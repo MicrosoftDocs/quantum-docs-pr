@@ -1,4 +1,2 @@
-# [Index](index.md)
-# [Welcome]
-# [Microsoft Quantum Story] (MS_Quantum_Story.md)
-# [Reference]
+# [Overview](index.md)
+# [Microsoft Quantum Story](MS_Quantum_Story.md)

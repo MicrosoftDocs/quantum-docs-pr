@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-﻿<!---
+<!---
 Purpose of an Overview article: 
 1. To give a TECHNICAL overview of a service/product: What is it? Why should I use it? It's a "learn" topic that describes key benefits and our competitive advantage. It's not a "do" topic.
 2. To help audiences who are new to service but who may be familiar with related concepts. 
@@ -41,8 +41,6 @@ Intro paragraph:
 2. What service is, why you use it.
 3. Include a simple conceptual image if it will help customers understand the service and features. 
 -->
-
-THIS IS A CHANGE TO THE LOCAL BRANCH ON 101317 AT 8:44 AM.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique. 
 
@@ -72,20 +70,20 @@ Other guidelines:
 Tip, note, important, warning: Use these extensions SPARINGLY to highlight info that broadens a user's knowledge. *Tip* is an easier way to do something, *Note* is "by the way" info, *Important* is info critical to completing a task, *Warning* is serious potential problem such as data loss.
 -->
 
-*NOTE EXAMPLE:*
+*Quantum note example:*
 
 > [!NOTE]
-> Depending on how many of the SDK dependencies you already have on your computer, installing the SDK could take from several minutes to a half hour or more.
+> Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique.
 
 ## Next steps
 
 <!---
 Link to 3-4 logical next steps: Ex. Quickstart, pricing info and SLA, tutorial. Don't repeat links you've already provided. 
 -->
-*NEXT STEPS EXAMPLE:*
+*NEXT STEPS:*
 
-Now that you have an overview of SQL Database here are suggested next steps: 
+Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique: 
 
-- Get started by [creating your first database](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal).
-- Build your first app in C#, Java, Node.js, PHP, Python, or Ruby: [Connection libraries for SQL Database and SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-libraries)
-- See the [pricing page](https://azure.microsoft.com/en-us/pricing/details/sql-database/) and [SLA page](https://azure.microsoft.com/support/legal/sla/).
+- Link example [creating your first database](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal).
+- Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique
+- Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique

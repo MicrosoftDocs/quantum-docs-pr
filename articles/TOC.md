@@ -3,6 +3,11 @@
 # [Quickstart]
 # [Reference]
 ## [Developer's guide]
+### Qb for developers
+### C# control code
+### Simulator usage
+### Visual Studio solution structure
+### Visual Studio Qb settings
 ## [Qb language reference]
 ## [Quantum APIs]
 ## [Samples]

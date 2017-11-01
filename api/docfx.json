@@ -5,7 +5,7 @@
         "files": [
           "**/*.yml"
         ],
-        "src": "api",
+        "src": ".",
         "version": "qflat-preview",
         "dest": "api",
         "exclude": [

@@ -6,7 +6,7 @@
           "**/*.md",
           "TOC.yml"
         ],
-        "src": "articles",
+        "src": ".",
         "version": "qflat-preview",
         "dest": "",
         "exclude": [

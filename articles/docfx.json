@@ -3,8 +3,12 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "TOC.yml"
         ],
+        "src": "articles",
+        "version": "qflat-preview",
+        "dest": "",
         "exclude": [
           "**/obj/**",
           "**/includes/**",

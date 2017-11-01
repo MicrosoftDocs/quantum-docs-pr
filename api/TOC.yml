@@ -1,0 +1,8 @@
+- name: Reference
+  href:index.md
+  items: 
+    - name: Microsoft.quantum.canon
+      uid: Microsoft.quantum.canon
+      items:
+        - name: ApproximateQFT
+          uid: Microsoft.quantum.canon.ApproximateQFT

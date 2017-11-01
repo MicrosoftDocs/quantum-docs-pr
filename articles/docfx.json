@@ -31,6 +31,11 @@
         ]
       }
     ],
+    "versions": {
+      "qflat-preview": {
+        "dest": "qflat-preview"
+      }
+    },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {},

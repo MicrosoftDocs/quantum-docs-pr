@@ -10,8 +10,8 @@
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "Odata": "Content"
+        "QFlatNamespace": "Content",
+        "QFlatType": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",

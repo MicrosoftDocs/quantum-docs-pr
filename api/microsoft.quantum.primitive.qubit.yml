@@ -1,0 +1,6 @@
+### YamlMime:QFlatType
+uid: microsoft.quantum.primitive.qubit
+name: Qubit
+type: primitive
+namespace: microsoft.quantum.primitive
+summary: "Represents a quantum bit or qubit. Qubits are opaque to the user; the only operation possible with them, other than passing them to another operation, is to test for identity (equality). Ultimately, actions on Qubit's are implemented by calling operations in the Qb standard library."

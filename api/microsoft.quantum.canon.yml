@@ -1,0 +1,23 @@
+### YamlMime:QFlatNamespace
+uid: microsoft.quantum.canon
+name: Microsoft.Quantum.Canon
+summary: "The Canon namespace summary."
+functions:
+- uid: microsoft.quantum.canon.resultasint
+  summary: "Given an array of results, represents the array by a single integer, with the 0th (leftmost) entry in the array being mapped the least significant bit. Thus, [One; Zero] is represented by 1 and [Zero; One] by 2."
+newtypes:
+- uid: microsoft.quantum.canon.continuousoracle
+  summary: "Represents a continuous-time oracle U(δt) : |?(t)> ? |?(t + δt)> for all times t, where U is a fixed operation, and where and δt is a non-negative real number."
+- uid: microsoft.quantum.canon.discreteoracle
+  summary: "Represents a discrete-time oracle U^m for a fixed operation U and a non-negative integer m."
+operations:
+- uid: microsoft.quantum.canon.approximateqft
+  summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
+- uid: microsoft.quantum.canon.oracletodiscrete
+  summary: Given an operation representing a "black-box" oracle, implements a discrete-time oracle by repeating the given oracle multiple times. For example, OracleToDiscrete(U)(3, target) is equivalent to U(target) repeated three times.
+- uid: microsoft.quantum.canon.quantumphaseestimation
+  summary: Performs the quantum phase estimation algorithm for a given oracle U and eigenstate, reading the phase into a big-endian quantum register.
+remarks: |
+  "Lorem **ipsum dolor** sit amet, [consectetur adipiscing elit](https://www.microsoft.com/en-us/quantum/default.aspx). Cras commodo eu libero eget semper. Donec ante metus, cursus vel tortor a, volutpat molestie nunc. Nullam fermentum ligula non aliquam aliquet. Aenean augue elit, pretium at nunc vitae, posuere ultricies tortor. Integer quis magna magna. Nam tempor arcu ac felis fringilla commodo. Mauris pretium porta magna vel bibendum. Proin eu elit lacinia, pulvinar sem nec, convallis massa. Nullam consequat lorem eu arcu pulvinar viverra. Suspendisse semper fringilla sem vel bibendum. In in est turpis. Integer egestas at sem ac gravida. Sed sodales urna eu nulla vestibulum, sed lobortis erat pharetra.
+
+  Maecenas a ante sed risus molestie iaculis. Nam dapibus magna nisl, nec egestas odio efficitur eu. Nunc non accumsan metus. Suspendisse placerat laoreet viverra. Fusce vel orci at mi sagittis ornare id eget quam. Donec egestas neque nec enim dapibus commodo. Cras venenatis dictum ligula, quis lacinia ligula efficitur ut. Sed a bibendum ligula, ut imperdiet sapien. Curabitur viverra, justo in accumsan mollis, augue dui vestibulum est, at condimentum urna diam nec turpis. Praesent ligula tellus, dictum in venenatis placerat, cursus at ante. Fusce vitae malesuada dolor, at mollis tellus. "

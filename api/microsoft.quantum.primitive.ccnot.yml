@@ -1,0 +1,19 @@
+### YamlMime:QFlatType
+uid: microsoft.quantum.primitive.ccnot
+name: CCNOT
+type: operation
+namespace: microsoft.quantum.primitive
+syntax: "CCNOT (source1 : Qubit, (source2: Qubit, target : Qubit)) : ()"
+input:
+  content: "(source1 : Qubit, (source2: Qubit, target : Qubit))"
+  types:
+  - uid: microsoft.quantum.primitive.qubit
+    name: source1
+  - isTuple: true
+    types:
+    - uid: microsoft.quantum.primitive.qubit
+      name: source2
+    - uid: microsoft.quantum.primitive.qubit
+      name: target
+output:
+  content: "()"

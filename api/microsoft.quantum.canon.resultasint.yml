@@ -1,0 +1,17 @@
+### YamlMime:QFlatType
+uid: microsoft.quantum.canon.resultasint
+name: ResultAsInt
+type: function
+namespace: microsoft.quantum.canon
+summary: "Given an array of results, represents the array by a single integer, with the 0th (leftmost) entry in the array being mapped the least significant bit. Thus, [One; Zero] is represented by 1 and [Zero; One] by 2."
+syntax: "ResultAsInt(results : Result[]) : Int"
+input:
+  content: "(Result[])"
+  types:
+  - uid: microsoft.quantum.primitive.result
+    isArray: true
+    name: results
+output:
+  content: "Int"
+  types:
+  - uid: microsoft.quantum.primitive.int

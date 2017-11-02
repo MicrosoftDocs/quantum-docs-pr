@@ -1,7 +1,0 @@
-- name: Reference
-  items: 
-    - name: Microsoft.Quantum.Canon
-      uid: Microsoft.Quantum.Canon
-      items:
-        - name: ApproximateQFT
-          uid: Microsoft.Quantum.Canon.ApproximateQFT

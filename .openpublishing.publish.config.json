@@ -47,9 +47,6 @@
         "ManagedReference": "Content",
         "Odata": "Content"
       },
-      "customized_template_paths": [
-        "_dependentPackages/MarkdigEngine/content"
-      ],
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "customized_template_paths": [

@@ -51,7 +51,25 @@
         "_dependentPackages/MarkdigEngine/content"
       ],
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "customized_template_paths": [
+        "_dependentPackages/MarkdigEngine/content",
+        "_dependentPackages/uref/content"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
+          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
+        ]
+      },
+      "JoinTOCPlugin": [
+        {
+          "ReferenceTOC": "api/TOC.yml",
+          "ConceptualTOC": "articles/TOC.yml",
+          "ReferenceTOCUrl": "/qflat/api/toc.json",
+          "ConceptualTOCUrl": "/quantum/toc.json"
+        }
+      ]
     }
   ],
   "notification_subscribers": [],

@@ -1,5 +1,5 @@
 - name: Reference
-  href: overview.md
+  href: ~/api/overview.md
   items: 
     - name: Microsoft.Quantum.Canon
       uid: microsoft.quantum.canon
@@ -16,7 +16,6 @@
           uid: microsoft.quantum.canon.quantumphaseestimation
         - name: ResultAsInt
           uid: microsoft.quantum.canon.resultasint
-  items: 
     - name: Microsoft.Quantum.Primitive
       uid: microsoft.quantum.primitive
       items: 

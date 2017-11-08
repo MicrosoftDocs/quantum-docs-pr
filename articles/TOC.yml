@@ -1,5 +1,8 @@
 - name: Welcome
   href: index.md
 - name: Quantum Computing Concepts
-  href: MS_Quantum_Story.md
+  href: quantum-concepts-1-Intro.md
+  items:
+    - name: Software Stack
+      href: quantum-concepts-2-SoftwareStack.md
 

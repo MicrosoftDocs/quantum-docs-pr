@@ -5,4 +5,16 @@
   items:
     - name: Software Stack
       href: quantum-concepts-2-SoftwareStack.md
+    - name: Vectors and Matrices
+      href: quantum-concepts-3-VectorsMatrices.md
+    - name: Qubit
+      href: quantum-concepts-4-Qubit.md
+    - name: Multiple qubits
+      href: quantum-concepts-5-MultipleQubits.md
+    - name: Dirac notation
+      href: quantum-concepts-6-DiracNotation.md
+    - name: Quantum circuits
+      href: quantum-concepts-7-QuantumCircuits.md
+      href: Conclusion and references
+      href: quantum-concepts-8-ConclusionBiblio.md 
 

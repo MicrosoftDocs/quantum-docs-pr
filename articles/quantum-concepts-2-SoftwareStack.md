@@ -4,7 +4,7 @@ title: Intent and product brand in a unique string of 43-59 chars including spac
 description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
-author: github-alias
+author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
@@ -28,64 +28,35 @@ Purpose of an Overview article:
 3. To compare the service to another service/product that has some similar functionality, ex. SQL Database / SQL Data Warehouse, if appropriate. This info can be in a short list or table. 
 -->
 
-# Microsoft Quantum Story 
-<!---
-Unique, complements the page title, and 100 characters or fewer including spaces.
--->
+# Quantum software stack 
+Normally when we think of a computer we envision a single monolithic device with memory and processing, but in reality modern computing environments are much more complicated than that.  This simple notion is brought about by necessity because if a developer had to think about bus or cache architectures while writing a smartphone app the impact of mobile computing would have been severely impacted.  The concept of the software stack was invented to address these issues and is a central concept behind the guiding vision behind quantum computing that inspired Q#.  The key idea behind a software stack is recursion.  A software stack consists of several nested layers of interfaces that abstracts the details of the lower levels of the device away from the developer.  For example, the WISA software stack involves running ASP.NET (a programming language), on top of SQL server (a relational database management system) which runs on top of Internet Information Services (a web server), which runs on top of Windows server (an operating system) which ultimately is run on top of a computer.  By looking at software in this hierarchical approach one can write software in ASP.NET without needing to understand the low-level details of all the software that the solution sits upon.
 
-## Concepts of Quantum Computing
 
-<!---
-Intro paragraph: 
-1. 2-4 sentences (with a few bullet points if helpful).
-2. What service is, why you use it.
-3. Include a simple conceptual image if it will help customers understand the service and features. 
--->
 
-NEW SENTENCE TO BE CHECKED IN.
+The concept of the stack in quantum computing is no different in principle, but in practice it operates at a much lower level than WISA or other similar stacks operate on.  
+%With quantum computing the purpose of the stack is to allow developers to express algorithmic thoughts  in a high-level and execute them in hardware without having detailed knowledge of the various levels of abstractions that the code would have to navigate through before finally being executed on quantum hardware.
+What does a quantum stack  look like?  The first thing to consider before we delve into this question is that a quantum computer is not a replacement for traditional (often called classical) computers.  In fact, quantum computers will almost certainly work in tandem with classical computers to solve computational problems.  In part this arises because of the fragility of quantum data.  Quantum data is so fragile that if you even look at it then you almost certainly damage the information stored in the quantum computer.  This means that quantum computers will need to be designed with quantum error correction in mind so that stray interactions with objects in the environment do not inadvertently damage the information.   For this reason, a natural target for Q# is an idealized model for an error corrected quantum computer (often called a fault tolerant quantum computer) that accepts a list of quantum instructions (called gates) and applies those instructions to the quantum data stored within it.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique. 
+Error correction requires a fast and reliable computer to be run in concert with the quantum computer to correct errors as they appear in the quantum computation.  In practice,  such as field-programmable gate arrays (FPGAs) or fast cryogenic processors may be needed to identify and correct the errors faster than they naturally accumulate in the quantum computer.  As a result, quantum computation is a hybrid computer comprised of a multitude of different computational devices that often operate over a wide range of temperatures.  For this reason, it is much more natural to think about programming a quantum computer through the lens of a software stack.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique.
+One such simple stack is given below, but the form and level of detail with which one wishes to view the stack may vary depending on the application.
 
-<!---
-The H2s state the benefits.
-1. Use  4-8 H2s. They are repeated in the right pane, which should not look cluttered.
-2. Start with a verb. Two reasons: 1) verbs help users understand how to use the service, 2) the consistency improves scannability.
-3. The section text relates benefits to supporting features with inline links to more detail. Use not just MS terms but also industry terms to improve SEO.
--->
+\begin{figure}[h!]
+\includegraphics[width=\linewidth]{stack.pdf}
+\end{figure}
 
-## Qubits
+There are several broad stages of programming such a quantum computation.  The first, and arguably most challenging phase, is specifying the problem that one wishes to solve.  In this case, the problem is to factor the number 15.  The next step involves designing an algorithm for solving this computational problem.  In this case, Shor's famous quantum factoring algorithm can be used to find the factors.  This algorithm is first expressed in Q# and then a sequence of quantum operations is output that could be run on an idealized error-free quantum computer.  
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique. 
+In this example, nature is not so kind as to provide an error free quantum computer so the subsequent step takes the operations emitted by Q# and translates them using templates specified by the quantum error correction method chosen into physical gates that the basic hardware can execute.  This process involves replacing every logical qubit described in the previous model with a host of physical qubits that are used to store and protect the information within a single qubit in a redundant fashion that can resist local errors on the constituent physical qubits long enough for such errors to be detected and corrected.  Just as the logical qubits described by the Q# code need to be replaced with many physical qubits, similarly each quantum gate described in the output needs to be translated into a sequence of physical gates that act upon the physical qubits.  For this reason, the output of Q# is seldom the final target for quantum computing and further levels of abstraction are needed to execute the code on hardware in an oblivious fashion.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique.
+%These physical gates are chosen in such a way so that when errors happen on the constituent qubits  which are designed to weather the errors appear in a calculation long enough for error correction to remove them.   In this case, we envision that these fault tolerant operations are stored as a lookup table that is sent to the interface computer for the quantum computer.   
 
-## Multiple Qubits
+The physical gate sequence is then loaded into an ordinary computer that sends these instructions down to a control computer that interfaces directly with the quantum computer.  This layer within the software stack is often handled by experimental control software such as QCoDeS.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique. 
+The final step in this process involves the interface computer streaming the gates as needed to a fast control computer that applies the voltages needed (commonly called pulses) to each quantum bit that are needed to apply each gate while correcting any errors that are observed through quantum error correction.  Cryogenic FPGAs or other exotic hardware will often be needed to perform these steps within the stringent time requirements imposed by the rate at which errors appear in the quantum computer.  The target language on this level is often VHDL, which requires a distinct way of thinking from that which is used at the top end of the stack to parse a description of a quantum algorithm.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique.
+The aim of Q# is to provide a simple language that allows developers to write code that targets a wealth of quantum computing platforms and interface with the intervening layers of software that stand between the user and the quantum device.  The language facilitates this by embracing the notion of a software stack and abstracting away many of the details of the underlying quantum computer and allows other levels of the stack, exposed through a language such as C$^\#$, to perform the necessary translations from Q# code to fundamental operations.  
+%By doing so, the complications involved in quantum error correction and pulse sequence design can be off-loaded onto other more low level portions of the software.  
+This allows the developer to focus on what they do best: solving problems.  %The intuitions needed to effectively use quantum computing to solve such problems, however, differ greatly from those commonly used in classical computing.  
 
-<!---
-Other guidelines: 
-Tip, note, important, warning: Use these extensions SPARINGLY to highlight info that broadens a user's knowledge. *Tip* is an easier way to do something, *Note* is "by the way" info, *Important* is info critical to completing a task, *Warning* is serious potential problem such as data loss.
--->
-
-*Quantum note example:*
-
-> [!NOTE]
-> Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique.
-
-## Next steps
-
-<!---
-Link to 3-4 logical next steps: Ex. Quickstart, pricing info and SLA, tutorial. Don't repeat links you've already provided. 
--->
-*NEXT STEPS:*
-
-Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique: 
-
-- Link example [creating your first database](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal).
-- Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique
-- Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique
+While the grand challenge of mastering the art of quantum computer programming is beyond the aspirations of this review, we can at least hope to help develop an intuition of how quantum computing worksby peeling back what happens inside the black box of a quantum computer by looking at quantum computers that consist of only one quantum bit.  But before we can do that, we will first need to review the fundamental objects behind quantum computing: vectors and matrices.

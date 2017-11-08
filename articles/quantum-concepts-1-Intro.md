@@ -29,63 +29,17 @@ Purpose of an Overview article:
 -->
 
 # Microsoft Quantum Story 
-<!---
-Unique, complements the page title, and 100 characters or fewer including spaces.
--->
+A host of new computer technologies have emerged within the last few years, but quantum computing is the technology that  requires the greatest paradigm shift on the part of developers.  Quantum computers were proposed in the 1980s by Richard Feynman and Yuri Manin.  The intuition behind quantum computing stemmed from what was often seen as one of the greatest embarrassments of physics.  Quantum mechanics was developed between 1900 and 1925 and it remains the cornerstone on which chemistry, condensed matter physics and technologies ranging from from computer chips to LED lighting ultimately rests.  Yet despite these successes, even some of the simplest systems seemed to be beyond quantum mechanics power to explain.  This is because the laws that describe systems of even a few dozen interacting particles  require such immense computing power to simulate that no conceivable computer can accurately simulate their dynamics within the lifetime of the universe.
 
-## Concepts of Quantum Computing
+There are many ways to understand why quantum mechanics is hard to simulate.  Perhaps the simplest is to see that quantum theory can be interpreted as saying that matter, at a quantum level, is simultaneously is in a host of different possible configurations (known as states) at the same time.  Unlike classical probability theory, these potential configurations can interfere with each other like waves on the beach.  This interference prevents us from using statistical sampling to solve such problems and means that we have to track every possible configuration that a quantum system could be in if we want to understand its evolution.  Tracking such information typically needs memory that grows exponentially with the number of particles in the system, meaning that if you are given a supercomputer that can simulate a system of 40 interacting electrons you would need a supercomputer with twice the memory to simulate 41 interacting electrons.  This game cannot be played forever.  Soon (at a few hundred electrons), the memory required to store the system exceeds the number of particles in the universe and we lose all hope of simulating their quantum dynamics with such methods.  And yet, in nature such systems to evolve in time according to these laws blissfully unaware of all the computing power they would need to follow them.
 
-<!---
-Intro paragraph: 
-1. 2-4 sentences (with a few bullet points if helpful).
-2. What service is, why you use it.
-3. Include a simple conceptual image if it will help customers understand the service and features. 
--->
+This observation lead the creators of quantum computing to ask a question: can we turn this embarrassment into an opportunity?  Specifically, if quantum dynamics are hard to simulate what would happen if we were to build hardware that had quantum effects as fundamental operations?  Could we simulate systems of interacting particles with the simplicity that nature seems to do it with?  Could there be other tasks that are entirely absent from nature that such a device could speed up?  These questions were the genesis of quantum computing.
 
-NEW SENTENCE TO BE CHECKED IN.
+The core idea behind quantum computing is to store data in quantum states of matter and use quantum gate operations to bend quantum interference to our will and thereby use it to solve problems that would otherwise be beyond the reach of existing computers.  The first example of such an algorithm was Shor's algorithm for factoring, which promised to break the public key cryptosystems that keep e-commerce secure.  Further investigation revealed that simulating physical systems, search problems, sampling tasks, solving systems of equations and machine learning tasks all can benefit strongly from such quantum operations.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique. 
+Designing a quantum program to harness interference to solve problems may sound like a daunting challenge, and in fact it is. Only a handful of basic strategies have been discovered that can be used to manipulate quantum interference in a way that is useful for computing and do not cause the data to be lost in a tangle of quantum possibilities that would be near impossible to measure let alone understand.  Quantum programming is therefore a distinct art from classical programming and requires very different tools to understand and express quantum algorithmic thinking. Indeed, not having general tools to aid the quantum developer tackle such challenges is one of the biggest obstacles faced in quantum computer programming.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique.
 
-<!---
-The H2s state the benefits.
-1. Use  4-8 H2s. They are repeated in the right pane, which should not look cluttered.
-2. Start with a verb. Two reasons: 1) verbs help users understand how to use the service, 2) the consistency improves scannability.
-3. The section text relates benefits to supporting features with inline links to more detail. Use not just MS terms but also industry terms to improve SEO.
--->
-
-## Qubits
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique. 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique.
-
-## Multiple Qubits
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique. 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique.
-
-<!---
-Other guidelines: 
-Tip, note, important, warning: Use these extensions SPARINGLY to highlight info that broadens a user's knowledge. *Tip* is an easier way to do something, *Note* is "by the way" info, *Important* is info critical to completing a task, *Warning* is serious potential problem such as data loss.
--->
-
-*Quantum note example:*
-
-> [!NOTE]
-> Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique.
-
-## Next steps
-
-<!---
-Link to 3-4 logical next steps: Ex. Quickstart, pricing info and SLA, tutorial. Don't repeat links you've already provided. 
--->
-*NEXT STEPS:*
-
-Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique: 
-
-- Link example [creating your first database](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal).
-- Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique
-- Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique
+\Qb was designed to help address these challenges by providing a high-level programming language capable of concisely expressing quantum information processing while also providing a solution that can be used within a complete software stack to allow a quantum algorithm to be compiled all the way down to primitive operations on the quantum computer.  Before we delve into the details of the programming language, we provide a brief review of quantum computing. 
+We will take the fundamental rules of quantum computing to be axioms, rather than explaining how they arise from more basic postulates of quantum mechanics.
+Additionally, we will assume basic familiarity with linear algebra (vectors, matrices etc) in our discussion.  We recommend the following introductory materials on quantum computing listed at the end of this review for those seeking more comprehensive background on quantum computing.

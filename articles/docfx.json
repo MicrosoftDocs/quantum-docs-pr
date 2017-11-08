@@ -3,8 +3,12 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "TOC.yml"
         ],
+        "src": ".",
+        "version": "qflat-preview",
+        "dest": "",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -27,11 +31,17 @@
         ]
       }
     ],
+    "versions": {
+      "qflat-preview": {
+        "dest": "qflat-preview"
+      }
+    },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {},
     "fileMetadata": {},
     "template": [],
+    "markdownEngineName": "markdig",
     "dest": "quantum-docs"
   }
 }

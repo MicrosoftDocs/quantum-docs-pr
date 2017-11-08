@@ -1,0 +1,13 @@
+### YamlMime:QFlatNamespace
+uid: microsoft.quantum.primitive
+name: Microsoft.Quantum.Primitive
+summary: "The Primitive namespace summary."
+primitives:
+- uid: microsoft.quantum.primitive.int
+  summary: "Represents a 64-bit signed (two's complement) integer."
+- uid: microsoft.quantum.primitive.qubit
+  summary: "Represents a quantum bit or qubit. Qubits are opaque to the user; the only operation possible with them, other than passing them to another operation, is to test for identity (equality). Ultimately, actions on Qubit's are implemented by calling operations in the Qb standard library."
+- uid: microsoft.quantum.primitive.result
+  summary: "Represents the result of a measurement. This type is a discriminated union with two possible values: One and Zero. Zero indicates that the +1 eigenvalue was measured; One indicates the -1 eigenvalue."
+operations:
+- uid: microsoft.quantum.primitive.ccnot

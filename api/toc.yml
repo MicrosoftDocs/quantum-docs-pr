@@ -1,27 +1,29 @@
-items:
-- name: Microsoft.Quantum.Canon
-  uid: microsoft.quantum.canon
-  items:
-  - name: ApproximateQFT
-    uid: microsoft.quantum.canon.approximateqft
-  - name: ContinuousOracle
-    uid: microsoft.quantum.canon.continuousoracle
-  - name: DiscreteOracle
-    uid: microsoft.quantum.canon.discreteoracle
-  - name: OracleToDiscrete
-    uid: microsoft.quantum.canon.oracletodiscrete
-  - name: QuantumPhaseEstimation
-    uid: microsoft.quantum.canon.quantumphaseestimation
-  - name: ResultAsInt
-    uid: microsoft.quantum.canon.resultasint
-- name: Microsoft.Quantum.Primitive
-  uid: microsoft.quantum.primitive
-  items:
-  - name: CCNOT
-    uid: microsoft.quantum.primitive.ccnot
-  - name: Int
-    uid: microsoft.quantum.primitive.int
-  - name: Qubit
-    uid: microsoft.quantum.primitive.qubit
-  - name: Result
-    uid: microsoft.quantum.primitive.result
+- items:
+    name: Reference
+    href: overview.md
+  - items: 
+    name: Microsoft.Quantum.Canon
+    uid: microsoft.quantum.canon
+    - name: ApproximateQFT
+      uid: microsoft.quantum.canon.approximateqft
+    - name: ContinuousOracle
+      uid: microsoft.quantum.canon.continuousoracle
+    - name: DiscreteOracle
+      uid: microsoft.quantum.canon.discreteoracle
+    - name: OracleToDiscrete
+      uid: microsoft.quantum.canon.oracletodiscrete
+    - name: QuantumPhaseEstimation
+      uid: microsoft.quantum.canon.quantumphaseestimation
+    - name: ResultAsInt
+      uid: microsoft.quantum.canon.resultasint
+  - items: 
+    name: Microsoft.Quantum.Primitive
+    uid: microsoft.quantum.primitive
+    - name: CCNOT
+      uid: microsoft.quantum.primitive.ccnot
+    - name: Int
+      uid: microsoft.quantum.primitive.int
+    - name: Qubit
+      uid: microsoft.quantum.primitive.qubit
+    - name: Result
+      uid: microsoft.quantum.primitive.result

@@ -1,5 +1,5 @@
 - name: Reference
-  href: ~/api/overview.md
+  href: overview.md
   items: 
     - name: Microsoft.Quantum.Canon
       uid: microsoft.quantum.canon

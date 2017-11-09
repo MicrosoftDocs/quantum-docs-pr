@@ -15,8 +15,6 @@
       href: quantum-concepts-6-DiracNotation.md
     - name: Quantum circuits
       href: quantum-concepts-7-QuantumCircuits.md
-    - name: Conclusion and references
-      href: quantum-concepts-8-ConclusionBiblio.md
 - name: Installation and configuration
   href: quantum-InstallConfig.md
 - name: Quickstart
@@ -27,5 +25,5 @@
     - name: Techniques
       href: quantum-devguide-4-Techniques.md
 - name: For more information
-  href: quantum-devguide-5-References.md
+  href: quantum-ForMoreInfo.md
 

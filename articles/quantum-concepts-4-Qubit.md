@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-#The Qubit
+# The Qubit
 If bits are the fundamental object in classical computing then qubits (quantum bits) are the fundamental object of quantum computing.  
  To understand this correspondence, lets look at the simplest example: a single qubit. 
 
@@ -37,7 +37,7 @@ The quantum state vectors $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$ and $\begin{bma
 \end{equation}
 although the opposite choice could have equally well been taken.  Thus out of the infinite number of possible single qubit quantum state vectors, only two correspond to states of classical bits and all other quantum states do not.
 
-##Measuring a Qubit
+## Measuring a Qubit
 Now that we know how to represent a qubit, we can gain some intuition for what these states represent by discussing the concept of a measurement. A measurement corresponds to the informal idea of ``looking'' at a qubit, which immediately collapses the quantum state to one of the two classical states  $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$ or  $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$. When a qubit given by the quantum state vector  $\begin{bmatrix} \alpha \\ \beta \end{bmatrix}$ is measured, we obtain the outcome $0$ with probability $|\alpha|^2$ and the outcome $1$  with probability $|\beta|^2$. On outcome $0$, the qubit's new state is $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$, and on outcome $1$ its state is $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$. Note that these probabilities sum up to $1$ because $|\alpha|^2 + |\beta|^2 = 1$.
 
 The properties of measurement also mean that the overall sign of the quantum state vector is irrelevant. Negating a vector is equivalent to $\alpha \rightarrow -\alpha$ and $\beta \rightarrow -\beta$.  Because the probability of measuring $0$ and $1$ depends on the magnitude squared of the terms, inserting such signs does not change the probabilities whatsoever.  Such phases are commonly called ``global phases'' and more generally can be of the form $e^{i \phi}$ rather than just $\pm 1$.
@@ -53,7 +53,7 @@ For the more visually inclined, qubits can be pictured in $3$D using the Bloch s
 The arrows in this diagram show the direction that the quantum state vector is pointing and each transformation of the arrow can be thought of as a rotation about one of the cardinal axes.
 While thinking about a quantum computation as a sequence of rotations is a powerful intuition, it is challenging to use this intuition to design and describe algorithms.  Q# from this perspective alleviates this issue by providing a language for describing such rotations.
 
-##Single Qubit Operations
+## Single Qubit Operations
  Quantum computers process data by applying a universal set of quantum gates that can emulate any rotation of the quantum state vector.  This notion of universality is akin to the notion of universality for traditional (i.e. classical) computing where a gate set is considered to be universal if every transformation of the input bits can be performed using a finite length circuit.  
 
 In quantum computing, the valid transformations that we are allowed to perform on a quantum bit are unitary transformations and measurement.  The \emph{adjoint operation} or the conjugate transpose is of crucial importance to quantum computing because it is needed to invert quantum transformations.  Q# reflects this by providing methods to automatically compile gate sequences to for the adjoint of a unitary operation, which saves the programmer from having to hand code adjoints in many cases.

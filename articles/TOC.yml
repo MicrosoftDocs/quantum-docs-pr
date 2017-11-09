@@ -23,9 +23,9 @@
   href: quantum-QuickStart.md
 - name: Quantum development techniques 
   href: quantum-devguide-1-Intro.md
-    items:
-      - name: Techniques
-        href: quantum-devguide-4-Techniques.md
+  items:
+    - name: Techniques
+      href: quantum-devguide-4-Techniques.md
 - name: For more information
   href: quantum-devguide-5-References.md
 

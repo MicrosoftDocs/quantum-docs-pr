@@ -22,8 +22,18 @@
 - name: Quantum development techniques 
   href: quantum-devguide-1-Intro.md
   items:
-    - name: Techniques
-      href: quantum-devguide-4-Techniques.md
+    - name: Q# and file structures
+      href: quantum-techniques-1-Qsharp_FileStructure.md
+    - name: Operations and functions
+      href: quantum-techniques-2-OperationsandFunctions.md
+    - name: Local variables
+      href: quantum-techniques-3-LocalVariables.md
+    - name: Q# type model
+      href: quantum-techniques-4-TypeModel.md
+    - name: Working with qubits
+      href: quantum-techniques-5-WorkingWithQubits.md
+    - name: Putting it all together
+      href: quantum-techniques-6-PuttingItAllTogether.md
 - name: For more information
   href: quantum-ForMoreInfo.md
 

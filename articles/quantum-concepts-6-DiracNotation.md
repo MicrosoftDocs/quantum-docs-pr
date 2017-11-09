@@ -21,19 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-<!---
-Purpose of an Overview article: 
-1. To give a TECHNICAL overview of a service/product: What is it? Why should I use it? It's a "learn" topic that describes key benefits and our competitive advantage. It's not a "do" topic.
-2. To help audiences who are new to service but who may be familiar with related concepts. 
-3. To compare the service to another service/product that has some similar functionality, ex. SQL Database / SQL Data Warehouse, if appropriate. This info can be in a short list or table. 
--->
-
-# Quantum Computing Concepts 
-<!---
-Unique, complements the page title, and 100 characters or fewer including spaces.
--->
-
-## Dirac notation
+#Dirac notation
 
 %While column vector notation is ubiquitous in linear algebra, it is often cumbersome in quantum computing especially when dealing with multiple qubits.  The two main reasons for this are that when we define $\psi$ to be a vector it is not explicitly clear whether $\psi$ is a row or a column vector.  Thus if $\phi$ and $\psi$ are vectors then it is not clear whether $\phi \psi$ is defined because the shapes of $\phi$ and $\psi$ may be unclear in the context.  Furthermore, if we wish to represent a system of $n$ qubits, formally expressing the vector as $\begin{bmatrix}1 \\ 0 \end{bmatrix}\otimes \cdots \otimes\begin{bmatrix}1 \\ 0 \end{bmatrix} $.  Dirac notation solves this by modifying the standard notation used in linear algebra to fit the needs of quantum mechanics.
 

@@ -21,19 +21,8 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-<!---
-Purpose of an Overview article: 
-1. To give a TECHNICAL overview of a service/product: What is it? Why should I use it? It's a "learn" topic that describes key benefits and our competitive advantage. It's not a "do" topic.
-2. To help audiences who are new to service but who may be familiar with related concepts. 
-3. To compare the service to another service/product that has some similar functionality, ex. SQL Database / SQL Data Warehouse, if appropriate. This info can be in a short list or table. 
--->
+#Vectors and Matrices
 
-# Quantum Computing Concepts 
-<!---
-Unique, complements the page title, and 100 characters or fewer including spaces.
--->
-
-## Vectors and matrices
 Some familiarity with vectors and matrices is essential to understand quantum computing. We provide a brief introduction below and interested readers are recommended to read a standard reference on linear algebra such as [Strang, G. (1993). Introduction to linear algebra (Vol. 3). Wellesley, MA: Wellesley-Cambridge Press] or an online reference such as http://joshua.smcvt.edu/linearalgebra/.
 
 A column vector (or simply vector) $v$ of dimension (or size) $n$ is a collection of $n$ complex numbers $(v_1,v_2,
@@ -48,7 +37,6 @@ The norm of a vector $v$ is defined as $\sqrt{\sum_i |v_i|^2}$. A vector is said
 $$
 \begin{bmatrix}x_1 \\ \vdots \\ x_n \end{bmatrix}^\dagger = \begin{bmatrix}x_1^* & \cdots & x_n^* \end{bmatrix}.
 $$
-%The inner product between two vectors $u$ and $v$ of the same dimension is $\sum_i u_i^*v_i$.
 
 The most common way to multiply two vectors together is through the inner product, otherwise known as a dot product.  The inner product gives the projection of one vector onto another and is invaluable in describing how to express one vector as a sum of other simpler vectors.  The inner product between $\phi$ and $\psi$, denoted $\left\langle \phi, \psi\right\rangle$ is defined as
 $$
@@ -111,14 +99,14 @@ P_{m1} ~~ P_{m2} ~~ \cdots ~~ P_{mp}\\
 $$
 where the entry $P_{ik} = \sum_j M_{ij}N_{jk}$. For example, the entry $P_{11}$ is the inner product of the first row of $M$ with the first column of $N$. Note that since a vector is simply a special case of a matrix, this definition extends to matrix--vector multiplication. 
 
-All the matrices we consider will either be square matrices, where the number of rows and columns are equal, or vectors, which corresponds to only $1$ column. One special square matrix is the identity matrix, denoted $\text{I\!I}$, which has all its diagonal elements equal to $1$ and the remaining elements equal to $0$:
-$$\text{I\!I}=\begin{bmatrix}
+All the matrices we consider will either be square matrices, where the number of rows and columns are equal, or vectors, which corresponds to only $1$ column. One special square matrix is the identity matrix, denoted $\openone$, which has all its diagonal elements equal to $1$ and the remaining elements equal to $0$:
+$$\openone=\begin{bmatrix}
 1 ~~ 0 ~~ \cdots ~~ 0\\
 0 ~~ 1 ~~ \cdots ~~ 0\\
 ~~ \ddots\\
 0 ~~ 0 ~~ \cdots ~~ 1\\
 \end{bmatrix}.$$
-For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \text{I\!I}$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. For any matrix $M$, the adjoint or conjugate transpose of $M$, is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. We say a matrix $U$ is unitary if $UU^\dagger = \text{I\!I}$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because $\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle$.  
+For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \openone$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. For any matrix $M$, the adjoint or conjugate transpose of $M$, is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. We say a matrix $U$ is unitary if $UU^\dagger = \openone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because $\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle$.  
 
 
 

@@ -28,8 +28,7 @@ Purpose of an Overview article:
 3. To compare the service to another service/product that has some similar functionality, ex. SQL Database / SQL Data Warehouse, if appropriate. This info can be in a short list or table. 
 -->
 
-# Quantum Computing Concepts
-## What is quantum computing?
+# What is quantum computing?
 
 A host of new computer technologies have emerged within the last few years, but quantum computing is the technology that  requires the greatest paradigm shift on the part of developers.  Quantum computers were proposed in the 1980s by Richard Feynman and Yuri Manin.  The intuition behind quantum computing stemmed from what was often seen as one of the greatest embarrassments of physics.  Quantum mechanics was developed between 1900 and 1925 and it remains the cornerstone on which chemistry, condensed matter physics and technologies ranging from from computer chips to LED lighting ultimately rests.  Yet despite these successes, even some of the simplest systems seemed to be beyond quantum mechanics power to explain.  This is because the laws that describe systems of even a few dozen interacting particles  require such immense computing power to simulate that no conceivable computer can accurately simulate their dynamics within the lifetime of the universe.
 

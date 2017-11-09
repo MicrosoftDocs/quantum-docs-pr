@@ -24,4 +24,16 @@ ms.topic: article-type-from-white-list
 
 # For more information
 
-Insert links, videos, books, and etc.
+*Videos*
++ Video 1
++ Video 2
+*Basic quantum computing*
+Text 1
+Text 2
+*Elementary techniques for building controlled gates*
+*Techniques for preparing quantum states*
+*Approaches for synthesizing circuits out of H, T and CNOT gates*
+*Approaches for quantum arithmetic*
+*Methods for fast quantum sampling (amplitude amplication) and probability estimation*
+*Algorithms for quantum simulation*
+*Procedures for quantum optimization*

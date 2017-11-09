@@ -21,12 +21,12 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-#Multiple Qubits
+# Multiple Qubits
 While single qubit gates possess some counter-intuitive features, such as the ability to be in more than one state at a given time, if all we had in a quantum computer were single qubit gates then we would have a device with computational power that would be dwarfed by a calculator let alone a classical supercomputer.  The true power of quantum computing only becomes visible as we increase the number of qubits.  This power arises, in part, because the dimension of the vector space that quantum state vectors lie in grows exponentially with the number of qubits.  This means that while a single qubit can be trivially simulated, simulating a fifty qubit quantum computation would arguably push the limits existing supercomputers.  Increasing the size of the computation by only one additional qubit would make the simulation double the memory required to store the state and roughly double the computational time.  This rapid doubling of computational power is why a quantum computer with a relatively small number of qubits can far surpass the most powerful supercomputers ever built, for some computational tasks.
 
 But why do we have this exponential growth for quantum state vectors?  Our goal in this section is to review the rules used to build multi-qubit states out of single qubit states as well as discuss the gate operations that we need to include in our gate set to form a universal many-qubit quantum computer.  These tools are absolutely necessary for understanding the gate sets that are commonly used in Q# code and also to gain an  intuition about why quantum effects such as entanglement or interference render quantum computing more powerful than classical computing.
 
-##Representing two qubits
+## Representing two qubits
 The main difference between one and two-qubit states is that two-qubit states are four dimensional rather than two-dimensional.  This happens because the computational basis for two-qubit states is formed by the tensor products of one-qubit states.  For example
 
 $$
@@ -48,13 +48,13 @@ where the operation $\otimes$ is called the tensor product (or Kronecker product
 Note that while we can always take the tensor product of two single-qubit states to form a two-qubit state, not all two-qubit quantum states can be written as the tensor product of two single-qubit states.
 For example, there are no states $\psi=\begin{bmatrix} \alpha \\ \beta \end{bmatrix}$ and $\phi=\begin{bmatrix} \gamma \\ \delta \end{bmatrix}$ such that their tensor product is the state $$\psi\otimes \phi = \begin{bmatrix} 1/\sqrt{2} \\ 0 \\ 0 \\ 1/\sqrt{2} \end{bmatrix}.$$ Such a two-qubit state, which cannot be written as the tensor product of single-qubit states, is called an ``entangled state'' and the two qubits are said to be entangled.  Loosely speaking, because the quantum state cannot be thought of as a tensor product of single qubit states the information that the state holds is not confined to either of the qubits individually.  Rather, the information is stored non-locally in the correlations between the two states.  This non-locality of information is one of the major distinguishing features of quantum computing over classical computing and is essential for a number of quantum protocols including quantum teleportation and quantum error correction.
 
-##Measuring two-qubit states 
+## Measuring two-qubit states 
 Measuring two-qubit states is very similar to single qubit measurements. Measuring the state $$
 \begin{bmatrix} \alpha_{00} \\ \alpha_{01} \\ \alpha_{10} \\ \alpha_{11} \end{bmatrix}
 $$
 yields $00$ with probability $|\alpha_{00}|^2$, $01$ with probability $|\alpha_{01}|^2$, $10$ with probability $|\alpha_{10}|^2$, and $11$ with probability $|\alpha_{11}|^2$. The variables $\alpha_{00}, \alpha_{01}, \alpha_{10},$ and $\alpha_{11}$ were deliberately named to make this connection clear. As before, after the measurement if the outcome is $00$, the quantum state of the two qubit system has collapsed and is now  $00\equiv \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}$.
 
-##Two-qubit Operations
+## Two-qubit Operations
 As in the single-qubit case, any unitary transformation is a valid operation on qubits. In general, a unitary transformation on $n$ qubits is a matrix $U$ of size $2^n \times 2^n$ (so that it acts on vectors of size $2^n$), such that $U^{-1} = U^\dagger$.
 
 For example, the CNOT (controlled NOT) gate is a commonly used two-qubit gate and is represented by the following unitary matrix:
@@ -89,7 +89,7 @@ Note that while any two single-qubit gates define a two-qubit gate by taking the
 There are infinitely many unitary matrices on two qubits, so we cannot hope to have all possible gates as elementary operations on our quantum computer. Instead, we choose a small set of elementary gates that form a universal gate set. As before, a gate set is universal if any unitary matrix can be written as a product of gates from this set to arbitrary precision.
 One example of a universal gate set is the Hadamard gate, the T gate, and the CNOT gate. By taking products of these gates, we can approximate any unitary matrix on two qubits.
 
-##Many-qubit systems
+## Many-qubit systems
 We follow the exact same patterns explored in the two-qubit case to build many-qubit quantum states from smaller systems.  Such states are built by forming tensor products of smaller states.  For example, consider encoding the bit string $1011001$ in a quantum computer.  We can encode this as
 $$
 1011001 \equiv \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}.

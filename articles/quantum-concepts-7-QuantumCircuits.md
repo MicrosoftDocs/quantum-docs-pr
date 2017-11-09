@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-#Quantum Circuits
+# Quantum Circuits
 Consider for a moment the unitary transformation $\text{ CNOT}_{01}(H\otimes 1)$.  This gate sequence is of fundamental significance to quantum computing because it creates a maximally entangled two-qubit state:
 $$\text{CNOT}_{01}(H\otimes 1)|00\rangle = \frac{1}{\sqrt{2}} \left(\ket{00} + \ket{11} \right),$$
 Operations with this, or greater complexity, are ubiquitous in quantum algorithms and quantum error correction and so it should come as a great relief that there is a simple method for visualizing them called a quantum circuit diagram.  The circuit diagram for preparing this maximally entangled quantum state is
@@ -72,3 +72,9 @@ gives a classically controlled gate that is applied conditioned on the classical
 Quantum Teleportation is perhaps the best quantum algorithm for illustrating all of these components.  Quantum teleportation is a method for moving data within a quantum computer (or perhaps between distant quantum computers in a quantum network) through the use of entanglement and measurement.  Interestingly, it is actually capable of moving a quantum state from one qubit to another without even knowing what that qubit is which is necessary for the protocol to work according to the laws of quantum mechanics.  This circuit is given below and we provide an annotated version of the circuit that illustrates how to read the quantum circuit.
 
 ![](tp2.svg){ width=50% }
+
+# Conclusion
+
+We have reviewed, in this brief introduction, how quantum computers can be viewed as a device that stores information as a unit vector in an exponentially large vector space and seen how quantum gates can be used to rotate these states in such a way as to perform a calculation.  We have also discussed useful language for describing quantum operations such as quantum circuits and Dirac notation which allow complex quantum states and subroutines to be quickly understood by a developer.
+
+While these tools are foundational for any developer of quantum software, they by no means span the depth or breadth of what is known about quantum computer programming and algorithm design.  Since quantum computing remains a rapidly developing field, there is no one resource that has all of the information needed to learn how to best use these tools in order to solve problems.  For this reason we have compiled a list of references that may be of use for the interested reader who wishes to learn more about the art of quantum computer programming.

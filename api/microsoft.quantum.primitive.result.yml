@@ -1,6 +1,0 @@
-### YamlMime:QFlatType
-uid: microsoft.quantum.primitive.result
-name: Result
-type: primitive
-namespace: microsoft.quantum.primitive
-summary: "Represents the result of a measurement. This type is a discriminated union with two possible values: One and Zero. Zero indicates that the +1 eigenvalue was measured; One indicates the -1 eigenvalue."

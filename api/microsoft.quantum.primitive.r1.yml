@@ -1,0 +1,29 @@
+uid: microsoft.quantum.primitive.r1
+name: R1
+type: operation
+namespace: microsoft.quantum.primitive
+input:
+  theta: >2-
+
+     Angle about which the qubit is to be rotated.
+  qubit: >2
+
+     Qubit to which the gate should be applied.
+output: {}
+summary: >2
+
+   Applies a rotation about the $\ket{1}$-axis by a given angle,
+   $$
+       R_1(\theta) \mathrel{:=}
+       \operatorname{diag}(1, e^{i\theta}).
+   $$
+remarks: >2-
+
+   Equivlent to:
+   ```qsharp
+   R(PauliZ, theta, qubit);
+   R(PauliI, -theta, qubit);
+   ```
+syntax: >2-
+
+  operation .R1 (theta : Double, qubit : Qubit) : ()

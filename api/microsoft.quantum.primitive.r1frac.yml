@@ -1,0 +1,40 @@
+uid: microsoft.quantum.primitive.r1frac
+name: R1Frac
+type: operation
+namespace: microsoft.quantum.primitive
+input:
+  numerator: >2-
+
+     Numerator in the dyadic fraction representation of the angle
+     by which the qubit is to be rotated.
+  power: >2-
+
+     Power of two specifying the denominator of the angle by which
+     the qubit is to be rotated.
+  qubit: >2
+
+     Qubit to which the gate should be applied.
+output: {}
+summary: >2
+
+   Applies a rotation about the $\ket{1}$ state by an angle specified
+   as a dyadic fraction,
+   $$
+       R_1(n, k) \mathrel{:=}
+       \operatorname{diag}(1, e^{i \pi k / 2^n}).
+   $$
+
+   > [!WARNING]
+   > This operation uses the **opposite** sign convention from
+   > @"microsoft.quantum.primitive.r", and does not include the
+   > factor of $1/ 2$ included by @"microsoft.quantum.primitive.r1".
+remarks: >2-
+
+   Equivalent to:
+   ```qsharp
+   RFrac(PauliZ, -numerator, denominator + 1, qubit);
+   RFrac(PauliI, numerator, denominator + 1, qubit);
+   ```
+syntax: >2-
+
+  operation .R1Frac (numerator : Int, power : Int, qubit : Qubit) : ()

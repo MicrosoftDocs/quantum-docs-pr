@@ -1,6 +1,0 @@
-### YamlMime:QFlatType
-uid: microsoft.quantum.primitive.int
-name: Int
-type: primitive
-namespace: microsoft.quantum.primitive
-summary: "Represents a 64-bit signed (two's complement) integer."

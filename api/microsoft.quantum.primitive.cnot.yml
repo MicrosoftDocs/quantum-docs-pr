@@ -1,0 +1,34 @@
+uid: microsoft.quantum.primitive.cnot
+name: CNOT
+type: operation
+namespace: microsoft.quantum.primitive
+input:
+  control: >2-
+
+     Control qubit for the CNOT gate.
+  target: >2
+
+     Target qubit for the CNOT gate.
+output: {}
+summary: >2
+
+   Applies the controlled-NOT (CNOT) gate to a pair of qubits
+   $$
+       \operatorname{CNOT} \mathrel{:=}
+       \begin{bmatrix}
+           1 & 0 & 0 & 0 \\
+           0 & 1 & 0 & 0 \\
+           0 & 0 & 0 & 1 \\
+           0 & 0 & 1 & 0
+       \end{bmatrix},
+   $$
+   where rows and columns are ordered as in the quantum concepts guide.
+remarks: >2-
+
+   Equivalent to:
+   ```qsharp
+   (Controlled X)([control], (target));
+   ```
+syntax: >2-
+
+  operation .CNOT (control : Qubit, target : Qubit) : ()

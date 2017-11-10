@@ -1,0 +1,33 @@
+uid: microsoft.quantum.primitive.expfrac
+name: ExpFrac
+type: operation
+namespace: microsoft.quantum.primitive
+input:
+  paulis: >2-
+
+     Array of single-qubit Pauli values indicating the tensor product
+     factors on each qubit.
+  numerator: >2-
+
+     Numerator in the dyadic fraction representation of the angle
+     by which the qubit register is to be rotated.
+  power: >2-
+
+     Power of two specifying the denominator of the angle by which
+     the qubit register is to be rotated.
+  qubits: >2-
+
+     Register to apply the given rotation to.
+output: {}
+summary: >2
+
+   Applies the exponential of a multi-qubit Pauli operator
+   with an argument given by a dyadic fraction,
+   $$
+       \exp\left(i \theta \pi k [P_0 \otimes P_1 \cdots P_N] / 2^n \right),
+   $$
+   where $P_i$ is the $i$th element of `paulis`, and where
+   $N = $`Length(paulis)`.
+syntax: >2-
+
+  operation .ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : ()

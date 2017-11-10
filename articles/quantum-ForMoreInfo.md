@@ -27,13 +27,127 @@ ms.topic: article-type-from-white-list
 *Videos*
 + Video 1
 + Video 2
+
 *Basic quantum computing*
-Text 1
-Text 2
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
+
 *Elementary techniques for building controlled gates*
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
+
 *Techniques for preparing quantum states*
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
+
 *Approaches for synthesizing circuits out of H, T and CNOT gates*
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
+
 *Approaches for quantum arithmetic*
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
+
 *Methods for fast quantum sampling (amplitude amplication) and probability estimation*
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
+
 *Algorithms for quantum simulation*
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
+
+
 *Procedures for quantum optimization*
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text
++ Text

@@ -25,7 +25,7 @@ ms.topic: article-type-from-white-list
 
 Let's return to the example of the teleportation circuit defined in @qc_concepts <!-- TODO: more specific link. -->.
 
-![](figures/teleportation.png){ width=50% }
+![`Teleport(msg : Qubit, there : Qubit) : ()`](figures/teleportation.svg)
 
 We can now translate each of the steps in this quantum circuit into Q#.
 First, we begin the definition of a new operation while will perform the teleportation given two qubits `msg` and `there`:

@@ -38,7 +38,9 @@
     },
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+      "show_latex": true
+    },
     "fileMetadata": {},
     "template": [],
     "markdownEngineName": "markdig",

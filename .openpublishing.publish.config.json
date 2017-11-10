@@ -29,7 +29,7 @@
         {
           "ReferenceTOC": "api/TOC.yml",
           "ConceptualTOC": "articles/TOC.yml",
-          "ReferenceTOCUrl": "/qflat/api/toc.json",
+          "ReferenceTOCUrl": "/qsharp/api/toc.json",
           "ConceptualTOCUrl": "/quantum/toc.json"
         }
       ]

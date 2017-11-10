@@ -21,20 +21,56 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-<!---
-Purpose of an Overview article: 
-1. To give a TECHNICAL overview of a service/product: What is it? Why should I use it? It's a "learn" topic that describes key benefits and our competitive advantage. It's not a "do" topic.
-2. To help audiences who are new to service but who may be familiar with related concepts. 
-3. To compare the service to another service/product that has some similar functionality, ex. SQL Database / SQL Data Warehouse, if appropriate. This info can be in a short list or table. 
--->
+# Setting Up Development Environment
 
-# Quantum Computing Concepts 
-<!---
-Unique, complements the page title, and 100 characters or fewer including spaces.
--->
+## Prerequisites
 
-## Conclusion
+To use Quantum Development Kit, you need [Visual Studio](https://www.visualstudio.com/) 2017 (any edition).
 
-We have reviewed, in this brief introduction, how quantum computers can be viewed as a device that stores information as a unit vector in an exponentially large vector space and seen how quantum gates can be used to rotate these states in such a way as to perform a calculation.  We have also discussed useful language for describing quantum operations such as quantum circuits and Dirac notation which allow complex quantum states and subroutines to be quickly understood by a developer.
+## Installing Quantum Developer Kit
 
-While these tools are foundational for any developer of quantum software, they by no means span the depth or breadth of what is known about quantum computer programming and algorithm design.  Since quantum computing remains a rapidly developing field, there is no one resource that has all of the information needed to learn how to best use these tools in order to solve problems.  For this reason we have compiled a list of references that may be of use for the interested reader who wishes to learn more about the art of quantum computer programming.
+Download and install [Microsoft Quantum Developer Kit](https://solidrepo.blob.core.windows.net/alpha/latest/QbVSIX.vsix) Visual Studio extension. 
+Note that some browsers (IE and Edge) might save this file as `QbVSIX.zip` during download, which makes it impossible to install. 
+In this case, rename it back to `QbVSIX.vsix` or use a different browser (Firefox or Chrome) to open download link.
+
+## Configuring NuGet feed
+
+Configure Visual Studio to use QuArC alpha NuGet feed  
+<https://quarcsw.pkgs.visualstudio.com/_packaging/alpha/nuget/v3/index.json>, as described
+[here](https://www.visualstudio.com/en-us/docs/package/nuget/consume).
+
+## Validating Setup
+
+* Clone [Libraries](https://quarcsw.visualstudio.com/_git/Libraries) repository.
+
+* Open `Libraries\QbLibs\QbLibs.sln` solution.
+
+* Build the solution. If needed, restore NuGet packages manually first.
+
+* To run teleport example: right click on `TeleportationExample` project, left click "Set as Startup Project", run it (Ctrl-F5). Output should look like this:
+
+        Round 0:        Sent True,      got True.
+        Teleportation successful!!
+        
+        Round 1:        Sent False,     got False.
+        Teleportation successful!!
+        
+        Round 2:        Sent False,     got False.
+        Teleportation successful!!
+        
+        Round 3:        Sent True,      got True.
+        Teleportation successful!!
+        
+        Round 4:        Sent True,      got True.
+        Teleportation successful!!
+        
+        Round 5:        Sent False,     got False.
+        Teleportation successful!!
+        
+        Round 6:        Sent True,      got True.
+        Teleportation successful!!
+        
+        Round 7:        Sent False,     got False.
+        Teleportation successful!!
+
+* To run chemistry example: right click on `H2SimulationExample` project, left click "Set as Startup Project", run it (Ctrl-F5).

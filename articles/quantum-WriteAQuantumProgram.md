@@ -20,8 +20,6 @@ ms.topic: article-type-from-white-list
 # ms.reviewer:
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
-
-# Heading one
 # Writing a Quantum Program
 
 ## What You'll Learn

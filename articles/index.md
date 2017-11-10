@@ -1,4 +1,14 @@
-# Welcome to Microsoft's Quantum Platform!
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. Proin accumsan ipsum eget nunc lobortis malesuada ac a velit. Sed tellus quam, accumsan vel faucibus eget, vestibulum ut turpis. Nulla consequat elit eu felis rutrum, vitae eleifend ligula tristique. Quisque cursus eget risus sit amet malesuada. Aliquam nec enim id sapien luctus pretium ac vel arcu. Aenean ultrices lectus a justo vulputate, eu mattis mi tristique. 
+# ![Microsoft Quantum](/media/mobius_strip_preview.png) Welcome to the Microsoft Quantum Developer Kit preview *beta* ![Microsoft Quantum](/media/mobius_strip_preview.png)
+Thank you for taking the time to try out the Microsoft Quantum Developer Kit preview. You're taking the first step into a new paradigm of computing that promises to push computing power up an exponential curve.
 
-Morbi suscipit turpis eu tincidunt imperdiet. Quisque fermentum turpis dolor, sit amet pellentesque risus porttitor non. Nulla id posuere enim. Duis nulla mi, malesuada tincidunt tincidunt nec, aliquet non sapien. Aenean sagittis ligula et nisl iaculis egestas. Ut massa quam, rhoncus in porttitor eget, pellentesque ut nulla. Nunc posuere turpis a lectus sagittis consectetur. Cras hendrerit enim ac eros scelerisque efficitur. Pellentesque vitae consectetur dui. 
+The current documentation includes:
+* **Quantum computing concepts**
+>> Topics include the import of linear algebra in quantum computing, the nature and use of a qubit, and how to read a quantum circuit.
+* **Installation and configuration** describes how to quickly set up your quantum development environment. Your Visual Studio environment will be enhanced with a compiler for the Q# language and templates for Q# projects and files.
+
+
+
+
+
+![Microsoft Quantum](/media/mobius_strip_icon.png)
+![Microsoft Quantum](/media/mobius_strip_large.png)

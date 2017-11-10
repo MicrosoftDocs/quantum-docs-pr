@@ -40,8 +40,11 @@ using (register = Qubit[1]) {
 }
 ```
 
+Importantly, in writing the above program, we did not explicitly refer to the state within Q#, but rather described how the state was *transformed* by our program.
 Thus, similar to how a graphics shader program accumulates a description of transformations to each vertex, a quantum program in Q# accumulates transformations to quantum states.
 This allows us to be entirely agnostic about what a quantum state even *is* on each target machine.
+As a particularly extreme example, the quantum computing trace simulator <!-- TODO: link to Vadym's docs --> does not assign any state to a qubit even internally, and instead traces out how a qubit is used.
+The replacement of a traditional simulator with a trace simulator is entirely transparent to Q#, such that a quantum programmer need not know anything about the target machine that will be used to run their application.
 
 Indeed, as we will see later on in this guide, from the perspective of a Q# program, a qubit is entirely an entirely opaque reference to the internal structure of a target machine.
 A Q# program has no ability to introspect into the state of a qubit, its representation on a target machine, or even whether it is the same qubit as any other qubit available to the program.

@@ -42,7 +42,7 @@ operation BitFlip(target : Qubit) : () {
 The keyword `operation` begins the operation definition, and is followed by the name; here, `BitFlip`.
 Next, the type of the input is defined as `(Qubit)`, along with a name `target` for referring to the input within the new operation.
 Similarly, the `()` defines that the operation's output is empty.
-This is used similarly to `void` in C# and other imperative languages, or to `unit` in F# and other functional languages.
+This is used similarly to `void` in C# and other imperative languages, and is equivalent to `unit` in F# and other functional languages.
 
 > [!NOTE]
 > We will explore this in more detail below, but each operation in Q# takes exactly one input and returns exactly one output.

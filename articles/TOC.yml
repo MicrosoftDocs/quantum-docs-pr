@@ -17,8 +17,8 @@
       href: quantum-concepts-7-QuantumCircuits.md
 - name: Installation and configuration
   href: quantum-InstallConfig.md
-- name: Quickstart
-  href: quantum-QuickStart.md
+- name: Quickstart- your first quantum program
+  href: quantum-WriteAQuantumProgram.md
 - name: Quantum development techniques 
   href: quantum-devguide-1-Intro.md
   items:
@@ -34,6 +34,8 @@
       href: quantum-techniques-5-WorkingWithQubits.md
     - name: Putting it all together
       href: quantum-techniques-6-PuttingItAllTogether.md
+- name: Q# language reference
+  href: quantum-QsharpReference.md
 - name: For more information
   href: quantum-ForMoreInfo.md
 

@@ -1,0 +1,41 @@
+uid: microsoft.quantum.primitive.assertprob
+name: AssertProb
+type: operation
+namespace: microsoft.quantum.primitive
+input:
+  bases: >2-
+
+     A measurement effect to assert the probability of, expressed as a
+     mutli-qubit Pauli operator.
+  qubits: >2-
+
+     A register on which to make the assertion.
+  result: >2-
+
+     An expected result of `Measure(bases, qubits)`.
+  prob: >2-
+
+     The probability with which the given result is expected.
+  msg: >2
+
+     A message to be reported if the assertion fails.
+output: {}
+summary: >2
+
+   Asserts that measuring the given qubits in the given Pauli basis will have the given result
+   with the given probability, within some tolerance.
+example: >2
+
+   ```qsharp
+   using (register = Qubit[1]) {
+       H(register[0]);
+       AssertProb([PauliZ], register, One, 0.5,
+           "Measuring in conjgate basis did not give 50/50 results.");
+   }
+   ```
+seealso: >2-
+
+   - @"microsoft.quantum.primitive.assertprob"
+syntax: >2-
+
+  operation .AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : ()

@@ -1,4 +1,4 @@
-### YamlMime:QFlatNamespace
+### YamlMime:QSharpNamespace
 uid: microsoft.quantum.canon
 name: Microsoft.Quantum.Canon
 summary: "The Canon namespace summary."

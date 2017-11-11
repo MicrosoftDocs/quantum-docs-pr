@@ -1,4 +1,4 @@
-### YamlMime:QFlatType
+### YamlMime:QSharpType
 uid: microsoft.quantum.canon.oracletodiscrete
 name: OracleToDiscrete
 type: operation

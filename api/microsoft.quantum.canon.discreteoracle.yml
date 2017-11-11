@@ -1,4 +1,4 @@
-### YamlMime:QFlatType
+### YamlMime:QSharpType
 uid: microsoft.quantum.canon.discreteoracle
 name: DiscreteOracle
 type: newtype

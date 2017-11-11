@@ -1,3 +1,4 @@
+### YamlMime:QSharpType
 uid: microsoft.quantum.primitive.ccnot
 name: CCNOT
 type: operation

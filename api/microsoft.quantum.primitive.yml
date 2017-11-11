@@ -1,4 +1,4 @@
-### YamlMime:QFlatNamespace
+### YamlMime:QSharpNamespace
 uid: microsoft.quantum.primitive
 name: Microsoft.Quantum.Primitive
 summary: "The Primitive namespace summary."

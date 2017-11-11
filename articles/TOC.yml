@@ -34,6 +34,8 @@
       href: quantum-techniques-5-WorkingWithQubits.md
     - name: Putting it all together
       href: quantum-techniques-6-PuttingItAllTogether.md
+    - name: Going further
+      href: quantum-techniques-7-going-further.md
 - name: Q# language reference
   href: quantum-QsharpReference.md
 - name: For more information

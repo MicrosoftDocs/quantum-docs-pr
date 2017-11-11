@@ -7,7 +7,7 @@
           "**/*.yml"
         ],
         "src": ".",
-        "version": "qflat-preview",
+        "version": "qsharp-preview",
         "dest": "api",
         "exclude": [
           "**/obj/**",

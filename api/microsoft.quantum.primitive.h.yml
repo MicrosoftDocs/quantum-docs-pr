@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.h
+name: H
+type: operation
+namespace: Microsoft.Quantum.Primitive
+input:
+  qubit: >2-
+
+     Qubit to which the gate should be applied.
+output: {}
+summary: >2
+
+   Applies the Hadamard transformation to a single qubit,
+   $$
+       H \mathrel{:=}
+       \frac{1}{\sqrt{2}}
+       \begin{bmatrix}
+           1 & 1 \\
+           1 & -1
+       \end{bmatrix}.
+   $$
+syntax: >2-
+
+  operation .H (qubit : Qubit) : ()

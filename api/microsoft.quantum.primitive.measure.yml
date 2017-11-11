@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.measure
+name: Measure
+type: operation
+namespace: Microsoft.Quantum.Primitive
+input:
+  bases: >2-
+
+     Array of single-qubit Pauli values indicating the tensor product
+     factors on each qubit.
+  qubits: >2
+
+     Register of qubits to be measured.
+output: {}
+summary: >2
+
+   Performs a joint measurement of one or more qubits in the
+   specified Pauli bases, such that the output result is given by
+   the distribution
+   $$
+       \Pr(\texttt{Zero} | \ket{\psi}) =
+           \frac12 \braket{
+               \psi | \boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_N |
+               \psi
+           },
+   $$
+   where $P_i$ is the $i$the element of `bases`, and where
+   $N = \texttt{Length}(\textt{paulis})$.
+   That is, measurement returns a `Result` $d$ such that the eigenvalue of the
+   observed measurement effect is $(-1)^d$.
+remarks: >2-
+
+   If the basis array and qubit array are different lengths, then the
+   operation will fail.
+syntax: >2-
+
+  operation .Measure (bases : Pauli[], qubits : Qubit[]) : Result

@@ -1,0 +1,49 @@
+- name: Reference
+  href: overview.md
+  items: 
+    - name: Microsoft.Quantum.Canon
+      uid: microsoft.quantum.canon
+      items: 
+        - name: ApproximateQFT
+          uid: microsoft.quantum.canon.approximateqft
+        - name: ContinuousOracle
+          uid: microsoft.quantum.canon.continuousoracle
+        - name: DiscreteOracle
+          uid: microsoft.quantum.canon.discreteoracle
+        - name: OracleToDiscrete
+          uid: microsoft.quantum.canon.oracletodiscrete
+        - name: QuantumPhaseEstimation
+          uid: microsoft.quantum.canon.quantumphaseestimation
+        - name: ResultAsInt
+          uid: microsoft.quantum.canon.resultasint
+    - name: Microsoft.Quantum.Primitive
+      uid: microsoft.quantum.primitive
+      items: 
+        - name: Assert
+          uid: microsoft.quantum.primitive.assert
+        - name: assertprob
+          uid: microsoft.quantum.primitive.assertprob
+        - name: ccnot
+          uid: microsoft.quantum.primitive.ccnot
+        - name: cnot
+          uid: microsoft.quantum.primitive.cnot
+        - name: exp
+          uid: microsoft.quantum.primitive.exp
+        - name: expfrac
+          uid: microsoft.quantum.primitive.expfrac
+        - name: h
+          uid: microsoft.quantum.primitive.h
+        - name: log
+          uid: microsoft.quantum.primitive.log
+        - name: m
+          uid: microsoft.quantum.primitive.m
+        - name: measure
+          uid: microsoft.quantum.primitive.measure
+        - name: cnot
+          uid: microsoft.quantum.primitive.cnot
+        - name: cnot
+          uid: microsoft.quantum.primitive.cnot
+        - name: cnot
+          uid: microsoft.quantum.primitive.cnot
+        - name: cnot
+          uid: microsoft.quantum.primitive.cnot    

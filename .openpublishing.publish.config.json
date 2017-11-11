@@ -84,9 +84,9 @@
     },
     {
       "id": "Microsoft.DocAsCode.MarkdigEngine",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
+      "nuget_feed": "https://www.myget.org/F/op-dev/api/v2",
       "path_to_root": "_dependentPackages/MarkdigEngine",
-      "version": "latest"
+      "version": "latest-prerelease"
     }
   ],
   "branch_target_mapping": {},

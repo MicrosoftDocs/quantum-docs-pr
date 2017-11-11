@@ -37,7 +37,7 @@ We describe each in the rest of this section.
 
 The Q# language provides a small set of *primitive types* that can be used throughout operations and functions.
 
-- **`Int`**: Represents integers, e.g.: `2`, `107`, `-5`.
+- **`Int`**: Represents signed integers, e.g.: `2`, `107`, `-5`.
 - **`Double`**: Represents double-precision floating point numbers, e.g.: `0.0`, `-1.3`, `4e-7`.
 - **`Bool`**: Represents a condition which can either be `true` or `false`.
 - **`Pauli`**: Represents one of the Pauli matrices, either `PauliI`, `PauliX`, `PauliY`, or `PauliZ`.
@@ -92,7 +92,7 @@ The subscripts of arrays are zero-based:
 
 ```qsharp
 let arr = [10; 11; 36; 49];
-let ten = arr[0];
+let ten = arr[0]; // 10
 let odds = arr[1..2..4]; // [11; 49]
 ```
 
@@ -134,7 +134,7 @@ let realUnit = Complex(1.0, 0.0);
 let imaginaryUnit = Complex(0.0, 1.0);
 ```
 
-As with ordinary tuple types, the consitent elements of a user-defined type can be accessed using deconstruction.
+As with ordinary tuple types, the constituting elements of a user-defined type can be accessed using deconstruction.
 This lets us write out accessor functions into the structure of a user-defined type, for instance:
 
 ```qsharp

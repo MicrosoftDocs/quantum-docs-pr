@@ -32,8 +32,8 @@
       }
     ],
     "versions": {
-      "qflat-preview": {
-        "dest": "qflat-preview"
+      "qsharp-preview": {
+        "dest": "qsharp-preview"
       }
     },
     "overwrite": [],

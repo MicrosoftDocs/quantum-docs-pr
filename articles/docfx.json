@@ -7,7 +7,7 @@
           "TOC.yml"
         ],
         "src": ".",
-        "version": "qflat-preview",
+        "version": "qsharp-preview",
         "dest": "",
         "exclude": [
           "**/obj/**",

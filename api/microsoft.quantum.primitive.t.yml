@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.t
+name: T
+type: operation
+namespace: Microsoft.Quantum.Primitive
+input:
+  qubit: >2-
+
+     Qubit to which the gate should be applied.
+output: {}
+summary: >2
+
+   Applies the $\pi / 8$ gate to a single qubit,
+   $$
+       T \mathrel{:=}
+       \begin{bmatrix}
+           1 & 0 \\
+           0 & e^{i \pi / 4}
+       \end{bmatrix}.
+   $$
+syntax: >2-
+
+  operation .T (qubit : Qubit) : ()

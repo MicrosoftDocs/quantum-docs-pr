@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.multix
+name: MultiX
+type: operation
+namespace: Microsoft.Quantum.Primitive
+input:
+  qubits: >2
+
+     Register of qubits to which the gate is to be applied.
+output: {}
+summary: >2
+
+   Applies the gate $X \otimes X \otimes \cdots \otimes X$
+   to a register of qubits.
+remarks: >2-
+
+   Equivalent to:
+   ```
+   for (idxQubit in 0..Length(qubits) - 1) {
+       X(qubits[idxQubit]);
+   }
+   ```
+syntax: >2-
+
+  operation .MultiX (qubits : Qubit[]) : ()

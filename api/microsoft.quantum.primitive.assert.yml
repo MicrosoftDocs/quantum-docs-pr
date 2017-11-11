@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.assert
+name: Assert
+type: operation
+namespace: Microsoft.Quantum.Primitive
+input:
+  bases: >2-
+
+     A measurement effect to assert the probability of, expressed as a
+     mutli-qubit Pauli operator.
+  qubits: >2-
+
+     A register on which to make the assertion.
+  result: >2-
+
+     The expected result of `Measure(bases, qubits)`.
+  msg: >2
+
+     A message to be reported if the assertion fails.
+output: {}
+summary: "\n Asserts that measuring the given qubits in the given Pauli basis will\n always have the given result. \n"
+seealso: >2-
+
+   - @"microsoft.quantum.primitive.assertprob"
+syntax: >2-
+
+  operation .Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : ()

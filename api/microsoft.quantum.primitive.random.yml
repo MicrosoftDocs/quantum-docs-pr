@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.random
+name: Random
+type: operation
+namespace: Microsoft.Quantum.Primitive
+input:
+  probs: >2
+
+     An array of floating-point numbers proportional to the probability of
+     selecting each index.
+output: {}
+summary: "\n The random operation takes an array of doubles as input, and returns \n a randomly-selected index into the array as an `Int`. \n The probability of selecting a specific index is proportional to the value \n of the array element at that index. \n Array elements that are equal to zero are ignored and their indices are never \n returned. If any array element is less than zero, \n or if no array element is greater than zero, then the operation fails.\n"
+syntax: >2-
+
+  operation .Random (probs : Double[]) : Int

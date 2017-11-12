@@ -160,8 +160,8 @@ let paulis = Map(IntToPauli, ints);
 
 > [!TIP]
 > Writing generic functions and operations is one place where "tuple-in tuple-out" is a very useful way to think about Q# functions and operations.
-> Since every function takes exactly one input and returns exactly one output, `'T -> 'U` matches *any* Q# function whatsoever.
-> Similarly, every operation is compatible with `'T => 'U`.
+> Since every function takes exactly one input and returns exactly one output, an input of type `'T -> 'U` matches *any* Q# function whatsoever.
+> Similarly, any operation can be passed to an input of type `'T => 'U`.
 
 As a second example, consider the challenge of writing a function that returns the composition of two other functions:
 

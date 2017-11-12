@@ -75,7 +75,7 @@ All of these operations allow both the Controlled and Adjoint functors.
 
 #### Pauli operators ####
 
-The `X` operation implements the Pauli `X` operator.
+The <xref:microsoft.quantum.primitive.x> operation implements the Pauli $X$ operator.
 This is sometimes also known as the `NOT` gate.
 It has signature `(Qubit => () : Adjoint, Controlled)`.
 It corresponds to the single-qubit unitary:
@@ -87,66 +87,101 @@ It corresponds to the single-qubit unitary:
     \end{bmatrix}
 \end{equation}
 
-The `Y` operation implements the Pauli `Y` operator.
+The <xref:microsoft.quantum.primitive.y> operation implements the Pauli $Y$ operator.
 It has signature `(Qubit => () : Adjoint, Controlled)`.
 It corresponds to the single-qubit unitary:
 
-[&nbsp; 0 -_i_<br>&nbsp;&nbsp;&nbsp; _i_&nbsp; 0 ] <!-- This should be done in LaTex -->
+\begin{equation}
+    \begin{bmatrix}
+        0 & -i \\\\ % FIXME: this currently uses the quadwhack hack.
+        i & 0
+    \end{bmatrix}
+\end{equation}
 
-The `Z` operation implements the Pauli `Z` operator.
+The <xref:microsoft.quantum.primitive.z> operation implements the Pauli $Z$ operator.
 It has signature `(Qubit => () : Adjoint, Controlled)`.
 It corresponds to the single-qubit unitary:
 
-[ 1&nbsp; 0<br>&nbsp; 0 -1 ] <!-- This should be done in LaTex -->
+\begin{equation}
+    \begin{bmatrix}
+        1 & 0 \\\\ % FIXME: this currently uses the quadwhack hack.
+        0 & -1
+    \end{bmatrix}
+\end{equation}
 
 #### Other single-qubit Cliffords ####
 
-The `H` operation implements the Hadamard gate.
-This interchanges the Pauli `X` and `Z` axes of the target qubit.
+The <xref:microsoft.quantum.primitive.h> operation implements the Hadamard gate.
+This interchanges the Pauli $X$ and $Z$ axes of the target qubit, such that $H\ket{0} = \ket{+} \mathrel{:=} (\ket{0} + \ket{1}) / \sqrt{2}$ and $H\ket{+} = \ket{0}$.
 It has signature `(Qubit => () : Adjoint, Controlled)`,
 and corresponds to the single-qubit unitary:
 
-1/√2 [ 1&nbsp; 1 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 -1 ]
+\begin{equation}
+    \frac{1}{\sqrt{2}}
+    \begin{bmatrix}
+        1 & 1 \\\\ % FIXME: this currently uses the quadwhack hack.
+        1 & 1
+    \end{bmatrix}
+\end{equation}
 
-The `HY` operation implements a variation of the Hadamard gate, sometimes known as the Y-basis gate.
-This interchanges the Pauli `Y` and `Z` axes of the target qubit.
+The <xref:microsoft.quantum.primitive.hy> operation implements a variation of the Hadamard gate, sometimes known as the $Y$-basis gate.
+This interchanges the Pauli $Y$ and $Z$ axes of the target qubit.
 It has signature `(Qubit => () : Adjoint, Controlled)`,
 and corresponds to the single-qubit unitary:
 
-1/√2 [ 1&nbsp; 1 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _i_&nbsp; -_i_ ]
+\begin{equation}
+    \frac{1}{\sqrt{2}}
+    \begin{bmatrix}
+        1 & 1 \\\\ % FIXME: this currently uses the quadwhack hack.
+        i & -i
+    \end{bmatrix}
+\end{equation}
 
-The `S` operation implements the phase gate.
-This is the square root of the Pauli `Z` operation..
+The <xref:microsoft.quantum.primitive.s> operation implements the phase gate $S$.
+This is the matrix square root of the Pauli $Z$ operation.
+That is, $S^2 = Z$.
 It has signature `(Qubit => () : Adjoint, Controlled)`,
 and corresponds to the single-qubit unitary:
 
-[ 1 0 <br>&nbsp;&nbsp; 0 _i_ ]
+\begin{equation}
+    \begin{bmatrix}
+        1 & 0 \\\\ % FIXME: this currently uses the quadwhack hack.
+        0 & i
+    \end{bmatrix}
+\end{equation}
 
 #### Rotations ####
 
-The `T` operation implements the T or π/8 gate.
-This is the square root of the `S` operation.
+The <xref:microsoft.quantum.primitive.t> operation implements the $T$ gate.
+This is the square root of the <xref:microsoft.quantum.primitive.s> operation, such that $T^2 = S$.
 It has signature `(Qubit => () : Adjoint, Controlled)`,
 and corresponds to the single-qubit unitary 
 
-[ 1&nbsp;&nbsp;&nbsp; 0 <br>&nbsp; 0 exp(_i_ π/4) ]
+\begin{equation}
+    \begin{bmatrix}
+        1 & 0 \\\\ % FIXME: this currently uses the quadwhack hack.
+        0 & e^{i \pi / 4}
+    \end{bmatrix}
+\end{equation}
 
-The `R` operation implements a rotation around a specified Pauli axis.
+The <xref:microsoft.quantum.primitive.r> operation implements a rotation around a specified Pauli axis.
 It has signature `((Pauli, Double, Qubit) => () : Adjoint, Controlled)`,
-and implements the single-qubit unitary exp(-_i_ ϕσ/2),
-ahere σ is the Pauli matrix corresponding to the first argument and ϕ is the second argument.
-> [!Note]
-> The `R` operation divides the input angle by 2 and multiplies it by -1.
-> For Z rotations, this means that the 0 eigenstate is rotated by -ϕ/2 and the
-> 1 eigenstate is rotated by +ϕ/2, so that the 1 eigenstate is rotated by ϕ
-> relative to the 0 eigenstate.
->
-> In particular, this means that `T` and `R(PauliZ, π/8, _)` differ by a global phase
-> of exp(-_i_ π/8).
->
-> Note also that rotating around `PauliI` simply applies a global phase of -ϕ/2.
+and implements the single-qubit unitary $\exp(-i \phi \sigma / 2)$,
+where $\sigma$ is the Pauli matrix corresponding to the first argument and $\phi$ is the second argument.
 
-The `RFrac` operation implements a rotation around a specified Pauli axis.
+> [!NOTE]
+> The <xref:microsoft.quantum.primitive.r> operation divides the input angle by 2 and multiplies it by -1.
+> For $Z$ rotations, this means that the $\ket{0}$ eigenstate is rotated by $-\phi / 2$ and the
+> $\ket{1}$ eigenstate is rotated by $\phi / 2$, so that the $\ket{1}$ eigenstate is rotated by $\phi$
+> relative to the $\ket{0}$ eigenstate.
+>
+> In particular, this means that `T` and `R(PauliZ, PI() / 8, _)` differ by a [global phase](TODO: glossary link)
+> of $e^{-i \pi / 8}$.
+> For this reason, $T$ is sometimes known as the $\frac{\pi}{8}$-gate.
+>
+> Note also that rotating around `PauliI` simply applies a global phase of $\phi / 2$.
+
+The <xref:microsoft.quantum.primitive.rfrac> operation implements a rotation around a specified Pauli axis.
 It differs from `R` in that the rotation angle is specified as a fraction of a
 power of two, rather than as a Double.
 `RFrac` has signature `((Pauli, Int, Int, Qubit) => () : Adjoint, Controlled)`.

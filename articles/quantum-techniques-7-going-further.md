@@ -78,14 +78,92 @@ On actual hardware, where we are constrained by physics, we of course cannot per
 
 ## Generic Operations and Functions ##
 
+> [!TIP]
+> This section assumes some basic familiarity with [generics in C#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/introduction-to-generics), [generics in F#](https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/generics/), [C++ templates](https://docs.microsoft.com/en-us/cpp/cpp/templates-cpp), or similar approaches to metaprogramming in other languages.
+
 Many functions and operations that we might wish to define do not actually heavily rely on the types of their inputs, but rather only implicitly use their types via some other function or operation.
-The most extreme case, of course, is that of qubits, where a Q# program cannot directly rely on the structure of the `Qubit` type, but **must** pass such types to other operations and functions.
-Type-parameterized, or generic, operations and functions formalize this idea by allowing us to specify that an operation or function has an additional *type parameter* in addition to its input.
-Q# uses a notation for 
+For example, consider the *map* concept common to many functional languages; given a function $f(x)$ and a collection of values $\{x_1, x_2, \dots, x_n\}$, map returns a new collection $\{f(x_1), f(x_2), \dots, f(x_n)\}$.
+To implement this in Q#, we can take advantage of that functions are first class:
+
+```qsharp
+function Map(fn : ??? -> ???, values : ???[]) : ???[] {
+    mutable mappedValues = new ???[Length(values)];
+    for (idx in 0..Length(values) - 1) {
+        set mappedValues[idx] = fn(values[idx]);
+    }
+    return mappedValues;
+}
+```
+
+In the above snippet, we have intentionally left the type annotations unspecified to emphasize that this function looks very much the same no matter what actual types we substitute in.
+A map from integers to Paulis, for instance, looks much the same as a map from floating-point numbers to strings:
 
 
+```qsharp
+function MapIntsToPaulis(fn : Int -> Pauli, values : Int[]) : Pauli[] {
+    mutable mappedValues = new Pauli[Length(values)];
+    for (idx in 0..Length(values) - 1) {
+        set mappedValues[idx] = fn(values[idx]);
+    }
+    return mappedValues;
+}
 
-Jumping right in, consider the challenge of writing a function that returns the composition of two other functions:
+function MapDoublesToStrings(fn : Double -> String, values : Double[]) : String[] {
+    mutable mappedValues = new String[Length(values)];
+    for (idx in 0..Length(values) - 1) {
+        set mappedValues[idx] = fn(values[idx]);
+    }
+    return mappedValues;
+}
+```
+
+In principle, we could write a version of `Map` for every pair of types that we encounter, but this introduces a number of difficulties.
+For instance, if we find a bug in `Map`, then we must ensure that the fix is applied uniformly across all versions of `Map`.
+Moreover, if we construct a new tuple or UDT, then we must now also construct a new `Map` to go along with the new type.
+While this is tractable for a small number of such functions, as we collect more and more functions of the same form as `Map`, the cost of introducing new types becomes unreasonably large in fairly short order.
+
+Much of this difficulty results, however, from that the we have not given the compiler the information it needs to recognize how the different versions of `Map` are related.
+Effectively, we want the compiler to treat `Map` as some kind of mathematical function from Q# *types* to Q# functions.
+This notion is formalized by allowing functions and operations to have *type parameters*, as well as their ordinary tuple parameters.
+In the examples above, we wish to think of `Map` as having type parameters `Int, Pauli` in the first case and `Double, String` in the second case.
+For the most part, these type parameters can then be used as though they were ordinary types, provided we use values of each type parameter only indirectly through calling other functions and operations.
+
+> [!NOTE]
+> The most extreme case of indirect dependence is that of qubits, where a Q# program cannot directly rely on the structure of the `Qubit` type, but **must** pass such types to other operations and functions.
+
+Returning to the example above, then, we can see that we need `Map` to have type parameters, one to represent the input to `fn` and one to represent the output from `fn`.
+In Q#, this is written by adding angle brackets (that's `<>`, not brakets $\braket{}$!) after the name of a function or operation in its declaration, and by listing each type parameter.
+The name of each type parameter must start with a tick `'`, indicating that it is a type parameter and not a ordinary type (also known as a *concrete* type).
+For `Map`, we thus write:
+
+```qsharp
+function Map<'Input, 'Output>(fn : 'Input -> 'Output, values : 'Input[]) : 'Output {
+    mutable mappedValues = new 'Output[Length(values)];
+    for (idx in 0..Length(values) - 1) {
+        set mappedValues[idx] = fn(values[idx]);
+    }
+    return mappedValues;
+}
+```
+
+Note that the definition of `Map<'Input, 'Output>` looks extremely similar to the versions we wrote out before.
+The only difference is that we have explicitly informed the compiler that `Map` doesn't directly depend on what `Input` and `'Output` are, but works for any two types by using them indirectly through `fn`.
+Once we have defined `Map<'Input, 'Output>` in this way, we can call it as though it was an ordinary function:
+
+```qsharp
+// Represent Z₀ Z₁ X₂ Y₃ as a list of ints.
+let ints = [3; 3; 1; 2];
+// Here, we assume IntToPauli : Int -> Pauli
+// looks up PauliI by 0, PauliX by 1, so forth.
+let paulis = Map(IntToPauli, ints);
+```
+
+> [!TIP]
+> Writing generic functions and operations is one place where "tuple-in tuple-out" is a very useful way to think about Q# functions and operations.
+> Since every function takes exactly one input and returns exactly one output, `'T -> 'U` matches *any* Q# function whatsoever.
+> Similarly, every operation is compatible with `'T => 'U`.
+
+As a second example, consider the challenge of writing a function that returns the composition of two other functions:
 
 ```qsharp
 function ComposeImpl(outerFn : (B -> C), innerFn : (A -> B), input : A) : C {

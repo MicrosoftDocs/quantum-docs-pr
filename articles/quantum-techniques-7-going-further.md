@@ -23,7 +23,7 @@ ms.topic: article-type-from-white-list
 
 # Going Further #
 
-Now that you've seen how to write interesting quantum programs in Q#, this section goes further by introducing a few more advanced topics that should prove uiseful going forward.
+Now that you've seen how to write interesting quantum programs in Q#, this section goes further by introducing a few more advanced topics that should prove useful going forward.
 
 ## Debugging and Testing Quantum Programs ##
 

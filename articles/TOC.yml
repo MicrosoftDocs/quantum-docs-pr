@@ -37,7 +37,10 @@
 - name: Q# standard libraries
   href: libraries/intro.md
   items:
-    # - 
+    - name: The prelude
+      href: libraries/prelude.md
+    - name: Prelude extensions
+      href: libraries/extensions.md
 - name: Q# language reference
   href: quantum-QsharpReference.md
 - name: For more information

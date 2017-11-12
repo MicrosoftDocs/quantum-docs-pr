@@ -34,6 +34,10 @@
       href: quantum-techniques-5-WorkingWithQubits.md
     - name: Putting it all together
       href: quantum-techniques-6-PuttingItAllTogether.md
+- name: Q# standard libraries
+  href: libraries/intro.md
+  items:
+    # - 
 - name: Q# language reference
   href: quantum-QsharpReference.md
 - name: For more information

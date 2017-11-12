@@ -22,5 +22,5 @@ ms.topic: article-type-from-white-list
 ---
 
 This section details the core concepts used to create quantum programs in Q#, and to interact with those programs from classical .NET applications.
-Most of this section will assume some knowledge of quantum computing concepts, such that you may be interested in reading the @qc_concepts guide first.
+Most of this section will assume some knowledge of quantum computing concepts, such that you may be interested in reading the @microsoft.quantum.concepts guide first.
 Programmers new to classical programming in C# and the .NET framework may be interested in <!-- TODO -->.

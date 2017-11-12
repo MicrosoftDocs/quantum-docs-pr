@@ -126,7 +126,7 @@ Much of this difficulty results, however, from that the we have not given the co
 Effectively, we want the compiler to treat `Map` as some kind of mathematical function from Q# *types* to Q# functions.
 This notion is formalized by allowing functions and operations to have *type parameters*, as well as their ordinary tuple parameters.
 In the examples above, we wish to think of `Map` as having type parameters `Int, Pauli` in the first case and `Double, String` in the second case.
-For the most part, these type parameters can then be used as though they were ordinary types, provided we use values of each type parameter only indirectly through calling other functions and operations.
+For the most part, these type parameters can then be used as though they were ordinary types: we use values of type parameters to make arrays and tuples, call functions and operations, and assign to ordinary or mutable variables.
 
 > [!NOTE]
 > The most extreme case of indirect dependence is that of qubits, where a Q# program cannot directly rely on the structure of the `Qubit` type, but **must** pass such types to other operations and functions.
@@ -147,7 +147,7 @@ function Map<'Input, 'Output>(fn : 'Input -> 'Output, values : 'Input[]) : 'Outp
 ```
 
 Note that the definition of `Map<'Input, 'Output>` looks extremely similar to the versions we wrote out before.
-The only difference is that we have explicitly informed the compiler that `Map` doesn't directly depend on what `Input` and `'Output` are, but works for any two types by using them indirectly through `fn`.
+The only difference is that we have explicitly informed the compiler that `Map` doesn't directly depend on what `'Input` and `'Output` are, but works for any two types by using them indirectly through `fn`.
 Once we have defined `Map<'Input, 'Output>` in this way, we can call it as though it was an ordinary function:
 
 ```qsharp

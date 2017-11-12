@@ -70,7 +70,7 @@ It returns the stopping value for a range.
 
 ### Common single-qubit unitary operations ###
 
-The prelude also defines many common <xref:microsoft.quantum.concepts.qubit#single-qubit-operations>.
+The prelude also defines many common [single-qubit operations](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 All of these operations allow both the Controlled and Adjoint functors.
 
 #### Pauli operators ####
@@ -80,7 +80,12 @@ This is sometimes also known as the `NOT` gate.
 It has signature `(Qubit => () : Adjoint, Controlled)`.
 It corresponds to the single-qubit unitary:
 
-[ 0 1<br>&nbsp; 1 0 ] <!-- This should be done in LaTex -->
+\begin{equation}
+    \begin{bmatrix}
+        0 & 1 \\\\ % FIXME: this currently uses the quadwhack hack.
+        1 & 0
+    \end{bmatrix}
+\end{equation}
 
 The `Y` operation implements the Pauli `Y` operator.
 It has signature `(Qubit => () : Adjoint, Controlled)`.

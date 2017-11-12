@@ -26,8 +26,9 @@ uid: microsoft.quantum.concepts.qubit
 If bits are the fundamental object in classical computing then qubits (quantum bits) are the fundamental object of quantum computing.  
  To understand this correspondence, lets look at the simplest example: a single qubit. 
 
-\subsection{Representing a qubit}
- While a bit, or binary digit, can be either $0$ or $1$, a qubit can be either of these or a quantum superposition of $0$ and $1$.
+## Representing a qubit ##
+
+While a bit, or binary digit, can be either $0$ or $1$, a qubit can be either of these or a quantum superposition of $0$ and $1$.
 The state of a single qubit can be described by a two-dimensional column vector of unit norm. This vector, called the quantum state vector, holds all the information needed to describe the one-qubit quantum system just as a single bit holds all of the information needed to describe the state of a binary variable.
 
 Any two-dimensional column vector of real or complex numbers with norm $1$ represents a qubit. Thus $\begin{bmatrix} \alpha \\ \beta \end{bmatrix}$ represents a qubit if $\alpha$ and $\beta$ are complex numbers satisfying $|\alpha|^2 + |\beta|^2 = 1$. Some examples of valid quantum state vectors representing qubits include $$\begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix}, \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}} \end{bmatrix}, \text{ and }\begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{i}{\sqrt{2}} \end{bmatrix}.$$
@@ -45,7 +46,7 @@ The properties of measurement also mean that the overall sign of the quantum sta
 
 A final important property of measurement is that it does not necessarily damage all quantum state vectors.  If we start with a qubit in the state $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$, which corresponds to the classical state $0$, measuring this state will always yield the outcome $0$ and leave the quantum state unchanged.  In this sense, if we only have classical bits (i.e. qubits that are either $\begin{bmatrix}1 \\ 0 \end{bmatrix}$ or $\begin{bmatrix}0 \\ 1 \end{bmatrix}$ then measurement does not damage the system.  This means that we can replicate classical data and manipulate it on a quantum computer just as one could do on a classical computer.  The ability, however, to store information in both states at once is what elevates quantum computing beyond what is possible classically.
 
-\subsection{Visualizing qubits and transformations using the Bloch sphere}
+## Visualizing qubits and transformations using the Bloch sphere ##
 
 For the more visually inclined, qubits can be pictured in $3$D using the Bloch sphere representation.  The Bloch sphere for gives a way of describing a single qubit quantum state (which is a two dimensional complex vector) as a three dimensional real-valued vector.  This is important because it allows us to visualize single-qubit states and thereby develop reasoning that can be invaluable to develop an understanding of multi-qubit states (where sadly the Bloch sphere representation breaks down).  The bloch sphere can be visualized as follows:
 

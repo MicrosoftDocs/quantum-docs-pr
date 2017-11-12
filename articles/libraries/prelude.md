@@ -70,6 +70,7 @@ It returns the stopping value for a range.
 
 ### Common single-qubit unitary operations ###
 
+The prelude also defines many common <xref:microsoft.quantum.concepts.qubit#single-qubit-operations>.
 All of these operations allow both the Controlled and Adjoint functors.
 
 #### Pauli operators ####

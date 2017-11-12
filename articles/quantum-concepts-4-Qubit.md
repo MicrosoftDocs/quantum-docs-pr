@@ -8,6 +8,7 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
+uid: microsoft.quantum.concepts.qubit
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
@@ -54,7 +55,8 @@ The arrows in this diagram show the direction that the quantum state vector is p
 While thinking about a quantum computation as a sequence of rotations is a powerful intuition, it is challenging to use this intuition to design and describe algorithms.  Q# from this perspective alleviates this issue by providing a language for describing such rotations.
 
 ## Single Qubit Operations
- Quantum computers process data by applying a universal set of quantum gates that can emulate any rotation of the quantum state vector.  This notion of universality is akin to the notion of universality for traditional (i.e. classical) computing where a gate set is considered to be universal if every transformation of the input bits can be performed using a finite length circuit.  
+
+Quantum computers process data by applying a universal set of quantum gates that can emulate any rotation of the quantum state vector.  This notion of universality is akin to the notion of universality for traditional (i.e. classical) computing where a gate set is considered to be universal if every transformation of the input bits can be performed using a finite length circuit.  
 
 In quantum computing, the valid transformations that we are allowed to perform on a quantum bit are unitary transformations and measurement.  The \emph{adjoint operation} or the conjugate transpose is of crucial importance to quantum computing because it is needed to invert quantum transformations.  Q# reflects this by providing methods to automatically compile gate sequences to for the adjoint of a unitary operation, which saves the programmer from having to hand code adjoints in many cases.
 

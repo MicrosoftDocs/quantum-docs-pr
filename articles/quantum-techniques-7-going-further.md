@@ -86,8 +86,8 @@ For example, consider the *map* concept common to many functional languages; giv
 To implement this in Q#, we can take advantage of that functions are first class:
 
 ```qsharp
-function Map(fn : ??? -> ???, values : ???[]) : ???[] {
-    mutable mappedValues = new ???[Length(values)];
+function Map(fn : ★ -> ★, values : ★[]) : ★[] {
+    mutable mappedValues = new ★[Length(values)];
     for (idx in 0..Length(values) - 1) {
         set mappedValues[idx] = fn(values[idx]);
     }

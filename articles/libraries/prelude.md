@@ -43,10 +43,10 @@ All of the functions and operations defined in this portion of the prelude are i
 
 ### Essential classical functions ###
 
-These functions are primarily used to work with the Q# built-in data types Int, Double, and Range.
+These functions are primarily used to work with the Q# built-in data types `Int`, `Double`, and `Range`.
 
 <!-- NB: Random might best be documented elsewhere -- and, indeed, best located in a different namespace -->
-The <xref:microsoft.quantum.primitive.random> function has signature `(Double[] -> Int)`.
+The <xref:microsoft.quantum.primitive.random> operation has signature `(Double[] -> Int)`.
 It takes an array of doubles as input, and returns a randomly-selected index into the array as an `Int`.
 The probability of selecting a specific index is proportional to the value of the array element at that index.
 Array elements that are equal to zero are ignored and their indices are never returned.

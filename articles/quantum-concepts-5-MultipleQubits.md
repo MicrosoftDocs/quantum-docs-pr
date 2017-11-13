@@ -48,13 +48,28 @@ where the operation $\otimes$ is called the tensor product (or Kronecker product
 Note that while we can always take the tensor product of two single-qubit states to form a two-qubit state, not all two-qubit quantum states can be written as the tensor product of two single-qubit states.
 For example, there are no states $\psi=\begin{bmatrix} \alpha \\ \beta \end{bmatrix}$ and $\phi=\begin{bmatrix} \gamma \\ \delta \end{bmatrix}$ such that their tensor product is the state $$\psi\otimes \phi = \begin{bmatrix} 1/\sqrt{2} \\ 0 \\ 0 \\ 1/\sqrt{2} \end{bmatrix}.$$ Such a two-qubit state, which cannot be written as the tensor product of single-qubit states, is called an ``entangled state'' and the two qubits are said to be entangled.  Loosely speaking, because the quantum state cannot be thought of as a tensor product of single qubit states the information that the state holds is not confined to either of the qubits individually.  Rather, the information is stored non-locally in the correlations between the two states.  This non-locality of information is one of the major distinguishing features of quantum computing over classical computing and is essential for a number of quantum protocols including quantum teleportation and quantum error correction.
 
-## Measuring two-qubit states 
-Measuring two-qubit states is very similar to single qubit measurements. Measuring the state $$
-\begin{bmatrix} \alpha_{00} \\ \alpha_{01} \\ \alpha_{10} \\ \alpha_{11} \end{bmatrix}
-$$
-yields $00$ with probability $|\alpha_{00}|^2$, $01$ with probability $|\alpha_{01}|^2$, $10$ with probability $|\alpha_{10}|^2$, and $11$ with probability $|\alpha_{11}|^2$. The variables $\alpha_{00}, \alpha_{01}, \alpha_{10},$ and $\alpha_{11}$ were deliberately named to make this connection clear. As before, after the measurement if the outcome is $00$, the quantum state of the two qubit system has collapsed and is now  $00\equiv \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}$.
+## Measuring two-qubit states ##
+Measuring two-qubit states is very similar to single qubit measurements. Measuring the state
+\begin{equation}
+    \begin{bmatrix}
+        \alpha_{00} \\
+        \alpha_{01} \\
+        \alpha_{10} \\
+        \alpha_{11}
+    \end{bmatrix}
+\end{equation}
+yields $00$ with probability $|\alpha_{00}|^2$, $01$ with probability $|\alpha_{01}|^2$, $10$ with probability $|\alpha_{10}|^2$, and $11$ with probability $|\alpha_{11}|^2$. The variables $\alpha_{00}, \alpha_{01}, \alpha_{10},$ and $\alpha_{11}$ were deliberately named to make this connection clear. As before, after the measurement if the outcome is $00$, the quantum state of the two qubit system has collapsed and is now
+\begin{equation}
+    00 \equiv
+    \begin{bmatrix}
+        1 \\
+        0 \\
+        0 \\
+        0
+    \end{bmatrix}.
+\end{equation}
 
-## Two-qubit Operations
+## Two-qubit Operations ##
 As in the single-qubit case, any unitary transformation is a valid operation on qubits. In general, a unitary transformation on $n$ qubits is a matrix $U$ of size $2^n \times 2^n$ (so that it acts on vectors of size $2^n$), such that $U^{-1} = U^\dagger$.
 
 For example, the CNOT (controlled NOT) gate is a commonly used two-qubit gate and is represented by the following unitary matrix:

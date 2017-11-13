@@ -1,13 +1,13 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Quantum computer trace simulator | Microsoft Docs 
-description: Overview of quantum computer trace simulator
-keywords: Don’t add or edit keywords without consulting your SEO champ.
-author: Vadym
-ms.author: vadym@microsoft.com
-ms.date: 11/12/2017
-ms.topic: article-type-from-white-list
-# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
+description: Overview of quantum computer trace simulator 
+keywords: Don’t add or edit keywords without consulting your SEO champ. 
+author: Vadym 
+ms.author: vadym@microsoft.com 
+ms.date: 11/12/2017 
+ms.topic: article-type-from-white-list 
+# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field. 
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
 
@@ -20,21 +20,29 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
+# Overview 
 
-# Quantum computer trace simulator 
-
-## Overview 
-
-Quantum computer trace simulator executes a quantum program without simulating a state of a quantum computer.  For this reason, trace simulator can execute quantum programs that use thousands of qubits.  It is useful for two main purposes: 
+Quantum computer trace simulator executes a quantum program without simulating a
+state of a quantum computer.  For this reason, trace simulator can execute
+quantum programs that use thousands of qubits.  It is useful for two main
+purposes: 
 
 * Debugging classical code that is a part of quantum programs 
-* Estimating the resources required to run given instance of a quantum program on a quantum computer
+* Estimating the resources required to run given instance of a quantum program
+  on a quantum computer
 
-The trace simulator relies on additional information provided by the user when the measurement must be performed. See Section [Providing probability of measurement outcomes](#providing-probability-of-measurement-outcomes) for more details on this. 
+The trace simulator relies on additional information provided by the user when
+the measurement must be performed. See Section [Providing probability of
+measurement outcomes](#providing-probability-of-measurement-outcomes) for more
+details on this. 
 
-## Providing probability of measurement outcomes
+# Providing probability of measurement outcomes
 
-There are two kinds of measurements that appear in quantum algorithms. The first kind of measurements plays an auxiliary role and the user usually knows the probability of these measurements outcomes. In this case user can write `AssertProb` from `Microsoft.Quantum.Primitive` to express this knowledge. The following example illustrates this: 
+There are two kinds of measurements that appear in quantum algorithms. The first
+kind of measurements plays an auxiliary role and the user usually knows the
+probability of these measurements outcomes. In this case user can write
+`AssertProb` from `Microsoft.Quantum.Primitive` to express this knowledge. The
+following example illustrates this: 
 
 ```qsharp
 operation Teleportation (source : Qubit, target : Qubit) : () {
@@ -48,8 +56,8 @@ operation Teleportation (source : Qubit, target : Qubit) : () {
             CNOT(source, ancilla);
             H(source);
 
-            AssertProb([PauliZ], [source], Zero, 0.5, "All outcomes of the Bell measurement must be equally likely", 1e-5);
-            AssertProb([PauliZ], [ancilla], Zero, 0.5, "All outcomes of the Bell measurement must be equally likely", 1e-5);
+            AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+            AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
             if (M(source) == One)  { Z(target); X(source); }
             if (M(ancilla) == One) { X(target); X(ancilla); }
@@ -58,22 +66,35 @@ operation Teleportation (source : Qubit, target : Qubit) : () {
 }
 ```
 
-When the trace simulator executes `AssertProb` it will record that measuring `PauliZ` on `source` and `ancilla` should given outcome `Zero` with probability 0.5. When the simulator executes `M` later, it will find the recorded values of the outcomes probabilities and `M` will return `Zero` or `One` with probability 0.5. When the same code is executed on a simulator that keeps track of the quantum state, such simulator will check that that provided probabilities in `AssertProb` are correct. 
+When the trace simulator executes `AssertProb` it will record that measuring
+`PauliZ` on `source` and `ancilla` should given outcome `Zero` with probability
+0.5. When the simulator executes `M` later, it will find the recorded values of
+the outcomes probabilities and `M` will return `Zero` or `One` with probability
+0.5. When the same code is executed on a simulator that keeps track of the
+quantum state, such simulator will check that that provided probabilities in
+`AssertProb` are correct. 
 
-The second kind of measurements is used to read out the answer of the quantum algorithm and user usually does not know the probability of such measurements outcomes. Quantum computer trace simulator provides a function `ForceMeasure` in namespace `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators` to force the simulator take the measurement outcome preferred by the user. 
+The second kind of measurements is used to read out the answer of the quantum
+algorithm and user usually does not know the probability of such measurements
+outcomes. Quantum computer trace simulator provides a function `ForceMeasure` in
+namespace `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators` to force
+the simulator take the measurement outcome preferred by the user. 
 
-`[TODO: add reference to Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.ForceMeasure qsharp API doc.]`
+`[TODO: add reference to
+Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.ForceMeasure qsharp
+API doc.]`
 
-## Running you program with quantum computer trace simulator 
+# Running you program with quantum computer trace simulator 
 
-Quantum computer trace simulator is just another simulator. C# driver program for using it is very similar to the one for Quantum Simulator: 
+Quantum computer trace simulator is just another simulator. C# driver program
+for using it is very similar to the one for Quantum Simulator: 
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.Simulation.Simulators;
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 
-namespace Quantum.Teleport
+namespace Quantum.MyProgram
 {
     class Driver
     {
@@ -88,19 +109,30 @@ namespace Quantum.Teleport
 }
 ```
 
-Note that if there is at least one measurement not annotated using `AssertProb` or `ForceMeasure` the simulator will throw `UnconstraintMeasurementException` from `Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime` namespace. 
+Note that if there is at least one measurement not annotated using `AssertProb`
+or `ForceMeasure` the simulator will throw `UnconstraintMeasurementException`
+from `Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime` namespace. 
 
-`[TODO: add reference to Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.UnconstraintMeasurementException csharp API doc.]`
+`[TODO: add reference to
+Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.UnconstraintMeasurementException
+csharp API doc.]`
 
-In addition to just running quantum programs the trace simulator comes with five components for detecting bugs in the programs and performing quantum program resource estimates: 
+In addition to just running quantum programs the trace simulator comes with five
+components for detecting bugs in the programs and performing quantum program
+resource estimates: 
 
 * Distinct Inputs Checker `[TODO: Add reference to the documentation file here]`
-* Invalidated Qubits Use Checker `[TODO: Add reference to the documentation file here]`
+* Invalidated Qubits Use Checker `[TODO: Add reference to the documentation file
+  here]`
 * Gate Counter `[TODO: Add reference to the documentation file here]`
 * Circuit Depth Counter `[TODO: Add reference to the documentation file here]`
 * Circuit Width Counter `[TODO: Add reference to the documentation file here]`
 
-Each of these components can be enabled by setting appropriate flags in `QCTraceSimulatorConfiguration`. More details about using each 
-of this components are provided in the corresponding reference files.
+Each of these components can be enabled by setting appropriate flags in
+`QCTraceSimulatorConfiguration`. More details about using each of this
+components are provided in the corresponding reference files.
 
-`[TODO: add reference to Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration csharp API doc. ]`
+`[TODO: add reference to
+Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration
+csharp API doc. ]`
+

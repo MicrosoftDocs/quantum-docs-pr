@@ -152,22 +152,30 @@ and corresponds to the single-qubit unitary:
 
 #### Rotations ####
 
-The <xref:microsoft.quantum.primitive.t> operation implements the $T$ gate.
-This is the square root of the <xref:microsoft.quantum.primitive.s> operation, such that $T^2 = S$.
-It has signature `(Qubit => () : Adjoint, Controlled)`,
-and corresponds to the single-qubit unitary 
+In addition to the Pauli and Clifford operations above, the Q# prelude provides a variety of ways of expressing rotations.
+As described in <xref:microsoft.quantum.concepts>, the ability to rotate is critical to quantum algorithms.
 
+We start by recalling that we can express any single-qubit operation using the $H$ and $T$ gates, where $H$ is the [Hadamard operation](microsoft.quantum.primitive.h), and where 
 \begin{equation}
+    T \mathrel{:=}
     \begin{bmatrix}
-        1 & 0 \\\\ % FIXME: this currently uses the quadwhack hack.
+        1 & 0 \\\\ % FIXME: this currently uses the quad back whack hack.
         0 & e^{i \pi / 4}
     \end{bmatrix}
 \end{equation}
+This is the square root of the <xref:microsoft.quantum.primitive.s> operation, such that $T^2 = S$.
+The $T$ gate is in turn implemented by the <xref:microsoft.quantum.primitive.t> operation, and has signature `(Qubit => () : Adjoint, Controlled)`, indicating that it is a unitary operation on a single-qubit.
 
-The <xref:microsoft.quantum.primitive.r> operation implements a rotation around a specified Pauli axis.
-It has signature `((Pauli, Double, Qubit) => () : Adjoint, Controlled)`,
-and implements the single-qubit unitary $\exp(-i \phi \sigma / 2)$,
-where $\sigma$ is the Pauli matrix corresponding to the first argument and $\phi$ is the second argument.
+Even though this is in principle sufficient to describe any arbitrary single-qubit operation, different target machines may have more efficient representations for rotations about Pauli operators, such that the prelude includes a variety of ways to convienently express such rotations.
+The most basic of these is the <xref:microsoft.quantum.primitive.r> operation, which implements a rotation around a specified Pauli axis,
+\begin{equation}
+    R(\sigma, \phi) \mathrel{:=}
+    \exp(-i \phi \sigma / 2)
+\end{equation},
+where $\sigma$ is a Pauli operator, $\phi$ is an angle, and where $\exp$ represents the matrix exponential.
+It has signature `((Pauli, Double, Qubit) => () : Adjoint, Controlled)`, where the first two parts of the input represent the classical arguments $\sigma$ and $\phi$ needed to specify the unitary operator $R(\sigma, \phi)$.
+We can partially apply $\sigma$ and $\phi$ to obtain an operation whose type is that of a single-qubit unitary.
+For example, `R(PauliZ, PI() / 4, _)` has type `(Qubit => () : Adjoint, Controlled)`.
 
 > [!NOTE]
 > The <xref:microsoft.quantum.primitive.r> operation divides the input angle by 2 and multiplies it by -1.
@@ -185,25 +193,25 @@ The <xref:microsoft.quantum.primitive.rfrac> operation implements a rotation aro
 It differs from `R` in that the rotation angle is specified as a fraction of a
 power of two, rather than as a Double.
 `RFrac` has signature `((Pauli, Int, Int, Qubit) => () : Adjoint, Controlled)`.
-It implements the single-qubit unitary exp(_i_ πkσ/2^n), where σ is the Pauli matrix
-corresponding to the first argument, k is the second argument, and n is the third argument.
+It implements the single-qubit unitary $\exp(i \pi k \sigma / 2^n)$, where $\sigma$ is the Pauli matrix
+corresponding to the first argument, $k$ is the second argument, and $n$ is the third argument.
 `RFrac(_,k,n,_)` is the same as `R(_,-πk/2^n,_)`; note that the angle is the *negative*
 of the fraction.
 
-The `Rx` operation implements a rotation around the Pauli X axis.
+The <xref:microsoft.quantum.primitive.rx> operation implements a rotation around the Pauli $X$ axis.
 It has signature `((Double, Qubit) => () : Adjoint, Controlled)`.
-`Rx(_,_)` is the same as `R(PauliX,_,_)`.
+`Rx(_, _)` is the same as `R(PauliX, _, _)`.
 
-The `Ry` operation implements a rotation around the Pauli Y axis.
+The <xref:microsoft.quantum.primitive.ry>` operation implements a rotation around the Pauli $Y$ axis.
 It has signature `((Double, Qubit) => () : Adjoint, Controlled)`.
-`Ry(_,_)` is the same as `R(PauliY,_,_)`.
+`Ry(_, _)` is the same as `R(PauliY,_ , _)`.
 
-The `Rz` operation implements a rotation around the Pauli Z axis.
+The <xref:microsoft.quantum.primitive.rz> operation implements a rotation around the Pauli $Z$ axis.
 It has signature `((Double, Qubit) => () : Adjoint, Controlled)`.
-`Rz(_,_)` is the same as `R(PauliZ,_,_)`.
+`Rz(_, _)` is the same as `R(PauliZ, _, _)`.
 
-The `R1` operation implements a rotation by the given amount around the
-Z=1 eigenstate.
+The `R1` operation implements a rotation by the given amount around $\ket{1}, the
+$-1$ eigenstate of $Z$.
 It has signature `((Double, Qubit) => () : Adjoint, Controlled)`.
 `R1(phi,_)` is the same as `R(PauliZ,phi,_)` followed by `R(PauliI,-phi,_)`.
 

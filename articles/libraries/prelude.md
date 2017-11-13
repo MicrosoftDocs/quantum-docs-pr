@@ -170,8 +170,8 @@ Even though this is in principle sufficient to describe any arbitrary single-qub
 The most basic of these is the <xref:microsoft.quantum.primitive.r> operation, which implements a rotation around a specified Pauli axis,
 \begin{equation}
     R(\sigma, \phi) \mathrel{:=}
-    \exp(-i \phi \sigma / 2)
-\end{equation},
+    \exp(-i \phi \sigma / 2),
+\end{equation}
 where $\sigma$ is a Pauli operator, $\phi$ is an angle, and where $\exp$ represents the matrix exponential.
 It has signature `((Pauli, Double, Qubit) => () : Adjoint, Controlled)`, where the first two parts of the input represent the classical arguments $\sigma$ and $\phi$ needed to specify the unitary operator $R(\sigma, \phi)$.
 We can partially apply $\sigma$ and $\phi$ to obtain an operation whose type is that of a single-qubit unitary.
@@ -189,10 +189,10 @@ For example, `R(PauliZ, PI() / 4, _)` has type `(Qubit => () : Adjoint, Controll
 >
 > Note also that rotating around `PauliI` simply applies a global phase of $\phi / 2$.
 
-The <xref:microsoft.quantum.primitive.rfrac> operation implements a rotation around a specified Pauli axis.
-It differs from `R` in that the rotation angle is specified as a fraction of a
-power of two, rather than as a Double.
-`RFrac` has signature `((Pauli, Int, Int, Qubit) => () : Adjoint, Controlled)`.
+Within quantum algorithms, it is often useful to express rotations as dyadic fractions, such that $\phi = \pi k / 2^n$ for some $k \in \mathbb{Z}$ and $n \in \mathbb{N}$.
+The <xref:microsoft.quantum.primitive.rfrac> operation implements a rotation around a specified Pauli axis using this convention.
+It differs from <xref:microsoft.quantum.primitive.r> in that the rotation angle is specified as two inputs of type `Int`, interpreted as a dyadic fraction.
+Thus, `RFrac` has signature `((Pauli, Int, Int, Qubit) => () : Adjoint, Controlled)`.
 It implements the single-qubit unitary $\exp(i \pi k \sigma / 2^n)$, where $\sigma$ is the Pauli matrix
 corresponding to the first argument, $k$ is the second argument, and $n$ is the third argument.
 `RFrac(_,k,n,_)` is the same as `R(_,-πk/2^n,_)`; note that the angle is the *negative*
@@ -210,41 +210,59 @@ The <xref:microsoft.quantum.primitive.rz> operation implements a rotation around
 It has signature `((Double, Qubit) => () : Adjoint, Controlled)`.
 `Rz(_, _)` is the same as `R(PauliZ, _, _)`.
 
-The `R1` operation implements a rotation by the given amount around $\ket{1}, the
+The <xref:microsoft.quantum.primitive.r1> operation implements a rotation by the given amount around $\ket{1}, the
 $-1$ eigenstate of $Z$.
 It has signature `((Double, Qubit) => () : Adjoint, Controlled)`.
 `R1(phi,_)` is the same as `R(PauliZ,phi,_)` followed by `R(PauliI,-phi,_)`.
 
-The `R1Frac` operation implements a fractional rotation by the given amount around the
+The <xref:microsoft.quantum.primitive.r1frac> operation implements a fractional rotation by the given amount around the
 Z=1 eigenstate.
 It has signature `((Int,Int, Qubit) => () : Adjoint, Controlled)`.
 `R1Frac(k,n,_)` is the same as `RFrac(PauliZ,-k.n+1,_)` followed by `RFrac(PauliI,k,n+1,_)`.
 
-The `Exp` operation performs a rotation based on a tensor product of Pauli matrices.
-It has signature `((Pauli[], Double, Qubit[]) => () : Adjoint, Controlled)`.
-
-The `ExpFrac` operation performs a fractional rotation based on a tensor product of Pauli matrices.
-It has signature `((Pauli[], Int, Int, Qubit[]) => () : Adjoint, Controlled)`.
-
 #### Multi-qubit operations ####
 
-The `CNOT` operation performs a standard controlled-`NOT` gate.
-It has signature `((Qubit, Qubit) => () : Adjoint, Controlled)`.
+In addition to the single-qubit operations above, the prelude also defines several multi-qubit operations.
+
+First, the <xref:microsoft.quantum.primitive.cnot> operation performs a standard controlled-`NOT` gate,
+\begin{equation}
+    \operatorname{CNOT} \mathrel{:=}
+    \begin{bmatrix}
+        1 & 0 & 0 & 0 \\\\
+        0 & 1 & 0 & 0 \\\\
+        0 & 0 & 0 & 1 \\\\
+        0 & 0 & 1 & 0
+    \end{bmatrix}.
+\end{equation}
+It has signature `((Qubit, Qubit) => () : Adjoint, Controlled)`, representing that $\operatorname{CNOT}$ acts unitarily on two individual qubits.
 `CNOT(q1,q2)` is the same as `Controlled(X)([q1], q2)`.
+Since the `Controlled` functor allows for controlling on a register, we use the array literal `[q1]` to indicate that we want only the one control.
 
-The `CCNOT` operation performs the Toffoli, or doubly-controlled NOT, gate.
+The <xref:microsoft.quantum.primitive.ccnot> operation performs doubly-controlled NOT gate, sometimes also known as the Toffoli gate.
 It has signature `((Qubit, Qubit, Qubit) => () : Adjoint, Controlled)`.
-`CCNOT(q1,q2,q3)` is the same as `Controlled(X)([q1;q2], q3)`.
+`CCNOT(q1, q2, q3)` is the same as `Controlled(X)([q1; q2], q3)`.
 
-The `SWAP` operation swaps the quantum states of two qubits.
-That is, it implements the unitary matrix:
-
-[ 1 0 0 0<br>&nbsp; 0 0 1 0<br>&nbsp; 0 1 0 0<br>&nbsp; 0 0 0 1 ]
-
+The <xref:microsoft.quantum.primitive.swap> operation swaps the quantum states of two qubits.
+That is, it implements the unitary matrix
+\begin{equation}
+    \operatorname{SWAP} \mathrel{:=}
+    \begin{bmatrix}
+        1 & 0 & 0 & 0 \\\\
+        0 & 0 & 1 & 0 \\\\
+        0 & 1 & 0 & 0 \\\\
+        0 & 0 & 0 & 1
+    \end{bmatrix}.
+\end{equation}
 It has signature `((Qubit, Qubit) => () : Adjoint, Controlled)`.
 `SWAP(q1,q2)` is equivalent to `CNOT(q1, q2)` followed by `CNOT(q2, q1)` and then `CNOT(q1, q2)`.
 
-The `MultiX` operation performs a tensor product of Pauli X gates to the array of qubits.
+> [!NOTE]
+> The SWAP gate is *not* the same as rearranging the elements of a variable with type `Qubit[]`.
+> Applying `SWAP(q1, q2)` causes a change to the state of the qubits referred to by `q1` and `q2`, while `let swappedRegister = [q2; q1]` only affects how we refer to those qubits.
+> Moreover, `(Controlled SWAP)([q0], q1, q2)` allows for `SWAP` to be conditioned on the state of a third qubit, which we cannot represent by rearranging elements.
+> The controlled-SWAP gate is powerful enough to include all classical computation.
+
+The <xref:microsoft.quantum.primitive.multix> operation performs a tensor product of Pauli $X$ gates to an array of qubits.
 It has signature `(Qubit[] => () : Adjoint, Controlled)`.
 `MultiX(qs)` is equivalent to:
 
@@ -255,24 +273,55 @@ for (index in 0..length(qs)-1)
 }
 ```
 
+> [!TIP]
+> Later, in the canon, we will see how to express `MultiX` as `ApplyToEach(X, _)`, allowing for generalizing to other operations.
+
+Finally, the prelude provides two operations for representing exponentials of multi-qubit Pauli operators.
+The <xref:microsoft.quantum.primitive.exp> operation performs a rotation based on a tensor product of Pauli matrices, as represented by the multi-qubit unitary
+\begin{equation}
+    \operatorname{Exp}(\vec{\sigma}, \phi) \mathrel{:=}
+    \exp\left(i \phi \sigma_0 \otimes \sigma_1 \otimes \cdots \otimes \sigma_n \right),
+\end{equation}
+where $\vec{\sigma} = (\sigma_0, \sigma_1, \dots, \sigma_n)$ is a sequence of single-qubit Pauli operators, and where $\phi$ is an angle.
+The `Exp` rotation represents $\vec{\sigma}$ as an array of `Pauli` elements, such that it has signature `((Pauli[], Double, Qubit[]) => () : Adjoint, Controlled)`.
+
+The <xref:microsoft.quantum.primitive.expfrac> operation performs the same rotation, using the dyadic fraction notation discussed above.
+It has signature `((Pauli[], Int, Int, Qubit[]) => () : Adjoint, Controlled)`.
+
+> [!WARNING]
+> Exponentials of the tensor product of Pauli operators are not the same as tensor products of the exponentials of Pauli operators.
+> That is, $e^{i (Z \otimes Z) \phi} \ne e^{i Z \phi} \otimes e^{i Z \phi}$.
+
 ### Measurements ###
 
-When measuring, the +1 eigenvalue of the operator being measured
-corresponds to a `Zero` result, and the -1 eigenvalue to a `One` result.
+When measuring, the +1 eigenvalue of the operator being measured corresponds to a `Zero` result, and the -1 eigenvalue to a `One` result.
+
+> [!NOTE]
+> While this convention might seem odd, it has two very nice advantages.
+> First, observing the outcome $\ket{0}$ is represented by the `Result` value `Zero`, while observing $\ket{1}$ corresponds to `One`.
+> Second, we can write out that the eigenvalue $\lambda$ corresponding to a result $r$ is $\lambda = (-1)^r$.
 
 Measurement operations support neither the `Adjoint` nor the `Controlled` functor.
 
-The `Measure` operation performs a joint measurement of one or more qubits
-in the specified product of Pauli operators.
+The <xref:microsoft.quantum.primitive.measusre> operation performs a joint measurement of one or more qubits in the specified product of Pauli operators.
 If the Pauli array and qubit array are different lengths,
 then the operation fails.
 `Measure` has signature `((Pauli[], Qubit[]) => Result)`.
 
-The `M` operation measures the Pauli Z operator on a single qubit.
-It has signature `(Qubit => Result)`.
+Note that a joint measurement is not the same as measuring each qubit individually.
+For example, consider the state $\ket{11} = \ket{1} \otimes \ket{1} = X\otimes X \ket{00}$.
+Measuring $Z_0$ and $Z_1$ each individually, we get the results $r_0 = 1$ and $r_1 = 1$.
+Measuring $Z_0 Z_1$, however, we get the single result $r_{\textrm{joint}} = 0$, representing that the pairity of $\ket{11}$ is positive.
+Put differently, $(-1)^{r_0 + r_1} = (-1)^r_{\textrm{joint}})$.
+Critically, since we *only* learn the parity from this measurement, any quantum information represented in the superposition between the two two-qubit states of positive parity, $\ket{00}$ and $\ket{11}$, is preserved.
+This property will be essential later, as we discuss error correction <!-- TODO: link -->.
+
+For convienence, the prelude also provides two other operations for measusring qubits.
+First, since performing single-qubit measurements is quite common, the prelude defines a shorthand for this case.
+The <xref:microsoft.quantum.primitive.m> operation measures the Pauli $Z$ operator on a single qubit, and has signature `(Qubit => Result)`.
 `M(q)` is equivalent to `Measure([PauliZ], [q])`.
 
-The `MultiM` measures the Pauli Z operator separately on each of an array of qubits.
+The <xref:microsoft.quantum.primitive.multim> measures the Pauli $Z$ operator *separately* on each of an array of qubits, returning the *array* of `Result` values obtained for each qubit.
 In some cases this can be optimized. 
 It has signature (`Qubit[] => Result[])`.
 `MultiM(qs)` is equivalent to:
@@ -288,13 +337,18 @@ return rs;
 
 ### Debugging ###
 
-The `Assert` function asserts that measuring the given qubits in the
+<!-- TODO: link these sentences to §Going Further and the upcoming § on Choi–Jamiłkowski testing. -->
+The final functions defined by the prelude provide useful tools for debugging and testing quantum programs.
+These will later be the basis for higher-level correctness testing in the canon.
+
+First, the `Assert` function asserts that measuring the given qubits in the
 given Pauli basis will always have the given result.
 If the assertion fails, the execution ends by calling `fail` with the
 given message.
 By default, this operation is not implemented; simulators that can support it
 should provide an implementation that performs runtime checking.
 `Assert` has signature `((Pauli[], Qubit[], Result, String) -> ())`.
+Since `Assert` is a function with an empty tuple as its output type, no effects from having called `Assert` are observable within a Q# program.
 
 The `AssertProb` function asserts that measuring the given qubits in the
 given Pauli basis will have the given result with the given probability,
@@ -306,6 +360,7 @@ By default, this operation is not implemented; simulators that can support it
 should provide an implementation that performs runtime checking.
 `AssertProb` has signature `((Pauli[], Qubit[], Result, Double, String, Double) -> ())`.
 
-The `Message` function logs a message in a machine-dependent way.
+Finally, the `Message` function logs a message in a machine-dependent way.
 By default, this writes the string to the console.
-`Message` has signature `((String) -> ())`.
+`Message` has signature `((String) -> ())`, again representing that emitting a debug log message cannot be observed from within Q#.
+

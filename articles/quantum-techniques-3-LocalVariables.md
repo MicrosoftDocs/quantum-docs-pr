@@ -45,7 +45,7 @@ Variables defined in this way are local to a particular scope, such as the body 
 
 As an alternative to creating a variable with `let`, the `mutable` keyword will create a special mutable variable that can be changed after it is initially created by using the `set` keyword.
 If a mutable variable is an array type, then the elements of that array can also be changed.
-This is very useful, for instance, for creating arrays progmatically:
+This is very useful, for instance, for creating arrays programmatically:
 
 ```qsharp
 function Squares(nSquares : Int) : Int[] {

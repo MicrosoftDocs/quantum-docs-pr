@@ -35,12 +35,12 @@ v_n
 \end{bmatrix}.$$
 The norm of a vector $v$ is defined as $\sqrt{\sum_i |v_i|^2}$. A vector is said to be of unit norm (or alternatively it is called a unit vector) if its norm is $1$. The adjoint of a vector $v$ is denoted $v^\dagger$ and is defined to be the following row vector
 $$
-\begin{bmatrix}x_1 \\ \vdots \\ x_n \end{bmatrix}^\dagger = \begin{bmatrix}x_1^* & \cdots & x_n^* \end{bmatrix}.
+\begin{bmatrix}v_1 \\ \vdots \\ v_n \end{bmatrix}^\dagger = \begin{bmatrix}v_1^* & \cdots & v_n^* \end{bmatrix}.
 $$
 
-The most common way to multiply two vectors together is through the inner product, otherwise known as a dot product.  The inner product gives the projection of one vector onto another and is invaluable in describing how to express one vector as a sum of other simpler vectors.  The inner product between $\phi$ and $\psi$, denoted $\left\langle \phi, \psi\right\rangle$ is defined as
+The most common way to multiply two vectors together is through the inner product, also known as a dot product.  The inner product gives the projection of one vector onto another and is invaluable in describing how to express one vector as a sum of other simpler vectors.  The inner product between $u$ and $v$, denoted $\left\langle u, v\right\rangle$ is defined as
 $$
-\left\langle \begin{bmatrix}\phi_1 \\\vdots\\ \phi_{n} \end{bmatrix},\begin{bmatrix}\psi_1 \\\vdots\\ \psi_{n} \end{bmatrix} \right\rangle = \phi^\dagger \psi=\phi_1^*\psi_1 + \cdots + \phi_n^* \psi_n.
+\left\langle \begin{bmatrix}u_1 \\\vdots\\ u_{n} \end{bmatrix},\begin{bmatrix} v_1 \\\vdots\\ v_{n} \end{bmatrix} \right\rangle = u^\dagger v=u_1^*v_1 + \cdots + u_n^* v_n.
 $$
 This notation also allows the norm of a vector $v$ to be written as $\sqrt{\langle v, v\rangle}$.
 
@@ -76,6 +76,7 @@ M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}\\
 
 Note that a vector of dimension $n$ is simply a matrix of size $n \times 1$. Just like with vectors, we can multiply a matrix with a number $c$ to obtain a new matrix where every entry is multiplied with $c$, and we can add two matrices of the same size to produce a new matrix whose entries are the sum of the respective entries of the two matrices. 
 
+##Matrix multiplication and tensor products
 We can also multiply two matrices $M$ of dimension $m\times n$ and $N$ of dimension $n \times p$ to get a new matrix $P$ of dimension $m \times p$ as follows:
 $$
 \begin{bmatrix}
@@ -174,13 +175,17 @@ $$
 \begin{bmatrix} 1 \\ 0 \end{bmatrix}^{\otimes 1} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\qquad \begin{bmatrix} 1 \\ 0 \end{bmatrix}^{\otimes 2} = \begin{bmatrix} 1 \\ 0\\0\\0 \end{bmatrix}\qquad X^{\otimes 2}= \begin{bmatrix} 0 &0&0&1 \\ 0 &0&1&0 \\0 &1&0&0\\1 &0&0&0\end{bmatrix}.
 $$
 
-#Matrix Exponentials
+##Eigenvalues and Eigenvector
+
+A vector $v$ is an eigenvector of a matrix $M$ if $Mv = cv$ for some number $c$. In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number.
+
+##Matrix Exponentials
 A matrix exponential can also be defined in exact analogy to the exponential function.  The matrix exponential of a matrix $A$ can be expressed as
 $$
 e^A=\boldone + A + \frac{A^2}{2!}+\frac{A^3}{3!}+\cdots.
 $$
 This is important to us because quantum mechanical time evolution is described by a unitary matrix of the form $e^{iB}$ for Hermitian matrix $B$.  For this reason, performing matrix exponentials is a fundamental part of quantum computing and as such Q# has intrinsic routines for describing these operations.
-There are many ways in practice to compute a matrix exponential on a classical computer, and in general numerically approximating such an exponential it is fraught with peril.  See [Moler, Cleve, and Charles Van Loan. "Nineteen dubious ways to compute the exponential of a matrix." SIAM review 20.4 (1978): 801-836] for more information about the challenges involved.  
+There are many ways in practice to compute a matrix exponential on a classical computer, and in general numerically approximating such an exponential it is fraught with peril.  See [Cleve Moler and Charles Van Loan. "Nineteen dubious ways to compute the exponential of a matrix." SIAM review 20.4 (1978): 801-836] for more information about the challenges involved.  
 
 The easiest way to understand how to compute the exponential of a matrix is through the eigenvalues and eigenvectors of that matrix.  Specifically, the eigenvalue decomposition says that for every $N\times N$ matrix $A$ there exists a unitary matrix $U$ and a diagonal matrix $D$ such that $A=U^\dagger D U$.  Because of the properties of unitarity we have that $A^2 = U^\dagger D^2 U$ and similarly for any power $p$ $A^p = U^\dagger D^p U$.  If we substitute this into the operator definition of the operator exponential we obtain
 $$

@@ -21,7 +21,8 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Dirac notation and Pauli Measurements
+# Advanced topics
+## Dirac Notation
 
 While column vector notation is ubiquitous in linear algebra, it is often cumbersome in quantum computing especially when dealing with multiple qubits.  The two main reasons for this are that when we define $\psi$ to be a vector it is not explicitly clear whether $\psi$ is a row or a column vector.  Thus if $\phi$ and $\psi$ are vectors then it is not clear whether $\phi \psi$ is defined because the shapes of $\phi$ and $\psi$ may be unclear in the context.  Apart from ambiguity about the shapes of vectors expressing even expressing simple vectors using the linear algebraic notation introduced earlier can be very cumbersome. For example, if we wish to describe an $n$-qubit state where each qubit takes the value $0$ then we would formally express the state as $$\begin{bmatrix}1 \\ 0 \end{bmatrix}\otimes \cdots \otimes\begin{bmatrix}1 \\ 0 \end{bmatrix}. $$  Of course evaluating this tensor product is impractical because the vector lies in an exponentially large space and so this notation is in fact the best description of the state that can be given using the previous notation.  Dirac notation solves these issues by developing a new language to fit the precise needs of quantum mechanics.  For this reason, we recommend not looking at any of these examples in this section as a rigid prescription of how to describe quantum states but rather encourage the reader to view these as suggestions that can be used to concisely express quantum ideas.
 
@@ -198,3 +199,21 @@ Another way of looking at measuring tensor products of Paulis such as $X\otimes 
 Arbitrary Pauli operators such as $X\otimes Y \otimes Z \otimes \openone$ can also be measured.  All such tensor products of Pauli operators have only two eigenvalues $\pm 1$ and both eigenspaces constitute half-spaces of the entire vector space.  Thus they coincide with the requirements stated above.  
 
 In Q#, such measurements return $j$ if the measurement yields a result in the eigenspace of sign $(-1)^j$.  Having this as a built in feature in Q# is helpful because measuring such operators requires long chains of controlled-not gates and basis transformations to describe the diagonalizing $U$ gate needed to express the operation as a tensor product of $Z$ and $\openone$.  By simply being able to specify that you wish to do one of these pre-defined measurements, you don't need to worry about how to transform your basis such that a computational basis measurement provides the necessary information.  Q# handles all the necessary basis transformations for you automatically.
+
+## The No Cloning Theorem
+Quantum information is powerful.  It enables us to do amazing things such as factor numbers exponentially faster than the best known classical algorithms, or simulate correlated electron systems that require exponential cost to simulate accurately.  However, there are limitations to the power of quantum computing.  One such limitation is given by the No-Cloning Theorem.
+
+The No-Cloning Theorem is aptly named.  It disallows cloning of generic quantum states by a quantum computer.  The proof of the theorem is remarkably straight forward.  Assume that you have a unitary $U$ such that
+$$
+U\ket{\psi}\ket{0}=\ket{\psi}\ket{\psi},
+$$
+for any state $\ket{\psi}$.  Because $U$ is unitary, we must have that for any second state $\ket{\phi}$ that
+$$
+U\left[\frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right)\right]=\frac{1}{\sqrt{2}}\left(\ket{\phi}\ket{\phi}+\ket{\psi}\ket{\psi}\right)\ne \left(\frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right)\right)\otimes\left(\frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right)\right).
+$$
+This shows that you cannot have a linear transformation that acts a universal cloner of quantum states without either knowing what the states are that are input or without making errors in the cloning.
+
+The No-Cloning Theorem is important for qualitative understanding of quantum computing because if you could clone quantum states inexpensively then you would be granted with a near-magical ability to learn from quantum states.  Indeed, you could violate Heisenberg's vaunted uncertainty principle with this.  Alternatively, you could use an optimal cloner to take a single sample from a complex quantum distribution and learn everything you could possibly learn about that distribution from just one sample.  This would be like someone telling you that they flipped a coin and got heads and you responding with "ah the distribution of that coin must be Bernoulli with $p=0.512643\ldots$!"  Without strong prior information, such a statement would be non-sensical.  Similarly, without prior information we cannot perfectly clone a quantum state just as we cannot prepare an ensemble of such coins without knowing $p$.
+
+Information is not free in quantum computing.  Each qubit measured gives a bit of information, and the No-Cloning theorem shows that there is no backdoor that can be exploited to get around the fundamental tradeoff between information gained about the system and the disturbance invoked upon it.
+

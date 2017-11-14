@@ -1,6 +1,6 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
+title: Setting up the Q# development environment 
 description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
@@ -21,34 +21,35 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Setting Up Development Environment
+# Setting up the Q# development environment
 
-## Prerequisites
+This section specifies how to create a Q# development environment and validate it by running the teleport sample program.
 
-To use Quantum Development Kit, you need [Visual Studio](https://www.visualstudio.com/) 2017 (any edition).
+## Checking prerequisites
 
-## Installing Quantum Developer Kit
+Confirm that you have [Visual Studio](https://www.visualstudio.com/) 2017 installed.
 
-Download and install [Microsoft Quantum Developer Kit](https://solidrepo.blob.core.windows.net/alpha/latest/QbVSIX.vsix) Visual Studio extension. 
-Note that some browsers (IE and Edge) might save this file as `QbVSIX.zip` during download, which makes it impossible to install. 
-In this case, rename it back to `QbVSIX.vsix` or use a different browser (Firefox or Chrome) to open download link.
+## Creating the Q# development environment 
 
-## Configuring NuGet feed
+1. Download and install [Microsoft Quantum Developer Kit](https://solidrepo.blob.core.windows.net/alpha/latest/QbVSIX.vsix) Visual Studio extension. 
+Some browsers (IE and Edge) will save this file as `QbVSIX.zip` during download. In this case, rename it back to `QbVSIX.vsix` prior to installation.
 
-Configure Visual Studio to use QuArC alpha NuGet feed  
+2. Configure Visual Studio to use QuArC alpha NuGet feed  
 <https://quarcsw.pkgs.visualstudio.com/_packaging/alpha/nuget/v3/index.json>, as described
-[here](https://www.visualstudio.com/en-us/docs/package/nuget/consume).
+in [Consume NuGet packages in Visual Studio](https://www.visualstudio.com/en-us/docs/package/nuget/consume).
 
-## Validating Setup
+## Validating your setup
 
-* Clone [Libraries](https://quarcsw.visualstudio.com/_git/Libraries) repository.
+1. Clone [Libraries](https://quarcsw.visualstudio.com/_git/Libraries) repository.
 
-* Open `Libraries\QbLibs\QbLibs.sln` solution.
+2. Open `Libraries\QbLibs\QbLibs.sln` solution.
 
-* Build the solution. If needed, restore NuGet packages manually first.
+3. Build the solution. If needed, restore NuGet packages manually first.
 
-* To run teleport example: right click on `TeleportationExample` project, left click "Set as Startup Project", run it (Ctrl-F5). Output should look like this:
-
+4. Validate your Q# environment by running the teleport example: 
+   1. Right click on `TeleportationExample` project in the Libraries solution, and left click "Set as Startup Project".
+   2. Run the solution. (Ctrl-F5). The output should look like this:
+<!---
         Round 0:        Sent True,      got True.
         Teleportation successful!!
         
@@ -72,5 +73,17 @@ Configure Visual Studio to use QuArC alpha NuGet feed
         
         Round 7:        Sent False,     got False.
         Teleportation successful!!
+--->
+
+>```
+>        Round 0:        Sent True,      got True. Teleportation successful!!
+>        Round 1:        Sent False,     got False. Teleportation successful!!
+>        Round 2:        Sent False,     got False. Teleportation successful!!
+>        Round 3:        Sent True,      got True. Teleportation successful!!
+>        Round 4:        Sent True,      got True. Teleportation successful!!
+>        Round 5:        Sent False,     got False. Teleportation successful!!
+>        Round 6:        Sent True,      got True. Teleportation successful!!
+>        Round 7:        Sent False,     got False. Teleportation successful!!
+>```
 
 * To run chemistry example: right click on `H2SimulationExample` project, left click "Set as Startup Project", run it (Ctrl-F5).

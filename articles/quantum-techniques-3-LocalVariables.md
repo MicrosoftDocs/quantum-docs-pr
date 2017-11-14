@@ -57,6 +57,10 @@ function Squares(nSquares : Int) : Int[] {
 }
 ```
 
+The example above also illustrates another important feature of mutability in Q#: arrays bound to mutable local variables are themselves mutable.
+As we will see in more detail when discussing [array types](xref:quantum-techniques-4-typemodel#array-types), this is not true of ordinary variables.
+Informally, collections descending from immutable variables are immutable, while collections descending from mutable variables are mutable.
+
 No operation or function calling `Squares` can observe that the local variable `squares` was defined to be mutable; mutability is an implementation detail that callers do not need to worry about.
 This provides an important way to isolate mutability inside specialized functions and operations.
 In particular, even though an operation which uses a mutable variable cannot use `adjoint auto`, an operation can call a function which uses mutability.

@@ -34,6 +34,27 @@
       href: quantum-techniques-5-WorkingWithQubits.md
     - name: Putting it all together
       href: quantum-techniques-6-PuttingItAllTogether.md
+- name: Q# standard libraries
+  href: libraries/intro.md
+  items:
+    - name: The prelude
+      href: libraries/prelude.md
+    - name: Prelude extensions
+      href: libraries/extensions.md
+    - name: Higher-order control flow
+      href: libraries/control-flow.md
+    - name: Data structures and modeling
+      href: libraries/data-structures.md
+    - name: Characterization
+      href: libraries/characterization.md
+    - name: Quantum algorithms
+      href: libraries/algorithms.md
+    - name: Error correction
+      href: libraries/error-correction.md
+    - name: Applications
+      href: libraries/applications.md
+    - name: Testing and debugging
+      href: libraries/testing.md
 - name: Q# language reference
   href: quantum-QsharpReference.md
 - name: For more information

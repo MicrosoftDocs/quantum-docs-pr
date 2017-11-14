@@ -43,6 +43,7 @@ The Q# language provides a small set of *primitive types* that can be used throu
 - **`Pauli`**: Represents one of the Pauli matrices, either `PauliI`, `PauliX`, `PauliY`, or `PauliZ`.
 - **`Result`**: Represents the result of a measurement in the computational basis, either `Zero` for $\ket{0}$ or `One` for $\ket{1}$.
 - **`Range`**: Represents a consecutive sequence of integers, denoted by `start..step..stop`. E.g: `1..2..7` represents the sequence $\{1, 3, 5, 7\}$.
+- **`String`**: Represents a message to be reported in the case of an error or diagnostic event.
 
 In addition, Q# defines a primitive type `Qubit` to model an opaque reference to a qubit within a target machine.
 A value of type `Qubit` cannot be directly used in Q#, but can be passed to operations defined by a target machine (such as gates and measurements) in order to do interesting things.

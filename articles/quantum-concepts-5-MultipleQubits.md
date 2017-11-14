@@ -54,6 +54,40 @@ Measuring two-qubit states is very similar to single qubit measurements. Measuri
 $$
 yields $00$ with probability $|\alpha_{00}|^2$, $01$ with probability $|\alpha_{01}|^2$, $10$ with probability $|\alpha_{10}|^2$, and $11$ with probability $|\alpha_{11}|^2$. The variables $\alpha_{00}, \alpha_{01}, \alpha_{10},$ and $\alpha_{11}$ were deliberately named to make this connection clear. As before, after the measurement if the outcome is $00$, the quantum state of the two qubit system has collapsed and is now  $00\equiv \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}$.
 
+Unlike the single qubit case, you don't need to measure every qubit in quantum computers with two or more qubits.  In cases where you measure a single qubit, the impacts of measurement are subtlely different because they do not collapse the entire state to a computational basis state but rather only one sub-system.  In such cases, measuring only one qubit only collapses one of the subsystems but not all of them.  To see this consider measuring the first qubit of the following state, which is formed by applying the Hadamard transform on two qubits initially set in the "0" state:
+$$
+\frac{1}{2}\begin{bmatrix}1\\1\\1\\1\end{bmatrix}\mapsto \begin{cases}\text{outcome }=0 & \frac{1}{\sqrt{2}}\begin{bmatrix}1\\1\\0\\0 \end{bmatrix}\\\text{outcome }=1 & \frac{1}{\sqrt{2}}\begin{bmatrix}0\\0\\1\\1 \end{bmatrix}\\ \end{cases}.
+$$
+Both outcomes have $50\%$ probability of occurring.  This happens because the first two components in the quantum state vector correspond to $00$ and $01$ and so if the first qubit is measured to be $1$ then both are inconsistent with the measurement and as such are omitted from the quantum state.  Similarly, if the first qubit is measured to be zero only the bit strings $10$ and $11$ are consistent with this outcome and hence the remainder of the quantum state is possible.  The outcome being $50\%$ probability for both can be intuited from the fact that the initial quantum state vector is invariant under permutation of the components vector.
+
+The mathematical rule for measuring the first, or second qubit is simple.  If we let $e_k$ be the $k^{\rm th}$ computational basis vector and let $S$ be the set of all $e_k$ such that the qubit in question takes the value $1$ for that value of $k$.  For example, if we are interested in measuring the first qubit then $S$ would consist of $e_2\equiv 10$ and $e_3\equiv 11$.  Similarly, if we are interested in the second qubit $S$ would consist of $e_1\equiv 01$ and $e_3 \equiv 11$.  Then the probability of measuring that qubit to be $1$ is for state vector $\psi$
+$$
+P(\text{outcome}=1)= \sum_{k \text{ in the set } S}\psi^\dagger e_k e_k^\dagger \psi.
+$$
+Since each qubit measurement can only yield $0$ or $1$, the probability of measuring $0$ is simply $1-P(\text{outcome}=1)$.  This is why we only explicitly give a formula for the probability of measuring $1$.
+
+The action that such a measurement has on the state can be expressed mathematically as
+$$
+\psi \mapsto \frac{\sum_{k \text{ in the set } S} e_k e_k^\dagger \psi}{\sqrt{P(\text{outcome}=1)}}.
+$$
+The cautious reader may worry about what happens when the probability of the measurement is zero.  While the resultant state is technically undefined in this case, we never need to worry about such eventualities because the probability is zero!
+
+
+If we take $\psi$ to be the uniform state vector given above and are interested in measuring the first qubit then 
+$$
+P(\text{measurement of first qubit}=1) = (\psi^\dagger e_2)(e_2^\dagger \psi)+(\psi^\dagger e_3)(e_3^\dagger \psi)=|e_2^\dagger \psi|^2+|e_3^\dagger \psi|^2.
+$$
+Note that this is just the sum of two probabilities that would be expected for measuring the results $10$ and $11$ were all the qubits to be measured.
+For our example, this evaluates to
+$$
+\frac{1}{4}\left|\begin{bmatrix}0&0&1&0\end{bmatrix}\begin{bmatrix}1\\1\\1\\1\end{bmatrix} \right|^2+\frac{1}{4}\left|\begin{bmatrix}0&0&0&1\end{bmatrix}\begin{bmatrix}1\\1\\1\\1\end{bmatrix} \right|^2=\frac{1}{2}.
+$$
+which perfectly matches what our intuition tells us the probability should be.  Similarly, the state can be written as
+\begin{equation}
+\frac{\frac{e_2}{2}+\frac{e_3}{2}}{\sqrt{\frac{1}{2}}}=\frac{1}{\sqrt{2}}\begin{bmatrix} 0\\0\\1\\1\end{bmatrix}
+\end{equation}
+again in accordance with our intuition.
+
 ## Two-qubit Operations
 As in the single-qubit case, any unitary transformation is a valid operation on qubits. In general, a unitary transformation on $n$ qubits is a matrix $U$ of size $2^n \times 2^n$ (so that it acts on vectors of size $2^n$), such that $U^{-1} = U^\dagger$.
 
@@ -98,6 +132,7 @@ Quantum gates work in exactly the same way and it can be shown, as mentioned abo
 $$
 (X \otimes \text{CNOT}_{12}\otimes \openone\otimes \openone \otimes \openone) \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\equiv 0011001.
 $$
+
 
 Finally, although new gates needed to be added to our gate set to achieve universal quantum computing for two qubit quantum computers, no new gates need to be introduced in the multi-qubit case.  The gates $H$, $T$ and CNOT form a universal gate set on many qubits because any general unitary transformation can be broken into a series of two qubit rotations.  We then can leverage the theory developed for the two-qubit case and use it again here when we have many qubits.
 

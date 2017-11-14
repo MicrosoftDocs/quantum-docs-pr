@@ -84,13 +84,30 @@ $$|\langle - |\psi\rangle|^2= \left|\frac{1}{\sqrt{2}}(\langle 0| - \langle 1|)(
 |0\rangle \langle 0| = \begin{bmatrix}1\\0 \end{bmatrix}\begin{bmatrix}1&0 \end{bmatrix}= \begin{bmatrix}1 &0\\0 &0\end{bmatrix} \qquad |1\rangle \langle 1| = \begin{bmatrix}0\\1 \end{bmatrix}\begin{bmatrix}0&1 \end{bmatrix}= \begin{bmatrix}0 &0\\0 &1\end{bmatrix}.
   $$
   Such ketbras are often called projectors because they project a quantum state onto a fixed value.  Since these operations are not unitary (and do not even preserve the norm of a vector), it should come as no surprise that a quantum computer cannot deterministically apply a projector.  However projectors do a beautiful job of describing the action that measurement has on a quantum state.  For example, if we measure a state $|\psi \rangle$ to be $0$ then the resulting transformation that the state experiences as a result of the measurement is
-  $$|\psi \rangle \rightarrow \frac{(|0\rangle \langle 0|)|\psi\rangle}{\langle 0|\psi\rangle}= |0\rangle,$$
+  $$|\psi \rangle \rightarrow \frac{(|0\rangle \langle 0|)|\psi\rangle}{|\langle 0|\psi\rangle|}= |0\rangle,$$
   as one expects if you were to measure the state and find it to be $|0\rangle$.  Again to reiterate, such projectors cannot be applied on a state in a quantum computer deterministically.  Instead, they can at best be applied randomly with the result $|0\rangle$ appearing with some fixed probability.  The probability of such a measurement succeeding can be written as the expectation value of the quantum projector in the state
   $$
 \langle \psi| (|0\rangle \langle 0|)|\psi\rangle = |\langle \psi|0\rangle|^2,
   $$
   which illustrates that projectors simply give a new way of expressing the measurement process.
 
+If instead we consider measuring the first qubit to be $1$ of a multi-qubit state then we can also describe this process conveniently using projectors and Dirac notation:
+$$
+P(\text{outcome of measuring first qubit = 1})= \langle\psi|\left(|1\rangle\langle{1}|\otimes \openone^{\otimes n-1}\right) |\psi\rangle.
+$$
+Here the identity matrix can be conveniently written in Dirac notation as
+$$
+\openone = |0\rangle \langle 0|+|1\rangle \langle 1|= \begin{bmatrix}1&0\\0&1 \end{bmatrix}.
+$$
+For the case where there are two-qubits the projector can be expanded as $|1\rangle \langle 1| \otimes \openone = |1\rangle\langle 1 \otimes (|0\rangle \langle 0|+|1\rangle \langle 1|)= |10\rangle\langle 10| + |11\rangle\langle 11|$.  We can then see that this is consistent with the discussion from the discussion about measurement likelihoods for multiqubit states using column-vector notation:
+$$
+P(\text{outcome of measuring first qubit = 1})= \psi^\dagger (e_{10}e_{10}^\dagger + e_{11}e_{11}^\dagger)\psi = |e_{10}^\dagger \psi|^2 + |e_{11}^\dagger \psi|^2,
+$$
+which matches our discussion from the multi-qubit measurement section.  The generalization though of this result to the multi-qubit case is slightly more straight forward to express using Dirac notation than column-vector notation, but it is entirely equivalent to the previous treatment.
+
   The other such operator that is useful to express in this language is a state operator.  A state operator for a quantum state vector takes the form $\rho = |\psi\rangle \langle \psi|$.  This concept of representing the state as a matrix, rather than a vector, is often convenient because it gives a convenient way of representing probability calculations but also allows one to describe both statistical uncertainty as well as quantum uncertainty within the same formalism.  These general quantum state operators, rather than vectors, are ubiquitous in some areas of quantum computing but are not necessary to understand the basics of the field.  For the interested reader, we recommend reading one of the reference books provided in the further reading section.
 
-A final point that is worth raising about quantum notation.  While at the onset of this document we mentioned that the quantum state is the fundamental object of quantum computing.  It may then come as a surprise that in Q# there is no notion of a quantum state.  Instead, all states are described only by the circuit used to prepare them.  The previous example is an excellent illustration of this.  Rather than expressing a uniform superposition over every quantum bit string in a register, we can represent the result as $H^{\otimes n} |{0}\rangle$.  This exponentially shorter description of the state not only has the advantage that we can classically reason about it but it also because it concisely gives the operations needed to be propagated through the software stack to implement the algorithm.  For this reason, Q# is designed to emit gate sequences rather than quantum states; however, at a theoretical level the two perspectives are equivalent.
+  A final point that is worth raising about quantum notation.  While at the onset of this document we mentioned that the quantum state is the fundamental object of quantum computing.  It may then come as a surprise that in Q# there is no notion of a quantum state.  Instead, all states are described only by the circuit used to prepare them.  The previous example is an excellent illustration of this.  Rather than expressing a uniform superposition over every quantum bit string in a register, we can represent the result as $H^{\otimes n} |{0}\rangle$.  This exponentially shorter description of the state not only has the advantage that we can classically reason about it but it also because it concisely gives the operations needed to be propagated through the software stack to implement the algorithm.  For this reason, Q# is designed to emit gate sequences rather than quantum states; however, at a theoretical level the two perspectives are equivalent.
+
+  In all the previous discussion, we focused on computational basis measurements but there are other common measurements that occur in quantum computing that can be inconvenient from a notational perspective to express in terms of computational basis measurements.  The most common set of these measurements are Pauli-measurements.  In such cases, it is common to discuss measuring a Pauli-operator which in general is an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$ and so forth.
+  

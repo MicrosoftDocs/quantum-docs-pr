@@ -1,6 +1,6 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Primitive Operations Counter | Quantum computer trace simulator | Microsoft Docs 
+title: Depth Counter | Quantum computer trace simulator | Microsoft Docs 
 description: Overview of quantum computer trace simulator 
 #keywords: Don’t add or edit keywords without consulting your SEO champ. 
 author: Vadym 
@@ -22,7 +22,7 @@ ms.topic: article-type-from-white-list
 
 # Overview
 
-Primitive Depth Counter counts the of depth of
+Depth Counter counts the depth of
 every operations invoked in quantum program. All operations from
 `Microsoft.Quantum.Primitive` are expressed in terms of single qubit rotations,
 T gate, single qubit Clifford gates, CNOT gate and measurements of multi-qubit
@@ -54,7 +54,7 @@ we can use the following C# code:
 //using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
 config.useDepthCounter = true;
-QCTraceSimulator sim = new QCTraceSimulator(config);
+var sim = new QCTraceSimulator(config);
 var res = CCNOTDriver.Run(sim).Result;
 
 double tDepth = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(DepthCounter.Metrics.Depth);

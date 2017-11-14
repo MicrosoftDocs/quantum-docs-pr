@@ -173,3 +173,21 @@ A final notation surrounding tensor products that is useful is that, for any vec
 $$
 \begin{bmatrix} 1 \\ 0 \end{bmatrix}^{\otimes 1} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\qquad \begin{bmatrix} 1 \\ 0 \end{bmatrix}^{\otimes 2} = \begin{bmatrix} 1 \\ 0\\0\\0 \end{bmatrix}\qquad X^{\otimes 2}= \begin{bmatrix} 0 &0&0&1 \\ 0 &0&1&0 \\0 &1&0&0\\1 &0&0&0\end{bmatrix}.
 $$
+
+#Matrix Exponentials
+A matrix exponential can also be defined in exact analogy to the exponential function.  The matrix exponential of a matrix $A$ can be expressed as
+$$
+e^A=\openone + A + \frac{A^2}{2!}+\frac{A^3}{3!}+\cdots.
+$$
+This is important to us because quantum mechanical time evolution is described by a unitary matrix of the form $e^{iB}$ for Hermitian matrix $B$.  For this reason, performing matrix exponentials is a fundamental part of quantum computing and as such Q# has intrinsic routines for describing these operations.
+There are many ways in practice to compute a matrix exponential on a classical computer, and in general numerically approximating such an exponential it is fraught with peril.  See [Moler, Cleve, and Charles Van Loan. "Nineteen dubious ways to compute the exponential of a matrix." SIAM review 20.4 (1978): 801-836] for more information about the challenges involved.  
+
+The easiest way to understand how to compute the exponential of a matrix is through the eigenvalues and eigenvectors of that matrix.  Specifically, the eigenvalue decomposition says that for every $N\times N$ matrix $A$ there exists a unitary matrix $U$ and a diagonal matrix $D$ such that $A=U^\dagger D U$.  Because of the properties of unitarity we have that $A^2 = U^\dagger D^2 U$ and similarly for any power $p$ $A^p = U^\dagger D^p U$.  If we substitute this into the operator definition of the operator exponential we obtain
+$$
+e^A= U^\dagger \left(\openone +D +\frac{D^2}{2!}+\cdots \right)U= U^\dagger \begin{bmatrix}\exp(D_{11}) & 0 &\cdots &0\\ 0 & \exp(D_{22})&\cdots& 0\\ \vdots &\vdots &\ddots &\vdots\\ 0&0&\cdots&\exp(D_{NN}) \end{bmatrix} U.
+$$
+In other words, if you transform to the eigenbasis of the matrix $A$ then computing the matrix exponential is equivalent to computing the ordinary exponential of the eigenvalues of the matrix.  As many of the operations in quantum computing involve performing matrix exponentials, this trick of transforming into the eigenbasis of a matrix to simplify performing the operator exponential appears frequently and is the basis behind many quantum algorithms such as Trotter-Suzuki based quantum simulation methods.
+
+Another useful property is if $B$ is both unitary and Hermitian, ie $B^2=\openone$, then it can be seen by applying this rule to the above expansion of the operator exponential and grouping the $\openone$ and the $B$ terms that for any real valued $x$
+$$e^{iBx}=\cos(x)\openone + iB\sin(x).$$
+This trick is especially useful because it allows us to reason about the actions that matrix exponentials have, even if the dimension of $B$ is exponentially large, for the special case when $B$ is both unitary and Hermitian. 

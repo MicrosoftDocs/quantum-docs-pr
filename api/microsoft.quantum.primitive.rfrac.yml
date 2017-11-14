@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.rfrac
+name: RFrac
+type: operation
+namespace: Microsoft.Quantum.Primitive
+input:
+  pauli: >2-
+
+     Pauli operator to be exponentiated to form the rotation.
+  numerator: >2-
+
+     Numerator in the dyadic fraction representation of the angle
+     by which the qubit is to be rotated.
+  power: >2-
+
+     Power of two specifying the denominator of the angle by which
+     the qubit is to be rotated.
+  qubit: >2
+
+     Qubit to which the gate should be applied.
+output: {}
+summary: >2
+
+   Applies a rotation about the given Pauli axis by an angle specified
+   as a dyadic fraction,
+   $$
+       R_{\mu}(n, k) \mathrel{:=}
+       e^{i \pi n \sigma_{\mu} / 2^k),
+   $$
+   where $\mu \in \{I, X, Y, Z\}$.
+
+   > [!WARNING]
+   > This operation uses the **opposite** sign convention from
+   > @"microsoft.quantum.primitive.r".
+remarks: >2-
+
+   Equivalent to:
+   ```qsharp
+   // Suppose Pi() is a function that returns an approximation of π.
+   R(pauli, -Pi() * Float(numerator) / Float(2 ^ (power - 1)), qubit);
+   ```
+syntax: >2-
+
+  operation .RFrac (pauli : Pauli, numerator : Int, power : Int, qubit : Qubit) : ()

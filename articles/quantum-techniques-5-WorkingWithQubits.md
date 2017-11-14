@@ -25,7 +25,7 @@ ms.topic: article-type-from-white-list
 
 Having now seen a variety of different parts of the Q# language, let us get into the thick of it and see how to use qubits themselves.
 
-## Alocating Qubits ##
+## Allocating Qubits ##
 
 First, to obtain a qubit that we can use in Q#, we *allocate* qubits within a `using` block:
 
@@ -51,7 +51,7 @@ We will see these operations in more detail in <!-- TODO: link to primitive oper
 
 First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the primitive operations `X`, `Y`, and `Z`, each of which as type `(Qubit => () : Adjoint, Controlled)`.
 As described in @qc_concepts <!-- TODO: more specific link -->, we can think of $X$ and hence of `X` as a bit-flip operation or NOT gate.
-This lets us prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $\vec{s}$:
+This lets us prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : () {
@@ -104,9 +104,9 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : () {
 ## Measurements ##
 
 Using the `Measure` operation, which is a built in primitive gate, we can extract classical information from an object of type `Qubit` and assign a classical value as a result, which has a reserved type `Result`, indicating that the result is no longer a quantum state. 
-The input to `Measure` is a Pauli axis on the Bloch sphere, representated by an object of type `Pauli` (i.e., for instance `XPauli`) and an object of type `Qubit`. 
+The input to `Measure` is a Pauli axis on the Bloch sphere, representated by an object of type `Pauli` (i.e., for instance `PauliX`) and an object of type `Qubit`. 
 
-A simple example is the following operation which creates one qubits in the $\ket{0}$ state, then applies a Hadamard gate ``H`` to it and then measures the result in the `ZPauli` basis. 
+A simple example is the following operation which creates one qubits in the $\ket{0}$ state, then applies a Hadamard gate ``H`` to it and then measures the result in the `PauliZ` basis. 
 
 ```qsharp
 operation Measurement () : Result {

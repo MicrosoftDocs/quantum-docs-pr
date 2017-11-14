@@ -55,9 +55,8 @@ config.usePrimitiveOperationsCounter = true;
 var sim = new QCTraceSimulator(config);
 var res = CCXDriver.Run(sim).Result;
 
-string metric = PrimitiveOperationsGroups.T.ToString(); // this is just "T"
-double tCount = sim.GetMetric<Primitive.CCNOT, CCXDriver>(metric);
-double tCountAll = sim.GetMetric<CCXDriver>(metric);
+double tCountAll = sim.GetMetric<CCXDriver>(PrimitiveOperationsGroupsNames.T);
+double tCount = sim.GetMetric<Primitive.CCNOT, CCXDriver>(PrimitiveOperationsGroupsNames.T);
 Debug.Assert(tCount == 7.0);
 Debug.Assert(tCountAll == 8.0);
 ```
@@ -65,8 +64,8 @@ Debug.Assert(tCountAll == 8.0);
 First part of the program executes CCXDriver. In the second part we use method
 `QCTraceSimulator.GetMetric` to get number of T gates executed by `CCXDriver`: 
 
-```csharp 
-double tCountAll = sim.GetMetric<CCXDriver>(tCountMetric);
+```csharp
+double tCountAll = sim.GetMetric<CCXDriver>(PrimitiveOperationsGroupsNames.T);
 ```
 
 When `GetMetric` is called with two type parameters it returns the value of the
@@ -74,8 +73,7 @@ metric associated with a given call graph edge. In our example operation
 `Primitive.CCNOT` is called within `CCXDriver` and therefore call graph contains
 edge `<Primitive.CCNOT,CCXDriver>`. 
 
-To get number of CNOT gates used we can add the following two lines
+To get number of CNOT gates used we can add the following line:
 ```csharp
-string metricCX = PrimitiveOperationsGroups.CX.ToString();
-double cxCount = sim.GetMetric<Primitive.CCNOT, CCXDriver>(metricCX);
+double cxCount = sim.GetMetric<Primitive.CCNOT, CCXDriver>(PrimitiveOperationsGroupsNames.CX);
 ```

@@ -202,7 +202,7 @@ The <xref:microsoft.quantum.primitive.rx> operation implements a rotation around
 It has signature `((Double, Qubit) => () : Adjoint, Controlled)`.
 `Rx(_, _)` is the same as `R(PauliX, _, _)`.
 
-The <xref:microsoft.quantum.primitive.ry>` operation implements a rotation around the Pauli $Y$ axis.
+The <xref:microsoft.quantum.primitive.ry> operation implements a rotation around the Pauli $Y$ axis.
 It has signature `((Double, Qubit) => () : Adjoint, Controlled)`.
 `Ry(_, _)` is the same as `R(PauliY,_ , _)`.
 
@@ -235,7 +235,7 @@ First, the <xref:microsoft.quantum.primitive.cnot> operation performs a standard
     \end{bmatrix}.
 \end{equation}
 It has signature `((Qubit, Qubit) => () : Adjoint, Controlled)`, representing that $\operatorname{CNOT}$ acts unitarily on two individual qubits.
-`CNOT(q1,q2)` is the same as `Controlled(X)([q1], q2)`.
+`CNOT(q1, q2)` is the same as `Controlled(X)([q1], q2)`.
 Since the `Controlled` functor allows for controlling on a register, we use the array literal `[q1]` to indicate that we want only the one control.
 
 The <xref:microsoft.quantum.primitive.ccnot> operation performs doubly-controlled NOT gate, sometimes also known as the Toffoli gate.
@@ -260,7 +260,7 @@ It has signature `((Qubit, Qubit) => () : Adjoint, Controlled)`.
 > The SWAP gate is *not* the same as rearranging the elements of a variable with type `Qubit[]`.
 > Applying `SWAP(q1, q2)` causes a change to the state of the qubits referred to by `q1` and `q2`, while `let swappedRegister = [q2; q1]` only affects how we refer to those qubits.
 > Moreover, `(Controlled SWAP)([q0], q1, q2)` allows for `SWAP` to be conditioned on the state of a third qubit, which we cannot represent by rearranging elements.
-> The controlled-SWAP gate is powerful enough to include all classical computation.
+> The controlled-SWAP gate, also known as the Fredikin gate, is powerful enough to include all classical computation.
 
 The <xref:microsoft.quantum.primitive.multix> operation performs a tensor product of Pauli $X$ gates to an array of qubits.
 It has signature `(Qubit[] => () : Adjoint, Controlled)`.

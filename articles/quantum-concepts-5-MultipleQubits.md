@@ -131,7 +131,7 @@ a\ b\\c\ d
 \begin{bmatrix}
 e\ f\\g\ h
 \end{bmatrix}$.
-Thus we can form two-qubit gates by taking the tensor product of single-qubit gates we know. Some examples of two qubit gates include $H \otimes H$, $X \otimes \openone$, and $X \otimes Z$.
+Thus we can form two-qubit gates by taking the tensor product of single-qubit gates we know. Some examples of two qubit gates include $H \otimes H$, $X \otimes \boldone$, and $X \otimes Z$.
 
 Note that while any two single-qubit gates define a two-qubit gate by taking their tensor product, the converse is not true. Not all two-qubit gates can be written as the tensor product of single-qubit gates. One example of such a gate is the CNOT gate. Such a gate is called an entangling gate.
 
@@ -145,7 +145,7 @@ $$
 $$
 Quantum gates work in exactly the same way and it can be shown, as mentioned above.  For example, if we wished to apply the $X$ gate to the first qubit and then perform a CNOT between the second and third qubits we would express this transformation as
 $$
-(X \otimes \text{CNOT}_{12}\otimes \openone\otimes \openone \otimes \openone) \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\equiv 0011001.
+(X \otimes \text{CNOT}_{12}\otimes \boldone\otimes \boldone \otimes \boldone) \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\equiv 0011001.
 $$
 
 

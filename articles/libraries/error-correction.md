@@ -41,7 +41,8 @@ Recall that each measurement of a Pauli operator checks the eigenvalue of that t
 Note that $Z_0 Z_1 \ket{000} = \ket{000}$ and that $Z_0 Z_1 \ket{111} = \ket{111}$, so that we conclude that this measurement does the same thing to both encoded states.
 On the other hand, $Z_0 Z_1 \ket{100} = - \ket{100}$ and $Z_0 Z_1 \ket{011} = -\ket{011}$, so the result of measuring $Z_0 Z_1$ reveals useful information about which error occured.
 
-To emphasize this, we repeat the table above, but add the results of measuring $Z_0 Z_1$ and $Z_1 Z_2$ on each row:
+To emphasize this, we repeat the table above, but add the results of measuring $Z_0 Z_1$ and $Z_1 Z_2$ on each row.
+We denote the results of each measurement by the sign of the eigenvalue that is observed, either $+$ or $-$, corresponding to the Q# `Result` values of `Zero` and `One`, respectively.
 
 | Error $E$ | $E\ket{\overline{0}}$ | $E\ket{\overline{1}}$ | Result of $Z_0 Z_1$ | Result of $Z_1 Z_2$ |
 | --- | --- | --- | --- | --- |
@@ -53,6 +54,12 @@ To emphasize this, we repeat the table above, but add the results of measuring $
 Thus, the results of the two measurements uniquely determines which bit-flip error occured, but without revealing any information about which state we encoded.
 We call these results a *syndrome*, and refer to the process of mapping a syndrome back to the error that caused it as *recovery*.
 In particular, we emphasize that recovery is a *classical* inference procedure which takes as its input the syndrome which occured, and returns a prescription for how to fix any errors that may have occured.
+
+> [!NOTE]
+> The bit-flip code above can only correct against single bit-flip errors; that is, an `X` operation acting on a single qubit.
+> Applying `X` to more than one qubit will map $\ket{\overline{0}}$ to $\ket{\overline{1}}$.
+> Similarly, applying a phase flip operation `Z` will map $\ket{\overline{1}}$ to $-\ket{\overline{1}}$, and hence will map $\ket{\overline{+}}$ to $\ket{\overline{-}}$.
+> More generally, codes can be created to handle larger number of errors, and to handle $Z$ errors as well as $X$ errors.
 
 The insight that we can describe measurements in quantum error correction that act the same way on all code states, is the essense of the *stabilizer formalism*.
 The Q# canon provides a framework for describing encoding into and decoding from stabilizer codes, and for describing how one recovers from errors.
@@ -110,8 +117,4 @@ using (scratch = Qubit[nScratch]) {
 
 We explore this in more detail in the [bit flip code sample](TODO: link).
 
-## Further Resources ##
-
-- The Five Qubit Code (see: [Kliunchnikov and Maslov](https://arxiv.org/abs/1305.08))
-- The Seven Qubit CSS Steane Code (see: [Gottesman](https://arxiv.org/abs/quant-ph/9705052))
-- The Bit Flip code (see: [Criger, Moussa, and Laflamme]
+Aside from the bit-flip code, the Q# canon is provided with implementations of the [five-qubit perfect code](https://arxiv.org/abs/1305.08), and the [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052), both of which can correct an arbitrary single-qubit error.

@@ -44,15 +44,42 @@ For background, you could start from [Standard Amplitude Amplification](https://
 
 ## Quantum Fourier Transform ##
 
-The Fourier Transform is a fundamental tool of classical analysis and is just as important for quantum computations. In addition, the efficiency of the Quantum Fourier Transform (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm. 
+The Fourier transform is a fundamental tool of classical analysis and is just as important for quantum computations.
+In addition, the efficiency of the quantum Fourier transform (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm.
 
-As a generalization of the QFT, we provide an `ApproximateQFT` (AQFT) that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy. 
+As a generalization of the QFT, we provide an `ApproximateQFT` (AQFT) that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
 
-AQFT requires Z-rotation gates of the form $2\pi/2^k$ and Hadamard gates. The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as ket notation). The approximation parameter `a` determines the pruning level of the Z-rotations, i.e., $a \in [0..n]$. In this case all Z-rotations $2\pi/2^k$ where $k>a$ are removed from the QFT circuit. It is known that for $k >= log_2(n)+log_2(1/\epsilon)+3$ one can bound $||QFT-AQFT||<\epsilon$.
+AQFT requires Z-rotation gates of the form $2 \pi / 2^k$ and Hadamard gates. The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as ket notation). The approximation parameter `a` determines the pruning level of the Z-rotations, i.e., $a \in [0..n]$. In this case all Z-rotations $2\pi/2^k$ where $k>a$ are removed from the QFT circuit. It is known that for $k >= log_2(n)+log_2(1/\epsilon)+3$ one can bound $||QFT-AQFT||<\epsilon$.
 
 For more details, please refer to [M. Roetteler, Th. Beth](http://doi.org/10.1007/s00200-008-0072-2 ) and [D. Coppersmith](https://arxiv.org/abs/quant-ph/0201067).
 
 ### Quantum Phase Estimation ###
+
+One particularly important application of the quantum Fourier transform is to learn the eigenvalues of unitary operators, a problem known as *phase estimation*.
+Consider a unitary $U$ and a state $\ket{\phi}$ such that $\ket{\phi}$ is an eigenstate of $U$ with unknown eigenvalue $\phi$,
+\begin{equation}
+    U\ket{\phi} = \phi\ket{\phi}.
+\end{equation}
+If we only have access to $U$ as an [oracle](data-structures#phase-estimation-oracles), then we can learn the phase $\phi$ by utilizing that $Z$ rotations applied to the target of a controlled operation propagate back onto the control.
+
+Suppose that $V$ is a controlled application of $U$, such that
+\begin{align}
+                   V (\ket{0} \otimes \ket{\phi}) & =            \ket{0} \otimes \ket{\phi} \\\\
+    \textrm{ and } V (\ket{1} \otimes \ket{\phi}) & = e^{i \phi} \ket{1} \otimes \ket{\phi}.
+\end{align}
+Then, by linearity,
+\begin{align}
+    V(\ket{+} \otimes \ket{\phi}) & = \frac{
+        (\ket{0} \otimes \ket{\phi}) + e^{i \phi} (\ket{1} \otimes \ket{\phi})
+    }{\sqrt{2}}.
+\end{align}
+We can collect terms to find that
+\begin{align}
+    V(\ket{+} \otimes \ket{\phi}) & = \frac{\ket{0} + e^{i \phi} \ket{1}}{\sqrt{2}} \otimes \ket{\phi} \\\\
+                                  & = (R_1(\phi) \ket{+}) \otimes \ket{+},
+\end{align}
+where $R_1$ is the unitary applied by the <xref:microsoft.quantum.primitive.r1> operation.
+
 
 ## Period Finding ##
 

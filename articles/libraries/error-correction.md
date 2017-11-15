@@ -11,7 +11,7 @@ Namely, by the [no-cloning theorem](xref:microsoft.quantum.concepts.dirac#the-no
 
 Since it is the measurement that is problematic, we can still implement the encoding above.
 It is helpful to do so to see how we can generalize error correction to the quantum case.
-Thus, let $\ket{\overline} = \ket{000} = \ket{0} \otimes \ket{0} \otimes \ket{0}$, and let $\ket{\overline{1}} = \ket{111}$.
+Thus, let $\ket{\overline{0}} = \ket{000} = \ket{0} \otimes \ket{0} \otimes \ket{0}$, and let $\ket{\overline{1}} = \ket{111}$.
 Then, by linearity, we have defined our repetition code for all inputs; for instance, $\ket{\overline{+}} = (\ket{\overline{0} + \ket{\overline{1}}) / \sqrt{2}} = (\ket{000} + \ket{111}) / \sqrt{2}$.
 In particular, letting a bit-flip error $X_1$ act on the middle qubit, we see that the correction needed in both branches is precisely $X_1$:
 $$

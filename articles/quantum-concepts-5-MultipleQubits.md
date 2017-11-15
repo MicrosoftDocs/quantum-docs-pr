@@ -110,7 +110,7 @@ For example, the CNOT (controlled NOT) gate is a commonly used two-qubit gate an
 $$
 \mathrm{CNOT} = \begin{bmatrix} 1\ 0\ 0\ 0  \\ 0\ 1\ 0\ 0 \\ 0\ 0\ 0\ 1 \\ 0\ 0\ 1\ 0 \end{bmatrix}.
 $$
-The CNOT gate corresponds to the following classical operation: Look at the first bit, if it is $0$, do nothing, and if it is $1$ then negate the second bit.   In cases when more than two qubits are present, or a CNOT gate that is controlled by the second qubit is needed, the notation $\text{CNOT}_{ij}$ is used to denote the controlled-not gate controlled on the $i^{\rm th}$ qubit and with the $j^{\rm th}$ qubit as its target (where zero is the first qubit label).  For example,
+The CNOT gate corresponds to the following classical operation: Look at the first bit, if it is $0$, do nothing, and if it is $1$ then negate the second bit.   In cases when more than two qubits are present, or a CNOT gate that is controlled by the second qubit is needed, the notation $\operatorname{CNOT}_{ij}$ is used to denote the controlled-not gate controlled on the $i^{\rm th}$ qubit and with the $j^{\rm th}$ qubit as its target (where zero is the first qubit label).  For example,
 $$
 \mathrm{CNOT}_{01} = \begin{bmatrix} 1\ 0\ 0\ 0  \\ 0\ 1\ 0\ 0 \\ 0\ 0\ 0\ 1 \\ 0\ 0\ 1\ 0 \end{bmatrix}\qquad\mathrm{CNOT}_{10} = \begin{bmatrix} 1\ 0\ 0\ 0  \\ 0\ 0\ 0\ 1 \\ 0\ 0\ 1\ 0 \\ 0\ 1\ 0\ 0 \end{bmatrix}.
 $$
@@ -131,7 +131,7 @@ a\ b\\c\ d
 \begin{bmatrix}
 e\ f\\g\ h
 \end{bmatrix}$.
-Thus we can form two-qubit gates by taking the tensor product of single-qubit gates we know. Some examples of two qubit gates include $H \otimes H$, $X \otimes \openone$, and $X \otimes Z$.
+Thus we can form two-qubit gates by taking the tensor product of single-qubit gates we know. Some examples of two qubit gates include $H \otimes H$, $X \otimes \boldone$, and $X \otimes Z$.
 
 Note that while any two single-qubit gates define a two-qubit gate by taking their tensor product, the converse is not true. Not all two-qubit gates can be written as the tensor product of single-qubit gates. One example of such a gate is the CNOT gate. Such a gate is called an entangling gate.
 
@@ -145,7 +145,7 @@ $$
 $$
 Quantum gates work in exactly the same way and it can be shown, as mentioned above.  For example, if we wished to apply the $X$ gate to the first qubit and then perform a CNOT between the second and third qubits we would express this transformation as
 $$
-(X \otimes \text{CNOT}_{12}\otimes \openone\otimes \openone \otimes \openone) \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\equiv 0011001.
+(X \otimes \operatorname{CNOT}_{12}\otimes \boldone\otimes \boldone \otimes \boldone) \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\equiv 0011001.
 $$
 
 

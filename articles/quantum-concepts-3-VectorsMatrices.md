@@ -35,12 +35,12 @@ v_n
 \end{bmatrix}.$$
 The norm of a vector $v$ is defined as $\sqrt{\sum_i |v_i|^2}$. A vector is said to be of unit norm (or alternatively it is called a unit vector) if its norm is $1$. The adjoint of a vector $v$ is denoted $v^\dagger$ and is defined to be the following row vector
 $$
-\begin{bmatrix}x_1 \\ \vdots \\ x_n \end{bmatrix}^\dagger = \begin{bmatrix}x_1^* & \cdots & x_n^* \end{bmatrix}.
+\begin{bmatrix}v_1 \\ \vdots \\ v_n \end{bmatrix}^\dagger = \begin{bmatrix}v_1^* & \cdots & v_n^* \end{bmatrix}.
 $$
 
-The most common way to multiply two vectors together is through the inner product, otherwise known as a dot product.  The inner product gives the projection of one vector onto another and is invaluable in describing how to express one vector as a sum of other simpler vectors.  The inner product between $\phi$ and $\psi$, denoted $\left\langle \phi, \psi\right\rangle$ is defined as
+The most common way to multiply two vectors together is through the inner product, also known as a dot product.  The inner product gives the projection of one vector onto another and is invaluable in describing how to express one vector as a sum of other simpler vectors.  The inner product between $u$ and $v$, denoted $\left\langle u, v\right\rangle$ is defined as
 $$
-\left\langle \begin{bmatrix}\phi_1 \\\vdots\\ \phi_{n} \end{bmatrix},\begin{bmatrix}\psi_1 \\\vdots\\ \psi_{n} \end{bmatrix} \right\rangle = \phi^\dagger \psi=\phi_1^*\psi_1 + \cdots + \phi_n^* \psi_n.
+\left\langle \begin{bmatrix}u_1 \\\vdots\\ u_{n} \end{bmatrix},\begin{bmatrix} v_1 \\\vdots\\ v_{n} \end{bmatrix} \right\rangle = u^\dagger v=u_1^*v_1 + \cdots + u_n^* v_n.
 $$
 This notation also allows the norm of a vector $v$ to be written as $\sqrt{\langle v, v\rangle}$.
 
@@ -76,6 +76,7 @@ M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}\\
 
 Note that a vector of dimension $n$ is simply a matrix of size $n \times 1$. Just like with vectors, we can multiply a matrix with a number $c$ to obtain a new matrix where every entry is multiplied with $c$, and we can add two matrices of the same size to produce a new matrix whose entries are the sum of the respective entries of the two matrices. 
 
+##Matrix multiplication and tensor products
 We can also multiply two matrices $M$ of dimension $m\times n$ and $N$ of dimension $n \times p$ to get a new matrix $P$ of dimension $m \times p$ as follows:
 $$
 \begin{bmatrix}
@@ -99,14 +100,14 @@ P_{m1} ~~ P_{m2} ~~ \cdots ~~ P_{mp}\\
 $$
 where the entry $P_{ik} = \sum_j M_{ij}N_{jk}$. For example, the entry $P_{11}$ is the inner product of the first row of $M$ with the first column of $N$. Note that since a vector is simply a special case of a matrix, this definition extends to matrix--vector multiplication. 
 
-All the matrices we consider will either be square matrices, where the number of rows and columns are equal, or vectors, which corresponds to only $1$ column. One special square matrix is the identity matrix, denoted $\openone$, which has all its diagonal elements equal to $1$ and the remaining elements equal to $0$:
-$$\openone=\begin{bmatrix}
+All the matrices we consider will either be square matrices, where the number of rows and columns are equal, or vectors, which corresponds to only $1$ column. One special square matrix is the identity matrix, denoted $\boldone$, which has all its diagonal elements equal to $1$ and the remaining elements equal to $0$:
+$$\boldone=\begin{bmatrix}
 1 ~~ 0 ~~ \cdots ~~ 0\\
 0 ~~ 1 ~~ \cdots ~~ 0\\
 ~~ \ddots\\
 0 ~~ 0 ~~ \cdots ~~ 1\\
 \end{bmatrix}.$$
-For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \openone$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. For any matrix $M$, the adjoint or conjugate transpose of $M$, is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. We say a matrix $U$ is unitary if $UU^\dagger = \openone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because $\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle$.  
+For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \boldone$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. For any matrix $M$, the adjoint or conjugate transpose of $M$, is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. We say a matrix $U$ is unitary if $UU^\dagger = \boldone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because $\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle$.  
 
 
 
@@ -174,20 +175,24 @@ $$
 \begin{bmatrix} 1 \\ 0 \end{bmatrix}^{\otimes 1} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\qquad \begin{bmatrix} 1 \\ 0 \end{bmatrix}^{\otimes 2} = \begin{bmatrix} 1 \\ 0\\0\\0 \end{bmatrix}\qquad X^{\otimes 2}= \begin{bmatrix} 0 &0&0&1 \\ 0 &0&1&0 \\0 &1&0&0\\1 &0&0&0\end{bmatrix}.
 $$
 
-#Matrix Exponentials
+##Eigenvalues and Eigenvector
+
+A vector $v$ is an eigenvector of a matrix $M$ if $Mv = cv$ for some number $c$. In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number.
+
+##Matrix Exponentials
 A matrix exponential can also be defined in exact analogy to the exponential function.  The matrix exponential of a matrix $A$ can be expressed as
 $$
-e^A=\openone + A + \frac{A^2}{2!}+\frac{A^3}{3!}+\cdots.
+e^A=\boldone + A + \frac{A^2}{2!}+\frac{A^3}{3!}+\cdots.
 $$
 This is important to us because quantum mechanical time evolution is described by a unitary matrix of the form $e^{iB}$ for Hermitian matrix $B$.  For this reason, performing matrix exponentials is a fundamental part of quantum computing and as such Q# has intrinsic routines for describing these operations.
-There are many ways in practice to compute a matrix exponential on a classical computer, and in general numerically approximating such an exponential it is fraught with peril.  See [Moler, Cleve, and Charles Van Loan. "Nineteen dubious ways to compute the exponential of a matrix." SIAM review 20.4 (1978): 801-836] for more information about the challenges involved.  
+There are many ways in practice to compute a matrix exponential on a classical computer, and in general numerically approximating such an exponential it is fraught with peril.  See [Cleve Moler and Charles Van Loan. "Nineteen dubious ways to compute the exponential of a matrix." SIAM review 20.4 (1978): 801-836] for more information about the challenges involved.  
 
 The easiest way to understand how to compute the exponential of a matrix is through the eigenvalues and eigenvectors of that matrix.  Specifically, the eigenvalue decomposition says that for every $N\times N$ matrix $A$ there exists a unitary matrix $U$ and a diagonal matrix $D$ such that $A=U^\dagger D U$.  Because of the properties of unitarity we have that $A^2 = U^\dagger D^2 U$ and similarly for any power $p$ $A^p = U^\dagger D^p U$.  If we substitute this into the operator definition of the operator exponential we obtain
 $$
-e^A= U^\dagger \left(\openone +D +\frac{D^2}{2!}+\cdots \right)U= U^\dagger \begin{bmatrix}\exp(D_{11}) & 0 &\cdots &0\\ 0 & \exp(D_{22})&\cdots& 0\\ \vdots &\vdots &\ddots &\vdots\\ 0&0&\cdots&\exp(D_{NN}) \end{bmatrix} U.
+e^A= U^\dagger \left(\boldone +D +\frac{D^2}{2!}+\cdots \right)U= U^\dagger \begin{bmatrix}\exp(D_{11}) & 0 &\cdots &0\\ 0 & \exp(D_{22})&\cdots& 0\\ \vdots &\vdots &\ddots &\vdots\\ 0&0&\cdots&\exp(D_{NN}) \end{bmatrix} U.
 $$
 In other words, if you transform to the eigenbasis of the matrix $A$ then computing the matrix exponential is equivalent to computing the ordinary exponential of the eigenvalues of the matrix.  As many of the operations in quantum computing involve performing matrix exponentials, this trick of transforming into the eigenbasis of a matrix to simplify performing the operator exponential appears frequently and is the basis behind many quantum algorithms such as Trotter-Suzuki based quantum simulation methods.
 
-Another useful property is if $B$ is both unitary and Hermitian, ie $B^2=\openone$, then it can be seen by applying this rule to the above expansion of the operator exponential and grouping the $\openone$ and the $B$ terms that for any real valued $x$
-$$e^{iBx}=\cos(x)\openone + iB\sin(x).$$
+Another useful property is if $B$ is both unitary and Hermitian, ie $B^2=\boldone$, then it can be seen by applying this rule to the above expansion of the operator exponential and grouping the $\boldone$ and the $B$ terms that for any real valued $x$
+$$e^{iBx}=\cos(x)\boldone + iB\sin(x).$$
 This trick is especially useful because it allows us to reason about the actions that matrix exponentials have, even if the dimension of $B$ is exponentially large, for the special case when $B$ is both unitary and Hermitian. 

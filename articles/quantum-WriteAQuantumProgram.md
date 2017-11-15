@@ -253,7 +253,7 @@ to its argument qubit.
 > In both cases, the type of a variable is inferred by the compiler.
 > Q# doesn't require any type annotations for variables.
 >
-> The `using` statement is also special to Q#.
+> The `using` statement is also uniquely used in Q#.
 > It is used to allocate an array of qubits for use in a block of code.
 > In Q#, all qubits are dynamically allocated and released,
 > rather than being fixed resources that are there for the entire

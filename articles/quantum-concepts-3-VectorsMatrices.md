@@ -113,61 +113,72 @@ For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \boldone$. 
 
 Finally, the tensor product (or Kronecker product) of two matrices $M$ of size $m\times n$ and $N$ of size $p \times q$ is a larger matrix $P=M\otimes N$ of size $mp \times nq$, and is obtained from $M$ and $N$ as follows:
 $$
-M \otimes N = 
-\begin{bmatrix}
-M_{11} ~~ \cdots ~~ M_{1n}\\
-\ddots\\
-M_{m1}  ~~ \cdots ~~ M_{mn}\\
-\end{bmatrix}\times
-\begin{bmatrix}
-N_{11}  ~~ \cdots ~~ N_{1q}\\
-\ddots\\
-N_{p1} ~~ \cdots ~~ N_{pq}\\
-\end{bmatrix}
-=
-\begin{bmatrix}
-M_{11} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\ \ddots\\ N_{p1} ~~ \cdots ~~ N_{pq}\\ \end{bmatrix}~~ \cdots ~~ 
-M_{1n} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\ \ddots\\ N_{p1} ~~ \cdots ~~ N_{pq}\\ \end{bmatrix}\\
-\ddots\\
-M_{m1} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\ \ddots\\ N_{p1} ~~ \cdots ~~ N_{pq}\\ \end{bmatrix}~~ \cdots ~~ 
-M_{mn} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\ \ddots\\ N_{p1} ~~ \cdots ~~ N_{pq}\\ \end{bmatrix}\\
-\end{bmatrix}.
+\begin{align}
+	M \otimes N & =
+	\begin{bmatrix}
+		M_{11} ~~ \cdots ~~ M_{1n} \\\\
+		\ddots\\\\
+		M_{m1}  ~~ \cdots ~~ M_{mn}\\\\
+	\end{bmatrix}\times
+	\begin{bmatrix}
+		N_{11}  ~~ \cdots ~~ N_{1q}\\\\
+		\ddots\\\\
+		N_{p1} ~~ \cdots ~~ N_{pq}\\\\
+	\end{bmatrix} \\\\
+	=
+	\begin{bmatrix}
+		M_{11} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}~~ \cdots ~~ 
+		M_{1n} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}\\\\
+		\ddots\\\\
+		M_{m1} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}~~ \cdots ~~ 
+		M_{mn} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}\\\\
+	\end{bmatrix}.
+\end{align}
 $$
 This is better demonstrated using some examples:
 $$
-\begin{bmatrix} a \\ b  \end{bmatrix} \otimes \begin{bmatrix} c \\ d \\ e\end{bmatrix} 
-=\begin{bmatrix} a \begin{bmatrix} c \\ d \\ e\end{bmatrix}  \\[1.5em] b \begin{bmatrix} c \\ d \\ e\end{bmatrix}  \end{bmatrix}
-= \begin{bmatrix} a c \\ a d \\a e \\ b c \\ b d \\ be\end{bmatrix}, \mathrm{~~and} \quad 
-\begin{bmatrix}
-a\ b\\c\ d
-\end{bmatrix}
-\otimes 
-\begin{bmatrix}
-e\ f\\g\ h
-\end{bmatrix}
-=
-\begin{bmatrix}
-a\begin{bmatrix}
-e\ f\\g\ h
-\end{bmatrix}
-b\begin{bmatrix}
-e\ f\\g\ h
-\end{bmatrix}
-\\[1em]
-c\begin{bmatrix}
-e\ f\\g\ h
-\end{bmatrix}
-d\begin{bmatrix}
-e\ f\\g\ h
-\end{bmatrix}
-\end{bmatrix}
-=
-\begin{bmatrix}
-ae\ af\ be\ bf\\
-ag\ ah\ bg\ bh\\
-ce\ cf\ de\ df\\
-cg\ ch\ dg\ dh
-\end{bmatrix}.
+\begin{align}
+	\begin{bmatrix}
+		a \\\\ b  \end{bmatrix} \otimes \begin{bmatrix} c \\\\ d \\\\ e
+	\end{bmatrix} & =
+	\begin{bmatrix}
+		a \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}
+		\\\\[1.5em]
+		b \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}
+	\end{bmatrix}
+	= \begin{bmatrix} a c \\\\ a d \\\\a e \\\\ b c \\\\ b d \\\\ be\end{bmatrix}, \\\\
+	\textrm{and} \quad 
+	\begin{bmatrix}
+		a\ b\\\\c\ d
+	\end{bmatrix}
+	\otimes 
+	\begin{bmatrix}
+		e\ f\\\\g\ h
+	\end{bmatrix}
+	& =
+	\begin{bmatrix}
+	a\begin{bmatrix}
+	e\ f\\\\g\ h
+	\end{bmatrix}
+	b\begin{bmatrix}
+	e\ f\\\\g\ h
+	\end{bmatrix}
+	\\\\[1em]
+	c\begin{bmatrix}
+	e\ f\\\\g\ h
+	\end{bmatrix}
+	d\begin{bmatrix}
+	e\ f\\\\g\ h
+	\end{bmatrix}
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	ae\ af\ be\ bf\\\\
+	ag\ ah\ bg\ bh\\\\
+	ce\ cf\ de\ df\\\\
+	cg\ ch\ dg\ dh
+	\end{bmatrix}.
+\end{align}
 $$
 
 A final notation surrounding tensor products that is useful is that, for any vector $v$ or matrix $M$, $v^{\otimes n}$ or $M^{\otimes n}$ is short hand for an $n$--fold repeated tensor product.  For example

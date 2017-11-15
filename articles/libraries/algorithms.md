@@ -83,8 +83,8 @@ where $R_1$ is the unitary applied by the <xref:microsoft.quantum.primitive.r1> 
 Since the control and target register remain untangled after this process, we can reuse $\ket{\phi}$ as the target of a controlled application of $U^2$ to prepare a second control qubit in the state $R_1(2 \phi) \ket{+}$.
 Continuing in this way, we can obtain a register of the form
 \begin{align}
-    \ket{\psi} & = \sum_{j = 0}^n R_1(2^j \phi) \ket{+}
-               & \propto \bigotimes_{j=0}^{n} \left(\ket{0} + \exp(i 2^{j} \phi) \ket{1}\right)
+    \ket{\psi} & = \sum_{j = 0}^n R_1(2^j \phi) \ket{+} \\\\
+               & \propto \bigotimes_{j=0}^{n} \left(\ket{0} + \exp(i 2^{j} \phi) \ket{1}\right) \\\\
                & \propto \sum_{k = 0}^{2^n - 1} \exp(i \phi k) \ket{k}
 \end{align}
 where $n$ is the number of bits of precision that we require, and where we have used ${} \propto {}$ to indicate that we have suppressed the normalization factor of $1 / \sqrt{2^n}$.

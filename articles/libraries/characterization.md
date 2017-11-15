@@ -33,6 +33,9 @@ We thus approach quantum characterization by treating operations and states as b
 ## Iterative Phase Estimation ##
 
 Viewing quantum programming in terms of quantum characterization suggests a useful alternative to [quantum phase estimation](algorithms#quantum-phase-estimation).
+That is, instead of preparing an $n$-qubit register to contain a binary representation of the phase as in quantum phase estimation, we can view phase estimation as the process by which a *classical* agent learns properties of a quantum system through measurements.
+This has the advantage that we only require a single additional qubit to perform the phase kickback described in the quantum case, as we then measure the control bit and use it to learn the phase in an iterative fashion.
+
 
 ### Bayesian Phase Estimation ###
 

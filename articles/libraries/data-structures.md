@@ -47,6 +47,8 @@ In the phase estimation and amplitude amplification literature the concept of an
 Here the term oracle refers to a blackbox quantum subroutine that acts upon a set of qubits and returns the answer as a phase.
 This subroutine often can be thought of as an input to a quantum algorithm that accepts the oracle, in addition to some other parameters, and applies a series of quantum operations and treating a call to this quantum subroutine as if it were a fundamental gate.
 Obviously, in order to actually implement the larger algorithm a concrete decomposition of the oracle into fundamental gates must be provided but such a decomposition is not needed in order to understand the algorithm that calls the oracle.
+In Q#, this abstraction is represented by using that [operations are first-class values](../quantum-techniques-2-operationsandfunctions#operations-and-functions-as-first-class-values), such that operations can be passed to implementations of quantum algorithms in a black-box manner.
+Moreover, user-defined types are used to label the different oracle representations in a type-safe way, making it difficult to accidently conflate different kinds of black box operations.
 
 Such oracles appear in a number of different contexts, including famous examples such as [Grover's search](todo: link to database search sample) and [quantum simulation algorithms](./applications#hamiltonian-simulation).
 Here we focus on the oracles needed for just two applications: [amplitude amplification](./algorithms#amplitude-amplification) and [phase estimation](./characterization#phase-estimation).
@@ -57,40 +59,82 @@ We will first discuss amplitude amplification oracles before proceding to phase 
 The amplitude amplification algorithm aims to perform a rotation between an initial state and a final state by applying a sequence of reflections of the state.
 In order for the algorithm to function, it needs a specification of both of these states.
 These specifications are given by two oracles.
-These oracles work by breaking the inputs into two spaces "target" subspace and an "initial" subspace.
+These oracles work by breaking the inputs into two spaces, a "target" subspace and an "initial" subspace.
 The oracles identify such subspaces, similar to how Pauli operators identify two spaces, by applying a $\pm 1$ phase to these spaces.
 The main difference is that these spaces need not be half-spaces in this application.
 Also note that these two subspaces are not usually mutually exclusive: there will be vectors that are members of both spaces.
 If this were not true then amplitude amplification would have no effect so we need the initial subspace to have non-zero overlap with the target subspace.
 
-We will denote the first oracle that we need for amplitude amplification to be $P$ is defined to have the following action.  For all states $\ket{x}$ in the "initial" subspace $P_0\ket{x} = -\ket{x}$ and for all states $\ket{y}$ that are not in this subspace we have $P_0\ket{y}=\ket{y}$.
+We will denote the first oracle that we need for amplitude amplification to be $P_0$, defined to have the following action.  For all states $\ket{x}$ in the "initial" subspace $P_0 \ket{x} = -\ket{x}$ and for all states $\ket{y}$ that are not in this subspace we have $P_0 \ket{y} = \ket{y}$.
 The oracle that marks the target subspace, $P_1$, takes exactly the same form.
-For all states $\ket{x}$ in the target subspace (ie for all states that you'd like the algorithm to output) $P_1\ket{x} = -\ket{x}$.
+For all states $\ket{x}$ in the target subspace (i.e., for all states that you'd like the algorithm to output), $P_1\ket{x} = -\ket{x}$.
 Similarly, for all states $\ket{y}$ that are not in the target subspace $P_1\ket{y} = \ket{y}$.
-These two reflections are then combined to form an operator that enacts a single step of amplitude amplification, $Q=-P_0 P_1$, where the overall minus sign is only important to consider in controlled applications.
+These two reflections are then combined to form an operator that enacts a single step of amplitude amplification, $Q = -P_0 P_1$, where the overall minus sign is only important to consider in controlled applications.
 Amplitude amplification then proceeds by taking an initial state, $\ket{\psi}$ that is in the initial subspace and then performs $\ket{\psi} \mapsto Q^m \ket{\psi}$.
-Performing such an iteration guarantees that if one starts with an initial state that has overlap $\sin^2(\theta)$ with the marked space then after $m$ iterations this overlap becomes $\sin^2([2m+1]\theta)$.
+Performing such an iteration guarantees that if one starts with an initial state that has overlap $\sin^2(\theta)$ with the marked space then after $m$ iterations this overlap becomes $\sin^2([2m + 1] \theta)$.
 We therefore typically wish to choose $m$ to be a free parameter such that $[2m+1]\theta = \pi/2$; however, such rigid choices are not as important for some forms of amplitude amplification such as fixed point amplitude amplification.
 This process allows us to prepare a state in the market subspace using quadratically fewer queries to the marking function and the state preparation function than would be possible on a strictly classical device.
 This is why amplitude amplification is a significant primitive for many applications of quantum computing.
 
-In order to understand how to use the algorithm, it is useful to provide an example that gives a construction of the oracles.  Consider performing Grover's search in this setting.
+In order to understand how to use the algorithm, it is useful to provide an example that gives a construction of the oracles.  Consider performing Grover's algorithm for database searches in this setting.
 In Grover's search the goal is to transform the state $\ket{+}^{\otimes n} = H^{\otimes n} \ket{0}$ into one of (potentially) many marked states.
 To further simplify, let's just look at the case where the only marked state is $\ket{0}$.
 Then we have design two oracles: one that only marks the initial state $\ket{+}^{\otimes n}$ with a minus sign and another that marks the marked state $\ket{0}$ with a minus sign.
-The latter gate can be implemented using the following process:
+The latter gate can be implemented using the following process operation, by using the [control flow](./control-flow) operations in the canon:
 
-1. Apply $X$ gates to every qubit.
-2. Apply an $n-1$ controlled $Z$-gate to the $n^{\rm th}$ qubit.  This gate will lead to a sign flip if and only if every qubit is $1$, which happens only if each of the qubits were $0$ before step 1.
-3. Apply $X$ gates to every qubit.
+```qsharp
+operation ReflectAboutAllZeros(register : Qubit[]) : () {
+    body {
+        // Apply $X$ gates to every qubit.
+        ApplyToEach(X, register);
+
+        // Apply an $n-1$ controlled $Z$-gate to the $n^{\text{th}}$ qubit.
+        // This gate will lead to a sign flip if and only if every qubit is
+        // $1$, which happens only if each of the qubits were $0$ before step 1.
+        (Controlled Z)(register[0..Length(register) - 2], register[Length(register) - 1]);
+
+        // Apply $X$ gates to every qubit.
+        ApplyToEach(X, register);
+    }
+
+    adjoint auto
+    controlled auto
+    controlled adjoint auto
+}
+```
 
 The oracle that marks the initial subspace can be constructed similarly.
+In pseudocode:
 
 1. Apply $H$ gates to every qubit.
 2. Apply $X$ gates to every qubit.
 3. Apply an $n-1$ controlled $Z$-gate to the $n^{\rm th}$ qubit.
 4. Apply $X$ gates to every qubit.
 5. Apply $H$ gates to every qubit.
+
+This time, we also demonstrate using <xref:microsoft.quantum.canon.with> by introducing an operation which applies the controlled-$Z$ gate from the previous example:
+
+```qsharp
+operation ReflectAboutAllOnes(register : Qubit[]) : () {
+    body {
+        (Controlled Z)(register[0..Length(register) - 2], register[Length(register) - 1]);
+    }
+
+    adjoint auto
+    controlled auto
+    controlled adjoint auto
+}
+
+operation ReflectAboutInitial(register : Qubit[]) : () {
+    body {
+        With(ApplyToEach(H, _), With(ApplyToEach(X, _), ReflectAllOnes, _), register);
+    }
+
+    adjoint auto
+    controlled auto
+    controlled adjoint auto
+}
+```
 
 We can then combine these two oracles together to rotate between the two states and deterministically transform $\ket{+}^{\otimes n}$ to $\ket{0}$ using a number of layers of Hadamard gates that is proportional to $\sqrt{2^n}$ (ie $m\propto \sqrt{2^n}$) versus the roughly $2^n$ layers that would be needed to non-deterministically prepare the $\ket{0}$ state by preparing and measuring the initial state until the outcome $0$ is observed.
 

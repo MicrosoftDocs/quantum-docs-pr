@@ -52,7 +52,7 @@ The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.q
 The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as [ket notation](xref:microsoft.quantum.concepts.dirac).
 The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
 In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.
-It is known that for $k >= \log_2(n) + \log_2(1 / \epsilon) + 3$. one can bound $\| \operatorname{QFT} - \operatorname{AQFT} \| < \epsilon$.
+It is known that for $k \ge \log_2(n) + \log_2(1 / \epsilon) + 3$. one can bound $\| \operatorname{QFT} - \operatorname{AQFT} \| < \epsilon$.
 <!-- TODO: explain what norms are, perhaps? -->
 
 For more details, please refer to [M. Roetteler, Th. Beth](http://doi.org/10.1007/s00200-008-0072-2 ) and [D. Coppersmith](https://arxiv.org/abs/quant-ph/0201067).

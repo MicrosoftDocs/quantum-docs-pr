@@ -51,7 +51,10 @@ To emphasize this, we repeat the table above, but add the results of measuring $
 | $X_2$ | $\ket{001}$ | $\ket{110}$ | $+$ | $-$ |
 
 Thus, the results of the two measurements uniquely determines which bit-flip error occured, but without revealing any information about which state we encoded.
-This insight, that we can describe measurements in quantum error correction that act the same way on all code states, is the essense of the *stabilizer formalism*.
+We call these results a *syndrome*, and refer to the process of mapping a syndrome back to the error that caused it as *recovery*.
+In particular, we emphasize that recovery is a *classical* inference procedure which takes as its input the syndrome which occured, and returns a prescription for how to fix any errors that may have occured.
+
+The insight that we can describe measurements in quantum error correction that act the same way on all code states, is the essense of the *stabilizer formalism*.
 The Q# canon provides a framework for describing encoding into and decoding from stabilizer codes, and for describing how one recovers from errors.
 In this section, we describe this framework and its application to a few simple quantum error-correcting codes.
 
@@ -61,11 +64,53 @@ In this section, we describe this framework and its application to a few simple 
 
 ## Representing Error Correcting Codes in Q# ##
 
+To help specify an error correcting codes, the Q# canon provides several distinct user-defined types <!-- TODO: link -->:
 
+<!-- FIXME: rename LogicalRegister to CodeBlock. -->
 
-Qubits, by their very nature, are prone to errors. In classical systems we can create codes that allow us to recover from bit errors by using more physical bits to represent desired logical bits that are more resistant to errors (e.g., Hamming codes). The same is true in the case of quantum systems. In many cases the codes we need will have to be much more sophisticated and use many more physical qubits than the classical case to reach a desired level of fidelity.
+- <xref:microsoft.quantum.canon.logicalregister> `= Qubit[]`: Denotes that a register of qubits should be interpreted as the code block of an error-correcting code.
+- <xref:microsoft.quantum.canon.syndrome> `= Result[]`: Denotes that an array of measurement results should be interpreted as the syndrome measured on a code block.
+- <xref:microsoft.quantum.canon.recoveryfn> `= (Syndrome -> Pauli[])`: Denotes that a *classical* function should be used to interpret a syndrome and return a correction that should be applied.
+- <xref:microsoft.quantum.canon.encodeop> `= ((Qubit[], Qubit[]) => LogicalRegister)`: Denotes that an operation takes qubits representing data along with fresh auxillary qubits in order to produce a code block of an error-correcting code.
+- <xref:microsoft.quantum.canon.decodeop> `= (LogicalRegister => (Qubit[], Qubit[]))`: Denotes than an operation decomposes a code block of an error correcting code into the data qubits and the auxillary qubits used to represent syndrome information.
+- <xref:microsoft.quantum.canon.syndromemeasop> `= (LogicalRegister => Syndrome)`: Denotes an operation that should be used to extract syndrome information from a code block, without disturbing the state protected by the code.
 
-The canon contains several examples of quantum codes that you can use as templates for your own work. These include encoders and decoders for:
+<!-- TODO: define ⟦3, 1, 1⟧ notation -->
+Finally, the canon provides the <xref:microsoft.quantum.canon.qecc> type to collect the other types required to define a quantum error-correcting code.
+For example, the <xref:microsoft.quantum.canon.bitflipcode> function defines the ⟦3, 1, 1⟧ bit flip code:
+
+```qsharp
+let encodeOp = EncodeOp(BitFlipEncoder);
+let decodeOp = DecodeOp(BitFlipDecoder);
+let syndMeasOp = SyndromeMeasOp(MeasureStabilizerGenerators([
+    [PauliZ; PauliZ; PauliI];
+    [PauliI; PauliZ; PauliZ]
+], _, MeasureWithScratch));
+let code = QECC(encodeOp, decodeOp, syndMeasOp);
+```
+
+Notice that the `QECC` type does *not* include a recovery function.
+This allows us to change the recovery function that is used in correcting errors without changing the definition of the code itself; this ability is in particular useful when incorporating feedback from characterization measurements into the model assumed by recovery.
+
+Once a code is defined in this way, we can use the <xref:microsoft.quantum.canon.recover> operation to recover from errors:
+
+```qsharp
+let code = BitFlipCode();
+let fn = BitFlipRecoveryFn();
+let X0 = ApplyPauli([PauliX; PauliI; PauliI], _);
+using (scratch = Qubit[nScratch]) {
+    let logicalRegister = encode(data, scratch);
+    // Cause an error.
+    X0(logicalRegister);
+    Recover(code, fn, logicalRegister);
+    let (decodedData, decodedScratch) = decode(logicalRegister);
+    ApplyToEach(Reset, decodedScratch);
+}
+```
+
+We explore this in more detail in the [bit flip code sample](TODO: link).
+
+## Further Resources ##
 
 - The Five Qubit Code (see: [Kliunchnikov and Maslov](https://arxiv.org/abs/1305.08))
 - The Seven Qubit CSS Steane Code (see: [Gottesman](https://arxiv.org/abs/quant-ph/9705052))

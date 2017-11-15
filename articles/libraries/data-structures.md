@@ -115,22 +115,12 @@ In pseudocode:
 4. Apply $X$ gates to every qubit.
 5. Apply $H$ gates to every qubit.
 
-This time, we also demonstrate using <xref:microsoft.quantum.canon.with> by introducing an operation which applies the controlled-$Z$ gate from the previous example:
+This time, we also demonstrate using <xref:microsoft.quantum.canon.with> together with the <xref:microsoft.quantum.canon.rall1> operation discussed above.:
 
 ```qsharp
-operation ReflectAboutAllOnes(register : Qubit[]) : () {
-    body {
-        (Controlled Z)(register[0..Length(register) - 2], register[Length(register) - 1]);
-    }
-
-    adjoint auto
-    controlled auto
-    controlled adjoint auto
-}
-
 operation ReflectAboutInitial(register : Qubit[]) : () {
     body {
-        With(ApplyToEach(H, _), With(ApplyToEach(X, _), ReflectAllOnes, _), register);
+        With(ApplyToEach(H, _), With(ApplyToEach(X, _), RAll1(_, PI()), _), register);
     }
 
     adjoint auto

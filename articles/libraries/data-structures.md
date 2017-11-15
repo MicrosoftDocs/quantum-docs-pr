@@ -73,7 +73,7 @@ These two reflections are then combined to form an operator that enacts a single
 Amplitude amplification then proceeds by taking an initial state, $\ket{\psi}$ that is in the initial subspace and then performs $\ket{\psi} \mapsto Q^m \ket{\psi}$.
 Performing such an iteration guarantees that if one starts with an initial state that has overlap $\sin^2(\theta)$ with the marked space then after $m$ iterations this overlap becomes $\sin^2([2m + 1] \theta)$.
 We therefore typically wish to choose $m$ to be a free parameter such that $[2m+1]\theta = \pi/2$; however, such rigid choices are not as important for some forms of amplitude amplification such as fixed point amplitude amplification.
-This process allows us to prepare a state in the market subspace using quadratically fewer queries to the marking function and the state preparation function than would be possible on a strictly classical device.
+This process allows us to prepare a state in the marked subspace using quadratically fewer queries to the marking function and the state preparation function than would be possible on a strictly classical device.
 This is why amplitude amplification is a significant primitive for many applications of quantum computing.
 
 In order to understand how to use the algorithm, it is useful to provide an example that gives a construction of the oracles.  Consider performing Grover's algorithm for database searches in this setting.
@@ -111,7 +111,7 @@ In pseudocode:
 
 1. Apply $H$ gates to every qubit.
 2. Apply $X$ gates to every qubit.
-3. Apply an $n-1$ controlled $Z$-gate to the $n^{\rm th}$ qubit.
+3. Apply an $n-1$ controlled $Z$-gate to the $n^{\text{th}}$ qubit.
 4. Apply $X$ gates to every qubit.
 5. Apply $H$ gates to every qubit.
 

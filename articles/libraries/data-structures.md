@@ -103,6 +103,9 @@ operation ReflectAboutAllZeros(register : Qubit[]) : () {
 }
 ```
 
+This oracle is then a special case of the <xref:microsoft.quantum.canon.rall1> operation, which allows for rotating by an arbitrary phase instead of the reflection case $\phi = -1$.
+In this case, `RAll1` is similar to the <xref:microsoft.quantum.primitive.r1> prelude operation, in that it rotates about $\ket{11\cdots1}$ instead of the single-qubit state $\ket{1}.
+
 The oracle that marks the initial subspace can be constructed similarly.
 In pseudocode:
 
@@ -146,7 +149,12 @@ This method is indispensible in quantum simulation because for many physical pro
 Every flavor of phase estimation needs an input unitary.
 This unitary is customarily described by one of two types of oracles.
 
-The first type of oracle, which we call a discrete query oracle, simply involves a unitary matrix.
+> [!TIP]
+> Both of the oracle types described below are covered in the samples.
+> To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](TODO: link).
+> To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](TODO: link).
+
+The first type of oracle, which we call a discrete query oracle and represent with the user-defined type <xref:microsoft.quantum.canon.discreteoracle>, simply involves a unitary matrix.
 If $U$ is the unitary whose eigenvalues we wish to estimate then the oracle for $U$ is simply a standin for a subroutine that implements $U$.
 For example, one could take $U$ to be the oracle $Q$ defined above for amplitude estimation.
 The eigenvalues of this matrix can be used to estimate the overlap between the initial and target states, $\sin^2(\theta)$, using quadratically fewer samples than one would need otherwise.
@@ -164,7 +172,7 @@ $$
 \end{align}
 $$
 
-The second type of oracle used in phase estimation is the continuous query oracle.
+The second type of oracle used in phase estimation is the continuous query oracle, represented by the <xref:microsoft.quantum.canon.continuousoracle> type.
 A continuous query oracle for phase estimation takes the form $U(t)$ where $t$ is a classically known real number.
 If we let $U$ be a fixed unitary then the continuous query oracle takes the form $U(t) = U^t$.
 This allows us to query matrices such as $\sqrt{U}$, which could not be implemented directly in the discrete query model.
@@ -184,12 +192,6 @@ In this context, we can simulate $U(t)$ for any $t$ using a single $R_z$ gate an
 Such a continuous model also has the property that frequencies greater than $2\pi$ can be learned from phase estimation processes that use continuous queries because phase information that would otherwise be masked by the branch-cuts of the logarithm function can be revealed from the results of experiments performed on non-commensurate values of $t$.
 Thus for problems such as this continuous query models for the phase estimation oracle are not only appropriate but are also preferable to the discrete query model.
 For this reason Q# has functionality for both forms of queries and leave it to the user to decide upon a phase estimation algorithm to fit their needs and the type of oracle that is available.
-
-One very common concept throughout quantum algorithms is that of a problem that can be specified in terms of a black-box quantum circuit.
-That is, we allow an algorithm to apply a circuit to qubits of its choice, but not to look at how that circuit is defined.
-This concept is often called an *oracle*, and is modeled in Q# by operations that accept qubit arrays as a part of their input.
-There are a variety of different forms oracles can take, however.
-To represent that, the canon provides a range of different user-defined types to label the ways that it might be convienent to represent a problem as an oracle.
 
 <!-- TODO: summarize the following.
 

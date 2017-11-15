@@ -28,39 +28,39 @@ Some familiarity with vectors and matrices is essential to understand quantum co
 A column vector (or simply vector) $v$ of dimension (or size) $n$ is a collection of $n$ complex numbers $(v_1,v_2,
 \ldots,v_n)$ arranged as a column:
 $$v =\begin{bmatrix}
-v_1\\
-v_2\\
-\vdots\\
+v_1\\\\
+v_2\\\\
+\vdots\\\\
 v_n
 \end{bmatrix}.$$
 The norm of a vector $v$ is defined as $\sqrt{\sum_i |v_i|^2}$. A vector is said to be of unit norm (or alternatively it is called a unit vector) if its norm is $1$. The adjoint of a vector $v$ is denoted $v^\dagger$ and is defined to be the following row vector
 $$
-\begin{bmatrix}v_1 \\ \vdots \\ v_n \end{bmatrix}^\dagger = \begin{bmatrix}v_1^* & \cdots & v_n^* \end{bmatrix}.
+\begin{bmatrix}v_1 \\\\ \vdots \\\\ v_n \end{bmatrix}^\dagger = \begin{bmatrix}v_1^* & \cdots & v_n^* \end{bmatrix}.
 $$
 
 The most common way to multiply two vectors together is through the inner product, also known as a dot product.  The inner product gives the projection of one vector onto another and is invaluable in describing how to express one vector as a sum of other simpler vectors.  The inner product between $u$ and $v$, denoted $\left\langle u, v\right\rangle$ is defined as
 $$
-\left\langle \begin{bmatrix}u_1 \\\vdots\\ u_{n} \end{bmatrix},\begin{bmatrix} v_1 \\\vdots\\ v_{n} \end{bmatrix} \right\rangle = u^\dagger v=u_1^*v_1 + \cdots + u_n^* v_n.
+\left\langle \begin{bmatrix}u_1 \\\\ \vdots\\\\ u_{n} \end{bmatrix},\begin{bmatrix} v_1 \\\\ \vdots\\\\ v_{n} \end{bmatrix} \right\rangle = u^\dagger v=u_1^*v_1 + \cdots + u_n^* v_n.
 $$
 This notation also allows the norm of a vector $v$ to be written as $\sqrt{\langle v, v\rangle}$.
 
 We can multiply a vector with a number $c$ to form a new vector whose entries are multiplied by $c$. We can also add two vectors $u$ and $v$ to form a new vector whose entries are the sum of the entries of $u$ and $v$. These operations are depicted below:
 $$\mathrm{If}~u =\begin{bmatrix}
-u_1\\
-u_2\\
-\vdots\\
+u_1\\\\
+u_2\\\\
+\vdots\\\\
 u_n
 \end{bmatrix}~\mathrm{and}~
 v =\begin{bmatrix}
-	v_1\\
-	v_2\\
-	\vdots\\
+	v_1\\\\
+	v_2\\\\
+	\vdots\\\\
 	v_n
 \end{bmatrix},~\mathrm{then}~
 au+bv =\begin{bmatrix}
-au_1+bv_1\\
-au_2+bv_2\\
-\vdots\\
+au_1+bv_1\\\\
+au_2+bv_2\\\\
+\vdots\\\\
 au_n+bv_n
 \end{bmatrix}.
 $$
@@ -68,10 +68,10 @@ $$
 A matrix of size $m \times n$ is a collection of $mn$ complex numbers arranged in $m$ rows and $n$ columns as shown below:
 $$M = 
 \begin{bmatrix}
-M_{11} ~~ M_{12} ~~ \cdots ~~ M_{1n}\\
-M_{21} ~~ M_{22} ~~ \cdots ~~ M_{2n}\\
-\ddots\\
-M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}\\
+M_{11} ~~ M_{12} ~~ \cdots ~~ M_{1n}\\\\
+M_{21} ~~ M_{22} ~~ \cdots ~~ M_{2n}\\\\
+\ddots\\\\
+M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}\\\\
 \end{bmatrix}$$
 
 Note that a vector of dimension $n$ is simply a matrix of size $n \times 1$. Just like with vectors, we can multiply a matrix with a number $c$ to obtain a new matrix where every entry is multiplied with $c$, and we can add two matrices of the same size to produce a new matrix whose entries are the sum of the respective entries of the two matrices. 

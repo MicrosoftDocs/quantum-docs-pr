@@ -40,7 +40,7 @@ $$
 
 The most common way to multiply two vectors together is through the inner product, also known as a dot product.  The inner product gives the projection of one vector onto another and is invaluable in describing how to express one vector as a sum of other simpler vectors.  The inner product between $u$ and $v$, denoted $\left\langle u, v\right\rangle$ is defined as
 $$
-\langle u, v\rangle = u^\dagger v=u_1^*v_1 + \cdots + u_n^* v_n.
+\langle u, v\rangle = u^\dagger v=u_1^{\*} v_1 + \cdots + u_n^{\*} v_n.
 $$
 This notation also allows the norm of a vector $v$ to be written as $\sqrt{\langle v, v\rangle}$.
 

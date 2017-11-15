@@ -22,9 +22,9 @@ ms.topic: article-type-from-white-list
 ---
 
 
-## Quantum Algorithms ##
+# Quantum Algorithms #
 
-### Amplitude Amplification ###
+## Amplitude Amplification ##
 
 Amplitude Amplification is one of the fundamental tools of Quantum Computing. There are many variants, but here we provide a very general version called Oblivious Amplitude Amplification with Partial Reflections to allow for the widest area of application. 
 
@@ -40,9 +40,9 @@ We relate the single-qubit rotation phases to the reflection operator phases as 
 
 For background, you could start from [Standard Amplitude Amplification](https://arxiv.org/abs/quant-ph/0005055) then move to an introduction to [Oblivious Amplitude Amplification](https://arxiv.org/abs/1312.1414) and finally generalizations presented in [Low and Chuang](https://arxiv.org/abs/1610.06546). A nice overview presentation of this entire area (as it relates to Hamiltonian Simulation) was given by [Dominic Berry](http://www.dominicberry.org/presentations/Durban.pdf).
 
-### Arithmetic ###
+## Arithmetic ##
 
-### Quantum Fourier Transform ###
+## Quantum Fourier Transform ##
 
 The Fourier Transform is a fundamental tool of classical analysis and is just as important for quantum computations. In addition, the efficiency of the Quantum Fourier Transform (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm. 
 
@@ -52,5 +52,7 @@ AQFT requires Z-rotation gates of the form $2\pi/2^k$ and Hadamard gates. The in
 
 For more details, please refer to [M. Roetteler, Th. Beth](http://doi.org/10.1007/s00200-008-0072-2 ) and [D. Coppersmith](https://arxiv.org/abs/quant-ph/0201067).
 
-### Period Finding ###
+### Quantum Phase Estimation ###
+
+## Period Finding ##
 

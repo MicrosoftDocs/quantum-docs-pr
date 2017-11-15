@@ -22,12 +22,19 @@ ms.topic: article-type-from-white-list
 ---
 
 
-## Quantum Characterization and Statistics ##
+# Quantum Characterization and Statistics #
 
-### Iterative Phase Estimation ###
+In developing quantum algorithms, it is critical to be able to characterize the effects of operations.
+This is made challenging by the fact that quantum states cannot be learned directly, reflected in that Q# does not expose or even define what a state *is* to quantum programs.
+We thus approach quantum characterization by treating operations and states as black-box; this approach shares much in common with the experimental practice of quantum characterization, verification and validation (QCVV).
 
-#### Bayesian Phase Estimation ####
+## Learning Quantum Processes ##
+
+## Iterative Phase Estimation ##
+
+Viewing quantum programming in terms of quantum characterization suggests a useful alternative to [quantum phase estimation](algorithms#quantum-phase-estimation).
+
+### Bayesian Phase Estimation ###
 
 <!-- FIXME: though RPE is the correct name of this algorithm, in context it reads as though Bayesian PE is the opposite of robust, which is not the case. -->
-#### Robust Phase Estimation ####
-
+### Robust Phase Estimation ###

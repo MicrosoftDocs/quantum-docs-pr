@@ -175,7 +175,7 @@ $$
 \begin{bmatrix} 1 \\ 0 \end{bmatrix}^{\otimes 1} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\qquad \begin{bmatrix} 1 \\ 0 \end{bmatrix}^{\otimes 2} = \begin{bmatrix} 1 \\ 0\\0\\0 \end{bmatrix}\qquad X^{\otimes 2}= \begin{bmatrix} 0 &0&0&1 \\ 0 &0&1&0 \\0 &1&0&0\\1 &0&0&0\end{bmatrix}.
 $$
 
-##Eigenvalues and Eigenvector
+##Eigenvalues and Eigenvectors
 
 A vector $v$ is an eigenvector of a matrix $M$ if $Mv = cv$ for some number $c$. In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number.
 

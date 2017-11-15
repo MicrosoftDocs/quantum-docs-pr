@@ -30,31 +30,31 @@ But why do we have this exponential growth for quantum state vectors?  Our goal 
 The main difference between one and two-qubit states is that two-qubit states are four dimensional rather than two-dimensional.  This happens because the computational basis for two-qubit states is formed by the tensor products of one-qubit states.  For example
 
 $$
-00 \equiv \begin{bmatrix}1 \\0 \end{bmatrix}\otimes \begin{bmatrix}1 \\0 \end{bmatrix} = \begin{bmatrix}1 \\0\\0\\0 \end{bmatrix}\qquad 01 \equiv \begin{bmatrix}1 \\0 \end{bmatrix}\otimes \begin{bmatrix}0 \\1 \end{bmatrix} = \begin{bmatrix}0 \\1\\0\\0 \end{bmatrix}\qquad 10 \equiv \begin{bmatrix}0 \\1 \end{bmatrix}\otimes \begin{bmatrix}1 \\0 \end{bmatrix} = \begin{bmatrix}0 \\0\\1\\0 \end{bmatrix}\qquad 11 \equiv \begin{bmatrix}0 \\1 \end{bmatrix}\otimes \begin{bmatrix}0 \\1 \end{bmatrix} = \begin{bmatrix}0 \\0\\0\\1 \end{bmatrix}
+00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}\qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\qquad 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}\qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}
 $$
 It is easy to see that more generally the quantum state of $n$ qubits is represented by a unit vector of dimension $2^n$ using this construction.  However, for two qubits the vector
 $$
-\begin{bmatrix} \alpha_{00} \\ \alpha_{01} \\ \alpha_{10} \\ \alpha_{11} \end{bmatrix}
+\begin{bmatrix} \alpha_{00} \\\\  \alpha_{01} \\\\  \alpha_{10} \\\\  \alpha_{11} \end{bmatrix}
 $$
 represents a quantum state on two qubits if $|\alpha_{00}|^2+|\alpha_{01}|^2+|\alpha_{10}|^2+|\alpha_{11}|^2=1$. Just as with single qubits, the quantum state vector of multiple qubits holds all the information needed to describe the system's behavior.
 
-If we are given two separate qubits, one in the state $\begin{bmatrix} \alpha \\ \beta \end{bmatrix}$ and the second qubit in state  $\begin{bmatrix} \gamma \\ \delta \end{bmatrix}$, the two qubit state corresponding to this is
+If we are given two separate qubits, one in the state $\begin{bmatrix} \alpha \\\\  \beta \end{bmatrix}$ and the second qubit in state  $\begin{bmatrix} \gamma \\\\  \delta \end{bmatrix}$, the two qubit state corresponding to this is
 $$
-\begin{bmatrix} \alpha \\ \beta \end{bmatrix} \otimes \begin{bmatrix} \gamma \\ \delta \end{bmatrix} 
-=\begin{bmatrix} \alpha \begin{bmatrix} \gamma \\ \delta \end{bmatrix} \\[1em] \beta \begin{bmatrix}\gamma \\ \delta \end{bmatrix} \end{bmatrix}
-= \begin{bmatrix} \alpha\gamma \\ \alpha\delta \\ \beta\gamma \\ \beta\delta \end{bmatrix},
+\begin{bmatrix} \alpha \\\\  \beta \end{bmatrix} \otimes \begin{bmatrix} \gamma \\\\  \delta \end{bmatrix} 
+=\begin{bmatrix} \alpha \begin{bmatrix} \gamma \\\\  \delta \end{bmatrix} \\\\ \beta \begin{bmatrix}\gamma \\\\  \delta \end{bmatrix} \end{bmatrix}
+= \begin{bmatrix} \alpha\gamma \\\\  \alpha\delta \\\\  \beta\gamma \\\\  \beta\delta \end{bmatrix},
 $$
 where the operation $\otimes$ is called the tensor product (or Kronecker product) of vectors. 
 Note that while we can always take the tensor product of two single-qubit states to form a two-qubit state, not all two-qubit quantum states can be written as the tensor product of two single-qubit states.
-For example, there are no states $\psi=\begin{bmatrix} \alpha \\ \beta \end{bmatrix}$ and $\phi=\begin{bmatrix} \gamma \\ \delta \end{bmatrix}$ such that their tensor product is the state $$\psi\otimes \phi = \begin{bmatrix} 1/\sqrt{2} \\ 0 \\ 0 \\ 1/\sqrt{2} \end{bmatrix}.$$ Such a two-qubit state, which cannot be written as the tensor product of single-qubit states, is called an ``entangled state'' and the two qubits are said to be entangled.  Loosely speaking, because the quantum state cannot be thought of as a tensor product of single qubit states the information that the state holds is not confined to either of the qubits individually.  Rather, the information is stored non-locally in the correlations between the two states.  This non-locality of information is one of the major distinguishing features of quantum computing over classical computing and is essential for a number of quantum protocols including quantum teleportation and quantum error correction.
+For example, there are no states $\psi=\begin{bmatrix} \alpha \\\\  \beta \end{bmatrix}$ and $\phi=\begin{bmatrix} \gamma \\\\  \delta \end{bmatrix}$ such that their tensor product is the state $$\psi\otimes \phi = \begin{bmatrix} 1/\sqrt{2} \\\\  0 \\\\  0 \\\\  1/\sqrt{2} \end{bmatrix}.$$ Such a two-qubit state, which cannot be written as the tensor product of single-qubit states, is called an ``entangled state'' and the two qubits are said to be entangled.  Loosely speaking, because the quantum state cannot be thought of as a tensor product of single qubit states the information that the state holds is not confined to either of the qubits individually.  Rather, the information is stored non-locally in the correlations between the two states.  This non-locality of information is one of the major distinguishing features of quantum computing over classical computing and is essential for a number of quantum protocols including quantum teleportation and quantum error correction.
 
 ## Measuring two-qubit states ##
 Measuring two-qubit states is very similar to single qubit measurements. Measuring the state
 \begin{equation}
     \begin{bmatrix}
-        \alpha_{00} \\
-        \alpha_{01} \\
-        \alpha_{10} \\
+        \alpha_{00} \\\\ 
+        \alpha_{01} \\\\ 
+        \alpha_{10} \\\\ 
         \alpha_{11}
     \end{bmatrix}
 \end{equation}
@@ -62,16 +62,16 @@ yields $00$ with probability $|\alpha_{00}|^2$, $01$ with probability $|\alpha_{
 \begin{equation}
     00 \equiv
     \begin{bmatrix}
-        1 \\
-        0 \\
-        0 \\
+        1 \\\\ 
+        0 \\\\ 
+        0 \\\\ 
         0
     \end{bmatrix}.
 \end{equation}
 
 Unlike the single qubit case, you don't need to measure every qubit in quantum computers with two or more qubits.  In cases where you measure a single qubit, the impacts of measurement are subtlely different because they do not collapse the entire state to a computational basis state but rather only one sub-system.  In such cases, measuring only one qubit only collapses one of the subsystems but not all of them.  To see this consider measuring the first qubit of the following state, which is formed by applying the Hadamard transform on two qubits initially set in the "0" state:
 $$
-\frac{1}{2}\begin{bmatrix}1\\1\\1\\1\end{bmatrix}\mapsto \begin{cases}\text{outcome }=0 & \frac{1}{\sqrt{2}}\begin{bmatrix}1\\1\\0\\0 \end{bmatrix}\\\text{outcome }=1 & \frac{1}{\sqrt{2}}\begin{bmatrix}0\\0\\1\\1 \end{bmatrix}\\ \end{cases}.
+\frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1\end{bmatrix}\mapsto \begin{cases}\text{outcome }=0 & \frac{1}{\sqrt{2}}\begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \text{outcome }=1 & \frac{1}{\sqrt{2}}\begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\  \end{cases}.
 $$
 Both outcomes have $50\%$ probability of occurring.  This happens because the first two components in the quantum state vector correspond to $00$ and $01$ and so if the first qubit is measured to be $1$ then both are inconsistent with the measurement and as such are omitted from the quantum state.  Similarly, if the first qubit is measured to be zero only the bit strings $10$ and $11$ are consistent with this outcome and hence the remainder of the quantum state is possible.  The outcome being $50\%$ probability for both can be intuited from the fact that the initial quantum state vector is invariant under permutation of the components vector.
 
@@ -95,11 +95,11 @@ $$
 Note that this is just the sum of two probabilities that would be expected for measuring the results $10$ and $11$ were all the qubits to be measured.
 For our example, this evaluates to
 $$
-\frac{1}{4}\left|\begin{bmatrix}0&0&1&0\end{bmatrix}\begin{bmatrix}1\\1\\1\\1\end{bmatrix} \right|^2+\frac{1}{4}\left|\begin{bmatrix}0&0&0&1\end{bmatrix}\begin{bmatrix}1\\1\\1\\1\end{bmatrix} \right|^2=\frac{1}{2}.
+\frac{1}{4}\left|\begin{bmatrix}0&0&1&0\end{bmatrix}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1\end{bmatrix} \right|^2+\frac{1}{4}\left|\begin{bmatrix}0&0&0&1\end{bmatrix}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1\end{bmatrix} \right|^2=\frac{1}{2}.
 $$
 which perfectly matches what our intuition tells us the probability should be.  Similarly, the state can be written as
 \begin{equation}
-\frac{\frac{e_2}{2}+\frac{e_3}{2}}{\sqrt{\frac{1}{2}}}=\frac{1}{\sqrt{2}}\begin{bmatrix} 0\\0\\1\\1\end{bmatrix}
+\frac{\frac{e_2}{2}+\frac{e_3}{2}}{\sqrt{\frac{1}{2}}}=\frac{1}{\sqrt{2}}\begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1\end{bmatrix}
 \end{equation}
 again in accordance with our intuition.
 
@@ -108,28 +108,28 @@ As in the single-qubit case, any unitary transformation is a valid operation on 
 
 For example, the CNOT (controlled NOT) gate is a commonly used two-qubit gate and is represented by the following unitary matrix:
 $$
-\mathrm{CNOT} = \begin{bmatrix} 1\ 0\ 0\ 0  \\ 0\ 1\ 0\ 0 \\ 0\ 0\ 0\ 1 \\ 0\ 0\ 1\ 0 \end{bmatrix}.
+\mathrm{CNOT} = \begin{bmatrix} 1\ 0\ 0\ 0  \\\\  0\ 1\ 0\ 0 \\\\  0\ 0\ 0\ 1 \\\\  0\ 0\ 1\ 0 \end{bmatrix}.
 $$
 The CNOT gate corresponds to the following classical operation: Look at the first bit, if it is $0$, do nothing, and if it is $1$ then negate the second bit.   In cases when more than two qubits are present, or a CNOT gate that is controlled by the second qubit is needed, the notation $\operatorname{CNOT}_{ij}$ is used to denote the controlled-not gate controlled on the $i^{\rm th}$ qubit and with the $j^{\rm th}$ qubit as its target (where zero is the first qubit label).  For example,
 $$
-\mathrm{CNOT}_{01} = \begin{bmatrix} 1\ 0\ 0\ 0  \\ 0\ 1\ 0\ 0 \\ 0\ 0\ 0\ 1 \\ 0\ 0\ 1\ 0 \end{bmatrix}\qquad\mathrm{CNOT}_{10} = \begin{bmatrix} 1\ 0\ 0\ 0  \\ 0\ 0\ 0\ 1 \\ 0\ 0\ 1\ 0 \\ 0\ 1\ 0\ 0 \end{bmatrix}.
+\mathrm{CNOT}_{01} = \begin{bmatrix} 1\ 0\ 0\ 0  \\\\  0\ 1\ 0\ 0 \\\\  0\ 0\ 0\ 1 \\\\  0\ 0\ 1\ 0 \end{bmatrix}\qquad\mathrm{CNOT}_{10} = \begin{bmatrix} 1\ 0\ 0\ 0  \\\\  0\ 0\ 0\ 1 \\\\  0\ 0\ 1\ 0 \\\\  0\ 1\ 0\ 0 \end{bmatrix}.
 $$
 
 We can also form two qubit gates by applying single-qubit gates on both qubits. For example, if we apply the gates 
 $\begin{bmatrix}
-a\ b\\c\ d
+a\ b\\\\ c\ d
 \end{bmatrix}$
 and
 $\begin{bmatrix}
-e\ f\\g\ h
+e\ f\\\\ g\ h
 \end{bmatrix}$
 to the first and second qubits, this is equivalent to applying the two-qubit unitary given by their tensor product
 $\begin{bmatrix}
-a\ b\\c\ d
+a\ b\\\\ c\ d
 \end{bmatrix}
 \otimes 
 \begin{bmatrix}
-e\ f\\g\ h
+e\ f\\\\ g\ h
 \end{bmatrix}$.
 Thus we can form two-qubit gates by taking the tensor product of single-qubit gates we know. Some examples of two qubit gates include $H \otimes H$, $X \otimes \boldone$, and $X \otimes Z$.
 
@@ -141,11 +141,11 @@ One example of a universal gate set is the Hadamard gate, the T gate, and the CN
 ## Many-qubit systems
 We follow the exact same patterns explored in the two-qubit case to build many-qubit quantum states from smaller systems.  Such states are built by forming tensor products of smaller states.  For example, consider encoding the bit string $1011001$ in a quantum computer.  We can encode this as
 $$
-1011001 \equiv \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}.
+1011001 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}.
 $$
 Quantum gates work in exactly the same way and it can be shown, as mentioned above.  For example, if we wished to apply the $X$ gate to the first qubit and then perform a CNOT between the second and third qubits we would express this transformation as
 $$
-(X \otimes \operatorname{CNOT}_{12}\otimes \boldone\otimes \boldone \otimes \boldone) \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}\equiv 0011001.
+(X \otimes \operatorname{CNOT}_{12}\otimes \boldone\otimes \boldone \otimes \boldone) \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\equiv 0011001.
 $$
 
 

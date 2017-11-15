@@ -125,7 +125,7 @@ $$
 		\ddots\\\\
 		N_{p1} ~~ \cdots ~~ N_{pq}\\\\
 	\end{bmatrix} \\\\
-	=
+	& =
 	\begin{bmatrix}
 		M_{11} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}~~ \cdots ~~ 
 		M_{1n} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}\\\\

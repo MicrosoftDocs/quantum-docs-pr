@@ -47,9 +47,13 @@ For background, you could start from [Standard Amplitude Amplification](https://
 The Fourier transform is a fundamental tool of classical analysis and is just as important for quantum computations.
 In addition, the efficiency of the quantum Fourier transform (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm.
 
-As a generalization of the QFT, we provide an `ApproximateQFT` (AQFT) that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
-
-AQFT requires Z-rotation gates of the form $2 \pi / 2^k$ and Hadamard gates. The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as ket notation). The approximation parameter `a` determines the pruning level of the Z-rotations, i.e., $a \in [0..n]$. In this case all Z-rotations $2\pi/2^k$ where $k>a$ are removed from the QFT circuit. It is known that for $k >= log_2(n)+log_2(1/\epsilon)+3$ one can bound $||QFT-AQFT||<\epsilon$.
+As an approximate generalization of the QFT, we provide the <xref:microsoft.quantum.canon.approximateqft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
+The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.primitive.RFrac> as well as the <xref:microsoft.quantum.primitive.h> operation.
+The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as [ket notation](xref:microsoft.quantum.concepts.dirac).
+The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
+In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.
+It is known that for $k >= \log_2(n) + \log_2(1 / \epsilon) + 3$. one can bound $\| \operatorname{QFT} - \operatorname{AQFT} \| < \epsilon$.
+<!-- TODO: explain what norms are, perhaps? -->
 
 For more details, please refer to [M. Roetteler, Th. Beth](http://doi.org/10.1007/s00200-008-0072-2 ) and [D. Coppersmith](https://arxiv.org/abs/quant-ph/0201067).
 
@@ -92,8 +96,7 @@ where $n$ is the number of bits of precision that we require, and where we have 
 If we assume that $\phi = 2 \pi p / 2^k$ for an integer $p$, then we recognize this as $\ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n}$, where $p_j$ is the $j^{\textrm{th}}$ bit of $2 \pi \phi$.
 Applying the adjoint of the quantum Fourier transform, we therefore obtain the binary representation of the phase encoded as a quantum state.
 
-In Q#, this is implemented by the <xref:microsoft.quantum.canon.qft> operation.
-
+In Q#, this is implemented by the <xref:microsoft.quantum.canon.quantumphaseestimation> operation, which takes a <xref:microsoft.quantum.canon.discreteoracle> implementing application of $U^m$ as a function of positive integers $m$.
 
 <!-- FIXME: ensure that |k〉 notation is defined above. -->
 

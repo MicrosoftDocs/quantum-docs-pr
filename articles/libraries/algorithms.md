@@ -76,10 +76,27 @@ Then, by linearity,
 We can collect terms to find that
 \begin{align}
     V(\ket{+} \otimes \ket{\phi}) & = \frac{\ket{0} + e^{i \phi} \ket{1}}{\sqrt{2}} \otimes \ket{\phi} \\\\
-                                  & = (R_1(\phi) \ket{+}) \otimes \ket{+},
+                                  & = (R_1(\phi) \ket{+}) \otimes \ket{\phi},
 \end{align}
 where $R_1$ is the unitary applied by the <xref:microsoft.quantum.primitive.r1> operation.
 
+Since the control and target register remain untangled after this process, we can reuse $\ket{\phi}$ as the target of a controlled application of $U^2$ to prepare a second control qubit in the state $R_1(2 \phi) \ket{+}$.
+Continuing in this way, we can obtain a register of the form
+\begin{align}
+    \ket{\psi} & = \sum_{j = 0}^n R_1(2^j \phi) \ket{+}
+               & \propto \bigotimes_{j=0}^{n} \left(\ket{0} + \exp(i 2^{j} \phi) \ket{1}\right)
+               & \propto \sum_{k = 0}^{2^n - 1} \exp(i \phi k) \ket{k}
+\end{align}
+where $n$ is the number of bits of precision that we require, and where we have used ${} \propto {}$ to indicate that we have suppressed the normalization factor of $1 / \sqrt{2^n}$.
 
-## Period Finding ##
+If we assume that $\phi = 2 \pi p / 2^k$ for an integer $p$, then we recognize this as $\ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n}$, where $p_j$ is the $j^{\textrm{th}}$ bit of $2 \pi \phi$.
+Applying the adjoint of the quantum Fourier transform, we therefore obtain the binary representation of the phase encoded as a quantum state.
+
+In Q#, this is implemented by the <xref:microsoft.quantum.canon.qft> operation.
+
+
+<!-- FIXME: ensure that |k〉 notation is defined above. -->
+
+
+### Period Finding ###
 

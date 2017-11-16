@@ -219,7 +219,7 @@ The easiest way to understand how to compute the exponential of a matrix is thro
 $$
 e^A= U^\dagger \left(\boldone +D +\frac{D^2}{2!}+\cdots \right)U= U^\dagger \begin{bmatrix}\exp(D_{11}) & 0 &\cdots &0\\\\ 0 & \exp(D_{22})&\cdots& 0\\\\ \vdots &\vdots &\ddots &\vdots\\\\ 0&0&\cdots&\exp(D_{NN}) \end{bmatrix} U.
 $$
-In other words, if you transform to the eigenbasis of the matrix $A$ then computing the matrix exponential is equivalent to computing the ordinary exponential of the eigenvalues of the matrix.  As many of the operations in quantum computing involve performing matrix exponentials, this trick of transforming into the eigenbasis of a matrix to simplify performing the operator exponential appears frequently and is the basis behind many quantum algorithms such as Trotter-Suzuki based quantum simulation methods.
+In other words, if you transform to the eigenbasis of the matrix $A$ then computing the matrix exponential is equivalent to computing the ordinary exponential of the eigenvalues of the matrix.  As many of the operations in quantum computing involve performing matrix exponentials, this trick of transforming into the eigenbasis of a matrix to simplify performing the operator exponential appears frequently and is the basis behind many quantum algorithms such as Trotter–Suzuki based quantum simulation methods.
 
 Another useful property is if $B$ is both unitary and Hermitian, ie $B^2=\boldone$, then it can be seen by applying this rule to the above expansion of the operator exponential and grouping the $\boldone$ and the $B$ terms that for any real valued $x$
 $$e^{iBx}=\cos(x)\boldone + iB\sin(x).$$

@@ -25,19 +25,19 @@ uid: microsoft.quantum.concepts.dirac
 # Advanced topics
 ## Dirac Notation
 
-While column vector notation is ubiquitous in linear algebra, it is often cumbersome in quantum computing especially when dealing with multiple qubits.  The two main reasons for this are that when we define $\psi$ to be a vector it is not explicitly clear whether $\psi$ is a row or a column vector.  Thus if $\phi$ and $\psi$ are vectors then it is not clear whether $\phi \psi$ is defined because the shapes of $\phi$ and $\psi$ may be unclear in the context.  Apart from ambiguity about the shapes of vectors expressing even expressing simple vectors using the linear algebraic notation introduced earlier can be very cumbersome. For example, if we wish to describe an $n$-qubit state where each qubit takes the value $0$ then we would formally express the state as $$\begin{bmatrix}1 \\ 0 \end{bmatrix}\otimes \cdots \otimes\begin{bmatrix}1 \\ 0 \end{bmatrix}. $$  Of course evaluating this tensor product is impractical because the vector lies in an exponentially large space and so this notation is in fact the best description of the state that can be given using the previous notation.  Dirac notation solves these issues by developing a new language to fit the precise needs of quantum mechanics.  For this reason, we recommend not looking at any of these examples in this section as a rigid prescription of how to describe quantum states but rather encourage the reader to view these as suggestions that can be used to concisely express quantum ideas.
+While column vector notation is ubiquitous in linear algebra, it is often cumbersome in quantum computing especially when dealing with multiple qubits.  The two main reasons for this are that when we define $\psi$ to be a vector it is not explicitly clear whether $\psi$ is a row or a column vector.  Thus if $\phi$ and $\psi$ are vectors then it is not clear whether $\phi \psi$ is defined because the shapes of $\phi$ and $\psi$ may be unclear in the context.  Apart from ambiguity about the shapes of vectors expressing even expressing simple vectors using the linear algebraic notation introduced earlier can be very cumbersome. For example, if we wish to describe an $n$-qubit state where each qubit takes the value $0$ then we would formally express the state as $$\begin{bmatrix}1 \\\\  0 \end{bmatrix}\otimes \cdots \otimes\begin{bmatrix}1 \\\\  0 \end{bmatrix}. $$  Of course evaluating this tensor product is impractical because the vector lies in an exponentially large space and so this notation is in fact the best description of the state that can be given using the previous notation.  Dirac notation solves these issues by developing a new language to fit the precise needs of quantum mechanics.  For this reason, we recommend not looking at any of these examples in this section as a rigid prescription of how to describe quantum states but rather encourage the reader to view these as suggestions that can be used to concisely express quantum ideas.
 
 There are two types of vectors in Dirac notation: the bra-vector and the ket-vector, so named because when put together they form a braket or inner product.  If $\psi$ is a column vector then we can write it in Dirac notation as $|\psi \rangle$, where the $|\cdot \rangle$ denotes that it is a unit-column vector i.e. a ``ket" vector.  Similarly, the row vector $\psi^\dagger$ is expressed as $\langle \psi |$.  This notation directly implies that $\langle \psi |\psi \rangle$ is the inner product of vector $\psi$ with itself which is by definition $1$.  More generally, if $\psi$ and $\phi$ are quantum state vectors their inner product is $\langle \phi | \psi \rangle$ which implies that the probability of measuring the state $|{\psi}\rangle$ to be $|{\phi}\rangle$ is $|\langle \phi|\psi\rangle|^2$.  
 
 The following convention is used to describe the quantum states that encode values of zero and one (the single-qubit computational basis states)
 $$
-\begin{bmatrix} 1 \\ 0 \end{bmatrix} = |0\rangle,\qquad
-\begin{bmatrix} 0 \\ 1 \end{bmatrix} = |1\rangle,
+\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = |0\rangle,\qquad
+\begin{bmatrix} 0 \\\\  1 \end{bmatrix} = |1\rangle,
 $$
  and the following notation is often used to describe the states that result from applying the Hadamard gate to $|0\rangle$ and $|1\rangle$ (which correspond to the unit vectors in the +x and -x directions on the Bloch sphere)
 $$
-\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 1 \end{bmatrix}=H|0\rangle = |{+}\rangle,\qquad
-\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ -1 \end{bmatrix} =H|1\rangle = |{-}\rangle .
+\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  1 \end{bmatrix}=H|0\rangle = |{+}\rangle,\qquad
+\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  -1 \end{bmatrix} =H|1\rangle = |{-}\rangle .
 $$
 These states can also be expanded using Dirac notation as sums of $|0\rangle$ and $|1\rangle$:
 $$
@@ -48,14 +48,14 @@ $$
 |0\rangle = \frac{1}{\sqrt{2}}(|+\rangle + |-\rangle),\qquad |1\rangle = \frac{1}{\sqrt{2}}(|+\rangle - |-\rangle).
 $$
 
-As an example of Dirac notation, consider the braket $\langle 0 | 1\rangle$, which is the inner product between $0$ and $1$.  It can be written as $$\langle 0| 1 \rangle=\begin{bmatrix} 1 & 0 \end{bmatrix}\begin{bmatrix}0\\1\end{bmatrix}=0.$$
+As an example of Dirac notation, consider the braket $\langle 0 | 1\rangle$, which is the inner product between $0$ and $1$.  It can be written as $$\langle 0| 1 \rangle=\begin{bmatrix} 1 & 0 \end{bmatrix}\begin{bmatrix}0\\\\ 1\end{bmatrix}=0.$$
 This says that $|0\rangle$ and $|1\rangle$ are orthogonal vectors, meaning that $\langle 0 |1\rangle = \langle 1 | 0\rangle =0$.  Also by definition $\langle 0 | 0 \rangle = \langle 1 | 1\rangle=1$, which means that the two computational basis vectors can also be called orthonormal.
 These orthonormality properties will be useful in the following example. If we have a state $|\psi\rangle = {\frac{3}{5}} |1\rangle + {\frac{4}{5}} |0\rangle$ then because $\langle 1 | 0\rangle =0$ the probability of measuring $1$  is  $$\big|\langle 1 | \psi\rangle \big|^2= \left|\frac{3}{5}\langle 1 | 1\rangle +\frac{4}{5}\langle 1 |0 \rangle\right|^2=\frac{9}{25}.$$ 
 
 
 Dirac notation also includes an implicit tensor product structure within it.  This is important because in quantum computing, the state vector described by two uncorollated quantum registers is the tensor products of the two state vectors.  Concisely describing the tensor product structure, or lack thereof, is therefore vital if you want to explain a quantum computation.  This tensor product structure implies that we can write $\psi \otimes \phi$ for any two quantum state vectors $\phi$ and $\psi$ as $|\psi\rangle |\phi\rangle$ which is sometimes explicitly written as $|\psi\rangle \otimes |\phi\rangle$ but by convention writing $\otimes$ in between the vectors is unnecessary.  For example, the state with two qubits initialized to the zero state would be
 $$
-\begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}= \begin{bmatrix} 1 \\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix} = |0\rangle \otimes |0\rangle= |0\rangle |0\rangle.
+\begin{bmatrix} 1 \\\\  0 \\\\  0 \\\\  0 \end{bmatrix}= \begin{bmatrix} 1 \\\\  0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix} = |0\rangle \otimes |0\rangle= |0\rangle |0\rangle.
 $$
  Similarly,  the state $|{p}\rangle$ for integer $p$ represents a quantum state that encodes in a binary representation the integer $p$.  For example, if we wished to express the number $3$ using an unsigned binary encoding we could equally express it as
 $$
@@ -63,7 +63,7 @@ $$
 $$
 Within this notation $|{0}\rangle$ need not refer to a single qubit state but rather a qubit register storing a binary encoding of $0$.  The differences between these two notations can is usually clear within the context it is used.  This convention is useful for simplifying the first example which can be written in any of the following ways
 $$
-\begin{bmatrix}1 \\ 0 \end{bmatrix}\otimes \cdots \otimes\begin{bmatrix}1 \\ 0 \end{bmatrix} = |0\rangle \otimes \cdots \otimes |0\rangle= |0\cdots 0\rangle = |0\rangle^{\otimes n} = |0\rangle.
+\begin{bmatrix}1 \\\\  0 \end{bmatrix}\otimes \cdots \otimes\begin{bmatrix}1 \\\\  0 \end{bmatrix} = |0\rangle \otimes \cdots \otimes |0\rangle= |0\cdots 0\rangle = |0\rangle^{\otimes n} = |0\rangle.
 $$
 As another example of how you can use Dirac notation to describe a quantum state, consider the following equivalent ways of writing a quantum state that is an equal superposition over every possible bit string of length $n$
 $$
@@ -83,7 +83,7 @@ $$|\langle - |\psi\rangle|^2= \left|\frac{1}{\sqrt{2}}(\langle 0| - \langle 1|)(
 
   The final object that is worth discussing in Dirac notation is the outer product or ketbra.  Such terms are represented within Dirac notations as $|\psi\rangle \langle \phi|$, and are sometimes called ketbras because the bras and kets occur in the opposite order as brakets.  The outer product is defined via matrix multiplication as $|\psi\rangle \langle \phi| = \psi \phi^\dagger$ for quantum state vectors $\psi$ and $\phi$.  The simplest, and arguably most common example of this notation is
   $$
-|0\rangle \langle 0| = \begin{bmatrix}1\\0 \end{bmatrix}\begin{bmatrix}1&0 \end{bmatrix}= \begin{bmatrix}1 &0\\0 &0\end{bmatrix} \qquad |1\rangle \langle 1| = \begin{bmatrix}0\\1 \end{bmatrix}\begin{bmatrix}0&1 \end{bmatrix}= \begin{bmatrix}0 &0\\0 &1\end{bmatrix}.
+|0\rangle \langle 0| = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1&0 \end{bmatrix}= \begin{bmatrix}1 &0\\\\ 0 &0\end{bmatrix} \qquad |1\rangle \langle 1| = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0&1 \end{bmatrix}= \begin{bmatrix}0 &0\\\\ 0 &1\end{bmatrix}.
   $$
   Such ketbras are often called projectors because they project a quantum state onto a fixed value.  Since these operations are not unitary (and do not even preserve the norm of a vector), it should come as no surprise that a quantum computer cannot deterministically apply a projector.  However projectors do a beautiful job of describing the action that measurement has on a quantum state.  For example, if we measure a state $|\psi \rangle$ to be $0$ then the resulting transformation that the state experiences as a result of the measurement is
   $$|\psi \rangle \rightarrow \frac{(|0\rangle \langle 0|)|\psi\rangle}{|\langle 0|\psi\rangle|}= |0\rangle,$$
@@ -99,7 +99,7 @@ P(\text{outcome of measuring first qubit = 1})= \langle\psi|\left(|1\rangle\lang
 $$
 Here the identity matrix can be conveniently written in Dirac notation as
 $$
-\boldone = |0\rangle \langle 0|+|1\rangle \langle 1|= \begin{bmatrix}1&0\\0&1 \end{bmatrix}.
+\boldone = |0\rangle \langle 0|+|1\rangle \langle 1|= \begin{bmatrix}1&0\\\\ 0&1 \end{bmatrix}.
 $$
 For the case where there are two-qubits the projector can be expanded as $|1\rangle \langle 1| \otimes \boldone = |1\rangle\langle 1 \otimes (|0\rangle \langle 0|+|1\rangle \langle 1|)= |10\rangle\langle 10| + |11\rangle\langle 11|$.  We can then see that this is consistent with the discussion from the discussion about measurement likelihoods for multiqubit states using column-vector notation:
 $$
@@ -119,7 +119,7 @@ which matches our discussion from the multi-qubit measurement section.  The gene
 
   In order to concisely identify these subspaces, we need a language for describing them.  One way to do this is to describe the two subspaces by specifying them through a matrix that just has two unique eigenvalues, which are taken by convention to be $\pm 1$.  The simplest example of this is 
   $$
-Z= \begin{bmatrix}1&0\\0&-1\end{bmatrix}
+Z= \begin{bmatrix}1&0\\\\ 0&-1\end{bmatrix}
   $$
 The Pauli-$Z$ matrix clearly has two eigenvectors $\ket{0}$ and $\ket{1}$ with eigenvalues $\pm 1$.  Thus if we measure the qubit and obtain $\ket{0}$ then we are in the $+1$ eigenspace (the set of all vectors that are formed of sums of  eigenvectors with only positive or only negative eigenvalues) of the operator and if measure $\ket{1}$ then we are in the $-1$ eigenspace of $Z$.  This process is referred to in the language of Pauli measurements as measuring Pauli-$Z$ and it is entirely equivalent to performing a computational basis measurement.
 
@@ -127,11 +127,11 @@ Of course any $2\times 2$ matrix that is a unitary transformation of $Z$ also sa
 $$
 \begin{array}{|c|c|}
 \hline
-\text{Pauli Measurement} & U\\
+\text{Pauli Measurement} & U\\\\ 
 \hline
-Z & \boldone\\
-X & H\\
-Y & HS^\dagger\\
+Z & \boldone\\\\ 
+X & H\\\\ 
+Y & HS^\dagger\\\\ 
 \hline
 \end{array}
 $$
@@ -141,57 +141,57 @@ In Q# we say the outcome, ie the classical information extracted from interactin
 
 Measurements of multi-qubit Pauli operators are defined similarly.  You can see this from the fact that
 $$
-Z\otimes Z = \begin{bmatrix}1 &0 &0&0\\ 0&-1&0&0\\0&0&-1&0\\0&0&0&1\end{bmatrix}.
+Z\otimes Z = \begin{bmatrix}1 &0 &0&0\\\\  0&-1&0&0\\\\ 0&0&-1&0\\\\ 0&0&0&1\end{bmatrix}.
 $$
 Thus the tensor products of two Pauli-$Z$ operators forms a matrix composed of two spaces consisting of $+1$ and $-1$ eigenvalues.  As with the single qubit case, both constitute a half-space meaning that half of the accessible vector space belongs to the $+1$ eigenspace and the remaining half to the $-1$ eigenspace.  In general, it is easy to see from the definition of the tensor product that any tensor product of Pauli-$Z$ operators and the identity also obeys this.  For example,
 $$
-Z\otimes\boldone=\begin{bmatrix} 1&0&0&0\\ 0&-1&0&0\\ 0&0&1&0\\0&0&0&-1\end{bmatrix}.
+Z\otimes\boldone=\begin{bmatrix} 1&0&0&0\\\\  0&-1&0&0\\\\  0&0&1&0\\\\ 0&0&0&-1\end{bmatrix}.
 $$
 
-As before, any unitary transformation of such matrices also describes two half-spaces labeled by $\pm 1$ eigenvalues.  For example, $X\otimes X = H\otimes H(Z\otimes Z)H\otimes H$  from the identity that $Z=HXH$.  Similar to the one-qubit case, all two qubit Pauli-measurements can be written as either $U^\dagger (Z\otimes \boldone) U $ for $4\times 4$ unitary matrices $U$.  We enumerate the transformations in the following table where we introduce for convenience the swap gate which swaps qubits $0$ and $1$: $\text{SWAP}=\operatorname{CNOT}_{01}\operatorname{CNOT}_{10}\operatorname{CNOT}_{01}$:
+As before, any unitary transformation of such matrices also describes two half-spaces labeled by $\pm 1$ eigenvalues.  For example, $X\otimes X = H\otimes H(Z\otimes Z)H\otimes H$  from the identity that $Z=HXH$.  Similar to the one-qubit case, all two qubit Pauli-measurements can be written as either $U^\dagger (Z\otimes \boldone) U $ for $4\times 4$ unitary matrices $U$.  We enumerate the transformations in the following table where we introduce for convenience the swap gate which swaps qubits $0$ and $1$: $\text{SWAP}=\text{CNOT}\_{01}\text{CNOT}\_{10}\text{CNOT}\_{01}$:
 
 $$
 \begin{array}{|c|c|}
 \hline
-\text{Pauli Measurement} & U\\
+\text{Pauli Measurement} & U\\\\ 
 \hline
-Z\otimes \boldone & \boldone\otimes \boldone\\
-X\otimes \boldone & H\otimes \boldone\\
-Y\otimes \boldone & HS^\dagger\otimes \boldone\\
-\boldone \otimes Z & \text{SWAP}\\
-\boldone \otimes X & (H\otimes \boldone)\text{SWAP}\\
-\boldone \otimes Y & (HS^\dagger\otimes \boldone)\text{SWAP}\\
+Z\otimes \boldone & \boldone\otimes \boldone\\\\ 
+X\otimes \boldone & H\otimes \boldone\\\\ 
+Y\otimes \boldone & HS^\dagger\otimes \boldone\\\\ 
+\boldone \otimes Z & \text{SWAP}\\\\ 
+\boldone \otimes X & (H\otimes \boldone)\text{SWAP}\\\\ 
+\boldone \otimes Y & (HS^\dagger\otimes \boldone)\text{SWAP}\\\\ 
 \hline
 \end{array}
 \qquad
 \begin{array}{|c|c|}
 \hline
-\text{Pauli Measurement} & U\\
+\text{Pauli Measurement} & U\\\\ 
 \hline
-Z\otimes Z & \operatorname{CNOT}_{10}\\
-X\otimes Z & \operatorname{CNOT}_{10}(H\otimes \boldone)\\
-Y\otimes Z & \operatorname{CNOT}_{10}(HS^\dagger\otimes \boldone)\\
-Z\otimes X & \operatorname{CNOT}_{10}(\boldone\otimes H)\\
-X\otimes X & \operatorname{CNOT}_{10}(H\otimes H)\\
-Y\otimes X & \operatorname{CNOT}_{10}(HS^\dagger\otimes H)\\
+Z\otimes Z & \mathrm{CNOT}\_{10}\\\\ 
+X\otimes Z & \mathrm{CNOT}\_{10}(H\otimes \boldone)\\\\ 
+Y\otimes Z & \mathrm{CNOT}\_{10}(HS^\dagger\otimes \boldone)\\\\ 
+Z\otimes X & \mathrm{CNOT}\_{10}(\boldone\otimes H)\\\\ 
+X\otimes X & \mathrm{CNOT}\_{10}(H\otimes H)\\\\ 
+Y\otimes X & \mathrm{CNOT}\_{10}(HS^\dagger\otimes H)\\\\ 
 \hline
 \end{array}
 $$
 $$
 \begin{array}{|c|c|}
 \hline
-\text{Pauli Measurement} & U\\
+\text{Pauli Measurement} & U\\\\ 
 \hline
-Z\otimes Y & \operatorname{CNOT}_{10}(\boldone \otimes HS^\dagger)\\
-X\otimes Y & \operatorname{CNOT}_{10}(H\otimes HS^\dagger)\\
-Y\otimes Y & \operatorname{CNOT}_{10}(HS^\dagger\otimes HS^\dagger)\\
-\\
-\\
-\\
+Z\otimes Y & \mathrm{CNOT}\_{10}(\boldone \otimes HS^\dagger)\\\\ 
+X\otimes Y & \mathrm{CNOT}\_{10}(H\otimes HS^\dagger)\\\\ 
+Y\otimes Y & \mathrm{CNOT}\_{10}(HS^\dagger\otimes HS^\dagger)\\\\ 
+\\\\ 
+\\\\ 
+\\\\ 
 \hline
 \end{array}
 $$
-Here the gate $\operatorname{CNOT}_{10}$ appears for the following reason.  Each Pauli measurement that does not include the $\boldone$ matrix is equivalent up to a unitary to $Z\otimes Z$ by the above reasoning.  The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector and the controlled-not operations that appear in this list serve to compute this parity and store it in the first bit.  Then once the first bit is measured, we can recover the identity of the resultant half-space which is equivalent to measuring the Pauli operator.
+Here the gate $\mathrm{CNOT}\_{10}$ appears for the following reason.  Each Pauli measurement that does not include the $\boldone$ matrix is equivalent up to a unitary to $Z\otimes Z$ by the above reasoning.  The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector and the controlled-not operations that appear in this list serve to compute this parity and store it in the first bit.  Then once the first bit is measured, we can recover the identity of the resultant half-space which is equivalent to measuring the Pauli operator.
 
 One additional note, while it may be tempting to assume that measuring $Z\otimes Z$ is the same as measuring $Z\otimes \boldone$ and then $\boldone \otimes Z$ this assumption would be false.  The reason why is that measuring $Z\otimes Z$ projects the quantum state into either the $+1$ or $-1$ eigenstate of these operators.  Measuring $Z\otimes \boldone$ and then $\boldone \otimes Z$ projects the quantum state vector first onto a half space of $Z\otimes \boldone$ and then onto a half space of $\boldone \otimes Z$.  As there are four computational basis vectors, performing both measurements reduces the state to a quarter-space and hence reduces it to a single computational basis vector.
 

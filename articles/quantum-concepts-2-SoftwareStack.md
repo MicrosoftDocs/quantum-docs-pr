@@ -33,6 +33,11 @@ One such simple stack is given below, but the form and level of detail with whic
 --->
 ![Software stack](media/stack.svg)
 ![Software stack](media/mobius_strip_preview.png)
+<img src=media/mobius_strip_preview.png>
+<img src="media/stack.svg">
+
+<object data="media/stack.svg" type="image/svg+xml"></object>
+
 
 There are several broad stages of programming such a quantum computation.  The first, and arguably most challenging phase, is specifying the problem that one wishes to solve.  In this case, the problem is to factor the number 15.  The next step involves designing an algorithm for solving this computational problem.  In this case, Shor's famous quantum factoring algorithm can be used to find the factors.  This algorithm is first expressed in Q# and then a sequence of quantum operations is output that could be run on an idealized error-free quantum computer.  
 

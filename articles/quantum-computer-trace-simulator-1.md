@@ -33,7 +33,7 @@ measurements must be performed. See Section [Providing the probability of
 measurement outcomes](#providing-the-probability-of-measurement-outcomes) for more
 details on this. 
 
-# Providing the probability of measurement outcomes
+## Providing the probability of measurement outcomes
 
 There are two kinds of measurements that appear in quantum algorithms. The first
 kind plays an auxiliary role where the user usually knows the
@@ -76,7 +76,7 @@ outcomes. The quantum computer `Trace Simulator` provides a function `ForceMeasu
 namespace `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators` to force
 the simulator to take the measurement outcome preferred by the user. See the API documentation on [ForceMeasure](Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.ForceMeasure) for more detail.
 
-# Running your program with the quantum computer Trace Simulator 
+## Running your program with the quantum computer Trace Simulator 
 
 The quantum computer `Trace Simulator` may be viewed as just another simulator. The C# driver program for using it is very similar to the one for any other Quantum Simulator: 
 
@@ -118,7 +118,7 @@ Each of these components may be enabled by setting appropriate flags in
 `QCTraceSimulatorConfiguration`. More details about using each of these
 components are provided in the corresponding reference files. See the API documentation on [QCTraceSimulatorConfiguration](Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for specific details.
 
-# See also
+## See also
 The quantum computer [Trace Simulator
 ](quantum-computer-trace-simulator-1.md) overview
 

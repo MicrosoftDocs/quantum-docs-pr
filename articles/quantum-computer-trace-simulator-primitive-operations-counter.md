@@ -22,7 +22,8 @@ ms.topic: article-type-from-white-list
 
 # Primitive Operations Counter	
 
-The `Primitive Operations Counter` counts the number of primitive operations used by
+The `Primitive Operations Counter` is a part of the quantum computer [Trace
+Simulator](quantum-computer-trace-simulator-1.md). It counts the number of primitive executions used by
 every operation invoked in a quantum program. All operations from
 `Microsoft.Quantum.Primitive` are expressed in terms of single qubit rotations,
 T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit
@@ -42,7 +43,7 @@ operation CCNOTDriver() : () {
 }
 ```
 
-# Using the Primitive Operations Counter within a C# program
+## Using the Primitive Operations Counter within a C# program
 
 To check that `CCNOT` indeed requires 7 `T` gates and that `CCNOTDriver` executes 8 `T` 
 gates we can use the following C# code:
@@ -83,6 +84,6 @@ use the following:
 string csvSummary = sim.ToCSV()[MetricCalculatorsNames.primitiveOperationsCounter];
 ```
 
-# See also
+## See also
 The quantum computer [Trace Simulator
 ](quantum-computer-trace-simulator-1.md) overview

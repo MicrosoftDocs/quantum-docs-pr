@@ -22,7 +22,9 @@ ms.topic: article-type-from-white-list
 
 # Depth Counter
 
-The `Depth Counter` counts the depth of
+The `Depth Counter` is a part of the quantum computer [Trace
+Simulator](quantum-computer-trace-simulator-1.md).
+It is used to gather counts of the depth of
 every operation invoked in a quantum program. All operations from
 `Microsoft.Quantum.Primitive` are expressed in terms of single qubit rotations,
 T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit
@@ -48,7 +50,7 @@ operation CCNOTDriver() : () {
 }
 ```
 
-# Using Depth Counter within a C# program
+## Using Depth Counter within a C# program
 
 To check that `CCNOT` has `T` depth 5 and `CCNOTDriver` has `T` depth 6
 we can use the following C# code:
@@ -78,6 +80,6 @@ use the following:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricCalculatorsNames.depthCounter];
 ```
-# See also
+## See also
 The quantum computer [Trace Simulator
 ](quantum-computer-trace-simulator-1.md) overview

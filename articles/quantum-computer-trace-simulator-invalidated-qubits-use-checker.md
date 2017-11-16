@@ -41,7 +41,7 @@ operation UseReleasedQubitTest () : () {
 
 When `H` is applied to `q[0]` it points to an already released qubit. This can cause undefined behavior. When the `Invalidated Qubits Use Checker` is enabled, the exception `InvalidatedQubitsUseCheckerException` will be thrown if an operation is applied to an already released qubit. See the API documentation on [InvalidatedQubitsUseCheckerException](Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.InvalidatedQubitsUseCheckerException) for more details.
 
-# Using the Invalidated Qubits Use Checker in your C# program
+## Using the Invalidated Qubits Use Checker in your C# program
 
 The following is an example of C# driver code for using the quantum computer `Trace
 Simulator` with the `Invalidated Qubits Use Checker` enabled: 
@@ -73,6 +73,6 @@ computer trace simulator and can be provided as an argument for
 the `QCTraceSimulator` constructor. When `useInvalidatedQubitsUseChecker` is set to true
 the `Invalidated Qubits Use Checker` is enabled. See the API documentation on [QCTraceSimulator](Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for more details.
 
-# See also
+## See also
 The quantum computer [Trace Simulator
 ](quantum-computer-trace-simulator-1.md) overview

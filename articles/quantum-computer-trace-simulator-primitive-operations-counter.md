@@ -20,7 +20,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Overview
+## Primitive Operations Counter	
 
 The Primitive Operations Counter counts the number of primitive operations used by
 every operation invoked in a quantum program. All operations from
@@ -42,7 +42,7 @@ operation CCNOTDriver() : () {
 }
 ```
 
-# Using the Primitive Operations Counter within a C# program
+## Using the Primitive Operations Counter within a C# program
 
 To check that `CCNOT` indeed requires 7 T gates and that `CCNOTDriver` executes 8 T 
 gates we can use the following C# code:

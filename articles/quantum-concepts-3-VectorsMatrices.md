@@ -107,9 +107,11 @@ $$\boldone=\begin{bmatrix}
 ~~ \ddots\\\\
 0 ~~ 0 ~~ \cdots ~~ 1\\\\
 \end{bmatrix}.$$
-For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \boldone$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. For any matrix $M$, the adjoint or conjugate transpose of $M$, is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. We say a matrix $U$ is unitary if $UU^\dagger = \boldone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because $\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle$.  
 
+For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \boldone$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. 
 
+For any matrix $M$, the adjoint or conjugate transpose of $M$, is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. We say a matrix $U$ is unitary if $UU^\dagger = \boldone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because $\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle$.  
+A matrix $M$ is said to be Hermitian if $M=M^\dagger$.
 
 Finally, the tensor product (or Kronecker product) of two matrices $M$ of size $m\times n$ and $N$ of size $p \times q$ is a larger matrix $P=M\otimes N$ of size $mp \times nq$, and is obtained from $M$ and $N$ as follows:
 $$
@@ -187,15 +189,23 @@ $$
 $$
 
 ##Eigenvalues and Eigenvectors
-Let $M$ be a square matrix and $v$ be a vector that is not the all zeros vector (i.e., the vector with all entries equal to $0$). Then we say $v$ is an eigenvector of $M$ if $Mv = cv$ for some number $c$. We say $c$ is the eigenvalue corresponding to the eigenvector $v$. In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number. Note that if $v$ is an eigenvector with eigenvalue $c$, then $av$ is also an eigenvector (for any nonzero $a$) with the same eigenvlue.
 
-For example, for the identity matrix, every vector $v$ is an eigenvector with eigenvalue $1$. As another example, consider a diagonal matrix $D$ which only has nonzero entries on the diagonal: $$\begin{bmatrix} d_1&0& 0\\\\ 0 & d_2 & 0 \\\\ 0 & 0 & d_3\end{bmatrix}.$$ The vectors $\begin{bmatrix}1\\\\ 0\\\\ 0\end{bmatrix}$, $\begin{bmatrix}0\\\\ 1\\\\ 0\end{bmatrix}$, and $\begin{bmatrix}0\\\\ 0\\\\ 1\end{bmatrix}$ are eigenvectors of this matrix with eigenvalues $d_1$, $d_2$, and $d_3$ respectively. If $d_1$, $d_2$, and $d_3$ are distinct numbers, then these vectors (and their multiples) are the only eigenvectors of the matrix $D$. In general, for a diagonal matrix it is easy to read off the eigenvalues and eigenvectors. The eigenvalues are all the numbers appearing on the diagonal, and their respective eigenvectors are the unit vectors with one entry equal to $1$ and the remaining entries equal to $0$.
+Let $M$ be a square matrix and $v$ be a vector that is not the all zeros vector (i.e., the vector with all entries equal to $0$).
+Then we say $v$ is an eigenvector of  $M$ if $Mv = cv$ for some number $c$. We say $c$ is the eigenvalue corresponding to the eigenvector $v$. In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number. Note that if $v$ is an eigenvector with eigenvalue $c$, then $av$ is also an eigenvector (for any nonzero $a$) with the same eigenvlue. 
 
-Note in the above example that the eigenvectors of $D$ formed a basis for $3$-dimensional vectors. A basis is a set of vectors such that any vector can be written as a linear combination of them. More explicitly, $v_1$, $v_2$, and $v_3$ form a basis if any vector $v$ can be written as $v=a_1 v_1 + a_2 v_2 + a_3 v_3$ for some numbers $a_1$, $a_2$, and $a_3$.
+For example, for the identity matrix, every vector $v$ is an eigenvector with eigenvalue $1$. As another example, consider a diagonal matrix $D$ which only has nonzero entries on the diagonal:
+$$
+\begin{equation}
+	\begin{bmatrix}
+		d_1 & 0 & 0 \\\\ 0 & d_2 & 0 \\\\ 0 & 0 & d_3
+	\end{bmatrix}.
+\end{equation}
+$$
+The vectors $\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}$, $\begin{bmatrix}0 \\\\ 1 \\\\ 0\end{bmatrix}$, and $\begin{bmatrix}0 \\\\ 0 \\\\ 1\end{bmatrix}$ are eigenvectors of this matrix with eigenvalues  $d_1$, $d_2$, and $d_3$ respectively. If $d_1$, $d_2$, and $d_3$ are distinct numbers, then these vectors (and their multiples) are the only eigenvectors of the matrix $D$. In general, for a diagonal matrix it is easy to read off the eigenvalues and eigenvectors. The eigenvalues are all the numbers appearing on the diagonal, and their respective eigenvectors are the unit vectors with one entry equal to $1$ and the remaining entries equal to $0$.
 
-For Hermitian and unitary matrices, which are essentially the only matrices encountered in quantum computing, we have a general result known as the spectral theorem, which asserts the following: For any Hermitian or unitary matrix $M$, there exists a unitary $U$ such that $M=U^\dagger D U$ for some diagonal matrix $D$. Furthermore, the diagonal entries of $D$ will be the eigenvalues of $M$. We already know how to compute the eigenvalues and eigenvectors of a diagonal matrix $D$. Using this theorem we know that if $v$ is an eigenvector of $D$ with eigenvalue $c$, i.e., $Dv = cv$, then $U^\dagger v$ will be an eigenvector of $M$ with eigenvalue $c$. This is because $$M(U^\dagger v) = U^\dagger D U (U^\dagger v) =U^\dagger D (U U^\dagger) v = U^\dagger D v = c U^\dagger v.$$  
+Note in the above example that the eigenvectors of $D$ formed a basis for $3$-dimensional vectors. A basis is a set of vectors such that any vector can be written as a linear combination of them. More explicitly, $v_1$, $v_2$, and $v_3$ form a basis if any vector $v$ can be written as $v=a_1 v_1 + a_2 v_2 + a_3 v_3$ for some numbers $a_1$, $a_2$, and $a_3$. 
 
-Also importantly, the eigenvectors for all Hermitian and unitary operators form an orthonormal basis (meaning each basis vector is orthogonal to each other vector and is of unit length).  The fact that complicated often become trivial diagonal matrices when viewed in such an orthonormal basis means that transforming to eigenbases of matrices is an important simplification for quantum computing.
+For Hermitian and unitary matrices, which are  essentially the only matrices encountered in quantum computing, we have a general result known as the spectral theorem, which asserts the following: For any Hermitian or unitary matrix $M$, there exists a unitary $U$ such that $M=U^\dagger D U$ for some diagonal matrix $D$. Furthermore, the diagonal entries of $D$ will be the eigenvalues of $M$. We already know how to compute the eigenvalues and eigenvectors of a diagonal matrix $D$. Using this theorem we know that if $v$ is an eigenvector of $D$ with eigenvalue $c$, i.e., $Dv = cv$, then $U^\dagger v$ will be an eigenvector of $M$ with eigenvalue $c$. This is because $$M(U^\dagger v) = U^\dagger D U  (U^\dagger v) =U^\dagger D (U  U^\dagger) v = U^\dagger D v = c U^\dagger v.$$
 
 ##Matrix Exponentials
 A matrix exponential can also be defined in exact analogy to the exponential function.  The matrix exponential of a matrix $A$ can be expressed as
@@ -205,7 +215,11 @@ $$
 This is important to us because quantum mechanical time evolution is described by a unitary matrix of the form $e^{iB}$ for Hermitian matrix $B$.  For this reason, performing matrix exponentials is a fundamental part of quantum computing and as such Q# has intrinsic routines for describing these operations.
 There are many ways in practice to compute a matrix exponential on a classical computer, and in general numerically approximating such an exponential it is fraught with peril.  See [Cleve Moler and Charles Van Loan. "Nineteen dubious ways to compute the exponential of a matrix." SIAM review 20.4 (1978): 801-836] for more information about the challenges involved.  
 
+<<<<<<< HEAD
 The easiest way to understand how to compute the exponential of a matrix is through the eigenvalues and eigenvectors of that matrix.  Specifically, the eigenvalue decomposition says that for every $N\times N$ matrix $A$ there exists a unitary matrix $U$ and a diagonal matrix $D$ such that $A=U^\dagger D U$.  Because of the properties of unitarity we have that $A^2 = U^\dagger D^2 U$ and similarly for any power $p$, $A^p = U^\dagger D^p U$.  If we substitute this into the operator definition of the operator exponential we obtain
+=======
+The easiest way to understand how to compute the exponential of a matrix is through the eigenvalues and eigenvectors of that matrix.  Specifically, the spectral theorem discussed above says that for every Hermitian or unitary matrix $A$ there exists a unitary matrix $U$ and a diagonal matrix $D$ such that $A=U^\dagger D U$.  Because of the properties of unitarity we have that $A^2 = U^\dagger D^2 U$ and similarly for any power $p$ $A^p = U^\dagger D^p U$.  If we substitute this into the operator definition of the operator exponential we obtain
+>>>>>>> master
 $$
 e^A= U^\dagger \left(\boldone +D +\frac{D^2}{2!}+\cdots \right)U= U^\dagger \begin{bmatrix}\exp(D_{11}) & 0 &\cdots &0\\\\ 0 & \exp(D_{22})&\cdots& 0\\\\ \vdots &\vdots &\ddots &\vdots\\\\ 0&0&\cdots&\exp(D_{NN}) \end{bmatrix} U.
 $$

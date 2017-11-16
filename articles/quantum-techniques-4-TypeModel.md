@@ -27,7 +27,8 @@ In discussing how to define Q# operations and functions, we have seen that input
 At this point, it is helpful to take a step back and discuss these types in more detail.
 In particular, we note that Q# is a *strongly-typed* language, such that careful use of these types can help the compiler to provide strong guarantees about Q# programs at compile time.
 
-> [!WARNING] In order to provide the strongest guarantees possible, all conversions between types in Q# **must** be made explicitly using calls to functions which express that conversion.
+> [!WARNING] 
+> In order to provide the strongest guarantees possible, all conversions between types in Q# **must** be made explicitly using calls to functions which express that conversion.
 > A variety of such functions are provided as a part of the @"microsoft.quantum.extensions.convert" namespace.
 
 Q# provides both primitive types, which can be used directly, and a variety of ways to produce new types from other types.

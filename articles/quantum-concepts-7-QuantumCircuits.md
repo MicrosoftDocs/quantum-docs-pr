@@ -22,8 +22,8 @@ ms.topic: article-type-from-white-list
 ---
 
 # Quantum Circuits
-Consider for a moment the unitary transformation $\text{ CNOT}_{01}(H\otimes 1)$.  This gate sequence is of fundamental significance to quantum computing because it creates a maximally entangled two-qubit state:
-$$\mathrm{CNOT}_{01}(H\otimes 1)|00\rangle = \frac{1}{\sqrt{2}} \left(\ket{00} + \ket{11} \right),$$
+Consider for a moment the unitary transformation $\text{ CNOT}\_{01}(H\otimes 1)$.  This gate sequence is of fundamental significance to quantum computing because it creates a maximally entangled two-qubit state:
+$$\mathrm{CNOT}\_{01}(H\otimes 1)|00\rangle = \frac{1}{\sqrt{2}} \left(\ket{00} + \ket{11} \right),$$
 Operations with this, or greater complexity, are ubiquitous in quantum algorithms and quantum error correction and so it should come as a great relief that there is a simple method for visualizing them called a quantum circuit diagram.  The circuit diagram for preparing this maximally entangled quantum state is
 
 ![](.\media\1.svg)

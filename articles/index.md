@@ -1,5 +1,13 @@
-|# Welcome to the Microsoft Quantum Developer Kit preview *beta*    | ![Microsoft Quantum](media/mobius_strip_preview.png) ||
+|   |   |
+| - | - |
+| This | table |
 
+
+
+<!---
+| <H1> Welcome to the Microsoft Quantum Developer Kit preview *beta*    | ![Microsoft Quantum](media/mobius_strip_preview.png) ||
+|-------------------------|----------------------------||
+--->
 
 ![Microsoft Quantum](media/mobius_strip_preview.png) 
 # Welcome to the Microsoft Quantum Developer Kit preview *beta*

@@ -22,7 +22,9 @@ ms.topic: article-type-from-white-list
 ---
 
 
-## Quantum Characterization and Statistics ##
+# Quantum Characterization and Statistics #
+
+## Phase Estimation ##
 
 ### Iterative Phase Estimation ###
 

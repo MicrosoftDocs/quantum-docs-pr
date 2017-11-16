@@ -22,14 +22,14 @@ ms.topic: article-type-from-white-list
 
 # Overview
 
-Depth Counter counts the depth of
-every operations invoked in quantum program. All operations from
+`Depth Counter` counts the depth of
+every operations invoked in a quantum program. All operations from
 `Microsoft.Quantum.Primitive` are expressed in terms of single qubit rotations,
-T gate, single qubit Clifford gates, CNOT gate and measurements of multi-qubit
-Pauli observables. User can set the depth for each of the primitive operations. By 
-default all operations have depth 0 except T gate which has depth 1.This means 
-that by default the T depth of operations is computed. Collected statistics
-are aggregated over edges of operations call graph. Let us now compute T depth 
+T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit
+Pauli observables. Users can set the depth for each of the primitive operations. By 
+default all operations have depth 0 except the T gate which has depth 1.This means 
+that by default, only the T depth of operations is computed. Collected statistics
+are aggregated over all the edges of the operations call graph. Let us now compute T depth 
 of CCNOT. We use the following Q# driver code: 
 
 ```qsharp
@@ -61,15 +61,15 @@ double tDepth = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(DepthCounter.Metrics
 double tDepthAll = sim.GetMetric<CCNOTDriver>(DepthCounter.Metrics.Depth);
 ```
 
-First part of the program executes CCNOTDriver. In the second part we use method
-`QCTraceSimulator.GetMetric` to get T depth of `CCNOT` and `CCNOTDriver`: 
+The first part of the program executes CCNOTDriver. In the second part, we use the method
+`QCTraceSimulator.GetMetric` to get the T depth of `CCNOT` and `CCNOTDriver`: 
 
 ```csharp
 double tDepth = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(DepthCounter.Metrics.Depth);
 double tDepthAll = sim.GetMetric<CCNOTDriver>(DepthCounter.Metrics.Depth);
 ```
 
-Finally, co output all the statistics collected by depth counter in CSV format we can 
+Finally, to output all the statistics collected by Depth Counter in CSV format we can 
 use the following:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricCalculatorsNames.depthCounter];

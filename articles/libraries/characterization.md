@@ -65,7 +65,7 @@ In the case of iterative phase estimation, we have that $\ket{\psi} = R_1(m \phi
             \frac12 \left( \bra{0} + \bra{1} \right) \left( \ket{0} + e^{i m \phi} \ket{1} \right)
             \right|^2 \\\\
         & = \left| \frac{1 + e^{i m \phi}}{2} \right|^2 \\\\
-        & = \cos^2(m \phi / 2) \tag{eq:phase-est-likelihood}.
+        & = \cos^2(m \phi / 2) \tag{1} \label{eq:phase-est-likelihood}.
 \end{align}
 That is, iterative phase estimation consists of learning the oscillation frequency of a sinusoidal function, given the ability to flip a coin with a bias given by that sinusoid.
 Following traditional classical terminology, we call $\ref{eq:phase-est-likelihood}$ the *likelihood function* for iterative phase estimation.

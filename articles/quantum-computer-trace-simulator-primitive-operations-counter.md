@@ -20,14 +20,14 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Overview
+# Primitive operations counter
 
-Primitive Operations Counter counts the number of primitive operations used by
-every operations invoked in quantum program. All operations from
+The primitive operations counter counts the number of primitive operations used by
+every operation in a quantum program. All operations from
 `Microsoft.Quantum.Primitive` are expressed in terms of single qubit rotations,
 T gate, single qubit Clifford gates, CNOT gate and measurements of multi-qubit
-Pauli observables. Collected statistics are aggregated over edges of operations
-call graph. Let us now count how many T gates are needed to implement `CCNOT`
+Pauli observables. Collected statistics are aggregated over the edges of operations
+call graphs. Let us now count how many T gates are needed to implement `CCNOT`
 operation. 
 
 ```qsharp
@@ -42,7 +42,7 @@ operation CCNOTDriver() : () {
 }
 ```
 
-# Using Primitive Operations Counter within C# program
+## Using Primitive Operations Counter within C# program
 
 To check that CCNOT indeed requires 7 T gates and that `CCNOTDriver` executes 8 T 
 gates we can use the following C# code:

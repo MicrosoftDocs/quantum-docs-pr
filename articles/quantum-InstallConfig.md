@@ -27,63 +27,60 @@ This section specifies how to create a Q# development environment and validate i
 
 ## Checking prerequisites
 
-Confirm that you have [Visual Studio](https://www.visualstudio.com/) 2017 installed.
+If you have [Visual Studio](https://www.visualstudio.com/) 2017 installed, you're ready to install the Microsoft Quantum Developer Kit.
+
+If you do not have Visual Studio installed, you can download Visual Studio 2017 Community Edition for free.
+1. Go to the [Visual Studio download page](https://www.visualstudio.com/downloads/).
+2. Click on the Visual Studio Community **Free download** button.
+3. Navigate to the folder your browser uses for downloads and double click on the executable file whose name begins with **vs_community**. The file name will contain a sequence of numbers that varies.
+4. Follow the prompts to continue the Visual Studio installation.
+5. When you are presented with the option to select the tools for specific workloads, check the boxes for **Universal Windows Platform development** and **.NET desktop development**
+6. After selecting your workloads, click **Install** to complete the installation.
 
 ## Creating the Q# development environment 
 
 1. Download and install [Microsoft Quantum Developer Kit](https://solidrepo.blob.core.windows.net/alpha/latest/QbVSIX.vsix) Visual Studio extension. 
-Some browsers (IE and Edge) will save this file as `QbVSIX.zip` during download. In this case, rename it back to `QbVSIX.vsix`.
+Some browsers (IE and Edge) will save this file as `QbVSIX.zip` during download. In this case, rename it to `QbVSIX.vsix`.
+
+1. If Visual Studio is open, close it.
 
 1. Start the VSIX installer by double clicking the `QbVSIX.vsix` file and follow the prompts to install the extension.
 
-1. Configure Visual Studio to use the [QuArC beta NuGet](https://quarcsw.pkgs.visualstudio.com/_packaging/alpha/nuget/v3/index.json) feed, as described
-in [Consume NuGet packages in Visual Studio](https://www.visualstudio.com/en-us/docs/package/nuget/consume).
+1. Configure Visual Studio to use the QuArC beta NuGet feed. See [Consume NuGet packages in Visual Studio](https://www.visualstudio.com/en-us/docs/package/nuget/consume) for the configuration procedure. You will need the quantum NuGet URL: NuGethttps://quarcsw.pkgs.visualstudio.com/_packaging/alpha/nuget/v3/index.json.
 
 ## Validating your setup
 
-1. Clone the [Libraries](https://quarcsw.visualstudio.com/_git/Libraries) repository.
+1. Clone the quantum Libraries repository.
+    1. Navigate to the [Libraries](https://quarcsw.visualstudio.com/_git/Libraries).
+    2. Click the **Clone** button in the upper right.
+    3. In the **Clone repo** pane, click **Clone in Visual Studio**.
+    4. If presented with a login request, sign in using your Microsoft credentials.
+    5. On the **Visual Studio Team Services** pane, click **Clone** to proceed.
 
-2. Open `Libraries\QbLibs\QbLibs.sln` solution.
+2. Open the `Libraries\QbLibs\QbLibs.sln` solution. If prompted, on the **Install Missing Features** pane click **Install** to allow the installation of the necessary features.
 
 3. If needed, restore NuGet packages manually as described in [NuGet package restore](https://docs.microsoft.com/en-us/nuget/consume-packages/package-restore).
 
 4. Validate your Q# environment by running the teleport example: 
    1. Right click on `TeleportationExample` project in the Libraries solution, and left click "Set as Startup Project".
-   2. Run the solution (Ctrl-F5.) If teleport runs and the output is as follows, your Q# environment is ready to support your development.
-<!---
-        Round 0:        Sent True,      got True.
-        Teleportation successful!!
-        
-        Round 1:        Sent False,     got False.
-        Teleportation successful!!
-        
-        Round 2:        Sent False,     got False.
-        Teleportation successful!!
-        
-        Round 3:        Sent True,      got True.
-        Teleportation successful!!
-        
-        Round 4:        Sent True,      got True.
-        Teleportation successful!!
-        
-        Round 5:        Sent False,     got False.
-        Teleportation successful!!
-        
-        Round 6:        Sent True,      got True.
-        Teleportation successful!!
-        
-        Round 7:        Sent False,     got False.
-        Teleportation successful!!
---->
+   2. Run the solution (F5.) If teleport runs and the output is as follows, your Q# environment is ready to support your development.
 
 ```
-        Round 0:        Sent True,      got True. Teleportation successful!!
-        Round 1:        Sent False,     got False. Teleportation successful!!
-        Round 2:        Sent False,     got False. Teleportation successful!!
-        Round 3:        Sent True,      got True. Teleportation successful!!
-        Round 4:        Sent True,      got True. Teleportation successful!!
-        Round 5:        Sent False,     got False. Teleportation successful!!
-        Round 6:        Sent True,      got True. Teleportation successful!!
-        Round 7:        Sent False,     got False. Teleportation successful!!
+        Round 0:        Sent True,      got True. 
+        Teleportation successful!!
+        Round 1:        Sent False,     got False. 
+        Teleportation successful!!
+        Round 2:        Sent False,     got False. 
+        Teleportation successful!!
+        Round 3:        Sent True,      got True. 
+        Teleportation successful!!
+        Round 4:        Sent True,      got True. 
+        Teleportation successful!!
+        Round 5:        Sent False,     got False. 
+        Teleportation successful!!
+        Round 6:        Sent True,      got True. 
+        Teleportation successful!!
+        Round 7:        Sent False,     got False. 
+        Teleportation successful!!
 ```
 

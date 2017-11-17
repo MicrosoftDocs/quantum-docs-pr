@@ -20,14 +20,15 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Overview
+# Primitive Operations Counter	
 
-Primitive Operations Counter counts the number of primitive operations used by
-every operations invoked in quantum program. All operations from
+The `Primitive Operations Counter` is a part of the quantum computer [Trace
+Simulator](quantum-computer-trace-simulator-1.md). It counts the number of primitive executions used by
+every operation invoked in a quantum program. All operations from
 `Microsoft.Quantum.Primitive` are expressed in terms of single qubit rotations,
-T gate, single qubit Clifford gates, CNOT gate and measurements of multi-qubit
-Pauli observables. Collected statistics are aggregated over edges of operations
-call graph. Let us now count how many T gates are needed to implement `CCNOT`
+T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit
+Pauli observables. Collected statistics are aggregated over the edges of the operations
+call graph. Let us now count how many `T` gates are needed to implement the `CCNOT`
 operation. 
 
 ```qsharp
@@ -42,9 +43,9 @@ operation CCNOTDriver() : () {
 }
 ```
 
-# Using Primitive Operations Counter within C# program
+## Using the Primitive Operations Counter within a C# program
 
-To check that CCNOT indeed requires 7 T gates and that `CCNOTDriver` executes 8 T 
+To check that `CCNOT` indeed requires 7 `T` gates and that `CCNOTDriver` executes 8 `T` 
 gates we can use the following C# code:
 
 ```csharp 
@@ -59,8 +60,8 @@ double tCountAll = sim.GetMetric<CCNOTDriver>(PrimitiveOperationsGroupsNames.T);
 double tCount = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(PrimitiveOperationsGroupsNames.T);
 ```
 
-First part of the program executes CCNOTDriver. In the second part we use method
-`QCTraceSimulator.GetMetric` to get number of T gates executed by `CCNOTDriver`: 
+The first part of the program executes `CCNOTDriver`. In the second part, we use the method
+`QCTraceSimulator.GetMetric` to get the number of T gates executed by `CCNOTDriver`: 
 
 ```csharp
 double tCount = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(PrimitiveOperationsGroupsNames.T);
@@ -69,16 +70,20 @@ double tCountAll = sim.GetMetric<CCNOTDriver>(PrimitiveOperationsGroupsNames.T);
 
 When `GetMetric` is called with two type parameters it returns the value of the
 metric associated with a given call graph edge. In our example operation
-`Primitive.CCNOT` is called within `CCNOTDriver` and therefore call graph contains
-edge `<Primitive.CCNOT,CCNOTDriver>`. 
+`Primitive.CCNOT` is called within `CCNOTDriver` and therefore the call graph contains
+the edge `<Primitive.CCNOT,CCNOTDriver>`. 
 
-To get number of CNOT gates used we can add the following line:
+To get the number of `CNOT` gates used, we can add the following line:
 ```csharp
 double cxCount = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(PrimitiveOperationsGroupsNames.CX);
 ```
 
-Finally, co output all the statistics collected by gate counter in CSV format we can 
+Finally, to output all the statistics collected by the gate counter in CSV format we can 
 use the following:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricCalculatorsNames.primitiveOperationsCounter];
 ```
+
+## See also
+The quantum computer [Trace Simulator
+](quantum-computer-trace-simulator-1.md) overview

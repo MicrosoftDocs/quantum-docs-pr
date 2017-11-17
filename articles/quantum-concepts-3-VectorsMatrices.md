@@ -98,7 +98,7 @@ P_{21} ~~ P_{22} ~~ \cdots ~~ P_{2p}\\\\
 P_{m1} ~~ P_{m2} ~~ \cdots ~~ P_{mp}\\\\
 \end{bmatrix},
 $$
-where the entry $P_{ik} = \sum_j M_{ij}N_{jk}$. For example, the entry $P_{11}$ is the inner product of the first row of $M$ with the first column of $N$. Note that since a vector is simply a special case of a matrix, this definition extends to matrix--vector multiplication. 
+where the entry $P_{ik} = \sum_j M_{ij}N_{jk}$. For example, the entry $P_{11}$ is the inner product of the first row of $M$ with the first column of $N$. Note that since a vector is simply a special case of a matrix, this definition extends to matrix-vector multiplication. 
 
 All the matrices we consider will either be square matrices, where the number of rows and columns are equal, or vectors, which corresponds to only $1$ column. One special square matrix is the identity matrix, denoted $\boldone$, which has all its diagonal elements equal to $1$ and the remaining elements equal to $0$:
 $$\boldone=\begin{bmatrix}
@@ -123,7 +123,7 @@ $$
 		M_{11} ~~ \cdots ~~ M_{1n} \\\\
 		\ddots\\\\
 		M_{m1}  ~~ \cdots ~~ M_{mn}\\\\
-	\end{bmatrix}\times
+	\end{bmatrix}\otimes
 	\begin{bmatrix}
 		N_{11}  ~~ \cdots ~~ N_{1q}\\\\
 		\ddots\\\\
@@ -185,9 +185,9 @@ $$
 \end{align}
 $$
 
-A final notation surrounding tensor products that is useful is that, for any vector $v$ or matrix $M$, $v^{\otimes n}$ or $M^{\otimes n}$ is short hand for an $n$--fold repeated tensor product.  For example
+A final notation surrounding tensor products that is useful is that, for any vector $v$ or matrix $M$, $v^{\otimes n}$ or $M^{\otimes n}$ is short hand for an $n$-fold repeated tensor product.  For example
 $$
-\begin{bmatrix} 1 \\\\ 0 \end{bmatrix}^{\otimes 1} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\qquad \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}^{\otimes 2} = \begin{bmatrix} 1 \\\\ 0 \\\\0 \\\\0 \end{bmatrix}\qquad X^{\otimes 2}= \begin{bmatrix} 0 &0&0&1 \\\\ 0 &0&1&0 \\\\ 0 &1&0&0\\\\ 1 &0&0&0\end{bmatrix}.
+\begin{bmatrix} 1 \\\\ 0 \end{bmatrix}^{\otimes 1} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\qquad \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}^{\otimes 2} = \begin{bmatrix} 1 \\\\ 0 \\\\0 \\\\0 \end{bmatrix}\qquad \begin{bmatrix}	0\ 1 \\\\ 1\ 0 \end{bmatrix}^{\otimes 2}= \begin{bmatrix} 0 &0&0&1 \\\\ 0 &0&1&0 \\\\ 0 &1&0&0\\\\ 1 &0&0&0\end{bmatrix}.
 $$
 
 ##Eigenvalues and Eigenvectors
@@ -203,7 +203,7 @@ $$
 	\end{bmatrix}.
 \end{equation}
 $$
-The vectors $\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}$, $\begin{bmatrix}0 \\\\ 1 \\\\ 0\end{bmatrix}$, and $\begin{bmatrix}0 \\\\ 0 \\\\ 1\end{bmatrix}$ are eigenvectors of this matrix with eigenvalues  $d_1$, $d_2$, and $d_3$ respectively. If $d_1$, $d_2$, and $d_3$ are distinct numbers, then these vectors (and their multiples) are the only eigenvectors of the matrix $D$. IFor any diagonal matrix, such as the above example, the eigenvalues are all the numbers appearing on the diagonal.  Their respective eigenvectors are the unit vectors with one entry equal to $1$ and the remaining entries equal to $0$.
+The vectors $\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}$, $\begin{bmatrix}0 \\\\ 1 \\\\ 0\end{bmatrix}$, and $\begin{bmatrix}0 \\\\ 0 \\\\ 1\end{bmatrix}$ are eigenvectors of this matrix with eigenvalues  $d_1$, $d_2$, and $d_3$ respectively. If $d_1$, $d_2$, and $d_3$ are distinct numbers, then these vectors (and their multiples) are the only eigenvectors of the matrix $D$. For any diagonal matrix, such as the above example, the eigenvalues are all the numbers appearing on the diagonal.  Their respective eigenvectors are the unit vectors with one entry equal to $1$ and the remaining entries equal to $0$.
 
 Note in the above example that the eigenvectors of $D$ formed a basis for $3$-dimensional vectors. A basis is a set of vectors such that any vector can be written as a linear combination of them. More explicitly, $v_1$, $v_2$, and $v_3$ form a basis if any vector $v$ can be written as $v=a_1 v_1 + a_2 v_2 + a_3 v_3$ for some numbers $a_1$, $a_2$, and $a_3$. 
 

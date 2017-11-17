@@ -55,16 +55,54 @@ ApplyToEachAC(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 
 In the rest of this section, we will provide a number of examples of how to use the various flow control operations and functions provided by the canon to compactly express quantum programs.
 
+## Applying Operations and Functions over Arrays and Ranges ##
+
+One of the primary abstractions provided by the canon is that of iteration.
+For instance, consider an unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.
+In Q#, this might get represented as a `for` loop over a register:
+
+```
+/// # Summary
+/// Applies $H$ to all qubits in a register.
+operation HAll(register : Qubit) : () {
+    body {
+        for (idxQubit in 0..Length(register) - 1) {
+            H(register[idxQubit]);
+        }
+    }
+    adjoint auto
+    controlled auto
+    adjoint controlled auto
+}
+```
+
+We can then use this new operation as `HAll(register)` to apply $H \otimes H \otimes \cdots \otimes H$.
+
+This is cumbersome to do, however, especially in a larger algorithm.
+Moreover, this approach is specialized to the particular operation that we wish to apply to each qubit.
+We can use that [operations are first-class](../quantum-techniques-2-operationsandfunctions#operations-and-functions-as-first-class-values) to express this algorithmic concept more explicitly:
+
+```
+ApplyToEachAC(H, register);
+```
+
+Here, the suffix `AC` indicates that the call to `ApplyToEach` is itself adjointable and controllable.
+Thus, if `U` supports `Adjoint` and `Controlled`, the following lines are equivalent:
+
+```
+(Adjoint ApplyToEachAC)(U, register);
+ApplyToEach((Adjoint U), register);
+```
+
+In particular, this means that calls to `ApplyToEachAC` can appear in operations which declare `adjoint auto`.
 
 
-<!-- TODO: refactor With into a combinator. -->
-<!-- TODO: Write once ApplyToEach → Iter style changes have been made. -->
-
-## Applying Operations over Arrays and Ranges ##
 
 - ApplyToEach
 - ApplyToRange
 - IterateThroughCartesianProduct
+- Map / MapIndex (**NB: write this!**)
+- Fold
 
 ## Composing Operations and Functions ##
 
@@ -72,8 +110,6 @@ In the rest of this section, we will provide a number of examples of how to use 
 - With
 - Bind
 - Curry
-- Map / MapIndex (**NB: write this!**)
-- Fold
 - Compose / ComposeOp (**NB: these need to be written**)
 
 ### Time-Ordered Composition ###

@@ -39,17 +39,20 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "show_latex": true,
+      "show_latex": true
+    },
+    "fileMetadata": {
       "latex_macros": {
-        "ket": ["\\left| #1\\right\\rangle", 1],
-        "bra": ["\\left\\langle #1\\right|", 1],
-        "braket": ["\\left\\langle #1 \\right\\rangle", 1],
-        "boldone": "\\mathbf{1}",
-        "expect": "\\mathbb{E}",
-        "variance": "\\operatorname{Var}"
+        "**/**.md": {
+          "ket": ["\\left| #1\\right\\rangle", 1],
+          "bra": ["\\left\\langle #1\\right|", 1],
+          "braket": ["\\left\\langle #1 \\right\\rangle", 1],
+          "boldone": "\\mathbf{1}",
+          "expect": "\\mathbb{E}",
+          "variance": "\\operatorname{Var}"
+        }
       }
     },
-    "fileMetadata": {},
     "template": [],
     "dest": "quantum-docs"
   }

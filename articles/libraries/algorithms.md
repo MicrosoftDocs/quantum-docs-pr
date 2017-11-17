@@ -83,6 +83,8 @@ We can collect terms to find that
                                   & = (R_1(\phi) \ket{+}) \otimes \ket{\phi},
 \end{align}
 where $R_1$ is the unitary applied by the <xref:microsoft.quantum.primitive.r1> operation.
+Put differently, the effect of applying $V$ is precisely the same as applying $R_1$ with an unknown angle, even though we only have access to $V$ as an oracle.
+Thus, for the rest of this discussion we will discuss phase estimation in terms of $R_1(\phi)$, which we implement by using phase kickback.
 
 Since the control and target register remain untangled after this process, we can reuse $\ket{\phi}$ as the target of a controlled application of $U^2$ to prepare a second control qubit in the state $R_1(2 \phi) \ket{+}$.
 Continuing in this way, we can obtain a register of the form

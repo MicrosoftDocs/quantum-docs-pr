@@ -78,9 +78,78 @@ Concretely,
 where $d \in \\{\texttt{Zero}, \texttt{One}\\}$ is a `Result`, and where $\Pr(\phi)$ describes our prior beliefs about $\phi$.
 This then makes the iterative nature of iterative phase estimation explicit, as the posterior distribution $\Pr(\phi | d)$ describes our beliefs immediately preceeding our observation of the next `Result`.
 
+At any point during this procedure, we can report the phase $\hat{\phi}$ inferred by the classical controller as
+\begin{equation}
+    \hat{\phi} \mathrel{:=} \expect[\phi | \text{data}] = \int \phi \Pr(\phi | \text{data})\,d\phi,
+\end{equation}
+where $\text{data}$ stands for the entire record of all `Result` values obtained.
+
+### Calling Phase Estimation Algorithms ###
+
+Each phase estimation operation provided with the Q# canon takes a different set of inputs parameterizing the quality that we demand out of the final estimate $\hat{\phi}$.
+These various inputs, however, all share several inputs in common, such that partial application over the quality parameters results in a common signature.
+For example, the <xref:microsoft.quantum.canon.robustphaseestimation> operation discussed in the next section has the following signature:
+
+```qsharp
+operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
+```
+
+The `bitsPrecision` input is unique to `RobustPhaseEstimation`, while `oracle` and `eigenstate` are in common.
+Thus, as seen in **H2Sample**, an operation can accept an iterative phase estimation algorithm with an input of the form `(DiscreteOracle, Qubit[]) => ()` to allow a user to specify arbitrary phase estimation algorithms:
+
+```qsharp
+operation H2EstimateEnergy(
+        idxBondLength: Int, trotterStepSize: Double,
+        phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)
+    ) : Double
+```
+
 ### Robust Phase Estimation ###
 <!-- FIXME: though RPE is the correct name of this algorithm, in context it reads as though Bayesian PE is the opposite of robust, which is not the case. -->
+<!-- TODO -->
 
 ### Continuous Oracles ###
 
+We can also generalize from the oracle model used above to allow for continuous-time oracles, modeled by the canon type <xref:microsoft.quantum.canon.continuousoracle>.
+Consider that instead of a single unitary operator $U$, we have a family of unitary operators $U(t)$ for $t \in \mathbb{R}$ such that $U(t) U(s)$ = $U(t + s)$.
+By [Stone's theorem](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U(t) = \exp(i H t)$ for some operator $H$, where $\exp$ is the [matrix exponential](../quantum-concepts-3-vectorsmatrices#matrix-exponentials).
+An eigenstate $\ket{\phi}$ of $H$ such that $H \ket{\phi} = \phi \ket{\phi}$ is then also an eigenstate of $U(t)$ for all $t$,
+\begin{equation}
+    U(t) \ket{\phi} = e^{i \phi t} \ket{\phi}.
+\end{equation}
+The exact same argument as in [the Bayesian case](#bayesian-phase-estimation) thus holds, and the likelihood function is the precisely the same for this more general oracle model.
+Moreover, if $U$ is a simulation of a dynamical generator, as is the case for [Hamiltonian simulation](applications#hamiltonian-simulation), we interpret $\phi$ as an energy.
+Thus, using continuous oracles with phase estimation allows us to learn the energy structure of Hamiltonian models.
+
 ### Random Walk Phase Estimation ###
+
+Q# provides a useful approximation of Bayesian phase estimation designed for use close to quantum devices that operates by conditioning a random walk on the data record obtained from iterative phase estimation.
+This method is both adaptive and entirely deterministic, allowing for near-optimal scaling of errors in the estimated phase $\hat{\phi}$ with very low memory overheads.
+In practice, using random walk phase estimation proceeds in much the same way as for other algorithms provided with the canon:
+
+```qsharp
+operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : () {
+    body {
+        Rz(2.0 * eigenphase * time, register[0]);
+    }
+    adjoint auto
+    controlled auto
+    controlled adjoint auto
+}
+
+operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
+    body {
+        let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+        mutable est = Float(0);
+        using (eigenstate = Qubit[1]) {
+            X(eigenstate[0]);
+            // The additional inputs here specify the mean and variance of the prior, the number of
+            // iterations to perform, how many iterations to perform as a maximum, and how many
+            // steps to roll back on an approximation failure.
+            set est = RandomWalkPhaseEstimation(0.0, 1.0, 61, 100000, 1, oracle, eigenstate);
+            Reset(eigenstate[0]);
+        }
+        return est;
+    }
+}
+```

@@ -33,7 +33,7 @@ v_2\\\\
 \vdots\\\\
 v_n
 \end{bmatrix}.$$
-The norm of a vector $v$ is defined as $\sqrt{\sum_i |v_i|^2}$. A vector is said to be of unit norm (or alternatively it is called a unit vector) if its norm is $1$. The adjoint of a vector $v$ is denoted $v^\dagger$ and is defined to be the following row vector
+The norm of a vector $v$ is defined as $\sqrt{\sum_i |v_i|^2}$. A vector is said to have unit norm (or alternatively it is called a unit vector) if its norm is $1$. The adjoint of a vector $v$ is denoted $v^\dagger$ and is defined to be the following row vector
 $$
 \begin{bmatrix}v_1 \\\\ \vdots \\\\ v_n \end{bmatrix}^\dagger = \begin{bmatrix}v_1^* & \cdots & v_n^* \end{bmatrix}.
 $$
@@ -84,7 +84,7 @@ $$
 	M_{21} ~~ M_{22} ~~ \cdots ~~ M_{2n}\\\\
 	\ddots\\\\
 	M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}\\\\
-\end{bmatrix}\times
+\end{bmatrix}
 \begin{bmatrix}
 N_{11} ~~ N_{12} ~~ \cdots ~~ N_{1p}\\\\
 N_{21} ~~ N_{22} ~~ \cdots ~~ N_{2p}\\\\
@@ -110,8 +110,10 @@ $$\boldone=\begin{bmatrix}
 
 For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \boldone$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. 
 
-For any matrix $M$, the adjoint or conjugate transpose of $M$, is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. We say a matrix $U$ is unitary if $UU^\dagger = \boldone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because $\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle$.  
-A matrix $M$ is said to be Hermitian if $M=M^\dagger$.
+For any matrix $M$, the adjoint or conjugate transpose of $M$, is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. 
+The two most important classes of matrices for quantum computing, Hermitian matrices and unitary matrices, transform in particularly nice ways under the adjoint operation.  Indeed, these classes of matrices can even be defined by their properties under the adjoint.  A matrix $M$ is said to be Hermitian if $M=M^\dagger$.
+We say a matrix $U$ is unitary if $UU^\dagger = \boldone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because $\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle$.  
+
 
 Finally, the tensor product (or Kronecker product) of two matrices $M$ of size $m\times n$ and $N$ of size $p \times q$ is a larger matrix $P=M\otimes N$ of size $mp \times nq$, and is obtained from $M$ and $N$ as follows:
 $$
@@ -201,7 +203,7 @@ $$
 	\end{bmatrix}.
 \end{equation}
 $$
-The vectors $\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}$, $\begin{bmatrix}0 \\\\ 1 \\\\ 0\end{bmatrix}$, and $\begin{bmatrix}0 \\\\ 0 \\\\ 1\end{bmatrix}$ are eigenvectors of this matrix with eigenvalues  $d_1$, $d_2$, and $d_3$ respectively. If $d_1$, $d_2$, and $d_3$ are distinct numbers, then these vectors (and their multiples) are the only eigenvectors of the matrix $D$. In general, for a diagonal matrix it is easy to read off the eigenvalues and eigenvectors. The eigenvalues are all the numbers appearing on the diagonal, and their respective eigenvectors are the unit vectors with one entry equal to $1$ and the remaining entries equal to $0$.
+The vectors $\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}$, $\begin{bmatrix}0 \\\\ 1 \\\\ 0\end{bmatrix}$, and $\begin{bmatrix}0 \\\\ 0 \\\\ 1\end{bmatrix}$ are eigenvectors of this matrix with eigenvalues  $d_1$, $d_2$, and $d_3$ respectively. If $d_1$, $d_2$, and $d_3$ are distinct numbers, then these vectors (and their multiples) are the only eigenvectors of the matrix $D$. IFor any diagonal matrix, such as the above example, the eigenvalues are all the numbers appearing on the diagonal.  Their respective eigenvectors are the unit vectors with one entry equal to $1$ and the remaining entries equal to $0$.
 
 Note in the above example that the eigenvectors of $D$ formed a basis for $3$-dimensional vectors. A basis is a set of vectors such that any vector can be written as a linear combination of them. More explicitly, $v_1$, $v_2$, and $v_3$ form a basis if any vector $v$ can be written as $v=a_1 v_1 + a_2 v_2 + a_3 v_3$ for some numbers $a_1$, $a_2$, and $a_3$. 
 
@@ -217,10 +219,11 @@ There are many ways in practice to compute a matrix exponential on a classical c
 
 The easiest way to understand how to compute the exponential of a matrix is through the eigenvalues and eigenvectors of that matrix.  Specifically, the spectral theorem discussed above says that for every Hermitian or unitary matrix $A$ there exists a unitary matrix $U$ and a diagonal matrix $D$ such that $A=U^\dagger D U$.  Because of the properties of unitarity we have that $A^2 = U^\dagger D^2 U$ and similarly for any power $p$ $A^p = U^\dagger D^p U$.  If we substitute this into the operator definition of the operator exponential we obtain
 $$
-e^A= U^\dagger \left(\boldone +D +\frac{D^2}{2!}+\cdots \right)U= U^\dagger \begin{bmatrix}\exp(D_{11}) & 0 &\cdots &0\\\\ 0 & \exp(D_{22})&\cdots& 0\\\\ \vdots &\vdots &\ddots &\vdots\\\\ 0&0&\cdots&\exp(D_{NN}) \end{bmatrix} U.
+e^A= U^\dagger \left(\boldone +D +\frac{D^2}{2!}+\cdots \right)U\\\\
+\qquad\qquad\qquad= U^\dagger \begin{bmatrix}\exp(D_{11}) & 0 &\cdots &0\\\\ 0 & \exp(D_{22})&\cdots& 0\\\\ \vdots &\vdots &\ddots &\vdots\\\\ 0&0&\cdots&\exp(D_{NN}) \end{bmatrix} U
 $$
 In other words, if you transform to the eigenbasis of the matrix $A$ then computing the matrix exponential is equivalent to computing the ordinary exponential of the eigenvalues of the matrix.  As many of the operations in quantum computing involve performing matrix exponentials, this trick of transforming into the eigenbasis of a matrix to simplify performing the operator exponential appears frequently and is the basis behind many quantum algorithms such as Trotter–Suzuki based quantum simulation methods.
 
-Another useful property is if $B$ is both unitary and Hermitian, ie $B^2=\boldone$, then it can be seen by applying this rule to the above expansion of the operator exponential and grouping the $\boldone$ and the $B$ terms that for any real valued $x$
+Another useful property is if $B$ is both unitary and Hermitian, ie $B=B^\dagger=B^{-1}$ and hence $B^2=\boldone$, then it can be seen by applying this rule to the above expansion of the operator exponential and grouping the $\boldone$ and the $B$ terms that for any real valued $x$
 $$e^{iBx}=\cos(x)\boldone + iB\sin(x).$$
 This trick is especially useful because it allows us to reason about the actions that matrix exponentials have, even if the dimension of $B$ is exponentially large, for the special case when $B$ is both unitary and Hermitian. 

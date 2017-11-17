@@ -39,7 +39,7 @@ CNOT(register[1], register[2]);
 CNOT(register[nQubits - 2], register[nQubits - 1]);
 ```
 
-We can express this pattern by using iteration and for loops:
+We can express this pattern by using iteration and `for` loops:
 
 ```
 for (idxQubit in 0..nQubits - 2) {
@@ -59,3 +59,27 @@ In the rest of this section, we will provide a number of examples of how to use 
 
 <!-- TODO: refactor With into a combinator. -->
 <!-- TODO: Write once ApplyToEach → Iter style changes have been made. -->
+
+## Applying Operations over Arrays and Ranges ##
+
+- ApplyToEach
+- ApplyToRange
+- IterateThroughCartesianProduct
+
+## Composing Operations and Functions ##
+
+**TODO**:
+- With
+- Bind
+- Curry
+- Map / MapIndex (**NB: write this!**)
+- Fold
+- Compose / ComposeOp (**NB: these need to be written**)
+
+### Time-Ordered Composition ###
+
+- DecomposeIntoTimeSteps
+
+## Controlling Operations ##
+
+- ControlledOnBitString

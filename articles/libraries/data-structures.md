@@ -32,18 +32,52 @@ Similarly, we saw in the previous section that types of the form `(Int, Int -> T
 
 <!-- TOOD: point out that MapIndex can be used to reconstruct an array from a lookup function. Also, write MapIndex. -->
 
+### Pairs ###
+
+The canon supports functional-style notation for pairs, complementing accessing tuples by deconstruction:
+
+```
+let pair = (PauliZ, register); // type (Pauli, Qubit[])
+ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
+```
+
 ### Arrays ###
 
-<!-- TODO -->
+The canon provides several functions for manipulating arrays.
+These functions are type-parameterized, and thus can be used with arrays of any Q# type.
+For instance, the <xref:microsoft.quantum.canon.reverse> function returns a new array whose elements are in reverse order from its input.
+This can be used to change how a quantum register is represented when calling operations:
 
-### Stacks ###
+```
+let leRegister = LittleEndian(register);
+// QFT expects a BigEndian, so we can reverse before calling.
+QFT(BigEndian(Reverse(leRegister)));
+```
 
-<!-- TODO -->
+Similarly, the <xref:microsoft.quantum.canon.permute> function can be used to reorder or take subsets of the elements of an array:
 
+```qsharp
+// Applies H to qubits 2 and 5.
+ApplyToEach(H, Permute([2; 5], register));
+```
+
+When combined with [flow control](./control-flow), array manipulation functions such as <xref:microsoft.quantum.canon.zip> can provide a powerful way to express quantum programs:
+
+```qsharp
+// FIXME: uses type-parameterization, and needs checked.
+// Applies X₃ Y₁ Z₇ to a register of any size.
+ApplyToEach(
+    ApplyPauli(_, register),
+    Map(
+        EmbedPauli(_, _, Length(register)),
+        Zip([PauliX; PauliY; PauliZ], [3; 1; 7])
+    )
+);
+```
 
 ## Oracles ##
 
-In the phase estimation and amplitude amplification literature the concept of an oracle appears frequently. 
+In the phase estimation and amplitude amplification literature the concept of an oracle appears frequently.
 Here the term oracle refers to a blackbox quantum subroutine that acts upon a set of qubits and returns the answer as a phase.
 This subroutine often can be thought of as an input to a quantum algorithm that accepts the oracle, in addition to some other parameters, and applies a series of quantum operations and treating a call to this quantum subroutine as if it were a fundamental gate.
 Obviously, in order to actually implement the larger algorithm a concrete decomposition of the oracle into fundamental gates must be provided but such a decomposition is not needed in order to understand the algorithm that calls the oracle.

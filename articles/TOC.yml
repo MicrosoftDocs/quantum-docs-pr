@@ -19,6 +19,22 @@
   href: quantum-InstallConfig.md
 - name: Quickstart- your first quantum program
   href: quantum-WriteAQuantumProgram.md
+- name: Managing quantum machines and drivers
+  href: quantum-SimulatorsAndMachines.md
+  items:
+        - name: Quantum resource estimator
+          href: quantum-computer-trace-simulator-1.md
+          items:
+            - name: Depth counter
+              href: quantum-computer-trace-simulator-depth-counter.md
+            - name: Distinct inputs checker
+              href: quantum-computer-trace-simulator-distinct-inputs-checker.md
+            - name: Invalidated qubits use checker
+              href: quantum-computer-trace-simulator-invalidated-qubits-use-checker.md
+            - name: Primitive operations counter
+              href: quantum-computer-trace-simulator-primitive-operations-counter.md
+            - name: Width counter
+              href: quantum-computer-trace-simulator-width-counter.md
 - name: Quantum development techniques 
   href: quantum-devguide-1-Intro.md
   items:

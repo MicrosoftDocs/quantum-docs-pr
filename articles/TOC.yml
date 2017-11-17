@@ -63,10 +63,10 @@
       href: libraries/control-flow.md
     - name: Data structures and modeling
       href: libraries/data-structures.md
-    - name: Characterization
-      href: libraries/characterization.md
     - name: Quantum algorithms
       href: libraries/algorithms.md
+    - name: Characterization
+      href: libraries/characterization.md
     - name: Error correction
       href: libraries/error-correction.md
     - name: Applications

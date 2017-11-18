@@ -95,16 +95,45 @@ ApplyToEach((Adjoint U), register);
 ```
 
 In particular, this means that calls to `ApplyToEachAC` can appear in operations which declare `adjoint auto`.
+Similarly, <xref:microsoft.quantum.applytorange> is useful for representing patterns of the form `U(0, targets[0]); U(1, targets[1]); ...`, and offers versions for each combination of functors supports by its input.
 
+> [!TIP]
+> `ApplyToEach` is [type-parameterized](../quantum-techniques-7-going-further#generic-operations-and-functions), such that it can be used with operations that take inputs other than `Qubit`.
+> For example, suppose that `codeBlocks` is an array of <xref:microsoft.quantum.canon.logicalregister> values that need to be recovered.
+> Then `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` will apply the error-correcting code `code` and recovery function `recoveryFn` to each block independently.
+> This holds even for classical inputs: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` will apply a rotation of $\pi / 2$ about $X$ followed by a rotation of $pi / 3$ about $Y$.
 
+The Q# canon also provides support for classical enumeration patterns familiar to functional programming.- Map / MapIndex (**NB: write this!**)
+For instance, <xref:microsoft.quantum.canon.fold> implements the pattern $f(f(f(s\_{\text{initial}}, x\_0), x\_1), \dots)$ for reducing a function over a list.
+This pattern can be used to implement sums, products, minima, maxima and other such functions:
 
-- ApplyToEach
-- ApplyToRange
-- IterateThroughCartesianProduct
-- Map / MapIndex (**NB: write this!**)
-- Fold
+```
+function Plus(a : Int, b : Int) : Int { return a + b; }
+function Sum(xs : Int[]) {
+    return Fold(Sum, 0, xs);
+}
+```
 
 ## Composing Operations and Functions ##
+
+The control flow constructs offered by the canon take operations and functions as their inputs, such that it is helpful to be able to compose several operations or functions into a single callable.
+For instance, the pattern $UVU^{\dagger}$ is extremely common in quantum programming, such that the canon provides the operation <xref:microsoft.quantum.canon.with> as an abstraction for this pattern.
+This abstraction also allows for more efficient compliation into circuits, as `Controlled` acting on the sequence `U(qubit); V(qubit); (Adjoint U)(qubit);` does not need to act on each `U`.
+To see this, let $c(U)$ be the unitary representing `(Controlled U)([control], target)` and let $c(V)$ be defined in the same way.
+Then for an arbitrary state $\ket{\psi}$,
+\begin{align}
+    c(U) c(V) c(U)^\dagger \ket{1} \otimes \ket{\psi}
+        & = \ket{1} \otimes (UVU^{\dagger} \ket{\psi}) \\\\
+        & = (\boldone \otimes U) (c(V)) (\boldone \otimes U^\dagger) \ket{1} \otimes \ket{\psi}.
+\end{align}
+by the definition of `Controlled`.
+On the other hand,
+\begin{align}
+    c(U) c(V) c(U)^\dagger \ket{0} \otimes \ket{\psi}
+        & = \ket{0} \otimes \ket{\psi} \\\\
+        & = \ket{0} \otimes (UU^\dagger \ket{\psi}) \\\\
+        & = (\boldone \otimes U) (c(V)) (\boldone \otimes U^\dagger) \ket{0} \otimes \ket{\psi}.
+\end{align}
 
 **TODO**:
 - With

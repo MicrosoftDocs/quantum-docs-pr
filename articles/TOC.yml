@@ -3,18 +3,22 @@
 - name: Quantum Computing Concepts
   href: quantum-concepts-1-Intro.md
   items:
-    - name: Software Stack
-      href: quantum-concepts-2-SoftwareStack.md
     - name: Vectors and Matrices
-      href: quantum-concepts-3-VectorsMatrices.md
+      href: quantum-concepts-2-VectorsMatrices.md
+    - name: Advanced Matrix Concepts
+      href: quantum-concepts-3-AdvancedMatrix.md
     - name: Qubit
       href: quantum-concepts-4-Qubit.md
     - name: Multiple qubits
       href: quantum-concepts-5-MultipleQubits.md
     - name: Dirac notation
       href: quantum-concepts-6-DiracNotation.md
+    - name: Pauli Measurements
+      href: quantum-concepts-7-PauliMeasurements.md
     - name: Quantum circuits
-      href: quantum-concepts-7-QuantumCircuits.md
+      href: quantum-concepts-8-QuantumCircuits.md
+    - name: Software Stack
+      href: quantum-concepts-9-SoftwareStack.md
 - name: Installation and configuration
   href: quantum-InstallConfig.md
 - name: Quickstart- your first quantum program

@@ -30,7 +30,7 @@ Operations with this, or greater complexity, are ubiquitous in quantum algorithm
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-___________________________________________![](media/Concepts1.png)
+![](media/Concepts1.png)
 
 This visual language for quantum operations is obviously much more digestable than writing down its equivalent matrix once you understand the conventions for drawing a quantum circuit.  We review these conventions below.
 
@@ -38,7 +38,7 @@ In a circuit diagram, each solid line depicts a qubit or more generally a qubit 
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-_____________________________________________________![](media/concepts_2.png)
+![](media/concepts_2.png)
 
  is the Hadamard gate acting on the qubit register.
 
@@ -46,7 +46,7 @@ Quantum gates are ordered in chronological order with the left most gate being t
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-________________________________________________![](media/concepts_3.png)
+![](media/concepts_3.png)
 
  is the unitary matrix $CBA$.  This is because matrix multiplication obeys the opposite convention used in quantum circuit diagrams: the right most matrix is applied first but the left most gate in a quantum circuit is applied first.  Unfortunately, this difference leads to no end of confusion and so it is important to note this significant differences between the linear algebraic notation provided earlier and quantum circuit diagrams.
 
@@ -56,7 +56,7 @@ Multiqubit circuits diagrams follow similar conventions to single qubit circuits
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-________________________________________________![](media/concepts_4.png)
+![](media/concepts_4.png)
 
 We can also view $B$ as having on action on a single two-qubit register rather than two one-qubit registers depending on the context in which the circuit is used. 
 Perhaps the most useful property of such abstract circuit diagrams is that they allow complicated quantum algorithms to be described at a high level without having to compile them down to fundamental gates.  This means that you can get an intuition about the data flow for a large quantum algorithm without needing to understand all the details of how each of the subroutines within the algorithm work.
@@ -65,26 +65,26 @@ The other construct that is built into multi-qubit quantum circuit diagrams is c
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-____________________________________________________![](media/concepts_5.png)
+![](media/concepts_5.png)
 
 Here the black circle denotes the quantum bit that the gate is controlled on and verticle wire denotes the unitary that is applied when the control qubit takes the value $1$.
 For the special cases where $G=X$ and $G=Z$ we introduce the following notation to describe the controlled gates:
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-________________________________________![](media/concepts_6.png)
+![](media/concepts_6.png)
 
 The remaining operation in circuit diagrams is measurement.  Measurement takes a qubit register and measures it and outputs the result as classical information.  A measurement operation is denoted by a meter and it always takes as input a qubit register (a solid line) and outputs classical information (a double line).  Specifically, such a subcircuit looks like 
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-____________________________________________________![](media/concepts_7.png)
+![](media/concepts_7.png)
 
 Similarly, the subcircuit
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-_____________________________________________________![](media/concepts_8.png)
+![](media/concepts_8.png)
 
 gives a classically controlled gate that is applied conditioned on the classical control bit being $1$.
 

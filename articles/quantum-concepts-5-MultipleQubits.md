@@ -72,7 +72,7 @@ It is also possible to measure just one qubit of a two-qubit quantum state. In c
 $$
 H^{\otimes 2} \left( \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1\end{bmatrix}\mapsto \begin{cases}\text{outcome }=0 & \frac{1}{\sqrt{2}}\begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \text{outcome }=1 & \frac{1}{\sqrt{2}}\begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\  \end{cases}.
 $$
-Both outcomes have 50% probability of occurring.  This happens because the first two components in the quantum state vector correspond to $00$ and $01$ and so if the first qubit is measured to be $1$ then both are inconsistent with the measurement and as such are omitted from the quantum state.  Similarly, if the first qubit is measured to be zero only the bit strings $10$ and $11$ are consistent with this outcome and hence the remainder of the quantum state is possible.  The outcome being 50% probability for both can be intuited from the fact that the initial quantum state vector is invariant under permutation of the components vector.
+Both outcomes have 50% probability of occurring.  The outcome being 50% probability for both can be intuited from the fact that the initial quantum state vector is invariant under swapping $0$ with $1$ on the first qubit.
 
 The mathematical rule for measuring the first, or second qubit is simple.  If we let $e_k$ be the $k^{\rm th}$ computational basis vector and let $S$ be the set of all $e_k$ such that the qubit in question takes the value $1$ for that value of $k$.  For example, if we are interested in measuring the first qubit then $S$ would consist of $e_2\equiv 10$ and $e_3\equiv 11$.  Similarly, if we are interested in the second qubit $S$ would consist of $e_1\equiv 01$ and $e_3 \equiv 11$.  Then the probability of measuring that qubit to be $1$ is for state vector $\psi$
 $$
@@ -109,7 +109,7 @@ For example, the CNOT (controlled NOT) gate is a commonly used two-qubit gate an
 $$
 \mathrm{CNOT} = \begin{bmatrix} 1\ 0\ 0\ 0  \\\\  0\ 1\ 0\ 0 \\\\  0\ 0\ 0\ 1 \\\\  0\ 0\ 1\ 0 \end{bmatrix}.
 $$
-The CNOT gate corresponds to the following classical operation: Look at the first bit, if it is $0$, do nothing, and if it is $1$ then negate the second bit.   In cases when more than two qubits are present, or a CNOT gate that is controlled by the second qubit is needed, the notation $\text{CNOT}\_{ij}$ is used to denote the controlled-not gate controlled on the $i^{\rm th}$ qubit and with the $j^{\rm th}$ qubit as its target (where zero is the first qubit label).  For example,
+The CNOT gate corresponds to the following classical operation: Look at the first bit, if it is $0$, do nothing, and if it is $1$ then flip the second bit.   In cases when more than two qubits are present, or a CNOT gate that is controlled by the second qubit is needed, the notation $\text{CNOT}\_{ij}$ is used to denote the controlled-not gate controlled on the $i^{\rm th}$ qubit and with the $j^{\rm th}$ qubit as its target (where zero is the first qubit label).  For example,
 $$
 \mathrm{CNOT}\_{01} = \begin{bmatrix} 1\ 0\ 0\ 0  \\\\  0\ 1\ 0\ 0 \\\\  0\ 0\ 0\ 1 \\\\  0\ 0\ 1\ 0 \end{bmatrix}\qquad\mathrm{CNOT}\_{10} = \begin{bmatrix} 1\ 0\ 0\ 0  \\\\  0\ 0\ 0\ 1 \\\\  0\ 0\ 1\ 0 \\\\  0\ 1\ 0\ 0 \end{bmatrix}.
 $$
@@ -132,7 +132,7 @@ e\ f\\\\ g\ h
 \end{bmatrix}$.
 Thus we can form two-qubit gates by taking the tensor product of single-qubit gates we know. Some examples of two qubit gates include $H \otimes H$, $X \otimes \boldone$, and $X \otimes Z$.
 
-Note that while any two single-qubit gates define a two-qubit gate by taking their tensor product, the converse is not true. Not all two-qubit gates can be written as the tensor product of single-qubit gates. One example of such a gate is the CNOT gate. Such a gate is called an entangling gate.
+Note that while any two single-qubit gates define a two-qubit gate by taking their tensor product, the converse is not true. Not all two-qubit gates can be written as the tensor product of single-qubit gates.  Such a gate is called an entangling gate. One example of an entangling gate is the CNOT gate.
 
 There are infinitely many unitary matrices on two qubits, so we cannot hope to have all possible gates as elementary operations on our quantum computer. Instead, we choose a small set of elementary gates that form a universal gate set. As before, a gate set is universal if any unitary matrix can be written as a product of gates from this set to arbitrary precision.
 One example of a universal gate set is the Hadamard gate, the T gate, and the CNOT gate. By taking products of these gates, we can approximate any unitary matrix on two qubits.
@@ -150,4 +150,4 @@ $$
 
 Finally, although new gates needed to be added to our gate set to achieve universal quantum computing for two qubit quantum computers, no new gates need to be introduced in the multi-qubit case.  The gates $H$, $T$ and CNOT form a universal gate set on many qubits because any general unitary transformation can be broken into a series of two qubit rotations.  We then can leverage the theory developed for the two-qubit case and use it again here when we have many qubits.
 
-While the linear algebraic notation that we have been using so far can certainly be used to describe many qubit states, it becomes increasingly cumbersome as we grow the states.  The resulting column-vector for this bit string is $128$ dimensional, which makes expressing it formally cumbersome using the notation described previously.  For this reason, we discuss a  notation that is common in quantum computing and allows us to concisely describe these high-dimensional vectors.
+While the linear algebraic notation that we have been using so far can certainly be used to describe many qubit states, it becomes increasingly cumbersome as we grow the states.  The resulting column-vector for this length 7 bit string is $128$ dimensional, which makes expressing it formally cumbersome using the notation described previously.  For this reason, we discuss a  notation that is common in quantum computing and allows us to concisely describe these high-dimensional vectors.

@@ -69,7 +69,7 @@ using $n$ controlled applications of adders of the form
 $$
 \operatorname{Add}\ket{a}\ket{b}=\Lambda\_{a\_0}\left(\operatorname{Add}(1)\right)\Lambda\_{a\_1}\left(\operatorname{Add}(2)\right)\Lambda\_{a\_2}\left(\operatorname{Add}(4)\right)\cdots \Lambda\_{a\_{n-1}}\left(\operatorname{Add}({{n-1}}) \right)\ket{a}\ket{b}=\ket{a}\ket{b+a},
 $$
-for $n$ bit integers $a$ and $b$ and addition modulo $2^n$.  Recall that the notation $\Lambda\_n(A)$ refers, for any operation $A$, to the controlled version of that operation with the $n^{\rm th}$ qubit as control.  
+for $n$ bit integers $a$ and $b$ and addition modulo $2^n$.  Recall that the notation $\Lambda\_x(A)$ refers, for any operation $A$, to the controlled version of that operation with the qubit $x$ as control.  
 
 Similarly, classically controlled multiplication (a modular form of which is essential for Shor's factoring algorithm) can be performed by using a similar series of controlled  additions.
 $$
@@ -81,7 +81,7 @@ Many quantum circuits have been proposed for addition and each explores a differ
 
 ### Draper Adder
 
-The Draper adder is arguably one of the most elegant addition circuits ever devised.  The insight behind the Draper adder is that the Fourier transform can be used to translate phase shifts into a bit shift.  It then follows that by applying a Fourier transform, applying appropriate phase shifts, and then undoing the Fourier transform you can implement an adder.  The specific steps used by the Draper adder to achieve this are given below.
+The Draper adder is arguably one of the most elegant quantum adders ever devised.  The insight behind the Draper adder is that the Fourier transform can be used to translate phase shifts into a bit shift.  It then follows that by applying a Fourier transform, applying appropriate phase shifts, and then undoing the Fourier transform you can implement an adder.  Unlike many other adders that have been proposed, the Draper adder explicitly uses quantum effects introduced through the quantum Fourier transform.  It does not have a natural classical counterpart.  The specific steps used by the Draper adder to achieve this are given below.
 
 Assume that you have two $n$-bit qubit registers storing the integers $a$ and $b$ then for all $a$
 $$

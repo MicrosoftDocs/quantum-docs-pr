@@ -234,10 +234,10 @@ For this reason Q# has functionality for both forms of queries and leave it to t
 Generators of time-evolution describe how states evolve through time. For instance, the dynamics of a quantum state $\ket{\psi}$ is goverened by the Schrödinger equation
 $$
 \begin{align}
-    \frac{d \ket{\psi(t)}}{d t} & = H \ket{\psi(t)},
+    \frac{d \ket{\psi(t)}}{d t} & = \hat{H} \ket{\psi(t)},
 \end{align}
 $$
-with a Hermitian matrix $H$, known as the Hamiltonian, as the generator of motion. Given an initial state $\ket{\psi(0)}$ at time $t=0$, the formal solution to this equation at time $t$ may be, in principle, written
+with a Hermitian matrix $\hat{H}$, known as the Hamiltonian, as the generator of motion. Given an initial state $\ket{\psi(0)}$ at time $t=0$, the formal solution to this equation at time $t$ may be, in principle, written
 $$
 \begin{align}
     \ket{\psi(t)} = U(t)\ket{\psi(0)},
@@ -246,17 +246,21 @@ $$
 where the matrix exponential $U(t)=e^{-i \hat{H} t}$ is known as the unitary time-evolution operator. Though we focus on generators of this form in the following, we emphasize that the concept applies more broadly, such as to the simulation of open quantum systems, or to more abstract differential equations.
 
 A primary goal of dynamical simulation is to implement the time-evolution operator on some quantum state encoded in qubits of a quantum computer.  In many cases, the Hamiltonian may be broken into into a sum of some $d$ simpler, or primitive, terms
+
 $$
 \begin{align}
-    H & = \sum^{d-1}_{j=0} H_j,
+    \hat{H} & = \sum^{d-1}_{j=0} \hat{H}_j,
 \end{align}
 $$
+
 where time-evolution by each term alone is easy to implement on a quantum computer. For instance, if $H_j$ is a Pauli $X_1X_2$ operator acting on the 1st and 2nd elements of the qubit register `qubits`, time-evolution by it for any time $t$ may be implemented simply by calling the operation `Exp([PauliX;PauliX], t, qubits[1..2])`, which has signature `((Pauli[], Double, Qubit[]) => () : Adjoint, Controlled)`. As discussed later in [Hamiltonian Simulation](./applications), one solution then is to approximate time-evolution by $H$ with a sequence of simpler operations
+
 $$
 \begin{align}
-    U(t)=\left( e^{-iH_0 t / r}e^{-iH_1 t / r} \cdots e^{-iH_{d-1} t / r} \right)^{r} + \mathcal{O}(d^2 t^2/r),
+    U(t)=\left( e^{-i\hat{H}_0 t / r}e^{-i\hat{H}_1 t / r} \cdots e^{-i\hat{H}_{d-1} t / r} \right)^{r} + \mathcal{O}(d^2 t^2/r),
 \end{align}
 $$
+
 where the integer $r>0$ controls the approximation error. 
 
 The dynamical generator modeling library provides a framework for systematically encoding complicated generators in terms of simpler generators. Such a description may then be passed to, say, the simulation library to implement time-evolution by a simulation algorithm of choice, with many details automatically taken care of.
@@ -295,7 +299,7 @@ newtype EvolutionSet = (GeneratorIndex -> EvolutionUnitary);
 A concrete and useful example of generators are Hamiltonians that are a sum of Pauli operators, each possibly with a different coefficient.
 $$
 \begin{align}
-    H & = \sum^{d-1}_{j=0} a_j H_j,
+    \hat{H} & = \sum^{d-1}_{j=0} a_j \hat{H}_j,
 \end{align}
 $$
 where each $H_j$ is now drawn from the Pauli group. For such systems, we provide the `PauliEvolutionSet()` of type `EvolutionSet` that defines a convention for how an element of the Pauli group and a coefficient may be identified by a `GeneratorIndex`, which has the following signature.
@@ -304,7 +308,7 @@ where each $H_j$ is now drawn from the Pauli group. For such systems, we provide
 newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 ```
 
-In our encoding, the first parameter `Int[]` specifies a Pauli string, where $I\right 0$, $X\right 1$, $Y\right 2$, and $Z\right 3$. The second parameter `Double[]` stores the coefficient of the Pauli string in the Hamiltonian. Note that only the first element of this array is used. The third parameter `Int[]` indexes the qubits that this Pauli string acts on, and must have no duplicatie elements. Thus the Hamiltonian term $0.4 X_0Y_8I_2Z_1$ may be represented as
+In our encoding, the first parameter `Int[]` specifies a Pauli string, where $I\rightarrow 0$, $X\rightarrow 1$, $Y\rightarrow 2$, and $Z\rightarrow 3$. The second parameter `Double[]` stores the coefficient of the Pauli string in the Hamiltonian. Note that only the first element of this array is used. The third parameter `Int[]` indexes the qubits that this Pauli string acts on, and must have no duplicatie elements. Thus the Hamiltonian term $0.4 \hat X_0 \hat Y_8\hat I_2\hat Z_1$ may be represented as
 
 ```qsharp
 let generatorIndexExample = GeneratorIndex(([1;2;0;3], [0.4]]), [0;8;2;1]);
@@ -324,7 +328,7 @@ PauliEvolutionSet()(generatorIndexExample)(stepSize, qubits);
 
 // This is the same as
 
-Exp([1;2;0;3], 0.4 * stepSize, [0;8;2;1]);
+Exp([1;2;0;3], 0.4 * stepSize, [qubits[0];qubits[8];qubits[2];qubits[1]]);
 ```
 
 ### Time-Dependent Generators ###
@@ -332,10 +336,10 @@ Exp([1;2;0;3], 0.4 * stepSize, [0;8;2;1]);
 In many cases, we are also interested in modelling time-dependent generators, as might occur in the Schrödinger equation 
 $$
 \begin{align}
-    \frac{d \ket{\psi(t)}}{d t} & = H(t) \ket{\psi(t)},
+    \frac{d \ket{\psi(t)}}{d t} & = \hat H(t) \ket{\psi(t)},
 \end{align}
 $$
-where the generator $H(t)$ is now time-dependent. The extension from the time-independent generators above to this case is straightforward. Rather than having a fixed `GeneratorSystem` describing the Hamiltonian for all times $t$, we instead have the `GeneratorSystemTimeDependent` user-defined type.
+where the generator $\hat H(t)$ is now time-dependent. The extension from the time-independent generators above to this case is straightforward. Rather than having a fixed `GeneratorSystem` describing the Hamiltonian for all times $t$, we instead have the `GeneratorSystemTimeDependent` user-defined type.
 
 ```qsharp
 newtype GeneratorSystemTimeDependent = (Double -> GeneratorSystem);

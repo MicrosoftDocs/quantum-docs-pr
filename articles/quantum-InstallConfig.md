@@ -39,7 +39,7 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 ## Creating the Q# development environment 
 
 1. Download and install [Microsoft Quantum Developer Kit](https://solidrepo.blob.core.windows.net/alpha/latest/QbVSIX.vsix) Visual Studio extension. 
-Some browsers (IE and Edge) will save this file as `QbVSIX.zip` during download. In this case, rename it to `QbVSIX.vsix`.
+Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip` during download. In this case, rename it to `QsharpVSIX.vsix`.
 
 1. If Visual Studio is open, close it.
 
@@ -48,8 +48,8 @@ Some browsers (IE and Edge) will save this file as `QbVSIX.zip` during download.
 1. Configure Visual Studio to use the QuArC beta NuGet feed. 
     - See [Consume NuGet packages in Visual Studio](https://www.visualstudio.com/en-us/docs/package/nuget/consume) for the configuration procedure. On that page, you should follow the instructions under the heading **Windows: Add the feed to your NuGet configuration**. The upper section is not required.
     - In that Windows section, the actions taken are in Visual Studio (which is not specified.)
-    - You will need the quantum NuGet URL: https://quarcsw.pkgs.visualstudio.com/_packaging/alpha/nuget/v3/index.json.
-    - Ignore step six: "6. If you enabled the nuget.org upstream source, uncheck the nuget.org package source."
+    - You will need the NuGet URL: https://quarcsw.pkgs.visualstudio.com/_packaging/alpha/nuget/v3/index.json.
+    - _**Important!**_ Ignore step six: "6. If you enabled the nuget.org upstream source, uncheck the nuget.org package source."
     - Ignore the last line of the Windows section (after the image): "Then click here to continue."
 
 ## Validating your setup
@@ -66,9 +66,13 @@ Some browsers (IE and Edge) will save this file as `QbVSIX.zip` during download.
 
 3. If needed, restore NuGet packages manually as described in [NuGet package restore](https://docs.microsoft.com/en-us/nuget/consume-packages/package-restore).
 
-4. Validate your Q# environment by running the teleport example: 
+4. Validate your Q# environment by running the teleport example:
+    
    1. Right click on `TeleportationExample` project in the Libraries solution, and left click "Set as Startup Project".
    2. Run the solution (F5.) If teleport runs and the output is as follows, your Q# environment is ready to support your development.
+
+> [!Tip]
+> If you receive a number of errors that reference NuGet packages, use the procedures in [NuGet package restore](https://docs.microsoft.com/en-us/nuget/consume-packages/package-restore) to restore the NuGet packages.
 
 ```
         Round 0:        Sent True,      got True. 

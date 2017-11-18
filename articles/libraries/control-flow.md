@@ -134,17 +134,61 @@ On the other hand,
         & = \ket{0} \otimes (UU^\dagger \ket{\psi}) \\\\
         & = (\boldone \otimes U) (c(V)) (\boldone \otimes U^\dagger) \ket{0} \otimes \ket{\psi}.
 \end{align}
+By linearity, we can conclude that we can factor $U$ out in this way for all input states.
+That is, $c(UVU^\dagger) = U c(V) U^\dagger$.
+Since controlling operations can be expensive in general, using controlled variants such as `WithC` and `WithCA` can help reduce the number of control functors that need to be applied.
 
-**TODO**:
-- With
-- Bind
-- Curry
-- Compose / ComposeOp (**NB: these need to be written**)
+> [!NOTE]
+> One other consequence of factoring out $U$ is that we need not even know how to apply the `Controlled` functor to `U`.
+> `WithCA` therefore has weaker signature than might be expected:
+> ```qsharp
+>     WithCA<'T> : (('T => () : Adjoint), ('T => () : Adjoint, Controlled), 'T) => ()
+> ```
+
+Similarly, <xref:microsoft.quantum.canon.bind> produces operations which apply a sequence of other operations in turn.
+For instance, the following are equivalent:
+```qsharp
+    H(qubit); X(qubit);
+    Bind([H; X], qubit);
+```
+Combining with iteration patterns can make this especially useful:
+```qsharp
+    // Bracket the quantum Fourier transform with $XH$ on each qubit.
+    With(ApplyToEach(Bind([H; X]), _), QFT, _);
+```
 
 ### Time-Ordered Composition ###
 
-- DecomposeIntoTimeSteps
+We can go still further by thinking of flow control in terms of partial application and classical functions, and can model even fairly sophisticated quantum concepts in terms of classical flow control.
+This analogy is made precise by the recognition that unitary operators correspond exactly to the side effects of calling operations, such that any decomposition of unitary operators in terms of other unitary operators correpsonds to constructing a particular calling sequence for classical subroutines which emit instructions to act particular unitary operators.
+Under this view, `Bind` is precisely the representation of the matrix product, since `Bind([A; B])(target)` is equivalent to `A(target); B(target);`, which in turn is the calling sequence corresponding to $BA$.
+
+A more sophisticated example is the [Trotter–Suzuki expansion](TODO: cite).
+As discussed in [Dynamical Generator Representation](data-structures#dynamical-generator-modeling), the Trotter–Suzuki expansion provides a particularly useful way of expressing matrix exponentials.
+For instance, applying the expansion at its lowest order yields that for any operators $A$ and $B$ such that $A = A^\dagger$ and $B = B^\dagger$,
+\begin{align}
+    \tag{★} \label{eq:trotter-suzuki-0}
+    \exp(i [A + B] t) = \lim_{n\to\infty} \left(\exp(i A t / n) \exp(i B t / n)\right)^n.
+\end{align}
+Colloquially, this says that we can approximately evolve a state under $A + B$ by alternately evolving under $A$ and $B$ alone.
+If we represent evolution under $A$ by an operation `A : (Double, Qubit[]) => ()` that applies $e^{i t A}$, then the representation of the Trotter–Suzuki expansion in terms of rearranging calling sequences becomes clear.
+Concretely, given two operations `A : (Double, Qubit[]) => ()` and `B : (Double, Qubit[])`, we can define a new operation `AB(t)` by generating sequences of the form
+```qsharp
+    A(time / Float(nSteps));
+    B(time / Float(nSteps));
+    A(time / Float(nSteps));
+    B(time / Float(nSteps));
+    // ...
+```
+At this point, we can now reason about the Trotter–Suzuki expansion *without reference to quantum mechanics at all*.
+The expansion is effectively a very particular iteration pattern motivated by $\eqref{eq:trotter-suzuki-0}$.
+This iteration pattern is implemented by <xref:microsoft.quantum.canon.decomposeintotimesteps>:
+```
+// TODO
+```
+
 
 ## Controlling Operations ##
 
+- CControlled
 - ControlledOnBitString

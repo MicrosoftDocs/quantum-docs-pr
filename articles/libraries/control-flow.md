@@ -140,9 +140,10 @@ Since controlling operations can be expensive in general, using controlled varia
 
 > [!NOTE]
 > One other consequence of factoring out $U$ is that we need not even know how to apply the `Controlled` functor to `U`.
-> `WithCA` therefore has weaker signature than might be expected:
+> `WithCA` therefore has a weaker signature than might be expected:
 > ```qsharp
-> WithCA<'T> : (('T => () : Adjoint), ('T => () : Adjoint, Controlled), 'T) => ()
+> WithCA<'T> : (('T => () : Adjoint),
+>     ('T => () : Adjoint, Controlled), 'T) => ()
 > ```
 
 Similarly, <xref:microsoft.quantum.canon.bind> produces operations which apply a sequence of other operations in turn.

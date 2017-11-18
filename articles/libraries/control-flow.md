@@ -41,7 +41,7 @@ CNOT(register[nQubits - 2], register[nQubits - 1]);
 
 We can express this pattern by using iteration and `for` loops:
 
-```
+```qsharp
 for (idxQubit in 0..nQubits - 2) {
     CNOT(register[idxQubit], register[idxQubit + 1]);
 }
@@ -61,7 +61,7 @@ One of the primary abstractions provided by the canon is that of iteration.
 For instance, consider an unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.
 In Q#, this might get represented as a `for` loop over a register:
 
-```
+```qsharp
 /// # Summary
 /// Applies $H$ to all qubits in a register.
 operation HAll(register : Qubit) : () {
@@ -82,14 +82,14 @@ This is cumbersome to do, however, especially in a larger algorithm.
 Moreover, this approach is specialized to the particular operation that we wish to apply to each qubit.
 We can use that [operations are first-class](../quantum-techniques-2-operationsandfunctions#operations-and-functions-as-first-class-values) to express this algorithmic concept more explicitly:
 
-```
+```qsharp
 ApplyToEachAC(H, register);
 ```
 
 Here, the suffix `AC` indicates that the call to `ApplyToEach` is itself adjointable and controllable.
 Thus, if `U` supports `Adjoint` and `Controlled`, the following lines are equivalent:
 
-```
+```qsharp
 (Adjoint ApplyToEachAC)(U, register);
 ApplyToEach((Adjoint U), register);
 ```
@@ -107,7 +107,7 @@ The Q# canon also provides support for classical enumeration patterns familiar t
 For instance, <xref:microsoft.quantum.canon.fold> implements the pattern $f(f(f(s\_{\text{initial}}, x\_0), x\_1), \dots)$ for reducing a function over a list.
 This pattern can be used to implement sums, products, minima, maxima and other such functions:
 
-```
+```qsharp
 function Plus(a : Int, b : Int) : Int { return a + b; }
 function Sum(xs : Int[]) {
     return Fold(Sum, 0, xs);
@@ -142,19 +142,19 @@ Since controlling operations can be expensive in general, using controlled varia
 > One other consequence of factoring out $U$ is that we need not even know how to apply the `Controlled` functor to `U`.
 > `WithCA` therefore has weaker signature than might be expected:
 > ```qsharp
->     WithCA<'T> : (('T => () : Adjoint), ('T => () : Adjoint, Controlled), 'T) => ()
+> WithCA<'T> : (('T => () : Adjoint), ('T => () : Adjoint, Controlled), 'T) => ()
 > ```
 
 Similarly, <xref:microsoft.quantum.canon.bind> produces operations which apply a sequence of other operations in turn.
 For instance, the following are equivalent:
 ```qsharp
-    H(qubit); X(qubit);
-    Bind([H; X], qubit);
+H(qubit); X(qubit);
+Bind([H; X], qubit);
 ```
 Combining with iteration patterns can make this especially useful:
 ```qsharp
-    // Bracket the quantum Fourier transform with $XH$ on each qubit.
-    With(ApplyToEach(Bind([H; X]), _), QFT, _);
+// Bracket the quantum Fourier transform with $XH$ on each qubit.
+With(ApplyToEach(Bind([H; X]), _), QFT, _);
 ```
 
 ### Time-Ordered Composition ###
@@ -174,21 +174,76 @@ Colloquially, this says that we can approximately evolve a state under $A + B$ b
 If we represent evolution under $A$ by an operation `A : (Double, Qubit[]) => ()` that applies $e^{i t A}$, then the representation of the Trotter–Suzuki expansion in terms of rearranging calling sequences becomes clear.
 Concretely, given two operations `A : (Double, Qubit[]) => ()` and `B : (Double, Qubit[])`, we can define a new operation `AB(t)` by generating sequences of the form
 ```qsharp
-    A(time / Float(nSteps));
-    B(time / Float(nSteps));
-    A(time / Float(nSteps));
-    B(time / Float(nSteps));
-    // ...
+A(time / Float(nSteps));
+B(time / Float(nSteps));
+A(time / Float(nSteps));
+B(time / Float(nSteps));
+// ...
 ```
 At this point, we can now reason about the Trotter–Suzuki expansion *without reference to quantum mechanics at all*.
 The expansion is effectively a very particular iteration pattern motivated by $\eqref{eq:trotter-suzuki-0}$.
 This iteration pattern is implemented by <xref:microsoft.quantum.canon.decomposeintotimesteps>:
-```
+
+```qsharp
 // TODO
 ```
 
+## Putting it Together: Controlling Operations ##
 
-## Controlling Operations ##
+Finally, the canon builds on the `Controlled` functor by providing additional ways to condition quantum operations.
+It is common, especially in [quantum arithmetic](algorithms#arithmetic), to condition operations on computational basis states other than $\ket{0\cdots 0}$.
+Using the control operations and functions introduced above, we can more general quantum conditions in a single statement.
+Let's jump in to how <xref:microsoft.quantum.canon.controlledonbitstring> does it (sans type parameters), then we'll break down the pieces one by one.
+The first thing we'll need to do is to define an operation which actually does the heavy lifting of implementing the control on arbitrary computational basis states.
+We won't call this operation directly, however, and so we add `Impl` to the end of the name to indicate that it's an implementation of another construct elsewhere.
+```qsharp
+operation ControlledOnBitStringImpl(
+        bits : Bool[],
+        oracle: (Qubit[] => (): Adjoint, Controlled),
+        controlRegister : Qubit[],
+        targetRegister: Qubit[]
+    ) : ()
+```
 
-- CControlled
-- ControlledOnBitString
+Note that we take a string of bits, represented as a `Bool` array, that we use to specify the conditioning that we want to apply to the operation `oracle` that we are given.
+Since this operation actually does the application directly, we also need to take the control and target registers, both represented here as `Qubit[]`.
+
+Next, we note that controlling on the computational basis state $\ket{\vec{s}} = \ket{s\_0 s\_1 \dots s\_{n - 1}}$ for a bit string $\vec{s}$ can be realized by transforming $\ket{\vec{s}}$ into $\ket{0\cdots 0}$.
+In particular, $\ket{\vec{s}} = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{n - 1}} \ket{0\cdots 0}$.
+Since $X^{\dagger} = X$, this implies that $\ket{0\dots 0} = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{n - 1}} \ket{\vec{s}}$.
+Thus, we can apply $P = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{n - 1}}$, apply `(Controlled oracle)`, and transform back to $\vec{s}$.
+This construction is precisely `With`, so we write the body of our new operation accordingly:
+
+```qsharp
+{
+    body {
+        WithCA(ApplyPauliFromBitString(PauliX, false, bits, _), (Controlled oracle)(_, targetRegister), controlRegister);
+    }
+```
+
+Here, we have used @"microsoft.quantum.canon.applypaulifrombitstring" to apply $P$, partially applying over its target for use with `With`.
+Note, however, that we need to transform the *control* register to our desired form, so we partially apply the inner operation `(Controlled oracle)` on the *target*.
+This leaves `With` acting to bracket the control register with $P$, exactly as we desired.
+We finish defining our operation by declaring that we support the usual functor applications:
+
+```qsharp
+    adjoint auto
+    controlled auto
+    adjoint controlled auto
+}
+```
+
+At this point, we could be done, but it is somehow unsatisfying that our new operation does not "feel" like applying the `Controlled` functor.
+Thus, we finish defining our new control flow concept by writing a function that takes the oracle to be controlled and that returns a new operation.
+In this way, our new function looks and feels very much like `Controlled`, illustrating that we can easily define powerful new control flow constructs using Q# and the canon together:
+
+```
+function ControlledOnBitString(
+        bits : Bool[],
+        oracle: (Qubit[] => (): Adjoint, Controlled)
+    ) : ((Qubit[], Qubit[]) => (): Adjoint, Controlled)
+{
+    return ControlledOnBitStringImpl(bits, oracle, _, _);
+}
+```
+

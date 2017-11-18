@@ -41,6 +41,56 @@ We relate the single-qubit rotation phases to the reflection operator phases as 
 For background, you could start from [Standard Amplitude Amplification](https://arxiv.org/abs/quant-ph/0005055) then move to an introduction to [Oblivious Amplitude Amplification](https://arxiv.org/abs/1312.1414) and finally generalizations presented in [Low and Chuang](https://arxiv.org/abs/1610.06546). A nice overview presentation of this entire area (as it relates to Hamiltonian Simulation) was given by [Dominic Berry](http://www.dominicberry.org/presentations/Durban.pdf).
 
 ## Arithmetic ##
+Just as arithmetic plays a central role in classical computing, it is also indispensible in quantum computing.  Algorithms such as Shor's factoring algorithm, quantum simulation methods as well as many oracular algorithms rely upon arithmetic as primitive operations.  Most approaches to arithmetic bootstrap upon the modular adder circuit.  A modular adder, which we denote $\operatorname{Add}(b)$ for classical input $b$ has the property that 
+
+$$
+\operatorname{Add}(b)\ket{a}=\ket{a+b }.
+$$
+This primitive adder circuit is more of an incrementer than an adder.  It can be converted into an adder that has two quantum inputs via
+$$
+\operatorname{Add}\ket{a}\ket{b}=\ket{a}\ket{a+b},
+$$
+using $n$ controlled applications of adders of the form
+$$
+\operatorname{Add}\ket{a}\ket{b}=\Lambda\_{a\_0}\left(\operatorname{Add}(1)\right)\Lambda\_{a\_1}\left(\operatorname{Add}(2)\right)\Lambda\_{a\_2}\left(\operatorname{Add}(4)\right)\cdots \Lambda\_{a\_{n-1}}\left(\operatorname{Add}({{n-1}}) \right)\ket{a}\ket{b}=\ket{a}\ket{b+a},
+$$
+for $n$ bit integers $a$ and $b$ and addition modulo $2^n$.  Recall that the notation $\Lambda\_n(A)$ refers, for any operation $A$, to the controlled version of that operation with the $n^{\rm th}$ qubit as control.  
+
+Similarly, classically controlled multiplication (a modular form of which is essential for Shor's factoring algorithm) can be performed by using a similar series of controlled  additions.
+$$
+\operatorname{Mult}(a)\ket{x}\ket{b}=\Lambda\_{x\_0}\left(\operatorname{Add}(2^0 a)\right)\Lambda\_{a\_1}\left(\operatorname{Add}(2^1a)\right)\Lambda\_{a\_2}\left(\operatorname{Add}(2^2 a)\right)\cdots \Lambda\_{x\_{n-1}}\left(\operatorname{Add}({2^{n-1}}a) \right)\ket{x}\ket{b}=\ket{x}\ket{b+ax}.
+$$
+There is a subtlety with multiplication on quantum computers that you may notice from the definition of $\operatorname{Mult}$ above.  Unlike addition, the quantum version of this circuit stores the product of the inputs in an ancillary register rather than in the input register.  In this example, the register is initialized with the value $b$, but typically it will start holding the value zero.  This is needed in because in general there is not a multiplicative inverse for general $a$ and $x$.  Since all quantum operations, save measurement, are reversible we need to keep enough information around to invert the multiplication.  For this reason the result is stored in a separate array.  This trick of saving the output of an irreversible operation, like multiplication, in a seperate register is known as the "Bennet trick" after Charlie Bennet and is a fundamental tool used in building quantum arithmetic circuits.
+
+There are many quantum circuits that have been proposed for addition that have different tradeoffs in terms of qubits (space) and depth (time) required.  We review two highly space efficient adders below known as the Draper adder and the Beauregard adder.  The latter of which is implemented by Q\#.  
+
+### Draper Adder
+
+The Draper adder is arguably one of the most elegant addition circuits ever devised.  The insight behind the Draper adder is that the Fourier transform can be used to translate phase shifts into a bit shift.  It then follows that by applying a Fourier transform, applying appropriate phase shifts, and then undoing the Fourier transform you can implement an adder.  The specific steps used by the Draper adder to achieve this are given below.
+
+Assume that you have two $n$-bit qubit registers storing the integers $a$ and $b$ then for all $a$
+$$
+\operatorname{QFT}\ket{a}= \frac{1}{\sqrt{2^n}}\sum\_{j=0}^{2^n-1} e^{i2\pi(aj)/2^n} \ket{j}.
+$$
+If we define
+$$
+\ket{\phi\_k(a)} = \frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi/2^k}\ket{1} \right),
+$$
+then after some algebra you can see that
+$$
+\operatorname{QFT}\ket{a}=\ket{\phi\_1(a)}\otimes \cdots \otimes \ket{\phi\_n(a)}.
+$$
+Thus we can perform $\ket{a} \mapsto \ket{a+b}$ (assuming $a+b < 2^n$) through the relation
+$$
+\ket{a+b}=\operatorname{QFT}^{-1}\ket{\phi\_1(a+b)}\otimes \cdots \otimes \ket{\phi\_n(a+b)}.
+$$
+This shows that we can add $b$ to $a$ by performing the appropriate phase rotation on each of the qubits in the decomposition controlled on the bits of $b$.  A quantum circuit that implements the entire process is given below.
+
+
+<!--- ![](.\media\draper.svg) --->
+![](../media/draper.png)
+
+Each controlled $e^{i2\pi/k}$ gate in the circuit refers to a controlled phase gate.  Such gates have the property that on the pair of qubits that they act $\ket{00}\mapsto \ket{00}$ but $\ket{11}\mapsto e^{i2\pi/k}\ket{11}$
 
 ## Quantum Fourier Transform ##
 

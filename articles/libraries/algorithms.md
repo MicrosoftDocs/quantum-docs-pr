@@ -101,9 +101,9 @@ $$
 $$
 The integers $b$ and $a$ can then be added by performing controlled phase rotation on each of the qubits in the decomposition using the bits of $b$ as controls.  
 
-This expansion can be further simplified by noting that for any integer $j$ and real number $x$, $e^{i2\pi(x+j)}=e^{i2\pi x}$.  This is because if you spin $360^{\circ}$ degrees ($2\pi$ radians) in a circle then you end up precisely where you started.  Therefore the only important part of $x$ for $e^{i2\pi x}$ is the fractional part of $x$.  Specifically, if we have a binary expansion of the form $x=y+0.x\_0x\_2\ldots x\_n$ then $e^{i2\pi x}=e^{i2\pi (0.x\_0x\_2\ldots x\_{n-1})}$ and hence
+This expansion can be further simplified by noting that for any integer $j$ and real number $x$, $e^{i2\pi(x+j)}=e^{i2\pi x}$.  This is because if you spin $360^{\circ}$ degrees ($2\pi$ radians) in a circle then you end up precisely where you started.  The only important part of $x$ for $e^{i2\pi x}$ is therefore the fractional part of $x$.  Specifically, if we have a binary expansion of the form $x=y+0.x\_0x\_2\ldots x\_n$ then $e^{i2\pi x}=e^{i2\pi (0.x\_0x\_2\ldots x\_{n-1})}$ and hence
 $$\ket{\phi\_k(a+b)}=\frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi [a/2^k+0.b\_k\ldots b\_1]}\ket{1} \right)$$
-This means that if we perform addition by incrementing each of the tensor factors in the expansion of the Fourier transform of $\ket{a}$ then the number of rotations shrinks as $k$ decreases.  We denote the process that describes this Fourier transform, phase addition and then inverse Fourier transform as $\operatorname{QFT}^{-1} \left(\phi\\\!\operatorname{ADD}\right) \operatorname{QFT}$. A quantum circuit that uses this simplification to implement the entire process can be as seen below.
+This means that if we perform addition by incrementing each of the tensor factors in the expansion of the Fourier transform of $\ket{a}$ then the number of rotations shrinks as $k$ decreases.  This substantially reduces the number of quantum gates needed in the adder.  We denote the process that describes the Fourier transform, phase addition and then inverse Fourier transform steps that comprise the Draper adder as $\operatorname{QFT}^{-1} \left(\phi\\\!\operatorname{ADD}\right) \operatorname{QFT}$. A quantum circuit that uses this simplification to implement the entire process can be as seen below.
 
 
 <!--- ![](.\media\draper.svg) --->
@@ -118,7 +118,7 @@ $$
 \ket{b}\rightarrow \ket{b+a \text{ mod }N}=\begin{cases} \ket{b+a},& b+a < N\\\\ \ket{b+a-N},& (b+a)\ge N \end{cases}.
 $$
 
-The Beauregard adder uses the Draper adder, or more specifically $\phi\\\!\operatorname{ADD}$ to add the value $a$ to $b$ in phase and then uses the same logic to identify whether $a+b <N$ by subtracting $N$ and testing if $a+b-N<0$.  The circuit stores this information in an ancillary qubit and then adds $N$ back the register if $a+b<N$.  It then concludes by uncomputing this ancillary bit (this step is needed to ensure that the ancilla can be de-allocated after calling the adder).  The circuit for the Beauregard adder is given below.
+The Beauregard adder uses the Draper adder, or more specifically $\phi\\\!\operatorname{ADD}$, to add $a$ and $b$ in phase.  It then uses the same operation to identify whether $a+b <N$ by subtracting $N$ and testing if $a+b-N<0$.  The circuit stores this information in an ancillary qubit and then adds $N$ back the register if $a+b<N$.  It then concludes by uncomputing this ancillary bit (this step is needed to ensure that the ancilla can be de-allocated after calling the adder).  The circuit for the Beauregard adder is given below.
 
 <!--- ![](.\media\beau.svg) --->
 ![](../media/beau.png)

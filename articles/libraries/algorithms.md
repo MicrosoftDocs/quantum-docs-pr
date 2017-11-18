@@ -84,13 +84,16 @@ Thus we can perform $\ket{a} \mapsto \ket{a+b}$ (assuming $a+b < 2^n$) through t
 $$
 \ket{a+b}=\operatorname{QFT}^{-1}\ket{\phi\_1(a+b)}\otimes \cdots \otimes \ket{\phi\_n(a+b)}.
 $$
-This shows that we can add $b$ to $a$ by performing the appropriate phase rotation on each of the qubits in the decomposition controlled on the bits of $b$.  A quantum circuit that implements the entire process is given below.
+This shows that we can add $b$ to $a$ by performing the appropriate phase rotation on each of the qubits in the decomposition controlled on the bits of $b$.  A quantum circuit that implements the entire process can be expressed as $\operatorname{QFT}^{-1} \phi\\\!\operatorname{ADD} \operatorname{QFT}$ as seen below.
 
 
 <!--- ![](.\media\draper.svg) --->
 ![](../media/draper.png)
 
-Each controlled $e^{i2\pi/k}$ gate in the circuit refers to a controlled phase gate.  Such gates have the property that on the pair of qubits that they act $\ket{00}\mapsto \ket{00}$ but $\ket{11}\mapsto e^{i2\pi/k}\ket{11}$
+Each controlled $e^{i2\pi/k}$ gate in the circuit refers to a controlled phase gate.  Such gates have the property that on the pair of qubits that they act $\ket{00}\mapsto \ket{00}$ but $\ket{11}\mapsto e^{i2\pi/k}\ket{11}$.  This circuit allows us to perform addition using no additional qubits apart from those needed to store the inputs and the outputs.  The circuit requires $O(n^2)$ single qubit rotations and CNOT gates and requires $2n$ bits in total to perform the addition.
+### Beauregard Adder
+
+The Beauregard adder is a quantum modular adder that uses the Draper adder in order to perform addition modulo $N$ for an arbitrary value positive integer $N$.  Such modular adders are  
 
 ## Quantum Fourier Transform ##
 

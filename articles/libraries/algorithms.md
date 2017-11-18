@@ -40,6 +40,21 @@ We relate the single-qubit rotation phases to the reflection operator phases as 
 
 For background, you could start from [Standard Amplitude Amplification](https://arxiv.org/abs/quant-ph/0005055) then move to an introduction to [Oblivious Amplitude Amplification](https://arxiv.org/abs/1312.1414) and finally generalizations presented in [Low and Chuang](https://arxiv.org/abs/1610.06546). A nice overview presentation of this entire area (as it relates to Hamiltonian Simulation) was given by [Dominic Berry](http://www.dominicberry.org/presentations/Durban.pdf).
 
+
+## Quantum Fourier Transform ##
+
+The Fourier transform is a fundamental tool of classical analysis and is just as important for quantum computations.
+In addition, the efficiency of the quantum Fourier transform (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm.
+
+As an approximate generalization of the QFT, we provide the <xref:microsoft.quantum.canon.approximateqft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
+The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.primitive.RFrac> as well as the <xref:microsoft.quantum.primitive.h> operation.
+The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as [ket notation](xref:microsoft.quantum.concepts.dirac).
+The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
+In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.
+It is known that for $k \ge \log_2(n) + \log_2(1 / \epsilon) + 3$. one can bound $\| \operatorname{QFT} - \operatorname{AQFT} \| < \epsilon$.
+Here $\|\cdot\|$ is the operator norm which in this case is the absolute value of the largest [eigenvalue](xref:microsoft.quantum.concepts.vecmat) of $\operatorname{QFT} - \operatorname{AQFT}$.
+<!-- TODO: explain what norms are, perhaps? -->
+
 ## Arithmetic ##
 Just as arithmetic plays a central role in classical computing, it is also indispensible in quantum computing.  Algorithms such as Shor's factoring algorithm, quantum simulation methods as well as many oracular algorithms rely upon arithmetic as primitive operations.  Most approaches to arithmetic bootstrap upon the modular adder circuit.  A modular adder, which we denote $\operatorname{Add}(b)$ for classical input $b$ has the property that 
 
@@ -111,18 +126,7 @@ The Beauregard adder uses the Draper adder, or more specifically $\phi\!\operato
 Here the gate $\Phi\\\!\operatorname{ADD}$ takes the same form as $\phi\\\!\operatorname{ADD}$ except that in this context the input is classical rather than quantum.  This allows the controlled phases in $\Phi\\\!\operatorname{ADD}$ to be replaced with phase gates that can be compiled together to reduce both the number of qubits and number of gates needed for the adder.
 
 
-## Quantum Fourier Transform ##
 
-The Fourier transform is a fundamental tool of classical analysis and is just as important for quantum computations.
-In addition, the efficiency of the quantum Fourier transform (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm.
-
-As an approximate generalization of the QFT, we provide the <xref:microsoft.quantum.canon.approximateqft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
-The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.primitive.RFrac> as well as the <xref:microsoft.quantum.primitive.h> operation.
-The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as [ket notation](xref:microsoft.quantum.concepts.dirac).
-The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
-In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.
-It is known that for $k \ge \log_2(n) + \log_2(1 / \epsilon) + 3$. one can bound $\| \operatorname{QFT} - \operatorname{AQFT} \| < \epsilon$.
-<!-- TODO: explain what norms are, perhaps? -->
 
 For more details, please refer to [M. Roetteler, Th. Beth](http://doi.org/10.1007/s00200-008-0072-2 ) and [D. Coppersmith](https://arxiv.org/abs/quant-ph/0201067).
 

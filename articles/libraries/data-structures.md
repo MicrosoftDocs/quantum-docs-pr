@@ -257,7 +257,7 @@ where time-evolution by each term alone is easy to implement on a quantum comput
 
 $$
 \begin{align}
-    U(t) & = ( e^{-i\hat{H}_0 t / r} e^{-i\hat{H}_1 t / r} \cdots e^{-i\hat{H}_{d-1} t / r} )^{r} + O(d^2 t^2/r),
+    U(t) & = ( e^{-i\hat{H}_0 t / r} e^{-i\hat{H}_1 t / r} ... e^{-i\hat{H}_{d-1} t / r} )^{r} + O(d^2 t^2/r),
 \end{align}
 $$
 
@@ -308,7 +308,7 @@ where each $H_j$ is now drawn from the Pauli group. For such systems, we provide
 newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 ```
 
-In our encoding, the first parameter `Int[]` specifies a Pauli string, where $I\rightarrow 0$, $X\rightarrow 1$, $Y\rightarrow 2$, and $Z\rightarrow 3$. The second parameter `Double[]` stores the coefficient of the Pauli string in the Hamiltonian. Note that only the first element of this array is used. The third parameter `Int[]` indexes the qubits that this Pauli string acts on, and must have no duplicatie elements. Thus the Hamiltonian term $0.4 \hat X_0 \hat Y_8\hat I_2\hat Z_1$ may be represented as
+In our encoding, the first parameter `Int[]` specifies a Pauli string, where $\hat I\rightarrow 0$, $\hat X\rightarrow 1$, $\hat Y\rightarrow 2$, and $Z\rightarrow 3$. The second parameter `Double[]` stores the coefficient of the Pauli string in the Hamiltonian. Note that only the first element of this array is used. The third parameter `Int[]` indexes the qubits that this Pauli string acts on, and must have no duplicatie elements. Thus the Hamiltonian term $0.4 \hat X_0 \hat Y_8\hat I_2\hat Z_1$ may be represented as
 
 ```qsharp
 let generatorIndexExample = GeneratorIndex(([1;2;0;3], [0.4]]), [0;8;2;1]);

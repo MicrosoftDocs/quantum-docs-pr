@@ -257,7 +257,7 @@ where time-evolution by each term alone is easy to implement on a quantum comput
 
 $$
 \begin{align}
-    U(t) & = ( e^{-i\hat{H}_0 t / r} e^{-i\hat{H}_1 t / r} ... e^{-i\hat{H}_{d-1} t / r} )^{r} + O(d^2 t^2/r),
+    U(t) & = \left( e^{-i\hat{H}\_0 t / r} e^{-i\hat{H}\_1 t / r} \cdots e^{-i\hat{H}\_{d-1} t / r} \right)^{r} + \mathcal{O}(d^2 t^2/r),
 \end{align}
 $$
 

@@ -33,9 +33,8 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 1. Go to the [Visual Studio download page](https://www.visualstudio.com/downloads/).
 2. Click on the Visual Studio Community **Free download** button.
 3. Navigate to the folder your browser uses for downloads and double click on the executable file whose name begins with **vs_community**. The file name will contain a sequence of numbers that varies.
-4. Follow the prompts to continue the Visual Studio installation.
-5. When you are presented with the option to select the tools for specific workloads, check the boxes for **Universal Windows Platform development** and **.NET desktop development**
-6. After selecting your workloads, click **Install** to complete the installation.
+1. _**Important!**_ When you are presented with the option to select the tools for specific workloads, check the boxes for **Universal Windows Platform development** and **.NET desktop development**
+2. After selecting your workloads, click **Install** to complete the installation.
 
 ## Creating the Q# development environment 
 
@@ -46,7 +45,12 @@ Some browsers (IE and Edge) will save this file as `QbVSIX.zip` during download.
 
 1. Start the VSIX installer by double clicking the `QbVSIX.vsix` file and follow the prompts to install the extension.
 
-1. Configure Visual Studio to use the QuArC beta NuGet feed. See [Consume NuGet packages in Visual Studio](https://www.visualstudio.com/en-us/docs/package/nuget/consume) for the configuration procedure. You will need the quantum NuGet URL: NuGethttps://quarcsw.pkgs.visualstudio.com/_packaging/alpha/nuget/v3/index.json.
+1. Configure Visual Studio to use the QuArC beta NuGet feed. 
+    - See [Consume NuGet packages in Visual Studio](https://www.visualstudio.com/en-us/docs/package/nuget/consume) for the configuration procedure. On that page, you should follow the instructions under the heading **Windows: Add the feed to your NuGet configuration**. The upper section is not required.
+    - In that Windows section, the actions taken are in Visual Studio (which is not specified.)
+    - You will need the quantum NuGet URL: https://quarcsw.pkgs.visualstudio.com/_packaging/alpha/nuget/v3/index.json.
+    - Ignore step six: "6. If you enabled the nuget.org upstream source, uncheck the nuget.org package source."
+    - Ignore the last line of the Windows section (after the image): "Then click here to continue."
 
 ## Validating your setup
 
@@ -57,7 +61,8 @@ Some browsers (IE and Edge) will save this file as `QbVSIX.zip` during download.
     4. If presented with a login request, sign in using your Microsoft credentials.
     5. On the **Visual Studio Team Services** pane, click **Clone** to proceed.
 
-2. Open the `Libraries\QbLibs\QbLibs.sln` solution. If prompted, on the **Install Missing Features** pane click **Install** to allow the installation of the necessary features.
+2. Open the `Libraries\QbLibs\QbLibs.sln` solution. 
+    - If prompted by the **Install Missing Features** pane, click **Install** to allow the installation of the necessary features. This is most often F# and tools.
 
 3. If needed, restore NuGet packages manually as described in [NuGet package restore](https://docs.microsoft.com/en-us/nuget/consume-packages/package-restore).
 

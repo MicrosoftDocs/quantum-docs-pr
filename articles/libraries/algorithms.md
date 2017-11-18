@@ -56,7 +56,7 @@ Here $\\|\cdot\\|$ is the operator norm which in this case is the square root of
 <!-- TODO: explain what norms are, perhaps? -->
 
 ## Arithmetic ##
-Just as arithmetic plays a central role in classical computing, it is also indispensible in quantum computing.  Algorithms such as Shor's factoring algorithm, quantum simulation methods as well as many oracular algorithms rely upon arithmetic as primitive operations.  Most approaches to arithmetic bootstrap upon the modular adder circuit.  A modular adder, which we denote $\operatorname{Add}(b)$ for classical input $b$ has the property that 
+Just as arithmetic plays a central role in classical computing, it is also indispensible in quantum computing.  Algorithms such as Shor's factoring algorithm, quantum simulation methods as well as many oracular algorithms rely upon arithmetic as primitive operations.  Most approaches to arithmetic build upon quantum adder circuits.  The simplest adder takes a classical input $b$ and adds the value to a quantum state holding an integer $\ket{a}$.  Mathematically, the adder (which we denote $\operatorname{Add}(b)$ for classical input $b$) has the property that 
 
 $$
 \operatorname{Add}(b)\ket{a}=\ket{a+b }.
@@ -75,9 +75,9 @@ Similarly, classically controlled multiplication (a modular form of which is ess
 $$
 \operatorname{Mult}(a)\ket{x}\ket{b}=\Lambda\_{x\_0}\left(\operatorname{Add}(2^0 a)\right)\Lambda\_{a\_1}\left(\operatorname{Add}(2^1a)\right)\Lambda\_{a\_2}\left(\operatorname{Add}(2^2 a)\right)\cdots \Lambda\_{x\_{n-1}}\left(\operatorname{Add}({2^{n-1}}a) \right)\ket{x}\ket{b}=\ket{x}\ket{b+ax}.
 $$
-There is a subtlety with multiplication on quantum computers that you may notice from the definition of $\operatorname{Mult}$ above.  Unlike addition, the quantum version of this circuit stores the product of the inputs in an ancillary register rather than in the input register.  In this example, the register is initialized with the value $b$, but typically it will start holding the value zero.  This is needed in because in general there is not a multiplicative inverse for general $a$ and $x$.  Since all quantum operations, save measurement, are reversible we need to keep enough information around to invert the multiplication.  For this reason the result is stored in a separate array.  This trick of saving the output of an irreversible operation, like multiplication, in a seperate register is known as the "Bennet trick" after Charlie Bennet and is a fundamental tool used in building quantum arithmetic circuits.
+There is a subtlety with multiplication on quantum computers that you may notice from the definition of $\operatorname{Mult}$ above.  Unlike addition, the quantum version of this circuit stores the product of the inputs in an ancillary register rather than in the input register.  In this example, the register is initialized with the value $b$, but typically it will start holding the value zero.  This is needed in because in general there is not a multiplicative inverse for general $a$ and $x$.  Since all quantum operations, save measurement, are reversible we need to keep enough information around to invert the multiplication.  For this reason the result is stored in a separate array.  This trick of saving the output of an irreversible operation, like multiplication, in a seperate register is known as the "Bennet trick" after Charlie Bennet and is a fundamental tool in both reversible and quantum computing.
 
-There are many quantum circuits that have been proposed for addition that have different tradeoffs in terms of qubits (space) and depth (time) required.  We review two highly space efficient adders below known as the Draper adder and the Beauregard adder.  The latter of which is implemented by Q\#.  
+Many quantum circuits have been proposed for addition and each explores a different tradeoff in terms of the number of qubits (space) and the number of gates (time) required.  We review two highly space efficient adders below known as the Draper adder and the Beauregard adder. 
 
 ### Draper Adder
 

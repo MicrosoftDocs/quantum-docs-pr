@@ -217,7 +217,11 @@ This construction is precisely `With`, so we write the body of our new operation
 ```qsharp
 {
     body {
-        WithCA(ApplyPauliFromBitString(PauliX, false, bits, _), (Controlled oracle)(_, targetRegister), controlRegister);
+        WithCA(
+            ApplyPauliFromBitString(PauliX, false, bits, _),
+            (Controlled oracle)(_, targetRegister),
+            controlRegister
+        );
     }
 ```
 
@@ -246,4 +250,3 @@ function ControlledOnBitString(
     return ControlledOnBitStringImpl(bits, oracle, _, _);
 }
 ```
-

@@ -74,7 +74,7 @@ $$
 $$
 If we define
 $$
-\ket{\phi\_k(a)} = \frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi/2^k}\ket{1} \right),
+\ket{\phi\_k(a)} = \frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi a /2^k}\ket{1} \right),
 $$
 then after some algebra you can see that
 $$
@@ -84,16 +84,32 @@ Thus we can perform $\ket{a} \mapsto \ket{a+b}$ (assuming $a+b < 2^n$) through t
 $$
 \ket{a+b}=\operatorname{QFT}^{-1}\ket{\phi\_1(a+b)}\otimes \cdots \otimes \ket{\phi\_n(a+b)}.
 $$
-This shows that we can add $b$ to $a$ by performing the appropriate phase rotation on each of the qubits in the decomposition controlled on the bits of $b$.  A quantum circuit that implements the entire process can be expressed as $\operatorname{QFT}^{-1} \phi\\\!\operatorname{ADD} \operatorname{QFT}$ as seen below.
+This shows that we can add $b$ to $a$ by performing the appropriate phase rotation on each of the qubits in the decomposition controlled on the bits of $b$.  
+
+The above expansion can be further simplified by noting that for any integer $j$ and real number $x$ $e^{i2\pi(x+j)}=e^{i2\pi x}$.  This is because if you spin $360^{\circ}$ degrees ($2\pi$ radians) in a circle then you end up precisely where you started.  Therefore the only important part of $x$ for $e^{i2\pi x}$ is the fractional part of $x$.  Specifically, if we have a binary expansion of the form $x=y+0.x\_0x\_2\ldots x\_n$ then $e^{i2\pi x}=e^{i2\pi (0.x\_0x\_2\ldots x\_{n-1})}$ and hence
+$$\ket{\phi\_k(a+b)}=\frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi [a/2^k+0.b\_k\ldots b\_1}\ket{1} \right)$$
+This means that if we perform addition by incrementing each of the tensor factors in the expansion of the Fourier transform of $\ket{a}$ then the number of rotations shrinks as $k$ decreases.  We denote the process that describes this Fourier transform, phase addition and then inverse Fourier transform as $\operatorname{QFT}^{-1} \left(\phi\\\!\operatorname{ADD}\right) \operatorname{QFT}$.$. A quantum circuit that uses this simplification to implement the entire process can be as seen below.
 
 
 <!--- ![](.\media\draper.svg) --->
 ![](../media/draper.png)
 
-Each controlled $e^{i2\pi/k}$ gate in the circuit refers to a controlled phase gate.  Such gates have the property that on the pair of qubits that they act $\ket{00}\mapsto \ket{00}$ but $\ket{11}\mapsto e^{i2\pi/k}\ket{11}$.  This circuit allows us to perform addition using no additional qubits apart from those needed to store the inputs and the outputs.  The circuit requires $O(n^2)$ single qubit rotations and CNOT gates and requires $2n$ bits in total to perform the addition.
+Each controlled $e^{i2\pi/k}$ gate in the circuit refers to a controlled phase gate.  Such gates have the property that on the pair of qubits that they act $\ket{00}\mapsto \ket{00}$ but $\ket{11}\mapsto e^{i2\pi/k}\ket{11}$.  This circuit allows us to perform addition using no additional qubits apart from those needed to store the inputs and the outputs.  
 ### Beauregard Adder
 
-The Beauregard adder is a quantum modular adder that uses the Draper adder in order to perform addition modulo $N$ for an arbitrary value positive integer $N$.  Such modular adders are  
+The Beauregard adder is a quantum modular adder that uses the Draper adder in order to perform addition modulo $N$ for an arbitrary value positive integer $N$.  The significance of quantum modular adders, such as the Beauregard adder, stems to a large extent from their use in the modular exponentiation step within Shor's algorithm for factoring.  A quantum modular adder has the following action for quantum input $\ket{b}$ and classical input $a$ where $a$ and $b$ are promised to be integers $\mod N$, meaning that they are in the interval $[0,\ldots, N-1]$.
+
+$$
+\ket{b}\rightarrow \ket{b+a \text{ mod }N}=\begin{cases} b+a < N & \ket{b+a}\\\\(b+a)\ge N & \ket{b+a-N} \end{cases}.
+$$
+
+The Beauregard adder uses the Draper adder, or more specifically $\phi\!\operatorname{ADD}$ to add the value $a$ to $b$ in phase and then uses the same logic to identify whether $a+b <N$ by subtracting $N$ and testing if $a+b-N<0$.  The circuit stores this information in an ancillary qubit and then adds $N$ back the register if $a+b<N$.  It then concludes by uncomputing this ancillary bit (this step is needed to ensure that the ancilla can be de-allocated after calling the adder).  The circuit for the Beauregard adder is given below.
+
+<!--- ![](.\media\beau.svg) --->
+![](../media/beau.png)
+
+Here the gate $\Phi\\\!\operatorname{ADD}$ takes the same form as $\phi\\\!\operatorname{ADD}$ except that in this context the input is classical rather than quantum.  This allows the controlled phases in $\Phi\\\!\operatorname{ADD}$ to be replaced with phase gates that can be compiled together to reduce both the number of qubits and number of gates needed for the adder.
+
 
 ## Quantum Fourier Transform ##
 

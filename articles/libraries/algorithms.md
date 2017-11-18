@@ -52,7 +52,7 @@ The input and output are assumed to be encoded in big endian encoding (lowest bi
 The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
 In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.
 It is known that for $k \ge \log_2(n) + \log_2(1 / \epsilon) + 3$. one can bound $\| \operatorname{QFT} - \operatorname{AQFT} \| < \epsilon$.
-Here $\|\cdot\|$ is the operator norm which in this case is the absolute value of the largest [eigenvalue](xref:microsoft.quantum.concepts.vecmat) of $\operatorname{QFT} - \operatorname{AQFT}$.
+Here $\|\cdot\|$ is the operator norm which in this case is the squareroot of the largest [eigenvalue](xref:microsoft.quantum.concepts.vecmat) of $(\operatorname{QFT} - \operatorname{AQFT})(\operatorname{QFT} - \operatorname{AQFT})^\dagger$.
 <!-- TODO: explain what norms are, perhaps? -->
 
 ## Arithmetic ##

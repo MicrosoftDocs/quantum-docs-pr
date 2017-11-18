@@ -52,7 +52,7 @@ The input and output are assumed to be encoded in big endian encoding (lowest bi
 The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
 In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.
 It is known that for $k \ge \log_2(n) + \log_2(1 / \epsilon) + 3$. one can bound $\\| \operatorname{QFT} - \operatorname{AQFT} \\| < \epsilon$.
-Here $\\|\cdot\\|$ is the operator norm which in this case is the squareroot of the largest [eigenvalue](xref:microsoft.quantum.concepts.vecmat) of $(\operatorname{QFT} - \operatorname{AQFT})(\operatorname{QFT} - \operatorname{AQFT})^\dagger$.
+Here $\\|\cdot\\|$ is the operator norm which in this case is the square root of the largest [eigenvalue](xref:microsoft.quantum.concepts.vecmat) of $(\operatorname{QFT} - \operatorname{AQFT})(\operatorname{QFT} - \operatorname{AQFT})^\dagger$.
 <!-- TODO: explain what norms are, perhaps? -->
 
 ## Arithmetic ##
@@ -103,7 +103,7 @@ This shows that we can add $b$ to $a$ by performing the appropriate phase rotati
 
 The above expansion can be further simplified by noting that for any integer $j$ and real number $x$ $e^{i2\pi(x+j)}=e^{i2\pi x}$.  This is because if you spin $360^{\circ}$ degrees ($2\pi$ radians) in a circle then you end up precisely where you started.  Therefore the only important part of $x$ for $e^{i2\pi x}$ is the fractional part of $x$.  Specifically, if we have a binary expansion of the form $x=y+0.x\_0x\_2\ldots x\_n$ then $e^{i2\pi x}=e^{i2\pi (0.x\_0x\_2\ldots x\_{n-1})}$ and hence
 $$\ket{\phi\_k(a+b)}=\frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi [a/2^k+0.b\_k\ldots b\_1}\ket{1} \right)$$
-This means that if we perform addition by incrementing each of the tensor factors in the expansion of the Fourier transform of $\ket{a}$ then the number of rotations shrinks as $k$ decreases.  We denote the process that describes this Fourier transform, phase addition and then inverse Fourier transform as $\operatorname{QFT}^{-1} \left(\phi\\\!\operatorname{ADD}\right) \operatorname{QFT}$.$. A quantum circuit that uses this simplification to implement the entire process can be as seen below.
+This means that if we perform addition by incrementing each of the tensor factors in the expansion of the Fourier transform of $\ket{a}$ then the number of rotations shrinks as $k$ decreases.  We denote the process that describes this Fourier transform, phase addition and then inverse Fourier transform as $\operatorname{QFT}^{-1} \left(\phi\\\!\operatorname{ADD}\right) \operatorname{QFT}$. A quantum circuit that uses this simplification to implement the entire process can be as seen below.
 
 
 <!--- ![](.\media\draper.svg) --->

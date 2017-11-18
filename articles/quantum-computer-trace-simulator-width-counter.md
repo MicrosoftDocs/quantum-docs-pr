@@ -20,13 +20,13 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Overview
+# Width Counter
 
-The `Width Counter` counts the number of qubits allocate and borrowed by each operation.
- All operations from `Microsoft.Quantum.Primitive` are expressed in terms of single qubit rotations,
+The `Width Counter` counts the number of qubits allocated and borrowed by each operation.
+ All operations from the `Microsoft.Quantum.Primitive` namespace are expressed in terms of single qubit rotations,
 T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit
-Pauli observables. Some of the primitive operations can allocate extra qubits. For example, multiply controlled X gate or controlled T gates. Let us compute the number of extra qubits allocated 
-by the implementation of a multiply controlled X gate:
+Pauli observables. Some of the primitive operations can allocate extra qubits. For example, multiply controlled `X` gates or controlled `T` gates. Let us compute the number of extra qubits allocated 
+by the implementation of a multiply controlled `X` gate:
 
 ```qsharp
 open Microsoft.Quantum.Primitive;
@@ -41,7 +41,7 @@ operation MultiControlledXDriver( numberOfQubits : Int ) : () {
 
 # Using Width Counter within a C# program
 
-Multiply controlled X acting on a total of 5 qubits will allocate 2 ancillary qubits 
+Multiply controlled `X` acting on a total of 5 qubits will allocate 2 ancillary qubits 
 and its input width will be 5. To check that this is the case, we can use the following 
 C# program:
 
@@ -63,8 +63,8 @@ double inputWidth =
         functor: OperationFunctor.Controlled);
 ```
 
-The first part of the program executes MultiControlledXDriver. In the second part we use the method
-`QCTraceSimulator.GetMetric` to get the number of allocated qubits as well as the number of qubits that Controlled X
+The first part of the program executes `MultiControlledXDriver`. In the second part we use the method
+`QCTraceSimulator.GetMetric` to get the number of allocated qubits as well as the number of qubits that Controlled `X`
 received as input. 
 
 Finally, to output all the statistics collected by width counter in CSV format we can 
@@ -72,3 +72,7 @@ use the following:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricCalculatorsNames.widthCounter];
 ```
+
+# See also
+The quantum computer [Trace Simulator
+](quantum-computer-trace-simulator-1.md) overview

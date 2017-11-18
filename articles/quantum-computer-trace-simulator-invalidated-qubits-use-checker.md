@@ -3,7 +3,7 @@
 title: Invalidated qubits use checker | Quantum computer trace simulator | Microsoft Docs 
 description: Overview of quantum computer trace simulator 
 keywords: Don’t add or edit keywords without consulting your SEO champ. 
-author: Vadym 
+author: vadym-kl
 ms.author: vadym@microsoft.com 
 ms.date: 11/12/2017 
 ms.topic: article-type-from-white-list 
@@ -20,10 +20,10 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Overview
+# Invalidated Qubits Use Checker
 
-The `Invalidated Qubits Use Checker` is a part of the [quantum computer trace
-simulator](quantum-computer-trace-simulator-1.md) designed for detecting
+The `Invalidated Qubits Use Checker` is a part of the quantum computer [Trace
+Simulator](quantum-computer-trace-simulator-1.md) designed for detecting
 potential bugs in the code. Consider the following piece of Q# code to
 illustrate the issues detected by the `Invalidated Qubits Use Checker`.
 
@@ -39,14 +39,12 @@ operation UseReleasedQubitTest () : () {
 }
 ```
 
-When `H` is applied to `q[0]` it points to an already released qubit. This can cause undefined behavior. When the `Invalidated Qubits Use Checker` is enabled, the exception `InvalidatedQubitsUseCheckerException` will be thrown if an operation is applied to an already released qubit. 
+When `H` is applied to `q[0]` it points to an already released qubit. This can cause undefined behavior. When the `Invalidated Qubits Use Checker` is enabled, the exception `InvalidatedQubitsUseCheckerException` will be thrown if an operation is applied to an already released qubit. See the API documentation on [InvalidatedQubitsUseCheckerException](Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.InvalidatedQubitsUseCheckerException) for more details.
 
-`[TODO: add reference to Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.InvalidatedQubitsUseCheckerException ]`
+## Using the Invalidated Qubits Use Checker in your C# program
 
-# Using the Invalidated Qubits Use Checker in your C# program
-
-The following is an example of C# driver code for using the quantum computer trace
-simulator with the `Invalidated Qubits Use Checker` enabled: 
+The following is an example of C# driver code for using the quantum computer `Trace
+Simulator` with the `Invalidated Qubits Use Checker` enabled: 
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -73,10 +71,8 @@ namespace Quantum.MyProgram
 The class `QCTraceSimulatorConfiguration` stores the configuration of the quantum
 computer trace simulator and can be provided as an argument for
 the `QCTraceSimulator` constructor. When `useInvalidatedQubitsUseChecker` is set to true
-the `Invalidated Qubits Use Checker` is enabled.
+the `Invalidated Qubits Use Checker` is enabled. See the API documentation on [QCTraceSimulator](Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for more details.
 
-`[TODO: Add reference to
-Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator]`
-
-`[TODO: Add reference to
-Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration]`
+## See also
+The quantum computer [Trace Simulator
+](quantum-computer-trace-simulator-1.md) overview

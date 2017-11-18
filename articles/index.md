@@ -1,6 +1,46 @@
 <table>
 <tr><td><H1> Welcome to the Microsoft Quantum Developer Kit preview *beta*</td><td><img src=media/mobius_strip_preview.png></td></tr>
-</table><br>
+</table></br>
+
+<table>
+<tr><td><H1> Welcome to the Microsoft Quantum Developer Kit preview *beta*</td><td><img src= media/mobius_strip_preview.png></td></tr>
+</table>
+
+<table>
+<tr><td><H1> Welcome to the Microsoft Quantum Developer Kit preview *beta*</td><td>![Quantum](media/mobius_strip_preview.png)</td></tr>
+</table></br>
+
+
+<table>
+<tr><td><H1> Welcome to the Microsoft Quantum Developer Kit preview *beta*</td><td>![Quantum](/media/mobius_strip_preview.png)</td></tr>
+</table></br>
+
+<table>
+<tr><td><H1> Welcome to the Microsoft Quantum Developer Kit preview *beta*</td><td><p><img src= media/mobius_strip_preview.png></p></td></tr>
+</table></br>
+
+<table>
+<tr><td><H1> Welcome to the Microsoft Quantum Developer Kit preview *beta*</td><td><img src=media/mobius_strip_preview.png></td></tr>
+</table></br>
+
+<table>
+<tr><td><H1> Welcome to the Microsoft Quantum Developer Kit preview *beta*</td><td><img src= media/mobius_strip_preview.png></td></tr>
+</table></br>
+
+<table>
+<tr><td><H1> Welcome to the Microsoft Quantum Developer Kit preview *beta*</td><td>![Quantum](media/mobius_strip_preview.png)</td></tr>
+</table></br>
+
+
+<table>
+<tr><td><H1> Welcome to the Microsoft Quantum Developer Kit preview *beta*</td><td>![Quantum](/media/mobius_strip_preview.png)</td></tr>
+</table>
+
+<table>
+<tr><td><H1> Welcome to the Microsoft Quantum Developer Kit preview *beta*</td><td><p><img src= media/mobius_strip_preview.png></p></td></tr>
+</table>
+
+
 Thank you for accepting our invitation to beta test the Microsoft Quantum Developer Kit preview. Your participation will help the Quantum Architectures and Computation (QuArC) team improve the Microsoft quantum development experience. We hope that this our beta testers will become the nucleus of a quantum development community that will develop new algorithms and techniques that will amaze the industry. You're taking the first step into a new paradigm of computing that promises to push computing power up an exponential curve.
 
 The current documentation includes:

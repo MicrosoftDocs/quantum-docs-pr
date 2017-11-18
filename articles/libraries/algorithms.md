@@ -118,7 +118,7 @@ $$
 \ket{b}\rightarrow \ket{b+a \text{ mod }N}=\begin{cases} \ket{b+a},& b+a < N\\\\ \ket{b+a-N},& (b+a)\ge N \end{cases}.
 $$
 
-The Beauregard adder uses the Draper adder, or more specifically $\phi\!\operatorname{ADD}$ to add the value $a$ to $b$ in phase and then uses the same logic to identify whether $a+b <N$ by subtracting $N$ and testing if $a+b-N<0$.  The circuit stores this information in an ancillary qubit and then adds $N$ back the register if $a+b<N$.  It then concludes by uncomputing this ancillary bit (this step is needed to ensure that the ancilla can be de-allocated after calling the adder).  The circuit for the Beauregard adder is given below.
+The Beauregard adder uses the Draper adder, or more specifically $\phi\\\!\operatorname{ADD}$ to add the value $a$ to $b$ in phase and then uses the same logic to identify whether $a+b <N$ by subtracting $N$ and testing if $a+b-N<0$.  The circuit stores this information in an ancillary qubit and then adds $N$ back the register if $a+b<N$.  It then concludes by uncomputing this ancillary bit (this step is needed to ensure that the ancilla can be de-allocated after calling the adder).  The circuit for the Beauregard adder is given below.
 
 <!--- ![](.\media\beau.svg) --->
 ![](../media/beau.png)

@@ -95,14 +95,14 @@ then after some algebra you can see that
 $$
 \operatorname{QFT}\ket{a}=\ket{\phi\_1(a)}\otimes \cdots \otimes \ket{\phi\_n(a)}.
 $$
-Thus we can perform $\ket{a} \mapsto \ket{a+b}$ (assuming $a+b < 2^n$) through the relation
+The path towards performing an adder then becomes clear after observing that the sum of the inputs can be written as
 $$
 \ket{a+b}=\operatorname{QFT}^{-1}\ket{\phi\_1(a+b)}\otimes \cdots \otimes \ket{\phi\_n(a+b)}.
 $$
-This shows that we can add $b$ to $a$ by performing the appropriate phase rotation on each of the qubits in the decomposition controlled on the bits of $b$.  
+The integers $b$ and $a$ can then be added by performing controlled phase rotation on each of the qubits in the decomposition using the bits of $b$ as controls.  
 
-The above expansion can be further simplified by noting that for any integer $j$ and real number $x$ $e^{i2\pi(x+j)}=e^{i2\pi x}$.  This is because if you spin $360^{\circ}$ degrees ($2\pi$ radians) in a circle then you end up precisely where you started.  Therefore the only important part of $x$ for $e^{i2\pi x}$ is the fractional part of $x$.  Specifically, if we have a binary expansion of the form $x=y+0.x\_0x\_2\ldots x\_n$ then $e^{i2\pi x}=e^{i2\pi (0.x\_0x\_2\ldots x\_{n-1})}$ and hence
-$$\ket{\phi\_k(a+b)}=\frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi [a/2^k+0.b\_k\ldots b\_1}\ket{1} \right)$$
+This expansion can be further simplified by noting that for any integer $j$ and real number $x$, $e^{i2\pi(x+j)}=e^{i2\pi x}$.  This is because if you spin $360^{\circ}$ degrees ($2\pi$ radians) in a circle then you end up precisely where you started.  Therefore the only important part of $x$ for $e^{i2\pi x}$ is the fractional part of $x$.  Specifically, if we have a binary expansion of the form $x=y+0.x\_0x\_2\ldots x\_n$ then $e^{i2\pi x}=e^{i2\pi (0.x\_0x\_2\ldots x\_{n-1})}$ and hence
+$$\ket{\phi\_k(a+b)}=\frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi [a/2^k+0.b\_k\ldots b\_1]}\ket{1} \right)$$
 This means that if we perform addition by incrementing each of the tensor factors in the expansion of the Fourier transform of $\ket{a}$ then the number of rotations shrinks as $k$ decreases.  We denote the process that describes this Fourier transform, phase addition and then inverse Fourier transform as $\operatorname{QFT}^{-1} \left(\phi\\\!\operatorname{ADD}\right) \operatorname{QFT}$. A quantum circuit that uses this simplification to implement the entire process can be as seen below.
 
 

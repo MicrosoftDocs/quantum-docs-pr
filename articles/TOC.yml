@@ -116,7 +116,7 @@
     - name: title
       href: quantum-QsharpReference.md
 - name: Glossary
-  href: quantum-Glossary.md
+  href: Glossary.md
 - name: For more information
   href: quantum-ForMoreInfo.md
 

@@ -88,6 +88,35 @@
       href: libraries/testing.md
 - name: Q# language reference
   href: quantum-QsharpReference.md
+  items:
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+- name: Glossary
+  href: quantum-Glossary.md
 - name: For more information
   href: quantum-ForMoreInfo.md
 

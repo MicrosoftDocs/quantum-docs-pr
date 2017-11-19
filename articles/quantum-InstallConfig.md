@@ -49,7 +49,7 @@ Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip` during downl
     - See [Consume NuGet packages in Visual Studio](https://www.visualstudio.com/en-us/docs/package/nuget/consume) for the configuration procedure. On that page, you should follow the instructions under the heading **Windows: Add the feed to your NuGet configuration**. The upper section is not required.
     - In that Windows section, the actions taken are in Visual Studio (which is not specified.)
     - You will need the NuGet URL: https://quarcsw.pkgs.visualstudio.com/_packaging/alpha/nuget/v3/index.json.
-    - _**Important!**_ Ignore step six: "6. If you enabled the nuget.org upstream source, uncheck the nuget.org package source."
+    - _**Important!**_  Ignore step six: "6. If you enabled the nuget.org upstream source, uncheck the nuget.org package source."
     - Ignore the last line of the Windows section (after the image): "Then click here to continue."
 
 ## Validating your setup

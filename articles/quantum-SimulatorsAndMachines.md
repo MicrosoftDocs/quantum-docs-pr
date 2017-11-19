@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Quantum simulators and classical drivers | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+description: Describes how to drive quantum simulators with a classical computing .NET language, typically either C# or Q#.
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
@@ -32,20 +32,20 @@ ms.topic: article-type-from-white-list
 
 ## The quantum developer kit execution model
 
-In [Writing a Quantum Program](http://tbd),
+In [Writing a Quantum Program](quantum-WriteAQuantumProgram.md),
 we executed our quantum algorithm by passing a `QuantumSimulator` object
 to the algorithm class's `Run` method.
 The `QuantumSimulator` class executes the quantum algorithm by
 fully simulating the quantum state vector, which is perfect for running and
 testing `Teleport`.
-See the [Concept Guide](http://tbd) for more on quantum state vectors.
+See the [Concepts Guide](quantum-1-Intro.dm) for more on quantum state vectors.
 
 Other target machines may be used to run a quantum algorithm.
 The machine is responsible for providing implementations of
 quantum primitives for the algorithm.
 This includes primitive operations such as H, CNOT, and Measure,
 as well as qubit management and tracking.
-In some sense, different classes of quantum machines represent different
+Different classes of quantum machines represent different
 execution models for the same quantum algorithm.
 
 Each type of quantum machine may provide different implementations of
@@ -62,7 +62,7 @@ to support other types of simulation and to support execution on
 topological quantum computers.
 Allowing the algorithm to stay constant while varying the underlying
 machine implementation makes it easy to test and debug an algorithm
-in simulation and then run it on real hardware with full confidence
+in simulation and then run it on real hardware with confidence
 that the algorithm hasn't changed.
 
 ### What's included in this release
@@ -75,9 +75,8 @@ Both are defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.
 
 ## Writing a classical driver program
 
-In [Writing a Quantum Program](http://tbd), we wrote a simple C# driver for
-our teleport algorithm.
-As a reminder, we said there that a C# driver has 4 main purposes:
+In [Writing a Quantum Program](quantum-WriteAQuantumProgram.md), we wrote a simple C# driver for
+our teleport algorithm. A C# driver has 4 main purposes:
 
 * Constructing the target machine
 * Computing any arguments required for the quantum algorithm
@@ -89,7 +88,7 @@ Here we'll discuss each step in more detail.
 > [!NOTE]
 > It is usually better to perform pre- and post-processing in the classical
 > driver, rather than in Q# code.
-> In the future when Q# code is running on cold classical classical hardware
+> In the future when Q# code is running on cold classical hardware
 > and controlling the detailed processes of a quantum device,
 > the overhead and the cost of purely classical computing will be much less
 > than that of cold computing.
@@ -109,8 +108,7 @@ Some simulators, including the `QuantumSimulator`, implement the .NET
 
 > [!NOTE]
 > Only one instance of the `QuantumSimulator` class may be used at a time.
-> This simulator is highly optimized to parallelize computations as much as
-> possible, and so it is not safe to allow more than one to be used.
+> This simulator is highly optimized to parallelize computations, making it unsafe to allow more than one.
 
 ### Computing arguments for the algorithm
 

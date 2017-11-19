@@ -3,18 +3,22 @@
 - name: Quantum Computing Concepts
   href: quantum-concepts-1-Intro.md
   items:
-    - name: Software Stack
-      href: quantum-concepts-2-SoftwareStack.md
     - name: Vectors and Matrices
-      href: quantum-concepts-3-VectorsMatrices.md
+      href: quantum-concepts-2-VectorsMatrices.md
+    - name: Advanced Matrix Concepts
+      href: quantum-concepts-3-MatrixAdvanced.md
     - name: Qubit
       href: quantum-concepts-4-Qubit.md
     - name: Multiple qubits
       href: quantum-concepts-5-MultipleQubits.md
     - name: Dirac notation
       href: quantum-concepts-6-DiracNotation.md
+    - name: Pauli Measurements
+      href: quantum-concepts-7-PauliMeasurements.md
     - name: Quantum circuits
-      href: quantum-concepts-7-QuantumCircuits.md
+      href: quantum-concepts-8-QuantumCircuits.md
+    - name: Software Stack
+      href: quantum-concepts-9-SoftwareStack.md
 - name: Installation and configuration
   href: quantum-InstallConfig.md
 - name: Quickstart- your first quantum program
@@ -22,7 +26,7 @@
 - name: Managing quantum machines and drivers
   href: quantum-SimulatorsAndMachines.md
   items:
-        - name: Quantum resource estimator
+        - name: Quantum computer trace simulator
           href: quantum-computer-trace-simulator-1.md
           items:
             - name: Depth counter
@@ -88,6 +92,35 @@
       href: libraries/testing.md
 - name: Q# language reference
   href: quantum-QsharpReference.md
+  items:
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+    - name: title
+      href: quantum-QsharpReference.md
+- name: Glossary
+  href: Glossary.md
 - name: For more information
   href: quantum-ForMoreInfo.md
 

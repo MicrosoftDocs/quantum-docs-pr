@@ -7,7 +7,7 @@ For instance, let $\overline{0} = 000$ be the encoding of the data bit 0, where 
 If we similarly let $\overline{1} = 111$, then we have a simple repetition code that protects against any one bit flip error.
 That is, if any of the three bits are flipped, then we can recover the state of the logical bit by taking a majority vote.
 Though classical error correction is a much richer subject that this particular example (we recommend [Lint's introduction to coding theory](https://www.springer.com/us/book/9783540641339)), the repetition code above already points to a possible problem in protecting quantum information.
-Namely, by the [no-cloning theorem](xref:microsoft.quantum.concepts.dirac#the-no-cloning-theorem), we have no way to take a majority vote in this way.
+Namely, by the [no-cloning theorem](xref:microsoft.quantum.concepts.PauliMeasurements#the-no-cloning-theorem), we have no way to take a majority vote in this way.
 
 Since it is the measurement that is problematic, we can still implement the encoding above.
 It is helpful to do so to see how we can generalize error correction to the quantum case.

@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+title: Write a quantum program | Microsoft Docs 
+description: Learn how to write a quantum program in Q#. Develop the quantum teleporation application in Visual Studio.
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
@@ -146,7 +146,7 @@ namespace Quantum.Teleport
 > An operation may also have __adjoint__, __controlled__, and 
 > __controlled adjoint__ sections.
 > These are used to specify specific variants of appropriate operations.
-> See the [Q# Language Reference](http://url.to.be.determined/) for more
+> See the [Q# Language Reference](quantum-QsharpReference.md) for more
 > information.
 
 Add the following operations to the namespace, after the end of the

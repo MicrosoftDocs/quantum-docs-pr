@@ -25,7 +25,7 @@ uid: microsoft.quantum.concepts.dirac
 # Advanced topics
 ## Dirac Notation
 
-While column vector notation is ubiquitous in linear algebra, it is often cumbersome in quantum computing especially when dealing with multiple qubits.  The two main reasons for this are that when we define $\psi$ to be a vector it is not explicitly clear whether $\psi$ is a row or a column vector.  Thus if $\phi$ and $\psi$ are vectors then it is not clear whether $\phi \psi$ is defined because the shapes of $\phi$ and $\psi$ may be unclear in the context.  Apart from ambiguity about the shapes of vectors expressing even expressing simple vectors using the linear algebraic notation introduced earlier can be very cumbersome. For example, if we wish to describe an $n$-qubit state where each qubit takes the value $0$ then we would formally express the state as 
+While column vector notation is ubiquitous in linear algebra, it is often cumbersome in quantum computing especially when dealing with multiple qubits.  The two main reasons for this are that when we define $\psi$ to be a vector it is not explicitly clear whether $\psi$ is a row or a column vector.  Thus if $\phi$ and $\psi$ are vectors then it is not clear whether $\phi \psi$ is defined because the shapes of $\phi$ and $\psi$ may be unclear in the context.  Apart from ambiguity about the shapes of vectors, expressing even simple vectors using the linear algebraic notation introduced earlier can be very cumbersome. For example, if we wish to describe an $n$-qubit state where each qubit takes the value $0$ then we would formally express the state as 
 
 $$\begin{bmatrix}1 \\\\  0 \end{bmatrix}\otimes \cdots \otimes\begin{bmatrix}1 \\\\  0 \end{bmatrix}. $$  
 
@@ -74,10 +74,10 @@ $$
 \begin{bmatrix} 1 \\\\  0 \\\\  0 \\\\  0 \end{bmatrix}= \begin{bmatrix} 1 \\\\  0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix} = |0\rangle \otimes |0\rangle= |0\rangle |0\rangle.
 $$
 
- Similarly,  the state $|{p}\rangle$ for integer $p$ represents a quantum state that encodes in a binary representation the integer $p$.  For example, if we wished to express the number $3$ using an unsigned binary encoding we could equally express it as
+ Similarly,  the state $|{p}\rangle$ for integer $p$ represents a quantum state that encodes in a binary representation the integer $p$.  For example, if we wished to express the number $5$ using an unsigned binary encoding we could equally express it as
 
 $$
-|{1}\rangle|{0}\rangle|{1}\rangle = |{101}\rangle = |{3}\rangle.
+|{1}\rangle|{0}\rangle|{1}\rangle = |{101}\rangle = |{5}\rangle.
 $$
 
 Within this notation $|{0}\rangle$ need not refer to a single qubit state but rather a qubit register storing a binary encoding of $0$.  The differences between these two notations can is usually clear within the context it is used.  This convention is useful for simplifying the first example which can be written in any of the following ways
@@ -101,7 +101,8 @@ $$(\alpha |\psi\rangle +\beta|\phi\rangle)\otimes (\gamma |\chi\rangle + \delta 
 
 That is to say, you can distribute the tensor product notation in Dirac notation so that taking tensor products between state vectors ends up looking just like ordinary multiplication.
 
-Bra vectors follow a similar convention to ket vectors.  For example the vector $\langle\psi|\langle \phi|$ is equivalent to the state vector $\psi^\dagger \otimes \phi^\dagger=(\psi\otimes \phi)^\dagger$.  For example if the ket vector $|\psi\rangle$ is $\alpha |0\rangle + \beta |1\rangle$ then the bra vector version of the vector is $\langle{\psi}|=|\psi\rangle^\dagger = (\langle 0|\alpha^* +\langle 1 |\beta^*)$.  This 
+Bra vectors follow a similar convention to ket vectors.  For example the vector $\langle\psi|\langle \phi|$ is equivalent to the state vector $\psi^\dagger \otimes \phi^\dagger=(\psi\otimes \phi)^\dagger$. If the ket vector $|\psi\rangle$ is $\alpha |0\rangle + \beta |1\rangle$ then the bra vector version of the vector is $\langle{\psi}|=|\psi\rangle^\dagger = (\langle 0|\alpha^* +\langle 1 |\beta^*)$.
+
 As an example, imagine that we wished to calculate the probability of measuring the state $|\psi\rangle = \frac{3}{5} |1\rangle + \frac{4}{5} |0\rangle$ using a quantum program for measuring states to be either $|+\rangle$ or $|-\rangle$ then the probability that the device would output that the state is $|-\rangle$ is 
 
 $$|\langle - |\psi\rangle|^2= \left|\frac{1}{\sqrt{2}}(\langle 0| - \langle 1|)(\frac{3}{5} |1\rangle + \frac{4}{5} |0\rangle) \right|^2=\left|-\frac{3}{5\sqrt{2}} + \frac{4}{5\sqrt{2}}\right|^2=\frac{1}{50}.$$
@@ -138,121 +139,21 @@ $$
 \mathbb{1} = |0\rangle \langle 0|+|1\rangle \langle 1|= \begin{bmatrix}1&0\\\\ 0&1 \end{bmatrix}.
 $$
 
-For the case where there are two-qubits the projector can be expanded as $|1\rangle \langle 1| \otimes \mathbb{1} = |1\rangle\langle 1 \otimes (|0\rangle \langle 0|+|1\rangle \langle 1|)= |10\rangle\langle 10| + |11\rangle\langle 11|$.  We can then see that this is consistent with the discussion from the discussion about measurement likelihoods for multiqubit states using column-vector notation:
+For the case where there are two-qubits the projector can be expanded as 
+
+$$
+|1\rangle \langle 1| \otimes \mathbb{1} = |1\rangle\langle 1 \otimes (|0\rangle \langle 0|+|1\rangle \langle 1|)= |10\rangle\langle 10| + |11\rangle\langle 11|
+$$
+
+We can then see that this is consistent with the discussion about measurement likelihoods for multiqubit states using column-vector notation:
 
 $$
 P(\text{outcome of measuring first qubit = 1})= \psi^\dagger (e_{10}e_{10}^\dagger + e_{11}e_{11}^\dagger)\psi = |e_{10}^\dagger \psi|^2 + |e_{11}^\dagger \psi|^2,
 $$
 
-which matches our discussion from the multi-qubit measurement section.  The generalization though of this result to the multi-qubit case is slightly more straight forward to express using Dirac notation than column-vector notation, but it is entirely equivalent to the previous treatment.
+which matches the multi-qubit measurement section.  The generalization though of this result to the multi-qubit case is slightly more straight forward to express using Dirac notation than column-vector notation, but it is entirely equivalent to the previous treatment.
 
-  The other such operator that is useful to express in this language is a state operator.  A state operator for a quantum state vector takes the form $\rho = |\psi\rangle \langle \psi|$.  This concept of representing the state as a matrix, rather than a vector, is often convenient because it gives a convenient way of representing probability calculations but also allows one to describe both statistical uncertainty as well as quantum uncertainty within the same formalism.  These general quantum state operators, rather than vectors, are ubiquitous in some areas of quantum computing but are not necessary to understand the basics of the field.  For the interested reader, we recommend reading one of the reference books provided in the further reading section.
+  The other such operator that is useful to express in this language is a state operator.  A state operator for a quantum state vector takes the form $\rho = |\psi\rangle \langle \psi|$.  This concept of representing the state as a matrix, rather than a vector, is often convenient because it gives a convenient way of representing probability calculations but also allows one to describe both statistical uncertainty as well as quantum uncertainty within the same formalism.  These general quantum state operators, rather than vectors, are ubiquitous in some areas of quantum computing but are not necessary to understand the basics of the field.  For the interested reader, we recommend reading one of the reference books provided in the [further reading](quantum-ForMoreInfo.md) section .
 
-  A final point that is worth raising about quantum notation.  While at the onset of this document we mentioned that the quantum state is the fundamental object of quantum computing.  It may then come as a surprise that in Q# there is no notion of a quantum state.  Instead, all states are described only by the circuit used to prepare them.  The previous example is an excellent illustration of this.  Rather than expressing a uniform superposition over every quantum bit string in a register, we can represent the result as $H^{\otimes n} |{0}\rangle$.  This exponentially shorter description of the state not only has the advantage that we can classically reason about it but it also because it concisely gives the operations needed to be propagated through the software stack to implement the algorithm.  For this reason, Q# is designed to emit gate sequences rather than quantum states; however, at a theoretical level the two perspectives are equivalent.
-
-## Pauli Measurements
-
-  In all the previous discussion, we focused on computational basis measurements but there are other common measurements that occur in quantum computing that can be inconvenient from a notational perspective to express in terms of computational basis measurements.  The most common set of these measurements are Pauli-measurements.  In such cases, it is common to discuss measuring a Pauli-operator which in general is an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$ and so forth.  Discussing measurement in terms of Pauli operations is especially common in the subfield of quantum error correction and in Q# we have taken a similar convention and as such we need to explain this alternative view of measurements.
-
-  Before delving into the details of how to think of a Pauli measurement, it is useful to think about what measuring a single qubit inside a quantum does to the quantum state.  Imagine that we have an $n$--qubit quantum state then measuring one qubit immediately rules out half of the $2^n$ possibilities that state could be in.  In other words, the measurement projects the quantum state onto one or two half-spaces.  We can generalize the way we think about measurement to reflect this.
-
-  In order to concisely identify these subspaces, we need a language for describing them.  One way to do this is to describe the two subspaces by specifying them through a matrix that just has two unique eigenvalues, which are taken by convention to be $\pm 1$.  The simplest example of this is 
-
-  $$
-Z= \begin{bmatrix}1&0\\\\ 0&-1\end{bmatrix}
-  $$
-
-The Pauli-$Z$ matrix clearly has two eigenvectors $|0\rangle$ and $|1\rangle$ with eigenvalues $\pm 1$.  Thus if we measure the qubit and obtain $|0\rangle$ then we are in the $+1$ eigenspace (the set of all vectors that are formed of sums of  eigenvectors with only positive or only negative eigenvalues) of the operator and if measure $|1\rangle$ then we are in the $-1$ eigenspace of $Z$.  This process is referred to in the language of Pauli measurements as measuring Pauli-$Z$ and it is entirely equivalent to performing a computational basis measurement.
-
-Of course any $2\times 2$ matrix that is a unitary transformation of $Z$ also satisfies this criteria.  This is to say that we could also consider matrix $A=U^\dagger Z U$, for any unitary matrix $U$, to give a matrix that defines the two outcomes of a measurement in its $\pm 1$ eigenvectors.  The notation of Pauli measurements references this by identifying $X,Y,Z$ measurements as equivalent measurements that one could do to gain information from a qubit.  These measurements are given below for convenience.
-
-$$
-\begin{array}{|c|c|}
-\text{Pauli Measurement} & U\\\\ 
-Z & \mathbb{1}\\\\ 
-X & H\\\\ 
-Y & HS^\dagger\\\\ 
-\end{array}
-$$
-
-That is to say, if you say using this language "measure $Y$" that is equivalent to applying $HS^\dagger$ and then measuring in the computational basis.  Or using this language it is equivalent to applying $HS^\dagger$ to the quantum state vector and then measuring $Z$.  The correct state would then be found by transforming back to the computational basis, which ammounts to applying $SH$ to the quantum state vector.
-
-In Q# we say the outcome, ie the classical information extracted from interacting with the state is $j$ which is in the set $\{0,1\}$ if the result is in the $(-1)^j$ eigenspace of the Pauli-operator measured.
-
-Measurements of multi-qubit Pauli operators are defined similarly.  You can see this from the fact that
-
-$$
-Z\otimes Z = \begin{bmatrix}1 &0 &0&0\\\\  0&-1&0&0\\\\ 0&0&-1&0\\\\ 0&0&0&1\end{bmatrix}.
-$$
-
-Thus the tensor products of two Pauli-$Z$ operators forms a matrix composed of two spaces consisting of $+1$ and $-1$ eigenvalues.  As with the single qubit case, both constitute a half-space meaning that half of the accessible vector space belongs to the $+1$ eigenspace and the remaining half to the $-1$ eigenspace.  In general, it is easy to see from the definition of the tensor product that any tensor product of Pauli-$Z$ operators and the identity also obeys this.  For example,
-
-$$
-Z\otimes\mathbb{1}=\begin{bmatrix} 1&0&0&0\\\\  0&-1&0&0\\\\  0&0&1&0\\\\ 0&0&0&-1\end{bmatrix}.
-$$
-
-As before, any unitary transformation of such matrices also describes two half-spaces labeled by $\pm 1$ eigenvalues.  For example, $X\otimes X = H\otimes H(Z\otimes Z)H\otimes H$  from the identity that $Z=HXH$.  Similar to the one-qubit case, all two qubit Pauli-measurements can be written as either $U^\dagger (Z\otimes \mathbb{1}) U $ for $4\times 4$ unitary matrices $U$.  We enumerate the transformations in the following table where we introduce for convenience the swap gate which swaps qubits $0$ and $1$: $\text{SWAP}=\text{CNOT}_{01}\text{CNOT}_{10}\text{CNOT}_{01}$:
-
-$$
-\begin{array}{|c|c|}
-\text{Pauli Measurement} & U\\\\ 
-Z\otimes \mathbb{1} & \mathbb{1}\otimes \mathbb{1}\\\\ 
-X\otimes \mathbb{1} & H\otimes \mathbb{1}\\\\ 
-Y\otimes \mathbb{1} & HS^\dagger\otimes \mathbb{1}\\\\ 
-\mathbb{1} \otimes Z & \text{SWAP}\\\\ 
-\mathbb{1} \otimes X & (H\otimes \mathbb{1})\text{SWAP}\\\\ 
-\mathbb{1} \otimes Y & (HS^\dagger\otimes \mathbb{1})\text{SWAP}\\\\ 
-\end{array}
-\qquad
-\begin{array}{|c|c|}
-\text{Pauli Measurement} & U\\\\ 
-Z\otimes Z & \mathrm{CNOT}_{10}\\\\ 
-X\otimes Z & \mathrm{CNOT}_{10}(H\otimes \mathbb{1})\\\\ 
-Y\otimes Z & \mathrm{CNOT}_{10}(HS^\dagger\otimes \mathbb{1})\\\\ 
-Z\otimes X & \mathrm{CNOT}_{10}(\mathbb{1}\otimes H)\\\\ 
-X\otimes X & \mathrm{CNOT}_{10}(H\otimes H)\\\\ 
-Y\otimes X & \mathrm{CNOT}_{10}(HS^\dagger\otimes H)\\\\ 
-\end{array}
-$$
-
-
-$$
-\begin{array}{|c|c|}
-\text{Pauli Measurement} & U\\\\ 
-Z\otimes Y & \mathrm{CNOT}_{10}(\mathbb{1} \otimes HS^\dagger)\\\\ 
-X\otimes Y & \mathrm{CNOT}_{10}(H\otimes HS^\dagger)\\\\ 
-Y\otimes Y & \mathrm{CNOT}_{10}(HS^\dagger\otimes HS^\dagger)\\\\ 
-\end{array}
-$$
-
-Here the gate $\mathrm{CNOT}_{10}$ appears for the following reason.  Each Pauli measurement that does not include the $\mathbb{1}$ matrix is equivalent up to a unitary to $Z\otimes Z$ by the above reasoning.  The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector and the controlled-not operations that appear in this list serve to compute this parity and store it in the first bit.  Then once the first bit is measured, we can recover the identity of the resultant half-space which is equivalent to measuring the Pauli operator.
-
-One additional note, while it may be tempting to assume that measuring $Z\otimes Z$ is the same as measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$ this assumption would be false.  The reason why is that measuring $Z\otimes Z$ projects the quantum state into either the $+1$ or $-1$ eigenstate of these operators.  Measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$ projects the quantum state vector first onto a half space of $Z\otimes \mathbb{1}$ and then onto a half space of $\mathbb{1} \otimes Z$.  As there are four computational basis vectors, performing both measurements reduces the state to a quarter-space and hence reduces it to a single computational basis vector.
-
-Another way of looking at measuring tensor products of Paulis such as $X\otimes X$ or $Z\otimes Z$ is that these measurements let you look at information stored in the correlations between the two qubits.  Measuring $X\otimes \mathbb{1}$ lets you look at information that is locally stored in the first qubit.  While both types of measurements are equally valuable in quantum computing, the former illuminates the power of quantum computing better because it reveals that in quantum computing often the information you wish to learn is not stored in any single qubit but rather it is stored non-locally in all the qubits at once and only by looking at it through a joint measurement with $Z\otimes Z$ does this information become manifest.
-
-Arbitrary Pauli operators such as $X\otimes Y \otimes Z \otimes \mathbb{1}$ can also be measured.  All such tensor products of Pauli operators have only two eigenvalues $\pm 1$ and both eigenspaces constitute half-spaces of the entire vector space.  Thus they coincide with the requirements stated above.  
-
-In Q#, such measurements return $j$ if the measurement yields a result in the eigenspace of sign $(-1)^j$.  Having this as a built in feature in Q# is helpful because measuring such operators requires long chains of controlled-not gates and basis transformations to describe the diagonalizing $U$ gate needed to express the operation as a tensor product of $Z$ and $\mathbb{1}$.  By simply being able to specify that you wish to do one of these pre-defined measurements, you don't need to worry about how to transform your basis such that a computational basis measurement provides the necessary information.  Q# handles all the necessary basis transformations for you automatically.
-
-## The No Cloning Theorem
-Quantum information is powerful.  It enables us to do amazing things such as factor numbers exponentially faster than the best known classical algorithms, or simulate correlated electron systems that require exponential cost to simulate accurately.  However, there are limitations to the power of quantum computing.  One such limitation is given by the No-Cloning Theorem.
-
-The No-Cloning Theorem is aptly named.  It disallows cloning of generic quantum states by a quantum computer.  The proof of the theorem is remarkably straight forward.  While a full proof of the no-cloning theorem is a little too technical for our discussion here, the proof of the theorem in the case where the quantum computer in question has no additional ancilla bits to use to potentially aid the cloning process.  For such a quantum computer, the cloning operation must be a unitary matrix because all legal quantum operations are measurement and measurement would corrupt the quantum states.  This unitary matrix must have the property that
-
-$$
-U|\psi\rangle|0\rangle=|\psi\rangle|\psi\rangle,
-$$
-
-for any state $|\psi\rangle$.  The linearity property of matrix multiplication then implies that that for any quantum second state $|\phi\rangle$
-
-$$
-U\left[\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right]=\frac{1}{\sqrt{2}}\left(|\phi\rangle|\phi\rangle+|\psi\rangle|\psi\rangle\right)\ne \left(\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right)\otimes\left(\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right).
-$$
-
-This provides the fundamental intuition behind the No-Cloning-Theorem, that any device that copies an unknown quantum state must induce errors on at least some of the states it copies.  While the key assumption that the cloner acts linearly on the input state can be violated through the addition of ancilla and measurement of the ancilla qubits, such interactions also leak information about the system through the measurement statistics and prevent exact cloning in such cases as well.  For a more complete proof of the No-Cloning-Theorem please see the reference texts recommended at the end of the documentation.
-
-The No-Cloning Theorem is important for qualitative understanding of quantum computing because if you could clone quantum states inexpensively then you would be granted with a near-magical ability to learn from quantum states.  Indeed, you could violate Heisenberg's vaunted uncertainty principle with this.  Alternatively, you could use an optimal cloner to take a single sample from a complex quantum distribution and learn everything you could possibly learn about that distribution from just one sample.  This would be like you flipping a coin and observing heads and then upon telling a friend about the result having them respond "Ah the distribution of that coin must be Bernoulli with $p=0.512643\ldots$!"  Such a statement would be non-sensical because one bit of information (the heads outcome) simply cannot provide the many bits of information needed to encode the distribution without substantial prior information.  Similarly, without prior information we cannot perfectly clone a quantum state just as we cannot prepare an ensemble of such coins without knowing $p$.
-
-Information is not free in quantum computing.  Each qubit measured gives a bit of information, and the No-Cloning theorem shows that there is no backdoor that can be exploited to get around the fundamental tradeoff between information gained about the system and the disturbance invoked upon it.
+  A final point that is worth raising about quantum notation.  While at the onset of this document we mentioned that the quantum state is the fundamental object of quantum computing.  It may then come as a surprise that in Q# there is no notion of a quantum state.  Instead, all states are described only by the circuit used to prepare them.  The previous example is an excellent illustration of this.  Rather than expressing a uniform superposition over every quantum bit string in a register, we can represent the result as $H^{\otimes n} |{0}\rangle$.  This exponentially shorter description of the state not only has the advantage that we can classically reason about it, but it also because it concisely gives the operations needed to be propagated through the software stack to implement the algorithm.  For this reason, Q# is designed to emit gate sequences rather than quantum states; however, at a theoretical level the two perspectives are equivalent.
 

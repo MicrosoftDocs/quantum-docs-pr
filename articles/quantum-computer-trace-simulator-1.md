@@ -20,15 +20,15 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Trace Simulator
+# Quantum trace simulator
 
-The Microsoft quantum computer `Trace Simulator` executes a quantum program without actually simulating the state of a quantum computer.  For this reason, the trace simulator can execute quantum programs that use thousands of qubits.  It is useful for two main purposes: 
+The Microsoft quantum computer trace simulator executes a quantum program without actually simulating the state of a quantum computer.  For this reason, the trace simulator can execute quantum programs that use thousands of qubits.  It is useful for two main purposes: 
 
 * Debugging classical code that is part of a quantum program. 
 * Estimating the resources required to run a given instance of a quantum program
   on a quantum computer.
 
-The `Trace Simulator` relies on additional information provided by the user when
+The trace simulator relies on additional information provided by the user when
 measurements must be performed. See Section [Providing the probability of
 measurement outcomes](#providing-the-probability-of-measurement-outcomes) for more
 details on this. 
@@ -72,13 +72,16 @@ quantum state, such a simulator will check that the provided probabilities in
 
 The second kind of measurement is used to read out the answer of the quantum
 algorithm where the user usually does not know the probability of such measurement
-outcomes. The quantum computer `Trace Simulator` provides a function `ForceMeasure` in
+outcomes. The quantum computer trace simulator provides a function `ForceMeasure` in
 namespace `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators` to force
-the simulator to take the measurement outcome preferred by the user. See the API documentation on [ForceMeasure](Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.ForceMeasure) for more detail.
+the simulator to take the measurement outcome preferred by the user. See the API documentation on `ForceMeasure` for more information.
 
-## Running your program with the quantum computer Trace Simulator 
+<!-- TODO Link to ref api page [ForceMeasure](Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.ForceMeasure) for more detail.
+--->
 
-The quantum computer `Trace Simulator` may be viewed as just another simulator. The C# driver program for using it is very similar to the one for any other Quantum Simulator: 
+## Running your program with the quantum computer trace simulator 
+
+The quantum computer trace simulator may be viewed as just another target machine. The C# driver program for using it is very similar to the one for any other quantum Simulator: 
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -104,7 +107,7 @@ Note that if there is at least one measurement not annotated using `AssertProb`
 or `ForceMeasure` the simulator will throw `UnconstraintMeasurementException`
 from the `Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime` namespace. See the API documentation on [UnconstraintMeasurementException](Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.UnconstraintMeasurementException) for more details.
 
-In addition to running quantum programs, the `Trace Simulator` comes with five
+In addition to running quantum programs, the trace simulator comes with five
 components for detecting bugs in programs and performing quantum program
 resource estimates: 
 
@@ -119,6 +122,6 @@ Each of these components may be enabled by setting appropriate flags in
 components are provided in the corresponding reference files. See the API documentation on [QCTraceSimulatorConfiguration](Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for specific details.
 
 ## See also
-The quantum computer [Trace Simulator
+The quantum computer [trace simulator
 ](quantum-computer-trace-simulator-1.md) overview
 

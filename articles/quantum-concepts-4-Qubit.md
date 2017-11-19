@@ -23,14 +23,14 @@ uid: microsoft.quantum.concepts.qubit
 ---
 
 # The Qubit
-If bits are the fundamental object in classical computing then qubits (quantum bits) are the fundamental object of quantum computing.   To understand this correspondence, lets look at the simplest example: a single qubit. 
+If bits are the fundamental object in classical computing then qubits (quantum bits) are the fundamental object of quantum computing.  To understand this correspondence, lets look at the simplest example: a single qubit. 
 
 ## Representing a qubit ##
 
 While a bit, or binary digit, can be either $0$ or $1$, a qubit can be either of these or a quantum superposition of $0$ and $1$.
 The state of a single qubit can be described by a two-dimensional column vector of unit norm. This vector, called the quantum state vector, holds all the information needed to describe the one-qubit quantum system just as a single bit holds all of the information needed to describe the state of a binary variable.
 
-Any two-dimensional column vector of real or complex numbers with norm $1$ represents a qubit. Thus $\begin{bmatrix} \alpha \\\\  \beta \end{bmatrix}$ represents a qubit if $\alpha$ and $\beta$ are complex numbers satisfying $|\alpha|^2 + |\beta|^2 = 1$. Some examples of valid quantum state vectors representing qubits include 
+Any two-dimensional column vector of real or complex numbers with norm $1$ represents the quantum state that a qubit could hold. Thus $\begin{bmatrix} \alpha \\\\  \beta \end{bmatrix}$ represents a qubit state if $\alpha$ and $\beta$ are complex numbers satisfying $|\alpha|^2 + |\beta|^2 = 1$. Some examples of valid quantum state vectors representing qubits include 
 
 $$\begin{bmatrix} 1 \\\\  0 \end{bmatrix}, \begin{bmatrix} 0 \\\\  1 \end{bmatrix}, \begin{bmatrix} \frac{1}{\sqrt{2}} \\\\  \frac{1}{\sqrt{2}} \end{bmatrix}, \begin{bmatrix} \frac{1}{\sqrt{2}} \\\\  \frac{-1}{\sqrt{2}} \end{bmatrix}, \text{ and }\begin{bmatrix} \frac{1}{\sqrt{2}} \\\\  \frac{i}{\sqrt{2}} \end{bmatrix}.$$
 
@@ -45,7 +45,8 @@ Now that we know how to represent a qubit, we can gain some intuition for what t
 
 The properties of measurement also mean that the overall sign of the quantum state vector is irrelevant. Negating a vector is equivalent to $\alpha \rightarrow -\alpha$ and $\beta \rightarrow -\beta$.  Because the probability of measuring $0$ and $1$ depends on the magnitude squared of the terms, inserting such signs does not change the probabilities whatsoever.  Such phases are commonly called ``global phases'' and more generally can be of the form $e^{i \phi}$ rather than just $\pm 1$.
 
-A final important property of measurement is that it does not necessarily damage all quantum state vectors.  If we start with a qubit in the state $\begin{bmatrix} 1 \\\\  0 \end{bmatrix}$, which corresponds to the classical state $0$, measuring this state will always yield the outcome $0$ and leave the quantum state unchanged.  In this sense, if we only have classical bits (i.e. qubits that are either $\begin{bmatrix}1 \\\\  0 \end{bmatrix}$ or $\begin{bmatrix}0 \\\\  1 \end{bmatrix}$ then measurement does not damage the system.  This means that we can replicate classical data and manipulate it on a quantum computer just as one could do on a classical computer.  The ability, however, to store information in both states at once is what elevates quantum computing beyond what is possible classically.
+A final important property of measurement is that it does not necessarily damage all quantum state vectors.  If we start with a qubit in the state $\begin{bmatrix} 1 \\\\  0 \end{bmatrix}$, which corresponds to the classical state $0$, measuring this state will always yield the outcome $0$ and leave the quantum state unchanged.  In this sense, if we only have classical bits (i.e. qubits that are either $\begin{bmatrix}1 \\\\  0 \end{bmatrix}$ or $\begin{bmatrix}0 \\\\  1 \end{bmatrix}$ then measurement does not damage the system.  This means that we can replicate classical data and manipulate it on a quantum computer just as one could do on a classical computer.  The ability, however, to store information in both states at once is what elevates quantum computing beyond what is possible classically and further robs quantum computers of the ability to copy quantum data indiscriminately.
+<!--- TODO: need to link in with no-cloning once its moved. --->
 
 ## Visualizing qubits and transformations using the Bloch sphere ##
 
@@ -94,7 +95,7 @@ Here the operations $X$, $Y$ and $Z$ are used especially frequently and are name
 
 As an example of how unitary transformations can be built from these primitives, the three transformations pictured in the Bloch-spheres above correspond to the gate sequence $\begin{bmatrix} 1 \\\\  0 \end{bmatrix} \mapsto HZH \begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}$.  
 
-While the previous constitute the most popular primitive gate for describing operations on the logical level of the stack, it is often convenient to consider less basic operations at the algorithmic level.  Fortunately, Q# also has methods programmed for implementing them which allows high-level algorithms to be implemented without explicitly decomposing everything down to Clifford and $T$-gates.  The simplest such primitive is the single qubit rotation.  There are three rotations that are usually considered: $R_x$, $R_y$ and $R_z$.  For example, to visualize the action of the rotation $R_x(\theta)$ imagine pointing your thumb along the direction of the $x$-axis of the Bloch-sphere and rotating your fingers through an angle of $\theta/2$ radians.  This unexpected factor of $2$ arises from the fact that orthogonal vectors are $180^\circ$ apart when plotted on the Bloch-sphere but are actually $90^\circ$ degrees apart geometrically.   The corresponding unitary matrices are:
+While the previous constitute the most popular primitive gate for describing operations on the logical level of the stack, it is often convenient to consider less basic operations at the algorithmic level.  Fortunately, Q# also has methods programmed for implementing them which allows high-level algorithms to be implemented without explicitly decomposing everything down to Clifford and $T$-gates.  The simplest such primitive is the single qubit rotation.  There are three rotations that are usually considered: $R_x$, $R_y$ and $R_z$.  For example, to visualize the action of the rotation $R_x(\theta)$ imagine pointing your right thumb along the direction of the $x$-axis of the Bloch-sphere and rotating the vector with your hand through an angle of $\theta/2$ radians.  This confusing factor of $2$ arises from the fact that orthogonal vectors are $180^\circ$ apart when plotted on the Bloch-sphere but are actually $90^\circ$ degrees apart geometrically.   The corresponding unitary matrices are:
 
 $$
 R_z(\theta) = \begin{bmatrix} e^{-i\theta/2} & 0\\\\  0& e^{i\theta/2} \end{bmatrix},\qquad R_x(\theta) = H R_z(\theta) H, \qquad R_y(\theta) = SHR_z(\theta)HS^\dagger.

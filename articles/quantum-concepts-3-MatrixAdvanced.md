@@ -67,7 +67,7 @@ $$
 
 In other words, if you transform to the eigenbasis of the matrix $A$ then computing the matrix exponential is equivalent to computing the ordinary exponential of the eigenvalues of the matrix.  As many of the operations in quantum computing involve performing matrix exponentials, this trick of transforming into the eigenbasis of a matrix to simplify performing the operator exponential appears frequently and is the basis behind many quantum algorithms such as Trotter–Suzuki based quantum simulation methods.
 
-Another useful property is if $B$ is both unitary and Hermitian, ie $B^2=\mathbb{1}$, then it can be seen by applying this rule to the above expansion of the operator exponential and grouping the $\mathbb{1}$ and the $B$ terms that for any real valued $x$
+Another useful property is if $B$ is both unitary and Hermitian, ie $B^2=\mathbb{1}$, then it can be seen by applying this rule to the above expansion of the operator exponential and grouping the $\mathbb{1}$ and the $B$ terms that for any real value $x$
 
 $$e^{iBx}=\cos(x)\mathbb{1} + iB\sin(x)$$
 

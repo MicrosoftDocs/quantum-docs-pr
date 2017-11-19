@@ -58,17 +58,17 @@ Multiqubit circuits diagrams follow similar conventions to single qubit circuits
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](media/concepts_4.png)
 
-We can also view $B$ as having on action on a single two-qubit register rather than two one-qubit registers depending on the context in which the circuit is used. 
+We can also view $B$ as having an action on a single two-qubit register rather than two one-qubit registers depending on the context in which the circuit is used. 
 Perhaps the most useful property of such abstract circuit diagrams is that they allow complicated quantum algorithms to be described at a high level without having to compile them down to fundamental gates.  This means that you can get an intuition about the data flow for a large quantum algorithm without needing to understand all the details of how each of the subroutines within the algorithm work.
 
-The other construct that is built into multi-qubit quantum circuit diagrams is control.  The action of a controlled quantum gate, $\Lambda(G)$, can be understood by looking at the following example of a product state input $\Lambda(G) (\alpha |0\rangle + \beta |1\rangle) |\psi\rangle = \alpha |0\rangle |\psi\rangle + \beta |1\rangle G|\psi \rangle $.  That is to say, the controlled gate applies $G$ to the register containing $\psi$ if and only if the control qubit takes the value $1$.  In general, we describe such controlled operations in circuit diagrams as
+The other construct that is built into multi-qubit quantum circuit diagrams is control.  The action of a controlled quantum gate, $\Lambda(G)$, can be understood by looking at the following example of a product state input $\Lambda(G) (\alpha |0\rangle + \beta |1\rangle) |\psi\rangle = \alpha |0\rangle |\psi\rangle + \beta |1\rangle G|\psi \rangle$.  That is to say, the controlled gate applies $G$ to the register containing $\psi$ if and only if the control qubit takes the value $1$.  In general, we describe such controlled operations in circuit diagrams as
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](media/concepts_5.png)
 
 Here the black circle denotes the quantum bit that the gate is controlled on and verticle wire denotes the unitary that is applied when the control qubit takes the value $1$.
-For the special cases where $G=X$ and $G=Z$ we introduce the following notation to describe the controlled gates:
+For the special cases where $G=X$ and $G=Z$ we introduce the following notation to describe the controlled gates (note that Controled-X is the $CNOT$ gate):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -88,13 +88,13 @@ Similarly, the subcircuit
 
 gives a classically controlled gate that is applied conditioned on the classical control bit being $1$.
 
-Quantum Teleportation is perhaps the best quantum algorithm for illustrating all of these components.  Quantum teleportation is a method for moving data within a quantum computer (or perhaps between distant quantum computers in a quantum network) through the use of entanglement and measurement.  Interestingly, it is actually capable of moving a quantum state from one qubit to another without even knowing what that qubit is which is necessary for the protocol to work according to the laws of quantum mechanics.  This circuit is given below and we provide an annotated version of the circuit that illustrates how to read the quantum circuit.
+Quantum Teleportation is perhaps the best quantum algorithm for illustrating all of these components.  Quantum teleportation is a method for moving data within a quantum computer (or perhaps between distant quantum computers in a quantum network) through the use of entanglement and measurement.  Interestingly, it is actually capable of moving a quantum state from one qubit to another, without even knowing what that qubit is which is necessary for the protocol to work according to the laws of quantum mechanics.  This circuit is given below and we provide an annotated version of the circuit that illustrates how to read the quantum circuit.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
 ![](media/concepts_tp2.png)
 
 # Conclusion
 
-We have reviewed, in this brief introduction, how quantum computers can be viewed as a device that stores information as a unit vector in an exponentially large vector space and seen how quantum gates can be used to rotate these states in such a way as to perform a calculation.  We have also discussed useful language for describing quantum operations such as quantum circuits and Dirac notation which allow complex quantum states and subroutines to be quickly understood by a developer.
+We have reviewed, in this brief introduction, how a quantum computer can be viewed as a device that stores information as a unit vector in an exponentially large vector space and seen how quantum gates can be used to rotate these states in such a way as to perform a calculation.  We have also discussed useful language for describing quantum operations such as quantum circuits and Dirac notation which allow complex quantum states and subroutines to be quickly understood by a developer.
 
-While these tools are foundational for any developer of quantum software, they by no means span the depth or breadth of what is known about quantum computer programming and algorithm design.  Since quantum computing remains a rapidly developing field, there is no one resource that has all of the information needed to learn how to best use these tools in order to solve problems.  For this reason we have compiled a list of references that may be of use for the interested reader who wishes to learn more about the art of quantum computer programming.
+While these tools are foundational for any developer of quantum software, they by no means span the depth or breadth of what is known about quantum computer programming and algorithm design.  Since quantum computing remains a rapidly developing field, there is no one resource that has all of the information needed to learn how to best use these tools in order to solve problems.  For this reason we have compiled a list of [references](quantum-ForMoreInfo.md)  that may be of use for the interested reader who wishes to learn more about the art of quantum computer programming.

@@ -78,7 +78,7 @@ M_{21} ~~ M_{22} ~~ \cdots ~~ M_{2n}\\\\
 M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}\\\\
 \end{bmatrix}$$
 
-Note that a vector of dimension $n$ is simply a matrix of size $n \times 1$. Just like with vectors, we can multiply a matrix with a number $c$ to obtain a new matrix where every entry is multiplied with $c$, and we can add two matrices of the same size to produce a new matrix whose entries are the sum of the respective entries of the two matrices. 
+Note that a vector of dimension $n$ is simply a matrix of size $n \times 1$. As with vectors, we can multiply a matrix with a number $c$ to obtain a new matrix where every entry is multiplied with $c$, and we can add two matrices of the same size to produce a new matrix whose entries are the sum of the respective entries of the two matrices. 
 
 ## Matrix multiplication and tensor products
 
@@ -89,19 +89,19 @@ $$
 	M_{11} ~~ M_{12} ~~ \cdots ~~ M_{1n}\\\\
 	M_{21} ~~ M_{22} ~~ \cdots ~~ M_{2n}\\\\
 	\ddots\\\\
-	M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}\\\\
+	M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}
 \end{bmatrix}\times
 \begin{bmatrix}
 N_{11} ~~ N_{12} ~~ \cdots ~~ N_{1p}\\\\
 N_{21} ~~ N_{22} ~~ \cdots ~~ N_{2p}\\\\
 \ddots\\\\
-N_{n1} ~~ N_{n2} ~~ \cdots ~~ N_{np}\\\\
+N_{n1} ~~ N_{n2} ~~ \cdots ~~ N_{np}
 \end{bmatrix} =
 \begin{bmatrix}
 P_{11} ~~ P_{12} ~~ \cdots ~~ P_{1p}\\\\
 P_{21} ~~ P_{22} ~~ \cdots ~~ P_{2p}\\\\
 \ddots\\\\
-P_{m1} ~~ P_{m2} ~~ \cdots ~~ P_{mp}\\\\
+P_{m1} ~~ P_{m2} ~~ \cdots ~~ P_{mp}
 \end{bmatrix}
 $$
 
@@ -113,7 +113,7 @@ $$\mathbb{1}=\begin{bmatrix}
 1 ~~ 0 ~~ \cdots ~~ 0\\\\
 0 ~~ 1 ~~ \cdots ~~ 0\\\\
 ~~ \ddots\\\\
-0 ~~ 0 ~~ \cdots ~~ 1\\\\
+0 ~~ 0 ~~ \cdots ~~ 1
 \end{bmatrix}$$
 
 For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \mathbb{1}$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. 
@@ -131,20 +131,20 @@ $$
 	\begin{bmatrix}
 		M_{11} ~~ \cdots ~~ M_{1n} \\\\
 		\ddots\\\\
-		M_{m1}  ~~ \cdots ~~ M_{mn}\\\\
+		M_{m1}  ~~ \cdots ~~ M_{mn}
 	\end{bmatrix}\times
 	\begin{bmatrix}
 		N_{11}  ~~ \cdots ~~ N_{1q}\\\\
 		\ddots\\\\
-		N_{p1} ~~ \cdots ~~ N_{pq}\\\\
+		N_{p1} ~~ \cdots ~~ N_{pq}
 	\end{bmatrix}
 	=
 	\begin{bmatrix}
-		M_{11} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}~~ \cdots ~~ 
-		M_{1n} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}\\\\
+		M_{11} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}~~ \cdots ~~ 
+		M_{1n} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}\\\\
 		\ddots\\\\
-		M_{m1} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}~~ \cdots ~~ 
-		M_{mn} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}\\\\
+		M_{m1} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}~~ \cdots ~~ 
+		M_{mn} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}
 	\end{bmatrix}
 $$
 

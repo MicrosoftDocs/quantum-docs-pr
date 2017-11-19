@@ -24,9 +24,22 @@ ms.topic: article-type-from-white-list
 # Testing and Debugging #
 
 As with classical development, is is important to be able to diagnose mistakes and errors in quantum programs.
-In this section, we discuss the functions and operations provided by the canon to assist in diagnosing quantum operations implemented in Q#.
+In this section, we discuss the functions and operations provided by the canon to assist in diagnosing quantum operations implemented in Q#, built on top of <xref:microsoft.quantum.primitive.assertprob>.
 Many of these functions and operations rely on the fact that classical simulations of quantum mechanics need not obey the [no cloning theorem](TODO: link), such that we can make unphysical measurements and assertions when using a simulator for our target machine.
 Thus, we can test individual operations on a classical simulator before deploying on hardware.
+
+
+## Asserts on classical values ##
+
+As discussed in <xref:todo>, a function or operation with signature `() -> ()` or `() => ()`, respectively, can be called as a *unit test*.
+Such unit tests are useful in ensuring that functions and operations act as intended in known cases, and that additional features to not break existing functionality.
+The canon provides several *assertions*: functions which `fail` if their inputs don't meet certain conditions.
+For instance, <xref:microsoft.quantum.canon.assertalmostequal> takes inputs `actual : Double` and `expected : Double` will `fail` if `(actual - expected)` is outside the range $[-10^{10}, 10^{-10}]$.
+`AssertAlmostEqual` is used within the canon to ensure that functions such as <xref:microsoft.quantum.canon.realmod> return the correct answer for a variety of representative cases.
+
+More generally, the canon provides a range of functions for asserting different properties of and relations between
+classical values.
+These functions all start with prefix Assert and located in Microsoft.Quantum.Canon namespace.
 
 ## Testing Qubit States ##
 
@@ -79,47 +92,32 @@ Then, using the likelihood function for quantum measurements,
 The <xref:microsoft.quantum.canon.assertqubitstate> implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.canon.complex>.
 This is helpful when the expected state can be computed mathematically.
 
-## Representing Quantum Operations ##
+## Asserting Equality of Quantum Operations ##
 
-We begin by describing how to represent quantum operations mathematically, as this will be helpful in formulating useful assertions
+Thus far, we have been concerned with testing operations which are intended to prepare particular states.
+Often, however, we are interested in how an operation acts for arbitrary inputs rather than for a single fixed input.
+For example, suppose we have implemented an operation `U : ((Double, Qubit[]) => () : Adjoint)` corresponding to a family of unitary operators $U(t)$, and have provided an explicit `adjoint` block instead of using `adjoint auto`.
+We may be interested in asserting that $U^\dagger(t) = U(-t)$, as expected if $t$ represents an evolution time.
 
-##  ##
+Broadly speaking, there are two different strategies that we can follow in making the assertion that two operations `U` and `V` act identically.
+First, we can check that `U(target); (Adjoint V)(target);` preserves each state in a given basis.
+Second, we can check that `U(target); (Adjoint V)(target);` acting on half of an entangled state preserves that entanglement.
+These strategies are implemented by the canon operations <xref:microsoft.quantum.canon.assertoperationsequalinplace> and <xref:microsoft.quantum.canon.assertoperationsequalreferenced>, respectively.
 
-We provide several function that built on top of `Microsoft.Quantum.Primitive.AssertProb`
- to help user test the correctness of the operations they implemented. These include: 
+> [!NOTE]
+> The referenced assertion discussed above works based on the [Choi–Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality), a mathematical framework which relates operations on $n$ qubits to entangled states on $2n$ qubits.
+> In particular, the identity operation on $n$ qubits is represented by $n$ copies of the entangled state $\ket{\beta_{00}} \mathrel{:=} (\ket{00} + \ket{11}) / \sqrt{2}.
+> The operation <xref:microsoft.quantum.canon.preparechoistate> implements this isomorphism, preparing a state that represents a given operation.
 
-* [Checking if two operations are equal](#checking-equality-of-the-operations)
-* [Checking that the qubit in the given state](#checking-that-the-qubit-is-in-the-given-state)
-* [Helpers to iterate over a Cartesian products and powers](#iterating-over-cartesian-products-and-powers)
-* [Asserts on classical values](#asserts-on-classical-values)
+Roughly, these strategies are distinguished by a time–space tradeoff.
+Iterating through each input state takes additional time, while using entanglement as a reference requires storing additional qubits.
+In cases where an operation implements a reversible classical operation, such that we are only interested in its behavior on computational basis states, <xref:microsoft.quantum.canon.assertoperationsequalinplacecompbasis> tests equality on this restricted set of inputs.
 
-## Checking equality of the operations
-There are three functions that assist witch checking the equality of quantum operations:
+> [!TIP]
+> The iteration over input states is handled by the enumeration operations <xref:microsoft.quantum.canon.iteratethroughcartesianproduct> and <xref:microsoft.quantum.iteratethroughcartesianpower>.
+> These operations are useful more generally for applying an operation to each element of the Cartesian product between two or more sets.
 
-* [Microsoft.Quantum.Canon.AssertOperationsEqualReferenced](fixme.md)
-* [Microsoft.Quantum.Canon.AssertOperationsEqualInPlace](fixme.md)
-* [Microsoft.Quantum.Canon.AssertOperationsEqualInPlaceCompBasis](fixme.md)
-
-First two functions ensure that two operations are equal. They differ in the number 
-of calls to operations being tested and number of total qubits needed. The third operation 
-checks equality only on computational basis states and can be particularly useful when 
-used with the reversible simulators. First two operations use only Clifford gates 
-in addition to calls to operations being tested. 
-
-
-## Iterating over Cartesian products and powers
-
-There are two helper operations that help user to exhaustively go through possible options 
-in their tests: 
-
-* [Microsoft.Quantum.Canon.IterateThroughCartesianProduct](fixme.md)
-* [Microsoft.Quantum.Canon.IterateThroughCartesianPower](fixme.md)
-
-The example of use of these operations can be found in the implementation of 
-[Microsoft.Quantum.Canon.AssertOperationsEqualInPlace](fixme.md).
-
-## Asserts on classical values
-
-We also provide a range of functions for asserting different properties of and relations between
-classical values. These functions all start with prefix Assert and located in Microsoft.Quantum.Canon 
-namespace.
+More critically, however, the two approaches test different properties of the operations under examination.
+Since the in-place assertion calls each operation multiple times, once for each input state, any random choices and measurement results might change between calls.
+By contrast, the referenced assertion calls each operation exactly once, such that it checks that the operations are equal *in a single shot*.
+Both of these tests are useful in ensuring the correctness of quantum programs.

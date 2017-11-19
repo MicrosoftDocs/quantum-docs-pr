@@ -12,6 +12,10 @@ Microsoft's Quantum Developer Kit preview provides a complete development and si
 - asdf
 - asdf
 
+## Beta feedback procedure
+Email to qdkfeed@microsoft.com
+
+
 The current documentation includes:
 * **Quantum computing concepts** includes topics such the import of linear algebra in quantum computing, the nature and use of a qubit, how to read a quantum circuit, and much more.
 * **Installation and configuration** describes how to quickly set up your quantum development environment. Your Visual Studio environment will be enhanced with a compiler for the Q# language and templates for Q# projects and files.

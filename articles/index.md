@@ -25,25 +25,17 @@ The Quantum Developer Kit preview provides a complete development and simulation
 > |Local quantum machine simulator| A full state vector simulator optimized for accurate vector simulation and speed.|
 > |Quantum computer trace simulator| The trace simulator does not simulate the quantum environment like the local quantum simulator. It is used to estimate the resources required to execute a quantum program and also allow faster debugging of the non-Q# control code.|
 
-## Beta feedback procedure
-The QuArC team is soliciting your feedback about all parts of the Quantum Developer Kit. We anticipate receiving a lot of input and it will help us manage it if you put one of the following "channels" in the subject of your email.
-- Q# language
-- Local simulator
-- Trace simulator
-- Libraries
-- Documentation 
-Please email the feedback to qdkfeed@microsoft.com
-
-The current documentation includes:
+## Quantum Developer Kit documentation
+The current documentation includes the following topics.
 * [Quantum computing concepts](quantum-concepts-1-Intro.md) includes topics such the relevance of linear algebra in quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
 * [Installation and configuration](quantum-InstallConfig.md) describes how to quickly set up your quantum development environment. Your Visual Studio environment will be enhanced with a compiler for the Q# language and templates for Q# projects and files.
 * [Quickstart- your first quantum program](quantum-WriteAQuantumProgram.md) walks you through how to create the Teleport application in the Visual Studio development environment. You'll learn how to define a Q# operation, call the Q# operation using C#, and how to execute your quantum algorith. 
-* [Quantum development techniques](quantum-devguide-1-Intro.md)
-* [Q# standard libraries](libraries/intro.md)
-* [Q# language reference](quantum-QsharpReference.md)
-* [For more information](quantum-ForMoreInfo.md)
+* [Quantum development techniques](quantum-devguide-1-Intro.md) specifies the core concepts used to create quantum programs in Q#. Topics include file structures, operations and functions, working with qubits, and some advanced topics.
+* [Q# standard libraries](libraries/intro.md) describes the operations and functions that support both the classical language control requirement and the Q# quantum algorithms. Topics include control flow, data structures, error correction, testing, and debugging. 
+* [Q# language reference](quantum-QsharpReference.md) details the Q# language including the type model, expressions, statements, and compiler use.
+* [For more information](quantum-ForMoreInfo.md) contains specially selected references to deep coverage of quantum computing topics.
 * **Quantum trace simulator reference**
-* [Q# library reference](api/overview.md)
+* [Q# library reference](../api/overview.md) contains reference information about library entities by namespace.
 
 
 

@@ -32,7 +32,7 @@ Thus, we can test individual operations on a classical simulator before deployin
 ## Asserts on classical values ##
 
 As discussed in <xref:todo>, a function or operation with signature `() -> ()` or `() => ()`, respectively, can be called as a *unit test*.
-Such unit tests are useful in ensuring that functions and operations act as intended in known cases, and that additional features to not break existing functionality.
+Such unit tests are useful in ensuring that functions and operations act as intended in known cases, and that additional features not break existing functionality.
 The canon provides several *assertions*: functions which `fail` if their inputs don't meet certain conditions.
 For instance, <xref:microsoft.quantum.canon.assertalmostequal> takes inputs `actual : Double` and `expected : Double` will `fail` if `(actual - expected)` is outside the range $[-10^{10}, 10^{-10}]$.
 `AssertAlmostEqual` is used within the canon to ensure that functions such as <xref:microsoft.quantum.canon.realmod> return the correct answer for a variety of representative cases.
@@ -56,8 +56,8 @@ In the case that our target machine is a simulator, however, we can do better, a
 We can use that the classical information used by a simulator to represent the internal state of a qubit is amenable to copying, such that we do not need to actually perform a measurement to test our assertion.
 In particular, this allows us to reason about *incompatible* measurements that would be impossible on actual hardware.
 
-The operation <xref:microsoft.quantum.canon.assertqubit> provides useful a particularly useful shorthand to do so in the case that we wish to test the assertion $\ket{\psi} = \ket{0}$.
-This is common, for instance, when we have uncomputed to return auxillary qubits to $\ket{0}$ before releasing them.
+The operation <xref:microsoft.quantum.canon.assertqubit> provides a particularly useful shorthand to do so in the case that we wish to test the assertion $\ket{\psi} = \ket{0}$.
+This is common, for instance, when we have uncomputed to return ancilla qubits to $\ket{0}$ before releasing them.
 Asserting against $\ket{0}$ is also useful when we wish to assert that two state preparation `P` and `Q` operations both prepare the same state, and when `Q` supports `Adjoint`.
 In particular,
 ```qsharp

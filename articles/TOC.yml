@@ -75,19 +75,6 @@
       href: libraries/error-correction.md
     - name: Applications
       href: libraries/applications.md
-    - name: Quantum resource estimator
-      href: quantum-computer-trace-simulator-1.md
-      items:
-        - name: Depth counter
-          href: quantum-computer-trace-simulator-depth-counter.md
-        - name: Distinct inputs checker
-          href: quantum-computer-trace-simulator-distinct-inputs-checker.md
-        - name: Invalidated qubits use checker
-          href: quantum-computer-trace-simulator-invalidated-qubits-use-checker.md
-        - name: Primitive operations counter
-          href: quantum-computer-trace-simulator-primitive-operations-counter.md
-        - name: Width counter
-          href: quantum-computer-trace-simulator-width-counter.md
     - name: Testing and debugging
       href: libraries/testing.md
 - name: Q# language reference

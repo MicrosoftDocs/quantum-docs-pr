@@ -25,7 +25,7 @@ ms.topic: article-type-from-white-list
 
 As with classical development, is is important to be able to diagnose mistakes and errors in quantum programs.
 In this section, we discuss the functions and operations provided by the canon to assist in diagnosing quantum operations implemented in Q#, built on top of <xref:microsoft.quantum.primitive.assertprob>.
-Many of these functions and operations rely on the fact that classical simulations of quantum mechanics need not obey the [no cloning theorem](TODO: link), such that we can make unphysical measurements and assertions when using a simulator for our target machine.
+Many of these functions and operations rely on the fact that classical simulations of quantum mechanics need not obey the [no cloning theorem](https://arxiv.org/pdf/quant-ph/9607018.pdf), such that we can make unphysical measurements and assertions when using a simulator for our target machine.
 Thus, we can test individual operations on a classical simulator before deploying on hardware.
 
 

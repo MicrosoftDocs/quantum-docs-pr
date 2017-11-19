@@ -28,9 +28,10 @@ But why do we have this exponential growth for quantum state vectors?  Our goal 
 
 ## Representing two qubits
 The main difference between one and two-qubit states is that two-qubit states are four dimensional rather than two-dimensional.  This is because the computational basis for two-qubit states is formed by the tensor products of one-qubit states.  For example, we have
-$$
-00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix},\qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\qquad 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix},\qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}.
-$$
+\begin{align}
+00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} &= \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix},\qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\
+10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} &= \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix},\qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}.
+\end{align}
 
 It is easy to see that more generally the quantum state of $n$ qubits is represented by a unit vector of dimension $2^n$ using this construction.  However, for two qubits the vector
 
@@ -116,15 +117,7 @@ which perfectly matches what our intuition tells us the probability should be.  
 again in accordance with our intuition.
 
 ## Two-qubit Operations
-As in the single-qubit case, any unitary transformation is a valid operation on qubits. In general, a unitary transformation on $n$ qubits is a matrix $U$ of size $2^n \times 2^n$ (so that it acts on vectors of size $2^n$), such that $U^{-1} = U^\dagger$.	=
-	\begin{bmatrix}
-	ae\ af\ be\ bf \\\\
-	ag\ ah\ bg\ bh \\\\
-	ce\ cf\ de\ df \\\\
-	cg\ ch\ dg\ dh
-	\end{bmatrix}.
-
-
+As in the single-qubit case, any unitary transformation is a valid operation on qubits. In general, a unitary transformation on $n$ qubits is a matrix $U$ of size $2^n \times 2^n$ (so that it acts on vectors of size $2^n$), such that $U^{-1} = U^\dagger$.	
 For example, the CNOT (controlled NOT) gate is a commonly used two-qubit gate and is represented by the following unitary matrix:
 
 $$
@@ -144,14 +137,20 @@ $\begin{bmatrix}
 e\ f\\\\ g\ h
 \end{bmatrix}$
 to the first and second qubits, this is equivalent to applying the two-qubit unitary given by their tensor product
-$\begin{bmatrix}
+$$\begin{bmatrix}
 a\ b\\\\ c\ d
 \end{bmatrix}
 \otimes 
 \begin{bmatrix}
 e\ f\\\\ g\ h
-\end{bmatrix}$.
-Thus we can form two-qubit gates by taking the tensor product of single-qubit gates we know. Some examples of two qubit gates include $H \otimes H$, $X \otimes \mathbb{1}$, and $X \otimes Z$.
+\end{bmatrix}=
+	\begin{bmatrix}
+	ae\ af\ be\ bf \\\\
+	ag\ ah\ bg\ bh \\\\
+	ce\ cf\ de\ df \\\\
+	cg\ ch\ dg\ dh
+	\end{bmatrix}.$$
+Thus we can form two-qubit gates by taking the tensor product of single-qubit gates we know. Some examples of two qubit gates include $H \otimes H$, $X \otimes \boldone$, and $X \otimes Z$.
 
 Note that while any two single-qubit gates define a two-qubit gate by taking their tensor product, the converse is not true. Not all two-qubit gates can be written as the tensor product of single-qubit gates.  Such a gate is called an entangling gate. One example of an entangling gate is the CNOT gate.
 
@@ -167,9 +166,10 @@ $$
 
 Quantum gates work in exactly the same way and it can be shown, as mentioned above.  For example, if we wished to apply the $X$ gate to the first qubit and then perform a CNOT between the second and third qubits we would express this transformation as
 
-$$
-(X \otimes \mathrm{CNOT}_{12}\otimes \mathbb{1}\otimes \mathbb{1} \otimes \mathbb{1}) \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\equiv 0011001.
-$$
+\begin{align}
+&(X \otimes \mathrm{CNOT}_{12}\otimes \boldone\otimes \boldone \otimes \boldone) \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\\
+&\qquad\qquad\equiv 0011001.
+\end{align}
 
 Finally, although new gates needed to be added to our gate set to achieve universal quantum computing for two qubit quantum computers, no new gates need to be introduced in the multi-qubit case.  The gates $H$, $T$ and CNOT form a universal gate set on many qubits because any general unitary transformation can be broken into a series of two qubit rotations.  We then can leverage the theory developed for the two-qubit case and use it again here when we have many qubits.
 

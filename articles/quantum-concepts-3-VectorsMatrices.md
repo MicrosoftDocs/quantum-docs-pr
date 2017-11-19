@@ -108,30 +108,29 @@ P_{m1} ~~ P_{m2} ~~ \cdots ~~ P_{mp}\\\\
 $$
 where the entry $P\_{ik} = \sum\_j M\_{ij}N\_{jk}$. For example, the entry $P_{11}$ is the inner product of the first row of $M$ with the first column of $N$. Note that since a vector is simply a special case of a matrix, this definition extends to matrix-vector multiplication. 
 
-All the matrices we consider will either be square matrices, where the number of rows and columns are equal, or vectors, which corresponds to only $1$ column. One special square matrix is the identity matrix, denoted $\mathbb{1}$, which has all its diagonal elements equal to $1$ and the remaining elements equal to $0$:
+All the matrices we consider will either be square matrices, where the number of rows and columns are equal, or vectors, which corresponds to only $1$ column. One special square matrix is the identity matrix, denoted $\boldone$, which has all its diagonal elements equal to $1$ and the remaining elements equal to $0$:
 
-$$\mathbb{1}=\begin{bmatrix}
+$$\boldone=\begin{bmatrix}
 1 ~~ 0 ~~ \cdots ~~ 0\\\\
 0 ~~ 1 ~~ \cdots ~~ 0\\\\
 ~~ \ddots\\\\
 0 ~~ 0 ~~ \cdots ~~ 1\\\\
 \end{bmatrix}.$$
 
-For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \mathbb{1}$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. 
+For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \boldone$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. 
 
-For any matrix $M$, the adjoint or conjugate transpose of $M$, is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. We say a matrix $U$ is unitary if $UU^\dagger = \mathbb{1}$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because 
+For any matrix $M$, the adjoint or conjugate transpose of $M$, is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. We say a matrix $U$ is unitary if $UU^\dagger = \boldone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because 
 
 $$\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle$$.  
 
 For any matrix $M$, the adjoint or conjugate transpose of $M$, is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. 
 The two most important classes of matrices for quantum computing, Hermitian matrices and unitary matrices, transform in particularly nice ways under the adjoint operation.  Indeed, these classes of matrices can even be defined by their properties under the adjoint.  A matrix $M$ is said to be Hermitian if $M=M^\dagger$.
-We say a matrix $U$ is unitary if $UU^\dagger = \boldone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because $\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle$.  
+We say a matrix $U$ is unitary if $UU^\dagger = \boldone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because $$\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle.$$  
 
 
 Finally, the tensor product (or Kronecker product) of two matrices $M$ of size $m\times n$ and $N$ of size $p \times q$ is a larger matrix $P=M\otimes N$ of size $mp \times nq$, and is obtained from $M$ and $N$ as follows:
-
-$$
-	M \otimes N =
+\begin{align}
+	M \otimes N &=
 	\begin{bmatrix}
 		M_{11} ~~ \cdots ~~ M_{1n} \\\\
 		\ddots\\\\
@@ -142,7 +141,8 @@ $$
 		\ddots\\\\
 		N_{p1} ~~ \cdots ~~ N_{pq}\\\\
 	\end{bmatrix}
-	=
+	\\
+	&=
 	\begin{bmatrix}
 		M_{11} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}~~ \cdots ~~ 
 		M_{1n} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}\\\\
@@ -150,7 +150,7 @@ $$
 		M_{m1} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}~~ \cdots ~~ 
 		M_{mn} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq}\\\\ \end{bmatrix}\\\\
 	\end{bmatrix}.
-$$
+	\end{align}
 
 This is better demonstrated using some examples:
 
@@ -209,7 +209,7 @@ $$
 ## Eigenvalues and Eigenvectors
 
 Let $M$ be a square matrix and $v$ be a vector that is not the all zeros vector (i.e., the vector with all entries equal to $0$).
-Then we say $v$ is an eigenvector of  $M$ if $Mv = cv$ for some number $c$. We say $c$ is the eigenvalue corresponding to the eigenvector $v$. In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number. Note that if $v$ is an eigenvector with eigenvalue $c$, then $av$ is also an eigenvector (for any nonzero $a$) with the same eigenvlue. 
+Then we say $v$ is an eigenvector of  $M$ if $Mv = cv$ for some number $c$. We say $c$ is the eigenvalue corresponding to the eigenvector $v$. In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number. Note that if $v$ is an eigenvector with eigenvalue $c$, then $av$ is also an eigenvector (for any nonzero $a$) with the same eigenvalue. 
 
 For example, for the identity matrix, every vector $v$ is an eigenvector with eigenvalue $1$. As another example, consider a diagonal matrix $D$ which only has nonzero entries on the diagonal:
 
@@ -232,7 +232,7 @@ $$M(U^\dagger v) = U^\dagger D U  (U^\dagger v) =U^\dagger D (U  U^\dagger) v = 
 A matrix exponential can also be defined in exact analogy to the exponential function.  The matrix exponential of a matrix $A$ can be expressed as
 
 $$
-e^A=\mathbb{1} + A + \frac{A^2}{2!}+\frac{A^3}{3!}+\cdots.
+e^A=\boldone + A + \frac{A^2}{2!}+\frac{A^3}{3!}+\cdots.
 $$
 This is important to us because quantum mechanical time evolution is described by a unitary matrix of the form $e^{iB}$ for Hermitian matrix $B$.  For this reason, performing matrix exponentials is a fundamental part of quantum computing and as such Q# has intrinsic routines for describing these operations.
 There are many ways in practice to compute a matrix exponential on a classical computer, and in general numerically approximating such an exponential it is fraught with peril.  See [Cleve Moler and Charles Van Loan. "Nineteen dubious ways to compute the exponential of a matrix." SIAM review 20.4 (1978): 801-836] for more information about the challenges involved.  
@@ -246,5 +246,5 @@ $$
 In other words, if you transform to the eigenbasis of the matrix $A$ then computing the matrix exponential is equivalent to computing the ordinary exponential of the eigenvalues of the matrix.  As many of the operations in quantum computing involve performing matrix exponentials, this trick of transforming into the eigenbasis of a matrix to simplify performing the operator exponential appears frequently and is the basis behind many quantum algorithms such as Trotter–Suzuki based quantum simulation methods.
 
 Another useful property is if $B$ is both unitary and Hermitian, ie $B=B^\dagger=B^{-1}$ and hence $B^2=\boldone$, then it can be seen by applying this rule to the above expansion of the operator exponential and grouping the $\boldone$ and the $B$ terms that for any real valued $x$
-$$e^{iBx}=\cos(x)\boldone + iB\sin(x).$$
+$$e^{iBx}=\boldone\cos(x) + iB\sin(x).$$
 This trick is especially useful because it allows us to reason about the actions that matrix exponentials have, even if the dimension of $B$ is exponentially large, for the special case when $B$ is both unitary and Hermitian. 

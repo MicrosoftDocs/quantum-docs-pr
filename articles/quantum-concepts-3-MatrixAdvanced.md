@@ -69,6 +69,6 @@ In other words, if you transform to the eigenbasis of the matrix $A$ then comput
 
 Another useful property is if $B$ is both unitary and Hermitian, ie $B^2=\boldone$, then it can be seen by applying this rule to the above expansion of the operator exponential and grouping the $\boldone$ and the $B$ terms that for any real value $x$
 
-$$e^{iBx}=\cos(x)\boldone + iB\sin(x)$$
+$$e^{iBx}=\boldone\cos(x) + iB\sin(x)$$
 
 This trick is especially useful because it allows us to reason about the actions that matrix exponentials have, even if the dimension of $B$ is exponentially large, for the special case when $B$ is both unitary and Hermitian. 

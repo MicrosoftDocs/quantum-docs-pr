@@ -130,7 +130,7 @@ $$
 If instead we consider measuring the first qubit to be $1$ of a multi-qubit state then we can also describe this process conveniently using projectors and Dirac notation:
 
 $$
-P(\text{outcome of measuring first qubit = 1})= \langle\psi|\left(|1\rangle\langle{1}|\otimes \boldone^{\otimes n-1}\right) |\psi\rangle.
+P(\text{first qubit = 1})= \langle\psi|\left(|1\rangle\langle{1}|\otimes \boldone^{\otimes n-1}\right) |\psi\rangle.
 $$
 
 Here the identity matrix can be conveniently written in Dirac notation as
@@ -142,13 +142,13 @@ $$
 For the case where there are two-qubits the projector can be expanded as 
 
 $$
-|1\rangle \langle 1| \otimes \boldone = |1\rangle\langle 1 \otimes (|0\rangle \langle 0|+|1\rangle \langle 1|)= |10\rangle\langle 10| + |11\rangle\langle 11|
+|1\rangle \langle 1| \otimes \boldone = |1\rangle\langle 1| \otimes (|0\rangle \langle 0|+|1\rangle \langle 1|)= |10\rangle\langle 10| + |11\rangle\langle 11|
 $$
 
 We can then see that this is consistent with the discussion about measurement likelihoods for multiqubit states using column-vector notation:
 
 $$
-P(\text{outcome of measuring first qubit = 1})= \psi^\dagger (e_{10}e_{10}^\dagger + e_{11}e_{11}^\dagger)\psi = |e_{10}^\dagger \psi|^2 + |e_{11}^\dagger \psi|^2,
+P(\text{first qubit = 1})= \psi^\dagger (e_{10}e_{10}^\dagger + e_{11}e_{11}^\dagger)\psi = |e_{10}^\dagger \psi|^2 + |e_{11}^\dagger \psi|^2,
 $$
 
 which matches the multi-qubit measurement section.  The generalization though of this result to the multi-qubit case is slightly more straight forward to express using Dirac notation than column-vector notation, but it is entirely equivalent to the previous treatment.

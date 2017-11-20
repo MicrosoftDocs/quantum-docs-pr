@@ -75,35 +75,23 @@
       href: libraries/applications.md
     - name: Testing and debugging
       href: libraries/testing.md
-- name: Q# language reference
-  href: quantum-QsharpReference.md
+- name: Q# Programming Langyage
+  href: quantum-QR-Intro.md
   items:
-    - name: title
-      href: quantum-QsharpReference.md
-    - name: title
-      href: quantum-QsharpReference.md
-    - name: title
-      href: quantum-QsharpReference.md
-    - name: title
-      href: quantum-QsharpReference.md
-    - name: title
-      href: quantum-QsharpReference.md
-    - name: title
-      href: quantum-QsharpReference.md
-    - name: title
-      href: quantum-QsharpReference.md
-    - name: title
-      href: quantum-QsharpReference.md
-    - name: title
-      href: quantum-QsharpReference.md
-    - name: title
-      href: quantum-QsharpReference.md
-    - name: title
-      href: quantum-QsharpReference.md
-    - name: title
-      href: quantum-QsharpReference.md
-    - name: title
-      href: quantum-QsharpReference.md
+    - name: The Type Model
+      href: quantum-QR-TypeModel.md
+    - name: Expressions
+      href: quantum-QR-Expressions.md
+    - name: Statements
+      href: quantum-QR-Statements.md
+    - name: File Structure
+      href: quantum-QR-FileStructure.md
+    - name: Using the Compiler
+      href: quantum-QR-Using.md
+    - name: The Standard Library
+      href: quantum-QR-StandardLibrary.md
+    - name: Appendices
+      href: quantum-QR-Appendices.md
 - name: Glossary
   href: Glossary.md
 - name: For more information

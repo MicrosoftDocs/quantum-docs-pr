@@ -82,7 +82,7 @@ $$
     U(t) & = \left( 
             e^{-i\hat{H}\_0 t / 2r} e^{-i\hat{H}\_1 t / 2r} \cdots e^{-i\hat{H}\_{d-1} t / 2r} 
              e^{-i\hat{H}\_{d-1} t / 2r}  \cdots e^{-i\hat{H}\_1 t / 2r} e^{-i\hat{H}\_0 t / 2r}
-    \right)^{r} + \mathcal{O}(d^3 \max_j\\|\hat{H}\\_j\|^3 t^3/r^2),
+    \right)^{r} + \mathcal{O}(d^3 \max_j\\|\hat{H}\_j\\|^3 t^3/r^2),
 \end{align}
 $$ 
 using a product of $2rd$ terms. Larger orders will involve even more terms and optimized variants may require highly non-trivial orderings on the exponentials. Other advanced algorithms may also involve the use of ancilla qubits in intermediate steps. Thus we package simulation algorithms as the user-defined type

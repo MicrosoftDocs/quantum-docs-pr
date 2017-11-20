@@ -34,7 +34,7 @@ Thus, we can test individual operations on a classical simulator before deployin
 As discussed in <xref:todo>, a function or operation with signature `() -> ()` or `() => ()`, respectively, can be called as a *unit test*.
 Such unit tests are useful in ensuring that functions and operations act as intended in known cases, and that additional features not break existing functionality.
 The canon provides several *assertions*: functions which `fail` if their inputs don't meet certain conditions.
-For instance, <xref:microsoft.quantum.canon.assertalmostequal> takes inputs `actual : Double` and `expected : Double` will `fail` if `(actual - expected)` is outside the range $[-10^{10}, 10^{-10}]$.
+For instance, <xref:microsoft.quantum.canon.assertalmostequal> takes inputs `actual : Double` and `expected : Double` will `fail` if `(actual - expected)` is outside the range $[-10^{-10}, 10^{-10}]$.
 `AssertAlmostEqual` is used within the canon to ensure that functions such as <xref:microsoft.quantum.canon.realmod> return the correct answer for a variety of representative cases.
 
 More generally, the canon provides a range of functions for asserting different properties of and relations between

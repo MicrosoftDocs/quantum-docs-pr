@@ -170,7 +170,17 @@ Thus we can form two-qubit gates by taking the tensor product of single-qubit ga
 
 Note that while any two single-qubit gates define a two-qubit gate by taking their tensor product, the converse is not true. Not all two-qubit gates can be written as the tensor product of single-qubit gates.  Such a gate is called an entangling gate. One example of an entangling gate is the CNOT gate.
 
-There are infinitely many unitary matrices on two qubits, so we cannot hope to have all possible gates as elementary operations on our quantum computer. Instead, we choose a small set of elementary gates that form a universal gate set. As before, a gate set is universal if any unitary matrix can be written as a product of gates from this set to arbitrary precision.
+The intuition behind a controlled-not gate can be generalized to arbitrary gates.  A controlled gate in general is a gate that acts as identity (ie it has no action) unless a specific qubit is $1$.  We denote a controlled unitary, controlled in this case on the qubit labeled $x$, with a $\Lambda\_x(U)$.  As an example $\Lambda_0(U) e\_{1}\otimes {\psi}=e\_{1}\otimes U{\psi}$ and $\Lambda\_0(U) e\_{0}\otimes {\psi}=e\_{0}\otimes{\psi}$, where $e\_0$ and $e\_1$ are the computational basis vectors for a single qubit corresponding to the values $0$ and $1$.  For example, consider the following controlled-$Z$ gate then we can express this as
+$$
+\Lambda\_0(Z)= \begin{bmatrix}1&0&0&0\\\\0&1&0&0\\\\0&0&1&0\\\\0&0&0&-1 \end{bmatrix}=(\boldone\otimes H)\operatorname{CNOT}(\boldone\otimes H).
+$$
+
+Building controlled unitaries in an efficient manner is a major challenge.  The simplest way to implement this requires forming a database of controlled versions of fundamental gates and replacing every fundamental gate in the original unitary operation with its controlled counterpart.  This is often quite wasteful and clever insight often can be used to just replace a few gates with controlled versions to achieve the same impact.  For this reason, we provide in our framework the ability to perform either the naive method or controlling or allow the user to define a controlled version of the unitary if an optimized hand-tuned version is known.
+
+Gates can also be controlled using classical information.  A classically controlled not-gate, for example, is just an ordinary not-gate but it is only applied if a classical bit is $1$ as opposed to a quantum bit.  In this sense, a classically controlled gate can be thought of as an if statement in the quantum code wherein the gate is applied only in one branch of the code.
+
+
+As in the single-qubit case, a two-qubit gate set is universal if any $4\times 4$ unitary matrix can be approximated by a product of gates from this set to arbitrary precision.
 One example of a universal gate set is the Hadamard gate, the T gate, and the CNOT gate. By taking products of these gates, we can approximate any unitary matrix on two qubits.
 
 ## Many-qubit systems
@@ -186,6 +196,8 @@ Quantum gates work in exactly the same way.  For example, if we wished to apply 
 &(X \otimes \mathrm{CNOT}_{12}\otimes \boldone\otimes \boldone \otimes \boldone) \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\\\\
 &\qquad\qquad\equiv 0011001.
 \end{align}
+
+In many qubit systems, there is often a need to allocate and de-allocate qubits that serve as temporary memory for the quantum computer.  Such qubit a qubit is called an ancilla.  By default we assume the qubit state is initialized to $e_0$ upon allocation.  We further assume that it is returned again to $e_0$ before de-allocation.  This assumption is important because if an ancilla qubit becomes entangled with another qubit register when it becomes de-allocated then the process of de-allocation will damage the ancilla.  For this reason, we always assume that such qubits are reverted to their initial state before being released.
 
 Finally, although new gates needed to be added to our gate set to achieve universal quantum computing for two qubit quantum computers, no new gates need to be introduced in the multi-qubit case.  The gates $H$, $T$ and CNOT form a universal gate set on many qubits because any general unitary transformation can be broken into a series of two qubit rotations.  We then can leverage the theory developed for the two-qubit case and use it again here when we have many qubits.
 

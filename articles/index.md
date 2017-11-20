@@ -1,14 +1,14 @@
 <table>
-<tr><td><H1> Welcome to the Microsoft Quantum Developer Kit internal preview</td><td>![Quantum](media/mobius_strip_preview.png)</td></tr>
+<tr><td><H1> Welcome to the Microsoft Quantum Development Kit internal preview</td><td>![Quantum](media/mobius_strip_preview.png)</td></tr>
 </table>
-Thank you for accepting our invitation to test the Microsoft Quantum Developer Kit preview. Your participation will help the QuArC team improve the Microsoft quantum development experience. We hope that our beta testers will become the nucleus of a community that will develop new algorithms and techniques to extend the reach of quantum computing.
+Thank you helping us test the Microsoft Quantum Development Kit preview. Your participation will help improve Microsoft's quantum development experience.
 
 <!---
 Microsoft's Q# language brings new power and flexibility to the art of quantum computing. Q# and it's supporting compiler, libraries, simulators and Visual Studio development environment comprise a significant step toward a more industrial strength computing environment.
 --->
 
-## Beta feedback pipeline
-The QuArC team is asking for your feedback about all parts of the Quantum Developer Kit. We anticipate receiving a lot of input and it will help us to manage it if you put one of the following "channels" in the subject of your email.
+## Feedback pipeline
+Your feedback about all parts of the Quantum Development Kit is important. Please help us to address feedback quickly by putting one of the following "channels" in the subject of your email.
 - Q# language
 - Debugging and simulation
 - Samples and Documentation
@@ -16,9 +16,9 @@ The QuArC team is asking for your feedback about all parts of the Quantum Develo
 - Setup and Visual Studio integration
 - General ideas and feature requests
  
-Please email the feedback to <qdkfeed@microsoft.com>
+Email the feedback to <qdkfeed@microsoft.com>
 
-## Microsoft Quantum Developer Kit components
+## Microsoft Quantum Development Kit components
 The Quantum Developer Kit preview provides a complete development and simulation environment that contains the following components.
 
 > [!div class="mx-tdBreakAll"]

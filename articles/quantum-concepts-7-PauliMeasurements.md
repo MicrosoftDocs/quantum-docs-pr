@@ -64,27 +64,29 @@ $$
 Z\otimes\boldone=\begin{bmatrix} 1&0&0&0\\\\  0&-1&0&0\\\\  0&0&1&0\\\\ 0&0&0&-1\end{bmatrix}.
 $$
 
-As before, any unitary transformation of such matrices also describes two half-spaces labeled by $\pm 1$ eigenvalues.  For example, $X\otimes X = H\otimes H(Z\otimes Z)H\otimes H$  from the identity that $Z=HXH$.  Similar to the one-qubit case, all two qubit Pauli-measurements can be written as $U^\dagger (Z\otimes \boldone) U$ for $4\times 4$ unitary matrices $U$.  We enumerate the transformations in the following table where we introduce for convenience the swap gate which swaps qubits $0$ and $1$: $\text{SWAP}=\text{CNOT}_{01}\text{CNOT}_{10}\text{CNOT}_{01}$:
+As before, any unitary transformation of such matrices also describes two half-spaces labeled by $\pm 1$ eigenvalues.  For example, $X\otimes X = H\otimes H(Z\otimes Z)H\otimes H$  from the identity that $Z=HXH$.  Similar to the one-qubit case, all two qubit Pauli-measurements can be written as $U^\dagger (Z\otimes \boldone) U$ for $4\times 4$ unitary matrices $U$.  We enumerate the transformations in the following table where we introduce for convenience the swap gate which swaps qubits $0$ and $1$: $\operatorname{SWAP}=\operatorname{CNOT}\_{01}\operatorname{CNOT}\_{10}\operatorname{CNOT}\_{01}$:
 
 $$
 \begin{array}{|c|c|}
 \text{Pauli Measurement} & U\\\\ 
+\hline
 Z\otimes \boldone & \boldone\otimes \boldone\\\\ 
 X\otimes \boldone & H\otimes \boldone\\\\ 
 Y\otimes \boldone & HS^\dagger\otimes \boldone\\\\ 
-\boldone \otimes Z & \text{SWAP}\\\\ 
-\boldone \otimes X & (H\otimes \boldone)\text{SWAP}\\\\ 
-\boldone \otimes Y & (HS^\dagger\otimes \boldone)\text{SWAP}\\\\ 
+\boldone \otimes Z & \operatorname{SWAP}\\\\ 
+\boldone \otimes X & (H\otimes \boldone)\operatorname{SWAP}\\\\ 
+\boldone \otimes Y & (HS^\dagger\otimes \boldone)\operatorname{SWAP}\\\\ 
 \end{array}
 \qquad
 \begin{array}{|c|c|}
 \text{Pauli Measurement} & U\\\\ 
-Z\otimes Z & \mathrm{CNOT}_{10}\\\\ 
-X\otimes Z & \mathrm{CNOT}_{10}(H\otimes \boldone)\\\\ 
-Y\otimes Z & \mathrm{CNOT}_{10}(HS^\dagger\otimes \boldone)\\\\ 
-Z\otimes X & \mathrm{CNOT}_{10}(\boldone\otimes H)\\\\ 
-X\otimes X & \mathrm{CNOT}_{10}(H\otimes H)\\\\ 
-Y\otimes X & \mathrm{CNOT}_{10}(HS^\dagger\otimes H)\\\\ 
+\hline
+Z\otimes Z & \operatorname{CNOT}\_{10}\\\\ 
+X\otimes Z & \operatorname{CNOT}\_{10}(H\otimes \boldone)\\\\ 
+Y\otimes Z & \operatorname{CNOT}\_{10}(HS^\dagger\otimes \boldone)\\\\ 
+Z\otimes X & \operatorname{CNOT}\_{10}(\boldone\otimes H)\\\\ 
+X\otimes X & \operatorname{CNOT}\_{10}(H\otimes H)\\\\ 
+Y\otimes X & \operatorname{CNOT}\_{10}(HS^\dagger\otimes H)\\\\ 
 \end{array}
 $$
 
@@ -92,13 +94,13 @@ $$
 $$
 \begin{array}{|c|c|}
 \text{Pauli Measurement} & U\\\\ 
-Z\otimes Y & \mathrm{CNOT}_{10}(\boldone \otimes HS^\dagger)\\\\ 
-X\otimes Y & \mathrm{CNOT}_{10}(H\otimes HS^\dagger)\\\\ 
-Y\otimes Y & \mathrm{CNOT}_{10}(HS^\dagger\otimes HS^\dagger)\\\\ 
+Z\otimes Y & \operatorname{CNOT}\_{10}(\boldone \otimes HS^\dagger)\\\\ 
+X\otimes Y & \operatorname{CNOT}\_{10}(H\otimes HS^\dagger)\\\\ 
+Y\otimes Y & \operatorname{CNOT}\_{10}(HS^\dagger\otimes HS^\dagger)\\\\ 
 \end{array}
 $$
 
-Here the gate $\mathrm{CNOT}_{10}$ appears for the following reason.  Each Pauli measurement that does not include the $\boldone$ matrix is equivalent up to a unitary to $Z\otimes Z$ by the above reasoning.  The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector and the controlled-not operations that appear in this list serve to compute this parity and store it in the first bit.  Then once the first bit is measured, we can recover the identity of the resultant half-space which is equivalent to measuring the Pauli operator.
+Here the gate $\operatorname{CNOT}\_{10}$ appears for the following reason.  Each Pauli measurement that does not include the $\boldone$ matrix is equivalent up to a unitary to $Z\otimes Z$ by the above reasoning.  The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector and the controlled-not operations that appear in this list serve to compute this parity and store it in the first bit.  Then once the first bit is measured, we can recover the identity of the resultant half-space which is equivalent to measuring the Pauli operator.
 
 One additional note, while it may be tempting to assume that measuring $Z\otimes Z$ is the same as measuring $Z\otimes \boldone$ and then $\boldone \otimes Z$ this assumption would be false.  The reason why is that measuring $Z\otimes Z$ projects the quantum state into either the $+1$ or $-1$ eigenstate of these operators.  Measuring $Z\otimes \boldone$ and then $\boldone \otimes Z$ projects the quantum state vector first onto a half space of $Z\otimes \boldone$ and then onto a half space of $\boldone \otimes Z$.  As there are four computational basis vectors, performing both measurements reduces the state to a quarter-space and hence reduces it to a single computational basis vector.
 

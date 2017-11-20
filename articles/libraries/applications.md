@@ -49,13 +49,13 @@ Moreover, it is assumed that that each part, a Hamiltonian $\hat{H}_j$, is easy 
 > [!TIP]
 > Hamiltonians that decompose into a sum of parts may be described using the [Dynamical Generator Representation](data-structures#dynamical-generator-modeling) library
 
-There exist other major variations of how quantum Hamiltonians may be sprasely described by a classical input. In the case where the parts $\hat{H}_j$ are also proportional to unitaries, this is generalized by a more recent formulation based on the unitary-access-model introduced by [Childs et al.](https://arxiv.org/abs/1202.5822). Here, one assumes that the Hamiltonian instead decomposes into a sum of unitaries 
+There exist other major variations of how quantum Hamiltonians may be sprasely described by a classical input. In the case where the parts $\hat{H}\_j$ are also proportional to unitaries, this is generalized by a more recent formulation based on the unitary-access-model introduced by [Childs et al.](https://arxiv.org/abs/1202.5822). Here, one assumes that the Hamiltonian instead decomposes into a sum of unitaries 
 $$
 \begin{align}
-    \hat{H} & = \sum^{d-1}_{j=0} a_j \hat{U}_j.
+    \hat{H} & = \sum^{d-1}\_{j=0} a\_j \hat{U}\_j.
 \end{align}
 $$
-where the $a_j$ are in general complex coefficients. In the case of $d$-sparse Hamiltonian simulation, one assumes that the Hamiltonian only has $d=\text{polylog}(N)$ non-zero element in every row. Moreover, one assumes the existence of efficient quantum circuits that output the location of these 
+where the $a_j$ are in general complex coefficients. In the case of $d$-sparse Hamiltonian simulation, one assumes that the Hamiltonian only has $d=\mathcal{O}(\text{polylog}(N))$ non-zero element in every row. Moreover, one assumes the existence of efficient quantum circuits that output the location of these 
 non-zero elements, as well as the their value. One may also suppose that Hamiltonians are described as a quantum input, such as as density matrices fed directly into the quantum computer.
 
 #### Simulation Algorithms ####
@@ -65,7 +65,7 @@ A quantum simulation algorithm converts a given classical description of a Hamil
 The [Trotter-Suzuki decomposition](control-flow#time-ordered-composition) is a particularly simple and intuitive algorithm for simulating Hamiltonians that decompose into a sum of Hermitian components. For instance, a first-order integrator of this family approximates
 $$
 \begin{align}
-    U(t) & = \left( e^{-i\hat{H}\_0 t / r} e^{-i\hat{H}\_1 t / r} \cdots e^{-i\hat{H}\_{d-1} t / r} \right)^{r} + \mathcal{O}(d^2 \|\hat{H}\_j\|^2 t^2/r),
+    U(t) & = \left( e^{-i\hat{H}\_0 t / r} e^{-i\hat{H}\_1 t / r} \cdots e^{-i\hat{H}\_{d-1} t / r} \right)^{r} + \mathcal{O}(d^2 \max_j\\|\hat{H}\_j\\|^2 t^2/r),
 \end{align}
 $$
 using a product of $r d$ terms. 
@@ -82,7 +82,7 @@ $$
     U(t) & = \left( 
             e^{-i\hat{H}\_0 t / 2r} e^{-i\hat{H}\_1 t / 2r} \cdots e^{-i\hat{H}\_{d-1} t / 2r} 
              e^{-i\hat{H}\_{d-1} t / 2r}  \cdots e^{-i\hat{H}\_1 t / 2r} e^{-i\hat{H}\_0 t / 2r}
-    \right)^{r} + \mathcal{O}(d^3 \|\hat{H}\_j\|^3 t^3/r^2),
+    \right)^{r} + \mathcal{O}(d^3 \max_j\\|\hat{H}\\_j\|^3 t^3/r^2),
 \end{align}
 $$ 
 using a product of $2rd$ terms. Larger orders will involve even more terms and optimized variants may require highly non-trivial orderings on the exponentials. Other advanced algorithms may also involve the use of ancilla qubits in intermediate steps. Thus we package simulation algorithms as the user-defined type
@@ -109,7 +109,7 @@ TimeDependentTrotterSimulationAlgorithm(trotterStepSize: Double, trotterOrder: I
 > Phase estimation in the Ising model using `SimulationAlgorithm`; please see the [**IsingPhaseEstimation** sample](TODO: link).
 > Adiabatic state preparation in the Ising model using `TimeDependentSimulationAlgorithm`; please see the [**AdiabaticIsing** sample](TODO: link).
 
-#### Adiabatic State Preparation & Phase Estimation####
+#### Adiabatic State Preparation & Phase Estimation ####
 
 One common application of Hamiltonian simulation is adiabatic state preparation. Here, one is provided with two Hamiltonians $\hat{H}\_{\text{start}}$ and $\hat{H}\_{\text{end}}$, and a quantum state $\ket{\psi(0)}$ that is a gound state of the start Hamiltonian $\hat{H}\_{\text{start}}$. Typically, $\hat{H}\_{\text{start}}$ is chosen such that $\ket{\psi(0)}$ is easy to prepare from a computational basis state $\ket{0...0}$. By slowly interpolating between these Hamiltonians in the time-dependent simulation problem, it is possible to end up, with high probability, in a ground state of the final Hamiltonian $\hat{H}\_{\text{end}}$. Though preparing good approximations to Hamiltonian ground states could proceed this manner by calling upon on time-dependent Hamiltonian simulation algorithms as a sub-routine, other conceptually different approaches such as variational eigensolver are possible.
 
@@ -154,11 +154,11 @@ operation AdiabaticStateEnergyEstimate( nQubits : Int,
 > Ising model using a manual implementation of adiabtic state preparation versus using the `AdiabaticEvolution` function; please see the [**AdiabaticIsing** sample](TODO: link).
 > Phase estimation and adiabatic state preparation in the Ising model ; please see the [**IsingPhaseEstimation** sample](TODO: link).
 
-#### Other Samples ####
+#### Simulation of Molecular Hydrogen ####
 
 The modeling of Hamiltonians is one of the major application areas desired for Quantum Computing. We provide a simple example of this based on the experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) using superconducting qubits. The model used for molecular hydrogen ($H_2$) only requires Pauli matrices and takes the form:
 
-        $H = g_{0}\bold{1}+g_1{Z_0}+g_2{Z_1}+g_3{Z_0}{Z_1}+g_4{Y_0}{Y_1}+g_5{X_0}{X_1}$
+        $H = g\_{0}\bold{1}+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$
 
 We represent the target Hamiltonian as an expansion in a set of unitaries which allows the system to find a solution using either Trotter-Suzuki with Phase Estimation or a Linear Combination of Unitaries (LCU) with Amplitude Amplification. For an in-depth treatment of LCU, please refer to Chapter 2 of  [Robin Kohari's thesis](https://uwspace.uwaterloo.ca/bitstream/handle/10012/8625/Kothari_Robin.pdf). A nice overview of the area was presented by [Dominic Berry](http://www.dominicberry.org/presentations/Durban.pdf).
 

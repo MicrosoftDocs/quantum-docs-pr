@@ -186,8 +186,7 @@ For example, `R(PauliZ, PI() / 4, _)` has type `(Qubit => () : Adjoint, Controll
 > In particular, this means that `T` and `R(PauliZ, PI() / 8, _)` differ only by an irrelevant a [global phase](TODO: glossary link).
 > For this reason, $T$ is sometimes known as the $\frac{\pi}{8}$-gate.
 >
-> Note also that rotating around `PauliI` simply applies a global phase of $\phi / 2$.  While such phases are irrelevant, as argued in [the conceptual documents](../quantum-concepts-4-Qubit.md), such phases are not irrelevant for controlled `PauliI` gates.  
-> This means that including `PauliI` rotations can aid the automatic generation of controlled unitaries.
+> Note also that rotating around `PauliI` simply applies a global phase of $\phi / 2$.  While such phases are irrelevant, as argued in [the conceptual documents](../quantum-concepts-4-Qubit.md), such phases are not irrelevant for controlled `PauliI` rotations.
 
 Within quantum algorithms, it is often useful to express rotations as dyadic fractions, such that $\phi = \pi k / 2^n$ for some $k \in \mathbb{Z}$ and $n \in \mathbb{N}$.
 The <xref:microsoft.quantum.primitive.rfrac> operation implements a rotation around a specified Pauli axis using this convention.

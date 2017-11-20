@@ -1856,7 +1856,7 @@ operation-type    = “(“ tuple-type “=>” tuple-type [ : variant { "," var
 function-type     = “(“ tuple-type “->” tuple-type “)”
 user-defined-type = symbol
 ```
-
+<!---
 ## Anticipated Future Features
 
 Some or all of the following features may be added to Qb in the future:
@@ -1893,3 +1893,4 @@ Some or all of the following features may be added to Qb in the future:
     arbitrary order.
     In some cases this may allow optimizations that are difficult to 
     detect programmatically.
+--->

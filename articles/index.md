@@ -59,9 +59,14 @@ The current documentation includes the following topics.
 * [Q# library reference](../../api/overview.md)
 * [Q# library reference](api/microsoft.quantum.primitive.h.yml) 
 --->
-* [Q# library reference](/api/microsoft.quantum.primitive.h.yml)
+* [Q# library reference](/api/microsoft.quantum.primitive.h)
 <!--- * [Q# library reference](../api/microsoft.quantum.primitive.h.yml)
 * [Q# library reference](../../api/microsoft.quantum.primitive.h.yml) --->
 
+<xref: microsoft.quantum.primitive.h>
+[Test](xref:uid)
+
+<xref:microsoft.quantum.primitive.h>
+[Test](xref: uid)
 
 

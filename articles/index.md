@@ -8,7 +8,7 @@ Microsoft's Q# language brings new power and flexibility to the art of quantum c
 --->
 
 ## Feedback pipeline
-Your feedback about all parts of the Quantum Developer Kit is important. Please help us to address feedback quickly by putting one of the following "channels" in the subject of your email.
+Your feedback about all parts of the Quantum Development Kit is important. Please help us to address feedback quickly by putting one of the following "channels" in the subject of your email.
 - Q# language
 - Local simulator
 - Quantum Resource Estimator

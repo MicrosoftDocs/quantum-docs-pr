@@ -23,6 +23,7 @@ ms.topic: article-type-from-white-list
 
 
 # For more information
+This section contains selected references to deep coverage of quantum computing topics.
 
 *Basic quantum computing*
 + Nielsen, M. A. & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Quantum

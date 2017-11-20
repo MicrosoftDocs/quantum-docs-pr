@@ -57,10 +57,10 @@ The current documentation includes the following topics.
 * [Q# library reference](/api/overview.md)
 * [Q# library reference](../api/overview.md)
 * [Q# library reference](../../api/overview.md)
-* [Q# library reference](api/microsoft.quantum.primitive)
-* [Q# library reference](/api/microsoft.quantum.primitive)
-* [Q# library reference](../api/microsoft.quantum.primitive)
-* [Q# library reference](../../api/microsoft.quantum.primitive)
+* [Q# library reference](api/microsoft.quantum.primitive.h.yml)
+* [Q# library reference](/api/microsoft.quantum.primitive.h.yml)
+* [Q# library reference](../api/microsoft.quantum.primitive.h.yml)
+* [Q# library reference](../../api/microsoft.quantum.primitive.h.yml)
 
 
 

@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-<H1>The Qb Programming Language</H1>
+<H1>The Q# Programming Language</H1>
 
 <!-- TOC -->
 
@@ -138,22 +138,22 @@ language may be very constrained.
 These constraints may allow better optimization or faster execution 
 of the quantum algorithm.
 
-Qb (Q-flat) is a domain-specific programming language used for 
+Q# (Q-sharp) is a domain-specific programming language used for 
 expressing quantum algorithms.
 It is to be used for writing sub-programs that execute on an adjunct 
 quantum processor, under the control of a classical host program and computer.
 
-Qb provides a small set of primitive types, along with two ways 
+Q# provides a small set of primitive types, along with two ways 
 (arrays and tuples) for creating new, structured types. 
 It supports a basic procedural model for writing programs, 
 with loops and if/then statements. 
-The top-level constructs in Qb are user defined types, operations, 
+The top-level constructs in Q# are user defined types, operations, 
 and functions.
 
 ## Execution Model
 
-The basic model for Qb execution includes a classical driver application,
-the Qb code itself, and either a quantum simulator or
+The basic model for Q# execution includes a classical driver application,
+the Q# code itself, and either a quantum simulator or
 classical logic that controls the quantum processor
 and the quantum processor itself.
 In this release we are only supporting a (classical) quantum simulator.
@@ -161,11 +161,12 @@ In this release we are only supporting a (classical) quantum simulator.
 The classical driver sets up the connection to the simulator by
 instantiating an object of the appropriate "quantum machine" type.
 It then invokes a method on the quantum machine object that executes the 
-top-level Qb operation, with the requested parameters.
+top-level Q# operation, with the requested parameters.
 
-The Qb compiler translates the Qb code into C#; this C# code is used
+
+The Q# compiler translates the Q# code into C#; this C# code is used
 by the quantum machine object to execute the algorithm expressed in the
-Qb code.
+Q# code.
 The standard library operations are implemented by the
 quantum machine object by classically updating a representation of the
 simulated quantum state.
@@ -175,18 +176,18 @@ returns the results to the classical driver.
 Note that the same classical driver should work for both execution and 
 simulation modes, except that the type of quantum machine that is
 instantiated changes.
-Similarly, the same Qb code should work for both execution and simulation, 
+Similarly, the same Q# code should work for both execution and simulation, 
 although there are additional compilation and optimization steps required
 for execution.
 
 # The Type Model
 
-This section lays out the Qb type model and describes the syntax for 
+This section lays out the Q# type model and describes the syntax for 
 specifying and working with types.
 
 ## Primitive Types
 
-Qb provides several primitive types, out of which all other types 
+Q# provides several primitive types, out of which all other types 
 are constructed:
 - The `Int` type represents a 64- bit signed (two's complement) integer. 
 - The `Double` type represents a double-precision floating-point number. 
@@ -196,7 +197,7 @@ are constructed:
    other than passing them to another operation, is to test for identity 
    (equality).
    Ultimately, actions on `Qubit's are implemented by calling operations
-   in the Qb standard library.
+   in the Q# standard library.
 - The `Pauli` type represents an element of the single-qubit Pauli group. 
    This type is used to denote the base operation for rotations and 
    to specify the basis of a measurement. 
@@ -210,27 +211,27 @@ are constructed:
 - The `Range` type represents a sequence of integers. 
 
 Note that this implies that `true`, `false`, `PauliI`, `PauliX`, 
-`PauliY`, `PauliZ`, `One`, and `Zero` are all reserved symbols in Qb.
+`PauliY`, `PauliZ`, `One`, and `Zero` are all reserved symbols in Q#.
 
 ## Array Types
 
-Given any valid Qb type `'T`, there is a type that represents an 
+Given any valid Q# type `'T`, there is a type that represents an 
 array of values of type `'T`. 
 This array type is represented as `'T[]`; 
 for example, `Qubit[]` or `Int[][]`.
 
 In the second example, note that this represents a potentially 
 jagged array of arrays, and not a rectangular two-dimensional array. 
-Qb does not include support for rectangular multi-dimensional arrays.
+Q# does not include support for rectangular multi-dimensional arrays.
 
-Array types in Qb are considered to be different types if the element types
+Array types in Q# are considered to be different types if the element types
 are different.
 An array of a user-defined type is not a sub-type of an array of the
 base type of the user-defined type.
 
 ## Tuple Types
 
-Given any valid Qb types `'T1`, `'T2`, `'T3`, etc., there is a type that 
+Given any valid Q# types `'T1`, `'T2`, `'T3`, etc., there is a type that 
 represents a tuple of values of types `'T1`, `'T2`, `'T3`, etc., 
 respectively. 
 This tuple type is represented as `('T1, 'T2, 'T3, …)`. 
@@ -241,14 +242,14 @@ It is possible to create arrays of tuples, tuples of arrays,
 tuples of sub-tuples, etc.
 
 Tuple instances are immutable.
-Qb does not provide a mechanism to change the contents of a tuple 
+Q# does not provide a mechanism to change the contents of a tuple 
 once created.
 
 ## Singleton Tuple Equivalence
 
 It is possible to create a singleton (single-element) tuple, `('T1)`, 
 such as `(5)` or `([1;2;3])`.
-However, Qb treats a singleton tuple as completely equivalent 
+However, Q# treats a singleton tuple as completely equivalent 
 to a value of the enclosed type.
 That is, there is no difference between `5` and `(5)`, or between 
 `5` and `(((5)))`, or between `(5, (6))` and `(5, 6)`.
@@ -261,7 +262,7 @@ We refer to this property as _singleton tuple equivalence_.
 
 ## User-Defined Types
 
-A Qb file may define a new named type based on a standard type. 
+A Q# file may define a new named type based on a standard type. 
 Any legal type may be used as the base for a user-defined type.
 
 User-defined types may be used anywhere any other type may be used. 
@@ -308,10 +309,10 @@ a value of one may not be used where a value of the other is expected.
 
 ## Operation and Function Types
 
-A Qb _operation_ is a quantum subroutine.
+A Q# _operation_ is a quantum subroutine.
 That is, it is a callable routine that contains quantum operations.
 
-A Qb _function_ is a classical subroutine used within 
+A Q# _function_ is a classical subroutine used within 
 a quantum algorithm.
 It may contain classical code but no quantum operations.
 Functions may not be passed qubits or operations as arguments, 
@@ -319,7 +320,7 @@ nor may they allocate or borrow qubits.
 
 Together, operations and functions are known as _callables_.
 
-All Qb callables are considered to take a single value as input 
+All Q# callables are considered to take a single value as input 
 and return a single value as output. 
 Both the input and output values may be tuples.
 Callables that have no result return the empty tuple, `()`;
@@ -355,7 +356,7 @@ Callable signatures may contain type parameters.
 Type parameters are indicated by a symbol prefixed by a single quote;
 for example, `'A` is a legal type parameter.
 Type-parameterized functions and operations are similar to generic
-functions in many programming languages, but Qb does not provide
+functions in many programming languages, but Q# does not provide
 a full generic type/function capability.
 
 A type parameter may appear more than once in a single signature.
@@ -378,7 +379,7 @@ For instance, given an operation with the signature
 it might be useful to pass a first parameter with signature
 `(()=>Foo)`, or a second parameter with signature `(Foo=>())`.
 
-Qb does not provide a mechanism for constraining the possible types
+Q# does not provide a mechanism for constraining the possible types
 that might be substituted for a type parameter.
 Thus, type parameters are primarily useful for functions on arrays and 
 for composing callables.
@@ -390,11 +391,11 @@ an operation with fewer functors but the same signature is expected.
 For instance, an operation of type `(Qubit=>():Adjoint)` may be used 
 anywhere an operation of type `(Qubit=>())` is expected.
 
-Qb is contravariant with respect to callable return types:
+Q# is contravariant with respect to callable return types:
 a callable that returns a type `'A` is compatible with a callable with 
 the same input type and a result type that `'A` is compatible with.
 
-Qb is covariant with respect to input types:
+Q# is covariant with respect to input types:
 a callable that takes a type `'A` as input is compatible with a callable 
 with the same result type and an input type that is compatible with `'A`.
 
@@ -417,7 +418,7 @@ the following are true:
 
 ### Functors
 
-A functor in Qb is a factory that defines a new operation 
+A functor in Q# is a factory that defines a new operation 
 from another operation.
 Functors have access to the implementation of the base operation when 
 defining the implementation of the new operation. 
@@ -433,7 +434,7 @@ generate a new operation, and applies that new operation to `q1`.
 
 Similarly, `(Controlled X)(controls, target)` 
 
-The two standard functors in Qb are `Adjoint` and `Controlled`.
+The two standard functors in Q# are `Adjoint` and `Controlled`.
 
 #### Adjoint
 
@@ -464,7 +465,7 @@ If the control qubits are in superposition, then the base operation is
 applied coherently to the appropriate part of the superposition.
 Thus, controlled operations are often used to generate entanglement.
 
-In Qb, controlled versions always take an array of control qubits, 
+In Q#, controlled versions always take an array of control qubits, 
 and the specified state is always for all of the control qubits to be
 in the computational (`PauliZ`) `One` state.
 Controlling based on other states may be achieved by applying the 
@@ -531,11 +532,11 @@ then `count` is an integer expression.
 Numeric expressions are expressions of type `Int` or `Double`.
 That is, they are either integer or floating-point numbers.
 
-`Int` literals in Qb are identical to integer literals in C#, 
+`Int` literals in Q# are identical to integer literals in C#, 
 except that no trailing "l" or "L" is required (or allowed).
 Hexadecimal integers are supported with a "0x" prefix.
 
-Double literals in Qb are identical to double literals in C#, 
+Double literals in Q# are identical to double literals in C#, 
 except that no trailing "d" or "D" is required (or allowed).
 
 Given an array expression of any element type, an `Int` expression 
@@ -671,7 +672,7 @@ Given a callable expression, a new callable may be created by providing a
 subset of the arguments to the callable.
 This is called _partial application_.
 
-In Qb, a partially applied callable is expressed by writing a normal
+In Q#, a partially applied callable is expressed by writing a normal
 invocation expression, but using an underscore, `_`, for the unspecified 
 arguments. 
 The resulting callable has the same result type as the base callable,
@@ -687,7 +688,7 @@ For example, if `Op` has type `((Int, Qubit, Double)=>():Adjoint)`:
 
 ### Recursion
 
-Qb callables are allowed to be directly or indirectly recursive.
+Q# callables are allowed to be directly or indirectly recursive.
 That is, an operation or function may call itself, or it may call 
 another callable that directly or indirectly calls the callable operation.
 
@@ -698,7 +699,7 @@ There are two important comments about the use of recursion, however:
    The compiler should generate a warning if optimizations are prevented.
  - When executing on an actual quantum device, stack space may be limited, 
    and so deep recursion may lead to a runtime error.
-   In particular, the Qb compiler and runtime do not identify and optimize 
+   In particular, the Q# compiler and runtime do not identify and optimize 
    tail recursion. 
 
 ## Tuple Expressions
@@ -800,7 +801,7 @@ concatenation would be expressed as:
 (a+b)[1..2..7]
 ```
 
-All arrays in Qb are zero-based.
+All arrays in Q# are zero-based.
 That is, the first element of an array `a` is always `a[0]`.
 
 ## Array Element Expressions
@@ -819,7 +820,7 @@ concatenation would be expressed as:
 (a+b)[13]
 ```
 
-All arrays in Qb are zero-based.
+All arrays in Q# are zero-based.
 That is, the first element of an array `a` is always `a[0]`.
 
 ## Boolean Expressions
@@ -884,12 +885,12 @@ Operator | Arity | Description | Operand Types
 
 ## String Interpolations
 
-Qb allows strings to be used in the `fail` statement and the `Log` 
+Q# allows strings to be used in the `fail` statement and the `Log` 
 standard function.
 There are no operators on strings, so they are not otherwise very useful.
 
-The Qb syntax for string interpolations is a subset of the C# 7.0 syntax;
-Qb does not support verbatim (multi-line) interpolated strings.
+The Q# syntax for string interpolations is a subset of the C# 7.0 syntax;
+Q# does not support verbatim (multi-line) interpolated strings.
 See [*Interpolated Strings*](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interpolated-strings)
 for the C# syntax.
 
@@ -902,7 +903,7 @@ and continue until the end of line.
 Comments are treated as whitespace for parsing purposes.
 
 
-A comment may appear anywhere in a Qb source file, 
+A comment may appear anywhere in a Q# source file, 
 including where statements are not valid.
 
 ### Documentation Comments
@@ -924,7 +925,7 @@ Optionally, a documentation engine may also support additional Markdown extensio
 
 For example:
 
-```qflat
+```Q#
 /// # Summary
 /// Given an operation and a target for that operation,
 /// applies the given operation twice.
@@ -940,7 +941,7 @@ For example:
 /// The type expected by the given operation as its input.
 ///
 /// # Example
-/// ```qflat
+/// ```Q#
 ///     // Should be equivalent to the identity.
 ///     ApplyTwice(H, qubit);
 /// ```
@@ -970,13 +971,13 @@ The following names are recognized as documentation comment headers.
 
 ## Namespaces
 
-Every Qb operation, function, and user-defined type is
+Every Q# operation, function, and user-defined type is
 defined within a namespace.
-Qb namespaces are treated the same as namespaces in any other
+Q# namespaces are treated the same as namespaces in any other
 .NET language, and follow the same rules for naming and for
 forming qualified names.
 
-Every Qb file must include at least one `namespace` directive.
+Every Q# file must include at least one `namespace` directive.
 This consists of the `namespace` keyword, followed by the namespace
 name, an opening `{`, the construct definitions, and a closing `}`.
 All user-defined type, function, and operations must appear inside of a
@@ -1002,7 +1003,7 @@ with the same name, and the current source uses constructs from both.
 
 ## Formatting
 
-Most Qb statements and directives end with a terminating semicolon, `;`.
+Most Q# statements and directives end with a terminating semicolon, `;`.
 Statements and directives such as `for` and `operation` that end with 
 a statement block do not require a terminating semicolon.
 Each statement description notes whether the terminating semicolon
@@ -1016,7 +1017,7 @@ may also span multiple lines.
 
 ## Statement Blocks
 
-Qb statements are grouped into statement blocks. 
+Q# statements are grouped into statement blocks. 
 A statement block starts with an opening `{` and ends with a 
 closing `}`.
 
@@ -1026,7 +1027,7 @@ containing and sub-blocks are also called outer and inner blocks.
 
 ## Symbol Binding and Assignment
 
-Qb distinguishes between mutable and immutable symbols.
+Q# distinguishes between mutable and immutable symbols.
 In general, the use of immutable symbols is encouraged because it 
 allows the compiler to perform more optimizations.
 
@@ -1041,14 +1042,14 @@ If a mutable symbol is bound to a tuple, the symbol may be bound
 to a new tuple, but the existing tuple may not be modified in place.
 
 The arguments to an operation or a function are treated as immutable.
-This means that Qb does not support "out" variables.
+This means that Q# does not support "out" variables.
 Also, the elements of an array passed to an operation or function may not be changed.
 
 ### Immutable Symbols
 
 Immutable symbols are bound using the `let` statement. 
 This is roughly equivalent to variable declaration and initialization in languages 
-such as C#, except that Qb symbols, once bound, may not be changed; 
+such as C#, except that Q# symbols, once bound, may not be changed; 
 `let` bindings are immutable.
 
 A simple binding statement consists of the keyword `let`, followed by 
@@ -1425,7 +1426,7 @@ For example,
 
 ## Expression Evaluation Statements
 
-Any valid Qb expression of type `()` may be evaluated as a statement.
+Any valid Q# expression of type `()` may be evaluated as a statement.
 This is primarily of use when calling operations on qubits that return `()`
 because the purpose of the statement is to modify the implicit quantum state.
 Expression evaluation statements require a terminating semicolon.
@@ -1444,14 +1445,14 @@ or
 
 # File Structure
 
-A Qb file consists of some number of type declarations 
+A Q# file consists of some number of type declarations 
 followed by some number of callable (operation or function) definitions. 
 A file may contain only type definitions or callable definitions, 
 but must contain at least one definition of some variety.
 
 ## User Defined Type Declarations
 
-Qb provides a way for users to declare new user-defined types, 
+Q# provides a way for users to declare new user-defined types, 
 as described in [The Type Model](#the-type-model) above. 
 User-defined types are distinct even if the underlying  types are identical, 
 and there is no automatic conversion between two user-defined types 
@@ -1471,9 +1472,9 @@ operation and function names.
 
 ## Operation Definitions
 
-Operations are the core of Qb, 
+Operations are the core of Q#, 
 roughly analogous to functions in other languages. 
-Each Qb source file may define any number of operations, including none 
+Each Q# source file may define any number of operations, including none 
 if the file only defines one or more user-defined types.
 
 An operation definition consists of the keyword `operation`, 
@@ -1495,7 +1496,7 @@ type and function names.
 
 ### Body
 
-The body of an operation is the Qb code that implements the operation. 
+The body of an operation is the Q# code that implements the operation. 
 It is legal to define an operation with no body; for instance, 
 primitive operations such as Paulis and the Hadamard gate are defined this way. 
 A body definition consists of the keyword `Body`, followed by a statement block.
@@ -1513,7 +1514,7 @@ contains an adjoint declaration.
 An adjoint definition consists of the keyword `Adjoint`, followed by one of:
 
  - The keyword `self` indicating that the operation is its own adjoint.
- - The keyword `auto` indicating that the Qb compiler should generate an adjoint 
+ - The keyword `auto` indicating that the Q# compiler should generate an adjoint 
     for the operation, based on the operation’s body.
     The generated version will apply the adjoint of each quantum operation
     in the body, in reverse order to the order in the body.
@@ -1568,7 +1569,7 @@ contains a controlled definition.
 A controlled definition consists of the keyword `Controlled`, followed by
 one of:
 
- - The keyword `auto` indicating that the Qb compiler should generate a 
+ - The keyword `auto` indicating that the Q# compiler should generate a 
     controlled version of the operation based on the operation’s body. 
     The generated version will apply quantum control to every *quantum* 
     operation.
@@ -1616,7 +1617,7 @@ it defines both a controlled variant and an adjoint variant.
 
 A controlled adjoint definition consists of the keyword `Adjoint`, 
 then the keyword `Controlled`, followed either by the keyword `auto` 
-indicating that the Qb compiler should generate a controlled adjoint version 
+indicating that the Q# compiler should generate a controlled adjoint version 
 of the operation based on the operation’s body, or by `(`, a symbol that will 
 be the name of the variable holding the array of control qubits, `)`, 
 and a statement block that implements the controlled adjoint version of the 
@@ -1659,9 +1660,9 @@ sub-operations as one normally would.
 namespace Microsoft.Quantum.Samples {
     // Entangle two qubits.
     // Assumes that both qubits are in the |0> state.
-    operation EPR (qb1 : Qubit, qb2 : Qubit) : () {
-        H(qb2);
-        CNOT(qb2, qb1);
+    operation EPR (Q#1 : Qubit, Q#2 : Qubit) : () {
+        H(Q#2);
+        CNOT(Q#2, Q#1);
     }
 
     // Teleport the quantum state of the source to the target.
@@ -1692,8 +1693,8 @@ namespace Microsoft.Quantum.Samples {
 
 ## Function Definitions
 
-Functions are purely classical routines in Qb. 
-Each Qb source file may define any number of functions, including none.
+Functions are purely classical routines in Q#. 
+Each Q# source file may define any number of functions, including none.
 
 A function definition consists of the keyword `function`, followed by 
 the symbol that is the function’s name, a typed identifier tuple as for 
@@ -1722,15 +1723,15 @@ For example,
 
 # Using The Compiler
 
-Qb code is stored as text in files. 
+Q# code is stored as text in files. 
 The top-level constructs allowed in a file are user defined types, 
 function and operation declarations, and comments.
 
-The Qb compiler will process one or more text files containing any number of 
+The Q# compiler will process one or more text files containing any number of 
 these constructs and create a single .NET library exposing the functionality 
 defined in these text files. 
 This library can be referenced within a .NET project and native .NET code in C# or F# 
-can then access the functionality represented by the Qb code within the native .NET 
+can then access the functionality represented by the Q# code within the native .NET 
 code. 
 
 The compiler functionality is packaged in two different forms:
@@ -1738,21 +1739,21 @@ The compiler functionality is packaged in two different forms:
 - As a command line tool which will take some arguments and 
     generate an assembly which can be linked against.
 - As a single file generator packaged within a Visual Studio Extension (VSIX) 
-    which can act as a custom tool for Qb files in a project, 
+    which can act as a custom tool for Q# files in a project, 
     and generate code-behind C# for each file.
-    This provides debugging capability within Visual Studio at the Qb language level.
+    This provides debugging capability within Visual Studio at the Q# language level.
 
 ## Compiler Command Line Interface
 
-The command line interface should take a list of Qb input files and the desired name of the output DLL.
+The command line interface should take a list of Q# input files and the desired name of the output DLL.
 
-    qbc.exe f1.qb f2.qb f3.qb --output phase.dll
+    Q#c.exe f1.Q# f2.Q# f3.Q# --output phase.dll
     
 # The Standard Library
 
-Qb includes a large number of operations in its standard library. 
+Q# includes a large number of operations in its standard library. 
 While the semantics of a particular operation is specified here, 
-different Qb execution environments may provide different implementations 
+different Q# execution environments may provide different implementations 
 of these operations, and may leave some of them unimplemented.
 
 ## Functions
@@ -1838,7 +1839,7 @@ Name | Signature | Description
 ## Type Specifier Syntax
 
 The rough EBNF syntax for type specifiers follows. 
-In the syntax, the “symbol” production specifies the set of valid Qb symbols. 
+In the syntax, the “symbol” production specifies the set of valid Q# symbols. 
 
 ```ebnf
 type              = simple-type | 
@@ -1859,9 +1860,9 @@ user-defined-type = symbol
 <!---
 ## Anticipated Future Features
 
-Some or all of the following features may be added to Qb in the future:
+Some or all of the following features may be added to Q# in the future:
 
- - Ability to link Qb functions to .NET static methods.
+ - Ability to link Q# functions to .NET static methods.
     The expected use for external functions is for core mathematical 
     functions such as `sine` and `exp`.
     External functions used during actual quantum execution must be 

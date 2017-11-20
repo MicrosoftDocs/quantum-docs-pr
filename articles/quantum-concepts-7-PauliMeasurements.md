@@ -115,9 +115,10 @@ $$
 
 for any state $|\psi\rangle$.  The linearity property of matrix multiplication then implies that that for any quantum second state $|\phi\rangle$
 
-$$
-U\left[\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right]=\frac{1}{\sqrt{2}}\left(|\phi\rangle|\phi\rangle+|\psi\rangle|\psi\rangle\right)\ne \left(\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right)\otimes\left(\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right).
-$$
+\begin{align}
+&U\left[\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right]=\frac{1}{\sqrt{2}}\left(|\phi\rangle|\phi\rangle+|\psi\rangle|\psi\rangle\right)\\\\
+&\qquad\qquad\ne \left(\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right)\otimes\left(\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right).
+\end{align}
 
 This provides the fundamental intuition behind the No-Cloning-Theorem, that any device that copies an unknown quantum state must induce errors on at least some of the states it copies.  While the key assumption that the cloner acts linearly on the input state can be violated through the addition of ancilla and measurement of the ancilla qubits, such interactions also leak information about the system through the measurement statistics and prevent exact cloning in such cases as well.  For a more complete proof of the No-Cloning-Theorem please see the [reference texts](quantum-ForMoreInfo.md)  recommended at the end of the documentation.
 

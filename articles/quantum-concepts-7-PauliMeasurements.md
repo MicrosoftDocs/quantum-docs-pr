@@ -77,7 +77,8 @@ Y\otimes \boldone & HS^\dagger\otimes \boldone\\\\
 \boldone \otimes X & (H\otimes \boldone)\operatorname{SWAP}\\\\ 
 \boldone \otimes Y & (HS^\dagger\otimes \boldone)\operatorname{SWAP}\\\\ 
 \end{array}
-\qquad
+$$
+$$
 \begin{array}{|c|c|}
 \text{Pauli Measurement} & U\\\\ 
 \hline
@@ -87,13 +88,6 @@ Y\otimes Z & \operatorname{CNOT}\_{10}(HS^\dagger\otimes \boldone)\\\\
 Z\otimes X & \operatorname{CNOT}\_{10}(\boldone\otimes H)\\\\ 
 X\otimes X & \operatorname{CNOT}\_{10}(H\otimes H)\\\\ 
 Y\otimes X & \operatorname{CNOT}\_{10}(HS^\dagger\otimes H)\\\\ 
-\end{array}
-$$
-
-
-$$
-\begin{array}{|c|c|}
-\text{Pauli Measurement} & U\\\\ 
 Z\otimes Y & \operatorname{CNOT}\_{10}(\boldone \otimes HS^\dagger)\\\\ 
 X\otimes Y & \operatorname{CNOT}\_{10}(H\otimes HS^\dagger)\\\\ 
 Y\otimes Y & \operatorname{CNOT}\_{10}(HS^\dagger\otimes HS^\dagger)\\\\ 

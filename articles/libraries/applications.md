@@ -72,9 +72,9 @@ using a product of $r d$ terms.
 
 > [!TIP]
 > Applications of the Trotter-Suziki simulation algorithm is covered in the samples. 
-> Ising model using only the primitive library; please see the [**SimpleIsing** sample](TODO: link).
-> Ising model using the Trotter-Suzuki library control structure; please see the [**IsingTrotter** sample](TODO: link).
-> Molecular hydrogen using the Trotter-Suzuki library control structure; please see the [**H2 simulation** sample](TODO: link).
+> For the Ising model using only the primitive library, please see the [**SimpleIsing** sample](TODO: link).
+> For the Ising model using the Trotter-Suzuki library control structure, please see the [**IsingTrotter** sample](TODO: link).
+> For Molecular hydrogen using the Trotter-Suzuki library control structure, please see the [**H2 simulation** sample](TODO: link).
 
 In many cases, we would like to implement the simulation algorithm, but are not interested in the details of it implementation. For instance, the second-order integrator approximates
 $$
@@ -106,8 +106,8 @@ TimeDependentTrotterSimulationAlgorithm(trotterStepSize: Double, trotterOrder: I
 
 > [!TIP]
 > Applications of the simulation algorithms library are covered in the samples. 
-> Phase estimation in the Ising model using `SimulationAlgorithm`; please see the [**IsingPhaseEstimation** sample](TODO: link).
-> Adiabatic state preparation in the Ising model using `TimeDependentSimulationAlgorithm`; please see the [**AdiabaticIsing** sample](TODO: link).
+> For phase estimation in the Ising model using `SimulationAlgorithm`, please see the [**IsingPhaseEstimation** sample](TODO: link).
+> For adiabatic state preparation in the Ising model using `TimeDependentSimulationAlgorithm`, please see the [**AdiabaticIsing** sample](TODO: link).
 
 #### Adiabatic State Preparation & Phase Estimation ####
 
@@ -151,8 +151,8 @@ operation AdiabaticStateEnergyEstimate( nQubits : Int,
 
 > [!TIP]
 > Applications of adiabatic state preparation are covered in the samples. 
-> Ising model using a manual implementation of adiabtic state preparation versus using the `AdiabaticEvolution` function; please see the [**AdiabaticIsing** sample](TODO: link).
-> Phase estimation and adiabatic state preparation in the Ising model ; please see the [**IsingPhaseEstimation** sample](TODO: link).
+> For the Ising model using a manual implementation of adiabtic state preparation versus using the `AdiabaticEvolution` function, please see the [**AdiabaticIsing** sample](TODO: link).
+> For phase estimation and adiabatic state preparation in the Ising model, please see the [**IsingPhaseEstimation** sample](TODO: link).
 
 #### Simulation of Molecular Hydrogen ####
 
@@ -160,7 +160,7 @@ The modeling of Hamiltonians is one of the major application areas desired for Q
 
 $$
 \begin{align}
-\hat H = g\_{0}\bold{1}+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$
+\hat H = g\_{0}I\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}
 \end{align}
 $$
 
@@ -173,7 +173,6 @@ Using canon functions, the Paulis are converted to Unitaries and then evolved ov
 The solution for the Hamiltonian ground state is found by utilizing Phase Estimation (described earlier) from the canon.
 
 To demonstrate the solution, a top level driver program (`H2SimulationExample`) is provided which performs a plot of the resulting ground state energy for several bond lengths $R$ using the `FSharp.Charting` package and is shown along with the theoretical values.
-> For an example based on molecular Hydrogen, please see the [*H2Simulation** sample](TODO: link).
 
 
 ### Factorization ###

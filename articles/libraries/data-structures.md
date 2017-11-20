@@ -202,9 +202,9 @@ If we let $U$ be a fixed unitary then the continuous query oracle takes the form
 This allows us to query matrices such as $\sqrt{U}$, which could not be implemented directly in the discrete query model.
 
 This type of oracle is valuable when you're not probing a particular unitary, but rather wish to learn the properties of the generator of the unitary.
-For example, in dynamical quantum simulation the goal is to devise quantum circuits that closely approximate $U(t)=e^{-i \hat{H} t}$ for a Hermitian matrix $\hat{H}$ and evolution time $t$.
-The eigenvalues of $U(t)$ are directly related to the eigenvalues of $\hat{H}$.
-To see this, consider an eigenvector of $\hat{H}$: $\hat{H} \ket{E} = E\ket{E}$ then it is easy to see from the power-series definition of the matrix exponential that $U(t) \ket{E} =e^{i\phi}\ket{E}= e^{-iEt}\ket{E}$.
+For example, in dynamical quantum simulation the goal is to devise quantum circuits that closely approximate $U(t)=e^{-i H t}$ for a Hermitian matrix $H$ and evolution time $t$.
+The eigenvalues of $U(t)$ are directly related to the eigenvalues of $H$.
+To see this, consider an eigenvector of $H$: $H \ket{E} = E\ket{E}$ then it is easy to see from the power-series definition of the matrix exponential that $U(t) \ket{E} =e^{i\phi}\ket{E}= e^{-iEt}\ket{E}$.
 Thus estimating the eigenphase of $U(t)$ gives the eigenvalue $E$ assuming the eigenvector $\ket{E}$ is input into the phase estimation algorithm.
 However, in this case the value $t$ can be chosen at the user's discretion since for any sufficiently small value of $t$ the eigenvalue $E$ can be uniquely inverted through $E=-\phi/t$.
 Since quantum simulation methods provide the ability to perform a fractional evolution, this grants phase estimation algorithms an additional freedom when querying the unitary, specifically while the discrete query model allows only unitaries of the form $U^j$ to applied for integer $j$ the continuous query oracle allows us to approximate unitaries of the form $U^t$ for any real valued $t$.
@@ -231,25 +231,25 @@ For this reason Q# has functionality for both forms of queries and leave it to t
 
 ## Dynamical Generator Modeling ##
 
-Generators of time-evolution describe how states evolve through time. For instance, the dynamics of a quantum state $\ket{\psi}$ is goverened by the Schrödinger equation
+Generators of time-evolution describe how states evolve through time. For instance, the dynamics of a quantum state $\ket{\psi}$ is governed by the Schrödinger equation
 $$
 \begin{align}
-    \frac{d \ket{\psi(t)}}{d t} & = \hat{H} \ket{\psi(t)},
+    i\frac{d \ket{\psi(t)}}{d t} & = H \ket{\psi(t)},
 \end{align}
 $$
-with a Hermitian matrix $\hat{H}$, known as the Hamiltonian, as the generator of motion. Given an initial state $\ket{\psi(0)}$ at time $t=0$, the formal solution to this equation at time $t$ may be, in principle, written
+with a Hermitian matrix $H$, known as the Hamiltonian, as the generator of motion. Given an initial state $\ket{\psi(0)}$ at time $t=0$, the formal solution to this equation at time $t$ may be, in principle, written
 $$
 \begin{align}
     \ket{\psi(t)} = U(t)\ket{\psi(0)},
 \end{align}
 $$
-where the matrix exponential $U(t)=e^{-i \hat{H} t}$ is known as the unitary time-evolution operator. Though we focus on generators of this form in the following, we emphasize that the concept applies more broadly, such as to the simulation of open quantum systems, or to more abstract differential equations.
+where the matrix exponential $U(t)=e^{-i H t}$ is known as the unitary time-evolution operator. Though we focus on generators of this form in the following, we emphasize that the concept applies more broadly, such as to the simulation of open quantum systems, or to more abstract differential equations.
 
 A primary goal of dynamical simulation is to implement the time-evolution operator on some quantum state encoded in qubits of a quantum computer.  In many cases, the Hamiltonian may be broken into into a sum of some $d$ simpler, or primitive, terms
 
 $$
 \begin{align}
-    \hat{H} & = \sum^{d-1}_{j=0} \hat{H}_j,
+    H & = \sum^{d-1}_{j=0} H_j,
 \end{align}
 $$
 
@@ -257,7 +257,7 @@ where time-evolution by each term alone is easy to implement on a quantum comput
 
 $$
 \begin{align}
-    U(t) & = \left( e^{-i\hat{H}\_0 t / r} e^{-i\hat{H}\_1 t / r} \cdots e^{-i\hat{H}\_{d-1} t / r} \right)^{r} + \mathcal{O}(d^2 t^2/r),
+    U(t) & = \left( e^{-iH\_0 t / r} e^{-iH\_1 t / r} \cdots e^{-iH\_{d-1} t / r} \right)^{r} + \mathcal{O}(d^2 t^2/r),
 \end{align}
 $$
 
@@ -299,7 +299,7 @@ newtype EvolutionSet = (GeneratorIndex -> EvolutionUnitary);
 A concrete and useful example of generators are Hamiltonians that are a sum of Pauli operators, each possibly with a different coefficient.
 $$
 \begin{align}
-    \hat{H} & = \sum^{d-1}_{j=0} a_j \hat{H}_j,
+    H & = \sum^{d-1}_{j=0} a_j H_j,
 \end{align}
 $$
 where each $\hat H_j$ is now drawn from the Pauli group. For such systems, we provide the `PauliEvolutionSet()` of type `EvolutionSet` that defines a convention for how an element of the Pauli group and a coefficient may be identified by a `GeneratorIndex`, which has the following signature.
@@ -336,7 +336,7 @@ Exp([1;2;0;3], 0.4 * stepSize, [qubits[0];qubits[8];qubits[2];qubits[1]]);
 In many cases, we are also interested in modelling time-dependent generators, as might occur in the Schrödinger equation 
 $$
 \begin{align}
-    \frac{d \ket{\psi(t)}}{d t} & = \hat H(t) \ket{\psi(t)},
+    i\frac{d \ket{\psi(t)}}{d t} & = \hat H(t) \ket{\psi(t)},
 \end{align}
 $$
 where the generator $\hat H(t)$ is now time-dependent. The extension from the time-independent generators above to this case is straightforward. Rather than having a fixed `GeneratorSystem` describing the Hamiltonian for all times $t$, we instead have the `GeneratorSystemTimeDependent` user-defined type.

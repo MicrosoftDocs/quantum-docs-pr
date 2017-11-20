@@ -61,8 +61,8 @@ cation) and probability estimation*
 *Algorithms for quantum simulation*
 + Lloyd, S. (1996). Universal Quantum Simulators. Science (New York, NY), 273(5278), 1073.
 + Berry, D. W., Childs, A. M., Cleve, R., Kothari, R., & Somma, R. D. (2015). Simulating Hamiltonian dynamics with a truncated Taylor series. Physical review letters, 114(9), 090502.
-+ Low, G. H., & Chuang, I. L. (2017). Optimal Hamiltonian simulation by quantum signal processing. Physical review letters, 118(1), 010501.
-+ Low, G. H., & Chuang, I. L. (2016). Hamiltonian simulation by Qubitization. arXiv preprint:1610.06546.
++ Low, G. H., & Chuang, I. L. (2017). [Optimal Hamiltonian simulation by quantum signal processing](https://arxiv.org/abs/1606.02685). [Physical Review letters, 118(1), 010501](http://doi.org/10.1103/PhysRevLett.118.010501).
++ Low, G. H., & Chuang, I. L. (2016). Hamiltonian simulation by Qubitization. [arXiv preprint:1610.06546](https://arxiv.org/abs/1610.06546).
 + Reiher, M., Wiebe, N., Svore, K. M., Wecker, D., & Troyer, M. (2017). Elucidating reaction mechanisms on quantum computers. Proceedings of the National Academy of Sciences, 201619152.
 + Wiebe, N., Berry, D. W., Høyer, P., & Sanders, B. C. (2011). Simulating quantum dynamics on a quantum computer. Journal of Physics A: Mathematical and Theoretical, 44(44), 445308.
 + Peruzzo, A., McClean, J., Shadbolt, P., Yung, M. H., Zhou, X. Q., Love, P. J., ... & Obrien, J. L. (2014). A variational eigenvalue solver on a photonic quantum processor. Nature communications, 5.

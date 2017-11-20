@@ -132,13 +132,14 @@ As in the single-qubit case, any unitary transformation is a valid operation on 
 For example, the CNOT (controlled-NOT) gate is a commonly used two-qubit gate and is represented by the following unitary matrix:
 
 $$
-\mathrm{CNOT} = \begin{bmatrix} 1\ 0\ 0\ 0  \\\\  0\ 1\ 0\ 0 \\\\  0\ 0\ 0\ 1 \\\\  0\ 0\ 1\ 0 \end{bmatrix}.
+\operatorname{CNOT} = \begin{bmatrix} 1 & 0 & 0 & 0  \\\\  0 & 1 & 0 & 0 \\\\  0 & 0 & 0 & 1 \\\\  0 & 0 & 1 & 0 \end{bmatrix}.
 $$
 
 The CNOT gate corresponds to the following classical operation: Look at the first bit, if it is $0$, do nothing, and if it is $1$ then flip the second bit.   In cases when more than two qubits are present, or a CNOT gate that is controlled by the second qubit is needed, the notation $\text{CNOT}\_{ij}$ is used to denote the controlled-NOT gate controlled on the $i^{\rm th}$ qubit and with the $j^{\rm th}$ qubit as its target (where zero is the first qubit label).  For example,
-$$
-\mathrm{CNOT}_{01} = \begin{bmatrix} 1\ 0\ 0\ 0  \\\\  0\ 1\ 0\ 0 \\\\  0\ 0\ 0\ 1 \\\\  0\ 0\ 1\ 0 \end{bmatrix}\qquad\mathrm{CNOT}_{10} = \begin{bmatrix} 1\ 0\ 0\ 0  \\\\  0\ 0\ 0\ 1 \\\\  0\ 0\ 1\ 0 \\\\  0\ 1\ 0\ 0 \end{bmatrix}.
-$$
+\begin{align}
+    \operatorname{CNOT}\_{01} = \begin{bmatrix} 1 & 0 & 0 & 0  \\\\  0 & 1 & 0 & 0 \\\\  0 & 0 & 0 & 1 \\\\  0 & 0 & 1 & 0 \end{bmatrix} \\\\
+    \operatorname{CNOT}\_{10} = \begin{bmatrix} 1 & 0 & 0 & 0  \\\\  0 & 0 & 0 & 1 \\\\  0 & 0 & 1 & 0 \\\\  0 & 1 & 0 & 0 \end{bmatrix}.
+\end{align}
 
 We can also form two-qubit gates by applying single-qubit gates on both qubits. For example, if we apply the gates 
 

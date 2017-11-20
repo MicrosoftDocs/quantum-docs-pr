@@ -52,13 +52,13 @@ where $a\_j>0$ are coefficients, and $\hat{U}\_j$ are unitaries. It is then assu
 > [!NOTE]
 > The big-O notation is commonly used to describe the complexity scaling of algorithms. Given two real functions $f,g$, the expression $g(x)=\mathcal{O}(f(x))$ means that there exists an absolute positive constant $x\_0, c>0$ such that $g(x) \le c f(x)$ for all $x\ge x\_0$. 
 
-In most practical applications to be implemented on a quantum computer, these black-boxes must be efficiently implementable, that is with $\mathcal{O}(\text{polylog}(N))$ primitive quantum gates. More strongly, efficiently simulable Hamiltonians must have some sufficiently sparse classical description. In one such formulation, it is assumed that the Hamiltonian decomposes into a sum of Hermitian parts.
+In most practical applications to be implemented on a quantum computer, these black-boxes must be efficiently implementable, that is with $\mathcal{O}(\text{polylog}(N))$ primitive quantum gates. More strongly, efficiently simulable Hamiltonians must have some sufficiently sparse classical description. In one such formulation, it is assumed that the Hamiltonian decomposes into a sum of Hermitian parts
 $$
 \begin{align}
     H & = \sum^{d-1}_{j=0} H_j.
 \end{align}
 $$
-Moreover, it is assumed that each part, a Hamiltonian $H\_j$, is easy to simulate. This means that the unitary $e^{-H\_j t}$ for any time $t$ may be implemented exactly using $\mathcal{O}(1)$ primitive quantum gates. For instance, this is true in the special case where each $H\_j$ are local Pauli operators, meaning that they are of tensor products of $\mathcal{O}(1)$ non-identity Pauli operators that act on spatially close qubits. If the number of terms is $d=\mathcal{O}(\text{polylog}(N))$, this description may clearly be written down, i.e. classically described, in polynomial time.
+Moreover, it is assumed that each part, a Hamiltonian $H\_j$, is easy to simulate. This means that the unitary $e^{-H\_j t}$ for any time $t$ may be implemented exactly using $\mathcal{O}(1)$ primitive quantum gates. For instance, this is true in the special case where each $H\_j$ are local Pauli operators, meaning that they are of tensor products of $\mathcal{O}(1)$ non-identity Pauli operators that act on spatially close qubits. This model is particularly applicable to physical systems with bounded and local interaction, as the number of terms is $d=\mathcal{O}(\text{polylog}(N))$, and may clearly be written down, i.e. classically described, in polynomial time.
 
 > [!TIP]
 > Hamiltonians that decompose into a sum of parts may be described using the [Dynamical Generator Representation](data-structures#dynamical-generator-modeling) library.

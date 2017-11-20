@@ -202,9 +202,9 @@ If we let $U$ be a fixed unitary then the continuous query oracle takes the form
 This allows us to query matrices such as $\sqrt{U}$, which could not be implemented directly in the discrete query model.
 
 This type of oracle is valuable when you're not probing a particular unitary, but rather wish to learn the properties of the generator of the unitary.
-For example, in dynamical quantum simulation the goal is to devise quantum circuits that closely approximate $U(t)=e^{-i \hat{H} t}$ for a Hermitian matrix $\hat{H}$ and evolution time $t$.
-The eigenvalues of $U(t)$ are directly related to the eigenvalues of $\hat{H}$.
-To see this, consider an eigenvector of $\hat{H}$: $\hat{H} \ket{E} = E\ket{E}$ then it is easy to see from the power-series definition of the matrix exponential that $U(t) \ket{E} =e^{i\phi}\ket{E}= e^{-iEt}\ket{E}$.
+For example, in dynamical quantum simulation the goal is to devise quantum circuits that closely approximate $U(t)=e^{-i H t}$ for a Hermitian matrix $H$ and evolution time $t$.
+The eigenvalues of $U(t)$ are directly related to the eigenvalues of $H$.
+To see this, consider an eigenvector of $H$: $H \ket{E} = E\ket{E}$ then it is easy to see from the power-series definition of the matrix exponential that $U(t) \ket{E} =e^{i\phi}\ket{E}= e^{-iEt}\ket{E}$.
 Thus estimating the eigenphase of $U(t)$ gives the eigenvalue $E$ assuming the eigenvector $\ket{E}$ is input into the phase estimation algorithm.
 However, in this case the value $t$ can be chosen at the user's discretion since for any sufficiently small value of $t$ the eigenvalue $E$ can be uniquely inverted through $E=-\phi/t$.
 Since quantum simulation methods provide the ability to perform a fractional evolution, this grants phase estimation algorithms an additional freedom when querying the unitary, specifically while the discrete query model allows only unitaries of the form $U^j$ to applied for integer $j$ the continuous query oracle allows us to approximate unitaries of the form $U^t$ for any real valued $t$.
@@ -230,4 +230,126 @@ For this reason Q# has functionality for both forms of queries and leave it to t
 -->
 
 ## Dynamical Generator Modeling ##
+
+Generators of time-evolution describe how states evolve through time. For instance, the dynamics of a quantum state $\ket{\psi}$ is governed by the Schrödinger equation
+$$
+\begin{align}
+    i\frac{d \ket{\psi(t)}}{d t} & = H \ket{\psi(t)},
+\end{align}
+$$
+with a Hermitian matrix $H$, known as the Hamiltonian, as the generator of motion. Given an initial state $\ket{\psi(0)}$ at time $t=0$, the formal solution to this equation at time $t$ may be, in principle, written
+$$
+\begin{align}
+    \ket{\psi(t)} = U(t)\ket{\psi(0)},
+\end{align}
+$$
+where the matrix exponential $U(t)=e^{-i H t}$ is known as the unitary time-evolution operator. Though we focus on generators of this form in the following, we emphasize that the concept applies more broadly, such as to the simulation of open quantum systems, or to more abstract differential equations.
+
+A primary goal of dynamical simulation is to implement the time-evolution operator on some quantum state encoded in qubits of a quantum computer.  In many cases, the Hamiltonian may be broken into into a sum of some $d$ simpler, or primitive, terms
+
+$$
+\begin{align}
+    H & = \sum^{d-1}_{j=0} H_j,
+\end{align}
+$$
+
+where time-evolution by each term alone is easy to implement on a quantum computer. For instance, if $H_j$ is a Pauli $X_1X_2$ operator acting on the 1st and 2nd elements of the qubit register `qubits`, time-evolution by it for any time $t$ may be implemented simply by calling the operation `Exp([PauliX;PauliX], t, qubits[1..2])`, which has signature `((Pauli[], Double, Qubit[]) => () : Adjoint, Controlled)`. As discussed later in [Hamiltonian Simulation](./applications), one solution then is to approximate time-evolution by $H$ with a sequence of simpler operations
+
+$$
+\begin{align}
+    U(t) & = \left( e^{-iH\_0 t / r} e^{-iH\_1 t / r} \cdots e^{-iH\_{d-1} t / r} \right)^{r} + \mathcal{O}(d^2 \max_j \\|H\_j\\|^2 t^2/r),
+\end{align}
+$$
+
+where the integer $r>0$ controls the approximation error. 
+
+The dynamical generator modeling library provides a framework for systematically encoding complicated generators in terms of simpler generators. Such a description may then be passed to, say, the simulation library to implement time-evolution by a simulation algorithm of choice, with many details automatically taken care of.
+
+> [!TIP]
+> The dynamical generator library described below is covered in the samples. 
+> For an example based on the Ising model, please see the [**IsingGenerators** sample](TODO: link).
+> For an example based on molecular Hydrogen, please see the [*H2Simulation** sample](TODO: link).
+
+### Complete Description of a Generator ###
+
+At the top level, a complete description of a Hamiltonian is contained in the `EvolutionGenerator` user-defined type which has has two components.:
+
+```qsharp
+newtype EvolutionGenerator = (EvolutionSet, GeneratorSystem);
+```
+
+The `GeneratorSystem` user-defined type is a classical description of the Hamiltonian.
+
+```qsharp
+newtype GeneratorSystem = (Int, (Int -> GeneratorIndex));
+```
+
+The first element `Int` of the tuple stores the number of terms $d$ in the Hamiltonian, and the second element `(Int -> GeneratorIndex)` is a function that maps an integer index in $\{0,1,...,d-1\}$ to a `GeneratorIndex` user-defined type which uniquely identifies each primitive term in the Hamiltonian. Note that by expressing the collection of terms in the Hamiltonian as a function rather than as an array `GeneratorIndex[]`, this allows for on-the-fly computation of the `GeneratorIndex` which is especially useful when describing Hamiltonians with a large number of terms.
+
+Crucially, we do not impose a convention on what primitive terms identified by the `GeneratorIndex` are easy-to-simulate. For instance, primitive terms could be Pauli operators as discussed above, but they could also be Fermionic annihilation and creation operators commonly used in quantum chemistry simulation. By itself, a `GeneratorIndex` is meaningless as it does not describe how time-evolution by the term it points to may be implemented as a quantum circuit. 
+
+This is resolved by specifying an `EvolutionSet` user-defined type that maps any `GeneratorIndex`, drawn from some canonical set, to a unitary operator, the `EvolutionUnitary`, expressed as a quantum circuit. The `EvolutionSet` defines the convention of how a `GeneratorIndex` is structured, and also defines the set of possible `GeneratorIndex`.
+
+```qsharp
+newtype EvolutionSet = (GeneratorIndex -> EvolutionUnitary);
+```
+
+### Pauli Operator Generators ###
+
+A concrete and useful example of generators are Hamiltonians that are a sum of Pauli operators, each possibly with a different coefficient.
+$$
+\begin{align}
+    H & = \sum^{d-1}_{j=0} a_j H_j,
+\end{align}
+$$
+where each $\hat H_j$ is now drawn from the Pauli group. For such systems, we provide the `PauliEvolutionSet()` of type `EvolutionSet` that defines a convention for how an element of the Pauli group and a coefficient may be identified by a `GeneratorIndex`, which has the following signature.
+
+```qsharp
+newtype GeneratorIndex = ((Int[], Double[]), Int[]);
+```
+
+In our encoding, the first parameter `Int[]` specifies a Pauli string, where $\hat I\rightarrow 0$, $\hat X\rightarrow 1$, $\hat Y\rightarrow 2$, and $\hat Z\rightarrow 3$. The second parameter `Double[]` stores the coefficient of the Pauli string in the Hamiltonian. Note that only the first element of this array is used. The third parameter `Int[]` indexes the qubits that this Pauli string acts on, and must have no duplicate elements. Thus the Hamiltonian term $0.4 \hat X_0 \hat Y_8\hat I_2\hat Z_1$ may be represented as
+
+```qsharp
+let generatorIndexExample = GeneratorIndex(([1;2;0;3], [0.4]]), [0;8;2;1]);
+```
+
+The `PauliEvolutionSet()` is a function that maps any `GeneratorIndex` of this form to an `EvolutionUnitary` with the following signature.
+
+```qsharp
+newtype EvolutionUnitary = ((Double, Qubit[]) => () : Adjoint, Controlled);
+```
+
+The first parameter represents a time-duration, that will be multiplied by the coefficient in the `GeneratorIndex`, of unitary evolution. The second parameter is the qubit register the unitary acts on. For example: 
+
+```qsharp
+let stepSize = 0.6;
+PauliEvolutionSet()(generatorIndexExample)(stepSize, qubits);
+
+// This is the same as
+
+Exp([1;2;0;3], 0.4 * stepSize, [qubits[0];qubits[8];qubits[2];qubits[1]]);
+```
+
+### Time-Dependent Generators ###
+
+In many cases, we are also interested in modelling time-dependent generators, as might occur in the Schrödinger equation 
+$$
+\begin{align}
+    i\frac{d \ket{\psi(t)}}{d t} & = \hat H(t) \ket{\psi(t)},
+\end{align}
+$$
+where the generator $\hat H(t)$ is now time-dependent. The extension from the time-independent generators above to this case is straightforward. Rather than having a fixed `GeneratorSystem` describing the Hamiltonian for all times $t$, we instead have the `GeneratorSystemTimeDependent` user-defined type.
+
+```qsharp
+newtype GeneratorSystemTimeDependent = (Double -> GeneratorSystem);
+```
+
+The first parameter is a continuous schedule parameter $s\in [0,1]$, and functions of this type return a `GeneratorSystem` for that schedule. Note that the schedule parameter may be linearly related to the physical time parameter e.g. $s = t / T$, for some total time of simulation $T$. In general however, this need not be the case.
+
+Similarly, a complete description of this generator requires an `EvolutionSet`, and so we define an `EvolutionSchedule` user-defined type.
+
+```qsharp
+newtype EvolutionSchedule = (EvolutionSet, GeneratorSystemTimeDependent);
+```
 

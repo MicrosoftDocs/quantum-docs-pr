@@ -19,6 +19,8 @@
         "_dependentPackages/MarkdigEngine/content",
         "_dependentPackages/uref/content"
       ],
+      "enable_xrefmap_share": true,
+      "xref_query_tags" : ["/qsharp"],
       "customized_tasks": {
         "docset_prebuild": [
           "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",

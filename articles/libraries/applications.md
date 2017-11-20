@@ -25,18 +25,18 @@ ms.topic: article-type-from-white-list
 
 ### Hamiltonian Simulation ###
 
-The simulation of quantum systems is one of the most exciting applications of quantum computation. On a classical computer, the difficulty of simulating quantum mechanics, in general, scales with the dimension $N$ of its state-vector representation. As this representation grows exponentially with the number of $n$ qubits $N=\mathcal{O}(n)$, a trait known also known as the [Curse of dimensionality][quantum-computing-concepts#multiple-qubits], quantum simulation on classical hardware is intractable. However, the situation is very different on quantum hardware -- so long the system of interest has a classical description that is, in some sense, sufficiently sparse, efficient simulation using a number of quantum gates poly-logarithmic in the dimension of the system is possible.  
+The simulation of quantum systems is one of the most exciting applications of quantum computation. On a classical computer, the difficulty of simulating quantum mechanics, in general, scales with the dimension $N$ of its state-vector representation. As this representation grows exponentially with the number of $n$ qubits $N=\mathcal{O}(n)$, a trait known also known as the [Curse of dimensionality](quantum-computing-concepts#multiple-qubits), quantum simulation on classical hardware is intractable. However, the situation is very different on quantum hardware -- so long the system of interest has a classical description that is, in some sense, sufficiently sparse, efficient simulation using a number of quantum gates poly-logarithmic in the dimension of the system is possible.  
 
 The most common variation of quantum simulation called the time-independent Hamiltonian simulation problem. There, one is provided with a classical description of the system Hamiltonian $H$, which is a Hermitian matrix, and some initial quantum state $\ket{\psi(0)}$ that is encoded in some basis on some number of qubits on a quantum computer. As quantum states in closed systems evolve under the Schrödinger equation
 $$
 \begin{align}
-    \frac{d \ket{\psi(t)}}{d t} & = \hat{H}(t) \ket{\psi(t)},
+    \frac{d \ket{\psi(t)}}{d t} & = \hat{H} \ket{\psi(t)},
 \end{align}
 $$
 the goal is to to implement the unitary time-evolution operator $U(t)=e^{-i\hat{H}t}$ at some fixed time $t$, where $\ket{\psi(t)}=U(t)\ket{\psi(0)}$ solves the Schrödinger equation. Analogously, the time-dependent Hamiltonian simulation problem solves the same equation, but with $H(t)$ now a function of time. 
 
 #### Classical Descriptions of Hamiltonians ####
-Hamiltonian simulation problem is a major component of many quantum simulation problems. The solution to Hamiltonian simulation is an algorithm that describes a sequence of primitive quantum gates for  synthesizing an approximating unitary $\tilde{U}$ with error $\|\tilde{U} - U(t)\| \le \epsilon$. The complexity of this algorithm depends very strongly on the form of this classical description. For instance, if $H$ acting on $n$ qubits were to be provided as a list of $2^n \times 2^n$ numbers, one for each matrix element, simply reading the data would already require exponential time. Additional assumptions of the format of the input are therefore required. 
+Hamiltonian simulation problem is a major component of many quantum simulation problems. The solution to Hamiltonian simulation is an algorithm that describes a sequence of primitive quantum gates for  synthesizing an approximating unitary $\tilde{U}$ with error $\\|\tilde{U} - U(t)\\| \le \epsilon$. The complexity of this algorithm depends very strongly on the form of this classical description. For instance, if $H$ acting on $n$ qubits were to be provided as a list of $2^n \times 2^n$ numbers, one for each matrix element, simply reading the data would already require exponential time. Additional assumptions of the format of the input are therefore required. 
 
 In the original formulation by [Seth Lloyd](http://science.sciencemag.org/content/273/5278/1073), it is assumed that the Hamiltonian decomposes into a sum of parts.
 $$
@@ -44,7 +44,7 @@ $$
     \hat{H} & = \sum^{d-1}_{j=0} \hat{H}_j.
 \end{align}
 $$
-Moreover, it is assumed that that each part, a Hamiltonian $\hat{H}_j$, is easy to simulate. This means that the unitary $e^{-\hat{H}_j t}$ for any time $t$ may be implemented exactly using $\mathcal{O}(1)$ primitive quantum gates. The best simulation algorithms are then able to approximate time-evolution by the whole $e^{-i\hat{H}t}$ using a product of $\mathcal{O}(\text{poly}(d,t,\epsilon, \|H_j\|))$ time-evolutions of the parts. As such, Hamiltonian simulation is defined to be efficient if the number of terms $d=\text{polylog}(N)$ is polylogarithmic in the number of qubits acted upon by $\hat{H}. 
+Moreover, it is assumed that that each part, a Hamiltonian $\hat{H}_j$, is easy to simulate. This means that the unitary $e^{-\hat{H}_j t}$ for any time $t$ may be implemented exactly using $\mathcal{O}(1)$ primitive quantum gates. One common family of simulation algorithms, based on Trotter-Suzuki decompositions, are then able to approximate time-evolution by the whole $e^{-i\hat{H}t}$ using a product of $\mathcal{O}(\text{poly}(d,t,\epsilon, \|H_j\|))$ time-evolutions of the parts. Improved algorithms may be found in the [For More Information section](for-more-information). As such, Hamiltonian simulation is defined to be efficient if the number of terms $d=\text{polylog}(N)$ is polylogarithmic in the number of qubits acted upon by $\hat{H}. 
 
 > [!TIP]
 > Hamiltonians that decompose into a sum of parts may be described using the [Dynamical Generator Representation](data-structures#dynamical-generator-modeling) library
@@ -158,7 +158,11 @@ operation AdiabaticStateEnergyEstimate( nQubits : Int,
 
 The modeling of Hamiltonians is one of the major application areas desired for Quantum Computing. We provide a simple example of this based on the experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) using superconducting qubits. The model used for molecular hydrogen ($H_2$) only requires Pauli matrices and takes the form:
 
-        $H = g\_{0}\bold{1}+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$
+$$
+\begin{align}
+\hat H = g\_{0}\bold{1}+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$
+\end{align}
+$$
 
 We represent the target Hamiltonian as an expansion in a set of unitaries which allows the system to find a solution using either Trotter-Suzuki with Phase Estimation or a Linear Combination of Unitaries (LCU) with Amplitude Amplification. For an in-depth treatment of LCU, please refer to Chapter 2 of  [Robin Kohari's thesis](https://uwspace.uwaterloo.ca/bitstream/handle/10012/8625/Kothari_Robin.pdf). A nice overview of the area was presented by [Dominic Berry](http://www.dominicberry.org/presentations/Durban.pdf).
 

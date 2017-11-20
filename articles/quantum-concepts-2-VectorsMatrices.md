@@ -34,22 +34,14 @@ v_2\\\\
 v_n
 \end{bmatrix}$$
 
-<<<<<<< HEAD
-The norm of a vector $v$ is defined as $\sqrt{\sum_i |v_i|^2}$. A vector is said to be of unit norm (or alternatively it is called a unit vector) if its norm is $1$. The adjoint of a vector $v$ is denoted $v^\dagger$ and is defined to be the following row vector:
-=======
-The norm of a vector $v$ is defined as $\sqrt{\sum_i |v_i|^2}$. A vector is said to be of unit norm (or alternatively it is called a *unit vector*) if its norm is $1$. The adjoint of a vector $v$ is denoted $v^\dagger$ and is defined to be the following row vector where $*$ denotes the complex conjugate,
->>>>>>> e1fb095dce1371314e13ca369283beea5afd68dd
+The norm of a vector $v$ is defined as $\sqrt{\sum\_i |v\_i|^2}$. A vector is said to be of unit norm (or alternatively it is called a *unit vector*) if its norm is $1$. The adjoint of a vector $v$ is denoted $v^\dagger$ and is defined to be the following row vector where $\*$ denotes the complex conjugate,
 
 $$\begin{bmatrix}v_1 \\\\ \vdots \\\\ v_n \end{bmatrix}^\dagger = \begin{bmatrix}v_1^* & \cdots & v_n^* \end{bmatrix}$$
 
 The most common way to multiply two vectors together is through the *inner product*, also known as a dot product.  The inner product gives the projection of one vector onto another and is invaluable in describing how to express one vector as a sum of other simpler vectors.  The inner product between $u$ and $v$, denoted $\left\langle u, v\right\rangle$ is defined as
 
 $$
-<<<<<<< HEAD
-\langle u, v\rangle = u^\dagger v=u_1^{*} v_1 + \cdots + u_n^{*} v_n.
-=======
-\langle u, v\rangle = u^\dagger v=u_1^* v_1 + \cdots + u_n^* v_n.
->>>>>>> e1fb095dce1371314e13ca369283beea5afd68dd
+\langle u, v\rangle = u^\dagger v=u\_1^{\*} v_1 + \cdots + u\_n^{\*} v\_n.
 $$
 
 This notation also allows the norm of a vector $v$ to be written as $\sqrt{\langle v, v\rangle}$.

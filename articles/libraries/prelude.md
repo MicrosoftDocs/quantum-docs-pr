@@ -183,7 +183,7 @@ For example, `R(PauliZ, PI() / 4, _)` has type `(Qubit => () : Adjoint, Controll
 > $\ket{1}$ eigenstate is rotated by $\phi / 2$, so that the $\ket{1}$ eigenstate is rotated by $\phi$
 > relative to the $\ket{0}$ eigenstate.
 >
-> In particular, this means that `T` and `R(PauliZ, PI() / 8, _)` differ only by an irrelevant a [global phase](TODO: glossary link).
+> In particular, this means that `T` and `R(PauliZ, PI() / 8, _)` differ only by an irrelevant [global phase](TODO: glossary link).
 > For this reason, $T$ is sometimes known as the $\frac{\pi}{8}$-gate.
 >
 > Note also that rotating around `PauliI` simply applies a global phase of $\phi / 2$.  While such phases are irrelevant, as argued in [the conceptual documents](../quantum-concepts-4-Qubit.md), such phases are not irrelevant for controlled `PauliI` rotations.

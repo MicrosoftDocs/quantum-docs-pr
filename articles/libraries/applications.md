@@ -58,7 +58,7 @@ $$
     H & = \sum^{d-1}_{j=0} H_j.
 \end{align}
 $$
-Moreover, it is assumed that each part, a Hamiltonian $H\_j$, is easy to simulate. This means that the unitary $e^{-H\_j t}$ for any time $t$ may be implemented exactly using $\mathcal{O}(1)$ primitive quantum gates. For instance, this is true in the special case where each $H\_j$ are local Pauli operators, meaning that they are of tensor products of $\mathcal{O}(1)$ non-identity Pauli operators that act on spatially close qubits. This model is particularly applicable to physical systems with bounded and local interaction, as the number of terms is $d=\mathcal{O}(\text{polylog}(N))$, and may clearly be written down, i.e. classically described, in polynomial time.
+Moreover, it is assumed that each part, a Hamiltonian $H\_j$, is easy to simulate. This means that the unitary $e^{-iH\_j t}$ for any time $t$ may be implemented exactly using $\mathcal{O}(1)$ primitive quantum gates. For instance, this is true in the special case where each $H\_j$ are local Pauli operators, meaning that they are of tensor products of $\mathcal{O}(1)$ non-identity Pauli operators that act on spatially close qubits. This model is particularly applicable to physical systems with bounded and local interaction, as the number of terms is $d=\mathcal{O}(\text{polylog}(N))$, and may clearly be written down, i.e. classically described, in polynomial time.
 
 > [!TIP]
 > Hamiltonians that decompose into a sum of parts may be described using the [Dynamical Generator Representation](data-structures#dynamical-generator-modeling) library.
@@ -168,8 +168,6 @@ operation AdiabaticStateEnergyEstimate(
 > Applications of adiabatic state preparation are covered in the samples. 
 > For the Ising model using a manual implementation of adiabatic state preparation versus using the `AdiabaticEvolution` function, please see the [**AdiabaticIsing** sample](TODO: link).
 > For phase estimation and adiabatic state preparation in the Ising model, please see the [**IsingPhaseEstimation** sample](TODO: link).
-
-The modeling of Hamiltonians is one of the major application areas desired for Quantum Computing. We provide a simple example of this based on the experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) using superconducting qubits. The model used for molecular hydrogen ($H_2$) only requires Pauli matrices
 
 > [!TIP]
 > The [simulation of molecular Hydrogen](TODO: link) is an interesting and brief sample. The model and experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) only requires Pauli matrices and takes the form $\hat H = g\_{0}I\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$. This is an effective Hamiltonian only requiring only 2 qubits, where the constants $g$ are computed from the distance $R$ between the two Hydrogen atoms. Using canon functions, the Paulis are converted to unitaries and then evolved over short periods of time using the Trotter-Suzuki decomposition. A good approximation to the $H_2$ ground state can be created without using adiabatic state preparation, and so the ground state energy may be found directly by utilizing phase Estimation from the canon.

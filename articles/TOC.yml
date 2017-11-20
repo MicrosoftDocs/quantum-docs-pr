@@ -108,4 +108,6 @@
   href: Glossary.md
 - name: For more information
   href: quantum-ForMoreInfo.md
+- name: C# components reference
+  href: https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?branch=master
 

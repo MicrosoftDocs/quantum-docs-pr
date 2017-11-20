@@ -38,7 +38,7 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 
 ## Creating the Q# development environment 
 
-1. Download and install [Microsoft Quantum Developer Kit](https://solidrepo.blob.core.windows.net/alpha/latest/QbVSIX.vsix) Visual Studio extension. 
+1. Download and install [Microsoft Quantum Developer Kit](https://solidrepo.blob.core.windows.net/alpha/latest/QsharpVSIX.vsix) Visual Studio extension. 
 Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip` during download. In this case, rename it to `QsharpVSIX.vsix`.
 
 1. If Visual Studio is open, close it.

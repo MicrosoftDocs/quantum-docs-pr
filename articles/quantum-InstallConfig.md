@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Setting up the Q# development environment 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+description: This section specifies how to create a Q# development environment and validate it by running the teleport sample program. 
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
@@ -32,9 +32,9 @@ If you have [Visual Studio](https://www.visualstudio.com/) 2017 installed, you'r
 If you do not have Visual Studio installed, you can download Visual Studio 2017 Community Edition for free.
 1. Go to the [Visual Studio download page](https://www.visualstudio.com/downloads/).
 2. Click on the Visual Studio Community **Free download** button.
-3. Navigate to the folder your browser uses for downloads and double click on the executable file whose name begins with **vs_community**. The file name will contain a sequence of numbers that varies.
-1. _**Important!**_ When you are presented with the option to select the tools for specific workloads, check the boxes for **Universal Windows Platform development** and **.NET desktop development**
-2. After selecting your workloads, click **Install** to complete the installation.
+3. Navigate to your browser's download folder and double click on the executable file whose name begins with **vs_community**. The file name will contain a sequence of numbers that varies.
+4. _**Important!**_ When you are presented with the option to select the tools for specific workloads, check the boxes for **Universal Windows Platform development** and **.NET desktop development**
+5. After selecting your workloads, click **Install** to complete the installation.
 
 ## Creating the Q# development environment 
 

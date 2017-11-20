@@ -61,8 +61,6 @@
   items:
     - name: The prelude
       href: libraries/prelude.md
-    - name: Prelude extensions
-      href: libraries/extensions.md
     - name: Higher-order control flow
       href: libraries/control-flow.md
     - name: Data structures and modeling

@@ -364,3 +364,40 @@ Finally, the `Message` function logs a message in a machine-dependent way.
 By default, this writes the string to the console.
 `Message` has signature `((String) -> ())`, again representing that emitting a debug log message cannot be observed from within Q#.
 
+## Extension Functions and Operations ##
+
+In addition, the prelude defines a rich set of mathematical and type conversion functions at the .NET level for use within Q# code.
+For instance, the @"microsoft.quantum.extensions.math" namespace defines useful operations such as @"microsoft.quantum.extensions.math.sin" and @"microsoft.quantum.extensions.math.log".
+The implementation provided by the Quantum Development Kit uses the classical .NET base class library, and thus may involve an additional communicaions round trip between quantum programms and their classical drivers.
+While this does not present a problem for a local simulator, this can be a performance issue when using a remote simulator or actual hardware as a target machine.
+That said, an individual target machine may mitigate this performance impact by overriding these operations with versions that are more efficient for that particular system.
+
+### Math ###
+
+The <xref:microsoft.quantum.extensions.math> namespace provides many useful functions from the .NET base class library's [`System.Math` class](https://docs.microsoft.com/en-us/dotnet/api/system.math?view=netframework-4.7.1).
+These functions can be used in the same manner as any other Q# functions:
+
+```qsharp
+open Microsoft.Quantum.Extensions.Math;
+// ...
+let y = Sin(theta);
+```
+
+Where a .NET static method has been overloaded based on the type of its arguments, the corresponding Q# function is annotated with a suffix indicating the type of its input:
+
+```qsharp
+let x = AbsI(-3); // x : Int = 3
+let y = AbsD(-PI()); // y : Double = 3.1415...
+```
+
+
+### Type Conversions ###
+
+The <xref:microsoft.quantum.extensions.covnert> namespace provides functions from the .NET base class library's [`System.Convert` class](https://docs.microsoft.com/en-us/dotnet/api/system.convert?view=netframework-4.7.1) that are relevant to Q# types.
+For example, the functions <xref:microsoft.quantum.extensions.convert.tostringd> and <xref:microsoft.quantum.extensions.convert.tostringi> convert inputs of type `Double` and `Int`, respectively, to `String`.
+
+
+### Bitwise Operations ###
+
+Finally, the <xref:microsoft.quantum.extensions.bitwise> namespace provides several useful functions for manipulating integers through bitwise operators.
+For instance, <xref:microsoft.quantum.extensions.bitwise.parity> returns the bitwise parity of an integer as another integer.

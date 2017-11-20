@@ -28,12 +28,12 @@ ms.topic: article-type-from-white-list
 The primitive operations defined in the standard library roughly fall into one of several categories:
 
 - Essential classical functions.
-- Operations representing elements of the Clifford group and the $T$ gate. <!-- TODO: link to qconcepts -->
+- Operations representing unitaries composed of [Clifford and $T$ gates](../quantum-concepts-4-Qubit.md). <!-- TODO: link to qconcepts -->
 - Operations representing rotations about various operators.
 - Operations implementing measurements.
 
-Since the Clifford + $T$ gate set is universal for quantum computing, these operations suffice to implement any quantum algorithm.
-By also providing rotations as well, Q# does not require the programmer to directly express the Clifford + $T$ decomposition in cases where highly efficient circuits are known and can be implemented by the compiler.
+Since the Clifford + $T$ gate set is [universal](../quantum-concepts-5-MultipleQubits.md) for quantum computing, these operations suffice to approximately implement any quantum algorithm within negligibly small error.
+By also providing rotations as well, Q# allows the programmer to work within the single qubit unitary and CNOT gate library.  This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [For more information](../quantum-ForMoreInformation)).
 
 <!-- TODO: discuss rotation conventions more here. -->
 
@@ -183,11 +183,11 @@ For example, `R(PauliZ, PI() / 4, _)` has type `(Qubit => () : Adjoint, Controll
 > $\ket{1}$ eigenstate is rotated by $\phi / 2$, so that the $\ket{1}$ eigenstate is rotated by $\phi$
 > relative to the $\ket{0}$ eigenstate.
 >
-> In particular, this means that `T` and `R(PauliZ, PI() / 8, _)` differ by a [global phase](TODO: glossary link)
-> of $e^{-i \pi / 8}$.
+> In particular, this means that `T` and `R(PauliZ, PI() / 8, _)` differ only by an irrelevant a [global phase](TODO: glossary link).
 > For this reason, $T$ is sometimes known as the $\frac{\pi}{8}$-gate.
 >
-> Note also that rotating around `PauliI` simply applies a global phase of $\phi / 2$.
+> Note also that rotating around `PauliI` simply applies a global phase of $\phi / 2$.  While such phases are irrelevant, as argued in [the conceptual documents](../quantum-concepts-4-Qubit.md), such phases are not irrelevant for controlled `PauliI` gates.  
+> This means that including `PauliI` rotations can aid the automatic generation of controlled unitaries.
 
 Within quantum algorithms, it is often useful to express rotations as dyadic fractions, such that $\phi = \pi k / 2^n$ for some $k \in \mathbb{Z}$ and $n \in \mathbb{N}$.
 The <xref:microsoft.quantum.primitive.rfrac> operation implements a rotation around a specified Pauli axis using this convention.

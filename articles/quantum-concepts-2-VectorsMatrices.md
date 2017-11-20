@@ -34,14 +34,22 @@ v_2\\\\
 v_n
 \end{bmatrix}$$
 
+<<<<<<< HEAD
 The norm of a vector $v$ is defined as $\sqrt{\sum_i |v_i|^2}$. A vector is said to be of unit norm (or alternatively it is called a unit vector) if its norm is $1$. The adjoint of a vector $v$ is denoted $v^\dagger$ and is defined to be the following row vector:
+=======
+The norm of a vector $v$ is defined as $\sqrt{\sum_i |v_i|^2}$. A vector is said to be of unit norm (or alternatively it is called a *unit vector*) if its norm is $1$. The adjoint of a vector $v$ is denoted $v^\dagger$ and is defined to be the following row vector where $*$ denotes the complex conjugate,
+>>>>>>> e1fb095dce1371314e13ca369283beea5afd68dd
 
 $$\begin{bmatrix}v_1 \\\\ \vdots \\\\ v_n \end{bmatrix}^\dagger = \begin{bmatrix}v_1^* & \cdots & v_n^* \end{bmatrix}$$
 
-The most common way to multiply two vectors together is through the inner product, also known as a dot product.  The inner product gives the projection of one vector onto another and is invaluable in describing how to express one vector as a sum of other simpler vectors.  The inner product between $u$ and $v$, denoted $\left\langle u, v\right\rangle$ is defined as
+The most common way to multiply two vectors together is through the *inner product*, also known as a dot product.  The inner product gives the projection of one vector onto another and is invaluable in describing how to express one vector as a sum of other simpler vectors.  The inner product between $u$ and $v$, denoted $\left\langle u, v\right\rangle$ is defined as
 
 $$
+<<<<<<< HEAD
 \langle u, v\rangle = u^\dagger v=u_1^{*} v_1 + \cdots + u_n^{*} v_n.
+=======
+\langle u, v\rangle = u^\dagger v=u_1^* v_1 + \cdots + u_n^* v_n.
+>>>>>>> e1fb095dce1371314e13ca369283beea5afd68dd
 $$
 
 This notation also allows the norm of a vector $v$ to be written as $\sqrt{\langle v, v\rangle}$.
@@ -76,7 +84,7 @@ M_{11} ~~ M_{12} ~~ \cdots ~~ M_{1n}\\\\
 M_{21} ~~ M_{22} ~~ \cdots ~~ M_{2n}\\\\
 \ddots\\\\
 M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}\\\\
-\end{bmatrix}$$
+\end{bmatrix}.$$
 
 Note that a vector of dimension $n$ is simply a matrix of size $n \times 1$. As with vectors, we can multiply a matrix with a number $c$ to obtain a new matrix where every entry is multiplied with $c$, and we can add two matrices of the same size to produce a new matrix whose entries are the sum of the respective entries of the two matrices. 
 
@@ -113,7 +121,7 @@ $$\boldone=\begin{bmatrix}
 0 ~~ 1 ~~ \cdots ~~ 0\\\\
 ~~ \ddots\\\\
 0 ~~ 0 ~~ \cdots ~~ 1
-\end{bmatrix}$$
+\end{bmatrix}.$$
 
 For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \boldone$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. 
 
@@ -147,7 +155,7 @@ Finally, the tensor product (or Kronecker product) of two matrices $M$ of size $
 	\end{bmatrix}
 \end{align}
 
-This is better demonstrated using some examples:
+This is better demonstrated with some examples:
 
 $$
 	\begin{bmatrix}
@@ -193,10 +201,10 @@ $$
 	ag\ ah\ bg\ bh \\\\
 	ce\ cf\ de\ df \\\\
 	cg\ ch\ dg\ dh
-	\end{bmatrix}
+	\end{bmatrix}.
 $$
 
-A final notation convention surrounding tensor products that is useful is that, for any vector $v$ or matrix $M$, $v^{\otimes n}$ or $M^{\otimes n}$ is short hand for an $n$-fold repeated tensor product.  For example:
+A final useful notational convention surrounding tensor products is that, for any vector $v$ or matrix $M$, $v^{\otimes n}$ or $M^{\otimes n}$ is short hand for an $n$-fold repeated tensor product.  For example:
 
 \begin{align}
 &\begin{bmatrix} 1 \\\\ 0 \end{bmatrix}^{\otimes 1} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \qquad\begin{bmatrix} 1 \\\\ 0 \end{bmatrix}^{\otimes 2} = \begin{bmatrix} 1 \\\\ 0 \\\\0 \\\\0 \end{bmatrix}

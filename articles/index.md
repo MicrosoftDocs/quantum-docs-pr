@@ -40,8 +40,6 @@ The Quantum Development Kit preview provides a complete development and simulati
 <tr><td>Visual Studio extension</td><td>The extension contains templates for Q# files and projects as well as syntax highlighting. The extension also installs and creates automatic hooks to the compiler.</td></tr>
 </table>
 
-
-
 ## Quantum Development Kit documentation
 The current documentation includes the following topics.
 * [Quantum computing concepts](quantum-concepts-1-Intro.md) includes topics such the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
@@ -53,8 +51,16 @@ The current documentation includes the following topics.
 * [Q# language reference](quantum-QsharpReference.md) details the Q# language including the type model, expressions, statements, and compiler use.
 * [For more information](quantum-ForMoreInfo.md) contains specially selected references to deep coverage of quantum computing topics.
 * [Quantum trace simulator reference](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?branch=master) contains reference material about trace simulator entities and exceptions.
-* [Q# library reference](api/overview.md) contains reference information about library entities by namespace.
+* [Q# library reference](api/overview.yml) contains reference information about library entities by namespace.
 
+* [Q# library reference](api/overview.md)
+* [Q# library reference](/api/overview.md)
+* [Q# library reference](../api/overview.md)
+* [Q# library reference](../../api/overview.md)
+* [Q# library reference](api/microsoft.quantum.primitive.h.yml)
+* [Q# library reference](/api/microsoft.quantum.primitive.h.yml)
+* [Q# library reference](../api/microsoft.quantum.primitive.h.yml)
+* [Q# library reference](../../api/microsoft.quantum.primitive.h.yml)
 
 
 

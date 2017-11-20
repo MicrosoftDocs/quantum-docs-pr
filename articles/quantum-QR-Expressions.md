@@ -27,7 +27,7 @@ ms.topic: article-type-from-white-list
 
 Given any expression, that same expression enclosed in parantheses 
 is an expression of the same type.
-For instance, `(7)` is an `Int`` expression, 
+For instance, `(7)` is an `Int` expression, 
 `([1;2;3])` is an expression of type array of `Int`s,
 and `((1,2))` is an expression with type `(Int, Int)`.
 

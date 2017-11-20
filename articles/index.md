@@ -19,8 +19,8 @@ Your feedback about all parts of the Quantum Development Kit is important. Pleas
 Email the feedback to <qdkfeed@microsoft.com>
 
 ## Microsoft Quantum Development Kit components
-The Quantum Developer Kit preview provides a complete development and simulation environment that contains the following components.
-
+The Quantum Development Kit preview provides a complete development and simulation environment that contains the following components.
+<!--
 > [!div class="mx-tdBreakAll"]
 > |Component|Function|
 > |-------------------------------------|-----------------------------------------|
@@ -30,9 +30,19 @@ The Quantum Developer Kit preview provides a complete development and simulation
 > |Quantum computer <br>trace simulator| The trace simulator does not simulate the quantum environment like the local quantum <br>simulator. It is used to estimate the resources required to execute a quantum program and also <br>allow faster debugging of the non-Q# control code.|
 > |Visual Studio <br>extension| The extension contains templates for Q# files and projects as well as syntax highlighting. <br>The extension also installs and creates automatic hooks to the compiler.
 > [!div class="mx-tdBreakAll"]
+--->
+<table>
+<tr><th>Component</th><th>Function</th></tr>
+<tr><td>Q# language and compiler</td><td>Q# is a domain-specific programming language used for expressing quantum algorithms. It is used for writing sub-programs that execute on an adjunct quantum processor, under the control of a classical host program and computer.</td></tr>
+<tr><td>Q# standard library</td><td>The library contains operations and functions that support both the classical language control requirement and the Q# quantum algorithms.</td></tr>
+<tr><td>Local quantum machine simulator</td><td>A full state vector simulator optimized for accurate vector simulation and speed.</td></tr>
+<tr><td>Quantum computer trace simulator</td><td>The trace simulator does not simulate the quantum environment like the local quantum simulator. It is used to estimate the resources required to execute a quantum program and also allow faster debugging of the non-Q# control code.</td></tr>
+<tr><td>Visual Studio extension</td><td>The extension contains templates for Q# files and projects as well as syntax highlighting. The extension also installs and creates automatic hooks to the compiler.</td></tr>
+</table>
 
 
-## Quantum Developer Kit documentation
+
+## Quantum Development Kit documentation
 The current documentation includes the following topics.
 * [Quantum computing concepts](quantum-concepts-1-Intro.md) includes topics such the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
 * [Installation and configuration](quantum-InstallConfig.md) describes how to quickly set up your quantum development environment. Your Visual Studio environment will be enhanced with a compiler for the Q# language and templates for Q# projects and files.

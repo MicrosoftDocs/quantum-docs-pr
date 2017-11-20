@@ -126,8 +126,8 @@ A matrix $M$ is said to be Hermitian if $M=M^\dagger$.
 
 Finally, the tensor product (or Kronecker product) of two matrices $M$ of size $m\times n$ and $N$ of size $p \times q$ is a larger matrix $P=M\otimes N$ of size $mp \times nq$, and is obtained from $M$ and $N$ as follows:
 
-$$
-	M \otimes N =
+\begin{align}
+	M \otimes N & =
 	\begin{bmatrix}
 		M_{11} ~~ \cdots ~~ M_{1n} \\\\
 		\ddots\\\\
@@ -137,8 +137,8 @@ $$
 		N_{11}  ~~ \cdots ~~ N_{1q}\\\\
 		\ddots\\\\
 		N_{p1} ~~ \cdots ~~ N_{pq}
-	\end{bmatrix}
-	=
+	\end{bmatrix} \\\\
+	& =
 	\begin{bmatrix}
 		M_{11} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}~~ \cdots ~~ 
 		M_{1n} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}\\\\
@@ -146,7 +146,7 @@ $$
 		M_{m1} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}~~ \cdots ~~ 
 		M_{mn} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}
 	\end{bmatrix}.
-$$
+\end{align}
 
 This is better demonstrated with some examples:
 

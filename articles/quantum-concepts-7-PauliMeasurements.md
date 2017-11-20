@@ -42,7 +42,7 @@ Of course any $2\times 2$ matrix that is a unitary transformation of $Z$ also sa
 $$
 \begin{array}{|c|c|}
 \text{Pauli Measurement} & U\\\\ 
-Z & \mathbb{1}\\\\ 
+Z & \boldone\\\\ 
 X & H\\\\ 
 Y & HS^\dagger\\\\ 
 \end{array}
@@ -61,28 +61,28 @@ $$
 Thus the tensor products of two Pauli-$Z$ operators forms a matrix composed of two spaces consisting of $+1$ and $-1$ eigenvalues.  As with the single qubit case, both constitute a half-space meaning that half of the accessible vector space belongs to the $+1$ eigenspace and the remaining half to the $-1$ eigenspace.  In general, it is easy to see from the definition of the tensor product that any tensor product of Pauli-$Z$ operators and the identity also obeys this.  For example,
 
 $$
-Z\otimes\mathbb{1}=\begin{bmatrix} 1&0&0&0\\\\  0&-1&0&0\\\\  0&0&1&0\\\\ 0&0&0&-1\end{bmatrix}.
+Z\otimes\boldone=\begin{bmatrix} 1&0&0&0\\\\  0&-1&0&0\\\\  0&0&1&0\\\\ 0&0&0&-1\end{bmatrix}.
 $$
 
-As before, any unitary transformation of such matrices also describes two half-spaces labeled by $\pm 1$ eigenvalues.  For example, $X\otimes X = H\otimes H(Z\otimes Z)H\otimes H$  from the identity that $Z=HXH$.  Similar to the one-qubit case, all two qubit Pauli-measurements can be written as $U^\dagger (Z\otimes \mathbb{1}) U$ for $4\times 4$ unitary matrices $U$.  We enumerate the transformations in the following table where we introduce for convenience the swap gate which swaps qubits $0$ and $1$: $\text{SWAP}=\text{CNOT}_{01}\text{CNOT}_{10}\text{CNOT}_{01}$:
+As before, any unitary transformation of such matrices also describes two half-spaces labeled by $\pm 1$ eigenvalues.  For example, $X\otimes X = H\otimes H(Z\otimes Z)H\otimes H$  from the identity that $Z=HXH$.  Similar to the one-qubit case, all two qubit Pauli-measurements can be written as $U^\dagger (Z\otimes \boldone) U$ for $4\times 4$ unitary matrices $U$.  We enumerate the transformations in the following table where we introduce for convenience the swap gate which swaps qubits $0$ and $1$: $\text{SWAP}=\text{CNOT}_{01}\text{CNOT}_{10}\text{CNOT}_{01}$:
 
 $$
 \begin{array}{|c|c|}
 \text{Pauli Measurement} & U\\\\ 
-Z\otimes \mathbb{1} & \mathbb{1}\otimes \mathbb{1}\\\\ 
-X\otimes \mathbb{1} & H\otimes \mathbb{1}\\\\ 
-Y\otimes \mathbb{1} & HS^\dagger\otimes \mathbb{1}\\\\ 
-\mathbb{1} \otimes Z & \text{SWAP}\\\\ 
-\mathbb{1} \otimes X & (H\otimes \mathbb{1})\text{SWAP}\\\\ 
-\mathbb{1} \otimes Y & (HS^\dagger\otimes \mathbb{1})\text{SWAP}\\\\ 
+Z\otimes \boldone & \boldone\otimes \boldone\\\\ 
+X\otimes \boldone & H\otimes \boldone\\\\ 
+Y\otimes \boldone & HS^\dagger\otimes \boldone\\\\ 
+\boldone \otimes Z & \text{SWAP}\\\\ 
+\boldone \otimes X & (H\otimes \boldone)\text{SWAP}\\\\ 
+\boldone \otimes Y & (HS^\dagger\otimes \boldone)\text{SWAP}\\\\ 
 \end{array}
 \qquad
 \begin{array}{|c|c|}
 \text{Pauli Measurement} & U\\\\ 
 Z\otimes Z & \mathrm{CNOT}_{10}\\\\ 
-X\otimes Z & \mathrm{CNOT}_{10}(H\otimes \mathbb{1})\\\\ 
-Y\otimes Z & \mathrm{CNOT}_{10}(HS^\dagger\otimes \mathbb{1})\\\\ 
-Z\otimes X & \mathrm{CNOT}_{10}(\mathbb{1}\otimes H)\\\\ 
+X\otimes Z & \mathrm{CNOT}_{10}(H\otimes \boldone)\\\\ 
+Y\otimes Z & \mathrm{CNOT}_{10}(HS^\dagger\otimes \boldone)\\\\ 
+Z\otimes X & \mathrm{CNOT}_{10}(\boldone\otimes H)\\\\ 
 X\otimes X & \mathrm{CNOT}_{10}(H\otimes H)\\\\ 
 Y\otimes X & \mathrm{CNOT}_{10}(HS^\dagger\otimes H)\\\\ 
 \end{array}
@@ -92,21 +92,21 @@ $$
 $$
 \begin{array}{|c|c|}
 \text{Pauli Measurement} & U\\\\ 
-Z\otimes Y & \mathrm{CNOT}_{10}(\mathbb{1} \otimes HS^\dagger)\\\\ 
+Z\otimes Y & \mathrm{CNOT}_{10}(\boldone \otimes HS^\dagger)\\\\ 
 X\otimes Y & \mathrm{CNOT}_{10}(H\otimes HS^\dagger)\\\\ 
 Y\otimes Y & \mathrm{CNOT}_{10}(HS^\dagger\otimes HS^\dagger)\\\\ 
 \end{array}
 $$
 
-Here the gate $\mathrm{CNOT}_{10}$ appears for the following reason.  Each Pauli measurement that does not include the $\mathbb{1}$ matrix is equivalent up to a unitary to $Z\otimes Z$ by the above reasoning.  The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector and the controlled-not operations that appear in this list serve to compute this parity and store it in the first bit.  Then once the first bit is measured, we can recover the identity of the resultant half-space which is equivalent to measuring the Pauli operator.
+Here the gate $\mathrm{CNOT}_{10}$ appears for the following reason.  Each Pauli measurement that does not include the $\boldone$ matrix is equivalent up to a unitary to $Z\otimes Z$ by the above reasoning.  The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector and the controlled-not operations that appear in this list serve to compute this parity and store it in the first bit.  Then once the first bit is measured, we can recover the identity of the resultant half-space which is equivalent to measuring the Pauli operator.
 
-One additional note, while it may be tempting to assume that measuring $Z\otimes Z$ is the same as measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$ this assumption would be false.  The reason why is that measuring $Z\otimes Z$ projects the quantum state into either the $+1$ or $-1$ eigenstate of these operators.  Measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$ projects the quantum state vector first onto a half space of $Z\otimes \mathbb{1}$ and then onto a half space of $\mathbb{1} \otimes Z$.  As there are four computational basis vectors, performing both measurements reduces the state to a quarter-space and hence reduces it to a single computational basis vector.
+One additional note, while it may be tempting to assume that measuring $Z\otimes Z$ is the same as measuring $Z\otimes \boldone$ and then $\boldone \otimes Z$ this assumption would be false.  The reason why is that measuring $Z\otimes Z$ projects the quantum state into either the $+1$ or $-1$ eigenstate of these operators.  Measuring $Z\otimes \boldone$ and then $\boldone \otimes Z$ projects the quantum state vector first onto a half space of $Z\otimes \boldone$ and then onto a half space of $\boldone \otimes Z$.  As there are four computational basis vectors, performing both measurements reduces the state to a quarter-space and hence reduces it to a single computational basis vector.
 
-Another way of looking at measuring tensor products of Paulis such as $X\otimes X$ or $Z\otimes Z$ is that these measurements let you look at information stored in the correlations between the two qubits.  Measuring $X\otimes \mathbb{1}$ lets you look at information that is locally stored in the first qubit.  While both types of measurements are equally valuable in quantum computing, the former illuminates the power of quantum computing better because it reveals that in quantum computing often the information you wish to learn is not stored in any single qubit but rather it is stored non-locally in all the qubits at once and only by looking at it through a joint measurement with $Z\otimes Z$ does this information become manifest.
+Another way of looking at measuring tensor products of Paulis such as $X\otimes X$ or $Z\otimes Z$ is that these measurements let you look at information stored in the correlations between the two qubits.  Measuring $X\otimes \boldone$ lets you look at information that is locally stored in the first qubit.  While both types of measurements are equally valuable in quantum computing, the former illuminates the power of quantum computing better because it reveals that in quantum computing often the information you wish to learn is not stored in any single qubit but rather it is stored non-locally in all the qubits at once and only by looking at it through a joint measurement with $Z\otimes Z$ does this information become manifest.
 
-Arbitrary Pauli operators such as $X\otimes Y \otimes Z \otimes \mathbb{1}$ can also be measured.  All such tensor products of Pauli operators have only two eigenvalues $\pm 1$ and both eigenspaces constitute half-spaces of the entire vector space.  Thus they coincide with the requirements stated above.  
+Arbitrary Pauli operators such as $X\otimes Y \otimes Z \otimes \boldone$ can also be measured.  All such tensor products of Pauli operators have only two eigenvalues $\pm 1$ and both eigenspaces constitute half-spaces of the entire vector space.  Thus they coincide with the requirements stated above.  
 
-In Q#, such measurements return $j$ if the measurement yields a result in the eigenspace of sign $(-1)^j$.  Having this as a built in feature in Q# is helpful because measuring such operators requires long chains of controlled-not gates and basis transformations to describe the diagonalizing $U$ gate needed to express the operation as a tensor product of $Z$ and $\mathbb{1}$.  By simply being able to specify that you wish to do one of these pre-defined measurements, you don't need to worry about how to transform your basis such that a computational basis measurement provides the necessary information.  Q# handles all the necessary basis transformations for you automatically.
+In Q#, such measurements return $j$ if the measurement yields a result in the eigenspace of sign $(-1)^j$.  Having this as a built in feature in Q# is helpful because measuring such operators requires long chains of controlled-not gates and basis transformations to describe the diagonalizing $U$ gate needed to express the operation as a tensor product of $Z$ and $\boldone$.  By simply being able to specify that you wish to do one of these pre-defined measurements, you don't need to worry about how to transform your basis such that a computational basis measurement provides the necessary information.  Q# handles all the necessary basis transformations for you automatically.
 
 ## The No Cloning Theorem
 Quantum information is powerful.  It enables us to do amazing things such as factor numbers exponentially faster than the best known classical algorithms, or simulate correlated electron systems that require exponential cost to simulate accurately.  However, there are limitations to the power of quantum computing.  One such limitation is given by the No-Cloning Theorem.

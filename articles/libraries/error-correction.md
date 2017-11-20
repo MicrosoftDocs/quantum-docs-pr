@@ -78,8 +78,8 @@ To help specify an error correcting codes, the Q# canon provides several distinc
 - <xref:microsoft.quantum.canon.logicalregister> `= Qubit[]`: Denotes that a register of qubits should be interpreted as the code block of an error-correcting code.
 - <xref:microsoft.quantum.canon.syndrome> `= Result[]`: Denotes that an array of measurement results should be interpreted as the syndrome measured on a code block.
 - <xref:microsoft.quantum.canon.recoveryfn> `= (Syndrome -> Pauli[])`: Denotes that a *classical* function should be used to interpret a syndrome and return a correction that should be applied.
-- <xref:microsoft.quantum.canon.encodeop> `= ((Qubit[], Qubit[]) => LogicalRegister)`: Denotes that an operation takes qubits representing data along with fresh auxillary qubits in order to produce a code block of an error-correcting code.
-- <xref:microsoft.quantum.canon.decodeop> `= (LogicalRegister => (Qubit[], Qubit[]))`: Denotes than an operation decomposes a code block of an error correcting code into the data qubits and the auxillary qubits used to represent syndrome information.
+- <xref:microsoft.quantum.canon.encodeop> `= ((Qubit[], Qubit[]) => LogicalRegister)`: Denotes that an operation takes qubits representing data along with fresh ancilla qubits in order to produce a code block of an error-correcting code.
+- <xref:microsoft.quantum.canon.decodeop> `= (LogicalRegister => (Qubit[], Qubit[]))`: Denotes than an operation decomposes a code block of an error correcting code into the data qubits and the ancilla qubits used to represent syndrome information.
 - <xref:microsoft.quantum.canon.syndromemeasop> `= (LogicalRegister => Syndrome)`: Denotes an operation that should be used to extract syndrome information from a code block, without disturbing the state protected by the code.
 
 <!-- TODO: define ⟦3, 1, 1⟧ notation -->

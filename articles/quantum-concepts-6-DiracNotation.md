@@ -130,19 +130,19 @@ $$
 If instead we consider measuring the first qubit to be $1$ of a multi-qubit state then we can also describe this process conveniently using projectors and Dirac notation:
 
 $$
-P(\text{outcome of measuring first qubit = 1})= \langle\psi|\left(|1\rangle\langle{1}|\otimes \mathbb{1}^{\otimes n-1}\right) |\psi\rangle.
+P(\text{outcome of measuring first qubit = 1})= \langle\psi|\left(|1\rangle\langle{1}|\otimes \boldone^{\otimes n-1}\right) |\psi\rangle.
 $$
 
 Here the identity matrix can be conveniently written in Dirac notation as
 
 $$
-\mathbb{1} = |0\rangle \langle 0|+|1\rangle \langle 1|= \begin{bmatrix}1&0\\\\ 0&1 \end{bmatrix}.
+\boldone = |0\rangle \langle 0|+|1\rangle \langle 1|= \begin{bmatrix}1&0\\\\ 0&1 \end{bmatrix}.
 $$
 
 For the case where there are two-qubits the projector can be expanded as 
 
 $$
-|1\rangle \langle 1| \otimes \mathbb{1} = |1\rangle\langle 1 \otimes (|0\rangle \langle 0|+|1\rangle \langle 1|)= |10\rangle\langle 10| + |11\rangle\langle 11|
+|1\rangle \langle 1| \otimes \boldone = |1\rangle\langle 1 \otimes (|0\rangle \langle 0|+|1\rangle \langle 1|)= |10\rangle\langle 10| + |11\rangle\langle 11|
 $$
 
 We can then see that this is consistent with the discussion about measurement likelihoods for multiqubit states using column-vector notation:

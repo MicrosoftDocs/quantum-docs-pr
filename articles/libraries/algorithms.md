@@ -59,22 +59,34 @@ Here $\\|\cdot\\|$ is the operator norm which in this case is the square root of
 Just as arithmetic plays a central role in classical computing, it is also indispensible in quantum computing.  Algorithms such as Shor's factoring algorithm, quantum simulation methods as well as many oracular algorithms rely upon arithmetic as primitive operations.  Most approaches to arithmetic build upon quantum adder circuits.  The simplest adder takes a classical input $b$ and adds the value to a quantum state holding an integer $\ket{a}$.  Mathematically, the adder (which we denote $\operatorname{Add}(b)$ for classical input $b$) has the property that 
 
 $$
-\operatorname{Add}(b)\ket{a}=\ket{a+b }.
+\operatorname{Add}(b)\ket{a}=\ket{a + b}.
 $$
 This primitive adder circuit is more of an incrementer than an adder.  It can be converted into an adder that has two quantum inputs via
 $$
 \operatorname{Add}\ket{a}\ket{b}=\ket{a}\ket{a+b},
 $$
 using $n$ controlled applications of adders of the form
-$$
-\operatorname{Add}\ket{a}\ket{b}=\Lambda\_{a\_0}\left(\operatorname{Add}(1)\right)\Lambda\_{a\_1}\left(\operatorname{Add}(2)\right)\Lambda\_{a\_2}\left(\operatorname{Add}(4)\right)\cdots \Lambda\_{a\_{n-1}}\left(\operatorname{Add}({{n-1}}) \right)\ket{a}\ket{b}=\ket{a}\ket{b+a},
-$$
+\begin{align}
+\operatorname{Add} \ket{a} \ket{b}
+    & = \Lambda\_{a\_0} \left(\operatorname{Add}(1) \right)
+        \Lambda\_{a\_1} \left(\operatorname{Add}(2) \right)
+        \Lambda\_{a\_2} \left(\operatorname{Add}(4) \right)
+        \cdots
+        \Lambda\_{a\_{n-1}} \left(\operatorname{Add}({{n-1}}) \right) \ket{a}\ket{b} \\\\
+    & = \ket{a} \ket{b + a},
+\end{align}
 for $n$ bit integers $a$ and $b$ and addition modulo $2^n$.  Recall that the notation $\Lambda\_x(A)$ refers, for any operation $A$, to the controlled version of that operation with the qubit $x$ as control.  
 
 Similarly, classically controlled multiplication (a modular form of which is essential for Shor's factoring algorithm) can be performed by using a similar series of controlled  additions.
-$$
-\operatorname{Mult}(a)\ket{x}\ket{b}=\Lambda\_{x\_0}\left(\operatorname{Add}(2^0 a)\right)\Lambda\_{a\_1}\left(\operatorname{Add}(2^1a)\right)\Lambda\_{a\_2}\left(\operatorname{Add}(2^2 a)\right)\cdots \Lambda\_{x\_{n-1}}\left(\operatorname{Add}({2^{n-1}}a) \right)\ket{x}\ket{b}=\ket{x}\ket{b+ax}.
-$$
+\begin{align}
+\operatorname{Mult}(a)\ket{x}\ket{b}
+    & = \Lambda\_{x\_0}\left(\operatorname{Add}(2^0 a)\right)
+        \Lambda\_{a\_1}\left(\operatorname{Add}(2^1a)\right)
+        \Lambda\_{a\_2}\left(\operatorname{Add}(2^2 a)\right)
+        \cdots \Lambda\_{x\_{n-1}}
+        \left(\operatorname{Add}({2^{n-1}}a) \right)\ket{x}\ket{b} \\\\
+    & = \ket{x}\ket{b+ax}.
+\end{align}
 There is a subtlety with multiplication on quantum computers that you may notice from the definition of $\operatorname{Mult}$ above.  Unlike addition, the quantum version of this circuit stores the product of the inputs in an ancillary register rather than in the input register.  In this example, the register is initialized with the value $b$, but typically it will start holding the value zero.  This is needed in because in general there is not a multiplicative inverse for general $a$ and $x$.  Since all quantum operations, save measurement, are reversible we need to keep enough information around to invert the multiplication.  For this reason the result is stored in a separate array.  This trick of saving the output of an irreversible operation, like multiplication, in a seperate register is known as the "Bennet trick" after Charlie Bennet and is a fundamental tool in both reversible and quantum computing.
 
 Many quantum circuits have been proposed for addition and each explores a different tradeoff in terms of the number of qubits (space) and the number of gates (time) required.  We review two highly space efficient adders below known as the Draper adder and the Beauregard adder. 

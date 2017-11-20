@@ -36,13 +36,14 @@ The current documentation includes the following topics.
 * [Q# language reference](quantum-QsharpReference.md) details the Q# language including the type model, expressions, statements, and compiler use.
 * [For more information](quantum-ForMoreInfo.md) contains specially selected references to deep coverage of quantum computing topics.
 * [Quantum trace simulator reference](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?branch=master) contains reference material about trace simulator entities and exceptions.
+* [C# components reference](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?branch=master) contains reference information about the C# entities used in control code and simulation handling.
 * [Q# library reference](/api/overview.md) contains reference information about library entities by namespace.
 
-<xref: microsoft.quantum.primitive>
+<xref:microsoft.quantum.primitive.rx>
 
 [Test](xref: microsoft.quantum.primitive)
 
-<xref:microsoft.quantum.primitive>
+<xref:microsoft.quantum.primitive.h>
 
 [Test](microsoft.quantum.primitive)
 

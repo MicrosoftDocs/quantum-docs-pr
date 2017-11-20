@@ -163,6 +163,7 @@ instantiating an object of the appropriate "quantum machine" type.
 It then invokes a method on the quantum machine object that executes the 
 top-level Q# operation, with the requested parameters.
 
+
 The Q# compiler translates the Q# code into C#; this C# code is used
 by the quantum machine object to execute the algorithm expressed in the
 Q# code.

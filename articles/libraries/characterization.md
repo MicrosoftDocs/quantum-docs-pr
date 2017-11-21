@@ -52,7 +52,7 @@ Concretely, if `U : DiscreteOracle`, then `U(m)` implements $U^m$ for `m : Int`.
 With this definition in place, each step of iterative phase estimation proceeds by preparing an ancilla qubit in the $\ket{+}$ state along with the initial state $\ket{\phi}$ that we assume is an [eigenvector](../quantum-concepts-3-MatrixAdvanced.md) of $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi}\ket{\phi}$.  
 A controlled application of `U(m)` is then used which prepares the state $\left(R\_1(m \phi) \ket{+}\right)\ket{\phi}$.
 As in the quantum case, the effect of a controlled application of the oracle `U(m)` is precisely the same as the effect of applying $R_1$ for the unknown phase on $\ket{+}$, such that we can describe the effects of $U$ in this simpler fashion.
-Optionally, the algorithm then rotates the control qubit by applying $R_1(m\theta)$ to obtain a state $\ket{\psi}=\left(R\_1(m [\phi-\theta]) \ket{+}\right)\ket{\phi}$$.
+Optionally, the algorithm then rotates the control qubit by applying $R_1(-m\theta)$ to obtain a state $\ket{\psi}=\left(R\_1(m [\phi-\theta]) \ket{+}\right)\ket{\phi}$$.
 The ancilla qubit used as a control for `U(m)` is then measured in the $X$ basis to obtain a single classical `Result`.
 
 At this point, reconstructing the phase from the `Result` values obtained through iterative phase estimation is a classical statistical inference problem.
@@ -71,7 +71,7 @@ As this process is iterated over multiple `Results', eigenstates that do not hav
 
 Bayes' theorem further suggests that the state that results from phase estimation be written in the form 
 $$\frac{\sqrt{\Pr(\phi\_j)}\sqrt{\Pr(\text{Result}|\phi\_j)}\ket{\phi\_j}}{\sqrt{\Pr(\phi\_j)\sum\_j \Pr(\text{Result}|\phi\_j)}}=\sum_j \sqrt{\Pr(\phi\_j|\text{Result})} \ket{\phi\_j}.$$
- Here $\Pr(\phi\_j|\text{Result})$ can be interpretted as the probability that one would ascribe to each hypothesis about the eigenstates given 1) knowledge of the quantum state prior to measurement 2) knowledge of the eigenstates of $U$ and 3) knowledge of the eigenvalues of $U$.  
+ Here $\Pr(\phi\_j|\text{Result})$ can be interpretted as the probability that one would ascribe to each hypothesis about the eigenstates given 1) knowledge of the quantum state prior to measurement 2) knowledge of the eigenstates of $U$ and 3) knowledge of the eigenvalues of $U$.
 Learning these three things is often exponentially hard on a classical computer.
 The utility of phase estimation arises, to no small extent, from the fact that it can perform such a quantum learning task without knowing any of them.
 Phase estimation for this reason appears within a number of quantum algorithms that provide exponential speedups.
@@ -86,9 +86,9 @@ The probability of observing `Zero` for a [`PauliX` measurement](../quantum-conc
 \begin{equation}
     \Pr(\texttt{Zero} | \psi) = \left| \braket{+ | \psi} \right|^2.
 \end{equation}
-In the case of iterative phase estimation, we have that $\ket{\psi} = R_1(m \phi) \ket{+}$, such that
+In the case of iterative phase estimation, we have that $\ket{\psi} = R_1(m [\phi-\theta]) \ket{+}$, such that
 \begin{align}
-    \Pr(\texttt{Zero} | \phi; m)
+    \Pr(\texttt{Zero} | \phi; m,\theta)
         & = \left| \braket{+ | R_1(m [\phi-\theta]) | +} \right|^2 \\\\
         & = \left|
             \frac12 \left( \bra{0} + \bra{1} \right) \left( \ket{0} + e^{i m [\phi-\theta]} \ket{1} \right)
@@ -155,7 +155,10 @@ An eigenstate $\ket{\phi}$ of $H$ such that $H \ket{\phi} = \phi \ket{\phi}$ is 
 \begin{equation}
     U(t) \ket{\phi} = e^{i \phi t} \ket{\phi}.
 \end{equation}
-The exact same argument as in [the Bayesian case](#bayesian-phase-estimation) thus holds, and the likelihood function is the precisely the same for this more general oracle model.
+The exact same analysis discussed for [Bayesian phase estimation](#bayesian-phase-estimation) can be applied, and the likelihood function is the precisely the same for this more general oracle model:
+$$
+\Pr(\texttt{Zero} | \phi; m,\theta)=\cos^2(\frac{m[\phi t -\theta]}{2}).
+$$
 Moreover, if $U$ is a simulation of a dynamical generator, as is the case for [Hamiltonian simulation](applications#hamiltonian-simulation), we interpret $\phi$ as an energy.
 Thus, using continuous oracles with phase estimation allows us to learn the energy structure of Hamiltonian models.
 

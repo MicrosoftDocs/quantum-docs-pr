@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+title: Quantum circuits | Microsoft Docs 
+description: Quantum circuits
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Quantum Circuits
+# Quantum circuits
 Consider for a moment the unitary transformation $\text{ CNOT}_{01}(H\otimes 1)$.  This gate sequence is of fundamental significance to quantum computing because it creates a maximally entangled two-qubit state:
 
 $$\mathrm{CNOT}_{01}(H\otimes 1)|00\rangle = \frac{1}{\sqrt{2}} \left(|00\rangle + |11\rangle \right),$$
@@ -97,4 +97,4 @@ Quantum Teleportation is perhaps the best quantum algorithm for illustrating the
 
 We have reviewed, in this brief introduction, how a quantum computer can be viewed as a device that stores information as a unit vector in an exponentially large vector space, and seen how quantum gates can be used to rotate the information in a way so as to perform a calculation.  We have also discussed useful language for describing quantum operations such as quantum circuits and Dirac notation which allow complex quantum states and subroutines to be quickly understood by a developer.
 
-While these tools are foundational for any developer of quantum software, they by no means span the depth or breadth of what is known about quantum computer programming and algorithm design.  Since quantum computing remains a rapidly developing field, there is no one resource that has all of the information needed to learn how to best use these tools in order to solve problems.  For this reason we have compiled a list of [references](quantum-ForMoreInfo.md)  that may entice the interested reader who wishes to learn more about the art and beauty of quantum computer programming.
+While these tools are foundational for any developer of quantum software, they by no means span the depth or breadth of what is known about quantum computer programming and algorithm design.  Since quantum computing remains a rapidly developing field, there is no one resource that has all of the information needed to learn how to best use these tools in order to solve problems.  For this reason we have compiled a list of [references](quantum-ForMoreInfo.md)  that may interest the reader who wishes to learn more about the art and beauty of quantum computer programming.

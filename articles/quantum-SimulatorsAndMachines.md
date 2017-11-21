@@ -30,15 +30,15 @@ ms.topic: article-type-from-white-list
 > * What quantum simulators are included in this release
 > * How to write a C# driver for your quantum algorithm
 
-## The quantum developer kit execution model
+## The Quantum Development Kit execution model
 
-In [Writing a Quantum Program](quantum-WriteAQuantumProgram.md),
+In [Writing a quantum program](quantum-WriteAQuantumProgram.md),
 we executed our quantum algorithm by passing a `QuantumSimulator` object
 to the algorithm class's `Run` method.
 The `QuantumSimulator` class executes the quantum algorithm by
 fully simulating the quantum state vector, which is perfect for running and
 testing `Teleport`.
-See the [Concepts Guide](quantum-concepts-1-Intro.dm) for more on quantum state vectors.
+See the [Concepts guide](quantum-concepts-1-Intro.dm) for more on quantum state vectors.
 
 Other target machines may be used to run a quantum algorithm.
 The machine is responsible for providing implementations of
@@ -51,7 +51,7 @@ execution models for the same quantum algorithm.
 Each type of quantum machine may provide different implementations of
 these primitives.
 For instance, the quantum computer trace simulator included in the
-developer kit doesn't do any simulation at all.
+development kit doesn't do any simulation at all.
 Rather, it tracks gate, qubit, and other resource usage for the
 algorithm.
 
@@ -75,7 +75,7 @@ Both are defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.
 
 ## Writing a classical driver program
 
-In [Writing a Quantum Program](quantum-WriteAQuantumProgram.md), we wrote a simple C# driver for
+In [Writing a quantum program](quantum-WriteAQuantumProgram.md), we wrote a simple C# driver for
 our teleport algorithm. A C# driver has 4 main purposes:
 
 * Constructing the target machine
@@ -112,7 +112,7 @@ Some simulators, including the `QuantumSimulator`, implement the .NET
 
 ### Computing arguments for the algorithm
 
-In our  `Teleport` example, we computed some relatively artificial arguments
+In our `Teleport` example, we computed some relatively artificial arguments
 to pass to our quantum algorithm.
 More typically, however, there is significant data required by the quantum
 algorithm, and it is easiest to provide it from the classical driver.

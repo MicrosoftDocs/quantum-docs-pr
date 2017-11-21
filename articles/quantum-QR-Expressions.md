@@ -25,7 +25,7 @@ ms.topic: article-type-from-white-list
 
 ## Grouping
 
-Given any expression, that same expression enclosed in parantheses 
+Given any expression, that same expression enclosed in parentheses 
 is an expression of the same type.
 For instance, `(7)` is an `Int` expression, 
 `([1;2;3])` is an expression of type array of `Int`s,

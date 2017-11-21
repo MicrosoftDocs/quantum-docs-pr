@@ -1,6 +1,9 @@
-<table>
-<tr><td><H1> Welcome to the Microsoft Quantum Development Kit internal preview</td><td>![Quantum](media/mobius_strip_preview.png)</td></tr>
-</table>
+---
+uid: microsoft.quantum.index
+---
+<img src="media/mobius_strip_preview.png" style="float: right;" title="Quantum" alt="Quantum">
+# Welcome to the Microsoft Quantum Development Kit internal preview #
+
 Thank you helping us test the Microsoft Quantum Development Kit preview. Your participation will help improve Microsoft's quantum development experience.
 
 ## Feedback pipeline
@@ -12,7 +15,7 @@ Your feedback about all parts of the Quantum Development Kit is important. Pleas
 - Setup and Visual Studio integration
 - General ideas and feature requests
  
-Email the feedback to <qdkfeed@microsoft.com>
+Email the feedback to <qdkfeed@microsoft.com>.
 
 ## Microsoft Quantum Development Kit components
 The Quantum Development Kit preview provides a complete development and simulation environment that contains the following components.
@@ -38,13 +41,5 @@ The current documentation includes the following topics.
 * [Quantum trace simulator reference](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?branch=master) contains reference material about trace simulator entities and exceptions.
 * [C# components reference](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?branch=master) contains reference information about the C# entities used in control code and simulation handling.
 * [Q# library reference](/api/overview.md) contains reference information about library entities by namespace.
-
-<xref:microsoft.quantum.primitive.rx>
-
-[Test](xref: microsoft.quantum.primitive)
-
-<xref:microsoft.quantum.primitive.h>
-
-[Test](microsoft.quantum.primitive)
 
 

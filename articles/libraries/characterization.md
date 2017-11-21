@@ -111,7 +111,7 @@ operation H2EstimateEnergy(
 
 These myriad phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many ancilla qubits, and other require only one.
 
-For instance, given a unitary black-box $U$ and an input eigenstate $U\ket{\psi}=e^{-i\phi}\ket{\psi}$, the robust phase estimation algorithm has the following features:
+For instance, given a unitary black-box $U$ and an input eigenstate $U\ket{\psi}=e^{i\phi}\ket{\psi}$, the robust phase estimation algorithm has the following features:
 * Inputs
     * Discrete queries of type `DiscreteOracle`. The algorithm only queries integer powers of controlled-$\hat{U}$.
     * A quantum register `Qubit[]` storing the input quantum state.

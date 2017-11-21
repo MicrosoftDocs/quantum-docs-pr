@@ -180,6 +180,8 @@ Thus Shor's algorithm has had a profound impact on how we think about security i
 
 Shor's algorithm can be thought of as a hybrid algorithm.
 The quantum computer is used to perform a computationally hard task known as period finding.
+The results from period finding are then classically processed to estimate the factors.
+We review these two steps below.
 #### Period Finding ####
 
 Now that we have seen how the quantum Fourier transform and phase estimation work (see [*Quantum Algorithms*](./algorithms.md), we can use these tools to solve a classically hard computational problem called *period finding*.  In the next section, we will see how to apply period finding to factoring.

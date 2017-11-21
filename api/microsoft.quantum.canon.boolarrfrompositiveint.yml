@@ -4,7 +4,7 @@ name: BoolArrFromPositiveInt
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Produces binary representation of positive integer in litle Endian format.
+   Produces binary representation of positive integer in little Endian format.
 remarks: ' The input "number" must be at most 2^bits -1.'
 syntax: 'function BoolArrFromPositiveInt (number : Int, bits : Int) : Bool[]'
 input:

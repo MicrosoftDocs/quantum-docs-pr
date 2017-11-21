@@ -3,8 +3,16 @@ uid: microsoft.quantum.canon.curryop
 name: CurryOp
 type: function
 namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given an operation with two inputs, applies Curry's isomorphism
+   $f(x, y) \equiv f(x)(y)$ to return an operation of one input which
+   returns an operation of one input.
+remarks: " The following are equivalent:\n ```qsharp\n op(x, y);\n \n let curried = CurryOp(op);\n let partial = curried(x);\n partial(y);\n ```"
 syntax: "function CurryOp (op : (('T, 'U) => () : )) : ('T -> ('U => () : ))"
 input:
   content: "(op : (('T, 'U) => () : ))"
-  types: []
+  types:
+  - name: op
+    summary: >2
+       An operation whose input is a pair.
 output: 

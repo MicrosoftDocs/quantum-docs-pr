@@ -3,7 +3,12 @@ uid: microsoft.quantum.canon.applytofirstthreequbits
 name: ApplyToFirstThreeQubits
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: ' Applies operation op to the first three qubits in the register : `op(register[0],register[1],,register[1])`'
+summary: ' Applies operation `op` to the first three qubits in the register.'
+remarks: >2-
+   This is equivalent to:
+   ```qsharp
+   op(register[0], register[1], register[2]);
+   ```
 syntax: 'operation ApplyToFirstThreeQubits (op : ((Qubit, Qubit, Qubit) => () : ), register : Qubit[]) : ()'
 input:
   content: '(op : ((Qubit, Qubit, Qubit) => () : ), register : Qubit[])'
@@ -11,5 +16,6 @@ input:
   - name: op
     summary: ' An operation to be applied to the first three qubits'
   - name: 'register '
-    summary: ' Qubit array to the first three qubits of which the operation is applied'
+    summary: >2
+       Qubit array to the first three qubits of which the operation is applied.
 output: 

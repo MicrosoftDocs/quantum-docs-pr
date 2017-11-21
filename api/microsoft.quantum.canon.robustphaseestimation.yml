@@ -4,25 +4,25 @@ name: RobustPhaseEstimation
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Performs the robust non-terative quantum phase estimation algorithm for a given oracle U and eigenstate,
+   Performs the robust non-terative quantum phase estimation algorithm for a given oracle $U$ and eigenstate,
    and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
-remarks: " In the limit of a large number of queries, Cramer-Rao lower bounds\n for the standard deviation of the estimate of φ satisfy\n $\\sigma \\ge 2 \\pi / \\text{# of queries}$.\n "
+remarks: " In the limit of a large number of queries, Cramer-Rao lower bounds\n for the standard deviation of the estimate of $\\phi$ satisfy\n $\\sigma \\ge 2 \\pi / \\text{# of queries}$.\n "
 syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[]) : Double'
 input:
   content: '(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])'
   types:
   - name: bitsPrecision
     summary: >2
-       This provides an estimate of φ with standard deviation
-       σ <= 2π / 2^bitsPrecision using Queries scaling like σ <= 10.7 Pi/ Queries.
+       This provides an estimate of $\phi$ with standard deviation
+       $\sigma \le 2\pi / 2^\text{bitsPrecision}$ using a number of queries scaling like $\sigma \le 10.7 \pi / \text{# of queries}$.
     uid: microsoft.quantum.primitive.integer
   - name: eigenstate
     summary: >2-
-       A quantum register representing an eigenstate |φ> of U, U|φ> =
-       e^{iφ} |φ> for φ ∈ [0, 2π) an unknown phase.
+       A quantum register representing an eigenstate $\ket{\phi}$ of $U$, where $U\ket{\phi} =
+       e^{i\phi} \ket{\phi}$ for $\phi\in(-\pi,\pi]$ an unknown phase.
     uid: microsoft.quantum.primitive.qubit
     isArray: true
   - name: oracle
-    summary: ' An operation implementing U^m for given integer powers m.'
+    summary: ' An operation implementing $U^m$ for given integer powers $m$.'
     uid: .discreteoracle
 output: 

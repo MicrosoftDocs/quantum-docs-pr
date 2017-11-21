@@ -162,6 +162,16 @@ Thus, using continuous oracles with phase estimation allows us to learn the ener
 
 Q# provides a useful approximation of Bayesian phase estimation designed for use close to quantum devices that operates by conditioning a random walk on the data record obtained from iterative phase estimation.
 This method is both adaptive and entirely deterministic, allowing for near-optimal scaling of errors in the estimated phase $\hat{\phi}$ with very low memory overheads.
+
+The protocol uses an approximate Bayesian inference method that assumes the prior distribution is Gaussian.  
+This Gaussian assumption allows us to use an analytical formula for the experiment that minimizes the posterior variance.
+The algorithm then, based on the outcome of that experiment, shifts the estimate of $\phi$ left or right by a pre-determined amount and shrinks the variance by a pre-determined amount.
+This mean and variance give all the information that is needed to specify a Gaussian prior on $\phi$ for the next experiment.
+Unexpected measurement failures, or the true result being on the tails of the initial prior, can cause this method to fail.
+It recovers from failure by performing experiments to test whether the current mean and standard deviation are appropriate for the system.
+If they are not then the algorithm does an inverse step of the walk and the process continues.  
+This allows the algorithm to learn even if the initial prior standard deviation is innapropriately small.
+
 In practice, using random walk phase estimation proceeds in much the same way as for other algorithms provided with the canon:
 
 ```qsharp

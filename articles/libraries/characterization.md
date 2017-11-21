@@ -80,7 +80,14 @@ Phase estimation for this reason appears within a number of quantum algorithms t
 > [!TIP]
 > For more details on Bayesian phase estimation in practice, please see the [**PhaseEstimation**](TODO: link) sample.
 
-Following the above procedure, we can find the probability of observing a `Zero` result.
+The idea of Bayesian phase estimation is simple.  
+You collect measurement statistics from the phase estimation protocol and then you process the results using Bayesian inference and provide an estimate of the parameter.
+This processing gives you an estimate of the eigenvalue as well as the uncertainty in that estimate.
+It also allows you to perform adaptive experiments and utilize prior information.
+The methods' principle drawback is that it is computationally demanding.
+
+
+To understand how the inference process works consider the case of processing a single `Zero` result.
 Note that $X = \ket{+}\bra{+} - \ket{-}\bra{-}$, such that $\ket{+}$ is the only positive eigenstate of $X$ corresponding to `Zero`.
 The probability of observing `Zero` for a [`PauliX` measurement](../quantum-concepts-7-PauliMeasurements.md) on the first qubit given an input state $\ket{\psi}\ket{\phi}$ is thus
 \begin{equation}
@@ -125,7 +132,7 @@ for approximate Bayesian methods such as random walk phase estimation (RWPE) and
 
 A maximum a posteriori Bayesian reconstruction of a phase estimate from measurement results is exponentially hard in the worst-case. Thus most practical phase estimation algorithms sacrifice some quality in the reconstruction, in exchange for an amount of classical post-processing that instead scales polynomially with the number of measurements made.
 
-One such example with an efficient classical post-processing step is the robust phase estimation algorithm, with its signature and inputs mentioned above. It assumes that input unitary black-boxes $U$ are packaged as `DiscreteOracle` type, and therefore only queries integer powers of controlled-$U$. If the input state in the `Qubit[]` register is an eigenstate $U\ket{\psi}=e^{i\phi}\ket{\psi}$, the robust phase estimation algorithm returns an estimate $\hat{\phi}\in[-\pi,\pi)$ of $\phi$ as a `Double`.
+One such example with an efficient classical post-processing step is the [robust phase estimation algorithm](https://arxiv.org/abs/1502.02677), with its signature and inputs mentioned above. It assumes that input unitary black-boxes $U$ are packaged as `DiscreteOracle` type, and therefore only queries integer powers of controlled-$U$. If the input state in the `Qubit[]` register is an eigenstate $U\ket{\psi}=e^{i\phi}\ket{\psi}$, the robust phase estimation algorithm returns an estimate $\hat{\phi}\in[-\pi,\pi)$ of $\phi$ as a `Double`.
 
 The most important feature of robust phase estimation, which is shared with most other useful variants, is that the reconstruction quality of $\hat{\phi}$ is in some sense Heisenberg-limited. This means that if the deviation of $\hat{\phi}$ from the true value is $\sigma$, then $\sigma$ scales inversely-proportional to the total number of queries $Q$ made to controlled-$U$, i.e. $\sigma=\mathcal{O}(1/Q)$. Now, the definition of deviation varies between different estimation algorithms. In some cases, it may mean that with at least $\mathcal{O}(1)$ probability, the estimation error $|\hat{\phi}-\phi|\_\circ\le \sigma$ on some circular measure $\circ$. For robust phase estimation, deviation is precisely the variance $\sigma^2 = \mathbb{E}\_\hat{\phi}[(\mod\_{2\pi}(\hat{\phi}-\phi +\pi)-\pi)^2]$ if we unwrap periodic phases onto a single finite interval $(-\pi,\pi]$. More precisely, the standard deviation in robust phase estimation satisfies the inequalities
 $$
@@ -156,7 +163,7 @@ $$
 \Pr(\texttt{Zero} | \phi; t,\theta)=\cos^2\left(\frac{t[\phi -\theta]}{2}\right).
 $$
 Moreover, if $U$ is a simulation of a dynamical generator, as is the case for [Hamiltonian simulation](applications#hamiltonian-simulation), we interpret $\phi$ as an energy.
-Thus, using phase estimation with continuous queries allows us to learn the simulated energy spectrum of molecules, materials or field theories without having to compromise our choice of experiments by requiring $t$ to be an integer.
+Thus, using phase estimation with continuous queries allows us to learn the simulated [energy spectrum of molecules](https://arxiv.org/abs/quant-ph/0604193), [materials](https://arxiv.org/abs/1510.03859) or [field theories](https://arxiv.org/abs/1111.3633v2) without having to compromise our choice of experiments by requiring $t$ to be an integer.
 
 ### Random Walk Phase Estimation ###
 
@@ -172,7 +179,7 @@ It recovers from failure by performing experiments to test whether the current m
 If they are not then the algorithm does an inverse step of the walk and the process continues.
 The ability to step backwards also allows the algorithm to learn even if the initial prior standard deviation is innapropriately small.
 
-### Calling Phase Estimation Algorithms ###
+## Calling Phase Estimation Algorithms ##
 
 Each phase estimation operation provided with the Q# canon takes a different set of inputs parameterizing the quality that we demand out of the final estimate $\hat{\phi}$.
 These various inputs, however, all share several inputs in common, such that partial application over the quality parameters results in a common signature.

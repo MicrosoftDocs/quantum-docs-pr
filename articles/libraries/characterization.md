@@ -65,9 +65,9 @@ We emphasize this by briefly describing iterative phase estimation at a theoreti
 
 Following the above procedure, we can find the probability of observing a `Zero` result.
 Note that $X = \ket{+}\bra{+} - \ket{-}\bra{-}$, such that $\ket{+}$ is the only positive eigenstate of $X$ corresponding to `Zero`.
-The probability of observing `Zero` for a `PauliX` measurement given an arbitrary state $\ket{\psi}$ is thus
+The probability of observing `Zero` for a [`PauliX` measurement](../quantum-concepts-7-PauliMeasurements.md) on the first qubit given an input state $\ket{\psi}\ket{\phi}$ is thus
 \begin{equation}
-    \Pr(\texttt{Zero} | \psi) = \left| \braket{+ | \psi} \right|^2.
+    \Pr(\texttt{Zero} | \psi) =\left|\braket{+ | \psi} \right|^2= \left| \braket{+ | \psi} \right|^2.
 \end{equation}
 In the case of iterative phase estimation, we have that $\ket{\psi} = R_1(m \phi) \ket{+}$, such that
 \begin{align}

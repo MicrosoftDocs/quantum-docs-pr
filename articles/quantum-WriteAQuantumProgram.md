@@ -46,7 +46,11 @@ In the project template explorer, under `Installed` > `Visual C#`,
 select the `Q# Application` template.
 Give your project the name `Teleport`.
 
-### Step 2: Enter the Q# code
+### Step 2 (optional): Update NuGet packages
+
+If you want to get the latest version of Q# compiler, update `Microsoft.Quantum.Simulation.Simulators` NuGet package, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package). Note that you'll have to switch to QuArC beta NuGet feed as the package source before you can get the update.
+
+### Step 3: Enter the Q# code
 
 Visual Studio should have two files open:
 `Driver.cs`, which will hold the C# driver for your quantum code,
@@ -278,7 +282,7 @@ to its argument qubit.
 > Q# uses tuples as a way to pass multiple values, rather than using
 > structures or records.
 
-### Step 3: Enter the C# driver code
+### Step 4: Enter the C# driver code
 
 Switch to the `Driver.cs` file in Visual Studio.
 This file should have the following contents:
@@ -335,7 +339,7 @@ In the `Main` method, enter the following code:
 >   We deconstruct the tuple to get the two fields, print the results,
 >   and then wait for a keypress.
 
-### Step 4: Build and run
+### Step 5: Build and run
 
 Just hit `F5`, and your program should build and run!
 

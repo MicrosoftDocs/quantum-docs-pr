@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bigshiftople
+name: BigShiftOpLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+input:
+  cyclic: >2-
+
+     Specifies if the shift is cyclic (1) or drops
+     shifted qubits (0).
+  op: >2-
+
+     Operation whose action is to be shifted.
+output: {}
+summary: >2
+
+   Given an operation acting on a little-endian register
+       |q0 q1 . q?>,
+   returns a new operation acting on the big end-shifted register
+       |q? q0 q1 . q??1>,
+   with qubit q? being dropped if the cyclic argument is 0.
+syntax: >2-
+
+  operation .BigShiftOpLE (cyclic : Int, op : (.LittleEndian => () : )) : (.LittleEndian => () : )

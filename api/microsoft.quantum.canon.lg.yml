@@ -1,0 +1,16 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.lg
+name: Lg
+type: function
+namespace: Microsoft.Quantum.Canon
+input:
+  input: >2
+
+     A real number $x$.
+output: {}
+summary: >2
+
+   Computes the base-2 logarithm of a number.
+syntax: >2-
+
+  function .Lg (input : Double) : Double

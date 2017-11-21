@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertqubit
+name: AssertQubit
+type: operation
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+syntax: >2-
+
+  operation .AssertQubit (expected : Result, q : Qubit) : ()

@@ -1,0 +1,16 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.arctanh
+name: ArcTanh
+type: function
+namespace: Microsoft.Quantum.Canon
+input:
+  x: >2
+
+     A real number $x$.
+output: {}
+summary: >2
+
+   Computes the inverse hyperbolic tangent of a number.
+syntax: >2-
+
+  function .ArcTanh (x : Double) : Double

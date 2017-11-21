@@ -1,0 +1,16 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.min
+name: Min
+type: function
+namespace: Microsoft.Quantum.Canon
+input:
+  values: >2
+
+     An array to take the minimum of.
+output: {}
+summary: >2
+
+   Given an array of integers, returns the smallest element.
+syntax: >2-
+
+  function .Min (value : Int[]) : Int

@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.boolarrfrompositiveinttest
+name: BoolArrFromPositiveIntTest
+type: function
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+syntax: >2-
+
+  function .BoolArrFromPositiveIntTest () : ()

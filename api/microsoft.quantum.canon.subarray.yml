@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.subarray
+name: Subarray
+type: function
+namespace: Microsoft.Quantum.Canon
+input:
+  indices: "\n A list of integers that is used to define the subarray. "
+  array: >2
+
+     An array of elements over `'T`.
+output: {}
+remarks: "\n The function is defined for generic types, i.e., whenever we have \n an array `'T[]` and a list of locations `Int[]` defining the subarray. \n "
+syntax: >2-
+
+  function .Subarray (indices : Int[], array : .'T[]) : .'T[]

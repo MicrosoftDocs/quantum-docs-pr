@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.littleoptobigop
+name: LittleOpToBigOp
+type: operation
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+syntax: >2-
+
+  operation .LittleOpToBigOp (op : (.LittleEndian => () : )) : (.BigEndian => () : )

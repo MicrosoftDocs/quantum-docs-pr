@@ -54,3 +54,196 @@
       uid: microsoft.quantum.primitive.measure
     - name: M
       uid: microsoft.quantum.primitive.m
+  - name: Microsoft.Quantum.Canon
+    uid: microsoft.quantum.canon
+    items:
+    - name: DiagonalShift
+      uid: microsoft.quantum.canon.diagonalshift
+    - name: IntegerIncrement
+      uid: microsoft.quantum.canon.integerincrement
+    - name: ModularIncrement
+      uid: microsoft.quantum.canon.modularincrement
+    - name: Filter
+      uid: microsoft.quantum.canon.filter
+    - name: ForAll
+      uid: microsoft.quantum.canon.forall
+    - name: ForAny
+      uid: microsoft.quantum.canon.forany
+    - name: Map
+      uid: microsoft.quantum.canon.map
+    - name: Subarray
+      uid: microsoft.quantum.canon.subarray
+    - name: CurryOpImpl
+      uid: microsoft.quantum.canon.curryopimpl
+    - name: CurryOp
+      uid: microsoft.quantum.canon.curryop
+    - name: RandomWalkPhaseEstimation
+      uid: microsoft.quantum.canon.randomwalkphaseestimation
+    - name: RandomIntPow2
+      uid: microsoft.quantum.canon.randomintpow2
+    - name: RandomInt
+      uid: microsoft.quantum.canon.randomint
+    - name: RandomReal
+      uid: microsoft.quantum.canon.randomreal
+    - name: RobustPhaseEstimation
+      uid: microsoft.quantum.canon.robustphaseestimation
+    - name: RobustPhaseEstimationTestOp
+      uid: microsoft.quantum.canon.robustphaseestimationtestop
+    - name: RobustPhaseEstimationDemo
+      uid: microsoft.quantum.canon.robustphaseestimationdemo
+    - name: RobustPhaseEstimationTest
+      uid: microsoft.quantum.canon.robustphaseestimationtest
+    - name: BoolFromResult
+      uid: microsoft.quantum.canon.boolfromresult
+    - name: ResultFromBool
+      uid: microsoft.quantum.canon.resultfrombool
+    - name: BoolArrFromResultArr
+      uid: microsoft.quantum.canon.boolarrfromresultarr
+    - name: ResultArrFromBoolArr
+      uid: microsoft.quantum.canon.resultarrfromboolarr
+    - name: BoolArrFromPositiveInt
+      uid: microsoft.quantum.canon.boolarrfrompositiveint
+    - name: PositiveIntFromBoolArr
+      uid: microsoft.quantum.canon.positiveintfromboolarr
+    - name: PositiveIntFromResultArr
+      uid: microsoft.quantum.canon.positiveintfromresultarr
+    - name: BoolArrFromPositiveIntTest
+      uid: microsoft.quantum.canon.boolarrfrompositiveinttest
+    - name: AssertAlmostEqualTol
+      uid: microsoft.quantum.canon.assertalmostequaltol
+    - name: AssertAlmostEqual
+      uid: microsoft.quantum.canon.assertalmostequal
+    - name: AssertIntEqual
+      uid: microsoft.quantum.canon.assertintequal
+    - name: AssertBoolEqual
+      uid: microsoft.quantum.canon.assertboolequal
+    - name: Lg
+      uid: microsoft.quantum.canon.lg
+    - name: Max
+      uid: microsoft.quantum.canon.max
+    - name: Min
+      uid: microsoft.quantum.canon.min
+    - name: RealMod
+      uid: microsoft.quantum.canon.realmod
+    - name: ArcCosh
+      uid: microsoft.quantum.canon.arccosh
+    - name: ArcSinh
+      uid: microsoft.quantum.canon.arcsinh
+    - name: ArcTanh
+      uid: microsoft.quantum.canon.arctanh
+    - name: AssertQubit
+      uid: microsoft.quantum.canon.assertqubit
+    - name: AssertQubitTol
+      uid: microsoft.quantum.canon.assertqubittol
+    - name: AssertQubitState
+      uid: microsoft.quantum.canon.assertqubitstate
+    - name: ReverseRegister
+      uid: microsoft.quantum.canon.reverseregister
+    - name: SwapReverseRegister
+      uid: microsoft.quantum.canon.swapreverseregister
+    - name: LittleEndian
+      uid: microsoft.quantum.canon.littleendian
+    - name: BigEndian
+      uid: microsoft.quantum.canon.bigendian
+    - name: ApplyReversedOpLE
+      uid: microsoft.quantum.canon.applyreversedople
+    - name: ApplyReversedOpBE
+      uid: microsoft.quantum.canon.applyreversedopbe
+    - name: LittleOpToBigOp
+      uid: microsoft.quantum.canon.littleoptobigop
+    - name: BigOpToLittleOp
+      uid: microsoft.quantum.canon.bigoptolittleop
+    - name: I
+      uid: microsoft.quantum.canon.i
+    - name: NoOp
+      uid: microsoft.quantum.canon.noop
+    - name: NoOp2
+      uid: microsoft.quantum.canon.noop2
+    - name: IterateThroughCartesianProduct
+      uid: microsoft.quantum.canon.iteratethroughcartesianproduct
+    - name: MakeConstArray
+      uid: microsoft.quantum.canon.makeconstarray
+    - name: IterateThroughCartesianPower
+      uid: microsoft.quantum.canon.iteratethroughcartesianpower
+    - name: LogOf2
+      uid: microsoft.quantum.canon.logof2
+    - name: Complex
+      uid: microsoft.quantum.canon.complex
+    - name: MeasureWithScratch
+      uid: microsoft.quantum.canon.measurewithscratch
+    - name: MeasureWithScratchTest
+      uid: microsoft.quantum.canon.measurewithscratchtest
+    - name: RandomSingleQubitPauli
+      uid: microsoft.quantum.canon.randomsinglequbitpauli
+    - name: ApplyPauli
+      uid: microsoft.quantum.canon.applypauli
+    - name: ApplyPauliFromBitString
+      uid: microsoft.quantum.canon.applypaulifrombitstring
+    - name: MeasurePaulis
+      uid: microsoft.quantum.canon.measurepaulis
+    - name: EmbedPauli
+      uid: microsoft.quantum.canon.embedpauli
+    - name: WeightOnePaulis
+      uid: microsoft.quantum.canon.weightonepaulis
+    - name: BasisChangeZtoY
+      uid: microsoft.quantum.canon.basischangeztoy
+    - name: MResetZ
+      uid: microsoft.quantum.canon.mresetz
+    - name: MResetX
+      uid: microsoft.quantum.canon.mresetx
+    - name: MResetY
+      uid: microsoft.quantum.canon.mresety
+    - name: Reset
+      uid: microsoft.quantum.canon.reset
+    - name: ResetAll
+      uid: microsoft.quantum.canon.resetall
+    - name: LogicalRegister
+      uid: microsoft.quantum.canon.logicalregister
+    - name: Syndrome
+      uid: microsoft.quantum.canon.syndrome
+    - name: RecoveryFn
+      uid: microsoft.quantum.canon.recoveryfn
+    - name: EncodeOp
+      uid: microsoft.quantum.canon.encodeop
+    - name: DecodeOp
+      uid: microsoft.quantum.canon.decodeop
+    - name: SyndromeMeasOp
+      uid: microsoft.quantum.canon.syndromemeasop
+    - name: QECC
+      uid: microsoft.quantum.canon.qecc
+    - name: CSS
+      uid: microsoft.quantum.canon.css
+    - name: QuantumPhaseEstimation
+      uid: microsoft.quantum.canon.quantumphaseestimation
+    - name: LEStub
+      uid: microsoft.quantum.canon.lestub
+    - name: BEStub
+      uid: microsoft.quantum.canon.bestub
+    - name: BigShiftOpLE
+      uid: microsoft.quantum.canon.bigshiftople
+    - name: LittleShiftOpLE
+      uid: microsoft.quantum.canon.littleshiftople
+    - name: BigShiftOpBE
+      uid: microsoft.quantum.canon.bigshiftopbe
+    - name: LittleShiftOpBE
+      uid: microsoft.quantum.canon.littleshiftopbe
+    - name: RightShiftOpImpl
+      uid: microsoft.quantum.canon.rightshiftopimpl
+    - name: Float
+      uid: microsoft.quantum.canon.float
+    - name: MultiM
+      uid: microsoft.quantum.canon.multim
+    - name: HY
+      uid: microsoft.quantum.canon.hy
+    - name: SuperdenseCoding
+      uid: microsoft.quantum.canon.superdensecoding
+    - name: SuperdenseCodingTestExFail
+      uid: microsoft.quantum.canon.superdensecodingtestexfail
+    - name: _ExtractLogicalQubitFromSteaneCode
+      uid: microsoft.quantum.canon._extractlogicalqubitfromsteanecode
+    - name: InjectPi4YRotation
+      uid: microsoft.quantum.canon.injectpi4yrotation
+    - name: Pi4YInjectionTest
+      uid: microsoft.quantum.canon.pi4yinjectiontest
+    - name: KnillDistill
+      uid: microsoft.quantum.canon.knilldistill

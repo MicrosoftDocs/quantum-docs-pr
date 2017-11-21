@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.weightonepaulis
+name: WeightOnePaulis
+type: function
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+summary: >2-
+
+   Returns an array of all weight-1 Pauli operators
+   on a given number of qubits.
+syntax: >2-
+
+  function .WeightOnePaulis (nQubits : Int) : Pauli[][]

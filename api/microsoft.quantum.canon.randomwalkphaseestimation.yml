@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.randomwalkphaseestimation
+name: RandomWalkPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Canon
+input:
+  oracle: >2-
+
+     An operation representing a unitary $U$ such that $U(t)\ket{\phi} = e^{i t \phi}\ket{\phi}$
+     for a known eigenstate $\ket{\phi}$ and an unknown phase $\phi \in \mathbb{R}^+$.
+  eigenstate: >2-
+
+     A register in the state $\ket{\phi}$.
+  initialMean: >2-
+
+     Mean of the initial normal prior distribution over $\phi$.
+  initialStdDev: >2-
+
+     Standard deviation of the initial normal prior distribution over $\phi$.
+  nMeasurements: >2-
+
+     Number of measurements to be accepted into the final posterior estimate.
+  maxMeasurements: >2-
+
+     Total number of measurements than can be taken before the operation is considered to have failed.
+  unwind: >2-
+
+     Number of results to forget when consistency checks fail.
+output: {}
+summary: >2
+
+   Performs iterative phase estimation using a random walk to approximate
+   Bayesian inference on the classical measurement results from a given
+   oracle and eigenstate.
+syntax: >2-
+
+  operation .RandomWalkPhaseEstimation (initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : .ContinuousOracle, eigenstate : Qubit[]) : Double

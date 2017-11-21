@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.syndrome
+name: Syndrome
+type: newtype
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+syntax: >2-
+
+  newtype .Syndrome = Result[];

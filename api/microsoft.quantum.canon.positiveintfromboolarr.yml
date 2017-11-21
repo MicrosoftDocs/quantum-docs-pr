@@ -1,0 +1,16 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.positiveintfromboolarr
+name: PositiveIntFromBoolArr
+type: function
+namespace: Microsoft.Quantum.Canon
+input:
+  bits: >2-
+
+     Bits in binary representation of number.
+output: {}
+summary: >2
+
+   Produces a positive integer from a string of bits in in litle Endian format.
+syntax: >2-
+
+  function .PositiveIntFromBoolArr (bits : Bool[]) : Int

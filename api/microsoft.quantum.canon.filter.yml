@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.filter
+name: Filter
+type: function
+namespace: Microsoft.Quantum.Canon
+input:
+  predicate: "\n A function from `'T' to Boolean that is used to filter elements. "
+  array: >2
+
+     An array of elements over `'T`.
+output: {}
+syntax: >2-
+
+  function .Filter (predicate : (.'T -> Bool), array : .'T[]) : .'T[]

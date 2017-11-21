@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.resetall
+name: ResetAll
+type: operation
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+summary: >2-
+
+   Given an array of qubits, measure them and ensure they are in the |0〉 state
+   such that they can be safely released.
+syntax: >2-
+
+  operation .ResetAll (target : Qubit[]) : ()

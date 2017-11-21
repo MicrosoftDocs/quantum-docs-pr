@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.reset
+name: Reset
+type: operation
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+summary: >2-
+
+   Given a single qubit, measures it and ensures it is in the |0〉 state
+   such that it can be safely released.
+syntax: >2-
+
+  operation .Reset (target : Qubit) : ()

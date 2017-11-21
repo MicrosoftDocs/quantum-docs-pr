@@ -2,22 +2,26 @@
 uid: microsoft.quantum.canon.quantumphaseestimation
 name: QuantumPhaseEstimation
 type: operation
-namespace: microsoft.quantum.canon
-summary: |
-  Performs the quantum phase estimation algorithm for a given oracle U and eigenstate, reading the phase into a big-endian quantum register.
-syntax: "QuantumPhaseEstimation( oracle : DiscreteOracle, eigenstate : Qubit[], controlRegister : BigEndian) : ()"
+namespace: Microsoft.Quantum.Canon
 input:
-  content: "(DiscreteOracle, Qubit[], BigEndian)"
-  types:
-  - uid: microsoft.quantum.canon.discreteoracle
-    name: oracle
-    summary: "An operation implementing U^m for given integer powers m."
-  - uid: microsoft.quantum.primitive.qubit
-    isArray: true
-    name: eigenstate
-    summary: "A quantum register representing an eigenstate |φ> of U, U|φ> = e^{iφ} |φ> for φ ∈ [0, 2π) an unknown phase."
-  - uid: microsoft.quantum.canon.bigendian
-    name: controlRegister
-    summary: "A big-endian representation integer register that can be used to control the provided oracle, and that will contain the a representation of φ following the application of this operation. The controlRegister is assumed to start in the initial state |00.0>, where the length of the register indicates the desired precision."
-output:
-  content: "()"
+  oracle: >2-
+
+     An operation implementing U^m for given integer powers m.
+  eigenstate: >2-
+
+     A quantum register representing an eigenstate |φ> of U, U|φ> =
+     e^{iφ} |φ> for φ ∈ [0, 2π) an unknown phase.
+  controlRegister: >2-
+
+     A big-endian representation integer register that can be used
+     to control the provided oracle, and that will contain the a representation of φ following
+     the application of this operation. The controlRegister is assumed to start in the initial
+     state |00.0>, where the length of the register indicates the desired precision.
+output: {}
+summary: >2
+
+   Performs the quantum phase estimation algorithm for a given oracle U and eigenstate,
+   reading the phase into a big-endian quantum register.
+syntax: >2-
+
+  operation .QuantumPhaseEstimation (oracle : .DiscreteOracle, eigenstate : Qubit[], controlRegister : .BigEndian) : ()

@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.pi4yinjectiontest
+name: Pi4YInjectionTest
+type: operation
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+syntax: >2-
+
+  operation .Pi4YInjectionTest () : ()

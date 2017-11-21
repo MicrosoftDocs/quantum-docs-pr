@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.randomreal
+name: RandomReal
+type: operation
+namespace: Microsoft.Quantum.Canon
+input:
+  bitsRandom: >2
+
+     The number of bits of precision with which the random number
+     should be sampled.
+output: {}
+summary: >2
+
+   Returns a random real number in the interval $[0, 1]$.
+syntax: >2-
+
+  operation .RandomReal (bitsRandom : Int) : Double

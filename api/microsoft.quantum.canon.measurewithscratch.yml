@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.measurewithscratch
+name: MeasureWithScratch
+type: operation
+namespace: Microsoft.Quantum.Canon
+input:
+  pauli: >2-
+
+     A multi-qubit Pauli operator specified as an array of
+     single-qubit Pauli operators.
+  target: >2-
+
+     Qubit register to be measured.
+output: {}
+summary: >2
+
+   Measures the given Pauli operator using an explicit scratch
+   qubit to perform the measurement.
+syntax: >2-
+
+  operation .MeasureWithScratch (pauli : Pauli[], target : Qubit[]) : Result

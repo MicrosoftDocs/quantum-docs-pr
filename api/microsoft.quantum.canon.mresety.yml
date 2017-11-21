@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.mresety
+name: MResetY
+type: operation
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+summary: >2-
+
+   Measures a single qubit in the X basis and ensures that it
+   is in the |0〉 state following the measurement.
+syntax: >2-
+
+  operation .MResetY (target : Qubit) : Result

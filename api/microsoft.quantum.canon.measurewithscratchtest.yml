@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.measurewithscratchtest
+name: MeasureWithScratchTest
+type: operation
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+syntax: >2-
+
+  operation .MeasureWithScratchTest () : ()

@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.integerincrement
+name: IntegerIncrement
+type: operation
+namespace: Microsoft.Quantum.Canon
+input:
+  qs: >2-
+
+     quantum register.
+  inc: >2-
+
+     increment.
+output: {}
+summary: >2
+
+   Integer increment by a constant, based on phase rotations. This implements the unitary |x??|x+inc?.
+syntax: >2-
+
+  operation .IntegerIncrement (inc : Int, qs : .LittleEndian) : ()

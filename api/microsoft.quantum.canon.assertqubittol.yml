@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertqubittol
+name: AssertQubitTol
+type: operation
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+syntax: >2-
+
+  operation .AssertQubitTol (expected : Result, tolerance : Double, q : Qubit) : ()

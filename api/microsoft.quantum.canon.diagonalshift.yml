@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.diagonalshift
+name: DiagonalShift
+type: operation
+namespace: Microsoft.Quantum.Canon
+input:
+  qs: >2-
+
+     quantum register.
+  s: >2-
+
+     phase shift.
+output: {}
+summary: >2-
+
+   Diagonal shift circuit. This implements the diagonal unitary diag(exp(2πisk/2ⁿ):k=0,...,2ⁿ-1).
+syntax: >2-
+
+  operation .DiagonalShift (s : Int, qs : .LittleEndian) : ()

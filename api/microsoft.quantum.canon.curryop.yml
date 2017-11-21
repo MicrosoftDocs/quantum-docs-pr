@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.curryop
+name: CurryOp
+type: function
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+syntax: >2-
+
+  function .CurryOp (op : ((.'T, .'U) => () : )) : (.'T -> (.'U => () : ))

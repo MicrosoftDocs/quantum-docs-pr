@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyreversedople
+name: ApplyReversedOpLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+input: {}
+output: {}
+syntax: >2-
+
+  operation .ApplyReversedOpLE (op : (.LittleEndian => () : ), register : .BigEndian) : ()

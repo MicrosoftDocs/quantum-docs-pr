@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.randomintpow2
+name: RandomIntPow2
+type: operation
+namespace: Microsoft.Quantum.Canon
+input:
+  maxBits: >2
+
+     The number of classical bits required to represent the largest integer
+     that could be returned by this operation.
+output: {}
+summary: >2
+
+   Generates a random number uniformly sampled in the interval
+   $[0, 2^{\texttt{maxBits}} - 1]$.
+syntax: >2-
+
+  operation .RandomIntPow2 (maxBits : Int) : Int

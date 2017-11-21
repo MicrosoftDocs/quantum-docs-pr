@@ -109,18 +109,20 @@ operation H2EstimateEnergy(
 ```
 ### Robust Phase Estimation ###
 
-These myraid phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many ancilla qubits, and other require only one.
+These myriad phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many ancilla qubits, and other require only one.
 
 For instance, given a unitary black-box $U$ and an input eigenstate $U\ket{\psi}=e^{-i\phi}\ket{\psi}$, the robust phase estimation algorithm has the following features:
 * Inputs
-    * Discrete queries. The algorithm only queries integer powers of controlled-$\hat{U}$.
-    * Small space overhead. The algorithm only requires $1$ ancilla qubit.
+    * Discrete queries of type `DiscreteOracle`. The algorithm only queries integer powers of controlled-$\hat{U}$.
+    * A quantum register `Qubit[]` storing the input quantum state.
+    * A classical `Int` parameter for the desired accuracy of the estimate, as defined below.
 * Output
     * A real number representing an estimate $\hat{\phi}$ of $\phi$.
 * Complexity.
-    * Heisenberg limited. The standard-deviation $\sigma$ of $\hat{\phi}$ scales like $2.0 \pi / Q \le \sigma \le 2\pi / 2^{n} \le 10.7\pi / Q$, where $Q$ is the number of queries to $\hat{U}$. Here, variance is defined as $\sigma^2 = \mathbb{E}\_\hat{\phi}[(\mod\_{2\pi,-\pi}(\hat{\phi}-\phi))^2]$.
+    * Heisenberg limited. The standard-deviation $\sigma$ of $\hat{\phi}$ scales like $2.0 \pi / Q \le \sigma \le 2\pi / 2^{n} \le 10.7\pi / Q$, where $Q$ is the number of queries to $\hat{U}$. Here, variance is defined as $\sigma^2 = \mathbb{E}\_\hat{\phi}[(\mod\_{2\pi,-\pi}(\hat{\phi}-\phi))^2]$, and $n$ is the `bitsPrecision` parameter of the function. Note that the lower bound is reached in the limit of asymptotically large $Q$, and the upper bound is guaranteed even for small sample sizes. 
     * Quadratic scaling in measurements. The number of measurements performed scales like $\mathcal{O}((\log{\sigma})^2)$.
     * Efficient classical post-processing. The classical algorithm that infers $\hat{\phi}$ from the measurement outcomes requires the computation of only $\mathcal{O}(\log{(1/\sigma)})$ trigonometric functions on $\mathcal{O}(\log{(1/\sigma)})$ classical bits.
+    * Small space overhead. The algorithm only requires $1$ ancilla qubit.
 * Remarks
     * Non-adaptive. The required sequence of quantum experiments is independent of the intermediate measurement outcomes.
     * Uniform prior. It is assumed that $\phi\in[0,2\pi)$ is uniformly distributed.

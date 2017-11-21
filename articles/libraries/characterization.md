@@ -107,30 +107,29 @@ operation H2EstimateEnergy(
         phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)
     ) : Double
 ```
-
-These myraid phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adapative, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many ancilla qubits, and other require only one.
-
 ### Robust Phase Estimation ###
 
-Given a unitary black-box $\hat{U}$ and an input eigenstate $\hat{U}\ket{\psi}=e^{-i\phi}\ket{\psi}$, the robust phase estimation algorithm has the following features:
+These myraid phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many ancilla qubits, and other require only one.
+
+For instance, given a unitary black-box $U$ and an input eigenstate $U\ket{\psi}=e^{-i\phi}\ket{\psi}$, the robust phase estimation algorithm has the following features:
 * Inputs
     * Discrete queries. The algorithm only queries integer powers of controlled-$\hat{U}$.
     * Small space overhead. The algorithm only requires $1$ ancilla qubit.
 * Output
-    * A real number represting an estimate $\hat{\phi}$ of $\phi$.
+    * A real number representing an estimate $\hat{\phi}$ of $\phi$.
 * Complexity.
-    * Heisenberg limied. The standard-deviation $\sigma$ of $\hat{\phi}$ scales like $2.0 \pi / Q \le \sigma \le 10.7\pi / Q$, where $Q$ is the number of queries to $\hat{U}$. Here, variance is defined as $\sigma^2 = \mathbb{E}\_\hat{\phi}[(\mod\_{2\pi}(\hat{\phi}-\phi))^2]$.
+    * Heisenberg limited. The standard-deviation $\sigma$ of $\hat{\phi}$ scales like $2.0 \pi / Q \le \sigma \le 2\pi / 2&{n} \le 10.7\pi / Q$, where $Q$ is the number of queries to $\hat{U}$. Here, variance is defined as $\sigma^2 = \mathbb{E}\_\hat{\phi}[(\mod\_{2\pi,-\pi}(\hat{\phi}-\phi))^2]$.
     * Quadratic scaling in measurements. The number of measurements performed scales like $\mathcal{O}((\log{\sigma})^2)$.
     * Efficient classical post-processing. The classical algorithm that infers $\hat{\phi}$ from the measurement outcomes requires the computation of only $\mathcal{O}(\log{(1/\sigma)})$ trigonometric functions on $\mathcal{O}(\log{(1/\sigma)})$ classical bits.
 * Remarks
     * Non-adaptive. The required sequence of quantum experiments is independent of the intermediate measurement outcomes.
+    * Uniform prior. It is assumed that $\phi\in[0,2\pi)$ is uniformly distributed.
 
+In this and forthcoming examples where the choice of phase estimation algorithm is important, one should one should refer to the documentation such as @"microsoft.quantum.canon.robustphaseestimation" and the referenced publications therein for details on the implementation.
 
+> [!TIP]
+> There are many samples where robust phase estimation is used. For phase estimation on various physical system, please see the [molecular Hydrogen sample](TODO:Link), the [Ising model samples](TO:Link), and the [Hubbard model sample](TO:Link).
 
-
-
-<!-- FIXME: though RPE is the correct name of this algorithm, in context it reads as though Bayesian PE is the opposite of robust, which is not the case. -->
-<!-- TODO -->
 
 ### Continuous Oracles ###
 

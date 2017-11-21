@@ -187,9 +187,10 @@ $$|x_s\rangle \equiv 1 / \sqrt{r} \sum\_{k=0}^{r-1} e^{\frac{-2\pi i sk}{r}} | a
 The eigenvalues of $U_a$ are
 $$ U\_a |x\_s\rangle = e^{2\pi i s / r} | x\_s \rangle . $$
 
-Phase estimation thus outputs the eigenvalues $e^{2\pi i s / r}$ from which $r$ can be learned efficiently using [{\it continued fractions}](https://en.wikipedia.org/wiki/Continued_fraction) from $s / r$.
+Phase estimation thus outputs the eigenvalues $e^{2\pi i s / r}$ from which $r$ can be learned efficiently using [continued fractions](https://en.wikipedia.org/wiki/Continued_fraction) from $s / r$.
 
 The circuit diagram for quantum period finding is:
+
 ![](../media/QPE.png)
 
 Here $2n$ qubits are initialized to $|0\rangle$ and $n$ qubits are initialized to $|1\rangle$.

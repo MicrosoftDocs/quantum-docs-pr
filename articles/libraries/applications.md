@@ -197,7 +197,7 @@ Here $2n$ qubits are initialized to $|0\rangle$ and $n$ qubits are initialized t
 The reader again may wonder why the quantum register to hold the eigenstates is initialized to $|1\rangle$.
 As one does not know the order $r$ in advance, we cannot actually prepare $|x_s\rangle$ states directly.
 Luckily, it turns out that $1/\sqrt{r} \sum\_{s=0}^{r-1} |x\_s\rangle = |1\rangle$.
-We don't need to actually prepare $|x\rangle$!  
+We don't need to actually prepare $|x\rangle$!
 We can just prepare a quantum register of $n$ qubits in state $|1\rangle$. 
 
 The circuit contains the QFT and several controlled gates.
@@ -245,4 +245,6 @@ proceed to the classical postprocessing routine to determine the prime factors:
 9. If $\mbox{gcd}(a^{r/2}-1, N)$ is a prime factor of $N$, return $\mbox{gcd}(a^{r/2}-1, N)$.
 
 
-The factoring algorithm is probabilistic: it can been shown that with probability at least one half that $r$ will be even and $a^{r/2} \neq -1 \text{ mod }N$, thus producing a prime factor.  (See Shor's original paper for details, or Nielsen and Chuang).  If a prime factor is not returned, then we simply repeat the algorithm from step (1).
+The factoring algorithm is probabilistic: it can been shown that with probability at least one half that $r$ will be even and $a^{r/2} \neq -1 \text{ mod }N$, thus producing a prime factor.  (See [Shor's original paper](https://doi.org/10.1109/SFCS.1994.365700) for details, or one of the reference texts in [For more information](..\quantum-ForMoreInfo)).
+If a prime factor is not returned, then we simply repeat the algorithm from step (1).  After $n$ tries, the probability that every attempt has failed is at most $2^{-n}$.
+Thus after repeating the algorithm a small number of times success is virtually assured.

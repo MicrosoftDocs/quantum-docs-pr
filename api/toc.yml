@@ -1,6 +1,59 @@
 - name: Reference
   href: overview.md
   items:
+  - name: Microsoft.Quantum.Primitive
+    uid: microsoft.quantum.primitive
+    items:
+    - name: Random
+      uid: microsoft.quantum.primitive.random
+    - name: Assert
+      uid: microsoft.quantum.primitive.assert
+    - name: AssertProb
+      uid: microsoft.quantum.primitive.assertprob
+    - name: Log
+      uid: microsoft.quantum.primitive.log
+    - name: X
+      uid: microsoft.quantum.primitive.x
+    - name: Y
+      uid: microsoft.quantum.primitive.y
+    - name: Z
+      uid: microsoft.quantum.primitive.z
+    - name: H
+      uid: microsoft.quantum.primitive.h
+    - name: S
+      uid: microsoft.quantum.primitive.s
+    - name: T
+      uid: microsoft.quantum.primitive.t
+    - name: CNOT
+      uid: microsoft.quantum.primitive.cnot
+    - name: CCNOT
+      uid: microsoft.quantum.primitive.ccnot
+    - name: SWAP
+      uid: microsoft.quantum.primitive.swap
+    - name: MultiX
+      uid: microsoft.quantum.primitive.multix
+    - name: R
+      uid: microsoft.quantum.primitive.r
+    - name: RFrac
+      uid: microsoft.quantum.primitive.rfrac
+    - name: Rx
+      uid: microsoft.quantum.primitive.rx
+    - name: Ry
+      uid: microsoft.quantum.primitive.ry
+    - name: Rz
+      uid: microsoft.quantum.primitive.rz
+    - name: R1
+      uid: microsoft.quantum.primitive.r1
+    - name: R1Frac
+      uid: microsoft.quantum.primitive.r1frac
+    - name: Exp
+      uid: microsoft.quantum.primitive.exp
+    - name: ExpFrac
+      uid: microsoft.quantum.primitive.expfrac
+    - name: Measure
+      uid: microsoft.quantum.primitive.measure
+    - name: M
+      uid: microsoft.quantum.primitive.m
   - name: Microsoft.Quantum.Canon
     uid: microsoft.quantum.canon
     items:

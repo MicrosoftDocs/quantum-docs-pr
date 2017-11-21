@@ -1,3 +1,7 @@
+---
+uid: microsoft.quantum.index
+---
+
 <table>
 <tr><td><H1> Welcome to the Microsoft Quantum Development Kit internal preview</td><td>![Quantum](media/mobius_strip_preview.png)</td></tr>
 </table>

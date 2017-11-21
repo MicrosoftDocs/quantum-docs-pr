@@ -25,56 +25,7 @@ ms.topic: article-type-from-white-list
 
 Now that you've seen how to write interesting quantum programs in Q#, this section goes further by introducing a few more advanced topics that should prove useful going forward.
 
-## Debugging and Testing Quantum Programs ##
-
-One important consequence of the fact that functions in Q# are deterministic is that a function whose output type is the empty tuple `()` cannot ever be observed from within a Q# program.
-That is, a target machine can choose not to execute any function which returns `()` with the guarantee that this omission will not modify the behavior of any following Q# code.
-This consequence makes functions a useful tool for embedding debugging and testing logic.
-
-In particular, functions of this form can be used to represent diagnostic side effects.
-Let's consider a simple example:
-
-```
-function AssertPositive(value : Double) : () {
-    if (value <= 0) {
-        fail "Expected a positive number.";
-    }
-}
-```
-
-Here, the keyword `fail` indicates that the computation should not proceed, raising an exception in the target machine running the Q# program.
-By definition, a failure of this kind cannot be observed from within Q#, as no further Q# code is run after a `fail` statement is reached.
-Thus, if we proceed past a call to `AssertPositive`, we can be assured by the [anthropic principle](https://www.scottaaronson.com/democritus/lec17.html) that its input was positive, even though we were not able to directly observe this fact.
-
-Similarly, the primitive function @"microsoft.quantum.primitive.message" has type `String -> ()`, and allows for emitting diagnostic messages.
-That a target machine observes the contents of the input to `Message` does not imply any consequence that is observable from within Q#.
-A target machine may thus elide calls to `Message` by the same logic.
-
-Building on these ideas, the prelude offers two especially useful assertions, both modeled as functions onto `()`: @"microsoft.quantum.primitive.assert" and @"microsoft.quantum.primitive.assertprob".
-These assertions each take a Pauli operator describing a particular measurement of interest, a register on which a measurement is to be performed, and a hypothetical outcome.
-On target machines which work by simulation, we are not bound by the [no-cloning theorm](TODO: link to glossary), and can perform such measurements without disturbing the register passed to such assertions.
-A simulator can then, similar to the `AssertPositive` function above, abort computation if the hypothetical outcome would not be observed in practice:
-
-<!-- TODO: check that this code is correct. -->
-
-```
-using (register = Qubit[1]) {
-    H(register[0]);
-    Assert([PauliX], register, Zero);
-    // Even though we do not have access to states in Q#,
-    // we know by the anthropic principle that the state
-    // of register at this point is |+〉.
-}
-```
-
-On actual hardware, where we are constrained by physics, we of course cannot perform such counterfactual measurements, and so the `Assert` and `AssertProb` functions simply return `()` with no other effect.
-
-
-<!--
-
-    TODO: finish this section.
-
--->
+<!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
 ## Generic Operations and Functions ##
 

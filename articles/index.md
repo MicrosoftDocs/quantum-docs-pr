@@ -1,6 +1,11 @@
-<table>
-<tr><td><H1> Welcome to the Microsoft Quantum Development Kit internal preview</td><td>![Quantum](media/mobius_strip_preview.png)</td></tr>
-</table>
+---
+uid: microsoft.quantum.index
+---
+
+# Welcome to the Microsoft Quantum Development Kit internal preview #
+
+<img src="media/mobius_strip_preview.png" style="float: right;" title="Quantum" alt="Quantum">
+
 Thank you helping us test the Microsoft Quantum Development Kit preview. Your participation will help improve Microsoft's quantum development experience.
 
 ## Feedback pipeline

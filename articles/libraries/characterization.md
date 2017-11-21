@@ -87,7 +87,7 @@ It also allows you to perform adaptive experiments and utilize prior information
 The methods' principle drawback is that it is computationally demanding.
 
 
-To understand how the inference process works consider the case of processing a single `Zero` result.
+To understand how this Bayesian inference process works, consider the case of processing a single `Zero` result.
 Note that $X = \ket{+}\bra{+} - \ket{-}\bra{-}$, such that $\ket{+}$ is the only positive eigenstate of $X$ corresponding to `Zero`.
 The probability of observing `Zero` for a [`PauliX` measurement](../quantum-concepts-7-PauliMeasurements.md) on the first qubit given an input state $\ket{\psi}\ket{\phi}$ is thus
 \begin{equation}

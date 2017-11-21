@@ -68,7 +68,7 @@ As this process is iterated over multiple `Results', eigenstates that do not hav
 
 Bayes' theorem further suggests that the state that results from phase estimation be written in the form 
 $$\frac{\sqrt{\Pr(\phi\_j)}\sqrt{\Pr(\text{Result}|\phi\_j)}\ket{\phi\_j}}{\sqrt{\Pr(\phi\_j)\sum\_j \Pr(\text{Result}|\phi\_j)}}=\sum_j \sqrt{\Pr(\phi\_j|\text{Result})} \ket{\phi\_j}.$$
- Here $\Pr(\phi\_j|Result)$ can be interpretted as the probability that one would ascribe to each hypothesis about the eigenstates given 1) knowledge of the quantum state prior to measurement 2) knowledge of the eigenstates of $U$ and 3) knowledge of the eigenvalues of $U$.  
+ Here $\Pr(\phi\_j|\text{Result})$ can be interpretted as the probability that one would ascribe to each hypothesis about the eigenstates given 1) knowledge of the quantum state prior to measurement 2) knowledge of the eigenstates of $U$ and 3) knowledge of the eigenvalues of $U$.  
 Learning these three things is often exponentially hard on a classical computer.
 The utility of phase estimation arises, to no small extent, from the fact that it can perform such a quantum learning task without knowing any of them.
 Phase estimation for this reason appears within a number of quantum algorithms that provide exponential speedups.
@@ -81,7 +81,7 @@ Following the above procedure, we can find the probability of observing a `Zero`
 Note that $X = \ket{+}\bra{+} - \ket{-}\bra{-}$, such that $\ket{+}$ is the only positive eigenstate of $X$ corresponding to `Zero`.
 The probability of observing `Zero` for a [`PauliX` measurement](../quantum-concepts-7-PauliMeasurements.md) on the first qubit given an input state $\ket{\psi}\ket{\phi}$ is thus
 \begin{equation}
-    \Pr(\texttt{Zero} | \psi) =\left|\braket{+ | \psi} \right|^2= \left| \braket{+ | \psi} \right|^2.
+    \Pr(\texttt{Zero} | \psi) = \left| \braket{+ | \psi} \right|^2.
 \end{equation}
 In the case of iterative phase estimation, we have that $\ket{\psi} = R_1(m \phi) \ket{+}$, such that
 \begin{align}

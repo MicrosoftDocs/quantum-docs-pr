@@ -26,28 +26,36 @@ uid: microsoft.quantum.libraries.characterization
 # Quantum Characterization and Statistics #
 
 It is critical to be able to characterize the effects of operations in order to develop useful quantum algorithms.
-This is made challenging by the fact that quantum states cannot be learned directly, reflected in that Q# does not expose or even define what a state *is* to quantum programs.
+This is challenging because every measurement of a quantum system yields at most one bit of information.
+In order to learn an eigenvalue, let alone a quantum state, the results of many measurements must be stitched together so that the user can glean the many bits of information needed to represent these concepts.  
+Quantum states are especially vexing because the [no-cloning theorem](../quantum-concepts-7-PauliMeasurements.md) states that there is no way to learn an arbitrary quantum state from a single copy of the state, because doing so would let you make copies of the state.
+This obfuscation of the quantum state from the user is reflected in the fact that Q# does not expose or even define what a state *is* to quantum programs.
 We thus approach quantum characterization by treating operations and states as black-box; this approach shares much in common with the experimental practice of quantum characterization, verification and validation (QCVV).
 
-## Learning Quantum Processes ##
+Characterization is distinct from many of the other libraries discussed previously.  
+The aim here is less to learn classical information about the system, rather than to perform a unitary transformation on a state vector.
+These libraries must therefore blend both classical and quantum information processing. 
+
 
 ## Iterative Phase Estimation ##
 
 Viewing quantum programming in terms of quantum characterization suggests a useful alternative to [quantum phase estimation](algorithms#quantum-phase-estimation).
 That is, instead of preparing an $n$-qubit register to contain a binary representation of the phase as in quantum phase estimation, we can view phase estimation as the process by which a *classical* agent learns properties of a quantum system through measurements.
 We proceed as in the [quantum case](algorithms#quantum-phase-estimation) by using phase kickback to turn applications of a black-box operation into rotations by an unknown angle, but will measure the ancilla qubit that we rotate at each step immediately following the rotation.
-This has the advantage that we only require a single additional qubit to perform the phase kickback described in the quantum case, as we then learn the phase from the measurement results at each step in an iterative fashion.
-Moreover, it is much easier to include prior information in iterative phase estimation, as we will see below.
+This has the advantage that we only require a single additional qubit to perform the phase kickback described in the quantum case, as we then learn the phase from the measurement results at each step in an iterative fashion.  
+Each of the methods proposed below uses a different strategy for designing experiments and different data processing methods to learn the phase.  They each have unique advantage ranging from having rigorous error bounds, to the abilities to incorporate prior information, tolerate errors or run on memory limitted classical computers.
 
 In discussing iterative phase estimation, we will consider a unitary $U$ given as a black-box operation.
 As described in the section on [oracles](data-structures#oracles), the Q# canon models such operations by the <xref:microsoft.quantum.canon.discreteoracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => () : Adjoint, Controlled)`.
 Concretely, if `U : DiscreteOracle`, then `U(m)` implements $U^m$ for `m : Int`.
 
-With this definition in place, each step of iterative phase estimation proceeds by preparing an ancilla qubit in the $\ket{+}$ state, then using a controlled application of `U(m)` to prepare $R_1(m \phi) \ket{+}$.
-As in the quantum case, the effect of a controlled application of the oracle `U(m)` is precisely the same as the effect of applying $R_1$ for the unknown phase, such that we can describe the effects of $U$ in this simpler fashion.
+With this definition in place, each step of iterative phase estimation proceeds by preparing an ancilla qubit in the $\ket{+}$ state along with the initial state $\ket{\phi}$ that we assume is an [eigenvector](../quantum-concepts-3-MatrixAdvanced.md) of $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi}\ket{\phi}$.  
+A controlled application of `U(m)` is then used which prepares the state $R\_1(m \phi) \ket{+}\ket{\phi}$.
+As in the quantum case, the effect of a controlled application of the oracle `U(m)` is precisely the same as the effect of applying $R_1$ for the unknown phase on $\ket{+}$, such that we can describe the effects of $U$ in this simpler fashion.
 The ancilla qubit used as a control for `U(m)` is then measured in the $X$ basis to obtain a single classical `Result`.
 
 At this point, reconstructing the phase from the `Result` values obtained through iterative phase estimation is a classical statistical inference problem.
+Finding the value of $m$ that maximizes the information gained, given a fixed inference method, is simply a problem in statistics.
 We emphasize this by briefly describing iterative phase estimation at a theoretical level in the Bayesian parameter estimation formalism before proceeding to describe the statistical algorithms provided in the Q# canon for solving this classical inference problem.
 
 ### Bayesian Phase Estimation ###

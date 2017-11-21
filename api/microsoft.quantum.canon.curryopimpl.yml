@@ -3,8 +3,8 @@ uid: microsoft.quantum.canon.curryopimpl
 name: CurryOpImpl
 type: function
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  function .CurryOpImpl (op : ((.'T, .'U) => () : ), arg1 : .'T) : (.'U => () : )
+syntax: "function CurryOpImpl (op : (('T, 'U) => () : ), arg1 : 'T) : ('U => () : )"
+input:
+  content: "(op : (('T, 'U) => () : ), arg1 : 'T)"
+  types: []
+output: 

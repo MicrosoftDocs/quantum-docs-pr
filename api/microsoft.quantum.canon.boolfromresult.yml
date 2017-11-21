@@ -3,8 +3,8 @@ uid: microsoft.quantum.canon.boolfromresult
 name: BoolFromResult
 type: function
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  function .BoolFromResult (input : Result) : Bool
+syntax: 'function BoolFromResult (input : Result) : Bool'
+input:
+  content: '(input : Result)'
+  types: []
+output: 

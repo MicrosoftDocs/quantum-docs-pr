@@ -3,8 +3,8 @@ uid: microsoft.quantum.canon.boolarrfrompositiveinttest
 name: BoolArrFromPositiveIntTest
 type: function
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  function .BoolArrFromPositiveIntTest () : ()
+syntax: 'function BoolArrFromPositiveIntTest () : ()'
+input:
+  content: ()
+  types: []
+output: 

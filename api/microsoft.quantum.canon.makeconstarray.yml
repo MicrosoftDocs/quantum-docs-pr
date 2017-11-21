@@ -3,11 +3,9 @@ uid: microsoft.quantum.canon.makeconstarray
 name: MakeConstArray
 type: function
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-summary: >2-
-
-   Creates an array of given length with all elements equal to given value.
-syntax: >2-
-
-  function .MakeConstArray (length : Int, value : Int) : Int[]
+summary: ' Creates an array of given length with all elements equal to given value.'
+syntax: 'function MakeConstArray (length : Int, value : Int) : Int[]'
+input:
+  content: '(length : Int, value : Int)'
+  types: []
+output: 

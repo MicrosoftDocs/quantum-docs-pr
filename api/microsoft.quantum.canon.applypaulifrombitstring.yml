@@ -3,26 +3,25 @@ uid: microsoft.quantum.canon.applypaulifrombitstring
 name: ApplyPauliFromBitString
 type: operation
 namespace: Microsoft.Quantum.Canon
-input:
-  pauli: >2-
-
-     Pauli to apply .
-  bitApply: >2-
-
-     apply Pauli if bit is this value .
-  bits: >2-
-
-     Boolean array .
-  qubits: >2
-
-     Quantum register .
-  Remark: >2-
-
-     The boolean array and the quantum register must be of equal length.
-output: {}
 summary: >2
-
    Applies a Pauli operator on the n^th qubit if the n^th bit of a Boolean array is true.
-syntax: >2-
-
-  operation .ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : ()
+syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : ()'
+input:
+  content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
+  types:
+  - name: bitApply
+    summary: ' apply Pauli if bit is this value .'
+    uid: microsoft.quantum.primitive.bool
+  - name: bits
+    summary: ' Boolean array .'
+    uid: microsoft.quantum.primitive.bool
+    isArray: true
+  - name: pauli
+    summary: ' Pauli to apply .'
+    uid: microsoft.quantum.primitive.pauli
+  - name: qubits
+    summary: >2
+       Quantum register .
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+output: 

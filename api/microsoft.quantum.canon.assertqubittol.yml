@@ -3,8 +3,8 @@ uid: microsoft.quantum.canon.assertqubittol
 name: AssertQubitTol
 type: operation
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  operation .AssertQubitTol (expected : Result, tolerance : Double, q : Qubit) : ()
+syntax: 'operation AssertQubitTol (expected : Result, tolerance : Double, q : Qubit) : ()'
+input:
+  content: '(expected : Result, tolerance : Double, q : Qubit)'
+  types: []
+output: 

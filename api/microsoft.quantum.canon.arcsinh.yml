@@ -3,14 +3,14 @@ uid: microsoft.quantum.canon.arcsinh
 name: ArcSinh
 type: function
 namespace: Microsoft.Quantum.Canon
-input:
-  x: >2
-
-     A real number $x$.
-output: {}
 summary: >2
-
    Computes the inverse hyperbolic secant of a number.
-syntax: >2-
-
-  function .ArcSinh (x : Double) : Double
+syntax: 'function ArcSinh (x : Double) : Double'
+input:
+  content: '(x : Double)'
+  types:
+  - name: x
+    summary: >2
+       A real number $x$.
+    uid: microsoft.quantum.primitive.float
+output: 

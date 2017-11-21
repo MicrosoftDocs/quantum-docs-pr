@@ -3,12 +3,15 @@ uid: microsoft.quantum.canon.filter
 name: Filter
 type: function
 namespace: Microsoft.Quantum.Canon
+syntax: "function Filter (predicate : ('T -> Bool), array : 'T[]) : 'T[]"
 input:
-  predicate: "\n A function from `'T' to Boolean that is used to filter elements. "
-  array: >2
-
-     An array of elements over `'T`.
-output: {}
-syntax: >2-
-
-  function .Filter (predicate : (.'T -> Bool), array : .'T[]) : .'T[]
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: array
+    summary: >2
+       An array of elements over `'T`.
+    uid: "'t"
+    isArray: true
+  - name: predicate
+    summary: " A function from `'T' to Boolean that is used to filter elements. "
+output: 

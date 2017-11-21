@@ -3,14 +3,15 @@ uid: microsoft.quantum.canon.max
 name: Max
 type: function
 namespace: Microsoft.Quantum.Canon
-input:
-  values: >2
-
-     An array to take the maximum of.
-output: {}
 summary: >2
-
    Given an array of integers, returns the largest element.
-syntax: >2-
-
-  function .Max (values : Int[]) : Int
+syntax: 'function Max (values : Int[]) : Int'
+input:
+  content: '(values : Int[])'
+  types:
+  - name: values
+    summary: >2
+       An array to take the maximum of.
+    uid: microsoft.quantum.primitive.integer
+    isArray: true
+output: 

@@ -3,8 +3,6 @@ uid: microsoft.quantum.canon.logicalregister
 name: LogicalRegister
 type: newtype
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  newtype .LogicalRegister = Qubit[];
+syntax: newtype LogicalRegister = Qubit[];
+input:
+  types: []

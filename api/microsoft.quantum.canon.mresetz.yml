@@ -3,12 +3,11 @@ uid: microsoft.quantum.canon.mresetz
 name: MResetZ
 type: operation
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
 summary: >2-
-
    Measures a single qubit in the Z basis and ensures that it
    is in the |0〉 state following the measurement.
-syntax: >2-
-
-  operation .MResetZ (target : Qubit) : Result
+syntax: 'operation MResetZ (target : Qubit) : Result'
+input:
+  content: '(target : Qubit)'
+  types: []
+output: 

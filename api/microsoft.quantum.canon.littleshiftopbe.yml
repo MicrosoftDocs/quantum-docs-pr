@@ -3,15 +3,14 @@ uid: microsoft.quantum.canon.littleshiftopbe
 name: LittleShiftOpBE
 type: operation
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
 summary: >2-
-
    Given an operation acting on a big-endian register
        |q? q??1 . q0>,
    returns a new operation acting on the little end-shifted register
        |q? q??1 . q1>,
    with qubit q0 being dropped being dropped if the cyclic argument is 0.
-syntax: >2-
-
-  operation .LittleShiftOpBE (cyclic : Int, op : (.BigEndian => () : )) : (.BigEndian => () : )
+syntax: 'operation LittleShiftOpBE (cyclic : Int, op : (BigEndian => () : )) : (BigEndian => () : )'
+input:
+  content: '(cyclic : Int, op : (BigEndian => () : ))'
+  types: []
+output: 

@@ -3,8 +3,8 @@ uid: microsoft.quantum.canon.lestub
 name: LEStub
 type: operation
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  operation .LEStub (target : .LittleEndian) : ()
+syntax: 'operation LEStub (target : LittleEndian) : ()'
+input:
+  content: '(target : LittleEndian)'
+  types: []
+output: 

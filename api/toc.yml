@@ -73,12 +73,94 @@
       uid: microsoft.quantum.canon.map
     - name: Subarray
       uid: microsoft.quantum.canon.subarray
+    - name: MeasureAllZeroState
+      uid: microsoft.quantum.canon.measureallzerostate
+    - name: MeasureIdentity
+      uid: microsoft.quantum.canon.measureidentity
+    - name: PrepareSingleQubitIdentity
+      uid: microsoft.quantum.canon.preparesinglequbitidentity
+    - name: PrepareIdentity
+      uid: microsoft.quantum.canon.prepareidentity
+    - name: EstimateFrequency
+      uid: microsoft.quantum.canon.estimatefrequency
+    - name: PrepareEntangledState
+      uid: microsoft.quantum.canon.prepareentangledstate
+    - name: PrepareChoiStateCA
+      uid: microsoft.quantum.canon.preparechoistateca
     - name: CurryOpImpl
       uid: microsoft.quantum.canon.curryopimpl
     - name: CurryOp
       uid: microsoft.quantum.canon.curryop
+    - name: ApplyToFirstQubit
+      uid: microsoft.quantum.canon.applytofirstqubit
+    - name: ApplyToFirstQubitA
+      uid: microsoft.quantum.canon.applytofirstqubita
+    - name: ApplyToFirstQubitC
+      uid: microsoft.quantum.canon.applytofirstqubitc
+    - name: ApplyToFirstQubitCA
+      uid: microsoft.quantum.canon.applytofirstqubitca
+    - name: ApplyToFirstTwoQubits
+      uid: microsoft.quantum.canon.applytofirsttwoqubits
+    - name: ApplyToFirstTwoQubitsA
+      uid: microsoft.quantum.canon.applytofirsttwoqubitsa
+    - name: ApplyToFirstTwoQubitsC
+      uid: microsoft.quantum.canon.applytofirsttwoqubitsc
+    - name: ApplyToFirstTwoQubitsCA
+      uid: microsoft.quantum.canon.applytofirsttwoqubitsca
+    - name: ApplyToFirstThreeQubits
+      uid: microsoft.quantum.canon.applytofirstthreequbits
+    - name: ApplyToFirstThreeQubitsA
+      uid: microsoft.quantum.canon.applytofirstthreequbitsa
+    - name: ApplyToFirstThreeQubitsC
+      uid: microsoft.quantum.canon.applytofirstthreequbitsc
+    - name: ApplyToFirstThreeQubitsCA
+      uid: microsoft.quantum.canon.applytofirstthreequbitsca
+    - name: ApplyToPartition
+      uid: microsoft.quantum.canon.applytopartition
+    - name: ApplyToPartitionA
+      uid: microsoft.quantum.canon.applytopartitiona
+    - name: ApplyToPartitionC
+      uid: microsoft.quantum.canon.applytopartitionc
+    - name: ApplyToPartitionCA
+      uid: microsoft.quantum.canon.applytopartitionca
+    - name: _AdiabaticEvolution
+      uid: microsoft.quantum.canon._adiabaticevolution
+    - name: AdiabaticEvolution
+      uid: microsoft.quantum.canon.adiabaticevolution
+    - name: AdiabaticStateEnergyUnitary
+      uid: microsoft.quantum.canon.adiabaticstateenergyunitary
+    - name: AdiabaticStateEnergyEstimate
+      uid: microsoft.quantum.canon.adiabaticstateenergyestimate
+    - name: EstimateEnergy
+      uid: microsoft.quantum.canon.estimateenergy
+    - name: Unitary
+      uid: microsoft.quantum.canon.unitary
+    - name: EvolutionUnitary
+      uid: microsoft.quantum.canon.evolutionunitary
+    - name: EvolutionSet
+      uid: microsoft.quantum.canon.evolutionset
+    - name: EvolutionGenerator
+      uid: microsoft.quantum.canon.evolutiongenerator
+    - name: EvolutionSchedule
+      uid: microsoft.quantum.canon.evolutionschedule
+    - name: SimulationAlgorithm
+      uid: microsoft.quantum.canon.simulationalgorithm
+    - name: TimeDependentSimulationAlgorithm
+      uid: microsoft.quantum.canon.timedependentsimulationalgorithm
     - name: RandomWalkPhaseEstimation
       uid: microsoft.quantum.canon.randomwalkphaseestimation
+    - name: ReflectionOracle
+      uid: microsoft.quantum.canon.reflectionoracle
+    - name: ObliviousOracle
+      uid: microsoft.quantum.canon.obliviousoracle
+    - name: StateOracle
+      uid: microsoft.quantum.canon.stateoracle
+    - name: DeterministicStateOracle
+      uid: microsoft.quantum.canon.deterministicstateoracle
+    - name: AmpAmpReflectionPhases
+      uid: microsoft.quantum.canon.ampampreflectionphases
+    - name: AmpAmpRotationPhases
+      uid: microsoft.quantum.canon.ampamprotationphases
     - name: RandomIntPow2
       uid: microsoft.quantum.canon.randomintpow2
     - name: RandomInt
@@ -93,6 +175,12 @@
       uid: microsoft.quantum.canon.robustphaseestimationdemo
     - name: RobustPhaseEstimationTest
       uid: microsoft.quantum.canon.robustphaseestimationtest
+    - name: Trotter1ImplCA
+      uid: microsoft.quantum.canon.trotter1implca
+    - name: Trotter2ImplCA
+      uid: microsoft.quantum.canon.trotter2implca
+    - name: DecomposeIntoTimeStepsCA
+      uid: microsoft.quantum.canon.decomposeintotimestepsca
     - name: BoolFromResult
       uid: microsoft.quantum.canon.boolfromresult
     - name: ResultFromBool
@@ -117,6 +205,14 @@
       uid: microsoft.quantum.canon.assertintequal
     - name: AssertBoolEqual
       uid: microsoft.quantum.canon.assertboolequal
+    - name: ControlledOnBitStringImpl
+      uid: microsoft.quantum.canon.controlledonbitstringimpl
+    - name: ControlledOnBitString
+      uid: microsoft.quantum.canon.controlledonbitstring
+    - name: ControlledOnIntImpl
+      uid: microsoft.quantum.canon.controlledonintimpl
+    - name: ControlledOnInt
+      uid: microsoft.quantum.canon.controlledonint
     - name: Lg
       uid: microsoft.quantum.canon.lg
     - name: Max
@@ -131,12 +227,34 @@
       uid: microsoft.quantum.canon.arcsinh
     - name: ArcTanh
       uid: microsoft.quantum.canon.arctanh
+    - name: FlipToBasis
+      uid: microsoft.quantum.canon.fliptobasis
+    - name: AssertEqualOnBasisVector
+      uid: microsoft.quantum.canon.assertequalonbasisvector
+    - name: IdentityTestHelper
+      uid: microsoft.quantum.canon.identitytesthelper
+    - name: AssertOperationsEqualInPlace
+      uid: microsoft.quantum.canon.assertoperationsequalinplace
+    - name: AssertOperationsEqualInPlaceCompBasis
+      uid: microsoft.quantum.canon.assertoperationsequalinplacecompbasis
+    - name: ApplyToEachAC
+      uid: microsoft.quantum.canon.applytoeachac
+    - name: ApplyToEachA
+      uid: microsoft.quantum.canon.applytoeacha
+    - name: ApplyToEachC
+      uid: microsoft.quantum.canon.applytoeachc
+    - name: ApplyToEach
+      uid: microsoft.quantum.canon.applytoeach
+    - name: ApplyToRangeAC
+      uid: microsoft.quantum.canon.applytorangeac
     - name: AssertQubit
       uid: microsoft.quantum.canon.assertqubit
     - name: AssertQubitTol
       uid: microsoft.quantum.canon.assertqubittol
     - name: AssertQubitState
       uid: microsoft.quantum.canon.assertqubitstate
+    - name: AssertOperationsEqualReferenced
+      uid: microsoft.quantum.canon.assertoperationsequalreferenced
     - name: ReverseRegister
       uid: microsoft.quantum.canon.reverseregister
     - name: SwapReverseRegister
@@ -169,6 +287,12 @@
       uid: microsoft.quantum.canon.logof2
     - name: Complex
       uid: microsoft.quantum.canon.complex
+    - name: OperationPowImpl
+      uid: microsoft.quantum.canon.operationpowimpl
+    - name: OperationPowImplAC
+      uid: microsoft.quantum.canon.operationpowimplac
+    - name: OperationPow
+      uid: microsoft.quantum.canon.operationpow
     - name: MeasureWithScratch
       uid: microsoft.quantum.canon.measurewithscratch
     - name: MeasureWithScratchTest

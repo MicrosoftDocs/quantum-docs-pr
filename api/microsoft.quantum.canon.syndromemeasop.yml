@@ -3,14 +3,10 @@ uid: microsoft.quantum.canon.syndromemeasop
 name: SyndromeMeasOp
 type: newtype
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
 summary: >2
-
    Represents an operation that is used to measure the syndrome
    of an error-correcting code block.
 example: >2-
-
    Measure syndromes for the bit-flip code
    $S = \langle ZZI, IZZ \rangle$ using scratch qubits in a
    non–fault tolerant manner:
@@ -20,6 +16,6 @@ example: >2-
                [PauliI; PauliZ; PauliZ]
            ], _, MeasureWithScratch));
    ```
-syntax: >2-
-
-  newtype .SyndromeMeasOp = (.LogicalRegister => .Syndrome : );
+syntax: 'newtype SyndromeMeasOp = (LogicalRegister => Syndrome : );'
+input:
+  types: []

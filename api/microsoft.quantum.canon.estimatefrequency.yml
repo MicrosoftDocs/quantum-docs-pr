@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.estimatefrequency
+name: EstimateFrequency
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation EstimateFrequency (preparation : (Qubit[] => () : ), measurement : (Qubit[] => Result : ), nQubits : Int, nMeasurements : Int) : Double'
+input:
+  content: '(preparation : (Qubit[] => () : ), measurement : (Qubit[] => Result : ), nQubits : Int, nMeasurements : Int)'
+  types: []
+output: 

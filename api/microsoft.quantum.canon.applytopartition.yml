@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytopartition
+name: ApplyToPartition
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyToPartition (op : ((Qubit[], Qubit[]) => () : ), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : ()'
+input:
+  content: '(op : ((Qubit[], Qubit[]) => () : ), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
+  types: []
+output: 

@@ -3,8 +3,8 @@ uid: microsoft.quantum.canon.littleoptobigop
 name: LittleOpToBigOp
 type: operation
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  operation .LittleOpToBigOp (op : (.LittleEndian => () : )) : (.BigEndian => () : )
+syntax: 'operation LittleOpToBigOp (op : (LittleEndian => () : )) : (BigEndian => () : )'
+input:
+  content: '(op : (LittleEndian => () : ))'
+  types: []
+output: 

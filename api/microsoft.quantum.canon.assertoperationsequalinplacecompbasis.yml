@@ -1,0 +1,11 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertoperationsequalinplacecompbasis
+name: AssertOperationsEqualInPlaceCompBasis
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Checks if the operation givenU is equal to the operation givenU on \n the given input size and up to a given tolerance \n by checking action of the operations only on the vectors from computational basis. \n This is necessary, but not sufficient condition for the equality of two unitaries."
+syntax: 'operation AssertOperationsEqualInPlaceCompBasis (givenU : (Qubit[] => () : ), expectedU : (Qubit[] => () : Adjoint), inputSize : Int) : ()'
+input:
+  content: '(givenU : (Qubit[] => () : ), expectedU : (Qubit[] => () : Adjoint), inputSize : Int)'
+  types: []
+output: 

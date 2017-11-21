@@ -3,14 +3,14 @@ uid: microsoft.quantum.canon.lg
 name: Lg
 type: function
 namespace: Microsoft.Quantum.Canon
-input:
-  input: >2
-
-     A real number $x$.
-output: {}
 summary: >2
-
    Computes the base-2 logarithm of a number.
-syntax: >2-
-
-  function .Lg (input : Double) : Double
+syntax: 'function Lg (input : Double) : Double'
+input:
+  content: '(input : Double)'
+  types:
+  - name: input
+    summary: >2
+       A real number $x$.
+    uid: microsoft.quantum.primitive.float
+output: 

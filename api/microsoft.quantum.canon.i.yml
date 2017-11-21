@@ -3,8 +3,8 @@ uid: microsoft.quantum.canon.i
 name: I
 type: operation
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  operation .I (target : Qubit) : ()
+syntax: 'operation I (target : Qubit) : ()'
+input:
+  content: '(target : Qubit)'
+  types: []
+output: 

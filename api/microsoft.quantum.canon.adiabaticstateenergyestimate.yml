@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.adiabaticstateenergyestimate
+name: AdiabaticStateEnergyEstimate
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation AdiabaticStateEnergyEstimate (nQubits : Int, statePrepUnitary : (Qubit[] => () : ), adiabaticUnitary : (Qubit[] => () : ), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double : )) : Double'
+input:
+  content: '(nQubits : Int, statePrepUnitary : (Qubit[] => () : ), adiabaticUnitary : (Qubit[] => () : ), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double : ))'
+  types: []
+output: 

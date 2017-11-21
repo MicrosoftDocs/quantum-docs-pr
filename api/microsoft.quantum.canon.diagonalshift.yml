@@ -3,17 +3,15 @@ uid: microsoft.quantum.canon.diagonalshift
 name: DiagonalShift
 type: operation
 namespace: Microsoft.Quantum.Canon
+summary: ' Diagonal shift circuit. This implements the diagonal unitary diag(exp(2πisk/2ⁿ):k=0,...,2ⁿ-1).'
+syntax: 'operation DiagonalShift (s : Int, qs : LittleEndian) : ()'
 input:
-  qs: >2-
-
-     quantum register.
-  s: >2-
-
-     phase shift.
-output: {}
-summary: >2-
-
-   Diagonal shift circuit. This implements the diagonal unitary diag(exp(2πisk/2ⁿ):k=0,...,2ⁿ-1).
-syntax: >2-
-
-  operation .DiagonalShift (s : Int, qs : .LittleEndian) : ()
+  content: '(s : Int, qs : LittleEndian)'
+  types:
+  - name: qs
+    summary: ' quantum register.'
+    uid: .littleendian
+  - name: s
+    summary: ' phase shift.'
+    uid: microsoft.quantum.primitive.integer
+output: 

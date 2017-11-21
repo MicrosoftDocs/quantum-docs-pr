@@ -3,13 +3,16 @@ uid: microsoft.quantum.canon.forany
 name: ForAny
 type: function
 namespace: Microsoft.Quantum.Canon
+remarks: " The function is defined for generic types, i.e., whenever we have \n an array `'T[]` and a function `predicate: 'S -> 'T` we can produce \n a `Bool` value that indicates if some element satisfies `predicate`. \n "
+syntax: "function ForAny (predicate : ('T -> Bool), array : 'T[]) : Bool"
 input:
-  predicate: "\n A function from `'T' to `'Bool` that is used to check elements. "
-  array: >2
-
-     An array of elements over `'T`.
-output: {}
-remarks: "\n The function is defined for generic types, i.e., whenever we have \n an array `'T[]` and a function `predicate: 'S -> 'T` we can produce \n a `Bool` value that indicates if some element satisfies `predicate`. \n "
-syntax: >2-
-
-  function .ForAny (predicate : (.'T -> Bool), array : .'T[]) : Bool
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: array
+    summary: >2
+       An array of elements over `'T`.
+    uid: "'t"
+    isArray: true
+  - name: predicate
+    summary: " A function from `'T' to `'Bool` that is used to check elements. "
+output: 

@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.controlledonbitstring
+name: ControlledOnBitString
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function ControlledOnBitString (bits : Bool[], oracle : (Qubit[] => () : Adjoint, Controlled)) : ((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
+input:
+  content: '(bits : Bool[], oracle : (Qubit[] => () : Adjoint, Controlled))'
+  types: []
+output: 

@@ -3,8 +3,8 @@ uid: microsoft.quantum.canon.applyreversedopbe
 name: ApplyReversedOpBE
 type: operation
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  operation .ApplyReversedOpBE (op : (.BigEndian => () : ), register : .LittleEndian) : ()
+syntax: 'operation ApplyReversedOpBE (op : (BigEndian => () : ), register : LittleEndian) : ()'
+input:
+  content: '(op : (BigEndian => () : ), register : LittleEndian)'
+  types: []
+output: 

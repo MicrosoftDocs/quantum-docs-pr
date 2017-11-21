@@ -1,0 +1,11 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytofirstqubitc
+name: ApplyToFirstQubitC
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyToFirstQubitC (op : (Qubit => () : Controlled), register : Qubit[]) : ()'
+seealso: ' @"Microsoft.Quantum.Canon.ApplyToFirstQubit"'
+input:
+  content: '(op : (Qubit => () : Controlled), register : Qubit[])'
+  types: []
+output: 

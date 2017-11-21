@@ -3,12 +3,9 @@ uid: microsoft.quantum.canon.qecc
 name: QECC
 type: newtype
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
 summary: >2-
-
    Represents an error-correcting code as defined by its encoder,
    decoder, and syndrome measurement procedure.
-syntax: >2-
-
-  newtype .QECC = (.EncodeOp, .DecodeOp, .SyndromeMeasOp);
+syntax: newtype QECC = (EncodeOp, DecodeOp, SyndromeMeasOp);
+input:
+  types: []

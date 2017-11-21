@@ -3,12 +3,11 @@ uid: microsoft.quantum.canon.reverseregister
 name: ReverseRegister
 type: operation
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
 summary: >2-
-
    Reorders the qubits in a register to obtain a new
    qubit register.
-syntax: >2-
-
-  operation .ReverseRegister (register : Qubit[]) : Qubit[]
+syntax: 'operation ReverseRegister (register : Qubit[]) : Qubit[]'
+input:
+  content: '(register : Qubit[])'
+  types: []
+output: 

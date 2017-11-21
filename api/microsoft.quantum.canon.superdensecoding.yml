@@ -3,18 +3,18 @@ uid: microsoft.quantum.canon.superdensecoding
 name: SuperdenseCoding
 type: operation
 namespace: Microsoft.Quantum.Canon
-input:
-  a: >2-
-
-     A Boolean value that represent the first of two input bits to the superdense coding protocol.
-  b: >2
-
-     A Boolean value that represent the second of two input bits to the superdense coding protocol.
-output: {}
 summary: >2
-
    Superdense coding transfers 2 classical bits by encoding them into 1 qubit, using 1 EPR pair ("2c=1q+1e").
-remarks: "\n The circuit first creates an EPR pair between two ancilla qubits. Depending on the value of two classical \n bits then one out of 4 possible Bell states is created by applying a local transformation to just one half of the\n EPR pair. Finally, a Bell measurement is applied to decode the two bits of classical information from the state.\n [ Nielsen & Chuang, CUP 2000, Section 2.3, http://doi.org/10.1017/CBO9780511976667 ]"
-syntax: >2-
-
-  operation .SuperdenseCoding (a : Bool, b : Bool) : (Result, Result)
+remarks: " The circuit first creates an EPR pair between two ancilla qubits. Depending on the value of two classical \n bits then one out of 4 possible Bell states is created by applying a local transformation to just one half of the\n EPR pair. Finally, a Bell measurement is applied to decode the two bits of classical information from the state.\n [ Nielsen & Chuang, CUP 2000, Section 2.3, http://doi.org/10.1017/CBO9780511976667 ]"
+syntax: 'operation SuperdenseCoding (a : Bool, b : Bool) : (Result, Result)'
+input:
+  content: '(a : Bool, b : Bool)'
+  types:
+  - name: a
+    summary: ' A Boolean value that represent the first of two input bits to the superdense coding protocol.'
+    uid: microsoft.quantum.primitive.bool
+  - name: b
+    summary: >2
+       A Boolean value that represent the second of two input bits to the superdense coding protocol.
+    uid: microsoft.quantum.primitive.bool
+output: 

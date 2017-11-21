@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytofirsttwoqubits
+name: ApplyToFirstTwoQubits
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: ' Applies operation op to the first two qubits in the register : `op(register[0],register[1])`'
+syntax: 'operation ApplyToFirstTwoQubits (op : ((Qubit, Qubit) => () : ), register : Qubit[]) : ()'
+input:
+  content: '(op : ((Qubit, Qubit) => () : ), register : Qubit[])'
+  types:
+  - name: op
+    summary: ' An operation to be applied to the first two qubits'
+  - name: 'register '
+    summary: ' Qubit array to the first two qubits of which the operation is applied'
+output: 

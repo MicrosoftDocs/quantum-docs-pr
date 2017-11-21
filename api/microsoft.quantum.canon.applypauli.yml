@@ -3,18 +3,19 @@ uid: microsoft.quantum.canon.applypauli
 name: ApplyPauli
 type: operation
 namespace: Microsoft.Quantum.Canon
-input:
-  pauli: >2-
-
-     A multi-qubit Pauli operator represented as an array of single-qubit Pauli operators.
-  target: >2-
-
-     Register to apply the given Pauli operation on.
-output: {}
 summary: >2
-
    Given a multi-qubit Pauli operator, applies the corresponding operation to
    a register.
-syntax: >2-
-
-  operation .ApplyPauli (pauli : Pauli[], target : Qubit[]) : ()
+syntax: 'operation ApplyPauli (pauli : Pauli[], target : Qubit[]) : ()'
+input:
+  content: '(pauli : Pauli[], target : Qubit[])'
+  types:
+  - name: pauli
+    summary: ' A multi-qubit Pauli operator represented as an array of single-qubit Pauli operators.'
+    uid: microsoft.quantum.primitive.pauli
+    isArray: true
+  - name: target
+    summary: ' Register to apply the given Pauli operation on.'
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+output: 

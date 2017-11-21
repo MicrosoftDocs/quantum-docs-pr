@@ -3,8 +3,8 @@ uid: microsoft.quantum.canon.assertalmostequal
 name: AssertAlmostEqual
 type: function
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  function .AssertAlmostEqual (actual : Double, expected : Double) : ()
+syntax: 'function AssertAlmostEqual (actual : Double, expected : Double) : ()'
+input:
+  content: '(actual : Double, expected : Double)'
+  types: []
+output: 

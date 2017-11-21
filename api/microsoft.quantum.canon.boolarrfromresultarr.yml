@@ -3,8 +3,8 @@ uid: microsoft.quantum.canon.boolarrfromresultarr
 name: BoolArrFromResultArr
 type: function
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  function .BoolArrFromResultArr (input : Result[]) : Bool[]
+syntax: 'function BoolArrFromResultArr (input : Result[]) : Bool[]'
+input:
+  content: '(input : Result[])'
+  types: []
+output: 

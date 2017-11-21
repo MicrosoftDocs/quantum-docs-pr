@@ -1,0 +1,11 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachac
+name: ApplyToEachAC
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: "operation ApplyToEachAC (singleQubitOperation : ('T => () : Adjoint, Controlled), register : 'T[]) : ()"
+seealso: ' - @"microsoft.quantum.canon.ApplyToEach"'
+input:
+  content: "(singleQubitOperation : ('T => () : Adjoint, Controlled), register : 'T[])"
+  types: []
+output: 

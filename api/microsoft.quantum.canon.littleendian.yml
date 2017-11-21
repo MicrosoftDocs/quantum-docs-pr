@@ -3,8 +3,6 @@ uid: microsoft.quantum.canon.littleendian
 name: LittleEndian
 type: newtype
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  newtype .LittleEndian = Qubit[];
+syntax: newtype LittleEndian = Qubit[];
+input:
+  types: []

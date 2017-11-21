@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.trotter1implca
+name: Trotter1ImplCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation Trotter1ImplCA (evolutionGenerator : (Int, ((Int, Double, Qubit[]) => () : Adjoint, Controlled)), stepSize : Double, target : Qubit[]) : ()'
+input:
+  content: '(evolutionGenerator : (Int, ((Int, Double, Qubit[]) => () : Adjoint, Controlled)), stepSize : Double, target : Qubit[])'
+  types: []
+output: 

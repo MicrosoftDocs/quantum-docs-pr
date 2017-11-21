@@ -3,13 +3,18 @@ uid: microsoft.quantum.canon.subarray
 name: Subarray
 type: function
 namespace: Microsoft.Quantum.Canon
+remarks: " The function is defined for generic types, i.e., whenever we have \n an array `'T[]` and a list of locations `Int[]` defining the subarray. \n "
+syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
 input:
-  indices: "\n A list of integers that is used to define the subarray. "
-  array: >2
-
-     An array of elements over `'T`.
-output: {}
-remarks: "\n The function is defined for generic types, i.e., whenever we have \n an array `'T[]` and a list of locations `Int[]` defining the subarray. \n "
-syntax: >2-
-
-  function .Subarray (indices : Int[], array : .'T[]) : .'T[]
+  content: "(indices : Int[], array : 'T[])"
+  types:
+  - name: array
+    summary: >2
+       An array of elements over `'T`.
+    uid: "'t"
+    isArray: true
+  - name: indices
+    summary: ' A list of integers that is used to define the subarray. '
+    uid: microsoft.quantum.primitive.integer
+    isArray: true
+output: 

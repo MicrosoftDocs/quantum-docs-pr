@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytorangeac
+name: ApplyToRangeAC
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyToRangeAC (singleQubitOperation : ((Int, Qubit) => () : Adjoint, Controlled), register : Qubit[]) : ()'
+input:
+  content: '(singleQubitOperation : ((Int, Qubit) => () : Adjoint, Controlled), register : Qubit[])'
+  types: []
+output: 

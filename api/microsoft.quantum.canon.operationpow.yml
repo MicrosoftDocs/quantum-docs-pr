@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpow
+name: OperationPow
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given an operation representing a gate $U$, returns a new operation
+   $U^m$ for a power $m$.
+syntax: "function OperationPow (oracle : ('T => () : ), power : Int) : ('T => () : )"
+input:
+  content: "(oracle : ('T => () : ), power : Int)"
+  types: []
+output: 

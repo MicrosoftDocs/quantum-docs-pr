@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.measureallzerostate
+name: MeasureAllZeroState
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation MeasureAllZeroState (register : Qubit[]) : Result'
+input:
+  content: '(register : Qubit[])'
+  types: []
+output: 

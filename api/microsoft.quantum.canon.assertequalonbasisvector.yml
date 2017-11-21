@@ -1,0 +1,11 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertequalonbasisvector
+name: AssertEqualOnBasisVector
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Checks if the result of applying two operation givenU and expectedU to \n a basis state is the same. The basis state is described by `basis` parameter. \n See FlipToBasis function for more details on this description. "
+syntax: 'operation AssertEqualOnBasisVector (basis : Int[], givenU : (Qubit[] => () : ), expectedU : (Qubit[] => () : Adjoint), tolerance : Double) : ()'
+input:
+  content: '(basis : Int[], givenU : (Qubit[] => () : ), expectedU : (Qubit[] => () : Adjoint), tolerance : Double)'
+  types: []
+output: 

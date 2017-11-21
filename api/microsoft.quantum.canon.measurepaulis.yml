@@ -3,12 +3,11 @@ uid: microsoft.quantum.canon.measurepaulis
 name: MeasurePaulis
 type: operation
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
 summary: >2
-
    Given an array of multi-qubit Pauli operators, measures each using a specified measurement
    gadget, then returns the array of results.
-syntax: >2-
-
-  operation .MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result : )) : Result[]
+syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result : )) : Result[]'
+input:
+  content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result : ))'
+  types: []
+output: 

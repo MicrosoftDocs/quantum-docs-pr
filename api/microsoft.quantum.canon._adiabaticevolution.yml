@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon._adiabaticevolution
+name: _AdiabaticEvolution
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation _AdiabaticEvolution (adiabaticTime : Double, evolutionGeneratorStart : EvolutionGenerator, evolutionGeneratorEnd : EvolutionGenerator, timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm, qubits : Qubit[]) : ()'
+input:
+  content: '(adiabaticTime : Double, evolutionGeneratorStart : EvolutionGenerator, evolutionGeneratorEnd : EvolutionGenerator, timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm, qubits : Qubit[])'
+  types: []
+output: 

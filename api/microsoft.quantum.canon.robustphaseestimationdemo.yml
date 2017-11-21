@@ -3,8 +3,8 @@ uid: microsoft.quantum.canon.robustphaseestimationdemo
 name: RobustPhaseEstimationDemo
 type: operation
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  operation .RobustPhaseEstimationDemo (phaseSet : Double, bitsPrecision : Int) : Double
+syntax: 'operation RobustPhaseEstimationDemo (phaseSet : Double, bitsPrecision : Int) : Double'
+input:
+  content: '(phaseSet : Double, bitsPrecision : Int)'
+  types: []
+output: 

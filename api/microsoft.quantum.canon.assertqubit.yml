@@ -3,8 +3,8 @@ uid: microsoft.quantum.canon.assertqubit
 name: AssertQubit
 type: operation
 namespace: Microsoft.Quantum.Canon
-input: {}
-output: {}
-syntax: >2-
-
-  operation .AssertQubit (expected : Result, q : Qubit) : ()
+syntax: 'operation AssertQubit (expected : Result, q : Qubit) : ()'
+input:
+  content: '(expected : Result, q : Qubit)'
+  types: []
+output: 

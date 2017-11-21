@@ -7,4 +7,8 @@ syntax: 'function ResultArrFromBoolArr (input : Bool[]) : Result[]'
 input:
   content: '(input : Bool[])'
   types: []
-output: 
+output:
+  content: Result[]
+  types:
+  - uid: microsoft.quantum.primitive.result
+    isArray: true

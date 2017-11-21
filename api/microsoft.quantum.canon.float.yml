@@ -7,4 +7,7 @@ syntax: 'function Float (value : Int) : Double'
 input:
   content: '(value : Int)'
   types: []
-output: 
+output:
+  content: Double
+  types:
+  - uid: microsoft.quantum.primitive.float

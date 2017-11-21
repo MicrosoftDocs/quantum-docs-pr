@@ -10,4 +10,7 @@ syntax: "function OperationPow (oracle : ('T => () : ), power : Int) : ('T => ()
 input:
   content: "(oracle : ('T => () : ), power : Int)"
   types: []
-output: 
+output:
+  content: "('T => () : )"
+  types:
+  - summary: ' A new operation representing $U^m$, where $m = \texttt{power}$.'

@@ -11,4 +11,10 @@ syntax: 'operation PrepareEntangledState (left : Qubit[], right : Qubit[]) : ()'
 input:
   content: '(left : Qubit[], right : Qubit[])'
   types: []
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

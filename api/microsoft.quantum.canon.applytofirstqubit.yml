@@ -12,4 +12,7 @@ input:
     summary: ' An operation to be applied to the first qubit'
   - name: 'register '
     summary: ' Qubit array to the first qubit of which the operation is applied'
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

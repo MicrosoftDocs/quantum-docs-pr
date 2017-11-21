@@ -7,4 +7,7 @@ syntax: 'operation RobustPhaseEstimationDemo (phaseSet : Double, bitsPrecision :
 input:
   content: '(phaseSet : Double, bitsPrecision : Int)'
   types: []
-output: 
+output:
+  content: Double
+  types:
+  - uid: microsoft.quantum.primitive.float

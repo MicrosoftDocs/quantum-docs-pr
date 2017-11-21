@@ -14,4 +14,8 @@ input:
        An array to take the maximum of.
     uid: microsoft.quantum.primitive.integer
     isArray: true
-output: 
+output:
+  content: Int
+  types:
+  - summary: ' The largest element of `values`.'
+    uid: microsoft.quantum.primitive.integer

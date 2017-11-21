@@ -26,4 +26,10 @@ input:
   - name: oracle
     summary: ' An operation implementing U^m for given integer powers m.'
     uid: .discreteoracle
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

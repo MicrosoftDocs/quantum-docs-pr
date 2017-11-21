@@ -11,4 +11,7 @@ syntax: 'operation IterateThroughCartesianProduct (bounds : Int[], op : (Int[] =
 input:
   content: '(bounds : Int[], op : (Int[] => () : ))'
   types: []
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

@@ -15,4 +15,8 @@ input:
     isArray: true
   - name: predicate
     summary: " A function from `'T' to `'Bool` that is used to check elements. "
-output: 
+output:
+  content: Bool
+  types:
+  - summary: ' A `Bool` value of the OR function of the predicate applied to all elements. '
+    uid: microsoft.quantum.primitive.bool

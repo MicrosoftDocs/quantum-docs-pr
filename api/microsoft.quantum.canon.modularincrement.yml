@@ -18,4 +18,7 @@ input:
   - name: qs
     summary: ' quantum register.'
     uid: .littleendian
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

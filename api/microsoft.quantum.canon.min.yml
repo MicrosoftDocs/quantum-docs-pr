@@ -12,4 +12,8 @@ input:
   - name: values
     summary: >2
        An array to take the minimum of.
-output: 
+output:
+  content: Int
+  types:
+  - summary: ' The smallest element of `values`.'
+    uid: microsoft.quantum.primitive.integer

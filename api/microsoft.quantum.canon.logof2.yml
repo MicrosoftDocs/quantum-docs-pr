@@ -10,4 +10,7 @@ syntax: 'function LogOf2 () : Double'
 input:
   content: ()
   types: []
-output: 
+output:
+  content: Double
+  types:
+  - uid: microsoft.quantum.primitive.float

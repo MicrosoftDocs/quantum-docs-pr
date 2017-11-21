@@ -17,4 +17,9 @@ input:
     summary: ' A list of integers that is used to define the subarray. '
     uid: microsoft.quantum.primitive.integer
     isArray: true
-output: 
+output:
+  content: "'T[]"
+  types:
+  - summary: " An array `'T[]` of elements whose indices correspond to the subarray. "
+    uid: "'t"
+    isArray: true

@@ -7,4 +7,10 @@ syntax: 'operation Trotter1ImplCA (evolutionGenerator : (Int, ((Int, Double, Qub
 input:
   content: '(evolutionGenerator : (Int, ((Int, Double, Qubit[]) => () : Adjoint, Controlled)), stepSize : Double, target : Qubit[])'
   types: []
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

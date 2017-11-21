@@ -20,4 +20,10 @@ input:
        An integer one larger than the largest integer to be
        returned by this operation.
     uid: microsoft.quantum.primitive.integer
-output: 
+output:
+  content: Int
+  types:
+  - summary: >2
+       An integer $x$ uniformly at random from the given interval;
+       that is, with $\Pr(x) = \frac{1}{\texttt{maxInt}}$.
+    uid: microsoft.quantum.primitive.integer

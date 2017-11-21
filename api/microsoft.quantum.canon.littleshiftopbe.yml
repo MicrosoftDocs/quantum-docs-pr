@@ -13,4 +13,7 @@ syntax: 'operation LittleShiftOpBE (cyclic : Int, op : (BigEndian => () : )) : (
 input:
   content: '(cyclic : Int, op : (BigEndian => () : ))'
   types: []
-output: 
+output:
+  content: '(BigEndian => () : )'
+  types:
+  - {}

@@ -3,9 +3,24 @@ uid: microsoft.quantum.canon.assertoperationsequalinplacecompbasis
 name: AssertOperationsEqualInPlaceCompBasis
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Checks if the operation givenU is equal to the operation givenU on \n the given input size and up to a given tolerance \n by checking action of the operations only on the vectors from computational basis. \n This is necessary, but not sufficient condition for the equality of two unitaries."
+summary: >2
+   Checks if the operation givenU is equal to the operation expectedU on
+   the given input size  by checking the action of the operations only on
+   the vectors from the computational basis.
+   This is a necessary, but not sufficient, condition for the equality of
+   two unitaries.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (givenU : (Qubit[] => () : ), expectedU : (Qubit[] => () : Adjoint), inputSize : Int) : ()'
 input:
   content: '(givenU : (Qubit[] => () : ), expectedU : (Qubit[] => () : Adjoint), inputSize : Int)'
-  types: []
-output: 
+  types:
+  - name: expectedU
+    summary: ' Reference operation on n qubits that givenU is to be compared against.'
+  - name: givenU
+    summary: ' Operation on n qubits to be checked.'
+  - name: inputSize
+    summary: ' The number of qubits n that the operations givenU and expectedU operate on.'
+    uid: microsoft.quantum.primitive.integer
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

@@ -7,4 +7,7 @@ syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] =>
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => () : ), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double : ))'
   types: []
-output: 
+output:
+  content: Double
+  types:
+  - uid: microsoft.quantum.primitive.float

@@ -13,4 +13,8 @@ input:
     summary: >2
        A real number $x$.
     uid: microsoft.quantum.primitive.float
-output: 
+output:
+  content: Double
+  types:
+  - summary: ' The base-2 logarithm $y = \log_2(x)$ such that $x = 2^y$.'
+    uid: microsoft.quantum.primitive.float

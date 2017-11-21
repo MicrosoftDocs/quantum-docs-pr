@@ -13,4 +13,8 @@ input:
     summary: >2
        A real number $x$.
     uid: microsoft.quantum.primitive.float
-output: 
+output:
+  content: Double
+  types:
+  - summary: ' A real number $y$ such that $x = \cosh(y)$.'
+    uid: microsoft.quantum.primitive.float

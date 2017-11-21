@@ -8,4 +8,9 @@ seealso: ' - @"microsoft.quantum.canon.ApplyToEach"'
 input:
   content: "(singleQubitOperation : ('T => () : Adjoint), register : 'T[])"
   types: []
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint

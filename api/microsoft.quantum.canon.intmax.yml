@@ -7,4 +7,7 @@ syntax: 'function IntMax (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'
   types: []
-output: 
+output:
+  content: Int
+  types:
+  - uid: microsoft.quantum.primitive.integer

@@ -7,4 +7,7 @@ syntax: 'operation ApplyReversedOpBE (op : (BigEndian => () : ), register : Litt
 input:
   content: '(op : (BigEndian => () : ), register : LittleEndian)'
   types: []
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

@@ -15,4 +15,10 @@ input:
        The number of classical bits required to represent the largest integer
        that could be returned by this operation.
     uid: microsoft.quantum.primitive.integer
-output: 
+output:
+  content: Int
+  types:
+  - summary: >2-
+       An integer $x$ uniformly at random from the given interval;
+       that is, with $\Pr(x) = \frac{1}{2^{\texttt{maxBits}}$.
+    uid: microsoft.quantum.primitive.integer

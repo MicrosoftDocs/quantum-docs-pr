@@ -7,4 +7,7 @@ syntax: 'function ControlledOnBitString (bits : Bool[], oracle : (Qubit[] => () 
 input:
   content: '(bits : Bool[], oracle : (Qubit[] => () : Adjoint, Controlled))'
   types: []
-output: 
+output:
+  content: '((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
+  types:
+  - {}

@@ -32,4 +32,11 @@ input:
     summary: >2-
        An oracle representing state preparation for the initial dynamical
        generator.
-output: 
+output:
+  content: Double
+  types:
+  - summary: >2-
+       An estimate $\hat{\phi}$ of the ground state energy $\phi$
+       of the ground state energy of the generator represented by $U$,
+       scaled by the evolution time step $\delta t$.
+    uid: microsoft.quantum.primitive.float

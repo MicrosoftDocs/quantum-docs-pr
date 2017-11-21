@@ -7,4 +7,7 @@ syntax: 'operation RandomSingleQubitPauli () : Pauli'
 input:
   content: ()
   types: []
-output: 
+output:
+  content: Pauli
+  types:
+  - uid: microsoft.quantum.primitive.pauli

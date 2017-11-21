@@ -15,4 +15,9 @@ input:
     isArray: true
   - name: mapper
     summary: " A function from `'S' to `'T` that is used to map elements. "
-output: 
+output:
+  content: "'U[]"
+  types:
+  - summary: " An array `'T[]` of elements that are mapped by the `mapper` function."
+    uid: "'u"
+    isArray: true

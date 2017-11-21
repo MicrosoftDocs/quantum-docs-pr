@@ -14,4 +14,7 @@ input:
   - name: s
     summary: ' phase shift.'
     uid: microsoft.quantum.primitive.integer
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

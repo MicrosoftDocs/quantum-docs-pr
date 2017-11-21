@@ -35,4 +35,7 @@ input:
   - name: unwind
     summary: ' Number of results to forget when consistency checks fail.'
     uid: microsoft.quantum.primitive.integer
-output: 
+output:
+  content: Double
+  types:
+  - uid: microsoft.quantum.primitive.float

@@ -5,7 +5,9 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >2
    Applies a single-qubit operation to each qubit in a register.
-example: >2
+remarks: >2
+
+  ## Examples
    Prepare a three-qubit $\ket{+} state:
    ```qsharp
        using (register = Qubit[3]) {
@@ -27,4 +29,7 @@ input:
     isArray: true
   - name: singleQubitOperation
     summary: ' Operation to apply to each qubit.'
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

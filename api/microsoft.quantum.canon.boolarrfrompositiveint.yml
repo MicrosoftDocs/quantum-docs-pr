@@ -16,4 +16,8 @@ input:
   - name: number
     summary: ' Positive integer.'
     uid: microsoft.quantum.primitive.integer
-output: 
+output:
+  content: Bool[]
+  types:
+  - uid: microsoft.quantum.primitive.bool
+    isArray: true

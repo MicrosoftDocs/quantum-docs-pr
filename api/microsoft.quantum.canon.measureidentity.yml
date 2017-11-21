@@ -7,4 +7,7 @@ syntax: 'operation MeasureIdentity (register : Qubit[]) : Result'
 input:
   content: '(register : Qubit[])'
   types: []
-output: 
+output:
+  content: Result
+  types:
+  - uid: microsoft.quantum.primitive.result

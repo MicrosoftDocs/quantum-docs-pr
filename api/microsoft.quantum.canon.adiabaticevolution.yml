@@ -12,6 +12,9 @@ remarks: >2
    then this function returns an operation which performs adiabatic
    state preparation for the final dynamical generator.
 syntax: 'function AdiabaticEvolution (adiabaticTime : Double, evolutionGeneratorStart : EvolutionGenerator, evolutionGeneratorEnd : EvolutionGenerator, timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm) : (Qubit[] => () : Adjoint, Controlled)'
+references: >2-
+   **TODO** This would be a good place to link to Nathan's paper on
+   adiabatic conditions.
 input:
   content: '(adiabaticTime : Double, evolutionGeneratorStart : EvolutionGenerator, evolutionGeneratorEnd : EvolutionGenerator, timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)'
   types:
@@ -29,4 +32,7 @@ input:
        A time-dependent simulation algorithm that will be used
        to simulate evolution during the uniform interpolation schedule.
     uid: .timedependentsimulationalgorithm
-output: 
+output:
+  content: '(Qubit[] => () : Adjoint, Controlled)'
+  types:
+  - {}

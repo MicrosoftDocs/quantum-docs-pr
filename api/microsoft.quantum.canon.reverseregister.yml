@@ -10,4 +10,8 @@ syntax: 'operation ReverseRegister (register : Qubit[]) : Qubit[]'
 input:
   content: '(register : Qubit[])'
   types: []
-output: 
+output:
+  content: Qubit[]
+  types:
+  - uid: microsoft.quantum.primitive.qubit
+    isArray: true

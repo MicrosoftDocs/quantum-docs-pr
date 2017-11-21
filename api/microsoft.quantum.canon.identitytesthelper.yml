@@ -3,9 +3,19 @@ uid: microsoft.quantum.canon.identitytesthelper
 name: IdentityTestHelper
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Test helper to be used with AssertOperationsEqualInPlace and AssertOperationsEqualReferenced \n if one needs to check that the operation is identity."
+summary: " Test helper to be used with AssertOperationsEqualInPlace and AssertOperationsEqualReferenced \n if one needs to check that the operation is identity.\n"
 syntax: 'operation IdentityTestHelper (q : Qubit[]) : ()'
 input:
   content: '(q : Qubit[])'
-  types: []
-output: 
+  types:
+  - name: q
+    summary: ' Qubit register to be operated upon.'
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

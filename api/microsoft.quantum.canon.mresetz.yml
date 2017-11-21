@@ -10,4 +10,7 @@ syntax: 'operation MResetZ (target : Qubit) : Result'
 input:
   content: '(target : Qubit)'
   types: []
-output: 
+output:
+  content: Result
+  types:
+  - uid: microsoft.quantum.primitive.result

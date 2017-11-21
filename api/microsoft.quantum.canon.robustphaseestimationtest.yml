@@ -7,4 +7,7 @@ syntax: 'operation RobustPhaseEstimationTest () : ()'
 input:
   content: ()
   types: []
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

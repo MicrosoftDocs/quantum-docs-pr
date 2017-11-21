@@ -3,8 +3,25 @@ uid: microsoft.quantum.canon.assertalmostequal
 name: AssertAlmostEqual
 type: function
 namespace: Microsoft.Quantum.Canon
+summary: >2
+   Asserts that a classical floating point variable has the expected value up to a
+   small tolerance of 1e-10.
+remarks: >2-
+   This is equivalent to @"Microsoft.Quantum.Canon.AssertAlmostEqualTol" with
+   hardcoded tolerance=1e-10.
 syntax: 'function AssertAlmostEqual (actual : Double, expected : Double) : ()'
 input:
   content: '(actual : Double, expected : Double)'
-  types: []
-output: 
+  types:
+  - name: actual
+    summary: >2
+       The number to be checked.
+    uid: microsoft.quantum.primitive.float
+  - name: expected
+    summary: >2
+       The expected value.
+    uid: microsoft.quantum.primitive.float
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

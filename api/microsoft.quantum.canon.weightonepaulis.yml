@@ -10,4 +10,9 @@ syntax: 'function WeightOnePaulis (nQubits : Int) : Pauli[][]'
 input:
   content: '(nQubits : Int)'
   types: []
-output: 
+output:
+  content: Pauli[][]
+  types:
+  - isArray: true
+    types:
+    - uid: microsoft.quantum.primitive.pauli

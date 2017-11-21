@@ -18,4 +18,10 @@ input:
     summary: ' Register to apply the given Pauli operation on.'
     uid: microsoft.quantum.primitive.qubit
     isArray: true
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

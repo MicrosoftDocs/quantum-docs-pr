@@ -14,4 +14,9 @@ input:
     isArray: true
   - name: predicate
     summary: " A function from `'T' to Boolean that is used to filter elements. "
-output: 
+output:
+  content: "'T[]"
+  types:
+  - summary: " An array `'T[]` of elements that satisfy the predicate."
+    uid: "'t"
+    isArray: true

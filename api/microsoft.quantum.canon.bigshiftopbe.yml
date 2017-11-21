@@ -13,4 +13,7 @@ syntax: 'operation BigShiftOpBE (cyclic : Int, op : (BigEndian => () : )) : (Big
 input:
   content: '(cyclic : Int, op : (BigEndian => () : ))'
   types: []
-output: 
+output:
+  content: '(BigEndian => () : )'
+  types:
+  - {}

@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.restricttosubregister
+name: RestrictToSubregister
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function RestrictToSubregister (op : (Qubit[] => () : ), idxs : Int[]) : (Qubit[] => () : )'
+input:
+  content: '(op : (Qubit[] => () : ), idxs : Int[])'
+  types: []
+output:
+  content: '(Qubit[] => () : )'
+  types:
+  - {}

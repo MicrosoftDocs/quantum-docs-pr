@@ -20,4 +20,7 @@ input:
     summary: ' Qubit register to be measured.'
     uid: microsoft.quantum.primitive.qubit
     isArray: true
-output: 
+output:
+  content: Result
+  types:
+  - uid: microsoft.quantum.primitive.result

@@ -7,4 +7,10 @@ syntax: "operation OperationPowImplAC (oracle : ('T => () : Controlled, Adjoint)
 input:
   content: "(oracle : ('T => () : Controlled, Adjoint), power : Int, target : 'T)"
   types: []
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

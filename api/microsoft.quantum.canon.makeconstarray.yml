@@ -8,4 +8,8 @@ syntax: 'function MakeConstArray (length : Int, value : Int) : Int[]'
 input:
   content: '(length : Int, value : Int)'
   types: []
-output: 
+output:
+  content: Int[]
+  types:
+  - uid: microsoft.quantum.primitive.integer
+    isArray: true

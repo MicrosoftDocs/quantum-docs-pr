@@ -10,4 +10,8 @@ syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget :
 input:
   content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result : ))'
   types: []
-output: 
+output:
+  content: Result[]
+  types:
+  - uid: microsoft.quantum.primitive.result
+    isArray: true

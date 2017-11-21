@@ -7,4 +7,10 @@ syntax: 'operation ApplyToRangeAC (singleQubitOperation : ((Int, Qubit) => () : 
 input:
   content: '(singleQubitOperation : ((Int, Qubit) => () : Adjoint, Controlled), register : Qubit[])'
   types: []
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

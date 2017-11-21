@@ -8,4 +8,7 @@ syntax: 'function IsResultZero (input : Result) : Bool'
 input:
   content: '(input : Result)'
   types: []
-output: 
+output:
+  content: Bool
+  types:
+  - uid: microsoft.quantum.primitive.bool

@@ -10,4 +10,10 @@ syntax: 'operation PrepareChoiStateCA (op : (Qubit[] => () : Controlled, Adjoint
 input:
   content: '(op : (Qubit[] => () : Controlled, Adjoint), reference : Qubit[], target : Qubit[])'
   types: []
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

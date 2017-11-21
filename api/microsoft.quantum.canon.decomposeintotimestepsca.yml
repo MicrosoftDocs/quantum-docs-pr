@@ -7,4 +7,7 @@ syntax: 'function DecomposeIntoTimeStepsCA (evolutionGenerator : (Int, ((Int, Do
 input:
   content: '(evolutionGenerator : (Int, ((Int, Double, Qubit[]) => () : Adjoint, Controlled)), order : Int)'
   types: []
-output: 
+output:
+  content: '((Double, Qubit[]) => () : Adjoint, Controlled)'
+  types:
+  - {}

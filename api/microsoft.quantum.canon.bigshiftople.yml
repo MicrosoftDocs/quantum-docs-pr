@@ -20,4 +20,7 @@ input:
     uid: microsoft.quantum.primitive.integer
   - name: op
     summary: ' Operation whose action is to be shifted.'
-output: 
+output:
+  content: '(LittleEndian => () : )'
+  types:
+  - {}

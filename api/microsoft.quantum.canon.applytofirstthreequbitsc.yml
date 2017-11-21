@@ -8,4 +8,9 @@ seealso: ' @"Microsoft.Quantum.Canon.ApplyToFirstThreeQubits"'
 input:
   content: '(op : ((Qubit, Qubit, Qubit) => () : Controlled), register : Qubit[])'
   types: []
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Controlled

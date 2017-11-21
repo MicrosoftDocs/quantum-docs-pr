@@ -7,4 +7,10 @@ syntax: 'operation BasisChangeZtoY (target : Qubit) : ()'
 input:
   content: '(target : Qubit)'
   types: []
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

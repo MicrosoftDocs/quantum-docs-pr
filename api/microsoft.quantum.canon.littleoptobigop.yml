@@ -7,4 +7,7 @@ syntax: 'operation LittleOpToBigOp (op : (LittleEndian => () : )) : (BigEndian =
 input:
   content: '(op : (LittleEndian => () : ))'
   types: []
-output: 
+output:
+  content: '(BigEndian => () : )'
+  types:
+  - {}

@@ -6,7 +6,9 @@ namespace: Microsoft.Quantum.Canon
 summary: >2
    Represents an operation that is used to measure the syndrome
    of an error-correcting code block.
-example: >2-
+remarks: >2-
+
+  ## Examples
    Measure syndromes for the bit-flip code
    $S = \langle ZZI, IZZ \rangle$ using scratch qubits in a
    non–fault tolerant manner:

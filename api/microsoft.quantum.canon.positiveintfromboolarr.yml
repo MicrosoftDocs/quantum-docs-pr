@@ -13,4 +13,7 @@ input:
     summary: ' Bits in binary representation of number.'
     uid: microsoft.quantum.primitive.bool
     isArray: true
-output: 
+output:
+  content: Int
+  types:
+  - uid: microsoft.quantum.primitive.integer

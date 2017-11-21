@@ -7,4 +7,10 @@ syntax: 'operation _AdiabaticEvolution (adiabaticTime : Double, evolutionGenerat
 input:
   content: '(adiabaticTime : Double, evolutionGeneratorStart : EvolutionGenerator, evolutionGeneratorEnd : EvolutionGenerator, timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm, qubits : Qubit[])'
   types: []
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

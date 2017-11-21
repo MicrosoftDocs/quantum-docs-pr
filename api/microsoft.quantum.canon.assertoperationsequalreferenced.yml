@@ -21,4 +21,7 @@ input:
   - name: nQubits
     summary: ' Number of qubits to pass to each operation.'
     uid: microsoft.quantum.primitive.integer
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

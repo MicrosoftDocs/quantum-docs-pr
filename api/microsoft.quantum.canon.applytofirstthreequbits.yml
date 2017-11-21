@@ -18,4 +18,7 @@ input:
   - name: 'register '
     summary: >2
        Qubit array to the first three qubits of which the operation is applied.
-output: 
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

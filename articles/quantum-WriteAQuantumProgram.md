@@ -43,7 +43,7 @@ earlier.
 Open up Visual Studio 2017.
 Go to the `File` menu and select `New` > `Project...`.
 In the project template explorer, under `Installed` > `Visual C#`,
-select the `Quantum Project` template.
+select the `Q# Application` template.
 Give your project the name `Teleport`.
 
 ### Step 2: Enter the Q# code

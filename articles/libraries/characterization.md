@@ -118,7 +118,7 @@ For instance, given a unitary black-box $U$ and an input eigenstate $U\ket{\psi}
 * Output
     * A real number representing an estimate $\hat{\phi}$ of $\phi$.
 * Complexity.
-    * Heisenberg limited. The standard-deviation $\sigma$ of $\hat{\phi}$ scales like $2.0 \pi / Q \le \sigma \le 2\pi / 2&{n} \le 10.7\pi / Q$, where $Q$ is the number of queries to $\hat{U}$. Here, variance is defined as $\sigma^2 = \mathbb{E}\_\hat{\phi}[(\mod\_{2\pi,-\pi}(\hat{\phi}-\phi))^2]$.
+    * Heisenberg limited. The standard-deviation $\sigma$ of $\hat{\phi}$ scales like $2.0 \pi / Q \le \sigma \le 2\pi / 2^{n} \le 10.7\pi / Q$, where $Q$ is the number of queries to $\hat{U}$. Here, variance is defined as $\sigma^2 = \mathbb{E}\_\hat{\phi}[(\mod\_{2\pi,-\pi}(\hat{\phi}-\phi))^2]$.
     * Quadratic scaling in measurements. The number of measurements performed scales like $\mathcal{O}((\log{\sigma})^2)$.
     * Efficient classical post-processing. The classical algorithm that infers $\hat{\phi}$ from the measurement outcomes requires the computation of only $\mathcal{O}(\log{(1/\sigma)})$ trigonometric functions on $\mathcal{O}(\log{(1/\sigma)})$ classical bits.
 * Remarks
@@ -128,7 +128,7 @@ For instance, given a unitary black-box $U$ and an input eigenstate $U\ket{\psi}
 In this and forthcoming examples where the choice of phase estimation algorithm is important, one should one should refer to the documentation such as @"microsoft.quantum.canon.robustphaseestimation" and the referenced publications therein for details on the implementation.
 
 > [!TIP]
-> There are many samples where robust phase estimation is used. For phase estimation on various physical system, please see the [molecular Hydrogen sample](TODO:Link), the [Ising model samples](TO:Link), and the [Hubbard model sample](TO:Link).
+> There are many samples where robust phase estimation is used. For phase estimation in extracting the ground state energy of various physical system, please see the [molecular Hydrogen sample](TODO:Link), the [Ising model samples](TO:Link), and the [Hubbard model sample](TO:Link).
 
 
 ### Continuous Oracles ###

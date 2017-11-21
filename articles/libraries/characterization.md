@@ -52,6 +52,7 @@ Concretely, if `U : DiscreteOracle`, then `U(m)` implements $U^m$ for `m : Int`.
 With this definition in place, each step of iterative phase estimation proceeds by preparing an ancilla qubit in the $\ket{+}$ state along with the initial state $\ket{\phi}$ that we assume is an [eigenvector](../quantum-concepts-3-MatrixAdvanced.md) of $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi}\ket{\phi}$.  
 A controlled application of `U(m)` is then used which prepares the state $\left(R\_1(m \phi) \ket{+}\right)\ket{\phi}$.
 As in the quantum case, the effect of a controlled application of the oracle `U(m)` is precisely the same as the effect of applying $R_1$ for the unknown phase on $\ket{+}$, such that we can describe the effects of $U$ in this simpler fashion.
+Optionally, the algorithm then rotates the control qubit by applying $R_1(m\theta)$ to obtain a state $\ket{\psi}=\left(R\_1(m [\phi-\theta]) \ket{+}\right)\ket{\phi}$$.
 The ancilla qubit used as a control for `U(m)` is then measured in the $X$ basis to obtain a single classical `Result`.
 
 At this point, reconstructing the phase from the `Result` values obtained through iterative phase estimation is a classical statistical inference problem.
@@ -88,12 +89,12 @@ The probability of observing `Zero` for a [`PauliX` measurement](../quantum-conc
 In the case of iterative phase estimation, we have that $\ket{\psi} = R_1(m \phi) \ket{+}$, such that
 \begin{align}
     \Pr(\texttt{Zero} | \phi; m)
-        & = \left| \braket{+ | R_1(m \phi) | +} \right|^2 \\\\
+        & = \left| \braket{+ | R_1(m [\phi-\theta]) | +} \right|^2 \\\\
         & = \left|
-            \frac12 \left( \bra{0} + \bra{1} \right) \left( \ket{0} + e^{i m \phi} \ket{1} \right)
+            \frac12 \left( \bra{0} + \bra{1} \right) \left( \ket{0} + e^{i m [\phi-\theta]} \ket{1} \right)
             \right|^2 \\\\
-        & = \left| \frac{1 + e^{i m \phi}}{2} \right|^2 \\\\
-        & = \cos^2(m \phi / 2) \tag{★} \label{eq:phase-est-likelihood}.
+        & = \left| \frac{1 + e^{i m [\phi-\theta]}}{2} \right|^2 \\\\
+        & = \cos^2(m [\phi-\theta] / 2) \tag{★} \label{eq:phase-est-likelihood}.
 \end{align}
 That is, iterative phase estimation consists of learning the oscillation frequency of a sinusoidal function, given the ability to flip a coin with a bias given by that sinusoid.
 Following traditional classical terminology, we call $\eqref{eq:phase-est-likelihood}$ the *likelihood function* for iterative phase estimation.
@@ -163,14 +164,14 @@ Thus, using continuous oracles with phase estimation allows us to learn the ener
 Q# provides a useful approximation of Bayesian phase estimation designed for use close to quantum devices that operates by conditioning a random walk on the data record obtained from iterative phase estimation.
 This method is both adaptive and entirely deterministic, allowing for near-optimal scaling of errors in the estimated phase $\hat{\phi}$ with very low memory overheads.
 
-The protocol uses an approximate Bayesian inference method that assumes the prior distribution is Gaussian.  
+The protocol uses an approximate Bayesian inference method that assumes the prior distribution is Gaussian.
 This Gaussian assumption allows us to use an analytical formula for the experiment that minimizes the posterior variance.
 The algorithm then, based on the outcome of that experiment, shifts the estimate of $\phi$ left or right by a pre-determined amount and shrinks the variance by a pre-determined amount.
 This mean and variance give all the information that is needed to specify a Gaussian prior on $\phi$ for the next experiment.
 Unexpected measurement failures, or the true result being on the tails of the initial prior, can cause this method to fail.
 It recovers from failure by performing experiments to test whether the current mean and standard deviation are appropriate for the system.
-If they are not then the algorithm does an inverse step of the walk and the process continues.  
-This allows the algorithm to learn even if the initial prior standard deviation is innapropriately small.
+If they are not then the algorithm does an inverse step of the walk and the process continues.
+The ability to step backwards also allows the algorithm to learn even if the initial prior standard deviation is innapropriately small.
 
 In practice, using random walk phase estimation proceeds in much the same way as for other algorithms provided with the canon:
 

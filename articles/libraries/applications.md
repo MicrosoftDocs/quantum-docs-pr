@@ -172,11 +172,11 @@ operation AdiabaticStateEnergyEstimate(
 > [!TIP]
 > The [simulation of molecular Hydrogen](TODO: link) is an interesting and brief sample. The model and experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) only requires Pauli matrices and takes the form $\hat H = g\_{0}I\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$. This is an effective Hamiltonian only requiring only 2 qubits, where the constants $g$ are computed from the distance $R$ between the two Hydrogen atoms. Using canon functions, the Paulis are converted to unitaries and then evolved over short periods of time using the Trotter-Suzuki decomposition. A good approximation to the $H_2$ ground state can be created without using adiabatic state preparation, and so the ground state energy may be found directly by utilizing phase Estimation from the canon.
 
-### Factorization ###
+### Shor's Algorithm ###
 
-## Period Finding ##
+#### Period Finding ####
 
-Now that we have seen how the quantum Fourier transform and phase estimation work, we can use these tools to solve a classically hard computational problem called *t period finding*.  In the next section, we will see how to apply period finding to factoring.
+Now that we have seen how the quantum Fourier transform and phase estimation work, we can use these tools to solve a classically hard computational problem called *period finding*.  In the next section, we will see how to apply period finding to factoring.
 
 Given two integers $a$ and $N$, where $a<N$, the goal of period finding, also called order finding, is to find the {\it order} $r$ of $a$ modulo $N$, where $r$ is defined to be the least positive integer such that $a^r \equiv 1 \text{ mod } N$.  
 
@@ -189,11 +189,11 @@ $$ U\_a |x\_s\rangle = e^{2\pi i s / r} | x\_s \rangle . $$
 
 Phase estimation thus outputs the eigenvalues $e^{2\pi i s / r}$ from which $r$ can be learned efficiently using [{\it continued fractions}](https://en.wikipedia.org/wiki/Continued_fraction) from $s / r$.
 
-Below is the circuit diagram for quantum period finding:
+The circuit diagram for quantum period finding is:
 ![](../media/QPE.png)
 
 Here $2n$ qubits are initialized to $|0\rangle$ and $n$ qubits are initialized to $|1\rangle$.
-The advanced reader again may wonder why the quantum register to hold the eigenstates is initialized to $|1\rangle$.
+The reader again may wonder why the quantum register to hold the eigenstates is initialized to $|1\rangle$.
 As one does not know the order $r$ in advance, we cannot actually prepare $|x_s\rangle$ states directly.
 Luckily, it turns out that $1/\sqrt{r} \sum\_{s=0}^{r-1} |x\_s\rangle = |1\rangle$.
 We don't need to actually prepare $|x\rangle$!  
@@ -217,7 +217,7 @@ We will compute the result into a separate register, denoted $|0\rangle$.
 The mapping we wish to achieve is the following:
 $$ |x\rangle |0\rangle \rightarrow |x\rangle |a^x \text{ mod } N\rangle . $$
 We can compute this mapping using $2n$ conditional modular multiplications.
-In turn, each modular multiplication can be computed using $n$ modular additions, as described in the ARITHMETIC SECTION REF.
+In turn, each modular multiplication can be computed using $n$ modular additions, as described in the [quantum arithmetic documentation](./algorithms.md).
 
 The quantum circuit below outlines the sequence of quantum gate operations:
 ![](../media/ItQPE.png)
@@ -226,7 +226,7 @@ The circuit requires several phase-shift gate operations $R_k$, given by:
 $$ R_k = \begin{bmatrix}  1 & 0 \\\\ 0 & e^{i\theta_k}  \end{bmatrix},$$
 where $\theta_k = -\pi \sum_{j=0}^{k-1} 2^{k-j}m_i$, where the sum runs over all previous measurements $j$ and $m_j\in{0,1}$ denotes the given measurement result.  That is, $m_0$ represents the least significant bit of the final result, and is extracted during the first measurement.  These gates are thus classically controlled gate operations, conditioned on the previous measurement results.  Together, they perform the inverse quantum Fourier transform.
  
-### Factoring ##
+#### Factoring ####
 The goal of factoring is to determine the two prime factors of integer $N$, where $N$ is an $n$-bit number.  
 Factoring consists of three parts: (1) a classical preprocessing routine; (2) a quantum computing routine to find the order of $a \text{ mod } N$; and (3) a classical preprocessing routine to derive the prime factors from the order.
 

@@ -53,7 +53,9 @@
         "_dependentPackages/MarkdigEngine/content"
       ],
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "enable_xrefmap_share": true,
+      "xref_query_tags": ["/qsharp"]
     }
   ],
   "notification_subscribers": [],

@@ -25,7 +25,7 @@ ms.topic: article-type-from-white-list
 
 ### Hamiltonian Simulation ###
 
-The simulation of quantum systems is one of the most exciting applications of quantum computation. On a classical computer, the difficulty of simulating quantum mechanics, in general, scales with the dimension $N$ of its state-vector representation. As this representation grows exponentially with the number of $n$ qubits $N=2^n$, a trait known also known as the [curse of dimensionality](quantum-concepts-5-multiplequbits), quantum simulation on classical hardware is intractable. 
+The simulation of quantum systems is one of the most exciting applications of quantum computation. On a classical computer, the difficulty of simulating quantum mechanics, in general, scales with the dimension $N$ of its state-vector representation. As this representation grows exponentially with the number of $n$ qubits $N=2^n$, a trait known also known as the [curse of dimensionality](.\quantum-concepts-5-multiplequbits.md), quantum simulation on classical hardware is intractable. 
 
 However, the situation can be very different on quantum hardware. The most common variation of quantum simulation is called the time-independent Hamiltonian simulation problem. There, one is provided with a description of the system Hamiltonian $H$, which is a Hermitian matrix, and some initial quantum state $\ket{\psi(0)}$ that is encoded in some basis on $n$ qubits on a quantum computer. As quantum states in closed systems evolve under the Schrödinger equation
 $$
@@ -41,7 +41,7 @@ Hamiltonian simulation is a major component of many other quantum simulation pro
 
 Additional assumptions of the format of the input are therefore required. A fine balance must be struck between input models that are sufficiently descriptive to encompass interesting Hamiltonians, such as those for realistic physical systems or interesting computational problems, and input models that are sufficiently restrictive to be efficiently implementable on a quantum computer. A variety of non-trivial input model may be found in the literature, and they range from quantum to classical. 
 
-As examples of quantum input models, [sample-based Hamiltonian simulation](doi.org/10.1038/s41534-017-0013-7) assumes black-box access to quantum operations that produce copies of a density matrix $\rho$, which are taken to be the Hamiltonian $H$. In the [unitary access model](https://arxiv.org/abs/1202.5822) one supposes that the Hamiltonian instead decomposes into a sum of unitaries 
+As examples of quantum input models, [sample-based Hamiltonian simulation](doi.org/10.1038/s41534-017-0013-7) assumes black-box access to quantum operations that produce copies of a density matrix $\rho$, which are taken to be the Hamiltonian $H$. In the [unitary access model](https://arxiv.org/abs/1412.4687) one supposes that the Hamiltonian instead decomposes into a sum of unitaries 
 $$
 \begin{align}
     H & = \sum^{d-1}\_{j=0} a\_j \hat{U}\_j,

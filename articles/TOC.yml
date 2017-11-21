@@ -7,7 +7,7 @@
       href: quantum-concepts-2-VectorsMatrices.md
     - name: Advanced matrix concepts
       href: quantum-concepts-3-MatrixAdvanced.md
-    - name: Qubit
+    - name: The qubit
       href: quantum-concepts-4-Qubit.md
     - name: Multiple qubits
       href: quantum-concepts-5-MultipleQubits.md

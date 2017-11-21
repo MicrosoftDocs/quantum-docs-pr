@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+title: Dirac notation | Microsoft Docs 
+description: Dirac notation
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
@@ -22,8 +22,7 @@ uid: microsoft.quantum.concepts.dirac
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Advanced topics
-## Dirac Notation
+# Dirac notation
 
 While column vector notation is ubiquitous in linear algebra, it is often cumbersome in quantum computing especially when dealing with multiple qubits.  For example, when we define $\psi$ to be a vector it is not explicitly clear whether $\psi$ is a row or a column vector.  Thus if $\phi$ and $\psi$ are vectors then it is equally unclear if $\phi \psi$ is even defined because the shapes of $\phi$ and $\psi$ may be unclear in the context.  Beyond the ambiguity about the shapes of vectors, expressing even simple vectors using the linear algebraic notation introduced earlier can be very cumbersome. For example, if we wish to describe an $n$-qubit state where each qubit takes the value $0$ then we would formally express the state as 
 

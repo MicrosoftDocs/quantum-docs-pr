@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+title: Multiple qubits | Microsoft Docs 
+description: Multiple qubits
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Multiple Qubits
+# Multiple qubits
 While single-qubit gates possess some counter-intuitive features, such as the ability to be in more than one state at a given time, if all we had in a quantum computer were single-qubit gates then we would have a device with computational power that would be dwarfed by even a calculator let alone a classical supercomputer.  The true power of quantum computing only becomes visible as we increase the number of qubits.  This power arises, in part, because the dimension of the vector space in which quantum state vectors grows exponentially with the number of qubits.  This means that while a single qubit can be trivially modeled, simulating a fifty-qubit quantum computation would arguably push the limits of existing supercomputers.  Increasing the size of the computation by only one additional qubit *doubles* the memory required to store the state and roughly *doubles* the computational time.  This rapid doubling of computational power is why a quantum computer with a relatively small number of qubits can far surpass the most powerful supercomputers of today, tomorrow and beyond for some computational tasks.
 
 Why do we have exponential growth for quantum state vectors?  Our goal in this section is to review the rules used to build multi-qubit states out of single-qubit states as well as discuss the gate operations that we need to include in our gate set to form a universal many-qubit quantum computer.  These tools are absolutely necessary to understand the gate sets that are commonly used in Q# code and also to gain intuition about why quantum effects such as entanglement or interference render quantum computing more powerful than classical computing.
@@ -127,7 +127,7 @@ $$
 
 again in accordance with our intuition.
 
-## Two-qubit Operations
+## Two-qubit operations
 As in the single-qubit case, any unitary transformation is a valid operation on qubits. In general, a unitary transformation on $n$ qubits is a matrix $U$ of size $2^n \times 2^n$ (so that it acts on vectors of size $2^n$), such that $U^{-1} = U^\dagger$.	
 For example, the CNOT (controlled-NOT) gate is a commonly used two-qubit gate and is represented by the following unitary matrix:
 

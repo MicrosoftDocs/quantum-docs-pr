@@ -1,10 +1,8 @@
 ---
 uid: microsoft.quantum.index
 ---
-
-# Welcome to the Microsoft Quantum Development Kit internal preview #
-
 <img src="media/mobius_strip_preview.png" style="float: right;" title="Quantum" alt="Quantum">
+# Welcome to the Microsoft Quantum Development Kit internal preview #
 
 Thank you helping us test the Microsoft Quantum Development Kit preview. Your participation will help improve Microsoft's quantum development experience.
 
@@ -17,7 +15,7 @@ Your feedback about all parts of the Quantum Development Kit is important. Pleas
 - Setup and Visual Studio integration
 - General ideas and feature requests
  
-Email the feedback to <qdkfeed@microsoft.com>
+Email the feedback to <qdkfeed@microsoft.com>.
 
 ## Microsoft Quantum Development Kit components
 The Quantum Development Kit preview provides a complete development and simulation environment that contains the following components.

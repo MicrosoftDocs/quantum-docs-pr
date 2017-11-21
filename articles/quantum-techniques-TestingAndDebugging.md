@@ -56,13 +56,13 @@ This makes functions a useful tool for embedding assertions and debugging logic.
 
 ### Logging
 
-The primitive function @"microsoft.quantum.primitive.message" has type `String -> ()`, and allows to emit diagnostic messages.
+The primitive function @"microsoft.quantum.primitive.message" has type `String -> ()`, which enables the creation of diagnostic messages.
 That a target machine observes the contents of the input to `Message` does not imply any consequence that is observable from within Q#.
 A target machine may thus omit calls to `Message` by the same logic.
 
-`onLog` action of `QuantumSimulator` can be used to define action(s) performed when Q# code calls `Message`. By default logged messages are printed to standard output.
+The `onLog` action of `QuantumSimulator` can be used to define action(s) performed when Q# code calls `Message`. By default logged messages are printed to standard output.
 
-When defining a unit test suite, the logged messages can be directed to the test output. When a project is created from Q# Test Project template, this redirection is pre-configured for the suite created by default as follows:
+When defining a unit test suite, the logged messages can be directed to the test output. When a project is created from Q# Test Project template, this redirection is pre-configured for the suite and created by default as follows:
 
 ```
 using (var sim = new QuantumSimulator())
@@ -73,7 +73,7 @@ using (var sim = new QuantumSimulator())
 }
 ```
 
-After you execute a test in Test Explorer and click on the test, a panel will apprear with information about test execution: Passed/Failed status, elapsed time and an "Output" link. If you click on it, test output will open in a new window.
+After you execute a test in Test Explorer and click on the test, a panel will appear with information about test execution: Passed/Failed status, elapsed time and an "Output" link. If you click the "Output" link, test output will open in a new window.
 
 ### Assertions
 
@@ -93,9 +93,9 @@ Thus, if we proceed past a call to `AssertPositive`, we can be assured by the [a
 
 Building on these ideas, the prelude offers two especially useful assertions, both modeled as functions onto `()`: @"microsoft.quantum.primitive.assert" and @"microsoft.quantum.primitive.assertprob".
 These assertions each take a Pauli operator describing a particular measurement of interest, a register on which a measurement is to be performed, and a hypothetical outcome.
-On target machines which work by simulation, we are not bound by the [no-cloning theorm](TODO: link to glossary), and can perform such measurements without disturbing the register passed to such assertions.
+On target machines which work by simulation, we are not bound by the no-cloning theorem, and can perform such measurements without disturbing the register passed to such assertions.
 A simulator can then, similar to the `AssertPositive` function above, abort computation if the hypothetical outcome would not be observed in practice:
-
+<!--- TODO: in para above [no-cloning theorm](TODO: link to glossary)--->
 <!-- TODO: check that this code is correct. -->
 
 ```
@@ -108,9 +108,10 @@ using (register = Qubit[1]) {
 }
 ```
 
-On actual hardware, where we are constrained by physics, we of course cannot perform such counterfactual measurements, and so the `Assert` and `AssertProb` functions simply return `()` with no other effect.
+On actual hardware, where we are constrained by physics, we can't perform such counterfactual measurements, and so the `Assert` and `AssertProb` functions simply return `()` with no other effect.
 
-@"microsoft.quantum.canon" namespace provides several more functions of `Assert` family which allow to check more advanced conditions. They are discussed in detail in [Q# Standard Libraries: Testing and Debugging]() section.
+The microsoft.quantum.canon namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. They are detailed in [Q# standard libraries: Testing and Debugging](libraries/testing.md) section.
+<!-- TODO: link to @"microsoft.quantum.canon" -->
 
 ## Debugging
 
@@ -118,9 +119,16 @@ Q# supports a subset of standard Visual Studio debugging capabilities: [setting 
 
 <!-- TODO: how much detail we need to provide? Are links to standard Visual Studio tools sufficient? -->
 
-### Set Breakpoints 
+### Set Breakpoints
 
+> Content in development.
+<!-- TODO:Content-->
 ### Navigate Code
 
+> Content in development.
+
 ### Inspect Classic Variables
+
+> Content in development.
+
 

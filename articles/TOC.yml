@@ -1,11 +1,11 @@
 - name: Welcome
   href: index.md
-- name: Quantum Computing Concepts
+- name: Quantum computing concepts
   href: quantum-concepts-1-Intro.md
   items:
-    - name: Vectors and Matrices
+    - name: Vectors and matrices
       href: quantum-concepts-2-VectorsMatrices.md
-    - name: Advanced Matrix Concepts
+    - name: Advanced matrix concepts
       href: quantum-concepts-3-MatrixAdvanced.md
     - name: Qubit
       href: quantum-concepts-4-Qubit.md
@@ -13,11 +13,11 @@
       href: quantum-concepts-5-MultipleQubits.md
     - name: Dirac notation
       href: quantum-concepts-6-DiracNotation.md
-    - name: Pauli Measurements
+    - name: Pauli measurements
       href: quantum-concepts-7-PauliMeasurements.md
     - name: Quantum circuits
       href: quantum-concepts-8-QuantumCircuits.md
-    - name: Software Stack
+    - name: Software stack
       href: quantum-concepts-9-SoftwareStack.md
 - name: Installation and configuration
   href: quantum-InstallConfig.md
@@ -56,6 +56,8 @@
       href: quantum-techniques-6-PuttingItAllTogether.md
     - name: Going further
       href: quantum-techniques-7-going-further.md
+    - name: Testing and debugging
+      href: quantum-techniques-TestingAndDebugging.md
 - name: Q# standard libraries
   href: libraries/intro.md
   items:
@@ -75,18 +77,18 @@
       href: libraries/applications.md
     - name: Testing and debugging
       href: libraries/testing.md
-- name: Q# Programming Langyage
+- name: Q# programming language
   href: quantum-QR-Intro.md
   items:
-    - name: The Type Model
+    - name: Q# type model
       href: quantum-QR-TypeModel.md
     - name: Expressions
       href: quantum-QR-Expressions.md
     - name: Statements
       href: quantum-QR-Statements.md
-    - name: File Structure
+    - name: File structure
       href: quantum-QR-FileStructure.md
-    - name: The Standard Library
+    - name: Q# standard library
       href: quantum-QR-StandardLibrary.md
 - name: For more information
   href: quantum-ForMoreInfo.md

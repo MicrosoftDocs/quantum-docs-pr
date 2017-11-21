@@ -60,7 +60,7 @@ Qubits may also be pictured in $3$D using the *Bloch sphere* representation.  Th
 The arrows in this diagram show the direction in which the quantum state vector is pointing and each transformation of the arrow can be thought of as a rotation about one of the cardinal axes.
 While thinking about a quantum computation as a sequence of rotations is a powerful intuition, it is challenging to use this intuition to design and describe algorithms.  Q# alleviates this issue by providing a language for describing such rotations.
 
-## Single-Qubit Operations
+## Single-qubit operations
 
 Quantum computers process data by applying a universal set of quantum gates that can emulate any rotation of the quantum state vector.  This notion of universality is akin to the notion of universality for traditional (i.e., classical) computing where a gate set is considered to be universal if every transformation of the input bits can be performed using a finite length circuit. 
 

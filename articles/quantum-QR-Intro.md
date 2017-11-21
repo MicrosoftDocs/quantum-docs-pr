@@ -63,8 +63,8 @@ quantum processor, under the control of a classical host program and computer.
 
 Q# provides a small set of primitive types, along with two ways 
 (arrays and tuples) for creating new, structured types. 
-It supports a basic procedural model for writing programs, 
-with loops and if/then statements. 
+It supports a basic procedural model for writing programs 
+with loops, and if/then statements. 
 The top-level constructs in Q# are user defined types, operations, 
 and functions.
 

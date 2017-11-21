@@ -43,7 +43,7 @@ Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip` during downl
 
 1. If Visual Studio is open, close it.
 
-1. Start the VSIX installer by double clicking the `QbVSIX.vsix` file and follow the prompts to install the extension.
+1. Start the VSIX installer by double clicking the `QsharpVSIX.vsix` file and follow the prompts to install the extension.
 
 1. Configure Visual Studio to use the QuArC beta NuGet feed. 
     - See [Consume NuGet packages in Visual Studio](https://www.visualstudio.com/en-us/docs/package/nuget/consume) for the configuration procedure. On that page, you should follow the instructions under the heading **Windows: Add the feed to your NuGet configuration**. The upper section is not required.

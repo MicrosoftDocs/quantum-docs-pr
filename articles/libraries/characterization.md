@@ -121,28 +121,6 @@ While for some applications, such as quantum simulation, the limitted accuracy r
 such as Shor's algorithm, cannot use exact Bayesian inference within its phase estimation step.  For this reason, we also provide implementations
 for approximate Bayesian methods such as random walk phase estimation (RWPE) and also non-Bayesian approaches such as robust phase estimation.
 
-### Calling Phase Estimation Algorithms ###
-
-Each phase estimation operation provided with the Q# canon takes a different set of inputs parameterizing the quality that we demand out of the final estimate $\hat{\phi}$.
-These various inputs, however, all share several inputs in common, such that partial application over the quality parameters results in a common signature.
-For example, the <xref:microsoft.quantum.canon.robustphaseestimation> operation discussed in the next section has the following signature:
-
-```qsharp
-operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
-```
-
-The `bitsPrecision` input is unique to `RobustPhaseEstimation`, while `oracle` and `eigenstate` are in common.
-Thus, as seen in **H2Sample**, an operation can accept an iterative phase estimation algorithm with an input of the form `(DiscreteOracle, Qubit[]) => ()` to allow a user to specify arbitrary phase estimation algorithms:
-
-```qsharp
-operation H2EstimateEnergy(
-        idxBondLength: Int, trotterStepSize: Double,
-        phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)
-    ) : Double
-```
-
-These myriad phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many ancilla qubits, and other require only one.
-
 ### Robust Phase Estimation ###
 
 A maximum a posteriori Bayesian reconstruction of a phase estimate from measurement results is exponentially hard in the worst-case. Thus most practical phase estimation algorithms sacrifice some quality in the reconstruction, in exchange for an amount of classical post-processing that instead scales polynomially with the number of measurements made.
@@ -175,10 +153,10 @@ An eigenstate $\ket{\phi}$ of $H$ such that $H \ket{\phi} = \phi \ket{\phi}$ is 
 \end{equation}
 The exact same analysis discussed for [Bayesian phase estimation](#bayesian-phase-estimation) can be applied, and the likelihood function is the precisely the same for this more general oracle model:
 $$
-\Pr(\texttt{Zero} | \phi; m,\theta)=\cos^2(\frac{m[\phi t -\theta]}{2}).
+\Pr(\texttt{Zero} | \phi; t,\theta)=\cos^2\left(\frac{t[\phi -\theta]}{2}\right).
 $$
 Moreover, if $U$ is a simulation of a dynamical generator, as is the case for [Hamiltonian simulation](applications#hamiltonian-simulation), we interpret $\phi$ as an energy.
-Thus, using continuous oracles with phase estimation allows us to learn the energy structure of Hamiltonian models.
+Thus, using phase estimation with continuous queries allows us to learn the simulated energy spectrum of molecules, materials or field theories without having to compromise our choice of experiments by requiring $t$ to be an integer.
 
 ### Random Walk Phase Estimation ###
 
@@ -194,7 +172,29 @@ It recovers from failure by performing experiments to test whether the current m
 If they are not then the algorithm does an inverse step of the walk and the process continues.
 The ability to step backwards also allows the algorithm to learn even if the initial prior standard deviation is innapropriately small.
 
-In practice, using random walk phase estimation proceeds in much the same way as for other algorithms provided with the canon:
+### Calling Phase Estimation Algorithms ###
+
+Each phase estimation operation provided with the Q# canon takes a different set of inputs parameterizing the quality that we demand out of the final estimate $\hat{\phi}$.
+These various inputs, however, all share several inputs in common, such that partial application over the quality parameters results in a common signature.
+For example, the <xref:microsoft.quantum.canon.robustphaseestimation> operation discussed in the next section has the following signature:
+
+```qsharp
+operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
+```
+
+The `bitsPrecision` input is unique to `RobustPhaseEstimation`, while `oracle` and `eigenstate` are in common.
+Thus, as seen in **H2Sample**, an operation can accept an iterative phase estimation algorithm with an input of the form `(DiscreteOracle, Qubit[]) => ()` to allow a user to specify arbitrary phase estimation algorithms:
+
+```qsharp
+operation H2EstimateEnergy(
+        idxBondLength: Int, trotterStepSize: Double,
+        phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)
+    ) : Double
+```
+
+These myriad phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many ancilla qubits, and other require only one.
+
+Similarly, using random walk phase estimation proceeds in much the same way as for other algorithms provided with the canon:
 
 ```qsharp
 operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : () {

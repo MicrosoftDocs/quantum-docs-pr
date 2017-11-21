@@ -135,8 +135,8 @@ Abstracting simulation algorithms as the user-defined types `SimulationAlgorithm
 Thus we define the convenient function
 
 ```qsharp
-function AdiabaticEvolution(
-        adiabaticTime: Double, 
+function InterpolatedEvolution(
+        interpolationTime: Double, 
         evolutionGeneratorStart: EvolutionGenerator,
         evolutionGeneratorEnd: EvolutionGenerator,
         timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
@@ -146,7 +146,7 @@ function AdiabaticEvolution(
  
 ```
 
-This returns a unitary operation that implements all steps of adiabatic state preparation. The first parameter `adiabaticTime` defines the time over which we linearly interpolate between the start Hamiltonian described by the second parameter `evolutionGeneratorStart` and the end Hamiltonian described by the third parameter `evolutionGeneratorEnd`. The fourth parameter `timeDependentSimulationAlgorithm` is where one makes the choice of simulation algorithm. Note that if `adiabaticTime` is long enough, an initial ground state remains an instantaneous ground state of the Hamiltonian over the entire duration of time-dependent simulation, and thus ends in the ground state of the end Hamiltonian.
+This returns a unitary operation that implements all steps of adiabatic state preparation. The first parameter `interpolatedTime` defines the time over which we linearly interpolate between the start Hamiltonian described by the second parameter `evolutionGeneratorStart` and the end Hamiltonian described by the third parameter `evolutionGeneratorEnd`. The fourth parameter `timeDependentSimulationAlgorithm` is where one makes the choice of simulation algorithm. Note that if `interpolatedTime` is long enough, an initial ground state remains an instantaneous ground state of the Hamiltonian over the entire duration of time-dependent simulation, and thus ends in the ground state of the end Hamiltonian.
 
 We also define a helpful operation that automatically performs all steps of a typical quantum chemistry experiment. For instance we have the following, which returns an energy estimate of the state produced by adiabatic state preparation.
 
@@ -162,7 +162,7 @@ operation AdiabaticStateEnergyEstimate(
 }
 ```
 
-`nQubits` is the number of qubits used to encode the initial quantum state. `statePrepUnitary` prepares the start state from the computational basis $\ket{0\cdots 0}$. `adiabaticUnitary` is the unitary operation that implements adiabatic state preparation, such as produced by the  `AdiabaticEvolution` function. `qpeUnitary` is the unitary operation that is used to perform phase estimation on the resulting quantum state. `phaseEstAlgorithm` is our choice of phase estimation algorithm.
+`nQubits` is the number of qubits used to encode the initial quantum state. `statePrepUnitary` prepares the start state from the computational basis $\ket{0\cdots 0}$. `adiabaticUnitary` is the unitary operation that implements adiabatic state preparation, such as produced by the  `InterpolatedEvolution` function. `qpeUnitary` is the unitary operation that is used to perform phase estimation on the resulting quantum state. `phaseEstAlgorithm` is our choice of phase estimation algorithm.
 
 > [!TIP]
 > Applications of adiabatic state preparation are covered in the samples. 

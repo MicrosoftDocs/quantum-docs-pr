@@ -107,27 +107,24 @@ operation H2EstimateEnergy(
         phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)
     ) : Double
 ```
-### Robust Phase Estimation ###
 
 These myriad phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many ancilla qubits, and other require only one.
 
-For instance, given a unitary black-box $U$ and an input eigenstate $U\ket{\psi}=e^{i\phi}\ket{\psi}$, the robust phase estimation algorithm has the following features:
-* Inputs
-    * Discrete queries of type `DiscreteOracle`. The algorithm only queries integer powers of controlled-$\hat{U}$.
-    * A quantum register `Qubit[]` storing the input quantum state.
-    * A classical `Int` parameter for the desired accuracy of the estimate, as defined below.
-* Output
-    * A real number representing an estimate $\hat{\phi}$ of $\phi$.
-* Complexity.
-    * Heisenberg limited. The standard-deviation $\sigma$ of $\hat{\phi}$ scales like $2.0 \pi / Q \le \sigma \le 2\pi / 2^{n} \le 10.7\pi / Q$, where $Q$ is the number of queries to $\hat{U}$. Here, variance is defined as $\sigma^2 = \mathbb{E}\_\hat{\phi}[(\mod\_{2\pi,-\pi}(\hat{\phi}-\phi))^2]$, and $n$ is the `Int` parameter of the function. Note that the lower bound is reached in the limit of asymptotically large $Q$, and the upper bound is guaranteed even for small sample sizes. 
-    * Quadratic scaling in measurements. The number of measurements performed scales like $\mathcal{O}((\log{\sigma})^2)$.
-    * Efficient classical post-processing. The classical algorithm that infers $\hat{\phi}$ from the measurement outcomes requires the computation of only $\mathcal{O}(\log{(1/\sigma)})$ trigonometric functions on $\mathcal{O}(\log{(1/\sigma)})$ classical bits.
-    * Small space overhead. The algorithm only requires $1$ ancilla qubit.
-* Remarks
-    * Non-adaptive. The required sequence of quantum experiments is independent of the intermediate measurement outcomes.
-    * Uniform prior. It is assumed that $\phi\in[0,2\pi)$ is uniformly distributed.
+### Robust Phase Estimation ###
 
-In this and forthcoming examples where the choice of phase estimation algorithm is important, one should one should refer to the documentation such as @"microsoft.quantum.canon.robustphaseestimation" and the referenced publications therein for details on the implementation.
+A maximum a posteriori Bayesian reconstruction of a phase estimate from measurement results is exponentially hard in the worst-case. Thus most practical phase estimation algorithms sacrifice some quality in the reconstruction, in exchange for an amount of classical post-processing that instead scales polynomially with the number of measurements made.
+
+One such example with an efficient classical post-processing step is the robust phase estimation algorithm, with its signature and inputs mentioned above. It assumes that input unitary black-boxes $U$ are packaged as `DiscreteOracle` type, and therefore only queries integer powers of controlled-$U$. If the input state in the `Qubit[]` register is an eigenstate $U\ket{\psi}=e^{i\phi}\ket{\psi}$, the robust phase estimation algorithm returns an estimate $\hat{\phi}\in[-\pi,\pi)$ of $\phi$ as a `Double`.
+
+The most important feature of robust phase estimation, which is shared with most other useful variants, is that the reconstruction quality of $\hat{\phi}$ is in some sense Heisenberg-limited. This means that if the deviation of $\hat{\phi}$ from the true value is $\sigma$, then $\sigma$ scales inversely-proportional to the total number of queries $Q$ made to controlled-$U$, i.e. $\sigma=\mathcal{O}(1/Q)$. Now, the definition of deviation varies between different estimation algorithms. In some cases, it may mean that with at least $\mathcal{O}(1)$ probability, the estimation error $|\hat{\phi}-\phi|_\circ}\le \sigma$ on some circular measure $\circ$. For robust phase estimation, deviation is precisely the variance $\sigma^2 = \mathbb{E}\_\hat{\phi}[((\mod\_{2\pi}(\hat{\phi}-\phi +\pi)-\pi)^2]$ if we unwrap periodic phases onto a single finite interval $[-\pi,\pi)$. More precisely, the standard deviation in robust phase estimation satisfies the inequalities
+$$
+\begin{align}
+2.0 \pi / Q \le \sigma \le 2\pi / 2^{n} \le 10.7\pi / Q$,
+\end{align}
+$$
+where the lower bound is reached in the limit of asymptotically large $Q$, and the upper bound is guaranteed even for small sample sizes. 
+
+Other relevant details include, say, the small space overhead of just $1$ ancilla qubit, or that the procedure is non-adaptive, meaning the required sequence of quantum experiments is independent of the intermediate measurement outcomes. In this and forthcoming examples where the choice of phase estimation algorithm is important, one should one should refer to the documentation such as @"microsoft.quantum.canon.robustphaseestimation" and the referenced publications therein for more information and for their the implementation.
 
 > [!TIP]
 > There are many samples where robust phase estimation is used. For phase estimation in extracting the ground state energy of various physical system, please see the [molecular Hydrogen sample](TODO:Link), the [Ising model samples](TO:Link), and the [Hubbard model sample](TO:Link).

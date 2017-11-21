@@ -58,6 +58,8 @@ At this point, reconstructing the phase from the `Result` values obtained throug
 Finding the value of $m$ that maximizes the information gained, given a fixed inference method, is simply a problem in statistics.
 We emphasize this by briefly describing iterative phase estimation at a theoretical level in the Bayesian parameter estimation formalism before proceeding to describe the statistical algorithms provided in the Q# canon for solving this classical inference problem.
 
+### Iterative Phase Estimation Without Eigenstates ###
+
 If an input state is provided that is not an eigenstate, which is to say that if $U(m)\ket{\phi\_j} = e^{im\phi\_j}$ then the process of phase estimation non-deterministically guides the quantum state towards a single energy eigenstate.  The eigenstate it ultimately converges to is the eigenstate that is most likely to produce the observed `Result`.  
 
 Specifically, a single step of PE performs the following non-unitary transformation on a state

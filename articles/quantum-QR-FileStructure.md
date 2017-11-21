@@ -23,15 +23,17 @@ ms.topic: article-type-from-white-list
 
 # File Structure
 
-A Q# file consists of some number of type declarations 
-followed by some number of callable (operation or function) definitions. 
-A file may contain only type definitions or callable definitions, 
-but must contain at least one definition of some variety.
+A Q# file consists of one or more namespace declarations.
+
+Each namespace declaration contains definitions for user-defined types,
+operations, and functions.
+A namespace declaration may contain any number of each type of definition,
+but it must contain at least one definition.
 
 ## User Defined Type Declarations
 
 Q# provides a way for users to declare new user-defined types, 
-as described in [The Type Model](#the-type-model) above. 
+as described in the [Q# type model](quantum-QR-TypeModel) section. 
 User-defined types are distinct even if the underlying  types are identical, 
 and there is no automatic conversion between two user-defined types 
 even if the underlying types are identical.
@@ -42,7 +44,7 @@ a terminating semicolon.
 
 For example:
 
-    newtype PairOfInts = (int, int);
+    newtype PairOfInts = (Int, Int);
 
 A file may contain zero or more user-defined type declarations. 
 Type names must be unique within a namespace and may not conflict with 
@@ -77,7 +79,7 @@ type and function names.
 The body of an operation is the Q# code that implements the operation. 
 It is legal to define an operation with no body; for instance, 
 primitive operations such as Paulis and the Hadamard gate are defined this way. 
-A body definition consists of the keyword `Body`, followed by a statement block.
+A body definition consists of the keyword `body`, followed by a statement block.
 
 ### Adjoint
 
@@ -89,7 +91,7 @@ they are not invertible.
 An operation supports the `Adjoint` functor if and only if its declaration
 contains an adjoint declaration.
 
-An adjoint definition consists of the keyword `Adjoint`, followed by one of:
+An adjoint definition consists of the keyword `adjoint`, followed by one of:
 
  - The keyword `self` indicating that the operation is its own adjoint.
  - The keyword `auto` indicating that the Q# compiler should generate an adjoint 
@@ -98,44 +100,48 @@ An adjoint definition consists of the keyword `Adjoint`, followed by one of:
     in the body, in reverse order to the order in the body.
     Non-quantum code may be reorganized to ensure values are computed
     before they are used.
- - The keyword `none` indicating that the operation has no adjoint.
  - A statement block that implements the operation’s adjoint. 
-
-Each of the keywords should be followed by a terminating semicolon.
 
 Thus, an operation definition contain
 
-    Adjoint self;
+```qsharp
+adjoint self
+```
 
 or
 
-    Adjoint auto;
+```qsharp
+adjoint auto
+```
 
 or 
 
-    Adjoint none;
+```qsharp
+adjoint none
+```
 
 or 
 
-    Adjoint {
-        // Code for the adjoint goes here.
-    }
+```qsharp
+adjoint {
+    // Code for the adjoint goes here
+}
+```
 
-If none of these appear, then no adjoint is defined; this is the same
-as if `Adjoint none` is specified.
+If none of these appear, then no adjoint is defined;.
 
 An operation whose body contains repeat-until-success loops or measurements 
 or that calls another operation that does not support the `Adjoint` functor
 may not specify the `auto` keyword.
 
 If an operation has no body but should have an adjoint defined, 
-it should specify `Adjoint auto` or `Adjoint self`.
+it should specify `adjoint auto` or `adjoint self`.
 
 ### Controlled
 
 The controlled version of an operation specifies how a quantum-controlled 
 version of the operation is implemented. 
-A more complete description is provided above in the [Controlled](#controlled)
+A more complete description is provided above in the [Controlled](quantum-QR-TypeModel#controlled)
 section, above.
 
 It is legal to specify an operation with no controlled version; 
@@ -144,7 +150,7 @@ they are not controllable.
 An operation supports the `Controlled` functor if and only if its definition
 contains a controlled definition.
 
-A controlled definition consists of the keyword `Controlled`, followed by
+A controlled definition consists of the keyword `controlled`, followed by
 one of:
 
  - The keyword `auto` indicating that the Q# compiler should generate a 
@@ -152,35 +158,31 @@ one of:
     The generated version will apply quantum control to every *quantum* 
     operation.
     Non-quantum code will be unmodified.
- - The keyword `none` indicating that the operation does not have a 
-    controlled version.
  - A `(`, a symbol that will be the name of the variable holding the 
     array of control qubits, `)`, and a statement block that implements the 
     controlled version of the operation. 
 
-Each of the keywords should be followed by a terminating semicolon.
-
 Thus, an operation definition contain
 
-    Controlled self;
+```qsharp
+controlled self
+```
 
 or 
 
-    Controlled none;
-
-or 
-
-    Controlled(controls) {
-        // Code for the controlled version goes here.
-        // "controls" is bound to the array of control qubits.
-    }
+```qsharp
+controlled(controls) {
+    // Code for the controlled version goes here.
+    // "controls" is bound to the array of control qubits.
+}
+```
 
 An operation whose body contains repeat-until-success loops or measurements 
 or that calls another operation that does not support the `Controlled` functor
 may not specify the `auto` keyword.
 
 If an operation has no body but should have a controlled version defined, 
-it should specify `Controlled auto`.
+it should specify `controlled auto`.
 
 ### Controlled Adjoint
 
@@ -193,14 +195,13 @@ because they are neither controllable nor invertible.
 An operation should define a controlled adjoint variant if and only if 
 it defines both a controlled variant and an adjoint variant.
 
-A controlled adjoint definition consists of the keyword `Adjoint`, 
-then the keyword `Controlled`, followed either by the keyword `auto` 
+A controlled adjoint definition consists of the keyword `adjoint`, 
+then the keyword `controlled`, followed either by the keyword `auto` 
 indicating that the Q# compiler should generate a controlled adjoint version 
 of the operation based on the operation’s body, or by `(`, a symbol that will 
 be the name of the variable holding the array of control qubits, `)`, 
 and a statement block that implements the controlled adjoint version of the 
 operation. 
-Each of the keywords should be followed by a terminating semicolon.
 
 An operation whose body contains repeat-until-success loops or measurements 
 or that calls another operation that has no controlled adjoint version 
@@ -215,40 +216,41 @@ is specified as `auto`, then the controlled adjoint version will be generated
 from the controlled version’s statement block.
 
 If an operation has no body but should have a controlled adjoint version 
-defined, it should specify `Adjoint Controlled auto`.
+defined, it should specify `adjoint controlled auto`.
 
 ### Example Operation Definitions
 
 An operation definition might be as simple as the following, 
 which defines the primitive Pauli X operation:
 
-```
+```qsharp
 operation X (q : Qubit) : () {
-    Adjoint self;
-    Controlled auto;
-    Adjoint Controlled auto;
+    adjoint self
+    controlled auto
+    adjoint controlled auto
 }
 ```
 
 The following defines the teleport operation. 
-Note that we’ve spelled this out in gory detail, rather than creating 
-sub-operations as one normally would.
 
-```
+```qsharp
 namespace Microsoft.Quantum.Samples {
     // Entangle two qubits.
     // Assumes that both qubits are in the |0> state.
-    operation EPR (Q#1 : Qubit, Q#2 : Qubit) : () {
-        H(Q#2);
-        CNOT(Q#2, Q#1);
+    operation EPR (q1 : Qubit, q2 : Qubit) : () {
+        body
+        {
+            H(q2);
+            CNOT(q2, q1);
+        }
     }
 
     // Teleport the quantum state of the source to the target.
     // Assumes that the target is in the |0> state.
     operation Teleport (source : Qubit, target : Qubit) : () {
-        Body {
+        body {
             // Get a temporary for the Bell pair
-            using ancilla = Qubit[1] {
+            using (ancilla = Qubit[1]) {
                 let temp = ancilla[0];
 
                 // Create a Bell pair between the temporary and the target
@@ -257,10 +259,10 @@ namespace Microsoft.Quantum.Samples {
                 // Do the teleportation
                 CNOT(source, temp);
                 H(source);
-                if M(source) == One {
+                if (M(source) == One) {
                     X(target);
                 }
-                if M(temp) == One {
+                if (M(temp) == One) {
                     Z(target);
                 }
             }
@@ -285,16 +287,17 @@ An external definition requires a terminating semicolon.
 
 Function names must be unique within a namespace and may not conflict with 
 operation and type names.
+Functions may not allocate qubits or call operations.
 
 For example,
 
-```
+```qsharp
 function DotProduct(a : Double[], b : Double[]) : Double {
-    if Length(a) != Length(b) {
+    if (Length(a) != Length(b) {
         fail "Arrays are not compatible";
     }
     mutable accum = 0.0;
-    for i in 0..Length(a)-1 {
+    for (i in 0..Length(a)-1) {
         set accum = accum + a[i] * b[i];
     }
     return accum;

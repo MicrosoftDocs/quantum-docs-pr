@@ -73,6 +73,6 @@ The following sections detail:
 - [Expressions](quantum-QR-Expressions.md)
 - [Statements](quantum-QR-Statements.md)
 - [File Structure](quantum-QR-FileStructure.md)
-- [The Standard Library](quantum-QR-StandardLibrary.md)
+
 
 

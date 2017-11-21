@@ -32,7 +32,7 @@ For instance, `(7)` is an `Int` expression,
 and `((1,2))` is an expression with type `(Int, Int)`.
 
 The equivalence between simple values and single-element tuples described in 
-[Single-Element Tuples](#single-element-tuples) above removes the ambiguity 
+[Single-Element Tuples](quantum-QR-TypeModel#single-element-tuples) above removes the ambiguity 
 between `(6)` as a group and `(6)` as a single-element tuple.
 
 ## Symbols
@@ -158,7 +158,7 @@ If an operation supports the `Adjoint` functor, then `Adjoint(op)`
 is an operation expression.
 Similarly, if the operation supports the `Controlled` functor, then 
 `Controlled(op)` is an operation expression.
-The types of these expressions are specified above in [Functors](#functors).
+The types of these expressions are specified above in [Functors](quantum-QR-TypeModel#functors).
 
 ## Callable Invocation Expressions
 
@@ -177,7 +177,8 @@ Invoking the result of a callable-valued expression requires an extra pair
 of parentheses around the callable expression.
 Thus, to invoke the adjoint of `Op` from the previous paragraph, the
 correct syntax is:
-```
+
+```qsharp
 (Adjoint(Op))(3, qubit1)
 ```
 
@@ -194,6 +195,11 @@ The resulting callable has the same result type as the base callable,
 and the same variants for operations.
 The input type of the partial application is simply the original type
 with the specified arguments removed.
+
+If a mutable variable is passed as a specified argument when creating
+a partial application, the current value of the variable is used.
+Changing the value of the variable afterward will not impact the partial
+application.
 
 For example, if `Op` has type `((Int, Qubit, Double)=>():Adjoint)`:
  - `Op(5,_,_)` has type `((Qubit, Double)=>():Adjoint)`.
@@ -270,7 +276,7 @@ Thus, for these types, the default is an invalid
 reference that cannot be used without causing a runtime error.
 This is similar to a null reference in languages such as C# or Java.
 Arrays containing qubits or callables must be filled in using 
-[`set`](#updating-mutable-symbols) statements 
+[`set`](quantum-QR-Statements#updating-mutable-symbols) statements 
 before their elements may be safely used. Array elements can only be set if the 
 array is declared as being mutable, e.g. `mutable array = new Int[5]`. 
 Arrays passed as arguments are immutable. 
@@ -293,7 +299,7 @@ Type | Default
 Tuple types are initialized element-by-element.
 
 Array creation is primarily of use initializing mutable arrays, 
-on the right-hand side of a [`mutable`](#mutable-symbols) statement.
+on the right-hand side of a [`mutable`](quantum-QR-Statements#mutable-symbols) statement.
 
 ### Array Slices
 
@@ -312,7 +318,8 @@ If the array expression is not a simple identifier, it must be enclosed
 it parentheses in order to slice.
 For instance, if `a` and `b` are both arrays of `Int`s, a slice from the
 concatenation would be expressed as:
-```
+
+```qsharp
 (a+b)[1..2..7]
 ```
 
@@ -331,7 +338,8 @@ If the array expression is not a simple identifier, it must be enclosed
 it parentheses in order to select an element.
 For instance, if `a` and `b` are both arrays of `Int`s, an element from the
 concatenation would be expressed as:
-```
+
+```qsharp
 (a+b)[13]
 ```
 

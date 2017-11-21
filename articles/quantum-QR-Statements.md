@@ -52,7 +52,7 @@ Optionally, a documentation engine may also support additional Markdown extensio
 
 For example:
 
-```Q#
+```qsharp
 /// # Summary
 /// Given an operation and a target for that operation,
 /// applies the given operation twice.
@@ -186,29 +186,36 @@ The type of the identifier is defined to be the same as the type of the expressi
 it is bound to.
 
 For example, the statement
-```
+
+```qsharp
 let i = 5;
 ```
+
 binds the symbol `i` as an `Int` with the value `5`.
 
 If the right-hand side of the binding is a tuple or a user-defined type, 
 then an extended syntax may be used to deconstruct the tuple:
-```
+
+```qsharp
 let (i, f) = (5, 0.1);
 ```
+
 This statement will bind `5` to `i` and `0.1` to `f`.
 
 Deconstructing binds may also be used for more complex tuples, such as:
-```
+
+```qsharp
 let (a, (b, c)) = (1, (2, 3))
 let (x, y) = (1, (2, 3))
 ```
+
 In these examples, `a` and `x` both get bound to `1`,
 `b` gets bound to `2`, `c` to `3`, and `y` to `(2, 3)`.
 
 Tuple deconstruction can also be used when the right-hand side of the `=` 
 is a tuple-valued expression:
-```
+
+```qsharp
 let (r1, r2) = MeasureTwice(q1, PauliX, q2, PauliY);
 ```
 
@@ -226,7 +233,9 @@ it is bound to.
 
 For example, the statement
 
-    mutable counter = 0;
+```qsharp
+mutable counter = 0;
+```
 
 defines the symbol `counter` as a mutable `Int` with initial value `0`.
 
@@ -250,13 +259,17 @@ and will be promoted to the original type.
 
 For example, the statement
 
-    set counter = counter + 1;
+```qsharp
+set counter = counter + 1;
+```
 
 increments the `counter` symbol from the `mutable` example.
 
 The `set` statement is also used to set the value of an item in a mutable array:
 
-    set result[1] = One;
+```qsharp
+set result[1] = One;
+```
 
 sets the second element of the `result` array to `One`.
 Note that the `result` array must have been defined in a `mutable` statement
@@ -280,7 +293,7 @@ A symbol may only be bound once per block; it is illegal to bind a symbol
 that is already bound.
 Thus, the following sequences would be legal:
 
-```
+```qsharp
 if a == b {
     ...
     let n = 5;
@@ -292,7 +305,7 @@ let n = 8;
 
 and
 
-```
+```qsharp
 if a == b {
     ...
     let n = 5;
@@ -304,24 +317,24 @@ if a == b {
 }
 ```
 
-and
-
-```
-let n = 8;
-if a == b {}
-    ...             // n is 8
-    let n = 5;
-    ...             // n is 5
-}
-...                 // n is 8
-```
-
 But this would be illegal:
 
-```
+```qsharp
 let n = 5;
 ...                 // n is 5
 let n = 8;          // Error!!
+...
+```
+
+as would:
+
+```qsharp
+let n = 8;
+if a == b {
+    ...             // n is 8
+    let n = 5;      // Error!
+    ...
+}
 ...
 ```
 
@@ -343,8 +356,8 @@ and will not change while the loop is executing.
 
 For example,
 
-```
-for index in 0 .. n-2 {
+```qsharp
+for (index in 0 .. n-2) {
     set results[index] = Measure([PauliX], [qubits[index]]);
 }
 ```
@@ -380,26 +393,26 @@ The loop terminates in 8/5 repetitions on average.
 See [*Repeat-Until-Success: Non-deterministic decomposition of single-qubit unitaries*](https://arxiv.org/abs/1311.1074) 
 (Paetznick and Svore, 2014) for details.
 
-```
+```qsharp
 using ancilla = Qubit[1] {
     repeat {
-        let anc = ancilla[0]
-        H(anc)
-        T(anc)
-        CNOT(target,anc)
-        H(anc)
-        (Adjoint T)(anc)
-        H(anc)
-        T(anc)
-        H(anc)
-        CNOT(target,anc)
-        T(anc)
-        Z(target)
-        H(anc)
-        let result = M([anc],[PauliZ])
+        let anc = ancilla[0];
+        H(anc);
+        T(anc);
+        CNOT(target,anc);
+        H(anc);
+        (Adjoint T)(anc);
+        H(anc);
+        T(anc);
+        H(anc);
+        CNOT(target,anc);
+        T(anc);
+        Z(target);
+        H(anc);
+        let result = M([anc],[PauliZ]);
     } until result == Zero
     fixup {
-        ()
+        ();
     }
 }
 ```
@@ -430,21 +443,23 @@ after the end of the if statement.
 
 For example,
 
-```
-if result == One {
-    X(target)
+```qsharp
+if (result == One) {
+    X(target);
 } else {
-    Z(target)
+    Z(target);
 }
 ```
+
 or
-```
-if i == 1 {
-    X(target)
-} elif i == 2 {
-    Y(target)
+
+```qsharp
+if (i == 1) {
+    X(target);
+} elif (i == 2) {
+    Y(target);
 } else {
-    Z(target)
+    Z(target);
 }
 ```
 
@@ -465,18 +480,20 @@ The compiler may emit a warning if statements follow a return statement
 within a block.
 
 For example,
-```
+
+```qsharp
 return 1;
 ```
+
 or
 
-```
+```qsharp
 return ();
 ```
 
 or
 
-```
+```qsharp
 return (results, qubits);
 ```
 
@@ -484,9 +501,9 @@ return (results, qubits);
 
 The fail statement ends execution of an operation and returns an error value 
 to the caller. 
-It consists of the keyword `fail`, followed by a string interpolation
+It consists of the keyword `fail`, followed by a string
 and a terminating semicolon.
-The interpolated string is returned to the classical driver as the error message.
+The string is returned to the classical driver as the error message.
 
 There is no restriction on the number of fail statements within an operation. 
 The compiler may emit a warning if statements follow a fail statement within 
@@ -494,11 +511,15 @@ a block.
 
 For example,
 
-    fail $"Impossible state reached";
+```qsharp
+fail $"Impossible state reached";
+```
 
 or
 
-    fail $"Syndrome {syn} is incorrect";
+```qsharp
+fail $"Syndrome {syn} is incorrect";
+```
 
 ## Qubit Management
 
@@ -520,9 +541,11 @@ the statement block within which the qubits will be available.
 
 For example,
 
-    using qubits = Qubit[bits * 2 + 3] {
-        ...
-    }
+```qsharp
+using (qubits = Qubit[bits * 2 + 3]) {
+    ...
+}
+```
 
 ### Dirty Qubits
 
@@ -531,7 +554,7 @@ during a statement block.
 The borrower commits to leaving the qubits in the same state they were in 
 when they were borrowed. 
 Such qubits are often known as “dirty ancilla”. 
-See [Factoring using 2n+2 qubits with Toffoli based modular multiplication](https://arxiv.org/abs/1611.07995)
+See [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995)
 (Haner, Roetteler, and Svore 2017) for an example of dirty ancilla use.
 
 When borrowing qubits, the system will first try to fill the request
@@ -547,9 +570,11 @@ the statement block within which the qubits will be available.
 
 For example,
 
-    borrowing qubits = Qubit[bits * 2 + 3] {
-        ...
-    }
+```qsharp
+borrowing qubits = Qubit[bits * 2 + 3] {
+    ...
+}
+```
 
 ## Expression Evaluation Statements
 

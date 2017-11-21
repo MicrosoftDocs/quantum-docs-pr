@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+title: The qubit | Microsoft Docs 
+description: The qubit
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
@@ -22,7 +22,7 @@ uid: microsoft.quantum.concepts.qubit
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# The Qubit
+# The qubit
 Just as bits are the fundamental object of information in classical computing, *qubits* (quantum bits) are the fundamental object of information in quantum computing.  To understand this correspondence, lets look at the simplest example: a single qubit. 
 
 ## Representing a qubit ##
@@ -42,7 +42,7 @@ $$0\equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\qquad 1 \equiv \begin{bmatrix}
 
 although the opposite choice could equally well be taken.  Thus, out of the infinite number of possible single-qubit quantum state vectors, only two correspond to states of classical bits; all other quantum states do not.
 
-## Measuring a Qubit
+## Measuring a qubit
 Now that we know how to represent a qubit, we can gain some intuition for what these states represent by discussing the concept of *measurement*. A measurement corresponds to the informal idea of “looking” at a qubit, which immediately collapses the quantum state to one of the two classical states  $\begin{bmatrix} 1 \\\\  0 \end{bmatrix}$ or  $\begin{bmatrix} 0 \\\\  1 \end{bmatrix}$. When a qubit given by the quantum state vector  $\begin{bmatrix} \alpha \\\\  \beta \end{bmatrix}$ is measured, we obtain the outcome $0$ with probability $|\alpha|^2$ and the outcome $1$  with probability $|\beta|^2$. On outcome $0$, the qubit's new state is $\begin{bmatrix} 1 \\\\  0 \end{bmatrix}$; on outcome $1$ its state is $\begin{bmatrix} 0 \\\\  1 \end{bmatrix}$. Note that these probabilities sum up to $1$ because of the normalization condition $|\alpha|^2 + |\beta|^2 = 1$.
 
 The properties of measurement also mean that the overall sign of the quantum state vector is irrelevant. Negating a vector is equivalent to $\alpha \rightarrow -\alpha$ and $\beta \rightarrow -\beta$.  Because the probability of measuring $0$ and $1$ depends on the magnitude squared of the terms, inserting such signs does not change the probabilities whatsoever.  Such phases are commonly called ``global phases'' and more generally can be of the form $e^{i \phi}$ rather than just $\pm 1$.
@@ -60,7 +60,7 @@ Qubits may also be pictured in $3$D using the *Bloch sphere* representation.  Th
 The arrows in this diagram show the direction in which the quantum state vector is pointing and each transformation of the arrow can be thought of as a rotation about one of the cardinal axes.
 While thinking about a quantum computation as a sequence of rotations is a powerful intuition, it is challenging to use this intuition to design and describe algorithms.  Q# alleviates this issue by providing a language for describing such rotations.
 
-## Single-Qubit Operations
+## Single-qubit operations
 
 Quantum computers process data by applying a universal set of quantum gates that can emulate any rotation of the quantum state vector.  This notion of universality is akin to the notion of universality for traditional (i.e., classical) computing where a gate set is considered to be universal if every transformation of the input bits can be performed using a finite length circuit. 
 

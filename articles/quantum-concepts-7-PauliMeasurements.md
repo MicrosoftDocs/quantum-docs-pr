@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+title: Pauli Measurements | Microsoft Docs 
+description: Pauli Measurements
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
@@ -22,8 +22,7 @@ uid: microsoft.quantum.concepts.pauli
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Advanced topics
-## Pauli Measurements
+# Pauli measurements
 
   In the previous discussions, we have focused on computational basis measurements.  In fact there are other common measurements that occur in quantum computing that, from a notational perspective, are convenient to express in terms of computational basis measurements.  The most common set of these measurements are *Pauli measurements*.  In such cases, it is common to discuss measuring a Pauli operator, in general an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$ and so forth.  Discussing measurement in terms of Pauli operations is especially common in the subfield of quantum error correction. In Q# we follow a similar convention; we now explain this alternative view of measurements.
 
@@ -107,7 +106,7 @@ In Q#, such measurements return $j$ if the measurement yields a result in the ei
 ## The No Cloning Theorem
 Quantum information is powerful.  It enables us to do amazing things such as factor numbers exponentially faster than the best known classical algorithms, or efficiently simulate correlated electron systems that classically require exponential cost to simulate accurately.  However, there are limitations to the power of quantum computing.  One such limitation is given by the *No-Cloning Theorem*.
 
-The No-Cloning Theorem is aptly named.  It disallows cloning of generic quantum states by a quantum computer.  The proof of the theorem is remarkably straightforward.  While a full proof of the no-cloning theorem is a little too technical for our discussion here, the proof of the theorem in the case where the quantum computer in question has no additional ancilla qubits is within our scope (ancilla qubits are qubits used for scratch space during a computation and are easily used and managed in Q#, see [reference texts](quantum-techniques-5-workingwithqubits.md)).  For such a quantum computer, the cloning operation must be a unitary matrix. We disallow measurement, since it would corrupt the quantum state we are trying to clone. The unitary matrix we want must have the property that
+The No-Cloning Theorem is aptly named.  It disallows cloning of generic quantum states by a quantum computer.  The proof of the theorem is remarkably straightforward.  While a full proof of the no-cloning theorem is a little too technical for our discussion here, the proof of the theorem in the case where the quantum computer in question has no additional ancilla qubits is within our scope (ancilla qubits are qubits used for scratch space during a computation and are easily used and managed in Q#, see [Working with qubits](quantum-techniques-5-workingwithqubits.md).)  For such a quantum computer, the cloning operation must be a unitary matrix. We disallow measurement, since it would corrupt the quantum state we are trying to clone. The unitary matrix we want must have the property that
 
 $$
 U|\psi\rangle|0\rangle=|\psi\rangle|\psi\rangle,
@@ -120,7 +119,7 @@ for any state $|\psi\rangle$.  The linearity property of matrix multiplication t
 &\qquad\qquad\ne \left(\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right)\otimes\left(\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right).
 \end{align}
 
-This provides the fundamental intuition behind the No-Cloning-Theorem: any device that copies an unknown quantum state must induce errors on at least some of the states it copies.  While the key assumption that the cloner acts linearly on the input state can be violated through the addition of ancilla and measurement of the ancilla qubits, such interactions also leak information about the system through the measurement statistics and prevent exact cloning in such cases as well.  For a more complete proof of the No-Cloning-Theorem please see the [reference texts](quantum-ForMoreInfo.md)  recommended at the end of the documentation.
+This provides the fundamental intuition behind the No-Cloning-Theorem: any device that copies an unknown quantum state must induce errors on at least some of the states it copies.  While the key assumption that the cloner acts linearly on the input state can be violated through the addition of ancilla and measurement of the ancilla qubits, such interactions also leak information about the system through the measurement statistics and prevent exact cloning in such cases as well.  For a more complete proof of the No-Cloning-Theorem see [For more information](quantum-ForMoreInfo.md).
 
 The No-Cloning Theorem is important for qualitative understanding of quantum computing because if you could clone quantum states inexpensively then you would be granted a near-magical ability to learn from quantum states.  Indeed, you could violate Heisenberg's vaunted uncertainty principle.  Alternatively, you could use an optimal cloner to take a single sample from a complex quantum distribution and learn everything you could possibly learn about that distribution from just one sample.  This would be like you flipping a coin and observing heads and then upon telling a friend about the result having them respond "Ah the distribution of that coin must be Bernoulli with $p=0.512643\ldots$!"  Such a statement would be non-sensical because one bit of information (the heads outcome) simply cannot provide the many bits of information needed to encode the distribution without substantial prior information.  Similarly, without prior information we cannot perfectly clone a quantum state just as we cannot prepare an ensemble of such coins without knowing $p$.
 

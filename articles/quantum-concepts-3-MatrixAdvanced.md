@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+title: Advanced matrix concepts | Microsoft Docs 
+description: Advanced matrix concepts
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Advanced Matrix Concepts
+# Advanced matrix concepts
 
 We now extend our manipulation of Matrices to Eigenvalues, Eigenvectors and Exponentials which form a fundamental set of tools we need to describe and implement quantum algorithms.
 
@@ -55,7 +55,7 @@ We already know how to compute the eigenvalues and eigenvectors of a diagonal ma
 
 $$M(U^\dagger v) = U^\dagger D U  (U^\dagger v) =U^\dagger D (U  U^\dagger) v = U^\dagger D v = c U^\dagger v.$$
 
-## Matrix Exponentials
+## Matrix exponentials
 A *matrix exponential* can also be defined in exact analogy to the exponential function.  The matrix exponential of a matrix $A$ can be expressed as
 
 $$

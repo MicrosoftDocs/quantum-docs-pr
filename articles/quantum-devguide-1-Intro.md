@@ -1,8 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
-services: service-name-with-dashes-AZURE-ONLY 
+title: Quantum development techniques | Microsoft Docs 
+description: Quantum development techniques 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
@@ -20,7 +19,26 @@ ms.topic: article-type-from-white-list
 # ms.reviewer:
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
-
+<img src="media/mobius_strip_preview.png" style="float: right;" title="Quantum" alt="Quantum">
+# Quantum development techniques
 This section details the core concepts used to create quantum programs in Q#, and to interact with those programs from classical .NET applications.
-Most of this section will assume some knowledge of quantum computing concepts, such that you may be interested in reading the <xref:microsoft.quantum.concepts.intro> guide first.
-Programmers new to classical programming in C# and the .NET framework may be interested in <!-- TODO -->.
+This section assumes some knowledge of quantum computing concepts like those described in [Quantum computing concepts](quantum-concepts-1-Intro.md).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

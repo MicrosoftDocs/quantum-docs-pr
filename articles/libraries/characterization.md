@@ -119,7 +119,7 @@ For instance, given a unitary black-box $U$ and an input eigenstate $U\ket{\psi}
 * Output
     * A real number representing an estimate $\hat{\phi}$ of $\phi$.
 * Complexity.
-    * Heisenberg limited. The standard-deviation $\sigma$ of $\hat{\phi}$ scales like $2.0 \pi / Q \le \sigma \le 2\pi / 2^{n} \le 10.7\pi / Q$, where $Q$ is the number of queries to $\hat{U}$. Here, variance is defined as $\sigma^2 = \mathbb{E}\_\hat{\phi}[(\mod\_{2\pi,-\pi}(\hat{\phi}-\phi))^2]$, and $n$ is the `bitsPrecision` parameter of the function. Note that the lower bound is reached in the limit of asymptotically large $Q$, and the upper bound is guaranteed even for small sample sizes. 
+    * Heisenberg limited. The standard-deviation $\sigma$ of $\hat{\phi}$ scales like $2.0 \pi / Q \le \sigma \le 2\pi / 2^{n} \le 10.7\pi / Q$, where $Q$ is the number of queries to $\hat{U}$. Here, variance is defined as $\sigma^2 = \mathbb{E}\_\hat{\phi}[(\mod\_{2\pi,-\pi}(\hat{\phi}-\phi))^2]$, and $n$ is the `Int` parameter of the function. Note that the lower bound is reached in the limit of asymptotically large $Q$, and the upper bound is guaranteed even for small sample sizes. 
     * Quadratic scaling in measurements. The number of measurements performed scales like $\mathcal{O}((\log{\sigma})^2)$.
     * Efficient classical post-processing. The classical algorithm that infers $\hat{\phi}$ from the measurement outcomes requires the computation of only $\mathcal{O}(\log{(1/\sigma)})$ trigonometric functions on $\mathcal{O}(\log{(1/\sigma)})$ classical bits.
     * Small space overhead. The algorithm only requires $1$ ancilla qubit.

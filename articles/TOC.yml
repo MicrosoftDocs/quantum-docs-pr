@@ -88,8 +88,6 @@
       href: quantum-QR-FileStructure.md
     - name: The Standard Library
       href: quantum-QR-StandardLibrary.md
-- name: Glossary
-  href: Glossary.md
 - name: For more information
   href: quantum-ForMoreInfo.md
 - name: C# components reference

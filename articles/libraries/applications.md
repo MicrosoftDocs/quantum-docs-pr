@@ -173,10 +173,16 @@ operation AdiabaticStateEnergyEstimate(
 > The [simulation of molecular Hydrogen](TODO: link) is an interesting and brief sample. The model and experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) only requires Pauli matrices and takes the form $\hat H = g\_{0}I\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$. This is an effective Hamiltonian only requiring only 2 qubits, where the constants $g$ are computed from the distance $R$ between the two Hydrogen atoms. Using canon functions, the Paulis are converted to unitaries and then evolved over short periods of time using the Trotter-Suzuki decomposition. A good approximation to the $H_2$ ground state can be created without using adiabatic state preparation, and so the ground state energy may be found directly by utilizing phase Estimation from the canon.
 
 ### Shor's Algorithm ###
+Shor's algorithm remains one of the most significant developments in quantum computing because it showed that quantum computers could be used to solve important and classically intractable problems.
+Shor's algorithm provides a fast way to factor numbers using a quantum computer.
+The security of many present-day cryptosystems is based on the assumption that no fast algorithm exists for factoring.
+Thus Shor's algorithm has had a profound impact on how we think about security in a post-quantum world.
 
+Shor's algorithm can be thought of as a hybrid algorithm.
+The quantum computer is used to perform a computationally hard task known as period finding.
 #### Period Finding ####
 
-Now that we have seen how the quantum Fourier transform and phase estimation work, we can use these tools to solve a classically hard computational problem called *period finding*.  In the next section, we will see how to apply period finding to factoring.
+Now that we have seen how the quantum Fourier transform and phase estimation work (see [*Quantum Algorithms*](./algorithms.md), we can use these tools to solve a classically hard computational problem called *period finding*.  In the next section, we will see how to apply period finding to factoring.
 
 Given two integers $a$ and $N$, where $a<N$, the goal of period finding, also called order finding, is to find the {\it order} $r$ of $a$ modulo $N$, where $r$ is defined to be the least positive integer such that $a^r \equiv 1 \text{ mod } N$.  
 
@@ -201,17 +207,17 @@ We don't need to actually prepare $|x\rangle$!
 We can just prepare a quantum register of $n$ qubits in state $|1\rangle$. 
 
 The circuit contains the QFT and several controlled gates.
-The QFT gate has been described [previously](./algorithms.md).  
+The QFT gate has been described [previously](./algorithms.md).
 The controlled-$U_a$ gate maps $|x\rangle$ to $|(ax)\text{ mod } N\rangle$ if the control qubit is $|1\rangle$, and maps $|x\rangle$ to $|x\rangle$ otherwise.
 
 To achieve $(a^nx)\text{ mod } N$,  we can simply apply controlled-$U_{a^n}$, where we calculate $a^n \text{ mod } N$ classically to plug into the quantum circuit.  
 The circuits to achieve such modular arithmetic have been described in the [quantum arithmetic documentation](./algorithms.md), specifically we require a modular exponentiation circuit to implement the controlled-$U\_{a^i}$ operations.
 
 While the circuit above explicitly enables order finding, we can reduce the number of qubits required by following Beauregard's method for order finding.  Rather than using $2n$ control qubits, Beauregard shows how to achieve order finding with only one single control qubit.
-The circuit performs the quantum Fourier transform semi-classically through a sequence of operations conditional on the measurement results. 
+The circuit performs the quantum Fourier transform semi-classically through a sequence of operations conditional on the measurement results.
 
-To perform the space-optimized version of the algorithm, we first note we can perform the modular exponentiation of a constant $a$ by a quantum superposition of values $x$ stored in a quantum register of $2n$ qubits.  
-Here $n=\left \lceil {\log\_2 N} \right \rceil$.  
+To perform the space-optimized version of the algorithm, we first note we can perform the modular exponentiation of a constant $a$ by a quantum superposition of values $x$ stored in a quantum register of $2n$ qubits.
+Here $n=\left \lceil {\log\_2 N} \right \rceil$.
 We denote the quantum register of $2n$ qubits as $|x\rangle$.
 We will compute the result into a separate register, denoted $|0\rangle$.
 
@@ -245,6 +251,6 @@ proceed to the classical postprocessing routine to determine the prime factors:
 9. If $\mbox{gcd}(a^{r/2}-1, N)$ is a prime factor of $N$, return $\mbox{gcd}(a^{r/2}-1, N)$.
 
 
-The factoring algorithm is probabilistic: it can been shown that with probability at least one half that $r$ will be even and $a^{r/2} \neq -1 \text{ mod }N$, thus producing a prime factor.  (See [Shor's original paper](https://doi.org/10.1109/SFCS.1994.365700) for details, or one of the reference texts in [For more information](..\quantum-ForMoreInfo)).
+The factoring algorithm is probabilistic: it can been shown that with probability at least one half that $r$ will be even and $a^{r/2} \neq -1 \text{ mod }N$, thus producing a prime factor.  (See [Shor's original paper](https://doi.org/10.1109/SFCS.1994.365700) for details, or one of the *Basic quantum computing* texts in [For more information](..\quantum-ForMoreInfo)).
 If a prime factor is not returned, then we simply repeat the algorithm from step (1).  After $n$ tries, the probability that every attempt has failed is at most $2^{-n}$.
 Thus after repeating the algorithm a small number of times success is virtually assured.

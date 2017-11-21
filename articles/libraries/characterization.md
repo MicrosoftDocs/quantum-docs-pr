@@ -27,14 +27,14 @@ uid: microsoft.quantum.libraries.characterization
 
 It is critical to be able to characterize the effects of operations in order to develop useful quantum algorithms.
 This is challenging because every measurement of a quantum system yields at most one bit of information.
-In order to learn an eigenvalue, let alone a quantum state, the results of many measurements must be stitched together so that the user can glean the many bits of information needed to represent these concepts.  
+In order to learn an eigenvalue, let alone a quantum state, the results of many measurements must be stitched together so that the user can glean the many bits of information needed to represent these concepts.
 Quantum states are especially vexing because the [no-cloning theorem](../quantum-concepts-7-PauliMeasurements.md) states that there is no way to learn an arbitrary quantum state from a single copy of the state, because doing so would let you make copies of the state.
 This obfuscation of the quantum state from the user is reflected in the fact that Q# does not expose or even define what a state *is* to quantum programs.
 We thus approach quantum characterization by treating operations and states as black-box; this approach shares much in common with the experimental practice of quantum characterization, verification and validation (QCVV).
 
-Characterization is distinct from many of the other libraries discussed previously.  
+Characterization is distinct from many of the other libraries discussed previously.
 The aim here is less to learn classical information about the system, rather than to perform a unitary transformation on a state vector.
-These libraries must therefore blend both classical and quantum information processing. 
+These libraries must therefore blend both classical and quantum information processing.
 
 
 ## Iterative Phase Estimation ##
@@ -50,7 +50,7 @@ As described in the section on [oracles](data-structures#oracles), the Q# canon 
 Concretely, if `U : DiscreteOracle`, then `U(m)` implements $U^m$ for `m : Int`.
 
 With this definition in place, each step of iterative phase estimation proceeds by preparing an ancilla qubit in the $\ket{+}$ state along with the initial state $\ket{\phi}$ that we assume is an [eigenvector](../quantum-concepts-3-MatrixAdvanced.md) of $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi}\ket{\phi}$.  
-A controlled application of `U(m)` is then used which prepares the state $R\_1(m \phi) \ket{+}\ket{\phi}$.
+A controlled application of `U(m)` is then used which prepares the state $\left(R\_1(m \phi) \ket{+}\right)\ket{\phi}$.
 As in the quantum case, the effect of a controlled application of the oracle `U(m)` is precisely the same as the effect of applying $R_1$ for the unknown phase on $\ket{+}$, such that we can describe the effects of $U$ in this simpler fashion.
 The ancilla qubit used as a control for `U(m)` is then measured in the $X$ basis to obtain a single classical `Result`.
 

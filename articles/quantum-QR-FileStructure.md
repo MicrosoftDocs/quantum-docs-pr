@@ -33,7 +33,7 @@ but it must contain at least one definition.
 ## User Defined Type Declarations
 
 Q# provides a way for users to declare new user-defined types, 
-as described in the [Q# type model](quantum-QR-TypeModel) section. 
+as described in the [Q# type model](articles/quantum-QR-TypeModel) section. 
 User-defined types are distinct even if the underlying  types are identical, 
 and there is no automatic conversion between two user-defined types 
 even if the underlying types are identical.
@@ -141,7 +141,7 @@ it should specify `adjoint auto` or `adjoint self`.
 
 The controlled version of an operation specifies how a quantum-controlled 
 version of the operation is implemented. 
-A more complete description is provided above in the [Controlled](quantum-QR-TypeModel#controlled)
+A more complete description is provided above in the [Controlled](articles/quantum-QR-TypeModel#controlled)
 section, above.
 
 It is legal to specify an operation with no controlled version; 

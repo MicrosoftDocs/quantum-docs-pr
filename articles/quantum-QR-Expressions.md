@@ -32,7 +32,7 @@ For instance, `(7)` is an `Int` expression,
 and `((1,2))` is an expression with type `(Int, Int)`.
 
 The equivalence between simple values and single-element tuples described in 
-[Single-Element Tuples](quantum-QR-TypeModel#single-element-tuples) above removes the ambiguity 
+[Single-Element Tuples](articles/quantum-QR-TypeModel#single-element-tuples) above removes the ambiguity 
 between `(6)` as a group and `(6)` as a single-element tuple.
 
 ## Symbols
@@ -158,7 +158,7 @@ If an operation supports the `Adjoint` functor, then `Adjoint(op)`
 is an operation expression.
 Similarly, if the operation supports the `Controlled` functor, then 
 `Controlled(op)` is an operation expression.
-The types of these expressions are specified above in [Functors](quantum-QR-TypeModel#functors).
+The types of these expressions are specified above in [Functors](articles/quantum-QR-TypeModel#functors).
 
 ## Callable Invocation Expressions
 
@@ -276,7 +276,7 @@ Thus, for these types, the default is an invalid
 reference that cannot be used without causing a runtime error.
 This is similar to a null reference in languages such as C# or Java.
 Arrays containing qubits or callables must be filled in using 
-[`set`](quantum-QR-Statements#updating-mutable-symbols) statements 
+[`set`](articles/quantum-QR-Statements#updating-mutable-symbols) statements 
 before their elements may be safely used. Array elements can only be set if the 
 array is declared as being mutable, e.g. `mutable array = new Int[5]`. 
 Arrays passed as arguments are immutable. 
@@ -299,7 +299,7 @@ Type | Default
 Tuple types are initialized element-by-element.
 
 Array creation is primarily of use initializing mutable arrays, 
-on the right-hand side of a [`mutable`](quantum-QR-Statements#mutable-symbols) statement.
+on the right-hand side of a [`mutable`](articles/quantum-QR-Statements#mutable-symbols) statement.
 
 ### Array Slices
 

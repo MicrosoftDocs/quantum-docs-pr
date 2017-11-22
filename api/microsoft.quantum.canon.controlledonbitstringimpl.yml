@@ -10,18 +10,18 @@ input:
   content: '(bits : Bool[], oracle : (Qubit[] => () : Adjoint, Controlled), controlRegister : Qubit[], targetRegister : Qubit[])'
   types:
   - name: bits
-    summary: ' Boolean array'
+    summary: ' Boolean array.'
     uid: microsoft.quantum.primitive.bool
     isArray: true
   - name: controlRegister
     summary: >2
-       Quantum register that controls application of "oracle"
+       Quantum register that controls application of `oracle`.
     uid: microsoft.quantum.primitive.qubit
     isArray: true
   - name: oracle
-    summary: ' Unitary operator'
+    summary: ' Unitary operator.'
   - name: targetRegister
-    summary: ' Quantum register acted on by "oracle"'
+    summary: ' Quantum register acted on by `oracle`.'
     uid: microsoft.quantum.primitive.qubit
     isArray: true
 output:

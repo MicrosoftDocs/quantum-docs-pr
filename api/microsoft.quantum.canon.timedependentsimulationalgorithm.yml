@@ -5,7 +5,7 @@ type: newtype
 namespace: Microsoft.Quantum.Canon
 summary: >2-
    A time-dependent simulation technique converts an
-   <xref:microsoft.quantum.canon.evolutionschedule>
+   @"microsoft.quantum.canon.evolutionschedule"
    to unitary time-evolution for some time-interval.
 syntax: 'newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => () : Adjoint, Controlled);'
 input:

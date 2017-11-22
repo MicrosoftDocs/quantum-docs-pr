@@ -3,21 +3,26 @@ uid: microsoft.quantum.primitive.z
 name: Z
 type: operation
 namespace: Microsoft.Quantum.Primitive
-input:
-  qubit: >2-
-
-     Qubit to which the gate should be applied.
-output: {}
 summary: >2
-
    Applies the Pauli $Z$ gate,
-   $$
+   \begin{align}
        \sigma_z \mathrel{:=}
        \begin{bmatrix}
-           1 & 0 \\
+           1 & 0 \\\\
            0 & -1
        \end{bmatrix}.
-   $$
-syntax: >2-
-
-  operation .Z (qubit : Qubit) : ()
+   \end{align}
+syntax: 'operation Z (qubit : Qubit) : ()'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: ' Qubit to which the gate should be applied.'
+    uid: microsoft.quantum.primitive.qubit
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

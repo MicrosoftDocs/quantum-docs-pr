@@ -3,26 +3,31 @@ uid: microsoft.quantum.primitive.ccnot
 name: CCNOT
 type: operation
 namespace: Microsoft.Quantum.Primitive
-input:
-  control1: >2-
-
-     First control qubit for the CCNOT gate.
-  control2: >2-
-
-     Second control qubit for the CCNOT gate.
-  target: >2
-
-     Target qubit for the CCNOT gate.
-output: {}
 summary: >2
-
    Applies the doubly controlled–NOT (CCNOT) gate to three qubits.
 remarks: >2-
-
    Equivalent to:
    ```qsharp
    (Controlled X)([control1; control2], (target));
    ```
-syntax: >2-
-
-  operation .CCNOT (control1 : Qubit, control2 : Qubit, target : Qubit) : ()
+syntax: 'operation CCNOT (control1 : Qubit, control2 : Qubit, target : Qubit) : ()'
+input:
+  content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
+  types:
+  - name: control1
+    summary: ' First control qubit for the CCNOT gate.'
+    uid: microsoft.quantum.primitive.qubit
+  - name: control2
+    summary: ' Second control qubit for the CCNOT gate.'
+    uid: microsoft.quantum.primitive.qubit
+  - name: target
+    summary: >2
+       Target qubit for the CCNOT gate.
+    uid: microsoft.quantum.primitive.qubit
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

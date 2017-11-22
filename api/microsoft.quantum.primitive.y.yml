@@ -3,21 +3,26 @@ uid: microsoft.quantum.primitive.y
 name: Y
 type: operation
 namespace: Microsoft.Quantum.Primitive
-input:
-  qubit: >2-
-
-     Qubit to which the gate should be applied.
-output: {}
 summary: >2
-
    Applies the Pauli $Y$ gate,
-   $$
+   \begin{align}
        \sigma_y \mathrel{:=}
        \begin{bmatrix}
-           0 & -i \\
+           0 & -i \\\\
            i & 0
        \end{bmatrix}.
-   $$
-syntax: >2-
-
-  operation .Y (qubit : Qubit) : ()
+   \end{align}
+syntax: 'operation Y (qubit : Qubit) : ()'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: ' Qubit to which the gate should be applied.'
+    uid: microsoft.quantum.primitive.qubit
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

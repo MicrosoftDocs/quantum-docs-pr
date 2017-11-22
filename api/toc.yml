@@ -1,421 +1,73 @@
 - name: Reference
   href: overview.md
   items:
+  - name: Microsoft.Quantum.Extensions.Bitwise
+    uid: microsoft.quantum.extensions.bitwise
+    items:
+    - name: And
+      uid: microsoft.quantum.extensions.bitwise.and
+    - name: Not
+      uid: microsoft.quantum.extensions.bitwise.not
+    - name: Or
+      uid: microsoft.quantum.extensions.bitwise.or
+    - name: Parity
+      uid: microsoft.quantum.extensions.bitwise.parity
+    - name: XBits
+      uid: microsoft.quantum.extensions.bitwise.xbits
+    - name: Xor
+      uid: microsoft.quantum.extensions.bitwise.xor
+    - name: ZBits
+      uid: microsoft.quantum.extensions.bitwise.zbits
   - name: Microsoft.Quantum.Primitive
     uid: microsoft.quantum.primitive
     items:
-    - name: Random
-      uid: microsoft.quantum.primitive.random
     - name: Assert
       uid: microsoft.quantum.primitive.assert
     - name: AssertProb
       uid: microsoft.quantum.primitive.assertprob
-    - name: Log
-      uid: microsoft.quantum.primitive.log
-    - name: X
-      uid: microsoft.quantum.primitive.x
-    - name: Y
-      uid: microsoft.quantum.primitive.y
-    - name: Z
-      uid: microsoft.quantum.primitive.z
-    - name: H
-      uid: microsoft.quantum.primitive.h
-    - name: S
-      uid: microsoft.quantum.primitive.s
-    - name: T
-      uid: microsoft.quantum.primitive.t
-    - name: CNOT
-      uid: microsoft.quantum.primitive.cnot
     - name: CCNOT
       uid: microsoft.quantum.primitive.ccnot
-    - name: SWAP
-      uid: microsoft.quantum.primitive.swap
+    - name: CNOT
+      uid: microsoft.quantum.primitive.cnot
+    - name: Exp
+      uid: microsoft.quantum.primitive.exp
+    - name: ExpFrac
+      uid: microsoft.quantum.primitive.expfrac
+    - name: H
+      uid: microsoft.quantum.primitive.h
+    - name: M
+      uid: microsoft.quantum.primitive.m
+    - name: Measure
+      uid: microsoft.quantum.primitive.measure
+    - name: Message
+      uid: microsoft.quantum.primitive.message
     - name: MultiX
       uid: microsoft.quantum.primitive.multix
     - name: R
       uid: microsoft.quantum.primitive.r
+    - name: R1
+      uid: microsoft.quantum.primitive.r1
+    - name: R1Frac
+      uid: microsoft.quantum.primitive.r1frac
     - name: RFrac
       uid: microsoft.quantum.primitive.rfrac
+    - name: Random
+      uid: microsoft.quantum.primitive.random
     - name: Rx
       uid: microsoft.quantum.primitive.rx
     - name: Ry
       uid: microsoft.quantum.primitive.ry
     - name: Rz
       uid: microsoft.quantum.primitive.rz
-    - name: R1
-      uid: microsoft.quantum.primitive.r1
-    - name: R1Frac
-      uid: microsoft.quantum.primitive.r1frac
-    - name: Exp
-      uid: microsoft.quantum.primitive.exp
-    - name: ExpFrac
-      uid: microsoft.quantum.primitive.expfrac
-    - name: Measure
-      uid: microsoft.quantum.primitive.measure
-    - name: M
-      uid: microsoft.quantum.primitive.m
-  - name: Microsoft.Quantum.Canon
-    uid: microsoft.quantum.canon
-    items:
-    - name: AdiabaticStateEnergyEstimate
-      uid: microsoft.quantum.canon.adiabaticstateenergyestimate
-    - name: AdiabaticStateEnergyUnitary
-      uid: microsoft.quantum.canon.adiabaticstateenergyunitary
-    - name: AmpAmpReflectionPhases
-      uid: microsoft.quantum.canon.ampampreflectionphases
-    - name: AmpAmpRotationPhases
-      uid: microsoft.quantum.canon.ampamprotationphases
-    - name: AndLadder
-      uid: microsoft.quantum.canon.andladder
-    - name: ApplyMultiControlledC
-      uid: microsoft.quantum.canon.applymulticontrolledc
-    - name: ApplyMultiControlledCA
-      uid: microsoft.quantum.canon.applymulticontrolledca
-    - name: ApplyPauli
-      uid: microsoft.quantum.canon.applypauli
-    - name: ApplyPauliFromBitString
-      uid: microsoft.quantum.canon.applypaulifrombitstring
-    - name: ApplyReversedOpBE
-      uid: microsoft.quantum.canon.applyreversedopbe
-    - name: ApplyReversedOpLE
-      uid: microsoft.quantum.canon.applyreversedople
-    - name: ApplyToEach
-      uid: microsoft.quantum.canon.applytoeach
-    - name: ApplyToEachA
-      uid: microsoft.quantum.canon.applytoeacha
-    - name: ApplyToEachAC
-      uid: microsoft.quantum.canon.applytoeachac
-    - name: ApplyToEachC
-      uid: microsoft.quantum.canon.applytoeachc
-    - name: ApplyToFirstQubit
-      uid: microsoft.quantum.canon.applytofirstqubit
-    - name: ApplyToFirstQubitA
-      uid: microsoft.quantum.canon.applytofirstqubita
-    - name: ApplyToFirstQubitC
-      uid: microsoft.quantum.canon.applytofirstqubitc
-    - name: ApplyToFirstQubitCA
-      uid: microsoft.quantum.canon.applytofirstqubitca
-    - name: ApplyToFirstThreeQubits
-      uid: microsoft.quantum.canon.applytofirstthreequbits
-    - name: ApplyToFirstThreeQubitsA
-      uid: microsoft.quantum.canon.applytofirstthreequbitsa
-    - name: ApplyToFirstThreeQubitsC
-      uid: microsoft.quantum.canon.applytofirstthreequbitsc
-    - name: ApplyToFirstThreeQubitsCA
-      uid: microsoft.quantum.canon.applytofirstthreequbitsca
-    - name: ApplyToFirstTwoQubits
-      uid: microsoft.quantum.canon.applytofirsttwoqubits
-    - name: ApplyToFirstTwoQubitsA
-      uid: microsoft.quantum.canon.applytofirsttwoqubitsa
-    - name: ApplyToFirstTwoQubitsC
-      uid: microsoft.quantum.canon.applytofirsttwoqubitsc
-    - name: ApplyToFirstTwoQubitsCA
-      uid: microsoft.quantum.canon.applytofirsttwoqubitsca
-    - name: ApplyToPartition
-      uid: microsoft.quantum.canon.applytopartition
-    - name: ApplyToPartitionA
-      uid: microsoft.quantum.canon.applytopartitiona
-    - name: ApplyToPartitionC
-      uid: microsoft.quantum.canon.applytopartitionc
-    - name: ApplyToPartitionCA
-      uid: microsoft.quantum.canon.applytopartitionca
-    - name: ApplyToRangeAC
-      uid: microsoft.quantum.canon.applytorangeac
-    - name: ApplyToSubregister
-      uid: microsoft.quantum.canon.applytosubregister
-    - name: ApplyToSubregisterA
-      uid: microsoft.quantum.canon.applytosubregistera
-    - name: ApplyToSubregisterC
-      uid: microsoft.quantum.canon.applytosubregisterc
-    - name: ApplyToSubregisterCA
-      uid: microsoft.quantum.canon.applytosubregisterca
-    - name: ArcCosh
-      uid: microsoft.quantum.canon.arccosh
-    - name: ArcSinh
-      uid: microsoft.quantum.canon.arcsinh
-    - name: ArcTanh
-      uid: microsoft.quantum.canon.arctanh
-    - name: AssertAlmostEqual
-      uid: microsoft.quantum.canon.assertalmostequal
-    - name: AssertAlmostEqualTol
-      uid: microsoft.quantum.canon.assertalmostequaltol
-    - name: AssertBoolArrayEqual
-      uid: microsoft.quantum.canon.assertboolarrayequal
-    - name: AssertBoolEqual
-      uid: microsoft.quantum.canon.assertboolequal
-    - name: AssertEqualOnBasisVector
-      uid: microsoft.quantum.canon.assertequalonbasisvector
-    - name: AssertIntEqual
-      uid: microsoft.quantum.canon.assertintequal
-    - name: AssertOperationsEqualInPlace
-      uid: microsoft.quantum.canon.assertoperationsequalinplace
-    - name: AssertOperationsEqualInPlaceCompBasis
-      uid: microsoft.quantum.canon.assertoperationsequalinplacecompbasis
-    - name: AssertOperationsEqualReferenced
-      uid: microsoft.quantum.canon.assertoperationsequalreferenced
-    - name: AssertQubit
-      uid: microsoft.quantum.canon.assertqubit
-    - name: AssertQubitState
-      uid: microsoft.quantum.canon.assertqubitstate
-    - name: AssertQubitTol
-      uid: microsoft.quantum.canon.assertqubittol
-    - name: BEStub
-      uid: microsoft.quantum.canon.bestub
-    - name: BasisChangeZtoY
-      uid: microsoft.quantum.canon.basischangeztoy
-    - name: BigEndian
-      uid: microsoft.quantum.canon.bigendian
-    - name: BigOpToLittleOp
-      uid: microsoft.quantum.canon.bigoptolittleop
-    - name: BigShiftOpBE
-      uid: microsoft.quantum.canon.bigshiftopbe
-    - name: BigShiftOpLE
-      uid: microsoft.quantum.canon.bigshiftople
-    - name: Bind
-      uid: microsoft.quantum.canon.bind
-    - name: BindA
-      uid: microsoft.quantum.canon.binda
-    - name: BindAC
-      uid: microsoft.quantum.canon.bindac
-    - name: BindACImpl
-      uid: microsoft.quantum.canon.bindacimpl
-    - name: BindAImpl
-      uid: microsoft.quantum.canon.bindaimpl
-    - name: BindC
-      uid: microsoft.quantum.canon.bindc
-    - name: BindCImpl
-      uid: microsoft.quantum.canon.bindcimpl
-    - name: BindImpl
-      uid: microsoft.quantum.canon.bindimpl
-    - name: BoolArrFromPositiveInt
-      uid: microsoft.quantum.canon.boolarrfrompositiveint
-    - name: BoolArrFromPositiveIntTest
-      uid: microsoft.quantum.canon.boolarrfrompositiveinttest
-    - name: BoolArrFromResultArr
-      uid: microsoft.quantum.canon.boolarrfromresultarr
-    - name: BoolFromResult
-      uid: microsoft.quantum.canon.boolfromresult
-    - name: CCNOTop
-      uid: microsoft.quantum.canon.ccnotop
-    - name: CSS
-      uid: microsoft.quantum.canon.css
-    - name: Complex
-      uid: microsoft.quantum.canon.complex
-    - name: ControlledOnBitString
-      uid: microsoft.quantum.canon.controlledonbitstring
-    - name: ControlledOnBitStringImpl
-      uid: microsoft.quantum.canon.controlledonbitstringimpl
-    - name: ControlledOnInt
-      uid: microsoft.quantum.canon.controlledonint
-    - name: ControlledOnIntImpl
-      uid: microsoft.quantum.canon.controlledonintimpl
-    - name: CurryOp
-      uid: microsoft.quantum.canon.curryop
-    - name: CurryOpImpl
-      uid: microsoft.quantum.canon.curryopimpl
-    - name: DecodeOp
-      uid: microsoft.quantum.canon.decodeop
-    - name: DecomposeIntoTimeStepsCA
-      uid: microsoft.quantum.canon.decomposeintotimestepsca
-    - name: DeterministicStateOracle
-      uid: microsoft.quantum.canon.deterministicstateoracle
-    - name: DiagonalShift
-      uid: microsoft.quantum.canon.diagonalshift
-    - name: EmbedPauli
-      uid: microsoft.quantum.canon.embedpauli
-    - name: EncodeOp
-      uid: microsoft.quantum.canon.encodeop
-    - name: EstimateEnergy
-      uid: microsoft.quantum.canon.estimateenergy
-    - name: EstimateFrequency
-      uid: microsoft.quantum.canon.estimatefrequency
-    - name: Filter
-      uid: microsoft.quantum.canon.filter
-    - name: FlipToBasis
-      uid: microsoft.quantum.canon.fliptobasis
-    - name: Float
-      uid: microsoft.quantum.canon.float
-    - name: ForAll
-      uid: microsoft.quantum.canon.forall
-    - name: ForAny
-      uid: microsoft.quantum.canon.forany
-    - name: HY
-      uid: microsoft.quantum.canon.hy
-    - name: I
-      uid: microsoft.quantum.canon.i
-    - name: IdentityTestHelper
-      uid: microsoft.quantum.canon.identitytesthelper
-    - name: InjectPi4YRotation
-      uid: microsoft.quantum.canon.injectpi4yrotation
-    - name: IntAbs
-      uid: microsoft.quantum.canon.intabs
-    - name: IntMax
-      uid: microsoft.quantum.canon.intmax
-    - name: IntegerIncrement
-      uid: microsoft.quantum.canon.integerincrement
-    - name: InterpolatedEvolution
-      uid: microsoft.quantum.canon.interpolatedevolution
-    - name: IsResultOne
-      uid: microsoft.quantum.canon.isresultone
-    - name: IsResultZero
-      uid: microsoft.quantum.canon.isresultzero
-    - name: IterateThroughCartesianPower
-      uid: microsoft.quantum.canon.iteratethroughcartesianpower
-    - name: IterateThroughCartesianProduct
-      uid: microsoft.quantum.canon.iteratethroughcartesianproduct
-    - name: KnillDistill
-      uid: microsoft.quantum.canon.knilldistill
-    - name: LEStub
-      uid: microsoft.quantum.canon.lestub
-    - name: Lg
-      uid: microsoft.quantum.canon.lg
-    - name: LittleEndian
-      uid: microsoft.quantum.canon.littleendian
-    - name: LittleOpToBigOp
-      uid: microsoft.quantum.canon.littleoptobigop
-    - name: LittleShiftOpBE
-      uid: microsoft.quantum.canon.littleshiftopbe
-    - name: LittleShiftOpLE
-      uid: microsoft.quantum.canon.littleshiftople
-    - name: LogOf2
-      uid: microsoft.quantum.canon.logof2
-    - name: LogicalRegister
-      uid: microsoft.quantum.canon.logicalregister
-    - name: MResetX
-      uid: microsoft.quantum.canon.mresetx
-    - name: MResetY
-      uid: microsoft.quantum.canon.mresety
-    - name: MResetZ
-      uid: microsoft.quantum.canon.mresetz
-    - name: MakeConstArray
-      uid: microsoft.quantum.canon.makeconstarray
-    - name: Map
-      uid: microsoft.quantum.canon.map
-    - name: Max
-      uid: microsoft.quantum.canon.max
-    - name: MeasureAllZeroState
-      uid: microsoft.quantum.canon.measureallzerostate
-    - name: MeasureIdentity
-      uid: microsoft.quantum.canon.measureidentity
-    - name: MeasurePaulis
-      uid: microsoft.quantum.canon.measurepaulis
-    - name: MeasureWithScratch
-      uid: microsoft.quantum.canon.measurewithscratch
-    - name: Min
-      uid: microsoft.quantum.canon.min
-    - name: ModularIncrement
-      uid: microsoft.quantum.canon.modularincrement
-    - name: MultiM
-      uid: microsoft.quantum.canon.multim
-    - name: NoOp
-      uid: microsoft.quantum.canon.noop
-    - name: NoOp2
-      uid: microsoft.quantum.canon.noop2
-    - name: ObliviousOracle
-      uid: microsoft.quantum.canon.obliviousoracle
-    - name: OperationPow
-      uid: microsoft.quantum.canon.operationpow
-    - name: OperationPowImpl
-      uid: microsoft.quantum.canon.operationpowimpl
-    - name: OperationPowImplAC
-      uid: microsoft.quantum.canon.operationpowimplac
-    - name: Pi4YInjectionTest
-      uid: microsoft.quantum.canon.pi4yinjectiontest
-    - name: PositiveIntFromBoolArr
-      uid: microsoft.quantum.canon.positiveintfromboolarr
-    - name: PositiveIntFromResultArr
-      uid: microsoft.quantum.canon.positiveintfromresultarr
-    - name: PrepareChoiStateCA
-      uid: microsoft.quantum.canon.preparechoistateca
-    - name: PrepareEntangledState
-      uid: microsoft.quantum.canon.prepareentangledstate
-    - name: PrepareIdentity
-      uid: microsoft.quantum.canon.prepareidentity
-    - name: PrepareSingleQubitIdentity
-      uid: microsoft.quantum.canon.preparesinglequbitidentity
-    - name: QECC
-      uid: microsoft.quantum.canon.qecc
-    - name: QuantumPhaseEstimation
-      uid: microsoft.quantum.canon.quantumphaseestimation
-    - name: QubitExclude
-      uid: microsoft.quantum.canon.qubitexclude
-    - name: QubitSlice
-      uid: microsoft.quantum.canon.qubitslice
-    - name: RandomInt
-      uid: microsoft.quantum.canon.randomint
-    - name: RandomIntPow2
-      uid: microsoft.quantum.canon.randomintpow2
-    - name: RandomReal
-      uid: microsoft.quantum.canon.randomreal
-    - name: RandomSingleQubitPauli
-      uid: microsoft.quantum.canon.randomsinglequbitpauli
-    - name: RandomWalkPhaseEstimation
-      uid: microsoft.quantum.canon.randomwalkphaseestimation
-    - name: RealMod
-      uid: microsoft.quantum.canon.realmod
-    - name: RecoveryFn
-      uid: microsoft.quantum.canon.recoveryfn
-    - name: ReflectionOracle
-      uid: microsoft.quantum.canon.reflectionoracle
-    - name: Reset
-      uid: microsoft.quantum.canon.reset
-    - name: ResetAll
-      uid: microsoft.quantum.canon.resetall
-    - name: RestrictToSubregister
-      uid: microsoft.quantum.canon.restricttosubregister
-    - name: RestrictToSubregisterA
-      uid: microsoft.quantum.canon.restricttosubregistera
-    - name: RestrictToSubregisterC
-      uid: microsoft.quantum.canon.restricttosubregisterc
-    - name: RestrictToSubregisterCA
-      uid: microsoft.quantum.canon.restricttosubregisterca
-    - name: ResultArrFromBoolArr
-      uid: microsoft.quantum.canon.resultarrfromboolarr
-    - name: ResultFromBool
-      uid: microsoft.quantum.canon.resultfrombool
-    - name: ReverseRegister
-      uid: microsoft.quantum.canon.reverseregister
-    - name: RightShiftOpImpl
-      uid: microsoft.quantum.canon.rightshiftopimpl
-    - name: RobustPhaseEstimation
-      uid: microsoft.quantum.canon.robustphaseestimation
-    - name: RobustPhaseEstimationDemo
-      uid: microsoft.quantum.canon.robustphaseestimationdemo
-    - name: RobustPhaseEstimationTest
-      uid: microsoft.quantum.canon.robustphaseestimationtest
-    - name: RobustPhaseEstimationTestOp
-      uid: microsoft.quantum.canon.robustphaseestimationtestop
-    - name: SimulationAlgorithm
-      uid: microsoft.quantum.canon.simulationalgorithm
-    - name: StateOracle
-      uid: microsoft.quantum.canon.stateoracle
-    - name: Subarray
-      uid: microsoft.quantum.canon.subarray
-    - name: SwapReverseRegister
-      uid: microsoft.quantum.canon.swapreverseregister
-    - name: Syndrome
-      uid: microsoft.quantum.canon.syndrome
-    - name: SyndromeMeasOp
-      uid: microsoft.quantum.canon.syndromemeasop
-    - name: TimeDependentSimulationAlgorithm
-      uid: microsoft.quantum.canon.timedependentsimulationalgorithm
-    - name: Trotter1ImplCA
-      uid: microsoft.quantum.canon.trotter1implca
-    - name: Trotter2ImplCA
-      uid: microsoft.quantum.canon.trotter2implca
-    - name: WeightOnePaulis
-      uid: microsoft.quantum.canon.weightonepaulis
-    - name: With
-      uid: microsoft.quantum.canon.with
-    - name: With1
-      uid: microsoft.quantum.canon.with1
-    - name: With1C
-      uid: microsoft.quantum.canon.with1c
-    - name: WithA
-      uid: microsoft.quantum.canon.witha
-    - name: WithC
-      uid: microsoft.quantum.canon.withc
-    - name: WithCA
-      uid: microsoft.quantum.canon.withca
-    - name: _ExtractLogicalQubitFromSteaneCode
-      uid: microsoft.quantum.canon._extractlogicalqubitfromsteanecode
+    - name: S
+      uid: microsoft.quantum.primitive.s
+    - name: SWAP
+      uid: microsoft.quantum.primitive.swap
+    - name: T
+      uid: microsoft.quantum.primitive.t
+    - name: X
+      uid: microsoft.quantum.primitive.x
+    - name: Y
+      uid: microsoft.quantum.primitive.y
+    - name: Z
+      uid: microsoft.quantum.primitive.z

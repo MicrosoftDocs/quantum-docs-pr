@@ -36,9 +36,7 @@ select the `Q# Test Project` template. This will create a project with two files
 
 `Tests.qs` holds Q# unit tests. Tests are operations with signature `() => ()`; they don't need to be specially annotated, and will be grouped in suites in C# code. Initially this file contains one sample unit test `AllocateQubitTest` which checks that a newly allocated qubit is in `|0>` state and prints a message.
 
-`TestSuiteRunner.cs` holds test suite runners - methods annotated with `OperationDriver` which define what subset of tests is to be executed as part of this test suite and how to execute these tests. Initially this file contains one sample test suite `TestTarget` which runs all tests in the same namespace as it is which have names ending with `...Test` on `QuantumSimulator`. 
-
-<!-- TODO: describe parameters of OperationDriver -->
+`TestSuiteRunner.cs` holds test suite runners - methods annotated with `OperationDriver` which define what subset of tests is to be executed as part of this test suite and how to execute these tests. Initially this file contains one sample test suite `TestTarget` which runs all tests in the same namespace as it is which have names ending with `...Test` on `QuantumSimulator`. Using other arguments of `OperationDriver` allows to select only tests from certain assembly or with names starting or ending with certain string.
 
 ### Running Q# Unit Tests
 
@@ -46,7 +44,34 @@ As a one-time setup, go to `Test` menu and select `Test Settings` > `Default Pro
 
 Build the project, go to `Test` menu and select `Windows` > `Test Explorer`. `AllocateQubitTest` will show up in the list of tests in `Not Run Tests` group. Select `Run All` or run this individual test, and it should pass!
 
-<!-- TODO: describe running from command line? -->
+Alternatively, you can run Q# xUnit tests from command line. Let's assume that your project name is `QSharpTestProject1`, and you've built it in Debug mode. To run tests, navigate to the project folder (the folder which contains `QSharpTestProject1.csproj`), and execute command
+
+```
+vstest.console.exe .\bin\Debug\QSharpTestProject1.dll /Platform:x64
+```
+
+You should get output similar to the following:
+
+```
+Microsoft (R) Test Execution Command Line Tool Version 15.0.26720.2
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+Warning: Using Isolation mode to run tests as required by effective Platform:X64 and .Net Framework:Framework40 settings for test run. Use the /inIsolation parameter to suppress this warning.
+Information: [xUnit.net 00:00:01.0018943]   Discovering: QSharpTestProject1
+
+Information: [xUnit.net 00:00:01.4948065]   Discovered:  QSharpTestProject1
+
+Information: [xUnit.net 00:00:01.5081234]   Starting:    QSharpTestProject1
+
+Information: [xUnit.net 00:00:02.0242517]   Finished:    QSharpTestProject1
+
+Passed   AllocateQubitTest
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 3.0038 Seconds
+```
 
 ## Logging and Assertions
 
@@ -116,19 +141,3 @@ The microsoft.quantum.canon namespace provides several more functions of the `As
 ## Debugging
 
 Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/en-us/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger) and [inspecting values of classic variables](https://docs.microsoft.com/en-us/visualstudio/debugger/autos-and-locals-windows) during code execution on simulator.
-
-<!-- TODO: how much detail we need to provide? Are links to standard Visual Studio tools sufficient? -->
-
-### Set Breakpoints
-
-> Content in development.
-<!-- TODO:Content-->
-### Navigate Code
-
-> Content in development.
-
-### Inspect Classic Variables
-
-> Content in development.
-
-

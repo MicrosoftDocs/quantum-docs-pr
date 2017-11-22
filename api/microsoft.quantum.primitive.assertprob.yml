@@ -3,30 +3,12 @@ uid: microsoft.quantum.primitive.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Primitive
-input:
-  bases: >2-
-
-     A measurement effect to assert the probability of, expressed as a
-     mutli-qubit Pauli operator.
-  qubits: >2-
-
-     A register on which to make the assertion.
-  result: >2-
-
-     An expected result of `Measure(bases, qubits)`.
-  prob: >2-
-
-     The probability with which the given result is expected.
-  msg: >2
-
-     A message to be reported if the assertion fails.
-output: {}
 summary: >2
-
    Asserts that measuring the given qubits in the given Pauli basis will have the given result
    with the given probability, within some tolerance.
-example: >2
+remarks: >2
 
+  ## Examples
    ```qsharp
    using (register = Qubit[1]) {
        H(register[0]);
@@ -34,9 +16,32 @@ example: >2
            "Measuring in conjgate basis did not give 50/50 results.");
    }
    ```
-seealso: >2-
-
-   - @"microsoft.quantum.primitive.assertprob"
-syntax: >2-
-
-  operation .AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : ()
+syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : ()'
+seealso: ' - @"microsoft.quantum.primitive.assertprob"'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
+  types:
+  - name: bases
+    summary: >2-
+       A measurement effect to assert the probability of, expressed as a
+       mutli-qubit Pauli operator.
+    uid: microsoft.quantum.primitive.pauli
+    isArray: true
+  - name: msg
+    summary: >2
+       A message to be reported if the assertion fails.
+    uid: microsoft.quantum.primitive.string
+  - name: prob
+    summary: ' The probability with which the given result is expected.'
+    uid: microsoft.quantum.primitive.float
+  - name: qubits
+    summary: ' A register on which to make the assertion.'
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+  - name: result
+    summary: ' An expected result of `Measure(bases, qubits)`.'
+    uid: microsoft.quantum.primitive.result
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

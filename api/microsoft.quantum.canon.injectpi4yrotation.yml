@@ -1,0 +1,16 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.injectpi4yrotation
+name: InjectPi4YRotation
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " InjectPi4YRotation needs a magic state \n $\\cos\\frac{\\pi}{8} \\ket{0} + \\sin \\frac{\\pi}{8} \\ket{1}$.\n The magic state required is the same for the Adjoint,\n that implements $-\\pi/4$ $Y$-rotation."
+syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : ()'
+input:
+  content: '(data : Qubit, magic : Qubit)'
+  types: []
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint

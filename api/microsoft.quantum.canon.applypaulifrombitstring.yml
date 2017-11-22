@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applypaulifrombitstring
+name: ApplyPauliFromBitString
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Applies a Pauli operator on the $n^{\text{th}}$ qubit if the $n^{\text{th}}$
+   bit of a Boolean array matches a given input.
+syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : ()'
+input:
+  content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
+  types:
+  - name: bitApply
+    summary: ' apply Pauli if bit is this value.'
+    uid: microsoft.quantum.primitive.bool
+  - name: bits
+    summary: ' Boolean array.'
+    uid: microsoft.quantum.primitive.bool
+    isArray: true
+  - name: pauli
+    summary: ' Pauli operator to apply to qubits where `bitsApply == bits[idx]`.'
+    uid: microsoft.quantum.primitive.pauli
+  - name: qubits
+    summary: >2
+       Quantum register to which a Pauli operator is to be applied.
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

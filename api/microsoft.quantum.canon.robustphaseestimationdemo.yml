@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.robustphaseestimationdemo
+name: RobustPhaseEstimationDemo
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation RobustPhaseEstimationDemo (phaseSet : Double, bitsPrecision : Int) : Double'
+input:
+  content: '(phaseSet : Double, bitsPrecision : Int)'
+  types: []
+output:
+  content: Double
+  types:
+  - uid: microsoft.quantum.primitive.float

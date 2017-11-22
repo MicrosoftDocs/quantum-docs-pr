@@ -93,8 +93,5 @@ Quantum Teleportation is perhaps the best quantum algorithm for illustrating the
 <!--- ![](.\media\tp2.svg){ width=50% } --->
 ![](./media/concepts_tp2.png)
 
-# Conclusion
 
-We have reviewed, in this brief introduction, how a quantum computer can be viewed as a device that stores information as a unit vector in an exponentially large vector space, and seen how quantum gates can be used to rotate the information in a way so as to perform a calculation.  We have also discussed useful language for describing quantum operations such as quantum circuits and Dirac notation which allow complex quantum states and subroutines to be quickly understood by a developer.
 
-While these tools are foundational for any developer of quantum software, they by no means span the depth or breadth of what is known about quantum computer programming and algorithm design.  Since quantum computing remains a rapidly developing field, there is no one resource that has all of the information needed to learn how to best use these tools in order to solve problems.  For this reason we have compiled a list of [references](quantum-ForMoreInfo.md)  that may interest the reader who wishes to learn more about the art and beauty of quantum computer programming.

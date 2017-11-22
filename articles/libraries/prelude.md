@@ -336,7 +336,8 @@ return rs;
 
 ### Debugging ###
 
-<!-- TODO: link these sentences to §Going Further and the upcoming § on Choi–Jamiłkowski testing. -->
+<!-- TODO: link these sentences to §quantum-techniques-TestingAndDebugging.md
+ and the upcoming § on Choi–Jamiłkowski testing. -->
 The final functions defined by the prelude provide useful tools for debugging and testing quantum programs.
 These will later be the basis for higher-level correctness testing in the canon.
 
@@ -357,7 +358,7 @@ If the assertion fails, the execution ends by calling `fail`
 with the given message.
 By default, this operation is not implemented; simulators that can support it
 should provide an implementation that performs runtime checking.
-`AssertProb` has signature `((Pauli[], Qubit[], Result, Double, String, Double) -> ())`.
+`AssertProb` has signature `((Pauli[], Qubit[], Result, Double, String, Double) -> ())`. The first of `Double` parameters gives the desired probability of the result, and the second one - the tolerance.
 
 Finally, the `Message` function logs a message in a machine-dependent way.
 By default, this writes the string to the console.

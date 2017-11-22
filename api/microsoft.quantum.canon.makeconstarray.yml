@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.makeconstarray
+name: MakeConstArray
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: ' Creates an array of given length with all elements equal to given value.'
+syntax: 'function MakeConstArray (length : Int, value : Int) : Int[]'
+input:
+  content: '(length : Int, value : Int)'
+  types: []
+output:
+  content: Int[]
+  types:
+  - uid: microsoft.quantum.primitive.integer
+    isArray: true

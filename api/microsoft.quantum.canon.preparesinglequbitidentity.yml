@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.preparesinglequbitidentity
+name: PrepareSingleQubitIdentity
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation PrepareSingleQubitIdentity (qubit : Qubit) : ()'
+input:
+  content: '(qubit : Qubit)'
+  types: []
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

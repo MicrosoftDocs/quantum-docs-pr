@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.andladder
+name: AndLadder
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation AndLadder (ccnot : CCNOTop, controls : Qubit[], targets : Qubit[]) : ()'
+references: >2-
+   - [ *Michael A. Nielsen , Isaac L. Chuang*,
+       Quantum Computation and Quantum Information ](http://doi.org/10.1017/CBO9780511976667)
+input:
+  content: '(ccnot : CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types: []
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint

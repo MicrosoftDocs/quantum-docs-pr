@@ -33,14 +33,13 @@ We thus approach quantum characterization by treating operations and states as b
 
 ## Iterative Phase Estimation ##
 
-Viewing quantum programming in terms of quantum characterization suggests a useful alternative to [quantum phase estimation](algorithms#quantum-phase-estimation).
-That is, instead of preparing an $n$-qubit register to contain a binary representation of the phase as in quantum phase estimation, we can view phase estimation as the process by which a *classical* agent learns properties of a quantum system through measurements.
-We proceed as in the [quantum case](algorithms#quantum-phase-estimation) by using phase kickback to turn applications of a black-box operation into rotations by an unknown angle, but will measure the ancilla qubit that we rotate at each step immediately following the rotation.
+Viewing quantum programming in terms of quantum characterization suggests a useful alternative to quantum phase estimation. That is, instead of preparing an $n$-qubit register to contain a binary representation of the phase as in quantum phase estimation, we can view phase estimation as the process by which a *classical* agent learns properties of a quantum system through measurements.
+We proceed as in the quantum case by using phase kickback to turn applications of a black-box operation into rotations by an unknown angle, but will measure the ancilla qubit that we rotate at each step immediately following the rotation.
 This has the advantage that we only require a single additional qubit to perform the phase kickback described in the quantum case, as we then learn the phase from the measurement results at each step in an iterative fashion.
 Moreover, it is much easier to include prior information in iterative phase estimation, as we will see below.
 
 In discussing iterative phase estimation, we will consider a unitary $U$ given as a black-box operation.
-As described in the section on [oracles](data-structures#oracles), the Q# canon models such operations by the <xref:microsoft.quantum.canon.discreteoracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => () : Adjoint, Controlled)`.
+As described in the section on oracles in [data-structures](data-structures.md), the Q# canon models such operations by the <xref:microsoft.quantum.canon.discreteoracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => () : Adjoint, Controlled)`.
 Concretely, if `U : DiscreteOracle`, then `U(m)` implements $U^m$ for `m : Int`.
 
 With this definition in place, each step of iterative phase estimation proceeds by preparing an ancilla qubit in the $\ket{+}$ state, then using a controlled application of `U(m)` to prepare $R_1(m \phi) \ket{+}$.
@@ -117,13 +116,13 @@ operation H2EstimateEnergy(
 We can also generalize from the oracle model used above to allow for continuous-time oracles, modeled by the canon type <xref:microsoft.quantum.canon.continuousoracle>.
 Consider that instead of a single unitary operator $U$, we have a family of unitary operators $U(t)$ for $t \in \mathbb{R}$ such that $U(t) U(s)$ = $U(t + s)$.
 This is a weaker statement than in the discrete case, since we can construct a <xref:microsoft.quantum.canon.discreteoracle> by restricting $t = m\,\delta t$ for some fixed $\delta t$.
-By [Stone's theorem](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U(t) = \exp(i H t)$ for some operator $H$, where $\exp$ is the [matrix exponential](../quantum-concepts-3-MatrixAdvanced#matrix-exponentials).
+By [Stone's theorem](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U(t) = \exp(i H t)$ for some operator $H$, where $\exp$ is the matrix exponential as described in [advanced matrices](../quantum-concepts-3-MatrixAdvanced.md).
 An eigenstate $\ket{\phi}$ of $H$ such that $H \ket{\phi} = \phi \ket{\phi}$ is then also an eigenstate of $U(t)$ for all $t$,
 \begin{equation}
     U(t) \ket{\phi} = e^{i \phi t} \ket{\phi}.
 \end{equation}
 The exact same argument as in [the Bayesian case](#bayesian-phase-estimation) thus holds, and the likelihood function is the precisely the same for this more general oracle model.
-Moreover, if $U$ is a simulation of a dynamical generator, as is the case for [Hamiltonian simulation](applications#hamiltonian-simulation), we interpret $\phi$ as an energy.
+Moreover, if $U$ is a simulation of a dynamical generator, as is the case for Hamiltonian simulation, we interpret $\phi$ as an energy.
 Thus, using continuous oracles with phase estimation allows us to learn the energy structure of Hamiltonian models.
 
 ### Random Walk Phase Estimation ###

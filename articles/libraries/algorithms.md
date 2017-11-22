@@ -149,7 +149,7 @@ Consider a unitary $U$ and a state $\ket{\phi}$ such that $\ket{\phi}$ is an eig
 \begin{equation}
     U\ket{\phi} = \phi\ket{\phi}.
 \end{equation}
-If we only have access to $U$ as an [oracle](data-structures#phase-estimation-oracles.md), then we can learn the phase $\phi$ by utilizing that $Z$ rotations applied to the target of a controlled operation propagate back onto the control.
+If we only have access to $U$ as an oracle, then we can learn the phase $\phi$ by utilizing that $Z$ rotations applied to the target of a controlled operation propagate back onto the control.
 
 Suppose that $V$ is a controlled application of $U$, such that
 \begin{align}

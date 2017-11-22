@@ -38,7 +38,7 @@ to the algorithm class's `Run` method.
 The `QuantumSimulator` class executes the quantum algorithm by
 fully simulating the quantum state vector, which is perfect for running and
 testing `Teleport`.
-See the [Concepts guide](quantum-concepts-1-Intro.dm) for more on quantum state vectors.
+See the [Concepts guide](quantum-concepts-1-Intro.md) for more on quantum state vectors.
 
 Other target machines may be used to run a quantum algorithm.
 The machine is responsible for providing implementations of

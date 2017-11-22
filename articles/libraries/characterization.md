@@ -39,14 +39,14 @@ These libraries must therefore blend both classical and quantum information proc
 
 ## Iterative Phase Estimation ##
 
-Viewing quantum programming in terms of quantum characterization suggests a useful alternative to [quantum phase estimation](algorithms#quantum-phase-estimation).
+Viewing quantum programming in terms of quantum characterization suggests a useful alternative to quantum phase estimation.
 That is, instead of preparing an $n$-qubit register to contain a binary representation of the phase as in quantum phase estimation, we can view phase estimation as the process by which a *classical* agent learns properties of a quantum system through measurements.
-We proceed as in the [quantum case](algorithms#quantum-phase-estimation) by using phase kickback to turn applications of a black-box operation into rotations by an unknown angle, but will measure the ancilla qubit that we rotate at each step immediately following the rotation.
+We proceed as in the quantum case by using phase kickback to turn applications of a black-box operation into rotations by an unknown angle, but will measure the ancilla qubit that we rotate at each step immediately following the rotation.
 This has the advantage that we only require a single additional qubit to perform the phase kickback described in the quantum case, as we then learn the phase from the measurement results at each step in an iterative fashion.  
 Each of the methods proposed below uses a different strategy for designing experiments and different data processing methods to learn the phase.  They each have unique advantage ranging from having rigorous error bounds, to the abilities to incorporate prior information, tolerate errors or run on memory limitted classical computers.
 
 In discussing iterative phase estimation, we will consider a unitary $U$ given as a black-box operation.
-As described in the section on [oracles](data-structures#oracles), the Q# canon models such operations by the <xref:microsoft.quantum.canon.discreteoracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => () : Adjoint, Controlled)`.
+As described in the section on oracles in [data-structures](data-structures.md), the Q# canon models such operations by the <xref:microsoft.quantum.canon.discreteoracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => () : Adjoint, Controlled)`.
 Concretely, if `U : DiscreteOracle`, then `U(m)` implements $U^m$ for `m : Int`.
 
 With this definition in place, each step of iterative phase estimation proceeds by preparing an ancilla qubit in the $\ket{+}$ state along with the initial state $\ket{\phi}$ that we assume is an [eigenvector](../quantum-concepts-3-MatrixAdvanced.md) of $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi}\ket{\phi}$.  
@@ -153,11 +153,12 @@ Other relevant details include, say, the small space overhead of just $1$ ancill
 We can also generalize from the oracle model used above to allow for continuous-time oracles, modeled by the canon type <xref:microsoft.quantum.canon.continuousoracle>.
 Consider that instead of a single unitary operator $U$, we have a family of unitary operators $U(t)$ for $t \in \mathbb{R}$ such that $U(t) U(s)$ = $U(t + s)$.
 This is a weaker statement than in the discrete case, since we can construct a <xref:microsoft.quantum.canon.discreteoracle> by restricting $t = m\,\delta t$ for some fixed $\delta t$.
-By [Stone's theorem](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U(t) = \exp(i H t)$ for some operator $H$, where $\exp$ is the [matrix exponential](../quantum-concepts-3-MatrixAdvanced#matrix-exponentials).
+By [Stone's theorem](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U(t) = \exp(i H t)$ for some operator $H$, where $\exp$ is the matrix exponential as described in [advanced matrices](../quantum-concepts-3-MatrixAdvanced.md).
 An eigenstate $\ket{\phi}$ of $H$ such that $H \ket{\phi} = \phi \ket{\phi}$ is then also an eigenstate of $U(t)$ for all $t$,
 \begin{equation}
     U(t) \ket{\phi} = e^{i \phi t} \ket{\phi}.
 \end{equation}
+
 The exact same analysis discussed for [Bayesian phase estimation](#bayesian-phase-estimation) can be applied, and the likelihood function is the precisely the same for this more general oracle model:
 $$
 \Pr(\texttt{Zero} | \phi; t,\theta)=\cos^2\left(\frac{t[\phi -\theta]}{2}\right).

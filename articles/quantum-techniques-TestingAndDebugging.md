@@ -36,9 +36,7 @@ select the `Q# Test Project` template. This will create a project with two files
 
 `Tests.qs` holds Q# unit tests. Tests are operations with signature `() => ()`; they don't need to be specially annotated, and will be grouped in suites in C# code. Initially this file contains one sample unit test `AllocateQubitTest` which checks that a newly allocated qubit is in `|0>` state and prints a message.
 
-`TestSuiteRunner.cs` holds test suite runners - methods annotated with `OperationDriver` which define what subset of tests is to be executed as part of this test suite and how to execute these tests. Initially this file contains one sample test suite `TestTarget` which runs all tests in the same namespace as it is which have names ending with `...Test` on `QuantumSimulator`. 
-
-<!-- TODO: describe parameters of OperationDriver -->
+`TestSuiteRunner.cs` holds test suite runners - methods annotated with `OperationDriver` which define what subset of tests is to be executed as part of this test suite and how to execute these tests. Initially this file contains one sample test suite `TestTarget` which runs all tests in the same namespace as it is which have names ending with `...Test` on `QuantumSimulator`. Using other arguments of `OperationDriver` allows to select only tests from certain assembly or with names starting or ending with certain string.
 
 ### Running Q# Unit Tests
 

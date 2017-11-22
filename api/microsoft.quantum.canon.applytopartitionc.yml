@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytopartitionc
+name: ApplyToPartitionC
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyToPartitionC (op : ((Qubit[], Qubit[]) => () : Controlled), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : ()'
+input:
+  content: '(op : ((Qubit[], Qubit[]) => () : Controlled), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
+  types: []
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Controlled

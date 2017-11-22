@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.lestub
+name: LEStub
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation LEStub (target : LittleEndian) : ()'
+input:
+  content: '(target : LittleEndian)'
+  types: []
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

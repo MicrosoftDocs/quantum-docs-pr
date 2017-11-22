@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.swapreverseregister
+name: SwapReverseRegister
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Uses SWAP gates to reverse the order of the qubits in
+   a register.
+syntax: 'operation SwapReverseRegister (register : Qubit[]) : ()'
+input:
+  content: '(register : Qubit[])'
+  types: []
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

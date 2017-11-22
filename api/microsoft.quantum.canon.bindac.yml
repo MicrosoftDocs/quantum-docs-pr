@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bindac
+name: BindAC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given an array of operations acting on a single qubit,
+   produces a new operation that
+   performs each given operation in sequence.
+remarks: ' See Bind1, Bind1A, and Bind1AC functor variants.'
+syntax: "function BindAC (operations : ('T => () : Adjoint, Controlled)[]) : ('T => () : Adjoint, Controlled)"
+input:
+  content: "(operations : ('T => () : Adjoint, Controlled)[])"
+  types: []
+output:
+  content: "('T => () : Adjoint, Controlled)"
+  types:
+  - {}

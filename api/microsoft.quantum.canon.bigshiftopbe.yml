@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bigshiftopbe
+name: BigShiftOpBE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Given an operation acting on a little-endian register
+       |q? q??1 . q0>,
+   returns a new operation acting on the big end-shifted register
+       |q??1 . q0>,
+   with qubit q? being dropped being dropped if the cyclic argument is 0.
+syntax: 'operation BigShiftOpBE (cyclic : Int, op : (BigEndian => () : )) : (BigEndian => () : )'
+input:
+  content: '(cyclic : Int, op : (BigEndian => () : ))'
+  types: []
+output:
+  content: '(BigEndian => () : )'
+  types:
+  - {}

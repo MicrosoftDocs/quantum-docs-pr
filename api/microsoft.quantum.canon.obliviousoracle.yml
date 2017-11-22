@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.obliviousoracle
+name: ObliviousOracle
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Represents an oracle for oblivious amplitude amplification.
+remarks: >2-
+   This oracle defined by O|s>_a|ψ>_s = λ |t>_a U |ψ>_s + ... acts on the ancilla state |s>_a to implement the unitary U on any system state |ψ>_s with amplitude λ in the |t>_a basis.
+   The first parameter is the qubit register of |s>_a. The second parameter is the qubit register of |ψ>_s.
+syntax: 'newtype ObliviousOracle = ((Qubit[], Qubit[]) => () : Adjoint, Controlled);'
+input:
+  types: []

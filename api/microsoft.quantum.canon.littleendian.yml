@@ -1,0 +1,8 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.littleendian
+name: LittleEndian
+type: newtype
+namespace: Microsoft.Quantum.Canon
+syntax: newtype LittleEndian = Qubit[];
+input:
+  types: []

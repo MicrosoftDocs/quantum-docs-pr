@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.decomposeintotimestepsca
+name: DecomposeIntoTimeStepsCA
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function DecomposeIntoTimeStepsCA (evolutionGenerator : (Int, ((Int, Double, Qubit[]) => () : Adjoint, Controlled)), order : Int) : ((Double, Qubit[]) => () : Adjoint, Controlled)'
+input:
+  content: '(evolutionGenerator : (Int, ((Int, Double, Qubit[]) => () : Adjoint, Controlled)), order : Int)'
+  types: []
+output:
+  content: '((Double, Qubit[]) => () : Adjoint, Controlled)'
+  types:
+  - {}

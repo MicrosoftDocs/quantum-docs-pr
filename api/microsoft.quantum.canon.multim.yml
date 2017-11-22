@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multim
+name: MultiM
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation MultiM (targets : Qubit[]) : Result[]'
+input:
+  content: '(targets : Qubit[])'
+  types: []
+output:
+  content: Result[]
+  types:
+  - uid: microsoft.quantum.primitive.result
+    isArray: true

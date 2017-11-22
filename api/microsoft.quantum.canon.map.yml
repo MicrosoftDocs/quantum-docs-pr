@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.map
+name: Map
+type: function
+namespace: Microsoft.Quantum.Canon
+remarks: " The function is defined for generic types, i.e., whenever we have \n an array `'S[]` and a function `mapper: 'S -> 'T` we can map the elements \n of the array and produce a new array of type `'T[]`. \n "
+syntax: "function Map (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
+input:
+  content: "(mapper : ('T -> 'U), array : 'T[])"
+  types:
+  - name: array
+    summary: >2
+       An array of elements over `'S`.
+    uid: "'t"
+    isArray: true
+  - name: mapper
+    summary: " A function from `'S' to `'T` that is used to map elements. "
+output:
+  content: "'U[]"
+  types:
+  - summary: " An array `'T[]` of elements that are mapped by the `mapper` function."
+    uid: "'u"
+    isArray: true

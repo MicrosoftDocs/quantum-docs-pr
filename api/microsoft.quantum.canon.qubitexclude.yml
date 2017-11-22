@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.qubitexclude
+name: QubitExclude
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function QubitExclude (remove : Int[], qubits : Qubit[]) : Qubit[]'
+input:
+  content: '(remove : Int[], qubits : Qubit[])'
+  types: []
+output:
+  content: Qubit[]
+  types:
+  - uid: microsoft.quantum.primitive.qubit
+    isArray: true

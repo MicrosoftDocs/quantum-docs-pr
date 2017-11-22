@@ -1,0 +1,12 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stateoracle
+name: StateOracle
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: ' Represents an oracle for state preparation.'
+remarks: >2-
+   This oracle defined by O|0>_f|0>_s = λ |1>_f |ψ>_s + ... acts on the on computational basis state |0>_f|0>_s to create the system state |ψ>_s with amplitude λ in the basis flagged by |1>_f.
+   The first parameter is an index to the qubit register of |0>_f. The second parameter encompassed both registers.
+syntax: 'newtype StateOracle = ((Int, Qubit[]) => () : Adjoint, Controlled);'
+input:
+  types: []

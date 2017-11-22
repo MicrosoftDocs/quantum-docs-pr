@@ -80,7 +80,7 @@ We can then use this new operation as `HAll(register)` to apply $H \otimes H \ot
 
 This is cumbersome to do, however, especially in a larger algorithm.
 Moreover, this approach is specialized to the particular operation that we wish to apply to each qubit.
-We can use that [operations are first-class](../quantum-techniques-2-operationsandfunctions#operations-and-functions-as-first-class-values) to express this algorithmic concept more explicitly:
+We can use the fact that operations are first-class to express this algorithmic concept more explicitly:
 
 ```qsharp
 ApplyToEachAC(H, register);
@@ -98,7 +98,7 @@ In particular, this means that calls to `ApplyToEachAC` can appear in operations
 Similarly, <xref:microsoft.quantum.applytorange> is useful for representing patterns of the form `U(0, targets[0]); U(1, targets[1]); ...`, and offers versions for each combination of functors supports by its input.
 
 > [!TIP]
-> `ApplyToEach` is [type-parameterized](../quantum-techniques-7-going-further#generic-operations-and-functions), such that it can be used with operations that take inputs other than `Qubit`.
+> `ApplyToEach` is type-parameterized such that it can be used with operations that take inputs other than `Qubit`.
 > For example, suppose that `codeBlocks` is an array of <xref:microsoft.quantum.canon.logicalregister> values that need to be recovered.
 > Then `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` will apply the error-correcting code `code` and recovery function `recoveryFn` to each block independently.
 > This holds even for classical inputs: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` will apply a rotation of $\pi / 2$ about $X$ followed by a rotation of $pi / 3$ about $Y$.
@@ -165,7 +165,7 @@ This analogy is made precise by the recognition that unitary operators correspon
 Under this view, `Bind` is precisely the representation of the matrix product, since `Bind([A; B])(target)` is equivalent to `A(target); B(target);`, which in turn is the calling sequence corresponding to $BA$.
 
 A more sophisticated example is the [Trotter–Suzuki expansion](TODO: cite).
-As discussed in [Dynamical Generator Representation](data-structures#dynamical-generator-modeling), the Trotter–Suzuki expansion provides a particularly useful way of expressing matrix exponentials.
+As discussed in the Dynamical Generator Representation section of [data structures](data-structures), the Trotter–Suzuki expansion provides a particularly useful way of expressing matrix exponentials.
 For instance, applying the expansion at its lowest order yields that for any operators $A$ and $B$ such that $A = A^\dagger$ and $B = B^\dagger$,
 \begin{align}
     \tag{★} \label{eq:trotter-suzuki-0}
@@ -192,7 +192,7 @@ This iteration pattern is implemented by <xref:microsoft.quantum.canon.decompose
 ## Putting it Together: Controlling Operations ##
 
 Finally, the canon builds on the `Controlled` functor by providing additional ways to condition quantum operations.
-It is common, especially in [quantum arithmetic](algorithms#arithmetic), to condition operations on computational basis states other than $\ket{0\cdots 0}$.
+It is common, especially in quantum arithmetic, to condition operations on computational basis states other than $\ket{0\cdots 0}$.
 Using the control operations and functions introduced above, we can more general quantum conditions in a single statement.
 Let's jump in to how <xref:microsoft.quantum.canon.controlledonbitstring> does it (sans type parameters), then we'll break down the pieces one by one.
 The first thing we'll need to do is to define an operation which actually does the heavy lifting of implementing the control on arbitrary computational basis states.

@@ -61,7 +61,7 @@ Similarly, the <xref:microsoft.quantum.canon.permute> function can be used to re
 ApplyToEach(H, Permute([2; 5], register));
 ```
 
-When combined with [flow control](./control-flow), array manipulation functions such as <xref:microsoft.quantum.canon.zip> can provide a powerful way to express quantum programs:
+When combined with flow control, array manipulation functions such as <xref:microsoft.quantum.canon.zip> can provide a powerful way to express quantum programs:
 
 ```qsharp
 // FIXME: uses type-parameterization, and needs checked.
@@ -81,11 +81,11 @@ In the phase estimation and amplitude amplification literature the concept of an
 Here the term oracle refers to a blackbox quantum subroutine that acts upon a set of qubits and returns the answer as a phase.
 This subroutine often can be thought of as an input to a quantum algorithm that accepts the oracle, in addition to some other parameters, and applies a series of quantum operations and treating a call to this quantum subroutine as if it were a fundamental gate.
 Obviously, in order to actually implement the larger algorithm a concrete decomposition of the oracle into fundamental gates must be provided but such a decomposition is not needed in order to understand the algorithm that calls the oracle.
-In Q#, this abstraction is represented by using that [operations are first-class values](../quantum-techniques-2-operationsandfunctions#operations-and-functions-as-first-class-values), such that operations can be passed to implementations of quantum algorithms in a black-box manner.
+In Q#, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.
 Moreover, user-defined types are used to label the different oracle representations in a type-safe way, making it difficult to accidently conflate different kinds of black box operations.
 
-Such oracles appear in a number of different contexts, including famous examples such as [Grover's search](todo: link to database search sample) and [quantum simulation algorithms](./applications#hamiltonian-simulation).
-Here we focus on the oracles needed for just two applications: [amplitude amplification](./algorithms#amplitude-amplification) and [phase estimation](./characterization#phase-estimation).
+Such oracles appear in a number of different contexts, including famous examples such as Grover's search and quantum simulation algorithms.
+Here we focus on the oracles needed for just two applications: amplitude amplification and phase estimation.
 We will first discuss amplitude amplification oracles before proceding to phase estimation.
 
 ### Amplitude Amplification Oracles ###
@@ -114,7 +114,7 @@ In order to understand how to use the algorithm, it is useful to provide an exam
 In Grover's search the goal is to transform the state $\ket{+}^{\otimes n} = H^{\otimes n} \ket{0}$ into one of (potentially) many marked states.
 To further simplify, let's just look at the case where the only marked state is $\ket{0}$.
 Then we have design two oracles: one that only marks the initial state $\ket{+}^{\otimes n}$ with a minus sign and another that marks the marked state $\ket{0}$ with a minus sign.
-The latter gate can be implemented using the following process operation, by using the [control flow](./control-flow) operations in the canon:
+The latter gate can be implemented using the following process operation, by using the control flow operations in the canon:
 
 ```qsharp
 operation ReflectAboutAllZeros(register : Qubit[]) : () {
@@ -253,7 +253,7 @@ $$
 \end{align}
 $$
 
-where time-evolution by each term alone is easy to implement on a quantum computer. For instance, if $H_j$ is a Pauli $X_1X_2$ operator acting on the 1st and 2nd elements of the qubit register `qubits`, time-evolution by it for any time $t$ may be implemented simply by calling the operation `Exp([PauliX;PauliX], t, qubits[1..2])`, which has signature `((Pauli[], Double, Qubit[]) => () : Adjoint, Controlled)`. As discussed later in [Hamiltonian Simulation](./applications), one solution then is to approximate time-evolution by $H$ with a sequence of simpler operations
+where time-evolution by each term alone is easy to implement on a quantum computer. For instance, if $H_j$ is a Pauli $X_1X_2$ operator acting on the 1st and 2nd elements of the qubit register `qubits`, time-evolution by it for any time $t$ may be implemented simply by calling the operation `Exp([PauliX;PauliX], t, qubits[1..2])`, which has signature `((Pauli[], Double, Qubit[]) => () : Adjoint, Controlled)`. As discussed later in Hamiltonian Simulation, one solution then is to approximate time-evolution by $H$ with a sequence of simpler operations
 
 $$
 \begin{align}

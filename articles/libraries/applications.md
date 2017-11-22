@@ -25,7 +25,7 @@ ms.topic: article-type-from-white-list
 
 ## Hamiltonian Simulation ##
 
-The simulation of quantum systems is one of the most exciting applications of quantum computation. On a classical computer, the difficulty of simulating quantum mechanics, in general, scales with the dimension $N$ of its state-vector representation. As this representation grows exponentially with the number of $n$ qubits $N=2^n$, a trait known also known as the [curse of dimensionality](.\quantum-concepts-5-multiplequbits.md), quantum simulation on classical hardware is intractable. 
+The simulation of quantum systems is one of the most exciting applications of quantum computation. On a classical computer, the difficulty of simulating quantum mechanics, in general, scales with the dimension $N$ of its state-vector representation. As this representation grows exponentially with the number of $n$ qubits $N=2^n$, a trait known also known as the [curse of dimensionality](quantum-concepts-5-multiplequbits.md), quantum simulation on classical hardware is intractable. 
 
 However, the situation can be very different on quantum hardware. The most common variation of quantum simulation is called the time-independent Hamiltonian simulation problem. There, one is provided with a description of the system Hamiltonian $H$, which is a Hermitian matrix, and some initial quantum state $\ket{\psi(0)}$ that is encoded in some basis on $n$ qubits on a quantum computer. As quantum states in closed systems evolve under the Schrödinger equation
 $$
@@ -35,13 +35,13 @@ $$
 $$
 the goal is to implement the unitary time-evolution operator $U(t)=e^{-iHt}$ at some fixed time $t$, where $\ket{\psi(t)}=U(t)\ket{\psi(0)}$ solves the Schrödinger equation. Analogously, the time-dependent Hamiltonian simulation problem solves the same equation, but with $H(t)$ now a function of time. 
 
-Hamiltonian simulation is a major component of many other quantum simulation problems, and solutions to Hamiltonian simulation problem are algorithms that describes a sequence of primitive quantum gates for synthesizing an approximating unitary $\tilde{U}$ with error $\\|\tilde{U} - U(t)\\| \le \epsilon$ in the [spectral norm](quantum-concepts-3-matrixadvanced). The complexity of these algorithms depend very strongly on how a description of the Hamiltonian of interest is made accessible by a quantum computer. For instance, in the worst-case, if $H$ acting on $n$ qubits were to be provided as a list of $2^n \times 2^n$ numbers, one for each matrix element, simply reading the data would already require exponential time. In the best case, one could assume access to a black-box unitary that $O\ket{t}\ket{\psi(0)}=\ket{t}U(t)\ket{\psi(0)}$ trivially solves the problem. Neither of these input models are particularly interesting -- the former as it is no better than classical approaches, and the latter as the black-box hides the primitive gate complexity of its implementation, which could be exponential in the number of qubits.
+Hamiltonian simulation is a major component of many other quantum simulation problems, and solutions to Hamiltonian simulation problem are algorithms that describes a sequence of primitive quantum gates for synthesizing an approximating unitary $\tilde{U}$ with error $\\|\tilde{U} - U(t)\\| \le \epsilon$ in the [spectral norm](quantum-concepts-3-matrixadvanced.md). The complexity of these algorithms depend very strongly on how a description of the Hamiltonian of interest is made accessible by a quantum computer. For instance, in the worst-case, if $H$ acting on $n$ qubits were to be provided as a list of $2^n \times 2^n$ numbers, one for each matrix element, simply reading the data would already require exponential time. In the best case, one could assume access to a black-box unitary that $O\ket{t}\ket{\psi(0)}=\ket{t}U(t)\ket{\psi(0)}$ trivially solves the problem. Neither of these input models are particularly interesting -- the former as it is no better than classical approaches, and the latter as the black-box hides the primitive gate complexity of its implementation, which could be exponential in the number of qubits.
 
 ### Descriptions of Hamiltonians ###
 
 Additional assumptions of the format of the input are therefore required. A fine balance must be struck between input models that are sufficiently descriptive to encompass interesting Hamiltonians, such as those for realistic physical systems or interesting computational problems, and input models that are sufficiently restrictive to be efficiently implementable on a quantum computer. A variety of non-trivial input model may be found in the literature, and they range from quantum to classical. 
 
-As examples of quantum input models, [sample-based Hamiltonian simulation](doi.org/10.1038/s41534-017-0013-7) assumes black-box access to quantum operations that produce copies of a density matrix $\rho$, which are taken to be the Hamiltonian $H$. In the [unitary access model](https://arxiv.org/abs/1412.4687) one supposes that the Hamiltonian instead decomposes into a sum of unitaries 
+As examples of quantum input models, [sample-based Hamiltonian simulation](http://www.nature.com/articles/s41534-017-0013-7) assumes black-box access to quantum operations that produce copies of a density matrix $\rho$, which are taken to be the Hamiltonian $H$. In the [unitary access model](https://arxiv.org/abs/1202.5822) one supposes that the Hamiltonian instead decomposes into a sum of unitaries 
 $$
 \begin{align}
     H & = \sum^{d-1}\_{j=0} a\_j \hat{U}\_j,
@@ -61,13 +61,13 @@ $$
 Moreover, it is assumed that each part, a Hamiltonian $H\_j$, is easy to simulate. This means that the unitary $e^{-iH\_j t}$ for any time $t$ may be implemented exactly using $\mathcal{O}(1)$ primitive quantum gates. For instance, this is true in the special case where each $H\_j$ are local Pauli operators, meaning that they are of tensor products of $\mathcal{O}(1)$ non-identity Pauli operators that act on spatially close qubits. This model is particularly applicable to physical systems with bounded and local interaction, as the number of terms is $d=\mathcal{O}(\text{polylog}(N))$, and may clearly be written down, i.e. classically described, in polynomial time.
 
 > [!TIP]
-> Hamiltonians that decompose into a sum of parts may be described using the [Dynamical Generator Representation](data-structures#dynamical-generator-modeling) library.
+> Hamiltonians that decompose into a sum of parts may be described using the Dynamical Generator Representation library. For more information, see the Dynamical Generator Representation section in [data structures](data-structures.md)
 
 ### Simulation Algorithms ###
 
 A quantum simulation algorithm converts a given description of a Hamiltonian into a sequence of primitive quantum gates that, as a whole, approximate time-evolution by said Hamiltonian.
 
-In the special case where the Hamiltonian decomposes into a sum of Hermitian parts, the [Trotter-Suzuki decomposition](control-flow#time-ordered-composition) is a particularly simple and intuitive algorithm for simulating Hamiltonians that decompose into a sum of Hermitian components. For instance, a first-order integrator of this family approximates
+In the special case where the Hamiltonian decomposes into a sum of Hermitian parts, the Trotter-Suzuki decomposition is a particularly simple and intuitive algorithm for simulating Hamiltonians that decompose into a sum of Hermitian components. For instance, a first-order integrator of this family approximates
 $$
 \begin{align}
     U(t) & = \left( e^{-iH\_0 t / r} e^{-iH\_1 t / r} \cdots e^{-iH\_{d-1} t / r} \right)^{r} + \mathcal{O}(d^2 \max_j\\|H\_j\\|^2 t^2/r),
@@ -96,7 +96,7 @@ using a product of $2rd$ terms. Larger orders will involve even more terms and o
 newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => () : Adjoint, Controlled);
 ```
 
-The first parameter `Double` is the time of simulation, the second parameter `EvolutionGenerator` , covered in [Dynamical Generator Representation](data-structures#dynamical-generator-modeling), is a classical description of a time-independent Hamiltonian packaged with instructions on how each term in the Hamiltonian may be simulated by a quantum circuit. Types of this form approximate the unitary operation $e^{-iHt}$ on the third parameter `Qubit[]`, which is the register storing the quantum state of the simulated system. Similarly for the time-dependent case, we define a user-defined type with an `EvolutionSchedule` type instead, which is a classical description of a time-dependent Hamiltonian.
+The first parameter `Double` is the time of simulation, the second parameter `EvolutionGenerator`, covered in the Dynamical Generator Representation section of [data-structures](data-structures.md), is a classical description of a time-independent Hamiltonian packaged with instructions on how each term in the Hamiltonian may be simulated by a quantum circuit. Types of this form approximate the unitary operation $e^{-iHt}$ on the third parameter `Qubit[]`, which is the register storing the quantum state of the simulated system. Similarly for the time-dependent case, we define a user-defined type with an `EvolutionSchedule` type instead, which is a classical description of a time-dependent Hamiltonian.
 
 ```qsharp
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => () : Adjoint, Controlled);
@@ -128,7 +128,7 @@ function TimeDependentTrotterSimulationAlgorithm(
 
 One common application of Hamiltonian simulation is adiabatic state preparation. Here, one is provided with two Hamiltonians $H\_{\text{start}}$ and $H\_{\text{end}}$, and a quantum state $\ket{\psi(0)}$ that is a ground state of the start Hamiltonian $H\_{\text{start}}$. Typically, $H\_{\text{start}}$ is chosen such that $\ket{\psi(0)}$ is easy to prepare from a computational basis state $\ket{0\cdots 0}$. By interpolating between these Hamiltonians in the time-dependent simulation problem sufficientl slowly, it is possible to end up, with high probability, in a ground state of the final Hamiltonian $H\_{\text{end}}$. Though preparing good approximations to Hamiltonian ground states could proceed in this manner by calling upon on time-dependent Hamiltonian simulation algorithms as a sub-routine, other conceptually different approaches such as the variational quantum eigensolver are possible.
 
-Yet another application ubiquitous in quantum chemistry is estimating the ground state energy of Hamiltonians representing the intermediate steps of chemical reaction. Such a scheme could, for instance, rely on adiabatic state preparation to create the ground state, and then incorporate time-independent Hamiltonian simulation as a sub-routine in [phase estimation](characterization) to extract this energy with some finite error and probability of success. 
+Yet another application ubiquitous in quantum chemistry is estimating the ground state energy of Hamiltonians representing the intermediate steps of chemical reaction. Such a scheme could, for instance, rely on adiabatic state preparation to create the ground state, and then incorporate time-independent Hamiltonian simulation as a sub-routine in phase estimation characterization to extract this energy with some finite error and probability of success. 
 
 Abstracting simulation algorithms as the user-defined types `SimulationAlgorithm` and `TimeDependentSimulationAlgorithm` allow us to conveniently incorporate their functionality into more sophisticated quantum algorithms. This motivates us to do the same for these commonly used sub-routines.
 

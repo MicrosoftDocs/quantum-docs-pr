@@ -31,7 +31,7 @@ The Q# standard library is split into two main parts:
 - **The canon**: operations and functions defined in Q# building on the logic defined in the prelude.
   The canon implementation is agnostic with respect to target machines.
 
-The `Microsoft.Quantum.Simulation.Simulators` NuGet package installed during [installation and configuration](quantum-InstallConfig.md) provides a target machine which implements the prelude by calling into a local simulator, while the `Microsoft.Quantum.Canon` package <!-- TODO: check that this is actually how the canon is distributed --> provides an implementation of the canon that references definitions in the prelude.
+The `Microsoft.Quantum.Simulation.Simulators` NuGet package installed during [installation and configuration](../quantum-InstallConfig.md) provides a target machine which implements the prelude by calling into a local simulator, while the `Microsoft.Quantum.Canon` package <!-- TODO: check that this is actually how the canon is distributed --> provides an implementation of the canon that references definitions in the prelude.
 
 The symbols defined by each of the prelude and the canon are defined in much greater and more exhaustive detail in the API documentation<!-- TODO: link! -->.
 In this section, we will outline the most salient features of each part of the standard library and provide some context about how each feature might be used in practice.

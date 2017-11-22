@@ -33,7 +33,7 @@ The primitive operations defined in the standard library roughly fall into one o
 - Operations implementing measurements.
 
 Since the Clifford + $T$ gate set is [universal](../quantum-concepts-5-MultipleQubits.md) for quantum computing, these operations suffice to approximately implement any quantum algorithm within negligibly small error.
-By also providing rotations as well, Q# allows the programmer to work within the single qubit unitary and CNOT gate library.  This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [For more information](../quantum-ForMoreInformation)).
+By also providing rotations as well, Q# allows the programmer to work within the single qubit unitary and CNOT gate library.  This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [For more information](../quantum-ForMoreInformation.md)).
 
 <!-- TODO: discuss rotation conventions more here. -->
 
@@ -155,7 +155,7 @@ and corresponds to the single-qubit unitary:
 In addition to the Pauli and Clifford operations above, the Q# prelude provides a variety of ways of expressing rotations.
 As described in <xref:microsoft.quantum.concepts>, the ability to rotate is critical to quantum algorithms.
 
-We start by recalling that we can express any single-qubit operation using the $H$ and $T$ gates, where $H$ is the [Hadamard operation](microsoft.quantum.primitive.h), and where 
+We start by recalling that we can express any single-qubit operation using the $H$ and $T$ gates, where $H$ is the Hadamard operation, and where 
 \begin{equation}
     T \mathrel{:=}
     \begin{bmatrix}

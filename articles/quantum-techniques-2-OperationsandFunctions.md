@@ -227,7 +227,7 @@ Optionally, we can specify that an operation type supports either or both varian
 We will explore this further below, when we discuss types in Q# more generally.
 
 For now, though, we emphasize that we can also return operations as a part of outputs, such that we can isolate some kinds of classical conditional logic as a classical function which returns a description of a quantum program in the form of an operation.
-As a simple example, consider the [teleportation example](FIXME), in which the party receiving a two-bit classical message needs to use the message to decode their qubit into the proper teleported state.
+As a simple example, consider the teleportation example, in which the party receiving a two-bit classical message needs to use the message to decode their qubit into the proper teleported state.
 We could write this in terms of a function which takes those two classical bits and returns the proper decoding operation.
 
 ```qsharp

@@ -115,7 +115,8 @@ That is, the type that defines a user-defined type may not be a tuple type
 that includes an element of the user-defined type.
 More generally, user-defined types may not have cyclic dependencies
 on each other, so the following set of type definitions would be illegal:
-```
+
+```qsharp
 newtype TypeA = (Int, TypeB);
 newtype TypeB = (Double, TypeC);
 newtype TypeC = (TypeA, Range);

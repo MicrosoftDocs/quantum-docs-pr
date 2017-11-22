@@ -17,10 +17,14 @@ input:
     uid: microsoft.quantum.primitive.pauli
     isArray: true
   - name: target
-    summary: ' Qubit register to be measured.'
+    summary: >2
+       Qubit register to be measured.
     uid: microsoft.quantum.primitive.qubit
     isArray: true
 output:
   content: Result
   types:
-  - uid: microsoft.quantum.primitive.result
+  - summary: >2-
+       The result of measuring the given Pauli operator on
+       the `target` register.
+    uid: microsoft.quantum.primitive.result

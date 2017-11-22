@@ -4,7 +4,8 @@ name: AdiabaticStateEnergyUnitary
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Performs state preparation, and adiabatic state preparation, and phase est.
+   Performs state preparation, and adiabatic state preparation, and phase
+   estimation.
 syntax: 'operation AdiabaticStateEnergyUnitary (statePrepUnitary : (Qubit[] => () : ), adiabaticUnitary : (Qubit[] => () : ), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double : ), qubits : Qubit[]) : Double'
 input:
   content: '(statePrepUnitary : (Qubit[] => () : ), adiabaticUnitary : (Qubit[] => () : ), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double : ), qubits : Qubit[])'
@@ -37,6 +38,5 @@ output:
   types:
   - summary: >2-
        An estimate $\hat{\phi}$ of the ground state energy $\phi$
-       of the ground state energy of the generator represented by $U$,
-       scaled by the evolution time step $\delta t$.
+       of the ground state energy of the generator represented by $U$.
     uid: microsoft.quantum.primitive.float

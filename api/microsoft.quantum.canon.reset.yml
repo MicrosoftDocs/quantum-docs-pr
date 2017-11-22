@@ -3,13 +3,16 @@ uid: microsoft.quantum.canon.reset
 name: Reset
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2-
-   Given a single qubit, measures it and ensures it is in the |0〉 state
+summary: >2
+   Given a single qubit, measures it and ensures it is in the $\ket{0}$ state
    such that it can be safely released.
 syntax: 'operation Reset (target : Qubit) : ()'
 input:
   content: '(target : Qubit)'
-  types: []
+  types:
+  - name: target
+    summary: ' A qubit whose state is to be reset to $\ket{0}$.'
+    uid: microsoft.quantum.primitive.qubit
 output:
   content: ()
   types:

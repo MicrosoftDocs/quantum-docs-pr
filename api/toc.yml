@@ -57,8 +57,6 @@
   - name: Microsoft.Quantum.Canon
     uid: microsoft.quantum.canon
     items:
-    - name: AdiabaticEvolution
-      uid: microsoft.quantum.canon.adiabaticevolution
     - name: AdiabaticStateEnergyEstimate
       uid: microsoft.quantum.canon.adiabaticstateenergyestimate
     - name: AdiabaticStateEnergyUnitary
@@ -231,14 +229,6 @@
       uid: microsoft.quantum.canon.estimateenergy
     - name: EstimateFrequency
       uid: microsoft.quantum.canon.estimatefrequency
-    - name: EvolutionGenerator
-      uid: microsoft.quantum.canon.evolutiongenerator
-    - name: EvolutionSchedule
-      uid: microsoft.quantum.canon.evolutionschedule
-    - name: EvolutionSet
-      uid: microsoft.quantum.canon.evolutionset
-    - name: EvolutionUnitary
-      uid: microsoft.quantum.canon.evolutionunitary
     - name: Filter
       uid: microsoft.quantum.canon.filter
     - name: FlipToBasis
@@ -263,6 +253,8 @@
       uid: microsoft.quantum.canon.intmax
     - name: IntegerIncrement
       uid: microsoft.quantum.canon.integerincrement
+    - name: InterpolatedEvolution
+      uid: microsoft.quantum.canon.interpolatedevolution
     - name: IsResultOne
       uid: microsoft.quantum.canon.isresultone
     - name: IsResultZero
@@ -309,8 +301,6 @@
       uid: microsoft.quantum.canon.measurepaulis
     - name: MeasureWithScratch
       uid: microsoft.quantum.canon.measurewithscratch
-    - name: MeasureWithScratchTest
-      uid: microsoft.quantum.canon.measurewithscratchtest
     - name: Min
       uid: microsoft.quantum.canon.min
     - name: ModularIncrement
@@ -413,8 +403,6 @@
       uid: microsoft.quantum.canon.trotter1implca
     - name: Trotter2ImplCA
       uid: microsoft.quantum.canon.trotter2implca
-    - name: Unitary
-      uid: microsoft.quantum.canon.unitary
     - name: WeightOnePaulis
       uid: microsoft.quantum.canon.weightonepaulis
     - name: With
@@ -429,7 +417,5 @@
       uid: microsoft.quantum.canon.withc
     - name: WithCA
       uid: microsoft.quantum.canon.withca
-    - name: _AdiabaticEvolution
-      uid: microsoft.quantum.canon._adiabaticevolution
     - name: _ExtractLogicalQubitFromSteaneCode
       uid: microsoft.quantum.canon._extractlogicalqubitfromsteanecode

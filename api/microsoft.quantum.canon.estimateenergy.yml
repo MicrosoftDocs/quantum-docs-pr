@@ -3,11 +3,32 @@ uid: microsoft.quantum.canon.estimateenergy
 name: EstimateEnergy
 type: operation
 namespace: Microsoft.Quantum.Canon
+summary: " Allocates qubits, performs state preparation, and phase estimation. \n"
 syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => () : ), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double : )) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => () : ), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double : ))'
-  types: []
+  types:
+  - name: nQubits
+    summary: ' Number of qubits used to perform simulation.'
+    uid: microsoft.quantum.primitive.integer
+  - name: phaseEstAlgorithm
+    summary: >2
+       An operation that performs phase estimation on a given unitary operation.
+       See [iterative phase estimation](../libraries/characterization#iterative-phase-estimation)
+       for more details.
+  - name: qpeUnitary
+    summary: >2-
+       An oracle representing a unitary operator $U$ representing evolution
+       for time $\delta t$ under a dynamical generator with ground state
+       $\ket{\phi}$ and ground state energy $E = \phi\,\delta t$.
+  - name: statePrepUnitary
+    summary: >2-
+       An oracle representing state preparation for the initial dynamical
+       generator.
 output:
   content: Double
   types:
-  - uid: microsoft.quantum.primitive.float
+  - summary: >2-
+       An estimate $\hat{\phi}$ of the ground state energy $\phi$
+       of the ground state energy of the generator represented by $U$.
+    uid: microsoft.quantum.primitive.float

@@ -12,12 +12,24 @@ remarks: >2-
   ## Examples
    To obtain the array `[PauliI; PauliI; PauliX; PauliI]`:
    ```qsharp
-       EmbedPauli(PauliX, 2, 3);
+   EmbedPauli(PauliX, 2, 3);
    ```
 syntax: 'function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]'
 input:
   content: '(pauli : Pauli, location : Int, n : Int)'
-  types: []
+  types:
+  - name: location
+    summary: >2-
+       An index such that `output[location] == pauli`, where `output` is
+       the output of this function.
+    uid: microsoft.quantum.primitive.integer
+  - name: n
+    summary: >2
+       Length of the array to be returned.
+    uid: microsoft.quantum.primitive.integer
+  - name: pauli
+    summary: ' A single-qubit Pauli operator to be placed at the given location.'
+    uid: microsoft.quantum.primitive.pauli
 output:
   content: Pauli[]
   types:

@@ -5,7 +5,7 @@ type: newtype
 namespace: Microsoft.Quantum.Canon
 summary: >2-
    A time-independent simulation technique converts an
-   EvolutionGenerator to unitary time evolution for some time-interval.
+   to unitary time evolution for some time-interval.
 syntax: 'newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => () : Adjoint, Controlled);'
 input:
   types: []

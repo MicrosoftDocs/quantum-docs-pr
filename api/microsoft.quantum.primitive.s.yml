@@ -3,21 +3,26 @@ uid: microsoft.quantum.primitive.s
 name: S
 type: operation
 namespace: Microsoft.Quantum.Primitive
-input:
-  qubit: >2-
-
-     Qubit to which the gate should be applied.
-output: {}
 summary: >2
-
    Applies the $\pi / 4$ phase gate to a single qubit,
-   $$
+   \begin{align}
        S \mathrel{:=}
        \begin{bmatrix}
-           1 & 0 \\
+           1 & 0 \\\\
            0 & i
        \end{bmatrix}.
-   $$
-syntax: >2-
-
-  operation .S (qubit : Qubit) : ()
+   \end{align}
+syntax: 'operation S (qubit : Qubit) : ()'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: ' Qubit to which the gate should be applied.'
+    uid: microsoft.quantum.primitive.qubit
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

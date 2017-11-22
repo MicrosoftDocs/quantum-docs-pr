@@ -3,30 +3,35 @@ uid: microsoft.quantum.primitive.r
 name: R
 type: operation
 namespace: Microsoft.Quantum.Primitive
-input:
-  pauli: >2-
-
-     Pauli operator to be exponentiated to form the rotation.
-  theta: >2-
-
-     Angle about which the qubit is to be rotated.
-  qubit: >2
-
-     Qubit to which the gate should be applied.
-output: {}
 summary: >2
-
    Applies a rotation about the given Pauli axis,
-   $$
+   \begin{align}
        R_{\mu}(\theta) \mathrel{:=}
-       e^{-i \theta \sigma_{\mu} / 2),
-   $$
+       e^{-i \theta \sigma_{\mu} / 2},
+   \end{align}
    where $\mu \in \{I, X, Y, Z\}$.
 remarks: >2-
-
    When called with `pauli = PauliI`, this operation applies
    a *global phase*. This phase can be significant, however,
    when used with the `Controlled` functor.
-syntax: >2-
-
-  operation .R (pauli : Pauli, theta : Double, qubit : Qubit) : ()
+syntax: 'operation R (pauli : Pauli, theta : Double, qubit : Qubit) : ()'
+input:
+  content: '(pauli : Pauli, theta : Double, qubit : Qubit)'
+  types:
+  - name: pauli
+    summary: ' Pauli operator to be exponentiated to form the rotation.'
+    uid: microsoft.quantum.primitive.pauli
+  - name: qubit
+    summary: >2
+       Qubit to which the gate should be applied.
+    uid: microsoft.quantum.primitive.qubit
+  - name: theta
+    summary: ' Angle about which the qubit is to be rotated.'
+    uid: microsoft.quantum.primitive.float
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

@@ -3,27 +3,32 @@ uid: microsoft.quantum.primitive.ry
 name: Ry
 type: operation
 namespace: Microsoft.Quantum.Primitive
-input:
-  theta: >2-
-
-     Angle about which the qubit is to be rotated.
-  qubit: >2
-
-     Qubit to which the gate should be applied.
-output: {}
 summary: >2
-
    Applies a rotation about the $y$-axis by a given angle,
-   $$
+   \begin{align}
        R_y(\theta) \mathrel{:=}
-       e^{-i \theta \sigma_y / 2).
-   $$
+       e^{-i \theta \sigma_y / 2}.
+   \end{align}
 remarks: >2-
-
    Equivlent to:
    ```qsharp
    R(PauliY, theta, qubit);
    ```
-syntax: >2-
-
-  operation .Ry (theta : Double, qubit : Qubit) : ()
+syntax: 'operation Ry (theta : Double, qubit : Qubit) : ()'
+input:
+  content: '(theta : Double, qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: >2
+       Qubit to which the gate should be applied.
+    uid: microsoft.quantum.primitive.qubit
+  - name: theta
+    summary: ' Angle about which the qubit is to be rotated.'
+    uid: microsoft.quantum.primitive.float
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

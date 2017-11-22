@@ -3,35 +3,40 @@ uid: microsoft.quantum.primitive.swap
 name: SWAP
 type: operation
 namespace: Microsoft.Quantum.Primitive
-input:
-  qubit1: >2-
-
-     First qubit to be swapped.
-  qubit2: >2
-
-     Second qubit to be swapped.
-output: {}
 summary: >2
-
    Applies the SWAP gate to a pair of qubits
-   $$
+   \begin{align}
        \operatorname{SWAP} \mathrel{:=}
        \begin{bmatrix}
-           1 & 0 & 0 & 0 \\
-           0 & 0 & 1 & 0 \\
-           0 & 1 & 0 & 0 \\
+           1 & 0 & 0 & 0 \\\\
+           0 & 0 & 1 & 0 \\\\
+           0 & 1 & 0 & 0 \\\\
            0 & 0 & 0 & 1
        \end{bmatrix},
-   $$
+   \end{align}
    where rows and columns are ordered as in the quantum concepts guide.
 remarks: >2-
-
    Equivalent to:
    ```qsharp
    CNOT(qubit1, qubit2);
    CNOT(qubit2, qubit1);
    CNOT(qubit1, qubit2);
    ```
-syntax: >2-
-
-  operation .SWAP (qubit1 : Qubit, qubit2 : Qubit) : ()
+syntax: 'operation SWAP (qubit1 : Qubit, qubit2 : Qubit) : ()'
+input:
+  content: '(qubit1 : Qubit, qubit2 : Qubit)'
+  types:
+  - name: qubit1
+    summary: ' First qubit to be swapped.'
+    uid: microsoft.quantum.primitive.qubit
+  - name: qubit2
+    summary: >2
+       Second qubit to be swapped.
+    uid: microsoft.quantum.primitive.qubit
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Adjoint
+- Controlled

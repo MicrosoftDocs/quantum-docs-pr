@@ -1,7 +1,7 @@
 ---
 uid: microsoft.quantum.index
 ---
-<img src="media/mobius_strip_preview.png" style="float: right;" title="Quantum" alt="Quantum">
+<img src="media/mobius_strip_preview.png" style="float: right;" title="Quantum" alt="Quantum"></img>
 # Welcome to the Microsoft Quantum Development Kit internal preview #
 
 Thank you helping us test the Microsoft Quantum Development Kit preview. Your participation will help improve Microsoft's quantum development experience.

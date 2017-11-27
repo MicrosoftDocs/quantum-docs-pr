@@ -161,7 +161,9 @@ Add the following operations to the namespace, after the end of the
     {
         body 
         {
+            // Apply a Hadamard to qubit 1 
             H (q1);
+            // Apply a controlled NOT gate between qubit 1 and qubit 2
             CNOT (q1, q2);
         }
     }
@@ -170,17 +172,28 @@ Add the following operations to the namespace, after the end of the
     {
         body 
         {
+            // Generate an EPR pair
             EPR (here, there);
+            // Apply a controlled NOT between our message qubit and 
+            // the local qubit of our EPR pair
             CNOT (msg, here);
+            // Apply a Hadamard gate to the message qubit
             H (msg);
 
+            // Measure the local qubit of the EPR pair. The (classical)
+            // result of this measurement is sent to the remote party.
             let m_here = M (here);
+            // If the measurement outcome is 1...
             if (m_here == One) {
+                // ... do an X gate on the remote qubit of the EPR pair
                 X (there);
             }
-
+            // Measure the message qubit. The (classical) result is
+            // sent to the remote party.
             let m_msg = M (msg);
+            // If the measurement is 1...
             if (m_msg == One) {
+                // ... do a Z gate on the remote qubit
                 Z (there);
             }
         }

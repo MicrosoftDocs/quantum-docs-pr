@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.rightshiftopimpl
+name: RightShiftOpImpl
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation RightShiftOpImpl (cyclic : Int, op : (LittleEndian => () : ), target : LittleEndian) : ()'
+input:
+  content: '(cyclic : Int, op : (LittleEndian => () : ), target : LittleEndian)'
+  types: []
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer

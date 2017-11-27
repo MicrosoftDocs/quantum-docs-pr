@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.with1c
+name: With1C
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation With1C (outerOperation : (Qubit => () : Adjoint), innerOperation : (Qubit => () : Controlled), target : Qubit) : ()'
+input:
+  content: '(outerOperation : (Qubit => () : Adjoint), innerOperation : (Qubit => () : Controlled), target : Qubit)'
+  types: []
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.integer
+functors:
+- Controlled

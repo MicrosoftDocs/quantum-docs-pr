@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.deterministicstateoracle
+name: DeterministicStateOracle
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Represents an oracle for deterministic state preparation.
+remarks: >2-
+   This oracle defined by O|0> = |ψ> acts on the on computational basis state |0> to create the state |ψ>.
+   The first parameter is the qubit register of |ψ>.
+syntax: 'newtype DeterministicStateOracle = (Qubit[] => () : Adjoint, Controlled);'
+input:
+  types: []

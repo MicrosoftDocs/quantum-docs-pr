@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.controlledonint
+name: ControlledOnInt
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function ControlledOnInt (numberState : Int, oracle : (Qubit[] => () : Adjoint, Controlled)) : ((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
+input:
+  content: '(numberState : Int, oracle : (Qubit[] => () : Adjoint, Controlled))'
+  types: []
+output:
+  content: '((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
+  types:
+  - {}

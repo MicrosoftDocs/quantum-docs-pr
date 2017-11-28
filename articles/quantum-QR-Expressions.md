@@ -151,8 +151,8 @@ Some example ranges are:
 A callable literal is the name of an operation or function defined in the 
 compilation scope.
 For instance, `X` is an operation literal that refers to the 
-standard library `X` operation, and `Random` is a function literal that 
-refers to the standard library `Random` function.
+standard library `X` operation, and `Message` is a function literal that 
+refers to the standard library `Message` function.
 
 If an operation supports the `Adjoint` functor, then `Adjoint(op)` 
 is an operation expression.

@@ -46,7 +46,7 @@ Within `///` comments, text to appear as a part of API documentation is formatte
 [Markdown](https://daringfireball.net/projects/markdown/syntax), 
 with different parts of the documentation being indicated by specially named headers.
 As an extension to Markdown, cross references to operations, functions and user-defined types
-in Q♭ can be included using the `@"<ref target>"`, where `<ref target>` is replaced by the
+in Q# can be included using the `@"<ref target>"`, where `<ref target>` is replaced by the
 fully qualified name of the code object being referenced.
 Optionally, a documentation engine may also support additional Markdown extensions.
 
@@ -69,8 +69,8 @@ For example:
 ///
 /// # Example
 /// ```Q#
-///     // Should be equivalent to the identity.
-///     ApplyTwice(H, qubit);
+/// // Should be equivalent to the identity.
+/// ApplyTwice(H, qubit);
 /// ```
 ///
 /// # See Also
@@ -107,7 +107,7 @@ forming qualified names.
 Every Q# file must include at least one `namespace` directive.
 This consists of the `namespace` keyword, followed by the namespace
 name, an opening `{`, the construct definitions, and a closing `}`.
-All user-defined type, function, and operations must appear inside of a
+All user-defined types, functions, and operations must appear inside of a
 namespace block; only comments may appear outside of a namespace block.
 
 Within a namespace block, the `open` directive may be used to allow
@@ -387,7 +387,7 @@ statement, so that symbol bindings made during the body or fixup are not
 available in subsequent repetitions.
 
 For example, the following code is a probabilistic circuit that implements 
-an important rotation gate **V3** = (**I**+2*i***Z**)/√5 using the 
+an important rotation gate $V_3 = (\boldone + 2 i Z) / \sqrt{5}$ using the 
 Hadamard and T gates. 
 The loop terminates in 8/5 repetitions on average.
 See [*Repeat-Until-Success: Non-deterministic decomposition of single-qubit unitaries*](https://arxiv.org/abs/1311.1074) 
@@ -535,7 +535,7 @@ The qubits should be in the computational `Zero` state at the
 end of the statement block; simulators are encouraged to enforce this.
 
 The statement consists of the keyword `using`, followed by 
-the symbol that should be bound to the resulting array of qubits, '=',
+the symbol that should be bound to the resulting array of qubits, `=`,
 the type to acquire (`Qubit`), `[`, an `Int` expression, `]`, and
 the statement block within which the qubits will be available. 
 
@@ -564,7 +564,7 @@ If there aren't enough such qubits, then it will allocate new qubits
 to complete the request.
 
 The statement consists of the keyword `borrowing`, followed by 
-the symbol that should be bound to the resulting array of qubits, '=',
+the symbol that should be bound to the resulting array of qubits, `=`,
 the type to acquire (`Qubit`), `[`, an `Int` expression, `]`, and
 the statement block within which the qubits will be available. 
 

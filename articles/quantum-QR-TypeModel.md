@@ -50,6 +50,9 @@ are constructed:
    `Zero` indicates that the +1 eigenvalue was measured; 
    `One` indicates the -1 eigenvalue.
 - The `Range` type represents a sequence of integers. 
+- The `String` type is a sequence of Unicode characters that
+  is opaque to the user once created.
+  This type is used to report messages to a classical host.
 
 Note that this implies that `true`, `false`, `PauliI`, `PauliX`, 
 `PauliY`, `PauliZ`, `One`, and `Zero` are all reserved symbols in Q#.

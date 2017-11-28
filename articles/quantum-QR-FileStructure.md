@@ -44,7 +44,9 @@ a terminating semicolon.
 
 For example:
 
-    newtype PairOfInts = (Int, Int);
+```Q#
+newtype PairOfInts = (Int, Int);
+```
 
 A file may contain zero or more user-defined type declarations. 
 Type names must be unique within a namespace and may not conflict with 
@@ -128,7 +130,7 @@ adjoint {
 }
 ```
 
-If none of these appear, then no adjoint is defined;.
+If none of these appear, then no adjoint is defined.
 
 An operation whose body contains repeat-until-success loops or measurements 
 or that calls another operation that does not support the `Adjoint` functor

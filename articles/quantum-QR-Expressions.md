@@ -402,9 +402,9 @@ Operator | Arity | Description | Operand Types
  `<`, `<=`, `>`, `>=` | Binary | Less-than, less-than-or-equal, greater-than, greater-than-or-equal comparisons | `Int` or `Double`
  `==`, `!=` | Binary | equal, not-equal comparisons | any
  `&` | Binary | Bitwise AND | `Int`
- `\|` | Binary | Bitwise OR | `Int`
+ <code>\|</code> | Binary | Bitwise OR | `Int`
  `&&` | Binary | Logical AND | `Boolean`
- `\|\|` | Binary | Logical OR | `Boolean`
+ <code>\|\|</code> | Binary | Logical OR | `Boolean`
 
 ## String Interpolations
 

@@ -61,7 +61,11 @@ The second file, `TestSuiteRunner.cs`, holds test suite runners - methods annota
 
 ### Running Q# Unit Tests
 
-As a one-time per-machine setup, go to `Test` menu and select `Test Settings` > `Default Processor Architecture` > `X64`.
+As a one-time per-solution setup, go to `Test` menu and select `Test Settings` > `Default Processor Architecture` > `X64`.
+
+> [!TIP]
+> The default processor architecture setting for Visual Studio is stored in the solution options (`.suo`) file for each solution.
+> If you delete this file, then you will need to select `X64` as your processor architecture again.
 
 Build the project, go to `Test` menu and select `Windows` > `Test Explorer`. `AllocateQubitTest` will show up in the list of tests in `Not Run Tests` group. Select `Run All` or run this individual test, and it should pass!
 

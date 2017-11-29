@@ -35,8 +35,10 @@ ms.topic: article-type-from-white-list
 
 Now that you’ve installed the Microsoft Quantum Development Kit and seen
 how it works, let’s write your first quantum application.
-We'll start with the same simple teleport algorithm that you ran
-earlier.
+We'll start with a simple teleport algorithm similar to the one that you ran
+earlier. It will start with a qubit in a basis state $|0>$, rotate it by a given angle, 
+teleport it, un-rotate the target qubit, measure it and verify that the result is $|0>$.
+
 
 ### Step 1: Create a project and solution
 

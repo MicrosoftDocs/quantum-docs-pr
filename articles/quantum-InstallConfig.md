@@ -65,7 +65,7 @@ Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip`. In that cas
     4. If presented with a login request, sign in using your Microsoft credentials.
     5. On the **Visual Studio Team Services** pane, click **Clone** to proceed.
 
-2. Open the `Libraries\QbLibs\QbLibs.sln` solution. 
+2. Open the `Libraries\QsharpLibraries.sln` solution. 
     - If prompted by the **Install Missing Features** pane, click **Install** to allow the installation of the necessary features. This is most often F# and tools.
 
 4. Validate your Q# environment by running the teleport sample program:

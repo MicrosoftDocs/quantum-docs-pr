@@ -151,8 +151,8 @@ Some example ranges are:
 A callable literal is the name of an operation or function defined in the 
 compilation scope.
 For instance, `X` is an operation literal that refers to the 
-standard library `X` operation, and `Random` is a function literal that 
-refers to the standard library `Random` function.
+standard library `X` operation, and `Message` is a function literal that 
+refers to the standard library `Message` function.
 
 If an operation supports the `Adjoint` functor, then `Adjoint(op)` 
 is an operation expression.
@@ -170,7 +170,7 @@ callable's signature.
 
 For example, if `Op` is an operation with signature 
 `((Int, Qubit) => Double)`, `Op(3, qubit1)` is an expression of type `Double`.
-Similarly, if `Sin` is a function with signature `(Double -> Double`),
+Similarly, if `Sin` is a function with signature `(Double -> Double)`,
 `Sin(0.1)` is an expression of type `Double`.
 
 Invoking the result of a callable-valued expression requires an extra pair
@@ -366,7 +366,7 @@ It is not legal to compare arrays for equality or inequality.
 
 Equality comparison for `Double` values may be misleading 
 due to rounding effects.
-For instance, 49.0 * (1.0/49.0) != 1.0.
+For instance, `49.0 * (1.0/49.0) != 1.0`.
 
 Given any two numeric expressions, the binary operators 
 `>`, `<`, `>=`, and `<=` may be used to construct a new Boolean expression 
@@ -402,9 +402,9 @@ Operator | Arity | Description | Operand Types
  `<`, `<=`, `>`, `>=` | Binary | Less-than, less-than-or-equal, greater-than, greater-than-or-equal comparisons | `Int` or `Double`
  `==`, `!=` | Binary | equal, not-equal comparisons | any
  `&` | Binary | Bitwise AND | `Int`
- `|` | Binary | Bitwise OR | `Int`
+ <code>\|</code> | Binary | Bitwise OR | `Int`
  `&&` | Binary | Logical AND | `Boolean`
- `||` | Binary | Logical OR | `Boolean`
+ <code>\|\|</code> | Binary | Logical OR | `Boolean`
 
 ## String Interpolations
 

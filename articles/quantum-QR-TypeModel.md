@@ -37,7 +37,7 @@ are constructed:
   `Qubit`s are opaque to the user; the only operation possible with them,
    other than passing them to another operation, is to test for identity 
    (equality).
-   Ultimately, actions on `Qubit's are implemented by calling operations
+   Ultimately, actions on `Qubit`s are implemented by calling operations
    in the Q# standard library.
 - The `Pauli` type represents an element of the single-qubit Pauli group. 
    This type is used to denote the base operation for rotations and 
@@ -50,6 +50,9 @@ are constructed:
    `Zero` indicates that the +1 eigenvalue was measured; 
    `One` indicates the -1 eigenvalue.
 - The `Range` type represents a sequence of integers. 
+- The `String` type is a sequence of Unicode characters that
+  is opaque to the user once created.
+  This type is used to report messages to a classical host.
 
 Note that this implies that `true`, `false`, `PauliI`, `PauliX`, 
 `PauliY`, `PauliZ`, `One`, and `Zero` are all reserved symbols in Q#.
@@ -307,16 +310,18 @@ If the control qubits are in superposition, then the base operation is
 applied coherently to the appropriate part of the superposition.
 Thus, controlled operations are often used to generate entanglement.
 
-In Q#, controlled versions always take an array of control qubits, 
+In Q#, controlled versions always take an array of control qubits,
 and the specified state is always for all of the control qubits to be
-in the computational (`PauliZ`) `One` state.
-Controlling based on other states may be achieved by applying the 
-appropriate CLifford operations to the control qubits before the 
+in the computational (`PauliZ`) `One` state, $\ket{1}$.
+Controlling based on other states may be achieved by applying the
+appropriate Clifford operations to the control qubits before the
 controlled operation, and then applying the inverses of the Cliffords
 after the controlled operation.
-For example, applying an `X` operation to a control qubit will control 
-on the `Zero` state for that qubit; applying an `H` operation will control
-on the `PauliX` `Zero` state rather than the `PauliZ` `Zero` state.
+For example, applying an `X` operation to a control qubit before and after
+a controlled operation will cause the operation to control 
+on the `Zero` state ($\ket{0}$) for that qubit; applying an `H` operation will control
+on the `PauliX` `Zero` state $\ket{+} \mathrel{:=} (\ket{0} + \ket{1}) / \sqrt{2}$
+rather than the `PauliZ` `Zero` state.
 
 Given an operation expression, a new operation expression 
 may be formed using the `Controlled` functor, with the base operation 

@@ -23,28 +23,53 @@ ms.topic: article-type-from-white-list
 
 # Testing and Debugging
 
+As with classical programming, it is essential to be able to check that quantum programs act as intended, and to be able to diagnose a quantum program that is incorrect.
+In this section, we cover the tools offered by Q# for testing and debugging quantum programs.
 
 ## Unit Tests
 
-Q# supports creating unit tests which can be executed as xUnit tests.
+One common approach to testing classical programs is to write small programs called *unit tests* which run code in a library and compare its output to some expected output.
+For instance, we may want to ensure that `Square(2)` returns `4`, since we know *a priori* that $2^2 = 4$.
 
-### Creating Test Project
+Q# supports creating unit tests that act upon quantum programs, and which can be executed as tests within the [xUnit](https://xunit.github.io/) unit testing framework.
+
+### Creating a Test Project
 
 Open Visual Studio 2017. Go to the `File` menu and select `New` > `Project...`.
 In the project template explorer, under `Installed` > `Visual C#`,
 select the `Q# Test Project` template. This will create a project with two files open. 
 
-`Tests.qs` holds Q# unit tests. Tests are operations with signature `() => ()`; they don't need to be specially annotated, and will be grouped in suites in C# code. Initially this file contains one sample unit test `AllocateQubitTest` which checks that a newly allocated qubit is in `|0>` state and prints a message.
+The first file, `Tests.qs`, provides a convienent place to define new Q# unit tests.
+Initially this file contains one sample unit test `AllocateQubitTest` which checks that a newly allocated qubit is in the $\ket{0}$ state and prints a message:
 
-`TestSuiteRunner.cs` holds test suite runners - methods annotated with `OperationDriver` which define what subset of tests is to be executed as part of this test suite and how to execute these tests. Initially this file contains one sample test suite `TestTarget` which runs all tests in the same namespace as it is which have names ending with `...Test` on `QuantumSimulator`. Using other arguments of `OperationDriver` allows to select only tests from certain assembly or with names starting or ending with certain string.
+```qsharp
+operation AllocateQubitTest () : ()
+{
+    body
+    {
+        using (qs = Qubit[1]) {
+            Assert([PauliZ], [qs[0]], Zero, "Newly allocated qubit must be in |0> state");
+        }
+        Message("Test passed");
+    }
+}
+```
+
+More generally, tests are operations with signature `() => ()` or functions with the signature `() -> ()`, and are identified as tests by their names, as grouped in suites by the matching C# code.
+
+The second file, `TestSuiteRunner.cs`, holds test suite runners - methods annotated with `OperationDriver` which define what subset of tests is to be executed as part of this test suite and how to execute these tests. Initially this file contains one sample test suite `TestTarget` which runs all tests in the same namespace as it is which have names ending with `...Test` on `QuantumSimulator`. Using other arguments of `OperationDriver` allows to select only tests from certain assembly or with names starting or ending with certain string.
 
 ### Running Q# Unit Tests
 
-As a one-time setup, go to `Test` menu and select `Test Settings` > `Default Processor Architecture` > `X64`.
+As a one-time per-solution setup, go to `Test` menu and select `Test Settings` > `Default Processor Architecture` > `X64`.
+
+> [!TIP]
+> The default processor architecture setting for Visual Studio is stored in the solution options (`.suo`) file for each solution.
+> If you delete this file, then you will need to select `X64` as your processor architecture again.
 
 Build the project, go to `Test` menu and select `Windows` > `Test Explorer`. `AllocateQubitTest` will show up in the list of tests in `Not Run Tests` group. Select `Run All` or run this individual test, and it should pass!
 
-Alternatively, you can run Q# xUnit tests from command line. Let's assume that your project name is `QSharpTestProject1`, and you've built it in Debug mode. To run tests, navigate to the project folder (the folder which contains `QSharpTestProject1.csproj`), and execute command
+Alternatively, you can run Q# xUnit tests from the command line. Let's assume that your project name is `QSharpTestProject1`, and you've built it in Debug mode. To run tests, navigate to the project folder (the folder which contains `QSharpTestProject1.csproj`), and execute the command
 
 ```
 vstest.console.exe .\bin\Debug\QSharpTestProject1.dll /Platform:x64
@@ -77,7 +102,7 @@ Test execution time: 3.0038 Seconds
 
 One important consequence of the fact that functions in Q# are deterministic is that a function whose output type is the empty tuple `()` cannot ever be observed from within a Q# program.
 That is, a target machine can choose not to execute any function which returns `()` with the guarantee that this omission will not modify the behavior of any following Q# code.
-This makes functions a useful tool for embedding assertions and debugging logic.
+This makes functions a useful tool for embedding assertions and debugging logic, both of which are needed in defining a complete suite of unit tests.
 
 ### Logging
 

@@ -68,30 +68,22 @@ Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip`. In that cas
 2. Open the `Libraries\QsharpLibraries.sln` solution. 
     - If prompted by the **Install Missing Features** pane, click **Install** to allow the installation of the necessary features. This is most often F# and tools.
 
-4. Validate your Q# environment by running the teleport sample program:
+3. Validate your Q# environment by running the teleport sample program:
     
-   1. Right click on the `Teleportation` project in the Libraries solution, and left click on "Set as Startup Project".
-   2. Run the solution (F5.) If teleport runs and the output is as follows, your Q# environment is ready to support your development.
-
-> [!Tip]
-> If you receive a number of errors that reference NuGet packages, use the procedures in [NuGet package restore](https://docs.microsoft.com/en-us/nuget/consume-packages/package-restore) to restore the packages.
+   1. Right click on the `TeleportationSample` project in `Samples` > `0.Introduction` folder of `QsharpLibraries` solution, and left click on "Set as Startup Project".
+   2. Run the solution (F5.) If teleport runs and the output is similar to the following (has 8 rounds of successful teleportation with varying values True/False sent each round), your Q# environment is ready to support your development.
 
 ```
         Round 0:        Sent True,      got True. 
         Teleportation successful!!
         Round 1:        Sent False,     got False. 
         Teleportation successful!!
-        Round 2:        Sent False,     got False. 
-        Teleportation successful!!
-        Round 3:        Sent True,      got True. 
-        Teleportation successful!!
-        Round 4:        Sent True,      got True. 
-        Teleportation successful!!
-        Round 5:        Sent False,     got False. 
-        Teleportation successful!!
+        ...
         Round 6:        Sent True,      got True. 
         Teleportation successful!!
         Round 7:        Sent False,     got False. 
         Teleportation successful!!
 ```
 
+> [!Tip]
+> If you receive a number of errors that reference NuGet packages, use the procedures in [NuGet package restore](https://docs.microsoft.com/en-us/nuget/consume-packages/package-restore) to restore the packages.

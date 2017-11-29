@@ -21,7 +21,8 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# MICROSOFT SOFTWARE LICENSE TERMS - MICROSOFT QUANTUM DEVELOPMENT KIT (PREVIEW)
+# MICROSOFT SOFTWARE LICENSE TERMS 
+# MICROSOFT QUANTUM DEVELOPMENT KIT (PREVIEW)
 
 * * *
 
@@ -34,6 +35,7 @@ These license terms are an agreement between you and Microsoft Corporation (or o
 IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE RIGHTS BELOW. BY USING THE SOFTWARE, YOU ACCEPT THESE TERMS.
 
 1. **INSTALLATION AND USE RIGHTS.**
+
     a. Test line 1
     c. Test line 2
 

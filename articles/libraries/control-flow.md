@@ -8,6 +8,7 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
+uid: microsoft.quantum.concepts.control-flow
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
@@ -58,7 +59,7 @@ In the rest of this section, we will provide a number of examples of how to use 
 ## Applying Operations and Functions over Arrays and Ranges ##
 
 One of the primary abstractions provided by the canon is that of iteration.
-For instance, consider an unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.
+For instance, consider a unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.
 In Q#, this might get represented as a `for` loop over a register:
 
 ```qsharp
@@ -103,7 +104,7 @@ Similarly, <xref:microsoft.quantum.applytorange> is useful for representing patt
 > Then `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` will apply the error-correcting code `code` and recovery function `recoveryFn` to each block independently.
 > This holds even for classical inputs: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` will apply a rotation of $\pi / 2$ about $X$ followed by a rotation of $pi / 3$ about $Y$.
 
-The Q# canon also provides support for classical enumeration patterns familiar to functional programming.- Map / MapIndex (**NB: write this!**)
+The Q# canon also provides support for classical enumeration patterns familiar to functional programming.
 For instance, <xref:microsoft.quantum.canon.fold> implements the pattern $f(f(f(s\_{\text{initial}}, x\_0), x\_1), \dots)$ for reducing a function over a list.
 This pattern can be used to implement sums, products, minima, maxima and other such functions:
 
@@ -113,6 +114,8 @@ function Sum(xs : Int[]) {
     return Fold(Sum, 0, xs);
 }
 ```
+
+Similarly, functions like <xref:microsoft.quantum.canon.map> and <xref:microsoft.quantum.canon.mapindex> can be used to express functional programming concepts in Q#.
 
 ## Composing Operations and Functions ##
 
@@ -173,21 +176,26 @@ For instance, applying the expansion at its lowest order yields that for any ope
 \end{align}
 Colloquially, this says that we can approximately evolve a state under $A + B$ by alternately evolving under $A$ and $B$ alone.
 If we represent evolution under $A$ by an operation `A : (Double, Qubit[]) => ()` that applies $e^{i t A}$, then the representation of the Trotter–Suzuki expansion in terms of rearranging calling sequences becomes clear.
-Concretely, given two operations `A : (Double, Qubit[]) => ()` and `B : (Double, Qubit[])`, we can define a new operation `AB(t)` by generating sequences of the form
+Concretely, given an operation `U : ((Int, Double, Qubit[]) => () : Controlled, Adjoint` such that `A = U(0, _, _)` and `B = U(1, _, _)`, we can define a new operation representing the integral of `U` at time $t$ by generating sequences of the form
 ```qsharp
-A(time / Float(nSteps));
-B(time / Float(nSteps));
-A(time / Float(nSteps));
-B(time / Float(nSteps));
+U(0, time / Float(nSteps), target);
+U(1, time / Float(nSteps), target);
+U(0, time / Float(nSteps), target);
+U(1, time / Float(nSteps), target);
 // ...
 ```
 At this point, we can now reason about the Trotter–Suzuki expansion *without reference to quantum mechanics at all*.
 The expansion is effectively a very particular iteration pattern motivated by $\eqref{eq:trotter-suzuki-0}$.
-This iteration pattern is implemented by <xref:microsoft.quantum.canon.decomposeintotimesteps>:
+This iteration pattern is implemented by <xref:microsoft.quantum.canon.decomposeintotimestepsca>:
 
 ```qsharp
-// TODO
+// The 2 indicates how many terms we need to decompose,
+// while the 1 indicates that we are using the
+// first-order Trotter–Suzuki decomposoition.
+DecomposeIntoTimeStepsCA((2, U), 1);
 ```
+
+The signature of `DecomposeIntoTimeStepsCA` follows a common pattern in Q#, where collections that may be backed either by arrays or by something which compute elements on the fly are represented by tuples whose first elements are `Int` values indicating their lengths.
 
 ## Putting it Together: Controlling Operations ##
 

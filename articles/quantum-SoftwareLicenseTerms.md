@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+title: Microsoft Quantum Development Kit license | Microsoft Docs 
+description: Microsoft Quantum Development Kit license
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
@@ -23,25 +23,29 @@ ms.topic: article-type-from-white-list
 
 # MICROSOFT SOFTWARE LICENSE TERMS - MICROSOFT QUANTUM DEVELOPMENT KIT (PREVIEW)
 
-**IF YOU LIVE IN (OR ARE A BUSINESS WITH YOUR PRINCIPAL PLACE OF BUSINESS IN) THE UNITED STATES, PLEASE READ THE “BINDING ARBITRATION AND CLASS ACTION WAIVER” SECTION BELOW. IT AFFECTS HOW DISPUTES ARE RESOLVED.**
 * * *
+
+**IF YOU LIVE IN (OR ARE A BUSINESS WITH YOUR PRINCIPAL PLACE OF BUSINESS IN) THE UNITED STATES, PLEASE READ THE “BINDING ARBITRATION AND CLASS ACTION WAIVER” SECTION BELOW. IT AFFECTS HOW DISPUTES ARE RESOLVED.**
+
+* * *
+
 These license terms are an agreement between you and Microsoft Corporation (or one of its affiliates). They apply to the pre-release software named above and any Microsoft services or software updates (except to the extent such services or updates are accompanied by new or additional terms, in which case those different terms apply prospectively and do not alter your or Microsoft’s rights relating to pre-updated software or services). 
 
 IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE RIGHTS BELOW. BY USING THE SOFTWARE, YOU ACCEPT THESE TERMS.
 
 1. **INSTALLATION AND USE RIGHTS.**
 
-    a. **General**. You may only use the Microsoft Quantum Development Kit (Preview) software to help you develop and test your applications.
+     a. **General**. You may only use the Microsoft Quantum Development Kit (Preview) software to help you develop and test your applications.
 
-    a. **Third Party Software**. The software may include third party applications that are licensed to you under this agreement or under their own terms. License terms, notices, and acknowledgements, if any, for the third party applications may be accessible online at [third party notices](http://aka.ms/thirdpartynotices) or in an accompanying notices file. Even if such applications are governed by other agreements, the disclaimer, limitations on, and exclusions of damages below also apply to the extent allowed by applicable law.
+     b. **Third Party Software**. The software may include third party applications that are licensed to you under this agreement or under their own terms. License terms, notices, and acknowledgements, if any, for the third party applications may be accessible online at [third party notices](http://aka.ms/thirdpartynotices) or in an accompanying notices file. Even if such applications are governed by other agreements, the disclaimer, limitations on, and exclusions of damages below also apply to the extent allowed by applicable law.
  
 2. **TIME-SENSITIVE SOFTWARE.**
 
-    a. **Period**. The software is time-sensitive and may stop running on a date that is defined in the software.
+     a. **Period**. The software is time-sensitive and may stop running on a date that is defined in the software.
 
-    a. **Notice**. You may receive periodic reminder notices of this date through the software.
+     a. **Notice**. You may receive periodic reminder notices of this date through the software.
 
-    a. **Access to data**. You may not be able to access data used in the software when it stops running.
+     a. **Access to data**. You may not be able to access data used in the software when it stops running.
 
 1. **PRE-RELEASE SOFTWARE**. The software is a pre-release version. It may not operate correctly. It may be different from the commercially released version.
 
@@ -78,13 +82,13 @@ IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE RIGHTS BELOW. BY USING THE 
 
     a. **Australia**. You have statutory guarantees under the Australian Consumer Law and nothing in this agreement is intended to affect those rights.
 
-    a. **Canada**. If you acquired this software in Canada, you may stop receiving updates by turning off the automatic update feature, disconnecting your device from the Internet (if and when you re-connect to the Internet, however, the software will resume checking for and installing updates), or uninstalling the software. The product documentation, if any, may also specify how to turn off updates for your specific device or software.
+    b. **Canada**. If you acquired this software in Canada, you may stop receiving updates by turning off the automatic update feature, disconnecting your device from the Internet (if and when you re-connect to the Internet, however, the software will resume checking for and installing updates), or uninstalling the software. The product documentation, if any, may also specify how to turn off updates for your specific device or software.
 
-    a. **Germany and Austria**.
+    c. **Germany and Austria**.
 
-        a. **Warranty**. The properly licensed software will perform substantially as described in any Microsoft materials that accompany the software. However, Microsoft gives no contractual guarantee in relation to the licensed software.
+        i. **Warranty**. The properly licensed software will perform substantially as described in any Microsoft materials that accompany the software. However, Microsoft gives no contractual guarantee in relation to the licensed software.
             
-        c. **Limitation of Liability**. In case of intentional conduct, gross negligence, claims based on the Product Liability Act, as well as, in case of death or personal or physical injury, Microsoft is liable according to the statutory law.
+        ii. **Limitation of Liability**. In case of intentional conduct, gross negligence, claims based on the Product Liability Act, as well as, in case of death or personal or physical injury, Microsoft is liable according to the statutory law.
 
         Subject to the foregoing clause ii., Microsoft will only be liable for slight negligence if Microsoft is in breach of such material contractual obligations, the fulfillment of which facilitate the due performance of this agreement, the breach of which would endanger the purpose of this agreement and the compliance with which a party may constantly trust in (so-called "cardinal obligations"). In other cases of slight negligence, Microsoft will not be liable for slight negligence.
     

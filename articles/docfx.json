@@ -55,6 +55,7 @@
       }
     },
     "template": [],
-    "dest": "quantum-docs"
+    "dest": "quantum-docs",
+    "markdownEngineName": "markdig"
   }
 }

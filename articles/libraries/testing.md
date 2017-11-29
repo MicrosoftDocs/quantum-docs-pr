@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Testing and Debugging #
+# Testing Library #
 
 As with classical development, is is important to be able to diagnose mistakes and errors in quantum programs.
 In this section, we discuss the functions and operations provided by the canon to assist in diagnosing quantum operations implemented in Q#, built on top of <xref:microsoft.quantum.primitive.assertprob>.
@@ -31,10 +31,10 @@ Thus, we can test individual operations on a classical simulator before deployin
 
 ## Asserts on classical values ##
 
-As discussed in <xref:todo>, a function or operation with signature `() -> ()` or `() => ()`, respectively, can be called as a *unit test*.
+As discussed in [Testing and Debugging](../quantum-techniques-testinganddebugging), a function or operation with signature `() -> ()` or `() => ()`, respectively, can be called as a *unit test*.
 Such unit tests are useful in ensuring that functions and operations act as intended in known cases, and that additional features not break existing functionality.
 The canon provides several *assertions*: functions which `fail` if their inputs don't meet certain conditions.
-For instance, <xref:microsoft.quantum.canon.assertalmostequal> takes inputs `actual : Double` and `expected : Double` will `fail` if `(actual - expected)` is outside the range $[-10^{-10}, 10^{-10}]$.
+For instance, <xref:microsoft.quantum.canon.assertalmostequal> takes inputs `actual : Double` and `expected : Double` and will fail if `(actual - expected)` is outside the range $[-10^{-10}, 10^{-10}]$.
 `AssertAlmostEqual` is used within the canon to ensure that functions such as <xref:microsoft.quantum.canon.realmod> return the correct answer for a variety of representative cases.
 
 More generally, the canon provides a range of functions for asserting different properties of and relations between
@@ -52,7 +52,7 @@ That is,
 \end{align}
 Using the primitive operations defined in the prelude, we can directly perform a measurement that returns `Zero` if $\ket{\psi}$ is an eigenstate of one of the Pauli operators.
 
-In the case that our target machine is a simulator, however, we can do better, as described in [../quantum-techniques-7-going-further#debugging-and-testing-quantum-programs].
+In the case that our target machine is a simulator, however, we can do better, as described in [Testing and Debugging](../quantum-techniques-testinganddebugging).
 We can use that the classical information used by a simulator to represent the internal state of a qubit is amenable to copying, such that we do not need to actually perform a measurement to test our assertion.
 In particular, this allows us to reason about *incompatible* measurements that would be impossible on actual hardware.
 
@@ -114,7 +114,7 @@ Iterating through each input state takes additional time, while using entangleme
 In cases where an operation implements a reversible classical operation, such that we are only interested in its behavior on computational basis states, <xref:microsoft.quantum.canon.assertoperationsequalinplacecompbasis> tests equality on this restricted set of inputs.
 
 > [!TIP]
-> The iteration over input states is handled by the enumeration operations <xref:microsoft.quantum.canon.iteratethroughcartesianproduct> and <xref:microsoft.quantum.iteratethroughcartesianpower>.
+> The iteration over input states is handled by the enumeration operations <xref:microsoft.quantum.canon.iteratethroughcartesianproduct> and <xref:microsoft.quantum.canon.iteratethroughcartesianpower>.
 > These operations are useful more generally for applying an operation to each element of the Cartesian product between two or more sets.
 
 More critically, however, the two approaches test different properties of the operations under examination.

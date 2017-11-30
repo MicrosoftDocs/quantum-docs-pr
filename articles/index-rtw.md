@@ -4,20 +4,18 @@ uid: microsoft.quantum.index
 <img src="media/mobius_strip_preview.png" style="float: right;" title="Quantum" alt="Quantum">
 # Welcome to the Microsoft Quantum Development Kit preview #
 
-Thank you for visiting Microsoft's Quantum Development Kit preview page. The development kit contains the tools you need to build your own quantum computing programs and experiments. Assuming some experience with Visual Studio, beginners can write their first quantum program, and experienced researchers can be developing new quantum algorithms in less than 90 minutes.
+Thank you for your interest in Microsoft's Quantum Development Kit preview. The development kit contains the tools you'll need to build your own quantum computing programs and experiments. Assuming some experience with Microsoft Visual Studio, beginners can write their first quantum program, and experienced researchers can quickly and efficiently develop new quantum algorithms.
 
-To jump right in, start with [Installation and validation](quantum-InstallConfig.md) to create and validate your development environment. Then use [Quickstart - your first computer program](quantum-WriteAQuantumProgram.md) to learn about the structure of a Q# project and how to write a quantum teleport application.
+To jump right in, start with [Installation and validation](quantum-InstallConfig.md) to create and validate your development environment. Then use [Quickstart - your first computer program](quantum-WriteAQuantumProgram.md) to learn about the structure of a Q# project and how to write the quantum equivalent of "Hello, world!" --  a quantum teleport application.
 
-If you'd like more general information about Microsoft's quantum computing initiatives, see [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/).
+If you'd like more general information about Microsoft's quantum computing initiative, see [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/).
 
 <!---
 Computers as we've known them for decades can no longer solve the complex problems we are faced with. Computing power has been rapidly increasing over decades, but that trend is slowing. Even Gordon Moore, who described [Moore's Law](https://www.merriam-webster.com/dictionary/Moore's%20law), said in [2015](https://spectrum.ieee.org/computing/hardware/gordon-moore-the-man-whose-name-means-progress) that he sees silicon technology becoming saturated in the next decade.  
 --->
 
 ## Feedback pipeline
-Your feedback about all parts of the Quantum Development Kit is important. We ask you to provide feedback by going to [Microsoft Quantum - Feedback](https://quantum.uservoice.com/). Sign in and enter your feedback in one of the following forums. 
-
-You will need a [Windows Live account](https://signup.live.com/) to provide feedback.
+Your feedback about all parts of the Quantum Development Kit is important. We ask you to provide feedback by joining our communitify of developers at [Microsoft Quantum - Feedback](https://quantum.uservoice.com/). Sign in and share your experience in one of the following forums. 
 
 - Q# language
 - Debugging and simulation
@@ -25,6 +23,8 @@ You will need a [Windows Live account](https://signup.live.com/) to provide feed
 - Libraries
 - Setup and Visual Studio integration
 - General ideas and feature requests
+
+You will need a [Microsoft Account](https://signup.live.com/) to provide feedback.
  
 ## Microsoft Quantum Development Kit components
 The Quantum Development Kit preview provides a complete development and simulation environment that contains the following components.

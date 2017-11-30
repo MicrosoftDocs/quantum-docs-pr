@@ -19,7 +19,7 @@
       href: quantum-concepts-8-QuantumCircuits.md
     - name: Software stack
       href: quantum-concepts-9-SoftwareStack.md
-- name: Installation and configuration
+- name: Installation and validation
   href: quantum-InstallConfig.md
 - name: Quickstart- your first quantum program
   href: quantum-WriteAQuantumProgram.md

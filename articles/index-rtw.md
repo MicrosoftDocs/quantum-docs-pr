@@ -4,9 +4,9 @@ uid: microsoft.quantum.index
 <img src="media/mobius_strip_preview.png" style="float: right;" title="Quantum" alt="Quantum">
 # Welcome to the Microsoft Quantum Development Kit preview #
 
-Thank you for visiting Microsoft's Quantum Development Kit preview page. The development kit is the foundation on which you can build your own quantum computing programs and experiments. Beginners can write their first quantum program in under an hour, and experienced researchers and developers can begin developing new quantum algorithm variants in the same time.
+Thank you for visiting Microsoft's Quantum Development Kit preview page. The development kit contains the tools you need to build your own quantum computing programs and experiments. Assuming some experience with Visual Studio, beginners can write their first quantum program, and experienced researchers can be developing new quantum algorithms in less than 90 minutes.
 
-The Microsoft Quantum Development Kit preview provides the components and documentation listed below. To jump right in, start with [Installation and validation](quantum-InstallConfig.md) to create and validate your development environment, and then use [Quickstart - your first computer program](quantum-WriteAQuantumProgram.md) to learn about the structure of a Q# project and how to write a simple quantum teleport application.
+To jump right in, start with [Installation and validation](quantum-InstallConfig.md) to create and validate your development environment, and then use [Quickstart - your first computer program](quantum-WriteAQuantumProgram.md) to learn about the structure of a Q# project and how to write a quantum teleport application.
 
 If you'd like more general information about Microsoft's quantum computing initiatives, see [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/).
 

@@ -115,9 +115,9 @@ $$\boldone=\begin{bmatrix}
 0 ~~ 0 ~~ \cdots ~~ 1
 \end{bmatrix}.$$
 
-For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = \boldone$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. 
+For a square matrix $A$, we say a matrix $B$ is its inverse if $AB = BA = \boldone$. The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$. 
 
-For any matrix $M$, the adjoint or conjugate transpose of $M$, is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. We say a matrix $U$ is unitary if $UU^\dagger = \boldone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because 
+For any matrix $M$, the adjoint or conjugate transpose of $M$ is a matrix $N$ such that $N_{ij} = M^*_{ji}$. The adjoint of $M$ is usually denoted $M^\dagger$. We say a matrix $U$ is unitary if $UU^\dagger = U^\dagger U = \boldone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because 
 
 $$\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle.$$  
 
@@ -132,6 +132,7 @@ Finally, the tensor product (or Kronecker product) of two matrices $M$ of size $
 		\ddots\\\\
 		M_{m1}  ~~ \cdots ~~ M_{mn}
 	\end{bmatrix}
+	\otimes
 	\begin{bmatrix}
 		N_{11}  ~~ \cdots ~~ N_{1q}\\\\
 		\ddots\\\\

@@ -26,7 +26,7 @@ ms.topic: article-type-from-white-list
 
 ## Amplitude Amplification ##
 
-Amplitude Amplification is one of the fundamental tools of Quantum Computing. There are many variants, but here we provide a very general version called Oblivious Amplitude Amplification with Partial Reflections to allow for the widest area of application. 
+*Amplitude Amplification* is one of the fundamental tools of Quantum Computing. There are many variants, and in Q# we provide a very general version based on Oblivious Amplitude Amplification with Partial Reflections to allow for the widest area of application. 
 
 The general routine (`AmpAmpObliviousByReflectionPhases`) has two registers that we call `ancillaRegister` and `systemRegister`. It also accepts two oracles for the necessary reflections. The `ReflectionOracle` acts only on the `ancillaRegister` while the `ObliviousOracle` acts jointly on both registers. The input to `ancillaRegister` must be initialized to the unique -1 eigenstate of the first reflection operator $I-2|s{\rangle}{\langle}s|$. 
 
@@ -34,7 +34,7 @@ Typically, the oracle prepares the state in the computational basis $|0...0\rang
 
 One may also provide oracles `StateOracle` and `ObliviousOracle` instead of reflections via a call to `AmpAmpObliviousByOraclePhases`. 
 
-It is also worth noting that traditional Amplitude Amplification is just a speical case of these routines where `ObliviousOracle` is the identity operator and there are no system qubits (i.e., `systemRegister` is empty). If you wish to obtain phases for partial reflections (e.g., for Grover search), the function `AmpAmpPhasesStandard`. Please refer to `ExampleGrover.qb` for a sample implemetation of this.
+It is also worth noting that traditional Amplitude Amplification is just a speical case of these routines where `ObliviousOracle` is the identity operator and there are no system qubits (i.e., `systemRegister` is empty). If you wish to obtain phases for partial reflections (e.g., for Grover search), the function `AmpAmpPhasesStandard` is available. Please refer to `ExampleGrover.qb` for a sample implemetation.
 
 We relate the single-qubit rotation phases to the reflection operator phases as described in the paper by [G.H. Low, I. L. Chuang](https://arxiv.org/abs/1707.05391). The fixed point phases that are used are detailed in [Yoder, Low and Chuang](https://arxiv.org/abs/1409.3305) along with the phases in [Low, Yoder and Chuang](https://arxiv.org/abs/1603.03996).
 
@@ -44,11 +44,11 @@ For background, you could start from [Standard Amplitude Amplification](https://
 ## Quantum Fourier Transform ##
 
 The Fourier transform is a fundamental tool of classical analysis and is just as important for quantum computations.
-In addition, the efficiency of the quantum Fourier transform (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm.
+In addition, the efficiency of the *quantum Fourier transform* (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm.
 
 As an approximate generalization of the QFT, we provide the <xref:microsoft.quantum.canon.approximateqft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
 The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.primitive.RFrac> as well as the <xref:microsoft.quantum.primitive.h> operation.
-The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as [ket notation](xref:microsoft.quantum.concepts.dirac).
+The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as [ket notation](xref:microsoft.quantum.concepts.dirac)).
 The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
 In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.
 It is known that for $k \ge \log_2(n) + \log_2(1 / \epsilon) + 3$. one can bound $\\| \operatorname{QFT} - \operatorname{AQFT} \\| < \epsilon$.
@@ -75,9 +75,9 @@ using $n$ controlled applications of adders of the form
         \Lambda\_{a\_{n-1}} \left(\operatorname{Add}({{n-1}}) \right) \ket{a}\ket{b} \\\\
     & = \ket{a} \ket{b + a},
 \end{align}
-for $n$ bit integers $a$ and $b$ and addition modulo $2^n$.  Recall that the notation $\Lambda\_x(A)$ refers, for any operation $A$, to the controlled version of that operation with the qubit $x$ as control.  
+for $n$-bit integers $a$ and $b$ and addition modulo $2^n$.  Recall that the notation $\Lambda\_x(A)$ refers, for any operation $A$, to the controlled version of that operation with the qubit $x$ as control.  
 
-Similarly, classically controlled multiplication (a modular form of which is essential for Shor's factoring algorithm) can be performed by using a similar series of controlled  additions.
+Similarly, classically controlled multiplication (a modular form of which is essential for Shor's factoring algorithm) can be performed by using a similar series of controlled  additions:
 \begin{align}
 \operatorname{Mult}(a)\ket{x}\ket{b}
     & = \Lambda\_{x\_0}\left(\operatorname{Add}(2^0 a)\right)
@@ -87,13 +87,13 @@ Similarly, classically controlled multiplication (a modular form of which is ess
         \left(\operatorname{Add}({2^{n-1}}a) \right)\ket{x}\ket{b} \\\\
     & = \ket{x}\ket{b+ax}.
 \end{align}
-There is a subtlety with multiplication on quantum computers that you may notice from the definition of $\operatorname{Mult}$ above.  Unlike addition, the quantum version of this circuit stores the product of the inputs in an ancillary register rather than in the input register.  In this example, the register is initialized with the value $b$, but typically it will start holding the value zero.  This is needed in because in general there is not a multiplicative inverse for general $a$ and $x$.  Since all quantum operations, save measurement, are reversible we need to keep enough information around to invert the multiplication.  For this reason the result is stored in a separate array.  This trick of saving the output of an irreversible operation, like multiplication, in a seperate register is known as the "Bennet trick" after Charlie Bennet and is a fundamental tool in both reversible and quantum computing.
+There is a subtlety with multiplication on quantum computers that you may notice from the definition of $\operatorname{Mult}$ above.  Unlike addition, the quantum version of this circuit stores the product of the inputs in an ancillary register rather than in the input register.  In this example, the register is initialized with the value $b$, but typically it will start holding the value zero.  This is needed in because in general there is not a multiplicative inverse for general $a$ and $x$.  Since all quantum operations, save measurement, are reversible we need to keep enough information around to invert the multiplication.  For this reason the result is stored in a separate array.  This trick of saving the output of an irreversible operation, like multiplication, in a seperate register is known as the "Bennett trick" after Charlie Bennett and is a fundamental tool in both reversible and quantum computing.
 
-Many quantum circuits have been proposed for addition and each explores a different tradeoff in terms of the number of qubits (space) and the number of gates (time) required.  We review two highly space efficient adders below known as the Draper adder and the Beauregard adder. 
+Many quantum circuits have been proposed for addition and each explores a different tradeoff in terms of the number of qubits (space) and the number of gate operations (time) required.  We review two highly space efficient adders below known as the Draper adder and the Beauregard adder. 
 
 ### Draper Adder
 
-The Draper adder is arguably one of the most elegant quantum adders ever devised.  The insight behind the Draper adder is that the Fourier transform can be used to translate phase shifts into a bit shift.  It then follows that by applying a Fourier transform, applying appropriate phase shifts, and then undoing the Fourier transform you can implement an adder.  Unlike many other adders that have been proposed, the Draper adder explicitly uses quantum effects introduced through the quantum Fourier transform.  It does not have a natural classical counterpart.  The specific steps used by the Draper adder to achieve this are given below.
+The Draper adder is arguably one of the most elegant quantum adders, as it directly invokes quantum properties to perform addition.  The insight behind the Draper adder is that the Fourier transform can be used to translate phase shifts into a bit shift.  It then follows that by applying a Fourier transform, applying appropriate phase shifts, and then undoing the Fourier transform you can implement an adder.  Unlike many other adders that have been proposed, the Draper adder explicitly uses quantum effects introduced through the quantum Fourier transform.  It does not have a natural classical counterpart.  The specific steps of the Draper adder are given below.
 
 Assume that you have two $n$-bit qubit registers storing the integers $a$ and $b$ then for all $a$
 $$
@@ -111,17 +111,18 @@ The path towards performing an adder then becomes clear after observing that the
 $$
 \ket{a+b}=\operatorname{QFT}^{-1}\ket{\phi\_1(a+b)}\otimes \cdots \otimes \ket{\phi\_n(a+b)}.
 $$
-The integers $b$ and $a$ can then be added by performing controlled phase rotation on each of the qubits in the decomposition using the bits of $b$ as controls.  
+The integers $b$ and $a$ can then be added by performing controlled-phase rotation on each of the qubits in the decomposition using the bits of $b$ as controls.  
 
-This expansion can be further simplified by noting that for any integer $j$ and real number $x$, $e^{i2\pi(x+j)}=e^{i2\pi x}$.  This is because if you spin $360^{\circ}$ degrees ($2\pi$ radians) in a circle then you end up precisely where you started.  The only important part of $x$ for $e^{i2\pi x}$ is therefore the fractional part of $x$.  Specifically, if we have a binary expansion of the form $x=y+0.x\_0x\_2\ldots x\_n$ then $e^{i2\pi x}=e^{i2\pi (0.x\_0x\_2\ldots x\_{n-1})}$ and hence
-$$\ket{\phi\_k(a+b)}=\frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi [a/2^k+0.b\_k\ldots b\_1]}\ket{1} \right)$$
-This means that if we perform addition by incrementing each of the tensor factors in the expansion of the Fourier transform of $\ket{a}$ then the number of rotations shrinks as $k$ decreases.  This substantially reduces the number of quantum gates needed in the adder.  We denote the process that describes the Fourier transform, phase addition and then inverse Fourier transform steps that comprise the Draper adder as $\operatorname{QFT}^{-1} \left(\phi\\\!\operatorname{ADD}\right) \operatorname{QFT}$. A quantum circuit that uses this simplification to implement the entire process can be as seen below.
+This expansion can be further simplified by noting that for any integer $j$ and real number $x$, $e^{i2\pi(x+j)}=e^{i2\pi x}$.  This is because if you rotate $360^{\circ}$ degrees ($2\pi$ radians) in a circle then you end up precisely where you started.  The only important part of $x$ for $e^{i2\pi x}$ is therefore the fractional part of $x$.  Specifically, if we have a binary expansion of the form $x=y+0.x\_0x\_2\ldots x\_n$ then $e^{i2\pi x}=e^{i2\pi (0.x\_0x\_2\ldots x\_{n-1})}$ and hence
+$$\ket{\phi\_k(a+b)}=\frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi [a/2^k+0.b\_k\ldots b\_1]}\ket{1} \right).$$
+This means that if we perform addition by incrementing each of the tensor factors in the expansion of the Fourier transform of $\ket{a}$ then the number of rotations shrinks as $k$ decreases.  This substantially reduces the number of quantum gates needed in the adder.  We denote the Fourier transform, phase addition and the inverse Fourier transform steps that comprise the Draper adder as $\operatorname{QFT}^{-1} \left(\phi\\\!\operatorname{ADD}\right) \operatorname{QFT}$. A quantum circuit that uses this simplification to implement the entire process can be seen below.
 
 
 <!--- ![](.\media\draper.svg) --->
 ![](../media/draper.png)
 
-Each controlled $e^{i2\pi/k}$ gate in the circuit refers to a controlled phase gate.  Such gates have the property that on the pair of qubits that they act $\ket{00}\mapsto \ket{00}$ but $\ket{11}\mapsto e^{i2\pi/k}\ket{11}$.  This circuit allows us to perform addition using no additional qubits apart from those needed to store the inputs and the outputs.  
+Each controlled $e^{i2\pi/k}$ gate in the circuit refers to a controlled-phase gate.  Such gates have the property that on the pair of qubits on which they act, $\ket{00}\mapsto \ket{00}$ but $\ket{11}\mapsto e^{i2\pi/k}\ket{11}$.  This circuit allows us to perform addition using no additional qubits apart from those needed to store the inputs and the outputs.  
+
 ### Beauregard Adder
 
 The Beauregard adder is a quantum modular adder that uses the Draper adder in order to perform addition modulo $N$ for an arbitrary value positive integer $N$.  The significance of quantum modular adders, such as the Beauregard adder, stems to a large extent from their use in the modular exponentiation step within Shor's algorithm for factoring.  A quantum modular adder has the following action for quantum input $\ket{b}$ and classical input $a$ where $a$ and $b$ are promised to be integers $\mod N$, meaning that they are in the interval $[0,\ldots, N-1]$.
@@ -135,7 +136,7 @@ The Beauregard adder uses the Draper adder, or more specifically $\phi\\\!\opera
 <!--- ![](.\media\beau.svg) --->
 ![](../media/beau.png)
 
-Here the gate $\Phi\\\!\operatorname{ADD}$ takes the same form as $\phi\\\!\operatorname{ADD}$ except that in this context the input is classical rather than quantum.  This allows the controlled phases in $\Phi\\\!\operatorname{ADD}$ to be replaced with phase gates that can be compiled together to reduce both the number of qubits and number of gates needed for the adder.
+Here the gate $\Phi\\\!\operatorname{ADD}$ takes the same form as $\phi\\\!\operatorname{ADD}$ except that in this context the input is classical rather than quantum.  This allows the controlled phases in $\Phi\\\!\operatorname{ADD}$ to be replaced with phase gates that can then be compiled together into fewer operations to reduce both the number of qubits and number of gates needed for the adder.
 
 
 
@@ -169,7 +170,7 @@ We can collect terms to find that
 \end{align}
 where $R_1$ is the unitary applied by the <xref:microsoft.quantum.primitive.r1> operation.
 Put differently, the effect of applying $V$ is precisely the same as applying $R_1$ with an unknown angle, even though we only have access to $V$ as an oracle.
-Thus, for the rest of this discussion we will discuss phase estimation in terms of $R_1(\phi)$, which we implement by using phase kickback.
+Thus, for the rest of this discussion we will discuss phase estimation in terms of $R_1(\phi)$, which we implement by using so-called *phase kickback*.
 
 Since the control and target register remain untangled after this process, we can reuse $\ket{\phi}$ as the target of a controlled application of $U^2$ to prepare a second control qubit in the state $R_1(2 \phi) \ket{+}$.
 Continuing in this way, we can obtain a register of the form

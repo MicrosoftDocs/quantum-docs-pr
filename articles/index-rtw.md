@@ -4,16 +4,18 @@ uid: microsoft.quantum.index
 <img src="media/mobius_strip_preview.png" style="float: right;" title="Quantum" alt="Quantum">
 # Welcome to the Microsoft Quantum Development Kit preview #
 
-Thank you for visiting Microsoft's Quantum Development Kit preview page. The development kit is the foundation on which you can easily build your own quantum computing programs and experiments. Beginners can write their first quantum program in under an hour, and experienced researchers and developers can begin developing new quantum algorithm variants in the same time.
+Thank you for visiting Microsoft's Quantum Development Kit preview page. The development kit is the foundation on which you can build your own quantum computing programs and experiments. Beginners can write their first quantum program in under an hour, and experienced researchers and developers can begin developing new quantum algorithm variants in the same time.
 
-The Microsoft Quantum Development Kit preview provides the components and documentation listed below to get you started. To jump right in, start with [Installation and configuration](quantum-InstallConfig.md) to create and validate your development environment, and then use [Quickstart - your first computer program](quantum-WriteAQuantumProgram.md) to learn about the structure of a Q#
+The Microsoft Quantum Development Kit preview provides the components and documentation listed below. To jump right in, start with [Installation and validation](quantum-InstallConfig.md) to create and validate your development environment, and then use [Quickstart - your first computer program](quantum-WriteAQuantumProgram.md) to learn about the structure of a Q# project and how to write a simple quantum teleport application.
+
+If you'd like more general information about Microsoft's quantum computing initiatives, see [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/).
 
 <!---
 Computers as we've known them for decades can no longer solve the complex problems we are faced with. Computing power has been rapidly increasing over decades, but that trend is slowing. Even Gordon Moore, who described [Moore's Law](https://www.merriam-webster.com/dictionary/Moore's%20law), said in [2015](https://spectrum.ieee.org/computing/hardware/gordon-moore-the-man-whose-name-means-progress) that he sees silicon technology becoming saturated in the next decade.  
 --->
 
 ## Feedback pipeline
-Your feedback about all parts of the Quantum Development Kit is important. Please help us to address feedback quickly by going to [Microsoft Quantum - Feedback](https://quantum.uservoice.com/). Sign in and enter your feedback in one of the following forums. 
+Your feedback about all parts of the Quantum Development Kit is important. We ask you to provide feedback by going to [Microsoft Quantum - Feedback](https://quantum.uservoice.com/). Sign in and enter your feedback in one of the following forums. 
 
 You will need a [Windows Live account](https://signup.live.com/) to provide feedback.
 

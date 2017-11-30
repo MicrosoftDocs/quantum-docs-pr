@@ -21,11 +21,11 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Setting up the Q# development environment
+# Installing and validating the Q# development environment
 
 This section specifies how to create a Q# development environment and validate it by running the teleport sample program.
 
-## Checking prerequisites
+## Prerequisites
 
 If you have [Visual Studio](https://www.visualstudio.com/) 2017 installed, you're ready to install the Microsoft Quantum Development Kit.
 

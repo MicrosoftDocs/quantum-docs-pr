@@ -205,19 +205,19 @@ Add the following operations to the namespace, after the end of the
     {
         body
         {
-            let count = 10;
+            let count = 100;
             mutable successes = 0;
             using (qubits = Qubit[3])
             {
                 for (test in 1..count)
                 {
                     // Rotate the message qubit
-                    Rz (theta, qubits[0]);
+                    Rx (theta, qubits[0]);
 
                     Teleport (qubits[0], qubits[1], qubits[2]);
 
                     // Un-rotate the target and measure
-                    Rz (-theta, qubits[2]);
+                    Rx (-theta, qubits[2]);
                     let res = M (qubits[2]);
 
                     // If the result was Zero, then we succeeded
@@ -361,11 +361,11 @@ Just hit `F5`, and your program should build and run!
 The results should be:
 
 ```Output
-Sending an angle of 0.1 radians worked 10 times out of 10
-Sending an angle of 0.3 radians worked 10 times out of 10
-Sending an angle of 0.5 radians worked 10 times out of 10
-Sending an angle of 0.7 radians worked 10 times out of 10
-Sending an angle of 0.9 radians worked 10 times out of 10
+Sending an angle of 0.1 radians worked 100 times out of 100
+Sending an angle of 0.3 radians worked 100 times out of 100
+Sending an angle of 0.5 radians worked 100 times out of 100
+Sending an angle of 0.7 radians worked 100 times out of 100
+Sending an angle of 0.9 radians worked 100 times out of 100
 Press any key to continue...
 ```
 

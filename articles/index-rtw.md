@@ -51,5 +51,9 @@ The current documentation includes the following topics.
 * [Quantum trace simulator reference](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?branch=master) contains reference material about trace simulator entities and exceptions.
 * [C# components reference](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?branch=master) contains reference information about the C# entities used in control code and simulation handling.
 * [Q# library reference](../api/index.md) contains reference information about library entities by namespace.
+* [Q# library reference](/api/index.md) contains reference information about library entities by namespace.
+* [Q# library reference](api/index.md) contains reference information about library entities by namespace.
+* [Q# library reference](api/index.md) contains reference information about library entities by namespace.
+
 
 

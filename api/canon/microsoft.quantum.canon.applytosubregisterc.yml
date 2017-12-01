@@ -8,19 +8,25 @@ input:
   content: '(op : (Qubit[] => () : Controlled), idxs : Int[], target : Qubit[])'
   types:
   - name: idxs
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
     isArray: true
   - name: op
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.qubit
+    - content: Qubit
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true
   - name: target
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true
 functors:
 - Controlled

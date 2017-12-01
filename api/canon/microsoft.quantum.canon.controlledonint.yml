@@ -10,21 +10,29 @@ input:
   content: '(numberState : Int, oracle : (Qubit[] => () : Adjoint, Controlled))'
   types:
   - name: numberState
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: oracle
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.qubit
+    - content: Qubit
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true
 output:
   content: '((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
   types:
   - summary: >2
        A unitary operator that applies `oracle` on the target register if the control register state corresponds to the number state `numberState`.
+    isOperation: true
     types:
     - types:
-      - uid: microsoft.quantum.primitive.qubit
+      - content: Qubit
+        isPrimitive: true
         isArray: true
-      - uid: microsoft.quantum.primitive.qubit
+      - content: Qubit
+        isPrimitive: true
         isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true

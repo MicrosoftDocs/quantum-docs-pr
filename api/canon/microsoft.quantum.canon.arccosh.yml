@@ -10,9 +10,11 @@ input:
   content: '(x : Double)'
   types:
   - name: x
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
 output:
   content: Double
   types:
   - summary: ' A real number $y$ such that $x = \cosh(y)$.'
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true

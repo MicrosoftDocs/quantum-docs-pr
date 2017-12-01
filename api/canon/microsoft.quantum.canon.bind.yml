@@ -27,15 +27,21 @@ input:
   types:
   - name: operations
     isArray: true
+    isOperation: true
     types:
-    - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
 output:
   content: ('T => ())
   types:
   - summary: >2
        A new operation that performs each given operation in sequence
        on its input.
+    isOperation: true
     types:
-    - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true

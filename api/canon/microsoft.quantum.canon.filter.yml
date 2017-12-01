@@ -9,15 +9,24 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: array
-    uid: "'t"
+    content: "'T"
+    isLocal: true
     isArray: true
   - name: predicate
+    isFunction: true
     types:
-    - uid: "'t"
-    - uid: microsoft.quantum.primitive.bool
+    - content: "'T"
+      isLocal: true
+    - content: Bool
+      isPrimitive: true
 output:
   content: "'T[]"
   types:
   - summary: " An array `'T[]` of elements that satisfy the predicate."
-    uid: "'t"
+    content: "'T"
+    isLocal: true
     isArray: true
+typeparams:
+- name: "'T"
+  summary: >2
+     The type of `array` elements.

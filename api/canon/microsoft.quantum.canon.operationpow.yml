@@ -15,16 +15,23 @@ input:
   content: "(oracle : ('T => ()), power : Int)"
   types:
   - name: oracle
+    isOperation: true
     types:
-    - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
   - name: power
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
 output:
   content: ('T => ())
   types:
   - summary: >2
        A new operation representing $U^m$, where $m = \texttt{power}$.
+    isOperation: true
     types:
-    - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true

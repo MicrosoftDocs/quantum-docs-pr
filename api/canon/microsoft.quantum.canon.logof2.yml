@@ -13,4 +13,5 @@ input:
 output:
   content: Double
   types:
-  - uid: microsoft.quantum.primitive.float
+  - content: Double
+    isPrimitive: true

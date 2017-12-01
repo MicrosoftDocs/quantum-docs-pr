@@ -12,15 +12,18 @@ input:
   content: '(left : Qubit[], right : Qubit[])'
   types:
   - name: left
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
   - name: right
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true
 functors:
 - Adjoint
 - Controlled

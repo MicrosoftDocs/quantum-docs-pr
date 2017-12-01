@@ -15,18 +15,26 @@ input:
   content: '(actual : (Qubit[] => ()), expected : (Qubit[] => () : Adjoint), nQubits : Int)'
   types:
   - name: actual
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.qubit
+    - content: Qubit
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true
   - name: expected
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.qubit
+    - content: Qubit
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true
   - name: nQubits
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

@@ -22,11 +22,13 @@ input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
 output:
   content: Result
   types:
   - summary: >2
        The result value `Zero`.
-    uid: microsoft.quantum.primitive.result
+    content: Result
+    isPrimitive: true

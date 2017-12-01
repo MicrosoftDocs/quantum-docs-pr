@@ -8,16 +8,25 @@ input:
   content: "(curriedOp : ('T -> ('U => () : Controlled, Adjoint)))"
   types:
   - name: curriedOp
+    isFunction: true
     types:
-    - uid: "'t"
-    - types:
-      - uid: "'u"
-      - uid: microsoft.quantum.primitive.void
+    - content: "'T"
+      isLocal: true
+    - isOperation: true
+      types:
+      - content: "'U"
+        isLocal: true
+      - content: ()
+        isPrimitive: true
 output:
   content: "(('T, 'U) => () : Controlled, Adjoint)"
   types:
-  - types:
+  - isOperation: true
+    types:
     - types:
-      - uid: "'t"
-      - uid: "'u"
-    - uid: microsoft.quantum.primitive.void
+      - content: "'T"
+        isLocal: true
+      - content: "'U"
+        isLocal: true
+    - content: ()
+      isPrimitive: true

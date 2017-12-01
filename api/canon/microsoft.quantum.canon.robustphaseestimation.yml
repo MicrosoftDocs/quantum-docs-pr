@@ -19,13 +19,16 @@ input:
   content: '(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])'
   types:
   - name: bitsPrecision
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: eigenstate
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
   - name: oracle
     uid: discreteoracle
 output:
   content: Double
   types:
-  - uid: microsoft.quantum.primitive.float
+  - content: Double
+    isPrimitive: true

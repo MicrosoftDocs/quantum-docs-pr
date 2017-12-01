@@ -9,14 +9,21 @@ input:
   content: "(oracle : ('T => () : Controlled), power : Int)"
   types:
   - name: oracle
+    isOperation: true
     types:
-    - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
   - name: power
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
 output:
   content: "('T => () : Controlled)"
   types:
-  - types:
-    - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+  - isOperation: true
+    types:
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true

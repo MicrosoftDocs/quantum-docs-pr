@@ -8,12 +8,16 @@ input:
   content: '(a : Int, b : Int)'
   types:
   - name: a
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: b
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
 output:
   content: (Int, Int)
   types:
   - types:
-    - uid: microsoft.quantum.primitive.integer
-    - uid: microsoft.quantum.primitive.integer
+    - content: Int
+      isPrimitive: true
+    - content: Int
+      isPrimitive: true

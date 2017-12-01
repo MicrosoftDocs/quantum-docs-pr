@@ -13,9 +13,11 @@ input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

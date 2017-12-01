@@ -11,9 +11,11 @@ input:
   content: '(target : Qubit)'
   types:
   - name: target
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
 output:
   content: Result
   types:
   - summary: ' The result of measuring `target` in the Pauli $X$ basis.'
-    uid: microsoft.quantum.primitive.result
+    content: Result
+    isPrimitive: true

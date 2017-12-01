@@ -9,13 +9,18 @@ input:
   content: "(func : ('T -> ()), array : 'T[])"
   types:
   - name: array
-    uid: "'t"
+    content: "'T"
+    isLocal: true
     isArray: true
   - name: func
+    isFunction: true
     types:
-    - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

@@ -10,12 +10,16 @@ input:
   content: '(actual : Int, expected : Int, message : String)'
   types:
   - name: actual
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: expected
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: message
-    uid: microsoft.quantum.primitive.string
+    content: String
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

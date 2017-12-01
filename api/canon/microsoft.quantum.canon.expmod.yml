@@ -8,12 +8,16 @@ input:
   content: '(expBase : Int, power : Int, modulus : Int)'
   types:
   - name: expBase
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: modulus
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: power
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
 output:
   content: Int
   types:
-  - uid: microsoft.quantum.primitive.integer
+  - content: Int
+    isPrimitive: true

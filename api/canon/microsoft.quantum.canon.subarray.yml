@@ -9,10 +9,12 @@ input:
   content: "(indices : Int[], array : 'T[])"
   types:
   - name: array
-    uid: "'t"
+    content: "'T"
+    isLocal: true
     isArray: true
   - name: indices
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
     isArray: true
 output:
   content: "'T[]"
@@ -20,5 +22,10 @@ output:
   - summary: >2-
        An array `out` of elements whose indices correspond to the subarray,
        such that `out[idx] == array[indices[idx]]`.
-    uid: "'t"
+    content: "'T"
+    isLocal: true
     isArray: true
+typeparams:
+- name: "'T"
+  summary: >2
+     The type of `array` elements.

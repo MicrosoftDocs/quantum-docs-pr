@@ -9,8 +9,10 @@ input:
   content: "(value : 'T)"
   types:
   - name: value
-    uid: "'t"
+    content: "'T"
+    isLocal: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

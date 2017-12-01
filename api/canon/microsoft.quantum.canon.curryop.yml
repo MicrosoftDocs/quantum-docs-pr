@@ -13,11 +13,15 @@ input:
   content: "(op : (('T, 'U) => ()))"
   types:
   - name: op
+    isOperation: true
     types:
     - types:
-      - uid: "'t"
-      - uid: "'u"
-    - uid: microsoft.quantum.primitive.void
+      - content: "'T"
+        isLocal: true
+      - content: "'U"
+        isLocal: true
+    - content: ()
+      isPrimitive: true
 output:
   content: ('T -> ('U => ()))
   types:
@@ -25,8 +29,13 @@ output:
        An operation which accepts the first element of a pair and returns
        an operation which accepts as its input the second element of the
        original operation's input.
+    isFunction: true
     types:
-    - uid: "'t"
-    - types:
-      - uid: "'u"
-      - uid: microsoft.quantum.primitive.void
+    - content: "'T"
+      isLocal: true
+    - isOperation: true
+      types:
+      - content: "'U"
+        isLocal: true
+      - content: ()
+        isPrimitive: true

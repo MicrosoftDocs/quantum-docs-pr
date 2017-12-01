@@ -120,18 +120,10 @@
       uid: microsoft.quantum.canon.bind
     - name: BindA
       uid: microsoft.quantum.canon.binda
-    - name: BindAImpl
-      uid: microsoft.quantum.canon.bindaimpl
     - name: BindC
       uid: microsoft.quantum.canon.bindc
     - name: BindCA
       uid: microsoft.quantum.canon.bindca
-    - name: BindCAImpl
-      uid: microsoft.quantum.canon.bindcaimpl
-    - name: BindCImpl
-      uid: microsoft.quantum.canon.bindcimpl
-    - name: BindImpl
-      uid: microsoft.quantum.canon.bindimpl
     - name: BoolArrFromPositiveInt
       uid: microsoft.quantum.canon.boolarrfrompositiveint
     - name: BoolArrFromResultArr
@@ -146,16 +138,10 @@
       uid: microsoft.quantum.canon.complex
     - name: ControlledOnBitString
       uid: microsoft.quantum.canon.controlledonbitstring
-    - name: ControlledOnBitStringImpl
-      uid: microsoft.quantum.canon.controlledonbitstringimpl
     - name: ControlledOnInt
       uid: microsoft.quantum.canon.controlledonint
-    - name: ControlledOnIntImpl
-      uid: microsoft.quantum.canon.controlledonintimpl
     - name: CurryOp
       uid: microsoft.quantum.canon.curryop
-    - name: CurryOpImpl
-      uid: microsoft.quantum.canon.curryopimpl
     - name: DecodeOp
       uid: microsoft.quantum.canon.decodeop
     - name: DecomposeIntoTimeStepsCA
@@ -258,8 +244,6 @@
       uid: microsoft.quantum.canon.operationpowc
     - name: OperationPowCA
       uid: microsoft.quantum.canon.operationpowca
-    - name: OperationPowImpl
-      uid: microsoft.quantum.canon.operationpowimpl
     - name: OperationPowImplA
       uid: microsoft.quantum.canon.operationpowimpla
     - name: OperationPowImplC
@@ -344,8 +328,6 @@
       uid: microsoft.quantum.canon.trotter2implca
     - name: UncurryOpCA
       uid: microsoft.quantum.canon.uncurryopca
-    - name: UncurryOpCAImpl
-      uid: microsoft.quantum.canon.uncurryopcaimpl
     - name: WeightOnePaulis
       uid: microsoft.quantum.canon.weightonepaulis
     - name: With
@@ -356,5 +338,3 @@
       uid: microsoft.quantum.canon.withc
     - name: WithCA
       uid: microsoft.quantum.canon.withca
-    - name: _ExtractLogicalQubitFromSteaneCode
-      uid: microsoft.quantum.canon._extractlogicalqubitfromsteanecode

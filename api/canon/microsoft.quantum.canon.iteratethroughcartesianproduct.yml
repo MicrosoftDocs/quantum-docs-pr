@@ -12,14 +12,19 @@ input:
   content: '(bounds : Int[], op : (Int[] => ()))'
   types:
   - name: bounds
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
     isArray: true
   - name: op
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.integer
+    - content: Int
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

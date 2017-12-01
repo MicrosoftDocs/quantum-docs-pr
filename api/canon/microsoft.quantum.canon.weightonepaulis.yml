@@ -11,7 +11,8 @@ input:
   content: '(nQubits : Int)'
   types:
   - name: nQubits
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
 output:
   content: Pauli[][]
   types:
@@ -20,4 +21,5 @@ output:
        represented as an array with length `nQubits`.
     isArray: true
     types:
-    - uid: microsoft.quantum.primitive.pauli
+    - content: Pauli
+      isPrimitive: true

@@ -11,16 +11,23 @@ input:
   content: "(nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), trotterOrder : Int)"
   types:
   - name: nSteps
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: op
+    isOperation: true
     types:
     - types:
-      - uid: microsoft.quantum.primitive.integer
-      - uid: microsoft.quantum.primitive.float
-      - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+      - content: Int
+        isPrimitive: true
+      - content: Double
+        isPrimitive: true
+      - content: "'T"
+        isLocal: true
+    - content: ()
+      isPrimitive: true
   - name: trotterOrder
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
 output:
   content: "((Double, 'T) => () : Adjoint, Controlled)"
   types:
@@ -28,8 +35,17 @@ output:
        Returns a unitary implementing the Trotter–Suzuki integrator, where
        the first parameter `Double` is the integration step size, and the
        second parameter is the target acted upon.
+    isOperation: true
     types:
     - types:
-      - uid: microsoft.quantum.primitive.float
-      - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+      - content: Double
+        isPrimitive: true
+      - content: "'T"
+        isLocal: true
+    - content: ()
+      isPrimitive: true
+typeparams:
+- name: "'T"
+  summary: >2
+     The type which each time step should act upon; typically, either
+     `Qubit[]` or `Qubit`.

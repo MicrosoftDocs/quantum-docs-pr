@@ -11,18 +11,26 @@ input:
   content: '(givenU : (Qubit[] => ()), expectedU : (Qubit[] => () : Adjoint), inputSize : Int)'
   types:
   - name: expectedU
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.qubit
+    - content: Qubit
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true
   - name: givenU
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.qubit
+    - content: Qubit
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true
   - name: inputSize
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

@@ -8,10 +8,12 @@ input:
   content: '(targets : Qubit[])'
   types:
   - name: targets
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
 output:
   content: Result[]
   types:
-  - uid: microsoft.quantum.primitive.result
+  - content: Result
+    isPrimitive: true
     isArray: true

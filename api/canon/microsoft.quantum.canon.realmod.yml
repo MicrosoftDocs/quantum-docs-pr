@@ -26,12 +26,16 @@ input:
   content: '(value : Double, modulo : Double, minValue : Double)'
   types:
   - name: minValue
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
   - name: modulo
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
   - name: value
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
 output:
   content: Double
   types:
-  - uid: microsoft.quantum.primitive.float
+  - content: Double
+    isPrimitive: true

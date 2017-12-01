@@ -22,22 +22,36 @@ input:
   content: "(nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), stepSize : Double, target : 'T)"
   types:
   - name: nSteps
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: op
+    isOperation: true
     types:
     - types:
-      - uid: microsoft.quantum.primitive.integer
-      - uid: microsoft.quantum.primitive.float
-      - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+      - content: Int
+        isPrimitive: true
+      - content: Double
+        isPrimitive: true
+      - content: "'T"
+        isLocal: true
+    - content: ()
+      isPrimitive: true
   - name: stepSize
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
   - name: target
-    uid: "'t"
+    content: "'T"
+    isLocal: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true
 functors:
 - Adjoint
 - Controlled
+typeparams:
+- name: "'T"
+  summary: >2
+     The type which each time step should act upon; typically, either
+     `Qubit[]` or `Qubit`.

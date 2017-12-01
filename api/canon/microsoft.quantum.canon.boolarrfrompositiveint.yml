@@ -11,11 +11,14 @@ input:
   content: '(number : Int, bits : Int)'
   types:
   - name: bits
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: number
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
 output:
   content: Bool[]
   types:
-  - uid: microsoft.quantum.primitive.bool
+  - content: Bool
+    isPrimitive: true
     isArray: true

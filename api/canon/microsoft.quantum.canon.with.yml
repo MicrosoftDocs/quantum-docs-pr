@@ -20,16 +20,24 @@ input:
   content: "(outerOperation : ('T => () : Adjoint), innerOperation : ('T => ()), target : 'T)"
   types:
   - name: innerOperation
+    isOperation: true
     types:
-    - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
   - name: outerOperation
+    isOperation: true
     types:
-    - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
   - name: target
-    uid: "'t"
+    content: "'T"
+    isLocal: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

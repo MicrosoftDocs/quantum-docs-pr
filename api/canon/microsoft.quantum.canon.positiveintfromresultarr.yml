@@ -10,9 +10,11 @@ input:
   content: '(results : Result[])'
   types:
   - name: results
-    uid: microsoft.quantum.primitive.result
+    content: Result
+    isPrimitive: true
     isArray: true
 output:
   content: Int
   types:
-  - uid: microsoft.quantum.primitive.integer
+  - content: Int
+    isPrimitive: true

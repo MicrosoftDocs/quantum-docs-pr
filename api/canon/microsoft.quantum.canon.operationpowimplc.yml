@@ -8,16 +8,22 @@ input:
   content: "(oracle : ('T => () : Controlled), power : Int, target : 'T)"
   types:
   - name: oracle
+    isOperation: true
     types:
-    - uid: "'t"
-    - uid: microsoft.quantum.primitive.void
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
   - name: power
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: target
-    uid: "'t"
+    content: "'T"
+    isLocal: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true
 functors:
 - Controlled

@@ -26,8 +26,10 @@ input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

@@ -10,10 +10,12 @@ input:
   content: '(value : Int[])'
   types:
   - name: value
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
     isArray: true
 output:
   content: Int
   types:
   - summary: ' The smallest element of `values`.'
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true

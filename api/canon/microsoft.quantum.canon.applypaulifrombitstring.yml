@@ -11,19 +11,24 @@ input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
   types:
   - name: bitApply
-    uid: microsoft.quantum.primitive.bool
+    content: Bool
+    isPrimitive: true
   - name: bits
-    uid: microsoft.quantum.primitive.bool
+    content: Bool
+    isPrimitive: true
     isArray: true
   - name: pauli
-    uid: microsoft.quantum.primitive.pauli
+    content: Pauli
+    isPrimitive: true
   - name: qubits
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true
 functors:
 - Adjoint
 - Controlled

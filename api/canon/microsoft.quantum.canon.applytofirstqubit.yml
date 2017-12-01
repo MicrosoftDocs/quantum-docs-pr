@@ -9,13 +9,18 @@ input:
   content: '(op : (Qubit => ()), register : Qubit[])'
   types:
   - name: op
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.qubit
-    - uid: microsoft.quantum.primitive.void
+    - content: Qubit
+      isPrimitive: true
+    - content: ()
+      isPrimitive: true
   - name: register
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

@@ -25,18 +25,30 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: array
-    uid: "'t"
+    content: "'T"
+    isLocal: true
     isArray: true
   - name: mapper
+    isFunction: true
     types:
     - types:
-      - uid: microsoft.quantum.primitive.integer
-      - uid: "'t"
-    - uid: "'u"
+      - content: Int
+        isPrimitive: true
+      - content: "'T"
+        isLocal: true
+    - content: "'U"
+      isLocal: true
 output:
   content: "'U[]"
   types:
   - summary: >2
        An array `'U[]` of elements that are mapped by the `mapper` function.
-    uid: "'u"
+    content: "'U"
+    isLocal: true
     isArray: true
+typeparams:
+- name: "'T"
+  summary: ' The type of `array` elements.'
+- name: "'U"
+  summary: >2
+     The result type of the `mapper` function.

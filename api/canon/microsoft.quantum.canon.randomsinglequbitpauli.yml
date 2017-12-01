@@ -13,4 +13,5 @@ input:
 output:
   content: Pauli
   types:
-  - uid: microsoft.quantum.primitive.pauli
+  - content: Pauli
+    isPrimitive: true

@@ -20,13 +20,17 @@ input:
   - name: evolutionGeneratorStart
     uid: evolutiongenerator
   - name: inerpolationTime
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
   - name: timeDependentSimulationAlgorithm
     uid: timedependentsimulationalgorithm
 output:
   content: '(Qubit[] => () : Adjoint, Controlled)'
   types:
-  - types:
-    - uid: microsoft.quantum.primitive.qubit
+  - isOperation: true
+    types:
+    - content: Qubit
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true

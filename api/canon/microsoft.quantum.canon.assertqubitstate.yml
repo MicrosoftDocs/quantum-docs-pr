@@ -19,10 +19,13 @@ input:
     - uid: complex
     - uid: complex
   - name: register
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
   - name: tolerance
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

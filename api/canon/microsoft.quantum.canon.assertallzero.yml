@@ -8,13 +8,17 @@ input:
   content: '(message : String, target : Qubit[], tolerance : Double)'
   types:
   - name: message
-    uid: microsoft.quantum.primitive.string
+    content: String
+    isPrimitive: true
   - name: target
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
   - name: tolerance
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

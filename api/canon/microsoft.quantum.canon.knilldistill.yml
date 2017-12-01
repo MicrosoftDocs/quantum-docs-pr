@@ -18,7 +18,8 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
 output:
   content: Bool
@@ -27,4 +28,5 @@ output:
        If `true`, then the procedure succeeded and the higher-quality
        copy should be accepted. If `false`, the procedure failed, and
        the state of the register should be considered undefined.
-    uid: microsoft.quantum.primitive.bool
+    content: Bool
+    isPrimitive: true

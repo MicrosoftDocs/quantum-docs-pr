@@ -9,33 +9,47 @@ input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => ()), adiabaticUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))'
   types:
   - name: adiabaticUnitary
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.qubit
+    - content: Qubit
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true
   - name: nQubits
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: phaseEstAlgorithm
+    isOperation: true
     types:
     - types:
       - uid: discreteoracle
-      - uid: microsoft.quantum.primitive.qubit
+      - content: Qubit
+        isPrimitive: true
         isArray: true
-    - uid: microsoft.quantum.primitive.float
+    - content: Double
+      isPrimitive: true
   - name: qpeUnitary
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.qubit
+    - content: Qubit
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true
   - name: statePrepUnitary
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.qubit
+    - content: Qubit
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true
 output:
   content: Double
   types:
   - summary: >2-
        An estimate $\hat{\phi}$ of the ground state energy $\phi$
        of the ground state energy of the generator represented by $U$.
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true

@@ -8,10 +8,13 @@ input:
   content: '(a : Int, modulus : Int)'
   types:
   - name: a
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: modulus
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
 output:
   content: Int
   types:
-  - uid: microsoft.quantum.primitive.integer
+  - content: Int
+    isPrimitive: true

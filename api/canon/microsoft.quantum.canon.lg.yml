@@ -10,9 +10,11 @@ input:
   content: '(input : Double)'
   types:
   - name: input
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
 output:
   content: Double
   types:
   - summary: ' The base-2 logarithm $y = \log_2(x)$ such that $x = 2^y$.'
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true

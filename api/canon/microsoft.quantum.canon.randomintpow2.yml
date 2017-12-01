@@ -11,11 +11,13 @@ input:
   content: '(maxBits : Int)'
   types:
   - name: maxBits
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
 output:
   content: Int
   types:
   - summary: >2-
        An integer $x$ uniformly at random from the given interval;
        that is, with $\Pr(x) = \frac{1}{2^{\texttt{maxBits}}$.
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true

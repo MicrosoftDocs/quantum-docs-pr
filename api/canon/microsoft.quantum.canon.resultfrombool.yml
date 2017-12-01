@@ -8,8 +8,10 @@ input:
   content: '(input : Bool)'
   types:
   - name: input
-    uid: microsoft.quantum.primitive.bool
+    content: Bool
+    isPrimitive: true
 output:
   content: Result
   types:
-  - uid: microsoft.quantum.primitive.result
+  - content: Result
+    isPrimitive: true

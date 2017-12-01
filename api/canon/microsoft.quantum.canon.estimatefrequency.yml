@@ -12,19 +12,27 @@ input:
   content: '(preparation : (Qubit[] => ()), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
   types:
   - name: measurement
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.qubit
+    - content: Qubit
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.result
+    - content: Result
+      isPrimitive: true
   - name: nMeasurements
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: nQubits
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: preparation
+    isOperation: true
     types:
-    - uid: microsoft.quantum.primitive.qubit
+    - content: Qubit
+      isPrimitive: true
       isArray: true
-    - uid: microsoft.quantum.primitive.void
+    - content: ()
+      isPrimitive: true
 output:
   content: Double
   types:
@@ -37,4 +45,5 @@ output:
 
        This is particularly important on target machines which respect
        physical limitations, such that probabilities cannot be measured.
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true

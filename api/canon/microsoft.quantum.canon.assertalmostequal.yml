@@ -14,10 +14,13 @@ input:
   content: '(actual : Double, expected : Double)'
   types:
   - name: actual
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
   - name: expected
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.void
+  - content: ()
+    isPrimitive: true

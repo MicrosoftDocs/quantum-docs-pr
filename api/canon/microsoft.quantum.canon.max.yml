@@ -10,10 +10,12 @@ input:
   content: '(values : Int[])'
   types:
   - name: values
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
     isArray: true
 output:
   content: Int
   types:
   - summary: ' The largest element of `values`.'
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true

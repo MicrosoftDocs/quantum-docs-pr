@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bindcimpl
+name: BindCImpl
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: "operation BindCImpl (operations : ('T => () : Controlled)[], target : 'T) : ()"
+seealso: ' - @"microsoft.quantum.canon.bindc"'
+input:
+  content: "(operations : ('T => () : Controlled)[], target : 'T)"
+  types:
+  - name: operations
+    isArray: true
+    types:
+    - uid: "'t"
+    - uid: microsoft.quantum.primitive.void
+  - name: target
+    uid: "'t"
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.void
+functors:
+- Controlled

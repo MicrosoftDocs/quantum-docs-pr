@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertqubittol
+name: AssertQubitTol
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Asserts that the qubit q is in the expected eigenstate of the Pauli Z operator up to
+   a given tolerance.
+syntax: 'operation AssertQubitTol (expected : Result, tolerance : Double, q : Qubit) : ()'
+input:
+  content: '(expected : Result, tolerance : Double, q : Qubit)'
+  types:
+  - name: expected
+    uid: microsoft.quantum.primitive.result
+  - name: q
+    uid: microsoft.quantum.primitive.qubit
+  - name: tolerance
+    uid: microsoft.quantum.primitive.float
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.void

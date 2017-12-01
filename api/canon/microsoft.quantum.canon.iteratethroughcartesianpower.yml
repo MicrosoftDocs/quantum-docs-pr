@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.iteratethroughcartesianpower
+name: IterateThroughCartesianPower
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Iterates a variable, say arr, through Cartesian product \n [ 0, bound - 1 ] × [ 0, bound - 1 ] × [ 0, bound - 1 ]\n and calls op(arr) for every element of the Cartesian product"
+syntax: 'operation IterateThroughCartesianPower (power : Int, bound : Int, op : (Int[] => ())) : ()'
+input:
+  content: '(power : Int, bound : Int, op : (Int[] => ()))'
+  types:
+  - name: bound
+    uid: microsoft.quantum.primitive.integer
+  - name: op
+    types:
+    - uid: microsoft.quantum.primitive.integer
+      isArray: true
+    - uid: microsoft.quantum.primitive.void
+  - name: power
+    uid: microsoft.quantum.primitive.integer
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.void

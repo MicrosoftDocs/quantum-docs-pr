@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.resultarrfromboolarr
+name: ResultArrFromBoolArr
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function ResultArrFromBoolArr (input : Bool[]) : Result[]'
+input:
+  content: '(input : Bool[])'
+  types:
+  - name: input
+    uid: microsoft.quantum.primitive.bool
+    isArray: true
+output:
+  content: Result[]
+  types:
+  - uid: microsoft.quantum.primitive.result
+    isArray: true

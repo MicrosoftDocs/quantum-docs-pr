@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.quantumphaseestimation
+name: QuantumPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Performs the quantum phase estimation algorithm for a given oracle U and eigenstate,
+   reading the phase into a big-endian quantum register.
+syntax: 'operation QuantumPhaseEstimation (oracle : DiscreteOracle, eigenstate : Qubit[], controlRegister : BigEndian) : ()'
+input:
+  content: '(oracle : DiscreteOracle, eigenstate : Qubit[], controlRegister : BigEndian)'
+  types:
+  - name: controlRegister
+    uid: bigendian
+  - name: eigenstate
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+  - name: oracle
+    uid: discreteoracle
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.void
+functors:
+- Adjoint
+- Controlled

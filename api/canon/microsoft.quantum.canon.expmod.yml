@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.expmod
+name: ExpMod
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function ExpMod (expBase : Int, power : Int, modulus : Int) : Int'
+input:
+  content: '(expBase : Int, power : Int, modulus : Int)'
+  types:
+  - name: expBase
+    uid: microsoft.quantum.primitive.integer
+  - name: modulus
+    uid: microsoft.quantum.primitive.integer
+  - name: power
+    uid: microsoft.quantum.primitive.integer
+output:
+  content: Int
+  types:
+  - uid: microsoft.quantum.primitive.integer

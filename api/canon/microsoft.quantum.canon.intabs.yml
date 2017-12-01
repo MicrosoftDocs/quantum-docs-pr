@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.intabs
+name: IntAbs
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function IntAbs (input : Int) : Int'
+input:
+  content: '(input : Int)'
+  types:
+  - name: input
+    uid: microsoft.quantum.primitive.integer
+output:
+  content: Int
+  types:
+  - uid: microsoft.quantum.primitive.integer

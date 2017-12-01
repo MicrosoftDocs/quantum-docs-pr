@@ -1,8 +1,0 @@
-### YamlMime:QSharpType
-uid: microsoft.quantum.canon.ccnotop
-name: CCNOTop
-type: newtype
-namespace: Microsoft.Quantum.Canon
-syntax: 'newtype CCNOTop = ((Qubit, Qubit, Qubit) => () : Adjoint);'
-input:
-  types: []

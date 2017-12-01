@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.randomwalkphaseestimation
+name: RandomWalkPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Performs iterative phase estimation using a random walk to approximate
+   Bayesian inference on the classical measurement results from a given
+   oracle and eigenstate.
+syntax: 'operation RandomWalkPhaseEstimation (initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : ContinuousOracle, eigenstate : Qubit[]) : Double'
+input:
+  content: '(initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : ContinuousOracle, eigenstate : Qubit[])'
+  types:
+  - name: eigenstate
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+  - name: initialMean
+    uid: microsoft.quantum.primitive.float
+  - name: initialStdDev
+    uid: microsoft.quantum.primitive.float
+  - name: maxMeasurements
+    uid: microsoft.quantum.primitive.integer
+  - name: nMeasurements
+    uid: microsoft.quantum.primitive.integer
+  - name: oracle
+    uid: continuousoracle
+  - name: unwind
+    uid: microsoft.quantum.primitive.integer
+output:
+  content: Double
+  types:
+  - summary: >2-
+       The final estimate $\hat{\phi} \mathrel{:=} \expect[\phi]$ , where
+       the expectation is over the posterior given all accepted data.
+    uid: microsoft.quantum.primitive.float

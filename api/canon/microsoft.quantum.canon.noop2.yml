@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.noop2
+name: NoOp2
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation NoOp2 (qubitsA : Qubit[], qubitsB : Qubit[]) : ()'
+input:
+  content: '(qubitsA : Qubit[], qubitsB : Qubit[])'
+  types:
+  - name: qubitsA
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+  - name: qubitsB
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.void
+functors:
+- Adjoint
+- Controlled

@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.estimateenergy
+name: EstimateEnergy
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Allocates qubits, performs state preparation, and phase estimation. \n"
+syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) : Double'
+input:
+  content: '(nQubits : Int, statePrepUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))'
+  types:
+  - name: nQubits
+    uid: microsoft.quantum.primitive.integer
+  - name: phaseEstAlgorithm
+    types:
+    - types:
+      - uid: discreteoracle
+      - uid: microsoft.quantum.primitive.qubit
+        isArray: true
+    - uid: microsoft.quantum.primitive.float
+  - name: qpeUnitary
+    types:
+    - uid: microsoft.quantum.primitive.qubit
+      isArray: true
+    - uid: microsoft.quantum.primitive.void
+  - name: statePrepUnitary
+    types:
+    - uid: microsoft.quantum.primitive.qubit
+      isArray: true
+    - uid: microsoft.quantum.primitive.void
+output:
+  content: Double
+  types:
+  - summary: >2-
+       An estimate $\hat{\phi}$ of the ground state energy $\phi$
+       of the ground state energy of the generator represented by $U$.
+    uid: microsoft.quantum.primitive.float

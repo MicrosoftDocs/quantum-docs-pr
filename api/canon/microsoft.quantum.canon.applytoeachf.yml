@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachf
+name: ApplyToEachF
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: "function ApplyToEachF (func : ('T -> ()), array : 'T[]) : ()"
+seealso: ' - @"microsoft.quantum.canon.ApplyToEach"'
+input:
+  content: "(func : ('T -> ()), array : 'T[])"
+  types:
+  - name: array
+    uid: "'t"
+    isArray: true
+  - name: func
+    types:
+    - uid: "'t"
+    - uid: microsoft.quantum.primitive.void
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.void

@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.robustphaseestimationtestop
+name: RobustPhaseEstimationTestOp
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation RobustPhaseEstimationTestOp (phase : Double, power : Int, qubits : Qubit[]) : ()'
+input:
+  content: '(phase : Double, power : Int, qubits : Qubit[])'
+  types:
+  - name: phase
+    uid: microsoft.quantum.primitive.float
+  - name: power
+    uid: microsoft.quantum.primitive.integer
+  - name: qubits
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.void
+functors:
+- Adjoint
+- Controlled

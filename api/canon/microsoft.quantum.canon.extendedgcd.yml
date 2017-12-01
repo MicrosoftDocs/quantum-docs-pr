@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.extendedgcd
+name: ExtendedGCD
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function ExtendedGCD (a : Int, b : Int) : (Int, Int)'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    uid: microsoft.quantum.primitive.integer
+  - name: b
+    uid: microsoft.quantum.primitive.integer
+output:
+  content: (Int, Int)
+  types:
+  - types:
+    - uid: microsoft.quantum.primitive.integer
+    - uid: microsoft.quantum.primitive.integer

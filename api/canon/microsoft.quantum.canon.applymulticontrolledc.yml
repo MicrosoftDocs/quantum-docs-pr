@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applymulticontrolledc
+name: ApplyMultiControlledC
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => ()), ccnot : CCNOTop, controls : Qubit[], targets : Qubit[]) : ()'
+references: >2-
+   - [ *Michael A. Nielsen , Isaac L. Chuang*,
+       Quantum Computation and Quantum Information ](http://doi.org/10.1017/CBO9780511976667)
+input:
+  content: '(singlyControlledOp : (Qubit[] => ()), ccnot : CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: ccnot
+    uid: ccnotop
+  - name: controls
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+  - name: singlyControlledOp
+    types:
+    - uid: microsoft.quantum.primitive.qubit
+      isArray: true
+    - uid: microsoft.quantum.primitive.void
+  - name: targets
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.void
+functors:
+- Controlled

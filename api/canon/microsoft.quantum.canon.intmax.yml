@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.intmax
+name: IntMax
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function IntMax (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    uid: microsoft.quantum.primitive.integer
+  - name: b
+    uid: microsoft.quantum.primitive.integer
+output:
+  content: Int
+  types:
+  - uid: microsoft.quantum.primitive.integer

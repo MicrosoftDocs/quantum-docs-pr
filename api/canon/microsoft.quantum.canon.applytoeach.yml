@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeach
+name: ApplyToEach
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Applies a single-qubit operation to each element in a register.
+remarks: >2
+
+  ### Examples
+   Prepare a three-qubit $\ket{+} state:
+   ```qsharp
+       using (register = Qubit[3]) {
+           ApplyToEach(H, register);
+       }
+   ```
+syntax: "operation ApplyToEach (singleElementOperation : ('T => ()), register : 'T[]) : ()"
+seealso: >2-
+   - @"microsoft.quantum.canon.ApplyToEachA"
+   - @"microsoft.quantum.canon.ApplyToEachC"
+   - @"microsoft.quantum.canon.ApplyToEachCA"
+input:
+  content: "(singleElementOperation : ('T => ()), register : 'T[])"
+  types:
+  - name: register
+    uid: "'t"
+    isArray: true
+  - name: singleElementOperation
+    types:
+    - uid: "'t"
+    - uid: microsoft.quantum.primitive.void
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.void

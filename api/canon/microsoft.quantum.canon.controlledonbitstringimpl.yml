@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.controlledonbitstringimpl
+name: ControlledOnBitStringImpl
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Applies a unitary operator on the target register if the control register state corresponds to a specified bit mask.
+syntax: 'operation ControlledOnBitStringImpl (bits : Bool[], oracle : (Qubit[] => () : Adjoint, Controlled), controlRegister : Qubit[], targetRegister : Qubit[]) : ()'
+input:
+  content: '(bits : Bool[], oracle : (Qubit[] => () : Adjoint, Controlled), controlRegister : Qubit[], targetRegister : Qubit[])'
+  types:
+  - name: bits
+    uid: microsoft.quantum.primitive.bool
+    isArray: true
+  - name: controlRegister
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+  - name: oracle
+    types:
+    - uid: microsoft.quantum.primitive.qubit
+      isArray: true
+    - uid: microsoft.quantum.primitive.void
+  - name: targetRegister
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.void
+functors:
+- Adjoint
+- Controlled

@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bind
+name: Bind
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given an array of operations acting on a single input,
+   produces a new operation that
+   performs each given operation in sequence.
+remarks: >2
+
+  ### Examples
+   The following are equivalent:
+   ```Q#
+   let bound = Bind([U; V]);
+   bound(x);
+
+   U(x); V(x);
+   ```
+syntax: "function Bind (operations : ('T => ())[]) : ('T => ())"
+seealso: >2-
+   - @"microsoft.quantum.canon.bindc"
+   - @"microsoft.quantum.canon.binda"
+   - @"microsoft.quantum.canon.bindca"
+input:
+  content: "(operations : ('T => ())[])"
+  types:
+  - name: operations
+    isArray: true
+    types:
+    - uid: "'t"
+    - uid: microsoft.quantum.primitive.void
+output:
+  content: ('T => ())
+  types:
+  - summary: >2
+       A new operation that performs each given operation in sequence
+       on its input.
+    types:
+    - uid: "'t"
+    - uid: microsoft.quantum.primitive.void

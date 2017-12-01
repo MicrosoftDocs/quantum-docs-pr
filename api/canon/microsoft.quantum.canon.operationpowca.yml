@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowca
+name: OperationPowCA
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: "function OperationPowCA (oracle : ('T => () : Controlled, Adjoint), power : Int) : ('T => () : Controlled, Adjoint)"
+seealso: ' - @"microsoft.quantum.canon.operationpow"'
+input:
+  content: "(oracle : ('T => () : Controlled, Adjoint), power : Int)"
+  types:
+  - name: oracle
+    types:
+    - uid: "'t"
+    - uid: microsoft.quantum.primitive.void
+  - name: power
+    uid: microsoft.quantum.primitive.integer
+output:
+  content: "('T => () : Controlled, Adjoint)"
+  types:
+  - types:
+    - uid: "'t"
+    - uid: microsoft.quantum.primitive.void

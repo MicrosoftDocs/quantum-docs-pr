@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.measurepaulis
+name: MeasurePaulis
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given an array of multi-qubit Pauli operators, measures each using a specified measurement
+   gadget, then returns the array of results.
+syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result)) : Result[]'
+input:
+  content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result))'
+  types:
+  - name: gadget
+    types:
+    - types:
+      - uid: microsoft.quantum.primitive.pauli
+        isArray: true
+      - uid: microsoft.quantum.primitive.qubit
+        isArray: true
+    - uid: microsoft.quantum.primitive.result
+  - name: paulis
+    isArray: true
+    types:
+    - uid: microsoft.quantum.primitive.pauli
+  - name: target
+    uid: microsoft.quantum.primitive.qubit
+    isArray: true
+output:
+  content: Result[]
+  types:
+  - summary: >2-
+       The array of results obtained from measuring each element of `paulis`
+       on `target`.
+    uid: microsoft.quantum.primitive.result
+    isArray: true

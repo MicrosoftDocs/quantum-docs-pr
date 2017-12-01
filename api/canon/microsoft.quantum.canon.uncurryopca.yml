@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.uncurryopca
+name: UncurryOpCA
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: "function UncurryOpCA (curriedOp : ('T -> ('U => () : Controlled, Adjoint))) : (('T, 'U) => () : Controlled, Adjoint)"
+input:
+  content: "(curriedOp : ('T -> ('U => () : Controlled, Adjoint)))"
+  types:
+  - name: curriedOp
+    types:
+    - uid: "'t"
+    - types:
+      - uid: "'u"
+      - uid: microsoft.quantum.primitive.void
+output:
+  content: "(('T, 'U) => () : Controlled, Adjoint)"
+  types:
+  - types:
+    - types:
+      - uid: "'t"
+      - uid: "'u"
+    - uid: microsoft.quantum.primitive.void

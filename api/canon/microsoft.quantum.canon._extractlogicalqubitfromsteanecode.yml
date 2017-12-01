@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon._extractlogicalqubitfromsteanecode
+name: _ExtractLogicalQubitFromSteaneCode
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Syndrome measurement and the inverse of embedding.
+   $X$- and $Z$-stabilizers are not treated equally,
+   which is due to the particular choice of the encoding circuit.
+   This asymmetry leads to a different syndrome extraction routine.
+   One could measure the syndrome by measuring multi-qubit Pauli operator
+   directly on the code state, but for the distillation purpose
+   the logical qubit is returned into a single qubit,
+   in course of which the syndrome measurements can be done without further ancillas.
+remarks: " > [!WARNING]\n > This routine is tailored \n > to a particular encoding circuit for Steane's 7 qubit code;\n > if the encoding circuit is modified then the syndrome outcome\n > might have to be interpreted differently."
+syntax: 'operation _ExtractLogicalQubitFromSteaneCode (code : LogicalRegister) : (Qubit, Int, Int)'
+input:
+  content: '(code : LogicalRegister)'
+  types:
+  - name: code
+    uid: logicalregister
+output:
+  content: (Qubit, Int, Int)
+  types:
+  - summary: >2
+       The logical qubit and a pair of integers for $X$-syndrome and $Z$-syndrome.
+       They represent the index of the code qubit on which a single $X$- or $Z$-error
+       would have caused the measured syndrome.
+    types:
+    - uid: microsoft.quantum.primitive.qubit
+    - uid: microsoft.quantum.primitive.integer
+    - uid: microsoft.quantum.primitive.integer

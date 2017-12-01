@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.trotter1implca
+name: Trotter1ImplCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Implementation of the first-order Trotter–Suzuki integrator.
+remarks: >2-
+
+  ### Examples
+   The following are equivalent:
+   ```Q#
+   op(0, deltaT, target);
+   op(1, deltaT, target);
+
+   Trotter1ImplCA((2, op), deltaT, target);
+   ```
+syntax: "operation Trotter1ImplCA (nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), stepSize : Double, target : 'T) : ()"
+input:
+  content: "(nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), stepSize : Double, target : 'T)"
+  types:
+  - name: nSteps
+    uid: microsoft.quantum.primitive.integer
+  - name: op
+    types:
+    - types:
+      - uid: microsoft.quantum.primitive.integer
+      - uid: microsoft.quantum.primitive.float
+      - uid: "'t"
+    - uid: microsoft.quantum.primitive.void
+  - name: stepSize
+    uid: microsoft.quantum.primitive.float
+  - name: target
+    uid: "'t"
+output:
+  content: ()
+  types:
+  - uid: microsoft.quantum.primitive.void
+functors:
+- Adjoint
+- Controlled

@@ -1,5 +1,5 @@
 - name: Reference
-  href: overview.md
+  href: index.md
   items:
   - name: Microsoft.Quantum.Primitive
     uid: microsoft.quantum.primitive

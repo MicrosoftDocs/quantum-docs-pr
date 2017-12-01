@@ -186,7 +186,3 @@ Applying the adjoint of the quantum Fourier transform, we therefore obtain the b
 In Q#, this is implemented by the <xref:microsoft.quantum.canon.quantumphaseestimation> operation, which takes a <xref:microsoft.quantum.canon.discreteoracle> implementing application of $U^m$ as a function of positive integers $m$.
 
 <!-- FIXME: ensure that |k〉 notation is defined above. -->
-
-
-### Period Finding ###
-

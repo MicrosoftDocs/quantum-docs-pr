@@ -8,4 +8,4 @@
   * Generate docs:
     - `msbuild /t:QsharpDocgen Solid\src\Quantum.Primitives`
     - `msbuild /t:QsharpDocgen Libraries\Microsoft.Quantum.Canon`
-  * Run 
+  * Run `sync.cmd`

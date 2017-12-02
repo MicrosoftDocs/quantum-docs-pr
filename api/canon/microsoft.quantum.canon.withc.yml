@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.withc
+name: WithC
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: "operation WithC (outerOperation : ('T => () : Adjoint), innerOperation : ('T => () : Controlled), target : 'T) : ()"
+input:
+  content: "(outerOperation : ('T => () : Adjoint), innerOperation : ('T => () : Controlled), target : 'T)"
+  types:
+  - name: innerOperation
+    isOperation: true
+    types:
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
+  - name: outerOperation
+    isOperation: true
+    types:
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
+  - name: target
+    content: "'T"
+    isLocal: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.with
+functors:
+- Controlled

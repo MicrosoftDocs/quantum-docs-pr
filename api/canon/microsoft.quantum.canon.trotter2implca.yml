@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.trotter2implca
+name: Trotter2ImplCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Implementation of the second-order Trotter–Suzuki integrator.
+remarks: >2-
+
+  ### Examples
+   The following are equivalent:
+   ```Q#
+   op(0, deltaT / 2.0, target);
+   op(1, deltaT / 2.0, target);
+   op(1, deltaT / 2.0, target);
+   op(0, deltaT / 2.0, target);
+
+   Trotter2ImplCA((2, op), deltaT, target);
+   ```
+syntax: "operation Trotter2ImplCA (nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), stepSize : Double, target : 'T) : ()"
+input:
+  content: "(nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), stepSize : Double, target : 'T)"
+  types:
+  - name: nSteps
+    content: Int
+    isPrimitive: true
+  - name: op
+    isOperation: true
+    types:
+    - types:
+      - content: Int
+        isPrimitive: true
+      - content: Double
+        isPrimitive: true
+      - content: "'T"
+        isLocal: true
+    - content: ()
+      isPrimitive: true
+  - name: stepSize
+    content: Double
+    isPrimitive: true
+  - name: target
+    content: "'T"
+    isLocal: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The type which each time step should act upon; typically, either
+     `Qubit[]` or `Qubit`.

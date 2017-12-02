@@ -1,7 +1,0 @@
-### YamlMime:QSharpType
-uid: microsoft.quantum.canon.discreteoracle
-name: DiscreteOracle
-type: newtype
-namespace: microsoft.quantum.canon
-summary: "Represents a discrete-time oracle U^m for a fixed operation U and a non-negative integer m."
-syntax: ((Int, Qubit[]) => ():Adjoint,Controlled)

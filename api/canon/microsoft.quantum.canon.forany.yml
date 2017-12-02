@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.forany
+name: ForAny
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " The `ForAny` function takes an array and a predicate that is defined \n for the elements of the array, and checks if at least one element of \n the array satisfies the predicate. \n"
+remarks: " The function is defined for generic types, i.e., whenever we have \n an array `'T[]` and a function `predicate: 'T -> Bool` we can produce\n a `Bool` value that indicates if some element satisfies `predicate`. \n "
+syntax: "function ForAny (predicate : ('T -> Bool), array : 'T[]) : Bool"
+input:
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: array
+    content: "'T"
+    isLocal: true
+    isArray: true
+  - name: predicate
+    isFunction: true
+    types:
+    - content: "'T"
+      isLocal: true
+    - content: Bool
+      isPrimitive: true
+output:
+  content: Bool
+  types:
+  - summary: ' A `Bool` value of the OR function of the predicate applied to all elements.'
+    content: Bool
+    isPrimitive: true
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The type of `array` elements.

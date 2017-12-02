@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.arcsinh
+name: ArcSinh
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Computes the inverse hyperbolic secant of a number.
+syntax: 'function ArcSinh (x : Double) : Double'
+input:
+  content: '(x : Double)'
+  types:
+  - name: x
+    content: Double
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - summary: ' A real number $y$ such that $x = \sech(y)$.'
+    content: Double
+    isPrimitive: true

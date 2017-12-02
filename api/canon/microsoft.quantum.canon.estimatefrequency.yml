@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.estimatefrequency
+name: EstimateFrequency
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given a preparation and measurement, estimates the frequency
+   with which that measurement suceeds (returns `Zero`) by
+   performing a given number of trials.
+syntax: 'operation EstimateFrequency (preparation : (Qubit[] => ()), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
+input:
+  content: '(preparation : (Qubit[] => ()), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: measurement
+    isOperation: true
+    types:
+    - content: Qubit
+      isPrimitive: true
+      isArray: true
+    - content: Result
+      isPrimitive: true
+  - name: nMeasurements
+    content: Int
+    isPrimitive: true
+  - name: nQubits
+    content: Int
+    isPrimitive: true
+  - name: preparation
+    isOperation: true
+    types:
+    - content: Qubit
+      isPrimitive: true
+      isArray: true
+    - content: ()
+      isPrimitive: true
+output:
+  content: Double
+  types:
+  - summary: >2-
+       An estimate $\hat{p}$ of the frequency with which
+       $M(P(\ket{00 \cdots 0}\bra{00 \cdots 0}))$ returns `Zero`,
+       obtained using the unbiased binomial estimator $\hat{p} =
+       n\_{\uparrow} / n\_{\text{measurements}}$, where $n\_{\uparrow}$ is
+       the number of `Zero` results observed.
+
+       This is particularly important on target machines which respect
+       physical limitations, such that probabilities cannot be measured.
+    content: Double
+    isPrimitive: true

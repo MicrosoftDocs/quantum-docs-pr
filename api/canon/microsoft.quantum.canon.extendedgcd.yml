@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.extendedgcd
+name: ExtendedGCD
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Computes tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a  \n greatest common divisor of a and b. The GCD is always positive.\n "
+syntax: 'function ExtendedGCD (a : Int, b : Int) : (Int, Int)'
+references: ' - This implementation is according to https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    content: Int
+    isPrimitive: true
+  - name: b
+    content: Int
+    isPrimitive: true
+output:
+  content: (Int, Int)
+  types:
+  - summary: >2
+       Tuple (u,v) with properties u⋅a + v⋅b = GCD(a,b)
+    types:
+    - content: Int
+      isPrimitive: true
+    - content: Int
+      isPrimitive: true

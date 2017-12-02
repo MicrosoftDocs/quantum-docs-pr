@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.logof2
+name: LogOf2
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Returns the constant $\ln(2)$, where $\ln$
+   is the natural (base-$e$) logarithm.
+syntax: 'function LogOf2 () : Double'
+input:
+  content: ()
+  types: []
+output:
+  content: Double
+  types:
+  - content: Double
+    isPrimitive: true

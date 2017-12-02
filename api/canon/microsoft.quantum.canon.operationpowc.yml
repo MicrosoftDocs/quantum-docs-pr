@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowc
+name: OperationPowC
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: "function OperationPowC (oracle : ('T => () : Controlled), power : Int) : ('T => () : Controlled)"
+input:
+  content: "(oracle : ('T => () : Controlled), power : Int)"
+  types:
+  - name: oracle
+    isOperation: true
+    types:
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
+  - name: power
+    content: Int
+    isPrimitive: true
+output:
+  content: "('T => () : Controlled)"
+  types:
+  - isOperation: true
+    types:
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.operationpow

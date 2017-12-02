@@ -1,7 +1,0 @@
-### YamlMime:QSharpType
-uid: microsoft.quantum.canon.complex
-name: Complex
-type: newtype
-namespace: Microsoft.Quantum.Canon
-summary: ' Represents a complex number by its real and imaginary components.'
-syntax: newtype Complex = (Double, Double);

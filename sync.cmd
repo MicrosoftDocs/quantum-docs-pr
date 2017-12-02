@@ -3,6 +3,9 @@
 :: 
 call :updateOne Solid\src\Quantum.Primitives api\prelude
 call :updateOne Libraries\Microsoft.Quantum.Canon api\canon
+
+git commit -m "Updating from script."
+git push
 EXIT /B
 
 ::

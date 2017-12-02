@@ -25,6 +25,8 @@ EXIT /B
 ::
 :build
 msbuild Solid\src\qflat\docgen
+msbuild /t:clean Solid\src\Quantum.Primitives
+msbuild /t:clean Libraries\Microsoft.Quantum.Canon
 msbuild /t:QsharpDocgen Solid\src\Quantum.Primitives
 msbuild /t:QsharpDocgen Libraries\Microsoft.Quantum.Canon
 EXIT /B

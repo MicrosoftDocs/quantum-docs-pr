@@ -31,6 +31,16 @@ ms.topic: article-type-from-white-list
 
 * * *
 
+1. Level 1
+    - test ul in ol
+    - test 2
+4. Level 2
+    1. test ol
+    2. test ol
+        - test
+        - test2
+    4. test
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus. 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum nunc dolor, eu vehicula dui bibendum sit amet. Proin ac ullamcorper risus.

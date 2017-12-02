@@ -1,11 +1,32 @@
 ::
 :: This script syncs api\prelude and api\canon with the build output
 :: 
+call :prepare
+call :build
 call :updateOne Solid\src\Quantum.Primitives api\prelude
-call :updateOne Libraries\Microsoft.Quantum.Canon api\canon
+REM call :updateOne Libraries\Microsoft.Quantum.Canon api\canon
 
 git commit -m "Updating from script."
 git push
+EXIT /B
+
+
+::
+:: Prepares the repo for building
+::
+:prepare
+git submodule foreach git checkout origin/master
+Solid\bin\nuget restore Solid\src\Qflat.sln
+Solid\bin\nuget restore Libraries\QsharpLibraries.sln
+EXIT /B
+
+::
+:: builds docgen and the yaml files
+::
+:build
+msbuild Solid\src\qflat\docgen
+msbuild /t:QsharpDocgen Solid\src\Quantum.Primitives
+msbuild /t:QsharpDocgen Libraries\Microsoft.Quantum.Canon
 EXIT /B
 
 ::

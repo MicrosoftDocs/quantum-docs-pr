@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.randomreal
+name: RandomReal
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Returns a random real number in the interval $[0, 1]$.
+syntax: 'operation RandomReal (bitsRandom : Int) : Double'
+input:
+  content: '(bitsRandom : Int)'
+  types:
+  - name: bitsRandom
+    content: Int
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - summary: >2-
+       A real number $x = k / 2^{\texttt{bitsRandom} - 1}$ for an integer
+       $k$ sampled from the interval $[0, 2^{\texttt{bitsRandom}})$
+       with probability $\Pr(k) = 1 / 2^{\texttt{bitsRandom}}$.
+    content: Double
+    isPrimitive: true

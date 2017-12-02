@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytofirstqubita
+name: ApplyToFirstQubitA
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyToFirstQubitA (op : (Qubit => () : Adjoint), register : Qubit[]) : ()'
+input:
+  content: '(op : (Qubit => () : Adjoint), register : Qubit[])'
+  types:
+  - name: op
+    isOperation: true
+    types:
+    - content: Qubit
+      isPrimitive: true
+    - content: ()
+      isPrimitive: true
+  - name: register
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytofirstqubit
+functors:
+- Adjoint

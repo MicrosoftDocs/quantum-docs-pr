@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytofirsttwoqubitsc
+name: ApplyToFirstTwoQubitsC
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyToFirstTwoQubitsC (op : ((Qubit, Qubit) => () : Controlled), register : Qubit[]) : ()'
+input:
+  content: '(op : ((Qubit, Qubit) => () : Controlled), register : Qubit[])'
+  types:
+  - name: op
+    isOperation: true
+    types:
+    - types:
+      - content: Qubit
+        isPrimitive: true
+      - content: Qubit
+        isPrimitive: true
+    - content: ()
+      isPrimitive: true
+  - name: register
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytofirsttwoqubits
+functors:
+- Controlled

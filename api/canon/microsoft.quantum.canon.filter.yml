@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.filter
+name: Filter
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " The `Filter` function takes an array and a predicate that is defined \n for the elements of the array, and returns an array that consists of \n those elements that satisfy the predicate. \n"
+remarks: " The function is defined for generic types, i.e., whenever we have \n an array `'T[]` and a predicate `'T -> Bool` we can filter elements. \n"
+syntax: "function Filter (predicate : ('T -> Bool), array : 'T[]) : 'T[]"
+input:
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: array
+    content: "'T"
+    isLocal: true
+    isArray: true
+  - name: predicate
+    isFunction: true
+    types:
+    - content: "'T"
+      isLocal: true
+    - content: Bool
+      isPrimitive: true
+output:
+  content: "'T[]"
+  types:
+  - summary: " An array `'T[]` of elements that satisfy the predicate."
+    content: "'T"
+    isLocal: true
+    isArray: true
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The type of `array` elements.

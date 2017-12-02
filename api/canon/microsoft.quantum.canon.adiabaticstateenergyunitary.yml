@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.adiabaticstateenergyunitary
+name: AdiabaticStateEnergyUnitary
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Performs state preparation, and adiabatic state preparation, and phase
+   estimation.
+syntax: 'operation AdiabaticStateEnergyUnitary (statePrepUnitary : (Qubit[] => ()), adiabaticUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double), qubits : Qubit[]) : Double'
+input:
+  content: '(statePrepUnitary : (Qubit[] => ()), adiabaticUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double), qubits : Qubit[])'
+  types:
+  - name: adiabaticUnitary
+    isOperation: true
+    types:
+    - content: Qubit
+      isPrimitive: true
+      isArray: true
+    - content: ()
+      isPrimitive: true
+  - name: phaseEstAlgorithm
+    isOperation: true
+    types:
+    - types:
+      - uid: discreteoracle
+      - content: Qubit
+        isPrimitive: true
+        isArray: true
+    - content: Double
+      isPrimitive: true
+  - name: qpeUnitary
+    isOperation: true
+    types:
+    - content: Qubit
+      isPrimitive: true
+      isArray: true
+    - content: ()
+      isPrimitive: true
+  - name: qubits
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: statePrepUnitary
+    isOperation: true
+    types:
+    - content: Qubit
+      isPrimitive: true
+      isArray: true
+    - content: ()
+      isPrimitive: true
+output:
+  content: Double
+  types:
+  - summary: >2-
+       An estimate $\hat{\phi}$ of the ground state energy $\phi$
+       of the ground state energy of the generator represented by $U$.
+    content: Double
+    isPrimitive: true

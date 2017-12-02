@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applymulticontrolledc
+name: ApplyMultiControlledC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Applies a multiply controlled version of singly controlled
+   operation.
+remarks: >2
+   This operation uses only clean ancilla qubits.
+
+   For the explanation and circuit diagram see Figure 4.10, Section 4.3 in Nielsen & Chuang
+syntax: 'operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => ()), ccnot : CCNOTop, controls : Qubit[], targets : Qubit[]) : ()'
+references: >2-
+   - [ *Michael A. Nielsen , Isaac L. Chuang*,
+       Quantum Computation and Quantum Information ](http://doi.org/10.1017/CBO9780511976667)
+input:
+  content: '(singlyControlledOp : (Qubit[] => ()), ccnot : CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: ccnot
+    uid: ccnotop
+  - name: controls
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: singlyControlledOp
+    isOperation: true
+    types:
+    - content: Qubit
+      isPrimitive: true
+      isArray: true
+    - content: ()
+      isPrimitive: true
+  - name: targets
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Controlled

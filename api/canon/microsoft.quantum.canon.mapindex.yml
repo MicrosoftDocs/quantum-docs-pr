@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.mapindex
+name: MapIndex
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   The `MapIndex` function takes an array and a function that is defined
+   for the indexed elements of the array, and returns a new array that consists
+   of the images of the original array under the function.
+remarks: >2
+   The function is defined for generic types, i.e., whenever we have
+   an array `'T[]` and a function `mapper: (Int, 'T) -> 'U` we can map the elements
+   of the array and produce a new array of type `'U[]`.
+
+
+  ### Examples
+   The following two lines are equivalent:
+   ```Q#
+   let arr = MapIndex(f, [x0; x1; x2]);
+   let arr = [f(0, x0); f(1, x1), f(2; x2)];
+   ```
+syntax: "function MapIndex (mapper : ((Int, 'T) -> 'U), array : 'T[]) : 'U[]"
+input:
+  content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
+  types:
+  - name: array
+    content: "'T"
+    isLocal: true
+    isArray: true
+  - name: mapper
+    isFunction: true
+    types:
+    - types:
+      - content: Int
+        isPrimitive: true
+      - content: "'T"
+        isLocal: true
+    - content: "'U"
+      isLocal: true
+output:
+  content: "'U[]"
+  types:
+  - summary: >2
+       An array `'U[]` of elements that are mapped by the `mapper` function.
+    content: "'U"
+    isLocal: true
+    isArray: true
+seeAlso:
+- microsoft.quantum.canon.map
+typeParameters:
+- uid: "'T"
+  summary: ' The type of `array` elements.'
+- uid: "'U"
+  summary: >2
+     The result type of the `mapper` function.

@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.css
+name: CSS
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Represents a Calderbank–Shor–Steane (CSS) code as defined by
+   its encoder, decoder, and its syndrome measurement procedures
+   for $X$ and $Z$ errors, respectively.
+syntax: newtype CSS = (EncodeOp, DecodeOp, SyndromeMeasOp, SyndromeMeasOp);

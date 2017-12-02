@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.controlledonint
+name: ControlledOnInt
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified positive integer.
+remarks: ' Obtained by partial application of @"microsoft.quantum.canon.ControlledOnIntImpl".'
+syntax: "function ControlledOnInt (numberState : Int, oracle : ('T => () : Adjoint, Controlled)) : ((Qubit[], 'T) => () : Adjoint, Controlled)"
+input:
+  content: "(numberState : Int, oracle : ('T => () : Adjoint, Controlled))"
+  types:
+  - name: numberState
+    content: Int
+    isPrimitive: true
+  - name: oracle
+    isOperation: true
+    types:
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
+output:
+  content: "((Qubit[], 'T) => () : Adjoint, Controlled)"
+  types:
+  - summary: >2
+       A unitary operator that applies `oracle` on the target register if the control register state corresponds to the number state `numberState`.
+    isOperation: true
+    types:
+    - types:
+      - content: Qubit
+        isPrimitive: true
+        isArray: true
+      - content: "'T"
+        isLocal: true
+    - content: ()
+      isPrimitive: true

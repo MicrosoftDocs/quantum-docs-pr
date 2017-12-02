@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.expmod
+name: ExpMod
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Let us denote expBase by x, power by p and modulus by N. \n The function returns xᵖ mod N . \n We assume that N,x are positive and power is non-negative."
+syntax: 'function ExpMod (expBase : Int, power : Int, modulus : Int) : Int'
+input:
+  content: '(expBase : Int, power : Int, modulus : Int)'
+  types:
+  - name: expBase
+    content: Int
+    isPrimitive: true
+  - name: modulus
+    content: Int
+    isPrimitive: true
+  - name: power
+    content: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - content: Int
+    isPrimitive: true

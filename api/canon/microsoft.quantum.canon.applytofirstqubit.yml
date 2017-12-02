@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytofirstqubit
+name: ApplyToFirstQubit
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: ' Applies operation op to the first qubit in the register'
+syntax: 'operation ApplyToFirstQubit (op : (Qubit => ()), register : Qubit[]) : ()'
+input:
+  content: '(op : (Qubit => ()), register : Qubit[])'
+  types:
+  - name: op
+    isOperation: true
+    types:
+    - content: Qubit
+      isPrimitive: true
+    - content: ()
+      isPrimitive: true
+  - name: register
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true

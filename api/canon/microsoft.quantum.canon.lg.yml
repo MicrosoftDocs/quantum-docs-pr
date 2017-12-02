@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.lg
+name: Lg
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Computes the base-2 logarithm of a number.
+syntax: 'function Lg (input : Double) : Double'
+input:
+  content: '(input : Double)'
+  types:
+  - name: input
+    content: Double
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - summary: ' The base-2 logarithm $y = \log_2(x)$ such that $x = 2^y$.'
+    content: Double
+    isPrimitive: true

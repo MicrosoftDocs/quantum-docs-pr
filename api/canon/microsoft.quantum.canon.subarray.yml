@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.subarray
+name: Subarray
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Takes an array and a list of locations and \n produces a new array formed from the elements of the original \n array that match the given locations.\n"
+remarks: " The function is defined for generic types, i.e., whenever we have \n an array `'T[]` and a list of locations `Int[]` defining the subarray.\n\n If `Length(indices) < Lenth(array)`, this function will return a\n subset of `array`. On the other hand, if `indices` contains repeated\n elements, the corresponding elements of `array` will likewise be\n repeated.\n If `indices` and `array` are the same length, this this function\n provides permutations of `array`.\n"
+syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
+input:
+  content: "(indices : Int[], array : 'T[])"
+  types:
+  - name: array
+    content: "'T"
+    isLocal: true
+    isArray: true
+  - name: indices
+    content: Int
+    isPrimitive: true
+    isArray: true
+output:
+  content: "'T[]"
+  types:
+  - summary: >2-
+       An array `out` of elements whose indices correspond to the subarray,
+       such that `out[idx] == array[indices[idx]]`.
+    content: "'T"
+    isLocal: true
+    isArray: true
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The type of `array` elements.

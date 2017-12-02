@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.reflectionoracle
+name: ReflectionOracle
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Represents a reflection oracle.
+   - The operation implementing the given reflection.
+   - The phase ϕ by which to rotate the reflected subspace.
+   - The qubit register on which to perform the given reflection〉.
+remarks: >2-
+   This oracle $O = \boldone - (1 - e^{- i \phi}) \ket{\psi}\bra{\psi}$
+   performs a partial reflection by a phase $\phi$ about a single pure state
+   $\ket{\psi}$.
+syntax: 'newtype ReflectionOracle = ((Double, Qubit[]) => () : Adjoint, Controlled);'

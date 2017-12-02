@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.modulus
+name: Modulus
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: ' Computes canonical residue of `value` modulo `modulus`.'
+remarks: >2-
+   This function behaves the way a mathematician would expect Mod function to behave,
+   as opposed to how operator `%` is behaving in C# and Q#.
+syntax: 'function Modulus (value : Int, modulus : Int) : Int'
+input:
+  content: '(value : Int, modulus : Int)'
+  types:
+  - name: modulus
+    content: Int
+    isPrimitive: true
+  - name: value
+    content: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - summary: >2
+       Integer r between 0 and `modulus` - 1 such that value - r is divisible by modulus
+    content: Int
+    isPrimitive: true

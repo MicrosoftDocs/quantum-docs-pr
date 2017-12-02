@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applymulticontrolledca
+name: ApplyMultiControlledCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => () : Adjoint), ccnot : CCNOTop, controls : Qubit[], targets : Qubit[]) : ()'
+input:
+  content: '(singlyControlledOp : (Qubit[] => () : Adjoint), ccnot : CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: ccnot
+    uid: ccnotop
+  - name: controls
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: singlyControlledOp
+    isOperation: true
+    types:
+    - content: Qubit
+      isPrimitive: true
+      isArray: true
+    - content: ()
+      isPrimitive: true
+  - name: targets
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applymulticontrolledca
+functors:
+- Adjoint
+- Controlled

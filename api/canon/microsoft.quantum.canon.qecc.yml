@@ -1,0 +1,9 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.qecc
+name: QECC
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Represents an error-correcting code as defined by its encoder,
+   decoder, and syndrome measurement procedure.
+syntax: newtype QECC = (EncodeOp, DecodeOp, SyndromeMeasOp);

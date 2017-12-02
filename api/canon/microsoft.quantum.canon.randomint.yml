@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.randomint
+name: RandomInt
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Generates a random number uniformly sampled in the interval
+   $[0, \texttt{maxInt})$.
+remarks: >2-
+   This operation uses postselection of an integer drawn from
+   a uniform distribution whose maximum is a power of two,
+   and thus may not make a constant number of calls to the
+   underlying source of random classical bits.
+syntax: 'operation RandomInt (maxInt : Int) : Int'
+input:
+  content: '(maxInt : Int)'
+  types:
+  - name: maxInt
+    content: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - summary: >2
+       An integer $x$ uniformly at random from the given interval;
+       that is, with $\Pr(x) = \frac{1}{\texttt{maxInt}}$.
+    content: Int
+    isPrimitive: true

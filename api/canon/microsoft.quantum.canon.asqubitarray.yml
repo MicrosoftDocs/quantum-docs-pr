@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.asqubitarray
+name: AsQubitArray
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Used to cast UDTs that are derived from type Qubit[] down to Qubit[].
+   Handy when used with generic functions like Head and Tail.
+syntax: 'function AsQubitArray (arr : Qubit[]) : Qubit[]'
+input:
+  content: '(arr : Qubit[])'
+  types:
+  - name: arr
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: Qubit[]
+  types:
+  - content: Qubit
+    isPrimitive: true
+    isArray: true

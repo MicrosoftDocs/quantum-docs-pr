@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.preparechoistatec
+name: PrepareChoiStateC
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation PrepareChoiStateC (op : (Qubit[] => () : Controlled, Adjoint), reference : Qubit[], target : Qubit[]) : ()'
+input:
+  content: '(op : (Qubit[] => () : Controlled, Adjoint), reference : Qubit[], target : Qubit[])'
+  types:
+  - name: op
+    isOperation: true
+    types:
+    - content: Qubit
+      isPrimitive: true
+      isArray: true
+    - content: ()
+      isPrimitive: true
+  - name: reference
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: target
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.preparechoistate
+functors:
+- Controlled

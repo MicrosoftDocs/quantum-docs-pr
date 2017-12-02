@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.noop
+name: NoOp
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: ' Performs the identity operation (no-op) on a register of qubits.'
+syntax: 'operation NoOp (qubits : Qubit[]) : ()'
+input:
+  content: '(qubits : Qubit[])'
+  types:
+  - name: qubits
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

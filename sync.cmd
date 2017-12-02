@@ -12,6 +12,6 @@ EXIT /B
 set source=%1
 set target=%2
 git rm %target%\*
-xcopy %source%\obj\qsharp\docs %target%
+xcopy %source%\obj\qsharp\docs %target% /I
 git add %target%
 EXIT /B

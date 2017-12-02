@@ -7,10 +7,6 @@ summary: >2
    Given an operation representing a gate $U$, returns a new operation
    $U^m$ for a power $m$.
 syntax: "function OperationPow (oracle : ('T => ()), power : Int) : ('T => ())"
-seealso: >2-
-   - @"microsoft.quantum.canon.operationpowc"
-   - @"microsoft.quantum.canon.operationpowa"
-   - @"microsoft.quantum.canon.operationpowca"
 input:
   content: "(oracle : ('T => ()), power : Int)"
   types:
@@ -35,3 +31,7 @@ output:
       isLocal: true
     - content: ()
       isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.operationpowc
+- microsoft.quantum.canon.operationpowa
+- microsoft.quantum.canon.operationpowca

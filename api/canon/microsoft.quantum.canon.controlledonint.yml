@@ -5,9 +5,10 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: >2
    Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified positive integer.
-syntax: 'function ControlledOnInt (numberState : Int, oracle : (Qubit[] => () : Adjoint, Controlled)) : ((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
+remarks: ' Obtained by partial application of @"microsoft.quantum.canon.ControlledOnIntImpl".'
+syntax: "function ControlledOnInt (numberState : Int, oracle : ('T => () : Adjoint, Controlled)) : ((Qubit[], 'T) => () : Adjoint, Controlled)"
 input:
-  content: '(numberState : Int, oracle : (Qubit[] => () : Adjoint, Controlled))'
+  content: "(numberState : Int, oracle : ('T => () : Adjoint, Controlled))"
   types:
   - name: numberState
     content: Int
@@ -15,13 +16,12 @@ input:
   - name: oracle
     isOperation: true
     types:
-    - content: Qubit
-      isPrimitive: true
-      isArray: true
+    - content: "'T"
+      isLocal: true
     - content: ()
       isPrimitive: true
 output:
-  content: '((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
+  content: "((Qubit[], 'T) => () : Adjoint, Controlled)"
   types:
   - summary: >2
        A unitary operator that applies `oracle` on the target register if the control register state corresponds to the number state `numberState`.
@@ -31,8 +31,7 @@ output:
       - content: Qubit
         isPrimitive: true
         isArray: true
-      - content: Qubit
-        isPrimitive: true
-        isArray: true
+      - content: "'T"
+        isLocal: true
     - content: ()
       isPrimitive: true

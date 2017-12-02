@@ -7,7 +7,15 @@ summary: >2
    Given an operation with two inputs, applies Curry's isomorphism
    $f(x, y) \equiv f(x)(y)$ to return an operation of one input which
    returns an operation of one input.
-remarks: " The following are equivalent:\n ```qsharp\n op(x, y);\n \n let curried = CurryOp(op);\n let partial = curried(x);\n partial(y);\n ```"
+remarks: >2-
+   The following are equivalent:
+   ```qsharp
+   op(x, y);
+
+   let curried = CurryOp(op);
+   let partial = curried(x);
+   partial(y);
+   ```
 syntax: "function CurryOp (op : (('T, 'U) => ())) : ('T -> ('U => ()))"
 input:
   content: "(op : (('T, 'U) => ()))"

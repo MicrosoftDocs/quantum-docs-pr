@@ -11,8 +11,11 @@ functions:
   - uid: microsoft.quantum.canon.isresultone
     summary: ' The `IsResultOne` function tests if a given Result value is equal to `One`.'
   - uid: microsoft.quantum.canon.filter
+    summary: " The `Filter` function takes an array and a predicate that is defined \n for the elements of the array, and returns an array that consists of \n those elements that satisfy the predicate. \n"
   - uid: microsoft.quantum.canon.forall
+    summary: " The `ForAll` function takes an array and a predicate that is defined \n for the elements of the array, and checks if all elements of the \n array satisfy the predicate. \n"
   - uid: microsoft.quantum.canon.forany
+    summary: " The `ForAny` function takes an array and a predicate that is defined \n for the elements of the array, and checks if at least one element of \n the array satisfies the predicate. \n"
   - uid: microsoft.quantum.canon.map
     summary: >2
        The `Map` function takes an array and a function that is defined
@@ -24,12 +27,20 @@ functions:
        for the indexed elements of the array, and returns a new array that consists
        of the images of the original array under the function.
   - uid: microsoft.quantum.canon.subarray
+    summary: " Takes an array and a list of locations and \n produces a new array formed from the elements of the original \n array that match the given locations.\n"
   - uid: microsoft.quantum.canon.curryopimpl
   - uid: microsoft.quantum.canon.curryop
     summary: >2
        Given an operation with two inputs, applies Curry's isomorphism
        $f(x, y) \equiv f(x)(y)$ to return an operation of one input which
        returns an operation of one input.
+  - uid: microsoft.quantum.canon.uncurryop
+    summary: >2
+       Given a function which returns operations,
+       returns a new operation which takes both inputs
+       as a tuple.
+  - uid: microsoft.quantum.canon.uncurryopc
+  - uid: microsoft.quantum.canon.uncurryopa
   - uid: microsoft.quantum.canon.uncurryopca
   - uid: microsoft.quantum.canon.interpolatedevolution
     summary: >2
@@ -52,6 +63,9 @@ functions:
     summary: >2
        Produces a positive integer from a string of Results in in little Endian format.
   - uid: microsoft.quantum.canon.asqubitarray
+    summary: >2-
+       Used to cast UDTs that are derived from type Qubit[] down to Qubit[].
+       Handy when used with generic functions like Head and Tail.
   - uid: microsoft.quantum.canon.assertalmostequaltol
     summary: >2
        Asserts that a classical floating point variable has the expected value up to a given
@@ -109,14 +123,20 @@ functions:
     summary: >2
        Computes the inverse hyperbolic tangent of a number.
   - uid: microsoft.quantum.canon.modulus
-    summary: ' Computes canonical residue of `value` modulo `modulus`. '
+    summary: ' Computes canonical residue of `value` modulo `modulus`.'
   - uid: microsoft.quantum.canon.expmod
+    summary: " Let us denote expBase by x, power by p and modulus by N. \n The function returns xᵖ mod N . \n We assume that N,x are positive and power is non-negative."
   - uid: microsoft.quantum.canon.extendedgcd
+    summary: " Computes tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a  \n greatest common divisor of a and b. The GCD is always positive.\n "
   - uid: microsoft.quantum.canon.iscoprime
+    summary: >2
+       Returns true if a and b are co-prime and false otherwise.
   - uid: microsoft.quantum.canon.inversemod
-  - uid: microsoft.quantum.canon.applytoeachf
+    summary: >2
+       Returns b such that `a`⋅b = 1 (mod `modulus`)
   - uid: microsoft.quantum.canon.ignore
-    summary: ' Ignores the output of an operation or function.'
+    summary: >2
+       Ignores the output of an operation or function.
   - uid: microsoft.quantum.canon.logof2
     summary: >2-
        Returns the constant $\ln(2)$, where $\ln$
@@ -196,6 +216,9 @@ operations:
   - uid: microsoft.quantum.canon.preparechoistatec
   - uid: microsoft.quantum.canon.preparechoistatea
   - uid: microsoft.quantum.canon.preparechoistateca
+  - uid: microsoft.quantum.canon.uncurryopimpl
+  - uid: microsoft.quantum.canon.uncurryopcimpl
+  - uid: microsoft.quantum.canon.uncurryopaimpl
   - uid: microsoft.quantum.canon.uncurryopcaimpl
   - uid: microsoft.quantum.canon.applytofirstqubit
     summary: ' Applies operation op to the first qubit in the register'
@@ -214,9 +237,16 @@ operations:
   - uid: microsoft.quantum.canon.applytofirstthreequbitsc
   - uid: microsoft.quantum.canon.applytofirstthreequbitsca
   - uid: microsoft.quantum.canon.applymulticontrolledc
+    summary: >2
+       Applies a multiply controlled version of singly controlled
+       operation.
   - uid: microsoft.quantum.canon.applymulticontrolledca
   - uid: microsoft.quantum.canon.andladder
+    summary: >2-
+       Applies a unitary given by the following map on computational basis vectors:
+       |x₁,…,xₙ⟩|y₁,…,yₙ₋₁⟩ ↦ |x₁,…,xₙ⟩|y₁⊕(x₁∧x₂),…,yₙ₋₁⊕(x₁∧x₂∧…∧xₙ)⟩
   - uid: microsoft.quantum.canon.applytopartition
+    summary: " Applies an operation to a given partition of the register into two parts\n "
   - uid: microsoft.quantum.canon.applytopartitiona
   - uid: microsoft.quantum.canon.applytopartitionc
   - uid: microsoft.quantum.canon.applytopartitionca
@@ -268,8 +298,7 @@ operations:
   - uid: microsoft.quantum.canon.assertequalonbasisvector
     summary: " Checks if the result of applying two operations givenU and expectedU to\n a basis state is the same. The basis state is described by `basis` parameter. \n See @\"Microsoft.Quantum.Canon.FlipToBasis\" function for more details on this\n description.\n"
   - uid: microsoft.quantum.canon.assertallzero
-  - uid: microsoft.quantum.canon.identitytesthelper
-    summary: " Test helper to be used with AssertOperationsEqualInPlace and AssertOperationsEqualReferenced \n if one needs to check that the operation is identity.\n"
+    summary: " Assert that given qubits are all in |0⟩ state\n "
   - uid: microsoft.quantum.canon.assertoperationsequalinplace
     summary: >2
        Checks if the operation givenU is equal to the operation expectedU on
@@ -304,8 +333,11 @@ operations:
   - uid: microsoft.quantum.canon.assertoperationsequalreferenced
     summary: " Given two operations, asserts that they act identically for all input states.\n This assertion is implemented by using the Choi–Jamiłkowski isomorphism to reduce\n the assertion to one of a qubit state assertion on two entangled registers.\n Thus, this operation needs only a single call to each operation being tested,\n but requires twice as many qubits to be allocated.\n This assertion can be used to ensure, for instance, that an optimized version of an\n operation acts identically to its naïve implementation, or that an operation\n which acts on a range of non-quantum inputs agrees with known cases.\n "
   - uid: microsoft.quantum.canon.i
+    summary: ' Performs the identity operation (no-op) on a single qubit.'
   - uid: microsoft.quantum.canon.noop
+    summary: ' Performs the identity operation (no-op) on a register of qubits.'
   - uid: microsoft.quantum.canon.noop2
+    summary: ' Performs the identity operation (no-op) on two registers of qubits.'
   - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
     summary: >2-
        Iterates a variable, say `arr`, through a Cartesian product
@@ -383,14 +415,26 @@ operations:
        the logical qubit is returned into a single qubit,
        in course of which the syndrome measurements can be done without further ancillas.
   - uid: microsoft.quantum.canon.injectpi4yrotation
-    summary: " InjectPi4YRotation needs a magic state \n $\\cos\\frac{\\pi}{8} \\ket{0} + \\sin \\frac{\\pi}{8} \\ket{1}$.\n The magic state required is the same for the Adjoint,\n that implements $-\\pi/4$ $Y$-rotation."
+    summary: >2
+       Performs a $\pi / 4$ rotation about $Y$ by consuming a magic
+       state; that is, a copy of the state
+       $$
+       \begin{align}
+           \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
+       \end{align}
+       $$.
   - uid: microsoft.quantum.canon.knilldistill
     summary: >2
-       Given 15 approximate copies of a magic state, yields
-       one higher-quality copy.
+       Given 15 approximate copies of a magic state
+       $$
+       \begin{align}
+           \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
+       \end{align},
+       $$ yields one higher-quality copy.
 newtypes:
   items:
   - uid: microsoft.quantum.canon.ccnotop
+    summary: ' The signature type of CCNOT gate.'
   - uid: microsoft.quantum.canon.simulationalgorithm
     summary: >2-
        A time-independent simulation technique converts an

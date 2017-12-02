@@ -4,7 +4,6 @@ name: PrepareChoiStateC
 type: operation
 namespace: Microsoft.Quantum.Canon
 syntax: 'operation PrepareChoiStateC (op : (Qubit[] => () : Controlled, Adjoint), reference : Qubit[], target : Qubit[]) : ()'
-seealso: ' - @"microsoft.quantum.canon.preparechoistate"'
 input:
   content: '(op : (Qubit[] => () : Controlled, Adjoint), reference : Qubit[], target : Qubit[])'
   types:
@@ -29,5 +28,7 @@ output:
   types:
   - content: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.preparechoistate
 functors:
 - Controlled

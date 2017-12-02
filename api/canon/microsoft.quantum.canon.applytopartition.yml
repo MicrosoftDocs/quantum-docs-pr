@@ -3,6 +3,7 @@ uid: microsoft.quantum.canon.applytopartition
 name: ApplyToPartition
 type: operation
 namespace: Microsoft.Quantum.Canon
+summary: " Applies an operation to a given partition of the register into two parts\n "
 syntax: 'operation ApplyToPartition (op : ((Qubit[], Qubit[]) => ()), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : ()'
 input:
   content: '(op : ((Qubit[], Qubit[]) => ()), numberOfQubitsToFirstArgument : Int, target : Qubit[])'

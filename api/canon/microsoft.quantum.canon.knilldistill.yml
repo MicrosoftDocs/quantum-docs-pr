@@ -4,8 +4,12 @@ name: KnillDistill
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Given 15 approximate copies of a magic state, yields
-   one higher-quality copy.
+   Given 15 approximate copies of a magic state
+   $$
+   \begin{align}
+       \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
+   \end{align},
+   $$ yields one higher-quality copy.
 remarks: >2
    We follow the algorithm of Knill.
    However, the present implementation is far from being optimal,

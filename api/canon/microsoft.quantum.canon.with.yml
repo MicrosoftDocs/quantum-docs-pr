@@ -12,10 +12,6 @@ remarks: >2
    need to be controllable in order for the combined operation to be
    controllable.
 syntax: "operation With (outerOperation : ('T => () : Adjoint), innerOperation : ('T => ()), target : 'T) : ()"
-seealso: >2-
-   - @"microsoft.quantum.canon.withc"
-   - @"microsoft.quantum.canon.witha"
-   - @"microsoft.quantum.canon.withca"
 input:
   content: "(outerOperation : ('T => () : Adjoint), innerOperation : ('T => ()), target : 'T)"
   types:
@@ -41,3 +37,7 @@ output:
   types:
   - content: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.withc
+- microsoft.quantum.canon.witha
+- microsoft.quantum.canon.withca

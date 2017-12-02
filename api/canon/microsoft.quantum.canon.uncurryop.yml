@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.uncurryop
+name: UncurryOp
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given a function which returns operations,
+   returns a new operation which takes both inputs
+   as a tuple.
+syntax: "function UncurryOp (curriedOp : ('T -> ('U => ()))) : (('T, 'U) => ())"
+input:
+  content: "(curriedOp : ('T -> ('U => ())))"
+  types:
+  - name: curriedOp
+    isFunction: true
+    types:
+    - content: "'T"
+      isLocal: true
+    - isOperation: true
+      types:
+      - content: "'U"
+        isLocal: true
+      - content: ()
+        isPrimitive: true
+output:
+  content: (('T, 'U) => ())
+  types:
+  - summary: >2
+       A new operation `op` such that `op(t, u)` is equivalent
+       to `(curriedOp(t))(u)`.
+    isOperation: true
+    types:
+    - types:
+      - content: "'T"
+        isLocal: true
+      - content: "'U"
+        isLocal: true
+    - content: ()
+      isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.uncurryopc
+- microsoft.quantum.canon.uncurryopa
+- microsoft.quantum.canon.uncurryopca

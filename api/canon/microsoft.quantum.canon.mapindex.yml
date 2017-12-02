@@ -20,7 +20,6 @@ remarks: >2
    let arr = [f(0, x0); f(1, x1), f(2; x2)];
    ```
 syntax: "function MapIndex (mapper : ((Int, 'T) -> 'U), array : 'T[]) : 'U[]"
-seealso: ' - @"microsoft.quantum.canon.map"'
 input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
@@ -46,6 +45,8 @@ output:
     content: "'U"
     isLocal: true
     isArray: true
+seeAlso:
+- microsoft.quantum.canon.map
 typeparams:
 - name: "'T"
   summary: ' The type of `array` elements.'

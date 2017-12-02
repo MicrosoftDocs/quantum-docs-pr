@@ -4,7 +4,6 @@ name: BindC
 type: function
 namespace: Microsoft.Quantum.Canon
 syntax: "function BindC (operations : ('T => () : Controlled)[]) : ('T => () : Controlled)"
-seealso: ' - @"microsoft.quantum.canon.bind"'
 input:
   content: "(operations : ('T => () : Controlled)[])"
   types:
@@ -25,3 +24,5 @@ output:
       isLocal: true
     - content: ()
       isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.bind

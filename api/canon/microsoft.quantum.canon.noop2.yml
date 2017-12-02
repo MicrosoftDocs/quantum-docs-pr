@@ -3,6 +3,7 @@ uid: microsoft.quantum.canon.noop2
 name: NoOp2
 type: operation
 namespace: Microsoft.Quantum.Canon
+summary: ' Performs the identity operation (no-op) on two registers of qubits.'
 syntax: 'operation NoOp2 (qubitsA : Qubit[], qubitsB : Qubit[]) : ()'
 input:
   content: '(qubitsA : Qubit[], qubitsB : Qubit[])'

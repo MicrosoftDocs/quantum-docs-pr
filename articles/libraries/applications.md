@@ -254,6 +254,6 @@ proceed to the classical postprocessing routine to determine the prime factors:
 9. If $\mbox{gcd}(a^{r/2}-1, N)$ is a prime factor of $N$, return $\mbox{gcd}(a^{r/2}-1, N)$.
 
 
-The factoring algorithm is probabilistic: it can been shown that with probability at least one half that $r$ will be even and $a^{r/2} \neq -1 \text{ mod }N$, thus producing a prime factor.  (See [Shor's original paper](https://doi.org/10.1109/SFCS.1994.365700) for details, or one of the *Basic quantum computing* texts in [For more information](..\quantum-ForMoreInfo)).
+The factoring algorithm is probabilistic: it can been shown that with probability at least one half that $r$ will be even and $a^{r/2} \neq -1 \text{ mod }N$, thus producing a prime factor.  (See [Shor's original paper](https://doi.org/10.1109/SFCS.1994.365700) for details, or one of the *Basic quantum computing* texts in [For more information](..\quantum-ForMoreInfo.md)).
 If a prime factor is not returned, then we simply repeat the algorithm from step (1).  After $n$ tries, the probability that every attempt has failed is at most $2^{-n}$.
 Thus after repeating the algorithm a small number of times success is virtually assured.

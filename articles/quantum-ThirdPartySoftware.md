@@ -20,7 +20,7 @@ ms.topic: article-type-from-white-list
 ## ms.reviewer:
 ## manager: MSFT-alias-manager-or-PM-counterpart
 ---
-THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
+# THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 
 This file is based on or incorporates material from the projects listed below (Third Party IP). 
 The original copyright notice and the license under which Microsoft received such Third Party IP, 

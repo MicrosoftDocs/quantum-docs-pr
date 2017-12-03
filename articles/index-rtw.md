@@ -11,7 +11,7 @@ To jump right in, start with [Installation and validation](quantum-InstallConfig
 If you'd like more general information about Microsoft's quantum computing initiative, see [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/).
 
 ## Feedback pipeline
-Your feedback about all parts of the Quantum Development Kit is important. We ask you to provide feedback by joining our communitify of developers at [Microsoft Quantum - Feedback](https://quantum.uservoice.com/). Sign in and share your experience in one of the following forums. 
+Your feedback about all parts of the Quantum Development Kit is important. We ask you to provide feedback by joining our community of developers at [Microsoft Quantum - Feedback](https://quantum.uservoice.com/). Sign in and share your experience in one of the following forums. 
 
 - Q# language
 - Debugging and simulation

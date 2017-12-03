@@ -34,9 +34,9 @@ ms.topic: article-type-from-white-list
 |Clifford group|The set of operations that occupy the octents of the Bloch sphere. These include: `X`, `Y`, `Z`, `H` and `S`|
 |Controlled|A quantum operation that takes one or more qubits as enablers for the target operation.|
 |Dirac Notation|A shorthand representation of quantum state. See the [Dirac Notation](quantum-concepts-6-DiracNotation.md) section for more details.|
-|Eigenvalues and Eigenvectors|See the [Advanced Matrix section](quantum-concepts-3-MatrixAdvanced.md) for details|
+|Eigenvalues and Eigenvectors|See the [Advanced Matrix section](quantum-concepts-3-MatrixAdvanced.md) for details.|
 |EPR pair|Also known as a [Bell State](https://en.wikipedia.org/wiki/Bell_state)|
-|Evolution|How the state changes over time. See the section on [Matrix Exponentials](quantum-concepts-3-MatrixAdvanced#Matrix-Exponentials) for an example|
+|Evolution|How the state changes over time. See the section on [Matrix Exponentials](quantum-concepts-3-MatrixAdvanced#Matrix-exponentials) [Matrix Exponentials](quantum-concepts-3-MatrixAdvanced.md#Matrix-exponentials) [Matrix Exponentials](quantum-concepts-3-MatrixAdvanced#Matrix_exponentials) [Matrix Exponentials](quantum-concepts-3-MatrixAdvanced.md#Matrix_exponentials) for an example|
 |Function|Purely classical routines in the Q# language|
 |Measurement|Obtaining a classical bit from a qubit (or set of qubits). See the [Qubit Concepts](quantum-concepts-4-Qubit.md) section for more details.|
 |Mutable|A variable whose value may be changed after it is created.|

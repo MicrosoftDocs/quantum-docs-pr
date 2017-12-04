@@ -7,12 +7,12 @@ For instance, let $\overline{0} = 000$ be the encoding of the data bit 0, where 
 If we similarly let $\overline{1} = 111$, then we have a simple repetition code that protects against any one bit flip error.
 That is, if any of the three bits are flipped, then we can recover the state of the logical bit by taking a majority vote.
 Though classical error correction is a much richer subject that this particular example (we recommend [Lint's introduction to coding theory](https://www.springer.com/us/book/9783540641339)), the repetition code above already points to a possible problem in protecting quantum information.
-Namely, by the [no-cloning theorem](xref:microsoft.quantum.concepts.PauliMeasurements#the-no-cloning-theorem), we have no way to take a majority vote in this way.
+Namely, the [no-cloning theorem](xref:microsoft.quantum.concepts.PauliMeasurements#the-no-cloning-theorem) implies that if we measure each individual qubit and take a majority vote by analogy to classical code above, then we have lost the precise information that we are trying to protect.
 
 Since it is the measurement that is problematic, we can still implement the encoding above.
 It is helpful to do so to see how we can generalize error correction to the quantum case.
 Thus, let $\ket{\overline{0}} = \ket{000} = \ket{0} \otimes \ket{0} \otimes \ket{0}$, and let $\ket{\overline{1}} = \ket{111}$.
-Then, by linearity, we have defined our repetition code for all inputs; for instance, $\ket{\overline{+}} = (\ket{\overline{0} + \ket{\overline{1}}) / \sqrt{2}} = (\ket{000} + \ket{111}) / \sqrt{2}$.
+Then, by linearity, we have defined our repetition code for all inputs; for instance, $\ket{\overline{+}} = (\ket{\overline{0}} + \ket{\overline{1}}) / \sqrt{2} = (\ket{000} + \ket{111}) / \sqrt{2}$.
 In particular, letting a bit-flip error $X_1$ act on the middle qubit, we see that the correction needed in both branches is precisely $X_1$:
 $$
 \begin{align}
@@ -37,7 +37,7 @@ To see how we can identify that this is the case without measuring the very stat
 In order to protect the state that we're encoding, we need to be able to distinguish the three errors from each other and from the identity $\boldone$ without distinguishing between $\ket{\overline{0}}$ and $\ket{\overline{1}}$.
 For example, if we measure $Z_0$, we get a different result for $\ket{\overline{0}}$ and $\ket{\overline{1}}$ in the no-error case, so that collapses the encoded state.
 On the other hand, consider measuring $Z_0 Z_1$, the parity of the first two bits in each computational basis state.
-Recall that each measurement of a Pauli operator checks the eigenvalue of that the state being measured corresponds to, so for each state $\ket{\psi}$ in the table above, we can compute $Z_0 Z_1 \ket{\psi}$ to see if we get $\pm\ket{\psi}$.
+Recall that each measurement of a Pauli operator checks which eigenvalue  the state being measured corresponds to, so for each state $\ket{\psi}$ in the table above, we can compute $Z_0 Z_1 \ket{\psi}$ to see if we get $\pm\ket{\psi}$.
 Note that $Z_0 Z_1 \ket{000} = \ket{000}$ and that $Z_0 Z_1 \ket{111} = \ket{111}$, so that we conclude that this measurement does the same thing to both encoded states.
 On the other hand, $Z_0 Z_1 \ket{100} = - \ket{100}$ and $Z_0 Z_1 \ket{011} = -\ket{011}$, so the result of measuring $Z_0 Z_1$ reveals useful information about which error occured.
 
@@ -57,7 +57,7 @@ In particular, we emphasize that recovery is a *classical* inference procedure w
 
 > [!NOTE]
 > The bit-flip code above can only correct against single bit-flip errors; that is, an `X` operation acting on a single qubit.
-> Applying `X` to more than one qubit will map $\ket{\overline{0}}$ to $\ket{\overline{1}}$.
+> Applying `X` to more than one qubit will map $\ket{\overline{0}}$ to $\ket{\overline{1}}$ following recovery.
 > Similarly, applying a phase flip operation `Z` will map $\ket{\overline{1}}$ to $-\ket{\overline{1}}$, and hence will map $\ket{\overline{+}}$ to $\ket{\overline{-}}$.
 > More generally, codes can be created to handle larger number of errors, and to handle $Z$ errors as well as $X$ errors.
 
@@ -71,9 +71,7 @@ In this section, we describe this framework and its application to a few simple 
 
 ## Representing Error Correcting Codes in Q# ##
 
-To help specify an error correcting codes, the Q# canon provides several distinct user-defined types <!-- TODO: link -->:
-
-<!-- FIXME: rename LogicalRegister to CodeBlock. -->
+To help specify error correcting codes, the Q# canon provides several distinct user-defined types:
 
 - <xref:microsoft.quantum.canon.logicalregister> `= Qubit[]`: Denotes that a register of qubits should be interpreted as the code block of an error-correcting code.
 - <xref:microsoft.quantum.canon.syndrome> `= Result[]`: Denotes that an array of measurement results should be interpreted as the syndrome measured on a code block.

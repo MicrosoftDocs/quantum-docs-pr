@@ -307,7 +307,7 @@ return rs;
 The final functions defined by the prelude provide useful tools for debugging and testing quantum programs.
 These will later be the basis for higher-level correctness testing in the canon.
 
-First, the <xref:microsoft.quantum.primitive.canon.assert> operation asserts that measuring the given qubits in the
+First, the <xref:microsoft.quantum.primitive.assert> operation asserts that measuring the given qubits in the
 given Pauli basis will always have the given result.
 If the assertion fails, the execution ends by calling `fail` with the
 given message.
@@ -316,7 +316,7 @@ should provide an implementation that performs runtime checking.
 `Assert` has signature `((Pauli[], Qubit[], Result, String) -> ())`.
 Since `Assert` is a function with an empty tuple as its output type, no effects from having called `Assert` are observable within a Q# program.
 
-The <xref:microsoft.quantum.primitive.canon.assertprob> operation function asserts that measuring the given qubits in the
+The <xref:microsoft.quantum.primitive.assertprob> operation function asserts that measuring the given qubits in the
 given Pauli basis will have the given result with the given probability,
 within some tolerance.
 Tolerance is additive (e.g. `abs(expected-actual) < tol`).

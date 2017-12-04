@@ -63,6 +63,8 @@ Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip`. In that cas
 
 > [!TIP]
 > Step 4 above will not be needed after the release.
+
+
 ## Validating your setup
 
 1. Clone the quantum Libraries repository.

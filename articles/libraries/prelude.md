@@ -49,15 +49,6 @@ The probability of selecting a specific index is proportional to the value of th
 Array elements that are equal to zero are ignored and their indices are never returned.
 If any array element is less than zero, or if no array element is greater than zero, then the operation fails.
 
-The `Start` function has signature `(Range -> Int)`.
-It returns the starting value for a range.
-
-The `Step` function has  signature `(Range -> Int)`.
-It returns the step value for a range.
-
-The `Stop` function has signature `(Range -> Int)`.
-It returns the stopping value for a range.
-
 ### Common single-qubit unitary operations ###
 
 The prelude also defines many common [single-qubit operations](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).

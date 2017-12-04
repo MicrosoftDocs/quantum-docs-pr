@@ -9,14 +9,17 @@ input:
   content: '(qubits : Qubit[], basis : Int[])'
   types:
   - name: basis
+    uid: Int
     isPrimitive: true
     isArray: true
   - name: qubits
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - isPrimitive: true
+  - uid: ()
+    isPrimitive: true
 functors:
 - Adjoint

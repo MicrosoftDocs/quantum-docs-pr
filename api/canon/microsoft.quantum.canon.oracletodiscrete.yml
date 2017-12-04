@@ -18,11 +18,12 @@ input:
   - name: blackBoxOracle
     isOperation: true
     types:
-    - isPrimitive: true
+    - uid: Qubit
+      isPrimitive: true
       isArray: true
-    - isPrimitive: true
+    - uid: ()
+      isPrimitive: true
 output:
   content: DiscreteOracle
   types:
   - uid: discreteoracle
-    content: discreteoracle

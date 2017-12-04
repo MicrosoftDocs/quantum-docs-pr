@@ -10,8 +10,10 @@ input:
   content: '(trotterStepSize : Double, trotterOrder : Int)'
   types:
   - name: trotterOrder
+    uid: Int
     isPrimitive: true
   - name: trotterStepSize
+    uid: Double
     isPrimitive: true
 output:
   content: TimeDependentSimulationAlgorithm
@@ -19,4 +21,3 @@ output:
   - summary: >2
        A `TimeDependentSimulationAlgorithm` type.
     uid: timedependentsimulationalgorithm
-    content: timedependentsimulationalgorithm

@@ -12,17 +12,17 @@ input:
   types:
   - name: controlRegister
     uid: bigendian
-    content: bigendian
   - name: eigenstate
+    uid: Qubit
     isPrimitive: true
     isArray: true
   - name: oracle
     uid: discreteoracle
-    content: discreteoracle
 output:
   content: ()
   types:
-  - isPrimitive: true
+  - uid: ()
+    isPrimitive: true
 functors:
 - Adjoint
 - Controlled

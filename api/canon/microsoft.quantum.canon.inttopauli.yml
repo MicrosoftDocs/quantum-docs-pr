@@ -10,9 +10,11 @@ input:
   content: '(idx : Int)'
   types:
   - name: idx
+    uid: Int
     isPrimitive: true
 output:
   content: Pauli
   types:
   - summary: ' A `Pauli` operator given by `[PauliI; PauliX; PauliY; PauliZ][idx]`.'
+    uid: Pauli
     isPrimitive: true

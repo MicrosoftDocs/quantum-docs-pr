@@ -12,23 +12,24 @@ input:
   types:
   - name: ancillaOracle
     uid: deterministicstateoracle
-    content: deterministicstateoracle
   - name: idxFlagQubit
+    uid: Int
     isPrimitive: true
   - name: phases
     uid: ampampreflectionphases
-    content: ampampreflectionphases
   - name: signalOracle
     uid: obliviousoracle
-    content: obliviousoracle
 output:
   content: '((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
   types:
   - isOperation: true
     types:
     - types:
-      - isPrimitive: true
+      - uid: Qubit
+        isPrimitive: true
         isArray: true
-      - isPrimitive: true
+      - uid: Qubit
+        isPrimitive: true
         isArray: true
-    - isPrimitive: true
+    - uid: ()
+      isPrimitive: true

@@ -12,24 +12,23 @@ input:
   types:
   - name: ancillaReflection
     uid: reflectionoracle
-    content: reflectionoracle
   - name: phases
     uid: ampampreflectionphases
-    content: ampampreflectionphases
   - name: signalOracle
     uid: obliviousoracle
-    content: obliviousoracle
   - name: targetStateReflection
     uid: reflectionoracle
-    content: reflectionoracle
 output:
   content: '((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
   types:
   - isOperation: true
     types:
     - types:
-      - isPrimitive: true
+      - uid: Qubit
+        isPrimitive: true
         isArray: true
-      - isPrimitive: true
+      - uid: Qubit
+        isPrimitive: true
         isArray: true
-    - isPrimitive: true
+    - uid: ()
+      isPrimitive: true

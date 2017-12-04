@@ -14,4 +14,3 @@ output:
   content: QECC
   types:
   - uid: qecc
-    content: qecc

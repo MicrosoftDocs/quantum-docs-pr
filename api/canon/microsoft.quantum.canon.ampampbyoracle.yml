@@ -11,17 +11,20 @@ input:
   content: '(nIterations : Int, stateOracle : StateOracle, idxFlagQubit : Int)'
   types:
   - name: idxFlagQubit
+    uid: Int
     isPrimitive: true
   - name: nIterations
+    uid: Int
     isPrimitive: true
   - name: stateOracle
     uid: stateoracle
-    content: stateoracle
 output:
   content: '(Qubit[] => () : Adjoint, Controlled)'
   types:
   - isOperation: true
     types:
-    - isPrimitive: true
+    - uid: Qubit
+      isPrimitive: true
       isArray: true
-    - isPrimitive: true
+    - uid: ()
+      isPrimitive: true

@@ -13,4 +13,5 @@ input:
 output:
   content: Pauli
   types:
-  - isPrimitive: true
+  - uid: Pauli
+    isPrimitive: true

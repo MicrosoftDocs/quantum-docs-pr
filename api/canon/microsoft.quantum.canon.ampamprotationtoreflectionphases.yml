@@ -11,9 +11,7 @@ input:
   types:
   - name: rotPhases
     uid: ampamprotationphases
-    content: ampamprotationphases
 output:
   content: AmpAmpReflectionPhases
   types:
   - uid: ampampreflectionphases
-    content: ampampreflectionphases

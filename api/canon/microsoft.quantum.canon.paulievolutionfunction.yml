@@ -11,10 +11,8 @@ input:
   types:
   - name: generatorIndex
     uid: generatorindex
-    content: generatorindex
 output:
   content: EvolutionUnitary
   types:
   - summary: " An `EvolutionUnitary` representing time-evolution by the term \n referenced in `generatorIndex.\n"
     uid: evolutionunitary
-    content: evolutionunitary

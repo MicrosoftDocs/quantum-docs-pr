@@ -12,19 +12,24 @@ input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
   types:
   - name: bitApply
+    uid: Bool
     isPrimitive: true
   - name: bits
+    uid: Bool
     isPrimitive: true
     isArray: true
   - name: pauli
+    uid: Pauli
     isPrimitive: true
   - name: qubits
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - isPrimitive: true
+  - uid: ()
+    isPrimitive: true
 functors:
 - Adjoint
 - Controlled

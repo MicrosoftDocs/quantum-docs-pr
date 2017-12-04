@@ -26,8 +26,10 @@ input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()
   types:
-  - isPrimitive: true
+  - uid: ()
+    isPrimitive: true

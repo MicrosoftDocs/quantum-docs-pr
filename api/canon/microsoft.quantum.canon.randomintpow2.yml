@@ -11,6 +11,7 @@ input:
   content: '(maxBits : Int)'
   types:
   - name: maxBits
+    uid: Int
     isPrimitive: true
 output:
   content: Int
@@ -18,4 +19,5 @@ output:
   - summary: >2-
        An integer $x$ uniformly at random from the given interval;
        that is, with $\Pr(x) = \frac{1}{2^{\texttt{maxBits}}$.
+    uid: Int
     isPrimitive: true

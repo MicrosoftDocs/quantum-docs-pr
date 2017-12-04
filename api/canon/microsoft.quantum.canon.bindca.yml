@@ -11,14 +11,18 @@ input:
     isArray: true
     isOperation: true
     types:
-    - isLocal: true
-    - isPrimitive: true
+    - uid: "'T"
+      isLocal: true
+    - uid: ()
+      isPrimitive: true
 output:
   content: "('T => () : Adjoint, Controlled)"
   types:
   - isOperation: true
     types:
-    - isLocal: true
-    - isPrimitive: true
+    - uid: "'T"
+      isLocal: true
+    - uid: ()
+      isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.bind

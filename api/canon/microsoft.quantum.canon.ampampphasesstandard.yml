@@ -14,9 +14,9 @@ input:
   content: '(nIterations : Int)'
   types:
   - name: nIterations
+    uid: Int
     isPrimitive: true
 output:
   content: AmpAmpReflectionPhases
   types:
   - uid: ampampreflectionphases
-    content: ampampreflectionphases

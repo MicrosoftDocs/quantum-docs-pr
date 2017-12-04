@@ -9,17 +9,14 @@ input:
   types:
   - name: code
     uid: css
-    content: css
   - name: fnX
     uid: recoveryfn
-    content: recoveryfn
   - name: fnZ
     uid: recoveryfn
-    content: recoveryfn
   - name: logicalRegister
     uid: logicalregister
-    content: logicalregister
 output:
   content: ()
   types:
-  - isPrimitive: true
+  - uid: ()
+    isPrimitive: true

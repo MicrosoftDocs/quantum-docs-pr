@@ -22,6 +22,7 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
@@ -31,4 +32,5 @@ output:
        If `true`, then the procedure succeeded and the higher-quality
        copy should be accepted. If `false`, the procedure failed, and
        the state of the register should be considered undefined.
+    uid: Bool
     isPrimitive: true

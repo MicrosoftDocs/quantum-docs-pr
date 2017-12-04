@@ -13,4 +13,5 @@ input:
 output:
   content: Double
   types:
-  - isPrimitive: true
+  - uid: Double
+    isPrimitive: true

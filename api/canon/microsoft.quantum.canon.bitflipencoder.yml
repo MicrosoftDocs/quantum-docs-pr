@@ -10,9 +10,11 @@ input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
   - name: auxQubits
+    uid: Qubit
     isPrimitive: true
     isArray: true
   - name: physRegister
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
@@ -22,4 +24,3 @@ output:
        The physical and auxillary qubits used in encoding, represented as a
        logical register.
     uid: logicalregister
-    content: logicalregister

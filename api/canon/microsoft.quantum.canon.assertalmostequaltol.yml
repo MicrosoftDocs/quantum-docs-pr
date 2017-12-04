@@ -11,12 +11,16 @@ input:
   content: '(actual : Double, expected : Double, tolerance : Double)'
   types:
   - name: actual
+    uid: Double
     isPrimitive: true
   - name: expected
+    uid: Double
     isPrimitive: true
   - name: tolerance
+    uid: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - isPrimitive: true
+  - uid: ()
+    isPrimitive: true

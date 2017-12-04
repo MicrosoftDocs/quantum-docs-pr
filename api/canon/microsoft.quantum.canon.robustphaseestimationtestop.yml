@@ -8,16 +8,20 @@ input:
   content: '(phase : Double, power : Int, qubits : Qubit[])'
   types:
   - name: phase
+    uid: Double
     isPrimitive: true
   - name: power
+    uid: Int
     isPrimitive: true
   - name: qubits
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - isPrimitive: true
+  - uid: ()
+    isPrimitive: true
 functors:
 - Adjoint
 - Controlled

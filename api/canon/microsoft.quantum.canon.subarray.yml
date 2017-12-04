@@ -10,9 +10,11 @@ input:
   content: "(indices : Int[], array : 'T[])"
   types:
   - name: array
+    uid: "'T"
     isLocal: true
     isArray: true
   - name: indices
+    uid: Int
     isPrimitive: true
     isArray: true
 output:
@@ -21,6 +23,7 @@ output:
   - summary: >2-
        An array `out` of elements whose indices correspond to the subarray,
        such that `out[idx] == array[indices[idx]]`.
+    uid: "'T"
     isLocal: true
     isArray: true
 typeParameters:

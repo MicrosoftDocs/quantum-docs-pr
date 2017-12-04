@@ -10,16 +10,21 @@ input:
   - name: oracle
     isOperation: true
     types:
-    - isLocal: true
-    - isPrimitive: true
+    - uid: "'T"
+      isLocal: true
+    - uid: ()
+      isPrimitive: true
   - name: power
+    uid: Int
     isPrimitive: true
 output:
   content: "('T => () : Adjoint)"
   types:
   - isOperation: true
     types:
-    - isLocal: true
-    - isPrimitive: true
+    - uid: "'T"
+      isLocal: true
+    - uid: ()
+      isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.operationpow

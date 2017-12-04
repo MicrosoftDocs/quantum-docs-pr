@@ -25,8 +25,10 @@ input:
     isArray: true
     isOperation: true
     types:
-    - isLocal: true
-    - isPrimitive: true
+    - uid: "'T"
+      isLocal: true
+    - uid: ()
+      isPrimitive: true
 output:
   content: ('T => ())
   types:
@@ -35,8 +37,10 @@ output:
        on its input.
     isOperation: true
     types:
-    - isLocal: true
-    - isPrimitive: true
+    - uid: "'T"
+      isLocal: true
+    - uid: ()
+      isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.bindc
 - microsoft.quantum.canon.binda

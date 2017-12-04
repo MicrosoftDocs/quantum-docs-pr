@@ -8,21 +8,26 @@ input:
   content: '(op : (Qubit[] => () : Controlled, Adjoint), idxs : Int[], target : Qubit[])'
   types:
   - name: idxs
+    uid: Int
     isPrimitive: true
     isArray: true
   - name: op
     isOperation: true
     types:
-    - isPrimitive: true
+    - uid: Qubit
+      isPrimitive: true
       isArray: true
-    - isPrimitive: true
+    - uid: ()
+      isPrimitive: true
   - name: target
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - isPrimitive: true
+  - uid: ()
+    isPrimitive: true
 functors:
 - Adjoint
 - Controlled

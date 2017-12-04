@@ -10,9 +10,11 @@ input:
   content: '(bits : Bool[])'
   types:
   - name: bits
+    uid: Bool
     isPrimitive: true
     isArray: true
 output:
   content: Int
   types:
-  - isPrimitive: true
+  - uid: Int
+    isPrimitive: true

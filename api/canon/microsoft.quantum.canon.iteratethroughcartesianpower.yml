@@ -9,16 +9,21 @@ input:
   content: '(power : Int, bound : Int, op : (Int[] => ()))'
   types:
   - name: bound
+    uid: Int
     isPrimitive: true
   - name: op
     isOperation: true
     types:
-    - isPrimitive: true
+    - uid: Int
+      isPrimitive: true
       isArray: true
-    - isPrimitive: true
+    - uid: ()
+      isPrimitive: true
   - name: power
+    uid: Int
     isPrimitive: true
 output:
   content: ()
   types:
-  - isPrimitive: true
+  - uid: ()
+    isPrimitive: true

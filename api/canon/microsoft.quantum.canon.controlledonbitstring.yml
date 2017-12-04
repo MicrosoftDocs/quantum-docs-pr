@@ -11,13 +11,16 @@ input:
   content: "(bits : Bool[], oracle : ('T => () : Adjoint, Controlled))"
   types:
   - name: bits
+    uid: Bool
     isPrimitive: true
     isArray: true
   - name: oracle
     isOperation: true
     types:
-    - isLocal: true
-    - isPrimitive: true
+    - uid: "'T"
+      isLocal: true
+    - uid: ()
+      isPrimitive: true
 output:
   content: "((Qubit[], 'T) => () : Adjoint, Controlled)"
   types:
@@ -26,7 +29,10 @@ output:
     isOperation: true
     types:
     - types:
-      - isPrimitive: true
+      - uid: Qubit
+        isPrimitive: true
         isArray: true
-      - isLocal: true
-    - isPrimitive: true
+      - uid: "'T"
+        isLocal: true
+    - uid: ()
+      isPrimitive: true

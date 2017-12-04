@@ -9,13 +9,14 @@ input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
   - name: auxQubits
+    uid: Qubit
     isPrimitive: true
     isArray: true
   - name: physRegister
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: LogicalRegister
   types:
   - uid: logicalregister
-    content: logicalregister

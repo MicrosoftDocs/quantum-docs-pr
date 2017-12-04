@@ -14,18 +14,17 @@ input:
   types:
   - name: phases
     uid: ampampreflectionphases
-    content: ampampreflectionphases
   - name: startStateReflection
     uid: reflectionoracle
-    content: reflectionoracle
   - name: targetStateReflection
     uid: reflectionoracle
-    content: reflectionoracle
 output:
   content: '(Qubit[] => () : Adjoint, Controlled)'
   types:
   - isOperation: true
     types:
-    - isPrimitive: true
+    - uid: Qubit
+      isPrimitive: true
       isArray: true
-    - isPrimitive: true
+    - uid: ()
+      isPrimitive: true

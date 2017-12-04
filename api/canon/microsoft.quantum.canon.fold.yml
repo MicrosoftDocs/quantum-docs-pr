@@ -20,16 +20,21 @@ input:
   content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
   types:
   - name: array
+    uid: "'T"
     isLocal: true
     isArray: true
   - name: folder
     isFunction: true
     types:
     - types:
-      - isLocal: true
-      - isLocal: true
-    - isLocal: true
+      - uid: "'State"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    - uid: "'State"
+      isLocal: true
   - name: state
+    uid: "'State"
     isLocal: true
 output:
   content: "'State"
@@ -37,6 +42,7 @@ output:
   - summary: >2
        The final state returned by the folder after iterating over
        all elements of `array`.
+    uid: "'State"
     isLocal: true
 typeParameters:
 - uid: "'State"

@@ -10,19 +10,24 @@ input:
   content: "(singleElementOperation : ((Int, 'T) => ()), register : 'T[])"
   types:
   - name: register
+    uid: "'T"
     isLocal: true
     isArray: true
   - name: singleElementOperation
     isOperation: true
     types:
     - types:
-      - isPrimitive: true
-      - isLocal: true
-    - isPrimitive: true
+      - uid: Int
+        isPrimitive: true
+      - uid: "'T"
+        isLocal: true
+    - uid: ()
+      isPrimitive: true
 output:
   content: ()
   types:
-  - isPrimitive: true
+  - uid: ()
+    isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.applytoeach
 - microsoft.quantum.canon.applytoeachindexa

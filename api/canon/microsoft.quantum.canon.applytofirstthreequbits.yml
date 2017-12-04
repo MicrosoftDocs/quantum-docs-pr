@@ -17,14 +17,20 @@ input:
     isOperation: true
     types:
     - types:
-      - isPrimitive: true
-      - isPrimitive: true
-      - isPrimitive: true
-    - isPrimitive: true
+      - uid: Qubit
+        isPrimitive: true
+      - uid: Qubit
+        isPrimitive: true
+      - uid: Qubit
+        isPrimitive: true
+    - uid: ()
+      isPrimitive: true
   - name: register
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - isPrimitive: true
+  - uid: ()
+    isPrimitive: true

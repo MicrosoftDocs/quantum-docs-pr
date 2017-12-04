@@ -12,6 +12,4 @@ output:
   types:
   - types:
     - uid: recoveryfn
-      content: recoveryfn
     - uid: recoveryfn
-      content: recoveryfn

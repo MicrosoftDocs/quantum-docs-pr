@@ -11,20 +11,22 @@ input:
     isOperation: true
     types:
     - types:
-      - isPrimitive: true
+      - uid: Pauli
+        isPrimitive: true
         isArray: true
-      - isPrimitive: true
+      - uid: Qubit
+        isPrimitive: true
         isArray: true
-    - isPrimitive: true
+    - uid: Result
+      isPrimitive: true
   - name: logicalRegister
     uid: logicalregister
-    content: logicalregister
   - name: stabilizerGroup
     isArray: true
     types:
-    - isPrimitive: true
+    - uid: Pauli
+      isPrimitive: true
 output:
   content: Syndrome
   types:
   - uid: syndrome
-    content: syndrome

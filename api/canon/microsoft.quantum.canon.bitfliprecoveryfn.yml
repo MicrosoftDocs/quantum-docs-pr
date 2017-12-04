@@ -11,4 +11,3 @@ output:
   content: RecoveryFn
   types:
   - uid: recoveryfn
-    content: recoveryfn

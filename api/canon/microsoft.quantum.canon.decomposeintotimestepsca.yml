@@ -11,16 +11,22 @@ input:
   content: "(nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), trotterOrder : Int)"
   types:
   - name: nSteps
+    uid: Int
     isPrimitive: true
   - name: op
     isOperation: true
     types:
     - types:
-      - isPrimitive: true
-      - isPrimitive: true
-      - isLocal: true
-    - isPrimitive: true
+      - uid: Int
+        isPrimitive: true
+      - uid: Double
+        isPrimitive: true
+      - uid: "'T"
+        isLocal: true
+    - uid: ()
+      isPrimitive: true
   - name: trotterOrder
+    uid: Int
     isPrimitive: true
 output:
   content: "((Double, 'T) => () : Adjoint, Controlled)"
@@ -32,9 +38,12 @@ output:
     isOperation: true
     types:
     - types:
-      - isPrimitive: true
-      - isLocal: true
-    - isPrimitive: true
+      - uid: Double
+        isPrimitive: true
+      - uid: "'T"
+        isLocal: true
+    - uid: ()
+      isPrimitive: true
 typeParameters:
 - uid: "'T"
   summary: >2

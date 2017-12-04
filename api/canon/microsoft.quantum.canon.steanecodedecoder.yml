@@ -9,12 +9,13 @@ input:
   types:
   - name: logicalRegister
     uid: logicalregister
-    content: logicalregister
 output:
   content: (Qubit[], Qubit[])
   types:
   - types:
-    - isPrimitive: true
+    - uid: Qubit
+      isPrimitive: true
       isArray: true
-    - isPrimitive: true
+    - uid: Qubit
+      isPrimitive: true
       isArray: true

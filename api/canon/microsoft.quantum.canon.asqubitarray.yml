@@ -11,10 +11,12 @@ input:
   content: '(arr : Qubit[])'
   types:
   - name: arr
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: Qubit[]
   types:
-  - isPrimitive: true
+  - uid: Qubit
+    isPrimitive: true
     isArray: true

@@ -9,9 +9,9 @@ input:
   types:
   - name: syndrome
     uid: syndrome
-    content: syndrome
 output:
   content: Pauli[]
   types:
-  - isPrimitive: true
+  - uid: Pauli
+    isPrimitive: true
     isArray: true

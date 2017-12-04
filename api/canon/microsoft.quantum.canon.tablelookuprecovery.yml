@@ -10,9 +10,9 @@ input:
   - name: table
     isArray: true
     types:
-    - isPrimitive: true
+    - uid: Pauli
+      isPrimitive: true
 output:
   content: RecoveryFn
   types:
   - uid: recoveryfn
-    content: recoveryfn

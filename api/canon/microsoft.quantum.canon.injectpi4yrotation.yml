@@ -32,12 +32,15 @@ input:
   content: '(data : Qubit, magic : Qubit)'
   types:
   - name: data
+    uid: Qubit
     isPrimitive: true
   - name: magic
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()
   types:
-  - isPrimitive: true
+  - uid: ()
+    isPrimitive: true
 functors:
 - Adjoint

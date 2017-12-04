@@ -9,32 +9,39 @@ input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))'
   types:
   - name: nQubits
+    uid: Int
     isPrimitive: true
   - name: phaseEstAlgorithm
     isOperation: true
     types:
     - types:
       - uid: discreteoracle
-        content: discreteoracle
-      - isPrimitive: true
+      - uid: Qubit
+        isPrimitive: true
         isArray: true
-    - isPrimitive: true
+    - uid: Double
+      isPrimitive: true
   - name: qpeUnitary
     isOperation: true
     types:
-    - isPrimitive: true
+    - uid: Qubit
+      isPrimitive: true
       isArray: true
-    - isPrimitive: true
+    - uid: ()
+      isPrimitive: true
   - name: statePrepUnitary
     isOperation: true
     types:
-    - isPrimitive: true
+    - uid: Qubit
+      isPrimitive: true
       isArray: true
-    - isPrimitive: true
+    - uid: ()
+      isPrimitive: true
 output:
   content: Double
   types:
   - summary: >2-
        An estimate $\hat{\phi}$ of the ground state energy $\phi$
        of the ground state energy of the generator represented by $U$.
+    uid: Double
     isPrimitive: true

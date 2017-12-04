@@ -12,14 +12,18 @@ input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[])'
   types:
   - name: bitApply
+    uid: Bool
     isPrimitive: true
   - name: bits
+    uid: Bool
     isPrimitive: true
     isArray: true
   - name: pauli
+    uid: Pauli
     isPrimitive: true
 output:
   content: Pauli[]
   types:
-  - isPrimitive: true
+  - uid: Pauli
+    isPrimitive: true
     isArray: true

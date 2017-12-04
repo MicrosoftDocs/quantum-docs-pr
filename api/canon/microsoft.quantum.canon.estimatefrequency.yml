@@ -14,19 +14,25 @@ input:
   - name: measurement
     isOperation: true
     types:
-    - isPrimitive: true
+    - uid: Qubit
+      isPrimitive: true
       isArray: true
-    - isPrimitive: true
+    - uid: Result
+      isPrimitive: true
   - name: nMeasurements
+    uid: Int
     isPrimitive: true
   - name: nQubits
+    uid: Int
     isPrimitive: true
   - name: preparation
     isOperation: true
     types:
-    - isPrimitive: true
+    - uid: Qubit
+      isPrimitive: true
       isArray: true
-    - isPrimitive: true
+    - uid: ()
+      isPrimitive: true
 output:
   content: Double
   types:
@@ -39,4 +45,5 @@ output:
 
        This is particularly important on target machines which respect
        physical limitations, such that probabilities cannot be measured.
+    uid: Double
     isPrimitive: true

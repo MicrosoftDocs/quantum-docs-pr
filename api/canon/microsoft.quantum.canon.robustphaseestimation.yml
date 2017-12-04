@@ -19,14 +19,16 @@ input:
   content: '(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])'
   types:
   - name: bitsPrecision
+    uid: Int
     isPrimitive: true
   - name: eigenstate
+    uid: Qubit
     isPrimitive: true
     isArray: true
   - name: oracle
     uid: discreteoracle
-    content: discreteoracle
 output:
   content: Double
   types:
-  - isPrimitive: true
+  - uid: Double
+    isPrimitive: true

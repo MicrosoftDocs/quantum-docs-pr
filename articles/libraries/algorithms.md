@@ -26,7 +26,9 @@ ms.topic: article-type-from-white-list
 
 ## Amplitude Amplification ##
 
-*Amplitude Amplification* is one of the fundamental tools of Quantum Computing. There are many variants, and in Q# we provide a very general version based on Oblivious Amplitude Amplification with Partial Reflections to allow for the widest area of application. 
+*Amplitude Amplification* is one of the fundamental tools of Quantum Computing. It is the fundamental idea that underlies Grover's search, amplitude estimation and many quantum machine learning algorithms.  There are many variants, and in Q# we provide a general version based on Oblivious Amplitude Amplification with Partial Reflections to allow for the widest area of application.  
+
+The central idea behind amplitude amplification is to amplify the probability of a desired outcome occurring by performing a sequence of reflections.  These reflections rotate the initial state closer towards a desired target state, often called a marked state.  Specifically, if the probability of measuring the initial state to be in a marked state is $\sin^2(\theta)$ then after applying amplitude amplification $m$ times the probability of success becomes $\sin^2((2m+1)\theta)$.
 
 The general routine (`AmpAmpObliviousByReflectionPhases`) has two registers that we call `ancillaRegister` and `systemRegister`. It also accepts two oracles for the necessary reflections. The `ReflectionOracle` acts only on the `ancillaRegister` while the `ObliviousOracle` acts jointly on both registers. The input to `ancillaRegister` must be initialized to the unique -1 eigenstate of the first reflection operator $I-2|s{\rangle}{\langle}s|$. 
 

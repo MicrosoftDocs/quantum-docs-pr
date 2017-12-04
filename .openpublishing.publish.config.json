@@ -77,20 +77,20 @@
       "nuget_feed": "https://www.myget.org/F/op/api/v2",
       "path_to_root": "_dependentPackages/uref",
       "target_framework": "net45",
-      "version": "latest"
+      "version": "1.41.4"
     },
     {
       "id": "Microsoft.OpenPublishing.CommonPlugins",
       "nuget_feed": "https://www.myget.org/F/op/api/v2",
       "path_to_root": "_dependentPackages/CommonPlugins",
       "target_framework": "net45",
-      "version": "latest"
+      "version": "1.0.105"
     },
     {
       "id": "Microsoft.DocAsCode.MarkdigEngine",
       "nuget_feed": "https://www.myget.org/F/op/api/v2",
       "path_to_root": "_dependentPackages/MarkdigEngine",
-      "version": "latest"
+      "version": "1.0.123"
     }
   ],
   "branch_target_mapping": {},

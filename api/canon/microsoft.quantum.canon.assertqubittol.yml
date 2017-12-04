@@ -14,18 +14,14 @@ input:
   content: '(expected : Result, tolerance : Double, q : Qubit)'
   types:
   - name: expected
-    content: Result
     isPrimitive: true
   - name: q
-    content: Qubit
     isPrimitive: true
   - name: tolerance
-    content: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.assertqubitstate

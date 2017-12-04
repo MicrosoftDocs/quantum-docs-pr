@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.paulievolutionfunction
+name: PauliEvolutionFunction
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Represents a dynamical generator as a set of simulatable gates and an \n expansion in the Pauli basis.\n"
+remarks: " This is obtained by partial application of \n @\"microsoft.quantum.canon.PauliEvolutionImpl\"."
+syntax: 'function PauliEvolutionFunction (generatorIndex : GeneratorIndex) : EvolutionUnitary'
+input:
+  content: '(generatorIndex : GeneratorIndex)'
+  types:
+  - name: generatorIndex
+    uid: generatorindex
+    content: generatorindex
+output:
+  content: EvolutionUnitary
+  types:
+  - summary: " An `EvolutionUnitary` representing time-evolution by the term \n referenced in `generatorIndex.\n"
+    uid: evolutionunitary
+    content: evolutionunitary

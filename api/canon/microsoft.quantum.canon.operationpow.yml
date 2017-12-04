@@ -13,12 +13,9 @@ input:
   - name: oracle
     isOperation: true
     types:
-    - content: "'T"
-      isLocal: true
-    - content: ()
-      isPrimitive: true
+    - isLocal: true
+    - isPrimitive: true
   - name: power
-    content: Int
     isPrimitive: true
 output:
   content: ('T => ())
@@ -27,10 +24,8 @@ output:
        A new operation representing $U^m$, where $m = \texttt{power}$.
     isOperation: true
     types:
-    - content: "'T"
-      isLocal: true
-    - content: ()
-      isPrimitive: true
+    - isLocal: true
+    - isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.operationpowc
 - microsoft.quantum.canon.operationpowa

@@ -9,14 +9,12 @@ input:
   content: '(qubits : Qubit[])'
   types:
   - name: qubits
-    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true
 functors:
 - Adjoint
 - Controlled

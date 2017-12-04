@@ -10,10 +10,8 @@ input:
   content: "(value : 'T)"
   types:
   - name: value
-    content: "'T"
     isLocal: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true

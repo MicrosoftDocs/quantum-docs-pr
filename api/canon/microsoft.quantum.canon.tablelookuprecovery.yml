@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.tablelookuprecovery
+name: TableLookupRecovery
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function TableLookupRecovery (table : Pauli[][]) : RecoveryFn'
+input:
+  content: '(table : Pauli[][])'
+  types:
+  - name: table
+    isArray: true
+    types:
+    - isPrimitive: true
+output:
+  content: RecoveryFn
+  types:
+  - uid: recoveryfn
+    content: recoveryfn

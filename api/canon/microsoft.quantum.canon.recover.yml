@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.recover
+name: Recover
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation Recover (code : QECC, fn : RecoveryFn, logicalRegister : LogicalRegister) : ()'
+input:
+  content: '(code : QECC, fn : RecoveryFn, logicalRegister : LogicalRegister)'
+  types:
+  - name: code
+    uid: qecc
+    content: qecc
+  - name: fn
+    uid: recoveryfn
+    content: recoveryfn
+  - name: logicalRegister
+    uid: logicalregister
+    content: logicalregister
+output:
+  content: ()
+  types:
+  - isPrimitive: true

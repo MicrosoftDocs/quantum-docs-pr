@@ -10,21 +10,16 @@ input:
   - name: oracle
     isOperation: true
     types:
-    - content: "'T"
-      isLocal: true
-    - content: ()
-      isPrimitive: true
+    - isLocal: true
+    - isPrimitive: true
   - name: power
-    content: Int
     isPrimitive: true
   - name: target
-    content: "'T"
     isLocal: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true
 functors:
 - Adjoint
 - Controlled

@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.steanecoderecoveryfns
+name: SteaneCodeRecoveryFns
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function SteaneCodeRecoveryFns () : (RecoveryFn, RecoveryFn)'
+input:
+  content: ()
+  types: []
+output:
+  content: (RecoveryFn, RecoveryFn)
+  types:
+  - types:
+    - uid: recoveryfn
+      content: recoveryfn
+    - uid: recoveryfn
+      content: recoveryfn

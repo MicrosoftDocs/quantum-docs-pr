@@ -19,18 +19,16 @@ input:
   types:
   - name: ccnot
     uid: ccnotop
+    content: ccnotop
   - name: controls
-    content: Qubit
     isPrimitive: true
     isArray: true
   - name: targets
-    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true
 functors:
 - Adjoint

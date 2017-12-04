@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.fold
+name: Fold
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Iterates a function `f` through an array `array`, returning
+   `f(f(f(initialState, array[0]), array[1]), ...)`.
+remarks: >2-
+
+  ### Examples
+   ```qsharp
+   function Plus(a : Double, b : Double) { return a + b; }
+   function Sum(xs : Double[]) {
+       return Fold(Plus, 0.0, xs);
+   }
+   ```
+syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array : 'T[]) : 'State"
+input:
+  content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
+  types:
+  - name: array
+    isLocal: true
+    isArray: true
+  - name: folder
+    isFunction: true
+    types:
+    - types:
+      - isLocal: true
+      - isLocal: true
+    - isLocal: true
+  - name: state
+    isLocal: true
+output:
+  content: "'State"
+  types:
+  - summary: >2
+       The final state returned by the folder after iterating over
+       all elements of `array`.
+    isLocal: true
+typeParameters:
+- uid: "'State"
+  summary: >2-
+     The type of states the `folder` function operates on, i.e., accepts as its first
+     argument and returns.
+- uid: "'T"
+  summary: >2
+     The type of `array` elements.

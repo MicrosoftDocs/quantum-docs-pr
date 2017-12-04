@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.steanecode
+name: SteaneCode
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Returns a CSS value representing the ⟦7, 1, 3⟧ Steane code encoder and
+   decoder with in-place syndrome measurement.
+syntax: 'operation SteaneCode () : CSS'
+input:
+  content: ()
+  types: []
+output:
+  content: CSS
+  types:
+  - uid: css
+    content: css

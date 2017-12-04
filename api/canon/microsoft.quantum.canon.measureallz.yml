@@ -11,12 +11,10 @@ input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: Result
   types:
   - summary: ' The result of measuring $Z \otimes Z \otimes \cdots \otimes Z$.'
-    content: Result
     isPrimitive: true

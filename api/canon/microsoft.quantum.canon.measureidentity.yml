@@ -22,7 +22,6 @@ input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    content: Qubit
     isPrimitive: true
     isArray: true
 output:
@@ -30,5 +29,4 @@ output:
   types:
   - summary: >2
        The result value `Zero`.
-    content: Result
     isPrimitive: true

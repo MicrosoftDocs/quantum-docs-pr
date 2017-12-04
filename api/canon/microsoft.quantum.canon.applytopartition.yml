@@ -9,26 +9,20 @@ input:
   content: '(op : ((Qubit[], Qubit[]) => ()), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
   types:
   - name: numberOfQubitsToFirstArgument
-    content: Int
     isPrimitive: true
   - name: op
     isOperation: true
     types:
     - types:
-      - content: Qubit
-        isPrimitive: true
+      - isPrimitive: true
         isArray: true
-      - content: Qubit
-        isPrimitive: true
+      - isPrimitive: true
         isArray: true
-    - content: ()
-      isPrimitive: true
+    - isPrimitive: true
   - name: target
-    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true

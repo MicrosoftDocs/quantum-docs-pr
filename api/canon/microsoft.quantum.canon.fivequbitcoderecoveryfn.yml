@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.fivequbitcoderecoveryfn
+name: FiveQubitCodeRecoveryFn
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Table lookup decoder for the ⟦5, 1, 3⟧ quantum code.
+remarks: " By iterating over all errors of weight 1, we obtain a total of 3*5=15 possible non-trivial syndromes. \n Together with the identity, a table of error and corresponding syndrom is built up. For the 5qubit code  \n this table is given by: X_1 (0,0,0,1); X_2 (1,0,0,0); X_3 (1,1,0,0); X_4 (0,1,1,0); X_5 (0,0,1,1), \n Z_1 (1,0,1,0); Z_2 (0,1,0,1); Z_3 (0,0,1,0); Z_4 (1,0,0,1); Z_5 (0,1,0,0) with Yi = Xi + Yi. Note that the \n ordering in the table lookup recovery is given by converting the bitvectors to integers (using little endian)."
+syntax: 'function FiveQubitCodeRecoveryFn () : RecoveryFn'
+input:
+  content: ()
+  types: []
+output:
+  content: RecoveryFn
+  types:
+  - uid: recoveryfn
+    content: recoveryfn

@@ -17,24 +17,18 @@ input:
   - name: actual
     isOperation: true
     types:
-    - content: Qubit
-      isPrimitive: true
+    - isPrimitive: true
       isArray: true
-    - content: ()
-      isPrimitive: true
+    - isPrimitive: true
   - name: expected
     isOperation: true
     types:
-    - content: Qubit
-      isPrimitive: true
+    - isPrimitive: true
       isArray: true
-    - content: ()
-      isPrimitive: true
+    - isPrimitive: true
   - name: nQubits
-    content: Int
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true

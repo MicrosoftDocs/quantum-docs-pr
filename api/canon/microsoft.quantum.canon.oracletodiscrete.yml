@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.oracletodiscrete
+name: OracleToDiscrete
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given an operation representing a "black-box" oracle, implements
+   a discrete-time oracle by repeating the given oracle multiple times.
+remarks: >2-
+
+  ### Examples
+   `OracleToDiscrete(U)(3, target)` is equivalent to `U(target)`
+   repeated three times.
+syntax: 'operation OracleToDiscrete (blackBoxOracle : (Qubit[] => () : Adjoint, Controlled)) : DiscreteOracle'
+input:
+  content: '(blackBoxOracle : (Qubit[] => () : Adjoint, Controlled))'
+  types:
+  - name: blackBoxOracle
+    isOperation: true
+    types:
+    - isPrimitive: true
+      isArray: true
+    - isPrimitive: true
+output:
+  content: DiscreteOracle
+  types:
+  - uid: discreteoracle
+    content: discreteoracle

@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.measurestabilizergenerators
+name: MeasureStabilizerGenerators
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation MeasureStabilizerGenerators (stabilizerGroup : Pauli[][], logicalRegister : LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result)) : Syndrome'
+input:
+  content: '(stabilizerGroup : Pauli[][], logicalRegister : LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result))'
+  types:
+  - name: gadget
+    isOperation: true
+    types:
+    - types:
+      - isPrimitive: true
+        isArray: true
+      - isPrimitive: true
+        isArray: true
+    - isPrimitive: true
+  - name: logicalRegister
+    uid: logicalregister
+    content: logicalregister
+  - name: stabilizerGroup
+    isArray: true
+    types:
+    - isPrimitive: true
+output:
+  content: Syndrome
+  types:
+  - uid: syndrome
+    content: syndrome

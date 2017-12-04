@@ -5,10 +5,28 @@
     uid: microsoft.quantum.canon.adiabaticstateenergyestimate
   - name: AdiabaticStateEnergyUnitary
     uid: microsoft.quantum.canon.adiabaticstateenergyunitary
+  - name: AmpAmpByOracle
+    uid: microsoft.quantum.canon.ampampbyoracle
+  - name: AmpAmpByOraclePhases
+    uid: microsoft.quantum.canon.ampampbyoraclephases
+  - name: AmpAmpByReflectionsPhases
+    uid: microsoft.quantum.canon.ampampbyreflectionsphases
+  - name: AmpAmpObliviousByOraclePhases
+    uid: microsoft.quantum.canon.ampampobliviousbyoraclephases
+  - name: AmpAmpObliviousByReflectionPhases
+    uid: microsoft.quantum.canon.ampampobliviousbyreflectionphases
+  - name: AmpAmpPhasesFixedPoint
+    uid: microsoft.quantum.canon.ampampphasesfixedpoint
+  - name: AmpAmpPhasesStandard
+    uid: microsoft.quantum.canon.ampampphasesstandard
+  - name: AmpAmpRUSByOracle
+    uid: microsoft.quantum.canon.ampamprusbyoracle
   - name: AmpAmpReflectionPhases
     uid: microsoft.quantum.canon.ampampreflectionphases
   - name: AmpAmpRotationPhases
     uid: microsoft.quantum.canon.ampamprotationphases
+  - name: AmpAmpRotationToReflectionPhases
+    uid: microsoft.quantum.canon.ampamprotationtoreflectionphases
   - name: AndLadder
     uid: microsoft.quantum.canon.andladder
   - name: ApplyMultiControlledC
@@ -75,12 +93,6 @@
     uid: microsoft.quantum.canon.applytosubregisterc
   - name: ApplyToSubregisterCA
     uid: microsoft.quantum.canon.applytosubregisterca
-  - name: ArcCosh
-    uid: microsoft.quantum.canon.arccosh
-  - name: ArcSinh
-    uid: microsoft.quantum.canon.arcsinh
-  - name: ArcTanh
-    uid: microsoft.quantum.canon.arctanh
   - name: AsQubitArray
     uid: microsoft.quantum.canon.asqubitarray
   - name: AssertAllZero
@@ -119,6 +131,14 @@
     uid: microsoft.quantum.canon.bindc
   - name: BindCA
     uid: microsoft.quantum.canon.bindca
+  - name: BitFlipCode
+    uid: microsoft.quantum.canon.bitflipcode
+  - name: BitFlipDecoder
+    uid: microsoft.quantum.canon.bitflipdecoder
+  - name: BitFlipEncoder
+    uid: microsoft.quantum.canon.bitflipencoder
+  - name: BitFlipRecoveryFn
+    uid: microsoft.quantum.canon.bitfliprecoveryfn
   - name: BoolArrFromPositiveInt
     uid: microsoft.quantum.canon.boolarrfrompositiveint
   - name: BoolArrFromResultArr
@@ -131,6 +151,8 @@
     uid: microsoft.quantum.canon.css
   - name: Complex
     uid: microsoft.quantum.canon.complex
+  - name: ContinuousOracle
+    uid: microsoft.quantum.canon.continuousoracle
   - name: ControlledOnBitString
     uid: microsoft.quantum.canon.controlledonbitstring
   - name: ControlledOnInt
@@ -143,6 +165,8 @@
     uid: microsoft.quantum.canon.decomposeintotimestepsca
   - name: DeterministicStateOracle
     uid: microsoft.quantum.canon.deterministicstateoracle
+  - name: DiscreteOracle
+    uid: microsoft.quantum.canon.discreteoracle
   - name: EmbedPauli
     uid: microsoft.quantum.canon.embedpauli
   - name: EncodeOp
@@ -151,18 +175,26 @@
     uid: microsoft.quantum.canon.estimateenergy
   - name: EstimateFrequency
     uid: microsoft.quantum.canon.estimatefrequency
-  - name: ExpMod
-    uid: microsoft.quantum.canon.expmod
-  - name: ExtendedGCD
-    uid: microsoft.quantum.canon.extendedgcd
   - name: Filter
     uid: microsoft.quantum.canon.filter
+  - name: FiveQubitCode
+    uid: microsoft.quantum.canon.fivequbitcode
+  - name: FiveQubitCodeDecoder
+    uid: microsoft.quantum.canon.fivequbitcodedecoder
+  - name: FiveQubitCodeEncoder
+    uid: microsoft.quantum.canon.fivequbitcodeencoder
+  - name: FiveQubitCodeRecoveryFn
+    uid: microsoft.quantum.canon.fivequbitcoderecoveryfn
   - name: FlipToBasis
     uid: microsoft.quantum.canon.fliptobasis
+  - name: Fold
+    uid: microsoft.quantum.canon.fold
   - name: ForAll
     uid: microsoft.quantum.canon.forall
   - name: ForAny
     uid: microsoft.quantum.canon.forany
+  - name: Fst
+    uid: microsoft.quantum.canon.fst
   - name: HY
     uid: microsoft.quantum.canon.hy
   - name: I
@@ -175,12 +207,12 @@
     uid: microsoft.quantum.canon.intabs
   - name: IntMax
     uid: microsoft.quantum.canon.intmax
+  - name: IntToPauli
+    uid: microsoft.quantum.canon.inttopauli
   - name: InterpolatedEvolution
     uid: microsoft.quantum.canon.interpolatedevolution
-  - name: InverseMod
-    uid: microsoft.quantum.canon.inversemod
-  - name: IsCoprime
-    uid: microsoft.quantum.canon.iscoprime
+  - name: IntsToPaulis
+    uid: microsoft.quantum.canon.intstopaulis
   - name: IsResultOne
     uid: microsoft.quantum.canon.isresultone
   - name: IsResultZero
@@ -191,8 +223,6 @@
     uid: microsoft.quantum.canon.iteratethroughcartesianproduct
   - name: KnillDistill
     uid: microsoft.quantum.canon.knilldistill
-  - name: Lg
-    uid: microsoft.quantum.canon.lg
   - name: LogOf2
     uid: microsoft.quantum.canon.logof2
   - name: LogicalRegister
@@ -207,20 +237,16 @@
     uid: microsoft.quantum.canon.map
   - name: MapIndex
     uid: microsoft.quantum.canon.mapindex
-  - name: Max
-    uid: microsoft.quantum.canon.max
   - name: MeasureAllZ
     uid: microsoft.quantum.canon.measureallz
   - name: MeasureIdentity
     uid: microsoft.quantum.canon.measureidentity
   - name: MeasurePaulis
     uid: microsoft.quantum.canon.measurepaulis
+  - name: MeasureStabilizerGenerators
+    uid: microsoft.quantum.canon.measurestabilizergenerators
   - name: MeasureWithScratch
     uid: microsoft.quantum.canon.measurewithscratch
-  - name: Min
-    uid: microsoft.quantum.canon.min
-  - name: Modulus
-    uid: microsoft.quantum.canon.modulus
   - name: MultiM
     uid: microsoft.quantum.canon.multim
   - name: NoOp
@@ -243,6 +269,12 @@
     uid: microsoft.quantum.canon.operationpowimplc
   - name: OperationPowImplCA
     uid: microsoft.quantum.canon.operationpowimplca
+  - name: OracleToDiscrete
+    uid: microsoft.quantum.canon.oracletodiscrete
+  - name: PauliEvolutionFunction
+    uid: microsoft.quantum.canon.paulievolutionfunction
+  - name: PauliEvolutionSet
+    uid: microsoft.quantum.canon.paulievolutionset
   - name: PauliFromBitString
     uid: microsoft.quantum.canon.paulifrombitstring
   - name: PositiveIntFromBoolArr
@@ -277,8 +309,10 @@
     uid: microsoft.quantum.canon.randomsinglequbitpauli
   - name: RandomWalkPhaseEstimation
     uid: microsoft.quantum.canon.randomwalkphaseestimation
-  - name: RealMod
-    uid: microsoft.quantum.canon.realmod
+  - name: Recover
+    uid: microsoft.quantum.canon.recover
+  - name: RecoverCSS
+    uid: microsoft.quantum.canon.recovercss
   - name: RecoveryFn
     uid: microsoft.quantum.canon.recoveryfn
   - name: ReflectionOracle
@@ -297,6 +331,8 @@
     uid: microsoft.quantum.canon.restricttosubregisterca
   - name: ResultArrFromBoolArr
     uid: microsoft.quantum.canon.resultarrfromboolarr
+  - name: ResultAsInt
+    uid: microsoft.quantum.canon.resultasint
   - name: ResultFromBool
     uid: microsoft.quantum.canon.resultfrombool
   - name: RobustPhaseEstimation
@@ -305,20 +341,42 @@
     uid: microsoft.quantum.canon.robustphaseestimationtestop
   - name: SimulationAlgorithm
     uid: microsoft.quantum.canon.simulationalgorithm
+  - name: Snd
+    uid: microsoft.quantum.canon.snd
   - name: StateOracle
     uid: microsoft.quantum.canon.stateoracle
+  - name: SteaneCode
+    uid: microsoft.quantum.canon.steanecode
+  - name: SteaneCodeDecoder
+    uid: microsoft.quantum.canon.steanecodedecoder
+  - name: SteaneCodeEncoder
+    uid: microsoft.quantum.canon.steanecodeencoder
+  - name: SteaneCodeRecoveryFns
+    uid: microsoft.quantum.canon.steanecoderecoveryfns
+  - name: SteaneCodeRecoveryX
+    uid: microsoft.quantum.canon.steanecoderecoveryx
+  - name: SteaneCodeRecoveryZ
+    uid: microsoft.quantum.canon.steanecoderecoveryz
   - name: Subarray
     uid: microsoft.quantum.canon.subarray
   - name: Syndrome
     uid: microsoft.quantum.canon.syndrome
   - name: SyndromeMeasOp
     uid: microsoft.quantum.canon.syndromemeasop
+  - name: TableLookupRecovery
+    uid: microsoft.quantum.canon.tablelookuprecovery
   - name: TimeDependentSimulationAlgorithm
     uid: microsoft.quantum.canon.timedependentsimulationalgorithm
+  - name: TimeDependentTrotterSimulationAlgorithm
+    uid: microsoft.quantum.canon.timedependenttrottersimulationalgorithm
   - name: Trotter1ImplCA
     uid: microsoft.quantum.canon.trotter1implca
   - name: Trotter2ImplCA
     uid: microsoft.quantum.canon.trotter2implca
+  - name: TrotterSimulationAlgorithm
+    uid: microsoft.quantum.canon.trottersimulationalgorithm
+  - name: TrotterStep
+    uid: microsoft.quantum.canon.trotterstep
   - name: UncurryOp
     uid: microsoft.quantum.canon.uncurryop
   - name: UncurryOpA

@@ -9,17 +9,16 @@ input:
   content: '(message : String, target : Qubit[], tolerance : Double)'
   types:
   - name: message
-    content: String
     isPrimitive: true
   - name: target
-    content: Qubit
     isPrimitive: true
     isArray: true
   - name: tolerance
-    content: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true
+functors:
+- Adjoint
+- Controlled

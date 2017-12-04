@@ -10,21 +10,17 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: array
-    content: "'T"
     isLocal: true
     isArray: true
   - name: predicate
     isFunction: true
     types:
-    - content: "'T"
-      isLocal: true
-    - content: Bool
-      isPrimitive: true
+    - isLocal: true
+    - isPrimitive: true
 output:
   content: Bool
   types:
   - summary: ' A `Bool` value of the OR function of the predicate applied to all elements.'
-    content: Bool
     isPrimitive: true
 typeParameters:
 - uid: "'T"

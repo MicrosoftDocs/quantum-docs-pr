@@ -13,5 +13,4 @@ input:
 output:
   content: Double
   types:
-  - content: Double
-    isPrimitive: true
+  - isPrimitive: true

@@ -17,15 +17,14 @@ input:
   - name: expected
     types:
     - uid: complex
+      content: complex
     - uid: complex
+      content: complex
   - name: register
-    content: Qubit
     isPrimitive: true
   - name: tolerance
-    content: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true

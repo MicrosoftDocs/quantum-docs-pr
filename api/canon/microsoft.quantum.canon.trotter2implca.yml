@@ -22,31 +22,23 @@ input:
   content: "(nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), stepSize : Double, target : 'T)"
   types:
   - name: nSteps
-    content: Int
     isPrimitive: true
   - name: op
     isOperation: true
     types:
     - types:
-      - content: Int
-        isPrimitive: true
-      - content: Double
-        isPrimitive: true
-      - content: "'T"
-        isLocal: true
-    - content: ()
-      isPrimitive: true
+      - isPrimitive: true
+      - isPrimitive: true
+      - isLocal: true
+    - isPrimitive: true
   - name: stepSize
-    content: Double
     isPrimitive: true
   - name: target
-    content: "'T"
     isLocal: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true
 functors:
 - Adjoint
 - Controlled

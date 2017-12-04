@@ -10,7 +10,6 @@ input:
   content: '(bitsRandom : Int)'
   types:
   - name: bitsRandom
-    content: Int
     isPrimitive: true
 output:
   content: Double
@@ -19,5 +18,4 @@ output:
        A real number $x = k / 2^{\texttt{bitsRandom} - 1}$ for an integer
        $k$ sampled from the interval $[0, 2^{\texttt{bitsRandom}})$
        with probability $\Pr(k) = 1 / 2^{\texttt{bitsRandom}}$.
-    content: Double
     isPrimitive: true

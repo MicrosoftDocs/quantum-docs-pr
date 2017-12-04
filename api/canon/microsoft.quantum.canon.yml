@@ -10,8 +10,18 @@ functions:
     summary: ' The `IsResultZero` function tests if a given Result value is equal to `Zero`.     '
   - uid: microsoft.quantum.canon.isresultone
     summary: ' The `IsResultOne` function tests if a given Result value is equal to `One`.'
+  - uid: microsoft.quantum.canon.fst
+    summary: >2
+       Given a pair, returns its first element.
+  - uid: microsoft.quantum.canon.snd
+    summary: >2
+       Given a pair, returns its second element.
   - uid: microsoft.quantum.canon.filter
     summary: " The `Filter` function takes an array and a predicate that is defined \n for the elements of the array, and returns an array that consists of \n those elements that satisfy the predicate. \n"
+  - uid: microsoft.quantum.canon.fold
+    summary: >2
+       Iterates a function `f` through an array `array`, returning
+       `f(f(f(initialState, array[0]), array[1]), ...)`.
   - uid: microsoft.quantum.canon.forall
     summary: " The `ForAll` function takes an array and a predicate that is defined \n for the elements of the array, and checks if all elements of the \n array satisfy the predicate. \n"
   - uid: microsoft.quantum.canon.forany
@@ -42,11 +52,49 @@ functions:
   - uid: microsoft.quantum.canon.uncurryopc
   - uid: microsoft.quantum.canon.uncurryopa
   - uid: microsoft.quantum.canon.uncurryopca
+  - uid: microsoft.quantum.canon.trotterstep
+    summary: " Implements a single time-step of time-evolution by the system \n described in an `EvolutionGenerator` using a Trotter–Suzuki \n decomposition.\n"
+  - uid: microsoft.quantum.canon.trottersimulationalgorithm
+    summary: " `SimulationAlgorithm` function that uses a Trotter-Suzuki \n decomposition to approximate the time-evolution operator $e^{-i H t}$.\n"
+  - uid: microsoft.quantum.canon.timedependenttrottersimulationalgorithm
+    summary: " `TimeDependentSimulationAlgorithm` function that uses a Trotter-Suzuki \n decomposition to approximate a unitary operator that solves the \n time-dependent Schr�dinger equation at time $t$. \n"
+  - uid: microsoft.quantum.canon.inttopauli
+    summary: >2
+       Converts a integer to a single-qubit Pauli operator.
+  - uid: microsoft.quantum.canon.intstopaulis
+    summary: " Converts an array of integers to an array of single-qubit Pauli \n operators.\n"
+  - uid: microsoft.quantum.canon.paulievolutionfunction
+    summary: " Represents a dynamical generator as a set of simulatable gates and an \n expansion in the Pauli basis.\n"
+  - uid: microsoft.quantum.canon.paulievolutionset
+    summary: " Represents a dynamical generator as a set of simulatable gates and an \n expansion in the Pauli basis.\n"
   - uid: microsoft.quantum.canon.interpolatedevolution
     summary: >2
        This interpolates between two generators with a uniform schedule,
        returning an operation that applies simulated evolution under
        the resulting time-dependent generator to a qubit register.
+  - uid: microsoft.quantum.canon.ampamprotationtoreflectionphases
+    summary: " Converts phases specified as single-qubit rotations to phases \n specified as partial reflections.\n"
+  - uid: microsoft.quantum.canon.ampampphasesstandard
+    summary: >2
+       Computes partial reflection phases for standard amplitude
+       amplification.
+  - uid: microsoft.quantum.canon.ampampphasesfixedpoint
+    summary: " Computes partial reflection phases for fixed-point amplitude \n amplification.\n"
+  - uid: microsoft.quantum.canon.ampampobliviousbyreflectionphases
+    summary: >2
+       Returns unitary that implements oblivious amplitude amplification by specifying for partial reflections.
+  - uid: microsoft.quantum.canon.ampampobliviousbyoraclephases
+    summary: >2
+       Oblivious amplitude amplification by oracles for partial reflections.
+  - uid: microsoft.quantum.canon.ampampbyreflectionsphases
+    summary: >2
+       Amplitude amplification by partial reflections.
+  - uid: microsoft.quantum.canon.ampampbyoraclephases
+    summary: >2
+       Amplitude amplification by oracles for partial reflections.
+  - uid: microsoft.quantum.canon.ampampbyoracle
+    summary: >2
+       Standard Amplitude Amplification algorithm
   - uid: microsoft.quantum.canon.intabs
   - uid: microsoft.quantum.canon.intmax
   - uid: microsoft.quantum.canon.boolfromresult
@@ -101,39 +149,6 @@ functions:
   - uid: microsoft.quantum.canon.restricttosubregistera
   - uid: microsoft.quantum.canon.restricttosubregisterc
   - uid: microsoft.quantum.canon.restricttosubregisterca
-  - uid: microsoft.quantum.canon.lg
-    summary: >2
-       Computes the base-2 logarithm of a number.
-  - uid: microsoft.quantum.canon.max
-    summary: >2
-       Given an array of integers, returns the largest element.
-  - uid: microsoft.quantum.canon.min
-    summary: >2
-       Given an array of integers, returns the smallest element.
-  - uid: microsoft.quantum.canon.realmod
-    summary: >2
-       Computes the modulus between two real numbers.
-  - uid: microsoft.quantum.canon.arccosh
-    summary: >2
-       Computes the inverse hyperbolic cosine of a number.
-  - uid: microsoft.quantum.canon.arcsinh
-    summary: >2
-       Computes the inverse hyperbolic secant of a number.
-  - uid: microsoft.quantum.canon.arctanh
-    summary: >2
-       Computes the inverse hyperbolic tangent of a number.
-  - uid: microsoft.quantum.canon.modulus
-    summary: ' Computes canonical residue of `value` modulo `modulus`.'
-  - uid: microsoft.quantum.canon.expmod
-    summary: " Let us denote expBase by x, power by p and modulus by N. \n The function returns xᵖ mod N . \n We assume that N,x are positive and power is non-negative."
-  - uid: microsoft.quantum.canon.extendedgcd
-    summary: " Computes tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a  \n greatest common divisor of a and b. The GCD is always positive.\n "
-  - uid: microsoft.quantum.canon.iscoprime
-    summary: >2
-       Returns true if a and b are co-prime and false otherwise.
-  - uid: microsoft.quantum.canon.inversemod
-    summary: >2
-       Returns b such that `a`⋅b = 1 (mod `modulus`)
   - uid: microsoft.quantum.canon.ignore
     summary: >2
        Ignores the output of an operation or function.
@@ -161,6 +176,22 @@ functions:
     summary: >2
        Returns an array of all weight-1 Pauli operators
        on a given number of qubits.
+  - uid: microsoft.quantum.canon.fivequbitcoderecoveryfn
+    summary: >2
+       Table lookup decoder for the ⟦5, 1, 3⟧ quantum code.
+  - uid: microsoft.quantum.canon.steanecoderecoveryx
+    summary: " Decoder for the ⟦7, 1, 3⟧ Steane quantum code.\n "
+  - uid: microsoft.quantum.canon.steanecoderecoveryz
+  - uid: microsoft.quantum.canon.steanecoderecoveryfns
+  - uid: microsoft.quantum.canon.bitfliprecoveryfn
+  - uid: microsoft.quantum.canon.resultasint
+    summary: >2-
+       Given an array of results, represents the array by a single
+       integer, with the 0th (leftmost) entry in the array being mapped
+       the least significant bit. Thus, [One; Zero] is represented by
+       1 and [Zero; One] by 2.
+  - uid: microsoft.quantum.canon.tablelookuprecoveryimpl
+  - uid: microsoft.quantum.canon.tablelookuprecovery
 operations:
   items:
   - uid: microsoft.quantum.canon.trotter1implca
@@ -250,6 +281,15 @@ operations:
   - uid: microsoft.quantum.canon.applytopartitiona
   - uid: microsoft.quantum.canon.applytopartitionc
   - uid: microsoft.quantum.canon.applytopartitionca
+  - uid: microsoft.quantum.canon.trotterstepimpl
+    summary: >2
+       Implements time-evolution by a term contained in a `GeneratorSystem`.
+  - uid: microsoft.quantum.canon.trottersimulationalgorithmimpl
+    summary: " Makes repeated calls to `TrotterStep` to approximate the \n time-evolution operator $e^{-i H t}$.\n"
+  - uid: microsoft.quantum.canon.timedependenttrottersimulationalgorithmimpl
+    summary: " Implementation of multiple Trotter steps to approximate a unitary \n operator that solves the time-dependent Schr�dinger equation at time \n $t$. \n"
+  - uid: microsoft.quantum.canon.paulievolutionimpl
+    summary: " Represents a dynamical generator as a set of simulatable gates and an \n expansion in the Pauli basis.\n\n See [Dynamical Generator Modeling](../libraries/data-structures#dynamical-generator-modeling)\n for more details.\n"
   - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
     summary: >2
        Performs state preparation, and adiabatic state preparation, and phase
@@ -263,6 +303,11 @@ operations:
        Performs iterative phase estimation using a random walk to approximate
        Bayesian inference on the classical measurement results from a given
        oracle and eigenstate.
+  - uid: microsoft.quantum.canon.ampampobliviousbyreflectionphasesimpl
+    summary: >2
+       Oblivious amplitude amplification by specifying partial reflections.
+  - uid: microsoft.quantum.canon.ampamprusbyoracle
+    summary: " Fixed-Point Amplitude Amplification algorithm \n"
   - uid: microsoft.quantum.canon.randomintpow2
     summary: >2
        Generates a random number uniformly sampled in the interval
@@ -349,6 +394,10 @@ operations:
   - uid: microsoft.quantum.canon.operationpowimplc
   - uid: microsoft.quantum.canon.operationpowimpla
   - uid: microsoft.quantum.canon.operationpowimplca
+  - uid: microsoft.quantum.canon.oracletodiscrete
+    summary: >2
+       Given an operation representing a "black-box" oracle, implements
+       a discrete-time oracle by repeating the given oracle multiple times.
   - uid: microsoft.quantum.canon.measurewithscratch
     summary: >2
        Measures the given Pauli operator using an explicit scratch
@@ -392,6 +441,48 @@ operations:
        Given an array of qubits, measure them and ensure they are in the $\ket{0}$ state
        such that they can be safely released.
   - uid: microsoft.quantum.canon.hy
+  - uid: microsoft.quantum.canon.fivequbitcodeencoderimpl
+    summary: >2
+       Private operation used to implement both the 5 qubit encoder and decoder.
+  - uid: microsoft.quantum.canon.fivequbitcodeencoder
+    summary: " Encodes into the ⟦5, 1, 3⟧ quantum code. \n"
+  - uid: microsoft.quantum.canon.fivequbitcodedecoder
+  - uid: microsoft.quantum.canon.fivequbitcode
+    summary: >2-
+       Returns a QECC value representing the ⟦5, 1, 3⟧ code encoder and
+       decoder with in-place syndrome measurement.
+  - uid: microsoft.quantum.canon.steanecodeencoderimpl
+    summary: >2
+       Private operation used to implement both the Steane code encoder and decoder.
+  - uid: microsoft.quantum.canon.steanecodeencoder
+    summary: ' Encodes into the ⟦7, 1, 3⟧ Steane quantum code.'
+  - uid: microsoft.quantum.canon.steanecodedecoder
+  - uid: microsoft.quantum.canon.steanecode
+    summary: >2-
+       Returns a CSS value representing the ⟦7, 1, 3⟧ Steane code encoder and
+       decoder with in-place syndrome measurement.
+  - uid: microsoft.quantum.canon.bfencoderimpl
+    summary: >2
+       Private operation used to implement both the bit flip encoder and decoder.
+
+       Note that this encoder can make use of in-place coherent recovery,
+       in which case it will "cause" the error described
+       by the initial state of `auxQubits`.
+       In particular, if `auxQubits` are initially in the state $\ket{10}$, this
+       will cause an $X_1$ error on the encoded qubit.
+  - uid: microsoft.quantum.canon.bitflipencoder
+    summary: >2
+       Encodes into the [3, 1, 3] / ⟦3, 1, 1⟧ bit-flip code.
+  - uid: microsoft.quantum.canon.bitflipdecoder
+    summary: >2
+       Decodes from the [3, 1, 3] / ⟦3, 1, 1⟧ bit-flip code.
+  - uid: microsoft.quantum.canon.bitflipcode
+    summary: >2-
+       Returns a QECC value representing the ⟦3, 1, 1⟧ bit flip code encoder and
+       decoder with in-place syndrome measurement.
+  - uid: microsoft.quantum.canon.measurestabilizergenerators
+  - uid: microsoft.quantum.canon.recover
+  - uid: microsoft.quantum.canon.recovercss
   - uid: microsoft.quantum.canon.quantumphaseestimation
     summary: >2
        Performs the quantum phase estimation algorithm for a given oracle U and eigenstate,
@@ -466,6 +557,16 @@ newtypes:
        Phases for a sequence of single-qubit rotations in amplitude amplification.
   - uid: microsoft.quantum.canon.complex
     summary: ' Represents a complex number by its real and imaginary components.'
+  - uid: microsoft.quantum.canon.discreteoracle
+    summary: >2-
+       Represents a discrete-time oracle $U^m$ for a fixed operation $U$
+       and a non-negative integer $m$.
+  - uid: microsoft.quantum.canon.continuousoracle
+    summary: >2-
+       Represents a continuous-time oracle
+       $U(\delta t) : \ket{\psi(t)} \mapsto \ket{\psi(t + \delta t)}
+       for all times $t$, where $U$ is a fixed operation, and where
+       and $\delta t$ is a non-negative real number.
   - uid: microsoft.quantum.canon.logicalregister
   - uid: microsoft.quantum.canon.syndrome
   - uid: microsoft.quantum.canon.recoveryfn

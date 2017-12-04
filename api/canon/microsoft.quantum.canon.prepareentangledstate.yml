@@ -12,18 +12,15 @@ input:
   content: '(left : Qubit[], right : Qubit[])'
   types:
   - name: left
-    content: Qubit
     isPrimitive: true
     isArray: true
   - name: right
-    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true
 functors:
 - Adjoint
 - Controlled

@@ -11,10 +11,8 @@ input:
   content: '(target : Qubit)'
   types:
   - name: target
-    content: Qubit
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true

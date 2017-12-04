@@ -17,20 +17,20 @@ input:
   types:
   - name: evolutionGeneratorEnd
     uid: evolutiongenerator
+    content: evolutiongenerator
   - name: evolutionGeneratorStart
     uid: evolutiongenerator
+    content: evolutiongenerator
   - name: inerpolationTime
-    content: Double
     isPrimitive: true
   - name: timeDependentSimulationAlgorithm
     uid: timedependentsimulationalgorithm
+    content: timedependentsimulationalgorithm
 output:
   content: '(Qubit[] => () : Adjoint, Controlled)'
   types:
   - isOperation: true
     types:
-    - content: Qubit
-      isPrimitive: true
+    - isPrimitive: true
       isArray: true
-    - content: ()
-      isPrimitive: true
+    - isPrimitive: true

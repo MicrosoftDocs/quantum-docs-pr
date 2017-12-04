@@ -9,30 +9,23 @@ input:
   content: '(basis : Int[], givenU : (Qubit[] => ()), expectedU : (Qubit[] => () : Adjoint), tolerance : Double)'
   types:
   - name: basis
-    content: Int
     isPrimitive: true
     isArray: true
   - name: expectedU
     isOperation: true
     types:
-    - content: Qubit
-      isPrimitive: true
+    - isPrimitive: true
       isArray: true
-    - content: ()
-      isPrimitive: true
+    - isPrimitive: true
   - name: givenU
     isOperation: true
     types:
-    - content: Qubit
-      isPrimitive: true
+    - isPrimitive: true
       isArray: true
-    - content: ()
-      isPrimitive: true
+    - isPrimitive: true
   - name: tolerance
-    content: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true

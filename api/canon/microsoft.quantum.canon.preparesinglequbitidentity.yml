@@ -26,10 +26,8 @@ input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    content: Qubit
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
-    isPrimitive: true
+  - isPrimitive: true

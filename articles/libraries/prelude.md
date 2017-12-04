@@ -28,14 +28,12 @@ ms.topic: article-type-from-white-list
 The primitive operations defined in the standard library roughly fall into one of several categories:
 
 - Essential classical functions.
-- Operations representing unitaries composed of [Clifford and $T$ gates](../quantum-concepts-4-Qubit.md). <!-- TODO: link to qconcepts -->
+- Operations representing unitaries composed of [Clifford and $T$ gates](../quantum-concepts-4-Qubit.md).
 - Operations representing rotations about various operators.
 - Operations implementing measurements.
 
 Since the Clifford + $T$ gate set is [universal](../quantum-concepts-5-MultipleQubits.md) for quantum computing, these operations suffice to approximately implement any quantum algorithm within negligibly small error.
-By also providing rotations as well, Q# allows the programmer to work within the single qubit unitary and CNOT gate library.  This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [For more information](../quantum-ForMoreInformation.md)).
-
-<!-- TODO: discuss rotation conventions more here. -->
+By also providing rotations as well, Q# allows the programmer to work within the single qubit unitary and CNOT gate library.  This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [For more information](xref:microsoft.quantum.more-information)).
 
 Where possible, the operations defined in the prelude which act on qubits allow for applying the `Controlled` variant, such that the target machine will perform the appropriate decomposition.
 

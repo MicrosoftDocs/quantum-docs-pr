@@ -187,7 +187,7 @@ We review these two steps below.
 
 Having seen how the quantum Fourier transform and phase estimation work (see [Quantum algorithms](./algorithms.md), we can use these tools to solve a classically hard computational problem called *period finding*.  In the next section, we will see how to apply period finding to factoring.
 
-Given two integers $a$ and $N$, where $a<N$, the goal of period finding, also called order finding, is to find the {\it order} $r$ of $a$ modulo $N$, where $r$ is defined to be the least positive integer such that $a^r \equiv 1 \text{ mod } N$.  
+Given two integers $a$ and $N$, where $a<N$, the goal of period finding, also called order finding, is to find the _order_ $r$ of $a$ modulo $N$, where $r$ is defined to be the least positive integer such that $a^r \equiv 1 \text{ mod } N$.  
 
 To find the order using a quantum computer, we can use the phase estimation algorithm applied to the following unitary operator $U_a$:
 $$ U_a|x\rangle \equiv |(ax)\text{ mod }N\rangle .$$

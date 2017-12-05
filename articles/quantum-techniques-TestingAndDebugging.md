@@ -167,7 +167,7 @@ By definition, a failure of this kind cannot be observed from within Q#, as no f
 Thus, if we proceed past a call to `AssertPositive`, we can be assured by that its input was positive.
 
 Building on these ideas, [the prelude](./libraries/prelude.md) offers two especially useful assertions, both @"microsoft.quantum.primitive.assert" and @"microsoft.quantum.primitive.assertprob" both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is to be performed, and a hypothetical outcome.
-On target machines which work by simulation, we are not bound by (the no-cloning theorem)[https://en.wikipedia.org/wiki/No-cloning_theorem], and can perform such measurements without disturbing the register passed to such assertions.
+On target machines which work by simulation, we are not bound by [the no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), and can perform such measurements without disturbing the register passed to such assertions.
 A simulator can then, similar to the `AssertPositive` function above, abort computation if the hypothetical outcome would not be observed in practice:
 <!--- TODO: in para above [no-cloning theorm](TODO: link to glossary)--->
 <!-- TODO: check that this code is correct. -->

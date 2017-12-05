@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.signd
+name: SignD
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+remarks: ' See (`System.Math.Sign`)[https://docs.microsoft.com/en-us/dotnet/api/system.math.sign].'
+syntax: 'function SignD (a : Double) : Double'
+input:
+  content: '(a : Double)'
+  types:
+  - name: a
+    content: Double
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - content: Double
+    isPrimitive: true

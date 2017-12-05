@@ -8,7 +8,7 @@ summary: >2
    with the given probability, within some tolerance.
 remarks: >2
 
-  ## Examples
+  ### Examples
    ```qsharp
    using (register = Qubit[1]) {
        H(register[0]);
@@ -17,31 +17,33 @@ remarks: >2
    }
    ```
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : ()'
-seealso: ' - @"microsoft.quantum.primitive.assertprob"'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
-    summary: >2-
-       A measurement effect to assert the probability of, expressed as a
-       mutli-qubit Pauli operator.
-    uid: microsoft.quantum.primitive.pauli
+    content: Pauli
+    isPrimitive: true
     isArray: true
   - name: msg
-    summary: >2
-       A message to be reported if the assertion fails.
-    uid: microsoft.quantum.primitive.string
+    content: String
+    isPrimitive: true
   - name: prob
-    summary: ' The probability with which the given result is expected.'
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
   - name: qubits
-    summary: ' A register on which to make the assertion.'
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
   - name: result
-    summary: ' An expected result of `Measure(bases, qubits)`.'
-    uid: microsoft.quantum.primitive.result
+    content: Result
+    isPrimitive: true
+  - name: tol
+    content: Double
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.integer
+  - content: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.primitive.assertprob

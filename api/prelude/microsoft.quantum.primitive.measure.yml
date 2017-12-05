@@ -29,15 +29,12 @@ input:
   content: '(bases : Pauli[], qubits : Qubit[])'
   types:
   - name: bases
-    summary: >2-
-       Array of single-qubit Pauli values indicating the tensor product
-       factors on each qubit.
-    uid: microsoft.quantum.primitive.pauli
+    content: Pauli
+    isPrimitive: true
     isArray: true
   - name: qubits
-    summary: >2
-       Register of qubits to be measured.
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
     isArray: true
 output:
   content: Result
@@ -45,4 +42,5 @@ output:
   - summary: >2
        The `Result` `Zero` if the $+1$ eigenvalue is observed, and `One` if
        the $-1$ eigenvalue is observed.
-    uid: microsoft.quantum.primitive.result
+    content: Result
+    isPrimitive: true

@@ -7,17 +7,20 @@ summary: >2
    Returns the bitwise NOT of an integer.
 remarks: >2
 
-  ## Examples
+  ### Examples
    ```qsharp
    let a = 248;
    let x = Not(a); // x : Int = -249, due to two's complement representation.
    ```
 syntax: 'function Not (a : Int) : Int'
-seealso: ' - [C# `~` Operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-complement-operator)'
 input:
   content: '(a : Int)'
-  types: []
+  types:
+  - name: a
+    content: Int
+    isPrimitive: true
 output:
   content: Int
   types:
-  - uid: microsoft.quantum.primitive.integer
+  - content: Int
+    isPrimitive: true

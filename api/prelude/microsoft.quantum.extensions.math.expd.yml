@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.expd
+name: ExpD
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+remarks: ' See (`System.Math.Exp`)[https://docs.microsoft.com/en-us/dotnet/api/system.math.exp].'
+syntax: 'function ExpD (a : Double) : Double'
+input:
+  content: '(a : Double)'
+  types:
+  - name: a
+    content: Double
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - content: Double
+    isPrimitive: true

@@ -7,7 +7,7 @@ summary: >2
    Returns the bitwise PARITY of an integer.
 remarks: >2-
 
-  ## Examples
+  ### Examples
    ```qsharp
    let a = 248;
    let x = Parity(a); // x : Int = 1.
@@ -15,8 +15,12 @@ remarks: >2-
 syntax: 'function Parity (a : Int) : Int'
 input:
   content: '(a : Int)'
-  types: []
+  types:
+  - name: a
+    content: Int
+    isPrimitive: true
 output:
   content: Int
   types:
-  - uid: microsoft.quantum.primitive.integer
+  - content: Int
+    isPrimitive: true

@@ -20,16 +20,16 @@ input:
   content: '(theta : Double, qubit : Qubit)'
   types:
   - name: qubit
-    summary: >2
-       Qubit to which the gate should be applied.
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
   - name: theta
-    summary: ' Angle about which the qubit is to be rotated.'
-    uid: microsoft.quantum.primitive.float
+    content: Double
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.integer
+  - content: ()
+    isPrimitive: true
 functors:
 - Adjoint
 - Controlled

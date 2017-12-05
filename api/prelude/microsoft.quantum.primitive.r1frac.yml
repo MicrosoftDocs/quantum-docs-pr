@@ -26,23 +26,19 @@ input:
   content: '(numerator : Int, power : Int, qubit : Qubit)'
   types:
   - name: numerator
-    summary: >2-
-       Numerator in the dyadic fraction representation of the angle
-       by which the qubit is to be rotated.
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: power
-    summary: >2-
-       Power of two specifying the denominator of the angle by which
-       the qubit is to be rotated.
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
   - name: qubit
-    summary: >2
-       Qubit to which the gate should be applied.
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.integer
+  - content: ()
+    isPrimitive: true
 functors:
 - Adjoint
 - Controlled

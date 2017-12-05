@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.ieeeremainder
+name: IEEERemainder
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+remarks: ' See (`System.Math.IEEERemainder`)[https://docs.microsoft.com/en-us/dotnet/api/system.math.ieeeremainder].'
+syntax: 'function IEEERemainder (x : Double, y : Double) : Double'
+input:
+  content: '(x : Double, y : Double)'
+  types:
+  - name: x
+    content: Double
+    isPrimitive: true
+  - name: y
+    content: Double
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - content: Double
+    isPrimitive: true

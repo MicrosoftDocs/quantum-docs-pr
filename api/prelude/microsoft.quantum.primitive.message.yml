@@ -13,10 +13,10 @@ input:
   content: '(msg : String)'
   types:
   - name: msg
-    summary: >2
-       The message to be reported.
-    uid: microsoft.quantum.primitive.string
+    content: String
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.integer
+  - content: ()
+    isPrimitive: true

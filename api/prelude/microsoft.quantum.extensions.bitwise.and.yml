@@ -7,18 +7,24 @@ summary: >2
    Returns the bitwise AND between two integers.
 remarks: >2
 
-  ## Examples
+  ### Examples
    ```qsharp
    let a = 248;       //                11111000₂
    let b = 63;        //                00111111₂
    let x = And(a, b); // x : Int = 56 = 00111000₂.
    ```
 syntax: 'function And (a : Int, b : Int) : Int'
-seealso: ' - [C# `&` Operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/and-operator)'
 input:
   content: '(a : Int, b : Int)'
-  types: []
+  types:
+  - name: a
+    content: Int
+    isPrimitive: true
+  - name: b
+    content: Int
+    isPrimitive: true
 output:
   content: Int
   types:
-  - uid: microsoft.quantum.primitive.integer
+  - content: Int
+    isPrimitive: true

@@ -25,16 +25,16 @@ input:
   content: '(control : Qubit, target : Qubit)'
   types:
   - name: control
-    summary: ' Control qubit for the CNOT gate.'
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
   - name: target
-    summary: >2
-       Target qubit for the CNOT gate.
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.integer
+  - content: ()
+    isPrimitive: true
 functors:
 - Adjoint
 - Controlled

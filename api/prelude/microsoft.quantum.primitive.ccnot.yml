@@ -15,19 +15,19 @@ input:
   content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
   types:
   - name: control1
-    summary: ' First control qubit for the CCNOT gate.'
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
   - name: control2
-    summary: ' Second control qubit for the CCNOT gate.'
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
   - name: target
-    summary: >2
-       Target qubit for the CCNOT gate.
-    uid: microsoft.quantum.primitive.qubit
+    content: Qubit
+    isPrimitive: true
 output:
   content: ()
   types:
-  - uid: microsoft.quantum.primitive.integer
+  - content: ()
+    isPrimitive: true
 functors:
 - Adjoint
 - Controlled

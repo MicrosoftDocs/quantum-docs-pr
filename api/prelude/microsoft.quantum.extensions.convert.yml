@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+name: microsoft.quantum.extensions.convert
+functions:
+  items:
+  - uid: microsoft.quantum.extensions.convert.todouble
+    summary: >2
+       Converts a given integer into a double-precision floating
+       point number.
+  - uid: microsoft.quantum.extensions.convert.tostringb
+    summary: ' Formats a boolean value as a string.'
+  - uid: microsoft.quantum.extensions.convert.tostringd
+    summary: ' Formats a double-precision floating point number as a string.'
+  - uid: microsoft.quantum.extensions.convert.tostringdformat
+  - uid: microsoft.quantum.extensions.convert.tostringi
+    summary: ' Formats an integer as a string.'
+  - uid: microsoft.quantum.extensions.convert.tostringiformat
+  - uid: microsoft.quantum.extensions.convert.pauliarraytoint
+    summary: >2
+       Encodes a multi-qubit Pauli operator represented as an array of
+       single-qubit Pauli operators into an integer.
+operations:
+  items: []
+newtypes:
+  items: []

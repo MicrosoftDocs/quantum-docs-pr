@@ -9,14 +9,12 @@ summary: >2
 remarks: >2
    The function will throw if the length of paulies array is greater than 63.
 syntax: 'function XBits (paulies : Pauli[]) : Int'
-seealso: ' - @"microsoft.quantum.extensions.bitwise.zbits"'
 input:
   content: '(paulies : Pauli[])'
   types:
   - name: paulies
-    summary: >2
-       An array of Pauli operators to be represented as an integer.
-    uid: microsoft.quantum.primitive.pauli
+    content: Pauli
+    isPrimitive: true
     isArray: true
 output:
   content: Int
@@ -25,4 +23,7 @@ output:
        An integer $x$ with binary representation $(p_62\,p_61\,\dots\,p_0)$,
        where $p_i = 0$ if `paulies[i]` is `PauliI` or `PauliZ` and where
        $p_i = 1$ if `paulies[i]` is `PauliX` or `PauliY`.
-    uid: microsoft.quantum.primitive.integer
+    content: Int
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.extensions.bitwise.zbits

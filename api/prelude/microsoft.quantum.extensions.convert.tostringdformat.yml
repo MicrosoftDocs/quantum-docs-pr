@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.convert.tostringdformat
+name: ToStringDFormat
+type: function
+namespace: Microsoft.Quantum.Extensions.Convert
+syntax: 'function ToStringDFormat (a : Double, fmt : String) : String'
+input:
+  content: '(a : Double, fmt : String)'
+  types:
+  - name: a
+    content: Double
+    isPrimitive: true
+  - name: fmt
+    content: String
+    isPrimitive: true
+output:
+  content: String
+  types:
+  - content: String
+    isPrimitive: true

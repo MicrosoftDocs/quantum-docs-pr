@@ -47,7 +47,7 @@ Give your project the name `Bell`.
 
 ### Step 2 (optional): Update NuGet packages
 
-If you want to get the latest version of Q# compiler, update `Microsoft.Quantum.Simulation.Simulators` NuGet package, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package). Note that you'll have to switch to QuArC NuGet feed as the package source before you can get the update.
+If you want to get the latest version of Q# compiler, update `Microsoft.Quantum.Simulation.Simulators` NuGet package, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package). Note that you'll have to switch to the QuArC NuGet feed as the package source before you can get the update.
 
 ### Step 3: Enter the Q# code
 

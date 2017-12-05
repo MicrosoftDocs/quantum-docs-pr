@@ -223,7 +223,7 @@ use one of the phase estimation routines available in Microsoft.Quantum.Canon. F
  
 ### Factoring ###
 The goal of factoring is to determine the two prime factors of integer $N$, where $N$ is an $n$-bit number.  
-Factoring consists of the steps describe below. The steps are split into three parts: a classical preprocessing routine (1-4); a quantum computing routine to find the order of $a \text{ mod } N$ (5); and a classical postprocessing routine to derive the prime factors from the order (6-9).
+Factoring consists of the steps described below. The steps are split into three parts: a classical preprocessing routine (1-4); a quantum computing routine to find the order of $a \text{ mod } N$ (5); and a classical postprocessing routine to derive the prime factors from the order (6-9).
 
 The classical preprocessing routine consists of the following steps:
 1. If $N$ is even, return the prime factor $2$.

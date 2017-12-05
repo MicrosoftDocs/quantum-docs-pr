@@ -41,7 +41,7 @@ Where possible, the operations defined in the prelude which act on qubits allow 
 
 All of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.primitive" namespace, such that most Q# source files will have an `open Microsoft.Quantum.Primitive;` directive immediately following the initial namespace declaration.
 
-### Essential classical functions ###
+### Essential Classical Functions ###
 
 These functions are primarily used to work with the Q# built-in data types `Int`, `Double`, and `Range`.
 
@@ -68,12 +68,12 @@ It returns the step value for a range.
 The `Stop` function has signature `(Range -> Int)`.
 It returns the stopping value for a range.
 
-### Common single-qubit unitary operations ###
+### Common Single-Qubit Unitary Operations ###
 
 The prelude also defines many common [single-qubit operations](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 All of these operations allow both the Controlled and Adjoint functors.
 
-#### Pauli operators ####
+#### Pauli Operators ####
 
 The <xref:microsoft.quantum.primitive.x> operation implements the Pauli $X$ operator.
 This is sometimes also known as the `NOT` gate.
@@ -109,7 +109,7 @@ It corresponds to the single-qubit unitary:
     \end{bmatrix}
 \end{equation}
 
-#### Other single-qubit Cliffords ####
+#### Other Single-Qubit Cliffords ####
 
 The <xref:microsoft.quantum.primitive.h> operation implements the Hadamard gate.
 This interchanges the Pauli $X$ and $Z$ axes of the target qubit, such that $H\ket{0} = \ket{+} \mathrel{:=} (\ket{0} + \ket{1}) / \sqrt{2}$ and $H\ket{+} = \ket{0}$.
@@ -219,7 +219,7 @@ Z=1 eigenstate.
 It has signature `((Int,Int, Qubit) => () : Adjoint, Controlled)`.
 `R1Frac(k,n,_)` is the same as `RFrac(PauliZ,-k.n+1,_)` followed by `RFrac(PauliI,k,n+1,_)`.
 
-#### Multi-qubit operations ####
+#### Multi-Qubit Operations ####
 
 In addition to the single-qubit operations above, the prelude also defines several multi-qubit operations.
 

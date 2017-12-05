@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Introduction to the Q# standard libraries #
+# Introduction to the Q# Standard Libraries #
 
 Q# is supported by a range of different useful operations, functions, and user-defined types that comprise the Q# *standard library*.
 The Q# standard library is split into two main parts:

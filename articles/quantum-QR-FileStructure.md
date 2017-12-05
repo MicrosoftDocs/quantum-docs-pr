@@ -30,7 +30,7 @@ operations, and functions.
 A namespace declaration may contain any number of each type of definition,
 but it must contain at least one definition.
 
-## User Defined Type Declarations
+## User-Defined Type Declarations
 
 Q# provides a way for users to declare new user-defined types, 
 as described in the [Q# type model](articles/quantum-QR-TypeModel) section. 
@@ -208,7 +208,7 @@ from the controlled version’s statement block.
 If an operation has no body but should have a controlled adjoint version 
 defined, it should specify `adjoint controlled auto`.
 
-### Example Operation Definitions
+### Operation Definitions
 
 An operation definition might be as simple as the following, 
 which defines the primitive Pauli X operation:

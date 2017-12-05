@@ -156,7 +156,7 @@ This violates the definition of the adjoint that we saw in [Vectors and Matrices
 On the other hand, allowing function calls such as `Square` is safe, in that the compiler can be assured that it only needs to preserve the input to `Square` in order to keep its output stable.
 Thus, isolating as much classical logic as possible into functions makes it easy to reuse that logic in other functions and operations alike.
 
-## Flow Control ##
+## Control Flow ##
 
 Within an operation or function, each statement executes in order, similar to in most common imparative classical languages.
 This flow of control can be modified, however, in three distinct ways:

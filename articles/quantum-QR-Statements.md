@@ -336,7 +336,7 @@ if a == b {
 
 ## Control Flow
 
-### For Loop
+### For-Loop
 
 The `for` statement supports iteration through a simple integer range. 
 The statement consists of the keyword `for`, followed by an identifier, 
@@ -362,7 +362,7 @@ The loop variable is bound at each entrance to the loop body, and unbound
 at the end of the body. 
 In particular, the loop variable is not bound after the for loop is completed.
 
-### Repeat Until Success Loop
+### Repeat-Until-Success Loop
 
 The `repeat` statement supports the quantum “repeat until success” pattern. 
 It consists of the keyword `repeat`, followed by a statement block 

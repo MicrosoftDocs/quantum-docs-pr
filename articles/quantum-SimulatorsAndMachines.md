@@ -21,16 +21,16 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Classical drivers and machines
+# Classical Drivers and Machines
 
-## What you'll learn
+## What You'll Learn
 
 > [!div class="checklist"]
 > * How quantum algorithms are executed
 > * What quantum simulators are included in this release
 > * How to write a C# driver for your quantum algorithm
 
-## The Quantum Development Kit execution model
+## The Quantum Development Kit Execution Model
 
 In [Writing a quantum program](quantum-WriteAQuantumProgram.md),
 we executed our quantum algorithm by passing a `QuantumSimulator` object
@@ -55,7 +55,7 @@ development kit doesn't do any simulation at all.
 Rather, it tracks gate, qubit, and other resource usage for the
 algorithm.
 
-### Quantum machines
+### Quantum Machines
 
 In the future, we will define additional quantum machine classes
 to support other types of simulation and to support execution on
@@ -65,7 +65,7 @@ machine implementation makes it easy to test and debug an algorithm
 in simulation and then run it on real hardware with confidence
 that the algorithm hasn't changed.
 
-### What's included in this release
+### What's Included in this Release
 
 This release of the quantum developer kit includes two quantum machine classes.
 Both are defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.
@@ -73,7 +73,7 @@ Both are defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.
 * A full state vector simulator, the `QuantumSimulator` class.
 * A trace-based resource estimator, the `QCTraceSimulator` class.
 
-## Writing a classical driver program
+## Writing a Cassical Driver Program
 
 In [Writing a quantum program](quantum-WriteAQuantumProgram.md), we wrote a simple C# driver for
 our teleport algorithm. A C# driver has 4 main purposes:
@@ -99,7 +99,7 @@ Here we'll discuss each step in more detail.
 > parameter evolution rate based on measured characteristics of the state
 > should perform their analysis and adjustment in Q#.
 
-### Constructing the target machine
+### Constructing the Target Machine
 
 Quantum machines are instances of normal .NET classes, so they are created by
 invoking their constructor, just like any .NET class.
@@ -110,7 +110,7 @@ Some simulators, including the `QuantumSimulator`, implement the .NET
 > Only one instance of the `QuantumSimulator` class may be used at a time.
 > This simulator is highly optimized to parallelize computations, making it unsafe to allow more than one.
 
-### Computing arguments for the algorithm
+### Computing Arguments for the Algorithm
 
 In our `Teleport` example, we computed some relatively artificial arguments
 to pass to our quantum algorithm.
@@ -136,7 +136,7 @@ as a purely classical function that is called by the classical driver;
 the results of the hill climbing are then passed to the next execution of the
 quantum algorithm.
 
-### Running the quantum algorithm
+### Running the Quantum Algorithm
 
 This part is generally very straightforward.
 Each Q# operation is compiled into a class that provides a static `Run` method.
@@ -157,7 +157,7 @@ There are some subtleties when passing arguments to a `Run` method:
     instance of the operation's or function's class, passing the simulator 
     object to the constructor.
 
-### Processing the results
+### Processing the Results
 
 The results of the quantum algorithm are returned from the `Run` method.
 As with arguments, Q# tuples are represented as `ValueTuple` instances and
@@ -176,7 +176,7 @@ Only the classical driver can report results to the user or write them to disk.
 The classical driver will have access to analytical libraries and other
 mathematical functions that are not exposed in Q#.
 
-### Other classical languages
+### Other Classical Languages
 
 While the samples we have provided are in C# or F#, all that is required
 for writing a classical driver is support for .NET.

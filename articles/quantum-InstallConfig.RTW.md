@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Installing and validating the Q# development environment
+# Installing and Validating the Q# Development Environment
 
 This section specifies how to create a Q# development environment and validate it by running the teleport sample program.
 
@@ -40,7 +40,7 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 
 4. After selecting your workloads, click **Install** to complete the installation.
 
-## Creating the Q# development environment 
+## Creating the Q# Development Environment 
 
 1. Download and install the Microsoft Quantum Development Kit <!--- TODO: Correct link --> [Visual Studio extension](https://solidrepo.blob.core.windows.net/alpha/latest/QsharpVSIX.vsix). 
 Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip`. In that case, rename it to `QsharpVSIX.vsix`.
@@ -56,7 +56,7 @@ Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip`. In that cas
     - _**Important!**_  &nbsp;Ignore step six of the Windows section: "6. If you enabled the nuget.org upstream source, uncheck the nuget.org package source."
     - Ignore the last line of the Windows section (after the image): "Then click here to continue."
 
-## Validating your setup
+## Validating Your Setup
 
 1. Clone the quantum Libraries repository.
     1. Navigate to the [Libraries](https://github.com/microsoft/quantum).

@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.assertprob
+name: AssertProb
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Asserts that measuring the given qubits in the given Pauli basis will have the given result
+   with the given probability, within some tolerance.
+remarks: >2
+
+  ### Examples
+   ```qsharp
+   using (register = Qubit[1]) {
+       H(register[0]);
+       AssertProb([PauliZ], register, One, 0.5,
+           "Measuring in conjgate basis did not give 50/50 results.");
+   }
+   ```
+syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : ()'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
+  types:
+  - name: bases
+    uid: Pauli
+    isPrimitive: true
+    isArray: true
+  - name: msg
+    uid: String
+    isPrimitive: true
+  - name: prob
+    uid: Double
+    isPrimitive: true
+  - name: qubits
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: result
+    uid: Result
+    isPrimitive: true
+  - name: tol
+    uid: Double
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.primitive.assertprob

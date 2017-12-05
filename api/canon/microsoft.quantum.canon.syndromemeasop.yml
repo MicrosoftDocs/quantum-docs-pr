@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.syndromemeasop
+name: SyndromeMeasOp
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Represents an operation that is used to measure the syndrome
+   of an error-correcting code block.
+remarks: >2-
+
+  ### Examples
+   Measure syndromes for the bit-flip code
+   $S = \langle ZZI, IZZ \rangle$ using scratch qubits in a
+   non–fault tolerant manner:
+   ```qsharp
+       let syndMeasOp = SyndromeMeasOp(MeasureStabilizerGenerators([
+               [PauliZ; PauliZ; PauliI];
+               [PauliI; PauliZ; PauliZ]
+           ], _, MeasureWithScratch));
+   ```
+syntax: newtype SyndromeMeasOp = (LogicalRegister => Syndrome);

@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.qft
+name: QFT
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Performs the quantum Fourier transform on an quantum register containing an \n integer in the big-endian representation.\n"
+remarks: " The input and output are assumed to be in big endian encoding.\n "
+syntax: 'operation QFT (qs : BigEndian) : ()'
+input:
+  content: '(qs : BigEndian)'
+  types:
+  - name: qs
+    uid: bigendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.approximateqft
+- microsoft.quantum.canon.qftle
+functors:
+- Adjoint
+- Controlled

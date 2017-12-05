@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.ry
+name: Ry
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies a rotation about the $y$-axis by a given angle,
+   \begin{align}
+       R_y(\theta) \mathrel{:=}
+       e^{-i \theta \sigma_y / 2}.
+   \end{align}
+remarks: >2-
+   Equivlent to:
+   ```qsharp
+   R(PauliY, theta, qubit);
+   ```
+syntax: 'operation Ry (theta : Double, qubit : Qubit) : ()'
+input:
+  content: '(theta : Double, qubit : Qubit)'
+  types:
+  - name: qubit
+    uid: Qubit
+    isPrimitive: true
+  - name: theta
+    uid: Double
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

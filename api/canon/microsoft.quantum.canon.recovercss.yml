@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.recovercss
+name: RecoverCSS
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation RecoverCSS (code : CSS, fnX : RecoveryFn, fnZ : RecoveryFn, logicalRegister : LogicalRegister) : ()'
+input:
+  content: '(code : CSS, fnX : RecoveryFn, fnZ : RecoveryFn, logicalRegister : LogicalRegister)'
+  types:
+  - name: code
+    uid: css
+  - name: fnX
+    uid: recoveryfn
+  - name: fnZ
+    uid: recoveryfn
+  - name: logicalRegister
+    uid: logicalregister
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true

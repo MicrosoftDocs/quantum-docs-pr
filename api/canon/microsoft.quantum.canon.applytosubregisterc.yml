@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytosubregisterc
+name: ApplyToSubregisterC
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyToSubregisterC (op : (Qubit[] => () : Controlled), idxs : Int[], target : Qubit[]) : ()'
+input:
+  content: '(op : (Qubit[] => () : Controlled), idxs : Int[], target : Qubit[])'
+  types:
+  - name: idxs
+    uid: Int
+    isPrimitive: true
+    isArray: true
+  - name: op
+    isOperation: true
+    types:
+    - uid: Qubit
+      isPrimitive: true
+      isArray: true
+    - uid: ()
+      isPrimitive: true
+  - name: target
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Controlled

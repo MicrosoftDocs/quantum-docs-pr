@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.continuousphaseestimationiteration
+name: ContinuousPhaseEstimationIteration
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ContinuousPhaseEstimationIteration (oracle : ContinuousOracle, time : Double, theta : Double, eigenstate : Qubit[], controlQubit : Qubit) : ()'
+input:
+  content: '(oracle : ContinuousOracle, time : Double, theta : Double, eigenstate : Qubit[], controlQubit : Qubit)'
+  types:
+  - name: controlQubit
+    uid: Qubit
+    isPrimitive: true
+  - name: eigenstate
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: oracle
+    uid: continuousoracle
+  - name: theta
+    uid: Double
+    isPrimitive: true
+  - name: time
+    uid: Double
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

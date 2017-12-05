@@ -1,0 +1,16 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bitflipcode
+name: BitFlipCode
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Returns a QECC value representing the ⟦3, 1, 1⟧ bit flip code encoder and
+   decoder with in-place syndrome measurement.
+syntax: 'operation BitFlipCode () : QECC'
+input:
+  content: ()
+  types: []
+output:
+  content: QECC
+  types:
+  - uid: qecc

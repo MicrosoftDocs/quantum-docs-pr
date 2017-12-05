@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.ccnot
+name: CCNOT
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies the doubly controlled–NOT (CCNOT) gate to three qubits.
+remarks: >2-
+   Equivalent to:
+   ```qsharp
+   (Controlled X)([control1; control2], (target));
+   ```
+syntax: 'operation CCNOT (control1 : Qubit, control2 : Qubit, target : Qubit) : ()'
+input:
+  content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
+  types:
+  - name: control1
+    uid: Qubit
+    isPrimitive: true
+  - name: control2
+    uid: Qubit
+    isPrimitive: true
+  - name: target
+    uid: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

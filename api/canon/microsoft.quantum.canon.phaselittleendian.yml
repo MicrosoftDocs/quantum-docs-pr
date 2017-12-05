@@ -1,0 +1,7 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.phaselittleendian
+name: PhaseLittleEndian
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: " Little-endian unsigned integers in QFT basis. \n For example, if |x⟩ is little-endian encoding of integer x in computational basis, \n then QFTLE|x⟩ is encoding of x in QFT basis. "
+syntax: newtype PhaseLittleEndian = Qubit[];

@@ -4,7 +4,6 @@ name: ApplyToPartitionA
 type: operation
 namespace: Microsoft.Quantum.Canon
 syntax: 'operation ApplyToPartitionA (op : ((Qubit[], Qubit[]) => () : Adjoint), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : ()'
-seealso: ' - Microsoft.Quantum.Canon.ApplyToPartition'
 input:
   content: '(op : ((Qubit[], Qubit[]) => () : Adjoint), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
   types:
@@ -32,5 +31,7 @@ output:
   types:
   - content: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytopartition
 functors:
 - Adjoint

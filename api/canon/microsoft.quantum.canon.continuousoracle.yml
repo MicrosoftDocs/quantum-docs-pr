@@ -1,0 +1,11 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.continuousoracle
+name: ContinuousOracle
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Represents a continuous-time oracle
+   $U(\delta t) : \ket{\psi(t)} \mapsto \ket{\psi(t + \delta t)}
+   for all times $t$, where $U$ is a fixed operation, and where
+   and $\delta t$ is a non-negative real number.
+syntax: 'newtype ContinuousOracle = ((Double, Qubit[]) => () : Adjoint, Controlled);'

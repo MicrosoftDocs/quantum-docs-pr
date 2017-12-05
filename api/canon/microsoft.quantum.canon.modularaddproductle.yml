@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.modularaddproductle
+name: ModularAddProductLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Let us denote modulus by N, constMultiplier by a, multiplier by x  \n and summand by y, then this operation is given by map \n |x⟩|b⟩ ↦ |x⟩| (b + a⋅x) (mod N) ⟩\n "
+syntax: 'operation ModularAddProductLE (constMultiplier : Int, modulus : Int, multiplier : LittleEndian, summand : LittleEndian) : ()'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : LittleEndian, summand : LittleEndian)'
+  types:
+  - name: constMultiplier
+    content: Int
+    isPrimitive: true
+  - name: modulus
+    content: Int
+    isPrimitive: true
+  - name: multiplier
+    uid: littleendian
+  - name: summand
+    uid: littleendian
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+seeAlso:
+- for
+- this
+functors:
+- Adjoint
+- Controlled

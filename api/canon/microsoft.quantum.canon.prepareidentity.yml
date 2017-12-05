@@ -8,7 +8,6 @@ summary: >2
    state $\boldone / 2^N$ by applying the complete depolarizing
    channel to each qubit, where $N$ is the length of the register.
 syntax: 'operation PrepareIdentity (register : Qubit[]) : ()'
-seealso: ' - @"microsoft.quantum.canon.preparesinglequbitidentity"'
 input:
   content: '(register : Qubit[])'
   types:
@@ -21,3 +20,5 @@ output:
   types:
   - content: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.preparesinglequbitidentity

@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.copymostsignificantbitle
+name: CopyMostSignificantBitLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Copies the most significant bit of `from` into target\n "
+syntax: 'operation CopyMostSignificantBitLE (from : LittleEndian, target : Qubit) : ()'
+input:
+  content: '(from : LittleEndian, target : Qubit)'
+  types:
+  - name: from
+    uid: littleendian
+  - name: target
+    content: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Adjoint

@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.modularmultiplybyconstantle
+name: ModularMultiplyByConstantLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Let us denote modulus by N and constMultiplier by a \n then this operation implements a unitary defined by the following map on \n computational basis:\n |y⟩ ↦ |a⋅y (mod N) ⟩, for all y between 0 and N - 1 \n "
+syntax: 'operation ModularMultiplyByConstantLE (constMultiplier : Int, modulus : Int, multiplier : LittleEndian) : ()'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : LittleEndian)'
+  types:
+  - name: constMultiplier
+    content: Int
+    isPrimitive: true
+  - name: modulus
+    content: Int
+    isPrimitive: true
+  - name: multiplier
+    uid: littleendian
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+seeAlso:
+- for
+- this
+functors:
+- Adjoint
+- Controlled

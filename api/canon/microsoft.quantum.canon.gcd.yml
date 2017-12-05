@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.gcd
+name: GCD
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Computes greatest common divisor of a and b. The GCD is always positive.\n "
+syntax: 'function GCD (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    content: Int
+    isPrimitive: true
+  - name: b
+    content: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - summary: ' Greatest common divisor of a and b'
+    content: Int
+    isPrimitive: true

@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.h2terms
+name: H2Terms
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given an index, returns a description of the correponding
+   term in the Hamiltonian for H₂. Each term is described by
+   a pair of integer arrays representing a sparse Pauli operator.
+remarks: >2-
+
+  ### Examples
+  	```
+       // Returns ([3], [0]), to represent H₀ ≔ Z₀.
+       let (idxsPaulis, idxsQubits) = H2Terms(0)
+   ```
+syntax: 'function H2Terms (idxHamiltonian : Int) : (Int[], Int[])'
+input:
+  content: '(idxHamiltonian : Int)'
+  types:
+  - name: idxHamiltonian
+    content: Int
+    isPrimitive: true
+output:
+  content: (Int[], Int[])
+  types:
+  - types:
+    - content: Int
+      isPrimitive: true
+      isArray: true
+    - content: Int
+      isPrimitive: true
+      isArray: true

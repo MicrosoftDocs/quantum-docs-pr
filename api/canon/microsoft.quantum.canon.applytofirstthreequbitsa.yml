@@ -4,7 +4,6 @@ name: ApplyToFirstThreeQubitsA
 type: operation
 namespace: Microsoft.Quantum.Canon
 syntax: 'operation ApplyToFirstThreeQubitsA (op : ((Qubit, Qubit, Qubit) => () : Adjoint), register : Qubit[]) : ()'
-seealso: ' - Microsoft.Quantum.Canon.ApplyToFirstThreeQubits'
 input:
   content: '(op : ((Qubit, Qubit, Qubit) => () : Adjoint), register : Qubit[])'
   types:
@@ -29,5 +28,7 @@ output:
   types:
   - content: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytofirstthreequbits
 functors:
 - Adjoint

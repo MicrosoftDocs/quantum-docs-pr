@@ -4,7 +4,6 @@ name: BindA
 type: function
 namespace: Microsoft.Quantum.Canon
 syntax: "function BindA (operations : ('T => () : Adjoint)[]) : ('T => () : Adjoint)"
-seealso: ' - @"microsoft.quantum.canon.bind"'
 input:
   content: "(operations : ('T => () : Adjoint)[])"
   types:
@@ -25,3 +24,5 @@ output:
       isLocal: true
     - content: ()
       isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.bind

@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.h2generatorindex
+name: H2GeneratorIndex
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Represents a term in the H₂ Hamiltonian for a particular bond
+   length using the GeneratorTerm type from Canon.
+syntax: 'function H2GeneratorIndex (idxBondLength : Int, idxHamiltonian : Int) : GeneratorIndex'
+input:
+  content: '(idxBondLength : Int, idxHamiltonian : Int)'
+  types:
+  - name: idxBondLength
+    content: Int
+    isPrimitive: true
+  - name: idxHamiltonian
+    content: Int
+    isPrimitive: true
+output:
+  content: GeneratorIndex
+  types:
+  - uid: generatorindex

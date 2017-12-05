@@ -5,6 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: >2
    Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified positive integer.
+remarks: ' Obtained by partial application of @"microsoft.quantum.canon.ControlledOnIntImpl".'
 syntax: "function ControlledOnInt (numberState : Int, oracle : ('T => () : Adjoint, Controlled)) : ((Qubit[], 'T) => () : Adjoint, Controlled)"
 input:
   content: "(numberState : Int, oracle : ('T => () : Adjoint, Controlled))"

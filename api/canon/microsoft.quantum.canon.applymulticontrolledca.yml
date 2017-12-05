@@ -4,7 +4,6 @@ name: ApplyMultiControlledCA
 type: operation
 namespace: Microsoft.Quantum.Canon
 syntax: 'operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => () : Adjoint), ccnot : CCNOTop, controls : Qubit[], targets : Qubit[]) : ()'
-seealso: ' - @"Microsoft.Quantum.Canon.ApplyMultiControlledCA"'
 input:
   content: '(singlyControlledOp : (Qubit[] => () : Adjoint), ccnot : CCNOTop, controls : Qubit[], targets : Qubit[])'
   types:
@@ -31,6 +30,8 @@ output:
   types:
   - content: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applymulticontrolledca
 functors:
 - Adjoint
 - Controlled

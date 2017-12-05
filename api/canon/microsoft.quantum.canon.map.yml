@@ -33,9 +33,9 @@ output:
     content: "'U"
     isLocal: true
     isArray: true
-typeparams:
-- name: "'T"
+typeParameters:
+- uid: "'T"
   summary: ' The type of `array` elements.'
-- name: "'U"
+- uid: "'U"
   summary: >2
      The result type of the `mapper` function.

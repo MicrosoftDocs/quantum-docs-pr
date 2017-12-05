@@ -4,7 +4,6 @@ name: WithCA
 type: operation
 namespace: Microsoft.Quantum.Canon
 syntax: "operation WithCA (outerOperation : ('T => () : Adjoint), innerOperation : ('T => () : Adjoint, Controlled), target : 'T) : ()"
-seealso: ' - @"microsoft.quantum.canon.with"'
 input:
   content: "(outerOperation : ('T => () : Adjoint), innerOperation : ('T => () : Adjoint, Controlled), target : 'T)"
   types:
@@ -30,6 +29,8 @@ output:
   types:
   - content: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.with
 functors:
 - Adjoint
 - Controlled

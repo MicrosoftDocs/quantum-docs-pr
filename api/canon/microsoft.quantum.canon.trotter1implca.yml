@@ -48,8 +48,8 @@ output:
 functors:
 - Adjoint
 - Controlled
-typeparams:
-- name: "'T"
+typeParameters:
+- uid: "'T"
   summary: >2
      The type which each time step should act upon; typically, either
      `Qubit[]` or `Qubit`.

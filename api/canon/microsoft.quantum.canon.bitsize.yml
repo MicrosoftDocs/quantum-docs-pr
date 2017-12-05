@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bitsize
+name: BitSize
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " For non-negative integer `a` returns the smallest n such \n that a < 2ⁿ .\n "
+syntax: 'function BitSize (a : Int) : Int'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    content: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - summary: ' The bit-size of `a` '
+    content: Int
+    isPrimitive: true

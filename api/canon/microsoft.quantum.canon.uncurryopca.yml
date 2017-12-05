@@ -4,7 +4,6 @@ name: UncurryOpCA
 type: function
 namespace: Microsoft.Quantum.Canon
 syntax: "function UncurryOpCA (curriedOp : ('T -> ('U => () : Controlled, Adjoint))) : (('T, 'U) => () : Controlled, Adjoint)"
-seealso: ' - @"microsoft.quantum.canon.uncurryop"'
 input:
   content: "(curriedOp : ('T -> ('U => () : Controlled, Adjoint)))"
   types:
@@ -31,3 +30,5 @@ output:
         isLocal: true
     - content: ()
       isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.uncurryop

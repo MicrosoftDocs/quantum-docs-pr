@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.h2coeff
+name: H2Coeff
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function H2Coeff (idxBondLength : Int) : Double[]'
+input:
+  content: '(idxBondLength : Int)'
+  types:
+  - name: idxBondLength
+    content: Int
+    isPrimitive: true
+output:
+  content: Double[]
+  types:
+  - content: Double
+    isPrimitive: true
+    isArray: true

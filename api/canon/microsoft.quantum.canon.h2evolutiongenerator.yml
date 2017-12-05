@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.h2evolutiongenerator
+name: H2EvolutionGenerator
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   We finish our description of the H₂ Hamiltonian for a
+   given bond length by specifying that we wish to use
+   the above description with the PauliEvolutionSet.
+
+   We could choose other evolution sets as well, allowing the
+   canon to be very general with respect to how Hamiltonians
+   are represented.
+syntax: 'function H2EvolutionGenerator (idxBondLength : Int) : EvolutionGenerator'
+input:
+  content: '(idxBondLength : Int)'
+  types:
+  - name: idxBondLength
+    content: Int
+    isPrimitive: true
+output:
+  content: EvolutionGenerator
+  types:
+  - uid: evolutiongenerator

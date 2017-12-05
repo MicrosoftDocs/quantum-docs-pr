@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.getgeneratorsystemnterms
+name: GetGeneratorSystemNTerms
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Retrieves the number of terms in a `GeneratorSystem`.
+syntax: 'function GetGeneratorSystemNTerms (generatorSystem : GeneratorSystem) : Int'
+input:
+  content: '(generatorSystem : GeneratorSystem)'
+  types:
+  - name: generatorSystem
+    uid: generatorsystem
+output:
+  content: Int
+  types:
+  - summary: ' The number of terms in a `GeneratorSystem`.'
+    content: Int
+    isPrimitive: true

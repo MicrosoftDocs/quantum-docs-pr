@@ -4,7 +4,6 @@ name: OperationPowC
 type: function
 namespace: Microsoft.Quantum.Canon
 syntax: "function OperationPowC (oracle : ('T => () : Controlled), power : Int) : ('T => () : Controlled)"
-seealso: ' - @"microsoft.quantum.canon.operationpow"'
 input:
   content: "(oracle : ('T => () : Controlled), power : Int)"
   types:
@@ -27,3 +26,5 @@ output:
       isLocal: true
     - content: ()
       isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.operationpow

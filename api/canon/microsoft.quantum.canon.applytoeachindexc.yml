@@ -4,7 +4,6 @@ name: ApplyToEachIndexC
 type: operation
 namespace: Microsoft.Quantum.Canon
 syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => () : Controlled), register : 'T[]) : ()"
-seealso: ' - @"microsoft.quantum.canon.applytoeachindex"'
 input:
   content: "(singleElementOperation : ((Int, 'T) => () : Controlled), register : 'T[])"
   types:
@@ -27,5 +26,7 @@ output:
   types:
   - content: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytoeachindex
 functors:
 - Controlled

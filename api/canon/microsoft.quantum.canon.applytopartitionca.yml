@@ -31,6 +31,8 @@ output:
   types:
   - content: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytopartition
 functors:
 - Adjoint
 - Controlled

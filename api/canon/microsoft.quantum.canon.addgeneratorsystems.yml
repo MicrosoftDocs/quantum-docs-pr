@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.addgeneratorsystems
+name: AddGeneratorSystems
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Adds two `GeneratorSystems` to create a new GeneratorSystem.
+syntax: 'function AddGeneratorSystems (generatorSystemA : GeneratorSystem, generatorSystemB : GeneratorSystem) : GeneratorSystem'
+input:
+  content: '(generatorSystemA : GeneratorSystem, generatorSystemB : GeneratorSystem)'
+  types:
+  - name: generatorSystemA
+    uid: generatorsystem
+  - name: generatorSystemB
+    uid: generatorsystem
+output:
+  content: GeneratorSystem
+  types:
+  - summary: >2-
+       A `GeneratorSystem` representing a system that is the sum of the
+       input generator systems.
+    uid: generatorsystem

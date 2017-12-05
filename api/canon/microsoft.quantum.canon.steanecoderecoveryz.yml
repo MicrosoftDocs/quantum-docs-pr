@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.steanecoderecoveryz
+name: SteaneCodeRecoveryZ
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function SteaneCodeRecoveryZ (syndrome : Syndrome) : Pauli[]'
+input:
+  content: '(syndrome : Syndrome)'
+  types:
+  - name: syndrome
+    uid: syndrome
+output:
+  content: Pauli[]
+  types:
+  - content: Pauli
+    isPrimitive: true
+    isArray: true

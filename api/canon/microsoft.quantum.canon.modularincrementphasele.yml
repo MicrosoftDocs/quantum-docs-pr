@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.modularincrementphasele
+name: ModularIncrementPhaseLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y\n Then the operation performs the following transformation: \n |y⟩ ↦ |y+a (mod N)⟩\n Integers are encoded in little-endian format in QFT basis\n "
+remarks: >2-
+   Assumes that `target` has the highest bit set to 0.
+   Also assumes that the value of target is less than N.
+syntax: 'operation ModularIncrementPhaseLE (increment : Int, modulus : Int, target : PhaseLittleEndian) : ()'
+input:
+  content: '(increment : Int, modulus : Int, target : PhaseLittleEndian)'
+  types:
+  - name: increment
+    content: Int
+    isPrimitive: true
+  - name: modulus
+    content: Int
+    isPrimitive: true
+  - name: target
+    uid: phaselittleendian
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+seeAlso:
+- for
+- microsoft.quantum.primitive.modularincrementle
+functors:
+- Adjoint
+- Controlled

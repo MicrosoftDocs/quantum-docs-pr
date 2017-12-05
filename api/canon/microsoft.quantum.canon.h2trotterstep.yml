@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.h2trotterstep
+name: H2TrotterStep
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   We now provide Canon's Hamiltonian simulation
+   functions with the above representaiton to automatically
+   decompose the H₂ Hamiltonian into an appropriate operation
+   that we can apply to qubits as we please.
+syntax: 'operation H2TrotterStep (idxBondLength : Int, trotterOrder : Int, trotterStepSize : Double, qubits : Qubit[]) : ()'
+input:
+  content: '(idxBondLength : Int, trotterOrder : Int, trotterStepSize : Double, qubits : Qubit[])'
+  types:
+  - name: idxBondLength
+    content: Int
+    isPrimitive: true
+  - name: qubits
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: trotterOrder
+    content: Int
+    isPrimitive: true
+  - name: trotterStepSize
+    content: Double
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

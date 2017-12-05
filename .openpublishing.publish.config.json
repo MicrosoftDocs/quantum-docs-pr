@@ -16,7 +16,6 @@
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "customized_template_paths": [
-        "_dependentPackages/MarkdigEngine/content",
         "_dependentPackages/uref/content"
       ],
       "enable_xrefmap_share": true,
@@ -77,23 +76,16 @@
       "nuget_feed": "https://www.myget.org/F/op/api/v2",
       "path_to_root": "_dependentPackages/uref",
       "target_framework": "net45",
-      "version": "1.41.4"
+      "version": "latest"
     },
     {
       "id": "Microsoft.OpenPublishing.CommonPlugins",
       "nuget_feed": "https://www.myget.org/F/op/api/v2",
       "path_to_root": "_dependentPackages/CommonPlugins",
       "target_framework": "net45",
-      "version": "1.0.105"
-    },
-    {
-      "id": "Microsoft.DocAsCode.MarkdigEngine",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
-      "path_to_root": "_dependentPackages/MarkdigEngine",
-      "version": "1.0.123"
+      "version": "latest"
     }
   ],
   "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false,
-  "package_version": "1.41.4"
+  "need_generate_pdf_url_template": false
 }

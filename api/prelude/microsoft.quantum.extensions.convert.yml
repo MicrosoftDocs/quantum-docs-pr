@@ -2,6 +2,10 @@
 uid: microsoft.quantum.extensions.convert
 name: Microsoft.Quantum.Extensions.Convert
 functions:
+- uid: microsoft.quantum.extensions.convert.pauliarraytoint
+  summary: >2
+     Encodes a multi-qubit Pauli operator represented as an array of
+     single-qubit Pauli operators into an integer.
 - uid: microsoft.quantum.extensions.convert.todouble
   summary: >2
      Converts a given integer into a double-precision floating
@@ -14,9 +18,5 @@ functions:
 - uid: microsoft.quantum.extensions.convert.tostringi
   summary: ' Formats an integer as a string.'
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-- uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: >2
-     Encodes a multi-qubit Pauli operator represented as an array of
-     single-qubit Pauli operators into an integer.
 operations: []
 newtypes: []

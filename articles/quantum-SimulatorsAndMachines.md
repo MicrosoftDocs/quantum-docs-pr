@@ -140,8 +140,9 @@ quantum algorithm.
 
 This part is generally very straightforward.
 Each Q# operation is compiled into a class that provides a static `Run` method.
-This method takes the same arguments as the operation itself,
-plus an additional first argument which is the simulator to execute with.
+The arguments to this method are given by the flattened argument tuple of the operation itself,
+plus an additional first argument which is the simulator to execute with. For a tuple of type `(String, (Double, Double))` its flattened counterpart is of type `(String, Double, Double)`. 
+
 
 There are some subtleties when passing arguments to a `Run` method:
 

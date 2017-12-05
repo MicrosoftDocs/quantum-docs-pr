@@ -89,16 +89,15 @@ operation PrepareEntangledPair(here : Qubit, there : Qubit) : () {
         CNOT(here, there);
     }
 
-    Adjoint auto
-    Controlled auto
-    Controlled Adjoint auto
+    adjoint auto
+    controlled auto
+    controlled adjoint auto
 }
 ```
 
 Very often, variant specifications will consist of the keyword `auto`, indicating that the compiler should determine how to generate the variant definition.
 If the compiler cannot generate a definition automatically, or if a more efficient implementation can be given, then a variant may also be manually defined.
-We will see examples of this below in ....
-<!-- TODO: reference With in control flow -->
+We will see examples of this below in [Higher-Order Control Flow](libraries/control-flow.md).
 
 To call a variant of an operation, use the `Adjoint` or `Controlled` keywords.
 For example, the superdense coding example above can be written more compactly by using the adjoint of `PrepareEntangledState` to transform the entangled state back into an unentangled pair of qubits:
@@ -125,7 +124,7 @@ Most critically, an operation which uses the output value of any other operation
 Q# also allows for defining *functions*, distinct from operations in that they are not allowed to have any effects beyond calculating an output value.
 In particular, functions cannot call operations, act on qubits, sample random numbers, or otherwise depend on state beyond the input value to a function.
 As a consequence, Q# functions are *pure*, in that they always map the same input values to the same output values.
-This allows the Q# compiler to safely reorder how and when functions are called when generating operations variants.
+This allows the Q# compiler to safely reorder how and when functions are called when generating operation variants.
 
 Defining a function works similarly to defining an operation, except that statements are placed directly within the function, and do not need to be wrapped in a `body` declaration.
 For instance:
@@ -152,7 +151,7 @@ operation U(target : Qubit) : () {
 
 Each time that `U` is called, it will have a different action on `target`.
 In particular, the compiler cannot guarantee that if we added an `Adjoint auto` statement to `U`, then `U(target); (Adjoint U)(target);` acts as identity (that is, as a no-op).
-This violates the definition of the adjoint that we saw in @qc_concepts, such that allowing `Adjoint auto` in an operation where we have called the operation @"microsoft.quantum.canon.randomreal" breaks the guarantees provided by the compiler.
+This violates the definition of the adjoint that we saw in [Vectors and Matrices](quantum-concepts-2-VectorsMatrices.md), such that allowing `Adjoint auto` in an operation where we have called the operation @"microsoft.quantum.canon.randomreal" would breaks the guarantees provided by the compiler; @"microsoft.quantum.canon.randomreal" is an operation for which no adjoint and controlled version exists. 
 
 On the other hand, allowing function calls such as `Square` is safe, in that the compiler can be assured that it only needs to preserve the input to `Square` in order to keep its output stable.
 Thus, isolating as much classical logic as possible into functions makes it easy to reuse that logic in other functions and operations alike.

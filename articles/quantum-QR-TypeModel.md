@@ -68,11 +68,6 @@ In the second example, note that this represents a potentially
 jagged array of arrays, and not a rectangular two-dimensional array. 
 Q# does not include support for rectangular multi-dimensional arrays.
 
-Array types in Q# are considered to be different types if the element types
-are different.
-An array of a user-defined type is not a sub-type of an array of the
-base type of the user-defined type.
-
 ## Tuple Types
 
 Given any valid Q# types `'T1`, `'T2`, `'T3`, etc., there is a type that 
@@ -160,8 +155,7 @@ That is, it is a callable routine that contains quantum operations.
 A Q# _function_ is a classical subroutine used within 
 a quantum algorithm.
 It may contain classical code but no quantum operations.
-Functions may not be passed qubits or operations as arguments, 
-nor may they allocate or borrow qubits.
+Functions may not allocate or borrow qubits, nor may they call operations. It is possible, however, to pass them operations or qubits for processing. 
 
 Together, operations and functions are known as _callables_.
 
@@ -208,21 +202,10 @@ A type parameter may appear more than once in a single signature.
 For example, a function that applies another function to each element
 of an array and returns the collected results would have signature 
 `(('A[], 'A->'A) -> 'A[])`.
-Similarly, an operation that returns the composition of two operations
-might have signature `((('A=>'B), ('B=>'C))=>('A=>'C))`.
+Similarly, a function that returns the composition of two operations
+might have signature `((('A=>'B), ('B=>'C)) -> ('A=>'C))`.
 
-When invoking a type-parameterized callable, the first value for an argument 
-specified by the type parameter sets the value of the type parameter.
-All later arguments that have the same type parameter must be of a
-compatible type; that is, they must either be of the same type,
-or of a user-defined type whose base type is compatible.
-
-A type parameter may resolve to the `()` unit type.
-This is useful particularly for parameterized operation signatures.
-For instance, given an operation with the signature
-`((('A=>'B), ('B=>'C))=>('A=>'C))`,
-it might be useful to pass a first parameter with signature
-`(()=>Foo)`, or a second parameter with signature `(Foo=>())`.
+When invoking a type-parameterized callable, all arguments that have the same type parameter must be of the same type, or be compatible with the same type; that is.
 
 Q# does not provide a mechanism for constraining the possible types
 that might be substituted for a type parameter.
@@ -236,11 +219,11 @@ an operation with fewer functors but the same signature is expected.
 For instance, an operation of type `(Qubit=>():Adjoint)` may be used 
 anywhere an operation of type `(Qubit=>())` is expected.
 
-Q# is contravariant with respect to callable return types:
+Q# is covariant with respect to callable return types:
 a callable that returns a type `'A` is compatible with a callable with 
 the same input type and a result type that `'A` is compatible with.
 
-Q# is covariant with respect to input types:
+Q# is contravariant with respect to input types:
 a callable that takes a type `'A` as input is compatible with a callable 
 with the same result type and an input type that is compatible with `'A`.
 

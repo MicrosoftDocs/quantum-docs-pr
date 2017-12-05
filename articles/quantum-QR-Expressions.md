@@ -70,11 +70,11 @@ constituent expressions are `Double`, or will be an `Int` expression
 if both are integers.
 
 Given two integer expressions, a new integer expression may be formed 
-using the `%` (modulus), `^` (power), `&` (bitwise AND), `|` (bitwise OR),
-`<<` (arithmetic left shift), or `>>` (arithmetic right shift) operations. 
+using the `%` (modulus), `^` (power), `&&&` (bitwise AND), `|||` (bitwise OR),
+`^^^` (bitwise XOR), `<<<` (arithmetic left shift), or `>>>` (arithmetic right shift) operations. 
 The second parameter to either shift operation must be greater than or 
 equal to zero.
-Right-shifting a negative number fills in the top bits with 1s.
+The behavior for shifting negative numbers is undefined. 
 
 Integer division and integer moduls follow the same behavior for
 negative numbers as C#.
@@ -94,7 +94,7 @@ Given any numeric expression, a new expression may be formed using the
 The new expression will be the same type as the constituent expression.
 
 Given any integer expression, a new integer expression may be formed 
-using the `~` (bitwise complement) unary operator.
+using the `~~~` (bitwise complement) unary operator.
 
 ## Qubit Expressions
 
@@ -154,10 +154,10 @@ For instance, `X` is an operation literal that refers to the
 standard library `X` operation, and `Message` is a function literal that 
 refers to the standard library `Message` function.
 
-If an operation supports the `Adjoint` functor, then `Adjoint(op)` 
+If an operation supports the `Adjoint` functor, then `(Adjoint op)` 
 is an operation expression.
 Similarly, if the operation supports the `Controlled` functor, then 
-`Controlled(op)` is an operation expression.
+`(Controlled op)` is an operation expression.
 The types of these expressions are specified above in [Functors](articles/quantum-QR-TypeModel#functors).
 
 ## Callable Invocation Expressions
@@ -201,10 +201,10 @@ a partial application, the current value of the variable is used.
 Changing the value of the variable afterward will not impact the partial
 application.
 
-For example, if `Op` has type `((Int, Qubit, Double)=>():Adjoint)`:
- - `Op(5,_,_)` has type `((Qubit, Double)=>():Adjoint)`.
- - `Op(_,_,1.0)` has type `((Int, Qubit)=>():Adjoint)`.
- - `Op(_,q1,1.0)` has type `(Int=>():Adjoint)`. 
+For example, if `Op` has type `((Int, ((Qubit,Qubit), Double)) => ():Adjoint)`:
+ - `Op(5,(_,_))` has type `(((Qubit,Qubit), Double) => ():Adjoint)`, and so has `Op(5,_)`.
+ - `Op(_,(_,1.0))` has type `((Int, (Qubit,Qubit)) => ():Adjoint)`.
+ - `Op(_,((q1,q2),_))` has type `((Int,Double) => ():Adjoint)`. 
     Note that we have applied singleton tuple equivalence here.
 
 ### Recursion
@@ -248,13 +248,10 @@ and callable invocations that return that type.
 
 An array literal is a sequence of one or more element expressions, 
 separated by semi-colons, enclosed by `[` and `]`. 
-All of the elements must have the same type.
-If the element type is an operation type, all of the operation elements 
-must have the same signature and allowed functors;
-if the element type is a function type, then all of the function elements 
-must have the same signature.
+All elements must be compatible with the same type.
+If the common element type is an operation or function type, all of the elements must have the same signature and - in case of operations - the same supported functors.
 
-Empty array literals, `[]`, are not allowed.
+Empty array literals, `[]`, are not allowed. Instead using `new ★[0]`, where `★` is as placeholder for a suitable type, allows to create the desired array of length zero.
 
 Given two arrays of the same type, the binary `+` operator may be used to form a 
 new array that is the concatenation of the two arrays.
@@ -350,19 +347,14 @@ That is, the first element of an array `a` is always `a[0]`.
 
 The two `Bool` literal values are `true` and `false`.
 
-Given any two expressions of the same non-array type, the `==` and `!=` 
-binary operators may be used to construct a new `Bool` expression. 
+Given any two expressions compatible with the same primitive type, the `==` and `!=` binary operators may be used to construct a `Bool` expression. 
 The expression will be true if the two expressions are (resp. are not) equal. 
+For both magnitude and equality comparision, values of user-defined types are cast to their base type before comparison. 
 
 Equality comparison for `Qubit` values is identity equality; 
 that is, whether the two expressions identify the same qubit.
 The state of the two qubits are not compared, accessed, measured, or modified
 by this comparison.
-
-Equality comparison for tuples and user-defined types is element-by-element.
-It is not legal to compare a value of a user-defined type to a value of
-its base type.
-It is not legal to compare arrays for equality or inequality.
 
 Equality comparison for `Double` values may be misleading 
 due to rounding effects.
@@ -393,25 +385,23 @@ Operators in order of precedence, from highest to lowest:
 
 Operator | Arity | Description | Operand Types
 ---------|----------|---------|---------------
- `-`, `~` | Unary | Numeric negative, bitwise complement | `Int` or `Double`, only `Int` for `~`
+ `-`, `~~~`,`!` | Unary | Numeric negative, bitwise complement, logical negation (NOT) | `Int` or `Double` for `-`, `Int` for `~~~`, `Bool` for `!`
  `^` | Binary | Integer power | `Int`
- `/`, `*`, `%` | Binary | Division, multiplication, integer modulus | `Int` or `Double`, only `Int` for `%`
- `+`, `-` | Binary | Addition, subtraction | `Int` or `Double`
- `<<`, `>>` | Binary | Left shift, right shift | `Int`
- `!` | Unary | Logical negation (NOT) | Boolean
+ `/`, `*`, `%` | Binary | Division, multiplication, integer modulus | `Int` or `Double` for `/` and `*`, `Int` for `%`
+ `+`, `-` | Binary | Addition or string and array concatenation, subtraction | `Int` or `Double`, additionally `String` or any array type for `+`
+ `<<<`, `>>>` | Binary | Left shift, right shift | `Int`
  `<`, `<=`, `>`, `>=` | Binary | Less-than, less-than-or-equal, greater-than, greater-than-or-equal comparisons | `Int` or `Double`
- `==`, `!=` | Binary | equal, not-equal comparisons | any
- `&` | Binary | Bitwise AND | `Int`
- <code>\|</code> | Binary | Bitwise OR | `Int`
- `&&` | Binary | Logical AND | `Boolean`
- <code>\|\|</code> | Binary | Logical OR | `Boolean`
+ `==`, `!=` | Binary | equal, not-equal comparisons | any primitive type
+ `&&&` | Binary | Bitwise AND | `Int`
+ `^^^` | Binary | Bitwise XOR | `Int`
+ `|||` | Binary | Bitwise OR | `Int`
+ `&&` | Binary | Logical AND | `Bool`
+ `||` | Binary | Logical OR | `Bool`
 
 ## String Interpolations
 
 Q# allows strings to be used in the `fail` statement and the `Log` 
 standard function.
-There are no operators on strings, so they are not otherwise very useful.
-
 The Q# syntax for string interpolations is a subset of the C# 7.0 syntax;
 Q# does not support verbatim (multi-line) interpolated strings.
 See [*Interpolated Strings*](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interpolated-strings)

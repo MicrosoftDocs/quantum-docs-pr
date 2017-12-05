@@ -23,7 +23,7 @@ ms.topic: article-type-from-white-list
 
 # Putting it All Together: Teleportation #
 
-Let's return to the example of the teleportation circuit defined in @qc_concepts <!-- TODO: more specific link. -->.
+Let's return to the example of the teleportation circuit defined in [Quantum Circuits](quantum-concepts-8-QuantumCircuits.md).
 
 ![`Teleport(msg : Qubit, there : Qubit) : ()`](./media/teleportation.svg)
 

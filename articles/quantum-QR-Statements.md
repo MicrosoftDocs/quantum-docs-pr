@@ -27,9 +27,7 @@ ms.topic: article-type-from-white-list
 
 Comments begin with two forward slashes, `//`, 
 and continue until the end of line. 
-Comments are treated as whitespace for parsing purposes.
-
-
+While expressions can be split across multiple lines, end of line comments in the middle of an expression are not supported. 
 A comment may appear anywhere in a Q# source file, 
 including where statements are not valid.
 
@@ -75,8 +73,8 @@ For example:
 ///
 /// # See Also
 /// - @"Microsoft.Quantum.Primitive.H": An example of a related operation.
-operation ApplyTwice<'T>(op : ('T => ()), target : 'T) {
-    Body {
+operation ApplyTwice<'T>(op : ('T => ()), target : 'T) : () {
+    body {
         op(target);
         op(target);
     }
@@ -100,9 +98,7 @@ The following names are recognized as documentation comment headers.
 
 Every Q# operation, function, and user-defined type is
 defined within a namespace.
-Q# namespaces are treated the same as namespaces in any other
-.NET language, and follow the same rules for naming and for
-forming qualified names.
+Q# follows the same rules for naming as other .NET languages. However, Q# does not support nested namespaces. In particular, for two defined namespaces `NS.Name1` and `NS.Name2`, only the fully qualified namespace can be opened - a directive `open NS;` is **invalid**. 
 
 Every Q# file must include at least one `namespace` directive.
 This consists of the `namespace` keyword, followed by the namespace

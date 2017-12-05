@@ -39,7 +39,7 @@ By also providing rotations as well, Q# allows the programmer to work within the
 
 Where possible, the operations defined in the prelude which act on qubits allow for applying the `Controlled` variant, such that the target machine will perform the appropriate decomposition.
 
-All of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.primitive" namespace, such that most Q# source files will have an `open Microsoft.Quantum.Primitive` directive immediately following the initial namespace declaration.
+All of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.primitive" namespace, such that most Q# source files will have an `open Microsoft.Quantum.Primitive;` directive immediately following the initial namespace declaration.
 
 ### Essential classical functions ###
 
@@ -234,12 +234,12 @@ First, the <xref:microsoft.quantum.primitive.cnot> operation performs a standard
     \end{bmatrix}.
 \end{equation}
 It has signature `((Qubit, Qubit) => () : Adjoint, Controlled)`, representing that $\operatorname{CNOT}$ acts unitarily on two individual qubits.
-`CNOT(q1, q2)` is the same as `Controlled(X)([q1], q2)`.
+`CNOT(q1, q2)` is the same as `(Controlled X)([q1], q2)`.
 Since the `Controlled` functor allows for controlling on a register, we use the array literal `[q1]` to indicate that we want only the one control.
 
 The <xref:microsoft.quantum.primitive.ccnot> operation performs doubly-controlled NOT gate, sometimes also known as the Toffoli gate.
 It has signature `((Qubit, Qubit, Qubit) => () : Adjoint, Controlled)`.
-`CCNOT(q1, q2, q3)` is the same as `Controlled(X)([q1; q2], q3)`.
+`CCNOT(q1, q2, q3)` is the same as `(Controlled X)([q1; q2], q3)`.
 
 The <xref:microsoft.quantum.primitive.swap> operation swaps the quantum states of two qubits.
 That is, it implements the unitary matrix
@@ -257,7 +257,7 @@ It has signature `((Qubit, Qubit) => () : Adjoint, Controlled)`.
 
 > [!NOTE]
 > The SWAP gate is *not* the same as rearranging the elements of a variable with type `Qubit[]`.
-> Applying `SWAP(q1, q2)` causes a change to the state of the qubits referred to by `q1` and `q2`, while `let swappedRegister = [q2; q1]` only affects how we refer to those qubits.
+> Applying `SWAP(q1, q2)` causes a change to the state of the qubits referred to by `q1` and `q2`, while `let swappedRegister = [q2; q1];` only affects how we refer to those qubits.
 > Moreover, `(Controlled SWAP)([q0], q1, q2)` allows for `SWAP` to be conditioned on the state of a third qubit, which we cannot represent by rearranging elements.
 > The controlled-SWAP gate, also known as the Fredikin gate, is powerful enough to include all classical computation.
 
@@ -266,9 +266,9 @@ It has signature `(Qubit[] => () : Adjoint, Controlled)`.
 `MultiX(qs)` is equivalent to:
 
 ```qsharp
-for (index in 0..length(qs)-1)
+for (index in 0..Length(qs)-1)
 {
-    X(qs[index])
+    X(qs[index]);
 }
 ```
 
@@ -302,7 +302,7 @@ When measuring, the +1 eigenvalue of the operator being measured corresponds to 
 
 Measurement operations support neither the `Adjoint` nor the `Controlled` functor.
 
-The <xref:microsoft.quantum.primitive.measusre> operation performs a joint measurement of one or more qubits in the specified product of Pauli operators.
+The <xref:microsoft.quantum.primitive.measure> operation performs a joint measurement of one or more qubits in the specified product of Pauli operators.
 If the Pauli array and qubit array are different lengths,
 then the operation fails.
 `Measure` has signature `((Pauli[], Qubit[]) => Result)`.
@@ -315,7 +315,7 @@ Put differently, $(-1)^{r_0 + r_1} = (-1)^r_{\textrm{joint}})$.
 Critically, since we *only* learn the parity from this measurement, any quantum information represented in the superposition between the two two-qubit states of positive parity, $\ket{00}$ and $\ket{11}$, is preserved.
 This property will be essential later, as we discuss error correction <!-- TODO: link -->.
 
-For convienence, the prelude also provides two other operations for measusring qubits.
+For convenience, the prelude also provides two other operations for measuring qubits.
 First, since performing single-qubit measurements is quite common, the prelude defines a shorthand for this case.
 The <xref:microsoft.quantum.primitive.m> operation measures the Pauli $Z$ operator on a single qubit, and has signature `(Qubit => Result)`.
 `M(q)` is equivalent to `Measure([PauliZ], [q])`.
@@ -326,8 +326,8 @@ It has signature (`Qubit[] => Result[])`.
 `MultiM(qs)` is equivalent to:
 
 ```qsharp
-mutable rs = new Result[length(qs)];
-for (index in 0..length(qs)-1)
+mutable rs = new Result[Length(qs)];
+for (index in 0..Length(qs)-1)
 {
     set rs[index] = M(qs[index]);
 }
@@ -358,7 +358,7 @@ If the assertion fails, the execution ends by calling `fail`
 with the given message.
 By default, this operation is not implemented; simulators that can support it
 should provide an implementation that performs runtime checking.
-`AssertProb` has signature `((Pauli[], Qubit[], Result, Double, String, Double) -> ())`. The first of `Double` parameters gives the desired probability of the result, and the second one - the tolerance.
+`AssertProb` has signature `((Pauli[], Qubit[], Result, Double, String, Double) -> ())`. The first of `Double` parameters gives the desired probability of the result, and the second one the tolerance.
 
 Finally, the `Message` function logs a message in a machine-dependent way.
 By default, this writes the string to the console.

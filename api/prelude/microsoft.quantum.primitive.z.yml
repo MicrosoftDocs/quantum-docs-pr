@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.z
+name: Z
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies the Pauli $Z$ gate,
+   \begin{align}
+       \sigma_z \mathrel{:=}
+       \begin{bmatrix}
+           1 & 0 \\\\
+           0 & -1
+       \end{bmatrix}.
+   \end{align}
+syntax: 'operation Z (qubit : Qubit) : ()'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    content: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

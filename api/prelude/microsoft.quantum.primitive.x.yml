@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.x
+name: X
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies the Pauli $X$ gate,
+   \begin{align}
+       \sigma_x \mathrel{:=}
+       \begin{bmatrix}
+           0 & 1 \\\\
+           1 & 0
+       \end{bmatrix}.
+   \end{align}
+syntax: 'operation X (qubit : Qubit) : ()'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    content: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

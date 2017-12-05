@@ -1,0 +1,31 @@
+### YamlMime:QSharpNamespace
+name: microsoft.quantum.extensions.bitwise
+functions:
+  items:
+  - uid: microsoft.quantum.extensions.bitwise.xor
+    summary: >2
+       Returns the bitwise exclusive-OR (XOR) between two integers.
+  - uid: microsoft.quantum.extensions.bitwise.and
+    summary: >2
+       Returns the bitwise AND between two integers.
+  - uid: microsoft.quantum.extensions.bitwise.or
+    summary: >2
+       Returns the bitwise OR between two integers.
+  - uid: microsoft.quantum.extensions.bitwise.not
+    summary: >2
+       Returns the bitwise NOT of an integer.
+  - uid: microsoft.quantum.extensions.bitwise.parity
+    summary: >2
+       Returns the bitwise PARITY of an integer.
+  - uid: microsoft.quantum.extensions.bitwise.xbits
+    summary: >2
+       Returns an integer representing the X bits of an array
+       of Pauli operators.
+  - uid: microsoft.quantum.extensions.bitwise.zbits
+    summary: >2
+       Returns an integer representing the Z bits of an array
+       of Pauli operators.
+operations:
+  items: []
+newtypes:
+  items: []

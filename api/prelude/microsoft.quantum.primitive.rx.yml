@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.rx
+name: Rx
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies a rotation about the $x$-axis by a given angle,
+   \begin{align}
+       R_x(\theta) \mathrel{:=}
+       e^{-i \theta \sigma_x / 2}.
+   \end{align}
+remarks: >2-
+   Equivlent to:
+   ```qsharp
+   R(PauliX, theta, qubit);
+   ```
+syntax: 'operation Rx (theta : Double, qubit : Qubit) : ()'
+input:
+  content: '(theta : Double, qubit : Qubit)'
+  types:
+  - name: qubit
+    content: Qubit
+    isPrimitive: true
+  - name: theta
+    content: Double
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

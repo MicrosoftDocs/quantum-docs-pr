@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.maxi
+name: MaxI
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+remarks: ' See (`System.Math.Max`)[https://docs.microsoft.com/en-us/dotnet/api/system.math.max].'
+syntax: 'function MaxI (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    content: Int
+    isPrimitive: true
+  - name: b
+    content: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - content: Int
+    isPrimitive: true

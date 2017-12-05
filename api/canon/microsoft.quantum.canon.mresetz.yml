@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.mresetz
+name: MResetZ
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Measures a single qubit in the $Z$ basis and ensures that it
+   is in the $\ket{0}$ state following the measurement.
+syntax: 'operation MResetZ (target : Qubit) : Result'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    content: Qubit
+    isPrimitive: true
+output:
+  content: Result
+  types:
+  - summary: ' The result of measuring `target` in the Pauli $Z$ basis.'
+    content: Result
+    isPrimitive: true

@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.convert.tostringd
+name: ToStringD
+type: function
+namespace: Microsoft.Quantum.Extensions.Convert
+summary: ' Formats a double-precision floating point number as a string.'
+syntax: 'function ToStringD (a : Double) : String'
+input:
+  content: '(a : Double)'
+  types:
+  - name: a
+    content: Double
+    isPrimitive: true
+output:
+  content: String
+  types:
+  - content: String
+    isPrimitive: true

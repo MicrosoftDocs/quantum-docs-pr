@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.sqrt
+name: Sqrt
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+remarks: ' See (`System.Math.Sqrt`)[https://docs.microsoft.com/en-us/dotnet/api/system.math.sqrt].'
+syntax: 'function Sqrt (d : Double) : Double'
+input:
+  content: '(d : Double)'
+  types:
+  - name: d
+    content: Double
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - content: Double
+    isPrimitive: true

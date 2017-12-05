@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertallzero
+name: AssertAllZero
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation AssertAllZero (message : String, target : Qubit[], tolerance : Double) : ()'
+input:
+  content: '(message : String, target : Qubit[], tolerance : Double)'
+  types:
+  - name: message
+    content: String
+    isPrimitive: true
+  - name: target
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: tolerance
+    content: Double
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

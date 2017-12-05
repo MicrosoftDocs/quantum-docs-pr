@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.convert.tostringb
+name: ToStringB
+type: function
+namespace: Microsoft.Quantum.Extensions.Convert
+summary: ' Formats a boolean value as a string.'
+syntax: 'function ToStringB (a : Bool) : String'
+input:
+  content: '(a : Bool)'
+  types:
+  - name: a
+    content: Bool
+    isPrimitive: true
+output:
+  content: String
+  types:
+  - content: String
+    isPrimitive: true

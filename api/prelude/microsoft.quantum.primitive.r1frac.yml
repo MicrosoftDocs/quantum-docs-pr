@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.r1frac
+name: R1Frac
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies a rotation about the $\ket{1}$ state by an angle specified
+   as a dyadic fraction,
+   \begin{align}
+       R_1(n, k) \mathrel{:=}
+       \operatorname{diag}(1, e^{i \pi k / 2^n}).
+   \end{align}
+
+   > [!WARNING]
+   > This operation uses the **opposite** sign convention from
+   > @"microsoft.quantum.primitive.r", and does not include the
+   > factor of $1/ 2$ included by @"microsoft.quantum.primitive.r1".
+remarks: >2-
+   Equivalent to:
+   ```qsharp
+   RFrac(PauliZ, -numerator, denominator + 1, qubit);
+   RFrac(PauliI, numerator, denominator + 1, qubit);
+   ```
+syntax: 'operation R1Frac (numerator : Int, power : Int, qubit : Qubit) : ()'
+input:
+  content: '(numerator : Int, power : Int, qubit : Qubit)'
+  types:
+  - name: numerator
+    content: Int
+    isPrimitive: true
+  - name: power
+    content: Int
+    isPrimitive: true
+  - name: qubit
+    content: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.convert.tostringiformat
+name: ToStringIFormat
+type: function
+namespace: Microsoft.Quantum.Extensions.Convert
+syntax: 'function ToStringIFormat (a : Int, fmt : String) : String'
+input:
+  content: '(a : Int, fmt : String)'
+  types:
+  - name: a
+    content: Int
+    isPrimitive: true
+  - name: fmt
+    content: String
+    isPrimitive: true
+output:
+  content: String
+  types:
+  - content: String
+    isPrimitive: true

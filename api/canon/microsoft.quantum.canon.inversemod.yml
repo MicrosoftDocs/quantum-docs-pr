@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.inversemod
+name: InverseMod
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function InverseMod (a : Int, modulus : Int) : Int'
+input:
+  content: '(a : Int, modulus : Int)'
+  types:
+  - name: a
+    content: Int
+    isPrimitive: true
+  - name: modulus
+    content: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - content: Int
+    isPrimitive: true

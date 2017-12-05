@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.convert.todouble
+name: ToDouble
+type: function
+namespace: Microsoft.Quantum.Extensions.Convert
+summary: >2
+   Converts a given integer into a double-precision floating
+   point number.
+syntax: 'function ToDouble (a : Int) : Double'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    content: Int
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - summary: ' A double-precision floating point number representing $a$.'
+    content: Double
+    isPrimitive: true

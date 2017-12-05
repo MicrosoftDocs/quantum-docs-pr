@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.exp
+name: Exp
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies the exponential of a multi-qubit Pauli operator
+   \begin{align}
+       \exp\left(i \theta [P_0 \otimes P_1 \cdots P_N] \right),
+   \end{align}
+   where $P_i$ is the $i$th element of `paulis`, and where
+   $N = $`Length(paulis)`.
+syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : ()'
+input:
+  content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'
+  types:
+  - name: paulis
+    content: Pauli
+    isPrimitive: true
+    isArray: true
+  - name: qubits
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: theta
+    content: Double
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

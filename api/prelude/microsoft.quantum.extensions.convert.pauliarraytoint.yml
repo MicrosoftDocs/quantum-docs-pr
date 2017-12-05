@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.convert.pauliarraytoint
+name: PauliArrayToInt
+type: function
+namespace: Microsoft.Quantum.Extensions.Convert
+summary: >2
+   Encodes a multi-qubit Pauli operator represented as an array of
+   single-qubit Pauli operators into an integer.
+remarks: >2-
+   Each Pauli operator can be encoded using two bits, such that
+   $$
+   \begin{align}
+       \boldone \mapsto 00, \quad X \mapsto 01, \quad Y \mapsto 11,
+       \text{ and } \quad Z \mapsto 10.
+   \end{align}
+   $$
+   Given an array `[P0, ..., Pn]`, this funtion returns an
+   integer with binary expansion formed by concatenating
+   the mapping of each Pauli in big-endian order,
+   `bits(Pn) ... bits(P0)`.
+syntax: 'function PauliArrayToInt (paulies : Pauli[]) : Int'
+input:
+  content: '(paulies : Pauli[])'
+  types:
+  - name: paulies
+    content: Pauli
+    isPrimitive: true
+    isArray: true
+output:
+  content: Int
+  types:
+  - summary: >2
+       An integer uniquely identifying `paulies`, as described below.
+    content: Int
+    isPrimitive: true

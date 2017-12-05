@@ -1,0 +1,38 @@
+### YamlMime:QSharpNamespace
+name: microsoft.quantum.extensions.math
+functions:
+  items:
+  - uid: microsoft.quantum.extensions.math.absd
+  - uid: microsoft.quantum.extensions.math.absi
+  - uid: microsoft.quantum.extensions.math.arccos
+  - uid: microsoft.quantum.extensions.math.arcsin
+  - uid: microsoft.quantum.extensions.math.arctan
+  - uid: microsoft.quantum.extensions.math.arctan2
+  - uid: microsoft.quantum.extensions.math.ceiling
+  - uid: microsoft.quantum.extensions.math.cos
+  - uid: microsoft.quantum.extensions.math.cosh
+  - uid: microsoft.quantum.extensions.math.e
+  - uid: microsoft.quantum.extensions.math.expd
+  - uid: microsoft.quantum.extensions.math.floor
+  - uid: microsoft.quantum.extensions.math.ieeeremainder
+  - uid: microsoft.quantum.extensions.math.log
+  - uid: microsoft.quantum.extensions.math.log10
+  - uid: microsoft.quantum.extensions.math.maxd
+  - uid: microsoft.quantum.extensions.math.maxi
+  - uid: microsoft.quantum.extensions.math.mind
+  - uid: microsoft.quantum.extensions.math.mini
+  - uid: microsoft.quantum.extensions.math.pi
+  - uid: microsoft.quantum.extensions.math.powd
+  - uid: microsoft.quantum.extensions.math.round
+  - uid: microsoft.quantum.extensions.math.sin
+  - uid: microsoft.quantum.extensions.math.signd
+  - uid: microsoft.quantum.extensions.math.signi
+  - uid: microsoft.quantum.extensions.math.sinh
+  - uid: microsoft.quantum.extensions.math.sqrt
+  - uid: microsoft.quantum.extensions.math.tan
+  - uid: microsoft.quantum.extensions.math.tanh
+  - uid: microsoft.quantum.extensions.math.truncate
+operations:
+  items: []
+newtypes:
+  items: []

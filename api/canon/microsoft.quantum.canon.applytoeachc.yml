@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachc
+name: ApplyToEachC
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: "operation ApplyToEachC (singleElementOperation : ('T => () : Controlled), register : 'T[]) : ()"
+seealso: ' - @"microsoft.quantum.canon.ApplyToEach"'
+input:
+  content: "(singleElementOperation : ('T => () : Controlled), register : 'T[])"
+  types:
+  - name: register
+    content: "'T"
+    isLocal: true
+    isArray: true
+  - name: singleElementOperation
+    isOperation: true
+    types:
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Controlled

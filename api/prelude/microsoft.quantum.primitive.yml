@@ -1,0 +1,227 @@
+### YamlMime:QSharpNamespace
+name: microsoft.quantum.primitive
+functions:
+  items:
+  - uid: microsoft.quantum.primitive.message
+    summary: >2
+       Logs a message.
+operations:
+  items:
+  - uid: microsoft.quantum.primitive.random
+    summary: >2
+       The random operation takes an array of doubles as input, and returns
+       a randomly-selected index into the array as an `Int`.
+       The probability of selecting a specific index is proportional to the value
+       of the array element at that index.
+       Array elements that are equal to zero are ignored and their indices are never
+       returned. If any array element is less than zero,
+       or if no array element is greater than zero, then the operation fails.
+  - uid: microsoft.quantum.primitive.assert
+    summary: " Asserts that measuring the given qubits in the given Pauli basis will\n always have the given result. \n"
+  - uid: microsoft.quantum.primitive.assertprob
+    summary: >2
+       Asserts that measuring the given qubits in the given Pauli basis will have the given result
+       with the given probability, within some tolerance.
+  - uid: microsoft.quantum.primitive.x
+    summary: >2
+       Applies the Pauli $X$ gate,
+       \begin{align}
+           \sigma_x \mathrel{:=}
+           \begin{bmatrix}
+               0 & 1 \\\\
+               1 & 0
+           \end{bmatrix}.
+       \end{align}
+  - uid: microsoft.quantum.primitive.y
+    summary: >2
+       Applies the Pauli $Y$ gate,
+       \begin{align}
+           \sigma_y \mathrel{:=}
+           \begin{bmatrix}
+               0 & -i \\\\
+               i & 0
+           \end{bmatrix}.
+       \end{align}
+  - uid: microsoft.quantum.primitive.z
+    summary: >2
+       Applies the Pauli $Z$ gate,
+       \begin{align}
+           \sigma_z \mathrel{:=}
+           \begin{bmatrix}
+               1 & 0 \\\\
+               0 & -1
+           \end{bmatrix}.
+       \end{align}
+  - uid: microsoft.quantum.primitive.h
+    summary: >2
+       Applies the Hadamard transformation to a single qubit,
+       \begin{align}
+           H \mathrel{:=}
+           \frac{1}{\sqrt{2}}
+           \begin{bmatrix}
+               1 & 1 \\\\
+               1 & -1
+           \end{bmatrix}.
+       \end{align}
+  - uid: microsoft.quantum.primitive.s
+    summary: >2
+       Applies the $\pi / 4$ phase gate to a single qubit,
+       \begin{align}
+           S \mathrel{:=}
+           \begin{bmatrix}
+               1 & 0 \\\\
+               0 & i
+           \end{bmatrix}.
+       \end{align}
+  - uid: microsoft.quantum.primitive.t
+    summary: >2
+       Applies the $\pi / 8$ gate to a single qubit,
+       \begin{align}
+           T \mathrel{:=}
+           \begin{bmatrix}
+               1 & 0 \\\\
+               0 & e^{i \pi / 4}
+           \end{bmatrix}.
+       \end{align}
+  - uid: microsoft.quantum.primitive.cnot
+    summary: >2
+       Applies the controlled-NOT (CNOT) gate to a pair of qubits
+       \begin{align}
+           \operatorname{CNOT} \mathrel{:=}
+           \begin{bmatrix}
+               1 & 0 & 0 & 0 \\\\
+               0 & 1 & 0 & 0 \\\\
+               0 & 0 & 0 & 1 \\\\
+               0 & 0 & 1 & 0
+           \end{bmatrix},
+       \end{align}
+       where rows and columns are ordered as in the quantum concepts guide.
+  - uid: microsoft.quantum.primitive.ccnot
+    summary: >2
+       Applies the doubly controlled–NOT (CCNOT) gate to three qubits.
+  - uid: microsoft.quantum.primitive.swap
+    summary: >2
+       Applies the SWAP gate to a pair of qubits
+       \begin{align}
+           \operatorname{SWAP} \mathrel{:=}
+           \begin{bmatrix}
+               1 & 0 & 0 & 0 \\\\
+               0 & 0 & 1 & 0 \\\\
+               0 & 1 & 0 & 0 \\\\
+               0 & 0 & 0 & 1
+           \end{bmatrix},
+       \end{align}
+       where rows and columns are ordered as in the quantum concepts guide.
+  - uid: microsoft.quantum.primitive.multix
+    summary: >2
+       Applies the gate $X \otimes X \otimes \cdots \otimes X$
+       to a register of qubits.
+  - uid: microsoft.quantum.primitive.r
+    summary: >2
+       Applies a rotation about the given Pauli axis,
+       \begin{align}
+           R_{\mu}(\theta) \mathrel{:=}
+           e^{-i \theta \sigma_{\mu} / 2},
+       \end{align}
+       where $\mu \in \{I, X, Y, Z\}$.
+  - uid: microsoft.quantum.primitive.rfrac
+    summary: >2
+       Applies a rotation about the given Pauli axis by an angle specified
+       as a dyadic fraction,
+       \begin{align}
+           R_{\mu}(n, k) \mathrel{:=}
+           e^{i \pi n \sigma_{\mu} / 2^k},
+       \end{align}
+       where $\mu \in \{I, X, Y, Z\}$.
+
+       > [!WARNING]
+       > This operation uses the **opposite** sign convention from
+       > @"microsoft.quantum.primitive.r".
+  - uid: microsoft.quantum.primitive.rx
+    summary: >2
+       Applies a rotation about the $x$-axis by a given angle,
+       \begin{align}
+           R_x(\theta) \mathrel{:=}
+           e^{-i \theta \sigma_x / 2}.
+       \end{align}
+  - uid: microsoft.quantum.primitive.ry
+    summary: >2
+       Applies a rotation about the $y$-axis by a given angle,
+       \begin{align}
+           R_y(\theta) \mathrel{:=}
+           e^{-i \theta \sigma_y / 2}.
+       \end{align}
+  - uid: microsoft.quantum.primitive.rz
+    summary: >2
+       Applies a rotation about the $z$-axis by a given angle,
+       \begin{align}
+           R_z(\theta) \mathrel{:=}
+           e^{-i \theta \sigma_z / 2}.
+       \end{align}
+  - uid: microsoft.quantum.primitive.r1
+    summary: >2
+       Applies a rotation about the $\ket{1}$-axis by a given angle,
+       \begin{align}
+           R_1(\theta) \mathrel{:=}
+           \operatorname{diag}(1, e^{i\theta}).
+       \end{align}
+  - uid: microsoft.quantum.primitive.r1frac
+    summary: >2
+       Applies a rotation about the $\ket{1}$ state by an angle specified
+       as a dyadic fraction,
+       \begin{align}
+           R_1(n, k) \mathrel{:=}
+           \operatorname{diag}(1, e^{i \pi k / 2^n}).
+       \end{align}
+
+       > [!WARNING]
+       > This operation uses the **opposite** sign convention from
+       > @"microsoft.quantum.primitive.r", and does not include the
+       > factor of $1/ 2$ included by @"microsoft.quantum.primitive.r1".
+  - uid: microsoft.quantum.primitive.exp
+    summary: >2
+       Applies the exponential of a multi-qubit Pauli operator
+       \begin{align}
+           \exp\left(i \theta [P_0 \otimes P_1 \cdots P_N] \right),
+       \end{align}
+       where $P_i$ is the $i$th element of `paulis`, and where
+       $N = $`Length(paulis)`.
+  - uid: microsoft.quantum.primitive.expfrac
+    summary: >2
+       Applies the exponential of a multi-qubit Pauli operator
+       with an argument given by a dyadic fraction,
+       \begin{align}
+           \exp\left(i \theta \pi k [P_0 \otimes P_1 \cdots P_N] / 2^n \right),
+       \end{align}
+       where $P_i$ is the $i$th element of `paulis`, and where
+       $N = $`Length(paulis)`.
+  - uid: microsoft.quantum.primitive.measure
+    summary: >2
+       Performs a joint measurement of one or more qubits in the
+       specified Pauli bases, such that the output result is given by
+       the distribution
+       \begin{align}
+           \Pr(\texttt{Zero} | \ket{\psi}) =
+               \frac12 \braket{
+                   \psi \mid|
+                   \left(
+                       \boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_N
+                   \right) \mid|
+                   \psi
+               },
+       \end{align}
+       where $P_i$ is the $i$th element of `bases`, and where
+       $N = \texttt{Length}(\texttt{paulis})$.
+       That is, measurement returns a `Result` $d$ such that the eigenvalue of the
+       observed measurement effect is $(-1)^d$.
+  - uid: microsoft.quantum.primitive.m
+    summary: >2
+       Performs a measurement of a single qubit in the
+       Pauli $Z$ basis, such that the output result is given by
+       the distribution
+       \begin{align}
+           \Pr(\texttt{Zero} | \ket{\psi}) =
+               \braket{\psi | 0} \braket{0 | \psi}.
+       \end{align}
+newtypes:
+  items: []

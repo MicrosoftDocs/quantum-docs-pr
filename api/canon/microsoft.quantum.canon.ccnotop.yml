@@ -1,0 +1,7 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ccnotop
+name: CCNOTop
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: ' The signature type of CCNOT gate.'
+syntax: 'newtype CCNOTop = ((Qubit, Qubit, Qubit) => () : Adjoint);'

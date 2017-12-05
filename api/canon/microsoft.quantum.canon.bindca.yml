@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bindca
+name: BindCA
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: "function BindCA (operations : ('T => () : Adjoint, Controlled)[]) : ('T => () : Adjoint, Controlled)"
+seealso: ' - @"microsoft.quantum.canon.bind"'
+input:
+  content: "(operations : ('T => () : Adjoint, Controlled)[])"
+  types:
+  - name: operations
+    isArray: true
+    isOperation: true
+    types:
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true
+output:
+  content: "('T => () : Adjoint, Controlled)"
+  types:
+  - isOperation: true
+    types:
+    - content: "'T"
+      isLocal: true
+    - content: ()
+      isPrimitive: true

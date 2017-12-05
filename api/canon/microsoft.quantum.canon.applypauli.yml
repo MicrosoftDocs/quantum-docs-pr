@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applypauli
+name: ApplyPauli
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given a multi-qubit Pauli operator, applies the corresponding operation to
+   a register.
+syntax: 'operation ApplyPauli (pauli : Pauli[], target : Qubit[]) : ()'
+input:
+  content: '(pauli : Pauli[], target : Qubit[])'
+  types:
+  - name: pauli
+    content: Pauli
+    isPrimitive: true
+    isArray: true
+  - name: target
+    content: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

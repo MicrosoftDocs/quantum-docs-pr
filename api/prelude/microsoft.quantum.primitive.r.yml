@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.r
+name: R
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies a rotation about the given Pauli axis,
+   \begin{align}
+       R_{\mu}(\theta) \mathrel{:=}
+       e^{-i \theta \sigma_{\mu} / 2},
+   \end{align}
+   where $\mu \in \{I, X, Y, Z\}$.
+remarks: >2-
+   When called with `pauli = PauliI`, this operation applies
+   a *global phase*. This phase can be significant, however,
+   when used with the `Controlled` functor.
+syntax: 'operation R (pauli : Pauli, theta : Double, qubit : Qubit) : ()'
+input:
+  content: '(pauli : Pauli, theta : Double, qubit : Qubit)'
+  types:
+  - name: pauli
+    content: Pauli
+    isPrimitive: true
+  - name: qubit
+    content: Qubit
+    isPrimitive: true
+  - name: theta
+    content: Double
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - content: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

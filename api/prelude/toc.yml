@@ -1,0 +1,150 @@
+- name: Microsoft.Quantum.Extensions.Bitwise
+  uid: microsoft.quantum.extensions.bitwise
+  items:
+  - name: And
+    uid: microsoft.quantum.extensions.bitwise.and
+  - name: Not
+    uid: microsoft.quantum.extensions.bitwise.not
+  - name: Or
+    uid: microsoft.quantum.extensions.bitwise.or
+  - name: Parity
+    uid: microsoft.quantum.extensions.bitwise.parity
+  - name: XBits
+    uid: microsoft.quantum.extensions.bitwise.xbits
+  - name: Xor
+    uid: microsoft.quantum.extensions.bitwise.xor
+  - name: ZBits
+    uid: microsoft.quantum.extensions.bitwise.zbits
+- name: Microsoft.Quantum.Extensions.Convert
+  uid: microsoft.quantum.extensions.convert
+  items:
+  - name: PauliArrayToInt
+    uid: microsoft.quantum.extensions.convert.pauliarraytoint
+  - name: ToDouble
+    uid: microsoft.quantum.extensions.convert.todouble
+  - name: ToStringB
+    uid: microsoft.quantum.extensions.convert.tostringb
+  - name: ToStringD
+    uid: microsoft.quantum.extensions.convert.tostringd
+  - name: ToStringDFormat
+    uid: microsoft.quantum.extensions.convert.tostringdformat
+  - name: ToStringI
+    uid: microsoft.quantum.extensions.convert.tostringi
+  - name: ToStringIFormat
+    uid: microsoft.quantum.extensions.convert.tostringiformat
+- name: Microsoft.Quantum.Extensions.Math
+  uid: microsoft.quantum.extensions.math
+  items:
+  - name: AbsD
+    uid: microsoft.quantum.extensions.math.absd
+  - name: AbsI
+    uid: microsoft.quantum.extensions.math.absi
+  - name: ArcCos
+    uid: microsoft.quantum.extensions.math.arccos
+  - name: ArcSin
+    uid: microsoft.quantum.extensions.math.arcsin
+  - name: ArcTan
+    uid: microsoft.quantum.extensions.math.arctan
+  - name: ArcTan2
+    uid: microsoft.quantum.extensions.math.arctan2
+  - name: Ceiling
+    uid: microsoft.quantum.extensions.math.ceiling
+  - name: Cos
+    uid: microsoft.quantum.extensions.math.cos
+  - name: Cosh
+    uid: microsoft.quantum.extensions.math.cosh
+  - name: E
+    uid: microsoft.quantum.extensions.math.e
+  - name: ExpD
+    uid: microsoft.quantum.extensions.math.expd
+  - name: Floor
+    uid: microsoft.quantum.extensions.math.floor
+  - name: IEEERemainder
+    uid: microsoft.quantum.extensions.math.ieeeremainder
+  - name: Log
+    uid: microsoft.quantum.extensions.math.log
+  - name: Log10
+    uid: microsoft.quantum.extensions.math.log10
+  - name: MaxD
+    uid: microsoft.quantum.extensions.math.maxd
+  - name: MaxI
+    uid: microsoft.quantum.extensions.math.maxi
+  - name: MinD
+    uid: microsoft.quantum.extensions.math.mind
+  - name: MinI
+    uid: microsoft.quantum.extensions.math.mini
+  - name: PI
+    uid: microsoft.quantum.extensions.math.pi
+  - name: PowD
+    uid: microsoft.quantum.extensions.math.powd
+  - name: Round
+    uid: microsoft.quantum.extensions.math.round
+  - name: SignD
+    uid: microsoft.quantum.extensions.math.signd
+  - name: SignI
+    uid: microsoft.quantum.extensions.math.signi
+  - name: Sin
+    uid: microsoft.quantum.extensions.math.sin
+  - name: Sinh
+    uid: microsoft.quantum.extensions.math.sinh
+  - name: Sqrt
+    uid: microsoft.quantum.extensions.math.sqrt
+  - name: Tan
+    uid: microsoft.quantum.extensions.math.tan
+  - name: Tanh
+    uid: microsoft.quantum.extensions.math.tanh
+  - name: Truncate
+    uid: microsoft.quantum.extensions.math.truncate
+- name: Microsoft.Quantum.Primitive
+  uid: microsoft.quantum.primitive
+  items:
+  - name: Assert
+    uid: microsoft.quantum.primitive.assert
+  - name: AssertProb
+    uid: microsoft.quantum.primitive.assertprob
+  - name: CCNOT
+    uid: microsoft.quantum.primitive.ccnot
+  - name: CNOT
+    uid: microsoft.quantum.primitive.cnot
+  - name: Exp
+    uid: microsoft.quantum.primitive.exp
+  - name: ExpFrac
+    uid: microsoft.quantum.primitive.expfrac
+  - name: H
+    uid: microsoft.quantum.primitive.h
+  - name: M
+    uid: microsoft.quantum.primitive.m
+  - name: Measure
+    uid: microsoft.quantum.primitive.measure
+  - name: Message
+    uid: microsoft.quantum.primitive.message
+  - name: MultiX
+    uid: microsoft.quantum.primitive.multix
+  - name: R
+    uid: microsoft.quantum.primitive.r
+  - name: R1
+    uid: microsoft.quantum.primitive.r1
+  - name: R1Frac
+    uid: microsoft.quantum.primitive.r1frac
+  - name: RFrac
+    uid: microsoft.quantum.primitive.rfrac
+  - name: Random
+    uid: microsoft.quantum.primitive.random
+  - name: Rx
+    uid: microsoft.quantum.primitive.rx
+  - name: Ry
+    uid: microsoft.quantum.primitive.ry
+  - name: Rz
+    uid: microsoft.quantum.primitive.rz
+  - name: S
+    uid: microsoft.quantum.primitive.s
+  - name: SWAP
+    uid: microsoft.quantum.primitive.swap
+  - name: T
+    uid: microsoft.quantum.primitive.t
+  - name: X
+    uid: microsoft.quantum.primitive.x
+  - name: Y
+    uid: microsoft.quantum.primitive.y
+  - name: Z
+    uid: microsoft.quantum.primitive.z

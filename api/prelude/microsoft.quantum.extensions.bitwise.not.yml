@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.bitwise.not
+name: Not
+type: function
+namespace: Microsoft.Quantum.Extensions.Bitwise
+summary: >2
+   Returns the bitwise NOT of an integer.
+remarks: >2
+
+  ### Examples
+   ```qsharp
+   let a = 248;
+   let x = Not(a); // x : Int = -249, due to two's complement representation.
+   ```
+syntax: 'function Not (a : Int) : Int'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    content: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - content: Int
+    isPrimitive: true

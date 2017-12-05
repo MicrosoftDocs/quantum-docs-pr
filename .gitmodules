@@ -1,6 +1,0 @@
-[submodule "Solid"]
-	path = Solid
-	url = https://quarcsw.visualstudio.com/_git/Solid
-[submodule "Libraries"]
-	path = Libraries
-	url = https://quarcsw.visualstudio.com/_git/Libraries

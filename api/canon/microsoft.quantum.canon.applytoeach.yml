@@ -15,26 +15,26 @@ remarks: >2
        }
    ```
 syntax: "operation ApplyToEach (singleElementOperation : ('T => ()), register : 'T[]) : ()"
+seealso: >2-
+   - @"microsoft.quantum.canon.ApplyToEachA"
+   - @"microsoft.quantum.canon.ApplyToEachC"
+   - @"microsoft.quantum.canon.ApplyToEachCA"
 input:
   content: "(singleElementOperation : ('T => ()), register : 'T[])"
   types:
   - name: register
-    uid: "'T"
+    content: "'T"
     isLocal: true
     isArray: true
   - name: singleElementOperation
     isOperation: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.applytoeacha
-- microsoft.quantum.canon.applytoeachc
-- microsoft.quantum.canon.applytoeachca

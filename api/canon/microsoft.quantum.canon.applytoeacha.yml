@@ -4,26 +4,25 @@ name: ApplyToEachA
 type: operation
 namespace: Microsoft.Quantum.Canon
 syntax: "operation ApplyToEachA (singleElementOperation : ('T => () : Adjoint), register : 'T[]) : ()"
+seealso: ' - @"microsoft.quantum.canon.ApplyToEach"'
 input:
   content: "(singleElementOperation : ('T => () : Adjoint), register : 'T[])"
   types:
   - name: register
-    uid: "'T"
+    content: "'T"
     isLocal: true
     isArray: true
   - name: singleElementOperation
     isOperation: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.applytoeach
 functors:
 - Adjoint

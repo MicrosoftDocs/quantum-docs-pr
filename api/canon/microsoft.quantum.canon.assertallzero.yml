@@ -3,25 +3,24 @@ uid: microsoft.quantum.canon.assertallzero
 name: AssertAllZero
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Assert that given qubits are all in |0⟩ state\n "
 syntax: 'operation AssertAllZero (message : String, target : Qubit[], tolerance : Double) : ()'
 input:
   content: '(message : String, target : Qubit[], tolerance : Double)'
   types:
   - name: message
-    uid: String
+    content: String
     isPrimitive: true
   - name: target
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
     isArray: true
   - name: tolerance
-    uid: Double
+    content: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
 functors:
 - Adjoint

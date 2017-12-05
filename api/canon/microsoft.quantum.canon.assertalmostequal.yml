@@ -14,13 +14,13 @@ input:
   content: '(actual : Double, expected : Double)'
   types:
   - name: actual
-    uid: Double
+    content: Double
     isPrimitive: true
   - name: expected
-    uid: Double
+    content: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true

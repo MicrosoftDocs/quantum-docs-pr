@@ -24,11 +24,11 @@ input:
     isOperation: true
     types:
     - types:
-      - uid: "'T"
+      - content: "'T"
         isLocal: true
-      - uid: "'U"
+      - content: "'U"
         isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
 output:
   content: ('T -> ('U => ()))
@@ -39,11 +39,11 @@ output:
        original operation's input.
     isFunction: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
     - isOperation: true
       types:
-      - uid: "'U"
+      - content: "'U"
         isLocal: true
-      - uid: ()
+      - content: ()
         isPrimitive: true

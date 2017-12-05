@@ -8,13 +8,13 @@ input:
   content: '(a : Int, b : Int)'
   types:
   - name: a
-    uid: Int
+    content: Int
     isPrimitive: true
   - name: b
-    uid: Int
+    content: Int
     isPrimitive: true
 output:
   content: Int
   types:
-  - uid: Int
+  - content: Int
     isPrimitive: true

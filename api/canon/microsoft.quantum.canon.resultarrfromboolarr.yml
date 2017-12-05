@@ -8,12 +8,12 @@ input:
   content: '(input : Bool[])'
   types:
   - name: input
-    uid: Bool
+    content: Bool
     isPrimitive: true
     isArray: true
 output:
   content: Result[]
   types:
-  - uid: Result
+  - content: Result
     isPrimitive: true
     isArray: true

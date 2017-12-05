@@ -11,11 +11,11 @@ input:
   content: '(target : Qubit)'
   types:
   - name: target
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
 output:
   content: Result
   types:
   - summary: ' The result of measuring `target` in the Pauli $Z$ basis.'
-    uid: Result
+    content: Result
     isPrimitive: true

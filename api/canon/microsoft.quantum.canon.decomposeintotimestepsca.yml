@@ -11,22 +11,22 @@ input:
   content: "(nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), trotterOrder : Int)"
   types:
   - name: nSteps
-    uid: Int
+    content: Int
     isPrimitive: true
   - name: op
     isOperation: true
     types:
     - types:
-      - uid: Int
+      - content: Int
         isPrimitive: true
-      - uid: Double
+      - content: Double
         isPrimitive: true
-      - uid: "'T"
+      - content: "'T"
         isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: trotterOrder
-    uid: Int
+    content: Int
     isPrimitive: true
 output:
   content: "((Double, 'T) => () : Adjoint, Controlled)"
@@ -38,14 +38,14 @@ output:
     isOperation: true
     types:
     - types:
-      - uid: Double
+      - content: Double
         isPrimitive: true
-      - uid: "'T"
+      - content: "'T"
         isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
-typeParameters:
-- uid: "'T"
+typeparams:
+- name: "'T"
   summary: >2
      The type which each time step should act upon; typically, either
      `Qubit[]` or `Qubit`.

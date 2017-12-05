@@ -8,23 +8,23 @@ input:
   content: '(op : (Qubit[] => ()), idxs : Int[], target : Qubit[])'
   types:
   - name: idxs
-    uid: Int
+    content: Int
     isPrimitive: true
     isArray: true
   - name: op
     isOperation: true
     types:
-    - uid: Qubit
+    - content: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: target
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true

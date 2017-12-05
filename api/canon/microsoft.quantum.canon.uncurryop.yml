@@ -8,19 +8,23 @@ summary: >2
    returns a new operation which takes both inputs
    as a tuple.
 syntax: "function UncurryOp (curriedOp : ('T -> ('U => ()))) : (('T, 'U) => ())"
+seealso: >2-
+   - @"microsoft.quantum.canon.uncurryopc"
+   - @"microsoft.quantum.canon.uncurryopa"
+   - @"microsoft.quantum.canon.uncurryopca"
 input:
   content: "(curriedOp : ('T -> ('U => ())))"
   types:
   - name: curriedOp
     isFunction: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
     - isOperation: true
       types:
-      - uid: "'U"
+      - content: "'U"
         isLocal: true
-      - uid: ()
+      - content: ()
         isPrimitive: true
 output:
   content: (('T, 'U) => ())
@@ -31,13 +35,9 @@ output:
     isOperation: true
     types:
     - types:
-      - uid: "'T"
+      - content: "'T"
         isLocal: true
-      - uid: "'U"
+      - content: "'U"
         isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.uncurryopc
-- microsoft.quantum.canon.uncurryopa
-- microsoft.quantum.canon.uncurryopca

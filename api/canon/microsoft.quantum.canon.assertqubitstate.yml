@@ -19,13 +19,13 @@ input:
     - uid: complex
     - uid: complex
   - name: register
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
   - name: tolerance
-    uid: Double
+    content: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true

@@ -11,10 +11,10 @@ input:
   content: '(target : Qubit)'
   types:
   - name: target
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true

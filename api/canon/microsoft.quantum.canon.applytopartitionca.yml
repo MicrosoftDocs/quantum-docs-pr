@@ -8,31 +8,29 @@ input:
   content: '(op : ((Qubit[], Qubit[]) => () : Controlled, Adjoint), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
   types:
   - name: numberOfQubitsToFirstArgument
-    uid: Int
+    content: Int
     isPrimitive: true
   - name: op
     isOperation: true
     types:
     - types:
-      - uid: Qubit
+      - content: Qubit
         isPrimitive: true
         isArray: true
-      - uid: Qubit
+      - content: Qubit
         isPrimitive: true
         isArray: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: target
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.applytopartition
 functors:
 - Adjoint
 - Controlled

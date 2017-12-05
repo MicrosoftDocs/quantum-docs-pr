@@ -16,24 +16,24 @@ input:
   - name: expectedU
     isOperation: true
     types:
-    - uid: Qubit
+    - content: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: givenU
     isOperation: true
     types:
-    - uid: Qubit
+    - content: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: inputSize
-    uid: Int
+    content: Int
     isPrimitive: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true

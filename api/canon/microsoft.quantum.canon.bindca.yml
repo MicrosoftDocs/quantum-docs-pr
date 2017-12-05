@@ -4,6 +4,7 @@ name: BindCA
 type: function
 namespace: Microsoft.Quantum.Canon
 syntax: "function BindCA (operations : ('T => () : Adjoint, Controlled)[]) : ('T => () : Adjoint, Controlled)"
+seealso: ' - @"microsoft.quantum.canon.bind"'
 input:
   content: "(operations : ('T => () : Adjoint, Controlled)[])"
   types:
@@ -11,18 +12,16 @@ input:
     isArray: true
     isOperation: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
 output:
   content: "('T => () : Adjoint, Controlled)"
   types:
   - isOperation: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.bind

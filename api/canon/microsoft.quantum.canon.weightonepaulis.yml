@@ -11,7 +11,7 @@ input:
   content: '(nQubits : Int)'
   types:
   - name: nQubits
-    uid: Int
+    content: Int
     isPrimitive: true
 output:
   content: Pauli[][]
@@ -21,5 +21,5 @@ output:
        represented as an array with length `nQubits`.
     isArray: true
     types:
-    - uid: Pauli
+    - content: Pauli
       isPrimitive: true

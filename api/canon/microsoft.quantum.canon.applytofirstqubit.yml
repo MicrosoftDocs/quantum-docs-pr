@@ -11,16 +11,16 @@ input:
   - name: op
     isOperation: true
     types:
-    - uid: Qubit
+    - content: Qubit
       isPrimitive: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: register
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true

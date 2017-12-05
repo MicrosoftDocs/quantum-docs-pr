@@ -10,16 +10,16 @@ input:
   content: '(actual : Bool, expected : Bool, message : String)'
   types:
   - name: actual
-    uid: Bool
+    content: Bool
     isPrimitive: true
   - name: expected
-    uid: Bool
+    content: Bool
     isPrimitive: true
   - name: message
-    uid: String
+    content: String
     isPrimitive: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true

@@ -10,11 +10,11 @@ input:
   content: '(results : Result[])'
   types:
   - name: results
-    uid: Result
+    content: Result
     isPrimitive: true
     isArray: true
 output:
   content: Int
   types:
-  - uid: Int
+  - content: Int
     isPrimitive: true

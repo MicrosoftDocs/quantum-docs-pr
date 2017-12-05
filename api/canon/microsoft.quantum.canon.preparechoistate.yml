@@ -21,31 +21,31 @@ remarks: >2
    acting on arbitrary input states, and forms the foundation of
    *quantum process tomography*.
 syntax: 'operation PrepareChoiState (op : (Qubit[] => ()), reference : Qubit[], target : Qubit[]) : ()'
+seealso: >2-
+   - @"microsoft.quantum.canon.preparechoistatec"
+   - @"microsoft.quantum.canon.preparechoistatea"
+   - @"microsoft.quantum.canon.preparechoistateca"
 input:
   content: '(op : (Qubit[] => ()), reference : Qubit[], target : Qubit[])'
   types:
   - name: op
     isOperation: true
     types:
-    - uid: Qubit
+    - content: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: reference
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
     isArray: true
   - name: target
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.preparechoistatec
-- microsoft.quantum.canon.preparechoistatea
-- microsoft.quantum.canon.preparechoistateca

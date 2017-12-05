@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.modulus
+name: Modulus
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: ' Computes canonical residue of `value` modulo `modulus`. '
+syntax: 'function Modulus (value : Int, modulus : Int) : Int'
+input:
+  content: '(value : Int, modulus : Int)'
+  types:
+  - name: modulus
+    content: Int
+    isPrimitive: true
+  - name: value
+    content: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - content: Int
+    isPrimitive: true

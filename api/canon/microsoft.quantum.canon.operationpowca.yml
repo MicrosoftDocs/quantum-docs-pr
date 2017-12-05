@@ -4,27 +4,26 @@ name: OperationPowCA
 type: function
 namespace: Microsoft.Quantum.Canon
 syntax: "function OperationPowCA (oracle : ('T => () : Controlled, Adjoint), power : Int) : ('T => () : Controlled, Adjoint)"
+seealso: ' - @"microsoft.quantum.canon.operationpow"'
 input:
   content: "(oracle : ('T => () : Controlled, Adjoint), power : Int)"
   types:
   - name: oracle
     isOperation: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: power
-    uid: Int
+    content: Int
     isPrimitive: true
 output:
   content: "('T => () : Controlled, Adjoint)"
   types:
   - isOperation: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.operationpow

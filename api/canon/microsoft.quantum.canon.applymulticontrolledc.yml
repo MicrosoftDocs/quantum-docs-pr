@@ -20,25 +20,25 @@ input:
   - name: ccnot
     uid: ccnotop
   - name: controls
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
     isArray: true
   - name: singlyControlledOp
     isOperation: true
     types:
-    - uid: Qubit
+    - content: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: targets
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
 functors:
 - Controlled

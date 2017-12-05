@@ -4,6 +4,7 @@ name: ApplyToFirstThreeQubitsC
 type: operation
 namespace: Microsoft.Quantum.Canon
 syntax: 'operation ApplyToFirstThreeQubitsC (op : ((Qubit, Qubit, Qubit) => () : Controlled), register : Qubit[]) : ()'
+seealso: ' - Microsoft.Quantum.Canon.ApplyToFirstThreeQubits'
 input:
   content: '(op : ((Qubit, Qubit, Qubit) => () : Controlled), register : Qubit[])'
   types:
@@ -11,24 +12,22 @@ input:
     isOperation: true
     types:
     - types:
-      - uid: Qubit
+      - content: Qubit
         isPrimitive: true
-      - uid: Qubit
+      - content: Qubit
         isPrimitive: true
-      - uid: Qubit
+      - content: Qubit
         isPrimitive: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: register
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.applytofirstthreequbits
 functors:
 - Controlled

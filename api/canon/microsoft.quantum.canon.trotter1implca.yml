@@ -20,36 +20,36 @@ input:
   content: "(nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), stepSize : Double, target : 'T)"
   types:
   - name: nSteps
-    uid: Int
+    content: Int
     isPrimitive: true
   - name: op
     isOperation: true
     types:
     - types:
-      - uid: Int
+      - content: Int
         isPrimitive: true
-      - uid: Double
+      - content: Double
         isPrimitive: true
-      - uid: "'T"
+      - content: "'T"
         isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: stepSize
-    uid: Double
+    content: Double
     isPrimitive: true
   - name: target
-    uid: "'T"
+    content: "'T"
     isLocal: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
 functors:
 - Adjoint
 - Controlled
-typeParameters:
-- uid: "'T"
+typeparams:
+- name: "'T"
   summary: >2
      The type which each time step should act upon; typically, either
      `Qubit[]` or `Qubit`.

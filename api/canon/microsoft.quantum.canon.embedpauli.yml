@@ -19,17 +19,17 @@ input:
   content: '(pauli : Pauli, location : Int, n : Int)'
   types:
   - name: location
-    uid: Int
+    content: Int
     isPrimitive: true
   - name: n
-    uid: Int
+    content: Int
     isPrimitive: true
   - name: pauli
-    uid: Pauli
+    content: Pauli
     isPrimitive: true
 output:
   content: Pauli[]
   types:
-  - uid: Pauli
+  - content: Pauli
     isPrimitive: true
     isArray: true

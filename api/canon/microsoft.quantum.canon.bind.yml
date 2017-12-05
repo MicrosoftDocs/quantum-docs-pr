@@ -18,6 +18,10 @@ remarks: >2
    U(x); V(x);
    ```
 syntax: "function Bind (operations : ('T => ())[]) : ('T => ())"
+seealso: >2-
+   - @"microsoft.quantum.canon.bindc"
+   - @"microsoft.quantum.canon.binda"
+   - @"microsoft.quantum.canon.bindca"
 input:
   content: "(operations : ('T => ())[])"
   types:
@@ -25,9 +29,9 @@ input:
     isArray: true
     isOperation: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
 output:
   content: ('T => ())
@@ -37,11 +41,7 @@ output:
        on its input.
     isOperation: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.bindc
-- microsoft.quantum.canon.binda
-- microsoft.quantum.canon.bindca

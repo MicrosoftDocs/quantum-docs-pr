@@ -10,20 +10,20 @@ input:
   - name: oracle
     isOperation: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: power
-    uid: Int
+    content: Int
     isPrimitive: true
   - name: target
-    uid: "'T"
+    content: "'T"
     isLocal: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
 functors:
 - Controlled

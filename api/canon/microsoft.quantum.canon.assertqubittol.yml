@@ -10,22 +10,22 @@ remarks: >2-
    @"Microsoft.Quantum.Canon.AssertQubitState" allows for asserting
    arbitrary qubit states rather than only $Z$ eigenstates.
 syntax: 'operation AssertQubitTol (expected : Result, tolerance : Double, q : Qubit) : ()'
+seealso: >2
+   - Microsoft.Quantum.Canon.AssertQubitState
 input:
   content: '(expected : Result, tolerance : Double, q : Qubit)'
   types:
   - name: expected
-    uid: Result
+    content: Result
     isPrimitive: true
   - name: q
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
   - name: tolerance
-    uid: Double
+    content: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.assertqubitstate

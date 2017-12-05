@@ -10,10 +10,10 @@ input:
   content: "(value : 'T)"
   types:
   - name: value
-    uid: "'T"
+    content: "'T"
     isLocal: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true

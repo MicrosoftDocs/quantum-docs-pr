@@ -6,30 +6,30 @@ namespace: Microsoft.Quantum.Canon
 summary: >2
    Applies a single-qubit operation to each indexed element in a register.
 syntax: "operation ApplyToEachIndex (singleElementOperation : ((Int, 'T) => ()), register : 'T[]) : ()"
+seealso: >2-
+   - @"microsoft.quantum.canon.ApplyToEach"
+   - @"microsoft.quantum.canon.ApplyToEachIndexA"
+   - @"microsoft.quantum.canon.ApplyToEachIndexC"
+   - @"microsoft.quantum.canon.ApplyToEachIndexCA"
 input:
   content: "(singleElementOperation : ((Int, 'T) => ()), register : 'T[])"
   types:
   - name: register
-    uid: "'T"
+    content: "'T"
     isLocal: true
     isArray: true
   - name: singleElementOperation
     isOperation: true
     types:
     - types:
-      - uid: Int
+      - content: Int
         isPrimitive: true
-      - uid: "'T"
+      - content: "'T"
         isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.applytoeach
-- microsoft.quantum.canon.applytoeachindexa
-- microsoft.quantum.canon.applytoeachindexc
-- microsoft.quantum.canon.applytoeachindexca

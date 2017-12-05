@@ -14,21 +14,21 @@ input:
     isOperation: true
     types:
     - types:
-      - uid: Pauli
+      - content: Pauli
         isPrimitive: true
         isArray: true
-      - uid: Qubit
+      - content: Qubit
         isPrimitive: true
         isArray: true
-    - uid: Result
+    - content: Result
       isPrimitive: true
   - name: paulis
     isArray: true
     types:
-    - uid: Pauli
+    - content: Pauli
       isPrimitive: true
   - name: target
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
     isArray: true
 output:
@@ -37,6 +37,6 @@ output:
   - summary: >2-
        The array of results obtained from measuring each element of `paulis`
        on `target`.
-    uid: Result
+    content: Result
     isPrimitive: true
     isArray: true

@@ -16,26 +16,26 @@ input:
   content: "(mapper : ('T -> 'U), array : 'T[])"
   types:
   - name: array
-    uid: "'T"
+    content: "'T"
     isLocal: true
     isArray: true
   - name: mapper
     isFunction: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
-    - uid: "'U"
+    - content: "'U"
       isLocal: true
 output:
   content: "'U[]"
   types:
   - summary: " An array `'U[]` of elements that are mapped by the `mapper` function."
-    uid: "'U"
+    content: "'U"
     isLocal: true
     isArray: true
-typeParameters:
-- uid: "'T"
+typeparams:
+- name: "'T"
   summary: ' The type of `array` elements.'
-- uid: "'U"
+- name: "'U"
   summary: >2
      The result type of the `mapper` function.

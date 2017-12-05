@@ -4,27 +4,26 @@ name: OperationPowA
 type: function
 namespace: Microsoft.Quantum.Canon
 syntax: "function OperationPowA (oracle : ('T => () : Adjoint), power : Int) : ('T => () : Adjoint)"
+seealso: ' - @"microsoft.quantum.canon.operationpow"'
 input:
   content: "(oracle : ('T => () : Adjoint), power : Int)"
   types:
   - name: oracle
     isOperation: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: power
-    uid: Int
+    content: Int
     isPrimitive: true
 output:
   content: "('T => () : Adjoint)"
   types:
   - isOperation: true
     types:
-    - uid: "'T"
+    - content: "'T"
       isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.operationpow

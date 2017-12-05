@@ -4,26 +4,25 @@ name: ApplyToFirstQubitA
 type: operation
 namespace: Microsoft.Quantum.Canon
 syntax: 'operation ApplyToFirstQubitA (op : (Qubit => () : Adjoint), register : Qubit[]) : ()'
+seealso: ' - Microsoft.Quantum.Canon.ApplyToFirstQubit'
 input:
   content: '(op : (Qubit => () : Adjoint), register : Qubit[])'
   types:
   - name: op
     isOperation: true
     types:
-    - uid: Qubit
+    - content: Qubit
       isPrimitive: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
   - name: register
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.applytofirstqubit
 functors:
 - Adjoint

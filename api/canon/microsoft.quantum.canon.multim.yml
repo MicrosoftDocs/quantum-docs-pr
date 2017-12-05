@@ -8,12 +8,12 @@ input:
   content: '(targets : Qubit[])'
   types:
   - name: targets
-    uid: Qubit
+    content: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: Result[]
   types:
-  - uid: Result
+  - content: Result
     isPrimitive: true
     isArray: true

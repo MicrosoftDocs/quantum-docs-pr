@@ -4,29 +4,28 @@ name: ApplyToEachIndexC
 type: operation
 namespace: Microsoft.Quantum.Canon
 syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => () : Controlled), register : 'T[]) : ()"
+seealso: ' - @"microsoft.quantum.canon.applytoeachindex"'
 input:
   content: "(singleElementOperation : ((Int, 'T) => () : Controlled), register : 'T[])"
   types:
   - name: register
-    uid: "'T"
+    content: "'T"
     isLocal: true
     isArray: true
   - name: singleElementOperation
     isOperation: true
     types:
     - types:
-      - uid: Int
+      - content: Int
         isPrimitive: true
-      - uid: "'T"
+      - content: "'T"
         isLocal: true
-    - uid: ()
+    - content: ()
       isPrimitive: true
 output:
   content: ()
   types:
-  - uid: ()
+  - content: ()
     isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.applytoeachindex
 functors:
 - Controlled

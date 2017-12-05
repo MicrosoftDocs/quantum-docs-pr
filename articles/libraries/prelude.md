@@ -393,7 +393,7 @@ let y = AbsD(-PI()); // y : Double = 3.1415...
 
 ### Type Conversions ###
 
-The <xref:microsoft.quantum.extensions.covnert> namespace provides functions from the .NET base class library's [`System.Convert` class](https://docs.microsoft.com/en-us/dotnet/api/system.convert?view=netframework-4.7.1) that are relevant to Q# types.
+The <xref:microsoft.quantum.extensions.convert> namespace provides functions from the .NET base class library's [`System.Convert` class](https://docs.microsoft.com/en-us/dotnet/api/system.convert?view=netframework-4.7.1) that are relevant to Q# types.
 For example, the functions <xref:microsoft.quantum.extensions.convert.tostringd> and <xref:microsoft.quantum.extensions.convert.tostringi> convert inputs of type `Double` and `Int`, respectively, to `String`.
 
 

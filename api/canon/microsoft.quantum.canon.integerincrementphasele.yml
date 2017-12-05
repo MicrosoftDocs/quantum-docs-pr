@@ -12,7 +12,9 @@ remarks: >2-
    [ Page 6 of arXiv:quant-ph/0008033v1 ](https://arxiv.org/pdf/quant-ph/0008033.pdf#page=6)
    for the circuit diagram and explanation.
 syntax: 'operation IntegerIncrementPhaseLE (increment : Int, target : PhaseLittleEndian) : ()'
-references: " - [ *Thomas G. Draper*,\n      arXiv:quant-ph/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)\n "
+references: >2
+   - [ *Thomas G. Draper*,
+        arXiv:quant-ph/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)
 input:
   content: '(increment : Int, target : PhaseLittleEndian)'
   types:

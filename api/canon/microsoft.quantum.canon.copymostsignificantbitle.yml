@@ -3,7 +3,8 @@ uid: microsoft.quantum.canon.copymostsignificantbitle
 name: CopyMostSignificantBitLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Copies the most significant bit of `from` into target\n "
+summary: >2
+   Copies the most significant bit of `from` into target
 syntax: 'operation CopyMostSignificantBitLE (from : LittleEndian, target : Qubit) : ()'
 input:
   content: '(from : LittleEndian, target : Qubit)'

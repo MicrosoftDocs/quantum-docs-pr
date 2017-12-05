@@ -4,6 +4,7 @@ name: ModularMultiplyByConstantLE
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: " Let us denote modulus by N and constMultiplier by a \n then this operation implements a unitary defined by the following map on \n computational basis:\n |y⟩ ↦ |a⋅y (mod N) ⟩, for all y between 0 and N - 1 \n "
+remarks: " - For the circuit diagram and explanation see Figure 7 on [Page 8\n        of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)\n - This operation corresponds to Uₐ in \n   [arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)"
 syntax: 'operation ModularMultiplyByConstantLE (constMultiplier : Int, modulus : Int, multiplier : LittleEndian) : ()'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : LittleEndian)'
@@ -21,9 +22,6 @@ output:
   types:
   - content: ()
     isPrimitive: true
-seeAlso:
-- for
-- this
 functors:
 - Adjoint
 - Controlled

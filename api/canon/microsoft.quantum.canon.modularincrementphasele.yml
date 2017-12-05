@@ -3,10 +3,13 @@ uid: microsoft.quantum.canon.modularincrementphasele
 name: ModularIncrementPhaseLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y\n Then the operation performs the following transformation: \n |y⟩ ↦ |y+a (mod N)⟩\n Integers are encoded in little-endian format in QFT basis\n "
+summary: " Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y\n Then the operation performs the following transformation: \n |y⟩ ↦ |y+a (mod N)⟩\n Integers are encoded in little-endian format in QFT basis\n"
 remarks: >2-
    Assumes that `target` has the highest bit set to 0.
    Also assumes that the value of target is less than N.
+
+   For the circuit diagram and explanation see Figure 5 on [Page 5
+   of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5).
 syntax: 'operation ModularIncrementPhaseLE (increment : Int, modulus : Int, target : PhaseLittleEndian) : ()'
 input:
   content: '(increment : Int, modulus : Int, target : PhaseLittleEndian)'
@@ -25,7 +28,6 @@ output:
   - content: ()
     isPrimitive: true
 seeAlso:
-- for
 - microsoft.quantum.primitive.modularincrementle
 functors:
 - Adjoint

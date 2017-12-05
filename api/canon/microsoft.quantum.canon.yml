@@ -304,9 +304,12 @@ functions:
   - uid: microsoft.quantum.canon.expmod
     summary: " Let us denote expBase by x, power by p and modulus by N. \n The function returns xᵖ mod N . \n We assume that N,x are positive and power is non-negative.\n "
   - uid: microsoft.quantum.canon.extendedgcd
-    summary: " Computes tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a  \n greatest common divisor of a and b. The GCD is always positive.\n "
+    summary: >2
+       Computes tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a
+       greatest common divisor of a and b. The GCD is always positive.
   - uid: microsoft.quantum.canon.gcd
-    summary: " Computes greatest common divisor of a and b. The GCD is always positive.\n "
+    summary: >2
+       Computes greatest common divisor of a and b. The GCD is always positive.
   - uid: microsoft.quantum.canon.continuedfractionconvergent
     summary: " Finds a continued fraction convergent closest to `fraction` \n with the denominator less or equal to `denominatorBound` \n "
   - uid: microsoft.quantum.canon.iscoprime
@@ -316,7 +319,9 @@ functions:
     summary: >2
        Returns b such that `a`⋅b = 1 (mod `modulus`)
   - uid: microsoft.quantum.canon.bitsize
-    summary: " For non-negative integer `a` returns the smallest n such \n that a < 2ⁿ .\n "
+    summary: >2
+       For non-negative integer `a` returns the smallest n such
+       that a < 2ⁿ .
   - uid: microsoft.quantum.canon.ignore
     summary: >2
        Ignores the output of an operation or function.
@@ -368,25 +373,31 @@ operations:
        then `InPlaceXorLE` performs an operation given by the following map:
        |y⟩ ↦ |y⊕a⟩ , where ⊕ is the bitwise exclusive OR operator.
   - uid: microsoft.quantum.canon.measureinteger
-    summary: " `MeasureInteger` reads out the content of a quantum register and converts \n it to an integer of type `Int`. The measurement is performed with respect \n to the standard computational basis, i.e., the eigenbasis of `PauliZ`.\n"
+    summary: >2
+       `MeasureInteger` reads out the content of a quantum register and converts
+       it to an integer of type `Int`. The measurement is performed with respect
+       to the standard computational basis, i.e., the eigenbasis of `PauliZ`.
   - uid: microsoft.quantum.canon.measureintegerbe
     summary: >2
        Version of MeasureInteger for BigEndian register
   - uid: microsoft.quantum.canon.integerincrementphasele
     summary: " Unsigned integer increment by an integer constant, based on phase rotations.\n Suppose `target` encodes unsigned integer x in little-endian encoding and \n `increment` is equal to a.\n The operation implements the unitary |x⟩ ↦ |x + a ⟩,\n where the addition is performed\n modulo 2ⁿ, for n = `Length(target)`.\n"
   - uid: microsoft.quantum.canon.asserthighestbit
-    summary: " Asserts that the highest bit of an unsigned integer has given value\n "
+    summary: >2
+       Asserts that the highest bit of an unsigned integer has given value
   - uid: microsoft.quantum.canon.assertlessthanphasele
-    summary: " Asserts that the `number` encoded in PhaseLittleEndian is less than `value`\n "
+    summary: >2
+       Asserts that the `number` encoded in PhaseLittleEndian is less than `value`
   - uid: microsoft.quantum.canon.integerincrementle
     summary: " Unsigned integer increment by an integer constant, based on phase rotations.\n Suppose `target` encodes unsigned integer x in little-endian encoding and \n `increment` is equal to a.\n The operation implements the unitary |x⟩ ↦ |x + a ⟩,\n where the addition is performed\n modulo 2ⁿ, for n = `Length(target)`.\n"
   - uid: microsoft.quantum.canon.modularincrementle
   - uid: microsoft.quantum.canon.copymostsignificantbitle
-    summary: " Copies the most significant bit of `from` into target\n "
+    summary: >2
+       Copies the most significant bit of `from` into target
   - uid: microsoft.quantum.canon.modularincrementphasele
-    summary: " Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y\n Then the operation performs the following transformation: \n |y⟩ ↦ |y+a (mod N)⟩\n Integers are encoded in little-endian format in QFT basis\n "
+    summary: " Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y\n Then the operation performs the following transformation: \n |y⟩ ↦ |y+a (mod N)⟩\n Integers are encoded in little-endian format in QFT basis\n"
   - uid: microsoft.quantum.canon.modularaddproductle
-    summary: " Let us denote modulus by N, constMultiplier by a, multiplier by x  \n and summand by y, then this operation is given by map \n |x⟩|b⟩ ↦ |x⟩| (b + a⋅x) (mod N) ⟩\n "
+    summary: " Let us denote modulus by N, constMultiplier by a, multiplier by x  \n and summand by y, then this operation is given by map \n |x⟩|b⟩ ↦ |x⟩| (b + a⋅x) (mod N) ⟩\n"
   - uid: microsoft.quantum.canon.modularaddproductphasele
     summary: " The same as ModularAddProductInPlaceLE, but assumes that summand encodes \n integers in QFT basis\n "
   - uid: microsoft.quantum.canon.modularmultiplybyconstantle
@@ -609,24 +620,30 @@ operations:
   - uid: microsoft.quantum.canon.assertoperationsequalreferenced
     summary: " Given two operations, asserts that they act identically for all input states.\n This assertion is implemented by using the Choi–Jamiłkowski isomorphism to reduce\n the assertion to one of a qubit state assertion on two entangled registers.\n Thus, this operation needs only a single call to each operation being tested,\n but requires twice as many qubits to be allocated.\n This assertion can be used to ensure, for instance, that an optimized version of an\n operation acts identically to its naïve implementation, or that an operation\n which acts on a range of non-quantum inputs agrees with known cases.\n "
   - uid: microsoft.quantum.canon.applyreversedoplittleendian
-    summary: " Applies an operation that takes little-endian input to a register encoding \n an unsigned integer using big-endian format.\n "
+    summary: " Applies an operation that takes little-endian input to a register encoding \n an unsigned integer using big-endian format.\n"
   - uid: microsoft.quantum.canon.applyreversedoplittleendiana
   - uid: microsoft.quantum.canon.applyreversedoplittleendianc
   - uid: microsoft.quantum.canon.applyreversedoplittleendianca
   - uid: microsoft.quantum.canon.applyreversedopbigendian
-    summary: " Applies an operation that takes big-endian input to a register encoding \n an unsigned integer using little-endian format.\n"
+    summary: >2
+       Applies an operation that takes big-endian input to a register encoding
+       an unsigned integer using little-endian format.
   - uid: microsoft.quantum.canon.applyreversedopbigendiana
   - uid: microsoft.quantum.canon.applyreversedopbigendianc
   - uid: microsoft.quantum.canon.applyreversedopbigendianca
   - uid: microsoft.quantum.canon.swapreverseregister
-    summary: " Uses SWAP gates to reverse the order of the qubits in\n a register.\n "
+    summary: >2
+       Uses SWAP gates to reverse the order of the qubits in
+       a register.
   - uid: microsoft.quantum.canon.applyphaseleoperationonle
-    summary: " Applies an operation that takes PhaseLittleEndian input on LittleEndian target\n "
+    summary: >2
+       Applies an operation that takes PhaseLittleEndian input on LittleEndian target
   - uid: microsoft.quantum.canon.applyphaseleoperationonlea
   - uid: microsoft.quantum.canon.applyphaseleoperationonlec
   - uid: microsoft.quantum.canon.applyphaseleoperationonleca
   - uid: microsoft.quantum.canon.applyleoperationonphasele
-    summary: " Applies an operation that takes PhaseLittleEndian input on LittleEndian target\n "
+    summary: >2
+       Applies an operation that takes PhaseLittleEndian input on LittleEndian target
   - uid: microsoft.quantum.canon.applyleoperationonphaselea
   - uid: microsoft.quantum.canon.applyleoperationonphaselec
   - uid: microsoft.quantum.canon.applyleoperationonphaseleca
@@ -860,7 +877,10 @@ newtypes:
        Represents a time-dependent dynamical generator. The `Double`
        parameter is a schedule in $[0, 1]$.
   - uid: microsoft.quantum.canon.fraction
-    summary: " Represents an integer of the form p/q. Integer p is \n the first element of the tuple and q is the second element \n of the tuple. "
+    summary: >2-
+       Represents an integer of the form p/q. Integer p is
+       the first element of the tuple and q is the second element
+       of the tuple.
   - uid: microsoft.quantum.canon.littleendian
     summary: >2-
        Register that encodes unsigned integer in little-endian order

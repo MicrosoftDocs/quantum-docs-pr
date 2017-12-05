@@ -3,7 +3,12 @@ uid: microsoft.quantum.canon.modularaddproductle
 name: ModularAddProductLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Let us denote modulus by N, constMultiplier by a, multiplier by x  \n and summand by y, then this operation is given by map \n |x⟩|b⟩ ↦ |x⟩| (b + a⋅x) (mod N) ⟩\n "
+summary: " Let us denote modulus by N, constMultiplier by a, multiplier by x  \n and summand by y, then this operation is given by map \n |x⟩|b⟩ ↦ |x⟩| (b + a⋅x) (mod N) ⟩\n"
+remarks: >2-
+   - For the circuit diagram and explanation see Figure 6 on [Page 7
+          of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=7)
+   - This operation corresponds to CMULT(a)MOD(N) in
+     [arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
 syntax: 'operation ModularAddProductLE (constMultiplier : Int, modulus : Int, multiplier : LittleEndian, summand : LittleEndian) : ()'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : LittleEndian, summand : LittleEndian)'
@@ -23,9 +28,6 @@ output:
   types:
   - content: ()
     isPrimitive: true
-seeAlso:
-- for
-- this
 functors:
 - Adjoint
 - Controlled

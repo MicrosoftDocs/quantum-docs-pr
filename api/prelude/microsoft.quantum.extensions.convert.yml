@@ -1,5 +1,6 @@
 ### YamlMime:QSharpNamespace
-name: microsoft.quantum.extensions.convert
+uid: microsoft.quantum.extensions.convert
+name: Microsoft.Quantum.Extensions.Convert
 functions:
   items:
   - uid: microsoft.quantum.extensions.convert.todouble

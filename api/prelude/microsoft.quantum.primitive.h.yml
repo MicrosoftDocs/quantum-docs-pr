@@ -18,12 +18,12 @@ input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

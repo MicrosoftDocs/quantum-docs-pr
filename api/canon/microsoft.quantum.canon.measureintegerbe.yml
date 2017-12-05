@@ -14,7 +14,7 @@ input:
 output:
   content: Int
   types:
-  - content: Int
+  - uid: Int
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.measureinteger

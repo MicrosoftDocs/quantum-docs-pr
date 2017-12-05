@@ -26,18 +26,18 @@ input:
   content: '(numerator : Int, power : Int, qubit : Qubit)'
   types:
   - name: numerator
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: power
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: qubit
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

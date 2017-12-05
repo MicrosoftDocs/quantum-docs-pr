@@ -9,16 +9,16 @@ input:
   content: '(phase : Double, qubits : Qubit[])'
   types:
   - name: phase
-    content: Double
+    uid: Double
     isPrimitive: true
   - name: qubits
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

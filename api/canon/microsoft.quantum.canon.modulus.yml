@@ -12,15 +12,15 @@ input:
   content: '(value : Int, modulus : Int)'
   types:
   - name: modulus
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: value
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: Int
   types:
   - summary: >2
        Integer r between 0 and `modulus` - 1 such that value - r is divisible by modulus
-    content: Int
+    uid: Int
     isPrimitive: true

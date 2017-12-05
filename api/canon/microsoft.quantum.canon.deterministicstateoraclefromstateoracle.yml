@@ -9,7 +9,7 @@ input:
   content: '(idxFlagQubit : Int, stateOracle : StateOracle)'
   types:
   - name: idxFlagQubit
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: stateOracle
     uid: stateoracle

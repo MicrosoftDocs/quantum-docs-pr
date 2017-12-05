@@ -10,18 +10,18 @@ input:
   content: '(actual : Bool[], expected : Bool[], message : String)'
   types:
   - name: actual
-    content: Bool
+    uid: Bool
     isPrimitive: true
     isArray: true
   - name: expected
-    content: Bool
+    uid: Bool
     isPrimitive: true
     isArray: true
   - name: message
-    content: String
+    uid: String
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true

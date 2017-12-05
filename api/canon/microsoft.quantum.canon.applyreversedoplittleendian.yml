@@ -12,14 +12,14 @@ input:
     isOperation: true
     types:
     - uid: littleendian
-    - content: ()
+    - uid: ()
       isPrimitive: true
   - name: register
     uid: bigendian
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.applyreversedoplittleendiana

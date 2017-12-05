@@ -10,12 +10,12 @@ input:
   content: '(value : Int[])'
   types:
   - name: value
-    content: Int
+    uid: Int
     isPrimitive: true
     isArray: true
 output:
   content: Int
   types:
   - summary: ' The smallest element of `values`.'
-    content: Int
+    uid: Int
     isPrimitive: true

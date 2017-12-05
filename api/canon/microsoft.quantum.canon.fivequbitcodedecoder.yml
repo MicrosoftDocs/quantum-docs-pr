@@ -13,10 +13,10 @@ output:
   content: (Qubit[], Qubit[])
   types:
   - types:
-    - content: Qubit
+    - uid: Qubit
       isPrimitive: true
       isArray: true
-    - content: Qubit
+    - uid: Qubit
       isPrimitive: true
       isArray: true
 seeAlso:

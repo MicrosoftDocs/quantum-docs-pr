@@ -19,11 +19,11 @@ input:
   content: "(left : 'T[], right : 'U[])"
   types:
   - name: left
-    content: "'T"
+    uid: "'T"
     isLocal: true
     isArray: true
   - name: right
-    content: "'U"
+    uid: "'U"
     isLocal: true
     isArray: true
 output:
@@ -35,9 +35,9 @@ output:
        be as long as the shorter of the inputs.
     isArray: true
     types:
-    - content: "'T"
+    - uid: "'T"
       isLocal: true
-    - content: "'U"
+    - uid: "'U"
       isLocal: true
 typeParameters:
 - uid: "'T"

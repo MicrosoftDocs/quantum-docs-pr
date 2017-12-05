@@ -10,10 +10,10 @@ input:
   content: '(a : Int, b : Int)'
   types:
   - name: a
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: b
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: Bool
@@ -21,5 +21,5 @@ output:
   - summary: >2-
        True, if a and b are co-prime (e.g. their greatest common divisor is 1 ),
        and false otherwise
-    content: Bool
+    uid: Bool
     isPrimitive: true

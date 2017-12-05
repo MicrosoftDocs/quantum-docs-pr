@@ -11,14 +11,14 @@ input:
     isOperation: true
     types:
     - uid: phaselittleendian
-    - content: ()
+    - uid: ()
       isPrimitive: true
   - name: target
     uid: littleendian
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.applyphaseleoperationonle

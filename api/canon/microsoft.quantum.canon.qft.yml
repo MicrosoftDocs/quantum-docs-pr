@@ -14,7 +14,7 @@ input:
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.approximateqft

@@ -20,15 +20,15 @@ input:
   content: '(theta : Double, qubit : Qubit)'
   types:
   - name: qubit
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
   - name: theta
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

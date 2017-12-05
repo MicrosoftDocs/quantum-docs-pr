@@ -10,7 +10,7 @@ input:
   - name: table
     isArray: true
     types:
-    - content: Pauli
+    - uid: Pauli
       isPrimitive: true
 output:
   content: RecoveryFn

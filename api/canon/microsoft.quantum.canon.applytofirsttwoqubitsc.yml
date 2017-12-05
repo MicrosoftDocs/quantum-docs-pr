@@ -11,20 +11,20 @@ input:
     isOperation: true
     types:
     - types:
-      - content: Qubit
+      - uid: Qubit
         isPrimitive: true
-      - content: Qubit
+      - uid: Qubit
         isPrimitive: true
-    - content: ()
+    - uid: ()
       isPrimitive: true
   - name: register
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.applytofirsttwoqubits

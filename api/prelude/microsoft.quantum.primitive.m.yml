@@ -21,7 +21,7 @@ input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
 output:
   content: Result
@@ -29,5 +29,5 @@ output:
   - summary: >2
        The `Result` `Zero` if the $+1$ eigenvalue is observed, and `One` if
        the $-1$ eigenvalue is observed.
-    content: Result
+    uid: Result
     isPrimitive: true

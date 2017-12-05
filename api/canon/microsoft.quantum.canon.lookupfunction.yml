@@ -17,7 +17,7 @@ input:
   content: "(array : 'T[])"
   types:
   - name: array
-    content: "'T"
+    uid: "'T"
     isLocal: true
     isArray: true
 output:
@@ -27,9 +27,9 @@ output:
        A function `f` such that `f(idx) == f[idx]`.
     isFunction: true
     types:
-    - content: Int
+    - uid: Int
       isPrimitive: true
-    - content: "'T"
+    - uid: "'T"
       isLocal: true
 typeParameters:
 - uid: "'T"

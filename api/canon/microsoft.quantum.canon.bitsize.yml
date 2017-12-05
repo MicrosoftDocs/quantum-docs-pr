@@ -11,11 +11,11 @@ input:
   content: '(a : Int)'
   types:
   - name: a
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: Int
   types:
   - summary: ' The bit-size of `a`'
-    content: Int
+    uid: Int
     isPrimitive: true

@@ -12,23 +12,23 @@ input:
   content: '(idxBondLength : Int)'
   types:
   - name: idxBondLength
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: '(Int, ((Int, Double, Qubit[]) => () : Adjoint, Controlled))'
   types:
   - types:
-    - content: Int
+    - uid: Int
       isPrimitive: true
     - isOperation: true
       types:
       - types:
-        - content: Int
+        - uid: Int
           isPrimitive: true
-        - content: Double
+        - uid: Double
           isPrimitive: true
-        - content: Qubit
+        - uid: Qubit
           isPrimitive: true
           isArray: true
-      - content: ()
+      - uid: ()
         isPrimitive: true

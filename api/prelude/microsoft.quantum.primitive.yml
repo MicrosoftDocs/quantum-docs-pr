@@ -1,5 +1,6 @@
 ### YamlMime:QSharpNamespace
-name: microsoft.quantum.primitive
+uid: microsoft.quantum.primitive
+name: Microsoft.Quantum.Primitive
 functions:
   items:
   - uid: microsoft.quantum.primitive.message

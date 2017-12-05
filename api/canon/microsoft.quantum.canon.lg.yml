@@ -10,11 +10,11 @@ input:
   content: '(input : Double)'
   types:
   - name: input
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: Double
   types:
   - summary: ' The base-2 logarithm $y = \log_2(x)$ such that $x = 2^y$.'
-    content: Double
+    uid: Double
     isPrimitive: true

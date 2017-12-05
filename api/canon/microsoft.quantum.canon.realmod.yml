@@ -26,16 +26,16 @@ input:
   content: '(value : Double, modulo : Double, minValue : Double)'
   types:
   - name: minValue
-    content: Double
+    uid: Double
     isPrimitive: true
   - name: modulo
-    content: Double
+    uid: Double
     isPrimitive: true
   - name: value
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: Double
   types:
-  - content: Double
+  - uid: Double
     isPrimitive: true

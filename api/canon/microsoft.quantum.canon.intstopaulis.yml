@@ -9,13 +9,13 @@ input:
   content: '(ints : Int[])'
   types:
   - name: ints
-    content: Int
+    uid: Int
     isPrimitive: true
     isArray: true
 output:
   content: Pauli[]
   types:
   - summary: " An array `paulis` of Pauli operators `Pauli[]` the same length as \n `ints` such that `paulis[idxPauli]` is equal to the element of\n `[PauliI; PauliX; PauliY; PauliZ]` given by `ints[idxPauli]`."
-    content: Pauli
+    uid: Pauli
     isPrimitive: true
     isArray: true

@@ -8,10 +8,10 @@ input:
   content: '(input : Bool)'
   types:
   - name: input
-    content: Bool
+    uid: Bool
     isPrimitive: true
 output:
   content: Result
   types:
-  - content: Result
+  - uid: Result
     isPrimitive: true

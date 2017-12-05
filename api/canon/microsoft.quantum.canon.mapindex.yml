@@ -24,25 +24,25 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: array
-    content: "'T"
+    uid: "'T"
     isLocal: true
     isArray: true
   - name: mapper
     isFunction: true
     types:
     - types:
-      - content: Int
+      - uid: Int
         isPrimitive: true
-      - content: "'T"
+      - uid: "'T"
         isLocal: true
-    - content: "'U"
+    - uid: "'U"
       isLocal: true
 output:
   content: "'U[]"
   types:
   - summary: >2
        An array `'U[]` of elements that are mapped by the `mapper` function.
-    content: "'U"
+    uid: "'U"
     isLocal: true
     isArray: true
 seeAlso:

@@ -9,19 +9,19 @@ input:
   content: '(message : String, target : Qubit[], tolerance : Double)'
   types:
   - name: message
-    content: String
+    uid: String
     isPrimitive: true
   - name: target
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
   - name: tolerance
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

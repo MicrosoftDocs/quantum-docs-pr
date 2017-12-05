@@ -1,5 +1,6 @@
 ### YamlMime:QSharpNamespace
-name: microsoft.quantum.canon
+uid: microsoft.quantum.canon
+name: Microsoft.Quantum.Canon
 functions:
   items:
   - uid: microsoft.quantum.canon.reverse

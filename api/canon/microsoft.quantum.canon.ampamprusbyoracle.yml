@@ -10,7 +10,7 @@ input:
   content: '(statePrepOracle : StateOracle, startQubits : Qubit[])'
   types:
   - name: startQubits
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
   - name: statePrepOracle
@@ -18,5 +18,5 @@ input:
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true

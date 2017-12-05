@@ -9,13 +9,13 @@ input:
   content: '(y : Double, x : Double)'
   types:
   - name: x
-    content: Double
+    uid: Double
     isPrimitive: true
   - name: y
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: Double
   types:
-  - content: Double
+  - uid: Double
     isPrimitive: true

@@ -20,7 +20,7 @@ input:
   - name: evolutionGeneratorStart
     uid: evolutiongenerator
   - name: inerpolationTime
-    content: Double
+    uid: Double
     isPrimitive: true
   - name: timeDependentSimulationAlgorithm
     uid: timedependentsimulationalgorithm
@@ -29,8 +29,8 @@ output:
   types:
   - isOperation: true
     types:
-    - content: Qubit
+    - uid: Qubit
       isPrimitive: true
       isArray: true
-    - content: ()
+    - uid: ()
       isPrimitive: true

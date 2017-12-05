@@ -15,20 +15,20 @@ input:
   content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'
   types:
   - name: paulis
-    content: Pauli
+    uid: Pauli
     isPrimitive: true
     isArray: true
   - name: qubits
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
   - name: theta
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

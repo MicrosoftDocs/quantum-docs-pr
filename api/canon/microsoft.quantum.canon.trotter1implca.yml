@@ -20,30 +20,30 @@ input:
   content: "(nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), stepSize : Double, target : 'T)"
   types:
   - name: nSteps
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: op
     isOperation: true
     types:
     - types:
-      - content: Int
+      - uid: Int
         isPrimitive: true
-      - content: Double
+      - uid: Double
         isPrimitive: true
-      - content: "'T"
+      - uid: "'T"
         isLocal: true
-    - content: ()
+    - uid: ()
       isPrimitive: true
   - name: stepSize
-    content: Double
+    uid: Double
     isPrimitive: true
   - name: target
-    content: "'T"
+    uid: "'T"
     isLocal: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

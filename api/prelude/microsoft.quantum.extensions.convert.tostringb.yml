@@ -9,10 +9,10 @@ input:
   content: '(a : Bool)'
   types:
   - name: a
-    content: Bool
+    uid: Bool
     isPrimitive: true
 output:
   content: String
   types:
-  - content: String
+  - uid: String
     isPrimitive: true

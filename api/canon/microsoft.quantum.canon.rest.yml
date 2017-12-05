@@ -11,14 +11,14 @@ input:
   content: "(array : 'T[])"
   types:
   - name: array
-    content: "'T"
+    uid: "'T"
     isLocal: true
     isArray: true
 output:
   content: "'T[]"
   types:
   - summary: ' An array containing the elements `array[1..Length(array) - 1]`.'
-    content: "'T"
+    uid: "'T"
     isLocal: true
     isArray: true
 typeParameters:

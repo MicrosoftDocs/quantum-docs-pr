@@ -10,12 +10,12 @@ input:
   content: '(values : Int[])'
   types:
   - name: values
-    content: Int
+    uid: Int
     isPrimitive: true
     isArray: true
 output:
   content: Int
   types:
   - summary: ' The largest element of `values`.'
-    content: Int
+    uid: Int
     isPrimitive: true

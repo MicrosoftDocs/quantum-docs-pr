@@ -29,11 +29,11 @@ input:
   content: '(bases : Pauli[], qubits : Qubit[])'
   types:
   - name: bases
-    content: Pauli
+    uid: Pauli
     isPrimitive: true
     isArray: true
   - name: qubits
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
@@ -42,5 +42,5 @@ output:
   - summary: >2
        The `Result` `Zero` if the $+1$ eigenvalue is observed, and `One` if
        the $-1$ eigenvalue is observed.
-    content: Result
+    uid: Result
     isPrimitive: true

@@ -18,9 +18,9 @@ output:
        A tuple of the data encoded into the logical register, and the auxillary
        qubits used to represent the syndrome.
     types:
-    - content: Qubit
+    - uid: Qubit
       isPrimitive: true
       isArray: true
-    - content: Qubit
+    - uid: Qubit
       isPrimitive: true
       isArray: true

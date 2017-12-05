@@ -11,10 +11,10 @@ input:
   content: '(idxBondLength : Int, idxHamiltonian : Int)'
   types:
   - name: idxBondLength
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: idxHamiltonian
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: GeneratorIndex

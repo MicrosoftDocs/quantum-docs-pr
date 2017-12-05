@@ -8,11 +8,11 @@ input:
   content: '(idxBondLength : Int)'
   types:
   - name: idxBondLength
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: Double[]
   types:
-  - content: Double
+  - uid: Double
     isPrimitive: true
     isArray: true

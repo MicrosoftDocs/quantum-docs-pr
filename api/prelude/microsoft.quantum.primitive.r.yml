@@ -19,18 +19,18 @@ input:
   content: '(pauli : Pauli, theta : Double, qubit : Qubit)'
   types:
   - name: pauli
-    content: Pauli
+    uid: Pauli
     isPrimitive: true
   - name: qubit
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
   - name: theta
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

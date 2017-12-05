@@ -12,13 +12,13 @@ input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.preparesinglequbitidentity

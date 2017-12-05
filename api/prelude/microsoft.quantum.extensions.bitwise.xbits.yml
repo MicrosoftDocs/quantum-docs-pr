@@ -13,7 +13,7 @@ input:
   content: '(paulies : Pauli[])'
   types:
   - name: paulies
-    content: Pauli
+    uid: Pauli
     isPrimitive: true
     isArray: true
 output:
@@ -23,7 +23,7 @@ output:
        An integer $x$ with binary representation $(p_62\,p_61\,\dots\,p_0)$,
        where $p_i = 0$ if `paulies[i]` is `PauliI` or `PauliZ` and where
        $p_i = 1$ if `paulies[i]` is `PauliX` or `PauliY`.
-    content: Int
+    uid: Int
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.extensions.bitwise.zbits

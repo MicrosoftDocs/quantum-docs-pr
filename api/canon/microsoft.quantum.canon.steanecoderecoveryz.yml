@@ -12,6 +12,6 @@ input:
 output:
   content: Pauli[]
   types:
-  - content: Pauli
+  - uid: Pauli
     isPrimitive: true
     isArray: true

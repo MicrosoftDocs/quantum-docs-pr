@@ -12,19 +12,19 @@ input:
   content: '(bounds : Int[], op : (Int[] => ()))'
   types:
   - name: bounds
-    content: Int
+    uid: Int
     isPrimitive: true
     isArray: true
   - name: op
     isOperation: true
     types:
-    - content: Int
+    - uid: Int
       isPrimitive: true
       isArray: true
-    - content: ()
+    - uid: ()
       isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true

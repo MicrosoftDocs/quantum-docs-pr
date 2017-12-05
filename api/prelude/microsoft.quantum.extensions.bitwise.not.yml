@@ -6,6 +6,7 @@ namespace: Microsoft.Quantum.Extensions.Bitwise
 summary: >2
    Returns the bitwise NOT of an integer.
 remarks: >2
+   See the [C# `~` Operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-complement-operator) for more details.
 
   ### Examples
    ```qsharp
@@ -17,10 +18,10 @@ input:
   content: '(a : Int)'
   types:
   - name: a
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: Int
   types:
-  - content: Int
+  - uid: Int
     isPrimitive: true

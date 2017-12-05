@@ -15,21 +15,21 @@ input:
   content: '(idxBondLength : Int, trotterOrder : Int, trotterStepSize : Double)'
   types:
   - name: idxBondLength
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: trotterOrder
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: trotterStepSize
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: '(Qubit[] => () : Adjoint, Controlled)'
   types:
   - isOperation: true
     types:
-    - content: Qubit
+    - uid: Qubit
       isPrimitive: true
       isArray: true
-    - content: ()
+    - uid: ()
       isPrimitive: true

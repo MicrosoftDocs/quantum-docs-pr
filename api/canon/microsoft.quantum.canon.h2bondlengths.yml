@@ -10,6 +10,6 @@ input:
 output:
   content: Double[]
   types:
-  - content: Double
+  - uid: Double
     isPrimitive: true
     isArray: true

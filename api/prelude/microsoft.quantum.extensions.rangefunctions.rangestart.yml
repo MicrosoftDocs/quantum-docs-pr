@@ -9,10 +9,10 @@ input:
   content: '(r : Range)'
   types:
   - name: r
-    content: Range
+    uid: Range
     isPrimitive: true
 output:
   content: Int
   types:
-  - content: Int
+  - uid: Int
     isPrimitive: true

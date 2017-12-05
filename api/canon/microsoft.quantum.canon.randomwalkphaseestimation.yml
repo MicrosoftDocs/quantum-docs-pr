@@ -12,25 +12,25 @@ input:
   content: '(initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : ContinuousOracle, eigenstate : Qubit[])'
   types:
   - name: eigenstate
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
   - name: initialMean
-    content: Double
+    uid: Double
     isPrimitive: true
   - name: initialStdDev
-    content: Double
+    uid: Double
     isPrimitive: true
   - name: maxMeasurements
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: nMeasurements
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: oracle
     uid: continuousoracle
   - name: unwind
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: Double
@@ -38,5 +38,5 @@ output:
   - summary: >2-
        The final estimate $\hat{\phi} \mathrel{:=} \expect[\phi]$ , where
        the expectation is over the posterior given all accepted data.
-    content: Double
+    uid: Double
     isPrimitive: true

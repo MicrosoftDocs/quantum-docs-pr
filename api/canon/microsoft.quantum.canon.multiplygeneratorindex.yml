@@ -20,7 +20,7 @@ input:
   - name: generatorIndex
     uid: generatorindex
   - name: multiplier
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: GeneratorIndex

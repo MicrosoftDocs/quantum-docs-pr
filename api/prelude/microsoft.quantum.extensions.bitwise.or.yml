@@ -6,6 +6,7 @@ namespace: Microsoft.Quantum.Extensions.Bitwise
 summary: >2
    Returns the bitwise OR between two integers.
 remarks: >2
+   See the [C# `|` Operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/or-operator) for more details.
 
   ### Examples
    ```qsharp
@@ -18,13 +19,13 @@ input:
   content: '(a : Int, b : Int)'
   types:
   - name: a
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: b
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: Int
   types:
-  - content: Int
+  - uid: Int
     isPrimitive: true

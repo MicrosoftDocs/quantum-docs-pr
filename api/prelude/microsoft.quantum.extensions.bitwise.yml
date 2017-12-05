@@ -1,5 +1,6 @@
 ### YamlMime:QSharpNamespace
-name: microsoft.quantum.extensions.bitwise
+uid: microsoft.quantum.extensions.bitwise
+name: Microsoft.Quantum.Extensions.Bitwise
 functions:
   items:
   - uid: microsoft.quantum.extensions.bitwise.xor

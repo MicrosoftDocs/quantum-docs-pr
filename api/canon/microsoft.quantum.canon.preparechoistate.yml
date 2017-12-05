@@ -27,23 +27,23 @@ input:
   - name: op
     isOperation: true
     types:
-    - content: Qubit
+    - uid: Qubit
       isPrimitive: true
       isArray: true
-    - content: ()
+    - uid: ()
       isPrimitive: true
   - name: reference
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
   - name: target
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.preparechoistatec

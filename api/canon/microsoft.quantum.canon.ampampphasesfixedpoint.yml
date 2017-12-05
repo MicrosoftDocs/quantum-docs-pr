@@ -14,10 +14,10 @@ input:
   content: '(nQueries : Int, successMin : Double)'
   types:
   - name: nQueries
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: successMin
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: AmpAmpReflectionPhases

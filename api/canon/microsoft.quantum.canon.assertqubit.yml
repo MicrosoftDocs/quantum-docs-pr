@@ -13,13 +13,13 @@ input:
   content: '(expected : Result, q : Qubit)'
   types:
   - name: expected
-    content: Result
+    uid: Result
     isPrimitive: true
   - name: q
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true

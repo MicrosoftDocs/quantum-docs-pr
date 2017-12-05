@@ -10,21 +10,21 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: array
-    content: "'T"
+    uid: "'T"
     isLocal: true
     isArray: true
   - name: predicate
     isFunction: true
     types:
-    - content: "'T"
+    - uid: "'T"
       isLocal: true
-    - content: Bool
+    - uid: Bool
       isPrimitive: true
 output:
   content: "'T[]"
   types:
   - summary: " An array `'T[]` of elements that satisfy the predicate."
-    content: "'T"
+    uid: "'T"
     isLocal: true
     isArray: true
 typeParameters:

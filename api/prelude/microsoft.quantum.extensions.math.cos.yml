@@ -9,10 +9,10 @@ input:
   content: '(theta : Double)'
   types:
   - name: theta
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: Double
   types:
-  - content: Double
+  - uid: Double
     isPrimitive: true

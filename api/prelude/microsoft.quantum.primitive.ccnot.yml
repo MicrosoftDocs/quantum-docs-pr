@@ -15,18 +15,18 @@ input:
   content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
   types:
   - name: control1
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
   - name: control2
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
   - name: target
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

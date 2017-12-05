@@ -15,5 +15,5 @@ output:
   content: Int
   types:
   - summary: ' The number of terms in a `GeneratorSystem`.'
-    content: Int
+    uid: Int
     isPrimitive: true

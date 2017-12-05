@@ -17,6 +17,6 @@ output:
   - summary: ' An function that indexes each `GeneratorIndex` term in a Hamiltonian.'
     isFunction: true
     types:
-    - content: Int
+    - uid: Int
       isPrimitive: true
     - uid: generatorindex

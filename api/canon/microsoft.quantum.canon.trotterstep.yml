@@ -12,10 +12,10 @@ input:
   - name: evolutionGenerator
     uid: evolutiongenerator
   - name: trotterOrder
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: trotterStepSize
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: '(Qubit[] => () : Adjoint, Controlled)'
@@ -25,8 +25,8 @@ output:
        for duration `trotterStepSize`.
     isOperation: true
     types:
-    - content: Qubit
+    - uid: Qubit
       isPrimitive: true
       isArray: true
-    - content: ()
+    - uid: ()
       isPrimitive: true

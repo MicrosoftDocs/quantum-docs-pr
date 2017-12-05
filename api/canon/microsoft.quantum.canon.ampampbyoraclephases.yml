@@ -11,7 +11,7 @@ input:
   content: '(phases : AmpAmpReflectionPhases, stateOracle : StateOracle, idxFlagQubit : Int)'
   types:
   - name: idxFlagQubit
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: phases
     uid: ampampreflectionphases
@@ -22,8 +22,8 @@ output:
   types:
   - isOperation: true
     types:
-    - content: Qubit
+    - uid: Qubit
       isPrimitive: true
       isArray: true
-    - content: ()
+    - uid: ()
       isPrimitive: true

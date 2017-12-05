@@ -1,5 +1,6 @@
 ### YamlMime:QSharpNamespace
-name: microsoft.quantum.extensions.rangefunctions
+uid: microsoft.quantum.extensions.rangefunctions
+name: Microsoft.Quantum.Extensions.RangeFunctions
 functions:
   items: []
 operations:

@@ -8,12 +8,12 @@ input:
   content: '(target : Qubit)'
   types:
   - name: target
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

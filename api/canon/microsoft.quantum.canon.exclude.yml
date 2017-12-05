@@ -19,11 +19,11 @@ input:
   content: "(remove : Int[], array : 'T[])"
   types:
   - name: array
-    content: "'T"
+    uid: "'T"
     isLocal: true
     isArray: true
   - name: remove
-    content: Int
+    uid: Int
     isPrimitive: true
     isArray: true
 output:
@@ -34,7 +34,7 @@ output:
        of `array` whose index does not appear in `remove`,
        such that `output[1]` is the second such element, and so
        forth.
-    content: "'T"
+    uid: "'T"
     isLocal: true
     isArray: true
 typeParameters:

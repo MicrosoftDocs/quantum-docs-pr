@@ -13,12 +13,12 @@ input:
   - name: number
     uid: phaselittleendian
   - name: value
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

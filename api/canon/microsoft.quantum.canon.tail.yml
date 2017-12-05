@@ -10,14 +10,14 @@ input:
   content: "(array : 'A[])"
   types:
   - name: array
-    content: "'A"
+    uid: "'A"
     isLocal: true
     isArray: true
 output:
   content: "'A"
   types:
   - summary: ' The last element of the array.'
-    content: "'A"
+    uid: "'A"
     isLocal: true
 typeParameters:
 - uid: "'A"

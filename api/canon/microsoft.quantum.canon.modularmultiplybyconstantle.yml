@@ -10,17 +10,17 @@ input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : LittleEndian)'
   types:
   - name: constMultiplier
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: modulus
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: multiplier
     uid: littleendian
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

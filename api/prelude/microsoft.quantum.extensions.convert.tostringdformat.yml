@@ -8,13 +8,13 @@ input:
   content: '(a : Double, fmt : String)'
   types:
   - name: a
-    content: Double
+    uid: Double
     isPrimitive: true
   - name: fmt
-    content: String
+    uid: String
     isPrimitive: true
 output:
   content: String
   types:
-  - content: String
+  - uid: String
     isPrimitive: true

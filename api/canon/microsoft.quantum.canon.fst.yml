@@ -11,15 +11,15 @@ input:
   types:
   - name: pair
     types:
-    - content: "'T"
+    - uid: "'T"
       isLocal: true
-    - content: "'U"
+    - uid: "'U"
       isLocal: true
 output:
   content: "'T"
   types:
   - summary: ' The first element of `pair`.'
-    content: "'T"
+    uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"

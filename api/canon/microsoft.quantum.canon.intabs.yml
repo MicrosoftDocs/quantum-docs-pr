@@ -8,10 +8,10 @@ input:
   content: '(input : Int)'
   types:
   - name: input
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: Int
   types:
-  - content: Int
+  - uid: Int
     isPrimitive: true

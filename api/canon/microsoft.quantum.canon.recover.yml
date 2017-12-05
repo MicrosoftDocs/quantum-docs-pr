@@ -16,5 +16,5 @@ input:
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true

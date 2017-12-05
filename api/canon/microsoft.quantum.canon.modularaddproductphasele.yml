@@ -12,10 +12,10 @@ input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : LittleEndian, phaseSummand : PhaseLittleEndian)'
   types:
   - name: constMultiplier
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: modulus
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: multiplier
     uid: littleendian
@@ -24,7 +24,7 @@ input:
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.modularaddproductle

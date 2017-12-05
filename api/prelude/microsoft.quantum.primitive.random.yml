@@ -16,7 +16,7 @@ input:
   content: '(probs : Double[])'
   types:
   - name: probs
-    content: Double
+    uid: Double
     isPrimitive: true
     isArray: true
 output:
@@ -25,5 +25,5 @@ output:
   - summary: >2-
        An integer $i$ with probability $\Pr(i) = p_i / \sum_i p_i$, where $p_i$
        is the $i$th element of `probs`.
-    content: Int
+    uid: Int
     isPrimitive: true

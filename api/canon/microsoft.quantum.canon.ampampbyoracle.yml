@@ -11,10 +11,10 @@ input:
   content: '(nIterations : Int, stateOracle : StateOracle, idxFlagQubit : Int)'
   types:
   - name: idxFlagQubit
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: nIterations
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: stateOracle
     uid: stateoracle
@@ -23,8 +23,8 @@ output:
   types:
   - isOperation: true
     types:
-    - content: Qubit
+    - uid: Qubit
       isPrimitive: true
       isArray: true
-    - content: ()
+    - uid: ()
       isPrimitive: true

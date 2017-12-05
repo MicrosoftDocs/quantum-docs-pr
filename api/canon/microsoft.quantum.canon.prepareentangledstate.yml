@@ -12,17 +12,17 @@ input:
   content: '(left : Qubit[], right : Qubit[])'
   types:
   - name: left
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
   - name: right
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

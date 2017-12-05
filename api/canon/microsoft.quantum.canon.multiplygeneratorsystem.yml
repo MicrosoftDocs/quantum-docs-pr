@@ -12,7 +12,7 @@ input:
   - name: generatorSystem
     uid: generatorsystem
   - name: multiplier
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: GeneratorSystem

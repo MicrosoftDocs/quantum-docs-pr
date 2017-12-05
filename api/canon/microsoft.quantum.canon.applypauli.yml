@@ -11,17 +11,17 @@ input:
   content: '(pauli : Pauli[], target : Qubit[])'
   types:
   - name: pauli
-    content: Pauli
+    uid: Pauli
     isPrimitive: true
     isArray: true
   - name: target
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

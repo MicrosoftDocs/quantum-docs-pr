@@ -9,23 +9,23 @@ input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
   types:
   - name: bases
-    content: Pauli
+    uid: Pauli
     isPrimitive: true
     isArray: true
   - name: msg
-    content: String
+    uid: String
     isPrimitive: true
   - name: qubits
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
   - name: result
-    content: Result
+    uid: Result
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.primitive.assertprob

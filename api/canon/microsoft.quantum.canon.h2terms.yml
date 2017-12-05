@@ -19,15 +19,15 @@ input:
   content: '(idxHamiltonian : Int)'
   types:
   - name: idxHamiltonian
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: (Int[], Int[])
   types:
   - types:
-    - content: Int
+    - uid: Int
       isPrimitive: true
       isArray: true
-    - content: Int
+    - uid: Int
       isPrimitive: true
       isArray: true

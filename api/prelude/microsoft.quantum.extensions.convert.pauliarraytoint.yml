@@ -23,7 +23,7 @@ input:
   content: '(paulies : Pauli[])'
   types:
   - name: paulies
-    content: Pauli
+    uid: Pauli
     isPrimitive: true
     isArray: true
 output:
@@ -31,5 +31,5 @@ output:
   types:
   - summary: >2
        An integer uniquely identifying `paulies`, as described below.
-    content: Int
+    uid: Int
     isPrimitive: true

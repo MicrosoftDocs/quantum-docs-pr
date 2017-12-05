@@ -27,15 +27,15 @@ input:
   content: '(qubit1 : Qubit, qubit2 : Qubit)'
   types:
   - name: qubit1
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
   - name: qubit2
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

@@ -13,22 +13,22 @@ input:
   content: '(idxBondLength : Int, trotterOrder : Int, trotterStepSize : Double, qubits : Qubit[])'
   types:
   - name: idxBondLength
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: qubits
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
   - name: trotterOrder
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: trotterStepSize
-    content: Double
+    uid: Double
     isPrimitive: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

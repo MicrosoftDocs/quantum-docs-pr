@@ -15,7 +15,7 @@ input:
   content: '(idxBondLength : Int)'
   types:
   - name: idxBondLength
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: GeneratorSystem

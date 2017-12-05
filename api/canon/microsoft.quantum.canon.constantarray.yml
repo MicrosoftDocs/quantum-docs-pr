@@ -10,15 +10,15 @@ input:
   content: "(length : Int, value : 'T)"
   types:
   - name: length
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: value
-    content: "'T"
+    uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
   - summary: ' A new array of length `length`, such that every element is `value`.'
-    content: "'T"
+    uid: "'T"
     isLocal: true
     isArray: true

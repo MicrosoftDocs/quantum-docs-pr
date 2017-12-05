@@ -8,24 +8,24 @@ input:
   content: '(op : (Qubit[] => () : Controlled), idxs : Int[])'
   types:
   - name: idxs
-    content: Int
+    uid: Int
     isPrimitive: true
     isArray: true
   - name: op
     isOperation: true
     types:
-    - content: Qubit
+    - uid: Qubit
       isPrimitive: true
       isArray: true
-    - content: ()
+    - uid: ()
       isPrimitive: true
 output:
   content: '(Qubit[] => () : Controlled)'
   types:
   - isOperation: true
     types:
-    - content: Qubit
+    - uid: Qubit
       isPrimitive: true
       isArray: true
-    - content: ()
+    - uid: ()
       isPrimitive: true

@@ -9,7 +9,7 @@ input:
   content: '(fraction : Fraction, denominatorBound : Int)'
   types:
   - name: denominatorBound
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: fraction
     uid: fraction

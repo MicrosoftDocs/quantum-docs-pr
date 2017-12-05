@@ -12,10 +12,10 @@ input:
   content: '(a : Int, b : Int)'
   types:
   - name: a
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: b
-    content: Int
+    uid: Int
     isPrimitive: true
 output:
   content: (Int, Int)
@@ -23,7 +23,7 @@ output:
   - summary: >2
        Tuple (u,v) with properties u⋅a + v⋅b = GCD(a,b)
     types:
-    - content: Int
+    - uid: Int
       isPrimitive: true
-    - content: Int
+    - uid: Int
       isPrimitive: true

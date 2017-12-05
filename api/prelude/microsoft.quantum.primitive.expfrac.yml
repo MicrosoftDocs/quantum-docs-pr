@@ -16,23 +16,23 @@ input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
   types:
   - name: numerator
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: paulis
-    content: Pauli
+    uid: Pauli
     isPrimitive: true
     isArray: true
   - name: power
-    content: Int
+    uid: Int
     isPrimitive: true
   - name: qubits
-    content: Qubit
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: ()
   types:
-  - content: ()
+  - uid: ()
     isPrimitive: true
 functors:
 - Adjoint

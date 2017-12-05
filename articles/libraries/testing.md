@@ -31,7 +31,7 @@ Thus, we can test individual operations on a classical simulator before deployin
 
 ## Asserts on classical values ##
 
-As discussed in [Testing and Debugging](../quantum-techniques-testinganddebugging), a function or operation with signature `() -> ()` or `() => ()`, respectively, can be called as a *unit test*.
+As discussed in [Testing and Debugging](../quantum-techniques-testinganddebugging.md), a function or operation with signature `() -> ()` or `() => ()`, respectively, can be called as a *unit test*.
 Such unit tests are useful in ensuring that functions and operations act as intended in known cases, and that additional features not break existing functionality.
 The canon provides several *assertions*: functions which `fail` if their inputs don't meet certain conditions.
 For instance, <xref:microsoft.quantum.canon.assertalmostequal> takes inputs `actual : Double` and `expected : Double` and will fail if `(actual - expected)` is outside the range $[-10^{-10}, 10^{-10}]$.
@@ -52,7 +52,7 @@ That is,
 \end{align}
 Using the primitive operations defined in the prelude, we can directly perform a measurement that returns `Zero` if $\ket{\psi}$ is an eigenstate of one of the Pauli operators.
 
-In the case that our target machine is a simulator, however, we can do better, as described in [Testing and Debugging](../quantum-techniques-testinganddebugging).
+In the case that our target machine is a simulator, however, we can do better, as described in [Testing and Debugging](../quantum-techniques-testinganddebugging.md).
 We can use that the classical information used by a simulator to represent the internal state of a qubit is amenable to copying, such that we do not need to actually perform a measurement to test our assertion.
 In particular, this allows us to reason about *incompatible* measurements that would be impossible on actual hardware.
 

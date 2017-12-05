@@ -207,6 +207,8 @@
     uid: microsoft.quantum.canon.continuedfractionconvergent
   - name: ContinuousOracle
     uid: microsoft.quantum.canon.continuousoracle
+  - name: ContinuousPhaseEstimationIteration
+    uid: microsoft.quantum.canon.continuousphaseestimationiteration
   - name: ControlledOnBitString
     uid: microsoft.quantum.canon.controlledonbitstring
   - name: ControlledOnInt
@@ -225,6 +227,8 @@
     uid: microsoft.quantum.canon.deterministicstateoraclefromstateoracle
   - name: DiscreteOracle
     uid: microsoft.quantum.canon.discreteoracle
+  - name: DiscretePhaseEstimationIteration
+    uid: microsoft.quantum.canon.discretephaseestimationiteration
   - name: EmbedPauli
     uid: microsoft.quantum.canon.embedpauli
   - name: EncodeOp
@@ -517,6 +521,8 @@
     uid: microsoft.quantum.canon.resultasint
   - name: ResultFromBool
     uid: microsoft.quantum.canon.resultfrombool
+  - name: ResultStack
+    uid: microsoft.quantum.canon.resultstack
   - name: Reverse
     uid: microsoft.quantum.canon.reverse
   - name: RobustPhaseEstimation
@@ -527,6 +533,18 @@
     uid: microsoft.quantum.canon.simulationalgorithm
   - name: Snd
     uid: microsoft.quantum.canon.snd
+  - name: StackCapacity
+    uid: microsoft.quantum.canon.stackcapacity
+  - name: StackLength
+    uid: microsoft.quantum.canon.stacklength
+  - name: StackNew
+    uid: microsoft.quantum.canon.stacknew
+  - name: StackPeek
+    uid: microsoft.quantum.canon.stackpeek
+  - name: StackPop
+    uid: microsoft.quantum.canon.stackpop
+  - name: StackPush
+    uid: microsoft.quantum.canon.stackpush
   - name: StateOracle
     uid: microsoft.quantum.canon.stateoracle
   - name: StateOracleFromDeterministicStateOracle

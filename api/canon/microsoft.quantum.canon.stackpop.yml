@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stackpop
+name: StackPop
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Removes the topmost element from a @"Microsoft.Quantum.Canon.ResultStack".
+syntax: 'function StackPop (stack : ResultStack) : ResultStack'
+input:
+  content: '(stack : ResultStack)'
+  types:
+  - name: stack
+    uid: resultstack
+output:
+  content: ResultStack
+  types:
+  - summary: >2-
+       The `stack` with the top element removed. The new stack has the same capacity as
+       the old one, but its length is reduced by one.
+    uid: resultstack

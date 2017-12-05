@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.discretephaseestimationiteration
+name: DiscretePhaseEstimationIteration
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Performs a single iteration of an iterative (classically-controlled) phase
+   estimation algorithm.
+syntax: 'operation DiscretePhaseEstimationIteration (oracle : DiscreteOracle, power : Int, theta : Double, eigenstate : Qubit[], controlQubit : Qubit) : ()'
+input:
+  content: '(oracle : DiscreteOracle, power : Int, theta : Double, eigenstate : Qubit[], controlQubit : Qubit)'
+  types:
+  - name: controlQubit
+    uid: Qubit
+    isPrimitive: true
+  - name: eigenstate
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: oracle
+    uid: discreteoracle
+  - name: power
+    uid: Int
+    isPrimitive: true
+  - name: theta
+    uid: Double
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

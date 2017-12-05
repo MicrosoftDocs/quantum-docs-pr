@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachindexc
+name: ApplyToEachIndexC
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => () : Controlled), register : 'T[]) : ()"
+input:
+  content: "(singleElementOperation : ((Int, 'T) => () : Controlled), register : 'T[])"
+  types:
+  - name: register
+    uid: "'T"
+    isLocal: true
+    isArray: true
+  - name: singleElementOperation
+    isOperation: true
+    types:
+    - types:
+      - uid: Int
+        isPrimitive: true
+      - uid: "'T"
+        isLocal: true
+    - uid: ()
+      isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytoeachindex
+functors:
+- Controlled

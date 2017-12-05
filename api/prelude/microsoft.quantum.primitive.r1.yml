@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.r1
+name: R1
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies a rotation about the $\ket{1}$-axis by a given angle,
+   \begin{align}
+       R_1(\theta) \mathrel{:=}
+       \operatorname{diag}(1, e^{i\theta}).
+   \end{align}
+remarks: >2-
+   Equivlent to:
+   ```qsharp
+   R(PauliZ, theta, qubit);
+   R(PauliI, -theta, qubit);
+   ```
+syntax: 'operation R1 (theta : Double, qubit : Qubit) : ()'
+input:
+  content: '(theta : Double, qubit : Qubit)'
+  types:
+  - name: qubit
+    uid: Qubit
+    isPrimitive: true
+  - name: theta
+    uid: Double
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

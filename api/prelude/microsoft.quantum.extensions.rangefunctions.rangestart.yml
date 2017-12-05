@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.rangefunctions.rangestart
+name: RangeStart
+type: operation
+namespace: Microsoft.Quantum.Extensions.RangeFunctions
+summary: ' Returns the defined start value of the given range.'
+syntax: 'operation RangeStart (r : Range) : Int'
+input:
+  content: '(r : Range)'
+  types:
+  - name: r
+    uid: Range
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - uid: Int
+    isPrimitive: true

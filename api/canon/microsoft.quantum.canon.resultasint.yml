@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.resultasint
+name: ResultAsInt
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Given an array of results, represents the array by a single
+   integer, with the 0th (leftmost) entry in the array being mapped
+   the least significant bit. Thus, [One; Zero] is represented by
+   1 and [Zero; One] by 2.
+syntax: 'function ResultAsInt (results : Result[]) : Int'
+input:
+  content: '(results : Result[])'
+  types:
+  - name: results
+    uid: Result
+    isPrimitive: true
+    isArray: true
+output:
+  content: Int
+  types:
+  - uid: Int
+    isPrimitive: true

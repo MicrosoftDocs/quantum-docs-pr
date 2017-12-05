@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.h2estimateenergyrpe
+name: H2EstimateEnergyRPE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " We finish by using the Robust Phase Estimation algorithm \n of Kimmel, Low and Yoder."
+syntax: 'operation H2EstimateEnergyRPE (idxBondLength : Int, nBitsPrecision : Int, trotterStepSize : Double) : Double'
+input:
+  content: '(idxBondLength : Int, nBitsPrecision : Int, trotterStepSize : Double)'
+  types:
+  - name: idxBondLength
+    uid: Int
+    isPrimitive: true
+  - name: nBitsPrecision
+    uid: Int
+    isPrimitive: true
+  - name: trotterStepSize
+    uid: Double
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - uid: Double
+    isPrimitive: true

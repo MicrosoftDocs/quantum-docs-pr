@@ -95,6 +95,15 @@
     uid: microsoft.quantum.extensions.math.tanh
   - name: Truncate
     uid: microsoft.quantum.extensions.math.truncate
+- name: Microsoft.Quantum.Extensions.RangeFunctions
+  uid: microsoft.quantum.extensions.rangefunctions
+  items:
+  - name: RangeEnd
+    uid: microsoft.quantum.extensions.rangefunctions.rangeend
+  - name: RangeStart
+    uid: microsoft.quantum.extensions.rangefunctions.rangestart
+  - name: RangeStep
+    uid: microsoft.quantum.extensions.rangefunctions.rangestep
 - name: Microsoft.Quantum.Primitive
   uid: microsoft.quantum.primitive
   items:

@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.rangefunctions.rangestep
+name: RangeStep
+type: operation
+namespace: Microsoft.Quantum.Extensions.RangeFunctions
+summary: ' Returns the defined step value of the given range.'
+syntax: 'operation RangeStep (r : Range) : Int'
+input:
+  content: '(r : Range)'
+  types:
+  - name: r
+    content: Range
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - content: Int
+    isPrimitive: true

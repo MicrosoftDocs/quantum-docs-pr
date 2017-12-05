@@ -35,7 +35,7 @@ ms.topic: article-type-from-white-list
 
 Now that you’ve installed the Microsoft Quantum Development Kit and seen
 how it works, let’s write your first quantum application.
-We'll start with the simplest program possible and build it up to demostrate quantum superposition and quantum entanglement. It will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
+We'll start with the simplest program possible and build it up to demostrate quantum superposition and quantum entanglement. We will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
 
 ### Step 1: Create a Project and Solution
 
@@ -47,7 +47,7 @@ Give your project the name `Bell`.
 
 ### Step 2 (optional): Update NuGet Packages
 
-If you want to get the latest version of Q# compileir, update `Microsoft.Quantum.Simulation.Simulators` NuGet package, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package). Note that you'll have to switch to QuArC beta NuGet feed as the package source before you can get the update.
+If you want to get the latest version of Q# compiler, update `Microsoft.Quantum.Simulation.Simulators` NuGet package, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package). Note that you'll have to switch to QuArC NuGet feed as the package source before you can get the update.
 
 ### Step 3: Enter the Q# Code
 
@@ -58,7 +58,7 @@ Visual Studio should have two files open:
 and `Operation.qs`, which will hold the quantum code itself.
 
 The first step is to rename the Q# file to `Bell.qs`.
-To do this, right-click on `Operation.qs` in the Visual Studio
+Right-click on `Operation.qs` in the Visual Studio
 Solution Explorer, and select the Rename option.
 Replace `Operation` with `Bell` and hit return.
 
@@ -133,7 +133,7 @@ namespace Quantum.Bell
 }
 ```
 
-This operation may now be called to set a qubit in a known state (`Zero` or `One`). We measure the qubit, if it's in the state we want, we leave it alone... otherwise, we flip it (with the `X` gate).
+This operation may now be called to set a qubit in a known state (`Zero` or `One`). We measure the qubit, if it's in the state we want, we leave it alone, otherwise, we flip it with the `X` gate.
 
 > [!NOTE]
 > This code defines a Q# __operation__.
@@ -404,7 +404,7 @@ The full routine now looks like this:
     }
 ```
 
-If we run this, we'll get exactly the same 50-50 result we got before (you can try it ;)... however, what we're really interested in is how the second qubit reacts to the first being measured. We'll add this statistic with this new version of the `BellTest` operation:
+If we run this, we'll get exactly the same 50-50 result we got before. However, what we're really interested in is how the second qubit reacts to the first being measured. We'll add this statistic with a new version of the `BellTest` operation:
 
 ```qsharp
     operation BellTest (count : Int, initial: Result) : (Int,Int,Int)
@@ -469,6 +469,6 @@ Init:Zero 0s=499  1s=501  agree=1000
 Init:One  0s=490  1s=510  agree=1000
 ```
 
-Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1)... but now when we measure the second qubit, it is __always__ the same as what we measured for the first qubit. Our `CNOT` has entangled the two qubits, so that whatever happens to one of them, happens to the other. If you reversed the measurements (did the second qubit before the first), the same thing would happen. The first measurment would be random and the second would be in lock step with whatever was discovered for the first (try it!).
+Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1), but now when we measure the second qubit, it is __always__ the same as what we measured for the first qubit. Our `CNOT` has entangled the two qubits, so that whatever happens to one of them, happens to the other. If you reversed the measurements (did the second qubit before the first), the same thing would happen. The first measurement would be random and the second would be in lock step with whatever was discovered for the first (try it!).
 
-This is the first step of the quantum Teleport sample circuit shown in the  [Installation and validation](quantum-InstallConfig.md) section.
+This is the first step of the quantum Teleport sample circuit shown in the [Installation and validation](quantum-InstallConfig.md) section.

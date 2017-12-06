@@ -26,34 +26,21 @@ If you have [Visual Studio](https://www.visualstudio.com/) 2017 installed, you'r
 
 If you do not have Visual Studio installed, you can download Visual Studio 2017 Community Edition for free.
 1. Go to the [Visual Studio download page](https://www.visualstudio.com/downloads/).
-
 1. Click on the Visual Studio Community **Free download** button.
-
 2. Navigate to your browser's download folder and double click on the executable file whose name begins with **vs_community**. The file name will contain a sequence of numbers that varies.
-
 3. _**Important!**_ &nbsp;When you are presented with the option to select the tools for specific workloads, check the boxes for **Universal Windows Platform development** and **.NET desktop development**
-
 4. After selecting your workloads, click **Install** to complete the installation.
 
 ## Creating the Q# development environment 
 
-1. Download and install the Microsoft Quantum Development Kit [Visual Studio extension](https://solidrepo.blob.core.windows.net/alpha/latest/QsharpVSIX.vsix). 
-Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip`. In that case, rename it to `QsharpVSIX.vsix`.
+1. Install the Microsoft Quantum Development Kit
 
-1. If Visual Studio is open, close it.
-
-1. Start the VSIX installer by double clicking the `QsharpVSIX.vsix` file and follow the prompts to install the extension.
-
-1. Configure Visual Studio to use the QuArC beta NuGet feed.
-    - See [Consume NuGet packages in Visual Studio](https://www.visualstudio.com/en-us/docs/package/nuget/consume) for the configuration procedure. On that page, you should follow the instructions under the heading **Windows: Add the feed to your NuGet configuration**. The upper section of the page is not required.
-    - In the Windows section, the actions occur in Visual Studio (which is not specified.)
-    - In step four of the Windows section, you will need the NuGet URL: https://quarcsw.pkgs.visualstudio.com/_packaging/alpha/nuget/v3/index.json.
-    - _**Important!**_  &nbsp;Ignore step six of the Windows section: "6. If you enabled the nuget.org upstream source, uncheck the nuget.org package source."
-    - Ignore the last line of the Windows section (after the image): "Then click here to continue."
-
-> [!TIP]
-> Step 4 above will not be needed after the release.
-
+    1. Browse to the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
+    2. Type "Microsoft Quantum Development Kit" and press enter.
+    3. Click on the Microsoft Quantum Development Kit tile.
+    4. On the development kit landing page, click the **Download** button.
+    5. Your browser will ask you whether you wish to **Open** or **Save** the download, click **Open**.
+    6. Your security software may present a confirmation pane. Click **Allow**, or the comparable term used by your browser.
 
 ## Validating your setup
 

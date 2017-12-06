@@ -152,30 +152,29 @@ In the canon there are examples that use the `borrowing` keyword, for instance t
 ```qsharp
 operation MultiControlledXBorrow ( controls : Qubit[] , target : Qubit ) : () {
     body {
-        ...
-            let numberOfDirtyQubits = numberOfControls - 2;
-            borrowing( dirtyQubits = Qubit[ numberOfDirtyQubits ] ) {
+        ... // skipping some case handling here
+        let numberOfDirtyQubits = numberOfControls - 2;
+        borrowing( dirtyQubits = Qubit[ numberOfDirtyQubits ] ) {
 
-                let allQubits = [ target ] + dirtyQubits + controls;
-                let lastDirtyQubit = numberOfDirtyQubits;
-                let totalNumberOfQubits = Length(allQubits);
+            let allQubits = [ target ] + dirtyQubits + controls;
+            let lastDirtyQubit = numberOfDirtyQubits;
+            let totalNumberOfQubits = Length(allQubits);
 
-                let outerOperation1 = 
-                    CCNOTByIndexLadder(
-                        numberOfDirtyQubits + 1, 1, 0, numberOfDirtyQubits , _ );
-                
-                let innerOperation = 
-                    CCNOTByIndex(
-                        totalNumberOfQubits - 1, totalNumberOfQubits - 2, lastDirtyQubit, _ );
-                
-                WithA(outerOperation1, innerOperation, allQubits);
-                
-                let outerOperation2 = 
-                    CCNOTByIndexLadder(
-                        numberOfDirtyQubits + 2, 2, 1, numberOfDirtyQubits - 1 , _ );
-                
-                WithA(outerOperation2, innerOperation, allQubits);
-            }
+            let outerOperation1 = 
+                CCNOTByIndexLadder(
+                    numberOfDirtyQubits + 1, 1, 0, numberOfDirtyQubits , _ );
+            
+            let innerOperation = 
+                CCNOTByIndex(
+                    totalNumberOfQubits - 1, totalNumberOfQubits - 2, lastDirtyQubit, _ );
+            
+            WithA(outerOperation1, innerOperation, allQubits);
+            
+            let outerOperation2 = 
+                CCNOTByIndexLadder(
+                    numberOfDirtyQubits + 2, 2, 1, numberOfDirtyQubits - 1 , _ );
+            
+            WithA(outerOperation2, innerOperation, allQubits);
         }
     }
     adjoint auto

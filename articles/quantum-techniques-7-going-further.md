@@ -145,4 +145,49 @@ These are discussed further in the [standard library guide](). <!-- TODO: link -
 
 ## Borrowing Qubits ##
 
-<!-- TODO -->
+The borrowing mechanism allows to allocate qubits that can be used as scratch space during a computation. These qubits are generally not in a clean state, i.e., they are not necessarily initialized in a known state such as $\ket{0}$. One also speaks of "dirty" qubits as their state is unknown and can even be entangled with other parts of the quantum computer's memory. Among the known use cases of dirty qubits are implementations of multiply-controlled CNOT gates that require only very few qubits and implementation of incrementers. 
+
+In the canon there are examples that use the `borrowing` keyword, for instance the function `MultiControlledXBorrow` defined below. If `controls` denotes the control qubits that should be added to an `X` operation, then an overall of `Length(controls)-2` many dirty ancillas will be added by this implementation. 
+
+```qsharp
+operation MultiControlledXBorrow ( controls : Qubit[] , target : Qubit ) : () {
+    body {
+        ...
+            let numberOfDirtyQubits = numberOfControls - 2;
+            borrowing( dirtyQubits = Qubit[ numberOfDirtyQubits ] ) {
+
+                let allQubits = [ target ] + dirtyQubits + controls;
+                let lastDirtyQubit = numberOfDirtyQubits;
+                let totalNumberOfQubits = Length(allQubits);
+
+                let outerOperation1 = 
+                    CCNOTByIndexLadder(
+                        numberOfDirtyQubits + 1, 1, 0, numberOfDirtyQubits , _ );
+                
+                let innerOperation = 
+                    CCNOTByIndex(
+                        totalNumberOfQubits - 1, totalNumberOfQubits - 2, lastDirtyQubit, _ );
+                
+                WithA(outerOperation1, innerOperation, allQubits);
+                
+                let outerOperation2 = 
+                    CCNOTByIndexLadder(
+                        numberOfDirtyQubits + 2, 2, 1, numberOfDirtyQubits - 1 , _ );
+                
+                WithA(outerOperation2, innerOperation, allQubits);
+            }
+        }
+    }
+    adjoint auto
+    controlled( extraControls ) {
+        MultiControlledXBorrow( extraControls + controls, target );
+    }
+    controlled adjoint auto
+}
+```
+
+Note that extensive use of the `With` combinator--in its form that is applicable for operations that support adjoint, i.e., `WithA`--was made in this example which is good programming style as adding control to structures involving `With` only propagates control to the inner operation. Further note that here in addition to the `body` of the operation an implementation of the `controlled` body of the operation was explicitly provided, rather than resorting to a `controlled auto` statement. The reason for this is that we know from the structure of the circuit how to easily add further controls which is beneficial compared to adding control to each and every individual gate in the `body`. 
+
+It is instructive to compare this code with another canon function `MultiControlledXClean` which achieves the same goal of implementing a multiply-controlled `X` operation, however, which uses several clean qubits using the `using` mechanism. 
+
+It should be noted that only such qubits can be borrowed inside an operation that are not already within the scope of the operation, or else the compiler will raise an exception. 

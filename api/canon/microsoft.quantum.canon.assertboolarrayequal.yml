@@ -10,14 +10,17 @@ input:
   content: '(actual : Bool[], expected : Bool[], message : String)'
   types:
   - name: actual
+    summary: ' The array that is produced by a test case of interest.'
     uid: Bool
     isPrimitive: true
     isArray: true
   - name: expected
+    summary: ' The array that is expected from a test case of interest.'
     uid: Bool
     isPrimitive: true
     isArray: true
   - name: message
+    summary: ' A message to be printed if the arrays are not equal.'
     uid: String
     isPrimitive: true
 output:

@@ -22,6 +22,8 @@ input:
   content: "(operations : ('T => ())[])"
   types:
   - name: operations
+    summary: >2
+       A sequence of operations to be performed on a given input.
     isArray: true
     isOperation: true
     types:

@@ -9,6 +9,9 @@ input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => ()), adiabaticUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))'
   types:
   - name: adiabaticUnitary
+    summary: >2-
+       An oracle representing the adiabatic evolution algorithm to be used
+       to implement the sweep to the final state of the algorithm.
     isOperation: true
     types:
     - uid: Qubit
@@ -17,9 +20,14 @@ input:
     - uid: ()
       isPrimitive: true
   - name: nQubits
+    summary: ' Number of qubits used to perform simulation.'
     uid: Int
     isPrimitive: true
   - name: phaseEstAlgorithm
+    summary: >2
+       An operation that performs phase estimation on a given unitary operation.
+       See [iterative phase estimation](../libraries/characterization#iterative-phase-estimation)
+       for more details.
     isOperation: true
     types:
     - types:
@@ -30,6 +38,10 @@ input:
     - uid: Double
       isPrimitive: true
   - name: qpeUnitary
+    summary: >2-
+       An oracle representing a unitary operator $U$ representing evolution
+       for time $\delta t$ under a dynamical generator with ground state
+       $\ket{\phi}$ and ground state energy $E = \phi\,\delta t$.
     isOperation: true
     types:
     - uid: Qubit
@@ -38,6 +50,9 @@ input:
     - uid: ()
       isPrimitive: true
   - name: statePrepUnitary
+    summary: >2-
+       An oracle representing state preparation for the initial dynamical
+       generator.
     isOperation: true
     types:
     - uid: Qubit

@@ -11,6 +11,7 @@ input:
   content: '(target : Qubit)'
   types:
   - name: target
+    summary: ' A qubit whose state is to be reset to $\ket{0}$.'
     uid: Qubit
     isPrimitive: true
 output:

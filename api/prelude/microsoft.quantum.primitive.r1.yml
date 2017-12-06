@@ -20,9 +20,12 @@ input:
   content: '(theta : Double, qubit : Qubit)'
   types:
   - name: qubit
+    summary: >2
+       Qubit to which the gate should be applied.
     uid: Qubit
     isPrimitive: true
   - name: theta
+    summary: ' Angle about which the qubit is to be rotated.'
     uid: Double
     isPrimitive: true
 output:

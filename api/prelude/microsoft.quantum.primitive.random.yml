@@ -16,6 +16,9 @@ input:
   content: '(probs : Double[])'
   types:
   - name: probs
+    summary: >2
+       An array of floating-point numbers proportional to the probability of
+       selecting each index.
     uid: Double
     isPrimitive: true
     isArray: true

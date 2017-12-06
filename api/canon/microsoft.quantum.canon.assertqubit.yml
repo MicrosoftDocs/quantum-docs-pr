@@ -13,9 +13,13 @@ input:
   content: '(expected : Result, q : Qubit)'
   types:
   - name: expected
+    summary: >2
+       Which state the qubit is expected to be in: Zero or One.
     uid: Result
     isPrimitive: true
   - name: q
+    summary: >2
+       The qubit whose state is asserted.
     uid: Qubit
     isPrimitive: true
 output:

@@ -10,8 +10,14 @@ input:
   content: '(from : LittleEndian, target : Qubit)'
   types:
   - name: from
+    summary: >2-
+       The unsigned integer from which the highest bit is copied from.
+       the integer is encoded in little-endian format.
     uid: littleendian
   - name: target
+    summary: >2-
+       The qubit in which the highest bit is being copied. The bit encoding is
+       in computational basis.
     uid: Qubit
     isPrimitive: true
 output:

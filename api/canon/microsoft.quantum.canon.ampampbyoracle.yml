@@ -11,9 +11,11 @@ input:
   content: '(nIterations : Int, stateOracle : StateOracle, idxFlagQubit : Int)'
   types:
   - name: idxFlagQubit
+    summary: ' Index to Flag qubit '
     uid: Int
     isPrimitive: true
   - name: nIterations
+    summary: ' Number of iterations $n$ of amplitude amplification '
     uid: Int
     isPrimitive: true
   - name: stateOracle

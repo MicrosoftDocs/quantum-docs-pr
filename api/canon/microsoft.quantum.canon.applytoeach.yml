@@ -19,10 +19,13 @@ input:
   content: "(singleElementOperation : ('T => ()), register : 'T[])"
   types:
   - name: register
+    summary: >2
+       Array of qubits on which to apply the given operation.
     uid: "'T"
     isLocal: true
     isArray: true
   - name: singleElementOperation
+    summary: ' Operation to apply to each qubit.'
     isOperation: true
     types:
     - uid: "'T"

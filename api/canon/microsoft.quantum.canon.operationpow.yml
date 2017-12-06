@@ -11,6 +11,7 @@ input:
   content: "(oracle : ('T => ()), power : Int)"
   types:
   - name: oracle
+    summary: ' An operation $U$ representing the gate to be repeated.'
     isOperation: true
     types:
     - uid: "'T"
@@ -18,6 +19,8 @@ input:
     - uid: ()
       isPrimitive: true
   - name: power
+    summary: >2
+       The number of times that $U$ is to be repeated.
     uid: Int
     isPrimitive: true
 output:

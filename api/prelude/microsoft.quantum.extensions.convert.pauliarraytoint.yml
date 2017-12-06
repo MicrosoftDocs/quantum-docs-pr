@@ -23,6 +23,8 @@ input:
   content: '(paulies : Pauli[])'
   types:
   - name: paulies
+    summary: >2
+       An array of no more than 31 single-qubit Pauli operators.
     uid: Pauli
     isPrimitive: true
     isArray: true

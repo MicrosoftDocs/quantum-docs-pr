@@ -10,6 +10,7 @@ input:
   content: '(generatorSystem : GeneratorSystem)'
   types:
   - name: generatorSystem
+    summary: " The `GeneratorSystem` of interest. \n"
     uid: generatorsystem
 output:
   content: Int

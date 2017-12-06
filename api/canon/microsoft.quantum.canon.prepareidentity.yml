@@ -12,6 +12,9 @@ input:
   content: '(register : Qubit[])'
   types:
   - name: register
+    summary: >2
+       A register whose state is to be depolarized in the manner
+       described above.
     uid: Qubit
     isPrimitive: true
     isArray: true

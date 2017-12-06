@@ -9,12 +9,15 @@ input:
   content: '(op : (LittleEndian => ()), register : BigEndian)'
   types:
   - name: op
+    summary: ' Operation that acts on little-endian register'
     isOperation: true
     types:
     - uid: littleendian
     - uid: ()
       isPrimitive: true
   - name: register
+    summary: >2
+       big-endian register to be transformed
     uid: bigendian
 output:
   content: ()

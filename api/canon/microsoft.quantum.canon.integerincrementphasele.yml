@@ -19,9 +19,12 @@ input:
   content: '(increment : Int, target : PhaseLittleEndian)'
   types:
   - name: increment
+    summary: >2
+       The integer by which the `target` is incremented by.
     uid: Int
     isPrimitive: true
   - name: target
+    summary: ' Quantum register encoding an integer using little-endian encoding in QFT basis.'
     uid: phaselittleendian
 output:
   content: ()

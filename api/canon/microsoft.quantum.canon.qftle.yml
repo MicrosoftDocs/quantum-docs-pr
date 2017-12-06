@@ -9,6 +9,8 @@ input:
   content: '(target : LittleEndian)'
   types:
   - name: target
+    summary: >2
+       Quantum register to which Fourier transform is applied
     uid: littleendian
 output:
   content: ()

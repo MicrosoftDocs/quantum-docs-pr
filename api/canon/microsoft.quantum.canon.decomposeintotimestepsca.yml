@@ -11,9 +11,13 @@ input:
   content: "(nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), trotterOrder : Int)"
   types:
   - name: nSteps
+    summary: ' The number of operations to be decomposed into time steps.'
     uid: Int
     isPrimitive: true
   - name: op
+    summary: >2-
+       An operation which accepts an index input (type `Int`) and a time
+       input (type `Double`) for decomposition.
     isOperation: true
     types:
     - types:
@@ -26,6 +30,9 @@ input:
     - uid: ()
       isPrimitive: true
   - name: trotterOrder
+    summary: >2
+       Selects the order of the Trotter–Suzuki integrator to be used.
+       Order 1 and 2 are currently supported.
     uid: Int
     isPrimitive: true
 output:

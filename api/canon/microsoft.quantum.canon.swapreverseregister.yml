@@ -11,6 +11,7 @@ input:
   content: '(register : Qubit[])'
   types:
   - name: register
+    summary: ' The qubits order of which should be reversed using SWAP gates'
     uid: Qubit
     isPrimitive: true
     isArray: true

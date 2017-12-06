@@ -11,8 +11,11 @@ input:
   content: '(value : Result, number : LittleEndian)'
   types:
   - name: number
+    summary: >2
+       Unsigned integer of which the highest bit is checked
     uid: littleendian
   - name: value
+    summary: ' The value of the highest bit being asserted'
     uid: Result
     isPrimitive: true
 output:

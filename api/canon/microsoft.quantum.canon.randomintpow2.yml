@@ -11,6 +11,9 @@ input:
   content: '(maxBits : Int)'
   types:
   - name: maxBits
+    summary: >2
+       The number of classical bits required to represent the largest integer
+       that could be returned by this operation.
     uid: Int
     isPrimitive: true
 output:

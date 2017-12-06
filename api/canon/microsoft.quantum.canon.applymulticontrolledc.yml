@@ -18,12 +18,17 @@ input:
   content: '(singlyControlledOp : (Qubit[] => ()), ccnot : CCNOTop, controls : Qubit[], targets : Qubit[])'
   types:
   - name: ccnot
+    summary: >2-
+       The ccnot gate to use for the construction
+       ApplyMultiControlled calls singlyControlledOp with the argument of the length at least 1.
     uid: ccnotop
   - name: controls
+    summary: ' The qubits an operation being controlled on, the length of controls must be at least 1.'
     uid: Qubit
     isPrimitive: true
     isArray: true
   - name: singlyControlledOp
+    summary: " Singly controlled operation. The first qubit in the argument of the operation \n assumed to be a control and the rest are assumed to be target qubits."
     isOperation: true
     types:
     - uid: Qubit
@@ -32,6 +37,8 @@ input:
     - uid: ()
       isPrimitive: true
   - name: targets
+    summary: >2
+       The target qubits
     uid: Qubit
     isPrimitive: true
     isArray: true

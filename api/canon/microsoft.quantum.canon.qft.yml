@@ -10,6 +10,8 @@ input:
   content: '(qs : BigEndian)'
   types:
   - name: qs
+    summary: >2
+       quantum register of n qubits to which the quantum Fourier transform is applied
     uid: bigendian
 output:
   content: ()

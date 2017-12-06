@@ -16,16 +16,26 @@ input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
   types:
   - name: numerator
+    summary: >2-
+       Numerator in the dyadic fraction representation of the angle
+       by which the qubit register is to be rotated.
     uid: Int
     isPrimitive: true
   - name: paulis
+    summary: >2-
+       Array of single-qubit Pauli values indicating the tensor product
+       factors on each qubit.
     uid: Pauli
     isPrimitive: true
     isArray: true
   - name: power
+    summary: >2-
+       Power of two specifying the denominator of the angle by which
+       the qubit register is to be rotated.
     uid: Int
     isPrimitive: true
   - name: qubits
+    summary: ' Register to apply the given rotation to.'
     uid: Qubit
     isPrimitive: true
     isArray: true

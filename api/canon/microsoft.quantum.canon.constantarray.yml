@@ -10,9 +10,12 @@ input:
   content: "(length : Int, value : 'T)"
   types:
   - name: length
+    summary: ' Length of the new array.'
     uid: Int
     isPrimitive: true
   - name: value
+    summary: >2
+       A value that will be contained at each index of the new array.
     uid: "'T"
     isLocal: true
 output:

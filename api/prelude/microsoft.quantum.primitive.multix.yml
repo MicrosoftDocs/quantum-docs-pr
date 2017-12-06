@@ -18,6 +18,8 @@ input:
   content: '(qubits : Qubit[])'
   types:
   - name: qubits
+    summary: >2
+       Register of qubits to which the gate is to be applied.
     uid: Qubit
     isPrimitive: true
     isArray: true

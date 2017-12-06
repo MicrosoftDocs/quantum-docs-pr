@@ -10,6 +10,8 @@ input:
   content: '(idxFlagQubit : Int)'
   types:
   - name: idxFlagQubit
+    summary: >2
+       Index to flag qubit $f$ of oracle.
     uid: Int
     isPrimitive: true
 output:

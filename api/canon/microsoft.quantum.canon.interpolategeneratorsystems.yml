@@ -9,8 +9,11 @@ input:
   content: '(generatorSystemStart : GeneratorSystem, generatorSystemEnd : GeneratorSystem)'
   types:
   - name: generatorSystemEnd
+    summary: >2
+       The end `GeneratorSystem`.
     uid: generatorsystem
   - name: generatorSystemStart
+    summary: ' The start `GeneratorSystem`.'
     uid: generatorsystem
 output:
   content: TimeDependentGeneratorSystem

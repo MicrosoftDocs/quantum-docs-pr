@@ -10,6 +10,8 @@ input:
   content: '(idx : Int)'
   types:
   - name: idx
+    summary: >2
+       Integer in the range `0..3` to be converted to Pauli operators.
     uid: Int
     isPrimitive: true
 output:

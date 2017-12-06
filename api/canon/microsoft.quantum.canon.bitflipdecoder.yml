@@ -10,6 +10,8 @@ input:
   content: '(logicalRegister : LogicalRegister)'
   types:
   - name: logicalRegister
+    summary: >2
+       A code block of the bit-flip code.
     uid: logicalregister
 output:
   content: (Qubit[], Qubit[])

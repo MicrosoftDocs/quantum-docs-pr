@@ -22,6 +22,12 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
+    summary: >2
+       A register of fifteen qubits containing approximate copies
+       of a magic state. Following application of this distillation
+       procedure, `roughMagic[0]` will contain one higher-quality
+       copy, and the rest of the register will be reset to the
+       $\ket{00\cdots 0}$ state.
     uid: Qubit
     isPrimitive: true
     isArray: true

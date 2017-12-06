@@ -9,10 +9,14 @@ input:
   content: '(basis : Int[], givenU : (Qubit[] => ()), expectedU : (Qubit[] => () : Adjoint), tolerance : Double)'
   types:
   - name: basis
+    summary: >2-
+       Basis state specified by a single-qubit basis state ID (0 <= id <= 3) for each of
+       n qubits.
     uid: Int
     isPrimitive: true
     isArray: true
   - name: expectedU
+    summary: ' Reference operation on n qubits that givenU is to be compared against.'
     isOperation: true
     types:
     - uid: Qubit
@@ -21,6 +25,7 @@ input:
     - uid: ()
       isPrimitive: true
   - name: givenU
+    summary: ' Operation on n qubits to be checked.'
     isOperation: true
     types:
     - uid: Qubit
@@ -29,6 +34,9 @@ input:
     - uid: ()
       isPrimitive: true
   - name: tolerance
+    summary: >2-
+       Tolerance for the comparison of probabilities between the two operations'
+       outcomes.
     uid: Double
     isPrimitive: true
 output:

@@ -11,6 +11,7 @@ input:
   content: '(target : Qubit[])'
   types:
   - name: target
+    summary: ' An array of qubits whose states are to be reset to $\ket{0}$.'
     uid: Qubit
     isPrimitive: true
     isArray: true

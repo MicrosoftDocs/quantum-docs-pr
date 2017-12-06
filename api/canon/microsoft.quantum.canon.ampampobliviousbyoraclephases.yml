@@ -11,13 +11,17 @@ input:
   content: '(phases : AmpAmpReflectionPhases, ancillaOracle : DeterministicStateOracle, signalOracle : ObliviousOracle, idxFlagQubit : Int)'
   types:
   - name: ancillaOracle
+    summary: ' Unitary oracle $A$ that prepares ancilla start state'
     uid: deterministicstateoracle
   - name: idxFlagQubit
+    summary: ' Index to single-qubit flag register'
     uid: Int
     isPrimitive: true
   - name: phases
+    summary: ' Phases of partial reflections'
     uid: ampampreflectionphases
   - name: signalOracle
+    summary: ' Unitary oracle $O$ of type "ObliviousOracle" that acts jointly on the ancilla and system register'
     uid: obliviousoracle
 output:
   content: '((Qubit[], Qubit[]) => () : Adjoint, Controlled)'

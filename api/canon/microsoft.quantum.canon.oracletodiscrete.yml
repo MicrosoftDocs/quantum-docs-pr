@@ -16,6 +16,8 @@ input:
   content: '(blackBoxOracle : (Qubit[] => () : Adjoint, Controlled))'
   types:
   - name: blackBoxOracle
+    summary: >2
+       "Black-box" oracle to perform powers of as a discrete-time oracle.
     isOperation: true
     types:
     - uid: Qubit

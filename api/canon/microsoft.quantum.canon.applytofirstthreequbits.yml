@@ -14,6 +14,7 @@ input:
   content: '(op : ((Qubit, Qubit, Qubit) => ()), register : Qubit[])'
   types:
   - name: op
+    summary: ' An operation to be applied to the first three qubits'
     isOperation: true
     types:
     - types:
@@ -26,6 +27,8 @@ input:
     - uid: ()
       isPrimitive: true
   - name: register
+    summary: >2
+       Qubit array to the first three qubits of which the operation is applied.
     uid: Qubit
     isPrimitive: true
     isArray: true

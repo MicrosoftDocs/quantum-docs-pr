@@ -16,6 +16,9 @@ input:
   content: '(maxInt : Int)'
   types:
   - name: maxInt
+    summary: >2
+       An integer one larger than the largest integer to be
+       returned by this operation.
     uid: Int
     isPrimitive: true
 output:

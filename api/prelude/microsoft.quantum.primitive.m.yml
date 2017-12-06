@@ -21,6 +21,8 @@ input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
+    summary: >2
+       Qubit to be measured.
     uid: Qubit
     isPrimitive: true
 output:

@@ -84,7 +84,7 @@ operation Example() : () {
 > [!TIP]
 > Later, we will see more compact ways of writing this operation that do not require manual flow control.
 
-We can also prepare states such as $\ket{=} \defeq \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} \defeq \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, represented in Q# by the primitive operation `H : (Qubit => () : Adjoint, Controlled)`:
+We can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the primitive operation `H : (Qubit => () : Adjoint, Controlled)`:
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : () {
@@ -104,27 +104,36 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : () {
 ## Measurements ##
 
 Using the `Measure` operation, which is a built in primitive gate, we can extract classical information from an object of type `Qubit` and assign a classical value as a result, which has a reserved type `Result`, indicating that the result is no longer a quantum state. 
-The input to `Measure` is a Pauli axis on the Bloch sphere, representated by an object of type `Pauli` (i.e., for instance `PauliX`) and an object of type `Qubit`. 
+The input to `Measure` is a Pauli axis on the Bloch sphere, represented by an object of type `Pauli` (i.e., for instance `PauliX`) and an object of type `Qubit`. 
 
 A simple example is the following operation which creates one qubits in the $\ket{0}$ state, then applies a Hadamard gate ``H`` to it and then measures the result in the `PauliZ` basis. 
 
 ```qsharp
-operation Measurement () : Result {
-Body {
-    mutable result = Zero;
-    using(qubits = Qubit[1]) {
-        let qubit = qubits[0];        
-        H(qubit);
-        let result = M(qubit);
+operation MeasurementOneQubit () : Result {
+    body {
+        mutable result = Zero;
+        // The following using block creates a fresh qubit and initializes it in |0〉.
+        using (qubits = Qubit[1]) {
+            let qubit = qubits[0]; 
+            // Apply a Hadamard operation H to the state, thereby creating the state 1/sqrt(2)(|0〉+|1〉). 
+            H(qubit); 
+            // Now we measure the qubit in Z-basis
+            set result = M(qubit);
+            // As the qubit is now in an eigenstate of the measurement operator, we reset the qubit before releasing it. 
+            if (result == One) {
+                X(qubit);
+            }            
+        }
+        // Finally, we return the result of the measurement. 
+        return result;
     }
-    return result;
 }
 ```
 
 A slightly more complicated example is given by the following operation which returns the Boolean value `true` of all qubits in a register of type `Qubit[]` are in the state zero, when measured in a specified Pauli basis and `false` otherwise. 
 
 ```qsharp
- operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
+operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
      Body {
          mutable value = true;
          for (i in 0..Length(qs)-1) {
@@ -152,8 +161,8 @@ fixup {
 where `statement1` and `statement2` can be any valid Q# statement, and `expression` any valid expression that evaluates to a value of type `Bool`. In a typical use case, the following circuit implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere. This is accomplished by using a known RUS pattern: 
 
 ```qsharp
-operation RUScircuitV1 (qubit : Qubit) : () {
-    Body {
+operation RUScircuit (qubit : Qubit) : () {
+    body {
         using(ancillas = Qubit[2]) {
             ApplyToEachA(H, ancillas);
             mutable finished = false;
@@ -175,3 +184,47 @@ operation RUScircuitV1 (qubit : Qubit) : () {
 ```
 
 This examples shows the use of a mutable variable `finished` which is in scope of the entire repeat-until-fixup loop and which gets initialized before the loop and updated in the fixup step.
+
+Finally, we show an example of a RUS pattern to prepare a quantum state $\frac{1}{\sqrt{3}}\left(\sqrt{2}\ket{0}+\ket{1}\right)$, starting from the $\ket{+}$ state. See also the canon sample at @"Microsoft.Quantum.Samples.UnitTesting.ExpIZArcTan2PS": 
+
+```qsharp
+operation RepeatUntilSuccessStatePreparation( target : Qubit ) : () {
+    body {
+        using( qubits = Qubit[1] ) {
+            let ancilla = qubits[0];
+            H(ancilla);
+            repeat {
+                // we expect target and ancilla qubit to be in |+⟩ state
+                AssertProb( [PauliX], [target], Zero, 1.0, "target qubit should be in |+⟩ state", 1e-10 );
+                AssertProb( [PauliX], [ancilla], Zero, 1.0,"ancilla qubit should be in |+⟩ state", 1e-10 );
+                    
+                (Adjoint T)(ancilla);
+                CNOT(target,ancilla);
+                T(ancilla);
+
+                // Probability of measuring |+⟩ state on ancilla is 3/4
+                AssertProb( 
+                    [PauliX], [ancilla], Zero, ToDouble(3) / ToDouble(4), 
+                    "Error: the probability to measure |+⟩ in the first ancilla must be 3/4",
+                    1e-10);
+
+                // if measurement outcome zero we prepared required state 
+                let outcome = Measure([PauliX], [ancilla]);
+            }
+            until( outcome == Zero )
+            fixup {
+                // Bring ancilla and target back to |+⟩ state
+                if( outcome == One ) {
+                    Z(ancilla);
+                    X(target);
+                    H(target);
+                }
+            }
+            // Return ancilla back to Zero state
+            H(ancilla);
+        }
+    }
+}
+```
+ 
+Notable programmatic features shown in this operation are a more complex `fixup` part of the loop which involves quantum operations, and the use of `AssertProb` statements to ascertain the probability of measuring the quantum state at certain specified points in the program. See also (xref:quantum-techniques-TestingAndDebugging) for more information about `Assert` and `AssertProb` statements. 

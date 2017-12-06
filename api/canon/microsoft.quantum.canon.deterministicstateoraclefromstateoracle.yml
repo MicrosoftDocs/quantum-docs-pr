@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.deterministicstateoraclefromstateoracle
+name: DeterministicStateOracleFromStateOracle
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: ' Converts an oracle of type StateOracle to DeterministicStateOracle.'
+syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : StateOracle) : DeterministicStateOracle'
+input:
+  content: '(idxFlagQubit : Int, stateOracle : StateOracle)'
+  types:
+  - name: idxFlagQubit
+    uid: Int
+    isPrimitive: true
+  - name: stateOracle
+    uid: stateoracle
+output:
+  content: DeterministicStateOracle
+  types:
+  - uid: deterministicstateoracle

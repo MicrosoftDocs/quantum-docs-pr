@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.expfrac
+name: ExpFrac
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies the exponential of a multi-qubit Pauli operator
+   with an argument given by a dyadic fraction,
+   \begin{align}
+       \exp\left(i \theta \pi k [P_0 \otimes P_1 \cdots P_N] / 2^n \right),
+   \end{align}
+   where $P_i$ is the $i$th element of `paulis`, and where
+   $N = $`Length(paulis)`.
+syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : ()'
+input:
+  content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
+  types:
+  - name: numerator
+    uid: Int
+    isPrimitive: true
+  - name: paulis
+    uid: Pauli
+    isPrimitive: true
+    isArray: true
+  - name: power
+    uid: Int
+    isPrimitive: true
+  - name: qubits
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.bitwise.xbits
+name: XBits
+type: function
+namespace: Microsoft.Quantum.Extensions.Bitwise
+summary: >2
+   Returns an integer representing the X bits of an array
+   of Pauli operators.
+remarks: >2
+   The function will throw if the length of paulies array is greater than 63.
+syntax: 'function XBits (paulies : Pauli[]) : Int'
+input:
+  content: '(paulies : Pauli[])'
+  types:
+  - name: paulies
+    uid: Pauli
+    isPrimitive: true
+    isArray: true
+output:
+  content: Int
+  types:
+  - summary: >2
+       An integer $x$ with binary representation $(p_62\,p_61\,\dots\,p_0)$,
+       where $p_i = 0$ if `paulies[i]` is `PauliI` or `PauliZ` and where
+       $p_i = 1$ if `paulies[i]` is `PauliX` or `PauliY`.
+    uid: Int
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.extensions.bitwise.zbits

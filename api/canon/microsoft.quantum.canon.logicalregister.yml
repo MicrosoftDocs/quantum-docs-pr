@@ -1,0 +1,6 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.logicalregister
+name: LogicalRegister
+type: newtype
+namespace: Microsoft.Quantum.Canon
+syntax: newtype LogicalRegister = Qubit[];

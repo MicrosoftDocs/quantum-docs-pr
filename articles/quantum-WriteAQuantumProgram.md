@@ -35,7 +35,7 @@ ms.topic: article-type-from-white-list
 
 Now that you’ve installed the Microsoft Quantum Development Kit and seen
 how it works, let’s write your first quantum application.
-We'll start with the simplest program possible and build it up to demostrate quantum superposition and quantum entanglement. We will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
+We'll start with the simplest program possible and build it up to demonstrate quantum superposition and quantum entanglement. We will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
 
 ### Step 1: Create a Project and Solution
 
@@ -47,11 +47,11 @@ Give your project the name `Bell`.
 
 ### Step 2 (optional): Update NuGet Packages
 
-If you want to get the latest version of Q# compiler, update `Microsoft.Quantum.Simulation.Simulators` NuGet package, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package). Note that you'll have to switch to QuArC NuGet feed as the package source before you can get the update.
+If you want to get the latest version of Q# compiler, update `Microsoft.Quantum.Simulation.Simulators` NuGet package, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package). Note that you'll have to switch to the QuArC NuGet feed as the package source before you can get the update.
 
 ### Step 3: Enter the Q# Code
 
-Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entangment. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
+Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
 
 Visual Studio should have two files open:
 `Driver.cs`, which will hold the C# driver for your quantum code,
@@ -469,6 +469,4 @@ Init:Zero 0s=499  1s=501  agree=1000
 Init:One  0s=490  1s=510  agree=1000
 ```
 
-Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1), but now when we measure the second qubit, it is __always__ the same as what we measured for the first qubit. Our `CNOT` has entangled the two qubits, so that whatever happens to one of them, happens to the other. If you reversed the measurements (did the second qubit before the first), the same thing would happen. The first measurement would be random and the second would be in lock step with whatever was discovered for the first (try it!).
-
-This is the first step of the quantum Teleport sample circuit shown in the [Installation and validation](quantum-InstallConfig.md) section.
+Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1), but now when we measure the second qubit, it is __always__ the same as what we measured for the first qubit. Our `CNOT` has entangled the two qubits, so that whatever happens to one of them, happens to the other. If you reversed the measurements (did the second qubit before the first), the same thing would happen. The first measurement would be random and the second would be in lock step with whatever was discovered for the first.

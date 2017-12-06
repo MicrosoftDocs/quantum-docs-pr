@@ -1,0 +1,7 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.unitary
+name: Unitary
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: ' Represents evolution under a unitary operator.'
+syntax: 'newtype Unitary = (Qubit[] => () : Adjoint, Controlled);'

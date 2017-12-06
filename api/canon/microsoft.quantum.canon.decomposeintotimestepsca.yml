@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.decomposeintotimestepsca
+name: DecomposeIntoTimeStepsCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Returns an operation implementing the Trotter–Suzuki integrator for
+   a given operation.
+syntax: "function DecomposeIntoTimeStepsCA (nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), trotterOrder : Int) : ((Double, 'T) => () : Adjoint, Controlled)"
+input:
+  content: "(nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), trotterOrder : Int)"
+  types:
+  - name: nSteps
+    uid: Int
+    isPrimitive: true
+  - name: op
+    isOperation: true
+    types:
+    - types:
+      - uid: Int
+        isPrimitive: true
+      - uid: Double
+        isPrimitive: true
+      - uid: "'T"
+        isLocal: true
+    - uid: ()
+      isPrimitive: true
+  - name: trotterOrder
+    uid: Int
+    isPrimitive: true
+output:
+  content: "((Double, 'T) => () : Adjoint, Controlled)"
+  types:
+  - summary: >2-
+       Returns a unitary implementing the Trotter–Suzuki integrator, where
+       the first parameter `Double` is the integration step size, and the
+       second parameter is the target acted upon.
+    isOperation: true
+    types:
+    - types:
+      - uid: Double
+        isPrimitive: true
+      - uid: "'T"
+        isLocal: true
+    - uid: ()
+      isPrimitive: true
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The type which each time step should act upon; typically, either
+     `Qubit[]` or `Qubit`.

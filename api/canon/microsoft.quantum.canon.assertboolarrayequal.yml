@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertboolarrayequal
+name: AssertBoolArrayEqual
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Asserts that two arrays of boolean values are equal.
+syntax: 'function AssertBoolArrayEqual (actual : Bool[], expected : Bool[], message : String) : ()'
+input:
+  content: '(actual : Bool[], expected : Bool[], message : String)'
+  types:
+  - name: actual
+    uid: Bool
+    isPrimitive: true
+    isArray: true
+  - name: expected
+    uid: Bool
+    isPrimitive: true
+    isArray: true
+  - name: message
+    uid: String
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true

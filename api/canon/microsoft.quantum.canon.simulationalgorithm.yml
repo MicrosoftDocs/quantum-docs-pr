@@ -1,0 +1,9 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.simulationalgorithm
+name: SimulationAlgorithm
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   A time-independent simulation technique converts an
+   to unitary time evolution for some time-interval.
+syntax: 'newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => () : Adjoint, Controlled);'

@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.rz
+name: Rz
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies a rotation about the $z$-axis by a given angle,
+   \begin{align}
+       R_z(\theta) \mathrel{:=}
+       e^{-i \theta \sigma_z / 2}.
+   \end{align}
+remarks: >2-
+   Equivlent to:
+   ```qsharp
+   R(PauliZ, theta, qubit);
+   ```
+syntax: 'operation Rz (theta : Double, qubit : Qubit) : ()'
+input:
+  content: '(theta : Double, qubit : Qubit)'
+  types:
+  - name: qubit
+    uid: Qubit
+    isPrimitive: true
+  - name: theta
+    uid: Double
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

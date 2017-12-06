@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.fivequbitcodedecoder
+name: FiveQubitCodeDecoder
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation FiveQubitCodeDecoder (logicalRegister : LogicalRegister) : (Qubit[], Qubit[])'
+input:
+  content: '(logicalRegister : LogicalRegister)'
+  types:
+  - name: logicalRegister
+    uid: logicalregister
+output:
+  content: (Qubit[], Qubit[])
+  types:
+  - types:
+    - uid: Qubit
+      isPrimitive: true
+      isArray: true
+    - uid: Qubit
+      isPrimitive: true
+      isArray: true
+seeAlso:
+- microsoft.quantum.canon.fivequbitcodeendocer

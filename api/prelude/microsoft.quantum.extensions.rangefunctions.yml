@@ -1,0 +1,12 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.rangefunctions
+name: Microsoft.Quantum.Extensions.RangeFunctions
+functions: []
+operations:
+- uid: microsoft.quantum.extensions.rangefunctions.rangeend
+  summary: " Returns the defined end value of the given range, \n which is not necessarily the last element in the sequence."
+- uid: microsoft.quantum.extensions.rangefunctions.rangestart
+  summary: ' Returns the defined start value of the given range.'
+- uid: microsoft.quantum.extensions.rangefunctions.rangestep
+  summary: ' Returns the defined step value of the given range.'
+newtypes: []

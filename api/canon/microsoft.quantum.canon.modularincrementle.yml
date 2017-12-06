@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.modularincrementle
+name: ModularIncrementLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+remarks: ' Assumes that the value of target is less than N'
+syntax: 'operation ModularIncrementLE (increment : Int, modulus : Int, target : LittleEndian) : ()'
+input:
+  content: '(increment : Int, modulus : Int, target : LittleEndian)'
+  types:
+  - name: increment
+    uid: Int
+    isPrimitive: true
+  - name: modulus
+    uid: Int
+    isPrimitive: true
+  - name: target
+    uid: littleendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.primitive.modularincrementphasele
+functors:
+- Adjoint
+- Controlled

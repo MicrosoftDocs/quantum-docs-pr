@@ -11,9 +11,11 @@ input:
   content: '(phases : AmpAmpReflectionPhases, stateOracle : StateOracle, idxFlagQubit : Int)'
   types:
   - name: idxFlagQubit
+    summary: ' Index to Flag qubit '
     uid: Int
     isPrimitive: true
   - name: phases
+    summary: ' Phases of partial reflections '
     uid: ampampreflectionphases
   - name: stateOracle
     uid: stateoracle

@@ -25,6 +25,10 @@ input:
   content: '(op : (Qubit[] => ()), reference : Qubit[], target : Qubit[])'
   types:
   - name: op
+    summary: >2-
+       Operation $\Lambda$ whose Choi–Jamiłkowski state $J(\Lambda) / 2^N$
+       is to be prepared, where $N$ is the number of qubits on which
+       `op` acts.
     isOperation: true
     types:
     - uid: Qubit
@@ -33,10 +37,16 @@ input:
     - uid: ()
       isPrimitive: true
   - name: reference
+    summary: >2-
+       A register of qubits starting in the $\ket{00\cdots 0}$ state
+       to be used as a reference for the action of `op`.
     uid: Qubit
     isPrimitive: true
     isArray: true
   - name: target
+    summary: >2
+       A register of qubits initially in the $\ket{00\cdots 0}$ state
+       on which `op` is to be applied.
     uid: Qubit
     isPrimitive: true
     isArray: true

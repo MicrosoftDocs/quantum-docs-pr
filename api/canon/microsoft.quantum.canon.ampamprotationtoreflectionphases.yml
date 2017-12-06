@@ -10,6 +10,7 @@ input:
   content: '(rotPhases : AmpAmpRotationPhases)'
   types:
   - name: rotPhases
+    summary: " Array of single-qubit rotations to be converted to partial \n reflections.\n"
     uid: ampamprotationphases
 output:
   content: AmpAmpReflectionPhases

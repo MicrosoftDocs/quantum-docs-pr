@@ -11,6 +11,9 @@ input:
   content: '(nQubits : Int)'
   types:
   - name: nQubits
+    summary: >2
+       The number of qubits on which the returned Pauli operators
+       are defined.
     uid: Int
     isPrimitive: true
 output:

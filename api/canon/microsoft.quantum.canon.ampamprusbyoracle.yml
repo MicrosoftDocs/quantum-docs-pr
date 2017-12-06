@@ -10,10 +10,12 @@ input:
   content: '(statePrepOracle : StateOracle, startQubits : Qubit[])'
   types:
   - name: startQubits
+    summary: " Qubit register \n"
     uid: Qubit
     isPrimitive: true
     isArray: true
   - name: statePrepOracle
+    summary: ' Unitary oracle that prepares start state '
     uid: stateoracle
 output:
   content: ()

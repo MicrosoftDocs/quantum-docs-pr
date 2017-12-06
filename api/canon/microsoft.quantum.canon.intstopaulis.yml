@@ -9,6 +9,9 @@ input:
   content: '(ints : Int[])'
   types:
   - name: ints
+    summary: >2
+       Array of integers in the range `0..3`  to be converted to Pauli
+       operators.
     uid: Int
     isPrimitive: true
     isArray: true

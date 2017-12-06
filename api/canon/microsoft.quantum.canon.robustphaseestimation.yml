@@ -19,13 +19,20 @@ input:
   content: '(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])'
   types:
   - name: bitsPrecision
+    summary: >2
+       This provides an estimate of $\phi$ with standard deviation
+       $\sigma \le 2\pi / 2^\text{bitsPrecision}$ using a number of queries scaling like $\sigma \le 10.7 \pi / \text{# of queries}$.
     uid: Int
     isPrimitive: true
   - name: eigenstate
+    summary: >2-
+       A quantum register representing an eigenstate $\ket{\phi}$ of $U$, where $U\ket{\phi} =
+       e^{i\phi} \ket{\phi}$ for $\phi\in(-\pi,\pi]$ an unknown phase.
     uid: Qubit
     isPrimitive: true
     isArray: true
   - name: oracle
+    summary: ' An operation implementing $U^m$ for given integer powers $m$.'
     uid: discreteoracle
 output:
   content: Double

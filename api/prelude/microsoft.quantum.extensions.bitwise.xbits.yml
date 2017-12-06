@@ -13,6 +13,8 @@ input:
   content: '(paulies : Pauli[])'
   types:
   - name: paulies
+    summary: >2
+       An array of Pauli operators to be represented as an integer.
     uid: Pauli
     isPrimitive: true
     isArray: true

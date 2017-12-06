@@ -18,6 +18,7 @@ input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
+    summary: ' Qubit to which the gate should be applied.'
     uid: Qubit
     isPrimitive: true
 output:

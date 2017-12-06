@@ -10,9 +10,12 @@ input:
   content: '(trotterStepSize : Double, trotterOrder : Int)'
   types:
   - name: trotterOrder
+    summary: >2
+       Order of Trotter integrator. Order 1 and 2 are currently supported.
     uid: Int
     isPrimitive: true
   - name: trotterStepSize
+    summary: ' Duration of simulated time-evolution in single Trotter step.    '
     uid: Double
     isPrimitive: true
 output:

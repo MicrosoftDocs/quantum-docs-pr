@@ -10,6 +10,8 @@ input:
   content: '(size : Int)'
   types:
   - name: size
+    summary: >2
+       The capacity of the new stack.
     uid: Int
     isPrimitive: true
 output:

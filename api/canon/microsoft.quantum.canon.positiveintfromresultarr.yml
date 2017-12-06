@@ -10,6 +10,7 @@ input:
   content: '(results : Result[])'
   types:
   - name: results
+    summary: ' Results in binary representation of number.'
     uid: Result
     isPrimitive: true
     isArray: true

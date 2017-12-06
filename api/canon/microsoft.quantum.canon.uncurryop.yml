@@ -12,6 +12,8 @@ input:
   content: "(curriedOp : ('T -> ('U => ())))"
   types:
   - name: curriedOp
+    summary: >2
+       A function which returns operations.
     isFunction: true
     types:
     - uid: "'T"

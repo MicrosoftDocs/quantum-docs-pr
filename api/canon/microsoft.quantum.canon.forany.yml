@@ -10,10 +10,13 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: array
+    summary: >2
+       An array of elements over `'T`.
     uid: "'T"
     isLocal: true
     isArray: true
   - name: predicate
+    summary: " A function from `'T` to `Bool` that is used to check elements. "
     isFunction: true
     types:
     - uid: "'T"

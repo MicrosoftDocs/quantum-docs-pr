@@ -14,9 +14,13 @@ input:
   content: '(actual : Double, expected : Double)'
   types:
   - name: actual
+    summary: >2
+       The number to be checked.
     uid: Double
     isPrimitive: true
   - name: expected
+    summary: >2
+       The expected value.
     uid: Double
     isPrimitive: true
 output:

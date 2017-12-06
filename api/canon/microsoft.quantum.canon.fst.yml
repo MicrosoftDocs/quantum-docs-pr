@@ -10,6 +10,8 @@ input:
   content: "(pair : ('T, 'U))"
   types:
   - name: pair
+    summary: >2
+       A tuple with two elements.
     types:
     - uid: "'T"
       isLocal: true

@@ -9,6 +9,7 @@ input:
   content: '(op : (Qubit => ()), register : Qubit[])'
   types:
   - name: op
+    summary: ' An operation to be applied to the first qubit'
     isOperation: true
     types:
     - uid: Qubit
@@ -16,6 +17,7 @@ input:
     - uid: ()
       isPrimitive: true
   - name: register
+    summary: ' Qubit array to the first qubit of which the operation is applied'
     uid: Qubit
     isPrimitive: true
     isArray: true

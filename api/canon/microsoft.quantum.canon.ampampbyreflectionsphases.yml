@@ -13,10 +13,13 @@ input:
   content: '(phases : AmpAmpReflectionPhases, startStateReflection : ReflectionOracle, targetStateReflection : ReflectionOracle)'
   types:
   - name: phases
+    summary: ' Phases of partial reflections'
     uid: ampampreflectionphases
   - name: startStateReflection
+    summary: ' Reflection operator about start state'
     uid: reflectionoracle
   - name: targetStateReflection
+    summary: ' Reflection operator about target state'
     uid: reflectionoracle
 output:
   content: '(Qubit[] => () : Adjoint, Controlled)'

@@ -22,6 +22,8 @@ input:
   content: '(register : Qubit[])'
   types:
   - name: register
+    summary: >2
+       The register to be measured.
     uid: Qubit
     isPrimitive: true
     isArray: true

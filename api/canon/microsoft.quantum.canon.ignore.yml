@@ -10,6 +10,7 @@ input:
   content: "(value : 'T)"
   types:
   - name: value
+    summary: ' A value to be ignored.'
     uid: "'T"
     isLocal: true
 output:

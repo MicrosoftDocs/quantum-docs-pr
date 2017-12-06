@@ -19,10 +19,13 @@ input:
   content: "(left : 'T[], right : 'U[])"
   types:
   - name: left
+    summary: ' An array containing values for the first element of each tuple.'
     uid: "'T"
     isLocal: true
     isArray: true
   - name: right
+    summary: >2
+       An array containing values for the second element of each tuple.
     uid: "'U"
     isLocal: true
     isArray: true

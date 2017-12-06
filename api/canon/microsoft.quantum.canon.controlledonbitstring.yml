@@ -11,10 +11,13 @@ input:
   content: "(bits : Bool[], oracle : ('T => () : Adjoint, Controlled))"
   types:
   - name: bits
+    summary: ' Boolean array.'
     uid: Bool
     isPrimitive: true
     isArray: true
   - name: oracle
+    summary: >2
+       Unitary operator.
     isOperation: true
     types:
     - uid: "'T"

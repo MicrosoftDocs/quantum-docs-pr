@@ -16,6 +16,8 @@ input:
   content: "(outerOperation : ('T => () : Adjoint), innerOperation : ('T => ()), target : 'T)"
   types:
   - name: innerOperation
+    summary: >2
+       The operation $V$ being conjugated.
     isOperation: true
     types:
     - uid: "'T"
@@ -23,6 +25,7 @@ input:
     - uid: ()
       isPrimitive: true
   - name: outerOperation
+    summary: ' The operation $U$ that should be used to conjugate $V$.'
     isOperation: true
     types:
     - uid: "'T"

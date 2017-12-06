@@ -15,12 +15,16 @@ input:
   content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
   types:
   - name: control1
+    summary: ' First control qubit for the CCNOT gate.'
     uid: Qubit
     isPrimitive: true
   - name: control2
+    summary: ' Second control qubit for the CCNOT gate.'
     uid: Qubit
     isPrimitive: true
   - name: target
+    summary: >2
+       Target qubit for the CCNOT gate.
     uid: Qubit
     isPrimitive: true
 output:

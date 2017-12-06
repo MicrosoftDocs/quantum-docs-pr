@@ -11,9 +11,12 @@ input:
   content: "(numberState : Int, oracle : ('T => () : Adjoint, Controlled))"
   types:
   - name: numberState
+    summary: ' Positive integer.'
     uid: Int
     isPrimitive: true
   - name: oracle
+    summary: >2
+       Unitary operator.
     isOperation: true
     types:
     - uid: "'T"

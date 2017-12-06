@@ -11,6 +11,8 @@ input:
   content: '(target : Qubit)'
   types:
   - name: target
+    summary: >2
+       A single qubit to be measured.
     uid: Qubit
     isPrimitive: true
 output:

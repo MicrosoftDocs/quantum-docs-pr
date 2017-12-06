@@ -9,10 +9,14 @@ input:
   content: '(qubits : Qubit[], basis : Int[])'
   types:
   - name: basis
+    summary: >2-
+       Array of single-qubit basis state IDs (0 <= id <= 3), one for each element of
+       qubits.
     uid: Int
     isPrimitive: true
     isArray: true
   - name: qubits
+    summary: ' Qubit to be operated on.'
     uid: Qubit
     isPrimitive: true
     isArray: true

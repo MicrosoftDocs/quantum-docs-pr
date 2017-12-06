@@ -11,6 +11,9 @@ input:
   content: '(idxTerm : Int)'
   types:
   - name: idxTerm
+    summary: >2
+       This input is ignored, and is defined for consistency with the
+       @"microsoft.quantum.canon.generatorsystem" user-defined type.
     uid: Int
     isPrimitive: true
 output:

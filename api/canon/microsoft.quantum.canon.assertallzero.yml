@@ -9,13 +9,16 @@ input:
   content: '(message : String, target : Qubit[], tolerance : Double)'
   types:
   - name: message
+    summary: ' The message to be emited if assertion fails'
     uid: String
     isPrimitive: true
   - name: target
+    summary: ' Qubits that are asserted to be in |0⟩ state'
     uid: Qubit
     isPrimitive: true
     isArray: true
   - name: tolerance
+    summary: ' Accuracy with which the state should be in |0⟩ state'
     uid: Double
     isPrimitive: true
 output:

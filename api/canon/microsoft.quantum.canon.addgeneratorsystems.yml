@@ -10,8 +10,11 @@ input:
   content: '(generatorSystemA : GeneratorSystem, generatorSystemB : GeneratorSystem)'
   types:
   - name: generatorSystemA
+    summary: ' The first `GeneratorSystem`.'
     uid: generatorsystem
   - name: generatorSystemB
+    summary: >2
+       The second `GeneratorSystem`.
     uid: generatorsystem
 output:
   content: GeneratorSystem

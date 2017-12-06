@@ -10,12 +10,15 @@ input:
   content: '(op : (LittleEndian => ()), target : PhaseLittleEndian)'
   types:
   - name: op
+    summary: ' Operation to be applied'
     isOperation: true
     types:
     - uid: littleendian
     - uid: ()
       isPrimitive: true
   - name: target
+    summary: >2
+       The register to which the operation is applied
     uid: phaselittleendian
 output:
   content: ()

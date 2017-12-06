@@ -13,6 +13,8 @@ input:
   content: '(msg : String)'
   types:
   - name: msg
+    summary: >2
+       The message to be reported.
     uid: String
     isPrimitive: true
 output:

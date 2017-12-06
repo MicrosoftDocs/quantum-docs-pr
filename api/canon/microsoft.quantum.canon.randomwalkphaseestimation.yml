@@ -12,24 +12,34 @@ input:
   content: '(initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : ContinuousOracle, eigenstate : Qubit[])'
   types:
   - name: eigenstate
+    summary: ' A register in the state $\ket{\phi}$.'
     uid: Qubit
     isPrimitive: true
     isArray: true
   - name: initialMean
+    summary: ' Mean of the initial normal prior distribution over $\phi$.'
     uid: Double
     isPrimitive: true
   - name: initialStdDev
+    summary: ' Standard deviation of the initial normal prior distribution over $\phi$.'
     uid: Double
     isPrimitive: true
   - name: maxMeasurements
+    summary: ' Total number of measurements than can be taken before the operation is considered to have failed.'
     uid: Int
     isPrimitive: true
   - name: nMeasurements
+    summary: ' Number of measurements to be accepted into the final posterior estimate.'
     uid: Int
     isPrimitive: true
   - name: oracle
+    summary: >2-
+       An operation representing a unitary $U$ such that $U(t)\ket{\phi} = e^{i t \phi}\ket{\phi}$
+       for a known eigenstate $\ket{\phi}$ and an unknown phase $\phi \in \mathbb{R}^+$.
     uid: continuousoracle
   - name: unwind
+    summary: >2
+       Number of results to forget when consistency checks fail.
     uid: Int
     isPrimitive: true
 output:

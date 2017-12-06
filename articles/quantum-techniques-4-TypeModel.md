@@ -38,7 +38,7 @@ We describe each in the rest of this section.
 
 The Q# language provides a small set of *primitive types* that can be used throughout operations and functions.
 
-- **`Int`**: Represents signed integers, e.g.: `2`, `107`, `-5`.
+- **`Int`**: Represents 64-bit signed integers, e.g.: `2`, `107`, `-5`.
 - **`Double`**: Represents double-precision floating point numbers, e.g.: `0.0`, `-1.3`, `4e-7`.
 - **`Bool`**: Represents a condition which can either be `true` or `false`.
 - **`Pauli`**: Represents one of the Pauli matrices, either `PauliI`, `PauliX`, `PauliY`, or `PauliZ`.

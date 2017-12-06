@@ -20,49 +20,43 @@ ms.topic: article-type-from-white-list
 # ms.reviewer:
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
+# Installing and validating the Q# development environment
+
 ## Prerequisites
 
 If you have [Visual Studio](https://www.visualstudio.com/) 2017 installed, you're ready to install the Microsoft Quantum Development Kit.
 
 If you do not have Visual Studio installed, you can download Visual Studio 2017 Community Edition for free.
 1. Go to the [Visual Studio download page](https://www.visualstudio.com/downloads/).
-
 1. Click on the Visual Studio Community **Free download** button.
-
 2. Navigate to your browser's download folder and double click on the executable file whose name begins with **vs_community**. The file name will contain a sequence of numbers that varies.
-
 3. _**Important!**_ &nbsp;When you are presented with the option to select the tools for specific workloads, check the boxes for **Universal Windows Platform development** and **.NET desktop development**
-
 4. After selecting your workloads, click **Install** to complete the installation.
 
 ## Creating the Q# development environment 
 
-1. Download and install the Microsoft Quantum Development Kit [Visual Studio extension](https://solidrepo.blob.core.windows.net/alpha/latest/QsharpVSIX.vsix). 
-Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip`. In that case, rename it to `QsharpVSIX.vsix`.
+1. Install the Microsoft Quantum Development Kit
 
-1. If Visual Studio is open, close it.
+    1. Browse to the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
+    2. Type "Microsoft Quantum Development Kit" and press enter.
+    3. Click on the Microsoft Quantum Development Kit tile.
+    4. On the development kit landing page, click the **Download** button.
+    5. Your browser will ask you whether you wish to **Open** or **Save** the download, click **Open**.
+    6. Your security software may present a confirmation pane. Click **Allow**, or the comparable term used by your browser.
+    7. The Quantum Development Kit extension will be installed in Visual Studio 2017.
 
-1. Start the VSIX installer by double clicking the `QsharpVSIX.vsix` file and follow the prompts to install the extension.
+## Validating your environment
 
-1. Configure Visual Studio to use the QuArC beta NuGet feed.
-    - See [Consume NuGet packages in Visual Studio](https://www.visualstudio.com/en-us/docs/package/nuget/consume) for the configuration procedure. On that page, you should follow the instructions under the heading **Windows: Add the feed to your NuGet configuration**. The upper section of the page is not required.
-    - In the Windows section, the actions occur in Visual Studio (which is not specified.)
-    - In step four of the Windows section, you will need the NuGet URL: https://quarcsw.pkgs.visualstudio.com/_packaging/alpha/nuget/v3/index.json.
-    - _**Important!**_  &nbsp;Ignore step six of the Windows section: "6. If you enabled the nuget.org upstream source, uncheck the nuget.org package source."
-    - Ignore the last line of the Windows section (after the image): "Then click here to continue."
-
-> [!TIP]
-> Step 4 above will not be needed after the release.
-
-
-## Validating your setup
+In this section you will clone the quantum libraries, and run a sample application to verify that your Q# environment is correctly installed and configured. 
 
 1. Clone the quantum Libraries repository.
-    1. Navigate to the [Libraries](https://quarcsw.visualstudio.com/_git/Libraries).
-    2. Click the **Clone** button in the upper right.
-    3. In the **Clone repo** pane, click **Clone in Visual Studio**.
-    4. If presented with a login request, sign in using your Microsoft credentials.
-    5. On the **Visual Studio Team Services** pane, click **Clone** to proceed.
+    1. Navigate to the [Libraries](https://github.com/microsoft/quantum) GitHub repository.
+    2. Click the **Clone or download** button in the upper right.
+    3. In the **Clone with HTTPS** pane, click **Open in Visual Studio**.
+    4. If presented with a browser or virus checker confirmation pane, click on the "Allow" button (or comparable button in your environment.)
+    5. Visual Studio will open with the **Team Explorer** pane open on the right.
+    6. On the **Team Explorer** pane, click **Clone** to proceed.
+    7. The repository will be cloned on your local computer and Visual Studio will switch to the **Solution Explorer** on the right populated with the libraries and samples.
 
 2. Open the `Libraries\QsharpLibraries.sln` solution. 
     - If prompted by the **Install Missing Features** pane, click **Install** to allow the installation of the necessary features. This is most often F# and tools.
@@ -70,7 +64,7 @@ Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip`. In that cas
 3. Validate your Q# environment by running the teleport sample program:
     
    1. Right click on the `TeleportationSample` project in `Samples` > `0.Introduction` folder of `QsharpLibraries` solution, and left click on "Set as Startup Project".
-   2. Run the solution (F5.) If teleport runs and the output is similar to the following (has 8 rounds of successful teleportation with varying values True/False sent each round), your Q# environment is ready to support your development.
+   2. Run the solution (F5.) If teleport runs and the output is similar to the following (has 8 rounds of successful teleportation with varying values True/False sent each round), your Q# environment is ready to support Q# development.
 
 ```
         Round 0:        Sent True,      got True. 

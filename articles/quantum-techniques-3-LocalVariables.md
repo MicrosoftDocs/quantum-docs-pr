@@ -24,21 +24,23 @@ ms.topic: article-type-from-white-list
 # Local Variables #
 
 A value of any type in Q# can be assigned to a variable for reuse within an operation or function by using the `let` keyword.
-For instance:
+For instance,
 
 ```qsharp
 let measurementOperator = [PauliX; PauliZ; PauliZ; PauliX; PauliI];
 ```
 
+assignes a particular array of Pauli operators to variable called `measurementOperator`.
+
 > [!TIP]
-> Note that we did not need to explicitly say the type of our new variable, as the expression on the right-hand side of the `let` statement is unambiguous.
+> Note that we did not need to explicitly specify the type of our new variable, as the expression on the right-hand side of the `let` statement is unambiguous and the type is inferred by the compiler. 
 
 Variables in Q# are *immutable*, meaning that once a variable defined in this way, it can no longer be changed in any way.
-This allow for classical logic acting on variables to be reordered for applying the `Adjoint` variant of an operation.
+This allows for several beneficial optimizations, including optimization of the classical logic acting on variables to be reordered for applying the `Adjoint` variant of an operation.
 
 <!-- FIXME: feels too much like the spec itself. Need to focus more on the how. -->
 
-Variables defined in this way are local to a particular scope, such as the body of an operation or the contents of a `for` loop.
+Variables defined used the `let` binding as above are local to a particular scope, such as the body of an operation or the contents of a `for` loop.
 
 
 ## Mutability ##

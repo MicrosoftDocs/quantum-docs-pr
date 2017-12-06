@@ -134,7 +134,7 @@ A slightly more complicated example is given by the following operation which re
 
 ```qsharp
 operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
-     Body {
+     body {
          mutable value = true;
          for (i in 0..Length(qs)-1) {
              if ( Measure([pauli], [qs[i]]) == One ) {

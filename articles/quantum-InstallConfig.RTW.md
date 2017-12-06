@@ -37,11 +37,6 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 
 ## Creating the Q# development environment 
 
-> [!TIP]
-> To change file extensions in Windows Explorer make sure you have File name extension option
-> enabled. 
-> ![file name extensions](media/file-extension.png)
-
 1. Download and install the Microsoft Quantum Development Kit [Visual Studio extension](https://solidrepo.blob.core.windows.net/alpha/latest/QsharpVSIX.vsix). 
 Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip`. In that case, rename it to `QsharpVSIX.vsix`.
 

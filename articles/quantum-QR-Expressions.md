@@ -394,9 +394,9 @@ Operator | Arity | Description | Operand Types
  `==`, `!=` | Binary | equal, not-equal comparisons | any primitive type
  `&&&` | Binary | Bitwise AND | `Int`
  `^^^` | Binary | Bitwise XOR | `Int`
- `|||` | Binary | Bitwise OR | `Int`
+ <code>\|\|\|</code> | Binary | Bitwise OR | `Int`
  `&&` | Binary | Logical AND | `Bool`
- `||` | Binary | Logical OR | `Bool`
+ <code>\|\|</code> | Binary | Logical OR | `Bool`
 
 ## String Interpolations
 

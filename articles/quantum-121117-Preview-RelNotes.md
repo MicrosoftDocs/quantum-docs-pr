@@ -49,7 +49,7 @@ ms.topic: article-type-from-white-list
 ### Testing
 
 - Tests must be executed in 64-bit mode. If your tests are failing with a BadImageFormatException, go to the Test menu and select Test Settings > Default Processor Architecture > X64.
-- Some tests take a long time (possibly as much as 5 minutes depending on your computer) to run. This is normal, as they use up to twenty qubits.
+- Some tests take a long time (possibly as much as 5 minutes depending on your computer) to run. This is normal, as some use over twenty qubits; our largest test currently runs on 23 qubits.
 
 ### Samples
 

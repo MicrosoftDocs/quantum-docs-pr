@@ -72,7 +72,7 @@ For example:
 /// ```
 ///
 /// # See Also
-/// - @"Microsoft.Quantum.Primitive.H": An example of a related operation.
+/// - Microsoft.Quantum.Primitive.H
 operation ApplyTwice<'T>(op : ('T => ()), target : 'T) : () {
     body {
         op(target);
@@ -89,9 +89,7 @@ The following names are recognized as documentation comment headers.
 - **Type Parameters**: An empty section which contains one additional subsection for each generic type parameter.
 - **Example**: A short example of the operation, function or type in use.
 - **Remarks**: Miscellaneous prose describing some aspect of the operation, function, or type.
-- **See Also**: A list of links and
-  [cross-references](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html?tabs=tabid-1%2Ctabid-a#cross-reference)
-  related to the item being documented.
+- **See Also**: A list of fully qualified names indicating related functions, operations, or user-defined types.
 - **References**: A list of references and citations for the item being documented.
 
 ## Namespaces

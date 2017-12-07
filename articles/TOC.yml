@@ -26,6 +26,8 @@
 - name: Managing quantum machines and drivers
   href: quantum-SimulatorsAndMachines.md
   items:
+        - name: Quantum simulator
+          href: quantum-fullstate-simulator.md
         - name: Quantum computer trace simulator
           href: quantum-computer-trace-simulator-1.md
           items:

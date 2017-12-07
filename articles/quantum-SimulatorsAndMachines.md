@@ -70,8 +70,8 @@ that the algorithm hasn't changed.
 This release of the quantum developer kit includes two quantum machine classes.
 Both are defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.
 
-* A full state vector simulator, the `QuantumSimulator` class.
-* A trace-based resource estimator, the `QCTraceSimulator` class.
+* A [full state vector simulator](quantum-fullstate-simulator.md), the `QuantumSimulator` class.
+* A [trace-based resource estimator](quantum-computer-trace-simulator-1.md), the `QCTraceSimulator` class.
 
 ## Writing a Cassical Driver Program
 
@@ -160,6 +160,18 @@ There are some subtleties when passing arguments to a `Run` method:
 ### Processing the Results
 
 The results of the quantum algorithm are returned from the `Run` method.
+The `Run` method executes asynchronously thus it returns a 
+[`Task<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1). 
+There are multiple ways to get the actual operation's results. The simplest is probably
+by using the `Task`'s [`Result` property](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1.result):
+
+```csharp
+    var res = BellTest.Run(sim, 1000, initial).Result;
+```
+but other techniques, like using the [`Wait` method](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.wait)
+or or C# [`await` keyword](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await)
+will also work.
+
 As with arguments, Q# tuples are represented as `ValueTuple` instances and
 Q# arrays are represented as `QArray` instances.
 User-defined types are returned as their base types.

@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.prepareidentity
+name: PrepareIdentity
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given a register, prepares that register in the maximally mixed
+   state $\boldone / 2^N$ by applying the complete depolarizing
+   channel to each qubit, where $N$ is the length of the register.
+syntax: 'operation PrepareIdentity (register : Qubit[]) : ()'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: >2
+       A register whose state is to be depolarized in the manner
+       described above.
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.preparesinglequbitidentity

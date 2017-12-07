@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.rest
+name: Rest
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Creates an array that is equal to an input array except that the first array
+   element is dropped.
+syntax: "function Rest (array : 'T[]) : 'T[]"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: >2
+       An array whose second to last elements are to form the output array.
+    uid: "'T"
+    isLocal: true
+    isArray: true
+output:
+  content: "'T[]"
+  types:
+  - summary: ' An array containing the elements `array[1..Length(array) - 1]`.'
+    uid: "'T"
+    isLocal: true
+    isArray: true
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The type of the array elements.

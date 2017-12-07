@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.head
+name: Head
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Returns the first element of the array.
+syntax: "function Head (array : 'A[]) : 'A"
+input:
+  content: "(array : 'A[])"
+  types:
+  - name: array
+    summary: >2
+       Array of which the first element is taken. Array must have length at least 1.
+    uid: "'A"
+    isLocal: true
+    isArray: true
+output:
+  content: "'A"
+  types:
+  - summary: ' The first element of the array.'
+    uid: "'A"
+    isLocal: true
+typeParameters:
+- uid: "'A"
+  summary: >2
+     The type of the array elements.

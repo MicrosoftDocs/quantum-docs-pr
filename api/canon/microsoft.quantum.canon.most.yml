@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.most
+name: Most
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Creates an array that is equal to an input array except that the last array
+   element is dropped.
+syntax: "function Most (array : 'T[]) : 'T[]"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: >2
+       An array whose fisrt to second-to-last elements are to form the output array.
+    uid: "'T"
+    isLocal: true
+    isArray: true
+output:
+  content: "'T[]"
+  types:
+  - summary: ' An array containing the elements `array[0..Length(array) - 2]`.'
+    uid: "'T"
+    isLocal: true
+    isArray: true
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The type of the array elements.

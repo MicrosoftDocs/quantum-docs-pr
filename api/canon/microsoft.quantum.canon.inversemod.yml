@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.inversemod
+name: InverseMod
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Returns b such that `a`⋅b = 1 (mod `modulus`)
+syntax: 'function InverseMod (a : Int, modulus : Int) : Int'
+input:
+  content: '(a : Int, modulus : Int)'
+  types:
+  - name: a
+    summary: ' The number being inverted'
+    uid: Int
+    isPrimitive: true
+  - name: modulus
+    summary: >2
+       The modulus according to which the numbers are inverted
+    uid: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - summary: ' Integer b such that a⋅`b` = 1 (mod `modulus`)'
+    uid: Int
+    isPrimitive: true

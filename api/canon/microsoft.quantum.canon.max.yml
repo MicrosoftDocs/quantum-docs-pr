@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.max
+name: Max
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given an array of integers, returns the largest element.
+syntax: 'function Max (values : Int[]) : Int'
+input:
+  content: '(values : Int[])'
+  types:
+  - name: values
+    summary: >2
+       An array to take the maximum of.
+    uid: Int
+    isPrimitive: true
+    isArray: true
+output:
+  content: Int
+  types:
+  - summary: ' The largest element of `values`.'
+    uid: Int
+    isPrimitive: true

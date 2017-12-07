@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertqubit
+name: AssertQubit
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Asserts that the qubit q is in the expected eigenstate of the Pauli Z operator.
+remarks: >2-
+   This is equivalent to @"Microsoft.Quantum.Canon.AssertQubitTol" with hardcoded
+   tolerance=1e-5.
+syntax: 'operation AssertQubit (expected : Result, q : Qubit) : ()'
+input:
+  content: '(expected : Result, q : Qubit)'
+  types:
+  - name: expected
+    summary: >2
+       Which state the qubit is expected to be in: Zero or One.
+    uid: Result
+    isPrimitive: true
+  - name: q
+    summary: >2
+       The qubit whose state is asserted.
+    uid: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true

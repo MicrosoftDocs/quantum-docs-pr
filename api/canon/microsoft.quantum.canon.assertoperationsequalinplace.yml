@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertoperationsequalinplace
+name: AssertOperationsEqualInPlace
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Checks if the operation givenU is equal to the operation expectedU on
+   the given input size.
+syntax: 'operation AssertOperationsEqualInPlace (givenU : (Qubit[] => ()), expectedU : (Qubit[] => () : Adjoint), inputSize : Int) : ()'
+input:
+  content: '(givenU : (Qubit[] => ()), expectedU : (Qubit[] => () : Adjoint), inputSize : Int)'
+  types:
+  - name: expectedU
+    summary: ' Reference operation on n qubits that givenU is to be compared against.'
+    isOperation: true
+    types:
+    - uid: Qubit
+      isPrimitive: true
+      isArray: true
+    - uid: ()
+      isPrimitive: true
+  - name: givenU
+    summary: ' Operation on n qubits to be checked.'
+    isOperation: true
+    types:
+    - uid: Qubit
+      isPrimitive: true
+      isArray: true
+    - uid: ()
+      isPrimitive: true
+  - name: inputSize
+    summary: ' The number of qubits n that the operations givenU and expectedU operate on.'
+    uid: Int
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true

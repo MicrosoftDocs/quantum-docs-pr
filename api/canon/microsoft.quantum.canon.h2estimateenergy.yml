@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.h2estimateenergy
+name: H2EstimateEnergy
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   We can now use Canon's phase estimation algorithms to
+   learn the ground state energy using the above simulation.
+syntax: 'operation H2EstimateEnergy (idxBondLength : Int, trotterStepSize : Double, phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) : Double'
+input:
+  content: '(idxBondLength : Int, trotterStepSize : Double, phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))'
+  types:
+  - name: idxBondLength
+    uid: Int
+    isPrimitive: true
+  - name: phaseEstAlgorithm
+    isOperation: true
+    types:
+    - types:
+      - uid: discreteoracle
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    - uid: Double
+      isPrimitive: true
+  - name: trotterStepSize
+    uid: Double
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - uid: Double
+    isPrimitive: true

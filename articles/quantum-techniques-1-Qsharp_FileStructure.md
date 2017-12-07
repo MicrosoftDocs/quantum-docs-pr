@@ -27,7 +27,7 @@ Q# is a scalable, multi-paradigm programming language for quantum computers. Q# 
 
 From a technical perspective, a quantum program is a particular set of classical functions which, when called, generate quantum circuits as their side effects. An important consequence of that view is that a program written in Q# does not directly model qubits themselves, but rather how a classical control computer interacts with those qubits.
 By design, Q# thus does not define quantum states or other properties of quantum mechanics directly, but rather does so indirectly through the action of the various subroutines defined in the language.
-For instance, consider the state $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ discussed in the <!-- TODO: link --> @qc_concepts guide.
+For instance, consider the state $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ discussed in the [Quantum Computing Concepts](quantum-concepts-1-Intro.md) guide.
 To prepare this state in Q#, we use that qubits are initialized in the $\ket{0}$ state, and that $\ket{+} = H\ket{0}$, where $H$ is the Hadamard transform:
 
 ```qsharp
@@ -54,7 +54,7 @@ Concretely, a Q# program is comprised of one or more *operations*, one or more *
 Each operation defined in Q# may then call any number of other operations, including the built-in *primitive* operations defined by the language and implemented by each target machine.
 When compiled, each operation is represented as a .NET class type that can be provided to target machines.
 
-In contrast to operations this are functions, which are used to describe purely classical behavior and do not have any effects besides computing classical output values. Q# is a strongly typed language and comes with a set of built-in primitive types as well as support for user defined types. 
+In contrast to operations are functions, which are used to describe purely classical behavior and do not have any effects besides computing classical output values. Q# is a strongly typed language and comes with a set of built-in primitive types as well as support for user defined types. 
 
 Throughout the rest of this guide, we will see how to use different language concepts and constructs to help us define complex quantum programs through the basic building blocks of operations, functions, and types. 
 

@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Advanced matrix concepts
+# Advanced Matrix Concepts
 
 We now extend our manipulation of Matrices to Eigenvalues, Eigenvectors and Exponentials which form a fundamental set of tools we need to describe and implement quantum algorithms.
 
@@ -55,7 +55,7 @@ We already know how to compute the eigenvalues and eigenvectors of a diagonal ma
 
 $$M(U^\dagger v) = U^\dagger D U  (U^\dagger v) =U^\dagger D (U  U^\dagger) v = U^\dagger D v = c U^\dagger v.$$
 
-## Matrix exponentials
+## Matrix Exponentials
 A *matrix exponential* can also be defined in exact analogy to the exponential function.  The matrix exponential of a matrix $A$ can be expressed as
 
 $$

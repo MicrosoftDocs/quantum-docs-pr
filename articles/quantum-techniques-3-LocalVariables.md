@@ -24,13 +24,13 @@ ms.topic: article-type-from-white-list
 # Local Variables #
 
 A value of any type in Q# can be assigned to a variable for reuse within an operation or function by using the `let` keyword.
-For instance,
+For instance:
 
 ```qsharp
 let measurementOperator = [PauliX; PauliZ; PauliZ; PauliX; PauliI];
 ```
 
-assignes a particular array of Pauli operators to variable called `measurementOperator`.
+This assigns a particular array of Pauli operators to variable called `measurementOperator`.
 
 > [!TIP]
 > Note that we did not need to explicitly specify the type of our new variable, as the expression on the right-hand side of the `let` statement is unambiguous and the type is inferred by the compiler. 

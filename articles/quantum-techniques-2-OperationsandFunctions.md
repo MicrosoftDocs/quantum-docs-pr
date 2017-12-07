@@ -23,7 +23,7 @@ ms.topic: article-type-from-white-list
 
 # Operations and Functions #
 
-Q# programs consist of one or more *operations* which describe side effect which quantum operations can have on quantum data and one or more *functions* which allow to modify classical data. In contrast to operations this are functions, which are used to describe purely classical behavior and do not have any effects besides computing classical output values.
+Q# programs consist of one or more *operations* which describe side effect which quantum operations can have on quantum data and one or more *functions* which allow to modify classical data. In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values.
 
 Each operation defined in Q# may then call any number of other operations, including the built-in primitive operations defined by the language. The particular way in which these primitive operations are defined depends on the target machine. When compiled, each operation is represented as a .NET class type that can be provided to target machines.
 

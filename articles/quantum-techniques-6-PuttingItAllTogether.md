@@ -23,7 +23,7 @@ ms.topic: article-type-from-white-list
 
 # Putting it All Together: Teleportation #
 
-Let's return to the example of the teleportation example introduced in @qc_concepts. Shown below is a text-book quantum circuit in Feynman notation that implements the teleportation, including the quantum part, the measurements, and the classically-controlled correction operations.
+Let's return to the example of the teleportation example introduced in @qc_concepts. Shown below is a text-book quantum circuit that implements the teleportation, including the quantum part, the measurements, and the classically-controlled correction operations.
 
 ![`Teleport(msg : Qubit, there : Qubit) : ()`](./media/teleportation.svg)
 

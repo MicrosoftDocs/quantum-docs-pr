@@ -112,14 +112,17 @@ A simple example is the following operation which creates one qubits in the $\ke
 operation MeasurementOneQubit () : Result {
     body {
         mutable result = Zero;
-        // The following using block creates a fresh qubit and initializes it in |0〉.
+        // The following using block creates a fresh qubit and initializes it 
+        // in the |0〉 state.
         using (qubits = Qubit[1]) {
             let qubit = qubits[0]; 
-            // Apply a Hadamard operation H to the state, thereby creating the state 1/sqrt(2)(|0〉+|1〉). 
+            // We apply a Hadamard operation H to the state, thereby creating the 
+            // state 1/sqrt(2)(|0〉+|1〉). 
             H(qubit); 
-            // Now we measure the qubit in Z-basis
+            // Now we measure the qubit in Z-basis.
             set result = M(qubit);
-            // As the qubit is now in an eigenstate of the measurement operator, we reset the qubit before releasing it. 
+            // As the qubit is now in an eigenstate of the measurement operator, 
+            // we reset the qubit before releasing it. 
             if (result == One) {
                 X(qubit);
             }            
@@ -183,9 +186,9 @@ operation RUScircuit (qubit : Qubit) : () {
 }
 ```
 
-This examples shows the use of a mutable variable `finished` which is in scope of the entire repeat-until-fixup loop and which gets initialized before the loop and updated in the fixup step.
+This example shows the use of a mutable variable `finished` which is in scope of the entire repeat-until-fixup loop and which gets initialized before the loop and updated in the fixup step.
 
-Finally, we show an example of a RUS pattern to prepare a quantum state $\frac{1}{\sqrt{3}}\left(\sqrt{2}\ket{0}+\ket{1}\right)$, starting from the $\ket{+}$ state. See also the canon sample at @"Microsoft.Quantum.Samples.UnitTesting.ExpIZArcTan2PS": 
+Finally, we show an example of a RUS pattern to prepare a quantum state $\frac{1}{\sqrt{3}}\left(\sqrt{2}\ket{0}+\ket{1}\right)$, starting from the $\ket{+}$ state. See also the canon sample at @"microsoft.quantum.samples.unitTesting.expizarctan2ps": 
 
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : () {
@@ -194,21 +197,26 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : () {
             let ancilla = qubits[0];
             H(ancilla);
             repeat {
-                // we expect target and ancilla qubit to be in |+⟩ state
-                AssertProb( [PauliX], [target], Zero, 1.0, "target qubit should be in |+⟩ state", 1e-10 );
-                AssertProb( [PauliX], [ancilla], Zero, 1.0,"ancilla qubit should be in |+⟩ state", 1e-10 );
+                // We expect target and ancilla qubit to be in |+⟩ state.
+                AssertProb( 
+                    [PauliX], [target], Zero, 1.0, 
+                    "target qubit should be in the |+⟩ state", 1e-10 );
+                AssertProb( 
+                    [PauliX], [ancilla], Zero, 1.0,
+                    "ancilla qubit should be in the |+⟩ state", 1e-10 );
                     
                 (Adjoint T)(ancilla);
                 CNOT(target,ancilla);
                 T(ancilla);
 
-                // Probability of measuring |+⟩ state on ancilla is 3/4
+                // The probability of measuring |+⟩ state on ancilla is 3/4.
                 AssertProb( 
                     [PauliX], [ancilla], Zero, ToDouble(3) / ToDouble(4), 
-                    "Error: the probability to measure |+⟩ in the first ancilla must be 3/4",
+                    "Error: the probability to measure |+⟩ in the first 
+                    ancilla must be 3/4",
                     1e-10);
 
-                // if measurement outcome zero we prepared required state 
+                // If we get measurement outcome Zero, we prepare the required state 
                 let outcome = Measure([PauliX], [ancilla]);
             }
             until( outcome == Zero )
@@ -227,4 +235,4 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : () {
 }
 ```
  
-Notable programmatic features shown in this operation are a more complex `fixup` part of the loop which involves quantum operations, and the use of `AssertProb` statements to ascertain the probability of measuring the quantum state at certain specified points in the program. See also (xref:quantum-techniques-TestingAndDebugging) for more information about `Assert` and `AssertProb` statements. 
+Notable programmatic features shown in this operation are a more complex `fixup` part of the loop which involves quantum operations, and the use of `AssertProb` statements to ascertain the probability of measuring the quantum state at certain specified points in the program. See also [Testing and debugging](xref:quantum-techniques-testinganddebugging) for more information about `Assert` and `AssertProb` statements. 

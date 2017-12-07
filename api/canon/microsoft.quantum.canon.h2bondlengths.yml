@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.h2bondlengths
+name: H2BondLengths
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function H2BondLengths () : Double[]'
+input:
+  content: ()
+  types: []
+output:
+  content: Double[]
+  types:
+  - uid: Double
+    isPrimitive: true
+    isArray: true

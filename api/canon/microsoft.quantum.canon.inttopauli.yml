@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.inttopauli
+name: IntToPauli
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Converts a integer to a single-qubit Pauli operator.
+syntax: 'function IntToPauli (idx : Int) : Pauli'
+input:
+  content: '(idx : Int)'
+  types:
+  - name: idx
+    summary: >2
+       Integer in the range `0..3` to be converted to Pauli operators.
+    uid: Int
+    isPrimitive: true
+output:
+  content: Pauli
+  types:
+  - summary: ' A `Pauli` operator given by `[PauliI; PauliX; PauliY; PauliZ][idx]`.'
+    uid: Pauli
+    isPrimitive: true

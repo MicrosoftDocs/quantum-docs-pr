@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.qftle
+name: QFTLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Little-endian version of QFT. \n"
+syntax: 'operation QFTLE (target : LittleEndian) : ()'
+input:
+  content: '(target : LittleEndian)'
+  types:
+  - name: target
+    summary: >2
+       Quantum register to which Fourier transform is applied
+    uid: littleendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.qft
+functors:
+- Adjoint
+- Controlled

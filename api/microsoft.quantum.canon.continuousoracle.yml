@@ -1,7 +1,0 @@
-### YamlMime:QSharpType
-uid: microsoft.quantum.canon.continuousoracle
-name: ContinuousOracle
-type: newtype
-namespace: microsoft.quantum.canon
-summary: "Represents a continuous-time oracle U(δt) : |?(t)> ? |?(t + δt)> for all times t, where U is a fixed operation, and where and δt is a non-negative real number."
-syntax: ((Double, Qubit[]) => ():Adjoint,Controlled)

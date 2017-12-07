@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyleoperationonphasele
+name: ApplyLEOperationOnPhaseLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Applies an operation that takes PhaseLittleEndian input on LittleEndian target
+syntax: 'operation ApplyLEOperationOnPhaseLE (op : (LittleEndian => ()), target : PhaseLittleEndian) : ()'
+input:
+  content: '(op : (LittleEndian => ()), target : PhaseLittleEndian)'
+  types:
+  - name: op
+    summary: ' Operation to be applied'
+    isOperation: true
+    types:
+    - uid: littleendian
+    - uid: ()
+      isPrimitive: true
+  - name: target
+    summary: >2
+       The register to which the operation is applied
+    uid: phaselittleendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applyleoperationonphaselea
+- microsoft.quantum.canon.applyleoperationonphaselec
+- microsoft.quantum.canon.applyleoperationonphaseleca

@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bitfliprecoveryfn
+name: BitFlipRecoveryFn
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function BitFlipRecoveryFn () : RecoveryFn'
+input:
+  content: ()
+  types: []
+output:
+  content: RecoveryFn
+  types:
+  - uid: recoveryfn

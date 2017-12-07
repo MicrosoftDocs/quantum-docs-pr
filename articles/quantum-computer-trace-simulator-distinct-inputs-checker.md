@@ -59,7 +59,7 @@ will depend on the order of `op1` and `op2` inside `DoBoth`. This is definitely
 not what the user would expect to happen. The `Distinct Inputs Checker` will detect
 such situations when enabled and will throw `DistinctInputsCheckerException`. See the API documentation on [DistinctInputsCheckerException](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException?view=qsharp-preview&branch=master) for more details.
 
-## Using the Distinct Inputs Checker in your C# program
+## Using the Distinct Inputs Checker in your C# Program
 
 The following is an example of C# driver code for using the quantum computer trace
 simulator with the `Distinct Inputs Checker` enabled: 

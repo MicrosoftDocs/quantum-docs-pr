@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertintequal
+name: AssertIntEqual
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Asserts that a classical Int variable has the expected value.
+syntax: 'function AssertIntEqual (actual : Int, expected : Int, message : String) : ()'
+input:
+  content: '(actual : Int, expected : Int, message : String)'
+  types:
+  - name: actual
+    summary: >2
+       The number to be checked.
+    uid: Int
+    isPrimitive: true
+  - name: expected
+    summary: >2
+       The expected value.
+    uid: Int
+    isPrimitive: true
+  - name: message
+    summary: ' Failure message string to be used when the assertion is triggered.'
+    uid: String
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true

@@ -29,7 +29,7 @@ Many of these functions and operations rely on the fact that classical simulatio
 Thus, we can test individual operations on a classical simulator before deploying on hardware.
 
 
-## Asserts on classical values ##
+## Asserts on Classical Values ##
 
 As discussed in [Testing and Debugging](../quantum-techniques-testinganddebugging.md), a function or operation with signature `() -> ()` or `() => ()`, respectively, can be called as a *unit test*.
 Such unit tests are useful in ensuring that functions and operations act as intended in known cases, and that additional features not break existing functionality.

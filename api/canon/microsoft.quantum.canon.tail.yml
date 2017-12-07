@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.tail
+name: Tail
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Returns the last element of the array.
+syntax: "function Tail (array : 'A[]) : 'A"
+input:
+  content: "(array : 'A[])"
+  types:
+  - name: array
+    summary: >2
+       Array of which the last element is taken. Array must have length at least 1.
+    uid: "'A"
+    isLocal: true
+    isArray: true
+output:
+  content: "'A"
+  types:
+  - summary: ' The last element of the array.'
+    uid: "'A"
+    isLocal: true
+typeParameters:
+- uid: "'A"
+  summary: >2
+     The type of the array elements.

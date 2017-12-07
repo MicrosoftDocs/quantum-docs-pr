@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.h2identitycoeff
+name: H2IdentityCoeff
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function H2IdentityCoeff (idxBond : Int) : Double'
+input:
+  content: '(idxBond : Int)'
+  types:
+  - name: idxBond
+    uid: Int
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - uid: Double
+    isPrimitive: true

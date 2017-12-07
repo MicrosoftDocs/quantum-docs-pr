@@ -30,13 +30,11 @@ operations, and functions.
 A namespace declaration may contain any number of each type of definition,
 but it must contain at least one definition.
 
-## User Defined Type Declarations
+## User-Defined Type Declarations
 
 Q# provides a way for users to declare new user-defined types, 
 as described in the [Q# type model](articles/quantum-QR-TypeModel) section. 
-User-defined types are distinct even if the underlying  types are identical, 
-and there is no automatic conversion between two user-defined types 
-even if the underlying types are identical.
+User-defined types are distinct even if the underlying  types are identical. In particular, there is no automatic conversion between two user-defined types if the underlying types are identical.
 
 A user-defined type declaration consists of the keyword `newtype`, followed by 
 the name of the user-defined type, an `=`, a valid type specification, and
@@ -119,12 +117,6 @@ adjoint auto
 or 
 
 ```qsharp
-adjoint none
-```
-
-or 
-
-```qsharp
 adjoint {
     // Code for the adjoint goes here
 }
@@ -132,9 +124,7 @@ adjoint {
 
 If none of these appear, then no adjoint is defined.
 
-An operation whose body contains repeat-until-success loops or measurements 
-or that calls another operation that does not support the `Adjoint` functor
-may not specify the `auto` keyword.
+An operation whose body contains repeat-until-success loops, set-statements, and/or measurements or calls to other operations that do not support the `Adjoint` functor may not specify the `auto` keyword.
 
 If an operation has no body but should have an adjoint defined, 
 it should specify `adjoint auto` or `adjoint self`.
@@ -167,13 +157,13 @@ one of:
 Thus, an operation definition contain
 
 ```qsharp
-controlled self
+controlled auto
 ```
 
 or 
 
 ```qsharp
-controlled(controls) {
+controlled (controls) {
     // Code for the controlled version goes here.
     // "controls" is bound to the array of control qubits.
 }
@@ -205,9 +195,7 @@ be the name of the variable holding the array of control qubits, `)`,
 and a statement block that implements the controlled adjoint version of the 
 operation. 
 
-An operation whose body contains repeat-until-success loops or measurements 
-or that calls another operation that has no controlled adjoint version 
-may not specify the `auto` keyword.
+An operation whose body contains repeat-until-success loops, set-statements, and/or measurements or calls to other operations that do not have a controlled adjoint version may not specify the `auto` keyword.
 
 If a statement block is provided for either the adjoint or controlled version 
 of an operation, and `auto` is specified for the controlled adjoint version, 
@@ -220,7 +208,7 @@ from the controlled version’s statement block.
 If an operation has no body but should have a controlled adjoint version 
 defined, it should specify `adjoint controlled auto`.
 
-### Example Operation Definitions
+### Operation Definitions
 
 An operation definition might be as simple as the following, 
 which defines the primitive Pauli X operation:

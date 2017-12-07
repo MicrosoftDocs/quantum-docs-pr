@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Installing and validating the Q# development environment
+# Installing and Validating the Q# Development Environment
 
 This section specifies how to create a Q# development environment and validate it by running the teleport sample program.
 
@@ -40,7 +40,12 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 
 4. After selecting your workloads, click **Install** to complete the installation.
 
-## Creating the Q# development environment 
+## Creating the Q# Development Environment 
+
+> [!TIP]
+> To change file extensions in Windows Explorer make sure you have File name extension option
+> enabled. 
+> ![file name extensions](media/file-extension.png)
 
 1. Download and install the Microsoft Quantum Development Kit [Visual Studio extension](https://solidrepo.blob.core.windows.net/alpha/latest/QsharpVSIX.vsix). 
 Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip`. In that case, rename it to `QsharpVSIX.vsix`.
@@ -49,14 +54,18 @@ Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip`. In that cas
 
 1. Start the VSIX installer by double clicking the `QsharpVSIX.vsix` file and follow the prompts to install the extension.
 
-1. Configure Visual Studio to use the QuArC beta NuGet feed. 
+1. Configure Visual Studio to use the QuArC beta NuGet feed.
     - See [Consume NuGet packages in Visual Studio](https://www.visualstudio.com/en-us/docs/package/nuget/consume) for the configuration procedure. On that page, you should follow the instructions under the heading **Windows: Add the feed to your NuGet configuration**. The upper section of the page is not required.
     - In the Windows section, the actions occur in Visual Studio (which is not specified.)
     - In step four of the Windows section, you will need the NuGet URL: https://quarcsw.pkgs.visualstudio.com/_packaging/alpha/nuget/v3/index.json.
     - _**Important!**_  &nbsp;Ignore step six of the Windows section: "6. If you enabled the nuget.org upstream source, uncheck the nuget.org package source."
     - Ignore the last line of the Windows section (after the image): "Then click here to continue."
 
-## Validating your setup
+> [!TIP]
+> Step 4 above will not be needed after the release.
+
+
+## Validating Your Setup
 
 1. Clone the quantum Libraries repository.
     1. Navigate to the [Libraries](https://quarcsw.visualstudio.com/_git/Libraries).

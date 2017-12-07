@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.intstopaulis
+name: IntsToPaulis
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Converts an array of integers to an array of single-qubit Pauli \n operators.\n"
+syntax: 'function IntsToPaulis (ints : Int[]) : Pauli[]'
+input:
+  content: '(ints : Int[])'
+  types:
+  - name: ints
+    summary: >2
+       Array of integers in the range `0..3`  to be converted to Pauli
+       operators.
+    uid: Int
+    isPrimitive: true
+    isArray: true
+output:
+  content: Pauli[]
+  types:
+  - summary: " An array `paulis` of Pauli operators `Pauli[]` the same length as \n `ints` such that `paulis[idxPauli]` is equal to the element of\n `[PauliI; PauliX; PauliY; PauliZ]` given by `ints[idxPauli]`."
+    uid: Pauli
+    isPrimitive: true
+    isArray: true

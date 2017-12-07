@@ -1,0 +1,9 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bigendian
+name: BigEndian
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Register that encodes unsigned integer in big-endian order
+   qubit with index 0 encodes the highest bit of an unsigned integer
+syntax: newtype BigEndian = Qubit[];

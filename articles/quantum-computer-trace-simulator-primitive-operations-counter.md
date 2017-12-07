@@ -43,7 +43,7 @@ operation CCNOTDriver() : () {
 }
 ```
 
-## Using the Primitive Operations Counter within a C# program
+## Using the Primitive Operations Counter within a C# Program
 
 To check that `CCNOT` indeed requires 7 `T` gates and that `CCNOTDriver` executes 8 `T` 
 gates we can use the following C# code:

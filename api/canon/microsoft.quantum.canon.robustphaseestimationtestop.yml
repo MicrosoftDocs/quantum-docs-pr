@@ -7,14 +7,11 @@ syntax: 'operation RobustPhaseEstimationTestOp (phase : Double, power : Int, qub
 input:
   content: '(phase : Double, power : Int, qubits : Qubit[])'
   types:
-  - name: phase
-    uid: Double
+  - uid: Double
     isPrimitive: true
-  - name: power
-    uid: Int
+  - uid: Int
     isPrimitive: true
-  - name: qubits
-    uid: Qubit
+  - uid: Qubit
     isPrimitive: true
     isArray: true
 output:

@@ -3,21 +3,16 @@ uid: microsoft.quantum.extensions.convert.todouble
 name: ToDouble
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: >2
-   Converts a given integer into a double-precision floating
-   point number.
+summary: " Converts a given integer to an equivalent double-precision \n floating-point number.\n"
+remarks: ' See [C# Convert.ToDouble](https://docs.microsoft.com/en-us/dotnet/api/system.convert.todouble?view=netframework-4.7.1#System_Convert_ToDouble_System_Int64_) for more details.'
 syntax: 'function ToDouble (a : Int) : Double'
 input:
   content: '(a : Int)'
   types:
-  - name: a
-    summary: >2
-       The integer to be converted.
-    uid: Int
+  - uid: Int
     isPrimitive: true
 output:
   content: Double
   types:
-  - summary: ' A double-precision floating point number representing $a$.'
-    uid: Double
+  - uid: Double
     isPrimitive: true

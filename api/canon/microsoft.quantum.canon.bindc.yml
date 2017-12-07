@@ -7,22 +7,26 @@ syntax: "function BindC (operations : ('T => () : Controlled)[]) : ('T => () : C
 input:
   content: "(operations : ('T => () : Controlled)[])"
   types:
-  - name: operations
-    isArray: true
+  - isArray: true
     isOperation: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors: &o0
+    - Controlled
 output:
   content: "('T => () : Controlled)"
   types:
   - isOperation: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors: *o0
 seeAlso:
 - microsoft.quantum.canon.bind

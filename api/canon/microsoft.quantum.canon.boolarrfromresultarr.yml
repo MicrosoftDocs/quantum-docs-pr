@@ -7,8 +7,7 @@ syntax: 'function BoolArrFromResultArr (input : Result[]) : Bool[]'
 input:
   content: '(input : Result[])'
   types:
-  - name: input
-    uid: Result
+  - uid: Result
     isPrimitive: true
     isArray: true
 output:

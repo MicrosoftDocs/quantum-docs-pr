@@ -15,15 +15,14 @@ syntax: 'function InterpolatedEvolution (inerpolationTime : Double, evolutionGen
 input:
   content: '(inerpolationTime : Double, evolutionGeneratorStart : EvolutionGenerator, evolutionGeneratorEnd : EvolutionGenerator, timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)'
   types:
-  - name: evolutionGeneratorEnd
-    summary: ' Final generator to simulate evolution under.'
-    uid: evolutiongenerator
+  - uid: Double
+    isPrimitive: true
   - name: evolutionGeneratorStart
     summary: ' Initial generator to simulate evolution under.'
     uid: evolutiongenerator
-  - name: inerpolationTime
-    uid: Double
-    isPrimitive: true
+  - name: evolutionGeneratorEnd
+    summary: ' Final generator to simulate evolution under.'
+    uid: evolutiongenerator
   - name: timeDependentSimulationAlgorithm
     summary: >2
        A time-dependent simulation algorithm that will be used
@@ -33,9 +32,13 @@ output:
   content: '(Qubit[] => () : Adjoint, Controlled)'
   types:
   - isOperation: true
-    types:
-    - uid: Qubit
+    input:
+      uid: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled

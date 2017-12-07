@@ -7,8 +7,7 @@ syntax: 'function BoolFromResult (input : Result) : Bool'
 input:
   content: '(input : Result)'
   types:
-  - name: input
-    uid: Result
+  - uid: Result
     isPrimitive: true
 output:
   content: Bool

@@ -4,21 +4,28 @@ name: ApplyPhaseLEOperationOnLE
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Applies an operation that takes PhaseLittleEndian input on LittleEndian target
+   Applies an operation that takes a
+   <xref:microsoft.quantum.canon.littleendian> register as input
+   on a target register of type <xref:microsoft.quanutm.canon.phaselittleendian>.
+remarks: >2
+   The register is transformed to `PhaseLittleEndian` by the use of
+   <xref:microsoft.quantum.canon.qftle> and is then returned to
+   its original representation after application of `op`.
 syntax: 'operation ApplyPhaseLEOperationOnLE (op : (PhaseLittleEndian => ()), target : LittleEndian) : ()'
 input:
   content: '(op : (PhaseLittleEndian => ()), target : LittleEndian)'
   types:
   - name: op
-    summary: ' Operation to be applied'
+    summary: ' The operation to be applied.'
     isOperation: true
-    types:
-    - uid: phaselittleendian
-    - uid: ()
+    input:
+      uid: phaselittleendian
+    output:
+      uid: ()
       isPrimitive: true
   - name: target
     summary: >2
-       The register to which the operation is applied
+       The register to which the operation is applied.
     uid: littleendian
 output:
   content: ()
@@ -27,5 +34,5 @@ output:
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.applyphaseleoperationonlea
-- microsoft.quantum.canon.applyphaseleoperationonlec
+- microsoft.quantum.canon.applyphaseleoperationonlea
 - microsoft.quantum.canon.applyphaseleoperationonleca

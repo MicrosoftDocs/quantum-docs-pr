@@ -3,16 +3,16 @@ uid: microsoft.quantum.extensions.math.mind
 name: MinD
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-remarks: ' See (`System.Math.Max`)[https://docs.microsoft.com/en-us/dotnet/api/system.math.max].'
+summary: >2
+   Returns the smaller of two specified numbers.
+remarks: ' See [System.Math.Min](https://docs.microsoft.com/en-us/dotnet/api/system.math.min) for more details.'
 syntax: 'function MinD (a : Double, b : Double) : Double'
 input:
   content: '(a : Double, b : Double)'
   types:
-  - name: a
-    uid: Double
+  - uid: Double
     isPrimitive: true
-  - name: b
-    uid: Double
+  - uid: Double
     isPrimitive: true
 output:
   content: Double

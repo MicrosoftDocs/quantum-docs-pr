@@ -3,20 +3,20 @@ uid: microsoft.quantum.canon.timedependenttrottersimulationalgorithm
 name: TimeDependentTrotterSimulationAlgorithm
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: " `TimeDependentSimulationAlgorithm` function that uses a Trotter-Suzuki \n decomposition to approximate a unitary operator that solves the \n time-dependent Schr�dinger equation at time $t$. \n"
+summary: " `TimeDependentSimulationAlgorithm` function that uses a Trotter–Suzuki \n decomposition to approximate a unitary operator that solves the \n time-dependent Schr�dinger equation at time $t$. \n"
 remarks: ' This is obtained by partial application of @"microsoft.quantum.canon.TimeDependentTrotterSimulationAlgorithmImpl".'
 syntax: 'function TimeDependentTrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : TimeDependentSimulationAlgorithm'
 input:
   content: '(trotterStepSize : Double, trotterOrder : Int)'
   types:
+  - name: trotterStepSize
+    summary: ' Duration of simulated time-evolution in single Trotter step.    '
+    uid: Double
+    isPrimitive: true
   - name: trotterOrder
     summary: >2
        Order of Trotter integrator. Order 1 and 2 are currently supported.
     uid: Int
-    isPrimitive: true
-  - name: trotterStepSize
-    summary: ' Duration of simulated time-evolution in single Trotter step.    '
-    uid: Double
     isPrimitive: true
 output:
   content: TimeDependentSimulationAlgorithm

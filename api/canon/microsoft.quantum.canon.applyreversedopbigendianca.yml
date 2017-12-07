@@ -7,14 +7,16 @@ syntax: 'operation ApplyReversedOpBigEndianCA (op : (BigEndian => () : Controlle
 input:
   content: '(op : (BigEndian => () : Controlled, Adjoint), register : LittleEndian)'
   types:
-  - name: op
-    isOperation: true
-    types:
-    - uid: bigendian
-    - uid: ()
+  - isOperation: true
+    input:
+      uid: bigendian
+    output:
+      uid: ()
       isPrimitive: true
-  - name: register
-    uid: littleendian
+    functors:
+    - Controlled
+    - Adjoint
+  - uid: littleendian
 output:
   content: ()
   types:

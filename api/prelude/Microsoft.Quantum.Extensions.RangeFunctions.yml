@@ -4,9 +4,11 @@ name: Microsoft.Quantum.Extensions.RangeFunctions
 functions: []
 operations:
 - uid: microsoft.quantum.extensions.rangefunctions.rangeend
-  summary: " Returns the defined end value of the given range, \n which is not necessarily the last element in the sequence."
+  summary: " Returns the defined end value of the given range, \n which is not necessarily the last element in the sequence.\n"
 - uid: microsoft.quantum.extensions.rangefunctions.rangestart
-  summary: ' Returns the defined start value of the given range.'
+  summary: >2
+     Returns the defined start value of the given range.
 - uid: microsoft.quantum.extensions.rangefunctions.rangestep
-  summary: ' Returns the defined step value of the given range.'
+  summary: >2
+     Returns the integer that specifies how the next value of a range is calculated.
 newtypes: []

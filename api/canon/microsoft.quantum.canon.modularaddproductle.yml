@@ -13,16 +13,12 @@ syntax: 'operation ModularAddProductLE (constMultiplier : Int, modulus : Int, mu
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : LittleEndian, summand : LittleEndian)'
   types:
-  - name: constMultiplier
-    uid: Int
+  - uid: Int
     isPrimitive: true
-  - name: modulus
-    uid: Int
+  - uid: Int
     isPrimitive: true
-  - name: multiplier
-    uid: littleendian
-  - name: summand
-    uid: littleendian
+  - uid: littleendian
+  - uid: littleendian
 output:
   content: ()
   types:

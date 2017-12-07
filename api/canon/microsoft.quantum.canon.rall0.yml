@@ -3,15 +3,24 @@ uid: microsoft.quantum.canon.rall0
 name: RAll0
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: ' This performs a phase shift operation about the state $\ket{0\cdots 0}\bra{0\cdots 0}$.'
+summary: >2
+   This performs a phase shift operation about the state $\ket{0\cdots 0}\bra{0\cdots 0}$,
+   $$
+   \begin{align}
+       \ket{0\cdots 0} \mapsto e^{i \theta} \ket{0\cdots 0}.
+   \end{align}
+   $$
 syntax: 'operation RAll0 (phase : Double, qubits : Qubit[]) : ()'
 input:
   content: '(phase : Double, qubits : Qubit[])'
   types:
   - name: phase
+    summary: ' The phase $\theta$ assigned to the state $\ket{0\cdots 0}$.'
     uid: Double
     isPrimitive: true
   - name: qubits
+    summary: >2
+       The register whose state is to be rotated.
     uid: Qubit
     isPrimitive: true
     isArray: true
@@ -20,6 +29,8 @@ output:
   types:
   - uid: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.rall1
 functors:
 - Adjoint
 - Controlled

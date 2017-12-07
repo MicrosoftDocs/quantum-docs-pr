@@ -9,20 +9,21 @@ syntax: "function ForAny (predicate : ('T -> Bool), array : 'T[]) : Bool"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
+  - name: predicate
+    summary: " A function from `'T` to `Bool` that is used to check elements. "
+    isFunction: true
+    input:
+      uid: "'T"
+      isLocal: true
+    output:
+      uid: Bool
+      isPrimitive: true
   - name: array
     summary: >2
        An array of elements over `'T`.
     uid: "'T"
     isLocal: true
     isArray: true
-  - name: predicate
-    summary: " A function from `'T` to `Bool` that is used to check elements. "
-    isFunction: true
-    types:
-    - uid: "'T"
-      isLocal: true
-    - uid: Bool
-      isPrimitive: true
 output:
   content: Bool
   types:

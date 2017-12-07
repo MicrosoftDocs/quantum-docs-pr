@@ -7,22 +7,25 @@ syntax: "operation WithC (outerOperation : ('T => () : Adjoint), innerOperation 
 input:
   content: "(outerOperation : ('T => () : Adjoint), innerOperation : ('T => () : Controlled), target : 'T)"
   types:
-  - name: innerOperation
-    isOperation: true
-    types:
-    - uid: "'T"
+  - isOperation: true
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
-  - name: outerOperation
-    isOperation: true
-    types:
-    - uid: "'T"
+    functors:
+    - Adjoint
+  - isOperation: true
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
-  - name: target
-    uid: "'T"
+    functors: &o0
+    - Controlled
+  - uid: "'T"
     isLocal: true
 output:
   content: ()
@@ -31,5 +34,4 @@ output:
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.with
-functors:
-- Controlled
+functors: *o0

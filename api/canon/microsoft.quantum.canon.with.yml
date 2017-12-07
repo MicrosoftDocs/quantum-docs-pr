@@ -15,25 +15,28 @@ syntax: "operation With (outerOperation : ('T => () : Adjoint), innerOperation :
 input:
   content: "(outerOperation : ('T => () : Adjoint), innerOperation : ('T => ()), target : 'T)"
   types:
+  - name: outerOperation
+    summary: ' The operation $U$ that should be used to conjugate $V$.'
+    isOperation: true
+    input:
+      uid: "'T"
+      isLocal: true
+    output:
+      uid: ()
+      isPrimitive: true
+    functors:
+    - Adjoint
   - name: innerOperation
     summary: >2
        The operation $V$ being conjugated.
     isOperation: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
-  - name: outerOperation
-    summary: ' The operation $U$ that should be used to conjugate $V$.'
-    isOperation: true
-    types:
-    - uid: "'T"
-      isLocal: true
-    - uid: ()
-      isPrimitive: true
-  - name: target
-    uid: "'T"
+  - uid: "'T"
     isLocal: true
 output:
   content: ()

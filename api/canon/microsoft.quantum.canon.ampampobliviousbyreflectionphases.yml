@@ -10,25 +10,25 @@ syntax: 'function AmpAmpObliviousByReflectionPhases (phases : AmpAmpReflectionPh
 input:
   content: '(phases : AmpAmpReflectionPhases, ancillaReflection : ReflectionOracle, targetStateReflection : ReflectionOracle, signalOracle : ObliviousOracle)'
   types:
-  - name: ancillaReflection
-    uid: reflectionoracle
-  - name: phases
-    uid: ampampreflectionphases
-  - name: signalOracle
-    uid: obliviousoracle
-  - name: targetStateReflection
-    uid: reflectionoracle
+  - uid: ampampreflectionphases
+  - uid: reflectionoracle
+  - uid: reflectionoracle
+  - uid: obliviousoracle
 output:
   content: '((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
   types:
   - isOperation: true
-    types:
-    - types:
+    input:
+      types:
       - uid: Qubit
         isPrimitive: true
         isArray: true
       - uid: Qubit
         isPrimitive: true
         isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled

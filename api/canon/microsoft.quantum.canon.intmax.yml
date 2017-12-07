@@ -7,11 +7,9 @@ syntax: 'function IntMax (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'
   types:
-  - name: a
-    uid: Int
+  - uid: Int
     isPrimitive: true
-  - name: b
-    uid: Int
+  - uid: Int
     isPrimitive: true
 output:
   content: Int

@@ -11,17 +11,16 @@ syntax: 'operation IterateThroughCartesianProduct (bounds : Int[], op : (Int[] =
 input:
   content: '(bounds : Int[], op : (Int[] => ()))'
   types:
-  - name: bounds
-    uid: Int
+  - uid: Int
     isPrimitive: true
     isArray: true
-  - name: op
-    isOperation: true
-    types:
-    - uid: Int
+  - isOperation: true
+    input:
+      uid: Int
       isPrimitive: true
       isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
 output:
   content: ()

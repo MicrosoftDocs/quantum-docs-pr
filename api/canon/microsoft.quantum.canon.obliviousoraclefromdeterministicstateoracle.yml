@@ -8,10 +8,8 @@ syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : D
 input:
   content: '(ancillaOracle : DeterministicStateOracle, signalOracle : ObliviousOracle)'
   types:
-  - name: ancillaOracle
-    uid: deterministicstateoracle
-  - name: signalOracle
-    uid: obliviousoracle
+  - uid: deterministicstateoracle
+  - uid: obliviousoracle
 output:
   content: ObliviousOracle
   types:

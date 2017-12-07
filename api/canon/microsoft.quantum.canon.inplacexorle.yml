@@ -11,13 +11,13 @@ syntax: 'operation InPlaceXorLE (value : Int, target : LittleEndian) : ()'
 input:
   content: '(value : Int, target : LittleEndian)'
   types:
-  - name: target
-    summary: ' A quantum register which is used to store `value` in little-endian encoding.'
-    uid: littleendian
   - name: value
     summary: ' An integer which is assumed to be non-negative.'
     uid: Int
     isPrimitive: true
+  - name: target
+    summary: ' A quantum register which is used to store `value` in little-endian encoding.'
+    uid: littleendian
 output:
   content: ()
   types:

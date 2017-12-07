@@ -8,8 +8,7 @@ syntax: 'operation I (target : Qubit) : ()'
 input:
   content: '(target : Qubit)'
   types:
-  - name: target
-    uid: Qubit
+  - uid: Qubit
     isPrimitive: true
 output:
   content: ()

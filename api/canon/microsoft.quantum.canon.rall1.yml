@@ -8,11 +8,9 @@ syntax: 'operation RAll1 (phase : Double, qubits : Qubit[]) : ()'
 input:
   content: '(phase : Double, qubits : Qubit[])'
   types:
-  - name: phase
-    uid: Double
+  - uid: Double
     isPrimitive: true
-  - name: qubits
-    uid: Qubit
+  - uid: Qubit
     isPrimitive: true
     isArray: true
 output:

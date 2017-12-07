@@ -9,15 +9,15 @@ syntax: 'operation BitFlipEncoder (physRegister : Qubit[], auxQubits : Qubit[]) 
 input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
+  - name: physRegister
+    summary: ' A register of physical qubits representing the data to be protected.'
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
   - name: auxQubits
     summary: >2
        A register of auxillary qubits initially in the $\ket{00}$ state to be
        used in encoding the data to be protected.
-    uid: Qubit
-    isPrimitive: true
-    isArray: true
-  - name: physRegister
-    summary: ' A register of physical qubits representing the data to be protected.'
     uid: Qubit
     isPrimitive: true
     isArray: true

@@ -7,8 +7,7 @@ syntax: 'function SteaneCodeRecoveryZ (syndrome : Syndrome) : Pauli[]'
 input:
   content: '(syndrome : Syndrome)'
   types:
-  - name: syndrome
-    uid: syndrome
+  - uid: syndrome
 output:
   content: Pauli[]
   types:

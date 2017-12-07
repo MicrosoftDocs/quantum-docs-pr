@@ -17,7 +17,8 @@ operations:
      Applies the doubly controlled–NOT (CCNOT) gate to three qubits.
 - uid: microsoft.quantum.primitive.cnot
   summary: >2
-     Applies the controlled-NOT (CNOT) gate to a pair of qubits
+     Applies the controlled-NOT (CNOT) gate to a pair of qubits,
+
      \begin{align}
          \operatorname{CNOT} \mathrel{:=}
          \begin{bmatrix}
@@ -27,12 +28,13 @@ operations:
              0 & 0 & 1 & 0
          \end{bmatrix},
      \end{align}
+
      where rows and columns are ordered as in the quantum concepts guide.
 - uid: microsoft.quantum.primitive.exp
   summary: >2
      Applies the exponential of a multi-qubit Pauli operator
      \begin{align}
-         \exp\left(i \theta [P_0 \otimes P_1 \cdots P_N] \right),
+         e^{i \theta [P_0 \otimes P_1 \cdots P_N]},
      \end{align}
      where $P_i$ is the $i$th element of `paulis`, and where
      $N = $`Length(paulis)`.
@@ -41,13 +43,14 @@ operations:
      Applies the exponential of a multi-qubit Pauli operator
      with an argument given by a dyadic fraction,
      \begin{align}
-         \exp\left(i \theta \pi k [P_0 \otimes P_1 \cdots P_N] / 2^n \right),
+         e^{i \theta \pi k [P_0 \otimes P_1 \cdots P_N] / 2^n},
      \end{align}
      where $P_i$ is the $i$th element of `paulis`, and where
      $N = $`Length(paulis)`.
 - uid: microsoft.quantum.primitive.h
   summary: >2
      Applies the Hadamard transformation to a single qubit,
+
      \begin{align}
          H \mathrel{:=}
          \frac{1}{\sqrt{2}}
@@ -98,7 +101,7 @@ operations:
      where $\mu \in \{I, X, Y, Z\}$.
 - uid: microsoft.quantum.primitive.r1
   summary: >2
-     Applies a rotation about the $\ket{1}$-axis by a given angle,
+     Applies a rotation about the $\ket{1}$ state by a given angle,
      \begin{align}
          R_1(\theta) \mathrel{:=}
          \operatorname{diag}(1, e^{i\theta}).
@@ -162,6 +165,7 @@ operations:
 - uid: microsoft.quantum.primitive.s
   summary: >2
      Applies the $\pi / 4$ phase gate to a single qubit,
+
      \begin{align}
          S \mathrel{:=}
          \begin{bmatrix}
@@ -172,6 +176,7 @@ operations:
 - uid: microsoft.quantum.primitive.swap
   summary: >2
      Applies the SWAP gate to a pair of qubits
+
      \begin{align}
          \operatorname{SWAP} \mathrel{:=}
          \begin{bmatrix}
@@ -181,10 +186,12 @@ operations:
              0 & 0 & 0 & 1
          \end{bmatrix},
      \end{align}
+
      where rows and columns are ordered as in the quantum concepts guide.
 - uid: microsoft.quantum.primitive.t
   summary: >2
      Applies the $\pi / 8$ gate to a single qubit,
+
      \begin{align}
          T \mathrel{:=}
          \begin{bmatrix}

@@ -9,13 +9,13 @@ syntax: 'operation FiveQubitCodeEncoder (physRegister : Qubit[], auxQubits : Qub
 input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
-  - name: auxQubits
-    summary: ' A register of auxillary qubits that will be used to represent the encoded state.</param>'
+  - name: physRegister
+    summary: ' An array of qubits representing an unencoded state.</param>'
     uid: Qubit
     isPrimitive: true
     isArray: true
-  - name: physRegister
-    summary: ' An array of qubits representing an unencoded state.</param>'
+  - name: auxQubits
+    summary: ' A register of auxillary qubits that will be used to represent the encoded state.</param>'
     uid: Qubit
     isPrimitive: true
     isArray: true

@@ -9,14 +9,14 @@ syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem 
 input:
   content: '(multiplier : Double, generatorSystem : GeneratorSystem)'
   types:
-  - name: generatorSystem
-    summary: >2
-       The `GeneratorSystem` to be multiplied.
-    uid: generatorsystem
   - name: multiplier
     summary: ' The multiplier on the coefficient.'
     uid: Double
     isPrimitive: true
+  - name: generatorSystem
+    summary: >2
+       The `GeneratorSystem` to be multiplied.
+    uid: generatorsystem
 output:
   content: GeneratorSystem
   types:

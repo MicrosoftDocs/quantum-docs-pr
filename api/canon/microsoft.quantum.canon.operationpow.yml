@@ -13,10 +13,11 @@ input:
   - name: oracle
     summary: ' An operation $U$ representing the gate to be repeated.'
     isOperation: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
   - name: power
     summary: >2
@@ -29,10 +30,11 @@ output:
   - summary: >2
        A new operation representing $U^m$, where $m = \texttt{power}$.
     isOperation: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.operationpowc

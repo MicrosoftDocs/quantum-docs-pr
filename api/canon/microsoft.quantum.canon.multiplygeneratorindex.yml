@@ -17,14 +17,14 @@ syntax: 'function MultiplyGeneratorIndex (multiplier : Double, generatorIndex : 
 input:
   content: '(multiplier : Double, generatorIndex : GeneratorIndex)'
   types:
-  - name: generatorIndex
-    summary: >2
-       The `GeneratorIndex` to be multiplied.
-    uid: generatorindex
   - name: multiplier
     summary: ' The multiplier on the coefficient.'
     uid: Double
     isPrimitive: true
+  - name: generatorIndex
+    summary: >2
+       The `GeneratorIndex` to be multiplied.
+    uid: generatorindex
 output:
   content: GeneratorIndex
   types:

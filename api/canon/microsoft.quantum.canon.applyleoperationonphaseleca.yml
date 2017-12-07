@@ -7,14 +7,16 @@ syntax: 'operation ApplyLEOperationOnPhaseLECA (op : (LittleEndian => () : Contr
 input:
   content: '(op : (LittleEndian => () : Controlled, Adjoint), target : PhaseLittleEndian)'
   types:
-  - name: op
-    isOperation: true
-    types:
-    - uid: littleendian
-    - uid: ()
+  - isOperation: true
+    input:
+      uid: littleendian
+    output:
+      uid: ()
       isPrimitive: true
-  - name: target
-    uid: phaselittleendian
+    functors:
+    - Controlled
+    - Adjoint
+  - uid: phaselittleendian
 output:
   content: ()
   types:

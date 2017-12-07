@@ -9,8 +9,7 @@ syntax: 'operation MeasureIntegerBE (target : BigEndian) : Int'
 input:
   content: '(target : BigEndian)'
   types:
-  - name: target
-    uid: bigendian
+  - uid: bigendian
 output:
   content: Int
   types:

@@ -9,14 +9,11 @@ syntax: 'function ExpMod (expBase : Int, power : Int, modulus : Int) : Int'
 input:
   content: '(expBase : Int, power : Int, modulus : Int)'
   types:
-  - name: expBase
-    uid: Int
+  - uid: Int
     isPrimitive: true
-  - name: modulus
-    uid: Int
+  - uid: Int
     isPrimitive: true
-  - name: power
-    uid: Int
+  - uid: Int
     isPrimitive: true
 output:
   content: Int

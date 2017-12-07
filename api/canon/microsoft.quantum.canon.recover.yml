@@ -7,12 +7,9 @@ syntax: 'operation Recover (code : QECC, fn : RecoveryFn, logicalRegister : Logi
 input:
   content: '(code : QECC, fn : RecoveryFn, logicalRegister : LogicalRegister)'
   types:
-  - name: code
-    uid: qecc
-  - name: fn
-    uid: recoveryfn
-  - name: logicalRegister
-    uid: logicalregister
+  - uid: qecc
+  - uid: recoveryfn
+  - uid: logicalregister
 output:
   content: ()
   types:

@@ -7,28 +7,34 @@ syntax: "function UncurryOpCA (curriedOp : ('T -> ('U => () : Controlled, Adjoin
 input:
   content: "(curriedOp : ('T -> ('U => () : Controlled, Adjoint)))"
   types:
-  - name: curriedOp
-    isFunction: true
-    types:
-    - uid: "'T"
+  - isFunction: true
+    input:
+      uid: "'T"
       isLocal: true
-    - isOperation: true
-      types:
-      - uid: "'U"
+    output:
+      isOperation: true
+      input:
+        uid: "'U"
         isLocal: true
-      - uid: ()
+      output:
+        uid: ()
         isPrimitive: true
+      functors: &o0
+      - Controlled
+      - Adjoint
 output:
   content: "(('T, 'U) => () : Controlled, Adjoint)"
   types:
   - isOperation: true
-    types:
-    - types:
+    input:
+      types:
       - uid: "'T"
         isLocal: true
       - uid: "'U"
         isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors: *o0
 seeAlso:
 - microsoft.quantum.canon.uncurryop

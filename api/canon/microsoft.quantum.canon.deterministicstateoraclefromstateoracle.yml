@@ -8,11 +8,9 @@ syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, s
 input:
   content: '(idxFlagQubit : Int, stateOracle : StateOracle)'
   types:
-  - name: idxFlagQubit
-    uid: Int
+  - uid: Int
     isPrimitive: true
-  - name: stateOracle
-    uid: stateoracle
+  - uid: stateoracle
 output:
   content: DeterministicStateOracle
   types:

@@ -7,17 +7,19 @@ syntax: "operation ApplyToEachCA (singleElementOperation : ('T => () : Adjoint, 
 input:
   content: "(singleElementOperation : ('T => () : Adjoint, Controlled), register : 'T[])"
   types:
-  - name: register
-    uid: "'T"
+  - isOperation: true
+    input:
+      uid: "'T"
+      isLocal: true
+    output:
+      uid: ()
+      isPrimitive: true
+    functors: &o0
+    - Adjoint
+    - Controlled
+  - uid: "'T"
     isLocal: true
     isArray: true
-  - name: singleElementOperation
-    isOperation: true
-    types:
-    - uid: "'T"
-      isLocal: true
-    - uid: ()
-      isPrimitive: true
 output:
   content: ()
   types:
@@ -25,6 +27,4 @@ output:
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.applytoeach
-functors:
-- Adjoint
-- Controlled
+functors: *o0

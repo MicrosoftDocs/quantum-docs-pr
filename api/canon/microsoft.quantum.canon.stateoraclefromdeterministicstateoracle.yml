@@ -8,8 +8,7 @@ syntax: 'function StateOracleFromDeterministicStateOracle (oracleStateDeterminis
 input:
   content: '(oracleStateDeterministic : DeterministicStateOracle)'
   types:
-  - name: oracleStateDeterministic
-    uid: deterministicstateoracle
+  - uid: deterministicstateoracle
 output:
   content: StateOracle
   types:

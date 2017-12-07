@@ -7,14 +7,10 @@ syntax: 'operation RecoverCSS (code : CSS, fnX : RecoveryFn, fnZ : RecoveryFn, l
 input:
   content: '(code : CSS, fnX : RecoveryFn, fnZ : RecoveryFn, logicalRegister : LogicalRegister)'
   types:
-  - name: code
-    uid: css
-  - name: fnX
-    uid: recoveryfn
-  - name: fnZ
-    uid: recoveryfn
-  - name: logicalRegister
-    uid: logicalregister
+  - uid: css
+  - uid: recoveryfn
+  - uid: recoveryfn
+  - uid: logicalregister
 output:
   content: ()
   types:

@@ -11,16 +11,12 @@ syntax: 'operation ModularAddProductPhaseLE (constMultiplier : Int, modulus : In
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : LittleEndian, phaseSummand : PhaseLittleEndian)'
   types:
-  - name: constMultiplier
-    uid: Int
+  - uid: Int
     isPrimitive: true
-  - name: modulus
-    uid: Int
+  - uid: Int
     isPrimitive: true
-  - name: multiplier
-    uid: littleendian
-  - name: phaseSummand
-    uid: phaselittleendian
+  - uid: littleendian
+  - uid: phaselittleendian
 output:
   content: ()
   types:

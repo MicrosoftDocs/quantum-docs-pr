@@ -7,24 +7,27 @@ syntax: "function OperationPowA (oracle : ('T => () : Adjoint), power : Int) : (
 input:
   content: "(oracle : ('T => () : Adjoint), power : Int)"
   types:
-  - name: oracle
-    isOperation: true
-    types:
-    - uid: "'T"
+  - isOperation: true
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
-  - name: power
-    uid: Int
+    functors: &o0
+    - Adjoint
+  - uid: Int
     isPrimitive: true
 output:
   content: "('T => () : Adjoint)"
   types:
   - isOperation: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors: *o0
 seeAlso:
 - microsoft.quantum.canon.operationpow

@@ -3,18 +3,21 @@ uid: microsoft.quantum.canon.applyreversedoplittleendianca
 name: ApplyReversedOpLittleEndianCA
 type: operation
 namespace: Microsoft.Quantum.Canon
+summary: " Applies an operation that takes little-endian input and that supports\n the controlled and adjoint functors to a register encoding \n an unsigned integer using big-endian format.\n"
 syntax: 'operation ApplyReversedOpLittleEndianCA (op : (LittleEndian => () : Controlled, Adjoint), register : BigEndian) : ()'
 input:
   content: '(op : (LittleEndian => () : Controlled, Adjoint), register : BigEndian)'
   types:
-  - name: op
-    isOperation: true
-    types:
-    - uid: littleendian
-    - uid: ()
+  - isOperation: true
+    input:
+      uid: littleendian
+    output:
+      uid: ()
       isPrimitive: true
-  - name: register
-    uid: bigendian
+    functors:
+    - Controlled
+    - Adjoint
+  - uid: bigendian
 output:
   content: ()
   types:

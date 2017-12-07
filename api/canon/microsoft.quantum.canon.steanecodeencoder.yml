@@ -8,12 +8,10 @@ syntax: 'operation SteaneCodeEncoder (physRegister : Qubit[], auxQubits : Qubit[
 input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
-  - name: auxQubits
-    uid: Qubit
+  - uid: Qubit
     isPrimitive: true
     isArray: true
-  - name: physRegister
-    uid: Qubit
+  - uid: Qubit
     isPrimitive: true
     isArray: true
 output:

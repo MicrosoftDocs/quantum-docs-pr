@@ -6,27 +6,28 @@ namespace: Microsoft.Quantum.Canon
 summary: >2
    Applies a Pauli operator on the $n^{\text{th}}$ qubit if the $n^{\text{th}}$
    bit of a Boolean array matches a given input.
-remarks: ' The Boolean array and the quantum register must be of equal length.'
+remarks: >2
+   The Boolean array and the quantum register must be of equal length
 syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : ()'
 input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
   types:
+  - name: pauli
+    summary: ' Pauli operator to apply to `qubits[idx]` where `bitsApply == bits[idx]`'
+    uid: Pauli
+    isPrimitive: true
   - name: bitApply
-    summary: ' apply Pauli if bit is this value.'
+    summary: ' apply Pauli if bit is this value'
     uid: Bool
     isPrimitive: true
   - name: bits
-    summary: ' Boolean array.'
+    summary: ' Boolean register specifying which corresponding qubit in `qubits` should be operated on'
     uid: Bool
     isPrimitive: true
     isArray: true
-  - name: pauli
-    summary: ' Pauli operator to apply to qubits where `bitsApply == bits[idx]`.'
-    uid: Pauli
-    isPrimitive: true
   - name: qubits
     summary: >2
-       Quantum register to which a Pauli operator is to be applied.
+       Quantum register on which to selectively apply the specified Pauli operator
     uid: Qubit
     isPrimitive: true
     isArray: true

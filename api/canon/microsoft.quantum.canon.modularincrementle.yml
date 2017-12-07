@@ -8,14 +8,11 @@ syntax: 'operation ModularIncrementLE (increment : Int, modulus : Int, target : 
 input:
   content: '(increment : Int, modulus : Int, target : LittleEndian)'
   types:
-  - name: increment
-    uid: Int
+  - uid: Int
     isPrimitive: true
-  - name: modulus
-    uid: Int
+  - uid: Int
     isPrimitive: true
-  - name: target
-    uid: littleendian
+  - uid: littleendian
 output:
   content: ()
   types:

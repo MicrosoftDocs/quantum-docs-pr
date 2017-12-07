@@ -26,10 +26,11 @@ input:
        A sequence of operations to be performed on a given input.
     isArray: true
     isOperation: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
 output:
   content: ('T => ())
@@ -38,10 +39,11 @@ output:
        A new operation that performs each given operation in sequence
        on its input.
     isOperation: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.bindc

@@ -8,12 +8,10 @@ syntax: 'operation NoOp2 (qubitsA : Qubit[], qubitsB : Qubit[]) : ()'
 input:
   content: '(qubitsA : Qubit[], qubitsB : Qubit[])'
   types:
-  - name: qubitsA
-    uid: Qubit
+  - uid: Qubit
     isPrimitive: true
     isArray: true
-  - name: qubitsB
-    uid: Qubit
+  - uid: Qubit
     isPrimitive: true
     isArray: true
 output:

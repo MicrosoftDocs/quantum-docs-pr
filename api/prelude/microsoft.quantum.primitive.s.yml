@@ -5,6 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Primitive
 summary: >2
    Applies the $\pi / 4$ phase gate to a single qubit,
+
    \begin{align}
        S \mathrel{:=}
        \begin{bmatrix}

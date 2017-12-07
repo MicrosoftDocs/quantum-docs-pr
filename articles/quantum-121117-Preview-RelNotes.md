@@ -27,16 +27,15 @@ ms.topic: article-type-from-white-list
 
 ### Project Creation
 
-- Solution (.sln) must be one directory higher than each project (.csproj) in it (or else install nugets manually)
+- When creating a solution (.sln) that will use Q#, the solution must be one directory higher than each project (.csproj) in the solution. When creating a new solution, this can be accomplished by making sure that the "Create directory for solution" checkbox on the "New Project" dialog box is checked. If this is not done, the Quantum Development Kit NuGet packages will need to be installed manually.
 
 ### Q#
 
 - Intellisense does not display proper errors for Q# code. Make sure that you are displaying Build errors in the Visual Studio Error List to see correct Q# errors. Also note that Q# errors will not show up until after you've done a build.
 - Using a mutable array in a partial application may lead to unexpected behavior.
 - Binding an immutable array to a mutable array (let a = b, where b is a mutable array) may lead to unexpected behavior.
-- In some cases, Q# may allow for passing operations which expect UDTs when to an operation-type input which expects a base type, such that type safety may not be guaranteed in these cases.
 - Profiling, code coverage and other VS plugins may not always count Q# lines and blocks accurately.
-- The Q# compiler does not validate interpolated strings. It is possible (easy?) to create C# compilation errors by misspelling variable names or using expressions in Q# interpolated strings.
+- The Q# compiler does not validate interpolated strings. It is possible to create C# compilation errors by misspelling variable names or using expressions in Q# interpolated strings.
 
 ### Simulation
 
@@ -45,19 +44,19 @@ ms.topic: article-type-from-white-list
 ### Debugging
 
 - F11 (step in) doesn't work in Q# code.
-- Code highlighting in Q# code at a breakpoint or single-step pause can be a bit flaky. In general, the correct line will be highlighted, but often the highlight will start and end at the incorrect columns on the line.
+- Code highlighting in Q# code at a breakpoint or single-step pause is sometimes inaccurate. The correct line will be highlighted, but sometimes the highlight will start and end at incorrect columns on the line.
 
 ### Testing
 
-- Tests must be executed in 64-bit mode. If your tests are failing with BadImageFormatException, go to Test menu and select Test Settings > Default Processor Architecture > X64.
-- Some tests take a long time (~1 to 5 minutes depending on computer) to run — this is normal, as they use up to approximately twenty qubits.
+- Tests must be executed in 64-bit mode. If your tests are failing with a BadImageFormatException, go to the Test menu and select Test Settings > Default Processor Architecture > X64.
+- Some tests take a long time (possibly as much as 5 minutes depending on your computer) to run. This is normal, as they use up to twenty qubits.
 
 ### Samples
 
-- On some machines, some samples may run slowly unless the environment variable OMP_NUM_THREADS is set to "1". See also the release note under "Simulation".
+- On some machines, some small samples may run slowly unless the environment variable OMP_NUM_THREADS is set to "1". See also the release note under "Simulation".
 
 ### Libraries
 
 - There is an implicit assumption that the qubits passed to an operation in different arguments are all distinct. For instance, all of the library operations (and all of the simulators) assume that the two qubits passed to a controlled NOT are different qubits. Violating this assumption may lead to unpredictable unexpected. It is possible to test for this using the quantum computer tracer simulator.
 - The Microsoft.Quantum.Bind function may not act as expected in all cases.
-- In Quantum.Math libraries, function SignD returns a Double type. Actually, logically, it returns only three values: -1, 0, 1. It does not make sense for it to return Double type for this "enum" (one can not even compare return to 0), it must return Int type. The fix is in PR and will go in after the release.
+- In the Microsoft.Quantum.Extensions.Math namespace, the SignD function returns a Double rather than an Int, although the underlying System.Math.Sign function always returns an integer. It is safe to compare the result against 1.0, -1.0, and 0.0, since these doubles all have exact binary representations.

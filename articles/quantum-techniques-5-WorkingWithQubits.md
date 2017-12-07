@@ -239,4 +239,4 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : () {
 }
 ```
  
-Notable programmatic features shown in this operation are a more complex `fixup` part of the loop which involves quantum operations, and the use of `AssertProb` statements to ascertain the probability of measuring the quantum state at certain specified points in the program. See also [Testing and debugging](xref:quantum-techniques-testinganddebugging) for more information about `Assert` and `AssertProb` statements. 
+Notable programmatic features shown in this operation are a more complex `fixup` part of the loop which involves quantum operations, and the use of `AssertProb` statements to ascertain the probability of measuring the quantum state at certain specified points in the program. See also [Testing and debugging](xref:microsoft.quantum.techniques.testing-and-debugging) for more information about `Assert` and `AssertProb` statements. 

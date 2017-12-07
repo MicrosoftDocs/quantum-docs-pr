@@ -10,6 +10,8 @@ input:
   content: '(stack : ResultStack)'
   types:
   - name: stack
+    summary: >2
+       The stack whose capacity is to be determined.
     uid: resultstack
 output:
   content: Int

@@ -10,9 +10,12 @@ input:
   content: '(a : Int, modulus : Int)'
   types:
   - name: a
+    summary: ' The number being inverted'
     uid: Int
     isPrimitive: true
   - name: modulus
+    summary: >2
+       The modulus according to which the numbers are inverted
     uid: Int
     isPrimitive: true
 output:

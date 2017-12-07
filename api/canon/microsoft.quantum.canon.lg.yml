@@ -10,6 +10,8 @@ input:
   content: '(input : Double)'
   types:
   - name: input
+    summary: >2
+       A real number $x$.
     uid: Double
     isPrimitive: true
 output:

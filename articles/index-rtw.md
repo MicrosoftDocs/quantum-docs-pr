@@ -2,7 +2,7 @@
 uid: microsoft.quantum.index
 ---
 <img src="media/mobius_strip_preview.png" style="float: right;" title="Quantum" alt="Quantum">
-# Welcome to the Microsoft Quantum Development Kit preview #
+# Welcome to the Microsoft Quantum Development Kit Preview #
 
 Thank you for your interest in Microsoft's Quantum Development Kit preview. The development kit contains the tools you'll need to build your own quantum computing programs and experiments. Assuming some experience with Microsoft Visual Studio, beginners can write their first quantum program, and experienced researchers can quickly and efficiently develop new quantum algorithms.
 
@@ -10,19 +10,19 @@ To jump right in, start with [Installation and validation](quantum-InstallConfig
 
 If you'd like more general information about Microsoft's quantum computing initiative, see [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/).
 
-## Feedback pipeline
+## Feedback Pipeline
 Your feedback about all parts of the Quantum Development Kit is important. We ask you to provide feedback by joining our community of developers at [Microsoft Quantum - Feedback](https://quantum.uservoice.com/). Sign in and share your experience in one of the following forums. 
 
 - Q# language
 - Debugging and simulation
-- Samples and Documentation
+- Samples and documentation
 - Libraries
 - Setup and Visual Studio integration
 - General ideas and feature requests
 
 You will need a [Microsoft Account](https://signup.live.com/) to provide feedback.
  
-## Microsoft Quantum Development Kit components
+## Microsoft Quantum Development Kit Components
 The Quantum Development Kit preview provides a complete development and simulation environment that contains the following components.
 <table>
 <tr><th>Component</th><th>Function</th></tr>
@@ -33,12 +33,12 @@ The Quantum Development Kit preview provides a complete development and simulati
 <tr><td>Visual Studio extension</td><td>The extension contains templates for Q# files and projects as well as syntax highlighting. The extension also installs and creates automatic hooks to the compiler.</td></tr>
 </table>
 
-## Quantum Development Kit documentation
+## Quantum Development Kit Documentation
 The current documentation includes the following topics.
 * [Microsoft Quantum Development kit release notes](quantum-121117-Preview-RelNotes.md)
 * [Quantum computing concepts](quantum-concepts-1-Intro.md) includes topics such the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
 * [Installation and validation](quantum-InstallConfig.md) describes how to quickly set up your quantum development environment. Your Visual Studio environment will be enhanced with a compiler for the Q# language and templates for Q# projects and files.
-* [Quickstart- your first quantum program](quantum-WriteAQuantumProgram.md) walks you through how to create the Teleport application in the Visual Studio development environment. You'll learn how to define a Q# operation, call the Q# operation using C#, and how to execute your quantum algorithm.
+* [Quickstart - your first quantum program](quantum-WriteAQuantumProgram.md) walks you through how to create the Teleport application in the Visual Studio development environment. You'll learn how to define a Q# operation, call the Q# operation using C#, and how to execute your quantum algorithm.
 * [Managing quantum machines and drivers](quantum-SimulatorsAndMachines.md) describes how quantum algorithms are executed, what quantum machines are available, and how to write a non-Q# driver for the quantum program.
 * [Quantum development techniques](quantum-devguide-1-Intro.md) specifies the core concepts used to create quantum programs in Q#. Topics include file structures, operations and functions, working with qubits, and some advanced topics.
 * [Q# standard libraries](libraries/intro.md) describes the operations and functions that support both the classical language control requirement and the Q# quantum algorithms. Topics include control flow, data structures, error correction, testing, and debugging. 

@@ -12,6 +12,7 @@ input:
   content: '(preparation : (Qubit[] => ()), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
   types:
   - name: measurement
+    summary: ' An operation $M$ representing the measurement of interest.'
     isOperation: true
     types:
     - uid: Qubit
@@ -20,12 +21,21 @@ input:
     - uid: Result
       isPrimitive: true
   - name: nMeasurements
+    summary: >2
+       The number of times that the measurement should be performed
+       in order to estimate the frequency of interest.
     uid: Int
     isPrimitive: true
   - name: nQubits
+    summary: >2-
+       The number of qubits on which the preparation and measurement
+       each act.
     uid: Int
     isPrimitive: true
   - name: preparation
+    summary: >2-
+       An operation $P$ that prepares a given state $\rho$ on
+       its input register.
     isOperation: true
     types:
     - uid: Qubit

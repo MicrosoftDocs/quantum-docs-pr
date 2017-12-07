@@ -16,10 +16,13 @@ input:
   content: "(mapper : ('T -> 'U), array : 'T[])"
   types:
   - name: array
+    summary: >2
+       An array of elements over `'T`.
     uid: "'T"
     isLocal: true
     isArray: true
   - name: mapper
+    summary: " A function from `'T` to `'U` that is used to map elements."
     isFunction: true
     types:
     - uid: "'T"

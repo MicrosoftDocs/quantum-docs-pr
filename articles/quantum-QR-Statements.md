@@ -27,9 +27,7 @@ ms.topic: article-type-from-white-list
 
 Comments begin with two forward slashes, `//`, 
 and continue until the end of line. 
-Comments are treated as whitespace for parsing purposes.
-
-
+While expressions can be split across multiple lines, end of line comments in the middle of an expression are not supported. 
 A comment may appear anywhere in a Q# source file, 
 including where statements are not valid.
 
@@ -74,9 +72,9 @@ For example:
 /// ```
 ///
 /// # See Also
-/// - @"Microsoft.Quantum.Primitive.H": An example of a related operation.
-operation ApplyTwice<'T>(op : ('T => ()), target : 'T) {
-    Body {
+/// - Microsoft.Quantum.Primitive.H
+operation ApplyTwice<'T>(op : ('T => ()), target : 'T) : () {
+    body {
         op(target);
         op(target);
     }
@@ -91,18 +89,14 @@ The following names are recognized as documentation comment headers.
 - **Type Parameters**: An empty section which contains one additional subsection for each generic type parameter.
 - **Example**: A short example of the operation, function or type in use.
 - **Remarks**: Miscellaneous prose describing some aspect of the operation, function, or type.
-- **See Also**: A list of links and
-  [cross-references](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html?tabs=tabid-1%2Ctabid-a#cross-reference)
-  related to the item being documented.
+- **See Also**: A list of fully qualified names indicating related functions, operations, or user-defined types.
 - **References**: A list of references and citations for the item being documented.
 
 ## Namespaces
 
 Every Q# operation, function, and user-defined type is
 defined within a namespace.
-Q# namespaces are treated the same as namespaces in any other
-.NET language, and follow the same rules for naming and for
-forming qualified names.
+Q# follows the same rules for naming as other .NET languages. However, Q# does not support nested namespaces. In particular, for two defined namespaces `NS.Name1` and `NS.Name2`, only the fully qualified namespace can be opened - a directive `open NS;` is **invalid**. 
 
 Every Q# file must include at least one `namespace` directive.
 This consists of the `namespace` keyword, followed by the namespace
@@ -340,7 +334,7 @@ if a == b {
 
 ## Control Flow
 
-### For Loop
+### For-Loop
 
 The `for` statement supports iteration through a simple integer range. 
 The statement consists of the keyword `for`, followed by an identifier, 
@@ -366,7 +360,7 @@ The loop variable is bound at each entrance to the loop body, and unbound
 at the end of the body. 
 In particular, the loop variable is not bound after the for loop is completed.
 
-### Repeat Until Success Loop
+### Repeat-Until-Success Loop
 
 The `repeat` statement supports the quantum “repeat until success” pattern. 
 It consists of the keyword `repeat`, followed by a statement block 

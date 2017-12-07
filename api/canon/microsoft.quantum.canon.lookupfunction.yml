@@ -17,6 +17,8 @@ input:
   content: "(array : 'T[])"
   types:
   - name: array
+    summary: >2
+       The array to be represented as a lookup function.
     uid: "'T"
     isLocal: true
     isArray: true

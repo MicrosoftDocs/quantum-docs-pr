@@ -20,7 +20,9 @@ ms.topic: article-type-from-white-list
 # ms.reviewer:
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
-# Installing and validating the Q# development environment
+
+# Installing and Validating the Q# Development Environment
+
 
 ## Prerequisites
 
@@ -33,7 +35,7 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 3. _**Important!**_ &nbsp;When you are presented with the option to select the tools for specific workloads, check the boxes for **Universal Windows Platform development** and **.NET desktop development**
 4. After selecting your workloads, click **Install** to complete the installation.
 
-## Creating the Q# development environment 
+## Creating the Q# Development Environment 
 
 1. Install the Microsoft Quantum Development Kit
 
@@ -45,7 +47,7 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
     6. Your security software may present a confirmation pane. Click **Allow**, or the comparable term used by your browser.
     7. The Quantum Development Kit extension will be installed in Visual Studio 2017.
 
-## Validating your environment
+## Validating Your Environment
 
 In this section you will clone the quantum libraries, and run a sample application to verify that your Q# environment is correctly installed and configured. 
 

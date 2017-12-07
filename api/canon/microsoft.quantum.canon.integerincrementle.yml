@@ -9,9 +9,11 @@ input:
   content: '(increment : Int, target : LittleEndian)'
   types:
   - name: increment
+    summary: " The integer by which the `target` is incremented by\n "
     uid: Int
     isPrimitive: true
   - name: target
+    summary: ' Quantum register encoding an unsigned integer using little-endian encoding.'
     uid: littleendian
 output:
   content: ()

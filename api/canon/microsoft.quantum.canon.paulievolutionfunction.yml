@@ -10,6 +10,9 @@ input:
   content: '(generatorIndex : GeneratorIndex)'
   types:
   - name: generatorIndex
+    summary: >2
+       A generator index to be represented as unitary evolution in the Pauli
+       basis.
     uid: generatorindex
 output:
   content: EvolutionUnitary

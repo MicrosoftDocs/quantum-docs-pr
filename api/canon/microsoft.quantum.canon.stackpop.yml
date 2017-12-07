@@ -10,6 +10,8 @@ input:
   content: '(stack : ResultStack)'
   types:
   - name: stack
+    summary: >2
+       The stack to be popped.
     uid: resultstack
 output:
   content: ResultStack

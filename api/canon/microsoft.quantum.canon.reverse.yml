@@ -11,6 +11,8 @@ input:
   content: "(array : 'T[])"
   types:
   - name: array
+    summary: >2
+       An array whose elements are to be copied in reverse order.
     uid: "'T"
     isLocal: true
     isArray: true

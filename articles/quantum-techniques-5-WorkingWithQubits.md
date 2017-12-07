@@ -41,22 +41,22 @@ At the end of the `using` block, any qubits allocated by that block are immediat
 > [!WARNING]
 > Target machines expect that qubits are in the $\ket{0}$ state immediately before deallocation, so that they can be reused and offered to other `using` blocks for allocation.
 > Whenever possible, use unitary operations to return any allocated qubits to $\ket{0}$.
-> If need be, the @"microsoft.quantum.canon.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$.
+> If need be, the @"microsoft.quantum.canon.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$. Such a measurement will destroy any entanglement with the remaining qubits. 
 
 ## Primitive Gates ##
 
 Once allocated, a qubit can then be passed to functions and operations.
 In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.
-We will see these operations in more detail in <!-- TODO: link to primitive operations in stdlib_techniques. -->, but for now, we mention a few useful primitive operations that can be used to interact with qubits.
+We will see these operations in more detail in [Primitive Operations and Functions](libraries/prelude.md), but for now, we mention a few useful primitive operations that can be used to interact with qubits.
 
 First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the primitive operations `X`, `Y`, and `Z`, each of which as type `(Qubit => () : Adjoint, Controlled)`.
-As described in @qc_concepts <!-- TODO: more specific link -->, we can think of $X$ and hence of `X` as a bit-flip operation or NOT gate.
+As described in [Primitive Operations and Functions](libraries/prelude.md), we can think of $X$ and hence of `X` as a bit-flip operation or NOT gate.
 This lets us prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : () {
     body {
-        let nQubits = length(register);
+        let nQubits = Length(register);
         for (idxQubit in 0..nQubits - 1) {
             if (bitstring[idxQubit]) {
                 X(register[idxQubit]);
@@ -151,7 +151,7 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 
 The Q# language allows dependencies of classical control flow on measurement results of qubits. This in turn enables to implement powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries. As an example, it is easy to implement so-called *Repeat-Until-Success* in Q# which are probabilistic circuits that have an *expected* low cost in terms of elementary gates, but for which the true cost depends on an actual run and an actual interleaving of various possible branchings. 
 
-To facilitate Repeat-Until-Success (RUS) patterns, the Q# supports the construct
+To facilitate Repeat-Until-Success (RUS) patterns, Q# supports the construct
 ```qsharp
 repeat {
     statement1 
@@ -164,7 +164,11 @@ fixup {
 where `statement1` and `statement2` can be any valid Q# statement, and `expression` any valid expression that evaluates to a value of type `Bool`. In a typical use case, the following circuit implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere. This is accomplished by using a known RUS pattern: 
 
 ```qsharp
+<<<<<<< HEAD
 operation RUScircuit (qubit : Qubit) : () {
+=======
+operation RUScircuitV1 (qubit : Qubit) : () {
+>>>>>>> origin/master
     body {
         using(ancillas = Qubit[2]) {
             ApplyToEachA(H, ancillas);

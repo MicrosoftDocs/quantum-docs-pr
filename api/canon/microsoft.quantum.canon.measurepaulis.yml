@@ -11,6 +11,8 @@ input:
   content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result))'
   types:
   - name: gadget
+    summary: >2
+       Operation which performs the measurement of a given multi-qubit operator.
     isOperation: true
     types:
     - types:
@@ -23,11 +25,13 @@ input:
     - uid: Result
       isPrimitive: true
   - name: paulis
+    summary: ' Array of multi-qubit Pauli operators to measure.'
     isArray: true
     types:
     - uid: Pauli
       isPrimitive: true
   - name: target
+    summary: ' Register on which to measure the given operators.'
     uid: Qubit
     isPrimitive: true
     isArray: true

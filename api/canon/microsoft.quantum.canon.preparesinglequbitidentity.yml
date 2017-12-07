@@ -26,6 +26,9 @@ input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
+    summary: >2
+       A qubit whose state is to be depolarized in the manner
+       described above.
     uid: Qubit
     isPrimitive: true
 output:

@@ -15,6 +15,7 @@ input:
   content: '(actual : (Qubit[] => ()), expected : (Qubit[] => () : Adjoint), nQubits : Int)'
   types:
   - name: actual
+    summary: ' Operation to be tested.'
     isOperation: true
     types:
     - uid: Qubit
@@ -23,6 +24,7 @@ input:
     - uid: ()
       isPrimitive: true
   - name: expected
+    summary: ' Operation defining the expected behavior for the operation under test.'
     isOperation: true
     types:
     - uid: Qubit
@@ -31,6 +33,7 @@ input:
     - uid: ()
       isPrimitive: true
   - name: nQubits
+    summary: ' Number of qubits to pass to each operation.'
     uid: Int
     isPrimitive: true
 output:

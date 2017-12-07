@@ -11,6 +11,8 @@ input:
   content: '(a : Int)'
   types:
   - name: a
+    summary: >2
+       The integer bit-size of which is computed.
     uid: Int
     isPrimitive: true
 output:

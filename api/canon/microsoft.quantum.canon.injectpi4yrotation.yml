@@ -32,9 +32,14 @@ input:
   content: '(data : Qubit, magic : Qubit)'
   types:
   - name: data
+    summary: >2
+       A qubit to be rotated about $Y$ by $\pi / 4$.
     uid: Qubit
     isPrimitive: true
   - name: magic
+    summary: >2
+       A qubit initially in the magic state. Following application
+       of this operation, `magic` is returned to the $\ket{0}$ state.
     uid: Qubit
     isPrimitive: true
 output:

@@ -21,7 +21,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Introduction to the Q# standard libraries #
+# Introduction to the Q# Standard Libraries #
 
 Q# is supported by a range of different useful operations, functions, and user-defined types that comprise the Q# *standard library*.
 The Q# standard library is split into two main parts:
@@ -33,6 +33,6 @@ The Q# standard library is split into two main parts:
 
 The `Microsoft.Quantum.Simulation.Simulators` NuGet package installed during [installation and validation](../quantum-InstallConfig.md) provides a target machine which implements the prelude by calling into a local simulator, while the `Microsoft.Quantum.Canon` package <!-- TODO: check that this is actually how the canon is distributed --> provides an implementation of the canon that references definitions in the prelude.
 
-The symbols defined by each of the prelude and the canon are defined in much greater and more exhaustive detail in the [API documentation]<!-- TODO: link! -->.
+The symbols defined by each of the prelude and the canon are defined in much greater and more exhaustive detail in the [API documentation](xref:microsoft.quantum.standardlibsintro).
 In this section, we will outline the most salient features of each part of the standard library and provide some context about how each feature might be used in practice.
 

@@ -16,9 +16,12 @@ input:
   content: '(a : Int, qs : BigEndian)'
   types:
   - name: a
+    summary: " approximation parameter which determines at which level the controlled Z-rotations that \n occur in the QFT circuit are pruned."
     uid: Int
     isPrimitive: true
   - name: qs
+    summary: >2
+       quantum register of n qubits to which the approximate quantum Fourier transform is applied.
     uid: bigendian
 output:
   content: ()

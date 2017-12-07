@@ -10,6 +10,8 @@ input:
   content: "(array : 'A[])"
   types:
   - name: array
+    summary: >2
+       Array of which the first element is taken. Array must have length at least 1.
     uid: "'A"
     isLocal: true
     isArray: true

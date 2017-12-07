@@ -10,6 +10,7 @@ input:
   content: '(bits : Bool[])'
   types:
   - name: bits
+    summary: ' Bits in binary representation of number.'
     uid: Bool
     isPrimitive: true
     isArray: true

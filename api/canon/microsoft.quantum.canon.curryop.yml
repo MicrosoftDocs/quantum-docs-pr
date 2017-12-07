@@ -21,6 +21,8 @@ input:
   content: "(op : (('T, 'U) => ()))"
   types:
   - name: op
+    summary: >2
+       An operation whose input is a pair.
     isOperation: true
     types:
     - types:

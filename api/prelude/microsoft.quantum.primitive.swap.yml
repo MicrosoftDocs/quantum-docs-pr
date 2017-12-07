@@ -27,9 +27,12 @@ input:
   content: '(qubit1 : Qubit, qubit2 : Qubit)'
   types:
   - name: qubit1
+    summary: ' First qubit to be swapped.'
     uid: Qubit
     isPrimitive: true
   - name: qubit2
+    summary: >2
+       Second qubit to be swapped.
     uid: Qubit
     isPrimitive: true
 output:

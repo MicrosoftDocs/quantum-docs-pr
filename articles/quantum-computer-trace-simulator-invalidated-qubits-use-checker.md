@@ -20,7 +20,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Invalidated qubits Use Checker
+# Invalidated Qubits Use Checker
 
 The `Invalidated Qubits Use Checker` is a part of the quantum computer [Trace
 Simulator](quantum-computer-trace-simulator-1.md) designed for detecting
@@ -41,7 +41,7 @@ operation UseReleasedQubitTest () : () {
 
 When `H` is applied to `q[0]` it points to an already released qubit. This can cause undefined behavior. When the `Invalidated Qubits Use Checker` is enabled, the exception `InvalidatedQubitsUseCheckerException` will be thrown if an operation is applied to an already released qubit. See the API documentation on [InvalidatedQubitsUseCheckerException](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException?view=qsharp-preview&branch=master) for more details.
 
-## Using the Invalidated Qubits Use Checker in your C# program
+## Using the Invalidated Qubits Use Checker in your C# Program
 
 The following is an example of C# driver code for using the quantum computer `Trace
 Simulator` with the `Invalidated Qubits Use Checker` enabled: 

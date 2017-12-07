@@ -26,12 +26,16 @@ input:
   content: '(value : Double, modulo : Double, minValue : Double)'
   types:
   - name: minValue
+    summary: >2
+       The smallest value to be returned by this function.
     uid: Double
     isPrimitive: true
   - name: modulo
+    summary: ' A real number to take the modulus of $x$ with respect to.'
     uid: Double
     isPrimitive: true
   - name: value
+    summary: ' A real number $x$ to take the modulus of.'
     uid: Double
     isPrimitive: true
 output:

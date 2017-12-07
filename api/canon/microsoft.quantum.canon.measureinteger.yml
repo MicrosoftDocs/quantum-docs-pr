@@ -14,6 +14,8 @@ input:
   content: '(target : LittleEndian)'
   types:
   - name: target
+    summary: >2
+       A quantum register which is assumed to be in little endian encoding.
     uid: littleendian
 output:
   content: Int

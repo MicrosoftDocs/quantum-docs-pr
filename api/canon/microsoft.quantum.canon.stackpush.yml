@@ -10,9 +10,12 @@ input:
   content: '(stack : ResultStack, datum : Result)'
   types:
   - name: datum
+    summary: >2
+       The `Result` value to be pushed onto `stack`.
     uid: Result
     isPrimitive: true
   - name: stack
+    summary: ' The stack to be grown.'
     uid: resultstack
 output:
   content: ResultStack

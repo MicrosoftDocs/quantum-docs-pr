@@ -19,12 +19,18 @@ input:
   content: '(pauli : Pauli, location : Int, n : Int)'
   types:
   - name: location
+    summary: >2-
+       An index such that `output[location] == pauli`, where `output` is
+       the output of this function.
     uid: Int
     isPrimitive: true
   - name: n
+    summary: >2
+       Length of the array to be returned.
     uid: Int
     isPrimitive: true
   - name: pauli
+    summary: ' A single-qubit Pauli operator to be placed at the given location.'
     uid: Pauli
     isPrimitive: true
 output:

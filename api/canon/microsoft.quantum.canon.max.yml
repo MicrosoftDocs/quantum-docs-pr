@@ -10,6 +10,8 @@ input:
   content: '(values : Int[])'
   types:
   - name: values
+    summary: >2
+       An array to take the maximum of.
     uid: Int
     isPrimitive: true
     isArray: true

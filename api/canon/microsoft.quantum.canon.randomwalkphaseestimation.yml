@@ -36,7 +36,7 @@ input:
     summary: >2-
        An operation representing a unitary $U$ such that $U(t)\ket{\phi} = e^{i t \phi}\ket{\phi}$
        for a known eigenstate $\ket{\phi}$ and an unknown phase $\phi \in \mathbb{R}^+$.
-    uid: continuousoracle
+    uid: microsoft.quantum.canon.continuousoracle
   - name: eigenstate
     summary: ' A register in the state $\ket{\phi}$.'
     uid: Qubit

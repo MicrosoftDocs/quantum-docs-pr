@@ -7,7 +7,8 @@ syntax: "operation WithC (outerOperation : ('T => () : Adjoint), innerOperation 
 input:
   content: "(outerOperation : ('T => () : Adjoint), innerOperation : ('T => () : Controlled), target : 'T)"
   types:
-  - isOperation: true
+  - name: outerOperation
+    isOperation: true
     input:
       uid: "'T"
       isLocal: true
@@ -16,7 +17,8 @@ input:
       isPrimitive: true
     functors:
     - Adjoint
-  - isOperation: true
+  - name: innerOperation
+    isOperation: true
     input:
       uid: "'T"
       isLocal: true
@@ -25,7 +27,8 @@ input:
       isPrimitive: true
     functors: &o0
     - Controlled
-  - uid: "'T"
+  - name: target
+    uid: "'T"
     isLocal: true
 output:
   content: ()

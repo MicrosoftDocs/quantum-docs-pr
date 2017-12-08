@@ -7,7 +7,8 @@ syntax: 'function SteaneCodeRecoveryZ (syndrome : Syndrome) : Pauli[]'
 input:
   content: '(syndrome : Syndrome)'
   types:
-  - uid: syndrome
+  - name: syndrome
+    uid: microsoft.quantum.canon.syndrome
 output:
   content: Pauli[]
   types:

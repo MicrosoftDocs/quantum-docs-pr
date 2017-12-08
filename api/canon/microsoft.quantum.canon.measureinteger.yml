@@ -16,7 +16,7 @@ input:
   - name: target
     summary: >2
        A quantum register which is assumed to be in little endian encoding.
-    uid: littleendian
+    uid: microsoft.quantum.canon.littleendian
 output:
   content: Int
   types:

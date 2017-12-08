@@ -36,7 +36,8 @@ input:
     output:
       uid: ()
       isPrimitive: true
-  - uid: "'T"
+  - name: target
+    uid: "'T"
     isLocal: true
 output:
   content: ()

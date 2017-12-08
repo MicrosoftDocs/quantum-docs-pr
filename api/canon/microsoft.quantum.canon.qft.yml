@@ -14,7 +14,7 @@ input:
   - name: qs
     summary: >2
        Quantum register to which the Quantum Fourier Transform is applied
-    uid: bigendian
+    uid: microsoft.quantum.canon.bigendian
 output:
   content: ()
   types:

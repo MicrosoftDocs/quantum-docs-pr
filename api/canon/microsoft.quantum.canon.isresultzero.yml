@@ -8,7 +8,8 @@ syntax: 'function IsResultZero (input : Result) : Bool'
 input:
   content: '(input : Result)'
   types:
-  - uid: Result
+  - name: input
+    uid: Result
     isPrimitive: true
 output:
   content: Bool

@@ -27,4 +27,4 @@ output:
   - summary: >2-
        The physical and auxillary qubits used in encoding, represented as a
        logical register.
-    uid: logicalregister
+    uid: microsoft.quantum.canon.logicalregister

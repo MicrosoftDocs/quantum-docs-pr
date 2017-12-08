@@ -8,9 +8,11 @@ syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : D
 input:
   content: '(ancillaOracle : DeterministicStateOracle, signalOracle : ObliviousOracle)'
   types:
-  - uid: deterministicstateoracle
-  - uid: obliviousoracle
+  - name: ancillaOracle
+    uid: microsoft.quantum.canon.deterministicstateoracle
+  - name: signalOracle
+    uid: microsoft.quantum.canon.obliviousoracle
 output:
   content: ObliviousOracle
   types:
-  - uid: obliviousoracle
+  - uid: microsoft.quantum.canon.obliviousoracle

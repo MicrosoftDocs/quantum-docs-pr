@@ -29,7 +29,7 @@ input:
   types:
   - name: ccnot
     summary: ' The CCNOT gate to use for the construction.'
-    uid: ccnotop
+    uid: microsoft.quantum.canon.ccnotop
   - name: controls
     summary: >2-
        A register of qubits to be used as controls for the and ladder.

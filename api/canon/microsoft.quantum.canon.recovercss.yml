@@ -7,10 +7,14 @@ syntax: 'operation RecoverCSS (code : CSS, fnX : RecoveryFn, fnZ : RecoveryFn, l
 input:
   content: '(code : CSS, fnX : RecoveryFn, fnZ : RecoveryFn, logicalRegister : LogicalRegister)'
   types:
-  - uid: css
-  - uid: recoveryfn
-  - uid: recoveryfn
-  - uid: logicalregister
+  - name: code
+    uid: microsoft.quantum.canon.css
+  - name: fnX
+    uid: microsoft.quantum.canon.recoveryfn
+  - name: fnZ
+    uid: microsoft.quantum.canon.recoveryfn
+  - name: logicalRegister
+    uid: microsoft.quantum.canon.logicalregister
 output:
   content: ()
   types:

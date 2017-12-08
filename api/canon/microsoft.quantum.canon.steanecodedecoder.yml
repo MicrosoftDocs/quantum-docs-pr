@@ -7,7 +7,8 @@ syntax: 'operation SteaneCodeDecoder (logicalRegister : LogicalRegister) : (Qubi
 input:
   content: '(logicalRegister : LogicalRegister)'
   types:
-  - uid: logicalregister
+  - name: logicalRegister
+    uid: microsoft.quantum.canon.logicalregister
 output:
   content: (Qubit[], Qubit[])
   types:

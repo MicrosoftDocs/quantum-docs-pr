@@ -16,7 +16,7 @@ input:
        such that $U^m$ is applied to the given register, where $U$ is the unitary
        whose phase is to be estimated, and where m is the integer power
        given to the oracle
-    uid: discreteoracle
+    uid: microsoft.quantum.canon.discreteoracle
   - name: power
     summary: ' Number of times to apply the given unitary oracle.'
     uid: Int
@@ -32,7 +32,8 @@ input:
     uid: Qubit
     isPrimitive: true
     isArray: true
-  - uid: Qubit
+  - name: controlQubit
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()

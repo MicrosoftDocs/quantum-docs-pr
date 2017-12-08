@@ -26,7 +26,7 @@ input:
     isPrimitive: true
   - name: oracle
     summary: ' An operation implementing $U^m$ for given integer powers $m$.'
-    uid: discreteoracle
+    uid: microsoft.quantum.canon.discreteoracle
   - name: eigenstate
     summary: >2-
        A quantum register representing an eigenstate $\ket{\phi}$ of $U$, where $U\ket{\phi} =

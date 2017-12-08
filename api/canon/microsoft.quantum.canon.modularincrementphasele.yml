@@ -14,11 +14,14 @@ syntax: 'operation ModularIncrementPhaseLE (increment : Int, modulus : Int, targ
 input:
   content: '(increment : Int, modulus : Int, target : PhaseLittleEndian)'
   types:
-  - uid: Int
+  - name: increment
+    uid: Int
     isPrimitive: true
-  - uid: Int
+  - name: modulus
+    uid: Int
     isPrimitive: true
-  - uid: phaselittleendian
+  - name: target
+    uid: microsoft.quantum.canon.phaselittleendian
 output:
   content: ()
   types:

@@ -7,9 +7,12 @@ syntax: 'operation Recover (code : QECC, fn : RecoveryFn, logicalRegister : Logi
 input:
   content: '(code : QECC, fn : RecoveryFn, logicalRegister : LogicalRegister)'
   types:
-  - uid: qecc
-  - uid: recoveryfn
-  - uid: logicalregister
+  - name: code
+    uid: microsoft.quantum.canon.qecc
+  - name: fn
+    uid: microsoft.quantum.canon.recoveryfn
+  - name: logicalRegister
+    uid: microsoft.quantum.canon.logicalregister
 output:
   content: ()
   types:

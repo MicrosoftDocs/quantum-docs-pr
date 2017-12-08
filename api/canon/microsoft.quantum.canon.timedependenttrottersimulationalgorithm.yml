@@ -23,4 +23,4 @@ output:
   types:
   - summary: >2
        A `TimeDependentSimulationAlgorithm` type.
-    uid: timedependentsimulationalgorithm
+    uid: microsoft.quantum.canon.timedependentsimulationalgorithm

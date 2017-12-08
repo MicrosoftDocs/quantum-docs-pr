@@ -10,10 +10,14 @@ syntax: 'function AmpAmpObliviousByReflectionPhases (phases : AmpAmpReflectionPh
 input:
   content: '(phases : AmpAmpReflectionPhases, ancillaReflection : ReflectionOracle, targetStateReflection : ReflectionOracle, signalOracle : ObliviousOracle)'
   types:
-  - uid: ampampreflectionphases
-  - uid: reflectionoracle
-  - uid: reflectionoracle
-  - uid: obliviousoracle
+  - name: phases
+    uid: microsoft.quantum.canon.ampampreflectionphases
+  - name: ancillaReflection
+    uid: microsoft.quantum.canon.reflectionoracle
+  - name: targetStateReflection
+    uid: microsoft.quantum.canon.reflectionoracle
+  - name: signalOracle
+    uid: microsoft.quantum.canon.obliviousoracle
 output:
   content: '((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
   types:

@@ -15,19 +15,20 @@ syntax: 'function InterpolatedEvolution (inerpolationTime : Double, evolutionGen
 input:
   content: '(inerpolationTime : Double, evolutionGeneratorStart : EvolutionGenerator, evolutionGeneratorEnd : EvolutionGenerator, timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)'
   types:
-  - uid: Double
+  - name: inerpolationTime
+    uid: Double
     isPrimitive: true
   - name: evolutionGeneratorStart
     summary: ' Initial generator to simulate evolution under.'
-    uid: evolutiongenerator
+    uid: microsoft.quantum.canon.evolutiongenerator
   - name: evolutionGeneratorEnd
     summary: ' Final generator to simulate evolution under.'
-    uid: evolutiongenerator
+    uid: microsoft.quantum.canon.evolutiongenerator
   - name: timeDependentSimulationAlgorithm
     summary: >2
        A time-dependent simulation algorithm that will be used
        to simulate evolution during the uniform interpolation schedule.
-    uid: timedependentsimulationalgorithm
+    uid: microsoft.quantum.canon.timedependentsimulationalgorithm
 output:
   content: '(Qubit[] => () : Adjoint, Controlled)'
   types:

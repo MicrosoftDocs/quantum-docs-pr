@@ -8,11 +8,14 @@ syntax: 'operation ModularIncrementLE (increment : Int, modulus : Int, target : 
 input:
   content: '(increment : Int, modulus : Int, target : LittleEndian)'
   types:
-  - uid: Int
+  - name: increment
+    uid: Int
     isPrimitive: true
-  - uid: Int
+  - name: modulus
+    uid: Int
     isPrimitive: true
-  - uid: littleendian
+  - name: target
+    uid: microsoft.quantum.canon.littleendian
 output:
   content: ()
   types:

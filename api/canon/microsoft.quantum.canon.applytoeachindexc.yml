@@ -7,7 +7,8 @@ syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => () 
 input:
   content: "(singleElementOperation : ((Int, 'T) => () : Controlled), register : 'T[])"
   types:
-  - isOperation: true
+  - name: singleElementOperation
+    isOperation: true
     input:
       types:
       - uid: Int
@@ -19,7 +20,8 @@ input:
       isPrimitive: true
     functors: &o0
     - Controlled
-  - uid: "'T"
+  - name: register
+    uid: "'T"
     isLocal: true
     isArray: true
 output:

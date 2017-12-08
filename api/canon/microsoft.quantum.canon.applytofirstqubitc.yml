@@ -7,7 +7,8 @@ syntax: 'operation ApplyToFirstQubitC (op : (Qubit => () : Controlled), register
 input:
   content: '(op : (Qubit => () : Controlled), register : Qubit[])'
   types:
-  - isOperation: true
+  - name: op
+    isOperation: true
     input:
       uid: Qubit
       isPrimitive: true
@@ -16,7 +17,8 @@ input:
       isPrimitive: true
     functors: &o0
     - Controlled
-  - uid: Qubit
+  - name: register
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:

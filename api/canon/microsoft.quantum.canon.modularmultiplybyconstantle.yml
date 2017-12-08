@@ -21,7 +21,7 @@ input:
     summary: >2
        The number being multiplied by a constant.
        This is an array of qubits representing integer in little-endian bit order.
-    uid: littleendian
+    uid: microsoft.quantum.canon.littleendian
 output:
   content: ()
   types:

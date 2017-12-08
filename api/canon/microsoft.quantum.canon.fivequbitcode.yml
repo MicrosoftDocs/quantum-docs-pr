@@ -13,4 +13,4 @@ input:
 output:
   content: QECC
   types:
-  - uid: qecc
+  - uid: microsoft.quantum.canon.qecc

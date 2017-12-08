@@ -10,7 +10,8 @@ syntax: 'operation PrepareChoiStateA (op : (Qubit[] => () : Adjoint), reference 
 input:
   content: '(op : (Qubit[] => () : Adjoint), reference : Qubit[], target : Qubit[])'
   types:
-  - isOperation: true
+  - name: op
+    isOperation: true
     input:
       uid: Qubit
       isPrimitive: true
@@ -20,10 +21,12 @@ input:
       isPrimitive: true
     functors: &o0
     - Adjoint
-  - uid: Qubit
+  - name: reference
+    uid: Qubit
     isPrimitive: true
     isArray: true
-  - uid: Qubit
+  - name: target
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:

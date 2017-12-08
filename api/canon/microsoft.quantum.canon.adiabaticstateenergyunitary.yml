@@ -58,7 +58,7 @@ input:
     isOperation: true
     input:
       types:
-      - uid: discreteoracle
+      - uid: microsoft.quantum.canon.discreteoracle
       - uid: Qubit
         isPrimitive: true
         isArray: true

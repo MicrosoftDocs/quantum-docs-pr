@@ -16,11 +16,11 @@ input:
   - name: generatorSystem
     summary: >2
        The `GeneratorSystem` to be multiplied.
-    uid: generatorsystem
+    uid: microsoft.quantum.canon.generatorsystem
 output:
   content: GeneratorSystem
   types:
   - summary: >2-
        A `GeneratorSystem` representing a system with coefficients a factor
        `multiplier` larger.
-    uid: generatorsystem
+    uid: microsoft.quantum.canon.generatorsystem

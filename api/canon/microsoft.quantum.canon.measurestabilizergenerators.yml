@@ -19,7 +19,7 @@ input:
       isPrimitive: true
   - name: logicalRegister
     summary: ' An array of qubits where the stabilizer code is defined.'
-    uid: logicalregister
+    uid: microsoft.quantum.canon.logicalregister
   - name: gadget
     summary: ' An operation that specifies how to measure a multiqubit Pauli operator.'
     isOperation: true
@@ -38,4 +38,4 @@ output:
   content: Syndrome
   types:
   - summary: ' The result of measurements.'
-    uid: syndrome
+    uid: microsoft.quantum.canon.syndrome

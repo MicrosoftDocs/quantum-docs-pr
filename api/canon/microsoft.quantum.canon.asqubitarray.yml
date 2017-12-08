@@ -10,7 +10,8 @@ syntax: 'function AsQubitArray (arr : Qubit[]) : Qubit[]'
 input:
   content: '(arr : Qubit[])'
   types:
-  - uid: Qubit
+  - name: arr
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:

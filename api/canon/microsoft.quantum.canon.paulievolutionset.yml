@@ -15,4 +15,4 @@ output:
   - summary: >2
        An `EvolutionSet` that maps a `GeneratorIndex` for the Pauli basis to
        an `EvolutionUnitary.
-    uid: evolutionset
+    uid: microsoft.quantum.canon.evolutionset

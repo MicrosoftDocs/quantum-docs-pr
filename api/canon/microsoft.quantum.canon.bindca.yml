@@ -7,7 +7,8 @@ syntax: "function BindCA (operations : ('T => () : Adjoint, Controlled)[]) : ('T
 input:
   content: "(operations : ('T => () : Adjoint, Controlled)[])"
   types:
-  - isArray: true
+  - name: operations
+    isArray: true
     isOperation: true
     input:
       uid: "'T"

@@ -22,4 +22,4 @@ output:
   - summary: >2-
        A generator index representing evolution under the Hamiltonian
        $H = 0$.
-    uid: generatorindex
+    uid: microsoft.quantum.canon.generatorindex

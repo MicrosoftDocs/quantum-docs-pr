@@ -9,7 +9,8 @@ syntax: 'operation MeasureIntegerBE (target : BigEndian) : Int'
 input:
   content: '(target : BigEndian)'
   types:
-  - uid: bigendian
+  - name: target
+    uid: microsoft.quantum.canon.bigendian
 output:
   content: Int
   types:

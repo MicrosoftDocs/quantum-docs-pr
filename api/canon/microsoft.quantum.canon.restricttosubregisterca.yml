@@ -7,7 +7,8 @@ syntax: 'function RestrictToSubregisterCA (op : (Qubit[] => () : Adjoint, Contro
 input:
   content: '(op : (Qubit[] => () : Adjoint, Controlled), idxs : Int[])'
   types:
-  - isOperation: true
+  - name: op
+    isOperation: true
     input:
       uid: Qubit
       isPrimitive: true
@@ -18,7 +19,8 @@ input:
     functors: &o0
     - Adjoint
     - Controlled
-  - uid: Int
+  - name: idxs
+    uid: Int
     isPrimitive: true
     isArray: true
 output:

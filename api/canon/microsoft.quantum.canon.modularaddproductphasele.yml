@@ -11,12 +11,16 @@ syntax: 'operation ModularAddProductPhaseLE (constMultiplier : Int, modulus : In
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : LittleEndian, phaseSummand : PhaseLittleEndian)'
   types:
-  - uid: Int
+  - name: constMultiplier
+    uid: Int
     isPrimitive: true
-  - uid: Int
+  - name: modulus
+    uid: Int
     isPrimitive: true
-  - uid: littleendian
-  - uid: phaselittleendian
+  - name: multiplier
+    uid: microsoft.quantum.canon.littleendian
+  - name: phaseSummand
+    uid: microsoft.quantum.canon.phaselittleendian
 output:
   content: ()
   types:

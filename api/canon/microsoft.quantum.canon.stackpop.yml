@@ -12,11 +12,11 @@ input:
   - name: stack
     summary: >2
        The stack to be popped.
-    uid: resultstack
+    uid: microsoft.quantum.canon.resultstack
 output:
   content: ResultStack
   types:
   - summary: >2-
        The `stack` with the top element removed. The new stack has the same capacity as
        the old one, but its length is reduced by one.
-    uid: resultstack
+    uid: microsoft.quantum.canon.resultstack

@@ -13,9 +13,9 @@ input:
   - name: oracle
     summary: >2
        Oracle of type "DeterministicStateOracle"
-    uid: deterministicstateoracle
+    uid: microsoft.quantum.canon.deterministicstateoracle
 output:
   content: ReflectionOracle
   types:
   - summary: ' A `ReflectionOracle` that reflects about the state $\ket{\psi}$.'
-    uid: reflectionoracle
+    uid: microsoft.quantum.canon.reflectionoracle

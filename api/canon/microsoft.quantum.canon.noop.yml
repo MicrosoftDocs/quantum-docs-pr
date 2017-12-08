@@ -8,7 +8,8 @@ syntax: 'operation NoOp (qubits : Qubit[]) : ()'
 input:
   content: '(qubits : Qubit[])'
   types:
-  - uid: Qubit
+  - name: qubits
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:

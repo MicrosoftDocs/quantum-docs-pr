@@ -12,7 +12,8 @@ syntax: 'function ResultAsInt (results : Result[]) : Int'
 input:
   content: '(results : Result[])'
   types:
-  - uid: Result
+  - name: results
+    uid: Result
     isPrimitive: true
     isArray: true
 output:

@@ -22,6 +22,6 @@ input:
 output:
   content: LogicalRegister
   types:
-  - uid: logicalregister
+  - uid: microsoft.quantum.canon.logicalregister
 seeAlso:
 - microsoft.quantum.canon.fivequbitcodedecoder

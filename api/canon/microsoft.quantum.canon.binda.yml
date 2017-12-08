@@ -7,7 +7,8 @@ syntax: "function BindA (operations : ('T => () : Adjoint)[]) : ('T => () : Adjo
 input:
   content: "(operations : ('T => () : Adjoint)[])"
   types:
-  - isArray: true
+  - name: operations
+    isArray: true
     isOperation: true
     input:
       uid: "'T"

@@ -11,7 +11,7 @@ input:
   types:
   - name: stack
     summary: ' The stack to be grown.'
-    uid: resultstack
+    uid: microsoft.quantum.canon.resultstack
   - name: datum
     summary: >2
        The `Result` value to be pushed onto `stack`.
@@ -23,4 +23,4 @@ output:
   - summary: >2-
        The `stack` with `datum` added as its new top element. The new stack's length is
        increased by one.
-    uid: resultstack
+    uid: microsoft.quantum.canon.resultstack

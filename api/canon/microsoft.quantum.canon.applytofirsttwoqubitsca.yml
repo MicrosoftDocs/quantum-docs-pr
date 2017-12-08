@@ -7,7 +7,8 @@ syntax: 'operation ApplyToFirstTwoQubitsCA (op : ((Qubit, Qubit) => () : Adjoint
 input:
   content: '(op : ((Qubit, Qubit) => () : Adjoint, Controlled), register : Qubit[])'
   types:
-  - isOperation: true
+  - name: op
+    isOperation: true
     input:
       types:
       - uid: Qubit
@@ -20,7 +21,8 @@ input:
     functors: &o0
     - Adjoint
     - Controlled
-  - uid: Qubit
+  - name: register
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:

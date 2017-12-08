@@ -7,7 +7,8 @@ syntax: 'operation HY (target : Qubit) : ()'
 input:
   content: '(target : Qubit)'
   types:
-  - uid: Qubit
+  - name: target
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()

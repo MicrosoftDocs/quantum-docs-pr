@@ -7,7 +7,8 @@ syntax: 'operation ApplyToSubregisterC (op : (Qubit[] => () : Controlled), idxs 
 input:
   content: '(op : (Qubit[] => () : Controlled), idxs : Int[], target : Qubit[])'
   types:
-  - isOperation: true
+  - name: op
+    isOperation: true
     input:
       uid: Qubit
       isPrimitive: true
@@ -17,10 +18,12 @@ input:
       isPrimitive: true
     functors: &o0
     - Controlled
-  - uid: Int
+  - name: idxs
+    uid: Int
     isPrimitive: true
     isArray: true
-  - uid: Qubit
+  - name: target
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:

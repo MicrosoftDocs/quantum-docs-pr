@@ -17,7 +17,7 @@ input:
   - name: number
     summary: >2
        Unsigned integer of which the highest bit is checked
-    uid: littleendian
+    uid: microsoft.quantum.canon.littleendian
 output:
   content: ()
   types:

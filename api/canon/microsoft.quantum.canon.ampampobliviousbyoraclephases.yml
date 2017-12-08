@@ -12,13 +12,13 @@ input:
   types:
   - name: phases
     summary: ' Phases of partial reflections'
-    uid: ampampreflectionphases
+    uid: microsoft.quantum.canon.ampampreflectionphases
   - name: ancillaOracle
     summary: ' Unitary oracle $A$ that prepares ancilla start state'
-    uid: deterministicstateoracle
+    uid: microsoft.quantum.canon.deterministicstateoracle
   - name: signalOracle
     summary: ' Unitary oracle $O$ of type "ObliviousOracle" that acts jointly on the ancilla and system register'
-    uid: obliviousoracle
+    uid: microsoft.quantum.canon.obliviousoracle
   - name: idxFlagQubit
     summary: ' Index to single-qubit flag register'
     uid: Int

@@ -7,15 +7,17 @@ syntax: 'operation ApplyLEOperationOnPhaseLEA (op : (LittleEndian => () : Adjoin
 input:
   content: '(op : (LittleEndian => () : Adjoint), target : PhaseLittleEndian)'
   types:
-  - isOperation: true
+  - name: op
+    isOperation: true
     input:
-      uid: littleendian
+      uid: microsoft.quantum.canon.littleendian
     output:
       uid: ()
       isPrimitive: true
     functors: &o0
     - Adjoint
-  - uid: phaselittleendian
+  - name: target
+    uid: microsoft.quantum.canon.phaselittleendian
 output:
   content: ()
   types:

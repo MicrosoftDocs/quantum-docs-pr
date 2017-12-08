@@ -16,7 +16,7 @@ input:
   - name: qs
     summary: >2
        Quantum register to which the Quantum Fourier Transform is applied
-    uid: littleendian
+    uid: microsoft.quantum.canon.littleendian
 output:
   content: ()
   types:

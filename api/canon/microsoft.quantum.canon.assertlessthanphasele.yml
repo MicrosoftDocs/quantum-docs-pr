@@ -17,7 +17,7 @@ input:
   - name: number
     summary: >2
        Unsigned integer which is compared to `value`
-    uid: phaselittleendian
+    uid: microsoft.quantum.canon.phaselittleendian
 output:
   content: ()
   types:

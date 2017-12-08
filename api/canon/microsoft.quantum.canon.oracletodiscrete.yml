@@ -30,4 +30,4 @@ output:
   content: DiscreteOracle
   types:
   - summary: " An operation partially applied over the \"black-box\" oracle representing the discrete-time oracle \n"
-    uid: discreteoracle
+    uid: microsoft.quantum.canon.discreteoracle

@@ -8,15 +8,17 @@ syntax: 'operation ApplyReversedOpLittleEndianA (op : (LittleEndian => () : Adjo
 input:
   content: '(op : (LittleEndian => () : Adjoint), register : BigEndian)'
   types:
-  - isOperation: true
+  - name: op
+    isOperation: true
     input:
-      uid: littleendian
+      uid: microsoft.quantum.canon.littleendian
     output:
       uid: ()
       isPrimitive: true
     functors: &o0
     - Adjoint
-  - uid: bigendian
+  - name: register
+    uid: microsoft.quantum.canon.bigendian
 output:
   content: ()
   types:

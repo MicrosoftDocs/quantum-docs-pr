@@ -7,7 +7,8 @@ syntax: "function BindC (operations : ('T => () : Controlled)[]) : ('T => () : C
 input:
   content: "(operations : ('T => () : Controlled)[])"
   types:
-  - isArray: true
+  - name: operations
+    isArray: true
     isOperation: true
     input:
       uid: "'T"

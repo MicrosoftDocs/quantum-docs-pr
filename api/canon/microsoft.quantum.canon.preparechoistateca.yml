@@ -8,7 +8,8 @@ syntax: 'operation PrepareChoiStateCA (op : (Qubit[] => () : Controlled, Adjoint
 input:
   content: '(op : (Qubit[] => () : Controlled, Adjoint), reference : Qubit[], target : Qubit[])'
   types:
-  - isOperation: true
+  - name: op
+    isOperation: true
     input:
       uid: Qubit
       isPrimitive: true
@@ -19,10 +20,12 @@ input:
     functors:
     - Controlled
     - Adjoint
-  - uid: Qubit
+  - name: reference
+    uid: Qubit
     isPrimitive: true
     isArray: true
-  - uid: Qubit
+  - name: target
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:

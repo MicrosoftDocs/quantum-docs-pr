@@ -8,10 +8,12 @@ syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, s
 input:
   content: '(idxFlagQubit : Int, stateOracle : StateOracle)'
   types:
-  - uid: Int
+  - name: idxFlagQubit
+    uid: Int
     isPrimitive: true
-  - uid: stateoracle
+  - name: stateOracle
+    uid: microsoft.quantum.canon.stateoracle
 output:
   content: DeterministicStateOracle
   types:
-  - uid: deterministicstateoracle
+  - uid: microsoft.quantum.canon.deterministicstateoracle

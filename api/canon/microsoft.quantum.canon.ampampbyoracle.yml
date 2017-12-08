@@ -14,7 +14,8 @@ input:
     summary: ' Number of iterations $n$ of amplitude amplification '
     uid: Int
     isPrimitive: true
-  - uid: stateoracle
+  - name: stateOracle
+    uid: microsoft.quantum.canon.stateoracle
   - name: idxFlagQubit
     summary: ' Index to Flag qubit '
     uid: Int

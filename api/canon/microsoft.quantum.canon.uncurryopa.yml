@@ -7,7 +7,8 @@ syntax: "function UncurryOpA (curriedOp : ('T -> ('U => () : Adjoint))) : (('T, 
 input:
   content: "(curriedOp : ('T -> ('U => () : Adjoint)))"
   types:
-  - isFunction: true
+  - name: curriedOp
+    isFunction: true
     input:
       uid: "'T"
       isLocal: true

@@ -8,8 +8,9 @@ syntax: 'function StateOracleFromDeterministicStateOracle (oracleStateDeterminis
 input:
   content: '(oracleStateDeterministic : DeterministicStateOracle)'
   types:
-  - uid: deterministicstateoracle
+  - name: oracleStateDeterministic
+    uid: microsoft.quantum.canon.deterministicstateoracle
 output:
   content: StateOracle
   types:
-  - uid: stateoracle
+  - uid: microsoft.quantum.canon.stateoracle

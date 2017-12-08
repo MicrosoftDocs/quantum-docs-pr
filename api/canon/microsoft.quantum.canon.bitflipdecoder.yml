@@ -12,7 +12,7 @@ input:
   - name: logicalRegister
     summary: >2
        A code block of the bit-flip code.
-    uid: logicalregister
+    uid: microsoft.quantum.canon.logicalregister
 output:
   content: (Qubit[], Qubit[])
   types:

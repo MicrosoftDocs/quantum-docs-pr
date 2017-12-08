@@ -13,9 +13,9 @@ input:
     summary: >2
        A generator index to be represented as unitary evolution in the Pauli
        basis.
-    uid: generatorindex
+    uid: microsoft.quantum.canon.generatorindex
 output:
   content: EvolutionUnitary
   types:
   - summary: " An `EvolutionUnitary` representing time-evolution by the term \n referenced in `generatorIndex.\n"
-    uid: evolutionunitary
+    uid: microsoft.quantum.canon.evolutionunitary

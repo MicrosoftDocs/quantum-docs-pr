@@ -7,11 +7,12 @@ syntax: 'function TableLookupRecovery (table : Pauli[][]) : RecoveryFn'
 input:
   content: '(table : Pauli[][])'
   types:
-  - isArray: true
+  - name: table
+    isArray: true
     types:
     - uid: Pauli
       isPrimitive: true
 output:
   content: RecoveryFn
   types:
-  - uid: recoveryfn
+  - uid: microsoft.quantum.canon.recoveryfn

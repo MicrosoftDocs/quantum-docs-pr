@@ -12,8 +12,9 @@ input:
   types:
   - name: phases
     summary: ' Phases of partial reflections '
-    uid: ampampreflectionphases
-  - uid: stateoracle
+    uid: microsoft.quantum.canon.ampampreflectionphases
+  - name: stateOracle
+    uid: microsoft.quantum.canon.stateoracle
   - name: idxFlagQubit
     summary: ' Index to Flag qubit '
     uid: Int

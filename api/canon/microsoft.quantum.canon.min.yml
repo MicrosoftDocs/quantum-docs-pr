@@ -9,7 +9,8 @@ syntax: 'function Min (value : Int[]) : Int'
 input:
   content: '(value : Int[])'
   types:
-  - uid: Int
+  - name: value
+    uid: Int
     isPrimitive: true
     isArray: true
 output:

@@ -7,15 +7,17 @@ syntax: 'operation ApplyLEOperationOnPhaseLEC (op : (LittleEndian => () : Contro
 input:
   content: '(op : (LittleEndian => () : Controlled), target : PhaseLittleEndian)'
   types:
-  - isOperation: true
+  - name: op
+    isOperation: true
     input:
-      uid: littleendian
+      uid: microsoft.quantum.canon.littleendian
     output:
       uid: ()
       isPrimitive: true
     functors: &o0
     - Controlled
-  - uid: phaselittleendian
+  - name: target
+    uid: microsoft.quantum.canon.phaselittleendian
 output:
   content: ()
   types:

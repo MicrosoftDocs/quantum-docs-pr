@@ -8,13 +8,15 @@ syntax: 'operation SteaneCodeEncoder (physRegister : Qubit[], auxQubits : Qubit[
 input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
-  - uid: Qubit
+  - name: physRegister
+    uid: Qubit
     isPrimitive: true
     isArray: true
-  - uid: Qubit
+  - name: auxQubits
+    uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: LogicalRegister
   types:
-  - uid: logicalregister
+  - uid: microsoft.quantum.canon.logicalregister

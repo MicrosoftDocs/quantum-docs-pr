@@ -34,7 +34,7 @@ input:
       isPrimitive: true
   - name: ccnot
     summary: ' The controlled-controlled-NOT gate to use for the construction.'
-    uid: ccnotop
+    uid: microsoft.quantum.canon.ccnotop
   - name: controls
     summary: >2-
        The qubits that `singlyControlledOp` is to be controlled on.

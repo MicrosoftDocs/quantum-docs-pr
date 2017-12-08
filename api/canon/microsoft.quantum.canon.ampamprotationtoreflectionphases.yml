@@ -11,8 +11,8 @@ input:
   types:
   - name: rotPhases
     summary: " Array of single-qubit rotations to be converted to partial \n reflections.\n"
-    uid: ampamprotationphases
+    uid: microsoft.quantum.canon.ampamprotationphases
 output:
   content: AmpAmpReflectionPhases
   types:
-  - uid: ampampreflectionphases
+  - uid: microsoft.quantum.canon.ampampreflectionphases

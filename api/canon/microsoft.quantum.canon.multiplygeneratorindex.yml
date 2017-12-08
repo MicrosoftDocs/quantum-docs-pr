@@ -24,11 +24,11 @@ input:
   - name: generatorIndex
     summary: >2
        The `GeneratorIndex` to be multiplied.
-    uid: generatorindex
+    uid: microsoft.quantum.canon.generatorindex
 output:
   content: GeneratorIndex
   types:
   - summary: >2
        A `GeneratorIndex` representing a term with coefficient a factor
        `multiplier` larger.
-    uid: generatorindex
+    uid: microsoft.quantum.canon.generatorindex

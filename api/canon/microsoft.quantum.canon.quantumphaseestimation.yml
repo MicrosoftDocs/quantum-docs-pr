@@ -12,7 +12,7 @@ input:
   types:
   - name: oracle
     summary: ' An operation implementing U^m for given integer powers m.'
-    uid: discreteoracle
+    uid: microsoft.quantum.canon.discreteoracle
   - name: eigenstate
     summary: >2-
        A quantum register representing an eigenstate |φ> of U, U|φ> =
@@ -26,7 +26,7 @@ input:
        to control the provided oracle, and that will contain the a representation of φ following
        the application of this operation. The controlRegister is assumed to start in the initial
        state |00.0>, where the length of the register indicates the desired precision.
-    uid: bigendian
+    uid: microsoft.quantum.canon.bigendian
 output:
   content: ()
   types:

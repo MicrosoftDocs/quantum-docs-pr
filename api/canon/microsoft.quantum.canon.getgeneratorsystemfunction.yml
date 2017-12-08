@@ -11,7 +11,7 @@ input:
   types:
   - name: generatorSystem
     summary: " The `GeneratorSystem` of interest. \n"
-    uid: generatorsystem
+    uid: microsoft.quantum.canon.generatorsystem
 output:
   content: (Int -> GeneratorIndex)
   types:
@@ -21,4 +21,4 @@ output:
       uid: Int
       isPrimitive: true
     output:
-      uid: generatorindex
+      uid: microsoft.quantum.canon.generatorindex

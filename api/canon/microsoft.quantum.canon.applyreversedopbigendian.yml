@@ -14,14 +14,14 @@ input:
     summary: ' Operation that acts on big-endian register'
     isOperation: true
     input:
-      uid: bigendian
+      uid: microsoft.quantum.canon.bigendian
     output:
       uid: ()
       isPrimitive: true
   - name: register
     summary: >2
        little-endian register to be transformed
-    uid: littleendian
+    uid: microsoft.quantum.canon.littleendian
 output:
   content: ()
   types:

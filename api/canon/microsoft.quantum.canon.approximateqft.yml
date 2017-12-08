@@ -22,7 +22,7 @@ input:
   - name: qs
     summary: >2
        quantum register of n qubits to which the Approximate Quantum Fourier Transform is applied.
-    uid: bigendian
+    uid: microsoft.quantum.canon.bigendian
 output:
   content: ()
   types:

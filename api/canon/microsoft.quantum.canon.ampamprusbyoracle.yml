@@ -13,7 +13,7 @@ input:
   types:
   - name: statePrepOracle
     summary: ' Unitary oracle that prepares the start state.'
-    uid: stateoracle
+    uid: microsoft.quantum.canon.stateoracle
   - name: startQubits
     summary: " Qubit register \n"
     uid: Qubit

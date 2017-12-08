@@ -17,6 +17,6 @@ input:
 output:
   content: Double
   types:
-  - summary: ' A real number $y$ such that $x = \sech(y)$.'
+  - summary: ' A real number $y$ such that $x = \operatorname{sinh}(y)$.'
     uid: Double
     isPrimitive: true

@@ -3,16 +3,21 @@ uid: microsoft.quantum.extensions.rangefunctions.rangeend
 name: RangeEnd
 type: operation
 namespace: Microsoft.Quantum.Extensions.RangeFunctions
-summary: " Returns the defined end value of the given range, \n which is not necessarily the last element in the sequence."
+summary: " Returns the defined end value of the given range, \n which is not necessarily the last element in the sequence.\n"
+remarks: " A range expression's first element is `start`, \n its second element is `start+step`, third element is `start+step+step`, etc., \n until `end` is passed."
 syntax: 'operation RangeEnd (r : Range) : Int'
 input:
   content: '(r : Range)'
   types:
   - name: r
+    summary: >2
+       Input range.
     uid: Range
     isPrimitive: true
 output:
   content: Int
   types:
-  - uid: Int
+  - summary: >2
+       The defined end value of the given range.
+    uid: Int
     isPrimitive: true

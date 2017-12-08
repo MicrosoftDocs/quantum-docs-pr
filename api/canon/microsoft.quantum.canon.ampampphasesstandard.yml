@@ -20,4 +20,4 @@ input:
 output:
   content: AmpAmpReflectionPhases
   types:
-  - uid: ampampreflectionphases
+  - uid: microsoft.quantum.canon.ampampreflectionphases

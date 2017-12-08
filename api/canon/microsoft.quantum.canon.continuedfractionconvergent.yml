@@ -8,13 +8,13 @@ syntax: 'function ContinuedFractionConvergent (fraction : Fraction, denominatorB
 input:
   content: '(fraction : Fraction, denominatorBound : Int)'
   types:
+  - name: fraction
+    uid: microsoft.quantum.canon.fraction
   - name: denominatorBound
     uid: Int
     isPrimitive: true
-  - name: fraction
-    uid: fraction
 output:
   content: Fraction
   types:
   - summary: " Continued fraction closest to `fraction` \n with the denominator less or equal to `denominatorBound` "
-    uid: fraction
+    uid: microsoft.quantum.canon.fraction

@@ -17,8 +17,7 @@ syntax: 'function Not (a : Int) : Int'
 input:
   content: '(a : Int)'
   types:
-  - name: a
-    uid: Int
+  - uid: Int
     isPrimitive: true
 output:
   content: Int

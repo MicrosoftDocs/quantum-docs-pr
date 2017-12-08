@@ -8,13 +8,13 @@ input:
   content: '(code : CSS, fnX : RecoveryFn, fnZ : RecoveryFn, logicalRegister : LogicalRegister)'
   types:
   - name: code
-    uid: css
+    uid: microsoft.quantum.canon.css
   - name: fnX
-    uid: recoveryfn
+    uid: microsoft.quantum.canon.recoveryfn
   - name: fnZ
-    uid: recoveryfn
+    uid: microsoft.quantum.canon.recoveryfn
   - name: logicalRegister
-    uid: logicalregister
+    uid: microsoft.quantum.canon.logicalregister
 output:
   content: ()
   types:

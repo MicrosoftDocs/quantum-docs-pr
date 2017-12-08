@@ -16,4 +16,4 @@ output:
   - summary: >2-
        A generator system representing evolution under the Hamiltonian
        $H = 0$.
-    uid: generatorsystem
+    uid: microsoft.quantum.canon.generatorsystem

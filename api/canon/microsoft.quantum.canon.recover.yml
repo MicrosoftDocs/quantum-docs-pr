@@ -8,11 +8,11 @@ input:
   content: '(code : QECC, fn : RecoveryFn, logicalRegister : LogicalRegister)'
   types:
   - name: code
-    uid: qecc
+    uid: microsoft.quantum.canon.qecc
   - name: fn
-    uid: recoveryfn
+    uid: microsoft.quantum.canon.recoveryfn
   - name: logicalRegister
-    uid: logicalregister
+    uid: microsoft.quantum.canon.logicalregister
 output:
   content: ()
   types:

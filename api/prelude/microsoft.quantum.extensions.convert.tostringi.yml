@@ -3,13 +3,14 @@ uid: microsoft.quantum.extensions.convert.tostringi
 name: ToStringI
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: ' Formats an integer as a string.'
+summary: >2
+   Converts a given integer number to an equivalent string representation.
+remarks: ' See [C# Convert.ToString](https://docs.microsoft.com/en-us/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Int64_) for more details.'
 syntax: 'function ToStringI (a : Int) : String'
 input:
   content: '(a : Int)'
   types:
-  - name: a
-    uid: Int
+  - uid: Int
     isPrimitive: true
 output:
   content: String

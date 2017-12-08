@@ -12,10 +12,10 @@ input:
   - name: expBase
     uid: Int
     isPrimitive: true
-  - name: modulus
+  - name: power
     uid: Int
     isPrimitive: true
-  - name: power
+  - name: modulus
     uid: Int
     isPrimitive: true
 output:

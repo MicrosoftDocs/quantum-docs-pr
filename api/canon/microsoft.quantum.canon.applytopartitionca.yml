@@ -7,21 +7,25 @@ syntax: 'operation ApplyToPartitionCA (op : ((Qubit[], Qubit[]) => () : Controll
 input:
   content: '(op : ((Qubit[], Qubit[]) => () : Controlled, Adjoint), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
   types:
+  - name: op
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      uid: ()
+      isPrimitive: true
+    functors:
+    - Controlled
+    - Adjoint
   - name: numberOfQubitsToFirstArgument
     uid: Int
     isPrimitive: true
-  - name: op
-    isOperation: true
-    types:
-    - types:
-      - uid: Qubit
-        isPrimitive: true
-        isArray: true
-      - uid: Qubit
-        isPrimitive: true
-        isArray: true
-    - uid: ()
-      isPrimitive: true
   - name: target
     uid: Qubit
     isPrimitive: true

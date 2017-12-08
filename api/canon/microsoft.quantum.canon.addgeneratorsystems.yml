@@ -11,15 +11,15 @@ input:
   types:
   - name: generatorSystemA
     summary: ' The first `GeneratorSystem`.'
-    uid: generatorsystem
+    uid: microsoft.quantum.canon.generatorsystem
   - name: generatorSystemB
     summary: >2
        The second `GeneratorSystem`.
-    uid: generatorsystem
+    uid: microsoft.quantum.canon.generatorsystem
 output:
   content: GeneratorSystem
   types:
   - summary: >2-
        A `GeneratorSystem` representing a system that is the sum of the
        input generator systems.
-    uid: generatorsystem
+    uid: microsoft.quantum.canon.generatorsystem

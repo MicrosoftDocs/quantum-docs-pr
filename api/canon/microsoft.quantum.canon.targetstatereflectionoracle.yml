@@ -18,4 +18,4 @@ output:
   content: ReflectionOracle
   types:
   - summary: ' A `ReflectionOracle` that reflects about the state marked by $\ket{1}_f$.'
-    uid: reflectionoracle
+    uid: microsoft.quantum.canon.reflectionoracle

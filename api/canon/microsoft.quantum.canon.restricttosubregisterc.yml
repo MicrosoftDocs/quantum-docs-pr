@@ -7,25 +7,30 @@ syntax: 'function RestrictToSubregisterC (op : (Qubit[] => () : Controlled), idx
 input:
   content: '(op : (Qubit[] => () : Controlled), idxs : Int[])'
   types:
+  - name: op
+    isOperation: true
+    input:
+      uid: Qubit
+      isPrimitive: true
+      isArray: true
+    output:
+      uid: ()
+      isPrimitive: true
+    functors: &o0
+    - Controlled
   - name: idxs
     uid: Int
     isPrimitive: true
     isArray: true
-  - name: op
-    isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
 output:
   content: '(Qubit[] => () : Controlled)'
   types:
   - isOperation: true
-    types:
-    - uid: Qubit
+    input:
+      uid: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors: *o0

@@ -14,20 +14,24 @@ input:
   types:
   - name: phases
     summary: ' Phases of partial reflections'
-    uid: ampampreflectionphases
+    uid: microsoft.quantum.canon.ampampreflectionphases
   - name: startStateReflection
     summary: ' Reflection operator about start state'
-    uid: reflectionoracle
+    uid: microsoft.quantum.canon.reflectionoracle
   - name: targetStateReflection
     summary: ' Reflection operator about target state'
-    uid: reflectionoracle
+    uid: microsoft.quantum.canon.reflectionoracle
 output:
   content: '(Qubit[] => () : Adjoint, Controlled)'
   types:
   - isOperation: true
-    types:
-    - uid: Qubit
+    input:
+      uid: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled

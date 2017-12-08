@@ -10,13 +10,9 @@ syntax: 'operation QuantumPhaseEstimation (oracle : DiscreteOracle, eigenstate :
 input:
   content: '(oracle : DiscreteOracle, eigenstate : Qubit[], controlRegister : BigEndian)'
   types:
-  - name: controlRegister
-    summary: >2-
-       A big-endian representation integer register that can be used
-       to control the provided oracle, and that will contain the a representation of φ following
-       the application of this operation. The controlRegister is assumed to start in the initial
-       state |00.0>, where the length of the register indicates the desired precision.
-    uid: bigendian
+  - name: oracle
+    summary: ' An operation implementing U^m for given integer powers m.'
+    uid: microsoft.quantum.canon.discreteoracle
   - name: eigenstate
     summary: >2-
        A quantum register representing an eigenstate |φ> of U, U|φ> =
@@ -24,9 +20,13 @@ input:
     uid: Qubit
     isPrimitive: true
     isArray: true
-  - name: oracle
-    summary: ' An operation implementing U^m for given integer powers m.'
-    uid: discreteoracle
+  - name: controlRegister
+    summary: >2-
+       A big-endian representation integer register that can be used
+       to control the provided oracle, and that will contain the a representation of φ following
+       the application of this operation. The controlRegister is assumed to start in the initial
+       state |00.0>, where the length of the register indicates the desired precision.
+    uid: microsoft.quantum.canon.bigendian
 output:
   content: ()
   types:

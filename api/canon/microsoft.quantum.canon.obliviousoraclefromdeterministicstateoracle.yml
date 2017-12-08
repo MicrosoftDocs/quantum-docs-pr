@@ -9,10 +9,10 @@ input:
   content: '(ancillaOracle : DeterministicStateOracle, signalOracle : ObliviousOracle)'
   types:
   - name: ancillaOracle
-    uid: deterministicstateoracle
+    uid: microsoft.quantum.canon.deterministicstateoracle
   - name: signalOracle
-    uid: obliviousoracle
+    uid: microsoft.quantum.canon.obliviousoracle
 output:
   content: ObliviousOracle
   types:
-  - uid: obliviousoracle
+  - uid: microsoft.quantum.canon.obliviousoracle

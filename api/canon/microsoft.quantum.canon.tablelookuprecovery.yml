@@ -15,4 +15,4 @@ input:
 output:
   content: RecoveryFn
   types:
-  - uid: recoveryfn
+  - uid: microsoft.quantum.canon.recoveryfn

@@ -13,4 +13,4 @@ input:
 output:
   content: CSS
   types:
-  - uid: css
+  - uid: microsoft.quantum.canon.css

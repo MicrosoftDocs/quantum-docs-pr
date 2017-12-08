@@ -13,4 +13,4 @@ output:
   content: ReflectionOracle
   types:
   - summary: ' A `ReflectionOracle` that reflects about the state $\ket{0\cdots 0}$.'
-    uid: reflectionoracle
+    uid: microsoft.quantum.canon.reflectionoracle

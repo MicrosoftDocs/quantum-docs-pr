@@ -12,42 +12,48 @@ input:
     summary: ' Number of qubits used to perform simulation.'
     uid: Int
     isPrimitive: true
+  - name: statePrepUnitary
+    summary: >2-
+       An oracle representing state preparation for the initial dynamical
+       generator.
+    isOperation: true
+    input:
+      uid: Qubit
+      isPrimitive: true
+      isArray: true
+    output:
+      uid: ()
+      isPrimitive: true
+  - name: qpeUnitary
+    summary: >2-
+       An oracle representing a unitary operator $U$ representing evolution
+       for time $\delta t$ under a dynamical generator with ground state
+       $\ket{\phi}$ and ground state energy $E = \phi\\,\delta t$.
+    isOperation: true
+    input:
+      uid: Qubit
+      isPrimitive: true
+      isArray: true
+    output:
+      uid: ()
+      isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled
   - name: phaseEstAlgorithm
     summary: >2
        An operation that performs phase estimation on a given unitary operation.
        See [iterative phase estimation](../libraries/characterization#iterative-phase-estimation)
        for more details.
     isOperation: true
-    types:
-    - types:
-      - uid: discreteoracle
+    input:
+      types:
+      - uid: microsoft.quantum.canon.discreteoracle
       - uid: Qubit
         isPrimitive: true
         isArray: true
-    - uid: Double
-      isPrimitive: true
-  - name: qpeUnitary
-    summary: >2-
-       An oracle representing a unitary operator $U$ representing evolution
-       for time $\delta t$ under a dynamical generator with ground state
-       $\ket{\phi}$ and ground state energy $E = \phi\,\delta t$.
-    isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
-  - name: statePrepUnitary
-    summary: >2-
-       An oracle representing state preparation for the initial dynamical
-       generator.
-    isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
+    output:
+      uid: Double
       isPrimitive: true
 output:
   content: Double

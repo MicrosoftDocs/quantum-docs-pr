@@ -17,13 +17,14 @@ input:
   - name: op
     summary: ' An operation to be applied to the first two qubits'
     isOperation: true
-    types:
-    - types:
+    input:
+      types:
       - uid: Qubit
         isPrimitive: true
       - uid: Qubit
         isPrimitive: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
   - name: register
     summary: >2

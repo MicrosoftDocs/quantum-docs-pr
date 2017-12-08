@@ -12,8 +12,8 @@ input:
     uid: Int
     isPrimitive: true
   - name: stateOracle
-    uid: stateoracle
+    uid: microsoft.quantum.canon.stateoracle
 output:
   content: DeterministicStateOracle
   types:
-  - uid: deterministicstateoracle
+  - uid: microsoft.quantum.canon.deterministicstateoracle

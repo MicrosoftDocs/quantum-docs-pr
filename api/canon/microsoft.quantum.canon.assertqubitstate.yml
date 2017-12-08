@@ -17,8 +17,8 @@ input:
   - name: expected
     summary: ' Expected complex amplitudes for $\ket{0}$ and $\ket{1}$, respectively.'
     types:
-    - uid: complex
-    - uid: complex
+    - uid: microsoft.quantum.canon.complex
+    - uid: microsoft.quantum.canon.complex
   - name: register
     summary: >2
        Qubit whose state is to be asserted. Note that this qubit is assumed to be separable

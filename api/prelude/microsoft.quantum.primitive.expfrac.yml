@@ -7,7 +7,7 @@ summary: >2
    Applies the exponential of a multi-qubit Pauli operator
    with an argument given by a dyadic fraction,
    \begin{align}
-       \exp\left(i \theta \pi k [P_0 \otimes P_1 \cdots P_N] / 2^n \right),
+       e^{i \theta \pi k [P_0 \otimes P_1 \cdots P_N] / 2^n},
    \end{align}
    where $P_i$ is the $i$th element of `paulis`, and where
    $N = $`Length(paulis)`.
@@ -15,12 +15,6 @@ syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubi
 input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
   types:
-  - name: numerator
-    summary: >2-
-       Numerator in the dyadic fraction representation of the angle
-       by which the qubit register is to be rotated.
-    uid: Int
-    isPrimitive: true
   - name: paulis
     summary: >2-
        Array of single-qubit Pauli values indicating the tensor product
@@ -28,9 +22,15 @@ input:
     uid: Pauli
     isPrimitive: true
     isArray: true
+  - name: numerator
+    summary: >2-
+       Numerator ($k$) in the dyadic fraction representation of the angle
+       by which the qubit register is to be rotated.
+    uid: Int
+    isPrimitive: true
   - name: power
     summary: >2-
-       Power of two specifying the denominator of the angle by which
+       Power of two ($n$) specifying the denominator of the angle by which
        the qubit register is to be rotated.
     uid: Int
     isPrimitive: true

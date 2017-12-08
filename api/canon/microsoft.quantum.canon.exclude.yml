@@ -18,18 +18,18 @@ syntax: "function Exclude (remove : Int[], array : 'T[]) : 'T[]"
 input:
   content: "(remove : Int[], array : 'T[])"
   types:
-  - name: array
-    summary: >2
-       Array of which the values in the output array are taken.
-    uid: "'T"
-    isLocal: true
-    isArray: true
   - name: remove
     summary: >2-
        An array of indices denoting which elements should be excluded
        from the output.
     uid: Int
     isPrimitive: true
+    isArray: true
+  - name: array
+    summary: >2
+       Array of which the values in the output array are taken.
+    uid: "'T"
+    isLocal: true
     isArray: true
 output:
   content: "'T[]"

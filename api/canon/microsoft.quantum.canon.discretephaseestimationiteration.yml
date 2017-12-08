@@ -10,21 +10,13 @@ syntax: 'operation DiscretePhaseEstimationIteration (oracle : DiscreteOracle, po
 input:
   content: '(oracle : DiscreteOracle, power : Int, theta : Double, eigenstate : Qubit[], controlQubit : Qubit)'
   types:
-  - name: controlQubit
-    uid: Qubit
-    isPrimitive: true
-  - name: eigenstate
-    summary: ' Register containing an eigenstate of the given oracle.'
-    uid: Qubit
-    isPrimitive: true
-    isArray: true
   - name: oracle
     summary: >2-
        Operation acting on an integer and a register,
        such that $U^m$ is applied to the given register, where $U$ is the unitary
        whose phase is to be estimated, and where m is the integer power
        given to the oracle
-    uid: discreteoracle
+    uid: microsoft.quantum.canon.discreteoracle
   - name: power
     summary: ' Number of times to apply the given unitary oracle.'
     uid: Int
@@ -34,6 +26,14 @@ input:
        Angle by which to invert the phase on the control qubit before
        acting on the eigenstate.
     uid: Double
+    isPrimitive: true
+  - name: eigenstate
+    summary: ' Register containing an eigenstate of the given oracle.'
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: controlQubit
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()

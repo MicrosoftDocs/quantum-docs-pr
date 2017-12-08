@@ -8,25 +8,26 @@ syntax: 'operation ApplyToPartition (op : ((Qubit[], Qubit[]) => ()), numberOfQu
 input:
   content: '(op : ((Qubit[], Qubit[]) => ()), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
   types:
+  - name: op
+    summary: ' The operation to apply to the partition'
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      uid: ()
+      isPrimitive: true
   - name: numberOfQubitsToFirstArgument
     summary: >2-
        Number of qubits from target to put into the first part of the partition.
        The rest go into the second part.
     uid: Int
     isPrimitive: true
-  - name: op
-    summary: ' The operation to apply to the partition'
-    isOperation: true
-    types:
-    - types:
-      - uid: Qubit
-        isPrimitive: true
-        isArray: true
-      - uid: Qubit
-        isPrimitive: true
-        isArray: true
-    - uid: ()
-      isPrimitive: true
   - name: target
     summary: ' Qubits that are being partitioned.'
     uid: Qubit

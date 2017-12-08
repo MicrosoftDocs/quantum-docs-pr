@@ -10,14 +10,14 @@ syntax: 'operation AssertLessThanPhaseLE (value : Int, number : PhaseLittleEndia
 input:
   content: '(value : Int, number : PhaseLittleEndian)'
   types:
-  - name: number
-    summary: >2
-       Unsigned integer which is compared to `value`
-    uid: phaselittleendian
   - name: value
     summary: ' `number` must be less than this'
     uid: Int
     isPrimitive: true
+  - name: number
+    summary: >2
+       Unsigned integer which is compared to `value`
+    uid: microsoft.quantum.canon.phaselittleendian
 output:
   content: ()
   types:

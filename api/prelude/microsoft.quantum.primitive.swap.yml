@@ -5,6 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Primitive
 summary: >2
    Applies the SWAP gate to a pair of qubits
+
    \begin{align}
        \operatorname{SWAP} \mathrel{:=}
        \begin{bmatrix}
@@ -14,6 +15,7 @@ summary: >2
            0 & 0 & 0 & 1
        \end{bmatrix},
    \end{align}
+
    where rows and columns are ordered as in the quantum concepts guide.
 remarks: >2-
    Equivalent to:

@@ -13,24 +13,28 @@ syntax: 'operation AssertOperationsEqualInPlaceCompBasis (givenU : (Qubit[] => (
 input:
   content: '(givenU : (Qubit[] => ()), expectedU : (Qubit[] => () : Adjoint), inputSize : Int)'
   types:
-  - name: expectedU
-    summary: ' Reference operation on n qubits that givenU is to be compared against.'
-    isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
   - name: givenU
     summary: ' Operation on n qubits to be checked.'
     isOperation: true
-    types:
-    - uid: Qubit
+    input:
+      uid: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+  - name: expectedU
+    summary: ' Reference operation on n qubits that givenU is to be compared against.'
+    isOperation: true
+    input:
+      uid: Qubit
+      isPrimitive: true
+      isArray: true
+    output:
+      uid: ()
+      isPrimitive: true
+    functors:
+    - Adjoint
   - name: inputSize
     summary: ' The number of qubits n that the operations givenU and expectedU operate on.'
     uid: Int

@@ -7,20 +7,23 @@ syntax: 'operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => () :
 input:
   content: '(singlyControlledOp : (Qubit[] => () : Adjoint), ccnot : CCNOTop, controls : Qubit[], targets : Qubit[])'
   types:
+  - name: singlyControlledOp
+    isOperation: true
+    input:
+      uid: Qubit
+      isPrimitive: true
+      isArray: true
+    output:
+      uid: ()
+      isPrimitive: true
+    functors:
+    - Adjoint
   - name: ccnot
-    uid: ccnotop
+    uid: microsoft.quantum.canon.ccnotop
   - name: controls
     uid: Qubit
     isPrimitive: true
     isArray: true
-  - name: singlyControlledOp
-    isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
   - name: targets
     uid: Qubit
     isPrimitive: true

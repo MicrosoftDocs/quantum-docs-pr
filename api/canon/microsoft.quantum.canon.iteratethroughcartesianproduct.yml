@@ -17,11 +17,12 @@ input:
     isArray: true
   - name: op
     isOperation: true
-    types:
-    - uid: Int
+    input:
+      uid: Int
       isPrimitive: true
       isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
 output:
   content: ()

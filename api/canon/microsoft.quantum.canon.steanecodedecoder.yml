@@ -8,7 +8,7 @@ input:
   content: '(logicalRegister : LogicalRegister)'
   types:
   - name: logicalRegister
-    uid: logicalregister
+    uid: microsoft.quantum.canon.logicalregister
 output:
   content: (Qubit[], Qubit[])
   types:

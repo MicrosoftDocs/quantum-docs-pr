@@ -7,21 +7,24 @@ syntax: 'operation ApplyToPartitionC (op : ((Qubit[], Qubit[]) => () : Controlle
 input:
   content: '(op : ((Qubit[], Qubit[]) => () : Controlled), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
   types:
+  - name: op
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      uid: ()
+      isPrimitive: true
+    functors: &o0
+    - Controlled
   - name: numberOfQubitsToFirstArgument
     uid: Int
     isPrimitive: true
-  - name: op
-    isOperation: true
-    types:
-    - types:
-      - uid: Qubit
-        isPrimitive: true
-        isArray: true
-      - uid: Qubit
-        isPrimitive: true
-        isArray: true
-    - uid: ()
-      isPrimitive: true
   - name: target
     uid: Qubit
     isPrimitive: true
@@ -33,5 +36,4 @@ output:
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.applytopartition
-functors:
-- Controlled
+functors: *o0

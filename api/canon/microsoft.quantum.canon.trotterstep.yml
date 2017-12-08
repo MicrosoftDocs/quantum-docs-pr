@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: " Implements a single time-step of time-evolution by the system \n described in an `EvolutionGenerator` using a Trotter–Suzuki \n decomposition.\n"
 remarks: >2-
-   For more on the Trotter-Suzuki decomposition, see
+   For more on the Trotter–Suzuki decomposition, see
    [Time-Ordered Composition](xref:microsoft.quantum.concepts.control-flow#time-ordered-composition).
 syntax: 'function TrotterStep (evolutionGenerator : EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => () : Adjoint, Controlled)'
 input:
@@ -13,7 +13,7 @@ input:
   types:
   - name: evolutionGenerator
     summary: ' A complete description of the system to be simulated.'
-    uid: evolutiongenerator
+    uid: microsoft.quantum.canon.evolutiongenerator
   - name: trotterOrder
     summary: ' Order of Trotter integrator. Order 1 and 2 are currently supported.'
     uid: Int
@@ -30,9 +30,13 @@ output:
        Unitary operation that approximate a single step of time-evolution
        for duration `trotterStepSize`.
     isOperation: true
-    types:
-    - uid: Qubit
+    input:
+      uid: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled

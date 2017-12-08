@@ -3,13 +3,14 @@ uid: microsoft.quantum.extensions.convert.tostringd
 name: ToStringD
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: ' Formats a double-precision floating point number as a string.'
+summary: >2
+   Converts a given double-precision floating-point number to an equivalent string representation.
+remarks: ' See [C# Convert.ToString](https://docs.microsoft.com/en-us/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Double_) for more details.'
 syntax: 'function ToStringD (a : Double) : String'
 input:
   content: '(a : Double)'
   types:
-  - name: a
-    uid: Double
+  - uid: Double
     isPrimitive: true
 output:
   content: String

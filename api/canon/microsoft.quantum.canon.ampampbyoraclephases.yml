@@ -10,22 +10,26 @@ syntax: 'function AmpAmpByOraclePhases (phases : AmpAmpReflectionPhases, stateOr
 input:
   content: '(phases : AmpAmpReflectionPhases, stateOracle : StateOracle, idxFlagQubit : Int)'
   types:
+  - name: phases
+    summary: ' Phases of partial reflections '
+    uid: microsoft.quantum.canon.ampampreflectionphases
+  - name: stateOracle
+    uid: microsoft.quantum.canon.stateoracle
   - name: idxFlagQubit
     summary: ' Index to Flag qubit '
     uid: Int
     isPrimitive: true
-  - name: phases
-    summary: ' Phases of partial reflections '
-    uid: ampampreflectionphases
-  - name: stateOracle
-    uid: stateoracle
 output:
   content: '(Qubit[] => () : Adjoint, Controlled)'
   types:
   - isOperation: true
-    types:
-    - uid: Qubit
+    input:
+      uid: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled

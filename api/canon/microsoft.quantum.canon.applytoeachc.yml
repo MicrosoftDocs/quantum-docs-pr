@@ -9,11 +9,11 @@ summary: >2
 remarks: >2
 
   ### Examples
-   Prepare a three-qubit $\ket{+} state:
-   ```qsharp
-       using (register = Qubit[3]) {
-           ApplyToEach(H, register);
-       }
+   Prepare a three-qubit $\ket{+}$ state:
+   ```Q#
+   using (register = Qubit[3]) {
+       ApplyToEach(H, register);
+   }
    ```
 syntax: "operation ApplyToEachC (singleElementOperation : ('T => () : Controlled), register : 'T[]) : ()"
 input:
@@ -46,4 +46,5 @@ seeAlso:
 functors: *o0
 typeParameters:
 - uid: "'T"
-  summary: " The target on which the operation acts. \n"
+  summary: >2
+     The target on which the operation acts.

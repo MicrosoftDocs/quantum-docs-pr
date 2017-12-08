@@ -8,11 +8,11 @@ summary: >2
 remarks: >2
 
   ### Examples
-   Prepare a three-qubit $\ket{+} state:
-   ```qsharp
-       using (register = Qubit[3]) {
-           ApplyToEach(H, register);
-       }
+   Prepare a three-qubit $\ket{+}$ state:
+   ```Q#
+   using (register = Qubit[3]) {
+       ApplyToEach(H, register);
+   }
    ```
 syntax: "operation ApplyToEach (singleElementOperation : ('T => ()), register : 'T[]) : ()"
 input:
@@ -39,9 +39,10 @@ output:
   - uid: ()
     isPrimitive: true
 seeAlso:
-- microsoft.quantum.canon.applytoeacha
 - microsoft.quantum.canon.applytoeachc
+- microsoft.quantum.canon.applytoeacha
 - microsoft.quantum.canon.applytoeachca
 typeParameters:
 - uid: "'T"
-  summary: " The target on which the operation acts. \n"
+  summary: >2
+     The target on which the operation acts.

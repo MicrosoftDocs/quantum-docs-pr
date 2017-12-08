@@ -7,11 +7,9 @@ summary: >2
    Represents an oracle for oblivious amplitude amplification.
 remarks: >2-
    This oracle defined by
-   \\(
    \begin{align}
        O\ket{s}\_a\ket{\psi}\_s & = \lambda\ket{t}\_a \ket{\psi}\_s + \sqrt{1-|\lambda|^2}\ket{t^\perp}\_a\cdots
    \end{align}
-   \\)
    acts on the ancilla state $\ket{s}\_a$ to implement the unitary $U$
    on any system state $\ket{\psi}_\s$ with amplitude $\lambda$ in the
    basis flagged by $\ket{t}\_a$.

@@ -21,9 +21,9 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Writing a quantum program
+# Writing a Quantum Program
 
-## What you'll learn
+## What You'll Learn
 
 > [!div class="checklist"]
 > * How to set up a quantum solution and project in Visual Studio
@@ -37,7 +37,7 @@ Now that you’ve installed the Microsoft Quantum Development Kit and seen
 how it works, let’s write your first quantum application.
 We'll start with the simplest program possible and build it up to demonstrate quantum superposition and quantum entanglement. We will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
 
-### Step 1: Create a project and solution
+### Step 1: Create a Project and Solution
 
 Open up Visual Studio 2017.
 Go to the `File` menu and select `New` > `Project...`.
@@ -45,11 +45,11 @@ In the project template explorer, under `Installed` > `Visual C#`,
 select the `Q# Application` template.
 Give your project the name `Bell`.
 
-### Step 2 (optional): Update NuGet packages
+### Step 2 (optional): Update NuGet Packages
 
 If you want to run the latest version, update the `Microsoft.Quantum.Development.Kit` and `Microsoft.Quantum.Canon` NuGet packages, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package).
 
-### Step 3: Enter the Q# code
+### Step 3: Enter the Q# Code
 
 Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
 
@@ -238,7 +238,7 @@ to its argument qubit.
 > Q# uses tuples as a way to pass multiple values, rather than using
 > structures or records.
 
-### Step 4: Enter the C# driver code
+### Step 4: Enter the C# Driver Code
 
 Switch to the `Driver.cs` file in Visual Studio.
 This file should have the following contents:
@@ -286,9 +286,13 @@ In the `Main` method, enter the following code:
 >   In the example, `count` is fixed at a 1000 and `initial` is the initial value of the qubit.
 > * Run the quantum algorithm.
 >   Each Q# operation generates a C# class with the same name.
->   This class has a `Run` method that asynchronously executes the operation.
+>   This class has a `Run` method that **asynchronously** executes the operation.
 >   The execution is asynchronous because execution on actual hardware will be
->   asynchronous.
+>   asynchronous. 
+>
+>   Because the `Run` method is asynchronous, we fetch the `Result` property;
+>   this blocks execution until the task completes and returns the result synchronously.
+>   
 > * Process the result of the operation.
 >   In the example, `res` receives the result of the operation.
 >   Here the result is a tuple of the number of zeros (`numZeros`) and number of ones (`numOnes`)
@@ -296,7 +300,7 @@ In the `Main` method, enter the following code:
 >   We deconstruct the tuple to get the two fields, print the results,
 >   and then wait for a keypress.
 
-### Step 5: Build and run
+### Step 5: Build and Run
 
 Just hit `F5`, and your program should build and run!
 

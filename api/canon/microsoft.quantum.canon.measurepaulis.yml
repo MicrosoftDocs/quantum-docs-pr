@@ -10,20 +10,6 @@ syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget :
 input:
   content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result))'
   types:
-  - name: gadget
-    summary: >2
-       Operation which performs the measurement of a given multi-qubit operator.
-    isOperation: true
-    types:
-    - types:
-      - uid: Pauli
-        isPrimitive: true
-        isArray: true
-      - uid: Qubit
-        isPrimitive: true
-        isArray: true
-    - uid: Result
-      isPrimitive: true
   - name: paulis
     summary: ' Array of multi-qubit Pauli operators to measure.'
     isArray: true
@@ -35,6 +21,21 @@ input:
     uid: Qubit
     isPrimitive: true
     isArray: true
+  - name: gadget
+    summary: >2
+       Operation which performs the measurement of a given multi-qubit operator.
+    isOperation: true
+    input:
+      types:
+      - uid: Pauli
+        isPrimitive: true
+        isArray: true
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      uid: Result
+      isPrimitive: true
 output:
   content: Result[]
   types:

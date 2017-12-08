@@ -18,16 +18,16 @@ input:
        Which state the qubit is expected to be in: Zero or One.
     uid: Result
     isPrimitive: true
-  - name: q
-    summary: >2
-       The qubit whose state is asserted.
-    uid: Qubit
-    isPrimitive: true
   - name: tolerance
     summary: >2
        Tolerance on the probability of a measurement of the qubit returning the expected
        result.
     uid: Double
+    isPrimitive: true
+  - name: q
+    summary: >2
+       The qubit whose state is asserted.
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()

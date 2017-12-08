@@ -11,5 +11,5 @@ output:
   content: (RecoveryFn, RecoveryFn)
   types:
   - types:
-    - uid: recoveryfn
-    - uid: recoveryfn
+    - uid: microsoft.quantum.canon.recoveryfn
+    - uid: microsoft.quantum.canon.recoveryfn

@@ -7,20 +7,23 @@ syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => () 
 input:
   content: "(singleElementOperation : ((Int, 'T) => () : Adjoint), register : 'T[])"
   types:
-  - name: register
-    uid: "'T"
-    isLocal: true
-    isArray: true
   - name: singleElementOperation
     isOperation: true
-    types:
-    - types:
+    input:
+      types:
       - uid: Int
         isPrimitive: true
       - uid: "'T"
         isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors: &o0
+    - Adjoint
+  - name: register
+    uid: "'T"
+    isLocal: true
+    isArray: true
 output:
   content: ()
   types:
@@ -28,5 +31,4 @@ output:
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
-functors:
-- Adjoint
+functors: *o0

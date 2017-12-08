@@ -9,11 +9,14 @@ input:
   types:
   - name: oracle
     isOperation: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors: &o0
+    - Controlled
   - name: power
     uid: Int
     isPrimitive: true
@@ -21,10 +24,12 @@ output:
   content: "('T => () : Controlled)"
   types:
   - isOperation: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors: *o0
 seeAlso:
 - microsoft.quantum.canon.operationpow

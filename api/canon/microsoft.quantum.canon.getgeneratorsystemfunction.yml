@@ -11,13 +11,14 @@ input:
   types:
   - name: generatorSystem
     summary: " The `GeneratorSystem` of interest. \n"
-    uid: generatorsystem
+    uid: microsoft.quantum.canon.generatorsystem
 output:
   content: (Int -> GeneratorIndex)
   types:
   - summary: ' An function that indexes each `GeneratorIndex` term in a Hamiltonian.'
     isFunction: true
-    types:
-    - uid: Int
+    input:
+      uid: Int
       isPrimitive: true
-    - uid: generatorindex
+    output:
+      uid: microsoft.quantum.canon.generatorindex

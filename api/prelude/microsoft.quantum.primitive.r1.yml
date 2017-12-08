@@ -4,7 +4,7 @@ name: R1
 type: operation
 namespace: Microsoft.Quantum.Primitive
 summary: >2
-   Applies a rotation about the $\ket{1}$-axis by a given angle,
+   Applies a rotation about the $\ket{1}$ state by a given angle,
    \begin{align}
        R_1(\theta) \mathrel{:=}
        \operatorname{diag}(1, e^{i\theta}).
@@ -19,14 +19,14 @@ syntax: 'operation R1 (theta : Double, qubit : Qubit) : ()'
 input:
   content: '(theta : Double, qubit : Qubit)'
   types:
+  - name: theta
+    summary: ' Angle about which the qubit is to be rotated.'
+    uid: Double
+    isPrimitive: true
   - name: qubit
     summary: >2
        Qubit to which the gate should be applied.
     uid: Qubit
-    isPrimitive: true
-  - name: theta
-    summary: ' Angle about which the qubit is to be rotated.'
-    uid: Double
     isPrimitive: true
 output:
   content: ()

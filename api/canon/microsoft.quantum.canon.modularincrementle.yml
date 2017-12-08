@@ -15,7 +15,7 @@ input:
     uid: Int
     isPrimitive: true
   - name: target
-    uid: littleendian
+    uid: microsoft.quantum.canon.littleendian
 output:
   content: ()
   types:

@@ -8,6 +8,7 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
+uid: microsoft.quantum.concepts.software-stack
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
@@ -20,7 +21,7 @@ ms.topic: article-type-from-white-list
 # ms.reviewer:
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
-# The software stack
+# The Software Stack
 Normally when we think of a computer we envision a single device running an application, but modern computing environments are much more complex and advanced. The application we interact with typically rests on multiple layers of software that provide for the application's execution down to the hardware level. These software layers are necessary to abstract the development of an application solution from the underlying complexity of the complete computing system. If a developer had to think about bus, cache architectures, communication protocols, and more while writing a simple smartphone app, the task would become much more complex.  The concept of a *software stack* was developed in classical computing to address these issues.  Borrowing from the classical concept, a software stack is also a key part of the vision behind quantum computing with Q#.  
 
 The key idea behind a software stack is recursion.  It consists of several nested layers of interfaces that abstract the details of the lower levels of the device away from the developer.  For example, a commonly used software stack involves running ASP.NET (a programming language), on top of SQL server (a relational database management system), which runs on top of Internet Information Services (a web server), which runs on top of Windows server (an operating system), which drives the computer hardware.  By looking at software as a hierarchy, one can write software in ASP.NET without needing to understand the low-level details of all the software below it.

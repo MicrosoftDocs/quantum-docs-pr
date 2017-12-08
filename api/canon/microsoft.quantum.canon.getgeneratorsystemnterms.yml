@@ -11,7 +11,7 @@ input:
   types:
   - name: generatorSystem
     summary: " The `GeneratorSystem` of interest. \n"
-    uid: generatorsystem
+    uid: microsoft.quantum.canon.generatorsystem
 output:
   content: Int
   types:

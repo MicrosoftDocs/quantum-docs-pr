@@ -24,6 +24,9 @@ input:
        $\sigma \le 2\pi / 2^\text{bitsPrecision}$ using a number of queries scaling like $\sigma \le 10.7 \pi / \text{# of queries}$.
     uid: Int
     isPrimitive: true
+  - name: oracle
+    summary: ' An operation implementing $U^m$ for given integer powers $m$.'
+    uid: microsoft.quantum.canon.discreteoracle
   - name: eigenstate
     summary: >2-
        A quantum register representing an eigenstate $\ket{\phi}$ of $U$, where $U\ket{\phi} =
@@ -31,9 +34,6 @@ input:
     uid: Qubit
     isPrimitive: true
     isArray: true
-  - name: oracle
-    summary: ' An operation implementing $U^m$ for given integer powers $m$.'
-    uid: discreteoracle
 output:
   content: Double
   types:

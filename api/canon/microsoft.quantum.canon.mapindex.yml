@@ -23,25 +23,26 @@ syntax: "function MapIndex (mapper : ((Int, 'T) -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
+  - name: mapper
+    summary: >2-
+       A function from `(Int, 'T)` to `'U` that is used to map elements
+       and their indices.
+    isFunction: true
+    input:
+      types:
+      - uid: Int
+        isPrimitive: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      uid: "'U"
+      isLocal: true
   - name: array
     summary: >2
        An array of elements over `'T`.
     uid: "'T"
     isLocal: true
     isArray: true
-  - name: mapper
-    summary: >2-
-       A function from `(Int, 'T)` to `'U` that is used to map elements
-       and their indices.
-    isFunction: true
-    types:
-    - types:
-      - uid: Int
-        isPrimitive: true
-      - uid: "'T"
-        isLocal: true
-    - uid: "'U"
-      isLocal: true
 output:
   content: "'U[]"
   types:

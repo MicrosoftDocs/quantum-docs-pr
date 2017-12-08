@@ -23,11 +23,13 @@ ms.topic: article-type-from-white-list
 
 # Operations and Functions #
 
-<!-- TODO: Need an intro here -->
+Q# programs consist of one or more *operations* which describe side effect which quantum operations can have on quantum data and one or more *functions* which allow to modify classical data. In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values.
+
+Each operation defined in Q# may then call any number of other operations, including the built-in primitive operations defined by the language. The particular way in which these primitive operations are defined depends on the target machine. When compiled, each operation is represented as a .NET class type that can be provided to target machines.
 
 ## Defining New Operations ##
 
-As described above, the most basic building block of a quantum program written in Q# is an *operation*, which can either be called from classical .NET applications using a simulator, or by other operations within Q#.
+As described above, the most basic building block of a quantum program written in Q# is an *operation*, which can either be called from classical .NET applications, e.g., using a simulator, or by other operations within Q#.
 Each operation takes an input, produces an output, and minimally consists of a *body* listing one or more instructions.
 For instance, the following operation takes a single qubit as its input, then calls the built-in `X` operation on that input:
 
@@ -40,7 +42,7 @@ operation BitFlip(target : Qubit) : () {
 ```
 
 The keyword `operation` begins the operation definition, and is followed by the name; here, `BitFlip`.
-Next, the type of the input is defined as `(Qubit)`, along with a name `target` for referring to the input within the new operation.
+Next, the type of the input is defined as `Qubit`, along with a name `target` for referring to the input within the new operation.
 Similarly, the `()` defines that the operation's output is empty.
 This is used similarly to `void` in C# and other imperative languages, and is equivalent to `unit` in F# and other functional languages.
 
@@ -89,16 +91,15 @@ operation PrepareEntangledPair(here : Qubit, there : Qubit) : () {
         CNOT(here, there);
     }
 
-    Adjoint auto
-    Controlled auto
-    Controlled Adjoint auto
+    adjoint auto
+    controlled auto
+    controlled adjoint auto
 }
 ```
 
 Very often, variant specifications will consist of the keyword `auto`, indicating that the compiler should determine how to generate the variant definition.
 If the compiler cannot generate a definition automatically, or if a more efficient implementation can be given, then a variant may also be manually defined.
-We will see examples of this below in ....
-<!-- TODO: reference With in control flow -->
+We will see examples of this below in [Higher-Order Control Flow](libraries/control-flow.md).
 
 To call a variant of an operation, use the `Adjoint` or `Controlled` keywords.
 For example, the superdense coding example above can be written more compactly by using the adjoint of `PrepareEntangledState` to transform the entangled state back into an unentangled pair of qubits:
@@ -125,7 +126,7 @@ Most critically, an operation which uses the output value of any other operation
 Q# also allows for defining *functions*, distinct from operations in that they are not allowed to have any effects beyond calculating an output value.
 In particular, functions cannot call operations, act on qubits, sample random numbers, or otherwise depend on state beyond the input value to a function.
 As a consequence, Q# functions are *pure*, in that they always map the same input values to the same output values.
-This allows the Q# compiler to safely reorder how and when functions are called when generating operations variants.
+This allows the Q# compiler to safely reorder how and when functions are called when generating operation variants.
 
 Defining a function works similarly to defining an operation, except that statements are placed directly within the function, and do not need to be wrapped in a `body` declaration.
 For instance:
@@ -136,7 +137,7 @@ function Square(x : Double) : (Double) {
 }
 ```
 Whenever it is possible to do so, it is helpful to write out classical logic in terms of functions rather than operations, so that it can be more readily used from within operations.
-If we had written `Square` as an operation, for example, then the compiler would not have been able to guarantee that calling it with the same input would consistantly produce the same outputs.
+If we had written `Square` as an operation, for example, then the compiler would not have been able to guarantee that calling it with the same input would consistently produce the same outputs.
 This is especially critical when considering operation variants.
 
 To underscore the difference between functions and operations, consider the problem of classically sampling a random number from within a Q# operation:
@@ -152,14 +153,14 @@ operation U(target : Qubit) : () {
 
 Each time that `U` is called, it will have a different action on `target`.
 In particular, the compiler cannot guarantee that if we added an `Adjoint auto` statement to `U`, then `U(target); (Adjoint U)(target);` acts as identity (that is, as a no-op).
-This violates the definition of the adjoint that we saw in @qc_concepts, such that allowing `Adjoint auto` in an operation where we have called the operation @"microsoft.quantum.canon.randomreal" breaks the guarantees provided by the compiler.
+This violates the definition of the adjoint that we saw in [Vectors and Matrices](quantum-concepts-2-VectorsMatrices.md), such that allowing `Adjoint auto` in an operation where we have called the operation @"microsoft.quantum.canon.randomreal" would breaks the guarantees provided by the compiler; @"microsoft.quantum.canon.randomreal" is an operation for which no adjoint and controlled version exists. 
 
 On the other hand, allowing function calls such as `Square` is safe, in that the compiler can be assured that it only needs to preserve the input to `Square` in order to keep its output stable.
 Thus, isolating as much classical logic as possible into functions makes it easy to reuse that logic in other functions and operations alike.
 
-## Flow Control ##
+## Control Flow ##
 
-Within an operation or function, each statement executes in order, similar to in most common imparative classical languages.
+Within an operation or function, each statement executes in order, similar to in most common imperative classical languages.
 This flow of control can be modified, however, in three distinct ways:
 
 - `if` Statements

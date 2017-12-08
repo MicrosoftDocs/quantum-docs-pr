@@ -30,11 +30,12 @@ input:
        is to be prepared, where $N$ is the number of qubits on which
        `op` acts.
     isOperation: true
-    types:
-    - uid: Qubit
+    input:
+      uid: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
   - name: reference
     summary: >2-

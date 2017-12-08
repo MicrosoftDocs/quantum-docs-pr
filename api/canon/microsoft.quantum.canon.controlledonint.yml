@@ -18,23 +18,29 @@ input:
     summary: >2
        Unitary operator.
     isOperation: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors: &o0
+    - Adjoint
+    - Controlled
 output:
   content: "((Qubit[], 'T) => () : Adjoint, Controlled)"
   types:
   - summary: >2
        A unitary operator that applies `oracle` on the target register if the control register state corresponds to the number state `numberState`.
     isOperation: true
-    types:
-    - types:
+    input:
+      types:
       - uid: Qubit
         isPrimitive: true
         isArray: true
       - uid: "'T"
         isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors: *o0

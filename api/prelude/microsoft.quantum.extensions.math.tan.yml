@@ -3,13 +3,14 @@ uid: microsoft.quantum.extensions.math.tan
 name: Tan
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-remarks: ' See (`System.Math.Tan`)[https://docs.microsoft.com/en-us/dotnet/api/system.math.tan].'
+summary: >2
+   Returns the tangent of the specified angle.
+remarks: ' See [System.Math.Tan](https://docs.microsoft.com/en-us/dotnet/api/system.math.tan) for more details.'
 syntax: 'function Tan (d : Double) : Double'
 input:
   content: '(d : Double)'
   types:
-  - name: d
-    uid: Double
+  - uid: Double
     isPrimitive: true
 output:
   content: Double

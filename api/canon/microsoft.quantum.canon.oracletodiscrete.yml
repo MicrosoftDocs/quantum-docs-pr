@@ -3,29 +3,31 @@ uid: microsoft.quantum.canon.oracletodiscrete
 name: OracleToDiscrete
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given an operation representing a "black-box" oracle, implements
-   a discrete-time oracle by repeating the given oracle multiple times.
+summary: " Given an operation representing a \"black-box\" oracle, returns a discrete-time oracle \n which represents the \"black-box\" oracle repeated multiple times.\n"
 remarks: >2-
 
   ### Examples
-   `OracleToDiscrete(U)(3, target)` is equivalent to `U(target)`
-   repeated three times.
+   `OracleToDiscrete(U)(3, target)` is equivalent to `U(target)` repeated three times.
 syntax: 'operation OracleToDiscrete (blackBoxOracle : (Qubit[] => () : Adjoint, Controlled)) : DiscreteOracle'
 input:
   content: '(blackBoxOracle : (Qubit[] => () : Adjoint, Controlled))'
   types:
   - name: blackBoxOracle
     summary: >2
-       "Black-box" oracle to perform powers of as a discrete-time oracle.
+       The operation to be exponentiated
     isOperation: true
-    types:
-    - uid: Qubit
+    input:
+      uid: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled
 output:
   content: DiscreteOracle
   types:
-  - uid: discreteoracle
+  - summary: " An operation partially applied over the \"black-box\" oracle representing the discrete-time oracle \n"
+    uid: microsoft.quantum.canon.discreteoracle

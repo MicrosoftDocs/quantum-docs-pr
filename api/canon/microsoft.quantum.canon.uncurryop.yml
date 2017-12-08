@@ -15,14 +15,16 @@ input:
     summary: >2
        A function which returns operations.
     isFunction: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - isOperation: true
-      types:
-      - uid: "'U"
+    output:
+      isOperation: true
+      input:
+        uid: "'U"
         isLocal: true
-      - uid: ()
+      output:
+        uid: ()
         isPrimitive: true
 output:
   content: (('T, 'U) => ())
@@ -31,13 +33,14 @@ output:
        A new operation `op` such that `op(t, u)` is equivalent
        to `(curriedOp(t))(u)`.
     isOperation: true
-    types:
-    - types:
+    input:
+      types:
       - uid: "'T"
         isLocal: true
       - uid: "'U"
         isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.uncurryopc

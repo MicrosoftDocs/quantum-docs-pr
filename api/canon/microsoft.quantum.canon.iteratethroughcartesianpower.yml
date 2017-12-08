@@ -8,20 +8,21 @@ syntax: 'operation IterateThroughCartesianPower (power : Int, bound : Int, op : 
 input:
   content: '(power : Int, bound : Int, op : (Int[] => ()))'
   types:
+  - name: power
+    uid: Int
+    isPrimitive: true
   - name: bound
     uid: Int
     isPrimitive: true
   - name: op
     isOperation: true
-    types:
-    - uid: Int
+    input:
+      uid: Int
       isPrimitive: true
       isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
-  - name: power
-    uid: Int
-    isPrimitive: true
 output:
   content: ()
   types:

@@ -24,13 +24,14 @@ input:
     summary: >2
        An operation whose input is a pair.
     isOperation: true
-    types:
-    - types:
+    input:
+      types:
       - uid: "'T"
         isLocal: true
       - uid: "'U"
         isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
 output:
   content: ('T -> ('U => ()))
@@ -40,12 +41,14 @@ output:
        an operation which accepts as its input the second element of the
        original operation's input.
     isFunction: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - isOperation: true
-      types:
-      - uid: "'U"
+    output:
+      isOperation: true
+      input:
+        uid: "'U"
         isLocal: true
-      - uid: ()
+      output:
+        uid: ()
         isPrimitive: true

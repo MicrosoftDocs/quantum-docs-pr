@@ -10,7 +10,7 @@ input:
   content: '(target : BigEndian)'
   types:
   - name: target
-    uid: bigendian
+    uid: microsoft.quantum.canon.bigendian
 output:
   content: Int
   types:

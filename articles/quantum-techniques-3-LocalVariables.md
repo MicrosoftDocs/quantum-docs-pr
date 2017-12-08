@@ -30,15 +30,17 @@ For instance:
 let measurementOperator = [PauliX; PauliZ; PauliZ; PauliX; PauliI];
 ```
 
+This assigns a particular array of Pauli operators to variable called `measurementOperator`.
+
 > [!TIP]
-> Note that we did not need to explicitly say the type of our new variable, as the expression on the right-hand side of the `let` statement is unambiguous.
+> Note that we did not need to explicitly specify the type of our new variable, as the expression on the right-hand side of the `let` statement is unambiguous and the type is inferred by the compiler. 
 
 Variables in Q# are *immutable*, meaning that once a variable defined in this way, it can no longer be changed in any way.
-This allow for classical logic acting on variables to be reordered for applying the `Adjoint` variant of an operation.
+This allows for several beneficial optimizations, including optimization of the classical logic acting on variables to be reordered for applying the `Adjoint` variant of an operation.
 
 <!-- FIXME: feels too much like the spec itself. Need to focus more on the how. -->
 
-Variables defined in this way are local to a particular scope, such as the body of an operation or the contents of a `for` loop.
+Variables defined used the `let` binding as above are local to a particular scope, such as the body of an operation or the contents of a `for` loop.
 
 
 ## Mutability ##
@@ -68,7 +70,7 @@ For this reason, it is a good practice to make functions and operations which us
 
 ## Deconstruction ##
 
-In addition to assigning a single variable, the `let`, `mutable`, and `set` keywords also allow for unpacking the contents of a [tuple type](#tuple-types).
+In addition to assigning a single variable, the `let` keyword also allows for unpacking the contents of a [tuple type](#tuple-types).
 An assignment of this form is said to *deconstruct* the elements of that tuple.
 For instance, if we model a term in a Hamiltonian by a tuple, then we can use deconstruction to access the different data that we need to simulate under that term:
 

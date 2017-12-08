@@ -7,20 +7,20 @@ syntax: 'operation ContinuousPhaseEstimationIteration (oracle : ContinuousOracle
 input:
   content: '(oracle : ContinuousOracle, time : Double, theta : Double, eigenstate : Qubit[], controlQubit : Qubit)'
   types:
-  - name: controlQubit
-    uid: Qubit
+  - name: oracle
+    uid: microsoft.quantum.canon.continuousoracle
+  - name: time
+    uid: Double
+    isPrimitive: true
+  - name: theta
+    uid: Double
     isPrimitive: true
   - name: eigenstate
     uid: Qubit
     isPrimitive: true
     isArray: true
-  - name: oracle
-    uid: continuousoracle
-  - name: theta
-    uid: Double
-    isPrimitive: true
-  - name: time
-    uid: Double
+  - name: controlQubit
+    uid: Qubit
     isPrimitive: true
 output:
   content: ()

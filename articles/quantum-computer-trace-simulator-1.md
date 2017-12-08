@@ -20,7 +20,7 @@ ms.topic: article-type-from-white-list
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Quantum trace simulator
+# Quantum Trace Simulator
 
 The Microsoft quantum computer trace simulator executes a quantum program without actually simulating the state of a quantum computer.  For this reason, the trace simulator can execute quantum programs that use thousands of qubits.  It is useful for two main purposes: 
 
@@ -33,7 +33,7 @@ measurements must be performed. See Section [Providing the probability of
 measurement outcomes](#providing-the-probability-of-measurement-outcomes) for more
 details on this. 
 
-## Providing the probability of measurement outcomes
+## Providing the Probability of Measurement Outcomes
 
 There are two kinds of measurements that appear in quantum algorithms. The first
 kind plays an auxiliary role where the user usually knows the
@@ -74,12 +74,9 @@ The second kind of measurement is used to read out the answer of the quantum
 algorithm where the user usually does not know the probability of such measurement
 outcomes. The quantum computer trace simulator provides a function `ForceMeasure` in
 namespace `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators` to force
-the simulator to take the measurement outcome preferred by the user. See the API documentation on `ForceMeasure` for more information.
+the simulator to take the measurement outcome preferred by the user. See [ForceMeasure](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.ForceMeasure) for more information.
 
-<!-- TODO Link to ref api page [ForceMeasure](Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.ForceMeasure) for more detail.
---->
-
-## Running your program with the quantum computer trace simulator 
+## Running your Program with the Quantum Computer Trace Simulator 
 
 The quantum computer trace simulator may be viewed as just another target machine. The C# driver program for using it is very similar to the one for any other quantum Simulator: 
 

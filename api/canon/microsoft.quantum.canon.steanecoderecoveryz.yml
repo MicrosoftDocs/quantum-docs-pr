@@ -8,7 +8,7 @@ input:
   content: '(syndrome : Syndrome)'
   types:
   - name: syndrome
-    uid: syndrome
+    uid: microsoft.quantum.canon.syndrome
 output:
   content: Pauli[]
   types:

@@ -22,10 +22,10 @@ uid: microsoft.quantum.concepts.qubit
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# The qubit
+# The Qubit
 Just as bits are the fundamental object of information in classical computing, *qubits* (quantum bits) are the fundamental object of information in quantum computing.  To understand this correspondence, lets look at the simplest example: a single qubit. 
 
-## Representing a qubit ##
+## Representing a Qubit ##
 
 While a bit, or binary digit, can have value either $0$ or $1$, a qubit can have a value that is either of these or a quantum superposition of $0$ and $1$.
 The state of a single qubit can be described by a two-dimensional column vector of unit norm, that is, the magnitude squared of its entries must sum to $1$. This vector, called the quantum state vector, holds all the information needed to describe the one-qubit quantum system just as a single bit holds all of the information needed to describe the state of a binary variable.
@@ -42,7 +42,7 @@ $$0\equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\qquad 1 \equiv \begin{bmatrix}
 
 although the opposite choice could equally well be taken.  Thus, out of the infinite number of possible single-qubit quantum state vectors, only two correspond to states of classical bits; all other quantum states do not.
 
-## Measuring a qubit
+## Measuring a Qubit
 Now that we know how to represent a qubit, we can gain some intuition for what these states represent by discussing the concept of *measurement*. A measurement corresponds to the informal idea of “looking” at a qubit, which immediately collapses the quantum state to one of the two classical states  $\begin{bmatrix} 1 \\\\  0 \end{bmatrix}$ or  $\begin{bmatrix} 0 \\\\  1 \end{bmatrix}$. When a qubit given by the quantum state vector  $\begin{bmatrix} \alpha \\\\  \beta \end{bmatrix}$ is measured, we obtain the outcome $0$ with probability $|\alpha|^2$ and the outcome $1$  with probability $|\beta|^2$. On outcome $0$, the qubit's new state is $\begin{bmatrix} 1 \\\\  0 \end{bmatrix}$; on outcome $1$ its state is $\begin{bmatrix} 0 \\\\  1 \end{bmatrix}$. Note that these probabilities sum up to $1$ because of the normalization condition $|\alpha|^2 + |\beta|^2 = 1$.
 
 The properties of measurement also mean that the overall sign of the quantum state vector is irrelevant. Negating a vector is equivalent to $\alpha \rightarrow -\alpha$ and $\beta \rightarrow -\beta$.  Because the probability of measuring $0$ and $1$ depends on the magnitude squared of the terms, inserting such signs does not change the probabilities whatsoever.  Such phases are commonly called ``global phases'' and more generally can be of the form $e^{i \phi}$ rather than just $\pm 1$.
@@ -50,7 +50,7 @@ The properties of measurement also mean that the overall sign of the quantum sta
 A final important property of measurement is that it does not necessarily damage all quantum state vectors.  If we start with a qubit in the state $\begin{bmatrix} 1 \\\\  0 \end{bmatrix}$, which corresponds to the classical state $0$, measuring this state will always yield the outcome $0$ and leave the quantum state unchanged.  In this sense, if we only have classical bits (i.e., qubits that are either $\begin{bmatrix}1 \\\\  0 \end{bmatrix}$ or $\begin{bmatrix}0 \\\\  1 \end{bmatrix}$) then measurement does not damage the system.  This means that we can replicate classical data and manipulate it on a quantum computer just as one could do on a classical computer.  The ability, however, to store information in both states at once is what elevates quantum computing beyond what is possible classically and further robs quantum computers of the ability to copy quantum data indiscriminately.
 <!--- TODO: need to link in with no-cloning once its moved. --->
 
-## Visualizing qubits and transformations using the Bloch sphere ##
+## Visualizing Qubits and Transformations using the Bloch Sphere ##
 
 Qubits may also be pictured in $3$D using the *Bloch sphere* representation.  The Bloch sphere gives a way of describing a single-qubit quantum state (which is a two-dimensional complex vector) as a three-dimensional real-valued vector.  This is important because it allows us to visualize single-qubit states and thereby develop reasoning that can be invaluable in understanding multi-qubit states (where sadly the Bloch sphere representation breaks down).  The bloch sphere can be visualized as follows:
 
@@ -60,7 +60,7 @@ Qubits may also be pictured in $3$D using the *Bloch sphere* representation.  Th
 The arrows in this diagram show the direction in which the quantum state vector is pointing and each transformation of the arrow can be thought of as a rotation about one of the cardinal axes.
 While thinking about a quantum computation as a sequence of rotations is a powerful intuition, it is challenging to use this intuition to design and describe algorithms.  Q# alleviates this issue by providing a language for describing such rotations.
 
-## Single-qubit operations
+## Single-Qubit Operations
 
 Quantum computers process data by applying a universal set of quantum gates that can emulate any rotation of the quantum state vector.  This notion of universality is akin to the notion of universality for traditional (i.e., classical) computing where a gate set is considered to be universal if every transformation of the input bits can be performed using a finite length circuit. 
 

@@ -11,10 +11,11 @@ input:
   - name: op
     summary: ' An operation to be applied to the first qubit'
     isOperation: true
-    types:
-    - uid: Qubit
+    input:
+      uid: Qubit
       isPrimitive: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
   - name: register
     summary: ' Qubit array to the first qubit of which the operation is applied'

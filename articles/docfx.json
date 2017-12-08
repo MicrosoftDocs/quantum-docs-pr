@@ -50,7 +50,8 @@
           "braket": ["\\left\\langle #1 \\right\\rangle", 1],
           "boldone": "\\mathbf{1}",
           "expect": "\\mathbb{E}",
-          "variance": "\\operatorname{Var}"
+          "variance": "\\operatorname{Var}",
+          "defeq": "\\mathrel{:=}"
         }
       }
     },

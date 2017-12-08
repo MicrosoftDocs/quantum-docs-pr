@@ -9,26 +9,32 @@ input:
   types:
   - name: curriedOp
     isFunction: true
-    types:
-    - uid: "'T"
+    input:
+      uid: "'T"
       isLocal: true
-    - isOperation: true
-      types:
-      - uid: "'U"
+    output:
+      isOperation: true
+      input:
+        uid: "'U"
         isLocal: true
-      - uid: ()
+      output:
+        uid: ()
         isPrimitive: true
+      functors: &o0
+      - Controlled
 output:
   content: "(('T, 'U) => () : Controlled)"
   types:
   - isOperation: true
-    types:
-    - types:
+    input:
+      types:
       - uid: "'T"
         isLocal: true
       - uid: "'U"
         isLocal: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors: *o0
 seeAlso:
 - microsoft.quantum.canon.uncurryop

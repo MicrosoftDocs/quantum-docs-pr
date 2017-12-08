@@ -10,12 +10,12 @@ syntax: 'function BoolArrFromPositiveInt (number : Int, bits : Int) : Bool[]'
 input:
   content: '(number : Int, bits : Int)'
   types:
-  - name: bits
-    summary: " Bits in binary representation of number.\n "
-    uid: Int
-    isPrimitive: true
   - name: number
     summary: ' Positive integer.'
+    uid: Int
+    isPrimitive: true
+  - name: bits
+    summary: " Bits in binary representation of number.\n "
     uid: Int
     isPrimitive: true
 output:

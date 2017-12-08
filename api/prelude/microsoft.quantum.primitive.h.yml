@@ -5,6 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Primitive
 summary: >2
    Applies the Hadamard transformation to a single qubit,
+
    \begin{align}
        H \mathrel{:=}
        \frac{1}{\sqrt{2}}

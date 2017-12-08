@@ -7,25 +7,30 @@ syntax: 'function RestrictToSubregisterA (op : (Qubit[] => () : Adjoint), idxs :
 input:
   content: '(op : (Qubit[] => () : Adjoint), idxs : Int[])'
   types:
+  - name: op
+    isOperation: true
+    input:
+      uid: Qubit
+      isPrimitive: true
+      isArray: true
+    output:
+      uid: ()
+      isPrimitive: true
+    functors: &o0
+    - Adjoint
   - name: idxs
     uid: Int
     isPrimitive: true
     isArray: true
-  - name: op
-    isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
 output:
   content: '(Qubit[] => () : Adjoint)'
   types:
   - isOperation: true
-    types:
-    - uid: Qubit
+    input:
+      uid: Qubit
       isPrimitive: true
       isArray: true
-    - uid: ()
+    output:
+      uid: ()
       isPrimitive: true
+    functors: *o0

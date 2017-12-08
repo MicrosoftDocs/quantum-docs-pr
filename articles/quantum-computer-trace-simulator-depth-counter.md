@@ -50,7 +50,7 @@ operation CCNOTDriver() : () {
 }
 ```
 
-## Using Depth Counter within a C# program
+## Using Depth Counter within a C# Program
 
 To check that `CCNOT` has `T` depth 5 and `CCNOTDriver` has `T` depth 6
 we can use the following C# code:

@@ -138,40 +138,6 @@ functions:
 - uid: microsoft.quantum.canon.getgeneratorsystemnterms
   summary: >2
      Retrieves the number of terms in a `GeneratorSystem`.
-- uid: microsoft.quantum.canon.h2bondlengths
-- uid: microsoft.quantum.canon.h2coeff
-- uid: microsoft.quantum.canon.h2evolutiongenerator
-  summary: >2-
-     We finish our description of the H₂ Hamiltonian for a
-     given bond length by specifying that we wish to use
-     the above description with the PauliEvolutionSet.
-
-     We could choose other evolution sets as well, allowing the
-     canon to be very general with respect to how Hamiltonians
-     are represented.
-- uid: microsoft.quantum.canon.h2generatorindex
-  summary: >2-
-     Represents a term in the H₂ Hamiltonian for a particular bond
-     length using the GeneratorTerm type from Canon.
-- uid: microsoft.quantum.canon.h2generatorsystem
-  summary: >2
-     Represents the sum of all Hamiltonian terms for a given
-     bond length using the GeneratorSystem type from Canon.
-- uid: microsoft.quantum.canon.h2identitycoeff
-- uid: microsoft.quantum.canon.h2terms
-  summary: >2
-     Given an index, returns a description of the correponding
-     term in the Hamiltonian for H₂. Each term is described by
-     a pair of integer arrays representing a sparse Pauli operator.
-- uid: microsoft.quantum.canon.h2trotterstepmanual
-  summary: >2
-     Uses the DecomposeIntoTimeSteps flow control library
-     to express the above decomposition.
-- uid: microsoft.quantum.canon.h2trotterunitaries
-  summary: >2-
-     Given the index of a bond length, returns an operation that
-     represents the decomposition of the corresponding Hamiltonian
-     into unitary gates.
 - uid: microsoft.quantum.canon.head
   summary: >2
      Returns the first element of the array.
@@ -344,9 +310,9 @@ functions:
   summary: >2
      Constructs reflection about the target state uniquely marked by the flag qubit state $\ket{1}_f$, prepared the oracle of type "StateOracle".
 - uid: microsoft.quantum.canon.timedependenttrottersimulationalgorithm
-  summary: " `TimeDependentSimulationAlgorithm` function that uses a Trotter-Suzuki \n decomposition to approximate a unitary operator that solves the \n time-dependent Schr�dinger equation at time $t$. \n"
+  summary: " `TimeDependentSimulationAlgorithm` function that uses a Trotter–Suzuki \n decomposition to approximate a unitary operator that solves the \n time-dependent Schr�dinger equation at time $t$. \n"
 - uid: microsoft.quantum.canon.trottersimulationalgorithm
-  summary: " `SimulationAlgorithm` function that uses a Trotter-Suzuki \n decomposition to approximate the time-evolution operator $e^{-i H t}$.\n"
+  summary: " `SimulationAlgorithm` function that uses a Trotter–Suzuki \n decomposition to approximate the time-evolution operator $e^{-i H t}$.\n"
 - uid: microsoft.quantum.canon.trotterstep
   summary: " Implements a single time-step of time-evolution by the system \n described in an `EvolutionGenerator` using a Trotter–Suzuki \n decomposition.\n"
 - uid: microsoft.quantum.canon.uncurryop
@@ -375,12 +341,24 @@ operations:
 - uid: microsoft.quantum.canon.ampamprusbyoracle
   summary: " Fixed-Point Amplitude Amplification algorithm \n"
 - uid: microsoft.quantum.canon.andladder
-  summary: >2-
+  summary: >2
      Applies a unitary given by the following map on computational basis vectors:
-     |x₁,…,xₙ⟩|y₁,…,yₙ₋₁⟩ ↦ |x₁,…,xₙ⟩|y₁⊕(x₁∧x₂),…,yₙ₋₁⊕(x₁∧x₂∧…∧xₙ)⟩
+     $$
+     \begin{align}
+         \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n - 1}} \mapsto
+         \ket{x\_1, \dots, x\_n} \ket{
+             y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n - 1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n - 1}
+         },
+     \end{align}
+     $$
+     where $\ket{x\_1, \dots, x\_n}$ refers to the computational basis
+     states of `controls`, and where $\ket{y\_1, \dots, y\_{n - 1}}$
+     refers to the computational basis states of `targets`.
 - uid: microsoft.quantum.canon.applyleoperationonphasele
   summary: >2
-     Applies an operation that takes PhaseLittleEndian input on LittleEndian target
+     Applies an operation that takes a
+     <xref:microsoft.quantum.canon.phaselittleendian> register as input
+     on a target register of type <xref:microsoft.quanutm.canon.littleendian>.
 - uid: microsoft.quantum.canon.applyleoperationonphaselea
 - uid: microsoft.quantum.canon.applyleoperationonphaselec
 - uid: microsoft.quantum.canon.applyleoperationonphaseleca
@@ -399,7 +377,9 @@ operations:
      bit of a Boolean array matches a given input.
 - uid: microsoft.quantum.canon.applyphaseleoperationonle
   summary: >2
-     Applies an operation that takes PhaseLittleEndian input on LittleEndian target
+     Applies an operation that takes a
+     <xref:microsoft.quantum.canon.littleendian> register as input
+     on a target register of type <xref:microsoft.quanutm.canon.phaselittleendian>.
 - uid: microsoft.quantum.canon.applyphaseleoperationonlea
 - uid: microsoft.quantum.canon.applyphaseleoperationonlec
 - uid: microsoft.quantum.canon.applyphaseleoperationonleca
@@ -413,8 +393,11 @@ operations:
 - uid: microsoft.quantum.canon.applyreversedoplittleendian
   summary: " Applies an operation that takes little-endian input to a register encoding \n an unsigned integer using big-endian format.\n"
 - uid: microsoft.quantum.canon.applyreversedoplittleendiana
+  summary: " Applies an operation that takes little-endian input and that supports\n the adjoint functor to a register encoding \n an unsigned integer using big-endian format.\n"
 - uid: microsoft.quantum.canon.applyreversedoplittleendianc
+  summary: " Applies an operation that takes little-endian input and that supports\n the controlled functor to a register encoding \n an unsigned integer using big-endian format.\n"
 - uid: microsoft.quantum.canon.applyreversedoplittleendianca
+  summary: " Applies an operation that takes little-endian input and that supports\n the controlled and adjoint functors to a register encoding \n an unsigned integer using big-endian format.\n"
 - uid: microsoft.quantum.canon.applytoeach
   summary: >2
      Applies a single-qubit operation to each element in a register.
@@ -527,22 +510,6 @@ operations:
   summary: " Encodes into the ⟦5, 1, 3⟧ quantum code. \n"
 - uid: microsoft.quantum.canon.fliptobasis
   summary: " Applies unitaries that map $\\ket{0}\\otimes\\cdots\\ket{0}$\n to $\\ket{\\psi_0} \\otimes \\ket{\\psi_{n - 1}}$,\n where $\\ket{\\psi_k}$ depends on `basis[k]`.\n\n The correspondence between \n value of `basis[k]` and $\\ket{\\psi_k}$ is the following:\n\n | `basis[k]` | $\\ket{\\psi_k}$ |\n |===|===|\n | 0 | $\\ket{0}$ |\n | 1 | $\\ket{1}$ |\n | 2 | $\\ket{+}$ |\n | 3 | $\\ket{i}$ ( +1 eigenstate of Pauli Y ) |\n"
-- uid: microsoft.quantum.canon.h2estimateenergy
-  summary: >2-
-     We can now use Canon's phase estimation algorithms to
-     learn the ground state energy using the above simulation.
-- uid: microsoft.quantum.canon.h2estimateenergyrpe
-  summary: " We finish by using the Robust Phase Estimation algorithm \n of Kimmel, Low and Yoder."
-- uid: microsoft.quantum.canon.h2stateprep
-  summary: >2-
-     Prepares the an approximation to the H₂ ground state,
-     assuming an initial state of |00〉.
-- uid: microsoft.quantum.canon.h2trotterstep
-  summary: >2-
-     We now provide Canon's Hamiltonian simulation
-     functions with the above representaiton to automatically
-     decompose the H₂ Hamiltonian into an appropriate operation
-     that we can apply to qubits as we please.
 - uid: microsoft.quantum.canon.hy
 - uid: microsoft.quantum.canon.i
   summary: ' Performs the identity operation (no-op) on a single qubit.'
@@ -600,6 +567,7 @@ operations:
      Given an array of multi-qubit Pauli operators, measures each using a specified measurement
      gadget, then returns the array of results.
 - uid: microsoft.quantum.canon.measurestabilizergenerators
+  summary: ' Measures the given set of generators of a stabilizer group.'
 - uid: microsoft.quantum.canon.measurewithscratch
   summary: >2
      Measures the given Pauli operator using an explicit scratch
@@ -614,38 +582,35 @@ operations:
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
   summary: " Let us denote modulus by N and constMultiplier by a \n then this operation implements a unitary defined by the following map on \n computational basis:\n |y⟩ ↦ |a⋅y (mod N) ⟩, for all y between 0 and N - 1 \n "
 - uid: microsoft.quantum.canon.mresetx
-  summary: >2
-     Measures a single qubit in the $X$ basis and ensures that it
-     is in the $\ket{0}$ state following the measurement.
+  summary: " Measures a single qubit in the $X$ basis, \n and resets it to the standard basis state\n $\\ket{0}$ following the measurement.\n"
 - uid: microsoft.quantum.canon.mresety
-  summary: >2
-     Measures a single qubit in the $Y$ basis and ensures that it
-     is in the $\ket{0}$ state following the measurement.
+  summary: " Measures a single qubit in the $Y$ basis, \n and resets it to the standard basis state\n $\\ket{0}$ following the measurement.\n"
 - uid: microsoft.quantum.canon.mresetz
-  summary: >2
-     Measures a single qubit in the $Z$ basis and ensures that it
-     is in the $\ket{0}$ state following the measurement.
+  summary: " Measures a single qubit in the $Z$ basis, \n and resets it to the standard basis state\n $\\ket{0}$ following the measurement.\n"
 - uid: microsoft.quantum.canon.multim
+  summary: ' Measures each qubit in a given array in the standard basis.'
 - uid: microsoft.quantum.canon.noop
   summary: ' Performs the identity operation (no-op) on a register of qubits.'
 - uid: microsoft.quantum.canon.noop2
   summary: ' Performs the identity operation (no-op) on two registers of qubits.'
-- uid: microsoft.quantum.canon.operationpowimpla
-- uid: microsoft.quantum.canon.operationpowimplc
-- uid: microsoft.quantum.canon.operationpowimplca
 - uid: microsoft.quantum.canon.oracletodiscrete
-  summary: >2
-     Given an operation representing a "black-box" oracle, implements
-     a discrete-time oracle by repeating the given oracle multiple times.
+  summary: " Given an operation representing a \"black-box\" oracle, returns a discrete-time oracle \n which represents the \"black-box\" oracle repeated multiple times.\n"
 - uid: microsoft.quantum.canon.preparechoistate
   summary: >2
      Prepares the Choi–Jamiłkowski state for a given operation onto given reference
      and target registers.
 - uid: microsoft.quantum.canon.preparechoistatea
-- uid: microsoft.quantum.canon.preparechoistatec
-- uid: microsoft.quantum.canon.preparechoistateca
-- uid: microsoft.quantum.canon.prepareentangledstate
   summary: >2-
+     Prepares the Choi–Jamiłkowski state for a given operation with an adjoint variant onto given reference
+     and target registers.
+- uid: microsoft.quantum.canon.preparechoistatec
+  summary: >2-
+     Prepares the Choi–Jamiłkowski state for a given operation with a controlled variant onto given reference
+     and target registers.
+- uid: microsoft.quantum.canon.preparechoistateca
+  summary: " Prepares the Choi–Jamiłkowski state for a given operation with both controlled and adjoint variants onto given reference\n and target registers. "
+- uid: microsoft.quantum.canon.prepareentangledstate
+  summary: >2
      Given two registers, prepares the maximally entangled state
      $\bra{\beta_{00}}\ket{\beta_{00}}$ between each pair of qubits on the respective registers,
      assuming that each register starts in the $\ket{0\cdots 0}$ state.
@@ -666,15 +631,25 @@ operations:
      where $\sigma\_i$ is the $i$th Pauli operator, and where
      $\rho$ is a density operator representing a mixed state.
 - uid: microsoft.quantum.canon.qft
-  summary: " Performs the quantum Fourier transform on an quantum register containing an \n integer in the big-endian representation.\n"
+  summary: >2
+     Performs the Quantum Fourier Transform on a quantum register containing an
+     integer in the big-endian representation.
 - uid: microsoft.quantum.canon.qftle
-  summary: " Little-endian version of QFT. \n"
+  summary: >2
+     Performs the Quantum Fourier Transform on a quantum register containing an
+     integer in the little-endian representation.
 - uid: microsoft.quantum.canon.quantumphaseestimation
   summary: >2
      Performs the quantum phase estimation algorithm for a given oracle U and eigenstate,
      reading the phase into a big-endian quantum register.
 - uid: microsoft.quantum.canon.rall0
-  summary: ' This performs a phase shift operation about the state $\ket{0\cdots 0}\bra{0\cdots 0}$.'
+  summary: >2
+     This performs a phase shift operation about the state $\ket{0\cdots 0}\bra{0\cdots 0}$,
+     $$
+     \begin{align}
+         \ket{0\cdots 0} \mapsto e^{i \theta} \ket{0\cdots 0}.
+     \end{align}
+     $$
 - uid: microsoft.quantum.canon.rall1
   summary: ' This performs a phase shift operation about the state $\ket{1\cdots 1}\bra{1\cdots 1}$.'
 - uid: microsoft.quantum.canon.randomint
@@ -723,12 +698,6 @@ operations:
   summary: >2
      Uses SWAP gates to reverse the order of the qubits in
      a register.
-- uid: microsoft.quantum.canon.trotter1implca
-  summary: >2
-     Implementation of the first-order Trotter–Suzuki integrator.
-- uid: microsoft.quantum.canon.trotter2implca
-  summary: >2
-     Implementation of the second-order Trotter–Suzuki integrator.
 - uid: microsoft.quantum.canon.with
   summary: >2
      Given operations implementing operators $U$ and $V$, performs the

@@ -20,7 +20,9 @@ ms.topic: article-type-from-white-list
 # ms.reviewer:
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
-# Installing and validating the Q# development environment
+
+# Installing and Validating the Q# Development Environment
+
 
 ## Prerequisites
 
@@ -33,33 +35,29 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 3. _**Important!**_ &nbsp;When you are presented with the option to select the tools for specific workloads, check the boxes for **Universal Windows Platform development** and **.NET desktop development**
 4. After selecting your workloads, click **Install** to complete the installation.
 
-## Creating the Q# development environment 
+## Creating the Q# Development Environment 
 
 1. Install the Microsoft Quantum Development Kit
 
-    1. Browse to the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
-    2. Type "Microsoft Quantum Development Kit" and press enter.
-    3. Click on the Microsoft Quantum Development Kit tile.
-    4. On the development kit landing page, click the **Download** button.
-    5. Your browser will ask you whether you wish to **Open** or **Save** the download, click **Open**.
-    6. Your security software may present a confirmation pane. Click **Allow**, or the comparable term used by your browser.
-    7. The Quantum Development Kit extension will be installed in Visual Studio 2017.
+    1. Browse to the [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/development-kit) page and click the **Download now** button in the upper left.
+    2. On the Visual Studio Marketplace [Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) page, click **Download**. 
+    3. Your browser will ask you whether you wish to **Open** or **Save** the download, click **Open**.
+    4. Your security software may present a confirmation pane. Click **Allow**, or the comparable term used by your browser.
+    5. The Quantum Development Kit extension will be installed in Visual Studio 2017.
 
-## Validating your environment
+## Validating Your Environment
 
-In this section you will clone the quantum libraries, and run a sample application to verify that your Q# environment is correctly installed and configured. 
+In this section you will clone the quantum samples & libraries, and run a sample application to verify that your Q# environment is correctly installed and configured. 
 
-1. Clone the quantum Libraries repository.
-    1. Navigate to the [Libraries](https://github.com/microsoft/quantum) GitHub repository.
-    2. Click the **Clone or download** button in the upper right.
-    3. In the **Clone with HTTPS** pane, click **Open in Visual Studio**.
-    4. If presented with a browser or virus checker confirmation pane, click on the "Allow" button (or comparable button in your environment.)
-    5. Visual Studio will open with the **Team Explorer** pane open on the right.
-    6. On the **Team Explorer** pane, click **Clone** to proceed.
-    7. The repository will be cloned on your local computer and Visual Studio will switch to the **Solution Explorer** on the right populated with the libraries and samples.
+1. Clone the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.
+    1. Open Visual Studio.
+    2. Open the **Connect** view in **Team Explorer** (`Team` > `Manage Connections`)
+    3. Select **Clone** under **Local Git Repositories** and enter `https://github.com/Microsoft/Quantum.git`
+    4. Click **Clone** to clone the repo.
+    5. The repository will be cloned on your local computer and Visual Studio will switch to the **Solution Explorer** on the right populated with the libraries and samples.
 
-2. Open the `Libraries\QsharpLibraries.sln` solution. 
-    - If prompted by the **Install Missing Features** pane, click **Install** to allow the installation of the necessary features. This is most often F# and tools.
+2. Open the `QsharpLibraries.sln` solution. 
+    - If prompted by the **Install Missing Features** pane, click **Install** to allow the installation of the necessary features. This is most often F# and tools used by some of the samples.
 
 3. Validate your Q# environment by running the teleport sample program:
     

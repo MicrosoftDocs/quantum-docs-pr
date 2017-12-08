@@ -9,23 +9,24 @@ syntax: "operation ApplyToEachIndex (singleElementOperation : ((Int, 'T) => ()),
 input:
   content: "(singleElementOperation : ((Int, 'T) => ()), register : 'T[])"
   types:
+  - name: singleElementOperation
+    summary: ' Operation to apply to each qubit.'
+    isOperation: true
+    input:
+      types:
+      - uid: Int
+        isPrimitive: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      uid: ()
+      isPrimitive: true
   - name: register
     summary: >2
        Array of qubits on which to apply the given operation.
     uid: "'T"
     isLocal: true
     isArray: true
-  - name: singleElementOperation
-    summary: ' Operation to apply to each qubit.'
-    isOperation: true
-    types:
-    - types:
-      - uid: Int
-        isPrimitive: true
-      - uid: "'T"
-        isLocal: true
-    - uid: ()
-      isPrimitive: true
 output:
   content: ()
   types:

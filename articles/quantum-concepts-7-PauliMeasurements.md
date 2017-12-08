@@ -22,7 +22,7 @@ uid: microsoft.quantum.concepts.pauli
 # manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
-# Pauli measurements
+# Pauli Measurements
 
   In the previous discussions, we have focused on computational basis measurements.  In fact there are other common measurements that occur in quantum computing that, from a notational perspective, are convenient to express in terms of computational basis measurements.  The most common set of these measurements are *Pauli measurements*.  In such cases, it is common to discuss measuring a Pauli operator, in general an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$ and so forth.  Discussing measurement in terms of Pauli operations is especially common in the subfield of quantum error correction. In Q# we follow a similar convention; we now explain this alternative view of measurements.
 

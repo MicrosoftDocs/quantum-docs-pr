@@ -11,12 +11,12 @@ syntax: 'function Modulus (value : Int, modulus : Int) : Int'
 input:
   content: '(value : Int, modulus : Int)'
   types:
-  - name: modulus
-    summary: ' the modulus by which residues are take, must be positive'
-    uid: Int
-    isPrimitive: true
   - name: value
     summary: ' the value of which residue is computed'
+    uid: Int
+    isPrimitive: true
+  - name: modulus
+    summary: ' the modulus by which residues are take, must be positive'
     uid: Int
     isPrimitive: true
 output:

@@ -54,11 +54,11 @@ let leRegister = LittleEndian(register);
 QFT(BigEndian(Reverse(leRegister)));
 ```
 
-Similarly, the <xref:microsoft.quantum.canon.permute> function can be used to reorder or take subsets of the elements of an array:
+Similarly, the <xref:microsoft.quantum.canon.subarray> function can be used to reorder or take subsets of the elements of an array:
 
 ```qsharp
 // Applies H to qubits 2 and 5.
-ApplyToEach(H, Permute([2; 5], register));
+ApplyToEach(H, Subarray([2; 5], register));
 ```
 
 When combined with flow control, array manipulation functions such as <xref:microsoft.quantum.canon.zip> can provide a powerful way to express quantum programs:

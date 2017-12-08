@@ -288,7 +288,7 @@ First, since performing single-qubit measurements is quite common, the prelude d
 The <xref:microsoft.quantum.primitive.m> operation measures the Pauli $Z$ operator on a single qubit, and has signature `(Qubit => Result)`.
 `M(q)` is equivalent to `Measure([PauliZ], [q])`.
 
-The <xref:microsoft.quantum.primitive.multim> measures the Pauli $Z$ operator *separately* on each of an array of qubits, returning the *array* of `Result` values obtained for each qubit.
+The <xref:microsoft.quantum.canon.multim> measures the Pauli $Z$ operator *separately* on each of an array of qubits, returning the *array* of `Result` values obtained for each qubit.
 In some cases this can be optimized. 
 It has signature (`Qubit[] => Result[])`.
 `MultiM(qs)` is equivalent to:
@@ -326,7 +326,7 @@ By default, this operation is not implemented; simulators that can support it
 should provide an implementation that performs runtime checking.
 `AssertProb` has signature `((Pauli[], Qubit[], Result, Double, String, Double) -> ())`. The first of `Double` parameters gives the desired probability of the result, and the second one the tolerance.
 
-Finally, the <xref:microsoft.quantum.primitive.canon.message> function logs a message in a machine-dependent way.
+Finally, the <xref:microsoft.quantum.primitive.message> function logs a message in a machine-dependent way.
 By default, this writes the string to the console.
 `Message` has signature `((String) -> ())`, again representing that emitting a debug log message cannot be observed from within Q#.
 

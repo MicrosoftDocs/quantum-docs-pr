@@ -204,7 +204,7 @@ Phase estimation thus outputs the eigenvalues $e^{2\pi i s / r}$ from which $r$ 
 
 The circuit diagram for quantum period finding is:
 
-![](../media/QPE.png)
+![](./articles/media/QPE.svg)
 
 Here $2n$ qubits are initialized to $|0\rangle$ and $n$ qubits are initialized to $|1\rangle$.
 The reader again may wonder why the quantum register to hold the eigenstates is initialized to $|1\rangle$.

@@ -133,11 +133,11 @@ The prior distribution $\Pr(x)$ has support over $2^n$ hypothetical values of $x
 This means that if we need a highly accurate estimate of $x$ then Bayesian phase estimation may need prohibitive memory and processing time.
 While for some applications, such as quantum simulation, the limitted accuracy required does not preclude such methods other applications,
 such as Shor's algorithm, cannot use exact Bayesian inference within its phase estimation step.  For this reason, we also provide implementations
-for approximate Bayesian methods such as random walk phase estimation (RWPE) and also non-Bayesian approaches such as robust phase estimation.
+for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:microsoft.quantum.canon.randomwalkphaseestimation) and also non-Bayesian approaches such as [robust phase estimation](xref:microsoft.quantum.canon.robustphaseestimation).
 
 ### Robust Phase Estimation ###
 
-A maximum a posteriori Bayesian reconstruction of a phase estimate from measurement results is exponentially hard in the worst-case. Thus most practical phase estimation algorithms sacrifice some quality in the reconstruction, in exchange for an amount of classical post-processing that instead scales polynomially with the number of measurements made.
+A maximum *a posteriori* Bayesian reconstruction of a phase estimate from measurement results is exponentially hard in the worst-case. Thus most practical phase estimation algorithms sacrifice some quality in the reconstruction, in exchange for an amount of classical post-processing that instead scales polynomially with the number of measurements made.
 
 One such example with an efficient classical post-processing step is the [robust phase estimation algorithm](https://arxiv.org/abs/1502.02677), with its signature and inputs mentioned above. It assumes that input unitary black-boxes $U$ are packaged as `DiscreteOracle` type, and therefore only queries integer powers of controlled-$U$. If the input state in the `Qubit[]` register is an eigenstate $U\ket{\psi}=e^{i\phi}\ket{\psi}$, the robust phase estimation algorithm returns an estimate $\hat{\phi}\in[-\pi,\pi)$ of $\phi$ as a `Double`.
 
@@ -184,8 +184,8 @@ The algorithm then, based on the outcome of that experiment, shifts the estimate
 This mean and variance give all the information that is needed to specify a Gaussian prior on $\phi$ for the next experiment.
 Unexpected measurement failures, or the true result being on the tails of the initial prior, can cause this method to fail.
 It recovers from failure by performing experiments to test whether the current mean and standard deviation are appropriate for the system.
-If they are not then the algorithm does an inverse step of the walk and the process continues.
-The ability to step backwards also allows the algorithm to learn even if the initial prior standard deviation is innapropriately small.
+If they are not, then the algorithm does an inverse step of the walk and the process continues.
+The ability to step backwards also allows the algorithm to learn even if the initial prior standard deviation is inapropriately small.
 
 ## Calling Phase Estimation Algorithms ##
 

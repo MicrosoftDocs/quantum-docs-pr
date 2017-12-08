@@ -96,7 +96,7 @@ ApplyToEach((Adjoint U), register);
 ```
 
 In particular, this means that calls to `ApplyToEachAC` can appear in operations which declare `adjoint auto`.
-Similarly, <xref:microsoft.quantum.applytorange> is useful for representing patterns of the form `U(0, targets[0]); U(1, targets[1]); ...`, and offers versions for each combination of functors supports by its input.
+Similarly, <xref:microsoft.quantum.canon.applytorange> is useful for representing patterns of the form `U(0, targets[0]); U(1, targets[1]); ...`, and offers versions for each combination of functors supports by its input.
 
 > [!TIP]
 > `ApplyToEach` is type-parameterized such that it can be used with operations that take inputs other than `Qubit`.

@@ -48,7 +48,7 @@ The general routine (`AmpAmpObliviousByReflectionPhases`) has two registers that
 
 Typically, the oracle prepares the state in the computational basis $|0...0\rangle$. In our implementation, the `ancillaRegister` consistes of one qubit (`flagQubit`) that controls the `stateOracle` and the rest of the desired ancillas. The `stateOracle` is applied when the `flagQubit` is $|1\rangle$.
 
-One may also provide oracles `StateOracle` and `ObliviousOracle` instead of reflections via a call to `AmpAmpObliviousByOraclePhases`. 
+One may also provide oracles `StateOracle` and `ObliviousOracle` instead of reflections via a call to `AmpAmpObliviousByOraclePhases`.
 
 As mentioned, traditional Amplitude Amplification is just a special case of these routines where `ObliviousOracle` is the identity operator and there are no system qubits (i.e., `systemRegister` is empty). If you wish to obtain phases for partial reflections (e.g., for Grover search), the function `AmpAmpPhasesStandard` is available. Please refer to `DatabaseSearch.qs` for a sample implementation of Grover's algorithm.
 
@@ -63,7 +63,7 @@ The Fourier transform is a fundamental tool of classical analysis and is just as
 In addition, the efficiency of the *quantum Fourier transform* (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm.
 
 As an approximate generalization of the QFT, we provide the <xref:microsoft.quantum.canon.approximateqft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
-The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.primitive.RFrac> as well as the <xref:microsoft.quantum.primitive.h> operation.
+The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.primitive.rfrac> as well as the <xref:microsoft.quantum.primitive.h> operation.
 The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as [ket notation](xref:microsoft.quantum.concepts.dirac)).
 The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
 In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.

@@ -61,31 +61,38 @@ We emphasize this by briefly describing iterative phase estimation at a theoreti
 
 ### Iterative Phase Estimation Without Eigenstates ###
 
-If an input state is provided that is not an eigenstate, which is to say that if $U(m)\ket{\phi\_j} = e^{im\phi\_j}$ then the process of phase estimation non-deterministically guides the quantum state towards a single energy eigenstate.  The eigenstate it ultimately converges to is the eigenstate that is most likely to produce the observed `Result`.  
+If an input state is provided that is not an eigenstate, which is to say that if $U(m)\ket{\phi\_j} = e^{im\phi\_j}$ then the process of phase estimation non-deterministically guides the quantum state towards a single energy eigenstate.  The eigenstate it ultimately converges to is the eigenstate that is most likely to produce the observed `Result`.
 
 Specifically, a single step of PE performs the following non-unitary transformation on a state
-$$
-\sum_j \sqrt{\Pr(\phi\_j)} \ket{\phi\_j} \mapsto \sum\_j\frac{\sqrt{\Pr(\phi\_j)}\sqrt{\Pr(\text{Result}|\phi\_j)}\ket{\phi\_j}}{\sqrt{\Pr(\phi\_j)\sum\_j \Pr(\text{Result}|\phi\_j)}}.
-$$
-As this process is iterated over multiple `Results', eigenstates that do not have maximal values of $\prod_k\Pr(\text{Result}\_k|\phi\_j)$ will be exponentially suppressed.  As a result, the inference process will tend to converge to states with a single eigenvalue if the experiments are chosen properly.
+\begin{align}
+    \sum_j \sqrt{\Pr(\phi\_j)} \ket{\phi\_j} \mapsto \sum\_j\frac{\sqrt{\Pr(\phi\_j)}\sqrt{\Pr(\text{Result}|\phi\_j)}\ket{\phi\_j}}{\sqrt{\Pr(\phi\_j)\sum\_j \Pr(\text{Result}|\phi\_j)}}.
+\end{align}
+As this process is iterated over multiple `Result`s, eigenstates that do not have maximal values of $\prod_k\Pr(\text{Result}\_k|\phi\_j)$ will be exponentially suppressed.
+As a result, the inference process will tend to converge to states with a single eigenvalue if the experiments are chosen properly.
 
-Bayes' theorem further suggests that the state that results from phase estimation be written in the form 
-$$\frac{\sqrt{\Pr(\phi\_j)}\sqrt{\Pr(\text{Result}|\phi\_j)}\ket{\phi\_j}}{\sqrt{\Pr(\phi\_j)\sum\_j \Pr(\text{Result}|\phi\_j)}}=\sum_j \sqrt{\Pr(\phi\_j|\text{Result})} \ket{\phi\_j}.$$
- Here $\Pr(\phi\_j|\text{Result})$ can be interpretted as the probability that one would ascribe to each hypothesis about the eigenstates given 1) knowledge of the quantum state prior to measurement 2) knowledge of the eigenstates of $U$ and 3) knowledge of the eigenvalues of $U$.
+Bayes' theorem further suggests that the state that results from phase estimation be written in the form
+\begin{align}
+    \frac{\sqrt{\Pr(\phi\_j)}\sqrt{\Pr(\text{Result}|\phi\_j)}\ket{\phi\_j}}{\sqrt{\Pr(\phi\_j)\sum\_j \Pr(\text{Result}|\phi\_j)}}=\sum_j \sqrt{\Pr(\phi\_j|\text{Result})} \ket{\phi\_j}.
+\end{align}
+Here $\Pr(\phi\_j|\text{Result})$ can be interpretted as the probability that one would ascribe to each hypothesis about the eigenstates given:
+
+1. knowledge of the quantum state prior to measurement,
+2. knowledge of the eigenstates of $U$ and,
+3. knowledge of the eigenvalues of $U$.
+
 Learning these three things is often exponentially hard on a classical computer.
 The utility of phase estimation arises, to no small extent, from the fact that it can perform such a quantum learning task without knowing any of them.
 Phase estimation for this reason appears within a number of quantum algorithms that provide exponential speedups.
 ### Bayesian Phase Estimation ###
 
 > [!TIP]
-> For more details on Bayesian phase estimation in practice, please see the [**PhaseEstimation**](TODO: link) sample.
+> For more details on Bayesian phase estimation in practice, please see the [**PhaseEstimation**](https://github.com/Microsoft/Quantum/tree/master/Samples/PhaseEstimation) sample.
 
-The idea of Bayesian phase estimation is simple.  
+The idea of Bayesian phase estimation is simple.
 You collect measurement statistics from the phase estimation protocol and then you process the results using Bayesian inference and provide an estimate of the parameter.
 This processing gives you an estimate of the eigenvalue as well as the uncertainty in that estimate.
 It also allows you to perform adaptive experiments and utilize prior information.
 The methods' principle drawback is that it is computationally demanding.
-
 
 To understand how this Bayesian inference process works, consider the case of processing a single `Zero` result.
 Note that $X = \ket{+}\bra{+} - \ket{-}\bra{-}$, such that $\ket{+}$ is the only positive eigenstate of $X$ corresponding to `Zero`.
@@ -126,11 +133,11 @@ The prior distribution $\Pr(x)$ has support over $2^n$ hypothetical values of $x
 This means that if we need a highly accurate estimate of $x$ then Bayesian phase estimation may need prohibitive memory and processing time.
 While for some applications, such as quantum simulation, the limitted accuracy required does not preclude such methods other applications,
 such as Shor's algorithm, cannot use exact Bayesian inference within its phase estimation step.  For this reason, we also provide implementations
-for approximate Bayesian methods such as random walk phase estimation (RWPE) and also non-Bayesian approaches such as robust phase estimation.
+for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:microsoft.quantum.canon.randomwalkphaseestimation) and also non-Bayesian approaches such as [robust phase estimation](xref:microsoft.quantum.canon.robustphaseestimation).
 
 ### Robust Phase Estimation ###
 
-A maximum a posteriori Bayesian reconstruction of a phase estimate from measurement results is exponentially hard in the worst-case. Thus most practical phase estimation algorithms sacrifice some quality in the reconstruction, in exchange for an amount of classical post-processing that instead scales polynomially with the number of measurements made.
+A maximum *a posteriori* Bayesian reconstruction of a phase estimate from measurement results is exponentially hard in the worst-case. Thus most practical phase estimation algorithms sacrifice some quality in the reconstruction, in exchange for an amount of classical post-processing that instead scales polynomially with the number of measurements made.
 
 One such example with an efficient classical post-processing step is the [robust phase estimation algorithm](https://arxiv.org/abs/1502.02677), with its signature and inputs mentioned above. It assumes that input unitary black-boxes $U$ are packaged as `DiscreteOracle` type, and therefore only queries integer powers of controlled-$U$. If the input state in the `Qubit[]` register is an eigenstate $U\ket{\psi}=e^{i\phi}\ket{\psi}$, the robust phase estimation algorithm returns an estimate $\hat{\phi}\in[-\pi,\pi)$ of $\phi$ as a `Double`.
 
@@ -163,7 +170,7 @@ The exact same analysis discussed for [Bayesian phase estimation](#bayesian-phas
 $$
 \Pr(\texttt{Zero} | \phi; t,\theta)=\cos^2\left(\frac{t[\phi -\theta]}{2}\right).
 $$
-Moreover, if $U$ is a simulation of a dynamical generator, as is the case for [Hamiltonian simulation](applications#hamiltonian-simulation), we interpret $\phi$ as an energy.
+Moreover, if $U$ is a simulation of a dynamical generator, as is the case for [Hamiltonian simulation](xref:microsoft.quantum.libraries.applications#hamiltonian-simulation), we interpret $\phi$ as an energy.
 Thus, using phase estimation with continuous queries allows us to learn the simulated [energy spectrum of molecules](https://arxiv.org/abs/quant-ph/0604193), [materials](https://arxiv.org/abs/1510.03859) or [field theories](https://arxiv.org/abs/1111.3633v2) without having to compromise our choice of experiments by requiring $t$ to be an integer.
 
 ### Random Walk Phase Estimation ###
@@ -177,8 +184,8 @@ The algorithm then, based on the outcome of that experiment, shifts the estimate
 This mean and variance give all the information that is needed to specify a Gaussian prior on $\phi$ for the next experiment.
 Unexpected measurement failures, or the true result being on the tails of the initial prior, can cause this method to fail.
 It recovers from failure by performing experiments to test whether the current mean and standard deviation are appropriate for the system.
-If they are not then the algorithm does an inverse step of the walk and the process continues.
-The ability to step backwards also allows the algorithm to learn even if the initial prior standard deviation is innapropriately small.
+If they are not, then the algorithm does an inverse step of the walk and the process continues.
+The ability to step backwards also allows the algorithm to learn even if the initial prior standard deviation is inapropriately small.
 
 ## Calling Phase Estimation Algorithms ##
 

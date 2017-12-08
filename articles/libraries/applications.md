@@ -26,7 +26,9 @@ uid: microsoft.quantum.libraries.applications
 
 ## Hamiltonian Simulation ##
 
-The simulation of quantum systems is one of the most exciting applications of quantum computation. On a classical computer, the difficulty of simulating quantum mechanics, in general, scales with the dimension $N$ of its state-vector representation. As this representation grows exponentially with the number of $n$ qubits $N=2^n$, a trait known also known as the [curse of dimensionality](quantum-concepts-5-multiplequbits.md), quantum simulation on classical hardware is intractable. 
+The simulation of quantum systems is one of the most exciting applications of quantum computation.
+On a classical computer, the difficulty of simulating quantum mechanics, in general, scales with the dimension $N$ of its state-vector representation.
+As this representation grows exponentially with the number of $n$ qubits $N=2^n$, a trait known also known as the [curse of dimensionality](xref:microsoft.quantum.concepts.multiple-qubits), quantum simulation on classical hardware is intractable.
 
 However, the situation can be very different on quantum hardware. The most common variation of quantum simulation is called the time-independent Hamiltonian simulation problem. There, one is provided with a description of the system Hamiltonian $H$, which is a Hermitian matrix, and some initial quantum state $\ket{\psi(0)}$ that is encoded in some basis on $n$ qubits on a quantum computer. As quantum states in closed systems evolve under the Schrödinger equation
 $$
@@ -34,9 +36,10 @@ $$
     i\frac{d \ket{\psi(t)}}{d t} & = H \ket{\psi(t)},
 \end{align}
 $$
-the goal is to implement the unitary time-evolution operator $U(t)=e^{-iHt}$ at some fixed time $t$, where $\ket{\psi(t)}=U(t)\ket{\psi(0)}$ solves the Schrödinger equation. Analogously, the time-dependent Hamiltonian simulation problem solves the same equation, but with $H(t)$ now a function of time. 
+the goal is to implement the unitary time-evolution operator $U(t)=e^{-iHt}$ at some fixed time $t$, where $\ket{\psi(t)}=U(t)\ket{\psi(0)}$ solves the Schrödinger equation.
+Analogously, the time-dependent Hamiltonian simulation problem solves the same equation, but with $H(t)$ now a function of time.
 
-Hamiltonian simulation is a major component of many other quantum simulation problems, and solutions to Hamiltonian simulation problem are algorithms that describes a sequence of primitive quantum gates for synthesizing an approximating unitary $\tilde{U}$ with error $\\|\tilde{U} - U(t)\\| \le \epsilon$ in the [spectral norm](quantum-concepts-3-matrixadvanced.md). The complexity of these algorithms depend very strongly on how a description of the Hamiltonian of interest is made accessible by a quantum computer. For instance, in the worst-case, if $H$ acting on $n$ qubits were to be provided as a list of $2^n \times 2^n$ numbers, one for each matrix element, simply reading the data would already require exponential time. In the best case, one could assume access to a black-box unitary that $O\ket{t}\ket{\psi(0)}=\ket{t}U(t)\ket{\psi(0)}$ trivially solves the problem. Neither of these input models are particularly interesting -- the former as it is no better than classical approaches, and the latter as the black-box hides the primitive gate complexity of its implementation, which could be exponential in the number of qubits.
+Hamiltonian simulation is a major component of many other quantum simulation problems, and solutions to Hamiltonian simulation problem are algorithms that describes a sequence of primitive quantum gates for synthesizing an approximating unitary $\tilde{U}$ with error $\\|\tilde{U} - U(t)\\| \le \epsilon$ in the [spectral norm](xref:microsoft.quantum.concepts.matrix-advanced). The complexity of these algorithms depend very strongly on how a description of the Hamiltonian of interest is made accessible by a quantum computer. For instance, in the worst-case, if $H$ acting on $n$ qubits were to be provided as a list of $2^n \times 2^n$ numbers, one for each matrix element, simply reading the data would already require exponential time. In the best case, one could assume access to a black-box unitary that $O\ket{t}\ket{\psi(0)}=\ket{t}U(t)\ket{\psi(0)}$ trivially solves the problem. Neither of these input models are particularly interesting -- the former as it is no better than classical approaches, and the latter as the black-box hides the primitive gate complexity of its implementation, which could be exponential in the number of qubits.
 
 ### Descriptions of Hamiltonians ###
 
@@ -215,7 +218,7 @@ The QFT gate has been described [previously](./algorithms.md).
 The controlled-$U_a$ gate maps $|x\rangle$ to $|(ax)\text{ mod } N\rangle$ if the control qubit is $|1\rangle$, and maps $|x\rangle$ to $|x\rangle$ otherwise.
 
 To achieve $(a^nx)\text{ mod } N$,  we can simply apply controlled-$U_{a^n}$, where we calculate $a^n \text{ mod } N$ classically to plug into the quantum circuit.  
-The circuits to achieve such modular arithmetic have been described in the [quantum arithmetic documentation](./algorithms.md#Arithmetic), specifically we require a modular exponentiation circuit to implement the controlled-$U\_{a^i}$ operations.
+The circuits to achieve such modular arithmetic have been described in the [quantum arithmetic documentation](./algorithms.md#arithmetic), specifically we require a modular exponentiation circuit to implement the controlled-$U\_{a^i}$ operations.
 
 While the circuit above corresponds to [Quantum Phase Estimation](xref:microsoft.quantum.canon.quantumphaseestimation) and explicitly enables order finding, we can reduce the number of qubits required. We can either follow Beauregard's method for order finding as described 
 [on Page 8 of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), or 

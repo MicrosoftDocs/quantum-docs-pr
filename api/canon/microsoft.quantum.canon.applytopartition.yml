@@ -3,13 +3,13 @@ uid: microsoft.quantum.canon.applytopartition
 name: ApplyToPartition
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Applies an operation to a given partition of the register into two parts\n "
+summary: " Applies a pair of operations to a given partition of a register into two parts.\n "
 syntax: 'operation ApplyToPartition (op : ((Qubit[], Qubit[]) => ()), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : ()'
 input:
   content: '(op : ((Qubit[], Qubit[]) => ()), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
   types:
   - name: op
-    summary: ' The operation to apply to the partition'
+    summary: ' The pair of operations to be applied to the given partition.'
     isOperation: true
     input:
       types:
@@ -23,13 +23,11 @@ input:
       uid: ()
       isPrimitive: true
   - name: numberOfQubitsToFirstArgument
-    summary: >2-
-       Number of qubits from target to put into the first part of the partition.
-       The rest go into the second part.
+    summary: " Number of qubits from target to put into the first part of the partition.\n The remaining qubits constitute the second part of the partition. "
     uid: Int
     isPrimitive: true
   - name: target
-    summary: ' Qubits that are being partitioned.'
+    summary: " A register of qubits that are being partitioned and operated on by the \n given two operation. \n"
     uid: Qubit
     isPrimitive: true
     isArray: true
@@ -38,3 +36,7 @@ output:
   types:
   - uid: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytopartitiona
+- microsoft.quantum.canon.applytopartitionc
+- microsoft.quantum.canon.applytopartitionca

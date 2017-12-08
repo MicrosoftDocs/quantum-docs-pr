@@ -49,3 +49,7 @@ seeAlso:
 - microsoft.quantum.canon.bindc
 - microsoft.quantum.canon.binda
 - microsoft.quantum.canon.bindca
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The target on which each of the operations in the array act.

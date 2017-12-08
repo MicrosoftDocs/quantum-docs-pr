@@ -3,11 +3,18 @@ uid: microsoft.quantum.canon.applytofirstthreequbitsca
 name: ApplyToFirstThreeQubitsCA
 type: operation
 namespace: Microsoft.Quantum.Canon
+summary: " Applies operation `op` to the first three qubits in the register.\n The modifier 'CA' indicates that the operation is controllable and adjointable. "
+remarks: >2
+   This is equivalent to:
+   ```qsharp
+   op(register[0], register[1], register[2]);
+   ```
 syntax: 'operation ApplyToFirstThreeQubitsCA (op : ((Qubit, Qubit, Qubit) => () : Adjoint, Controlled), register : Qubit[]) : ()'
 input:
   content: '(op : ((Qubit, Qubit, Qubit) => () : Adjoint, Controlled), register : Qubit[])'
   types:
   - name: op
+    summary: ' An operation to be applied to the first three qubits'
     isOperation: true
     input:
       types:
@@ -24,6 +31,8 @@ input:
     - Adjoint
     - Controlled
   - name: register
+    summary: >2
+       Qubit array to the first three qubits of which the operation is applied.
     uid: Qubit
     isPrimitive: true
     isArray: true

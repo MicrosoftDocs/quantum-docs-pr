@@ -38,3 +38,7 @@ output:
   types:
   - uid: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytofirstthreequbitsa
+- microsoft.quantum.canon.applytofirstthreequbitsc
+- microsoft.quantum.canon.applytofirstthreequbitsca

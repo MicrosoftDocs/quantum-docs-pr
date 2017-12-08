@@ -64,8 +64,20 @@ functions:
      produces a new operation that
      performs each given operation in sequence.
 - uid: microsoft.quantum.canon.binda
+  summary: >2
+     Given an array of operations acting on a single input,
+     produces a new operation that
+     performs each given operation in sequence.
+     The modifier 'A' indicates that all operations in the array are adjointable.
 - uid: microsoft.quantum.canon.bindc
+  summary: " Given an array of operations acting on a single input,\n produces a new operation that\n performs each given operation in sequence.\n The modifier 'C' indicates that all operations in the array are controllable. \n"
 - uid: microsoft.quantum.canon.bindca
+  summary: >2
+     Given an array of operations acting on a single input,
+     produces a new operation that
+     performs each given operation in sequence.
+     The modifier 'CA' indicates that all operations in the array are adjointable
+     and controllable.
 - uid: microsoft.quantum.canon.bitfliprecoveryfn
 - uid: microsoft.quantum.canon.bitsize
   summary: >2
@@ -226,8 +238,17 @@ functions:
      Given an operation representing a gate $U$, returns a new operation
      $U^m$ for a power $m$.
 - uid: microsoft.quantum.canon.operationpowa
+  summary: " Given an operation representing a gate $U$, returns a new operation\n $U^m$ for a power $m$.\n The modifier 'A' indicates that the operation is adjointable. \n"
 - uid: microsoft.quantum.canon.operationpowc
+  summary: >2
+     Given an operation representing a gate $U$, returns a new operation
+     $U^m$ for a power $m$.
+     The modifier 'C' indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.operationpowca
+  summary: >2
+     Given an operation representing a gate $U$, returns a new operation
+     $U^m$ for a power $m$.
+     The modifier 'CA' indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.paulievolutionfunction
   summary: " Represents a dynamical generator as a set of simulatable gates and an \n expansion in the Pauli basis.\n"
 - uid: microsoft.quantum.canon.paulievolutionset
@@ -257,9 +278,13 @@ functions:
      Creates an array that is equal to an input array except that the first array
      element is dropped.
 - uid: microsoft.quantum.canon.restricttosubregister
+  summary: " Restricts an operation to an array of indices of a register, i.e., a subregister.  \n"
 - uid: microsoft.quantum.canon.restricttosubregistera
+  summary: " Restricts an operation to an array of indices of a register, i.e., a subregister.  \n The modifier 'A' indicates that the operation is adjointable.\n"
 - uid: microsoft.quantum.canon.restricttosubregisterc
+  summary: " Restricts an operation to an array of indices of a register, i.e., a subregister.  \n The modifier 'C' indicates that the operation is controllable.\n"
 - uid: microsoft.quantum.canon.restricttosubregisterca
+  summary: " Restricts an operation to an array of indices of a register, i.e., a subregister.  \n The modifier 'CA' indicates that the operation is controllable and adjointable.\n"
 - uid: microsoft.quantum.canon.resultarrfromboolarr
 - uid: microsoft.quantum.canon.resultasint
   summary: >2-
@@ -321,8 +346,23 @@ functions:
      returns a new operation which takes both inputs
      as a tuple.
 - uid: microsoft.quantum.canon.uncurryopa
+  summary: >2
+     Given a function which returns operations,
+     returns a new operation which takes both inputs
+     as a tuple.
+     The modifier 'A' indicates that the operations are adjointable.
 - uid: microsoft.quantum.canon.uncurryopc
+  summary: >2
+     Given a function which returns operations,
+     returns a new operation which takes both inputs
+     as a tuple.
+     The modifier 'C' indicates that the operations are controllable.
 - uid: microsoft.quantum.canon.uncurryopca
+  summary: >2
+     Given a function which returns operations,
+     returns a new operation which takes both inputs
+     as a tuple.
+     The modifier 'CA' indicates that the operations are controllable and adjointable.
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: >2
      Returns an array of all weight-1 Pauli operators
@@ -366,7 +406,13 @@ operations:
   summary: >2
      Applies a multiply controlled version of singly controlled
      operation.
+     The modifier 'C' indicates that the single-qubit operation is controllable.
 - uid: microsoft.quantum.canon.applymulticontrolledca
+  summary: >2
+     Applies a multiply controlled version of singly controlled
+     operation.
+     The modifier 'CA' indicates that the single-qubit operation is controllable
+     and adjointable.
 - uid: microsoft.quantum.canon.applypauli
   summary: >2
      Given a multi-qubit Pauli operator, applies the corresponding operation to
@@ -402,39 +448,81 @@ operations:
   summary: >2
      Applies a single-qubit operation to each element in a register.
 - uid: microsoft.quantum.canon.applytoeacha
+  summary: >2
+     Applies a single-qubit operation to each element in a register.
+     The modifier 'A' indicates that the single-qubit operation is adjointable.
 - uid: microsoft.quantum.canon.applytoeachc
+  summary: >2
+     Applies a single-qubit operation to each element in a register.
+     The modifier 'C' indicates that the single-qubit operation is controllable.
 - uid: microsoft.quantum.canon.applytoeachca
+  summary: >2
+     Applies a single-qubit operation to each element in a register.
+     The modifier 'CA' indicates that the single-qubit operation is controllable
+     and adjointable.
 - uid: microsoft.quantum.canon.applytoeachindex
   summary: >2
      Applies a single-qubit operation to each indexed element in a register.
 - uid: microsoft.quantum.canon.applytoeachindexa
+  summary: >2
+     Applies a single-qubit operation to each indexed element in a register.
+     The modifier 'A' indicates that the single-qubit operation is adjointable.
 - uid: microsoft.quantum.canon.applytoeachindexc
+  summary: >2
+     Applies a single-qubit operation to each indexed element in a register.
+     The modifier 'C' indicates that the single-qubit operation is controllable.
 - uid: microsoft.quantum.canon.applytoeachindexca
+  summary: >2
+     Applies a single-qubit operation to each indexed element in a register.
+     The modifier 'CA' indicates that the single-qubit operation is adjointable
+     and controllable.
 - uid: microsoft.quantum.canon.applytofirstqubit
-  summary: ' Applies operation op to the first qubit in the register'
+  summary: ' Applies operation op to the first qubit in the register.'
 - uid: microsoft.quantum.canon.applytofirstqubita
+  summary: " Applies operation op to the first qubit in the register.\n The modifier 'A' indicates that the operation is adjointable. "
 - uid: microsoft.quantum.canon.applytofirstqubitc
+  summary: >2-
+     Applies operation op to the first qubit in the register.
+     The modifier 'C' indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.applytofirstqubitca
+  summary: " Applies operation op to the first qubit in the register.\n The modifier 'CA' indicates that the operation is controllable and adjointable. "
 - uid: microsoft.quantum.canon.applytofirstthreequbits
   summary: ' Applies operation `op` to the first three qubits in the register.'
 - uid: microsoft.quantum.canon.applytofirstthreequbitsa
+  summary: " Applies operation `op` to the first three qubits in the register.\n The modifier 'A' indicates that the operation is adjointable. "
 - uid: microsoft.quantum.canon.applytofirstthreequbitsc
+  summary: " Applies operation `op` to the first three qubits in the register.\n The modifier 'C' indicates that the operation is controllable. "
 - uid: microsoft.quantum.canon.applytofirstthreequbitsca
+  summary: " Applies operation `op` to the first three qubits in the register.\n The modifier 'CA' indicates that the operation is controllable and adjointable. "
 - uid: microsoft.quantum.canon.applytofirsttwoqubits
   summary: >2
      Applies operation `op` to the first two qubits in the register.
 - uid: microsoft.quantum.canon.applytofirsttwoqubitsa
+  summary: >2
+     Applies operation `op` to the first two qubits in the register.
+     The modifier 'A' indicates that the operation is adjointable.
 - uid: microsoft.quantum.canon.applytofirsttwoqubitsc
+  summary: >2
+     Applies operation `op` to the first two qubits in the register.
+     The modifier 'C' indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.applytofirsttwoqubitsca
+  summary: " Applies operation `op` to the first two qubits in the register.\n The modifier 'CA' indicates that the operation is controllable and adjointable. \n"
 - uid: microsoft.quantum.canon.applytopartition
-  summary: " Applies an operation to a given partition of the register into two parts\n "
+  summary: " Applies a pair of operations to a given partition of a register into two parts.\n "
 - uid: microsoft.quantum.canon.applytopartitiona
+  summary: " Applies a pair of operations to a given partition of a register into two parts.\n The modifier 'A' indicates that the operation is adjointable. \n "
 - uid: microsoft.quantum.canon.applytopartitionc
+  summary: " Applies a pair of operations to a given partition of a register into two parts.\n The modifier 'C' indicates that the operation is controllable. \n "
 - uid: microsoft.quantum.canon.applytopartitionca
+  summary: " Applies a pair of operations to a given partition of a register into two parts.\n The modifier 'CA' indicates that the operation is controllable and adjointable. \n "
 - uid: microsoft.quantum.canon.applytosubregister
+  summary: " Applies an operation to an array of indices of a register, i.e., a subregister.  \n"
 - uid: microsoft.quantum.canon.applytosubregistera
+  summary: " Applies an operation to an array of indices of a register, i.e., a subregister.  \n The modifier 'A' indicates that the operation is adjointable.\n"
 - uid: microsoft.quantum.canon.applytosubregisterc
+  summary: " Applies an operation to an array of indices of a register, i.e., a subregister.  \n The modifier 'C' indicates that the operation is controllable.\n"
 - uid: microsoft.quantum.canon.applytosubregisterca
+  summary: " Applies an operation to an array of indices of a register, i.e., a subregister.  \n The modifier 'CA' indicates that the operation is controllable and adjointable.\n"
 - uid: microsoft.quantum.canon.approximateqft
   summary: >2
      Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
@@ -704,8 +792,11 @@ operations:
      operation $UVU^{\dagger}$ on a target. That is, this operation
      conjugates $V$ with $U$.
 - uid: microsoft.quantum.canon.witha
+  summary: " Given operations implementing operators $U$ and $V$, performs the\n operation $UVU^{\\dagger}$ on a target. That is, this operation\n conjugates $V$ with $U$. \n The modifier 'A' indicates that the inner operation is adjointable.\n"
 - uid: microsoft.quantum.canon.withc
+  summary: " Given operations implementing operators $U$ and $V$, performs the\n operation $UVU^{\\dagger}$ on a target. That is, this operation\n conjugates $V$ with $U$. \n The modifier 'C' indicates that the inner operation is controllable.\n"
 - uid: microsoft.quantum.canon.withca
+  summary: " Given operations implementing operators $U$ and $V$, performs the\n operation $UVU^{\\dagger}$ on a target. That is, this operation\n conjugates $V$ with $U$. \n The modifier 'CA' indicates that the inner operation is controllable\n and adjointable.\n"
 newtypes:
 - uid: microsoft.quantum.canon.ampampreflectionphases
   summary: >2

@@ -3,11 +3,13 @@ uid: microsoft.quantum.canon.restricttosubregisterca
 name: RestrictToSubregisterCA
 type: function
 namespace: Microsoft.Quantum.Canon
+summary: " Restricts an operation to an array of indices of a register, i.e., a subregister.  \n The modifier 'CA' indicates that the operation is controllable and adjointable.\n"
 syntax: 'function RestrictToSubregisterCA (op : (Qubit[] => () : Adjoint, Controlled), idxs : Int[]) : (Qubit[] => () : Adjoint, Controlled)'
 input:
   content: '(op : (Qubit[] => () : Adjoint, Controlled), idxs : Int[])'
   types:
   - name: op
+    summary: ' Operation to be restricted to a subregister. '
     isOperation: true
     input:
       uid: Qubit
@@ -20,6 +22,7 @@ input:
     - Adjoint
     - Controlled
   - name: idxs
+    summary: ' Array of indices, indicating to which qubits the operation will be restricted. '
     uid: Int
     isPrimitive: true
     isArray: true
@@ -35,3 +38,5 @@ output:
       uid: ()
       isPrimitive: true
     functors: *o0
+seeAlso:
+- microsoft.quantum.canon.restricttosubregister

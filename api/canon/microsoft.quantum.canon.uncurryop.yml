@@ -46,3 +46,8 @@ seeAlso:
 - microsoft.quantum.canon.uncurryopc
 - microsoft.quantum.canon.uncurryopa
 - microsoft.quantum.canon.uncurryopca
+typeParameters:
+- uid: "'T"
+  summary: ' The type of the first argument of a curried function.'
+- uid: "'U"
+  summary: ' The type of the second argument of a curried function.'

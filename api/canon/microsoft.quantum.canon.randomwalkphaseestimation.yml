@@ -7,7 +7,16 @@ summary: >2
    Performs iterative phase estimation using a random walk to approximate
    Bayesian inference on the classical measurement results from a given
    oracle and eigenstate.
+remarks: >2
+   <h3>Optimality</h3>
+   This operation approximates the optimal estimator for the phase
+   $\phi$, as evaluated using the
+   quadratic loss $L(\phi, \hat{\phi}) \defeq (\phi - \hat{\phi})^2$.
+
+   See [Bayesian Phase Estimation](xref:microsoft.quantum.libraries.characterization#bayesian-phase-estimation
+   for more details on the statistics of iterative phase estimation.
 syntax: 'operation RandomWalkPhaseEstimation (initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : ContinuousOracle, eigenstate : Qubit[]) : Double'
+references: ' '
 input:
   content: '(initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : ContinuousOracle, eigenstate : Qubit[])'
   types:
@@ -45,7 +54,7 @@ input:
 output:
   content: Double
   types:
-  - summary: >2-
+  - summary: >2
        The final estimate $\hat{\phi} \mathrel{:=} \expect[\phi]$ , where
        the expectation is over the posterior given all accepted data.
     uid: Double

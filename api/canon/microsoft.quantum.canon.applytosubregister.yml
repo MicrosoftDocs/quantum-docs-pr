@@ -3,11 +3,13 @@ uid: microsoft.quantum.canon.applytosubregister
 name: ApplyToSubregister
 type: operation
 namespace: Microsoft.Quantum.Canon
+summary: " Applies an operation to an array of indices of a register, i.e., a subregister.  \n"
 syntax: 'operation ApplyToSubregister (op : (Qubit[] => ()), idxs : Int[], target : Qubit[]) : ()'
 input:
   content: '(op : (Qubit[] => ()), idxs : Int[], target : Qubit[])'
   types:
   - name: op
+    summary: ' Operation to be applied to a subregister. '
     isOperation: true
     input:
       uid: Qubit
@@ -17,10 +19,12 @@ input:
       uid: ()
       isPrimitive: true
   - name: idxs
+    summary: ' Array of indices, indicating to which qubits the operation will be applied. '
     uid: Int
     isPrimitive: true
     isArray: true
   - name: target
+    summary: " Register on which the operation acts. \n"
     uid: Qubit
     isPrimitive: true
     isArray: true
@@ -29,3 +33,7 @@ output:
   types:
   - uid: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytosubregistera
+- microsoft.quantum.canon.applytosubregisterc
+- microsoft.quantum.canon.applytosubregisterca

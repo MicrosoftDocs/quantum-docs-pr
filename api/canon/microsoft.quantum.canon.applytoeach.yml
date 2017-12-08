@@ -42,3 +42,6 @@ seeAlso:
 - microsoft.quantum.canon.applytoeacha
 - microsoft.quantum.canon.applytoeachc
 - microsoft.quantum.canon.applytoeachca
+typeParameters:
+- uid: "'T"
+  summary: " The target on which the operation acts. \n"

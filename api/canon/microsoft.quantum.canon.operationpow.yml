@@ -40,3 +40,6 @@ seeAlso:
 - microsoft.quantum.canon.operationpowc
 - microsoft.quantum.canon.operationpowa
 - microsoft.quantum.canon.operationpowca
+typeParameters:
+- uid: "'T"
+  summary: " The type of the operation to be powered. \n"

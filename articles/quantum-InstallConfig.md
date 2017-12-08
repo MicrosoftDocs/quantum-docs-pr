@@ -47,7 +47,7 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 > enabled. 
 > ![file name extensions](media/file-extension.png)
 
-1. Download and install the Microsoft Quantum Development Kit [Visual Studio extension](https://solidrepo.blob.core.windows.net/alpha/latest/QsharpVSIX.vsix). 
+1. Download and install the Microsoft Quantum Development Kit [Visual Studio extension](https://solidrepo.blob.core.windows.net/release/latest/QsharpVSIX.vsix). 
 Some browsers (IE and Edge) will save this file as `QsharpVSIX.zip`. In that case, rename it to `QsharpVSIX.vsix`.
 
 1. If Visual Studio is open, close it.

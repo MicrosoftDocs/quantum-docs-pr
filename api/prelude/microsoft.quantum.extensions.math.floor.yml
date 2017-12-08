@@ -10,7 +10,8 @@ syntax: 'function Floor (value : Double) : Int'
 input:
   content: '(value : Double)'
   types:
-  - uid: Double
+  - name: value
+    uid: Double
     isPrimitive: true
 output:
   content: Int

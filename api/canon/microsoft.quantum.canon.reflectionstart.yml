@@ -12,5 +12,8 @@ input:
 output:
   content: ReflectionOracle
   types:
-  - summary: ' A `ReflectionOracle` that reflects about the state $\ket{0\cdots 0}$.'
+  - summary: >2
+       A `ReflectionOracle` that reflects about the state $\ket{0\cdots 0}$.
     uid: microsoft.quantum.canon.reflectionoracle
+seeAlso:
+- microsoft.quantum.canon.reflectionoracle

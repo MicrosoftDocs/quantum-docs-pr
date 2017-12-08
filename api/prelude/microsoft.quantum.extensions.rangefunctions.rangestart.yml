@@ -10,7 +10,8 @@ syntax: 'operation RangeStart (r : Range) : Int'
 input:
   content: '(r : Range)'
   types:
-  - uid: Range
+  - name: r
+    uid: Range
     isPrimitive: true
 output:
   content: Int

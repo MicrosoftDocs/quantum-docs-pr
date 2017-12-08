@@ -12,11 +12,13 @@ input:
     summary: ' An operation to be applied to the first qubit'
     isOperation: true
     input:
-      uid: Qubit
-      isPrimitive: true
+      types:
+      - uid: Qubit
+        isPrimitive: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors: &o0
     - Adjoint
     - Controlled

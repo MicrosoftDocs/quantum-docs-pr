@@ -11,9 +11,11 @@ syntax: 'function ToStringDFormat (a : Double, fmt : String) : String'
 input:
   content: '(a : Double, fmt : String)'
   types:
-  - uid: Double
+  - name: a
+    uid: Double
     isPrimitive: true
-  - uid: String
+  - name: fmt
+    uid: String
     isPrimitive: true
 output:
   content: String

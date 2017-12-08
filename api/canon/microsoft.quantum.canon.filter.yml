@@ -13,11 +13,13 @@ input:
     summary: " A function from `'T' to Boolean that is used to filter elements. "
     isFunction: true
     input:
-      uid: "'T"
-      isLocal: true
+      types:
+      - uid: "'T"
+        isLocal: true
     output:
-      uid: Bool
-      isPrimitive: true
+      types:
+      - uid: Bool
+        isPrimitive: true
   - name: array
     summary: >2
        An array of elements over `'T`.

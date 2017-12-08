@@ -24,8 +24,9 @@ input:
       - uid: Qubit
         isPrimitive: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: register
     summary: >2
        Qubit array to the first two qubits of which the operation is applied.

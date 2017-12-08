@@ -12,10 +12,12 @@ input:
     summary: ' Operation that acts on a little-endian register.'
     isOperation: true
     input:
-      uid: microsoft.quantum.canon.littleendian
+      types:
+      - uid: microsoft.quantum.canon.littleendian
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: register
     summary: >2
        A big-endian register to be transformed.

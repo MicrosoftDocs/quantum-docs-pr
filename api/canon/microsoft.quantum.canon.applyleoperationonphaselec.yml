@@ -10,10 +10,12 @@ input:
   - name: op
     isOperation: true
     input:
-      uid: microsoft.quantum.canon.littleendian
+      types:
+      - uid: microsoft.quantum.canon.littleendian
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors: &o0
     - Controlled
   - name: target

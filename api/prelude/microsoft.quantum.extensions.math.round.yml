@@ -10,7 +10,8 @@ syntax: 'function Round (a : Double) : Int'
 input:
   content: '(a : Double)'
   types:
-  - uid: Double
+  - name: a
+    uid: Double
     isPrimitive: true
 output:
   content: Int

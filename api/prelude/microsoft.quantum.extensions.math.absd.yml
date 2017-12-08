@@ -10,7 +10,8 @@ syntax: 'function AbsD (a : Double) : Double'
 input:
   content: '(a : Double)'
   types:
-  - uid: Double
+  - name: a
+    uid: Double
     isPrimitive: true
 output:
   content: Double

@@ -28,12 +28,14 @@ input:
        length at least 1.
     isOperation: true
     input:
-      uid: Qubit
-      isPrimitive: true
-      isArray: true
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors:
     - Adjoint
   - name: ccnot

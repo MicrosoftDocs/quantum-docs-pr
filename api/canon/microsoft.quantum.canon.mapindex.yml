@@ -35,8 +35,9 @@ input:
       - uid: "'T"
         isLocal: true
     output:
-      uid: "'U"
-      isLocal: true
+      types:
+      - uid: "'U"
+        isLocal: true
   - name: array
     summary: >2
        An array of elements over `'T`.

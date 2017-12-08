@@ -15,11 +15,13 @@ input:
     summary: ' An operation $U$ representing the gate to be repeated.'
     isOperation: true
     input:
-      uid: "'T"
-      isLocal: true
+      types:
+      - uid: "'T"
+        isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors: &o0
     - Controlled
     - Adjoint
@@ -35,11 +37,13 @@ output:
        A new operation representing $U^m$, where $m = \texttt{power}$.
     isOperation: true
     input:
-      uid: "'T"
-      isLocal: true
+      types:
+      - uid: "'T"
+        isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors: *o0
 seeAlso:
 - microsoft.quantum.canon.operationpow

@@ -167,8 +167,6 @@
     uid: microsoft.quantum.canon.assertqubitstate
   - name: AssertQubitTol
     uid: microsoft.quantum.canon.assertqubittol
-  - name: BasisChangeZtoY
-    uid: microsoft.quantum.canon.basischangeztoy
   - name: BigEndian
     uid: microsoft.quantum.canon.bigendian
   - name: Bind
@@ -495,8 +493,6 @@
     uid: microsoft.quantum.canon.reverse
   - name: RobustPhaseEstimation
     uid: microsoft.quantum.canon.robustphaseestimation
-  - name: RobustPhaseEstimationTestOp
-    uid: microsoft.quantum.canon.robustphaseestimationtestop
   - name: SimulationAlgorithm
     uid: microsoft.quantum.canon.simulationalgorithm
   - name: Snd
@@ -525,10 +521,6 @@
     uid: microsoft.quantum.canon.steanecodeencoder
   - name: SteaneCodeRecoveryFns
     uid: microsoft.quantum.canon.steanecoderecoveryfns
-  - name: SteaneCodeRecoveryX
-    uid: microsoft.quantum.canon.steanecoderecoveryx
-  - name: SteaneCodeRecoveryZ
-    uid: microsoft.quantum.canon.steanecoderecoveryz
   - name: Subarray
     uid: microsoft.quantum.canon.subarray
   - name: SwapReverseRegister

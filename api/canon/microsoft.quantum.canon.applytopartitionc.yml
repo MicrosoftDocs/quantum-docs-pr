@@ -20,8 +20,9 @@ input:
         isPrimitive: true
         isArray: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors: &o0
     - Controlled
   - name: numberOfQubitsToFirstArgument

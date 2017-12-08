@@ -16,16 +16,20 @@ input:
        A function which returns operations.
     isFunction: true
     input:
-      uid: "'T"
-      isLocal: true
-    output:
-      isOperation: true
-      input:
-        uid: "'U"
+      types:
+      - uid: "'T"
         isLocal: true
-      output:
-        uid: ()
-        isPrimitive: true
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - uid: ()
+            isPrimitive: true
 output:
   content: (('T, 'U) => ())
   types:
@@ -40,8 +44,9 @@ output:
       - uid: "'U"
         isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
 seeAlso:
 - microsoft.quantum.canon.uncurryopc
 - microsoft.quantum.canon.uncurryopa

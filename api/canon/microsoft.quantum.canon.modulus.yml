@@ -12,17 +12,17 @@ input:
   content: '(value : Int, modulus : Int)'
   types:
   - name: value
-    summary: ' the value of which residue is computed'
+    summary: ' The value of which residue is computed'
     uid: Int
     isPrimitive: true
   - name: modulus
-    summary: ' the modulus by which residues are take, must be positive'
+    summary: ' The modulus by which residues are take, must be positive'
     uid: Int
     isPrimitive: true
 output:
   content: Int
   types:
   - summary: >2
-       Integer r between 0 and `modulus` - 1 such that value - r is divisible by modulus
+       Integer r between 0 and `modulus - 1' such that `value - r' is divisible by modulus
     uid: Int
     isPrimitive: true

@@ -20,8 +20,9 @@ input:
       - uid: "'T"
         isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors: &o0
     - Adjoint
   - name: register

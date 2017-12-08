@@ -23,11 +23,13 @@ input:
     summary: ' Operation to apply to each qubit.'
     isOperation: true
     input:
-      uid: "'T"
-      isLocal: true
+      types:
+      - uid: "'T"
+        isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors: &o0
     - Controlled
   - name: register

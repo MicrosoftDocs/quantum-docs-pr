@@ -17,19 +17,23 @@ input:
        A function which returns operations.
     isFunction: true
     input:
-      uid: "'T"
-      isLocal: true
-    output:
-      isOperation: true
-      input:
-        uid: "'U"
+      types:
+      - uid: "'T"
         isLocal: true
-      output:
-        uid: ()
-        isPrimitive: true
-      functors: &o0
-      - Controlled
-      - Adjoint
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - uid: ()
+            isPrimitive: true
+        functors: &o0
+        - Controlled
+        - Adjoint
 output:
   content: "(('T, 'U) => () : Controlled, Adjoint)"
   types:
@@ -44,8 +48,9 @@ output:
       - uid: "'U"
         isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors: *o0
 seeAlso:
 - microsoft.quantum.canon.uncurryop

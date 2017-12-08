@@ -3,6 +3,9 @@ uid: microsoft.quantum.canon.steanecoderecoveryfns
 name: SteaneCodeRecoveryFns
 type: function
 namespace: Microsoft.Quantum.Canon
+summary: >2
+   Function for recovery Pauli operations for given symdrome measurement
+   by table lookup for the ⟦7, 1, 3⟧ Steane quantum code.
 syntax: 'function SteaneCodeRecoveryFns () : (RecoveryFn, RecoveryFn)'
 input:
   content: ()
@@ -10,6 +13,9 @@ input:
 output:
   content: (RecoveryFn, RecoveryFn)
   types:
-  - types:
+  - summary: " Tuple of functions of type `RecoveryFn` that takes a syndrome \n measurement `Result[]` and returns the `Pauli[]` operations that \n corrects the detected error.\n"
+    types:
     - uid: microsoft.quantum.canon.recoveryfn
     - uid: microsoft.quantum.canon.recoveryfn
+seeAlso:
+- microsoft.quantum.canon.recoveryfn

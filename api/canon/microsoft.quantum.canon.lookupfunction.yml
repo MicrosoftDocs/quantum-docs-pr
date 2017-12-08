@@ -29,11 +29,13 @@ output:
        A function `f` such that `f(idx) == f[idx]`.
     isFunction: true
     input:
-      uid: Int
-      isPrimitive: true
+      types:
+      - uid: Int
+        isPrimitive: true
     output:
-      uid: "'T"
-      isLocal: true
+      types:
+      - uid: "'T"
+        isLocal: true
 typeParameters:
 - uid: "'T"
   summary: >2

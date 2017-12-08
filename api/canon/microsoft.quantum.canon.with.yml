@@ -19,11 +19,13 @@ input:
     summary: " The operation $U$ that should be used to conjugate $V$. Note that the \n outer operation $U$ needs to be adjointable, but does not\n need to be controllable."
     isOperation: true
     input:
-      uid: "'T"
-      isLocal: true
+      types:
+      - uid: "'T"
+        isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors:
     - Adjoint
   - name: innerOperation
@@ -31,11 +33,13 @@ input:
        The operation $V$ being conjugated.
     isOperation: true
     input:
-      uid: "'T"
-      isLocal: true
+      types:
+      - uid: "'T"
+        isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: target
     uid: "'T"
     isLocal: true

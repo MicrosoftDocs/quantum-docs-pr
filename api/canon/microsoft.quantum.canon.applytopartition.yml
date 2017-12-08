@@ -20,8 +20,9 @@ input:
         isPrimitive: true
         isArray: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: numberOfQubitsToFirstArgument
     summary: " Number of qubits from target to put into the first part of the partition.\n The remaining qubits constitute the second part of the partition. "
     uid: Int

@@ -39,15 +39,15 @@ remarks: >2
 
    See [Bayesian Phase Estimation](xref:microsoft.quantum.libraries.characterization#bayesian-phase-estimation)
    for more details on the statistics of iterative phase estimation.
-syntax: 'operation RandomWalkPhaseEstimation (initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : ContinuousOracle, eigenstate : Qubit[]) : Double'
+syntax: 'operation RandomWalkPhaseEstimation (initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : ContinuousOracle, targetState : Qubit[]) : Double'
 references: >2-
    - Ferrie *et al.* 2011 [doi:10/tfx](https://doi.org/10.1007/s11128-012-0407-6),
      [arXiv:1110.3067](https://arxiv.org/abs/1110.3067).
    - Wiebe *et al.* 2013 [doi:10/tf3](https://doi.org/10.1103/PhysRevLett.112.190501),
      [arXiv:1309.0876](https://arxiv.org/abs/1309.0876)
-   - Wiebe and Granade 2018, *(in preparation)*.
+   - Wiebe and Granade 2018 *(in preparation)*.
 input:
-  content: '(initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : ContinuousOracle, eigenstate : Qubit[])'
+  content: '(initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : ContinuousOracle, targetState : Qubit[])'
   types:
   - name: initialMean
     summary: ' Mean of the initial normal prior distribution over $\phi$.'
@@ -73,10 +73,10 @@ input:
   - name: oracle
     summary: >2-
        An operation representing a unitary $U$ such that $U(t)\ket{\phi} = e^{i t \phi}\ket{\phi}$
-       for a known eigenstate $\ket{\phi}$ and an unknown phase $\phi \in \mathbb{R}^+$.
+       for eigenstates $\ket{\phi}$ with unknown phase $\phi \in \mathbb{R}^+$.
     uid: microsoft.quantum.canon.continuousoracle
-  - name: eigenstate
-    summary: ' A register in the state $\ket{\phi}$.'
+  - name: targetState
+    summary: ' A register that $U$ acts on.'
     uid: Qubit
     isPrimitive: true
     isArray: true

@@ -9,7 +9,8 @@ syntax: 'function ToDouble (a : Int) : Double'
 input:
   content: '(a : Int)'
   types:
-  - uid: Int
+  - name: a
+    uid: Int
     isPrimitive: true
 output:
   content: Double

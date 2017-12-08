@@ -10,9 +10,11 @@ syntax: 'function MinD (a : Double, b : Double) : Double'
 input:
   content: '(a : Double, b : Double)'
   types:
-  - uid: Double
+  - name: a
+    uid: Double
     isPrimitive: true
-  - uid: Double
+  - name: b
+    uid: Double
     isPrimitive: true
 output:
   content: Double

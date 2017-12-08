@@ -10,7 +10,8 @@ syntax: 'function ToStringB (a : Bool) : String'
 input:
   content: '(a : Bool)'
   types:
-  - uid: Bool
+  - name: a
+    uid: Bool
     isPrimitive: true
 output:
   content: String

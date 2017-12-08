@@ -24,11 +24,13 @@ input:
     isArray: true
     isOperation: true
     input:
-      uid: "'T"
-      isLocal: true
+      types:
+      - uid: "'T"
+        isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors: &o0
     - Controlled
 output:
@@ -39,11 +41,13 @@ output:
        on its input.
     isOperation: true
     input:
-      uid: "'T"
-      isLocal: true
+      types:
+      - uid: "'T"
+        isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors: *o0
 seeAlso:
 - microsoft.quantum.canon.bind

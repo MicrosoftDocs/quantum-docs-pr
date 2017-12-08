@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.estimateenergy
 name: EstimateEnergy
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Allocates qubits, performs state preparation, and phase estimation. \n"
+summary: " Convenience function that performs state preparation by applying a \n `statePrepUnitary` on an automatically allocated input state \n phase estimation with respect to `qpeUnitary`on the resulting state \n using a `phaseEstAlgorithm`.\n"
 syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))'
@@ -18,12 +18,14 @@ input:
        generator.
     isOperation: true
     input:
-      uid: Qubit
-      isPrimitive: true
-      isArray: true
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: qpeUnitary
     summary: >2-
        An oracle representing a unitary operator $U$ representing evolution
@@ -31,12 +33,14 @@ input:
        $\ket{\phi}$ and ground state energy $E = \phi\\,\delta t$.
     isOperation: true
     input:
-      uid: Qubit
-      isPrimitive: true
-      isArray: true
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors:
     - Adjoint
     - Controlled
@@ -53,8 +57,9 @@ input:
         isPrimitive: true
         isArray: true
     output:
-      uid: Double
-      isPrimitive: true
+      types:
+      - uid: Double
+        isPrimitive: true
 output:
   content: Double
   types:

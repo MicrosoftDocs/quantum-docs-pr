@@ -17,5 +17,8 @@ input:
 output:
   content: ReflectionOracle
   types:
-  - summary: ' A `ReflectionOracle` that reflects about the state marked by $\ket{1}_f$.'
+  - summary: >2
+       A `ReflectionOracle` that reflects about the state marked by $\ket{1}_f$.
     uid: microsoft.quantum.canon.reflectionoracle
+seeAlso:
+- microsoft.quantum.canon.reflectionoracle

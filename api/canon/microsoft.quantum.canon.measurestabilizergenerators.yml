@@ -32,8 +32,9 @@ input:
         isPrimitive: true
         isArray: true
     output:
-      uid: Result
-      isPrimitive: true
+      types:
+      - uid: Result
+        isPrimitive: true
 output:
   content: Syndrome
   types:

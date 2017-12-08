@@ -40,11 +40,10 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 1. Install the Microsoft Quantum Development Kit
 
     1. Browse to the [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/development-kit) page and click the **Download now** button in the upper left.
-    2. On the development kit [registration page](https://info.microsoft.com/QuantumComputingKitDownload-Registration.html), fill in the required information and press **Download now**.
-    4. On the Visual Studio Marketplace [Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) page, click **Download**. 
-    8. Your browser will ask you whether you wish to **Open** or **Save** the download, click **Open**.
-    9. Your security software may present a confirmation pane. Click **Allow**, or the comparable term used by your browser.
-    10. The Quantum Development Kit extension will be installed in Visual Studio 2017.
+    2. On the Visual Studio Marketplace [Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) page, click **Download**. 
+    3. Your browser will ask you whether you wish to **Open** or **Save** the download, click **Open**.
+    4. Your security software may present a confirmation pane. Click **Allow**, or the comparable term used by your browser.
+    5. The Quantum Development Kit extension will be installed in Visual Studio 2017.
 
 ## Validating Your Environment
 

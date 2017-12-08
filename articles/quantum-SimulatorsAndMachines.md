@@ -162,14 +162,14 @@ There are some subtleties when passing arguments to a `Run` method:
 The results of the quantum algorithm are returned from the `Run` method.
 The `Run` method executes asynchronously thus it returns a 
 [`Task<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1). 
-There are multiple ways to get the actual operation's results. The simplest is probably
+There are multiple ways to get the actual operation's results. The simplest is
 by using the `Task`'s [`Result` property](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1.result):
 
 ```csharp
     var res = BellTest.Run(sim, 1000, initial).Result;
 ```
 but other techniques, like using the [`Wait` method](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.wait)
-or or C# [`await` keyword](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await)
+or C# [`await` keyword](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await)
 will also work.
 
 As with arguments, Q# tuples are represented as `ValueTuple` instances and
@@ -188,7 +188,43 @@ Only the classical driver can report results to the user or write them to disk.
 The classical driver will have access to analytical libraries and other
 mathematical functions that are not exposed in Q#.
 
-### Other Classical Languages
+
+## Failures
+
+When the Q# `fail` statement is reached during the execution of an operation,
+an `ExecutionFailException` is thrown.
+
+Due to the use of `System.Task` in the `Run` method, the exception thrown as a result of a `fail` 
+statement will be wrapped into a `System.AggregateException`.
+To find the actual reason for the failure, you need to iterate into the `AggregateException` 
+`InnerExceptions`, for example:
+
+```csharp
+
+            try
+            {
+                using(var sim = new QuantumSimulator())
+                {
+                    /// call your operations here...
+                }
+            }
+            catch (AggregateException e)
+            {
+                // Unwrap AggregateException to get the message from Q# fail statement.
+                // Go through all inner exceptions.
+                foreach (Exception inner in e.InnerExceptions)
+                {
+                    // If the exception of type ExecutionFailException
+                    if (inner is ExecutionFailException failException)
+                    {
+                        // Print the message it contains
+                        Console.WriteLine($" {failException.Message}");
+                    }
+                }
+            }
+```
+
+## Other Classical Languages
 
 While the samples we have provided are in C# or F#, all that is required
 for writing a classical driver is support for .NET.

@@ -288,8 +288,10 @@ In the `Main` method, enter the following code:
 >   Each Q# operation generates a C# class with the same name.
 >   This class has a `Run` method that **asynchronously** executes the operation.
 >   The execution is asynchronous because execution on actual hardware will be
->   asynchronous. Because it's asynchronous, you need to add `.Result` to make
->   the call synchronous and get the actual result values.
+>   asynchronous. 
+>
+>   Because the `Run` method is asynchronous, we fetch the `Result` property;
+>   this blocks execution until the task completes and returns the result synchronously.
 >   
 > * Process the result of the operation.
 >   In the example, `res` receives the result of the operation.

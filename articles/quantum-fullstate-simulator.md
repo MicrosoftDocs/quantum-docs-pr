@@ -43,12 +43,12 @@ of the quantum operation you want to execute along with the rest of the paramete
 
 The `QuantumSimulator` class implements `IDisposable` thus the `Dispose` method
 should be called once the instance of the simulator is not used anymore. The best way 
-to do this is to wrap the simulator within a `using` statement, like the example above.
+to do this is to wrap the simulator within a `using` statement, as in the example above.
 
 ## Seed
 
 The `QuantumSimulator` uses a random number generator to simulate quantum randomness. 
-For testing purposes, though, sometimes it is useful to have deterministic results. This can 
+For testing purposes, it is sometimes useful to have deterministic results. This can 
 be accomplished by providing a seed for the random number generator in the 
 `QuantunSimulator`'s constructor via the `randomNumberGeneratorSeed`
 parameter:

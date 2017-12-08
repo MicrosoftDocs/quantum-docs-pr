@@ -18,9 +18,11 @@ syntax: 'function And (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'
   types:
-  - uid: Int
+  - name: a
+    uid: Int
     isPrimitive: true
-  - uid: Int
+  - name: b
+    uid: Int
     isPrimitive: true
 output:
   content: Int

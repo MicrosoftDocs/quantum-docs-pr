@@ -3,20 +3,28 @@ uid: microsoft.quantum.canon.steanecodeencoder
 name: SteaneCodeEncoder
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: ' Encodes into the ⟦7, 1, 3⟧ Steane quantum code.'
+summary: >2
+   Encodes into the ⟦7, 1, 3⟧ Steane quantum code.
 syntax: 'operation SteaneCodeEncoder (physRegister : Qubit[], auxQubits : Qubit[]) : LogicalRegister'
 input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
   - name: physRegister
+    summary: " A qubit representing an unencoded state. This array `Qubit[]` is of \n length 1."
     uid: Qubit
     isPrimitive: true
     isArray: true
   - name: auxQubits
+    summary: >2
+       A register of auxillary qubits that will be used to represent the
+       encoded state.
     uid: Qubit
     isPrimitive: true
     isArray: true
 output:
   content: LogicalRegister
   types:
-  - uid: microsoft.quantum.canon.logicalregister
+  - summary: " An array of physical qubits of type `LogicalRegister` that store the\n encoded state. \n"
+    uid: microsoft.quantum.canon.logicalregister
+seeAlso:
+- microsoft.quantum.canon.logicalregister

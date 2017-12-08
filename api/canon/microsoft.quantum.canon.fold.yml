@@ -29,8 +29,9 @@ input:
       - uid: "'T"
         isLocal: true
     output:
-      uid: "'State"
-      isLocal: true
+      types:
+      - uid: "'State"
+        isLocal: true
   - name: state
     summary: ' The initial state of the folder.'
     uid: "'State"

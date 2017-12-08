@@ -10,13 +10,13 @@ remarks: >2
    In the limit of a large number of queries, Cramer-Rao lower bounds
    for the standard deviation of the estimate of $\phi$ satisfy
    $\sigma \ge 2 \pi / \text{# of queries}$.
-syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[]) : Double'
+syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : DiscreteOracle, targetState : Qubit[]) : Double'
 references: >2-
    - Robust Calibration of a Universal Single-Qubit Gate-Set via Robust Phase Estimation
      Shelby Kimmel, Guang Hao Low, Theodore J. Yoder
      https://arxiv.org/abs/1502.02677
 input:
-  content: '(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])'
+  content: '(bitsPrecision : Int, oracle : DiscreteOracle, targetState : Qubit[])'
   types:
   - name: bitsPrecision
     summary: >2
@@ -25,12 +25,10 @@ input:
     uid: Int
     isPrimitive: true
   - name: oracle
-    summary: ' An operation implementing $U^m$ for given integer powers $m$.'
+    summary: ' An operation implementing $U^m$ for given integer powers $m$. '
     uid: microsoft.quantum.canon.discreteoracle
-  - name: eigenstate
-    summary: >2-
-       A quantum register representing an eigenstate $\ket{\phi}$ of $U$, where $U\ket{\phi} =
-       e^{i\phi} \ket{\phi}$ for $\phi\in(-\pi,\pi]$ an unknown phase.
+  - name: targetState
+    summary: " A quantum register that $U$ acts on. If it stores an eigenstate \n $\\ket{\\phi}$ of $U$, then $U\\ket{\\phi} = e^{i\\phi} \\ket{\\phi}$\n for $\\phi\\in(-\\pi,\\pi]$ an unknown phase."
     uid: Qubit
     isPrimitive: true
     isArray: true

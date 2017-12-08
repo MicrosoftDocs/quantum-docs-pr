@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.assertequalonbasisvector
 name: AssertEqualOnBasisVector
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Checks if the result of applying two operations givenU and expectedU to\n a basis state is the same. The basis state is described by `basis` parameter. \n See @\"Microsoft.Quantum.Canon.FlipToBasis\" function for more details on this\n description.\n"
+summary: " Checks if the result of applying two operations `givenU` and `expectedU` to\n a basis state is the same. The basis state is described by `basis` parameter. \n See <xref:microsoft.quantum.canon.fliptobasis> function for more details on this\n description.\n"
 syntax: 'operation AssertEqualOnBasisVector (basis : Int[], givenU : (Qubit[] => ()), expectedU : (Qubit[] => () : Adjoint), tolerance : Double) : ()'
 input:
   content: '(basis : Int[], givenU : (Qubit[] => ()), expectedU : (Qubit[] => () : Adjoint), tolerance : Double)'
@@ -11,30 +11,34 @@ input:
   - name: basis
     summary: >2-
        Basis state specified by a single-qubit basis state ID (0 <= id <= 3) for each of
-       n qubits.
+       $n$ qubits.
     uid: Int
     isPrimitive: true
     isArray: true
   - name: givenU
-    summary: ' Operation on n qubits to be checked.'
+    summary: ' Operation on $n$ qubits to be checked.'
     isOperation: true
     input:
-      uid: Qubit
-      isPrimitive: true
-      isArray: true
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: expectedU
-    summary: ' Reference operation on n qubits that givenU is to be compared against.'
+    summary: ' Reference operation on $n$ qubits that givenU is to be compared against.'
     isOperation: true
     input:
-      uid: Qubit
-      isPrimitive: true
-      isArray: true
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors:
     - Adjoint
   - name: tolerance

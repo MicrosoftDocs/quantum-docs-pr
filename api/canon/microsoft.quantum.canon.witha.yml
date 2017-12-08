@@ -3,28 +3,40 @@ uid: microsoft.quantum.canon.witha
 name: WithA
 type: operation
 namespace: Microsoft.Quantum.Canon
+summary: " Given operations implementing operators $U$ and $V$, performs the\n operation $UVU^{\\dagger}$ on a target. That is, this operation\n conjugates $V$ with $U$. \n The modifier 'A' indicates that the inner operation is adjointable.\n"
+remarks: >2
+   The outer operation is always assumed to be adjointable, but does not
+   need to be controllable in order for the combined operation to be
+   controllable.
 syntax: "operation WithA (outerOperation : ('T => () : Adjoint), innerOperation : ('T => () : Adjoint), target : 'T) : ()"
 input:
   content: "(outerOperation : ('T => () : Adjoint), innerOperation : ('T => () : Adjoint), target : 'T)"
   types:
   - name: outerOperation
+    summary: " The operation $U$ that should be used to conjugate $V$. Note that the \n outer operation $U$ needs to be adjointable, but does not\n need to be controllable."
     isOperation: true
     input:
-      uid: "'T"
-      isLocal: true
+      types:
+      - uid: "'T"
+        isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors: &o0
     - Adjoint
   - name: innerOperation
+    summary: >2
+       The operation $V$ being conjugated.
     isOperation: true
     input:
-      uid: "'T"
-      isLocal: true
+      types:
+      - uid: "'T"
+        isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors: *o0
   - name: target
     uid: "'T"
@@ -37,3 +49,7 @@ output:
 seeAlso:
 - microsoft.quantum.canon.with
 functors: *o0
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The target on which each of the inner and outer operations act.

@@ -19,10 +19,12 @@ input:
     summary: ' The operation to be applied.'
     isOperation: true
     input:
-      uid: microsoft.quantum.canon.littleendian
+      types:
+      - uid: microsoft.quantum.canon.littleendian
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: target
     summary: >2
        The register to which the operation is applied.

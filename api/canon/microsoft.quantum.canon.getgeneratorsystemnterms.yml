@@ -15,6 +15,9 @@ input:
 output:
   content: Int
   types:
-  - summary: ' The number of terms in a `GeneratorSystem`.'
+  - summary: >2
+       The number of terms in a `GeneratorSystem`.
     uid: Int
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.generatorsystem

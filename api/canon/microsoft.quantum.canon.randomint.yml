@@ -11,6 +11,9 @@ remarks: >2-
    a uniform distribution whose maximum is a power of two,
    and thus may not make a constant number of calls to the
    underlying source of random classical bits.
+
+   This function calls <xref:microsoft.quantum.primitive.random>, so
+   its randomess depends on the implementation of `Random`.
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'

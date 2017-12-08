@@ -19,11 +19,13 @@ input:
     summary: " A function from `'T` to `'U` that is used to map elements."
     isFunction: true
     input:
-      uid: "'T"
-      isLocal: true
+      types:
+      - uid: "'T"
+        isLocal: true
     output:
-      uid: "'U"
-      isLocal: true
+      types:
+      - uid: "'U"
+        isLocal: true
   - name: array
     summary: >2
        An array of elements over `'T`.

@@ -10,9 +10,11 @@ syntax: 'function IEEERemainder (x : Double, y : Double) : Double'
 input:
   content: '(x : Double, y : Double)'
   types:
-  - uid: Double
+  - name: x
+    uid: Double
     isPrimitive: true
-  - uid: Double
+  - name: y
+    uid: Double
     isPrimitive: true
 output:
   content: Double

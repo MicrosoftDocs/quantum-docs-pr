@@ -19,7 +19,9 @@ input:
 output:
   content: GeneratorSystem
   types:
-  - summary: >2-
+  - summary: >2
        A `GeneratorSystem` representing a system that is the sum of the
        input generator systems.
     uid: microsoft.quantum.canon.generatorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem

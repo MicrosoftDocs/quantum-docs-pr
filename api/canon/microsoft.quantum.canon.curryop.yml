@@ -31,8 +31,9 @@ input:
       - uid: "'U"
         isLocal: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
 output:
   content: ('T -> ('U => ()))
   types:
@@ -42,13 +43,22 @@ output:
        original operation's input.
     isFunction: true
     input:
-      uid: "'T"
-      isLocal: true
-    output:
-      isOperation: true
-      input:
-        uid: "'U"
+      types:
+      - uid: "'T"
         isLocal: true
-      output:
-        uid: ()
-        isPrimitive: true
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - uid: ()
+            isPrimitive: true
+typeParameters:
+- uid: "'T"
+  summary: ' The type of the first component of a function defined on pairs. '
+- uid: "'U"
+  summary: " The type of the second component of a function defined on pairs. \n"

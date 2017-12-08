@@ -36,8 +36,9 @@ output:
         isPrimitive: true
         isArray: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
     functors:
     - Adjoint
     - Controlled

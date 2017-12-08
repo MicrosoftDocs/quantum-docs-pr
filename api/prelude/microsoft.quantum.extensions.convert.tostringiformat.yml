@@ -11,9 +11,11 @@ syntax: 'function ToStringIFormat (a : Int, fmt : String) : String'
 input:
   content: '(a : Int, fmt : String)'
   types:
-  - uid: Int
+  - name: a
+    uid: Int
     isPrimitive: true
-  - uid: String
+  - name: fmt
+    uid: String
     isPrimitive: true
 output:
   content: String

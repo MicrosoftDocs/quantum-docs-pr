@@ -3,18 +3,23 @@ uid: microsoft.quantum.canon.modularincrementle
 name: ModularIncrementLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-remarks: ' Assumes that the value of target is less than N'
+summary: " Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y\n Then the operation performs the following transformation: \n |y⟩ ↦ |y+a (mod N)⟩\n Integers are encoded in little-endian format.\n"
+remarks: " Assumes that the value of target is less than N. Note that \n <xref:microsoft.quantum.primitive.modularincrementphasele> implements\n the same operation, but in the `PhaseLittleEndian` basis."
 syntax: 'operation ModularIncrementLE (increment : Int, modulus : Int, target : LittleEndian) : ()'
 input:
   content: '(increment : Int, modulus : Int, target : LittleEndian)'
   types:
   - name: increment
+    summary: ' Integer increment a to be added to y.'
     uid: Int
     isPrimitive: true
   - name: modulus
+    summary: ' Integer N that mods y + a. '
     uid: Int
     isPrimitive: true
   - name: target
+    summary: >2
+       Integer y in `LittleEndian` format that `increment` a is added to.
     uid: microsoft.quantum.canon.littleendian
 output:
   content: ()

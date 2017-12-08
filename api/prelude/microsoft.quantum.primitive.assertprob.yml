@@ -45,7 +45,8 @@ input:
        A message to be reported if the assertion fails.
     uid: String
     isPrimitive: true
-  - uid: Double
+  - name: tol
+    uid: Double
     isPrimitive: true
 output:
   content: ()

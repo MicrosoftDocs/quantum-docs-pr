@@ -4,19 +4,19 @@ name: QuantumPhaseEstimation
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Performs the quantum phase estimation algorithm for a given oracle U and eigenstate,
+   Performs the quantum phase estimation algorithm for a given oracle U and targetState,
    reading the phase into a big-endian quantum register.
-syntax: 'operation QuantumPhaseEstimation (oracle : DiscreteOracle, eigenstate : Qubit[], controlRegister : BigEndian) : ()'
+syntax: 'operation QuantumPhaseEstimation (oracle : DiscreteOracle, targetState : Qubit[], controlRegister : BigEndian) : ()'
 input:
-  content: '(oracle : DiscreteOracle, eigenstate : Qubit[], controlRegister : BigEndian)'
+  content: '(oracle : DiscreteOracle, targetState : Qubit[], controlRegister : BigEndian)'
   types:
   - name: oracle
     summary: ' An operation implementing U^m for given integer powers m.'
     uid: microsoft.quantum.canon.discreteoracle
-  - name: eigenstate
+  - name: targetState
     summary: >2-
-       A quantum register representing an eigenstate |φ> of U, U|φ> =
-       e^{iφ} |φ> for φ ∈ [0, 2π) an unknown phase.
+       A quantum register representing the state |φ〉 acted on by U. If |φ〉 is an
+       eigenstate of U, U|φ〉 = e^{iφ} |φ〉 for φ ∈ [0, 2π) an unknown phase.
     uid: Qubit
     isPrimitive: true
     isArray: true

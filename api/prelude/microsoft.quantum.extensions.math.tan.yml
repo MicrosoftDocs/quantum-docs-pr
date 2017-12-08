@@ -10,7 +10,8 @@ syntax: 'function Tan (d : Double) : Double'
 input:
   content: '(d : Double)'
   types:
-  - uid: Double
+  - name: d
+    uid: Double
     isPrimitive: true
 output:
   content: Double

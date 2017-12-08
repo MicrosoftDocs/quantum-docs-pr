@@ -31,12 +31,14 @@ input:
        `op` acts.
     isOperation: true
     input:
-      uid: Qubit
-      isPrimitive: true
-      isArray: true
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
     output:
-      uid: ()
-      isPrimitive: true
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: reference
     summary: >2-
        A register of qubits starting in the $\ket{00\cdots 0}$ state

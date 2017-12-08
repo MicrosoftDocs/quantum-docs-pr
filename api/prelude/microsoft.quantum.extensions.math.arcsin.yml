@@ -10,7 +10,8 @@ syntax: 'function ArcSin (theta : Double) : Double'
 input:
   content: '(theta : Double)'
   types:
-  - uid: Double
+  - name: theta
+    uid: Double
     isPrimitive: true
 output:
   content: Double

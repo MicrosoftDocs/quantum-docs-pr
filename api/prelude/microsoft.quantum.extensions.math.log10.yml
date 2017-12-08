@@ -10,7 +10,8 @@ syntax: 'function Log10 (input : Double) : Double'
 input:
   content: '(input : Double)'
   types:
-  - uid: Double
+  - name: input
+    uid: Double
     isPrimitive: true
 output:
   content: Double

@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: >2
    Multiplies the coefficient in a `GeneratorIndex`.
-remarks: >2-
+remarks: >2
 
   ### Examples
    ```qsharp
@@ -32,3 +32,5 @@ output:
        A `GeneratorIndex` representing a term with coefficient a factor
        `multiplier` larger.
     uid: microsoft.quantum.canon.generatorindex
+seeAlso:
+- microsoft.quantum.canon.generatorindex

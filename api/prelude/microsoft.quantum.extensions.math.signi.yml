@@ -10,7 +10,8 @@ syntax: 'function SignI (a : Int) : Int'
 input:
   content: '(a : Int)'
   types:
-  - uid: Int
+  - name: a
+    uid: Int
     isPrimitive: true
 output:
   content: Int

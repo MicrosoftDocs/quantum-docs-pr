@@ -15,10 +15,16 @@ input:
 output:
   content: (Int -> GeneratorIndex)
   types:
-  - summary: ' An function that indexes each `GeneratorIndex` term in a Hamiltonian.'
+  - summary: >2
+       An function that indexes each `GeneratorIndex` term in a Hamiltonian.
     isFunction: true
     input:
-      uid: Int
-      isPrimitive: true
+      types:
+      - uid: Int
+        isPrimitive: true
     output:
-      uid: microsoft.quantum.canon.generatorindex
+      types:
+      - uid: microsoft.quantum.canon.generatorindex
+seeAlso:
+- microsoft.quantum.canon.generatorindex
+- microsoft.quantum.canon.generatorsystem

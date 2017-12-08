@@ -74,10 +74,7 @@ The second kind of measurement is used to read out the answer of the quantum
 algorithm where the user usually does not know the probability of such measurement
 outcomes. The quantum computer trace simulator provides a function `ForceMeasure` in
 namespace `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators` to force
-the simulator to take the measurement outcome preferred by the user. See the API documentation on `ForceMeasure` for more information.
-
-<!-- TODO Link to ref api page [ForceMeasure](Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.ForceMeasure) for more detail.
---->
+the simulator to take the measurement outcome preferred by the user. See [ForceMeasure](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.ForceMeasure) for more information.
 
 ## Running your program with the quantum computer trace simulator 
 

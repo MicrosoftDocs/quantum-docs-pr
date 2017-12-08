@@ -61,31 +61,38 @@ We emphasize this by briefly describing iterative phase estimation at a theoreti
 
 ### Iterative Phase Estimation Without Eigenstates ###
 
-If an input state is provided that is not an eigenstate, which is to say that if $U(m)\ket{\phi\_j} = e^{im\phi\_j}$ then the process of phase estimation non-deterministically guides the quantum state towards a single energy eigenstate.  The eigenstate it ultimately converges to is the eigenstate that is most likely to produce the observed `Result`.  
+If an input state is provided that is not an eigenstate, which is to say that if $U(m)\ket{\phi\_j} = e^{im\phi\_j}$ then the process of phase estimation non-deterministically guides the quantum state towards a single energy eigenstate.  The eigenstate it ultimately converges to is the eigenstate that is most likely to produce the observed `Result`.
 
 Specifically, a single step of PE performs the following non-unitary transformation on a state
-$$
-\sum_j \sqrt{\Pr(\phi\_j)} \ket{\phi\_j} \mapsto \sum\_j\frac{\sqrt{\Pr(\phi\_j)}\sqrt{\Pr(\text{Result}|\phi\_j)}\ket{\phi\_j}}{\sqrt{\Pr(\phi\_j)\sum\_j \Pr(\text{Result}|\phi\_j)}}.
-$$
-As this process is iterated over multiple `Results', eigenstates that do not have maximal values of $\prod_k\Pr(\text{Result}\_k|\phi\_j)$ will be exponentially suppressed.  As a result, the inference process will tend to converge to states with a single eigenvalue if the experiments are chosen properly.
+\begin{align}
+    \sum_j \sqrt{\Pr(\phi\_j)} \ket{\phi\_j} \mapsto \sum\_j\frac{\sqrt{\Pr(\phi\_j)}\sqrt{\Pr(\text{Result}|\phi\_j)}\ket{\phi\_j}}{\sqrt{\Pr(\phi\_j)\sum\_j \Pr(\text{Result}|\phi\_j)}}.
+\end{align}
+As this process is iterated over multiple `Result`s, eigenstates that do not have maximal values of $\prod_k\Pr(\text{Result}\_k|\phi\_j)$ will be exponentially suppressed.
+As a result, the inference process will tend to converge to states with a single eigenvalue if the experiments are chosen properly.
 
-Bayes' theorem further suggests that the state that results from phase estimation be written in the form 
-$$\frac{\sqrt{\Pr(\phi\_j)}\sqrt{\Pr(\text{Result}|\phi\_j)}\ket{\phi\_j}}{\sqrt{\Pr(\phi\_j)\sum\_j \Pr(\text{Result}|\phi\_j)}}=\sum_j \sqrt{\Pr(\phi\_j|\text{Result})} \ket{\phi\_j}.$$
- Here $\Pr(\phi\_j|\text{Result})$ can be interpretted as the probability that one would ascribe to each hypothesis about the eigenstates given 1) knowledge of the quantum state prior to measurement 2) knowledge of the eigenstates of $U$ and 3) knowledge of the eigenvalues of $U$.
+Bayes' theorem further suggests that the state that results from phase estimation be written in the form
+\begin{align}
+    \frac{\sqrt{\Pr(\phi\_j)}\sqrt{\Pr(\text{Result}|\phi\_j)}\ket{\phi\_j}}{\sqrt{\Pr(\phi\_j)\sum\_j \Pr(\text{Result}|\phi\_j)}}=\sum_j \sqrt{\Pr(\phi\_j|\text{Result})} \ket{\phi\_j}.
+\end{align}
+Here $\Pr(\phi\_j|\text{Result})$ can be interpretted as the probability that one would ascribe to each hypothesis about the eigenstates given:
+
+1. knowledge of the quantum state prior to measurement,
+2. knowledge of the eigenstates of $U$ and,
+3. knowledge of the eigenvalues of $U$.
+
 Learning these three things is often exponentially hard on a classical computer.
 The utility of phase estimation arises, to no small extent, from the fact that it can perform such a quantum learning task without knowing any of them.
 Phase estimation for this reason appears within a number of quantum algorithms that provide exponential speedups.
 ### Bayesian Phase Estimation ###
 
 > [!TIP]
-> For more details on Bayesian phase estimation in practice, please see the [**PhaseEstimation**](TODO: link) sample.
+> For more details on Bayesian phase estimation in practice, please see the [**PhaseEstimation**](https://github.com/Microsoft/Quantum/tree/master/Samples/PhaseEstimation) sample.
 
-The idea of Bayesian phase estimation is simple.  
+The idea of Bayesian phase estimation is simple.
 You collect measurement statistics from the phase estimation protocol and then you process the results using Bayesian inference and provide an estimate of the parameter.
 This processing gives you an estimate of the eigenvalue as well as the uncertainty in that estimate.
 It also allows you to perform adaptive experiments and utilize prior information.
 The methods' principle drawback is that it is computationally demanding.
-
 
 To understand how this Bayesian inference process works, consider the case of processing a single `Zero` result.
 Note that $X = \ket{+}\bra{+} - \ket{-}\bra{-}$, such that $\ket{+}$ is the only positive eigenstate of $X$ corresponding to `Zero`.

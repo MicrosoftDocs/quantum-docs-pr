@@ -37,20 +37,19 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 
 1. Install the Microsoft Quantum Development Kit
 
-    1. Browse to the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
-    2. Type "Microsoft Quantum Development Kit" and press enter.
-    3. Click on the Microsoft Quantum Development Kit tile.
-    4. On the development kit landing page, click the **Download** button.
-    5. Your browser will ask you whether you wish to **Open** or **Save** the download, click **Open**.
-    6. Your security software may present a confirmation pane. Click **Allow**, or the comparable term used by your browser.
-    7. The Quantum Development Kit extension will be installed in Visual Studio 2017.
+    1. Browse to the [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/development-kit) page and click the **Download now** button in the upper left.
+    2. On the development kit [registration page](https://info.microsoft.com/QuantumComputingKitDownload-Registration.html), fill in the required information and press **Download now**.
+    4. On the Visual Studio Marketplace [Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) page, click **Download**. 
+    8. Your browser will ask you whether you wish to **Open** or **Save** the download, click **Open**.
+    9. Your security software may present a confirmation pane. Click **Allow**, or the comparable term used by your browser.
+    10. The Quantum Development Kit extension will be installed in Visual Studio 2017.
 
 ## Validating your environment
 
 In this section you will clone the quantum libraries, and run a sample application to verify that your Q# environment is correctly installed and configured. 
 
 1. Clone the quantum Libraries repository.
-    1. Navigate to the [Libraries](https://github.com/microsoft/quantum) GitHub repository.
+    1. Browse to the [Libraries](https://github.com/microsoft/quantum) GitHub repository.
     2. Click the **Clone or download** button in the upper right.
     3. In the **Clone with HTTPS** pane, click **Open in Visual Studio**.
     4. If presented with a browser or virus checker confirmation pane, click on the "Allow" button (or comparable button in your environment.)

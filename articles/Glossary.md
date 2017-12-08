@@ -47,11 +47,11 @@ ms.topic: article-type-from-white-list
 |Partial Application|Calling a function or operation without all the required parameters. The returns a new callable that only needs the missing parameters supplied during a future application.|
 |Pauli Operators|The `X`, `Y` and `Z` quantum gates.|
 |Prelude|The set of primitive and classical operations and functions defined by each individual target machine, rather than at the Q# level.|
-|Quantum Circuit|The representation of a program for a quantum computer. See the [Quantum Circuits](quantum-concepts-8-QuantumCircuits.md) section for more details.|
-|Quantum State|A representation of the qubits in the system. This is usually denoted as a complex column vector. For more information, see [Vectors and Matrices](quantum-concepts-2-VectorsMatrices.md). |
-|Qubit|Unit of quantum storage. See the [Qubit Concepts](quantum-concepts-4-Qubit.md) section for more details.|
+|Quantum Circuit|The representation of a program for a quantum computer. See the <xref:microsoft.quantum.concepts.circuits> section for more details.|
+|Quantum State|A representation of the qubits in the system. This is usually denoted as a complex column vector. For more information, see <xref:microsoft.quantum.concepts.vectors>. |
+|Qubit|Unit of quantum storage. See the <xref:microsoft.quantum.concepts.qubit> section for more details.|
 |Repeat-until-success|A quantum algorithm that probabilistically succeeds. Upon failure, the routine will re-try until successful (or a limit has been reached). |
-|Software Stack|The complete set of classical and quantum software as well as the compilers, simulators and runtimes necessary to operate a quantum computer. See the [Software Stack](quantum-concepts-9-SoftwareStack.md) section for more details. |
+|Software Stack|The complete set of classical and quantum software as well as the compilers, simulators and runtimes necessary to operate a quantum computer. See the <xref:microsoft.quantum.concepts.software-stack> section for more details. |
 |Target machine|A compilation target that lowers an abstract quantum program towards hardware or simulation. This typically include re-writes for many purposes including gate replacement, encoding for error correction, geometric layout and others.|
 |Tuple|Comma separated types grouped together via parenthesis. |
 |User-defined type|Collection of built-in or previously defined types that may be referred to as a single unit.|

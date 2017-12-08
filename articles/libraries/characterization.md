@@ -170,7 +170,7 @@ The exact same analysis discussed for [Bayesian phase estimation](#bayesian-phas
 $$
 \Pr(\texttt{Zero} | \phi; t,\theta)=\cos^2\left(\frac{t[\phi -\theta]}{2}\right).
 $$
-Moreover, if $U$ is a simulation of a dynamical generator, as is the case for [Hamiltonian simulation](applications#hamiltonian-simulation), we interpret $\phi$ as an energy.
+Moreover, if $U$ is a simulation of a dynamical generator, as is the case for [Hamiltonian simulation](xref:microsoft.quantum.libraries.applications#hamiltonian-simulation), we interpret $\phi$ as an energy.
 Thus, using phase estimation with continuous queries allows us to learn the simulated [energy spectrum of molecules](https://arxiv.org/abs/quant-ph/0604193), [materials](https://arxiv.org/abs/1510.03859) or [field theories](https://arxiv.org/abs/1111.3633v2) without having to compromise our choice of experiments by requiring $t$ to be an integer.
 
 ### Random Walk Phase Estimation ###

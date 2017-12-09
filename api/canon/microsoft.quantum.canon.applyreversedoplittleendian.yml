@@ -9,22 +9,25 @@ input:
   content: '(op : (LittleEndian => ()), register : BigEndian)'
   types:
   - name: op
-    summary: ' Operation that acts on little-endian register'
+    summary: ' Operation that acts on a little-endian register.'
     isOperation: true
-    types:
-    - uid: littleendian
-    - uid: ()
-      isPrimitive: true
+    input:
+      types:
+      - uid: microsoft.quantum.canon.littleendian
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: register
     summary: >2
-       big-endian register to be transformed
-    uid: bigendian
+       A big-endian register to be transformed.
+    uid: microsoft.quantum.canon.bigendian
 output:
   content: ()
   types:
   - uid: ()
     isPrimitive: true
 seeAlso:
-- microsoft.quantum.canon.applyreversedoplittleendiana
-- microsoft.quantum.canon.applyreversedoplittleendianc
-- microsoft.quantum.canon.applyreversedoplittleendianca
+- microsoft.quantum.canon.applyreversedoplittlendiana
+- microsoft.quantum.canon.applyreversedoplittlendianc
+- microsoft.quantum.canon.applyreversedoplittlendianca

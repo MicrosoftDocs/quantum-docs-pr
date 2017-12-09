@@ -10,7 +10,7 @@ summary: >2
        e^{-i \theta \sigma_y / 2}.
    \end{align}
 remarks: >2-
-   Equivlent to:
+   Equivalent to:
    ```qsharp
    R(PauliY, theta, qubit);
    ```
@@ -18,14 +18,14 @@ syntax: 'operation Ry (theta : Double, qubit : Qubit) : ()'
 input:
   content: '(theta : Double, qubit : Qubit)'
   types:
+  - name: theta
+    summary: ' Angle about which the qubit is to be rotated.'
+    uid: Double
+    isPrimitive: true
   - name: qubit
     summary: >2
        Qubit to which the gate should be applied.
     uid: Qubit
-    isPrimitive: true
-  - name: theta
-    summary: ' Angle about which the qubit is to be rotated.'
-    uid: Double
     isPrimitive: true
 output:
   content: ()

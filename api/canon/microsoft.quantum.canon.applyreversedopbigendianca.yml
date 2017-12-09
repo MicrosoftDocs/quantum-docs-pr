@@ -9,12 +9,18 @@ input:
   types:
   - name: op
     isOperation: true
-    types:
-    - uid: bigendian
-    - uid: ()
-      isPrimitive: true
+    input:
+      types:
+      - uid: microsoft.quantum.canon.bigendian
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Controlled
+    - Adjoint
   - name: register
-    uid: littleendian
+    uid: microsoft.quantum.canon.littleendian
 output:
   content: ()
   types:

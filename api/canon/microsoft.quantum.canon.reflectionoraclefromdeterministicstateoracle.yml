@@ -4,7 +4,7 @@ name: ReflectionOracleFromDeterministicStateOracle
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Constructs reflection about a some state $\ket{\psi}$ from the oracle of type
+   Constructs reflection about a some state $\ket{\psi}$ from the oracle $O$ of type
    @"microsoft.quantum.canon.deterministicstateoracle", where $O\ket{0} = \ket{\psi}$.
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : DeterministicStateOracle) : ReflectionOracle'
 input:
@@ -13,9 +13,13 @@ input:
   - name: oracle
     summary: >2
        Oracle of type "DeterministicStateOracle"
-    uid: deterministicstateoracle
+    uid: microsoft.quantum.canon.deterministicstateoracle
 output:
   content: ReflectionOracle
   types:
-  - summary: ' A `ReflectionOracle` that reflects about the state $\ket{\psi}$.'
-    uid: reflectionoracle
+  - summary: >2
+       A `ReflectionOracle` that reflects about the state $\ket{\psi}$.
+    uid: microsoft.quantum.canon.reflectionoracle
+seeAlso:
+- microsoft.quantum.canon.deterministicstateoracle
+- microsoft.quantum.canon.reflectionoracle

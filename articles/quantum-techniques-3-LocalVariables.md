@@ -30,15 +30,17 @@ For instance:
 let measurementOperator = [PauliX; PauliZ; PauliZ; PauliX; PauliI];
 ```
 
+This assigns a particular array of Pauli operators to variable called `measurementOperator`.
+
 > [!TIP]
-> Note that we did not need to explicitly say the type of our new variable, as the expression on the right-hand side of the `let` statement is unambiguous.
+> Note that we did not need to explicitly specify the type of our new variable, as the expression on the right-hand side of the `let` statement is unambiguous and the type is inferred by the compiler. 
 
 Variables in Q# are *immutable*, meaning that once a variable defined in this way, it can no longer be changed in any way.
-This allow for classical logic acting on variables to be reordered for applying the `Adjoint` variant of an operation.
+This allows for several beneficial optimizations, including optimization of the classical logic acting on variables to be reordered for applying the `Adjoint` variant of an operation.
 
 <!-- FIXME: feels too much like the spec itself. Need to focus more on the how. -->
 
-Variables defined in this way are local to a particular scope, such as the body of an operation or the contents of a `for` loop.
+Variables defined used the `let` binding as above are local to a particular scope, such as the body of an operation or the contents of a `for` loop.
 
 
 ## Mutability ##
@@ -58,7 +60,7 @@ function Squares(nSquares : Int) : Int[] {
 ```
 
 The example above also illustrates another important feature of mutability in Q#: arrays bound to mutable local variables are themselves mutable.
-As we will see in more detail when discussing [array types](xref:quantum-techniques-4-typemodel#array-types), this is not true of ordinary variables.
+As we will see in more detail when discussing [array types](xref:microsoft.quantum.techniques.type-model#array-types), this is not true of ordinary variables.
 Informally, collections descending from immutable variables are immutable, while collections descending from mutable variables are mutable.
 
 No operation or function calling `Squares` can observe that the local variable `squares` was defined to be mutable; mutability is an implementation detail that callers do not need to worry about.

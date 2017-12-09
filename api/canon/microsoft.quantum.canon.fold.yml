@@ -19,27 +19,29 @@ syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array
 input:
   content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
   types:
+  - name: folder
+    summary: ' A function to be folded over the array.'
+    isFunction: true
+    input:
+      types:
+      - uid: "'State"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'State"
+        isLocal: true
+  - name: state
+    summary: ' The initial state of the folder.'
+    uid: "'State"
+    isLocal: true
   - name: array
     summary: >2
        An array of values to be folded over.
     uid: "'T"
     isLocal: true
     isArray: true
-  - name: folder
-    summary: ' A function to be folded over the array.'
-    isFunction: true
-    types:
-    - types:
-      - uid: "'State"
-        isLocal: true
-      - uid: "'T"
-        isLocal: true
-    - uid: "'State"
-      isLocal: true
-  - name: state
-    summary: ' The initial state of the folder.'
-    uid: "'State"
-    isLocal: true
 output:
   content: "'State"
   types:

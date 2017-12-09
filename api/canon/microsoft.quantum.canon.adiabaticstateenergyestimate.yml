@@ -3,68 +3,82 @@ uid: microsoft.quantum.canon.adiabaticstateenergyestimate
 name: AdiabaticStateEnergyEstimate
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Allocates qubits, performs state preparation, adiabatic state \n preparation, and phase estimation. \n"
+summary: " Convenience function that performs state preparation by applying a \n `statePrepUnitary` on an automatically allocated input state \n $\\ket{0...0}$, followed by adiabatic state preparation using a \n `adiabaticUnitary`, and finally phase estimation with respect to \n `qpeUnitary`on the resulting state using a `phaseEstAlgorithm`.\n"
 syntax: 'operation AdiabaticStateEnergyEstimate (nQubits : Int, statePrepUnitary : (Qubit[] => ()), adiabaticUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => ()), adiabaticUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))'
   types:
+  - name: nQubits
+    summary: ' Number of qubits used for the simulation.'
+    uid: Int
+    isPrimitive: true
+  - name: statePrepUnitary
+    summary: >2-
+       An oracle representing state preparation for the initial dynamical
+       generator.
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: adiabaticUnitary
     summary: >2-
        An oracle representing the adiabatic evolution algorithm to be used
-       to implement the sweep to the final state of the algorithm.
+       to implement the sweeps to the final state of the algorithm.
     isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
-  - name: nQubits
-    summary: ' Number of qubits used to perform simulation.'
-    uid: Int
-    isPrimitive: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+  - name: qpeUnitary
+    summary: >2-
+       An oracle representing a unitary operator $U$ representing evolution
+       for time $\delta t$ under a dynamical generator with ground state
+       $\ket{\phi}$ and ground state energy $E = \phi\\,\delta t$.
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled
   - name: phaseEstAlgorithm
     summary: >2
        An operation that performs phase estimation on a given unitary operation.
        See [iterative phase estimation](../libraries/characterization#iterative-phase-estimation)
        for more details.
     isOperation: true
-    types:
-    - types:
-      - uid: discreteoracle
+    input:
+      types:
+      - uid: microsoft.quantum.canon.discreteoracle
       - uid: Qubit
         isPrimitive: true
         isArray: true
-    - uid: Double
-      isPrimitive: true
-  - name: qpeUnitary
-    summary: >2-
-       An oracle representing a unitary operator $U$ representing evolution
-       for time $\delta t$ under a dynamical generator with ground state
-       $\ket{\phi}$ and ground state energy $E = \phi\,\delta t$.
-    isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
-  - name: statePrepUnitary
-    summary: >2-
-       An oracle representing state preparation for the initial dynamical
-       generator.
-    isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
+    output:
+      types:
+      - uid: Double
+        isPrimitive: true
 output:
   content: Double
   types:
   - summary: >2-
        An estimate $\hat{\phi}$ of the ground state energy $\phi$
-       of the ground state energy of the generator represented by $U$.
+       of the generator represented by $U$.
     uid: Double
     isPrimitive: true

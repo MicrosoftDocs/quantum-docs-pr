@@ -4,7 +4,8 @@ name: CNOT
 type: operation
 namespace: Microsoft.Quantum.Primitive
 summary: >2
-   Applies the controlled-NOT (CNOT) gate to a pair of qubits
+   Applies the controlled-NOT (CNOT) gate to a pair of qubits,
+
    \begin{align}
        \operatorname{CNOT} \mathrel{:=}
        \begin{bmatrix}
@@ -14,6 +15,7 @@ summary: >2
            0 & 0 & 1 & 0
        \end{bmatrix},
    \end{align}
+
    where rows and columns are ordered as in the quantum concepts guide.
 remarks: >2-
    Equivalent to:

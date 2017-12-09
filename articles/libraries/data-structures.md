@@ -8,6 +8,7 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
+uid: microsoft.quantum.libraries.data-structures
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
@@ -54,11 +55,11 @@ let leRegister = LittleEndian(register);
 QFT(BigEndian(Reverse(leRegister)));
 ```
 
-Similarly, the <xref:microsoft.quantum.canon.permute> function can be used to reorder or take subsets of the elements of an array:
+Similarly, the <xref:microsoft.quantum.canon.subarray> function can be used to reorder or take subsets of the elements of an array:
 
 ```qsharp
 // Applies H to qubits 2 and 5.
-ApplyToEach(H, Permute([2; 5], register));
+ApplyToEach(H, Subarray([2; 5], register));
 ```
 
 When combined with flow control, array manipulation functions such as <xref:microsoft.quantum.canon.zip> can provide a powerful way to express quantum programs:

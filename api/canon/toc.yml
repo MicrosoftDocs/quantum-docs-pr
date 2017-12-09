@@ -167,8 +167,6 @@
     uid: microsoft.quantum.canon.assertqubitstate
   - name: AssertQubitTol
     uid: microsoft.quantum.canon.assertqubittol
-  - name: BasisChangeZtoY
-    uid: microsoft.quantum.canon.basischangeztoy
   - name: BigEndian
     uid: microsoft.quantum.canon.bigendian
   - name: Bind
@@ -283,32 +281,6 @@
     uid: microsoft.quantum.canon.getgeneratorsystemfunction
   - name: GetGeneratorSystemNTerms
     uid: microsoft.quantum.canon.getgeneratorsystemnterms
-  - name: H2BondLengths
-    uid: microsoft.quantum.canon.h2bondlengths
-  - name: H2Coeff
-    uid: microsoft.quantum.canon.h2coeff
-  - name: H2EstimateEnergy
-    uid: microsoft.quantum.canon.h2estimateenergy
-  - name: H2EstimateEnergyRPE
-    uid: microsoft.quantum.canon.h2estimateenergyrpe
-  - name: H2EvolutionGenerator
-    uid: microsoft.quantum.canon.h2evolutiongenerator
-  - name: H2GeneratorIndex
-    uid: microsoft.quantum.canon.h2generatorindex
-  - name: H2GeneratorSystem
-    uid: microsoft.quantum.canon.h2generatorsystem
-  - name: H2IdentityCoeff
-    uid: microsoft.quantum.canon.h2identitycoeff
-  - name: H2StatePrep
-    uid: microsoft.quantum.canon.h2stateprep
-  - name: H2Terms
-    uid: microsoft.quantum.canon.h2terms
-  - name: H2TrotterStep
-    uid: microsoft.quantum.canon.h2trotterstep
-  - name: H2TrotterStepManual
-    uid: microsoft.quantum.canon.h2trotterstepmanual
-  - name: H2TrotterUnitaries
-    uid: microsoft.quantum.canon.h2trotterunitaries
   - name: HY
     uid: microsoft.quantum.canon.hy
   - name: Head
@@ -431,12 +403,6 @@
     uid: microsoft.quantum.canon.operationpowc
   - name: OperationPowCA
     uid: microsoft.quantum.canon.operationpowca
-  - name: OperationPowImplA
-    uid: microsoft.quantum.canon.operationpowimpla
-  - name: OperationPowImplC
-    uid: microsoft.quantum.canon.operationpowimplc
-  - name: OperationPowImplCA
-    uid: microsoft.quantum.canon.operationpowimplca
   - name: OracleToDiscrete
     uid: microsoft.quantum.canon.oracletodiscrete
   - name: PauliEvolutionFunction
@@ -527,8 +493,6 @@
     uid: microsoft.quantum.canon.reverse
   - name: RobustPhaseEstimation
     uid: microsoft.quantum.canon.robustphaseestimation
-  - name: RobustPhaseEstimationTestOp
-    uid: microsoft.quantum.canon.robustphaseestimationtestop
   - name: SimulationAlgorithm
     uid: microsoft.quantum.canon.simulationalgorithm
   - name: Snd
@@ -557,10 +521,6 @@
     uid: microsoft.quantum.canon.steanecodeencoder
   - name: SteaneCodeRecoveryFns
     uid: microsoft.quantum.canon.steanecoderecoveryfns
-  - name: SteaneCodeRecoveryX
-    uid: microsoft.quantum.canon.steanecoderecoveryx
-  - name: SteaneCodeRecoveryZ
-    uid: microsoft.quantum.canon.steanecoderecoveryz
   - name: Subarray
     uid: microsoft.quantum.canon.subarray
   - name: SwapReverseRegister
@@ -581,10 +541,6 @@
     uid: microsoft.quantum.canon.timedependentsimulationalgorithm
   - name: TimeDependentTrotterSimulationAlgorithm
     uid: microsoft.quantum.canon.timedependenttrottersimulationalgorithm
-  - name: Trotter1ImplCA
-    uid: microsoft.quantum.canon.trotter1implca
-  - name: Trotter2ImplCA
-    uid: microsoft.quantum.canon.trotter2implca
   - name: TrotterSimulationAlgorithm
     uid: microsoft.quantum.canon.trottersimulationalgorithm
   - name: TrotterStep

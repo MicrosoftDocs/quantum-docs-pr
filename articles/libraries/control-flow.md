@@ -24,10 +24,6 @@ uid: microsoft.quantum.concepts.control-flow
 
 # Higher-Order Control Flow #
 
-<!--
-    FIXME: Some of the functionality here has not been implemented yet.
--->
-
 One of the primary roles of the canon is to make it easier to express high-level algorithmic ideas as quantum programs.
 Thus, the Q# canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.
 Jumping immediately into an example, consider the case in which one wants to construct a "CNOT ladder" on a register:
@@ -96,7 +92,7 @@ ApplyToEach((Adjoint U), register);
 ```
 
 In particular, this means that calls to `ApplyToEachAC` can appear in operations which declare `adjoint auto`.
-Similarly, <xref:microsoft.quantum.applytorange> is useful for representing patterns of the form `U(0, targets[0]); U(1, targets[1]); ...`, and offers versions for each combination of functors supports by its input.
+Similarly, <xref:microsoft.quantum.canon.applytoeachindex> is useful for representing patterns of the form `U(0, targets[0]); U(1, targets[1]); ...`, and offers versions for each combination of functors supports by its input.
 
 > [!TIP]
 > `ApplyToEach` is type-parameterized such that it can be used with operations that take inputs other than `Qubit`.
@@ -168,7 +164,7 @@ This analogy is made precise by the recognition that unitary operators correspon
 Under this view, `Bind` is precisely the representation of the matrix product, since `Bind([A; B])(target)` is equivalent to `A(target); B(target);`, which in turn is the calling sequence corresponding to $BA$.
 
 A more sophisticated example is the [Trotter–Suzuki expansion](TODO: cite).
-As discussed in the Dynamical Generator Representation section of [data structures](data-structures), the Trotter–Suzuki expansion provides a particularly useful way of expressing matrix exponentials.
+As discussed in the Dynamical Generator Representation section of [data structures](xref:microsoft.quantum.libraries.data-structures), the Trotter–Suzuki expansion provides a particularly useful way of expressing matrix exponentials.
 For instance, applying the expansion at its lowest order yields that for any operators $A$ and $B$ such that $A = A^\dagger$ and $B = B^\dagger$,
 \begin{align}
     \tag{★} \label{eq:trotter-suzuki-0}

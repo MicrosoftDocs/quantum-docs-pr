@@ -30,12 +30,15 @@ input:
        is to be prepared, where $N$ is the number of qubits on which
        `op` acts.
     isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: reference
     summary: >2-
        A register of qubits starting in the $\ket{00\cdots 0}$ state

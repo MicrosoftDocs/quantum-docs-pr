@@ -47,7 +47,7 @@ Give your project the name `Bell`.
 
 ### Step 2 (optional): Update NuGet Packages
 
-If you want to get the latest version of Q# compiler, update `Microsoft.Quantum.Simulation.Simulators` NuGet package, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package). Note that you'll have to switch to the QuArC NuGet feed as the package source before you can get the update.
+If you want to run the latest version, update the `Microsoft.Quantum.Development.Kit` and `Microsoft.Quantum.Canon` NuGet packages, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package).
 
 ### Step 3: Enter the Q# Code
 
@@ -286,9 +286,13 @@ In the `Main` method, enter the following code:
 >   In the example, `count` is fixed at a 1000 and `initial` is the initial value of the qubit.
 > * Run the quantum algorithm.
 >   Each Q# operation generates a C# class with the same name.
->   This class has a `Run` method that asynchronously executes the operation.
+>   This class has a `Run` method that **asynchronously** executes the operation.
 >   The execution is asynchronous because execution on actual hardware will be
->   asynchronous.
+>   asynchronous. 
+>
+>   Because the `Run` method is asynchronous, we fetch the `Result` property;
+>   this blocks execution until the task completes and returns the result synchronously.
+>   
 > * Process the result of the operation.
 >   In the example, `res` receives the result of the operation.
 >   Here the result is a tuple of the number of zeros (`numZeros`) and number of ones (`numOnes`)

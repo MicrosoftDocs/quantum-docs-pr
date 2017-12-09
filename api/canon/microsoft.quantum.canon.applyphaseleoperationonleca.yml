@@ -9,12 +9,18 @@ input:
   types:
   - name: op
     isOperation: true
-    types:
-    - uid: phaselittleendian
-    - uid: ()
-      isPrimitive: true
+    input:
+      types:
+      - uid: microsoft.quantum.canon.phaselittleendian
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Controlled
+    - Adjoint
   - name: target
-    uid: littleendian
+    uid: microsoft.quantum.canon.littleendian
 output:
   content: ()
   types:

@@ -3,26 +3,55 @@ uid: microsoft.quantum.canon.bindc
 name: BindC
 type: function
 namespace: Microsoft.Quantum.Canon
+summary: " Given an array of operations acting on a single input,\n produces a new operation that\n performs each given operation in sequence.\n The modifier 'C' indicates that all operations in the array are controllable. \n"
+remarks: >2
+
+  ### Examples
+   The following are equivalent:
+   ```Q#
+   let bound = Bind([U; V]);
+   bound(x);
+
+   U(x); V(x);
+   ```
 syntax: "function BindC (operations : ('T => () : Controlled)[]) : ('T => () : Controlled)"
 input:
   content: "(operations : ('T => () : Controlled)[])"
   types:
   - name: operations
+    summary: >2
+       A sequence of operations to be performed on a given input.
     isArray: true
     isOperation: true
-    types:
-    - uid: "'T"
-      isLocal: true
-    - uid: ()
-      isPrimitive: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Controlled
 output:
   content: "('T => () : Controlled)"
   types:
-  - isOperation: true
-    types:
-    - uid: "'T"
-      isLocal: true
-    - uid: ()
-      isPrimitive: true
+  - summary: >2
+       A new operation that performs each given operation in sequence
+       on its input.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: *o0
 seeAlso:
 - microsoft.quantum.canon.bind
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The target on which each of the operations in the array act.

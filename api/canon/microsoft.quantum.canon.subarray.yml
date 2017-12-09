@@ -9,16 +9,16 @@ syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
 input:
   content: "(indices : Int[], array : 'T[])"
   types:
+  - name: indices
+    summary: ' A list of integers that is used to define the subarray. '
+    uid: Int
+    isPrimitive: true
+    isArray: true
   - name: array
     summary: >2
        An array of elements over `'T`.
     uid: "'T"
     isLocal: true
-    isArray: true
-  - name: indices
-    summary: ' A list of integers that is used to define the subarray. '
-    uid: Int
-    isPrimitive: true
     isArray: true
 output:
   content: "'T[]"

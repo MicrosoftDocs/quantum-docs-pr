@@ -15,23 +15,31 @@ syntax: "operation With (outerOperation : ('T => () : Adjoint), innerOperation :
 input:
   content: "(outerOperation : ('T => () : Adjoint), innerOperation : ('T => ()), target : 'T)"
   types:
+  - name: outerOperation
+    summary: " The operation $U$ that should be used to conjugate $V$. Note that the \n outer operation $U$ needs to be adjointable, but does not\n need to be controllable."
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
   - name: innerOperation
     summary: >2
        The operation $V$ being conjugated.
     isOperation: true
-    types:
-    - uid: "'T"
-      isLocal: true
-    - uid: ()
-      isPrimitive: true
-  - name: outerOperation
-    summary: ' The operation $U$ that should be used to conjugate $V$.'
-    isOperation: true
-    types:
-    - uid: "'T"
-      isLocal: true
-    - uid: ()
-      isPrimitive: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: target
     uid: "'T"
     isLocal: true
@@ -44,3 +52,7 @@ seeAlso:
 - microsoft.quantum.canon.withc
 - microsoft.quantum.canon.witha
 - microsoft.quantum.canon.withca
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The target on which each of the inner and outer operations act.

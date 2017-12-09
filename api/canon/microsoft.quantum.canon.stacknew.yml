@@ -18,4 +18,4 @@ output:
   content: ResultStack
   types:
   - summary: ' A new `ResultStack` that has capacity `size` and length 0.'
-    uid: resultstack
+    uid: microsoft.quantum.canon.resultstack

@@ -45,7 +45,7 @@ output:
   content: Result
   types:
   - summary: >2
-       The `Result` `Zero` if the $+1$ eigenvalue is observed, and `One` if
+       `Zero` if the $+1$ eigenvalue is observed, and `One` if
        the $-1$ eigenvalue is observed.
     uid: Result
     isPrimitive: true

@@ -16,16 +16,18 @@ input:
   - name: op
     summary: ' An operation to be applied to the first three qubits'
     isOperation: true
-    types:
-    - types:
+    input:
+      types:
       - uid: Qubit
         isPrimitive: true
       - uid: Qubit
         isPrimitive: true
       - uid: Qubit
         isPrimitive: true
-    - uid: ()
-      isPrimitive: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: register
     summary: >2
        Qubit array to the first three qubits of which the operation is applied.
@@ -37,3 +39,7 @@ output:
   types:
   - uid: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytofirstthreequbitsa
+- microsoft.quantum.canon.applytofirstthreequbitsc
+- microsoft.quantum.canon.applytofirstthreequbitsca

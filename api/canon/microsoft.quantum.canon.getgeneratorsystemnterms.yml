@@ -11,10 +11,13 @@ input:
   types:
   - name: generatorSystem
     summary: " The `GeneratorSystem` of interest. \n"
-    uid: generatorsystem
+    uid: microsoft.quantum.canon.generatorsystem
 output:
   content: Int
   types:
-  - summary: ' The number of terms in a `GeneratorSystem`.'
+  - summary: >2
+       The number of terms in a `GeneratorSystem`.
     uid: Int
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.generatorsystem

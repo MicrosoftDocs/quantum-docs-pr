@@ -10,23 +10,29 @@ syntax: 'function AmpAmpByOracle (nIterations : Int, stateOracle : StateOracle, 
 input:
   content: '(nIterations : Int, stateOracle : StateOracle, idxFlagQubit : Int)'
   types:
-  - name: idxFlagQubit
-    summary: ' Index to Flag qubit '
-    uid: Int
-    isPrimitive: true
   - name: nIterations
     summary: ' Number of iterations $n$ of amplitude amplification '
     uid: Int
     isPrimitive: true
   - name: stateOracle
-    uid: stateoracle
+    uid: microsoft.quantum.canon.stateoracle
+  - name: idxFlagQubit
+    summary: ' Index to Flag qubit '
+    uid: Int
+    isPrimitive: true
 output:
   content: '(Qubit[] => () : Adjoint, Controlled)'
   types:
   - isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled

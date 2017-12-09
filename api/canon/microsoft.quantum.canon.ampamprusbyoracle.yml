@@ -4,19 +4,21 @@ name: AmpAmpRUSByOracle
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: " Fixed-Point Amplitude Amplification algorithm \n"
-remarks: " startQubits must be in the $\\ket{0 \\cdots 0}$ state. This iterates over a number of queries in powers of $2$ until `queriesMax` \n is reached, or the target state is found."
+remarks: >2-
+   The startQubits must be in the $\ket{0 \cdots 0}$ state. This operation iterates over a number of queries in powers of $2$ until either a maximal number of queries
+   is reached, or the target state is found.
 syntax: 'operation AmpAmpRUSByOracle (statePrepOracle : StateOracle, startQubits : Qubit[]) : ()'
 input:
   content: '(statePrepOracle : StateOracle, startQubits : Qubit[])'
   types:
+  - name: statePrepOracle
+    summary: ' Unitary oracle that prepares the start state.'
+    uid: microsoft.quantum.canon.stateoracle
   - name: startQubits
     summary: " Qubit register \n"
     uid: Qubit
     isPrimitive: true
     isArray: true
-  - name: statePrepOracle
-    summary: ' Unitary oracle that prepares start state '
-    uid: stateoracle
 output:
   content: ()
   types:

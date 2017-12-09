@@ -13,7 +13,7 @@ remarks: >2
    using (register = Qubit[1]) {
        H(register[0]);
        AssertProb([PauliZ], register, One, 0.5,
-           "Measuring in conjgate basis did not give 50/50 results.");
+           "Measuring in conjugate basis did not give 50/50 results.");
    }
    ```
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : ()'
@@ -23,19 +23,10 @@ input:
   - name: bases
     summary: >2-
        A measurement effect to assert the probability of, expressed as a
-       mutli-qubit Pauli operator.
+       multi-qubit Pauli operator.
     uid: Pauli
     isPrimitive: true
     isArray: true
-  - name: msg
-    summary: >2
-       A message to be reported if the assertion fails.
-    uid: String
-    isPrimitive: true
-  - name: prob
-    summary: ' The probability with which the given result is expected.'
-    uid: Double
-    isPrimitive: true
   - name: qubits
     summary: ' A register on which to make the assertion.'
     uid: Qubit
@@ -44,6 +35,15 @@ input:
   - name: result
     summary: ' An expected result of `Measure(bases, qubits)`.'
     uid: Result
+    isPrimitive: true
+  - name: prob
+    summary: ' The probability with which the given result is expected.'
+    uid: Double
+    isPrimitive: true
+  - name: msg
+    summary: >2
+       A message to be reported if the assertion fails.
+    uid: String
     isPrimitive: true
   - name: tol
     uid: Double
@@ -54,4 +54,4 @@ output:
   - uid: ()
     isPrimitive: true
 seeAlso:
-- microsoft.quantum.primitive.assertprob
+- microsoft.quantum.primitive.assert

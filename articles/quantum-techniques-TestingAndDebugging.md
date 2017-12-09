@@ -8,6 +8,7 @@ author: tcNickolas
 ms.author: mamykhai@microsoft.com
 ms.date: 11/20/2017
 ms.topic: article-type-from-white-list
+uid: microsoft.quantum.techniques.testing-and-debugging
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
@@ -169,8 +170,6 @@ Thus, if we proceed past a call to `AssertPositive`, we can be assured by that i
 Building on these ideas, [the prelude](./libraries/prelude.md) offers two especially useful assertions, both @"microsoft.quantum.primitive.assert" and @"microsoft.quantum.primitive.assertprob" both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is to be performed, and a hypothetical outcome.
 On target machines which work by simulation, we are not bound by [the no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), and can perform such measurements without disturbing the register passed to such assertions.
 A simulator can then, similar to the `AssertPositive` function above, abort computation if the hypothetical outcome would not be observed in practice:
-<!--- TODO: in para above [no-cloning theorm](TODO: link to glossary)--->
-<!-- TODO: check that this code is correct. -->
 
 ```qsharp
 using (register = Qubit[1]) {
@@ -184,9 +183,7 @@ using (register = Qubit[1]) {
 
 On physical quantum hardware, where the no-cloning theorem prevents examination of quantum state, the `Assert` and `AssertProb` operations simply return `()` with no other effect.
 
-The microsoft.quantum.canon namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. They are detailed in [Q# standard libraries: Testing and Debugging](libraries/testing.md) section.
-<!-- TODO: link to @"microsoft.quantum.canon" -->
-
+The <xref:microsoft.quantum.canon> namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. They are detailed in [Q# standard libraries: Testing and Debugging](libraries/testing.md) section.
 ## Debugging
 
 Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/en-us/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger) and [inspecting values of classic variables](https://docs.microsoft.com/en-us/visualstudio/debugger/autos-and-locals-windows) during code execution on simulator.

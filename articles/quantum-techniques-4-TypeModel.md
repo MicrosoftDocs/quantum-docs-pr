@@ -8,6 +8,7 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
+uid: microsoft.quantum.techniques.type-model
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
@@ -39,7 +40,7 @@ We describe each in the rest of this section.
 
 The Q# language provides a small set of *primitive types* that can be used throughout operations and functions.
 
-- **`Int`**: Represents signed integers, e.g.: `2`, `107`, `-5`.
+- **`Int`**: Represents 64-bit signed integers, e.g.: `2`, `107`, `-5`.
 - **`Double`**: Represents double-precision floating point numbers, e.g.: `0.0`, `-1.3`, `4e-7`.
 - **`Bool`**: Represents a condition which can either be `true` or `false`.
 - **`Pauli`**: Represents one of the Pauli matrices, either `PauliI`, `PauliX`, `PauliY`, or `PauliZ`.

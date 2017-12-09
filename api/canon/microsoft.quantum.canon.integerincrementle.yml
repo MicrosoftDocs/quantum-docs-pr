@@ -14,7 +14,7 @@ input:
     isPrimitive: true
   - name: target
     summary: ' Quantum register encoding an unsigned integer using little-endian encoding.'
-    uid: littleendian
+    uid: microsoft.quantum.canon.littleendian
 output:
   content: ()
   types:

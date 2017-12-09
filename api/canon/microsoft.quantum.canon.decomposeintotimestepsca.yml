@@ -19,16 +19,21 @@ input:
        An operation which accepts an index input (type `Int`) and a time
        input (type `Double`) for decomposition.
     isOperation: true
-    types:
-    - types:
+    input:
+      types:
       - uid: Int
         isPrimitive: true
       - uid: Double
         isPrimitive: true
       - uid: "'T"
         isLocal: true
-    - uid: ()
-      isPrimitive: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Adjoint
+    - Controlled
   - name: trotterOrder
     summary: >2
        Selects the order of the Trotter–Suzuki integrator to be used.
@@ -43,14 +48,17 @@ output:
        the first parameter `Double` is the integration step size, and the
        second parameter is the target acted upon.
     isOperation: true
-    types:
-    - types:
+    input:
+      types:
       - uid: Double
         isPrimitive: true
       - uid: "'T"
         isLocal: true
-    - uid: ()
-      isPrimitive: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: *o0
 typeParameters:
 - uid: "'T"
   summary: >2

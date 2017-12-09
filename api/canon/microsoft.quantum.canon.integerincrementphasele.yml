@@ -25,7 +25,7 @@ input:
     isPrimitive: true
   - name: target
     summary: ' Quantum register encoding an integer using little-endian encoding in QFT basis.'
-    uid: phaselittleendian
+    uid: microsoft.quantum.canon.phaselittleendian
 output:
   content: ()
   types:

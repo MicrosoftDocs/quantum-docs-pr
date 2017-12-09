@@ -4,9 +4,9 @@ name: And
 type: function
 namespace: Microsoft.Quantum.Extensions.Bitwise
 summary: >2
-   Returns the bitwise AND between two integers.
+   Returns the bitwise AND of two integers.
 remarks: >2
-   See the [C# `&` Operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/and-operator) for more details.
+   See the [C# `&` Operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/and-operator) (binary) for more details.
 
   ### Examples
    ```qsharp

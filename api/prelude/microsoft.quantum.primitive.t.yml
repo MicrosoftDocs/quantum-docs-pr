@@ -5,6 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Primitive
 summary: >2
    Applies the $\pi / 8$ gate to a single qubit,
+
    \begin{align}
        T \mathrel{:=}
        \begin{bmatrix}

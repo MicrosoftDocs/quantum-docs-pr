@@ -3,7 +3,7 @@
 title: Primitive Operations Counter | Quantum computer trace simulator | Microsoft Docs 
 description: Overview of quantum computer trace simulator 
 #keywords: Don’t add or edit keywords without consulting your SEO champ. 
-author: Vadym 
+author: vadym-kl 
 ms.author: vadym@microsoft.com 
 ms.date: 11/12/2017 
 ms.topic: article-type-from-white-list 
@@ -83,8 +83,7 @@ use the following:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricCalculatorsNames.primitiveOperationsCounter];
 ```
-<!---
-## See also
-The quantum computer [Trace Simulator
-](quantum-computer-trace-simulator-1.md) overview
---->
+
+## See also ##
+
+- The quantum computer [Trace Simulator](./quantum-computer-trace-simulator-1.md) overview.

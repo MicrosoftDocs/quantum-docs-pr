@@ -4,7 +4,7 @@ name: AssertOperationsEqualInPlaceCompBasis
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Checks if the operation givenU is equal to the operation expectedU on
+   Checks if the operation `givenU` is equal to the operation `expectedU` on
    the given input size  by checking the action of the operations only on
    the vectors from the computational basis.
    This is a necessary, but not sufficient, condition for the equality of
@@ -13,26 +13,34 @@ syntax: 'operation AssertOperationsEqualInPlaceCompBasis (givenU : (Qubit[] => (
 input:
   content: '(givenU : (Qubit[] => ()), expectedU : (Qubit[] => () : Adjoint), inputSize : Int)'
   types:
-  - name: expectedU
-    summary: ' Reference operation on n qubits that givenU is to be compared against.'
-    isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
   - name: givenU
-    summary: ' Operation on n qubits to be checked.'
+    summary: ' Operation on $n$ qubits to be checked.'
     isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+  - name: expectedU
+    summary: ' Reference operation on $n$ qubits that `givenU` is to be compared against.'
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
   - name: inputSize
-    summary: ' The number of qubits n that the operations givenU and expectedU operate on.'
+    summary: ' The number of qubits $n$ that the operations `givenU` and `expectedU` operate on.'
     uid: Int
     isPrimitive: true
 output:

@@ -4,7 +4,7 @@ name: Or
 type: function
 namespace: Microsoft.Quantum.Extensions.Bitwise
 summary: >2
-   Returns the bitwise OR between two integers.
+   Returns the bitwise OR of two integers.
 remarks: >2
    See the [C# `|` Operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/or-operator) for more details.
 

@@ -20,9 +20,9 @@ input:
     uid: Int
     isPrimitive: true
   - name: multiplier
-    uid: littleendian
+    uid: microsoft.quantum.canon.littleendian
   - name: summand
-    uid: littleendian
+    uid: microsoft.quantum.canon.littleendian
 output:
   content: ()
   types:

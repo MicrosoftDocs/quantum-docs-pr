@@ -26,6 +26,8 @@
 - name: Managing quantum machines and drivers
   href: quantum-SimulatorsAndMachines.md
   items:
+        - name: Quantum simulator
+          href: quantum-fullstate-simulator.md
         - name: Quantum computer trace simulator
           href: quantum-computer-trace-simulator-1.md
           items:
@@ -93,5 +95,5 @@
 - name: For more information
   href: quantum-ForMoreInfo.md
 - name: C# components reference
-  href: https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?branch=master
+  href: https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators
 

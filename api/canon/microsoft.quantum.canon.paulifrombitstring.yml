@@ -11,6 +11,10 @@ syntax: 'function PauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Boo
 input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[])'
   types:
+  - name: pauli
+    summary: ' Pauli operator to apply to qubits where `bitsApply == bits[idx]`.'
+    uid: Pauli
+    isPrimitive: true
   - name: bitApply
     summary: ' apply Pauli if bit is this value.'
     uid: Bool
@@ -20,10 +24,6 @@ input:
     uid: Bool
     isPrimitive: true
     isArray: true
-  - name: pauli
-    summary: ' Pauli operator to apply to qubits where `bitsApply == bits[idx]`.'
-    uid: Pauli
-    isPrimitive: true
 output:
   content: Pauli[]
   types:

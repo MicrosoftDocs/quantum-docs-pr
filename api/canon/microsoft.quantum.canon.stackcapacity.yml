@@ -12,7 +12,7 @@ input:
   - name: stack
     summary: >2
        The stack whose capacity is to be determined.
-    uid: resultstack
+    uid: microsoft.quantum.canon.resultstack
 output:
   content: Int
   types:

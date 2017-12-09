@@ -3,7 +3,9 @@ uid: microsoft.quantum.extensions.math.absi
 name: AbsI
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-remarks: ' See (`System.Math.Abs`)[https://docs.microsoft.com/en-us/dotnet/api/system.math.abs].'
+summary: >2
+   Returns the absolute value of an integer.
+remarks: ' See [System.Math.Abs](https://docs.microsoft.com/en-us/dotnet/api/system.math.abs) for more details.'
 syntax: 'function AbsI (a : Int) : Int'
 input:
   content: '(a : Int)'

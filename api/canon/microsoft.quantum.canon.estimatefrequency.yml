@@ -11,38 +11,44 @@ syntax: 'operation EstimateFrequency (preparation : (Qubit[] => ()), measurement
 input:
   content: '(preparation : (Qubit[] => ()), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
   types:
+  - name: preparation
+    summary: >2-
+       An operation $P$ that prepares a given state $\rho$ on
+       its input register.
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
   - name: measurement
     summary: ' An operation $M$ representing the measurement of interest.'
     isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: Result
-      isPrimitive: true
-  - name: nMeasurements
-    summary: >2
-       The number of times that the measurement should be performed
-       in order to estimate the frequency of interest.
-    uid: Int
-    isPrimitive: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: Result
+        isPrimitive: true
   - name: nQubits
     summary: >2-
        The number of qubits on which the preparation and measurement
        each act.
     uid: Int
     isPrimitive: true
-  - name: preparation
-    summary: >2-
-       An operation $P$ that prepares a given state $\rho$ on
-       its input register.
-    isOperation: true
-    types:
-    - uid: Qubit
-      isPrimitive: true
-      isArray: true
-    - uid: ()
-      isPrimitive: true
+  - name: nMeasurements
+    summary: >2
+       The number of times that the measurement should be performed
+       in order to estimate the frequency of interest.
+    uid: Int
+    isPrimitive: true
 output:
   content: Double
   types:

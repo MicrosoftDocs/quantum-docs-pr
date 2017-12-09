@@ -7,16 +7,23 @@ functions:
      Encodes a multi-qubit Pauli operator represented as an array of
      single-qubit Pauli operators into an integer.
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: >2
-     Converts a given integer into a double-precision floating
-     point number.
+  summary: " Converts a given integer to an equivalent double-precision \n floating-point number.\n"
 - uid: microsoft.quantum.extensions.convert.tostringb
-  summary: ' Formats a boolean value as a string.'
+  summary: >2
+     Converts a given boolean value to an equivalent string representation.
 - uid: microsoft.quantum.extensions.convert.tostringd
-  summary: ' Formats a double-precision floating point number as a string.'
+  summary: >2
+     Converts a given double-precision floating-point number to an equivalent string representation.
 - uid: microsoft.quantum.extensions.convert.tostringdformat
+  summary: >2
+     Converts a given double-precision floating-point number to an equivalent string representation,
+     using the given format.
 - uid: microsoft.quantum.extensions.convert.tostringi
-  summary: ' Formats an integer as a string.'
+  summary: >2
+     Converts a given integer number to an equivalent string representation.
 - uid: microsoft.quantum.extensions.convert.tostringiformat
+  summary: >2
+     Converts a given integer number to an equivalent string representation,
+     using the given format.
 operations: []
 newtypes: []

@@ -176,8 +176,8 @@ This unitary is customarily described by one of two types of oracles.
 
 > [!TIP]
 > Both of the oracle types described below are covered in the samples.
-> To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](TODO: link).
-> To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](TODO: link).
+> To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](https://github.com/Microsoft/Quantum/Samples/PhaseEstimation).
+> To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/Samples/IsingPhaseEstimation).
 
 The first type of oracle, which we call a discrete query oracle and represent with the user-defined type <xref:microsoft.quantum.canon.discreteoracle>, simply involves a unitary matrix.
 If $U$ is the unitary whose eigenvalues we wish to estimate then the oracle for $U$ is simply a standin for a subroutine that implements $U$.
@@ -218,18 +218,6 @@ Such a continuous model also has the property that frequencies greater than $2\p
 Thus for problems such as this continuous query models for the phase estimation oracle are not only appropriate but are also preferable to the discrete query model.
 For this reason Q# has functionality for both forms of queries and leave it to the user to decide upon a phase estimation algorithm to fit their needs and the type of oracle that is available.
 
-<!-- TODO: summarize the following.
-
-    - ReflectionOracle
-    - ContinousOracle (FIXME: rename to ContinuousPhaseOracle)
-    - DiscreteOracle (same FIXME)
-    - StateOracle
-    - DeterministicStateOracle
-    - ObliviousOracle (FIXME: need to expand on the API docs here)
-    - ProbabilityOracle (TODO: add this type.)
-
--->
-
 ## Dynamical Generator Modeling ##
 
 Generators of time-evolution describe how states evolve through time. For instance, the dynamics of a quantum state $\ket{\psi}$ is governed by the Schrödinger equation
@@ -262,14 +250,14 @@ $$
 \end{align}
 $$
 
-where the integer $r>0$ controls the approximation error. 
+where the integer $r > 0$ controls the approximation error.
 
 The dynamical generator modeling library provides a framework for systematically encoding complicated generators in terms of simpler generators. Such a description may then be passed to, say, the simulation library to implement time-evolution by a simulation algorithm of choice, with many details automatically taken care of.
 
 > [!TIP]
 > The dynamical generator library described below is covered in the samples. 
-> For an example based on the Ising model, please see the [**IsingGenerators** sample](TODO: link).
-> For an example based on molecular Hydrogen, please see the [*H2Simulation** sample](TODO: link).
+> For an example based on the Ising model, please see the [**IsingGenerators** sample](https://github.com/Microsoft/Quantum/Samples/IsingGenerators).
+> For an example based on molecular Hydrogen, please see the [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/Samples/H2SimulationCmdLine) and [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/Samples/H2SimulationGUI) samples.
 
 ### Complete Description of a Generator ###
 

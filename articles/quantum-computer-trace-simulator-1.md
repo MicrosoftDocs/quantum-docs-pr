@@ -114,5 +114,5 @@ components are provided in the corresponding reference files. See the API docume
 
 ## See also
 The quantum computer [trace simulator
-](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator?view=qsharp-preview&branch=master) C# reference 
+](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) C# reference 
 

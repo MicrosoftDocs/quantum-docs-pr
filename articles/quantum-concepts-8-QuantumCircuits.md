@@ -33,7 +33,7 @@ Operations with this or greater complexity are ubiquitous in quantum algorithms 
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](./media/Concepts1.png)
 
-This visual language for quantum operations is can be more readily digestible than writing down its equivalent matrix once you understand the conventions for expressing a quantum circuit.  We review these conventions below.
+This visual language for quantum operations can be more readily digestible than writing down its equivalent matrix once you understand the conventions for expressing a quantum circuit.  We review these conventions below.
 
 In a circuit diagram, each solid line depicts a qubit or more generally a qubit register.  By convention, the top line is qubit register $0$ and the remainder are labeled sequentially. The above example circuit is depicted as acting on two qubits (or equivalently two registers consisting of one qubit).  Gates acting on one or more qubit registers are denoted as a box.  For example, the symbol
 

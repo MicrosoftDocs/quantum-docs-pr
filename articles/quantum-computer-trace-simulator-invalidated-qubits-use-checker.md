@@ -74,4 +74,5 @@ the `QCTraceSimulator` constructor. When `useInvalidatedQubitsUseChecker` is set
 the `Invalidated Qubits Use Checker` is enabled. See the API documentation on [QCTraceSimulator](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator?view=qsharp-preview&branch=master) and [QCTraceSimulatorConfiguration](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?view=qsharp-preview&branch=master) for more details.
 
 ## See also ##
+
 - The quantum computer [Trace Simulator](./quantum-computer-trace-simulator-1.md) overview.

@@ -8,6 +8,7 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
+uid: microsoft.quantum.qsharp-ref.file-structure
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
@@ -32,13 +33,13 @@ but it must contain at least one definition.
 
 ## User-Defined Type Declarations
 
-Q# provides a way for users to declare new user-defined types, 
-as described in the [Q# type model](articles/quantum-QR-TypeModel) section. 
+Q# provides a way for users to declare new user-defined types,
+as described in the [Q# type model](xref:microsoft.quantum.qsharp-ref.type-model) section.
 User-defined types are distinct even if the underlying  types are identical. In particular, there is no automatic conversion between two user-defined types if the underlying types are identical.
 
-A user-defined type declaration consists of the keyword `newtype`, followed by 
+A user-defined type declaration consists of the keyword `newtype`, followed by
 the name of the user-defined type, an `=`, a valid type specification, and
-a terminating semicolon. 
+a terminating semicolon.
 
 For example:
 
@@ -133,7 +134,7 @@ it should specify `adjoint auto` or `adjoint self`.
 
 The controlled version of an operation specifies how a quantum-controlled 
 version of the operation is implemented. 
-A more complete description is provided above in the [Controlled](articles/quantum-QR-TypeModel#controlled)
+A more complete description is provided above in the [Controlled](xref:microsoft.quantum.qsharp-ref.type-model#controlled)
 section, above.
 
 It is legal to specify an operation with no controlled version; 

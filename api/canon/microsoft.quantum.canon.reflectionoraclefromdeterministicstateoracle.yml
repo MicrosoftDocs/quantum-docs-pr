@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: >2
    Constructs reflection about a some state $\ket{\psi}$ from the oracle $O$ of type
-   @"microsoft.quantum.canon.deterministicstateoracle", where $O\ket{0} = \ket{\psi}$.
+   <xref:microsoft.quantum.canon.deterministicstateoracle>, where $O\ket{0} = \ket{\psi}$.
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : DeterministicStateOracle) : ReflectionOracle'
 input:
   content: '(oracle : DeterministicStateOracle)'

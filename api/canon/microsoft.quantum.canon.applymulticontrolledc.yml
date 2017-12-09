@@ -57,6 +57,6 @@ output:
   - uid: ()
     isPrimitive: true
 seeAlso:
-- microsoft.quantum.canon.applymulticontrolledc
+- microsoft.quantum.canon.applymulticontrolledca
 functors:
 - Controlled

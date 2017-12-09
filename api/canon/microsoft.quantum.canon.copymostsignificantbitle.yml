@@ -26,6 +26,6 @@ output:
   - uid: ()
     isPrimitive: true
 seeAlso:
-- microsoft.quantum.primitive.littleendian
+- microsoft.quantum.canon.littleendian
 functors:
 - Adjoint

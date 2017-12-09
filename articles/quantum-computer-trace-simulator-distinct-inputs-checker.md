@@ -94,5 +94,4 @@ hecker` is enabled. See the API documentation on [QCTraceSimulator](https://docs
 
 ## See also
 
-- The quantum computer [trace Simulator
-](quantum-computer-trace-simulator-1.md) overview.
+- The quantum computer [Trace Simulator](quantum-computer-trace-simulator-1.md) overview.

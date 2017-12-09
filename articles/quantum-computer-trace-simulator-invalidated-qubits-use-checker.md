@@ -39,7 +39,7 @@ operation UseReleasedQubitTest () : () {
 }
 ```
 
-When `H` is applied to `q[0]` it points to an already released qubit. This can cause undefined behavior. When the `Invalidated Qubits Use Checker` is enabled, the exception `InvalidatedQubitsUseCheckerException` will be thrown if an operation is applied to an already released qubit. See the API documentation on [InvalidatedQubitsUseCheckerException](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException?view=qsharp-preview&branch=master) for more details.
+When `H` is applied to `q[0]` it points to an already released qubit. This can cause undefined behavior. When the `Invalidated Qubits Use Checker` is enabled, the exception `InvalidatedQubitsUseCheckerException` will be thrown if an operation is applied to an already released qubit. See the API documentation on [InvalidatedQubitsUseCheckerException](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException) for more details.
 
 ## Using the Invalidated Qubits Use Checker in your C# Program
 
@@ -71,7 +71,7 @@ namespace Quantum.MyProgram
 The class `QCTraceSimulatorConfiguration` stores the configuration of the quantum
 computer trace simulator and can be provided as an argument for
 the `QCTraceSimulator` constructor. When `useInvalidatedQubitsUseChecker` is set to true
-the `Invalidated Qubits Use Checker` is enabled. See the API documentation on [QCTraceSimulator](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator?view=qsharp-preview&branch=master) and [QCTraceSimulatorConfiguration](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?view=qsharp-preview&branch=master) for more details.
+the `Invalidated Qubits Use Checker` is enabled. See the API documentation on [QCTraceSimulator](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for more details.
 
 ## See also ##
 - The quantum computer [Trace Simulator](./quantum-computer-trace-simulator-1.md) overview.

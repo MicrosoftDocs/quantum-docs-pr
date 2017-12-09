@@ -73,8 +73,6 @@ use the following:
 string csvSummary = sim.ToCSV()[MetricCalculatorsNames.widthCounter];
 ```
 
-<!---
-# See also
-The quantum computer [Trace Simulator
-](quantum-computer-trace-simulator-1.md) overview
---->
+## See also ##
+
+- The quantum computer [Trace Simulator](./quantum-computer-trace-simulator-1.md) overview.

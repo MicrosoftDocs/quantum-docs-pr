@@ -92,7 +92,6 @@ computer trace simulator and can be provided as an argument for the
 the `Distinct Inputs C
 hecker` is enabled. See the API documentation on [QCTraceSimulator](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?) for more details.
 
-
 ## See also
-- The quantum computer [trace Simulator
-](quantum-computer-trace-simulator-1.md) overview.
+
+- The quantum computer [Trace Simulator](quantum-computer-trace-simulator-1.md) overview.

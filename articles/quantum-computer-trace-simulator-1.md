@@ -102,7 +102,7 @@ namespace Quantum.MyProgram
 
 Note that if there is at least one measurement not annotated using `AssertProb`
 or `ForceMeasure` the simulator will throw `UnconstraintMeasurementException`
-from the `Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime` namespace. See the API documentation on [UnconstraintMeasurementException](https://review.docs.microsoft.com/en-us/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstraintmeasurementexception?view=qsharp-preview&branch=master) for more details.
+from the `Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime` namespace. See the API documentation on [UnconstraintMeasurementException](https://docs.microsoft.com/en-us/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstraintmeasurementexception) for more details.
 
 In addition to running quantum programs, the trace simulator comes with five
 components for detecting bugs in programs and performing quantum program
@@ -116,7 +116,7 @@ resource estimates:
 
 Each of these components may be enabled by setting appropriate flags in
 `QCTraceSimulatorConfiguration`. More details about using each of these
-components are provided in the corresponding reference files. See the API documentation on [QCTraceSimulatorConfiguration](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?view=qsharp-preview&branch=master) for specific details.
+components are provided in the corresponding reference files. See the API documentation on [QCTraceSimulatorConfiguration](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for specific details.
 
 ## See also
 The quantum computer [trace simulator

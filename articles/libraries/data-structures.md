@@ -31,8 +31,6 @@ For instance, the @"microsoft.quantum.canon.reverse" function takes an array as 
 This can then be used on an array of type `Qubit[]` to avoid having to apply unnecessary $\operatorname{SWAP}$ gates when converting between quantum representations of integers.
 Similarly, we saw in the previous section that types of the form `(Int, Int -> T)` can be useful for representing random access collections, so the @"microsoft.quantum.canon.lookupfunction" function provides a convienent way of constructing such types from array types.
 
-<!-- TOOD: point out that MapIndex can be used to reconstruct an array from a lookup function. Also, write MapIndex. -->
-
 ### Pairs ###
 
 The canon supports functional-style notation for pairs, complementing accessing tuples by deconstruction:
@@ -65,7 +63,6 @@ ApplyToEach(H, Subarray([2; 5], register));
 When combined with flow control, array manipulation functions such as <xref:microsoft.quantum.canon.zip> can provide a powerful way to express quantum programs:
 
 ```qsharp
-// FIXME: uses type-parameterization, and needs checked.
 // Applies X₃ Y₁ Z₇ to a register of any size.
 ApplyToEach(
     ApplyPauli(_, register),
@@ -100,7 +97,7 @@ The main difference is that these spaces need not be half-spaces in this applica
 Also note that these two subspaces are not usually mutually exclusive: there will be vectors that are members of both spaces.
 If this were not true then amplitude amplification would have no effect so we need the initial subspace to have non-zero overlap with the target subspace.
 
-We will denote the first oracle that we need for amplitude amplification to be $P_0$, defined to have the following action.  For all states $\ket{x}$ in the "initial" subspace $P_0 \ket{x} = -\ket{x}$ and for all states $\ket{y}$ that are not in this subspace we have $P_0 \ket{y} = \ket{y}$.
+We will denote the first oracle that we need for amplitude amplification to be $P\_0$, defined to have the following action.  For all states $\ket{x}$ in the "initial" subspace $P\_0 \ket{x} = -\ket{x}$ and for all states $\ket{y}$ that are not in this subspace we have $P\_0 \ket{y} = \ket{y}$.
 The oracle that marks the target subspace, $P_1$, takes exactly the same form.
 For all states $\ket{x}$ in the target subspace (i.e., for all states that you'd like the algorithm to output), $P_1\ket{x} = -\ket{x}$.
 Similarly, for all states $\ket{y}$ that are not in the target subspace $P_1\ket{y} = \ket{y}$.
@@ -205,7 +202,7 @@ This allows us to query matrices such as $\sqrt{U}$, which could not be implemen
 This type of oracle is valuable when you're not probing a particular unitary, but rather wish to learn the properties of the generator of the unitary.
 For example, in dynamical quantum simulation the goal is to devise quantum circuits that closely approximate $U(t)=e^{-i H t}$ for a Hermitian matrix $H$ and evolution time $t$.
 The eigenvalues of $U(t)$ are directly related to the eigenvalues of $H$.
-To see this, consider an eigenvector of $H$: $H \ket{E} = E\ket{E}$ then it is easy to see from the power-series definition of the matrix exponential that $U(t) \ket{E} =e^{i\phi}\ket{E}= e^{-iEt}\ket{E}$.
+To see this, consider an eigenvector of $H$: $H \ket{E} = E\ket{E}$ then it is easy to see from the power-series definition of the matrix exponential that $U(t) \ket{E} = e^{i\phi}\ket{E}= e^{-iEt}\ket{E}$.
 Thus estimating the eigenphase of $U(t)$ gives the eigenvalue $E$ assuming the eigenvector $\ket{E}$ is input into the phase estimation algorithm.
 However, in this case the value $t$ can be chosen at the user's discretion since for any sufficiently small value of $t$ the eigenvalue $E$ can be uniquely inverted through $E=-\phi/t$.
 Since quantum simulation methods provide the ability to perform a fractional evolution, this grants phase estimation algorithms an additional freedom when querying the unitary, specifically while the discrete query model allows only unitaries of the form $U^j$ to applied for integer $j$ the continuous query oracle allows us to approximate unitaries of the form $U^t$ for any real valued $t$.

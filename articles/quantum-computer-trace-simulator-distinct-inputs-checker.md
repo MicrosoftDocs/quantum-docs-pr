@@ -89,10 +89,10 @@ namespace Quantum.MyProgram
 The class `QCTraceSimulatorConfiguration` stores the configuration of the quantum
 computer trace simulator and can be provided as an argument for the
 `QCTraceSimulator` constructor. When `useDistinctInputsChecker` is set to true
-the `Distinct Inputs Checker` is enabled. See the API documentation on [QCTraceSimulator](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?) for more details.
+the `Distinct Inputs C
+hecker` is enabled. See the API documentation on [QCTraceSimulator](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?) for more details.
 
 
 ## See also
-The quantum computer [trace Simulator
-](quantum-computer-trace-simulator-1.md) overview
-
+- The quantum computer [trace Simulator
+](quantum-computer-trace-simulator-1.md) overview.

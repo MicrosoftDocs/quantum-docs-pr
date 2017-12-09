@@ -26,14 +26,14 @@ uid: microsoft.quantum.qsharp-ref.expressions
 
 ## Grouping
 
-Given any expression, that same expression enclosed in parentheses 
+Given any expression, that same expression enclosed in parentheses
 is an expression of the same type.
-For instance, `(7)` is an `Int` expression, 
+For instance, `(7)` is an `Int` expression,
 `([1;2;3])` is an expression of type array of `Int`s,
 and `((1,2))` is an expression with type `(Int, Int)`.
 
-The equivalence between simple values and single-element tuples described in 
-[Single-Element Tuples](xref:microsoft.quantum.qsharp-ref.type-model#single-element-tuples) above removes the ambiguity 
+The equivalence between simple values and single-element tuples described in
+<xref:microsoft.quantum.qsharp-ref.type-model#tuple-types> above removes the ambiguity
 between `(6)` as a group and `(6)` as a single-element tuple.
 
 ## Symbols

@@ -73,7 +73,6 @@ For instance, a collection of integers is denoted `Int[]`, while an array of arr
 
 An array value can be written in Q# source code by using square brackets around the elements of an array, as in `[PauliI; PauliX; PauliY; PauliZ]`.
 The types of each element must match exactly, as there are no "base" types in Q#.
-<!-- TODO: is Length actually a function? Check on this. -->
 
 > [!WARNING]
 > The elements of an array cannot typically be changed after the array has been created.

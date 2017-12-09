@@ -152,7 +152,7 @@ where the lower bound is reached in the limit of asymptotically large $Q$, and t
 Other relevant details include, say, the small space overhead of just $1$ ancilla qubit, or that the procedure is non-adaptive, meaning the required sequence of quantum experiments is independent of the intermediate measurement outcomes. In this and forthcoming examples where the choice of phase estimation algorithm is important, one should one should refer to the documentation such as @"microsoft.quantum.canon.robustphaseestimation" and the referenced publications therein for more information and for their the implementation.
 
 > [!TIP]
-> There are many samples where robust phase estimation is used. For phase estimation in extracting the ground state energy of various physical system, please see the [molecular Hydrogen sample](TODO:Link), the [Ising model samples](TO:Link), and the [Hubbard model sample](TO:Link).
+> There are many samples where robust phase estimation is used. For phase estimation in extracting the ground state energy of various physical system, please see the [**H2 simulation** sample](https://github.com/Microsoft/Quantum/Samples/H2SimulationSampleCmdLine), the [**SimpleIsing** sample](https://github.com/Microsoft/Quantum/Samples/SimpleIsingSample), and the [**Hubbard model** sample](https://github.com/Microsoft/Quantum/Samples/HubbardSimulationSample).
 
 
 ### Continuous Oracles ###

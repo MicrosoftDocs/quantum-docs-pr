@@ -68,13 +68,7 @@ When the trace simulator executes `AssertProb` it will record that measuring
 the outcome probabilities and `M` will return `Zero` or `One` with probability
 0.5. When the same code is executed on a simulator that keeps track of the
 quantum state, such a simulator will check that the provided probabilities in
-`AssertProb` are correct. 
-
-The second kind of measurement is used to read out the answer of the quantum
-algorithm where the user usually does not know the probability of such measurement
-outcomes. The quantum computer trace simulator provides a function `ForceMeasure` in
-namespace `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators` to force
-the simulator to take the measurement outcome preferred by the user. See [ForceMeasure](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.ForceMeasure) for more information.
+`AssertProb` are correct.
 
 ## Running your Program with the Quantum Computer Trace Simulator 
 
@@ -102,7 +96,7 @@ namespace Quantum.MyProgram
 
 Note that if there is at least one measurement not annotated using `AssertProb`
 or `ForceMeasure` the simulator will throw `UnconstraintMeasurementException`
-from the `Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime` namespace. See the API documentation on [UnconstraintMeasurementException](https://review.docs.microsoft.com/en-us/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstraintmeasurementexception?view=qsharp-preview&branch=master) for more details.
+from the `Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime` namespace. See the API documentation on [UnconstraintMeasurementException](https://docs.microsoft.com/en-us/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstraintmeasurementexception) for more details.
 
 In addition to running quantum programs, the trace simulator comes with five
 components for detecting bugs in programs and performing quantum program
@@ -116,9 +110,9 @@ resource estimates:
 
 Each of these components may be enabled by setting appropriate flags in
 `QCTraceSimulatorConfiguration`. More details about using each of these
-components are provided in the corresponding reference files. See the API documentation on [QCTraceSimulatorConfiguration](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?view=qsharp-preview&branch=master) for specific details.
+components are provided in the corresponding reference files. See the API documentation on [QCTraceSimulatorConfiguration](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for specific details.
 
 ## See also
 The quantum computer [trace simulator
-](quantum-computer-trace-simulator-1.md) overview
+](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) C# reference 
 

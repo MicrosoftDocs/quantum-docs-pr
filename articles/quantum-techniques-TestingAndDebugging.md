@@ -183,8 +183,7 @@ using (register = Qubit[1]) {
 
 On physical quantum hardware, where the no-cloning theorem prevents examination of quantum state, the `Assert` and `AssertProb` operations simply return `()` with no other effect.
 
-The microsoft.quantum.canon namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. They are detailed in [Q# standard libraries: Testing and Debugging](libraries/testing.md) section.
-
+The <xref:microsoft.quantum.canon> namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. They are detailed in [Q# standard libraries: Testing and Debugging](libraries/testing.md) section.
 ## Debugging
 
 Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/en-us/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger) and [inspecting values of classic variables](https://docs.microsoft.com/en-us/visualstudio/debugger/autos-and-locals-windows) during code execution on simulator.

@@ -80,9 +80,7 @@ To help specify error correcting codes, the Q# canon provides several distinct u
 - <xref:microsoft.quantum.canon.decodeop> `= (LogicalRegister => (Qubit[], Qubit[]))`: Denotes than an operation decomposes a code block of an error correcting code into the data qubits and the ancilla qubits used to represent syndrome information.
 - <xref:microsoft.quantum.canon.syndromemeasop> `= (LogicalRegister => Syndrome)`: Denotes an operation that should be used to extract syndrome information from a code block, without disturbing the state protected by the code.
 
-<!-- TODO: define ⟦3, 1, 1⟧ notation -->
-Finally, the canon provides the <xref:microsoft.quantum.canon.qecc> type to collect the other types required to define a quantum error-correcting code.
-For example, the <xref:microsoft.quantum.canon.bitflipcode> function defines the ⟦3, 1, 1⟧ bit flip code:
+Finally, the canon provides the <xref:microsoft.quantum.canon.qecc> type to collect the other types required to define a quantum error-correcting code. Associated with each stabilizer quantum code is the code length $n$, the number $k$ of logical qubits, and the minimum distance $d$, often conveniently grouped together in the notation ⟦$n$, $k$, $d$⟧. For example, the <xref:microsoft.quantum.canon.bitflipcode> function defines the ⟦3, 1, 1⟧ bit flip code:
 
 ```qsharp
 let encodeOp = EncodeOp(BitFlipEncoder);

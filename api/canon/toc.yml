@@ -521,6 +521,10 @@
     uid: microsoft.quantum.canon.steanecodeencoder
   - name: SteaneCodeRecoveryFns
     uid: microsoft.quantum.canon.steanecoderecoveryfns
+  - name: SteaneCodeRecoveryX
+    uid: microsoft.quantum.canon.steanecoderecoveryx
+  - name: SteaneCodeRecoveryZ
+    uid: microsoft.quantum.canon.steanecoderecoveryz
   - name: Subarray
     uid: microsoft.quantum.canon.subarray
   - name: SwapReverseRegister

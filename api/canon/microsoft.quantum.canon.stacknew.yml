@@ -4,7 +4,7 @@ name: StackNew
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Creates a new empty @"Microsoft.Quantum.Canon.ResultStack" with given capacity.
+   Creates a new empty <xref:microsoft.quantum.canon.resultstack> with given capacity.
 syntax: 'function StackNew (size : Int) : ResultStack'
 input:
   content: '(size : Int)'

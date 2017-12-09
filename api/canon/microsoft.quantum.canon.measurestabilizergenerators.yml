@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: ' Measures the given set of generators of a stabilizer group.'
 remarks: >2-
-   This does not checks if the given set of generators are commuting.
+   This does not check if the given set of generators are commuting.
    If they are not commuting, the result of measurements may be arbitrary.
 syntax: 'operation MeasureStabilizerGenerators (stabilizerGroup : Pauli[][], logicalRegister : LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result)) : Syndrome'
 input:

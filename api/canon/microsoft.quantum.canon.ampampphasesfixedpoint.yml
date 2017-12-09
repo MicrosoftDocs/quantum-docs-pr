@@ -4,12 +4,8 @@ name: AmpAmpPhasesFixedPoint
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: " Computes partial reflection phases for fixed-point amplitude \n amplification.\n"
-remarks: >2-
-   We use the phases in "Fixed-Point Amplitude Amplification with
-   an Optimal Number of Queries" [YoderLowChuang2014, https://arxiv.org/abs/1409.3305].
-   See also "Methodology of composite quantum gates" [LowYoderChuang2016, https://arxiv.org/abs/1603.03996]
-   for phases in the "AmpAmpRotationPhases" format.
 syntax: 'function AmpAmpPhasesFixedPoint (nQueries : Int, successMin : Double) : AmpAmpReflectionPhases'
+references: " We use the phases in \"Fixed-Point Amplitude Amplification with\n an Optimal Number of Queries\" \n - [YoderLowChuang2014](https://arxiv.org/abs/1409.3305)\n See also \"Methodology of composite quantum gates\" \n - [LowYoderChuang2016](https://arxiv.org/abs/1603.03996)\n for phases in the `AmpAmpRotationPhases` format."
 input:
   content: '(nQueries : Int, successMin : Double)'
   types:
@@ -25,4 +21,7 @@ input:
 output:
   content: AmpAmpReflectionPhases
   types:
-  - uid: microsoft.quantum.canon.ampampreflectionphases
+  - summary: >2
+       Array of phases that can be used in fixed-point amplitide amplification
+       quantum algorithm implementation.
+    uid: microsoft.quantum.canon.ampampreflectionphases

@@ -7,7 +7,7 @@ summary: >2
    Asserts that a classical floating point variable has the expected value up to a
    small tolerance of 1e-10.
 remarks: >2-
-   This is equivalent to @"Microsoft.Quantum.Canon.AssertAlmostEqualTol" with
+   This is equivalent to <xref:microsoft.quantum.canon.assertalmostequaltol> with
    hardcoded tolerance=1e-10.
 syntax: 'function AssertAlmostEqual (actual : Double, expected : Double) : ()'
 input:

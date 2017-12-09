@@ -4,7 +4,7 @@ name: TrotterSimulationAlgorithm
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: " `SimulationAlgorithm` function that uses a Trotter–Suzuki \n decomposition to approximate the time-evolution operator $e^{-i H t}$.\n"
-remarks: ' This is obtained by partial application of @"microsoft.quantum.canon.TrotterSimulationAlgorithmImpl".'
+remarks: ' This is obtained by partial application of <xref:microsoft.quantum.canon.trottersimulationalgorithmimpl>.'
 syntax: 'function TrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : SimulationAlgorithm'
 input:
   content: '(trotterStepSize : Double, trotterOrder : Int)'

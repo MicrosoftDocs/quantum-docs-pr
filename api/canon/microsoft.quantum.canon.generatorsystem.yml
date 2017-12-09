@@ -9,7 +9,7 @@ summary: >2
    collection is assumed to be known.
 remarks: >2
    Instances of `GeneratorSystem` can be defined easily using the
-   @"microsoft.quantum.canon.lookupfunction" function.
+   <xref:microsoft.quantum.canon.lookupfunction> function.
 syntax: newtype GeneratorSystem = (Int, (Int -> GeneratorIndex));
 seeAlso:
 - microsoft.quantum.canon.lookupfunction

@@ -167,7 +167,7 @@ This flow of control can be modified, however, in three distinct ways:
 - `for` Loops
 - `repeat`-`until` Loops
 
-We defer discussion of the latter until we discuss [Repeat Until Sucess (RUS)](#measurements) <!-- FIXME: make this link more specific --> circuits.
+We defer discussion of the latter until we discuss [Repeat Until Sucess (RUS)](xref:microsoft.quantum.techniques.further) circuits.
 The `if` and `for` control flow constructs, however, proceed in a familiar sense to most classical programming languages.
 In particular, an `if` statement can take a condition, may be followed by one or more `elif` statements, and may end with an `else`:
 

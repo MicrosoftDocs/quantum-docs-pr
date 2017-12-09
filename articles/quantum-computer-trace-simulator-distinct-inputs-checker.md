@@ -91,10 +91,5 @@ computer trace simulator and can be provided as an argument for the
 `QCTraceSimulator` constructor. When `useDistinctInputsChecker` is set to true
 the `Distinct Inputs Checker` is enabled. See the API documentation on [QCTraceSimulator](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator?view=qsharp-preview&branch=master) and [QCTraceSimulatorConfiguration](https://review.docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?view=qsharp-preview&branch=master) for more details.
 
-<!--- TODO put "See also" sections through the doc - taking them out now for beta
-
-## See also
-The quantum computer [Trace Simulator
-](quantum-computer-trace-simulator-1.md) overview
-
----->
+## See also ##
+- The quantum computer [Trace Simulator](./quantum-computer-trace-simulator-1.md) overview.

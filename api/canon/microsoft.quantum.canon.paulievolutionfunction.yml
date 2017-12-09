@@ -6,9 +6,6 @@ namespace: Microsoft.Quantum.Canon
 summary: >2
    Represents a dynamical generator as a set of simulatable gates and an
    expansion in the Pauli basis.
-remarks: >2-
-   This is obtained by partial application of
-   <xref:microsoft.quantum.canon.paulievolutionimpl>.
 syntax: 'function PauliEvolutionFunction (generatorIndex : GeneratorIndex) : EvolutionUnitary'
 input:
   content: '(generatorIndex : GeneratorIndex)'
@@ -21,7 +18,7 @@ input:
 output:
   content: EvolutionUnitary
   types:
-  - summary: >2
+  - summary: >2-
        An `EvolutionUnitary` representing time-evolution by the term
        referenced in `generatorIndex.
     uid: microsoft.quantum.canon.evolutionunitary

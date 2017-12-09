@@ -18,8 +18,7 @@ functions:
   summary: >2
      Oblivious amplitude amplification by oracles for partial reflections.
 - uid: microsoft.quantum.canon.ampampobliviousbyreflectionphases
-  summary: >2
-     Returns a unitary that implements oblivious amplitude amplification by specifying for partial reflections.
+  summary: ' Returns a unitary that implements oblivious amplitude amplification by specifying for partial reflections.'
 - uid: microsoft.quantum.canon.ampampphasesfixedpoint
   summary: " Computes partial reflection phases for fixed-point amplitude \n amplification.\n"
 - uid: microsoft.quantum.canon.ampampphasesstandard

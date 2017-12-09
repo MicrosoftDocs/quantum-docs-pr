@@ -19,4 +19,4 @@ output:
     isArray: true
 seeAlso:
 - microsoft.quantum.canon.steanecoderecoveryx
-- microsoft.quantum.canon.steanecoderecoveryfn
+- microsoft.quantum.canon.steanecoderecoveryfns

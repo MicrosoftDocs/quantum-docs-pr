@@ -52,7 +52,7 @@ A final important property of measurement is that it does not necessarily damage
 
 ## Visualizing Qubits and Transformations using the Bloch Sphere ##
 
-Qubits may also be pictured in $3$D using the *Bloch sphere* representation.  The Bloch sphere gives a way of describing a single-qubit quantum state (which is a two-dimensional complex vector) as a three-dimensional real-valued vector.  This is important because it allows us to visualize single-qubit states and thereby develop reasoning that can be invaluable in understanding multi-qubit states (where sadly the Bloch sphere representation breaks down).  The bloch sphere can be visualized as follows:
+Qubits may also be pictured in $3$D using the *Bloch sphere* representation.  The Bloch sphere gives a way of describing a single-qubit quantum state (which is a two-dimensional complex vector) as a three-dimensional real-valued vector.  This is important because it allows us to visualize single-qubit states and thereby develop reasoning that can be invaluable in understanding multi-qubit states (where sadly the Bloch sphere representation breaks down).  The Bloch sphere can be visualized as follows:
 
 <!--- ![](.\media\bloch.svg){ width=50% } --->
 ![Bloch sphere](./media/concepts_bloch.png)

@@ -322,14 +322,14 @@ The new operation allows `Controlled`, and will allow
 
 If the base function took only a single argument, then singleton
 tuple equivalence will come into play here.
-For instance, `Controlled(X)` is the controlled verson of the
+For instance, `Controlled(X)` is the controlled version of the
 `X` operation.
 `X` has type `(Qubit => () : Adjoint, Controlled)`, so `Controlled(X)` 
 has type `((Qubit[], (Qubit)) => () : Adjoint, Controlled)`;
 because of singleton tuple equivalence, this is the same as
 `((Qubit[], Qubit) => () : Adjoint, Controlled)`.
 
-Similarly, `Controlled(Rz)` is the controlled verson of the
+Similarly, `Controlled(Rz)` is the controlled version of the
 `Rz` operation.
 `Rz` has type `((Double, Qubit) => () : Adjoint, Controlled)`, 
 so `Controlled(Rz)` has type 

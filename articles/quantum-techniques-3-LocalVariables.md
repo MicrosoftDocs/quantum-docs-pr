@@ -38,8 +38,6 @@ This assigns a particular array of Pauli operators to variable called `measureme
 Variables in Q# are *immutable*, meaning that once a variable defined in this way, it can no longer be changed in any way.
 This allows for several beneficial optimizations, including optimization of the classical logic acting on variables to be reordered for applying the `Adjoint` variant of an operation.
 
-<!-- FIXME: feels too much like the spec itself. Need to focus more on the how. -->
-
 Variables defined used the `let` binding as above are local to a particular scope, such as the body of an operation or the contents of a `for` loop.
 
 

@@ -77,7 +77,7 @@ The second parameter to either shift operation must be greater than or
 equal to zero.
 The behavior for shifting negative numbers is undefined. 
 
-Integer division and integer moduls follow the same behavior for
+Integer division and integer modulus follow the same behavior for
 negative numbers as C#.
 That is, `a % b` will always have the same sign as `a`, 
 and `b * (a / b) + a % b` will always equal `a`.

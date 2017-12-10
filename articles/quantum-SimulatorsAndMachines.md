@@ -73,7 +73,7 @@ Both are defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.
 * A [full state vector simulator](quantum-fullstate-simulator.md), the `QuantumSimulator` class.
 * A [trace-based resource estimator](quantum-computer-trace-simulator-1.md), the `QCTraceSimulator` class.
 
-## Writing a Cassical Driver Program
+## Writing a Classical Driver Program
 
 In [Writing a quantum program](quantum-WriteAQuantumProgram.md), we wrote a simple C# driver for
 our teleport algorithm. A C# driver has 4 main purposes:
@@ -182,7 +182,7 @@ useful answers.
 For instance, the quantum part of Shor's algorithm is just the beginning
 of a computation that finds the factors of a number.
 
-In most cases, it is simplext and easiest to do this sort of post-processing
+In most cases, it is simplest and easiest to do this sort of post-processing
 in the classical driver.
 Only the classical driver can report results to the user or write them to disk.
 The classical driver will have access to analytical libraries and other

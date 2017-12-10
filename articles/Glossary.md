@@ -31,7 +31,7 @@ ms.topic: article-type-from-white-list
 |Adjoint|The complex conjugate transpose of the operation. For operations that implement a unitary operator, the adjoint is the inverse of the operation.|
 |Callable|Operations and functions are collectively known as *callables*.|
 |Canon|Operations and functions defined in Q# building on the logic defined in the prelude. The canon implementation is agnostic with respect to target machines.|
-|Clifford group|The set of operations that occupy the octents of the Bloch sphere. These include: `X`, `Y`, `Z`, `H` and `S`|
+|Clifford group|The set of operations that occupy the octants of the Bloch sphere. These include: `X`, `Y`, `Z`, `H` and `S`|
 |Controlled|A quantum operation that takes one or more qubits as enablers for the target operation.|
 |Dirac Notation|A shorthand representation of quantum state. See the [Dirac Notation](quantum-concepts-6-DiracNotation.md) section for more details.|
 |Eigenvalues and Eigenvectors|See the [Advanced Matrix section](quantum-concepts-3-MatrixAdvanced.md) for details.|

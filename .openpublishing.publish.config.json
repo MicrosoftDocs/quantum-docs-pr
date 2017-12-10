@@ -16,8 +16,7 @@
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "customized_template_paths": [
-        "_dependentPackages/MarkdigEngine/content",
-        "_dependentPackages/uref/content"
+        "_dependentPackages/MarkdigEngine/content"
       ],
       "enable_xrefmap_share": true,
       "xref_query_tags" : ["/qsharp"],

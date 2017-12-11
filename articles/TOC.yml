@@ -95,5 +95,5 @@
 - name: For more information
   href: quantum-ForMoreInfo.md
 - name: C# components reference
-  href: /dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?view=quantumsdk-dotnet-0.1.1712.901-preview%23
+  href: /dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?view=quantumsdk-dotnet-0.1.1712.901-preview
 

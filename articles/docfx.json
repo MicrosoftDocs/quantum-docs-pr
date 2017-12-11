@@ -3,11 +3,25 @@
     "content": [
       {
         "files": [
-          "**/*.md",
-          "TOC.yml"
+          "**/*.md"
         ],
         "src": ".",
         "version": "qsharp-preview",
+        "dest": "",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "TOC.yml"
+        ],
+        "src": ".",
         "dest": "",
         "exclude": [
           "**/obj/**",

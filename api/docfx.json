@@ -47,7 +47,8 @@
         "expect": "\\mathbb{E}",
         "variance": "\\operatorname{Var}",
         "defeq": "\\mathrel{:=}"
-      }
+      },
+      "ms.devlang":"qsharp"
     },
     "fileMetadata": {},
     "template": [],

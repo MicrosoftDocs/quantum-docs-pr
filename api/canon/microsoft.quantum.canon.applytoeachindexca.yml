@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachindexca
+name: ApplyToEachIndexCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Applies a single-qubit operation to each indexed element in a register.
+   The modifier 'CA' indicates that the single-qubit operation is adjointable
+   and controllable.
+syntax: "operation ApplyToEachIndexCA (singleElementOperation : ((Int, 'T) => () : Adjoint, Controlled), register : 'T[]) : ()"
+input:
+  content: "(singleElementOperation : ((Int, 'T) => () : Adjoint, Controlled), register : 'T[])"
+  types:
+  - name: singleElementOperation
+    summary: ' Operation to apply to each qubit.'
+    isOperation: true
+    input:
+      types:
+      - uid: Int
+        isPrimitive: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Adjoint
+    - Controlled
+  - name: register
+    summary: >2
+       Array of qubits on which to apply the given operation.
+    uid: "'T"
+    isLocal: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytoeachindex
+functors: *o0
+typeParameters:
+- uid: "'T"
+  summary: " The target on which each of the operations acts. \n"

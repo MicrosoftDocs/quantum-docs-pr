@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.identitygeneratorindex
+name: IdentityGeneratorIndex
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Returns a generator index consistent with the
+   Hamiltonian $H = 0$.
+syntax: 'function IdentityGeneratorIndex (idxTerm : Int) : GeneratorIndex'
+input:
+  content: '(idxTerm : Int)'
+  types:
+  - name: idxTerm
+    summary: >2
+       This input is ignored, and is defined for consistency with the
+       <xref:microsoft.quantum.canon.generatorsystem> user-defined type.
+    uid: Int
+    isPrimitive: true
+output:
+  content: GeneratorIndex
+  types:
+  - summary: >2-
+       A generator index representing evolution under the Hamiltonian
+       $H = 0$.
+    uid: microsoft.quantum.canon.generatorindex

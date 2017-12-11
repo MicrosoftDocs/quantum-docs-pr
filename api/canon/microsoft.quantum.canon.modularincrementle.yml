@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.modularincrementle
+name: ModularIncrementLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
+   Then the operation performs the following transformation:
+   \begin{align}
+       \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N}
+   \end{align}
+   Integers are encoded in little-endian format.
+remarks: >2-
+   Assumes that the value of target is less than N. Note that
+   <xref:microsoft.quantum.canon.modularincrementphasele> implements
+   the same operation, but in the `PhaseLittleEndian` basis.
+syntax: 'operation ModularIncrementLE (increment : Int, modulus : Int, target : LittleEndian) : ()'
+input:
+  content: '(increment : Int, modulus : Int, target : LittleEndian)'
+  types:
+  - name: increment
+    summary: ' Integer increment a to be added to y.'
+    uid: Int
+    isPrimitive: true
+  - name: modulus
+    summary: ' Integer N that mods y + a.'
+    uid: Int
+    isPrimitive: true
+  - name: target
+    summary: >2
+       Integer y in `LittleEndian` format that `increment` a is added to.
+    uid: microsoft.quantum.canon.littleendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.modularincrementphasele
+functors:
+- Adjoint
+- Controlled

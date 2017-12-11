@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.paulifrombitstring
+name: PauliFromBitString
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given a bit string, returns a multi-qubit Pauli operator
+   represented as an array of single-qubit Pauli operators.
+remarks: ' The Boolean array and the quantum register must be of equal length.'
+syntax: 'function PauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[]) : Pauli[]'
+input:
+  content: '(pauli : Pauli, bitApply : Bool, bits : Bool[])'
+  types:
+  - name: pauli
+    summary: ' Pauli operator to apply to qubits where `bitsApply == bits[idx]`.'
+    uid: Pauli
+    isPrimitive: true
+  - name: bitApply
+    summary: ' apply Pauli if bit is this value.'
+    uid: Bool
+    isPrimitive: true
+  - name: bits
+    summary: ' Boolean array.'
+    uid: Bool
+    isPrimitive: true
+    isArray: true
+output:
+  content: Pauli[]
+  types:
+  - uid: Pauli
+    isPrimitive: true
+    isArray: true

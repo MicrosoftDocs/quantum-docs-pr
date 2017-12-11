@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.exp
+name: Exp
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies the exponential of a multi-qubit Pauli operator
+   \begin{align}
+       e^{i \theta [P_0 \otimes P_1 \cdots P_N]},
+   \end{align}
+   where $P_i$ is the $i$th element of `paulis`, and where
+   $N = $`Length(paulis)`.
+syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : ()'
+input:
+  content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'
+  types:
+  - name: paulis
+    summary: >2-
+       Array of single-qubit Pauli values indicating the tensor product
+       factors on each qubit.
+    uid: Pauli
+    isPrimitive: true
+    isArray: true
+  - name: theta
+    summary: >2-
+       Angle about the given multiqubit Pauli operator by which the
+       target register is to be rotated.
+    uid: Double
+    isPrimitive: true
+  - name: qubits
+    summary: ' Register to apply the given rotation to.'
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

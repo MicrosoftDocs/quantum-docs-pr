@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.positiveintfromresultarr
+name: PositiveIntFromResultArr
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Produces a positive integer from a string of Results in in little Endian format.
+syntax: 'function PositiveIntFromResultArr (results : Result[]) : Int'
+input:
+  content: '(results : Result[])'
+  types:
+  - name: results
+    summary: ' Results in binary representation of number.'
+    uid: Result
+    isPrimitive: true
+    isArray: true
+output:
+  content: Int
+  types:
+  - uid: Int
+    isPrimitive: true

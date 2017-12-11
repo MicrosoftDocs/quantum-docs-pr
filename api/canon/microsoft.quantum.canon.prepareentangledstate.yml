@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.prepareentangledstate
+name: PrepareEntangledState
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given two registers, prepares the maximally entangled state
+   $\bra{\beta_{00}}\ket{\beta_{00}}$ between each pair of qubits on the respective registers,
+   assuming that each register starts in the $\ket{0\cdots 0}$ state.
+syntax: 'operation PrepareEntangledState (left : Qubit[], right : Qubit[]) : ()'
+input:
+  content: '(left : Qubit[], right : Qubit[])'
+  types:
+  - name: left
+    summary: ' A qubit array in the $\ket{0\cdots 0}$ state'
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: right
+    summary: ' A qubit array in the $\ket{0\cdots 0}$ state'
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

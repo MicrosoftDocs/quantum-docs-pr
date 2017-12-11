@@ -1,0 +1,7 @@
+- name: Reference
+  href: index.md
+  items:
+  - name: Prelude
+    href: prelude/toc.yml
+  - name: Canon
+    href: canon/toc.yml

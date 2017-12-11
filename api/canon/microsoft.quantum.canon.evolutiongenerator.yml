@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.evolutiongenerator
+name: EvolutionGenerator
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Represents a dynamical generator as a set of simulatable gates and
+   an expansion in terms of that basis.
+   Last parameter for number of terms
+syntax: newtype EvolutionGenerator = (EvolutionSet, GeneratorSystem);

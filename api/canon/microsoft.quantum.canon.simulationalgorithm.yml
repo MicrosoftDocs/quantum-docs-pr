@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.simulationalgorithm
+name: SimulationAlgorithm
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   A time-independent simulation technique converts an
+   to unitary time evolution for some time-interval.
+syntax: 'newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => () : Adjoint, Controlled);'
+input:
+  types:
+  - name: First Parameter
+    summary: ' `Double` is time interval of simulation.'
+  - name: Second Parameter
+    summary: ' `EvolutionGenerator` is a representation of the generator of dynamic evolution.'
+  - name: Third Parameter
+    summary: >2
+       `Qubit[]` is register encoding state of system.
+output:
+  summary: ' Unitary evolution by generator for time `Double`.'

@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.deterministicstateoraclefromstateoracle
+name: DeterministicStateOracleFromStateOracle
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Converts an oracle of type `StateOracle` to `DeterministicStateOracle`.
+syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : StateOracle) : DeterministicStateOracle'
+input:
+  content: '(idxFlagQubit : Int, stateOracle : StateOracle)'
+  types:
+  - name: idxFlagQubit
+    summary: " The index to the flag qubit of the `stateOracle` $A$, \n which explicitly acts on two registers: the flag $f$ and the system \n $s$, e.g. $A\\ket{0}\\_f\\ket{\\psi}\\_s$."
+    uid: Int
+    isPrimitive: true
+  - name: stateOracle
+    summary: >2
+       A state preparation oracle $A$ of type `StateOracle`.
+    uid: microsoft.quantum.canon.stateoracle
+output:
+  content: DeterministicStateOracle
+  types:
+  - summary: " The same state prepataion oracle $A$, but now of type \n `DeterministicStateOracle`, so it acts on a register where $a,s$ no \n longer explicitly separate, e.g.  $A\\ket{0\\psi}\\_{as}$.\n"
+    uid: microsoft.quantum.canon.deterministicstateoracle
+seeAlso:
+- microsoft.quantum.canon.stateoracle
+- microsoft.quantum.canon.deterministicstateoracle

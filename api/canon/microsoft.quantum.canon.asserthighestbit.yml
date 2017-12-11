@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.asserthighestbit
+name: AssertHighestBit
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Asserts that the highest bit of an unsigned integer has given value
+remarks: ' The controlled version of this operation ignores controls.'
+syntax: 'operation AssertHighestBit (value : Result, number : LittleEndian) : ()'
+input:
+  content: '(value : Result, number : LittleEndian)'
+  types:
+  - name: value
+    summary: ' The value of the highest bit being asserted'
+    uid: Result
+    isPrimitive: true
+  - name: number
+    summary: >2
+       Unsigned integer of which the highest bit is checked
+    uid: microsoft.quantum.canon.littleendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

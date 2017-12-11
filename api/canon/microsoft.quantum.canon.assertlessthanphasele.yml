@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertlessthanphasele
+name: AssertLessThanPhaseLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Asserts that the `number` encoded in PhaseLittleEndian is less than `value`.
+remarks: ' The controlled version of this operation ignores controls.'
+syntax: 'operation AssertLessThanPhaseLE (value : Int, number : PhaseLittleEndian) : ()'
+input:
+  content: '(value : Int, number : PhaseLittleEndian)'
+  types:
+  - name: value
+    summary: ' `number` must be less than this.'
+    uid: Int
+    isPrimitive: true
+  - name: number
+    summary: >2
+       Unsigned integer which is compared to `value`.
+    uid: microsoft.quantum.canon.phaselittleendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

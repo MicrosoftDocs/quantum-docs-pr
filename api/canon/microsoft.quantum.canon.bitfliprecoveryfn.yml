@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bitfliprecoveryfn
+name: BitFlipRecoveryFn
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Function for recovery Pauli operations for given symdrome measurement
+   by table lookup for the ⟦3, 1, 1⟧ bit flip code.
+syntax: 'function BitFlipRecoveryFn () : RecoveryFn'
+input:
+  content: ()
+  types: []
+output:
+  content: RecoveryFn
+  types:
+  - summary: " Function of type `RecoveryFn` that takes a syndrome measurement \n `Result[]` and returns the `Pauli[]` operations that corrects the \n detected error.\n"
+    uid: microsoft.quantum.canon.recoveryfn
+seeAlso:
+- microsoft.quantum.canon.recoveryfn

@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ignore
+name: Ignore
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Ignores the output of an operation or function.
+syntax: "function Ignore (value : 'T) : ()"
+input:
+  content: "(value : 'T)"
+  types:
+  - name: value
+    summary: ' A value to be ignored.'
+    uid: "'T"
+    isLocal: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true

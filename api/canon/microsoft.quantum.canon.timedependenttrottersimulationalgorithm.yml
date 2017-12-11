@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.timedependenttrottersimulationalgorithm
+name: TimeDependentTrotterSimulationAlgorithm
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   `TimeDependentSimulationAlgorithm` function that uses a Trotter–Suzuki
+   decomposition to approximate a unitary operator that solves the
+   time-dependent Schr�dinger equation at time $t$.
+syntax: 'function TimeDependentTrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : TimeDependentSimulationAlgorithm'
+input:
+  content: '(trotterStepSize : Double, trotterOrder : Int)'
+  types:
+  - name: trotterStepSize
+    summary: ' Duration of simulated time-evolution in single Trotter step.'
+    uid: Double
+    isPrimitive: true
+  - name: trotterOrder
+    summary: >2
+       Order of Trotter integrator. Order 1 and 2 are currently supported.
+    uid: Int
+    isPrimitive: true
+output:
+  content: TimeDependentSimulationAlgorithm
+  types:
+  - summary: ' A `TimeDependentSimulationAlgorithm` type.'
+    uid: microsoft.quantum.canon.timedependentsimulationalgorithm

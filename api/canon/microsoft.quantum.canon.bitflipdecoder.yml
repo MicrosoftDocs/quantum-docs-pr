@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bitflipdecoder
+name: BitFlipDecoder
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Decodes from the [3, 1, 3] / ⟦3, 1, 1⟧ bit-flip code.
+syntax: 'operation BitFlipDecoder (logicalRegister : LogicalRegister) : (Qubit[], Qubit[])'
+input:
+  content: '(logicalRegister : LogicalRegister)'
+  types:
+  - name: logicalRegister
+    summary: >2
+       A code block of the bit-flip code.
+    uid: microsoft.quantum.canon.logicalregister
+output:
+  content: (Qubit[], Qubit[])
+  types:
+  - summary: >2
+       A tuple of the data encoded into the logical register, and the auxillary
+       qubits used to represent the syndrome.
+    types:
+    - uid: Qubit
+      isPrimitive: true
+      isArray: true
+    - uid: Qubit
+      isPrimitive: true
+      isArray: true
+seeAlso:
+- microsoft.quantum.canon.logicalregister
+- microsoft.quantum.canon.bitflipencoder

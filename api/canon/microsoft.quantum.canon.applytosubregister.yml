@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytosubregister
+name: ApplyToSubregister
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Applies an operation to a subregister of a register, with qubits
+   specified by an array of their indices.
+remarks: >2
+
+  ### Examples
+   Create three qubit state $\frac{1}{\sqrt{2}}\ket{0}\_2(\ket{0}\_1\ket{0}_3+\ket{1}\_1\ket{1}_3)$:
+   ```qsharp
+       using (register = Qubit[3]) {
+           ApplyToSubregister(Exp([PauliX;PauliY;],PI() / 4.0,_), [1;3], register);
+       }
+   ```
+syntax: 'operation ApplyToSubregister (op : (Qubit[] => ()), idxs : Int[], target : Qubit[]) : ()'
+input:
+  content: '(op : (Qubit[] => ()), idxs : Int[], target : Qubit[])'
+  types:
+  - name: op
+    summary: ' Operation to apply to subregister.'
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+  - name: idxs
+    summary: ' Array of indices, indicating to which qubits the operation will be applied.'
+    uid: Int
+    isPrimitive: true
+    isArray: true
+  - name: target
+    summary: >2
+       Register on which the operation acts.
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytosubregistera
+- microsoft.quantum.canon.applytosubregisterc
+- microsoft.quantum.canon.applytosubregisterca

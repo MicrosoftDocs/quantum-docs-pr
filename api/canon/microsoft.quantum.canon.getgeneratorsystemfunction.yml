@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.getgeneratorsystemfunction
+name: GetGeneratorSystemFunction
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Retrieves the `GeneratorIndex` function in a `GeneratorSystem`.
+syntax: 'function GetGeneratorSystemFunction (generatorSystem : GeneratorSystem) : (Int -> GeneratorIndex)'
+input:
+  content: '(generatorSystem : GeneratorSystem)'
+  types:
+  - name: generatorSystem
+    summary: >2
+       The `GeneratorSystem` of interest.
+    uid: microsoft.quantum.canon.generatorsystem
+output:
+  content: (Int -> GeneratorIndex)
+  types:
+  - summary: >2
+       An function that indexes each `GeneratorIndex` term in a Hamiltonian.
+    isFunction: true
+    input:
+      types:
+      - uid: Int
+        isPrimitive: true
+    output:
+      types:
+      - uid: microsoft.quantum.canon.generatorindex
+seeAlso:
+- microsoft.quantum.canon.generatorindex
+- microsoft.quantum.canon.generatorsystem

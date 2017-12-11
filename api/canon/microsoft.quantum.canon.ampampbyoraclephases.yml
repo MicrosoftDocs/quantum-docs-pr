@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ampampbyoraclephases
+name: AmpAmpByOraclePhases
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Amplitude amplification by oracles for partial reflections.
+remarks: " This imposes stricter conditions on form of the start and target states than in `AmpAmpByReflectionPhases`.\n It is assumed that the target state is marked by $\\ket{1}\\_f$.\n It is assumed that \n \\begin{align}\n A\\ket{0}\\_{f}\\ket{0}\\_s= \\lambda\\ket{1}\\_f\\ket{\\text{target}}\\_s + \\sqrt{1-|\\lambda|^2}\\ket{0}\\_f\\cdots,\n \\end{align}\n In most cases, `flagQubit` and `ancillaRegister` is initialized in the state $\\ket{0}\\_{f}\\ket{0}\\_s$."
+syntax: 'function AmpAmpByOraclePhases (phases : AmpAmpReflectionPhases, stateOracle : StateOracle, idxFlagQubit : Int) : (Qubit[] => () : Adjoint, Controlled)'
+input:
+  content: '(phases : AmpAmpReflectionPhases, stateOracle : StateOracle, idxFlagQubit : Int)'
+  types:
+  - name: phases
+    summary: ' Phases of partial reflections '
+    uid: microsoft.quantum.canon.ampampreflectionphases
+  - name: stateOracle
+    summary: ' Unitary oracle $A$ that prepares start state '
+    uid: microsoft.quantum.canon.stateoracle
+  - name: idxFlagQubit
+    summary: ' Index to flag qubit '
+    uid: Int
+    isPrimitive: true
+output:
+  content: '(Qubit[] => () : Adjoint, Controlled)'
+  types:
+  - summary: " An operation that implements amplitude amplification by oracles that are \n implemented by partial reflections.\n"
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled

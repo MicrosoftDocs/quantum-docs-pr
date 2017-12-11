@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ampampphasesstandard
+name: AmpAmpPhasesStandard
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Computes partial reflection phases for standard amplitude
+   amplification.
+remarks: >2-
+   All phases are $\pi$, except for the first reflection about the start
+   state and the last reflection about the target state, which are $0$.
+syntax: 'function AmpAmpPhasesStandard (nIterations : Int) : AmpAmpReflectionPhases'
+input:
+  content: '(nIterations : Int)'
+  types:
+  - name: nIterations
+    summary: " Number of amplitude amplification iterations to generate partial \n reflection phases for.\n"
+    uid: Int
+    isPrimitive: true
+output:
+  content: AmpAmpReflectionPhases
+  types:
+  - summary: >2
+       An operation that implements phases specified as partial reflections
+    uid: microsoft.quantum.canon.ampampreflectionphases

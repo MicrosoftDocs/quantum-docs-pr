@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplygeneratorindex
+name: MultiplyGeneratorIndex
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Multiplies the coefficient in a `GeneratorIndex`.
+remarks: >2
+
+  ### Examples
+   ```qsharp
+   let gen = GeneratorIndex(([1;2;3],[coeff]),[1;2;3);
+   let ((idxPaulis, idxDoubles), idxQubits) = MultiplyGeneratorIndex(multipler, gen);
+   // idxDoubles[0] == multipler * coeff;
+   ```
+syntax: 'function MultiplyGeneratorIndex (multiplier : Double, generatorIndex : GeneratorIndex) : GeneratorIndex'
+input:
+  content: '(multiplier : Double, generatorIndex : GeneratorIndex)'
+  types:
+  - name: multiplier
+    summary: ' The multiplier on the coefficient.'
+    uid: Double
+    isPrimitive: true
+  - name: generatorIndex
+    summary: >2
+       The `GeneratorIndex` to be multiplied.
+    uid: microsoft.quantum.canon.generatorindex
+output:
+  content: GeneratorIndex
+  types:
+  - summary: >2
+       A `GeneratorIndex` representing a term with coefficient a factor
+       `multiplier` larger.
+    uid: microsoft.quantum.canon.generatorindex
+seeAlso:
+- microsoft.quantum.canon.generatorindex

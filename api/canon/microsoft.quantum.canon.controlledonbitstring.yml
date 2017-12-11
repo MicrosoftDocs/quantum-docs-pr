@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.controlledonbitstring
+name: ControlledOnBitString
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
+syntax: "function ControlledOnBitString (bits : Bool[], oracle : ('T => () : Adjoint, Controlled)) : ((Qubit[], 'T) => () : Adjoint, Controlled)"
+input:
+  content: "(bits : Bool[], oracle : ('T => () : Adjoint, Controlled))"
+  types:
+  - name: bits
+    summary: ' Boolean array.'
+    uid: Bool
+    isPrimitive: true
+    isArray: true
+  - name: oracle
+    summary: >2
+       Unitary operator.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Adjoint
+    - Controlled
+output:
+  content: "((Qubit[], 'T) => () : Adjoint, Controlled)"
+  types:
+  - summary: ' A unitary operator that applies `oracle` on the target register if the control register state corresponds to the bit mask `bits`.'
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: *o0

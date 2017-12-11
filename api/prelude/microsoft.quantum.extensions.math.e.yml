@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.e
+name: E
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+summary: >2
+   Returns the natural logarithmic base $e$.
+remarks: ' See [System.Math.E](https://docs.microsoft.com/en-us/dotnet/api/system.math.e) for more details.'
+syntax: 'function E () : Double'
+input:
+  content: ()
+  types: []
+output:
+  content: Double
+  types:
+  - uid: Double
+    isPrimitive: true

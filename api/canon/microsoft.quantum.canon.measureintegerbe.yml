@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.measureintegerbe
+name: MeasureIntegerBE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Version of MeasureInteger for BigEndian register
+syntax: 'operation MeasureIntegerBE (target : BigEndian) : Int'
+input:
+  content: '(target : BigEndian)'
+  types:
+  - name: target
+    uid: microsoft.quantum.canon.bigendian
+output:
+  content: Int
+  types:
+  - uid: Int
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.measureinteger

@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.integerincrementle
+name: IntegerIncrementLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Unsigned integer increment by an integer constant, based on phase rotations.\n Suppose `target` encodes unsigned integer x in little-endian encoding and \n `increment` is equal to a.\n The operation implements the unitary |x⟩ ↦ |x + a ⟩,\n where the addition is performed\n modulo 2ⁿ, for n = `Length(target)`.\n"
+syntax: 'operation IntegerIncrementLE (increment : Int, target : LittleEndian) : ()'
+input:
+  content: '(increment : Int, target : LittleEndian)'
+  types:
+  - name: increment
+    summary: >2
+       The integer by which the `target` is incremented by
+    uid: Int
+    isPrimitive: true
+  - name: target
+    summary: ' Quantum register encoding an unsigned integer using little-endian encoding.'
+    uid: microsoft.quantum.canon.littleendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.integerincrementphasele
+functors:
+- Adjoint
+- Controlled

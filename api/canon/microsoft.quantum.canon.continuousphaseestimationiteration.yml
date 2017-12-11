@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.continuousphaseestimationiteration
+name: ContinuousPhaseEstimationIteration
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Performs a single iteration of an iterative (classically-controlled) phase
+   estimation algorithm using arbitrary real powers of a unitary oracle.
+syntax: 'operation ContinuousPhaseEstimationIteration (oracle : ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit) : ()'
+input:
+  content: '(oracle : ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
+  types:
+  - name: oracle
+    summary: >2-
+       Operation acting on a double $t$ and a register,
+       such that $U^t$ is applied to the given register, where $U$ is the unitary
+       whose phase is to be estimated, and where $t$ is the integer power
+       given to the oracle
+    uid: microsoft.quantum.canon.continuousoracle
+  - name: time
+    summary: ' Number of times to apply the given unitary oracle.'
+    uid: Double
+    isPrimitive: true
+  - name: theta
+    summary: >2-
+       Angle by which to invert the phase on the control qubit before
+       acting on the target state.
+    uid: Double
+    isPrimitive: true
+  - name: targetState
+    summary: ' Register of state acted upon by the given unitary oracle.'
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: controlQubit
+    uid: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

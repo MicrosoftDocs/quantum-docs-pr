@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.generatorsystem
+name: GeneratorSystem
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   From the view of a GeneratorSystem, a description of a Hamiltonian
+   collection using a single-index integer, and the size of the
+   collection is assumed to be known.
+remarks: >2
+   Instances of `GeneratorSystem` can be defined easily using the
+   <xref:microsoft.quantum.canon.lookupfunction> function.
+syntax: newtype GeneratorSystem = (Int, (Int -> GeneratorIndex));
+seeAlso:
+- microsoft.quantum.canon.lookupfunction

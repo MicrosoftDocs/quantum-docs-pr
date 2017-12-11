@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.floor
+name: Floor
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+summary: >2
+   Returns the largest integer less than or equal to the specified number.
+remarks: ' See [System.Math.Floor](https://docs.microsoft.com/en-us/dotnet/api/system.math.floor) for more details.'
+syntax: 'function Floor (value : Double) : Int'
+input:
+  content: '(value : Double)'
+  types:
+  - name: value
+    uid: Double
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - uid: Int
+    isPrimitive: true

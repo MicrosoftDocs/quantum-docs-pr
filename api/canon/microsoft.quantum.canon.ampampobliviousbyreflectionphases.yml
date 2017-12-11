@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ampampobliviousbyreflectionphases
+name: AmpAmpObliviousByReflectionPhases
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: ' Returns a unitary that implements oblivious amplitude amplification by specifying for partial reflections.'
+syntax: 'function AmpAmpObliviousByReflectionPhases (phases : AmpAmpReflectionPhases, ancillaReflection : ReflectionOracle, targetStateReflection : ReflectionOracle, signalOracle : ObliviousOracle) : ((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
+input:
+  content: '(phases : AmpAmpReflectionPhases, ancillaReflection : ReflectionOracle, targetStateReflection : ReflectionOracle, signalOracle : ObliviousOracle)'
+  types:
+  - name: phases
+    uid: microsoft.quantum.canon.ampampreflectionphases
+  - name: ancillaReflection
+    uid: microsoft.quantum.canon.reflectionoracle
+  - name: targetStateReflection
+    uid: microsoft.quantum.canon.reflectionoracle
+  - name: signalOracle
+    uid: microsoft.quantum.canon.obliviousoracle
+output:
+  content: '((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
+  types:
+  - isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled

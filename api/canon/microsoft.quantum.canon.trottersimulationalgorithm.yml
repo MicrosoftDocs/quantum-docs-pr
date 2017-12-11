@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.trottersimulationalgorithm
+name: TrotterSimulationAlgorithm
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " `SimulationAlgorithm` function that uses a Trotter–Suzuki \n decomposition to approximate the time-evolution operator $e^{-i H t}$.\n"
+syntax: 'function TrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : SimulationAlgorithm'
+input:
+  content: '(trotterStepSize : Double, trotterOrder : Int)'
+  types:
+  - name: trotterStepSize
+    summary: ' Duration of simulated time-evolution in single Trotter step.    '
+    uid: Double
+    isPrimitive: true
+  - name: trotterOrder
+    summary: >2
+       Order of Trotter integrator. Order 1 and 2 are currently supported.
+    uid: Int
+    isPrimitive: true
+output:
+  content: SimulationAlgorithm
+  types:
+  - summary: ' A `SimulationAlgorithm` type.'
+    uid: microsoft.quantum.canon.simulationalgorithm

@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.evolutionset
+name: EvolutionSet
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Represents a set of gates that can be readily implemented and used
+   to implement simulation algorithms. Elements in the set are indexed
+   by a  <xref:microsoft.quantum.canon.generatorindex>,
+   and each set is described by a function
+   from `GeneratorIndex` to  <xref:microsoft.quantum.canon.evolutionunitary>,
+   which are operations
+   parameterized by a real number representing time
+syntax: newtype EvolutionSet = (GeneratorIndex -> EvolutionUnitary);

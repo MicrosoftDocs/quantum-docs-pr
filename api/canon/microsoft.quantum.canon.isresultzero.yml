@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.isresultzero
+name: IsResultZero
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " The `IsResultZero` function tests if a given Result value is equal to `Zero`.     \n"
+syntax: 'function IsResultZero (input : Result) : Bool'
+input:
+  content: '(input : Result)'
+  types:
+  - name: input
+    summary: ' `Result` value to be tested.'
+    uid: Result
+    isPrimitive: true
+output:
+  content: Bool
+  types:
+  - summary: ' Returns `true` if `input` is equal to `Zero`.'
+    uid: Bool
+    isPrimitive: true

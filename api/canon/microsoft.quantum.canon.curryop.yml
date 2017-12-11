@@ -1,0 +1,64 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.curryop
+name: CurryOp
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given an operation with two inputs, applies Curry's isomorphism
+   $f(x, y) \equiv f(x)(y)$ to return an operation of one input which
+   returns an operation of one input.
+remarks: >2-
+   The following are equivalent:
+   ```qsharp
+   op(x, y);
+
+   let curried = CurryOp(op);
+   let partial = curried(x);
+   partial(y);
+   ```
+syntax: "function CurryOp (op : (('T, 'U) => ())) : ('T -> ('U => ()))"
+input:
+  content: "(op : (('T, 'U) => ()))"
+  types:
+  - name: op
+    summary: >2
+       An operation whose input is a pair.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+output:
+  content: ('T -> ('U => ()))
+  types:
+  - summary: >2
+       An operation which accepts the first element of a pair and returns
+       an operation which accepts as its input the second element of the
+       original operation's input.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - uid: ()
+            isPrimitive: true
+typeParameters:
+- uid: "'T"
+  summary: ' The type of the first component of a function defined on pairs. '
+- uid: "'U"
+  summary: " The type of the second component of a function defined on pairs. \n"

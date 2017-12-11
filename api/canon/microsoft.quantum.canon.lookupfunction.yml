@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.lookupfunction
+name: LookupFunction
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given an array, returns a function which returns elements of that
+   array.
+remarks: >2-
+   This function is mainly useful for interoperating with functions and
+   operations that take `Int -> 'T` functions as their arguments. This
+   is common, for instance, in the generator representation library,
+   where functions are used to avoid the need to record an entire array
+   in memory.
+syntax: "function LookupFunction (array : 'T[]) : (Int -> 'T)"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: >2
+       The array to be represented as a lookup function.
+    uid: "'T"
+    isLocal: true
+    isArray: true
+output:
+  content: (Int -> 'T)
+  types:
+  - summary: >2
+       A function `f` such that `f(idx) == f[idx]`.
+    isFunction: true
+    input:
+      types:
+      - uid: Int
+        isPrimitive: true
+    output:
+      types:
+      - uid: "'T"
+        isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The type of the elements of the array being represented as a lookup
+     function.

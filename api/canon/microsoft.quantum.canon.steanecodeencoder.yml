@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.steanecodeencoder
+name: SteaneCodeEncoder
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   An encoding operation that maps an unencoded quantum register to an encoded quantum register
+   under the ⟦7, 1, 3⟧ Steane quantum code.
+syntax: 'operation SteaneCodeEncoder (physRegister : Qubit[], auxQubits : Qubit[]) : LogicalRegister'
+input:
+  content: '(physRegister : Qubit[], auxQubits : Qubit[])'
+  types:
+  - name: physRegister
+    summary: ' A qubit register which holds the an unencoded quantum state'
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: auxQubits
+    summary: >2
+       A qubit register which is initially zero and which gets added to the quantum
+       system so that an encoding operation can be performed
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: LogicalRegister
+  types:
+  - summary: >2
+       A quantum register holding the state after the Steane encoder has been applied
+    uid: microsoft.quantum.canon.logicalregister
+seeAlso:
+- microsoft.quantum.canon.logicalregister
+- microsoft.quantum.canon.steanecodedecoder

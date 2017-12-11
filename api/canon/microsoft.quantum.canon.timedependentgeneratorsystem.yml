@@ -1,0 +1,9 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.timedependentgeneratorsystem
+name: TimeDependentGeneratorSystem
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Represents a time-dependent dynamical generator as a function
+   from time to the value of the dynamical generator at that time.
+syntax: newtype TimeDependentGeneratorSystem = (Double -> GeneratorSystem);

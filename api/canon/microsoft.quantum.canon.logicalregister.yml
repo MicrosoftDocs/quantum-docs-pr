@@ -1,0 +1,7 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.logicalregister
+name: LogicalRegister
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: " Type for register of physical qubits `Qubit[]` that encode the \n logical qubits."
+syntax: newtype LogicalRegister = Qubit[];

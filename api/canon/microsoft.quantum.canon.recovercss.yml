@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.recovercss
+name: RecoverCSS
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Performs a single round of error correction by a quantum code
+   described by a `CSS` type.
+syntax: 'operation RecoverCSS (code : CSS, fnX : RecoveryFn, fnZ : RecoveryFn, logicalRegister : LogicalRegister) : ()'
+input:
+  content: '(code : CSS, fnX : RecoveryFn, fnZ : RecoveryFn, logicalRegister : LogicalRegister)'
+  types:
+  - name: code
+    summary: " A quantum CSS error-correcting code packaged as a `CSS` type describes \n the encoding and deconding of quantum data, and how error syndromes \n are to be measuremed."
+    uid: microsoft.quantum.canon.css
+  - name: fnX
+    summary: " A `RecoveryFn` that maps each $X$ error syndrome to the `Pauli[]` operations\n that correct the detected error. "
+    uid: microsoft.quantum.canon.recoveryfn
+  - name: fnZ
+    summary: " A `RecoveryFn` that maps each $Z$ error syndrome to the `Pauli[]` operations\n that correct the detected error. "
+    uid: microsoft.quantum.canon.recoveryfn
+  - name: logicalRegister
+    summary: >2
+       An array of qubits where the stabilizer code is defined.
+    uid: microsoft.quantum.canon.logicalregister
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.css
+- microsoft.quantum.canon.recoveryfn
+- microsoft.quantum.canon.logicalregister

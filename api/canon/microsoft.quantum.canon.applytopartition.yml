@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytopartition
+name: ApplyToPartition
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Applies a pair of operations to a given partition of a register into two parts.\n "
+syntax: 'operation ApplyToPartition (op : ((Qubit[], Qubit[]) => ()), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : ()'
+input:
+  content: '(op : ((Qubit[], Qubit[]) => ()), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
+  types:
+  - name: op
+    summary: ' The pair of operations to be applied to the given partition.'
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+  - name: numberOfQubitsToFirstArgument
+    summary: " Number of qubits from target to put into the first part of the partition.\n The remaining qubits constitute the second part of the partition. "
+    uid: Int
+    isPrimitive: true
+  - name: target
+    summary: " A register of qubits that are being partitioned and operated on by the \n given two operation. \n"
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytopartitiona
+- microsoft.quantum.canon.applytopartitionc
+- microsoft.quantum.canon.applytopartitionca

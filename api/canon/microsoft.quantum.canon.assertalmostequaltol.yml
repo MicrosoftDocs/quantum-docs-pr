@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertalmostequaltol
+name: AssertAlmostEqualTol
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Asserts that a classical floating point variable has the expected value up to a given
+   absolute tolerance.
+syntax: 'function AssertAlmostEqualTol (actual : Double, expected : Double, tolerance : Double) : ()'
+input:
+  content: '(actual : Double, expected : Double, tolerance : Double)'
+  types:
+  - name: actual
+    summary: >2
+       The number to be checked.
+    uid: Double
+    isPrimitive: true
+  - name: expected
+    summary: >2
+       The expected value.
+    uid: Double
+    isPrimitive: true
+  - name: tolerance
+    summary: ' Absolute tolerance on the difference between actual and expected.'
+    uid: Double
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true

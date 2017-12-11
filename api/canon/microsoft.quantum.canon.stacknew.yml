@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stacknew
+name: StackNew
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Creates a new empty <xref:microsoft.quantum.canon.resultstack> with given capacity.
+syntax: 'function StackNew (size : Int) : ResultStack'
+input:
+  content: '(size : Int)'
+  types:
+  - name: size
+    summary: >2
+       The capacity of the new stack.
+    uid: Int
+    isPrimitive: true
+output:
+  content: ResultStack
+  types:
+  - summary: ' A new `ResultStack` that has capacity `size` and length 0.'
+    uid: microsoft.quantum.canon.resultstack

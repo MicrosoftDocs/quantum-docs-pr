@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.randomintpow2
+name: RandomIntPow2
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Generates a random number uniformly sampled in the interval
+   $[0, 2^{\texttt{maxBits}} - 1]$.
+remarks: >2-
+   This function calls <xref:microsoft.quantum.primitive.random>, so
+   its randomess depends on the implementation of `Random`.
+syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
+input:
+  content: '(maxBits : Int)'
+  types:
+  - name: maxBits
+    summary: >2
+       The number of classical bits required to represent the largest integer
+       that could be returned by this operation.
+    uid: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - summary: " An integer $x$ uniformly at random from the given interval;\n that is, with $\\Pr(x) = \\frac{1}{2^{\\texttt{maxBits}}}$.\n       "
+    uid: Int
+    isPrimitive: true

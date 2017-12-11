@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.exclude
+name: Exclude
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Returns an array containing the elements of another array,
+   excluding elements at a given list of indices.
+remarks: >2-
+
+  ### Examples
+   ```Q#
+   let array = [10; 11; 12; 13; 14; 15];
+   // The following line returns [10; 12; 15].
+   let subarray = Exclude([1; 3; 4], array);
+   ```
+syntax: "function Exclude (remove : Int[], array : 'T[]) : 'T[]"
+input:
+  content: "(remove : Int[], array : 'T[])"
+  types:
+  - name: remove
+    summary: >2-
+       An array of indices denoting which elements should be excluded
+       from the output.
+    uid: Int
+    isPrimitive: true
+    isArray: true
+  - name: array
+    summary: >2
+       Array of which the values in the output array are taken.
+    uid: "'T"
+    isLocal: true
+    isArray: true
+output:
+  content: "'T[]"
+  types:
+  - summary: >2
+       An array `output` such that `output[0]` is the first element
+       of `array` whose index does not appear in `remove`,
+       such that `output[1]` is the second such element, and so
+       forth.
+    uid: "'T"
+    isLocal: true
+    isArray: true
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The type of the array elements.

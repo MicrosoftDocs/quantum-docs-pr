@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ampamprotationtoreflectionphases
+name: AmpAmpRotationToReflectionPhases
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Converts phases specified as single-qubit rotations to phases \n specified as partial reflections.\n"
+syntax: 'function AmpAmpRotationToReflectionPhases (rotPhases : AmpAmpRotationPhases) : AmpAmpReflectionPhases'
+references: " We use the convention in \n - [ *G.H. Low, I. L. Chuang* ](https://arxiv.org/abs/1707.05391) \n for relating single-qubit rotation phases to reflection operator phases."
+input:
+  content: '(rotPhases : AmpAmpRotationPhases)'
+  types:
+  - name: rotPhases
+    summary: " Array of single-qubit rotations to be converted to partial \n reflections.\n"
+    uid: microsoft.quantum.canon.ampamprotationphases
+output:
+  content: AmpAmpReflectionPhases
+  types:
+  - summary: >2
+       An operation that implements phases specified as partial reflections.
+    uid: microsoft.quantum.canon.ampampreflectionphases

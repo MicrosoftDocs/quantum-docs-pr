@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ampampbyoracle
+name: AmpAmpByOracle
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Standard Amplitude Amplification algorithm
+remarks: " This is the standard amplitude amplification algorithm obtained by a choice of reflection phases computed by `AmpAmpPhasesStandard`\n Assuming that \n \\begin{align}\n A\\ket{0}\\_{f}\\ket{0}\\_s= \\lambda\\ket{1}\\_f\\ket{\\text{target}}\\_s + \\sqrt{1-|\\lambda|^2}\\ket{0}\\_f\\cdots,\n \\end{align}\n this operation prepares the state \n \\begin{align}\n \\operatorname{AmpAmpByOracle}\\ket{0}\\_{f}\\ket{0}\\_s= \\sin((2n+1)\\sin^{-1}(\\lambda))\\ket{1}\\_f\\ket{\\text{target}}\\_s + \\cdots\\ket{0}\\_f\n \\end{align}\n In most cases, `flagQubit` and `ancillaRegister` is initialized in the state $\\ket{0}\\_f\\ket{0}\\_a$.\n"
+syntax: 'function AmpAmpByOracle (nIterations : Int, stateOracle : StateOracle, idxFlagQubit : Int) : (Qubit[] => () : Adjoint, Controlled)'
+references: ' - [ *G. Brassard, P. Hoyer, M. Mosca, A. Tapp* ](https://arxiv.org/abs/quant-ph/0005055)'
+input:
+  content: '(nIterations : Int, stateOracle : StateOracle, idxFlagQubit : Int)'
+  types:
+  - name: nIterations
+    summary: ' Number of iterations $n$ of amplitude amplification '
+    uid: Int
+    isPrimitive: true
+  - name: stateOracle
+    uid: microsoft.quantum.canon.stateoracle
+  - name: idxFlagQubit
+    summary: ' Index to flag qubit '
+    uid: Int
+    isPrimitive: true
+output:
+  content: '(Qubit[] => () : Adjoint, Controlled)'
+  types:
+  - summary: >2
+       An operation that implements the standard amplitude amplification quantum algorithm
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled

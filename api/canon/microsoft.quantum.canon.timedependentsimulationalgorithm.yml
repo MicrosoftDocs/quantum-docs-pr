@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.timedependentsimulationalgorithm
+name: TimeDependentSimulationAlgorithm
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   A time-dependent simulation technique converts an
+   <xref:microsoft.quantum.canon.evolutionschedule>
+   to unitary time-evolution for some time-interval.
+syntax: 'newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => () : Adjoint, Controlled);'
+input:
+  types:
+  - name: First Parameter
+    summary: ' `Double` is time interval of simulation.'
+  - name: Second Parameter
+    summary: ' `EvolutionSchedule` is a representation of the time-dependent generator of dynamic evolution.'
+  - name: Third Parameter
+    summary: >2
+       `Qubit[]` is register encoding state of system.
+output:
+  summary: ' Unitary evolution by time-dependent generator for time `Double`.'

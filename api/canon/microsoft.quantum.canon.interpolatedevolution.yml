@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.interpolatedevolution
+name: InterpolatedEvolution
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   This interpolates between two generators with a uniform schedule,
+   returning an operation that applies simulated evolution under
+   the resulting time-dependent generator to a qubit register.
+remarks: >2-
+   If the interpolation time is chosen to meet the adiabatic conditions,
+   then this function returns an operation which performs adiabatic
+   state preparation for the final dynamical generator.
+syntax: 'function InterpolatedEvolution (inerpolationTime : Double, evolutionGeneratorStart : EvolutionGenerator, evolutionGeneratorEnd : EvolutionGenerator, timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm) : (Qubit[] => () : Adjoint, Controlled)'
+input:
+  content: '(inerpolationTime : Double, evolutionGeneratorStart : EvolutionGenerator, evolutionGeneratorEnd : EvolutionGenerator, timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)'
+  types:
+  - name: inerpolationTime
+    uid: Double
+    isPrimitive: true
+  - name: evolutionGeneratorStart
+    summary: ' Initial generator to simulate evolution under.'
+    uid: microsoft.quantum.canon.evolutiongenerator
+  - name: evolutionGeneratorEnd
+    summary: ' Final generator to simulate evolution under.'
+    uid: microsoft.quantum.canon.evolutiongenerator
+  - name: timeDependentSimulationAlgorithm
+    summary: >2
+       A time-dependent simulation algorithm that will be used
+       to simulate evolution during the uniform interpolation schedule.
+    uid: microsoft.quantum.canon.timedependentsimulationalgorithm
+output:
+  content: '(Qubit[] => () : Adjoint, Controlled)'
+  types:
+  - isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled

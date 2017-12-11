@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyreversedoplittleendianc
+name: ApplyReversedOpLittleEndianC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Applies an operation that takes little-endian input and that supports\n the controlled functor to a register encoding \n an unsigned integer using big-endian format.\n"
+syntax: 'operation ApplyReversedOpLittleEndianC (op : (LittleEndian => () : Controlled), register : BigEndian) : ()'
+input:
+  content: '(op : (LittleEndian => () : Controlled), register : BigEndian)'
+  types:
+  - name: op
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.canon.littleendian
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Controlled
+  - name: register
+    uid: microsoft.quantum.canon.bigendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applyreversedoplittleendian
+functors: *o0

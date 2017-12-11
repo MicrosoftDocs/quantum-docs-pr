@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.preparechoistatea
+name: PrepareChoiStateA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Prepares the Choi–Jamiłkowski state for a given operation with an adjoint variant onto given reference
+   and target registers.
+syntax: 'operation PrepareChoiStateA (op : (Qubit[] => () : Adjoint), reference : Qubit[], target : Qubit[]) : ()'
+input:
+  content: '(op : (Qubit[] => () : Adjoint), reference : Qubit[], target : Qubit[])'
+  types:
+  - name: op
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Adjoint
+  - name: reference
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: target
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.preparechoistate
+functors: *o0

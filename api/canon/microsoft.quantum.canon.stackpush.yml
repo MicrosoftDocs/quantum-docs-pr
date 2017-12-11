@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stackpush
+name: StackPush
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Pushes a new element onto a <xref:microsoft.quantum.canon.resultstack>.
+syntax: 'function StackPush (stack : ResultStack, datum : Result) : ResultStack'
+input:
+  content: '(stack : ResultStack, datum : Result)'
+  types:
+  - name: stack
+    summary: ' The stack to be grown.'
+    uid: microsoft.quantum.canon.resultstack
+  - name: datum
+    summary: >2
+       The `Result` value to be pushed onto `stack`.
+    uid: Result
+    isPrimitive: true
+output:
+  content: ResultStack
+  types:
+  - summary: >2-
+       The `stack` with `datum` added as its new top element. The new stack's length is
+       increased by one.
+    uid: microsoft.quantum.canon.resultstack

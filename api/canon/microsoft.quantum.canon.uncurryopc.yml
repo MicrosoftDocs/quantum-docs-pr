@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.uncurryopc
+name: UncurryOpC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given a function which returns operations,
+   returns a new operation which takes both inputs
+   as a tuple.
+   The modifier 'C' indicates that the operations are controllable.
+syntax: "function UncurryOpC (curriedOp : ('T -> ('U => () : Controlled))) : (('T, 'U) => () : Controlled)"
+input:
+  content: "(curriedOp : ('T -> ('U => () : Controlled)))"
+  types:
+  - name: curriedOp
+    summary: >2
+       A function which returns operations.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - uid: ()
+            isPrimitive: true
+        functors: &o0
+        - Controlled
+output:
+  content: "(('T, 'U) => () : Controlled)"
+  types:
+  - summary: >2
+       A new operation `op` such that `op(t, u)` is equivalent
+       to `(curriedOp(t))(u)`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: *o0
+seeAlso:
+- microsoft.quantum.canon.uncurryop
+typeParameters:
+- uid: "'T"
+  summary: ' The type of the first argument of a curried function.'
+- uid: "'U"
+  summary: >2
+     The type of the second argument of a curried function.

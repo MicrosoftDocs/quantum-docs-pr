@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.rangefunctions.rangestart
+name: RangeStart
+type: operation
+namespace: Microsoft.Quantum.Extensions.RangeFunctions
+summary: >2
+   Returns the defined start value of the given range.
+remarks: " A range expression's first element is `start`, \n its second element is `start+step`, third element is `start+step+step`, etc., \n until `end` is passed."
+syntax: 'operation RangeStart (r : Range) : Int'
+input:
+  content: '(r : Range)'
+  types:
+  - name: r
+    uid: Range
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - summary: >2
+       The range's first item.
+    uid: Int
+    isPrimitive: true

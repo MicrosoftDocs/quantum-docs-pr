@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.ieeeremainder
+name: IEEERemainder
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+summary: >2
+   Returns the remainder resulting from the division of a specified number by another specified number.
+remarks: ' See [System.Math.IEEERemainder](https://docs.microsoft.com/en-us/dotnet/api/system.math.ieeeremainder) for more details.'
+syntax: 'function IEEERemainder (x : Double, y : Double) : Double'
+input:
+  content: '(x : Double, y : Double)'
+  types:
+  - name: x
+    uid: Double
+    isPrimitive: true
+  - name: y
+    uid: Double
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - uid: Double
+    isPrimitive: true

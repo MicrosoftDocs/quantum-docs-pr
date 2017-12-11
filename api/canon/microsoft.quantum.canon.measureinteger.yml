@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.measureinteger
+name: MeasureInteger
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   `MeasureInteger` reads out the content of a quantum register and converts
+   it to an integer of type `Int`. The measurement is performed with respect
+   to the standard computational basis, i.e., the eigenbasis of `PauliZ`.
+remarks: >2
+   Ensures that the register is set to 0.
+syntax: 'operation MeasureInteger (target : LittleEndian) : Int'
+input:
+  content: '(target : LittleEndian)'
+  types:
+  - name: target
+    summary: >2
+       A quantum register which is assumed to be in little endian encoding.
+    uid: microsoft.quantum.canon.littleendian
+output:
+  content: Int
+  types:
+  - summary: >2
+       An unsigned integer that contains the measured value of `target`.
+    uid: Int
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.measureintegerbe

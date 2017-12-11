@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multim
+name: MultiM
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: ' Measures each qubit in a given array in the standard basis.'
+syntax: 'operation MultiM (targets : Qubit[]) : Result[]'
+input:
+  content: '(targets : Qubit[])'
+  types:
+  - name: targets
+    summary: ' An array of qubits to be measured.'
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: Result[]
+  types:
+  - summary: ' An array of measurement results.'
+    uid: Result
+    isPrimitive: true
+    isArray: true

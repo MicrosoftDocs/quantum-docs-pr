@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplygeneratorsystem
+name: MultiplyGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Multiplies the coefficient of all terms in a `GeneratorSystem`.
+syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : GeneratorSystem) : GeneratorSystem'
+input:
+  content: '(multiplier : Double, generatorSystem : GeneratorSystem)'
+  types:
+  - name: multiplier
+    summary: ' The multiplier on the coefficient.'
+    uid: Double
+    isPrimitive: true
+  - name: generatorSystem
+    summary: >2
+       The `GeneratorSystem` to be multiplied.
+    uid: microsoft.quantum.canon.generatorsystem
+output:
+  content: GeneratorSystem
+  types:
+  - summary: >2
+       A `GeneratorSystem` representing a system with coefficients a factor
+       `multiplier` larger.
+    uid: microsoft.quantum.canon.generatorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem

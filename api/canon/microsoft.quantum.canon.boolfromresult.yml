@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.boolfromresult
+name: BoolFromResult
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Converts a `Result` type to a `Bool` type, where `One` is mapped to \n `true` and `Zero` is mapped to `false`.\n"
+syntax: 'function BoolFromResult (input : Result) : Bool'
+input:
+  content: '(input : Result)'
+  types:
+  - name: input
+    summary: " `Result` to be converted.\n "
+    uid: Result
+    isPrimitive: true
+output:
+  content: Bool
+  types:
+  - summary: ' A `Bool` representing the `input`.'
+    uid: Bool
+    isPrimitive: true

@@ -3,8 +3,12 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "TOC.yml"
         ],
+        "src": ".",
+        "version": "qsharp-preview",
+        "dest": "",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -19,7 +23,8 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -27,10 +32,29 @@
         ]
       }
     ],
+    "versions": {
+      "qsharp-preview": {
+        "dest": "qsharp-preview"
+      }
+    },
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
-    "fileMetadata": {},
+    "globalMetadata": {
+      "show_latex": true
+    },
+    "fileMetadata": {
+      "latex_macros": {
+        "**/**.md": {
+          "ket": ["\\left| #1\\right\\rangle", 1],
+          "bra": ["\\left\\langle #1\\right|", 1],
+          "braket": ["\\left\\langle #1 \\right\\rangle", 1],
+          "boldone": "\\mathbf{1}",
+          "expect": "\\mathbb{E}",
+          "variance": "\\operatorname{Var}",
+          "defeq": "\\mathrel{:=}"
+        }
+      }
+    },
     "template": [],
     "dest": "quantum-docs"
   }

@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowc
+name: OperationPowC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given an operation representing a gate $U$, returns a new operation
+   $U^m$ for a power $m$.
+   The modifier 'C' indicates that the operation is controllable.
+syntax: "function OperationPowC (oracle : ('T => () : Controlled), power : Int) : ('T => () : Controlled)"
+input:
+  content: "(oracle : ('T => () : Controlled), power : Int)"
+  types:
+  - name: oracle
+    summary: ' An operation $U$ representing the gate to be repeated.'
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Controlled
+  - name: power
+    summary: >2
+       The number of times that $U$ is to be repeated.
+    uid: Int
+    isPrimitive: true
+output:
+  content: "('T => () : Controlled)"
+  types:
+  - summary: >2
+       A new operation representing $U^m$, where $m = \texttt{power}$.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: *o0
+seeAlso:
+- microsoft.quantum.canon.operationpow
+typeParameters:
+- uid: "'T"
+  summary: " The type of the operation to be powered. \n"

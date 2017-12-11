@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyleoperationonphaseleca
+name: ApplyLEOperationOnPhaseLECA
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyLEOperationOnPhaseLECA (op : (LittleEndian => () : Controlled, Adjoint), target : PhaseLittleEndian) : ()'
+input:
+  content: '(op : (LittleEndian => () : Controlled, Adjoint), target : PhaseLittleEndian)'
+  types:
+  - name: op
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.canon.littleendian
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Controlled
+    - Adjoint
+  - name: target
+    uid: microsoft.quantum.canon.phaselittleendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applyleoperationonphasele
+functors:
+- Adjoint
+- Controlled

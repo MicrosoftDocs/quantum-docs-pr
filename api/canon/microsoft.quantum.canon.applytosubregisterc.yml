@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytosubregisterc
+name: ApplyToSubregisterC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Applies an operation to a subregister of a register, with qubits
+   specified by an array of their indices.
+   The modifier 'C' indicates that the operation is controllable.
+syntax: 'operation ApplyToSubregisterC (op : (Qubit[] => () : Controlled), idxs : Int[], target : Qubit[]) : ()'
+input:
+  content: '(op : (Qubit[] => () : Controlled), idxs : Int[], target : Qubit[])'
+  types:
+  - name: op
+    summary: ' Operation to apply to subregister.'
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Controlled
+  - name: idxs
+    summary: ' Array of indices, indicating to which qubits the operation will be applied.'
+    uid: Int
+    isPrimitive: true
+    isArray: true
+  - name: target
+    summary: >2
+       Register on which the operation acts.
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytosubregister
+functors: *o0

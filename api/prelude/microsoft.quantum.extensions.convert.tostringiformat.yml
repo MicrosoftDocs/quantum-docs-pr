@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.convert.tostringiformat
+name: ToStringIFormat
+type: function
+namespace: Microsoft.Quantum.Extensions.Convert
+summary: >2
+   Converts a given integer number to an equivalent string representation,
+   using the given format.
+remarks: ' See [C# Int64.ToString](https://docs.microsoft.com/en-us/dotnet/api/system.int64.tostring?view=netframework-4.7.1#System_Int64_ToString_System_String_) for more details.'
+syntax: 'function ToStringIFormat (a : Int, fmt : String) : String'
+input:
+  content: '(a : Int, fmt : String)'
+  types:
+  - name: a
+    uid: Int
+    isPrimitive: true
+  - name: fmt
+    uid: String
+    isPrimitive: true
+output:
+  content: String
+  types:
+  - uid: String
+    isPrimitive: true

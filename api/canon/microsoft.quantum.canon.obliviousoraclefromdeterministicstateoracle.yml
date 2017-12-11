@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.obliviousoraclefromdeterministicstateoracle
+name: ObliviousOracleFromDeterministicStateOracle
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Combines the oracles `DeterministicStateOracle` and `ObliviousOracle`.
+syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : DeterministicStateOracle, signalOracle : ObliviousOracle) : ObliviousOracle'
+input:
+  content: '(ancillaOracle : DeterministicStateOracle, signalOracle : ObliviousOracle)'
+  types:
+  - name: ancillaOracle
+    summary: ' A state preparation oracle $A$ of type `DeterministicStateOracle` acting on register $a$.'
+    uid: microsoft.quantum.canon.deterministicstateoracle
+  - name: signalOracle
+    summary: >2
+       A oracle $U$ of type `ObliviousOracle` acting jointly on register $a,s$.
+    uid: microsoft.quantum.canon.obliviousoracle
+output:
+  content: ObliviousOracle
+  types:
+  - summary: >2
+       An oracle $O=UA$ of type `ObliviousOracle`.
+    uid: microsoft.quantum.canon.obliviousoracle
+seeAlso:
+- microsoft.quantum.canon.deterministicstateoracle
+- microsoft.quantum.canon.obliviousoracle

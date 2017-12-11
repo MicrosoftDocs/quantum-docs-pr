@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.steanecoderecoveryz
+name: SteaneCodeRecoveryZ
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Decoder for the Z-part of the stabilizer group of the ⟦7, 1, 3⟧ Steane quantum code.
+syntax: 'function SteaneCodeRecoveryZ (syndrome : Syndrome) : Pauli[]'
+input:
+  content: '(syndrome : Syndrome)'
+  types:
+  - name: syndrome
+    uid: microsoft.quantum.canon.syndrome
+output:
+  content: Pauli[]
+  types:
+  - uid: Pauli
+    isPrimitive: true
+    isArray: true
+seeAlso:
+- microsoft.quantum.canon.steanecoderecoveryx
+- microsoft.quantum.canon.steanecoderecoveryfns

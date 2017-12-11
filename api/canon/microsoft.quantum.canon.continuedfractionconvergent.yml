@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.continuedfractionconvergent
+name: ContinuedFractionConvergent
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Finds a continued fraction convergent closest to `fraction` \n with the denominator less or equal to `denominatorBound` \n "
+syntax: 'function ContinuedFractionConvergent (fraction : Fraction, denominatorBound : Int) : Fraction'
+input:
+  content: '(fraction : Fraction, denominatorBound : Int)'
+  types:
+  - name: fraction
+    uid: microsoft.quantum.canon.fraction
+  - name: denominatorBound
+    uid: Int
+    isPrimitive: true
+output:
+  content: Fraction
+  types:
+  - summary: " Continued fraction closest to `fraction` \n with the denominator less or equal to `denominatorBound` "
+    uid: microsoft.quantum.canon.fraction

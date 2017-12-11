@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.syndromemeasop
+name: SyndromeMeasOp
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Represents an operation that is used to measure the syndrome
+   of an error-correcting code block.
+remarks: " The signature `(LogicalRegister => Syndrome)` represents an operation \n that acts jointly on the qubits in `LogicalRegister` and some ancilla\n qubits followed by a measurements of the ancilla to extract a `Syndrome\n type represting the `Result[]` of these measurements.\n\n\n### Examples\n Measure syndromes for the bit-flip code\n $S = \\langle ZZI, IZZ \\rangle$ using scratch qubits in a\n non–fault tolerant manner:\n ```qsharp\n     let syndMeasOp = SyndromeMeasOp(MeasureStabilizerGenerators([\n             [PauliZ; PauliZ; PauliI];\n             [PauliI; PauliZ; PauliZ]\n         ], _, MeasureWithScratch));\n ```\n"
+syntax: newtype SyndromeMeasOp = (LogicalRegister => Syndrome);
+seeAlso:
+- microsoft.quantum.canon.logicalregister
+- microsoft.quantum.canon.syndrome

@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.inplacexorle
+name: InPlaceXorLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
+   then `InPlaceXorLE` performs an operation given by the following map:
+   |y⟩ ↦ |y⊕a⟩ , where ⊕ is the bitwise exclusive OR operator.
+syntax: 'operation InPlaceXorLE (value : Int, target : LittleEndian) : ()'
+input:
+  content: '(value : Int, target : LittleEndian)'
+  types:
+  - name: value
+    summary: ' An integer which is assumed to be non-negative.'
+    uid: Int
+    isPrimitive: true
+  - name: target
+    summary: ' A quantum register which is used to store `value` in little-endian encoding.'
+    uid: microsoft.quantum.canon.littleendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

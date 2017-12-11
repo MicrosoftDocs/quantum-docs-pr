@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.t
+name: T
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies the $\pi / 8$ gate to a single qubit,
+
+   \begin{align}
+       T \mathrel{:=}
+       \begin{bmatrix}
+           1 & 0 \\\\
+           0 & e^{i \pi / 4}
+       \end{bmatrix}.
+   \end{align}
+syntax: 'operation T (qubit : Qubit) : ()'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: ' Qubit to which the gate should be applied.'
+    uid: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

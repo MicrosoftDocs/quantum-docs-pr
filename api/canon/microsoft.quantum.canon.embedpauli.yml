@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.embedpauli
+name: EmbedPauli
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given a single-qubit Pauli operator and the index of a qubit,
+   returns a multi-qubit Pauli operator with the given single-qubit
+   operator at that index and `PauliI` at every other index.
+remarks: >2-
+
+  ### Examples
+   To obtain the array `[PauliI; PauliI; PauliX; PauliI]`:
+   ```qsharp
+   EmbedPauli(PauliX, 2, 3);
+   ```
+syntax: 'function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]'
+input:
+  content: '(pauli : Pauli, location : Int, n : Int)'
+  types:
+  - name: pauli
+    summary: ' A single-qubit Pauli operator to be placed at the given location.'
+    uid: Pauli
+    isPrimitive: true
+  - name: location
+    summary: >2-
+       An index such that `output[location] == pauli`, where `output` is
+       the output of this function.
+    uid: Int
+    isPrimitive: true
+  - name: n
+    summary: >2
+       Length of the array to be returned.
+    uid: Int
+    isPrimitive: true
+output:
+  content: Pauli[]
+  types:
+  - uid: Pauli
+    isPrimitive: true
+    isArray: true

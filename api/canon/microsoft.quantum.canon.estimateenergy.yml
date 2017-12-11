@@ -1,0 +1,70 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.estimateenergy
+name: EstimateEnergy
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Convenience function that performs state preparation by applying a \n `statePrepUnitary` on an automatically allocated input state \n phase estimation with respect to `qpeUnitary`on the resulting state \n using a `phaseEstAlgorithm`.\n"
+syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) : Double'
+input:
+  content: '(nQubits : Int, statePrepUnitary : (Qubit[] => ()), qpeUnitary : (Qubit[] => () : Adjoint, Controlled), phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))'
+  types:
+  - name: nQubits
+    summary: ' Number of qubits used to perform simulation.'
+    uid: Int
+    isPrimitive: true
+  - name: statePrepUnitary
+    summary: >2-
+       An oracle representing state preparation for the initial dynamical
+       generator.
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+  - name: qpeUnitary
+    summary: >2-
+       An oracle representing a unitary operator $U$ representing evolution
+       for time $\delta t$ under a dynamical generator with ground state
+       $\ket{\phi}$ and ground state energy $E = \phi\\,\delta t$.
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled
+  - name: phaseEstAlgorithm
+    summary: >2
+       An operation that performs phase estimation on a given unitary operation.
+       See [iterative phase estimation](../libraries/characterization#iterative-phase-estimation)
+       for more details.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.canon.discreteoracle
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: Double
+        isPrimitive: true
+output:
+  content: Double
+  types:
+  - summary: >2-
+       An estimate $\hat{\phi}$ of the ground state energy $\phi$
+       of the ground state energy of the generator represented by $U$.
+    uid: Double
+    isPrimitive: true

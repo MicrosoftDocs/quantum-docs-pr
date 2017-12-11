@@ -1,0 +1,64 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.withc
+name: WithC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given operations implementing operators $U$ and $V$, performs the
+   operation $UVU^{\dagger}$ on a target. That is, this operation
+   conjugates $V$ with $U$.
+   The modifier 'C' indicates that the inner operation is controllable.
+remarks: >2
+   The outer operation is always assumed to be adjointable, but does not
+   need to be controllable in order for the combined operation to be
+   controllable.
+syntax: "operation WithC (outerOperation : ('T => () : Adjoint), innerOperation : ('T => () : Controlled), target : 'T) : ()"
+input:
+  content: "(outerOperation : ('T => () : Adjoint), innerOperation : ('T => () : Controlled), target : 'T)"
+  types:
+  - name: outerOperation
+    summary: >2-
+       The operation $U$ that should be used to conjugate $V$. Note that the
+       outer operation $U$ needs to be adjointable, but does not
+       need to be controllable.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
+  - name: innerOperation
+    summary: ' The operation $V$ being conjugated.'
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Controlled
+  - name: target
+    summary: >2
+       The input to be provided to the outer and inner operations.
+    uid: "'T"
+    isLocal: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.with
+functors: *o0
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The target on which each of the inner and outer operations act.

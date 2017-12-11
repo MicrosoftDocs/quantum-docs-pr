@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowa
+name: OperationPowA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Given an operation representing a gate $U$, returns a new operation\n $U^m$ for a power $m$.\n The modifier 'A' indicates that the operation is adjointable. \n"
+syntax: "function OperationPowA (oracle : ('T => () : Adjoint), power : Int) : ('T => () : Adjoint)"
+input:
+  content: "(oracle : ('T => () : Adjoint), power : Int)"
+  types:
+  - name: oracle
+    summary: ' An operation $U$ representing the gate to be repeated.'
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Adjoint
+  - name: power
+    summary: >2
+       The number of times that $U$ is to be repeated.
+    uid: Int
+    isPrimitive: true
+output:
+  content: "('T => () : Adjoint)"
+  types:
+  - summary: >2
+       A new operation representing $U^m$, where $m = \texttt{power}$.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: *o0
+seeAlso:
+- microsoft.quantum.canon.operationpow
+typeParameters:
+- uid: "'T"
+  summary: " The type of the operation to be powered. \n"

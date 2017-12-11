@@ -1,0 +1,66 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applymulticontrolledca
+name: ApplyMultiControlledCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Applies a multiply controlled version of singly controlled
+   operation.
+   The modifier 'CA' indicates that the single-qubit operation is controllable
+   and adjointable.
+remarks: >2
+   This operation uses only clean ancilla qubits.
+
+   For the explanation and circuit diagram see Figure 4.10, Section 4.3 in Nielsen & Chuang
+syntax: 'operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => () : Adjoint), ccnot : CCNOTop, controls : Qubit[], targets : Qubit[]) : ()'
+references: >2
+   - [ *Michael A. Nielsen , Isaac L. Chuang*,
+       Quantum Computation and Quantum Information ](http://doi.org/10.1017/CBO9780511976667)
+input:
+  content: '(singlyControlledOp : (Qubit[] => () : Adjoint), ccnot : CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: singlyControlledOp
+    summary: >2-
+       An operation controlled on a single qubit.
+       The first qubit in the argument of the operation
+       assumed to be a control and the rest are assumed to be target qubits.
+       `ApplyMultiControlled` always calls `singlyControlledOp` with an argument of
+       length at least 1.
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
+  - name: ccnot
+    summary: ' The controlled-controlled-NOT gate to use for the construction.'
+    uid: microsoft.quantum.canon.ccnotop
+  - name: controls
+    summary: >2-
+       The qubits that `singlyControlledOp` is to be controlled on.
+       The length of `controls` must be at least 1.
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: targets
+    summary: >2
+       The target qubits that `singlyControlledOp` acts upon.
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applymulticontrolledc
+functors:
+- Adjoint
+- Controlled

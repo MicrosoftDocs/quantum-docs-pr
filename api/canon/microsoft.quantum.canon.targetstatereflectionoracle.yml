@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.targetstatereflectionoracle
+name: TargetStateReflectionOracle
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Constructs reflection about the target state uniquely marked by the flag qubit state
+   $\ket{1}_f$, prepared the oracle of type "ReflectionOracle".
+syntax: 'function TargetStateReflectionOracle (idxFlagQubit : Int) : ReflectionOracle'
+input:
+  content: '(idxFlagQubit : Int)'
+  types:
+  - name: idxFlagQubit
+    summary: >2
+       Index to flag qubit $f$ of oracle.
+    uid: Int
+    isPrimitive: true
+output:
+  content: ReflectionOracle
+  types:
+  - summary: >2
+       A `ReflectionOracle` that reflects about the state marked by $\ket{1}_f$.
+    uid: microsoft.quantum.canon.reflectionoracle
+seeAlso:
+- microsoft.quantum.canon.reflectionoracle

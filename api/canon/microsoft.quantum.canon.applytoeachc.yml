@@ -1,0 +1,52 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachc
+name: ApplyToEachC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Applies a single-qubit operation to each element in a register.
+   The modifier 'C' indicates that the single-qubit operation is controllable.
+remarks: >2
+
+  ### Examples
+   Prepare a three-qubit $\ket{+}$ state:
+   ```Q#
+   using (register = Qubit[3]) {
+       ApplyToEach(H, register);
+   }
+   ```
+syntax: "operation ApplyToEachC (singleElementOperation : ('T => () : Controlled), register : 'T[]) : ()"
+input:
+  content: "(singleElementOperation : ('T => () : Controlled), register : 'T[])"
+  types:
+  - name: singleElementOperation
+    summary: ' Operation to apply to each qubit.'
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Controlled
+  - name: register
+    summary: >2
+       Array of qubits on which to apply the given operation.
+    uid: "'T"
+    isLocal: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.applytoeach
+functors: *o0
+typeParameters:
+- uid: "'T"
+  summary: >2
+     The target on which the operation acts.

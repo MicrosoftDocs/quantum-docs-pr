@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.integerincrementphasele
+name: IntegerIncrementPhaseLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Unsigned integer increment by an integer constant, based on phase rotations.\n Suppose `target` encodes unsigned integer x in little-endian encoding and \n `increment` is equal to a.\n The operation implements the unitary |x⟩ ↦ |x + a ⟩,\n where the addition is performed\n modulo 2ⁿ, for n = `Length(target)`.\n"
+remarks: >2-
+   Note that we have simplified the circuit because the increment is a classical constant,
+   not a quantum register.
+
+   See the figure on
+   [ Page 6 of arXiv:quant-ph/0008033v1 ](https://arxiv.org/pdf/quant-ph/0008033.pdf#page=6)
+   for the circuit diagram and explanation.
+syntax: 'operation IntegerIncrementPhaseLE (increment : Int, target : PhaseLittleEndian) : ()'
+references: >2
+   - [ *Thomas G. Draper*,
+        arXiv:quant-ph/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)
+input:
+  content: '(increment : Int, target : PhaseLittleEndian)'
+  types:
+  - name: increment
+    summary: >2
+       The integer by which the `target` is incremented by.
+    uid: Int
+    isPrimitive: true
+  - name: target
+    summary: ' Quantum register encoding an integer using little-endian encoding in QFT basis.'
+    uid: microsoft.quantum.canon.phaselittleendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.integerincrementle
+functors:
+- Adjoint
+- Controlled

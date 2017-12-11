@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.littleendian
+name: LittleEndian
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Register that encodes an unsigned integer in little-endian order. The
+   qubit with index `0` encodes the lowest bit of an unsigned integer
+remarks: ' We abbreviate `LittleEndian` as `LE` in the documentation.'
+syntax: newtype LittleEndian = Qubit[];

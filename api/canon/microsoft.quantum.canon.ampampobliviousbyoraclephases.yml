@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ampampobliviousbyoraclephases
+name: AmpAmpObliviousByOraclePhases
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Oblivious amplitude amplification by oracles for partial reflections.
+remarks: >2-
+   This imposes stricter conditions on form of the ancilla start and target states than in `AmpAmpObliviousByReflectionPhases`.
+   It is assumed that $A\ket{0}\_f\ket{0}\_a= \ket{\text{start}}\_{fa}$ prepares the ancilla start state $\ket{\text{start}}\_{fa}$ from the computational basis $\ket{0}\_f\ket{0}$.
+   It is assumed that the target state is marked by $\ket{1}\_f$.
+   It is assumed that
+   \begin{align}
+   O\ket{\text{start}}\_{fa}\ket{\psi}\_s= \lambda\ket{1}\_f\ket{\text{anything}}\_a\ket{\text{target}}\_s U \ket{\psi}\_s + \sqrt{1-|\lambda|^2}\ket{0}\_f\cdots,
+   \end{align}
+   for some unitary $U$.
+syntax: 'function AmpAmpObliviousByOraclePhases (phases : AmpAmpReflectionPhases, ancillaOracle : DeterministicStateOracle, signalOracle : ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
+input:
+  content: '(phases : AmpAmpReflectionPhases, ancillaOracle : DeterministicStateOracle, signalOracle : ObliviousOracle, idxFlagQubit : Int)'
+  types:
+  - name: phases
+    summary: ' Phases of partial reflections'
+    uid: microsoft.quantum.canon.ampampreflectionphases
+  - name: ancillaOracle
+    summary: ' Unitary oracle $A$ that prepares ancilla start state'
+    uid: microsoft.quantum.canon.deterministicstateoracle
+  - name: signalOracle
+    summary: ' Unitary oracle $O$ of type `ObliviousOracle` that acts jointly on the ancilla and system register'
+    uid: microsoft.quantum.canon.obliviousoracle
+  - name: idxFlagQubit
+    summary: >2
+       Index to single-qubit flag register
+    uid: Int
+    isPrimitive: true
+output:
+  content: '((Qubit[], Qubit[]) => () : Adjoint, Controlled)'
+  types:
+  - summary: >2
+       An operation that implements oblivious amplitude amplification based on partial reflections.
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled

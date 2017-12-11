@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.rall1
+name: RAll1
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   This performs a phase shift operation $R=\boldone-(1-e^{i \phi})\ket{1\cdots 1}\bra{1\cdots 1}$.
+syntax: 'operation RAll1 (phase : Double, qubits : Qubit[]) : ()'
+input:
+  content: '(phase : Double, qubits : Qubit[])'
+  types:
+  - name: phase
+    summary: ' The phase $\phi$ applied to state $\ket{1\cdots 1}\bra{1\cdots 1}$.'
+    uid: Double
+    isPrimitive: true
+  - name: qubits
+    summary: ' The register whose state is to be rotated by $R$.'
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

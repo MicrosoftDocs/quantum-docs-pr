@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.randomreal
+name: RandomReal
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Returns a random real number in the interval $[0, 1)$.
+remarks: >2-
+   This function calls <xref:microsoft.quantum.primitive.random>, so
+   its randomess depends on the implementation of `Random`.
+syntax: 'operation RandomReal (bitsRandom : Int) : Double'
+input:
+  content: '(bitsRandom : Int)'
+  types:
+  - name: bitsRandom
+    summary: >2
+       The number of bits of precision with which the random number
+       should be sampled.
+    uid: Int
+    isPrimitive: true
+output:
+  content: Double
+  types:
+  - summary: >2
+       A real number $x = k / 2^{\texttt{bitsRandom} - 1}$ for an integer
+       $k$ sampled from the interval $[0, 2^{\texttt{bitsRandom}})$
+       with probability $\Pr(k) = 1 / 2^{\texttt{bitsRandom}}$.
+    uid: Double
+    isPrimitive: true

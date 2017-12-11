@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.restricttosubregisterc
+name: RestrictToSubregisterC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Restricts an operation to an array of indices of a register, i.e., a subregister.
+   The modifier 'C' indicates that the operation is controllable.
+syntax: 'function RestrictToSubregisterC (op : (Qubit[] => () : Controlled), idxs : Int[]) : (Qubit[] => () : Controlled)'
+input:
+  content: '(op : (Qubit[] => () : Controlled), idxs : Int[])'
+  types:
+  - name: op
+    summary: ' Operation to be restricted to a subregister.'
+    isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Controlled
+  - name: idxs
+    summary: ' Array of indices, indicating to which qubits the operation will be restricted.'
+    uid: Int
+    isPrimitive: true
+    isArray: true
+output:
+  content: '(Qubit[] => () : Controlled)'
+  types:
+  - isOperation: true
+    input:
+      types:
+      - uid: Qubit
+        isPrimitive: true
+        isArray: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: *o0
+seeAlso:
+- microsoft.quantum.canon.restricttosubregister

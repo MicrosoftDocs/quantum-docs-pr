@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.discretephaseestimationiteration
+name: DiscretePhaseEstimationIteration
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Performs a single iteration of an iterative (classically-controlled) phase
+   estimation algorithm using integer powers of a unitary oracle.
+syntax: 'operation DiscretePhaseEstimationIteration (oracle : DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit) : ()'
+input:
+  content: '(oracle : DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
+  types:
+  - name: oracle
+    summary: >2-
+       Operation acting on an integer and a register,
+       such that $U^m$ is applied to the given register, where $U$ is the unitary
+       whose phase is to be estimated, and where $m$ is the integer power
+       given to the oracle
+    uid: microsoft.quantum.canon.discreteoracle
+  - name: power
+    summary: ' Number of times to apply the given unitary oracle.'
+    uid: Int
+    isPrimitive: true
+  - name: theta
+    summary: >2-
+       Angle by which to invert the phase on the control qubit before
+       acting on the target state.
+    uid: Double
+    isPrimitive: true
+  - name: targetState
+    summary: ' Register of state acted upon by the given unitary oracle.'
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: controlQubit
+    uid: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.signi
+name: SignI
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+summary: >2
+   Returns an integer that indicates the sign of a number.
+remarks: ' See [System.Math.Sign](https://docs.microsoft.com/en-us/dotnet/api/system.math.sign) for more details.'
+syntax: 'function SignI (a : Int) : Int'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    uid: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - uid: Int
+    isPrimitive: true

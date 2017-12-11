@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.constantarray
+name: ConstantArray
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Creates an array of given length with all elements equal to given value.
+syntax: "function ConstantArray (length : Int, value : 'T) : 'T[]"
+input:
+  content: "(length : Int, value : 'T)"
+  types:
+  - name: length
+    summary: ' Length of the new array.'
+    uid: Int
+    isPrimitive: true
+  - name: value
+    summary: >2
+       A value that will be contained at each index of the new array.
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: ' A new array of length `length`, such that every element is `value`.'
+    uid: "'T"
+    isLocal: true
+    isArray: true

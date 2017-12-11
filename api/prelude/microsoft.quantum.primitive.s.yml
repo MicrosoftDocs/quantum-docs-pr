@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.s
+name: S
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >2
+   Applies the $\pi / 4$ phase gate to a single qubit,
+
+   \begin{align}
+       S \mathrel{:=}
+       \begin{bmatrix}
+           1 & 0 \\\\
+           0 & i
+       \end{bmatrix}.
+   \end{align}
+syntax: 'operation S (qubit : Qubit) : ()'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: ' Qubit to which the gate should be applied.'
+    uid: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

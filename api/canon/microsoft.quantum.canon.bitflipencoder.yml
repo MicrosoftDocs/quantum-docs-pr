@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bitflipencoder
+name: BitFlipEncoder
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Encodes into the [3, 1, 3] / ⟦3, 1, 1⟧ bit-flip code.
+syntax: 'operation BitFlipEncoder (physRegister : Qubit[], auxQubits : Qubit[]) : LogicalRegister'
+input:
+  content: '(physRegister : Qubit[], auxQubits : Qubit[])'
+  types:
+  - name: physRegister
+    summary: ' A register of physical qubits representing the data to be protected.'
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+  - name: auxQubits
+    summary: >2
+       A register of auxillary qubits initially in the $\ket{00}$ state to be
+       used in encoding the data to be protected.
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: LogicalRegister
+  types:
+  - summary: >2
+       The physical and auxillary qubits used in encoding, represented as a
+       logical register.
+    uid: microsoft.quantum.canon.logicalregister
+seeAlso:
+- microsoft.quantum.canon.logicalregister

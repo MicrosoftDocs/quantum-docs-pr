@@ -1,0 +1,9 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.evolutionschedule
+name: EvolutionSchedule
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2-
+   Represents a time-dependent dynamical generator. The `Double`
+   parameter is a schedule in $[0, 1]$.
+syntax: newtype EvolutionSchedule = (EvolutionSet, (Double -> GeneratorSystem));

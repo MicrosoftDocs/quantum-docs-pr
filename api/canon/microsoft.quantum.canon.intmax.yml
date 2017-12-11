@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.intmax
+name: IntMax
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Returns the maximum of two integers.
+syntax: 'function IntMax (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: ' An integer $a$ of type `Int`.'
+    uid: Int
+    isPrimitive: true
+  - name: b
+    summary: >2
+       An integer $b$ of type `Int`.
+    uid: Int
+    isPrimitive: true
+output:
+  content: Int
+  types:
+  - summary: ' An integer $\max{a,b}$ of type `Int`.'
+    uid: Int
+    isPrimitive: true

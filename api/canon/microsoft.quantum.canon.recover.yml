@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.recover
+name: Recover
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Performs a single round of error correction by a quantum code
+   described by a `QECC` type.
+syntax: 'operation Recover (code : QECC, fn : RecoveryFn, logicalRegister : LogicalRegister) : ()'
+input:
+  content: '(code : QECC, fn : RecoveryFn, logicalRegister : LogicalRegister)'
+  types:
+  - name: code
+    summary: " A quantum error-correcting code packaged as a `QECC` type describes \n the encoding and deconding of quantum data, and how error syndromes \n are to be measuremed."
+    uid: microsoft.quantum.canon.qecc
+  - name: fn
+    summary: " A `RecoveryFn` that maps each error syndrome to the `Pauli[]` operations\n that correct the detected error. "
+    uid: microsoft.quantum.canon.recoveryfn
+  - name: logicalRegister
+    summary: >2
+       An array of qubits where the stabilizer code is defined.
+    uid: microsoft.quantum.canon.logicalregister
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.qecc
+- microsoft.quantum.canon.recoveryfn
+- microsoft.quantum.canon.logicalregister

@@ -44,8 +44,8 @@ The current documentation includes the following topics.
 * [Q# standard libraries](libraries/intro.md) describes the operations and functions that support both the classical language control requirement and the Q# quantum algorithms. Topics include control flow, data structures, error correction, testing, and debugging. 
 * [Q# language reference](quantum-QR-Intro.md) details the Q# language including the type model, expressions, statements, and compiler use.
 * [For more information](quantum-ForMoreInfo.md) contains specially selected references to deep coverage of quantum computing topics.
-* [Quantum trace simulator reference](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?branch=master&view=qsharp-preview) contains reference material about trace simulator entities and exceptions.
-* [Q# library reference](xref:microsoft.quantum.standardlibsintro) contains reference information about library entities by namespace.
+* [Quantum trace simulator reference](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators) contains reference material about trace simulator entities and exceptions.
+* [Q# library reference](https://docs.microsoft.com/en-us/qsharp/api/) contains reference information about library entities by namespace.
 
 
 

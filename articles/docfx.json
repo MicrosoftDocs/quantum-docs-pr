@@ -41,7 +41,7 @@
     "externalReference": [],
     "globalMetadata": {
       "show_latex": true,
-      "ms.prod": quantum
+      "ms.prod": "quantum"
     },
     "fileMetadata": {
       "latex_macros": {

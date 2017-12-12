@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+title: Working with Qubits | Microsoft Docs 
+description: Working with Qubits
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
@@ -165,11 +165,7 @@ fixup {
 where `statement1` and `statement2` can be any valid Q# statement, and `expression` any valid expression that evaluates to a value of type `Bool`. In a typical use case, the following circuit implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere. This is accomplished by using a known RUS pattern: 
 
 ```qsharp
-<<<<<<< HEAD
 operation RUScircuit (qubit : Qubit) : () {
-=======
-operation RUScircuitV1 (qubit : Qubit) : () {
->>>>>>> origin/master
     body {
         using(ancillas = Qubit[2]) {
             ApplyToEachA(H, ancillas);

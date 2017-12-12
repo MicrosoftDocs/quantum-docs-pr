@@ -26,7 +26,9 @@ ms.topic: article-type-from-white-list
 
 ## Prerequisites
 
-If you have [Visual Studio](https://www.visualstudio.com/) 2017 installed, you're ready to install the Microsoft Quantum Development Kit.
+- Microsoft's quantum simulator, installed with the Quantum Development Kit, utilizes Advance Vector Extensions (AVX), and requires an AVX-enabled CPU. Intel processors shipped in Q1 2011 (Sandy Bridge) or later support AVX. We are evaluating support for earlier CPUs and may announce details at a later time.
+- The simulator included with the Quantum Development Kit requires a 64-bit installation of Microsoft Windows to run.
+- Visual Studio 2017
 
 If you do not have Visual Studio installed, you can download Visual Studio 2017 Community Edition for free.
 1. Go to the [Visual Studio download page](https://www.visualstudio.com/downloads/).

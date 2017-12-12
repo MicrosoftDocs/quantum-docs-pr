@@ -25,6 +25,11 @@ ms.topic: article-type-from-white-list
 
 ## Known Issues
 
+### Hardware and Software Requirements
+
+- The simulator included with the Quantum Development Kit requires a 64-bit installation of Microsoft Windows to run.
+- Microsoft's quantum simulator, installed with the Quantum Development Kit, utilizes Advance Vector Extensions (AVX), and requires an AVX-enabled CPU. Intel processors shipped in Q1 2011 (Sandy Bridge) or later support AVX. We are evaluating support for earlier CPUs and may announce details at a later time.
+
 ### Project Creation
 
 - When creating a solution (.sln) that will use Q#, the solution must be one directory higher than each project (.csproj) in the solution. When creating a new solution, this can be accomplished by making sure that the "Create directory for solution" checkbox on the "New Project" dialog box is checked. If this is not done, the Quantum Development Kit NuGet packages will need to be installed manually.

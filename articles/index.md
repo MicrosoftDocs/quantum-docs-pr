@@ -36,7 +36,7 @@ The Quantum Development Kit preview provides a complete development and simulati
 ## Quantum Development Kit Documentation
 The current documentation includes the following topics.
 * [Microsoft Quantum Development kit release notes](quantum-121117-Preview-RelNotes.md)
-* [Quantum computing concepts](quantum-concepts-1-Intro.md) includes topics such the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
+* [Quantum computing concepts](quantum-concepts-1-Intro.md) includes topics such as the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
 * [Installation and validation](quantum-InstallConfig.md) describes how to quickly set up your quantum development environment. Your Visual Studio environment will be enhanced with a compiler for the Q# language and templates for Q# projects and files.
 * [Quickstart - your first quantum program](quantum-WriteAQuantumProgram.md) walks you through how to create the Teleport application in the Visual Studio development environment. You'll learn how to define a Q# operation, call the Q# operation using C#, and how to execute your quantum algorithm.
 * [Managing quantum machines and drivers](quantum-SimulatorsAndMachines.md) describes how quantum algorithms are executed, what quantum machines are available, and how to write a non-Q# driver for the quantum program.

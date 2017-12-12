@@ -1,5 +1,5 @@
 ---
-uid: microsoft.quantum.index
+uid: microsoft.quantum.index-beta
 ---
 <img src="media/mobius_strip_preview.png" style="float: right;" title="Quantum" alt="Quantum"></img>
 # Welcome to the Microsoft Quantum Development Kit Internal Preview #

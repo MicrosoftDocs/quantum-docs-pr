@@ -1,4 +1,4 @@
-- name: Reference
+- name: Q# library reference
   href: index.md
   items:
   - name: Prelude

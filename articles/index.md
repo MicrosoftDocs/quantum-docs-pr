@@ -28,7 +28,6 @@ The Quantum Development Kit preview provides a complete development and simulati
 
 | Component | Function |
 | --------- | -------- |
-
 | Q# language and compiler | Q# is a domain-specific programming language used for expressing quantum algorithms. It is used for writing sub-programs that execute on an adjunct quantum processor under the control of a classical host program and computer. |
 | Q# standard library | The library contains operations and functions that support both the classical language control requirement and the Q# quantum algorithms. |
 | Local quantum machine simulator | A full state vector simulator optimized for accurate vector simulation and speed. |

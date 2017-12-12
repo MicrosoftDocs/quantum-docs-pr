@@ -165,11 +165,7 @@ fixup {
 where `statement1` and `statement2` can be any valid Q# statement, and `expression` any valid expression that evaluates to a value of type `Bool`. In a typical use case, the following circuit implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere. This is accomplished by using a known RUS pattern: 
 
 ```qsharp
-<<<<<<< HEAD
 operation RUScircuit (qubit : Qubit) : () {
-=======
-operation RUScircuitV1 (qubit : Qubit) : () {
->>>>>>> origin/master
     body {
         using(ancillas = Qubit[2]) {
             ApplyToEachA(H, ancillas);

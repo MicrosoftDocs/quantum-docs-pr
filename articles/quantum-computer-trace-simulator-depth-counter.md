@@ -72,3 +72,7 @@ use the following:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricCalculatorsNames.depthCounter];
 ```
+
+## See also ##
+
+- The quantum computer [Trace Simulator](./quantum-computer-trace-simulator-1.md) overview.

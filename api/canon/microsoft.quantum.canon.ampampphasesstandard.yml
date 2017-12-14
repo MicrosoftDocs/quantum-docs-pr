@@ -20,4 +20,6 @@ input:
 output:
   content: AmpAmpReflectionPhases
   types:
-  - uid: microsoft.quantum.canon.ampampreflectionphases
+  - summary: >2
+       An operation that implements phases specified as partial reflections
+    uid: microsoft.quantum.canon.ampampreflectionphases

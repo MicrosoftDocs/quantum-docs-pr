@@ -4,7 +4,7 @@ name: StackPush
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Pushes a new element onto a @"Microsoft.Quantum.Canon.ResultStack".
+   Pushes a new element onto a <xref:microsoft.quantum.canon.resultstack>.
 syntax: 'function StackPush (stack : ResultStack, datum : Result) : ResultStack'
 input:
   content: '(stack : ResultStack, datum : Result)'

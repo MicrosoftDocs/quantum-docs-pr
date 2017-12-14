@@ -40,7 +40,8 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "show_latex": true
+      "show_latex": true,
+      "ms.prod": "quantum"
     },
     "fileMetadata": {
       "latex_macros": {

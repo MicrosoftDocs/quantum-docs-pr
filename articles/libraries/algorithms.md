@@ -69,9 +69,9 @@ The approximation parameter $a$ determines the pruning level of the $Z$-rotation
 In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.
 It is known that for $k \ge \log_2(n) + \log_2(1 / \epsilon) + 3$. one can bound $\\| \operatorname{QFT} - \operatorname{AQFT} \\| < \epsilon$.
 Here $\\|\cdot\\|$ is the operator norm which in this case is the square root of the largest [eigenvalue](xref:microsoft.quantum.concepts.vecmat) of $(\operatorname{QFT} - \operatorname{AQFT})(\operatorname{QFT} - \operatorname{AQFT})^\dagger$.
-<!-- TODO: explain what norms are, perhaps? -->
 
 ## Arithmetic ##
+
 Just as arithmetic plays a central role in classical computing, it is also indispensible in quantum computing.  Algorithms such as Shor's factoring algorithm, quantum simulation methods as well as many oracular algorithms rely upon arithmetic as primitive operations.  Most approaches to arithmetic build upon quantum adder circuits.  The simplest adder takes a classical input $b$ and adds the value to a quantum state holding an integer $\ket{a}$.  Mathematically, the adder (which we denote $\operatorname{Add}(b)$ for classical input $b$) has the property that 
 
 $$
@@ -202,4 +202,3 @@ Applying the adjoint of the quantum Fourier transform, we therefore obtain the b
 
 In Q#, this is implemented by the <xref:microsoft.quantum.canon.quantumphaseestimation> operation, which takes a <xref:microsoft.quantum.canon.discreteoracle> implementing application of $U^m$ as a function of positive integers $m$.
 
-<!-- FIXME: ensure that |k〉 notation is defined above. -->

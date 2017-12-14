@@ -61,13 +61,7 @@ When the trace simulator executes `AssertProb` it will record that measuring
 the outcome probabilities and `M` will return `Zero` or `One` with probability
 0.5. When the same code is executed on a simulator that keeps track of the
 quantum state, such a simulator will check that the provided probabilities in
-`AssertProb` are correct. 
-
-The second kind of measurement is used to read out the answer of the quantum
-algorithm where the user usually does not know the probability of such measurement
-outcomes. The quantum computer trace simulator provides a function `ForceMeasure` in
-namespace `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators` to force
-the simulator to take the measurement outcome preferred by the user. See [ForceMeasure](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.ForceMeasure) for more information.
+`AssertProb` are correct.
 
 ## Running your Program with the Quantum Computer Trace Simulator 
 
@@ -113,5 +107,5 @@ components are provided in the corresponding reference files. See the API docume
 
 ## See also
 The quantum computer [trace simulator
-](quantum-computer-trace-simulator-1.md) overview
+](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) C# reference 
 

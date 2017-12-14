@@ -29,7 +29,7 @@ We now extend our manipulation of Matrices to Eigenvalues, Eigenvectors and Expo
 ## Eigenvalues and Eigenvectors
 
 Let $M$ be a square matrix and $v$ be a vector that is not the all zeros vector (i.e., the vector with all entries equal to $0$).
-We say $v$ is an *eigenvector* of  $M$ if $Mv = cv$ for some number $c$. We say $c$ is the eigenvalue corresponding to the eigenvector $v$. In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number. Note that if $v$ is an eigenvector with eigenvalue $c$, then $av$ is also an eigenvector (for any nonzero $a$) with the same eigenvlue. 
+We say $v$ is an *eigenvector* of  $M$ if $Mv = cv$ for some number $c$. We say $c$ is the eigenvalue corresponding to the eigenvector $v$. In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number. Note that if $v$ is an eigenvector with eigenvalue $c$, then $av$ is also an eigenvector (for any nonzero $a$) with the same eigenvalue. 
 
 For example, for the identity matrix, every vector $v$ is an eigenvector with eigenvalue $1$. 
 

@@ -4,7 +4,7 @@ name: StackCapacity
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Retrieves the capacity of a @"Microsoft.Quantum.Canon.ResultStack".
+   Retrieves the capacity of a <xref:microsoft.quantum.canon.resultstack>.
 syntax: 'function StackCapacity (stack : ResultStack) : Int'
 input:
   content: '(stack : ResultStack)'

@@ -8,6 +8,7 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
+uid: microsoft.quantum.techniques.type-model
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
@@ -73,7 +74,6 @@ For instance, a collection of integers is denoted `Int[]`, while an array of arr
 
 An array value can be written in Q# source code by using square brackets around the elements of an array, as in `[PauliI; PauliX; PauliY; PauliZ]`.
 The types of each element must match exactly, as there are no "base" types in Q#.
-<!-- TODO: is Length actually a function? Check on this. -->
 
 > [!WARNING]
 > The elements of an array cannot typically be changed after the array has been created.

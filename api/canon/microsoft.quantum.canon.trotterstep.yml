@@ -27,7 +27,7 @@ output:
   content: '(Qubit[] => () : Adjoint, Controlled)'
   types:
   - summary: >2
-       Unitary operation that approximate a single step of time-evolution
+       Unitary operation that approximates a single step of time-evolution
        for duration `trotterStepSize`.
     isOperation: true
     input:

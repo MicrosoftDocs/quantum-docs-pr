@@ -28,7 +28,7 @@ output:
   - uid: ()
     isPrimitive: true
 seeAlso:
-- microsoft.quantum.primitive.modularincrementle
+- microsoft.quantum.canon.modularincrementle
 functors:
 - Adjoint
 - Controlled

@@ -4,7 +4,8 @@ name: TargetStateReflectionOracle
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Constructs reflection about the target state uniquely marked by the flag qubit state $\ket{1}_f$, prepared the oracle of type "StateOracle".
+   Constructs reflection about the target state uniquely marked by the flag qubit state
+   $\ket{1}_f$, prepared the oracle of type "ReflectionOracle".
 syntax: 'function TargetStateReflectionOracle (idxFlagQubit : Int) : ReflectionOracle'
 input:
   content: '(idxFlagQubit : Int)'

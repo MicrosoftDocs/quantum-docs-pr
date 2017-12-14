@@ -81,9 +81,9 @@ using a product of $r d$ terms.
 
 > [!TIP]
 > Applications of the Trotter-Suzuki simulation algorithm are covered in the samples. 
-> For the Ising model using only the primitive library, please see the [**SimpleIsing** sample](TODO: link).
-> For the Ising model using the Trotter-Suzuki library control structure, please see the [**IsingTrotter** sample](TODO: link).
-> For molecular Hydrogen using the Trotter-Suzuki library control structure, please see the [**H2 simulation** sample](TODO: link).
+> For the Ising model using only the primitive library, please see the [**SimpleIsing** sample](https://github.com/Microsoft/Quantum/Samples/SimpleIsingSample).
+> For the Ising model using the Trotter-Suzuki library control structure, please see the [**IsingTrotter** sample](https://github.com/Microsoft/Quantum/Samples/IsingTrotterSample).
+> For molecular Hydrogen using the Trotter-Suzuki library control structure, please see the [**H2 simulation** sample](https://github.com/Microsoft/Quantum/Samples/H2SimulationSampleCmdLine).
 
 In many cases, we would like to implement the simulation algorithm, but are not interested in the details of its implementation. For instance, the second-order integrator approximates
 $$
@@ -125,8 +125,9 @@ function TimeDependentTrotterSimulationAlgorithm(
 
 > [!TIP]
 > Applications of the simulation library are covered in the samples. 
-> For phase estimation in the Ising model using `SimulationAlgorithm`, please see the [**IsingPhaseEstimation** sample](TODO: link).
-> For adiabatic state preparation in the Ising model using `TimeDependentSimulationAlgorithm`, please see the [**AdiabaticIsing** sample](TODO: link).
+> For phase estimation in the Ising model using `SimulationAlgorithm`, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/Samples/IsingPhaseEstimationSample).
+> For adiabatic state preparation in the Ising model using `TimeDependentSimulationAlgorithm`, please see the [**AdiabaticIsing** sample](https://github.com/Microsoft/Quantum/Samples/AdiabaticIsingSample).
+
 
 ### Adiabatic State Preparation & Phase Estimation ###
 
@@ -170,11 +171,11 @@ operation AdiabaticStateEnergyEstimate(
 
 > [!TIP]
 > Applications of adiabatic state preparation are covered in the samples. 
-> For the Ising model using a manual implementation of adiabatic state preparation versus using the `AdiabaticEvolution` function, please see the [**AdiabaticIsing** sample](TODO: link).
-> For phase estimation and adiabatic state preparation in the Ising model, please see the [**IsingPhaseEstimation** sample](TODO: link).
+> For the Ising model using a manual implementation of adiabatic state preparation versus using the `AdiabaticEvolution` function, please see the [**AdiabaticIsing** sample](https://github.com/Microsoft/Quantum/Samples/AdiabaticIsingSample).
+> For phase estimation and adiabatic state preparation in the Ising model, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/Samples/IsingPhaseEstimationSample).
 
 > [!TIP]
-> The [simulation of molecular Hydrogen](TODO: link) is an interesting and brief sample. The model and experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) only requires Pauli matrices and takes the form $\hat H = g\_{0}I\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$. This is an effective Hamiltonian only requiring only 2 qubits, where the constants $g$ are computed from the distance $R$ between the two Hydrogen atoms. Using canon functions, the Paulis are converted to unitaries and then evolved over short periods of time using the Trotter-Suzuki decomposition. A good approximation to the $H_2$ ground state can be created without using adiabatic state preparation, and so the ground state energy may be found directly by utilizing phase Estimation from the canon.
+> The [simulation of molecular Hydrogen](https://github.com/Microsoft/Quantum/Samples/H2SimulationSampleCmdLine) is an interesting and brief sample. The model and experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) only requires Pauli matrices and takes the form $\hat H = g\_{0}I\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$. This is an effective Hamiltonian only requiring only 2 qubits, where the constants $g$ are computed from the distance $R$ between the two Hydrogen atoms. Using canon functions, the Paulis are converted to unitaries and then evolved over short periods of time using the Trotter-Suzuki decomposition. A good approximation to the $H_2$ ground state can be created without using adiabatic state preparation, and so the ground state energy may be found directly by utilizing phase estimation from the canon.
 
 ## Shor's Algorithm ##
 Shor's algorithm remains one of the most significant developments in quantum computing because it showed that quantum computers could be used to solve important, currently classically intractable problems.

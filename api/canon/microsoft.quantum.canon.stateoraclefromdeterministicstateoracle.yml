@@ -3,7 +3,8 @@ uid: microsoft.quantum.canon.stateoraclefromdeterministicstateoracle
 name: StateOracleFromDeterministicStateOracle
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: " Converts an oracle of type `DeterministicStateOracle` to `StateOracle`. \n"
+summary: >2
+   Converts an oracle of type `DeterministicStateOracle` to `StateOracle`.
 syntax: 'function StateOracleFromDeterministicStateOracle (deterministicStateOracle : DeterministicStateOracle) : StateOracle'
 input:
   content: '(deterministicStateOracle : DeterministicStateOracle)'
@@ -15,7 +16,10 @@ input:
 output:
   content: StateOracle
   types:
-  - summary: " The same state prepataion oracle $A$, but now of type \n `StateOracle`. Note that the flag index in this `StateOracle` is a\n dummy variable and has no effect.\n"
+  - summary: >2
+       The same state prepataion oracle $A$, but now of type
+       `StateOracle`. Note that the flag index in this `StateOracle` is a
+       dummy variable and has no effect.
     uid: microsoft.quantum.canon.stateoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle

@@ -1,5 +1,16 @@
 ---
 uid: microsoft.quantum.index
+# Mandatory fields.
+title: Setting up the Q# development environment 
+author: QuantumWriter
+ms.author:  
+ms.date: 10/09/2017
+ms.topic: article
+# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
+# For Quantum products none of these categories have been defined  yet.
+# ms.service: service-name-from-white-list
+# ms.prod: product-name-from-white-list
+# ms.technology: tech-name-from-white-list
 ---
 # Welcome to the Microsoft Quantum Development Kit Preview
 

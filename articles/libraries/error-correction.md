@@ -1,3 +1,18 @@
+---
+# Mandatory fields. See more on aka.ms/skyeye/meta.
+title: Q# standard libraries - error correction | Microsoft Docs
+description: Q# standard libraries - error correction
+author: QuantumWriter
+uid: microsoft.quantum.libraries.data-structures
+ms.author: martinro@microsoft.com 
+ms.date: 12/11/2017
+ms.topic: article
+# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
+# For Quantum products none of these categories have been defined  yet.
+# ms.service: service-name-from-white-list
+# ms.prod: product-name-from-white-list
+# ms.technology: tech-name-from-white-list
+---
 # Error Correction #
 
 ## Introduction ##

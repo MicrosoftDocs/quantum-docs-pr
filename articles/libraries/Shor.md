@@ -1,3 +1,16 @@
+---
+# Mandatory fields.
+title: Shor algorithm 
+author: QuantumWriter
+ms.author: martinro@microsoft.com 
+ms.date: 12/11/2017
+ms.topic: article
+# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
+# For Quantum products none of these categories have been defined  yet.
+# ms.service: service-name-from-white-list
+# ms.prod: product-name-from-white-list
+# ms.technology: tech-name-from-white-list
+---
 ## Period Finding ##
 
 Now that we have seen how the quantum Fourier transform and phase estimation work, we can use these tools to solve a classically hard computational problem called *t period finding*.  In the next section, we will see how to apply period finding to factoring.

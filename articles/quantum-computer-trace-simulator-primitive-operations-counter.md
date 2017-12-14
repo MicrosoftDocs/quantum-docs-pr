@@ -2,7 +2,6 @@
 # Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Primitive Operations Counter | Quantum computer trace simulator | Microsoft Docs 
 description: Overview of quantum computer trace simulator 
-#keywords: Don’t add or edit keywords without consulting your SEO champ. 
 author: vadym-kl 
 ms.author: vadym@microsoft.com 
 ms.date: 12/11/2017

@@ -1,24 +1,15 @@
 ---
-# Mandatory fields. See more on aka.ms/skyeye/meta.
+# Mandatory fields.
 title: Setting up the Q# development environment 
-description: This section specifies how to create a Q# development environment and validate it by running the teleport sample program. 
-services: service-name-with-dashes-AZURE-ONLY 
-keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
+ms.author: Alan.Geller@microsoft.com 
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: article
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
+# For Quantum products none of these categories have been defined  yet.
 # ms.service: service-name-from-white-list
-# product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.devlang:devlang-from-white-list
-# ms.suite: 
-# ms.tgt_pltfrm:
-# ms.reviewer:
-# manager: MSFT-alias-manager-or-PM-counterpart
+# ms.prod: product-name-from-white-list
+# ms.technology: tech-name-from-white-list
 ---
 
 # Installing and Validating the Q# Development Environment

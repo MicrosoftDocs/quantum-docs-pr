@@ -33,7 +33,7 @@ Operations with this or greater complexity are ubiquitous in quantum algorithms 
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](./media/Concepts1.png)
 
-This visual language for quantum operations is can be more readily digestable than writing down its equivalent matrix once you understand the conventions for expressing a quantum circuit.  We review these conventions below.
+This visual language for quantum operations can be more readily digestible than writing down its equivalent matrix once you understand the conventions for expressing a quantum circuit.  We review these conventions below.
 
 In a circuit diagram, each solid line depicts a qubit or more generally a qubit register.  By convention, the top line is qubit register $0$ and the remainder are labeled sequentially. The above example circuit is depicted as acting on two qubits (or equivalently two registers consisting of one qubit).  Gates acting on one or more qubit registers are denoted as a box.  For example, the symbol
 
@@ -87,7 +87,7 @@ Similarly, the subcircuit
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](./media/concepts_8.png)
 
-gives a classically controlled gate, wher $G$ is applied conditioned on the classical control bit being value $1$.
+gives a classically controlled gate, where $G$ is applied conditioned on the classical control bit being value $1$.
 
 Quantum Teleportation is perhaps the best quantum algorithm for illustrating these components.  Quantum teleportation is a method for moving data within a quantum computer (or even between distant quantum computers in a quantum network) through the use of entanglement and measurement.  Interestingly, it is actually capable of moving a quantum state, say the value in a given qubit, from one qubit to another, without even knowing what the qubit's value is! This is necessary for the protocol to work according to the laws of quantum mechanics.  The quantum teleportation circuit is given below; we also provide an annotated version of the circuit to illustrate how to read the quantum circuit.
 

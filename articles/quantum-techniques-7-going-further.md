@@ -8,6 +8,7 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
+uid: microsoft.quantum.techniques.further
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
@@ -141,7 +142,7 @@ function Compose<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B)) : ('A -
 ```
 
 The canon provided with the Q# standard library provides a range of such type-parameterized operations and functions to make higher-order control flow easier to express.
-These are discussed further in the [standard library guide](). <!-- TODO: link -->
+These are discussed further in the [Q# standard library guide](libraries/intro.md).
 
 ## Borrowing Qubits ##
 

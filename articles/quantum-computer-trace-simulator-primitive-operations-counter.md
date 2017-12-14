@@ -2,7 +2,7 @@
 # Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Primitive Operations Counter | Quantum computer trace simulator | Microsoft Docs 
 description: Overview of quantum computer trace simulator 
-author: Vadym 
+author: vadym-kl 
 ms.author: vadym@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article
@@ -76,8 +76,7 @@ use the following:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricCalculatorsNames.primitiveOperationsCounter];
 ```
-<!---
-## See also
-The quantum computer [Trace Simulator
-](quantum-computer-trace-simulator-1.md) overview
---->
+
+## See also ##
+
+- The quantum computer [Trace Simulator](./quantum-computer-trace-simulator-1.md) overview.

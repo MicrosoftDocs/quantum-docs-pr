@@ -10,7 +10,8 @@ input:
   content: '(generatorSystem : GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: " The `GeneratorSystem` of interest. \n"
+    summary: >2
+       The `GeneratorSystem` of interest.
     uid: microsoft.quantum.canon.generatorsystem
 output:
   content: (Int -> GeneratorIndex)

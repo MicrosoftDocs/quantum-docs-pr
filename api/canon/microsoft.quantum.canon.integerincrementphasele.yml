@@ -32,7 +32,7 @@ output:
   - uid: ()
     isPrimitive: true
 seeAlso:
-- microsoft.quantum.primitive.integerincrementle
+- microsoft.quantum.canon.integerincrementle
 functors:
 - Adjoint
 - Controlled

@@ -19,7 +19,7 @@ remarks: >2
 
 
   ### Examples
-   Using  @"microsoft.quantum.canon.paulievolutionset", the operator
+   Using  <xref:microsoft.quantum.canon.paulievolutionset>, the operator
    $\pi X_2 X_5 Y_9$ is represented as:
    ```qsharp
    let index = GeneratorIndex(([1; 1; 2], [PI()]), [2; 5; 9]);

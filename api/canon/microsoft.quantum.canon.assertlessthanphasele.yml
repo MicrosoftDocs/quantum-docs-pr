@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >2
    Asserts that the `number` encoded in PhaseLittleEndian is less than `value`.
-remarks: ' Controlled version of the operation ignores controls.'
+remarks: ' The controlled version of this operation ignores controls.'
 syntax: 'operation AssertLessThanPhaseLE (value : Int, number : PhaseLittleEndian) : ()'
 input:
   content: '(value : Int, number : PhaseLittleEndian)'

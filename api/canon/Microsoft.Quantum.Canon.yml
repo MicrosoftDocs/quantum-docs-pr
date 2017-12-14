@@ -18,8 +18,7 @@ functions:
   summary: >2
      Oblivious amplitude amplification by oracles for partial reflections.
 - uid: microsoft.quantum.canon.ampampobliviousbyreflectionphases
-  summary: >2
-     Returns unitary that implements oblivious amplitude amplification by specifying for partial reflections.
+  summary: ' Returns a unitary that implements oblivious amplitude amplification by specifying for partial reflections.'
 - uid: microsoft.quantum.canon.ampampphasesfixedpoint
   summary: " Computes partial reflection phases for fixed-point amplitude \n amplification.\n"
 - uid: microsoft.quantum.canon.ampampphasesstandard
@@ -134,7 +133,10 @@ functions:
 - uid: microsoft.quantum.canon.filter
   summary: " The `Filter` function takes an array and a predicate that is defined \n for the elements of the array, and returns an array that consists of \n those elements that satisfy the predicate. \n"
 - uid: microsoft.quantum.canon.fivequbitcoderecoveryfn
-  summary: " Returns function that maps error syndrome measurements to the \n appropriate error-correcting Pauli operators by table lookup for\n the ⟦5, 1, 3⟧ quantum code.\n"
+  summary: >2
+     Returns function that maps error syndrome measurements to the
+     appropriate error-correcting Pauli operators by table lookup for
+     the ⟦5, 1, 3⟧ quantum code.
 - uid: microsoft.quantum.canon.fold
   summary: >2
      Iterates a function `f` through an array `array`, returning
@@ -261,9 +263,13 @@ functions:
      $U^m$ for a power $m$.
      The modifier 'CA' indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.paulievolutionfunction
-  summary: " Represents a dynamical generator as a set of simulatable gates and an \n expansion in the Pauli basis.\n"
+  summary: >2
+     Represents a dynamical generator as a set of simulatable gates and an
+     expansion in the Pauli basis.
 - uid: microsoft.quantum.canon.paulievolutionset
-  summary: " Represents a dynamical generator as a set of simulatable gates and an \n expansion in the Pauli basis.\n"
+  summary: >2
+     Represents a dynamical generator as a set of simulatable gates and an
+     expansion in the Pauli basis.
 - uid: microsoft.quantum.canon.paulifrombitstring
   summary: >2
      Given a bit string, returns a multi-qubit Pauli operator
@@ -280,7 +286,7 @@ functions:
 - uid: microsoft.quantum.canon.reflectionoraclefromdeterministicstateoracle
   summary: >2
      Constructs reflection about a some state $\ket{\psi}$ from the oracle $O$ of type
-     @"microsoft.quantum.canon.deterministicstateoracle", where $O\ket{0} = \ket{\psi}$.
+     <xref:microsoft.quantum.canon.deterministicstateoracle>, where $O\ket{0} = \ket{\psi}$.
 - uid: microsoft.quantum.canon.reflectionstart
   summary: >2
      Constructs a reflection about the all-zero string $\ket{0\cdots 0}$, which is the typical input state to amplitude amplification.
@@ -322,40 +328,52 @@ functions:
      Given a pair, returns its second element.
 - uid: microsoft.quantum.canon.stackcapacity
   summary: >2
-     Retrieves the capacity of a @"Microsoft.Quantum.Canon.ResultStack".
+     Retrieves the capacity of a <xref:microsoft.quantum.canon.resultstack>.
 - uid: microsoft.quantum.canon.stacklength
   summary: >2
      Retrieves the number of elements stored in a
-     @"Microsoft.Quantum.Canon.ResultStack".
+     <xref:microsoft.quantum.canon.resultstack>.
 - uid: microsoft.quantum.canon.stacknew
   summary: >2
-     Creates a new empty @"Microsoft.Quantum.Canon.ResultStack" with given capacity.
+     Creates a new empty <xref:microsoft.quantum.canon.resultstack> with given capacity.
 - uid: microsoft.quantum.canon.stackpeek
   summary: >2
-     Retrieves the topmost element of a @"Microsoft.Quantum.Canon.ResultStack".
+     Retrieves the topmost element of a <xref:microsoft.quantum.canon.resultstack>.
 - uid: microsoft.quantum.canon.stackpop
   summary: >2
-     Removes the topmost element from a @"Microsoft.Quantum.Canon.ResultStack".
+     Removes the topmost element from a <xref:microsoft.quantum.canon.resultstack>.
 - uid: microsoft.quantum.canon.stackpush
   summary: >2
-     Pushes a new element onto a @"Microsoft.Quantum.Canon.ResultStack".
+     Pushes a new element onto a <xref:microsoft.quantum.canon.resultstack>.
 - uid: microsoft.quantum.canon.stateoraclefromdeterministicstateoracle
-  summary: " Converts an oracle of type `DeterministicStateOracle` to `StateOracle`. \n"
+  summary: >2
+     Converts an oracle of type `DeterministicStateOracle` to `StateOracle`.
 - uid: microsoft.quantum.canon.steanecoderecoveryfns
   summary: >2
-     Function for recovery Pauli operations for given symdrome measurement
-     by table lookup for the ⟦7, 1, 3⟧ Steane quantum code.
+     Decoder for combined X- and Z-parts of the stabilizer group of the
+     ⟦7, 1, 3⟧ Steane quantum code.
+- uid: microsoft.quantum.canon.steanecoderecoveryx
+  summary: >2
+     Decoder for the X-part of the stabilizer group of the ⟦7, 1, 3⟧ Steane quantum code.
+- uid: microsoft.quantum.canon.steanecoderecoveryz
+  summary: >2
+     Decoder for the Z-part of the stabilizer group of the ⟦7, 1, 3⟧ Steane quantum code.
 - uid: microsoft.quantum.canon.subarray
   summary: " Takes an array and a list of locations and \n produces a new array formed from the elements of the original \n array that match the given locations.\n"
 - uid: microsoft.quantum.canon.tablelookuprecovery
+  summary: " For a given table of Pauli operations on a given register of qubits, this function \n returns an object of type `RecoveryFn` which contains all information needed to \n perform a table-lookup decoding with respect to the given array of Pauli operations. \n"
 - uid: microsoft.quantum.canon.tail
   summary: >2
      Returns the last element of the array.
 - uid: microsoft.quantum.canon.targetstatereflectionoracle
   summary: >2
-     Constructs reflection about the target state uniquely marked by the flag qubit state $\ket{1}_f$, prepared the oracle of type "StateOracle".
+     Constructs reflection about the target state uniquely marked by the flag qubit state
+     $\ket{1}_f$, prepared the oracle of type "ReflectionOracle".
 - uid: microsoft.quantum.canon.timedependenttrottersimulationalgorithm
-  summary: " `TimeDependentSimulationAlgorithm` function that uses a Trotter–Suzuki \n decomposition to approximate a unitary operator that solves the \n time-dependent Schr�dinger equation at time $t$. \n"
+  summary: >2
+     `TimeDependentSimulationAlgorithm` function that uses a Trotter–Suzuki
+     decomposition to approximate a unitary operator that solves the
+     time-dependent Schr�dinger equation at time $t$.
 - uid: microsoft.quantum.canon.trottersimulationalgorithm
   summary: " `SimulationAlgorithm` function that uses a Trotter–Suzuki \n decomposition to approximate the time-evolution operator $e^{-i H t}$.\n"
 - uid: microsoft.quantum.canon.trotterstep
@@ -416,7 +434,7 @@ operations:
   summary: >2
      Applies an operation that takes a
      <xref:microsoft.quantum.canon.phaselittleendian> register as input
-     on a target register of type <xref:microsoft.quanutm.canon.littleendian>.
+     on a target register of type <xref:microsoft.quantum.canon.littleendian>.
 - uid: microsoft.quantum.canon.applyleoperationonphaselea
 - uid: microsoft.quantum.canon.applyleoperationonphaselec
 - uid: microsoft.quantum.canon.applyleoperationonphaseleca
@@ -443,7 +461,7 @@ operations:
   summary: >2
      Applies an operation that takes a
      <xref:microsoft.quantum.canon.littleendian> register as input
-     on a target register of type <xref:microsoft.quanutm.canon.phaselittleendian>.
+     on a target register of type <xref:microsoft.quantum.canon.phaselittleendian>.
 - uid: microsoft.quantum.canon.applyphaseleoperationonlea
 - uid: microsoft.quantum.canon.applyphaseleoperationonlec
 - uid: microsoft.quantum.canon.applyphaseleoperationonleca
@@ -697,7 +715,13 @@ operations:
 - uid: microsoft.quantum.canon.modularaddproductphasele
   summary: " The same as ModularAddProductInPlaceLE, but assumes that summand encodes \n integers in QFT basis\n "
 - uid: microsoft.quantum.canon.modularincrementle
-  summary: " Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y\n Then the operation performs the following transformation: \n |y⟩ ↦ |y+a (mod N)⟩\n Integers are encoded in little-endian format.\n"
+  summary: >2
+     Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
+     Then the operation performs the following transformation:
+     \begin{align}
+         \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N}
+     \end{align}
+     Integers are encoded in little-endian format.
 - uid: microsoft.quantum.canon.modularincrementphasele
   summary: " Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y\n Then the operation performs the following transformation: \n |y⟩ ↦ |y+a (mod N)⟩\n Integers are encoded in little-endian format in QFT basis\n"
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
@@ -814,10 +838,13 @@ operations:
      Returns a CSS value representing the ⟦7, 1, 3⟧ Steane code encoder and
      decoder with in-place syndrome measurement.
 - uid: microsoft.quantum.canon.steanecodedecoder
-  summary: " Decodes the ⟦7, 1, 3⟧ Steane quantum code. \n"
+  summary: >2
+     An inverse encoding operation that maps an unencoded quantum register to an encoded quantum
+     register under the ⟦7, 1, 3⟧ Steane quantum code.
 - uid: microsoft.quantum.canon.steanecodeencoder
   summary: >2
-     Encodes into the ⟦7, 1, 3⟧ Steane quantum code.
+     An encoding operation that maps an unencoded quantum register to an encoded quantum register
+     under the ⟦7, 1, 3⟧ Steane quantum code.
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: >2
      Uses SWAP gates to reverse the order of the qubits in
@@ -828,11 +855,24 @@ operations:
      operation $UVU^{\dagger}$ on a target. That is, this operation
      conjugates $V$ with $U$.
 - uid: microsoft.quantum.canon.witha
-  summary: " Given operations implementing operators $U$ and $V$, performs the\n operation $UVU^{\\dagger}$ on a target. That is, this operation\n conjugates $V$ with $U$. \n The modifier 'A' indicates that the inner operation is adjointable.\n"
+  summary: >2
+     Given operations implementing operators $U$ and $V$, performs the
+     operation $UVU^{\dagger}$ on a target. That is, this operation
+     conjugates $V$ with $U$.
+     The modifier 'A' indicates that the inner operation is adjointable.
 - uid: microsoft.quantum.canon.withc
-  summary: " Given operations implementing operators $U$ and $V$, performs the\n operation $UVU^{\\dagger}$ on a target. That is, this operation\n conjugates $V$ with $U$. \n The modifier 'C' indicates that the inner operation is controllable.\n"
+  summary: >2
+     Given operations implementing operators $U$ and $V$, performs the
+     operation $UVU^{\dagger}$ on a target. That is, this operation
+     conjugates $V$ with $U$.
+     The modifier 'C' indicates that the inner operation is controllable.
 - uid: microsoft.quantum.canon.withca
-  summary: " Given operations implementing operators $U$ and $V$, performs the\n operation $UVU^{\\dagger}$ on a target. That is, this operation\n conjugates $V$ with $U$. \n The modifier 'CA' indicates that the inner operation is controllable\n and adjointable.\n"
+  summary: >2
+     Given operations implementing operators $U$ and $V$, performs the
+     operation $UVU^{\dagger}$ on a target. That is, this operation
+     conjugates $V$ with $U$.
+     The modifier 'CA' indicates that the inner operation is controllable
+     and adjointable.
 newtypes:
 - uid: microsoft.quantum.canon.ampampreflectionphases
   summary: >2
@@ -896,9 +936,9 @@ newtypes:
   summary: >2-
      Represents a set of gates that can be readily implemented and used
      to implement simulation algorithms. Elements in the set are indexed
-     by a  @"microsoft.quantum.canon.generatorindex",
+     by a  <xref:microsoft.quantum.canon.generatorindex>,
      and each set is described by a function
-     from `GeneratorIndex` to  @"microsoft.quantum.canon.evolutionunitary",
+     from `GeneratorIndex` to  <xref:microsoft.quantum.canon.evolutionunitary>,
      which are operations
      parameterized by a real number representing time
 - uid: microsoft.quantum.canon.evolutionunitary

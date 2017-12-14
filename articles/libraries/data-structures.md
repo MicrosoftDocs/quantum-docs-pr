@@ -8,6 +8,7 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
+uid: microsoft.quantum.libraries.data-structures
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
@@ -29,8 +30,6 @@ Along with user-defined types for representing quantum concepts, the canon also 
 For instance, the @"microsoft.quantum.canon.reverse" function takes an array as input and returns the same array in reverse order.
 This can then be used on an array of type `Qubit[]` to avoid having to apply unnecessary $\operatorname{SWAP}$ gates when converting between quantum representations of integers.
 Similarly, we saw in the previous section that types of the form `(Int, Int -> T)` can be useful for representing random access collections, so the @"microsoft.quantum.canon.lookupfunction" function provides a convienent way of constructing such types from array types.
-
-<!-- TOOD: point out that MapIndex can be used to reconstruct an array from a lookup function. Also, write MapIndex. -->
 
 ### Pairs ###
 
@@ -64,7 +63,6 @@ ApplyToEach(H, Subarray([2; 5], register));
 When combined with flow control, array manipulation functions such as <xref:microsoft.quantum.canon.zip> can provide a powerful way to express quantum programs:
 
 ```qsharp
-// FIXME: uses type-parameterization, and needs checked.
 // Applies X₃ Y₁ Z₇ to a register of any size.
 ApplyToEach(
     ApplyPauli(_, register),
@@ -99,7 +97,7 @@ The main difference is that these spaces need not be half-spaces in this applica
 Also note that these two subspaces are not usually mutually exclusive: there will be vectors that are members of both spaces.
 If this were not true then amplitude amplification would have no effect so we need the initial subspace to have non-zero overlap with the target subspace.
 
-We will denote the first oracle that we need for amplitude amplification to be $P_0$, defined to have the following action.  For all states $\ket{x}$ in the "initial" subspace $P_0 \ket{x} = -\ket{x}$ and for all states $\ket{y}$ that are not in this subspace we have $P_0 \ket{y} = \ket{y}$.
+We will denote the first oracle that we need for amplitude amplification to be $P\_0$, defined to have the following action.  For all states $\ket{x}$ in the "initial" subspace $P\_0 \ket{x} = -\ket{x}$ and for all states $\ket{y}$ that are not in this subspace we have $P\_0 \ket{y} = \ket{y}$.
 The oracle that marks the target subspace, $P_1$, takes exactly the same form.
 For all states $\ket{x}$ in the target subspace (i.e., for all states that you'd like the algorithm to output), $P_1\ket{x} = -\ket{x}$.
 Similarly, for all states $\ket{y}$ that are not in the target subspace $P_1\ket{y} = \ket{y}$.
@@ -175,8 +173,8 @@ This unitary is customarily described by one of two types of oracles.
 
 > [!TIP]
 > Both of the oracle types described below are covered in the samples.
-> To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](TODO: link).
-> To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](TODO: link).
+> To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](https://github.com/Microsoft/Quantum/Samples/PhaseEstimation).
+> To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/Samples/IsingPhaseEstimation).
 
 The first type of oracle, which we call a discrete query oracle and represent with the user-defined type <xref:microsoft.quantum.canon.discreteoracle>, simply involves a unitary matrix.
 If $U$ is the unitary whose eigenvalues we wish to estimate then the oracle for $U$ is simply a standin for a subroutine that implements $U$.
@@ -204,7 +202,7 @@ This allows us to query matrices such as $\sqrt{U}$, which could not be implemen
 This type of oracle is valuable when you're not probing a particular unitary, but rather wish to learn the properties of the generator of the unitary.
 For example, in dynamical quantum simulation the goal is to devise quantum circuits that closely approximate $U(t)=e^{-i H t}$ for a Hermitian matrix $H$ and evolution time $t$.
 The eigenvalues of $U(t)$ are directly related to the eigenvalues of $H$.
-To see this, consider an eigenvector of $H$: $H \ket{E} = E\ket{E}$ then it is easy to see from the power-series definition of the matrix exponential that $U(t) \ket{E} =e^{i\phi}\ket{E}= e^{-iEt}\ket{E}$.
+To see this, consider an eigenvector of $H$: $H \ket{E} = E\ket{E}$ then it is easy to see from the power-series definition of the matrix exponential that $U(t) \ket{E} = e^{i\phi}\ket{E}= e^{-iEt}\ket{E}$.
 Thus estimating the eigenphase of $U(t)$ gives the eigenvalue $E$ assuming the eigenvector $\ket{E}$ is input into the phase estimation algorithm.
 However, in this case the value $t$ can be chosen at the user's discretion since for any sufficiently small value of $t$ the eigenvalue $E$ can be uniquely inverted through $E=-\phi/t$.
 Since quantum simulation methods provide the ability to perform a fractional evolution, this grants phase estimation algorithms an additional freedom when querying the unitary, specifically while the discrete query model allows only unitaries of the form $U^j$ to applied for integer $j$ the continuous query oracle allows us to approximate unitaries of the form $U^t$ for any real valued $t$.
@@ -216,18 +214,6 @@ In this context, we can simulate $U(t)$ for any $t$ using a single $R_z$ gate an
 Such a continuous model also has the property that frequencies greater than $2\pi$ can be learned from phase estimation processes that use continuous queries because phase information that would otherwise be masked by the branch-cuts of the logarithm function can be revealed from the results of experiments performed on non-commensurate values of $t$.
 Thus for problems such as this continuous query models for the phase estimation oracle are not only appropriate but are also preferable to the discrete query model.
 For this reason Q# has functionality for both forms of queries and leave it to the user to decide upon a phase estimation algorithm to fit their needs and the type of oracle that is available.
-
-<!-- TODO: summarize the following.
-
-    - ReflectionOracle
-    - ContinousOracle (FIXME: rename to ContinuousPhaseOracle)
-    - DiscreteOracle (same FIXME)
-    - StateOracle
-    - DeterministicStateOracle
-    - ObliviousOracle (FIXME: need to expand on the API docs here)
-    - ProbabilityOracle (TODO: add this type.)
-
--->
 
 ## Dynamical Generator Modeling ##
 
@@ -261,14 +247,14 @@ $$
 \end{align}
 $$
 
-where the integer $r>0$ controls the approximation error. 
+where the integer $r > 0$ controls the approximation error.
 
 The dynamical generator modeling library provides a framework for systematically encoding complicated generators in terms of simpler generators. Such a description may then be passed to, say, the simulation library to implement time-evolution by a simulation algorithm of choice, with many details automatically taken care of.
 
 > [!TIP]
 > The dynamical generator library described below is covered in the samples. 
-> For an example based on the Ising model, please see the [**IsingGenerators** sample](TODO: link).
-> For an example based on molecular Hydrogen, please see the [*H2Simulation** sample](TODO: link).
+> For an example based on the Ising model, please see the [**IsingGenerators** sample](https://github.com/Microsoft/Quantum/Samples/IsingGenerators).
+> For an example based on molecular Hydrogen, please see the [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/Samples/H2SimulationCmdLine) and [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/Samples/H2SimulationGUI) samples.
 
 ### Complete Description of a Generator ###
 

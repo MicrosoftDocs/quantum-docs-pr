@@ -3,8 +3,9 @@ uid: microsoft.quantum.canon.paulievolutionfunction
 name: PauliEvolutionFunction
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: " Represents a dynamical generator as a set of simulatable gates and an \n expansion in the Pauli basis.\n"
-remarks: " This is obtained by partial application of \n @\"microsoft.quantum.canon.PauliEvolutionImpl\"."
+summary: >2
+   Represents a dynamical generator as a set of simulatable gates and an
+   expansion in the Pauli basis.
 syntax: 'function PauliEvolutionFunction (generatorIndex : GeneratorIndex) : EvolutionUnitary'
 input:
   content: '(generatorIndex : GeneratorIndex)'
@@ -17,5 +18,7 @@ input:
 output:
   content: EvolutionUnitary
   types:
-  - summary: " An `EvolutionUnitary` representing time-evolution by the term \n referenced in `generatorIndex.\n"
+  - summary: >2-
+       An `EvolutionUnitary` representing time-evolution by the term
+       referenced in `generatorIndex.
     uid: microsoft.quantum.canon.evolutionunitary

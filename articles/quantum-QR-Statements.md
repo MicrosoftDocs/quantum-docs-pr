@@ -8,6 +8,7 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
+uid: microsoft.quantum.qsharp-ref.statements
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
@@ -174,7 +175,7 @@ such as C#, except that Q# symbols, once bound, may not be changed;
 `let` bindings are immutable.
 
 A simple binding statement consists of the keyword `let`, followed by 
-an identifier, an equals sign `=`, an expression to bind the identifer to,
+an identifier, an equals sign `=`, an expression to bind the identifier to,
 and a terminating semicolon. 
 The type of the identifier is defined to be the same as the type of the expression
 it is bound to.
@@ -220,7 +221,7 @@ This statement defines a new symbol binding and specifies that the bound value
 may be changed later in the code.
 
 A mutable binding statement consists of the keyword `mutable`, followed by 
-an identifier, an equals sign `=`, an expression to bind the identifer to,
+an identifier, an equals sign `=`, an expression to bind the identifier to,
 and a terminating semicolon. 
 The type of the identifier is defined to be the same as the type of the expression
 it is bound to.
@@ -246,7 +247,7 @@ The value bound to a mutable symbol may be changed by
 binding the symbol to a new value using the `set` statement.
 
 A mutable rebinding statement consists of the keyword `set`, followed by 
-an identifier, an equals sign `=`, an expression to rebind the identifer to,
+an identifier, an equals sign `=`, an expression to rebind the identifier to,
 and a terminating semicolon. 
 The new value must be compatible with the original type, 
 and will be promoted to the original type.

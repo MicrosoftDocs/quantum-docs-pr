@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >2
    Asserts that the highest bit of an unsigned integer has given value
-remarks: ' Controlled version of the operation ignores controls'
+remarks: ' The controlled version of this operation ignores controls.'
 syntax: 'operation AssertHighestBit (value : Result, number : LittleEndian) : ()'
 input:
   content: '(value : Result, number : LittleEndian)'

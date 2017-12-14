@@ -1,13 +1,14 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+title: Expressions | Microsoft Docs 
+description: Expressions
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
+uid: microsoft.quantum.qsharp-ref.expressions
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # ms.service: service-name-from-white-list
 # product-name-from-white-list
@@ -25,14 +26,14 @@ ms.topic: article-type-from-white-list
 
 ## Grouping
 
-Given any expression, that same expression enclosed in parentheses 
+Given any expression, that same expression enclosed in parentheses
 is an expression of the same type.
-For instance, `(7)` is an `Int` expression, 
+For instance, `(7)` is an `Int` expression,
 `([1;2;3])` is an expression of type array of `Int`s,
 and `((1,2))` is an expression with type `(Int, Int)`.
 
-The equivalence between simple values and single-element tuples described in 
-[Single-Element Tuples](articles/quantum-QR-TypeModel#single-element-tuples) above removes the ambiguity 
+The equivalence between simple values and single-element tuples described in
+<xref:microsoft.quantum.qsharp-ref.type-model#tuple-types> above removes the ambiguity
 between `(6)` as a group and `(6)` as a single-element tuple.
 
 ## Symbols
@@ -76,7 +77,7 @@ The second parameter to either shift operation must be greater than or
 equal to zero.
 The behavior for shifting negative numbers is undefined. 
 
-Integer division and integer moduls follow the same behavior for
+Integer division and integer modulus follow the same behavior for
 negative numbers as C#.
 That is, `a % b` will always have the same sign as `a`, 
 and `b * (a / b) + a % b` will always equal `a`.
@@ -158,7 +159,7 @@ If an operation supports the `Adjoint` functor, then `(Adjoint op)`
 is an operation expression.
 Similarly, if the operation supports the `Controlled` functor, then 
 `(Controlled op)` is an operation expression.
-The types of these expressions are specified above in [Functors](articles/quantum-QR-TypeModel#functors).
+The types of these expressions are specified above in [Functors](xref:microsoft.quantum.qsharp-ref.type-model#functors).
 
 ## Callable Invocation Expressions
 
@@ -273,7 +274,7 @@ Thus, for these types, the default is an invalid
 reference that cannot be used without causing a runtime error.
 This is similar to a null reference in languages such as C# or Java.
 Arrays containing qubits or callables must be filled in using 
-[`set`](articles/quantum-QR-Statements#updating-mutable-symbols) statements 
+[`set`](xref:microsoft.quantum.qsharp-ref.type-model.statements#updating-mutable-symbols) statements 
 before their elements may be safely used. Array elements can only be set if the 
 array is declared as being mutable, e.g. `mutable array = new Int[5]`. 
 Arrays passed as arguments are immutable. 
@@ -296,7 +297,7 @@ Type | Default
 Tuple types are initialized element-by-element.
 
 Array creation is primarily of use initializing mutable arrays, 
-on the right-hand side of a [`mutable`](articles/quantum-QR-Statements#mutable-symbols) statement.
+on the right-hand side of a [`mutable`]microsoft.quantum.qsharp-ref.type-model.statements#mutable-symbols) statement.
 
 ### Array Slices
 

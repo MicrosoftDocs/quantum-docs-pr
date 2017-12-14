@@ -3,7 +3,7 @@
 title: Setting up the Q# development environment 
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com 
-ms.date: 10/09/2017
+ms.date: 12/11/2017
 ms.topic: article
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # For Quantum products none of these categories have been defined  yet.

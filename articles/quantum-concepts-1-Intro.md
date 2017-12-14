@@ -2,7 +2,6 @@
 # Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Quantum Computing Concepts
 description: What is quantum computing?
-keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
 ms.author: nawiebe@microsoft.com
 uid: microsoft.quantum.concepts.intro

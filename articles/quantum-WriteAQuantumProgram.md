@@ -2,25 +2,16 @@
 # Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Write a quantum program | Microsoft Docs 
 description: Learn how to write a quantum program in Q#. Develop a Bell  State application in Visual Studio.
-services: service-name-with-dashes-AZURE-ONLY 
-keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
-ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.author: Alan.Geller@microsoft.com 
+ms.date: 12/11/2017
+ms.topic: article
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
+# For Quantum products none of these categories have been defined  yet.
 # ms.service: service-name-from-white-list
-# product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.devlang:devlang-from-white-list
-# ms.suite: 
-# ms.tgt_pltfrm:
-# ms.reviewer:
-# manager: MSFT-alias-manager-or-PM-counterpart
+# ms.prod: product-name-from-white-list
+# ms.technology: tech-name-from-white-list
 ---
-
 # Writing a Quantum Program
 
 ## What You'll Learn

@@ -2,22 +2,15 @@
 # Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Distinct inputs checker | Quantum computer trace simulator | Microsoft Docs 
 description: Overview of quantum computer trace simulator 
-#keywords: Don’t add or edit keywords without consulting your SEO champ. 
 author: vadym-kl 
 ms.author: vadym@microsoft.com 
-ms.date: 11/12/2017 
-ms.topic: article-type-from-white-list 
-# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field. 
+ms.date: 12/11/2017
+ms.topic: article
+# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
+# For Quantum products none of these categories have been defined  yet.
 # ms.service: service-name-from-white-list
-# product-name-from-white-list
-
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.devlang:devlang-from-white-list
-# ms.suite: 
-# ms.tgt_pltfrm:
-# ms.reviewer:
-# manager: MSFT-alias-manager-or-PM-counterpart
+# ms.prod: product-name-from-white-list
+# ms.technology: tech-name-from-white-list
 ---
 
 # Distinct Inputs Checker

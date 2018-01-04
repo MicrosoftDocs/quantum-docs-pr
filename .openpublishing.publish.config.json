@@ -92,6 +92,5 @@
       "path_to_root": "_dependentPackages/MarkdigEngine",
       "version": "latest"
     }
-  ],
-  "need_generate_pdf_url_template": false
+  ]
 }

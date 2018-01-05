@@ -62,7 +62,8 @@
       "Publish"
     ],
     "master": [
-      "Publish"
+      "Publish",
+      "Pdf"
     ]
   },
   "Targets": {

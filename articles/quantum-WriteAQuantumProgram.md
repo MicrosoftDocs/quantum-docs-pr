@@ -34,6 +34,7 @@ Open up Visual Studio 2017.
 Go to the `File` menu and select `New` > `Project...`.
 In the project template explorer, under `Installed` > `Visual C#`,
 select the `Q# Application` template.
+Make sure you have `.NET Framework 4.6.1` selected in the list at the top of the `New Project` dialog box.
 Give your project the name `Bell`.
 
 ### Step 2 (optional): Update NuGet Packages
@@ -61,6 +62,7 @@ The `Bell.qs` file should have the following contents:
 namespace Quantum.Bell
 {
     open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Canon;
 
     operation Operation () : ()
     {
@@ -81,6 +83,7 @@ The file should now look like:
 namespace Quantum.Bell
 {
     open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Canon;
 
     operation Set (desired: Result, q1: Qubit) : ()
     {
@@ -109,6 +112,7 @@ The file should now look like:
 namespace Quantum.Bell
 {
     open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Canon;
 
     operation Set (desired: Result, q1: Qubit) : ()
     {
@@ -305,7 +309,7 @@ Press any key to continue...
 
 The program will exit after you press a key.
 
-### Step 5: Creating Superposition
+### Step 6: Creating Superposition
 
 Now we want to manipulate the qubit. First we'll just try to flip it. This is accomplished by performing an `X` gate before we measure it in `BellTest`:
 
@@ -337,7 +341,7 @@ Init:One  0s=522  1s=478
 
 Every time we measure, we ask for a classical value, but the qubit is halfway between 0 and 1, so we get (statistically) 0 half the time and 1 half the time. This is known as __superposition__ and gives us our first real view into a quantum state.
 
-### Step 6 Creating Entanglement
+### Step 7: Creating Entanglement
 
 Now we'll make the promised [Bell State](https://en.wikipedia.org/wiki/Bell_state) and show off __entanglement__. The first thing we'll need to do is allocate 2 qubits instead of one in `BellTest`:
 
@@ -356,7 +360,7 @@ This will allow us to add a new gate (`CNOT`) before we measure  (`M`) in `BellT
                     let res = M (qubits[0]);
 ```
 
-Another line as also add to initialize qubit 1 to make sure that it's always in the `Zero` state when we start.
+We've added another `Set` operation to initialize qubit 1 to make sure that it's always in the `Zero` state when we start.
 
 We also need to reset the second qubit before releasing it (this could also be done with a `for` loop). We'll add a line after qubit 0 is reset:
 

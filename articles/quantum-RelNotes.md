@@ -15,6 +15,18 @@ ms.topic: article
 
 # Microsoft Quantum Development Kit Preview Release Notes
 
+
+# Version 0.1.1801.1707
+
+This release fixes some issues reported by the community. Namely:
+
+- The simulator now works with early non-AVX-enabled CPUs.
+- Regional decimal settings will not causes the Q# parser to fail.
+- Changed the `SignD` primitive operation to return `Int` rather than `Double`
+
+
+# Version 0.1.1712.901
+
 ## Known Issues
 
 ### Hardware and Software Requirements

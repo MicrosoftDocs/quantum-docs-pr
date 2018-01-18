@@ -15,6 +15,12 @@ syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubi
 input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
   types:
+  - name: numerator
+    summary: >2-
+       Numerator ($k$) in the dyadic fraction representation of the angle
+       by which the qubit register is to be rotated.
+    uid: Int
+    isPrimitive: true
   - name: paulis
     summary: >2-
        Array of single-qubit Pauli values indicating the tensor product
@@ -22,12 +28,6 @@ input:
     uid: Pauli
     isPrimitive: true
     isArray: true
-  - name: numerator
-    summary: >2-
-       Numerator ($k$) in the dyadic fraction representation of the angle
-       by which the qubit register is to be rotated.
-    uid: Int
-    isPrimitive: true
   - name: power
     summary: >2-
        Power of two ($n$) specifying the denominator of the angle by which

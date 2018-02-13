@@ -30,12 +30,23 @@ We'll start with the simplest program possible and build it up to demonstrate qu
 
 ### Step 1: Create a Project and Solution
 
+#### [Visual Studio 2017](#tab/tabid-vs2017-step1)
+
 Open up Visual Studio 2017.
 Go to the `File` menu and select `New` > `Project...`.
 In the project template explorer, under `Installed` > `Visual C#`,
 select the `Q# Application` template.
 Make sure you have `.NET Framework 4.6.1` selected in the list at the top of the `New Project` dialog box.
 Give your project the name `Bell`.
+
+#### [Visual Studio Code](#tab/tabid-vscode-step1)
+
+```bash
+$ dotnet new console -lang Q# --output Bell
+$ cd Bell
+```
+
+***
 
 ### Step 2 (optional): Update NuGet Packages
 

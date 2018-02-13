@@ -395,7 +395,7 @@ Every time we measure, we ask for a classical value, but the qubit is halfway be
 Now we'll make the promised [Bell State](https://en.wikipedia.org/wiki/Bell_state) and show off __entanglement__. The first thing we'll need to do is allocate 2 qubits instead of one in `BellTest`:
 
 ```qsharp
-            using (qubits = Qubit[2])
+            using (qubits = Qubit[2]) {
 ```
 
 This will allow us to add a new gate (`CNOT`) before we measure  (`M`) in `BellTest`:

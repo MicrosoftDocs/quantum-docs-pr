@@ -23,6 +23,7 @@ ms.topic: article
 ## Optional Prerequisites
 
 - Microsoft's quantum simulator, installed with the Quantum Development Kit, utilizes Advance Vector Extensions (AVX), and thus can run significantly more efficiently on an AVX-enabled CPU.
+  The Quantum Development Kit will still run on non–AVX enabled CPUs, but may not be as efficient.
   Intel processors shipped in Q1 2011 (Sandy Bridge) or later support AVX.
 - A development environment with .NET Core support:
     - For Windows, macOS or Linux: We recommend [Visual Studio Code](https://code.visualstudio.com/) and the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.microsoft-quantum-development-kit-vscode).

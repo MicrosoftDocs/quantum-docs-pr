@@ -41,10 +41,12 @@ Give your project the name `Bell`.
 
 #### [Visual Studio Code](#tab/tabid-vscode-step1)
 
-```bash
-$ dotnet new console -lang Q# --output Bell
-$ cd Bell
-```
+Run the following commands in your favorite command line (e.g.: PowerShell or Bash):
+
+    ```bash
+    $ dotnet new console -lang Q# --output Bell
+    $ cd Bell
+    ```
 
 ***
 

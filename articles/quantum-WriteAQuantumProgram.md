@@ -28,9 +28,12 @@ Now that you’ve installed the Microsoft Quantum Development Kit and seen
 how it works, let’s write your first quantum application.
 We'll start with the simplest program possible and build it up to demonstrate quantum superposition and quantum entanglement. We will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
 
+The instructions on the page are written for both Visual Studio 2017 and for Visual Studio Code.
+If you are using a different development environment, please follow the instructions for Visual Studio Code, using the command line to call the .NET Core SDK.
+
 ### Step 1: Create a Project and Solution
 
-#### [Visual Studio 2017](#tab/tabid-vs2017-step1)
+#### [Visual Studio 2017](#tab/tabid-vs2017)
 
 Open up Visual Studio 2017.
 Go to the `File` menu and select `New` > `Project...`.
@@ -39,26 +42,40 @@ select the `Q# Application` template.
 Make sure you have `.NET Framework 4.6.1` selected in the list at the top of the `New Project` dialog box.
 Give your project the name `Bell`.
 
-#### [Visual Studio Code](#tab/tabid-vscode-step1)
+#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
 Run the following commands in your favorite command line (e.g.: PowerShell or Bash):
 
     ```bash
     $ dotnet new console -lang Q# --output Bell
-    $ cd Bell
+    $ cd Bell # At the command line.
+    $ code Bell # To open in Visual Studio Code.
     ```
 
 ***
 
 ### Step 2 (optional): Update NuGet Packages
 
+#### [Visual Studio 2017](#tab/tabid-vs2017)
+
 If you want to run the latest version, update the `Microsoft.Quantum.Development.Kit` and `Microsoft.Quantum.Canon` NuGet packages, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package).
+
+#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+
+Run the following from the command line:
+
+    ```bash
+    $ dotnet add package Microsoft.Quantum.Development.Kit
+    $ dotnet add package Microsoft.Quantum.Canon
+    ```
+
+***
 
 ### Step 3: Enter the Q# Code
 
 Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
 
-Visual Studio should have two files open:
+Your development environment should have two files open:
 `Driver.cs`, which will hold the C# driver for your quantum code,
 and `Operation.qs`, which will hold the quantum code itself.
 
@@ -248,7 +265,7 @@ to its argument qubit.
 
 ### Step 4: Enter the C# Driver Code
 
-Switch to the `Driver.cs` file in Visual Studio.
+Switch to the `Driver.cs` file in your development environment.
 This file should have the following contents:
 
 ```csharp
@@ -310,7 +327,26 @@ In the `Main` method, enter the following code:
 
 ### Step 5: Build and Run
 
+#### [Visual Studio 2017](#tab/tabid-vs2017)
+
 Just hit `F5`, and your program should build and run!
+
+#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+
+Run the following at your terminal:
+
+    ```bash
+    $ dotnet run
+    ```
+
+This will automatically download all required packages, build the application, then run it at the commmand line.
+
+Alternatively, press **F1** to open the Command Palette and select "Debug: Start Without Debugging."
+You may be prompted to create a new ``launch.json`` file describing how to start the program.
+The default ``launch.json`` should work well for most applications.
+
+***
+
 
 The results should be:
 

@@ -46,11 +46,11 @@ Give your project the name `Bell`.
 
 Run the following commands in your favorite command line (e.g.: PowerShell or Bash):
 
-    ```bash
-    $ dotnet new console -lang Q# --output Bell
-    $ cd Bell # At the command line.
-    $ code Bell # To open in Visual Studio Code.
-    ```
+```bash
+$ dotnet new console -lang Q# --output Bell
+$ cd Bell # At the command line.
+$ code Bell # To open in Visual Studio Code.
+```
 
 ***
 
@@ -64,10 +64,10 @@ If you want to run the latest version, update the `Microsoft.Quantum.Development
 
 Run the following from the command line:
 
-    ```bash
-    $ dotnet add package Microsoft.Quantum.Development.Kit
-    $ dotnet add package Microsoft.Quantum.Canon
-    ```
+```bash
+$ dotnet add package Microsoft.Quantum.Development.Kit
+$ dotnet add package Microsoft.Quantum.Canon
+```
 
 ***
 
@@ -335,9 +335,9 @@ Just hit `F5`, and your program should build and run!
 
 Run the following at your terminal:
 
-    ```bash
-    $ dotnet run
-    ```
+```bash
+$ dotnet run
+```
 
 This will automatically download all required packages, build the application, then run it at the commmand line.
 

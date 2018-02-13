@@ -14,12 +14,22 @@ ms.topic: article
 
 # Installing and Validating the Q# Development Environment
 
+## Required Prerequisites
 
-## Prerequisites
+- A 64-bit installation of Windows, macOS, or Linux.
+  The Quantum Development Kit has been tested under Ubuntu Linux, but may work on other distributions.
+- The [.NET Core SDK 2.0](https://www.microsoft.com/net/learn/get-started) or later.
 
-- Microsoft's quantum simulator, installed with the Quantum Development Kit, utilizes Advance Vector Extensions (AVX), and requires an AVX-enabled CPU. Intel processors shipped in Q1 2011 (Sandy Bridge) or later support AVX. We are evaluating support for earlier CPUs and may announce details at a later time.
-- The simulator included with the Quantum Development Kit requires a 64-bit installation of Microsoft Windows to run.
-- Visual Studio 2017
+## Optional Prerequisites
+
+- Microsoft's quantum simulator, installed with the Quantum Development Kit, utilizes Advance Vector Extensions (AVX), and thus can run significantly more efficiently on an AVX-enabled CPU.
+  Intel processors shipped in Q1 2011 (Sandy Bridge) or later support AVX.
+- A development environment with .NET Core support:
+    - For Windows, macOS or Linux: [Visual Studio Code](https://code.visualstudio.com/) and the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).
+    - For Windows: Visual Studio 2017.
+      (NB: Visual Studio for Mac has not yet been tested.)
+- Some samples use the Node.js Package Manager (NPM) to handle user interface dependencies.
+  NPM can be installed [manually](https://nodejs.org/en/download/current/) or through a [package manager](https://nodejs.org/en/download/package-manager/).
 
 If you do not have Visual Studio installed, you can download Visual Studio 2017 Community Edition for free.
 1. Go to the [Visual Studio download page](https://www.visualstudio.com/downloads/).
@@ -28,7 +38,7 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 3. _**Important!**_ &nbsp;When you are presented with the option to select the tools for specific workloads, check the boxes for **Universal Windows Platform development** and **.NET desktop development**
 4. After selecting your workloads, click **Install** to complete the installation.
 
-## Creating the Q# Development Environment 
+## Creating the Q# Development Environment
 
 1. Install the Microsoft Quantum Development Kit
 

@@ -24,7 +24,7 @@ ms.topic: article
 
 ## Creating a Bell State in Q#
 
-Now that you’ve installed the Microsoft Quantum Development Kit and seen
+Now that you’ve [installed the Microsoft Quantum Development Kit](quantum-InstallConfig.md) and seen
 how it works, let’s write your first quantum application.
 We'll start with the simplest program possible and build it up to demonstrate quantum superposition and quantum entanglement. We will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
 
@@ -48,30 +48,13 @@ Run the following commands in your favorite command line (e.g.: PowerShell or Ba
 
 ```bash
 $ dotnet new console -lang Q# --output Bell
-$ cd Bell # At the command line.
-$ code Bell # To open in Visual Studio Code.
+$ cd Bell 
+$ code . # To open in Visual Studio Code.
 ```
 
 ***
 
-### Step 2 (optional): Update NuGet Packages
-
-#### [Visual Studio 2017](#tab/tabid-vs2017)
-
-If you want to run the latest version, update the `Microsoft.Quantum.Development.Kit` and `Microsoft.Quantum.Canon` NuGet packages, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package).
-
-#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
-
-Run the following from the command line:
-
-```bash
-$ dotnet add package Microsoft.Quantum.Development.Kit
-$ dotnet add package Microsoft.Quantum.Canon
-```
-
-***
-
-### Step 3: Enter the Q# Code
+### Step 2: Enter the Q# Code
 
 Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
 
@@ -263,7 +246,7 @@ to its argument qubit.
 > Q# uses tuples as a way to pass multiple values, rather than using
 > structures or records.
 
-### Step 4: Enter the C# Driver Code
+### Step 3: Enter the C# Driver Code
 
 Switch to the `Driver.cs` file in your development environment.
 This file should have the following contents:
@@ -325,7 +308,7 @@ In the `Main` method, enter the following code:
 >   We deconstruct the tuple to get the two fields, print the results,
 >   and then wait for a keypress.
 
-### Step 5: Build and Run
+### Step 4: Build and Run
 
 #### [Visual Studio 2017](#tab/tabid-vs2017)
 
@@ -358,7 +341,7 @@ Press any key to continue...
 
 The program will exit after you press a key.
 
-### Step 6: Creating Superposition
+### Step 5: Creating Superposition
 
 Now we want to manipulate the qubit. First we'll just try to flip it. This is accomplished by performing an `X` gate before we measure it in `BellTest`:
 
@@ -390,7 +373,7 @@ Init:One  0s=522  1s=478
 
 Every time we measure, we ask for a classical value, but the qubit is halfway between 0 and 1, so we get (statistically) 0 half the time and 1 half the time. This is known as __superposition__ and gives us our first real view into a quantum state.
 
-### Step 7: Creating Entanglement
+### Step 6: Creating Entanglement
 
 Now we'll make the promised [Bell State](https://en.wikipedia.org/wiki/Bell_state) and show off __entanglement__. The first thing we'll need to do is allocate 2 qubits instead of one in `BellTest`:
 

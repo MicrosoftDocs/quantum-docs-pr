@@ -443,6 +443,7 @@ The full routine now looks like this:
                         set numOnes = numOnes + 1;
                     }
                 }
+                
                 Set(Zero, qubits[0]);
                 Set(Zero, qubits[1]);
             }
@@ -483,8 +484,9 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
                         set numOnes = numOnes + 1;
                     }
                 }
-            Set(Zero, qubits[0]);
-            Set(Zero, qubits[1]);
+                
+                Set(Zero, qubits[0]);
+                Set(Zero, qubits[1]);
             }
             // Return number of times we saw a |0> and number of times we saw a |1>
             return (count-numOnes, numOnes, agree);

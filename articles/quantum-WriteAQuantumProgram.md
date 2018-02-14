@@ -63,8 +63,7 @@ Your development environment should have two files open:
 and `Operation.qs`, which will hold the quantum code itself.
 
 The first step is to rename the Q# file to `Bell.qs`.
-Right-click on `Operation.qs` in the Visual Studio
-Solution Explorer, and select the Rename option.
+Right-click on `Operation.qs` in the Visual Studio Solution Explorer (Ctrl+Alt+L to focus) or the Visual Studio Code Explorer (Ctrl/⌘+Shift+E to focus), and select the Rename option.
 Replace `Operation` with `Bell` and hit return.
 
 To enter the Q# code, make sure that you are editing the

@@ -33,15 +33,13 @@ ms.topic: article
   NPM can be installed [manually](https://nodejs.org/en/download/current/) or through a [package manager](https://nodejs.org/en/download/package-manager/).
 - The Python interoperability feature has been developed for the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3.6.
 
+### Installing Visual Studio 2017
+
 If you do not have Visual Studio installed, you can download Visual Studio 2017 Community Edition for free.
 1. Go to the [Visual Studio download page](https://www.visualstudio.com/downloads/).
 1. Click on the Visual Studio Community **Free download** button.
 2. Navigate to your browser's download folder and double click on the executable file whose name begins with **vs_community**. The file name will contain a sequence of numbers that varies.
-3. _**Important!**_ &nbsp;When you are presented with the option to select the tools for specific workloads, check the boxes for:
-    - **Universal Windows Platform development**,
-    - **.NET desktop development**, and
-    - **.NET Core cross-platform development**.
-  If there are any other workloads you would like to install, you can select them as well at this step.
+3. _**Important!**_ &nbsp;When you are presented with the option to select the tools for specific workloads, check the box for **.NET Core cross-platform development**. If there are any other workloads you would like to install, you can select them as well at this step.
 4. After selecting your workloads, click **Install** to complete the installation.
 
 ## Creating and Validating the Q# Development Environment

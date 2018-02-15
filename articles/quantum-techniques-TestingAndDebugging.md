@@ -28,10 +28,24 @@ Q# supports creating unit tests for quantum programs, and which can be executed 
 
 ### Creating a Test Project
 
+#### [Visual Studio 2017](#tab/tabid-vs2017)
+
 Open Visual Studio 2017. Go to the `File` menu and select `New` > `Project...`.
 In the project template explorer, under `Installed` > `Visual C#`,
-select the `Q# Test Project` template. This will create a project with two files open. 
+select the `Q# Test Project` template.
 
+#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+
+From your favorite command line, run the following command:
+```bash
+$ dotnet new xunit -lang Q# -o Tests
+$ cd Tests
+$ code . # To open in Visual Studio Code
+```
+
+****
+
+In either case, your new project will have two files open.
 The first file, `Tests.qs`, provides a convenient place to define new Q# unit tests.
 Initially this file contains one sample unit test `AllocateQubitTest` which checks that a newly allocated qubit is in the $\ket{0}$ state and prints a message:
 
@@ -58,15 +72,15 @@ The framework passes the unit test description to the method through `op` argume
 ```csharp
 op.TestOperationRunner(sim);
 ```
-executes the unit test on `QuantumSimulator`. 
+executes the unit test on `QuantumSimulator`.
 
 By default, the unit test discovery mechanism looks for all Q# functions or operations with signatures `() => ()` or `() -> ()`
-that satisfy the following properties: 
+that satisfy the following properties:
 * Located in the same assembly as the method annotated with the `OperationDriver` attribute.
 * Located in the same namespace as the method annotated with the `OperationDriver` attribute.
 * Has a name ending with `Test`.
 
-An assembly, a namespace, and a suffix for unit test functions and operations can be set using optional parameters of the `OperationDriver` attribute: 
+An assembly, a namespace, and a suffix for unit test functions and operations can be set using optional parameters of the `OperationDriver` attribute:
 * `AssemblyName` parameter sets the name of the assembly which is being searched for tests.
 * `TestNamespace` parameter sets the name of the namespace which is being searched for tests.
 * `Suffix` sets the suffix of operation or function names that are considered to be unit tests.
@@ -78,6 +92,8 @@ of found tests. This can be useful to indicate, for instance, which simulator is
 
 ### Running Q# Unit Tests
 
+#### [Visual Studio 2017](#tab/tabid-vs2017)
+
 As a one-time per-solution setup, go to `Test` menu and select `Test Settings` > `Default Processor Architecture` > `X64`.
 
 > [!TIP]
@@ -86,35 +102,36 @@ As a one-time per-solution setup, go to `Test` menu and select `Test Settings` >
 
 Build the project, go to the `Test` menu and select `Windows` > `Test Explorer`. `AllocateQubitTest` will show up in the list of tests in the `Not Run Tests` group. Select `Run All` or run this individual test, and it should pass!
 
+#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+
 Alternatively, you can run Q# xUnit tests from the command line. Let's assume that your project name is `QSharpTestProject1`, and you've built it in Debug mode. To run tests, navigate to the project folder (the folder which contains `QSharpTestProject1.csproj`), and execute the command
 
-```
-vstest.console.exe .\bin\Debug\QSharpTestProject1.dll /Platform:x64
+```bash
+$ dotnet test
 ```
 
-from [Developer Command Prompt for Visual Studio](https://docs.microsoft.com/en-us/dotnet/framework/tools/developer-command-prompt-for-vs).
 You should get output similar to the following:
 
 ```
-Microsoft (R) Test Execution Command Line Tool Version 15.0.26720.2
+Build started, please wait...
+Build completed.
+
+Test run for C:\Users\...\Tests\bin\Debug\netcoreapp2.0\Tests.dll(.NETCoreApp,Version=v2.0)
+Microsoft (R) Test Execution Command Line Tool Version 15.3.0-preview-20170628-02
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
-Warning: Using Isolation mode to run tests as required by effective Platform:X64 and .Net Framework:Framework40 settings for test run. Use the /inIsolation parameter to suppress this warning.
-Information: [xUnit.net 00:00:01.0018943]   Discovering: QSharpTestProject1
-
-Information: [xUnit.net 00:00:01.4948065]   Discovered:  QSharpTestProject1
-
-Information: [xUnit.net 00:00:01.5081234]   Starting:    QSharpTestProject1
-
-Information: [xUnit.net 00:00:02.0242517]   Finished:    QSharpTestProject1
-
-Passed   AllocateQubitTest
+[xUnit.net 00:00:00.5304293]   Discovering: Tests
+[xUnit.net 00:00:00.6632543]   Discovered:  Tests
+[xUnit.net 00:00:00.7074059]   Starting:    Tests
+[xUnit.net 00:00:00.8950589]   Finished:    Tests
 
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 3.0038 Seconds
+Test execution time: 1.8743 Seconds
 ```
+
+***
 
 ## Logging and Assertions
 

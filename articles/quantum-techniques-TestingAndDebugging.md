@@ -107,28 +107,25 @@ Build the project, go to the `Test` menu and select `Windows` > `Test Explorer`.
 To run tests, navigate to the project folder (the folder which contains `Tests.csproj`), and execute the command:
 
 ```bash
-$ dotnet test
+$ dotnet restore
+$ dotnet xunit
 ```
 
 You should get output similar to the following:
 
 ```
-Build started, please wait...
-Build completed.
-
-Test run for C:\Users\...\Tests\bin\Debug\netcoreapp2.0\Tests.dll(.NETCoreApp,Version=v2.0)
-Microsoft (R) Test Execution Command Line Tool Version 15.3.0-preview-20170628-02
-Copyright (c) Microsoft Corporation.  All rights reserved.
-
-Starting test execution, please wait...
-[xUnit.net 00:00:00.5304293]   Discovering: Tests
-[xUnit.net 00:00:00.6632543]   Discovered:  Tests
-[xUnit.net 00:00:00.7074059]   Starting:    Tests
-[xUnit.net 00:00:00.8950589]   Finished:    Tests
-
-Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
-Test Run Successful.
-Test execution time: 1.8743 Seconds
+Detecting target frameworks in Tests.csproj...
+Building for framework netcoreapp2.0...
+  Tests -> C:\Users\...\Tests\bin\Debug\netcoreapp2.0\Tests.dll
+Running .NET Core 2.0.0 tests for framework netcoreapp2.0...
+xUnit.net Console Runner (64-bit .NET Core 4.6.00001.0)
+  Discovering: Tests
+  Discovered:  Tests
+  Starting:    Tests
+Test passed
+  Finished:    Tests
+=== TEST EXECUTION SUMMARY ===
+   Tests  Total: 1, Errors: 0, Failed: 0, Skipped: 0, Time: 0.237s
 ```
 
 ***
@@ -156,9 +153,17 @@ using (var sim = new QuantumSimulator())
 }
 ```
 
+#### [Visual Studio 2017](#tab/tabid-vs2017)
+
 After you execute a test in Test Explorer and click on the test, a panel will appear with information about test execution: Passed/Failed status, elapsed time and an "Output" link. If you click the "Output" link, test output will open in a new window.
 
 ![test output](media/unit-test-output.png "Accessing Xunit test output")
+
+#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+
+The pass/fail status for each test is printed to the console by `dotnet xunit`, along with any test outputs logged as a result of the `output.WriteLine(msg)` call above.
+
+***
 
 ### Assertions
 
@@ -196,3 +201,4 @@ The <xref:microsoft.quantum.canon> namespace provides several more functions of 
 ## Debugging
 
 Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/en-us/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger) and [inspecting values of classic variables](https://docs.microsoft.com/en-us/visualstudio/debugger/autos-and-locals-windows) during code execution on simulator.
+Debugging in Visual Studio Code is not yet supported.

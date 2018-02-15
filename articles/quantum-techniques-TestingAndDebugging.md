@@ -104,7 +104,7 @@ Build the project, go to the `Test` menu and select `Windows` > `Test Explorer`.
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
-Alternatively, you can run Q# xUnit tests from the command line. Let's assume that your project name is `QSharpTestProject1`, and you've built it in Debug mode. To run tests, navigate to the project folder (the folder which contains `QSharpTestProject1.csproj`), and execute the command
+To run tests, navigate to the project folder (the folder which contains `Tests.csproj`), and execute the command:
 
 ```bash
 $ dotnet test

@@ -27,6 +27,15 @@ input:
     uid: Pauli
     isPrimitive: true
     isArray: true
+  - name: msg
+    summary: >2
+       A message to be reported if the assertion fails.
+    uid: String
+    isPrimitive: true
+  - name: prob
+    summary: ' The probability with which the given result is expected.'
+    uid: Double
+    isPrimitive: true
   - name: qubits
     summary: ' A register on which to make the assertion.'
     uid: Qubit
@@ -35,15 +44,6 @@ input:
   - name: result
     summary: ' An expected result of `Measure(bases, qubits)`.'
     uid: Result
-    isPrimitive: true
-  - name: prob
-    summary: ' The probability with which the given result is expected.'
-    uid: Double
-    isPrimitive: true
-  - name: msg
-    summary: >2
-       A message to be reported if the assertion fails.
-    uid: String
     isPrimitive: true
   - name: tol
     uid: Double

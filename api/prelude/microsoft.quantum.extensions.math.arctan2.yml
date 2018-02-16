@@ -10,10 +10,10 @@ syntax: 'function ArcTan2 (y : Double, x : Double) : Double'
 input:
   content: '(y : Double, x : Double)'
   types:
-  - name: y
+  - name: x
     uid: Double
     isPrimitive: true
-  - name: x
+  - name: y
     uid: Double
     isPrimitive: true
 output:

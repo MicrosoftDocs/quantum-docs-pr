@@ -22,14 +22,14 @@ input:
     summary: ' Pauli operator ($\mu$) to be exponentiated to form the rotation.'
     uid: Pauli
     isPrimitive: true
-  - name: theta
-    summary: ' Angle about which the qubit is to be rotated.'
-    uid: Double
-    isPrimitive: true
   - name: qubit
     summary: >2
        Qubit to which the gate should be applied.
     uid: Qubit
+    isPrimitive: true
+  - name: theta
+    summary: ' Angle about which the qubit is to be rotated.'
+    uid: Double
     isPrimitive: true
 output:
   content: ()

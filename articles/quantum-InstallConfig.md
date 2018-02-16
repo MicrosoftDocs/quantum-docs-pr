@@ -89,7 +89,7 @@ In this section you will clone the quantum samples & libraries, and run a sample
           Teleportation successful!!
   ```
 
-### Visual Studo (Windows only) ###
+### Visual Studio (Windows only) ###
 
 1. If you haven't already, install [Visual Studio 2017](https://www.visualstudio.com/) and the [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension.
 

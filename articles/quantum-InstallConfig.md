@@ -89,9 +89,11 @@ In this section you will clone the quantum samples & libraries, and run a sample
           Teleportation successful!!
   ```
 
-### Visual Studo (Windows only) ###
+### Visual Studio (Windows only) ###
 
-1. Clone and open the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.
+1. Download and install the [Microsoft Quantum Developer Kit Extension for Visual Studio](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
+
+2. Clone and open the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.
     1. Open Visual Studio.
     2. Open the **Connect** view in **Team Explorer** (`Team` > `Manage Connections`)
     3. Select **Clone** under **Local Git Repositories** and enter `https://github.com/Microsoft/Quantum.git`
@@ -100,7 +102,7 @@ In this section you will clone the quantum samples & libraries, and run a sample
     6. Open the `QsharpLibraries.sln` solution.
       - If prompted by the **Install Missing Features** pane, click **Install** to allow the installation of the necessary features. This is most often F# and tools used by some of the samples.
 
-2. Validate your Q# environment by running the teleport sample program:
+3. Validate your Q# environment by running the teleport sample program:
    1. Right click on the `TeleportationSample` project in `Samples` > `0.Introduction` folder of `QsharpLibraries` solution, and left click on "Set as Startup Project".
    2. Run the solution (F5.) If teleport runs and the output is similar to the following (has 8 rounds of successful teleportation with varying values True/False sent each round), your Q# environment is ready to support Q# development.
 

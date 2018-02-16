@@ -16,19 +16,18 @@ ms.topic: article
 
 ## Required Prerequisites
 
-- A 64-bit installation of Windows, macOS, or Linux.
-  The Quantum Development Kit has been tested under Ubuntu Linux, but may work on other distributions.
+- A 64-bit installation of Windows, macOS, or Linux. (the Microsoft Quantum Development Kit has been tested under Ubuntu Linux, but may work on other distributions).
 - The [.NET Core SDK 2.0](https://www.microsoft.com/net/learn/get-started) or later.
+
 
 ## Optional Prerequisites
 
+- A development environment with .NET Core support:
+    - For Windows: We recommend [Visual Studio 2017](https://www.visualstudio.com/) and the [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension.
+    - For macOS or Linux: We recommend [Visual Studio Code](https://code.visualstudio.com/) and the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.microsoft-quantum-development-kit-vscode) extension.
 - Microsoft's quantum simulator, installed with the Quantum Development Kit, utilizes Advance Vector Extensions (AVX), and thus can run significantly more efficiently on an AVX-enabled CPU.
   The Quantum Development Kit will still run on non–AVX enabled CPUs, but may not be as efficient.
   Intel processors shipped in Q1 2011 (Sandy Bridge) or later support AVX.
-- A development environment with .NET Core support:
-    - For Windows, macOS or Linux: We recommend [Visual Studio Code](https://code.visualstudio.com/) and the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.microsoft-quantum-development-kit-vscode).
-    - For Windows: Visual Studio 2017 and the [Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension.
-      (NB: Visual Studio for Mac has not yet been tested.)
 - Some samples use the Node.js Package Manager (NPM) to handle user interface dependencies.
   NPM can be installed [manually](https://nodejs.org/en/download/current/) or through a [package manager](https://nodejs.org/en/download/package-manager/).
 - The Python interoperability feature has been developed for the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3.6.
@@ -42,7 +41,8 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 3. _**Important!**_ &nbsp;When you are presented with the option to select the tools for specific workloads, check the box for **.NET Core cross-platform development**. If there are any other workloads you would like to install, you can select them as well at this step.
 4. After selecting your workloads, click **Install** to complete the installation.
 
-## Creating and Validating the Q# Development Environment
+
+## Installing and Validating the Q# Development Environment
 
 In this section you will clone the quantum samples & libraries, and run a sample application to verify that your Q# environment is correctly installed and configured. 
 
@@ -62,7 +62,7 @@ In this section you will clone the quantum samples & libraries, and run a sample
   ```bash
   $ cd Quantum
   ```
-  Alternatively, to open in VS Code, run
+  Alternatively, to open in VS Code, run:
   ```bash
   $ code Quantum
   ```
@@ -91,7 +91,9 @@ In this section you will clone the quantum samples & libraries, and run a sample
 
 ### Visual Studo (Windows only) ###
 
-1. Clone and open the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.
+1. If you haven't already, install [Visual Studio 2017](https://www.visualstudio.com/) and the [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension.
+
+2. Clone and open the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.
     1. Open Visual Studio.
     2. Open the **Connect** view in **Team Explorer** (`Team` > `Manage Connections`)
     3. Select **Clone** under **Local Git Repositories** and enter `https://github.com/Microsoft/Quantum.git`
@@ -100,7 +102,7 @@ In this section you will clone the quantum samples & libraries, and run a sample
     6. Open the `QsharpLibraries.sln` solution.
       - If prompted by the **Install Missing Features** pane, click **Install** to allow the installation of the necessary features. This is most often F# and tools used by some of the samples.
 
-2. Validate your Q# environment by running the teleport sample program:
+3. Validate your Q# environment by running the teleport sample program:
    1. Right click on the `TeleportationSample` project in `Samples` > `0.Introduction` folder of `QsharpLibraries` solution, and left click on "Set as Startup Project".
    2. Run the solution (F5.) If teleport runs and the output is similar to the following (has 8 rounds of successful teleportation with varying values True/False sent each round), your Q# environment is ready to support Q# development.
 

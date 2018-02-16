@@ -23,7 +23,7 @@ ms.topic: article
 ## Optional Prerequisites
 
 - A development environment with .NET Core support:
-    - For Windows: We recommend [Visual Studio 2017](https://www.visualstudio.com/) and the [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension.
+    - For Windows: We recommend [Visual Studio 2017](https://www.visualstudio.com/) and the [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension. You can also use [Visual Studio Code](https://code.visualstudio.com/) and the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.microsoft-quantum-development-kit-vscode) extension.
     - For macOS or Linux: We recommend [Visual Studio Code](https://code.visualstudio.com/) and the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.microsoft-quantum-development-kit-vscode) extension.
 - Microsoft's quantum simulator, installed with the Quantum Development Kit, utilizes Advance Vector Extensions (AVX), and thus can run significantly more efficiently on an AVX-enabled CPU.
   The Quantum Development Kit will still run on non–AVX enabled CPUs, but may not be as efficient.

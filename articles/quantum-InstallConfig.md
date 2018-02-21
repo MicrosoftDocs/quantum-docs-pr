@@ -33,7 +33,7 @@ ms.topic: article
 - The Python interoperability feature has been developed for the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3.6.
   Please see the [README](https://github.com/Microsoft/Quantum/tree/master/Samples/PythonInterop/README.md) file provided with the Python sample for more details.
 
-### Installing Visual Studio 2017
+#### [Installing Visual Studio 2017](#tab/tabid-vs2017)
 
 If you do not have Visual Studio installed, you can download Visual Studio 2017 Community Edition for free.
 1. Go to the [Visual Studio download page](https://www.visualstudio.com/downloads/).
@@ -42,12 +42,49 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 3. _**Important!**_ &nbsp;When you are presented with the option to select the tools for specific workloads, check the box for **.NET Core cross-platform development**. If there are any other workloads you would like to install, you can select them as well at this step.
 4. After selecting your workloads, click **Install** to complete the installation.
 
+#### [Installing Visual Studio Code](#tab/tabid-vscode)
+
+
+
+****
 
 ## Installing and Validating the Q# Development Environment
 
 In this section you will clone the quantum samples & libraries, and run a sample application to verify that your Q# environment is correctly installed and configured.
 
-### Command Line or Visual Studio Code (Windows, macOS, Linux) ###
+#### [Visual Studio (Windows only)](#tab/tabid-vs2017)
+
+1. If you haven't already, install [Visual Studio 2017](https://www.visualstudio.com/) and the [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension.
+
+2. Clone and open the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.
+    1. Open Visual Studio.
+    2. Open the **Connect** view in **Team Explorer** (`Team` > `Manage Connections`)
+    3. Select **Clone** under **Local Git Repositories** and enter `https://github.com/Microsoft/Quantum.git`
+    4. Click **Clone** to clone the repo.
+    5. The repository will be cloned on your local computer and Visual Studio will switch to the **Solution Explorer** on the right populated with the libraries and samples.
+    6. Open the `QsharpLibraries.sln` solution.
+      - If prompted by the **Install Missing Features** pane, click **Install** to allow the installation of the necessary features. This is most often F# and tools used by some of the samples.
+
+3. Validate your Q# environment by running the teleport sample program:
+   1. Right click on the `TeleportationSample` project in `Samples` > `0.Introduction` folder of `QsharpLibraries` solution, and left click on "Set as Startup Project".
+   2. Run the solution (F5.) If teleport runs and the output is similar to the following (has 8 rounds of successful teleportation with varying values True/False sent each round), your Q# environment is ready to support Q# development.
+
+  ```
+          Round 0:        Sent True,      got True.
+          Teleportation successful!!
+          Round 1:        Sent False,     got False.
+          Teleportation successful!!
+          ...
+          Round 6:        Sent True,      got True.
+          Teleportation successful!!
+          Round 7:        Sent False,     got False.
+          Teleportation successful!!
+  ```
+
+> [!Tip]
+> If you receive a number of errors that reference NuGet packages, use the procedures in [NuGet package restore](https://docs.microsoft.com/en-us/nuget/consume-packages/package-restore) to restore the packages.
+
+#### [Command Line / Visual Studio Code (Windows, macOS, Linux)](#tab/tabid-vscode)
 
 1. Install the Q# Development Kit project templates.
    From your favorite command line (e.g.: PowerShell or Bash), run the following command:
@@ -90,34 +127,4 @@ In this section you will clone the quantum samples & libraries, and run a sample
           Teleportation successful!!
   ```
 
-### Visual Studio (Windows only) ###
-
-1. If you haven't already, install [Visual Studio 2017](https://www.visualstudio.com/) and the [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension.
-
-2. Clone and open the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.
-    1. Open Visual Studio.
-    2. Open the **Connect** view in **Team Explorer** (`Team` > `Manage Connections`)
-    3. Select **Clone** under **Local Git Repositories** and enter `https://github.com/Microsoft/Quantum.git`
-    4. Click **Clone** to clone the repo.
-    5. The repository will be cloned on your local computer and Visual Studio will switch to the **Solution Explorer** on the right populated with the libraries and samples.
-    6. Open the `QsharpLibraries.sln` solution.
-      - If prompted by the **Install Missing Features** pane, click **Install** to allow the installation of the necessary features. This is most often F# and tools used by some of the samples.
-
-3. Validate your Q# environment by running the teleport sample program:
-   1. Right click on the `TeleportationSample` project in `Samples` > `0.Introduction` folder of `QsharpLibraries` solution, and left click on "Set as Startup Project".
-   2. Run the solution (F5.) If teleport runs and the output is similar to the following (has 8 rounds of successful teleportation with varying values True/False sent each round), your Q# environment is ready to support Q# development.
-
-  ```
-          Round 0:        Sent True,      got True.
-          Teleportation successful!!
-          Round 1:        Sent False,     got False.
-          Teleportation successful!!
-          ...
-          Round 6:        Sent True,      got True.
-          Teleportation successful!!
-          Round 7:        Sent False,     got False.
-          Teleportation successful!!
-  ```
-
-> [!Tip]
-> If you receive a number of errors that reference NuGet packages, use the procedures in [NuGet package restore](https://docs.microsoft.com/en-us/nuget/consume-packages/package-restore) to restore the packages.
+****

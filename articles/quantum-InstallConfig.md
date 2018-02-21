@@ -31,6 +31,7 @@ ms.topic: article
 - Some samples use the Node.js Package Manager (NPM) to handle user interface dependencies.
   NPM can be installed [manually](https://nodejs.org/en/download/current/) or through a [package manager](https://nodejs.org/en/download/package-manager/).
 - The Python interoperability feature has been developed for the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3.6.
+  Please see the [README](https://github.com/Microsoft/Quantum/tree/master/Samples/PythonInterop/README.md) file provided with the Python sample for more details.
 
 ### Installing Visual Studio 2017
 
@@ -44,14 +45,14 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 
 ## Installing and Validating the Q# Development Environment
 
-In this section you will clone the quantum samples & libraries, and run a sample application to verify that your Q# environment is correctly installed and configured. 
+In this section you will clone the quantum samples & libraries, and run a sample application to verify that your Q# environment is correctly installed and configured.
 
 ### Command Line or Visual Studio Code (Windows, macOS, Linux) ###
 
 1. Install the Q# Development Kit project templates.
    From your favorite command line (e.g.: PowerShell or Bash), run the following command:
   ```bash
-  $ dotnet new -i Microsoft.Quantum.ProjectTemplates
+  $ dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.2-*"
   ```
 
 2. Clone and open the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.
@@ -62,30 +63,30 @@ In this section you will clone the quantum samples & libraries, and run a sample
   ```bash
   $ cd Quantum
   ```
-  Alternatively, to open in VS Code, run:
+  If you would like to work with the new project in VS Code, run:
   ```bash
-  $ code Quantum
+  $ code .
   ```
   You may be prompted to install the Microsoft Quantum Development Kit for Visual Studio Code and the Microsoft C# extension if you haven't already done so.
 
   > [!TIP]
   > If you are running on macOS and the `code` command is missing, you may need to [install the command line interface for Visual Studio Code](https://code.visualstudio.com/docs/editor/command-line).
 
-3. From the terminal in Visual Studio Code, run the teleport sample program:
+3. From the terminal (standalone, or the embedded terminal in Visual Studio Code), run the teleport sample program:
   ```bash
   $ cd Samples/Teleportation/
   $ dotnet run
   ```
-  You should see output similar to the following:  
+  You should see output similar to the following:
   ```
-          Round 0:        Sent True,      got True. 
+          Round 0:        Sent True,      got True.
           Teleportation successful!!
-          Round 1:        Sent False,     got False. 
+          Round 1:        Sent False,     got False.
           Teleportation successful!!
           ...
-          Round 6:        Sent True,      got True. 
+          Round 6:        Sent True,      got True.
           Teleportation successful!!
-          Round 7:        Sent False,     got False. 
+          Round 7:        Sent False,     got False.
           Teleportation successful!!
   ```
 
@@ -107,14 +108,14 @@ In this section you will clone the quantum samples & libraries, and run a sample
    2. Run the solution (F5.) If teleport runs and the output is similar to the following (has 8 rounds of successful teleportation with varying values True/False sent each round), your Q# environment is ready to support Q# development.
 
   ```
-          Round 0:        Sent True,      got True. 
+          Round 0:        Sent True,      got True.
           Teleportation successful!!
-          Round 1:        Sent False,     got False. 
+          Round 1:        Sent False,     got False.
           Teleportation successful!!
           ...
-          Round 6:        Sent True,      got True. 
+          Round 6:        Sent True,      got True.
           Teleportation successful!!
-          Round 7:        Sent False,     got False. 
+          Round 7:        Sent False,     got False.
           Teleportation successful!!
   ```
 

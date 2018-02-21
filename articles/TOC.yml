@@ -21,7 +21,7 @@
       href: quantum-concepts-9-SoftwareStack.md
 - name: Installation and validation
   href: quantum-InstallConfig.md
-- name: Quickstart- your first quantum program
+- name: Quickstart - your first quantum program
   href: quantum-WriteAQuantumProgram.md
 - name: Managing quantum machines and drivers
   href: quantum-SimulatorsAndMachines.md

@@ -108,24 +108,28 @@ To run tests, navigate to the project folder (the folder which contains `Tests.c
 
 ```bash
 $ dotnet restore
-$ dotnet xunit
+$ dotnet test
 ```
 
 You should get output similar to the following:
 
 ```
-Detecting target frameworks in Tests.csproj...
-Building for framework netcoreapp2.0...
-  Tests -> C:\Users\...\Tests\bin\Debug\netcoreapp2.0\Tests.dll
-Running .NET Core 2.0.0 tests for framework netcoreapp2.0...
-xUnit.net Console Runner (64-bit .NET Core 4.6.00001.0)
-  Discovering: Tests
-  Discovered:  Tests
-  Starting:    Tests
-Test passed
-  Finished:    Tests
-=== TEST EXECUTION SUMMARY ===
-   Tests  Total: 1, Errors: 0, Failed: 0, Skipped: 0, Time: 0.237s
+Build started, please wait...
+Build completed.
+
+Test run for C:\Users\chgranad.REDMOND\tmp\Tests\bin\Debug\netcoreapp2.0\Tests.dll(.NETCoreApp,Version=v2.0)
+Microsoft (R) Test Execution Command Line Tool Version 15.3.0-preview-20170628-02
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:00.5864002]   Discovering: Tests
+[xUnit.net 00:00:00.7073844]   Discovered:  Tests
+[xUnit.net 00:00:00.7453826]   Starting:    Tests
+[xUnit.net 00:00:00.9590439]   Finished:    Tests
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1.9607 Seconds
 ```
 
 ***
@@ -161,7 +165,8 @@ After you execute a test in Test Explorer and click on the test, a panel will ap
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
-The pass/fail status for each test is printed to the console by `dotnet xunit`, along with any test outputs logged as a result of the `output.WriteLine(msg)` call above.
+The pass/fail status for each test is printed to the console by `dotnet test`.
+For failing tests, the outputs logged as a result of the `output.WriteLine(msg)` call above are also printed to the console to help diagnose the failure.
 
 ***
 

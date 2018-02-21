@@ -72,7 +72,7 @@ In this section you will clone the quantum samples & libraries, and run a sample
   > [!TIP]
   > If you are running on macOS and the `code` command is missing, you may need to [install the command line interface for Visual Studio Code](https://code.visualstudio.com/docs/editor/command-line).
 
-3. From the terminal in (standalone, or the embedded terminal in Visual Studio Code), run the teleport sample program:
+3. From the terminal (standalone, or the embedded terminal in Visual Studio Code), run the teleport sample program:
   ```bash
   $ cd Samples/Teleportation/
   $ dotnet run

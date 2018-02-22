@@ -54,9 +54,9 @@ You can download Visual Studio Code for free for your platform.
 
 In this section you will clone the quantum samples & libraries repository, and run a sample application to verify that your Q# environment is correctly installed and configured.
 
-#### [Visual Studio](#tab/tabid-vs2017)
+#### [Visual Studio 2017](#tab/tabid-vs2017)
 
-1. If you haven't already, install [Visual Studio 2017](https://www.visualstudio.com/) and the [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension.
+1. Install the [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension.
 
 2. Clone and open the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.
     1. Open Visual Studio.
@@ -69,26 +69,14 @@ In this section you will clone the quantum samples & libraries repository, and r
 
 3. Validate your Q# environment by running the teleport sample program:
    1. Right click on the `TeleportationSample` project in `Samples` > `0.Introduction` folder of `QsharpLibraries` solution, and left click on "Set as Startup Project".
-   2. Run the solution (F5.) If teleport runs and the output is similar to the following (has 8 rounds of successful teleportation with varying values True/False sent each round), your Q# environment is ready to support Q# development.
-
-  ```
-          Round 0:        Sent True,      got True.
-          Teleportation successful!!
-          Round 1:        Sent False,     got False.
-          Teleportation successful!!
-          ...
-          Round 6:        Sent True,      got True.
-          Teleportation successful!!
-          Round 7:        Sent False,     got False.
-          Teleportation successful!!
-  ```
+   2. Run the solution (F5.)
 
 > [!Tip]
 > If you receive a number of errors that reference NuGet packages, use the procedures in [NuGet package restore](https://docs.microsoft.com/en-us/nuget/consume-packages/package-restore) to restore the packages.
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
-1. If you haven't already, install [Visual Studio Code](https://code.visualstudio.com/) and the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.microsoft-quantum-development-kit-vscode) extension.
+1. If you intend to use Visual Studio Code, install the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.microsoft-quantum-development-kit-vscode) extension.
 
 2. Install the Q# Development Kit project templates.
    From your favorite command line (e.g.: PowerShell or Bash), run the following command:
@@ -118,7 +106,10 @@ In this section you will clone the quantum samples & libraries repository, and r
   $ cd Samples/Teleportation/
   $ dotnet run
   ```
-  You should see output similar to the following:
+****
+
+ If the program runs and the output is similar to the following (has 8 rounds of successful teleportation with varying values True/False sent each round), your Q# environment is ready to support Q# development.
+
   ```
           Round 0:        Sent True,      got True.
           Teleportation successful!!
@@ -130,5 +121,3 @@ In this section you will clone the quantum samples & libraries repository, and r
           Round 7:        Sent False,     got False.
           Teleportation successful!!
   ```
-
-****

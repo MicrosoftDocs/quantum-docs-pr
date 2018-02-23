@@ -59,7 +59,7 @@ In this section you will clone the quantum samples & libraries repository, and r
 1. Install the [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension.
 
 > [!NOTE]
-> Microsoft Quantum Development Kit does not support Visual Studio for macOS. For development on macOS, we recommend Visual Studio Code.
+> Microsoft Quantum Development Kit does not support Visual Studio for Mac. For development on macOS, we recommend Visual Studio Code.
 
 2. Clone and open the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.
     1. Open Visual Studio.

@@ -1,8 +1,8 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.assertoperationsequalreferenced
+uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
 name: AssertOperationsEqualReferenced
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: Microsoft.Quantum.Extensions.Testing
 summary: " Given two operations, asserts that they act identically for all input states.\n This assertion is implemented by using the Choi–Jamiłkowski isomorphism to reduce\n the assertion to one of a qubit state assertion on two entangled registers.\n Thus, this operation needs only a single call to each operation being tested,\n but requires twice as many qubits to be allocated.\n This assertion can be used to ensure, for instance, that an optimized version of an\n operation acts identically to its naïve implementation, or that an operation\n which acts on a range of non-quantum inputs agrees with known cases.\n "
 remarks: >2
    This operation requires that the operation modeling the expected behavior is

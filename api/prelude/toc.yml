@@ -49,6 +49,8 @@
     uid: microsoft.quantum.extensions.math.arctan2
   - name: Ceiling
     uid: microsoft.quantum.extensions.math.ceiling
+  - name: Complex
+    uid: microsoft.quantum.extensions.math.complex
   - name: Cos
     uid: microsoft.quantum.extensions.math.cos
   - name: Cosh
@@ -104,6 +106,25 @@
     uid: microsoft.quantum.extensions.rangefunctions.rangestart
   - name: RangeStep
     uid: microsoft.quantum.extensions.rangefunctions.rangestep
+- name: Microsoft.Quantum.Extensions.Testing
+  uid: microsoft.quantum.extensions.testing
+  items:
+  - name: AssertAllZero
+    uid: microsoft.quantum.extensions.testing.assertallzero
+  - name: AssertAllZeroTol
+    uid: microsoft.quantum.extensions.testing.assertallzerotol
+  - name: AssertOperationsEqualInPlace
+    uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
+  - name: AssertOperationsEqualInPlaceCompBasis
+    uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
+  - name: AssertOperationsEqualReferenced
+    uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
+  - name: AssertQubit
+    uid: microsoft.quantum.extensions.testing.assertqubit
+  - name: AssertQubitState
+    uid: microsoft.quantum.extensions.testing.assertqubitstate
+  - name: AssertQubitTol
+    uid: microsoft.quantum.extensions.testing.assertqubittol
 - name: Microsoft.Quantum.Primitive
   uid: microsoft.quantum.primitive
   items:
@@ -121,6 +142,8 @@
     uid: microsoft.quantum.primitive.expfrac
   - name: H
     uid: microsoft.quantum.primitive.h
+  - name: I
+    uid: microsoft.quantum.primitive.i
   - name: M
     uid: microsoft.quantum.primitive.m
   - name: Measure
@@ -139,6 +162,10 @@
     uid: microsoft.quantum.primitive.rfrac
   - name: Random
     uid: microsoft.quantum.primitive.random
+  - name: Reset
+    uid: microsoft.quantum.primitive.reset
+  - name: ResetAll
+    uid: microsoft.quantum.primitive.resetall
   - name: Rx
     uid: microsoft.quantum.primitive.rx
   - name: Ry

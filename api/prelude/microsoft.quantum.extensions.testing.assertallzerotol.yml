@@ -1,18 +1,14 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.assertallzero
-name: AssertAllZero
+uid: microsoft.quantum.extensions.testing.assertallzerotol
+name: AssertAllZeroTol
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: Microsoft.Quantum.Extensions.Testing
 summary: " Assert that given qubits are all in $\\ket{0}$ state\n "
-syntax: 'operation AssertAllZero (message : String, target : Qubit[], tolerance : Double) : ()'
+syntax: 'operation AssertAllZeroTol (qubits : Qubit[], tolerance : Double) : ()'
 input:
-  content: '(message : String, target : Qubit[], tolerance : Double)'
+  content: '(qubits : Qubit[], tolerance : Double)'
   types:
-  - name: message
-    summary: ' The message to be emited if assertion fails'
-    uid: String
-    isPrimitive: true
-  - name: target
+  - name: qubits
     summary: ' Qubits that are asserted to be in $\ket{0}$ state'
     uid: Qubit
     isPrimitive: true

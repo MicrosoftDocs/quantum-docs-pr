@@ -98,7 +98,7 @@ These strategies are implemented by the canon operations <xref:microsoft.quantum
 
 > [!NOTE]
 > The referenced assertion discussed above works based on the [Choi–Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality), a mathematical framework which relates operations on $n$ qubits to entangled states on $2n$ qubits.
-> In particular, the identity operation on $n$ qubits is represented by $n$ copies of the entangled state $\ket{\beta_{00}} \mathrel{:=} (\ket{00} + \ket{11}) / \sqrt{2}.
+> In particular, the identity operation on $n$ qubits is represented by $n$ copies of the entangled state $\ket{\beta_{00}} \mathrel{:=} (\ket{00} + \ket{11}) / \sqrt{2}$.
 > The operation <xref:microsoft.quantum.canon.preparechoistate> implements this isomorphism, preparing a state that represents a given operation.
 
 Roughly, these strategies are distinguished by a time–space tradeoff.

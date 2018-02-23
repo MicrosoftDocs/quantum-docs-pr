@@ -23,10 +23,10 @@ TODO: add release notes
 
 ### Project Migration
 
-Projects created using previous versions of Quantum Development Kit will still work, as long as you don't update NuGet packages used in them. To migrate existing code to the new version, perform the following steps:
+Projects created using previous versions of Quantum Development Kit will still work, as long as you don't update the NuGet packages used in them. To migrate existing code to the new version, perform the following steps:
 1. Create a new .NET Core project using the right type of Q# project template (Application, Library or Test Project).
-2. Copy existing .qs and .cs/.fs files from the old project to the new project (using Add > Existing Item). Do not copy AssemblyInfo.cs file.
-3. Build and run new project.
+2. Copy existing .qs and .cs/.fs files from the old project to the new project (using Add > Existing Item). Do not copy the AssemblyInfo.cs file.
+3. Build and run the new project.
 
 
 # Version 0.1.1801.1707

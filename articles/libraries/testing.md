@@ -48,7 +48,7 @@ In the case that our target machine is a simulator, however, we can do better, a
 We can use that the classical information used by a simulator to represent the internal state of a qubit is amenable to copying, such that we do not need to actually perform a measurement to test our assertion.
 In particular, this allows us to reason about *incompatible* measurements that would be impossible on actual hardware.
 
-The operation <xref:microsoft.quantum.canon.assertqubit> provides a particularly useful shorthand to do so in the case that we wish to test the assertion $\ket{\psi} = \ket{0}$.
+The operation <xref:microsoft.quantum.extensions.testing.assertqubit> provides a particularly useful shorthand to do so in the case that we wish to test the assertion $\ket{\psi} = \ket{0}$.
 This is common, for instance, when we have uncomputed to return ancilla qubits to $\ket{0}$ before releasing them.
 Asserting against $\ket{0}$ is also useful when we wish to assert that two state preparation `P` and `Q` operations both prepare the same state, and when `Q` supports `Adjoint`.
 In particular,
@@ -81,7 +81,7 @@ Then, using the likelihood function for quantum measurements,
         \right).
 \end{align}
 
-The <xref:microsoft.quantum.canon.assertqubitstate> implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.canon.complex>.
+The <xref:microsoft.quantum.extensions.testing.assertqubitstate> implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.canon.complex>.
 This is helpful when the expected state can be computed mathematically.
 
 ## Asserting Equality of Quantum Operations ##
@@ -98,7 +98,7 @@ These strategies are implemented by the canon operations <xref:microsoft.quantum
 
 > [!NOTE]
 > The referenced assertion discussed above works based on the [Choi–Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality), a mathematical framework which relates operations on $n$ qubits to entangled states on $2n$ qubits.
-> In particular, the identity operation on $n$ qubits is represented by $n$ copies of the entangled state $\ket{\beta_{00}} \mathrel{:=} (\ket{00} + \ket{11}) / \sqrt{2}.
+> In particular, the identity operation on $n$ qubits is represented by $n$ copies of the entangled state $\ket{\beta_{00}} \mathrel{:=} (\ket{00} + \ket{11}) / \sqrt{2}$.
 > The operation <xref:microsoft.quantum.canon.preparechoistate> implements this isomorphism, preparing a state that represents a given operation.
 
 Roughly, these strategies are distinguished by a time–space tradeoff.

@@ -24,7 +24,7 @@ For instance, `(7)` is an `Int` expression,
 and `((1,2))` is an expression with type `(Int, Int)`.
 
 The equivalence between simple values and single-element tuples described in
-<xref:microsoft.quantum.qsharp-ref.type-model#tuple-types> above removes the ambiguity
+[the type model](xref:microsoft.quantum.qsharp-ref.type-model#tuple-types) removes the ambiguity
 between `(6)` as a group and `(6)` as a single-element tuple.
 
 ## Symbols

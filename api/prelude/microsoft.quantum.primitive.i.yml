@@ -1,8 +1,8 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.i
+uid: microsoft.quantum.primitive.i
 name: I
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: Microsoft.Quantum.Primitive
 summary: ' Performs the identity operation (no-op) on a single qubit.'
 syntax: 'operation I (target : Qubit) : ()'
 input:

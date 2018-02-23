@@ -1,0 +1,37 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.testing
+name: Microsoft.Quantum.Extensions.Testing
+functions: []
+operations:
+- uid: microsoft.quantum.extensions.testing.assertallzero
+  summary: " Assert that given qubits are all in $\\ket{0}$ state\n "
+- uid: microsoft.quantum.extensions.testing.assertallzerotol
+  summary: " Assert that given qubits are all in $\\ket{0}$ state\n "
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
+  summary: >2
+     Checks if the operation `givenU` is equal to the operation expectedU on
+     the given input size.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
+  summary: >2
+     Checks if the operation `givenU` is equal to the operation `expectedU` on
+     the given input size  by checking the action of the operations only on
+     the vectors from the computational basis.
+     This is a necessary, but not sufficient, condition for the equality of
+     two unitaries.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
+  summary: " Given two operations, asserts that they act identically for all input states.\n This assertion is implemented by using the Choi–Jamiłkowski isomorphism to reduce\n the assertion to one of a qubit state assertion on two entangled registers.\n Thus, this operation needs only a single call to each operation being tested,\n but requires twice as many qubits to be allocated.\n This assertion can be used to ensure, for instance, that an optimized version of an\n operation acts identically to its naïve implementation, or that an operation\n which acts on a range of non-quantum inputs agrees with known cases.\n "
+- uid: microsoft.quantum.extensions.testing.assertqubit
+  summary: >2
+     Asserts that the qubit `q` is in the expected eigenstate of the Pauli $Z$ operator.
+- uid: microsoft.quantum.extensions.testing.assertqubitstate
+  summary: >2
+     Asserts that the qubit given by register is in the state described by
+     complex vector, $\ket{\psi} = \begin{bmatrix}a & b\end{bmatrix}^{\mathrm{T}}$.
+     The first element of the tuples representing each of $a$, $b$
+     is the real part of the complex number, while the second one is the imaginary part.
+     The last argument defines the tolerance with which assertion is made.
+- uid: microsoft.quantum.extensions.testing.assertqubittol
+  summary: >2
+     Asserts that the qubit `q` is in the expected eigenstate of the Pauli $Z$ operator up to
+     a given tolerance.
+newtypes: []

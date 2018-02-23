@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertresultequal
+name: AssertResultEqual
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Asserts that a classical Result variable has the expected value.
+syntax: 'function AssertResultEqual (actual : Result, expected : Result, message : String) : ()'
+input:
+  content: '(actual : Result, expected : Result, message : String)'
+  types:
+  - name: actual
+    summary: >2
+       The variable to be checked.
+    uid: Result
+    isPrimitive: true
+  - name: expected
+    summary: >2
+       The expected value.
+    uid: Result
+    isPrimitive: true
+  - name: message
+    summary: ' Failure message string to be used when the assertion is triggered.'
+    uid: String
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true

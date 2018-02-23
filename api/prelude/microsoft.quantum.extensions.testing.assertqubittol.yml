@@ -1,22 +1,27 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.assertqubittol
+uid: microsoft.quantum.extensions.testing.assertqubittol
 name: AssertQubitTol
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: Microsoft.Quantum.Extensions.Testing
 summary: >2
    Asserts that the qubit `q` is in the expected eigenstate of the Pauli $Z$ operator up to
    a given tolerance.
 remarks: >2-
-   <xref:microsoft.quantum.canon.assertqubitstate> allows for asserting
+   <xref:microsoft.quantum.extensions.testing.assertqubitstate> allows for asserting
    arbitrary qubit states rather than only $Z$ eigenstates.
-syntax: 'operation AssertQubitTol (expected : Result, tolerance : Double, q : Qubit) : ()'
+syntax: 'operation AssertQubitTol (expected : Result, q : Qubit, tolerance : Double) : ()'
 input:
-  content: '(expected : Result, tolerance : Double, q : Qubit)'
+  content: '(expected : Result, q : Qubit, tolerance : Double)'
   types:
   - name: expected
     summary: >2
        Which state the qubit is expected to be in: `Zero` or `One`.
     uid: Result
+    isPrimitive: true
+  - name: q
+    summary: >2
+       The qubit whose state is asserted.
+    uid: Qubit
     isPrimitive: true
   - name: tolerance
     summary: >2
@@ -24,15 +29,10 @@ input:
        result.
     uid: Double
     isPrimitive: true
-  - name: q
-    summary: >2
-       The qubit whose state is asserted.
-    uid: Qubit
-    isPrimitive: true
 output:
   content: ()
   types:
   - uid: ()
     isPrimitive: true
 seeAlso:
-- microsoft.quantum.canon.assertqubitstate
+- microsoft.quantum.extensions.testing.assertqubitstate

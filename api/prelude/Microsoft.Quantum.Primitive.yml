@@ -59,6 +59,8 @@ operations:
              1 & -1
          \end{bmatrix}.
      \end{align}
+- uid: microsoft.quantum.primitive.i
+  summary: ' Performs the identity operation (no-op) on a single qubit.'
 - uid: microsoft.quantum.primitive.m
   summary: >2
      Performs a measurement of a single qubit in the
@@ -128,6 +130,14 @@ operations:
      Array elements that are equal to zero are ignored and their indices are never
      returned. If any array element is less than zero,
      or if no array element is greater than zero, then the operation fails.
+- uid: microsoft.quantum.primitive.reset
+  summary: >2
+     Given a single qubit, measures it and ensure it is in the $\ket{0}$ state
+     such that it can be safely released.
+- uid: microsoft.quantum.primitive.resetall
+  summary: >2
+     Given an array of qubits, measure them and ensure they are in the $\ket{0}$ state
+     such that they can be safely released.
 - uid: microsoft.quantum.primitive.rfrac
   summary: >2
      Applies a rotation about the given Pauli axis by an angle specified

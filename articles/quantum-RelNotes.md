@@ -15,17 +15,34 @@ ms.topic: article
 
 # Microsoft Quantum Development Kit Preview Release Notes
 
+# Version 0.2.1802.2202
+
+*Release date: February 26, 2018*
+
+TODO: add release notes
+
+### Project Migration
+
+Projects created using previous versions of Quantum Development Kit will still work, as long as you don't update the NuGet packages used in them. To migrate existing code to the new version, perform the following steps:
+1. Create a new .NET Core project using the right type of Q# project template (Application, Library or Test Project).
+2. Copy existing .qs and .cs/.fs files from the old project to the new project (using Add > Existing Item). Do not copy the AssemblyInfo.cs file.
+3. Build and run the new project.
+
 
 # Version 0.1.1801.1707
+
+*Release date: January 18, 2018*
 
 This release fixes some issues reported by the community. Namely:
 
 - The simulator now works with early non-AVX-enabled CPUs.
-- Regional decimal settings will not causes the Q# parser to fail.
-- Changed the `SignD` primitive operation to return `Int` rather than `Double`
+- Regional decimal settings will not cause the Q# parser to fail.
+- `SignD` primitive operation now returns `Int` rather than `Double`.
 
 
 # Version 0.1.1712.901
+
+*Release date: December 11, 2017*
 
 ## Known Issues
 

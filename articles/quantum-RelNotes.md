@@ -19,7 +19,13 @@ ms.topic: article
 
 *Release date: February 26, 2018*
 
-TODO: add release notes
+This release brings support for development on more platforms, language interoperability, and performance enhancements. Specifically:
+
+- Support for Mac- and Linux-based development. 
+- .NET Core compatibilty, including support for Visual Studio Code across platforms.
+- A full Open Source license for the Quantum Developmet Kit Libraries.
+- Faster simulator performance on projects requiring 20 or more qubits.
+- Interoprability with the Python language (preview release available on Windows).
 
 ### Project Migration
 

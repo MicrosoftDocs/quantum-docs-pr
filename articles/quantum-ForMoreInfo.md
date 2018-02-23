@@ -31,7 +31,7 @@ Computation and Quantum Information, UK: Cambridge University Press, 2010.
 
 ## Elementary techniques for building controlled gates ##
 
-+ Barenco, A., Bennett, C. H., Cleve, R., DiVincenzo, D. P., Margolus, N., Shor, P., ... & Weinfurter, H. (1995). Elementary gates for quantum computation. Physical review A, 52(5), 3457.
++ Barenco, A., Bennett, C. H., Cleve, R., DiVincenzo, D. P., Margolus, N., Shor, P., ... & Weinfurter, H. (1995). Elementary gates for quantum computation. Physical Review A, 52(5), 3457.
 + Jones, C. (2013). Low-overhead constructions for the fault-tolerant Toﬀoli gate. Physical Review A, 87(2), 022328
 
 ## Techniques for preparing quantum states ##
@@ -43,7 +43,7 @@ Computation and Quantum Information, UK: Cambridge University Press, 2010.
 
 ## Approaches for synthesizing circuits out of H, T and CNOT gates ##
 
-+ Kliuchnikov, V., Maslov, D., & Mosca, M. (2013). Asymptotically optimal approximation of single qubit unitaries by Cliﬀord and T circuits using a constant number of ancillary qubits. Physical review Letters, 110(19), 190502.
++ Kliuchnikov, V., Maslov, D., & Mosca, M. (2013). Asymptotically optimal approximation of single qubit unitaries by Cliﬀord and T circuits using a constant number of ancillary qubits. Physical Review Letters, 110(19), 190502.
 + Ross, N. J., & Selinger, P. (2014). Optimal ancilla-free Cliﬀord+ T approximation of z-rotations. arXiv preprint arXiv:1403.2975.
 + Kliuchnikov, V. (2013). Synthesis of unitaries with Cliﬀord+ T circuits. arXiv preprint arXiv:1306.3200.
 + Jones, N. C., Whitﬁeld, J. D., McMahon, P. L., Yung, M. H., Van Meter, R., Aspuru-Guzik, A., & Yamamoto, Y. (2012). Faster quantum chemistry simulation on fault-tolerant quantum computers. New Journal of Physics, 14(11), 115023.
@@ -57,14 +57,14 @@ Computation and Quantum Information, UK: Cambridge University Press, 2010.
 ## Methods for fast quantum sampling (amplitude amplification) and probability estimation ##
 
 + Brassard, G., Hoyer, P., Mosca, M., & Tapp, A. (2002). Quantum amplitude ampliﬁcation and estimation. Contemporary Mathematics, 305, 53-74.
-+ Grover, L. K. (2005). Fixed-point quantum search. Physical review Letters, 95(15), 150501.
++ Grover, L. K. (2005). Fixed-point quantum search. Physical Review Letters, 95(15), 150501.
 + Berry, D. W., Childs, A. M., & Kothari, R. (2015, October). Hamiltonian simulation with nearly optimal dependence on all parameters. In Foundations of Computer Science (FOCS), 2015 IEEE 56th Annual Symposium on (pp. 792-809). IEEE.
 
 ## Algorithms for quantum simulation ##
 
 + Lloyd, S. (1996). Universal Quantum Simulators. [Science (New York, NY), 273(5278), 1073](http://doi.org/10.1126/science.273.5278.1073).
-+ Berry, D. W., Childs, A. M., Cleve, R., Kothari, R., & Somma, R. D. (2015). Simulating Hamiltonian dynamics with a truncated Taylor series. [Physical review Letters, 114(9), 090502](http://doi.org/10.1103/PhysRevLett.114.090502).
-+ Low, G. H., & Chuang, I. L. (2017). [Optimal Hamiltonian simulation by quantum signal processing](https://arxiv.org/abs/1606.02685). [Physical review Letters, 118(1), 010501](http://doi.org/10.1103/PhysRevLett.118.010501).
++ Berry, D. W., Childs, A. M., Cleve, R., Kothari, R., & Somma, R. D. (2015). Simulating Hamiltonian dynamics with a truncated Taylor series. [Physical Review Letters, 114(9), 090502](http://doi.org/10.1103/PhysRevLett.114.090502).
++ Low, G. H., & Chuang, I. L. (2017). [Optimal Hamiltonian simulation by quantum signal processing](https://arxiv.org/abs/1606.02685). [Physical Review Letters, 118(1), 010501](http://doi.org/10.1103/PhysRevLett.118.010501).
 + Low, G. H., & Chuang, I. L. (2016). Hamiltonian simulation by qubitization. [arXiv preprint:1610.06546](https://arxiv.org/abs/1610.06546).
 + Reiher, M., Wiebe, N., Svore, K. M., Wecker, D., & Troyer, M. (2017). Elucidating reaction mechanisms on quantum computers. [Proceedings of the National Academy of Sciences, 201619152](http://doi.org/10.1073/pnas.1619152114).
 + Wiebe, N., Berry, D. W., Høyer, P., & Sanders, B. C. (2011). Simulating quantum dynamics on a quantum computer. [Journal of Physics A: Mathematical and Theoretical, 44(44), 445308](http://doi.org/10.1088/1751-8113/44/44/445308).

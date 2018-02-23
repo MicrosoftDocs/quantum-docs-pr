@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.research.quantum.randomwalkphaseestimation.exporacle
+name: ExpOracle
+type: operation
+namespace: Microsoft.Research.Quantum.RandomWalkPhaseEstimation
+syntax: 'operation ExpOracle (eigenphase : Double, time : Double, register : Qubit[]) : ()'
+input:
+  content: '(eigenphase : Double, time : Double, register : Qubit[])'
+  types:
+  - name: eigenphase
+    uid: Double
+    isPrimitive: true
+  - name: time
+    uid: Double
+    isPrimitive: true
+  - name: register
+    uid: Qubit
+    isPrimitive: true
+    isArray: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

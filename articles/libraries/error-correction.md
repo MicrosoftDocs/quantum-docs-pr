@@ -3,7 +3,7 @@
 title: Q# standard libraries - error correction | Microsoft Docs
 description: Q# standard libraries - error correction
 author: QuantumWriter
-uid: microsoft.quantum.libraries.data-structures
+uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article

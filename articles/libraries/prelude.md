@@ -93,7 +93,7 @@ and corresponds to the single-qubit unitary:
     \frac{1}{\sqrt{2}}
     \begin{bmatrix}
         1 & 1 \\\\ % FIXME: this currently uses the quadwhack hack.
-        1 & 1
+        1 & -1
     \end{bmatrix}
 \end{equation}
 

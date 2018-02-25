@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Library Licensing Terms
-description: Q# standard libraries - licensing terms
+title: OSS licensing
+description: Q# standard libraries - licensing and contributing
 author: martinro
 ms.author: martinro@microsoft.com 
 ms.date: 2/16/2018
@@ -18,3 +18,17 @@ ms.topic: article
 The canon is an extensive collection of library functions and is open source, licensed under the permissive MIT license. It can be obtained from [Github Quantum Repo](https://github.com/microsoft/quantum). 
 
 It should be noted that Microsoft's Quantum Development Kit also provides a few specialized library functions that are licensed under a Microsoft Research license which is permissive for academic use, but which restricts commercial use. These library functions can be obtained from [Github Quantum-NC Repo](https://github.com/microsoft/quantum-nc).  
+
+## Contributing ##
+
+This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
+the rights to use your contribution. For details, visit [CLA](https://cla.microsoft.com). 
+
+When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
+a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
+provided by the bot. You will only need to do this once across all repos using our CLA.
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.

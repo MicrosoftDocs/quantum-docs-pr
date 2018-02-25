@@ -24,7 +24,7 @@ Of course evaluating this tensor product is impractical because the vector lies 
 
 *Dirac notation* solves these issues by presenting a new language to fit the precise needs of quantum mechanics.  For this reason, we recommend the reader not view the examples in this section as a rigid prescription of how to describe quantum states, but rather encourage the reader to view these as suggestions that can be used to concisely express quantum ideas.
 
-There are two types of vectors in Dirac notation: the *bra* vector and the *ket* vector, so named because when put together they form a *braket* or inner product.  If $\psi$ is a column vector then we can write it in Dirac notation as $|\psi \rangle$, where the $|\cdot \rangle$ denotes that it is a unit column vector, i.e., a *ket* vector.  Similarly, the row vector $\psi^\dagger$ is expressed as $\langle \psi |$.  This notation directly implies that $\langle \psi |\psi \rangle$ is the inner product of vector $\psi$ with itself, which is by definition $1$.  
+There are two types of vectors in Dirac notation: the *bra* vector and the *ket* vector, so named because when put together they form a *braket* or inner product.  If $\psi$ is a column vector then we can write it in Dirac notation as $|\psi \rangle$, where the $|\cdot \rangle$ denotes that it is a unit column vector, i.e., a *ket* vector.  Similarly, the row vector $\psi^\dagger$ is expressed as $\langle \psi |$. In other words, $\psi^\dagger$ is obtained by applying entry-wise complex conjugation to the elements of the transpose of $\psi$. The bra-ket notation directly implies that $\langle \psi |\psi \rangle$ is the inner product of vector $\psi$ with itself, which is by definition $1$.  
 
 More generally, if $\psi$ and $\phi$ are quantum state vectors their inner product is $\langle \phi | \psi \rangle$ which implies that the probability of measuring the state $|{\psi}\rangle$ to be $|{\phi}\rangle$ is $|\langle \phi|\psi\rangle|^2$.  
 
@@ -92,7 +92,7 @@ As a side note, in this example we did not use $|+\rangle^{\otimes n}=|+\rangle$
 
 Another nice feature of Dirac notation is the fact that it is linear.  If we wish to write for any four quantum state vectors, 
 
-$$(\alpha |\psi\rangle +\beta|\phi\rangle)\otimes (\gamma |\chi\rangle + \delta |\omega\rangle)= \alpha\gamma |\psi\rangle|\chi\rangle + \alpha\delta |\psi\rangle|\omega\rangle+\beta\gamma|\phi\rangle|\chi\rangle+\beta\omega|\phi\rangle|\omega\rangle.$$
+$$(\alpha |\psi\rangle +\beta|\phi\rangle)\otimes (\gamma |\chi\rangle + \delta |\omega\rangle)= \alpha\gamma |\psi\rangle|\chi\rangle + \alpha\delta |\psi\rangle|\omega\rangle+\beta\gamma|\phi\rangle|\chi\rangle+\beta\delta|\phi\rangle|\omega\rangle.$$
 
 That is to say, you can distribute the tensor product notation in Dirac notation so that taking tensor products between state vectors ends up looking just like ordinary multiplication.
 

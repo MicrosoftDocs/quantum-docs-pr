@@ -15,9 +15,10 @@ ms.topic: article
 
 # Licensing 
 
-The canon is an extensive collection of library functions and is open source, licensed under the permissive MIT license. It can be obtained from [Github Quantum Repo](https://github.com/microsoft/quantum). 
+The canon is an extensive collection of library functions and is open source, licensed under the [MIT license]( https://github.com/Microsoft/Quantum/blob/master/LICENSE). It can be obtained from [Github Quantum Repo](https://github.com/microsoft/quantum).
 
-It should be noted that Microsoft's Quantum Development Kit also provides a few specialized library functions that are licensed under a Microsoft Research license which is permissive for academic use, but which restricts commercial use. These library functions can be obtained from [Github Quantum-NC Repo](https://github.com/microsoft/quantum-nc).  
+Microsoft's Quantum Development Kit also provides specialized library functions that are licensed under a [Microsoft Research license]( https://github.com/Microsoft/Quantum-nc/blob/master/LICENSE). These library functions can be obtained from [Github Quantum-NC Repo](https://github.com/microsoft/quantum-nc).
+
 
 ## Contributing ##
 

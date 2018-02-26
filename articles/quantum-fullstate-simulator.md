@@ -16,7 +16,7 @@ ms.topic: article
 # Quantum Development Kit Full State Simulator 
 
 The Quantum Development Kit provides a full state quantum simulator 
-similar to [`Li|>Uid`](http://stationq.github.io/Liquid/) from Microsoft Research.
+similar to [`LIQUi|>`](http://stationq.github.io/Liquid/) from Microsoft Research.
 This simulator can be used to execute and debug quantum algorithms written in Q#
 on your computer.
 

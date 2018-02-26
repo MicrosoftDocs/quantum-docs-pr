@@ -69,7 +69,7 @@ In this section you will clone the quantum samples & libraries repository, and r
     5. The repository will be cloned on your local computer and Visual Studio will switch to the **Solution Explorer** on the right populated with the libraries and samples.
     6. Open the `QsharpLibraries.sln` solution.
       - If prompted by the **Install Missing Features** pane, click **Install** to allow the installation of the necessary features. This is most often F# and tools used by some of the samples.
-    7. (optional) to install libraries for non-commercial use, navigate to [Github Quantum-NC Repo](https://github.com/microsoft/quantum-nc), clone the repo, followed by opening the `Quantum-NC.sln` solution.
+    7. (Optional) To install libraries for non-commercial use, navigate to [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) on GitHub. Then clone the repository and open the `Quantum-NC.sln` solution.
 
 3. Validate your Q# environment by running the teleport sample program:
    1. Right click on the `TeleportationSample` project in `Samples` > `0.Introduction` folder of `QsharpLibraries` solution, and left click on "Set as Startup Project".

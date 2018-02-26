@@ -15,7 +15,7 @@ ms.topic: article
 ---
 
 # The Qubit
-Just as bits are the fundamental object of information in classical computing, *qubits* (quantum bits) are the fundamental object of information in quantum computing.  To understand this correspondence, lets look at the simplest example: a single qubit. 
+Just as bits are the fundamental object of information in classical computing, *qubits* (quantum bits) are the fundamental object of information in quantum computing.  To understand this correspondence, let's look at the simplest example: a single qubit. 
 
 ## Representing a Qubit ##
 
@@ -30,7 +30,7 @@ The quantum state vectors $\begin{bmatrix} 1 \\\\  0 \end{bmatrix}$ and $\begin{
 
 We take these two quantum states to correspond to the two states of a classical bit, namely $0$ and $1$.  The standard convention is to choose
 
-$$0\equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\qquad 1 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix}$$
+$$0\equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix}, \qquad 1 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix},$$
 
 although the opposite choice could equally well be taken.  Thus, out of the infinite number of possible single-qubit quantum state vectors, only two correspond to states of classical bits; all other quantum states do not.
 

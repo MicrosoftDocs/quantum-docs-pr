@@ -24,11 +24,16 @@ ms.topic: article
 
 ## Creating a Bell State in Q#
 
-Now that you’ve installed the Microsoft Quantum Development Kit and seen
+Now that you’ve [installed the Microsoft Quantum Development Kit](quantum-InstallConfig.md) and seen
 how it works, let’s write your first quantum application.
 We'll start with the simplest program possible and build it up to demonstrate quantum superposition and quantum entanglement. We will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
 
+The instructions on the page are written for both Visual Studio 2017 and for Visual Studio Code.
+If you are using a different development environment, please follow the instructions for Visual Studio Code, using the command line to call the .NET Core SDK.
+
 ### Step 1: Create a Project and Solution
+
+#### [Visual Studio 2017](#tab/tabid-vs2017)
 
 Open up Visual Studio 2017.
 Go to the `File` menu and select `New` > `Project...`.
@@ -37,21 +42,28 @@ select the `Q# Application` template.
 Make sure you have `.NET Framework 4.6.1` selected in the list at the top of the `New Project` dialog box.
 Give your project the name `Bell`.
 
-### Step 2 (optional): Update NuGet Packages
+#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
-If you want to run the latest version, update the `Microsoft.Quantum.Development.Kit` and `Microsoft.Quantum.Canon` NuGet packages, as described in [Updating a Package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package).
+Run the following commands in your favorite command line (e.g.: PowerShell or Bash):
 
-### Step 3: Enter the Q# Code
+```bash
+$ dotnet new console -lang Q# --output Bell
+$ cd Bell 
+$ code . # To open in Visual Studio Code.
+```
+
+***
+
+### Step 2: Enter the Q# Code
 
 Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
 
-Visual Studio should have two files open:
+Your development environment should have two files open:
 `Driver.cs`, which will hold the C# driver for your quantum code,
 and `Operation.qs`, which will hold the quantum code itself.
 
 The first step is to rename the Q# file to `Bell.qs`.
-Right-click on `Operation.qs` in the Visual Studio
-Solution Explorer, and select the Rename option.
+Right-click on `Operation.qs` in the Visual Studio Solution Explorer (Ctrl+Alt+L to focus) or the Visual Studio Code Explorer (Ctrl/⌘+Shift+E to focus), and select the Rename option.
 Replace `Operation` with `Bell` and hit return.
 
 To enter the Q# code, make sure that you are editing the
@@ -233,9 +245,9 @@ to its argument qubit.
 > Q# uses tuples as a way to pass multiple values, rather than using
 > structures or records.
 
-### Step 4: Enter the C# Driver Code
+### Step 3: Enter the C# Driver Code
 
-Switch to the `Driver.cs` file in Visual Studio.
+Switch to the `Driver.cs` file in your development environment.
 This file should have the following contents:
 
 ```csharp
@@ -295,9 +307,28 @@ In the `Main` method, enter the following code:
 >   We deconstruct the tuple to get the two fields, print the results,
 >   and then wait for a keypress.
 
-### Step 5: Build and Run
+### Step 4: Build and Run
+
+#### [Visual Studio 2017](#tab/tabid-vs2017)
 
 Just hit `F5`, and your program should build and run!
+
+#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+
+Run the following at your terminal:
+
+```bash
+$ dotnet run
+```
+
+This will automatically download all required packages, build the application, then run it at the commmand line.
+
+Alternatively, press **F1** to open the Command Palette and select "Debug: Start Without Debugging."
+You may be prompted to create a new ``launch.json`` file describing how to start the program.
+The default ``launch.json`` should work well for most applications.
+
+***
+
 
 The results should be:
 
@@ -309,7 +340,7 @@ Press any key to continue...
 
 The program will exit after you press a key.
 
-### Step 6: Creating Superposition
+### Step 5: Creating Superposition
 
 Now we want to manipulate the qubit. First we'll just try to flip it. This is accomplished by performing an `X` gate before we measure it in `BellTest`:
 
@@ -341,12 +372,12 @@ Init:One  0s=522  1s=478
 
 Every time we measure, we ask for a classical value, but the qubit is halfway between 0 and 1, so we get (statistically) 0 half the time and 1 half the time. This is known as __superposition__ and gives us our first real view into a quantum state.
 
-### Step 7: Creating Entanglement
+### Step 6: Creating Entanglement
 
 Now we'll make the promised [Bell State](https://en.wikipedia.org/wiki/Bell_state) and show off __entanglement__. The first thing we'll need to do is allocate 2 qubits instead of one in `BellTest`:
 
 ```qsharp
-            using (qubits = Qubit[2])
+            using (qubits = Qubit[2]) {
 ```
 
 This will allow us to add a new gate (`CNOT`) before we measure  (`M`) in `BellTest`:
@@ -394,6 +425,7 @@ The full routine now looks like this:
                         set numOnes = numOnes + 1;
                     }
                 }
+                
                 Set(Zero, qubits[0]);
                 Set(Zero, qubits[1]);
             }
@@ -434,8 +466,9 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
                         set numOnes = numOnes + 1;
                     }
                 }
-            Set(Zero, qubits[0]);
-            Set(Zero, qubits[1]);
+                
+                Set(Zero, qubits[0]);
+                Set(Zero, qubits[1]);
             }
             // Return number of times we saw a |0> and number of times we saw a |1>
             return (count-numOnes, numOnes, agree);

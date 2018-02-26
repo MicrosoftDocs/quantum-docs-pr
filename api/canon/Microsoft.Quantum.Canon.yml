@@ -57,6 +57,9 @@ functions:
 - uid: microsoft.quantum.canon.assertintequal
   summary: >2
      Asserts that a classical Int variable has the expected value.
+- uid: microsoft.quantum.canon.assertresultequal
+  summary: >2
+     Asserts that a classical Result variable has the expected value.
 - uid: microsoft.quantum.canon.bind
   summary: >2
      Given an array of operations acting on a single input,
@@ -573,43 +576,12 @@ operations:
 - uid: microsoft.quantum.canon.approximateqft
   summary: >2
      Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
-- uid: microsoft.quantum.canon.assertallzero
-  summary: " Assert that given qubits are all in $\\ket{0}$ state\n "
-- uid: microsoft.quantum.canon.assertequalonbasisvector
-  summary: " Checks if the result of applying two operations `givenU` and `expectedU` to\n a basis state is the same. The basis state is described by `basis` parameter. \n See <xref:microsoft.quantum.canon.fliptobasis> function for more details on this\n description.\n"
 - uid: microsoft.quantum.canon.asserthighestbit
   summary: >2
      Asserts that the highest bit of an unsigned integer has given value
 - uid: microsoft.quantum.canon.assertlessthanphasele
   summary: >2
      Asserts that the `number` encoded in PhaseLittleEndian is less than `value`.
-- uid: microsoft.quantum.canon.assertoperationsequalinplace
-  summary: >2
-     Checks if the operation `givenU` is equal to the operation expectedU on
-     the given input size.
-- uid: microsoft.quantum.canon.assertoperationsequalinplacecompbasis
-  summary: >2
-     Checks if the operation `givenU` is equal to the operation `expectedU` on
-     the given input size  by checking the action of the operations only on
-     the vectors from the computational basis.
-     This is a necessary, but not sufficient, condition for the equality of
-     two unitaries.
-- uid: microsoft.quantum.canon.assertoperationsequalreferenced
-  summary: " Given two operations, asserts that they act identically for all input states.\n This assertion is implemented by using the Choi–Jamiłkowski isomorphism to reduce\n the assertion to one of a qubit state assertion on two entangled registers.\n Thus, this operation needs only a single call to each operation being tested,\n but requires twice as many qubits to be allocated.\n This assertion can be used to ensure, for instance, that an optimized version of an\n operation acts identically to its naïve implementation, or that an operation\n which acts on a range of non-quantum inputs agrees with known cases.\n "
-- uid: microsoft.quantum.canon.assertqubit
-  summary: >2
-     Asserts that the qubit `q` is in the expected eigenstate of the Pauli $Z$ operator.
-- uid: microsoft.quantum.canon.assertqubitstate
-  summary: >2
-     Asserts that the qubit given by register is in the state described by
-     complex vector, $\ket{\psi} = \begin{bmatrix}a & b\end{bmatrix}^{\mathrm{T}}$.
-     The first element of the tuples representing each of $a$, $b$
-     is the real part of the complex number, while the second one is the imaginary part.
-     The last argument defines the tolerance with which assertion is made.
-- uid: microsoft.quantum.canon.assertqubittol
-  summary: >2
-     Asserts that the qubit `q` is in the expected eigenstate of the Pauli $Z$ operator up to
-     a given tolerance.
 - uid: microsoft.quantum.canon.bitflipcode
   summary: >2
      Returns a QECC value representing the ⟦3, 1, 1⟧ bit flip code encoder and
@@ -646,11 +618,7 @@ operations:
   summary: " Decodes the ⟦5, 1, 3⟧ quantum code. \n"
 - uid: microsoft.quantum.canon.fivequbitcodeencoder
   summary: " Encodes into the ⟦5, 1, 3⟧ quantum code. \n"
-- uid: microsoft.quantum.canon.fliptobasis
-  summary: " Applies unitaries that map $\\ket{0}\\otimes\\cdots\\ket{0}$\n to $\\ket{\\psi_0} \\otimes \\ket{\\psi_{n - 1}}$,\n where $\\ket{\\psi_k}$ depends on `basis[k]`.\n\n The correspondence between \n value of `basis[k]` and $\\ket{\\psi_k}$ is the following:\n - `basis[k]=0` $\\rightarrow \\ket{0}$. \n - `basis[k]=1` $\\rightarrow \\ket{1}$. \n - `basis[k]=2` $\\rightarrow \\ket{+}$.\n - `basis[k]=3` $\\rightarrow \\ket{i}$ ( +1 eigenstate of Pauli Y ).\n"
 - uid: microsoft.quantum.canon.hy
-- uid: microsoft.quantum.canon.i
-  summary: ' Performs the identity operation (no-op) on a single qubit.'
 - uid: microsoft.quantum.canon.injectpi4yrotation
   summary: >2
      Performs a $\pi / 4$ rotation about $Y$ by consuming a magic
@@ -753,7 +721,7 @@ operations:
      Prepares the Choi–Jamiłkowski state for a given operation with a controlled variant onto given reference
      and target registers.
 - uid: microsoft.quantum.canon.preparechoistateca
-  summary: " Prepares the Choi–Jamiłkowski state for a given operation with both controlled and adjoint variants onto given reference\n and target registers. "
+  summary: " Prepares the Choi–Jamiłkowski state for a given operation with both controlled and adjoint variants onto given reference\n and target registers. \n"
 - uid: microsoft.quantum.canon.prepareentangledstate
   summary: >2
      Given two registers, prepares the maximally entangled state
@@ -764,6 +732,11 @@ operations:
      Given a register, prepares that register in the maximally mixed
      state $\boldone / 2^N$ by applying the complete depolarizing
      channel to each qubit, where $N$ is the length of the register.
+- uid: microsoft.quantum.canon.preparequbit
+  summary: >2
+     Given a single qubit initially in the $\ket{0}$ state, prepares the
+     qubit in the $+1$ eigenstate of a given Pauli operator, or in the
+     maximally mixed state for the $\boldone$ Pauli operator `PauliI`.
 - uid: microsoft.quantum.canon.preparesinglequbitidentity
   summary: >2
      Given a qubit, prepares that qubit in the maximally mixed
@@ -808,11 +781,6 @@ operations:
   summary: >2
      Returns one of the single-qubit Pauli operators uniformly
      at random.
-- uid: microsoft.quantum.canon.randomwalkphaseestimation
-  summary: >2
-     Performs iterative phase estimation using a random walk to approximate
-     Bayesian inference on the classical measurement results from a given
-     oracle and eigenstate.
 - uid: microsoft.quantum.canon.recover
   summary: >2
      Performs a single round of error correction by a quantum code
@@ -821,18 +789,14 @@ operations:
   summary: >2
      Performs a single round of error correction by a quantum code
      described by a `CSS` type.
-- uid: microsoft.quantum.canon.reset
-  summary: >2
-     Given a single qubit, measures it and ensures it is in the $\ket{0}$ state
-     such that it can be safely released.
-- uid: microsoft.quantum.canon.resetall
-  summary: >2
-     Given an array of qubits, measure them and ensure they are in the $\ket{0}$ state
-     such that they can be safely released.
 - uid: microsoft.quantum.canon.robustphaseestimation
   summary: >2
      Performs the robust non-terative quantum phase estimation algorithm for a given oracle $U$ and eigenstate,
      and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
+- uid: microsoft.quantum.canon.singlequbitprocesstomographymeasurement
+  summary: >2
+     Performs a single-qubit process tomography measurement in the Pauli
+     basis, given a particular channel of interest.
 - uid: microsoft.quantum.canon.steanecode
   summary: >2
      Returns a CSS value representing the ⟦7, 1, 3⟧ Steane code encoder and
@@ -886,8 +850,6 @@ newtypes:
      qubit with index `0` encodes the highest bit of an unsigned integer
 - uid: microsoft.quantum.canon.ccnotop
   summary: ' The signature type of CCNOT gate.'
-- uid: microsoft.quantum.canon.complex
-  summary: ' Represents a complex number by its real and imaginary components.'
 - uid: microsoft.quantum.canon.continuousoracle
   summary: >2-
      Represents a continuous-time oracle

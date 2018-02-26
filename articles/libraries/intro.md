@@ -27,5 +27,4 @@ The `Microsoft.Quantum.Development.Kit` NuGet package installed during [installa
 
 The symbols defined by each of the prelude and the canon are defined in much greater and more exhaustive detail in the [API documentation](xref:microsoft.quantum.standardlibsintro).
 
-In this section, we will outline the most salient features of each part of the standard library and provide some context about how each feature might be used in practice.
-
+In the following sections, we will outline the most salient features of each part of the standard library and provide some context about how each feature might be used in practice.

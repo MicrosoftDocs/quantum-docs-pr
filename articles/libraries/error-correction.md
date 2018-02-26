@@ -3,7 +3,7 @@
 title: Q# standard libraries - error correction | Microsoft Docs
 description: Q# standard libraries - error correction
 author: QuantumWriter
-uid: microsoft.quantum.libraries.data-structures
+uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article
@@ -125,7 +125,6 @@ using (scratch = Qubit[nScratch]) {
     ApplyToEach(Reset, decodedScratch);
 }
 ```
-
-We explore this in more detail in the [bit flip code sample](TODO: link).
+We explore this in more detail in the [bit flip code sample](https://github.com/Microsoft/Quantum/tree/master/Samples/BitFlipCode). 
 
 Aside from the bit-flip code, the Q# canon is provided with implementations of the [five-qubit perfect code](https://arxiv.org/abs/1305.08), and the [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052), both of which can correct an arbitrary single-qubit error.

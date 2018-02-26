@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.preparequbit
+name: PrepareQubit
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given a single qubit initially in the $\ket{0}$ state, prepares the
+   qubit in the $+1$ eigenstate of a given Pauli operator, or in the
+   maximally mixed state for the $\boldone$ Pauli operator `PauliI`.
+syntax: 'operation PrepareQubit (basis : Pauli, qubit : Qubit) : ()'
+input:
+  content: '(basis : Pauli, qubit : Qubit)'
+  types:
+  - name: basis
+    summary: >2-
+       A Pauli operator $P$ such that measuring $P$ immediately after this
+       operation will return `Zero`.
+    uid: Pauli
+    isPrimitive: true
+  - name: qubit
+    summary: >2-
+       A qubit initially in the $\ket{0}$ state which is to be prepared in
+       the given basis.
+    uid: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true

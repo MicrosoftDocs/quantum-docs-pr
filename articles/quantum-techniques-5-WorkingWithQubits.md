@@ -180,7 +180,7 @@ operation RUScircuit (qubit : Qubit) : () {
 
 This example shows the use of a mutable variable `finished` which is in scope of the entire repeat-until-fixup loop and which gets initialized before the loop and updated in the fixup step.
 
-Finally, we show an example of a RUS pattern to prepare a quantum state $\frac{1}{\sqrt{3}}\left(\sqrt{2}\ket{0}+\ket{1}\right)$, starting from the $\ket{+}$ state. See also the canon sample at @"microsoft.quantum.samples.unitTesting.expizarctan2ps": 
+Finally, we show an example of a RUS pattern to prepare a quantum state $\frac{1}{\sqrt{3}}\left(\sqrt{2}\ket{0}+\ket{1}\right)$, starting from the $\ket{+}$ state. See also the [unit testing sample provided with the canon](https://github.com/Microsoft/Quantum/blob/master/Samples/UnitTesting/RepeatUntilSuccessCircuits.qs): 
 
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : () {

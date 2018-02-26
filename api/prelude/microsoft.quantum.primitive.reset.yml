@@ -1,17 +1,16 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.reset
+uid: microsoft.quantum.primitive.reset
 name: Reset
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: Microsoft.Quantum.Primitive
 summary: >2
-   Given a single qubit, measures it and ensures it is in the $\ket{0}$ state
+   Given a single qubit, measures it and ensure it is in the $\ket{0}$ state
    such that it can be safely released.
 syntax: 'operation Reset (target : Qubit) : ()'
 input:
   content: '(target : Qubit)'
   types:
   - name: target
-    summary: ' A qubit whose state is to be reset to $\ket{0}$.'
     uid: Qubit
     isPrimitive: true
 output:

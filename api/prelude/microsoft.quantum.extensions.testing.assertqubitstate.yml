@@ -1,8 +1,8 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.assertqubitstate
+uid: microsoft.quantum.extensions.testing.assertqubitstate
 name: AssertQubitState
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: Microsoft.Quantum.Extensions.Testing
 summary: >2
    Asserts that the qubit given by register is in the state described by
    complex vector, $\ket{\psi} = \begin{bmatrix}a & b\end{bmatrix}^{\mathrm{T}}$.

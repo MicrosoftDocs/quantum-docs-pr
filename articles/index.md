@@ -14,9 +14,9 @@ ms.topic: article
 ---
 # Welcome to the Microsoft Quantum Development Kit Preview
 
-Thank you for your interest in Microsoft's Quantum Development Kit preview. The development kit contains the tools you'll need to build your own quantum computing programs and experiments. Assuming some experience with Microsoft Visual Studio, beginners can write their first quantum program, and experienced researchers can quickly and efficiently develop new quantum algorithms.
+Thank you for your interest in Microsoft Quantum Development Kit preview. The development kit contains the tools you'll need to build your own quantum computing programs and experiments. Assuming some experience with Microsoft Visual Studio or Visual Studio Code, beginners can write their first quantum program, and experienced researchers can quickly and efficiently develop new quantum algorithms.
 
-To jump right in, start with [Installation and validation](quantum-InstallConfig.md) to create and validate your development environment. Then use [Quickstart - your first computer program](quantum-WriteAQuantumProgram.md) to learn about the structure of a Q# project and how to write the quantum equivalent of "Hello, world!" --  a quantum teleport application.
+To jump right in, start with [Installation and validation](quantum-InstallConfig.md) to create and validate your development environment. Then use [Quickstart - your first computer program](quantum-WriteAQuantumProgram.md) to learn about the structure of a Q# project and how to write the quantum equivalent of "Hello, world!" - a quantum teleport application.
 
 If you'd like more general information about Microsoft's quantum computing initiative, see [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/).
 
@@ -28,7 +28,7 @@ Your feedback about all parts of the Quantum Development Kit is important. We as
 - Debugging and simulation
 - Samples and documentation
 - Libraries
-- Setup and Visual Studio integration
+- Setup and IDE integration
 - General ideas and feature requests
 
 You will need a [Microsoft Account](https://signup.live.com/) to provide feedback.
@@ -43,13 +43,15 @@ The Quantum Development Kit preview provides a complete development and simulati
 | Q# standard library | The library contains operations and functions that support both the classical language control requirement and the Q# quantum algorithms. |
 | Local quantum machine simulator | A full state vector simulator optimized for accurate vector simulation and speed. |
 | Quantum computer trace simulator | The trace simulator does not simulate the quantum environment like the local quantum simulator. It is used to estimate the resources required to execute a quantum program and also allow faster debugging of the non-Q# control code. |
-| Visual Studio extension | The extension contains templates for Q# files and projects as well as syntax highlighting. The extension also installs and creates automatic hooks to the compiler. |
+| Visual Studio extension | This extension contains templates for Q# files and projects as well as syntax highlighting. |
+| Visual Studio Code extension | This extension contains syntax highlighting and code snippets for Q#. |
+
 
 ## Quantum Development Kit Documentation
 
 The current documentation includes the following topics.
 
-* [Microsoft Quantum Development kit release notes](quantum-RelNotes.md)
+* [Microsoft Quantum Development kit release notes](quantum-RelNotes.md).
 * [Quantum computing concepts](quantum-concepts-1-Intro.md) includes topics such as the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
 * [Installation and validation](quantum-InstallConfig.md) describes how to quickly set up your quantum development environment. Your Visual Studio environment will be enhanced with a compiler for the Q# language and templates for Q# projects and files.
 * [Quickstart - your first quantum program](quantum-WriteAQuantumProgram.md) walks you through how to create the Teleport application in the Visual Studio development environment. You'll learn how to define a Q# operation, call the Q# operation using C#, and how to execute your quantum algorithm.

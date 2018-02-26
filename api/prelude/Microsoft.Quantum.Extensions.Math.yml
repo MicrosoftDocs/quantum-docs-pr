@@ -93,4 +93,6 @@ functions:
   summary: >2
      Calculates the integral part of a number.
 operations: []
-newtypes: []
+newtypes:
+- uid: microsoft.quantum.extensions.math.complex
+  summary: ' Represents a complex number by its real and imaginary components.'

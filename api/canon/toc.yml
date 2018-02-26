@@ -137,8 +137,6 @@
     uid: microsoft.quantum.canon.arctanh
   - name: AsQubitArray
     uid: microsoft.quantum.canon.asqubitarray
-  - name: AssertAllZero
-    uid: microsoft.quantum.canon.assertallzero
   - name: AssertAlmostEqual
     uid: microsoft.quantum.canon.assertalmostequal
   - name: AssertAlmostEqualTol
@@ -147,26 +145,14 @@
     uid: microsoft.quantum.canon.assertboolarrayequal
   - name: AssertBoolEqual
     uid: microsoft.quantum.canon.assertboolequal
-  - name: AssertEqualOnBasisVector
-    uid: microsoft.quantum.canon.assertequalonbasisvector
   - name: AssertHighestBit
     uid: microsoft.quantum.canon.asserthighestbit
   - name: AssertIntEqual
     uid: microsoft.quantum.canon.assertintequal
   - name: AssertLessThanPhaseLE
     uid: microsoft.quantum.canon.assertlessthanphasele
-  - name: AssertOperationsEqualInPlace
-    uid: microsoft.quantum.canon.assertoperationsequalinplace
-  - name: AssertOperationsEqualInPlaceCompBasis
-    uid: microsoft.quantum.canon.assertoperationsequalinplacecompbasis
-  - name: AssertOperationsEqualReferenced
-    uid: microsoft.quantum.canon.assertoperationsequalreferenced
-  - name: AssertQubit
-    uid: microsoft.quantum.canon.assertqubit
-  - name: AssertQubitState
-    uid: microsoft.quantum.canon.assertqubitstate
-  - name: AssertQubitTol
-    uid: microsoft.quantum.canon.assertqubittol
+  - name: AssertResultEqual
+    uid: microsoft.quantum.canon.assertresultequal
   - name: BigEndian
     uid: microsoft.quantum.canon.bigendian
   - name: Bind
@@ -197,8 +183,6 @@
     uid: microsoft.quantum.canon.ccnotop
   - name: CSS
     uid: microsoft.quantum.canon.css
-  - name: Complex
-    uid: microsoft.quantum.canon.complex
   - name: ConstantArray
     uid: microsoft.quantum.canon.constantarray
   - name: ContinuedFractionConvergent
@@ -259,8 +243,6 @@
     uid: microsoft.quantum.canon.fivequbitcodeencoder
   - name: FiveQubitCodeRecoveryFn
     uid: microsoft.quantum.canon.fivequbitcoderecoveryfn
-  - name: FlipToBasis
-    uid: microsoft.quantum.canon.fliptobasis
   - name: Fold
     uid: microsoft.quantum.canon.fold
   - name: ForAll
@@ -285,8 +267,6 @@
     uid: microsoft.quantum.canon.hy
   - name: Head
     uid: microsoft.quantum.canon.head
-  - name: I
-    uid: microsoft.quantum.canon.i
   - name: IdentityGeneratorIndex
     uid: microsoft.quantum.canon.identitygeneratorindex
   - name: IdentityGeneratorSystem
@@ -429,6 +409,8 @@
     uid: microsoft.quantum.canon.prepareentangledstate
   - name: PrepareIdentity
     uid: microsoft.quantum.canon.prepareidentity
+  - name: PrepareQubit
+    uid: microsoft.quantum.canon.preparequbit
   - name: PrepareSingleQubitIdentity
     uid: microsoft.quantum.canon.preparesinglequbitidentity
   - name: QECC
@@ -451,8 +433,6 @@
     uid: microsoft.quantum.canon.randomreal
   - name: RandomSingleQubitPauli
     uid: microsoft.quantum.canon.randomsinglequbitpauli
-  - name: RandomWalkPhaseEstimation
-    uid: microsoft.quantum.canon.randomwalkphaseestimation
   - name: RealMod
     uid: microsoft.quantum.canon.realmod
   - name: Recover
@@ -467,10 +447,6 @@
     uid: microsoft.quantum.canon.reflectionoraclefromdeterministicstateoracle
   - name: ReflectionStart
     uid: microsoft.quantum.canon.reflectionstart
-  - name: Reset
-    uid: microsoft.quantum.canon.reset
-  - name: ResetAll
-    uid: microsoft.quantum.canon.resetall
   - name: Rest
     uid: microsoft.quantum.canon.rest
   - name: RestrictToSubregister
@@ -495,6 +471,8 @@
     uid: microsoft.quantum.canon.robustphaseestimation
   - name: SimulationAlgorithm
     uid: microsoft.quantum.canon.simulationalgorithm
+  - name: SingleQubitProcessTomographyMeasurement
+    uid: microsoft.quantum.canon.singlequbitprocesstomographymeasurement
   - name: Snd
     uid: microsoft.quantum.canon.snd
   - name: StackCapacity

@@ -5,3 +5,5 @@
     href: prelude/toc.yml
   - name: Canon
     href: canon/toc.yml
+  - name: Research Libraries
+    href: research/toc.yml

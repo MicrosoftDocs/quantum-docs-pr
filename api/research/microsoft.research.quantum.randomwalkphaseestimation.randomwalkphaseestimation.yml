@@ -1,8 +1,8 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.randomwalkphaseestimation
+uid: microsoft.research.quantum.randomwalkphaseestimation.randomwalkphaseestimation
 name: RandomWalkPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: Microsoft.Research.Quantum.RandomWalkPhaseEstimation
 summary: >2
    Performs iterative phase estimation using a random walk to approximate
    Bayesian inference on the classical measurement results from a given

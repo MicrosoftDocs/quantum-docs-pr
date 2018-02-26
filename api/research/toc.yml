@@ -1,0 +1,9 @@
+- name: Microsoft.Research.Quantum.RandomWalkPhaseEstimation
+  uid: microsoft.research.quantum.randomwalkphaseestimation
+  items:
+  - name: ExpOracle
+    uid: microsoft.research.quantum.randomwalkphaseestimation.exporacle
+  - name: PhaseEstimationSample
+    uid: microsoft.research.quantum.randomwalkphaseestimation.phaseestimationsample
+  - name: RandomWalkPhaseEstimation
+    uid: microsoft.research.quantum.randomwalkphaseestimation.randomwalkphaseestimation

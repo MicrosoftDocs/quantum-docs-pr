@@ -1,0 +1,13 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.research.quantum.randomwalkphaseestimation
+name: Microsoft.Research.Quantum.RandomWalkPhaseEstimation
+functions: []
+operations:
+- uid: microsoft.research.quantum.randomwalkphaseestimation.exporacle
+- uid: microsoft.research.quantum.randomwalkphaseestimation.phaseestimationsample
+- uid: microsoft.research.quantum.randomwalkphaseestimation.randomwalkphaseestimation
+  summary: >2
+     Performs iterative phase estimation using a random walk to approximate
+     Bayesian inference on the classical measurement results from a given
+     oracle and eigenstate.
+newtypes: []

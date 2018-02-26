@@ -43,6 +43,8 @@ Projects created using previous versions of Quantum Development Kit will still w
 2. Copy existing .qs and .cs/.fs files from the old project to the new project (using Add > Existing Item). Do not copy the AssemblyInfo.cs file.
 3. Build and run the new project.
 
+Please note that the operation RandomWalkPhaseEstimation from the namespace Microsoft.Quantum.Canon was moved into the namespace Microsoft.Research.Quantum.RandomWalkPhaseEstimation in the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository.
+
 ### Known Issues ###
 
 - The `--filter` option to `dotnet test` does not work correctly for tests written in Q#.

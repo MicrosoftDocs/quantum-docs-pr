@@ -28,9 +28,3 @@ The `Microsoft.Quantum.Development.Kit` NuGet package installed during [installa
 The symbols defined by each of the prelude and the canon are defined in much greater and more exhaustive detail in the [API documentation](xref:microsoft.quantum.standardlibsintro).
 
 In the following sections, we will outline the most salient features of each part of the standard library and provide some context about how each feature might be used in practice.
-
-# Licensing 
-
-The canon is an extensive collection of library functions and is open source, licensed under the permissive MIT license. It can be obtained from [Github Quantum Repo](https://github.com/microsoft/quantum). 
-
-It should be noted that Microsoft's Quantum Development Kit also provides a few specialized library functions that are licensed under a Microsoft Research license which is permissive for academic use, but restricts commercial use. These library functions can be obtained from [Github Quantum-NC Repo](https://github.com/microsoft/quantum-nc).  

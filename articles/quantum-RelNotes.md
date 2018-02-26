@@ -27,6 +27,15 @@ This release brings support for development on more platforms, language interope
 - Improved simulator performance on projects requiring 20 or more qubits.
 - Interoperability with the Python language (preview release available on Windows).
 
+### .NET Editions ###
+
+The .NET platform is available through two different editions, the .NET Framework that is provided with Windows, and the open-source .NET Core that is available on Windows, macOS and Linux.
+With this release, most parts of the Quantum Development Kit are provided as libraries for .NET Standard, the set of classes common to both Framework and Core.
+These libraries are therefore compatible with recent versions of either .NET Framework or .NET Core.
+
+Thus, to help ensure that projects written using the Quantum Development Kit are as portable as possible, we recommend that library projects written using the Quantum Development Kit target .NET Standard, while console applications target .NET Core.
+Since previous releases of the Quantum Development Kit only supported .NET Framework, you may need to migrate your existing projects; see below for details on how to do this.
+
 ### Project Migration
 
 Projects created using previous versions of Quantum Development Kit will still work, as long as you don't update the NuGet packages used in them. To migrate existing code to the new version, perform the following steps:
@@ -34,6 +43,10 @@ Projects created using previous versions of Quantum Development Kit will still w
 2. Copy existing .qs and .cs/.fs files from the old project to the new project (using Add > Existing Item). Do not copy the AssemblyInfo.cs file.
 3. Build and run the new project.
 
+### Known Issues ###
+
+- The `--filter` option to `dotnet test` does not work correctly for tests written in Q#.
+  As a result, individual unit tests cannot be run in VS Code; we recommend using `dotnet test` at the command line to re-run all tests.
 
 # Version 0.1.1801.1707
 

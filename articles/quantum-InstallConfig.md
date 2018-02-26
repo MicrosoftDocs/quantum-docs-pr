@@ -80,7 +80,7 @@ In this section you will clone the quantum samples & libraries repository, and r
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
-1. If you intend to use Visual Studio Code, install the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.microsoft-quantum-development-kit-vscode) extension.
+1. If you intend to use Visual Studio Code, install the [Microsoft Quantum Development Kit for Visual Studio Code]( https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) extension.
 
 2. Install the Q# Development Kit project templates.
    From your favorite command line (e.g.: PowerShell or Bash), run the following command:

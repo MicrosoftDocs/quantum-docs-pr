@@ -34,7 +34,7 @@ Projects created using previous versions of Quantum Development Kit will still w
 2. Copy existing .qs and .cs/.fs files from the old project to the new project (using Add > Existing Item). Do not copy the AssemblyInfo.cs file.
 3. Build and run the new project.
 
-Please note that Phase Estimation routines have moved into a separate library, which can be found at https://github.com/microsoft/quantum-nc.
+Please note that the operation RandomWalkPhaseEstimation from the namespace Microsoft.Quantum.Canon was moved into the namespace Microsoft.Research.Quantum.RandomWalkPhaseEstimation in the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository.
 
 
 # Version 0.1.1801.1707

@@ -46,7 +46,7 @@ Projects created using previous versions of Quantum Development Kit will still w
 ### Known Issues ###
 
 - The `--filter` option to `dotnet test` does not work correctly for tests written in Q#.
-  As a result, individual unit tests cannot be run in VS Code; we recommend using `dotnet test` at the command line to re-run all tests.
+  As a result, individual unit tests cannot be run in Visual Studio Code; we recommend using `dotnet test` at the command line to re-run all tests.
 
 # Version 0.1.1801.1707
 

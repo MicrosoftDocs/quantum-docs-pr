@@ -52,6 +52,7 @@
     },
     "fileMetadata": {},
     "template": [],
+    "markdownEngineName": "markdig",
     "dest": "quantum-api"
   }
 }

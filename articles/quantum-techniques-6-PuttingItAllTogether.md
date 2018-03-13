@@ -20,7 +20,7 @@ Let's return to the example of the teleportation circuit defined in [Quantum Cir
 ![`Teleport(msg : Qubit, there : Qubit) : ()`](./media/teleportation.svg)
 
 We can now translate each of the steps in this quantum circuit into Q#.
-First, we begin the definition of a new operation while will perform the teleportation given two qubits `msg` and `there`:
+First, we begin the definition of a new operation that will perform the teleportation given two qubits `msg` and `there`:
 
 ```qsharp
 operation Teleport(msg : Qubit, there : Qubit) : () {

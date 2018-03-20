@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Intent and product brand in a unique string of 43-59 chars including spaces | Microsoft Docs 
-description: 115-145 characters including spaces. Edit the intro para describing article intent to fit here. This abstract displays in the search result.
+title: File Structure | Microsoft Docs 
+description: Q# File Structure
 author: QuantumWriter
 uid: microsoft.quantum.qsharp-ref.file-structure
 ms.author: Alan.Geller@microsoft.com 
@@ -20,8 +20,7 @@ A Q# file consists of one or more namespace declarations.
 
 Each namespace declaration contains definitions for user-defined types,
 operations, and functions.
-A namespace declaration may contain any number of each type of definition,
-but it must contain at least one definition.
+A namespace declaration may contain any number of each type of definition.
 
 ## User-Defined Type Declarations
 
@@ -39,7 +38,7 @@ For example:
 newtype PairOfInts = (Int, Int);
 ```
 
-A file may contain zero or more user-defined type declarations. 
+Each Q# source file may define any number of user-defined type declarations, including none. 
 Type names must be unique within a namespace and may not conflict with 
 operation and function names.
 
@@ -47,8 +46,7 @@ operation and function names.
 
 Operations are the core of Q#, 
 roughly analogous to functions in other languages. 
-Each Q# source file may define any number of operations, including none 
-if the file only defines one or more user-defined types.
+Each Q# source file may define any number of operations, including none.
 
 An operation definition consists of the keyword `operation`, 
 followed by the symbol that is the operation’s name, 
@@ -95,7 +93,7 @@ An adjoint definition consists of the keyword `adjoint`, followed by one of:
     before they are used.
  - A statement block that implements the operation’s adjoint. 
 
-Thus, an operation definition contain
+Thus, an operation definition can contain
 
 ```qsharp
 adjoint self
@@ -117,7 +115,7 @@ adjoint {
 
 If none of these appear, then no adjoint is defined.
 
-An operation whose body contains repeat-until-success loops, set-statements, and/or measurements or calls to other operations that do not support the `Adjoint` functor may not specify the `auto` keyword.
+An operation whose body contains repeat-until-success loops, set statements, and/or measurements or calls to other operations that do not support the `Adjoint` functor may not specify the `auto` keyword.
 
 If an operation has no body but should have an adjoint defined, 
 it should specify `adjoint auto` or `adjoint self`.
@@ -126,8 +124,8 @@ it should specify `adjoint auto` or `adjoint self`.
 
 The controlled version of an operation specifies how a quantum-controlled 
 version of the operation is implemented. 
-A more complete description is provided above in the [Controlled](xref:microsoft.quantum.qsharp-ref.type-model#controlled)
-section, above.
+A more complete description is provided in the [Controlled](xref:microsoft.quantum.qsharp-ref.type-model#controlled)
+section.
 
 It is legal to specify an operation with no controlled version; 
 for instance, measurement operations have no controlled version because 
@@ -147,7 +145,7 @@ one of:
     array of control qubits, `)`, and a statement block that implements the 
     controlled version of the operation. 
 
-Thus, an operation definition contain
+Thus, an operation definition can contain
 
 ```qsharp
 controlled auto
@@ -162,7 +160,7 @@ controlled (controls) {
 }
 ```
 
-An operation whose body contains repeat-until-success loops or measurements 
+An operation whose body contains repeat-until-success loops, set statements, and/or measurements 
 or that calls another operation that does not support the `Controlled` functor
 may not specify the `auto` keyword.
 
@@ -188,7 +186,7 @@ be the name of the variable holding the array of control qubits, `)`,
 and a statement block that implements the controlled adjoint version of the 
 operation. 
 
-An operation whose body contains repeat-until-success loops, set-statements, and/or measurements or calls to other operations that do not have a controlled adjoint version may not specify the `auto` keyword.
+An operation whose body contains repeat-until-success loops, set statements, and/or measurements or calls to other operations that do not have a controlled adjoint version may not specify the `auto` keyword.
 
 If a statement block is provided for either the adjoint or controlled version 
 of an operation, and `auto` is specified for the controlled adjoint version, 

@@ -16,7 +16,7 @@ ms.topic: article
 
 Thank you for your interest in Microsoft Quantum Development Kit preview. The development kit contains the tools you'll need to build your own quantum computing programs and experiments. Assuming some experience with Microsoft Visual Studio or Visual Studio Code, beginners can write their first quantum program, and experienced researchers can quickly and efficiently develop new quantum algorithms.
 
-To jump right in, start with [Installation and validation](quantum-InstallConfig.md) to create and validate your development environment. Then use [Quickstart - your first computer program](quantum-WriteAQuantumProgram.md) to learn about the structure of a Q# project and how to write the quantum equivalent of "Hello, world!" - a quantum teleport application.
+To jump right in, start with [Installation and validation](quantum-InstallConfig.md) to create and validate your development environment. Then use [Quickstart - your first quantum program](quantum-WriteAQuantumProgram.md) to learn about the structure of a Q# project and how to write the quantum equivalent of "Hello, world!" - a quantum teleport application.
 
 If you'd like more general information about Microsoft's quantum computing initiative, see [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/).
 

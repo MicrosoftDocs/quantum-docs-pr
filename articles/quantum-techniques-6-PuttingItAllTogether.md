@@ -16,8 +16,6 @@ ms.topic: article
 # Putting it All Together: Teleportation #
 Let's return to the example of the teleportation circuit defined in [Quantum Circuits](quantum-concepts-8-QuantumCircuits.md). We're going to use this to illustrate the concepts we've learned so far. An explanation of quantum teleportation is provided below for those who are unfamiliar with the theory, followed by a walkthrough of the code implementation in Q#. 
 
-
-
 ## Quantum Teleportation: Theory
 Quantum teleportation is a technique for sending an unknown quantum state (which we'll refer to as the '__message__') from a qubit in one location to a qubit in another location (we'll refer to these qubits as '__here__' and '__there__', respectively). We can represent our __message__ as a vector using Dirac notation: 
 
@@ -62,7 +60,7 @@ The next step to send the __message__ is to apply a Hadamard gate to the __messa
 As a reminder, the Hadamard gate does the following:
 
 Input | Output
------------- | ---------------------------------------------------------------
+---------------------------| ---------------------------------------------------------------
 |0\rangle  | \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)
 |1\rangle  | \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
 
@@ -123,9 +121,7 @@ Shown below is a text-book quantum circuit that implements the teleportation. Mo
 1. Step 3: making a measurement of the first and second qubits, __message__ and __here__.
 1. Step 4: applying a NOT gate or a Z gate, depending on the result of the measurement. 
 
-![`Teleport(msg : Qubit, there : Qubit) : ()`](./media/teleportation.svg)
-
-
+![`Teleport(msg : Qubit, there : Qubit) : ()`](./media/teleportation.svg)  
 
 ## Quantum Teleportation: Code
 

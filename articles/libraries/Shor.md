@@ -11,11 +11,11 @@ ms.topic: article
 # ms.prod: product-name-from-white-list
 # ms.technology: tech-name-from-white-list
 ---
-## Period Finding ##
+# Period Finding #
 
 Now that we have seen how the quantum Fourier transform and phase estimation work, we can use these tools to solve a classically hard computational problem called *t period finding*.  In the next section, we will see how to apply period finding to factoring.
 
-Given two integers $a$ and $N$, where $a<N$, the goal of period finding, also called order finding, is to find the {\it order} $r$ of $a$ modulo $N$, where $r$ is defined to be the least positive integer such that $a^r \equiv 1 \text{ mod } N$.  
+Given two integers $a$ and $N$, where $a<N$, the goal of period finding, also called order finding, is to find the {\it order} $r$ of $a$ modulo $N$, where $r$ is defined to be the least positive integer such that $a^r \equiv 1 \text{ mod } N$.
 
 To find the order using a quantum computer, we can use the phase estimation algorithm applied to the following unitary operator $U_a$:
 $$ U_a|x\rangle \equiv |(ax)\text{ mod }N\rangle .$$
@@ -28,26 +28,25 @@ Phase estimation thus outputs the eigenvalues $e^{2\pi i s / r}$ from which $r$ 
 
 Below is the circuit diagram for quantum period finding:
 
-
 Here $2n$ qubits are initialized to $|0\rangle$ and $n$ qubits are initialized to $|1\rangle$.
 The advanced reader again may wonder why the quantum register to hold the eigenstates is initialized to $|1\rangle$.
 As one does not know the order $r$ in advance, we cannot actually prepare $|x_s\rangle$ states directly.
 Luckily, it turns out that $1/\sqrt{r} \sum\_{s=0}^{r-1} |x\_s\rangle = |1\rangle$.
-We don't need to actually prepare $|x\rangle$!  
-We can just prepare a quantum register of $n$ qubits in state $|1\rangle$. 
+We don't need to actually prepare $|x\rangle$!
+We can just prepare a quantum register of $n$ qubits in state $|1\rangle$.
 
 The circuit contains the QFT and several controlled gates.
-The QFT gate has been described [previously](./algorithms.md).  
+The QFT gate has been described [previously](./algorithms.md).
 The controlled-$U_a$ gate maps $|x\rangle$ to $|(ax)\text{ mod } N\rangle$ if the control qubit is $|1\rangle$, and maps $|x\rangle$ to $|x\rangle$ otherwise.
 
-To achieve $(a^nx)\text{ mod } N$,  we can simply apply controlled-$U_{a^n}$, where we calculate $a^n \text{ mod } N$ classically to plug into the quantum circuit.  
+To achieve $(a^nx)\text{ mod } N$,  we can simply apply controlled-$U_{a^n}$, where we calculate $a^n \text{ mod } N$ classically to plug into the quantum circuit.
 The circuits to achieve such modular arithmetic have been described in the [quantum arithmetic documentation](./algorithms.md), specifically we require a modular exponentiation circuit to implement the controlled-$U\_{a^i}$ operations.
 
 While the circuit above explicitly enables order finding, we can reduce the number of qubits required by following Beauregard's method for order finding.  Rather than using $2n$ control qubits, Beauregard shows how to achieve order finding with only one single control qubit.
-The circuit performs the quantum Fourier transform semi-classically through a sequence of operations conditional on the measurement results. 
+The circuit performs the quantum Fourier transform semi-classically through a sequence of operations conditional on the measurement results.
 
-To perform the space-optimized version of the algorithm, we first note we can perform the modular exponentiation of a constant $a$ by a quantum superposition of values $x$ stored in a quantum register of $2n$ qubits.  
-Here $n=\left \lceil {\log\_2 N} \right \rceil$.  
+To perform the space-optimized version of the algorithm, we first note we can perform the modular exponentiation of a constant $a$ by a quantum superposition of values $x$ stored in a quantum register of $2n$ qubits.
+Here $n=\left \lceil {\log\_2 N} \right \rceil$.
 We denote the quantum register of $2n$ qubits as $|x\rangle$.
 We will compute the result into a separate register, denoted $|0\rangle$.
 
@@ -57,14 +56,14 @@ We can compute this mapping using $2n$ conditional modular multiplications.
 In turn, each modular multiplication can be computed using $n$ modular additions, as described in the ARITHMETIC SECTION REF.
 
 The quantum circuit below outlines the sequence of quantum gate operations:
-![](../media/QPE.png)
+![Quantum circuit Diagram described next](../media/QPE.png)
 
 The circuit requires several phase-shift gate operations $R_k$, given by:
 $$ R_k = \left [ \begin{matrix}  1 & 0 \\ 0 & e^{i\theta_k}  \end{matrix} \right ],$$
 where $\theta_k = -\pi \sum_{j=0}^{k-1} 2^{k-j}m_i$, where the sum runs over all previous measurements $j$ and $m_j\in{0,1}$ denotes the given measurement result.  That is, $m_0$ represents the least significant bit of the final result, and is extracted during the first measurement.  These gates are thus classically controlled gate operations, conditioned on the previous measurement results.  Together, they perform the inverse quantum Fourier transform.
- 
+
 \section{Factoring}
-The goal of factoring is to determine the two prime factors of integer $N$, where $N$ is an $n$-bit number.  
+The goal of factoring is to determine the two prime factors of integer $N$, where $N$ is an $n$-bit number.
 Factoring consists of three parts: (1) a classical preprocessing routine; (2) a quantum computing routine to find the order of $a \text{ mod } N$; and (3) a classical preprocessing routine to derive the prime factors from the order.
 
 The classical preprocessing routine consists of the following steps:

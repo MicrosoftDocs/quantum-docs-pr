@@ -24,12 +24,13 @@ If you'd like more general information about Microsoft's quantum computing initi
 
 Your feedback about all parts of the Quantum Development Kit is important. We ask you to provide feedback by joining our community of developers at [Microsoft Quantum - Feedback](https://quantum.uservoice.com/). Sign in and share your experience in one of the following forums.
 
-- Q# language
-- Debugging and simulation
-- Samples and documentation
-- Libraries
-- Setup and IDE integration
-- General ideas and feature requests
+- [Q# language](https://quantum.uservoice.com/forums/906208-q-language)
+- [Language Interoperability](https://quantum.uservoice.com/forums/910546-language-interoperability)
+- [Debugging and simulation](https://quantum.uservoice.com/forums/906940-debugging-and-simulation)
+- [Libraries](https://quantum.uservoice.com/forums/906952-libraries)
+- [Samples and documentation](https://quantum.uservoice.com/forums/906946-samples-and-documentation)
+- [Setup and Visual Studio / VS Code Integration](https://quantum.uservoice.com/forums/906943-setup-and-visual-studio-vs-code-integration)
+- [General ideas and feature requests](https://quantum.uservoice.com/forums/906097-general-ideas-and-feature-requests)
 
 You will need a [Microsoft Account](https://signup.live.com/) to provide feedback.
 

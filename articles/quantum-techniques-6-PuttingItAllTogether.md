@@ -23,7 +23,7 @@ $$
 |\psi\rangle = \alpha|0\rangle + \beta|1\rangle
 $$
 
-The __message__ qubit's state is unknown to us as we do not know the values of \alpha and \beta.
+The __message__ qubit's state is unknown to us as we do not know the values of $\alpha$ and $\beta$.
 
 ### Step 1: Create an entangled state
 In order to send the __message__ we need for the qubit __here__ to be entangled with the qubit __there__. This is achieved by applying a Hadamard gate, followed by a CNOT gate. Let's look at the math behind these gate operations.
@@ -31,12 +31,62 @@ In order to send the __message__ we need for the qubit __here__ to be entangled 
 We will begin with the qubits __here__ and __there__ both in the $|0\rangle$ state. After entangling these qubits, they are in the state:
 
 $$
-\frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)
+|\phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)
 $$
 
 ### Step 2: Send the message
 To send the __message__ we first apply a CNOT gate with the __message__ qubit and __here__ qubit as input. This input state can be written:
 
+$$
+|\psi\rangle|\phi^+\rangle = (\alpha|0\rangle + \beta|1\rangle)(\frac{1}{\sqrt{2}}(|00\rangle + |11\rangle))
+$$
+
+This expands to:
+
+$$
+|\psi\rangle|\phi^+\rangle = \frac{\alpha}{\sqrt{2}}|000\rangle + \frac{\alpha}{\sqrt{2}}|011\rangle + \frac{\beta}{\sqrt{2}}|100\rangle + \frac{\beta}{\sqrt{2}}|111\rangle
+$$
+
+As a reminder, the CNOT gate flips the target qubit when the control qubit is 1. So for example, an input of $|000\rangle$ will result in no change as the first qubit (the control) is 0. However take a case where the first qubit is 1, for example an input of $|100\rangle$, then the output is $|110\rangle$ as the second qubit (the target) is flipped by the CNOT gate.
+
+Let's now consider our output once the CNOT gate has acted on our input above. The result is:
+
+$$
+\frac{\alpha}{\sqrt{2}}|000\rangle + \frac{\alpha}{\sqrt{2}}|011\rangle + \frac{\beta}{\sqrt{2}}|110\rangle + \frac{\beta}{\sqrt{2}}|101\rangle
+$$
+
+The next step to send the __message__ is to apply a Hadamard gate to the __message__ qubit. 
+
+As a reminder, the Hadamard gate does the following:
+
+Input | Output
+------------ | -------------
+|0\rangle  | \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)
+|1\rangle  | \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
+
+If we apply the Hadamard gate to the first qubit of each term of our output above, we get the following result:
+
+$$
+\frac{\alpha}{\sqrt{2}}(\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle))|00\rangle + \frac{\alpha}{\sqrt{2}}(\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle))|11\rangle + \frac{\beta}{\sqrt{2}}(\frac{1}{\sqrt{2}}(|0\rangle - |1\rangle))|10\rangle + \frac{\beta}{\sqrt{2}}(\frac{1}{\sqrt{2}}|0\rangle - |1\rangle))|01\rangle
+$$
+
+Note that each term has two $\frac{1}{\sqrt{2}}$ factors. We can multiply these out giving the following result:
+
+$$
+\frac{\alpha}{2}(|0\rangle + |1\rangle)|00\rangle + \frac{\alpha}{2}(|0\rangle + |1\rangle)|11\rangle + \frac{\beta}{2}(|0\rangle - |1\rangle)|10\rangle + \frac{\beta}{2}(|0\rangle - |1\rangle)|01\rangle
+$$
+
+The  $\frac{1}{2}$ factor is common to each term so we can now take it outside the brackets:
+
+$$
+\frac{1}{2}\big[\alpha(|0\rangle + |1\rangle)|00\rangle + \alpha(|0\rangle + |1\rangle)|11\rangle + \beta(|0\rangle - |1\rangle)|10\rangle + \beta(|0\rangle - |1\rangle)|01\rangle\big]
+$$
+
+We can then multiply out the brackets for each term giving:
+
+$$
+\frac{1}{2}\big[\alpha|000\rangle + \alpha|100\rangle + \alpha|011\rangle + \alpha|111\rangle + \beta|010\rangle - \beta|110\rangle + \beta|001\rangle - \beta|101\rangle\big]
+$$
 
 
 Shown below is a text-book quantum circuit that implements the teleportation, including the quantum part, the measurements, and the classically-controlled correction operations.

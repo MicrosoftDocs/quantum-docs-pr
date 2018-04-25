@@ -120,6 +120,13 @@ Shown below is a text-book quantum circuit that implements the teleportation. Mo
 1. Step 2: sending the __message__ using a CNOT gate and a Hadamard gate.
 1. Step 3: making a measurement of the first and second qubits, __message__ and __here__.
 1. Step 4: applying a NOT gate or a Z gate, depending on the result of the measurement. 
+
+![`Teleport(msg : Qubit, there : Qubit) : ()`](./media/teleportation.svg)
+
+## Quantum Teleportation: Code
+
+We have our circuit for quantum teleportation: 
+
 ![`Teleport(msg : Qubit, there : Qubit) : ()`](./media/teleportation.svg)
 
 We can now translate each of the steps in this quantum circuit into Q#.

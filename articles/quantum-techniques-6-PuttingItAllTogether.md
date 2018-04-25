@@ -23,8 +23,21 @@ $$
 |\psi\rangle = \alpha|0\rangle + \beta|1\rangle
 $$
 
+The __message__ qubit's state is unknown to us as we do not know the values of \alpha and \beta.
+
 ### Step 1: Create an entangled state
-In order to send the __message__ we need for the qubit __here__ to be entangled with the qubit __there__. This is achieved by applying 
+In order to send the __message__ we need for the qubit __here__ to be entangled with the qubit __there__. This is achieved by applying a Hadamard gate, followed by a CNOT gate. Let's look at the math behind these gate operations.
+
+We will begin with the qubits __here__ and __there__ both in the $|0\rangle$ state. After entangling these qubits, they are in the state:
+
+$$
+\frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)
+$$
+
+### Step 2: Send the message
+To send the __message__ we first apply a CNOT gate with the __message__ qubit and __here__ qubit as input. This input state can be written:
+
+
 
 Shown below is a text-book quantum circuit that implements the teleportation, including the quantum part, the measurements, and the classically-controlled correction operations.
 

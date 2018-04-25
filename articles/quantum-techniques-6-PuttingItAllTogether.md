@@ -55,12 +55,12 @@ $$
 \frac{\alpha}{\sqrt{2}}|000\rangle + \frac{\alpha}{\sqrt{2}}|011\rangle + \frac{\beta}{\sqrt{2}}|110\rangle + \frac{\beta}{\sqrt{2}}|101\rangle
 $$
 
-The next step to send the __message__ is to apply a Hadamard gate to the __message__ qubit. 
+The next step to send the __message__ is to apply a Hadamard gate to the __message__ qubit (that's the first qubit of each term). 
 
 As a reminder, the Hadamard gate does the following:
 
 Input | Output
------------- | -------------
+------------ | ---------------------------------------------------------------
 |0\rangle  | \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)
 |1\rangle  | \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
 
@@ -87,6 +87,16 @@ We can then multiply out the brackets for each term giving:
 $$
 \frac{1}{2}\big[\alpha|000\rangle + \alpha|100\rangle + \alpha|011\rangle + \alpha|111\rangle + \beta|010\rangle - \beta|110\rangle + \beta|001\rangle - \beta|101\rangle\big]
 $$
+
+### Step 3: Measure the result
+
+Due to __here__ and __there__ being entangled, the operations on __here__ in the previous step have altered __there__'s state. If we measure the first and second qubit (__message__ and __here__) we can learn what state __there__ is in, due to this property of entanglement. 
+
+* If we measure and get a result 00, the superposition collapses, leaving only terms above consistent with this result. That's $\alpha|000\rangle +\beta|001\rangle$. This can be refactored to $|00\rangle(\alpha|0\rangle +\beta|1\rangle)$. Therefore if we measure the first and second qubit to be 00, we know that the third qubit, __there__, is in the state $(\alpha|0\rangle +\beta|1\rangle)$.
+* If we measure and get a result 01, the superposition collapses, leaving only terms above consistent with this result. That's $\alpha|011\rangle +\beta|010\rangle$. This can be refactored to $|01\rangle(\alpha|1\rangle +\beta|0\rangle)$. Therefore if we measure the first and second qubit to be 01, we know that the third qubit, __there__, is in the state $(\alpha|1\rangle +\beta|0\rangle)$.
+* If we measure and get a result 10, the superposition collapses, leaving only terms above consistent with this result. That's $\alpha|100\rangle -\beta|101\rangle$. This can be refactored to $|10\rangle(\alpha|0\rangle -\beta|1\rangle)$. Therefore if we measure the first and second qubit to be 10, we know that the third qubit, __there__, is in the state $(\alpha|0\rangle -\beta|1\rangle)$.
+* If we measure and get a result 11, the superposition collapses, leaving only terms above consistent with this result. That's $\alpha|111\rangle -\beta|110\rangle$. This can be refactored to $|11\rangle(\alpha|1\rangle -\beta|0\rangle)$. Therefore if we measure the first and second qubit to be 11, we know that the third qubit, __there__, is in the state $(\alpha|1\rangle -\beta|0\rangle)$.
+
 
 
 Shown below is a text-book quantum circuit that implements the teleportation, including the quantum part, the measurements, and the classically-controlled correction operations.

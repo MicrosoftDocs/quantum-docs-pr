@@ -3,6 +3,7 @@
 title: Q# standard libraries - prelude | Microsoft Docs
 description: Q# standard libraries - prelude
 author: QuantumWriter
+uid: microsoft.quantum.libraries.prelude
 ms.author: martinro@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article

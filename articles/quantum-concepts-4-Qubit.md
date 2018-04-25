@@ -64,7 +64,7 @@ operation PrepareSuperposition(qubit : Qubit) : () {
     body {
         H(qubit);
     }
-
+    // Auto-generate the adjoint of the operation
     adjoint auto;
 }
 ```

@@ -92,18 +92,38 @@ $$
 
 Due to __here__ and __there__ being entangled, the operations on __here__ in the previous step have altered __there__'s state. If we measure the first and second qubit (__message__ and __here__) we can learn what state __there__ is in, due to this property of entanglement. 
 
-* If we measure and get a result 00, the superposition collapses, leaving only terms above consistent with this result. That's $\alpha|000\rangle +\beta|001\rangle$. This can be refactored to $|00\rangle(\alpha|0\rangle +\beta|1\rangle)$. Therefore if we measure the first and second qubit to be 00, we know that the third qubit, __there__, is in the state $(\alpha|0\rangle +\beta|1\rangle)$.
-* If we measure and get a result 01, the superposition collapses, leaving only terms above consistent with this result. That's $\alpha|011\rangle +\beta|010\rangle$. This can be refactored to $|01\rangle(\alpha|1\rangle +\beta|0\rangle)$. Therefore if we measure the first and second qubit to be 01, we know that the third qubit, __there__, is in the state $(\alpha|1\rangle +\beta|0\rangle)$.
-* If we measure and get a result 10, the superposition collapses, leaving only terms above consistent with this result. That's $\alpha|100\rangle -\beta|101\rangle$. This can be refactored to $|10\rangle(\alpha|0\rangle -\beta|1\rangle)$. Therefore if we measure the first and second qubit to be 10, we know that the third qubit, __there__, is in the state $(\alpha|0\rangle -\beta|1\rangle)$.
-* If we measure and get a result 11, the superposition collapses, leaving only terms above consistent with this result. That's $\alpha|111\rangle -\beta|110\rangle$. This can be refactored to $|11\rangle(\alpha|1\rangle -\beta|0\rangle)$. Therefore if we measure the first and second qubit to be 11, we know that the third qubit, __there__, is in the state $(\alpha|1\rangle -\beta|0\rangle)$.
+* If we measure and get a result 00, the superposition collapses, leaving only terms consistent with this result. That's $\alpha|000\rangle +\beta|001\rangle$. This can be refactored to $|00\rangle(\alpha|0\rangle +\beta|1\rangle)$. Therefore if we measure the first and second qubit to be 00, we know that the third qubit, __there__, is in the state $(\alpha|0\rangle +\beta|1\rangle)$.
+* If we measure and get a result 01, the superposition collapses, leaving only terms consistent with this result. That's $\alpha|011\rangle +\beta|010\rangle$. This can be refactored to $|01\rangle(\alpha|1\rangle +\beta|0\rangle)$. Therefore if we measure the first and second qubit to be 01, we know that the third qubit, __there__, is in the state $(\alpha|1\rangle +\beta|0\rangle)$.
+* If we measure and get a result 10, the superposition collapses, leaving only terms consistent with this result. That's $\alpha|100\rangle -\beta|101\rangle$. This can be refactored to $|10\rangle(\alpha|0\rangle -\beta|1\rangle)$. Therefore if we measure the first and second qubit to be 10, we know that the third qubit, __there__, is in the state $(\alpha|0\rangle -\beta|1\rangle)$.
+* If we measure and get a result 11, the superposition collapses, leaving only terms consistent with this result. That's $\alpha|111\rangle -\beta|110\rangle$. This can be refactored to $|11\rangle(\alpha|1\rangle -\beta|0\rangle)$. Therefore if we measure the first and second qubit to be 11, we know that the third qubit, __there__, is in the state $(\alpha|1\rangle -\beta|0\rangle)$.
 
+### Step 4: Interpret the result
 
+As a reminder, the original __message__ we wished to send was:
 
-Shown below is a text-book quantum circuit that implements the teleportation, including the quantum part, the measurements, and the classically-controlled correction operations.
+$$
+|\psi\rangle = \alpha|0\rangle + \beta|1\rangle
+$$
 
+We need to get the __there__ qubit into this state, so that the received state is the one that was intended. 
+
+* If we measured and got a result of 00, then the third qubit, __there__, is in the state $(\alpha|0\rangle +\beta|1\rangle)$. You can see that this is the intended __message__ therefore we do not need to alter this state.
+* If we measured and got a result of 01, then the third qubit, __there__, is in the state $(\alpha|1\rangle +\beta|0\rangle)$. This differs from the intended __message__, however applying a NOT gate gives us the desired state $(\alpha|0\rangle +\beta|1\rangle)$.
+* If we measured and got a result of 10, then the third qubit, __there__, is in the state $(\alpha|0\rangle -\beta|1\rangle)$. This differs from the intended __message__, however applying a Z gate gives us the desired state $(\alpha|0\rangle +\beta|1\rangle)$.
+* If we measured and got a result of 11, then the third qubit, __there__, is in the state $(\alpha|1\rangle -\beta|0\rangle)$. This differs from the intended __message__, however applying a NOT gate, followed by a Z gate, gives us the desired state $(\alpha|0\rangle +\beta|1\rangle)$.
+
+To summarize, if we measure and the first qubit is 1, a Z gate is applied. If we measure and the second qubit is 1, a NOT gate is applied.
+
+### Summary
+Shown below is a text-book quantum circuit that implements the teleportation. Moving from left to right you can see:
+1. Step 1: creating an entangled state by applying a Hadamard gate and CNOT gate. 
+1. Step 2: sending the __message__ using a CNOT gate and a Hadamard gate.
+1. Step 3: making a measurement of the first and second qubits, __message__ and __here__.
+1. Step 4: applying a NOT gate or a Z gate, depending on the result of the measurement. 
 ![`Teleport(msg : Qubit, there : Qubit) : ()`](./media/teleportation.svg)
 
 We can now translate each of the steps in this quantum circuit into Q#.
+
 First, we begin the definition of a new operation while will perform the teleportation given two qubits `msg` and `there`:
 
 ```qsharp

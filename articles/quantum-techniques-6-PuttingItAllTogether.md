@@ -16,6 +16,8 @@ ms.topic: article
 # Putting it All Together: Teleportation #
 Let's return to the example of the teleportation circuit defined in [Quantum Circuits](quantum-concepts-8-QuantumCircuits.md). We're going to use this to illustrate the concepts we've learned so far. An explanation of quantum teleportation is provided below for those who are unfamiliar with the theory, followed by a walkthrough of the code implementation in Q#. 
 
+
+
 ## Quantum Teleportation: Theory
 Quantum teleportation is a technique for sending an unknown quantum state (which we'll refer to as the '__message__') from a qubit in one location to a qubit in another location (we'll refer to these qubits as '__here__' and '__there__', respectively). We can represent our __message__ as a vector using Dirac notation: 
 
@@ -123,6 +125,8 @@ Shown below is a text-book quantum circuit that implements the teleportation. Mo
 
 ![`Teleport(msg : Qubit, there : Qubit) : ()`](./media/teleportation.svg)
 
+
+
 ## Quantum Teleportation: Code
 
 We have our circuit for quantum teleportation: 
@@ -131,20 +135,23 @@ We have our circuit for quantum teleportation:
 
 We can now translate each of the steps in this quantum circuit into Q#.
 
-First, we begin the definition of a new operation while will perform the teleportation given two qubits `msg` and `there`:
+### Step 0: Definition
+When we perform teleportation, we must know the __message__ we wish to send, and where we wish to send it (__there__). For this reason, we begin by defining a new Teleport operation that is given two qubits as arguments, `msg` and `there`:
 
 ```qsharp
 operation Teleport(msg : Qubit, there : Qubit) : () {
     body {
 ```
 
-Next, we allocate a qubit `here` with a `using` block:
+
+We also need to allocate a qubit `here` which we achieve with a `using` block:
 
 ```qsharp
         using (register = Qubit[1]) {
             let here = register[0];
 ```
 
+### Step 1: Create an entangled state
 We can then create the entangled pair between `here` and `there` by using the @"microsoft.quantum.primitive.h" and @"microsoft.quantum.primitive.cnot" operations:
 
 ```qsharp
@@ -152,6 +159,7 @@ We can then create the entangled pair between `here` and `there` by using the @"
             CNOT(here, there);
 ```
 
+### Step 2: Send the message
 We then use the next $\operatorname{CNOT}$ and $H$ gates to move our message qubit:
 
 ```qsharp
@@ -159,10 +167,11 @@ We then use the next $\operatorname{CNOT}$ and $H$ gates to move our message qub
             H(msg);
 ```
 
-Finally, we use @"microsoft.quantum.primitive.m" to perform the measurements and feed them into classical control, as denoted by `if` statements:
+### Step 3 & 4: Measuring and interpreting the result
+Finally, we use @"microsoft.quantum.primitive.m" to perform the measurements and perform the necessary gate operations to get the desired state, as denoted by `if` statements:
 
 ```qsharp
-            // Measure out the entanglement.
+            // Measure out the entanglement
             if (M(msg) == One)  { Z(there); }
             if (M(here) == One) { X(there); }
 ```

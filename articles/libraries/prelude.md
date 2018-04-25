@@ -25,7 +25,7 @@ The primitive operations defined in the standard library roughly fall into one o
 - Operations implementing measurements.
 
 Since the Clifford + $T$ gate set is [universal](../quantum-concepts-5-MultipleQubits.md) for quantum computing, these operations suffice to approximately implement any quantum algorithm within negligibly small error.
-By also providing rotations as well, Q# allows the programmer to work within the single qubit unitary and CNOT gate library.  This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [For more information](xref:microsoft.quantum.more-information)).
+By providing rotations as well, Q# allows the programmer to work within the single qubit unitary and CNOT gate library.  This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [here](xref:microsoft.quantum.more-information) for more information).
 
 Where possible, the operations defined in the prelude which act on qubits allow for applying the `Controlled` variant, such that the target machine will perform the appropriate decomposition.
 
@@ -82,6 +82,20 @@ It corresponds to the single-qubit unitary:
     \end{bmatrix}
 \end{equation}
 
+Below we see these transformations mapped to the [Bloch sphere](https://docs.microsoft.com/en-us/quantum/quantum-concepts-4-qubit?view=qsharp-preview#visualizing-qubits-and-transformations-using-the-bloch-sphere) (the rotation axis in each case is highlighted red):
+
+![Pauli operations mapped onto the Bloch sphere](../media/prelude_pauliBloch.png)
+
+It is important to note that applying the same Pauli gate twice to the same qubit cancels out the operation (because you have now performed a full rotation of 2π (360°) over the surface to the Bloch Sphere, thus arriving back at the starting point). This brings us to the following identity:
+
+$$
+X^2=Y^2=Z^2=\boldone
+$$
+
+This can be visualised on the Bloch sphere:
+
+![XX = I](../media/prelude_blochIdentity.png)
+
 #### Other Single-Qubit Cliffords ####
 
 The <xref:microsoft.quantum.primitive.h> operation implements the Hadamard gate.
@@ -96,6 +110,10 @@ and corresponds to the single-qubit unitary:
         1 & -1
     \end{bmatrix}
 \end{equation}
+
+The Hadamard gate is particularly important as it can be used to create a superposition of the $\ket{0}$ and $\ket{1}$ states. In the Bloch sphere representation, it is easiest to think of this as a rotation of $\ket{\psi}$ around the x-axis by $\pi$ radians ($180^\circ$) followed by a (clockwise) rotation around the y-axis by $\pi/2$ radians ($90^\circ$):
+
+![Hadamard operation mapped onto the Bloch sphere](../media/prelude_hadamardBloch.png)
 
 The <xref:microsoft.quantum.primitive.s> operation implements the phase gate $S$.
 This is the matrix square root of the Pauli $Z$ operation.
@@ -178,6 +196,10 @@ The <xref:microsoft.quantum.primitive.r1frac> operation implements a fractional 
 Z=1 eigenstate.
 It has signature `((Int,Int, Qubit) => () : Adjoint, Controlled)`.
 `R1Frac(k,n,_)` is the same as `RFrac(PauliZ,-k.n+1,_)` followed by `RFrac(PauliI,k,n+1,_)`.
+
+An example of a rotation operation (around the Pauli $Z$ axis, in this instance) mapped onto the Bloch sphere is shown below:
+
+![Rotation operation mapped onto the Bloch sphere](../media/prelude_rotationBloch.png)
 
 #### Multi-Qubit Operations ####
 

@@ -13,12 +13,13 @@ ms.topic: article
 # ms.prod: product-name-from-white-list
 # ms.technology: tech-name-from-white-list
 ---
+# Advanced Matrix Concepts #
 
 # Advanced Matrix Concepts
 
 We now extend our manipulation of Matrices to [Eigenvalues, Eigenvectors](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) and [Exponentials](https://en.wikipedia.org/wiki/Matrix_exponential) which form a fundamental set of tools we need to describe and implement quantum algorithms.
 
-## Eigenvalues and Eigenvectors
+## Eigenvalues and Eigenvectors ##
 
 Let $M$ be a square matrix and $v$ be a vector that is not the all zeros vector (i.e., the vector with all entries equal to $0$).
 We say $v$ is an [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) of  $M$ if $Mv = cv$ for some number $c$. We say $c$ is the [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) corresponding to the eigenvector $v$. In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number. Note that if $v$ is an eigenvector with eigenvalue $c$, then $av$ is also an eigenvector (for any nonzero $a$) with the same eigenvalue.
@@ -29,7 +30,7 @@ As another example, consider a [diagonal matrix](https://en.wikipedia.org/wiki/D
 
 $$
 \begin{bmatrix}
-	d_1 & 0 & 0 \\\\ 0 & d_2 & 0 \\\\ 0 & 0 & d_3
+d_1 & 0 & 0 \\\\ 0 & d_2 & 0 \\\\ 0 & 0 & d_3
 \end{bmatrix}.
 $$
 

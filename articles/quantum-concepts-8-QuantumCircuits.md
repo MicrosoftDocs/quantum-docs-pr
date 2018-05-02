@@ -99,6 +99,3 @@ gives a classically controlled gate, where $G$ is applied conditioned on the cla
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
 ![](./media/concepts_tp2.png)
-
-
-

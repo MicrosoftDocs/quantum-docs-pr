@@ -35,7 +35,7 @@ $$
 $$
 
 ### Step 2: Send the message
-To send the __message__ we first apply a CNOT gate with the __message__ qubit and __here__ qubit as input. This input state can be written:
+To send the __message__ we first apply a CNOT gate with the __message__ qubit and __here__ qubit as inputs (the __message__ qubit being the control and the __here__ qubit being the target qubit, in this instance). This input state can be written:
 
 $$
 |\psi\rangle|\phi^+\rangle = (\alpha|0\rangle + \beta|1\rangle)(\frac{1}{\sqrt{2}}(|00\rangle + |11\rangle))

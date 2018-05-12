@@ -22,7 +22,7 @@ The software stack in quantum computing is no different in principle, and in pra
 
 Error correction requires a fast and reliable classical computer to be run in concert with the quantum computer to correct errors as they appear in the quantum computation.  In practice, components such as field-programmable gate arrays (FPGAs) or fast cryogenic processors may be needed to identify and correct the errors faster than they naturally accumulate in the quantum computer.  As a result, a quantum computer is a hybrid machine comprised of several different computational devices that operate over a wide range of temperatures.  For this reason, it is much more helpful to think about programming a quantum computer through the lens of a software stack, as there are many layers of hardware and software (classical and quantum) required to ultimately achieve the implementation of a quantum algorithm on a quantum computer.
 
-A conceptual stack which illustrates the functional flow of factoring 8704143553785700723 in a quantum computing environment is shown here.
+A conceptual stack that illustrates the functional flow of factoring 8704143553785700723 in a quantum computing environment is shown below:
 
 ![Software stack](./media/concepts_stack.png)
 

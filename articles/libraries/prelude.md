@@ -83,9 +83,11 @@ It corresponds to the single-qubit unitary:
     \end{bmatrix}
 \end{equation}
 
-Below we see these transformations mapped to the [Bloch sphere](https://docs.microsoft.com/en-us/quantum/quantum-concepts-4-qubit?view=qsharp-preview#visualizing-qubits-and-transformations-using-the-bloch-sphere) (the rotation axis in each case is highlighted red):
+Below we see these transformations mapped to the Bloch sphere (the rotation axis in each case is highlighted red):
 
 ![Pauli operations mapped onto the Bloch sphere](../media/prelude_pauliBloch.png)
+
+For more information, refer to <xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere>.
 
 It is important to note that applying the same Pauli gate twice to the same qubit cancels out the operation (because you have now performed a full rotation of 2π (360°) over the surface to the Bloch Sphere, thus arriving back at the starting point). This brings us to the following identity:
 

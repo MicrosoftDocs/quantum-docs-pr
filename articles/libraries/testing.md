@@ -12,14 +12,12 @@ ms.topic: article
 # ms.prod: product-name-from-white-list
 # ms.technology: tech-name-from-white-list
 ---
-
 # Testing Library #
 
 As with classical development, is is important to be able to diagnose mistakes and errors in quantum programs.
 In this section, we discuss the functions and operations provided by the canon to assist in diagnosing quantum operations implemented in Q#, built on top of <xref:microsoft.quantum.primitive.assertprob>.
 Many of these functions and operations rely on the fact that classical simulations of quantum mechanics need not obey the [no cloning theorem](https://arxiv.org/pdf/quant-ph/9607018.pdf), such that we can make unphysical measurements and assertions when using a simulator for our target machine.
 Thus, we can test individual operations on a classical simulator before deploying on hardware.
-
 
 ## Asserts on Classical Values ##
 
@@ -52,6 +50,7 @@ The operation <xref:microsoft.quantum.extensions.testing.assertqubit> provides a
 This is common, for instance, when we have uncomputed to return ancilla qubits to $\ket{0}$ before releasing them.
 Asserting against $\ket{0}$ is also useful when we wish to assert that two state preparation `P` and `Q` operations both prepare the same state, and when `Q` supports `Adjoint`.
 In particular,
+
 ```qsharp
 using (register = Qubit[1]) {
     P(register[0]);

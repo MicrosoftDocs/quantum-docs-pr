@@ -26,7 +26,7 @@ The primitive operations defined in the standard library roughly fall into one o
 - Operations implementing measurements.
 
 Since the Clifford + $T$ gate set is [universal](../quantum-concepts-5-MultipleQubits.md) for quantum computing, these operations suffice to approximately implement any quantum algorithm within negligibly small error.
-By providing rotations as well, Q# allows the programmer to work within the single qubit unitary and CNOT gate library.  This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [here](xref:microsoft.quantum.more-information) for more information).
+By providing rotations as well, Q# allows the programmer to work within the single qubit unitary and CNOT gate library. This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [here](xref:microsoft.quantum.more-information) for more information).
 
 Where possible, the operations defined in the prelude which act on qubits allow for applying the `Controlled` variant, such that the target machine will perform the appropriate decomposition.
 
@@ -165,7 +165,7 @@ For example, `R(PauliZ, PI() / 4, _)` has type `(Qubit => () : Adjoint, Controll
 > In particular, this means that `T` and `R(PauliZ, PI() / 8, _)` differ only by an irrelevant [global phase](TODO: glossary link).
 > For this reason, $T$ is sometimes known as the $\frac{\pi}{8}$-gate.
 >
-> Note also that rotating around `PauliI` simply applies a global phase of $\phi / 2$.  While such phases are irrelevant, as argued in [the conceptual documents](../quantum-concepts-4-Qubit.md), they are relevant for controlled `PauliI` rotations.
+> Note also that rotating around `PauliI` simply applies a global phase of $\phi / 2$. While such phases are irrelevant, as argued in [the conceptual documents](../quantum-concepts-4-Qubit.md), they are relevant for controlled `PauliI` rotations.
 
 Within quantum algorithms, it is often useful to express rotations as dyadic fractions, such that $\phi = \pi k / 2^n$ for some $k \in \mathbb{Z}$ and $n \in \mathbb{N}$.
 The <xref:microsoft.quantum.primitive.rfrac> operation implements a rotation around a specified Pauli axis using this convention.

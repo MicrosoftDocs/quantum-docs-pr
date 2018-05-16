@@ -22,6 +22,7 @@ We now extend our manipulation of Matrices to [Eigenvalues, Eigenvectors](https:
 ## Eigenvalues and Eigenvectors ##
 
 Let $M$ be a square matrix and $v$ be a vector that is not the all zeros vector (i.e., the vector with all entries equal to $0$).
+
 We say $v$ is an [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) of  $M$ if $Mv = cv$ for some number $c$. We say $c$ is the [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) corresponding to the eigenvector $v$. In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number. Note that if $v$ is an eigenvector with eigenvalue $c$, then $av$ is also an eigenvector (for any nonzero $a$) with the same eigenvalue.
 
 For example, for the identity matrix, every vector $v$ is an eigenvector with eigenvalue $1$.
@@ -70,5 +71,6 @@ In other words, if you transform to the eigenbasis of the matrix $A$ then comput
 Another useful property is if $B$ is both unitary and Hermitian, i.e., $B=B^{-1}=B^\dagger$ then $B^2=\boldone$. By applying this rule to the above expansion of the matrix exponential and by grouping the $\boldone$ and the $B$ terms together, it can be see that for any real value $x$ the identity
 
 $$e^{iBx}=\boldone \cos(x)+ iB\sin(x)$$
+
 
 holds. This trick is especially useful because it allows to reason about the actions matrix exponentials have, even if the dimension of $B$ is exponentially large, for the special case when $B$ is both unitary and Hermitian.

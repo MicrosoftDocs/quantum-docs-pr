@@ -46,7 +46,7 @@ If you do not have Visual Studio installed, you can download Visual Studio 2017 
 
 You can download Visual Studio Code for free for your platform.
 1. Go to the [Visual Studio Code website](https://code.visualstudio.com/).
-1. Pick the download for your platform and follow the installation prompts.
+2. Pick the download for your platform and follow the installation prompts.
 
 ****
 
@@ -58,8 +58,8 @@ In this section you will clone the quantum samples & libraries repository, and r
 
 1. Install the [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension.
 
-> [!NOTE]
-> Microsoft Quantum Development Kit does not support Visual Studio for Mac. For development on macOS, we recommend Visual Studio Code.
+  > [!NOTE]
+  > Microsoft Quantum Development Kit does not support Visual Studio for Mac. For development on macOS, we recommend Visual Studio Code.
 
 2. Clone and open the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.
     1. Open Visual Studio.
@@ -80,7 +80,7 @@ In this section you will clone the quantum samples & libraries repository, and r
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
-1. If you intend to use Visual Studio Code, install the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.microsoft-quantum-development-kit-vscode) extension.
+1. If you intend to use Visual Studio Code, install the [Microsoft Quantum Development Kit for Visual Studio Code]( https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) extension.
 
 2. Install the Q# Development Kit project templates.
    From your favorite command line (e.g.: PowerShell or Bash), run the following command:

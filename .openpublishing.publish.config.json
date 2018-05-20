@@ -1,6 +1,5 @@
 {
-  "docsets_to_publish": [
-    {
+  "docsets_to_publish": [{
       "docset_name": "quamtum-api",
       "build_source_folder": "api",
       "build_output_subfolder": "quamtum-api",
@@ -15,25 +14,20 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-      "customized_template_paths": [
-        "_dependentPackages/MarkdigEngine/content"
-      ],
       "enable_xrefmap_share": true,
-      "xref_query_tags" : ["/qsharp"],
+      "xref_query_tags": ["/qsharp"],
       "customized_tasks": {
         "docset_prebuild": [
           "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
           "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
         ]
       },
-      "JoinTOCPlugin": [
-        {
-          "ReferenceTOC": "api/TOC.yml",
-          "ConceptualTOC": "articles/TOC.yml",
-          "ReferenceTOCUrl": "/qsharp/api/toc.json",
-          "ConceptualTOCUrl": "/quantum/toc.json"
-        }
-      ]
+      "JoinTOCPlugin": [{
+        "ReferenceTOC": "api/TOC.yml",
+        "ConceptualTOC": "articles/TOC.yml",
+        "ReferenceTOCUrl": "/qsharp/api/toc.json",
+        "ConceptualTOCUrl": "/quantum/toc.json"
+      }]
     },
     {
       "docset_name": "quantum-docs",
@@ -48,9 +42,6 @@
         "ManagedReference": "Content",
         "Odata": "Content"
       },
-      "customized_template_paths": [
-        "_dependentPackages/MarkdigEngine/content"
-      ],
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "enable_xrefmap_share": true,
@@ -75,8 +66,7 @@
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
   "contribution_branch_mappings": {},
-  "dependent_repositories": [
-    {
+  "dependent_repositories": [{
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
@@ -88,20 +78,12 @@
       "branch": "master"
     }
   ],
-  "dependent_packages": [
-    {
-      "id": "Microsoft.OpenPublishing.CommonPlugins",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
-      "path_to_root": "_dependentPackages/CommonPlugins",
-      "target_framework": "net45",
-      "version": "latest"
-    },
-    {
-      "id": "Microsoft.DocAsCode.MarkdigEngine",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
-      "path_to_root": "_dependentPackages/MarkdigEngine",
-      "version": "latest"
-    }
-  ],
+  "dependent_packages": [{
+    "id": "Microsoft.OpenPublishing.CommonPlugins",
+    "nuget_feed": "https://www.myget.org/F/op/api/v2",
+    "path_to_root": "_dependentPackages/CommonPlugins",
+    "target_framework": "net45",
+    "version": "latest"
+  }],
   "need_generate_pdf_url_template": false
 }

@@ -104,7 +104,7 @@ $$
 U|\psi\rangle|0\rangle=|\psi\rangle|\psi\rangle,
 $$
 
-for any state $|\psi\rangle$.  The linearity property of matrix multiplication then implies that that for any quantum second state $|\phi\rangle$,
+for any state $|\psi\rangle$.  The linearity property of matrix multiplication then implies that for any second quantum state $|\phi\rangle$,
 
 \begin{align}
 &U\left[\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right]=\frac{1}{\sqrt{2}}\left(|\phi\rangle|\phi\rangle+|\psi\rangle|\psi\rangle\right)\\\\

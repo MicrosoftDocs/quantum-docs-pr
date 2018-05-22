@@ -264,7 +264,7 @@ Thus, for these types, the default is an invalid
 reference that cannot be used without causing a runtime error.
 This is similar to a null reference in languages such as C# or Java.
 Arrays containing qubits or callables must be filled in using 
-[`set`](xref:microsoft.quantum.qsharp-ref.type-model.statements#updating-mutable-symbols) statements 
+[`set`](xref:microsoft.quantum.qsharp-ref.statements#updating-mutable-symbols) statements 
 before their elements may be safely used. Array elements can only be set if the 
 array is declared as mutable, e.g. `mutable array = new Int[5]`. 
 Arrays passed as arguments are immutable. 
@@ -287,7 +287,7 @@ Type | Default
 Tuple types are initialized element-by-element.
 
 Array creation is primarily of use initializing mutable arrays, 
-on the right-hand side of a [`mutable`](microsoft.quantum.qsharp-ref.type-model.statements#mutable-symbols) statement.
+on the right-hand side of a [`mutable`](xref:microsoft.quantum.qsharp-ref.statements#mutable-symbols) statement.
 
 ### Array Slices
 

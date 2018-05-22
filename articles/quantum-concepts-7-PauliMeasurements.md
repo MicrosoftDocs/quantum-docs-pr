@@ -20,7 +20,7 @@ ms.topic: article
 
 Before delving into the details of how to think of a Pauli measurement, it is useful to think about what measuring a single qubit inside a quantum computer does to the quantum state.  Imagine that we have an $n$-qubit quantum state; then measuring one qubit immediately rules out half of the $2^n$ possibilities that state could be in.  In other words, the measurement projects the quantum state onto one of two half-spaces.  We can generalize the way we think about measurement to reflect this.
 
-In order to concisely identify these subspaces, we need a language for describing them.  One way to do this is to describe the two subspaces by specifying them through a matrix that just has two unique eigenvalues, taken by convention to be $\pm 1$.  The simplest example of this is 
+In order to concisely identify these subspaces, we need a language for describing them.  One way to do this is to describe the two subspaces by specifying them through a matrix that just has two unique eigenvalues, taken by convention to be $\pm 1$.  The simplest example of this is:
 
   $$
 Z= \begin{bmatrix}1&0\\\\ 0&-1\end{bmatrix}.
@@ -91,9 +91,9 @@ One additional note, while it may be tempting to assume that measuring $Z\otimes
 
 Another way of looking at measuring tensor products of Paulis such as $X\otimes X$ or $Z\otimes Z$ is that these measurements let you look at information stored in the correlations between the two qubits.  Measuring $X\otimes \mathbb{1}$ lets you look at information that is locally stored in the first qubit.  While both types of measurements are equally valuable in quantum computing, the former illuminates the power of quantum computing. It reveals that in quantum computing often the information you wish to learn is not stored in any single qubit but rather stored non-locally in all the qubits at once, and only by looking at it through a joint measurement with $Z\otimes Z$ does this information become manifest.
 
-Arbitrary Pauli operators such as $X\otimes Y \otimes Z \otimes \boldone$ can also be measured.  All such tensor products of Pauli operators have only two eigenvalues $\pm 1$ and both eigenspaces constitute half-spaces of the entire vector space.  Thus they coincide with the requirements stated above.  
+Arbitrary Pauli operators such as $X\otimes Y \otimes Z \otimes \boldone$ can also be measured.  All such tensor products of Pauli operators have only two eigenvalues $\pm 1$ and both eigenspaces constitute half-spaces of the entire vector space.  Thus they coincide with the requirements stated above.
 
-In Q#, such measurements return $j$ if the measurement yields a result in the eigenspace of sign $(-1)^j$.  Having this as a built-in feature in Q# is helpful because measuring such operators requires long chains of controlled-NOT gates and basis transformations to describe the diagonalizing $U$ gate needed to express the operation as a tensor product of $Z$ and $\mathbb{1}$.  By simply being able to specify that you wish to do one of these pre-defined measurements, you don't need to worry about how to transform your basis such that a computational basis measurement provides the necessary information.  Q# handles all the necessary basis transformations for you automatically.
+In Q#, such measurements return $j$ if the measurement yields a result in the eigenspace of sign $(-1)^j$.  Having this as a built-in feature in Q# is helpful because measuring such operators requires long chains of controlled-NOT gates and basis transformations to describe the diagonalizing $U$ gate needed to express the operation as a tensor product of $Z$ and $\mathbb{1}$.  By simply being able to specify that you wish to do one of these pre-defined measurements, you don't need to worry about how to transform your basis such that a computational basis measurement provides the necessary information.  Q# handles all the necessary basis transformations for you automatically. See [Q# library reference for Pauli measurements](..\api\canon\microsoft.quantum.canon.measurepaulis.yml)
 
 ## The No-Cloning Theorem
 Quantum information is powerful.  It enables us to do amazing things such as factor numbers exponentially faster than the best known classical algorithms, or efficiently simulate correlated electron systems that classically require exponential cost to simulate accurately.  However, there are limitations to the power of quantum computing.  One such limitation is given by the *No-Cloning Theorem*.
@@ -107,7 +107,8 @@ $$
 for any state $|\psi\rangle$.  The linearity property of matrix multiplication then implies that for any second quantum state $|\phi\rangle$,
 
 \begin{align}
-&U\left[\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right]=\frac{1}{\sqrt{2}}\left(|\phi\rangle|\phi\rangle+|\psi\rangle|\psi\rangle\right)\\\\
+&U\left[\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right]|0\rangle=\frac{1}{\sqrt{2}}U|\phi\rangle|0\rangle+\frac{1}{\sqrt{2}}U|\psi\rangle|0\rangle\\\\
+&\qquad\qquad=\frac{1}{\sqrt{2}}\left(|\phi\rangle|\phi\rangle+|\psi\rangle|\psi\rangle\right)\\\\
 &\qquad\qquad\ne \left(\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right)\otimes\left(\frac{1}{\sqrt{2}}\left(|\phi\rangle+|\psi\rangle \right)\right).
 \end{align}
 

@@ -98,7 +98,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : () {
 Using the `Measure` operation, which is a built in primitive gate, we can extract classical information from an object of type `Qubit` and assign a classical value as a result, which has a reserved type `Result`, indicating that the result is no longer a quantum state. 
 The input to `Measure` is a Pauli axis on the Bloch sphere, represented by an object of type `Pauli` (i.e., for instance `PauliX`) and an object of type `Qubit`. 
 
-A simple example is the following operation which creates one qubits in the $\ket{0}$ state, then applies a Hadamard gate ``H`` to it and then measures the result in the `PauliZ` basis. 
+A simple example is the following operation which creates one qubit in the $\ket{0}$ state, then applies a Hadamard gate ``H`` to it and then measures the result in the `PauliZ` basis. 
 
 ```qsharp
 operation MeasurementOneQubit () : Result {
@@ -125,7 +125,7 @@ operation MeasurementOneQubit () : Result {
 }
 ```
 
-A slightly more complicated example is given by the following operation which returns the Boolean value `true` of all qubits in a register of type `Qubit[]` are in the state zero, when measured in a specified Pauli basis and `false` otherwise. 
+A slightly more complicated example is given by the following operation which returns the Boolean value `true` if all qubits in a register of type `Qubit[]` are in the state zero, when measured in a specified Pauli basis and `false` otherwise. 
 
 ```qsharp
 operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {

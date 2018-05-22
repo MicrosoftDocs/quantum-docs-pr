@@ -15,7 +15,7 @@ ms.topic: article
 
 # Operations and Functions #
 
-Q# programs consist of one or more *operations* which describe side effect which quantum operations can have on quantum data and one or more *functions* which allow to modify classical data. In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values.
+Q# programs consist of one or more *operations* which describe side effects which quantum operations can have on quantum data and one or more *functions* which allow to modify classical data. In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values.
 
 Each operation defined in Q# may then call any number of other operations, including the built-in primitive operations defined by the language. The particular way in which these primitive operations are defined depends on the target machine. When compiled, each operation is represented as a .NET class type that can be provided to target machines.
 
@@ -145,7 +145,7 @@ operation U(target : Qubit) : () {
 
 Each time that `U` is called, it will have a different action on `target`.
 In particular, the compiler cannot guarantee that if we added an `Adjoint auto` statement to `U`, then `U(target); (Adjoint U)(target);` acts as identity (that is, as a no-op).
-This violates the definition of the adjoint that we saw in [Vectors and Matrices](quantum-concepts-2-VectorsMatrices.md), such that allowing `Adjoint auto` in an operation where we have called the operation @"microsoft.quantum.canon.randomreal" would breaks the guarantees provided by the compiler; @"microsoft.quantum.canon.randomreal" is an operation for which no adjoint and controlled version exists. 
+This violates the definition of the adjoint that we saw in [Vectors and Matrices](quantum-concepts-2-VectorsMatrices.md), such that allowing `Adjoint auto` in an operation where we have called the operation @"microsoft.quantum.canon.randomreal" would break the guarantees provided by the compiler; @"microsoft.quantum.canon.randomreal" is an operation for which no adjoint or controlled version exists. 
 
 On the other hand, allowing function calls such as `Square` is safe, in that the compiler can be assured that it only needs to preserve the input to `Square` in order to keep its output stable.
 Thus, isolating as much classical logic as possible into functions makes it easy to reuse that logic in other functions and operations alike.

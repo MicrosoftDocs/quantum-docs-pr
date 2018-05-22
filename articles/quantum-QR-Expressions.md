@@ -43,7 +43,7 @@ That is, they are either integer or floating-point numbers.
 except that no trailing "l" or "L" is required (or allowed).
 Hexadecimal integers are supported with a "0x" prefix.
 
-Double literals in Q# are identical to double literals in C#, 
+`Double` literals in Q# are identical to double literals in C#, 
 except that no trailing "d" or "D" is required (or allowed).
 
 Given an array expression of any element type, an `Int` expression 
@@ -90,9 +90,9 @@ using the `~~~` (bitwise complement) unary operator.
 
 ## Qubit Expressions
 
-The only qubit expressions are symbols that are bound to qubit values 
-or array elements of qubit arrays.
-There are no qubit literals.
+The only `Qubit` expressions are symbols that are bound to `Qubit` values 
+or array elements of `Qubit` arrays.
+There are no `Qubit` literals.
 
 ## Pauli Expressions
 
@@ -150,7 +150,7 @@ If an operation supports the `Adjoint` functor, then `(Adjoint op)`
 is an operation expression.
 Similarly, if the operation supports the `Controlled` functor, then 
 `(Controlled op)` is an operation expression.
-The types of these expressions are specified above in [Functors](xref:microsoft.quantum.qsharp-ref.type-model#functors).
+The types of these expressions are specified in [Functors](xref:microsoft.quantum.qsharp-ref.type-model#functors).
 
 ## Callable Invocation Expressions
 
@@ -209,7 +209,6 @@ There are two important comments about the use of recursion, however:
  - The use of recursion in operations is likely to interfere with certain
    optimizations. 
    This may have a substantial impact on the execution time of the algorithm. 
-   The compiler should generate a warning if optimizations are prevented.
  - When executing on an actual quantum device, stack space may be limited, 
    and so deep recursion may lead to a runtime error.
    In particular, the Q# compiler and runtime do not identify and optimize 
@@ -218,7 +217,7 @@ There are two important comments about the use of recursion, however:
 ## Tuple Expressions
 
 A tuple literal is a sequence of element expressions of the appropriate type, 
-separated by commas, enclosed by `(` and `)`. 
+separated by commas, enclosed in `(` and `)`. 
 For instance, `(1, One)` is an `(Int, Result)` expression.
 
 Other than literals, the only tuple expressions are symbols that are bound to 
@@ -239,7 +238,7 @@ and callable invocations that return that type.
 ## Array Expressions
 
 An array literal is a sequence of one or more element expressions, 
-separated by semi-colons, enclosed by `[` and `]`. 
+separated by semi-colons, enclosed in `[` and `]`. 
 All elements must be compatible with the same type.
 If the common element type is an operation or function type, all of the elements must have the same signature and - in case of operations - the same supported functors.
 
@@ -265,9 +264,9 @@ Thus, for these types, the default is an invalid
 reference that cannot be used without causing a runtime error.
 This is similar to a null reference in languages such as C# or Java.
 Arrays containing qubits or callables must be filled in using 
-[`set`](xref:microsoft.quantum.qsharp-ref.type-model.statements#updating-mutable-symbols) statements 
+[`set`](xref:microsoft.quantum.qsharp-ref.statements#updating-mutable-symbols) statements 
 before their elements may be safely used. Array elements can only be set if the 
-array is declared as being mutable, e.g. `mutable array = new Int[5]`. 
+array is declared as mutable, e.g. `mutable array = new Int[5]`. 
 Arrays passed as arguments are immutable. 
 
 The default values for each type are:
@@ -288,7 +287,7 @@ Type | Default
 Tuple types are initialized element-by-element.
 
 Array creation is primarily of use initializing mutable arrays, 
-on the right-hand side of a [`mutable`]microsoft.quantum.qsharp-ref.type-model.statements#mutable-symbols) statement.
+on the right-hand side of a [`mutable`](xref:microsoft.quantum.qsharp-ref.statements#mutable-symbols) statement.
 
 ### Array Slices
 

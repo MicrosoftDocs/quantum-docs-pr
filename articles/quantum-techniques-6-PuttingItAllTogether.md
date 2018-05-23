@@ -140,7 +140,6 @@ operation Teleport(msg : Qubit, there : Qubit) : () {
     body {
 ```
 
-
 We also need to allocate a qubit `here` which we achieve with a `using` block:
 
 ```qsharp

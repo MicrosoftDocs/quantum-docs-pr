@@ -164,8 +164,8 @@ This unitary is customarily described by one of two types of oracles.
 
 > [!TIP]
 > Both of the oracle types described below are covered in the samples.
-> To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](https://github.com/Microsoft/Quantum/Samples/PhaseEstimation).
-> To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/Samples/IsingPhaseEstimation).
+> To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](https://github.com/Microsoft/Quantum/blob/master/Samples/PhaseEstimation).
+> To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/blob/master/Samples/IsingPhaseEstimation).
 
 The first type of oracle, which we call a discrete query oracle and represent with the user-defined type <xref:microsoft.quantum.canon.discreteoracle>, simply involves a unitary matrix.
 If $U$ is the unitary whose eigenvalues we wish to estimate then the oracle for $U$ is simply a standin for a subroutine that implements $U$.
@@ -243,9 +243,9 @@ where the integer $r > 0$ controls the approximation error.
 The dynamical generator modeling library provides a framework for systematically encoding complicated generators in terms of simpler generators. Such a description may then be passed to, say, the simulation library to implement time-evolution by a simulation algorithm of choice, with many details automatically taken care of.
 
 > [!TIP]
-> The dynamical generator library described below is covered in the samples.
-> For an example based on the Ising model, please see the [**IsingGenerators** sample](https://github.com/Microsoft/Quantum/Samples/IsingGenerators).
-> For an example based on molecular Hydrogen, please see the [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/Samples/H2SimulationCmdLine) and [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/Samples/H2SimulationGUI) samples.
+> The dynamical generator library described below is covered in the samples. 
+> For an example based on the Ising model, please see the [**IsingGenerators** sample](https://github.com/Microsoft/Quantum/blob/master/Samples/IsingGenerators).
+> For an example based on molecular Hydrogen, please see the [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/blob/master/Samples/H2SimulationCmdLine) and [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/blob/master/Samples/H2SimulationGUI) samples.
 
 ### Complete Description of a Generator ###
 

@@ -1,6 +1,6 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Q# techniques - putting it all together | Microsoft Docs 
+title: Q# techniques - putting it all together \ket{ Microsoft Docs 
 description: Q# techniques - putting it all together
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
@@ -21,7 +21,7 @@ Let's return to the example of the teleportation circuit defined in [Quantum Cir
 Quantum teleportation is a technique for sending an unknown quantum state (which we'll refer to as the '__message__') from a qubit in one location to a qubit in another location (we'll refer to these qubits as '__here__' and '__there__', respectively). We can represent our __message__ as a vector using Dirac notation: 
 
 $$
-|\psi\rangle = \alpha|0\rangle + \beta|1\rangle
+\ket{\ket{psi} = \alpha\ket{0} + \beta\ket{1}
 $$
 
 The __message__ qubit's state is unknown to us as we do not know the values of $\alpha$ and $\beta$.
@@ -29,31 +29,31 @@ The __message__ qubit's state is unknown to us as we do not know the values of $
 ### Step 1: Create an entangled state
 In order to send the __message__ we need for the qubit __here__ to be entangled with the qubit __there__. This is achieved by applying a Hadamard gate, followed by a CNOT gate. Let's look at the math behind these gate operations.
 
-We will begin with the qubits __here__ and __there__ both in the $|0\rangle$ state. After entangling these qubits, they are in the state:
+We will begin with the qubits __here__ and __there__ both in the $\ket{0}$ state. After entangling these qubits, they are in the state:
 
 $$
-|\phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)
+\ket{\phi^+} = \frac{1}{\sqrt{2}}(\ket{00} + \ket{11})
 $$
 
 ### Step 2: Send the message
 To send the __message__ we first apply a CNOT gate with the __message__ qubit and __here__ qubit as inputs (the __message__ qubit being the control and the __here__ qubit being the target qubit, in this instance). This input state can be written:
 
 $$
-|\psi\rangle|\phi^+\rangle = (\alpha|0\rangle + \beta|1\rangle)(\frac{1}{\sqrt{2}}(|00\rangle + |11\rangle))
+\ket{\psi}\ket{\phi^+} = (\alpha\ket{0} + \beta\ket{1})(\frac{1}{\sqrt{2}}(\ket{00} + \ket{11}))
 $$
 
 This expands to:
 
 $$
-|\psi\rangle|\phi^+\rangle = \frac{\alpha}{\sqrt{2}}|000\rangle + \frac{\alpha}{\sqrt{2}}|011\rangle + \frac{\beta}{\sqrt{2}}|100\rangle + \frac{\beta}{\sqrt{2}}|111\rangle
+\ket{\psi}\ket{\phi^+} = \frac{\alpha}{\sqrt{2}}\ket{000} + \frac{\alpha}{\sqrt{2}}\ket{011} + \frac{\beta}{\sqrt{2}}\ket{100} + \frac{\beta}{\sqrt{2}}\ket{111}
 $$
 
-As a reminder, the CNOT gate flips the target qubit when the control qubit is 1. So for example, an input of $|000\rangle$ will result in no change as the first qubit (the control) is 0. However, take a case where the first qubit is 1 - for example an input of $|100\rangle$. In this instance, the output is $|110\rangle$ as the second qubit (the target) is flipped by the CNOT gate.
+As a reminder, the CNOT gate flips the target qubit when the control qubit is 1. So for example, an input of $\ket{000}$ will result in no change as the first qubit (the control) is 0. However, take a case where the first qubit is 1 - for example an input of $\ket{100}$. In this instance, the output is $\ket{110}$ as the second qubit (the target) is flipped by the CNOT gate.
 
 Let's now consider our output once the CNOT gate has acted on our input above. The result is:
 
 $$
-\frac{\alpha}{\sqrt{2}}|000\rangle + \frac{\alpha}{\sqrt{2}}|011\rangle + \frac{\beta}{\sqrt{2}}|110\rangle + \frac{\beta}{\sqrt{2}}|101\rangle
+\frac{\alpha}{\sqrt{2}}\ket{000} + \frac{\alpha}{\sqrt{2}}\ket{011} + \frac{\beta}{\sqrt{2}}\ket{110} + \frac{\beta}{\sqrt{2}}\ket{101}
 $$
 
 The next step to send the __message__ is to apply a Hadamard gate to the __message__ qubit (that's the first qubit of each term). 
@@ -62,56 +62,56 @@ As a reminder, the Hadamard gate does the following:
 
 Input | Output
 ---------------------------| ---------------------------------------------------------------
-$\vert0\rangle$  | $\frac{1}{\sqrt{2}}(\vert0\rangle + \vert1\rangle)$
-$\vert1\rangle$  | $\frac{1}{\sqrt{2}}(\vert0\rangle - \vert1\rangle)$
+$\ket{0}$  | $\frac{1}{\sqrt{2}}(\ket{0} + \ket{1})$
+$\ket{1}$  | $\frac{1}{\sqrt{2}}(\ket{0} - \ket{1})$
 
 If we apply the Hadamard gate to the first qubit of each term of our output above, we get the following result:
 
 $$
-\frac{\alpha}{\sqrt{2}}(\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle))|00\rangle + \frac{\alpha}{\sqrt{2}}(\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle))|11\rangle + \frac{\beta}{\sqrt{2}}(\frac{1}{\sqrt{2}}(|0\rangle - |1\rangle))|10\rangle + \frac{\beta}{\sqrt{2}}(\frac{1}{\sqrt{2}}(|0\rangle - |1\rangle))|01\rangle
+\frac{\alpha}{\sqrt{2}}(\frac{1}{\sqrt{2}}(\ket{0} + \ket{1}))\ket{00} + \frac{\alpha}{\sqrt{2}}(\frac{1}{\sqrt{2}}(\ket{0} + \ket{1}))\ket{11} + \frac{\beta}{\sqrt{2}}(\frac{1}{\sqrt{2}}(\ket{0} - \ket{1}))\ket{10} + \frac{\beta}{\sqrt{2}}(\frac{1}{\sqrt{2}}(\ket{0} - \ket{1}))\ket{01}
 $$
 
 Note that each term has two $\frac{1}{\sqrt{2}}$ factors. We can multiply these out giving the following result:
 
 $$
-\frac{\alpha}{2}(|0\rangle + |1\rangle)|00\rangle + \frac{\alpha}{2}(|0\rangle + |1\rangle)|11\rangle + \frac{\beta}{2}(|0\rangle - |1\rangle)|10\rangle + \frac{\beta}{2}(|0\rangle - |1\rangle)|01\rangle
+\frac{\alpha}{2}(\ket{0} + \ket{1})\ket{00} + \frac{\alpha}{2}(\ket{0} + \ket{1})\ket{11} + \frac{\beta}{2}(\ket{0} - \ket{1})\ket{10} + \frac{\beta}{2}(\ket{0} - \ket{1})\ket{01}
 $$
 
 The  $\frac{1}{2}$ factor is common to each term so we can now take it outside the brackets:
 
 $$
-\frac{1}{2}\big[\alpha(|0\rangle + |1\rangle)|00\rangle + \alpha(|0\rangle + |1\rangle)|11\rangle + \beta(|0\rangle - |1\rangle)|10\rangle + \beta(|0\rangle - |1\rangle)|01\rangle\big]
+\frac{1}{2}\big[\alpha(\ket{0} + \ket{1})\ket{00} + \alpha(\ket{0} + \ket{1})\ket{11} + \beta(\ket{0} - \ket{1})\ket{10} + \beta(\ket{0} - \ket{1})\ket{01}\big]
 $$
 
 We can then multiply out the brackets for each term giving:
 
 $$
-\frac{1}{2}\big[\alpha|000\rangle + \alpha|100\rangle + \alpha|011\rangle + \alpha|111\rangle + \beta|010\rangle - \beta|110\rangle + \beta|001\rangle - \beta|101\rangle\big]
+\frac{1}{2}\big[\alpha\ket{000} + \alpha\ket{100} + \alpha\ket{011} + \alpha\ket{111} + \beta\ket{010} - \beta\ket{110} + \beta\ket{001} - \beta\ket{101}\big]
 $$
 
 ### Step 3: Measure the result
 
 Due to __here__ and __there__ being entangled, any measurement on __here__ will affect the state of __there__. If we measure the first and second qubit (__message__ and __here__) we can learn what state __there__ is in, due to this property of entanglement. 
 
-* If we measure and get a result 00, the superposition collapses, leaving only terms consistent with this result. That's $\alpha|000\rangle +\beta|001\rangle$. This can be refactored to $|00\rangle(\alpha|0\rangle +\beta|1\rangle)$. Therefore if we measure the first and second qubit to be 00, we know that the third qubit, __there__, is in the state $(\alpha|0\rangle +\beta|1\rangle)$.
-* If we measure and get a result 01, the superposition collapses, leaving only terms consistent with this result. That's $\alpha|011\rangle +\beta|010\rangle$. This can be refactored to $|01\rangle(\alpha|1\rangle +\beta|0\rangle)$. Therefore if we measure the first and second qubit to be 01, we know that the third qubit, __there__, is in the state $(\alpha|1\rangle +\beta|0\rangle)$.
-* If we measure and get a result 10, the superposition collapses, leaving only terms consistent with this result. That's $\alpha|100\rangle -\beta|101\rangle$. This can be refactored to $|10\rangle(\alpha|0\rangle -\beta|1\rangle)$. Therefore if we measure the first and second qubit to be 10, we know that the third qubit, __there__, is in the state $(\alpha|0\rangle -\beta|1\rangle)$.
-* If we measure and get a result 11, the superposition collapses, leaving only terms consistent with this result. That's $\alpha|111\rangle -\beta|110\rangle$. This can be refactored to $|11\rangle(\alpha|1\rangle -\beta|0\rangle)$. Therefore if we measure the first and second qubit to be 11, we know that the third qubit, __there__, is in the state $(\alpha|1\rangle -\beta|0\rangle)$.
+* If we measure and get a result 00, the superposition collapses, leaving only terms consistent with this result. That's $\alpha\ket{000} +\beta\ket{001}$. This can be refactored to $\ket{00}(\alpha\ket{0} +\beta\ket{1})$. Therefore if we measure the first and second qubit to be 00, we know that the third qubit, __there__, is in the state $(\alpha\ket{0} +\beta\ket{1})$.
+* If we measure and get a result 01, the superposition collapses, leaving only terms consistent with this result. That's $\alpha\ket{011} +\beta\ket{010}$. This can be refactored to $\ket{01}(\alpha\ket{1} +\beta\ket{0})$. Therefore if we measure the first and second qubit to be 01, we know that the third qubit, __there__, is in the state $(\alpha\ket{1} +\beta\ket{0})$.
+* If we measure and get a result 10, the superposition collapses, leaving only terms consistent with this result. That's $\alpha\ket{100} -\beta\ket{101}$. This can be refactored to $\ket{10}(\alpha\ket{0} -\beta\ket{1})$. Therefore if we measure the first and second qubit to be 10, we know that the third qubit, __there__, is in the state $(\alpha\ket{0} -\beta\ket{1})$.
+* If we measure and get a result 11, the superposition collapses, leaving only terms consistent with this result. That's $\alpha\ket{111} -\beta\ket{110}$. This can be refactored to $\ket{11}(\alpha\ket{1} -\beta\ket{0})$. Therefore if we measure the first and second qubit to be 11, we know that the third qubit, __there__, is in the state $(\alpha\ket{1} -\beta\ket{0})$.
 
 ### Step 4: Interpret the result
 
 As a reminder, the original __message__ we wished to send was:
 
 $$
-|\psi\rangle = \alpha|0\rangle + \beta|1\rangle
+\ket{\psi} = \alpha\ket{0} + \beta\ket{1}
 $$
 
 We need to get the __there__ qubit into this state, so that the received state is the one that was intended. 
 
-* If we measured and got a result of 00, then the third qubit, __there__, is in the state $(\alpha|0\rangle +\beta|1\rangle)$. As this is the intended __message__, no alteration is required.
-* If we measured and got a result of 01, then the third qubit, __there__, is in the state $(\alpha|1\rangle +\beta|0\rangle)$. This differs from the intended __message__, however applying a NOT gate gives us the desired state $(\alpha|0\rangle +\beta|1\rangle)$.
-* If we measured and got a result of 10, then the third qubit, __there__, is in the state $(\alpha|0\rangle -\beta|1\rangle)$. This differs from the intended __message__, however applying a Z gate gives us the desired state $(\alpha|0\rangle +\beta|1\rangle)$.
-* If we measured and got a result of 11, then the third qubit, __there__, is in the state $(\alpha|1\rangle -\beta|0\rangle)$. This differs from the intended __message__, however applying a NOT gate followed by a Z gate gives us the desired state $(\alpha|0\rangle +\beta|1\rangle)$.
+* If we measured and got a result of 00, then the third qubit, __there__, is in the state $(\alpha\ket{0} +\beta\ket{1})$. As this is the intended __message__, no alteration is required.
+* If we measured and got a result of 01, then the third qubit, __there__, is in the state $(\alpha\ket{1} +\beta\ket{0})$. This differs from the intended __message__, however applying a NOT gate gives us the desired state $(\alpha\ket{0} +\beta\ket{1})$.
+* If we measured and got a result of 10, then the third qubit, __there__, is in the state $(\alpha\ket{0} -\beta\ket{1})$. This differs from the intended __message__, however applying a Z gate gives us the desired state $(\alpha\ket{0} +\beta\ket{1})$.
+* If we measured and got a result of 11, then the third qubit, __there__, is in the state $(\alpha\ket{1} -\beta\ket{0})$. This differs from the intended __message__, however applying a NOT gate followed by a Z gate gives us the desired state $(\alpha\ket{0} +\beta\ket{1})$.
 
 To summarize, if we measure and the first qubit is 1, a Z gate is applied. If we measure and the second qubit is 1, a NOT gate is applied.
 

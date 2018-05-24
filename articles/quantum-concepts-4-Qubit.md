@@ -15,11 +15,12 @@ ms.topic: article
 ---
 
 # The Qubit
+
 Just as bits are the fundamental object of information in classical computing, [*qubits*](https://en.wikipedia.org/wiki/Qubit) (quantum bits) are the fundamental object of information in quantum computing.  To understand this correspondence, let's look at the simplest example: a single qubit.
 
 ## Representing a Qubit
 
-While a bit, or binary digit, can have value either $0$ or $1$, a qubit can have a value that is either of these or [a quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) of $0$ and $1$. Quantum superposition is the phenomenon where a quantum object can exist across all of its possible states simultaneously. Superposed states are continuous, unlike the discrete classical states $0$ and $1$. When we observe (measure) a qubit in superposition, we collapse its state and are left with only one of our classical states $0$ or $1$.
+While a bit, or binary digit, can have value either $0$ or $1$, a qubit can have a value that is either of these or a quantum superposition of $0$ and $1$.
 
 The state of a single qubit can be described by a two-dimensional column vector of unit norm, that is, the magnitude squared of its entries must sum to $1$. This vector, called the quantum state vector, holds all the information needed to describe the one-qubit quantum system just as a single bit holds all of the information needed to describe the state of a binary variable.
 

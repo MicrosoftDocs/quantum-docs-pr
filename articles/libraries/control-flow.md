@@ -15,8 +15,7 @@ ms.topic: article
 ---
 # Higher-Order Control Flow #
 
-One of the primary roles of the canon is to make it easier to express high-level algorithmic ideas as quantum programs.
-[quantum programs](https://en.wikipedia.org/wiki/Quantum_programming).
+One of the primary roles of the canon is to make it easier to express high-level algorithmic ideas as [quantum programs](https://en.wikipedia.org/wiki/Quantum_programming).
 Thus, the Q# canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.
 Jumping immediately into an example, consider the case in which one wants to construct a "CNOT ladder" on a register:
 

@@ -73,7 +73,7 @@ Obviously, in order to actually implement the larger algorithm a concrete decomp
 In Q#, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.
 Moreover, user-defined types are used to label the different oracle representations in a type-safe way, making it difficult to accidently conflate different kinds of black box operations.
 
-Such oracles appear in a number of different contexts, including famous examples such as [Grover's search and quantum simulation algorithms](https://en.wikipedia.org/wiki/Grover%27s_algorithm).
+Such oracles appear in a number of different contexts, including famous examples such as [Grover's search](https://en.wikipedia.org/wiki/Grover%27s_algorithm) and quantum simulation algorithms.
 Here we focus on the oracles needed for just two applications: amplitude amplification and phase estimation.
 We will first discuss amplitude amplification oracles before proceding to phase estimation.
 

@@ -48,7 +48,7 @@ For example, there are no states $\psi=\begin{bmatrix} \alpha \\\\  \beta \end{b
 
 $$\psi\otimes \phi = \begin{bmatrix} 1/\sqrt{2} \\\\  0 \\\\  0 \\\\  1/\sqrt{2} \end{bmatrix}.$$ 
 
-Such a two-qubit state, which cannot be written as the tensor product of single-qubit states, is called an "entangled state"; the two qubits are said to be *entangled*.  Loosely speaking, because the quantum state cannot be thought of as a tensor product of single qubit states, the information that the state holds is not confined to either of the qubits individually.  Rather, the information is stored non-locally in the correlations between the two states.  This non-locality of information is one of the major distinguishing features of quantum computing over classical computing and is essential for a number of quantum protocols including quantum teleportation and quantum error correction.
+Such a two-qubit state, which cannot be written as the tensor product of single-qubit states, is called an ``entangled state''; the two qubits are said to be [*entangled*](https://en.wikipedia.org/wiki/Quantum_entanglement).  Loosely speaking, because the quantum state cannot be thought of as a tensor product of single qubit states, the information that the state holds is not confined to either of the qubits individually.  Rather, the information is stored non-locally in the correlations between the two states.  This non-locality of information is one of the major distinguishing features of quantum computing over classical computing and is essential for a number of quantum protocols including [quantum teleportation](https://github.com/Microsoft/Quantum/tree/master/Samples/Teleportation) and [quantum error correction](https://docs.microsoft.com/en-us/quantum/libraries/error-correction?view=qsharp-preview).
 
 ## Measuring Two-Qubit States ##
 Measuring two-qubit states is very similar to single-qubit measurements. Measuring the state
@@ -85,7 +85,7 @@ Both outcomes have 50% probability of occurring.  The outcome being 50% probabil
 The mathematical rule for measuring the first or second qubit is simple.  If we let $e_k$ be the $k^{\rm th}$ computational basis vector and let $S$ be the set of all $e_k$ such that the qubit in question takes the value $1$ for that value of $k$.  For example, if we are interested in measuring the first qubit then $S$ would consist of $e_2\equiv 10$ and $e_3\equiv 11$.  Similarly, if we are interested in the second qubit $S$ would consist of $e_1\equiv 01$ and $e_3 \equiv 11$.  Then the probability of measuring the chosen qubit to be $1$ is for state vector $\psi$
 
 $$
-P(\text{outcome}=1)= \sum_{e_k \in S}\psi^\dagger e_k e_k^\dagger \psi.
+P(\text{outcome}=1)= \sum_{e_k \text{ in the set } S}\psi^\dagger e_k e_k^\dagger \psi.
 $$
 
 Since each qubit measurement can only yield $0$ or $1$, the probability of measuring $0$ is simply $1-P(\text{outcome}=1)$.  This is why we only explicitly give a formula for the probability of measuring $1$.
@@ -93,7 +93,7 @@ Since each qubit measurement can only yield $0$ or $1$, the probability of measu
 The action that such a measurement has on the state can be expressed mathematically as
 
 $$
-\psi \mapsto \frac{\sum_{e_k \in S} e_k e_k^\dagger \psi}{\sqrt{P(\text{outcome}=1)}}.
+\psi \mapsto \frac{\sum_{e_k \text{ in the set } S} e_k e_k^\dagger \psi}{\sqrt{P(\text{outcome}=1)}}.
 $$
 
 The cautious reader may worry about what happens when the probability of the measurement is zero.  While the resultant state is technically undefined in this case, we never need to worry about such eventualities because the probability is zero!

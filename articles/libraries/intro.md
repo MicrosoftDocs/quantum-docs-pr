@@ -12,7 +12,6 @@ ms.topic: article
 # ms.prod: product-name-from-white-list
 # ms.technology: tech-name-from-white-list
 ---
-
 # Introduction to the Q# Standard Libraries #
 
 Q# is supported by a range of different useful operations, functions, and user-defined types that comprise the Q# *standard library*.

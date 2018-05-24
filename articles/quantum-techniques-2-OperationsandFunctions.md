@@ -2,6 +2,7 @@
 # Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Q# techniques - operations and functions | Microsoft Docs 
 description: Q# techniques - operations and functions
+uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017

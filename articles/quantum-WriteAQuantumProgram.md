@@ -26,7 +26,7 @@ ms.topic: article
 
 Now that you’ve [installed the Microsoft Quantum Development Kit](quantum-InstallConfig.md) and seen
 how it works, let’s write your first quantum application.
-We'll start with the simplest program possible and build it up to demonstrate quantum superposition and quantum entanglement. We will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
+We'll start with the simplest program possible and build it up to demonstrate [quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) and [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement). We will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
 
 The instructions on the page are written for both Visual Studio 2017 and for Visual Studio Code.
 If you are using a different development environment, please follow the instructions for Visual Studio Code, using the command line to call the .NET Core SDK.

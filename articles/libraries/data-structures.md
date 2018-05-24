@@ -13,7 +13,6 @@ ms.topic: article
 # ms.prod: product-name-from-white-list
 # ms.technology: tech-name-from-white-list
 ---
-
 # Data Structures and Modeling #
 
 ## Classical Data Structures ##
@@ -27,7 +26,7 @@ Similarly, we saw in the previous section that types of the form `(Int, Int -> T
 
 The canon supports functional-style notation for pairs, complementing accessing tuples by deconstruction:
 
-```
+```qsharp
 let pair = (PauliZ, register); // type (Pauli, Qubit[])
 ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ```
@@ -39,7 +38,7 @@ These functions are type-parameterized, and thus can be used with arrays of any 
 For instance, the <xref:microsoft.quantum.canon.reverse> function returns a new array whose elements are in reverse order from its input.
 This can be used to change how a quantum register is represented when calling operations:
 
-```
+```qsharp
 let leRegister = LittleEndian(register);
 // QFT expects a BigEndian, so we can reverse before calling.
 QFT(BigEndian(Reverse(leRegister)));
@@ -67,14 +66,14 @@ ApplyToEach(
 
 ## Oracles ##
 
-In the phase estimation and amplitude amplification literature the concept of an oracle appears frequently.
+In the [phase estimation](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) and [amplitude amplification](https://en.wikipedia.org/wiki/Amplitude_amplification) literature the concept of an oracle appears frequently.
 Here the term oracle refers to a blackbox quantum subroutine that acts upon a set of qubits and returns the answer as a phase.
 This subroutine often can be thought of as an input to a quantum algorithm that accepts the oracle, in addition to some other parameters, and applies a series of quantum operations and treating a call to this quantum subroutine as if it were a fundamental gate.
 Obviously, in order to actually implement the larger algorithm a concrete decomposition of the oracle into fundamental gates must be provided but such a decomposition is not needed in order to understand the algorithm that calls the oracle.
 In Q#, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.
 Moreover, user-defined types are used to label the different oracle representations in a type-safe way, making it difficult to accidently conflate different kinds of black box operations.
 
-Such oracles appear in a number of different contexts, including famous examples such as Grover's search and quantum simulation algorithms.
+Such oracles appear in a number of different contexts, including famous examples such as [Grover's search](https://en.wikipedia.org/wiki/Grover%27s_algorithm) and quantum simulation algorithms.
 Here we focus on the oracles needed for just two applications: amplitude amplification and phase estimation.
 We will first discuss amplitude amplification oracles before proceding to phase estimation.
 
@@ -264,7 +263,7 @@ newtype GeneratorSystem = (Int, (Int -> GeneratorIndex));
 
 The first element `Int` of the tuple stores the number of terms $d$ in the Hamiltonian, and the second element `(Int -> GeneratorIndex)` is a function that maps an integer index in $\{0,1,...,d-1\}$ to a `GeneratorIndex` user-defined type which uniquely identifies each primitive term in the Hamiltonian. Note that by expressing the collection of terms in the Hamiltonian as a function rather than as an array `GeneratorIndex[]`, this allows for on-the-fly computation of the `GeneratorIndex` which is especially useful when describing Hamiltonians with a large number of terms.
 
-Crucially, we do not impose a convention on what primitive terms identified by the `GeneratorIndex` are easy-to-simulate. For instance, primitive terms could be Pauli operators as discussed above, but they could also be Fermionic annihilation and creation operators commonly used in quantum chemistry simulation. By itself, a `GeneratorIndex` is meaningless as it does not describe how time-evolution by the term it points to may be implemented as a quantum circuit. 
+Crucially, we do not impose a convention on what primitive terms identified by the `GeneratorIndex` are easy-to-simulate. For instance, primitive terms could be Pauli operators as discussed above, but they could also be Fermionic annihilation and creation operators commonly used in quantum chemistry simulation. By itself, a `GeneratorIndex` is meaningless as it does not describe how time-evolution by the term it points to may be implemented as a quantum circuit.
 
 This is resolved by specifying an `EvolutionSet` user-defined type that maps any `GeneratorIndex`, drawn from some canonical set, to a unitary operator, the `EvolutionUnitary`, expressed as a quantum circuit. The `EvolutionSet` defines the convention of how a `GeneratorIndex` is structured, and also defines the set of possible `GeneratorIndex`.
 
@@ -298,7 +297,7 @@ The `PauliEvolutionSet()` is a function that maps any `GeneratorIndex` of this f
 newtype EvolutionUnitary = ((Double, Qubit[]) => () : Adjoint, Controlled);
 ```
 
-The first parameter represents a time-duration, that will be multiplied by the coefficient in the `GeneratorIndex`, of unitary evolution. The second parameter is the qubit register the unitary acts on. For example: 
+The first parameter represents a time-duration, that will be multiplied by the coefficient in the `GeneratorIndex`, of unitary evolution. The second parameter is the qubit register the unitary acts on. For example:
 
 ```qsharp
 let stepSize = 0.6;
@@ -311,7 +310,7 @@ Exp([1;2;0;3], 0.4 * stepSize, [qubits[0];qubits[8];qubits[2];qubits[1]]);
 
 ### Time-Dependent Generators ###
 
-In many cases, we are also interested in modelling time-dependent generators, as might occur in the Schrödinger equation 
+In many cases, we are also interested in modelling time-dependent generators, as might occur in the Schrödinger equation
 $$
 \begin{align}
     i\frac{d \ket{\psi(t)}}{d t} & = \hat H(t) \ket{\psi(t)},
@@ -330,4 +329,3 @@ Similarly, a complete description of this generator requires an `EvolutionSet`, 
 ```qsharp
 newtype EvolutionSchedule = (EvolutionSet, GeneratorSystemTimeDependent);
 ```
-

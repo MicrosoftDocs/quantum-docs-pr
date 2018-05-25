@@ -15,8 +15,6 @@ ms.topic: article
 ---
 # Advanced Matrix Concepts #
 
-# Advanced Matrix Concepts
-
 We now extend our manipulation of Matrices to [Eigenvalues, Eigenvectors](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) and [Exponentials](https://en.wikipedia.org/wiki/Matrix_exponential) which form a fundamental set of tools we need to describe and implement quantum algorithms.
 
 ## Eigenvalues and Eigenvectors ##

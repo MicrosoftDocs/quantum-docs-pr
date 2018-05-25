@@ -55,7 +55,7 @@ The input and output are assumed to be encoded in big endian encoding (lowest bi
 The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
 In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.
 It is known that for $k \ge \log_2(n) + \log_2(1 / \epsilon) + 3$. one can bound $\\| \operatorname{QFT} - \operatorname{AQFT} \\| < \epsilon$.
-Here $\\|\cdot\\|$ is the operator norm which in this case is the square root of the largest [eigenvalue](xref:microsoft.quantum.concepts.vecmat) of $(\operatorname{QFT} - \operatorname{AQFT})(\operatorname{QFT} - \operatorname{AQFT})^\dagger$.
+Here $\\|\cdot\\|$ is the operator norm which in this case is the square root of the largest [eigenvalue](xref:microsoft.quantum.concepts.matrix-advanced) of $(\operatorname{QFT} - \operatorname{AQFT})(\operatorname{QFT} - \operatorname{AQFT})^\dagger$.
 
 ## Arithmetic ##
 
@@ -121,11 +121,12 @@ $$\ket{\phi\_k(a+b)}=\frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi [a/2^k+0.b\_k\ld
 This means that if we perform addition by incrementing each of the tensor factors in the expansion of the Fourier transform of $\ket{a}$ then the number of rotations shrinks as $k$ decreases.  This substantially reduces the number of quantum gates needed in the adder.  We denote the Fourier transform, phase addition and the inverse Fourier transform steps that comprise the Draper adder as $\operatorname{QFT}^{-1} \left(\phi\\\!\operatorname{ADD}\right) \operatorname{QFT}$. A quantum circuit that uses this simplification to implement the entire process can be seen below.
 
 ![Draper adder shown as circuit diagram](../media/draper.png)
+
 Each controlled $e^{i2\pi/k}$ gate in the circuit refers to a controlled-phase gate.  Such gates have the property that on the pair of qubits on which they act, $\ket{00}\mapsto \ket{00}$ but $\ket{11}\mapsto e^{i2\pi/k}\ket{11}$.  This circuit allows us to perform addition using no additional qubits apart from those needed to store the inputs and the outputs.
 
 ### Beauregard Adder ###
 
-The Beauregard adder is a quantum modular adder that uses the Draper adder in order to perform addition modulo $N$ for an arbitrary value positive integer $N$.  The significance of quantum modular adders, such as the Beauregard adder, stems to a large extent from their use in the modular exponentiation step within Shor's algorithm for factoring.  A quantum modular adder has the following action for quantum input $\ket{b}$ and classical input $a$ where $a$ and $b$ are promised to be integers $\mod N$, meaning that they are in the interval $[0,\ldots, N-1]$.
+The Beauregard adder is a quantum modular adder that uses the Draper adder in order to perform addition modulo $N$ for an arbitrary value positive integer $N$.  The significance of quantum modular adders, such as the Beauregard adder, stems to a large extent from their use in the modular exponentiation step within Shor's algorithm for factoring.  A quantum modular adder has the following action for quantum input $\ket{b}$ and classical input $a$ where $a$ and $b$ are promised to be integers mod $N$, meaning that they are in the interval $[0,\ldots, N-1]$.
 
 $$
 \ket{b}\rightarrow \ket{b+a \text{ mod }N}=\begin{cases} \ket{b+a},& b+a < N\\\\ \ket{b+a-N},& (b+a)\ge N \end{cases}.

@@ -83,7 +83,7 @@ It corresponds to the single-qubit unitary:
     \end{bmatrix}
 \end{equation}
 
-Below we see these transformations mapped to the [Bloch sphere](ref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) (the rotation axis in each case is highlighted red):
+Below we see these transformations mapped to the [Bloch sphere](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) (the rotation axis in each case is highlighted red):
 
 ![Pauli operations mapped onto the Bloch sphere](../media/prelude_pauliBloch.png)
 

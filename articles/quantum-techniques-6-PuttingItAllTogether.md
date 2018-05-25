@@ -1,6 +1,6 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Q# techniques - putting it all together \ket{ Microsoft Docs 
+title: Q# techniques - putting it all together | Microsoft Docs 
 description: Q# techniques - putting it all together
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
@@ -21,7 +21,7 @@ Let's return to the example of the teleportation circuit defined in [Quantum Cir
 Quantum teleportation is a technique for sending an unknown quantum state (which we'll refer to as the '__message__') from a qubit in one location to a qubit in another location (we'll refer to these qubits as '__here__' and '__there__', respectively). We can represent our __message__ as a vector using Dirac notation: 
 
 $$
-\ket{\ket{psi} = \alpha\ket{0} + \beta\ket{1}
+\ket{\psi} = \alpha\ket{0} + \beta\ket{1}
 $$
 
 The __message__ qubit's state is unknown to us as we do not know the values of $\alpha$ and $\beta$.

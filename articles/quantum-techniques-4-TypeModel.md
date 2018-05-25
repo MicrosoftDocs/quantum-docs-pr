@@ -3,6 +3,7 @@
 title: Q# techniques - type model | Microsoft Docs 
 description: Q# techniques - type model
 author: QuantumWriter
+uid: microsoft.quantum.techniques.type-model
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article

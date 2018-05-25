@@ -13,7 +13,7 @@ remarks: >2
    using (register = Qubit[1]) {
        H(register[0]);
        AssertProb([PauliZ], register, One, 0.5,
-           "Measuring in conjugate basis did not give 50/50 results.");
+           "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
    }
    ```
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : ()'

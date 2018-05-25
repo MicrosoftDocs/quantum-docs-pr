@@ -12,7 +12,7 @@ summary: >2
            \frac12 \braket{
                \psi \mid|
                \left(
-                   \boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_N-1
+                   \boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_{N-1}
                \right) \mid|
                \psi
            },

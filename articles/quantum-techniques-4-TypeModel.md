@@ -3,6 +3,7 @@
 title: Q# techniques - type model | Microsoft Docs 
 description: Q# techniques - type model
 author: QuantumWriter
+uid: microsoft.quantum.techniques.type-model
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
@@ -81,7 +82,7 @@ let emptyRegister = new Qubit[0];
 This is typically more useful for mutable arrays, as we [discussed above](#mutability), since the individual elements of an array created using the `new` keyword are not often useful in and of themselves.
 
 In either case, once an array has been constructed, the built-in `Length` function can be used to obtain the number of elements as an `Int`.
-Arrays can be subscripting using square brackets, with subscripts either having type `Int` or type `Range`, to obtain either single elements or new arrays containing a subset of the elements of an array.
+Arrays can be subscripted using square brackets, with subscripts either having type `Int` or type `Range`, to obtain either single elements or new arrays containing a subset of the elements of an array.
 The subscripts of arrays are zero-based:
 
 ```qsharp
@@ -150,5 +151,5 @@ Returning to the example of `Complex`, one could have also defined 2D polar coor
 newtype Polar = (Double, Double);
 ```
 
-Even though both `Complex` and `Polar` both derive from `(Double, Double)`, the two types are wholly incompatable in Q#, minimizing the risk of accidently calling a complex math function with polar coordinates and vice versa.
+Even though both `Complex` and `Polar` both derive from `(Double, Double)`, the two types are wholly incompatible in Q#, minimizing the risk of accidently calling a complex math function with polar coordinates and vice versa.
 In this way, user-defined types can play a similar role to `struct` types in C and other such languages.

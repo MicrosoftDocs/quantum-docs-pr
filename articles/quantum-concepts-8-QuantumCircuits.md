@@ -18,7 +18,7 @@ Consider for a moment the unitary transformation $\text{ CNOT}_{01}(H\otimes 1)$
 
 $$\mathrm{CNOT}_{01}(H\otimes 1)|00\rangle = \frac{1}{\sqrt{2}} \left(|00\rangle + |11\rangle \right),$$
 
-Operations with this or greater complexity are ubiquitous in quantum algorithms and quantum error correction, so it should come with great relief that there is a simple method for their visualization called a *quantum circuit diagram*.  The circuit diagram for preparing this maximally entangled quantum state is
+Operations with this or greater complexity are ubiquitous in quantum algorithms and quantum error correction, so it should come as a great relief that there is a simple method for their visualization called a *quantum circuit diagram*.  The circuit diagram for preparing this maximally entangled quantum state is:
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -32,7 +32,7 @@ In a circuit diagram, each solid line depicts a qubit or more generally a qubit 
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](./media/concepts_2.png)
 
- is the Hadamard gate acting on a single-qubit register.
+ is the [Hadamard](xref:microsoft.quantum.primitive.h) gate acting on a single-qubit register.
 
 Quantum gates are ordered in chronological order with the left-most gate as the gate first applied to the qubits.  In other words, if you picture the wires as holding the quantum state, the wires bring the quantum state through each of the gates in the diagram from left to right.  That is to say 
 
@@ -60,17 +60,32 @@ The other construct that is built into multi-qubit quantum circuit diagrams is c
 ![](./media/concepts_5.png)
 
 Here the black circle denotes the quantum bit on which the gate is controlled and a vertical wire denotes the unitary that is applied when the control qubit takes the value $1$.
-For the special cases where $G=X$ and $G=Z$ we introduce the following notation to describe the controlled version of the gates (note that the controlled-X gate is the $CNOT$ gate):
+For the special cases where $G=X$ and $G=Z$ we introduce the following notation to describe the controlled version of the gates (note that the controlled-X gate is the [$CNOT$ gate](xref:microsoft.quantum.primitive.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](./media/concepts_6.png)
 
-The remaining operation to visualize in circuit diagrams is measurement.  Measurement takes a qubit register, measures it, and outputs the result as classical information.  A measurement operation is denoted by a meter symbol and always takes as input a qubit register (denoted by a solid line) and outputs classical information (denoted by a double line).  Specifically, such a subcircuit looks like 
+Q# provides methods to automatically generate the controlled version of an operation, which saves the programmer from having to hand code these operations. An example of this is shown below:
+
+```qsharp
+operation PrepareSuperposition(qubit : Qubit) : () {
+    body {
+        H(qubit);
+    }
+
+    // Auto-generate the controlled version of the operation
+    controlled auto;
+}
+```
+
+The remaining operation to visualize in circuit diagrams is measurement.  Measurement takes a qubit register, measures it, and outputs the result as classical information.  A measurement operation is denoted by a meter symbol and always takes as input a qubit register (denoted by a solid line) and outputs classical information (denoted by a double line).  Specifically, such a subcircuit looks like:
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](./media/concepts_7.png)
+![Measurement circuit](./media/concepts_7.png)
+
+Q# implements a [Measure operator](xref:microsoft.quantum.primitive.measure) for this purpose. See the section on <xref:microsoft.quantum.libraries.prelude#measurements> for more information.
 
 Similarly, the subcircuit
 
@@ -80,10 +95,7 @@ Similarly, the subcircuit
 
 gives a classically controlled gate, where $G$ is applied conditioned on the classical control bit being value $1$.
 
-Quantum Teleportation is perhaps the best quantum algorithm for illustrating these components.  Quantum teleportation is a method for moving data within a quantum computer (or even between distant quantum computers in a quantum network) through the use of entanglement and measurement.  Interestingly, it is actually capable of moving a quantum state, say the value in a given qubit, from one qubit to another, without even knowing what the qubit's value is! This is necessary for the protocol to work according to the laws of quantum mechanics.  The quantum teleportation circuit is given below; we also provide an annotated version of the circuit to illustrate how to read the quantum circuit.
+[Quantum Teleportation](xref:microsoft.quantum.techniques.puttingittogether) is perhaps the best quantum algorithm for illustrating these components. Quantum teleportation is a method for moving data within a quantum computer (or even between distant quantum computers in a quantum network) through the use of entanglement and measurement. Interestingly, it is actually capable of moving a quantum state, say the value in a given qubit, from one qubit to another, without even knowing what the qubit's value is! This is necessary for the protocol to work according to the laws of quantum mechanics.  The quantum teleportation circuit is given below; we also provide an annotated version of the circuit to illustrate how to read the quantum circuit.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
 ![](./media/concepts_tp2.png)
-
-
-

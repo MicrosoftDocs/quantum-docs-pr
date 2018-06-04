@@ -126,7 +126,7 @@ operation ReflectAboutAllZeros(register : Qubit[]) : () {
 }
 ```
 
-This oracle is then a special case of the <xref:microsoft.quantum.canon.rall1> operation, which allows for rotating by an arbitrary phase instead of the reflection case $\phi = -1$.
+This oracle is then a special case of the <xref:microsoft.quantum.canon.rall1> operation, which allows for rotating by an arbitrary phase instead of the reflection case $\phi = \pi$.
 In this case, `RAll1` is similar to the <xref:microsoft.quantum.primitive.r1> prelude operation, in that it rotates about $\ket{11\cdots1}$ instead of the single-qubit state $\ket{1}$.
 
 The oracle that marks the initial subspace can be constructed similarly.

@@ -20,7 +20,7 @@ Q# is a scalable, multi-paradigm, domain-specific programming language for quant
 From a technical perspective, a quantum program is a particular set of classical functions which, when called, generate quantum circuits as their side effects. An important consequence of that view is that a program written in Q# does not directly model qubits themselves, but rather describes how a classical control computer interacts with those qubits.
 By design, Q# thus does not define quantum states or other properties of quantum mechanics directly, but rather does so indirectly through the action of the various subroutines defined in the language.
 For instance, consider the state $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ discussed in the [Quantum Computing Concepts](quantum-concepts-1-Intro.md) guide.
-To prepare this state in Q#, we use that qubits are initialized in the $\ket{0}$ state, and that $\ket{+} = H\ket{0}$, where $H$ is the Hadamard transform:
+To prepare this state in Q#, we use qubits that are initialized in the $\ket{0}$ state, and that $\ket{+} = H\ket{0}$, where $H$ is the Hadamard transform:
 
 ```qsharp
 using (register = Qubit[1]) {

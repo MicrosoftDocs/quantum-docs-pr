@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.compose
+name: Compose
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given two functions $f$ and $g$, returns a new function representing
+   $f \circ g$.
+syntax: "function Compose (outer : ('U -> 'V), inner : ('T -> 'U)) : ('T -> 'V)"
+input:
+  content: "(outer : ('U -> 'V), inner : ('T -> 'U))"
+  types:
+  - name: outer
+    summary: ' The second function to be applied.'
+    isFunction: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: "'V"
+        isLocal: true
+  - name: inner
+    summary: >2
+       The first function to be applied.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+output:
+  content: ('T -> 'V)
+  types:
+  - summary: >2
+       A new function $h$ such that for all inputs $x$, $f(g(x)) = h(x)$.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'V"
+        isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: ' The input type of the first function to be applied.'
+- uid: "'U"
+  summary: >2-
+     The output type of the first function to be applied and the input type
+     of the second function to be applied.
+- uid: "'V"
+  summary: ' The output type of the second function to be applied.'

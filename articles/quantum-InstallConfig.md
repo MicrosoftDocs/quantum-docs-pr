@@ -85,7 +85,7 @@ In this section you will clone the quantum samples & libraries repository, and r
 2. Install the Q# Development Kit project templates.
    From your favorite command line (e.g.: PowerShell or Bash), run the following command:
   ```bash
-  $ dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.2-*"
+  $ dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.2.1806.1503-preview"
   ```
 
 3. Clone and open the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.

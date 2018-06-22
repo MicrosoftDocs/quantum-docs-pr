@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: " Implements a single time-step of time-evolution by the system \n described in an `EvolutionGenerator` using a Trotter–Suzuki \n decomposition.\n"
 remarks: >2-
    For more on the Trotter–Suzuki decomposition, see
-   [Time-Ordered Composition](xref:microsoft.quantum.concepts.control-flow#time-ordered-composition).
+   [Time-Ordered Composition](/quantum/libraries/control-flow#time-ordered-composition).
 syntax: 'function TrotterStep (evolutionGenerator : EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => () : Adjoint, Controlled)'
 input:
   content: '(evolutionGenerator : EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double)'

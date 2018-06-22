@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.preparearbitrarystate_
+name: PrepareArbitraryState_
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Implementation step of arbitrary state preparation procedure.
+syntax: 'operation PrepareArbitraryState_ (coefficients : ComplexPolar[], control : BigEndian, target : Qubit) : ()'
+input:
+  content: '(coefficients : ComplexPolar[], control : BigEndian, target : Qubit)'
+  types:
+  - name: coefficients
+    uid: microsoft.quantum.canon.complexpolar
+    isArray: true
+  - name: control
+    uid: microsoft.quantum.canon.bigendian
+  - name: target
+    uid: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+seeAlso:
+- microsoft.quantum.canon.preparearbitrarystate
+- microsoft.quantum.canon.multiplexpauli
+functors:
+- Adjoint
+- Controlled

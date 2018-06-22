@@ -4,6 +4,9 @@ name: Assert
 type: operation
 namespace: Microsoft.Quantum.Primitive
 summary: " Asserts that measuring the given qubits in the given Pauli basis will\n always have the given result. \n"
+remarks: >2
+   Note that the Adjoint and Controlled versions of this operation will not
+   check the condition.
 syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : ()'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
@@ -36,3 +39,6 @@ output:
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.primitive.assertprob
+functors:
+- Adjoint
+- Controlled

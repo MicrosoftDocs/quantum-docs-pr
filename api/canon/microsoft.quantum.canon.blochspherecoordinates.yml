@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.blochspherecoordinates
+name: BlochSphereCoordinates
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Given two complex numbers $a0, a1$, computes coordinates\n on the Bloch sphere such that \n $a0 \\ket{0} + a1 \\ket{1} = r e^{it}(e^{-i \\phi /2}\\cos{(\\theta/2)}\\ket{0}+e^{i \\phi /2}\\sin{(\\theta/2)}\\ket{1})$.\n"
+syntax: 'function BlochSphereCoordinates (a0 : ComplexPolar, a1 : ComplexPolar) : (ComplexPolar, Double, Double)'
+input:
+  content: '(a0 : ComplexPolar, a1 : ComplexPolar)'
+  types:
+  - name: a0
+    summary: ' Complex coefficient of state $\ket{0}$.'
+    uid: microsoft.quantum.canon.complexpolar
+  - name: a1
+    summary: >2
+       Complex coefficient of state $\ket{1}$.
+    uid: microsoft.quantum.canon.complexpolar
+output:
+  content: (ComplexPolar, Double, Double)
+  types:
+  - summary: ' A tuple containing `(ComplexPolar(r, t), phi, theta)`.'
+    types:
+    - uid: microsoft.quantum.canon.complexpolar
+    - uid: Double
+      isPrimitive: true
+    - uid: Double
+      isPrimitive: true

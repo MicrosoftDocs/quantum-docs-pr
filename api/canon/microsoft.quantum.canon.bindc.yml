@@ -3,7 +3,11 @@ uid: microsoft.quantum.canon.bindc
 name: BindC
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: " Given an array of operations acting on a single input,\n produces a new operation that\n performs each given operation in sequence.\n The modifier 'C' indicates that all operations in the array are controllable. \n"
+summary: >2
+   Given an array of operations acting on a single input,
+   produces a new operation that
+   performs each given operation in sequence.
+   The modifier 'C' indicates that all operations in the array are controllable.
 remarks: >2
 
   ### Examples

@@ -4,7 +4,7 @@ name: AssertOperationsEqualInPlace
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
 summary: >2
-   Checks if the operation `givenU` is equal to the operation expectedU on
+   Checks if the operation `givenU` is equal to the operation `expectedU` on
    the given input size.
 syntax: 'operation AssertOperationsEqualInPlace (givenU : (Qubit[] => ()), expectedU : (Qubit[] => () : Adjoint), inputSize : Int) : ()'
 input:

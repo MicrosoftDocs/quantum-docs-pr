@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.argcomplexpolar
+name: ArgComplexPolar
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Returns the phase of a complex number type \n `ComplexPolar`.\n"
+syntax: 'function ArgComplexPolar (input : ComplexPolar) : Double'
+input:
+  content: '(input : ComplexPolar)'
+  types:
+  - name: input
+    summary: >2
+       Complex number $c = r e^{i t}$.
+    uid: microsoft.quantum.canon.complexpolar
+output:
+  content: Double
+  types:
+  - summary: ' Phase $\text{Arg}[c] = t$.'
+    uid: Double
+    isPrimitive: true

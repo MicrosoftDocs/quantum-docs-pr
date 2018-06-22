@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexpauli
+name: MultiplexPauli
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Applies multiply-controlled unitary operation $U$ that performs \n rotations by angle $\\theta_j$ about single-qubit Pauli operator $P$ \n when controlled by the $n$-qubit number state $\\ket{j}$.\n\n $U = \\sum^{2^n-1}_{j=0}\\ket{j}\\bra{j}\\otimes e^{i P \\theta_j}$.\n"
+remarks: " `coefficients` will be padded with elements $\\theta_j = 0.0$ if \n fewer than $2^n$ are specified."
+syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : BigEndian, target : Qubit) : ()'
+input:
+  content: '(coefficients : Double[], pauli : Pauli, control : BigEndian, target : Qubit)'
+  types:
+  - name: coefficients
+    summary: " Array of up to $2^n$ coefficients $\\theta_j$. The $j$th coefficient \n indexes the number state $\\ket{j}$ encoded in big-endian format. \n"
+    uid: Double
+    isPrimitive: true
+    isArray: true
+  - name: pauli
+    summary: >2
+       Pauli operator $P$ that determines axis of rotation.
+    uid: Pauli
+    isPrimitive: true
+  - name: control
+    summary: >2
+       $n$-qubit control register that encodes number states $\ket{j}$ in
+       big-endian format.
+    uid: microsoft.quantum.canon.bigendian
+  - name: target
+    summary: >2
+       Single qubit register that is rotated by $e^{i P \theta_j}$.
+    uid: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

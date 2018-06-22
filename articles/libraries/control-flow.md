@@ -35,10 +35,10 @@ for (idxQubit in 0..nQubits - 2) {
 }
 ```
 
-Expressed in terms of <xref:microsoft.quantum.canon.applytoeachac> and array manipulation functions such as <xref:microsoft.quantum.canon.zip>, however, this is much shorter and easier to read:
+Expressed in terms of <xref:microsoft.quantum.canon.applytoeachca> and array manipulation functions such as <xref:microsoft.quantum.canon.zip>, however, this is much shorter and easier to read:
 
 ```qsharp
-ApplyToEachAC(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
+ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 ```
 
 In the rest of this section, we will provide a number of examples of how to use the various flow control operations and functions provided by the canon to compactly express quantum programs.
@@ -71,18 +71,18 @@ Moreover, this approach is specialized to the particular operation that we wish 
 We can use the fact that operations are first-class to express this algorithmic concept more explicitly:
 
 ```qsharp
-ApplyToEachAC(H, register);
+ApplyToEachCA(H, register);
 ```
 
 Here, the suffix `AC` indicates that the call to `ApplyToEach` is itself adjointable and controllable.
 Thus, if `U` supports `Adjoint` and `Controlled`, the following lines are equivalent:
 
 ```qsharp
-(Adjoint ApplyToEachAC)(U, register);
+(Adjoint ApplyToEachCA)(U, register);
 ApplyToEach((Adjoint U), register);
 ```
 
-In particular, this means that calls to `ApplyToEachAC` can appear in operations which declare `adjoint auto`.
+In particular, this means that calls to `ApplyToEachCA` can appear in operations which declare `adjoint auto`.
 Similarly, <xref:microsoft.quantum.canon.applytoeachindex> is useful for representing patterns of the form `U(0, targets[0]); U(1, targets[1]); ...`, and offers versions for each combination of functors supports by its input.
 
 > [!TIP]

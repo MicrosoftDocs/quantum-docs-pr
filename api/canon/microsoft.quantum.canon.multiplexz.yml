@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexz
+name: MultiplexZ
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Applies multiply-controlled unitary operation $U$ that performs \n rotations by angle $\\theta_j$ about single-qubit Pauli operator $Z$ \n when controlled by the $n$-qubit number state $\\ket{j}$.\n\n $U = \\sum^{2^n-1}_{j=0}\\ket{j}\\bra{j}\\otimes e^{i Z \\theta_j}$.\n"
+remarks: " `coefficients` will be padded with elements $\\theta_j = 0.0$ if \n fewer than $2^n$ are specified.\n"
+syntax: 'operation MultiplexZ (coefficients : Double[], control : BigEndian, target : Qubit) : ()'
+references: >2-
+   - Synthesis of Quantum Logic Circuits
+     Vivek V. Shende, Stephen S. Bullock, Igor L. Markov
+     https://arxiv.org/abs/quant-ph/0406176
+input:
+  content: '(coefficients : Double[], control : BigEndian, target : Qubit)'
+  types:
+  - name: coefficients
+    summary: " Array of up to $2^n$ coefficients $\\theta_j$. The $j$th coefficient \n indexes the number state $\\ket{j}$ encoded in big-endian format. \n"
+    uid: Double
+    isPrimitive: true
+    isArray: true
+  - name: control
+    summary: >2
+       $n$-qubit control register that encodes number states $\ket{j}$ in
+       big-endian format.
+    uid: microsoft.quantum.canon.bigendian
+  - name: target
+    summary: >2
+       Single qubit register that is rotated by $e^{i P \theta_j}$.
+    uid: Qubit
+    isPrimitive: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

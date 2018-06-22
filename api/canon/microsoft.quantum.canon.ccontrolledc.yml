@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ccontrolledc
+name: CControlledC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Given an operation op, returns a new operation which
+   applies the op if a classical control bit is true. If false, nothing happens.
+   The modifier 'C' indicates that the operation is controllable.
+syntax: "function CControlledC (op : ('T => () : Controlled)) : ((Bool, 'T) => () : Controlled)"
+input:
+  content: "(op : ('T => () : Controlled))"
+  types:
+  - name: op
+    summary: >2
+       An operation to be conditionally applied.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Controlled
+output:
+  content: "((Bool, 'T) => () : Controlled)"
+  types:
+  - summary: " A new operation which is op if the classical control bit is true. \n"
+    isOperation: true
+    input:
+      types:
+      - uid: Bool
+        isPrimitive: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: *o0
+seeAlso:
+- microsoft.quantum.canon.controlled
+typeParameters:
+- uid: "'T"
+  summary: " The input type of the operation to be conditionally applied. \n"

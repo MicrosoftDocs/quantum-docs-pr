@@ -11,7 +11,7 @@ input:
   types:
   - name: x
     summary: >2
-       A real number $x$.
+       A real number $x\geq 1$.
     uid: Double
     isPrimitive: true
 output:

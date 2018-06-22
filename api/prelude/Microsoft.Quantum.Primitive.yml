@@ -60,7 +60,8 @@ operations:
          \end{bmatrix}.
      \end{align}
 - uid: microsoft.quantum.primitive.i
-  summary: ' Performs the identity operation (no-op) on a single qubit.'
+  summary: >2
+     Performs the identity operation (no-op) on a single qubit.
 - uid: microsoft.quantum.primitive.m
   summary: >2
      Performs a measurement of a single qubit in the
@@ -80,13 +81,13 @@ operations:
              \frac12 \braket{
                  \psi \mid|
                  \left(
-                     \boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_N
+                     \boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_{N-1}
                  \right) \mid|
                  \psi
              },
      \end{align}
      where $P_i$ is the $i$th element of `bases`, and where
-     $N = \texttt{Length}(\texttt{paulis})$.
+     $N = \texttt{Length}(\texttt{bases})$.
      That is, measurement returns a `Result` $d$ such that the eigenvalue of the
      observed measurement effect is $(-1)^d$.
 - uid: microsoft.quantum.primitive.multix

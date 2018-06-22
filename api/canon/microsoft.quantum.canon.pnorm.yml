@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.pnorm
+name: PNorm
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Given an array $x$ of type `Double[]`, this returns the $p$-norm \n $\\|x\\|_p= (\\sum_{j}|x_j|^{p})^{1/p}$.\n"
+syntax: 'function PNorm (p : Double, array : Double[]) : Double'
+input:
+  content: '(p : Double, array : Double[])'
+  types:
+  - name: p
+    summary: >2
+       The exponent $p$ in the $p$-norm.
+    uid: Double
+    isPrimitive: true
+  - name: array
+    uid: Double
+    isPrimitive: true
+    isArray: true
+output:
+  content: Double
+  types:
+  - summary: ' The $p$-norm $\|x\|_p$.'
+    uid: Double
+    isPrimitive: true

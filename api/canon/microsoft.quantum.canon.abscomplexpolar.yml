@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.abscomplexpolar
+name: AbsComplexPolar
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Returns the absolute value of a complex number type \n `ComplexPolar`.\n"
+syntax: 'function AbsComplexPolar (input : ComplexPolar) : Double'
+input:
+  content: '(input : ComplexPolar)'
+  types:
+  - name: input
+    summary: >2
+       Complex number $c = r e^{i t}$.
+    uid: microsoft.quantum.canon.complexpolar
+output:
+  content: Double
+  types:
+  - summary: ' Absolute value $|c| = r$.'
+    uid: Double
+    isPrimitive: true

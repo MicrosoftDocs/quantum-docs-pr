@@ -1,8 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.rangefunctions
 name: Microsoft.Quantum.Extensions.RangeFunctions
-functions: []
-operations:
+functions:
 - uid: microsoft.quantum.extensions.rangefunctions.rangeend
   summary: " Returns the defined end value of the given range, \n which is not necessarily the last element in the sequence.\n"
 - uid: microsoft.quantum.extensions.rangefunctions.rangestart
@@ -11,4 +10,5 @@ operations:
 - uid: microsoft.quantum.extensions.rangefunctions.rangestep
   summary: >2
      Returns the integer that specifies how the next value of a range is calculated.
+operations: []
 newtypes: []

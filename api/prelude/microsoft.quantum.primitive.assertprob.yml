@@ -7,6 +7,9 @@ summary: >2
    Asserts that measuring the given qubits in the given Pauli basis will have the given result
    with the given probability, within some tolerance.
 remarks: >2
+   Note that the Adjoint and Controlled versions of this operation will not
+   check the condition.
+
 
   ### Examples
    ```qsharp
@@ -55,3 +58,6 @@ output:
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.primitive.assert
+functors:
+- Adjoint
+- Controlled

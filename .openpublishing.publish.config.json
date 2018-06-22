@@ -1,11 +1,16 @@
 {
-  "docsets_to_publish": [{
+  "docsets_to_publish": [
+    {
       "docset_name": "quamtum-api",
       "build_source_folder": "api",
       "build_output_subfolder": "quamtum-api",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
+      "xref_query_tags": [
+        "/qsharp"
+      ],
+      "enable_xrefmap_share": true,
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
@@ -14,20 +19,54 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-      "enable_xrefmap_share": true,
-      "xref_query_tags": ["/qsharp"],
       "customized_tasks": {
         "docset_prebuild": [
           "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
           "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
         ]
       },
-      "JoinTOCPlugin": [{
-        "ReferenceTOC": "api/TOC.yml",
-        "ConceptualTOC": "articles/TOC.yml",
-        "ReferenceTOCUrl": "/qsharp/api/toc.json",
-        "ConceptualTOCUrl": "/quantum/toc.json"
-      }]
+      "JoinTOCPlugin": [
+        {
+          "ReferenceTOC": "api/TOC.yml",
+          "ConceptualTOC": "articles/TOC.yml",
+          "ReferenceTOCUrl": "/qsharp/api/toc.json",
+          "ConceptualTOCUrl": "/quantum/toc.json"
+        }
+      ]
+    },
+    {
+      "docset_name": "quantum-api-private",
+      "build_source_folder": "api",
+      "build_output_subfolder": "quantum-api-private",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "xref_query_tags": [
+        "/qsharp"
+      ],
+      "enable_xrefmap_share": true,
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "QSharpNamespace": "Content",
+        "QSharpType": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
+          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
+        ]
+      },
+      "JoinTOCPlugin": [
+        {
+          "ReferenceTOC": "api/TOC.yml",
+          "ConceptualTOC": "articles/TOC.yml",
+          "ReferenceTOCUrl": "/qsharp/api/toc.json",
+          "ConceptualTOCUrl": "/quantum/toc.json"
+        }
+      ]
     },
     {
       "docset_name": "quantum-docs",
@@ -36,6 +75,10 @@
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
+      "xref_query_tags": [
+        "/qsharp"
+      ],
+      "enable_xrefmap_share": true,
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
@@ -43,47 +86,57 @@
         "Odata": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "quantum-docs-private",
+      "build_source_folder": "articles",
+      "build_output_subfolder": "quantum-docs-private",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "xref_query_tags": [
+        "/qsharp"
+      ],
       "enable_xrefmap_share": true,
-      "xref_query_tags": ["/qsharp"]
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "Odata": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     }
   ],
-  "branch_target_mapping": {
-    "live": [
-      "Publish"
-    ],
-    "master": [
-      "Publish"
-    ]
-  },
-  "Targets": {
-    "Pdf": {
-      "template_folder": "_themes.pdf"
-    }
-  },
   "notification_subscribers": [],
+  "sync_notification_subscribers": [],
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
   "contribution_branch_mappings": {},
-  "dependent_repositories": [{
+  "dependent_repositories": [
+    {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
-    },
-    {
-      "path_to_root": "_themes.pdf",
-      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master"
     }
   ],
-  "dependent_packages": [{
-    "id": "Microsoft.OpenPublishing.CommonPlugins",
-    "nuget_feed": "https://www.myget.org/F/op/api/v2",
-    "path_to_root": "_dependentPackages/CommonPlugins",
-    "target_framework": "net45",
-    "version": "latest"
-  }],
-  "need_generate_pdf_url_template": false
+  "branch_target_mapping": {},
+  "need_generate_pdf_url_template": false,
+  "targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
+  "dependent_packages": [
+    {
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2",
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
+      "version": "latest"
+    }
+  ]
 }

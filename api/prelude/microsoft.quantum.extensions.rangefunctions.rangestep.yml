@@ -1,12 +1,12 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.extensions.rangefunctions.rangestep
 name: RangeStep
-type: operation
+type: function
 namespace: Microsoft.Quantum.Extensions.RangeFunctions
 summary: >2
    Returns the integer that specifies how the next value of a range is calculated.
 remarks: " A range expression's first element is `start`, \n its second element is `start+step`, third element is `start+step+step`, etc., \n until `end` is passed."
-syntax: 'operation RangeStep (r : Range) : Int'
+syntax: 'function RangeStep (r : Range) : Int'
 input:
   content: '(r : Range)'
   types:

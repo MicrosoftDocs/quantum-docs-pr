@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.abscomplex
+name: AbsComplex
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Returns the absolute value of a complex number type \n `Complex`.\n"
+syntax: 'function AbsComplex (input : Complex) : Double'
+input:
+  content: '(input : Complex)'
+  types:
+  - name: input
+    summary: >2
+       Complex number $c = x + i y$.
+    uid: microsoft.quantum.canon.complex
+output:
+  content: Double
+  types:
+  - summary: ' Absolute value $|c| = \sqrt{x^2 + y^2}$.'
+    uid: Double
+    isPrimitive: true

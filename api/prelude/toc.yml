@@ -32,6 +32,13 @@
     uid: microsoft.quantum.extensions.convert.tostringi
   - name: ToStringIFormat
     uid: microsoft.quantum.extensions.convert.tostringiformat
+- name: Microsoft.Quantum.Extensions.Diagnostics
+  uid: microsoft.quantum.extensions.diagnostics
+  items:
+  - name: DumpMachine
+    uid: microsoft.quantum.extensions.diagnostics.dumpmachine
+  - name: DumpRegister
+    uid: microsoft.quantum.extensions.diagnostics.dumpregister
 - name: Microsoft.Quantum.Extensions.Math
   uid: microsoft.quantum.extensions.math
   items:

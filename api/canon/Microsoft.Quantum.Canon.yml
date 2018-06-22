@@ -2,6 +2,14 @@
 uid: microsoft.quantum.canon
 name: Microsoft.Quantum.Canon
 functions:
+- uid: microsoft.quantum.canon.abscomplex
+  summary: " Returns the absolute value of a complex number type \n `Complex`.\n"
+- uid: microsoft.quantum.canon.abscomplexpolar
+  summary: " Returns the absolute value of a complex number type \n `ComplexPolar`.\n"
+- uid: microsoft.quantum.canon.abssquaredcomplex
+  summary: " Returns the squared absolute value of a complex number type \n `Complex`.\n"
+- uid: microsoft.quantum.canon.abssquaredcomplexpolar
+  summary: " Returns the squared absolute value of a complex number type \n `ComplexPolar`.\n"
 - uid: microsoft.quantum.canon.addgeneratorsystems
   summary: >2
      Adds two `GeneratorSystems` to create a new GeneratorSystem.
@@ -36,6 +44,10 @@ functions:
 - uid: microsoft.quantum.canon.arctanh
   summary: >2
      Computes the inverse hyperbolic tangent of a number.
+- uid: microsoft.quantum.canon.argcomplex
+  summary: " Returns the phase of a complex number type \n `Complex`.\n"
+- uid: microsoft.quantum.canon.argcomplexpolar
+  summary: " Returns the phase of a complex number type \n `ComplexPolar`.\n"
 - uid: microsoft.quantum.canon.asqubitarray
   summary: >2-
      Used to cast UDTs that are derived from type Qubit[] down to Qubit[].
@@ -72,7 +84,11 @@ functions:
      performs each given operation in sequence.
      The modifier 'A' indicates that all operations in the array are adjointable.
 - uid: microsoft.quantum.canon.bindc
-  summary: " Given an array of operations acting on a single input,\n produces a new operation that\n performs each given operation in sequence.\n The modifier 'C' indicates that all operations in the array are controllable. \n"
+  summary: >2
+     Given an array of operations acting on a single input,
+     produces a new operation that
+     performs each given operation in sequence.
+     The modifier 'C' indicates that all operations in the array are controllable.
 - uid: microsoft.quantum.canon.bindca
   summary: >2
      Given an array of operations acting on a single input,
@@ -86,8 +102,10 @@ functions:
      by table lookup for the ⟦3, 1, 1⟧ bit flip code.
 - uid: microsoft.quantum.canon.bitsize
   summary: >2
-     For non-negative integer `a` returns the smallest n such
-     that a < 2ⁿ .
+     For a non-negative integer `a`, returns the smallest $n$ such
+     that $a < 2^n$.
+- uid: microsoft.quantum.canon.blochspherecoordinates
+  summary: " Given two complex numbers $a0, a1$, computes coordinates\n on the Bloch sphere such that \n $a0 \\ket{0} + a1 \\ket{1} = r e^{it}(e^{-i \\phi /2}\\cos{(\\theta/2)}\\ket{0}+e^{i \\phi /2}\\sin{(\\theta/2)}\\ket{1})$.\n"
 - uid: microsoft.quantum.canon.boolarrfrompositiveint
   summary: >2
      Produces binary representation of positive integer in little Endian format.
@@ -95,6 +113,34 @@ functions:
   summary: " Converts a `Result[]` type to a `Bool[]` type, where `One` is mapped to \n `true` and `Zero` is mapped to `false`.\n"
 - uid: microsoft.quantum.canon.boolfromresult
   summary: " Converts a `Result` type to a `Bool` type, where `One` is mapped to \n `true` and `Zero` is mapped to `false`.\n"
+- uid: microsoft.quantum.canon.ccontrolled
+  summary: >2
+     Given an operation op, returns a new operation which
+     applies the op if a classical control bit is true. If false, nothing happens.
+- uid: microsoft.quantum.canon.ccontrolleda
+  summary: " Given an operation op, returns a new operation which\n applies the op if a classical control bit is true. If false, nothing happens.\n The modifier 'A' indicates that the operation is adjointable. \n"
+- uid: microsoft.quantum.canon.ccontrolledc
+  summary: >2
+     Given an operation op, returns a new operation which
+     applies the op if a classical control bit is true. If false, nothing happens.
+     The modifier 'C' indicates that the operation is controllable.
+- uid: microsoft.quantum.canon.ccontrolledca
+  summary: >2
+     Given an operation op, returns a new operation which
+     applies the op if a classical control bit is true. If false, nothing happens.
+     The modifier 'CA' indicates that the operation is controllable and adjointable.
+- uid: microsoft.quantum.canon.complexpolartocomplex
+  summary: >2
+     Converts a complex number of type `ComplexPolar` to a complex
+     number of type `Complex`.
+- uid: microsoft.quantum.canon.complextocomplexpolar
+  summary: >2
+     Converts a complex number of type `Complex` to a complex
+     number of type `ComplexPolar`.
+- uid: microsoft.quantum.canon.compose
+  summary: >2
+     Given two functions $f$ and $g$, returns a new function representing
+     $f \circ g$.
 - uid: microsoft.quantum.canon.constantarray
   summary: >2
      Creates an array of given length with all elements equal to given value.
@@ -240,6 +286,8 @@ functions:
   summary: >2
      Creates an array that is equal to an input array except that the last array
      element is dropped.
+- uid: microsoft.quantum.canon.multiplexzcomputecoefficients_
+  summary: ' Implementation step of multiply-controlled Z rotations.'
 - uid: microsoft.quantum.canon.multiplygeneratorindex
   summary: >2
      Multiplies the coefficient in a `GeneratorIndex`.
@@ -265,6 +313,8 @@ functions:
      Given an operation representing a gate $U$, returns a new operation
      $U^m$ for a power $m$.
      The modifier 'CA' indicates that the operation is controllable and adjointable.
+- uid: microsoft.quantum.canon.pad
+  summary: " Returns an array padded at with specified values up to a \n specified length.\n"
 - uid: microsoft.quantum.canon.paulievolutionfunction
   summary: >2
      Represents a dynamical generator as a set of simulatable gates and an
@@ -277,6 +327,12 @@ functions:
   summary: >2
      Given a bit string, returns a multi-qubit Pauli operator
      represented as an array of single-qubit Pauli operators.
+- uid: microsoft.quantum.canon.pnorm
+  summary: " Given an array $x$ of type `Double[]`, this returns the $p$-norm \n $\\|x\\|_p= (\\sum_{j}|x_j|^{p})^{1/p}$.\n"
+- uid: microsoft.quantum.canon.pnormalize
+  summary: >2
+     Given an array $x$ of type `Double[]`, this returns an array where
+     all elements are divided by the $p$-norm $\|x\|_p$.
 - uid: microsoft.quantum.canon.positiveintfromboolarr
   summary: >2
      Produces a positive integer from a string of bits in in little Endian format.
@@ -351,6 +407,12 @@ functions:
 - uid: microsoft.quantum.canon.stateoraclefromdeterministicstateoracle
   summary: >2
      Converts an oracle of type `DeterministicStateOracle` to `StateOracle`.
+- uid: microsoft.quantum.canon.statepreparationcomplexcoefficients
+  summary: " Returns a unitary operation $U$ that prepares an arbitrary quantum \n state $\\ket{\\psi}$ with complex coefficients $r_j e^{i t_j}$ from \n the $n$-qubit computational basis state $\\ket{0...0}$.\n\n The action of U on a newly-allocated register is given by\n \\begin{align}\n U\\ket{0...0}=\\ket{\\psi}=\\frac{\\sum^{2^n-1}_{j=0}r_j e^{i t_j}\\ket{j}}{\\sqrt{\\sum^{2^n-1}_{j=0}|r_j|^2}}.\n \\end{align}\n"
+- uid: microsoft.quantum.canon.statepreparationpositivecoefficients
+  summary: " Returns a unitary operation $U$ that prepares an arbitrary quantum \n state $\\ket{\\psi}$ with positive coefficients $\\alpha_j\\ge 0$ from \n the $n$-qubit computational basis state $\\ket{0...0}$.\n\n The action of U on a newly-allocated register is given by\n \\begin{align}\n     U \\ket{0\\cdots 0} = \\ket{\\psi} = \\frac{\\sum^{2^n-1}_{j=0}\\alpha_j \\ket{j}}{\\sqrt{\\sum^{2^n-1}_{j=0}|\\alpha_j|^2}}$.\n \\end{align}\n"
+- uid: microsoft.quantum.canon.statepreparationsbmcomputecoefficients_
+  summary: ' Implementation step of arbitrary state preparation procedure.'
 - uid: microsoft.quantum.canon.steanecoderecoveryfns
   summary: >2
      Decoder for combined X- and Z-parts of the stabilizer group of the
@@ -433,6 +495,16 @@ operations:
      where $\ket{x\_1, \dots, x\_n}$ refers to the computational basis
      states of `controls`, and where $\ket{y\_1, \dots, y\_{n - 1}}$
      refers to the computational basis states of `targets`.
+- uid: microsoft.quantum.canon.applydiagonalunitary
+  summary: " Applies Diagonal unitary operation $U$ that applies a complex phase \n $e^{i \\theta_j}$ on the $n$-qubit number state $\\ket{j}$.\n\n $U = \\sum^{2^n-1}_{j=0}e^{i\\theta_j}\\ket{j}\\bra{j}$.\n"
+- uid: microsoft.quantum.canon.applyif
+  summary: " Given an operation `op` and a bit value `bit`, applies `op` to the `target` \n if `bit` is true. If false, nothing happens to the `target`.\n"
+- uid: microsoft.quantum.canon.applyifa
+  summary: " Given an operation `op` and a bit value `bit`, applies `op` to the `target` \n if `bit` is true. If false, nothing happens to the `target`.\n The modifier 'A' indicates that the operation is adjointable. \n"
+- uid: microsoft.quantum.canon.applyifc
+  summary: " Given an operation `op` and a bit value `bit`, applies `op` to the `target` \n if `bit` is true. If false, nothing happens to the `target`.\n The modifier 'C' indicates that the operation is controllable.\n"
+- uid: microsoft.quantum.canon.applyifca
+  summary: " Given an operation `op` and a bit value `bit`, applies `op` to the `target` \n if `bit` is true. If false, nothing happens to the `target`.\n The modifier 'CA' indicates that the operation is controllable and adjointable.\n"
 - uid: microsoft.quantum.canon.applyleoperationonphasele
   summary: >2
      Applies an operation that takes a
@@ -578,10 +650,17 @@ operations:
      Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
 - uid: microsoft.quantum.canon.asserthighestbit
   summary: >2
-     Asserts that the highest bit of an unsigned integer has given value
+     Asserts that the highest qubit of a qubit register
+     representing an unsigned integer is in a particular state.
 - uid: microsoft.quantum.canon.assertlessthanphasele
   summary: >2
      Asserts that the `number` encoded in PhaseLittleEndian is less than `value`.
+- uid: microsoft.quantum.canon.assertphase
+  summary: " Asserts that the phase $\\phi$ of an equal superposition quantum state \n that may be expressed as\n $\\frac{e^{i t}}{\\sqrt{2}}(e^{i\\phi}\\ket{0} + e^{-i\\phi}\\ket{1})$\n for some arbitrary real t has the expected value.\n"
+- uid: microsoft.quantum.canon.assertprobint
+  summary: " Given an $n$-qubit quantum state $\\ket{\\psi}=\\sum^{2^n-1}_{j=0}\\alpha_j \\ket{j}$, \n asserts that the probability $|\\alpha_j|^2$ of the state $\\ket{j}$ indexed by $j$ \n has the expected value.\n"
+- uid: microsoft.quantum.canon.assertprobintbe
+  summary: " Given an $n$-qubit quantum state $\\ket{\\psi}=\\sum^{2^n-1}_{j=0}\\alpha_j \\ket{j}$, \n asserts that the probability $|\\alpha_j|^2$ of the state $\\ket{j}$ indexed by $j$ \n has the expected value.\n"
 - uid: microsoft.quantum.canon.bitflipcode
   summary: >2
      Returns a QECC value representing the ⟦3, 1, 1⟧ bit flip code encoder and
@@ -598,7 +677,8 @@ operations:
      estimation algorithm using arbitrary real powers of a unitary oracle.
 - uid: microsoft.quantum.canon.copymostsignificantbitle
   summary: >2
-     Copies the most significant bit of `from` into target
+     Copies the most significant bit of a qubit register
+     `from` representing an unsigned integer into the qubit `target`.
 - uid: microsoft.quantum.canon.discretephaseestimationiteration
   summary: >2
      Performs a single iteration of an iterative (classically-controlled) phase
@@ -619,6 +699,18 @@ operations:
 - uid: microsoft.quantum.canon.fivequbitcodeencoder
   summary: " Encodes into the ⟦5, 1, 3⟧ quantum code. \n"
 - uid: microsoft.quantum.canon.hy
+  summary: >2
+     Applies the Hadamard transformation $H_Y = S H$
+     between the $Z$ and $Y$ bases to a single qubit,
+
+     \begin{align}
+         H_Y \mathrel{:=}
+         \frac{1}{\sqrt{2}}
+         \begin{bmatrix}
+             1 & 1 \\\\
+             i & -i
+         \end{bmatrix}.
+     \end{align}
 - uid: microsoft.quantum.canon.injectpi4yrotation
   summary: >2
      Performs a $\pi / 4$ rotation about $Y$ by consuming a magic
@@ -627,7 +719,7 @@ operations:
      \begin{align}
          \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
      \end{align}
-     $$.
+     $$
 - uid: microsoft.quantum.canon.inplacexorle
   summary: >2
      Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
@@ -649,9 +741,10 @@ operations:
      Given 15 approximate copies of a magic state
      $$
      \begin{align}
-         \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
+         \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}
      \end{align},
-     $$ yields one higher-quality copy.
+     $$
+     yields one higher-quality copy.
 - uid: microsoft.quantum.canon.measureallz
   summary: >2
      Measures $Z \otimes Z \otimes \cdots \otimes Z$ on
@@ -679,7 +772,14 @@ operations:
      Measures the given Pauli operator using an explicit scratch
      qubit to perform the measurement.
 - uid: microsoft.quantum.canon.modularaddproductle
-  summary: " Let us denote modulus by N, constMultiplier by a, multiplier by x  \n and summand by y, then this operation is given by map \n |x⟩|b⟩ ↦ |x⟩| (b + a⋅x) (mod N) ⟩\n"
+  summary: >2
+     Implements the map
+     $$
+     \begin{align}
+         \ket{x} \ket{b} \mapsto \ket{x} \ket{b + a \cdot x \operatorname{mod} N}
+     \end{align}
+     $$
+     for a given modulus $N$, constant multiplier $a$, and summand $y$.
 - uid: microsoft.quantum.canon.modularaddproductphasele
   summary: " The same as ModularAddProductInPlaceLE, but assumes that summand encodes \n integers in QFT basis\n "
 - uid: microsoft.quantum.canon.modularincrementle
@@ -702,12 +802,25 @@ operations:
   summary: " Measures a single qubit in the $Z$ basis, \n and resets it to the standard basis state\n $\\ket{0}$ following the measurement.\n"
 - uid: microsoft.quantum.canon.multim
   summary: ' Measures each qubit in a given array in the standard basis.'
+- uid: microsoft.quantum.canon.multiplexoperations
+  summary: " Applies Multiply-controlled unitary operation $U$ that applies a \n unitary $V_j$ when controlled by $n$-qubit number state $\\ket{j}$.\n\n $U = \\sum^{2^n-1}_{j=0}\\ket{j}\\bra{j}\\otimes V_j$.\n"
+- uid: microsoft.quantum.canon.multiplexoperations_
+  summary: ' Implementation step of MultiplexOperations.'
+- uid: microsoft.quantum.canon.multiplexpauli
+  summary: " Applies multiply-controlled unitary operation $U$ that performs \n rotations by angle $\\theta_j$ about single-qubit Pauli operator $P$ \n when controlled by the $n$-qubit number state $\\ket{j}$.\n\n $U = \\sum^{2^n-1}_{j=0}\\ket{j}\\bra{j}\\otimes e^{i P \\theta_j}$.\n"
+- uid: microsoft.quantum.canon.multiplexz
+  summary: " Applies multiply-controlled unitary operation $U$ that performs \n rotations by angle $\\theta_j$ about single-qubit Pauli operator $Z$ \n when controlled by the $n$-qubit number state $\\ket{j}$.\n\n $U = \\sum^{2^n-1}_{j=0}\\ket{j}\\bra{j}\\otimes e^{i Z \\theta_j}$.\n"
 - uid: microsoft.quantum.canon.noop
   summary: ' Performs the identity operation (no-op) on a register of qubits.'
 - uid: microsoft.quantum.canon.noop2
   summary: ' Performs the identity operation (no-op) on two registers of qubits.'
 - uid: microsoft.quantum.canon.oracletodiscrete
   summary: " Given an operation representing a \"black-box\" oracle, returns a discrete-time oracle \n which represents the \"black-box\" oracle repeated multiple times.\n"
+- uid: microsoft.quantum.canon.preparearbitrarystate
+  summary: " Returns a unitary operation $U$ that prepares an arbitrary quantum \n state $\\ket{\\psi}$ with complex coefficients $r_j e^{i t_j}$ from \n the $n$-qubit computational basis state $\\ket{0...0}$.\n\n $U\\ket{0...0}=\\ket{\\psi}=\\frac{\\sum^{2^n-1}_{j=0}r_j e^{i t_j}\\ket{j}}{\\sqrt{\\sum^{2^n-1}_{j=0}|r_j|^2}}$.\n"
+- uid: microsoft.quantum.canon.preparearbitrarystate_
+  summary: >2
+     Implementation step of arbitrary state preparation procedure.
 - uid: microsoft.quantum.canon.preparechoistate
   summary: >2
      Prepares the Choi–Jamiłkowski state for a given operation onto given reference
@@ -850,6 +963,9 @@ newtypes:
      qubit with index `0` encodes the highest bit of an unsigned integer
 - uid: microsoft.quantum.canon.ccnotop
   summary: ' The signature type of CCNOT gate.'
+- uid: microsoft.quantum.canon.complexpolar
+  summary: >2
+     Polar representation of a complex number $c=r e^{i t}$.
 - uid: microsoft.quantum.canon.continuousoracle
   summary: >2-
      Represents a continuous-time oracle

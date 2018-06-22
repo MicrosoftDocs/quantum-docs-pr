@@ -3,6 +3,18 @@ uid: microsoft.quantum.canon.hy
 name: HY
 type: operation
 namespace: Microsoft.Quantum.Canon
+summary: >2
+   Applies the Hadamard transformation $H_Y = S H$
+   between the $Z$ and $Y$ bases to a single qubit,
+
+   \begin{align}
+       H_Y \mathrel{:=}
+       \frac{1}{\sqrt{2}}
+       \begin{bmatrix}
+           1 & 1 \\\\
+           i & -i
+       \end{bmatrix}.
+   \end{align}
 syntax: 'operation HY (target : Qubit) : ()'
 input:
   content: '(target : Qubit)'

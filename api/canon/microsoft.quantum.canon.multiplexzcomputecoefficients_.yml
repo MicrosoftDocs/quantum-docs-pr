@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexzcomputecoefficients_
+name: MultiplexZComputeCoefficients_
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: ' Implementation step of multiply-controlled Z rotations.'
+syntax: 'function MultiplexZComputeCoefficients_ (coefficients : Double[]) : (Double[], Double[])'
+input:
+  content: '(coefficients : Double[])'
+  types:
+  - name: coefficients
+    uid: Double
+    isPrimitive: true
+    isArray: true
+output:
+  content: (Double[], Double[])
+  types:
+  - types:
+    - uid: Double
+      isPrimitive: true
+      isArray: true
+    - uid: Double
+      isPrimitive: true
+      isArray: true
+seeAlso:
+- microsoft.quantum.canon.multiplexz

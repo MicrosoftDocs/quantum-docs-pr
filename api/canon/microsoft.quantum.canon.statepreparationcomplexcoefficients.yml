@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.statepreparationcomplexcoefficients
+name: StatePreparationComplexCoefficients
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Returns a unitary operation $U$ that prepares an arbitrary quantum \n state $\\ket{\\psi}$ with complex coefficients $r_j e^{i t_j}$ from \n the $n$-qubit computational basis state $\\ket{0...0}$.\n\n The action of U on a newly-allocated register is given by\n \\begin{align}\n U\\ket{0...0}=\\ket{\\psi}=\\frac{\\sum^{2^n-1}_{j=0}r_j e^{i t_j}\\ket{j}}{\\sqrt{\\sum^{2^n-1}_{j=0}|r_j|^2}}.\n \\end{align}\n"
+remarks: " Negative input coefficients $r_j < 0$ will be treated as though\n positive with value $|r_j|$. `coefficients` will be padded with \n elements $(r_j, t_j) = (0.0, 0.0)$ if fewer than $2^n$ are \n specified.\n\n\n### Examples\n The following snippet prepares the quantum state $\\ket{\\psi}=e^{i 0.1}\\sqrt{1/8}\\ket{0}+\\sqrt{7/8}\\ket{2}$\n in the qubit register `qubitsBE`.\n ```qsharp\n mutable amplitudes = [Sqrt(0.125); 0.0; Sqrt(0.875); 0.0];\n mutable phases = [0.1; 0.0; 0.0; 0.0];\n mutable complexNumbers = new ComplexPolar[4];\n for(idx in 0..3){\n     set complexNumbers[idx] = ComplexPolar(amplitudes, phases);\n }\n let op = StatePreparationPositiveCoefficients(complexNumbers);\n using(qubits = Qubit[2]){\n     let qubitsBE = BigEndian(qubits);\n     op(qubitsBE);\n }\n ```"
+syntax: 'function StatePreparationComplexCoefficients (coefficients : ComplexPolar[]) : (BigEndian => () : Adjoint, Controlled)'
+input:
+  content: '(coefficients : ComplexPolar[])'
+  types:
+  - name: coefficients
+    summary: " Array of up to $2^n$ complex coefficients represented by their \n absolute value and phase $(r_j, t_j)$. The $j$th coefficient \n indexes the number state $\\ket{j}$ encoded in big-endian format. \n"
+    uid: microsoft.quantum.canon.complexpolar
+    isArray: true
+output:
+  content: '(BigEndian => () : Adjoint, Controlled)'
+  types:
+  - summary: >2
+       A state-preparation unitary operation $U$.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.canon.bigendian
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors:
+    - Adjoint
+    - Controlled

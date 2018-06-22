@@ -4,12 +4,12 @@ name: Microsoft.Quantum.Extensions.Testing
 functions: []
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: " Assert that given qubits are all in $\\ket{0}$ state\n "
+  summary: " Assert that given qubits are all in $\\ket{0}$ state.\n "
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
   summary: " Assert that given qubits are all in $\\ket{0}$ state\n "
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
   summary: >2
-     Checks if the operation `givenU` is equal to the operation expectedU on
+     Checks if the operation `givenU` is equal to the operation `expectedU` on
      the given input size.
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
   summary: >2

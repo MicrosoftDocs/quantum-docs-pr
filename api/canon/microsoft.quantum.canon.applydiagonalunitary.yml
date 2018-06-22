@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applydiagonalunitary
+name: ApplyDiagonalUnitary
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Applies Diagonal unitary operation $U$ that applies a complex phase \n $e^{i \\theta_j}$ on the $n$-qubit number state $\\ket{j}$.\n\n $U = \\sum^{2^n-1}_{j=0}e^{i\\theta_j}\\ket{j}\\bra{j}$.\n"
+remarks: " `coefficients` will be padded with elements $\\theta_j = 0.0$ if \n fewer than $2^n$ are specified.\n"
+syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : BigEndian) : ()'
+references: >2-
+   - Synthesis of Quantum Logic Circuits
+     Vivek V. Shende, Stephen S. Bullock, Igor L. Markov
+     https://arxiv.org/abs/quant-ph/0406176
+input:
+  content: '(coefficients : Double[], qubits : BigEndian)'
+  types:
+  - name: coefficients
+    summary: " Array of up to $2^n$ coefficients $\\theta_j$. The $j$th coefficient \n indexes the number state $\\ket{j}$ encoded in big-endian format. \n"
+    uid: Double
+    isPrimitive: true
+    isArray: true
+  - name: qubits
+    uid: microsoft.quantum.canon.bigendian
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors:
+- Adjoint
+- Controlled

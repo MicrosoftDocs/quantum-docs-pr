@@ -355,6 +355,5 @@ namespace app
 
 On top of `Assert` and `Dump` functions and operations, Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/en-us/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger) and [inspecting values of classic variables](https://docs.microsoft.com/en-us/visualstudio/debugger/autos-and-locals-windows) are all possible during code execution on the simulator.
 
-
 Debugging in Visual Studio Code is not yet supported.
 

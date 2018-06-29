@@ -15,7 +15,14 @@ ms.topic: article
 
 # Microsoft Quantum Development Kit Preview Release Notes
 
-# Version 0.2.1806
+# Version 0.2.1806.2802
+
+*Release date: June 29, 2018*
+
+This releases is just a quick fix for [issue #48 reported on GitHub](https://github.com/Microsoft/Quantum/issues/48) (Q# compilation fails if user name contains a blank space). Follow same update instructions as `0.2.1806.1503` with the corresponding new version (`0.2.1806.2802-preview`).
+
+
+# Version 0.2.1806.1503
 
 *Release date: June 22, 2018*
 

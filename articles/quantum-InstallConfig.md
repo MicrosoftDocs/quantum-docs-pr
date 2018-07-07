@@ -17,7 +17,7 @@ ms.topic: article
 The Quantum Development Kit can be used either with the Visual Studio 2017 integrated development environment, or with the command line and a development editor such as Visual Studio Code.
 We'll walk through both methods in this install guide.
 
-> [NOTE]
+> [!NOTE]
 > The Quantum Development Kit requires a 64-bit installation of Windows 10, macOS, or Linux.
 
 ### Optional Prerequisites

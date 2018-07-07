@@ -7,13 +7,16 @@ summary: >2
    Asserts that measuring the given qubits in the given Pauli basis will have the given result
    with the given probability, within some tolerance.
 remarks: >2
+   Note that the Adjoint and Controlled versions of this operation will not
+   check the condition.
+
 
   ### Examples
    ```qsharp
    using (register = Qubit[1]) {
        H(register[0]);
        AssertProb([PauliZ], register, One, 0.5,
-           "Measuring in conjugate basis did not give 50/50 results.");
+           "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
    }
    ```
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : ()'
@@ -55,3 +58,6 @@ output:
     isPrimitive: true
 seeAlso:
 - microsoft.quantum.primitive.assert
+functors:
+- Adjoint
+- Controlled

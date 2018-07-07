@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.argcomplex
+name: ArgComplex
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: " Returns the phase of a complex number type \n `Complex`.\n"
+syntax: 'function ArgComplex (input : Complex) : Double'
+input:
+  content: '(input : Complex)'
+  types:
+  - name: input
+    summary: >2
+       Complex number $c = x + i y$.
+    uid: microsoft.quantum.canon.complex
+output:
+  content: Double
+  types:
+  - summary: ' Phase $\text{Arg}[c] = \text{ArcTan}(y,x) \in (-\pi,\pi]$.'
+    uid: Double
+    isPrimitive: true

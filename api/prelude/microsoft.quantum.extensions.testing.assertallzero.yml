@@ -3,7 +3,7 @@ uid: microsoft.quantum.extensions.testing.assertallzero
 name: AssertAllZero
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
-summary: " Assert that given qubits are all in $\\ket{0}$ state\n "
+summary: " Assert that given qubits are all in $\\ket{0}$ state.\n "
 syntax: 'operation AssertAllZero (qubits : Qubit[]) : ()'
 input:
   content: '(qubits : Qubit[])'
@@ -17,6 +17,8 @@ output:
   types:
   - uid: ()
     isPrimitive: true
+seeAlso:
+- microsoft.quantum.extensions.testing.assertqubit
 functors:
 - Adjoint
 - Controlled

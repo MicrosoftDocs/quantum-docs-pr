@@ -4,7 +4,8 @@ name: CopyMostSignificantBitLE
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >2
-   Copies the most significant bit of `from` into target
+   Copies the most significant bit of a qubit register
+   `from` representing an unsigned integer into the qubit `target`.
 syntax: 'operation CopyMostSignificantBitLE (from : LittleEndian, target : Qubit) : ()'
 input:
   content: '(from : LittleEndian, target : Qubit)'

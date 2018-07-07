@@ -54,7 +54,8 @@ operation AllocateQubitTest () : ()
 {
     body
     {
-        using (qs = Qubit[1]) {
+        using (qs = Qubit[1]) 
+        {
             Assert([PauliZ], [qs[0]], Zero, "Newly allocated qubit must be in |0> state");
         }
         Message("Test passed");
@@ -161,7 +162,7 @@ using (var sim = new QuantumSimulator())
 
 After you execute a test in Test Explorer and click on the test, a panel will appear with information about test execution: Passed/Failed status, elapsed time and an "Output" link. If you click the "Output" link, test output will open in a new window.
 
-![test output](media/unit-test-output.png "Accessing Xunit test output")
+![test output](./media/unit-test-output.png)
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
@@ -175,8 +176,10 @@ For failing tests, the outputs logged as a result of the `output.WriteLine(msg)`
 The same logic can be applied to implementing assertions. Let's consider a simple example:
 
 ```qsharp
-function AssertPositive(value : Double) : () {
-    if (value <= 0) {
+function AssertPositive(value : Double) : () 
+{
+    if (value <= 0) 
+    {
         fail "Expected a positive number.";
     }
 }
@@ -186,12 +189,13 @@ Here, the keyword `fail` indicates that the computation should not proceed, rais
 By definition, a failure of this kind cannot be observed from within Q#, as no further Q# code is run after a `fail` statement is reached.
 Thus, if we proceed past a call to `AssertPositive`, we can be assured by that its input was positive.
 
-Building on these ideas, [the prelude](./libraries/prelude.md) offers two especially useful assertions, both @"microsoft.quantum.primitive.assert" and @"microsoft.quantum.primitive.assertprob" both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is to be performed, and a hypothetical outcome.
+Building on these ideas, [the prelude](./libraries/prelude.md) offers two especially useful assertions, @"microsoft.quantum.primitive.assert" and @"microsoft.quantum.primitive.assertprob" both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is to be performed, and a hypothetical outcome.
 On target machines which work by simulation, we are not bound by [the no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), and can perform such measurements without disturbing the register passed to such assertions.
 A simulator can then, similar to the `AssertPositive` function above, abort computation if the hypothetical outcome would not be observed in practice:
 
 ```qsharp
-using (register = Qubit[1]) {
+using (register = Qubit[1]) 
+{
     H(register[0]);
     Assert([PauliX], register, Zero);
     // Even though we do not have access to states in Q#,
@@ -203,7 +207,153 @@ using (register = Qubit[1]) {
 On physical quantum hardware, where the no-cloning theorem prevents examination of quantum state, the `Assert` and `AssertProb` operations simply return `()` with no other effect.
 
 The <xref:microsoft.quantum.canon> namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. They are detailed in [Q# standard libraries: Testing and Debugging](libraries/testing.md) section.
+
+## Dump Functions
+
+To help troubleshooting quantum programs, [the prelude](./libraries/prelude.md) offers two functions that can dump into a file the current status of the target machine: @"microsoft.quantum.extensions.diagnostics.dumpmachine" and @"microsoft.quantum.extensions.diagnostics.dumpregister". The generated output of each depends on the target machine.
+
+### DumpMachine
+
+The full-state quantum simulator distributed as part of the Quantum Development Kit writes into the file the [wave function](https://en.wikipedia.org/wiki/Wave_function) of the entire quantum system, as a one-dimensional array of complex numbers, in which each element represents the amplituted of the probability of measuring the computational basis state $\ket{n}$, where $\ket{n} = \ket{b_{n-1}...b_1b_0}$ for bits $\{b_i\}$. For example, on a machine with only two qubits allocated and in the quantum state
+$$
+\begin{align}
+    \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10},
+\end{align}
+$$
+calling @"microsoft.quantum.extensions.diagnostics.dumpmachine" generates this output:
+
+```
+Ids:    [1;0;]
+Wavefunction:
+0:      0.707107        0
+1:      0               0
+2:      -0.5            -0.5
+3:      0               0
+```
+
+Notice how the ids of the qubits are shown at the top in their significant order. For each computational basis state $\ket{n}$, the first column represents the Real part of the amplituted, and the second column represents its Imaginary part.
+
+  > [!NOTE]
+  > The id of a qubit is assigned at runtime and it's not necessarily aligned with the order in which the qubit was allocated or its position within a qubit register.
+
+
+#### [Visual Studio 2017](#tab/tabid-vs2017)
+
+  > [!TIP]
+  > You can figure out a qubit id in Visual Studio by putting a breakpoint in your code and inspecting the value of a qubit variable, for example:
+  > 
+  > ![show qubit id in Visual Studio](./media/qubit_id.png)
+  >
+  > the qubit with index `0` on `register2` has id=`3`, the qubit with index `1` has id=`2`.
+
+#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+
+  > [!TIP]
+  > You can figure out a qubit id by using the @"microsoft.quantum.primitive.message" function and passing the qubit variable in the message, for example:
+  >
+  > ```qsharp
+  > Message($"0={register2[0]}; 1={register2[1]}");
+  > ```
+  > 
+  > which could generate this output:
+  >```
+  > 0=q:3; 1=q:2
+  >```
+  > which means that the qubit with index `0` on `register2` has id=`3`, the qubit with index `1` has id=`2`.
+
+
+***
+
+
+@"microsoft.quantum.extensions.diagnostics.dumpmachine" is part of the  <xref:microsoft.quantum.extensions.diagnostics> namespace, so in order to use it you must add an `open` statement:
+
+```qsharp
+namespace Samples
+{
+    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Extensions.Diagnostics;
+
+    operation Operation () : ()
+    {
+        body
+        {
+            using (qubits = Qubit[2])
+            {
+                H(qubits[1]);
+                DumpMachine("dump.txt");
+            }
+        }
+    }
+}
+```
+
+
+### DumpRegister
+
+@"microsoft.quantum.extensions.diagnostics.dumpregister" works like @"microsoft.quantum.extensions.diagnostics.dumpmachine", except it also takes an array of qubits to limit the amount of information to only that relevant to the corresponding qubits.
+
+As with @"microsoft.quantum.extensions.diagnostics.dumpmachine", the information generated by @"microsoft.quantum.extensions.diagnostics.dumpregister" depends on the target machine. For the full-state quantum simulator it writes into the file the wave function up to a global phase of the quantum sub-system generated by the provided qubits in the same format as @"microsoft.quantum.extensions.diagnostics.dumpmachine".  For example, take again a a machine with only two qubits allocated and in the quantum state
+$$
+\begin{align}
+    \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10} = - e^{-i\pi/4} ( (\frac{1}{\sqrt{2}} \ket{0} - \frac{(1 + i)}{2} \ket{1} ) \otimes \frac{-(1 + i)}{\sqrt{2}} \ket{0} ) ,
+\end{align}
+$$
+calling @"microsoft.quantum.extensions.diagnostics.dumpregister" for `qubit[0]` generates this output:
+
+```
+Ids:    [0;]
+Wavefunction:
+0:      -0.707107       -0.707107
+1:      0               0
+```
+
+and calling @"microsoft.quantum.extensions.diagnostics.dumpregister" for `qubit[1]` generates this output:
+
+```
+Ids:    [1;]
+Wavefunction:
+0:      0.707107        0
+1:      -0.5            -0.5
+```
+
+In general, the state of a register that is entangled with another register is a mixed state rather than a pure state. In this case, @"microsoft.quantum.extensions.diagnostics.dumpregister" outputs the following message:
+
+```
+Qubits provided (0;) are entangled with some other qubit.
+```
+
+The following example shows you how you can use both @"microsoft.quantum.extensions.diagnostics.dumpregister" and @"microsoft.quantum.extensions.diagnostics.dumpmachine" in your Q# code:
+
+```qsharp
+namespace app
+{
+    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Extensions.Diagnostics;
+
+    operation Operation () : ()
+    {
+        body
+        {
+            using (qubits = Qubit[2])
+            {
+                X(qubits[1]);
+                H(qubits[1]);
+                R1Frac(1, 2, qubits[1]);
+                
+                DumpMachine("dump.txt");
+                DumpRegister("q0.txt", qubits[0..0]);
+                DumpRegister("q1.txt", qubits[1..1]);
+
+                ResetAll(qubits);
+            }
+        }
+    }
+}
+```
+
 ## Debugging
 
-Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/en-us/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger) and [inspecting values of classic variables](https://docs.microsoft.com/en-us/visualstudio/debugger/autos-and-locals-windows) during code execution on simulator.
+On top of `Assert` and `Dump` functions and operations, Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/en-us/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger) and [inspecting values of classic variables](https://docs.microsoft.com/en-us/visualstudio/debugger/autos-and-locals-windows) are all possible during code execution on the simulator.
+
 Debugging in Visual Studio Code is not yet supported.
+

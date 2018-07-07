@@ -15,6 +15,98 @@ ms.topic: article
 
 # Microsoft Quantum Development Kit Preview Release Notes
 
+# Version 0.2.1806.3001
+
+*Release date: June 30, 2018*
+
+This releases is just a quick fix for [issue #48 reported on GitHub](https://github.com/Microsoft/Quantum/issues/48) (Q# compilation fails if user name contains a blank space). Follow same update instructions as `0.2.1806.1503` with the corresponding new version (`0.2.1806.3001-preview`).
+
+
+# Version 0.2.1806.1503
+
+*Release date: June 22, 2018*
+
+This release includes several community contributions as well as an improved debugging experience and improved performance.  Specifically:
+
+* Performance improvements on both small and large simulations for the QuantumSimulator target machine.
+* Improved debugging functionality.
+* Community contributions in bug fixes, new helper functions, operations and new samples.
+
+
+### Performance improvements ###
+
+This update includes significant performance improvements for simulation of large and small numbers of qubits for all the target machines.  This improvement is easily visible with the H<sub>2</sub> simulation that is a standard sample in the Quantum Development Kit.
+
+
+### Improved debugging functionality ###
+
+This update adds new debugging functionality:
+* Added two new operations,  @"microsoft.quantum.extensions.diagnostics.dumpmachine" and @"microsoft.quantum.extensions.diagnostics.dumpregister" that output wave function information about the target quantum machine at a point in time.  
+* In Visual Studio, the probability of measuring a $\ket{1}$ on a single qubit is now automatically shown in the debugging window for the QuantumSimulator target machine.
+* In Visual Studio, improved the display of variable properties in the **Autos** and **Locals** debug windows. 
+
+Learn more about [Testing and Debugging](quantum-techniques-TestingAndDebugging.md).
+
+
+### Community Contributions ###
+
+The Q# coder community is growing and we are thrilled to see the first user contributed libraries and samples that were submitted to our open code base at http://github.com/Microsoft/quantum.  **A big Thank you!** to the following contributors:
+* Mathias Soeken ([@msoeken](https://github.com/msoeken)):  contributed a sample defining a transformation based logic synthesis method that constructs Toffoli networks to implement a given permutation. The code is written entirely in Q# functions and operations.  [PR #41](https://github.com/Microsoft/Quantum/pull/41).
+* RolfHuisman ([@RolfHuisman](https://github.com/RolfHuisman)): Microsoft MVP Rolf Huisman contributed a sample that generates flat QASM code from Q# code for a restricted class of programs that do not have classical control flow and restricted quantum operations. [PR #59](https://github.com/Microsoft/Quantum/pull/59)
+* Sarah Kasier ([@crazy4pi314](https://github.com/crazy4pi314)): helped to improve our code base by submitting a library function for controlled operations. [PR #53](https://github.com/Microsoft/Quantum/pull/53)
+* Jessica Lemieux ([@Lemj3111](https://github.com/Lemj3111)): fixed @"microsoft.quantum.canon.quantumphaseestimation" and created new unit tests.  [PR #54](https://github.com/Microsoft/Quantum/pull/54)
+* Tama McGlinn ([@TamaHobbit](https://github.com/TamaHobbit)): cleaned the Teleportation sample by making sure the QuantumSimulator instance is disposed. [PR #20](https://github.com/Microsoft/Quantum/pull/20)
+
+Additionally, a big **Thank You!** to these Microsoft Software Engineers from the Commercial Engineering Services team contributors who made valuable changes to our documentation during their Hackathon.  Their changes vastly improved the clarity and onboarding experience for all of us:
+* Sascha Corti
+* Mihaela Curmei
+* John Donnelly
+* Kirill Logachev
+* Jan Pospisil
+* Anita Ramanan
+* Frances Tibble
+* Alessandro Vozza
+
+### Update existing projects ###
+
+This release is fully backwards compatible. Just update the nuget pakages in your projects to version `0.2.1806.1503-preview` and do a **full rebuild** to make sure all intermediate files are regenerated.
+
+From Visual Studio, follow the normal instructions on how to [update a package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package).
+
+To update project templates for the command line, run the following command:
+```
+dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.2.1806.1503-preview"
+```
+
+After running this command, any new projects created using `dotnet new <project-type> -lang Q#` will automatically use this version of the Quantum Development Kit.
+
+To update an existing project to use the newest version, run the following command from within the directory for each project:
+
+```
+dotnet add package Microsoft.Quantum.Development.Kit -v "0.2.1806.1503-preview"
+dotnet add package Microsoft.Quantum.Canon -v "0.2.1806.1503-preview"
+```
+
+If an existing project also uses XUnit integration for unit testing, then a similar command can be used to update that package as well:
+```
+dotnet add package Microsoft.Quantum.Xunit -v "0.2.1806.1503-preview"
+```
+
+Depending on the version of XUnit that your test project uses, you may also need to update XUnit to 2.3.1:
+```
+dotnet add package xunit -v "2.3.1" 
+```
+
+After the update, make sure you remove all temporary files generated by the previous version by doing:
+```
+dotnet clean 
+```
+
+### Known Issues ###
+
+No aditional known issues to report.
+
+
 # Version 0.2.1802.2202
 
 *Release date: February 26, 2018*

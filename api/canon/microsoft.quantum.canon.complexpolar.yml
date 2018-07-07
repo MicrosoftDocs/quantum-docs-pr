@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.complexpolar
+name: ComplexPolar
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Polar representation of a complex number $c=r e^{i t}$.
+syntax: newtype ComplexPolar = (Double, Double);
+input:
+  types:
+  - name: First Parameter
+    summary: ' `Double` is absolute value $r \ge 0$.'
+  - name: Second Parameter
+    summary: ' `Double` is the phase $t \in \mathbb R$.'

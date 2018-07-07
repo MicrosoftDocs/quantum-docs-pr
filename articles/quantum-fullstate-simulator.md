@@ -43,7 +43,7 @@ to do this is to wrap the simulator within a `using` statement, as in the exampl
 The `QuantumSimulator` uses a random number generator to simulate quantum randomness. 
 For testing purposes, it is sometimes useful to have deterministic results. This can 
 be accomplished by providing a seed for the random number generator in the 
-`QuantunSimulator`'s constructor via the `randomNumberGeneratorSeed`
+`QuantumSimulator`'s constructor via the `randomNumberGeneratorSeed`
 parameter:
 
 ```csharp

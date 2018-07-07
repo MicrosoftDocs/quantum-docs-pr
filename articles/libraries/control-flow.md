@@ -13,10 +13,9 @@ ms.topic: article
 # ms.prod: product-name-from-white-list
 # ms.technology: tech-name-from-white-list
 ---
-
 # Higher-Order Control Flow #
 
-One of the primary roles of the canon is to make it easier to express high-level algorithmic ideas as quantum programs.
+One of the primary roles of the canon is to make it easier to express high-level algorithmic ideas as [quantum programs](https://en.wikipedia.org/wiki/Quantum_programming).
 Thus, the Q# canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.
 Jumping immediately into an example, consider the case in which one wants to construct a "CNOT ladder" on a register:
 
@@ -36,10 +35,10 @@ for (idxQubit in 0..nQubits - 2) {
 }
 ```
 
-Expressed in terms of <xref:microsoft.quantum.canon.applytoeachac> and array manipulation functions such as <xref:microsoft.quantum.canon.zip>, however, this is much shorter and easier to read:
+Expressed in terms of <xref:microsoft.quantum.canon.applytoeachca> and array manipulation functions such as <xref:microsoft.quantum.canon.zip>, however, this is much shorter and easier to read:
 
 ```qsharp
-ApplyToEachAC(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
+ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 ```
 
 In the rest of this section, we will provide a number of examples of how to use the various flow control operations and functions provided by the canon to compactly express quantum programs.
@@ -72,18 +71,18 @@ Moreover, this approach is specialized to the particular operation that we wish 
 We can use the fact that operations are first-class to express this algorithmic concept more explicitly:
 
 ```qsharp
-ApplyToEachAC(H, register);
+ApplyToEachCA(H, register);
 ```
 
 Here, the suffix `AC` indicates that the call to `ApplyToEach` is itself adjointable and controllable.
 Thus, if `U` supports `Adjoint` and `Controlled`, the following lines are equivalent:
 
 ```qsharp
-(Adjoint ApplyToEachAC)(U, register);
+(Adjoint ApplyToEachCA)(U, register);
 ApplyToEach((Adjoint U), register);
 ```
 
-In particular, this means that calls to `ApplyToEachAC` can appear in operations which declare `adjoint auto`.
+In particular, this means that calls to `ApplyToEachCA` can appear in operations which declare `adjoint auto`.
 Similarly, <xref:microsoft.quantum.canon.applytoeachindex> is useful for representing patterns of the form `U(0, targets[0]); U(1, targets[1]); ...`, and offers versions for each combination of functors supports by its input.
 
 > [!TIP]
@@ -139,11 +138,14 @@ Since controlling operations can be expensive in general, using controlled varia
 
 Similarly, <xref:microsoft.quantum.canon.bind> produces operations which apply a sequence of other operations in turn.
 For instance, the following are equivalent:
+
 ```qsharp
 H(qubit); X(qubit);
 Bind([H; X], qubit);
 ```
+
 Combining with iteration patterns can make this especially useful:
+
 ```qsharp
 // Bracket the quantum Fourier transform with $XH$ on each qubit.
 With(ApplyToEach(Bind([H; X]), _), QFT, _);
@@ -155,7 +157,7 @@ We can go still further by thinking of flow control in terms of partial applicat
 This analogy is made precise by the recognition that unitary operators correspond exactly to the side effects of calling operations, such that any decomposition of unitary operators in terms of other unitary operators correpsonds to constructing a particular calling sequence for classical subroutines which emit instructions to act particular unitary operators.
 Under this view, `Bind` is precisely the representation of the matrix product, since `Bind([A; B])(target)` is equivalent to `A(target); B(target);`, which in turn is the calling sequence corresponding to $BA$.
 
-A more sophisticated example is the [Trotter–Suzuki expansion](TODO: cite).
+A more sophisticated example is the [Trotter–Suzuki expansion](https://arxiv.org/abs/math-ph/0506007v1).
 As discussed in the Dynamical Generator Representation section of [data structures](xref:microsoft.quantum.libraries.data-structures), the Trotter–Suzuki expansion provides a particularly useful way of expressing matrix exponentials.
 For instance, applying the expansion at its lowest order yields that for any operators $A$ and $B$ such that $A = A^\dagger$ and $B = B^\dagger$,
 \begin{align}
@@ -165,6 +167,7 @@ For instance, applying the expansion at its lowest order yields that for any ope
 Colloquially, this says that we can approximately evolve a state under $A + B$ by alternately evolving under $A$ and $B$ alone.
 If we represent evolution under $A$ by an operation `A : (Double, Qubit[]) => ()` that applies $e^{i t A}$, then the representation of the Trotter–Suzuki expansion in terms of rearranging calling sequences becomes clear.
 Concretely, given an operation `U : ((Int, Double, Qubit[]) => () : Controlled, Adjoint` such that `A = U(0, _, _)` and `B = U(1, _, _)`, we can define a new operation representing the integral of `U` at time $t$ by generating sequences of the form
+
 ```qsharp
 U(0, time / Float(nSteps), target);
 U(1, time / Float(nSteps), target);
@@ -172,6 +175,7 @@ U(0, time / Float(nSteps), target);
 U(1, time / Float(nSteps), target);
 // ...
 ```
+
 At this point, we can now reason about the Trotter–Suzuki expansion *without reference to quantum mechanics at all*.
 The expansion is effectively a very particular iteration pattern motivated by $\eqref{eq:trotter-suzuki-0}$.
 This iteration pattern is implemented by <xref:microsoft.quantum.canon.decomposeintotimestepsca>:
@@ -193,6 +197,7 @@ Using the control operations and functions introduced above, we can more general
 Let's jump in to how <xref:microsoft.quantum.canon.controlledonbitstring> does it (sans type parameters), then we'll break down the pieces one by one.
 The first thing we'll need to do is to define an operation which actually does the heavy lifting of implementing the control on arbitrary computational basis states.
 We won't call this operation directly, however, and so we add `Impl` to the end of the name to indicate that it's an implementation of another construct elsewhere.
+
 ```qsharp
 operation ControlledOnBitStringImpl(
         bits : Bool[],
@@ -238,7 +243,7 @@ At this point, we could be done, but it is somehow unsatisfying that our new ope
 Thus, we finish defining our new control flow concept by writing a function that takes the oracle to be controlled and that returns a new operation.
 In this way, our new function looks and feels very much like `Controlled`, illustrating that we can easily define powerful new control flow constructs using Q# and the canon together:
 
-```
+```qsharp
 function ControlledOnBitString(
         bits : Bool[],
         oracle: (Qubit[] => (): Adjoint, Controlled)

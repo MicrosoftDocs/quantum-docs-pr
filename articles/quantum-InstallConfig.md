@@ -57,7 +57,7 @@ We recommend using the Quantum Development Kit together with Visual Studio Code.
    $ dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.2.1806.3001-preview"
    ```
 1. Go to the [Visual Studio Code website](https://code.visualstudio.com/).
-1. Pick the download for your platform and follow the installation prompts.
+2. Pick the download for your platform and follow the installation prompts.
 
 > [Note]
 > When you run Visual Studio Code for the first time, you may be prompted to install Git if you have not already done so.

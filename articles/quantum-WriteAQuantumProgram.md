@@ -35,12 +35,11 @@ If you are using a different development environment, please follow the instruct
 
 #### [Visual Studio 2017](#tab/tabid-vs2017)
 
-Open up Visual Studio 2017.
-Go to the `File` menu and select `New` > `Project...`.
-In the project template explorer, under `Installed` > `Visual C#`,
-select the `Q# Application` template.
-Make sure you have `.NET Framework 4.6.1` selected in the list at the top of the `New Project` dialog box.
-Give your project the name `Bell`.
+- Open up Visual Studio 2017.
+- Go to the `File` menu and select `New` > `Project...`.
+- In the project template explorer, under `Installed` > `Visual C#`, select the `Q# Application` template.
+- Make sure you have `.NET Framework 4.6.1` selected in the list at the top of the `New Project` dialog box.
+- Give your project the name `Bell`.
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 

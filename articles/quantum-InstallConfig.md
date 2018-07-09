@@ -47,7 +47,7 @@ We recommend using the Quantum Development Kit together with Visual Studio Code.
 1. Please see [Getting started with .NET](https://www.microsoft.com/net/learn/get-started) for how to download and install the .NET Core SDK.
 
 2. Once the .NET Core SDK is installed, run the following command in your favorite command line (e.g.: PowerShell or Bash) to download the latest templates for creating new Q# applications and libraries:
-   ```bash
+   ```Bash
    $ dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.2.1806.3001-preview"
    ```
 
@@ -55,11 +55,11 @@ We recommend using the Quantum Development Kit together with Visual Studio Code.
 
 4. Pick the download for your platform and follow the installation prompts.
 
-5. Once Visual Studio Code is installed, go to the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) extension on the Visual Studio Marketplace and press Install.
-
 > [!NOTE]
 > When you run Visual Studio Code for the first time, you may be prompted to install Git if you have not already done so.
 > Git is not required to use the Quantum Development Kit, but works great for managing and sharing Q# projects, and for contributing back to the Q# libraries and samples.
+
+5. Once Visual Studio Code is installed, go to the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) extension on the Visual Studio Marketplace and press Install.
 
 > [!TIP]
 > You can also install the Quantum Development Kit extension for Visual Studio Code from the *Go to file...* palette.

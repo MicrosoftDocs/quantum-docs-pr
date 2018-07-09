@@ -57,13 +57,13 @@ We recommend using the Quantum Development Kit together with Visual Studio Code.
 
 5. Once Visual Studio Code is installed, go to the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) extension on the Visual Studio Marketplace and press Install.
 
-> [!TIP]
-> You can also install the Quantum Development Kit extension for Visual Studio Code from the *Go to file...* palette.
-> Press **Ctrl+P** or **⌘+P** from within Visual Studio Code, type or paste `ext install quantum.quantum-devkit-vscode`, and press **Enter**.
-
 > [!NOTE]
 > When you run Visual Studio Code for the first time, you may be prompted to install Git if you have not already done so.
 > Git is not required to use the Quantum Development Kit, but works great for managing and sharing Q# projects, and for contributing back to the Q# libraries and samples.
+
+> [!TIP]
+> You can also install the Quantum Development Kit extension for Visual Studio Code from the *Go to file...* palette.
+> Press **Ctrl+P** or **⌘+P** from within Visual Studio Code, type or paste `ext install quantum.quantum-devkit-vscode`, and press **Enter**.
 
 ****
 
@@ -84,7 +84,6 @@ In this section you will clone the quantum samples & libraries repository, and r
     5. The repository will be cloned on your local computer and Visual Studio will switch to the **Solution Explorer** on the right populated with the libraries and samples.
     6. Open the `QsharpLibraries.sln` solution.
       - If prompted by the **Install Missing Features** pane, click **Install** to allow the installation of the necessary features. This is most often F# and tools used by some of the samples.
-    7. (Optional) To install libraries for non-commercial use, navigate to [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) on GitHub. Then clone the repository and open the `Quantum-NC.sln` solution.
 
 3. Validate your Q# environment by running the teleport sample program:
    1. Right click on the `TeleportationSample` project in `Samples` > `0.Introduction` folder of `QsharpLibraries` solution, and left click on "Set as Startup Project".
@@ -142,3 +141,6 @@ Some of the samples demonstrate using the Quantum Development Kit with other pro
   NPM can be installed [manually](https://nodejs.org/en/download/current/) or through a [package manager](https://nodejs.org/en/download/package-manager/).
 - The Python interoperability feature has been developed for the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3.6.
   Please see the [README](https://github.com/Microsoft/Quantum/tree/master/Samples/PythonInterop/README.md) file provided with the Python sample for more details.
+
+Additionally, the Quantum Development Kit is provided along with libraries for non-commercial use.
+These libraries may be found in the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository on GitHub.

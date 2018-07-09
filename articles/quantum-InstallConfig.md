@@ -68,7 +68,6 @@ We recommend using the Quantum Development Kit together with Visual Studio Code.
 ****
 
 You should now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
-The next section will cover how to build the samples and standard libraries provided along with the Quantum Development Kit.
 
 ## Building the Quantum Samples and Libraries
 

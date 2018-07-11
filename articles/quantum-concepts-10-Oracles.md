@@ -11,7 +11,7 @@ ms.topic: article
 # Quantum Oracles
 
 An oracle $O$ is a "black box" operation that is used as input to another algorithm.
-Often, such operations are defined using a classical function $f : \{0, 1\}^n \to \{0, 1\}^m$ which takes $n$-bit binary input and produces an $m$-bit binary output.
+Often, such operations are defined using a classical function $f : \{0, 1\}^n \to \{0, 1\}^m$ which takes an $n$-bit binary input and produces an $m$-bit binary output.
 To do so, consider a particular binary input $x = (x_{0}, x_{1}, \dots, x_{n-1})$.
 We can label qubit states as $\ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_{n-1}}$.
 
@@ -24,7 +24,11 @@ This means we won't be able to construct the adjoint operation $O^\dagger$, and 
 We can deal with both of these problems by introducing a second register of $m$ qubits to hold our answer.
 Then we will define the effect of the oracle on all computational basis states: for all $x \in \{0, 1\}^n$ and $y \in \{0, 1\}^m$,
 
-$$O(\ket{x} \otimes \ket{y}) = \ket{x} \otimes \ket{y \oplus f(x)}.$$
+$$
+\begin{align}
+    O(\ket{x} \otimes \ket{y}) = \ket{x} \otimes \ket{y \oplus f(x)}.
+\end{align}
+$$
 
 Now $O = O^\dagger$ by construction, thus we have resolved both of the earlier problems.
 
@@ -33,16 +37,24 @@ This follows immediately from the fact that $O$, like all quantum operations, is
 Consider the Hadamard operation, for instance, which is defined by $H \ket{0} = \ket{+}$ and $H \ket{1} = \ket{-}$.
 If we wish to know how $H$ acts on $\ket{+}$, we can use that $H$ is linear,
 
-$$H\ket{+} & = \frac{1}{\sqrt{2}} H(\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (H\ket{0} + H\ket{1}) \\
-           & = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0} - \ket{1}) = \ket{0}.$$
+$$
+\begin{align}
+H\ket{+} & = \frac{1}{\sqrt{2}} H(\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (H\ket{0} + H\ket{1}) \\\\
+           & = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0} - \ket{1}) = \ket{0}.
+\end{align}
+$$
 
 In the case of defining our oracle $O$, we can similarly use that any state $\ket{\psi}$ on $n + m$ qubits can be written as
 
-$$    \ket{\psi} & = \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) \ket{x} \ket{y},
+$$
+\begin{align}
+\ket{\psi} & = \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) \ket{x} \ket{y},
     \intertext{
         where $\alpha : \{0, 1\}^n \times \{0, 1\}^m \to \mathbb{C}$ represents the coefficients of the state $\ket{\psi}$.
         Thus,
     }
-    O \ket{\psi} & = O \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) \ket{x} \ket{y} \\
+    O \ket{\psi} & = O \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) \ket{x} \ket{y} \\\\
                     & = \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) O \ket{x} \ket{y} \\
-                    & = \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) \ket{x} \ket{y \oplus f(x)}.$$
+                    & = \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) \ket{x} \ket{y \oplus f(x)}.
+\end{align}
+$$

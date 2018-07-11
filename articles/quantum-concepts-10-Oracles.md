@@ -58,3 +58,28 @@ $$
                     & = \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) \ket{x} \ket{y \oplus f(x)}.
 \end{align}
 $$
+
+Alternatively, we can encode $f$ into an oracle $O$ by applying a _phase_ based on the input to $O$.
+For instance, we might define $O$ such that
+$$
+\begin{align}
+    O \ket{x} = (-1)^{f(x)} \ket{x}.
+\end{align}
+$$
+If $O$ acts on a register initially in a computational basis state $\ket{x}$, then this phase is a global phase and hence not observable.
+On the other hand, $O$ can be a very powerful resouce if acted on a superposition or as a controlled operation.
+For example, consider a phase orcale $O_f$ for a single-qubit function $f$.
+Then,
+$$
+\begin{align}
+    O_f \ket{+}
+        & = O_f (\ket{0} + \ket{1}) / \sqrt{2} \\\\
+        & = ((-1)^{f(0)} \ket{0} + (-1)^{f(1)} \ket{1}) / \sqrt{2} \\\\
+        & = (-1)^{f(0)} (\ket{0} + (-1)^{f(1) - f(0)} \ket{1}) / \sqrt{2}
+        & = (-1)^{f(0)} Z^{f(0) - f(1)} \ket{+}.
+\end{align}
+$$
+
+More generally, both views of oracles can be broadened to represent classical functions which return real numbers instead of only a single bit.
+Chooing the best way to do so depends heavily on how an oracle will be used within a given algorithm.
+For more details, we suggest the discussion in [Gilyén *et al*. 1711.00465](https://arxiv.org/abs/1711.00465).

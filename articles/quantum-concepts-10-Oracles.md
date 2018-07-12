@@ -11,7 +11,7 @@ ms.topic: article
 # Quantum Oracles
 
 An oracle $O$ is a "black box" operation that is used as input to another algorithm.
-Often, such operations are defined using a classical function $f : \{0, 1\}^n \to \{0, 1\}^m$ which takes an $n$-bit binary input and produces an $m$-bit binary output.
+Often, such operations are defined using a classical function $f : \\{0, 1\\}^n \to \\{0, 1\\}^m$ which takes an $n$-bit binary input and produces an $m$-bit binary output.
 To do so, consider a particular binary input $x = (x_{0}, x_{1}, \dots, x_{n-1})$.
 We can label qubit states as $\ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_{n-1}}$.
 
@@ -54,7 +54,7 @@ $$
         Thus,
     }
     O \ket{\psi} & = O \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) \ket{x} \ket{y} \\\\
-                    & = \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) O \ket{x} \ket{y} \\
+                    & = \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) O \ket{x} \ket{y} \\\\
                     & = \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) \ket{x} \ket{y \oplus f(x)}.
 \end{align}
 $$
@@ -75,7 +75,7 @@ $$
     O_f \ket{+}
         & = O_f (\ket{0} + \ket{1}) / \sqrt{2} \\\\
         & = ((-1)^{f(0)} \ket{0} + (-1)^{f(1)} \ket{1}) / \sqrt{2} \\\\
-        & = (-1)^{f(0)} (\ket{0} + (-1)^{f(1) - f(0)} \ket{1}) / \sqrt{2}
+        & = (-1)^{f(0)} (\ket{0} + (-1)^{f(1) - f(0)} \ket{1}) / \sqrt{2} \\\\
         & = (-1)^{f(0)} Z^{f(0) - f(1)} \ket{+}.
 \end{align}
 $$

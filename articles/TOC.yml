@@ -17,6 +17,8 @@
       href: quantum-concepts-7-PauliMeasurements.md
     - name: Quantum circuits
       href: quantum-concepts-8-QuantumCircuits.md
+    - name: Quantum oracles
+      href: quantum-concepts-10-Oracles.md
     - name: Software stack
       href: quantum-concepts-9-SoftwareStack.md
 - name: Installation and validation

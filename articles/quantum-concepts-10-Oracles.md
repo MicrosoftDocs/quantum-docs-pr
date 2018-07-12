@@ -22,7 +22,7 @@ if $f(x) = f(y)$ for some $x \ne y$, then $O\ket{x} = O\ket{y}$ but $O^\dagger O
 This means we won't be able to construct the adjoint operation $O^\dagger$, and oracles have to have an adjoint defined for them.
 
 We can deal with both of these problems by introducing a second register of $m$ qubits to hold our answer.
-Then we will define the effect of the oracle on all computational basis states: for all $x \in \{0, 1\}^n$ and $y \in \{0, 1\}^m$,
+Then we will define the effect of the oracle on all computational basis states: for all $x \in \\{0, 1\\}^n$ and $y \in \\{0, 1\\}^m$,
 
 $$
 \begin{align}
@@ -48,14 +48,17 @@ In the case of defining our oracle $O$, we can similarly use that any state $\ke
 
 $$
 \begin{align}
-\ket{\psi} & = \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) \ket{x} \ket{y},
-    \intertext{
-        where $\alpha : \{0, 1\}^n \times \{0, 1\}^m \to \mathbb{C}$ represents the coefficients of the state $\ket{\psi}$.
-        Thus,
-    }
-    O \ket{\psi} & = O \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) \ket{x} \ket{y} \\\\
-                    & = \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) O \ket{x} \ket{y} \\\\
-                    & = \sum_{x \in \{0, 1\}^n, y \in \{0, 1\}^m} \alpha(x, y) \ket{x} \ket{y \oplus f(x)}.
+\ket{\psi} & = \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) \ket{x} \ket{y}
+\end{align}
+$$
+
+where $\alpha : \\{0, 1\\}^n \times \\{0, 1\\}^m \to \mathbb{C}$ represents the coefficients of the state $\ket{\psi}$. Thus,
+
+$$
+\begin{align}
+O \ket{\psi} & = O \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) \ket{x} \ket{y} \\\\
+             & = \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) O \ket{x} \ket{y} \\\\
+             & = \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) \ket{x} \ket{y \oplus f(x)}.
 \end{align}
 $$
 
@@ -66,8 +69,8 @@ $$
     O \ket{x} = (-1)^{f(x)} \ket{x}.
 \end{align}
 $$
-If $O$ acts on a register initially in a computational basis state $\ket{x}$, then this phase is a global phase and hence not observable.
-On the other hand, $O$ can be a very powerful resouce if acted on a superposition or as a controlled operation.
+If a phase oracle acts on a register initially in a computational basis state $\ket{x}$, then this phase is a global phase and hence not observable.
+But such an oracle can be a very powerful resouce if applied to a superposition or as a controlled operation.
 For example, consider a phase orcale $O_f$ for a single-qubit function $f$.
 Then,
 $$
@@ -81,5 +84,9 @@ $$
 $$
 
 More generally, both views of oracles can be broadened to represent classical functions which return real numbers instead of only a single bit.
-Chooing the best way to do so depends heavily on how an oracle will be used within a given algorithm.
+
+Choosing the best way to implement an oracle depends heavily on how this oracle will be used within a given algorithm.
+For example, [Deutsch-Jozsa algorithm](https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm) relies on the oracle implemented in the first way, while [Grover's algorithm](https://en.wikipedia.org/wiki/Grover's_algorithm) relies on the oracle implemented in the second way.
+
+
 For more details, we suggest the discussion in [Gilyén *et al*. 1711.00465](https://arxiv.org/abs/1711.00465).

@@ -52,7 +52,7 @@ In Q#, this might get represented as a `for` loop over a register:
 ```qsharp
 /// # Summary
 /// Applies $H$ to all qubits in a register.
-operation HAll(register : Qubit) : () {
+operation HAll(register : Qubit[]) : () {
     body {
         for (idxQubit in 0..Length(register) - 1) {
             H(register[idxQubit]);

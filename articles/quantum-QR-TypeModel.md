@@ -330,5 +330,5 @@ For example, `((Controlled(Rz))(controls, (0.1, target))` would be
 a valid invocation of `Controlled(Rz)`.
 
 As another example, `CNOT(control, target)` analogue can be implemented as `(Controlled(X))([control], target)`. 
-If a target should be controlled by 2 control qubits (CCNOT analogue) we can use `(Contolled(X))([control1;control2], target) statement`.
+If a target should be controlled by 2 control qubits (CCNOT analogue) we can use `(Contolled(X))([control1;control2], target)` statement.
 

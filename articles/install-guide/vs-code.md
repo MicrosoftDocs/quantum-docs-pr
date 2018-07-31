@@ -7,7 +7,7 @@ ms.date: 7/31/2018
 ms.topic: article
 ---
 
-## Installing Visual Studio Code and the .NET Core SDK (Windows 10, macOS, Linux) ##
+# Installing the Quantum Development Kit for Visual Studio Code #
 
 The Quantum Development Kit uses the .NET Core SDK (2.0 or later) to make it easy to create, build, and run Q# projects from the command line.
 We recommend using the Quantum Development Kit together with Visual Studio Code.

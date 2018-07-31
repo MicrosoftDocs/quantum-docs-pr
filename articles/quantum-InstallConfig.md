@@ -24,10 +24,10 @@ The Quantum Development Kit can be used either with the Visual Studio 2017 integ
 </td>
 
 <td>
-[![](media/install-guide-select-vs-code.png)](xref:microsoft.quantum.install.vs-code)
-
-> [!div class="nextstepaction"]
-> [Install for Visual Studio Code on Windows 10, macOS, or Linux](xref:microsoft.quantum.install.vs-code)
+[![](media/install-guide-select-vs-code.png | width=45%)](xref:microsoft.quantum.install.vs-code)
+<div class="nextstepaction">
+[Install for Visual Studio Code on Windows 10, macOS, or Linux](xref:microsoft.quantum.install.vs-code)
+</div>
 </td>
 </tr>
 </table>

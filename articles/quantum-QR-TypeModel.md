@@ -329,3 +329,6 @@ so `Controlled(Rz)` has type
 For example, `((Controlled(Rz))(controls, (0.1, target))` would be 
 a valid invocation of `Controlled(Rz)`.
 
+As another example, `CNOT(control, target)` can be implemented as `(Controlled(X))([control], target)`. 
+If a target should be controlled by 2 control qubits (CCNOT), we can use `(Controlled(X))([control1;control2], target)` statement.
+

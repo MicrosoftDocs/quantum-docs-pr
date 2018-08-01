@@ -1,6 +1,6 @@
 ---
 title: Installing the Q# development environment for VS Code
-author: chgranad
+author: cgranad
 uid: microsoft.quantum.install.vs-code
 ms.author: christopher.granade@microsoft.com
 ms.date: 7/31/2018
@@ -8,6 +8,8 @@ ms.topic: article
 ---
 
 # Installing the Quantum Development Kit for Visual Studio Code #
+
+## Installing Visual Studio Code and the .NET Core SDK (Windows 10, macOS, Linux) ##
 
 The Quantum Development Kit uses the .NET Core SDK (2.0 or later) to make it easy to create, build, and run Q# projects from the command line.
 We recommend using the Quantum Development Kit together with Visual Studio Code.

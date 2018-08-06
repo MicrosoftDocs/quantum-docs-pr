@@ -14,7 +14,7 @@ ms.topic: article
 The Quantum Development Kit uses the .NET Core SDK (2.0 or later) to make it easy to create, build, and run Q# projects from the command line.
 We recommend using the Quantum Development Kit together with Visual Studio Code.
 
-1. Please see [Getting started with .NET](https://www.microsoft.com/net/learn/get-started) for how to download and install the .NET Core SDK.
+1. Download and install the **.NET Core SDK** 2.0 or later from the [.NET downloads page](https://www.microsoft.com/net/download).
 
 2. Once the .NET Core SDK is installed, run the following command in your favorite command line (e.g.: PowerShell or Bash) to download the latest templates for creating new Q# applications and libraries:
    ```Bash
@@ -30,6 +30,7 @@ We recommend using the Quantum Development Kit together with Visual Studio Code.
 > [!NOTE]
 > When you run Visual Studio Code for the first time, you may be prompted to install Git if you have not already done so.
 > Git is not required to use the Quantum Development Kit, but works great for managing and sharing Q# projects, and for contributing back to the Q# libraries and samples.
+> If you would like to use Git, please download and run [Git for Windows](https://git-scm.com/download/win).
 
 > [!TIP]
 > You can also install the Quantum Development Kit extension for Visual Studio Code from the *Go to file...* palette.
@@ -37,7 +38,17 @@ We recommend using the Quantum Development Kit together with Visual Studio Code.
 
 You should now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
 
-## Building the Quantum Samples and Libraries
+## Optional Dependencies ##
+
+Some of the samples demonstrate using the Quantum Development Kit with other programming environments, and have additional installation requirement:
+
+- Some samples use the Node.js Package Manager (NPM) to handle user interface dependencies.
+  NPM can be installed [manually](https://nodejs.org/en/download/current/) or through a [package manager](https://nodejs.org/en/download/package-manager/).
+- The Python interoperability feature (currently in Windows-only preview) has been developed for the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3.6.
+  Please see the [README](https://github.com/Microsoft/Quantum/tree/master/Samples/PythonInterop/README.md) file provided with the Python sample for more details.
+
+
+# Validating the Quantum Development Kit installation
 
 In this section you will clone the quantum samples & libraries repository, and run a sample application to verify that your Q# environment is correctly installed and configured.
 
@@ -78,15 +89,5 @@ If the program runs and the output is similar to the following (has 8 rounds of 
           Teleportation successful!!
   ```
 
-
-### Optional Dependencies ###
-
-Some of the samples demonstrate using the Quantum Development Kit with other programming environments, and have additional installation requirement:
-
-- Some samples use the Node.js Package Manager (NPM) to handle user interface dependencies.
-  NPM can be installed [manually](https://nodejs.org/en/download/current/) or through a [package manager](https://nodejs.org/en/download/package-manager/).
-- The Python interoperability feature (currently in Windows-only preview) has been developed for the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3.6.
-  Please see the [README](https://github.com/Microsoft/Quantum/tree/master/Samples/PythonInterop/README.md) file provided with the Python sample for more details.
-
-Additionally, the Quantum Development Kit is provided along with libraries for non-commercial use.
+In addition to these libraries and samples, the Quantum Development Kit is provided along with further libraries for non-commercial use.
 These libraries may be found in the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository on GitHub.

@@ -15,6 +15,12 @@ ms.topic: article
 
 # Microsoft Quantum Development Kit Preview Release Notes
 
+# Version 0.2.1809.701
+
+*Release date: September 10, 2018*
+
+This release includes bug fixes for issues reported by the community. Thanks! 
+
 # Version 0.2.1806.3001
 
 *Release date: June 30, 2018*

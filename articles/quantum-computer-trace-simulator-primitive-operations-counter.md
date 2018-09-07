@@ -74,7 +74,7 @@ double cxCount = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(PrimitiveOperations
 Finally, to output all the statistics collected by the gate counter in CSV format we can 
 use the following:
 ```csharp
-string csvSummary = sim.ToCSV()[MetricCalculatorsNames.primitiveOperationsCounter];
+string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
 ## See also ##

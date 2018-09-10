@@ -15,6 +15,20 @@ ms.topic: article
 
 # Microsoft Quantum Development Kit Preview Release Notes
 
+# Version 0.2.1809.701
+
+*Release date: September 10, 2018*
+
+This release includes bug fixes for issues reported by the community. Including:
+
+* Unable to use shift operator ([GitHub](https://github.com/Microsoft/Quantum/issues/75)).
+* `DumpMachine` / `DumpRegister` fails on `QCTraceSimulator` when printing to console ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34709680)).
+* Allow allocating 0 qubits ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34768069-allow-allocating-0-qubits)).
+* `AssertQubitState` requires explicit Complex() call ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34713733-assertqubitstate-requires-explicit-complex-call)).
+* `Measure` operation always returns `One` on macOS ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
+
+Thanks! 
+
 # Version 0.2.1806.3001
 
 *Release date: June 30, 2018*

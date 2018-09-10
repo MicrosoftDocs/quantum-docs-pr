@@ -21,7 +21,7 @@ ms.topic: article
 
 This release includes bug fixes for issues reported by the community. Including:
 
-* Unable to use shift operator ([github](https://github.com/Microsoft/Quantum/issues/75)).
+* Unable to use shift operator ([GitHub](https://github.com/Microsoft/Quantum/issues/75)).
 * `DumpMachine` / `DumpRegister` fails on `QCTraceSimulator` when printing to console ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34709680)).
 * Allow allocating 0 qubits ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34768069-allow-allocating-0-qubits)).
 * `AssertQubitState` requires explicit Complex() call ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34713733-assertqubitstate-requires-explicit-complex-call)).

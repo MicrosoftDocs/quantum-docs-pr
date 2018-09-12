@@ -21,14 +21,14 @@ The Quantum Development Kit can be used either with the Visual Studio 2017 integ
 <td>
 [<img src="media/install-guide-select-vs-2017.png" width="90%">](xref:microsoft.quantum.install.vs-2017)
 <div class="nextstepaction">
-[Install for Visual Studio 2017 on Windows 10](xref:microsoft.quantum.install.vs-2017)
+[Install on Visual Studio 2017 (Windows 10)](xref:microsoft.quantum.install.vs-2017)
 </div>
 </td>
 
 <td>
 [<img src="media/install-guide-select-vs-code.png" width="90%">](xref:microsoft.quantum.install.vs-code)
 <div class="nextstepaction">
-[Install for Visual Studio Code on Windows 10, macOS, or Linux](xref:microsoft.quantum.install.vs-code)
+[Install on Visual Studio Code (Windows 10, macOS, or Linux)](xref:microsoft.quantum.install.vs-code)
 </div>
 </td>
 </tr>

@@ -14,7 +14,8 @@ ms.topic: article
 
 # Installing the Quantum Development Kit
 
-The Quantum Development Kit can be used either with the Visual Studio 2017 integrated development environment, or with the command line and a development editor such as Visual Studio Code.
+The Quantum Development Kit can be used either with the Visual Studio 2017 integrated development environment, or a development editor such as Visual Studio Code.
+Alternatively, the Quantum Development Kit can be used with the [command line directly](xref:microsoft.quantum.install.cmd-line).
 
 <table>
 <tr>

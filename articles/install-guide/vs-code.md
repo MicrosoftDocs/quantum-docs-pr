@@ -7,7 +7,7 @@ ms.date: 7/31/2018
 ms.topic: article
 ---
 
-# Installing the Quantum Development Kit for Visual Studio Code #
+# Installing the Quantum Development Kit for Visual Studio Code and the Command Line #
 
 ## Installing Visual Studio Code and the .NET Core SDK (Windows 10, macOS, Linux) ##
 
@@ -60,13 +60,17 @@ In this section you will clone the quantum samples & libraries repository, and r
   ```bash
   cd Quantum
   ```
-  If you would like to work with the new project in VS Code, run:
-  ```bash
-  code .
-  ```
-  You may be prompted to install the Microsoft Quantum Development Kit for Visual Studio Code and the Microsoft C# extension if you haven't already done so.
 
   > [!TIP]
+  > If you would like to work with the libraries and samples project in VS Code, we recommend opening the folder containing the project rather than working with one file at a time.
+  > This makes it much easier to see the whole project at once, save settings for each project, and so forth.
+  > One quick way to open Visual Studio Code is to use the `code` command in your favorite terminal with the name of the folder you'd like to open.
+  > For example, to open the `Quantum` repo that you cloned above, run the following:
+  > ```bash
+  > code .
+  > ```
+  > Since the folder comes with suggestions for different extensions, you may be prompted to install the Microsoft Quantum Development Kit for Visual Studio Code and the Microsoft C# extension if you haven't already done so.
+  > 
   > If you are running on macOS and the `code` command is missing, you may need to [install the command line interface for Visual Studio Code](https://code.visualstudio.com/docs/editor/command-line).
 
 4. From the terminal (standalone, or the embedded terminal in Visual Studio Code), run the teleport sample program:

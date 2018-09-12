@@ -28,6 +28,8 @@
       href: install-guide/vs-2017.md
     - name: Visual Studio Code (Windows 10, macOS, and Linux)
       href: install-guide/vs-code.md
+    - name: Command Line (Windows 10, macOS, and Linux)
+      href: install-guide/command-line.md
 - name: Quickstart - your first quantum program
   href: quantum-WriteAQuantumProgram.md
 - name: Managing quantum machines and drivers

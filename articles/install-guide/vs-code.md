@@ -18,7 +18,7 @@ We recommend using the Quantum Development Kit together with Visual Studio Code.
 
 2. Once the .NET Core SDK is installed, run the following command in your favorite command line (e.g.: PowerShell or Bash) to download the latest templates for creating new Q# applications and libraries:
    ```Bash
-   $ dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.2.1806.3001-preview"
+   dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.2.1806.3001-preview"
    ```
 
 3. Go to the [Visual Studio Code website](https://code.visualstudio.com/).
@@ -54,15 +54,15 @@ In this section you will clone the quantum samples & libraries repository, and r
 
 3. Clone and open the [Microsoft Quantum Developer Kit Samples and Libraries](https://github.com/microsoft/quantum) GitHub repository.
   ```bash
-  $ git clone https://github.com/Microsoft/Quantum.git
+  git clone https://github.com/Microsoft/Quantum.git
   ```
   To continue at the command line, navigate into the newly cloned directory:
   ```bash
-  $ cd Quantum
+  cd Quantum
   ```
   If you would like to work with the new project in VS Code, run:
   ```bash
-  $ code .
+  code .
   ```
   You may be prompted to install the Microsoft Quantum Development Kit for Visual Studio Code and the Microsoft C# extension if you haven't already done so.
 
@@ -71,8 +71,8 @@ In this section you will clone the quantum samples & libraries repository, and r
 
 4. From the terminal (standalone, or the embedded terminal in Visual Studio Code), run the teleport sample program:
   ```bash
-  $ cd Samples/Teleportation/
-  $ dotnet run
+  cd Samples/Teleportation/
+  dotnet run
   ```
 
 If the program runs and the output is similar to the following (has 8 rounds of successful teleportation with varying values True/False sent each round), your Q# environment is ready to support Q# development.

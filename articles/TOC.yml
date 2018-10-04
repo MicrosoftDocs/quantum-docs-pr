@@ -23,6 +23,13 @@
       href: quantum-concepts-9-SoftwareStack.md
 - name: Installation and validation
   href: quantum-InstallConfig.md
+  items:
+    - name: Visual Studio 2017 (Windows 10)
+      href: install-guide/vs-2017.md
+    - name: Visual Studio Code (Windows 10, macOS, and Linux)
+      href: install-guide/vs-code.md
+    - name: Command Line (Windows 10, macOS, and Linux)
+      href: install-guide/command-line.md
 - name: Quickstart - your first quantum program
   href: quantum-WriteAQuantumProgram.md
 - name: Managing quantum machines and drivers

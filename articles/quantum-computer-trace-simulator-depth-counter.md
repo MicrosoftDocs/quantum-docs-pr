@@ -70,7 +70,7 @@ double tDepthAll = sim.GetMetric<CCNOTDriver>(DepthCounter.Metrics.Depth);
 Finally, to output all the statistics collected by `Depth Counter` in CSV format we can 
 use the following:
 ```csharp
-string csvSummary = sim.ToCSV()[MetricCalculatorsNames.depthCounter];
+string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
 ## See also ##

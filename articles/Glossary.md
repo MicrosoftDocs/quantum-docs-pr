@@ -21,7 +21,7 @@ uid: microsoft.quantum.glossary
 |EPR pair|Also known as a [Bell State](https://en.wikipedia.org/wiki/Bell_state)|
 |Evolution|How the state changes over time. See the section on <xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials> for an example. |
 |Function|Purely classical routines in the Q# language|
-| Global phase | Two states that are identical up to a multiple of a complex number $e^{i\phi}$ are said to differ up to a global phase. Unlike local phases, global phases cannot be observed through any measurement. See <xref:microsoft.quantum.concepts.pauli> for more details. |
+| <a id="global-phase"></a>Global phase | Two states that are identical up to a multiple of a complex number $e^{i\phi}$ are said to differ up to a global phase. Unlike local phases, global phases cannot be observed through any measurement. See [Pauli measurements](xref:microsoft.quantum.concepts.pauli) for more details. |
 |Measurement|Obtaining a classical bit from a qubit (or set of qubits). See the [Qubit Concepts](quantum-concepts-4-Qubit.md) section for more details.|
 |Mutable|A variable whose value may be changed after it is created.|
 |Namespace|A label for a collection of related names (typically operations, functions, and types). For instance the namespace `Microsoft.Quantum.Canon` labels all of the symbols defined by [the canon](xref:microsoft.quantum.canon).|

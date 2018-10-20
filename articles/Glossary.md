@@ -6,11 +6,7 @@ author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article
-# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
-# For Quantum products none of these categories have been defined  yet.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-# ms.technology: tech-name-from-white-list
+uid: microsoft.quantum.glossary
 ---
 
 |Term|Definition|
@@ -25,6 +21,7 @@ ms.topic: article
 |EPR pair|Also known as a [Bell State](https://en.wikipedia.org/wiki/Bell_state)|
 |Evolution|How the state changes over time. See the section on <xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials> for an example. |
 |Function|Purely classical routines in the Q# language|
+| <a id="global-phase"></a>Global phase | Two states that are identical up to a multiple of a complex number $e^{i\phi}$ are said to differ up to a global phase. Unlike local phases, global phases cannot be observed through any measurement. See [Pauli measurements](xref:microsoft.quantum.concepts.pauli) for more details. |
 |Measurement|Obtaining a classical bit from a qubit (or set of qubits). See the [Qubit Concepts](quantum-concepts-4-Qubit.md) section for more details.|
 |Mutable|A variable whose value may be changed after it is created.|
 |Namespace|A label for a collection of related names (typically operations, functions, and types). For instance the namespace `Microsoft.Quantum.Canon` labels all of the symbols defined by [the canon](xref:microsoft.quantum.canon).|

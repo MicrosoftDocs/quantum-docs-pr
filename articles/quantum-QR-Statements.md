@@ -381,7 +381,7 @@ See [*Repeat-Until-Success: Non-deterministic decomposition of single-qubit unit
 (Paetznick and Svore, 2014) for details.
 
 ```qsharp
-using ancilla = Qubit[1] {
+using (ancilla = Qubit[1]) {
     repeat {
         let anc = ancilla[0];
         H(anc);
@@ -396,10 +396,9 @@ using ancilla = Qubit[1] {
         T(anc);
         Z(target);
         H(anc);
-        let result = M([anc],[PauliZ]);
+        let result = M(anc);
     } until result == Zero
     fixup {
-        ();
     }
 }
 ```
@@ -558,7 +557,7 @@ the statement block within which the qubits will be available.
 For example,
 
 ```qsharp
-borrowing qubits = Qubit[bits * 2 + 3] {
+borrowing (qubits = Qubit[bits * 2 + 3]) {
     ...
 }
 ```

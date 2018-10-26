@@ -1,6 +1,14 @@
 - name: Microsoft.Quantum.Canon
   uid: microsoft.quantum.canon
   items:
+  - name: AbsComplex
+    uid: microsoft.quantum.canon.abscomplex
+  - name: AbsComplexPolar
+    uid: microsoft.quantum.canon.abscomplexpolar
+  - name: AbsSquaredComplex
+    uid: microsoft.quantum.canon.abssquaredcomplex
+  - name: AbsSquaredComplexPolar
+    uid: microsoft.quantum.canon.abssquaredcomplexpolar
   - name: AddGeneratorSystems
     uid: microsoft.quantum.canon.addgeneratorsystems
   - name: AdiabaticStateEnergyEstimate
@@ -31,6 +39,16 @@
     uid: microsoft.quantum.canon.ampamprotationtoreflectionphases
   - name: AndLadder
     uid: microsoft.quantum.canon.andladder
+  - name: ApplyDiagonalUnitary
+    uid: microsoft.quantum.canon.applydiagonalunitary
+  - name: ApplyIf
+    uid: microsoft.quantum.canon.applyif
+  - name: ApplyIfA
+    uid: microsoft.quantum.canon.applyifa
+  - name: ApplyIfC
+    uid: microsoft.quantum.canon.applyifc
+  - name: ApplyIfCA
+    uid: microsoft.quantum.canon.applyifca
   - name: ApplyLEOperationOnPhaseLE
     uid: microsoft.quantum.canon.applyleoperationonphasele
   - name: ApplyLEOperationOnPhaseLEA
@@ -135,6 +153,10 @@
     uid: microsoft.quantum.canon.arcsinh
   - name: ArcTanh
     uid: microsoft.quantum.canon.arctanh
+  - name: ArgComplex
+    uid: microsoft.quantum.canon.argcomplex
+  - name: ArgComplexPolar
+    uid: microsoft.quantum.canon.argcomplexpolar
   - name: AsQubitArray
     uid: microsoft.quantum.canon.asqubitarray
   - name: AssertAlmostEqual
@@ -151,6 +173,12 @@
     uid: microsoft.quantum.canon.assertintequal
   - name: AssertLessThanPhaseLE
     uid: microsoft.quantum.canon.assertlessthanphasele
+  - name: AssertPhase
+    uid: microsoft.quantum.canon.assertphase
+  - name: AssertProbInt
+    uid: microsoft.quantum.canon.assertprobint
+  - name: AssertProbIntBE
+    uid: microsoft.quantum.canon.assertprobintbe
   - name: AssertResultEqual
     uid: microsoft.quantum.canon.assertresultequal
   - name: BigEndian
@@ -173,6 +201,8 @@
     uid: microsoft.quantum.canon.bitfliprecoveryfn
   - name: BitSize
     uid: microsoft.quantum.canon.bitsize
+  - name: BlochSphereCoordinates
+    uid: microsoft.quantum.canon.blochspherecoordinates
   - name: BoolArrFromPositiveInt
     uid: microsoft.quantum.canon.boolarrfrompositiveint
   - name: BoolArrFromResultArr
@@ -181,8 +211,24 @@
     uid: microsoft.quantum.canon.boolfromresult
   - name: CCNOTop
     uid: microsoft.quantum.canon.ccnotop
+  - name: CControlled
+    uid: microsoft.quantum.canon.ccontrolled
+  - name: CControlledA
+    uid: microsoft.quantum.canon.ccontrolleda
+  - name: CControlledC
+    uid: microsoft.quantum.canon.ccontrolledc
+  - name: CControlledCA
+    uid: microsoft.quantum.canon.ccontrolledca
   - name: CSS
     uid: microsoft.quantum.canon.css
+  - name: ComplexPolar
+    uid: microsoft.quantum.canon.complexpolar
+  - name: ComplexPolarToComplex
+    uid: microsoft.quantum.canon.complexpolartocomplex
+  - name: ComplexToComplexPolar
+    uid: microsoft.quantum.canon.complextocomplexpolar
+  - name: Compose
+    uid: microsoft.quantum.canon.compose
   - name: ConstantArray
     uid: microsoft.quantum.canon.constantarray
   - name: ContinuedFractionConvergent
@@ -363,6 +409,16 @@
     uid: microsoft.quantum.canon.most
   - name: MultiM
     uid: microsoft.quantum.canon.multim
+  - name: MultiplexOperations
+    uid: microsoft.quantum.canon.multiplexoperations
+  - name: MultiplexOperations_
+    uid: microsoft.quantum.canon.multiplexoperations_
+  - name: MultiplexPauli
+    uid: microsoft.quantum.canon.multiplexpauli
+  - name: MultiplexZ
+    uid: microsoft.quantum.canon.multiplexz
+  - name: MultiplexZComputeCoefficients_
+    uid: microsoft.quantum.canon.multiplexzcomputecoefficients_
   - name: MultiplyGeneratorIndex
     uid: microsoft.quantum.canon.multiplygeneratorindex
   - name: MultiplyGeneratorSystem
@@ -385,6 +441,12 @@
     uid: microsoft.quantum.canon.operationpowca
   - name: OracleToDiscrete
     uid: microsoft.quantum.canon.oracletodiscrete
+  - name: PNorm
+    uid: microsoft.quantum.canon.pnorm
+  - name: PNormalize
+    uid: microsoft.quantum.canon.pnormalize
+  - name: Pad
+    uid: microsoft.quantum.canon.pad
   - name: PauliEvolutionFunction
     uid: microsoft.quantum.canon.paulievolutionfunction
   - name: PauliEvolutionSet
@@ -397,6 +459,10 @@
     uid: microsoft.quantum.canon.positiveintfromboolarr
   - name: PositiveIntFromResultArr
     uid: microsoft.quantum.canon.positiveintfromresultarr
+  - name: PrepareArbitraryState
+    uid: microsoft.quantum.canon.preparearbitrarystate
+  - name: PrepareArbitraryState_
+    uid: microsoft.quantum.canon.preparearbitrarystate_
   - name: PrepareChoiState
     uid: microsoft.quantum.canon.preparechoistate
   - name: PrepareChoiStateA
@@ -491,6 +557,12 @@
     uid: microsoft.quantum.canon.stateoracle
   - name: StateOracleFromDeterministicStateOracle
     uid: microsoft.quantum.canon.stateoraclefromdeterministicstateoracle
+  - name: StatePreparationComplexCoefficients
+    uid: microsoft.quantum.canon.statepreparationcomplexcoefficients
+  - name: StatePreparationPositiveCoefficients
+    uid: microsoft.quantum.canon.statepreparationpositivecoefficients
+  - name: StatePreparationSBMComputeCoefficients_
+    uid: microsoft.quantum.canon.statepreparationsbmcomputecoefficients_
   - name: SteaneCode
     uid: microsoft.quantum.canon.steanecode
   - name: SteaneCodeDecoder

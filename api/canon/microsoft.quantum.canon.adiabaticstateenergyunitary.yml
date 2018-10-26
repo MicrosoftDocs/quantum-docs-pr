@@ -57,7 +57,7 @@ input:
   - name: phaseEstAlgorithm
     summary: >2-
        An operation that performs phase estimation on a given unitary operation.
-       See [iterative phase estimation](../libraries/characterization#iterative-phase-estimation)
+       See [iterative phase estimation](/quantum/libraries/characterization#iterative-phase-estimation)
        for more details.
     isOperation: true
     input:

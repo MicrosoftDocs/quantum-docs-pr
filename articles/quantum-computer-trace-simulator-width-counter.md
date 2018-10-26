@@ -63,7 +63,7 @@ received as input.
 Finally, to output all the statistics collected by width counter in CSV format we can 
 use the following:
 ```csharp
-string csvSummary = sim.ToCSV()[MetricCalculatorsNames.widthCounter];
+string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
 ## See also ##

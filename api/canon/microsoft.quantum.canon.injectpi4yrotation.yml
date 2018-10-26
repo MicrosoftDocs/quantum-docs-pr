@@ -10,7 +10,7 @@ summary: >2
    \begin{align}
        \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
    \end{align}
-   $$.
+   $$
 remarks: >2-
    The following are equivalent:
    ```Q#

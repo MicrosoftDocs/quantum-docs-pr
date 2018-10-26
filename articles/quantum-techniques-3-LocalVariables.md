@@ -66,7 +66,7 @@ For instance, if we model a term in a Hamiltonian by a tuple, then we can use de
 
 ```qsharp
 // Represents H = 3.1 X_0 Z_1.
-let (coefficient, (paulis, idxQubits)) = (3.1, ([PauliX; PauliZ], [0, 1]));
+let (coefficient, (paulis, idxQubits)) = (3.1, ([PauliX; PauliZ], [0; 1]));
 ```
 
 We can also use deconstruction to access the different parts of a [user-defined type](#user-defined-types):

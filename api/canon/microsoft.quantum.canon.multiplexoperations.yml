@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexoperations
+name: MultiplexOperations
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: " Applies Multiply-controlled unitary operation $U$ that applies a \n unitary $V_j$ when controlled by $n$-qubit number state $\\ket{j}$.\n\n $U = \\sum^{2^n-1}_{j=0}\\ket{j}\\bra{j}\\otimes V_j$.\n"
+remarks: " `coefficients` will be padded with identity elements if \n fewer than $2^n$ are specified. This implementation uses\n $n-1$ ancilla qubits.\n"
+syntax: "operation MultiplexOperations (unitaries : ('T => () : Adjoint, Controlled)[], index : BigEndian, target : 'T) : ()"
+references: >2-
+   - Toward the first quantum simulation with quantum speedup
+     Andrew M. Childs, Dmitri Maslov, Yunseong Nam, Neil J. Ross, Yuan Su
+     https://arxiv.org/abs/1711.10980
+input:
+  content: "(unitaries : ('T => () : Adjoint, Controlled)[], index : BigEndian, target : 'T)"
+  types:
+  - name: unitaries
+    summary: " Array of up to $2^n$ unitary operations. The $j$th operation \n is indexed by the number state $\\ket{j}$ encoded in big-endian format. \n"
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: ()
+        isPrimitive: true
+    functors: &o0
+    - Adjoint
+    - Controlled
+  - name: index
+    summary: >2
+       $n$-qubit control register that encodes number states $\ket{j}$ in
+       big-endian format.
+    uid: microsoft.quantum.canon.bigendian
+  - name: target
+    summary: >2
+       Generic qubit register that $V_j$ acts on.
+    uid: "'T"
+    isLocal: true
+output:
+  content: ()
+  types:
+  - uid: ()
+    isPrimitive: true
+functors: *o0

@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.statepreparationsbmcomputecoefficients_
+name: StatePreparationSBMComputeCoefficients_
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: ' Implementation step of arbitrary state preparation procedure.'
+syntax: 'function StatePreparationSBMComputeCoefficients_ (coefficients : ComplexPolar[]) : (Double[], Double[], ComplexPolar[])'
+input:
+  content: '(coefficients : ComplexPolar[])'
+  types:
+  - name: coefficients
+    uid: microsoft.quantum.canon.complexpolar
+    isArray: true
+output:
+  content: (Double[], Double[], ComplexPolar[])
+  types:
+  - types:
+    - uid: Double
+      isPrimitive: true
+      isArray: true
+    - uid: Double
+      isPrimitive: true
+      isArray: true
+    - uid: microsoft.quantum.canon.complexpolar
+      isArray: true
+seeAlso:
+- microsoft.quantum.canon.preparearbitrarystate

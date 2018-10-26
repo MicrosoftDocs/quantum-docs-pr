@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.complexpolartocomplex
+name: ComplexPolarToComplex
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >2
+   Converts a complex number of type `ComplexPolar` to a complex
+   number of type `Complex`.
+syntax: 'function ComplexPolarToComplex (input : ComplexPolar) : Complex'
+input:
+  content: '(input : ComplexPolar)'
+  types:
+  - name: input
+    summary: >2
+       Complex number $c = r e^{i t}$.
+    uid: microsoft.quantum.canon.complexpolar
+output:
+  content: Complex
+  types:
+  - summary: ' Complex number $c = x + i y$.'
+    uid: microsoft.quantum.canon.complex

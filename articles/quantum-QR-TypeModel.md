@@ -150,7 +150,7 @@ a quantum algorithm.
 It may contain classical code but no quantum operations.
 Functions may not allocate or borrow qubits, nor may they call operations. It is possible, however, to pass them operations or qubits for processing. 
 
-Together, operations and functions are known as _callables_.
+Together, operations and functions are known as _callables_. You can see some [Examples](#examples) of these below.
 
 All Q# callables are considered to take a single value as input 
 and return a single value as output. 
@@ -329,3 +329,72 @@ so `Controlled(Rz)` has type
 For example, `((Controlled(Rz))(controls, (0.1, target))` would be 
 a valid invocation of `Controlled(Rz)`.
 
+As another example, `CNOT(control, target)` can be implemented as `(Controlled(X))([control], target)`. 
+If a target should be controlled by 2 control qubits (CCNOT), we can use `(Controlled(X))([control1;control2], target)` statement.
+
+### Examples
+
+This example of a Q# operation comes from the [Measurement](https://github.com/Microsoft/Quantum/tree/master/Samples/Measurement) sample. Within operations we can allocate qubits and use quantum operations on those qubits such as `H` and `X`: 
+
+```qsharp
+/// # Summary
+/// Creates a state and measures it in the Pauli-Z basis.
+operation MeasurementOneQubit () : Result {
+
+        mutable result = Zero;
+        
+        using (qubits = Qubit[1]) { // Allocate a qubit
+            let qubit = qubits[0];
+            H(qubit);               // Use a quantum operation on that qubit
+                        
+            if (result == One) {
+                X(qubit);
+            }
+        }
+        return result;
+}
+```
+
+This example of a function comes from the [PhaseEstimation](https://github.com/Microsoft/Quantum/tree/master/Samples/PhaseEstimation) sample. It contains purely classical code. You can see that, unlike the example above, no qubits are allocated, and no quantum operations are used.
+
+```qsharp
+/// # Summary
+/// Given two arrays, returns a new array that is the pointwise product
+/// of each of the given arrays.
+function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
+        
+    mutable product = new Double[Length(left)];
+        
+    for (idxElement in 0 .. Length(left) - 1) {
+        set product[idxElement] = left[idxElement] * right[idxElement];
+    } 
+    return product;
+}
+```
+
+It is also possible for a function to be passed qubits for processing, as in this example from the [ReversibleLogicSynthesis](https://github.com/Microsoft/Quantum/tree/master/Samples/ReversibleLogicSynthesis) sample. Qubits are passed to the function and used for processing, although at no point are the qubit states themselves modified.
+
+```qsharp
+/// # Summary
+/// Translate MCT masks into multiple-controlled Toffoli gates (with single
+/// targets).
+function GateMasksToToffoliGates (qubits : Qubit[], masks : MCMTMask[]) : MCTGate[] {
+        
+    mutable result = new MCTGate[0];
+    let n = Length(qubits);
+        
+    for (i in 0 .. Length(masks) - 1) {
+        let (controls, targets) = (masks[i])!;
+        let controlBits = IntegerBits(controls, n);
+        let targetBits = IntegerBits(targets, n);
+        let cQubits = Subarray(controlBits, qubits);
+        let tQubits = Subarray(targetBits, qubits);
+            
+        for (t in 0 .. Length(tQubits) - 1) {
+            set result = result + [MCTGate(cQubits, tQubits[t])];
+        }
+    }
+        
+    return result;
+}
+```

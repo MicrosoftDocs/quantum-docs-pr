@@ -17,7 +17,7 @@
         },
         {
             "source_path": "articles/quantum-InstallConfig.md",
-            "redirect_url": "install-guide",
+            "redirect_url": "install-guide/",
             "redirect_document_id": true
         },
         {
@@ -32,12 +32,12 @@
         },
         {
             "source_path": "articles/quantum-devguide-1-Intro.md",
-            "redirect_url": "techniques/file-structure",
+            "redirect_url": "techniques/",
             "redirect_document_id": true
         },
         {
             "source_path": "articles/libraries/intro.md",
-            "redirect_url": "libraries/",
+            "redirect_url": "libraries/standard/",
             "redirect_document_id": true
         },
         {

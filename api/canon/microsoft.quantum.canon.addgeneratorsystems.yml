@@ -3,25 +3,24 @@ uid: microsoft.quantum.canon.addgeneratorsystems
 name: AddGeneratorSystems
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Adds two `GeneratorSystems` to create a new GeneratorSystem.
-syntax: 'function AddGeneratorSystems (generatorSystemA : GeneratorSystem, generatorSystemB : GeneratorSystem) : GeneratorSystem'
+summary: Adds two `GeneratorSystems` to create a new GeneratorSystem.
+syntax: 'function AddGeneratorSystems (generatorSystemA : Microsoft.Quantum.Canon.GeneratorSystem, generatorSystemB : Microsoft.Quantum.Canon.GeneratorSystem) : Microsoft.Quantum.Canon.GeneratorSystem'
 input:
-  content: '(generatorSystemA : GeneratorSystem, generatorSystemB : GeneratorSystem)'
+  content: '(generatorSystemA : Microsoft.Quantum.Canon.GeneratorSystem, generatorSystemB : Microsoft.Quantum.Canon.GeneratorSystem)'
   types:
   - name: generatorSystemA
-    summary: ' The first `GeneratorSystem`.'
+    summary: The first `GeneratorSystem`.
     uid: microsoft.quantum.canon.generatorsystem
   - name: generatorSystemB
-    summary: >2
-       The second `GeneratorSystem`.
+    summary: The second `GeneratorSystem`.
     uid: microsoft.quantum.canon.generatorsystem
 output:
-  content: GeneratorSystem
+  content: Microsoft.Quantum.Canon.GeneratorSystem
   types:
-  - summary: >2
-       A `GeneratorSystem` representing a system that is the sum of the
-       input generator systems.
+  - summary: >-
+      A `GeneratorSystem` representing a system that is the sum of the
+      input generator systems.
     uid: microsoft.quantum.canon.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
+...

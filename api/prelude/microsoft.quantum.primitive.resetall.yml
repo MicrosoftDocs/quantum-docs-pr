@@ -3,20 +3,21 @@ uid: microsoft.quantum.primitive.resetall
 name: ResetAll
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >2
-   Given an array of qubits, measure them and ensure they are in the $\ket{0}$ state
-   such that they can be safely released.
-syntax: 'operation ResetAll (qubits : Qubit[]) : ()'
+summary: >-
+  Given an array of qubits, measure them and ensure they are in the |0⟩ state
+  such that they can be safely released.
+syntax: 'operation ResetAll (qubits : Qubit[]) : Unit'
 input:
   content: '(qubits : Qubit[])'
   types:
   - name: qubits
-    summary: ' An array of qubits whose states are to be reset to $\ket{0}$.'
-    uid: Qubit
-    isPrimitive: true
+    summary: An array of qubits whose states are to be reset to $\ket{0}$.
     isArray: true
-output:
-  content: ()
-  types:
-  - uid: ()
     isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

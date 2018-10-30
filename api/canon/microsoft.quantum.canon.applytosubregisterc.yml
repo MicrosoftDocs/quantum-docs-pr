@@ -3,44 +3,45 @@ uid: microsoft.quantum.canon.applytosubregisterc
 name: ApplyToSubregisterC
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Applies an operation to a subregister of a register, with qubits
-   specified by an array of their indices.
-   The modifier 'C' indicates that the operation is controllable.
-syntax: 'operation ApplyToSubregisterC (op : (Qubit[] => () : Controlled), idxs : Int[], target : Qubit[]) : ()'
+summary: >-
+  Applies an operation to a subregister of a register, with qubits
+  specified by an array of their indices.
+  The modifier 'C' indicates that the operation is controllable.
+syntax: 'operation ApplyToSubregisterC (op : (Qubit[] => Unit : Controlled), idxs : Int[], target : Qubit[]) : Unit'
 input:
-  content: '(op : (Qubit[] => () : Controlled), idxs : Int[], target : Qubit[])'
+  content: '(op : (Qubit[] => Unit : Controlled), idxs : Int[], target : Qubit[])'
   types:
   - name: op
-    summary: ' Operation to apply to subregister.'
+    summary: Operation to apply to subregister.
     isOperation: true
     input:
       types:
-      - uid: Qubit
+      - isArray: true
         isPrimitive: true
-        isArray: true
+        uid: Qubit
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Controlled
   - name: idxs
-    summary: ' Array of indices, indicating to which qubits the operation will be applied.'
+    summary: Array of indices, indicating to which qubits the operation will be applied.
+    isArray: true
+    isPrimitive: true
     uid: Int
-    isPrimitive: true
-    isArray: true
   - name: target
-    summary: >2
-       Register on which the operation acts.
-    uid: Qubit
-    isPrimitive: true
+    summary: Register on which the operation acts.
     isArray: true
-output:
-  content: ()
-  types:
-  - uid: ()
     isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
 seeAlso:
 - microsoft.quantum.canon.applytosubregister
-functors: *o0
+...

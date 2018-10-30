@@ -3,19 +3,17 @@ uid: microsoft.quantum.canon.controlledonint
 name: ControlledOnInt
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified positive integer.
-syntax: "function ControlledOnInt (numberState : Int, oracle : ('T => () : Adjoint, Controlled)) : ((Qubit[], 'T) => () : Adjoint, Controlled)"
+summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified positive integer.
+syntax: "function ControlledOnInt (numberState : Int, oracle : ('T => Unit : Adjoint, Controlled)) : ((Qubit[], 'T) => Unit : Adjoint, Controlled)"
 input:
-  content: "(numberState : Int, oracle : ('T => () : Adjoint, Controlled))"
+  content: "(numberState : Int, oracle : ('T => Unit : Adjoint, Controlled))"
   types:
   - name: numberState
-    summary: ' Positive integer.'
-    uid: Int
+    summary: Positive integer.
     isPrimitive: true
+    uid: Int
   - name: oracle
-    summary: >2
-       Unitary operator.
+    summary: Unitary operator.
     isOperation: true
     input:
       types:
@@ -23,25 +21,28 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Adjoint
     - Controlled
 output:
-  content: "((Qubit[], 'T) => () : Adjoint, Controlled)"
+  content: "((Qubit[], 'T) => Unit : Adjoint, Controlled)"
   types:
-  - summary: ' A unitary operator that applies `oracle` on the target register if the control register state corresponds to the number state `numberState`.'
+  - summary: A unitary operator that applies `oracle` on the target register if the control register state corresponds to the number state `numberState`.
     isOperation: true
     input:
       types:
-      - uid: Qubit
+      - isArray: true
         isPrimitive: true
-        isArray: true
+        uid: Qubit
       - uid: "'T"
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: *o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+...

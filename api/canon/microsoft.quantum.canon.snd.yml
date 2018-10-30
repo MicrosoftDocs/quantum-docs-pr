@@ -3,15 +3,13 @@ uid: microsoft.quantum.canon.snd
 name: Snd
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given a pair, returns its second element.
+summary: Given a pair, returns its second element.
 syntax: "function Snd (pair : ('T, 'U)) : 'U"
 input:
   content: "(pair : ('T, 'U))"
   types:
   - name: pair
-    summary: >2
-       A tuple with two elements.
+    summary: A tuple with two elements.
     types:
     - uid: "'T"
       isLocal: true
@@ -20,12 +18,12 @@ input:
 output:
   content: "'U"
   types:
-  - summary: ' The second element of `pair`.'
+  - summary: The second element of `pair`.
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: " The type of the pair's first member."
+  summary: The type of the pair's first member.
 - uid: "'U"
-  summary: >2
-     The type of the pair's second member.
+  summary: The type of the pair's second member.
+...

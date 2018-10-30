@@ -3,10 +3,13 @@ uid: microsoft.quantum.canon.applyreversedoplittleendiana
 name: ApplyReversedOpLittleEndianA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Applies an operation that takes little-endian input and that supports\n the adjoint functor to a register encoding \n an unsigned integer using big-endian format.\n"
-syntax: 'operation ApplyReversedOpLittleEndianA (op : (LittleEndian => () : Adjoint), register : BigEndian) : ()'
+summary: >-
+  Applies an operation that takes little-endian input and that supports
+  the adjoint functor to a register encoding
+  an unsigned integer using big-endian format.
+syntax: 'operation ApplyReversedOpLittleEndianA (op : (Microsoft.Quantum.Canon.LittleEndian => Unit : Adjoint), register : Microsoft.Quantum.Canon.BigEndian) : Unit'
 input:
-  content: '(op : (LittleEndian => () : Adjoint), register : BigEndian)'
+  content: '(op : (Microsoft.Quantum.Canon.LittleEndian => Unit : Adjoint), register : Microsoft.Quantum.Canon.BigEndian)'
   types:
   - name: op
     isOperation: true
@@ -15,17 +18,19 @@ input:
       - uid: microsoft.quantum.canon.littleendian
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Adjoint
   - name: register
     uid: microsoft.quantum.canon.bigendian
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
 seeAlso:
 - microsoft.quantum.canon.applyreversedoplittleendian
-functors: *o0
+...

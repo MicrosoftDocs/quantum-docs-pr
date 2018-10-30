@@ -3,17 +3,18 @@ uid: microsoft.quantum.canon.identitygeneratorsystem
 name: IdentityGeneratorSystem
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Returns a generator system consistent with the
-   Hamiltonian $H = 0$.
-syntax: 'function IdentityGeneratorSystem () : GeneratorSystem'
+summary: >-
+  Returns a generator system consistent with the
+  Hamiltonian $H = 0$.
+syntax: 'function IdentityGeneratorSystem () : Microsoft.Quantum.Canon.GeneratorSystem'
 input:
   content: ()
   types: []
 output:
-  content: GeneratorSystem
+  content: Microsoft.Quantum.Canon.GeneratorSystem
   types:
-  - summary: >2-
-       A generator system representing evolution under the Hamiltonian
-       $H = 0$.
+  - summary: >-
+      A generator system representing evolution under the Hamiltonian
+      $H = 0$.
     uid: microsoft.quantum.canon.generatorsystem
+...

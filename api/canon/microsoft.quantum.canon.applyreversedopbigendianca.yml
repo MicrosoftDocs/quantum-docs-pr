@@ -3,9 +3,9 @@ uid: microsoft.quantum.canon.applyreversedopbigendianca
 name: ApplyReversedOpBigEndianCA
 type: operation
 namespace: Microsoft.Quantum.Canon
-syntax: 'operation ApplyReversedOpBigEndianCA (op : (BigEndian => () : Controlled, Adjoint), register : LittleEndian) : ()'
+syntax: 'operation ApplyReversedOpBigEndianCA (op : (Microsoft.Quantum.Canon.BigEndian => Unit : Controlled, Adjoint), register : Microsoft.Quantum.Canon.LittleEndian) : Unit'
 input:
-  content: '(op : (BigEndian => () : Controlled, Adjoint), register : LittleEndian)'
+  content: '(op : (Microsoft.Quantum.Canon.BigEndian => Unit : Controlled, Adjoint), register : Microsoft.Quantum.Canon.LittleEndian)'
   types:
   - name: op
     isOperation: true
@@ -14,20 +14,21 @@ input:
       - uid: microsoft.quantum.canon.bigendian
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
     functors:
     - Controlled
     - Adjoint
   - name: register
     uid: microsoft.quantum.canon.littleendian
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.applyreversedopbigendian
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.canon.applyreversedopbigendian
+...

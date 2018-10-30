@@ -3,39 +3,41 @@ uid: microsoft.quantum.canon.preparechoistatec
 name: PrepareChoiStateC
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2-
-   Prepares the Choi–Jamiłkowski state for a given operation with a controlled variant onto given reference
-   and target registers.
-syntax: 'operation PrepareChoiStateC (op : (Qubit[] => () : Controlled), reference : Qubit[], target : Qubit[]) : ()'
+summary: >-
+  Prepares the Choi–Jamiłkowski state for a given operation with a controlled variant onto given reference
+  and target registers.
+syntax: 'operation PrepareChoiStateC (op : (Qubit[] => Unit : Controlled), reference : Qubit[], target : Qubit[]) : Unit'
 input:
-  content: '(op : (Qubit[] => () : Controlled), reference : Qubit[], target : Qubit[])'
+  content: '(op : (Qubit[] => Unit : Controlled), reference : Qubit[], target : Qubit[])'
   types:
   - name: op
     isOperation: true
     input:
       types:
-      - uid: Qubit
+      - isArray: true
         isPrimitive: true
-        isArray: true
+        uid: Qubit
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Controlled
   - name: reference
-    uid: Qubit
-    isPrimitive: true
     isArray: true
+    isPrimitive: true
+    uid: Qubit
   - name: target
-    uid: Qubit
-    isPrimitive: true
     isArray: true
-output:
-  content: ()
-  types:
-  - uid: ()
     isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
 seeAlso:
 - microsoft.quantum.canon.preparechoistate
-functors: *o0
+...

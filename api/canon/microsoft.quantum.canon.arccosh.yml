@@ -3,20 +3,19 @@ uid: microsoft.quantum.canon.arccosh
 name: ArcCosh
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Computes the inverse hyperbolic cosine of a number.
+summary: Computes the inverse hyperbolic cosine of a number.
 syntax: 'function ArcCosh (x : Double) : Double'
 input:
   content: '(x : Double)'
   types:
   - name: x
-    summary: >2
-       A real number $x\geq 1$.
-    uid: Double
+    summary: A real number $x\geq 1$.
     isPrimitive: true
+    uid: Double
 output:
   content: Double
   types:
-  - summary: ' A real number $y$ such that $x = \cosh(y)$.'
-    uid: Double
+  - summary: A real number $y$ such that $x = \cosh(y)$.
     isPrimitive: true
+    uid: Double
+...

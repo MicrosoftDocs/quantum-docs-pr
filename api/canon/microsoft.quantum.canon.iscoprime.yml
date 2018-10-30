@@ -3,26 +3,25 @@ uid: microsoft.quantum.canon.iscoprime
 name: IsCoprime
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Returns  true if a and b are co-prime and false otherwise.
+summary: Returns  true if a and b are co-prime and false otherwise.
 syntax: 'function IsCoprime (a : Int, b : Int) : Bool'
 input:
   content: '(a : Int, b : Int)'
   types:
   - name: a
-    summary: ' the first number of which co-primality is being tested'
-    uid: Int
+    summary: the first number of which co-primality is being tested
     isPrimitive: true
+    uid: Int
   - name: b
-    summary: >2
-       the second number of which co-primality is being tested
-    uid: Int
+    summary: the second number of which co-primality is being tested
     isPrimitive: true
+    uid: Int
 output:
   content: Bool
   types:
-  - summary: >2-
-       True, if a and b are co-prime (e.g. their greatest common divisor is 1 ),
-       and false otherwise
-    uid: Bool
+  - summary: >-
+      True, if a and b are co-prime (e.g. their greatest common divisor is 1 ),
+      and false otherwise
     isPrimitive: true
+    uid: Bool
+...

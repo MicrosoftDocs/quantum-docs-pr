@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.blockencoding
+name: BlockEncoding
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  A `BlockEncoding` is a unitary $U$ where an arbitrary operator $H$ of
+  interest that acts on the system register `s` is encoded in the top-
+  left block corresponding to auxiliary state `\ket{0}_a`. That is,
+
+  $$
+  \begin{align}
+  (\bra{0}_a\otimes I_s)U(\ket{0}_a\otimes I_s) = H
+  \end{align}
+  $$.
+syntax: 'newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit : Adjoint, Controlled);'
+...

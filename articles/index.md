@@ -1,22 +1,17 @@
 ---
 uid: microsoft.quantum.index
-# Mandatory fields.
 title: Setting up the Q# development environment 
 author: QuantumWriter
 ms.author:  
 ms.date: 10/09/2017
 ms.topic: article
-# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
-# For Quantum products none of these categories have been defined  yet.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-# ms.technology: tech-name-from-white-list
 ---
+
 # Welcome to the Microsoft Quantum Development Kit Preview
 
 Thank you for your interest in Microsoft Quantum Development Kit preview. The development kit contains the tools you'll need to build your own quantum computing programs and experiments. Assuming some experience with Microsoft Visual Studio or Visual Studio Code, beginners can write their first quantum program, and experienced researchers can quickly and efficiently develop new quantum algorithms.
 
-To jump right in, start with [Installation and validation](quantum-InstallConfig.md) to create and validate your development environment. Then use [Quickstart - your first quantum program](quantum-WriteAQuantumProgram.md) to learn about the structure of a Q# project and how to write the quantum equivalent of "Hello, world!" - a quantum teleport application.
+To jump right in, start with [Installation and validation](xref:microsoft.quantum.install) to create and validate your development environment. Then use [Quickstart - your first quantum program](xref:microsoft.quantum.write-program) to learn about the structure of a Q# project and how to write the quantum equivalent of "Hello, world!" - creating entanglement, or what is also known as a Bell State, in Q#.
 
 If you'd like more general information about Microsoft's quantum computing initiative, see [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/).
 
@@ -52,14 +47,14 @@ The Quantum Development Kit preview provides a complete development and simulati
 
 The current documentation includes the following topics.
 
-* [Microsoft Quantum Development kit release notes](quantum-RelNotes.md).
-* [Quantum computing concepts](quantum-concepts-1-Intro.md) includes topics such as the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
-* [Installation and validation](quantum-InstallConfig.md) describes how to quickly set up your quantum development environment. Your Visual Studio environment will be enhanced with a compiler for the Q# language and templates for Q# projects and files.
-* [Quickstart - your first quantum program](quantum-WriteAQuantumProgram.md) walks you through how to create the Teleport application in the Visual Studio development environment. You'll learn how to define a Q# operation, call the Q# operation using C#, and how to execute your quantum algorithm.
-* [Managing quantum machines and drivers](quantum-SimulatorsAndMachines.md) describes how quantum algorithms are executed, what quantum machines are available, and how to write a non-Q# driver for the quantum program.
-* [Quantum development techniques](quantum-devguide-1-Intro.md) specifies the core concepts used to create quantum programs in Q#. Topics include file structures, operations and functions, working with qubits, and some advanced topics.
-* [Q# standard libraries](libraries/intro.md) describes the operations and functions that support both the classical language control requirement and the Q# quantum algorithms. Topics include control flow, data structures, error correction, testing, and debugging. 
-* [Q# language reference](quantum-QR-Intro.md) details the Q# language including the type model, expressions, statements, and compiler use.
-* [For more information](quantum-ForMoreInfo.md) contains specially selected references to deep coverage of quantum computing topics.
+* [Microsoft Quantum Development kit release notes](xref:microsoft.quantum.relnotes).
+* [Quantum computing concepts](xref:microsoft.quantum.concepts.intro) includes topics such as the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
+* [Installation and validation](xref:microsoft.quantum.install) describes how to quickly set up your quantum development environment. Your Visual Studio environment will be enhanced with a compiler for the Q# language and templates for Q# projects and files.
+* [Quickstart - your first quantum program](xref:microsoft.quantum.write-program) walks you through how to write an application that creates a quantum entanglment state in the Visual Studio development environment. You'll learn how to define a Q# operation, call the Q# operation using C#, and how to execute your quantum algorithm.
+* [Managing quantum machines and drivers](xref:microsoft.quantum.machines) describes how quantum algorithms are executed, what quantum machines are available, and how to write a non-Q# driver for the quantum program.
+* [Quantum development techniques](xref:microsoft.quantum.techniques.intro) specifies the core concepts used to create quantum programs in Q#. Topics include file structures, operations and functions, working with qubits, and some advanced topics.
+* [Q# standard libraries](xref:microsoft.quantum.libraries.standard.intro) describes the operations and functions that support both the classical language control requirement and the Q# quantum algorithms. Topics include control flow, data structures, error correction, testing, and debugging. 
+* [Q# language reference](xref:microsoft.quantum.language.intro) details the Q# language including the type model, expressions, statements, and compiler use.
+* [For more information](xref:microsoft.quantum.more-information) contains specially selected references to deep coverage of quantum computing topics.
 * [Quantum trace simulator reference](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators?branch=master&view=qsharp-preview) contains reference material about trace simulator entities and exceptions.
-* [Q# library reference](https://docs.microsoft.com/en-us/qsharp/api/) contains reference information about library entities by namespace.
+* [Q# library reference](xref:microsoft.quantum.standardlibsintro) contains reference information about library entities by namespace.

@@ -3,27 +3,26 @@ uid: microsoft.quantum.canon.reverse
 name: Reverse
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Create an array that contains the same elements as an input array but in reverse
-   order.
+summary: >-
+  Create an array that contains the same elements as an input array but in reverse
+  order.
 syntax: "function Reverse (array : 'T[]) : 'T[]"
 input:
   content: "(array : 'T[])"
   types:
   - name: array
-    summary: >2
-       An array whose elements are to be copied in reverse order.
+    summary: An array whose elements are to be copied in reverse order.
+    isArray: true
     uid: "'T"
     isLocal: true
-    isArray: true
 output:
   content: "'T[]"
   types:
-  - summary: ' An array containing the elements `array[Length(array) - 1]` .. `array[0]`.'
+  - summary: An array containing the elements `array[Length(array) - 1]` .. `array[0]`.
+    isArray: true
     uid: "'T"
     isLocal: true
-    isArray: true
 typeParameters:
 - uid: "'T"
-  summary: >2
-     The type of the array elements.
+  summary: The type of the array elements.
+...

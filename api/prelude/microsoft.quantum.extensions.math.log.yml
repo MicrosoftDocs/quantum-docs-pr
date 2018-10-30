@@ -3,18 +3,18 @@ uid: microsoft.quantum.extensions.math.log
 name: Log
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: >2
-   Returns the natural (base $e$) logarithm of a specified number.
-remarks: ' See [System.Math.Log](https://docs.microsoft.com/en-us/dotnet/api/system.math.log) for more details.'
+summary: Returns the natural (base $e$) logarithm of a specified number.
+remarks: See [System.Math.Log](https://docs.microsoft.com/en-us/dotnet/api/system.math.log) for more details.
 syntax: 'function Log (input : Double) : Double'
 input:
   content: '(input : Double)'
   types:
   - name: input
-    uid: Double
     isPrimitive: true
+    uid: Double
 output:
   content: Double
   types:
-  - uid: Double
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Double
+...

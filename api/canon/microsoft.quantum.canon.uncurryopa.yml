@@ -3,18 +3,17 @@ uid: microsoft.quantum.canon.uncurryopa
 name: UncurryOpA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given a function which returns operations,
-   returns a new operation which takes both inputs
-   as a tuple.
-   The modifier 'A' indicates that the operations are adjointable.
-syntax: "function UncurryOpA (curriedOp : ('T -> ('U => () : Adjoint))) : (('T, 'U) => () : Adjoint)"
+summary: >-
+  Given a function which returns operations,
+  returns a new operation which takes both inputs
+  as a tuple.
+  The modifier 'A' indicates that the operations are adjointable.
+syntax: "function UncurryOpA (curriedOp : ('T -> ('U => Unit : Adjoint))) : (('T, 'U) => Unit : Adjoint)"
 input:
-  content: "(curriedOp : ('T -> ('U => () : Adjoint)))"
+  content: "(curriedOp : ('T -> ('U => Unit : Adjoint)))"
   types:
   - name: curriedOp
-    summary: >2
-       A function which returns operations.
+    summary: A function which returns operations.
     isFunction: true
     input:
       types:
@@ -29,16 +28,16 @@ input:
             isLocal: true
         output:
           types:
-          - uid: ()
-            isPrimitive: true
-        functors: &o0
+          - isPrimitive: true
+            uid: Unit
+        functors:
         - Adjoint
 output:
-  content: "(('T, 'U) => () : Adjoint)"
+  content: "(('T, 'U) => Unit : Adjoint)"
   types:
-  - summary: >2
-       A new operation `op` such that `op(t, u)` is equivalent
-       to `(curriedOp(t))(u)`.
+  - summary: >-
+      A new operation `op` such that `op(t, u)` is equivalent
+      to `(curriedOp(t))(u)`.
     isOperation: true
     input:
       types:
@@ -48,14 +47,15 @@ output:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: *o0
-seeAlso:
-- microsoft.quantum.canon.uncurryop
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
 typeParameters:
 - uid: "'T"
-  summary: ' The type of the first argument of a curried function.'
+  summary: The type of the first argument of a curried function.
 - uid: "'U"
-  summary: >2
-     The type of the second argument of a curried function.
+  summary: The type of the second argument of a curried function.
+seeAlso:
+- microsoft.quantum.canon.uncurryop
+...

@@ -3,17 +3,16 @@ uid: microsoft.quantum.canon.ccontrolledc
 name: CControlledC
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given an operation op, returns a new operation which
-   applies the op if a classical control bit is true. If false, nothing happens.
-   The modifier 'C' indicates that the operation is controllable.
-syntax: "function CControlledC (op : ('T => () : Controlled)) : ((Bool, 'T) => () : Controlled)"
+summary: >-
+  Given an operation op, returns a new operation which
+  applies the op if a classical control bit is true. If false, nothing happens.
+  The modifier 'C' indicates that the operation is controllable.
+syntax: "function CControlledC (op : ('T => Unit : Controlled)) : ((Bool, 'T) => Unit : Controlled)"
 input:
-  content: "(op : ('T => () : Controlled))"
+  content: "(op : ('T => Unit : Controlled))"
   types:
   - name: op
-    summary: >2
-       An operation to be conditionally applied.
+    summary: An operation to be conditionally applied.
     isOperation: true
     input:
       types:
@@ -21,28 +20,30 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Controlled
 output:
-  content: "((Bool, 'T) => () : Controlled)"
+  content: "((Bool, 'T) => Unit : Controlled)"
   types:
-  - summary: " A new operation which is op if the classical control bit is true. \n"
+  - summary: A new operation which is op if the classical control bit is true.
     isOperation: true
     input:
       types:
-      - uid: Bool
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Bool
       - uid: "'T"
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: *o0
-seeAlso:
-- microsoft.quantum.canon.controlled
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
 typeParameters:
 - uid: "'T"
-  summary: " The input type of the operation to be conditionally applied. \n"
+  summary: The input type of the operation to be conditionally applied.
+seeAlso:
+- microsoft.quantum.canon.controlled
+...

@@ -1,111 +1,30 @@
 - name: Welcome
   href: index.md
 - name: Quantum computing concepts
-  href: quantum-concepts-1-Intro.md
-  items:
-    - name: Vectors and matrices
-      href: quantum-concepts-2-VectorsMatrices.md
-    - name: Advanced matrix concepts
-      href: quantum-concepts-3-MatrixAdvanced.md
-    - name: The qubit
-      href: quantum-concepts-4-Qubit.md
-    - name: Multiple qubits
-      href: quantum-concepts-5-MultipleQubits.md
-    - name: Dirac notation
-      href: quantum-concepts-6-DiracNotation.md
-    - name: Pauli measurements
-      href: quantum-concepts-7-PauliMeasurements.md
-    - name: Quantum circuits
-      href: quantum-concepts-8-QuantumCircuits.md
-    - name: Quantum oracles
-      href: quantum-concepts-10-Oracles.md
-    - name: Software stack
-      href: quantum-concepts-9-SoftwareStack.md
+  topicHref: concepts/index.md
+  href: concepts/toc.yml
 - name: Installation and validation
-  href: quantum-InstallConfig.md
-  items:
-    - name: Visual Studio 2017 (Windows 10)
-      href: install-guide/vs-2017.md
-    - name: Visual Studio Code (Windows 10, macOS, and Linux)
-      href: install-guide/vs-code.md
-    - name: Command Line (Windows 10, macOS, and Linux)
-      href: install-guide/command-line.md
+  topicHref: install-guide/index.md
+  href: install-guide/toc.yml
 - name: Quickstart - your first quantum program
-  href: quantum-WriteAQuantumProgram.md
+  href: quickstart.md
 - name: Managing quantum machines and drivers
-  href: quantum-SimulatorsAndMachines.md
-  items:
-        - name: Quantum simulator
-          href: quantum-fullstate-simulator.md
-        - name: Quantum computer trace simulator
-          href: quantum-computer-trace-simulator-1.md
-          items:
-            - name: Depth counter
-              href: quantum-computer-trace-simulator-depth-counter.md
-            - name: Distinct inputs checker
-              href: quantum-computer-trace-simulator-distinct-inputs-checker.md
-            - name: Invalidated qubits use checker
-              href: quantum-computer-trace-simulator-invalidated-qubits-use-checker.md
-            - name: Primitive operations counter
-              href: quantum-computer-trace-simulator-primitive-operations-counter.md
-            - name: Width counter
-              href: quantum-computer-trace-simulator-width-counter.md
-- name: Quantum development techniques 
-  href: quantum-devguide-1-Intro.md
-  items:
-    - name: Q# and file structures
-      href: quantum-techniques-1-Qsharp_FileStructure.md
-    - name: Operations and functions
-      href: quantum-techniques-2-OperationsandFunctions.md
-    - name: Local variables
-      href: quantum-techniques-3-LocalVariables.md
-    - name: Q# type model
-      href: quantum-techniques-4-TypeModel.md
-    - name: Working with qubits
-      href: quantum-techniques-5-WorkingWithQubits.md
-    - name: Putting it all together
-      href: quantum-techniques-6-PuttingItAllTogether.md
-    - name: Going further
-      href: quantum-techniques-7-going-further.md
-    - name: Testing and debugging
-      href: quantum-techniques-TestingAndDebugging.md
-- name: Q# standard libraries
-  href: libraries/intro.md
-  items:
-    - name: OSS licensing
-      href: libraries/licensing.md
-    - name: The prelude
-      href: libraries/prelude.md
-    - name: Higher-order control flow
-      href: libraries/control-flow.md
-    - name: Data structures and modeling
-      href: libraries/data-structures.md
-    - name: Quantum algorithms
-      href: libraries/algorithms.md
-    - name: Characterization
-      href: libraries/characterization.md
-    - name: Error correction
-      href: libraries/error-correction.md
-    - name: Applications
-      href: libraries/applications.md
-    - name: Testing and debugging
-      href: libraries/testing.md
+  topicHref: machines/index.md
+  href: machines/toc.yml
+- name: Quantum development techniques
+  topicHref: techniques/index.md
+  href: techniques/toc.yml
+- name: Q# libraries
+  href: libraries/toc.yml
 - name: Q# programming language
-  href: quantum-QR-Intro.md
-  items:
-    - name: Q# type model
-      href: quantum-QR-TypeModel.md
-    - name: Expressions
-      href: quantum-QR-Expressions.md
-    - name: Statements
-      href: quantum-QR-Statements.md
-    - name: File structure
-      href: quantum-QR-FileStructure.md
+  topicHref: language/index.md
+  href: language/toc.yml
 - name: Glossary
   href: Glossary.md
 - name: For more information
-  href: quantum-ForMoreInfo.md
-- name: C# components reference
-  href: https://docs.microsoft.com/en-us/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators?view=quantumsdk-dotnet-0.1.1712.901-preview
+  href: for-more-info.md
 - name: Release Notes
-  href: quantum-RelNotes.md
+  topicHref: relnotes/index.md
+  href: relnotes/toc.yml
+- name: License
+  href: license.md

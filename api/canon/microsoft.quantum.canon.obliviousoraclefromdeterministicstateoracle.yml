@@ -3,25 +3,23 @@ uid: microsoft.quantum.canon.obliviousoraclefromdeterministicstateoracle
 name: ObliviousOracleFromDeterministicStateOracle
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Combines the oracles `DeterministicStateOracle` and `ObliviousOracle`.
-syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : DeterministicStateOracle, signalOracle : ObliviousOracle) : ObliviousOracle'
+summary: Combines the oracles `DeterministicStateOracle` and `ObliviousOracle`.
+syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Canon.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Canon.ObliviousOracle) : Microsoft.Quantum.Canon.ObliviousOracle'
 input:
-  content: '(ancillaOracle : DeterministicStateOracle, signalOracle : ObliviousOracle)'
+  content: '(ancillaOracle : Microsoft.Quantum.Canon.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Canon.ObliviousOracle)'
   types:
   - name: ancillaOracle
-    summary: ' A state preparation oracle $A$ of type `DeterministicStateOracle` acting on register $a$.'
+    summary: A state preparation oracle $A$ of type `DeterministicStateOracle` acting on register $a$.
     uid: microsoft.quantum.canon.deterministicstateoracle
   - name: signalOracle
-    summary: >2
-       A oracle $U$ of type `ObliviousOracle` acting jointly on register $a,s$.
+    summary: A oracle $U$ of type `ObliviousOracle` acting jointly on register $a,s$.
     uid: microsoft.quantum.canon.obliviousoracle
 output:
-  content: ObliviousOracle
+  content: Microsoft.Quantum.Canon.ObliviousOracle
   types:
-  - summary: >2
-       An oracle $O=UA$ of type `ObliviousOracle`.
+  - summary: An oracle $O=UA$ of type `ObliviousOracle`.
     uid: microsoft.quantum.canon.obliviousoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.obliviousoracle
+...

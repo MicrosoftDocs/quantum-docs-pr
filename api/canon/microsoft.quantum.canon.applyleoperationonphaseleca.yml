@@ -3,9 +3,9 @@ uid: microsoft.quantum.canon.applyleoperationonphaseleca
 name: ApplyLEOperationOnPhaseLECA
 type: operation
 namespace: Microsoft.Quantum.Canon
-syntax: 'operation ApplyLEOperationOnPhaseLECA (op : (LittleEndian => () : Controlled, Adjoint), target : PhaseLittleEndian) : ()'
+syntax: 'operation ApplyLEOperationOnPhaseLECA (op : (Microsoft.Quantum.Canon.LittleEndian => Unit : Controlled, Adjoint), target : Microsoft.Quantum.Canon.PhaseLittleEndian) : Unit'
 input:
-  content: '(op : (LittleEndian => () : Controlled, Adjoint), target : PhaseLittleEndian)'
+  content: '(op : (Microsoft.Quantum.Canon.LittleEndian => Unit : Controlled, Adjoint), target : Microsoft.Quantum.Canon.PhaseLittleEndian)'
   types:
   - name: op
     isOperation: true
@@ -14,20 +14,21 @@ input:
       - uid: microsoft.quantum.canon.littleendian
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
     functors:
     - Controlled
     - Adjoint
   - name: target
     uid: microsoft.quantum.canon.phaselittleendian
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.applyleoperationonphasele
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.canon.applyleoperationonphasele
+...

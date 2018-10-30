@@ -3,30 +3,34 @@ uid: microsoft.quantum.canon.iteratethroughcartesianpower
 name: IterateThroughCartesianPower
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Iterates a variable, say arr, through Cartesian product \n [ 0, bound - 1 ] × [ 0, bound - 1 ] × [ 0, bound - 1 ]\n and calls op(arr) for every element of the Cartesian product"
-syntax: 'operation IterateThroughCartesianPower (power : Int, bound : Int, op : (Int[] => ())) : ()'
+summary: >-
+  Iterates a variable, say arr, through Cartesian product
+  [ 0, bound - 1 ] × [ 0, bound - 1 ] × [ 0, bound - 1 ]
+  and calls op(arr) for every element of the Cartesian product
+syntax: 'operation IterateThroughCartesianPower (power : Int, bound : Int, op : (Int[] => Unit)) : Unit'
 input:
-  content: '(power : Int, bound : Int, op : (Int[] => ()))'
+  content: '(power : Int, bound : Int, op : (Int[] => Unit))'
   types:
   - name: power
-    uid: Int
     isPrimitive: true
+    uid: Int
   - name: bound
-    uid: Int
     isPrimitive: true
+    uid: Int
   - name: op
     isOperation: true
     input:
       types:
-      - uid: Int
+      - isArray: true
         isPrimitive: true
-        isArray: true
+        uid: Int
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
+...

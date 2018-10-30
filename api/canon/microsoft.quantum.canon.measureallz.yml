@@ -3,22 +3,22 @@ uid: microsoft.quantum.canon.measureallz
 name: MeasureAllZ
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Measures $Z \otimes Z \otimes \cdots \otimes Z$ on
-   a given register.
+summary: >-
+  Measures $Z \otimes Z \otimes \cdots \otimes Z$ on
+  a given register.
 syntax: 'operation MeasureAllZ (register : Qubit[]) : Result'
 input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    summary: >2
-       The register to be measured.
-    uid: Qubit
-    isPrimitive: true
+    summary: The register to be measured.
     isArray: true
+    isPrimitive: true
+    uid: Qubit
 output:
   content: Result
   types:
-  - summary: ' The result of measuring $Z \otimes Z \otimes \cdots \otimes Z$.'
-    uid: Result
+  - summary: The result of measuring $Z \otimes Z \otimes \cdots \otimes Z$.
     isPrimitive: true
+    uid: Result
+...

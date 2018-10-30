@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cx
+name: CX
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Applies the controlled-$X$ (CX) gate to a pair of qubits,
+  $$
+  \begin{align}
+  1 & 0 & 0 & 0 \\\\
+  0 & 1 & 0 & 0 \\\\
+  0 & 0 & 0 & 1 \\\\
+  0 & 0 & 1 & 0
+  \end{align},
+  $$
+  where rows and columns are organized as in the quantum concepts guide.
+remarks: >-
+  Equivalent to:
+
+  ```Q#
+  Controlled X([control], target);
+  ```
+
+  Equivalent to:
+
+  ```Q#
+  CNOT(control, target);
+  ```
+syntax: 'operation CX (control : Qubit, target : Qubit) : Unit'
+input:
+  content: '(control : Qubit, target : Qubit)'
+  types:
+  - name: control
+    summary: Control qubit for the CX gate.
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Target qubit for the CX gate.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

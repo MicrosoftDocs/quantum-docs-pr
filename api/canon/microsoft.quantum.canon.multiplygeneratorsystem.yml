@@ -3,26 +3,25 @@ uid: microsoft.quantum.canon.multiplygeneratorsystem
 name: MultiplyGeneratorSystem
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Multiplies the coefficient of all terms in a `GeneratorSystem`.
-syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : GeneratorSystem) : GeneratorSystem'
+summary: Multiplies the coefficient of all terms in a `GeneratorSystem`.
+syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : Microsoft.Quantum.Canon.GeneratorSystem) : Microsoft.Quantum.Canon.GeneratorSystem'
 input:
-  content: '(multiplier : Double, generatorSystem : GeneratorSystem)'
+  content: '(multiplier : Double, generatorSystem : Microsoft.Quantum.Canon.GeneratorSystem)'
   types:
   - name: multiplier
-    summary: ' The multiplier on the coefficient.'
-    uid: Double
+    summary: The multiplier on the coefficient.
     isPrimitive: true
+    uid: Double
   - name: generatorSystem
-    summary: >2
-       The `GeneratorSystem` to be multiplied.
+    summary: The `GeneratorSystem` to be multiplied.
     uid: microsoft.quantum.canon.generatorsystem
 output:
-  content: GeneratorSystem
+  content: Microsoft.Quantum.Canon.GeneratorSystem
   types:
-  - summary: >2
-       A `GeneratorSystem` representing a system with coefficients a factor
-       `multiplier` larger.
+  - summary: >-
+      A `GeneratorSystem` representing a system with coefficients a factor
+      `multiplier` larger.
     uid: microsoft.quantum.canon.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
+...

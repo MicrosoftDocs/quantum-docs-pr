@@ -1,0 +1,18 @@
+- name: OSS licensing
+  href: licensing.md
+- name: The prelude
+  href: prelude.md
+- name: Higher-order control flow
+  href: control-flow.md
+- name: Data structures and modeling
+  href: data-structures.md
+- name: Quantum algorithms
+  href: algorithms.md
+- name: Characterization
+  href: characterization.md
+- name: Error correction
+  href: error-correction.md
+- name: Applications
+  href: applications.md
+- name: Testing and debugging
+  href: testing.md

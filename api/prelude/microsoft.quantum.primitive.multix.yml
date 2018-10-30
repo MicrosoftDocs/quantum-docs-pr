@@ -3,31 +3,32 @@ uid: microsoft.quantum.primitive.multix
 name: MultiX
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >2
-   Applies the gate $X \otimes X \otimes \cdots \otimes X$
-   to a register of qubits.
-remarks: >2-
-   Equivalent to:
-   ```qsharp
-   for (idxQubit in 0..Length(qubits) - 1) {
-       X(qubits[idxQubit]);
-   }
-   ```
-syntax: 'operation MultiX (qubits : Qubit[]) : ()'
+summary: >-
+  Applies the gate $X \otimes X \otimes \cdots \otimes X$
+  to a register of qubits.
+remarks: >-
+  Equivalent to:
+
+  ```qsharp
+  for (qb in qubits) {
+      X(qb);
+  }
+  ```
+syntax: 'operation MultiX (qubits : Qubit[]) : Unit'
 input:
   content: '(qubits : Qubit[])'
   types:
   - name: qubits
-    summary: >2
-       Register of qubits to which the gate is to be applied.
-    uid: Qubit
-    isPrimitive: true
+    summary: Register of qubits to which the gate is to be applied.
     isArray: true
-output:
-  content: ()
-  types:
-  - uid: ()
     isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+...

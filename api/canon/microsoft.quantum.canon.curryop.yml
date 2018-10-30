@@ -3,26 +3,26 @@ uid: microsoft.quantum.canon.curryop
 name: CurryOp
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given an operation with two inputs, applies Curry's isomorphism
-   $f(x, y) \equiv f(x)(y)$ to return an operation of one input which
-   returns an operation of one input.
-remarks: >2-
-   The following are equivalent:
-   ```qsharp
-   op(x, y);
+summary: >-
+  Given an operation with two inputs, applies Curry's isomorphism
+  $f(x, y) \equiv f(x)(y)$ to return an operation of one input which
+  returns an operation of one input.
+remarks: >-
+  The following are equivalent:
 
-   let curried = CurryOp(op);
-   let partial = curried(x);
-   partial(y);
-   ```
-syntax: "function CurryOp (op : (('T, 'U) => ())) : ('T -> ('U => ()))"
+  ```qsharp
+  op(x, y);
+
+  let curried = CurryOp(op);
+  let partial = curried(x);
+  partial(y);
+  ```
+syntax: "function CurryOp (op : (('T, 'U) => Unit)) : ('T -> ('U => Unit))"
 input:
-  content: "(op : (('T, 'U) => ()))"
+  content: "(op : (('T, 'U) => Unit))"
   types:
   - name: op
-    summary: >2
-       An operation whose input is a pair.
+    summary: An operation whose input is a pair.
     isOperation: true
     input:
       types:
@@ -32,15 +32,15 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
 output:
-  content: ('T -> ('U => ()))
+  content: ('T -> ('U => Unit))
   types:
-  - summary: >2
-       An operation which accepts the first element of a pair and returns
-       an operation which accepts as its input the second element of the
-       original operation's input.
+  - summary: >-
+      An operation which accepts the first element of a pair and returns
+      an operation which accepts as its input the second element of the
+      original operation's input.
     isFunction: true
     input:
       types:
@@ -55,10 +55,11 @@ output:
             isLocal: true
         output:
           types:
-          - uid: ()
-            isPrimitive: true
+          - isPrimitive: true
+            uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: ' The type of the first component of a function defined on pairs. '
+  summary: The type of the first component of a function defined on pairs.
 - uid: "'U"
-  summary: " The type of the second component of a function defined on pairs. \n"
+  summary: The type of the second component of a function defined on pairs.
+...

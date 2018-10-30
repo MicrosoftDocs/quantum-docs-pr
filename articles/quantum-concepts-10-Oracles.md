@@ -32,6 +32,10 @@ $$
 
 Now $O = O^\dagger$ by construction, thus we have resolved both of the earlier problems.
 
+> [!TIP]
+> To see that $O = O^{\dagger}$, note that $O^2 = \boldone$ since $a \oplus b \oplus b = a$ for all $a, b \in \{0, 1\}$.
+> As a result, $O \ket{x} \ket{y \oplus f(x)} = \ket{x} \ket{y \oplus f(x) \oplus f(x)} = \ket{x} \ket{y}$.
+
 Importantly, defining an oracle this way for each computational basis state $\ket{x}\ket{y}$ also defines how $O$ acts for any other state.
 This follows immediately from the fact that $O$, like all quantum operations, is linear in the state that it acts on.
 Consider the Hadamard operation, for instance, which is defined by $H \ket{0} = \ket{+}$ and $H \ket{1} = \ket{-}$.

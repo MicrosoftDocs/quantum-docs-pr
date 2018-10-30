@@ -3,33 +3,33 @@ uid: microsoft.quantum.canon.applyreversedopbigendian
 name: ApplyReversedOpBigEndian
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Applies an operation that takes big-endian input to a register encoding
-   an unsigned integer using little-endian format.
-syntax: 'operation ApplyReversedOpBigEndian (op : (BigEndian => ()), register : LittleEndian) : ()'
+summary: >-
+  Applies an operation that takes big-endian input to a register encoding
+  an unsigned integer using little-endian format.
+syntax: 'operation ApplyReversedOpBigEndian (op : (Microsoft.Quantum.Canon.BigEndian => Unit), register : Microsoft.Quantum.Canon.LittleEndian) : Unit'
 input:
-  content: '(op : (BigEndian => ()), register : LittleEndian)'
+  content: '(op : (Microsoft.Quantum.Canon.BigEndian => Unit), register : Microsoft.Quantum.Canon.LittleEndian)'
   types:
   - name: op
-    summary: ' Operation that acts on big-endian register'
+    summary: Operation that acts on big-endian register
     isOperation: true
     input:
       types:
       - uid: microsoft.quantum.canon.bigendian
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
   - name: register
-    summary: >2
-       little-endian register to be transformed
+    summary: little-endian register to be transformed
     uid: microsoft.quantum.canon.littleendian
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
 seeAlso:
 - microsoft.quantum.canon.applyreversedopbigendiana
 - microsoft.quantum.canon.applyreversedopbigendianc
 - microsoft.quantum.canon.applyreversedopbigendianca
+...

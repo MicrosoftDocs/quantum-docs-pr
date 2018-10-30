@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.xor
+name: XOR
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: This computes the exclusive-OR of two bits.
+syntax: 'function XOR (bit1 : Bool, bit2 : Bool) : Bool'
+input:
+  content: '(bit1 : Bool, bit2 : Bool)'
+  types:
+  - name: bit1
+    isPrimitive: true
+    uid: Bool
+  - name: bit2
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Bool
+  types:
+  - isPrimitive: true
+    uid: Bool
+...

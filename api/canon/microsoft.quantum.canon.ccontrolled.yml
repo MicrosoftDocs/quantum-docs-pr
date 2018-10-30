@@ -3,16 +3,15 @@ uid: microsoft.quantum.canon.ccontrolled
 name: CControlled
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given an operation op, returns a new operation which
-   applies the op if a classical control bit is true. If false, nothing happens.
-syntax: "function CControlled (op : ('T => ())) : ((Bool, 'T) => ())"
+summary: >-
+  Given an operation op, returns a new operation which
+  applies the op if a classical control bit is true. If false, nothing happens.
+syntax: "function CControlled (op : ('T => Unit)) : ((Bool, 'T) => Unit)"
 input:
-  content: "(op : ('T => ()))"
+  content: "(op : ('T => Unit))"
   types:
   - name: op
-    summary: >2
-       An operation to be conditionally applied.
+    summary: An operation to be conditionally applied.
     isOperation: true
     input:
       types:
@@ -20,27 +19,28 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
 output:
-  content: ((Bool, 'T) => ())
+  content: ((Bool, 'T) => Unit)
   types:
-  - summary: " A new operation which is op if the classical control bit is true. \n"
+  - summary: A new operation which is op if the classical control bit is true.
     isOperation: true
     input:
       types:
-      - uid: Bool
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Bool
       - uid: "'T"
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: The input type of the operation to be conditionally applied.
 seeAlso:
 - microsoft.quantum.canon.controlledc
 - microsoft.quantum.canon.controlleda
 - microsoft.quantum.canon.controlledca
-typeParameters:
-- uid: "'T"
-  summary: " The input type of the operation to be conditionally applied. \n"
+...

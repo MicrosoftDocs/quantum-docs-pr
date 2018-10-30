@@ -3,15 +3,13 @@ uid: microsoft.quantum.canon.fst
 name: Fst
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given a pair, returns its first element.
+summary: Given a pair, returns its first element.
 syntax: "function Fst (pair : ('T, 'U)) : 'T"
 input:
   content: "(pair : ('T, 'U))"
   types:
   - name: pair
-    summary: >2
-       A tuple with two elements.
+    summary: A tuple with two elements.
     types:
     - uid: "'T"
       isLocal: true
@@ -20,12 +18,12 @@ input:
 output:
   content: "'T"
   types:
-  - summary: ' The first element of `pair`.'
+  - summary: The first element of `pair`.
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: " The type of the pair's first member."
+  summary: The type of the pair's first member.
 - uid: "'U"
-  summary: >2
-     The type of the pair's second member.
+  summary: The type of the pair's second member.
+...

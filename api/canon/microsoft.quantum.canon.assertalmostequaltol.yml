@@ -3,29 +3,28 @@ uid: microsoft.quantum.canon.assertalmostequaltol
 name: AssertAlmostEqualTol
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Asserts that a classical floating point variable has the expected value up to a given
-   absolute tolerance.
-syntax: 'function AssertAlmostEqualTol (actual : Double, expected : Double, tolerance : Double) : ()'
+summary: >-
+  Asserts that a classical floating point variable has the expected value up to a given
+  absolute tolerance.
+syntax: 'function AssertAlmostEqualTol (actual : Double, expected : Double, tolerance : Double) : Unit'
 input:
   content: '(actual : Double, expected : Double, tolerance : Double)'
   types:
   - name: actual
-    summary: >2
-       The number to be checked.
-    uid: Double
+    summary: The number to be checked.
     isPrimitive: true
+    uid: Double
   - name: expected
-    summary: >2
-       The expected value.
-    uid: Double
+    summary: The expected value.
     isPrimitive: true
+    uid: Double
   - name: tolerance
-    summary: ' Absolute tolerance on the difference between actual and expected.'
+    summary: Absolute tolerance on the difference between actual and expected.
+    isPrimitive: true
     uid: Double
-    isPrimitive: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
+...

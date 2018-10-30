@@ -12,13 +12,13 @@ ms.topic: article
 ## Installing Visual Studio Code and the .NET Core SDK (Windows 10, macOS, Linux) ##
 
 The Quantum Development Kit uses the .NET Core SDK (2.0 or later) to make it easy to create, build, and run Q# projects from the command line.
-We recommend using the Quantum Development Kit together with Visual Studio Code.
+We recommend using the Quantum Development Kit together with Visual Studio Code (version 1.26.0 or later).
 
 1. Download and install the **.NET Core SDK** 2.0 or later from the [.NET downloads page](https://www.microsoft.com/net/download).
 
 2. Once the .NET Core SDK is installed, run the following command in your favorite command line (e.g.: PowerShell or Bash) to download the latest templates for creating new Q# applications and libraries:
    ```Bash
-   dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.2.1809.701-preview"
+   dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.3.1810.2508-preview"
    ```
 
 3. Go to the [Visual Studio Code website](https://code.visualstudio.com/).
@@ -37,6 +37,11 @@ We recommend using the Quantum Development Kit together with Visual Studio Code.
 > Press **Ctrl+P** or **⌘+P** from within Visual Studio Code, type or paste `ext install quantum.quantum-devkit-vscode`, and press **Enter**.
 
 You should now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
+
+## Common Issues ##
+
+- Depending on your network configuration, when using the Microsoft Quantum Development Kit for Visual Studio Code on Windows 10, you may see a popup from Windows Defender asking you to approve network access for the extension.
+  The Visual Studio Code extension uses network access on the local machine to send information between Visual Studio Code and the Q# compiler framework, allowing for diagnostic information to be reported immediately through intelliSense.
 
 ## Optional Dependencies ##
 
@@ -75,7 +80,7 @@ In this section you will clone the quantum samples & libraries repository, and r
 
 4. From the terminal (standalone, or the embedded terminal in Visual Studio Code), run the teleport sample program:
   ```bash
-  cd Samples/Teleportation/
+  cd Samples/src/Teleportation/
   dotnet run
   ```
 

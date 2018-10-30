@@ -3,24 +3,24 @@ uid: microsoft.quantum.canon.witha
 name: WithA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given operations implementing operators $U$ and $V$, performs the
-   operation $UVU^{\dagger}$ on a target. That is, this operation
-   conjugates $V$ with $U$.
-   The modifier 'A' indicates that the inner operation is adjointable.
-remarks: >2
-   The outer operation is always assumed to be adjointable, but does not
-   need to be controllable in order for the combined operation to be
-   controllable.
-syntax: "operation WithA (outerOperation : ('T => () : Adjoint), innerOperation : ('T => () : Adjoint), target : 'T) : ()"
+summary: >-
+  Given operations implementing operators $U$ and $V$, performs the
+  operation $UVU^{\dagger}$ on a target. That is, this operation
+  conjugates $V$ with $U$.
+  The modifier 'A' indicates that the inner operation is adjointable.
+remarks: >-
+  The outer operation is always assumed to be adjointable, but does not
+  need to be controllable in order for the combined operation to be
+  controllable.
+syntax: "operation WithA (outerOperation : ('T => Unit : Adjoint), innerOperation : ('T => Unit : Adjoint), target : 'T) : Unit"
 input:
-  content: "(outerOperation : ('T => () : Adjoint), innerOperation : ('T => () : Adjoint), target : 'T)"
+  content: "(outerOperation : ('T => Unit : Adjoint), innerOperation : ('T => Unit : Adjoint), target : 'T)"
   types:
   - name: outerOperation
-    summary: >2-
-       The operation $U$ that should be used to conjugate $V$. Note that the
-       outer operation $U$ needs to be adjointable, but does not
-       need to be controllable.
+    summary: >-
+      The operation $U$ that should be used to conjugate $V$. Note that the
+      outer operation $U$ needs to be adjointable, but does not
+      need to be controllable.
     isOperation: true
     input:
       types:
@@ -28,12 +28,12 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Adjoint
   - name: innerOperation
-    summary: ' The operation $V$ being conjugated.'
+    summary: The operation $V$ being conjugated.
     isOperation: true
     input:
       types:
@@ -41,23 +41,24 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: *o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
   - name: target
-    summary: >2
-       The input to be provided to the outer and inner operations.
+    summary: The input to be provided to the outer and inner operations.
     uid: "'T"
     isLocal: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.with
-functors: *o0
+  - isPrimitive: true
+    uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: >2
-     The target on which each of the inner and outer operations act.
+  summary: The target on which each of the inner and outer operations act.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.with
+...

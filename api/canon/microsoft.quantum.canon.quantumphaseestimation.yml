@@ -3,35 +3,36 @@ uid: microsoft.quantum.canon.quantumphaseestimation
 name: QuantumPhaseEstimation
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Performs the quantum phase estimation algorithm for a given oracle U and targetState,
-   reading the phase into a big-endian quantum register.
-syntax: 'operation QuantumPhaseEstimation (oracle : DiscreteOracle, targetState : Qubit[], controlRegister : BigEndian) : ()'
+summary: >-
+  Performs the quantum phase estimation algorithm for a given oracle U and targetState,
+  reading the phase into a big-endian quantum register.
+syntax: 'operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Canon.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Canon.BigEndian) : Unit'
 input:
-  content: '(oracle : DiscreteOracle, targetState : Qubit[], controlRegister : BigEndian)'
+  content: '(oracle : Microsoft.Quantum.Canon.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Canon.BigEndian)'
   types:
   - name: oracle
-    summary: ' An operation implementing $U^m$ for given integer powers m.'
+    summary: An operation implementing $U^m$ for given integer powers m.
     uid: microsoft.quantum.canon.discreteoracle
   - name: targetState
-    summary: >2-
-       A quantum register representing the state $\ket{\phi}$ acted on by $U$. If $\ket{\phi}$ is an
-       eigenstate of $U$, $U\ket{\phi} = e^{i\phi} \ket{\phi}$ for $\phi \in [0, 2\pi)$ an unknown phase.
-    uid: Qubit
-    isPrimitive: true
+    summary: >-
+      A quantum register representing the state $\ket{\phi}$ acted on by $U$. If $\ket{\phi}$ is an
+      eigenstate of $U$, $U\ket{\phi} = e^{i\phi} \ket{\phi}$ for $\phi \in [0, 2\pi)$ an unknown phase.
     isArray: true
+    isPrimitive: true
+    uid: Qubit
   - name: controlRegister
-    summary: >2-
-       A big-endian representation integer register that can be used
-       to control the provided oracle, and that will contain the a representation of $\phi$ following
-       the application of this operation. The controlRegister is assumed to start in the initial
-       state $\ket{00\cdots 0}$, where the length of the register indicates the desired precision.
+    summary: >-
+      A big-endian representation integer register that can be used
+      to control the provided oracle, and that will contain the a representation of $\phi$ following
+      the application of this operation. The controlRegister is assumed to start in the initial
+      state $\ket{00\cdots 0}$, where the length of the register indicates the desired precision.
     uid: microsoft.quantum.canon.bigendian
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+...

@@ -3,18 +3,20 @@ uid: microsoft.quantum.canon.abssquaredcomplexpolar
 name: AbsSquaredComplexPolar
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: " Returns the squared absolute value of a complex number type \n `ComplexPolar`.\n"
-syntax: 'function AbsSquaredComplexPolar (input : ComplexPolar) : Double'
+summary: >-
+  Returns the squared absolute value of a complex number type
+  `ComplexPolar`.
+syntax: 'function AbsSquaredComplexPolar (input : Microsoft.Quantum.Canon.ComplexPolar) : Double'
 input:
-  content: '(input : ComplexPolar)'
+  content: '(input : Microsoft.Quantum.Canon.ComplexPolar)'
   types:
   - name: input
-    summary: >2
-       Complex number $c = r e^{i t}$.
+    summary: Complex number $c = r e^{i t}$.
     uid: microsoft.quantum.canon.complexpolar
 output:
   content: Double
   types:
-  - summary: ' Squared absolute value $|c|^2 = r^2$.'
-    uid: Double
+  - summary: Squared absolute value $|c|^2 = r^2$.
     isPrimitive: true
+    uid: Double
+...

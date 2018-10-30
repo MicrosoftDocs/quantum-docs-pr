@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.pauliblockencoding
+name: PauliBlockEncoding
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Creates a block-encoding unitary $U$ of the Hamiltonian $H=\sum_{j}\alpha_j P_j$ described by a
+  sum of Pauli terms $P_j$, each with real coefficient $\alpha_j$.
+remarks: >-
+  This is obtained by preparing and unpreparing the state $\sum_{j}\sqrt{\alpha_j/\alpha}\ket{j}$,
+  and constructing a multiply-controlled unitary
+  <xref:microsoft.quantum.canon.statepreparationpositivecoefficients> and
+  <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>.
+syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Canon.GeneratorSystem) : (Double, Microsoft.Quantum.Canon.BlockEncodingReflection)'
+input:
+  content: '(generatorSystem : Microsoft.Quantum.Canon.GeneratorSystem)'
+  types:
+  - name: generatorSystem
+    summary: A `GeneratorSystem` that describes $H$ as a sum of Pauli terms
+    uid: microsoft.quantum.canon.generatorsystem
+output:
+  content: (Double, Microsoft.Quantum.Canon.BlockEncodingReflection)
+  types:
+  - summary: >-
+      ## First parameter
+
+      The one-norm of coefficients $\alpha=\sum_{j}|\alpha_j|$.
+
+      ## Second parameter
+
+      A `BlockEncodingReflection` unitary $U$ of the Hamiltonian $U$. As this unitary
+      satisfies $U^2 = I$, it is also a reflection.
+    types:
+    - isPrimitive: true
+      uid: Double
+    - uid: microsoft.quantum.canon.blockencodingreflection
+...

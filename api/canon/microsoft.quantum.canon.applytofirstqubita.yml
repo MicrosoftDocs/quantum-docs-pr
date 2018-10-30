@@ -3,35 +3,38 @@ uid: microsoft.quantum.canon.applytofirstqubita
 name: ApplyToFirstQubitA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Applies operation op to the first qubit in the register.\n The modifier 'A' indicates that the operation is adjointable. "
-syntax: 'operation ApplyToFirstQubitA (op : (Qubit => () : Adjoint), register : Qubit[]) : ()'
+summary: >-
+  Applies operation op to the first qubit in the register.
+  The modifier 'A' indicates that the operation is adjointable.
+syntax: 'operation ApplyToFirstQubitA (op : (Qubit => Unit : Adjoint), register : Qubit[]) : Unit'
 input:
-  content: '(op : (Qubit => () : Adjoint), register : Qubit[])'
+  content: '(op : (Qubit => Unit : Adjoint), register : Qubit[])'
   types:
   - name: op
-    summary: ' An operation to be applied to the first qubit'
+    summary: An operation to be applied to the first qubit
     isOperation: true
     input:
       types:
-      - uid: Qubit
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Qubit
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Adjoint
   - name: register
-    summary: >2
-       Qubit array to the first qubit of which the operation is applied
-    uid: Qubit
-    isPrimitive: true
+    summary: Qubit array to the first qubit of which the operation is applied
     isArray: true
-output:
-  content: ()
-  types:
-  - uid: ()
     isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
 seeAlso:
 - microsoft.quantum.canon.applytofirstqubit
-functors: *o0
+...

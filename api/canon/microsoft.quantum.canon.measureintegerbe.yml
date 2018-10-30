@@ -3,18 +3,18 @@ uid: microsoft.quantum.canon.measureintegerbe
 name: MeasureIntegerBE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Version of MeasureInteger for BigEndian register
-syntax: 'operation MeasureIntegerBE (target : BigEndian) : Int'
+summary: Version of MeasureInteger for BigEndian register
+syntax: 'operation MeasureIntegerBE (target : Microsoft.Quantum.Canon.BigEndian) : Int'
 input:
-  content: '(target : BigEndian)'
+  content: '(target : Microsoft.Quantum.Canon.BigEndian)'
   types:
   - name: target
     uid: microsoft.quantum.canon.bigendian
 output:
   content: Int
   types:
-  - uid: Int
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Int
 seeAlso:
 - microsoft.quantum.canon.measureinteger
+...

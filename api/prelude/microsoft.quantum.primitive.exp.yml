@@ -3,40 +3,42 @@ uid: microsoft.quantum.primitive.exp
 name: Exp
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >2
-   Applies the exponential of a multi-qubit Pauli operator
-   \begin{align}
-       e^{i \theta [P_0 \otimes P_1 \cdots P_N]},
-   \end{align}
-   where $P_i$ is the $i$th element of `paulis`, and where
-   $N = $`Length(paulis)`.
-syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : ()'
+summary: >-
+  Applies the exponential of a multi-qubit Pauli operator.
+
+  \begin{align}
+  e^{i \theta [P_0 \otimes P_1 \cdots P_N]},
+  \end{align}
+  where $P_i$ is the $i$th element of `paulis`, and where
+  $N = $`Length(paulis)`.
+syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'
   types:
   - name: paulis
-    summary: >2-
-       Array of single-qubit Pauli values indicating the tensor product
-       factors on each qubit.
+    summary: >-
+      Array of single-qubit Pauli values indicating the tensor product
+      factors on each qubit.
+    isArray: true
+    isPrimitive: true
     uid: Pauli
-    isPrimitive: true
-    isArray: true
   - name: theta
-    summary: >2-
-       Angle about the given multiqubit Pauli operator by which the
-       target register is to be rotated.
+    summary: >-
+      Angle about the given multiqubit Pauli operator by which the
+      target register is to be rotated.
+    isPrimitive: true
     uid: Double
-    isPrimitive: true
   - name: qubits
-    summary: ' Register to apply the given rotation to.'
-    uid: Qubit
-    isPrimitive: true
+    summary: Register to apply the given rotation to.
     isArray: true
-output:
-  content: ()
-  types:
-  - uid: ()
     isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+...

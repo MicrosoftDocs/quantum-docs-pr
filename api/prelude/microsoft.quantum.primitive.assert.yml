@@ -3,42 +3,44 @@ uid: microsoft.quantum.primitive.assert
 name: Assert
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: " Asserts that measuring the given qubits in the given Pauli basis will\n always have the given result. \n"
-remarks: >2
-   Note that the Adjoint and Controlled versions of this operation will not
-   check the condition.
-syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : ()'
+summary: >-
+  Asserts that measuring the given qubits in the given Pauli basis will
+  always have the given result.
+remarks: >-
+  Note that the Adjoint and Controlled versions of this operation will not
+  check the condition.
+syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
   types:
   - name: bases
-    summary: >2-
-       A measurement effect to assert the probability of, expressed as a
-       multi-qubit Pauli operator.
+    summary: >-
+      A measurement effect to assert the probability of, expressed as a
+      multi-qubit Pauli operator.
+    isArray: true
+    isPrimitive: true
     uid: Pauli
-    isPrimitive: true
-    isArray: true
   - name: qubits
-    summary: ' A register on which to make the assertion.'
-    uid: Qubit
-    isPrimitive: true
+    summary: A register on which to make the assertion.
     isArray: true
+    isPrimitive: true
+    uid: Qubit
   - name: result
-    summary: ' The expected result of `Measure(bases, qubits)`.'
+    summary: The expected result of `Measure(bases, qubits)`.
+    isPrimitive: true
     uid: Result
-    isPrimitive: true
   - name: msg
-    summary: >2
-       A message to be reported if the assertion fails.
+    summary: A message to be reported if the assertion fails.
+    isPrimitive: true
     uid: String
-    isPrimitive: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.primitive.assertprob
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.primitive.assertprob
+...

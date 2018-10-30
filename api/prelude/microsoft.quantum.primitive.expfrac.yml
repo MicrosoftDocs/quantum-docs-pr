@@ -3,47 +3,49 @@ uid: microsoft.quantum.primitive.expfrac
 name: ExpFrac
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >2
-   Applies the exponential of a multi-qubit Pauli operator
-   with an argument given by a dyadic fraction,
-   \begin{align}
-       e^{i \theta \pi k [P_0 \otimes P_1 \cdots P_N] / 2^n},
-   \end{align}
-   where $P_i$ is the $i$th element of `paulis`, and where
-   $N = $`Length(paulis)`.
-syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : ()'
+summary: >-
+  Applies the exponential of a multi-qubit Pauli operator
+  with an argument given by a dyadic fraction.
+
+  \begin{align}
+  e^{i \theta \pi k [P_0 \otimes P_1 \cdots P_N] / 2^n},
+  \end{align}
+  where $P_i$ is the $i$th element of `paulis`, and where
+  $N = $`Length(paulis)`.
+syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
   types:
   - name: paulis
-    summary: >2-
-       Array of single-qubit Pauli values indicating the tensor product
-       factors on each qubit.
+    summary: >-
+      Array of single-qubit Pauli values indicating the tensor product
+      factors on each qubit.
+    isArray: true
+    isPrimitive: true
     uid: Pauli
-    isPrimitive: true
-    isArray: true
   - name: numerator
-    summary: >2-
-       Numerator ($k$) in the dyadic fraction representation of the angle
-       by which the qubit register is to be rotated.
-    uid: Int
+    summary: >-
+      Numerator ($k$) in the dyadic fraction representation of the angle
+      by which the qubit register is to be rotated.
     isPrimitive: true
+    uid: Int
   - name: power
-    summary: >2-
-       Power of two ($n$) specifying the denominator of the angle by which
-       the qubit register is to be rotated.
+    summary: >-
+      Power of two ($n$) specifying the denominator of the angle by which
+      the qubit register is to be rotated.
+    isPrimitive: true
     uid: Int
-    isPrimitive: true
   - name: qubits
-    summary: ' Register to apply the given rotation to.'
-    uid: Qubit
-    isPrimitive: true
+    summary: Register to apply the given rotation to.
     isArray: true
-output:
-  content: ()
-  types:
-  - uid: ()
     isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+...

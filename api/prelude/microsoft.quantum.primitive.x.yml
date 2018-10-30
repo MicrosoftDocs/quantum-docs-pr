@@ -3,28 +3,30 @@ uid: microsoft.quantum.primitive.x
 name: X
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >2
-   Applies the Pauli $X$ gate,
-   \begin{align}
-       \sigma_x \mathrel{:=}
-       \begin{bmatrix}
-           0 & 1 \\\\
-           1 & 0
-       \end{bmatrix}.
-   \end{align}
-syntax: 'operation X (qubit : Qubit) : ()'
+summary: >-
+  Applies the Pauli $X$ gate.
+
+  \begin{align}
+  \sigma_x \mathrel{:=}
+  \begin{bmatrix}
+  0 & 1 \\\\
+  1 & 0
+  \end{bmatrix}.
+  \end{align}
+syntax: 'operation X (qubit : Qubit) : Unit'
 input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    summary: ' Qubit to which the gate should be applied.'
+    summary: Qubit to which the gate should be applied.
+    isPrimitive: true
     uid: Qubit
-    isPrimitive: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+...

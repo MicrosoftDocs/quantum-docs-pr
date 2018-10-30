@@ -3,23 +3,23 @@ uid: microsoft.quantum.canon.applytoeach
 name: ApplyToEach
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Applies a single-qubit operation to each element in a register.
-remarks: >2
+summary: Applies a single-qubit operation to each element in a register.
+remarks: >-
+  ## Example
 
-  ### Examples
-   Prepare a three-qubit $\ket{+}$ state:
-   ```Q#
-   using (register = Qubit[3]) {
-       ApplyToEach(H, register);
-   }
-   ```
-syntax: "operation ApplyToEach (singleElementOperation : ('T => ()), register : 'T[]) : ()"
+  Prepare a three-qubit $\ket{+}$ state:
+
+  ```Q#
+  using (register = Qubit[3]) {
+      ApplyToEach(H, register);
+  }
+  ```
+syntax: "operation ApplyToEach (singleElementOperation : ('T => Unit), register : 'T[]) : Unit"
 input:
-  content: "(singleElementOperation : ('T => ()), register : 'T[])"
+  content: "(singleElementOperation : ('T => Unit), register : 'T[])"
   types:
   - name: singleElementOperation
-    summary: ' Operation to apply to each qubit.'
+    summary: Operation to apply to each qubit.
     isOperation: true
     input:
       types:
@@ -27,24 +27,23 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
   - name: register
-    summary: >2
-       Array of qubits on which to apply the given operation.
+    summary: Array of qubits on which to apply the given operation.
+    isArray: true
     uid: "'T"
     isLocal: true
-    isArray: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: The target on which the operation acts.
 seeAlso:
 - microsoft.quantum.canon.applytoeachc
 - microsoft.quantum.canon.applytoeacha
 - microsoft.quantum.canon.applytoeachca
-typeParameters:
-- uid: "'T"
-  summary: >2
-     The target on which the operation acts.
+...

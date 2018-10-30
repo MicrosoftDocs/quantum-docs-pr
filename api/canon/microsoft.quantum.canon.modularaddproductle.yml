@@ -3,45 +3,46 @@ uid: microsoft.quantum.canon.modularaddproductle
 name: ModularAddProductLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Implements the map
-   $$
-   \begin{align}
-       \ket{x} \ket{b} \mapsto \ket{x} \ket{b + a \cdot x \operatorname{mod} N}
-   \end{align}
-   $$
-   for a given modulus $N$, constant multiplier $a$, and summand $y$.
-remarks: >2-
-   - For the circuit diagram and explanation see Figure 6 on [Page 7
-          of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=7)
-   - This operation corresponds to CMULT(a)MOD(N) in
-     [arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
-syntax: 'operation ModularAddProductLE (constMultiplier : Int, modulus : Int, multiplier : LittleEndian, summand : LittleEndian) : ()'
+summary: >-
+  Implements the map
+  $$
+  \begin{align}
+  \ket{x} \ket{b} \mapsto \ket{x} \ket{b + a \cdot x \operatorname{mod} N}
+  \end{align}
+  $$
+  for a given modulus $N$, constant multiplier $a$, and summand $y$.
+remarks: >-
+  - For the circuit diagram and explanation see Figure 6 on [Page 7
+    of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=7)
+  - This operation corresponds to CMULT(a)MOD(N) in
+    [arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
+syntax: 'operation ModularAddProductLE (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Canon.LittleEndian, summand : Microsoft.Quantum.Canon.LittleEndian) : Unit'
 input:
-  content: '(constMultiplier : Int, modulus : Int, multiplier : LittleEndian, summand : LittleEndian)'
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Canon.LittleEndian, summand : Microsoft.Quantum.Canon.LittleEndian)'
   types:
   - name: constMultiplier
-    uid: Int
     isPrimitive: true
+    uid: Int
   - name: modulus
-    summary: ' The modulus $N$ which addition and multiplication is taken with respect to.'
-    uid: Int
+    summary: The modulus $N$ which addition and multiplication is taken with respect to.
     isPrimitive: true
+    uid: Int
   - name: multiplier
-    summary: >2-
-       A quantum register representing an unsigned integer whose value is to
-       be added to each basis state label of `summand`.
+    summary: >-
+      A quantum register representing an unsigned integer whose value is to
+      be added to each basis state label of `summand`.
     uid: microsoft.quantum.canon.littleendian
   - name: summand
-    summary: >2
-       A quantum register representing an unsigned integer to use as the target
-       for this operation.
+    summary: >-
+      A quantum register representing an unsigned integer to use as the target
+      for this operation.
     uid: microsoft.quantum.canon.littleendian
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+...

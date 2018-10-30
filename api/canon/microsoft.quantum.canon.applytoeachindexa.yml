@@ -3,42 +3,43 @@ uid: microsoft.quantum.canon.applytoeachindexa
 name: ApplyToEachIndexA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Applies a single-qubit operation to each indexed element in a register.
-   The modifier 'A' indicates that the single-qubit operation is adjointable.
-syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => () : Adjoint), register : 'T[]) : ()"
+summary: >-
+  Applies a single-qubit operation to each indexed element in a register.
+  The modifier 'A' indicates that the single-qubit operation is adjointable.
+syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => Unit : Adjoint), register : 'T[]) : Unit"
 input:
-  content: "(singleElementOperation : ((Int, 'T) => () : Adjoint), register : 'T[])"
+  content: "(singleElementOperation : ((Int, 'T) => Unit : Adjoint), register : 'T[])"
   types:
   - name: singleElementOperation
-    summary: ' Operation to apply to each qubit.'
+    summary: Operation to apply to each qubit.
     isOperation: true
     input:
       types:
-      - uid: Int
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Int
       - uid: "'T"
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Adjoint
   - name: register
-    summary: >2
-       Array of qubits on which to apply the given operation.
+    summary: Array of qubits on which to apply the given operation.
+    isArray: true
     uid: "'T"
     isLocal: true
-    isArray: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.applytoeachindex
-functors: *o0
+  - isPrimitive: true
+    uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: " The target on which each of the operations acts. \n"
+  summary: The target on which each of the operations acts.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applytoeachindex
+...

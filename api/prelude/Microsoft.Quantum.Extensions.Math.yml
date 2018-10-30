@@ -3,96 +3,66 @@ uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
 - uid: microsoft.quantum.extensions.math.absd
-  summary: >2
-     Returns the absolute value of a double-precision floating-point number.
+  summary: Returns the absolute value of a double-precision floating-point number.
 - uid: microsoft.quantum.extensions.math.absi
-  summary: >2
-     Returns the absolute value of an integer.
+  summary: Returns the absolute value of an integer.
 - uid: microsoft.quantum.extensions.math.arccos
-  summary: >2
-     Returns the angle whose cosine is the specified number.
+  summary: Returns the angle whose cosine is the specified number.
 - uid: microsoft.quantum.extensions.math.arcsin
-  summary: >2
-     Returns the angle whose sine is the specified number.
+  summary: Returns the angle whose sine is the specified number.
 - uid: microsoft.quantum.extensions.math.arctan
-  summary: >2
-     Returns the angle whose tangent is the specified number.
+  summary: Returns the angle whose tangent is the specified number.
 - uid: microsoft.quantum.extensions.math.arctan2
-  summary: >2
-     Returns the angle whose tangent is the quotient of two specified numbers.
+  summary: Returns the angle whose tangent is the quotient of two specified numbers.
 - uid: microsoft.quantum.extensions.math.ceiling
-  summary: >2
-     Returns the smallest integer greater than or equal to the specified number.
+  summary: Returns the smallest integer greater than or equal to the specified number.
 - uid: microsoft.quantum.extensions.math.cos
-  summary: >2
-     Returns the cosine of the specified angle.
+  summary: Returns the cosine of the specified angle.
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: >2
-     Returns the cosine of the specified angle.
+  summary: Returns the cosine of the specified angle.
 - uid: microsoft.quantum.extensions.math.e
-  summary: >2
-     Returns the natural logarithmic base $e$.
+  summary: Returns the natural logarithmic base $e$.
 - uid: microsoft.quantum.extensions.math.expd
-  summary: >2
-     Returns $e$ raised to the specified power.
+  summary: Returns $e$ raised to the specified power.
 - uid: microsoft.quantum.extensions.math.floor
-  summary: >2
-     Returns the largest integer less than or equal to the specified number.
+  summary: Returns the largest integer less than or equal to the specified number.
 - uid: microsoft.quantum.extensions.math.ieeeremainder
-  summary: >2
-     Returns the remainder resulting from the division of a specified number by another specified number.
+  summary: Returns the remainder resulting from the division of a specified number by another specified number.
 - uid: microsoft.quantum.extensions.math.log
-  summary: >2
-     Returns the natural (base $e$) logarithm of a specified number.
+  summary: Returns the natural (base $e$) logarithm of a specified number.
 - uid: microsoft.quantum.extensions.math.log10
-  summary: >2
-     Returns the base 10 logarithm of a specified number.
+  summary: Returns the base 10 logarithm of a specified number.
 - uid: microsoft.quantum.extensions.math.maxd
-  summary: >2
-     Returns the larger of two specified numbers.
+  summary: Returns the larger of two specified numbers.
 - uid: microsoft.quantum.extensions.math.maxi
-  summary: >2
-     Returns the larger of two specified numbers.
+  summary: Returns the larger of two specified numbers.
 - uid: microsoft.quantum.extensions.math.mind
-  summary: >2
-     Returns the smaller of two specified numbers.
+  summary: Returns the smaller of two specified numbers.
 - uid: microsoft.quantum.extensions.math.mini
-  summary: >2
-     Returns the smaller of two specified numbers.
+  summary: Returns the smaller of two specified numbers.
 - uid: microsoft.quantum.extensions.math.pi
-  summary: >2
-     Represents the ratio of the circumference of a circle to its diameter, specified by the constant, π.
+  summary: Represents the ratio of the circumference of a circle to its diameter, specified by the constant, π.
 - uid: microsoft.quantum.extensions.math.powd
-  summary: >2
-     Returns the number x raised to the power y.
+  summary: Returns the number x raised to the power y.
 - uid: microsoft.quantum.extensions.math.round
-  summary: >2
-     Rounds a value to the nearest integer or to the specified number of fractional digits.
+  summary: Rounds a value to the nearest integer or to the specified number of fractional digits.
 - uid: microsoft.quantum.extensions.math.signd
-  summary: >2
-     Returns an integer that indicates the sign of a number.
+  summary: Returns an integer that indicates the sign of a number.
 - uid: microsoft.quantum.extensions.math.signi
-  summary: >2
-     Returns an integer that indicates the sign of a number.
+  summary: Returns an integer that indicates the sign of a number.
 - uid: microsoft.quantum.extensions.math.sin
-  summary: >2
-     Returns the sine of the specified angle.
+  summary: Returns the sine of the specified angle.
 - uid: microsoft.quantum.extensions.math.sinh
-  summary: >2
-     Returns the hyperbolic sine of the specified angle.
+  summary: Returns the hyperbolic sine of the specified angle.
 - uid: microsoft.quantum.extensions.math.sqrt
-  summary: >2
-     Returns the square root of a specified number.
+  summary: Returns the square root of a specified number.
 - uid: microsoft.quantum.extensions.math.tan
-  summary: >2
-     Returns the tangent of the specified angle.
+  summary: Returns the tangent of the specified angle.
 - uid: microsoft.quantum.extensions.math.tanh
-  summary: >2
-     Returns the hyperbolic tangent of the specified angle.
+  summary: Returns the hyperbolic tangent of the specified angle.
 - uid: microsoft.quantum.extensions.math.truncate
-  summary: >2
-     Calculates the integral part of a number.
-operations: []
+  summary: Calculates the integral part of a number.
 newtypes:
 - uid: microsoft.quantum.extensions.math.complex
-  summary: ' Represents a complex number by its real and imaginary components.'
+  summary: Represents a complex number by its real and imaginary components.
+...

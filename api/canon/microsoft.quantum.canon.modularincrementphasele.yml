@@ -3,32 +3,37 @@ uid: microsoft.quantum.canon.modularincrementphasele
 name: ModularIncrementPhaseLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y\n Then the operation performs the following transformation: \n |y⟩ ↦ |y+a (mod N)⟩\n Integers are encoded in little-endian format in QFT basis\n"
-remarks: >2-
-   Assumes that `target` has the highest bit set to 0.
-   Also assumes that the value of target is less than N.
+summary: >-
+  Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
+  Then the operation performs the following transformation:
+  |y⟩ ↦ |y+a (mod N)⟩
+  Integers are encoded in little-endian format in QFT basis
+remarks: >-
+  Assumes that `target` has the highest bit set to 0.
+  Also assumes that the value of target is less than N.
 
-   For the circuit diagram and explanation see Figure 5 on [Page 5
-   of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5).
-syntax: 'operation ModularIncrementPhaseLE (increment : Int, modulus : Int, target : PhaseLittleEndian) : ()'
+  For the circuit diagram and explanation see Figure 5 on [Page 5
+  of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5).
+syntax: 'operation ModularIncrementPhaseLE (increment : Int, modulus : Int, target : Microsoft.Quantum.Canon.PhaseLittleEndian) : Unit'
 input:
-  content: '(increment : Int, modulus : Int, target : PhaseLittleEndian)'
+  content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Canon.PhaseLittleEndian)'
   types:
   - name: increment
-    uid: Int
     isPrimitive: true
+    uid: Int
   - name: modulus
-    uid: Int
     isPrimitive: true
+    uid: Int
   - name: target
     uid: microsoft.quantum.canon.phaselittleendian
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.modularincrementle
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.canon.modularincrementle
+...

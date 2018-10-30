@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.prepareuniformsuperposition
+name: PrepareUniformSuperposition
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  This unitary $U$ creates a uniform superposition over all number states
+  $0$ to $M-1$, given an input state $\ket{0\cdots 0}$. In other words,
+  $$
+  \begin{align}
+  U\ket{0}=\frac{1}{\sqrt{M}}\sum_{j=1}^{M-1}\ket{j}.
+  \end{align}
+  $$.
+syntax: 'operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Canon.BigEndian) : Unit'
+input:
+  content: '(nIndices : Int, indexRegister : Microsoft.Quantum.Canon.BigEndian)'
+  types:
+  - name: nIndices
+    summary: The desired number of states $M$ in the uniform superposition.
+    isPrimitive: true
+    uid: Int
+  - name: indexRegister
+    summary: >-
+      The qubit register that stores the number states in `BigEndian` format.
+      This register must be able to store the number $M-1$, and is assumed to be
+      initialized in the state $\ket{0\cdots 0}$.
+    uid: microsoft.quantum.canon.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

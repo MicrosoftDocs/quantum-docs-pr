@@ -3,29 +3,27 @@ uid: microsoft.quantum.extensions.testing.assertqubit
 name: AssertQubit
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
-summary: >2
-   Asserts that the qubit `q` is in the expected eigenstate of the Pauli $Z$ operator.
-remarks: >2-
-   <xref:microsoft.quantum.extensions.testing.assertqubitstate> allows for asserting
-   arbitrary qubit states rather than only $Z$ eigenstates.
-syntax: 'operation AssertQubit (expected : Result, q : Qubit) : ()'
+summary: Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator.
+remarks: >-
+  <xref:microsoft.quantum.extensions.testing.assertqubitstate> allows for asserting
+  arbitrary qubit states rather than only $Z$ eigenstates.
+syntax: 'operation AssertQubit (expected : Result, q : Qubit) : Unit'
 input:
   content: '(expected : Result, q : Qubit)'
   types:
   - name: expected
-    summary: >2
-       Which state the qubit is expected to be in: `Zero` or `One`.
+    summary: 'Which state the qubit is expected to be in: `Zero` or `One`.'
+    isPrimitive: true
     uid: Result
-    isPrimitive: true
   - name: q
-    summary: >2
-       The qubit whose state is asserted.
+    summary: The qubit whose state is asserted.
+    isPrimitive: true
     uid: Qubit
-    isPrimitive: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
 seeAlso:
 - microsoft.quantum.extensions.testing.assertqubitstate
+...

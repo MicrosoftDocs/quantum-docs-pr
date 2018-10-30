@@ -3,21 +3,21 @@ uid: microsoft.quantum.extensions.math.arctan2
 name: ArcTan2
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: >2
-   Returns the angle whose tangent is the quotient of two specified numbers.
-remarks: ' See [System.Math.Atan2](https://docs.microsoft.com/en-us/dotnet/api/system.math.atan2) for more details.'
+summary: Returns the angle whose tangent is the quotient of two specified numbers.
+remarks: See [System.Math.Atan2](https://docs.microsoft.com/en-us/dotnet/api/system.math.atan2) for more details.
 syntax: 'function ArcTan2 (y : Double, x : Double) : Double'
 input:
   content: '(y : Double, x : Double)'
   types:
   - name: y
-    uid: Double
     isPrimitive: true
+    uid: Double
   - name: x
-    uid: Double
     isPrimitive: true
+    uid: Double
 output:
   content: Double
   types:
-  - uid: Double
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Double
+...

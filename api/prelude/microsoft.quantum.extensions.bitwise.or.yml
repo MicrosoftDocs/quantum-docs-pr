@@ -3,29 +3,23 @@ uid: microsoft.quantum.extensions.bitwise.or
 name: Or
 type: function
 namespace: Microsoft.Quantum.Extensions.Bitwise
-summary: >2
-   Returns the bitwise OR of two integers.
-remarks: >2
-   See the [C# `|` Operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/or-operator) for more details.
-
-  ### Examples
-   ```qsharp
-   let a = 248;      //                 11111000₂
-   let b = 63;       //                 00111111₂
-   let x = Or(a, b); // x : Int = 255 = 11111111₂.
-   ```
+summary: >-
+  Returns the bitwise OR of two integers.
+  This performs the same computation as the built-in `|||` operator.
+remarks: See the [C# `|` Operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/or-operator) for more details.
 syntax: 'function Or (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'
   types:
   - name: a
-    uid: Int
     isPrimitive: true
+    uid: Int
   - name: b
-    uid: Int
     isPrimitive: true
+    uid: Int
 output:
   content: Int
   types:
-  - uid: Int
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Int
+...

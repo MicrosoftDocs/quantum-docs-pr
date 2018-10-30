@@ -3,25 +3,36 @@ uid: microsoft.quantum.canon.ampampphasesfixedpoint
 name: AmpAmpPhasesFixedPoint
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: " Computes partial reflection phases for fixed-point amplitude \n amplification.\n"
-syntax: 'function AmpAmpPhasesFixedPoint (nQueries : Int, successMin : Double) : AmpAmpReflectionPhases'
-references: " We use the phases in \"Fixed-Point Amplitude Amplification with\n an Optimal Number of Queries\" \n - [YoderLowChuang2014](https://arxiv.org/abs/1409.3305)\n See also \"Methodology of composite quantum gates\" \n - [LowYoderChuang2016](https://arxiv.org/abs/1603.03996)\n for phases in the `AmpAmpRotationPhases` format."
+summary: >-
+  Computes partial reflection phases for fixed-point amplitude
+  amplification.
+syntax: 'function AmpAmpPhasesFixedPoint (nQueries : Int, successMin : Double) : Microsoft.Quantum.Canon.AmpAmpReflectionPhases'
+references: >-
+  We use the phases in "Fixed-Point Amplitude Amplification with
+  an Optimal Number of Queries"
+
+  - [YoderLowChuang2014](https://arxiv.org/abs/1409.3305)
+    See also "Methodology of composite quantum gates"
+  - [LowYoderChuang2016](https://arxiv.org/abs/1603.03996)
+    for phases in the `AmpAmpRotationPhases` format.
 input:
   content: '(nQueries : Int, successMin : Double)'
   types:
   - name: nQueries
-    summary: " Number of queries to the state preparation oracle. Must be an odd \n integer."
+    summary: >-
+      Number of queries to the state preparation oracle. Must be an odd
+      integer.
+    isPrimitive: true
     uid: Int
-    isPrimitive: true
   - name: successMin
-    summary: >2
-       Target minimum success probability.
-    uid: Double
+    summary: Target minimum success probability.
     isPrimitive: true
+    uid: Double
 output:
-  content: AmpAmpReflectionPhases
+  content: Microsoft.Quantum.Canon.AmpAmpReflectionPhases
   types:
-  - summary: >2
-       Array of phases that can be used in fixed-point amplitide amplification
-       quantum algorithm implementation.
+  - summary: >-
+      Array of phases that can be used in fixed-point amplitude amplification
+      quantum algorithm implementation.
     uid: microsoft.quantum.canon.ampampreflectionphases
+...

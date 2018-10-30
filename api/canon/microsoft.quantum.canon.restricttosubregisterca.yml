@@ -3,46 +3,49 @@ uid: microsoft.quantum.canon.restricttosubregisterca
 name: RestrictToSubregisterCA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Restricts an operation to an array of indices of a register, i.e., a subregister.
-   The modifier 'CA' indicates that the operation is controllable and adjointable.
-syntax: 'function RestrictToSubregisterCA (op : (Qubit[] => () : Adjoint, Controlled), idxs : Int[]) : (Qubit[] => () : Adjoint, Controlled)'
+summary: >-
+  Restricts an operation to an array of indices of a register, i.e., a subregister.
+  The modifier 'CA' indicates that the operation is controllable and adjointable.
+syntax: 'function RestrictToSubregisterCA (op : (Qubit[] => Unit : Adjoint, Controlled), idxs : Int[]) : (Qubit[] => Unit : Adjoint, Controlled)'
 input:
-  content: '(op : (Qubit[] => () : Adjoint, Controlled), idxs : Int[])'
+  content: '(op : (Qubit[] => Unit : Adjoint, Controlled), idxs : Int[])'
   types:
   - name: op
-    summary: ' Operation to be restricted to a subregister.'
+    summary: Operation to be restricted to a subregister.
     isOperation: true
     input:
       types:
-      - uid: Qubit
+      - isArray: true
         isPrimitive: true
-        isArray: true
+        uid: Qubit
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Adjoint
     - Controlled
   - name: idxs
-    summary: ' Array of indices, indicating to which qubits the operation will be restricted.'
-    uid: Int
-    isPrimitive: true
+    summary: Array of indices, indicating to which qubits the operation will be restricted.
     isArray: true
+    isPrimitive: true
+    uid: Int
 output:
-  content: '(Qubit[] => () : Adjoint, Controlled)'
+  content: '(Qubit[] => Unit : Adjoint, Controlled)'
   types:
   - isOperation: true
     input:
       types:
-      - uid: Qubit
+      - isArray: true
         isPrimitive: true
-        isArray: true
+        uid: Qubit
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: *o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
 seeAlso:
 - microsoft.quantum.canon.restricttosubregister
+...

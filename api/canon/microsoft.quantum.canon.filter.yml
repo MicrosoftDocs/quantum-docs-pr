@@ -3,14 +3,19 @@ uid: microsoft.quantum.canon.filter
 name: Filter
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: " The `Filter` function takes an array and a predicate that is defined \n for the elements of the array, and returns an array that consists of \n those elements that satisfy the predicate. \n"
-remarks: " The function is defined for generic types, i.e., whenever we have \n an array `'T[]` and a predicate `'T -> Bool` we can filter elements. \n"
+summary: >-
+  The `Filter` function takes an array and a predicate that is defined
+  for the elements of the array, and returns an array that consists of
+  those elements that satisfy the predicate.
+remarks: >-
+  The function is defined for generic types, i.e., whenever we have
+  an array `'T[]` and a predicate `'T -> Bool` we can filter elements.
 syntax: "function Filter (predicate : ('T -> Bool), array : 'T[]) : 'T[]"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: " A function from `'T' to Boolean that is used to filter elements. "
+    summary: A function from `'T' to Boolean that is used to filter elements.
     isFunction: true
     input:
       types:
@@ -18,22 +23,21 @@ input:
         isLocal: true
     output:
       types:
-      - uid: Bool
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Bool
   - name: array
-    summary: >2
-       An array of elements over `'T`.
+    summary: An array of elements over `'T`.
+    isArray: true
     uid: "'T"
     isLocal: true
-    isArray: true
 output:
   content: "'T[]"
   types:
-  - summary: " An array `'T[]` of elements that satisfy the predicate."
+  - summary: An array `'T[]` of elements that satisfy the predicate.
+    isArray: true
     uid: "'T"
     isLocal: true
-    isArray: true
 typeParameters:
 - uid: "'T"
-  summary: >2
-     The type of `array` elements.
+  summary: The type of `array` elements.
+...

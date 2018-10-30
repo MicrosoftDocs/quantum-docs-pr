@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.intarrayfromrange
+name: IntArrayFromRange
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Creates an array `arr` of integers enumnerated by start..step..end.
+syntax: 'function IntArrayFromRange (range : Range) : Int[]'
+input:
+  content: '(range : Range)'
+  types:
+  - name: range
+    summary: A `Range` of values `start..step..end` to be converted to an array.
+    isPrimitive: true
+    uid: Range
+output:
+  content: Int[]
+  types:
+  - summary: A new array of integers corresponding to values iterated over by `range`.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+...

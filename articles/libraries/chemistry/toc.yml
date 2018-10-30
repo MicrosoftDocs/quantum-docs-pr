@@ -1,0 +1,10 @@
+- name: Installation and validation
+  href: installation.md
+- name: Quantum chemistry concepts
+  href: concepts/toc.yml
+- name: Invoking the chemistry library
+  topicHref: samples/index.md
+  href: samples/toc.yml
+- name: Schema
+  topicHref: schema/index.md
+  href: schema/toc.yml

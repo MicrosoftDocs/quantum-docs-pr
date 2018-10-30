@@ -3,23 +3,29 @@ uid: microsoft.quantum.canon.interpolategeneratorsystems
 name: InterpolateGeneratorSystems
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: " Returns a `TimeDependentGeneratorSystem` representing the linear \n interpolation between two `GeneratorSystems` according to a\n schedule parameter $s\\in[0,1]$.\n"
-syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : GeneratorSystem, generatorSystemEnd : GeneratorSystem) : TimeDependentGeneratorSystem'
+summary: >-
+  Returns a `TimeDependentGeneratorSystem` representing the linear
+  interpolation between two `GeneratorSystems` according to a
+  schedule parameter $s\in[0,1]$.
+syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : Microsoft.Quantum.Canon.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Canon.GeneratorSystem) : Microsoft.Quantum.Canon.TimeDependentGeneratorSystem'
 input:
-  content: '(generatorSystemStart : GeneratorSystem, generatorSystemEnd : GeneratorSystem)'
+  content: '(generatorSystemStart : Microsoft.Quantum.Canon.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Canon.GeneratorSystem)'
   types:
   - name: generatorSystemStart
-    summary: ' The start `GeneratorSystem`.'
+    summary: The start `GeneratorSystem`.
     uid: microsoft.quantum.canon.generatorsystem
   - name: generatorSystemEnd
-    summary: >2
-       The end `GeneratorSystem`.
+    summary: The end `GeneratorSystem`.
     uid: microsoft.quantum.canon.generatorsystem
 output:
-  content: TimeDependentGeneratorSystem
+  content: Microsoft.Quantum.Canon.TimeDependentGeneratorSystem
   types:
-  - summary: " A `TimeDependentGeneratorSystem` representing a system that is the \n sum of the input generator systems, with weight $(1-s)$ on \n `generatorSystemStart` and weight $s$ on `generatorSystemEnd`.\n"
+  - summary: >-
+      A `TimeDependentGeneratorSystem` representing a system that is the
+      sum of the input generator systems, with weight $(1-s)$ on
+      `generatorSystemStart` and weight $s$ on `generatorSystemEnd`.
     uid: microsoft.quantum.canon.timedependentgeneratorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 - microsoft.quantum.canon.timedependentgeneratorsystem
+...

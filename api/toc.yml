@@ -7,3 +7,11 @@
     href: canon/toc.yml
   - name: Research Libraries
     href: research/toc.yml
+  - name: Chemistry Library
+    href: chemistry/toc.yml
+- name: C# components reference
+  items:
+  - name: Trace simulator 
+    href: https://docs.microsoft.com/en-us/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators
+  - name: Quantum chemistry
+    href: https://docs.microsoft.com/en-us/dotnet/api/microsoft.quantum.chemistry

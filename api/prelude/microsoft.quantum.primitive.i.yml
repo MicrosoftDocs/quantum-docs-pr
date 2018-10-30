@@ -3,23 +3,23 @@ uid: microsoft.quantum.primitive.i
 name: I
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >2
-   Performs the identity operation (no-op) on a single qubit.
-remarks: >2-
-   This is a no-op. It is just provided for completeness and because
-   sometimes it is useful to call the identity in an algorithm.
-syntax: 'operation I (target : Qubit) : ()'
+summary: Performs the identity operation (no-op) on a single qubit.
+remarks: >-
+  This is a no-op. It is just provided for completeness and because
+  sometimes it is useful to call the identity in an algorithm.
+syntax: 'operation I (target : Qubit) : Unit'
 input:
   content: '(target : Qubit)'
   types:
   - name: target
+    isPrimitive: true
     uid: Qubit
-    isPrimitive: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+...

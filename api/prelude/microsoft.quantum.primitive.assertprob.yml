@@ -3,61 +3,51 @@ uid: microsoft.quantum.primitive.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >2
-   Asserts that measuring the given qubits in the given Pauli basis will have the given result
-   with the given probability, within some tolerance.
-remarks: >2
-   Note that the Adjoint and Controlled versions of this operation will not
-   check the condition.
-
-
-  ### Examples
-   ```qsharp
-   using (register = Qubit[1]) {
-       H(register[0]);
-       AssertProb([PauliZ], register, One, 0.5,
-           "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
-   }
-   ```
-syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : ()'
+summary: >-
+  Asserts that measuring the given qubits in the given Pauli basis will have the given result
+  with the given probability, within some tolerance.
+remarks: >-
+  Note that the Adjoint and Controlled versions of this operation will not
+  check the condition.
+syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
-    summary: >2-
-       A measurement effect to assert the probability of, expressed as a
-       multi-qubit Pauli operator.
+    summary: >-
+      A measurement effect to assert the probability of, expressed as a
+      multi-qubit Pauli operator.
+    isArray: true
+    isPrimitive: true
     uid: Pauli
-    isPrimitive: true
-    isArray: true
   - name: qubits
-    summary: ' A register on which to make the assertion.'
-    uid: Qubit
-    isPrimitive: true
+    summary: A register on which to make the assertion.
     isArray: true
+    isPrimitive: true
+    uid: Qubit
   - name: result
-    summary: ' An expected result of `Measure(bases, qubits)`.'
+    summary: An expected result of `Measure(bases, qubits)`.
+    isPrimitive: true
     uid: Result
-    isPrimitive: true
   - name: prob
-    summary: ' The probability with which the given result is expected.'
-    uid: Double
+    summary: The probability with which the given result is expected.
     isPrimitive: true
+    uid: Double
   - name: msg
-    summary: >2
-       A message to be reported if the assertion fails.
+    summary: A message to be reported if the assertion fails.
+    isPrimitive: true
     uid: String
-    isPrimitive: true
   - name: tol
+    isPrimitive: true
     uid: Double
-    isPrimitive: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.primitive.assert
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.primitive.assert
+...

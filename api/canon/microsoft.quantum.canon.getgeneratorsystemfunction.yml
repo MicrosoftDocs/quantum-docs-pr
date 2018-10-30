@@ -3,29 +3,27 @@ uid: microsoft.quantum.canon.getgeneratorsystemfunction
 name: GetGeneratorSystemFunction
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Retrieves the `GeneratorIndex` function in a `GeneratorSystem`.
-syntax: 'function GetGeneratorSystemFunction (generatorSystem : GeneratorSystem) : (Int -> GeneratorIndex)'
+summary: Retrieves the `GeneratorIndex` function in a `GeneratorSystem`.
+syntax: 'function GetGeneratorSystemFunction (generatorSystem : Microsoft.Quantum.Canon.GeneratorSystem) : (Int -> Microsoft.Quantum.Canon.GeneratorIndex)'
 input:
-  content: '(generatorSystem : GeneratorSystem)'
+  content: '(generatorSystem : Microsoft.Quantum.Canon.GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: >2
-       The `GeneratorSystem` of interest.
+    summary: The `GeneratorSystem` of interest.
     uid: microsoft.quantum.canon.generatorsystem
 output:
-  content: (Int -> GeneratorIndex)
+  content: (Int -> Microsoft.Quantum.Canon.GeneratorIndex)
   types:
-  - summary: >2
-       An function that indexes each `GeneratorIndex` term in a Hamiltonian.
+  - summary: An function that indexes each `GeneratorIndex` term in a Hamiltonian.
     isFunction: true
     input:
       types:
-      - uid: Int
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Int
     output:
       types:
       - uid: microsoft.quantum.canon.generatorindex
 seeAlso:
 - microsoft.quantum.canon.generatorindex
 - microsoft.quantum.canon.generatorsystem
+...

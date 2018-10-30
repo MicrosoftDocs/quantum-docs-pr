@@ -1,3 +1,16 @@
+- name: Microsoft.Quantum.Core
+  uid: microsoft.quantum.core
+  items:
+  - name: Length
+    uid: microsoft.quantum.core.length
+  - name: RangeEnd
+    uid: microsoft.quantum.core.rangeend
+  - name: RangeReverse
+    uid: microsoft.quantum.core.rangereverse
+  - name: RangeStart
+    uid: microsoft.quantum.core.rangestart
+  - name: RangeStep
+    uid: microsoft.quantum.core.rangestep
 - name: Microsoft.Quantum.Extensions.Bitwise
   uid: microsoft.quantum.extensions.bitwise
   items:
@@ -104,15 +117,6 @@
     uid: microsoft.quantum.extensions.math.tanh
   - name: Truncate
     uid: microsoft.quantum.extensions.math.truncate
-- name: Microsoft.Quantum.Extensions.RangeFunctions
-  uid: microsoft.quantum.extensions.rangefunctions
-  items:
-  - name: RangeEnd
-    uid: microsoft.quantum.extensions.rangefunctions.rangeend
-  - name: RangeStart
-    uid: microsoft.quantum.extensions.rangefunctions.rangestart
-  - name: RangeStep
-    uid: microsoft.quantum.extensions.rangefunctions.rangestep
 - name: Microsoft.Quantum.Extensions.Testing
   uid: microsoft.quantum.extensions.testing
   items:
@@ -165,14 +169,14 @@
     uid: microsoft.quantum.primitive.r1
   - name: R1Frac
     uid: microsoft.quantum.primitive.r1frac
-  - name: RFrac
-    uid: microsoft.quantum.primitive.rfrac
   - name: Random
     uid: microsoft.quantum.primitive.random
   - name: Reset
     uid: microsoft.quantum.primitive.reset
   - name: ResetAll
     uid: microsoft.quantum.primitive.resetall
+  - name: RFrac
+    uid: microsoft.quantum.primitive.rfrac
   - name: Rx
     uid: microsoft.quantum.primitive.rx
   - name: Ry
@@ -191,3 +195,4 @@
     uid: microsoft.quantum.primitive.y
   - name: Z
     uid: microsoft.quantum.primitive.z
+...

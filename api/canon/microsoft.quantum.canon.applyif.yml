@@ -3,13 +3,15 @@ uid: microsoft.quantum.canon.applyif
 name: ApplyIf
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Given an operation `op` and a bit value `bit`, applies `op` to the `target` \n if `bit` is true. If false, nothing happens to the `target`.\n"
-syntax: "operation ApplyIf (op : ('T => ()), bit : Bool, target : 'T) : ()"
+summary: >-
+  Given an operation `op` and a bit value `bit`, applies `op` to the `target`
+  if `bit` is true. If false, nothing happens to the `target`.
+syntax: "operation ApplyIf (op : ('T => Unit), bit : Bool, target : 'T) : Unit"
 input:
-  content: "(op : ('T => ()), bit : Bool, target : 'T)"
+  content: "(op : ('T => Unit), bit : Bool, target : 'T)"
   types:
   - name: op
-    summary: ' An operation to be conditionally applied.'
+    summary: An operation to be conditionally applied.
     isOperation: true
     input:
       types:
@@ -17,26 +19,26 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
   - name: bit
-    summary: ' a boolean that controls whether op is applied or not.'
-    uid: Bool
+    summary: a boolean that controls whether op is applied or not.
     isPrimitive: true
+    uid: Bool
   - name: target
-    summary: >2
-       The input to which the operation is applied.
+    summary: The input to which the operation is applied.
     uid: "'T"
     isLocal: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: The input type of the operation to be conditionally applied.
 seeAlso:
 - microsoft.quantum.canon.applyifc
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
-typeParameters:
-- uid: "'T"
-  summary: " The input type of the operation to be conditionally applied. \n"
+...

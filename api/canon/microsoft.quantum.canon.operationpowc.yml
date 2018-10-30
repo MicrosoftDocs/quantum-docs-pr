@@ -3,16 +3,16 @@ uid: microsoft.quantum.canon.operationpowc
 name: OperationPowC
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given an operation representing a gate $U$, returns a new operation
-   $U^m$ for a power $m$.
-   The modifier 'C' indicates that the operation is controllable.
-syntax: "function OperationPowC (oracle : ('T => () : Controlled), power : Int) : ('T => () : Controlled)"
+summary: >-
+  Given an operation representing a gate $U$, returns a new operation
+  $U^m$ for a power $m$.
+  The modifier 'C' indicates that the operation is controllable.
+syntax: "function OperationPowC (oracle : ('T => Unit : Controlled), power : Int) : ('T => Unit : Controlled)"
 input:
-  content: "(oracle : ('T => () : Controlled), power : Int)"
+  content: "(oracle : ('T => Unit : Controlled), power : Int)"
   types:
   - name: oracle
-    summary: ' An operation $U$ representing the gate to be repeated.'
+    summary: An operation $U$ representing the gate to be repeated.
     isOperation: true
     input:
       types:
@@ -20,20 +20,18 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Controlled
   - name: power
-    summary: >2
-       The number of times that $U$ is to be repeated.
-    uid: Int
+    summary: The number of times that $U$ is to be repeated.
     isPrimitive: true
+    uid: Int
 output:
-  content: "('T => () : Controlled)"
+  content: "('T => Unit : Controlled)"
   types:
-  - summary: >2
-       A new operation representing $U^m$, where $m = \texttt{power}$.
+  - summary: A new operation representing $U^m$, where $m = \texttt{power}$.
     isOperation: true
     input:
       types:
@@ -41,11 +39,13 @@ output:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: *o0
-seeAlso:
-- microsoft.quantum.canon.operationpow
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
 typeParameters:
 - uid: "'T"
-  summary: " The type of the operation to be powered. \n"
+  summary: The type of the operation to be powered.
+seeAlso:
+- microsoft.quantum.canon.operationpow
+...

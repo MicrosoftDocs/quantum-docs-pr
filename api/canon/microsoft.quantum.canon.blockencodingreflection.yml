@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.blockencodingreflection
+name: BlockEncodingReflection
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  A `BlockEncodingReflection` is a unitary $U$ with the same properties
+  as a `BlockEncoding`, but is also a reflection. That is,
+  $U^\dag = U$.
+syntax: newtype BlockEncodingReflection = Microsoft.Quantum.Canon.BlockEncoding;
+seeAlso:
+- microsoft.quantum.canon.blockencoding
+...

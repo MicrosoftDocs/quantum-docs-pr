@@ -3,17 +3,16 @@ uid: microsoft.quantum.canon.reflectionstart
 name: ReflectionStart
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Constructs a reflection about the all-zero string $\ket{0\cdots 0}$, which is the typical input state to amplitude amplification.
-syntax: 'function ReflectionStart () : ReflectionOracle'
+summary: Constructs a reflection about the all-zero string $\ket{0\cdots 0}$, which is the typical input state to amplitude amplification.
+syntax: 'function ReflectionStart () : Microsoft.Quantum.Canon.ReflectionOracle'
 input:
   content: ()
   types: []
 output:
-  content: ReflectionOracle
+  content: Microsoft.Quantum.Canon.ReflectionOracle
   types:
-  - summary: >2
-       A `ReflectionOracle` that reflects about the state $\ket{0\cdots 0}$.
+  - summary: A `ReflectionOracle` that reflects about the state $\ket{0\cdots 0}$.
     uid: microsoft.quantum.canon.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle
+...

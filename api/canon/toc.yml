@@ -29,14 +29,14 @@
     uid: microsoft.quantum.canon.ampampphasesfixedpoint
   - name: AmpAmpPhasesStandard
     uid: microsoft.quantum.canon.ampampphasesstandard
-  - name: AmpAmpRUSByOracle
-    uid: microsoft.quantum.canon.ampamprusbyoracle
   - name: AmpAmpReflectionPhases
     uid: microsoft.quantum.canon.ampampreflectionphases
   - name: AmpAmpRotationPhases
     uid: microsoft.quantum.canon.ampamprotationphases
   - name: AmpAmpRotationToReflectionPhases
     uid: microsoft.quantum.canon.ampamprotationtoreflectionphases
+  - name: AmpAmpRUSByOracle
+    uid: microsoft.quantum.canon.ampamprusbyoracle
   - name: AndLadder
     uid: microsoft.quantum.canon.andladder
   - name: ApplyDiagonalUnitary
@@ -89,6 +89,10 @@
     uid: microsoft.quantum.canon.applyreversedoplittleendianc
   - name: ApplyReversedOpLittleEndianCA
     uid: microsoft.quantum.canon.applyreversedoplittleendianca
+  - name: ApplyRippleCarryComparatorBE
+    uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
+  - name: ApplyRippleCarryComparatorLE
+    uid: microsoft.quantum.canon.applyripplecarrycomparatorle
   - name: ApplyToEach
     uid: microsoft.quantum.canon.applytoeach
   - name: ApplyToEachA
@@ -183,6 +187,8 @@
     uid: microsoft.quantum.canon.assertresultequal
   - name: BigEndian
     uid: microsoft.quantum.canon.bigendian
+  - name: BigEndianToLittleEndian
+    uid: microsoft.quantum.canon.bigendiantolittleendian
   - name: Bind
     uid: microsoft.quantum.canon.bind
   - name: BindA
@@ -203,12 +209,24 @@
     uid: microsoft.quantum.canon.bitsize
   - name: BlochSphereCoordinates
     uid: microsoft.quantum.canon.blochspherecoordinates
+  - name: BlockEncoding
+    uid: microsoft.quantum.canon.blockencoding
+  - name: BlockEncodingByLCU
+    uid: microsoft.quantum.canon.blockencodingbylcu
+  - name: BlockEncodingReflection
+    uid: microsoft.quantum.canon.blockencodingreflection
+  - name: BlockEncodingReflectionByLCU
+    uid: microsoft.quantum.canon.blockencodingreflectionbylcu
+  - name: BlockEncodingToReflection
+    uid: microsoft.quantum.canon.blockencodingtoreflection
   - name: BoolArrFromPositiveInt
     uid: microsoft.quantum.canon.boolarrfrompositiveint
   - name: BoolArrFromResultArr
     uid: microsoft.quantum.canon.boolarrfromresultarr
   - name: BoolFromResult
     uid: microsoft.quantum.canon.boolfromresult
+  - name: Call
+    uid: microsoft.quantum.canon.call
   - name: CCNOTop
     uid: microsoft.quantum.canon.ccnotop
   - name: CControlled
@@ -219,8 +237,10 @@
     uid: microsoft.quantum.canon.ccontrolledc
   - name: CControlledCA
     uid: microsoft.quantum.canon.ccontrolledca
-  - name: CSS
-    uid: microsoft.quantum.canon.css
+  - name: CNOTChain
+    uid: microsoft.quantum.canon.cnotchain
+  - name: CNOTChainTarget
+    uid: microsoft.quantum.canon.cnotchaintarget
   - name: ComplexPolar
     uid: microsoft.quantum.canon.complexpolar
   - name: ComplexPolarToComplex
@@ -243,8 +263,16 @@
     uid: microsoft.quantum.canon.controlledonint
   - name: CopyMostSignificantBitLE
     uid: microsoft.quantum.canon.copymostsignificantbitle
+  - name: CSS
+    uid: microsoft.quantum.canon.css
   - name: CurryOp
     uid: microsoft.quantum.canon.curryop
+  - name: CX
+    uid: microsoft.quantum.canon.cx
+  - name: CY
+    uid: microsoft.quantum.canon.cy
+  - name: CZ
+    uid: microsoft.quantum.canon.cz
   - name: DecodeOp
     uid: microsoft.quantum.canon.decodeop
   - name: DecomposeIntoTimeStepsCA
@@ -309,10 +337,10 @@
     uid: microsoft.quantum.canon.getgeneratorsystemfunction
   - name: GetGeneratorSystemNTerms
     uid: microsoft.quantum.canon.getgeneratorsystemnterms
-  - name: HY
-    uid: microsoft.quantum.canon.hy
   - name: Head
     uid: microsoft.quantum.canon.head
+  - name: HY
+    uid: microsoft.quantum.canon.hy
   - name: IdentityGeneratorIndex
     uid: microsoft.quantum.canon.identitygeneratorindex
   - name: IdentityGeneratorSystem
@@ -321,26 +349,32 @@
     uid: microsoft.quantum.canon.identitytimedependentgeneratorsystem
   - name: Ignore
     uid: microsoft.quantum.canon.ignore
-  - name: InPlaceXorLE
-    uid: microsoft.quantum.canon.inplacexorle
   - name: InjectPi4YRotation
     uid: microsoft.quantum.canon.injectpi4yrotation
+  - name: InPlaceMajority
+    uid: microsoft.quantum.canon.inplacemajority
+  - name: InPlaceXorBE
+    uid: microsoft.quantum.canon.inplacexorbe
+  - name: InPlaceXorLE
+    uid: microsoft.quantum.canon.inplacexorle
   - name: IntAbs
     uid: microsoft.quantum.canon.intabs
-  - name: IntMax
-    uid: microsoft.quantum.canon.intmax
-  - name: IntToPauli
-    uid: microsoft.quantum.canon.inttopauli
+  - name: IntArrayFromRange
+    uid: microsoft.quantum.canon.intarrayfromrange
   - name: IntegerIncrementLE
     uid: microsoft.quantum.canon.integerincrementle
   - name: IntegerIncrementPhaseLE
     uid: microsoft.quantum.canon.integerincrementphasele
-  - name: InterpolateGeneratorSystems
-    uid: microsoft.quantum.canon.interpolategeneratorsystems
   - name: InterpolatedEvolution
     uid: microsoft.quantum.canon.interpolatedevolution
+  - name: InterpolateGeneratorSystems
+    uid: microsoft.quantum.canon.interpolategeneratorsystems
+  - name: IntMax
+    uid: microsoft.quantum.canon.intmax
   - name: IntsToPaulis
     uid: microsoft.quantum.canon.intstopaulis
+  - name: IntToPauli
+    uid: microsoft.quantum.canon.inttopauli
   - name: InverseMod
     uid: microsoft.quantum.canon.inversemod
   - name: IsCoprime
@@ -359,18 +393,14 @@
     uid: microsoft.quantum.canon.lg
   - name: LittleEndian
     uid: microsoft.quantum.canon.littleendian
-  - name: LogOf2
-    uid: microsoft.quantum.canon.logof2
+  - name: LittleEndianToBigEndian
+    uid: microsoft.quantum.canon.littleendiantobigendian
   - name: LogicalRegister
     uid: microsoft.quantum.canon.logicalregister
+  - name: LogOf2
+    uid: microsoft.quantum.canon.logof2
   - name: LookupFunction
     uid: microsoft.quantum.canon.lookupfunction
-  - name: MResetX
-    uid: microsoft.quantum.canon.mresetx
-  - name: MResetY
-    uid: microsoft.quantum.canon.mresety
-  - name: MResetZ
-    uid: microsoft.quantum.canon.mresetz
   - name: Map
     uid: microsoft.quantum.canon.map
   - name: MapIndex
@@ -407,26 +437,34 @@
     uid: microsoft.quantum.canon.modulus
   - name: Most
     uid: microsoft.quantum.canon.most
+  - name: MResetX
+    uid: microsoft.quantum.canon.mresetx
+  - name: MResetY
+    uid: microsoft.quantum.canon.mresety
+  - name: MResetZ
+    uid: microsoft.quantum.canon.mresetz
   - name: MultiM
     uid: microsoft.quantum.canon.multim
+  - name: MultiplexerBruteForceFromGenerator
+    uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
+  - name: MultiplexerFromGenerator
+    uid: microsoft.quantum.canon.multiplexerfromgenerator
   - name: MultiplexOperations
     uid: microsoft.quantum.canon.multiplexoperations
-  - name: MultiplexOperations_
-    uid: microsoft.quantum.canon.multiplexoperations_
+  - name: MultiplexOperationsBruteForceFromGenerator
+    uid: microsoft.quantum.canon.multiplexoperationsbruteforcefromgenerator
+  - name: MultiplexOperationsFromGenerator
+    uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
   - name: MultiplexPauli
     uid: microsoft.quantum.canon.multiplexpauli
   - name: MultiplexZ
     uid: microsoft.quantum.canon.multiplexz
-  - name: MultiplexZComputeCoefficients_
-    uid: microsoft.quantum.canon.multiplexzcomputecoefficients_
   - name: MultiplyGeneratorIndex
     uid: microsoft.quantum.canon.multiplygeneratorindex
   - name: MultiplyGeneratorSystem
     uid: microsoft.quantum.canon.multiplygeneratorsystem
   - name: NoOp
     uid: microsoft.quantum.canon.noop
-  - name: NoOp2
-    uid: microsoft.quantum.canon.noop2
   - name: ObliviousOracle
     uid: microsoft.quantum.canon.obliviousoracle
   - name: ObliviousOracleFromDeterministicStateOracle
@@ -441,28 +479,32 @@
     uid: microsoft.quantum.canon.operationpowca
   - name: OracleToDiscrete
     uid: microsoft.quantum.canon.oracletodiscrete
-  - name: PNorm
-    uid: microsoft.quantum.canon.pnorm
-  - name: PNormalize
-    uid: microsoft.quantum.canon.pnormalize
   - name: Pad
     uid: microsoft.quantum.canon.pad
+  - name: PauliBlockEncoding
+    uid: microsoft.quantum.canon.pauliblockencoding
+  - name: PauliCoefficientFromGenIdx
+    uid: microsoft.quantum.canon.paulicoefficientfromgenidx
   - name: PauliEvolutionFunction
     uid: microsoft.quantum.canon.paulievolutionfunction
   - name: PauliEvolutionSet
     uid: microsoft.quantum.canon.paulievolutionset
   - name: PauliFromBitString
     uid: microsoft.quantum.canon.paulifrombitstring
+  - name: PauliStringFromGenIdx
+    uid: microsoft.quantum.canon.paulistringfromgenidx
   - name: PhaseLittleEndian
     uid: microsoft.quantum.canon.phaselittleendian
+  - name: PNorm
+    uid: microsoft.quantum.canon.pnorm
+  - name: PNormalize
+    uid: microsoft.quantum.canon.pnormalize
   - name: PositiveIntFromBoolArr
     uid: microsoft.quantum.canon.positiveintfromboolarr
   - name: PositiveIntFromResultArr
     uid: microsoft.quantum.canon.positiveintfromresultarr
   - name: PrepareArbitraryState
     uid: microsoft.quantum.canon.preparearbitrarystate
-  - name: PrepareArbitraryState_
-    uid: microsoft.quantum.canon.preparearbitrarystate_
   - name: PrepareChoiState
     uid: microsoft.quantum.canon.preparechoistate
   - name: PrepareChoiStateA
@@ -479,6 +521,8 @@
     uid: microsoft.quantum.canon.preparequbit
   - name: PrepareSingleQubitIdentity
     uid: microsoft.quantum.canon.preparesinglequbitidentity
+  - name: PrepareUniformSuperposition
+    uid: microsoft.quantum.canon.prepareuniformsuperposition
   - name: QECC
     uid: microsoft.quantum.canon.qecc
   - name: QFT
@@ -487,6 +531,12 @@
     uid: microsoft.quantum.canon.qftle
   - name: QuantumPhaseEstimation
     uid: microsoft.quantum.canon.quantumphaseestimation
+  - name: QuantumROM
+    uid: microsoft.quantum.canon.quantumrom
+  - name: QuantumROMQubitCount
+    uid: microsoft.quantum.canon.quantumromqubitcount
+  - name: QuantumWalkByQubitization
+    uid: microsoft.quantum.canon.quantumwalkbyqubitization
   - name: RAll0
     uid: microsoft.quantum.canon.rall0
   - name: RAll1
@@ -541,6 +591,8 @@
     uid: microsoft.quantum.canon.singlequbitprocesstomographymeasurement
   - name: Snd
     uid: microsoft.quantum.canon.snd
+  - name: SplitArray
+    uid: microsoft.quantum.canon.splitarray
   - name: StackCapacity
     uid: microsoft.quantum.canon.stackcapacity
   - name: StackLength
@@ -561,8 +613,6 @@
     uid: microsoft.quantum.canon.statepreparationcomplexcoefficients
   - name: StatePreparationPositiveCoefficients
     uid: microsoft.quantum.canon.statepreparationpositivecoefficients
-  - name: StatePreparationSBMComputeCoefficients_
-    uid: microsoft.quantum.canon.statepreparationsbmcomputecoefficients_
   - name: SteaneCode
     uid: microsoft.quantum.canon.steanecode
   - name: SteaneCodeDecoder
@@ -577,6 +627,8 @@
     uid: microsoft.quantum.canon.steanecoderecoveryz
   - name: Subarray
     uid: microsoft.quantum.canon.subarray
+  - name: SumGeneratorSystems
+    uid: microsoft.quantum.canon.sumgeneratorsystems
   - name: SwapReverseRegister
     uid: microsoft.quantum.canon.swapreverseregister
   - name: Syndrome
@@ -589,12 +641,16 @@
     uid: microsoft.quantum.canon.tail
   - name: TargetStateReflectionOracle
     uid: microsoft.quantum.canon.targetstatereflectionoracle
+  - name: TimeDependentBlockEncoding
+    uid: microsoft.quantum.canon.timedependentblockencoding
   - name: TimeDependentGeneratorSystem
     uid: microsoft.quantum.canon.timedependentgeneratorsystem
   - name: TimeDependentSimulationAlgorithm
     uid: microsoft.quantum.canon.timedependentsimulationalgorithm
   - name: TimeDependentTrotterSimulationAlgorithm
     uid: microsoft.quantum.canon.timedependenttrottersimulationalgorithm
+  - name: ToOperation
+    uid: microsoft.quantum.canon.tooperation
   - name: TrotterSimulationAlgorithm
     uid: microsoft.quantum.canon.trottersimulationalgorithm
   - name: TrotterStep
@@ -619,5 +675,8 @@
     uid: microsoft.quantum.canon.withc
   - name: WithCA
     uid: microsoft.quantum.canon.withca
+  - name: XOR
+    uid: microsoft.quantum.canon.xor
   - name: Zip
     uid: microsoft.quantum.canon.zip
+...

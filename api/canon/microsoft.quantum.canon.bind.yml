@@ -3,27 +3,16 @@ uid: microsoft.quantum.canon.bind
 name: Bind
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given an array of operations acting on a single input,
-   produces a new operation that
-   performs each given operation in sequence.
-remarks: >2
-
-  ### Examples
-   The following are equivalent:
-   ```Q#
-   let bound = Bind([U; V]);
-   bound(x);
-
-   U(x); V(x);
-   ```
-syntax: "function Bind (operations : ('T => ())[]) : ('T => ())"
+summary: >-
+  Given an array of operations acting on a single input,
+  produces a new operation that
+  performs each given operation in sequence.
+syntax: "function Bind (operations : ('T => Unit)[]) : ('T => Unit)"
 input:
-  content: "(operations : ('T => ())[])"
+  content: "(operations : ('T => Unit)[])"
   types:
   - name: operations
-    summary: >2
-       A sequence of operations to be performed on a given input.
+    summary: A sequence of operations to be performed on a given input.
     isArray: true
     isOperation: true
     input:
@@ -32,14 +21,14 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
 output:
-  content: ('T => ())
+  content: ('T => Unit)
   types:
-  - summary: >2
-       A new operation that performs each given operation in sequence
-       on its input.
+  - summary: >-
+      A new operation that performs each given operation in sequence
+      on its input.
     isOperation: true
     input:
       types:
@@ -47,13 +36,13 @@ output:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: The target on which each of the operations in the array act.
 seeAlso:
 - microsoft.quantum.canon.bindc
 - microsoft.quantum.canon.binda
 - microsoft.quantum.canon.bindca
-typeParameters:
-- uid: "'T"
-  summary: >2
-     The target on which each of the operations in the array act.
+...

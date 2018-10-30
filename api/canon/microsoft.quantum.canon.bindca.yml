@@ -3,29 +3,18 @@ uid: microsoft.quantum.canon.bindca
 name: BindCA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given an array of operations acting on a single input,
-   produces a new operation that
-   performs each given operation in sequence.
-   The modifier 'CA' indicates that all operations in the array are adjointable
-   and controllable.
-remarks: >2
-
-  ### Examples
-   The following are equivalent:
-   ```Q#
-   let bound = Bind([U; V]);
-   bound(x);
-
-   U(x); V(x);
-   ```
-syntax: "function BindCA (operations : ('T => () : Adjoint, Controlled)[]) : ('T => () : Adjoint, Controlled)"
+summary: >-
+  Given an array of operations acting on a single input,
+  produces a new operation that
+  performs each given operation in sequence.
+  The modifier 'CA' indicates that all operations in the array are adjointable
+  and controllable.
+syntax: "function BindCA (operations : ('T => Unit : Adjoint, Controlled)[]) : ('T => Unit : Adjoint, Controlled)"
 input:
-  content: "(operations : ('T => () : Adjoint, Controlled)[])"
+  content: "(operations : ('T => Unit : Adjoint, Controlled)[])"
   types:
   - name: operations
-    summary: >2
-       A sequence of operations to be performed on a given input.
+    summary: A sequence of operations to be performed on a given input.
     isArray: true
     isOperation: true
     input:
@@ -34,17 +23,17 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Adjoint
     - Controlled
 output:
-  content: "('T => () : Adjoint, Controlled)"
+  content: "('T => Unit : Adjoint, Controlled)"
   types:
-  - summary: >2
-       A new operation that performs each given operation in sequence
-       on its input.
+  - summary: >-
+      A new operation that performs each given operation in sequence
+      on its input.
     isOperation: true
     input:
       types:
@@ -52,12 +41,14 @@ output:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: *o0
-seeAlso:
-- microsoft.quantum.canon.bind
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
 typeParameters:
 - uid: "'T"
-  summary: >2
-     The target on which each of the operations in the array act.
+  summary: The target on which each of the operations in the array act.
+seeAlso:
+- microsoft.quantum.canon.bind
+...

@@ -3,27 +3,39 @@ uid: microsoft.quantum.extensions.diagnostics.dumpregister
 name: DumpRegister
 type: function
 namespace: Microsoft.Quantum.Extensions.Diagnostics
-summary: >2
-   Dumps the current target machine's status associated with the given qubits.
-remarks: " This method allows you to dump the information associated with the state of the\n given qubits into a file or some other location.\n The actual information generated and the semantics of `location` \n are specific to each target machine. However, providing an empty location (`()`)\n typically means to generate the output to the console.\n \n For the local full state simulator distributed as part of the \n Quantum Development Kit, this method  expects a string with \n the path to a file in which it will write the \n state of the given qubits (i.e. the wavefunction of the corresponding  subsystem) as a\n one-dimensional array of complex numbers, in which each element represents\n the amplituted of the probability of measuring the corresponding state.\n If the given qubits are entangled with some other qubit and their\n state can't be separated, it just reports that the qubits are entangled."
-syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : ()"
+summary: Dumps the current target machine's status associated with the given qubits.
+remarks: >-
+  This method allows you to dump the information associated with the state of the
+  given qubits into a file or some other location.
+  The actual information generated and the semantics of `location`
+  are specific to each target machine. However, providing an empty location (`()`)
+  typically means to generate the output to the console.
+
+  For the local full state simulator distributed as part of the
+  Quantum Development Kit, this method  expects a string with
+  the path to a file in which it will write the
+  state of the given qubits (i.e. the wavefunction of the corresponding  subsystem) as a
+  one-dimensional array of complex numbers, in which each element represents
+  the amplituted of the probability of measuring the corresponding state.
+  If the given qubits are entangled with some other qubit and their
+  state can't be separated, it just reports that the qubits are entangled.
+syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
 input:
   content: "(location : 'T, qubits : Qubit[])"
   types:
   - name: location
-    summary: " Provides information on where to generate the state's dump."
+    summary: Provides information on where to generate the state's dump.
     uid: "'T"
     isLocal: true
   - name: qubits
-    summary: >2
-       The list of qubits to report.
-    uid: Qubit
-    isPrimitive: true
+    summary: The list of qubits to report.
     isArray: true
-output:
-  content: ()
-  types:
-  - summary: >2
-       None.
-    uid: ()
     isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - summary: None.
+    isPrimitive: true
+    uid: Unit
+...

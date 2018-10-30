@@ -3,13 +3,16 @@ uid: microsoft.quantum.canon.applyifca
 name: ApplyIfCA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Given an operation `op` and a bit value `bit`, applies `op` to the `target` \n if `bit` is true. If false, nothing happens to the `target`.\n The modifier 'CA' indicates that the operation is controllable and adjointable.\n"
-syntax: "operation ApplyIfCA (op : ('T => () : Controlled, Adjoint), bit : Bool, target : 'T) : ()"
+summary: >-
+  Given an operation `op` and a bit value `bit`, applies `op` to the `target`
+  if `bit` is true. If false, nothing happens to the `target`.
+  The modifier 'CA' indicates that the operation is controllable and adjointable.
+syntax: "operation ApplyIfCA (op : ('T => Unit : Controlled, Adjoint), bit : Bool, target : 'T) : Unit"
 input:
-  content: "(op : ('T => () : Controlled, Adjoint), bit : Bool, target : 'T)"
+  content: "(op : ('T => Unit : Controlled, Adjoint), bit : Bool, target : 'T)"
   types:
   - name: op
-    summary: ' An operation to be conditionally applied.'
+    summary: An operation to be conditionally applied.
     isOperation: true
     input:
       types:
@@ -17,30 +20,30 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
     functors:
     - Controlled
     - Adjoint
   - name: bit
-    summary: ' a boolean that controls whether op is applied or not.'
-    uid: Bool
+    summary: a boolean that controls whether op is applied or not.
     isPrimitive: true
+    uid: Bool
   - name: target
-    summary: >2
-       The input to which the operation is applied.
+    summary: The input to which the operation is applied.
     uid: "'T"
     isLocal: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.applyif
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: The input type of the operation to be conditionally applied.
 functors:
 - Adjoint
 - Controlled
-typeParameters:
-- uid: "'T"
-  summary: " The input type of the operation to be conditionally applied. \n"
+seeAlso:
+- microsoft.quantum.canon.applyif
+...

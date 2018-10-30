@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.inplacexorbe
+name: InPlaceXorBE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
+  then `InPlaceXorBE` performs an operation given by the following map:
+  $\ket{y}\rightarrow \ket{y\oplus a}$ , where $\oplus$ is the bitwise exclusive OR operator.
+syntax: 'operation InPlaceXorBE (value : Int, target : Microsoft.Quantum.Canon.BigEndian) : Unit'
+input:
+  content: '(value : Int, target : Microsoft.Quantum.Canon.BigEndian)'
+  types:
+  - name: value
+    summary: An integer which is assumed to be non-negative.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: A quantum register which is used to store `value` in big-endian encoding.
+    uid: microsoft.quantum.canon.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- inplacexorbe
+...

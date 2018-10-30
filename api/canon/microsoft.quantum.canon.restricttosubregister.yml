@@ -3,43 +3,43 @@ uid: microsoft.quantum.canon.restricttosubregister
 name: RestrictToSubregister
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Restricts an operation to an array of indices of a register, i.e., a subregister.
-syntax: 'function RestrictToSubregister (op : (Qubit[] => ()), idxs : Int[]) : (Qubit[] => ())'
+summary: Restricts an operation to an array of indices of a register, i.e., a subregister.
+syntax: 'function RestrictToSubregister (op : (Qubit[] => Unit), idxs : Int[]) : (Qubit[] => Unit)'
 input:
-  content: '(op : (Qubit[] => ()), idxs : Int[])'
+  content: '(op : (Qubit[] => Unit), idxs : Int[])'
   types:
   - name: op
-    summary: ' Operation to be restricted to a subregister.'
+    summary: Operation to be restricted to a subregister.
     isOperation: true
     input:
       types:
-      - uid: Qubit
+      - isArray: true
         isPrimitive: true
-        isArray: true
+        uid: Qubit
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
   - name: idxs
-    summary: ' Array of indices, indicating to which qubits the operation will be restricted.'
-    uid: Int
-    isPrimitive: true
+    summary: Array of indices, indicating to which qubits the operation will be restricted.
     isArray: true
+    isPrimitive: true
+    uid: Int
 output:
-  content: (Qubit[] => ())
+  content: (Qubit[] => Unit)
   types:
   - isOperation: true
     input:
       types:
-      - uid: Qubit
+      - isArray: true
         isPrimitive: true
-        isArray: true
+        uid: Qubit
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
 seeAlso:
 - microsoft.quantum.canon.restricttosubregistera
 - microsoft.quantum.canon.restricttosubregisterc
 - microsoft.quantum.canon.restricttosubregisterca
+...

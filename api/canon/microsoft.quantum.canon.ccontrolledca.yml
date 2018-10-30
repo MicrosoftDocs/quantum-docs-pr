@@ -3,17 +3,16 @@ uid: microsoft.quantum.canon.ccontrolledca
 name: CControlledCA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given an operation op, returns a new operation which
-   applies the op if a classical control bit is true. If false, nothing happens.
-   The modifier 'CA' indicates that the operation is controllable and adjointable.
-syntax: "function CControlledCA (op : ('T => () : Controlled, Adjoint)) : ((Bool, 'T) => () : Controlled, Adjoint)"
+summary: >-
+  Given an operation op, returns a new operation which
+  applies the op if a classical control bit is true. If false, nothing happens.
+  The modifier 'CA' indicates that the operation is controllable and adjointable.
+syntax: "function CControlledCA (op : ('T => Unit : Controlled, Adjoint)) : ((Bool, 'T) => Unit : Controlled, Adjoint)"
 input:
-  content: "(op : ('T => () : Controlled, Adjoint))"
+  content: "(op : ('T => Unit : Controlled, Adjoint))"
   types:
   - name: op
-    summary: >2
-       An operation to be conditionally applied.
+    summary: An operation to be conditionally applied.
     isOperation: true
     input:
       types:
@@ -21,29 +20,32 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Controlled
     - Adjoint
 output:
-  content: "((Bool, 'T) => () : Controlled, Adjoint)"
+  content: "((Bool, 'T) => Unit : Controlled, Adjoint)"
   types:
-  - summary: " A new operation which is op if the classical control bit is true. \n"
+  - summary: A new operation which is op if the classical control bit is true.
     isOperation: true
     input:
       types:
-      - uid: Bool
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Bool
       - uid: "'T"
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: *o0
-seeAlso:
-- microsoft.quantum.canon.controlled
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+    - Adjoint
 typeParameters:
 - uid: "'T"
-  summary: " The input type of the operation to be conditionally applied. \n"
+  summary: The input type of the operation to be conditionally applied.
+seeAlso:
+- microsoft.quantum.canon.controlled
+...

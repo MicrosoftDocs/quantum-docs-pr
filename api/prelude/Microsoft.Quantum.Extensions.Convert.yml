@@ -3,27 +3,25 @@ uid: microsoft.quantum.extensions.convert
 name: Microsoft.Quantum.Extensions.Convert
 functions:
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: >2
-     Encodes a multi-qubit Pauli operator represented as an array of
-     single-qubit Pauli operators into an integer.
+  summary: >-
+    Encodes a multi-qubit Pauli operator represented as an array of
+    single-qubit Pauli operators into an integer.
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: " Converts a given integer to an equivalent double-precision \n floating-point number.\n"
+  summary: >-
+    Converts a given integer to an equivalent double-precision
+    floating-point number.
 - uid: microsoft.quantum.extensions.convert.tostringb
-  summary: >2
-     Converts a given boolean value to an equivalent string representation.
+  summary: Converts a given boolean value to an equivalent string representation.
 - uid: microsoft.quantum.extensions.convert.tostringd
-  summary: >2
-     Converts a given double-precision floating-point number to an equivalent string representation.
+  summary: Converts a given double-precision floating-point number to an equivalent string representation.
 - uid: microsoft.quantum.extensions.convert.tostringdformat
-  summary: >2
-     Converts a given double-precision floating-point number to an equivalent string representation,
-     using the given format.
+  summary: >-
+    Converts a given double-precision floating-point number to an equivalent string representation,
+    using the given format.
 - uid: microsoft.quantum.extensions.convert.tostringi
-  summary: >2
-     Converts a given integer number to an equivalent string representation.
+  summary: Converts a given integer number to an equivalent string representation.
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-  summary: >2
-     Converts a given integer number to an equivalent string representation,
-     using the given format.
-operations: []
-newtypes: []
+  summary: >-
+    Converts a given integer number to an equivalent string representation,
+    using the given format.
+...

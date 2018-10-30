@@ -3,41 +3,40 @@ uid: microsoft.quantum.canon.applytoeachindex
 name: ApplyToEachIndex
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Applies a single-qubit operation to each indexed element in a register.
-syntax: "operation ApplyToEachIndex (singleElementOperation : ((Int, 'T) => ()), register : 'T[]) : ()"
+summary: Applies a single-qubit operation to each indexed element in a register.
+syntax: "operation ApplyToEachIndex (singleElementOperation : ((Int, 'T) => Unit), register : 'T[]) : Unit"
 input:
-  content: "(singleElementOperation : ((Int, 'T) => ()), register : 'T[])"
+  content: "(singleElementOperation : ((Int, 'T) => Unit), register : 'T[])"
   types:
   - name: singleElementOperation
-    summary: ' Operation to apply to each qubit.'
+    summary: Operation to apply to each qubit.
     isOperation: true
     input:
       types:
-      - uid: Int
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Int
       - uid: "'T"
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
   - name: register
-    summary: >2
-       Array of qubits on which to apply the given operation.
+    summary: Array of qubits on which to apply the given operation.
+    isArray: true
     uid: "'T"
     isLocal: true
-    isArray: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: The target on which each of the operations acts.
 seeAlso:
 - microsoft.quantum.canon.applytoeach
 - microsoft.quantum.canon.applytoeachindexa
 - microsoft.quantum.canon.applytoeachindexc
 - microsoft.quantum.canon.applytoeachindexca
-typeParameters:
-- uid: "'T"
-  summary: " The target on which each of the operations acts. \n"
+...

@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.inplacemajority
+name: InPlaceMajority
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: This computes the Majority function in-place on $3$ bits.
+syntax: 'operation InPlaceMajority (output : Qubit, input : Qubit[]) : Unit'
+input:
+  content: '(output : Qubit, input : Qubit[])'
+  types:
+  - name: output
+    summary: >-
+      First input qubit. Note that the output is computed in-place
+      and stored in this qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: input
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

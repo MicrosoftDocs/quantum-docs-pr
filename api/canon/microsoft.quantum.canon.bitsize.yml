@@ -3,21 +3,21 @@ uid: microsoft.quantum.canon.bitsize
 name: BitSize
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   For a non-negative integer `a`, returns the smallest $n$ such
-   that $a < 2^n$.
+summary: >-
+  For a non-negative integer `a`, returns the smallest $n$ such
+  that $a < 2^n$.
 syntax: 'function BitSize (a : Int) : Int'
 input:
   content: '(a : Int)'
   types:
   - name: a
-    summary: >2
-       The integer whose bit-size is to be computed.
-    uid: Int
+    summary: The integer whose bit-size is to be computed.
     isPrimitive: true
+    uid: Int
 output:
   content: Int
   types:
-  - summary: ' The bit-size of `a`.'
-    uid: Int
+  - summary: The bit-size of `a`.
     isPrimitive: true
+    uid: Int
+...

@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.length
+name: Length
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Returns the number of elements in an array.
+syntax: "function Length (a : 'T[]) : Int"
+input:
+  content: "(a : 'T[])"
+  types:
+  - name: a
+    summary: Input array.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Int
+  types:
+  - summary: The total count of elements in an array.
+    isPrimitive: true
+    uid: Int
+...

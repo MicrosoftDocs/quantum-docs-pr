@@ -3,15 +3,15 @@ uid: microsoft.quantum.canon.operationpow
 name: OperationPow
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given an operation representing a gate $U$, returns a new operation
-   $U^m$ for a power $m$.
-syntax: "function OperationPow (oracle : ('T => ()), power : Int) : ('T => ())"
+summary: >-
+  Given an operation representing a gate $U$, returns a new operation
+  $U^m$ for a power $m$.
+syntax: "function OperationPow (oracle : ('T => Unit), power : Int) : ('T => Unit)"
 input:
-  content: "(oracle : ('T => ()), power : Int)"
+  content: "(oracle : ('T => Unit), power : Int)"
   types:
   - name: oracle
-    summary: ' An operation $U$ representing the gate to be repeated.'
+    summary: An operation $U$ representing the gate to be repeated.
     isOperation: true
     input:
       types:
@@ -19,18 +19,16 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
   - name: power
-    summary: >2
-       The number of times that $U$ is to be repeated.
-    uid: Int
+    summary: The number of times that $U$ is to be repeated.
     isPrimitive: true
+    uid: Int
 output:
-  content: ('T => ())
+  content: ('T => Unit)
   types:
-  - summary: >2
-       A new operation representing $U^m$, where $m = \texttt{power}$.
+  - summary: A new operation representing $U^m$, where $m = \texttt{power}$.
     isOperation: true
     input:
       types:
@@ -38,12 +36,13 @@ output:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: The type of the operation to be powered.
 seeAlso:
 - microsoft.quantum.canon.operationpowc
 - microsoft.quantum.canon.operationpowa
 - microsoft.quantum.canon.operationpowca
-typeParameters:
-- uid: "'T"
-  summary: " The type of the operation to be powered. \n"
+...

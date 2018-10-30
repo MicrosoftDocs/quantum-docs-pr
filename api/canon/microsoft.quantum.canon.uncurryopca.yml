@@ -3,18 +3,17 @@ uid: microsoft.quantum.canon.uncurryopca
 name: UncurryOpCA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Given a function which returns operations,
-   returns a new operation which takes both inputs
-   as a tuple.
-   The modifier 'CA' indicates that the operations are controllable and adjointable.
-syntax: "function UncurryOpCA (curriedOp : ('T -> ('U => () : Controlled, Adjoint))) : (('T, 'U) => () : Controlled, Adjoint)"
+summary: >-
+  Given a function which returns operations,
+  returns a new operation which takes both inputs
+  as a tuple.
+  The modifier 'CA' indicates that the operations are controllable and adjointable.
+syntax: "function UncurryOpCA (curriedOp : ('T -> ('U => Unit : Controlled, Adjoint))) : (('T, 'U) => Unit : Controlled, Adjoint)"
 input:
-  content: "(curriedOp : ('T -> ('U => () : Controlled, Adjoint)))"
+  content: "(curriedOp : ('T -> ('U => Unit : Controlled, Adjoint)))"
   types:
   - name: curriedOp
-    summary: >2
-       A function which returns operations.
+    summary: A function which returns operations.
     isFunction: true
     input:
       types:
@@ -29,17 +28,17 @@ input:
             isLocal: true
         output:
           types:
-          - uid: ()
-            isPrimitive: true
-        functors: &o0
+          - isPrimitive: true
+            uid: Unit
+        functors:
         - Controlled
         - Adjoint
 output:
-  content: "(('T, 'U) => () : Controlled, Adjoint)"
+  content: "(('T, 'U) => Unit : Controlled, Adjoint)"
   types:
-  - summary: >2
-       A new operation `op` such that `op(t, u)` is equivalent
-       to `(curriedOp(t))(u)`.
+  - summary: >-
+      A new operation `op` such that `op(t, u)` is equivalent
+      to `(curriedOp(t))(u)`.
     isOperation: true
     input:
       types:
@@ -49,14 +48,16 @@ output:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: *o0
-seeAlso:
-- microsoft.quantum.canon.uncurryop
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+    - Adjoint
 typeParameters:
 - uid: "'T"
-  summary: ' The type of the first argument of a curried function.'
+  summary: The type of the first argument of a curried function.
 - uid: "'U"
-  summary: >2
-     The type of the second argument of a curried function.
+  summary: The type of the second argument of a curried function.
+seeAlso:
+- microsoft.quantum.canon.uncurryop
+...

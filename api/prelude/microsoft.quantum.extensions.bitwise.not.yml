@@ -3,25 +3,20 @@ uid: microsoft.quantum.extensions.bitwise.not
 name: Not
 type: function
 namespace: Microsoft.Quantum.Extensions.Bitwise
-summary: >2
-   Returns the bitwise NOT of an integer.
-remarks: >2
-   See the [C# `~` Operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-complement-operator) for more details.
-
-  ### Examples
-   ```qsharp
-   let a = 248;
-   let x = Not(a); // x : Int = -249, due to two's complement representation.
-   ```
+summary: >-
+  Returns the bitwise NOT of an integer.
+  This performs the same computation as the built-in `~~~` operator.
+remarks: See the [C# `~` Operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-complement-operator) for more details.
 syntax: 'function Not (a : Int) : Int'
 input:
   content: '(a : Int)'
   types:
   - name: a
-    uid: Int
     isPrimitive: true
+    uid: Int
 output:
   content: Int
   types:
-  - uid: Int
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Int
+...

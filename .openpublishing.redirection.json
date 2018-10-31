@@ -37,7 +37,7 @@
         },
         {
             "source_path": "articles/libraries/intro.md",
-            "redirect_url": "libraries/standard/",
+            "redirect_url": "standard/",
             "redirect_document_id": true
         },
         {

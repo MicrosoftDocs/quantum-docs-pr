@@ -148,15 +148,15 @@ There are some subtleties when passing arguments to a `Run` method:
 
 The results of the quantum algorithm are returned from the `Run` method.
 The `Run` method executes asynchronously thus it returns a 
-[`Task<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1). 
+[`Task<T>`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1). 
 There are multiple ways to get the actual operation's results. The simplest is
-by using the `Task`'s [`Result` property](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1.result):
+by using the `Task`'s [`Result` property](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1.result):
 
 ```csharp
     var res = BellTest.Run(sim, 1000, initial).Result;
 ```
-but other techniques, like using the [`Wait` method](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.wait)
-or C# [`await` keyword](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await)
+but other techniques, like using the [`Wait` method](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.wait)
+or C# [`await` keyword](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await)
 will also work.
 
 As with arguments, Q# tuples are represented as `ValueTuple` instances and

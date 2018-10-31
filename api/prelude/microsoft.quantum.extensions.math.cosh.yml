@@ -4,7 +4,7 @@ name: Cosh
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
 summary: Returns the cosine of the specified angle.
-remarks: See [System.Math.Cosh](https://docs.microsoft.com/en-us/dotnet/api/system.math.cosh) for more details.
+remarks: See [System.Math.Cosh](https://docs.microsoft.com/dotnet/api/system.math.cosh) for more details.
 syntax: 'function Cosh (d : Double) : Double'
 input:
   content: '(d : Double)'

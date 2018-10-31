@@ -4,7 +4,7 @@ name: IEEERemainder
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
 summary: Returns the remainder resulting from the division of a specified number by another specified number.
-remarks: See [System.Math.IEEERemainder](https://docs.microsoft.com/en-us/dotnet/api/system.math.ieeeremainder) for more details.
+remarks: See [System.Math.IEEERemainder](https://docs.microsoft.com/dotnet/api/system.math.ieeeremainder) for more details.
 syntax: 'function IEEERemainder (x : Double, y : Double) : Double'
 input:
   content: '(x : Double, y : Double)'

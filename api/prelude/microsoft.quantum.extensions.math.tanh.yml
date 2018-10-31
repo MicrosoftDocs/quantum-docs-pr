@@ -4,7 +4,7 @@ name: Tanh
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
 summary: Returns the hyperbolic tangent of the specified angle.
-remarks: See [System.Math.Tanh](https://docs.microsoft.com/en-us/dotnet/api/system.math.tanh) for more details.
+remarks: See [System.Math.Tanh](https://docs.microsoft.com/dotnet/api/system.math.tanh) for more details.
 syntax: 'function Tanh (d : Double) : Double'
 input:
   content: '(d : Double)'

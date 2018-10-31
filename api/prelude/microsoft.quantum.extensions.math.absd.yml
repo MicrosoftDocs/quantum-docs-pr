@@ -4,7 +4,7 @@ name: AbsD
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
 summary: Returns the absolute value of a double-precision floating-point number.
-remarks: See [System.Math.Abs](https://docs.microsoft.com/en-us/dotnet/api/system.math.abs) for more details.
+remarks: See [System.Math.Abs](https://docs.microsoft.com/dotnet/api/system.math.abs) for more details.
 syntax: 'function AbsD (a : Double) : Double'
 input:
   content: '(a : Double)'

@@ -30,7 +30,7 @@ Click on the "Microsoft.Quantum.Chemistry on the left-hand pane, select the late
 
 ![](~/media/vs2017-nuget-select-chem.png)
 
-For more details, see the [Package Manager UI guide](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui).
+For more details, see the [Package Manager UI guide](https://docs.microsoft.com/nuget/tools/package-manager-ui).
 
 Alternatively, you can use the Package Manager Console to add the quantum chemistry library to your project with a command line interface.
 
@@ -42,7 +42,7 @@ From the package manager console, run the following:
 Install-Package Microsoft.Quantum.Chemistry
 ```
 
-For more details, see the [Package Manager Console guide](https://docs.microsoft.com/en-us/nuget/tools/package-manager-console).
+For more details, see the [Package Manager Console guide](https://docs.microsoft.com/nuget/tools/package-manager-console).
 
 **Command line or Visual Studio Code 2017:** Using the command line on its own or from within Visual Studio Code, you can use the `dotnet` command to add NuGet package reference to your project:
 

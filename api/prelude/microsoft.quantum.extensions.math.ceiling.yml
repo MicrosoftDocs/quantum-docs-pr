@@ -4,7 +4,7 @@ name: Ceiling
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
 summary: Returns the smallest integer greater than or equal to the specified number.
-remarks: See [System.Math.Ceiling](https://docs.microsoft.com/en-us/dotnet/api/system.math.ceiling) for more details.
+remarks: See [System.Math.Ceiling](https://docs.microsoft.com/dotnet/api/system.math.ceiling) for more details.
 syntax: 'function Ceiling (value : Double) : Int'
 input:
   content: '(value : Double)'

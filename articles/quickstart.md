@@ -65,7 +65,7 @@ To enter the Q# code, make sure that you are editing the
 The `Bell.qs` file should have the following contents:
 
 ```qsharp
-namespace Bell
+namespace Quantum.Bell
 {
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Primitive;
@@ -237,7 +237,7 @@ using System;
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.Simulation.Simulators;
 
-namespace Bell
+namespace Quantum.Bell
 {
     class Driver
     {

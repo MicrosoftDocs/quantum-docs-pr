@@ -13,6 +13,8 @@ Thank you for your interest in Microsoft Quantum Development Kit preview. The de
 
 To jump right in, start with [Installation and validation](xref:microsoft.quantum.install) to create and validate your development environment. Then use [Quickstart - your first quantum program](xref:microsoft.quantum.write-program) to learn about the structure of a Q# project and how to write the quantum equivalent of "Hello, world!" - creating entanglement, or what is also known as a Bell State, in Q#.
 
+You should also visit our [samples repository](https://github.com/Microsoft/Quantum) that showcases multiple examples on how to write quantum programs using Q#. Most of these samples are written using our open-source [quantum libraries](https://github.com/Microsoft/QuantumLibraries), including our [standard](xref:microsoft.quantum.libraries.standard.intro) and [chemistry](xref:microsoft.quantum.chemistry.concepts.intro) libraries. If you want to dive deeper into Q# programming, check out the [Quantum Katas](https://github.com/Microsoft/QuantumKatas) - a collection of self-paced tutorials introducing you to quantum computing via programming exercises in Q#.
+
 If you'd like more general information about Microsoft's quantum computing initiative, see [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/).
 
 ## Feedback Pipeline

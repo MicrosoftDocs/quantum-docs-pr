@@ -1,8 +1,8 @@
 ---
 title: Loading a Hamiltonian from file | Microsoft Docs
 description: Loading a Hamiltonian from file Docs
-author: Guang Hao Low
-ms.author: gulow@microsoft.com
+author: guanghaolow
+ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian

@@ -244,7 +244,7 @@ The dynamical generator modeling library provides a framework for systematically
 
 ### Complete Description of a Generator ###
 
-At the top level, a complete description of a Hamiltonian is contained in the `EvolutionGenerator` user-defined type which has has two components.:
+At the top level, a complete description of a Hamiltonian is contained in the `EvolutionGenerator` user-defined type which has two components.:
 
 ```qsharp
 newtype EvolutionGenerator = (EvolutionSet, GeneratorSystem);

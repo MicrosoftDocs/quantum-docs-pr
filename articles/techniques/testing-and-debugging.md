@@ -156,7 +156,7 @@ using (var sim = new QuantumSimulator())
 
 After you execute a test in Test Explorer and click on the test, a panel will appear with information about test execution: Passed/Failed status, elapsed time and an "Output" link. If you click the "Output" link, test output will open in a new window.
 
-![test output](~/media/unit-test-output.png)
+![test output](../media/unit-test-output.png)
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
@@ -236,7 +236,7 @@ Notice how the ids of the qubits are shown at the top in their significant order
   > [!TIP]
   > You can figure out a qubit id in Visual Studio by putting a breakpoint in your code and inspecting the value of a qubit variable, for example:
   > 
-  > ![show qubit id in Visual Studio](~/media/qubit_id.png)
+  > ![show qubit id in Visual Studio](../media/qubit_id.png)
   >
   > the qubit with index `0` on `register2` has id=`3`, the qubit with index `1` has id=`2`.
 

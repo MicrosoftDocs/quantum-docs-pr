@@ -17,7 +17,7 @@ Operations with this or greater complexity are ubiquitous in quantum algorithms 
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/Concepts1.png)
+![](../media/Concepts1.png)
 
 This visual language for quantum operations can be more readily digestible than writing down its equivalent matrix once you understand the conventions for expressing a quantum circuit.  We review these conventions below.
 
@@ -25,7 +25,7 @@ In a circuit diagram, each solid line depicts a qubit or more generally a qubit 
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_2.png)
+![](../media/concepts_2.png)
 
 is the [Hadamard](xref:microsoft.quantum.primitive.h) gate acting on a single-qubit register.
 
@@ -33,7 +33,7 @@ Quantum gates are ordered in chronological order with the left-most gate as the 
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_3.png)
+![](../media/concepts_3.png)
 
 is the unitary matrix $CBA$.  Matrix multiplication obeys the opposite convention: the right-most matrix is applied first. In quantum circuit diagrams, however, the left-most gate is applied first.  This difference can at times lead to confusion, so it is important to note this significant difference between the linear algebraic notation and quantum circuit diagrams.
 
@@ -43,7 +43,7 @@ Multi-qubit circuit diagrams follow similar conventions to single-qubit ones.  A
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_4.png)
+![](../media/concepts_4.png)
 
 We can also view $B$ as having an action on a single two-qubit register rather than two one-qubit registers depending on the context in which the circuit is used. 
 Perhaps the most useful property of such abstract circuit diagrams is that they allow complicated quantum algorithms to be described at a high level without having to compile them down to fundamental gates.  This means that you can get an intuition about the data flow for a large quantum algorithm without needing to understand all the details of how each of the subroutines within the algorithm work.
@@ -52,14 +52,14 @@ The other construct that is built into multi-qubit quantum circuit diagrams is c
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_5.png)
+![](../media/concepts_5.png)
 
 Here the black circle denotes the quantum bit on which the gate is controlled and a vertical wire denotes the unitary that is applied when the control qubit takes the value $1$.
 For the special cases where $G=X$ and $G=Z$ we introduce the following notation to describe the controlled version of the gates (note that the controlled-X gate is the [$CNOT$ gate](xref:microsoft.quantum.primitive.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_6.png)
+![](../media/concepts_6.png)
 
 Q# provides methods to automatically generate the controlled version of an operation, which saves the programmer from having to hand code these operations. An example of this is shown below:
 
@@ -78,7 +78,7 @@ The remaining operation to visualize in circuit diagrams is measurement.  Measur
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Measurement circuit](~/media/concepts_7.png)
+![Measurement circuit](../media/concepts_7.png)
 
 Q# implements a [Measure operator](xref:microsoft.quantum.primitive.measure) for this purpose. See the section on <xref:microsoft.quantum.libraries.prelude#measurements> for more information.
 
@@ -86,11 +86,11 @@ Similarly, the subcircuit
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_8.png)
+![](../media/concepts_8.png)
 
 gives a classically controlled gate, where $G$ is applied conditioned on the classical control bit being value $1$.
 
 [Quantum Teleportation](xref:microsoft.quantum.techniques.puttingittogether) is perhaps the best quantum algorithm for illustrating these components. Quantum teleportation is a method for moving data within a quantum computer (or even between distant quantum computers in a quantum network) through the use of entanglement and measurement. Interestingly, it is actually capable of moving a quantum state, say the value in a given qubit, from one qubit to another, without even knowing what the qubit's value is! This is necessary for the protocol to work according to the laws of quantum mechanics.  The quantum teleportation circuit is given below; we also provide an annotated version of the circuit to illustrate how to read the quantum circuit.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![](~/media/concepts_tp2.png)
+![](../media/concepts_tp2.png)

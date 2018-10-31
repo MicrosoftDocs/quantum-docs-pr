@@ -122,13 +122,13 @@ Shown below is a text-book quantum circuit that implements the teleportation. Mo
 - Step 3: Taking a measurement of the first and second qubits, __message__ and __here__.
 - Step 4: Applying a NOT gate or a Z gate, depending on the result of the measurement in step 3.
 
-![`Teleport(msg : Qubit, there : Qubit) : Unit`](~/media/teleportation.svg)
+![`Teleport(msg : Qubit, there : Qubit) : Unit`](../media/teleportation.svg)
 
 ## Quantum Teleportation: Code
 
 We have our circuit for quantum teleportation:
 
-![`Teleport(msg : Qubit, there : Qubit) : Unit`](~/media/teleportation.svg)
+![`Teleport(msg : Qubit, there : Qubit) : Unit`](../media/teleportation.svg)
 
 We can now translate each of the steps in this quantum circuit into Q#.
 

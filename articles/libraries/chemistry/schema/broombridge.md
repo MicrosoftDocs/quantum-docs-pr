@@ -21,7 +21,7 @@ Being YAML-based, Broombridge is a structured, human-readable and human-editable
 The data format can be generated from NWChem with effortless ease: a variety of methods is available that range from a full installation of NWChem to run chemistry decks such as the ones provided [here](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) and output Broombridge as part of the run, over a docker image of NWchem which can also be used to generate Broombridge from chemistry decks. Finally, a visual method to get started with computational chemistry quickly without having to install any chemistry software is provided by the [EMSL Arrows](https://arrows.emsl.pnnl.gov/api/qsharp_chem) interface to NWChem. 
 
 At a high level, the interplay between NWChem and the Microsoft Quantum Development Kit can be visualized as follows: 
-![Chemistry stack](~/media/broombridge.png)
+![Chemistry stack](../../../media/broombridge.png)
 The blue shaded box represents the Broombridge schema, the various grey shaded boxes represent other internal data representations that were chosen to represent and process quantum algorithms for computational chemistry based on real-world chemistry problems. 
 
 Multiple chemical representations defined using the Broombridge schema are provided [here] (https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/IntegralData/YAML/).

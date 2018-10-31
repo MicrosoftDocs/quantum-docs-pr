@@ -19,7 +19,7 @@ Error correction requires a fast and reliable classical computer to be run in co
 
 A conceptual stack that illustrates the functional flow of factoring 8704143553785700723 in a quantum computing environment is shown below:
 
-![Software stack](~/media/concepts_stack.png)
+![Software stack](../media/concepts_stack.png)
 
 There are several broad stages of programming such a quantum computation.  The first, and arguably most challenging phase, is specifying the problem that one wishes to solve.  In this case, the problem is to factor the number 8704143553785700723  into a product of two prime numbers.  The next step involves designing an algorithm for solving this computational problem.  In this case, Shor's famous quantum factoring algorithm can be used to find the factors.  This algorithm is expressed in Q# and then a sequence of quantum operations is output that could be run on an idealized error-free quantum computer.  
 

@@ -80,7 +80,7 @@ It corresponds to the single-qubit unitary:
 
 Below we see these transformations mapped to the [Bloch sphere](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) (the rotation axis in each case is highlighted red):
 
-![Pauli operations mapped onto the Bloch sphere](~/media/prelude_pauliBloch.png)
+![Pauli operations mapped onto the Bloch sphere](../../media/prelude_pauliBloch.png)
 
 It is important to note that applying the same Pauli gate twice to the same qubit cancels out the operation (because you have now performed a full rotation of 2π (360°) over the surface to the Bloch Sphere, thus arriving back at the starting point). This brings us to the following identity:
 
@@ -90,7 +90,7 @@ $$
 
 This can be visualised on the Bloch sphere:
 
-![XX = I](~/media/prelude_blochIdentity.png)
+![XX = I](../../media/prelude_blochIdentity.png)
 
 #### Other Single-Qubit Cliffords ####
 
@@ -109,7 +109,7 @@ and corresponds to the single-qubit unitary:
 
 The Hadamard gate is particularly important as it can be used to create a superposition of the $\ket{0}$ and $\ket{1}$ states. In the Bloch sphere representation, it is easiest to think of this as a rotation of $\ket{\psi}$ around the x-axis by $\pi$ radians ($180^\circ$) followed by a (clockwise) rotation around the y-axis by $\pi/2$ radians ($90^\circ$):
 
-![Hadamard operation mapped onto the Bloch sphere](~/media/prelude_hadamardBloch.png)
+![Hadamard operation mapped onto the Bloch sphere](../../media/prelude_hadamardBloch.png)
 
 The <xref:microsoft.quantum.primitive.s> operation implements the phase gate $S$.
 This is the matrix square root of the Pauli $Z$ operation.
@@ -195,7 +195,7 @@ It has signature `((Int,Int, Qubit) => Unit : Adjoint, Controlled)`.
 
 An example of a rotation operation (around the Pauli $Z$ axis, in this instance) mapped onto the Bloch sphere is shown below:
 
-![Rotation operation mapped onto the Bloch sphere](~/media/prelude_rotationBloch.png)
+![Rotation operation mapped onto the Bloch sphere](../../media/prelude_rotationBloch.png)
 
 #### Multi-Qubit Operations ####
 

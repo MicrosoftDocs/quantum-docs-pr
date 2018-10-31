@@ -16,25 +16,25 @@ As with other NuGet packages, it's straightforward to add the chemistry library 
 **Visual Studio 2017:** If you are using Visual Studio 2017, you can add the quantum chemistry packages by using the NuGet Package Manager.
 To open the Package Manager, right-click on the project you'd like to add the chemistry library to and select "Manage NuGet Packages...," as in the screenshot below.
 
-![](~/media/vs2017-nuget-manage-packages.png)
+![](../../media/vs2017-nuget-manage-packages.png)
 
 From the Browse tab, search for the package name "Microsoft.Quantum.Chemistry."
 
 > [!NOTE]
 > Make sure to tick "Include prerelease."
 
-![](~/media/vs2017-nuget-package-search.png)
+![](../../media/vs2017-nuget-package-search.png)
 
 This will list the packages available for download.
 Click on the "Microsoft.Quantum.Chemistry on the left-hand pane, select the latest pre-release version on the right-hand pane, and click "Install":
 
-![](~/media/vs2017-nuget-select-chem.png)
+![](../../media/vs2017-nuget-select-chem.png)
 
 For more details, see the [Package Manager UI guide](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui).
 
 Alternatively, you can use the Package Manager Console to add the quantum chemistry library to your project with a command line interface.
 
-![](~/media/vs2017-nuger-console-menu.png)
+![](../../media/vs2017-nuger-console-menu.png)
 
 From the package manager console, run the following:
 

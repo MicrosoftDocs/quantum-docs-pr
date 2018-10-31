@@ -9,6 +9,46 @@
             "source_path": "articles/quantum-RelNotes.md",
             "redirect_url": "relnotes/",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "articles/quantum-concepts-1-Intro.md",
+            "redirect_url": "concepts/",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "articles/quantum-InstallConfig.md",
+            "redirect_url": "install-guide/",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "articles/quantum-WriteAQuantumProgram.md",
+            "redirect_url": "quickstart",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "articles/quantum-SimulatorsAndMachines.md",
+            "redirect_url": "machines/",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "articles/quantum-devguide-1-Intro.md",
+            "redirect_url": "techniques/",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "articles/libraries/intro.md",
+            "redirect_url": "libraries/standard/",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "articles/quantum-QR-Intro.md",
+            "redirect_url": "language/",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "articles/quantum-ForMoreInfo.md",
+            "redirect_url": "for-more-info",
+            "redirect_document_id": true
         }
     ]
 }

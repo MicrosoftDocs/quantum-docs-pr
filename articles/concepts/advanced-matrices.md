@@ -9,7 +9,7 @@ ms.topic: article
 ---
 # Advanced Matrix Concepts #
 
-We now extend our manipulation of Matrices to [Eigenvalues, Eigenvectors](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) and [Exponentials](https://en.wikipedia.org/wiki/Matrix_exponential) which form a fundamental set of tools we need to describe and implement quantum algorithms.
+We now extend our manipulation of Matrices to [*Eigenvalues, Eigenvectors*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) and [*Exponentials*](https://en.wikipedia.org/wiki/Matrix_exponential) which form a fundamental set of tools we need to describe and implement quantum algorithms.
 
 ## Eigenvalues and Eigenvectors ##
 
@@ -19,7 +19,7 @@ We say $v$ is an [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_e
 
 For example, for the identity matrix, every vector $v$ is an eigenvector with eigenvalue $1$.
 
-As another example, consider a [diagonal matrix](https://en.wikipedia.org/wiki/Diagonal_matrix) $D$ which only has nonzero entries on the diagonal:
+As another example, consider a [*diagonal matrix*](https://en.wikipedia.org/wiki/Diagonal_matrix) $D$ which only has nonzero entries on the diagonal:
 
 $$
 \begin{bmatrix}

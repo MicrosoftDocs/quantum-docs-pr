@@ -7,7 +7,7 @@ summary: >-
   Given a function which returns operations,
   returns a new operation which takes both inputs
   as a tuple.
-  The modifier 'CA' indicates that the operations are controllable and adjointable.
+  The modifier `CA` indicates that the operations are controllable and adjointable.
 syntax: "function UncurryOpCA (curriedOp : ('T -> ('U => Unit : Controlled, Adjoint))) : (('T, 'U) => Unit : Controlled, Adjoint)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit : Controlled, Adjoint)))"

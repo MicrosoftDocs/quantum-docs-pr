@@ -4,8 +4,8 @@ name: ApplyToFirstTwoQubitsCA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Applies operation `op` to the first two qubits in the register.
-  The modifier 'CA' indicates that the operation is controllable and adjointable.
+  Applies an operation to the first two qubits in the register.
+  The modifier `CA` indicates that the operation is controllable and adjointable.
 remarks: >-
   This is equivalent to:
 

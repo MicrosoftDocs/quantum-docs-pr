@@ -4,15 +4,22 @@ name: CNOTChainTarget
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  This computes the parity of qubits initially in the state
-  $\ket{q_0} \ket{q_1} \cdots \ket{q_{\text{target}}}$ in-place,
-  such that the final state is given by
+  Computes the parity of an array of qubits into a target qubit.
+
+  If the array is initially in the state
+  $\ket{q_0} \ket{q_1} \cdots \ket{q_{\text{target}}}$,
+  the final state is given by
   $\ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n - 1} \oplus \cdots \oplus q_0 \oplus q_{\text{target}}}$.
 remarks: >-
   The following are equivalent:
 
-  ```Q#
+  ```qsharp
   CNOTChainTarget(Most(qs), Last(qs));
+  ```
+
+  and
+
+  ```qsharp
   CNOTChain(qs);
   ```
 syntax: 'operation CNOTChainTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'

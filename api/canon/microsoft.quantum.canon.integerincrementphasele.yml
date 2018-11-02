@@ -5,6 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
   Unsigned integer increment by an integer constant, based on phase rotations.
+
   Suppose `target` encodes unsigned integer x in little-endian encoding and
   `increment` is equal to a.
   The operation implements the unitary |x⟩ ↦ |x + a ⟩,

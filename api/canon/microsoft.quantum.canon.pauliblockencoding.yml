@@ -4,7 +4,9 @@ name: PauliBlockEncoding
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Creates a block-encoding unitary $U$ of the Hamiltonian $H=\sum_{j}\alpha_j P_j$ described by a
+  Creates a block-encoding unitary for a Hamiltonian.
+
+  The Hamiltonian $H=\sum_{j}\alpha_j P_j$ is described by a
   sum of Pauli terms $P_j$, each with real coefficient $\alpha_j$.
 remarks: >-
   This is obtained by preparing and unpreparing the state $\sum_{j}\sqrt{\alpha_j/\alpha}\ket{j}$,
@@ -28,7 +30,7 @@ output:
 
       ## Second parameter
 
-      A `BlockEncodingReflection` unitary $U$ of the Hamiltonian $U$. As this unitary
+      A `BlockEncodingReflection` unitary $U$ of the Hamiltonian $H$. As this unitary
       satisfies $U^2 = I$, it is also a reflection.
     types:
     - isPrimitive: true

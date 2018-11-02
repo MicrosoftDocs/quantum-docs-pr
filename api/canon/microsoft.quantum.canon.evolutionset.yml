@@ -5,7 +5,9 @@ type: newtype
 namespace: Microsoft.Quantum.Canon
 summary: >-
   Represents a set of gates that can be readily implemented and used
-  to implement simulation algorithms. Elements in the set are indexed
+  to implement simulation algorithms.
+
+  Elements in the set are indexed
   by a  <xref:microsoft.quantum.canon.generatorindex>,
   and each set is described by a function
   from `GeneratorIndex` to  <xref:microsoft.quantum.canon.evolutionunitary>,

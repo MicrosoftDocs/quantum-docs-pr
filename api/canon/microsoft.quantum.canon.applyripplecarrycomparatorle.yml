@@ -4,9 +4,11 @@ name: ApplyRippleCarryComparatorLE
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  This unitary $U$ tests if two integers $x,y$ stored in equal-size qubit registers
-  satisfies $x > y$. If true, $1$ is XORed into an output
-  qubit. Otherwise, $0$ is XORed into an output qubit. In other words,
+  This unitary tests if two integers `x` and `y` stored in equal-size qubit registers
+  satisfy `x > y`. If true, 1 is XORed into an output
+  qubit. Otherwise, 0 is XORed into an output qubit.
+
+  In other words, this unitary $U$  satisfies:
   $$
   \begin{align}
   U\ket{x}\ket{y}\ket{z}=\ket{x}\ket{y}\ket{z\oplus (x>y)}.

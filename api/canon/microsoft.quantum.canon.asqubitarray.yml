@@ -4,7 +4,7 @@ name: AsQubitArray
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Used to cast UDTs that are derived from type Qubit[] down to Qubit[].
+  Used to cast UDTs that are derived from type `Qubit[]` down to `Qubit[]`.
   Handy when used with generic functions like Head and Tail.
 syntax: 'function AsQubitArray (arr : Qubit[]) : Qubit[]'
 input:

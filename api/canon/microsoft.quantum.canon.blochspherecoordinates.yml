@@ -4,7 +4,9 @@ name: BlochSphereCoordinates
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Given two complex numbers $a0, a1$, computes coordinates
+  Computes the Bloch sphere coordinates for a single-qubit state.
+
+  Given two complex numbers $a0, a1$ that represent the qubit state, computes coordinates
   on the Bloch sphere such that
   $a0 \ket{0} + a1 \ket{1} = r e^{it}(e^{-i \phi /2}\cos{(\theta/2)}\ket{0}+e^{i \phi /2}\sin{(\theta/2)}\ket{1})$.
 syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Canon.ComplexPolar, a1 : Microsoft.Quantum.Canon.ComplexPolar) : (Microsoft.Quantum.Canon.ComplexPolar, Double, Double)'

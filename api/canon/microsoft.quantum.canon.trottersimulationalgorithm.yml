@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
   `SimulationAlgorithm` function that uses a Trotter–Suzuki
-  decomposition to approximate the time-evolution operator $e^{-i H t}$.
+  decomposition to approximate the time-evolution operator _exp(-iHt)_.
 syntax: 'function TrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Canon.SimulationAlgorithm'
 input:
   content: '(trotterStepSize : Double, trotterOrder : Int)'

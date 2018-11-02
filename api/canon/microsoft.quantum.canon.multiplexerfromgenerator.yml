@@ -4,8 +4,8 @@ name: MultiplexerFromGenerator
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Returns a multiply-controlled unitary operation $U$ that applies a
-  unitary $V_j$ when controlled by $n$-qubit number state $\ket{j}$.
+  Returns a multiply-controlled unitary operation `U` that applies a
+  unitary `V_j` when controlled by n-qubit number state `|j〉`.
 
   $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 syntax: 'function MultiplexerFromGenerator (unitaryGenerator : (Int, (Int -> (Qubit[] => Unit : Adjoint, Controlled)))) : ((Microsoft.Quantum.Canon.BigEndian, Qubit[]) => Unit : Adjoint, Controlled)'

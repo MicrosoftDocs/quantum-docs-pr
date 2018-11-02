@@ -4,7 +4,9 @@ name: StatePreparationPositiveCoefficients
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Returns a unitary operation $U$ that prepares an arbitrary quantum
+  Returns an operation that prepares the given quantum state.
+
+  The returned operation $U$ prepares an arbitrary quantum
   state $\ket{\psi}$ with positive coefficients $\alpha_j\ge 0$ from
   the $n$-qubit computational basis state $\ket{0...0}$.
 

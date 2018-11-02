@@ -4,7 +4,8 @@ name: CY
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Applies the controlled-$Y$ (CY) gate to a pair of qubits,
+  Applies the controlled-Y (CY) gate to a pair of qubits.
+
   $$
   \begin{align}
   1 & 0 & 0 & 0 \\\\
@@ -17,7 +18,7 @@ summary: >-
 remarks: >-
   Equivalent to:
 
-  ```Q#
+  ```qsharp
   Controlled Y([control], target);
   ```
 syntax: 'operation CY (control : Qubit, target : Qubit) : Unit'

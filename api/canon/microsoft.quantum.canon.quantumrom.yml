@@ -4,6 +4,8 @@ name: QuantumROM
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
+  Uses the Quantum ROM technique to represent a given density matrix.
+
   Given a list of $N$ coefficients $\alpha_j$, this returns a unitary $U$ that uses the Quantum-ROM
   technique to prepare
   an approximation  $\tilde\rho\sum^{N-1}_{j=0}p_j\ket{j}\bra{j}$ of the purification of the density matrix

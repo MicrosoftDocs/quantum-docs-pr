@@ -4,6 +4,8 @@ name: KnillDistill
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
+  Implements the Knill magic state distillation algorithm.
+
   Given 15 approximate copies of a magic state
   $$
   \begin{align}

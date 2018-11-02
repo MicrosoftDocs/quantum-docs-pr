@@ -4,6 +4,8 @@ name: ModularAddProductLE
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
+  Performs a modular multipy-and-add by integer constants on a qubit register.
+
   Implements the map
   $$
   \begin{align}

@@ -7,7 +7,7 @@ summary: >-
   Given an array of operations acting on a single input,
   produces a new operation that
   performs each given operation in sequence.
-  The modifier 'CA' indicates that all operations in the array are adjointable
+  The modifier `CA` indicates that all operations in the array are adjointable
   and controllable.
 syntax: "function BindCA (operations : ('T => Unit : Adjoint, Controlled)[]) : ('T => Unit : Adjoint, Controlled)"
 input:

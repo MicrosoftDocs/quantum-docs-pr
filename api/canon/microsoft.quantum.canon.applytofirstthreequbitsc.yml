@@ -4,8 +4,8 @@ name: ApplyToFirstThreeQubitsC
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Applies operation `op` to the first three qubits in the register.
-  The modifier 'C' indicates that the operation is controllable.
+  Applies an operation to the first three qubits in the register.
+  The modifier `C` indicates that the operation is controllable.
 remarks: >-
   This is equivalent to:
 

@@ -4,8 +4,10 @@ name: BlockEncodingToReflection
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  This function converts a `BlockEncoding` unitary $U$ that encodes some
-  operator $H$ of interest into a `BlockEncodingReflection` $U'$ that
+  Converts a `BlockEncoding` into an equivalent `BLockEncodingReflection`.
+
+  That is, given a `BlockEncoding` unitary $U$ that encodes some
+  operator $H$ of interest, converts it into a `BlockEncodingReflection` $U'$ that
   encodes the same operator, but also satisfies $U'^\dag = U'$.
   This increases the size of the auxiliary register of $U$ by one qubit.
 remarks: This increases the size of the auxiliary register of $U$ by one qubit.

@@ -4,6 +4,8 @@ name: ModularMultiplyByConstantLE
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
+  Performs modular multiplication by an integer constant on a qubit register.
+
   Let us denote modulus by N and constMultiplier by a
   then this operation implements a unitary defined by the following map on
   computational basis:

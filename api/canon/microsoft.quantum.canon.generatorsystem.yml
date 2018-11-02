@@ -3,6 +3,12 @@ uid: microsoft.quantum.canon.generatorsystem
 name: GeneratorSystem
 type: newtype
 namespace: Microsoft.Quantum.Canon
+summary: >-
+  Represents a collection of `GeneratorIndex`es.
+
+  We iterate over this
+  collection using a single-index integer, and the size of the
+  collection is assumed to be known.
 remarks: >-
   Instances of `GeneratorSystem` can be defined easily using the
   <xref:microsoft.quantum.canon.lookupfunction> function.

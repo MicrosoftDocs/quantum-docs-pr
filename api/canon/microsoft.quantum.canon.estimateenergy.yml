@@ -4,7 +4,7 @@ name: EstimateEnergy
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Convenience function that performs state preparation by applying a
+  Performs state preparation by applying a
   `statePrepUnitary` on an automatically allocated input state
   phase estimation with respect to `qpeUnitary`on the resulting state
   using a `phaseEstAlgorithm`.

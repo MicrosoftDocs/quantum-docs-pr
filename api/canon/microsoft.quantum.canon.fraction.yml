@@ -4,8 +4,8 @@ name: Fraction
 type: newtype
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Represents an integer of the form p/q. Integer p is
-  the first element of the tuple and q is the second element
+  Represents a rational number of the form `p/q`. Integer `p` is
+  the first element of the tuple and `q` is the second element
   of the tuple.
 syntax: newtype Fraction = (Int, Int);
 ...

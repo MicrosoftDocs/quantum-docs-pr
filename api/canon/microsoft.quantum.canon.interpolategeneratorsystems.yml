@@ -5,8 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
   Returns a `TimeDependentGeneratorSystem` representing the linear
-  interpolation between two `GeneratorSystems` according to a
-  schedule parameter $s\in[0,1]$.
+  interpolation between two `GeneratorSystem`s.
 syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : Microsoft.Quantum.Canon.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Canon.GeneratorSystem) : Microsoft.Quantum.Canon.TimeDependentGeneratorSystem'
 input:
   content: '(generatorSystemStart : Microsoft.Quantum.Canon.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Canon.GeneratorSystem)'

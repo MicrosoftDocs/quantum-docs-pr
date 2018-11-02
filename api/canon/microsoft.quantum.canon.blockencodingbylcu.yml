@@ -4,6 +4,8 @@ name: BlockEncodingByLCU
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
+  Encodes an operator of interest into a `BlockEncoding`.
+
   This constructs a `BlockEncoding` unitary $U=P\cdot V\cdot P^\dag$ that encodes some
   operator $H=\sum_{j}|\alpha_j|U_j$ of interest that is a linear combination of
   unitaries. Typically, $P$ is a state preparation unitary such that

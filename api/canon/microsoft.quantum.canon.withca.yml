@@ -4,10 +4,10 @@ name: WithCA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Given operations implementing operators $U$ and $V$, performs the
-  operation $UVU^{\dagger}$ on a target. That is, this operation
-  conjugates $V$ with $U$.
-  The modifier 'CA' indicates that the inner operation is controllable
+  Given operations implementing operators `U` and `V`, performs the
+  operation `U�VU` on a target. That is, this operation
+  conjugates `V` with `U`.
+  The modifier `CA` indicates that the inner operation is controllable
   and adjointable.
 remarks: >-
   The outer operation is always assumed to be adjointable, but does not

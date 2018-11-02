@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   `TimeDependentSimulationAlgorithm` function that uses a Trotter–Suzuki
   decomposition to approximate a unitary operator that solves the
-  time-dependent Schr�dinger equation at time $t$.
+  time-dependent Schrodinger equation.
 syntax: 'function TimeDependentTrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Canon.TimeDependentSimulationAlgorithm'
 input:
   content: '(trotterStepSize : Double, trotterOrder : Int)'

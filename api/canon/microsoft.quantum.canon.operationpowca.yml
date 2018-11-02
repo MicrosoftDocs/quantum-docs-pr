@@ -4,9 +4,11 @@ name: OperationPowCA
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Given an operation representing a gate $U$, returns a new operation
+  Raises an operation to a power.
+  The modifier `A` indicates that the operation is controllable and adjointable.
+
+  That is, given an operation representing a gate $U$, returns a new operation
   $U^m$ for a power $m$.
-  The modifier 'CA' indicates that the operation is controllable and adjointable.
 syntax: "function OperationPowCA (oracle : ('T => Unit : Controlled, Adjoint), power : Int) : ('T => Unit : Controlled, Adjoint)"
 input:
   content: "(oracle : ('T => Unit : Controlled, Adjoint), power : Int)"

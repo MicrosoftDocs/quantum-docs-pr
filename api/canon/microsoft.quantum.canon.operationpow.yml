@@ -4,7 +4,9 @@ name: OperationPow
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Given an operation representing a gate $U$, returns a new operation
+  Raises an operation to a power.
+
+  That is, given an operation representing a gate $U$, returns a new operation
   $U^m$ for a power $m$.
 syntax: "function OperationPow (oracle : ('T => Unit), power : Int) : ('T => Unit)"
 input:

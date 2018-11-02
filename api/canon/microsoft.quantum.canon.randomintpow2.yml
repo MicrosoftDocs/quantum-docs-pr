@@ -4,8 +4,8 @@ name: RandomIntPow2
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Generates a random number uniformly sampled in the interval
-  $[0, 2^{\texttt{maxBits}} - 1]$.
+  Generates a random integer uniformly sampled from all integers that can be represented
+  in a given number of bits.
 remarks: >-
   This function calls <xref:microsoft.quantum.primitive.random>, so
   its randomess depends on the implementation of `Random`.

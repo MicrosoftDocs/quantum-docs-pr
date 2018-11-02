@@ -7,7 +7,7 @@ summary: >-
   Given an array of operations acting on a single input,
   produces a new operation that
   performs each given operation in sequence.
-  The modifier 'C' indicates that all operations in the array are controllable.
+  The modifier `C` indicates that all operations in the array are controllable.
 syntax: "function BindC (operations : ('T => Unit : Controlled)[]) : ('T => Unit : Controlled)"
 input:
   content: "(operations : ('T => Unit : Controlled)[])"

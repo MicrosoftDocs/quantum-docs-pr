@@ -4,8 +4,9 @@ name: PrepareSingleQubitIdentity
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Given a qubit, prepares that qubit in the maximally mixed
-  state $\boldone / 2$ by applying the depolarizing channel
+  Prepares a qubit in the maximally mixed state.
+
+  It prepares the given qubit in the $\boldone / 2$ state by applying the depolarizing channel
   $$
   \begin{align}
   \Omega(\rho) \mathrel{:=} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu}^{\dagger},

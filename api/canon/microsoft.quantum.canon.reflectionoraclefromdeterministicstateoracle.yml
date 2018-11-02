@@ -4,8 +4,12 @@ name: ReflectionOracleFromDeterministicStateOracle
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Constructs reflection about a some state $\ket{\psi}$ from the oracle $O$ of type
-  <xref:microsoft.quantum.canon.deterministicstateoracle>, where $O\ket{0} = \ket{\psi}$.
+  Constructs reflection about a given state from an oracle.
+
+  Given the oracle $O$ of type
+  <xref:microsoft.quantum.canon.deterministicstateoracle>,
+  the result of this function is a reflection around the state $\ket{\psi}$
+  where $O\ket{0} = \ket{\psi}$.
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Canon.DeterministicStateOracle) : Microsoft.Quantum.Canon.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Canon.DeterministicStateOracle)'

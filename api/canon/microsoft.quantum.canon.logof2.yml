@@ -3,9 +3,7 @@ uid: microsoft.quantum.canon.logof2
 name: LogOf2
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
-  Returns the constant $\ln(2)$, where $\ln$
-  is the natural (base-$e$) logarithm.
+summary: Returns the natural logarithm of 2.
 syntax: 'function LogOf2 () : Double'
 input:
   content: ()

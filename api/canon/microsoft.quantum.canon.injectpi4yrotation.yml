@@ -4,7 +4,9 @@ name: InjectPi4YRotation
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Performs a $\pi / 4$ rotation about $Y$ by consuming a magic
+  Performs a π/4 rotation about `Y`.
+
+  The rotation is performed by consuming a magic
   state; that is, a copy of the state
   $$
   \begin{align}
@@ -14,11 +16,14 @@ summary: >-
 remarks: >-
   The following are equivalent:
 
-  ```Q#
+  ```qsharp
   Ry(PI() / 4.0, data);
+  ```
 
-  using (magicRegister = Qubit[1]) {
-      let magic = magicRegister[0];
+  and
+
+  ```qsharp
+  using (magic = Qubit()) {
       Ry(PI() / 4.0, magic);
       InjectPi4YRotation(data, magic);
       Reset(magic);

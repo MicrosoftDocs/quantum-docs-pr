@@ -11,7 +11,7 @@ uid: microsoft.quantum.relnotes
 # Microsoft Quantum Development Kit Release Notes
 
 
-# Version 0.3.1810.2508
+# Version 0.3.1811.203
 
 *Release date: October 29, 2018*
 

@@ -14,7 +14,7 @@ uid: microsoft.quantum.relnotes
 
 # Version 0.3.1811.203
 
-*Release date: October 29, 2018*
+*Release date: November 2, 2018*
 
 This release includes a few bug fixes, including:
 

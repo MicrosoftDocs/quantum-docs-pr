@@ -1,8 +1,8 @@
 ---
 title: Chemistry Library Installation and Validation | Microsoft Docs
 description: Chemistry Library Installation and Validation
-author: Guang Hao Low
-ms.author: GuangHao.Low@microsoft.com
+author: guanghaolow
+ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation

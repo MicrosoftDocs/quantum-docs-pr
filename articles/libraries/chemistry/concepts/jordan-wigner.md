@@ -1,7 +1,7 @@
 ---
 title: Jordan-Wigner Representation | Microsoft Docs
 description: Jordan-Wigner Representation Conceptual Docs
-author: Nathan Wiebe
+author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list

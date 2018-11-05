@@ -1,7 +1,7 @@
 ---
 title: End-to-end with NWChem | Microsoft Docs
 description: End-to-end with NWChem Docs
-author: Chris Granade
+author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend

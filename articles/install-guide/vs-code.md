@@ -1,6 +1,6 @@
 ---
 title: Installing the Q# development environment for VS Code
-author: cgranad
+author: cgranade
 uid: microsoft.quantum.install.vs-code
 ms.author: christopher.granade@microsoft.com
 ms.date: 7/31/2018

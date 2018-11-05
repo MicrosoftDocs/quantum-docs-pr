@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
   Given operations implementing operators `U` and `V`, performs the
-  operation `U�VU` on a target. That is, this operation
+  operation `U&dagger;VU` on a target. That is, this operation
   conjugates `V` with `U`.
   The modifier `A` indicates that the inner operation is adjointable.
 remarks: >-

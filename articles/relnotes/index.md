@@ -19,7 +19,7 @@ uid: microsoft.quantum.relnotes
 This release includes a few bug fixes, including:
 
 * Invoking `DumpMachine` could change the state of the simulator under certain situations.
-* Removed compilation warnings when building projects using a version of .net core previous to 2.1.403.
+* Removed compilation warnings when building projects using a version of .NET Core previous to 2.1.403.
 * Clean up of documentation, specially the tooltips shown during mouse hover in VS Code or Visual Studio.
 
 If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).

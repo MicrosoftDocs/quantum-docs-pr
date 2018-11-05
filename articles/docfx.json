@@ -41,7 +41,8 @@
     "externalReference": [],
     "globalMetadata": {
       "show_latex": true,
-      "ms.prod": "quantum"
+      "ms.prod": "quantum",
+      "searchScope": ["quantum", "q#", "qsharp"]
     },
     "fileMetadata": {
       "latex_macros": {

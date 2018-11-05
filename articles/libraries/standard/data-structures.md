@@ -217,7 +217,7 @@ $$
 $$
 where the matrix exponential $U(t)=e^{-i H t}$ is known as the unitary time-evolution operator. Though we focus on generators of this form in the following, we emphasize that the concept applies more broadly, such as to the simulation of open quantum systems, or to more abstract differential equations.
 
-A primary goal of dynamical simulation is to implement the time-evolution operator on some quantum state encoded in qubits of a quantum computer.  In many cases, the Hamiltonian may be broken into into a sum of some $d$ simpler, or primitive, terms
+A primary goal of dynamical simulation is to implement the time-evolution operator on some quantum state encoded in qubits of a quantum computer.  In many cases, the Hamiltonian may be broken into a sum of some $d$ simpler, or primitive, terms
 
 $$
 \begin{align}

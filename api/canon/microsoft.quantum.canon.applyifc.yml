@@ -3,13 +3,16 @@ uid: microsoft.quantum.canon.applyifc
 name: ApplyIfC
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Given an operation `op` and a bit value `bit`, applies `op` to the `target` \n if `bit` is true. If false, nothing happens to the `target`.\n The modifier 'C' indicates that the operation is controllable.\n"
-syntax: "operation ApplyIfC (op : ('T => () : Controlled), bit : Bool, target : 'T) : ()"
+summary: >-
+  Given an operation `op` and a bit value `bit`, applies `op` to the `target`
+  if `bit` is true. If false, nothing happens to the `target`.
+  The modifier 'C' indicates that the operation is controllable.
+syntax: "operation ApplyIfC (op : ('T => Unit : Controlled), bit : Bool, target : 'T) : Unit"
 input:
-  content: "(op : ('T => () : Controlled), bit : Bool, target : 'T)"
+  content: "(op : ('T => Unit : Controlled), bit : Bool, target : 'T)"
   types:
   - name: op
-    summary: ' An operation to be conditionally applied.'
+    summary: An operation to be conditionally applied.
     isOperation: true
     input:
       types:
@@ -17,27 +20,28 @@ input:
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Controlled
   - name: bit
-    summary: ' a boolean that controls whether op is applied or not.'
-    uid: Bool
+    summary: a boolean that controls whether op is applied or not.
     isPrimitive: true
+    uid: Bool
   - name: target
-    summary: >2
-       The input to which the operation is applied.
+    summary: The input to which the operation is applied.
     uid: "'T"
     isLocal: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.applyif
-functors: *o0
+  - isPrimitive: true
+    uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: " The input type of the operation to be conditionally applied. \n"
+  summary: The input type of the operation to be conditionally applied.
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyif
+...

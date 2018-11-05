@@ -3,22 +3,21 @@ uid: microsoft.quantum.primitive.message
 name: Message
 type: function
 namespace: Microsoft.Quantum.Primitive
-summary: >2
-   Logs a message.
-remarks: >2-
-   The specific behavior of this function is simulator-dependent,
-   but in most cases the given message will be written to the console.
-syntax: 'function Message (msg : String) : ()'
+summary: Logs a message.
+remarks: >-
+  The specific behavior of this function is simulator-dependent,
+  but in most cases the given message will be written to the console.
+syntax: 'function Message (msg : String) : Unit'
 input:
   content: '(msg : String)'
   types:
   - name: msg
-    summary: >2
-       The message to be reported.
+    summary: The message to be reported.
+    isPrimitive: true
     uid: String
-    isPrimitive: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
+...

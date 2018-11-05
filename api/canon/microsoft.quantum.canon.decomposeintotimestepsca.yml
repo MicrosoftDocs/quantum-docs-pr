@@ -3,64 +3,67 @@ uid: microsoft.quantum.canon.decomposeintotimestepsca
 name: DecomposeIntoTimeStepsCA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Returns an operation implementing the Trotter–Suzuki integrator for
-   a given operation.
-syntax: "function DecomposeIntoTimeStepsCA (nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), trotterOrder : Int) : ((Double, 'T) => () : Adjoint, Controlled)"
+summary: >-
+  Returns an operation implementing the Trotter–Suzuki integrator for
+  a given operation.
+syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit : Adjoint, Controlled)), trotterOrder : Int) : ((Double, 'T) => Unit : Adjoint, Controlled)"
+references: >-
+  We use the implementation in
+
+  - [ *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* ](https://arxiv.org/abs/quant-ph/0508139)
 input:
-  content: "(nSteps : Int, op : ((Int, Double, 'T) => () : Adjoint, Controlled), trotterOrder : Int)"
+  content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit : Adjoint, Controlled)), trotterOrder : Int)"
   types:
   - name: nSteps
-    summary: ' The number of operations to be decomposed into time steps.'
-    uid: Int
     isPrimitive: true
+    uid: Int
   - name: op
-    summary: >2-
-       An operation which accepts an index input (type `Int`) and a time
-       input (type `Double`) for decomposition.
     isOperation: true
     input:
       types:
-      - uid: Int
-        isPrimitive: true
-      - uid: Double
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Int
+      - isPrimitive: true
+        uid: Double
       - uid: "'T"
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: &o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
     - Adjoint
     - Controlled
   - name: trotterOrder
-    summary: >2
-       Selects the order of the Trotter–Suzuki integrator to be used.
-       Order 1 and 2 are currently supported.
-    uid: Int
+    summary: >-
+      Selects the order of the Trotter–Suzuki integrator to be used.
+      Order 1 and 2 are currently supported.
     isPrimitive: true
+    uid: Int
 output:
-  content: "((Double, 'T) => () : Adjoint, Controlled)"
+  content: "((Double, 'T) => Unit : Adjoint, Controlled)"
   types:
-  - summary: >2-
-       Returns a unitary implementing the Trotter–Suzuki integrator, where
-       the first parameter `Double` is the integration step size, and the
-       second parameter is the target acted upon.
+  - summary: >-
+      Returns a unitary implementing the Trotter–Suzuki integrator, where
+      the first parameter `Double` is the integration step size, and the
+      second parameter is the target acted upon.
     isOperation: true
     input:
       types:
-      - uid: Double
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Double
       - uid: "'T"
         isLocal: true
     output:
       types:
-      - uid: ()
-        isPrimitive: true
-    functors: *o0
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
 typeParameters:
 - uid: "'T"
-  summary: >2
-     The type which each time step should act upon; typically, either
-     `Qubit[]` or `Qubit`.
+  summary: >-
+    The type which each time step should act upon; typically, either
+    `Qubit[]` or `Qubit`.
+...

@@ -3,34 +3,34 @@ uid: microsoft.quantum.canon.applytofirstqubit
 name: ApplyToFirstQubit
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: ' Applies operation op to the first qubit in the register.'
-syntax: 'operation ApplyToFirstQubit (op : (Qubit => ()), register : Qubit[]) : ()'
+summary: Applies operation op to the first qubit in the register.
+syntax: 'operation ApplyToFirstQubit (op : (Qubit => Unit), register : Qubit[]) : Unit'
 input:
-  content: '(op : (Qubit => ()), register : Qubit[])'
+  content: '(op : (Qubit => Unit), register : Qubit[])'
   types:
   - name: op
-    summary: ' An operation to be applied to the first qubit'
+    summary: An operation to be applied to the first qubit
     isOperation: true
     input:
       types:
-      - uid: Qubit
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Qubit
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
   - name: register
-    summary: >2
-       Qubit array to the first qubit of which the operation is applied
-    uid: Qubit
-    isPrimitive: true
+    summary: Qubit array to the first qubit of which the operation is applied
     isArray: true
-output:
-  content: ()
-  types:
-  - uid: ()
     isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
 seeAlso:
 - microsoft.quantum.canon.applytofirstqubita
 - microsoft.quantum.canon.applytofirstqubitc
 - microsoft.quantum.canon.applytofirstqubitca
+...

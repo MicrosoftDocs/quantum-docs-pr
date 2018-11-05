@@ -3,33 +3,31 @@ uid: microsoft.quantum.canon.oracletodiscrete
 name: OracleToDiscrete
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: " Given an operation representing a \"black-box\" oracle, returns a discrete-time oracle \n which represents the \"black-box\" oracle repeated multiple times.\n"
-remarks: >2-
-
-  ### Examples
-   `OracleToDiscrete(U)(3, target)` is equivalent to `U(target)` repeated three times.
-syntax: 'operation OracleToDiscrete (blackBoxOracle : (Qubit[] => () : Adjoint, Controlled)) : DiscreteOracle'
+summary: >-
+  Given an operation representing a "black-box" oracle, returns a discrete-time oracle
+  which represents the "black-box" oracle repeated multiple times.
+syntax: 'operation OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit : Adjoint, Controlled)) : Microsoft.Quantum.Canon.DiscreteOracle'
 input:
-  content: '(blackBoxOracle : (Qubit[] => () : Adjoint, Controlled))'
+  content: '(blackBoxOracle : (Qubit[] => Unit : Adjoint, Controlled))'
   types:
   - name: blackBoxOracle
-    summary: >2
-       The operation to be exponentiated
+    summary: The operation to be exponentiated
     isOperation: true
     input:
       types:
-      - uid: Qubit
+      - isArray: true
         isPrimitive: true
-        isArray: true
+        uid: Qubit
     output:
       types:
-      - uid: ()
-        isPrimitive: true
+      - isPrimitive: true
+        uid: Unit
     functors:
     - Adjoint
     - Controlled
 output:
-  content: DiscreteOracle
+  content: Microsoft.Quantum.Canon.DiscreteOracle
   types:
-  - summary: " An operation partially applied over the \"black-box\" oracle representing the discrete-time oracle \n"
+  - summary: An operation partially applied over the "black-box" oracle representing the discrete-time oracle
     uid: microsoft.quantum.canon.discreteoracle
+...

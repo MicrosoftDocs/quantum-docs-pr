@@ -3,22 +3,23 @@ uid: microsoft.quantum.extensions.testing.assertallzero
 name: AssertAllZero
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
-summary: " Assert that given qubits are all in $\\ket{0}$ state.\n "
-syntax: 'operation AssertAllZero (qubits : Qubit[]) : ()'
+summary: Assert that given qubits are all in |0⟩ state.
+syntax: 'operation AssertAllZero (qubits : Qubit[]) : Unit'
 input:
   content: '(qubits : Qubit[])'
   types:
   - name: qubits
-    uid: Qubit
-    isPrimitive: true
     isArray: true
-output:
-  content: ()
-  types:
-  - uid: ()
     isPrimitive: true
-seeAlso:
-- microsoft.quantum.extensions.testing.assertqubit
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.extensions.testing.assertqubit
+...

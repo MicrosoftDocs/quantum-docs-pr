@@ -3,24 +3,24 @@ uid: microsoft.quantum.canon.boolarrfrompositiveint
 name: BoolArrFromPositiveInt
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Produces binary representation of positive integer in little Endian format.
-remarks: ' The input `number` must be at most 2^bits -1.'
+summary: Produces binary representation of positive integer in little Endian format.
+remarks: The input `number` must be at most 2^bits -1.
 syntax: 'function BoolArrFromPositiveInt (number : Int, bits : Int) : Bool[]'
 input:
   content: '(number : Int, bits : Int)'
   types:
   - name: number
-    summary: ' Positive integer.'
-    uid: Int
+    summary: Positive integer.
     isPrimitive: true
+    uid: Int
   - name: bits
-    summary: " Bits in binary representation of number.\n "
-    uid: Int
+    summary: Bits in binary representation of number.
     isPrimitive: true
+    uid: Int
 output:
   content: Bool[]
   types:
-  - uid: Bool
+  - isArray: true
     isPrimitive: true
-    isArray: true
+    uid: Bool
+...

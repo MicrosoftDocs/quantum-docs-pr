@@ -3,20 +3,21 @@ uid: microsoft.quantum.canon.asqubitarray
 name: AsQubitArray
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2-
-   Used to cast UDTs that are derived from type Qubit[] down to Qubit[].
-   Handy when used with generic functions like Head and Tail.
+summary: >-
+  Used to cast UDTs that are derived from type Qubit[] down to Qubit[].
+  Handy when used with generic functions like Head and Tail.
 syntax: 'function AsQubitArray (arr : Qubit[]) : Qubit[]'
 input:
   content: '(arr : Qubit[])'
   types:
   - name: arr
-    uid: Qubit
-    isPrimitive: true
     isArray: true
+    isPrimitive: true
+    uid: Qubit
 output:
   content: Qubit[]
   types:
-  - uid: Qubit
+  - isArray: true
     isPrimitive: true
-    isArray: true
+    uid: Qubit
+...

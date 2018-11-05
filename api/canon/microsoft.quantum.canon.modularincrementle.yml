@@ -3,40 +3,40 @@ uid: microsoft.quantum.canon.modularincrementle
 name: ModularIncrementLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
-   Then the operation performs the following transformation:
-   \begin{align}
-       \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N}
-   \end{align}
-   Integers are encoded in little-endian format.
-remarks: >2-
-   Assumes that the value of target is less than N. Note that
-   <xref:microsoft.quantum.canon.modularincrementphasele> implements
-   the same operation, but in the `PhaseLittleEndian` basis.
-syntax: 'operation ModularIncrementLE (increment : Int, modulus : Int, target : LittleEndian) : ()'
+summary: >-
+  Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
+  Then the operation performs the following transformation:
+  \begin{align}
+  \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N}
+  \end{align}
+  Integers are encoded in little-endian format.
+remarks: >-
+  Assumes that the value of target is less than N. Note that
+  <xref:microsoft.quantum.canon.modularincrementphasele> implements
+  the same operation, but in the `PhaseLittleEndian` basis.
+syntax: 'operation ModularIncrementLE (increment : Int, modulus : Int, target : Microsoft.Quantum.Canon.LittleEndian) : Unit'
 input:
-  content: '(increment : Int, modulus : Int, target : LittleEndian)'
+  content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Canon.LittleEndian)'
   types:
   - name: increment
-    summary: ' Integer increment a to be added to y.'
-    uid: Int
+    summary: Integer increment a to be added to y.
     isPrimitive: true
+    uid: Int
   - name: modulus
-    summary: ' Integer N that mods y + a.'
-    uid: Int
+    summary: Integer N that mods y + a.
     isPrimitive: true
+    uid: Int
   - name: target
-    summary: >2
-       Integer y in `LittleEndian` format that `increment` a is added to.
+    summary: Integer y in `LittleEndian` format that `increment` a is added to.
     uid: microsoft.quantum.canon.littleendian
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.modularincrementphasele
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.canon.modularincrementphasele
+...

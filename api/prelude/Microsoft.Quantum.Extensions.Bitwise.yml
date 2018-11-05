@@ -3,27 +3,29 @@ uid: microsoft.quantum.extensions.bitwise
 name: Microsoft.Quantum.Extensions.Bitwise
 functions:
 - uid: microsoft.quantum.extensions.bitwise.and
-  summary: >2
-     Returns the bitwise AND of two integers.
+  summary: >-
+    Returns the bitwise AND of two integers.
+    This performs the same computation as the built-in `&&&` operator.
 - uid: microsoft.quantum.extensions.bitwise.not
-  summary: >2
-     Returns the bitwise NOT of an integer.
+  summary: >-
+    Returns the bitwise NOT of an integer.
+    This performs the same computation as the built-in `~~~` operator.
 - uid: microsoft.quantum.extensions.bitwise.or
-  summary: >2
-     Returns the bitwise OR of two integers.
+  summary: >-
+    Returns the bitwise OR of two integers.
+    This performs the same computation as the built-in `|||` operator.
 - uid: microsoft.quantum.extensions.bitwise.parity
-  summary: >2
-     Returns the bitwise PARITY of an integer (1 if its binary representation contains odd number of ones and 0 otherwise).
+  summary: Returns the bitwise PARITY of an integer (1 if its binary representation contains odd number of ones and 0 otherwise).
 - uid: microsoft.quantum.extensions.bitwise.xbits
-  summary: >2
-     Returns an integer representing the X bits of an array
-     of Pauli operators.
+  summary: >-
+    Returns an integer representing the X bits of an array
+    of Pauli operators.
 - uid: microsoft.quantum.extensions.bitwise.xor
-  summary: >2
-     Returns the bitwise exclusive-OR (XOR) of two integers.
+  summary: >-
+    Returns the bitwise exclusive-OR (XOR) of two integers.
+    This performs the same computation as the built-in `^^^` operator.
 - uid: microsoft.quantum.extensions.bitwise.zbits
-  summary: >2
-     Returns an integer representing the Z bits of an array
-     of Pauli operators.
-operations: []
-newtypes: []
+  summary: >-
+    Returns an integer representing the Z bits of an array
+    of Pauli operators.
+...

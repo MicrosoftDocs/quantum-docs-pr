@@ -3,26 +3,26 @@ uid: microsoft.quantum.canon.qft
 name: QFT
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Performs the Quantum Fourier Transform on a quantum register containing an
-   integer in the big-endian representation.
-remarks: " The input and output are assumed to be in big endian encoding.\n "
-syntax: 'operation QFT (qs : BigEndian) : ()'
+summary: >-
+  Performs the Quantum Fourier Transform on a quantum register containing an
+  integer in the big-endian representation.
+remarks: The input and output are assumed to be in big endian encoding.
+syntax: 'operation QFT (qs : Microsoft.Quantum.Canon.BigEndian) : Unit'
 input:
-  content: '(qs : BigEndian)'
+  content: '(qs : Microsoft.Quantum.Canon.BigEndian)'
   types:
   - name: qs
-    summary: >2
-       Quantum register to which the Quantum Fourier Transform is applied
+    summary: Quantum register to which the Quantum Fourier Transform is applied
     uid: microsoft.quantum.canon.bigendian
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.approximateqft
-- microsoft.quantum.canon.qftle
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.canon.approximateqft
+- microsoft.quantum.canon.qftle
+...

@@ -1,0 +1,5 @@
+- name: Quantum simulator
+  href: full-state-simulator.md
+- name: Quantum computer trace simulator
+  topicHref: qc-trace-simulator/index.md
+  href: qc-trace-simulator/toc.yml

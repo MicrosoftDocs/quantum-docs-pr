@@ -3,15 +3,18 @@ uid: microsoft.quantum.canon.bitflipcode
 name: BitFlipCode
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Returns a QECC value representing the ⟦3, 1, 1⟧ bit flip code encoder and
-   decoder with in-place syndrome measurement.
-syntax: 'operation BitFlipCode () : QECC'
+summary: >-
+  Returns a QECC value representing the ⟦3, 1, 1⟧ bit flip code encoder and
+  decoder with in-place syndrome measurement.
+syntax: 'operation BitFlipCode () : Microsoft.Quantum.Canon.QECC'
 input:
   content: ()
   types: []
 output:
-  content: QECC
+  content: Microsoft.Quantum.Canon.QECC
   types:
-  - summary: " Returns an implementation of a quantum error correction code by \n specifying a `QECC` type."
+  - summary: >-
+      Returns an implementation of a quantum error correction code by
+      specifying a `QECC` type.
     uid: microsoft.quantum.canon.qecc
+...

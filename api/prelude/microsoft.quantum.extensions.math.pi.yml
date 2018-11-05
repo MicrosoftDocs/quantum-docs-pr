@@ -3,9 +3,8 @@ uid: microsoft.quantum.extensions.math.pi
 name: PI
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: >2
-   Represents the ratio of the circumference of a circle to its diameter, specified by the constant, π.
-remarks: ' See [System.Math.PI](https://docs.microsoft.com/en-us/dotnet/api/system.math.pi) for more details.'
+summary: Represents the ratio of the circumference of a circle to its diameter, specified by the constant, π.
+remarks: See [System.Math.PI](https://docs.microsoft.com/en-us/dotnet/api/system.math.pi) for more details.
 syntax: 'function PI () : Double'
 input:
   content: ()
@@ -13,5 +12,6 @@ input:
 output:
   content: Double
   types:
-  - uid: Double
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Double
+...

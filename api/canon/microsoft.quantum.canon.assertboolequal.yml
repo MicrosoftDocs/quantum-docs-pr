@@ -3,28 +3,26 @@ uid: microsoft.quantum.canon.assertboolequal
 name: AssertBoolEqual
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Asserts that a classical Bool variable has the expected value.
-syntax: 'function AssertBoolEqual (actual : Bool, expected : Bool, message : String) : ()'
+summary: Asserts that a classical Bool variable has the expected value.
+syntax: 'function AssertBoolEqual (actual : Bool, expected : Bool, message : String) : Unit'
 input:
   content: '(actual : Bool, expected : Bool, message : String)'
   types:
   - name: actual
-    summary: >2
-       The variable to be checked.
-    uid: Bool
+    summary: The variable to be checked.
     isPrimitive: true
+    uid: Bool
   - name: expected
-    summary: >2
-       The expected value.
+    summary: The expected value.
+    isPrimitive: true
     uid: Bool
-    isPrimitive: true
   - name: message
-    summary: ' Failure message string to be used when the assertion is triggered.'
+    summary: Failure message string to be used when the assertion is triggered.
+    isPrimitive: true
     uid: String
-    isPrimitive: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
+...

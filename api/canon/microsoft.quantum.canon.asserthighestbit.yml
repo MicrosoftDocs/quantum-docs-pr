@@ -3,30 +3,29 @@ uid: microsoft.quantum.canon.asserthighestbit
 name: AssertHighestBit
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Asserts that the highest qubit of a qubit register
-   representing an unsigned integer is in a particular state.
-remarks: >2
-   The controlled version of this operation ignores controls.
-syntax: 'operation AssertHighestBit (value : Result, number : LittleEndian) : ()'
+summary: >-
+  Asserts that the highest qubit of a qubit register
+  representing an unsigned integer is in a particular state.
+remarks: The controlled version of this operation ignores controls.
+syntax: 'operation AssertHighestBit (value : Result, number : Microsoft.Quantum.Canon.LittleEndian) : Unit'
 input:
-  content: '(value : Result, number : LittleEndian)'
+  content: '(value : Result, number : Microsoft.Quantum.Canon.LittleEndian)'
   types:
   - name: value
-    summary: ' The value of the highest bit being asserted.'
-    uid: Result
+    summary: The value of the highest bit being asserted.
     isPrimitive: true
+    uid: Result
   - name: number
-    summary: >2
-       Unsigned integer of which the highest bit is checked.
+    summary: Unsigned integer of which the highest bit is checked.
     uid: microsoft.quantum.canon.littleendian
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.primitive.assert
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.primitive.assert
+...

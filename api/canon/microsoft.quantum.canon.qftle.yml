@@ -3,27 +3,25 @@ uid: microsoft.quantum.canon.qftle
 name: QFTLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Performs the Quantum Fourier Transform on a quantum register containing an
-   integer in the little-endian representation.
-remarks: >2+
-   The input and output are assumed to be in little endian encoding.
-
-syntax: 'operation QFTLE (qs : LittleEndian) : ()'
+summary: >-
+  Performs the Quantum Fourier Transform on a quantum register containing an
+  integer in the little-endian representation.
+remarks: The input and output are assumed to be in little endian encoding.
+syntax: 'operation QFTLE (qs : Microsoft.Quantum.Canon.LittleEndian) : Unit'
 input:
-  content: '(qs : LittleEndian)'
+  content: '(qs : Microsoft.Quantum.Canon.LittleEndian)'
   types:
   - name: qs
-    summary: >2
-       Quantum register to which the Quantum Fourier Transform is applied
+    summary: Quantum register to which the Quantum Fourier Transform is applied
     uid: microsoft.quantum.canon.littleendian
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
-seeAlso:
-- microsoft.quantum.canon.qft
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.canon.qft
+...

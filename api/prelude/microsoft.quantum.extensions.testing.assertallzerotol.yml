@@ -3,25 +3,26 @@ uid: microsoft.quantum.extensions.testing.assertallzerotol
 name: AssertAllZeroTol
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
-summary: " Assert that given qubits are all in $\\ket{0}$ state\n "
-syntax: 'operation AssertAllZeroTol (qubits : Qubit[], tolerance : Double) : ()'
+summary: Assert that given qubits are all in |0⟩ state
+syntax: 'operation AssertAllZeroTol (qubits : Qubit[], tolerance : Double) : Unit'
 input:
   content: '(qubits : Qubit[], tolerance : Double)'
   types:
   - name: qubits
-    summary: ' Qubits that are asserted to be in $\ket{0}$ state'
-    uid: Qubit
-    isPrimitive: true
+    summary: Qubits that are asserted to be in $\ket{0}$ state
     isArray: true
+    isPrimitive: true
+    uid: Qubit
   - name: tolerance
-    summary: ' Accuracy with which the state should be in $\ket{0}$ state'
+    summary: Accuracy with which the state should be in $\ket{0}$ state
+    isPrimitive: true
     uid: Double
-    isPrimitive: true
 output:
-  content: ()
+  content: Unit
   types:
-  - uid: ()
-    isPrimitive: true
+  - isPrimitive: true
+    uid: Unit
 functors:
 - Adjoint
 - Controlled
+...

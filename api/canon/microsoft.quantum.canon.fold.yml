@@ -3,24 +3,15 @@ uid: microsoft.quantum.canon.fold
 name: Fold
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >2
-   Iterates a function `f` through an array `array`, returning
-   `f(f(f(initialState, array[0]), array[1]), ...)`.
-remarks: >2-
-
-  ### Examples
-   ```qsharp
-   function Plus(a : Double, b : Double) { return a + b; }
-   function Sum(xs : Double[]) {
-       return Fold(Plus, 0.0, xs);
-   }
-   ```
+summary: >-
+  Iterates a function `f` through an array `array`, returning
+  `f(f(f(initialState, array[0]), array[1]), ...)`.
 syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array : 'T[]) : 'State"
 input:
   content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
   types:
   - name: folder
-    summary: ' A function to be folded over the array.'
+    summary: A function to be folded over the array.
     isFunction: true
     input:
       types:
@@ -33,28 +24,27 @@ input:
       - uid: "'State"
         isLocal: true
   - name: state
-    summary: ' The initial state of the folder.'
+    summary: The initial state of the folder.
     uid: "'State"
     isLocal: true
   - name: array
-    summary: >2
-       An array of values to be folded over.
+    summary: An array of values to be folded over.
+    isArray: true
     uid: "'T"
     isLocal: true
-    isArray: true
 output:
   content: "'State"
   types:
-  - summary: >2
-       The final state returned by the folder after iterating over
-       all elements of `array`.
+  - summary: >-
+      The final state returned by the folder after iterating over
+      all elements of `array`.
     uid: "'State"
     isLocal: true
 typeParameters:
 - uid: "'State"
-  summary: >2-
-     The type of states the `folder` function operates on, i.e., accepts as its first
-     argument and returns.
+  summary: >-
+    The type of states the `folder` function operates on, i.e., accepts as its first
+    argument and returns.
 - uid: "'T"
-  summary: >2
-     The type of `array` elements.
+  summary: The type of `array` elements.
+...

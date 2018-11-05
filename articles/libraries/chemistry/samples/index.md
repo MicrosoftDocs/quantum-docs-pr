@@ -1,8 +1,8 @@
 ---
 title: Quantum chemistry examples | Microsoft Docs
 description: Quantum chemistry examples Docs
-author: Guang Hao Low
-ms.author: gulow@microsoft.com
+author: guanghaolow
+ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples

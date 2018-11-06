@@ -5,7 +5,7 @@ type: newtype
 namespace: Microsoft.Quantum.Canon
 summary: >-
   Represents a continuous-time oracle
-  $U(\delta t) : \ket{\psi(t)} \mapsto \ket{\psi(t + \delta t)}
+  $U(\delta t) : \ket{\psi(t)} \mapsto \ket{\psi(t + \delta t)}$
   for all times $t$, where $U$ is a fixed operation, and where
   and $\delta t$ is a non-negative real number.
 syntax: 'newtype ContinuousOracle = ((Double, Qubit[]) => Unit : Adjoint, Controlled);'

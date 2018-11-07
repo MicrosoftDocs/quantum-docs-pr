@@ -7,7 +7,7 @@ summary: >-
   Given a function which returns operations,
   returns a new operation which takes both inputs
   as a tuple.
-  The modifier 'A' indicates that the operations are adjointable.
+  The modifier `A` indicates that the operations are adjointable.
 syntax: "function UncurryOpA (curriedOp : ('T -> ('U => Unit : Adjoint))) : (('T, 'U) => Unit : Adjoint)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit : Adjoint)))"

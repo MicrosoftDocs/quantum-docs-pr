@@ -7,7 +7,7 @@ summary: >-
   Given an array of operations acting on a single input,
   produces a new operation that
   performs each given operation in sequence.
-  The modifier 'A' indicates that all operations in the array are adjointable.
+  The modifier `A` indicates that all operations in the array are adjointable.
 syntax: "function BindA (operations : ('T => Unit : Adjoint)[]) : ('T => Unit : Adjoint)"
 input:
   content: "(operations : ('T => Unit : Adjoint)[])"

@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
   Applies a pair of operations to a given partition of a register into two parts.
-  The modifier 'CA' indicates that the operation is controllable and adjointable.
+  The modifier `CA` indicates that the operation is controllable and adjointable.
 syntax: 'operation ApplyToPartitionCA (op : ((Qubit[], Qubit[]) => Unit : Controlled, Adjoint), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit'
 input:
   content: '(op : ((Qubit[], Qubit[]) => Unit : Controlled, Adjoint), numberOfQubitsToFirstArgument : Int, target : Qubit[])'

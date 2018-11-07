@@ -5,7 +5,8 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
   Let us denote expBase by x, power by p and modulus by N.
-  The function returns xᵖ mod N .
+  The function returns xᵖ mod N.
+
   We assume that N,x are positive and power is non-negative.
 remarks: Takes time proportional to the number of bits in `power`, not the power itself
 syntax: 'function ExpMod (expBase : Int, power : Int, modulus : Int) : Int'

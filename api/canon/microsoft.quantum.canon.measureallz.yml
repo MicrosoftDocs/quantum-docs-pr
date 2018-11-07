@@ -4,7 +4,9 @@ name: MeasureAllZ
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Measures $Z \otimes Z \otimes \cdots \otimes Z$ on
+  Jointly measures a register of qubits in the Pauli Z basis.
+
+  In other words, measures the operation $Z \otimes Z \otimes \cdots \otimes Z$ on
   a given register.
 syntax: 'operation MeasureAllZ (register : Qubit[]) : Result'
 input:

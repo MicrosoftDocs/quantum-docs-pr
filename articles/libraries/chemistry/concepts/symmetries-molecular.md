@@ -3,7 +3,7 @@ title: Symmetries of Molecular Integrals | Microsoft Docs
 description: Symmetries of Molecular Integrals Conceptual Docs
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Don’t add or edit keywords without consulting your SEO champ.
-author: Nathan Wiebe
+author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list

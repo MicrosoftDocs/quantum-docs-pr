@@ -3,7 +3,9 @@ uid: microsoft.quantum.canon.randomreal
 name: RandomReal
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Returns a random real number in the interval $[0, 1)$.
+summary: >-
+  Returns a random real number in the interval greater than or equal to zero
+  and less than one.
 remarks: >-
   This function calls <xref:microsoft.quantum.primitive.random>, so
   its randomess depends on the implementation of `Random`.

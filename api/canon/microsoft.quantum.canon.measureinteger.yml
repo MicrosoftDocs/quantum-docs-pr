@@ -4,8 +4,8 @@ name: MeasureInteger
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  `MeasureInteger` reads out the content of a quantum register and converts
-  it to an integer of type `Int`. The measurement is performed with respect
+  Measures the content of a quantum register and converts
+  it to an integer. The measurement is performed with respect
   to the standard computational basis, i.e., the eigenbasis of `PauliZ`.
 remarks: Ensures that the register is set to 0.
 syntax: 'operation MeasureInteger (target : Microsoft.Quantum.Canon.LittleEndian) : Int'

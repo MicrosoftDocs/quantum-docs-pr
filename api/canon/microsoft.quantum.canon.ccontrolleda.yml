@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   Given an operation op, returns a new operation which
   applies the op if a classical control bit is true. If false, nothing happens.
-  The modifier 'A' indicates that the operation is adjointable.
+  The modifier `A` indicates that the operation is adjointable.
 syntax: "function CControlledA (op : ('T => Unit : Adjoint)) : ((Bool, 'T) => Unit : Adjoint)"
 input:
   content: "(op : ('T => Unit : Adjoint))"

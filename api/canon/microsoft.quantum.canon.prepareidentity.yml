@@ -4,8 +4,10 @@ name: PrepareIdentity
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Given a register, prepares that register in the maximally mixed
-  state $\boldone / 2^N$ by applying the complete depolarizing
+  Given a register, prepares that register in the maximally mixed state.
+
+  The register is prepared in the $\boldone / 2^N$ state by applying the
+  complete depolarizing
   channel to each qubit, where $N$ is the length of the register.
 syntax: 'operation PrepareIdentity (register : Qubit[]) : Unit'
 input:

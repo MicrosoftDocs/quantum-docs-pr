@@ -4,22 +4,22 @@ name: Microsoft.Quantum.Canon
 functions:
 - uid: microsoft.quantum.canon.abscomplex
   summary: >-
-    Returns the absolute value of a complex number type
+    Returns the absolute value of a complex number of type
     `Complex`.
 - uid: microsoft.quantum.canon.abscomplexpolar
   summary: >-
-    Returns the absolute value of a complex number type
+    Returns the absolute value of a complex number of type
     `ComplexPolar`.
 - uid: microsoft.quantum.canon.abssquaredcomplex
   summary: >-
-    Returns the squared absolute value of a complex number type
+    Returns the squared absolute value of a complex number of type
     `Complex`.
 - uid: microsoft.quantum.canon.abssquaredcomplexpolar
   summary: >-
-    Returns the squared absolute value of a complex number type
+    Returns the squared absolute value of a complex number of type
     `ComplexPolar`.
 - uid: microsoft.quantum.canon.addgeneratorsystems
-  summary: Adds two `GeneratorSystems` to create a new GeneratorSystem.
+  summary: Adds two `GeneratorSystem`s to create a new `GeneratorSystem`.
 - uid: microsoft.quantum.canon.ampampbyoracle
   summary: Standard Amplitude Amplification algorithm
 - uid: microsoft.quantum.canon.ampampbyoraclephases
@@ -50,15 +50,15 @@ functions:
   summary: Computes the inverse hyperbolic tangent of a number.
 - uid: microsoft.quantum.canon.argcomplex
   summary: >-
-    Returns the phase of a complex number type
+    Returns the phase of a complex number of type
     `Complex`.
 - uid: microsoft.quantum.canon.argcomplexpolar
   summary: >-
-    Returns the phase of a complex number type
+    Returns the phase of a complex number of type
     `ComplexPolar`.
 - uid: microsoft.quantum.canon.asqubitarray
   summary: >-
-    Used to cast UDTs that are derived from type Qubit[] down to Qubit[].
+    Used to cast UDTs that are derived from type `Qubit[]` down to `Qubit[]`.
     Handy when used with generic functions like Head and Tail.
 - uid: microsoft.quantum.canon.assertalmostequal
   summary: >-
@@ -90,19 +90,19 @@ functions:
     Given an array of operations acting on a single input,
     produces a new operation that
     performs each given operation in sequence.
-    The modifier 'A' indicates that all operations in the array are adjointable.
+    The modifier `A` indicates that all operations in the array are adjointable.
 - uid: microsoft.quantum.canon.bindc
   summary: >-
     Given an array of operations acting on a single input,
     produces a new operation that
     performs each given operation in sequence.
-    The modifier 'C' indicates that all operations in the array are controllable.
+    The modifier `C` indicates that all operations in the array are controllable.
 - uid: microsoft.quantum.canon.bindca
   summary: >-
     Given an array of operations acting on a single input,
     produces a new operation that
     performs each given operation in sequence.
-    The modifier 'CA' indicates that all operations in the array are adjointable
+    The modifier `CA` indicates that all operations in the array are adjointable
     and controllable.
 - uid: microsoft.quantum.canon.bitfliprecoveryfn
   summary: >-
@@ -110,15 +110,21 @@ functions:
     by table lookup for the ⟦3, 1, 1⟧ bit flip code.
 - uid: microsoft.quantum.canon.bitsize
   summary: >-
-    For a non-negative integer `a`, returns the smallest $n$ such
+    For a non-negative integer `a`, returns the number of bits required to represent `a`.
+
+    That is, returns the smallest $n$ such
     that $a < 2^n$.
 - uid: microsoft.quantum.canon.blochspherecoordinates
   summary: >-
-    Given two complex numbers $a0, a1$, computes coordinates
+    Computes the Bloch sphere coordinates for a single-qubit state.
+
+    Given two complex numbers $a0, a1$ that represent the qubit state, computes coordinates
     on the Bloch sphere such that
     $a0 \ket{0} + a1 \ket{1} = r e^{it}(e^{-i \phi /2}\cos{(\theta/2)}\ket{0}+e^{i \phi /2}\sin{(\theta/2)}\ket{1})$.
 - uid: microsoft.quantum.canon.blockencodingbylcu
   summary: >-
+    Encodes an operator of interest into a `BlockEncoding`.
+
     This constructs a `BlockEncoding` unitary $U=P\cdot V\cdot P^\dag$ that encodes some
     operator $H=\sum_{j}|\alpha_j|U_j$ of interest that is a linear combination of
     unitaries. Typically, $P$ is a state preparation unitary such that
@@ -126,6 +132,8 @@ functions:
     and $V=\sum_{j}\ket{j}\bra{j}_a\otimes U_j$.
 - uid: microsoft.quantum.canon.blockencodingreflectionbylcu
   summary: >-
+    Encodes an operator of interest into a `BlockEncodingReflection`.
+
     This constructs a `BlockEncodingReflection` unitary $U=P\cdot V\cdot P^\dag$ that encodes some
     operator $H=\sum_{j}|\alpha_j|U_j$ of interest that is a linear combination of
     unitaries. Typically, $P$ is a state preparation unitary such that
@@ -133,8 +141,10 @@ functions:
     and $V=\sum_{j}\ket{j}\bra{j}_a\otimes U_j$.
 - uid: microsoft.quantum.canon.blockencodingtoreflection
   summary: >-
-    This function converts a `BlockEncoding` unitary $U$ that encodes some
-    operator $H$ of interest into a `BlockEncodingReflection` $U'$ that
+    Converts a `BlockEncoding` into an equivalent `BLockEncodingReflection`.
+
+    That is, given a `BlockEncoding` unitary $U$ that encodes some
+    operator $H$ of interest, converts it into a `BlockEncodingReflection` $U'$ that
     encodes the same operator, but also satisfies $U'^\dag = U'$.
     This increases the size of the auxiliary register of $U$ by one qubit.
 - uid: microsoft.quantum.canon.boolarrfrompositiveint
@@ -155,17 +165,17 @@ functions:
   summary: >-
     Given an operation op, returns a new operation which
     applies the op if a classical control bit is true. If false, nothing happens.
-    The modifier 'A' indicates that the operation is adjointable.
+    The modifier `A` indicates that the operation is adjointable.
 - uid: microsoft.quantum.canon.ccontrolledc
   summary: >-
     Given an operation op, returns a new operation which
     applies the op if a classical control bit is true. If false, nothing happens.
-    The modifier 'C' indicates that the operation is controllable.
+    The modifier `C` indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.ccontrolledca
   summary: >-
     Given an operation op, returns a new operation which
     applies the op if a classical control bit is true. If false, nothing happens.
-    The modifier 'CA' indicates that the operation is controllable and adjointable.
+    The modifier `CA` indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.complexpolartocomplex
   summary: >-
     Converts a complex number of type `ComplexPolar` to a complex
@@ -176,13 +186,15 @@ functions:
     number of type `ComplexPolar`.
 - uid: microsoft.quantum.canon.compose
   summary: >-
-    Given two functions $f$ and $g$, returns a new function representing
+    Generates the composition of two functions.
+
+    That is, given two functions $f$ and $g$, returns a new function representing
     $f \circ g$.
 - uid: microsoft.quantum.canon.constantarray
   summary: Creates an array of given length with all elements equal to given value.
 - uid: microsoft.quantum.canon.continuedfractionconvergent
   summary: >-
-    Finds a continued fraction convergent closest to `fraction`
+    Finds the continued fraction convergent closest to `fraction`
     with the denominator less or equal to `denominatorBound`
 - uid: microsoft.quantum.canon.controlledonbitstring
   summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
@@ -190,7 +202,9 @@ functions:
   summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified positive integer.
 - uid: microsoft.quantum.canon.curryop
   summary: >-
-    Given an operation with two inputs, applies Curry's isomorphism
+    Returns a curried version of an operation on two inputs.
+
+    That is, given an operation with two inputs, this function applies Curry's isomorphism
     $f(x, y) \equiv f(x)(y)$ to return an operation of one input which
     returns an operation of one input.
 - uid: microsoft.quantum.canon.decomposeintotimestepsca
@@ -211,11 +225,12 @@ functions:
 - uid: microsoft.quantum.canon.expmod
   summary: >-
     Let us denote expBase by x, power by p and modulus by N.
-    The function returns xᵖ mod N .
+    The function returns xᵖ mod N.
+
     We assume that N,x are positive and power is non-negative.
 - uid: microsoft.quantum.canon.extendedgcd
   summary: >-
-    Computes tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a
+    Computes a tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a
     greatest common divisor of a and b. The GCD is always positive.
 - uid: microsoft.quantum.canon.filter
   summary: >-
@@ -244,7 +259,7 @@ functions:
 - uid: microsoft.quantum.canon.fst
   summary: Given a pair, returns its first element.
 - uid: microsoft.quantum.canon.gcd
-  summary: Computes greatest common divisor of a and b. The GCD is always positive.
+  summary: Computes the greatest common divisor of a and b. The GCD is always positive.
 - uid: microsoft.quantum.canon.getgeneratorsystemfunction
   summary: Retrieves the `GeneratorIndex` function in a `GeneratorSystem`.
 - uid: microsoft.quantum.canon.getgeneratorsystemnterms
@@ -253,16 +268,16 @@ functions:
   summary: Returns the first element of the array.
 - uid: microsoft.quantum.canon.identitygeneratorindex
   summary: >-
-    Returns a generator index consistent with the
-    Hamiltonian $H = 0$.
+    Returns a generator index consistent with the zero
+    Hamiltonian, `H = 0`, which corresponds to the identity evolution operation.
 - uid: microsoft.quantum.canon.identitygeneratorsystem
   summary: >-
-    Returns a generator system consistent with the
-    Hamiltonian $H = 0$.
+    Returns a generator system consistent with the zero
+    Hamiltonian `H = 0`, which corresponds to the identity evolution operation.
 - uid: microsoft.quantum.canon.identitytimedependentgeneratorsystem
   summary: >-
     Returns a time-dependent generator system consistent with the
-    Hamiltonian $H(s) = 0$.
+    Hamiltonian `H(s) = 0`.
 - uid: microsoft.quantum.canon.ignore
   summary: Ignores the output of an operation or function.
 - uid: microsoft.quantum.canon.intabs
@@ -271,14 +286,13 @@ functions:
   summary: Creates an array `arr` of integers enumnerated by start..step..end.
 - uid: microsoft.quantum.canon.interpolatedevolution
   summary: >-
-    This interpolates between two generators with a uniform schedule,
+    Interpolates between two generators with a uniform schedule,
     returning an operation that applies simulated evolution under
     the resulting time-dependent generator to a qubit register.
 - uid: microsoft.quantum.canon.interpolategeneratorsystems
   summary: >-
     Returns a `TimeDependentGeneratorSystem` representing the linear
-    interpolation between two `GeneratorSystems` according to a
-    schedule parameter $s\in[0,1]$.
+    interpolation between two `GeneratorSystem`s.
 - uid: microsoft.quantum.canon.intmax
   summary: Returns the maximum of two integers.
 - uid: microsoft.quantum.canon.intstopaulis
@@ -292,9 +306,9 @@ functions:
 - uid: microsoft.quantum.canon.iscoprime
   summary: Returns  true if a and b are co-prime and false otherwise.
 - uid: microsoft.quantum.canon.isresultone
-  summary: The `IsResultOne` function tests if a given Result value is equal to `One`.
+  summary: Tests if a given Result value is equal to `One`.
 - uid: microsoft.quantum.canon.isresultzero
-  summary: The `IsResultZero` function tests if a given Result value is equal to `Zero`.
+  summary: Tests if a given Result value is equal to `Zero`.
 - uid: microsoft.quantum.canon.lg
   summary: Computes the base-2 logarithm of a number.
 - uid: microsoft.quantum.canon.littleendiantobigendian
@@ -302,9 +316,7 @@ functions:
     Converts a `LittleEndian` qubit register to a `BigEndian` Qubit
     register by reversing the qubit ordering.
 - uid: microsoft.quantum.canon.logof2
-  summary: >-
-    Returns the constant $\ln(2)$, where $\ln$
-    is the natural (base-$e$) logarithm.
+  summary: Returns the natural logarithm of 2.
 - uid: microsoft.quantum.canon.lookupfunction
   summary: >-
     Given an array, returns a function which returns elements of that
@@ -324,21 +336,21 @@ functions:
 - uid: microsoft.quantum.canon.min
   summary: Given an array of integers, returns the smallest element.
 - uid: microsoft.quantum.canon.modulus
-  summary: Computes canonical residue of `value` modulo `modulus`.
+  summary: Computes the canonical residue of `value` modulo `modulus`.
 - uid: microsoft.quantum.canon.most
   summary: >-
     Creates an array that is equal to an input array except that the last array
     element is dropped.
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
-    Returns a multiply-controlled unitary operation $U$ that applies a
-    unitary $V_j$ when controlled by $n$-qubit number state $\ket{j}$.
+    Returns a multiply-controlled unitary operation `U` that applies a
+    unitary `V_j` when controlled by n-qubit number state `|j〉`.
 
     $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplexerfromgenerator
   summary: >-
-    Returns a multiply-controlled unitary operation $U$ that applies a
-    unitary $V_j$ when controlled by $n$-qubit number state $\ket{j}$.
+    Returns a multiply-controlled unitary operation `U` that applies a
+    unitary `V_j` when controlled by n-qubit number state `|j〉`.
 
     $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplygeneratorindex
@@ -349,30 +361,40 @@ functions:
   summary: Combines the oracles `DeterministicStateOracle` and `ObliviousOracle`.
 - uid: microsoft.quantum.canon.operationpow
   summary: >-
-    Given an operation representing a gate $U$, returns a new operation
+    Raises an operation to a power.
+
+    That is, given an operation representing a gate $U$, returns a new operation
     $U^m$ for a power $m$.
 - uid: microsoft.quantum.canon.operationpowa
   summary: >-
-    Given an operation representing a gate $U$, returns a new operation
+    Raises an operation to a power.
+    The modifier `A` indicates that the operation is adjointable.
+
+    That is, given an operation representing a gate $U$, returns a new operation
     $U^m$ for a power $m$.
-    The modifier 'A' indicates that the operation is adjointable.
 - uid: microsoft.quantum.canon.operationpowc
   summary: >-
-    Given an operation representing a gate $U$, returns a new operation
+    Raises an operation to a power.
+    The modifier `C` indicates that the operation is controllable.
+
+    That is, given an operation representing a gate $U$, returns a new operation
     $U^m$ for a power $m$.
-    The modifier 'C' indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.operationpowca
   summary: >-
-    Given an operation representing a gate $U$, returns a new operation
+    Raises an operation to a power.
+    The modifier `A` indicates that the operation is controllable and adjointable.
+
+    That is, given an operation representing a gate $U$, returns a new operation
     $U^m$ for a power $m$.
-    The modifier 'CA' indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.pad
   summary: >-
     Returns an array padded at with specified values up to a
     specified length.
 - uid: microsoft.quantum.canon.pauliblockencoding
   summary: >-
-    Creates a block-encoding unitary $U$ of the Hamiltonian $H=\sum_{j}\alpha_j P_j$ described by a
+    Creates a block-encoding unitary for a Hamiltonian.
+
+    The Hamiltonian $H=\sum_{j}\alpha_j P_j$ is described by a
     sum of Pauli terms $P_j$, each with real coefficient $\alpha_j$.
 - uid: microsoft.quantum.canon.paulicoefficientfromgenidx
   summary: Extracts the coefficient of a Pauli term described by a `GeneratorIndex`.
@@ -394,11 +416,15 @@ functions:
     by a `GeneratorIndex`.
 - uid: microsoft.quantum.canon.pnorm
   summary: >-
-    Given an array $x$ of type `Double[]`, this returns the $p$-norm
+    Returns the `L(p)` norm of a vector of `Double`s.
+
+    That is, given an array $x$ of type `Double[]`, this returns the $p$-norm
     $\|x\|_p= (\sum_{j}|x_j|^{p})^{1/p}$.
 - uid: microsoft.quantum.canon.pnormalize
   summary: >-
-    Given an array $x$ of type `Double[]`, this returns an array where
+    Normalizes a vector of `Double`s in the `L(p)` norm.
+
+    That is, given an array $x$ of type `Double[]`, this returns an array where
     all elements are divided by the $p$-norm $\|x\|_p$.
 - uid: microsoft.quantum.canon.positiveintfromboolarr
   summary: Produces a positive integer from a string of bits in in little Endian format.
@@ -406,6 +432,8 @@ functions:
   summary: Produces a positive integer from a string of Results in in little Endian format.
 - uid: microsoft.quantum.canon.quantumrom
   summary: >-
+    Uses the Quantum ROM technique to represent a given density matrix.
+
     Given a list of $N$ coefficients $\alpha_j$, this returns a unitary $U$ that uses the Quantum-ROM
     technique to prepare
     an approximation  $\tilde\rho\sum^{N-1}_{j=0}p_j\ket{j}\bra{j}$ of the purification of the density matrix
@@ -419,21 +447,27 @@ functions:
     $$.
 - uid: microsoft.quantum.canon.quantumromqubitcount
   summary: >-
-    Returns count of number of qubits that must be allocated
+    Returns the total number of qubits that must be allocated
     to the operation returned by `QuantumROM`.
 - uid: microsoft.quantum.canon.quantumwalkbyqubitization
   summary: >-
-    This function converts a `BlockEncodingReflection` unitary $U$
-    that encodes some operator $H$ of interest into a quantum walk
+    Converts a `BlockEncodingReflection` into a quantum walk.
+
+    That is, given a `BlockEncodingReflection` unitary $U$
+    that encodes some operator $H$ of interest, converts it into a quantum walk
     $W$ containing the spectrum of $\pm e^{\pm i\sin^{-1}(H)}$.
 - uid: microsoft.quantum.canon.realmod
   summary: Computes the modulus between two real numbers.
 - uid: microsoft.quantum.canon.reflectionoraclefromdeterministicstateoracle
   summary: >-
-    Constructs reflection about a some state $\ket{\psi}$ from the oracle $O$ of type
-    <xref:microsoft.quantum.canon.deterministicstateoracle>, where $O\ket{0} = \ket{\psi}$.
+    Constructs reflection about a given state from an oracle.
+
+    Given the oracle $O$ of type
+    <xref:microsoft.quantum.canon.deterministicstateoracle>,
+    the result of this function is a reflection around the state $\ket{\psi}$
+    where $O\ket{0} = \ket{\psi}$.
 - uid: microsoft.quantum.canon.reflectionstart
-  summary: Constructs a reflection about the all-zero string $\ket{0\cdots 0}$, which is the typical input state to amplitude amplification.
+  summary: Constructs a reflection about the all-zero string |0...0〉, which is the typical input state to amplitude amplification.
 - uid: microsoft.quantum.canon.rest
   summary: >-
     Creates an array that is equal to an input array except that the first array
@@ -443,15 +477,15 @@ functions:
 - uid: microsoft.quantum.canon.restricttosubregistera
   summary: >-
     Restricts an operation to an array of indices of a register, i.e., a subregister.
-    The modifier 'A' indicates that the operation is adjointable.
+    The modifier `A` indicates that the operation is adjointable.
 - uid: microsoft.quantum.canon.restricttosubregisterc
   summary: >-
     Restricts an operation to an array of indices of a register, i.e., a subregister.
-    The modifier 'C' indicates that the operation is controllable.
+    The modifier `C` indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.restricttosubregisterca
   summary: >-
     Restricts an operation to an array of indices of a register, i.e., a subregister.
-    The modifier 'CA' indicates that the operation is controllable and adjointable.
+    The modifier `CA` indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.resultarrfromboolarr
   summary: >-
     Converts a `Bool[]` type to a `Result[]` type, where `true` is mapped to
@@ -460,8 +494,8 @@ functions:
   summary: >-
     Given an array of results, represents the array by a single
     integer, with the 0th (leftmost) entry in the array being mapped
-    the least significant bit. Thus, [One, Zero] is represented by
-    1 and [Zero, One] by 2.
+    the least significant bit. Thus, `[One, Zero]` is represented by
+    1 and `[Zero, One]` by 2.
 - uid: microsoft.quantum.canon.resultfrombool
   summary: >-
     Converts a `Bool` type to a `Result` type, where `true` is mapped to
@@ -492,7 +526,9 @@ functions:
   summary: Converts an oracle of type `DeterministicStateOracle` to `StateOracle`.
 - uid: microsoft.quantum.canon.statepreparationcomplexcoefficients
   summary: >-
-    Returns a unitary operation $U$ that prepares an arbitrary quantum
+    Returns an operation that prepares a specific quantum state.
+
+    The returned operation $U$ prepares an arbitrary quantum
     state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from
     the $n$-qubit computational basis state $\ket{0...0}$.
 
@@ -502,7 +538,9 @@ functions:
     \end{align}
 - uid: microsoft.quantum.canon.statepreparationpositivecoefficients
   summary: >-
-    Returns a unitary operation $U$ that prepares an arbitrary quantum
+    Returns an operation that prepares the given quantum state.
+
+    The returned operation $U$ prepares an arbitrary quantum
     state $\ket{\psi}$ with positive coefficients $\alpha_j\ge 0$ from
     the $n$-qubit computational basis state $\ket{0...0}$.
 
@@ -524,7 +562,7 @@ functions:
     produces a new array formed from the elements of the original
     array that match the given locations.
 - uid: microsoft.quantum.canon.sumgeneratorsystems
-  summary: Adds multiple `GeneratorSystems` to create a new GeneratorSystem.
+  summary: Adds multiple `GeneratorSystem`s to create a new GeneratorSystem.
 - uid: microsoft.quantum.canon.tablelookuprecovery
   summary: >-
     For a given table of Pauli operations on a given register of qubits, this function
@@ -534,19 +572,20 @@ functions:
   summary: Returns the last element of the array.
 - uid: microsoft.quantum.canon.targetstatereflectionoracle
   summary: >-
-    Constructs reflection about the target state uniquely marked by the flag qubit state
-    $\ket{1}_f$, prepared the oracle of type "ReflectionOracle".
+    Constructs a `ReflectionOracle` about the target state uniquely marked by the flag qubit.
+
+    The target state has a single qubit set to 1, and all others 0: $\ket{1}_f$.
 - uid: microsoft.quantum.canon.timedependenttrottersimulationalgorithm
   summary: >-
     `TimeDependentSimulationAlgorithm` function that uses a Trotter–Suzuki
     decomposition to approximate a unitary operator that solves the
-    time-dependent Schr�dinger equation at time $t$.
+    time-dependent Schrodinger equation.
 - uid: microsoft.quantum.canon.tooperation
   summary: Converts functions to operations.
 - uid: microsoft.quantum.canon.trottersimulationalgorithm
   summary: >-
     `SimulationAlgorithm` function that uses a Trotter–Suzuki
-    decomposition to approximate the time-evolution operator $e^{-i H t}$.
+    decomposition to approximate the time-evolution operator _exp(-iHt)_.
 - uid: microsoft.quantum.canon.trotterstep
   summary: >-
     Implements a single time-step of time-evolution by the system
@@ -562,19 +601,19 @@ functions:
     Given a function which returns operations,
     returns a new operation which takes both inputs
     as a tuple.
-    The modifier 'A' indicates that the operations are adjointable.
+    The modifier `A` indicates that the operations are adjointable.
 - uid: microsoft.quantum.canon.uncurryopc
   summary: >-
     Given a function which returns operations,
     returns a new operation which takes both inputs
     as a tuple.
-    The modifier 'C' indicates that the operations are controllable.
+    The modifier `C` indicates that the operations are controllable.
 - uid: microsoft.quantum.canon.uncurryopca
   summary: >-
     Given a function which returns operations,
     returns a new operation which takes both inputs
     as a tuple.
-    The modifier 'CA' indicates that the operations are controllable and adjointable.
+    The modifier `CA` indicates that the operations are controllable and adjointable.
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: >-
     Returns an array of all weight-1 Pauli operators
@@ -588,14 +627,14 @@ functions:
 operations:
 - uid: microsoft.quantum.canon.adiabaticstateenergyestimate
   summary: >-
-    Convenience function that performs state preparation by applying a
-    `statePrepUnitary` on an automatically allocated input state
-    $\ket{0...0}$, followed by adiabatic state preparation using a
+    Performs state preparation by applying a
+    `statePrepUnitary` on an automatically allocated input state,
+    followed by adiabatic state preparation using a
     `adiabaticUnitary`, and finally phase estimation with respect to
     `qpeUnitary`on the resulting state using a `phaseEstAlgorithm`.
 - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
   summary: >-
-    Convenience function that performs state preparation by applying a
+    Performs state preparation by applying a
     `statePrepUnitary` on the input state, followed by adiabatic state
     preparation using a `adiabaticUnitary`, and finally phase estimation
     with respect to `qpeUnitary`on the resulting state using a
@@ -604,7 +643,9 @@ operations:
   summary: Fixed-Point Amplitude Amplification algorithm
 - uid: microsoft.quantum.canon.andladder
   summary: >-
-    Applies a unitary given by the following map on computational basis vectors:
+    Performs a controlled 'AND ladder' on the target qubits.
+
+    This applies a unitary given by the following map on computational basis vectors:
     $$
     \begin{align}
     \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n - 1}} \mapsto
@@ -618,7 +659,9 @@ operations:
     refers to the computational basis states of `targets`.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: >-
-    Applies Diagonal unitary operation $U$ that applies a complex phase
+    Applies an array of complex phases to numeric basis states of a register of qubits.
+
+    That is, this implements the diagonal unitary operation $U$ that applies a complex phase
     $e^{i \theta_j}$ on the $n$-qubit number state $\ket{j}$.
 
     $U = \sum^{2^n-1}_{j=0}e^{i\theta_j}\ket{j}\bra{j}$.
@@ -630,17 +673,17 @@ operations:
   summary: >-
     Given an operation `op` and a bit value `bit`, applies `op` to the `target`
     if `bit` is true. If false, nothing happens to the `target`.
-    The modifier 'A' indicates that the operation is adjointable.
+    The modifier `A` indicates that the operation is adjointable.
 - uid: microsoft.quantum.canon.applyifc
   summary: >-
     Given an operation `op` and a bit value `bit`, applies `op` to the `target`
     if `bit` is true. If false, nothing happens to the `target`.
-    The modifier 'C' indicates that the operation is controllable.
+    The modifier `C` indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.applyifca
   summary: >-
     Given an operation `op` and a bit value `bit`, applies `op` to the `target`
     if `bit` is true. If false, nothing happens to the `target`.
-    The modifier 'CA' indicates that the operation is controllable and adjointable.
+    The modifier `CA` indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.applyleoperationonphasele
   summary: >-
     Applies an operation that takes a
@@ -654,14 +697,14 @@ operations:
   summary: ''
 - uid: microsoft.quantum.canon.applymulticontrolledc
   summary: >-
-    Applies a multiply controlled version of singly controlled
+    Applies a multiply controlled version of a singly controlled
     operation.
-    The modifier 'C' indicates that the single-qubit operation is controllable.
+    The modifier `C` indicates that the single-qubit operation is controllable.
 - uid: microsoft.quantum.canon.applymulticontrolledca
   summary: >-
-    Applies a multiply controlled version of singly controlled
+    Applies a multiply controlled version of a singly controlled
     operation.
-    The modifier 'CA' indicates that the single-qubit operation is controllable
+    The modifier `CA` indicates that the single-qubit operation is controllable
     and adjointable.
 - uid: microsoft.quantum.canon.applypauli
   summary: >-
@@ -669,7 +712,7 @@ operations:
     a register.
 - uid: microsoft.quantum.canon.applypaulifrombitstring
   summary: >-
-    Applies a Pauli operator on the $n^{\text{th}}$ qubit if the $n^{\text{th}}$
+    Applies a Pauli operator on each qubit in an array if the corresponding
     bit of a Boolean array matches a given input.
 - uid: microsoft.quantum.canon.applyphaseleoperationonle
   summary: >-
@@ -713,9 +756,11 @@ operations:
     an unsigned integer using big-endian format.
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
   summary: >-
-    This unitary $U$ tests if two integers $x,y$ stored in equal-size qubit registers
-    satisfies $x > y$. If true, $1$ is XORed into an output
-    qubit. Otherwise, $0$ is XORed into an output qubit. In other words,
+    This unitary tests if two integers `x` and `y` stored in equal-size qubit registers
+    satisfy `x > y`. If true, 1 is XORed into an output
+    qubit. Otherwise, 0 is XORed into an output qubit.
+
+    In other words, this unitary $U$  satisfies:
     $$
     \begin{align}
     U\ket{x}\ket{y}\ket{z}=\ket{x}\ket{y}\ket{z\oplus (x>y)}.
@@ -723,9 +768,11 @@ operations:
     $$.
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorle
   summary: >-
-    This unitary $U$ tests if two integers $x,y$ stored in equal-size qubit registers
-    satisfies $x > y$. If true, $1$ is XORed into an output
-    qubit. Otherwise, $0$ is XORed into an output qubit. In other words,
+    This unitary tests if two integers `x` and `y` stored in equal-size qubit registers
+    satisfy `x > y`. If true, 1 is XORed into an output
+    qubit. Otherwise, 0 is XORed into an output qubit.
+
+    In other words, this unitary $U$  satisfies:
     $$
     \begin{align}
     U\ket{x}\ket{y}\ket{z}=\ket{x}\ket{y}\ket{z\oplus (x>y)}.
@@ -736,87 +783,87 @@ operations:
 - uid: microsoft.quantum.canon.applytoeacha
   summary: >-
     Applies a single-qubit operation to each element in a register.
-    The modifier 'A' indicates that the single-qubit operation is adjointable.
+    The modifier `A` indicates that the single-qubit operation is adjointable.
 - uid: microsoft.quantum.canon.applytoeachc
   summary: >-
     Applies a single-qubit operation to each element in a register.
-    The modifier 'C' indicates that the single-qubit operation is controllable.
+    The modifier `C` indicates that the single-qubit operation is controllable.
 - uid: microsoft.quantum.canon.applytoeachca
   summary: >-
     Applies a single-qubit operation to each element in a register.
-    The modifier 'CA' indicates that the single-qubit operation is controllable
+    The modifier `CA` indicates that the single-qubit operation is controllable
     and adjointable.
 - uid: microsoft.quantum.canon.applytoeachindex
   summary: Applies a single-qubit operation to each indexed element in a register.
 - uid: microsoft.quantum.canon.applytoeachindexa
   summary: >-
     Applies a single-qubit operation to each indexed element in a register.
-    The modifier 'A' indicates that the single-qubit operation is adjointable.
+    The modifier `A` indicates that the single-qubit operation is adjointable.
 - uid: microsoft.quantum.canon.applytoeachindexc
   summary: >-
     Applies a single-qubit operation to each indexed element in a register.
-    The modifier 'C' indicates that the single-qubit operation is controllable.
+    The modifier `C` indicates that the single-qubit operation is controllable.
 - uid: microsoft.quantum.canon.applytoeachindexca
   summary: >-
     Applies a single-qubit operation to each indexed element in a register.
-    The modifier 'CA' indicates that the single-qubit operation is adjointable
+    The modifier `CA` indicates that the single-qubit operation is adjointable
     and controllable.
 - uid: microsoft.quantum.canon.applytofirstqubit
-  summary: Applies operation op to the first qubit in the register.
+  summary: Applies an operation to the first qubit in the register.
 - uid: microsoft.quantum.canon.applytofirstqubita
   summary: >-
-    Applies operation op to the first qubit in the register.
-    The modifier 'A' indicates that the operation is adjointable.
+    Applies an operation to the first qubit in the register.
+    The modifier `A` indicates that the operation is adjointable.
 - uid: microsoft.quantum.canon.applytofirstqubitc
   summary: >-
     Applies operation op to the first qubit in the register.
-    The modifier 'C' indicates that the operation is controllable.
+    The modifier `C` indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.applytofirstqubitca
   summary: >-
     Applies operation op to the first qubit in the register.
-    The modifier 'CA' indicates that the operation is controllable and adjointable.
+    The modifier `CA` indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.applytofirstthreequbits
-  summary: Applies operation `op` to the first three qubits in the register.
+  summary: Applies an operation to the first three qubits in the register.
 - uid: microsoft.quantum.canon.applytofirstthreequbitsa
   summary: >-
-    Applies operation `op` to the first three qubits in the register.
-    The modifier 'A' indicates that the operation is adjointable.
+    Applies an operation to the first three qubits in the register.
+    The modifier `A` indicates that the operation is adjointable.
 - uid: microsoft.quantum.canon.applytofirstthreequbitsc
   summary: >-
-    Applies operation `op` to the first three qubits in the register.
-    The modifier 'C' indicates that the operation is controllable.
+    Applies an operation to the first three qubits in the register.
+    The modifier `C` indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.applytofirstthreequbitsca
   summary: >-
-    Applies operation `op` to the first three qubits in the register.
-    The modifier 'CA' indicates that the operation is controllable and adjointable.
+    Applies an operation to the first three qubits in the register.
+    The modifier `CA` indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.applytofirsttwoqubits
-  summary: Applies operation `op` to the first two qubits in the register.
+  summary: Applies an operation to the first two qubits in the register.
 - uid: microsoft.quantum.canon.applytofirsttwoqubitsa
   summary: >-
-    Applies operation `op` to the first two qubits in the register.
-    The modifier 'A' indicates that the operation is adjointable.
+    Applies an operation to the first two qubits in the register.
+    The modifier `A` indicates that the operation is adjointable.
 - uid: microsoft.quantum.canon.applytofirsttwoqubitsc
   summary: >-
-    Applies operation `op` to the first two qubits in the register.
-    The modifier 'C' indicates that the operation is controllable.
+    Applies an operation to the first two qubits in the register.
+    The modifier `C` indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.applytofirsttwoqubitsca
   summary: >-
-    Applies operation `op` to the first two qubits in the register.
-    The modifier 'CA' indicates that the operation is controllable and adjointable.
+    Applies an operation to the first two qubits in the register.
+    The modifier `CA` indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.applytopartition
   summary: Applies a pair of operations to a given partition of a register into two parts.
 - uid: microsoft.quantum.canon.applytopartitiona
   summary: >-
     Applies a pair of operations to a given partition of a register into two parts.
-    The modifier 'A' indicates that the operation is adjointable.
+    The modifier `A` indicates that the operation is adjointable.
 - uid: microsoft.quantum.canon.applytopartitionc
   summary: >-
     Applies a pair of operations to a given partition of a register into two parts.
-    The modifier 'C' indicates that the operation is controllable.
+    The modifier `C` indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.applytopartitionca
   summary: >-
     Applies a pair of operations to a given partition of a register into two parts.
-    The modifier 'CA' indicates that the operation is controllable and adjointable.
+    The modifier `CA` indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.applytosubregister
   summary: >-
     Applies an operation to a subregister of a register, with qubits
@@ -825,17 +872,17 @@ operations:
   summary: >-
     Applies an operation to a subregister of a register, with qubits
     specified by an array of their indices.
-    The modifier 'A' indicates that the operation is adjointable.
+    The modifier `A` indicates that the operation is adjointable.
 - uid: microsoft.quantum.canon.applytosubregisterc
   summary: >-
     Applies an operation to a subregister of a register, with qubits
     specified by an array of their indices.
-    The modifier 'C' indicates that the operation is controllable.
+    The modifier `C` indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.applytosubregisterca
   summary: >-
     Applies an operation to a subregister of a register, with qubits
     specified by an array of their indices.
-    The modifier 'CA' indicates that the operation is controllable and adjointable.
+    The modifier `CA` indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.approximateqft
   summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
 - uid: microsoft.quantum.canon.asserthighestbit
@@ -846,17 +893,25 @@ operations:
   summary: Asserts that the `number` encoded in PhaseLittleEndian is less than `value`.
 - uid: microsoft.quantum.canon.assertphase
   summary: >-
-    Asserts that the phase $\phi$ of an equal superposition quantum state
+    Asserts that the phase of an equal superposition state has the expected value.
+
+    Specifically, asserts that the phase $\phi$ of a quantum state
     that may be expressed as
     $\frac{e^{i t}}{\sqrt{2}}(e^{i\phi}\ket{0} + e^{-i\phi}\ket{1})$
     for some arbitrary real t has the expected value.
 - uid: microsoft.quantum.canon.assertprobint
   summary: >-
+    Asserts that the probability of a specific state of a quantum register has the
+    expected value.
+
     Given an $n$-qubit quantum state $\ket{\psi}=\sum^{2^n-1}_{j=0}\alpha_j \ket{j}$,
     asserts that the probability $|\alpha_j|^2$ of the state $\ket{j}$ indexed by $j$
     has the expected value.
 - uid: microsoft.quantum.canon.assertprobintbe
   summary: >-
+    Asserts that the probability of a specific state of a quantum register has the
+    expected value.
+
     Given an $n$-qubit quantum state $\ket{\psi}=\sum^{2^n-1}_{j=0}\alpha_j \ket{j}$,
     asserts that the probability $|\alpha_j|^2$ of the state $\ket{j}$ indexed by $j$
     has the expected value.
@@ -872,14 +927,17 @@ operations:
   summary: Calls a function with a given input.
 - uid: microsoft.quantum.canon.cnotchain
   summary: >-
-    This computes the parity of qubits $\ket{q_0} \ket{q_1} \cdots$
-    in-place, following the pattern
+    Computes the parity of an array of qubits in-place.
+
+    It follows the pattern
     $\ket{q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cdots$.
 - uid: microsoft.quantum.canon.cnotchaintarget
   summary: >-
-    This computes the parity of qubits initially in the state
-    $\ket{q_0} \ket{q_1} \cdots \ket{q_{\text{target}}}$ in-place,
-    such that the final state is given by
+    Computes the parity of an array of qubits into a target qubit.
+
+    If the array is initially in the state
+    $\ket{q_0} \ket{q_1} \cdots \ket{q_{\text{target}}}$,
+    the final state is given by
     $\ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n - 1} \oplus \cdots \oplus q_0 \oplus q_{\text{target}}}$.
 - uid: microsoft.quantum.canon.continuousphaseestimationiteration
   summary: >-
@@ -891,7 +949,8 @@ operations:
     `from` representing an unsigned integer into the qubit `target`.
 - uid: microsoft.quantum.canon.cx
   summary: >-
-    Applies the controlled-$X$ (CX) gate to a pair of qubits,
+    Applies the controlled-X (CX) gate to a pair of qubits.
+
     $$
     \begin{align}
     1 & 0 & 0 & 0 \\\\
@@ -903,7 +962,8 @@ operations:
     where rows and columns are organized as in the quantum concepts guide.
 - uid: microsoft.quantum.canon.cy
   summary: >-
-    Applies the controlled-$Y$ (CY) gate to a pair of qubits,
+    Applies the controlled-Y (CY) gate to a pair of qubits.
+
     $$
     \begin{align}
     1 & 0 & 0 & 0 \\\\
@@ -915,7 +975,8 @@ operations:
     where rows and columns are organized as in the quantum concepts guide.
 - uid: microsoft.quantum.canon.cz
   summary: >-
-    Applies the controlled-$Z$ (CZ) gate to a pair of qubits,
+    Applies the controlled-Z (CZ) gate to a pair of qubits.
+
     $$
     \begin{align}
     1 & 0 & 0 & 0 \\\\
@@ -931,7 +992,7 @@ operations:
     estimation algorithm using integer powers of a unitary oracle.
 - uid: microsoft.quantum.canon.estimateenergy
   summary: >-
-    Convenience function that performs state preparation by applying a
+    Performs state preparation by applying a
     `statePrepUnitary` on an automatically allocated input state
     phase estimation with respect to `qpeUnitary`on the resulting state
     using a `phaseEstAlgorithm`.
@@ -950,8 +1011,10 @@ operations:
   summary: Encodes into the ⟦5, 1, 3⟧ quantum code.
 - uid: microsoft.quantum.canon.hy
   summary: >-
-    Applies the Hadamard transformation $H_Y = S H$
-    between the $Z$ and $Y$ bases to a single qubit,
+    Applies the Y-basis analog to the Hadamard transformation
+    that interchanges the Z and Y axes.
+
+    The Y Hadamard transformation $H_Y = S H$ on a single qubit is:
 
     \begin{align}
     H_Y \mathrel{:=}
@@ -963,7 +1026,9 @@ operations:
     \end{align}
 - uid: microsoft.quantum.canon.injectpi4yrotation
   summary: >-
-    Performs a $\pi / 4$ rotation about $Y$ by consuming a magic
+    Performs a π/4 rotation about `Y`.
+
+    The rotation is performed by consuming a magic
     state; that is, a copy of the state
     $$
     \begin{align}
@@ -971,20 +1036,25 @@ operations:
     \end{align}
     $$
 - uid: microsoft.quantum.canon.inplacemajority
-  summary: This computes the Majority function in-place on $3$ bits.
+  summary: This computes the Majority function in-place on 3 qubits.
 - uid: microsoft.quantum.canon.inplacexorbe
   summary: >-
+    Applies `X` operations to qubits in a big-endian register based on 1 bits in an integer.
+
     Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
     then `InPlaceXorBE` performs an operation given by the following map:
     $\ket{y}\rightarrow \ket{y\oplus a}$ , where $\oplus$ is the bitwise exclusive OR operator.
 - uid: microsoft.quantum.canon.inplacexorle
   summary: >-
+    Applies `X` operations to qubits in a little-endian register based on 1 bits in an integer.
+
     Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
     then `InPlaceXorLE` performs an operation given by the following map:
     $\ket{y}\rightarrow \ket{y\oplus a}$ , where $\oplus$ is the bitwise exclusive OR operator.
 - uid: microsoft.quantum.canon.integerincrementle
   summary: >-
     Unsigned integer increment by an integer constant, based on phase rotations.
+
     Suppose `target` encodes unsigned integer x in little-endian encoding and
     `increment` is equal to a.
     The operation implements the unitary |x⟩ ↦ |x + a ⟩,
@@ -993,6 +1063,7 @@ operations:
 - uid: microsoft.quantum.canon.integerincrementphasele
   summary: >-
     Unsigned integer increment by an integer constant, based on phase rotations.
+
     Suppose `target` encodes unsigned integer x in little-endian encoding and
     `increment` is equal to a.
     The operation implements the unitary |x⟩ ↦ |x + a ⟩,
@@ -1010,6 +1081,8 @@ operations:
     and calls op(arr) for every element of the Cartesian product
 - uid: microsoft.quantum.canon.knilldistill
   summary: >-
+    Implements the Knill magic state distillation algorithm.
+
     Given 15 approximate copies of a magic state
     $$
     \begin{align}
@@ -1019,16 +1092,18 @@ operations:
     yields one higher-quality copy.
 - uid: microsoft.quantum.canon.measureallz
   summary: >-
-    Measures $Z \otimes Z \otimes \cdots \otimes Z$ on
+    Jointly measures a register of qubits in the Pauli Z basis.
+
+    In other words, measures the operation $Z \otimes Z \otimes \cdots \otimes Z$ on
     a given register.
 - uid: microsoft.quantum.canon.measureidentity
   summary: >-
-    Measures the identity operator $\boldone$ on a register
+    Measures the identity operator on a register
     of qubits.
 - uid: microsoft.quantum.canon.measureinteger
   summary: >-
-    `MeasureInteger` reads out the content of a quantum register and converts
-    it to an integer of type `Int`. The measurement is performed with respect
+    Measures the content of a quantum register and converts
+    it to an integer. The measurement is performed with respect
     to the standard computational basis, i.e., the eigenbasis of `PauliZ`.
 - uid: microsoft.quantum.canon.measureintegerbe
   summary: Version of MeasureInteger for BigEndian register
@@ -1044,6 +1119,8 @@ operations:
     qubit to perform the measurement.
 - uid: microsoft.quantum.canon.modularaddproductle
   summary: >-
+    Performs a modular multipy-and-add by integer constants on a qubit register.
+
     Implements the map
     $$
     \begin{align}
@@ -1057,6 +1134,8 @@ operations:
     integers in QFT basis
 - uid: microsoft.quantum.canon.modularincrementle
   summary: >-
+    Performs a modular increment of a qubit register by an integer constant.
+
     Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
     Then the operation performs the following transformation:
     \begin{align}
@@ -1065,61 +1144,71 @@ operations:
     Integers are encoded in little-endian format.
 - uid: microsoft.quantum.canon.modularincrementphasele
   summary: >-
+    Performs a modular increment of a qubit register by an integer constant.
+
     Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
     Then the operation performs the following transformation:
     |y⟩ ↦ |y+a (mod N)⟩
     Integers are encoded in little-endian format in QFT basis
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
   summary: >-
+    Performs modular multiplication by an integer constant on a qubit register.
+
     Let us denote modulus by N and constMultiplier by a
     then this operation implements a unitary defined by the following map on
     computational basis:
     |y⟩ ↦ |a⋅y (mod N) ⟩, for all y between 0 and N - 1
 - uid: microsoft.quantum.canon.mresetx
   summary: >-
-    Measures a single qubit in the $X$ basis,
+    Measures a single qubit in the X basis,
     and resets it to the standard basis state
-    $\ket{0}$ following the measurement.
+    |0〉 following the measurement.
 - uid: microsoft.quantum.canon.mresety
   summary: >-
-    Measures a single qubit in the $Y$ basis,
+    Measures a single qubit in the Y basis,
     and resets it to the standard basis state
-    $\ket{0}$ following the measurement.
+    |0〉 following the measurement.
 - uid: microsoft.quantum.canon.mresetz
   summary: >-
-    Measures a single qubit in the $Z$ basis,
+    Measures a single qubit in the `Z` basis,
     and resets it to the standard basis state
-    $\ket{0}$ following the measurement.
+    |0〉 following the measurement.
 - uid: microsoft.quantum.canon.multim
   summary: Measures each qubit in a given array in the standard basis.
 - uid: microsoft.quantum.canon.multiplexoperations
   summary: >-
-    Applies Multiply-controlled unitary operation $U$ that applies a
+    Applies an array of operations controlled by an array of number states.
+
+    That is, applies Multiply-controlled unitary operation $U$ that applies a
     unitary $V_j$ when controlled by $n$-qubit number state $\ket{j}$.
 
     $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplexoperationsbruteforcefromgenerator
   summary: >-
-    Applies multiply-controlled unitary operation $U$ that applies a
-    unitary $V_j$ when controlled by $n$-qubit number state $\ket{j}$.
+    Applies multiply-controlled unitary operation `U` that applies a
+    unitary `V_j` when controlled by n-qubit number state `|j〉`.
 
     $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
   summary: >-
-    Applies multiply-controlled unitary operation $U$ that applies a
-    unitary $V_j$ when controlled by $n$-qubit number state $\ket{j}$.
+    Applies a multiply-controlled unitary operation `U` that applies a
+    unitary `V_j` when controlled by n-qubit number state `|j〉`.
 
     $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplexpauli
   summary: >-
-    Applies multiply-controlled unitary operation $U$ that performs
+    Applies a Pauli rotation conditioned on an array of qubits.
+
+    This applies the multiply-controlled unitary operation $U$ that performs
     rotations by angle $\theta_j$ about single-qubit Pauli operator $P$
     when controlled by the $n$-qubit number state $\ket{j}$.
 
     $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes e^{i P \theta_j}$.
 - uid: microsoft.quantum.canon.multiplexz
   summary: >-
-    Applies multiply-controlled unitary operation $U$ that performs
+    Applies a Pauli Z rotation conditioned on an array of qubits.
+
+    This applies the multiply-controlled unitary operation $U$ that performs
     rotations by angle $\theta_j$ about single-qubit Pauli operator $Z$
     when controlled by the $n$-qubit number state $\ket{j}$.
 
@@ -1132,7 +1221,9 @@ operations:
     which represents the "black-box" oracle repeated multiple times.
 - uid: microsoft.quantum.canon.preparearbitrarystate
   summary: >-
-    Returns a unitary operation $U$ that prepares an arbitrary quantum
+    Returns an operation that prepares a given quantum state.
+
+    The returned operation $U$ prepares an arbitrary quantum
     state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from
     the $n$-qubit computational basis state $\ket{0...0}$.
 
@@ -1155,23 +1246,32 @@ operations:
     and target registers.
 - uid: microsoft.quantum.canon.prepareentangledstate
   summary: >-
-    Given two registers, prepares the maximally entangled state
+    Pairwise entangles two qubit registers.
+
+    That is, given two registers, prepares the maximally entangled state
     $\bra{\beta_{00}}\ket{\beta_{00}}$ between each pair of qubits on the respective registers,
     assuming that each register starts in the $\ket{0\cdots 0}$ state.
 - uid: microsoft.quantum.canon.prepareidentity
   summary: >-
-    Given a register, prepares that register in the maximally mixed
-    state $\boldone / 2^N$ by applying the complete depolarizing
+    Given a register, prepares that register in the maximally mixed state.
+
+    The register is prepared in the $\boldone / 2^N$ state by applying the
+    complete depolarizing
     channel to each qubit, where $N$ is the length of the register.
 - uid: microsoft.quantum.canon.preparequbit
   summary: >-
-    Given a single qubit initially in the $\ket{0}$ state, prepares the
+    Prepares a qubit in the +1 (`Zero`) eigenstate of the given Pauli operator.
+    If the identity operator is given, then the qubit is prepared in the maximally
+    mixed state.
+
+    That is, given a single qubit initially in the $\ket{0}$ state, prepares the
     qubit in the $+1$ eigenstate of a given Pauli operator, or in the
     maximally mixed state for the $\boldone$ Pauli operator `PauliI`.
 - uid: microsoft.quantum.canon.preparesinglequbitidentity
   summary: >-
-    Given a qubit, prepares that qubit in the maximally mixed
-    state $\boldone / 2$ by applying the depolarizing channel
+    Prepares a qubit in the maximally mixed state.
+
+    It prepares the given qubit in the $\boldone / 2$ state by applying the depolarizing channel
     $$
     \begin{align}
     \Omega(\rho) \mathrel{:=} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu}^{\dagger},
@@ -1181,7 +1281,9 @@ operations:
     $\rho$ is a density operator representing a mixed state.
 - uid: microsoft.quantum.canon.prepareuniformsuperposition
   summary: >-
-    This unitary $U$ creates a uniform superposition over all number states
+    Creates a uniform superposition over states that encode 0 through `nIndices`.
+
+    That is, this unitary $U$ creates a uniform superposition over all number states
     $0$ to $M-1$, given an input state $\ket{0\cdots 0}$. In other words,
     $$
     \begin{align}
@@ -1198,22 +1300,30 @@ operations:
     integer in the little-endian representation.
 - uid: microsoft.quantum.canon.quantumphaseestimation
   summary: >-
-    Performs the quantum phase estimation algorithm for a given oracle U and targetState,
+    Performs the quantum phase estimation algorithm for a given oracle `U` and `targetState`,
     reading the phase into a big-endian quantum register.
 - uid: microsoft.quantum.canon.rall0
-  summary: This performs a phase shift operation $R=\boldone-(1-e^{i \phi})\ket{0\cdots 0}\bra{0\cdots 0}$.
+  summary: >-
+    Performs a phase shift operation.
+
+    $R=\boldone-(1-e^{i \phi})\ket{0\cdots 0}\bra{0\cdots 0}$.
 - uid: microsoft.quantum.canon.rall1
-  summary: This performs a phase shift operation $R=\boldone-(1-e^{i \phi})\ket{1\cdots 1}\bra{1\cdots 1}$.
+  summary: >-
+    Performs a phase shift operation.
+
+    $R=\boldone-(1-e^{i \phi})\ket{1\cdots 1}\bra{1\cdots 1}$.
 - uid: microsoft.quantum.canon.randomint
   summary: >-
-    Generates a random number uniformly sampled in the interval
-    $[0, \texttt{maxInt})$.
+    Generates a uniformly sampled random integer greater than or equal to zero
+    and less than a provided upper bound.
 - uid: microsoft.quantum.canon.randomintpow2
   summary: >-
-    Generates a random number uniformly sampled in the interval
-    $[0, 2^{\texttt{maxBits}} - 1]$.
+    Generates a random integer uniformly sampled from all integers that can be represented
+    in a given number of bits.
 - uid: microsoft.quantum.canon.randomreal
-  summary: Returns a random real number in the interval $[0, 1)$.
+  summary: >-
+    Returns a random real number in the interval greater than or equal to zero
+    and less than one.
 - uid: microsoft.quantum.canon.randomsinglequbitpauli
   summary: >-
     Returns one of the single-qubit Pauli operators uniformly
@@ -1228,7 +1338,7 @@ operations:
     described by a `CSS` type.
 - uid: microsoft.quantum.canon.robustphaseestimation
   summary: >-
-    Performs the robust non-terative quantum phase estimation algorithm for a given oracle $U$ and eigenstate,
+    Performs the robust non-terative quantum phase estimation algorithm for a given oracle `U` and eigenstate,
     and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
 - uid: microsoft.quantum.canon.singlequbitprocesstomographymeasurement
   summary: >-
@@ -1252,27 +1362,27 @@ operations:
     a register.
 - uid: microsoft.quantum.canon.with
   summary: >-
-    Given operations implementing operators $U$ and $V$, performs the
-    operation $UVU^{\dagger}$ on a target. That is, this operation
-    conjugates $V$ with $U$.
+    Given operations implementing operators `U` and `V`, performs the
+    operation `U†VU` on a target. That is, this operation
+    conjugates `V` with `U`.
 - uid: microsoft.quantum.canon.witha
   summary: >-
-    Given operations implementing operators $U$ and $V$, performs the
-    operation $UVU^{\dagger}$ on a target. That is, this operation
-    conjugates $V$ with $U$.
-    The modifier 'A' indicates that the inner operation is adjointable.
+    Given operations implementing operators `U` and `V`, performs the
+    operation `U†VU` on a target. That is, this operation
+    conjugates `V` with `U`.
+    The modifier `A` indicates that the inner operation is adjointable.
 - uid: microsoft.quantum.canon.withc
   summary: >-
-    Given operations implementing operators $U$ and $V$, performs the
-    operation $UVU^{\dagger}$ on a target. That is, this operation
-    conjugates $V$ with $U$.
-    The modifier 'C' indicates that the inner operation is controllable.
+    Given operations implementing operators `U` and `V`, performs the
+    operation `U†VU` on a target. That is, this operation
+    conjugates `V` with `U`.
+    The modifier `C` dicates that the inner operation is controllable.
 - uid: microsoft.quantum.canon.withca
   summary: >-
-    Given operations implementing operators $U$ and $V$, performs the
-    operation $UVU^{\dagger}$ on a target. That is, this operation
-    conjugates $V$ with $U$.
-    The modifier 'CA' indicates that the inner operation is controllable
+    Given operations implementing operators `U` and `V`, performs the
+    operation `U†VU` on a target. That is, this operation
+    conjugates `V` with `U`.
+    The modifier `CA` indicates that the inner operation is controllable
     and adjointable.
 newtypes:
 - uid: microsoft.quantum.canon.ampampreflectionphases
@@ -1285,7 +1395,10 @@ newtypes:
     qubit with index `0` encodes the highest bit of an unsigned integer
 - uid: microsoft.quantum.canon.blockencoding
   summary: >-
-    A `BlockEncoding` is a unitary $U$ where an arbitrary operator $H$ of
+    Represents a unitary where an arbitrary operator of
+    interest is encoded in the top-left block.
+
+    That is, a `BlockEncoding` is a unitary $U$ where an arbitrary operator $H$ of
     interest that acts on the system register `s` is encoded in the top-
     left block corresponding to auxiliary state `\ket{0}_a`. That is,
 
@@ -1295,25 +1408,27 @@ newtypes:
     \end{align}
     $$.
 - uid: microsoft.quantum.canon.blockencodingreflection
-  summary: >-
-    A `BlockEncodingReflection` is a unitary $U$ with the same properties
-    as a `BlockEncoding`, but is also a reflection. That is,
-    $U^\dag = U$.
+  summary: Represents a `BlockEncoding` that is also a reflection.
 - uid: microsoft.quantum.canon.ccnotop
   summary: The signature type of CCNOT gate.
 - uid: microsoft.quantum.canon.complexpolar
-  summary: Polar representation of a complex number $c=r e^{i t}$.
+  summary: >-
+    Represents a complex number in polar form.
+
+    The polar representation of a complex number is $c=r e^{i t}$.
 - uid: microsoft.quantum.canon.continuousoracle
   summary: >-
-    Represents a continuous-time oracle
+    Represents a continuous-time oracle.
+
+    This is an oracle that implements
     $U(\delta t) : \ket{\psi(t)} \mapsto \ket{\psi(t + \delta t)}
     for all times $t$, where $U$ is a fixed operation, and where
-    and $\delta t$ is a non-negative real number.
+    $\delta t$ is a non-negative real number.
 - uid: microsoft.quantum.canon.css
   summary: >-
     Represents a Calderbank–Shor–Steane (CSS) code as defined by
     its encoder, decoder, and its syndrome measurement procedures
-    for $X$ and $Z$ errors, respectively.
+    for `X` and `Z` errors, respectively.
 - uid: microsoft.quantum.canon.decodeop
   summary: >-
     Represents an operation which decodes an encoded register into a
@@ -1323,13 +1438,16 @@ newtypes:
     EncodeOp, and vice versa.
 - uid: microsoft.quantum.canon.deterministicstateoracle
   summary: >-
-    Represents an oracle $O$ for deterministic state preparation, where
-    the input is
+    Represents an oracle for deterministic state preparation.
+
+    The input to the oracle $O$ is:
 
     - The register that will store the desired quantum state $\ket{\psi}\_s$.
 - uid: microsoft.quantum.canon.discreteoracle
   summary: >-
-    Represents a discrete-time oracle $U^m$ for a fixed operation $U$
+    Represents a discrete-time oracle.
+
+    This is an oracle that implements $U^m$ for a fixed operation $U$
     and a non-negative integer $m$.
 - uid: microsoft.quantum.canon.encodeop
   summary: >-
@@ -1343,15 +1461,20 @@ newtypes:
   summary: >-
     Represents a dynamical generator as a set of simulatable gates and
     an expansion in terms of that basis.
-    Last parameter for number of terms
+
+    Last parameter for number of terms.
 - uid: microsoft.quantum.canon.evolutionschedule
   summary: >-
-    Represents a time-dependent dynamical generator. The `Double`
+    Represents a time-dependent dynamical generator.
+
+    The `Double`
     parameter is a schedule in $[0, 1]$.
 - uid: microsoft.quantum.canon.evolutionset
   summary: >-
     Represents a set of gates that can be readily implemented and used
-    to implement simulation algorithms. Elements in the set are indexed
+    to implement simulation algorithms.
+
+    Elements in the set are indexed
     by a  <xref:microsoft.quantum.canon.generatorindex>,
     and each set is described by a function
     from `GeneratorIndex` to  <xref:microsoft.quantum.canon.evolutionunitary>,
@@ -1359,26 +1482,35 @@ newtypes:
     parameterized by a real number representing time
 - uid: microsoft.quantum.canon.evolutionunitary
   summary: >-
-    Represents a unitary time-evolution operator. The first parameter is
+    Represents a unitary time-evolution operator.
+
+    The first parameter is
     is duration of time-evolution, and the second parameter is the qubit
     register acted upon by the unitary.
 - uid: microsoft.quantum.canon.fraction
   summary: >-
-    Represents an integer of the form p/q. Integer p is
-    the first element of the tuple and q is the second element
+    Represents a rational number of the form `p/q`. Integer `p` is
+    the first element of the tuple and `q` is the second element
     of the tuple.
 - uid: microsoft.quantum.canon.generatorindex
   summary: >-
     Represents a single primitive term in the set of all dynamical generators, e.g.
     Hermitian operators, for which there exists a map from that generator
-    to time-evolution by that that generator, through "EvolutionSet". The first element
+    to time-evolution by that that generator, through `EvolutionSet`.
+
+    The first element
     (Int[], Double[]) is indexes that single term -- For instance, the Pauli string
     XXY with coefficient 0.5 would be indexed by ([1,1,2], [0.5]). Alternatively,
     Hamiltonians parameterized by a continuous variable, such as X cos φ + Y sin φ,
     might for instance be represented by ([], [φ]). The second
     element indexes the subsystem on which the generator acts on.
 - uid: microsoft.quantum.canon.generatorsystem
-  summary: ''
+  summary: >-
+    Represents a collection of `GeneratorIndex`es.
+
+    We iterate over this
+    collection using a single-index integer, and the size of the
+    collection is assumed to be known.
 - uid: microsoft.quantum.canon.littleendian
   summary: >-
     Register that encodes an unsigned integer in little-endian order. The
@@ -1389,16 +1521,18 @@ newtypes:
     logical qubits.
 - uid: microsoft.quantum.canon.obliviousoracle
   summary: >-
-    Represents an oracle $O$ for oblivious amplitude amplification, where
-    the inputs are
+    Represents an oracle for oblivious amplitude amplification.
+
+    The inputs to the oracle $O$ are:
 
     - The ancilla register $a$ that $O$ acts on.
     - The system register $s$ on which the desired unitary $U$ is applied, post-selected on register $a$ being in state $\ket{t}\_a$.
 - uid: microsoft.quantum.canon.phaselittleendian
   summary: >-
     Little-endian unsigned integers in QFT basis.
-    For example, if |x⟩ is little-endian encoding of integer x in computational basis,
-    then QFTLE|x⟩ is encoding of x in QFT basis.
+
+    For example, if `|x⟩` is the little-endian encoding of the integer `x` in the computational basis,
+    then `QFTLE|x⟩` is the encoding of `x` in the QFT basis.
 - uid: microsoft.quantum.canon.qecc
   summary: >-
     Represents an error-correcting code as defined by its encoder,
@@ -1409,7 +1543,9 @@ newtypes:
     operations that correct the detected error.
 - uid: microsoft.quantum.canon.reflectionoracle
   summary: >-
-    Represents a reflection oracle $O$, where the inputs are
+    Represents a reflection oracle.
+
+    A reflection oracle, $O$, has inputs:
 
     - The phase $\phi$ by which to rotate the reflected subspace.
     - The qubit register on which to perform the given reflection.
@@ -1419,12 +1555,16 @@ newtypes:
     The stack consists of an integer capacity, a stack pointer and a `Result` array.
 - uid: microsoft.quantum.canon.simulationalgorithm
   summary: >-
+    Represents a time-independent simulation algorithm.
+
     A time-independent simulation technique converts an
     <xref:microsoft.quantum.canon.evolutiongenerator>
     to unitary time evolution for some time-interval.
 - uid: microsoft.quantum.canon.stateoracle
   summary: >-
-    Represents an oracle $O$ for state preparation, where the inputs are
+    Represents an oracle for state preparation.
+
+    The inputs to the opracle $O$ are:
 
     - An integer indexing the flag qubit $f$.
     - The system register $s$ that will store the desired quantum state $\ket{\psi}\_s$.
@@ -1438,7 +1578,9 @@ newtypes:
     of an error-correcting code block.
 - uid: microsoft.quantum.canon.timedependentblockencoding
   summary: >-
-    A `TimeDependentBlockEncoding` is a unitary $U$ controlled by a state
+    Represents a `BlockEncoding` that is controlled by a clock register.
+
+    That is, a `TimeDependentBlockEncoding` is a unitary $U$ controlled by a state
     $\ket{k}_d$ in clock register `d` such that an arbitrary operator $H_k$ of
     interest that acts on the system register `s` is encoded in the top-
     left block corresponding to auxiliary state `\ket{0}_a`. That is,
@@ -1454,6 +1596,8 @@ newtypes:
     from time to the value of the dynamical generator at that time.
 - uid: microsoft.quantum.canon.timedependentsimulationalgorithm
   summary: >-
+    Represents a time-dependent simulation algorithm.
+
     A time-dependent simulation technique converts an
     <xref:microsoft.quantum.canon.evolutionschedule>
     to unitary time-evolution for some time-interval.

@@ -4,7 +4,9 @@ name: MultiplexOperations
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Applies Multiply-controlled unitary operation $U$ that applies a
+  Applies an array of operations controlled by an array of number states.
+
+  That is, applies Multiply-controlled unitary operation $U$ that applies a
   unitary $V_j$ when controlled by $n$-qubit number state $\ket{j}$.
 
   $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.

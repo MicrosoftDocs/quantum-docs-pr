@@ -4,7 +4,7 @@ name: MeasureIdentity
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Measures the identity operator $\boldone$ on a register
+  Measures the identity operator on a register
   of qubits.
 remarks: >-
   Since $\boldone$ has only the eigenvalue $1$, and does not

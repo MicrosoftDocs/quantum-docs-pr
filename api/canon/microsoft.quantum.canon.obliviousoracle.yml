@@ -4,8 +4,9 @@ name: ObliviousOracle
 type: newtype
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Represents an oracle $O$ for oblivious amplitude amplification, where
-  the inputs are
+  Represents an oracle for oblivious amplitude amplification.
+
+  The inputs to the oracle $O$ are:
 
   - The ancilla register $a$ that $O$ acts on.
   - The system register $s$ on which the desired unitary $U$ is applied, post-selected on register $a$ being in state $\ket{t}\_a$.

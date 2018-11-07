@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.applytofirstthreequbits
 name: ApplyToFirstThreeQubits
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Applies operation `op` to the first three qubits in the register.
+summary: Applies an operation to the first three qubits in the register.
 remarks: >-
   This is equivalent to:
 

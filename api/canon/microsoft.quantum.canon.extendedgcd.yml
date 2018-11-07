@@ -4,7 +4,7 @@ name: ExtendedGCD
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Computes tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a
+  Computes a tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a
   greatest common divisor of a and b. The GCD is always positive.
 syntax: 'function ExtendedGCD (a : Int, b : Int) : (Int, Int)'
 references: '- This implementation is according to https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
@@ -22,7 +22,7 @@ input:
 output:
   content: (Int, Int)
   types:
-  - summary: Tuple (u,v) with properties u⋅a + v⋅b = GCD(a,b)
+  - summary: Tuple (u,v) with the property u⋅a + v⋅b = GCD(a,b)
     types:
     - isPrimitive: true
       uid: Int

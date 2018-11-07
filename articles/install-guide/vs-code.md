@@ -1,6 +1,6 @@
 ---
 title: Installing the Q# development environment for VS Code
-author: cgranad
+author: cgranade
 uid: microsoft.quantum.install.vs-code
 ms.author: christopher.granade@microsoft.com
 ms.date: 7/31/2018
@@ -18,7 +18,7 @@ We recommend using the Quantum Development Kit together with Visual Studio Code 
 
 2. Once the .NET Core SDK is installed, run the following command in your favorite command line (e.g.: PowerShell or Bash) to download the latest templates for creating new Q# applications and libraries:
    ```Bash
-   dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.3.1810.2508-preview"
+   dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.3.1811.203-preview"
    ```
 
 3. Go to the [Visual Studio Code website](https://code.visualstudio.com/).

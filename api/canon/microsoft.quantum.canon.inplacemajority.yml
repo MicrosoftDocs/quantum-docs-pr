@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.inplacemajority
 name: InPlaceMajority
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: This computes the Majority function in-place on $3$ bits.
+summary: This computes the Majority function in-place on 3 qubits.
 syntax: 'operation InPlaceMajority (output : Qubit, input : Qubit[]) : Unit'
 input:
   content: '(output : Qubit, input : Qubit[])'

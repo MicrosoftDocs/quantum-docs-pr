@@ -4,7 +4,11 @@ name: PrepareQubit
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Given a single qubit initially in the $\ket{0}$ state, prepares the
+  Prepares a qubit in the +1 (`Zero`) eigenstate of the given Pauli operator.
+  If the identity operator is given, then the qubit is prepared in the maximally
+  mixed state.
+
+  That is, given a single qubit initially in the $\ket{0}$ state, prepares the
   qubit in the $+1$ eigenstate of a given Pauli operator, or in the
   maximally mixed state for the $\boldone$ Pauli operator `PauliI`.
 syntax: 'operation PrepareQubit (basis : Pauli, qubit : Qubit) : Unit'

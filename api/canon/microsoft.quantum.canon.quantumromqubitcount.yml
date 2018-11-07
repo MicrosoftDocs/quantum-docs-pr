@@ -4,7 +4,7 @@ name: QuantumROMQubitCount
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Returns count of number of qubits that must be allocated
+  Returns the total number of qubits that must be allocated
   to the operation returned by `QuantumROM`.
 syntax: 'function QuantumROMQubitCount (targetError : Double, nCoeffs : Int) : (Int, (Int, Int))'
 input:

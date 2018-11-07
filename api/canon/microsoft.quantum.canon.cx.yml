@@ -4,7 +4,8 @@ name: CX
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Applies the controlled-$X$ (CX) gate to a pair of qubits,
+  Applies the controlled-X (CX) gate to a pair of qubits.
+
   $$
   \begin{align}
   1 & 0 & 0 & 0 \\\\
@@ -17,13 +18,13 @@ summary: >-
 remarks: >-
   Equivalent to:
 
-  ```Q#
+  ```qsharp
   Controlled X([control], target);
   ```
 
-  Equivalent to:
+  and to:
 
-  ```Q#
+  ```qsharp
   CNOT(control, target);
   ```
 syntax: 'operation CX (control : Qubit, target : Qubit) : Unit'

@@ -4,6 +4,8 @@ name: TimeDependentSimulationAlgorithm
 type: newtype
 namespace: Microsoft.Quantum.Canon
 summary: >-
+  Represents a time-dependent simulation algorithm.
+
   A time-dependent simulation technique converts an
   <xref:microsoft.quantum.canon.evolutionschedule>
   to unitary time-evolution for some time-interval.

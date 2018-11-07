@@ -4,7 +4,9 @@ name: StatePreparationComplexCoefficients
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Returns a unitary operation $U$ that prepares an arbitrary quantum
+  Returns an operation that prepares a specific quantum state.
+
+  The returned operation $U$ prepares an arbitrary quantum
   state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from
   the $n$-qubit computational basis state $\ket{0...0}$.
 

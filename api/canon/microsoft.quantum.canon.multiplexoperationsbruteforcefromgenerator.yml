@@ -4,8 +4,8 @@ name: MultiplexOperationsBruteForceFromGenerator
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Applies multiply-controlled unitary operation $U$ that applies a
-  unitary $V_j$ when controlled by $n$-qubit number state $\ket{j}$.
+  Applies multiply-controlled unitary operation `U` that applies a
+  unitary `V_j` when controlled by n-qubit number state `|j〉`.
 
   $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 remarks: >-

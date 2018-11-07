@@ -3,7 +3,10 @@ uid: microsoft.quantum.canon.rall0
 name: RAll0
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: This performs a phase shift operation $R=\boldone-(1-e^{i \phi})\ket{0\cdots 0}\bra{0\cdots 0}$.
+summary: >-
+  Performs a phase shift operation.
+
+  $R=\boldone-(1-e^{i \phi})\ket{0\cdots 0}\bra{0\cdots 0}$.
 syntax: 'operation RAll0 (phase : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(phase : Double, qubits : Qubit[])'

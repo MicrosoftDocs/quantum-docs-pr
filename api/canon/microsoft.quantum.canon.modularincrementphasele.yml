@@ -4,6 +4,8 @@ name: ModularIncrementPhaseLE
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
+  Performs a modular increment of a qubit register by an integer constant.
+
   Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
   Then the operation performs the following transformation:
   |y⟩ ↦ |y+a (mod N)⟩

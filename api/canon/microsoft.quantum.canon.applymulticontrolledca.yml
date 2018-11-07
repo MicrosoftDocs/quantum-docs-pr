@@ -4,9 +4,9 @@ name: ApplyMultiControlledCA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Applies a multiply controlled version of singly controlled
+  Applies a multiply controlled version of a singly controlled
   operation.
-  The modifier 'CA' indicates that the single-qubit operation is controllable
+  The modifier `CA` indicates that the single-qubit operation is controllable
   and adjointable.
 remarks: >-
   This operation uses only clean ancilla qubits.

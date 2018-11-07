@@ -4,8 +4,10 @@ name: QuantumWalkByQubitization
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  This function converts a `BlockEncodingReflection` unitary $U$
-  that encodes some operator $H$ of interest into a quantum walk
+  Converts a `BlockEncodingReflection` into a quantum walk.
+
+  That is, given a `BlockEncodingReflection` unitary $U$
+  that encodes some operator $H$ of interest, converts it into a quantum walk
   $W$ containing the spectrum of $\pm e^{\pm i\sin^{-1}(H)}$.
 syntax: 'function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Canon.BlockEncodingReflection) : ((Qubit[], Qubit[]) => Unit : Adjoint, Controlled)'
 references: >-

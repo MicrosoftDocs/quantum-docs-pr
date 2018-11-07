@@ -4,7 +4,7 @@ name: InterpolatedEvolution
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  This interpolates between two generators with a uniform schedule,
+  Interpolates between two generators with a uniform schedule,
   returning an operation that applies simulated evolution under
   the resulting time-dependent generator to a qubit register.
 remarks: >-

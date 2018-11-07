@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.gcd
 name: GCD
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Computes greatest common divisor of a and b. The GCD is always positive.
+summary: Computes the greatest common divisor of a and b. The GCD is always positive.
 syntax: 'function GCD (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'

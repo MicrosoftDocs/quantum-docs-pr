@@ -1,6 +1,6 @@
 ---
 title: Installing the Q# development environment for VS Code
-author: cgranad
+author: cgranade
 uid: microsoft.quantum.install.cmd-line
 ms.author: christopher.granade@microsoft.com
 ms.date: 7/31/2018
@@ -17,7 +17,7 @@ The Quantum Development Kit uses the .NET Core SDK (2.0 or later) to make it eas
 
 2. Once the .NET Core SDK is installed, run the following command in your favorite command line (e.g.: PowerShell or Bash) to download the latest templates for creating new Q# applications and libraries:
    ```Bash
-   dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.3.1810.2508-preview"
+   dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.3.1811.203-preview"
    ```
 
 You should now have the Quantum Development Kit installed and ready to use in your own applications and libraries.

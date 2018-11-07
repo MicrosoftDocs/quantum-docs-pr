@@ -4,7 +4,9 @@ name: ReflectionOracle
 type: newtype
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Represents a reflection oracle $O$, where the inputs are
+  Represents a reflection oracle.
+
+  A reflection oracle, $O$, has inputs:
 
   - The phase $\phi$ by which to rotate the reflected subspace.
   - The qubit register on which to perform the given reflection.

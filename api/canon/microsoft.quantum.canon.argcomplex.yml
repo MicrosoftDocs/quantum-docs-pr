@@ -4,7 +4,7 @@ name: ArgComplex
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Returns the phase of a complex number type
+  Returns the phase of a complex number of type
   `Complex`.
 syntax: 'function ArgComplex (input : Microsoft.Quantum.Extensions.Math.Complex) : Double'
 input:

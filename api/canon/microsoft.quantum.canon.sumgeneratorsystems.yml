@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.sumgeneratorsystems
 name: SumGeneratorSystems
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Adds multiple `GeneratorSystems` to create a new GeneratorSystem.
+summary: Adds multiple `GeneratorSystem`s to create a new GeneratorSystem.
 syntax: 'function SumGeneratorSystems (generatorSystems : Microsoft.Quantum.Canon.GeneratorSystem[]) : Microsoft.Quantum.Canon.GeneratorSystem'
 input:
   content: '(generatorSystems : Microsoft.Quantum.Canon.GeneratorSystem[])'

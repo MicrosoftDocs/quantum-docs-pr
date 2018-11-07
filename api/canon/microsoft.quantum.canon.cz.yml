@@ -4,7 +4,8 @@ name: CZ
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Applies the controlled-$Z$ (CZ) gate to a pair of qubits,
+  Applies the controlled-Z (CZ) gate to a pair of qubits.
+
   $$
   \begin{align}
   1 & 0 & 0 & 0 \\\\
@@ -17,7 +18,7 @@ summary: >-
 remarks: >-
   Equivalent to:
 
-  ```Q#
+  ```qsharp
   Controlled Z([control], target);
   ```
 syntax: 'operation CZ (control : Qubit, target : Qubit) : Unit'

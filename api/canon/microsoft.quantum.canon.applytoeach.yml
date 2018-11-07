@@ -9,7 +9,7 @@ remarks: >-
 
   Prepare a three-qubit $\ket{+}$ state:
 
-  ```Q#
+  ```qsharp
   using (register = Qubit[3]) {
       ApplyToEach(H, register);
   }

@@ -4,8 +4,8 @@ name: IdentityGeneratorIndex
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Returns a generator index consistent with the
-  Hamiltonian $H = 0$.
+  Returns a generator index consistent with the zero
+  Hamiltonian, `H = 0`, which corresponds to the identity evolution operation.
 syntax: 'function IdentityGeneratorIndex (idxTerm : Int) : Microsoft.Quantum.Canon.GeneratorIndex'
 input:
   content: '(idxTerm : Int)'

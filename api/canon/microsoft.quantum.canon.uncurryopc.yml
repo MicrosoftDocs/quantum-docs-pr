@@ -7,7 +7,7 @@ summary: >-
   Given a function which returns operations,
   returns a new operation which takes both inputs
   as a tuple.
-  The modifier 'C' indicates that the operations are controllable.
+  The modifier `C` indicates that the operations are controllable.
 syntax: "function UncurryOpC (curriedOp : ('T -> ('U => Unit : Controlled))) : (('T, 'U) => Unit : Controlled)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit : Controlled)))"

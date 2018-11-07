@@ -4,7 +4,7 @@ name: QuantumPhaseEstimation
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Performs the quantum phase estimation algorithm for a given oracle U and targetState,
+  Performs the quantum phase estimation algorithm for a given oracle `U` and `targetState`,
   reading the phase into a big-endian quantum register.
 syntax: 'operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Canon.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Canon.BigEndian) : Unit'
 input:

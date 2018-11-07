@@ -4,9 +4,9 @@ name: With
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Given operations implementing operators $U$ and $V$, performs the
-  operation $UVU^{\dagger}$ on a target. That is, this operation
-  conjugates $V$ with $U$.
+  Given operations implementing operators `U` and `V`, performs the
+  operation `U†VU` on a target. That is, this operation
+  conjugates `V` with `U`.
 remarks: >-
   The outer operation is always assumed to be adjointable, but does not
   need to be controllable in order for the combined operation to be

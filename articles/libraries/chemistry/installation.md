@@ -53,13 +53,13 @@ dotnet add package Microsoft.Quantum.Chemistry
 ## Using the Quantum Development Kit with NWChem ##
 
 The quantum chemistry library for the Quantum Development Kit is designed to work well with computational chemistry packages, most notably the [**NWChem**](http://www.nwchem-sw.org/) computational chemistry platform developed by the Environmental Molecular Sciences Laboratory (EMSL) at Pacific Northwest National Laboratory.
-In particular, the `Microsoft.Quantum.Chemistry` package provides tools for loading instances of quantum chemistry simulation problems represented in the [Broombridge schema](xref:quantum.libraries.chemistry.schema.intro), also supported for export by recent versions of NWChem.
+In particular, the `Microsoft.Quantum.Chemistry` package provides tools for loading instances of quantum chemistry simulation problems represented in the [Broombridge schema](xref:quantum.libraries.chemistry.schema.broombridge), also supported for export by recent versions of NWChem.
 
 To get up and running using NWChem together with the Quantum Development Kit, we suggest one of the following methods:
-- Using existing Broombridge files provided with the samples at [IntegralData](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData),
+- Using existing Broombridge files provided with the samples at [IntegralData/YAML](https://github.com/Microsoft/Quantum/tree/release/v0.3.1810/Chemistry/IntegralData/YAML).
 - Using the [EMSL Arrows Builder for the Microsoft Quantum Development Kit](https://arrows.emsl.pnnl.gov/api/qsharp_chem) which is a web-based frontend to NWChem,
-- [Compiling NWChem](http://www.nwchem-sw.org/index.php/Compiling_NWChem) for your platform, or 
-- Using the [Docker image](https://hub.docker.com/r/nwchemorg/nwchem-qc/) provided by PNNL.
+- Using the [Docker image](https://hub.docker.com/r/nwchemorg/nwchem-qc/) provided by PNNL, or
+- [Compiling NWChem](http://www.nwchem-sw.org/index.php/Compiling_NWChem) for your platform.
 
 Here, we provide details as to how to run NWChem locally by compiling from source, or by using Docker.
 
@@ -91,7 +91,7 @@ To get started, follow the Docker installation instructions for your platform:
 > [!TIP]
 > If you are using Docker for Windows, you will need to share the drive containing your temporary directory (usually this is the `C:\` drive) with the Docker daemon. See the [Docker documentation](https://docs.docker.com/docker-for-windows/#shared-drives) for more details.
 
-Once you have Docker installed, you can either use the PowerShell module provided with the Quantum Development Kit samples to run the image, or ou can run the image manually.
+Once you have Docker installed, you can either use the PowerShell module provided with the Quantum Development Kit samples to run the image, or you can run the image manually.
 We detail using PowerShell here; if you would like to use the Docker image manually, please see the [documentation provided with the image](https://hub.docker.com/r/nwchemorg/nwchem-qc/).
 
 #### Running NWChem through PowerShell Core

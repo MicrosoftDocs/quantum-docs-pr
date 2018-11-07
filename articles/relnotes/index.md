@@ -16,6 +16,7 @@ uid: microsoft.quantum.relnotes
 *Release date: October 29, 2018*
 
 This release includes new language features and an improved developer experience:
+Testing
 
 * This release includes a language server for Q#, as well as the client integrations for Visual Studio and Visual Studio Code. This enables a new set of IntelliSense features along with live feedback on typing in form of squiggly underlinings of errors and warnings. 
 * This update greatly improves diagnostic messages in general, with easy navigation to and precise ranges for diagnostics and additional details in the displayed hover information.

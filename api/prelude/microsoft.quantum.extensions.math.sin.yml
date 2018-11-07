@@ -4,7 +4,7 @@ name: Sin
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
 summary: Returns the sine of the specified angle.
-remarks: See [System.Math.Sin](https://docs.microsoft.com/en-us/dotnet/api/system.math.sin) for more details.
+remarks: See [System.Math.Sin](https://docs.microsoft.com/dotnet/api/system.math.sin) for more details.
 syntax: 'function Sin (theta : Double) : Double'
 input:
   content: '(theta : Double)'

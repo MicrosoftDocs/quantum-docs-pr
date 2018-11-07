@@ -12,6 +12,6 @@
 - name: C# components reference
   items:
   - name: Trace simulator 
-    href: https://docs.microsoft.com/en-us/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators
+    href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators
   - name: Quantum chemistry
-    href: https://docs.microsoft.com/en-us/dotnet/api/microsoft.quantum.chemistry
+    href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry

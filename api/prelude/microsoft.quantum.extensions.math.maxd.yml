@@ -4,7 +4,7 @@ name: MaxD
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
 summary: Returns the larger of two specified numbers.
-remarks: See [System.Math.Max](https://docs.microsoft.com/en-us/dotnet/api/system.math.max) for more details.
+remarks: See [System.Math.Max](https://docs.microsoft.com/dotnet/api/system.math.max) for more details.
 syntax: 'function MaxD (a : Double, b : Double) : Double'
 input:
   content: '(a : Double, b : Double)'

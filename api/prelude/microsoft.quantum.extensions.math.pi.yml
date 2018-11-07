@@ -4,7 +4,7 @@ name: PI
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
 summary: Represents the ratio of the circumference of a circle to its diameter, specified by the constant, π.
-remarks: See [System.Math.PI](https://docs.microsoft.com/en-us/dotnet/api/system.math.pi) for more details.
+remarks: See [System.Math.PI](https://docs.microsoft.com/dotnet/api/system.math.pi) for more details.
 syntax: 'function PI () : Double'
 input:
   content: ()

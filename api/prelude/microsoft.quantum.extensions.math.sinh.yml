@@ -4,7 +4,7 @@ name: Sinh
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
 summary: Returns the hyperbolic sine of the specified angle.
-remarks: See [System.Math.Sinh](https://docs.microsoft.com/en-us/dotnet/api/system.math.sinh) for more details.
+remarks: See [System.Math.Sinh](https://docs.microsoft.com/dotnet/api/system.math.sinh) for more details.
 syntax: 'function Sinh (d : Double) : Double'
 input:
   content: '(d : Double)'

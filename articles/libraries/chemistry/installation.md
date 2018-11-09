@@ -82,6 +82,7 @@ To get up and running using NWChem together with the Quantum Development Kit, we
 - Use the [Docker image](https://hub.docker.com/r/nwchemorg/nwchem-qc/) provided by PNNL to run NWChem, or
 - [Compile NWChem](http://www.nwchem-sw.org/index.php/Compiling_NWChem) for your platform.
 
+See [End-to-end with NWChem](xref:microsoft.quantum.chemistry.examples.endtoend) for more information on how to work with NWChem to chemical models to analyze with the Quantum Developmen Kit chemistry library.
 
 ### Getting started using Broombridge files provided with the samples
 The [IntegralData/YAML](https://github.com/Microsoft/Quantum/tree/release/v0.3.1810/Chemistry/IntegralData/YAML) folder in the Quantum Development Kit Samples repository contains Broombridge-formated molecule data files.  
@@ -166,4 +167,4 @@ Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
 ```
 
-See [End-to-end with NWChem](xref:microsoft.quantum.chemistry.examples.endtoend) for more information on how to work with NWChem to chemical models to analyze with the Quantum Developmen Kit chemistry library.
+

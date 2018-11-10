@@ -145,7 +145,7 @@ For instance:
 
 The Q# syntax for string interpolations is a subset of the C# 7.0 syntax;
 Q# does not support verbatim (multi-line) interpolated strings.
-See [*Interpolated Strings*](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interpolated-strings)
+See [*Interpolated Strings*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings)
 for the C# syntax.
 
 Expressions inside of an interpolated string follow Q# syntax, not C# syntax.

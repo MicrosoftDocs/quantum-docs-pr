@@ -146,7 +146,7 @@ Additionally, a big **Thank You!** to these Microsoft Software Engineers from th
 
 This release is fully backwards compatible. Just update the nuget pakages in your projects to version `0.2.1806.1503-preview` and do a **full rebuild** to make sure all intermediate files are regenerated.
 
-From Visual Studio, follow the normal instructions on how to [update a package](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#updating-a-package).
+From Visual Studio, follow the normal instructions on how to [update a package](https://docs.microsoft.com/nuget/tools/package-manager-ui#updating-a-package).
 
 To update project templates for the command line, run the following command:
 ```

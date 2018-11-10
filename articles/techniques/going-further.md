@@ -22,7 +22,7 @@ Now that you've seen how to write interesting quantum programs in Q#, this secti
 ## Generic Operations and Functions ##
 
 > [!TIP]
-> This section assumes some basic familiarity with [generics in C#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/introduction-to-generics), [generics in F#](https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/generics/), [C++ templates](https://docs.microsoft.com/en-us/cpp/cpp/templates-cpp), or similar approaches to metaprogramming in other languages.
+> This section assumes some basic familiarity with [generics in C#](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics), [generics in F#](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/), [C++ templates](https://docs.microsoft.com/cpp/cpp/templates-cpp), or similar approaches to metaprogramming in other languages.
 
 Many functions and operations that we might wish to define do not actually heavily rely on the types of their inputs, but rather only implicitly use their types via some other function or operation.
 For example, consider the *map* concept common to many functional languages; given a function $f(x)$ and a collection of values $\{x_1, x_2, \dots, x_n\}$, map returns a new collection $\{f(x_1), f(x_2), \dots, f(x_n)\}$.

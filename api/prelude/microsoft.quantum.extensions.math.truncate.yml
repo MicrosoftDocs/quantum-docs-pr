@@ -4,7 +4,7 @@ name: Truncate
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
 summary: Calculates the integral part of a number.
-remarks: See [System.Math.Truncate](https://docs.microsoft.com/en-us/dotnet/api/system.math.truncate) for more details.
+remarks: See [System.Math.Truncate](https://docs.microsoft.com/dotnet/api/system.math.truncate) for more details.
 syntax: 'function Truncate (a : Double) : Int'
 input:
   content: '(a : Double)'

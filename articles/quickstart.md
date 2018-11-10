@@ -33,7 +33,7 @@ If you are using a different development environment, please follow the instruct
 - Open up Visual Studio 2017.
 - Go to the `File` menu and select `New` > `Project...`.
 - In the project template explorer, under `Installed` > `Visual C#`, select the `Q# Application` template.
-- Make sure you have `.NET Framework 4.6.1` selected in the list at the top of the `New Project` dialog box.
+- Make sure you have `.NET Framework 4.6.1` selected in the list at the bottom of the `New Project` dialog box.
 - Give your project the name `Bell`.
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
@@ -269,7 +269,7 @@ Replace the body of the `Main` method with the following code:
             }
 
             System.Console.WriteLine("Press any key to continue...");
-            System.Console.ReadKey();
+            Console.ReadKey();
 ```
 
 > [!NOTE]
@@ -476,7 +476,7 @@ There is now a new return value (`agree`) that will keep track of every time the
             }
             
             System.Console.WriteLine("Press any key to continue...");
-            System.Console.ReadKey();
+            Console.ReadKey();
 ```
 Now when we run, we get something pretty amazing:
 

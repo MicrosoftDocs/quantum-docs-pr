@@ -4,7 +4,7 @@ name: MinI
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
 summary: Returns the smaller of two specified numbers.
-remarks: See [System.Math.Min](https://docs.microsoft.com/en-us/dotnet/api/system.math.min) for more details.
+remarks: See [System.Math.Min](https://docs.microsoft.com/dotnet/api/system.math.min) for more details.
 syntax: 'function MinI (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'

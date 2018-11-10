@@ -1,5 +1,5 @@
 ---
-title: Broombridge - Message Passing With Quantum Chemistry Software
+title: Broombridge - Quantum Chemistry Schema
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 10/17/2018
@@ -7,9 +7,9 @@ ms.topic: article
 uid: quantum.libraries.chemistry.schema.broombridge
 ---
 
-# Message Passing With Quantum Chemistry Software # 
+# Broombridge Quantum Chemistry Schema # 
 
-Powerful computational chemistry software such as [NWChem](http://www.nwchem-sw.org/) allows to model a wide range of real-world chemistry problems. In order to perform message passing between NWChem and the Microsoft Quantum Chemistry library, we use a [YAML](https://en.wikipedia.org/wiki/YAML)-based schema which we call **Broombridge**. The name was chosen in reference to a [landmark](https://en.wikipedia.org/wiki/Broom_Bridge) which in some circles is celebrated as a birthplace of Hamiltonians. 
+Powerful computational chemistry software such as [NWChem](http://www.nwchem-sw.org/) allows to model a wide range of real-world chemistry problems. In order to access NWChem molecular models with the Microsoft Quantum Chemistry library, we use a [YAML](https://en.wikipedia.org/wiki/YAML)-based schema which we call **Broombridge**. The name was chosen in reference to a [landmark](https://en.wikipedia.org/wiki/Broom_Bridge) which in some circles is celebrated as a birthplace of Hamiltonians. 
 
 [NWChem](https://github.com/nwchemgit/nwchem) is an Open Source project licensed under the permissive Educational Community License (ECL) 2.0 license. Broombridge is an Open Source schema that is specified [here](xref:microsoft.quantum.libraries.chemistry.schema.spec) and that comes with a [definition](https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/broombridge-0.1.schema.json) following [RFC 2119](https://tools.ietf.org/html/rfc2119) and [validator script](https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/validator.py) licensed under the MIT license. 
 

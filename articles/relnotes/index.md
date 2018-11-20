@@ -11,6 +11,13 @@ uid: microsoft.quantum.relnotes
 # Microsoft Quantum Development Kit Release Notes
 
 
+# Version 0.3.1811.1511
+
+*Release date: November 20, 2018*
+
+This release fixes a bug that prevented some users to successfully load the Visual Studio extension.
+
+If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).
 
 # Version 0.3.1811.203
 

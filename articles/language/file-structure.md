@@ -72,7 +72,7 @@ open Microsoft.Quantum.Canon;
 ## User-Defined Type Declarations
 
 Q# provides a way for users to declare new user-defined types, as described in
-the [Q# type model](xref:microsoft.quantum.qsharp-ref.type-model) section.
+the [Q# type model](xref:microsoft.quantum.language.type-model) section.
 User-defined types are distinct even if the base types are identical.
 In particular, there is no automatic conversion between values of two
 user-defined types even if the base types are identical.
@@ -237,7 +237,7 @@ support the `Adjoint` functor, may not specify the `invert` directive.
 The controlled version of an operation specifies how a quantum-controlled
 version of the operation is implemented.
 A more complete description is provided in the
-[Controlled](xref:microsoft.quantum.qsharp-ref.type-model#controlled)
+[Controlled](xref:microsoft.quantum.language.type-model#controlled)
 section.
 
 It is legal to specify an operation with no controlled version;

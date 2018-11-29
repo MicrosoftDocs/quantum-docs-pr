@@ -11,6 +11,19 @@ uid: microsoft.quantum.relnotes
 # Microsoft Quantum Development Kit Release Notes
 
 
+# Version 0.3.1811.2802
+
+*Release date: November 28, 2018*
+
+Even though our VS Code extension was not using it, it was flagged and removed from the marketplace during
+[the extensions purge](https://code.visualstudio.com/blogs/2018/11/26/event-stream) related to the `event-stream` NPM package. 
+This version removes all runtime dependencies that could make the extension trigger any red flags.
+
+If you had previously installed the extension you will need to install it again by visiting 
+the [Microsoft Quantum Development Kit for Visual Studio Code](vscode:extension/quantum.quantum-devkit-vscode) extension on the 
+Visual Studio Marketplace and press Install. We're sorry about the inconvenience.
+
+
 # Version 0.3.1811.1511
 
 *Release date: November 20, 2018*

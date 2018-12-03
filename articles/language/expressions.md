@@ -553,8 +553,12 @@ All binary operators are right-associative, except for `^`.
 
 Brackets, `[` and `]`, for array slicing and indexing,
 bind before any operator.
+
+The functors `Adjoint` and `Controlled` bind after array indexing
+but before all other operators.
+
 Parentheses for operation and function invocation also bind before any
-operator but after array indexing.
+operator but after array indexing and functors.
 
 Operators in order of precedence, from highest to lowest:
 

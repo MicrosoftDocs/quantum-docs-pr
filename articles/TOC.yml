@@ -19,6 +19,9 @@
 - name: Q# programming language
   topicHref: language/index.md
   href: language/toc.yml
+- name: Contributing to the Quantum Development Kit
+  topicHref: contributing/toc.yml
+  href: contributing/index.md
 - name: Glossary
   href: Glossary.md
 - name: For more information

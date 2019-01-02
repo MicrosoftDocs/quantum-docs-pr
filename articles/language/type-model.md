@@ -21,7 +21,7 @@ are constructed:
 
 - The `Int` type represents a 64-bit signed (two's complement) integer.
 - The `BigInt` type represents a signed integer or arbitrary size.
-   THis type is based on the .NET `BigInteger` type.
+   This type is based on the .NET `BigInteger` type.
 - The `Double` type represents a double-precision floating-point number.
 - The `Bool` type represents a Boolean value, either `true` or `false`.
 - The `Qubit` type represents a quantum bit or qubit.

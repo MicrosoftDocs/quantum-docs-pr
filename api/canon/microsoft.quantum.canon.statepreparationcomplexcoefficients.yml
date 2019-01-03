@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.statepreparationcomplexcoefficients
 name: StatePreparationComplexCoefficients
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Returns an operation that prepares a specific quantum state.
 
   The returned operation $U$ prepares an arbitrary quantum
@@ -16,14 +16,12 @@ summary: >-
   U\ket{0...0}=\ket{\psi}=\frac{\sum^{2^n-1}_{j=0}r_j e^{i t_j}\ket{j}}{\sqrt{\sum^{2^n-1}_{j=0}|r_j|^2}}.
   \end{align}
   $$
-remarks: >-
+remarks: |-
   Negative input coefficients $r_j < 0$ will be treated as though
   positive with value $|r_j|$. `coefficients` will be padded with
   elements $(r_j, t_j) = (0.0, 0.0)$ if fewer than $2^n$ are
   specified.
-
-  ## Example
-
+examples: |-
   The following snippet prepares the quantum state $\ket{\psi}=e^{i 0.1}\sqrt{1/8}\ket{0}+\sqrt{7/8}\ket{2}$
   in the qubit register `qubitsBE`.
 
@@ -45,7 +43,7 @@ input:
   content: '(coefficients : Microsoft.Quantum.Canon.ComplexPolar[])'
   types:
   - name: coefficients
-    summary: >-
+    summary: |-
       Array of up to $2^n$ complex coefficients represented by their
       absolute value and phase $(r_j, t_j)$. The $j$th coefficient
       indexes the number state $\ket{j}$ encoded in big-endian format.

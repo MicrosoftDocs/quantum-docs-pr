@@ -3,14 +3,14 @@ uid: microsoft.quantum.canon.modularmultiplybyconstantle
 name: ModularMultiplyByConstantLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Performs modular multiplication by an integer constant on a qubit register.
 
   Let us denote modulus by N and constMultiplier by a
   then this operation implements a unitary defined by the following map on
   computational basis:
   |y⟩ ↦ |a⋅y (mod N) ⟩, for all y between 0 and N - 1
-remarks: >-
+remarks: |-
   - For the circuit diagram and explanation see Figure 7 on [Page 8
     of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
   - This operation corresponds to Uₐ in
@@ -28,7 +28,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: >-
+    summary: |-
       The number being multiplied by a constant.
       This is an array of qubits representing integer in little-endian bit order.
     uid: microsoft.quantum.canon.littleendian

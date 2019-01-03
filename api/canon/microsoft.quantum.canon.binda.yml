@@ -3,14 +3,12 @@ uid: microsoft.quantum.canon.binda
 name: BindA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given an array of operations acting on a single input,
   produces a new operation that
   performs each given operation in sequence.
   The modifier `A` indicates that all operations in the array are adjointable.
-remarks: >-
-  ## Example
-
+examples: |-
   The following are equivalent:
 
   ```qsharp
@@ -44,7 +42,7 @@ input:
 output:
   content: "('T => Unit : Adjoint)"
   types:
-  - summary: >-
+  - summary: |-
       A new operation that performs each given operation in sequence
       on its input.
     isOperation: true

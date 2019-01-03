@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.trottersimulationalgorithm
 name: TrotterSimulationAlgorithm
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   `SimulationAlgorithm` function that uses a Trotter–Suzuki
   decomposition to approximate the time-evolution operator _exp(-iHt)_.
 syntax: 'function TrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Canon.SimulationAlgorithm'

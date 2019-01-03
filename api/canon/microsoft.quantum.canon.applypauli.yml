@@ -3,12 +3,10 @@ uid: microsoft.quantum.canon.applypauli
 name: ApplyPauli
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given a multi-qubit Pauli operator, applies the corresponding operation to
   a register.
-remarks: >-
-  ## Example
-
+examples: |-
   The following are equivalent:
 
   ```qsharp

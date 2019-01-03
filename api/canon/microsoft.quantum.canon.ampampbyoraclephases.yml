@@ -4,7 +4,7 @@ name: AmpAmpByOraclePhases
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: Amplitude amplification by oracles for partial reflections.
-remarks: >-
+remarks: |-
   This imposes stricter conditions on form of the start and target states than in `AmpAmpByReflectionPhases`.
   It is assumed that the target state is marked by $\ket{1}\_f$.
   It is assumed that
@@ -29,7 +29,7 @@ input:
 output:
   content: '(Qubit[] => Unit : Adjoint, Controlled)'
   types:
-  - summary: >-
+  - summary: |-
       An operation that implements amplitude amplification by oracles that are
       implemented by partial reflections.
     isOperation: true

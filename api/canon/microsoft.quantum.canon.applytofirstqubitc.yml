@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.applytofirstqubitc
 name: ApplyToFirstQubitC
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Applies operation op to the first qubit in the register.
   The modifier `C` indicates that the operation is controllable.
 syntax: 'operation ApplyToFirstQubitC (op : (Qubit => Unit : Controlled), register : Qubit[]) : Unit'

@@ -3,10 +3,10 @@ uid: microsoft.quantum.canon.applytofirsttwoqubitsa
 name: ApplyToFirstTwoQubitsA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Applies an operation to the first two qubits in the register.
   The modifier `A` indicates that the operation is adjointable.
-remarks: >-
+remarks: |-
   This is equivalent to:
 
   ```qsharp

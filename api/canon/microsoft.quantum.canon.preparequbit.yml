@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.preparequbit
 name: PrepareQubit
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Prepares a qubit in the +1 (`Zero`) eigenstate of the given Pauli operator.
   If the identity operator is given, then the qubit is prepared in the maximally
   mixed state.
@@ -16,13 +16,13 @@ input:
   content: '(basis : Pauli, qubit : Qubit)'
   types:
   - name: basis
-    summary: >-
+    summary: |-
       A Pauli operator $P$ such that measuring $P$ immediately after this
       operation will return `Zero`.
     isPrimitive: true
     uid: Pauli
   - name: qubit
-    summary: >-
+    summary: |-
       A qubit initially in the $\ket{0}$ state which is to be prepared in
       the given basis.
     isPrimitive: true

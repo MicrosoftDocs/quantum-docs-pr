@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.timedependentblockencoding
 name: TimeDependentBlockEncoding
 type: newtype
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Represents a `BlockEncoding` that is controlled by a clock register.
 
   That is, a `TimeDependentBlockEncoding` is a unitary $U$ controlled by a state

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.blockencoding
 name: BlockEncoding
 type: newtype
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Represents a unitary where an arbitrary operator of
   interest is encoded in the top-left block.
 

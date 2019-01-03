@@ -3,13 +3,11 @@ uid: microsoft.quantum.canon.embedpauli
 name: EmbedPauli
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given a single-qubit Pauli operator and the index of a qubit,
   returns a multi-qubit Pauli operator with the given single-qubit
   operator at that index and `PauliI` at every other index.
-remarks: >-
-  ## Example
-
+examples: |-
   To obtain the array `[PauliI, PauliI, PauliX, PauliI]`:
 
   ```qsharp
@@ -24,7 +22,7 @@ input:
     isPrimitive: true
     uid: Pauli
   - name: location
-    summary: >-
+    summary: |-
       An index such that `output[location] == pauli`, where `output` is
       the output of this function.
     isPrimitive: true

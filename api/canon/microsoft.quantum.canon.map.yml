@@ -3,11 +3,11 @@ uid: microsoft.quantum.canon.map
 name: Map
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   The `Map` function takes an array and a function that is defined
   for the elements of the array, and returns a new array that consists
   of the images of the original array under the function.
-remarks: >-
+remarks: |-
   The function is defined for generic types, i.e., whenever we have
   an array `'T[]` and a function `mapper: 'T -> 'U` we can map the elements
   of the array and produce a new array of type `'U[]`.

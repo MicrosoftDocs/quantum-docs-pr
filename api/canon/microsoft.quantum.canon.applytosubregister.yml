@@ -3,12 +3,10 @@ uid: microsoft.quantum.canon.applytosubregister
 name: ApplyToSubregister
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Applies an operation to a subregister of a register, with qubits
   specified by an array of their indices.
-remarks: >-
-  ## Example
-
+examples: |-
   Create three qubit state $\frac{1}{\sqrt{2}}\ket{0}\_2(\ket{0}\_1\ket{0}_3+\ket{1}\_1\ket{1}_3)$:
 
   ```qsharp

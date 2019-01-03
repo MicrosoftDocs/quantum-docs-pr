@@ -24,13 +24,13 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: numberOfQubitsToFirstArgument
-    summary: >-
+    summary: |-
       Number of qubits from target to put into the first part of the partition.
       The remaining qubits constitute the second part of the partition.
     isPrimitive: true
     uid: Int
   - name: target
-    summary: >-
+    summary: |-
       A register of qubits that are being partitioned and operated on by the
       given two operation.
     isArray: true

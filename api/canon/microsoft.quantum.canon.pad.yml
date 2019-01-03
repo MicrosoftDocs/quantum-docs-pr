@@ -3,12 +3,10 @@ uid: microsoft.quantum.canon.pad
 name: Pad
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Returns an array padded at with specified values up to a
   specified length.
-remarks: >-
-  ## Example
-
+examples: |-
   ```qsharp
   let array = [10, 11, 12];
   // The following line returns [10, 12, 15, 2, 2, 2].
@@ -21,7 +19,7 @@ input:
   content: "(nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[])"
   types:
   - name: nElementsTotal
-    summary: >-
+    summary: |-
       The length of the padded array. If this is positive, `inputArray`
       is padded at the head. If this is negative, `inputArray` is padded
       at the tail.
@@ -39,7 +37,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: >-
+  - summary: |-
       An array `output` that is the `inputArray` padded at the head
       with `defaultElement`s until `output` has length `nElementsTotal`
     isArray: true

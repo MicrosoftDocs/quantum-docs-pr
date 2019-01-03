@@ -3,14 +3,12 @@ uid: microsoft.quantum.canon.bindc
 name: BindC
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given an array of operations acting on a single input,
   produces a new operation that
   performs each given operation in sequence.
   The modifier `C` indicates that all operations in the array are controllable.
-remarks: >-
-  ## Example
-
+examples: |-
   The following are equivalent:
 
   ```qsharp
@@ -44,7 +42,7 @@ input:
 output:
   content: "('T => Unit : Controlled)"
   types:
-  - summary: >-
+  - summary: |-
       A new operation that performs each given operation in sequence
       on its input.
     isOperation: true

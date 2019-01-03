@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.preparechoistateca
 name: PrepareChoiStateCA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Prepares the Choi–Jamiłkowski state for a given operation with both controlled and adjoint variants onto given reference
   and target registers.
 syntax: 'operation PrepareChoiStateCA (op : (Qubit[] => Unit : Controlled, Adjoint), reference : Qubit[], target : Qubit[]) : Unit'

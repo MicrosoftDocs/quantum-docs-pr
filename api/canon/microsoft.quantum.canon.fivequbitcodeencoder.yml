@@ -9,14 +9,14 @@ input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
   - name: physRegister
-    summary: >-
+    summary: |-
       A qubit representing an unencoded state. This array `Qubit[]` is of
       length 1.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: auxQubits
-    summary: >-
+    summary: |-
       A register of auxiliary qubits that will be used to represent the
       encoded state.
     isArray: true
@@ -25,7 +25,7 @@ input:
 output:
   content: Microsoft.Quantum.Canon.LogicalRegister
   types:
-  - summary: >-
+  - summary: |-
       An array of physical qubits of type `LogicalRegister` that store the
       encoded state.
     uid: microsoft.quantum.canon.logicalregister

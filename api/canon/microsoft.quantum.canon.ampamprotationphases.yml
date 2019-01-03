@@ -4,7 +4,7 @@ name: AmpAmpRotationPhases
 type: newtype
 namespace: Microsoft.Quantum.Canon
 summary: Phases for a sequence of single-qubit rotations in amplitude amplification.
-remarks: >-
+remarks: |-
   The first parameter is an array of phases for reflections, expressed as a product of single-qubit rotations.
   [ G.H. Low, I. L. Chuang, https://arxiv.org/abs/1707.05391].
 syntax: newtype AmpAmpRotationPhases = Double[];

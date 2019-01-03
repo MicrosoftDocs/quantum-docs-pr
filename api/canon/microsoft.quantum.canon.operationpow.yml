@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.operationpow
 name: OperationPow
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Raises an operation to a power.
 
   That is, given an operation representing a gate $U$, returns a new operation

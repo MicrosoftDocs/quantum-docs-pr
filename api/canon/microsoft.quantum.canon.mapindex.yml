@@ -3,13 +3,11 @@ uid: microsoft.quantum.canon.mapindex
 name: MapIndex
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   The `MapIndex` function takes an array and a function that is defined
   for the indexed elements of the array, and returns a new array that consists
   of the images of the original array under the function.
-remarks: >-
-  ## Example
-
+examples: |-
   The following two lines are equivalent:
 
   ```qsharp
@@ -26,7 +24,7 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: >-
+    summary: |-
       A function from `(Int, 'T)` to `'U` that is used to map elements
       and their indices.
     isFunction: true

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.preparesinglequbitidentity
 name: PrepareSingleQubitIdentity
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Prepares a qubit in the maximally mixed state.
 
   It prepares the given qubit in the $\boldone / 2$ state by applying the depolarizing channel
@@ -14,7 +14,7 @@ summary: >-
   $$
   where $\sigma\_i$ is the $i$th Pauli operator, and where
   $\rho$ is a density operator representing a mixed state.
-remarks: >-
+remarks: |-
   The mixed state $\boldone / 2$ describing the result of
   applying this operation to a state implicitly describes
   an expectation value over random choices made in this operation.
@@ -27,7 +27,7 @@ input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    summary: >-
+    summary: |-
       A qubit whose state is to be depolarized in the manner
       described above.
     isPrimitive: true

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
 name: ApplyRippleCarryComparatorBE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   This unitary tests if two integers `x` and `y` stored in equal-size qubit registers
   satisfy `x > y`. If true, 1 is XORed into an output
   qubit. Otherwise, 0 is XORed into an output qubit.
@@ -15,7 +15,7 @@ summary: >-
   \end{align}
   $$.
 syntax: 'operation ApplyRippleCarryComparatorBE (x : Microsoft.Quantum.Canon.BigEndian, y : Microsoft.Quantum.Canon.BigEndian, output : Qubit) : Unit'
-references: >-
+references: |-
   - A new quantum ripple-carry addition circuit
     Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton
     https://arxiv.org/abs/quant-ph/0410184

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.evolutionunitary
 name: EvolutionUnitary
 type: newtype
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Represents a unitary time-evolution operator.
 
   The first parameter is

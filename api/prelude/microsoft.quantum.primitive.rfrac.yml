@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.rfrac
 name: RFrac
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Applies a rotation about the given Pauli axis by an angle specified
   as a dyadic fraction.
 
@@ -16,7 +16,7 @@ summary: >-
   > [!WARNING]
   > This operation uses the **opposite** sign convention from
   > @"microsoft.quantum.primitive.r".
-remarks: >-
+remarks: |-
   Equivalent to:
 
   ```qsharp
@@ -32,13 +32,13 @@ input:
     isPrimitive: true
     uid: Pauli
   - name: numerator
-    summary: >-
+    summary: |-
       Numerator in the dyadic fraction representation of the angle
       by which the qubit is to be rotated.
     isPrimitive: true
     uid: Int
   - name: power
-    summary: >-
+    summary: |-
       Power of two specifying the denominator of the angle by which
       the qubit is to be rotated.
     isPrimitive: true

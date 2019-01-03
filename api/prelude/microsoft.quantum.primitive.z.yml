@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.z
 name: Z
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Applies the Pauli $Z$ gate.
 
   \begin{align}

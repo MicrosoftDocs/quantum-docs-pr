@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.random
 name: Random
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   The random operation takes an array of doubles as input, and returns
   a randomly-selected index into the array as an `Int`.
   The probability of selecting a specific index is proportional to the value
@@ -16,7 +16,7 @@ input:
   content: '(probs : Double[])'
   types:
   - name: probs
-    summary: >-
+    summary: |-
       An array of floating-point numbers proportional to the probability of
       selecting each index.
     isArray: true
@@ -25,7 +25,7 @@ input:
 output:
   content: Int
   types:
-  - summary: >-
+  - summary: |-
       An integer $i$ with probability $\Pr(i) = p_i / \sum_i p_i$, where $p_i$
       is the $i$th element of `probs`.
     isPrimitive: true

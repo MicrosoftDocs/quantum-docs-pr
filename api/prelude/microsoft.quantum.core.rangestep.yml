@@ -4,7 +4,7 @@ name: RangeStep
 type: function
 namespace: Microsoft.Quantum.Core
 summary: Returns the integer that specifies how the next value of a range is calculated.
-remarks: >-
+remarks: |-
   A range expression's first element is `start`,
   its second element is `start+step`, third element is `start+step+step`, etc.,
   until `end` is passed.

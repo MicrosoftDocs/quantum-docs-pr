@@ -3,7 +3,7 @@ uid: microsoft.quantum.extensions.convert.tostringdformat
 name: ToStringDFormat
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: >-
+summary: |-
   Converts a given double-precision floating-point number to an equivalent string representation,
   using the given format.
 remarks: See [C# Double.ToString](https://docs.microsoft.com/dotnet/api/system.double.tostring?view=netframework-4.7.1#System_Double_ToString_System_String_) for more details.

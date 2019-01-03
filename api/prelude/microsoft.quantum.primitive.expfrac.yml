@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.expfrac
 name: ExpFrac
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Applies the exponential of a multi-qubit Pauli operator
   with an argument given by a dyadic fraction.
 
@@ -17,20 +17,20 @@ input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
   types:
   - name: paulis
-    summary: >-
+    summary: |-
       Array of single-qubit Pauli values indicating the tensor product
       factors on each qubit.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: numerator
-    summary: >-
+    summary: |-
       Numerator ($k$) in the dyadic fraction representation of the angle
       by which the qubit register is to be rotated.
     isPrimitive: true
     uid: Int
   - name: power
-    summary: >-
+    summary: |-
       Power of two ($n$) specifying the denominator of the angle by which
       the qubit register is to be rotated.
     isPrimitive: true

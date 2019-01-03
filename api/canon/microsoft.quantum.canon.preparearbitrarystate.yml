@@ -10,7 +10,11 @@ summary: |-
   state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from
   the $n$-qubit computational basis state $\ket{0...0}$.
 
-  $U\ket{0...0}=\ket{\psi}=\frac{\sum^{2^n-1}_{j=0}r_j e^{i t_j}\ket{j}}{\sqrt{\sum^{2^n-1}_{j=0}|r_j|^2}}$.
+  $$
+  \begin{align}
+  U\ket{0...0}=\ket{\psi}=\frac{\sum_{j=0}^{2^n-1}r_j e^{i t_j}\ket{j}}{\sqrt{\sum_{j=0}^{2^n-1}|r_j|^2}}.
+  \end{align}
+  $$
 remarks: |-
   Negative input coefficients $r_j < 0$ will be treated as though
   positive with value $|r_j|$. `coefficients` will be padded with

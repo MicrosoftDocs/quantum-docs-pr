@@ -6,6 +6,22 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   Given a multi-qubit Pauli operator, applies the corresponding operation to
   a register.
+remarks: >-
+  ## Example
+
+  The following are equivalent:
+
+  ```qsharp
+  ApplyPauli([PauliY, PauliZ, PauliX], target);
+  ```
+
+  and
+
+  ```qsharp
+  Y(target[0]);
+  Z(target[1]);
+  X(target[2]);
+  ```
 syntax: 'operation ApplyPauli (pauli : Pauli[], target : Qubit[]) : Unit'
 input:
   content: '(pauli : Pauli[], target : Qubit[])'

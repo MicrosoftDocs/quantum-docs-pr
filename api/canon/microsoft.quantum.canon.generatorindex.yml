@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   Represents a single primitive term in the set of all dynamical generators, e.g.
   Hermitian operators, for which there exists a map from that generator
-  to time-evolution by that that generator, through `EvolutionSet`.
+  to time-evolution by that generator, through `EvolutionSet`.
 
   The first element
   (Int[], Double[]) is indexes that single term -- For instance, the Pauli string
@@ -19,7 +19,8 @@ remarks: >-
   > The interpretation of an `GeneratorIndex` is not defined except
   > with reference to a particular set of generators.
 
-  ### Examples
+  ## Example
+
   Using  <xref:microsoft.quantum.canon.paulievolutionset>, the operator
   $\pi X_2 X_5 Y_9$ is represented as:
 

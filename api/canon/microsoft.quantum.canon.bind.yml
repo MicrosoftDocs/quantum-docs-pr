@@ -7,6 +7,21 @@ summary: >-
   Given an array of operations acting on a single input,
   produces a new operation that
   performs each given operation in sequence.
+remarks: >-
+  ## Example
+
+  The following are equivalent:
+
+  ```qsharp
+  let bound = Bind([U, V]);
+  bound(x);
+  ```
+
+  and
+
+  ```qsharp
+  U(x); V(x);
+  ```
 syntax: "function Bind (operations : ('T => Unit)[]) : ('T => Unit)"
 input:
   content: "(operations : ('T => Unit)[])"

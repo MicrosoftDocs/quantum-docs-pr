@@ -11,7 +11,8 @@ remarks: >-
   that acts jointly on the qubits in `LogicalRegister` and some ancilla
   qubits followed by a measurements of the ancilla to extract a `Syndrome type representing the`Result[]` of these measurements.
 
-  ### Examples
+  ## Example
+
   Measure syndromes for the bit-flip code
   $S = \langle ZZI, IZZ \rangle$ using scratch qubits in a
   non–fault tolerant manner:

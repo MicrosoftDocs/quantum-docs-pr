@@ -533,9 +533,11 @@ functions:
     the $n$-qubit computational basis state $\ket{0...0}$.
 
     The action of U on a newly-allocated register is given by
+    $$
     \begin{align}
     U\ket{0...0}=\ket{\psi}=\frac{\sum^{2^n-1}_{j=0}r_j e^{i t_j}\ket{j}}{\sqrt{\sum^{2^n-1}_{j=0}|r_j|^2}}.
     \end{align}
+    $$
 - uid: microsoft.quantum.canon.statepreparationpositivecoefficients
   summary: >-
     Returns an operation that prepares the given quantum state.
@@ -545,9 +547,11 @@ functions:
     the $n$-qubit computational basis state $\ket{0...0}$.
 
     The action of U on a newly-allocated register is given by
+    $$
     \begin{align}
-    U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum^{2^n-1}_{j=0}\alpha_j \ket{j}}{\sqrt{\sum^{2^n-1}_{j=0}|\alpha_j|^2}}$.
+    U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum^{2^n-1}_{j=0}\alpha_j \ket{j}}{\sqrt{\sum^{2^n-1}_{j=0}|\alpha_j|^2}}.
     \end{align}
+    $$
 - uid: microsoft.quantum.canon.steanecoderecoveryfns
   summary: >-
     Decoder for combined X- and Z-parts of the stabilizer group of the
@@ -1287,7 +1291,7 @@ operations:
     $0$ to $M-1$, given an input state $\ket{0\cdots 0}$. In other words,
     $$
     \begin{align}
-    U\ket{0}=\frac{1}{\sqrt{M}}\sum_{j=1}^{M-1}\ket{j}.
+    U\ket{0}=\frac{1}{\sqrt{M}}\sum_{j=0}^{M-1}\ket{j}.
     \end{align}
     $$.
 - uid: microsoft.quantum.canon.qft
@@ -1363,24 +1367,24 @@ operations:
 - uid: microsoft.quantum.canon.with
   summary: >-
     Given operations implementing operators `U` and `V`, performs the
-    operation `U†VU` on a target. That is, this operation
+    operation `U�VU` on a target. That is, this operation
     conjugates `V` with `U`.
 - uid: microsoft.quantum.canon.witha
   summary: >-
     Given operations implementing operators `U` and `V`, performs the
-    operation `U†VU` on a target. That is, this operation
+    operation `U�VU` on a target. That is, this operation
     conjugates `V` with `U`.
     The modifier `A` indicates that the inner operation is adjointable.
 - uid: microsoft.quantum.canon.withc
   summary: >-
     Given operations implementing operators `U` and `V`, performs the
-    operation `U†VU` on a target. That is, this operation
+    operation `U�VU` on a target. That is, this operation
     conjugates `V` with `U`.
     The modifier `C` dicates that the inner operation is controllable.
 - uid: microsoft.quantum.canon.withca
   summary: >-
     Given operations implementing operators `U` and `V`, performs the
-    operation `U†VU` on a target. That is, this operation
+    operation `U�VU` on a target. That is, this operation
     conjugates `V` with `U`.
     The modifier `CA` indicates that the inner operation is controllable
     and adjointable.
@@ -1496,7 +1500,7 @@ newtypes:
   summary: >-
     Represents a single primitive term in the set of all dynamical generators, e.g.
     Hermitian operators, for which there exists a map from that generator
-    to time-evolution by that that generator, through `EvolutionSet`.
+    to time-evolution by that generator, through `EvolutionSet`.
 
     The first element
     (Int[], Double[]) is indexes that single term -- For instance, the Pauli string

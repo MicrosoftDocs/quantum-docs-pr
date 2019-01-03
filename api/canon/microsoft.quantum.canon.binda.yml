@@ -8,6 +8,21 @@ summary: >-
   produces a new operation that
   performs each given operation in sequence.
   The modifier `A` indicates that all operations in the array are adjointable.
+remarks: >-
+  ## Example
+
+  The following are equivalent:
+
+  ```qsharp
+  let bound = Bind([U, V]);
+  bound(x);
+  ```
+
+  and
+
+  ```qsharp
+  U(x); V(x);
+  ```
 syntax: "function BindA (operations : ('T => Unit : Adjoint)[]) : ('T => Unit : Adjoint)"
 input:
   content: "(operations : ('T => Unit : Adjoint)[])"

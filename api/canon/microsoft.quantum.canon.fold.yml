@@ -6,6 +6,17 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   Iterates a function `f` through an array `array`, returning
   `f(f(f(initialState, array[0]), array[1]), ...)`.
+remarks: >-
+  ## Example
+
+  ```qsharp
+  function Plus(a : Double, b : Double) {
+      return a + b;
+  }
+  function Sum(xs : Double[]) {
+      return Fold(Plus, 0.0, xs);
+  }
+  ```
 syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array : 'T[]) : 'State"
 input:
   content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"

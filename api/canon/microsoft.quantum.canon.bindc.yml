@@ -8,6 +8,21 @@ summary: >-
   produces a new operation that
   performs each given operation in sequence.
   The modifier `C` indicates that all operations in the array are controllable.
+remarks: >-
+  ## Example
+
+  The following are equivalent:
+
+  ```qsharp
+  let bound = Bind([U, V]);
+  bound(x);
+  ```
+
+  and
+
+  ```qsharp
+  U(x); V(x);
+  ```
 syntax: "function BindC (operations : ('T => Unit : Controlled)[]) : ('T => Unit : Controlled)"
 input:
   content: "(operations : ('T => Unit : Controlled)[])"

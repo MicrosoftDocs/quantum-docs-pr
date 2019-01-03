@@ -8,9 +8,19 @@ summary: >-
   for the indexed elements of the array, and returns a new array that consists
   of the images of the original array under the function.
 remarks: >-
-  The function is defined for generic types, i.e., whenever we have
-  an array `'T[]` and a function `mapper: (Int, 'T) -> 'U` we can map the elements
-  of the array and produce a new array of type `'U[]`.
+  ## Example
+
+  The following two lines are equivalent:
+
+  ```qsharp
+  let arr = MapIndex(f, [x0, x1, x2]);
+  ```
+
+  and
+
+  ```qsharp
+  let arr = [f(0, x0), f(1, x1), f(2, x2)];
+  ```
 syntax: "function MapIndex (mapper : ((Int, 'T) -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"

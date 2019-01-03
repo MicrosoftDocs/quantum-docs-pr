@@ -17,6 +17,23 @@ summary: >-
   U\ket{0}^{\lceil\log_2 N\rceil}\ket{0}^{m}=\sum_{j=0}^{N-1}\sqrt{p_j} \ket{j}\ket{\text{garbage}_j}.
   \end{align}
   $$.
+remarks: >-
+  ## Example
+
+  The following code snippet prepares an purification of the $3$-qubit state
+  $\rho=\sum^{4}_{j=0}\frac{|alpha_j|}{\sum_k |\alpha_k|}\ket{j}\bra{j}$, where
+  $\vec\alpha=(1.0,2.0,3.0,4.0,5.0)$, and the error is `1e-3`;
+
+  ```qsharp
+  let coefficients = [1.0,2.0,3.0,4.0,5.0];
+  let targetError = 1e-3;
+  let ((nTotalQubits, (nIndexQubits, nGarbageQubits)), oneNorm, op) = QuantumROM(targetError, coefficients);
+  using (indexRegister = Qubit[nIndexQubits]) {
+      using (garbageRegister = Qubit[nGarbageQubits]) {
+          op(BigEndian(indexRegister), garbageRegister);
+      }
+  }
+  ```
 syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Canon.BigEndian, Qubit[]) => Unit : Adjoint, Controlled))'
 references: >-
   - Encoding Electronic Spectra in Quantum Circuits with Linear T Complexity

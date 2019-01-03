@@ -10,6 +10,16 @@ remarks: >-
   unit circle corresponding to the input.
   The `minValue` input then effectively specifies where to cut the
   unit circle.
+
+  ## Example
+
+  ```qsharp
+      // Returns 3 π / 2.
+      let y = RealMod(5.5 * PI(), 2.0 * PI(), 0.0);
+      // Returns -1.2, since +3.6 and -1.2 are 4.8 apart on the real line,
+      // which is a multiple of 2.4.
+      let z = RealMod(3.6, 2.4, -1.2);
+  ```
 syntax: 'function RealMod (value : Double, modulo : Double, minValue : Double) : Double'
 input:
   content: '(value : Double, modulo : Double, minValue : Double)'

@@ -11,14 +11,35 @@ summary: >-
   the $n$-qubit computational basis state $\ket{0...0}$.
 
   The action of U on a newly-allocated register is given by
+  $$
   \begin{align}
   U\ket{0...0}=\ket{\psi}=\frac{\sum^{2^n-1}_{j=0}r_j e^{i t_j}\ket{j}}{\sqrt{\sum^{2^n-1}_{j=0}|r_j|^2}}.
   \end{align}
+  $$
 remarks: >-
   Negative input coefficients $r_j < 0$ will be treated as though
   positive with value $|r_j|$. `coefficients` will be padded with
   elements $(r_j, t_j) = (0.0, 0.0)$ if fewer than $2^n$ are
   specified.
+
+  ## Example
+
+  The following snippet prepares the quantum state $\ket{\psi}=e^{i 0.1}\sqrt{1/8}\ket{0}+\sqrt{7/8}\ket{2}$
+  in the qubit register `qubitsBE`.
+
+  ```qsharp
+  let amplitudes = [Sqrt(0.125), 0.0, Sqrt(0.875), 0.0];
+  let phases = [0.1, 0.0, 0.0, 0.0];
+  mutable complexNumbers = new ComplexPolar[4];
+  for (idx in 0..3) {
+      set complexNumbers[idx] = ComplexPolar(amplitudes[idx], phases[idx]);
+  }
+  let op = StatePreparationComplexCoefficients(complexNumbers);
+  using (qubits = Qubit[2]) {
+      let qubitsBE = BigEndian(qubits);
+      op(qubitsBE);
+  }
+  ```
 syntax: 'function StatePreparationComplexCoefficients (coefficients : Microsoft.Quantum.Canon.ComplexPolar[]) : (Microsoft.Quantum.Canon.BigEndian => Unit : Adjoint, Controlled)'
 input:
   content: '(coefficients : Microsoft.Quantum.Canon.ComplexPolar[])'

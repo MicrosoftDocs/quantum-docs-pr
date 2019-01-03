@@ -4,6 +4,14 @@ name: MultiplyGeneratorIndex
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: Multiplies the coefficient in a `GeneratorIndex`.
+remarks: >-
+  ## Example
+
+  ```qsharp
+  let gen = GeneratorIndex(([1,2,3],[coeff]),[1,2,3]);
+  let ((idxPaulis, idxDoubles), idxQubits) = MultiplyGeneratorIndex(multipler, gen);
+  // idxDoubles[0] == multipler * coeff;
+  ```
 syntax: 'function MultiplyGeneratorIndex (multiplier : Double, generatorIndex : Microsoft.Quantum.Canon.GeneratorIndex) : Microsoft.Quantum.Canon.GeneratorIndex'
 input:
   content: '(multiplier : Double, generatorIndex : Microsoft.Quantum.Canon.GeneratorIndex)'

@@ -9,6 +9,21 @@ summary: >-
   performs each given operation in sequence.
   The modifier `CA` indicates that all operations in the array are adjointable
   and controllable.
+remarks: >-
+  ## Example
+
+  The following are equivalent:
+
+  ```qsharp
+  let bound = Bind([U, V]);
+  bound(x);
+  ```
+
+  and
+
+  ```qsharp
+  U(x); V(x);
+  ```
 syntax: "function BindCA (operations : ('T => Unit : Adjoint, Controlled)[]) : ('T => Unit : Adjoint, Controlled)"
 input:
   content: "(operations : ('T => Unit : Adjoint, Controlled)[])"

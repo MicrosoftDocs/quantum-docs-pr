@@ -7,6 +7,14 @@ summary: >-
   Given a single-qubit Pauli operator and the index of a qubit,
   returns a multi-qubit Pauli operator with the given single-qubit
   operator at that index and `PauliI` at every other index.
+remarks: >-
+  ## Example
+
+  To obtain the array `[PauliI, PauliI, PauliX, PauliI]`:
+
+  ```qsharp
+  EmbedPauli(PauliX, 2, 3);
+  ```
 syntax: 'function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]'
 input:
   content: '(pauli : Pauli, location : Int, n : Int)'

@@ -4,6 +4,13 @@ name: IntArrayFromRange
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: Creates an array `arr` of integers enumnerated by start..step..end.
+remarks: >-
+  ## Example
+
+  ```qsharp
+  // The following returns [1,3,5,7];
+  let array = IntArrayFromRange(1..2..8);
+  ```
 syntax: 'function IntArrayFromRange (range : Range) : Int[]'
 input:
   content: '(range : Range)'

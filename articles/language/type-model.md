@@ -308,7 +308,7 @@ In particular, the new operation also allows `Adjoint`, and will allow
 `Controlled` if and only if the base operation did.
 
 The Adjoint functor is its own inverse; that is, `Adjoint Adjoint Op` is
-always the same as `Qp`.
+always the same as `Op`.
 
 #### Controlled
 
@@ -340,12 +340,13 @@ base operation.
 The result type is the same, but the input type is a two-tuple with a
 qubit array that holds the control qubit(s) as the first element and
 the arguments of the base operation as the second element.
-If the base operation took no arguments, `()`, then the input type of
-the controlled version is just the array of control qubits.
 The new operation allows `Controlled`, and will allow
 `Adjoint` if and only if the base operation did.
 
-If the base function took only a single argument, then singleton
+If the base operation took no arguments, `()`, then the input type of
+the controlled version is just the array of control qubits.
+
+If the base operation took only a single argument, then singleton
 tuple equivalence will come into play here.
 For instance, `Controlled X` is the controlled version of the
 `X` operation.
@@ -354,13 +355,16 @@ has type `((Qubit[], (Qubit)) => Unit : Adjoint, Controlled)`;
 because of singleton tuple equivalence, this is the same as
 `((Qubit[], Qubit) => Unit : Adjoint, Controlled)`.
 
-Similarly, `Controlled Rz` is the controlled version of the
+If the base operation took several arguments, remember to enclose 
+the corresponding arguments of the controlled version of the operation in parentheses 
+to convert them into a tuple.
+For instance, `Controlled Rz` is the controlled version of the
 `Rz` operation.
 `Rz` has type `((Double, Qubit) => Unit : Adjoint, Controlled)`,
 so `Controlled Rz` has type
 `((Qubit[], (Double, Qubit)) => Unit : Adjoint, Controlled)`.
-For example, `Controlled Rz(controls, (0.1, target))` would be
-a valid invocation of `Controlled Rz`.
+Thus, `Controlled Rz(controls, (0.1, target))` would be
+a valid invocation of `Controlled Rz` (note the parentheses around `0.1, target`).
 
 As another example, `CNOT(control, target)` can be implemented as `Controlled X([control], target)`. 
 If a target should be controlled by 2 control qubits (CCNOT), we can use `Controlled X([control1;control2], target)` statement.

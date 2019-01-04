@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.timedependenttrottersimulationalgorithm
 name: TimeDependentTrotterSimulationAlgorithm
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   `TimeDependentSimulationAlgorithm` function that uses a Trotter–Suzuki
   decomposition to approximate a unitary operator that solves the
   time-dependent Schrodinger equation.

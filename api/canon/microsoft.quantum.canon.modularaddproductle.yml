@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.modularaddproductle
 name: ModularAddProductLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Performs a modular multipy-and-add by integer constants on a qubit register.
 
   Implements the map
@@ -13,7 +13,7 @@ summary: >-
   \end{align}
   $$
   for a given modulus $N$, constant multiplier $a$, and summand $y$.
-remarks: >-
+remarks: |-
   - For the circuit diagram and explanation see Figure 6 on [Page 7
     of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=7)
   - This operation corresponds to CMULT(a)MOD(N) in
@@ -30,12 +30,12 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: >-
+    summary: |-
       A quantum register representing an unsigned integer whose value is to
       be added to each basis state label of `summand`.
     uid: microsoft.quantum.canon.littleendian
   - name: summand
-    summary: >-
+    summary: |-
       A quantum register representing an unsigned integer to use as the target
       for this operation.
     uid: microsoft.quantum.canon.littleendian

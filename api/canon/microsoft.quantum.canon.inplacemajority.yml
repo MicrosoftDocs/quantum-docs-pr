@@ -9,7 +9,7 @@ input:
   content: '(output : Qubit, input : Qubit[])'
   types:
   - name: output
-    summary: >-
+    summary: |-
       First input qubit. Note that the output is computed in-place
       and stored in this qubit.
     isPrimitive: true

@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.r1frac
 name: R1Frac
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Applies a rotation about the $\ket{1}$ state by an angle specified
   as a dyadic fraction.
 
@@ -16,7 +16,7 @@ summary: >-
   > This operation uses the **opposite** sign convention from
   > @"microsoft.quantum.primitive.r", and does not include the
   > factor of $1/ 2$ included by @"microsoft.quantum.primitive.r1".
-remarks: >-
+remarks: |-
   Equivalent to:
 
   ```qsharp
@@ -28,13 +28,13 @@ input:
   content: '(numerator : Int, power : Int, qubit : Qubit)'
   types:
   - name: numerator
-    summary: >-
+    summary: |-
       Numerator in the dyadic fraction representation of the angle
       by which the qubit is to be rotated.
     isPrimitive: true
     uid: Int
   - name: power
-    summary: >-
+    summary: |-
       Power of two specifying the denominator of the angle by which
       the qubit is to be rotated.
     isPrimitive: true

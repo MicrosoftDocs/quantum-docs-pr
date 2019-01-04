@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.expmod
 name: ExpMod
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Let us denote expBase by x, power by p and modulus by N.
   The function returns xᵖ mod N.
 

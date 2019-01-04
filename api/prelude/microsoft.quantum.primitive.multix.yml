@@ -3,10 +3,10 @@ uid: microsoft.quantum.primitive.multix
 name: MultiX
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Applies the gate $X \otimes X \otimes \cdots \otimes X$
   to a register of qubits.
-remarks: >-
+remarks: |-
   Equivalent to:
 
   ```qsharp

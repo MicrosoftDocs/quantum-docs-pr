@@ -3,14 +3,14 @@ uid: microsoft.quantum.primitive.rz
 name: Rz
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Applies a rotation about the $z$-axis by a given angle.
 
   \begin{align}
   R_z(\theta) \mathrel{:=}
   e^{-i \theta \sigma_z / 2}.
   \end{align}
-remarks: >-
+remarks: |-
   Equivalent to:
 
   ```qsharp

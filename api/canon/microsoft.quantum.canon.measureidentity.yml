@@ -3,10 +3,10 @@ uid: microsoft.quantum.canon.measureidentity
 name: MeasureIdentity
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Measures the identity operator on a register
   of qubits.
-remarks: >-
+remarks: |-
   Since $\boldone$ has only the eigenvalue $1$, and does not
   have a negative eigenvalue, this operation always returns
   `Zero`, corresponding to the eigenvalue $+1 = (-1)^0$,

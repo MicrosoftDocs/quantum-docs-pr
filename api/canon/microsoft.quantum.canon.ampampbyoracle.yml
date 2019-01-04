@@ -4,7 +4,7 @@ name: AmpAmpByOracle
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: Standard Amplitude Amplification algorithm
-remarks: >-
+remarks: |-
   This is the standard amplitude amplification algorithm obtained by a choice of reflection phases computed by `AmpAmpPhasesStandard`
   Assuming that
   \begin{align}

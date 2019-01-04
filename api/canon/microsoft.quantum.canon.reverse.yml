@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.reverse
 name: Reverse
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Create an array that contains the same elements as an input array but in reverse
   order.
 syntax: "function Reverse (array : 'T[]) : 'T[]"

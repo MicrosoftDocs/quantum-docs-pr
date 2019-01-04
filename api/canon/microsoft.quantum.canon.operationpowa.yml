@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.operationpowa
 name: OperationPowA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Raises an operation to a power.
   The modifier `A` indicates that the operation is adjointable.
 

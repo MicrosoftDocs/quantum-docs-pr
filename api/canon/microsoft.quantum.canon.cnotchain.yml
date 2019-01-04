@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.cnotchain
 name: CNOTChain
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Computes the parity of an array of qubits in-place.
 
   It follows the pattern
@@ -13,7 +13,7 @@ input:
   content: '(qubits : Qubit[])'
   types:
   - name: qubits
-    summary: >-
+    summary: |-
       Array of qubits on which parity is computed
       and stored.
     isArray: true

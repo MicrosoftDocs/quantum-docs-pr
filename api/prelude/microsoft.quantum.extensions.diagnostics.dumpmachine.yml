@@ -4,7 +4,7 @@ name: DumpMachine
 type: function
 namespace: Microsoft.Quantum.Extensions.Diagnostics
 summary: Dumps the current target machine's status.
-remarks: >-
+remarks: |-
   This method allows you to dump information about the current status of the
   target machine into a file or some other location.
   The actual information generated and the semantics of `location`

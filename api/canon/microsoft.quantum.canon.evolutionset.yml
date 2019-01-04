@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.evolutionset
 name: EvolutionSet
 type: newtype
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Represents a set of gates that can be readily implemented and used
   to implement simulation algorithms.
 

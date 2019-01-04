@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.resetall
 name: ResetAll
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Given an array of qubits, measure them and ensure they are in the |0⟩ state
   such that they can be safely released.
 syntax: 'operation ResetAll (qubits : Qubit[]) : Unit'

@@ -3,10 +3,10 @@ uid: microsoft.quantum.canon.randomreal
 name: RandomReal
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Returns a random real number in the interval greater than or equal to zero
   and less than one.
-remarks: >-
+remarks: |-
   This function calls <xref:microsoft.quantum.primitive.random>, so
   its randomess depends on the implementation of `Random`.
 syntax: 'operation RandomReal (bitsRandom : Int) : Double'
@@ -14,7 +14,7 @@ input:
   content: '(bitsRandom : Int)'
   types:
   - name: bitsRandom
-    summary: >-
+    summary: |-
       The number of bits of precision with which the random number
       should be sampled.
 

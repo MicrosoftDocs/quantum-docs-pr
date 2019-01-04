@@ -3,12 +3,12 @@ uid: microsoft.quantum.canon.tooperation
 name: ToOperation
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Converts functions to operations.
 
   Given a function, returns an operation which calls that function,
   and which does nothing else.
-remarks: >-
+remarks: |-
   This is mainly useful for passing functions to functions or operations
   which expect an operation as input.
 syntax: "function ToOperation (fn : ('Input -> 'Output)) : ('Input => 'Output)"
@@ -29,7 +29,7 @@ input:
 output:
   content: ('Input => 'Output)
   types:
-  - summary: >-
+  - summary: |-
       An operation `op` such that `op(input)` is identical to `fn(input)`
       for all `input`.
     isOperation: true

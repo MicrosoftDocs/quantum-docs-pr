@@ -3,12 +3,12 @@ uid: microsoft.quantum.canon.pauliblockencoding
 name: PauliBlockEncoding
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Creates a block-encoding unitary for a Hamiltonian.
 
   The Hamiltonian $H=\sum_{j}\alpha_j P_j$ is described by a
   sum of Pauli terms $P_j$, each with real coefficient $\alpha_j$.
-remarks: >-
+remarks: |-
   This is obtained by preparing and unpreparing the state $\sum_{j}\sqrt{\alpha_j/\alpha}\ket{j}$,
   and constructing a multiply-controlled unitary
   <xref:microsoft.quantum.canon.statepreparationpositivecoefficients> and
@@ -23,7 +23,7 @@ input:
 output:
   content: (Double, Microsoft.Quantum.Canon.BlockEncodingReflection)
   types:
-  - summary: >-
+  - summary: |-
       ## First parameter
 
       The one-norm of coefficients $\alpha=\sum_{j}|\alpha_j|$.

@@ -3,11 +3,11 @@ uid: microsoft.quantum.canon.filter
 name: Filter
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   The `Filter` function takes an array and a predicate that is defined
   for the elements of the array, and returns an array that consists of
   those elements that satisfy the predicate.
-remarks: >-
+remarks: |-
   The function is defined for generic types, i.e., whenever we have
   an array `'T[]` and a predicate `'T -> Bool` we can filter elements.
 syntax: "function Filter (predicate : ('T -> Bool), array : 'T[]) : 'T[]"

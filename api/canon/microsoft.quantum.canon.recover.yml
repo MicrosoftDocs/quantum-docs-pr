@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.recover
 name: Recover
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Performs a single round of error correction by a quantum code
   described by a `QECC` type.
 syntax: 'operation Recover (code : Microsoft.Quantum.Canon.QECC, fn : Microsoft.Quantum.Canon.RecoveryFn, logicalRegister : Microsoft.Quantum.Canon.LogicalRegister) : Unit'
@@ -11,13 +11,13 @@ input:
   content: '(code : Microsoft.Quantum.Canon.QECC, fn : Microsoft.Quantum.Canon.RecoveryFn, logicalRegister : Microsoft.Quantum.Canon.LogicalRegister)'
   types:
   - name: code
-    summary: >-
+    summary: |-
       A quantum error-correcting code packaged as a `QECC` type describes
       the encoding and deconding of quantum data, and how error syndromes
       are to be measuremed.
     uid: microsoft.quantum.canon.qecc
   - name: fn
-    summary: >-
+    summary: |-
       A `RecoveryFn` that maps each error syndrome to the `Pauli[]` operations
       that correct the detected error.
     uid: microsoft.quantum.canon.recoveryfn

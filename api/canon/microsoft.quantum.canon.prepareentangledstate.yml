@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.prepareentangledstate
 name: PrepareEntangledState
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Pairwise entangles two qubit registers.
 
   That is, given two registers, prepares the maximally entangled state

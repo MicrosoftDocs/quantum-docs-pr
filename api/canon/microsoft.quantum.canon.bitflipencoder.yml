@@ -14,7 +14,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: auxQubits
-    summary: >-
+    summary: |-
       A register of auxiliary qubits initially in the $\ket{00}$ state to be
       used in encoding the data to be protected.
     isArray: true
@@ -23,7 +23,7 @@ input:
 output:
   content: Microsoft.Quantum.Canon.LogicalRegister
   types:
-  - summary: >-
+  - summary: |-
       The physical and auxiliary qubits used in encoding, represented as a
       logical register.
     uid: microsoft.quantum.canon.logicalregister

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.blockencodingbylcu
 name: BlockEncodingByLCU
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Encodes an operator of interest into a `BlockEncoding`.
 
   This constructs a `BlockEncoding` unitary $U=P\cdot V\cdot P^\dag$ that encodes some
@@ -11,7 +11,7 @@ summary: >-
   unitaries. Typically, $P$ is a state preparation unitary such that
   $P\ket{0}_a=\sum_j\sqrt{\alpha_j/\|\vec\alpha\|_2}\ket{j}_a$,
   and $V=\sum_{j}\ket{j}\bra{j}_a\otimes U_j$.
-remarks: >-
+remarks: |-
   This `BlockEncoding` implementation gives it the properties of a
   `BlockEncodingReflection`.
 syntax: "function BlockEncodingByLCU (statePreparation : ('T => Unit : Adjoint, Controlled), selector : (('T, 'S) => Unit : Adjoint, Controlled)) : (('T, 'S) => Unit : Adjoint, Controlled)"
@@ -51,7 +51,7 @@ input:
 output:
   content: "(('T, 'S) => Unit : Adjoint, Controlled)"
   types:
-  - summary: >-
+  - summary: |-
       A unitary $U$ acting jointly on registers `a` and `s` that block-
       encodes $H$, and satisfies $U^\dag = U$.
     isOperation: true

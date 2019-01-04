@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.y
 name: Y
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Applies the Pauli $Y$ gate.
 
   \begin{align}

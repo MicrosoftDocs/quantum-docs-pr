@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.paulistringfromgenidx
 name: PauliStringFromGenIdx
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Extracts the Pauli string and its qubit indices of a Pauli term described
   by a `GeneratorIndex`.
 syntax: 'function PauliStringFromGenIdx (generatorIndex : Microsoft.Quantum.Canon.GeneratorIndex) : (Pauli[], Int[])'
@@ -16,7 +16,7 @@ input:
 output:
   content: (Pauli[], Int[])
   types:
-  - summary: >-
+  - summary: |-
       The Pauli string of the term described by a `GeneratorIndex`, and
       indices to the qubits it acts on.
     types:

@@ -4,12 +4,12 @@ name: ApproximateQFT
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
-remarks: >-
+remarks: |-
   AQFT requires Z-rotation gates of the form 2π/2ᵏ and Hadamard gates.
 
   The input and output are assumed to be encoded in big endian encoding.
 syntax: 'operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Canon.BigEndian) : Unit'
-references: >-
+references: |-
   - [ *M. Roetteler, Th. Beth*,
     Appl. Algebra Eng. Commun. Comput.
     19(3): 177-193 (2008) ](http://doi.org/10.1007/s00200-008-0072-2)
@@ -18,7 +18,7 @@ input:
   content: '(a : Int, qs : Microsoft.Quantum.Canon.BigEndian)'
   types:
   - name: a
-    summary: >-
+    summary: |-
       approximation parameter which determines at which level the controlled Z-rotations that
       occur in the QFT circuit are pruned.
 

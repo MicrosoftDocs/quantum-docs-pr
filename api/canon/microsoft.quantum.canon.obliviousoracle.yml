@@ -3,14 +3,14 @@ uid: microsoft.quantum.canon.obliviousoracle
 name: ObliviousOracle
 type: newtype
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Represents an oracle for oblivious amplitude amplification.
 
   The inputs to the oracle $O$ are:
 
   - The ancilla register $a$ that $O$ acts on.
   - The system register $s$ on which the desired unitary $U$ is applied, post-selected on register $a$ being in state $\ket{t}\_a$.
-remarks: >-
+remarks: |-
   This oracle defined by
   $$
   O\ket{s}\_a\ket{\psi}\_s= \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-|\lambda|^2}\ket{t^\perp}\_a\cdots

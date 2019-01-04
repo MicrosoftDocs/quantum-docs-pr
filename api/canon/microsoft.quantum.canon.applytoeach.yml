@@ -4,9 +4,7 @@ name: ApplyToEach
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: Applies a single-qubit operation to each element in a register.
-remarks: >-
-  ## Example
-
+examples: |-
   Prepare a three-qubit $\ket{+}$ state:
 
   ```qsharp

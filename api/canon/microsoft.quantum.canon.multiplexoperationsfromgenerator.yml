@@ -3,27 +3,27 @@ uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
 name: MultiplexOperationsFromGenerator
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Applies a multiply-controlled unitary operation `U` that applies a
   unitary `V_j` when controlled by n-qubit number state `|j〉`.
 
   $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
-remarks: >-
+remarks: |-
   `coefficients` will be padded with identity elements if
   fewer than $2^n$ are specified. This implementation uses
   $n-1$ auxillary qubits.
 syntax: "operation MultiplexOperationsFromGenerator (unitaryGenerator : (Int, (Int -> ('T => Unit : Adjoint, Controlled))), index : Microsoft.Quantum.Canon.BigEndian, target : 'T) : Unit"
-references: >-
+references: |-
   - [ *Andrew M. Childs, Dmitri Maslov, Yunseong Nam, Neil J. Ross, Yuan Su*,
     arXiv:1711.10980](https://arxiv.org/abs/1711.10980)
 input:
   content: "(unitaryGenerator : (Int, (Int -> ('T => Unit : Adjoint, Controlled))), index : Microsoft.Quantum.Canon.BigEndian, target : 'T)"
   types:
   - name: unitaryGenerator
-    summary: >-
+    summary: |-
       A tuple where the first element `Int` is the number of unitaries $N$,
       and the second element `(Int -> ('T => () : Adjoint, Controlled))`
-      is a fuction that takes an integer $j$ in $[0,N-1]$ and outputs the unitary
+      is a function that takes an integer $j$ in $[0,N-1]$ and outputs the unitary
       operation $V_j$.
     types:
     - isPrimitive: true
@@ -48,7 +48,7 @@ input:
           - Adjoint
           - Controlled
   - name: index
-    summary: >-
+    summary: |-
       $n$-qubit control register that encodes number states $\ket{j}$ in
       big-endian format.
     uid: microsoft.quantum.canon.bigendian

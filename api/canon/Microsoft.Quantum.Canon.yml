@@ -1371,24 +1371,24 @@ operations:
 - uid: microsoft.quantum.canon.with
   summary: |-
     Given operations implementing operators `U` and `V`, performs the
-    operation `U�VU` on a target. That is, this operation
+    operation `U†VU` on a target. That is, this operation
     conjugates `V` with `U`.
 - uid: microsoft.quantum.canon.witha
   summary: |-
     Given operations implementing operators `U` and `V`, performs the
-    operation `U�VU` on a target. That is, this operation
+    operation `U†VU` on a target. That is, this operation
     conjugates `V` with `U`.
     The modifier `A` indicates that the inner operation is adjointable.
 - uid: microsoft.quantum.canon.withc
   summary: |-
     Given operations implementing operators `U` and `V`, performs the
-    operation `U�VU` on a target. That is, this operation
+    operation `U†VU` on a target. That is, this operation
     conjugates `V` with `U`.
     The modifier `C` dicates that the inner operation is controllable.
 - uid: microsoft.quantum.canon.withca
   summary: |-
     Given operations implementing operators `U` and `V`, performs the
-    operation `U�VU` on a target. That is, this operation
+    operation `U†VU` on a target. That is, this operation
     conjugates `V` with `U`.
     The modifier `CA` indicates that the inner operation is controllable
     and adjointable.

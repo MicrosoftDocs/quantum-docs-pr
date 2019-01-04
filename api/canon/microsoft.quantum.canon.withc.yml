@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: |-
   Given operations implementing operators `U` and `V`, performs the
-  operation `U�VU` on a target. That is, this operation
+  operation `U†VU` on a target. That is, this operation
   conjugates `V` with `U`.
   The modifier `C` dicates that the inner operation is controllable.
 remarks: |-

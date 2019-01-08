@@ -4,7 +4,7 @@ name: Modulus
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: Computes the canonical residue of `value` modulo `modulus`.
-remarks: >-
+remarks: |-
   This function behaves different to how the operator `%` behaves in C# and Q# as in the result
   is always a positive integer between between 0 and `modulus - 1', even if value is negative.
 syntax: 'function Modulus (value : Int, modulus : Int) : Int'

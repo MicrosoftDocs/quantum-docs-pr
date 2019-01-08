@@ -4,7 +4,7 @@ name: RangeStart
 type: function
 namespace: Microsoft.Quantum.Core
 summary: Returns the defined start value of the given range.
-remarks: >-
+remarks: |-
   A range expression's first element is `start`,
   its second element is `start+step`, third element is `start+step+step`, etc.,
   until `end` is passed.

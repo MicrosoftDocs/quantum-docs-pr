@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.qft
 name: QFT
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Performs the Quantum Fourier Transform on a quantum register containing an
   integer in the big-endian representation.
 remarks: The input and output are assumed to be in big endian encoding.

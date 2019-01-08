@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.asserthighestbit
 name: AssertHighestBit
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Asserts that the highest qubit of a qubit register
   representing an unsigned integer is in a particular state.
 remarks: The controlled version of this operation ignores controls.

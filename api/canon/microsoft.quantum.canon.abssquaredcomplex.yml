@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.abssquaredcomplex
 name: AbsSquaredComplex
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Returns the squared absolute value of a complex number of type
   `Complex`.
 syntax: 'function AbsSquaredComplex (input : Microsoft.Quantum.Extensions.Math.Complex) : Double'

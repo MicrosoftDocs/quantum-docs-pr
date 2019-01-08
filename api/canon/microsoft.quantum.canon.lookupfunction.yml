@@ -3,10 +3,10 @@ uid: microsoft.quantum.canon.lookupfunction
 name: LookupFunction
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given an array, returns a function which returns elements of that
   array.
-remarks: >-
+remarks: |-
   This function is mainly useful for interoperating with functions and
   operations that take `Int -> 'T` functions as their arguments. This
   is common, for instance, in the generator representation library,
@@ -36,7 +36,7 @@ output:
         isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: >-
+  summary: |-
     The type of the elements of the array being represented as a lookup
     function.
 ...

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.evolutionschedule
 name: EvolutionSchedule
 type: newtype
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Represents a time-dependent dynamical generator.
 
   The `Double`

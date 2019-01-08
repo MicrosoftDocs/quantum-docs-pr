@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.adiabaticstateenergyunitary
 name: AdiabaticStateEnergyUnitary
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Performs state preparation by applying a
   `statePrepUnitary` on the input state, followed by adiabatic state
   preparation using a `adiabaticUnitary`, and finally phase estimation
@@ -14,7 +14,7 @@ input:
   content: '(statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit : Adjoint, Controlled), phaseEstAlgorithm : ((Microsoft.Quantum.Canon.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[])'
   types:
   - name: statePrepUnitary
-    summary: >-
+    summary: |-
       An oracle representing state preparation for the initial dynamical
       generator.
     isOperation: true
@@ -28,7 +28,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: adiabaticUnitary
-    summary: >-
+    summary: |-
       An oracle representing the adiabatic evolution algorithm to be used
       to implement the sweeps to the final state of the algorithm.
     isOperation: true
@@ -42,7 +42,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: >-
+    summary: |-
       An oracle representing a unitary operator $U$ representing evolution
       for time $\delta t$ under a dynamical generator with ground state
       $\ket{\phi}$ and ground state energy $E = \phi\\,\delta t$.
@@ -60,7 +60,7 @@ input:
     - Adjoint
     - Controlled
   - name: phaseEstAlgorithm
-    summary: >-
+    summary: |-
       An operation that performs phase estimation on a given unitary operation.
       See [iterative phase estimation](/quantum/libraries/characterization#iterative-phase-estimation)
       for more details.
@@ -83,7 +83,7 @@ input:
 output:
   content: Double
   types:
-  - summary: >-
+  - summary: |-
       An estimate $\hat{\phi}$ of the ground state energy $\phi$
       of the generator represented by $U$.
     isPrimitive: true

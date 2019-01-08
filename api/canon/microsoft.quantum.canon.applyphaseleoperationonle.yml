@@ -3,11 +3,11 @@ uid: microsoft.quantum.canon.applyphaseleoperationonle
 name: ApplyPhaseLEOperationOnLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Applies an operation that takes a
   <xref:microsoft.quantum.canon.littleendian> register as input
   on a target register of type <xref:microsoft.quantum.canon.phaselittleendian>.
-remarks: >-
+remarks: |-
   The register is transformed to `PhaseLittleEndian` by the use of
   <xref:microsoft.quantum.canon.qftle> and is then returned to
   its original representation after application of `op`.

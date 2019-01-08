@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.applyreversedoplittleendian
 name: ApplyReversedOpLittleEndian
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Applies an operation that takes little-endian input to a register encoding
   an unsigned integer using big-endian format.
 syntax: 'operation ApplyReversedOpLittleEndian (op : (Microsoft.Quantum.Canon.LittleEndian => Unit), register : Microsoft.Quantum.Canon.BigEndian) : Unit'

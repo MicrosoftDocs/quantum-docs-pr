@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.extendedgcd
 name: ExtendedGCD
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Computes a tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a
   greatest common divisor of a and b. The GCD is always positive.
 syntax: 'function ExtendedGCD (a : Int, b : Int) : (Int, Int)'

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.pnormalize
 name: PNormalize
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Normalizes a vector of `Double`s in the `L(p)` norm.
 
   That is, given an array $x$ of type `Double[]`, this returns an array where

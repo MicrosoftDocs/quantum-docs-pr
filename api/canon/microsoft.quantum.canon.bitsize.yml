@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.bitsize
 name: BitSize
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   For a non-negative integer `a`, returns the number of bits required to represent `a`.
 
   That is, returns the smallest $n$ such

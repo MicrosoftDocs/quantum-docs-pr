@@ -3,10 +3,10 @@ uid: microsoft.quantum.canon.preparechoistate
 name: PrepareChoiState
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Prepares the Choi–Jamiłkowski state for a given operation onto given reference
   and target registers.
-remarks: >-
+remarks: |-
   The Choi–Jamiłkowski state $J(\Lambda)$ of a quantum process is
   defined as
   $$
@@ -25,7 +25,7 @@ input:
   content: '(op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[])'
   types:
   - name: op
-    summary: >-
+    summary: |-
       Operation $\Lambda$ whose Choi–Jamiłkowski state $J(\Lambda) / 2^N$
       is to be prepared, where $N$ is the number of qubits on which
       `op` acts.
@@ -40,14 +40,14 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: reference
-    summary: >-
+    summary: |-
       A register of qubits starting in the $\ket{00\cdots 0}$ state
       to be used as a reference for the action of `op`.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: >-
+    summary: |-
       A register of qubits initially in the $\ket{00\cdots 0}$ state
       on which `op` is to be applied.
     isArray: true

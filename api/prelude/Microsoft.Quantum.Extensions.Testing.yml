@@ -7,18 +7,18 @@ operations:
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
   summary: Assert that given qubits are all in |0⟩ state
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
-  summary: >-
+  summary: |-
     Checks if the operation `givenU` is equal to the operation `expectedU` on
     the given input size.
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
-  summary: >-
+  summary: |-
     Checks if the operation `givenU` is equal to the operation `expectedU` on
     the given input size  by checking the action of the operations only on
     the vectors from the computational basis.
     This is a necessary, but not sufficient, condition for the equality of
     two unitaries.
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
-  summary: >-
+  summary: |-
     Given two operations, asserts that they act identically for all input states.
 
     This assertion is implemented by using the Choi–Jamiłkowski isomorphism to reduce
@@ -31,7 +31,7 @@ operations:
 - uid: microsoft.quantum.extensions.testing.assertqubit
   summary: Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator.
 - uid: microsoft.quantum.extensions.testing.assertqubitstate
-  summary: >-
+  summary: |-
     Asserts that a qubit in the expected state.
 
     `expected` represents a complex vector, $\ket{\psi} = \begin{bmatrix}a & b\end{bmatrix}^{\mathrm{T}}$.
@@ -39,7 +39,7 @@ operations:
     is the real part of the complex number, while the second one is the imaginary part.
     The last argument defines the tolerance with which assertion is made.
 - uid: microsoft.quantum.extensions.testing.assertqubittol
-  summary: >-
+  summary: |-
     Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator up to
     a given tolerance.
 ...

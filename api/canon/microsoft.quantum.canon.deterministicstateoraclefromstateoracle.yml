@@ -9,7 +9,7 @@ input:
   content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Canon.StateOracle)'
   types:
   - name: idxFlagQubit
-    summary: >-
+    summary: |-
       The index to the flag qubit of the `stateOracle` $A$,
       which explicitly acts on two registers: the flag $f$ and the system
       $s$, e.g. $A\ket{0}\_f\ket{\psi}\_s$.
@@ -21,7 +21,7 @@ input:
 output:
   content: Microsoft.Quantum.Canon.DeterministicStateOracle
   types:
-  - summary: >-
+  - summary: |-
       The same state preparation oracle $A$, but now of type
       `DeterministicStateOracle`, so it acts on a register where $a,s$ no
       longer explicitly separate, e.g.  $A\ket{0\psi}\_{as}$.

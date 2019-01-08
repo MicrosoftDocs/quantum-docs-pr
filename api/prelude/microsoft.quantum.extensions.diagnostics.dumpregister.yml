@@ -4,7 +4,7 @@ name: DumpRegister
 type: function
 namespace: Microsoft.Quantum.Extensions.Diagnostics
 summary: Dumps the current target machine's status associated with the given qubits.
-remarks: >-
+remarks: |-
   This method allows you to dump the information associated with the state of the
   given qubits into a file or some other location.
   The actual information generated and the semantics of `location`

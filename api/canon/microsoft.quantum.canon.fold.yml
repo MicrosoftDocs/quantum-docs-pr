@@ -3,9 +3,18 @@ uid: microsoft.quantum.canon.fold
 name: Fold
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Iterates a function `f` through an array `array`, returning
   `f(f(f(initialState, array[0]), array[1]), ...)`.
+examples: |-
+  ```qsharp
+  function Plus(a : Double, b : Double) {
+      return a + b;
+  }
+  function Sum(xs : Double[]) {
+      return Fold(Plus, 0.0, xs);
+  }
+  ```
 syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array : 'T[]) : 'State"
 input:
   content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
@@ -35,14 +44,14 @@ input:
 output:
   content: "'State"
   types:
-  - summary: >-
+  - summary: |-
       The final state returned by the folder after iterating over
       all elements of `array`.
     uid: "'State"
     isLocal: true
 typeParameters:
 - uid: "'State"
-  summary: >-
+  summary: |-
     The type of states the `folder` function operates on, i.e., accepts as its first
     argument and returns.
 - uid: "'T"

@@ -3,10 +3,10 @@ uid: microsoft.quantum.canon.paulievolutionset
 name: PauliEvolutionSet
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Represents a dynamical generator as a set of simulatable gates and an
   expansion in the Pauli basis.
-remarks: >-
+remarks: |-
   This is obtained by partial application of
   <xref:microsoft.quantum.canon.paulievolutionfunction>.
 syntax: 'function PauliEvolutionSet () : Microsoft.Quantum.Canon.EvolutionSet'
@@ -16,7 +16,7 @@ input:
 output:
   content: Microsoft.Quantum.Canon.EvolutionSet
   types:
-  - summary: >-
+  - summary: |-
       An `EvolutionSet` that maps a `GeneratorIndex` for the Pauli basis to
       an `EvolutionUnitary.
     uid: microsoft.quantum.canon.evolutionset

@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.r
 name: R
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Applies a rotation about the given Pauli axis.
 
   \begin{align}
@@ -11,7 +11,7 @@ summary: >-
   e^{-i \theta \sigma_{\mu} / 2},
   \end{align}
   where $\mu \in \{I, X, Y, Z\}$.
-remarks: >-
+remarks: |-
   When called with `pauli = PauliI`, this operation applies
   a *global phase*. This phase can be significant
   when used with the `Controlled` functor.

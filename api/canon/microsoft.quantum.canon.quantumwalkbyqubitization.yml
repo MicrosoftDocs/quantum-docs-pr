@@ -3,14 +3,14 @@ uid: microsoft.quantum.canon.quantumwalkbyqubitization
 name: QuantumWalkByQubitization
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Converts a `BlockEncodingReflection` into a quantum walk.
 
   That is, given a `BlockEncodingReflection` unitary $U$
   that encodes some operator $H$ of interest, converts it into a quantum walk
   $W$ containing the spectrum of $\pm e^{\pm i\sin^{-1}(H)}$.
 syntax: 'function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Canon.BlockEncodingReflection) : ((Qubit[], Qubit[]) => Unit : Adjoint, Controlled)'
-references: >-
+references: |-
   - Hamiltonian Simulation by Qubitization
     Guang Hao Low, Isaac L. Chuang
     https://arxiv.org/abs/1610.06546
@@ -22,7 +22,7 @@ input:
 output:
   content: '((Qubit[], Qubit[]) => Unit : Adjoint, Controlled)'
   types:
-  - summary: >-
+  - summary: |-
       A quantum walk $W$ acting jointly on registers `a` and `s` that block-
       encodes $H$, and contains the spectrum of $\pm e^{\pm i\sin^{-1}(H)}$.
     isOperation: true

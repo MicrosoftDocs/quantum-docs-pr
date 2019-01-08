@@ -3,7 +3,7 @@ uid: microsoft.quantum.extensions.convert.todouble
 name: ToDouble
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: >-
+summary: |-
   Converts a given integer to an equivalent double-precision
   floating-point number.
 remarks: See [C# Convert.ToDouble](https://docs.microsoft.com/dotnet/api/system.convert.todouble?view=netframework-4.7.1#System_Convert_ToDouble_System_Int64_) for more details.

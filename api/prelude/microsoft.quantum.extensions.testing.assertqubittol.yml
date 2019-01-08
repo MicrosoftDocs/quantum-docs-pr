@@ -3,10 +3,10 @@ uid: microsoft.quantum.extensions.testing.assertqubittol
 name: AssertQubitTol
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
-summary: >-
+summary: |-
   Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator up to
   a given tolerance.
-remarks: >-
+remarks: |-
   <xref:microsoft.quantum.extensions.testing.assertqubitstate> allows for asserting
   arbitrary qubit states rather than only $Z$ eigenstates.
 syntax: 'operation AssertQubitTol (expected : Result, q : Qubit, tolerance : Double) : Unit'
@@ -22,7 +22,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: >-
+    summary: |-
       Tolerance on the probability of a measurement of the qubit returning the expected
       result.
     isPrimitive: true

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.resultfrombool
 name: ResultFromBool
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Converts a `Bool` type to a `Result` type, where `true` is mapped to
   `One` and `false` is mapped to `Zero`.
 syntax: 'function ResultFromBool (input : Bool) : Result'

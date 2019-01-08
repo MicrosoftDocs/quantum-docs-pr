@@ -14,7 +14,7 @@ input:
 output:
   content: (Qubit[], Qubit[])
   types:
-  - summary: >-
+  - summary: |-
       A qubit array of length 1 representing the unencoded state in the
       first parameter, together with auxillary qubits in the second parameter.
     types:

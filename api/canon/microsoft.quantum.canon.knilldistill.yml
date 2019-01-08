@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.knilldistill
 name: KnillDistill
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Implements the Knill magic state distillation algorithm.
 
   Given 15 approximate copies of a magic state
@@ -13,7 +13,7 @@ summary: >-
   \end{align},
   $$
   yields one higher-quality copy.
-remarks: >-
+remarks: |-
   We follow the algorithm of Knill.
   However, the present implementation is far from being optimal,
   as it uses too many qubits.
@@ -25,7 +25,7 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
-    summary: >-
+    summary: |-
       A register of fifteen qubits containing approximate copies
       of a magic state. Following application of this distillation
       procedure, `roughMagic[0]` will contain one higher-quality
@@ -37,7 +37,7 @@ input:
 output:
   content: Bool
   types:
-  - summary: >-
+  - summary: |-
       If `true`, then the procedure succeeded and the higher-quality
       copy should be accepted. If `false`, the procedure failed, and
       the state of the register should be considered undefined.

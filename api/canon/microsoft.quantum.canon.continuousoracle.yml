@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.continuousoracle
 name: ContinuousOracle
 type: newtype
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Represents a continuous-time oracle.
 
   This is an oracle that implements

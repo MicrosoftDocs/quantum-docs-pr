@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.pnorm
 name: PNorm
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Returns the `L(p)` norm of a vector of `Double`s.
 
   That is, given an array $x$ of type `Double[]`, this returns the $p$-norm

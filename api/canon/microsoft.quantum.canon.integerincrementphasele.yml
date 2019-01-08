@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.integerincrementphasele
 name: IntegerIncrementPhaseLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Unsigned integer increment by an integer constant, based on phase rotations.
 
   Suppose `target` encodes unsigned integer x in little-endian encoding and
@@ -11,7 +11,7 @@ summary: >-
   The operation implements the unitary |x⟩ ↦ |x + a ⟩,
   where the addition is performed
   modulo 2ⁿ, for n = `Length(target)`.
-remarks: >-
+remarks: |-
   Note that we have simplified the circuit because the increment is a classical constant,
   not a quantum register.
 
@@ -19,7 +19,7 @@ remarks: >-
   [ Page 6 of arXiv:quant-ph/0008033v1 ](https://arxiv.org/pdf/quant-ph/0008033.pdf#page=6)
   for the circuit diagram and explanation.
 syntax: 'operation IntegerIncrementPhaseLE (increment : Int, target : Microsoft.Quantum.Canon.PhaseLittleEndian) : Unit'
-references: >-
+references: |-
   - [ *Thomas G. Draper*,
     arXiv:quant-ph/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)
 input:

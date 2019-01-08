@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.argcomplex
 name: ArgComplex
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Returns the phase of a complex number of type
   `Complex`.
 syntax: 'function ArgComplex (input : Microsoft.Quantum.Extensions.Math.Complex) : Double'

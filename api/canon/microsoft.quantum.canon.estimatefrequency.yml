@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.estimatefrequency
 name: EstimateFrequency
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given a preparation and measurement, estimates the frequency
   with which that measurement succeeds (returns `Zero`) by
   performing a given number of trials.
@@ -12,7 +12,7 @@ input:
   content: '(preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
   types:
   - name: preparation
-    summary: >-
+    summary: |-
       An operation $P$ that prepares a given state $\rho$ on
       its input register.
     isOperation: true
@@ -38,13 +38,13 @@ input:
       - isPrimitive: true
         uid: Result
   - name: nQubits
-    summary: >-
+    summary: |-
       The number of qubits on which the preparation and measurement
       each act.
     isPrimitive: true
     uid: Int
   - name: nMeasurements
-    summary: >-
+    summary: |-
       The number of times that the measurement should be performed
       in order to estimate the frequency of interest.
     isPrimitive: true
@@ -52,7 +52,7 @@ input:
 output:
   content: Double
   types:
-  - summary: >-
+  - summary: |-
       An estimate $\hat{p}$ of the frequency with which
       $M(P(\ket{00 \cdots 0}\bra{00 \cdots 0}))$ returns `Zero`,
       obtained using the unbiased binomial estimator $\hat{p} =

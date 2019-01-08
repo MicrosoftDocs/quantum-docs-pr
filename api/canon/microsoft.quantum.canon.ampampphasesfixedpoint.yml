@@ -3,11 +3,11 @@ uid: microsoft.quantum.canon.ampampphasesfixedpoint
 name: AmpAmpPhasesFixedPoint
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Computes partial reflection phases for fixed-point amplitude
   amplification.
 syntax: 'function AmpAmpPhasesFixedPoint (nQueries : Int, successMin : Double) : Microsoft.Quantum.Canon.AmpAmpReflectionPhases'
-references: >-
+references: |-
   We use the phases in "Fixed-Point Amplitude Amplification with
   an Optimal Number of Queries"
 
@@ -19,7 +19,7 @@ input:
   content: '(nQueries : Int, successMin : Double)'
   types:
   - name: nQueries
-    summary: >-
+    summary: |-
       Number of queries to the state preparation oracle. Must be an odd
       integer.
     isPrimitive: true
@@ -31,7 +31,7 @@ input:
 output:
   content: Microsoft.Quantum.Canon.AmpAmpReflectionPhases
   types:
-  - summary: >-
+  - summary: |-
       Array of phases that can be used in fixed-point amplitude amplification
       quantum algorithm implementation.
     uid: microsoft.quantum.canon.ampampreflectionphases

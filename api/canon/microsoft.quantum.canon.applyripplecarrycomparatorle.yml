@@ -23,10 +23,10 @@ input:
   content: '(x : Microsoft.Quantum.Canon.LittleEndian, y : Microsoft.Quantum.Canon.LittleEndian, output : Qubit)'
   types:
   - name: x
-    summary: First nubmer to be compared stored in `LittleEndian` format in a qubit register.
+    summary: First number to be compared stored in `LittleEndian` format in a qubit register.
     uid: microsoft.quantum.canon.littleendian
   - name: y
-    summary: Second nubmer to be compared stored in `LittleEndian` format in a qubit register.
+    summary: Second number to be compared stored in `LittleEndian` format in a qubit register.
     uid: microsoft.quantum.canon.littleendian
   - name: output
     summary: Qubit that stores the result of the comparison $x>y$.

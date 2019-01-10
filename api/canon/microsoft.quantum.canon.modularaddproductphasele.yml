@@ -4,7 +4,7 @@ name: ModularAddProductPhaseLE
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: |-
-  The same as ModularAddProductInPlaceLE, but assumes that summand encodes
+  The same as ModularAddProductLE, but assumes that summand encodes
   integers in QFT basis
 remarks: |-
   Assumes that `phaseSummand` has the highest bit set to 0.

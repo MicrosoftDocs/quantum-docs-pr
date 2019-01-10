@@ -13,8 +13,8 @@ input:
   - name: code
     summary: |-
       A quantum error-correcting code packaged as a `QECC` type describes
-      the encoding and deconding of quantum data, and how error syndromes
-      are to be measuremed.
+      the encoding and decoding of quantum data, and how error syndromes
+      are to be measured.
     uid: microsoft.quantum.canon.qecc
   - name: fn
     summary: |-

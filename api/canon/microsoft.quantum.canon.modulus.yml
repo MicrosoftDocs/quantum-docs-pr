@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: Computes the canonical residue of `value` modulo `modulus`.
 remarks: |-
   This function behaves different to how the operator `%` behaves in C# and Q# as in the result
-  is always a positive integer between between 0 and `modulus - 1', even if value is negative.
+  is always a positive integer between 0 and `modulus - 1`, even if value is negative.
 syntax: 'function Modulus (value : Int, modulus : Int) : Int'
 input:
   content: '(value : Int, modulus : Int)'
@@ -22,7 +22,7 @@ input:
 output:
   content: Int
   types:
-  - summary: Integer r between 0 and `modulus - 1' such that`value - r' is divisible by modulus
+  - summary: Integer $r$ between 0 and `modulus - 1` such that `value - r` is divisible by modulus
     isPrimitive: true
     uid: Int
 ...

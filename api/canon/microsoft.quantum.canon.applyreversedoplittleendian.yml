@@ -29,7 +29,7 @@ output:
   - isPrimitive: true
     uid: Unit
 seeAlso:
-- microsoft.quantum.canon.applyreversedoplittlendiana
-- microsoft.quantum.canon.applyreversedoplittlendianc
-- microsoft.quantum.canon.applyreversedoplittlendianca
+- microsoft.quantum.canon.applyreversedoplittleendiana
+- microsoft.quantum.canon.applyreversedoplittleendianc
+- microsoft.quantum.canon.applyreversedoplittleendianca
 ...

@@ -3,13 +3,13 @@ uid: microsoft.quantum.chemistry.htermstogensys
 name: HTermsToGenSys
 type: function
 namespace: Microsoft.Quantum.Chemistry
-summary: Converts a Hamiltonian in 'HTerm[]' data format to a GeneratorSystem.
+summary: Converts a Hamiltonian in `HTerm[]` data format to a GeneratorSystem.
 syntax: 'function HTermsToGenSys (data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[]) : Microsoft.Quantum.Canon.GeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[])'
   types:
   - name: data
-    summary: Input data in 'HTerm[]' format.
+    summary: Input data in `HTerm[]` format.
     isArray: true
     uid: microsoft.quantum.chemistry.hterm
   - name: termType

@@ -15,7 +15,7 @@ input:
 output:
   content: Bool
   types:
-  - summary: Returns true if `number` has an absolute value greater '1e-15'.
+  - summary: Returns true if `number` has an absolute value greater than `1e-15`.
     isPrimitive: true
     uid: Bool
 ...

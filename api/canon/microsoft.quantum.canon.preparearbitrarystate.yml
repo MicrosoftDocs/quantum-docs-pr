@@ -39,7 +39,7 @@ input:
     summary: |-
       Qubit register encoding number states in big-endian format. This is
       expected to be initialized in the computational basis state
-      $ket{0...0}$.
+      $\ket{0...0}$.
     uid: microsoft.quantum.canon.bigendian
 output:
   content: Unit

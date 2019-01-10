@@ -473,6 +473,22 @@ right-hand side of a
 [`mutable`](xref:microsoft.quantum.qsharp-ref.statements#mutable-symbols)
 statement.
 
+### Jagged Arrays
+
+A jagged array, sometimes called an "array of arrays", is an array whose elements are arrays. The elements of a jagged array can be of different sizes. The following example shows how to declare and initialize a jagged array representing a multiplication table.
+
+```qsharp
+let N = 4;
+mutable multiplicationTable = new Int[][N];
+for (i in 1..N) {
+    set multiplicationTable[i-1] = new Int[i];
+    for (j in 1..i) {
+        set multiplicationTable[i-1][j-1] = i * j;
+    }
+}
+```
+
+
 ### Array Slices
 
 Given an array expression and a `Range` expression, a new expression

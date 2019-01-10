@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.resultasint
 name: ResultAsInt
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given an array of results, represents the array by a single
   integer, with the 0th (leftmost) entry in the array being mapped
   the least significant bit. Thus, `[One, Zero]` is represented by

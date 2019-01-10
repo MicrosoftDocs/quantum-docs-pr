@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.applytopartitiona
 name: ApplyToPartitionA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Applies a pair of operations to a given partition of a register into two parts.
   The modifier `A` indicates that the operation is adjointable.
 syntax: 'operation ApplyToPartitionA (op : ((Qubit[], Qubit[]) => Unit : Adjoint), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit'
@@ -28,13 +28,13 @@ input:
     functors:
     - Adjoint
   - name: numberOfQubitsToFirstArgument
-    summary: >-
+    summary: |-
       Number of qubits from target to put into the first part of the partition.
       The remaining qubits constitute the second part of the partition.
     isPrimitive: true
     uid: Int
   - name: target
-    summary: >-
+    summary: |-
       A register of qubits that are being partitioned and operated on by the
       given two operation.
     isArray: true

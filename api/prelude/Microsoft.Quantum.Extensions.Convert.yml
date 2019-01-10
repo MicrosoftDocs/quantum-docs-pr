@@ -3,11 +3,11 @@ uid: microsoft.quantum.extensions.convert
 name: Microsoft.Quantum.Extensions.Convert
 functions:
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: >-
+  summary: |-
     Encodes a multi-qubit Pauli operator represented as an array of
     single-qubit Pauli operators into an integer.
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: >-
+  summary: |-
     Converts a given integer to an equivalent double-precision
     floating-point number.
 - uid: microsoft.quantum.extensions.convert.tostringb
@@ -15,13 +15,13 @@ functions:
 - uid: microsoft.quantum.extensions.convert.tostringd
   summary: Converts a given double-precision floating-point number to an equivalent string representation.
 - uid: microsoft.quantum.extensions.convert.tostringdformat
-  summary: >-
+  summary: |-
     Converts a given double-precision floating-point number to an equivalent string representation,
     using the given format.
 - uid: microsoft.quantum.extensions.convert.tostringi
   summary: Converts a given integer number to an equivalent string representation.
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-  summary: >-
+  summary: |-
     Converts a given integer number to an equivalent string representation,
     using the given format.
 ...

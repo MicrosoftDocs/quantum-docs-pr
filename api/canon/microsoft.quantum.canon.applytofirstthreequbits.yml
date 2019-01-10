@@ -4,7 +4,7 @@ name: ApplyToFirstThreeQubits
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: Applies an operation to the first three qubits in the register.
-remarks: >-
+remarks: |-
   This is equivalent to:
 
   ```qsharp

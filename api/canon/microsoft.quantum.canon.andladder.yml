@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.andladder
 name: AndLadder
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Performs a controlled 'AND ladder' on the target qubits.
 
   This applies a unitary given by the following map on computational basis vectors:
@@ -18,12 +18,12 @@ summary: >-
   where $\ket{x\_1, \dots, x\_n}$ refers to the computational basis
   states of `controls`, and where $\ket{y\_1, \dots, y\_{n - 1}}$
   refers to the computational basis states of `targets`.
-remarks: >-
+remarks: |-
   - Used as a part of <xref:microsoft.quantum.canon.applymulticontrolledc>
     and <xref:microsoft.quantum.canon.applymulticontrolledca>.
   - For the explanation and circuit diagram see Figure 4.10, Section 4.3 in Nielsen & Chuang.
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
-references: >-
+references: |-
   - [ *Michael A. Nielsen , Isaac L. Chuang*,
     Quantum Computation and Quantum Information ](http://doi.org/10.1017/CBO9780511976667)
 input:
@@ -33,7 +33,7 @@ input:
     summary: The CCNOT gate to use for the construction.
     uid: microsoft.quantum.canon.ccnotop
   - name: controls
-    summary: >-
+    summary: |-
       A register of qubits to be used as controls for the and ladder.
       This operation leaves computational basis states of `controls`
       invariant.
@@ -43,7 +43,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: >-
+    summary: |-
       The length of `targets` must be at least 1 and equal to the length
       of `controls` minus one.
     isArray: true

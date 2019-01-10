@@ -3,11 +3,11 @@ uid: microsoft.quantum.canon.interpolatedevolution
 name: InterpolatedEvolution
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Interpolates between two generators with a uniform schedule,
   returning an operation that applies simulated evolution under
   the resulting time-dependent generator to a qubit register.
-remarks: >-
+remarks: |-
   If the interpolation time is chosen to meet the adiabatic conditions,
   then this function returns an operation which performs adiabatic
   state preparation for the final dynamical generator.
@@ -25,7 +25,7 @@ input:
     summary: Final generator to simulate evolution under.
     uid: microsoft.quantum.canon.evolutiongenerator
   - name: timeDependentSimulationAlgorithm
-    summary: >-
+    summary: |-
       A time-dependent simulation algorithm that will be used
       to simulate evolution during the uniform interpolation schedule.
     uid: microsoft.quantum.canon.timedependentsimulationalgorithm

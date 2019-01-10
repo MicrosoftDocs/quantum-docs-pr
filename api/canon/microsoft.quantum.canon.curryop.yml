@@ -3,13 +3,13 @@ uid: microsoft.quantum.canon.curryop
 name: CurryOp
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Returns a curried version of an operation on two inputs.
 
   That is, given an operation with two inputs, this function applies Curry's isomorphism
   $f(x, y) \equiv f(x)(y)$ to return an operation of one input which
   returns an operation of one input.
-remarks: >-
+remarks: |-
   The following are equivalent:
 
   ```qsharp
@@ -39,7 +39,7 @@ input:
 output:
   content: ('T -> ('U => Unit))
   types:
-  - summary: >-
+  - summary: |-
       An operation which accepts the first element of a pair and returns
       an operation which accepts as its input the second element of the
       original operation's input.

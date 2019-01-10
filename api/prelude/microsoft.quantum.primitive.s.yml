@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.s
 name: S
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Applies the π/4 phase gate to a single qubit.
 
   \begin{align}

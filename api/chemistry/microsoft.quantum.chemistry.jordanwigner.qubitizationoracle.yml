@@ -14,7 +14,7 @@ input:
 output:
   content: '(Int, (Double, (Qubit[] => Unit : Adjoint, Controlled)))'
   types:
-  - summary: >-
+  - summary: |-
       A tuple where: `Int` is the number of qubits allocated,
       `Double` is the one-norm of Hamiltonian coefficients, and the operation
       is the Quantum walk created by Qubitization.

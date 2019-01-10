@@ -3,11 +3,11 @@ uid: microsoft.quantum.canon.subarray
 name: Subarray
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Takes an array and a list of locations and
   produces a new array formed from the elements of the original
   array that match the given locations.
-remarks: >-
+remarks: |-
   The function is defined for generic types, i.e., whenever we have
   an array `'T[]` and a list of locations `Int[]` defining the subarray.
   The construction of the subarray is a based on generating a new, deep
@@ -17,7 +17,7 @@ remarks: >-
   subset of `array`. On the other hand, if `indices` contains repeated
   elements, the corresponding elements of `array` will likewise be
   repeated.
-  If `indices` and `array` are the same length, this this function
+  If `indices` and `array` are the same length, this function
   provides permutations of `array`.
 syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
 input:
@@ -36,7 +36,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: >-
+  - summary: |-
       An array `out` of elements whose indices correspond to the subarray,
       such that `out[idx] == array[indices[idx]]`.
     isArray: true

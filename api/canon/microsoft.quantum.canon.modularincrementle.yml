@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.modularincrementle
 name: ModularIncrementLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Performs a modular increment of a qubit register by an integer constant.
 
   Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
@@ -12,7 +12,7 @@ summary: >-
   \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N}
   \end{align}
   Integers are encoded in little-endian format.
-remarks: >-
+remarks: |-
   Assumes that the value of target is less than N. Note that
   <xref:microsoft.quantum.canon.modularincrementphasele> implements
   the same operation, but in the `PhaseLittleEndian` basis.

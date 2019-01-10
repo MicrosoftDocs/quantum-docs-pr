@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsys
 name: OptimizedBlockEncodingGeneratorSystem
 type: function
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: >-
+summary: |-
   Converts a Hamiltonian described by `JWOptimizedHTerms`
   to a `GeneratorSystem` expressed in terms of the Pauli
   `GeneratorIndex`.

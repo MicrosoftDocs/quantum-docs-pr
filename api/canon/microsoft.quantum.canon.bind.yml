@@ -3,10 +3,23 @@ uid: microsoft.quantum.canon.bind
 name: Bind
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given an array of operations acting on a single input,
   produces a new operation that
   performs each given operation in sequence.
+examples: |-
+  The following are equivalent:
+
+  ```qsharp
+  let bound = Bind([U, V]);
+  bound(x);
+  ```
+
+  and
+
+  ```qsharp
+  U(x); V(x);
+  ```
 syntax: "function Bind (operations : ('T => Unit)[]) : ('T => Unit)"
 input:
   content: "(operations : ('T => Unit)[])"
@@ -26,7 +39,7 @@ input:
 output:
   content: ('T => Unit)
   types:
-  - summary: >-
+  - summary: |-
       A new operation that performs each given operation in sequence
       on its input.
     isOperation: true

@@ -14,7 +14,7 @@ input:
 output:
   content: (Qubit[], Qubit[])
   types:
-  - summary: >-
+  - summary: |-
       A tuple of the data encoded into the logical register, and the auxiliary
       qubits used to represent the syndrome.
     types:

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.applytosubregistera
 name: ApplyToSubregisterA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Applies an operation to a subregister of a register, with qubits
   specified by an array of their indices.
   The modifier `A` indicates that the operation is adjointable.

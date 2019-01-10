@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.applyreversedoplittleendiana
 name: ApplyReversedOpLittleEndianA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Applies an operation that takes little-endian input and that supports
   the adjoint functor to a register encoding
   an unsigned integer using big-endian format.

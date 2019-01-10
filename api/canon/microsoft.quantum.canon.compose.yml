@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.compose
 name: Compose
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Generates the composition of two functions.
 
   That is, given two functions $f$ and $g$, returns a new function representing
@@ -51,7 +51,7 @@ typeParameters:
 - uid: "'T"
   summary: The input type of the first function to be applied.
 - uid: "'U"
-  summary: >-
+  summary: |-
     The output type of the first function to be applied and the input type
     of the second function to be applied.
 - uid: "'V"

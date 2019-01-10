@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.applytofirstqubita
 name: ApplyToFirstQubitA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Applies an operation to the first qubit in the register.
   The modifier `A` indicates that the operation is adjointable.
 syntax: 'operation ApplyToFirstQubitA (op : (Qubit => Unit : Adjoint), register : Qubit[]) : Unit'

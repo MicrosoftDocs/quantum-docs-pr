@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.complexpolartocomplex
 name: ComplexPolarToComplex
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Converts a complex number of type `ComplexPolar` to a complex
   number of type `Complex`.
 syntax: 'function ComplexPolarToComplex (input : Microsoft.Quantum.Canon.ComplexPolar) : Microsoft.Quantum.Extensions.Math.Complex'

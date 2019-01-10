@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.m
 name: M
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Performs a measurement of a single qubit in the
   Pauli $Z$ basis.
 
@@ -13,7 +13,7 @@ summary: >-
   \Pr(\texttt{Zero} | \ket{\psi}) =
   \braket{\psi | 0} \braket{0 | \psi}.
   \end{align}
-remarks: >-
+remarks: |-
   Equivalent to:
 
   ```qsharp
@@ -30,7 +30,7 @@ input:
 output:
   content: Result
   types:
-  - summary: >-
+  - summary: |-
       `Zero` if the $+1$ eigenvalue is observed, and `One` if
       the $-1$ eigenvalue is observed.
     isPrimitive: true

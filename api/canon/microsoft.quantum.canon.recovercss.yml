@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.recovercss
 name: RecoverCSS
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Performs a single round of error correction by a quantum code
   described by a `CSS` type.
 syntax: 'operation RecoverCSS (code : Microsoft.Quantum.Canon.CSS, fnX : Microsoft.Quantum.Canon.RecoveryFn, fnZ : Microsoft.Quantum.Canon.RecoveryFn, logicalRegister : Microsoft.Quantum.Canon.LogicalRegister) : Unit'
@@ -11,18 +11,18 @@ input:
   content: '(code : Microsoft.Quantum.Canon.CSS, fnX : Microsoft.Quantum.Canon.RecoveryFn, fnZ : Microsoft.Quantum.Canon.RecoveryFn, logicalRegister : Microsoft.Quantum.Canon.LogicalRegister)'
   types:
   - name: code
-    summary: >-
+    summary: |-
       A quantum CSS error-correcting code packaged as a `CSS` type describes
-      the encoding and deconding of quantum data, and how error syndromes
-      are to be measuremed.
+      the encoding and decoding of quantum data, and how error syndromes
+      are to be measured.
     uid: microsoft.quantum.canon.css
   - name: fnX
-    summary: >-
+    summary: |-
       A `RecoveryFn` that maps each $X$ error syndrome to the `Pauli[]` operations
       that correct the detected error.
     uid: microsoft.quantum.canon.recoveryfn
   - name: fnZ
-    summary: >-
+    summary: |-
       A `RecoveryFn` that maps each $Z$ error syndrome to the `Pauli[]` operations
       that correct the detected error.
     uid: microsoft.quantum.canon.recoveryfn

@@ -3,13 +3,18 @@ uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: Assert that given qubits are all in |0⟩ state.
+  summary: Assert that given qubits are all in $\ket{0}$ state.
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
-  summary: Assert that given qubits are all in |0⟩ state
+  summary: Assert that given qubits are all in $\ket{0}$ state up to a given tolerance.
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
   summary: |-
-    Checks if the operation `givenU` is equal to the operation `expectedU` on
-    the given input size.
+    Given two operations, asserts that they act identically for all input states.
+
+    This assertion is implemented by checking the action of the operations
+    on all states of the form $V_0 \otimes ... \otimes V_{n-1}$, where
+    $V_k$ is one of the states $\ket{0}$, $\ket{1}$, $\ket{+}$ and $\ket{i}$ (+1 eigenstate of Pauli Y operator).
+
+    This assertion uses $n$ qubits and requires multiple calls of the operations being compared.
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
   summary: |-
     Checks if the operation `givenU` is equal to the operation `expectedU` on

@@ -8,7 +8,7 @@ summary: |-
   with an argument given by a dyadic fraction.
 
   \begin{align}
-  e^{i \theta \pi k [P_0 \otimes P_1 \cdots P_N] / 2^n},
+  e^{i \pi k [P_0 \otimes P_1 \cdots P_{N-1}] / 2^n},
   \end{align}
   where $P_i$ is the $i$th element of `paulis`, and where
   $N = $`Length(paulis)`.

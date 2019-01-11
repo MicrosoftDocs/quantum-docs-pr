@@ -19,7 +19,7 @@ functions:
 - uid: microsoft.quantum.extensions.math.cos
   summary: Returns the cosine of the specified angle.
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: Returns the cosine of the specified angle.
+  summary: Returns the hyperbolic cosine of the specified angle.
 - uid: microsoft.quantum.extensions.math.e
   summary: Returns the natural logarithmic base $e$.
 - uid: microsoft.quantum.extensions.math.expd
@@ -64,5 +64,7 @@ functions:
   summary: Calculates the integral part of a number.
 newtypes:
 - uid: microsoft.quantum.extensions.math.complex
-  summary: Represents a complex number by its real and imaginary components.
+  summary: |-
+    Represents a complex number by its real and imaginary components.
+    The first element of the tuple is the real component, the second one - the imaginary component.
 ...

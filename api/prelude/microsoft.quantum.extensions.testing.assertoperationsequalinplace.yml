@@ -4,9 +4,17 @@ name: AssertOperationsEqualInPlace
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
 summary: |-
-  Checks if the operation `givenU` is equal to the operation `expectedU` on
-  the given input size.
+  Given two operations, asserts that they act identically for all input states.
+
+  This assertion is implemented by checking the action of the operations
+  on all states of the form $V_0 \otimes ... \otimes V_{n-1}$, where
+  $V_k$ is one of the states $\ket{0}$, $\ket{1}$, $\ket{+}$ and $\ket{i}$ (+1 eigenstate of Pauli Y operator).
+
+  This assertion uses $n$ qubits and requires multiple calls of the operations being compared.
 syntax: 'operation AssertOperationsEqualInPlace (givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit : Adjoint), inputSize : Int) : Unit'
+references: |-
+  The basis of states $\ket{0}$, $\ket{1}$, $\ket{+}$ and $\ket{i}$ is the Chuang-Nielsen basis,
+  described in [ *I. L. Chuang, M. A. Nielsen* ](https://arxiv.org/abs/quant-ph/9610001).
 input:
   content: '(givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit : Adjoint), inputSize : Int)'
   types:
@@ -45,4 +53,6 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+seeAlso:
+- microsoft.quantum.extensions.testing.assertoperationsequalreferenced
 ...

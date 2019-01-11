@@ -8,6 +8,9 @@ remarks: |-
   A range expression's first element is `start`,
   its second element is `start+step`, third element is `start+step+step`, etc.,
   until `end` is passed.
+
+  Note that the defined start value of a range is the same as the first element of the sequence,
+  unless the range specifies an empty sequence (for example, 2 .. 1).
 syntax: 'function RangeStart (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -18,7 +21,7 @@ input:
 output:
   content: Int
   types:
-  - summary: The range's first item.
+  - summary: The defined start value of the given range.
     isPrimitive: true
     uid: Int
 ...

@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Extensions.Bitwise
 summary: |-
   Returns the bitwise NOT of an integer.
   This performs the same computation as the built-in `~~~` operator.
-remarks: See the [C# `~` Operator](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/bitwise-complement-operator) for more details.
+remarks: See the [C# ~ Operator](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/bitwise-complement-operator) for more details.
 examples: |-
   ```qsharp
   let a = 248;

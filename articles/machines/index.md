@@ -59,6 +59,7 @@ Both are defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.
 
 * A [full state vector simulator](xref:microsoft.quantum.machines.full-state-simulator), the `QuantumSimulator` class.
 * A [trace-based resource estimator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), the `QCTraceSimulator` class.
+* A [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator), the `ToffoliSimulator` class.
 
 ## Writing a Classical Driver Program
 

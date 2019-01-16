@@ -19,15 +19,11 @@ specifying and working with types.
 Q# provides several primitive types, out of which all other types
 are constructed:
 
-- The `Int` type represents a 64-bit signed (two's complement) integer.
-- The `BigInt` type represents a signed integer or arbitrary size.
-   This type is based on the .NET
-   [`BigInteger`](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger)
-   type.
+- The `Int` type represents a 64- bit signed (two's complement) integer.
 - The `Double` type represents a double-precision floating-point number.
 - The `Bool` type represents a Boolean value, either `true` or `false`.
 - The `Qubit` type represents a quantum bit or qubit.
-   `Qubit`s are opaque to the user; the only operation possible with them,
+  `Qubit`s are opaque to the user; the only operation possible with them,
    other than passing them to another operation, is to test for identity
    (equality).
    Ultimately, actions on `Qubit`s are implemented by calling operations

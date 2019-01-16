@@ -15,7 +15,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: A function from `'T' to Boolean that is used to filter elements.
+    summary: A function from `'T` to Boolean that is used to filter elements.
     isFunction: true
     input:
       types:

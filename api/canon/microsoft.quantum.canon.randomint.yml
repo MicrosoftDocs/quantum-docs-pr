@@ -8,7 +8,7 @@ summary: |-
   and less than a provided upper bound.
 remarks: |-
   This function calls <xref:microsoft.quantum.primitive.random>, so
-  its randomess depends on the implementation of `Random`.
+  its randomness depends on the implementation of `Random`.
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'

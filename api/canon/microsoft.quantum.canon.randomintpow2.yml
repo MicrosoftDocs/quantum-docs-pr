@@ -8,7 +8,7 @@ summary: |-
   in a given number of bits.
 remarks: |-
   This function calls <xref:microsoft.quantum.primitive.random>, so
-  its randomess depends on the implementation of `Random`.
+  its randomness depends on the implementation of `Random`.
 syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
 input:
   content: '(maxBits : Int)'

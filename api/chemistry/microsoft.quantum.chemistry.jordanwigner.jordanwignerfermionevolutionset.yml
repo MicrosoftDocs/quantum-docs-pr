@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionevolutionset
 name: JordanWignerFermionEvolutionSet
 type: function
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: >-
+summary: |-
   Represents a dynamical generator as a set of simulatable gates and an
   expansion in the JordanWigner basis.
 syntax: 'function JordanWignerFermionEvolutionSet () : Microsoft.Quantum.Canon.EvolutionSet'
@@ -13,7 +13,7 @@ input:
 output:
   content: Microsoft.Quantum.Canon.EvolutionSet
   types:
-  - summary: >-
+  - summary: |-
       An `EvolutionSet` that maps a `GeneratorIndex` for the JordanWigner basis to
       an `EvolutionUnitary.
     uid: microsoft.quantum.canon.evolutionset

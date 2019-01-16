@@ -45,5 +45,5 @@ typeParameters:
 - uid: "'T"
   summary: The input type of the operation to be conditionally applied.
 seeAlso:
-- microsoft.quantum.canon.controlled
+- microsoft.quantum.canon.ccontrolled
 ...

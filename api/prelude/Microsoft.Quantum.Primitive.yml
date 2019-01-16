@@ -32,7 +32,7 @@ operations:
     Applies the exponential of a multi-qubit Pauli operator.
 
     \begin{align}
-    e^{i \theta [P_0 \otimes P_1 \cdots P_N]},
+    e^{i \theta [P_0 \otimes P_1 \cdots P_{N-1}]},
     \end{align}
     where $P_i$ is the $i$th element of `paulis`, and where
     $N = $`Length(paulis)`.
@@ -42,7 +42,7 @@ operations:
     with an argument given by a dyadic fraction.
 
     \begin{align}
-    e^{i \theta \pi k [P_0 \otimes P_1 \cdots P_N] / 2^n},
+    e^{i \pi k [P_0 \otimes P_1 \cdots P_{N-1}] / 2^n},
     \end{align}
     where $P_i$ is the $i$th element of `paulis`, and where
     $N = $`Length(paulis)`.
@@ -163,7 +163,11 @@ operations:
 
     \begin{align}
     R_x(\theta) \mathrel{:=}
-    e^{-i \theta \sigma_x / 2}.
+    e^{-i \theta \sigma_x / 2} =
+    \begin{bmatrix}
+    \cos \frac{\theta}{2} & -i\sin \frac{\theta}{2}  \\\\
+    -i\sin \frac{\theta}{2} & \cos \frac{\theta}{2}
+    \end{bmatrix}.
     \end{align}
 - uid: microsoft.quantum.primitive.ry
   summary: |-
@@ -171,7 +175,11 @@ operations:
 
     \begin{align}
     R_y(\theta) \mathrel{:=}
-    e^{-i \theta \sigma_y / 2}.
+    e^{-i \theta \sigma_y / 2} =
+    \begin{bmatrix}
+    \cos \frac{\theta}{2} & -\sin \frac{\theta}{2}  \\\\
+    \sin \frac{\theta}{2} & \cos \frac{\theta}{2}
+    \end{bmatrix}.
     \end{align}
 - uid: microsoft.quantum.primitive.rz
   summary: |-
@@ -179,7 +187,11 @@ operations:
 
     \begin{align}
     R_z(\theta) \mathrel{:=}
-    e^{-i \theta \sigma_z / 2}.
+    e^{-i \theta \sigma_z / 2} =
+    \begin{bmatrix}
+    e^{-i \theta / 2} & 0 \\\\
+    0 & e^{i \theta / 2}
+    \end{bmatrix}.
     \end{align}
 - uid: microsoft.quantum.primitive.s
   summary: |-

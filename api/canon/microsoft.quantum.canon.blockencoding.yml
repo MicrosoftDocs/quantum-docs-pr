@@ -9,7 +9,7 @@ summary: |-
 
   That is, a `BlockEncoding` is a unitary $U$ where an arbitrary operator $H$ of
   interest that acts on the system register `s` is encoded in the top-
-  left block corresponding to auxiliary state `\ket{0}_a`. That is,
+  left block corresponding to auxiliary state $\ket{0}_a$. That is,
 
   $$
   \begin{align}

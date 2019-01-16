@@ -4,14 +4,14 @@ name: MultiplexOperationsFromGenerator
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: |-
-  Applies a multiply-controlled unitary operation `U` that applies a
-  unitary `V_j` when controlled by n-qubit number state `|j〉`.
+  Applies a multiply-controlled unitary operation $U$ that applies a
+  unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
 
   $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 remarks: |-
   `coefficients` will be padded with identity elements if
   fewer than $2^n$ are specified. This implementation uses
-  $n-1$ auxillary qubits.
+  $n-1$ auxiliary qubits.
 syntax: "operation MultiplexOperationsFromGenerator (unitaryGenerator : (Int, (Int -> ('T => Unit : Adjoint, Controlled))), index : Microsoft.Quantum.Canon.BigEndian, target : 'T) : Unit"
 references: |-
   - [ *Andrew M. Childs, Dmitri Maslov, Yunseong Nam, Neil J. Ross, Yuan Su*,

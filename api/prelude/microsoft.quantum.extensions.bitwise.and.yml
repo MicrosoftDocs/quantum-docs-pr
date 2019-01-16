@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Extensions.Bitwise
 summary: |-
   Returns the bitwise AND of two integers.
   This performs the same computation as the built-in `&&&` operator.
-remarks: See the [C# `&` Operator](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/and-operator) (binary) for more details.
+remarks: See the [C# &amp; Operator](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/and-operator) (binary) for more details.
 examples: |-
   ```qsharp
   let a = 248;       //                11111000₂

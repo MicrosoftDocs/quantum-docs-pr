@@ -11,7 +11,7 @@ summary: |-
   \operatorname{diag}(1, e^{i\theta}).
   \end{align}
 remarks: |-
-  Equivlent to:
+  Equivalent to:
 
   ```qsharp
   R(PauliZ, theta, qubit);

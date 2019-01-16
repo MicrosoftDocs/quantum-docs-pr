@@ -5,8 +5,8 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: Amplitude amplification by partial reflections.
 remarks: |-
-  Amplitude amplification is a special case of oblivous amplitude amplification where there are no system qubits and the oblivious oracle is set to identity.
-  In most cases, `startQubits` is initialized in the state $\ket{\text{start}}\_1$, which is the $-1$ eigenstate of `startStateReflection`
+  Amplitude amplification is a special case of oblivious amplitude amplification where there are no system qubits and the oblivious oracle is set to identity.
+  In most cases, `startQubits` is initialized in the state $\ket{\text{start}}\_1$, which is the $-1$ eigenstate of `startStateReflection`.
 syntax: 'function AmpAmpByReflectionsPhases (phases : Microsoft.Quantum.Canon.AmpAmpReflectionPhases, startStateReflection : Microsoft.Quantum.Canon.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Canon.ReflectionOracle) : (Qubit[] => Unit : Adjoint, Controlled)'
 input:
   content: '(phases : Microsoft.Quantum.Canon.AmpAmpReflectionPhases, startStateReflection : Microsoft.Quantum.Canon.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Canon.ReflectionOracle)'

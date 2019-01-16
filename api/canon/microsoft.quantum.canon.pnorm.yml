@@ -7,7 +7,7 @@ summary: |-
   Returns the `L(p)` norm of a vector of `Double`s.
 
   That is, given an array $x$ of type `Double[]`, this returns the $p$-norm
-  $\|x\|_p= (\sum_{j}|x_j|^{p})^{1/p}$.
+  $\|x\|\_p= (\sum_{j}|x_j|^{p})^{1/p}$.
 syntax: 'function PNorm (p : Double, array : Double[]) : Double'
 input:
   content: '(p : Double, array : Double[])'

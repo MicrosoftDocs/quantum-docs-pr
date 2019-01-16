@@ -8,7 +8,11 @@ summary: |-
 
   \begin{align}
   R_x(\theta) \mathrel{:=}
-  e^{-i \theta \sigma_x / 2}.
+  e^{-i \theta \sigma_x / 2} =
+  \begin{bmatrix}
+  \cos \frac{\theta}{2} & -i\sin \frac{\theta}{2}  \\\\
+  -i\sin \frac{\theta}{2} & \cos \frac{\theta}{2}
+  \end{bmatrix}.
   \end{align}
 remarks: |-
   Equivalent to:

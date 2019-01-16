@@ -45,7 +45,7 @@ functions:
 - uid: microsoft.quantum.canon.arccosh
   summary: Computes the inverse hyperbolic cosine of a number.
 - uid: microsoft.quantum.canon.arcsinh
-  summary: Computes the inverse hyperbolic secant of a number.
+  summary: Computes the inverse hyperbolic sine of a number.
 - uid: microsoft.quantum.canon.arctanh
   summary: Computes the inverse hyperbolic tangent of a number.
 - uid: microsoft.quantum.canon.argcomplex
@@ -125,27 +125,27 @@ functions:
   summary: |-
     Encodes an operator of interest into a `BlockEncoding`.
 
-    This constructs a `BlockEncoding` unitary $U=P\cdot V\cdot P^\dag$ that encodes some
+    This constructs a `BlockEncoding` unitary $U=P\cdot V\cdot P^\dagger$ that encodes some
     operator $H=\sum_{j}|\alpha_j|U_j$ of interest that is a linear combination of
     unitaries. Typically, $P$ is a state preparation unitary such that
-    $P\ket{0}_a=\sum_j\sqrt{\alpha_j/\|\vec\alpha\|_2}\ket{j}_a$,
-    and $V=\sum_{j}\ket{j}\bra{j}_a\otimes U_j$.
+    $P\ket{0}\_a=\sum_j\sqrt{\alpha_j/\|\vec\alpha\|\_2}\ket{j}\_a$,
+    and $V=\sum_{j}\ket{j}\bra{j}\_a\otimes U_j$.
 - uid: microsoft.quantum.canon.blockencodingreflectionbylcu
   summary: |-
     Encodes an operator of interest into a `BlockEncodingReflection`.
 
-    This constructs a `BlockEncodingReflection` unitary $U=P\cdot V\cdot P^\dag$ that encodes some
+    This constructs a `BlockEncodingReflection` unitary $U=P\cdot V\cdot P^\dagger$ that encodes some
     operator $H=\sum_{j}|\alpha_j|U_j$ of interest that is a linear combination of
     unitaries. Typically, $P$ is a state preparation unitary such that
-    $P\ket{0}_a\sum_j\sqrt{\alpha_j/\|\vec\alpha\|_2}\ket{j}_a$,
-    and $V=\sum_{j}\ket{j}\bra{j}_a\otimes U_j$.
+    $P\ket{0}\_a\sum_j\sqrt{\alpha_j/\|\vec\alpha\|\_2}\ket{j}\_a$,
+    and $V=\sum_{j}\ket{j}\bra{j}\_a\otimes U_j$.
 - uid: microsoft.quantum.canon.blockencodingtoreflection
   summary: |-
     Converts a `BlockEncoding` into an equivalent `BLockEncodingReflection`.
 
     That is, given a `BlockEncoding` unitary $U$ that encodes some
     operator $H$ of interest, converts it into a `BlockEncodingReflection` $U'$ that
-    encodes the same operator, but also satisfies $U'^\dag = U'$.
+    encodes the same operator, but also satisfies $U'^\dagger = U'$.
     This increases the size of the auxiliary register of $U$ by one qubit.
 - uid: microsoft.quantum.canon.boolarrfrompositiveint
   summary: Produces binary representation of positive integer in little Endian format.
@@ -227,7 +227,7 @@ functions:
     Let us denote expBase by x, power by p and modulus by N.
     The function returns xᵖ mod N.
 
-    We assume that N,x are positive and power is non-negative.
+    We assume that $N$, $x$ are positive and power is non-negative.
 - uid: microsoft.quantum.canon.extendedgcd
   summary: |-
     Computes a tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a
@@ -283,7 +283,7 @@ functions:
 - uid: microsoft.quantum.canon.intabs
   summary: Returns the absolute value of an integer.
 - uid: microsoft.quantum.canon.intarrayfromrange
-  summary: Creates an array `arr` of integers enumnerated by start..step..end.
+  summary: Creates an array `arr` of integers enumerated by start..step..end.
 - uid: microsoft.quantum.canon.interpolatedevolution
   summary: |-
     Interpolates between two generators with a uniform schedule,
@@ -343,14 +343,14 @@ functions:
     element is dropped.
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: |-
-    Returns a multiply-controlled unitary operation `U` that applies a
-    unitary `V_j` when controlled by n-qubit number state `|j〉`.
+    Returns a multiply-controlled unitary operation $U$ that applies a
+    unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
 
     $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplexerfromgenerator
   summary: |-
-    Returns a multiply-controlled unitary operation `U` that applies a
-    unitary `V_j` when controlled by n-qubit number state `|j〉`.
+    Returns a multiply-controlled unitary operation $U$ that applies a
+    unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
 
     $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplygeneratorindex
@@ -419,7 +419,7 @@ functions:
     Returns the `L(p)` norm of a vector of `Double`s.
 
     That is, given an array $x$ of type `Double[]`, this returns the $p$-norm
-    $\|x\|_p= (\sum_{j}|x_j|^{p})^{1/p}$.
+    $\|x\|\_p= (\sum_{j}|x_j|^{p})^{1/p}$.
 - uid: microsoft.quantum.canon.pnormalize
   summary: |-
     Normalizes a vector of `Double`s in the `L(p)` norm.
@@ -427,9 +427,9 @@ functions:
     That is, given an array $x$ of type `Double[]`, this returns an array where
     all elements are divided by the $p$-norm $\|x\|_p$.
 - uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: Produces a positive integer from a string of bits in in little Endian format.
+  summary: Produces a positive integer from a string of bits in little endian format.
 - uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: Produces a positive integer from a string of Results in in little Endian format.
+  summary: Produces a positive integer from a string of Results in little endian format.
 - uid: microsoft.quantum.canon.quantumrom
   summary: |-
     Uses the Quantum ROM technique to represent a given density matrix.
@@ -1040,7 +1040,12 @@ operations:
     \end{align}
     $$
 - uid: microsoft.quantum.canon.inplacemajority
-  summary: This computes the Majority function in-place on 3 qubits.
+  summary: |-
+    This computes the Majority function in-place on 3 qubits.
+
+    If we denote output qubit as $z$ and input qubits as $x$ and $y$,
+    the operation performs the following transformation:
+    $\ket{xyz} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} (x, y, z)}$.
 - uid: microsoft.quantum.canon.inplacexorbe
   summary: |-
     Applies `X` operations to qubits in a big-endian register based on 1 bits in an integer.
@@ -1123,7 +1128,7 @@ operations:
     qubit to perform the measurement.
 - uid: microsoft.quantum.canon.modularaddproductle
   summary: |-
-    Performs a modular multipy-and-add by integer constants on a qubit register.
+    Performs a modular multiply-and-add by integer constants on a qubit register.
 
     Implements the map
     $$
@@ -1134,7 +1139,7 @@ operations:
     for a given modulus $N$, constant multiplier $a$, and summand $y$.
 - uid: microsoft.quantum.canon.modularaddproductphasele
   summary: |-
-    The same as ModularAddProductInPlaceLE, but assumes that summand encodes
+    The same as ModularAddProductLE, but assumes that summand encodes
     integers in QFT basis
 - uid: microsoft.quantum.canon.modularincrementle
   summary: |-
@@ -1189,14 +1194,14 @@ operations:
     $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplexoperationsbruteforcefromgenerator
   summary: |-
-    Applies multiply-controlled unitary operation `U` that applies a
-    unitary `V_j` when controlled by n-qubit number state `|j〉`.
+    Applies multiply-controlled unitary operation $U$ that applies a
+    unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
 
     $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
   summary: |-
-    Applies a multiply-controlled unitary operation `U` that applies a
-    unitary `V_j` when controlled by n-qubit number state `|j〉`.
+    Applies a multiply-controlled unitary operation $U$ that applies a
+    unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
 
     $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplexpauli
@@ -1272,9 +1277,13 @@ operations:
     If the identity operator is given, then the qubit is prepared in the maximally
     mixed state.
 
-    That is, given a single qubit initially in the $\ket{0}$ state, prepares the
-    qubit in the $+1$ eigenstate of a given Pauli operator, or in the
-    maximally mixed state for the $\boldone$ Pauli operator `PauliI`.
+    If the qubit was initially in the $\ket{0}$ state, this operation prepares the
+    qubit in the $+1$ eigenstate of a given Pauli operator, or, for `PauliI`,
+    in the maximally mixed state instead (see <xref:microsoft.quantum.canon.preparesinglequbitidentity>).
+
+    If the qubit was in a state other than $\ket{0}$, this operation applies the following gates:
+    $H$ for `PauliX`, $HS$ for `PauliY`, $I$ for `PauliZ` and
+    <xref:microsoft.quantum.canon.preparesinglequbitidentity> for `PauliI`.
 - uid: microsoft.quantum.canon.preparesinglequbitidentity
   summary: |-
     Prepares a qubit in the maximally mixed state.
@@ -1346,7 +1355,7 @@ operations:
     described by a `CSS` type.
 - uid: microsoft.quantum.canon.robustphaseestimation
   summary: |-
-    Performs the robust non-terative quantum phase estimation algorithm for a given oracle `U` and eigenstate,
+    Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate,
     and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
 - uid: microsoft.quantum.canon.singlequbitprocesstomographymeasurement
   summary: |-
@@ -1384,7 +1393,7 @@ operations:
     Given operations implementing operators `U` and `V`, performs the
     operation `U†VU` on a target. That is, this operation
     conjugates `V` with `U`.
-    The modifier `C` dicates that the inner operation is controllable.
+    The modifier `C` dictates that the inner operation is controllable.
 - uid: microsoft.quantum.canon.withca
   summary: |-
     Given operations implementing operators `U` and `V`, performs the
@@ -1408,7 +1417,7 @@ newtypes:
 
     That is, a `BlockEncoding` is a unitary $U$ where an arbitrary operator $H$ of
     interest that acts on the system register `s` is encoded in the top-
-    left block corresponding to auxiliary state `\ket{0}_a`. That is,
+    left block corresponding to auxiliary state $\ket{0}_a$. That is,
 
     $$
     \begin{align}
@@ -1429,7 +1438,7 @@ newtypes:
     Represents a continuous-time oracle.
 
     This is an oracle that implements
-    $U(\delta t) : \ket{\psi(t)} \mapsto \ket{\psi(t + \delta t)}
+    $U(\delta t) : \ket{\psi(t)} \mapsto \ket{\psi(t + \delta t)}$
     for all times $t$, where $U$ is a fixed operation, and where
     $\delta t$ is a non-negative real number.
 - uid: microsoft.quantum.canon.css
@@ -1572,7 +1581,7 @@ newtypes:
   summary: |-
     Represents an oracle for state preparation.
 
-    The inputs to the opracle $O$ are:
+    The inputs to the oracle $O$ are:
 
     - An integer indexing the flag qubit $f$.
     - The system register $s$ that will store the desired quantum state $\ket{\psi}\_s$.
@@ -1591,11 +1600,11 @@ newtypes:
     That is, a `TimeDependentBlockEncoding` is a unitary $U$ controlled by a state
     $\ket{k}_d$ in clock register `d` such that an arbitrary operator $H_k$ of
     interest that acts on the system register `s` is encoded in the top-
-    left block corresponding to auxiliary state `\ket{0}_a`. That is,
+    left block corresponding to auxiliary state $\ket{0}_a$. That is,
 
     $$
     \begin{align}
-    (\bra{0}_a\otimes I_{ds})U(\ket{0}_a\otimes I_{ds}) = \sum_{k}\ket{k}\bra{k}_d\otimes H_k.
+    (\bra{0}\_a\otimes I_{ds})U(\ket{0}\_a\otimes I_{ds}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
     \end{align}
     $$.
 - uid: microsoft.quantum.canon.timedependentgeneratorsystem

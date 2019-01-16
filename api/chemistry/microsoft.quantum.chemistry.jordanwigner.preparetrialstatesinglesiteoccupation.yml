@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstatesinglesiteoccupat
 name: PrepareTrialStateSingleSiteOccupation
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: >-
+summary: |-
   Simple state preparation of trial state by occupying
   spin-orbitals
 syntax: 'operation PrepareTrialStateSingleSiteOccupation (qubitIndices : Int[], qubits : Qubit[]) : Unit'

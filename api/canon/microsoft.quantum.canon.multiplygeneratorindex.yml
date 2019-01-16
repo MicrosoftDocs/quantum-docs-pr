@@ -7,8 +7,8 @@ summary: Multiplies the coefficient in a `GeneratorIndex`.
 examples: |-
   ```qsharp
   let gen = GeneratorIndex(([1,2,3],[coeff]),[1,2,3]);
-  let ((idxPaulis, idxDoubles), idxQubits) = MultiplyGeneratorIndex(multipler, gen);
-  // idxDoubles[0] == multipler * coeff;
+  let ((idxPaulis, idxDoubles), idxQubits) = MultiplyGeneratorIndex(multiplier, gen);
+  // idxDoubles[0] == multiplier * coeff;
   ```
 syntax: 'function MultiplyGeneratorIndex (multiplier : Double, generatorIndex : Microsoft.Quantum.Canon.GeneratorIndex) : Microsoft.Quantum.Canon.GeneratorIndex'
 input:

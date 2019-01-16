@@ -19,7 +19,7 @@ input:
 output:
   content: Microsoft.Quantum.Canon.GeneratorIndex
   types:
-  - summary: >-
+  - summary: |-
       A GeneratorIndex representing a Hamiltonian term represented by `term`,
       together with additional information added by `termType`.
     uid: microsoft.quantum.canon.generatorindex

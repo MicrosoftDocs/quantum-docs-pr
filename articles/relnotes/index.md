@@ -21,7 +21,7 @@ This version removes all runtime dependencies that could make the extension trig
 
 If you had previously installed the extension you will need to install it again by visiting 
 the [Microsoft Quantum Development Kit for Visual Studio Code](vscode:extension/quantum.quantum-devkit-vscode) extension on the 
-Visual Studio Marketplace and press Install. We're sorry about the inconvenience.
+Visual Studio Marketplace and press Install. We are sorry about the inconvenience.
 
 
 # Version 0.3.1811.1511

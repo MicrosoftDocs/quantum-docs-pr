@@ -13,7 +13,8 @@ uid: microsoft.quantum.machines.toffoli-simulator
 
 The Quantum Development Kit provides a Toffoli simulator,
 which is a special-purpose simulator that can simulate quantum algorithms
-that are limited to X, CNOT, and multi-controlled X operations.
+that are limited to X, CNOT, and multi-controlled X quantum operations
+(all classical logic and computations are available).
 This simulator can be used to execute and debug a limited set of
 quantum algorithms written in Q# on your computer.
 

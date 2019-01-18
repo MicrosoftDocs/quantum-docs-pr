@@ -37,7 +37,7 @@ with the rest of the parameters:
 
 ## QubitCount
 
-By default, the `ToffoliSimulator` allocates space for 1,000 qubits.
+By default, the `ToffoliSimulator` allocates space for 65,536 qubits.
 If your algorithm requires more than this, you can change the qubit count
 by providing a value for the `qubitCount` parameter to the
 `ToffoliSimulator` constructor.

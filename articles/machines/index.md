@@ -128,7 +128,8 @@ quantum algorithm.
 This part is generally very straightforward.
 Each Q# operation is compiled into a class that provides a static `Run` method.
 The arguments to this method are given by the flattened argument tuple of the operation itself,
-plus an additional first argument which is the simulator to execute with. For a tuple of type `(String, (Double, Double))` its flattened counterpart is of type `(String, Double, Double)`. 
+plus an additional first argument which is the simulator to execute with. For an operation that expects
+the named tuple of type `(a: String, (b: Double, c: Double))` its flattened counterpart is of type `(String a, Double b, Double c)`. 
 
 
 There are some subtleties when passing arguments to a `Run` method:
@@ -140,9 +141,8 @@ There are some subtleties when passing arguments to a `Run` method:
 * The empty tuple, `()` in Q#, is represented by `QVoid.Instance` in C#.
 * Non-empty tuples are represented as .NET `ValueType` instances.
 * Q# user-defined types are passed as their base type.
-* To pass an operation or a function to a `Run` method, you have to create an
-    instance of the operation's or function's class, passing the simulator 
-    object to the constructor.
+* To pass an operation or a function to a `Run` method, you have to obtain an
+    instance of the operation's or function's class, using the simulator's `Get<>` method.
 
 ### Processing the Results
 

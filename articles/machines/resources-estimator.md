@@ -9,18 +9,18 @@ ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
 ---
 
-# Resources estimator
+# The `ResourcesEstimator` Target Machine
 
 As the name implies, the `ResourcesEstimator` estimates the resources 
-required to run a given instance of a quantum program on a quantum computer.
-It accomplishes this by executing the quantum program without actually 
+required to run a given instance of a Q# operation on a quantum computer.
+It accomplishes this by executing the quantum operation without actually 
 simulating the state of a quantum computer; for this reason, 
-it can estimate resources for quantum programs that use thousands of qubits.
+it can estimate resources for Q# operations that use thousands of qubits.
 
 ## Usage
 
 The `ResourcesEstimator` is just another type of target machine, thus 
-it can be used to run any Q# program. 
+it can be used to run any Q# operation. 
 
 As other target machines, to use it on a C# host program create an instance and pass it
 as the first parameter of the operation's `Run` method to estimate:
@@ -51,15 +51,8 @@ or written to the console for analysis.
 ## Programmatically Retrieving the Results
 
 On top of a TSV table, the resources estimated can be retrieved programmatically
-via the `ResourcesEstimator`'s `Data` property. `Data` returns a `System.DataTable` 
-instance, indexed by the metrics names, and the statistics of each metric (sum, average, etc)
-as the columns; the statistics reported are:
-  * Sum
-  * Average
-  * Variance
-  * Min
-  * Max
-  * SecondMoment
+via the `ResourcesEstimator`'s `Data` property. `Data` provides a `System.DataTable` 
+instance with two columns: `Metric` and `Sum`, indexed by the metrics names.
 
 The following code shows how to retrieve and print the total number of `QubitClifford`, `T` and `CNOT` 
 gates used by a Q# operation:
@@ -88,14 +81,23 @@ namespace Quantum.MyProgram
 
 ## Metrics Reported
 
+The following is the list of metrics estimated by the `ResourcesEstimator`:
+
+* CNOT: The count of CNOT (also known as the Controlled Pauli X gate) gates executed.
+* QubitClifford: The count of any single qubit Clifford and Pauli gate executed.
+* Measure:  The count of any measurement executed.
+* R: The count of any single qubit rotation excluding T, Clifford and Pauli gates executed.
+* T: The count of T gate and its conjugates, including the T gate, T_x = H.T.H, and T_y = Hy.T.Hy, executed.
+* Depth: Depth of the quantum circuit executed by the Q# operation.
+* Width: Maximum number of qubits allocated during the execution of the Q# operation.
+* BorrowedWith: Maximum number of qubits borrowed inside the Q# operation.
 
 
 ## Providing the Probability of Measurement Outcomes
 
-There are two kinds of measurements that appear in quantum algorithms. The first
-kind plays an auxiliary role where the user usually knows the
-probability of the outcomes. In this case the user can write
-<xref:microsoft.quantum.primitive.assertprob> from the <xref:microsoft.quantum.primitive> namespace to express this knowledge. The following example illustrates this:
+<xref:microsoft.quantum.primitive.assertprob> from the <xref:microsoft.quantum.primitive> namespace can 
+be used to provide information about the expected probability of a measurement to help drive the execution 
+of the Q# program. The following example illustrates this:
 
 ```qsharp
 operation Teleportation (source : Qubit, target : Qubit) : Unit {
@@ -119,35 +121,17 @@ operation Teleportation (source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-When the trace simulator executes `AssertProb` it will record that measuring
+When the `ResourcesEstimator` encounters `AssertProb` it will record that measuring
 `PauliZ` on `source` and `ancilla` should be given an outcome of `Zero` with probability
 0.5. When the simulator executes `M` later, it will find the recorded values of
 the outcome probabilities and `M` will return `Zero` or `One` with probability
-0.5. When the same code is executed on a simulator that keeps track of the
-quantum state, such a simulator will check that the provided probabilities in
-`AssertProb` are correct.
+0.5.
 
-## Running your Program with the Quantum Computer Trace Simulator 
-
-
-Note that if there is at least one measurement not annotated using `AssertProb`
-or `ForceMeasure` the simulator will throw `UnconstraintMeasurementException`
-from the `Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime` namespace. See the API documentation on [UnconstraintMeasurementException](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstraintmeasurementexception) for more details.
-
-In addition to running quantum programs, the trace simulator comes with five
-components for detecting bugs in programs and performing quantum program
-resource estimates: 
-
-* [Distinct Inputs Checker](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)
-* [Invalidated Qubits Use Checker](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)
-* [Primitive Operations Counter](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)
-* [Circuit Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)
-* [Circuit Width Counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)
-
-Each of these components may be enabled by setting appropriate flags in
-`QCTraceSimulatorConfiguration`. More details about using each of these
-components are provided in the corresponding reference files. See the API documentation on [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for specific details.
 
 ## See also
-The quantum computer [trace simulator
-](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) C# reference 
+
+The `ResourcesEstimator` is built on top of the quantum computer [trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), which provides a richer set of metrics, 
+the ability to report metrics on the full call-graph, and features like [distinct inputs checker](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) to help find bugs on Q# programs. 
+Please refer to the [trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+documentation for more information.
+

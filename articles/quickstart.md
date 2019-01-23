@@ -491,9 +491,9 @@ Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1),
 ## Estimating Resources
 
 Some times researchers are interested not in the actual execution of the quantum program, but need to get an estimation
-of how many quantum resources the program will use. To do this, the Q# operation only needs to change its target machine
-to be `ResourcesEstimator`. For example, modify the code in the the __Driver.cs__ file to create an instance of 
-`ResourcesEstimator`:
+of how many quantum resources the program will use. To do this, the Q# operation remaisn the same and only needs 
+to change its target machine for execution to be an instance of `ResourcesEstimator`. 
+For example, modify the code in the the __Driver.cs__ file to be:
 
 ```csharp
             var estimator = new ResourcesEstimator();
@@ -505,7 +505,7 @@ to be `ResourcesEstimator`. For example, modify the code in the the __Driver.cs_
             Console.ReadKey();
 ```
 
-This changed indicated the `BellTest` to run using the `estimator` as the target machine. When completed,
+This change indicated the `BellTest` operation to run using the `estimator` as the target machine. When completed,
 we output the results to the console which the `ResourcesEstimator` can provide in TSV (tab-seperated values) format
 to make it easy to analyze. The output of the program is:
 
@@ -521,7 +521,7 @@ Width           2
 BorrowedWidth   0
 ```
 
-For more information take a look at the [`ResourceEstimator` documentation](xref:microsoft.quantum.machines.resources-estimator).
+For more information take a look at the [`ResourcesEstimator` documentation](xref:microsoft.quantum.machines.resources-estimator).
 
 
 To learn more about the other type of simulators and target machines provided in the Quantum Development Kit, 

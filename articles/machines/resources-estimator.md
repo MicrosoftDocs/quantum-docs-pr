@@ -9,7 +9,7 @@ ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
 ---
 
-# The `ResourcesEstimator` Target Machine
+# The ResourcesEstimator Target Machine
 
 As the name implies, the `ResourcesEstimator` estimates the resources 
 required to run a given instance of a Q# operation on a quantum computer.
@@ -19,11 +19,11 @@ it can estimate resources for Q# operations that use thousands of qubits.
 
 ## Usage
 
-The `ResourcesEstimator` is just another type of target machine, thus 
+The `ResourcesEstimator` is just another type of target machine thus 
 it can be used to run any Q# operation. 
 
 As other target machines, to use it on a C# host program create an instance and pass it
-as the first parameter of the operation's `Run` method to estimate:
+as the first parameter of the operation's `Run` method:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -45,10 +45,22 @@ namespace Quantum.MyProgram
 
 As the example shows, the `ResourcesEstimator` provides a `ToTSV()` method to generate
 a table with tab-seperated-values (TSV) that can be saved into a file
-or written to the console for analysis.
+or written to the console for analysis. The output of the above program should look something like this:
+
+```Output
+Metric          Sum
+CNOT            1000
+QubitClifford   1000
+R               0
+Measure         4002
+T               0
+Depth           0
+Width           2
+BorrowedWidth   0
+```
 
 
-## Programmatically Retrieving the Results
+## Programmatically Retrieving the Estimated Data
 
 On top of a TSV table, the resources estimated can be retrieved programmatically
 via the `ResourcesEstimator`'s `Data` property. `Data` provides a `System.DataTable` 
@@ -83,14 +95,14 @@ namespace Quantum.MyProgram
 
 The following is the list of metrics estimated by the `ResourcesEstimator`:
 
-* CNOT: The count of CNOT (also known as the Controlled Pauli X gate) gates executed.
-* QubitClifford: The count of any single qubit Clifford and Pauli gate executed.
-* Measure:  The count of any measurement executed.
-* R: The count of any single qubit rotation excluding T, Clifford and Pauli gates executed.
-* T: The count of T gate and its conjugates, including the T gate, T_x = H.T.H, and T_y = Hy.T.Hy, executed.
-* Depth: Depth of the quantum circuit executed by the Q# operation.
-* Width: Maximum number of qubits allocated during the execution of the Q# operation.
-* BorrowedWith: Maximum number of qubits borrowed inside the Q# operation.
+* __CNOT__: The count of CNOT (also known as the Controlled Pauli X gate) gates executed.
+* __QubitClifford__: The count of any single qubit Clifford and Pauli gate executed.
+* __Measure__:  The count of any measurement executed.
+* __R__: The count of any single qubit rotation excluding T, Clifford and Pauli gates executed.
+* __T__: The count of T gate and its conjugates, including the T gate, T_x = H.T.H, and T_y = Hy.T.Hy, executed.
+* __Depth__: Depth of the quantum circuit executed by the Q# operation.
+* __Width__: Maximum number of qubits allocated during the execution of the Q# operation.
+* __BorrowedWith__: Maximum number of qubits borrowed inside the Q# operation.
 
 
 ## Providing the Probability of Measurement Outcomes

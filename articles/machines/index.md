@@ -58,7 +58,10 @@ This release of the quantum developer kit includes two quantum machine classes.
 Both are defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.
 
 * A [full state vector simulator](xref:microsoft.quantum.machines.full-state-simulator), the `QuantumSimulator` class.
-* A [trace-based resource estimator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), the `QCTraceSimulator` class.
+* A [simple resources estimator](xref:microsoft.quantum.machines.resources-estimator), the `ResourcesEstimator` class, it allows
+  a top level analysis of the resources needed to run a quantum algorithm.
+* A [trace-based resource estimator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), the `QCTraceSimulator` class,
+  it allows advanced analysis of resources consumptions for the algorithm's entire call-graph.
 
 ## Writing a Classical Driver Program
 
@@ -93,9 +96,6 @@ invoking their constructor, just like any .NET class.
 Some simulators, including the `QuantumSimulator`, implement the .NET
 `IDisposable` interface, and so should be wrapped in a C# `using` statement.
 
-> [!NOTE]
-> Only one instance of the `QuantumSimulator` class may be used at a time.
-> This simulator is highly optimized to parallelize computations, making it unsafe to allow more than one.
 
 ### Computing Arguments for the Algorithm
 

@@ -1,5 +1,7 @@
 - name: Quantum simulator
   href: full-state-simulator.md
+- name: Resources estimator
+  href: resources-estimator.md
 - name: Quantum computer trace simulator
   topicHref: qc-trace-simulator/index.md
   href: qc-trace-simulator/toc.yml

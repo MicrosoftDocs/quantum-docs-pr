@@ -107,7 +107,7 @@ The following is the list of metrics estimated by the `ResourcesEstimator`:
 * __T__: The count of T gates and their conjugates, including the T gate, T_x = H.T.H, and T_y = Hy.T.Hy, executed.
 * __Depth__: Depth of the quantum circuit executed by the Q# operation.
 * __Width__: Maximum number of qubits allocated during the execution of the Q# operation.
-* __BorrowedWith__: Maximum number of qubits borrowed inside the Q# operation.
+* __BorrowedWidth__: Maximum number of qubits borrowed inside the Q# operation.
 
 
 ## Providing the Probability of Measurement Outcomes

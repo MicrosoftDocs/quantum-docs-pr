@@ -31,12 +31,23 @@ then `count` is an integer expression.
 
 ## Numeric Expressions
 
-Numeric expressions are expressions of type `Int` or `Double`.
+Numeric expressions are expressions of type `Int`, `BigInt`, or `Double`.
 That is, they are either integer or floating-point numbers.
 
 `Int` literals in Q# are identical to integer literals in C#,
 except that no trailing "l" or "L" is required (or allowed).
 Hexadecimal integers are supported with a "0x" prefix.
+
+`BigInt` literals in Q# are identical to big integer strings in .NET,
+with a trailing "l" or "L".
+Hexadecimal big integers are supported with a "0x" prefix.
+Thus, the following are all valid uses of `BigInt` literals:
+
+```qsharp
+let bigZero = 0L;
+let bigHex = 0x123456789abcdef123456789abcdefL;
+let bigOne = bigZero + 1L;
+```
 
 `Double` literals in Q# are identical to double literals in C#,
 except that no trailing "d" or "D" is required (or allowed).
@@ -50,19 +61,43 @@ If `b` is an array of arrays of integers, `Int[][]`, then
 `Length(b)` is the number of sub-arrays in `b`, and `Length(b[1])`
 is the number of integers in the second sub-array in `b`.
 
-Given two numeric expressions, the binary operators `+`, `-`, `*`,
-and `/` may be used to form a new numeric expression.
-The type of the new expression will be `Double` if both of the
-constituent expressions are `Double`, or will be an `Int` expression
-if both are integers.
+Given two numeric expressions of the same type,
+the binary operators `+`, `-`, `*`, and `/` may be used to form
+a new numeric expression.
+The type of the new expression will be the same as the types of the
+constituent expressions.
 
-Given two integer expressions, a new integer expression may be formed
-using the `%` (modulus), `^` (power), `&&&` (bitwise AND), `|||` (bitwise OR),
-`^^^` (bitwise XOR), `<<<` (arithmetic left shift), or `>>>`
-(arithmetic right shift) operations.
-The second parameter to either shift operation must be greater than or
-equal to zero.
-The behavior for shifting negative numbers is undefined.
+Given two integer expressions, the binary operator `^` (power)
+may be used to form a new integer expression.
+Similarly, `^` may be used with two double expressions to form
+a new double expression.
+Finally, `^` may be used with a big integer on the left and
+an integer on the right to form a new big integer expression.
+In this case, the second parameter must fit into 32 bits;
+if not, a runtime error will be raised.
+
+Given two integer or big integer expressions, a new integer or
+big integer expression may be formed using the `%` (modulus),
+`&&&` (bitwise AND), `|||` (bitwise OR), or `^^^` (bitwise XOR) operators.
+
+Given either an integer or big integer expression on the left,
+and an integer expression on the right, the `<<<` (arithmetic left shift)
+or `>>>` (arithmetic right shift) operators may be used to create
+a new expression with the same type as the left-hand expression.
+
+The second parameter (the shift amount) to either shift operation
+must be greater than or equal to zero; the behavior for negative
+shift amounts is undefined.
+The shift amount for either shift operation must also fit into
+32 bits; if not, a runtime error will be raised.
+If the number to be shifted is an integer, then the shift amount
+is interpreted `mod 64`; that is, a shift of 1 and a shift of 65
+have the same effect.
+
+For both integer and big integer values, shifts are arithmetic.
+Shifting a negative value either left or right will result in a negative number.
+That is, shifting one step to the left or right is exactly the same as
+multiplying or dividing by 2, respectively.
 
 Integer division and integer modulus follow the same behavior for
 negative numbers as C#.
@@ -77,12 +112,14 @@ For example:
  -5 | 2 | -2 | -1
  -5 | -2 | 2 | -1
 
+Big integer division and modulus works the same way.
+
 Given any numeric expression, a new expression may be formed using the
 `-` unary operator.
 The new expression will be the same type as the constituent expression.
 
-Given any integer expression, a new integer expression may be formed
-using the `~~~` (bitwise complement) unary operator.
+Given any integer or big integer expression, a new expression of the same type
+may be formed using the `~~~` (bitwise complement) unary operator.
 
 ## Boolean Expressions
 

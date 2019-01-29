@@ -19,7 +19,7 @@ it can estimate resources for Q# operations that use thousands of qubits.
 
 ## Usage
 
-The `ResourcesEstimator` is just another type of target machine thus 
+The `ResourcesEstimator` is just another type of target machine, thus 
 it can be used to run any Q# operation. 
 
 As other target machines, to use it on a C# host program create an instance and pass it
@@ -36,7 +36,7 @@ namespace Quantum.MyProgram
         static void Main(string[] args)
         {
             ResourcesEstimator estimator = new ResourcesEstimator();
-            var res = MyQuantumProgram.Run(estimator).Result;
+            MyQuantumProgram.Run(estimator).Wait();
             Console.WriteLine(estimator.ToTSV());
         }
     }
@@ -59,10 +59,15 @@ Width           2
 BorrowedWidth   0
 ```
 
+> [!NOTE]
+> The `ResourcesEstimator` does not reset its calculations on every run, if the same instance is
+> used to execute another operation it will keep aggregating counts on top of existing results.
+> If you need to reset calculations across runs, create a new instance for every execution.
+
 
 ## Programmatically Retrieving the Estimated Data
 
-On top of a TSV table, the resources estimated can be retrieved programmatically
+In addition to a TSV table, the resources estimated can be retrieved programmatically
 via the `ResourcesEstimator`'s `Data` property. `Data` provides a `System.DataTable` 
 instance with two columns: `Metric` and `Sum`, indexed by the metrics names.
 
@@ -96,10 +101,10 @@ namespace Quantum.MyProgram
 The following is the list of metrics estimated by the `ResourcesEstimator`:
 
 * __CNOT__: The count of CNOT (also known as the Controlled Pauli X gate) gates executed.
-* __QubitClifford__: The count of any single qubit Clifford and Pauli gate executed.
-* __Measure__:  The count of any measurement executed.
-* __R__: The count of any single qubit rotation excluding T, Clifford and Pauli gates executed.
-* __T__: The count of T gate and its conjugates, including the T gate, T_x = H.T.H, and T_y = Hy.T.Hy, executed.
+* __QubitClifford__: The count of any single qubit Clifford and Pauli gates executed.
+* __Measure__:  The count of any measurements executed.
+* __R__: The count of any single qubit rotations executed, excluding T, Clifford and Pauli gates.
+* __T__: The count of T gates and their conjugates, including the T gate, T_x = H.T.H, and T_y = Hy.T.Hy, executed.
 * __Depth__: Depth of the quantum circuit executed by the Q# operation.
 * __Width__: Maximum number of qubits allocated during the execution of the Q# operation.
 * __BorrowedWith__: Maximum number of qubits borrowed inside the Q# operation.
@@ -135,7 +140,7 @@ operation Teleportation (source : Qubit, target : Qubit) : Unit {
 
 When the `ResourcesEstimator` encounters `AssertProb` it will record that measuring
 `PauliZ` on `source` and `ancilla` should be given an outcome of `Zero` with probability
-0.5. When the simulator executes `M` later, it will find the recorded values of
+0.5. When it executes `M` later, it will find the recorded values of
 the outcome probabilities and `M` will return `Zero` or `One` with probability
 0.5.
 

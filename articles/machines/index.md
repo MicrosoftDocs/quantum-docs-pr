@@ -54,14 +54,15 @@ that the algorithm hasn't changed.
 
 ### What's Included in this Release
 
-This release of the quantum developer kit includes two quantum machine classes.
-Both are defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.
+This release of the quantum developer kit includes several quantum machine classes.
+All of them are defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.
 
 * A [full state vector simulator](xref:microsoft.quantum.machines.full-state-simulator), the `QuantumSimulator` class.
 * A [simple resources estimator](xref:microsoft.quantum.machines.resources-estimator), the `ResourcesEstimator` class, it allows
   a top level analysis of the resources needed to run a quantum algorithm.
 * A [trace-based resource estimator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), the `QCTraceSimulator` class,
   it allows advanced analysis of resources consumptions for the algorithm's entire call-graph.
+* A [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator), the `ToffoliSimulator` class.
 
 ## Writing a Classical Driver Program
 

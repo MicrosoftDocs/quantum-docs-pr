@@ -5,3 +5,5 @@
 - name: Quantum computer trace simulator
   topicHref: qc-trace-simulator/index.md
   href: qc-trace-simulator/toc.yml
+- name: Toffoli simulator
+  href: toffoli-simulator.md

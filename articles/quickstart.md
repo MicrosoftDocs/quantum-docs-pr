@@ -490,9 +490,9 @@ Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1),
 
 ## Estimating Resources
 
-Some times researchers are interested not in the actual execution of the quantum program, but need to get an estimation
-of how many quantum resources the program will use. To do this, the Q# operation doesn't have to change, it only needs 
-to change its target machine for execution to be an instance of `ResourcesEstimator` in the C# host code; 
+Sometimes researchers are interested not in the actual execution of the quantum program, but need to get an estimation
+of how many quantum resources the program will use on a quantum computer as it would be impossible to simulate the 
+program on a classical computer. We can do this without changing the Q# operation but using a different target machine, a  `ResourcesEstimator`, for executing it in the C# host code; 
 for example, modify the code in the the __Driver.cs__ file to be:
 
 ```csharp
@@ -521,7 +521,7 @@ Width           2
 BorrowedWidth   0
 ```
 
-For more information about the metrics reported and how to access the data programmatically,
+For more information about the metrics reported and accessing the data programmatically,
 take a look at the [`ResourcesEstimator` documentation](xref:microsoft.quantum.machines.resources-estimator).
 
 

@@ -17,7 +17,7 @@ The Quantum Development Kit uses the .NET Core SDK (2.0 or later) to make it eas
 
 2. Once the .NET Core SDK is installed, run the following command in your favorite command line (e.g.: PowerShell or Bash) to download the latest templates for creating new Q# applications and libraries:
    ```Bash
-   dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.3.1811.2802-preview"
+   dotnet new -i Microsoft.Quantum.ProjectTemplates
    ```
 
 You should now have the Quantum Development Kit installed and ready to use in your own applications and libraries.

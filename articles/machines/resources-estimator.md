@@ -62,7 +62,7 @@ BorrowedWidth   0
 > [!NOTE]
 > The `ResourcesEstimator` does not reset its calculations on every run, if the same instance is
 > used to execute another operation it will keep aggregating counts on top of existing results.
-> If you need to reset calculations across runs, create a new instance for every execution.
+> If you need to reset calculations between runs, create a new instance for every execution.
 
 
 ## Programmatically Retrieving the Estimated Data

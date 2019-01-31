@@ -20,6 +20,7 @@ This release contains the following:
 - adds new Toffoli simulator, a special purpose fast simulator that can simulate X, CNOT and multi-controlled X quantum operations with very large numbers of qubits.  Learn more about [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator).
 - adds a simple resource estimator that estimates the resources required to run a given instancee of a Q# operation on a quantum computer.  Learn more about the [Resource Estimator](xref:microsoft.quantum.machines.resources-estimator).
 
+
 # Version 0.3.1811.2802
 
 *Release date: November 28, 2018*

@@ -85,7 +85,7 @@ namespace Quantum.MyProgram
         static void Main(string[] args)
         {
             ResourcesEstimator estimator = new ResourcesEstimator();
-            var res = MyQuantumProgram.Run(estimator).Result;
+            MyQuantumProgram.Run(estimator).Wait();
 
             var data = estimator.Data;
             Console.WriteLine($"QubitCliffords: {data.Rows.Find("QubitClifford")["Sum"]}");

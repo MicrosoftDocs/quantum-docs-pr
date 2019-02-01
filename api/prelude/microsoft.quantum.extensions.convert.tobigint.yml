@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.convert.tobigint
+name: ToBigInt
+type: function
+namespace: Microsoft.Quantum.Extensions.Convert
+summary: Converts a given integer to an equivalent big integer.
+remarks: See [C# BigInteger constructor](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) for more details.
+syntax: 'function ToBigInt (a : Int) : BigInt'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Int
+output:
+  content: BigInt
+  types:
+  - isPrimitive: true
+    uid: BigInt
+...

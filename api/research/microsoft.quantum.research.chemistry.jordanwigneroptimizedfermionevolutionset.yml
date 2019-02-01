@@ -3,7 +3,7 @@ uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutions
 name: JordanWignerOptimizedFermionEvolutionSet
 type: function
 namespace: Microsoft.Quantum.Research.Chemistry
-summary: >-
+summary: |-
   Represents a dynamical generator as a set of simulatable gates and an
   expansion in the Pauli basis.
 syntax: 'function JordanWignerOptimizedFermionEvolutionSet (parityQubit : Qubit) : Microsoft.Quantum.Canon.EvolutionSet'
@@ -17,7 +17,7 @@ input:
 output:
   content: Microsoft.Quantum.Canon.EvolutionSet
   types:
-  - summary: >-
+  - summary: |-
       An `EvolutionSet` that maps a `GeneratorIndex` for the JWOptimized basis to
       an `EvolutionUnitary.
     uid: microsoft.quantum.canon.evolutionset

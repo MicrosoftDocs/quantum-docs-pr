@@ -92,7 +92,3 @@ In addition to the general practice of documentation writing, in writing API doc
 ## LaTeX Formatting ##
 
 **TODO**
-
-<div class="nextstepaction">
-[Learn how to open pull requests](xref:microsoft.quantum.contributing.pulls)
-</div>

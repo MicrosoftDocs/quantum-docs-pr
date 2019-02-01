@@ -26,6 +26,10 @@ While a full tutorial on Git is beyond the scope of this guide, we can suggest t
 
 **TODO: PR ettiquette, reviews, etc.**
 
+## Next steps ##
+
+Congratulations on using Git to help out the Quantum Development Kit community!
+To learn more about how to contribute code, please continue with the following guide.
 
 <div class="nextstepaction">
 [Learn how to contribute code](xref:microsoft.quantum.contributing.code)

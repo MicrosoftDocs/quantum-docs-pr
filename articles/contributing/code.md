@@ -16,6 +16,10 @@ uid: microsoft.quantum.contributing.code
 
 **TODO: when do we reject, and why?**
 
+## Next steps ##
+
+Thanks for helping to make the Quantum Development Kit a great resource for the entire quantum programming community!
+To learn more, please continue with the following guide on Q# style.
 
 <div class="nextstepaction">
 [Learn about Q# style guidelines](xref:microsoft.quantum.contributing.style)

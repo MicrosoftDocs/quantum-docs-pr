@@ -56,6 +56,18 @@ There are also a few other, more specialized repositories focusing on different 
 > [!NOTE]
 > We unfortunately cannot accept code and documentation contributions on the [**Microsoft/Quantum-NC**](https://github.com/Microsoft/Quantum-NC) repository at this time, but we still very much appreciate bug reports.
 
+## Next steps ##
+
+Thanks for being a part of the Quantum Development Kit community, we're excited for your contributions!
+If you'd like to learn more about contributing, please continue with one of the following guides.
+
 <div class="nextstepaction">
 [Learn how to report bugs](xref:microsoft.quantum.contributing.reporting)
 </div>
+<div class="nextstepaction">
+[Learn how to contribute documentation](xref:microsoft.quantum.contributing.docs)
+</div>
+<div class="nextstepaction">
+[Learn how to open pull requests](xref:microsoft.quantum.contributing.pulls)
+</div>
+

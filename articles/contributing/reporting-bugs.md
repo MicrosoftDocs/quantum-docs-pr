@@ -27,7 +27,3 @@ When creating a new issue, you'll be prompted with a template that suggests some
 
 You can also [create a pull request](https://help.github.com/articles/about-pull-requests/) to fix the bug directly, if it's very straightforward and is not worth the discussion (for example, a typo).
 
-
-<div class="nextstepaction">
-[Learn how to contribute documentation](xref:microsoft.quantum.contributing.docs)
-</div>

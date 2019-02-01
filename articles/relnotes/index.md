@@ -10,6 +10,16 @@ uid: microsoft.quantum.relnotes
 
 # Microsoft Quantum Development Kit Release Notes
 
+# Version 0.4.1901
+
+*Release date: January 30, 2019*
+
+This release contains the following:
+
+- adds support for a new primitive type, BigInt, which represents a signed integer of arbitrary size.  Learn more about [BigInt type](xref:microsoft.quantum.language.type-model).
+- adds new Toffoli simulator, a special purpose fast simulator that can simulate X, CNOT and multi-controlled X quantum operations with very large numbers of qubits.  Learn more about [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator).
+- adds a simple resource estimator that estimates the resources required to run a given instancee of a Q# operation on a quantum computer.  Learn more about the [Resource Estimator](xref:microsoft.quantum.machines.resources-estimator).
+
 
 # Version 0.3.1811.2802
 
@@ -21,7 +31,7 @@ This version removes all runtime dependencies that could make the extension trig
 
 If you had previously installed the extension you will need to install it again by visiting 
 the [Microsoft Quantum Development Kit for Visual Studio Code](vscode:extension/quantum.quantum-devkit-vscode) extension on the 
-Visual Studio Marketplace and press Install. We're sorry about the inconvenience.
+Visual Studio Marketplace and press Install. We are sorry about the inconvenience.
 
 
 # Version 0.3.1811.1511

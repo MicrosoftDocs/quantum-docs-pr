@@ -46,15 +46,15 @@ In the rest of the guide, we'll offer advice on how to make each kind of contrib
 The Quantum Development Kit includes a number of different pieces that all work together to realize a platform for writing quantum programs.
 Each of these different pieces finds its home on a different repository, so the one of the earlier things to sort out is where each contribution best belongs.
 
-- [**Microsoft/Quantum**](): Samples and tools to help get started with the Quantum Development Kit.
-- [**Microsoft/QuantumLibraries**](): Standard and domain-specific libraries for the Quantum Development Kit.
-- [**Microsoft/QuantumKatas**](): Self-paced exercises to help learn more about quantum programming and the Q# language.
-- [**MicrosoftDocs/quantum-docs-pr**](): Source code for the documentation published at https://docs.microsoft.com/quantum.
+- [**Microsoft/Quantum**](https://github.com/Microsoft/Quantum): Samples and tools to help get started with the Quantum Development Kit.
+- [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries): Standard and domain-specific libraries for the Quantum Development Kit.
+- [**Microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): Self-paced exercises to help learn more about quantum programming and the Q# language.
+- [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): Source code for the documentation published at https://docs.microsoft.com/quantum.
 
 There are also a few other, more specialized repositories focusing on different events, or on auxillary functionality related to the Quantum Development Kit.
 
 > [!NOTE]
-> We unfortunately cannot accept code and documentation contributions on the [**Microsoft/QuantumNC**]() repository at this time, but we still very much appreciate bug reports.
+> We unfortunately cannot accept code and documentation contributions on the [**Microsoft/Quantum-NC**](https://github.com/Microsoft/Quantum-NC) repository at this time, but we still very much appreciate bug reports.
 
 <div class="nextstepaction">
 [Learn how to report bugs](xref:microsoft.quantum.contributing.reporting)

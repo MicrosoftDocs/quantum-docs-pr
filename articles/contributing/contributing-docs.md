@@ -14,7 +14,7 @@ The documentation for the Quantum Development Kit takes on several different for
 
 Following the principles of [Docs as Code](https://www.writethedocs.org/guide/docs-as-code/), all Quantum Development Kit documentation is formatted as code and is managed using Git in the same way as the source code that is used to build the Quantum Development Kit.
 For the most part, the code backing documentation consists of various forms of [Markdown](https://daringfireball.net/projects/markdown/), a language for writing out richly formatted text in a plain text format that's easy to use at the command line, in IDEs, and with source control.
-We similarly adopt the [MathJax]() library to allow for formatting mathematics in documentation using the LaTeX language, as detailed further below.
+We similarly adopt the [MathJax](https://www.mathjax.org/) library to allow for formatting mathematics in documentation using the LaTeX language, as detailed further below.
 
 
 That said, each form of documentation does vary somewhat in the details:
@@ -25,7 +25,8 @@ That said, each form of documentation does vary somewhat in the details:
 
 ## Contributing to the Conceptual Documentation ##
 
-To contribute an improvement to the conceptual or README documentation, then, starts with a pull request onto either [**MicrosoftDocs/quantum-docs-pr**](), [**Microsoft/Quantum**](), or [**Microsoft/QuantumKatas**](), as is appropriate.
+To contribute an improvement to the conceptual or README documentation, then, starts with a pull request onto either [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr/
+), [**Microsoft/Quantum**](https://github.com/Microsoft/Quantum), or [**Microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas), as is appropriate.
 We'll describe more about pull requests below, but for now there's a few things that are good to keep in mind as you improve documentation:
 
 - Readers come to the Quantum Development Kit documentation from a very wide range of backgrounds. Everyone from high school students looking to learn something new and exciting through to tenured faculty performing quantum computing research should be able to get something out of reading the documentation. To the extent that's possible, please don't assume extensive knowledge on the part of your readers, as they may just be starting out. It's most helpful if you can provide clear and accessible descriptions, or can provide links to other resources for more information.

@@ -486,3 +486,44 @@ Init:One  0s=490  1s=510  agree=1000
 ```
 
 Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1), but now when we measure the second qubit, it is __always__ the same as what we measured for the first qubit. Our `CNOT` has entangled the two qubits, so that whatever happens to one of them, happens to the other. If you reversed the measurements (did the second qubit before the first), the same thing would happen. The first measurement would be random and the second would be in lock step with whatever was discovered for the first.
+
+
+## Estimating Resources
+
+Sometimes the quantum program is impossible to simulate on a classical computer (for example, if it uses too many qubits). In this case the researchers need to get an estimate of how many resources (qubits or certain gates) the program will use when executed on a quantum computer.
+of how many quantum resources the program will use on a quantum computer as it would be impossible to simulate the 
+program on a classical computer. We can do this without changing the Q# operation but using a different target machine, a  `ResourcesEstimator`, for executing it in the C# host code; 
+for example, modify the code in the the __Driver.cs__ file to be:
+
+```csharp
+            var estimator = new ResourcesEstimator();
+            BellTest.Run(estimator, 1000, Result.Zero).Wait();
+
+            System.Console.WriteLine(estimator.ToTSV());
+            
+            System.Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+```
+
+This change indicates to run the `BellTest` operation using the `estimator` as the target machine. When completed,
+we output the results to the console in TSV (tab-seperated values) format using the `ResourcesEstimator`'s `ToTSV()` method.
+The output of the program is:
+
+```Output
+Metric          Sum
+CNOT            1000
+QubitClifford   1000
+R               0
+Measure         4002
+T               0
+Depth           0
+Width           2
+BorrowedWidth   0
+```
+
+For more information about the metrics reported and accessing the data programmatically,
+take a look at the [`ResourcesEstimator` documentation](xref:microsoft.quantum.machines.resources-estimator).
+
+
+To learn more about the other type of simulators and target machines provided in the Quantum Development Kit, 
+how they work and how to use them, take a look at the [Managing Quantum machines and drivers topic](xref:microsoft.quantum.machines) in the documentation.

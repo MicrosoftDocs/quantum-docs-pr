@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.paulifrombitstring
 name: PauliFromBitString
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given a bit string, returns a multi-qubit Pauli operator
   represented as an array of single-qubit Pauli operators.
 remarks: The Boolean array and the quantum register must be of equal length.

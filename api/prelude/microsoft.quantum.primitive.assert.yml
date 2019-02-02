@@ -3,10 +3,10 @@ uid: microsoft.quantum.primitive.assert
 name: Assert
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Asserts that measuring the given qubits in the given Pauli basis will
   always have the given result.
-remarks: >-
+remarks: |-
   Note that the Adjoint and Controlled versions of this operation will not
   check the condition.
 syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
@@ -14,7 +14,7 @@ input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
   types:
   - name: bases
-    summary: >-
+    summary: |-
       A measurement effect to assert the probability of, expressed as a
       multi-qubit Pauli operator.
     isArray: true

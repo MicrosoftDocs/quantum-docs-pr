@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.blochspherecoordinates
 name: BlochSphereCoordinates
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Computes the Bloch sphere coordinates for a single-qubit state.
 
   Given two complex numbers $a0, a1$ that represent the qubit state, computes coordinates

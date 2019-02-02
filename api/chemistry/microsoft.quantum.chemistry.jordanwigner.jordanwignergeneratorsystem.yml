@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner.jordanwignergeneratorsystem
 name: JordanWignerGeneratorSystem
 type: function
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: >-
+summary: |-
   Converts a Hamiltonian described by `JWOptimizedHTerms`
   to a `GeneratorSystem` expressed in terms of the
   `GeneratorIndex` convention defined in this file.

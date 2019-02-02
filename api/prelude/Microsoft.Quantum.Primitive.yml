@@ -3,17 +3,17 @@ uid: microsoft.quantum.primitive
 name: Microsoft.Quantum.Primitive
 operations:
 - uid: microsoft.quantum.primitive.assert
-  summary: >-
+  summary: |-
     Asserts that measuring the given qubits in the given Pauli basis will
     always have the given result.
 - uid: microsoft.quantum.primitive.assertprob
-  summary: >-
+  summary: |-
     Asserts that measuring the given qubits in the given Pauli basis will have the given result
     with the given probability, within some tolerance.
 - uid: microsoft.quantum.primitive.ccnot
   summary: Applies the doubly controlled–NOT (CCNOT) gate to three qubits.
 - uid: microsoft.quantum.primitive.cnot
-  summary: >-
+  summary: |-
     Applies the controlled-NOT (CNOT) gate to a pair of qubits.
 
     \begin{align}
@@ -28,26 +28,26 @@ operations:
 
     where rows and columns are ordered as in the quantum concepts guide.
 - uid: microsoft.quantum.primitive.exp
-  summary: >-
+  summary: |-
     Applies the exponential of a multi-qubit Pauli operator.
 
     \begin{align}
-    e^{i \theta [P_0 \otimes P_1 \cdots P_N]},
+    e^{i \theta [P_0 \otimes P_1 \cdots P_{N-1}]},
     \end{align}
     where $P_i$ is the $i$th element of `paulis`, and where
     $N = $`Length(paulis)`.
 - uid: microsoft.quantum.primitive.expfrac
-  summary: >-
+  summary: |-
     Applies the exponential of a multi-qubit Pauli operator
     with an argument given by a dyadic fraction.
 
     \begin{align}
-    e^{i \theta \pi k [P_0 \otimes P_1 \cdots P_N] / 2^n},
+    e^{i \pi k [P_0 \otimes P_1 \cdots P_{N-1}] / 2^n},
     \end{align}
     where $P_i$ is the $i$th element of `paulis`, and where
     $N = $`Length(paulis)`.
 - uid: microsoft.quantum.primitive.h
-  summary: >-
+  summary: |-
     Applies the Hadamard transformation to a single qubit.
 
     \begin{align}
@@ -61,7 +61,7 @@ operations:
 - uid: microsoft.quantum.primitive.i
   summary: Performs the identity operation (no-op) on a single qubit.
 - uid: microsoft.quantum.primitive.m
-  summary: >-
+  summary: |-
     Performs a measurement of a single qubit in the
     Pauli $Z$ basis.
 
@@ -72,7 +72,7 @@ operations:
     \braket{\psi | 0} \braket{0 | \psi}.
     \end{align}
 - uid: microsoft.quantum.primitive.measure
-  summary: >-
+  summary: |-
     Performs a joint measurement of one or more qubits in the
     specified Pauli bases.
 
@@ -92,11 +92,11 @@ operations:
     That is, measurement returns a `Result` $d$ such that the eigenvalue of the
     observed measurement effect is $(-1)^d$.
 - uid: microsoft.quantum.primitive.multix
-  summary: >-
+  summary: |-
     Applies the gate $X \otimes X \otimes \cdots \otimes X$
     to a register of qubits.
 - uid: microsoft.quantum.primitive.r
-  summary: >-
+  summary: |-
     Applies a rotation about the given Pauli axis.
 
     \begin{align}
@@ -105,7 +105,7 @@ operations:
     \end{align}
     where $\mu \in \{I, X, Y, Z\}$.
 - uid: microsoft.quantum.primitive.r1
-  summary: >-
+  summary: |-
     Applies a rotation about the $\ket{1}$ state by a given angle.
 
     \begin{align}
@@ -113,7 +113,7 @@ operations:
     \operatorname{diag}(1, e^{i\theta}).
     \end{align}
 - uid: microsoft.quantum.primitive.r1frac
-  summary: >-
+  summary: |-
     Applies a rotation about the $\ket{1}$ state by an angle specified
     as a dyadic fraction.
 
@@ -127,7 +127,7 @@ operations:
     > @"microsoft.quantum.primitive.r", and does not include the
     > factor of $1/ 2$ included by @"microsoft.quantum.primitive.r1".
 - uid: microsoft.quantum.primitive.random
-  summary: >-
+  summary: |-
     The random operation takes an array of doubles as input, and returns
     a randomly-selected index into the array as an `Int`.
     The probability of selecting a specific index is proportional to the value
@@ -136,15 +136,15 @@ operations:
     returned. If any array element is less than zero,
     or if no array element is greater than zero, then the operation fails.
 - uid: microsoft.quantum.primitive.reset
-  summary: >-
+  summary: |-
     Given a single qubit, measures it and ensures it is in the |0⟩ state
     such that it can be safely released.
 - uid: microsoft.quantum.primitive.resetall
-  summary: >-
+  summary: |-
     Given an array of qubits, measure them and ensure they are in the |0⟩ state
     such that they can be safely released.
 - uid: microsoft.quantum.primitive.rfrac
-  summary: >-
+  summary: |-
     Applies a rotation about the given Pauli axis by an angle specified
     as a dyadic fraction.
 
@@ -158,31 +158,43 @@ operations:
     > This operation uses the **opposite** sign convention from
     > @"microsoft.quantum.primitive.r".
 - uid: microsoft.quantum.primitive.rx
-  summary: >-
+  summary: |-
     Applies a rotation about the $x$-axis by a given angle.
 
     \begin{align}
     R_x(\theta) \mathrel{:=}
-    e^{-i \theta \sigma_x / 2}.
+    e^{-i \theta \sigma_x / 2} =
+    \begin{bmatrix}
+    \cos \frac{\theta}{2} & -i\sin \frac{\theta}{2}  \\\\
+    -i\sin \frac{\theta}{2} & \cos \frac{\theta}{2}
+    \end{bmatrix}.
     \end{align}
 - uid: microsoft.quantum.primitive.ry
-  summary: >-
+  summary: |-
     Applies a rotation about the $y$-axis by a given angle.
 
     \begin{align}
     R_y(\theta) \mathrel{:=}
-    e^{-i \theta \sigma_y / 2}.
+    e^{-i \theta \sigma_y / 2} =
+    \begin{bmatrix}
+    \cos \frac{\theta}{2} & -\sin \frac{\theta}{2}  \\\\
+    \sin \frac{\theta}{2} & \cos \frac{\theta}{2}
+    \end{bmatrix}.
     \end{align}
 - uid: microsoft.quantum.primitive.rz
-  summary: >-
+  summary: |-
     Applies a rotation about the $z$-axis by a given angle.
 
     \begin{align}
     R_z(\theta) \mathrel{:=}
-    e^{-i \theta \sigma_z / 2}.
+    e^{-i \theta \sigma_z / 2} =
+    \begin{bmatrix}
+    e^{-i \theta / 2} & 0 \\\\
+    0 & e^{i \theta / 2}
+    \end{bmatrix}.
     \end{align}
 - uid: microsoft.quantum.primitive.s
-  summary: >-
+  summary: |-
     Applies the π/4 phase gate to a single qubit.
 
     \begin{align}
@@ -193,7 +205,7 @@ operations:
     \end{bmatrix}.
     \end{align}
 - uid: microsoft.quantum.primitive.swap
-  summary: >-
+  summary: |-
     Applies the SWAP gate to a pair of qubits.
 
     \begin{align}
@@ -208,7 +220,7 @@ operations:
 
     where rows and columns are ordered as in the quantum concepts guide.
 - uid: microsoft.quantum.primitive.t
-  summary: >-
+  summary: |-
     Applies the π/8 gate to a single qubit.
 
     \begin{align}
@@ -219,7 +231,7 @@ operations:
     \end{bmatrix}.
     \end{align}
 - uid: microsoft.quantum.primitive.x
-  summary: >-
+  summary: |-
     Applies the Pauli $X$ gate.
 
     \begin{align}
@@ -230,7 +242,7 @@ operations:
     \end{bmatrix}.
     \end{align}
 - uid: microsoft.quantum.primitive.y
-  summary: >-
+  summary: |-
     Applies the Pauli $Y$ gate.
 
     \begin{align}
@@ -241,7 +253,7 @@ operations:
     \end{bmatrix}.
     \end{align}
 - uid: microsoft.quantum.primitive.z
-  summary: >-
+  summary: |-
     Applies the Pauli $Z$ gate.
 
     \begin{align}

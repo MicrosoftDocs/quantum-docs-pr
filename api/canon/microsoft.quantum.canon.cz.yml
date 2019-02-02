@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.cz
 name: CZ
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Applies the controlled-Z (CZ) gate to a pair of qubits.
 
   $$
@@ -15,7 +15,7 @@ summary: >-
   \end{align},
   $$
   where rows and columns are organized as in the quantum concepts guide.
-remarks: >-
+remarks: |-
   Equivalent to:
 
   ```qsharp

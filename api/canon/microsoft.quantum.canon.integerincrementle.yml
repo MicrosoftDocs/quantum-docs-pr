@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.integerincrementle
 name: IntegerIncrementLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Unsigned integer increment by an integer constant, based on phase rotations.
 
   Suppose `target` encodes unsigned integer x in little-endian encoding and

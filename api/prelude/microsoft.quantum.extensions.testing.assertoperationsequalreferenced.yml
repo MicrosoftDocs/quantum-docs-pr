@@ -3,7 +3,7 @@ uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
 name: AssertOperationsEqualReferenced
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
-summary: >-
+summary: |-
   Given two operations, asserts that they act identically for all input states.
 
   This assertion is implemented by using the Choi–Jamiłkowski isomorphism to reduce
@@ -13,7 +13,7 @@ summary: >-
   This assertion can be used to ensure, for instance, that an optimized version of an
   operation acts identically to its naïve implementation, or that an operation
   which acts on a range of non-quantum inputs agrees with known cases.
-remarks: >-
+remarks: |-
   This operation requires that the operation modeling the expected behavior is
   adjointable, so that the inverse can be performed on the target register alone.
   Formally, one can specify a transpose operation, which relaxes this requirement,

@@ -189,7 +189,8 @@ Given two integers $a$ and $N$, where $a<N$, the goal of period finding, also ca
 To find the order using a quantum computer, we can use the phase estimation algorithm applied to the following unitary operator $U_a$:
 $$ U_a|x\rangle \equiv |(ax)\text{ mod }N\rangle .$$
 The eigenvectors of $U_a$ are for integer $s$ and $0\leq s \leq r - 1$,
-$$|x_s\rangle \equiv 1 / \sqrt{r} \sum\_{k=0}^{r-1} e^{\frac{-2\pi i sk}{r}} | a^k \text{ mod } N \rangle,$$ are {\it eigenstates} of $U_a$.
+$$|x_s\rangle \equiv 1 / \sqrt{r} \sum\_{k=0}^{r-1} e^{\frac{-2\pi i sk}{r}} | a^k \text{ mod } N \rangle,$$
+are _eigenstates_ of $U_a$.
 The eigenvalues of $U_a$ are
 $$ U\_a |x\_s\rangle = e^{2\pi i s / r} | x\_s \rangle . $$
 

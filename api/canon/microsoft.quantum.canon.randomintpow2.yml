@@ -3,18 +3,18 @@ uid: microsoft.quantum.canon.randomintpow2
 name: RandomIntPow2
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Generates a random integer uniformly sampled from all integers that can be represented
   in a given number of bits.
-remarks: >-
+remarks: |-
   This function calls <xref:microsoft.quantum.primitive.random>, so
-  its randomess depends on the implementation of `Random`.
+  its randomness depends on the implementation of `Random`.
 syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
 input:
   content: '(maxBits : Int)'
   types:
   - name: maxBits
-    summary: >-
+    summary: |-
       The number of classical bits required to represent the largest integer
       that could be returned by this operation.
     isPrimitive: true
@@ -22,7 +22,7 @@ input:
 output:
   content: Int
   types:
-  - summary: >-
+  - summary: |-
       An integer $x$ uniformly at random from the given interval;
       that is, with $\Pr(x) = \frac{1}{2^{\texttt{maxBits}}}$.
     isPrimitive: true

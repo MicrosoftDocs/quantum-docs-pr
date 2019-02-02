@@ -3,11 +3,11 @@ uid: microsoft.quantum.canon.ampamprotationtoreflectionphases
 name: AmpAmpRotationToReflectionPhases
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Converts phases specified as single-qubit rotations to phases
   specified as partial reflections.
 syntax: 'function AmpAmpRotationToReflectionPhases (rotPhases : Microsoft.Quantum.Canon.AmpAmpRotationPhases) : Microsoft.Quantum.Canon.AmpAmpReflectionPhases'
-references: >-
+references: |-
   We use the convention in
 
   - [ *G.H. Low, I. L. Chuang* ](https://arxiv.org/abs/1707.05391)
@@ -16,7 +16,7 @@ input:
   content: '(rotPhases : Microsoft.Quantum.Canon.AmpAmpRotationPhases)'
   types:
   - name: rotPhases
-    summary: >-
+    summary: |-
       Array of single-qubit rotations to be converted to partial
       reflections.
     uid: microsoft.quantum.canon.ampamprotationphases

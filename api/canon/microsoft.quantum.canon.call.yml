@@ -3,12 +3,12 @@ uid: microsoft.quantum.canon.call
 name: Call
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Calls a function with a given input.
 
   Given a function and an input to that function, calls the function
   and returns its output.
-remarks: >-
+remarks: |-
   This operation is mainly useful for forcing a function to be called
   at a specific place within an operation, or for calling a function
   where an operation is expected.

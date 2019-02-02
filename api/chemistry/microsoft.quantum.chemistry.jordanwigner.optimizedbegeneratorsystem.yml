@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
 name: OptimizedBEGeneratorSystem
 type: newtype
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: >-
+summary: |-
   Function that returns `OptimizedBETermIndex` data for term `n` given an
   integer `n`, together with the number of terms in the first `Int` and
   the sum of absolute-values of all term coefficients in the `Double`.

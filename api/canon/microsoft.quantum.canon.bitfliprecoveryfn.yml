@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.bitfliprecoveryfn
 name: BitFlipRecoveryFn
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Function for recovery Pauli operations for given syndrome measurement
   by table lookup for the ⟦3, 1, 1⟧ bit flip code.
 syntax: 'function BitFlipRecoveryFn () : Microsoft.Quantum.Canon.RecoveryFn'
@@ -13,7 +13,7 @@ input:
 output:
   content: Microsoft.Quantum.Canon.RecoveryFn
   types:
-  - summary: >-
+  - summary: |-
       Function of type `RecoveryFn` that takes a syndrome measurement
       `Result[]` and returns the `Pauli[]` operations that corrects the
       detected error.

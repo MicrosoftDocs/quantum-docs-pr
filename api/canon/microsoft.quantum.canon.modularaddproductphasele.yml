@@ -3,10 +3,10 @@ uid: microsoft.quantum.canon.modularaddproductphasele
 name: ModularAddProductPhaseLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
-  The same as ModularAddProductInPlaceLE, but assumes that summand encodes
+summary: |-
+  The same as ModularAddProductLE, but assumes that summand encodes
   integers in QFT basis
-remarks: >-
+remarks: |-
   Assumes that `phaseSummand` has the highest bit set to 0.
   Also assumes that the value of `phaseSummand` is less than N.
 syntax: 'operation ModularAddProductPhaseLE (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Canon.LittleEndian, phaseSummand : Microsoft.Quantum.Canon.PhaseLittleEndian) : Unit'

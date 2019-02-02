@@ -3,17 +3,17 @@ uid: microsoft.quantum.canon.singlequbitprocesstomographymeasurement
 name: SingleQubitProcessTomographyMeasurement
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Performs a single-qubit process tomography measurement in the Pauli
   basis, given a particular channel of interest.
-remarks: >-
+remarks: |-
   The distribution over results returned by this operation is a special
   case of two-qubit state tomography. Let $\rho = J(\Lambda) / 2$ be
   the Choi–Jamiłkowski state for $\Lambda$. Then, the distribution above
   is identical to
   $$
   \begin{align}
-  \Pr(\texttt{Zero} | \rho; M) = \Tr(M \rho),
+  \Pr(\texttt{Zero} | \rho; M) = \operatorname{Tr}(M \rho),
   \end{align}
   $$
   where $M = 2 (\boldone + P)^\mathrm{T} / 2 \cdot (\boldone + Q) / 2$
@@ -31,7 +31,7 @@ input:
     isPrimitive: true
     uid: Pauli
   - name: channel
-    summary: >-
+    summary: |-
       A single qubit channel $\Lambda$ whose behavior is being estimated
       with process tomography.
     isOperation: true
@@ -46,11 +46,11 @@ input:
 output:
   content: Result
   types:
-  - summary: >-
+  - summary: |-
       The Result `Zero` with probability
       $$
       \begin{align}
-      \Pr(\texttt{Zero} | \Lambda; P, Q) = \Tr\left(
+      \Pr(\texttt{Zero} | \Lambda; P, Q) = \operatorname{Tr}\left(
       \frac{\boldone + Q}{2} \Lambda\left[
       \frac{\boldone + P}{2}
       \right]

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.littleendiantobigendian
 name: LittleEndianToBigEndian
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Converts a `LittleEndian` qubit register to a `BigEndian` Qubit
   register by reversing the qubit ordering.
 syntax: 'function LittleEndianToBigEndian (input : Microsoft.Quantum.Canon.LittleEndian) : Microsoft.Quantum.Canon.BigEndian'

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.iteratethroughcartesianproduct
 name: IterateThroughCartesianProduct
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Iterates a variable, say `arr`, through a Cartesian product
   [ 0, bounds[0]-1 ] × [ 0, bounds[1]-1 ] × [ 0, bounds[Length(bounds)-1]-1 ]
   and calls op(arr) for every element of the Cartesian product

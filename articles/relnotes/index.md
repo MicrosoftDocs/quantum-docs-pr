@@ -10,7 +10,37 @@ uid: microsoft.quantum.relnotes
 
 # Microsoft Quantum Development Kit Release Notes
 
+# Version 0.4.1901
 
+*Release date: January 30, 2019*
+
+This release contains the following:
+
+- adds support for a new primitive type, BigInt, which represents a signed integer of arbitrary size.  Learn more about [BigInt type](xref:microsoft.quantum.language.type-model).
+- adds new Toffoli simulator, a special purpose fast simulator that can simulate X, CNOT and multi-controlled X quantum operations with very large numbers of qubits.  Learn more about [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator).
+- adds a simple resource estimator that estimates the resources required to run a given instancee of a Q# operation on a quantum computer.  Learn more about the [Resource Estimator](xref:microsoft.quantum.machines.resources-estimator).
+
+
+# Version 0.3.1811.2802
+
+*Release date: November 28, 2018*
+
+Even though our VS Code extension was not using it, it was flagged and removed from the marketplace during
+[the extensions purge](https://code.visualstudio.com/blogs/2018/11/26/event-stream) related to the `event-stream` NPM package. 
+This version removes all runtime dependencies that could make the extension trigger any red flags.
+
+If you had previously installed the extension you will need to install it again by visiting 
+the [Microsoft Quantum Development Kit for Visual Studio Code](vscode:extension/quantum.quantum-devkit-vscode) extension on the 
+Visual Studio Marketplace and press Install. We are sorry about the inconvenience.
+
+
+# Version 0.3.1811.1511
+
+*Release date: November 20, 2018*
+
+This release fixes a bug that prevented some users to successfully load the Visual Studio extension.
+
+If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).
 
 # Version 0.3.1811.203
 

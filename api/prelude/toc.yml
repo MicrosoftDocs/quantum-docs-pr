@@ -31,8 +31,14 @@
 - name: Microsoft.Quantum.Extensions.Convert
   uid: microsoft.quantum.extensions.convert
   items:
+  - name: BigIntToBools
+    uid: microsoft.quantum.extensions.convert.biginttobools
+  - name: BoolsToBigInt
+    uid: microsoft.quantum.extensions.convert.boolstobigint
   - name: PauliArrayToInt
     uid: microsoft.quantum.extensions.convert.pauliarraytoint
+  - name: ToBigInt
+    uid: microsoft.quantum.extensions.convert.tobigint
   - name: ToDouble
     uid: microsoft.quantum.extensions.convert.todouble
   - name: ToStringB
@@ -55,6 +61,8 @@
 - name: Microsoft.Quantum.Extensions.Math
   uid: microsoft.quantum.extensions.math
   items:
+  - name: AbsB
+    uid: microsoft.quantum.extensions.math.absb
   - name: AbsD
     uid: microsoft.quantum.extensions.math.absd
   - name: AbsI
@@ -75,6 +83,8 @@
     uid: microsoft.quantum.extensions.math.cos
   - name: Cosh
     uid: microsoft.quantum.extensions.math.cosh
+  - name: DivRemB
+    uid: microsoft.quantum.extensions.math.divremb
   - name: E
     uid: microsoft.quantum.extensions.math.e
   - name: ExpD
@@ -87,20 +97,28 @@
     uid: microsoft.quantum.extensions.math.log
   - name: Log10
     uid: microsoft.quantum.extensions.math.log10
+  - name: MaxB
+    uid: microsoft.quantum.extensions.math.maxb
   - name: MaxD
     uid: microsoft.quantum.extensions.math.maxd
   - name: MaxI
     uid: microsoft.quantum.extensions.math.maxi
+  - name: MinB
+    uid: microsoft.quantum.extensions.math.minb
   - name: MinD
     uid: microsoft.quantum.extensions.math.mind
   - name: MinI
     uid: microsoft.quantum.extensions.math.mini
+  - name: ModPowB
+    uid: microsoft.quantum.extensions.math.modpowb
   - name: PI
     uid: microsoft.quantum.extensions.math.pi
   - name: PowD
     uid: microsoft.quantum.extensions.math.powd
   - name: Round
     uid: microsoft.quantum.extensions.math.round
+  - name: SignB
+    uid: microsoft.quantum.extensions.math.signb
   - name: SignD
     uid: microsoft.quantum.extensions.math.signd
   - name: SignI

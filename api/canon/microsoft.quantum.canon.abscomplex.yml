@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.abscomplex
 name: AbsComplex
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Returns the absolute value of a complex number of type
   `Complex`.
 syntax: 'function AbsComplex (input : Microsoft.Quantum.Extensions.Math.Complex) : Double'

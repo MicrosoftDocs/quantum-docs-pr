@@ -4,7 +4,7 @@ name: AmpAmpObliviousByOraclePhases
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: Oblivious amplitude amplification by oracles for partial reflections.
-remarks: >-
+remarks: |-
   This imposes stricter conditions on form of the ancilla start and target states than in `AmpAmpObliviousByReflectionPhases`.
   It is assumed that $A\ket{0}\_f\ket{0}\_a= \ket{\text{start}}\_{fa}$ prepares the ancilla start state $\ket{\text{start}}\_{fa}$ from the computational basis $\ket{0}\_f\ket{0}$.
   It is assumed that the target state is marked by $\ket{1}\_f$.

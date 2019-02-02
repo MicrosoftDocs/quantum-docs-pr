@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.ccontrolled
 name: CControlled
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given an operation op, returns a new operation which
   applies the op if a classical control bit is true. If false, nothing happens.
 syntax: "function CControlled (op : ('T => Unit)) : ((Bool, 'T) => Unit)"
@@ -40,7 +40,7 @@ typeParameters:
 - uid: "'T"
   summary: The input type of the operation to be conditionally applied.
 seeAlso:
-- microsoft.quantum.canon.controlledc
-- microsoft.quantum.canon.controlleda
-- microsoft.quantum.canon.controlledca
+- microsoft.quantum.canon.ccontrolledc
+- microsoft.quantum.canon.ccontrolleda
+- microsoft.quantum.canon.ccontrolledca
 ...

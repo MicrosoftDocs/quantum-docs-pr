@@ -3,14 +3,18 @@ uid: microsoft.quantum.primitive.rx
 name: Rx
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Applies a rotation about the $x$-axis by a given angle.
 
   \begin{align}
   R_x(\theta) \mathrel{:=}
-  e^{-i \theta \sigma_x / 2}.
+  e^{-i \theta \sigma_x / 2} =
+  \begin{bmatrix}
+  \cos \frac{\theta}{2} & -i\sin \frac{\theta}{2}  \\\\
+  -i\sin \frac{\theta}{2} & \cos \frac{\theta}{2}
+  \end{bmatrix}.
   \end{align}
-remarks: >-
+remarks: |-
   Equivalent to:
 
   ```qsharp

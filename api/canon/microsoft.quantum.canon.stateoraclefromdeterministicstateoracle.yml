@@ -14,7 +14,7 @@ input:
 output:
   content: Microsoft.Quantum.Canon.StateOracle
   types:
-  - summary: >-
+  - summary: |-
       The same state preparation oracle $A$, but now of type
       `StateOracle`. Note that the flag index in this `StateOracle` is a
       dummy variable and has no effect.

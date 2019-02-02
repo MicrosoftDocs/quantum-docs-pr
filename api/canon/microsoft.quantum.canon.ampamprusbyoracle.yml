@@ -4,7 +4,7 @@ name: AmpAmpRUSByOracle
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: Fixed-Point Amplitude Amplification algorithm
-remarks: >-
+remarks: |-
   The startQubits must be in the $\ket{0 \cdots 0}$ state. This operation iterates over a number of queries in powers of $2$ until either a maximal number of queries
   is reached, or the target state is found.
 syntax: 'operation AmpAmpRUSByOracle (statePrepOracle : Microsoft.Quantum.Canon.StateOracle, startQubits : Qubit[]) : Unit'

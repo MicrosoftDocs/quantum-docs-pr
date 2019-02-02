@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstatecoupledcluster
 name: PrepareTrialStateCoupledCluster
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: >-
+summary: |-
   Coupled-cluster state preparation of trial state by adding excitations
   to initial trial state.
 syntax: 'operation PrepareTrialStateCoupledCluster (initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[]) : Unit'
@@ -23,7 +23,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: excitations
-    summary: >-
+    summary: |-
       Excitations of initial trial state represented by
       the amplitude of the excitation and the qubit indices
       the excitation acts on.

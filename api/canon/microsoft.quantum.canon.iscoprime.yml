@@ -19,7 +19,7 @@ input:
 output:
   content: Bool
   types:
-  - summary: >-
+  - summary: |-
       True, if a and b are co-prime (e.g. their greatest common divisor is 1 ),
       and false otherwise
     isPrimitive: true

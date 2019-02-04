@@ -29,7 +29,7 @@ Some of the samples demonstrate using the Quantum Development Kit with other pro
 - Some samples use the Node.js Package Manager (NPM) to handle user interface dependencies.
   NPM can be installed [manually](https://nodejs.org/en/download/current/) or through a [package manager](https://nodejs.org/en/download/package-manager/).
 - The Python interoperability feature (currently in Windows-only preview) has been developed for the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3.6.
-  Please see the [README](https://github.com/Microsoft/Quantum/tree/master/Samples/PythonInterop/README.md) file provided with the Python sample for more details.
+  Please see the [README](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PythonInterop/README.md) file provided with the Python sample for more details.
 
 
 # Validating the Quantum Development Kit installation

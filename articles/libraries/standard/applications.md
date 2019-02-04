@@ -7,11 +7,6 @@ uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article
-# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
-# For Quantum products none of these categories have been defined  yet.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-# ms.technology: tech-name-from-white-list
 ---
 
 # Applications #
@@ -43,7 +38,7 @@ $$
     H & = \sum^{d-1}\_{j=0} a\_j \hat{U}\_j,
 \end{align}
 $$
-where $a\_j>0$ are coefficients, and $\hat{U}\_j$ are unitaries. It is then assumed that one has black-box access to the unitary oracle $V=\sum^{d-1}\_{j=0}\ket{j}\bra{j}\otimes \hat{U}\_j$ that selects the desired $\hat{U}\_j$, and the oracle $A\ket{0}=\sum^{d-1}\_{j=0}\sqrt{a\_j/\sum^{d-1}\_{k=0}\alpha\_j}\ket{j}$ that create a quantum state encoding these coefficients. In the case of [sparse Hamiltonian simulation](https://arxiv.org/abs/quant-ph/0301023), one assumes that the Hamiltonian is a sparse matrix with only $d=\mathcal{O}(\text{polylog}(N))$ non-zero element in every row. Moreover, one assumes the existence of efficient quantum circuits that output the location of these non-zero elements, as well as the their values. The complexity of (Hamiltonian simulation algorithms)[quantum-formoreinfo] are evaluated in terms of number of queries to these black-boxes, and the primitive gate complexity then depends very much on the difficulty of implementing these black-boxes.
+where $a\_j>0$ are coefficients, and $\hat{U}\_j$ are unitaries. It is then assumed that one has black-box access to the unitary oracle $V=\sum^{d-1}\_{j=0}\ket{j}\bra{j}\otimes \hat{U}\_j$ that selects the desired $\hat{U}\_j$, and the oracle $A\ket{0}=\sum^{d-1}\_{j=0}\sqrt{a\_j/\sum^{d-1}\_{k=0}\alpha\_j}\ket{j}$ that create a quantum state encoding these coefficients. In the case of [sparse Hamiltonian simulation](https://arxiv.org/abs/quant-ph/0301023), one assumes that the Hamiltonian is a sparse matrix with only $d=\mathcal{O}(\text{polylog}(N))$ non-zero element in every row. Moreover, one assumes the existence of efficient quantum circuits that output the location of these non-zero elements, as well as the their values. The complexity of [Hamiltonian simulation algorithms](xref:microsoft.quantum.more-information) is evaluated in terms of number of queries to these black-boxes, and the primitive gate complexity then depends very much on the difficulty of implementing these black-boxes.
 
 > [!NOTE]
 > The big-O notation is commonly used to describe the complexity scaling of algorithms. Given two real functions $f,g$, the expression $g(x)=\mathcal{O}(f(x))$ means that there exists an absolute positive constant $x\_0, c>0$ such that $g(x) \le c f(x)$ for all $x\ge x\_0$. 
@@ -57,7 +52,7 @@ $$
 Moreover, it is assumed that each part, a Hamiltonian $H\_j$, is easy to simulate. This means that the unitary $e^{-iH\_j t}$ for any time $t$ may be implemented exactly using $\mathcal{O}(1)$ primitive quantum gates. For instance, this is true in the special case where each $H\_j$ are local Pauli operators, meaning that they are of tensor products of $\mathcal{O}(1)$ non-identity Pauli operators that act on spatially close qubits. This model is particularly applicable to physical systems with bounded and local interaction, as the number of terms is $d=\mathcal{O}(\text{polylog}(N))$, and may clearly be written down, i.e. classically described, in polynomial time.
 
 > [!TIP]
-> Hamiltonians that decompose into a sum of parts may be described using the Dynamical Generator Representation library. For more information, see the Dynamical Generator Representation section in [data structures](xref:microsoft.quantum.libraries.data-structures)
+> Hamiltonians that decompose into a sum of parts may be described using the Dynamical Generator Representation library. For more information, see the Dynamical Generator Representation section in [data structures](xref:microsoft.quantum.libraries.data-structures).
 
 ### Simulation Algorithms ###
 
@@ -73,9 +68,9 @@ using a product of $r d$ terms.
 
 > [!TIP]
 > Applications of the Trotter-Suzuki simulation algorithm are covered in the samples. 
-> For the Ising model using only the primitive library, please see the [**SimpleIsing** sample](https://github.com/Microsoft/Quantum/Samples/SimpleIsingSample).
-> For the Ising model using the Trotter-Suzuki library control structure, please see the [**IsingTrotter** sample](https://github.com/Microsoft/Quantum/Samples/IsingTrotterSample).
-> For molecular Hydrogen using the Trotter-Suzuki library control structure, please see the [**H2 simulation** sample](https://github.com/Microsoft/Quantum/Samples/H2SimulationSampleCmdLine).
+> For the Ising model using only the primitive library, please see the [**SimpleIsing** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing).
+> For the Ising model using the Trotter-Suzuki library control structure, please see the [**IsingTrotter** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingTrotterEvolution).
+> For molecular Hydrogen using the Trotter-Suzuki library control structure, please see the [**H2 simulation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine).
 
 In many cases, we would like to implement the simulation algorithm, but are not interested in the details of its implementation. For instance, the second-order integrator approximates
 $$
@@ -117,8 +112,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 
 > [!TIP]
 > Applications of the simulation library are covered in the samples. 
-> For phase estimation in the Ising model using `SimulationAlgorithm`, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/Samples/IsingPhaseEstimationSample).
-> For adiabatic state preparation in the Ising model using `TimeDependentSimulationAlgorithm`, please see the [**AdiabaticIsing** sample](https://github.com/Microsoft/Quantum/Samples/AdiabaticIsingSample).
+> For phase estimation in the Ising model using `SimulationAlgorithm`, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
+> For adiabatic state preparation in the Ising model using `TimeDependentSimulationAlgorithm`, please see the [**AdiabaticIsing** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/AdiabaticIsing).
 
 
 ### Adiabatic State Preparation & Phase Estimation ###
@@ -163,11 +158,11 @@ operation AdiabaticStateEnergyEstimate(
 
 > [!TIP]
 > Applications of adiabatic state preparation are covered in the samples. 
-> For the Ising model using a manual implementation of adiabatic state preparation versus using the `AdiabaticEvolution` function, please see the [**AdiabaticIsing** sample](https://github.com/Microsoft/Quantum/Samples/AdiabaticIsingSample).
-> For phase estimation and adiabatic state preparation in the Ising model, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/Samples/IsingPhaseEstimationSample).
+> For the Ising model using a manual implementation of adiabatic state preparation versus using the `AdiabaticEvolution` function, please see the [**AdiabaticIsing** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/AdiabaticIsing).
+> For phase estimation and adiabatic state preparation in the Ising model, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
 
 > [!TIP]
-> The [simulation of molecular Hydrogen](https://github.com/Microsoft/Quantum/Samples/H2SimulationSampleCmdLine) is an interesting and brief sample. The model and experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) only requires Pauli matrices and takes the form $\hat H = g\_{0}I\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$. This is an effective Hamiltonian only requiring only 2 qubits, where the constants $g$ are computed from the distance $R$ between the two Hydrogen atoms. Using canon functions, the Paulis are converted to unitaries and then evolved over short periods of time using the Trotter-Suzuki decomposition. A good approximation to the $H_2$ ground state can be created without using adiabatic state preparation, and so the ground state energy may be found directly by utilizing phase estimation from the canon.
+> The [simulation of molecular Hydrogen](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) is an interesting and brief sample. The model and experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) only requires Pauli matrices and takes the form $\hat H = g\_{0}I\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$. This is an effective Hamiltonian only requiring only 2 qubits, where the constants $g$ are computed from the distance $R$ between the two Hydrogen atoms. Using canon functions, the Paulis are converted to unitaries and then evolved over short periods of time using the Trotter-Suzuki decomposition. A good approximation to the $H_2$ ground state can be created without using adiabatic state preparation, and so the ground state energy may be found directly by utilizing phase estimation from the canon.
 
 ## Shor's Algorithm ##
 Shor's algorithm remains one of the most significant developments in quantum computing because it showed that quantum computers could be used to solve important, currently classically intractable problems.
@@ -182,7 +177,7 @@ We review these two steps below.
 
 ### Period Finding ###
 
-Having seen how the quantum Fourier transform and phase estimation work (see [Quantum algorithms](xref:microsoft.quantum.libraries.standard.algorithms), we can use these tools to solve a classically hard computational problem called *period finding*.  In the next section, we will see how to apply period finding to factoring.
+Having seen how the quantum Fourier transform and phase estimation work (see [Quantum algorithms](xref:microsoft.quantum.libraries.standard.algorithms)), we can use these tools to solve a classically hard computational problem called *period finding*.  In the next section, we will see how to apply period finding to factoring.
 
 Given two integers $a$ and $N$, where $a<N$, the goal of period finding, also called order finding, is to find the _order_ $r$ of $a$ modulo $N$, where $r$ is defined to be the least positive integer such that $a^r \equiv 1 \text{ mod } N$.  
 
@@ -198,7 +193,7 @@ Phase estimation thus outputs the eigenvalues $e^{2\pi i s / r}$ from which $r$ 
 
 The circuit diagram for quantum period finding is:
 
-![](./../media/QPE.svg)
+![](./../../media/QPE.svg)
 
 Here $2n$ qubits are initialized to $|0\rangle$ and $n$ qubits are initialized to $|1\rangle$.
 The reader again may wonder why the quantum register to hold the eigenstates is initialized to $|1\rangle$.
@@ -236,6 +231,6 @@ If no prime factor has been returned, we proceed to the quantum routine:
 9. If $\text{gcd}(a^{r/2}-1, N)$ is a non-trivial factor of $N$, return $\text{gcd}(a^{r/2}-1, N)$.
 
 
-The factoring algorithm is probabilistic: it can been shown that with probability at least one half that $r$ will be even and $a^{r/2} \neq -1 \text{ mod }N$, thus producing a prime factor.  (See [Shor's original paper](https://doi.org/10.1109/SFCS.1994.365700) for details, or one of the *Basic quantum computing* texts in [For more information](..\xref:microsoft.quantum.more-information)).
+The factoring algorithm is probabilistic: it can been shown that with probability at least one half that $r$ will be even and $a^{r/2} \neq -1 \text{ mod }N$, thus producing a prime factor.  (See [Shor's original paper](https://doi.org/10.1109/SFCS.1994.365700) for details, or one of the *Basic quantum computing* texts in [For more information](xref:microsoft.quantum.more-information)).
 If a prime factor is not returned, then we simply repeat the algorithm from step (1).  After $n$ tries, the probability that every attempt has failed is at most $2^{-n}$.
 Thus after repeating the algorithm a small number of times success is virtually assured.

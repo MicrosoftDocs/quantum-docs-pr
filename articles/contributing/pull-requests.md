@@ -22,6 +22,7 @@ The page for each pull request includes details of all the changes that make you
 > While a full tutorial on Git is beyond the scope of this guide, we can suggest the following links for more resources on learning Git:
 >
 > - [Learn Git](https://www.atlassian.com/git): A set of Git tutorials from Atlassian.
+> - [Version Control in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol): A guide on how to use Visual Studio Code as a GUI for Git.
 > - [GitHub Learning Lab](https://lab.github.com/): A set of online courses for using Git, GitHub, and related technologies.
 > - [Visualizing Git](https://git-school.github.io/visualizing-git/): An interactive tool for visualizing how Git commands change the state of a repository.
 > - [Version Control with Git (EPQIS 2016)](https://nbviewer.jupyter.org/github/QuinnPhys/PythonWorkshop-science/blob/master/lecture-1-scicomp-tools-part1.ipynb#Version-Control-with-Git-(50-Minutes)): A Git tutorial oriented towards scientific computing.
@@ -52,10 +53,28 @@ When you open a pull request to one of our repositories, GitHub will offer an op
 
 ![](~/media/pull-request-header.png)
 
-Using this process helps us 
+Using this process helps us use GitHub functionality to improve contributions and to maintain a high-quality product for the quantum programming community.
 
+## How to Make a Pull Request ##
 
-**TODO: describe lightweight (web-based) for small changes, links to GitHub Flow for more extensive work.**
+There are two main ways to make a pull request.
+For small changes that only affect a single file, the GitHub web interface can be used to make a pull request entirely online.
+For more complicated contributions, it's most often easier to use your local computer to prepare for a pull request first.
+
+### Using the Web Interface ###
+
+**TODO**
+
+### Command-Line and GitHub Flow ###
+
+Most of the time, it's easier to prepare a pull request on your own computer; that makes it easier to work incrementally, and to test your changes.
+If you haven't already done so, the first step is to _fork_ the repository that you'd like to contribute to.
+Forking makes a complete clone of the original repository, but under your GitHub account instead of under [Microsoft](http://github.com/Microsoft/) or [MicrosoftDocs](http://github.com/MicrosoftDocs/).
+This way, you can edit your personal fork to your heart's content before making a pull request for your work.
+
+**TODO: pick up here**
+
+## Code Review and Etiquette ##
 
 **TODO: PR ettiquette, reviews, etc.**
 

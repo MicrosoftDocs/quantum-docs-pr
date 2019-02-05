@@ -47,7 +47,7 @@ function PairTest () : Unit {
 }
 ```
 
-More complicated conditions can be checked using the techniques in the [testing section](microsoft.quantum.libraries.standard.testing) of the standard libraries guide.
+More complicated conditions can be checked using the techniques in the [testing section](xref:microsoft.quantum.libraries.standard.testing) of the standard libraries guide.
 For instance, the following test checks that `H(q); X(q); H(q);` as called by <xref:microsoft.quantum.canon.with> does the same thing as `Z(q)`.
 
 ```qsharp

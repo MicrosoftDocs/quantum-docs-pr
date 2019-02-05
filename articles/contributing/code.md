@@ -58,7 +58,14 @@ operation WithTest () : Unit {
 }
 ```
 
-Locally, these tests can be run using the Visual Studio Test Explorer or the `dotnet test` command.
+When adding new features, it's a good idea to also add new tests to make sure that your contribution does what it's supposed to.
+This helps the rest of the community to maintain and develop your feature, and in particular helps other developers know that they can rely on your feature.
+
+> [!NOTE]
+> This works the other way around, too!
+> If there's an existing feature that's missing some tests, helping us add test coverage would make a great contribution to the community.
+
+Locally, unit tests can be run using the Visual Studio Test Explorer or the `dotnet test` command, so that you can check your contribution before opening up a pull request.
 
 
 ### Comments and Documentation ###
@@ -67,7 +74,22 @@ Locally, these tests can be run using the Visual Studio Test Explorer or the `do
 
 ## When We'll Reject a Pull Request ##
 
-**TODO: when do we reject, and why?**
+Sometimes, we'll reject the pull request for a contribution.
+If this happens to you, it doesn't mean that it's bad, as there's a number of reasons why we might not be able to accept a particular contribution.
+Perhaps most commonly, a contribution to the quantum programming community is a really good one, but the Quantum Development Kit repositories aren't the right place to develop it.
+In such cases, we strongly encourage you to make your own repository --- part of the strength of the Quantum Development Kit is that it's easy to make and distribute your own libraries using GitHub and NuGet.org, the same way that we distribute the canon and chemistry libraries today.
+
+At other times, we may reject a good contribution simply because we aren't yet ready to maintain and develop it.
+It can be difficult to do everything, so we plan out what features we're best able to work on as a roadmap.
+This can be another case where releasing a feature as a third-party library can make a lot of sense.
+Alternatively, we may ask for your help in modifying a feature to better fit into our roadmap so that we can do the best work we can with it.
+
+We'll also ask for changes to a pull request if it requires more documentation or unit tests to help us make use of it, or if it differs enough in style from the rest of the Q# libraries that it will make it harder for users to find your feature.
+In these cases, we'll try to offer some advice in code reviews about what can be added or changed to make your contribution easier for us to include.
+
+Finally, we cannot accept contributions that cause harm the quantum computing community, as outlined in the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+We want to ensure that contributions serve the entire quantum computing community, both in its current wonderful diversity, and in the future as it grows to become still more inclusive.
+We appreciate your help in realizing this goal.
 
 ## Next steps ##
 

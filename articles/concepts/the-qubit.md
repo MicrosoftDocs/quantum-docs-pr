@@ -82,7 +82,9 @@ $$
 H=\frac{1}{\sqrt{2}}\begin{bmatrix} 1 & 1 \\\\  1 &-1  \end{bmatrix},\qquad T=\begin{bmatrix} 1 & 0 \\\\  0 & e^{i\pi/4} \end{bmatrix}.
 $$
 
-However, for practical reasons related to quantum error correction it can be more convenient to consider a larger gate set, namely one that can be generated using $H$ and $T$. We can classify the quantum gates into two categories: Clifford gates and the $T$-gate. This subdivision is useful because in many quantum error correction schemes the so-called Clifford gates are easy to implement, that is they require very few resources in terms of operations and qubits to implement fault tolerantly, whereas non-Clifford gates are quite costly when requiring fault tolerance. The standard set of single-qubit Clifford gates, [included by default in Q#](xref:microsoft.quantum.libraries.prelude), include
+However, for practical reasons related to quantum error correction it can be more convenient to consider a larger gate set, namely one that can be generated using $H$ and $T$.
+We can classify the quantum gates into two categories: Clifford gates and the $T$-gate.
+This subdivision is useful because in many quantum error correction schemes the so-called Clifford gates are easy to implement, that is they require very few resources in terms of operations and qubits to implement fault tolerantly, whereas non-Clifford gates are quite costly when requiring fault tolerance. The standard set of single-qubit Clifford gates, [included by default in Q#](xref:microsoft.quantum.libraries.standard.prelude), include
 
 $$
 H=\frac{1}{\sqrt{2}}\begin{bmatrix} 1 & 1 \\\\  1 &-1  \end{bmatrix} ,\qquad S =\begin{bmatrix} 1 & 0 \\\\  0 & i \end{bmatrix}= T^2,\qquad X=\begin{bmatrix} 0 &1 \\\\  1& 0 \end{bmatrix}= HT^4H,
@@ -92,7 +94,8 @@ $$
 Y = \begin{bmatrix} 0 & -i \\\\  i & 0 \end{bmatrix}=T^2HT^4  HT^6, \qquad Z=\begin{bmatrix}1&0\\\\ 0&-1 \end{bmatrix}=T^4.
 $$
 
-Here the operations $X$, $Y$ and $Z$ are used especially frequently and are named [*Pauli operators*](https://en.wikipedia.org/wiki/Pauli_matrices) after their creator Wolfgang Pauli.  Together with the non-Clifford gate (the $T$-gate), these operations can be composed to approximate any unitary transformation on a single qubit.
+Here the operations $X$, $Y$ and $Z$ are used especially frequently and are named [*Pauli operators*](https://en.wikipedia.org/wiki/Pauli_matrices) after their creator Wolfgang Pauli.
+Together with the non-Clifford gate (the $T$-gate), these operations can be composed to approximate any unitary transformation on a single qubit.
 
 For more information on these operations, their Bloch sphere representations and Q# implementations, please refer to [this](xref:microsoft.quantum.libraries.standard.prelude) article.
 

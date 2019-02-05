@@ -1,7 +1,6 @@
 ---
 title: Symmetries of Molecular Integrals | Microsoft Docs
 description: Symmetries of Molecular Integrals Conceptual Docs
-services: service-name-with-dashes-AZURE-ONLY
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: nathanwiebe2
 ms.author: nawiebe
@@ -23,7 +22,7 @@ If we assume that the spin-orbitals are real-valued (as they are for Gaussian or
 \begin{equation}
 h_{pqrs} = h_{qpsr} = h_{srqp} = h_{rspq}=h_{rqps}=h_{psrq}=h_{spqr}=h_{qrsp}.\tag{★}\label{eq:hpqrsreal}
 \end{equation}
-Given such assumptions hold, we can use the above symmetries to reduce the data needed to store the matrix elements of the Hamiltonian by a factor of $8$; although doing so makes importing data in a consistent way slightly more challenging.  Fortunately the Hamiltonian simulation library has subroutines that can be used to import integral files from either [LIQ$U$I$|\rangle$](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) or directly from [NWChem](http://www.nwchem-sw.org/index.php/Main_Page).
+Given such assumptions hold, we can use the above symmetries to reduce the data needed to store the matrix elements of the Hamiltonian by a factor of $8$; although doing so makes importing data in a consistent way slightly more challenging.  Fortunately the Hamiltonian simulation library has subroutines that can be used to import integral files from either [LIQUI$|\rangle$](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) or directly from [NWChem](http://www.nwchem-sw.org/index.php/Main_Page).
 
 Molecular orbital integrals (i.e. the $h\_{pq}$ and $h\_{pqrs}$ terms) such as these are represented using the `OrbitalIntegral` type, which provides a number of helpful functions to express this symmetry.
 ```csharp

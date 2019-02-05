@@ -4,7 +4,7 @@ author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
-uid: quantum.libraries.chemistry.schema.broombridge
+uid: microsoft.quantum.libraries.chemistry.schema.broombridge
 ---
 
 # Broombridge Quantum Chemistry Schema # 

@@ -27,7 +27,7 @@ The Q# functions, operations, and user-defined types that make up libraries such
 When a new pull request is opened, for instance, our [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) configuration will check that the changes in the pull request do not break any existing functionality that the quantum programming community depends on.
 These tests are written using the [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) package, which exposes Q# functions and operations as tests for the [xUnit](https://xunit.github.io/) framework.
 
-The [`Canon/tests/Canon.Tests.csproj`](https://github.com/Microsoft/QuantumLibraries/blob/master/Canon/tests/Canon.Tests.csproj) uses this Xunit integration to run any functions or operations ending in `Test`.
+The [`Canon/tests/Canon.Tests.csproj`](https://github.com/Microsoft/QuantumLibraries/blob/master/Canon/tests/Canon.Tests.csproj) uses this xUnit integration to run any functions or operations ending in `Test`.
 For instance, the following function is used to ensure that the <xref:microsoft.quantum.canon.fst> and <xref:microsoft.quantum.canon.snd> functions both return the right outputs in a representative example.
 If the output of `Fst` or `Snd` is incorrect, the `fail` statement is used to cause the test to fail.
 

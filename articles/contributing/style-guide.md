@@ -17,7 +17,7 @@ uid: microsoft.quantum.contributing.style
 ## Naming Conventions ##
 
 In offering the Quantum Development Kit, we strive for function and operation names that help quantum developers write programs that are easy to read and that minimize surprise.
-An important part of that is that when we choose names for functions, operations, and types, we are establishing the *volcabulary* that programmers use to express quantum concepts; with our choices, we either help or hinder them in their effort to clearly communicate.
+An important part of that is that when we choose names for functions, operations, and types, we are establishing the *vocabulary* that programmers use to express quantum concepts; with our choices, we either help or hinder them in their effort to clearly communicate.
 This places a responsibility on us to make sure that the names we introduce lend themselves to clarity rather than obscurity.
 In this section, we detail how we realize this obligation in terms of explicit guidance that helps us do the best by the Q# development community.
 

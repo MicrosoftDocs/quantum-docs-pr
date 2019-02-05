@@ -31,6 +31,6 @@ This means that, while it is often quite successful, it may not always be well s
 strongly correlated systems that are targets for quantum computation.  However, the simplicity and accuracy of Hartree-Fock theory for many small systems makes 
 it the workhorse of state preparation in quantum computing and a spring board on top of which most post-Hartree–Fock methods are based.
 
-For this reason, the [Broombridge schema](xref:quantum.libraries.chemistry.schema.spec) used to input quantum chemistry Hamiltonians into the chemistry library incorporates a field that gives Hartree–Fock data if available.
+For this reason, the [Broombridge schema](xref:microsoft.quantum.libraries.chemistry.schema.spec) used to input quantum chemistry Hamiltonians into the chemistry library incorporates a field that gives Hartree–Fock data if available.
 This is useful not only as a diagnostic, but also because it allows the correlation energy to be reported, which is the difference between the
 Hartree–Fock energy and the true ground state energy as yielded by full-configuration interaction simulations or quantum computation.

@@ -4,7 +4,7 @@ author: chgranad
 ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
-uid: quantum.libraries.chemistry.schema.spec
+uid: microsoft.quantum.libraries.chemistry.schema.spec
 ---
 
 # Broombridge Specification #

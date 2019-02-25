@@ -3,7 +3,7 @@
 - name: Quantum computing concepts
   topicHref: concepts/index.md
   href: concepts/toc.yml
-- name: Installation and validation
+- name: Getting Started
   topicHref: install-guide/index.md
   href: install-guide/toc.yml
 - name: Quickstart - your first quantum program

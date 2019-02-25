@@ -10,6 +10,14 @@ uid: microsoft.quantum.relnotes
 
 # Microsoft Quantum Development Kit Release Notes
 
+# Version 0.4.1902
+
+*Release date: February 27, 2019*
+
+This release contains the following:
+
+- adds support for a Python host.  The qsharp package for Python makes it easy to simulate Q# operations and functiona from within Python. Learn more about [Python interoperability](xref:microsoft.quantum.install.python.md).    
+
 # Version 0.4.1901
 
 *Release date: January 30, 2019*

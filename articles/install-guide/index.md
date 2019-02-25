@@ -7,10 +7,12 @@ ms.topic: article
 uid: microsoft.quantum.install
 ---
 
-# Installing the Quantum Development Kit
+# Getting Started with the Quantum Development Kit
+
+The Quantum Development Kit can be used on a variety of platforms (Windows, Linux, Mac) and with a variety of development enviornments (Visual Studio, Visual Studio Code, Command Line).  Additionally, Q# quantum program is executed on one of many target machines provided by the Quantum Development Kit (e.g., full-state simulator, trace simulator or resource estimator.  These target machines can be invoked from any .NET host language or from Python. Here is a guide to configuring the Quantum Development Kit for each platform and host language in the manner most natural for that platform and host language.   
 
 The Quantum Development Kit can be used either with the Visual Studio 2017 integrated development environment, or a development editor such as Visual Studio Code.
-Alternatively, the Quantum Development Kit can be used with the [command line directly](xref:microsoft.quantum.install.cmd-line).
+Alternatively, the Quantum Development Kit can be used with the [command line directly](xref:microsoft.quantum.install.cmd-line).  A separate section gives additional information on how to integrate with [Python](xref:microsoft.quantum.install.python).
 
 <table>
 <tr>

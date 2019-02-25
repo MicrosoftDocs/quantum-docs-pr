@@ -11,7 +11,7 @@ ms.topic: article
 
 Thank you for your interest in Microsoft Quantum Development Kit preview. The development kit contains the tools you'll need to build your own quantum computing programs and experiments. Assuming some experience with Microsoft Visual Studio or Visual Studio Code, beginners can write their first quantum program, and experienced researchers can quickly and efficiently develop new quantum algorithms.
 
-To jump right in, start with [Installation and validation](xref:microsoft.quantum.install) to create and validate your development environment. Then use [Quickstart - your first quantum program](xref:microsoft.quantum.write-program) to learn about the structure of a Q# project and how to write the quantum equivalent of "Hello, world!" - creating entanglement, or what is also known as a Bell State, in Q#.
+To jump right in, start with [Getting Started with the Quantum Development Kit](xref:microsoft.quantum.install) to create and validate your development environment. Then use [Quickstart - your first quantum program](xref:microsoft.quantum.write-program) to learn about the structure of a Q# project and how to write the quantum equivalent of "Hello, world!" - creating entanglement, or what is also known as a Bell State, in Q#.
 
 You should also visit our [samples repository](https://github.com/Microsoft/Quantum) that showcases multiple examples on how to write quantum programs using Q#. Most of these samples are written using our open-source [quantum libraries](https://github.com/Microsoft/QuantumLibraries), including our [standard](xref:microsoft.quantum.libraries.standard.intro) and [chemistry](xref:microsoft.quantum.chemistry.concepts.intro) libraries. If you want to dive deeper into Q# programming, check out the [Quantum Katas](https://github.com/Microsoft/QuantumKatas) - a collection of self-paced tutorials introducing you to quantum computing via programming exercises in Q#.
 
@@ -38,11 +38,13 @@ The Quantum Development Kit preview provides a complete development and simulati
 | Component | Function |
 | --------- | -------- |
 | Q# language and compiler | Q# is a domain-specific programming language used for expressing quantum algorithms. It is used for writing sub-programs that execute on an adjunct quantum processor under the control of a classical host program and computer. |
-| Q# standard library | The library contains operations and functions that support both the classical language control requirement and the Q# quantum algorithms. |
+| Q# library | The library contains operations and functions that support both the classical language control requirement and the Q# quantum algorithms. |
 | Local quantum machine simulator | A full state vector simulator optimized for accurate vector simulation and speed. |
 | Quantum computer trace simulator | The trace simulator does not simulate the quantum environment like the local quantum simulator. It is used to estimate the resources required to execute a quantum program and also allow faster debugging of the non-Q# control code. |
+| Resource Estimator | The resource estimator estimates the resources required to run a given instance of a Q# operation on a quantum computer. |
 | Visual Studio extension | This extension contains templates for Q# files and projects as well as syntax highlighting. |
 | Visual Studio Code extension | This extension contains syntax highlighting and code snippets for Q#. |
+| QSharp for Python | The qsharp package for Python makes it easy to simulate Q# operations and functiona from within Python.  
 
 
 ## Quantum Development Kit Documentation
@@ -51,7 +53,7 @@ The current documentation includes the following topics.
 
 * [Microsoft Quantum Development kit release notes](xref:microsoft.quantum.relnotes).
 * [Quantum computing concepts](xref:microsoft.quantum.concepts.intro) includes topics such as the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
-* [Installation and validation](xref:microsoft.quantum.install) describes how to quickly set up your quantum development environment. Your Visual Studio environment will be enhanced with a compiler for the Q# language and templates for Q# projects and files.
+* [Getting Started with the Quantum Development Kit](xref:microsoft.quantum.install) describes how to quickly set up your quantum development environment from any platform (Windows, Linux, and Mac) using Visual Studio, Visual Studio Code or the command line.  
 * [Quickstart - your first quantum program](xref:microsoft.quantum.write-program) walks you through how to write an application that creates a quantum entanglment state in the Visual Studio development environment. You'll learn how to define a Q# operation, call the Q# operation using C#, and how to execute your quantum algorithm.
 * [Managing quantum machines and drivers](xref:microsoft.quantum.machines) describes how quantum algorithms are executed, what quantum machines are available, and how to write a non-Q# driver for the quantum program.
 * [Quantum development techniques](xref:microsoft.quantum.techniques.intro) specifies the core concepts used to create quantum programs in Q#. Topics include file structures, operations and functions, working with qubits, and some advanced topics.

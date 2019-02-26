@@ -16,7 +16,11 @@ uid: microsoft.quantum.relnotes
 
 This release contains the following:
 
-- adds support for a Python host.  The qsharp package for Python makes it easy to simulate Q# operations and functiona from within Python. Learn more about [Python interoperability](xref:microsoft.quantum.install.python.md).    
+- Adds support for a Python host.  The qsharp package for Python makes it easy to simulate Q# operations and functiona from within Python. Learn more about [Python interoperability](xref:microsoft.quantum.install.python.md). 
+
+- The Visual Studio and Visual Studio Code extensions now support renaming of symbols (e.g., functions and operations).
+
+- The Visual Studio extension can now be installed on Visual Studio 2019.  
 
 # Version 0.4.1901
 

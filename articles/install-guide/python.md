@@ -20,13 +20,13 @@ To get started with the `qsharp` package, you'll need a couple prerequisites:
 - Jupyter, and
 - The IQ# kernel for Jupyter.
 
-To install the .NET Core SDK, please follow the [Hello World tutorial](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) provided with .NET Core.
+To install the .NET Core SDK, please follow the instructions from the [.NET downloads page](https://www.microsoft.com/net/download).
 
 To install Python and Jupyter, we recommend using the Anaconda distribution of Python.
 Please see https://www.anaconda.com/distribution/ for more details.
 On other distributions of Python, the Jupyter platform can be installed using `pip install jupyter`.
 
-Finally, the IQ# kernel for Jupyter can be installed using the `dotnet` command line tool:
+Finally, the IQ# kernel for Jupyter must be installed using the `dotnet` command line tool:
 
 ```
 dotnet tool install -g Microsoft.Quantum.IQSharp

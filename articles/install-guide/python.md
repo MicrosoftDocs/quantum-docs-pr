@@ -2,7 +2,7 @@
 title: Getting Started with Python and Q#
 author: cpalmer
 uid: microsoft.quantum.install.python
-ms.author: christopher.granade@microsoft.com
+ms.author: cpalmer@microsoft.com
 ms.date: 2/25/19
 ms.topic: article
 ---

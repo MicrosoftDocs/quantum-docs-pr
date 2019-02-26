@@ -44,7 +44,7 @@ The Quantum Development Kit preview provides a complete development and simulati
 | Resource Estimator | The resource estimator estimates the resources required to run a given instance of a Q# operation on a quantum computer. |
 | Visual Studio extension | This extension contains templates for Q# files and projects as well as syntax highlighting. |
 | Visual Studio Code extension | This extension contains syntax highlighting and code snippets for Q#. |
-| QSharp for Python | The qsharp package for Python makes it easy to simulate Q# operations and functiona from within Python.  
+| `qsharp` for Python | The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python.  
 
 
 ## Quantum Development Kit Documentation
@@ -53,7 +53,7 @@ The current documentation includes the following topics.
 
 * [Microsoft Quantum Development kit release notes](xref:microsoft.quantum.relnotes).
 * [Quantum computing concepts](xref:microsoft.quantum.concepts.intro) includes topics such as the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
-* [Getting Started with the Quantum Development Kit](xref:microsoft.quantum.install) describes how to quickly set up your quantum development environment from any platform (Windows, Linux, and Mac) using Visual Studio, Visual Studio Code or the command line.  
+* [Getting Started with the Quantum Development Kit](xref:microsoft.quantum.install) describes how to quickly set up your quantum development environment from any platform (Windows 10, Linux, and Mac) using Visual Studio, Visual Studio Code or the command line.  
 * [Quickstart - your first quantum program](xref:microsoft.quantum.write-program) walks you through how to write an application that creates a quantum entanglment state in the Visual Studio development environment. You'll learn how to define a Q# operation, call the Q# operation using C#, and how to execute your quantum algorithm.
 * [Managing quantum machines and drivers](xref:microsoft.quantum.machines) describes how quantum algorithms are executed, what quantum machines are available, and how to write a non-Q# driver for the quantum program.
 * [Quantum development techniques](xref:microsoft.quantum.techniques.intro) specifies the core concepts used to create quantum programs in Q#. Topics include file structures, operations and functions, working with qubits, and some advanced topics.

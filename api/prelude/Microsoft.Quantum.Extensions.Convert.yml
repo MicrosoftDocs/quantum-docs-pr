@@ -2,10 +2,20 @@
 uid: microsoft.quantum.extensions.convert
 name: Microsoft.Quantum.Extensions.Convert
 functions:
+- uid: microsoft.quantum.extensions.convert.biginttobools
+  summary: |-
+    Converts a given big integer to an array of Booleans.
+    The 0 element of the array is the least significant bit of the big integer.
+- uid: microsoft.quantum.extensions.convert.boolstobigint
+  summary: |-
+    Converts a given array of Booleans to an equivalent big integer.
+    The 0 element of the array is the least significant bit of the big integer.
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
   summary: |-
     Encodes a multi-qubit Pauli operator represented as an array of
     single-qubit Pauli operators into an integer.
+- uid: microsoft.quantum.extensions.convert.tobigint
+  summary: Converts a given integer to an equivalent big integer.
 - uid: microsoft.quantum.extensions.convert.todouble
   summary: |-
     Converts a given integer to an equivalent double-precision

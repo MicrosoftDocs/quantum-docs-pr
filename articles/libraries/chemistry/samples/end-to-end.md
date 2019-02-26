@@ -57,7 +57,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Next, we'll import the `Get-GateCount` command provided with the **GetGateCount** sample.
-For full details, see the [instructions provided with the sample]((https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount).
+For full details, see the [instructions provided with the sample](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount).
 Next, run the following, substituting `<runtime>` with either `win10-x64`, `osx-x64`, or `linux-x64`, depending on your operating system:
 
 ```powershell

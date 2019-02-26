@@ -131,7 +131,7 @@ $$
 For the case where there are two-qubits the projector can be expanded as 
 
 $$
-|1\rangle \langle 1| \otimes \mathbb{1} = |1\rangle\langle 1 \otimes (|0\rangle \langle 0|+|1\rangle \langle 1|)= |10\rangle\langle 10| + |11\rangle\langle 11|.
+|1\rangle \langle 1| \otimes \mathbb{1} = |1\rangle\langle 1| \otimes (|0\rangle \langle 0|+|1\rangle \langle 1|)= |10\rangle\langle 10| + |11\rangle\langle 11|.
 $$
 
 We can then see that this is consistent with the discussion about measurement likelihoods for multiqubit states using column-vector notation:

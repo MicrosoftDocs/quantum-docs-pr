@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.absb
+name: AbsB
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+summary: Returns the absolute value of a big integer.
+remarks: See [System.Numerics.BigInteger.Abs](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.abs) for more details.
+syntax: 'function AbsB (a : BigInt) : BigInt'
+input:
+  content: '(a : BigInt)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - isPrimitive: true
+    uid: BigInt
+...

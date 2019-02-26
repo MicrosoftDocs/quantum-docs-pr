@@ -3,7 +3,7 @@ uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
 name: JWOptimizedStatePreparation
 type: operation
 namespace: Microsoft.Quantum.Research.Chemistry
-summary: >-
+summary: |-
   Simple state preparation of trial state by occupying
   spin-orbitals
 syntax: 'operation JWOptimizedStatePreparation (qubitIndices : Int[], qubits : Qubit[]) : Unit'

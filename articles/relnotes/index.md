@@ -16,7 +16,7 @@ uid: microsoft.quantum.relnotes
 
 This release contains the following:
 
-- Adds support for a cross-platform Python host.  The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python. Learn more about [Python interoperability](xref:microsoft.quantum.install.python.md). 
+- Adds support for a cross-platform Python host.  The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python. Learn more about [Python interoperability](xref:microsoft.quantum.install.python). 
 
 - The Visual Studio and Visual Studio Code extensions now support renaming of symbols (e.g., functions and operations).
 

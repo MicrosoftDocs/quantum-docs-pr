@@ -10,6 +10,20 @@ uid: microsoft.quantum.relnotes
 
 # Microsoft Quantum Development Kit Release Notes
 
+# Version 0.5.1902
+
+*Release date: February 27, 2019*
+
+This release contains the following:
+
+- Adds support for a cross-platform Python host.  The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python. Learn more about [Python interoperability](xref:microsoft.quantum.install.python). 
+
+- The Visual Studio and Visual Studio Code extensions now support renaming of symbols (e.g., functions and operations).
+
+- The Visual Studio extension can now be installed on Visual Studio 2019.
+
+
+
 # Version 0.4.1901
 
 *Release date: January 30, 2019*

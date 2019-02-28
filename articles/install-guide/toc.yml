@@ -4,3 +4,5 @@
   href: vs-code.md
 - name: Command Line (Windows 10, macOS, and Linux)
   href: command-line.md
+- name: Getting Started with Python
+  href: python.md

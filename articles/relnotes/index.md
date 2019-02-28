@@ -10,7 +10,7 @@ uid: microsoft.quantum.relnotes
 
 # Microsoft Quantum Development Kit Release Notes
 
-# Version 0.4.1902
+# Version 0.5.1902
 
 *Release date: February 27, 2019*
 
@@ -20,7 +20,9 @@ This release contains the following:
 
 - The Visual Studio and Visual Studio Code extensions now support renaming of symbols (e.g., functions and operations).
 
-- The Visual Studio extension can now be installed on Visual Studio 2019.  
+- The Visual Studio extension can now be installed on Visual Studio 2019.
+
+
 
 # Version 0.4.1901
 

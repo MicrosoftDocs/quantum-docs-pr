@@ -9,7 +9,7 @@ ms.topic: article
 
 # Getting Started with Python and the Quantum Development Kit #  
 
-The [qsharp package for Python](https://pypi.org/project/qsharp/) provides interoperability with the Quantum Development Kit and with the Q# language, making it easy to simulate Q# operations and functions from within Python.  
+The [qsharp package for Python](https://pypi.org/project/qsharp/) provides interoperability with the Quantum Development Kit and with the Q# language, making it easy to simulate Q# operations and functions from within Python.
 
 ## Prerequisites ##
 
@@ -64,7 +64,7 @@ namespace Microsoft.Samples
 
 > [!NOTE]
 > All `.qs` files under the current working folder need to correctly compile
-> before they can be used from Python
+> before any of the operations can be used from Python.
 
 
 To call the `HelloQ` Q# operation from Python, first import the `qsharp` module:
@@ -72,12 +72,12 @@ To call the `HelloQ` Q# operation from Python, first import the `qsharp` module:
 import qsharp
 ```
 
-### Simulation ###
-
 After this, Q# namespaces can be imported as Python packages, for example:
 ```python
 from Microsoft.Samples import HelloQ
 ```
+
+### Simulation ###
 
 Once imported, to simulate a Q# operation invoke it's `simulate` method:
 If the Q# operation returns a value, the corresponding value is returned from the `simulate` method.
@@ -89,11 +89,11 @@ Hello from quantum world!
 0
 ```
 
-A `.qs` file may contain multiple operations, for example we could add this to `Quantum.qs`:
+A `.qs` file may contain multiple operations, for example we could add the following code to `Quantum.qs`:
 
 ```qsharp
     /// # Summary: 
-    ///     A more sophisticated program that shows how to 
+    ///     A more sophisticated operation that shows how to 
     ///     specify parameters, instantiate qubits, and return values.
     operation HelloAgain(count: Int, name: String) : Result[]
     {
@@ -139,12 +139,14 @@ Hello "resources" again!
 {'CNOT': 0, 'QubitClifford': 1, 'R': 0, 'Measure': 6, 'T': 0, 'Depth': 0, 'Width': 1, 'BorrowedWidth': 0}
 ```
 
+The list of metrics and their description can be found in the [resources estimator documentation](xref:microsoft.quantum.machines.resources-estimator).
+
 ### Quantum Libraries ###
 
-All `.qs` files can automatically use all [standard operations](https://docs.microsoft.com/en-us/quantum/libraries/standard/?view=qsharp-preview) 
+All `.qs` files can automatically use all [standard operations](xref:microsoft.quantum.libraries.standard.intro) 
 defined in the Quantum Development Kit. 
 To import operations defined in other libraries, their corresponding nuget package needs to be added first.
-In particular, to use the operations from the [chemistry library](https://docs.microsoft.com/en-us/quantum/libraries/chemistry/?view=qsharp-preview)
+In particular, to use the operations from the [chemistry library](xref:microsoft.quantum.chemistry.concepts.intro)
 you need to add the [Microsoft.Quantum.Chemistry](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry/) package to `qsharp`.
 
 ```python

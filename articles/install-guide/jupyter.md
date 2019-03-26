@@ -26,23 +26,22 @@ To install Jupyter, follow the instructions provided at https://jupyter.org/inst
 
 Install the `qsharp` Jupyter kernel from the command line using:
 
-```
+```Command Prompt
 dotnet iqsharp install
 ```
 
 
 ## Usage ##
 
-Once installed, started jupyter notebook from the command line using:
+Once installed, start jupyter notebook from the command line using:
 
-```
+```Command Prompt
 jupyter notebook
 ```
 
 and create a new Notebook using the `Q#` kernel.
 
-For details on how to write an interactive Q# notebook, take a look at this
-notebook from our samples repository.
-
-
+For details on how to write an interactive Q# notebook, take a look at
+[Q# Notebooks](https://github.com/Microsoft/Quantum/blob/master/Samples/src/IntroToIQSharp/Notebook.ipynb)
+from our [GitHub Quantum repository](https://github.com/Microsoft/Quantum.git).
 

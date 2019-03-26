@@ -12,8 +12,8 @@ uid: microsoft.quantum.install
 A great way to get started with the Quantum Development Kit is via some of the Jupyter notebooks available in our [GitHub Quantum repository](https://github.com/Microsoft/Quantum.git). 
 These notebooks can be launched directly in a web browser via [binder](https://mybinder.org/). In particular:
 
-* **(Q# Notebooks)[https://mybinder.org/v2/gh/Microsoft/Quantum.git/master?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb]**: explains how to compile and simulate Q# operations inside a Jupyter notebook.
-* **(Teleport)[https://mybinder.org/v2/gh/Microsoft/Quantum.git/master?filepath=Samples%2Fsrc%2FTeleportation%2FNotebook.ipynb]**: shows how to implement the teleport algorithm using Q#.
+* **[Q# Notebooks](https://mybinder.org/v2/gh/Microsoft/Quantum.git/master?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb)**: explains how to compile and simulate Q# operations inside a Jupyter notebook.
+* **[Teleport](https://mybinder.org/v2/gh/Microsoft/Quantum.git/master?filepath=Samples%2Fsrc%2FTeleportation%2FNotebook.ipynb)**: shows how to implement the teleport algorithm using Q#.
 
 Be mindful that all changes you do to notebooks launched this way cannot be saved. In order 
 to create new notebooks or write new quantum applications you will need to install 
@@ -25,11 +25,10 @@ IQ# to your local machine.
 IQ# (pronounced i-q-sharp) provides the core functionality of compiling and simulating Q# operations.
 Installing IQ# on your machine typically takes less than 10 minutes; just follow these two steps:
 
-1. Install the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.1 or later). 
-   > [!div class="button"]
-   > [Download .NET Core](https://dotnet.microsoft.com/download)
+1. Install the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.1 or later) by 
+  following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download).
 2. From the command line, execute:
-   ```
+   ```Command Prompt
    dotnet tool install -g Microsoft.Quantum.IQSharp
    ```
 

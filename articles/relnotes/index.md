@@ -10,6 +10,22 @@ uid: microsoft.quantum.relnotes
 
 # Microsoft Quantum Development Kit Release Notes
 
+# Version 0.5.1903
+
+*Release date: March 27, 2019*
+
+This release contains the following:
+
+- Adds support for Jupyter Notebook, which offers a great way to learn about Q#.  [Check out new Jupyter Notebook samples and learn how to write your own Notebooks.](xref:microsoft.quantum.install.jupyter). 
+
+- Adds integer adder arithmetic to the Quantum Canon library.  See also a Jupyter Notebook that [describes how to use the new integer adders](https://github.com/Microsoft/Quantum/Samples/src/Arithmetic/AdderExample.ipynb).
+
+- Bug fix for DumpRegister issue reported by the community ([#148](https://github.com/Microsoft/Quantum/issues/148)).
+
+- Added ability to return from within a [using statement](ref:microsoft.quantum.qsharp-ref.statements).
+
+
+
 # Version 0.5.1902
 
 *Release date: February 27, 2019*

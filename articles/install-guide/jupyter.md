@@ -1,0 +1,48 @@
+---
+title: Getting Started with Jupyter Notebooks and Q#
+author: anpaz-msft
+uid: microsoft.quantum.install.jupyter
+ms.author: cpalmer@microsoft.com
+ms.date: 2/25/19
+ms.topic: article
+---
+
+# Getting Started with Jupyter Notebooks and the Quantum Development Kit #  
+
+The Quantum Development Kit provides a Jupyter kernel for the Q# language, making it easy to write and simulate quantum algorithms using Q# interactively from a web browser.
+
+## Pre-requisites ##
+
+To get started you need:
+- IQ#.
+- Jupyter
+
+Make sure you have followed the installation steps in the [getting started guide](xref:microsoft.quantum.install) for IQ#.
+
+To install Jupyter, follow the instructions provided at https://jupyter.org/install.
+
+
+## Installation ##
+
+Install the `qsharp` Jupyter kernel from the command line using:
+
+```
+dotnet iqsharp install
+```
+
+
+## Usage ##
+
+Once installed, started jupyter notebook from the command line using:
+
+```
+jupyter notebook
+```
+
+and create a new Notebook using the `Q#` kernel.
+
+For details on how to write an interactive Q# notebook, take a look at this
+notebook from our samples repository.
+
+
+

@@ -58,6 +58,13 @@
     uid: microsoft.quantum.extensions.diagnostics.dumpmachine
   - name: DumpRegister
     uid: microsoft.quantum.extensions.diagnostics.dumpregister
+- name: Microsoft.Quantum.Extensions.Environment
+  uid: microsoft.quantum.extensions.environment
+  items:
+  - name: GetQubitsAvailableToBorrow
+    uid: microsoft.quantum.extensions.environment.getqubitsavailabletoborrow
+  - name: GetQubitsAvailableToUse
+    uid: microsoft.quantum.extensions.environment.getqubitsavailabletouse
 - name: Microsoft.Quantum.Extensions.Math
   uid: microsoft.quantum.extensions.math
   items:

@@ -1,9 +1,9 @@
 ---
-title: Getting Started with Python and Q#
-author: cpalmer
+title: Getting Started with C# and Q#
 uid: microsoft.quantum.install.csharp
-ms.author: cpalmer@microsoft.com
-ms.date: 2/25/19
+author: anpaz-msft
+ms.author: anpaz@microsoft.com
+ms.date: 3/27/19
 ms.topic: article
 ---
 

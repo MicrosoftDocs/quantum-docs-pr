@@ -52,6 +52,14 @@ Jupyter core: 1.1.12077.0
 > Microsoft's quantum simulator utilizes OpenMP at runtime, on Linux systems you might need to manually install `libgomp`.
 
 
+## Updating IQ# ##
+
+To update IQ# to the latest version, from the command line, execute:
+```Command Prompt
+dotnet tool update -g Microsoft.Quantum.IQSharp
+```
+
+
 ## Classical Hosts ##
 
 Applications developed with Microsoft's Quantum Development Kit typically consists of two parts:

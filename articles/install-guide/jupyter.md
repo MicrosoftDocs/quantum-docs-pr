@@ -1,9 +1,9 @@
 ---
 title: Getting Started with Jupyter Notebooks and Q#
-author: anpaz-msft
 uid: microsoft.quantum.install.jupyter
-ms.author: cpalmer@microsoft.com
-ms.date: 2/25/19
+author: anpaz-msft
+ms.author: anpaz@microsoft.com
+ms.date: 3/27/19
 ms.topic: article
 ---
 

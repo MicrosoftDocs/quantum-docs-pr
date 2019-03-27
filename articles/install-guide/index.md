@@ -9,15 +9,12 @@ uid: microsoft.quantum.install
 
 # Getting Started with the Microsoft Quantum Development Kit #
 
-A great way to get started with the Quantum Development Kit is via some of the Jupyter notebooks available in our [GitHub Quantum repository](https://github.com/Microsoft/Quantum.git). 
-These notebooks can be launched directly in a web browser via [binder](https://mybinder.org/). In particular:
+A great way to get started with the Quantum Development Kit is via some of the Jupyter notebooks available in our [GitHub Quantum repository](https://github.com/Microsoft/Quantum.git).  In particular:
 
-* **[Q# Notebooks](https://mybinder.org/v2/gh/Microsoft/Quantum.git/master?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb)**: explains how to compile and simulate Q# operations inside a Jupyter notebook.
-* **[Teleport](https://mybinder.org/v2/gh/Microsoft/Quantum.git/master?filepath=Samples%2Fsrc%2FTeleportation%2FNotebook.ipynb)**: shows how to implement the teleport algorithm using Q#.
+* **[Q# Notebooks](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IntroToIQSharp/Notebook.ipynb)**: explains how to compile and simulate Q# operations inside a Jupyter notebook.
+* **[Teleport](https://github.com/Microsoft/Quantum/tree/master/Samples/src/Teleportation/Notebook.ipynb)**: shows how to implement the teleport algorithm using Q#.
 
-Be mindful that all changes you do to notebooks launched this way cannot be saved. In order 
-to create new notebooks or write new quantum applications you will need to install 
-IQ# to your local machine.
+To run these interactively, install IQ# on your machine (see below) and take a look at our [Jupyter notebooks getting started guide](xref:microsoft.quantum.install.jupyter).
 
 
 ## Installing IQ# ##
@@ -71,8 +68,8 @@ Applications developed with Microsoft's Quantum Development Kit typically consis
 Once you have installed IQ#, these articles explain how to enable interoperability between Q# and other classical languages:
 
 * [C# getting started](xref:microsoft.quantum.install.csharp)
-* [Python getting started](xref:microsoft.quantum.install.python)
 * [Jupyter notebooks getting started](xref:microsoft.quantum.install.jupyter)
+* [Python getting started](xref:microsoft.quantum.install.python)
 
 ## Editor extensions ##
 

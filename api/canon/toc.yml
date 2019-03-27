@@ -227,6 +227,12 @@
     uid: microsoft.quantum.canon.boolfromresult
   - name: Call
     uid: microsoft.quantum.canon.call
+  - name: Carry
+    uid: microsoft.quantum.canon.carry
+  - name: CascadeCCNOT
+    uid: microsoft.quantum.canon.cascadeccnot
+  - name: CascadeCNOT
+    uid: microsoft.quantum.canon.cascadecnot
   - name: CCNOTop
     uid: microsoft.quantum.canon.ccnotop
   - name: CControlled
@@ -337,6 +343,8 @@
     uid: microsoft.quantum.canon.getgeneratorsystemfunction
   - name: GetGeneratorSystemNTerms
     uid: microsoft.quantum.canon.getgeneratorsystemnterms
+  - name: GreaterThan
+    uid: microsoft.quantum.canon.greaterthan
   - name: Head
     uid: microsoft.quantum.canon.head
   - name: HY
@@ -583,6 +591,14 @@
     uid: microsoft.quantum.canon.resultstack
   - name: Reverse
     uid: microsoft.quantum.canon.reverse
+  - name: RippleCarryAdderCDKM
+    uid: microsoft.quantum.canon.ripplecarryaddercdkm
+  - name: RippleCarryAdderD
+    uid: microsoft.quantum.canon.ripplecarryadderd
+  - name: RippleCarryAdderNoCarryTTK
+    uid: microsoft.quantum.canon.ripplecarryaddernocarryttk
+  - name: RippleCarryAdderTTK
+    uid: microsoft.quantum.canon.ripplecarryadderttk
   - name: RobustPhaseEstimation
     uid: microsoft.quantum.canon.robustphaseestimation
   - name: SimulationAlgorithm
@@ -627,6 +643,8 @@
     uid: microsoft.quantum.canon.steanecoderecoveryz
   - name: Subarray
     uid: microsoft.quantum.canon.subarray
+  - name: Sum
+    uid: microsoft.quantum.canon.sum
   - name: SumGeneratorSystems
     uid: microsoft.quantum.canon.sumgeneratorsystems
   - name: SwapReverseRegister

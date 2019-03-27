@@ -929,6 +929,27 @@ operations:
   summary: Encodes into the [3, 1, 3] / ⟦3, 1, 1⟧ bit-flip code.
 - uid: microsoft.quantum.canon.call
   summary: Calls a function with a given input.
+- uid: microsoft.quantum.canon.carry
+  summary: |-
+    Implements a reversible carry gate. Given a carry-in bit encoded in
+    qubit `carryIn` and two summand bits encoded in `summand1` and `summand2`,
+    computes the bitwise xor of `carryIn`, `summand1` and `summand2` in the
+    qubit `summand2` and the carry-out is xored to the qubit `carryOut`.
+- uid: microsoft.quantum.canon.cascadeccnot
+  summary: |-
+    Implements a cascade of CCNOT gates controlled on corresponding bits of two
+    qubit registers, acting on the next qubit of one of the registers.
+    Starting from the qubits at position 0 in both registers as controls, CCNOT is
+    applied to the qubit at position 1 of the target register, then controlled by
+    the qubits at position 1 acting on the qubit at position 2 in the target register,
+    etc., ending with an action on the target qubit in position `Length(nQubits)-1`.
+- uid: microsoft.quantum.canon.cascadecnot
+  summary: |-
+    Implements a cascade of CNOT gates on neighboring qubits in a given qubit
+    register, starting from the qubit at position 0 as control to the qubit at
+    position 1 as the target, then from the qubit at position 1 as the control to
+    the qubit at position 2 as the target, etc., ending with the qubit in position
+    `Length(register)-1` as the target.
 - uid: microsoft.quantum.canon.cnotchain
   summary: |-
     Computes the parity of an array of qubits in-place.
@@ -1013,6 +1034,11 @@ operations:
   summary: Decodes the ⟦5, 1, 3⟧ quantum code.
 - uid: microsoft.quantum.canon.fivequbitcodeencoder
   summary: Encodes into the ⟦5, 1, 3⟧ quantum code.
+- uid: microsoft.quantum.canon.greaterthan
+  summary: |-
+    Carries out a strictly greater than comparison of two integers $x$ and $y$, encoded
+    in qubit registers xs and ys. If $x > y$, then the result qubit will be flipped,
+    otherwise retain its state.
 - uid: microsoft.quantum.canon.hy
   summary: |-
     Applies the Y-basis analog to the Hadamard transformation
@@ -1353,6 +1379,34 @@ operations:
   summary: |-
     Performs a single round of error correction by a quantum code
     described by a `CSS` type.
+- uid: microsoft.quantum.canon.ripplecarryaddercdkm
+  summary: |-
+    Reversible, in-place ripple-carry addition of two integers.
+    Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`,
+    and a qubit carry, the operation computes the sum of the two integers
+    where the $n$ least significant bits of the result are held in `ys` and
+    the carry out bit is xored to the qubit `carry`.
+- uid: microsoft.quantum.canon.ripplecarryadderd
+  summary: |-
+    Reversible, in-place ripple-carry addition of two integers.
+    Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`,
+    and a qubit carry, the operation computes the sum of the two integers
+    where the $n$ least significant bits of the result are held in `ys` and
+    the carry out bit is xored to the qubit `carry`.
+- uid: microsoft.quantum.canon.ripplecarryaddernocarryttk
+  summary: |-
+    Reversible, in-place ripple-carry addition of two integers without carry out.
+    Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`,
+    the operation computes the sum of the two integers modulo $2^n$,
+    where $n$ is the bit size of the inputs `xs` and `ys`. It does not compute
+    the carry out bit.
+- uid: microsoft.quantum.canon.ripplecarryadderttk
+  summary: |-
+    Reversible, in-place ripple-carry addition of two integers.
+    Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`,
+    and a qubit carry, the operation computes the sum of the two integers
+    where the $n$ least significant bits of the result are held in `ys` and
+    the carry out bit is xored to the qubit `carry`.
 - uid: microsoft.quantum.canon.robustphaseestimation
   summary: |-
     Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate,
@@ -1373,6 +1427,12 @@ operations:
   summary: |-
     An encoding operation that maps an unencoded quantum register to an encoded quantum register
     under the ⟦7, 1, 3⟧ Steane quantum code.
+- uid: microsoft.quantum.canon.sum
+  summary: |-
+    Implements a reversible sum gate. Given a carry-in bit encoded in
+    qubit `carryIn` and two summand bits encoded in `summand1` and `summand2`,
+    computes the bitwise xor of `carryIn`, `summand1` and `summand2` in the qubit
+    `summand2`.
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: |-
     Uses SWAP gates to reverse the order of the qubits in

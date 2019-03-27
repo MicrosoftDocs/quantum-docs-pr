@@ -363,7 +363,7 @@ For example, if `Op` has type
 `(('T1, Qubit, 'T1) => Unit : Adjoint)`:
 
 ```qsharp
-let f1 = Op<Int>(_, qb, _); // f1 is Int=>Unit:Adjoint
+let f1 = Op<Int>(_, qb, _); // f1 is (Int,Int)=>Unit:Adjoint
 let f2 = Op(5, qb, _);      // f2 is Int=>Unit:Adjoint
 let f3 = Op(_,qb, _);       // f3 generates a compilation error
 ```

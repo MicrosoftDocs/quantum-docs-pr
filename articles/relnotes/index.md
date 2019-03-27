@@ -16,7 +16,7 @@ uid: microsoft.quantum.relnotes
 
 This release contains the following:
 
-- Adds support for Jupyter Notebook, which offers a great way to learn about Q#.  [Check out new Jupyter Notebook samples and learn how to write your own Notebooks.](xref:microsoft.quantum.install.jupyter). 
+- Adds support for Jupyter Notebook, which offers a great way to learn about Q#.  [Check out new Jupyter Notebook samples and learn how to write your own Notebooks](xref:microsoft.quantum.install.jupyter). 
 
 - Adds integer adder arithmetic to the Quantum Canon library.  See also a Jupyter Notebook that [describes how to use the new integer adders](https://github.com/Microsoft/Quantum/Samples/src/Arithmetic/AdderExample.ipynb).
 
@@ -24,6 +24,7 @@ This release contains the following:
 
 - Added ability to return from within a [using statement](ref:microsoft.quantum.qsharp-ref.statements).
 
+- Revamped [getting started guide](xref:microsoft.quantum.install).
 
 
 # Version 0.5.1902

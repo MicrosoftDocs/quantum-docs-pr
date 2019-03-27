@@ -39,7 +39,7 @@ Once installed, start jupyter notebook from the command line using:
 jupyter notebook
 ```
 
-and create a new Notebook using the `Q#` kernel.
+Once started, on the web browser click "New" and select `Q#` to create a new Notebook using the `Q#` kernel.
 
 For details on how to write an interactive Q# notebook, take a look at
 [Q# Notebooks](https://github.com/Microsoft/Quantum/blob/master/Samples/src/IntroToIQSharp/Notebook.ipynb)

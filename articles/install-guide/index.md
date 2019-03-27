@@ -47,6 +47,7 @@ Jupyter core: 1.1.12077.0
 > Intel processors shipped in Q1 2011 (Sandy Bridge) or later support AVX.
 >
 > Microsoft's quantum simulator utilizes OpenMP at runtime, on Linux systems you might need to manually install `libgomp`.
+> See [this thread](https://stackoverflow.com/questions/52428334/unable-to-load-dll-microsoft-quantum-simulator-runtime-dll-centos-7) at stackoverflow.
 
 
 ## Updating IQ# ##
@@ -65,7 +66,7 @@ Applications developed with Microsoft's Quantum Development Kit typically consis
   that serves as the main entry point and will invoke Q# operations 
   when it wants to execute a quantum algorithm.
 
-Once you have installed IQ#, these articles explain how to enable interoperability between Q# and other classical languages:
+Once you have installed IQ#, these articles explain how to enable interoperability between Q# and classical languages:
 
 * [C# getting started](xref:microsoft.quantum.install.csharp)
 * [Jupyter notebooks getting started](xref:microsoft.quantum.install.jupyter)

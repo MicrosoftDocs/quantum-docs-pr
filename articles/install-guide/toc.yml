@@ -1,8 +1,6 @@
-- name: Visual Studio 2017 (Windows 10)
-  href: vs-2017.md
-- name: Visual Studio Code (Windows 10, macOS, and Linux)
-  href: vs-code.md
-- name: Command Line (Windows 10, macOS, and Linux)
-  href: command-line.md
-- name: Getting Started with Python
+- name: C#
+  href: csharp.md
+- name: Jupyter Notebooks
+  href: jupyter.md
+- name: Python
   href: python.md

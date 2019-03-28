@@ -13,18 +13,24 @@ The Quantum Development Kit provides a Jupyter kernel for the Q# language, makin
 
 ## Pre-requisites ##
 
-To get started you need:
+Before installing the Q# Jupyter kernel, you'll need the following pre-requisites:
 - IQ#.
 - Jupyter
 
-Make sure you have followed the installation steps in the [getting started guide](xref:microsoft.quantum.install) for IQ#.
+IQ# provides the core functionality of compiling and simulating Q# operations.
+Installing IQ# on your machine typically takes less than 10 minutes; just follow these two steps:
+1. Install the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.1 or later) by 
+  following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download).
+2. From the command line, execute:
+   ```Command prompt
+   dotnet tool install -g Microsoft.Quantum.IQSharp
 
 To install Jupyter, follow the instructions provided at https://jupyter.org/install.
 
 
 ## Installation ##
 
-Install the `qsharp` Jupyter kernel from the command line using:
+Once IQ# and Jupyter are installed, install the `Q#` Jupyter kernel from the command line using:
 
 ```Command Prompt
 dotnet iqsharp install
@@ -33,7 +39,7 @@ dotnet iqsharp install
 
 ## Usage ##
 
-Once installed, start jupyter notebook from the command line using:
+Once the `Q#` Jupyter kernel is installed, start jupyter notebook from the command line using:
 
 ```Command Prompt
 jupyter notebook

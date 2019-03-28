@@ -13,11 +13,17 @@ The [qsharp package for Python](https://pypi.org/project/qsharp/) provides inter
 
 ## Pre-requisites ##
 
-To get started with the `qsharp` package, you'll need the following prerequisites:
+Before installing the `qsharp` package, you'll need the following pre-requisites:
 - IQ#.
 - Python 3.6 or later,
 
-Make sure you have followed the installation steps in the [getting started guide](xref:microsoft.quantum.install) for IQ#.
+IQ# provides the core functionality of compiling and simulating Q# operations.
+Installing IQ# on your machine typically takes less than 10 minutes; just follow these two steps:
+1. Install the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.1 or later) by 
+  following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download).
+2. From the command line, execute:
+   ```Command prompt
+   dotnet tool install -g Microsoft.Quantum.IQSharp
 
 To install Python, we recommend using the Anaconda distribution of Python.
 Please see https://www.anaconda.com/distribution/ for more details.
@@ -25,13 +31,13 @@ Please see https://www.anaconda.com/distribution/ for more details.
 
 ## Installation ##
 
-Install `qsharp` using `pip`:
+Once Python and IQ# are installed, install the `qsharp` package using `pip`:
 
 ```
 pip install qsharp
 ```
 
-You will also need to explicitly install the `iqsharp` kernel using this command:
+You will also need to explicitly install the `Q#` kernel using this command:
 
 ```
 dotnet iqsharp install

@@ -17,45 +17,86 @@ A great way to get started with the Quantum Development Kit is via some of the J
 To run these interactively, install IQ# on your machine (see below) and take a look at our [Jupyter notebooks getting started guide](xref:microsoft.quantum.install.jupyter).
 
 
-## Installing IQ# ##
+## Installation ##
 
-IQ# (pronounced i-q-sharp) provides the core functionality of compiling and simulating Q# operations.
+#### [Command Line](#tab/tabid-cmdline)
+
+IQ# (pronounced i-q-sharp) is a local service that provides the core functionality needed
+to compile and simulate Q# operations.
 Installing IQ# on your machine typically takes less than 10 minutes; just follow these two steps:
 
 1. Install the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.1 or later) by 
   following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download).
 2. From the command line, execute:
-   ```Command Prompt
+   ```Command prompt
    dotnet tool install -g Microsoft.Quantum.IQSharp
    ```
 
-Your installation of the Quantum Development Kit is now complete!
+**Your installation of the Quantum Development Kit is now complete!**
 
 To verify IQ# was correctly installed, from the command line type: `dotnet iqsharp --version`. You should see the IQ# version reported on the output, for example:
-```
+```Sample
 C:\>dotnet iqsharp --version
 Language kernel: 0.5.1903.2501
 Jupyter core: 1.1.12077.0
 ```
 
+
+### Visual Studio extensions ###
+
+The Quantum Development Kit offers tight integration with [Visual Studio](https://visualstudio.microsoft.com/vs/) 
+and [Visual Studio Code](https://code.visualstudio.com/) that improve the development experience. 
+These extensions are available from [Visual Studio's Marketplace](https://marketplace.visualstudio.com/) 
+and provide features like:
+* Code highlighting
+* Errors highlights
+* Documentation on hover
+* Goto symbol definition
+* Rename of symbols
+* Debug breakpoints (Visual Studio)
+
+To install the extensions, follow the corresponding instructions at:
+
+> [!div class="button"]
+> [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+
+> [!div class="button"]
+> [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+
+
+#### [Visual Studio](#tab/tabid-vs)
+
+Q# is tightly integrated into Visual Studio, providing a rich developing experience with features like syntax highlighting and debugging. If you already have Visual Studio 2017 on your computer (version 15.8 or later), follow these steps to enable the Quantum Development Kit integration:
+1. Download the [Microsoft Quantum Development Kit for Visual Studio](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension from the Visual Studio Marketplace.
+2. Once downloaded, double-click the VSIX file to install the extension.
+
+> [!IMPORTANT]
+> The Microsoft Quantum Development Kit does not support Visual Studio for Mac.
+> To install on macOS, please use the instructions for [the command line](#tab/tabid-vs).
+>
+> The Quantum Development Kit requires **.NET Core**. Please make sure the
+> **.NET Core cross-platform development** workload is installed as part of Visual Studio.
+
+If you do not have Visual Studio 2017 installed, you can download Visual Studio 2017 Community Edition for free.
+To do so, please see the [Install Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio) page.
+
+
+Once the extension is installed, take a look at the [quickstart guide](xref:microsoft.quantum.write-program) for information on how to write Q# operations and how to invoke them from C#.
+
+***
+
+
 > [!NOTE]
-> IQ# requires a 64-bit installation of Windows 10, macOS, or Linux.
+> The Quantum Development Kit requires a 64-bit installation of Windows 10, macOS, or Linux.
+>
+> Microsoft's quantum simulator utilizes OpenMP at runtime, on Linux systems you might need to manually install `libgomp`.
+> See [this thread](https://stackoverflow.com/questions/52428334/unable-to-load-dll-microsoft-quantum-simulator-runtime-dll-centos-7) at stackoverflow.
 >
 > Microsoft's quantum simulator, installed with the Quantum Development Kit, utilizes Advance Vector Extensions (AVX), 
 > and thus can run significantly more efficiently on an AVX-enabled CPU.
 > The Quantum Development Kit will still run on non–AVX enabled CPUs, but may not be as efficient.
 > Intel processors shipped in Q1 2011 (Sandy Bridge) or later support AVX.
->
-> Microsoft's quantum simulator utilizes OpenMP at runtime, on Linux systems you might need to manually install `libgomp`.
-> See [this thread](https://stackoverflow.com/questions/52428334/unable-to-load-dll-microsoft-quantum-simulator-runtime-dll-centos-7) at stackoverflow.
 
-
-## Updating IQ# ##
-
-To update IQ# to the latest version, from the command line, execute:
-```Command Prompt
-dotnet tool update -g Microsoft.Quantum.IQSharp
-```
 
 
 ## Classical Hosts ##
@@ -72,24 +113,12 @@ Once you have installed IQ#, these articles explain how to enable interoperabili
 * [Jupyter notebooks getting started](xref:microsoft.quantum.install.jupyter)
 * [Python getting started](xref:microsoft.quantum.install.python)
 
-## Editor extensions ##
 
-The Quantum Development Kit offers extensions to [Visual Studio](https://visualstudio.microsoft.com/vs/) 
-and [Visual Studio Code](https://code.visualstudio.com/) to improve the development experience. 
-These extensions are available from [Visual Studio's Marketplace](https://marketplace.visualstudio.com/) 
-and provide features like:
-* Code highlighting
-* Errors highlights
-* Documentation on hover
-* Goto symbol definition
-* Rename of symbols
-* Debug breakpoints (Visual Studio)
 
-To install the extensions, follow the instructions at:
-> [!div class="button"]
-> [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+## Updating IQ# ##
 
-> [!div class="button"]
-> [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
-
+If you already have IQ# installed, to update it to the latest version, from the command line, execute:
+```Command Prompt
+dotnet tool update -g Microsoft.Quantum.IQSharp
+```
 

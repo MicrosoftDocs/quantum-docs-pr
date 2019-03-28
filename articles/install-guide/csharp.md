@@ -20,19 +20,19 @@ To write C# programs, download and install the **.NET Core SDK** 2.1 or later fr
 ## Installation ##
 
 To download the latest templates for creating new C# projects and libraries that invoke Q# operations, execute this from a command line:
-```Bash
+```Command Prompt
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
 To verify everything is correctly installed, create and run a new program using the following from a command line:
-```Bash
+```Command Prompt
 dotnet new console -lang Q# -o myApp
 cd MyApp
 dotnet run
 ```
 
 If everything works ok, you will see a "Hello quantum world!" message, for example:
-```Prompt
+```Sample
 C:\>dotnet new console -lang Q# -o myApp
 The template "Console Application" was created successfully.
 

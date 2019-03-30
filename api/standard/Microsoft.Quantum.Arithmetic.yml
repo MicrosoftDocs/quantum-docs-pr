@@ -1,0 +1,343 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.arithmetic
+name: Microsoft.Quantum.Arithmetic
+operations:
+- uid: microsoft.quantum.arithmetic.applyleoperationonphasele
+  summary: |-
+    Applies an operation that takes a
+    <xref:microsoft.quantum.canon.phaselittleendian> register as input
+    on a target register of type <xref:microsoft.quantum.canon.littleendian>.
+- uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyleoperationonphaseleca
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
+  summary: |-
+    Applies an operation that takes a
+    <xref:microsoft.quantum.canon.littleendian> register as input
+    on a target register of type <xref:microsoft.quantum.canon.phaselittleendian>.
+- uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyphaseleoperationonlec
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyphaseleoperationonleca
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyreversedopbe
+  summary: |-
+    Applies an operation that takes big-endian input to a register encoding
+    an unsigned integer using little-endian format.
+- uid: microsoft.quantum.arithmetic.applyreversedopbea
+  summary: |-
+    Applies an operation that takes big-endian input to a register encoding
+    an unsigned integer using little-endian format.
+- uid: microsoft.quantum.arithmetic.applyreversedopbec
+  summary: |-
+    Applies an operation that takes big-endian input to a register encoding
+    an unsigned integer using little-endian format.
+- uid: microsoft.quantum.arithmetic.applyreversedopbeca
+  summary: |-
+    Applies an operation that takes big-endian input to a register encoding
+    an unsigned integer using little-endian format.
+- uid: microsoft.quantum.arithmetic.applyreversedopbigendian
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyreversedopbigendiana
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyreversedopbigendianc
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyreversedopbigendianca
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyreversedople
+  summary: |-
+    Applies an operation that takes little-endian input to a register encoding
+    an unsigned integer using big-endian format.
+- uid: microsoft.quantum.arithmetic.applyreversedoplea
+  summary: |-
+    Applies an operation that takes little-endian input to a register encoding
+    an unsigned integer using big-endian format.
+- uid: microsoft.quantum.arithmetic.applyreversedoplec
+  summary: |-
+    Applies an operation that takes little-endian input to a register encoding
+    an unsigned integer using big-endian format.
+- uid: microsoft.quantum.arithmetic.applyreversedopleca
+  summary: |-
+    Applies an operation that takes little-endian input to a register encoding
+    an unsigned integer using big-endian format.
+- uid: microsoft.quantum.arithmetic.applyreversedoplittleendian
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyreversedoplittleendiana
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyreversedoplittleendianc
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyreversedoplittleendianca
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyripplecarrycomparatorbe
+  summary: |-
+    This unitary tests if two integers `x` and `y` stored in equal-size qubit registers
+    satisfy `x > y`. If true, 1 is XORed into an output
+    qubit. Otherwise, 0 is XORed into an output qubit.
+
+    In other words, this unitary $U$  satisfies:
+    $$
+    \begin{align}
+    U\ket{x}\ket{y}\ket{z}=\ket{x}\ket{y}\ket{z\oplus (x>y)}.
+    \end{align}
+    $$.
+- uid: microsoft.quantum.arithmetic.applyripplecarrycomparatorle
+  summary: |-
+    This unitary tests if two integers `x` and `y` stored in equal-size qubit registers
+    satisfy `x > y`. If true, 1 is XORed into an output
+    qubit. Otherwise, 0 is XORed into an output qubit.
+
+    In other words, this unitary $U$  satisfies:
+    $$
+    \begin{align}
+    U\ket{x}\ket{y}\ket{z}=\ket{x}\ket{y}\ket{z\oplus (x>y)}.
+    \end{align}
+    $$.
+- uid: microsoft.quantum.arithmetic.asserthighestbit
+  summary: ''
+- uid: microsoft.quantum.arithmetic.assertlessthanphasele
+  summary: Asserts that the `number` encoded in PhaseLittleEndian is less than `value`.
+- uid: microsoft.quantum.arithmetic.assertmostsignificantbitle
+  summary: |-
+    Asserts that the most significant qubit of a qubit register
+    representing an unsigned integer is in a particular state.
+- uid: microsoft.quantum.arithmetic.assertprobint
+  summary: ''
+- uid: microsoft.quantum.arithmetic.assertprobintbe
+  summary: |-
+    Asserts that the probability of a specific state of a quantum register has the
+    expected value.
+
+    Given an $n$-qubit quantum state $\ket{\psi}=\sum^{2^n-1}_{j=0}\alpha_j \ket{j}$,
+    asserts that the probability $|\alpha_j|^2$ of the state $\ket{j}$ indexed by $j$
+    has the expected value.
+- uid: microsoft.quantum.arithmetic.assertprobintle
+  summary: |-
+    Asserts that the probability of a specific state of a quantum register has the
+    expected value.
+
+    Given an $n$-qubit quantum state $\ket{\psi}=\sum^{2^n-1}_{j=0}\alpha_j \ket{j}$,
+    asserts that the probability $|\alpha_j|^2$ of the state $\ket{j}$ indexed by $j$
+    has the expected value.
+- uid: microsoft.quantum.arithmetic.carry
+  summary: |-
+    Implements a reversible carry gate. Given a carry-in bit encoded in
+    qubit `carryIn` and two summand bits encoded in `summand1` and `summand2`,
+    computes the bitwise xor of `carryIn`, `summand1` and `summand2` in the
+    qubit `summand2` and the carry-out is xored to the qubit `carryOut`.
+- uid: microsoft.quantum.arithmetic.cascadeccnot
+  summary: |-
+    Implements a cascade of CCNOT gates controlled on corresponding bits of two
+    qubit registers, acting on the next qubit of one of the registers.
+    Starting from the qubits at position 0 in both registers as controls, CCNOT is
+    applied to the qubit at position 1 of the target register, then controlled by
+    the qubits at position 1 acting on the qubit at position 2 in the target register,
+    etc., ending with an action on the target qubit in position `Length(nQubits)-1`.
+- uid: microsoft.quantum.arithmetic.cascadecnot
+  summary: |-
+    Implements a cascade of CNOT gates on neighboring qubits in a given qubit
+    register, starting from the qubit at position 0 as control to the qubit at
+    position 1 as the target, then from the qubit at position 1 as the control to
+    the qubit at position 2 as the target, etc., ending with the qubit in position
+    `Length(register)-1` as the target.
+- uid: microsoft.quantum.arithmetic.copymostsignificantbitle
+  summary: |-
+    Copies the most significant bit of a qubit register
+    `from` representing an unsigned integer into the qubit `target`.
+- uid: microsoft.quantum.arithmetic.greaterthan
+  summary: |-
+    Carries out a strictly greater than comparison of two integers $x$ and $y$, encoded
+    in qubit registers xs and ys. If $x > y$, then the result qubit will be flipped,
+    otherwise retain its state.
+- uid: microsoft.quantum.arithmetic.incrementbyintegerbe
+  summary: |-
+    Increments an unsigned quantum register by a classical integer,
+    using phase rotations.
+- uid: microsoft.quantum.arithmetic.incrementbyintegerle
+  summary: |-
+    Increments an unsigned quantum register by a classical integer,
+    using phase rotations.
+- uid: microsoft.quantum.arithmetic.incrementbyintegerphasele
+  summary: |-
+    Increments an unsigned quantum register by a classical integer,
+    using phase rotations.
+- uid: microsoft.quantum.arithmetic.inplacemajority
+  summary: |-
+    This computes the Majority function in-place on 3 qubits.
+
+    If we denote output qubit as $z$ and input qubits as $x$ and $y$,
+    the operation performs the following transformation:
+    $\ket{xyz} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} (x, y, z)}$.
+- uid: microsoft.quantum.arithmetic.inplacexorbe
+  summary: |-
+    Applies `X` operations to qubits in a big-endian register based on 1 bits in an integer.
+
+    Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
+    then `InPlaceXorBE` performs an operation given by the following map:
+    $\ket{y}\rightarrow \ket{y\oplus a}$ , where $\oplus$ is the bitwise exclusive OR operator.
+- uid: microsoft.quantum.arithmetic.inplacexorle
+  summary: |-
+    Applies `X` operations to qubits in a little-endian register based on 1 bits in an integer.
+
+    Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
+    then `InPlaceXorLE` performs an operation given by the following map:
+    $\ket{y}\rightarrow \ket{y\oplus a}$ , where $\oplus$ is the bitwise exclusive OR operator.
+- uid: microsoft.quantum.arithmetic.integerincrementle
+  summary: ''
+- uid: microsoft.quantum.arithmetic.integerincrementphasele
+  summary: ''
+- uid: microsoft.quantum.arithmetic.maj
+  summary: This computes applies the in-place majority operation on 3 qubits.
+- uid: microsoft.quantum.arithmetic.measureinteger
+  summary: ''
+- uid: microsoft.quantum.arithmetic.measureintegerbe
+  summary: |-
+    Measures the content of a quantum register and converts
+    it to an integer. The measurement is performed with respect
+    to the standard computational basis, i.e., the eigenbasis of `PauliZ`.
+- uid: microsoft.quantum.arithmetic.measureintegerle
+  summary: |-
+    Measures the content of a quantum register and converts
+    it to an integer. The measurement is performed with respect
+    to the standard computational basis, i.e., the eigenbasis of `PauliZ`.
+- uid: microsoft.quantum.arithmetic.modularaddproductle
+  summary: |-
+    Performs a modular multiply-and-add by integer constants on a qubit register.
+
+    Implements the map
+    $$
+    \begin{align}
+    \ket{x} \ket{b} \mapsto \ket{x} \ket{b + a \cdot x \operatorname{mod} N}
+    \end{align}
+    $$
+    for a given modulus $N$, constant multiplier $a$, and summand $y$.
+- uid: microsoft.quantum.arithmetic.modularaddproductphasele
+  summary: |-
+    The same as ModularAddProductLE, but assumes that summand encodes
+    integers in QFT basis
+- uid: microsoft.quantum.arithmetic.modularincrementle
+  summary: |-
+    Performs a modular increment of a qubit register by an integer constant.
+
+    Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
+    Then the operation performs the following transformation:
+    \begin{align}
+    \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N}
+    \end{align}
+    Integers are encoded in little-endian format.
+- uid: microsoft.quantum.arithmetic.modularincrementphasele
+  summary: |-
+    Performs a modular increment of a qubit register by an integer constant.
+
+    Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
+    Then the operation performs the following transformation:
+    |y⟩ ↦ |y+a (mod N)⟩
+    Integers are encoded in little-endian format in QFT basis
+- uid: microsoft.quantum.arithmetic.modularmultiplybyconstantle
+  summary: |-
+    Performs modular multiplication by an integer constant on a qubit register.
+
+    Let us denote modulus by N and constMultiplier by a
+    then this operation implements a unitary defined by the following map on
+    computational basis:
+    |y⟩ ↦ |a⋅y (mod N) ⟩, for all y between 0 and N - 1
+- uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
+  summary: |-
+    Reversible, in-place ripple-carry addition of two integers.
+    Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`,
+    and a qubit carry, the operation computes the sum of the two integers
+    where the $n$ least significant bits of the result are held in `ys` and
+    the carry out bit is xored to the qubit `carry`.
+- uid: microsoft.quantum.arithmetic.ripplecarryadderd
+  summary: |-
+    Reversible, in-place ripple-carry addition of two integers.
+    Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`,
+    and a qubit carry, the operation computes the sum of the two integers
+    where the $n$ least significant bits of the result are held in `ys` and
+    the carry out bit is xored to the qubit `carry`.
+- uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
+  summary: |-
+    Reversible, in-place ripple-carry addition of two integers without carry out.
+    Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`,
+    the operation computes the sum of the two integers modulo $2^n$,
+    where $n$ is the bit size of the inputs `xs` and `ys`. It does not compute
+    the carry out bit.
+- uid: microsoft.quantum.arithmetic.ripplecarryadderttk
+  summary: |-
+    Reversible, in-place ripple-carry addition of two integers.
+    Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`,
+    and a qubit carry, the operation computes the sum of the two integers
+    where the $n$ least significant bits of the result are held in `ys` and
+    the carry out bit is xored to the qubit `carry`.
+- uid: microsoft.quantum.arithmetic.sum
+  summary: |-
+    Implements a reversible sum gate. Given a carry-in bit encoded in
+    qubit `carryIn` and two summand bits encoded in `summand1` and `summand2`,
+    computes the bitwise xor of `carryIn`, `summand1` and `summand2` in the qubit
+    `summand2`.
+newtypes:
+- uid: microsoft.quantum.arithmetic.bigendian
+  summary: |-
+    Register that encodes an unsigned integer in big-endian order. The
+    qubit with index `0` encodes the highest bit of an unsigned integer.
+- uid: microsoft.quantum.arithmetic.littleendian
+  summary: |-
+    Register that encodes an unsigned integer in little-endian order. The
+    qubit with index `0` encodes the lowest bit of an unsigned integer.
+- uid: microsoft.quantum.arithmetic.phaselittleendian
+  summary: |-
+    Little-endian unsigned integers in QFT basis.
+
+    For example, if $\ket{x}$ is the little-endian encoding of the integer
+    $x$ in the computational basis,
+    then $\operatorname{QFTLE} \ket{x}$ is the encoding of $x$ in the QFT
+    basis.
+functions:
+- uid: microsoft.quantum.arithmetic.bigendianaslittleendian
+  summary: |-
+    Converts a `BigEndian` qubit register to a `LittleEndian` qubit
+    register by reversing the qubit ordering.
+- uid: microsoft.quantum.arithmetic.bigendiantolittleendian
+  summary: ''
+- uid: microsoft.quantum.arithmetic.littleendianasbigendian
+  summary: |-
+    Converts a `LittleEndian` qubit register to a `BigEndian` qubit
+    register by reversing the qubit ordering.
+- uid: microsoft.quantum.arithmetic.littleendiantobigendian
+  summary: ''
+- uid: microsoft.quantum.arithmetic.reversedopbe
+  summary: |-
+    Given an operation that takes a big-endian input, returns a new
+    operation that takes a little-endian input.
+- uid: microsoft.quantum.arithmetic.reversedopbea
+  summary: |-
+    Given an operation that takes a big-endian input, returns a new
+    operation that takes a little-endian input.
+- uid: microsoft.quantum.arithmetic.reversedopbec
+  summary: |-
+    Given an operation that takes a big-endian input, returns a new
+    operation that takes a little-endian input.
+- uid: microsoft.quantum.arithmetic.reversedopbeca
+  summary: |-
+    Given an operation that takes a big-endian input, returns a new
+    operation that takes a little-endian input.
+- uid: microsoft.quantum.arithmetic.reversedople
+  summary: |-
+    Given an operation that takes a little-endian input, returns a new
+    operation that takes a big-endian input.
+- uid: microsoft.quantum.arithmetic.reversedoplea
+  summary: |-
+    Given an operation that takes a little-endian input, returns a new
+    operation that takes a big-endian input.
+- uid: microsoft.quantum.arithmetic.reversedoplec
+  summary: |-
+    Given an operation that takes a little-endian input, returns a new
+    operation that takes a big-endian input.
+- uid: microsoft.quantum.arithmetic.reversedopleca
+  summary: |-
+    Given an operation that takes a little-endian input, returns a new
+    operation that takes a big-endian input.
+...

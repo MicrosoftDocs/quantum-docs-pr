@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.incrementbyintegerbe
+name: IncrementByIntegerBE
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: |-
+  Increments an unsigned quantum register by a classical integer,
+  using phase rotations.
+
+  Suppose that `target` encodes an unsigned integer $x$ in a big-endian
+  encoding and that `increment` is equal to $a$.
+  Then, this operation implements the unitary $\ket{x} \mapsto \ket{x + a}$,
+  where the addition is performed
+  modulo $2^n$, where $n = \texttt{Length(target!)}$.
+syntax: 'operation IncrementByIntegerBE (increment : Int, target : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+input:
+  content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: increment
+    summary: The integer by which the `target` is incremented by.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: |-
+      A quantum register encoding an unsigned integer using big-endian
+      encoding.
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- incrementbyintegerbe
+- incrementbyintegerphasele
+...

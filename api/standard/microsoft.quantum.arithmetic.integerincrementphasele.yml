@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.integerincrementphasele
+name: IntegerIncrementPhaseLE
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+syntax: 'operation IntegerIncrementPhaseLE (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+input:
+  content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
+  types:
+  - name: increment
+    isPrimitive: true
+    uid: Int
+  - name: target
+    uid: microsoft.quantum.arithmetic.phaselittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

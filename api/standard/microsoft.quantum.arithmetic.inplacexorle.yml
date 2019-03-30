@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.inplacexorle
+name: InPlaceXorLE
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: |-
+  Applies `X` operations to qubits in a little-endian register based on 1 bits in an integer.
+
+  Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
+  then `InPlaceXorLE` performs an operation given by the following map:
+  $\ket{y}\rightarrow \ket{y\oplus a}$ , where $\oplus$ is the bitwise exclusive OR operator.
+syntax: 'operation InPlaceXorLE (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: value
+    summary: An integer which is assumed to be non-negative.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: A quantum register which is used to store `value` in little-endian encoding.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- inplacexorbe
+...

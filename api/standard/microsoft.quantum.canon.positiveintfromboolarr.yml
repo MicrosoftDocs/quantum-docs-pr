@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.positiveintfromboolarr
+name: PositiveIntFromBoolArr
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function PositiveIntFromBoolArr (bits : Bool[]) : Int'
+input:
+  content: '(bits : Bool[])'
+  types:
+  - name: bits
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+...

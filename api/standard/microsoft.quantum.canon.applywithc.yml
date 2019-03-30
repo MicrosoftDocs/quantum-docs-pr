@@ -1,0 +1,66 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applywithc
+name: ApplyWithC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  Given two operations, respectively described by unitary operators $U$
+  and $V$, applies them in the sequence $U^{\dagger} V U$. That is,
+  this operation implements the unitary operator given by $V$ conjugated
+  with $U$.
+remarks: |-
+  The outer operation is always assumed to be adjointable, but does not
+  need to be controllable in order for the combined operation to be
+  controllable.
+syntax: "operation ApplyWithC (outerOperation : ('T => Unit : Adjoint), innerOperation : ('T => Unit : Controlled), target : 'T) : Unit"
+input:
+  content: "(outerOperation : ('T => Unit : Adjoint), innerOperation : ('T => Unit : Controlled), target : 'T)"
+  types:
+  - name: outerOperation
+    summary: |-
+      The operation $U$ that should be used to conjugate $V$. Note that the
+      outer operation $U$ needs to be adjointable, but does not
+      need to be controllable.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: innerOperation
+    summary: The operation $V$ being conjugated.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: target
+    summary: The input to be provided to the outer and inner operations.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: The target on which each of the inner and outer operations act.
+functors:
+- Controlled
+seeAlso:
+- applywith
+- applywitha
+- applywithca
+...

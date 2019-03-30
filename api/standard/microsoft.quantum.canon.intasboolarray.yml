@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.intasboolarray
+name: IntAsBoolArray
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  Produces a binary representation of a positive integer, using the
+  little-endian representation for the returned array.
+remarks: The input `number` must be at most $2^{\texttt{bits}} - 1$.
+syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
+input:
+  content: '(number : Int, bits : Int)'
+  types:
+  - name: number
+    summary: A positive integer to be converted to an array of boolean values.
+    isPrimitive: true
+    uid: Int
+  - name: bits
+    summary: The number of bits in the binary representation of `number`.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool[]
+  types:
+  - summary: An array of boolean values representing `number`.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+...

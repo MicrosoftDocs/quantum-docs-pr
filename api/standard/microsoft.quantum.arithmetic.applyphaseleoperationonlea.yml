@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
+name: ApplyPhaseLEOperationOnLEA
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+syntax: 'operation ApplyPhaseLEOperationOnLEA (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit : Adjoint), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit : Adjoint), target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: op
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.phaselittleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: target
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+seeAlso:
+- applyphaseleoperationonle
+...

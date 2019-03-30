@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.boolfromresult
+name: BoolFromResult
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function BoolFromResult (input : Result) : Bool'
+input:
+  content: '(input : Result)'
+  types:
+  - name: input
+    isPrimitive: true
+    uid: Result
+output:
+  content: Bool
+  types:
+  - isPrimitive: true
+    uid: Bool
+...

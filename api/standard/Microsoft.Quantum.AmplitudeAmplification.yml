@@ -1,0 +1,42 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.amplitudeamplification
+name: Microsoft.Quantum.AmplitudeAmplification
+functions:
+- uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
+  summary: Standard Amplitude Amplification algorithm
+- uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
+  summary: Amplitude amplification by oracles for partial reflections.
+- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionsphases
+  summary: Amplitude amplification by partial reflections.
+- uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
+  summary: Oblivious amplitude amplification by oracles for partial reflections.
+- uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
+  summary: Returns a unitary that implements oblivious amplitude amplification by specifying for partial reflections.
+- uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
+  summary: |-
+    Computes partial reflection phases for fixed-point amplitude
+    amplification.
+- uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
+  summary: |-
+    Computes partial reflection phases for standard amplitude
+    amplification.
+- uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
+  summary: |-
+    Converts phases specified as single-qubit rotations to phases
+    specified as partial reflections.
+- uid: microsoft.quantum.amplitudeamplification.reflectionstart
+  summary: Constructs a reflection about the all-zero string |0...0〉, which is the typical input state to amplitude amplification.
+- uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
+  summary: |-
+    Constructs a `ReflectionOracle` about the target state uniquely marked by the flag qubit.
+
+    The target state has a single qubit set to 1, and all others 0: $\ket{1}_f$.
+operations:
+- uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
+  summary: Fixed-Point Amplitude Amplification algorithm
+newtypes:
+- uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  summary: Phases for a sequence of partial reflections in amplitude amplification.
+- uid: microsoft.quantum.amplitudeamplification.rotationphases
+  summary: Phases for a sequence of single-qubit rotations in amplitude amplification.
+...

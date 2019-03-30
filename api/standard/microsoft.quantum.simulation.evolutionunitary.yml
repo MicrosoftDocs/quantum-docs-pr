@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.evolutionunitary
+name: EvolutionUnitary
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: |-
+  Represents a unitary time-evolution operator.
+
+  The first parameter is
+  is duration of time-evolution, and the second parameter is the qubit
+  register acted upon by the unitary.
+syntax: 'newtype EvolutionUnitary = ((Double, Qubit[]) => Unit : Adjoint, Controlled);'
+...

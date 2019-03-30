@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.identitygeneratorsystem
+name: IdentityGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: |-
+  Returns a generator system consistent with the zero
+  Hamiltonian `H = 0`, which corresponds to the identity evolution operation.
+syntax: 'function IdentityGeneratorSystem () : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
+  types:
+  - summary: |-
+      A generator system representing evolution under the Hamiltonian
+      $H = 0$.
+    uid: microsoft.quantum.simulation.generatorsystem
+...

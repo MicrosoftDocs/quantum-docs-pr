@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.modularmultiplybyconstantle
+name: ModularMultiplyByConstantLE
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: |-
+  Performs modular multiplication by an integer constant on a qubit register.
+
+  Let us denote modulus by N and constMultiplier by a
+  then this operation implements a unitary defined by the following map on
+  computational basis:
+  |y⟩ ↦ |a⋅y (mod N) ⟩, for all y between 0 and N - 1
+remarks: |-
+  - For the circuit diagram and explanation see Figure 7 on [Page 8
+    of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
+  - This operation corresponds to Uₐ in
+    [arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
+syntax: 'operation ModularMultiplyByConstantLE (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: constMultiplier
+    summary: Constant by which multiplier is being multiplied. Must be co-prime to modulus.
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: The multiplication operation is performed modulo `modulus`
+    isPrimitive: true
+    uid: Int
+  - name: multiplier
+    summary: |-
+      The number being multiplied by a constant.
+      This is an array of qubits representing integer in little-endian bit order.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

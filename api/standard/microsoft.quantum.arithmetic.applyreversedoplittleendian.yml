@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyreversedoplittleendian
+name: ApplyReversedOpLittleEndian
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+syntax: 'operation ApplyReversedOpLittleEndian (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+input:
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), register : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: op
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: register
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

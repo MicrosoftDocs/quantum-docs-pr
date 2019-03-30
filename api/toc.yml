@@ -3,8 +3,8 @@
   items:
   - name: Prelude
     href: prelude/toc.yml
-  - name: Canon
-    href: canon/toc.yml
+  - name: Standard Libraries
+    href: standard/toc.yml
   - name: Research Libraries
     href: research/toc.yml
   - name: Chemistry Library

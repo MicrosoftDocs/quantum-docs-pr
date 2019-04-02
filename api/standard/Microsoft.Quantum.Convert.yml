@@ -1,0 +1,40 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.convert
+name: Microsoft.Quantum.Convert
+functions:
+- uid: microsoft.quantum.convert.boolarrayasint
+  summary: Produces a positive integer from a string of bits in little endian format.
+- uid: microsoft.quantum.convert.boolarrayaspauli
+  summary: |-
+    Given a bit string, returns a multi-qubit Pauli operator
+    represented as an array of single-qubit Pauli operators.
+- uid: microsoft.quantum.convert.boolarrayasresultarray
+  summary: |-
+    Converts a `Bool[]` type to a `Result[]` type, where `true` is mapped to
+    `One` and `false` is mapped to `Zero`.
+- uid: microsoft.quantum.convert.boolasresult
+  summary: |-
+    Converts a `Bool` type to a `Result` type, where `true` is mapped to
+    `One` and `false` is mapped to `Zero`.
+- uid: microsoft.quantum.convert.intasboolarray
+  summary: |-
+    Produces a binary representation of a positive integer, using the
+    little-endian representation for the returned array.
+- uid: microsoft.quantum.convert.rangeasintarray
+  summary: Creates an array `arr` of integers enumerated by start..step..end.
+- uid: microsoft.quantum.convert.resultarrayasboolarray
+  summary: |-
+    Converts a `Result[]` type to a `Bool[]` type, where `One` is mapped to
+    `true` and `Zero` is mapped to `false`.
+- uid: microsoft.quantum.convert.resultarrayasint
+  summary: Produces a positive integer from a string of Results in little endian format.
+- uid: microsoft.quantum.convert.resultasbool
+  summary: |-
+    Converts a `Result` type to a `Bool` type, where `One` is mapped to
+    `true` and `Zero` is mapped to `false`.
+- uid: microsoft.quantum.convert.tooperation
+  summary: Converts functions to operations.
+operations:
+- uid: microsoft.quantum.convert.call
+  summary: Calls a function with a given input.
+...

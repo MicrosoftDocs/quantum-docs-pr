@@ -1,8 +1,8 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.call
+uid: microsoft.quantum.convert.call
 name: Call
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: Microsoft.Quantum.Convert
 summary: |-
   Calls a function with a given input.
 

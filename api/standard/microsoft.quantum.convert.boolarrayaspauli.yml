@@ -1,8 +1,8 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.boolarrayaspauli
+uid: microsoft.quantum.convert.boolarrayaspauli
 name: BoolArrayAsPauli
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: Microsoft.Quantum.Convert
 summary: |-
   Given a bit string, returns a multi-qubit Pauli operator
   represented as an array of single-qubit Pauli operators.

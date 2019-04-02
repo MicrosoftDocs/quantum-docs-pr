@@ -1,8 +1,8 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.boolarrayasint
+uid: microsoft.quantum.convert.boolarrayasint
 name: BoolArrayAsInt
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: Microsoft.Quantum.Convert
 summary: Produces a positive integer from a string of bits in little endian format.
 syntax: 'function BoolArrayAsInt (bits : Bool[]) : Int'
 input:

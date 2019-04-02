@@ -38,9 +38,9 @@ examples: |-
       op(qubitsBE);
   }
   ```
-syntax: 'function StatePreparationComplexCoefficients (coefficients : Microsoft.Quantum.Canon.ComplexPolar[]) : (Microsoft.Quantum.Arithmetic.BigEndian => Unit : Adjoint, Controlled)'
+syntax: 'function StatePreparationComplexCoefficients (coefficients : Microsoft.Quantum.Math.ComplexPolar[]) : (Microsoft.Quantum.Arithmetic.BigEndian => Unit : Adjoint, Controlled)'
 input:
-  content: '(coefficients : Microsoft.Quantum.Canon.ComplexPolar[])'
+  content: '(coefficients : Microsoft.Quantum.Math.ComplexPolar[])'
   types:
   - name: coefficients
     summary: |-
@@ -48,7 +48,7 @@ input:
       absolute value and phase $(r_j, t_j)$. The $j$th coefficient
       indexes the number state $\ket{j}$ encoded in big-endian format.
     isArray: true
-    uid: microsoft.quantum.canon.complexpolar
+    uid: microsoft.quantum.math.complexpolar
 output:
   content: '(Microsoft.Quantum.Arithmetic.BigEndian => Unit : Adjoint, Controlled)'
   types:

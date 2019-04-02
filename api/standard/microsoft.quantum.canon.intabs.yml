@@ -3,19 +3,16 @@ uid: microsoft.quantum.canon.intabs
 name: IntAbs
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Returns the absolute value of an integer.
 syntax: 'function IntAbs (input : Int) : Int'
 input:
   content: '(input : Int)'
   types:
   - name: input
-    summary: An integer $x$ of type `Int`.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: An integer $|x|$ of type `Int`.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 ...

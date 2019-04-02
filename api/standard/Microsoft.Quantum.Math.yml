@@ -1,0 +1,117 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.math
+name: Microsoft.Quantum.Math
+functions:
+- uid: microsoft.quantum.math.abscomplex
+  summary: |-
+    Returns the absolute value of a complex number of type
+    `Complex`.
+- uid: microsoft.quantum.math.abscomplexpolar
+  summary: |-
+    Returns the absolute value of a complex number of type
+    `ComplexPolar`.
+- uid: microsoft.quantum.math.abssquaredcomplex
+  summary: |-
+    Returns the squared absolute value of a complex number of type
+    `Complex`.
+- uid: microsoft.quantum.math.abssquaredcomplexpolar
+  summary: |-
+    Returns the squared absolute value of a complex number of type
+    `ComplexPolar`.
+- uid: microsoft.quantum.math.arccosh
+  summary: Computes the inverse hyperbolic cosine of a number.
+- uid: microsoft.quantum.math.arcsinh
+  summary: Computes the inverse hyperbolic sine of a number.
+- uid: microsoft.quantum.math.arctanh
+  summary: Computes the inverse hyperbolic tangent of a number.
+- uid: microsoft.quantum.math.argcomplex
+  summary: |-
+    Returns the phase of a complex number of type
+    `Complex`.
+- uid: microsoft.quantum.math.argcomplexpolar
+  summary: |-
+    Returns the phase of a complex number of type
+    `ComplexPolar`.
+- uid: microsoft.quantum.math.bitsize
+  summary: |-
+    For a non-negative integer `a`, returns the number of bits required to represent `a`.
+
+    That is, returns the smallest $n$ such
+    that $a < 2^n$.
+- uid: microsoft.quantum.math.complexpolartocomplex
+  summary: |-
+    Converts a complex number of type `ComplexPolar` to a complex
+    number of type `Complex`.
+- uid: microsoft.quantum.math.complextocomplexpolar
+  summary: |-
+    Converts a complex number of type `Complex` to a complex
+    number of type `ComplexPolar`.
+- uid: microsoft.quantum.math.continuedfractionconvergent
+  summary: |-
+    Finds the continued fraction convergent closest to `fraction`
+    with the denominator less or equal to `denominatorBound`
+- uid: microsoft.quantum.math.expmod
+  summary: |-
+    Let us denote expBase by x, power by p and modulus by N.
+    The function returns xᵖ mod N.
+
+    We assume that $N$, $x$ are positive and power is non-negative.
+- uid: microsoft.quantum.math.extendedgcd
+  summary: |-
+    Computes a tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a
+    greatest common divisor of a and b. The GCD is always positive.
+- uid: microsoft.quantum.math.gcd
+  summary: Computes the greatest common divisor of a and b. The GCD is always positive.
+- uid: microsoft.quantum.math.inversemod
+  summary: Returns b such that `a`⋅b = 1 (mod `modulus`)
+- uid: microsoft.quantum.math.iscoprime
+  summary: Returns  true if a and b are co-prime and false otherwise.
+- uid: microsoft.quantum.math.lg
+  summary: Computes the base-2 logarithm of a number.
+- uid: microsoft.quantum.math.logof2
+  summary: Returns the natural logarithm of 2.
+- uid: microsoft.quantum.math.max
+  summary: Given an array of integers, returns the largest element.
+- uid: microsoft.quantum.math.min
+  summary: Given an array of integers, returns the smallest element.
+- uid: microsoft.quantum.math.modulus
+  summary: Computes the canonical residue of `value` modulo `modulus`.
+- uid: microsoft.quantum.math.pnorm
+  summary: |-
+    Returns the `L(p)` norm of a vector of `Double`s.
+
+    That is, given an array $x$ of type `Double[]`, this returns the $p$-norm
+    $\|x\|\_p= (\sum_{j}|x_j|^{p})^{1/p}$.
+- uid: microsoft.quantum.math.pnormalized
+  summary: |-
+    Normalizes a vector of `Double`s in the `L(p)` norm.
+
+    That is, given an array $x$ of type `Double[]`, this returns an array where
+    all elements are divided by the $p$-norm $\|x\|_p$.
+- uid: microsoft.quantum.math.realmod
+  summary: Computes the modulus between two real numbers.
+newtypes:
+- uid: microsoft.quantum.math.complexpolar
+  summary: |-
+    Represents a complex number in polar form.
+
+    The polar representation of a complex number is $c=r e^{i t}$.
+- uid: microsoft.quantum.math.fraction
+  summary: |-
+    Represents a rational number of the form `p/q`. Integer `p` is
+    the first element of the tuple and `q` is the second element
+    of the tuple.
+operations:
+- uid: microsoft.quantum.math.randomint
+  summary: |-
+    Generates a uniformly sampled random integer greater than or equal to zero
+    and less than a provided upper bound.
+- uid: microsoft.quantum.math.randomintpow2
+  summary: |-
+    Generates a random integer uniformly sampled from all integers that can be represented
+    in a given number of bits.
+- uid: microsoft.quantum.math.randomreal
+  summary: |-
+    Returns a random real number in the interval greater than or equal to zero
+    and less than one.
+...

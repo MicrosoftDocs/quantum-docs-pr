@@ -1,8 +1,8 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.resultarrayasint
+uid: microsoft.quantum.convert.resultarrayasint
 name: ResultArrayAsInt
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: Microsoft.Quantum.Convert
 summary: Produces a positive integer from a string of Results in little endian format.
 syntax: 'function ResultArrayAsInt (results : Result[]) : Int'
 input:

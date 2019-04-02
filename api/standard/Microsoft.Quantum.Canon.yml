@@ -1,460 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.canon
 name: Microsoft.Quantum.Canon
-functions:
-- uid: microsoft.quantum.canon.abscomplex
-  summary: |-
-    Returns the absolute value of a complex number of type
-    `Complex`.
-- uid: microsoft.quantum.canon.abscomplexpolar
-  summary: |-
-    Returns the absolute value of a complex number of type
-    `ComplexPolar`.
-- uid: microsoft.quantum.canon.abssquaredcomplex
-  summary: |-
-    Returns the squared absolute value of a complex number of type
-    `Complex`.
-- uid: microsoft.quantum.canon.abssquaredcomplexpolar
-  summary: |-
-    Returns the squared absolute value of a complex number of type
-    `ComplexPolar`.
-- uid: microsoft.quantum.canon.arccosh
-  summary: Computes the inverse hyperbolic cosine of a number.
-- uid: microsoft.quantum.canon.arcsinh
-  summary: Computes the inverse hyperbolic sine of a number.
-- uid: microsoft.quantum.canon.arctanh
-  summary: Computes the inverse hyperbolic tangent of a number.
-- uid: microsoft.quantum.canon.argcomplex
-  summary: |-
-    Returns the phase of a complex number of type
-    `Complex`.
-- uid: microsoft.quantum.canon.argcomplexpolar
-  summary: |-
-    Returns the phase of a complex number of type
-    `ComplexPolar`.
-- uid: microsoft.quantum.canon.asqubitarray
-  summary: ''
-- uid: microsoft.quantum.canon.assertalmostequal
-  summary: |-
-    Asserts that a classical floating point variable has the expected value up to a
-    small tolerance of 1e-10.
-- uid: microsoft.quantum.canon.assertalmostequaltol
-  summary: |-
-    Asserts that a classical floating point variable has the expected value up to a given
-    absolute tolerance.
-- uid: microsoft.quantum.canon.assertboolarrayequal
-  summary: Asserts that two arrays of boolean values are equal.
-- uid: microsoft.quantum.canon.assertboolequal
-  summary: Asserts that a classical Bool variable has the expected value.
-- uid: microsoft.quantum.canon.assertintequal
-  summary: Asserts that a classical Int variable has the expected value.
-- uid: microsoft.quantum.canon.assertresultequal
-  summary: Asserts that a classical Result variable has the expected value.
-- uid: microsoft.quantum.canon.bind
-  summary: |-
-    Given an array of operations acting on a single input,
-    produces a new operation that
-    performs each given operation in sequence.
-- uid: microsoft.quantum.canon.binda
-  summary: |-
-    Given an array of operations acting on a single input,
-    produces a new operation that
-    performs each given operation in sequence.
-    The modifier `A` indicates that all operations in the array are adjointable.
-- uid: microsoft.quantum.canon.bindc
-  summary: |-
-    Given an array of operations acting on a single input,
-    produces a new operation that
-    performs each given operation in sequence.
-    The modifier `C` indicates that all operations in the array are controllable.
-- uid: microsoft.quantum.canon.bindca
-  summary: |-
-    Given an array of operations acting on a single input,
-    produces a new operation that
-    performs each given operation in sequence.
-    The modifier `CA` indicates that all operations in the array are adjointable
-    and controllable.
-- uid: microsoft.quantum.canon.bitsize
-  summary: |-
-    For a non-negative integer `a`, returns the number of bits required to represent `a`.
-
-    That is, returns the smallest $n$ such
-    that $a < 2^n$.
-- uid: microsoft.quantum.canon.boolarrayasint
-  summary: Produces a positive integer from a string of bits in little endian format.
-- uid: microsoft.quantum.canon.boolarrayaspauli
-  summary: |-
-    Given a bit string, returns a multi-qubit Pauli operator
-    represented as an array of single-qubit Pauli operators.
-- uid: microsoft.quantum.canon.boolarrayasresultarray
-  summary: |-
-    Converts a `Bool[]` type to a `Result[]` type, where `true` is mapped to
-    `One` and `false` is mapped to `Zero`.
-- uid: microsoft.quantum.canon.boolarrfrompositiveint
-  summary: ''
-- uid: microsoft.quantum.canon.boolarrfromresultarr
-  summary: ''
-- uid: microsoft.quantum.canon.boolasresult
-  summary: |-
-    Converts a `Bool` type to a `Result` type, where `true` is mapped to
-    `One` and `false` is mapped to `Zero`.
-- uid: microsoft.quantum.canon.boolfromresult
-  summary: ''
-- uid: microsoft.quantum.canon.ccontrolled
-  summary: |-
-    Given an operation op, returns a new operation which
-    applies the op if a classical control bit is true. If false, nothing happens.
-- uid: microsoft.quantum.canon.ccontrolleda
-  summary: |-
-    Given an operation op, returns a new operation which
-    applies the op if a classical control bit is true. If false, nothing happens.
-    The modifier `A` indicates that the operation is adjointable.
-- uid: microsoft.quantum.canon.ccontrolledc
-  summary: |-
-    Given an operation op, returns a new operation which
-    applies the op if a classical control bit is true. If false, nothing happens.
-    The modifier `C` indicates that the operation is controllable.
-- uid: microsoft.quantum.canon.ccontrolledca
-  summary: |-
-    Given an operation op, returns a new operation which
-    applies the op if a classical control bit is true. If false, nothing happens.
-    The modifier `CA` indicates that the operation is controllable and adjointable.
-- uid: microsoft.quantum.canon.complexpolartocomplex
-  summary: |-
-    Converts a complex number of type `ComplexPolar` to a complex
-    number of type `Complex`.
-- uid: microsoft.quantum.canon.complextocomplexpolar
-  summary: |-
-    Converts a complex number of type `Complex` to a complex
-    number of type `ComplexPolar`.
-- uid: microsoft.quantum.canon.compose
-  summary: |-
-    Generates the composition of two functions.
-
-    That is, given two functions $f$ and $g$, returns a new function representing
-    $f \circ g$.
-- uid: microsoft.quantum.canon.conjugatedby
-  summary: |-
-    Given outer and inner operations, returns a new operation that
-    conjugates the inner operation by the outer operation.
-- uid: microsoft.quantum.canon.conjugatedbya
-  summary: |-
-    Given outer and inner operations, returns a new operation that
-    conjugates the inner operation by the outer operation.
-- uid: microsoft.quantum.canon.conjugatedbyc
-  summary: |-
-    Given outer and inner operations, returns a new operation that
-    conjugates the inner operation by the outer operation.
-- uid: microsoft.quantum.canon.conjugatedbyca
-  summary: |-
-    Given outer and inner operations, returns a new operation that
-    conjugates the inner operation by the outer operation.
-- uid: microsoft.quantum.canon.constantarray
-  summary: Creates an array of given length with all elements equal to given value.
-- uid: microsoft.quantum.canon.continuedfractionconvergent
-  summary: |-
-    Finds the continued fraction convergent closest to `fraction`
-    with the denominator less or equal to `denominatorBound`
-- uid: microsoft.quantum.canon.controlledonbitstring
-  summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
-- uid: microsoft.quantum.canon.controlledonint
-  summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified positive integer.
-- uid: microsoft.quantum.canon.curryop
-  summary: |-
-    Returns a curried version of an operation on two inputs.
-
-    That is, given an operation with two inputs, this function applies Curry's isomorphism
-    $f(x, y) \equiv f(x)(y)$ to return an operation of one input which
-    returns an operation of one input.
-- uid: microsoft.quantum.canon.decomposeintotimestepsca
-  summary: |-
-    Returns an operation implementing the Trotter–Suzuki integrator for
-    a given operation.
-- uid: microsoft.quantum.canon.embedpauli
-  summary: |-
-    Given a single-qubit Pauli operator and the index of a qubit,
-    returns a multi-qubit Pauli operator with the given single-qubit
-    operator at that index and `PauliI` at every other index.
-- uid: microsoft.quantum.canon.exclude
-  summary: |-
-    Returns an array containing the elements of another array,
-    excluding elements at a given list of indices.
-- uid: microsoft.quantum.canon.expmod
-  summary: |-
-    Let us denote expBase by x, power by p and modulus by N.
-    The function returns xᵖ mod N.
-
-    We assume that $N$, $x$ are positive and power is non-negative.
-- uid: microsoft.quantum.canon.extendedgcd
-  summary: |-
-    Computes a tuple (u,v) such that u⋅a + v⋅b = GCD(a,b), where GCD is a
-    greatest common divisor of a and b. The GCD is always positive.
-- uid: microsoft.quantum.canon.filter
-  summary: |-
-    The `Filter` function takes an array and a predicate that is defined
-    for the elements of the array, and returns an array that consists of
-    those elements that satisfy the predicate.
-- uid: microsoft.quantum.canon.fold
-  summary: |-
-    Iterates a function `f` through an array `array`, returning
-    `f(f(f(initialState, array[0]), array[1]), ...)`.
-- uid: microsoft.quantum.canon.forall
-  summary: |-
-    The `ForAll` function takes an array and a predicate that is defined
-    for the elements of the array, and checks if all elements of the
-    array satisfy the predicate.
-- uid: microsoft.quantum.canon.forany
-  summary: |-
-    The `ForAny` function takes an array and a predicate that is defined
-    for the elements of the array, and checks if at least one element of
-    the array satisfies the predicate.
-- uid: microsoft.quantum.canon.fst
-  summary: Given a pair, returns its first element.
-- uid: microsoft.quantum.canon.gcd
-  summary: Computes the greatest common divisor of a and b. The GCD is always positive.
-- uid: microsoft.quantum.canon.head
-  summary: Returns the first element of the array.
-- uid: microsoft.quantum.canon.ignore
-  summary: Ignores the output of an operation or function.
-- uid: microsoft.quantum.canon.intabs
-  summary: Returns the absolute value of an integer.
-- uid: microsoft.quantum.canon.intarrayfromrange
-  summary: ''
-- uid: microsoft.quantum.canon.intasboolarray
-  summary: |-
-    Produces a binary representation of a positive integer, using the
-    little-endian representation for the returned array.
-- uid: microsoft.quantum.canon.intmax
-  summary: Returns the maximum of two integers.
-- uid: microsoft.quantum.canon.inversemod
-  summary: Returns b such that `a`⋅b = 1 (mod `modulus`)
-- uid: microsoft.quantum.canon.iscoprime
-  summary: Returns  true if a and b are co-prime and false otherwise.
-- uid: microsoft.quantum.canon.isresultone
-  summary: Tests if a given Result value is equal to `One`.
-- uid: microsoft.quantum.canon.isresultzero
-  summary: Tests if a given Result value is equal to `Zero`.
-- uid: microsoft.quantum.canon.lg
-  summary: Computes the base-2 logarithm of a number.
-- uid: microsoft.quantum.canon.logof2
-  summary: Returns the natural logarithm of 2.
-- uid: microsoft.quantum.canon.lookupfunction
-  summary: |-
-    Given an array, returns a function which returns elements of that
-    array.
-- uid: microsoft.quantum.canon.map
-  summary: |-
-    The `Map` function takes an array and a function that is defined
-    for the elements of the array, and returns a new array that consists
-    of the images of the original array under the function.
-- uid: microsoft.quantum.canon.mapindex
-  summary: |-
-    The `MapIndex` function takes an array and a function that is defined
-    for the indexed elements of the array, and returns a new array that consists
-    of the images of the original array under the function.
-- uid: microsoft.quantum.canon.max
-  summary: Given an array of integers, returns the largest element.
-- uid: microsoft.quantum.canon.min
-  summary: Given an array of integers, returns the smallest element.
-- uid: microsoft.quantum.canon.modulus
-  summary: Computes the canonical residue of `value` modulo `modulus`.
-- uid: microsoft.quantum.canon.most
-  summary: |-
-    Creates an array that is equal to an input array except that the last array
-    element is dropped.
-- uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
-  summary: |-
-    Returns a multiply-controlled unitary operation $U$ that applies a
-    unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
-
-    $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
-- uid: microsoft.quantum.canon.multiplexerfromgenerator
-  summary: |-
-    Returns a multiply-controlled unitary operation $U$ that applies a
-    unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
-
-    $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
-- uid: microsoft.quantum.canon.operationpow
-  summary: |-
-    Raises an operation to a power.
-
-    That is, given an operation representing a gate $U$, returns a new operation
-    $U^m$ for a power $m$.
-- uid: microsoft.quantum.canon.operationpowa
-  summary: |-
-    Raises an operation to a power.
-    The modifier `A` indicates that the operation is adjointable.
-
-    That is, given an operation representing a gate $U$, returns a new operation
-    $U^m$ for a power $m$.
-- uid: microsoft.quantum.canon.operationpowc
-  summary: |-
-    Raises an operation to a power.
-    The modifier `C` indicates that the operation is controllable.
-
-    That is, given an operation representing a gate $U$, returns a new operation
-    $U^m$ for a power $m$.
-- uid: microsoft.quantum.canon.operationpowca
-  summary: |-
-    Raises an operation to a power.
-    The modifier `A` indicates that the operation is controllable and adjointable.
-
-    That is, given an operation representing a gate $U$, returns a new operation
-    $U^m$ for a power $m$.
-- uid: microsoft.quantum.canon.pad
-  summary: |-
-    Returns an array padded at with specified values up to a
-    specified length.
-- uid: microsoft.quantum.canon.paulifrombitstring
-  summary: ''
-- uid: microsoft.quantum.canon.pnorm
-  summary: |-
-    Returns the `L(p)` norm of a vector of `Double`s.
-
-    That is, given an array $x$ of type `Double[]`, this returns the $p$-norm
-    $\|x\|\_p= (\sum_{j}|x_j|^{p})^{1/p}$.
-- uid: microsoft.quantum.canon.pnormalize
-  summary: |-
-    Normalizes a vector of `Double`s in the `L(p)` norm.
-
-    That is, given an array $x$ of type `Double[]`, this returns an array where
-    all elements are divided by the $p$-norm $\|x\|_p$.
-- uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: ''
-- uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: ''
-- uid: microsoft.quantum.canon.rangeasintarray
-  summary: Creates an array `arr` of integers enumerated by start..step..end.
-- uid: microsoft.quantum.canon.realmod
-  summary: Computes the modulus between two real numbers.
-- uid: microsoft.quantum.canon.renamed
-  summary: |-
-    When called from a deprecated function or operation, logs a message
-    warning about the deprecation and informing the user of the new name.
-- uid: microsoft.quantum.canon.rest
-  summary: |-
-    Creates an array that is equal to an input array except that the first array
-    element is dropped.
-- uid: microsoft.quantum.canon.restricttosubregister
-  summary: Restricts an operation to an array of indices of a register, i.e., a subregister.
-- uid: microsoft.quantum.canon.restricttosubregistera
-  summary: |-
-    Restricts an operation to an array of indices of a register, i.e., a subregister.
-    The modifier `A` indicates that the operation is adjointable.
-- uid: microsoft.quantum.canon.restricttosubregisterc
-  summary: |-
-    Restricts an operation to an array of indices of a register, i.e., a subregister.
-    The modifier `C` indicates that the operation is controllable.
-- uid: microsoft.quantum.canon.restricttosubregisterca
-  summary: |-
-    Restricts an operation to an array of indices of a register, i.e., a subregister.
-    The modifier `CA` indicates that the operation is controllable and adjointable.
-- uid: microsoft.quantum.canon.resultarrayasboolarray
-  summary: |-
-    Converts a `Result[]` type to a `Bool[]` type, where `One` is mapped to
-    `true` and `Zero` is mapped to `false`.
-- uid: microsoft.quantum.canon.resultarrayasint
-  summary: Produces a positive integer from a string of Results in little endian format.
-- uid: microsoft.quantum.canon.resultarrfromboolarr
-  summary: ''
-- uid: microsoft.quantum.canon.resultasbool
-  summary: |-
-    Converts a `Result` type to a `Bool` type, where `One` is mapped to
-    `true` and `Zero` is mapped to `false`.
-- uid: microsoft.quantum.canon.resultasint
-  summary: ''
-- uid: microsoft.quantum.canon.resultfrombool
-  summary: ''
-- uid: microsoft.quantum.canon.reverse
-  summary: ''
-- uid: microsoft.quantum.canon.reversed
-  summary: |-
-    Create an array that contains the same elements as an input array but in reverse
-    order.
-- uid: microsoft.quantum.canon.snd
-  summary: Given a pair, returns its second element.
-- uid: microsoft.quantum.canon.splitarray
-  summary: Splits an array into multiple parts.
-- uid: microsoft.quantum.canon.stackcapacity
-  summary: Retrieves the capacity of a <xref:microsoft.quantum.canon.resultstack>.
-- uid: microsoft.quantum.canon.stacklength
-  summary: |-
-    Retrieves the number of elements stored in a
-    <xref:microsoft.quantum.canon.resultstack>.
-- uid: microsoft.quantum.canon.stacknew
-  summary: Creates a new empty <xref:microsoft.quantum.canon.resultstack> with given capacity.
-- uid: microsoft.quantum.canon.stackpeek
-  summary: Retrieves the topmost element of a <xref:microsoft.quantum.canon.resultstack>.
-- uid: microsoft.quantum.canon.stackpop
-  summary: Removes the topmost element from a <xref:microsoft.quantum.canon.resultstack>.
-- uid: microsoft.quantum.canon.stackpush
-  summary: Pushes a new element onto a <xref:microsoft.quantum.canon.resultstack>.
-- uid: microsoft.quantum.canon.subarray
-  summary: |-
-    Takes an array and a list of locations and
-    produces a new array formed from the elements of the original
-    array that match the given locations.
-- uid: microsoft.quantum.canon.tail
-  summary: Returns the last element of the array.
-- uid: microsoft.quantum.canon.tooperation
-  summary: Converts functions to operations.
-- uid: microsoft.quantum.canon.transformedoperation
-  summary: |-
-    Given a function and an operation, returns a new operation whose
-    input is transformed by the given function.
-- uid: microsoft.quantum.canon.transformedoperationa
-  summary: |-
-    Given a function and an operation, returns a new operation whose
-    input is transformed by the given function.
-- uid: microsoft.quantum.canon.transformedoperationc
-  summary: |-
-    Given a function and an operation, returns a new operation whose
-    input is transformed by the given function.
-- uid: microsoft.quantum.canon.transformedoperationca
-  summary: |-
-    Given a function and an operation, returns a new operation whose
-    input is transformed by the given function.
-- uid: microsoft.quantum.canon.uncurryop
-  summary: |-
-    Given a function which returns operations,
-    returns a new operation which takes both inputs
-    as a tuple.
-- uid: microsoft.quantum.canon.uncurryopa
-  summary: |-
-    Given a function which returns operations,
-    returns a new operation which takes both inputs
-    as a tuple.
-    The modifier `A` indicates that the operations are adjointable.
-- uid: microsoft.quantum.canon.uncurryopc
-  summary: |-
-    Given a function which returns operations,
-    returns a new operation which takes both inputs
-    as a tuple.
-    The modifier `C` indicates that the operations are controllable.
-- uid: microsoft.quantum.canon.uncurryopca
-  summary: |-
-    Given a function which returns operations,
-    returns a new operation which takes both inputs
-    as a tuple.
-    The modifier `CA` indicates that the operations are controllable and adjointable.
-- uid: microsoft.quantum.canon.weightonepaulis
-  summary: |-
-    Returns an array of all weight-1 Pauli operators
-    on a given number of qubits.
-- uid: microsoft.quantum.canon.xor
-  summary: This computes the exclusive-OR of two bits.
-- uid: microsoft.quantum.canon.zip
-  summary: |-
-    Given two arrays, returns a new array of pairs such that each pair
-    contains an element from each original array.
-- uid: microsoft.quantum.canon.zip3
-  summary: |-
-    Given three arrays, returns a new array of 3-tuples such that each 3-tuple
-    contains an element from each original array.
-- uid: microsoft.quantum.canon.zip4
-  summary: |-
-    Given four arrays, returns a new array of 4-tuples such that each 4-tuple
-    contains an element from each original array.
 operations:
 - uid: microsoft.quantum.canon.andladder
   summary: |-
@@ -673,8 +219,6 @@ operations:
     that may be expressed as
     $\frac{e^{i t}}{\sqrt{2}}(e^{i\phi}\ket{0} + e^{-i\phi}\ket{1})$
     for some arbitrary real t has the expected value.
-- uid: microsoft.quantum.canon.call
-  summary: Calls a function with a given input.
 - uid: microsoft.quantum.canon.cnotchain
   summary: |-
     Computes the parity of an array of qubits in-place.
@@ -689,10 +233,6 @@ operations:
     $\ket{q_0} \ket{q_1} \cdots \ket{q_{\text{target}}}$,
     the final state is given by
     $\ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n - 1} \oplus \cdots \oplus q_0 \oplus q_{\text{target}}}$.
-- uid: microsoft.quantum.canon.continuousphaseestimationiteration
-  summary: |-
-    Performs a single iteration of an iterative (classically-controlled) phase
-    estimation algorithm using arbitrary real powers of a unitary oracle.
 - uid: microsoft.quantum.canon.cx
   summary: |-
     Applies the controlled-X (CX) gate to a pair of qubits.
@@ -732,15 +272,6 @@ operations:
     \end{align},
     $$
     where rows and columns are organized as in the quantum concepts guide.
-- uid: microsoft.quantum.canon.discretephaseestimationiteration
-  summary: |-
-    Performs a single iteration of an iterative (classically-controlled) phase
-    estimation algorithm using integer powers of a unitary oracle.
-- uid: microsoft.quantum.canon.estimatefrequency
-  summary: |-
-    Given a preparation and measurement, estimates the frequency
-    with which that measurement succeeds (returns `Zero`) by
-    performing a given number of trials.
 - uid: microsoft.quantum.canon.hy
   summary: |-
     Applies the Y-basis analog to the Hadamard transformation
@@ -766,16 +297,6 @@ operations:
     Iterates a variable, say `arr`, through a Cartesian product
     [ 0, bounds[0]-1 ] × [ 0, bounds[1]-1 ] × [ 0, bounds[Length(bounds)-1]-1 ]
     and calls op(arr) for every element of the Cartesian product
-- uid: microsoft.quantum.canon.measureallz
-  summary: |-
-    Jointly measures a register of qubits in the Pauli Z basis.
-
-    In other words, measures the operation $Z \otimes Z \otimes \cdots \otimes Z$ on
-    a given register.
-- uid: microsoft.quantum.canon.measureidentity
-  summary: |-
-    Measures the identity operator on a register
-    of qubits.
 - uid: microsoft.quantum.canon.measurepaulis
   summary: |-
     Given an array of multi-qubit Pauli operators, measures each using a specified measurement
@@ -841,61 +362,6 @@ operations:
     $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes e^{i Z \theta_j}$.
 - uid: microsoft.quantum.canon.noop
   summary: Performs the identity operation (no-op) on an argument.
-- uid: microsoft.quantum.canon.preparechoistate
-  summary: |-
-    Prepares the Choi–Jamiłkowski state for a given operation onto given reference
-    and target registers.
-- uid: microsoft.quantum.canon.preparechoistatea
-  summary: |-
-    Prepares the Choi–Jamiłkowski state for a given operation with an adjoint variant onto given reference
-    and target registers.
-- uid: microsoft.quantum.canon.preparechoistatec
-  summary: |-
-    Prepares the Choi–Jamiłkowski state for a given operation with a controlled variant onto given reference
-    and target registers.
-- uid: microsoft.quantum.canon.preparechoistateca
-  summary: |-
-    Prepares the Choi–Jamiłkowski state for a given operation with both controlled and adjoint variants onto given reference
-    and target registers.
-- uid: microsoft.quantum.canon.prepareentangledstate
-  summary: |-
-    Pairwise entangles two qubit registers.
-
-    That is, given two registers, prepares the maximally entangled state
-    $\bra{\beta_{00}}\ket{\beta_{00}}$ between each pair of qubits on the respective registers,
-    assuming that each register starts in the $\ket{0\cdots 0}$ state.
-- uid: microsoft.quantum.canon.prepareidentity
-  summary: |-
-    Given a register, prepares that register in the maximally mixed state.
-
-    The register is prepared in the $\boldone / 2^N$ state by applying the
-    complete depolarizing
-    channel to each qubit, where $N$ is the length of the register.
-- uid: microsoft.quantum.canon.preparequbit
-  summary: |-
-    Prepares a qubit in the +1 (`Zero`) eigenstate of the given Pauli operator.
-    If the identity operator is given, then the qubit is prepared in the maximally
-    mixed state.
-
-    If the qubit was initially in the $\ket{0}$ state, this operation prepares the
-    qubit in the $+1$ eigenstate of a given Pauli operator, or, for `PauliI`,
-    in the maximally mixed state instead (see <xref:microsoft.quantum.canon.preparesinglequbitidentity>).
-
-    If the qubit was in a state other than $\ket{0}$, this operation applies the following gates:
-    $H$ for `PauliX`, $HS$ for `PauliY`, $I$ for `PauliZ` and
-    <xref:microsoft.quantum.canon.preparesinglequbitidentity> for `PauliI`.
-- uid: microsoft.quantum.canon.preparesinglequbitidentity
-  summary: |-
-    Prepares a qubit in the maximally mixed state.
-
-    It prepares the given qubit in the $\boldone / 2$ state by applying the depolarizing channel
-    $$
-    \begin{align}
-    \Omega(\rho) \mathrel{:=} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu}^{\dagger},
-    \end{align}
-    $$
-    where $\sigma\_i$ is the $i$th Pauli operator, and where
-    $\rho$ is a density operator representing a mixed state.
 - uid: microsoft.quantum.canon.qft
   summary: |-
     Performs the Quantum Fourier Transform on a quantum register containing an
@@ -904,10 +370,6 @@ operations:
   summary: |-
     Performs the Quantum Fourier Transform on a quantum register containing an
     integer in the little-endian representation.
-- uid: microsoft.quantum.canon.quantumphaseestimation
-  summary: |-
-    Performs the quantum phase estimation algorithm for a given oracle `U` and `targetState`,
-    reading the phase into a big-endian quantum register.
 - uid: microsoft.quantum.canon.rall0
   summary: |-
     Performs a phase shift operation.
@@ -918,30 +380,10 @@ operations:
     Performs a phase shift operation.
 
     $R=\boldone-(1-e^{i \phi})\ket{1\cdots 1}\bra{1\cdots 1}$.
-- uid: microsoft.quantum.canon.randomint
-  summary: |-
-    Generates a uniformly sampled random integer greater than or equal to zero
-    and less than a provided upper bound.
-- uid: microsoft.quantum.canon.randomintpow2
-  summary: |-
-    Generates a random integer uniformly sampled from all integers that can be represented
-    in a given number of bits.
-- uid: microsoft.quantum.canon.randomreal
-  summary: |-
-    Returns a random real number in the interval greater than or equal to zero
-    and less than one.
 - uid: microsoft.quantum.canon.randomsinglequbitpauli
   summary: |-
     Returns one of the single-qubit Pauli operators uniformly
     at random.
-- uid: microsoft.quantum.canon.robustphaseestimation
-  summary: |-
-    Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate,
-    and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
-- uid: microsoft.quantum.canon.singlequbitprocesstomographymeasurement
-  summary: |-
-    Performs a single-qubit process tomography measurement in the Pauli
-    basis, given a particular channel of interest.
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: |-
     Uses SWAP gates to reverse the order of the qubits in
@@ -954,19 +396,345 @@ operations:
   summary: ''
 - uid: microsoft.quantum.canon.withca
   summary: ''
+functions:
+- uid: microsoft.quantum.canon.asqubitarray
+  summary: ''
+- uid: microsoft.quantum.canon.assertalmostequal
+  summary: |-
+    Asserts that a classical floating point variable has the expected value up to a
+    small tolerance of 1e-10.
+- uid: microsoft.quantum.canon.assertalmostequaltol
+  summary: |-
+    Asserts that a classical floating point variable has the expected value up to a given
+    absolute tolerance.
+- uid: microsoft.quantum.canon.assertboolarrayequal
+  summary: Asserts that two arrays of boolean values are equal.
+- uid: microsoft.quantum.canon.assertboolequal
+  summary: Asserts that a classical Bool variable has the expected value.
+- uid: microsoft.quantum.canon.assertintequal
+  summary: Asserts that a classical Int variable has the expected value.
+- uid: microsoft.quantum.canon.assertresultequal
+  summary: Asserts that a classical Result variable has the expected value.
+- uid: microsoft.quantum.canon.bind
+  summary: |-
+    Given an array of operations acting on a single input,
+    produces a new operation that
+    performs each given operation in sequence.
+- uid: microsoft.quantum.canon.binda
+  summary: |-
+    Given an array of operations acting on a single input,
+    produces a new operation that
+    performs each given operation in sequence.
+    The modifier `A` indicates that all operations in the array are adjointable.
+- uid: microsoft.quantum.canon.bindc
+  summary: |-
+    Given an array of operations acting on a single input,
+    produces a new operation that
+    performs each given operation in sequence.
+    The modifier `C` indicates that all operations in the array are controllable.
+- uid: microsoft.quantum.canon.bindca
+  summary: |-
+    Given an array of operations acting on a single input,
+    produces a new operation that
+    performs each given operation in sequence.
+    The modifier `CA` indicates that all operations in the array are adjointable
+    and controllable.
+- uid: microsoft.quantum.canon.boolarrfrompositiveint
+  summary: ''
+- uid: microsoft.quantum.canon.boolarrfromresultarr
+  summary: ''
+- uid: microsoft.quantum.canon.boolfromresult
+  summary: ''
+- uid: microsoft.quantum.canon.ccontrolled
+  summary: |-
+    Given an operation op, returns a new operation which
+    applies the op if a classical control bit is true. If false, nothing happens.
+- uid: microsoft.quantum.canon.ccontrolleda
+  summary: |-
+    Given an operation op, returns a new operation which
+    applies the op if a classical control bit is true. If false, nothing happens.
+    The modifier `A` indicates that the operation is adjointable.
+- uid: microsoft.quantum.canon.ccontrolledc
+  summary: |-
+    Given an operation op, returns a new operation which
+    applies the op if a classical control bit is true. If false, nothing happens.
+    The modifier `C` indicates that the operation is controllable.
+- uid: microsoft.quantum.canon.ccontrolledca
+  summary: |-
+    Given an operation op, returns a new operation which
+    applies the op if a classical control bit is true. If false, nothing happens.
+    The modifier `CA` indicates that the operation is controllable and adjointable.
+- uid: microsoft.quantum.canon.compose
+  summary: |-
+    Generates the composition of two functions.
+
+    That is, given two functions $f$ and $g$, returns a new function representing
+    $f \circ g$.
+- uid: microsoft.quantum.canon.conjugatedby
+  summary: |-
+    Given outer and inner operations, returns a new operation that
+    conjugates the inner operation by the outer operation.
+- uid: microsoft.quantum.canon.conjugatedbya
+  summary: |-
+    Given outer and inner operations, returns a new operation that
+    conjugates the inner operation by the outer operation.
+- uid: microsoft.quantum.canon.conjugatedbyc
+  summary: |-
+    Given outer and inner operations, returns a new operation that
+    conjugates the inner operation by the outer operation.
+- uid: microsoft.quantum.canon.conjugatedbyca
+  summary: |-
+    Given outer and inner operations, returns a new operation that
+    conjugates the inner operation by the outer operation.
+- uid: microsoft.quantum.canon.constantarray
+  summary: Creates an array of given length with all elements equal to given value.
+- uid: microsoft.quantum.canon.controlledonbitstring
+  summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
+- uid: microsoft.quantum.canon.controlledonint
+  summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified positive integer.
+- uid: microsoft.quantum.canon.curryop
+  summary: |-
+    Returns a curried version of an operation on two inputs.
+
+    That is, given an operation with two inputs, this function applies Curry's isomorphism
+    $f(x, y) \equiv f(x)(y)$ to return an operation of one input which
+    returns an operation of one input.
+- uid: microsoft.quantum.canon.decomposeintotimestepsca
+  summary: |-
+    Returns an operation implementing the Trotter–Suzuki integrator for
+    a given operation.
+- uid: microsoft.quantum.canon.embedpauli
+  summary: |-
+    Given a single-qubit Pauli operator and the index of a qubit,
+    returns a multi-qubit Pauli operator with the given single-qubit
+    operator at that index and `PauliI` at every other index.
+- uid: microsoft.quantum.canon.exclude
+  summary: |-
+    Returns an array containing the elements of another array,
+    excluding elements at a given list of indices.
+- uid: microsoft.quantum.canon.filter
+  summary: |-
+    The `Filter` function takes an array and a predicate that is defined
+    for the elements of the array, and returns an array that consists of
+    those elements that satisfy the predicate.
+- uid: microsoft.quantum.canon.fold
+  summary: |-
+    Iterates a function `f` through an array `array`, returning
+    `f(f(f(initialState, array[0]), array[1]), ...)`.
+- uid: microsoft.quantum.canon.forall
+  summary: |-
+    The `ForAll` function takes an array and a predicate that is defined
+    for the elements of the array, and checks if all elements of the
+    array satisfy the predicate.
+- uid: microsoft.quantum.canon.forany
+  summary: |-
+    The `ForAny` function takes an array and a predicate that is defined
+    for the elements of the array, and checks if at least one element of
+    the array satisfies the predicate.
+- uid: microsoft.quantum.canon.fst
+  summary: Given a pair, returns its first element.
+- uid: microsoft.quantum.canon.head
+  summary: Returns the first element of the array.
+- uid: microsoft.quantum.canon.ignore
+  summary: Ignores the output of an operation or function.
+- uid: microsoft.quantum.canon.intabs
+  summary: ''
+- uid: microsoft.quantum.canon.intarrayfromrange
+  summary: ''
+- uid: microsoft.quantum.canon.intmax
+  summary: ''
+- uid: microsoft.quantum.canon.isresultone
+  summary: Tests if a given Result value is equal to `One`.
+- uid: microsoft.quantum.canon.isresultzero
+  summary: Tests if a given Result value is equal to `Zero`.
+- uid: microsoft.quantum.canon.lookupfunction
+  summary: |-
+    Given an array, returns a function which returns elements of that
+    array.
+- uid: microsoft.quantum.canon.map
+  summary: |-
+    The `Map` function takes an array and a function that is defined
+    for the elements of the array, and returns a new array that consists
+    of the images of the original array under the function.
+- uid: microsoft.quantum.canon.mapindex
+  summary: |-
+    The `MapIndex` function takes an array and a function that is defined
+    for the indexed elements of the array, and returns a new array that consists
+    of the images of the original array under the function.
+- uid: microsoft.quantum.canon.most
+  summary: |-
+    Creates an array that is equal to an input array except that the last array
+    element is dropped.
+- uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
+  summary: |-
+    Returns a multiply-controlled unitary operation $U$ that applies a
+    unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
+
+    $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
+- uid: microsoft.quantum.canon.multiplexerfromgenerator
+  summary: |-
+    Returns a multiply-controlled unitary operation $U$ that applies a
+    unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
+
+    $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
+- uid: microsoft.quantum.canon.operationpow
+  summary: |-
+    Raises an operation to a power.
+
+    That is, given an operation representing a gate $U$, returns a new operation
+    $U^m$ for a power $m$.
+- uid: microsoft.quantum.canon.operationpowa
+  summary: |-
+    Raises an operation to a power.
+    The modifier `A` indicates that the operation is adjointable.
+
+    That is, given an operation representing a gate $U$, returns a new operation
+    $U^m$ for a power $m$.
+- uid: microsoft.quantum.canon.operationpowc
+  summary: |-
+    Raises an operation to a power.
+    The modifier `C` indicates that the operation is controllable.
+
+    That is, given an operation representing a gate $U$, returns a new operation
+    $U^m$ for a power $m$.
+- uid: microsoft.quantum.canon.operationpowca
+  summary: |-
+    Raises an operation to a power.
+    The modifier `A` indicates that the operation is controllable and adjointable.
+
+    That is, given an operation representing a gate $U$, returns a new operation
+    $U^m$ for a power $m$.
+- uid: microsoft.quantum.canon.pad
+  summary: |-
+    Returns an array padded at with specified values up to a
+    specified length.
+- uid: microsoft.quantum.canon.paulifrombitstring
+  summary: ''
+- uid: microsoft.quantum.canon.pnormalize
+  summary: ''
+- uid: microsoft.quantum.canon.positiveintfromboolarr
+  summary: ''
+- uid: microsoft.quantum.canon.positiveintfromresultarr
+  summary: ''
+- uid: microsoft.quantum.canon.renamed
+  summary: |-
+    When called from a deprecated function or operation, logs a message
+    warning about the deprecation and informing the user of the new name.
+- uid: microsoft.quantum.canon.rest
+  summary: |-
+    Creates an array that is equal to an input array except that the first array
+    element is dropped.
+- uid: microsoft.quantum.canon.restricttosubregister
+  summary: Restricts an operation to an array of indices of a register, i.e., a subregister.
+- uid: microsoft.quantum.canon.restricttosubregistera
+  summary: |-
+    Restricts an operation to an array of indices of a register, i.e., a subregister.
+    The modifier `A` indicates that the operation is adjointable.
+- uid: microsoft.quantum.canon.restricttosubregisterc
+  summary: |-
+    Restricts an operation to an array of indices of a register, i.e., a subregister.
+    The modifier `C` indicates that the operation is controllable.
+- uid: microsoft.quantum.canon.restricttosubregisterca
+  summary: |-
+    Restricts an operation to an array of indices of a register, i.e., a subregister.
+    The modifier `CA` indicates that the operation is controllable and adjointable.
+- uid: microsoft.quantum.canon.resultarrfromboolarr
+  summary: ''
+- uid: microsoft.quantum.canon.resultasint
+  summary: ''
+- uid: microsoft.quantum.canon.resultfrombool
+  summary: ''
+- uid: microsoft.quantum.canon.reverse
+  summary: ''
+- uid: microsoft.quantum.canon.reversed
+  summary: |-
+    Create an array that contains the same elements as an input array but in reverse
+    order.
+- uid: microsoft.quantum.canon.snd
+  summary: Given a pair, returns its second element.
+- uid: microsoft.quantum.canon.splitarray
+  summary: Splits an array into multiple parts.
+- uid: microsoft.quantum.canon.stackcapacity
+  summary: Retrieves the capacity of a <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.stacklength
+  summary: |-
+    Retrieves the number of elements stored in a
+    <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.stacknew
+  summary: Creates a new empty <xref:microsoft.quantum.canon.resultstack> with given capacity.
+- uid: microsoft.quantum.canon.stackpeek
+  summary: Retrieves the topmost element of a <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.stackpop
+  summary: Removes the topmost element from a <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.stackpush
+  summary: Pushes a new element onto a <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.subarray
+  summary: |-
+    Takes an array and a list of locations and
+    produces a new array formed from the elements of the original
+    array that match the given locations.
+- uid: microsoft.quantum.canon.tail
+  summary: Returns the last element of the array.
+- uid: microsoft.quantum.canon.transformedoperation
+  summary: |-
+    Given a function and an operation, returns a new operation whose
+    input is transformed by the given function.
+- uid: microsoft.quantum.canon.transformedoperationa
+  summary: |-
+    Given a function and an operation, returns a new operation whose
+    input is transformed by the given function.
+- uid: microsoft.quantum.canon.transformedoperationc
+  summary: |-
+    Given a function and an operation, returns a new operation whose
+    input is transformed by the given function.
+- uid: microsoft.quantum.canon.transformedoperationca
+  summary: |-
+    Given a function and an operation, returns a new operation whose
+    input is transformed by the given function.
+- uid: microsoft.quantum.canon.uncurryop
+  summary: |-
+    Given a function which returns operations,
+    returns a new operation which takes both inputs
+    as a tuple.
+- uid: microsoft.quantum.canon.uncurryopa
+  summary: |-
+    Given a function which returns operations,
+    returns a new operation which takes both inputs
+    as a tuple.
+    The modifier `A` indicates that the operations are adjointable.
+- uid: microsoft.quantum.canon.uncurryopc
+  summary: |-
+    Given a function which returns operations,
+    returns a new operation which takes both inputs
+    as a tuple.
+    The modifier `C` indicates that the operations are controllable.
+- uid: microsoft.quantum.canon.uncurryopca
+  summary: |-
+    Given a function which returns operations,
+    returns a new operation which takes both inputs
+    as a tuple.
+    The modifier `CA` indicates that the operations are controllable and adjointable.
+- uid: microsoft.quantum.canon.weightonepaulis
+  summary: |-
+    Returns an array of all weight-1 Pauli operators
+    on a given number of qubits.
+- uid: microsoft.quantum.canon.xor
+  summary: This computes the exclusive-OR of two bits.
+- uid: microsoft.quantum.canon.zip
+  summary: |-
+    Given two arrays, returns a new array of pairs such that each pair
+    contains an element from each original array.
+- uid: microsoft.quantum.canon.zip3
+  summary: |-
+    Given three arrays, returns a new array of 3-tuples such that each 3-tuple
+    contains an element from each original array.
+- uid: microsoft.quantum.canon.zip4
+  summary: |-
+    Given four arrays, returns a new array of 4-tuples such that each 4-tuple
+    contains an element from each original array.
 newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: The signature type of CCNOT gate.
-- uid: microsoft.quantum.canon.complexpolar
-  summary: |-
-    Represents a complex number in polar form.
-
-    The polar representation of a complex number is $c=r e^{i t}$.
-- uid: microsoft.quantum.canon.fraction
-  summary: |-
-    Represents a rational number of the form `p/q`. Integer `p` is
-    the first element of the tuple and `q` is the second element
-    of the tuple.
 - uid: microsoft.quantum.canon.resultstack
   summary: |-
     A last-in-first-out stack of `Result` variables.

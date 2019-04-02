@@ -1,8 +1,8 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.tooperation
+uid: microsoft.quantum.convert.tooperation
 name: ToOperation
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: Microsoft.Quantum.Convert
 summary: |-
   Converts functions to operations.
 

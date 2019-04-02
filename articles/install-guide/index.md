@@ -74,7 +74,7 @@ Q# is tightly integrated into Visual Studio, providing a rich developing experie
 
 > [!IMPORTANT]
 > The Microsoft Quantum Development Kit does not support Visual Studio for Mac.
-> To install on macOS, please use the instructions for [the command line](#tab/tabid-vs).
+> To install on macOS, please use the instructions for [the command line](#tab/tabid-cmdline).
 >
 > The Quantum Development Kit requires **.NET Core**. Please make sure the
 > **.NET Core cross-platform development** workload is installed as part of Visual Studio.

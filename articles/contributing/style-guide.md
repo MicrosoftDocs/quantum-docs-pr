@@ -34,7 +34,7 @@ In this section, we detail how we meet this obligation in terms of explicit guid
 
 The first thing that a name should establish is whether a given symbol represents a function or an operation.
 The difference between functions and operations is critical to understanding how a block of code behaves.
-To communicate this distinction to programmers, we refer back to that in Q#, quantum computation proceeds through the effects of operations.
+To communicate the distinction between functions and operations to users, we rely on that Q# models quantum operations through the use of side effects.
 That is, an operation *does* something.
 
 By contrast, functions describe the mathematical relationships between data.

@@ -9,12 +9,14 @@ uid: microsoft.quantum.install
 
 # Getting Started with the Microsoft Quantum Development Kit #
 
-A great way to get started with the Quantum Development Kit is via some of the Jupyter notebooks available in our [GitHub Quantum repository](https://github.com/Microsoft/Quantum.git).  In particular:
+A great way to get started with the Quantum Development Kit is via some of the Jupyter notebooks from our GitHub Quantum repository available through [binder](https://mybinder.org).  In particular:
 
-* **[Q# Notebooks](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IntroToIQSharp/Notebook.ipynb)**: explains how to compile and simulate Q# operations inside a Jupyter notebook.
-* **[Teleport](https://github.com/Microsoft/Quantum/tree/master/Samples/src/Teleportation/Notebook.ipynb)**: shows how to implement the teleport algorithm using Q#.
+* **[Q# Notebooks](https://mybinder.org/v2/gh/Microsoft/Quantum/anpaz/binder?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb)**: explains how to compile and simulate Q# operations inside a Jupyter notebook.
+* **[Teleport](https://mybinder.org/v2/gh/Microsoft/Quantum/anpaz/binder?filepath=Samples%2Fsrc%2FTeleportation%2FNotebook.ipynb)**: shows how to implement the teleport algorithm using Q#.
 
-To run these interactively, install IQ# on your machine (see below) and take a look at our [Jupyter notebooks getting started guide](xref:microsoft.quantum.install.jupyter).
+Running these notebooks from binder will not allow you to save any changes. 
+To run the notebooks from your computer and save any changes, or to integrate Q# with other classical languages like C# or Python, 
+you will first need to install it either via the command line or Visual Studio.
 
 
 ## Installation ##
@@ -37,7 +39,7 @@ Installing IQ# on your machine typically takes less than 10 minutes; just follow
 To verify IQ# was correctly installed, from the command line type: `dotnet iqsharp --version`. You should see the IQ# version reported on the output, for example:
 ```Sample
 C:\>dotnet iqsharp --version
-Language kernel: 0.5.1903.2501
+Language kernel: 0.5.1903.2902
 Jupyter core: 1.1.12077.0
 ```
 
@@ -66,7 +68,7 @@ To install the extensions, follow the corresponding instructions at:
 
 #### [Visual Studio](#tab/tabid-vs)
 
-Q# is tightly integrated into Visual Studio, providing a rich developing experience with features like syntax highlighting and debugging. If you already have Visual Studio 2017 on your computer (version 15.8 or later), follow these steps to enable the Quantum Development Kit integration:
+Q# is tightly integrated into Visual Studio, providing a rich developing experience with features like syntax highlighting and debugging. If you already have Visual Studio on your computer (version 15.8 or later), follow these steps to enable the Quantum Development Kit integration:
 1. Download the [Microsoft Quantum Development Kit for Visual Studio](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension from the Visual Studio Marketplace.
 2. Once downloaded, double-click the VSIX file to install the extension.
 
@@ -77,9 +79,8 @@ Q# is tightly integrated into Visual Studio, providing a rich developing experie
 > The Quantum Development Kit requires **.NET Core**. Please make sure the
 > **.NET Core cross-platform development** workload is installed as part of Visual Studio.
 
-If you do not have Visual Studio 2017 installed, you can download Visual Studio 2017 Community Edition for free.
-To do so, please see the [Install Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio) page.
-
+If you do not have Visual Studio installed, you can download the Visual Studio Community Edition for free.
+For more information, visit the [Install Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio) web site.
 
 Once the extension is installed, take a look at the [quickstart guide](xref:microsoft.quantum.write-program) for information on how to write Q# operations and how to invoke them from C#.
 

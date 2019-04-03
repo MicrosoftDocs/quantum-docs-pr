@@ -11,11 +11,12 @@ uid: microsoft.quantum.install
 
 A great way to get started with the Quantum Development Kit is via some of the Jupyter notebooks from our GitHub Quantum repository available through [binder](https://mybinder.org).  In particular:
 
-* **[Q# Notebooks](https://mybinder.org/v2/gh/Microsoft/Quantum/anpaz/binder?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb)**: explains how to compile and simulate Q# operations inside a Jupyter notebook.
-* **[Teleport](https://mybinder.org/v2/gh/Microsoft/Quantum/anpaz/binder?filepath=Samples%2Fsrc%2FTeleportation%2FNotebook.ipynb)**: shows how to implement the teleport algorithm using Q#.
+* **[Q# Notebooks](https://mybinder.org/v2/gh/Microsoft/Quantum/master?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb)**: explains how to compile and simulate Q# operations inside a Jupyter notebook.
+* **[Teleport](https://mybinder.org/v2/gh/Microsoft/Quantum/master?filepath=Samples%2Fsrc%2FTeleportation%2FNotebook.ipynb)**: shows how to implement the teleport algorithm using Q#.
 
 Running these notebooks from binder will not allow you to save any changes. 
-To run the notebooks from your computer and save any changes, or to integrate Q# with other classical languages like C# or Python, 
+To run the notebooks from your computer and save your changes, or to 
+integrate Q# with other classical languages like C# or Python, 
 you will first need to install it either via the command line or Visual Studio.
 
 

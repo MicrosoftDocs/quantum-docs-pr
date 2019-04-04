@@ -27,12 +27,12 @@ We suggest:
 
 In offering the Quantum Development Kit, we strive for function and operation names that help quantum developers write programs that are easy to read and that minimize surprise.
 An important part of that is that when we choose names for functions, operations, and types, we are establishing the *vocabulary* that programmers use to express quantum concepts; with our choices, we either help or hinder them in their effort to clearly communicate.
-This places a responsibility on us to make sure that the names we introduce lend themselves to clarity rather than obscurity.
+This places a responsibility on us to make sure that the names we introduce offer clarity rather than obscurity.
 In this section, we detail how we meet this obligation in terms of explicit guidance that helps us do the best by the Q# development community.
 
 ### Operations and Functions ###
 
-The first thing that a name should establish is whether a given symbol represents a function or an operation.
+One of the first things that a name should establish is whether a given symbol represents a function or an operation.
 The difference between functions and operations is critical to understanding how a block of code behaves.
 To communicate the distinction between functions and operations to users, we rely on that Q# models quantum operations through the use of side effects.
 That is, an operation *does* something.
@@ -96,7 +96,8 @@ We suggest:
 - Use verbs for operation names.
 - Use nouns or adjectives for function names.
 - Use nouns for user-defined types.
-- For all callable names, use `CamelCase` in strong preference to `pascalCase`, `snake_case`, or `ANGRY_CASE`.
+- For all callable names, use `CamelCase` in strong preference to `pascalCase`, `snake_case`, or `ANGRY_CASE`. In particular, ensure that callable names start with uppercase letters.
+- For all local variables, use `pascalCase` in strong preference to `CamelCase`, `snake_case`, or `ANGRY_CASE`. In particular, ensure that local variables start with lowercase letters.
 - Avoid the use of underscores `_` in function and operation names.
 
 # [Examples](#tab/examples)
@@ -118,7 +119,7 @@ We suggest:
 The above advice notwithstanding, there are many forms of shorthand that see common and pervasive use in quantum computing.
 We suggest using existing and common shorthand where it exists, especially for operations that are intrinsic to the operation of a target machine.
 For example, we choose the name `X` instead of `ApplyX`, and `Rz` instead of `RotateAboutZ`.
-When using such shorthand, operation names should be uppercase.
+When using such shorthand, operation names should be all uppercase (e.g.: `MAJ`).
 
 Some care is required when applying this convention in the case of commonly used acronyms and initialisms such as "QFT" for "quantum Fourier transform."
 We suggest following general .NET conventions for the use of acronyms and initialisms in full names, which prescribe that:

@@ -11,9 +11,9 @@ uid: microsoft.quantum.contributing.style
 # Q# Style Guide #
 ## General Conventions ##
 
-The conventions listed here are suggestions only, and should likely be disregarded when they would result in less readable or useful code.
+The conventions suggested in this guide are intended to help make programs and libraries written in Q# easier to read and understand.
 
-# [Guidance](#tab/guidance) 
+# [Guidance](#tab/guidance)
 
 We suggest:
 

@@ -79,16 +79,6 @@ For example,  `ControlledOnInt` uses the part participle form of the verb "contr
 This name has the additional benefit of matching the semantics of the built-in `Controlled` functor, as discussed further below.
 Similarly, _agent nouns_ can be used to construct function and UDT names from operation names, as in the case of the name `Encoder` for a UDT that is strongly associated with `Encode`.
 
-In common cases, we suggest using particular nouns and adjectives:
-
-| Noun/Adjective | Expected Result |
-|----|----|
-| Claim | Unit, but fails if a condition is not true. (Contrast with `Assert`, which should be used for operations.)
-| Controlled | An operation that is a controlled version of an input operation. |
-| Identity | A UDT or operation that represents identity / no-op on some data type. |
-| Operation | An operation that is computed from another operation in some way. Use when no more specific case applies. |
-
-
 # [Guidance](#tab/guidance)
 
 We suggest:
@@ -287,7 +277,7 @@ We suggest:
 - Input names should be descriptive; avoid one or two letter names where possible.
 - Operations and functions accepting exactly one type argument should denote that type argument by `T` when its role is obvious.
 - If a function or operation takes multiple type arguments, or if the role of a single type argument is not obvious, consider using a short capitalized word prefaced by `T` (e.g.: `TOutput`) for each type.
-- Do not include type names in argument and variable names unless absolutely necessary; this information can and should be provided by your development environment.
+- Do not include type names in argument and variable names; this information can and should be provided by your development environment.
 - Denote scalar types by their literal names (`flagQubit`), and array types by a plural (`measResults`).
   For arrays of qubits in particular, consider denoting such types by `Register` where the name refers to a sequence of qubits that are closely related in some way.
 - Variables used as indices into arrays should begin with `idx` and should be singular (e.g.: `things[idxThing]`).
@@ -424,6 +414,7 @@ operation Rx(theta : Double, qubit : Qubit) : Unit {
 In addition to the preceding suggestions, it is helpful to help make code as legible as possible to use consistent formatting rules.
 Such formatting rules by nature tend to be somewhat arbitrary and strongly up to personal aesthetics.
 Nonetheless, we recommend maintaining a consistent set of formatting conventions within a group of collaborators, and especially for large Q# projects such as the Quantum Development Kit itself.
+These rules can be automatically applied by using the formatting tool integrated with the Q# compiler.
 
 # [Guidance](#tab/guidance) 
 

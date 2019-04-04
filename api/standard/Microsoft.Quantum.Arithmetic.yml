@@ -40,14 +40,6 @@ operations:
   summary: |-
     Applies an operation that takes big-endian input to a register encoding
     an unsigned integer using little-endian format.
-- uid: microsoft.quantum.arithmetic.applyreversedopbigendian
-  summary: ''
-- uid: microsoft.quantum.arithmetic.applyreversedopbigendiana
-  summary: ''
-- uid: microsoft.quantum.arithmetic.applyreversedopbigendianc
-  summary: ''
-- uid: microsoft.quantum.arithmetic.applyreversedopbigendianca
-  summary: ''
 - uid: microsoft.quantum.arithmetic.applyreversedople
   summary: |-
     Applies an operation that takes little-endian input to a register encoding
@@ -64,48 +56,19 @@ operations:
   summary: |-
     Applies an operation that takes little-endian input to a register encoding
     an unsigned integer using big-endian format.
-- uid: microsoft.quantum.arithmetic.applyreversedoplittleendian
-  summary: ''
-- uid: microsoft.quantum.arithmetic.applyreversedoplittleendiana
-  summary: ''
-- uid: microsoft.quantum.arithmetic.applyreversedoplittleendianc
-  summary: ''
-- uid: microsoft.quantum.arithmetic.applyreversedoplittleendianca
-  summary: ''
-- uid: microsoft.quantum.arithmetic.applyripplecarrycomparatorbe
+- uid: microsoft.quantum.arithmetic.applyxorinplace
   summary: |-
-    This unitary tests if two integers `x` and `y` stored in equal-size qubit registers
-    satisfy `x > y`. If true, 1 is XORed into an output
-    qubit. Otherwise, 0 is XORed into an output qubit.
+    Applies `X` operations to qubits in a little-endian register based on 1 bits in an integer.
 
-    In other words, this unitary $U$  satisfies:
-    $$
-    \begin{align}
-    U\ket{x}\ket{y}\ket{z}=\ket{x}\ket{y}\ket{z\oplus (x>y)}.
-    \end{align}
-    $$.
-- uid: microsoft.quantum.arithmetic.applyripplecarrycomparatorle
-  summary: |-
-    This unitary tests if two integers `x` and `y` stored in equal-size qubit registers
-    satisfy `x > y`. If true, 1 is XORed into an output
-    qubit. Otherwise, 0 is XORed into an output qubit.
-
-    In other words, this unitary $U$  satisfies:
-    $$
-    \begin{align}
-    U\ket{x}\ket{y}\ket{z}=\ket{x}\ket{y}\ket{z\oplus (x>y)}.
-    \end{align}
-    $$.
-- uid: microsoft.quantum.arithmetic.asserthighestbit
-  summary: ''
+    Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
+    then `InPlaceXorLE` performs an operation given by the following map:
+    $\ket{y}\rightarrow \ket{y\oplus a}$ , where $\oplus$ is the bitwise exclusive OR operator.
 - uid: microsoft.quantum.arithmetic.assertlessthanphasele
   summary: Asserts that the `number` encoded in PhaseLittleEndian is less than `value`.
 - uid: microsoft.quantum.arithmetic.assertmostsignificantbitle
   summary: |-
     Asserts that the most significant qubit of a qubit register
     representing an unsigned integer is in a particular state.
-- uid: microsoft.quantum.arithmetic.assertprobint
-  summary: ''
 - uid: microsoft.quantum.arithmetic.assertprobintbe
   summary: |-
     Asserts that the probability of a specific state of a quantum register has the
@@ -143,6 +106,18 @@ operations:
     position 1 as the target, then from the qubit at position 1 as the control to
     the qubit at position 2 as the target, etc., ending with the qubit in position
     `Length(register)-1` as the target.
+- uid: microsoft.quantum.arithmetic.compareusingripplecarry
+  summary: |-
+    This unitary tests if two integers `x` and `y` stored in equal-size qubit registers
+    satisfy `x > y`. If true, 1 is XORed into an output
+    qubit. Otherwise, 0 is XORed into an output qubit.
+
+    In other words, this unitary $U$  satisfies:
+    $$
+    \begin{align}
+    U\ket{x}\ket{y}\ket{z}=\ket{x}\ket{y}\ket{z\oplus (x>y)}.
+    \end{align}
+    $$.
 - uid: microsoft.quantum.arithmetic.copymostsignificantbitle
   summary: |-
     Copies the most significant bit of a qubit register
@@ -152,18 +127,32 @@ operations:
     Carries out a strictly greater than comparison of two integers $x$ and $y$, encoded
     in qubit registers xs and ys. If $x > y$, then the result qubit will be flipped,
     otherwise retain its state.
-- uid: microsoft.quantum.arithmetic.incrementbyintegerbe
+- uid: microsoft.quantum.arithmetic.incrementbyinteger
   summary: |-
     Increments an unsigned quantum register by a classical integer,
     using phase rotations.
-- uid: microsoft.quantum.arithmetic.incrementbyintegerle
+- uid: microsoft.quantum.arithmetic.incrementbymodularinteger
+  summary: |-
+    Performs a modular increment of a qubit register by an integer constant.
+
+    Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
+    Then the operation performs the following transformation:
+    \begin{align}
+    \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N}
+    \end{align}
+    Integers are encoded in little-endian format.
+- uid: microsoft.quantum.arithmetic.incrementphasebyinteger
   summary: |-
     Increments an unsigned quantum register by a classical integer,
     using phase rotations.
-- uid: microsoft.quantum.arithmetic.incrementbyintegerphasele
+- uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
   summary: |-
-    Increments an unsigned quantum register by a classical integer,
-    using phase rotations.
+    Performs a modular increment of a qubit register by an integer constant.
+
+    Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
+    Then the operation performs the following transformation:
+    |y⟩ ↦ |y+a (mod N)⟩
+    Integers are encoded in little-endian format in QFT basis
 - uid: microsoft.quantum.arithmetic.inplacemajority
   summary: |-
     This computes the Majority function in-place on 3 qubits.
@@ -171,39 +160,14 @@ operations:
     If we denote output qubit as $z$ and input qubits as $x$ and $y$,
     the operation performs the following transformation:
     $\ket{xyz} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} (x, y, z)}$.
-- uid: microsoft.quantum.arithmetic.inplacexorbe
-  summary: |-
-    Applies `X` operations to qubits in a big-endian register based on 1 bits in an integer.
-
-    Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
-    then `InPlaceXorBE` performs an operation given by the following map:
-    $\ket{y}\rightarrow \ket{y\oplus a}$ , where $\oplus$ is the bitwise exclusive OR operator.
-- uid: microsoft.quantum.arithmetic.inplacexorle
-  summary: |-
-    Applies `X` operations to qubits in a little-endian register based on 1 bits in an integer.
-
-    Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
-    then `InPlaceXorLE` performs an operation given by the following map:
-    $\ket{y}\rightarrow \ket{y\oplus a}$ , where $\oplus$ is the bitwise exclusive OR operator.
-- uid: microsoft.quantum.arithmetic.integerincrementle
-  summary: ''
-- uid: microsoft.quantum.arithmetic.integerincrementphasele
-  summary: ''
 - uid: microsoft.quantum.arithmetic.maj
-  summary: This computes applies the in-place majority operation on 3 qubits.
+  summary: This applies the in-place majority operation to 3 qubits.
 - uid: microsoft.quantum.arithmetic.measureinteger
-  summary: ''
-- uid: microsoft.quantum.arithmetic.measureintegerbe
   summary: |-
     Measures the content of a quantum register and converts
     it to an integer. The measurement is performed with respect
     to the standard computational basis, i.e., the eigenbasis of `PauliZ`.
-- uid: microsoft.quantum.arithmetic.measureintegerle
-  summary: |-
-    Measures the content of a quantum register and converts
-    it to an integer. The measurement is performed with respect
-    to the standard computational basis, i.e., the eigenbasis of `PauliZ`.
-- uid: microsoft.quantum.arithmetic.modularaddproductle
+- uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
   summary: |-
     Performs a modular multiply-and-add by integer constants on a qubit register.
 
@@ -214,29 +178,11 @@ operations:
     \end{align}
     $$
     for a given modulus $N$, constant multiplier $a$, and summand $y$.
-- uid: microsoft.quantum.arithmetic.modularaddproductphasele
+- uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
   summary: |-
     The same as ModularAddProductLE, but assumes that summand encodes
     integers in QFT basis
-- uid: microsoft.quantum.arithmetic.modularincrementle
-  summary: |-
-    Performs a modular increment of a qubit register by an integer constant.
-
-    Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
-    Then the operation performs the following transformation:
-    \begin{align}
-    \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N}
-    \end{align}
-    Integers are encoded in little-endian format.
-- uid: microsoft.quantum.arithmetic.modularincrementphasele
-  summary: |-
-    Performs a modular increment of a qubit register by an integer constant.
-
-    Let us denote `increment` by a, `modulus` by N and integer encoded in `target` by y
-    Then the operation performs the following transformation:
-    |y⟩ ↦ |y+a (mod N)⟩
-    Integers are encoded in little-endian format in QFT basis
-- uid: microsoft.quantum.arithmetic.modularmultiplybyconstantle
+- uid: microsoft.quantum.arithmetic.multiplybymodularinteger
   summary: |-
     Performs modular multiplication by an integer constant on a qubit register.
 
@@ -300,14 +246,10 @@ functions:
   summary: |-
     Converts a `BigEndian` qubit register to a `LittleEndian` qubit
     register by reversing the qubit ordering.
-- uid: microsoft.quantum.arithmetic.bigendiantolittleendian
-  summary: ''
 - uid: microsoft.quantum.arithmetic.littleendianasbigendian
   summary: |-
     Converts a `LittleEndian` qubit register to a `BigEndian` qubit
     register by reversing the qubit ordering.
-- uid: microsoft.quantum.arithmetic.littleendiantobigendian
-  summary: ''
 - uid: microsoft.quantum.arithmetic.reversedopbe
   summary: |-
     Given an operation that takes a big-endian input, returns a new

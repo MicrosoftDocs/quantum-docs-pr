@@ -114,4 +114,8 @@ operations:
   summary: |-
     Returns a random real number in the interval greater than or equal to zero
     and less than one.
+- uid: microsoft.quantum.math.randomsinglequbitpauli
+  summary: |-
+    Returns one of the single-qubit Pauli operators uniformly
+    at random.
 ...

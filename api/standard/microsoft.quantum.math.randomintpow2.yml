@@ -23,7 +23,7 @@ output:
   content: Int
   types:
   - summary: |-
-      An integer $x$ uniformly at random from the given interval;
+      An integer $x$ uniformly at random from $[0,2^{\texttt{maxBits}}-1]$;
       that is, with $\Pr(x) = \frac{1}{2^{\texttt{maxBits}}}$.
     isPrimitive: true
     uid: Int

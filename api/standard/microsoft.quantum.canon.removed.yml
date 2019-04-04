@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.removed
+name: Removed
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  When called from a deprecated function or operation, logs a message warning
+  about the deprecation and informing the user of a suggested alternative.
+syntax: 'function Removed (oldName : String, suggestedAction : String) : Unit'
+input:
+  content: '(oldName : String, suggestedAction : String)'
+  types:
+  - name: oldName
+    isPrimitive: true
+    uid: String
+  - name: suggestedAction
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

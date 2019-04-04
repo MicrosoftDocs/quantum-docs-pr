@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.integerincrementle
+name: IntegerIncrementLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation IntegerIncrementLE (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: increment
+    isPrimitive: true
+    uid: Int
+  - name: target
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

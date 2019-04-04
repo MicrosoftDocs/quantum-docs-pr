@@ -1,0 +1,22 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.diagnostics
+name: Microsoft.Quantum.Diagnostics
+functions:
+- uid: microsoft.quantum.diagnostics.allequalityfactb
+  summary: Asserts that two arrays of boolean values are equal.
+- uid: microsoft.quantum.diagnostics.equalityfactb
+  summary: Asserts that a classical Bool variable has the expected value.
+- uid: microsoft.quantum.diagnostics.equalityfacti
+  summary: Asserts that a classical Int variable has the expected value.
+- uid: microsoft.quantum.diagnostics.equalityfactr
+  summary: Asserts that a classical Result variable has the expected value.
+- uid: microsoft.quantum.diagnostics.equalitywithintolerancefact
+  summary: |-
+    Represents the claim that a classical floating point value has the
+    expected value up to a given
+    absolute tolerance.
+- uid: microsoft.quantum.diagnostics.nearequalityfact
+  summary: |-
+    Asserts that a classical floating point variable has the expected value up to a
+    small tolerance of 1e-10.
+...

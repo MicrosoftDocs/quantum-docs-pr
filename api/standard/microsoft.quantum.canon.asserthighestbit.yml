@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.asserthighestbit
+name: AssertHighestBit
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation AssertHighestBit (value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: value
+    isPrimitive: true
+    uid: Result
+  - name: number
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

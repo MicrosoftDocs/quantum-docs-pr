@@ -4,7 +4,7 @@ name: MAJ
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: |-
-  This computes applies the in-place majority operation on 3 qubits.
+  This applies the in-place majority operation to 3 qubits.
 
   If we denote the state of the target qubit as $\ket{z}$, and input states of
   the input qubits as $\ket{x}$ and $\ket{y}$, then

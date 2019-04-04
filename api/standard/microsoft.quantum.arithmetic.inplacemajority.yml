@@ -32,4 +32,6 @@ output:
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- inplacexorle
 ...

@@ -3,20 +3,11 @@ uid: microsoft.quantum.canon.forany
 name: ForAny
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  The `ForAny` function takes an array and a predicate that is defined
-  for the elements of the array, and checks if at least one element of
-  the array satisfies the predicate.
-remarks: |-
-  The function is defined for generic types, i.e., whenever we have
-  an array `'T[]` and a function `predicate: 'T -> Bool` we can produce
-  a `Bool` value that indicates if some element satisfies `predicate`.
 syntax: "function ForAny (predicate : ('T -> Bool), array : 'T[]) : Bool"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: A function from `'T` to `Bool` that is used to check elements.
     isFunction: true
     input:
       types:
@@ -27,17 +18,12 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: An array of elements over `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: A `Bool` value of the OR function of the predicate applied to all elements.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Bool
-typeParameters:
-- uid: "'T"
-  summary: The type of `array` elements.
 ...

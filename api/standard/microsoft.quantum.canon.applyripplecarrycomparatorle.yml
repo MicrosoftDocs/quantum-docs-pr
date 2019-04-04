@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyripplecarrycomparatorle
+name: ApplyRippleCarryComparatorLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyRippleCarryComparatorLE (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
+input:
+  content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
+  types:
+  - name: x
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: y
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: output
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

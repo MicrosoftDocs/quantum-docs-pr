@@ -54,14 +54,6 @@
     uid: microsoft.quantum.arithmetic.applyreversedopbec
   - name: ApplyReversedOpBECA
     uid: microsoft.quantum.arithmetic.applyreversedopbeca
-  - name: ApplyReversedOpBigEndian
-    uid: microsoft.quantum.arithmetic.applyreversedopbigendian
-  - name: ApplyReversedOpBigEndianA
-    uid: microsoft.quantum.arithmetic.applyreversedopbigendiana
-  - name: ApplyReversedOpBigEndianC
-    uid: microsoft.quantum.arithmetic.applyreversedopbigendianc
-  - name: ApplyReversedOpBigEndianCA
-    uid: microsoft.quantum.arithmetic.applyreversedopbigendianca
   - name: ApplyReversedOpLE
     uid: microsoft.quantum.arithmetic.applyreversedople
   - name: ApplyReversedOpLEA
@@ -70,26 +62,12 @@
     uid: microsoft.quantum.arithmetic.applyreversedoplec
   - name: ApplyReversedOpLECA
     uid: microsoft.quantum.arithmetic.applyreversedopleca
-  - name: ApplyReversedOpLittleEndian
-    uid: microsoft.quantum.arithmetic.applyreversedoplittleendian
-  - name: ApplyReversedOpLittleEndianA
-    uid: microsoft.quantum.arithmetic.applyreversedoplittleendiana
-  - name: ApplyReversedOpLittleEndianC
-    uid: microsoft.quantum.arithmetic.applyreversedoplittleendianc
-  - name: ApplyReversedOpLittleEndianCA
-    uid: microsoft.quantum.arithmetic.applyreversedoplittleendianca
-  - name: ApplyRippleCarryComparatorBE
-    uid: microsoft.quantum.arithmetic.applyripplecarrycomparatorbe
-  - name: ApplyRippleCarryComparatorLE
-    uid: microsoft.quantum.arithmetic.applyripplecarrycomparatorle
-  - name: AssertHighestBit
-    uid: microsoft.quantum.arithmetic.asserthighestbit
+  - name: ApplyXorInPlace
+    uid: microsoft.quantum.arithmetic.applyxorinplace
   - name: AssertLessThanPhaseLE
     uid: microsoft.quantum.arithmetic.assertlessthanphasele
   - name: AssertMostSignificantBitLE
     uid: microsoft.quantum.arithmetic.assertmostsignificantbitle
-  - name: AssertProbInt
-    uid: microsoft.quantum.arithmetic.assertprobint
   - name: AssertProbIntBE
     uid: microsoft.quantum.arithmetic.assertprobintbe
   - name: AssertProbIntLE
@@ -98,58 +76,42 @@
     uid: microsoft.quantum.arithmetic.bigendian
   - name: BigEndianAsLittleEndian
     uid: microsoft.quantum.arithmetic.bigendianaslittleendian
-  - name: BigEndianToLittleEndian
-    uid: microsoft.quantum.arithmetic.bigendiantolittleendian
   - name: Carry
     uid: microsoft.quantum.arithmetic.carry
   - name: CascadeCCNOT
     uid: microsoft.quantum.arithmetic.cascadeccnot
   - name: CascadeCNOT
     uid: microsoft.quantum.arithmetic.cascadecnot
+  - name: CompareUsingRippleCarry
+    uid: microsoft.quantum.arithmetic.compareusingripplecarry
   - name: CopyMostSignificantBitLE
     uid: microsoft.quantum.arithmetic.copymostsignificantbitle
   - name: GreaterThan
     uid: microsoft.quantum.arithmetic.greaterthan
-  - name: IncrementByIntegerBE
-    uid: microsoft.quantum.arithmetic.incrementbyintegerbe
-  - name: IncrementByIntegerLE
-    uid: microsoft.quantum.arithmetic.incrementbyintegerle
-  - name: IncrementByIntegerPhaseLE
-    uid: microsoft.quantum.arithmetic.incrementbyintegerphasele
+  - name: IncrementByInteger
+    uid: microsoft.quantum.arithmetic.incrementbyinteger
+  - name: IncrementByModularInteger
+    uid: microsoft.quantum.arithmetic.incrementbymodularinteger
+  - name: IncrementPhaseByInteger
+    uid: microsoft.quantum.arithmetic.incrementphasebyinteger
+  - name: IncrementPhaseByModularInteger
+    uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
   - name: InPlaceMajority
     uid: microsoft.quantum.arithmetic.inplacemajority
-  - name: InPlaceXorBE
-    uid: microsoft.quantum.arithmetic.inplacexorbe
-  - name: InPlaceXorLE
-    uid: microsoft.quantum.arithmetic.inplacexorle
-  - name: IntegerIncrementLE
-    uid: microsoft.quantum.arithmetic.integerincrementle
-  - name: IntegerIncrementPhaseLE
-    uid: microsoft.quantum.arithmetic.integerincrementphasele
   - name: LittleEndian
     uid: microsoft.quantum.arithmetic.littleendian
   - name: LittleEndianAsBigEndian
     uid: microsoft.quantum.arithmetic.littleendianasbigendian
-  - name: LittleEndianToBigEndian
-    uid: microsoft.quantum.arithmetic.littleendiantobigendian
   - name: MAJ
     uid: microsoft.quantum.arithmetic.maj
   - name: MeasureInteger
     uid: microsoft.quantum.arithmetic.measureinteger
-  - name: MeasureIntegerBE
-    uid: microsoft.quantum.arithmetic.measureintegerbe
-  - name: MeasureIntegerLE
-    uid: microsoft.quantum.arithmetic.measureintegerle
-  - name: ModularAddProductLE
-    uid: microsoft.quantum.arithmetic.modularaddproductle
-  - name: ModularAddProductPhaseLE
-    uid: microsoft.quantum.arithmetic.modularaddproductphasele
-  - name: ModularIncrementLE
-    uid: microsoft.quantum.arithmetic.modularincrementle
-  - name: ModularIncrementPhaseLE
-    uid: microsoft.quantum.arithmetic.modularincrementphasele
-  - name: ModularMultiplyByConstantLE
-    uid: microsoft.quantum.arithmetic.modularmultiplybyconstantle
+  - name: MultiplyAndAddByModularInteger
+    uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
+  - name: MultiplyAndAddPhaseByModularInteger
+    uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
+  - name: MultiplyByModularInteger
+    uid: microsoft.quantum.arithmetic.multiplybymodularinteger
   - name: PhaseLittleEndian
     uid: microsoft.quantum.arithmetic.phaselittleendian
   - name: ReversedOpBE
@@ -178,6 +140,53 @@
     uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   - name: Sum
     uid: microsoft.quantum.arithmetic.sum
+- name: Microsoft.Quantum.Arrays
+  uid: microsoft.quantum.arrays
+  items:
+  - name: All
+    uid: microsoft.quantum.arrays.all
+  - name: Any
+    uid: microsoft.quantum.arrays.any
+  - name: ConstantArray
+    uid: microsoft.quantum.arrays.constantarray
+  - name: Exclude
+    uid: microsoft.quantum.arrays.exclude
+  - name: Filtered
+    uid: microsoft.quantum.arrays.filtered
+  - name: Fold
+    uid: microsoft.quantum.arrays.fold
+  - name: ForEach
+    uid: microsoft.quantum.arrays.foreach
+  - name: Head
+    uid: microsoft.quantum.arrays.head
+  - name: IndexOf
+    uid: microsoft.quantum.arrays.indexof
+  - name: LookupFunction
+    uid: microsoft.quantum.arrays.lookupfunction
+  - name: Mapped
+    uid: microsoft.quantum.arrays.mapped
+  - name: MappedByIndex
+    uid: microsoft.quantum.arrays.mappedbyindex
+  - name: Most
+    uid: microsoft.quantum.arrays.most
+  - name: Padded
+    uid: microsoft.quantum.arrays.padded
+  - name: Partitioned
+    uid: microsoft.quantum.arrays.partitioned
+  - name: Rest
+    uid: microsoft.quantum.arrays.rest
+  - name: Reversed
+    uid: microsoft.quantum.arrays.reversed
+  - name: Subarray
+    uid: microsoft.quantum.arrays.subarray
+  - name: Tail
+    uid: microsoft.quantum.arrays.tail
+  - name: Zip
+    uid: microsoft.quantum.arrays.zip
+  - name: Zip3
+    uid: microsoft.quantum.arrays.zip3
+  - name: Zip4
+    uid: microsoft.quantum.arrays.zip4
 - name: Microsoft.Quantum.Canon
   uid: microsoft.quantum.canon
   items:
@@ -205,6 +214,26 @@
     uid: microsoft.quantum.canon.applyquantumfouriertransformbe
   - name: ApplyQuantumFourierTransformLE
     uid: microsoft.quantum.canon.applyquantumfouriertransformle
+  - name: ApplyReversedOpBigEndian
+    uid: microsoft.quantum.canon.applyreversedopbigendian
+  - name: ApplyReversedOpBigEndianA
+    uid: microsoft.quantum.canon.applyreversedopbigendiana
+  - name: ApplyReversedOpBigEndianC
+    uid: microsoft.quantum.canon.applyreversedopbigendianc
+  - name: ApplyReversedOpBigEndianCA
+    uid: microsoft.quantum.canon.applyreversedopbigendianca
+  - name: ApplyReversedOpLittleEndian
+    uid: microsoft.quantum.canon.applyreversedoplittleendian
+  - name: ApplyReversedOpLittleEndianA
+    uid: microsoft.quantum.canon.applyreversedoplittleendiana
+  - name: ApplyReversedOpLittleEndianC
+    uid: microsoft.quantum.canon.applyreversedoplittleendianc
+  - name: ApplyReversedOpLittleEndianCA
+    uid: microsoft.quantum.canon.applyreversedoplittleendianca
+  - name: ApplyRippleCarryComparatorBE
+    uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
+  - name: ApplyRippleCarryComparatorLE
+    uid: microsoft.quantum.canon.applyripplecarrycomparatorle
   - name: ApplyToEach
     uid: microsoft.quantum.canon.applytoeach
   - name: ApplyToEachA
@@ -289,12 +318,18 @@
     uid: microsoft.quantum.canon.assertboolarrayequal
   - name: AssertBoolEqual
     uid: microsoft.quantum.canon.assertboolequal
+  - name: AssertHighestBit
+    uid: microsoft.quantum.canon.asserthighestbit
   - name: AssertIntEqual
     uid: microsoft.quantum.canon.assertintequal
   - name: AssertPhase
     uid: microsoft.quantum.canon.assertphase
+  - name: AssertProbInt
+    uid: microsoft.quantum.canon.assertprobint
   - name: AssertResultEqual
     uid: microsoft.quantum.canon.assertresultequal
+  - name: BigEndianToLittleEndian
+    uid: microsoft.quantum.canon.bigendiantolittleendian
   - name: Bind
     uid: microsoft.quantum.canon.bind
   - name: BindA
@@ -333,8 +368,6 @@
     uid: microsoft.quantum.canon.conjugatedbyc
   - name: ConjugatedByCA
     uid: microsoft.quantum.canon.conjugatedbyca
-  - name: ConstantArray
-    uid: microsoft.quantum.canon.constantarray
   - name: ControlledOnBitString
     uid: microsoft.quantum.canon.controlledonbitstring
   - name: ControlledOnInt
@@ -351,28 +384,30 @@
     uid: microsoft.quantum.canon.decomposeintotimestepsca
   - name: EmbedPauli
     uid: microsoft.quantum.canon.embedpauli
-  - name: Exclude
-    uid: microsoft.quantum.canon.exclude
   - name: Filter
     uid: microsoft.quantum.canon.filter
-  - name: Fold
-    uid: microsoft.quantum.canon.fold
   - name: ForAll
     uid: microsoft.quantum.canon.forall
   - name: ForAny
     uid: microsoft.quantum.canon.forany
   - name: Fst
     uid: microsoft.quantum.canon.fst
-  - name: Head
-    uid: microsoft.quantum.canon.head
   - name: HY
     uid: microsoft.quantum.canon.hy
   - name: Ignore
     uid: microsoft.quantum.canon.ignore
+  - name: InPlaceXorBE
+    uid: microsoft.quantum.canon.inplacexorbe
+  - name: InPlaceXorLE
+    uid: microsoft.quantum.canon.inplacexorle
   - name: IntAbs
     uid: microsoft.quantum.canon.intabs
   - name: IntArrayFromRange
     uid: microsoft.quantum.canon.intarrayfromrange
+  - name: IntegerIncrementLE
+    uid: microsoft.quantum.canon.integerincrementle
+  - name: IntegerIncrementPhaseLE
+    uid: microsoft.quantum.canon.integerincrementphasele
   - name: IntMax
     uid: microsoft.quantum.canon.intmax
   - name: IsResultOne
@@ -383,26 +418,24 @@
     uid: microsoft.quantum.canon.iteratethroughcartesianpower
   - name: IterateThroughCartesianProduct
     uid: microsoft.quantum.canon.iteratethroughcartesianproduct
-  - name: LookupFunction
-    uid: microsoft.quantum.canon.lookupfunction
+  - name: LittleEndianToBigEndian
+    uid: microsoft.quantum.canon.littleendiantobigendian
   - name: Map
     uid: microsoft.quantum.canon.map
   - name: MapIndex
     uid: microsoft.quantum.canon.mapindex
-  - name: MeasurePaulis
-    uid: microsoft.quantum.canon.measurepaulis
-  - name: MeasureWithScratch
-    uid: microsoft.quantum.canon.measurewithscratch
-  - name: Most
-    uid: microsoft.quantum.canon.most
-  - name: MResetX
-    uid: microsoft.quantum.canon.mresetx
-  - name: MResetY
-    uid: microsoft.quantum.canon.mresety
-  - name: MResetZ
-    uid: microsoft.quantum.canon.mresetz
-  - name: MultiM
-    uid: microsoft.quantum.canon.multim
+  - name: MeasureIntegerBE
+    uid: microsoft.quantum.canon.measureintegerbe
+  - name: ModularAddProductLE
+    uid: microsoft.quantum.canon.modularaddproductle
+  - name: ModularAddProductPhaseLE
+    uid: microsoft.quantum.canon.modularaddproductphasele
+  - name: ModularIncrementLE
+    uid: microsoft.quantum.canon.modularincrementle
+  - name: ModularIncrementPhaseLE
+    uid: microsoft.quantum.canon.modularincrementphasele
+  - name: ModularMultiplyByConstantLE
+    uid: microsoft.quantum.canon.modularmultiplybyconstantle
   - name: MultiplexerBruteForceFromGenerator
     uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   - name: MultiplexerFromGenerator
@@ -445,12 +478,10 @@
     uid: microsoft.quantum.canon.rall0
   - name: RAll1
     uid: microsoft.quantum.canon.rall1
-  - name: RandomSingleQubitPauli
-    uid: microsoft.quantum.canon.randomsinglequbitpauli
+  - name: Removed
+    uid: microsoft.quantum.canon.removed
   - name: Renamed
     uid: microsoft.quantum.canon.renamed
-  - name: Rest
-    uid: microsoft.quantum.canon.rest
   - name: RestrictToSubregister
     uid: microsoft.quantum.canon.restricttosubregister
   - name: RestrictToSubregisterA
@@ -469,8 +500,6 @@
     uid: microsoft.quantum.canon.resultstack
   - name: Reverse
     uid: microsoft.quantum.canon.reverse
-  - name: Reversed
-    uid: microsoft.quantum.canon.reversed
   - name: Snd
     uid: microsoft.quantum.canon.snd
   - name: SplitArray
@@ -487,12 +516,10 @@
     uid: microsoft.quantum.canon.stackpop
   - name: StackPush
     uid: microsoft.quantum.canon.stackpush
-  - name: Subarray
-    uid: microsoft.quantum.canon.subarray
   - name: SwapReverseRegister
     uid: microsoft.quantum.canon.swapreverseregister
-  - name: Tail
-    uid: microsoft.quantum.canon.tail
+  - name: ToOperation
+    uid: microsoft.quantum.canon.tooperation
   - name: TransformedOperation
     uid: microsoft.quantum.canon.transformedoperation
   - name: TransformedOperationA
@@ -521,12 +548,6 @@
     uid: microsoft.quantum.canon.withca
   - name: XOR
     uid: microsoft.quantum.canon.xor
-  - name: Zip
-    uid: microsoft.quantum.canon.zip
-  - name: Zip3
-    uid: microsoft.quantum.canon.zip3
-  - name: Zip4
-    uid: microsoft.quantum.canon.zip4
 - name: Microsoft.Quantum.Characterization
   uid: microsoft.quantum.characterization
   items:
@@ -559,6 +580,8 @@
     uid: microsoft.quantum.convert.boolasresult
   - name: Call
     uid: microsoft.quantum.convert.call
+  - name: FunctionAsOperation
+    uid: microsoft.quantum.convert.functionasoperation
   - name: IntAsBoolArray
     uid: microsoft.quantum.convert.intasboolarray
   - name: RangeAsIntArray
@@ -569,8 +592,21 @@
     uid: microsoft.quantum.convert.resultarrayasint
   - name: ResultAsBool
     uid: microsoft.quantum.convert.resultasbool
-  - name: ToOperation
-    uid: microsoft.quantum.convert.tooperation
+- name: Microsoft.Quantum.Diagnostics
+  uid: microsoft.quantum.diagnostics
+  items:
+  - name: AllEqualityFactB
+    uid: microsoft.quantum.diagnostics.allequalityfactb
+  - name: EqualityFactB
+    uid: microsoft.quantum.diagnostics.equalityfactb
+  - name: EqualityFactI
+    uid: microsoft.quantum.diagnostics.equalityfacti
+  - name: EqualityFactR
+    uid: microsoft.quantum.diagnostics.equalityfactr
+  - name: EqualityWithinToleranceFact
+    uid: microsoft.quantum.diagnostics.equalitywithintolerancefact
+  - name: NearEqualityFact
+    uid: microsoft.quantum.diagnostics.nearequalityfact
 - name: Microsoft.Quantum.ErrorCorrection
   uid: microsoft.quantum.errorcorrection
   items:
@@ -705,8 +741,25 @@
     uid: microsoft.quantum.math.randomintpow2
   - name: RandomReal
     uid: microsoft.quantum.math.randomreal
+  - name: RandomSingleQubitPauli
+    uid: microsoft.quantum.math.randomsinglequbitpauli
   - name: RealMod
     uid: microsoft.quantum.math.realmod
+- name: Microsoft.Quantum.Measurement
+  uid: microsoft.quantum.measurement
+  items:
+  - name: MeasurePaulis
+    uid: microsoft.quantum.measurement.measurepaulis
+  - name: MeasureWithScratch
+    uid: microsoft.quantum.measurement.measurewithscratch
+  - name: MResetX
+    uid: microsoft.quantum.measurement.mresetx
+  - name: MResetY
+    uid: microsoft.quantum.measurement.mresety
+  - name: MResetZ
+    uid: microsoft.quantum.measurement.mresetz
+  - name: MultiM
+    uid: microsoft.quantum.measurement.multim
 - name: Microsoft.Quantum.Oracles
   uid: microsoft.quantum.oracles
   items:

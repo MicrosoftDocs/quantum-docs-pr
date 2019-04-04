@@ -16,6 +16,8 @@ functions:
   summary: |-
     Converts a `Bool` type to a `Result` type, where `true` is mapped to
     `One` and `false` is mapped to `Zero`.
+- uid: microsoft.quantum.convert.functionasoperation
+  summary: Converts functions to operations.
 - uid: microsoft.quantum.convert.intasboolarray
   summary: |-
     Produces a binary representation of a positive integer, using the
@@ -32,8 +34,6 @@ functions:
   summary: |-
     Converts a `Result` type to a `Bool` type, where `One` is mapped to
     `true` and `Zero` is mapped to `false`.
-- uid: microsoft.quantum.convert.tooperation
-  summary: Converts functions to operations.
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Calls a function with a given input.

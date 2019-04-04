@@ -3,23 +3,19 @@ uid: microsoft.quantum.canon.assertboolarrayequal
 name: AssertBoolArrayEqual
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Asserts that two arrays of boolean values are equal.
 syntax: 'function AssertBoolArrayEqual (actual : Bool[], expected : Bool[], message : String) : Unit'
 input:
   content: '(actual : Bool[], expected : Bool[], message : String)'
   types:
   - name: actual
-    summary: The array that is produced by a test case of interest.
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: expected
-    summary: The array that is expected from a test case of interest.
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: message
-    summary: A message to be printed if the arrays are not equal.
     isPrimitive: true
     uid: String
 output:

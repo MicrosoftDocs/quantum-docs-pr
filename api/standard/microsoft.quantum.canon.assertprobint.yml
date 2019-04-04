@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertprobint
+name: AssertProbInt
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation AssertProbInt (stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double) : Unit'
+input:
+  content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double)'
+  types:
+  - name: stateIndex
+    isPrimitive: true
+    uid: Int
+  - name: expected
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: tolerance
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

@@ -15,7 +15,7 @@ It is used to gather counts of the depth of
 every operation invoked in a quantum program. All operations from
 <xref:microsoft.quantum.primitive> are expressed in terms of single qubit rotations,
 T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit
-Pauli observables. Users can set the depth for each of the primitive operations. 
+Pauli observables. Users can set the depth for each of the primitive operations via the `gateTimes` field of <xref:microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration>.
 
 By default, all operations have depth 0 except the T gate which has depth 1. This means 
 that by default, only the T depth of operations is computed (which is often desirable). Collected statistics

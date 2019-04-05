@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.reflectionoraclefromdeterministicstateoracle
 name: ReflectionOracleFromDeterministicStateOracle
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Constructs reflection about a given state from an oracle.
 
   Given the oracle $O$ of type

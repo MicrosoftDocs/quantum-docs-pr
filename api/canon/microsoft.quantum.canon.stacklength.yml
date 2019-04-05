@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.stacklength
 name: StackLength
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Retrieves the number of elements stored in a
   <xref:microsoft.quantum.canon.resultstack>.
 syntax: 'function StackLength (stack : Microsoft.Quantum.Canon.ResultStack) : Int'

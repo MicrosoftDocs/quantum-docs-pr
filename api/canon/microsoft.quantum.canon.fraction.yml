@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.fraction
 name: Fraction
 type: newtype
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Represents a rational number of the form `p/q`. Integer `p` is
   the first element of the tuple and `q` is the second element
   of the tuple.

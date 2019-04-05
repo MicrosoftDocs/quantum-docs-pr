@@ -18,7 +18,7 @@ We recommend using the Quantum Development Kit together with Visual Studio Code 
 
 2. Once the .NET Core SDK is installed, run the following command in your favorite command line (e.g.: PowerShell or Bash) to download the latest templates for creating new Q# applications and libraries:
    ```Bash
-   dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.3.1811.2802-preview"
+   dotnet new -i Microsoft.Quantum.ProjectTemplates
    ```
 
 3. Go to the [Visual Studio Code website](https://code.visualstudio.com/).
@@ -50,7 +50,7 @@ Some of the samples demonstrate using the Quantum Development Kit with other pro
 - Some samples use the Node.js Package Manager (NPM) to handle user interface dependencies.
   NPM can be installed [manually](https://nodejs.org/en/download/current/) or through a [package manager](https://nodejs.org/en/download/package-manager/).
 - The Python interoperability feature (currently in Windows-only preview) has been developed for the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3.6.
-  Please see the [README](https://github.com/Microsoft/Quantum/tree/master/Samples/PythonInterop/README.md) file provided with the Python sample for more details.
+  Please see the [README](https://github.com/Microsoft/Quantum/blob/master/Samples/src/PythonInterop/README.md) file provided with the Python sample for more details.
 
 
 # Validating the Quantum Development Kit installation

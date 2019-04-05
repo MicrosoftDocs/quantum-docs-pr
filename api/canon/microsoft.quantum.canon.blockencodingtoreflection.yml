@@ -3,16 +3,16 @@ uid: microsoft.quantum.canon.blockencodingtoreflection
 name: BlockEncodingToReflection
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Converts a `BlockEncoding` into an equivalent `BLockEncodingReflection`.
 
   That is, given a `BlockEncoding` unitary $U$ that encodes some
   operator $H$ of interest, converts it into a `BlockEncodingReflection` $U'$ that
-  encodes the same operator, but also satisfies $U'^\dag = U'$.
+  encodes the same operator, but also satisfies $U'^\dagger = U'$.
   This increases the size of the auxiliary register of $U$ by one qubit.
 remarks: This increases the size of the auxiliary register of $U$ by one qubit.
 syntax: 'function BlockEncodingToReflection (blockEncoding : Microsoft.Quantum.Canon.BlockEncoding) : Microsoft.Quantum.Canon.BlockEncodingReflection'
-references: >-
+references: |-
   - Hamiltonian Simulation by Qubitization
     Guang Hao Low, Isaac L. Chuang
     https://arxiv.org/abs/1610.06546
@@ -25,9 +25,9 @@ input:
 output:
   content: Microsoft.Quantum.Canon.BlockEncodingReflection
   types:
-  - summary: >-
+  - summary: |-
       A unitary $U'$ acting jointly on registers `a` and `s` that block-
-      encodes $H$, and satisfies $U'^\dag = U'$.
+      encodes $H$, and satisfies $U'^\dagger = U'$.
     uid: microsoft.quantum.canon.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding

@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.estimateenergy
 name: EstimateEnergy
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Performs state preparation by applying a
   `statePrepUnitary` on an automatically allocated input state
   phase estimation with respect to `qpeUnitary`on the resulting state
@@ -17,7 +17,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: statePrepUnitary
-    summary: >-
+    summary: |-
       An oracle representing state preparation for the initial dynamical
       generator.
     isOperation: true
@@ -31,7 +31,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: >-
+    summary: |-
       An oracle representing a unitary operator $U$ representing evolution
       for time $\delta t$ under a dynamical generator with ground state
       $\ket{\phi}$ and ground state energy $E = \phi\\,\delta t$.
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: phaseEstAlgorithm
-    summary: >-
+    summary: |-
       An operation that performs phase estimation on a given unitary operation.
       See [iterative phase estimation](/quantum/libraries/characterization#iterative-phase-estimation)
       for more details.
@@ -67,7 +67,7 @@ input:
 output:
   content: Double
   types:
-  - summary: >-
+  - summary: |-
       An estimate $\hat{\phi}$ of the ground state energy $\phi$
       of the ground state energy of the generator represented by $U$.
     isPrimitive: true

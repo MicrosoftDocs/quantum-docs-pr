@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.boolarrfromresultarr
 name: BoolArrFromResultArr
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Converts a `Result[]` type to a `Bool[]` type, where `One` is mapped to
   `true` and `Zero` is mapped to `false`.
 syntax: 'function BoolArrFromResultArr (input : Result[]) : Bool[]'

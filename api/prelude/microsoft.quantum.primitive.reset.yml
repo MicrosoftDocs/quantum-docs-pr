@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.reset
 name: Reset
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Given a single qubit, measures it and ensures it is in the |0⟩ state
   such that it can be safely released.
 syntax: 'operation Reset (target : Qubit) : Unit'

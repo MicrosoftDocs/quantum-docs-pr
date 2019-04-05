@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.maxb
+name: MaxB
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+summary: Returns the larger of two specified numbers.
+remarks: See [System.Numerics.BigInteger.Max](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.max) for more details.
+syntax: 'function MaxB (a : BigInt, b : BigInt) : BigInt'
+input:
+  content: '(a : BigInt, b : BigInt)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: BigInt
+  - name: b
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - isPrimitive: true
+    uid: BigInt
+...

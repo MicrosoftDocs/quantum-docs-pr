@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.cnot
 name: CNOT
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Applies the controlled-NOT (CNOT) gate to a pair of qubits.
 
   \begin{align}
@@ -17,7 +17,7 @@ summary: >-
   \end{align}
 
   where rows and columns are ordered as in the quantum concepts guide.
-remarks: >-
+remarks: |-
   Equivalent to:
 
   ```qsharp

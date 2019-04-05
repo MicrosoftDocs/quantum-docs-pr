@@ -10,6 +10,47 @@ uid: microsoft.quantum.relnotes
 
 # Microsoft Quantum Development Kit Release Notes
 
+# Version 0.5.1903
+
+*Release date: March 27, 2019*
+
+This release contains the following:
+
+- Adds support for Jupyter Notebook, which offers a great way to learn about Q#.  [Check out new Jupyter Notebook samples and learn how to write your own Notebooks](xref:microsoft.quantum.install.jupyter). 
+
+- Adds integer adder arithmetic to the Quantum Canon library.  See also a Jupyter Notebook that [describes how to use the new integer adders](https://github.com/Microsoft/Quantum/blob/master/Samples/src/Arithmetic/Adder%20Example.ipynb).
+
+- Bug fix for DumpRegister issue reported by the community ([#148](https://github.com/Microsoft/Quantum/issues/148)).
+
+- Added ability to return from within a [using statement](ref:microsoft.quantum.qsharp-ref.statements).
+
+- Revamped [getting started guide](xref:microsoft.quantum.install).
+
+
+# Version 0.5.1902
+
+*Release date: February 27, 2019*
+
+This release contains the following:
+
+- Adds support for a cross-platform Python host.  The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python. Learn more about [Python interoperability](xref:microsoft.quantum.install.python). 
+
+- The Visual Studio and Visual Studio Code extensions now support renaming of symbols (e.g., functions and operations).
+
+- The Visual Studio extension can now be installed on Visual Studio 2019.
+
+
+
+# Version 0.4.1901
+
+*Release date: January 30, 2019*
+
+This release contains the following:
+
+- adds support for a new primitive type, BigInt, which represents a signed integer of arbitrary size.  Learn more about [BigInt type](xref:microsoft.quantum.language.type-model).
+- adds new Toffoli simulator, a special purpose fast simulator that can simulate X, CNOT and multi-controlled X quantum operations with very large numbers of qubits.  Learn more about [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator).
+- adds a simple resource estimator that estimates the resources required to run a given instancee of a Q# operation on a quantum computer.  Learn more about the [Resource Estimator](xref:microsoft.quantum.machines.resources-estimator).
+
 
 # Version 0.3.1811.2802
 
@@ -21,7 +62,7 @@ This version removes all runtime dependencies that could make the extension trig
 
 If you had previously installed the extension you will need to install it again by visiting 
 the [Microsoft Quantum Development Kit for Visual Studio Code](vscode:extension/quantum.quantum-devkit-vscode) extension on the 
-Visual Studio Marketplace and press Install. We're sorry about the inconvenience.
+Visual Studio Marketplace and press Install. We are sorry about the inconvenience.
 
 
 # Version 0.3.1811.1511

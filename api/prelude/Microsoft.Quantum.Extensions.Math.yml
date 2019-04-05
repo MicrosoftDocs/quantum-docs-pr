@@ -2,6 +2,8 @@
 uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
+- uid: microsoft.quantum.extensions.math.absb
+  summary: Returns the absolute value of a big integer.
 - uid: microsoft.quantum.extensions.math.absd
   summary: Returns the absolute value of a double-precision floating-point number.
 - uid: microsoft.quantum.extensions.math.absi
@@ -19,7 +21,9 @@ functions:
 - uid: microsoft.quantum.extensions.math.cos
   summary: Returns the cosine of the specified angle.
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: Returns the cosine of the specified angle.
+  summary: Returns the hyperbolic cosine of the specified angle.
+- uid: microsoft.quantum.extensions.math.divremb
+  summary: Divides one BigInteger value by another, returns the result and the remainder as a tuple.
 - uid: microsoft.quantum.extensions.math.e
   summary: Returns the natural logarithmic base $e$.
 - uid: microsoft.quantum.extensions.math.expd
@@ -32,20 +36,28 @@ functions:
   summary: Returns the natural (base $e$) logarithm of a specified number.
 - uid: microsoft.quantum.extensions.math.log10
   summary: Returns the base 10 logarithm of a specified number.
+- uid: microsoft.quantum.extensions.math.maxb
+  summary: Returns the larger of two specified numbers.
 - uid: microsoft.quantum.extensions.math.maxd
   summary: Returns the larger of two specified numbers.
 - uid: microsoft.quantum.extensions.math.maxi
   summary: Returns the larger of two specified numbers.
+- uid: microsoft.quantum.extensions.math.minb
+  summary: Returns the smaller of two specified numbers.
 - uid: microsoft.quantum.extensions.math.mind
   summary: Returns the smaller of two specified numbers.
 - uid: microsoft.quantum.extensions.math.mini
   summary: Returns the smaller of two specified numbers.
+- uid: microsoft.quantum.extensions.math.modpowb
+  summary: Performs modular division on a number raised to the power of another number.
 - uid: microsoft.quantum.extensions.math.pi
   summary: Represents the ratio of the circumference of a circle to its diameter, specified by the constant, π.
 - uid: microsoft.quantum.extensions.math.powd
   summary: Returns the number x raised to the power y.
 - uid: microsoft.quantum.extensions.math.round
   summary: Rounds a value to the nearest integer or to the specified number of fractional digits.
+- uid: microsoft.quantum.extensions.math.signb
+  summary: Returns an integer that indicates the sign of a number.
 - uid: microsoft.quantum.extensions.math.signd
   summary: Returns an integer that indicates the sign of a number.
 - uid: microsoft.quantum.extensions.math.signi
@@ -64,5 +76,7 @@ functions:
   summary: Calculates the integral part of a number.
 newtypes:
 - uid: microsoft.quantum.extensions.math.complex
-  summary: Represents a complex number by its real and imaginary components.
+  summary: |-
+    Represents a complex number by its real and imaginary components.
+    The first element of the tuple is the real component, the second one - the imaginary component.
 ...

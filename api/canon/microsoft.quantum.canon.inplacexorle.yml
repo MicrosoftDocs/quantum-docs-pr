@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.inplacexorle
 name: InPlaceXorLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Applies `X` operations to qubits in a little-endian register based on 1 bits in an integer.
 
   Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
@@ -29,5 +29,5 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- inplacexorle
+- inplacexorbe
 ...

@@ -14,7 +14,7 @@ input:
 output:
   content: Microsoft.Quantum.Canon.ResultStack
   types:
-  - summary: >-
+  - summary: |-
       The `stack` with the top element removed. The new stack has the same capacity as
       the old one, but its length is reduced by one.
     uid: microsoft.quantum.canon.resultstack

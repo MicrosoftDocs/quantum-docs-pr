@@ -14,7 +14,7 @@ ms.topic: article
 It is critical to be able to characterize the effects of operations in order to develop useful quantum algorithms.
 This is challenging because every measurement of a quantum system yields at most one bit of information.
 In order to learn an eigenvalue, let alone a quantum state, the results of many measurements must be stitched together so that the user can glean the many bits of information needed to represent these concepts.
-Quantum states are especially vexing because the [no-cloning theorem](xref:microsoft.quantum.concepts.pauli) states that there is no way to learn an arbitrary quantum state from a single copy of the state, because doing so would let you make copies of the state.
+Quantum states are especially vexing because the [no-cloning theorem](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) states that there is no way to learn an arbitrary quantum state from a single copy of the state, because doing so would let you make copies of the state.
 This obfuscation of the quantum state from the user is reflected in the fact that Q# does not expose or even define what a state *is* to quantum programs.
 We thus approach quantum characterization by treating operations and states as black-box; this approach shares much in common with the experimental practice of quantum characterization, verification and validation (QCVV).
 
@@ -32,7 +32,7 @@ This has the advantage that we only require a single additional qubit to perform
 Each of the methods proposed below uses a different strategy for designing experiments and different data processing methods to learn the phase.  They each have unique advantage ranging from having rigorous error bounds, to the abilities to incorporate prior information, tolerate errors or run on memory limitted classical computers.
 
 In discussing iterative phase estimation, we will consider a unitary $U$ given as a black-box operation.
-As described in the section on oracles in [data-structures](xref:microsoft.quantum.libraries.data-structures), the Q# canon models such operations by the <xref:microsoft.quantum.canon.discreteoracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.
+As described in the section on oracles in [data structures](xref:microsoft.quantum.libraries.data-structures), the Q# canon models such operations by the <xref:microsoft.quantum.canon.discreteoracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.
 Concretely, if `U : DiscreteOracle`, then `U(m)` implements $U^m$ for `m : Int`.
 
 With this definition in place, each step of iterative phase estimation proceeds by preparing an ancilla qubit in the $\ket{+}$ state along with the initial state $\ket{\phi}$ that we assume is an [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) of $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi}\ket{\phi}$.  
@@ -73,7 +73,7 @@ Phase estimation for this reason appears within a number of quantum algorithms t
 ### Bayesian Phase Estimation ###
 
 > [!TIP]
-> For more details on Bayesian phase estimation in practice, please see the [**PhaseEstimation**](https://github.com/Microsoft/Quantum/tree/master/Samples/PhaseEstimation) sample.
+> For more details on Bayesian phase estimation in practice, please see the [**PhaseEstimation**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation) sample.
 
 The idea of Bayesian phase estimation is simple.
 You collect measurement statistics from the phase estimation protocol and then you process the results using Bayesian inference and provide an estimate of the parameter.
@@ -120,7 +120,7 @@ The prior distribution $\Pr(x)$ has support over $2^n$ hypothetical values of $x
 This means that if we need a highly accurate estimate of $x$ then Bayesian phase estimation may need prohibitive memory and processing time.
 While for some applications, such as quantum simulation, the limitted accuracy required does not preclude such methods other applications,
 such as Shor's algorithm, cannot use exact Bayesian inference within its phase estimation step.  For this reason, we also provide implementations
-for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:microsoft.research.quantum.randomwalkphaseestimation.randomwalkphaseestimation) and also non-Bayesian approaches such as [robust phase estimation](xref:microsoft.quantum.canon.robustphaseestimation).
+for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) and also non-Bayesian approaches such as [robust phase estimation](xref:microsoft.quantum.canon.robustphaseestimation).
 
 ### Robust Phase Estimation ###
 
@@ -139,7 +139,7 @@ where the lower bound is reached in the limit of asymptotically large $Q$, and t
 Other relevant details include, say, the small space overhead of just $1$ ancilla qubit, or that the procedure is non-adaptive, meaning the required sequence of quantum experiments is independent of the intermediate measurement outcomes. In this and forthcoming examples where the choice of phase estimation algorithm is important, one should one should refer to the documentation such as @"microsoft.quantum.canon.robustphaseestimation" and the referenced publications therein for more information and for their the implementation.
 
 > [!TIP]
-> There are many samples where robust phase estimation is used. For phase estimation in extracting the ground state energy of various physical system, please see the [**H2 simulation** sample](https://github.com/Microsoft/Quantum/Samples/H2SimulationSampleCmdLine), the [**SimpleIsing** sample](https://github.com/Microsoft/Quantum/Samples/SimpleIsingSample), and the [**Hubbard model** sample](https://github.com/Microsoft/Quantum/Samples/HubbardSimulationSample).
+> There are many samples where robust phase estimation is used. For phase estimation in extracting the ground state energy of various physical system, please see the [**H2 simulation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine), the [**SimpleIsing** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing), and the [**Hubbard model** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/HubbardSimulation).
 
 
 ### Continuous Oracles ###

@@ -3,15 +3,15 @@ uid: microsoft.quantum.primitive.r1
 name: R1
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: >-
+summary: |-
   Applies a rotation about the $\ket{1}$ state by a given angle.
 
   \begin{align}
   R_1(\theta) \mathrel{:=}
   \operatorname{diag}(1, e^{i\theta}).
   \end{align}
-remarks: >-
-  Equivlent to:
+remarks: |-
+  Equivalent to:
 
   ```qsharp
   R(PauliZ, theta, qubit);

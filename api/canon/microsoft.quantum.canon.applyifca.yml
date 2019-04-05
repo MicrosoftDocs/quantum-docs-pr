@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.applyifca
 name: ApplyIfCA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given an operation `op` and a bit value `bit`, applies `op` to the `target`
   if `bit` is true. If false, nothing happens to the `target`.
   The modifier `CA` indicates that the operation is controllable and adjointable.

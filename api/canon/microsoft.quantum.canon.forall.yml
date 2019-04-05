@@ -3,11 +3,11 @@ uid: microsoft.quantum.canon.forall
 name: ForAll
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   The `ForAll` function takes an array and a predicate that is defined
   for the elements of the array, and checks if all elements of the
   array satisfy the predicate.
-remarks: >-
+remarks: |-
   The function is defined for generic types, i.e., whenever we have
   an array `'T[]` and a function `predicate: 'T -> Bool` we can produce
   a `Bool` value that indicates if all elements satisfy `predicate`.

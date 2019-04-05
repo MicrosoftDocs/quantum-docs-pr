@@ -3,12 +3,25 @@ uid: microsoft.quantum.canon.bindca
 name: BindCA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given an array of operations acting on a single input,
   produces a new operation that
   performs each given operation in sequence.
   The modifier `CA` indicates that all operations in the array are adjointable
   and controllable.
+examples: |-
+  The following are equivalent:
+
+  ```qsharp
+  let bound = Bind([U, V]);
+  bound(x);
+  ```
+
+  and
+
+  ```qsharp
+  U(x); V(x);
+  ```
 syntax: "function BindCA (operations : ('T => Unit : Adjoint, Controlled)[]) : ('T => Unit : Adjoint, Controlled)"
 input:
   content: "(operations : ('T => Unit : Adjoint, Controlled)[])"
@@ -31,7 +44,7 @@ input:
 output:
   content: "('T => Unit : Adjoint, Controlled)"
   types:
-  - summary: >-
+  - summary: |-
       A new operation that performs each given operation in sequence
       on its input.
     isOperation: true

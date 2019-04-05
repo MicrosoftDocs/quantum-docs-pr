@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.minb
+name: MinB
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+summary: Returns the smaller of two specified numbers.
+remarks: See [System.Numerics.BigInteger.Min](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.min) for more details.
+syntax: 'function MinB (a : BigInt, b : BigInt) : BigInt'
+input:
+  content: '(a : BigInt, b : BigInt)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: BigInt
+  - name: b
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - isPrimitive: true
+    uid: BigInt
+...

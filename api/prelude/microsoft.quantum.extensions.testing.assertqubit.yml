@@ -4,7 +4,7 @@ name: AssertQubit
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
 summary: Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator.
-remarks: >-
+remarks: |-
   <xref:microsoft.quantum.extensions.testing.assertqubitstate> allows for asserting
   arbitrary qubit states rather than only $Z$ eigenstates.
 syntax: 'operation AssertQubit (expected : Result, q : Qubit) : Unit'

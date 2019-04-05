@@ -1,6 +1,6 @@
 ---
 title: Quantum Development Kit Libraries | Microsoft Docs
-author: chgranad
+author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article

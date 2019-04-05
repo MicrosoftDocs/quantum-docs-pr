@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.prepareidentity
 name: PrepareIdentity
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given a register, prepares that register in the maximally mixed state.
 
   The register is prepared in the $\boldone / 2^N$ state by applying the
@@ -14,7 +14,7 @@ input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    summary: >-
+    summary: |-
       A register whose state is to be depolarized in the manner
       described above.
     isArray: true

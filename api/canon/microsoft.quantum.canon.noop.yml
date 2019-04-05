@@ -3,22 +3,22 @@ uid: microsoft.quantum.canon.noop
 name: NoOp
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Performs the identity operation (no-op) on an argument.
 
   This operation takes a value of any type and does nothing to it.
   This can be useful whenever an input of an operation type is expected,
   but no action should be taken.
   For instance, if a particular error correction syndrome indicates that
-  no error has occured, `NoOp<Qubit[]>` may be the correct recovery
+  no error has occurred, `NoOp<Qubit[]>` may be the correct recovery
   procedure.
   Similarly, if an operation expects a state preparation procedure as
   input, `NoOp<Qubit[]>` can be used to prepare the state
   $\ket{0 \cdots 0}$.
-remarks: >-
+remarks: |-
   In almost all cases, the type parameter for `NoOp` needs to be specified
   explicitly. For instance, `NoOp<Qubit>` is identical to
-  @"Microsoft.Quantum.Primitive.I".
+  <xref:microsoft.quantum.primitive.i>.
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"

@@ -4,6 +4,11 @@ name: SplitArray
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: Splits an array into multiple parts.
+examples: |-
+  ```qsharp
+  // The following returns [[1,5],[3],[7]];
+  let (arr1, arr2) = SplitArray([2,1], [1,5,3,7]);
+  ```
 syntax: "function SplitArray (nElements : Int[], arr : 'T[]) : 'T[][]"
 input:
   content: "(nElements : Int[], arr : 'T[])"
@@ -21,9 +26,9 @@ input:
 output:
   content: "'T[][]"
   types:
-  - summary: >-
-      Multiple arrays where the first array is the first 'nElements[0]' of `arr`
-      and the second array are the next 'nElements[1]' of `arr` etc. The last array
+  - summary: |-
+      Multiple arrays where the first array is the first `nElements[0]` of `arr`
+      and the second array are the next `nElements[1]` of `arr` etc. The last array
       will contain all remaining elements.
     isArray: true
     types:

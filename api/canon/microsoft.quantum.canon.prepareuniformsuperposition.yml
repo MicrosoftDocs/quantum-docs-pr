@@ -3,16 +3,26 @@ uid: microsoft.quantum.canon.prepareuniformsuperposition
 name: PrepareUniformSuperposition
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Creates a uniform superposition over states that encode 0 through `nIndices`.
 
   That is, this unitary $U$ creates a uniform superposition over all number states
   $0$ to $M-1$, given an input state $\ket{0\cdots 0}$. In other words,
   $$
   \begin{align}
-  U\ket{0}=\frac{1}{\sqrt{M}}\sum_{j=1}^{M-1}\ket{j}.
+  U\ket{0}=\frac{1}{\sqrt{M}}\sum_{j=0}^{M-1}\ket{j}.
   \end{align}
   $$.
+examples: |-
+  The following example prepares the state $\frac{1}{\sqrt{6}}\sum_{j=0}^{5}\ket{j}$
+  on $3$ qubits.
+
+  ```Q#
+  let nIndices = 6;
+  using(indexRegister = Qubit[3]) {
+      PrepareUniformSuperposition(nIndices, BigEndian(indexRegister));
+  }
+  ```
 syntax: 'operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Canon.BigEndian) : Unit'
 input:
   content: '(nIndices : Int, indexRegister : Microsoft.Quantum.Canon.BigEndian)'
@@ -22,7 +32,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: indexRegister
-    summary: >-
+    summary: |-
       The qubit register that stores the number states in `BigEndian` format.
       This register must be able to store the number $M-1$, and is assumed to be
       initialized in the state $\ket{0\cdots 0}$.

@@ -17,7 +17,7 @@ uid: microsoft.quantum.libraries.licensing
 
 The canon is an extensive collection of library functions and operations and is open source, licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt). The canon and other libraries, such as the Quantum Chemistry Library, can be obtained from the [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) repository on GitHub. 
 
-Microsoft's Quantum Development Kit also provides specialized library functions and operations that are licensed under a [Microsoft Research license](https://github.com/Microsoft/Quantum-nc/blob/master/LICENSE.txt). These can be obtained from the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository on GitHub.
+Microsoft's Quantum Development Kit also provides specialized library functions and operations that are licensed under a [Microsoft Research license](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE). These can be obtained from the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository on GitHub.
 
 There is also an extensive set of samples that explain and illustrate the use of functions and operations from the canon and other libraries. These samples are licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt). The samples can be obtained from the [Microsoft/Quantum](https://github.com/Microsoft/Quantum) repository on GitHub.
 

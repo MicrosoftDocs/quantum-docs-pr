@@ -3,11 +3,11 @@ uid: microsoft.quantum.canon.with
 name: With
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Given operations implementing operators `U` and `V`, performs the
   operation `U†VU` on a target. That is, this operation
   conjugates `V` with `U`.
-remarks: >-
+remarks: |-
   The outer operation is always assumed to be adjointable, but does not
   need to be controllable in order for the combined operation to be
   controllable.
@@ -16,7 +16,7 @@ input:
   content: "(outerOperation : ('T => Unit : Adjoint), innerOperation : ('T => Unit), target : 'T)"
   types:
   - name: outerOperation
-    summary: >-
+    summary: |-
       The operation $U$ that should be used to conjugate $V$. Note that the
       outer operation $U$ needs to be adjointable, but does not
       need to be controllable.

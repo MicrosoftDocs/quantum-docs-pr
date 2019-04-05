@@ -12,29 +12,25 @@ uid: microsoft.quantum.write-program
 ## What You'll Learn
 
 > [!div class="checklist"]
-> * How to set up a quantum solution and project in Visual Studio
+> * How to set up a quantum solution and project
 > * The components of a Q# operation
 > * How to call a Q# operation from C#
 > * How to build and execute your quantum algorithm
 
 ## Creating a Bell State in Q#
 
-Now that you’ve [installed the Microsoft Quantum Development Kit](xref:microsoft.quantum.install) and seen
-how it works, let’s write your first quantum application.
-We'll start with the simplest program possible and build it up to demonstrate [quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) and [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement). We will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
+Now that you’ve [installed the Microsoft Quantum Development Kit](xref:microsoft.quantum.install), let’s write your first quantum application.
+We'll start with the simplest program possible and build it up to demonstrate [quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) 
+and [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement). We will start with a qubit in a 
+basis state $\ket{0}$, perform some operations on it and then measure the result.
 
-The instructions on the page are written for both Visual Studio 2017 and for Visual Studio Code.
-If you are using a different development environment, please follow the instructions for Visual Studio Code, using the command line to call the .NET Core SDK.
+The instructions on the page are written for both the command line and Visual Studio.
+For Visual Studio, it assumes you have installed the 
+[Microsoft Quantum Development Kit Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
+If you are using a different development environment, like Visual Studio Code, please 
+follow the instructions to call the .NET Core SDK from the command line.
 
 ### Step 1: Create a Project and Solution
-
-#### [Visual Studio 2017](#tab/tabid-vs2017)
-
-- Open up Visual Studio 2017.
-- Go to the `File` menu and select `New` > `Project...`.
-- In the project template explorer, under `Installed` > `Visual C#`, select the `Q# Application` template.
-- Make sure you have `.NET Framework 4.6.1` selected in the list at the bottom of the `New Project` dialog box.
-- Give your project the name `Bell`.
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
@@ -45,6 +41,14 @@ $ dotnet new console -lang Q# --output Bell
 $ cd Bell 
 $ code . # To open in Visual Studio Code.
 ```
+
+#### [Visual Studio](#tab/tabid-vs2017)
+
+- Open up Visual Studio.
+- Go to the `File` menu and select `New` > `Project...`.
+- In the project template explorer, under `Installed` > `Visual C#`, select the `Q# Application` template.
+- Make sure you have `.NET Framework 4.6.1` selected in the list at the bottom of the `New Project` dialog box.
+- Give your project the name `Bell`.
 
 ***
 
@@ -296,10 +300,6 @@ Replace the body of the `Main` method with the following code:
 
 ### Step 4: Build and Run
 
-#### [Visual Studio 2017](#tab/tabid-vs2017)
-
-Just hit `F5`, and your program should build and run!
-
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
 Run the following at your terminal:
@@ -313,6 +313,10 @@ This will automatically download all required packages, build the application, t
 Alternatively, press **F1** to open the Command Palette and select "Debug: Start Without Debugging."
 You may be prompted to create a new ``launch.json`` file describing how to start the program.
 The default ``launch.json`` should work well for most applications.
+
+#### [Visual Studio](#tab/tabid-vs2017)
+
+Just hit `F5`, and your program should build and run!
 
 ***
 
@@ -486,3 +490,44 @@ Init:One  0s=490  1s=510  agree=1000
 ```
 
 Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1), but now when we measure the second qubit, it is __always__ the same as what we measured for the first qubit. Our `CNOT` has entangled the two qubits, so that whatever happens to one of them, happens to the other. If you reversed the measurements (did the second qubit before the first), the same thing would happen. The first measurement would be random and the second would be in lock step with whatever was discovered for the first.
+
+
+## Estimating Resources
+
+Sometimes the quantum program is impossible to simulate on a classical computer (for example, if it uses too many qubits). In this case the researchers need to get an estimate of how many resources (qubits or certain gates) the program will use when executed on a quantum computer.
+of how many quantum resources the program will use on a quantum computer as it would be impossible to simulate the 
+program on a classical computer. We can do this without changing the Q# operation but using a different target machine, a  `ResourcesEstimator`, for executing it in the C# host code; 
+for example, modify the code in the the __Driver.cs__ file to be:
+
+```csharp
+            var estimator = new ResourcesEstimator();
+            BellTest.Run(estimator, 1000, Result.Zero).Wait();
+
+            System.Console.WriteLine(estimator.ToTSV());
+            
+            System.Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+```
+
+This change indicates to run the `BellTest` operation using the `estimator` as the target machine. When completed,
+we output the results to the console in TSV (tab-seperated values) format using the `ResourcesEstimator`'s `ToTSV()` method.
+The output of the program is:
+
+```Output
+Metric          Sum
+CNOT            1000
+QubitClifford   1000
+R               0
+Measure         4002
+T               0
+Depth           0
+Width           2
+BorrowedWidth   0
+```
+
+For more information about the metrics reported and accessing the data programmatically,
+take a look at the [`ResourcesEstimator` documentation](xref:microsoft.quantum.machines.resources-estimator).
+
+
+To learn more about the other type of simulators and target machines provided in the Quantum Development Kit, 
+how they work and how to use them, take a look at the [Managing Quantum machines and drivers topic](xref:microsoft.quantum.machines) in the documentation.

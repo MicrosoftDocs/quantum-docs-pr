@@ -18,7 +18,7 @@ input:
 output:
   content: Microsoft.Quantum.Canon.ResultStack
   types:
-  - summary: >-
+  - summary: |-
       The `stack` with `datum` added as its new top element. The new stack's length is
       increased by one.
     uid: microsoft.quantum.canon.resultstack

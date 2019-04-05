@@ -127,7 +127,7 @@ and corresponds to the single-qubit unitary:
 #### Rotations ####
 
 In addition to the Pauli and Clifford operations above, the Q# prelude provides a variety of ways of expressing rotations.
-As described in <xref:microsoft.quantum.concepts.qubit#single-qubit-operations>, the ability to rotate is critical to quantum algorithms.
+As described in [single-qubit operations](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), the ability to rotate is critical to quantum algorithms.
 
 We start by recalling that we can express any single-qubit operation using the $H$ and $T$ gates, where $H$ is the Hadamard operation, and where 
 \begin{equation}

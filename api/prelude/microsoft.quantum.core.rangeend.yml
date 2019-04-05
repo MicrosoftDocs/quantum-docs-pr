@@ -3,13 +3,16 @@ uid: microsoft.quantum.core.rangeend
 name: RangeEnd
 type: function
 namespace: Microsoft.Quantum.Core
-summary: >-
+summary: |-
   Returns the defined end value of the given range,
   which is not necessarily the last element in the sequence.
-remarks: >-
+remarks: |-
   A range expression's first element is `start`,
   its second element is `start+step`, third element is `start+step+step`, etc.,
   until `end` is passed.
+
+  Note that the defined end value of a range can differ from the last element in the sequence specified by the range;
+  for example, in a range 0 .. 2 .. 5 the last element is 4 but the end value is 5.
 syntax: 'function RangeEnd (range : Range) : Int'
 input:
   content: '(range : Range)'

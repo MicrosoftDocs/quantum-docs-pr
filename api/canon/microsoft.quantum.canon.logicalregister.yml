@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.logicalregister
 name: LogicalRegister
 type: newtype
 namespace: Microsoft.Quantum.Canon
-summary: >-
+summary: |-
   Type for register of physical qubits `Qubit[]` that encode the
   logical qubits.
 syntax: newtype LogicalRegister = Qubit[];

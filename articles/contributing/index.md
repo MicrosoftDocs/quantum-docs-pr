@@ -48,7 +48,7 @@ Each of these different pieces finds its home on a different repository, so the 
 
 - [**Microsoft/Quantum**](https://github.com/Microsoft/Quantum): Samples and tools to help get started with the Quantum Development Kit.
 - [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries): Standard and domain-specific libraries for the Quantum Development Kit.
-- [**Microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): Self-paced exercises to help learn more about quantum programming and the Q# language.
+- [**Microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): Self-paced programming exercises for learning quantum computing and the Q# programming language.
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): Source code for the documentation published at https://docs.microsoft.com/quantum.
 
 There are also a few other, more specialized repositories focusing on different events, or on auxillary functionality related to the Quantum Development Kit.

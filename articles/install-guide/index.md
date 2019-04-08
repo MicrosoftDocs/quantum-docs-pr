@@ -9,15 +9,15 @@ uid: microsoft.quantum.install
 
 # Getting Started with the Microsoft Quantum Development Kit #
 
-A great way to get started with the Quantum Development Kit is via some of the Jupyter notebooks from our GitHub Quantum repository available through [binder](https://mybinder.org).  In particular:
+A great way to get started with the Quantum Development Kit is via some of the Jupyter notebooks from our GitHub Quantum repository.
+You can launch these notebooks from your browser without any installation using [binder](https://mybinder.org).  In particular:
 
 * **[Q# Notebooks](https://mybinder.org/v2/gh/Microsoft/Quantum/master?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb)**: explains how to compile and simulate Q# operations inside a Jupyter notebook.
 * **[Teleport](https://mybinder.org/v2/gh/Microsoft/Quantum/master?filepath=Samples%2Fsrc%2FTeleportation%2FNotebook.ipynb)**: shows how to implement the teleport algorithm using Q#.
 
-Running these notebooks from binder will not allow you to save any changes. 
-To run the notebooks from your computer and save your changes, or to 
+To launch these notebooks from your computer, to create new ones or to 
 integrate Q# with other classical languages like C# or Python, 
-you will first need to install it either via the command line or Visual Studio.
+you will need to install the Quantum Development Kit either via the command line or Visual Studio.
 
 
 ## Installation ##
@@ -45,7 +45,7 @@ Jupyter core: 1.1.12077.0
 ```
 
 
-### Visual Studio extensions ###
+### Visual Studio and VS Code extensions ###
 
 The Quantum Development Kit offers tight integration with [Visual Studio](https://visualstudio.microsoft.com/vs/) 
 and [Visual Studio Code](https://code.visualstudio.com/) that improve the development experience. 
@@ -109,12 +109,12 @@ Applications developed with Microsoft's Quantum Development Kit typically consis
   that serves as the main entry point and will invoke Q# operations 
   when it wants to execute a quantum algorithm.
 
-Once you have installed IQ#, these articles explain how to enable interoperability between Q# and classical languages:
+Once you have installed IQ#, there might be extra steps required to enable interoperability with the classical language.
+The following articles explain how to enable this interoperability:
 
 * [C# getting started](xref:microsoft.quantum.install.csharp)
 * [Jupyter notebooks getting started](xref:microsoft.quantum.install.jupyter)
 * [Python getting started](xref:microsoft.quantum.install.python)
-
 
 
 ## Updating IQ# ##

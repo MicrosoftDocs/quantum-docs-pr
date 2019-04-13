@@ -179,7 +179,7 @@ Add the following operation to the namespace, after the end of the
     }
 ```
 
-This operation (`BellTest`) will loop for `count` iterations, set a specified `initial` value on a qubit and them measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
+This operation (`BellTest`) will loop for `count` iterations, set a specified `initial` value on a qubit and then measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
 
 All of these calls use primitive quantum operations that are
 defined in the `Microsoft.Quantum.Primitive` namespace.

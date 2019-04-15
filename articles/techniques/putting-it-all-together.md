@@ -167,8 +167,8 @@ Finally, we use @"microsoft.quantum.primitive.m" to perform the measurements and
 
 ```qsharp
             // Measure out the entanglement
-            if (M(msg) == One)  { Z(there); }
             if (M(here) == One) { X(there); }
+            if (M(msg) == One)  { Z(there); }
 ```
 
 This finishes the definition of our teleportation operator, so we can deallocate `here`, end the body, and end the operation.

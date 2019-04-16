@@ -1,0 +1,21 @@
+---
+title: Integer Addition | Microsoft Docs
+description: Integer Addition Conceptual Docs
+author: Michael Naehrig
+ms.author: mnaehrig@microsoft.com
+ms.date: 4/16/2019
+ms.topic: article-type-from-white-list
+uid: microsoft.quantum.numerics.concepts.adders
+---
+
+WIP
+
+# Quantum Circuits To Add Integers 
+
+One of the basic tasks when it comes to building quantum circuit libraries for arithmetics is to bootstrap the functionality from simple building blocks. A useful building block are adders, i.e., the operation that takes two inputs $x$ and $y$, each represented on say $n$ bits, and produces the sum $x+y$ which in itself is an $n+1$ bit integers. There are several ways this can be accomplished on a quantum computer. 
+
+## Takahashi-Tani-Kunihiro Adder
+
+## Cuccaro-D...-K...-M... Adder
+
+## Draper Adder

@@ -1,0 +1,7 @@
+- name: Installation and validation
+  href: installation.md
+- name: Quantum numerics concepts
+  href: concepts/toc.yml
+- name: Invoking the numerics library
+  topicHref: samples/index.md
+  href: samples/toc.yml

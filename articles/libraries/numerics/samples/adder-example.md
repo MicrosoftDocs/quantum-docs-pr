@@ -1,7 +1,7 @@
 ---
 title: Integer Addition | Microsoft Docs
 description: Integer Addition Example
-author: Michael Naehrig and Martin Roetteler
+author: Martin Roetteler
 ms.author: martinro
 ms.date: 4/16/2019
 uid: microsoft.quantum.numerics.concepts.adders-example

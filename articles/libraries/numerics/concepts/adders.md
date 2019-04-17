@@ -2,9 +2,8 @@
 title: Integer Addition | Microsoft Docs
 description: Integer Addition Conceptual Docs
 author: Michael Naehrig
-ms.author: mnaehrig@microsoft.com
+ms.author: mnaehrig
 ms.date: 4/16/2019
-ms.topic: article-type-from-white-list
 uid: microsoft.quantum.numerics.concepts.adders
 ---
 

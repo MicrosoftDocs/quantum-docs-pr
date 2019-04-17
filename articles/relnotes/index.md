@@ -10,6 +10,14 @@ uid: microsoft.quantum.relnotes
 
 # Microsoft Quantum Development Kit Release Notes
 
+
+# Version 0.5.1904
+
+*Release date: Aprint 2015, 2019*
+
+This release contains bug fixes.
+
+
 # Version 0.5.1903
 
 *Release date: March 27, 2019*

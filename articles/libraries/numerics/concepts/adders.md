@@ -1,8 +1,8 @@
 ---
 title: Integer Addition | Microsoft Docs
 description: Integer Addition Conceptual Docs
-author: Michael Naehrig
-ms.author: mnaehrig
+author: Michael Naehrig and Martin Roetteler
+ms.author: martinro
 ms.date: 4/16/2019
 uid: microsoft.quantum.numerics.concepts.adders
 ---

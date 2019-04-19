@@ -494,9 +494,7 @@ Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1),
 
 ## Estimating Resources
 
-Sometimes the quantum program is impossible to simulate on a classical computer (for example, if it uses too many qubits). In this case the researchers need to get an estimate of how many resources (qubits or certain gates) the program will use when executed on a quantum computer.
-of how many quantum resources the program will use on a quantum computer as it would be impossible to simulate the 
-program on a classical computer. We can do this without changing the Q# operation but using a different target machine, a  `ResourcesEstimator`, for executing it in the C# host code; 
+Sometimes the quantum program is impossible to simulate on a classical computer (for example, if it uses too many qubits). In this case the researchers need to get an estimate of how many resources (qubits or certain gates) the program will use on a quantum computer as it would be impossible to simulate the program on a classical computer. We can do this without changing the Q# operation but using a different target machine, a  `ResourcesEstimator`, for executing it in the C# host code; 
 for example, modify the code in the the __Driver.cs__ file to be:
 
 ```csharp

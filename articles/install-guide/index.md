@@ -15,7 +15,7 @@ You can launch these notebooks from your browser without any installation using 
 * **[Q# Notebooks](https://mybinder.org/v2/gh/Microsoft/Quantum/master?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb)**: explains how to compile and simulate Q# operations inside a Jupyter notebook.
 * **[Teleport](https://mybinder.org/v2/gh/Microsoft/Quantum/master?filepath=Samples%2Fsrc%2FTeleportation%2FNotebook.ipynb)**: shows how to implement the teleport algorithm using Q#.
 
-To launch these notebooks from your computer, to create new ones or to 
+To launch these notebooks from your computer, to create new ones, or to 
 integrate Q# with other classical languages like C# or Python, 
 you will need to install the Quantum Development Kit either via the command line or Visual Studio.
 

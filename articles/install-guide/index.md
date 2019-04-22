@@ -58,18 +58,16 @@ and provide features like:
 * Rename of symbols
 * Debug breakpoints (Visual Studio)
 
-To install the extensions, follow the corresponding instructions at:
+#### [VS Code](#tab/tabid-vscode)
 
-> [!div class="button"]
-> [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
-
+To install the VS Code extensions, follow the instructions at:
 > [!div class="button"]
 > [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
 
 
 #### [Visual Studio](#tab/tabid-vs)
 
-Q# is tightly integrated into Visual Studio, providing a rich developing experience with features like syntax highlighting and debugging. If you already have Visual Studio on your computer (version 15.8 or later), follow these steps to enable the Quantum Development Kit integration:
+Q# is tightly integrated into Visual Studio. If you already have Visual Studio on your computer (version 15.8 or later), follow these steps to enable the Quantum Development Kit integration:
 1. Download the [Microsoft Quantum Development Kit for Visual Studio](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) extension from the Visual Studio Marketplace.
 2. Once downloaded, double-click the VSIX file to install the extension.
 

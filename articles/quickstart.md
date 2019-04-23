@@ -56,10 +56,12 @@ $ code . # To open in Visual Studio Code.
 
 Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
 
+#### Source files of a Quantum application
 Your development environment should have two files open:
 `Driver.cs`, which will hold the C# driver for your quantum code,
 and `Operations.qs`, which will hold the quantum code itself.
 
+#### Q# source
 The first step is to rename the Q# file to `Bell.qs`.
 Right-click on `Operations.qs` in the Visual Studio Solution Explorer (Ctrl+Alt+L to focus) or the Visual Studio Code Explorer (Ctrl/⌘+Shift+E to focus), and select the Rename option.
 Replace `Operations` with `Bell` and hit return.
@@ -80,6 +82,7 @@ namespace Quantum.Bell
 }
 ```
 
+#### Q# operation
 First, replace the string `HelloQ` with `Set`, and change the operation
 parameters (the content of the parentheses) to contain the string
 `desired: Result, q1: Qubit`.
@@ -127,6 +130,7 @@ namespace Quantum.Bell
 }
 ```
 
+#### Set or flip a qubit
 This operation may now be called to set a qubit in a known state (`Zero` or `One`). We measure the qubit, if it's in the state we want, we leave it alone, otherwise, we flip it with the `X` gate.
 
 > [!NOTE]
@@ -150,6 +154,7 @@ This operation may now be called to set a qubit in a known state (`Zero` or `One
 > See the [Q# language reference](xref:microsoft.quantum.language.intro) for more
 > information.
 
+#### Measure a qubit
 Add the following operation to the namespace, after the end of the
 `Set` operation:
 
@@ -181,6 +186,7 @@ Add the following operation to the namespace, after the end of the
 
 This operation (`BellTest`) will loop for `count` iterations, set a specified `initial` value on a qubit and then measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
 
+#### Primitive Quantum operations
 All of these calls use primitive quantum operations that are
 defined in the `Microsoft.Quantum.Primitive` namespace.
 For instance, the `M` operation measures its argument qubit in the
@@ -256,6 +262,7 @@ namespace Quantum.Bell
 }
 ```
 
+#### Run the Quantum opearations from C# driver
 Replace the body of the `Main` method with the following code:
 
 ```csharp

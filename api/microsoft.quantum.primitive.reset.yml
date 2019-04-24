@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.reset
+name: Reset
+type: operation
+namespace: Microsoft.Quantum.Primitive
+syntax: 'operation Reset (target : Qubit) : Unit'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

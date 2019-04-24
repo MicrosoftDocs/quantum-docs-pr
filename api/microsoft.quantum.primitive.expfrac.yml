@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.expfrac
+name: ExpFrac
+type: operation
+namespace: Microsoft.Quantum.Primitive
+syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
+input:
+  content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
+  types:
+  - name: paulis
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: numerator
+    isPrimitive: true
+    uid: Int
+  - name: power
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

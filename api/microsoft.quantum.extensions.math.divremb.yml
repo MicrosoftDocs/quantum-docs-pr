@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.divremb
+name: DivRemB
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+syntax: 'function DivRemB (dividend : BigInt, divisor : BigInt) : (BigInt, BigInt)'
+input:
+  content: '(dividend : BigInt, divisor : BigInt)'
+  types:
+  - name: dividend
+    isPrimitive: true
+    uid: BigInt
+  - name: divisor
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: (BigInt, BigInt)
+  types:
+  - types:
+    - isPrimitive: true
+      uid: BigInt
+    - isPrimitive: true
+      uid: BigInt
+...

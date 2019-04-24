@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.message
+name: Message
+type: function
+namespace: Microsoft.Quantum.Primitive
+syntax: 'function Message (msg : String) : Unit'
+input:
+  content: '(msg : String)'
+  types:
+  - name: msg
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

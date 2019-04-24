@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.ry
+name: Ry
+type: operation
+namespace: Microsoft.Quantum.Primitive
+syntax: 'operation Ry (theta : Double, qubit : Qubit) : Unit'
+input:
+  content: '(theta : Double, qubit : Qubit)'
+  types:
+  - name: theta
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

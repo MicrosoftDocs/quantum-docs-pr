@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.absb
+name: AbsB
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+syntax: 'function AbsB (a : BigInt) : BigInt'
+input:
+  content: '(a : BigInt)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - isPrimitive: true
+    uid: BigInt
+...

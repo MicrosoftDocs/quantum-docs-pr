@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.testing.assertqubit
+name: AssertQubit
+type: operation
+namespace: Microsoft.Quantum.Extensions.Testing
+syntax: 'operation AssertQubit (expected : Result, q : Qubit) : Unit'
+input:
+  content: '(expected : Result, q : Qubit)'
+  types:
+  - name: expected
+    isPrimitive: true
+    uid: Result
+  - name: q
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

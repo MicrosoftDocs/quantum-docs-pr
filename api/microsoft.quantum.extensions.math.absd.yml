@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.absd
+name: AbsD
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+syntax: 'function AbsD (a : Double) : Double'
+input:
+  content: '(a : Double)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+...

@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.convert.tobigint
+name: ToBigInt
+type: function
+namespace: Microsoft.Quantum.Extensions.Convert
+syntax: 'function ToBigInt (a : Int) : BigInt'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Int
+output:
+  content: BigInt
+  types:
+  - isPrimitive: true
+    uid: BigInt
+...

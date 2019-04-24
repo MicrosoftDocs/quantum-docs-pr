@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.pi
+name: PI
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+syntax: 'function PI () : Double'
+input:
+  content: ()
+  types: []
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+...

@@ -1,0 +1,21 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.testing
+name: Microsoft.Quantum.Extensions.Testing
+operations:
+- uid: microsoft.quantum.extensions.testing.assertallzero
+  summary: ''
+- uid: microsoft.quantum.extensions.testing.assertallzerotol
+  summary: ''
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
+  summary: ''
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
+  summary: ''
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
+  summary: ''
+- uid: microsoft.quantum.extensions.testing.assertqubit
+  summary: ''
+- uid: microsoft.quantum.extensions.testing.assertqubitstate
+  summary: ''
+- uid: microsoft.quantum.extensions.testing.assertqubittol
+  summary: ''
+...

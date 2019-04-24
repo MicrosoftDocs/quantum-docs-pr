@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.rfrac
+name: RFrac
+type: operation
+namespace: Microsoft.Quantum.Primitive
+syntax: 'operation RFrac (pauli : Pauli, numerator : Int, power : Int, qubit : Qubit) : Unit'
+input:
+  content: '(pauli : Pauli, numerator : Int, power : Int, qubit : Qubit)'
+  types:
+  - name: pauli
+    isPrimitive: true
+    uid: Pauli
+  - name: numerator
+    isPrimitive: true
+    uid: Int
+  - name: power
+    isPrimitive: true
+    uid: Int
+  - name: qubit
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

@@ -1,0 +1,62 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.primitive
+name: Microsoft.Quantum.Primitive
+operations:
+- uid: microsoft.quantum.primitive.assert
+  summary: ''
+- uid: microsoft.quantum.primitive.assertprob
+  summary: ''
+- uid: microsoft.quantum.primitive.ccnot
+  summary: ''
+- uid: microsoft.quantum.primitive.cnot
+  summary: ''
+- uid: microsoft.quantum.primitive.exp
+  summary: ''
+- uid: microsoft.quantum.primitive.expfrac
+  summary: ''
+- uid: microsoft.quantum.primitive.h
+  summary: ''
+- uid: microsoft.quantum.primitive.i
+  summary: ''
+- uid: microsoft.quantum.primitive.m
+  summary: ''
+- uid: microsoft.quantum.primitive.measure
+  summary: ''
+- uid: microsoft.quantum.primitive.multix
+  summary: ''
+- uid: microsoft.quantum.primitive.r
+  summary: ''
+- uid: microsoft.quantum.primitive.r1
+  summary: ''
+- uid: microsoft.quantum.primitive.r1frac
+  summary: ''
+- uid: microsoft.quantum.primitive.random
+  summary: ''
+- uid: microsoft.quantum.primitive.reset
+  summary: ''
+- uid: microsoft.quantum.primitive.resetall
+  summary: ''
+- uid: microsoft.quantum.primitive.rfrac
+  summary: ''
+- uid: microsoft.quantum.primitive.rx
+  summary: ''
+- uid: microsoft.quantum.primitive.ry
+  summary: ''
+- uid: microsoft.quantum.primitive.rz
+  summary: ''
+- uid: microsoft.quantum.primitive.s
+  summary: ''
+- uid: microsoft.quantum.primitive.swap
+  summary: ''
+- uid: microsoft.quantum.primitive.t
+  summary: ''
+- uid: microsoft.quantum.primitive.x
+  summary: ''
+- uid: microsoft.quantum.primitive.y
+  summary: ''
+- uid: microsoft.quantum.primitive.z
+  summary: ''
+functions:
+- uid: microsoft.quantum.primitive.message
+  summary: ''
+...

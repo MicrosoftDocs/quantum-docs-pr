@@ -1,0 +1,18 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.arcsin
+name: ArcSin
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+syntax: 'function ArcSin (theta : Double) : Double'
+input:
+  content: '(theta : Double)'
+  types:
+  - name: theta
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+...

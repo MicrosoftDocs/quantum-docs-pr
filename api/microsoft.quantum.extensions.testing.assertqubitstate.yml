@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.testing.assertqubitstate
+name: AssertQubitState
+type: operation
+namespace: Microsoft.Quantum.Extensions.Testing
+syntax: 'operation AssertQubitState (expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double) : Unit'
+input:
+  content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
+  types:
+  - name: expected
+    types:
+    - uid: microsoft.quantum.math.complex
+    - uid: microsoft.quantum.math.complex
+  - name: register
+    isPrimitive: true
+    uid: Qubit
+  - name: tolerance
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

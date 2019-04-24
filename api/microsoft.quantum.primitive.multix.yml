@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.multix
+name: MultiX
+type: operation
+namespace: Microsoft.Quantum.Primitive
+syntax: 'operation MultiX (qubits : Qubit[]) : Unit'
+input:
+  content: '(qubits : Qubit[])'
+  types:
+  - name: qubits
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

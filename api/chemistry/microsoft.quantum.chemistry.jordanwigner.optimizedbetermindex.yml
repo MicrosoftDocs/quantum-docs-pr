@@ -1,8 +1,0 @@
-### YamlMime:QSharpType
-uid: microsoft.quantum.chemistry.jordanwigner.optimizedbetermindex
-name: OptimizedBETermIndex
-type: newtype
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Term data in the optimized block-encoding algorithm.
-syntax: newtype OptimizedBETermIndex = (Double, Bool, Bool[], Bool[], Int[], Int[]);
-...

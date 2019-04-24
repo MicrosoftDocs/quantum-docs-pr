@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.y
+name: Y
+type: operation
+namespace: Microsoft.Quantum.Primitive
+syntax: 'operation Y (qubit : Qubit) : Unit'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

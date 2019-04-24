@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.testing.assertallzerotol
+name: AssertAllZeroTol
+type: operation
+namespace: Microsoft.Quantum.Extensions.Testing
+syntax: 'operation AssertAllZeroTol (qubits : Qubit[], tolerance : Double) : Unit'
+input:
+  content: '(qubits : Qubit[], tolerance : Double)'
+  types:
+  - name: qubits
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: tolerance
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

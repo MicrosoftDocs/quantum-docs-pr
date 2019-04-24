@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.maxb
+name: MaxB
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+syntax: 'function MaxB (a : BigInt, b : BigInt) : BigInt'
+input:
+  content: '(a : BigInt, b : BigInt)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: BigInt
+  - name: b
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - isPrimitive: true
+    uid: BigInt
+...

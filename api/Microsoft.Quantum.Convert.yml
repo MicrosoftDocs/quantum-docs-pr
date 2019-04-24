@@ -1,0 +1,44 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.convert
+name: Microsoft.Quantum.Convert
+summary: |2-
+   These are some of the functions from System.Convert namespace of .NET CLR
+   that are relevant within Q# type system.
+
+   # Remarks
+   If there are several versions of the function for Bool, Int and Double types, the corresponding
+   functions have suffix B,I and D.
+functions:
+- uid: microsoft.quantum.convert.bigintasboolarray
+  summary: |-
+    Converts a given big integer to an array of Booleans.
+    The 0 element of the array is the least significant bit of the big integer.
+- uid: microsoft.quantum.convert.boolarrayasbigint
+  summary: |-
+    Converts a given array of Booleans to an equivalent big integer.
+    The 0 element of the array is the least significant bit of the big integer.
+- uid: microsoft.quantum.convert.boolasstring
+  summary: Converts a given boolean value to an equivalent string representation.
+- uid: microsoft.quantum.convert.doubleasstring
+  summary: Converts a given double-precision floating-point number to an equivalent string representation.
+- uid: microsoft.quantum.convert.doubleasstringwithformat
+  summary: |-
+    Converts a given double-precision floating-point number to an equivalent string representation,
+    using the given format.
+- uid: microsoft.quantum.convert.intasbigint
+  summary: Converts a given integer to an equivalent big integer.
+- uid: microsoft.quantum.convert.intasdouble
+  summary: |-
+    Converts a given integer to an equivalent double-precision
+    floating-point number.
+- uid: microsoft.quantum.convert.intasstring
+  summary: Converts a given integer number to an equivalent string representation.
+- uid: microsoft.quantum.convert.intasstringwithformat
+  summary: |-
+    Converts a given integer number to an equivalent string representation,
+    using the given format.
+- uid: microsoft.quantum.convert.pauliarrayasint
+  summary: |-
+    Encodes a multi-qubit Pauli operator represented as an array of
+    single-qubit Pauli operators into an integer.
+...

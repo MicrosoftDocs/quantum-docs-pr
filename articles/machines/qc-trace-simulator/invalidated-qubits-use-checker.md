@@ -20,7 +20,7 @@ operation UseReleasedQubitTest () : Unit {
     body (...) {
         mutable q = new Qubit[1];
         using(ans = Qubit[1]) {
-            set q[0] = ans[0];
+            set q w/= 0 <- ans[0];
         }
         H(q[0]);
     }

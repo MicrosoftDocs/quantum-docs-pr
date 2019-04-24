@@ -17,7 +17,7 @@ If there is only one body and no other specializations, one can specify the impl
 ```qsharp
 operation UseReleasedQubitTest () : Unit {
     mutable q = new Qubit[1];
-    using(ans = Qubit[1]) {
+    using(ans = Qubit()) {
         set q w/= 0 <- ans[0];
     }
     H(q[0]);

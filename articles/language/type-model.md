@@ -14,9 +14,9 @@ uid: microsoft.quantum.language.type-model
 This section lays out the Q# type model and describes the syntax for
 specifying and working with types.
 
-## Primitive Types
+## Intrinsic Types
 
-Q# provides several primitive types, out of which all other types
+Q# provides several Intrinsic types, out of which all other types
 are constructed:
 
 - The `Int` type represents a 64-bit signed (two's complement) integer.

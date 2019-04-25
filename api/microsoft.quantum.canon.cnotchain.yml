@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cnotchain
+name: CNOTChain
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  Computes the parity of an array of qubits in-place.
+
+  It follows the pattern
+  $\ket{q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cdots$.
+syntax: 'operation CNOTChain (qubits : Qubit[]) : Unit'
+input:
+  content: '(qubits : Qubit[])'
+  types:
+  - name: qubits
+    summary: |-
+      Array of qubits on which parity is computed
+      and stored.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stackpeek
+name: StackPeek
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Retrieves the topmost element of a <xref:microsoft.quantum.canon.resultstack>.
+syntax: 'function StackPeek (stack : Microsoft.Quantum.Canon.ResultStack) : Result'
+input:
+  content: '(stack : Microsoft.Quantum.Canon.ResultStack)'
+  types:
+  - name: stack
+    summary: The stack to be inspected.
+    uid: microsoft.quantum.canon.resultstack
+output:
+  content: Result
+  types:
+  - summary: The value stored at the top of `stack`.
+    isPrimitive: true
+    uid: Result
+...

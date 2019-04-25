@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertintequal
+name: AssertIntEqual
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function AssertIntEqual (actual : Int, expected : Int, message : String) : Unit'
+input:
+  content: '(actual : Int, expected : Int, message : String)'
+  types:
+  - name: actual
+    isPrimitive: true
+    uid: Int
+  - name: expected
+    isPrimitive: true
+    uid: Int
+  - name: message
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

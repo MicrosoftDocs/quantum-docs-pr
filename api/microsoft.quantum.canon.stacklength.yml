@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stacklength
+name: StackLength
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  Retrieves the number of elements stored in a
+  <xref:microsoft.quantum.canon.resultstack>.
+syntax: 'function StackLength (stack : Microsoft.Quantum.Canon.ResultStack) : Int'
+input:
+  content: '(stack : Microsoft.Quantum.Canon.ResultStack)'
+  types:
+  - name: stack
+    summary: The stack whose length is to be determined.
+    uid: microsoft.quantum.canon.resultstack
+output:
+  content: Int
+  types:
+  - summary: The number of elements on the stack.
+    isPrimitive: true
+    uid: Int
+...

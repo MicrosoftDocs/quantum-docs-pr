@@ -21,7 +21,7 @@ remarks: |-
 
   ```qsharp
   // PI() is a Q# function that returns an approximation of π.
-  R(pauli, -PI() * ToDouble(numerator) / ToDouble(2 ^ (power - 1)), qubit);
+  R(pauli, -PI() * IntAsDouble(numerator) / IntAsDouble(2 ^ (power - 1)), qubit);
   ```
 syntax: 'operation RFrac (pauli : Pauli, numerator : Int, power : Int, qubit : Qubit) : Unit'
 input:

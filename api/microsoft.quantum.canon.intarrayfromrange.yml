@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.intarrayfromrange
+name: IntArrayFromRange
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function IntArrayFromRange (range : Range) : Int[]'
+input:
+  content: '(range : Range)'
+  types:
+  - name: range
+    isPrimitive: true
+    uid: Range
+output:
+  content: Int[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Int
+...

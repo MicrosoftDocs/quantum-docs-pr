@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.isresultone
+name: IsResultOne
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Tests if a given Result value is equal to `One`.
+syntax: 'function IsResultOne (input : Result) : Bool'
+input:
+  content: '(input : Result)'
+  types:
+  - name: input
+    summary: '`Result` value to be tested.'
+    isPrimitive: true
+    uid: Result
+output:
+  content: Bool
+  types:
+  - summary: Returns `true` if `input` is equal to `One`.
+    isPrimitive: true
+    uid: Bool
+...

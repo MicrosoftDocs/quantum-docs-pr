@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.assertalmostequal
+name: AssertAlmostEqual
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function AssertAlmostEqual (actual : Double, expected : Double) : Unit'
+input:
+  content: '(actual : Double, expected : Double)'
+  types:
+  - name: actual
+    isPrimitive: true
+    uid: Double
+  - name: expected
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

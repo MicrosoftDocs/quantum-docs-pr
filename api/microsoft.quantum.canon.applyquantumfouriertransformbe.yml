@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyquantumfouriertransformbe
+name: ApplyQuantumFourierTransformBE
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyQuantumFourierTransformBE (qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+input:
+  content: '(qs : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: qs
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

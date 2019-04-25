@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.asqubitarray
+name: AsQubitArray
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function AsQubitArray (arr : Qubit[]) : Qubit[]'
+input:
+  content: '(arr : Qubit[])'
+  types:
+  - name: arr
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Qubit[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Qubit
+...

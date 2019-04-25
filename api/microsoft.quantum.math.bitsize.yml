@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.bitsize
+name: BitSize
+type: function
+namespace: Microsoft.Quantum.Math
+summary: |-
+  For a non-negative integer `a`, returns the number of bits required to represent `a`.
+
+  That is, returns the smallest $n$ such
+  that $a < 2^n$.
+syntax: 'function BitSize (a : Int) : Int'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    summary: The integer whose bit-size is to be computed.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: The bit-size of `a`.
+    isPrimitive: true
+    uid: Int
+...

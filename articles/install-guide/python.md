@@ -49,7 +49,7 @@ To get started, create a new `Quantum.qs` file with the following content:
 namespace Microsoft.Samples 
 {
     open Microsoft.Quantum.Primitive;
-    open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Standard;
 
     operation HelloQ() : Result
     {

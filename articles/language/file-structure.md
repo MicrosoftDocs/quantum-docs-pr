@@ -277,7 +277,7 @@ from the controlled version’s statement block.
 ### Examples
 
 An operation definition might be as simple as the following,
-which defines the primitive Pauli X operation:
+which defines the Intrinsic Pauli X operation:
 
 ```qsharp
 operation X (q : Qubit) : Unit

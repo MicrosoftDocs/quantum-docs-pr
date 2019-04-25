@@ -137,7 +137,7 @@ This makes functions returning `()` a useful tool for embedding assertions and d
 
 ### Logging
 
-The primitive function @"microsoft.quantum.primitive.message" has type `String -> ()` and enables the creation of diagnostic messages.
+The Intrinsic function @"microsoft.quantum.primitive.message" has type `String -> ()` and enables the creation of diagnostic messages.
 
 The `onLog` action of `QuantumSimulator` can be used to define actions performed when Q# code calls `Message`. By default logged messages are printed to standard output.
 
@@ -264,7 +264,7 @@ Notice how the ids of the qubits are shown at the top in their significant order
 ```qsharp
 namespace Samples
 {
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Extensions.Diagnostics;
 
     operation Operation () : Unit
@@ -321,7 +321,7 @@ The following example shows you how you can use both @"microsoft.quantum.extensi
 ```qsharp
 namespace app
 {
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Extensions.Diagnostics;
 
     operation Operation () : Unit

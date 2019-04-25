@@ -125,13 +125,13 @@ may be formed using the `~~~` (bitwise complement) unary operator.
 
 The two `Bool` literal values are `true` and `false`.
 
-Given any two expressions of the same primitive type, the `==`
+Given any two expressions of the same intrinsic type, the `==`
 and `!=` binary operators may be used to construct a `Bool` expression.
 The expression will be true if the two expressions are (resp. are not) equal.
 
 :new: Values of user-defined types may not be compared.
 The unwrap operator must be used to compare user-defined type values
-for types based on primitive types.
+for types based on intrinsic types.
 For example,
 
 ```qsharp
@@ -624,7 +624,7 @@ Operator | Arity | Description | Operand Types
  `+`, `-` | Binary | Addition or string and array concatenation, subtraction | `Int` or `Double`, additionally `String` or any array type for `+`
  `<<<`, `>>>` | Binary | Left shift, right shift | `Int`
  `<`, `<=`, `>`, `>=` | Binary | Less-than, less-than-or-equal, greater-than, greater-than-or-equal comparisons | `Int` or `Double`
- `==`, `!=` | Binary | equal, not-equal comparisons | any primitive type
+ `==`, `!=` | Binary | equal, not-equal comparisons | any intrinsic type
  `&&&` | Binary | Bitwise AND | `Int`
  `^^^` | Binary | Bitwise XOR | `Int`
  <code>\|\|\|</code> | Binary | Bitwise OR | `Int`

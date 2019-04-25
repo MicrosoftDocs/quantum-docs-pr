@@ -42,7 +42,7 @@ name of the namespace, an open brace `{`, the definitions contained in the
 namespace, and a close brace `}`.
 Namespace names follow the .NET pattern of a sequence of one or more legal
 symbols separated by periods `.`.
-For instance, `MyQuantumStuff` and `Microsoft.Quantum.Canon` are valid
+For instance, `MyQuantumStuff` and `Microsoft.Quantum.Standard` are valid
 namespace names.
 By convention, the symbols in a namespace name are capitalized,
 but this is not required.
@@ -66,7 +66,7 @@ The `open` directive applies to the entire namespace block.
 For instance,
 
 ```qsharp
-open Microsoft.Quantum.Canon;
+open Microsoft.Quantum.Standard;
 ```
 
 ## User-Defined Type Declarations

@@ -313,12 +313,9 @@ $$
 In this notation, there are at most $N^2+N^4$ coefficients. However, many of these coefficients may be collected as they correspond to the same operator. For instance, in the case where $p,q,r,s$ are distinct indices, we may use the anti-commutation rules to show that:
 
 $$
-a^\dagger\_{p}a^\dagger\_{q}a\_{r}a\_{s}
-=
--a^\dagger\_{q}a^\dagger\_{p}a\_{r}a\_{s}
-=
--a^\dagger\_{p}a^\dagger\_{q}a\_{s}a\_{r}
-=
+a^\dagger\_{p}a^\dagger\_{q}a\_{r}a\_{s} =
+-a^\dagger\_{q}a^\dagger\_{p}a\_{r}a\_{s} =
+-a^\dagger\_{p}a^\dagger\_{q}a\_{s}a\_{r} =
 a^\dagger\_{q}a^\dagger\_{p}a\_{s}a\_{r}.
 $$
 

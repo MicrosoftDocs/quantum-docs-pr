@@ -71,7 +71,6 @@ The `Bell.qs` file should have the following contents:
 ```qsharp
 namespace Quantum.Bell
 {
-    open Microsoft.Quantum.Standard;
     open Microsoft.Quantum.Primitive;
 
     operation HelloQ () : Unit {

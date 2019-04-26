@@ -16,7 +16,7 @@ specifying and working with types.
 
 ## Primitive Types
 
-Q# provides several Intrinsic types, out of which all other types
+Q# provides several primitive types, out of which all other types
 are constructed:
 
 - The `Int` type represents a 64-bit signed (two's complement) integer.

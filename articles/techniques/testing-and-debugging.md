@@ -265,7 +265,7 @@ Notice how the ids of the qubits are shown at the top in their significant order
 namespace Samples
 {
     open Microsoft.Quantum.Intrinsic;
-    open Microsoft.Quantum.Extensions.Diagnostics;
+    open Microsoft.Quantum.Diagnostics;
 
     operation Operation () : Unit
     {

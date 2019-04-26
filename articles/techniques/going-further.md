@@ -54,7 +54,7 @@ function MapIntsToPaulis(fn : Int -> Pauli, values : Int[]) : Pauli[] {
 function MapDoublesToStrings(fn : Double -> String, values : Double[]) : String[] {
     mutable mappedValues = new String[Length(values)];
     for (idx in 0..Length(values) - 1) {
-        set mappedValues w/= idx <- fn(values[idx];
+        set mappedValues w/= idx <- fn(values[idx]);
     }
     return mappedValues;
 }

@@ -112,7 +112,6 @@ The file should now look like:
 namespace Quantum.Bell
 {
     open Microsoft.Quantum.Primitive;
-    open Microsoft.Quantum.Standard;
 
     operation Set (desired: Result, q1: Qubit) : Unit
     {

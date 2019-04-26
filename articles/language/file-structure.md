@@ -66,7 +66,7 @@ The `open` directive applies to the entire namespace block.
 For instance,
 
 ```qsharp
-open Microsoft.Quantum.Standard;
+open Microsoft.Quantum.Canon;
 ```
 
 ## User-Defined Type Declarations

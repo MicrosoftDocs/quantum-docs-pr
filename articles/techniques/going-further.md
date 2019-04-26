@@ -46,7 +46,7 @@ A map from integers to Paulis, for instance, looks much the same as a map from f
 function MapIntsToPaulis(fn : Int -> Pauli, values : Int[]) : Pauli[] {
     mutable mappedValues = new Pauli[Length(values)];
     for (idx in 0..Length(values) - 1) {
-        set mappedValues w/= idx <- fn(values[idx];
+        set mappedValues w/= idx <- fn(values[idx]);
     }
     return mappedValues;
 }

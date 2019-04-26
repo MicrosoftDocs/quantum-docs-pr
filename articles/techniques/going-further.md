@@ -83,7 +83,7 @@ For `Map`, we thus write:
 function Map<'Input, 'Output>(fn : 'Input -> 'Output, values : 'Input[]) : 'Output {
     mutable mappedValues = new 'Output[Length(values)];
     for (idx in 0..Length(values) - 1) {
-        set mappedValues w/= idx <- fn(values[idx];
+        set mappedValues w/= idx <- fn(values[idx]);
     }
     return mappedValues;
 }

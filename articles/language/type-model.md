@@ -14,7 +14,7 @@ uid: microsoft.quantum.language.type-model
 This section lays out the Q# type model and describes the syntax for
 specifying and working with types.
 
-## Intrinsic Types
+## Primitive Types
 
 Q# provides several Intrinsic types, out of which all other types
 are constructed:

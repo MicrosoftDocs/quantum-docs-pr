@@ -12,7 +12,7 @@ uid: microsoft.quantum.glossary
 |-------------|----------|
 |Adjoint|The complex conjugate transpose of the operation. For operations that implement a unitary operator, the adjoint is the inverse of the operation.|
 |Callable|Operations and functions are collectively known as *callables*.|
-|Standard|Operations and functions defined in Q# building on the logic defined in the prelude. The Standard library implementation is agnostic with respect to target machines.|
+|Standard|Operations and functions defined in Q# building on the logic defined in the prelude. The standard library implementation is agnostic with respect to target machines.|
 |Clifford group|The set of operations that occupy the octants of the Bloch sphere. These include: `X`, `Y`, `Z`, `H` and `S`|
 |Controlled|A quantum operation that takes one or more qubits as enablers for the target operation.|
 |Dirac Notation|A shorthand representation of quantum state. See the [Dirac Notation](xref:microsoft.quantum.concepts.dirac) section for more details.|

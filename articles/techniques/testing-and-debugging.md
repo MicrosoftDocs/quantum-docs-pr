@@ -322,7 +322,7 @@ The following example shows you how you can use both @"microsoft.quantum.extensi
 namespace app
 {
     open Microsoft.Quantum.Intrinsic;
-    open Microsoft.Quantum.Extensions.Diagnostics;
+    open Microsoft.Quantum.Diagnostics;
 
     operation Operation () : Unit
     {

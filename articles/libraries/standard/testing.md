@@ -76,7 +76,7 @@ Then, using the likelihood function for quantum measurements,
         \right).
 \end{align}
 
-The <xref:microsoft.quantum.extensions.testing.assertqubitstate> implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.canon.complex>.
+The <xref:microsoft.quantum.extensions.testing.assertqubitstate> implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.extensions.math.complex>.
 This is helpful when the expected state can be computed mathematically.
 
 ## Asserting Equality of Quantum Operations ##
@@ -89,7 +89,7 @@ We may be interested in asserting that $U^\dagger(t) = U(-t)$, as expected if $t
 Broadly speaking, there are two different strategies that we can follow in making the assertion that two operations `U` and `V` act identically.
 First, we can check that `U(target); (Adjoint V)(target);` preserves each state in a given basis.
 Second, we can check that `U(target); (Adjoint V)(target);` acting on half of an entangled state preserves that entanglement.
-These strategies are implemented by the canon operations <xref:microsoft.quantum.canon.assertoperationsequalinplace> and <xref:microsoft.quantum.canon.assertoperationsequalreferenced>, respectively.
+These strategies are implemented by the canon operations <xref:microsoft.quantum.extensions.testing.assertoperationsequalinplace> and <xref:microsoft.quantum.extensions.testing.assertoperationsequalreferenced>, respectively.
 
 > [!NOTE]
 > The referenced assertion discussed above works based on the [Choi–Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality), a mathematical framework which relates operations on $n$ qubits to entangled states on $2n$ qubits.
@@ -98,7 +98,7 @@ These strategies are implemented by the canon operations <xref:microsoft.quantum
 
 Roughly, these strategies are distinguished by a time–space tradeoff.
 Iterating through each input state takes additional time, while using entanglement as a reference requires storing additional qubits.
-In cases where an operation implements a reversible classical operation, such that we are only interested in its behavior on computational basis states, <xref:microsoft.quantum.canon.assertoperationsequalinplacecompbasis> tests equality on this restricted set of inputs.
+In cases where an operation implements a reversible classical operation, such that we are only interested in its behavior on computational basis states, <xref:microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis> tests equality on this restricted set of inputs.
 
 > [!TIP]
 > The iteration over input states is handled by the enumeration operations <xref:microsoft.quantum.canon.iteratethroughcartesianproduct> and <xref:microsoft.quantum.canon.iteratethroughcartesianpower>.

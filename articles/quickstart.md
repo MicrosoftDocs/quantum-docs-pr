@@ -71,7 +71,8 @@ The `Bell.qs` file should have the following contents:
 ```qsharp
 namespace Quantum.Bell
 {
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Intrinsic;
 
     operation HelloQ () : Unit {
         Message("Hello quantum world!");
@@ -87,7 +88,8 @@ The file should now look like:
 ```qsharp
 namespace Quantum.Bell
 {
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Canon;
 
     operation Set (desired: Result, q1: Qubit) : Unit {
         Message("Hello quantum world!");
@@ -111,7 +113,8 @@ The file should now look like:
 ```qsharp
 namespace Quantum.Bell
 {
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Canon;
 
     operation Set (desired: Result, q1: Qubit) : Unit
     {

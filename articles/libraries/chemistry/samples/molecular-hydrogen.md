@@ -66,7 +66,9 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-We can now use Canon's phase estimation algorithms to learn the ground state energy using the above simulation. This requires preparing a good approximation to the quantum ground state. Suggestions for such approximations are provided in the `Broombridge` schema, but absent these suggestions, the default approach adds a number of `hamiltonian.NElectrons` electrons to  greedily minimizes the diagonal one-electron term energies. The following snippet shows how the real time-evolution output by the chemistry simulation library may be integrated with quantum phase estimation.
+We can now use the standard library's phase estimation algorithms to learn the ground state energy using the above simulation. This requires preparing a good approximation to the quantum ground state. Suggestions for such approximations are provided in the `Broombridge` schema, but absent these suggestions, the default approach adds a number of `hamiltonian.NElectrons` electrons to  greedily minimize the diagonal one-electron term energies. The phase estimation functions and operations are located in the [Microsoft.Quantum.Characterization namespace](xref:microsoft.quantum.characterization in DocFX notation).
+
+The following snippet shows how the real time-evolution output by the chemistry simulation library may be integrated with quantum phase estimation.
 
 ```qsharp
 operation GetEnergyByTrotterization (

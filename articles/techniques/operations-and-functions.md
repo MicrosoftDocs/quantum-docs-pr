@@ -89,7 +89,7 @@ If the compiler cannot generate a definition automatically, or if a more efficie
 We will see examples of this below in [Higher-Order Control Flow](xref:microsoft.quantum.concepts.control-flow).
 
 To call a variant of an operation, use the `Adjoint` or `Controlled` keywords.
-For example, the superdense coding example above can be written more compactly by using the adjoint of `PrepareEntangledState` to transform the entangled state back into an unentangled pair of qubits:
+For example, the superdense coding example above can be written more compactly by using the adjoint of `PrepareEntangledPair` to transform the entangled state back into an unentangled pair of qubits:
 
 ```qsharp
 operation Superdense(here : Qubit, there : Qubit) : (Result, Result) {

@@ -15,7 +15,7 @@ uid: microsoft.quantum.libraries.licensing
 ---
 # Licensing #
 
-The Standard namespace is an extensive collection functions and operations and is open source, licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt). The Standard and other libraries, such as the Quantum Chemistry Library, can be obtained from the [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) repository on GitHub. 
+The standard library is an extensive collection functions and operations and is open source, licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt). The standard library and other libraries, such as the Quantum Chemistry Library, can be obtained from the [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) repository on GitHub. 
 
 Microsoft's Quantum Development Kit also provides specialized library functions and operations that are licensed under a [Microsoft Research license](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE). These can be obtained from the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository on GitHub.
 

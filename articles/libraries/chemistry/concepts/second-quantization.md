@@ -303,21 +303,22 @@ By combining coefficients of equivalent terms, we reduce the total number of ter
 ### Internal Representation
 
 A fermionic Hamiltonian with one- and two-body interactions is represented in second-quantized notation as
+
 $$
 \begin{align}
 H=\sum\_{pq}h\_{pq}a^\dagger\_{p}a\_{q}+\frac{1}{2}\sum\_{pqrs}h\_{pqrs}a^\dagger\_{p}a^\dagger\_{q}a\_{r}a\_{s}.
 \end{align}
 $$
-In this notation, there are at most $N^2+N^4$ coefficients. However, many of these coefficients may be collected as they correspond to the same operator. For instance, in the case where $p,q,r,s$ are distinct indices, we may use the anti-commutation rules to show that
+
+In this notation, there are at most $N^2+N^4$ coefficients. However, many of these coefficients may be collected as they correspond to the same operator. For instance, in the case where $p,q,r,s$ are distinct indices, we may use the anti-commutation rules to show that:
+
 $$
-a^\dagger\_{p}a^\dagger\_{q}a\_{r}a\_{s}
-=
--a^\dagger\_{q}a^\dagger\_{p}a\_{r}a\_{s}
-=
--a^\dagger\_{p}a^\dagger\_{q}a\_{s}a\_{r}
-=
+a^\dagger\_{p}a^\dagger\_{q}a\_{r}a\_{s} =
+-a^\dagger\_{q}a^\dagger\_{p}a\_{r}a\_{s} =
+-a^\dagger\_{p}a^\dagger\_{q}a\_{s}a\_{r} =
 a^\dagger\_{q}a^\dagger\_{p}a\_{s}a\_{r}.
 $$
+
 Furthermore, as $H$ is Hermitian, every non-Hermitian fermionic operator, say $h\_{pqrs}a^\dagger\_{p}a^\dagger\_{q}a\_{r}a\_{s}$, has a Hermitian conjugate that is also found in $H$. In order to uniquely index groups of terms characterized by these symmetries, we define a canonical ordering on the indices $(i\_1,\cdots,i\_n,j\_1,\cdots,j\_m)$ of any sequence of $n+m$ fermionic operators $a^\dagger\_{i\_1}\cdots a^\dagger\_{i\_n}a\_{j\_1}\cdots a\_{j\_m}$as follows:
 -   All creation operators $a^\dagger\_{i\_\cdot}$ are placed before all annihilation operators $a\_{j\_\cdot}$.
 -   All creation operator indices are sorted in ascending order, that is $i\_1< i\_2< \cdots < i\_n$.

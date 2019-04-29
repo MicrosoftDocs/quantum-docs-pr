@@ -33,7 +33,7 @@ Let's write out a quick example of `Map`, using ★ as a placeholder while we fi
 function Map(fn : ★ -> ★, values : ★[]) : ★[] {
     mutable mappedValues = new ★[Length(values)];
     for (idx in 0..Length(values) - 1) {
-        set mappedValues[idx] = fn(values[idx]);
+        set mappedValues w/= idx <- fn(values[idx]);
     }
     return mappedValues;
 }
@@ -46,7 +46,7 @@ A map from integers to Paulis, for instance, looks much the same as a map from f
 function MapIntsToPaulis(fn : Int -> Pauli, values : Int[]) : Pauli[] {
     mutable mappedValues = new Pauli[Length(values)];
     for (idx in 0..Length(values) - 1) {
-        set mappedValues[idx] = fn(values[idx]);
+        set mappedValues w/= idx <- fn(values[idx]);
     }
     return mappedValues;
 }
@@ -54,7 +54,7 @@ function MapIntsToPaulis(fn : Int -> Pauli, values : Int[]) : Pauli[] {
 function MapDoublesToStrings(fn : Double -> String, values : Double[]) : String[] {
     mutable mappedValues = new String[Length(values)];
     for (idx in 0..Length(values) - 1) {
-        set mappedValues[idx] = fn(values[idx]);
+        set mappedValues w/= idx <- fn(values[idx]);
     }
     return mappedValues;
 }
@@ -83,7 +83,7 @@ For `Map`, we thus write:
 function Map<'Input, 'Output>(fn : 'Input -> 'Output, values : 'Input[]) : 'Output {
     mutable mappedValues = new 'Output[Length(values)];
     for (idx in 0..Length(values) - 1) {
-        set mappedValues[idx] = fn(values[idx]);
+        set mappedValues w/= idx <- fn(values[idx]);
     }
     return mappedValues;
 }

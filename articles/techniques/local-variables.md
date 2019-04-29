@@ -43,7 +43,7 @@ This is very useful, for instance, for creating arrays programmatically:
 function Squares(nSquares : Int) : Int[] {
     mutable squares = new Int[nSquares];
     for (idxSquare in 0..nSquares - 1) {
-        set squares[idxSequare] = idxSquare ^ 2;
+        set squares w/= idxSequare <- idxSquare ^ 2;
     }
     return squares;
 }

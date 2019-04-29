@@ -168,7 +168,7 @@ Add the following operation to the namespace, after the end of the
                 // Count the number of ones we saw:
                 if (res == One)
                 {
-                    set numOnes = numOnes + 1;
+                    set numOnes += 1;
                 }
             }
             Set(Zero, qubit);
@@ -411,7 +411,7 @@ The full routine now looks like this:
                 // Count the number of ones we saw:
                 if (res == One)
                 {
-                    set numOnes = numOnes + 1;
+                    set numOnes += 1;
                 }
             }
             
@@ -444,13 +444,13 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
 
                 if (M (qubits[1]) == res) 
                 {
-                    set agree = agree + 1;
+                    set agree += 1;
                 }
 
                 // Count the number of ones we saw:
                 if (res == One)
                 {
-                    set numOnes = numOnes + 1;
+                    set numOnes += 1;
                 }
             }
             

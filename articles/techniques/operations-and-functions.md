@@ -102,22 +102,16 @@ is Ctl + Adj {
         H(here);
         CNOT(here, there);
     }
-
-    adjoint (...) { // user defined adjoint specialization
-        CNOT(here, there);
-        H(here);
-    }
 }
 ```
 
 We will see more examples of this below in [Higher-Order Control Flow](xref:microsoft.quantum.concepts.control-flow).
 
-To obtain the adjointed or controlled version of an operation, use the `Adjoint` or `Controlled` keywords.
-For example, the superdense coding example above can be written more compactly by using the adjoint of `PrepareEntangledState` to transform the entangled state back into an unentangled pair of qubits:
+To call a specialization of an operation, use the `Adjoint` or `Controlled` keywords.
+For example, the superdense coding example above can be written more compactly by using the adjoint of `PrepareEntangledPair` to transform the entangled state back into an unentangled pair of qubits:
 
 ```qsharp
 operation Superdense(here : Qubit, there : Qubit) : (Result, Result) {
-
     Adjoint PrepareEntangledPair(there, here);
 
     let firstBit = M(there);

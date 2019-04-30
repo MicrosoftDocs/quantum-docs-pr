@@ -56,7 +56,7 @@ $ code . # To open in Visual Studio Code.
 
 Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
 
-#### Source files of a Quantum application
+#### Source files for a quantum application
 Your development environment should have two files open:
 `Driver.cs`, which will hold the C# driver for your quantum code,
 and `Operations.qs`, which will hold the quantum code itself.

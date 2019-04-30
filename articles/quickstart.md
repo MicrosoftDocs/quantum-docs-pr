@@ -262,7 +262,7 @@ namespace Quantum.Bell
 }
 ```
 
-#### Run Quantum operations from C# driver
+#### Run quantum operations from a C# host program
 Replace the body of the `Main` method with the following code:
 
 ```csharp

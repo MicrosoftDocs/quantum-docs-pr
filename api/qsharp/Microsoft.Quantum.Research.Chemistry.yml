@@ -1,16 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.research.chemistry
 name: Microsoft.Quantum.Research.Chemistry
-operations:
-- uid: microsoft.quantum.research.chemistry.applydeltaparity
-  summary: |-
-    Computes difference in parity between a previous PQRS... terms
-    and the next PQRS... term. This difference is computed on a auxiliary
-    qubit.
-- uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
-  summary: |-
-    Simple state preparation of trial state by occupying
-    spin-orbitals
 functions:
 - uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
   summary: |-
@@ -27,4 +17,15 @@ functions:
     `GeneratorIndex` convention defined in this file.
 - uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
   summary: Returns optimized Trotter step operation and the parameters necessary to run it.
+operations:
+- uid: microsoft.quantum.research.chemistry.applydeltaparity
+  summary: |-
+    Computes difference in parity between a previous PQRS... terms
+    and the next PQRS... term. This difference is computed on a auxiliary
+    qubit.
+- uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
+  summary: |-
+    Simple state preparation of trial state by occupying
+    spin-orbitals
+newtypes: []
 ...

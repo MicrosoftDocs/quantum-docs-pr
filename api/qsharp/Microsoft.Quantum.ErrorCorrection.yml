@@ -42,9 +42,15 @@ functions:
     perform a table-lookup decoding with respect to the given array of Pauli operations.
 operations:
 - uid: microsoft.quantum.errorcorrection.bitflipdecoder
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.errorcorrection.encodeintobitflipcode".
 - uid: microsoft.quantum.errorcorrection.bitflipencoder
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.errorcorrection.encodeintobitflipcode".
 - uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
   summary: Decodes from the [3, 1, 3] / ⟦3, 1, 1⟧ bit-flip code.
 - uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
@@ -62,9 +68,15 @@ operations:
     An encoding operation that maps an unencoded quantum register to an encoded quantum register
     under the ⟦7, 1, 3⟧ Steane quantum code.
 - uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
 - uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.errorcorrection.encodeintofivequbitcode".
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
   summary: |-
     Performs a π/4 rotation about `Y`.
@@ -98,9 +110,15 @@ operations:
     Performs a single round of error correction by a quantum code
     described by a `CSS` type.
 - uid: microsoft.quantum.errorcorrection.steanecodedecoder
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
 - uid: microsoft.quantum.errorcorrection.steanecodeencoder
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
 newtypes:
 - uid: microsoft.quantum.errorcorrection.css
   summary: |-

@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.iscoprime
+name: IsCoprime
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function IsCoprime (a : Int, b : Int) : Bool'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Int
+  - name: b
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - isPrimitive: true
+    uid: Bool
+...

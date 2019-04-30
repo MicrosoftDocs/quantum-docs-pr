@@ -5,6 +5,47 @@ summary: |2-
    # Summary
    This namespace contains functions and operations used for coherently
    computing arithmetic.
+functions:
+- uid: microsoft.quantum.arithmetic.bigendianaslittleendian
+  summary: |-
+    Converts a `BigEndian` qubit register to a `LittleEndian` qubit
+    register by reversing the qubit ordering.
+- uid: microsoft.quantum.arithmetic.littleendianasbigendian
+  summary: |-
+    Converts a `LittleEndian` qubit register to a `BigEndian` qubit
+    register by reversing the qubit ordering.
+- uid: microsoft.quantum.arithmetic.reversedopbe
+  summary: |-
+    Given an operation that takes a big-endian input, returns a new
+    operation that takes a little-endian input.
+- uid: microsoft.quantum.arithmetic.reversedopbea
+  summary: |-
+    Given an operation that takes a big-endian input, returns a new
+    operation that takes a little-endian input.
+- uid: microsoft.quantum.arithmetic.reversedopbec
+  summary: |-
+    Given an operation that takes a big-endian input, returns a new
+    operation that takes a little-endian input.
+- uid: microsoft.quantum.arithmetic.reversedopbeca
+  summary: |-
+    Given an operation that takes a big-endian input, returns a new
+    operation that takes a little-endian input.
+- uid: microsoft.quantum.arithmetic.reversedople
+  summary: |-
+    Given an operation that takes a little-endian input, returns a new
+    operation that takes a big-endian input.
+- uid: microsoft.quantum.arithmetic.reversedoplea
+  summary: |-
+    Given an operation that takes a little-endian input, returns a new
+    operation that takes a big-endian input.
+- uid: microsoft.quantum.arithmetic.reversedoplec
+  summary: |-
+    Given an operation that takes a little-endian input, returns a new
+    operation that takes a big-endian input.
+- uid: microsoft.quantum.arithmetic.reversedopleca
+  summary: |-
+    Given an operation that takes a little-endian input, returns a new
+    operation that takes a big-endian input.
 operations:
 - uid: microsoft.quantum.arithmetic.applyleoperationonphasele
   summary: |-
@@ -237,45 +278,4 @@ newtypes:
     $x$ in the computational basis,
     then $\operatorname{QFTLE} \ket{x}$ is the encoding of $x$ in the QFT
     basis.
-functions:
-- uid: microsoft.quantum.arithmetic.bigendianaslittleendian
-  summary: |-
-    Converts a `BigEndian` qubit register to a `LittleEndian` qubit
-    register by reversing the qubit ordering.
-- uid: microsoft.quantum.arithmetic.littleendianasbigendian
-  summary: |-
-    Converts a `LittleEndian` qubit register to a `BigEndian` qubit
-    register by reversing the qubit ordering.
-- uid: microsoft.quantum.arithmetic.reversedopbe
-  summary: |-
-    Given an operation that takes a big-endian input, returns a new
-    operation that takes a little-endian input.
-- uid: microsoft.quantum.arithmetic.reversedopbea
-  summary: |-
-    Given an operation that takes a big-endian input, returns a new
-    operation that takes a little-endian input.
-- uid: microsoft.quantum.arithmetic.reversedopbec
-  summary: |-
-    Given an operation that takes a big-endian input, returns a new
-    operation that takes a little-endian input.
-- uid: microsoft.quantum.arithmetic.reversedopbeca
-  summary: |-
-    Given an operation that takes a big-endian input, returns a new
-    operation that takes a little-endian input.
-- uid: microsoft.quantum.arithmetic.reversedople
-  summary: |-
-    Given an operation that takes a little-endian input, returns a new
-    operation that takes a big-endian input.
-- uid: microsoft.quantum.arithmetic.reversedoplea
-  summary: |-
-    Given an operation that takes a little-endian input, returns a new
-    operation that takes a big-endian input.
-- uid: microsoft.quantum.arithmetic.reversedoplec
-  summary: |-
-    Given an operation that takes a little-endian input, returns a new
-    operation that takes a big-endian input.
-- uid: microsoft.quantum.arithmetic.reversedopleca
-  summary: |-
-    Given an operation that takes a little-endian input, returns a new
-    operation that takes a big-endian input.
 ...

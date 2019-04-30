@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.continuedfractionconvergent
+name: ContinuedFractionConvergent
+type: function
+namespace: Microsoft.Quantum.Canon
+syntax: 'function ContinuedFractionConvergent (fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int) : Microsoft.Quantum.Math.Fraction'
+input:
+  content: '(fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int)'
+  types:
+  - name: fraction
+    uid: microsoft.quantum.math.fraction
+  - name: denominatorBound
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Math.Fraction
+  types:
+  - uid: microsoft.quantum.math.fraction
+...

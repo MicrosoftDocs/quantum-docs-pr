@@ -33,26 +33,6 @@ functions:
   summary: Returns Qubitization operation and the parameters necessary to run it.
 - uid: microsoft.quantum.chemistry.jordanwigner.trottersteporacle
   summary: Returns Trotter step operation and the parameters necessary to run it.
-newtypes:
-- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
-  summary: |-
-    Format of data passed from C# to Q# to represent all information for Hamiltonian simulation.
-    The meaning of the data represented is determined by the algorithm that receives it.
-- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
-  summary: |-
-    Format of data passed from C# to Q# to represent preparation of the initial state
-    The meaning of the data represented is determined by the algorithm that receives it.
-- uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
-  summary: |-
-    Format of data passed from C# to Q# to represent terms of the Hamiltonian.
-    The meaning of the data represented is determined by the algorithm that receives it.
-- uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
-  summary: |-
-    Function that returns `OptimizedBETermIndex` data for term `n` given an
-    integer `n`, together with the number of terms in the first `Int` and
-    the sum of absolute-values of all term coefficients in the `Double`.
-- uid: microsoft.quantum.chemistry.jordanwigner.optimizedbetermindex
-  summary: Term data in the optimized block-encoding algorithm.
 operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
   summary: |-
@@ -82,4 +62,24 @@ operations:
     U\ket{p}\ket{\psi} = \ket{p}Z\_p\ket{\psi}
     \end{align}
     $$
+newtypes:
+- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
+  summary: |-
+    Format of data passed from C# to Q# to represent all information for Hamiltonian simulation.
+    The meaning of the data represented is determined by the algorithm that receives it.
+- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
+  summary: |-
+    Format of data passed from C# to Q# to represent preparation of the initial state
+    The meaning of the data represented is determined by the algorithm that receives it.
+- uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
+  summary: |-
+    Format of data passed from C# to Q# to represent terms of the Hamiltonian.
+    The meaning of the data represented is determined by the algorithm that receives it.
+- uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
+  summary: |-
+    Function that returns `OptimizedBETermIndex` data for term `n` given an
+    integer `n`, together with the number of terms in the first `Int` and
+    the sum of absolute-values of all term coefficients in the `Double`.
+- uid: microsoft.quantum.chemistry.jordanwigner.optimizedbetermindex
+  summary: Term data in the optimized block-encoding algorithm.
 ...

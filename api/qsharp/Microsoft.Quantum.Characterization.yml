@@ -5,6 +5,7 @@ summary: |2-
    # Summary
    This namespace contains functions and operations for learning properties of
    quantum states and processes, including tomography and phase estimation.
+functions: []
 operations:
 - uid: microsoft.quantum.characterization.continuousphaseestimationiteration
   summary: |-
@@ -41,4 +42,5 @@ operations:
   summary: |-
     Performs a single-qubit process tomography measurement in the Pauli
     basis, given a particular channel of interest.
+newtypes: []
 ...

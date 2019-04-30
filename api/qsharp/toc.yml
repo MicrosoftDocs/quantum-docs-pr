@@ -1,5 +1,5 @@
-- name: Microsoft.Quantum.Bitwise
-  uid: microsoft.quantum.bitwise
+- uid: microsoft.quantum.bitwise
+  name: Microsoft.Quantum.Bitwise
   items:
   - name: And
     uid: microsoft.quantum.bitwise.and
@@ -15,9 +15,29 @@
     uid: microsoft.quantum.bitwise.xor
   - name: ZBits
     uid: microsoft.quantum.bitwise.zbits
-- name: Microsoft.Quantum.Convert
-  uid: microsoft.quantum.convert
+- uid: microsoft.quantum.convert
+  name: Microsoft.Quantum.Convert
   items:
+  - name: BigIntAsBoolArray
+    uid: microsoft.quantum.convert.bigintasboolarray
+  - name: BoolArrayAsBigInt
+    uid: microsoft.quantum.convert.boolarrayasbigint
+  - name: BoolAsString
+    uid: microsoft.quantum.convert.boolasstring
+  - name: DoubleAsString
+    uid: microsoft.quantum.convert.doubleasstring
+  - name: DoubleAsStringWithFormat
+    uid: microsoft.quantum.convert.doubleasstringwithformat
+  - name: IntAsBigInt
+    uid: microsoft.quantum.convert.intasbigint
+  - name: IntAsDouble
+    uid: microsoft.quantum.convert.intasdouble
+  - name: IntAsString
+    uid: microsoft.quantum.convert.intasstring
+  - name: IntAsStringWithFormat
+    uid: microsoft.quantum.convert.intasstringwithformat
+  - name: PauliArrayAsInt
+    uid: microsoft.quantum.convert.pauliarrayasint
   - name: BoolArrayAsInt
     uid: microsoft.quantum.convert.boolarrayasint
   - name: BoolArrayAsPauli
@@ -40,8 +60,8 @@
     uid: microsoft.quantum.convert.resultarrayasint
   - name: ResultAsBool
     uid: microsoft.quantum.convert.resultasbool
-- name: Microsoft.Quantum.Core
-  uid: microsoft.quantum.core
+- uid: microsoft.quantum.core
+  name: Microsoft.Quantum.Core
   items:
   - name: Length
     uid: microsoft.quantum.core.length
@@ -53,15 +73,37 @@
     uid: microsoft.quantum.core.rangestart
   - name: RangeStep
     uid: microsoft.quantum.core.rangestep
-- name: Microsoft.Quantum.Diagnostics
-  uid: microsoft.quantum.diagnostics
+- uid: microsoft.quantum.diagnostics
+  name: Microsoft.Quantum.Diagnostics
   items:
+  - name: AssertAllZero
+    uid: microsoft.quantum.diagnostics.assertallzero
+  - name: AssertAllZeroWithinTolerance
+    uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
+  - name: AssertOperationsEqualInPlace
+    uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
+  - name: AssertOperationsEqualInPlaceCompBasis
+    uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
+  - name: AssertOperationsEqualReferenced
+    uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
+  - name: AssertQubit
+    uid: microsoft.quantum.diagnostics.assertqubit
+  - name: AssertQubitIsInStateWithinTolerance
+    uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
+  - name: AssertQubitWithinTolerance
+    uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
+  - name: DumpMachine
+    uid: microsoft.quantum.diagnostics.dumpmachine
+  - name: DumpRegister
+    uid: microsoft.quantum.diagnostics.dumpregister
   - name: AllEqualityFactB
     uid: microsoft.quantum.diagnostics.allequalityfactb
   - name: EqualityFactB
     uid: microsoft.quantum.diagnostics.equalityfactb
   - name: EqualityFactI
     uid: microsoft.quantum.diagnostics.equalityfacti
+  - name: EqualityFactL
+    uid: microsoft.quantum.diagnostics.equalityfactl
   - name: EqualityFactR
     uid: microsoft.quantum.diagnostics.equalityfactr
   - name: EqualityWithinToleranceFact
@@ -70,15 +112,15 @@
     uid: microsoft.quantum.diagnostics.fact
   - name: NearEqualityFact
     uid: microsoft.quantum.diagnostics.nearequalityfact
-- name: Microsoft.Quantum.Environment
-  uid: microsoft.quantum.environment
+- uid: microsoft.quantum.environment
+  name: Microsoft.Quantum.Environment
   items:
   - name: GetQubitsAvailableToBorrow
     uid: microsoft.quantum.environment.getqubitsavailabletoborrow
   - name: GetQubitsAvailableToUse
     uid: microsoft.quantum.environment.getqubitsavailabletouse
-- name: Microsoft.Quantum.Extensions.Bitwise
-  uid: microsoft.quantum.extensions.bitwise
+- uid: microsoft.quantum.extensions.bitwise
+  name: Microsoft.Quantum.Extensions.Bitwise
   items:
   - name: And
     uid: microsoft.quantum.extensions.bitwise.and
@@ -94,8 +136,8 @@
     uid: microsoft.quantum.extensions.bitwise.xor
   - name: ZBits
     uid: microsoft.quantum.extensions.bitwise.zbits
-- name: Microsoft.Quantum.Extensions.Convert
-  uid: microsoft.quantum.extensions.convert
+- uid: microsoft.quantum.extensions.convert
+  name: Microsoft.Quantum.Extensions.Convert
   items:
   - name: BigIntToBools
     uid: microsoft.quantum.extensions.convert.biginttobools
@@ -117,15 +159,15 @@
     uid: microsoft.quantum.extensions.convert.tostringi
   - name: ToStringIFormat
     uid: microsoft.quantum.extensions.convert.tostringiformat
-- name: Microsoft.Quantum.Extensions.Diagnostics
-  uid: microsoft.quantum.extensions.diagnostics
+- uid: microsoft.quantum.extensions.diagnostics
+  name: Microsoft.Quantum.Extensions.Diagnostics
   items:
   - name: DumpMachine
     uid: microsoft.quantum.extensions.diagnostics.dumpmachine
   - name: DumpRegister
     uid: microsoft.quantum.extensions.diagnostics.dumpregister
-- name: Microsoft.Quantum.Extensions.Math
-  uid: microsoft.quantum.extensions.math
+- uid: microsoft.quantum.extensions.math
+  name: Microsoft.Quantum.Extensions.Math
   items:
   - name: AbsB
     uid: microsoft.quantum.extensions.math.absb
@@ -199,8 +241,8 @@
     uid: microsoft.quantum.extensions.math.tanh
   - name: Truncate
     uid: microsoft.quantum.extensions.math.truncate
-- name: Microsoft.Quantum.Extensions.Testing
-  uid: microsoft.quantum.extensions.testing
+- uid: microsoft.quantum.extensions.testing
+  name: Microsoft.Quantum.Extensions.Testing
   items:
   - name: AssertAllZero
     uid: microsoft.quantum.extensions.testing.assertallzero
@@ -218,8 +260,8 @@
     uid: microsoft.quantum.extensions.testing.assertqubitstate
   - name: AssertQubitTol
     uid: microsoft.quantum.extensions.testing.assertqubittol
-- name: Microsoft.Quantum.Intrinsic
-  uid: microsoft.quantum.intrinsic
+- uid: microsoft.quantum.intrinsic
+  name: Microsoft.Quantum.Intrinsic
   items:
   - name: Assert
     uid: microsoft.quantum.intrinsic.assert
@@ -275,9 +317,83 @@
     uid: microsoft.quantum.intrinsic.y
   - name: Z
     uid: microsoft.quantum.intrinsic.z
-- name: Microsoft.Quantum.Math
-  uid: microsoft.quantum.math
+- uid: microsoft.quantum.math
+  name: Microsoft.Quantum.Math
   items:
+  - name: AbsD
+    uid: microsoft.quantum.math.absd
+  - name: AbsI
+    uid: microsoft.quantum.math.absi
+  - name: AbsL
+    uid: microsoft.quantum.math.absl
+  - name: ArcCos
+    uid: microsoft.quantum.math.arccos
+  - name: ArcSin
+    uid: microsoft.quantum.math.arcsin
+  - name: ArcTan
+    uid: microsoft.quantum.math.arctan
+  - name: ArcTan2
+    uid: microsoft.quantum.math.arctan2
+  - name: Ceiling
+    uid: microsoft.quantum.math.ceiling
+  - name: Complex
+    uid: microsoft.quantum.math.complex
+  - name: Cos
+    uid: microsoft.quantum.math.cos
+  - name: Cosh
+    uid: microsoft.quantum.math.cosh
+  - name: DivRemL
+    uid: microsoft.quantum.math.divreml
+  - name: E
+    uid: microsoft.quantum.math.e
+  - name: ExpD
+    uid: microsoft.quantum.math.expd
+  - name: Floor
+    uid: microsoft.quantum.math.floor
+  - name: IEEERemainder
+    uid: microsoft.quantum.math.ieeeremainder
+  - name: Log
+    uid: microsoft.quantum.math.log
+  - name: Log10
+    uid: microsoft.quantum.math.log10
+  - name: MaxD
+    uid: microsoft.quantum.math.maxd
+  - name: MaxI
+    uid: microsoft.quantum.math.maxi
+  - name: MaxL
+    uid: microsoft.quantum.math.maxl
+  - name: MinD
+    uid: microsoft.quantum.math.mind
+  - name: MinI
+    uid: microsoft.quantum.math.mini
+  - name: MinL
+    uid: microsoft.quantum.math.minl
+  - name: ModPowL
+    uid: microsoft.quantum.math.modpowl
+  - name: PI
+    uid: microsoft.quantum.math.pi
+  - name: PowD
+    uid: microsoft.quantum.math.powd
+  - name: Round
+    uid: microsoft.quantum.math.round
+  - name: SignD
+    uid: microsoft.quantum.math.signd
+  - name: SignI
+    uid: microsoft.quantum.math.signi
+  - name: SignL
+    uid: microsoft.quantum.math.signl
+  - name: Sin
+    uid: microsoft.quantum.math.sin
+  - name: Sinh
+    uid: microsoft.quantum.math.sinh
+  - name: Sqrt
+    uid: microsoft.quantum.math.sqrt
+  - name: Tan
+    uid: microsoft.quantum.math.tan
+  - name: Tanh
+    uid: microsoft.quantum.math.tanh
+  - name: Truncate
+    uid: microsoft.quantum.math.truncate
   - name: AbsComplex
     uid: microsoft.quantum.math.abscomplex
   - name: AbsComplexPolar
@@ -296,28 +412,44 @@
     uid: microsoft.quantum.math.argcomplex
   - name: ArgComplexPolar
     uid: microsoft.quantum.math.argcomplexpolar
-  - name: BitSize
-    uid: microsoft.quantum.math.bitsize
+  - name: BigFraction
+    uid: microsoft.quantum.math.bigfraction
+  - name: BitSizeI
+    uid: microsoft.quantum.math.bitsizei
+  - name: BitSizeL
+    uid: microsoft.quantum.math.bitsizel
   - name: ComplexPolar
     uid: microsoft.quantum.math.complexpolar
   - name: ComplexPolarToComplex
     uid: microsoft.quantum.math.complexpolartocomplex
   - name: ComplexToComplexPolar
     uid: microsoft.quantum.math.complextocomplexpolar
-  - name: ContinuedFractionConvergent
-    uid: microsoft.quantum.math.continuedfractionconvergent
-  - name: ExpMod
-    uid: microsoft.quantum.math.expmod
-  - name: ExtendedGCD
-    uid: microsoft.quantum.math.extendedgcd
+  - name: ContinuedFractionConvergentI
+    uid: microsoft.quantum.math.continuedfractionconvergenti
+  - name: ContinuedFractionConvergentL
+    uid: microsoft.quantum.math.continuedfractionconvergentl
+  - name: ExpModI
+    uid: microsoft.quantum.math.expmodi
+  - name: ExpModL
+    uid: microsoft.quantum.math.expmodl
+  - name: ExtendedGreatestCommonDivisorI
+    uid: microsoft.quantum.math.extendedgreatestcommondivisori
+  - name: ExtendedGreatestCommonDivisorL
+    uid: microsoft.quantum.math.extendedgreatestcommondivisorl
   - name: Fraction
     uid: microsoft.quantum.math.fraction
-  - name: GCD
-    uid: microsoft.quantum.math.gcd
-  - name: InverseMod
-    uid: microsoft.quantum.math.inversemod
-  - name: IsCoprime
-    uid: microsoft.quantum.math.iscoprime
+  - name: GreatestCommonDivisorI
+    uid: microsoft.quantum.math.greatestcommondivisori
+  - name: GreatestCommonDivisorL
+    uid: microsoft.quantum.math.greatestcommondivisorl
+  - name: InverseModI
+    uid: microsoft.quantum.math.inversemodi
+  - name: InverseModL
+    uid: microsoft.quantum.math.inversemodl
+  - name: IsCoprimeI
+    uid: microsoft.quantum.math.iscoprimei
+  - name: IsCoprimeL
+    uid: microsoft.quantum.math.iscoprimel
   - name: Lg
     uid: microsoft.quantum.math.lg
   - name: LogOf2
@@ -326,8 +458,10 @@
     uid: microsoft.quantum.math.max
   - name: Min
     uid: microsoft.quantum.math.min
-  - name: Modulus
-    uid: microsoft.quantum.math.modulus
+  - name: ModulusI
+    uid: microsoft.quantum.math.modulusi
+  - name: ModulusL
+    uid: microsoft.quantum.math.modulusl
   - name: PNorm
     uid: microsoft.quantum.math.pnorm
   - name: PNormalized
@@ -342,8 +476,8 @@
     uid: microsoft.quantum.math.randomsinglequbitpauli
   - name: RealMod
     uid: microsoft.quantum.math.realmod
-- name: Microsoft.Quantum.Primitive
-  uid: microsoft.quantum.primitive
+- uid: microsoft.quantum.primitive
+  name: Microsoft.Quantum.Primitive
   items:
   - name: Assert
     uid: microsoft.quantum.primitive.assert
@@ -401,8 +535,8 @@
     uid: microsoft.quantum.primitive.y
   - name: Z
     uid: microsoft.quantum.primitive.z
-- name: Microsoft.Quantum.AmplitudeAmplification
-  uid: microsoft.quantum.amplitudeamplification
+- uid: microsoft.quantum.amplitudeamplification
+  name: Microsoft.Quantum.AmplitudeAmplification
   items:
   - name: AmpAmpByOracle
     uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
@@ -430,8 +564,8 @@
     uid: microsoft.quantum.amplitudeamplification.rotationphases
   - name: TargetStateReflectionOracle
     uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
-- name: Microsoft.Quantum.Arithmetic
-  uid: microsoft.quantum.arithmetic
+- uid: microsoft.quantum.arithmetic
+  name: Microsoft.Quantum.Arithmetic
   items:
   - name: ApplyLEOperationOnPhaseLE
     uid: microsoft.quantum.arithmetic.applyleoperationonphasele
@@ -541,8 +675,8 @@
     uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   - name: Sum
     uid: microsoft.quantum.arithmetic.sum
-- name: Microsoft.Quantum.Arrays
-  uid: microsoft.quantum.arrays
+- uid: microsoft.quantum.arrays
+  name: Microsoft.Quantum.Arrays
   items:
   - name: All
     uid: microsoft.quantum.arrays.all
@@ -592,8 +726,8 @@
     uid: microsoft.quantum.arrays.zip3
   - name: Zip4
     uid: microsoft.quantum.arrays.zip4
-- name: Microsoft.Quantum.Canon
-  uid: microsoft.quantum.canon
+- uid: microsoft.quantum.canon
+  name: Microsoft.Quantum.Canon
   items:
   - name: AdiabaticStateEnergyUnitary
     uid: microsoft.quantum.canon.adiabaticstateenergyunitary
@@ -749,6 +883,8 @@
     uid: microsoft.quantum.canon.bindc
   - name: BindCA
     uid: microsoft.quantum.canon.bindca
+  - name: BitSize
+    uid: microsoft.quantum.canon.bitsize
   - name: BoolArrFromPositiveInt
     uid: microsoft.quantum.canon.boolarrfrompositiveint
   - name: BoolArrFromResultArr
@@ -787,6 +923,8 @@
     uid: microsoft.quantum.canon.conjugatedbyc
   - name: ConjugatedByCA
     uid: microsoft.quantum.canon.conjugatedbyca
+  - name: ContinuedFractionConvergent
+    uid: microsoft.quantum.canon.continuedfractionconvergent
   - name: ControlledOnBitString
     uid: microsoft.quantum.canon.controlledonbitstring
   - name: ControlledOnInt
@@ -807,6 +945,10 @@
     uid: microsoft.quantum.canon.decomposeintotimestepsca
   - name: EmbedPauli
     uid: microsoft.quantum.canon.embedpauli
+  - name: ExpMod
+    uid: microsoft.quantum.canon.expmod
+  - name: ExtendedGCD
+    uid: microsoft.quantum.canon.extendedgcd
   - name: Filter
     uid: microsoft.quantum.canon.filter
   - name: ForAll
@@ -815,6 +957,8 @@
     uid: microsoft.quantum.canon.forany
   - name: Fst
     uid: microsoft.quantum.canon.fst
+  - name: GCD
+    uid: microsoft.quantum.canon.gcd
   - name: HY
     uid: microsoft.quantum.canon.hy
   - name: Ignore
@@ -833,6 +977,10 @@
     uid: microsoft.quantum.canon.integerincrementphasele
   - name: IntMax
     uid: microsoft.quantum.canon.intmax
+  - name: InverseMod
+    uid: microsoft.quantum.canon.inversemod
+  - name: IsCoprime
+    uid: microsoft.quantum.canon.iscoprime
   - name: IsResultOne
     uid: microsoft.quantum.canon.isresultone
   - name: IsResultZero
@@ -859,6 +1007,8 @@
     uid: microsoft.quantum.canon.modularincrementphasele
   - name: ModularMultiplyByConstantLE
     uid: microsoft.quantum.canon.modularmultiplybyconstantle
+  - name: Modulus
+    uid: microsoft.quantum.canon.modulus
   - name: MultiplexerBruteForceFromGenerator
     uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   - name: MultiplexerFromGenerator
@@ -983,8 +1133,8 @@
     uid: microsoft.quantum.canon.withca
   - name: XOR
     uid: microsoft.quantum.canon.xor
-- name: Microsoft.Quantum.Characterization
-  uid: microsoft.quantum.characterization
+- uid: microsoft.quantum.characterization
+  name: Microsoft.Quantum.Characterization
   items:
   - name: ContinuousPhaseEstimationIteration
     uid: microsoft.quantum.characterization.continuousphaseestimationiteration
@@ -1002,8 +1152,8 @@
     uid: microsoft.quantum.characterization.robustphaseestimation
   - name: SingleQubitProcessTomographyMeasurement
     uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
-- name: Microsoft.Quantum.ErrorCorrection
-  uid: microsoft.quantum.errorcorrection
+- uid: microsoft.quantum.errorcorrection
+  name: Microsoft.Quantum.ErrorCorrection
   items:
   - name: BitFlipCode
     uid: microsoft.quantum.errorcorrection.bitflipcode
@@ -1073,8 +1223,8 @@
     uid: microsoft.quantum.errorcorrection.syndromemeasop
   - name: TableLookupRecovery
     uid: microsoft.quantum.errorcorrection.tablelookuprecovery
-- name: Microsoft.Quantum.Measurement
-  uid: microsoft.quantum.measurement
+- uid: microsoft.quantum.measurement
+  name: Microsoft.Quantum.Measurement
   items:
   - name: MeasurePaulis
     uid: microsoft.quantum.measurement.measurepaulis
@@ -1088,8 +1238,8 @@
     uid: microsoft.quantum.measurement.mresetz
   - name: MultiM
     uid: microsoft.quantum.measurement.multim
-- name: Microsoft.Quantum.Oracles
-  uid: microsoft.quantum.oracles
+- uid: microsoft.quantum.oracles
+  name: Microsoft.Quantum.Oracles
   items:
   - name: ContinuousOracle
     uid: microsoft.quantum.oracles.continuousoracle
@@ -1113,8 +1263,8 @@
     uid: microsoft.quantum.oracles.stateoracle
   - name: StateOracleFromDeterministicStateOracle
     uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-- name: Microsoft.Quantum.Preparation
-  uid: microsoft.quantum.preparation
+- uid: microsoft.quantum.preparation
+  name: Microsoft.Quantum.Preparation
   items:
   - name: BlochSphereCoordinates
     uid: microsoft.quantum.preparation.blochspherecoordinates
@@ -1146,8 +1296,8 @@
     uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
   - name: StatePreparationPositiveCoefficients
     uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
-- name: Microsoft.Quantum.Simulation
-  uid: microsoft.quantum.simulation
+- uid: microsoft.quantum.simulation
+  name: Microsoft.Quantum.Simulation
   items:
   - name: AddGeneratorSystems
     uid: microsoft.quantum.simulation.addgeneratorsystems
@@ -1231,8 +1381,8 @@
     uid: microsoft.quantum.simulation.trotterstep
   - name: Unitary
     uid: microsoft.quantum.simulation.unitary
-- name: Microsoft.Quantum.Chemistry
-  uid: microsoft.quantum.chemistry
+- uid: microsoft.quantum.chemistry
+  name: Microsoft.Quantum.Chemistry
   items:
   - name: HTerm
     uid: microsoft.quantum.chemistry.hterm
@@ -1244,8 +1394,8 @@
     uid: microsoft.quantum.chemistry.htermtogenidx
   - name: IsNotZero
     uid: microsoft.quantum.chemistry.isnotzero
-- name: Microsoft.Quantum.Chemistry.JordanWigner
-  uid: microsoft.quantum.chemistry.jordanwigner
+- uid: microsoft.quantum.chemistry.jordanwigner
+  name: Microsoft.Quantum.Chemistry.JordanWigner
   items:
   - name: JordanWignerBlockEncodingGeneratorSystem
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggeneratorsystem
@@ -1283,8 +1433,8 @@
     uid: microsoft.quantum.chemistry.jordanwigner.selectz
   - name: TrotterStepOracle
     uid: microsoft.quantum.chemistry.jordanwigner.trottersteporacle
-- name: Microsoft.Quantum.Research.Chemistry
-  uid: microsoft.quantum.research.chemistry
+- uid: microsoft.quantum.research.chemistry
+  name: Microsoft.Quantum.Research.Chemistry
   items:
   - name: ApplyDeltaParity
     uid: microsoft.quantum.research.chemistry.applydeltaparity
@@ -1298,8 +1448,8 @@
     uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
   - name: OptimizedTrotterStepOracle
     uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
-- name: Microsoft.Quantum.Research.RandomWalkPhaseEstimation
-  uid: microsoft.quantum.research.randomwalkphaseestimation
+- uid: microsoft.quantum.research.randomwalkphaseestimation
+  name: Microsoft.Quantum.Research.RandomWalkPhaseEstimation
   items:
   - name: ExpOracle
     uid: microsoft.quantum.research.randomwalkphaseestimation.exporacle

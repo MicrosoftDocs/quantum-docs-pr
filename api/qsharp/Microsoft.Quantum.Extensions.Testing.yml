@@ -1,21 +1,50 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
+functions: []
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertallzero".
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertallzerowithintolerance".
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
+    Note that the order of the arguments to this operation has changed.
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis".
+    Note that the order of the arguments to this operation has changed.
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertoperationsequalreferenced".
+    Note that the order of the arguments to this operation has changed.
 - uid: microsoft.quantum.extensions.testing.assertqubit
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertqubit".
 - uid: microsoft.quantum.extensions.testing.assertqubitstate
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
 - uid: microsoft.quantum.extensions.testing.assertqubittol
-  summary: ''
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+newtypes: []
 ...

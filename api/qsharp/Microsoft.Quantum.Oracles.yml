@@ -6,6 +6,26 @@ summary: |2-
    This namespaces provides user-defined types to decorate various kinds of
    oracles by their intended use in quantum algorithms such as phase estimation
    and amplitude amplification.
+functions:
+- uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
+  summary: Converts an oracle of type `StateOracle` to `DeterministicStateOracle`.
+- uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
+  summary: Combines the oracles `DeterministicStateOracle` and `ObliviousOracle`.
+- uid: microsoft.quantum.oracles.oracletodiscrete
+  summary: |-
+    Given an operation representing a "black-box" oracle, returns a discrete-time oracle
+    which represents the "black-box" oracle repeated multiple times.
+- uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
+  summary: |-
+    Constructs reflection about a given state from an oracle.
+
+    Given the oracle $O$ of type
+    <xref:microsoft.quantum.canon.deterministicstateoracle>,
+    the result of this function is a reflection around the state $\ket{\psi}$
+    where $O\ket{0} = \ket{\psi}$.
+- uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
+  summary: Converts an oracle of type `DeterministicStateOracle` to `StateOracle`.
+operations: []
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: |-
@@ -52,23 +72,4 @@ newtypes:
 
     - An integer indexing the flag qubit $f$.
     - The system register $s$ that will store the desired quantum state $\ket{\psi}\_s$.
-functions:
-- uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: Converts an oracle of type `StateOracle` to `DeterministicStateOracle`.
-- uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: Combines the oracles `DeterministicStateOracle` and `ObliviousOracle`.
-- uid: microsoft.quantum.oracles.oracletodiscrete
-  summary: |-
-    Given an operation representing a "black-box" oracle, returns a discrete-time oracle
-    which represents the "black-box" oracle repeated multiple times.
-- uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
-  summary: |-
-    Constructs reflection about a given state from an oracle.
-
-    Given the oracle $O$ of type
-    <xref:microsoft.quantum.canon.deterministicstateoracle>,
-    the result of this function is a reflection around the state $\ket{\psi}$
-    where $O\ket{0} = \ket{\psi}$.
-- uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: Converts an oracle of type `DeterministicStateOracle` to `StateOracle`.
 ...

@@ -1,11 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.chemistry
 name: Microsoft.Quantum.Chemistry
-newtypes:
-- uid: microsoft.quantum.chemistry.hterm
-  summary: |-
-    Format of data passed from C# to Q# to represent a term of the Hamiltonian.
-    The meaning of the data represented is determined by the algorithm that receives it.
 functions:
 - uid: microsoft.quantum.chemistry.htermstogenidx
   summary: Converts an index to a Hamiltonian term in `HTerm[]` data format to a GeneratorIndex.
@@ -15,4 +10,10 @@ functions:
   summary: Converts a Hamiltonian term in `HTerm` data format to a GeneratorIndex.
 - uid: microsoft.quantum.chemistry.isnotzero
   summary: Checks whether a `Double` number is not approximately zero.
+operations: []
+newtypes:
+- uid: microsoft.quantum.chemistry.hterm
+  summary: |-
+    Format of data passed from C# to Q# to represent a term of the Hamiltonian.
+    The meaning of the data represented is determined by the algorithm that receives it.
 ...

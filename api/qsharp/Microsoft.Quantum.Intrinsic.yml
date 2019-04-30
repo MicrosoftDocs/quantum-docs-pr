@@ -1,6 +1,9 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.intrinsic
 name: Microsoft.Quantum.Intrinsic
+functions:
+- uid: microsoft.quantum.intrinsic.message
+  summary: Logs a message.
 operations:
 - uid: microsoft.quantum.intrinsic.assert
   summary: |-
@@ -259,7 +262,5 @@ operations:
     0 & -1
     \end{bmatrix}.
     \end{align}
-functions:
-- uid: microsoft.quantum.intrinsic.message
-  summary: Logs a message.
+newtypes: []
 ...

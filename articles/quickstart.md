@@ -69,8 +69,7 @@ To enter the Q# code, make sure that you are editing the
 The `Bell.qs` file should have the following contents:
 
 ```qsharp
-namespace Quantum.Bell
-{
+namespace Quantum.Bell {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Canon;
 
@@ -86,8 +85,7 @@ parameters (the content of the parentheses) to contain the string
 The file should now look like:
 
 ```qsharp
-namespace Quantum.Bell
-{
+namespace Quantum.Bell {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Canon;
 
@@ -108,8 +106,7 @@ Now, replace `Message("Hello quantum world!");` with the following code between 
 The file should now look like:
 
 ```qsharp
-namespace Quantum.Bell
-{
+namespace Quantum.Bell {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Canon;
 
@@ -172,8 +169,7 @@ Add the following operation to the namespace, after the end of the
 
 This operation (`BellTest`) will loop for `count` iterations, set a specified `initial` value on a qubit and then measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
 
-All of these calls use primitive quantum operations that are
-defined in the `Microsoft.Quantum.Intrinsic` namespace.
+All of these calls use intrinsic quantum operations that are defined in the `Microsoft.Quantum.Intrinsic` namespace.
 For instance, the `M` operation measures its argument qubit in the
 computational (`Z`) basis, and `X` applies a state flip around the x axis
 to its argument qubit.
@@ -417,12 +413,10 @@ The full routine now looks like this:
 If we run this, we'll get exactly the same 50-50 result we got before. However, what we're really interested in is how the second qubit reacts to the first being measured. We'll add this statistic with a new version of the `BellTest` operation:
 
 ```qsharp
-    operation BellTest (count : Int, initial: Result) : (Int, Int, Int)
-    {
+    operation BellTest (count : Int, initial: Result) : (Int, Int, Int) {
         mutable numOnes = 0;
         mutable agree = 0;
         using ((q0, q1) = (Qubit(), Qubit())) {
-        {
             for (test in 1..count)
             {
                 Set (initial, q0);
@@ -483,9 +477,7 @@ Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1),
 
 ## Estimating Resources
 
-Sometimes the quantum program is impossible to simulate on a classical computer (for example, if it uses too many qubits). In this case the researchers need to get an estimate of how many resources (qubits or certain gates) the program will use when executed on a quantum computer.
-of how many quantum resources the program will use on a quantum computer as it would be impossible to simulate the 
-program on a classical computer. We can do this without changing the Q# operation but using a different target machine, a  `ResourcesEstimator`, for executing it in the C# host code; 
+Sometimes the quantum program is impossible to simulate on a classical computer (for example, if it uses too many qubits). In this case the researchers need to get an estimate of how many resources (qubits or certain gates) the program will use on a quantum computer as it would be impossible to simulate the program on a classical computer. We can do this without changing the Q# operation but using a different target machine, a  `ResourcesEstimator`, for executing it in the C# host code; 
 for example, modify the code in the the __Driver.cs__ file to be:
 
 ```csharp

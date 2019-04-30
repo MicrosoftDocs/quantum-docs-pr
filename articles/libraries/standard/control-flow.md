@@ -52,15 +52,12 @@ In Q#, this might get represented as a `for` loop over a register:
 ```qsharp
 /// # Summary
 /// Applies $H$ to all qubits in a register.
-operation HAll(register : Qubit[]) : Unit {
-    body (...) {
-        for (idxQubit in 0..Length(register) - 1) {
-            H(register[idxQubit]);
-        }
+operation HAll(register : Qubit[]) : Unit 
+is Adj + Ctl {
+
+    for (qubit in register) {
+        H(qubit);
     }
-    adjoint auto;
-    controlled auto;
-    adjoint controlled auto;
 }
 ```
 
@@ -78,12 +75,12 @@ Here, the suffix `AC` indicates that the call to `ApplyToEach` is itself adjoint
 Thus, if `U` supports `Adjoint` and `Controlled`, the following lines are equivalent:
 
 ```qsharp
-(Adjoint ApplyToEachCA)(U, register);
-ApplyToEach((Adjoint U), register);
+Adjoint ApplyToEachCA(U, register);
+ApplyToEach(Adjoint U, register);
 ```
 
-In particular, this means that calls to `ApplyToEachCA` can appear in operations which declare `adjoint auto`.
-Similarly, <xref:microsoft.quantum.canon.applytoeachindex> is useful for representing patterns of the form `U(0, targets[0]); U(1, targets[1]); ...`, and offers versions for each combination of functors supports by its input.
+In particular, this means that calls to `ApplyToEachCA` can appear in operations for which an adjoint specialization is auto-generated.
+Similarly, <xref:microsoft.quantum.canon.applytoeachindex> is useful for representing patterns of the form `U(0, targets[0]); U(1, targets[1]); ...`, and offers versions for each combination of functors supported by its input.
 
 > [!TIP]
 > `ApplyToEach` is type-parameterized such that it can be used with operations that take inputs other than `Qubit`.
@@ -108,8 +105,8 @@ Similarly, functions like <xref:microsoft.quantum.canon.map> and <xref:microsoft
 
 The control flow constructs offered by the canon take operations and functions as their inputs, such that it is helpful to be able to compose several operations or functions into a single callable.
 For instance, the pattern $UVU^{\dagger}$ is extremely common in quantum programming, such that the canon provides the operation <xref:microsoft.quantum.canon.with> as an abstraction for this pattern.
-This abstraction also allows for more efficient compliation into circuits, as `Controlled` acting on the sequence `U(qubit); V(qubit); (Adjoint U)(qubit);` does not need to act on each `U`.
-To see this, let $c(U)$ be the unitary representing `(Controlled U)([control], target)` and let $c(V)$ be defined in the same way.
+This abstraction also allows for more efficient compilation into circuits, as `Controlled` acting on the sequence `U(qubit); V(qubit); (Adjoint U)(qubit);` does not need to act on each `U`.
+To see this, let $c(U)$ be the unitary representing `Controlled U([control], target)` and let $c(V)$ be defined in the same way.
 Then for an arbitrary state $\ket{\psi}$,
 \begin{align}
     c(U) c(V) c(U)^\dagger \ket{1} \otimes \ket{\psi}
@@ -132,8 +129,8 @@ Since controlling operations can be expensive in general, using controlled varia
 > One other consequence of factoring out $U$ is that we need not even know how to apply the `Controlled` functor to `U`.
 > `WithCA` therefore has a weaker signature than might be expected:
 > ```qsharp
-> WithCA<'T> : (('T => Unit : Adjoint),
->     ('T => Unit : Adjoint, Controlled), 'T) => Unit
+> WithCA<'T> : (('T => Unit is Adj),
+>     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
 Similarly, <xref:microsoft.quantum.canon.bind> produces operations which apply a sequence of other operations in turn.
@@ -154,7 +151,7 @@ With(ApplyToEach(Bind([H, X]), _), QFT, _);
 ### Time-Ordered Composition ###
 
 We can go still further by thinking of flow control in terms of partial application and classical functions, and can model even fairly sophisticated quantum concepts in terms of classical flow control.
-This analogy is made precise by the recognition that unitary operators correspond exactly to the side effects of calling operations, such that any decomposition of unitary operators in terms of other unitary operators correpsonds to constructing a particular calling sequence for classical subroutines which emit instructions to act particular unitary operators.
+This analogy is made precise by the recognition that unitary operators correspond exactly to the side effects of calling operations, such that any decomposition of unitary operators in terms of other unitary operators corresponds to constructing a particular calling sequence for classical subroutines which emit instructions to act as particular unitary operators.
 Under this view, `Bind` is precisely the representation of the matrix product, since `Bind([A, B])(target)` is equivalent to `A(target); B(target);`, which in turn is the calling sequence corresponding to $BA$.
 
 A more sophisticated example is the [Trotter–Suzuki expansion](https://arxiv.org/abs/math-ph/0506007v1).
@@ -166,7 +163,7 @@ For instance, applying the expansion at its lowest order yields that for any ope
 \end{align}
 Colloquially, this says that we can approximately evolve a state under $A + B$ by alternately evolving under $A$ and $B$ alone.
 If we represent evolution under $A$ by an operation `A : (Double, Qubit[]) => Unit` that applies $e^{i t A}$, then the representation of the Trotter–Suzuki expansion in terms of rearranging calling sequences becomes clear.
-Concretely, given an operation `U : ((Int, Double, Qubit[]) => Unit : Controlled, Adjoint` such that `A = U(0, _, _)` and `B = U(1, _, _)`, we can define a new operation representing the integral of `U` at time $t$ by generating sequences of the form
+Concretely, given an operation `U : ((Int, Double, Qubit[]) => Unit is Adj + Ctl` such that `A = U(0, _, _)` and `B = U(1, _, _)`, we can define a new operation representing the integral of `U` at time $t$ by generating sequences of the form
 
 ```qsharp
 U(0, time / Float(nSteps), target);
@@ -201,10 +198,11 @@ We won't call this operation directly, however, and so we add `Impl` to the end 
 ```qsharp
 operation ControlledOnBitStringImpl(
         bits : Bool[],
-        oracle: (Qubit[] => Unit: Adjoint, Controlled),
+        oracle: (Qubit[] => Unit is Adj + Ctl),
         controlRegister : Qubit[],
-        targetRegister: Qubit[]
-    ) : ()
+        targetRegister: Qubit[]) 
+: Unit 
+is Adj + Ctl {
 ```
 
 Note that we take a string of bits, represented as a `Bool` array, that we use to specify the conditioning that we want to apply to the operation `oracle` that we are given.
@@ -213,31 +211,21 @@ Since this operation actually does the application directly, we also need to tak
 Next, we note that controlling on the computational basis state $\ket{\vec{s}} = \ket{s\_0 s\_1 \dots s\_{n - 1}}$ for a bit string $\vec{s}$ can be realized by transforming $\ket{\vec{s}}$ into $\ket{0\cdots 0}$.
 In particular, $\ket{\vec{s}} = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{n - 1}} \ket{0\cdots 0}$.
 Since $X^{\dagger} = X$, this implies that $\ket{0\dots 0} = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{n - 1}} \ket{\vec{s}}$.
-Thus, we can apply $P = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{n - 1}}$, apply `(Controlled oracle)`, and transform back to $\vec{s}$.
+Thus, we can apply $P = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{n - 1}}$, apply `Controlled oracle`, and transform back to $\vec{s}$.
 This construction is precisely `With`, so we write the body of our new operation accordingly:
 
 ```qsharp
-{
-    body (...) {
-        WithCA(
-            ApplyPauliFromBitString(PauliX, false, bits, _),
-            (Controlled oracle)(_, targetRegister),
-            controlRegister
-        );
-    }
+    WithCA(
+        ApplyPauliFromBitString(PauliX, false, bits, _),
+        (Controlled oracle)(_, targetRegister),
+        controlRegister
+    );
+}
 ```
 
 Here, we have used @"microsoft.quantum.canon.applypaulifrombitstring" to apply $P$, partially applying over its target for use with `With`.
-Note, however, that we need to transform the *control* register to our desired form, so we partially apply the inner operation `(Controlled oracle)` on the *target*.
+Note, however, that we need to transform the *control* register to our desired form, so we partially apply the inner operation `Controlled oracle` on the *target*.
 This leaves `With` acting to bracket the control register with $P$, exactly as we desired.
-We finish defining our operation by declaring that we support the usual functor applications:
-
-```qsharp
-    adjoint auto;
-    controlled auto;
-    adjoint controlled auto;
-}
-```
 
 At this point, we could be done, but it is somehow unsatisfying that our new operation does not "feel" like applying the `Controlled` functor.
 Thus, we finish defining our new control flow concept by writing a function that takes the oracle to be controlled and that returns a new operation.
@@ -246,9 +234,8 @@ In this way, our new function looks and feels very much like `Controlled`, illus
 ```qsharp
 function ControlledOnBitString(
         bits : Bool[],
-        oracle: (Qubit[] => Unit: Adjoint, Controlled)
-    ) : ((Qubit[], Qubit[]) => Unit: Adjoint, Controlled)
-{
+        oracle: (Qubit[] => Unit is Adj + Ctl)) 
+: ((Qubit[], Qubit[]) => Unit is Adj + Ctl) {
     return ControlledOnBitStringImpl(bits, oracle, _, _);
 }
 ```

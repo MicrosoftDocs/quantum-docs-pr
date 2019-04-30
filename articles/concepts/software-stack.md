@@ -8,7 +8,7 @@ ms.date: 12/11/2017
 ms.topic: article
 ---
 
-# Software stack for Quantum computing
+# Software stack for quantum computing
 Normally when we think of a computer we envision a single device running an application, but modern computing environments are much more complex and advanced. The application we interact with typically rests on multiple layers of software that provide for the application's execution down to the hardware level. These software layers are necessary to abstract the development of an application solution from the underlying complexity of the complete computing system. If a developer had to think about bus, cache architectures, communication protocols, and more while writing a simple smartphone app, the task would become much more complex.  The concept of a *software stack* was developed in classical computing to address these issues.  Borrowing from the classical concept, a software stack is also a key part of the vision behind quantum computing with Q#.
 
 ## Conventional stack

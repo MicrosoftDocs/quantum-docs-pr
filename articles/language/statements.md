@@ -273,6 +273,36 @@ sets the second element of the `result` array to `One`.
 Note that the `result` array must have been defined in a `mutable` statement
 for this to be valid.
 
+
+..............
+
+While our library functions should provide the necessary tools for array initialization and thus help to avoid having update array items in the first place, we can consistently extend the syntax for copy-and-update expressions to define a convenient way to express array modifications. 
+Analog to the newly supported apply-and-reassign statements for binary operators described in the previous section, we support an update-and-reassign statement of the form <nobr>`set arr w/= i <- 0;`</nobr>, as shown in the example below.
+
+
+```qsharp
+operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
+
+    mutable samples = new Double[0];
+    for (i in 1 .. nrSamples) {
+        set samples += [RandomInt(maxInt)];
+    }
+    return samples;
+}
+
+operation SampleUniformDistr(nrSamples : Int, prec : Int) 
+: Double[] {
+
+    let normalization = 1. / IntAsDouble(prec);
+    mutable samples = RandomInts(prec, nrSamples);
+    
+    for (i in 0 .. Length(samples) - 1) {
+        set samples w/= i <- normalization * IntAsDouble(samples[i]);
+    }
+}
+
+```
+
 ### Binding Scopes
 
 In general, symbol bindings go out of scope and become inoperative

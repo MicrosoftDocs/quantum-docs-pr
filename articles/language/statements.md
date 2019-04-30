@@ -60,7 +60,7 @@ For example:
 /// ```
 ///
 /// # See Also
-/// - Microsoft.Quantum.Primitive.H
+/// - Microsoft.Quantum.Intrinsic.H
 operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
 {
     body(...)

@@ -11,25 +11,25 @@ uid: microsoft.quantum.libraries.standard.testing
 # Testing Library #
 
 As with classical development, it is important to be able to diagnose mistakes and errors in quantum programs.
-In this section, we discuss the functions and operations provided by the canon to assist in diagnosing quantum operations implemented in Q#, built on top of <xref:microsoft.quantum.primitive.assertprob>.
+In this section, we discuss the functions and operations provided in our libraries to assist in diagnosing quantum operations implemented in Q#, built on top of <xref:microsoft.quantum.primitive.assertprob>.
 Many of these functions and operations rely on the fact that classical simulations of quantum mechanics need not obey the [no cloning theorem](https://arxiv.org/pdf/quant-ph/9607018.pdf), such that we can make unphysical measurements and assertions when using a simulator for our target machine.
 Thus, we can test individual operations on a classical simulator before deploying on hardware.
 
 ## Asserts on Classical Values ##
 
-As discussed in [Testing and Debugging](xref:microsoft.quantum.techniques.testing-and-debugging), a function or operation with signature `Unit -> Unit` or `Unit => Unit`, respectively, can be called as a *unit test*.
+As discussed in [Testing and Debugging](xref:microsoft.quantum.techniques.testing-and-debugging), a function or operation with signature `(Unit -> Unit)` or `(Unit => Unit)`, respectively, can be called as a *unit test*.
 Such unit tests are useful in ensuring that functions and operations act as intended in known cases, and that additional features not break existing functionality.
 The canon provides several *assertions*: functions which `fail` if their inputs don't meet certain conditions.
 For instance, <xref:microsoft.quantum.canon.assertalmostequal> takes inputs `actual : Double` and `expected : Double` and will fail if `(actual - expected)` is outside the range $[-10^{-10}, 10^{-10}]$.
 `AssertAlmostEqual` is used within the canon to ensure that functions such as <xref:microsoft.quantum.canon.realmod> return the correct answer for a variety of representative cases.
 
-More generally, the canon provides a range of functions for asserting different properties of and relations between
+More generally, the standard libraries provide a range of functions for asserting different properties of and relations between
 classical values.
-These functions all start with prefix Assert and located in Microsoft.Quantum.Canon namespace.
+These functions all start with prefix Assert and located in Microsoft.Quantum.Diagnostic namespace.
 
 ## Testing Qubit States ##
 
-Suppose that `P : Qubit => Unit` is an operation intended to prepare the state $\ket{\psi}$ when its input is in the state $\ket{0}$.
+Suppose that `P : (Qubit => Unit)` is an operation intended to prepare the state $\ket{\psi}$ when its input is in the state $\ket{0}$.
 Let $\ket{\psi'}$ be the actual state prepared by `P`.
 Then, $\ket{\psi} = \ket{\psi'}$ if and only if measuring $\ket{\psi'}$ in the axis described by $\ket{\psi}$ always returns `Zero`.
 That is,
@@ -51,7 +51,6 @@ In particular,
 using (register = Qubit()) {
     P(register);
     Adjoint Q(register);
-
     AssertQubit(Zero, register);
 }
 ```
@@ -83,12 +82,12 @@ This is helpful when the expected state can be computed mathematically.
 
 Thus far, we have been concerned with testing operations which are intended to prepare particular states.
 Often, however, we are interested in how an operation acts for arbitrary inputs rather than for a single fixed input.
-For example, suppose we have implemented an operation `U : ((Double, Qubit[]) => () : Adjoint)` corresponding to a family of unitary operators $U(t)$, and have provided an explicit `adjoint` block instead of using `adjoint auto`.
+For example, suppose we have implemented an operation `U : ((Double, Qubit[]) => Unit is Adj)` corresponding to a family of unitary operators $U(t)$, and have provided an explicit `adjoint` block instead of relying on auto-generation.
 We may be interested in asserting that $U^\dagger(t) = U(-t)$, as expected if $t$ represents an evolution time.
 
 Broadly speaking, there are two different strategies that we can follow in making the assertion that two operations `U` and `V` act identically.
-First, we can check that `U(target); (Adjoint V)(target);` preserves each state in a given basis.
-Second, we can check that `U(target); (Adjoint V)(target);` acting on half of an entangled state preserves that entanglement.
+First, we can check that `U(target); Adjoint V(target);` preserves each state in a given basis.
+Second, we can check that `U(target); Adjoint V(target);` acting on half of an entangled state preserves that entanglement.
 These strategies are implemented by the canon operations <xref:microsoft.quantum.canon.assertoperationsequalinplace> and <xref:microsoft.quantum.canon.assertoperationsequalreferenced>, respectively.
 
 > [!NOTE]

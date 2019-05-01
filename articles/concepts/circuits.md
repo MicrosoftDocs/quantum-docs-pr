@@ -84,7 +84,7 @@ Q# provides methods to automatically generate the controlled version of an opera
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
-is Ctl { // Auto-generate the controlled version of the operation
+is Ctl { // Auto-generate the controlled specialization of the operation
     H(qubit);
 }
 ```

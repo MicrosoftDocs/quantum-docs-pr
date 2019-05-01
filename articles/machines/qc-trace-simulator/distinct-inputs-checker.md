@@ -32,7 +32,7 @@ example, where this operation is used:
 ```qsharp
 operation DisctinctQubitCaptured2Test () : Unit {
 
-    using( q = Qubit[3] ) {
+    using (q = Qubit[3]) {
         let op1 = CNOT(_, q[1]);
         let op2 = CNOT(q[1], _);
         DoBoth(q[0], q[2], op1, op2);

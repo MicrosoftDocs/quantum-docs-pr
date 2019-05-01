@@ -56,10 +56,12 @@ $ code . # To open in Visual Studio Code.
 
 Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
 
+#### Source files for a quantum application
 Your development environment should have two files open:
 `Driver.cs`, which will hold the C# driver for your quantum code,
 and `Operations.qs`, which will hold the quantum code itself.
 
+#### Q# source
 The first step is to rename the Q# file to `Bell.qs`.
 Right-click on `Operations.qs` in the Visual Studio Solution Explorer (Ctrl+Alt+L to focus) or the Visual Studio Code Explorer (Ctrl/⌘+Shift+E to focus), and select the Rename option.
 Replace `Operations` with `Bell` and hit return.
@@ -79,6 +81,7 @@ namespace Quantum.Bell {
 }
 ```
 
+#### Q# operation
 First, replace the string `HelloQ` with `Set`, and change the operation
 parameters (the content of the parentheses) to contain the string
 `desired: Result, q1: Qubit`.
@@ -118,6 +121,7 @@ namespace Quantum.Bell {
 }
 ```
 
+#### Set or flip a qubit
 This operation may now be called to set a qubit in a known state (`Zero` or `One`). We measure the qubit, if it's in the state we want, we leave it alone, otherwise, we flip it with the `X` gate.
 
 > [!NOTE]
@@ -141,6 +145,7 @@ This operation may now be called to set a qubit in a known state (`Zero` or `One
 > See the [Q# language reference](xref:microsoft.quantum.language.intro) for more
 > information.
 
+#### Measure a qubit
 Add the following operation to the namespace, after the end of the
 `Set` operation:
 
@@ -243,6 +248,7 @@ namespace Quantum.Bell
 }
 ```
 
+#### Run quantum operations from a C# host program
 Replace the body of the `Main` method with the following code:
 
 ```csharp
@@ -393,7 +399,7 @@ The full routine now looks like this:
 
                 H(q0);
                 CNOT(q0,q1);
-                let res = M (q0);
+                let res = M(q0);
 
                 // Count the number of ones we saw:
                 if (res == One) {

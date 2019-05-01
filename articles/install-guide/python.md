@@ -101,7 +101,7 @@ A `.qs` file may contain multiple operations, for example we could add the follo
         using (q = Qubit()) {
             for (i in 1..count) {
                 ApplyIf(X, i == 2, q);
-                set r w/= i-1 <- M(q);
+                set r w/= (i - 1) <- M(q);
                 Reset(q);
             }
         }

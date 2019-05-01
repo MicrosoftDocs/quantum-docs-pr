@@ -36,7 +36,7 @@ This can be used to change how a quantum register is represented when calling op
 ```qsharp
 let leRegister = LittleEndian(register);
 // QFT expects a BigEndian, so we can reverse before calling.
-QFT(BigEndian(Reverse(leRegister!)));
+QFT(BigEndian(LittleEndianAsBigEndian(leRegister)));
 ```
 
 Similarly, the <xref:microsoft.quantum.canon.subarray> function can be used to reorder or take subsets of the elements of an array:
@@ -110,7 +110,7 @@ is Adj + Ctl {
     // Apply an $n-1$ controlled $Z$-gate to the $n^{\text{th}}$ qubit.
     // This gate will lead to a sign flip if and only if every qubit is
     // $1$, which happens only if each of the qubits were $0$ before step 1.
-    Controlled Z(register[0..Length(register) - 2], register[Length(register) - 1]);
+    Controlled Z(Most(register), Tail(register));
 
     // Apply $X$ gates to every qubit.
     ApplyToEach(X, register);
@@ -134,7 +134,7 @@ This time, we also demonstrate using <xref:microsoft.quantum.canon.with> togethe
 ```qsharp
 operation ReflectAboutInitial(register : Qubit[]) : Unit
 is Adj + Ctl {
-    With(ApplyToEach(H, _), With(ApplyToEach(X, _), RAll1(_, PI()), _), register);
+    ApplyWith(ApplyToEach(H, _), ApplyWith(ApplyToEach(X, _), RAll1(_, PI()), _), register);
 }
 ```
 

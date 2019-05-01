@@ -76,7 +76,7 @@ Thus, if `U` supports `Adjoint` and `Controlled`, the following lines are equiva
 
 ```qsharp
 Adjoint ApplyToEachCA(U, register);
-ApplyToEach(Adjoint U, register);
+ApplyToEachCA(Adjoint U, register);
 ```
 
 In particular, this means that calls to `ApplyToEachCA` can appear in operations for which an adjoint specialization is auto-generated.
@@ -215,7 +215,7 @@ Thus, we can apply $P = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{
 This construction is precisely `With`, so we write the body of our new operation accordingly:
 
 ```qsharp
-    WithCA(
+    ApplyWithCA(
         ApplyPauliFromBitString(PauliX, false, bits, _),
         (Controlled oracle)(_, targetRegister),
         controlRegister

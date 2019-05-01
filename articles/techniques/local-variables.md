@@ -39,7 +39,7 @@ As an alternative to creating a variable with `let`, the `mutable` keyword will 
 
 ```qsharp
 operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-    mutable samples = new Double[0];
+    mutable samples = new Int[0];
     for (i in 1 .. nrSamples) {
         set samples += [RandomInt(maxInt)];
     }
@@ -48,7 +48,7 @@ operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
 ```
 
 All types in Q#, including arrays, follow value semantics. In particular, it is not possible to update array items. To modify an existing array requires leveraging a copy-and-update mechanism much like the one for records in F#. 
-Using the library tools for arrays provided in `Microsoft.Quantum.Arrays` we can e.g. easily defined a function that returns an array of Paulis where the Pauli at index `i` takes the given value and all other entries are the identity: 
+Using the library tools for arrays provided in [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays), we can e.g. easily define a function that returns an array of Paulis where the Pauli at index `i` takes the given value and all other entries are the identity: 
 
 ```qsharp
 function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
@@ -69,7 +69,7 @@ For this reason, it is a good practice to make functions and operations which us
 
 ## Deconstruction ##
 
-In addition to assigning a single variable, the `let` and `mutable` keywords - or in fact any other binding - also allow for unpacking the contents of a [tuple type](#tuple-types).
+In addition to assigning a single variable, the `let` and `mutable` keywords - or in fact any other binding construct - also allow for unpacking the contents of a [tuple type](#tuple-types).
 An assignment of this form is said to *deconstruct* the elements of that tuple.
 For instance, if we model a term in a Hamiltonian by a tuple, then we can use deconstruction to access the different data that we need to simulate under that term:
 

@@ -78,7 +78,7 @@ The Quantum Development Kit offers extensions to [Visual Studio](https://visuals
 and [Visual Studio Code](https://code.visualstudio.com/) to improve the development experience. 
 These extensions are available from [Visual Studio's Marketplace](https://marketplace.visualstudio.com/) 
 and provide features like:
-* Colorization and highlights
+* Code colorization and highlighting
 * Live diagnostics
 * Document symbols
 * Documentation on hover
@@ -86,7 +86,7 @@ and provide features like:
 * Go to symbol definition
 * Find all references
 * Rename of symbols
-* Code actions
+* Code actions (e.g. namespace import helper)
 * Debug breakpoints (Visual Studio)
 
 To install the extensions, follow the instructions at:

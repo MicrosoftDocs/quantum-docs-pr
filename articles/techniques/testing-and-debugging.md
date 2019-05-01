@@ -48,13 +48,13 @@ operation AllocateQubitTest () : Unit
 {
     using (qs = Qubit()) 
     {
-        Assert([PauliZ], [qs], Zero, "Newly allocated qubit must be in |0> state");
+        Assert([PauliZ], [qs], Zero, "Newly allocated qubit must be in |0⟩ state");
     }
     Message("Test passed");
 }
 ```
 
-Any Q# operation compatible with type `(Unit => Unit)` or function compatible with `(Unit -> Unit)` can be executed as a unit test. 
+Any Q# operation compatible with the type `(Unit => Unit)` or function compatible with `(Unit -> Unit)` can be executed as a unit test. 
 
 The second file, `TestSuiteRunner.cs` contains a method that discovers and runs Q# unit tests. 
 This is the method `TestTarget` annotated with `OperationDriver` attribute.
@@ -222,7 +222,7 @@ Wavefunction:
 3:      0               0
 ```
 
-Notice how the ids of the qubits are shown at the top in their significant order. For each computational basis state $\ket{n}$, the first column represents the Real part of the amplitude, and the second column represents its Imaginary part.
+Notice how the IDs of the qubits are shown at the top in their significant order. For each computational basis state $\ket{n}$, the first column represents the real part of the amplitude, and the second column represents its imaginary part.
 
   > [!NOTE]
   > The id of a qubit is assigned at runtime and it's not necessarily aligned with the order in which the qubit was allocated or its position within a qubit register.

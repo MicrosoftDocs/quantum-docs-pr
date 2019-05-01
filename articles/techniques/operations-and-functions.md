@@ -35,15 +35,15 @@ This is used similarly to `void` in C# and other imperative languages, and is eq
 > We will explore this in more detail below, but each operation in Q# takes exactly one input and returns exactly one output.
 > Multiple inputs and outputs are then represented using *tuples*, which collect multiple values together into a single value.
 > Informally, we say that Q# is a "tuple-in tuple-out" language.
-> Following this concept, `()` should then be read as the "empty" tuple.
+> Following this concept, `()` should then be read as the "empty" tuple, which has the type `Unit`.
 
 Within the new operation, the implementation can be specified directly within the declaration 
 if only the implementation of the default body specialization needs to be specified explicitly.
 Additionally, it is possible to define the implementations of for example the operation after functor application, as elaborated further below.
-In the example above, the only statement is to call the built-in Q# operation @"microsoft.quantum.primitive.x".
+In the example above, the only statement is to call the built-in Q# operation @"microsoft.quantum.intrinsic.x".
 
 Operations can also return more interesting types than `Unit`.
-For instance, the @"microsoft.quantum.primitive.m" operation returns an output of type `Result`, representing having performed a measurement.
+For instance, the @"microsoft.quantum.intrinsic.m" operation returns an output of type `Result`, representing having performed a measurement.
 We can either pass the output from an operation to another operation, or can use it with the `let` keyword to define a new variable.
 <!-- Link to UID for superdense conceptual and example documentation. -->
 This allows for representing classical computation that interacts with quantum operations at a low level, such as in superdense coding:
@@ -166,7 +166,7 @@ operation U(target : Qubit) : Unit {
 
 Each time that `U` is called, it will have a different action on `target`.
 In particular, the compiler cannot guarantee that if we added an `adjoint auto` specialization declaration to `U`, then `U(target); Adjoint U(target);` acts as identity (that is, as a no-op).
-This violates the definition of the adjoint that we saw in [Vectors and Matrices](xref:microsoft.quantum.concepts.vectors), such that allowing to auto-generate an adjoint specialization in an operation where we have called the operation @"microsoft.quantum.canon.randomreal" would break the guarantees provided by the compiler; @"microsoft.quantum.canon.randomreal" is an operation for which no adjoint or controlled version exists.
+This violates the definition of the adjoint that we saw in [Vectors and Matrices](xref:microsoft.quantum.concepts.vectors), such that allowing to auto-generate an adjoint specialization in an operation where we have called the operation @"microsoft.quantum.math.randomreal" would break the guarantees provided by the compiler; @"microsoft.quantum.math.randomreal" is an operation for which no adjoint or controlled version exists.
 
 On the other hand, allowing function calls such as `Square` is safe, in that the compiler can be assured that it only needs to preserve the input to `Square` in order to keep its output stable.
 Thus, isolating as much classical logic as possible into functions makes it easy to reuse that logic in other functions and operations alike.

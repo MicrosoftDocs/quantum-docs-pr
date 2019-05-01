@@ -23,7 +23,7 @@ operation.
 open Microsoft.Quantum.Primitive;
 operation CCNOTDriver() : Unit {
 
-    using(qubits = Qubit[3]) {
+    using (qubits = Qubit[3]) {
         CCNOT(qubits[0], qubits[1], qubits[2]);
         T(qubits[0]);
     } 

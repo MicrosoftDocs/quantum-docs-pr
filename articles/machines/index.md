@@ -76,20 +76,6 @@ our teleport algorithm. A C# driver has 4 main purposes:
 
 Here we'll discuss each step in more detail.
 
-> [!NOTE]
-> It is usually better to perform pre- and post-processing in the classical
-> driver, rather than in Q# code.
-> In the future when Q# code is running on cold classical hardware
-> and controlling the detailed processes of a quantum device,
-> the overhead and the cost of purely classical computing will be much less
-> than that of cold computing.
->
-> Computation and analysis that impacts the quantum computation, of course,
-> should be done in Q#.
-> For instance, adaptive adiabatic algorithms that dynamically adjust the
-> parameter evolution rate based on measured characteristics of the state
-> should perform their analysis and adjustment in Q#.
-
 ### Constructing the Target Machine
 
 Quantum machines are instances of normal .NET classes, so they are created by

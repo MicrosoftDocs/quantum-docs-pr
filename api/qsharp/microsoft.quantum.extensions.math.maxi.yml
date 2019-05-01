@@ -3,6 +3,11 @@ uid: microsoft.quantum.extensions.math.maxi
 name: MaxI
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.math.maxi".
 syntax: 'function MaxI (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'

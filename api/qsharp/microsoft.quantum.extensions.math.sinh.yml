@@ -3,6 +3,11 @@ uid: microsoft.quantum.extensions.math.sinh
 name: Sinh
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.math.sinh".
 syntax: 'function Sinh (d : Double) : Double'
 input:
   content: '(d : Double)'

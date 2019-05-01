@@ -3,6 +3,11 @@ uid: microsoft.quantum.canon.bind
 name: Bind
 type: function
 namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.canon.bound".
 syntax: "function Bind (operations : ('T => Unit)[]) : ('T => Unit)"
 input:
   content: "(operations : ('T => Unit)[])"

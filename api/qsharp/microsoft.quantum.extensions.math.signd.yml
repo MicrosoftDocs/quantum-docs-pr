@@ -3,6 +3,11 @@ uid: microsoft.quantum.extensions.math.signd
 name: SignD
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.math.signd".
 syntax: 'function SignD (a : Double) : Int'
 input:
   content: '(a : Double)'

@@ -3,6 +3,11 @@ uid: microsoft.quantum.canon.bindca
 name: BindCA
 type: function
 namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.canon.boundca".
 syntax: "function BindCA (operations : ('T => Unit is Adj + Ctl)[]) : ('T => Unit is Adj + Ctl)"
 input:
   content: "(operations : ('T => Unit is Adj + Ctl)[])"

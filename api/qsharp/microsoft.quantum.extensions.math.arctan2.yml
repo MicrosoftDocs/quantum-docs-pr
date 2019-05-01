@@ -3,6 +3,11 @@ uid: microsoft.quantum.extensions.math.arctan2
 name: ArcTan2
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.math.arctan2".
 syntax: 'function ArcTan2 (y : Double, x : Double) : Double'
 input:
   content: '(y : Double, x : Double)'

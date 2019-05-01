@@ -3,6 +3,11 @@ uid: microsoft.quantum.extensions.math.pi
 name: PI
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.math.pi".
 syntax: 'function PI () : Double'
 input:
   content: ()

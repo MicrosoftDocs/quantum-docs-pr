@@ -3,6 +3,11 @@ uid: microsoft.quantum.primitive.multix
 name: MultiX
 type: operation
 namespace: Microsoft.Quantum.Primitive
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.canon.applytoeachca".
 syntax: 'operation MultiX (qubits : Qubit[]) : Unit'
 input:
   content: '(qubits : Qubit[])'

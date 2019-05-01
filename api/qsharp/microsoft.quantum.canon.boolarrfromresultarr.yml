@@ -3,6 +3,11 @@ uid: microsoft.quantum.canon.boolarrfromresultarr
 name: BoolArrFromResultArr
 type: function
 namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.convert.resultarrayasboolarray".
 syntax: 'function BoolArrFromResultArr (input : Result[]) : Bool[]'
 input:
   content: '(input : Result[])'

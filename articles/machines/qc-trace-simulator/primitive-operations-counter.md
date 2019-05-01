@@ -22,12 +22,11 @@ operation.
 ```qsharp
 open Microsoft.Quantum.Primitive;
 operation CCNOTDriver() : Unit {
-    body (...) {
-        using(qubits = Qubit[3]) {
-            CCNOT(qubits[0], qubits[1], qubits[2]);
-            T(qubits[0]);
-        } 
-    }
+
+    using (qubits = Qubit[3]) {
+        CCNOT(qubits[0], qubits[1], qubits[2]);
+        T(qubits[0]);
+    } 
 }
 ```
 

@@ -84,7 +84,7 @@ $$
 using a product of $2rd$ terms. Larger orders will involve even more terms and optimized variants may require highly non-trivial orderings on the exponentials. Other advanced algorithms may also involve the use of ancilla qubits in intermediate steps. Thus we package simulation algorithms in the canon as the user-defined type
 
 ```qsharp
-newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit : Adjoint, Controlled);
+newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
 ```
 
 The first parameter `Double` is the time of simulation, the second parameter `EvolutionGenerator`, covered in the Dynamical Generator Representation section of [data-structures](xref:microsoft.quantum.libraries.data-structures), is a classical description of a time-independent Hamiltonian packaged with instructions on how each term in the Hamiltonian may be simulated by a quantum circuit. Types of this form approximate the unitary operation $e^{-iHt}$ on the third parameter `Qubit[]`, which is the register storing the quantum state of the simulated system. Similarly for the time-dependent case, we define a user-defined type with an `EvolutionSchedule` type instead, which is a classical description of a time-dependent Hamiltonian.
@@ -132,7 +132,7 @@ function InterpolatedEvolution(
         evolutionGeneratorStart: EvolutionGenerator,
         evolutionGeneratorEnd: EvolutionGenerator,
         timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
-        : (Qubit[] => Unit : Adjoint, Controlled) {
+        : (Qubit[] => Unit is Adj + Ctl) {
         ...
 }
  
@@ -147,7 +147,7 @@ operation AdiabaticStateEnergyEstimate(
     nQubits : Int, 
     statePrepUnitary: (Qubit[] => Unit),
     adiabaticUnitary: (Qubit[] => Unit),
-    qpeUnitary: (Qubit[] => Unit :  Adjoint, Controlled),
+    qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
     phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
     : Double {
 ...

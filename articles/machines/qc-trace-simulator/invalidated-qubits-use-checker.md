@@ -15,7 +15,7 @@ The `Invalidated Qubits Use Checker` is a part of the quantum computer [TraceSim
 ```qsharp
 operation UseReleasedQubitTest () : Unit {
     mutable q = new Qubit[1];
-    using(ans = Qubit()) {
+    using (ans = Qubit()) {
         set q w/= 0 <- ans;
     }
     H(q[0]);

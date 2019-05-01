@@ -12,19 +12,17 @@ ms.topic: article
 
 Q# programs consist of one or more *operations* which describe side effects which quantum operations can have on quantum data and one or more *functions* which allow to modify classical data. In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values.
 
-Each operation defined in Q# may then call any number of other operations, including the built-in primitive operations defined by the language. The particular way in which these primitive operations are defined depends on the target machine. When compiled, each operation is represented as a .NET class type that can be provided to target machines.
+Each operation defined in Q# may then call any number of other operations, including the built-in intrinsic operations defined by the language. The particular way in which these intrinsic operations are defined depends on the target machine. When compiled, each operation is represented as a .NET class type that can be provided to target machines.
 
 ## Defining New Operations ##
 
 As described above, the most basic building block of a quantum program written in Q# is an *operation*, which can either be called from classical .NET applications, e.g., using a simulator, or by other operations within Q#.
-Each operation takes an input, produces an output, and minimally consists of a *body* listing one or more instructions.
-For instance, the following operation takes a single qubit as its input, then calls the built-in `X` operation on that input:
+Each operation takes an input, produces an output, and specifies the implementation for one or more operation specializations.
+For instance, the following operation defines only a default body specialization and takes a single qubit as its input, then calls the built-in `X` operation on that input:
 
 ```qsharp
 operation BitFlip(target : Qubit) : Unit {
-    body (...) {
-        X(target);
-    }
+    X(target);
 }
 ```
 
@@ -37,75 +35,105 @@ This is used similarly to `void` in C# and other imperative languages, and is eq
 > We will explore this in more detail below, but each operation in Q# takes exactly one input and returns exactly one output.
 > Multiple inputs and outputs are then represented using *tuples*, which collect multiple values together into a single value.
 > Informally, we say that Q# is a "tuple-in tuple-out" language.
-> Following this concept, `()` should then be read as the "empty" tuple.
+> Following this concept, `()` should then be read as the "empty" tuple, which has the type `Unit`.
 
-Within the new operation, the keyword `body` is used to declare the sequence of statements that make up the new operation.
-In the example above, the only statement is to call the @"microsoft.quantum.primitive.x" operation built-in to the Q# prelude.
+Within the new operation, the implementation can be specified directly within the declaration 
+if only the implementation of the default body specialization needs to be specified explicitly.
+Additionally, it is possible to define the implementations of for example the operation after functor application, as elaborated further below.
+In the example above, the only statement is to call the built-in Q# operation @"microsoft.quantum.intrinsic.x".
 
 Operations can also return more interesting types than `Unit`.
-For instance, the @"microsoft.quantum.primitive.m" operation returns an output of type `(Result)`, representing having performed a measurement.
+For instance, the @"microsoft.quantum.intrinsic.m" operation returns an output of type `Result`, representing having performed a measurement.
 We can either pass the output from an operation to another operation, or can use it with the `let` keyword to define a new variable.
 <!-- Link to UID for superdense conceptual and example documentation. -->
 This allows for representing classical computation that interacts with quantum operations at a low level, such as in superdense coding:
 
 ```qsharp
 operation Superdense(here : Qubit, there : Qubit) : (Result, Result) {
-    body (...) {
-        CNOT(there, here);
-        H(there);
 
-        let firstBit = M(there);
-        let secondBit = M(here);
+    CNOT(there, here);
+    H(there);
 
-        return (firstBit, secondBit);
-    }
+    let firstBit = M(there);
+    let secondBit = M(here);
+
+    return (firstBit, secondBit);
 }
 ```
 
-If an operation does not return a value other than `()`, then it can also specify *variants* as well as a body, specifying how the operation acts when *adjointed* or *controlled*.
-The adjoint variant of an operation specifies how it acts when run in reverse, while the controlled variant specifies how an operation acts when applied conditioned on the state of a quantum register.
-
-> [!NOTE]
-> Many operations in Q# represent unitary gates.
-> If $U$ is the unitary gate represented by an operation `U`, then `(Adjoint U)` represents the unitary gate $U^\dagger$.
-
-In both cases, the variant specification immediately follows the end of the body definition:
+If an operation implements a unitary transformation, then it is possible to define how the operation acts when *adjointed* or *controlled*.
+An adjoint specialization of an operation specifies how it acts when run in reverse, while a controlled specialization specifies how an operation acts when applied conditioned on the state of a quantum register.
+The existence of these specializations can be declared as part of the operation signature. The corresponding implementation for each such implicitly declared specialization is then generated by the compiler. 
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
-    body (...) {
+is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
+    H(here);
+    CNOT(here, there);
+}
+```
+
+> [!NOTE]
+> Many operations in Q# represent unitary gates.
+> If $U$ is the unitary gate represented by an operation `U`, then `Adjoint U` represents the unitary gate $U^\dagger$.
+
+In the case where the implementation cannot be generated by the compiler, it can be explicitly specified. 
+Such explicit specialization declarations can either consist of a suitable generation directive, or a user defined implementation. 
+The code in `PrepareEntangledPair` above for example is equivalent to the code below containing explicit specialization declarations: 
+
+```qsharp
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
+    body (...) { // default body specialization
         H(here);
         CNOT(here, there);
     }
 
-    adjoint auto;
-    controlled auto;
-    controlled adjoint auto;
+    adjoint auto; // auto-generate adjoint specialization
+    controlled auto; // auto-generate controlled specialization
+    controlled adjoint auto; // auto-generate controlled adjoint specialization
 }
 ```
+The keyword `auto` indicates that the compiler should determine how to generate the specialization implementation.
+If the compiler cannot generate the implementation for a certain specialization automatically, or if a more efficient implementation can be given, then the implementation may also be manually defined.
 
-Very often, variant specifications will consist of the keyword `auto`, indicating that the compiler should determine how to generate the variant definition.
-If the compiler cannot generate a definition automatically, or if a more efficient implementation can be given, then a variant may also be manually defined.
-We will see examples of this below in [Higher-Order Control Flow](xref:microsoft.quantum.concepts.control-flow).
+```qsharp
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
+is Ctl + Adj {
+    body (...) { // default body specialization
+        H(here);
+        CNOT(here, there);
+    }
 
-To call a variant of an operation, use the `Adjoint` or `Controlled` keywords.
+    controlled (cs, ...) { // user defined implementation for the controlled specialization
+        Controlled H(cs, here);
+        Controlled X(cs + [here], there);
+    }
+
+    adjoint invert; 
+    controlled adjoint invert; 
+}
+```
+In the example above, `adjoint invert;` indicates that the adjoint specialization is to be generated by inverting the body implementation, 
+and `controlled adjoint invert;` indicates that the controlled adjoint specialization is to be generated by inverting the given implementation of the controlled specialization.
+
+We will see more examples of this below in [Higher-Order Control Flow](xref:microsoft.quantum.concepts.control-flow).
+
+To call a specialization of an operation, use the `Adjoint` or `Controlled` keywords.
 For example, the superdense coding example above can be written more compactly by using the adjoint of `PrepareEntangledPair` to transform the entangled state back into an unentangled pair of qubits:
 
 ```qsharp
 operation Superdense(here : Qubit, there : Qubit) : (Result, Result) {
-    body (...) {
-        Adjoint PrepareEntangledPair(there, here);
+    Adjoint PrepareEntangledPair(there, here);
 
-        let firstBit = M(there);
-        let secondBit = M(here);
+    let firstBit = M(there);
+    let secondBit = M(here);
 
-        return (firstBit, secondBit);
-    }
+    return (firstBit, secondBit);
 }
 ```
 
-There are a number of important limitations to consider when designing operations for use with variants.
-Most critically, an operation which uses the output value of any other operation cannot use the `auto` keyword to specify variants, as it is ambiguous how to reorder the statements in such an operation to obtain the same effect.
+There are a number of important limitations to consider when designing operations for use with functors.
+Most critically, specializations for an operation which uses the output value of any other operation cannot be auto-generated by the compiler, as it is ambiguous how to reorder the statements in such an operation to obtain the same effect.
 
 
 ## Defining New Functions ##
@@ -113,9 +141,9 @@ Most critically, an operation which uses the output value of any other operation
 Q# also allows for defining *functions*, distinct from operations in that they are not allowed to have any effects beyond calculating an output value.
 In particular, functions cannot call operations, act on qubits, sample random numbers, or otherwise depend on state beyond the input value to a function.
 As a consequence, Q# functions are *pure*, in that they always map the same input values to the same output values.
-This allows the Q# compiler to safely reorder how and when functions are called when generating operation variants.
+This allows the Q# compiler to safely reorder how and when functions are called when generating operation specializations.
 
-Defining a function works similarly to defining an operation, except that statements are placed directly within the function, and do not need to be wrapped in a `body` declaration.
+Defining a function works similarly to defining an operation, except that no adjoint or controlled specializations can be defined for a function.
 For instance:
 
 ```qsharp
@@ -125,22 +153,20 @@ function Square(x : Double) : (Double) {
 ```
 Whenever it is possible to do so, it is helpful to write out classical logic in terms of functions rather than operations, so that it can be more readily used from within operations.
 If we had written `Square` as an operation, for example, then the compiler would not have been able to guarantee that calling it with the same input would consistently produce the same outputs.
-This is especially critical when considering operation variants.
 
 To underscore the difference between functions and operations, consider the problem of classically sampling a random number from within a Q# operation:
 
 ```qsharp
 operation U(target : Qubit) : Unit {
-    body (...) {
-        let angle = RandomReal()
-        Rz(angle, target)
-    }
+
+    let angle = RandomReal()
+    Rz(angle, target)
 }
 ```
 
 Each time that `U` is called, it will have a different action on `target`.
-In particular, the compiler cannot guarantee that if we added an `Adjoint auto` statement to `U`, then `U(target); Adjoint U(target);` acts as identity (that is, as a no-op).
-This violates the definition of the adjoint that we saw in [Vectors and Matrices](xref:microsoft.quantum.concepts.vectors), such that allowing `Adjoint auto` in an operation where we have called the operation @"microsoft.quantum.canon.randomreal" would break the guarantees provided by the compiler; @"microsoft.quantum.canon.randomreal" is an operation for which no adjoint or controlled version exists.
+In particular, the compiler cannot guarantee that if we added an `adjoint auto` specialization declaration to `U`, then `U(target); Adjoint U(target);` acts as identity (that is, as a no-op).
+This violates the definition of the adjoint that we saw in [Vectors and Matrices](xref:microsoft.quantum.concepts.vectors), such that allowing to auto-generate an adjoint specialization in an operation where we have called the operation @"microsoft.quantum.math.randomreal" would break the guarantees provided by the compiler; @"microsoft.quantum.math.randomreal" is an operation for which no adjoint or controlled version exists.
 
 On the other hand, allowing function calls such as `Square` is safe, in that the compiler can be assured that it only needs to preserve the input to `Square` in order to keep its output stable.
 Thus, isolating as much classical logic as possible into functions makes it easy to reuse that logic in other functions and operations alike.
@@ -154,7 +180,7 @@ This flow of control can be modified, however, in three distinct ways:
 - `for` Loops
 - `repeat`-`until` Loops
 
-We defer discussion of the latter until we discuss [Repeat Until Sucess (RUS)](xref:microsoft.quantum.techniques.qubits#measurements) circuits.
+We defer discussion of the latter until we discuss [Repeat Until Success (RUS)](xref:microsoft.quantum.techniques.qubits#measurements) circuits.
 The `if` and `for` control flow constructs, however, proceed in a familiar sense to most classical programming languages.
 In particular, an `if` statement can take a condition, may be followed by one or more `elif` statements, and may end with an `else`:
 
@@ -170,7 +196,7 @@ if (pauli == PauliX) {
 }
 ```
 
-Similarly, `for` loops indicate iteration over a range of integers:
+Similarly, `for` loops indicate iteration over a range of integers or over the elements of an array:
 
 ```qsharp
 for (idxQubit in 0..nQubits - 1) {
@@ -178,7 +204,7 @@ for (idxQubit in 0..nQubits - 1) {
 }
 ```
 
-Importantly, `for` loops can even be used in operations which declare `adjoint auto` variants, in which case the adjoint of a `for` loop reverses the direction and takes the adjoint of each iteration.
+Importantly, `for` loops and `if` statements can even be used in operations for which specializations are auto-generated. In that case the adjoint of a `for` loop reverses the direction and takes the adjoint of each iteration.
 This follows the "shoes-and-socks" principle: if you wish to undo putting on socks and then shoes, you must undo putting on shoes and then undo putting on socks.
 It works decidedly less well to try and take your socks off while you're still wearing your shoes!
 
@@ -190,10 +216,8 @@ For instance, the following is perfectly valid Q# code, if a little indirect:
 
 ```qsharp
 operation FirstClassExample(target : Qubit) : Unit {
-    body (...) {
-        let ourH = H;
-        ourH(target);
-    }
+    let ourH = H;
+    ourH(target);
 }
 ```
 
@@ -203,15 +227,16 @@ For instance, we could imagine wanting to "square" an operation by applying it t
 
 ```qsharp
 operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
-    body (...) {
-        op(target);
-        op(target);
-    }
+    op(target);
+    op(target);
 }
 ```
 
-In this example, the `=>` arrow that appears in the type `((Qubit) => ())` denotes that the input field `op` is an operation which takes as its input the type `(Qubit)` and produces an empty tuple `()` as its output.
-Optionally, we can specify that an operation type supports either or both variants by specifying variants after the output type, as in `((Qubit) => () : Adjoint)`.
+In this example, the `=>` arrow that appears in the type `(Qubit => Unit)` denotes that the input field `op` is an operation which takes as its input the type `Qubit` and produces an empty tuple as its output.
+Additionally we specify the characteristics of that an operation type, which contains the information about what functors are supported. 
+An operation of type `(Qubit => Unit)` supports neither the `Adjoint` nor the `Controlled` functor. 
+If we want to indicate that an operation of that type has to support e.g. the `Adjoint` functor, we have to declare it as being adjointable. This is done by using the annotation `is Adj` to the type. 
+Similarly, `(Qubit => Unit is Ctl)` denotes that an operation of that type supports the `Controlled` functor. 
 We will explore this further below, when we discuss types in Q# more generally.
 
 For now, though, we emphasize that we can also return operations as a part of outputs, such that we can isolate some kinds of classical conditional logic as a classical function which returns a description of a quantum program in the form of an operation.
@@ -220,8 +245,8 @@ We could write this in terms of a function which takes those two classical bits 
 
 ```qsharp
 function TeleporationDecoderForMessage(hereBit : Result, thereBit : Result)
-        : (Qubit => Unit : Adjoint, Controlled)
-{
+: (Qubit => Unit is Adj + Ctl) {
+
     if (hereBit == Zero && thereBit == Zero) {
         return I;
     } elif (hereBit == One && thereBit == Zero) {
@@ -235,7 +260,7 @@ function TeleporationDecoderForMessage(hereBit : Result, thereBit : Result)
 ```
 
 This new function is indeed a function, in that if we call it with the same values of `hereBit` and `thereBit`, we will always get back the same operation.
-Thus, the decoder can be safely run inside operations without having to reason about how the decoding logic interacts with the definitions of the different operation variants.
+Thus, the decoder can be safely run inside operations without having to reason about how the decoding logic interacts with the definitions of the different operation specializations.
 That is, we have isolated the classical logic inside a function, guaranteeing to the compiler that the function call can be reordered with impunity so long as the input is preserved.
 
 We can also treat functions as first-class values, as we will see in more detail when we discuss [operations and function types](#operation-and-function-types).
@@ -247,10 +272,8 @@ For example, recalling the `ApplyTwice` example above, we can indicate that we d
 
 ```qsharp
 operation PartialApplicationExample(op : (Qubit => Unit), target : Qubit) : Unit {
-    body (...) {
-        let twiceOp = ApplyTwice(op, _);
-        twiceOp(target);
-    }
+    let twiceOp = ApplyTwice(op, _);
+    twiceOp(target);
 }
 ```
 

@@ -189,9 +189,10 @@ Thus, as seen in **H2Sample**, an operation can accept an iterative phase estima
 
 ```qsharp
 operation H2EstimateEnergy(
-        idxBondLength: Int, trotterStepSize: Double,
-        phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)
-    ) : Double
+    idxBondLength : Int, 
+    trotterStepSize : Double,
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+: Double
 ```
 
 These myriad phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many auxillary qubits, and other require only one.
@@ -199,27 +200,21 @@ These myriad phase estimation algorithms are optimized for different properties 
 Similarly, using random walk phase estimation proceeds in much the same way as for other algorithms provided with the canon:
 
 ```qsharp
-operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit {
-    body (...) {
-        Rz(2.0 * eigenphase * time, register[0]);
-    }
-    adjoint auto;
-    controlled auto;
-    controlled adjoint auto;
+operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
+is Adj + Ctl {
+    Rz(2.0 * eigenphase * time, register[0]);
 }
 
 operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
-    body (...) {
-        let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
-        mutable est = Float(0);
-        using (eigenstate = Qubit()) {
-            X(eigenstate);
-            // The additional inputs here specify the mean and variance of the prior, the number of
-            // iterations to perform, how many iterations to perform as a maximum, and how many
-            // steps to roll back on an approximation failure.
-            set est = RandomWalkPhaseEstimation(0.0, 1.0, 61, 100000, 1, oracle, [eigenstate]);
-            Reset(eigenstate);
-        }
+
+    let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+    using (eigenstate = Qubit()) {
+        X(eigenstate);
+        // The additional inputs here specify the mean and variance of the prior, the number of
+        // iterations to perform, how many iterations to perform as a maximum, and how many
+        // steps to roll back on an approximation failure.
+        let est = RandomWalkPhaseEstimation(0.0, 1.0, 61, 100000, 1, oracle, [eigenstate]);
+        Reset(eigenstate);
         return est;
     }
 }

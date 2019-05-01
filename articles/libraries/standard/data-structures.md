@@ -56,7 +56,7 @@ ApplyToEach(
     ApplyPauli(_, register),
     Map(
         EmbedPauli(_, _, Length(register)),
-        Zip([PauliX; PauliY; PauliZ], [3, 1, 7])
+        Zip([PauliX, PauliY, PauliZ], [3, 1, 7])
     )
 );
 ```
@@ -94,7 +94,7 @@ Amplitude amplification then proceeds by taking an initial state, $\ket{\psi}$ t
 Performing such an iteration guarantees that if one starts with an initial state that has overlap $\sin^2(\theta)$ with the marked space then after $m$ iterations this overlap becomes $\sin^2([2m + 1] \theta)$.
 We therefore typically wish to choose $m$ to be a free parameter such that $[2m+1]\theta = \pi/2$; however, such rigid choices are not as important for some forms of amplitude amplification such as fixed point amplitude amplification.
 This process allows us to prepare a state in the marked subspace using quadratically fewer queries to the marking function and the state preparation function than would be possible on a strictly classical device.
-This is why amplitude amplification is a significant primitive for many applications of quantum computing.
+This is why amplitude amplification is a significant building block for many applications of quantum computing.
 
 In order to understand how to use the algorithm, it is useful to provide an example that gives a construction of the oracles.  Consider performing Grover's algorithm for database searches in this setting.
 In Grover's search the goal is to transform the state $\ket{+}^{\otimes n} = H^{\otimes n} \ket{0}$ into one of (potentially) many marked states.
@@ -103,23 +103,19 @@ Then we have design two oracles: one that only marks the initial state $\ket{+}^
 The latter gate can be implemented using the following process operation, by using the control flow operations in the canon:
 
 ```qsharp
-operation ReflectAboutAllZeros(register : Qubit[]) : Unit {
-    body (...) {
-        // Apply $X$ gates to every qubit.
-        ApplyToEach(X, register);
+operation ReflectAboutAllZeros(register : Qubit[]) : Unit 
+is Adj + Ctl {
 
-        // Apply an $n-1$ controlled $Z$-gate to the $n^{\text{th}}$ qubit.
-        // This gate will lead to a sign flip if and only if every qubit is
-        // $1$, which happens only if each of the qubits were $0$ before step 1.
-        Controlled Z(register[0..Length(register) - 2], register[Length(register) - 1]);
+    // Apply $X$ gates to every qubit.
+    ApplyToEach(X, register);
 
-        // Apply $X$ gates to every qubit.
-        ApplyToEach(X, register);
-    }
+    // Apply an $n-1$ controlled $Z$-gate to the $n^{\text{th}}$ qubit.
+    // This gate will lead to a sign flip if and only if every qubit is
+    // $1$, which happens only if each of the qubits were $0$ before step 1.
+    Controlled Z(Most(register), Tail(register));
 
-    adjoint auto;
-    controlled auto;
-    controlled adjoint auto;
+    // Apply $X$ gates to every qubit.
+    ApplyToEach(X, register);
 }
 ```
 
@@ -138,8 +134,9 @@ In pseudocode:
 This time, we also demonstrate using <xref:microsoft.quantum.canon.applywith> together with the <xref:microsoft.quantum.canon.rall1> operation discussed above:
 
 ```qsharp
-operation ReflectAboutInitial(register : Qubit[]) : Unit is Adj + Ctl {
-    ApplWithCA(ApplyToEach(H, _), With(ApplyToEach(X, _), RAll1(_, PI()), _), register);
+operation ReflectAboutInitial(register : Qubit[]) : Unit
+is Adj + Ctl {
+    ApplyWithCA(ApplyToEach(H, _), ApplyWith(ApplyToEach(X, _), RAll1(_, PI()), _), register);
 }
 ```
 
@@ -213,7 +210,7 @@ $$
 $$
 where the matrix exponential $U(t)=e^{-i H t}$ is known as the unitary time-evolution operator. Though we focus on generators of this form in the following, we emphasize that the concept applies more broadly, such as to the simulation of open quantum systems, or to more abstract differential equations.
 
-A primary goal of dynamical simulation is to implement the time-evolution operator on some quantum state encoded in qubits of a quantum computer.  In many cases, the Hamiltonian may be broken into a sum of some $d$ simpler, or primitive, terms
+A primary goal of dynamical simulation is to implement the time-evolution operator on some quantum state encoded in qubits of a quantum computer.  In many cases, the Hamiltonian may be broken into a sum of some $d$ simpler terms
 
 $$
 \begin{align}
@@ -221,7 +218,7 @@ $$
 \end{align}
 $$
 
-where time-evolution by each term alone is easy to implement on a quantum computer. For instance, if $H_j$ is a Pauli $X_1X_2$ operator acting on the 1st and 2nd elements of the qubit register `qubits`, time-evolution by it for any time $t$ may be implemented simply by calling the operation `Exp([PauliX;PauliX], t, qubits[1..2])`, which has signature `((Pauli[], Double, Qubit[]) => () : Adjoint, Controlled)`. As discussed later in Hamiltonian Simulation, one solution then is to approximate time-evolution by $H$ with a sequence of simpler operations
+where time-evolution by each term alone is easy to implement on a quantum computer. For instance, if $H_j$ is a Pauli $X_1X_2$ operator acting on the 1st and 2nd elements of the qubit register `qubits`, time-evolution by it for any time $t$ may be implemented simply by calling the operation `Exp([PauliX,PauliX], t, qubits[1..2])`, which has signature `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`. As discussed later in Hamiltonian Simulation, one solution then is to approximate time-evolution by $H$ with a sequence of simpler operations
 
 $$
 \begin{align}
@@ -285,19 +282,10 @@ let generatorIndexExample = GeneratorIndex(([1,2,0,3], [0.4]]), [0,8,2,1]);
 The `PauliEvolutionSet()` is a function that maps any `GeneratorIndex` of this form to an `EvolutionUnitary` with the following signature.
 
 ```qsharp
-newtype EvolutionUnitary = ((Double, Qubit[]) => Unit : Adjoint, Controlled);
+newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 ```
 
-The first parameter represents a time-duration, that will be multiplied by the coefficient in the `GeneratorIndex`, of unitary evolution. The second parameter is the qubit register the unitary acts on. For example:
-
-```qsharp
-let stepSize = 0.6;
-((PauliEvolutionSet()) (generatorIndexExample)) (stepSize, qubits);
-
-// This is the same as
-
-Exp([1,2,0,3], 0.4 * stepSize, [qubits[0],qubits[8],qubits[2],qubits[1]]);
-```
+The first parameter represents a time-duration, that will be multiplied by the coefficient in the `GeneratorIndex`, of unitary evolution. The second parameter is the qubit register the unitary acts on. 
 
 ### Time-Dependent Generators ###
 

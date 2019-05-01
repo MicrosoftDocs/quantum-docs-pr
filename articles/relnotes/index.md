@@ -14,8 +14,15 @@ uid: microsoft.quantum.relnotes
 
 *Release date: April 31, 2019 (May 1, 2019)*
 
-This release makes changes to the Q# language and restructures the Quantum Development Kit libraries.  The changes are summarized here as well as instructions for upgrading your existing programs.  You can read more about these changes on devblogs.microsoft.com/qsharp.
+This release contains the following:
+- makes changes to the Q# language, 
+- restructures the Quantum Development Kit libraries, 
+- adds a newly contributed sample, and 
+- fixes bugs.  
 
+The changes are summarized here as well as instructions for upgrading your existing programs.  You can read more about these changes on devblogs.microsoft.com/qsharp.
+
+## Q# language syntax
 This release adds new Q# language syntax:
 * Add a [shorthand way to express variations of quantum operations](xref:microsoft.quantum.language.type-model#functors) (control and adjoints) with "+" operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., ": adjoint") will continue to work, but a compile time warning will be generated.  
 * Add a new operator for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions), "w/", can be used to express array creation as a modification of an existing array.
@@ -24,7 +31,7 @@ This release adds new Q# language syntax:
 
 With this release, we no longer allow an array element to be specified on the left side of a set statement.  This is because that syntax implies that arrays are mutable when in fact, the result of the operation has always been the creation of a new array with the modification.  Instead, a compiler error will be generated with a suggestion to use the new copy-and-update operator, "w/", to accomplish the same result.  
 
-#
+## Library restructuring
 This release reorganizes the libraries to enable their growth in a consistent way:
 * Renames namespace Microsoft.Quantum.Primitive  to Microsoft.Quantum.Intrinsic.  These operations are implemented by the target machine.  The Microsoft.Quantum.Primitive namespace is deprecated.  A runtime warning will advise changing the namespace to Intrinsic.
 
@@ -40,6 +47,7 @@ With this change, programs that include a single "open" statement for the namesp
 
 * Microsoft.quantum.arithmetic namespace has been normalized to use little endian. Use the function [BigEndianAsLittleEndian](xref:microsoft.quantum.arithmetic.bigendianaslittleendian) when needed to convert to little endian.  
 
+## Samples and Bug fixes
 
 
 ## Migrating existing projects to 0.6.1904.

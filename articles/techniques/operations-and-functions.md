@@ -35,7 +35,7 @@ This is used similarly to `void` in C# and other imperative languages, and is eq
 > We will explore this in more detail below, but each operation in Q# takes exactly one input and returns exactly one output.
 > Multiple inputs and outputs are then represented using *tuples*, which collect multiple values together into a single value.
 > Informally, we say that Q# is a "tuple-in tuple-out" language.
-> Following this concept, `()` should then be read as the "empty" tuple.
+> Following this concept, `()` should then be read as the "empty" tuple, which has the type `Unit`.
 
 Within the new operation, the implementation can be specified directly within the declaration if only the default body specialization exists.
 Additionally, it is possible to define the implementations of for example the operation after functor application, as elaborated further below.

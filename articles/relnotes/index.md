@@ -33,7 +33,7 @@ With this release, we no longer allow an array element to be specified on the le
 
 ## Library restructuring
 This release reorganizes the libraries to enable their growth in a consistent way:
-* Renames namespace Microsoft.Quantum.Primitive  to Microsoft.Quantum.Intrinsic.  These operations are implemented by the target machine.  The Microsoft.Quantum.Primitive namespace is deprecated.  A runtime warning will advise changing the namespace to Intrinsic.
+* Renames the Microsoft.Quantum.Primitive namespace  to Microsoft.Quantum.Intrinsic.  These operations are implemented by the target machine.  The Microsoft.Quantum.Primitive namespace is deprecated.  A runtime warning will advise when programs call operations and functions using deprecated names.
 
 * Renames Microsoft.Quantum.Canon package to Microsoft.Quantum.Standard.  This package contains namespaces that are common to most Q# programs.  This includes:  
     - Microsoft.Quantum.Canon for common operations

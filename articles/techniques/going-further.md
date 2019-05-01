@@ -173,7 +173,7 @@ is Adj + Ctl {
         }
     }
 
-    controlled( extraControls, ... ) {
+    controlled(extraControls, ...) {
         MultiControlledXBorrow( extraControls + controls, target );
     }
 }

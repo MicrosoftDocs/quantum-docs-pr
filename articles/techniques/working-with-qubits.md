@@ -95,7 +95,7 @@ operation MeasurementOneQubit () : Result {
 
     // The following using block creates a fresh qubit and initializes it 
     // in the |0〉 state.
-    using (qubit = Qubit() {
+    using (qubit = Qubit()) {
         // We apply a Hadamard operation H to the state, thereby creating the 
         // state 1/sqrt(2)(|0〉+|1〉). 
         H(qubit); 

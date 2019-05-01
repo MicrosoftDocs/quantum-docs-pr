@@ -589,6 +589,18 @@ the `C` operation will be invoked, and if it is false then only `D` will
 be invoked.
 This is similar to short-circuiting in other languages.
 
+## Copy-and-Update Expressions
+
+New arrays can be created from existing ones via copy-and-update expressions.
+A copy-and-update expression is an expression of the form `expression1 w/ expression2 <- expression3`, where `expression1` has to be of type `T[]` for some type `T`. The second `expression2` defines the indices of the element(s) to modify compared to the array in `expression1` and has to be either of type `Int` or of type `Range`. If `expression2` is of type `Int`, `expression3` has to be of type `T`. If `expression2` is of type `Range`, `expression3` has to be of type `T[]`.
+
+A copy-and-update expression `arr w/ idx <- value` constructs a new array with all elements set to the corresponding element in `arr`, except for the element(s) at `idx`, which are set to the one(s) in `value`. 
+For example, if `arr` contains an array `[0,1,2,3]`, then 
+- `arr w/ 0 <- 10` is the array `[10,1,2,3]`.
+- `arr w/ 2 <- 10` is the array `[0,1,10,3]`.
+- `arr w/ 0..2..3 <- [10,12]` is the array `[10,1,12,3]`.
+
+
 ## Operator Precedence
 
 All binary operators are right-associative, except for `^`.
@@ -607,15 +619,18 @@ Operators in order of precedence, from highest to lowest:
 Operator | Arity | Description | Operand Types
 ---------|----------|---------|---------------
  trailing `!` | Unary | Unwrap | Any user-defined type
- `-`, `~~~`,`not` | Unary | Numeric negative, bitwise complement, logical negation | `Int` or `Double` for `-`, `Int` for `~~~`, `Bool` for `not`
- `^` | Binary | Integer power | `Int`
- `/`, `*`, `%` | Binary | Division, multiplication, integer modulus | `Int` or `Double` for `/` and `*`, `Int` for `%`
- `+`, `-` | Binary | Addition or string and array concatenation, subtraction | `Int` or `Double`, additionally `String` or any array type for `+`
- `<<<`, `>>>` | Binary | Left shift, right shift | `Int`
- `<`, `<=`, `>`, `>=` | Binary | Less-than, less-than-or-equal, greater-than, greater-than-or-equal comparisons | `Int` or `Double`
+ `-`, `~~~`, `not` | Unary | Numeric negative, bitwise complement, logical negation | `Int`, `BigInt` or `Double` for `-`, `Int` or `BigInt` for `~~~`, `Bool` for `not`
+ `^` | Binary | Integer power | `Int` or `BigInt` for the base, `Int` for the exponent
+ `/`, `*`, `%` | Binary | Division, multiplication, integer modulus | `Int`, `BigInt` or `Double` for `/` and `*`, `Int` or `BigInt` for `%`
+ `+`, `-` | Binary | Addition or string and array concatenation, subtraction | `Int`, `BigInt` or `Double`, additionally `String` or any array type for `+`
+ `<<<`, `>>>` | Binary | Left shift, right shift | `Int` or `BigInt`
+ `<`, `<=`, `>`, `>=` | Binary | Less-than, less-than-or-equal, greater-than, greater-than-or-equal comparisons | `Int`, `BigInt` or `Double`
  `==`, `!=` | Binary | equal, not-equal comparisons | any primitive type
- `&&&` | Binary | Bitwise AND | `Int`
- `^^^` | Binary | Bitwise XOR | `Int`
- <code>\|\|\|</code> | Binary | Bitwise OR | `Int`
+ `&&&` | Binary | Bitwise AND | `Int` or `BigInt`
+ `^^^` | Binary | Bitwise XOR | `Int` or `BigInt`
+ <code>\|\|\|</code> | Binary | Bitwise OR | `Int` or `BigInt`
  `and` | Binary | Logical AND | `Bool`
  `or` | Binary | Logical OR | `Bool`
+ `..` | Binary/Ternary | Range operator | `Int`
+ `?` `|` | Ternary | Conditional | `Bool` for the left-hand-side
+`w/` `<-` | Ternary | Copy-and-update | see [copy-and-update expressions](#copy-and-update-expressions)

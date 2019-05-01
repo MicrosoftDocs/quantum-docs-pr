@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.positiveintfromresultarr
 name: PositiveIntFromResultArr
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.canon.resultarrayasint".
 syntax: 'function PositiveIntFromResultArr (results : Result[]) : Int'
 input:
   content: '(results : Result[])'

@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.applyquantumfouriertransformbe
 name: ApplyQuantumFourierTransformBE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  This operation has been removed.
 syntax: 'operation ApplyQuantumFourierTransformBE (qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 input:
   content: '(qs : Microsoft.Quantum.Arithmetic.BigEndian)'

@@ -3,11 +3,6 @@ uid: microsoft.quantum.primitive.reset
 name: Reset
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.intrinsic.reset".
 syntax: 'operation Reset (target : Qubit) : Unit'
 input:
   content: '(target : Qubit)'

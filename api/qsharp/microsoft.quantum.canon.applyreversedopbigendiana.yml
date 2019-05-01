@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.applyreversedopbigendiana
 name: ApplyReversedOpBigEndianA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA".
 syntax: 'operation ApplyReversedOpBigEndianA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian)'

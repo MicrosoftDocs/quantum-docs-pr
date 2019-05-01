@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.resultasint
 name: ResultAsInt
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.convert.resultarrayasint".
 syntax: 'function ResultAsInt (results : Result[]) : Int'
 input:
   content: '(results : Result[])'

@@ -3,11 +3,6 @@ uid: microsoft.quantum.extensions.math.log
 name: Log
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.log".
 syntax: 'function Log (input : Double) : Double'
 input:
   content: '(input : Double)'

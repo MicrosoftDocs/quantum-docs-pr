@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.assertalmostequal
 name: AssertAlmostEqual
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Diagnostics.NearEqualityFact" instead.
 syntax: 'function AssertAlmostEqual (actual : Double, expected : Double) : Unit'
 input:
   content: '(actual : Double, expected : Double)'

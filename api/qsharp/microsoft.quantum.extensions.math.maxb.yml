@@ -3,11 +3,6 @@ uid: microsoft.quantum.extensions.math.maxb
 name: MaxB
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.maxl".
 syntax: 'function MaxB (a : BigInt, b : BigInt) : BigInt'
 input:
   content: '(a : BigInt, b : BigInt)'

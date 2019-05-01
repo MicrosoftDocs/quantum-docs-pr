@@ -3,11 +3,6 @@ uid: microsoft.quantum.extensions.convert.tostringd
 name: ToStringD
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.convert.doubleasstring".
 syntax: 'function ToStringD (a : Double) : String'
 input:
   content: '(a : Double)'

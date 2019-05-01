@@ -3,11 +3,6 @@ uid: microsoft.quantum.primitive.random
 name: Random
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.intrinsic.random".
 syntax: 'operation Random (probs : Double[]) : Int'
 input:
   content: '(probs : Double[])'

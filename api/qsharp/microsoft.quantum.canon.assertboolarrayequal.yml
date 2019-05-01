@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.assertboolarrayequal
 name: AssertBoolArrayEqual
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Diagnostics.AllEqualityFactB" instead.
 syntax: 'function AssertBoolArrayEqual (actual : Bool[], expected : Bool[], message : String) : Unit'
 input:
   content: '(actual : Bool[], expected : Bool[], message : String)'

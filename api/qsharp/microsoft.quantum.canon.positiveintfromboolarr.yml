@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.positiveintfromboolarr
 name: PositiveIntFromBoolArr
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.convert.boolarrayasint".
 syntax: 'function PositiveIntFromBoolArr (bits : Bool[]) : Int'
 input:
   content: '(bits : Bool[])'

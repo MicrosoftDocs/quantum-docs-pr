@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
 name: ApplyRippleCarryComparatorBE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  This operation has been removed.
 syntax: 'operation ApplyRippleCarryComparatorBE (x : Microsoft.Quantum.Arithmetic.BigEndian, y : Microsoft.Quantum.Arithmetic.BigEndian, output : Qubit) : Unit'
 input:
   content: '(x : Microsoft.Quantum.Arithmetic.BigEndian, y : Microsoft.Quantum.Arithmetic.BigEndian, output : Qubit)'

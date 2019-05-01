@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.splitarray
 name: SplitArray
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Arrays.Partitioned" instead.
 syntax: "function SplitArray (nElements : Int[], arr : 'T[]) : 'T[][]"
 input:
   content: "(nElements : Int[], arr : 'T[])"

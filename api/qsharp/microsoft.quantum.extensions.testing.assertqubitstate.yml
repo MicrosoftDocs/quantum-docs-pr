@@ -3,11 +3,6 @@ uid: microsoft.quantum.extensions.testing.assertqubitstate
 name: AssertQubitState
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
 syntax: 'operation AssertQubitState (expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'

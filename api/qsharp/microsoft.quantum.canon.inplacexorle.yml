@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.inplacexorle
 name: InPlaceXorLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Measurement.ApplyXorInPlace".
 syntax: 'operation InPlaceXorLE (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'

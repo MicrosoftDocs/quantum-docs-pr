@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.curryop
 name: CurryOp
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.canon.curriedop".
 syntax: "function CurryOp (op : (('T, 'U) => Unit)) : ('T -> ('U => Unit))"
 input:
   content: "(op : (('T, 'U) => Unit))"

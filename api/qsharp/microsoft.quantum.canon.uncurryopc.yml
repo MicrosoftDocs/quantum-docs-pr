@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.uncurryopc
 name: UncurryOpC
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.canon.uncurriedopc".
 syntax: "function UncurryOpC (curriedOp : ('T -> ('U => Unit is Ctl))) : (('T, 'U) => Unit is Ctl)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Ctl)))"

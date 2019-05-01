@@ -3,11 +3,6 @@ uid: microsoft.quantum.extensions.math.truncate
 name: Truncate
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.truncate".
 syntax: 'function Truncate (a : Double) : Int'
 input:
   content: '(a : Double)'

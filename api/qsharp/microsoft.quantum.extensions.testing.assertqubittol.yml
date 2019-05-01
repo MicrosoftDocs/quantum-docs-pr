@@ -3,11 +3,6 @@ uid: microsoft.quantum.extensions.testing.assertqubittol
 name: AssertQubitTol
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
 syntax: 'operation AssertQubitTol (expected : Result, q : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Result, q : Qubit, tolerance : Double)'

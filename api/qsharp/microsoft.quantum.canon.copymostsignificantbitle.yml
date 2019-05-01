@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.copymostsignificantbitle
 name: CopyMostSignificantBitLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit".
 syntax: 'operation CopyMostSignificantBitLE (from : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
   content: '(from : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'

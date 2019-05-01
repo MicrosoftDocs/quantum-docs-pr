@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Diagnostics
 summary: Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator.
 remarks: |-
-  <xref:microsoft.quantum.extensions.testing.assertqubitisinstatewithintolerance> allows for asserting
+  <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> allows for asserting
   arbitrary qubit states rather than only $Z$ eigenstates.
 syntax: 'operation AssertQubit (expected : Result, q : Qubit) : Unit'
 input:

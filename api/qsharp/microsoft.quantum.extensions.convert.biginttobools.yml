@@ -3,11 +3,6 @@ uid: microsoft.quantum.extensions.convert.biginttobools
 name: BigIntToBools
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.convert.bigintasboolarray".
 syntax: 'function BigIntToBools (a : BigInt) : Bool[]'
 input:
   content: '(a : BigInt)'

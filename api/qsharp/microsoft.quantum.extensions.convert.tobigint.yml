@@ -3,11 +3,6 @@ uid: microsoft.quantum.extensions.convert.tobigint
 name: ToBigInt
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.convert.intasbigint".
 syntax: 'function ToBigInt (a : Int) : BigInt'
 input:
   content: '(a : Int)'

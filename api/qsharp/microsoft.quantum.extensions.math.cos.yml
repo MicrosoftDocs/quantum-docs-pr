@@ -3,11 +3,6 @@ uid: microsoft.quantum.extensions.math.cos
 name: Cos
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.cos".
 syntax: 'function Cos (theta : Double) : Double'
 input:
   content: '(theta : Double)'

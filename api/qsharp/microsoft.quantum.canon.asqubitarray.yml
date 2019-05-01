@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.asqubitarray
 name: AsQubitArray
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  This function has been removed.
 syntax: 'function AsQubitArray (arr : Qubit[]) : Qubit[]'
 input:
   content: '(arr : Qubit[])'

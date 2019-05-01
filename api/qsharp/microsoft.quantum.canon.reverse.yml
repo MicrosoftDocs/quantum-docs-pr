@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.reverse
 name: Reverse
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Arrays.Reversed" instead.
 syntax: "function Reverse (array : 'T[]) : 'T[]"
 input:
   content: "(array : 'T[])"

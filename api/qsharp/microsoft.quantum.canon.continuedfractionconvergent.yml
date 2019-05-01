@@ -3,11 +3,6 @@ uid: microsoft.quantum.canon.continuedfractionconvergent
 name: ContinuedFractionConvergent
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.continuedfractionconvergenti".
 syntax: 'function ContinuedFractionConvergent (fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int) : Microsoft.Quantum.Math.Fraction'
 input:
   content: '(fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int)'

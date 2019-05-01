@@ -3,11 +3,6 @@ uid: microsoft.quantum.extensions.math.round
 name: Round
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.round".
 syntax: 'function Round (a : Double) : Int'
 input:
   content: '(a : Double)'

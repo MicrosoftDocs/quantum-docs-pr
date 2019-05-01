@@ -3,11 +3,6 @@ uid: microsoft.quantum.primitive.m
 name: M
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.intrinsic.m".
 syntax: 'operation M (qubit : Qubit) : Result'
 input:
   content: '(qubit : Qubit)'

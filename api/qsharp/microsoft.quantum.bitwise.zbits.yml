@@ -26,5 +26,5 @@ output:
     isPrimitive: true
     uid: Int
 seeAlso:
-- microsoft.quantum.extensions.bitwise.xbits
+- xbits
 ...

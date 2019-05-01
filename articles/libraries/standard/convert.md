@@ -13,7 +13,7 @@ Q# is a **strongly-typed** language.
 In particular, Q# does not implicitly cast between distinct types. For instance, `1 + 2.0` is not a valid Q# expression.
 Rather, Q# provides a variety of type conversion functions for constructing new values of a given type.
 
-For example, <xref:microsoft.quantum.core.length> has an output type of `Int`, such that its output must first be converted to a `Double` before it can be used as a part of a floating-point expression.
+For example, <xref:microsoft.quantum.core.length> has an output type of `Int`, so its output must first be converted to a `Double` before it can be used as a part of a floating-point expression.
 This can be done using the <xref:microsoft.quantum.convert.intasdouble> function:
 
 ```Q#

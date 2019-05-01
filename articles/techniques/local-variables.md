@@ -48,7 +48,7 @@ operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
 ```
 
 All types in Q#, including arrays, follow value semantics. In particular, it is not possible to update array items. To modify an existing array requires leveraging a copy-and-update mechanism much like the one for records in F#. 
-Using the library tools for arrays provided in `Microsoft.Quantum.Arrays` we can e.g. easily defined a function that returns an array of Paulis where the Pauli at index `i` takes the given value and all other entries are the identity: 
+Using the library tools for arrays provided in [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays), we can e.g. easily define a function that returns an array of Paulis where the Pauli at index `i` takes the given value and all other entries are the identity: 
 
 ```qsharp
 function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {

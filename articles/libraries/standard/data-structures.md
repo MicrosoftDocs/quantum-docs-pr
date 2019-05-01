@@ -36,7 +36,7 @@ This can be used to change how a quantum register is represented when calling op
 ```qsharp
 let leRegister = LittleEndian(register);
 // QFT expects a BigEndian, so we can reverse before calling.
-QFT(BigEndian(Reverse(leRegister!)));
+QFT(BigEndian(LittleEndianAsBigEndian(leRegister)));
 ```
 
 Similarly, the <xref:microsoft.quantum.canon.subarray> function can be used to reorder or take subsets of the elements of an array:

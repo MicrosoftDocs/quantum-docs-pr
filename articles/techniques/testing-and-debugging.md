@@ -48,7 +48,7 @@ operation AllocateQubitTest () : Unit
 {
     using (qs = Qubit()) 
     {
-        Assert([PauliZ], [qs], Zero, "Newly allocated qubit must be in |0> state");
+        Assert([PauliZ], [qs], Zero, "Newly allocated qubit must be in |0⟩ state");
     }
     Message("Test passed");
 }

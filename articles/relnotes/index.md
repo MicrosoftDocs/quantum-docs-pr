@@ -61,24 +61,24 @@ We added a [sample of using Q# with F# driver](https://github.com/Microsoft/Quan
 
   
 1.  Follow [these instructions](xref:microsoft.quantum.install#updating-iq) to update IQ#.  
-2.  Follow [these instructions](xref:microsoft.quantum.install.python) to update Python.
+2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
 3.  Follow these instructions to update your .csproj file: 
 
 If you have existing Q# projects from version 0.5 of the Quantum Development Kit, the following are the steps to migrate those projects to the newest version.
 
-1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
-2. From a command line, Run `dotnet clean` to remove all existing binaries and intermediate files.
-3. In a text editor, edit the .csproj file to change the version of all 
+      1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
+      2. From a command line, Run `dotnet clean` to remove all existing binaries and intermediate files.
+      3. In a text editor, edit the .csproj file to change the version of all 
    the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
 ```xml
     <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1904.0102" />
     <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1904.0102" />
 ```
-4. From the command line, run this command: `dotnet msbuild`  
-5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
-    - Open the root folder of the project or the containing solution in Visual Studio 2017 or Visual Studio Code.
-    - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
-    - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
+      4. From the command line, run this command: `dotnet msbuild`  
+      5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
+            - Open the root folder of the project or the containing solution in Visual Studio 2017 or Visual Studio Code.
+            - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
+            - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
 
 
 > [!NOTE]

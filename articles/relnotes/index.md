@@ -10,10 +10,73 @@ uid: microsoft.quantum.relnotes
 
 # Microsoft Quantum Development Kit Release Notes
 
+# Version 0.6.1904
+
+*Release date: April 31, 2019 (May 1, 2019)*
+
+This release makes changes to the Q# language and restructures the Quantum Development Kit libraries.  The changes are summarized here as well as instructions for upgrading your existing programs.  You can read more about these changes on devblogs.microsoft.com/qsharp.
+
+This release adds new Q# language syntax:
+* Add a shorthand way to express variations of quantum operations (control and adjoints)
+* Add a new operator "w/" to express array creation as a modification of an existing array.
+* Add the common operation shorthands, e.g., "+=", "w/=".
+* Add a way to specify a short name for namespaces.
+
+With this release, we no longer allow an array element to be specified on the left side of a set statement.  This is because that syntax implies that arrays are mutable when in fact, the result of the operation has always been the creation of a new array with the modification.  Instead, a compiler error will be generated with a suggestion to use the new operator "w/" to accomplish the same result.  
+
+#
+This release reorganizes the libraries to enable their growth in a consistent way:
+* Renames Microsoft.Quantum.Primitive namespace to Microsoft.Quantum.Intrinsic.  These operations are implemented by the target machine.  The Microsoft.Quantum.Primitive namespace is deprecated.  A runtime warning will advise changing the namespace to Intrinsic.
+
+* Renames Microsoft.Quantum.Canon package to Microsoft.Quantum.Standard.  This package contains namespaces that are common to most Q# programs.  This includes:  
+    - Microsoft.Quantum.Canon for common operations
+    - Microsoft.Quantum.Arithmetic for general purpose arithmetic operations
+    - Microsoft.Quantum.Preparation for operations used to prepare qubit state
+    - Microsoft.Quantum.Simulation for simulation functionality
+
+With this change, programs that include a single "open" statement for the namespace "Microsoft.Quatum.Canon" may encounter build errors if the program references operations that were moved to the other three new namespaces.  Adding the three additional open statements for the new namespaces is a straightforward way to resolve this issue.  
+
+* Several namespaces have been deprecated as the operations within have been reorganized to other namespaces. Programs that use these namespaces will continue to work, and a compile time warning will denote the namespace where the operation is defined.  
+
+* Microsoft.quantum.arithmetic namespace has been normalized to use little endian. Use the function [BigEndianAsLittleEndian](xref:microsoft.quantum.arithmetic.bigendianaslittleendian) when needed to convert to little endian.  
+
+
+
+## Migrating existing projects to 0.6.1904.
+
+  
+1.  Follow [these instructions](xref:microsoft.quantum.install#updating-iq) to update IQ#.  
+2.  Follow [these instructions](xref:microsoft.quantum.install.python) to update Python.
+3.  Follow these instructions to update your .csproj file: 
+
+If you have existing Q# projects from version 0.5 of the Quantum Development Kit, the following are the steps to migrate those projects to the newest version.
+
+1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
+2. From a command line, Run `dotnet clean` to remove all existing binaries and intermediate files.
+3. In a text editor, edit the .csproj file to change the version of all 
+   the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
+```xml
+    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1904.xxxx" />
+    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1904.xxxx" />
+```
+4. From the command line, running this command: `dotnet msbuild`  
+5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
+    - Open the root folder of the project or the containing solution in Visual Studio 2017 or Visual Studio Code.
+    - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
+    - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
+
+
+> [!NOTE]
+> * For the 0.6 release, the language server included with the Quantum Development Kit does not support multiple workspaces.
+> * In order to work with a project in Visual Studio Code, open the root folder containing the project itself and all referenced projects.   
+> * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
+> * References between projects migrated to 0.6 and higher and projects using older package versions are **not** supported.
+
+
 
 # Version 0.5.1904
 
-*Release date: Aprint 2015, 2019*
+*Release date: April 15, 2019*
 
 This release contains bug fixes.
 

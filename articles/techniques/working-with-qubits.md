@@ -77,7 +77,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
     PrepareBitString(bitstring, register);
     // Next, we use that |+〉 = H|0〉 and |-〉 = H|1〉 to
     // prepare the state we want.
-    for (idxQubit in 0..Length(register) - 1) {
+    for (idxQubit in IndexRange(register)) {
         H(register[idxQubit]);
     }
 }

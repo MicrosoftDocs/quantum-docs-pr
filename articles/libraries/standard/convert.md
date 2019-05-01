@@ -26,7 +26,7 @@ function HalfLength<'T>(arr : 'T[]) : Double {
 
 The <xref:microsoft.quantum.convert> namespace provides common type conversion functions for working with the basic built-in types, such as `Int`, `Double`, `BigInt`, `Result`, and `Bool`:
 
-```Q#
+```qsharp
 let bool = Convert.ResultAsBool(One);        // true
 let big = Convert.IntAsBigInt(271);          // 271L
 let indices = Convert.RangeAsIntArray(0..4); // [0, 1, 2, 3, 4]

@@ -296,7 +296,7 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int)
     let normalization = 1. / IntAsDouble(prec);
     mutable samples = RandomInts(prec, nrSamples);
     
-    for (i in 0 .. Length(samples) - 1) {
+    for (i in IndexRange(samples) {
         set samples w/= i <- normalization * IntAsDouble(samples[i]);
     }
 }

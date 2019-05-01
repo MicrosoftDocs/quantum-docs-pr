@@ -28,7 +28,7 @@ Please see https://www.anaconda.com/distribution/ for more details.
 Install `qsharp` using `pip`:
 
 ```
-pip install qsharp
+pip install qsharp --upgrade
 ```
 
 You will also need to explicitly install the `iqsharp` kernel using this command:

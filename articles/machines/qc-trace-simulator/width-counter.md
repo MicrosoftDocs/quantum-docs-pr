@@ -18,6 +18,7 @@ by the implementation of a multiply controlled `X` gate:
 
 ```qsharp
 open Microsoft.Quantum.Primitive;
+open Microsoft.Quantum.Arrays;
 operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
 
     using(qubits = Qubit[numberOfQubits]) {

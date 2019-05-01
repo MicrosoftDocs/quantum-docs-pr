@@ -476,7 +476,7 @@ reference that cannot be used without causing a runtime error.
 This is similar to a null reference in languages such as C# or Java.
 Arrays containing qubits or callables must be properly initialized 
 with non-default values before their elements may be safely used. 
-Suitable initialization routines can be found in `Microsoft.Quantum.Arrays`.
+Suitable initialization routines can be found in <xref:microsoft.quantum.arrays>.
 
 The default values for each type are:
 

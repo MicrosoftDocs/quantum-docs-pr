@@ -45,7 +45,7 @@ With this change, programs that include a single "open" statement for the namesp
 
 * Several namespaces have been deprecated as the operations within have been reorganized to other namespaces. Programs that use these namespaces will continue to work, and a compile time warning will denote the namespace where the operation is defined.  
 
-* Microsoft.quantum.arithmetic namespace has been normalized to use little endian. Use the function [BigEndianAsLittleEndian](xref:microsoft.quantum.arithmetic.bigendianaslittleendian) when needed to convert to little endian.  
+* The Microsoft.Quantum.Arithmetic namespace has been normalized to use the <xref:microsoft.quantum.arithmetic.littleendian> user-defined type. Use the function [BigEndianAsLittleEndian](xref:microsoft.quantum.arithmetic.bigendianaslittleendian) when needed to convert to little endian.  
 
 ## Samples and Bug fixes
 

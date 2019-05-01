@@ -10,7 +10,7 @@ ms.topic: article
 # Type Conversions #
 
 Q# is a **strongly-typed** language.
-In particular, Q# does not implicitly cast between distinct types, such that `1 + 2.0` is not a valid Q# expression.
+In particular, Q# does not implicitly cast between distinct types. For instance, `1 + 2.0` is not a valid Q# expression.
 Rather, Q# provides a variety of type conversion functions for constructing new values of a given type.
 
 For example, <xref:microsoft.quantum.core.length> has an output type of `Int`, such that its output must first be converted to a `Double` before it can be used as a part of a floating-point expression.

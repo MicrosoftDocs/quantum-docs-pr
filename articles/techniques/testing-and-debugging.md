@@ -54,7 +54,7 @@ operation AllocateQubitTest () : Unit
 }
 ```
 
-Any Q# operation compatible with type `(Unit => Unit)` or function compatible with `(Unit -> Unit)` can be executed as a unit test. 
+Any Q# operation compatible with the type `(Unit => Unit)` or function compatible with `(Unit -> Unit)` can be executed as a unit test. 
 
 The second file, `TestSuiteRunner.cs` contains a method that discovers and runs Q# unit tests. 
 This is the method `TestTarget` annotated with `OperationDriver` attribute.

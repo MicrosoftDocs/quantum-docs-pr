@@ -170,7 +170,7 @@ Function types are completely specified by their signature.
 For example, a function that computes the sine of an angle
 would have type `(Double -> Double)`.
 
-Operations -- but not functions -- have certain additional characteristics that are expressed as part of the operation type. 
+Operations—but not functions—have certain additional _characteristics_ that are expressed as part of the operation type. 
 Such characteristics include information about what functors the operation supports.
 Functors are meta-operations that generate a specialization of a base operation;
 see [Functors](#functors), below.

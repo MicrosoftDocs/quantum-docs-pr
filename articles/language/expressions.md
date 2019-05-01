@@ -353,7 +353,7 @@ For example, if `Op` has type
 - `Op(_,((q1,q2),_))` has type `((Int,Double) => Unit is Adj)`.
    Note that we have applied singleton tuple equivalence here.
 
-:new: If the partially-applied callable has type parameters that cannot be
+If the partially-applied callable has type parameters that cannot be
 inferred by the compiler, they must be provided at the invocation site.
 The partial application cannot have any unspecified type parameters.
 
@@ -476,7 +476,7 @@ reference that cannot be used without causing a runtime error.
 This is similar to a null reference in languages such as C# or Java.
 Arrays containing qubits or callables must be properly initialized 
 with non-default values before their elements may be safely used. 
-Suitable initialization routines can be found in `Microsoft.Quantum.Arrays`.
+Suitable initialization routines can be found in <xref:microsoft.quantum.arrays>.
 
 The default values for each type are:
 

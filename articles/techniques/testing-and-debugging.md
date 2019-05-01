@@ -222,7 +222,7 @@ Wavefunction:
 3:      0               0
 ```
 
-Notice how the ids of the qubits are shown at the top in their significant order. For each computational basis state $\ket{n}$, the first column represents the Real part of the amplitude, and the second column represents its Imaginary part.
+Notice how the IDs of the qubits are shown at the top in their significant order. For each computational basis state $\ket{n}$, the first column represents the real part of the amplitude, and the second column represents its imaginary part.
 
   > [!NOTE]
   > The id of a qubit is assigned at runtime and it's not necessarily aligned with the order in which the qubit was allocated or its position within a qubit register.

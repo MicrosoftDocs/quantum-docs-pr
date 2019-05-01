@@ -56,10 +56,12 @@ $ code . # To open in Visual Studio Code.
 
 Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
 
+#### Source files for a quantum application
 Your development environment should have two files open:
 `Driver.cs`, which will hold the C# driver for your quantum code,
 and `Operations.qs`, which will hold the quantum code itself.
 
+#### Q# source
 The first step is to rename the Q# file to `Bell.qs`.
 Right-click on `Operations.qs` in the Visual Studio Solution Explorer (Ctrl+Alt+L to focus) or the Visual Studio Code Explorer (Ctrl/⌘+Shift+E to focus), and select the Rename option.
 Replace `Operations` with `Bell` and hit return.
@@ -72,7 +74,7 @@ The `Bell.qs` file should have the following contents:
 namespace Quantum.Bell
 {
     open Microsoft.Quantum.Canon;
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Intrinsic;
 
     operation HelloQ () : Unit {
         Message("Hello quantum world!");
@@ -80,6 +82,7 @@ namespace Quantum.Bell
 }
 ```
 
+#### Q# operation
 First, replace the string `HelloQ` with `Set`, and change the operation
 parameters (the content of the parentheses) to contain the string
 `desired: Result, q1: Qubit`.
@@ -88,7 +91,7 @@ The file should now look like:
 ```qsharp
 namespace Quantum.Bell
 {
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Canon;
 
     operation Set (desired: Result, q1: Qubit) : Unit {
@@ -113,7 +116,7 @@ The file should now look like:
 ```qsharp
 namespace Quantum.Bell
 {
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Canon;
 
     operation Set (desired: Result, q1: Qubit) : Unit
@@ -127,6 +130,7 @@ namespace Quantum.Bell
 }
 ```
 
+#### Set or flip a qubit
 This operation may now be called to set a qubit in a known state (`Zero` or `One`). We measure the qubit, if it's in the state we want, we leave it alone, otherwise, we flip it with the `X` gate.
 
 > [!NOTE]
@@ -150,6 +154,7 @@ This operation may now be called to set a qubit in a known state (`Zero` or `One
 > See the [Q# language reference](xref:microsoft.quantum.language.intro) for more
 > information.
 
+#### Measure a qubit
 Add the following operation to the namespace, after the end of the
 `Set` operation:
 
@@ -168,7 +173,7 @@ Add the following operation to the namespace, after the end of the
                 // Count the number of ones we saw:
                 if (res == One)
                 {
-                    set numOnes = numOnes + 1;
+                    set numOnes += 1;
                 }
             }
             Set(Zero, qubit);
@@ -179,10 +184,11 @@ Add the following operation to the namespace, after the end of the
     }
 ```
 
-This operation (`BellTest`) will loop for `count` iterations, set a specified `initial` value on a qubit and them measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
+This operation (`BellTest`) will loop for `count` iterations, set a specified `initial` value on a qubit and then measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
 
-All of these calls use primitive quantum operations that are
-defined in the `Microsoft.Quantum.Primitive` namespace.
+All of these calls use intrinsic quantum operations that are
+defined in the `Microsoft.Quantum.Intrinsic` namespace.
+
 For instance, the `M` operation measures its argument qubit in the
 computational (`Z`) basis, and `X` applies a state flip around the x axis
 to its argument qubit.
@@ -256,6 +262,7 @@ namespace Quantum.Bell
 }
 ```
 
+#### Run quantum operations from a C# host program
 Replace the body of the `Main` method with the following code:
 
 ```csharp
@@ -411,7 +418,7 @@ The full routine now looks like this:
                 // Count the number of ones we saw:
                 if (res == One)
                 {
-                    set numOnes = numOnes + 1;
+                    set numOnes += 1;
                 }
             }
             
@@ -444,13 +451,13 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
 
                 if (M (qubits[1]) == res) 
                 {
-                    set agree = agree + 1;
+                    set agree += 1;
                 }
 
                 // Count the number of ones we saw:
                 if (res == One)
                 {
-                    set numOnes = numOnes + 1;
+                    set numOnes += 1;
                 }
             }
             
@@ -494,9 +501,7 @@ Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1),
 
 ## Estimating Resources
 
-Sometimes the quantum program is impossible to simulate on a classical computer (for example, if it uses too many qubits). In this case the researchers need to get an estimate of how many resources (qubits or certain gates) the program will use when executed on a quantum computer.
-of how many quantum resources the program will use on a quantum computer as it would be impossible to simulate the 
-program on a classical computer. We can do this without changing the Q# operation but using a different target machine, a  `ResourcesEstimator`, for executing it in the C# host code; 
+Sometimes the quantum program is impossible to simulate on a classical computer (for example, if it uses too many qubits). In this case the researchers need to get an estimate of how many resources (qubits or certain gates) the program will use on a quantum computer as it would be impossible to simulate the program on a classical computer. We can do this without changing the Q# operation but using a different target machine, a  `ResourcesEstimator`, for executing it in the C# host code; 
 for example, modify the code in the the __Driver.cs__ file to be:
 
 ```csharp

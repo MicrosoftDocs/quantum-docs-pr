@@ -20,8 +20,8 @@
   topicHref: language/index.md
   href: language/toc.yml
 - name: Contributing to the Quantum Development Kit
-  topicHref: contributing/toc.yml
-  href: contributing/index.md
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
 - name: Glossary
   href: Glossary.md
 - name: For more information

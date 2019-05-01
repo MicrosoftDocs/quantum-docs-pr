@@ -28,7 +28,7 @@ At the end of the `using` block, any qubits allocated by that block are immediat
 > [!WARNING]
 > Target machines expect that qubits are in the $\ket{0}$ state immediately before deallocation, so that they can be reused and offered to other `using` blocks for allocation.
 > Whenever possible, use unitary operations to return any allocated qubits to $\ket{0}$.
-> If need be, the @"microsoft.quantum.canon.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$. Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation. 
+> If need be, the @"microsoft.quantum.intrinsic.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$. Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation. 
 
 ## Intrinsic Unitaries ##
 

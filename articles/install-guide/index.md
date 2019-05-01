@@ -86,7 +86,7 @@ and provide features like:
 * Go to symbol definition
 * Find all references
 * Rename of symbols
-* Code actions
+* Code actions (e.g. namespace import helper)
 * Debug breakpoints (Visual Studio)
 
 To install the extensions, follow the instructions at:

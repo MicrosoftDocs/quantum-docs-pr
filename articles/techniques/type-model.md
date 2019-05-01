@@ -132,8 +132,8 @@ let realUnit = Complex(1.0, 0.0);
 let imaginaryUnit = Complex(0.0, 1.0);
 ```
 
-In order to access the items in a user defined type, the tuple first needs to be "cast" to the corresponding tuple type. 
-The postfix operator `!` will invoke a suitable cast.
+In order to access the items in a user defined type, the tuple first needs to be extracted to give an expression of the corresponding tuple type. 
+The postfix operator `!` will do this extraction.
 This lets us write out accessor functions into the structure of a user-defined type, for instance:
 
 ```qsharp

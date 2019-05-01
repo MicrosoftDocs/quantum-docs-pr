@@ -254,7 +254,7 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 
 ```
 
-> [!TIP]
+> [!TIP]   
 > Avoid unnecessary use of update-and-reassign statements by leveraging the tools provided in `Microsoft.Quantum.Arrays`.
 
 The function

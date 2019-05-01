@@ -11,11 +11,13 @@ uid: microsoft.quantum.libraries.standard.prelude
 
 # The Prelude #
 
-## Primitive Operations and Functions ##
+The Q# compiler and the target machines included with the Quantum Development Kit provide a set of intrinsic functions and operations that can be used when writing quantum programsin Q#.
 
-The primitive operations defined in the standard library roughly fall into one of several categories:
+## Intrinsic Operations and Functions ##
 
-- Essential classical functions.
+The intrinsic operations defined in the standard library roughly fall into one of several categories:
+
+- Essential classical functions, collected in the <xref:microsoft.quantum.core> namespace.
 - Operations representing unitaries composed of [Clifford and $T$ gates](xref:microsoft.quantum.concepts.qubit).
 - Operations representing rotations about various operators.
 - Operations implementing measurements.
@@ -25,17 +27,8 @@ By providing rotations as well, Q# allows the programmer to work within the sing
 
 Where possible, the operations defined in the prelude which act on qubits allow for applying the `Controlled` variant, such that the target machine will perform the appropriate decomposition.
 
-All of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.primitive" namespace, such that most Q# source files will have an `open Microsoft.Quantum.Primitive;` directive immediately following the initial namespace declaration.
-
-### Essential Classical Functions ###
-
-These functions are primarily used to work with the Q# built-in data types `Int`, `Double`, and `Range`.
-
-The <xref:microsoft.quantum.primitive.random> operation has signature `(Double[] => Int)`.
-It takes an array of doubles as input, and returns a randomly-selected index into the array as an `Int`.
-The probability of selecting a specific index is proportional to the value of the array element at that index.
-Array elements that are equal to zero are ignored and their indices are never returned.
-If any array element is less than zero, or if no array element is greater than zero, then the operation fails.
+Many of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.intrinsic" namespace, such that most Q# source files will have an `open Microsoft.Quantum.Intrinsic;` directive immediately following the initial namespace declaration.
+The <xref:microsoft.quantum.core> namespace is automatically opened, so that functions such as <xref:microsoft.quantum.core.length> can be used without an `open` statement at all.
 
 ### Common Single-Qubit Unitary Operations ###
 
@@ -44,7 +37,7 @@ All of these operations allow both the Controlled and Adjoint functors.
 
 #### Pauli Operators ####
 
-The <xref:microsoft.quantum.primitive.x> operation implements the Pauli $X$ operator.
+The <xref:microsoft.quantum.intrinsic.x> operation implements the Pauli $X$ operator.
 This is sometimes also known as the `NOT` gate.
 It has signature `(Qubit => Unit : Adjoint, Controlled)`.
 It corresponds to the single-qubit unitary:

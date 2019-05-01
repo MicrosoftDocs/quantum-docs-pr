@@ -42,7 +42,7 @@ Additionally, it is possible to define the implementations of for example the op
 In the example above, the only statement is to call the built-in Q# operation @"microsoft.quantum.intrinsic.x".
 
 Operations can also return more interesting types than `Unit`.
-For instance, the @"microsoft.quantum.primitive.m" operation returns an output of type `Result`, representing having performed a measurement.
+For instance, the @"microsoft.quantum.intrinsic.m" operation returns an output of type `Result`, representing having performed a measurement.
 We can either pass the output from an operation to another operation, or can use it with the `let` keyword to define a new variable.
 <!-- Link to UID for superdense conceptual and example documentation. -->
 This allows for representing classical computation that interacts with quantum operations at a low level, such as in superdense coding:

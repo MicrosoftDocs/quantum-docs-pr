@@ -353,7 +353,7 @@ For example, if `Op` has type
 - `Op(_,((q1,q2),_))` has type `((Int,Double) => Unit is Adj)`.
    Note that we have applied singleton tuple equivalence here.
 
-:new: If the partially-applied callable has type parameters that cannot be
+If the partially-applied callable has type parameters that cannot be
 inferred by the compiler, they must be provided at the invocation site.
 The partial application cannot have any unspecified type parameters.
 

@@ -134,7 +134,7 @@ This time, we also demonstrate using <xref:microsoft.quantum.canon.with> togethe
 ```qsharp
 operation ReflectAboutInitial(register : Qubit[]) : Unit
 is Adj + Ctl {
-    With(ApplyToEach(H, _), With(ApplyToEach(X, _), RAll1(_, PI()), _), register);
+    ApplyWith(ApplyToEach(H, _), ApplyWith(ApplyToEach(X, _), RAll1(_, PI()), _), register);
 }
 ```
 

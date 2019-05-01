@@ -39,7 +39,7 @@ As an alternative to creating a variable with `let`, the `mutable` keyword will 
 
 ```qsharp
 operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-    mutable samples = new Double[0];
+    mutable samples = new Int[0];
     for (i in 1 .. nrSamples) {
         set samples += [RandomInt(maxInt)];
     }

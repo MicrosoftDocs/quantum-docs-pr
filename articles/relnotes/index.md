@@ -17,8 +17,8 @@ uid: microsoft.quantum.relnotes
 This release contains the following:
 - makes changes to the Q# language, 
 - restructures the Quantum Development Kit libraries, 
-- adds a newly contributed sample, and 
-- fixes bugs.  
+- adds new samples, and 
+- fixes bugs.  Several closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) and [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
 
 The changes are summarized here as well as instructions for upgrading your existing programs.  You can read more about these changes on devblogs.microsoft.com/qsharp.
 
@@ -47,8 +47,15 @@ With this change, programs that include a single "open" statement for the namesp
 
 * Microsoft.quantum.arithmetic namespace has been normalized to use little endian. Use the function [BigEndianAsLittleEndian](xref:microsoft.quantum.arithmetic.bigendianaslittleendian) when needed to convert to little endian.  
 
-## Samples and Bug fixes
+* The names of several callables (functions and operations) have been changed to conform to the [Q# Style Guide](xref:microsoft.quantum.contributing.style).  The old callable names are deprecated.  Programs that use the old callables will continue to work with a compile time warning. 
 
+## New Samples ##
+
+We added a [sample of using Q# coe ewith F# driver](https://github.com/Microsoft/Quantum/pull/164).  
+
+**Thank you!** to the following contributor to our open code base at http://github.com/Microsoft/Quantum. These contributions add significantly to the rich samples of Q# code:
+
+* Mathias Soeken ([@msoeken](https://github.com/msoeken)): Oracle function synthesis. [PR #135](https://github.com/Microsoft/Quantum/pull/135).
 
 ## Migrating existing projects to 0.6.1904.
 

@@ -17,16 +17,16 @@ uid: microsoft.quantum.relnotes
 This release makes changes to the Q# language and restructures the Quantum Development Kit libraries.  The changes are summarized here as well as instructions for upgrading your existing programs.  You can read more about these changes on devblogs.microsoft.com/qsharp.
 
 This release adds new Q# language syntax:
-* Add a shorthand way to express variations of quantum operations (control and adjoints)
-* Add a new operator "w/" to express array creation as a modification of an existing array.
-* Add the common operation shorthands, e.g., "+=", "w/=".
-* Add a way to specify a short name for namespaces.
+* Add a [shorthand way to express variations of quantum operations](xref:microsoft.quantum.language.type-model#functors) (control and adjoints) with "+" operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., ": adjoint") will continue to work, but a compile time warning will be generated.  
+* Add a new operator for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions), "w/", can be used to express array creation as a modification of an existing array.
+* Add the common [apply-and-upate statement](xref:microsoft.quantum.qsharp-ref.statements#rebinding-of-mutable-symbols), e.g., "+=", "w/=".
+* Add a way to specify a short name for namespaces in [open directives](xref:microsoft.quantum.language.file-structure#open-directives).
 
-With this release, we no longer allow an array element to be specified on the left side of a set statement.  This is because that syntax implies that arrays are mutable when in fact, the result of the operation has always been the creation of a new array with the modification.  Instead, a compiler error will be generated with a suggestion to use the new operator "w/" to accomplish the same result.  
+With this release, we no longer allow an array element to be specified on the left side of a set statement.  This is because that syntax implies that arrays are mutable when in fact, the result of the operation has always been the creation of a new array with the modification.  Instead, a compiler error will be generated with a suggestion to use the new copy-and-update operator, "w/", to accomplish the same result.  
 
 #
 This release reorganizes the libraries to enable their growth in a consistent way:
-* Renames Microsoft.Quantum.Primitive namespace to Microsoft.Quantum.Intrinsic.  These operations are implemented by the target machine.  The Microsoft.Quantum.Primitive namespace is deprecated.  A runtime warning will advise changing the namespace to Intrinsic.
+* Renames namespace Microsoft.Quantum.Primitive  to Microsoft.Quantum.Intrinsic.  These operations are implemented by the target machine.  The Microsoft.Quantum.Primitive namespace is deprecated.  A runtime warning will advise changing the namespace to Intrinsic.
 
 * Renames Microsoft.Quantum.Canon package to Microsoft.Quantum.Standard.  This package contains namespaces that are common to most Q# programs.  This includes:  
     - Microsoft.Quantum.Canon for common operations
@@ -34,7 +34,7 @@ This release reorganizes the libraries to enable their growth in a consistent wa
     - Microsoft.Quantum.Preparation for operations used to prepare qubit state
     - Microsoft.Quantum.Simulation for simulation functionality
 
-With this change, programs that include a single "open" statement for the namespace "Microsoft.Quatum.Canon" may encounter build errors if the program references operations that were moved to the other three new namespaces.  Adding the three additional open statements for the new namespaces is a straightforward way to resolve this issue.  
+With this change, programs that include a single "open" statement for the namespace Microsoft.Quatum.Canon may encounter build errors if the program references operations that were moved to the other three new namespaces.  Adding the additional open statements for the three new namespaces is a straightforward way to resolve this issue.  
 
 * Several namespaces have been deprecated as the operations within have been reorganized to other namespaces. Programs that use these namespaces will continue to work, and a compile time warning will denote the namespace where the operation is defined.  
 

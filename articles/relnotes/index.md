@@ -67,7 +67,7 @@ If you have existing Q# projects from version 0.5 of the Quantum Development Kit
     <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1904.xxxx" />
     <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1904.xxxx" />
 ```
-4. From the command line, running this command: `dotnet msbuild`  
+4. From the command line, run this command: `dotnet msbuild`  
 5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
     - Open the root folder of the project or the containing solution in Visual Studio 2017 or Visual Studio Code.
     - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.

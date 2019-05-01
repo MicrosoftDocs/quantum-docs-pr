@@ -63,7 +63,7 @@ Next, run the following, substituting `<runtime>` with either `win10-x64`, `osx-
 ```powershell
 cd ../Chemistry/GetGateCount
 dotnet publish --self-contained -r <runtime>
-Import-Module ./bin/Debug/netcoreapp2.0/<runtime>/publish/get-gatecount.dll
+Import-Module ./bin/Debug/netcoreapp2.1/<runtime>/publish/get-gatecount.dll
 ```
 
 You should now have the `Get-GateCount` command available:

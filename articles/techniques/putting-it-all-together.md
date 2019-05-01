@@ -137,44 +137,42 @@ When we perform teleportation, we must know the __message__ we wish to send, and
 
 ```qsharp
 operation Teleport(msg : Qubit, there : Qubit) : Unit {
-    body (...) {
 ```
 
 We also need to allocate a qubit `here` which we achieve with a `using` block:
 
 ```qsharp
-        using (here = Qubit()) {
+    using (here = Qubit()) {
 ```
 
 ### Step 1: Create an entangled state
 We can then create the entangled pair between `here` and `there` by using the @"microsoft.quantum.primitive.h" and @"microsoft.quantum.primitive.cnot" operations:
 
 ```qsharp
-            H(here);
-            CNOT(here, there);
+        H(here);
+        CNOT(here, there);
 ```
 
 ### Step 2: Send the message
 We then use the next $\operatorname{CNOT}$ and $H$ gates to move our message qubit:
 
 ```qsharp
-            CNOT(msg, here);
-            H(msg);
+        CNOT(msg, here);
+        H(msg);
 ```
 
 ### Step 3 & 4: Measuring and interpreting the result
 Finally, we use @"microsoft.quantum.primitive.m" to perform the measurements and perform the necessary gate operations to get the desired state, as denoted by `if` statements:
 
 ```qsharp
-            // Measure out the entanglement
-            if (M(here) == One) { X(there); }
-            if (M(msg) == One)  { Z(there); }
+        // Measure out the entanglement
+        if (M(msg) == One)  { Z(there); }
+        if (M(here) == One) { X(there); }
 ```
 
 This finishes the definition of our teleportation operator, so we can deallocate `here`, end the body, and end the operation.
 
 ```qsharp
-        }
     }
 }
 ```

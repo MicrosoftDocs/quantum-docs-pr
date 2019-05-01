@@ -9,7 +9,7 @@ ms.topic: article
 ---
 
 # Quantum computing and the Q# programming language
-There are several broad stages of programming a quantum computation.  The first stages are described in the [previous article](qsharp-preview/software-stack) as in the following figure showing a conceptual stack that illustrates factoring 8704143553785700723 in a quantum computing environment
+There are several broad stages of programming a quantum computation.  The first stages are described in the [previous article](xref:microsoft.quantum.concepts.software-stack) as in the following figure showing a conceptual stack that illustrates factoring 8704143553785700723 in a quantum computing environment
 
 ![Software stack](~/media/concepts_stack.png)
 

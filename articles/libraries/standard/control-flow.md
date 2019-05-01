@@ -76,7 +76,7 @@ Thus, if `U` supports `Adjoint` and `Controlled`, the following lines are equiva
 
 ```qsharp
 Adjoint ApplyToEachCA(U, register);
-ApplyToEach(Adjoint U, register);
+ApplyToEachCA(Adjoint U, register);
 ```
 
 In particular, this means that calls to `ApplyToEachCA` can appear in operations for which an adjoint specialization is auto-generated.

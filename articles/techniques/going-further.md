@@ -132,7 +132,7 @@ function Compose<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B)) : ('A -
 }
 ```
 
-The canon and the Q# standard library provide a range of such type-parameterized operations and functions to make higher-order control flow easier to express.
+The Q# standard libraries provide a range of such type-parameterized operations and functions to make higher-order control flow easier to express.
 These are discussed further in the [Q# standard library guide](xref:microsoft.quantum.libraries.standard.intro).
 
 ## Borrowing Qubits ##

@@ -110,7 +110,7 @@ is Adj + Ctl {
     // Apply an $n-1$ controlled $Z$-gate to the $n^{\text{th}}$ qubit.
     // This gate will lead to a sign flip if and only if every qubit is
     // $1$, which happens only if each of the qubits were $0$ before step 1.
-    Controlled Z(register[0..Length(register) - 2], register[Length(register) - 1]);
+    Controlled Z(Most(register), Tail(register));
 
     // Apply $X$ gates to every qubit.
     ApplyToEach(X, register);

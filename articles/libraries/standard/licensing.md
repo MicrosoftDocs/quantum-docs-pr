@@ -21,7 +21,7 @@ The portions of the standard library that are portable across target machines ca
 Microsoft's Quantum Development Kit also provides specialized library functions and operations that are licensed under a [Microsoft Research license](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE).
 These can be obtained from the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository on GitHub.
 
-There is also an extensive set of samples that explain and illustrate the use of functions and operations from the standard library and other libraries.
+There are also many samples that explain and illustrate the use of functions and operations from the standard library and other libraries.
 These samples are licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt).
 The samples can be obtained from the [Microsoft/Quantum](https://github.com/Microsoft/Quantum) repository on GitHub.
 

@@ -27,7 +27,7 @@ Message($"About to rotate by an angle of {angle}...");
 > [!NOTE]
 > `Message` has signature `(String -> Unit)`, again representing that emitting a debug log message cannot be observed from within Q#.
 
-The <xref:microsoft.quantum.diagnostics.dumpmachine> and <xref:microsoft.quantum.diagnostics.dumpregister> callables instruct target machines to provide diagnostic information about all currently allocated qubits or specific register of qubits, respectively.
+The <xref:microsoft.quantum.diagnostics.dumpmachine> and <xref:microsoft.quantum.diagnostics.dumpregister> callables instruct target machines to provide diagnostic information about all currently allocated qubits or about a specific register of qubits, respectively.
 Each target machine varies in what diagnostic information is provided in response to a dump instruction.
 The <xref:microsoft.quantum.simulation.simulators.quantumsimulator> target machine, for instance, provides the host program with the state vector that it uses internally to represent a register of qubits.
 By comparison, the <xref:microsoft.quantum.simulation.simulators.toffolisimulator> target machine provides a single classical bit for each qubit.

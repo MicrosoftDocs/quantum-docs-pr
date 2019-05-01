@@ -249,7 +249,7 @@ operation CountOnes(qs: Qubit[]) : Int {
     {
         mutable n = 0;
         for (q in qs) {
-            n += M(q) == One ? 1 | 0;
+            set n += M(q) == One ? 1 | 0;
         }
         return n;
     }

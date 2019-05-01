@@ -13,6 +13,7 @@ ms.topic: article
 # ms.prod: product-name-from-white-list
 # ms.technology: tech-name-from-white-list
 ---
+
 # Higher-Order Control Flow #
 
 One of the primary roles of the standard library is to make it easier to express high-level algorithmic ideas as [quantum programs](https://en.wikipedia.org/wiki/Quantum_programming).
@@ -35,7 +36,7 @@ for (idxQubit in 0..nQubits - 2) {
 }
 ```
 
-Expressed in terms of <xref:microsoft.quantum.canon.applytoeachca> and array manipulation functions such as <xref:microsoft.quantum.canon.zip>, however, this is much shorter and easier to read:
+Expressed in terms of <xref:microsoft.quantum.canon.applytoeachca> and array manipulation functions such as <xref:microsoft.quantum.arrays.zip>, however, this is much shorter and easier to read:
 
 ```qsharp
 ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
@@ -47,7 +48,7 @@ In the rest of this section, we will provide a number of examples of how to use 
 
 One of the primary abstractions provided by the canon is that of iteration.
 For instance, consider a unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.
-In Q#, this might get represented as a `for` loop over a register:
+In Q#, we might use <xref:microsoft.quantum.arrays.indexrange> to represent this as as a `for` loop over a register:
 
 ```qsharp
 /// # Summary
@@ -71,7 +72,7 @@ We can use the fact that operations are first-class to express this algorithmic 
 ApplyToEachCA(H, register);
 ```
 
-Here, the suffix `AC` indicates that the call to `ApplyToEach` is itself adjointable and controllable.
+Here, the suffix `CA` indicates that the call to `ApplyToEach` is itself adjointable and controllable.
 Thus, if `U` supports `Adjoint` and `Controlled`, the following lines are equivalent:
 
 ```qsharp
@@ -84,28 +85,29 @@ Similarly, <xref:microsoft.quantum.canon.applytoeachindex> is useful for represe
 
 > [!TIP]
 > `ApplyToEach` is type-parameterized such that it can be used with operations that take inputs other than `Qubit`.
-> For example, suppose that `codeBlocks` is an array of <xref:microsoft.quantum.canon.logicalregister> values that need to be recovered.
+> For example, suppose that `codeBlocks` is an array of <xref:microsoft.quantum.errorcorrection.logicalregister> values that need to be recovered.
 > Then `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` will apply the error-correcting code `code` and recovery function `recoveryFn` to each block independently.
 > This holds even for classical inputs: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` will apply a rotation of $\pi / 2$ about $X$ followed by a rotation of $pi / 3$ about $Y$.
 
 The Q# canon also provides support for classical enumeration patterns familiar to functional programming.
-For instance, <xref:microsoft.quantum.canon.fold> implements the pattern $f(f(f(s\_{\text{initial}}, x\_0), x\_1), \dots)$ for reducing a function over a list.
+For instance, <xref:microsoft.quantum.arrays.fold> implements the pattern $f(f(f(s\_{\text{initial}}, x\_0), x\_1), \dots)$ for reducing a function over a list.
 This pattern can be used to implement sums, products, minima, maxima and other such functions:
 
 ```qsharp
+open Microsoft.Quantum.Arrays;
 function Plus(a : Int, b : Int) : Int { return a + b; }
 function Sum(xs : Int[]) {
     return Fold(Sum, 0, xs);
 }
 ```
 
-Similarly, functions like <xref:microsoft.quantum.canon.map> and <xref:microsoft.quantum.canon.mapindex> can be used to express functional programming concepts in Q#.
+Similarly, functions like <xref:microsoft.quantum.canon.mapped> and <xref:microsoft.quantum.canon.mappedbyindex> can be used to express functional programming concepts in Q#.
 
 ## Composing Operations and Functions ##
 
 The control flow constructs offered by the canon take operations and functions as their inputs, such that it is helpful to be able to compose several operations or functions into a single callable.
-For instance, the pattern $UVU^{\dagger}$ is extremely common in quantum programming, such that the canon provides the operation <xref:microsoft.quantum.canon.with> as an abstraction for this pattern.
-This abstraction also allows for more efficient compilation into circuits, as `Controlled` acting on the sequence `U(qubit); V(qubit); (Adjoint U)(qubit);` does not need to act on each `U`.
+For instance, the pattern $UVU^{\dagger}$ is extremely common in quantum programming, such that the canon provides the operation <xref:microsoft.quantum.canon.applywith> as an abstraction for this pattern.
+This abstraction also allows for more efficient compliation into circuits, as `Controlled` acting on the sequence `U(qubit); V(qubit); Adjoint U(qubit);` does not need to act on each `U`.
 To see this, let $c(U)$ be the unitary representing `Controlled U([control], target)` and let $c(V)$ be defined in the same way.
 Then for an arbitrary state $\ket{\psi}$,
 \begin{align}
@@ -127,9 +129,9 @@ Since controlling operations can be expensive in general, using controlled varia
 
 > [!NOTE]
 > One other consequence of factoring out $U$ is that we need not even know how to apply the `Controlled` functor to `U`.
-> `WithCA` therefore has a weaker signature than might be expected:
+> `ApplyWithCA` therefore has a weaker signature than might be expected:
 > ```qsharp
-> WithCA<'T> : (('T => Unit is Adj),
+> ApplyWithCA<'T> : (('T => Unit is Adj),
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
@@ -145,7 +147,7 @@ Combining with iteration patterns can make this especially useful:
 
 ```qsharp
 // Bracket the quantum Fourier transform with $XH$ on each qubit.
-With(ApplyToEach(Bind([H, X]), _), QFT, _);
+ApplyWith(ApplyToEach(Bind([H, X]), _), QFT, _);
 ```
 
 ### Time-Ordered Composition ###
@@ -193,10 +195,10 @@ It is common, especially in quantum arithmetic, to condition operations on compu
 Using the control operations and functions introduced above, we can more general quantum conditions in a single statement.
 Let's jump in to how <xref:microsoft.quantum.canon.controlledonbitstring> does it (sans type parameters), then we'll break down the pieces one by one.
 The first thing we'll need to do is to define an operation which actually does the heavy lifting of implementing the control on arbitrary computational basis states.
-We won't call this operation directly, however, and so we add `Impl` to the end of the name to indicate that it's an implementation of another construct elsewhere.
+We won't call this operation directly, however, and so we add `_` to the beginning of the name to indicate that it's an implementation of another construct elsewhere.
 
 ```qsharp
-operation ControlledOnBitStringImpl(
+operation _ControlledOnBitString(
         bits : Bool[],
         oracle: (Qubit[] => Unit is Adj + Ctl),
         controlRegister : Qubit[],
@@ -212,7 +214,7 @@ Next, we note that controlling on the computational basis state $\ket{\vec{s}} =
 In particular, $\ket{\vec{s}} = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{n - 1}} \ket{0\cdots 0}$.
 Since $X^{\dagger} = X$, this implies that $\ket{0\dots 0} = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{n - 1}} \ket{\vec{s}}$.
 Thus, we can apply $P = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{n - 1}}$, apply `Controlled oracle`, and transform back to $\vec{s}$.
-This construction is precisely `With`, so we write the body of our new operation accordingly:
+This construction is precisely `ApplyWith`, so we write the body of our new operation accordingly:
 
 ```qsharp
     ApplyWithCA(
@@ -223,9 +225,9 @@ This construction is precisely `With`, so we write the body of our new operation
 }
 ```
 
-Here, we have used @"microsoft.quantum.canon.applypaulifrombitstring" to apply $P$, partially applying over its target for use with `With`.
-Note, however, that we need to transform the *control* register to our desired form, so we partially apply the inner operation `Controlled oracle` on the *target*.
-This leaves `With` acting to bracket the control register with $P$, exactly as we desired.
+Here, we have used <xref:microsoft.quantum.canon.applypaulifrombitstring> to apply $P$, partially applying over its target for use with `ApplyWith`.
+Note, however, that we need to transform the *control* register to our desired form, so we partially apply the inner operation `(Controlled oracle)` on the *target*.
+This leaves `ApplyWith` acting to bracket the control register with $P$, exactly as we desired.
 
 At this point, we could be done, but it is somehow unsatisfying that our new operation does not "feel" like applying the `Controlled` functor.
 Thus, we finish defining our new control flow concept by writing a function that takes the oracle to be controlled and that returns a new operation.
@@ -236,6 +238,6 @@ function ControlledOnBitString(
         bits : Bool[],
         oracle: (Qubit[] => Unit is Adj + Ctl)) 
 : ((Qubit[], Qubit[]) => Unit is Adj + Ctl) {
-    return ControlledOnBitStringImpl(bits, oracle, _, _);
+    return _ControlledOnBitString(bits, oracle, _, _);
 }
 ```

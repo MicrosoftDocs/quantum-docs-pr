@@ -3,7 +3,7 @@ title: Quantum computing and the Q# programming language| Microsoft Docs
 description: Quantum computing stages and Q#
 author: MikeDodaro
 uid: microsoft.quantum.concepts.quantum-computing-q#
-ms.author: cathy.palmerbe@microsoft.com
+ms.author: Cathy.Palmer@microsoft.com
 ms.date: 05/1/2019
 ms.topic: article
 ---

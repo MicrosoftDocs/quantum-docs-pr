@@ -155,7 +155,7 @@ operation U(target : Qubit) : Unit {
 
 Each time that `U` is called, it will have a different action on `target`.
 In particular, the compiler cannot guarantee that if we added an `adjoint auto` specialization declaration to `U`, then `U(target); Adjoint U(target);` acts as identity (that is, as a no-op).
-This violates the definition of the adjoint that we saw in [Vectors and Matrices](xref:microsoft.quantum.concepts.vectors), such that allowing to auto-generate an adjoint specialization in an operation where we have called the operation @"microsoft.quantum.canon.randomreal" would break the guarantees provided by the compiler; @"microsoft.quantum.canon.randomreal" is an operation for which no adjoint or controlled version exists.
+This violates the definition of the adjoint that we saw in [Vectors and Matrices](xref:microsoft.quantum.concepts.vectors), such that allowing to auto-generate an adjoint specialization in an operation where we have called the operation @"microsoft.quantum.math.randomreal" would break the guarantees provided by the compiler; @"microsoft.quantum.math.randomreal" is an operation for which no adjoint or controlled version exists.
 
 On the other hand, allowing function calls such as `Square` is safe, in that the compiler can be assured that it only needs to preserve the input to `Square` in order to keep its output stable.
 Thus, isolating as much classical logic as possible into functions makes it easy to reuse that logic in other functions and operations alike.

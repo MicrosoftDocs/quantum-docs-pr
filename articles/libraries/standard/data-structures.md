@@ -13,9 +13,9 @@ ms.topic: article
 ## Classical Data Structures ##
 
 Along with user-defined types for representing quantum concepts, the canon also provides operations, functions, and types for working with classical data used in the control of quantum systems.
-For instance, the @"microsoft.quantum.canon.reverse" function takes an array as input and returns the same array in reverse order.
+For instance, the <xref:microsoft.quantum.arrays.reversed> function takes an array as input and returns the same array in reverse order.
 This can then be used on an array of type `Qubit[]` to avoid having to apply unnecessary $\operatorname{SWAP}$ gates when converting between quantum representations of integers.
-Similarly, we saw in the previous section that types of the form `(Int, Int -> T)` can be useful for representing random access collections, so the @"microsoft.quantum.canon.lookupfunction" function provides a convienent way of constructing such types from array types.
+Similarly, we saw in the previous section that types of the form `(Int, Int -> T)` can be useful for representing random access collections, so the <xref:microsoft.quantum.arrays.lookupfunction> function provides a convienent way of constructing such types from array types.
 
 ### Pairs ###
 
@@ -30,23 +30,25 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 
 The canon provides several functions for manipulating arrays.
 These functions are type-parameterized, and thus can be used with arrays of any Q# type.
-For instance, the <xref:microsoft.quantum.canon.reverse> function returns a new array whose elements are in reverse order from its input.
+For instance, the <xref:microsoft.quantum.arrays.reversed> function returns a new array whose elements are in reverse order from its input.
 This can be used to change how a quantum register is represented when calling operations:
 
 ```qsharp
 let leRegister = LittleEndian(register);
 // QFT expects a BigEndian, so we can reverse before calling.
-QFT(BigEndian(Reverse(leRegister)));
+QFT(BigEndian(Reversed(leRegister!)));
+// This is how the LittleEndianAsBigEndian function is implemented:
+QFT(LittleEndianAsBigEndian(leRegister));
 ```
 
-Similarly, the <xref:microsoft.quantum.canon.subarray> function can be used to reorder or take subsets of the elements of an array:
+Similarly, the <xref:microsoft.quantum.arrays.subarray> function can be used to reorder or take subsets of the elements of an array:
 
 ```qsharp
 // Applies H to qubits 2 and 5.
 ApplyToEach(H, Subarray([2, 5], register));
 ```
 
-When combined with flow control, array manipulation functions such as <xref:microsoft.quantum.canon.zip> can provide a powerful way to express quantum programs:
+When combined with flow control, array manipulation functions such as <xref:microsoft.quantum.arrays.zip> can provide a powerful way to express quantum programs:
 
 ```qsharp
 // Applies X₃ Y₁ Z₇ to a register of any size.
@@ -122,7 +124,7 @@ operation ReflectAboutAllZeros(register : Qubit[]) : Unit {
 ```
 
 This oracle is then a special case of the <xref:microsoft.quantum.canon.rall1> operation, which allows for rotating by an arbitrary phase instead of the reflection case $\phi = \pi$.
-In this case, `RAll1` is similar to the <xref:microsoft.quantum.primitive.r1> prelude operation, in that it rotates about $\ket{11\cdots1}$ instead of the single-qubit state $\ket{1}$.
+In this case, `RAll1` is similar to the <xref:microsoft.quantum.intrinsic.r1> prelude operation, in that it rotates about $\ket{11\cdots1}$ instead of the single-qubit state $\ket{1}$.
 
 The oracle that marks the initial subspace can be constructed similarly.
 In pseudocode:
@@ -133,17 +135,11 @@ In pseudocode:
 4. Apply $X$ gates to every qubit.
 5. Apply $H$ gates to every qubit.
 
-This time, we also demonstrate using <xref:microsoft.quantum.canon.with> together with the <xref:microsoft.quantum.canon.rall1> operation discussed above.:
+This time, we also demonstrate using <xref:microsoft.quantum.canon.applywith> together with the <xref:microsoft.quantum.canon.rall1> operation discussed above:
 
 ```qsharp
-operation ReflectAboutInitial(register : Qubit[]) : Unit {
-    body (...) {
-        With(ApplyToEach(H, _), With(ApplyToEach(X, _), RAll1(_, PI()), _), register);
-    }
-
-    adjoint auto;
-    controlled auto;
-    controlled adjoint auto;
+operation ReflectAboutInitial(register : Qubit[]) : Unit is Adj + Ctl {
+    ApplWithCA(ApplyToEach(H, _), With(ApplyToEach(X, _), RAll1(_, PI()), _), register);
 }
 ```
 
@@ -162,8 +158,8 @@ This unitary is customarily described by one of two types of oracles.
 > To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation).
 > To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
 
-The first type of oracle, which we call a discrete query oracle and represent with the user-defined type <xref:microsoft.quantum.canon.discreteoracle>, simply involves a unitary matrix.
-If $U$ is the unitary whose eigenvalues we wish to estimate then the oracle for $U$ is simply a standin for a subroutine that implements $U$.
+The first type of oracle, which we call a discrete query oracle and represent with the user-defined type <xref:microsoft.quantum.oracles.discreteoracle>, simply involves a unitary matrix.
+If $U$ is the unitary whose eigenvalues we wish to estimate then the oracle for $U$ is simply a stand-in for a subroutine that implements $U$.
 For example, one could take $U$ to be the oracle $Q$ defined above for amplitude estimation.
 The eigenvalues of this matrix can be used to estimate the overlap between the initial and target states, $\sin^2(\theta)$, using quadratically fewer samples than one would need otherwise.
 This earns the application of phase estimation using the Grover oracle $Q$ as input the moniker of amplitude estimation.
@@ -180,7 +176,7 @@ $$
 \end{align}
 $$
 
-The second type of oracle used in phase estimation is the continuous query oracle, represented by the <xref:microsoft.quantum.canon.continuousoracle> type.
+The second type of oracle used in phase estimation is the continuous query oracle, represented by the <xref:microsoft.quantum.oracles.continuousoracle> type.
 A continuous query oracle for phase estimation takes the form $U(t)$ where $t$ is a classically known real number.
 If we let $U$ be a fixed unitary then the continuous query oracle takes the form $U(t) = U^t$.
 This allows us to query matrices such as $\sqrt{U}$, which could not be implemented directly in the discrete query model.

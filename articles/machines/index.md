@@ -76,27 +76,12 @@ our teleport algorithm. A C# driver has 4 main purposes:
 
 Here we'll discuss each step in more detail.
 
-> [!NOTE]
-> It is usually better to perform pre- and post-processing in the classical
-> driver, rather than in Q# code.
-> In the future when Q# code is running on cold classical hardware
-> and controlling the detailed processes of a quantum device,
-> the overhead and the cost of purely classical computing will be much less
-> than that of cold computing.
->
-> Computation and analysis that impacts the quantum computation, of course,
-> should be done in Q#.
-> For instance, adaptive adiabatic algorithms that dynamically adjust the
-> parameter evolution rate based on measured characteristics of the state
-> should perform their analysis and adjustment in Q#.
-
 ### Constructing the Target Machine
 
 Quantum machines are instances of normal .NET classes, so they are created by
 invoking their constructor, just like any .NET class.
 Some simulators, including the `QuantumSimulator`, implement the .NET
-`IDisposable` interface, and so should be wrapped in a C# `using` statement.
-
+<xref:System.IDisposable?displayProperty=nameWithType> interface, and so should be wrapped in a C# `using` statement.
 
 ### Computing Arguments for the Algorithm
 
@@ -130,7 +115,7 @@ This part is generally very straightforward.
 Each Q# operation is compiled into a class that provides a static `Run` method.
 The arguments to this method are given by the flattened argument tuple of the operation itself,
 plus an additional first argument which is the simulator to execute with. For an operation that expects
-the named tuple of type `(a: String, (b: Double, c: Double))` its flattened counterpart is of type `(String a, Double b, Double c)`. 
+the named tuple of type `(a: String, (b: Double, c: Double))` its flattened counterpart is of type `(String a, Double b, Double c)`.
 
 
 There are some subtleties when passing arguments to a `Run` method:
@@ -214,7 +199,5 @@ To find the actual reason for the failure, you need to iterate into the `Aggrega
 
 ## Other Classical Languages
 
-While the samples we have provided are in C# or F#, all that is required
-for writing a classical driver is support for .NET.
-If you want to write a driver in Visual Basic, it should work just fine.
-
+While the samples we have provided are in C#, F#, and Python, the Quantum Development Kit also supports writing classical host programs in other languages.
+For example, if you want to write a host program in Visual Basic, [it should work just fine](https://github.com/tcNickolas/MiscQSharp/blob/master/Quantum_VBNet/README.md#using-q-with-visual-basic-net).

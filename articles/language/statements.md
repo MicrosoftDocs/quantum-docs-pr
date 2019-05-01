@@ -346,48 +346,43 @@ if (a == b) {
 
 ### For-Loop
 
-The `for` statement supports iteration through a simple integer range
-or :new: through an array value.
+The `for` statement supports iteration over an integer range or over an array.
 The statement consists of the keyword `for`, an open parenthesis `(`,
-followed by an identifier, the keyword `in`, an expression that
-evaluates to a `Range` or an array, a close parenthesis `)`,
-and a statement block.
+followed by a symbol or symbol tuple, the keyword `in`, an expression of type `Range` or array, a close parenthesis `)`, and a statement block.
+
 The statement block (the body of the loop) is executed repeatedly,
-with the identifier (the loop variable) bound to each value in the
-range or array.
+with the defined symbol(s) (the loop variable(s)) bound to each value in the range or array.
 Note that if the range expression evaluates to an empty range or array,
 the body will not be executed at all.
-
 The expression is fully evaluated before entering the loop,
 and will not change while the loop is executing.
+
+The binding of the declared symbol(s) is immutable and follows the same rules as other variable bindings. 
+In particular, it is possible to destruct e.g. array items for an iteration over an array upon assignment to the loop variable(s).
 
 For example,
 
 ```qsharp
-for (index in 0 .. n-2) {
-    set results[index] = Measure([PauliX], [qubits[index]]);
-}
-```
-
-or
-
-```qsharp
-for (qb in qubits) {
+// ...
+for (qb in qubits) { // qubits contains a Qubit[]
     H(qb);
 }
-```
 
-Tuple deconstruction is available with `for` statements if the array
-is an array of tuples:
+mutable results = new (Int, Results)[Length(qubits)];
+for (index in 0 .. Length(qubits) - 1) {
+    let measured = 
+    set results w/= index <- (index, M(qubits[i]));
+}
 
-```qsharp
-for ((qb, theta) in qubitRotations) {
-    Rz(theta, qb);
+mutable accumulated = 0;
+for ((index, measured) in results) {
+    if (measured == One) {
+        set accumulated += 1 <<< index;
+    }
 }
 ```
 
-The loop variable is bound at each entrance to the loop body, and unbound
-at the end of the body.
+The loop variable is bound at each entrance to the loop body, and unbound at the end of the body.
 In particular, the loop variable is not bound after the for loop is completed.
 
 ### Repeat-Until-Success Loop
@@ -398,9 +393,7 @@ It consists of the keyword `repeat`, followed by a statement block
 the keyword `fixup`, and another statement block (the _fixup_).
 The loop body, condition, and fixup are all considered to be a single scope,
 so symbols bound in the body are available in the condition and fixup.
-
 Note that the fixup block is required, even if there is no fixup to be done.
-In this case, the fixup should be a single expression statement, `()`.
 
 The loop body is executed, and then the condition is evaluated.
 If the condition is true, then the statement is completed;
@@ -441,7 +434,7 @@ using (anc = Qubit()) {
 
 ### Conditional Statement
 
-The if statement supports conditional execution.
+The `if` statement supports conditional execution.
 It consists of the keyword `if`, an open parenthesis `(`, a Boolean
 expression, a close parenthesis `)`, and a statement block (the _then_ block).
 This may be followed by any number of else-if clauses, each of which consists
@@ -468,9 +461,7 @@ For example,
 ```qsharp
 if (result == One) {
     X(target);
-} else {
-    Z(target);
-}
+} 
 ```
 
 or
@@ -494,7 +485,7 @@ appropriate type, and a terminating semicolon.
 
 A callable that returns an empty tuple, `()`, does not require a
 return statement.
-If an early exit is desired, `return ()` may be used in this case
+If an early exit is desired, `return ()` may be used in this case.
 Callables that return any other type require a final return statement.
 
 There is no maximum number of return statements within an operation.
@@ -550,60 +541,68 @@ They are only valid within operations.
 
 ### Clean Qubits
 
-The using statement is used to acquire new qubits for use
-during a statement block.
-The qubits are guaranteed to be initialized to the
-computational `Zero` state.
+The `using` statement is used to acquire new qubits for use during a statement block.
+The qubits are guaranteed to be initialized to the computational `Zero` state.
 The qubits should be in the computational `Zero` state at the
 end of the statement block; simulators are encouraged to enforce this.
 
-:new: The statement consists of the keyword `using`, followed by an open
+The statement consists of the keyword `using`, followed by an open
 parenthesis `(`, a binding, a close parenthesis `)`, and
 the statement block within which the qubits will be available.
 The binding follows the same pattern as `let` statements: either a single
 symbol or a tuple of symbols, followed by an equals sign `=`, and either a
-single value or a matching tuple of values.
-The values must all be either a single qubit, indicated as `Qubit()`, or
+single value or a matching tuple of initializers.
+Initializers are available either for a single qubit, indicated as `Qubit()`, or
 an array of qubits, indicated by `Qubit[`, an `Int` expression, and `]`.
 
 For example,
 
 ```qsharp
+using (q = Qubit()) {
+    // ...
+}
 using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
-    ...
+    // ...
 }
 ```
 
 ### Dirty Qubits
 
-The borrowing statement is used to allocate qubits for temporary use
-during a statement block.
-The borrower commits to leaving the qubits in the same state they were in
-when they were borrowed.
+The `borrowing` statement is used to obtain qubits for temporary use. 
+The statement consists of the keyword `borrowing`, followed by an open
+parenthesis `(`, a binding, a close parenthesis `)`, and
+the statement block within which the qubits will be available.
+The binding follows the same pattern and rules as the one in a `using` statement.
+
+For example,
+
+```qsharp
+borrowing (q = Qubit()) {
+    // ...
+}
+borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+    // ...
+}
+```
+
+The borrowed qubits are in an unknown state and go out of scope at the end of the statement block.
+The borrower commits to leaving the qubits in the same state they were in when they were borrowed, 
+i.e. their state at the beginning and at the end of the statement block is expected to be the same.
+This state in particular is not necessarily a classical state, such that in most cases, 
+borrowing scopes should not contain measurements. 
+
 Such qubits are often known as “dirty ancilla”.
 See [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995)
 (Haner, Roetteler, and Svore 2017) for an example of dirty ancilla use.
 
 When borrowing qubits, the system will first try to fill the request
-from qubits that are in use but that are not accessed during the body
-of the `borrowing` statement.
+from qubits that are in use but that are not accessed during the body of the `borrowing` statement.
 If there aren't enough such qubits, then it will allocate new qubits
 to complete the request.
 
-:new: The statement has the same format as the `using` statement, but with the
-`using` keyword replaced by `borrowing`.
-
-For example,
-
-```qsharp
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
-    ...
-}
-```
-
 ## Expression Evaluation Statements
 
-Any valid Q# expression of type `Unit` may be evaluated as a statement.
+Any call expression of type `Unit` may be used as a statement.
 This is primarily of use when calling operations on qubits that return `Unit`
 because the purpose of the statement is to modify the implicit quantum state.
 Expression evaluation statements require a terminating semicolon.
@@ -612,16 +611,6 @@ For example,
 
 ```qsharp
 X(q);
-```
-
-or
-
-```qsharp
 CNOT(control, target);
-```
-
-or
-
-```qsharp
-Adjoint T(q1);
+Adjoint T(q);
 ```

@@ -39,7 +39,7 @@ This is used similarly to `void` in C# and other imperative languages, and is eq
 
 Within the new operation, the implementation can be specified directly within the declaration if only the default body specialization exists.
 Additionally, it is possible to define the implementations of for example the operation after functor application, as elaborated further below.
-In the example above, the only statement is to call the built-in Q# operation @"microsoft.quantum.primitive.x".
+In the example above, the only statement is to call the built-in Q# operation @"microsoft.quantum.intrinsic.x".
 
 Operations can also return more interesting types than `Unit`.
 For instance, the @"microsoft.quantum.primitive.m" operation returns an output of type `Result`, representing having performed a measurement.

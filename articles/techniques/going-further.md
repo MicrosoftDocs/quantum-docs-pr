@@ -132,12 +132,12 @@ function Compose<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B)) : ('A -
 }
 ```
 
-The canon and the Q# standard library provide a range of such type-parameterized operations and functions to make higher-order control flow easier to express.
+The Q# standard libraries provide a range of such type-parameterized operations and functions to make higher-order control flow easier to express.
 These are discussed further in the [Q# standard library guide](xref:microsoft.quantum.libraries.standard.intro).
 
 ## Borrowing Qubits ##
 
-The borrowing mechanism allows to allocate qubits that can be used as scratch space during a computation. These qubits are generally not in a clean state, i.e., they are not necessarily initialized in a known state such as $\ket{0}$. One also speaks of "dirty" qubits as their state is unknown and can even be entangled with other parts of the quantum computer's memory. Among the known use cases of dirty qubits are implementations of multi-controlled CNOT gates that require only very few qubits and implementation of incrementers.
+The borrowing mechanism allows the allocation of qubits that can be used as scratch space during a computation. These qubits are generally not in a clean state, i.e., they are not necessarily initialized in a known state such as $\ket{0}$. One also speaks of "dirty" qubits as their state is unknown and can even be entangled with other parts of the quantum computer's memory. Among the known use cases of dirty qubits are implementations of multi-controlled CNOT gates that require only very few qubits and implementation of incrementers.
 
 In the canon there are examples that use the `borrowing` keyword, for instance the function `MultiControlledXBorrow` defined below.
 If `controls` denotes the control qubits that should be added to an `X` operation, then an overall of `Length(controls)-2` many dirty ancillas will be added by this implementation.
@@ -173,7 +173,7 @@ is Adj + Ctl {
         }
     }
 
-    controlled( extraControls, ... ) {
+    controlled(extraControls, ...) {
         MultiControlledXBorrow( extraControls + controls, target );
     }
 }

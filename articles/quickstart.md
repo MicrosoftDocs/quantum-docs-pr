@@ -399,7 +399,7 @@ The full routine now looks like this:
 
                 H(q0);
                 CNOT(q0,q1);
-                let res = M (q0);
+                let res = M(q0);
 
                 // Count the number of ones we saw:
                 if (res == One) {

@@ -28,15 +28,15 @@ At the end of the `using` block, any qubits allocated by that block are immediat
 > [!WARNING]
 > Target machines expect that qubits are in the $\ket{0}$ state immediately before deallocation, so that they can be reused and offered to other `using` blocks for allocation.
 > Whenever possible, use unitary operations to return any allocated qubits to $\ket{0}$.
-> If need be, the @"microsoft.quantum.canon.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$. Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation. 
+> If need be, the @"microsoft.quantum.intrinsic.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$. Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation. 
 
-## Intrinsic Unitaries ##
+## Intrinsic Operations##
 
 Once allocated, a qubit can then be passed to functions and operations.
 In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.
 We will see these operations in more detail in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), but for now, we mention a few useful operations that can be used to interact with qubits.
 
-First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations `X`, `Y`, and `Z`, each of which as type `(Qubit => Unit is Adj + Ctl)`.
+First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations `X`, `Y`, and `Z`, each of which has type `(Qubit => Unit is Adj + Ctl)`.
 As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), we can think of $X$ and hence of `X` as a bit-flip operation or NOT gate.
 This lets us prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:
 
@@ -77,7 +77,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
     PrepareBitString(bitstring, register);
     // Next, we use that |+〉 = H|0〉 and |-〉 = H|1〉 to
     // prepare the state we want.
-    for (idxQubit in 0..Length(register) - 1) {
+    for (idxQubit in IndexRange(register)) {
         H(register[idxQubit]);
     }
 }
@@ -95,7 +95,7 @@ operation MeasurementOneQubit () : Result {
 
     // The following using block creates a fresh qubit and initializes it 
     // in the |0〉 state.
-    using (qubit = Qubit() {
+    using (qubit = Qubit()) {
         // We apply a Hadamard operation H to the state, thereby creating the 
         // state 1/sqrt(2)(|0〉+|1〉). 
         H(qubit); 

@@ -29,7 +29,7 @@ This release adds new Q# language syntax:
 * Add the common [apply-and-upate statement](xref:microsoft.quantum.qsharp-ref.statements#rebinding-of-mutable-symbols), e.g., `+=`, `w/=`.
 * Add a way to specify a short name for namespaces in [open directives](xref:microsoft.quantum.language.file-structure#open-directives).
 
-With this release, we no longer allow an array element to be specified on the left side of a set statement.  This is because that syntax implies that arrays are mutable when in fact, the result of the operation has always been the creation of a new array with the modification.  Instead, a compiler error will be generated with a suggestion to use the new copy-and-update operator, "w/", to accomplish the same result.  
+With this release, we no longer allow an array element to be specified on the left side of a set statement.  This is because that syntax implies that arrays are mutable when in fact, the result of the operation has always been the creation of a new array with the modification.  Instead, a compiler error will be generated with a suggestion to use the new copy-and-update operator, `w/`, to accomplish the same result.  
 
 ## Library restructuring
 This release reorganizes the libraries to enable their growth in a consistent way:

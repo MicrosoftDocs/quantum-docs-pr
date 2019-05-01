@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.mresety
+name: MResetY
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: |-
+  Measures a single qubit in the Y basis,
+  and resets it to the standard basis state
+  |0〉 following the measurement.
+syntax: 'operation MResetY (target : Qubit) : Result'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    summary: A single qubit to be measured.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: The result of measuring `target` in the Pauli $Y$ basis.
+    isPrimitive: true
+    uid: Result
+...

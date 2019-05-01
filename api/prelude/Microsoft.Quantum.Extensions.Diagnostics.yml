@@ -1,9 +1,0 @@
-### YamlMime:QSharpNamespace
-uid: microsoft.quantum.extensions.diagnostics
-name: Microsoft.Quantum.Extensions.Diagnostics
-functions:
-- uid: microsoft.quantum.extensions.diagnostics.dumpmachine
-  summary: Dumps the current target machine's status.
-- uid: microsoft.quantum.extensions.diagnostics.dumpregister
-  summary: Dumps the current target machine's status associated with the given qubits.
-...

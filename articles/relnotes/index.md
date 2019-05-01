@@ -51,7 +51,7 @@ With this change, programs that include a single "open" statement for the namesp
 
 ## New Samples ##
 
-We added a [sample of using Q# coe ewith F# driver](https://github.com/Microsoft/Quantum/pull/164).  
+We added a [sample of using Q# with F# driver](https://github.com/Microsoft/Quantum/pull/164).  
 
 **Thank you!** to the following contributor to our open code base at http://github.com/Microsoft/Quantum. These contributions add significantly to the rich samples of Q# code:
 
@@ -71,8 +71,8 @@ If you have existing Q# projects from version 0.5 of the Quantum Development Kit
 3. In a text editor, edit the .csproj file to change the version of all 
    the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
 ```xml
-    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1904.xxxx" />
-    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1904.xxxx" />
+    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1904.0102" />
+    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1904.0102" />
 ```
 4. From the command line, run this command: `dotnet msbuild`  
 5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.

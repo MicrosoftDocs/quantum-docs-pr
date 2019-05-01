@@ -19,8 +19,7 @@ ms.topic: article
 A Q# file consists of a sequence of namespace declarations.
 Each namespace declaration contains definitions for user-defined types,
 operations, and functions.
-A namespace declaration may contain any number of each type of definition.
-
+A namespace declaration may contain any number of each type of definition, and in any order.
 The only text that can appear outside of a namespace declaration is comments.
 In particular, documentation comments for a namespace precede the declaration.
 
@@ -54,14 +53,11 @@ to precede a reference to it.
 
 ## Open Directives
 
-Within a namespace block, the `open` directive may be used to allow
-abbreviated reference to constructs from another namespace.
-This consists of the `open` keyword, followed by the namespace to be
-opened and a terminating semicolon.
+Within a namespace block, the `open` directive may be used to 
+import all types and callables defined in a certain namespace and refer to them by their unqualified name. 
 
-`open` directives must appear before any `function`, `operation`, or
-`newtype` definitions in the namespace block.
-The `open` directive applies to the entire namespace block.
+Such an `open` directive consists of the `open` keyword, followed by the namespace to be
+opened and a terminating semicolon.
 
 For instance,
 
@@ -69,13 +65,24 @@ For instance,
 open Microsoft.Quantum.Canon;
 ```
 
+Optionally, a short name for the opened namespace may be defined 
+such that all elements from that namespace can (and need) to be qualified by the defined short name. 
+Such a short name is defined by adding the keyword `as` followed by the desired short name before the semicolon in an `open` directive:
+
+```qsharp
+open Microsoft.Quantum.Math as Math;
+```
+
+All `open` directives must appear before any `function`, `operation`, or `newtype` definitions in the namespace block.
+The `open` directive applies to the entire namespace block within a file.
+
 ## User-Defined Type Declarations
 
 Q# provides a way for users to declare new user-defined types, as described in
 the [Q# type model](xref:microsoft.quantum.language.type-model) section.
 User-defined types are distinct even if the base types are identical.
 In particular, there is no automatic conversion between values of two
-user-defined types even if the base types are identical.
+user-defined types even if the underlying types are identical.
 
 A user-defined type declaration consists of the keyword `newtype`, followed by
 the name of the user-defined type, an `=`, a valid type specification, and
@@ -87,16 +94,17 @@ For example:
 newtype PairOfInts = (Int, Int);
 ```
 
-Each Q# source file may define any number of user-defined type declarations,
-including none.
+Each Q# source file may define any number of user-defined type declarations.
 Type names must be unique within a namespace and may not conflict with
 operation and function names.
 
+It is not possible to define circular dependencies between user defined types. 
+Recursive types are thus not possible within Q#.
+
 ## Operation Definitions
 
-Operations are the core of Q#, roughly analogous to functions
-in other languages.
-Each Q# source file may define any number of operations, including none.
+Operations are the core of Q#, roughly analogous to functions in other languages.
+Each Q# source file may define any number of operations.
 
 Operation names must be unique within a namespace and may not conflict with
 type and function names.

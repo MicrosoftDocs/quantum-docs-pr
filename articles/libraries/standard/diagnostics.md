@@ -11,7 +11,7 @@ ms.topic: article
 
 As with classical development, it is important to be able to diagnose mistakes and errors in quantum programs.
 The Q# standard libraries provide a variety of different ways to ensure the correctness of quantum programs, as detailed in <xref:microsoft.quantum.techniques.testing-and-debugging>.
-Largely speaking, this support comes in the form of functions and operations that either instruct target machines to provide additional diagnostic information to host programs, or that enforce the correctness of conditions and invariants expressed by quantum programmers.
+Largely speaking, this support comes in the form of functions and operations that either instruct the target machine to provide additional diagnostic information to the host program or developer, or enforce the correctness of conditions and invariants expressed by the function or operation call.
 
 ## Machine Diagnostics ##
 

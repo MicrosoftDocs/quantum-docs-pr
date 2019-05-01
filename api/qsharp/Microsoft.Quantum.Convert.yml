@@ -73,5 +73,4 @@ functions:
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Calls a function with a given input.
-newtypes: []
 ...

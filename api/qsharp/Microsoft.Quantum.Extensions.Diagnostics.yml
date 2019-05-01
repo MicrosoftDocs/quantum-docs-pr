@@ -12,6 +12,4 @@ functions:
     > [!WARNING]
     > Deprecated
     Please use @"microsoft.quantum.diagnostics.dumpregister".
-operations: []
-newtypes: []
 ...

@@ -59,6 +59,4 @@ functions:
     > [!WARNING]
     > Deprecated
     Please use @"microsoft.quantum.convert.intasstringwithformat".
-operations: []
-newtypes: []
 ...

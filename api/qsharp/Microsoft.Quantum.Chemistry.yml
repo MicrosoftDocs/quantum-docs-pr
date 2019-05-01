@@ -10,7 +10,6 @@ functions:
   summary: Converts a Hamiltonian term in `HTerm` data format to a GeneratorIndex.
 - uid: microsoft.quantum.chemistry.isnotzero
   summary: Checks whether a `Double` number is not approximately zero.
-operations: []
 newtypes:
 - uid: microsoft.quantum.chemistry.hterm
   summary: |-

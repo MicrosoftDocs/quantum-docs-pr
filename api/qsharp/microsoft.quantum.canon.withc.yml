@@ -3,6 +3,11 @@ uid: microsoft.quantum.canon.withc
 name: WithC
 type: operation
 namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"Microsoft.Quantum.Canon.ApplyWithC".
 syntax: "operation WithC (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl), target : 'T) : Unit"
 input:
   content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl), target : 'T)"

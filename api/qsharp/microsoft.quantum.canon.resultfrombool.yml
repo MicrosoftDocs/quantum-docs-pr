@@ -3,6 +3,11 @@ uid: microsoft.quantum.canon.resultfrombool
 name: ResultFromBool
 type: function
 namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.convert.boolasresult".
 syntax: 'function ResultFromBool (input : Bool) : Result'
 input:
   content: '(input : Bool)'

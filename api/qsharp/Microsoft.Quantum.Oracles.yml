@@ -25,7 +25,6 @@ functions:
     where $O\ket{0} = \ket{\psi}$.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
   summary: Converts an oracle of type `DeterministicStateOracle` to `StateOracle`.
-operations: []
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: |-

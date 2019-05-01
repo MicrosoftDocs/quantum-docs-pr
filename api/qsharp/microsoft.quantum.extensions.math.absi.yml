@@ -3,6 +3,11 @@ uid: microsoft.quantum.extensions.math.absi
 name: AbsI
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.math.absi".
 syntax: 'function AbsI (a : Int) : Int'
 input:
   content: '(a : Int)'

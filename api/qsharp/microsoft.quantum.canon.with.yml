@@ -3,6 +3,11 @@ uid: microsoft.quantum.canon.with
 name: With
 type: operation
 namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"Microsoft.Quantum.Canon.ApplyWith".
 syntax: "operation With (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit), target : 'T) : Unit"
 input:
   content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit), target : 'T)"

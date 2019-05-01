@@ -3,6 +3,11 @@ uid: microsoft.quantum.canon.intarrayfromrange
 name: IntArrayFromRange
 type: function
 namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.convert.rangeasintarray".
 syntax: 'function IntArrayFromRange (range : Range) : Int[]'
 input:
   content: '(range : Range)'

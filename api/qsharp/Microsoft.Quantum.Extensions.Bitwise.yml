@@ -37,6 +37,4 @@ functions:
     > [!WARNING]
     > Deprecated
     Please use @"microsoft.quantum.bitwise.zbits".
-operations: []
-newtypes: []
 ...

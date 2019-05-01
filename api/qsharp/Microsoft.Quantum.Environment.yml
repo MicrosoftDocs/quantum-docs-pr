@@ -2,7 +2,6 @@
 uid: microsoft.quantum.environment
 name: Microsoft.Quantum.Environment
 summary: ' These functions provide information about the environment in which the quantum computation is occuring.'
-functions: []
 operations:
 - uid: microsoft.quantum.environment.getqubitsavailabletoborrow
   summary: |-
@@ -11,5 +10,4 @@ operations:
     returned by `GetQubitsAvailableToUse`.
 - uid: microsoft.quantum.environment.getqubitsavailabletouse
   summary: Returns the number of qubits currently available to use.
-newtypes: []
 ...

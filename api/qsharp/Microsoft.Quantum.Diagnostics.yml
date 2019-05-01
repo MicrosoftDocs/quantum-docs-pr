@@ -73,7 +73,6 @@ operations:
   summary: |-
     Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator up to
     a given tolerance.
-newtypes: []
 summary: |2-
    # Summary
    This namespace contains functions and operations useful for diagnostic

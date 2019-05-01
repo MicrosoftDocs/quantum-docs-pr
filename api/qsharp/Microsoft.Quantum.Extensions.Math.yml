@@ -182,6 +182,4 @@ functions:
     > [!WARNING]
     > Deprecated
     Please use @"microsoft.quantum.math.truncate".
-operations: []
-newtypes: []
 ...

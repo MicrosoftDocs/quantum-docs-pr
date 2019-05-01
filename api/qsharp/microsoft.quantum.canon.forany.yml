@@ -3,6 +3,11 @@ uid: microsoft.quantum.canon.forany
 name: ForAny
 type: function
 namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"Microsoft.Quantum.Arrays.Any" instead.
 syntax: "function ForAny (predicate : ('T -> Bool), array : 'T[]) : Bool"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"

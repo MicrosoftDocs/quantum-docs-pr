@@ -1,7 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
-functions: []
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
   summary: |-
@@ -46,5 +45,4 @@ operations:
     > [!WARNING]
     > Deprecated
     Please use @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
-newtypes: []
 ...

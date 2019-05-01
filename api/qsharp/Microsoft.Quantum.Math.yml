@@ -188,23 +188,6 @@ functions:
   summary: Returns the hyperbolic tangent of the specified angle.
 - uid: microsoft.quantum.math.truncate
   summary: Calculates the integral part of a number.
-operations:
-- uid: microsoft.quantum.math.randomint
-  summary: |-
-    Generates a uniformly sampled random integer greater than or equal to zero
-    and less than a provided upper bound.
-- uid: microsoft.quantum.math.randomintpow2
-  summary: |-
-    Generates a random integer uniformly sampled from all integers that can be represented
-    in a given number of bits.
-- uid: microsoft.quantum.math.randomreal
-  summary: |-
-    Returns a random real number in the interval greater than or equal to zero
-    and less than one.
-- uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: |-
-    Returns one of the single-qubit Pauli operators uniformly
-    at random.
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
   summary: |-
@@ -228,4 +211,21 @@ newtypes:
 summary: |2-
    # Summary
    This namespace contains classical mathematical functions and data types.
+operations:
+- uid: microsoft.quantum.math.randomint
+  summary: |-
+    Generates a uniformly sampled random integer greater than or equal to zero
+    and less than a provided upper bound.
+- uid: microsoft.quantum.math.randomintpow2
+  summary: |-
+    Generates a random integer uniformly sampled from all integers that can be represented
+    in a given number of bits.
+- uid: microsoft.quantum.math.randomreal
+  summary: |-
+    Returns a random real number in the interval greater than or equal to zero
+    and less than one.
+- uid: microsoft.quantum.math.randomsinglequbitpauli
+  summary: |-
+    Returns one of the single-qubit Pauli operators uniformly
+    at random.
 ...

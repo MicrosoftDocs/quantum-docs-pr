@@ -143,5 +143,4 @@ operations:
     > [!WARNING]
     > Deprecated
     Please use @"microsoft.quantum.intrinsic.z".
-newtypes: []
 ...

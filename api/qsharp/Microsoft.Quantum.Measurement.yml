@@ -1,7 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.measurement
 name: Microsoft.Quantum.Measurement
-functions: []
 operations:
 - uid: microsoft.quantum.measurement.measurepaulis
   summary: |-
@@ -28,5 +27,4 @@ operations:
     |0〉 following the measurement.
 - uid: microsoft.quantum.measurement.multim
   summary: Measures each qubit in a given array in the standard basis.
-newtypes: []
 ...

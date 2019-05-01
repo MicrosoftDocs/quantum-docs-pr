@@ -16,7 +16,7 @@ Rather, Q# provides a variety of type conversion functions for constructing new 
 For example, <xref:microsoft.quantum.core.length> has an output type of `Int`, so its output must first be converted to a `Double` before it can be used as a part of a floating-point expression.
 This can be done using the <xref:microsoft.quantum.convert.intasdouble> function:
 
-```Q#
+```qsharp
 open Microsoft.Quantum.Convert as Convert;
 
 function HalfLength<'T>(arr : 'T[]) : Double {

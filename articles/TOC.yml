@@ -1,5 +1,8 @@
 - name: Welcome
   href: index.md
+- name: Q# Tour
+  topicHref: tour/index.md
+  href: tour/toc.yml
 - name: Quantum computing concepts
   topicHref: concepts/index.md
   href: concepts/toc.yml

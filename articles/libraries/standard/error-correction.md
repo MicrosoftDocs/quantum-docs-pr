@@ -13,6 +13,7 @@ ms.topic: article
 # ms.prod: product-name-from-white-list
 # ms.technology: tech-name-from-white-list
 ---
+
 # Error Correction #
 
 ## Introduction ##
@@ -88,14 +89,14 @@ In this section, we describe this framework and its application to a few simple 
 
 To help specify error correcting codes, the Q# canon provides several distinct user-defined types:
 
-- <xref:microsoft.quantum.canon.logicalregister> `= Qubit[]`: Denotes that a register of qubits should be interpreted as the code block of an error-correcting code.
-- <xref:microsoft.quantum.canon.syndrome> `= Result[]`: Denotes that an array of measurement results should be interpreted as the syndrome measured on a code block.
-- <xref:microsoft.quantum.canon.recoveryfn> `= (Syndrome -> Pauli[])`: Denotes that a *classical* function should be used to interpret a syndrome and return a correction that should be applied.
-- <xref:microsoft.quantum.canon.encodeop> `= ((Qubit[], Qubit[]) => LogicalRegister)`: Denotes that an operation takes qubits representing data along with fresh ancilla qubits in order to produce a code block of an error-correcting code.
-- <xref:microsoft.quantum.canon.decodeop> `= (LogicalRegister => (Qubit[], Qubit[]))`: Denotes than an operation decomposes a code block of an error correcting code into the data qubits and the ancilla qubits used to represent syndrome information.
-- <xref:microsoft.quantum.canon.syndromemeasop> `= (LogicalRegister => Syndrome)`: Denotes an operation that should be used to extract syndrome information from a code block, without disturbing the state protected by the code.
+- <xref:microsoft.quantum.errorcorrection.logicalregister> `= Qubit[]`: Denotes that a register of qubits should be interpreted as the code block of an error-correcting code.
+- <xref:microsoft.quantum.errorcorrection.syndrome> `= Result[]`: Denotes that an array of measurement results should be interpreted as the syndrome measured on a code block.
+- <xref:microsoft.quantum.errorcorrection.recoveryfn> `= (Syndrome -> Pauli[])`: Denotes that a *classical* function should be used to interpret a syndrome and return a correction that should be applied.
+- <xref:microsoft.quantum.errorcorrection.encodeop> `= ((Qubit[], Qubit[]) => LogicalRegister)`: Denotes that an operation takes qubits representing data along with fresh ancilla qubits in order to produce a code block of an error-correcting code.
+- <xref:microsoft.quantum.errorcorrection.decodeop> `= (LogicalRegister => (Qubit[], Qubit[]))`: Denotes than an operation decomposes a code block of an error correcting code into the data qubits and the ancilla qubits used to represent syndrome information.
+- <xref:microsoft.quantum.errorcorrection.syndromemeasop> `= (LogicalRegister => Syndrome)`: Denotes an operation that should be used to extract syndrome information from a code block, without disturbing the state protected by the code.
 
-Finally, the canon provides the <xref:microsoft.quantum.canon.qecc> type to collect the other types required to define a quantum error-correcting code. Associated with each stabilizer quantum code is the code length $n$, the number $k$ of logical qubits, and the minimum distance $d$, often conveniently grouped together in the notation ⟦$n$, $k$, $d$⟧. For example, the <xref:microsoft.quantum.canon.bitflipcode> function defines the ⟦3, 1, 1⟧ bit flip code:
+Finally, the canon provides the <xref:microsoft.quantum.errorcorrection.qecc> type to collect the other types required to define a quantum error-correcting code. Associated with each stabilizer quantum code is the code length $n$, the number $k$ of logical qubits, and the minimum distance $d$, often conveniently grouped together in the notation ⟦$n$, $k$, $d$⟧. For example, the <xref:microsoft.quantum.errorcorrection.bitflipcode> function defines the ⟦3, 1, 1⟧ bit flip code:
 
 ```qsharp
 let encodeOp = EncodeOp(BitFlipEncoder);
@@ -110,7 +111,7 @@ let code = QECC(encodeOp, decodeOp, syndMeasOp);
 Notice that the `QECC` type does *not* include a recovery function.
 This allows us to change the recovery function that is used in correcting errors without changing the definition of the code itself; this ability is in particular useful when incorporating feedback from characterization measurements into the model assumed by recovery.
 
-Once a code is defined in this way, we can use the <xref:microsoft.quantum.canon.recover> operation to recover from errors:
+Once a code is defined in this way, we can use the <xref:microsoft.quantum.errorcorrection.recover> operation to recover from errors:
 
 ```qsharp
 let code = BitFlipCode();

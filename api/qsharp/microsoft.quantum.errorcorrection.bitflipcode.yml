@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.bitflipcode
+name: BitFlipCode
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: |-
+  Returns a QECC value representing the ⟦3, 1, 1⟧ bit flip code encoder and
+  decoder with in-place syndrome measurement.
+syntax: 'function BitFlipCode () : Microsoft.Quantum.ErrorCorrection.QECC'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.ErrorCorrection.QECC
+  types:
+  - summary: |-
+      Returns an implementation of a quantum error correction code by
+      specifying a `QECC` type.
+    uid: microsoft.quantum.errorcorrection.qecc
+...

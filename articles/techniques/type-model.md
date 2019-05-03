@@ -33,6 +33,7 @@ We describe each in the rest of this section.
 The Q# language provides a small set of *primitive types* that can be used throughout operations and functions.
 
 - **`Int`**: Represents 64-bit signed integers, e.g.: `2`, `107`, `-5`.
+- **`BigInt`**: Represents an arbitrary-sized signed integer, e.g. `2L`, `107L`, `-5L`.
 - **`Double`**: Represents double-precision floating point numbers, e.g.: `0.0`, `-1.3`, `4e-7`.
 - **`Bool`**: Represents a condition which can either be `true` or `false`.
 - **`Pauli`**: Represents one of the Pauli matrices, either `PauliI`, `PauliX`, `PauliY`, or `PauliZ`.
@@ -65,11 +66,11 @@ Given any other type `T`, the type `T[]` denotes an array of values of that type
 For instance, a collection of integers is denoted `Int[]`, while an array of arrays of `(Bool, Pauli)` values is denoted `(Bool, Pauli)[][]`.
 
 An array value can be written in Q# source code by using square brackets around the elements of an array, as in `[PauliI, PauliX, PauliY, PauliZ]`.
-The types of each element must match exactly, as there are no "base" types in Q#.
+The type of an array literal is determined by the common base type of all items in the array. 
 
 > [!WARNING]
-> The elements of an array cannot typically be changed after the array has been created.
-> In order to change the elements of an array, it must be bound to a [mutable variable](#mutability).
+> The elements of an array cannot be changed after the array has been created.
+> Update-and-reassign statements and/or copy-and-update expressions can be used to construct a modified array.
 
 Alternatively, an array can be created from its size using the `new` keyword:
 
@@ -78,8 +79,6 @@ let zeros = new Int[13];
 // new also allows for creating empty arrays:
 let emptyRegister = new Qubit[0];
 ```
-
-This is typically more useful for mutable arrays, as we [discussed above](#mutability), since the individual elements of an array created using the `new` keyword are not often useful in and of themselves.
 
 In either case, once an array has been constructed, the built-in `Length` function can be used to obtain the number of elements as an `Int`.
 Arrays can be subscripted using square brackets, with subscripts either having type `Int` or type `Range`, to obtain either single elements or new arrays containing a subset of the elements of an array.
@@ -94,7 +93,7 @@ let odds = arr[1..2..4]; // [11, 49]
 ## Operation and Function Types ##
 
 As noted above, operations and functions are values in and of themselves in Q#.
-The types of these values are constructed from the types of the input and output tuples that each operation and function takes and returns.
+The types of these values are constructed from the types of the input and output tuples that each operation and function takes and returns, as well as its characteristics.
 To see this in practice, let's consider the `ApplyTwice` example from above:
 
 ```qsharp
@@ -109,8 +108,11 @@ The types before and after each arrow can be whatever type we wish, including ot
 For instance, we can pass the function `SquareOperation` defined above to any input expecting type ` ((Qubit => Unit) -> (Qubit => Unit))`.
 Informally, we can read that type as "a classical function which takes operations on a single qubit and returns operations on a single qubit."
 
-In order to use the `Controlled` and `Adjoint` variants of an operation type, we need to indicate that the values of that type support the variants we wish to call.
-This is done by adding constraints to the operation type, as in `(Qubit => Unit : Adjoint)`, which indicates an adjointable operation acting on one qubit to produce an empty tuple as its output.
+In order to require support for the `Controlled` and/or `Adjoint` functor in an operation type, we need to add an annotation indicating the corresponding characteristics.
+An annotation `is Ctl` for example indicates that the operation is controllable. 
+If we want to require that an operation of that type supports both the `Adjoint` and `Controlled` functor we can express this as `(Qubit => Unit is Adj + Ctl)`. 
+The used operation characteristics `Adj` and `Ctl` strictly speaking are two pre-defined sets of labels, where each label indicates a particular operation characteristics like e.g. support for a particular functor.
+Hence, `+` is used to indicate the union of those two sets, and `*` is used to indicate the intersection - i.e. the labels that are common to both sets.  
 
 ## User-Defined Types ##
 
@@ -123,24 +125,25 @@ newtype Complex = (Double, Double);
 ```
 
 This statement creates a new type which is effectively a label for a particular tuple type.
-Values of the new type are created by using the name of the type as a function:
+Values of the new type are created by calling the corresponding type constructor:
 
 ```
 let realUnit = Complex(1.0, 0.0);
 let imaginaryUnit = Complex(0.0, 1.0);
 ```
 
-As with ordinary tuple types, the constituting elements of a user-defined type can be accessed using deconstruction.
+In order to access the items in a user defined type, the tuple first needs to be extracted to give an expression of the corresponding tuple type. 
+The postfix operator `!` will do this extraction.
 This lets us write out accessor functions into the structure of a user-defined type, for instance:
 
 ```qsharp
 function Re(z : Complex) : Double {
-    let (re, im) = z;
+    let (re, im) = z!;
     return re;
 }
 
 function Im(z : Complex) : Double {
-    let (re, im) = z;
+    let (re, im) = z!;
     return im;
 }
 ```
@@ -152,5 +155,5 @@ Returning to the example of `Complex`, one could have also defined 2D polar coor
 newtype Polar = (Double, Double);
 ```
 
-Even though both `Complex` and `Polar` both derive from `(Double, Double)`, the two types are wholly incompatible in Q#, minimizing the risk of accidently calling a complex math function with polar coordinates and vice versa.
+Even though both `Complex` and `Polar` are both wrapped versions of `(Double, Double)`, the two types are wholly incompatible in Q#, minimizing the risk of accidentally calling a complex math function with polar coordinates and vice versa.
 In this way, user-defined types can play a similar role to `struct` types in C and other such languages.

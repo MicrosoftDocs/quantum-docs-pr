@@ -45,7 +45,7 @@ The Fourier transform is a fundamental tool of classical analysis and is just as
 In addition, the efficiency of the *quantum Fourier transform* (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm.
 
 As an approximate generalization of the QFT, we provide the <xref:microsoft.quantum.canon.approximateqft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
-The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.primitive.rfrac> as well as the <xref:microsoft.quantum.primitive.h> operation.
+The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.primitive.rfrac> as well as the <xref:microsoft.quantum.intrinsic.h> operation.
 The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as [ket notation](xref:microsoft.quantum.concepts.dirac)).
 The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
 In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.
@@ -54,12 +54,13 @@ Here $\\|\cdot\\|$ is the operator norm which in this case is the square root of
 
 ## Arithmetic ##
 
-Just as arithmetic plays a central role in classical computing, it is also indispensible in quantum computing.  Algorithms such as Shor's factoring algorithm, quantum simulation methods as well as many oracular algorithms rely upon arithmetic as primitive operations.  Most approaches to arithmetic build upon quantum adder circuits.  The simplest adder takes a classical input $b$ and adds the value to a quantum state holding an integer $\ket{a}$.  Mathematically, the adder (which we denote $\operatorname{Add}(b)$ for classical input $b$) has the property that
+Just as arithmetic plays a central role in classical computing, it is also indispensible in quantum computing.  Algorithms such as Shor's factoring algorithm, quantum simulation methods as well as many oracular algorithms rely upon coherent arithmetic operations.  Most approaches to arithmetic build upon quantum adder circuits.  The simplest adder takes a classical input $b$ and adds the value to a quantum state holding an integer $\ket{a}$.  Mathematically, the adder (which we denote $\operatorname{Add}(b)$ for classical input $b$) has the property that
 
 $$
 \operatorname{Add}(b)\ket{a}=\ket{a + b}.
 $$
-This primitive adder circuit is more of an incrementer than an adder.  It can be converted into an adder that has two quantum inputs via
+This basic adder circuit is more of an incrementer than an adder.
+It can be converted into an adder that has two quantum inputs via
 $$
 \operatorname{Add}\ket{a}\ket{b}=\ket{a}\ket{a+b},
 $$
@@ -160,7 +161,7 @@ We can collect terms to find that
     V(\ket{+} \otimes \ket{\phi}) & = \frac{\ket{0} + e^{i \phi} \ket{1}}{\sqrt{2}} \otimes \ket{\phi} \\\\
                                   & = (R_1(\phi) \ket{+}) \otimes \ket{\phi},
 \end{align}
-where $R_1$ is the unitary applied by the <xref:microsoft.quantum.primitive.r1> operation.
+where $R_1$ is the unitary applied by the <xref:microsoft.quantum.intrinsic.r1> operation.
 Put differently, the effect of applying $V$ is precisely the same as applying $R_1$ with an unknown angle, even though we only have access to $V$ as an oracle.
 Thus, for the rest of this discussion we will discuss phase estimation in terms of $R_1(\phi)$, which we implement by using so-called *phase kickback*.
 
@@ -176,4 +177,4 @@ where $n$ is the number of bits of precision that we require, and where we have 
 If we assume that $\phi = 2 \pi p / 2^k$ for an integer $p$, then we recognize this as $\ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n}$, where $p_j$ is the $j^{\textrm{th}}$ bit of $2 \pi \phi$.
 Applying the adjoint of the quantum Fourier transform, we therefore obtain the binary representation of the phase encoded as a quantum state.
 
-In Q#, this is implemented by the <xref:microsoft.quantum.canon.quantumphaseestimation> operation, which takes a <xref:microsoft.quantum.canon.discreteoracle> implementing application of $U^m$ as a function of positive integers $m$.
+In Q#, this is implemented by the <xref:microsoft.quantum.characterization.quantumphaseestimation> operation, which takes a <xref:microsoft.quantum.oracles.discreteoracle> implementing application of $U^m$ as a function of positive integers $m$.

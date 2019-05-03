@@ -56,10 +56,12 @@ $ code . # To open in Visual Studio Code.
 
 Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
 
+#### Source files for a quantum application
 Your development environment should have two files open:
 `Driver.cs`, which will hold the C# driver for your quantum code,
 and `Operations.qs`, which will hold the quantum code itself.
 
+#### Q# source
 The first step is to rename the Q# file to `Bell.qs`.
 Right-click on `Operations.qs` in the Visual Studio Solution Explorer (Ctrl+Alt+L to focus) or the Visual Studio Code Explorer (Ctrl/⌘+Shift+E to focus), and select the Rename option.
 Replace `Operations` with `Bell` and hit return.
@@ -69,10 +71,9 @@ To enter the Q# code, make sure that you are editing the
 The `Bell.qs` file should have the following contents:
 
 ```qsharp
-namespace Quantum.Bell
-{
-    open Microsoft.Quantum.Canon;
+namespace Quantum.Bell {
     open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Canon;
 
     operation HelloQ () : Unit {
         Message("Hello quantum world!");
@@ -80,14 +81,14 @@ namespace Quantum.Bell
 }
 ```
 
+#### Q# operation
 First, replace the string `HelloQ` with `Set`, and change the operation
 parameters (the content of the parentheses) to contain the string
 `desired: Result, q1: Qubit`.
 The file should now look like:
 
 ```qsharp
-namespace Quantum.Bell
-{
+namespace Quantum.Bell {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Canon;
 
@@ -100,10 +101,7 @@ namespace Quantum.Bell
 Now, replace `Message("Hello quantum world!");` with the following code between the braces that enclose the operation body:
 
 ```qsharp
-        let current = M(q1);
-
-        if (desired != current)
-        {
+        if (desired != M(q1)) {
             X(q1);
         }
 ```
@@ -111,22 +109,19 @@ Now, replace `Message("Hello quantum world!");` with the following code between 
 The file should now look like:
 
 ```qsharp
-namespace Quantum.Bell
-{
+namespace Quantum.Bell {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Canon;
 
-    operation Set (desired: Result, q1: Qubit) : Unit
-    {
-        let current = M(q1);
-        if (desired != current)
-        {
+    operation Set (desired: Result, q1: Qubit) : Unit {
+        if (desired != M(q1)) {
             X(q1);
         }
     }
 }
 ```
 
+#### Set or flip a qubit
 This operation may now be called to set a qubit in a known state (`Zero` or `One`). We measure the qubit, if it's in the state we want, we leave it alone, otherwise, we flip it with the `X` gate.
 
 > [!NOTE]
@@ -150,24 +145,22 @@ This operation may now be called to set a qubit in a known state (`Zero` or `One
 > See the [Q# language reference](xref:microsoft.quantum.language.intro) for more
 > information.
 
+#### Measure a qubit
 Add the following operation to the namespace, after the end of the
 `Set` operation:
 
 ```qsharp
-    operation BellTest (count : Int, initial: Result) : (Int, Int)
-    {
-        mutable numOnes = 0;
-        using (qubit = Qubit())
-        {
-            for (test in 1..count)
-            {
-                Set (initial, qubit);
+    operation BellTest (count : Int, initial: Result) : (Int, Int) {
 
+        mutable numOnes = 0;
+        using (qubit = Qubit()) {
+
+            for (test in 1..count) {
+                Set (initial, qubit);
                 let res = M (qubit);
 
                 // Count the number of ones we saw:
-                if (res == One)
-                {
+                if (res == One) {
                     set numOnes += 1;
                 }
             }
@@ -181,8 +174,7 @@ Add the following operation to the namespace, after the end of the
 
 This operation (`BellTest`) will loop for `count` iterations, set a specified `initial` value on a qubit and then measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
 
-All of these calls use intrinsic quantum operations that are
-defined in the `Microsoft.Quantum.Intrinsic` namespace.
+All of these calls use intrinsic quantum operations that are defined in the `Microsoft.Quantum.Intrinsic` namespace.
 For instance, the `M` operation measures its argument qubit in the
 computational (`Z`) basis, and `X` applies a state flip around the x axis
 to its argument qubit.
@@ -207,7 +199,7 @@ to its argument qubit.
 > Q# doesn't require any type annotations for variables.
 >
 > The `using` statement is also special to Q#.
-> It is used to allocate an array of qubits for use in a block of code.
+> It is used to allocate qubits for use in a block of code.
 > In Q#, all qubits are dynamically allocated and released,
 > rather than being fixed resources that are there for the entire
 > lifetime of a complex algorithm.
@@ -216,7 +208,7 @@ to its argument qubit.
 > There is an analogous `borrowing` statement that is used to allocate
 > potentially dirty ancilla qubits.
 >
-> A `for` loop in Q# always iterates through a range.
+> A `for` loop in Q# iterates through a range or array.
 > There is no Q# equivalent to a traditional C-style computer __for__ statement.
 > A range may be specified by the first and last integers in the range, as in
 > the example: `1..10` is the range 1, 2, 3, 4, 5, 6, 7, 8, 9, and 10.
@@ -256,6 +248,7 @@ namespace Quantum.Bell
 }
 ```
 
+#### Run quantum operations from a C# host program
 Replace the body of the `Main` method with the following code:
 
 ```csharp
@@ -368,18 +361,18 @@ Every time we measure, we ask for a classical value, but the qubit is halfway be
 Now we'll make the promised [Bell State](https://en.wikipedia.org/wiki/Bell_state) and show off __entanglement__. The first thing we'll need to do is allocate 2 qubits instead of one in `BellTest`:
 
 ```qsharp
-        using (qubits = Qubit[2]) {
+        using ((q0, q1) = (Qubit(), Qubit())) {
 ```
 
 This will allow us to add a new gate (`CNOT`) before we measure  (`M`) in `BellTest`:
 
 ```qsharp
-                Set (initial, qubits[0]);
-                Set (Zero, qubits[1]);
+                Set (initial, q0);
+                Set (Zero, q1);
 
-                H(qubits[0]);
-                CNOT(qubits[0],qubits[1]);
-                let res = M (qubits[0]);
+                H(q0);
+                CNOT(q0,q1);
+                let res = M (q0);
 ```
 
 We've added another `Set` operation to initialize qubit 1 to make sure that it's always in the `Zero` state when we start.
@@ -387,36 +380,35 @@ We've added another `Set` operation to initialize qubit 1 to make sure that it's
 We also need to reset the second qubit before releasing it (this could also be done with a `for` loop). We'll add a line after qubit 0 is reset:
 
 ```qsharp
-            Set(Zero, qubits[0]);
-            Set(Zero, qubits[1]);
+            Set(Zero, q0);
+            Set(Zero, q1);
 ```
 
 The full routine now looks like this:
 
 ```qsharp
-    operation BellTest (count : Int, initial: Result) : (Int,Int)
-    {
+    operation BellTest (count : Int, initial: Result) : (Int,Int) {
+
         mutable numOnes = 0;
-        using (qubits = Qubit[2])
+        using ((q0, q1) = (Qubit(), Qubit())) {
         {
             for (test in 1..count)
             {
-                Set (initial, qubits[0]);
-                Set (Zero, qubits[1]);
+                Set (initial, q0);
+                Set (Zero, q1);
 
-                H(qubits[0]);
-                CNOT(qubits[0],qubits[1]);
-                let res = M (qubits[0]);
+                H(q0);
+                CNOT(q0,q1);
+                let res = M(q0);
 
                 // Count the number of ones we saw:
-                if (res == One)
-                {
+                if (res == One) {
                     set numOnes += 1;
                 }
             }
             
-            Set(Zero, qubits[0]);
-            Set(Zero, qubits[1]);
+            Set(Zero, q0);
+            Set(Zero, q1);
         }
 
         // Return number of times we saw a |0> and number of times we saw a |1>
@@ -427,35 +419,32 @@ The full routine now looks like this:
 If we run this, we'll get exactly the same 50-50 result we got before. However, what we're really interested in is how the second qubit reacts to the first being measured. We'll add this statistic with a new version of the `BellTest` operation:
 
 ```qsharp
-    operation BellTest (count : Int, initial: Result) : (Int, Int, Int)
-    {
+    operation BellTest (count : Int, initial: Result) : (Int, Int, Int) {
         mutable numOnes = 0;
         mutable agree = 0;
-        using (qubits = Qubit[2])
-        {
+        using ((q0, q1) = (Qubit(), Qubit())) {
             for (test in 1..count)
             {
-                Set (initial, qubits[0]);
-                Set (Zero, qubits[1]);
+                Set (initial, q0);
+                Set (Zero, q1);
 
-                H(qubits[0]);
-                CNOT(qubits[0], qubits[1]);
-                let res = M (qubits[0]);
+                H(q0);
+                CNOT(q0,q1);
+                let res = M (q0);
 
-                if (M (qubits[1]) == res) 
-                {
+                if (M (q1) == res) {
                     set agree += 1;
                 }
 
                 // Count the number of ones we saw:
-                if (res == One)
-                {
+                if (res == One) {
                     set numOnes += 1;
                 }
+                
             }
             
-            Set(Zero, qubits[0]);
-            Set(Zero, qubits[1]);
+            Set(Zero, q0);
+            Set(Zero, q1);
         }
 
         // Return number of times we saw a |0> and number of times we saw a |1>

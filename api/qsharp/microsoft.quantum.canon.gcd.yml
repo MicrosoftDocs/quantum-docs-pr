@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.gcd
+name: GCD
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.math.greatestcommondivisori".
+syntax: 'function GCD (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Int
+  - name: b
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+...

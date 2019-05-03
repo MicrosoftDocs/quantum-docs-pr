@@ -14,8 +14,7 @@ ms.topic: article
 
 Comments begin with two forward slashes, `//`,
 and continue until the end of line.
-A comment may appear anywhere in a Q# source file,
-including where statements are not valid.
+A comment may appear anywhere in a Q# source file.
 
 ### Documentation Comments
 
@@ -63,11 +62,8 @@ For example:
 /// - Microsoft.Quantum.Intrinsic.H
 operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
 {
-    body(...)
-    {
-        op(target);
-        op(target);
-    }
+    op(target);
+    op(target);
 }
 ```
 
@@ -103,17 +99,25 @@ However, Q# does not support relative references to namespaces.
 That is, if the namespace `a.b` has been opened, a reference to an operation
 names `c.d` will not be resolved to an operation with full name `a.b.c.d`.
 
-Within a namespace block, the `open` directive may be used to allow
-abbreviated reference to constructs from another namespace.
-The `open` directive applies to the entire namespace block.
+Within a namespace block, the `open` directive may be used to 
+import all types and callables declared in a certain namespace and refer to them by their unqualified name. Optionally, a short name for the opened namespace may be defined such that all elements from that namespace can (and need) to be qualified by the defined short name. 
+The `open` directive applies to the entire namespace block within a file.
 
-A reference to a construct defined in another namespace that is not
-opened in the current namespace must be by its fully-qualified name.
+A type or callable defined in another namespace that is not
+opened in the current namespace must be referenced by its fully-qualified name.
 For example, an operation named `Op` in the `X.Y` namespace must be
 referenced by its fully-qualified name `X.Y.Op`, unless the `X.Y`
-namespace has been opened earlier in the current block.
-As mentioned above, even if the `X` namespace has been opened, you still
-cannot reference the operation as `Y.Op`.
+namespace has been opened earlier in the current block. 
+As mentioned above, even if the `X` namespace has been opened, it is not possible to reference the operation as `Y.Op`.
+If a short name `Z` for `X.Y` has been defined in that namespace and file, then `Op` needs to be referred to as `Y.Op`. 
+
+```qsharp
+namespace NS {
+
+    open Microsoft.Quantum.Intrinsic; // opens the namespace
+    open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
+}
+```
 
 It is usually better to include a namespace by using an `open` directive.
 Using a fully-qualified name is required if two namespaces define constructs
@@ -122,16 +126,13 @@ with the same name, and the current source uses constructs from both.
 ## Formatting
 
 Most Q# statements and directives end with a terminating semicolon, `;`.
-Statements and directives such as `for` and `operation` that end with
+Statements and declarations such as `for` and `operation` that end with
 a statement block do not require a terminating semicolon.
 Each statement description notes whether the terminating semicolon
 is required.
 
-Statements may be broken out across multiple lines.
-There must be a line-end between statements,
-so it is not possible to have multiple statements on a single line.
-Directives and declarations, such as operation declarations,
-may also span multiple lines.
+Statements, like expressions, declarations, and directives, may be broken out across multiple lines.
+Having multiple statements on a single line should be avoided.
 
 ## Statement Blocks
 
@@ -149,45 +150,25 @@ Q# distinguishes between mutable and immutable symbols.
 In general, the use of immutable symbols is encouraged because it
 allows the compiler to perform more optimizations.
 
-For arrays, mutability or immutability applies both to the array as a whole
-and to array elements.
-That is, the elements of an immutable array may not be changed.
+The left-hand-side of the binding consists of a symbol tuple, and the right hand side of an expression.
 
-The contents of a tuple instance or of a user-defined type based on a tuple
-may not be changed regardless of the mutability of the symbol bound to the
-instance.
-If a mutable symbol is bound to a tuple, the symbol may be bound
-to a new tuple, but the existing tuple may not be modified in place.
-
-The arguments to an operation or a function are treated as immutable.
-This also applies to elements of an array passed to an operation or function.
-This means that Q# does not support "out" variables.
+Since all Q# types are value types - with the qubits taking a somewhat special role - 
+formally a "copy" is created when a value is bound to a symbol, or when a symbol is rebound. 
+That is to say, the behavior of Q# is the same as if a copy were created on assignment. 
+This in particular also includes arrays. Of course in practice only the relevant pieces are actually recreated as needed. 
 
 ### Tuple Deconstruction
 
-If the right-hand side of the binding is a tuple or a user-defined type,
-then an extended syntax may be used to deconstruct the tuple:
+If the right-hand side of the binding is a tuple,
+then that tuple may be deconstructed upon assignment.
+Such deconstructions may involve nested tuples, and any full or partial deconstruction is valid as long as the shape of the tuple on the right hand side is compatible with the shape of the symbol tuple.
+Tuple deconstruction can in particular also be used when the right-hand side of the `=` is a tuple-valued expression.
 
 ```qsharp
-let (i, f) = (5, 0.1);
-```
-
-This statement will bind `5` to `i` and `0.1` to `f`.
-
-Deconstructing binds may also be used for more complex tuples, such as:
-
-```qsharp
-mutable (a, (b, c)) = (1, (2, 3));
-set (x, y) = (1, (2, 3));
-```
-
-In these examples, `a` and `x` both get bound to `1`,
-`b` gets bound to `2`, `c` to `3`, and `y` to `(2, 3)`.
-
-Tuple deconstruction can also be used when the right-hand side of the `=`
-is a tuple-valued expression:
-
-```qsharp
+let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
+mutable (a, (_, b)) = (1, (2, 3)); // a is bound to 1, b is bound to 3
+mutable (x, y) = ((1, 2), [3, 4]); // x is bound to (1,2), y is bound to [3,4]
+set (x, _, y) = ((5, 6), 7, [8]);  // x is rebound to (5,6), y is rebound to [8]
 let (r1, r2) = MeasureTwice(q1, PauliX, q2, PauliY);
 ```
 
@@ -198,80 +179,103 @@ This is roughly equivalent to variable declaration and initialization in
 languages such as C#, except that Q# symbols, once bound, may not be changed;
 `let` bindings are immutable.
 
-A simple binding statement consists of the keyword `let`, followed by
-an identifier, an equals sign `=`, an expression to bind the identifier to,
-and a terminating semicolon.
-The type of the identifier is defined to be the same as the type of the
-expression it is bound to.
-
-Tuple deconstruction is available with `let` statements.
-
-For example, the statement
-
-```qsharp
-let i = 5;
-```
-
-binds the symbol `i` as an `Int` with the value `5`.
+An immutable binding consists of the keyword `let`, followed by
+a symbol or symbol tuple, an equals sign `=`, an expression to bind the symbol(s) to, and a terminating semicolon.
+The type of the bound symbol(s) is inferred based on the expression on the right hand side.
 
 ### Mutable Symbols
 
 Mutable symbols are defined and initialized using the `mutable` statement.
-This statement defines a new symbol binding and specifies that the bound value
-may be changed later in the code.
+Symbols declared and bound as part of a `mutable` statement may be rebound to a different value later in the code. 
 
 A mutable binding statement consists of the keyword `mutable`, followed by
-an identifier, an equals sign `=`, an expression to bind the identifier to,
-and a terminating semicolon.
-The type of the identifier is defined to be the same as the type of the
-expression it is bound to.
+a symbol or symbol tuple, an equals sign `=`, an expression to bind the symbol(s) to, and a terminating semicolon.
+The type of the bound symbol(s) is inferred based on the expression on the right hand side. If a symbol is rebound later in the code, its type does not change, and the bound value needs to be compatible with that type.
 
-:new: Tuple deconstruction is available with `mutable` statements.
+### Rebinding of Mutable Symbols
 
-For example, the statement
+A mutable variable may be rebound using a `set` statement.
+Such a rebinding consists of the keyword `set`, followed by
+a symbol or symbol tuple, an equals sign `=`, an expression to rebind the symbol(s) to, and a terminating semicolon.
+The value must be compatible with the type(s) of the symbol(s) it is bound to.
 
+A particular kind of set-statement we refer to as apply-and-update statement provides a convenient way of 
+concatenation if the right hand side consists of the application of a binary operator an is to be rebound to the left argument to the operator. 
+For example,
 ```qsharp
 mutable counter = 0;
+for (i in 1 .. 2 .. 10) {
+    set counter += 1;
+    // ...
+}
+```
+increments the value of the counter `counter` in each iteration of the `for` loop. The code above is equivalent to 
+```qsharp
+mutable counter = 0;
+for (i in 1 .. 2 .. 10) {
+    set counter = counter + 1;
+    // ...
+}
+```
+Similar statements are available for all binary operators in which the type of the left-hand-side matches the expression type. 
+This provides for example a convenient way to accumulate values:
+```qsharp
+mutable results = new Result[0];
+for (q in qubits) {
+    set results += [M(q)];
+    // ...
+}
 ```
 
-defines the symbol `counter` as a mutable `Int` with initial value `0`.
-
-If a mutable symbol is bound to an immutable array, a copy of the array
-is created and bound to the symbol.
-Modifying the elements of the mutable array will not change the contents
-of the original immutable array.
-
-### Updating Mutable Symbols
-
-The value bound to a mutable symbol may be changed by
-binding the symbol to a new value using the `set` statement.
-
-A mutable rebinding statement consists of the keyword `set`, followed by
-an identifier, an equals sign `=`, an expression to rebind the identifier to,
-and a terminating semicolon.
-The new value must be compatible with the original type,
-and will be promoted to the original type.
-
-:new: Tuple deconstruction is available with `set` statements.
-
-For example, the statement
+A similar concatenation exists for copy-and-update expressions on the right hand side. 
+While our standard libraries contain the necessary tools for many common array initialization and manipulation needs, 
+and thus help to avoid having update array items in the first place, 
+such update-and-reassign statements provide an alternative if needed:
 
 ```qsharp
-set counter = counter + 1;
+operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
+
+    mutable samples = new Double[0];
+    for (i in 1 .. nrSamples) {
+        set samples += [RandomInt(maxInt)];
+    }
+    return samples;
+}
+
+operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
+
+    let normalization = 1. / IntAsDouble(prec);
+    mutable samples = RandomInts(prec, nrSamples);
+    
+    for (i in IndexRange(samples) {
+        set samples w/= i <- normalization * IntAsDouble(samples[i]);
+    }
+}
+
 ```
 
-increments the `counter` symbol from the `mutable` example.
+> [!TIP]   
+> Avoid unnecessary use of update-and-reassign statements by leveraging the tools provided in <xref:microsoft.quantum.arrays>.
 
-The `set` statement is also used to set the value of an item
-in a mutable array:
+The function
+```qsharp
+function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
+{
+    mutable pauliArray = new Pauli[n];
+    for (index in 0 .. n - 1) {
+        set pauliArray w/= index <- 
+            index == location ? pauli | PauliI;
+    }    
+    return pauliArray;
+}
+```
+for example can simply be expressed using the function `ConstantArray` in `Microsoft.Quantum.Arrays`:
 
 ```qsharp
-set result[1] = One;
+function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
+    return ConstantArray(n, PauliI) w/ i <- pauli;
+}
 ```
-
-sets the second element of the `result` array to `One`.
-Note that the `result` array must have been defined in a `mutable` statement
-for this to be valid.
 
 ### Binding Scopes
 
@@ -289,9 +293,9 @@ For both types of loops, each pass through the loop executes in its own scope,
 so bindings from an earlier pass are not available in a later pass.
 
 Symbol bindings from outer blocks are inherited by inner blocks.
-A symbol may only be bound once per block; it is illegal to bind a symbol
-that is already bound.
-Thus, the following sequences would be legal:
+A symbol may only be bound once per block; it is illegal to define a symbol
+with the same name as another symbol that is within scope (no "shadowing").
+The following sequences would be legal:
 
 ```qsharp
 if (a == b) {
@@ -342,48 +346,43 @@ if (a == b) {
 
 ### For-Loop
 
-The `for` statement supports iteration through a simple integer range
-or :new: through an array value.
+The `for` statement supports iteration over an integer range or over an array.
 The statement consists of the keyword `for`, an open parenthesis `(`,
-followed by an identifier, the keyword `in`, an expression that
-evaluates to a `Range` or an array, a close parenthesis `)`,
-and a statement block.
+followed by a symbol or symbol tuple, the keyword `in`, an expression of type `Range` or array, a close parenthesis `)`, and a statement block.
+
 The statement block (the body of the loop) is executed repeatedly,
-with the identifier (the loop variable) bound to each value in the
-range or array.
+with the defined symbol(s) (the loop variable(s)) bound to each value in the range or array.
 Note that if the range expression evaluates to an empty range or array,
 the body will not be executed at all.
-
 The expression is fully evaluated before entering the loop,
 and will not change while the loop is executing.
+
+The binding of the declared symbol(s) is immutable and follows the same rules as other variable bindings. 
+In particular, it is possible to destruct e.g. array items for an iteration over an array upon assignment to the loop variable(s).
 
 For example,
 
 ```qsharp
-for (index in 0 .. n-2) {
-    set results[index] = Measure([PauliX], [qubits[index]]);
-}
-```
-
-or
-
-```qsharp
-for (qb in qubits) {
+// ...
+for (qb in qubits) { // qubits contains a Qubit[]
     H(qb);
 }
-```
 
-Tuple deconstruction is available with `for` statements if the array
-is an array of tuples:
+mutable results = new (Int, Results)[Length(qubits)];
+for (index in 0 .. Length(qubits) - 1) {
+    let measured = 
+    set results w/= index <- (index, M(qubits[i]));
+}
 
-```qsharp
-for ((qb, theta) in qubitRotations) {
-    Rz(theta, qb);
+mutable accumulated = 0;
+for ((index, measured) in results) {
+    if (measured == One) {
+        set accumulated += 1 <<< index;
+    }
 }
 ```
 
-The loop variable is bound at each entrance to the loop body, and unbound
-at the end of the body.
+The loop variable is bound at each entrance to the loop body, and unbound at the end of the body.
 In particular, the loop variable is not bound after the for loop is completed.
 
 ### Repeat-Until-Success Loop
@@ -394,9 +393,7 @@ It consists of the keyword `repeat`, followed by a statement block
 the keyword `fixup`, and another statement block (the _fixup_).
 The loop body, condition, and fixup are all considered to be a single scope,
 so symbols bound in the body are available in the condition and fixup.
-
 Note that the fixup block is required, even if there is no fixup to be done.
-In this case, the fixup should be a single expression statement, `()`.
 
 The loop body is executed, and then the condition is evaluated.
 If the condition is true, then the statement is completed;
@@ -437,7 +434,7 @@ using (anc = Qubit()) {
 
 ### Conditional Statement
 
-The if statement supports conditional execution.
+The `if` statement supports conditional execution.
 It consists of the keyword `if`, an open parenthesis `(`, a Boolean
 expression, a close parenthesis `)`, and a statement block (the _then_ block).
 This may be followed by any number of else-if clauses, each of which consists
@@ -464,9 +461,7 @@ For example,
 ```qsharp
 if (result == One) {
     X(target);
-} else {
-    Z(target);
-}
+} 
 ```
 
 or
@@ -490,7 +485,7 @@ appropriate type, and a terminating semicolon.
 
 A callable that returns an empty tuple, `()`, does not require a
 return statement.
-If an early exit is desired, `return ()` may be used in this case
+If an early exit is desired, `return ()` may be used in this case.
 Callables that return any other type require a final return statement.
 
 There is no maximum number of return statements within an operation.
@@ -546,60 +541,68 @@ They are only valid within operations.
 
 ### Clean Qubits
 
-The using statement is used to acquire new qubits for use
-during a statement block.
-The qubits are guaranteed to be initialized to the
-computational `Zero` state.
+The `using` statement is used to acquire new qubits for use during a statement block.
+The qubits are guaranteed to be initialized to the computational `Zero` state.
 The qubits should be in the computational `Zero` state at the
 end of the statement block; simulators are encouraged to enforce this.
 
-:new: The statement consists of the keyword `using`, followed by an open
+The statement consists of the keyword `using`, followed by an open
 parenthesis `(`, a binding, a close parenthesis `)`, and
 the statement block within which the qubits will be available.
 The binding follows the same pattern as `let` statements: either a single
 symbol or a tuple of symbols, followed by an equals sign `=`, and either a
-single value or a matching tuple of values.
-The values must all be either a single qubit, indicated as `Qubit()`, or
+single value or a matching tuple of initializers.
+Initializers are available either for a single qubit, indicated as `Qubit()`, or
 an array of qubits, indicated by `Qubit[`, an `Int` expression, and `]`.
 
 For example,
 
 ```qsharp
+using (q = Qubit()) {
+    // ...
+}
 using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
-    ...
+    // ...
 }
 ```
 
 ### Dirty Qubits
 
-The borrowing statement is used to allocate qubits for temporary use
-during a statement block.
-The borrower commits to leaving the qubits in the same state they were in
-when they were borrowed.
+The `borrowing` statement is used to obtain qubits for temporary use. 
+The statement consists of the keyword `borrowing`, followed by an open
+parenthesis `(`, a binding, a close parenthesis `)`, and
+the statement block within which the qubits will be available.
+The binding follows the same pattern and rules as the one in a `using` statement.
+
+For example,
+
+```qsharp
+borrowing (q = Qubit()) {
+    // ...
+}
+borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+    // ...
+}
+```
+
+The borrowed qubits are in an unknown state and go out of scope at the end of the statement block.
+The borrower commits to leaving the qubits in the same state they were in when they were borrowed, 
+i.e. their state at the beginning and at the end of the statement block is expected to be the same.
+This state in particular is not necessarily a classical state, such that in most cases, 
+borrowing scopes should not contain measurements. 
+
 Such qubits are often known as “dirty ancilla”.
 See [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995)
 (Haner, Roetteler, and Svore 2017) for an example of dirty ancilla use.
 
 When borrowing qubits, the system will first try to fill the request
-from qubits that are in use but that are not accessed during the body
-of the `borrowing` statement.
+from qubits that are in use but that are not accessed during the body of the `borrowing` statement.
 If there aren't enough such qubits, then it will allocate new qubits
 to complete the request.
 
-:new: The statement has the same format as the `using` statement, but with the
-`using` keyword replaced by `borrowing`.
-
-For example,
-
-```qsharp
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
-    ...
-}
-```
-
 ## Expression Evaluation Statements
 
-Any valid Q# expression of type `Unit` may be evaluated as a statement.
+Any call expression of type `Unit` may be used as a statement.
 This is primarily of use when calling operations on qubits that return `Unit`
 because the purpose of the statement is to modify the implicit quantum state.
 Expression evaluation statements require a terminating semicolon.
@@ -608,16 +611,6 @@ For example,
 
 ```qsharp
 X(q);
-```
-
-or
-
-```qsharp
 CNOT(control, target);
-```
-
-or
-
-```qsharp
-Adjoint T(q1);
+Adjoint T(q);
 ```

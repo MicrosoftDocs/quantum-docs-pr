@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.bitflipdecoder
+name: BitFlipDecoder
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.errorcorrection.encodeintobitflipcode".
+syntax: 'operation BitFlipDecoder (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : (Qubit[], Qubit[])'
+input:
+  content: '(logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
+  types:
+  - name: logicalRegister
+    uid: microsoft.quantum.errorcorrection.logicalregister
+output:
+  content: (Qubit[], Qubit[])
+  types:
+  - types:
+    - isArray: true
+      isPrimitive: true
+      uid: Qubit
+    - isArray: true
+      isPrimitive: true
+      uid: Qubit
+...

@@ -13,9 +13,9 @@ ms.topic: article
 ## Classical Data Structures ##
 
 Along with user-defined types for representing quantum concepts, the canon also provides operations, functions, and types for working with classical data used in the control of quantum systems.
-For instance, the @"microsoft.quantum.canon.reverse" function takes an array as input and returns the same array in reverse order.
+For instance, the <xref:microsoft.quantum.arrays.reversed> function takes an array as input and returns the same array in reverse order.
 This can then be used on an array of type `Qubit[]` to avoid having to apply unnecessary $\operatorname{SWAP}$ gates when converting between quantum representations of integers.
-Similarly, we saw in the previous section that types of the form `(Int, Int -> T)` can be useful for representing random access collections, so the @"microsoft.quantum.canon.lookupfunction" function provides a convienent way of constructing such types from array types.
+Similarly, we saw in the previous section that types of the form `(Int, Int -> T)` can be useful for representing random access collections, so the <xref:microsoft.quantum.arrays.lookupfunction> function provides a convienent way of constructing such types from array types.
 
 ### Pairs ###
 
@@ -30,23 +30,25 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 
 The canon provides several functions for manipulating arrays.
 These functions are type-parameterized, and thus can be used with arrays of any Q# type.
-For instance, the <xref:microsoft.quantum.canon.reverse> function returns a new array whose elements are in reverse order from its input.
+For instance, the <xref:microsoft.quantum.arrays.reversed> function returns a new array whose elements are in reverse order from its input.
 This can be used to change how a quantum register is represented when calling operations:
 
 ```qsharp
 let leRegister = LittleEndian(register);
 // QFT expects a BigEndian, so we can reverse before calling.
-QFT(BigEndian(Reverse(leRegister)));
+QFT(BigEndian(Reversed(leRegister!)));
+// This is how the LittleEndianAsBigEndian function is implemented:
+QFT(LittleEndianAsBigEndian(leRegister));
 ```
 
-Similarly, the <xref:microsoft.quantum.canon.subarray> function can be used to reorder or take subsets of the elements of an array:
+Similarly, the <xref:microsoft.quantum.arrays.subarray> function can be used to reorder or take subsets of the elements of an array:
 
 ```qsharp
 // Applies H to qubits 2 and 5.
 ApplyToEach(H, Subarray([2, 5], register));
 ```
 
-When combined with flow control, array manipulation functions such as <xref:microsoft.quantum.canon.zip> can provide a powerful way to express quantum programs:
+When combined with flow control, array manipulation functions such as <xref:microsoft.quantum.arrays.zip> can provide a powerful way to express quantum programs:
 
 ```qsharp
 // Applies X₃ Y₁ Z₇ to a register of any size.
@@ -54,7 +56,7 @@ ApplyToEach(
     ApplyPauli(_, register),
     Map(
         EmbedPauli(_, _, Length(register)),
-        Zip([PauliX; PauliY; PauliZ], [3, 1, 7])
+        Zip([PauliX, PauliY, PauliZ], [3, 1, 7])
     )
 );
 ```
@@ -92,7 +94,7 @@ Amplitude amplification then proceeds by taking an initial state, $\ket{\psi}$ t
 Performing such an iteration guarantees that if one starts with an initial state that has overlap $\sin^2(\theta)$ with the marked space then after $m$ iterations this overlap becomes $\sin^2([2m + 1] \theta)$.
 We therefore typically wish to choose $m$ to be a free parameter such that $[2m+1]\theta = \pi/2$; however, such rigid choices are not as important for some forms of amplitude amplification such as fixed point amplitude amplification.
 This process allows us to prepare a state in the marked subspace using quadratically fewer queries to the marking function and the state preparation function than would be possible on a strictly classical device.
-This is why amplitude amplification is a significant primitive for many applications of quantum computing.
+This is why amplitude amplification is a significant building block for many applications of quantum computing.
 
 In order to understand how to use the algorithm, it is useful to provide an example that gives a construction of the oracles.  Consider performing Grover's algorithm for database searches in this setting.
 In Grover's search the goal is to transform the state $\ket{+}^{\otimes n} = H^{\otimes n} \ket{0}$ into one of (potentially) many marked states.
@@ -101,28 +103,24 @@ Then we have design two oracles: one that only marks the initial state $\ket{+}^
 The latter gate can be implemented using the following process operation, by using the control flow operations in the canon:
 
 ```qsharp
-operation ReflectAboutAllZeros(register : Qubit[]) : Unit {
-    body (...) {
-        // Apply $X$ gates to every qubit.
-        ApplyToEach(X, register);
+operation ReflectAboutAllZeros(register : Qubit[]) : Unit 
+is Adj + Ctl {
 
-        // Apply an $n-1$ controlled $Z$-gate to the $n^{\text{th}}$ qubit.
-        // This gate will lead to a sign flip if and only if every qubit is
-        // $1$, which happens only if each of the qubits were $0$ before step 1.
-        Controlled Z(register[0..Length(register) - 2], register[Length(register) - 1]);
+    // Apply $X$ gates to every qubit.
+    ApplyToEach(X, register);
 
-        // Apply $X$ gates to every qubit.
-        ApplyToEach(X, register);
-    }
+    // Apply an $n-1$ controlled $Z$-gate to the $n^{\text{th}}$ qubit.
+    // This gate will lead to a sign flip if and only if every qubit is
+    // $1$, which happens only if each of the qubits were $0$ before step 1.
+    Controlled Z(Most(register), Tail(register));
 
-    adjoint auto;
-    controlled auto;
-    controlled adjoint auto;
+    // Apply $X$ gates to every qubit.
+    ApplyToEach(X, register);
 }
 ```
 
 This oracle is then a special case of the <xref:microsoft.quantum.canon.rall1> operation, which allows for rotating by an arbitrary phase instead of the reflection case $\phi = \pi$.
-In this case, `RAll1` is similar to the <xref:microsoft.quantum.primitive.r1> prelude operation, in that it rotates about $\ket{11\cdots1}$ instead of the single-qubit state $\ket{1}$.
+In this case, `RAll1` is similar to the <xref:microsoft.quantum.intrinsic.r1> prelude operation, in that it rotates about $\ket{11\cdots1}$ instead of the single-qubit state $\ket{1}$.
 
 The oracle that marks the initial subspace can be constructed similarly.
 In pseudocode:
@@ -133,17 +131,12 @@ In pseudocode:
 4. Apply $X$ gates to every qubit.
 5. Apply $H$ gates to every qubit.
 
-This time, we also demonstrate using <xref:microsoft.quantum.canon.with> together with the <xref:microsoft.quantum.canon.rall1> operation discussed above.:
+This time, we also demonstrate using <xref:microsoft.quantum.canon.applywith> together with the <xref:microsoft.quantum.canon.rall1> operation discussed above:
 
 ```qsharp
-operation ReflectAboutInitial(register : Qubit[]) : Unit {
-    body (...) {
-        With(ApplyToEach(H, _), With(ApplyToEach(X, _), RAll1(_, PI()), _), register);
-    }
-
-    adjoint auto;
-    controlled auto;
-    controlled adjoint auto;
+operation ReflectAboutInitial(register : Qubit[]) : Unit
+is Adj + Ctl {
+    ApplyWithCA(ApplyToEach(H, _), ApplyWith(ApplyToEach(X, _), RAll1(_, PI()), _), register);
 }
 ```
 
@@ -162,8 +155,8 @@ This unitary is customarily described by one of two types of oracles.
 > To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation).
 > To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
 
-The first type of oracle, which we call a discrete query oracle and represent with the user-defined type <xref:microsoft.quantum.canon.discreteoracle>, simply involves a unitary matrix.
-If $U$ is the unitary whose eigenvalues we wish to estimate then the oracle for $U$ is simply a standin for a subroutine that implements $U$.
+The first type of oracle, which we call a discrete query oracle and represent with the user-defined type <xref:microsoft.quantum.oracles.discreteoracle>, simply involves a unitary matrix.
+If $U$ is the unitary whose eigenvalues we wish to estimate then the oracle for $U$ is simply a stand-in for a subroutine that implements $U$.
 For example, one could take $U$ to be the oracle $Q$ defined above for amplitude estimation.
 The eigenvalues of this matrix can be used to estimate the overlap between the initial and target states, $\sin^2(\theta)$, using quadratically fewer samples than one would need otherwise.
 This earns the application of phase estimation using the Grover oracle $Q$ as input the moniker of amplitude estimation.
@@ -180,7 +173,7 @@ $$
 \end{align}
 $$
 
-The second type of oracle used in phase estimation is the continuous query oracle, represented by the <xref:microsoft.quantum.canon.continuousoracle> type.
+The second type of oracle used in phase estimation is the continuous query oracle, represented by the <xref:microsoft.quantum.oracles.continuousoracle> type.
 A continuous query oracle for phase estimation takes the form $U(t)$ where $t$ is a classically known real number.
 If we let $U$ be a fixed unitary then the continuous query oracle takes the form $U(t) = U^t$.
 This allows us to query matrices such as $\sqrt{U}$, which could not be implemented directly in the discrete query model.
@@ -217,7 +210,7 @@ $$
 $$
 where the matrix exponential $U(t)=e^{-i H t}$ is known as the unitary time-evolution operator. Though we focus on generators of this form in the following, we emphasize that the concept applies more broadly, such as to the simulation of open quantum systems, or to more abstract differential equations.
 
-A primary goal of dynamical simulation is to implement the time-evolution operator on some quantum state encoded in qubits of a quantum computer.  In many cases, the Hamiltonian may be broken into a sum of some $d$ simpler, or primitive, terms
+A primary goal of dynamical simulation is to implement the time-evolution operator on some quantum state encoded in qubits of a quantum computer.  In many cases, the Hamiltonian may be broken into a sum of some $d$ simpler terms
 
 $$
 \begin{align}
@@ -225,7 +218,7 @@ $$
 \end{align}
 $$
 
-where time-evolution by each term alone is easy to implement on a quantum computer. For instance, if $H_j$ is a Pauli $X_1X_2$ operator acting on the 1st and 2nd elements of the qubit register `qubits`, time-evolution by it for any time $t$ may be implemented simply by calling the operation `Exp([PauliX;PauliX], t, qubits[1..2])`, which has signature `((Pauli[], Double, Qubit[]) => () : Adjoint, Controlled)`. As discussed later in Hamiltonian Simulation, one solution then is to approximate time-evolution by $H$ with a sequence of simpler operations
+where time-evolution by each term alone is easy to implement on a quantum computer. For instance, if $H_j$ is a Pauli $X_1X_2$ operator acting on the 1st and 2nd elements of the qubit register `qubits`, time-evolution by it for any time $t$ may be implemented simply by calling the operation `Exp([PauliX,PauliX], t, qubits[1..2])`, which has signature `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`. As discussed later in Hamiltonian Simulation, one solution then is to approximate time-evolution by $H$ with a sequence of simpler operations
 
 $$
 \begin{align}
@@ -289,19 +282,10 @@ let generatorIndexExample = GeneratorIndex(([1,2,0,3], [0.4]]), [0,8,2,1]);
 The `PauliEvolutionSet()` is a function that maps any `GeneratorIndex` of this form to an `EvolutionUnitary` with the following signature.
 
 ```qsharp
-newtype EvolutionUnitary = ((Double, Qubit[]) => Unit : Adjoint, Controlled);
+newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 ```
 
-The first parameter represents a time-duration, that will be multiplied by the coefficient in the `GeneratorIndex`, of unitary evolution. The second parameter is the qubit register the unitary acts on. For example:
-
-```qsharp
-let stepSize = 0.6;
-((PauliEvolutionSet()) (generatorIndexExample)) (stepSize, qubits);
-
-// This is the same as
-
-Exp([1,2,0,3], 0.4 * stepSize, [qubits[0],qubits[8],qubits[2],qubits[1]]);
-```
+The first parameter represents a time-duration, that will be multiplied by the coefficient in the `GeneratorIndex`, of unitary evolution. The second parameter is the qubit register the unitary acts on. 
 
 ### Time-Dependent Generators ###
 

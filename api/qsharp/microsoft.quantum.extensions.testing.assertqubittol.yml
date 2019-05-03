@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.testing.assertqubittol
+name: AssertQubitTol
+type: operation
+namespace: Microsoft.Quantum.Extensions.Testing
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+syntax: 'operation AssertQubitTol (expected : Result, q : Qubit, tolerance : Double) : Unit'
+input:
+  content: '(expected : Result, q : Qubit, tolerance : Double)'
+  types:
+  - name: expected
+    isPrimitive: true
+    uid: Result
+  - name: q
+    isPrimitive: true
+    uid: Qubit
+  - name: tolerance
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

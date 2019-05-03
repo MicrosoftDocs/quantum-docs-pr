@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.filtered
+name: Filtered
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: |-
+  Given an array and a predicate that is defined
+  for the elements of the array, returns an array that consists of
+  those elements that satisfy the predicate.
+remarks: |-
+  The function is defined for generic types, i.e., whenever we have
+  an array `'T[]` and a predicate `'T -> Bool` we can filter elements.
+syntax: "function Filtered (predicate : ('T -> Bool), array : 'T[]) : 'T[]"
+input:
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: predicate
+    summary: A function from `'T` to Boolean that is used to filter elements.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: An array of elements over `'T`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: An array `'T[]` of elements that satisfy the predicate.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: The type of `array` elements.
+...

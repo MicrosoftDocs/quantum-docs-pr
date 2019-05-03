@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
+name: StateOracleFromDeterministicStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: Converts an oracle of type `DeterministicStateOracle` to `StateOracle`.
+syntax: 'function StateOracleFromDeterministicStateOracle (deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.StateOracle'
+input:
+  content: '(deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
+  types:
+  - name: deterministicStateOracle
+    summary: A state preparation oracle $A$ of type `DeterministicStateOracle`.
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+output:
+  content: Microsoft.Quantum.Oracles.StateOracle
+  types:
+  - summary: |-
+      The same state preparation oracle $A$, but now of type
+      `StateOracle`. Note that the flag index in this `StateOracle` is a
+      dummy variable and has no effect.
+    uid: microsoft.quantum.oracles.stateoracle
+seeAlso:
+- microsoft.quantum.canon.deterministicstateoracle
+- microsoft.quantum.canon.stateoracle
+...

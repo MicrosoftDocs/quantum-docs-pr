@@ -122,13 +122,9 @@ Thus, an operation implementing the QFT could either be called `QFT` as shorthan
 For particularly commonly used operations and functions, it may be desirable to provide a shorthand name as an _alias_ for a longer form:
 
 ```qsharp
-operation CCNOT(control0 : Qubit, control1 : Qubit, target : Qubit) {
-    body (...) {
-        Controlled X([control0, control1], target);
-    }
-    adjoint auto;
-    controlled auto;
-    controlled adjoint auto;
+operation CCNOT(control0 : Qubit, control1 : Qubit, target : Qubit) 
+is Adj + Ctl {
+    Controlled X([control0, control1], target);
 }
 ```
 
@@ -246,8 +242,6 @@ These groups can be distinguished by using the same root name, followed by one o
 | `I` | Input or inputs are of type `Int` |
 | `D` | Input or inputs are of type `Double` |
 | `L` | Input or inputs are of type `BigInt` |
-| `BE` | Input or inputs are of type `BigEndian` |
-| `LE` | Input or inputs are of type `LittleEndian` |
 
 # [Guidance](#tab/guidance)
 
@@ -310,14 +304,16 @@ We would order the inputs to `ApplyPhaseEstimationIteration` in the following fa
 
 ```qsharp
 operation ApplyPhaseEstimationIteration(
-          angle : Double,
-          callable : (Qubit => () : Controlled),
-          scaleFactors : Double[],
-          controlQubit : Qubit,
-          targetQubits : Qubit[]) : ()
+    angle : Double,
+    callable : (Qubit => () is Ctl),
+    scaleFactors : Double[],
+    controlQubit : Qubit,
+    targetQubits : Qubit[]) 
+: Unit 
+...
 ```
 As a special case of minimizing surprise, some functions and operations mimic the behavior of the built-in functors `Adjoint` and `Controlled`.
-For instance, `ControlledOnInt<'T>` has type `(Int, ('T => Unit : Adjoint, Controlled)) => ((Qubit[], 'T) => Unit : Adjoint, Controlled)`, such that `ControlledOnInt<Qubit[]>(5, _)` acts like the `Controlled` functor, but on the condition that the control register represents the state $\ket{5} = \ket{101}$.
+For instance, `ControlledOnInt<'T>` has type `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)`, such that `ControlledOnInt<Qubit[]>(5, _)` acts like the `Controlled` functor, but on the condition that the control register represents the state $\ket{5} = \ket{101}$.
 Thus, a developer expects that the inputs to `ControlledOnInt` place the callable being transformed last, and that the resulting operation takes as its input `(Qubit[], 'T)` --- the same order as followed by the output of the `Controlled` functor.
 
 # [Guidance](#tab/guidance)
@@ -396,11 +392,10 @@ We suggest:
 /// # See Also
 /// - Ry
 /// - Rz
-operation Rx(theta : Double, qubit : Qubit) : Unit {
+operation Rx(theta : Double, qubit : Qubit) : Unit 
+is Adj + Ctl {
     body (...) { R(PauliX, theta, qubit); }
     adjoint (...) { R(PauliX, -theta, qubit); }
-    controlled auto;
-    controlled adjoint auto;
 }
 ```
 

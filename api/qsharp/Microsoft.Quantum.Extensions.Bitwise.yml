@@ -1,0 +1,40 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.bitwise
+name: Microsoft.Quantum.Extensions.Bitwise
+functions:
+- uid: microsoft.quantum.extensions.bitwise.and
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.bitwise.and".
+- uid: microsoft.quantum.extensions.bitwise.not
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.bitwise.not".
+- uid: microsoft.quantum.extensions.bitwise.or
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.bitwise.or".
+- uid: microsoft.quantum.extensions.bitwise.parity
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.bitwise.parity".
+- uid: microsoft.quantum.extensions.bitwise.xbits
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.bitwise.xbits".
+- uid: microsoft.quantum.extensions.bitwise.xor
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.bitwise.xor".
+- uid: microsoft.quantum.extensions.bitwise.zbits
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.bitwise.zbits".
+...

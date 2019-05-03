@@ -1,0 +1,15 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.diagnostics
+name: Microsoft.Quantum.Extensions.Diagnostics
+functions:
+- uid: microsoft.quantum.extensions.diagnostics.dumpmachine
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.dumpmachine".
+- uid: microsoft.quantum.extensions.diagnostics.dumpregister
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.dumpregister".
+...

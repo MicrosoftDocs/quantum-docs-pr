@@ -35,43 +35,48 @@ Variables defined using the `let` binding as above are local to a particular sco
 
 ## Mutability ##
 
-As an alternative to creating a variable with `let`, the `mutable` keyword will create a special mutable variable that can be changed after it is initially created by using the `set` keyword.
-If a mutable variable is an array type, then the elements of that array can also be changed.
-This is very useful, for instance, for creating arrays programmatically:
+As an alternative to creating a variable with `let`, the `mutable` keyword will create a special mutable variable that can be re-bound after it is initially created by using the `set` keyword.
 
 ```qsharp
-function Squares(nSquares : Int) : Int[] {
-    mutable squares = new Int[nSquares];
-    for (idxSquare in 0..nSquares - 1) {
-        set squares w/= idxSequare <- idxSquare ^ 2;
+operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
+    mutable samples = new Int[0];
+    for (i in 1 .. nrSamples) {
+        set samples += [RandomInt(maxInt)];
     }
-    return squares;
+    return samples;
 }
 ```
 
-The example above also illustrates another important feature of mutability in Q#: arrays bound to mutable local variables are themselves mutable.
-As we will see in more detail when discussing [array types](xref:microsoft.quantum.techniques.type-model#array-types), this is not true of ordinary variables.
-Informally, collections descending from immutable variables are immutable, while collections descending from mutable variables are mutable.
+All types in Q#, including arrays, follow value semantics. In particular, it is not possible to update array items. To modify an existing array requires leveraging a copy-and-update mechanism much like the one for records in F#. 
+Using the library tools for arrays provided in [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays), we can e.g. easily define a function that returns an array of Paulis where the Pauli at index `i` takes the given value and all other entries are the identity: 
 
-No operation or function calling `Squares` can observe that the local variable `squares` was defined to be mutable; mutability is an implementation detail that callers do not need to worry about.
+```qsharp
+function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
+    
+    let arr = ConstantArray(n, PauliI); // creates an array of filled with PauliI
+    return arr w/ i <- pauli; // constructs a new array based on arr except that entry i is set to pauli
+}
+```
+
+We will elaborate more on how to work with arrays when discussing Q# statements and expressions. 
+
+Mutability within Q# is a concept that applies to a *symbol* rather than a type or value. 
+Specifically, it does not have a representation in the type system, implicitly or explicitly, and whether or not a binding is mutable (as indicated by the `mutable` keyword) or immutable (as indicated by `let`) does not change the type of the bound variable(s). 
 This provides an important way to isolate mutability inside specialized functions and operations.
-In particular, even though an operation which uses a mutable variable cannot use `adjoint auto`, an operation can call a function which uses mutability.
+In particular, even though an adjoint specialization for an operation which uses a mutable variable cannot be auto-generated, auto-generation works fine for an operation calling a function which uses mutability.
 For this reason, it is a good practice to make functions and operations which use mutability as short and compact as possible, so that the rest of the quantum program can be written using ordinary immutable variables.
+
 
 ## Deconstruction ##
 
-In addition to assigning a single variable, the `let` keyword also allows for unpacking the contents of a [tuple type](#tuple-types).
+In addition to assigning a single variable, the `let` and `mutable` keywords - or in fact any other binding construct - also allow for unpacking the contents of a [tuple type](#tuple-types).
 An assignment of this form is said to *deconstruct* the elements of that tuple.
 For instance, if we model a term in a Hamiltonian by a tuple, then we can use deconstruction to access the different data that we need to simulate under that term:
 
 ```qsharp
 // Represents H = 3.1 X_0 Z_1.
-let (coefficient, (paulis, idxQubits)) = (3.1, ([PauliX, PauliZ], [0, 1]));
+let (_, (paulis, idxQubits)) = ((3.1, 1.0), ([PauliX, PauliZ], [0, 1])); // paulis and idxQubits are both immutable variables
+mutable ((c1, c2), _) = ((3.1, 1.0), ([PauliX, PauliZ], [0, 1])); // c1 and c2 are both mutable variables
 ```
 
-We can also use deconstruction to access the different parts of a [user-defined type](#user-defined-types):
 
-```qsharp
-newtype Quaternion = (Double, Double, Double, Double);
-let (realPart, iPart, jPart, kPart) = Quaternion(1.0, -2.0, 3.5, 0.0);
-```

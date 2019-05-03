@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.arctan
+name: ArcTan
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.math.arctan".
+syntax: 'function ArcTan (theta : Double) : Double'
+input:
+  content: '(theta : Double)'
+  types:
+  - name: theta
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+...

@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
+name: ReflectionOracleFromDeterministicStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: |-
+  Constructs reflection about a given state from an oracle.
+
+  Given the oracle $O$ of type
+  <xref:microsoft.quantum.canon.deterministicstateoracle>,
+  the result of this function is a reflection around the state $\ket{\psi}$
+  where $O\ket{0} = \ket{\psi}$.
+syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
+input:
+  content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
+  types:
+  - name: oracle
+    summary: Oracle of type "DeterministicStateOracle"
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+output:
+  content: Microsoft.Quantum.Oracles.ReflectionOracle
+  types:
+  - summary: A `ReflectionOracle` that reflects about the state $\ket{\psi}$.
+    uid: microsoft.quantum.oracles.reflectionoracle
+seeAlso:
+- microsoft.quantum.canon.deterministicstateoracle
+- microsoft.quantum.canon.reflectionoracle
+...

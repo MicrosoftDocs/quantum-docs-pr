@@ -18,12 +18,12 @@ by the implementation of a multiply controlled `X` gate:
 
 ```qsharp
 open Microsoft.Quantum.Primitive;
+open Microsoft.Quantum.Arrays;
 operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
-    body (...) {
-        using(qubits = Qubit[numberOfQubits]) {
-            Controlled X (qubits[1 .. numberOfQubits - 1], qubits[0]);
-        } 
-    }
+
+    using(qubits = Qubit[numberOfQubits]) {
+        Controlled X (Rest(qubits), Head(qubits));
+    } 
 }
 ```
 

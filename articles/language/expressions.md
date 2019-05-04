@@ -265,7 +265,7 @@ Controlled Adjoint Op(controls, targets)
 Adjoint WrappedOp!(qs)
 ```
 
-:new: A callable literal may be used as a value, say to assign to a
+A callable literal may be used as a value, say to assign to a
 variable or to pass to another callable.
 In this case, if the callable has type parameters, they must be provided
 as part of the callable value.
@@ -304,7 +304,7 @@ the correct syntax is:
 (Builder(3))(2)
 ```
 
-:new: When invoking a type-parameterized callable, the actual type parameters
+When invoking a type-parameterized callable, the actual type parameters
 may be specified within angle brackets `<` and `>` after the callable
 expression.
 This is usually unnecessary as the Q# compiler will infer the actual types.

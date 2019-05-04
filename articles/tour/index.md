@@ -9,4 +9,4 @@ ms.topic: article
 ---
 
 # Quantum computing tour
-Quantum computing is accessible now using the Q# programming language. Q# supports an extensive and growing [research in quantum computing])http://www.vcpc.univie.ac.at/~ian/hotlist/qc/research.shtml). This section includes snapshots of Q# syntax and some of the logic gates of the new paradigm.  
+Quantum computing using the Q# programming language is accessible now! Q# supports an extensive and growing [research in quantum computing])http://www.vcpc.univie.ac.at/~ian/hotlist/qc/research.shtml). This section includes snapshots of Q# syntax and some of the logic gates of the new paradigm.  

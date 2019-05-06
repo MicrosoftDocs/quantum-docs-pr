@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.tanh
+name: Tanh
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Returns the hyperbolic tangent of the specified angle.
+remarks: See [System.Math.Tanh](https://docs.microsoft.com/dotnet/api/system.math.tanh) for more details.
+syntax: 'function Tanh (d : Double) : Double'
+input:
+  content: '(d : Double)'
+  types:
+  - name: d
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+...

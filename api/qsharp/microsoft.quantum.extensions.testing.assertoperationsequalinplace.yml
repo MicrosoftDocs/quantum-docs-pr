@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
+name: AssertOperationsEqualInPlace
+type: operation
+namespace: Microsoft.Quantum.Extensions.Testing
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
+  Note that the order of the arguments to this operation has changed.
+syntax: 'operation AssertOperationsEqualInPlace (actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int) : Unit'
+input:
+  content: '(actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int)'
+  types:
+  - name: actual
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: expected
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: nQubits
+    isPrimitive: true
+    uid: Int
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

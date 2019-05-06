@@ -42,8 +42,8 @@ The Quantum Development Kit preview provides a complete development and simulati
 | Local quantum machine simulator | A full state vector simulator optimized for accurate vector simulation and speed. |
 | Quantum computer trace simulator | The trace simulator does not simulate the quantum environment like the local quantum simulator. It is used to estimate the resources required to execute a quantum program and also allow faster debugging of the non-Q# control code. |
 | Resource Estimator | The resource estimator estimates the resources required to run a given instance of a Q# operation on a quantum computer. |
-| Visual Studio extension | This extension contains templates for Q# files and projects as well as syntax highlighting. |
-| Visual Studio Code extension | This extension contains syntax highlighting and code snippets for Q#. |
+| Visual Studio extension | This extension contains templates for Q# files and projects as well as syntax highlighting and IntelliSense support. |
+| Visual Studio Code extension | This extension contains syntax highlighting, as well as code snippets for Q# and IntelliSense support. |
 | `qsharp` for Python | The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python.  
 
 

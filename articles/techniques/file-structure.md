@@ -15,9 +15,9 @@ ms.topic: article
 
 # What is Q#? #
 
-Q# is a scalable, multi-paradigm, domain-specific programming language for quantum computing. Q# is a quantum programming language in that it can be used to describe how instructions are executed on quantum machines. The machines that can be targeted include many different levels of abstraction, ranging from various simulators to actual quantum hardware. Q# is multi-paradigm in that it supports functional and imperative programming styles. Q# is scalable in that it allows to write programs to target machines of various sizes, ranging from small machines with only a few hundred qubits to large machines with millions of qubits. Even though large physical machines might only come into fruition on the future, Q# allows a programmer to program complex quantum algorithms already now. What is more, Q# allows to perform various tasks such as debugging, profiling, resource estimation, and certain special-purpose simulations in a scalable way. 
+Q# is a scalable, multi-paradigm, domain-specific programming language for quantum computing. Q# is a quantum programming language in that it can be used to describe how instructions are executed on quantum machines. The machines that can be targeted range from simulators to actual quantum hardware. Q# is scalable: it can be used to write simple demonstration programss like teleport that run on a few qubits, but also supports writing large, sophisticated programs such simulations of complex molecules that will require large machines with millions of qubits. Even though large physical machines are still in the future, Q# allows a programmer to program complex quantum algorithms now. What is more, Q# supports various tasks such as debugging, profiling, resource estimation, and certain special-purpose simulations in a scalable way. 
 
-From a technical perspective, a quantum program is a particular set of classical functions which, when called, generate quantum circuits as their side effects. An important consequence of that view is that a program written in Q# does not directly model qubits themselves, but rather describes how a classical control computer interacts with those qubits.
+From a technical perspective, a quantum program can be seen as a particular set of classical functions which, when called, generate quantum circuits as their side effects. An important consequence of that view is that a program written in Q# does not directly model qubits themselves, but rather describes how a classical control computer interacts with those qubits.
 By design, Q# thus does not define quantum states or other properties of quantum mechanics directly, but rather does so indirectly through the action of the various subroutines defined in the language.
 For instance, consider the state $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ discussed in the [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro) guide.
 To prepare this state in Q#, we use the facts that the qubits are initialized in the $\ket{0}$ state, and that $\ket{+} = H\ket{0}$, where $H$ is the Hadamard transform:
@@ -42,7 +42,7 @@ A Q# program recombines these operations as defined by a target machine to creat
 In this way, Q# makes it easy to express the logic underlying quantum and hybrid quantum-classical algorithms, while also being general with respect to the structure of a target machine or simulator.
 
 Concretely, a Q# program is comprised of one or more *operations*, one or more *functions*, and user defined types. Operations are used to describe the transformations of the state of a quantum machine and are the most basic building block of Q# programs. 
-Each operation defined in Q# may then call any number of other operations, including the built-in *primitive* operations defined by the language and implemented by each target machine.
+Each operation defined in Q# may then call any number of other operations, including the built-in *intrinsic* operations implemented by a target machine.
 When compiled, each operation is represented as a .NET class type that can be provided to target machines.
 
 In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values. Q# is a strongly typed language and comes with a set of built-in primitive types as well as support for user defined types. 
@@ -58,7 +58,7 @@ To make this available to our code, we simply `open` that namespace at the top o
 
 ```qsharp
 namespace Example {
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Intrinsic;
 
     // ...
 }

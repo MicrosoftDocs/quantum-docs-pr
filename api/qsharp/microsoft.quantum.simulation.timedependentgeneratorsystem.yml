@@ -1,0 +1,10 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.timedependentgeneratorsystem
+name: TimeDependentGeneratorSystem
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: |-
+  Represents a time-dependent dynamical generator as a function
+  from time to the value of the dynamical generator at that time.
+syntax: newtype TimeDependentGeneratorSystem = (Double -> Microsoft.Quantum.Simulation.GeneratorSystem);
+...

@@ -1,0 +1,30 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.measurement
+name: Microsoft.Quantum.Measurement
+operations:
+- uid: microsoft.quantum.measurement.measurepaulis
+  summary: |-
+    Given an array of multi-qubit Pauli operators, measures each using a specified measurement
+    gadget, then returns the array of results.
+- uid: microsoft.quantum.measurement.measurewithscratch
+  summary: |-
+    Measures the given Pauli operator using an explicit scratch
+    qubit to perform the measurement.
+- uid: microsoft.quantum.measurement.mresetx
+  summary: |-
+    Measures a single qubit in the X basis,
+    and resets it to the standard basis state
+    |0〉 following the measurement.
+- uid: microsoft.quantum.measurement.mresety
+  summary: |-
+    Measures a single qubit in the Y basis,
+    and resets it to the standard basis state
+    |0〉 following the measurement.
+- uid: microsoft.quantum.measurement.mresetz
+  summary: |-
+    Measures a single qubit in the `Z` basis,
+    and resets it to the standard basis state
+    |0〉 following the measurement.
+- uid: microsoft.quantum.measurement.multim
+  summary: Measures each qubit in a given array in the standard basis.
+...

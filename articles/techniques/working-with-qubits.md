@@ -8,11 +8,11 @@ ms.topic: article
 uid: microsoft.quantum.techniques.qubits
 ---
 
-# Working with Qubits #
+# Working with Qubits
 
 Having now seen a variety of different parts of the Q# language, let us get into the thick of it and see how to use qubits themselves.
 
-## Allocating Qubits ##
+## Allocating Qubits
 
 First, to obtain a qubit that we can use in Q#, we *allocate* qubits within a `using` block:
 
@@ -30,7 +30,7 @@ At the end of the `using` block, any qubits allocated by that block are immediat
 > Whenever possible, use unitary operations to return any allocated qubits to $\ket{0}$.
 > If need be, the @"microsoft.quantum.intrinsic.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$. Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation. 
 
-## Intrinsic Operations##
+## Intrinsic Operations
 
 Once allocated, a qubit can then be passed to functions and operations.
 In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.
@@ -83,7 +83,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 }
 ```
 
-## Measurements ##
+## Measurements of qubits
 
 Using the `Measure` operation, which is a built in intrinsic non-unitary operation, we can extract classical information from an object of type `Qubit` and assign a classical value as a result, which has a reserved type `Result`, indicating that the result is no longer a quantum state. 
 The input to `Measure` is a Pauli axis on the Bloch sphere, represented by an object of type `Pauli` (i.e., for instance `PauliX`) and an object of type `Qubit`. 
@@ -125,6 +125,7 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
+## Classical control based on measurements of qubits
 The Q# language allows dependencies of classical control flow on measurement results of qubits. This in turn enables to implement powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries. As an example, it is easy to implement so-called *Repeat-Until-Success* in Q# which are probabilistic circuits that have an *expected* low cost in terms of elementary gates, but for which the true cost depends on an actual run and an actual interleaving of various possible branchings. 
 
 To facilitate Repeat-Until-Success (RUS) patterns, Q# supports the construct

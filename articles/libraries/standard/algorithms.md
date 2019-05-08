@@ -7,13 +7,13 @@ ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
 ---
-# Quantum Algorithms #
+# Quantum Algorithms
 
-## Amplitude Amplification ##
+## Amplitude Amplification
 
 *Amplitude Amplification* is one of the fundamental tools of Quantum Computing. It is the fundamental idea that underlies Grover's search, amplitude estimation and many quantum machine learning algorithms.  There are many variants, and in Q# we provide a general version based on Oblivious Amplitude Amplification with Partial Reflections to allow for the widest area of application.
 
-The central idea behind amplitude amplification is to amplify the probability of a desired outcome occurring by performing a sequence of reflections.  These reflections rotate the initial state closer towards a desired target state, often called a marked state.  Specifically, if the probability of measuring the initial state to be in a marked state is $\sin^2(\theta)$ then after applying amplitude amplification $m$ times the probability of success becomes $\sin^2((2m+1)\theta)$.  This means that if $\theta = \pi/[2(2n+1)]$ for some value of $n$ then amplitude amplification is capable of boosting the probability of success to $100\\%$ after $n$ iterations of amplitude amplification.  Since $\theta = \sin^{-1}(\sqrt{\Pr(success)})$ this means that the number of iterations needed to obtain a success deterministically is quadratically lower than the expected number needed to find a marked state non-deterministically using random sampling.
+The central idea behind amplitude amplification is to amplify the probability of a desired outcome by performing a sequence of reflections.  These reflections rotate the initial state closer towards a desired target state, often called a marked state.  Specifically, if the probability of measuring the initial state to be in a marked state is $\sin^2(\theta)$ then after applying amplitude amplification $m$ times the probability of success becomes $\sin^2((2m+1)\theta)$.  This means that if $\theta = \pi/[2(2n+1)]$ for some value of $n$ then amplitude amplification is capable of boosting the probability of success to $100\\%$ after $n$ iterations of amplitude amplification.  Since $\theta = \sin^{-1}(\sqrt{\Pr(success)})$ this means that the number of iterations needed to obtain a success deterministically is quadratically lower than the expected number needed to find a marked state non-deterministically using random sampling.
 
 Each iteration of Amplitude amplification requires that two reflection operators be specified. Specifically, if $Q$ is the amplitude amplification iterate and $P_0$ is a projector operator onto the initial subspace and $P_1$ is the projector onto the marked subspace then $Q=-(\boldone-2P_0)(\boldone -2P_1)$.  Recall that a projector is a Hermitian operator that has eigenvalues $+1$ and $0$ and as a result $(\boldone -2P_0)$ is unitary because it has eigenvalues that are roots of unity (in this case $\pm 1$). As an example, consider the case of Grover's search with initial state $H^{\otimes n} \ket{0}$ and marked state $\ket{m}$, $P_0 = H^{\otimes n}\ket{0}\bra{0}H^{\otimes n}$ and $P_1= \ket{m}\bra{m}$.  In most applications of amplitude amplification $P_0$ will be a projector onto an initial state meaning that $P_0 = \boldone -2\ket{\psi}\bra{\psi}$ for some vector $\ket{\psi}$; however, for oblivious amplitude amplication $P_0$ will typically project onto many quantum states (i.e. the multiplicity of the $+1$ eigenvalue of $P_0$ is greater than $1$).
 
@@ -39,7 +39,7 @@ We relate the single-qubit rotation phases to the reflection operator phases as 
 
 For background, you could start from [Standard Amplitude Amplification](https://arxiv.org/abs/quant-ph/0005055) then move to an introduction to [Oblivious Amplitude Amplification](https://arxiv.org/abs/1312.1414) and finally generalizations presented in [Low and Chuang](https://arxiv.org/abs/1610.06546). A nice overview presentation of this entire area (as it relates to Hamiltonian Simulation) was given by [Dominic Berry](http://www.dominicberry.org/presentations/Durban.pdf).
 
-## Quantum Fourier Transform ##
+## Quantum Fourier Transform
 
 The Fourier transform is a fundamental tool of classical analysis and is just as important for quantum computations.
 In addition, the efficiency of the *quantum Fourier transform* (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm.
@@ -52,7 +52,7 @@ In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT
 It is known that for $k \ge \log_2(n) + \log_2(1 / \epsilon) + 3$. one can bound $\\| \operatorname{QFT} - \operatorname{AQFT} \\| < \epsilon$.
 Here $\\|\cdot\\|$ is the operator norm which in this case is the square root of the largest [eigenvalue](xref:microsoft.quantum.concepts.matrix-advanced) of $(\operatorname{QFT} - \operatorname{AQFT})(\operatorname{QFT} - \operatorname{AQFT})^\dagger$.
 
-## Arithmetic ##
+## Arithmetic
 
 Just as arithmetic plays a central role in classical computing, it is also indispensible in quantum computing.  Algorithms such as Shor's factoring algorithm, quantum simulation methods as well as many oracular algorithms rely upon coherent arithmetic operations.  Most approaches to arithmetic build upon quantum adder circuits.  The simplest adder takes a classical input $b$ and adds the value to a quantum state holding an integer $\ket{a}$.  Mathematically, the adder (which we denote $\operatorname{Add}(b)$ for classical input $b$) has the property that
 
@@ -90,7 +90,7 @@ There is a subtlety with multiplication on quantum computers that you may notice
 
 Many quantum circuits have been proposed for addition and each explores a different tradeoff in terms of the number of qubits (space) and the number of gate operations (time) required.  We review two highly space efficient adders below known as the Draper adder and the Beauregard adder.
 
-### Draper Adder ###
+### Draper Adder
 
 The Draper adder is arguably one of the most elegant quantum adders, as it directly invokes quantum properties to perform addition.  The insight behind the Draper adder is that the Fourier transform can be used to translate phase shifts into a bit shift.  It then follows that by applying a Fourier transform, applying appropriate phase shifts, and then undoing the Fourier transform you can implement an adder.  Unlike many other adders that have been proposed, the Draper adder explicitly uses quantum effects introduced through the quantum Fourier transform.  It does not have a natural classical counterpart.  The specific steps of the Draper adder are given below.
 
@@ -120,7 +120,7 @@ This means that if we perform addition by incrementing each of the tensor factor
 
 Each controlled $e^{i2\pi/k}$ gate in the circuit refers to a controlled-phase gate.  Such gates have the property that on the pair of qubits on which they act, $\ket{00}\mapsto \ket{00}$ but $\ket{11}\mapsto e^{i2\pi/k}\ket{11}$.  This circuit allows us to perform addition using no additional qubits apart from those needed to store the inputs and the outputs.
 
-### Beauregard Adder ###
+### Beauregard Adder
 
 The Beauregard adder is a quantum modular adder that uses the Draper adder in order to perform addition modulo $N$ for an arbitrary value positive integer $N$.  The significance of quantum modular adders, such as the Beauregard adder, stems to a large extent from their use in the modular exponentiation step within Shor's algorithm for factoring.  A quantum modular adder has the following action for quantum input $\ket{b}$ and classical input $a$ where $a$ and $b$ are promised to be integers mod $N$, meaning that they are in the interval $[0,\ldots, N-1]$.
 
@@ -136,7 +136,7 @@ Here the gate $\Phi\\\!\operatorname{ADD}$ takes the same form as $\phi\\\!\oper
 
 For more details, please refer to [M. Roetteler, Th. Beth](http://doi.org/10.1007/s00200-008-0072-2 ) and [D. Coppersmith](https://arxiv.org/abs/quant-ph/0201067).
 
-### Quantum Phase Estimation ###
+### Quantum Phase Estimation
 
 One particularly important application of the quantum Fourier transform is to learn the eigenvalues of unitary operators, a problem known as *phase estimation*.
 Consider a unitary $U$ and a state $\ket{\phi}$ such that $\ket{\phi}$ is an eigenstate of $U$ with unknown eigenvalue $\phi$,

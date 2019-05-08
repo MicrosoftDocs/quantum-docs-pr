@@ -14,9 +14,9 @@ ms.topic: article
 # ms.technology: tech-name-from-white-list
 ---
 
-# Error Correction #
+# Error Correction
 
-## Introduction ##
+## Introduction
 
 In classical computing, if one wants to protect a bit against errors, it can often suffice to represent that bit by a *logical bit* by repeating the data bit.
 For instance, let $\overline{0} = 000$ be the encoding of the data bit 0, where we use the a line above the label 0 to indicate that it is an encoding of a bit in the 0 state.
@@ -85,7 +85,7 @@ In this section, we describe this framework and its application to a few simple 
 > A full introduction to the stabilizer formalism is beyond the scope of this section.
 > We refer readers interested in learning more to [Gottesman 2009](https://arxiv.org/abs/0904.2557).
 
-## Representing Error Correcting Codes in Q# ##
+## Representing Error Correcting Codes in Q#
 
 To help specify error correcting codes, the Q# canon provides several distinct user-defined types:
 

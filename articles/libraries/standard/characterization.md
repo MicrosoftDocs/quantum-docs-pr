@@ -9,7 +9,7 @@ ms.topic: article
 ---
 
 
-# Quantum Characterization and Statistics #
+# Quantum Characterization and Statistics
 
 It is critical to be able to characterize the effects of operations in order to develop useful quantum algorithms.
 This is challenging because every measurement of a quantum system yields at most one bit of information.
@@ -23,7 +23,7 @@ The aim here is less to learn classical information about the system, rather tha
 These libraries must therefore blend both classical and quantum information processing.
 
 
-## Iterative Phase Estimation ##
+## Iterative Phase Estimation
 
 Viewing quantum programming in terms of quantum characterization suggests a useful alternative to quantum phase estimation.
 That is, instead of preparing an $n$-qubit register to contain a binary representation of the phase as in quantum phase estimation, we can view phase estimation as the process by which a *classical* agent learns properties of a quantum system through measurements.
@@ -45,7 +45,7 @@ At this point, reconstructing the phase from the `Result` values obtained throug
 Finding the value of $m$ that maximizes the information gained, given a fixed inference method, is simply a problem in statistics.
 We emphasize this by briefly describing iterative phase estimation at a theoretical level in the Bayesian parameter estimation formalism before proceeding to describe the statistical algorithms provided in the Q# canon for solving this classical inference problem.
 
-### Iterative Phase Estimation Without Eigenstates ###
+### Iterative Phase Estimation Without Eigenstates
 
 If an input state is provided that is not an eigenstate, which is to say that if $U(m)\ket{\phi\_j} = e^{im\phi\_j}$ then the process of phase estimation non-deterministically guides the quantum state towards a single energy eigenstate.  The eigenstate it ultimately converges to is the eigenstate that is most likely to produce the observed `Result`.
 
@@ -70,7 +70,7 @@ Learning these three things is often exponentially hard on a classical computer.
 The utility of phase estimation arises, to no small extent, from the fact that it can perform such a quantum learning task without knowing any of them.
 Phase estimation for this reason appears within a number of quantum algorithms that provide exponential speedups.
 
-### Bayesian Phase Estimation ###
+### Bayesian Phase Estimation
 
 > [!TIP]
 > For more details on Bayesian phase estimation in practice, please see the [**PhaseEstimation**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation) sample.
@@ -120,9 +120,9 @@ The prior distribution $\Pr(x)$ has support over $2^n$ hypothetical values of $x
 This means that if we need a highly accurate estimate of $x$ then Bayesian phase estimation may need prohibitive memory and processing time.
 While for some applications, such as quantum simulation, the limitted accuracy required does not preclude such methods other applications,
 such as Shor's algorithm, cannot use exact Bayesian inference within its phase estimation step.  For this reason, we also provide implementations
-for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) and also non-Bayesian approaches such as [robust phase estimation](xref:microsoft.quantum.characterization.robustphaseestimation).
+for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) and also non-Bayesian approaches such as <xref:microsoft.quantum.characterization.robustphaseestimation>.
 
-### Robust Phase Estimation ###
+### Robust Phase Estimation
 
 A maximum *a posteriori* Bayesian reconstruction of a phase estimate from measurement results is exponentially hard in the worst-case. Thus most practical phase estimation algorithms sacrifice some quality in the reconstruction, in exchange for an amount of classical post-processing that instead scales polynomially with the number of measurements made.
 
@@ -136,13 +136,13 @@ $$
 $$
 where the lower bound is reached in the limit of asymptotically large $Q$, and the upper bound is guaranteed even for small sample sizes.  Note that $n$ selected by the `bitsPrecision` input, which implicitly defines $Q$.
 
-Other relevant details include, say, the small space overhead of just $1$ ancilla qubit, or that the procedure is non-adaptive, meaning the required sequence of quantum experiments is independent of the intermediate measurement outcomes. In this and forthcoming examples where the choice of phase estimation algorithm is important, one should one should refer to the documentation such as @"microsoft.quantum.canon.robustphaseestimation" and the referenced publications therein for more information and for their the implementation.
+Other relevant details include, say, the small space overhead of just $1$ ancilla qubit, or that the procedure is non-adaptive, meaning the required sequence of quantum experiments is independent of the intermediate measurement outcomes. In this and forthcoming examples where the choice of phase estimation algorithm is important, one should one should refer to the documentation such as <xref:microsoft.quantum.characterization.robustphaseestimation> and the referenced publications therein for more information and for their the implementation.
 
 > [!TIP]
 > There are many samples where robust phase estimation is used. For phase estimation in extracting the ground state energy of various physical system, please see the [**H2 simulation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine), the [**SimpleIsing** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing), and the [**Hubbard model** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/HubbardSimulation).
 
 
-### Continuous Oracles ###
+### Continuous Oracles
 
 We can also generalize from the oracle model used above to allow for continuous-time oracles, modeled by the canon type <xref:microsoft.quantum.oracles.continuousoracle>.
 Consider that instead of a single unitary operator $U$, we have a family of unitary operators $U(t)$ for $t \in \mathbb{R}$ such that $U(t) U(s)$ = $U(t + s)$.
@@ -160,7 +160,7 @@ $$
 Moreover, if $U$ is a simulation of a dynamical generator, as is the case for [Hamiltonian simulation](xref:microsoft.quantum.libraries.applications#hamiltonian-simulation), we interpret $\phi$ as an energy.
 Thus, using phase estimation with continuous queries allows us to learn the simulated [energy spectrum of molecules](https://arxiv.org/abs/quant-ph/0604193), [materials](https://arxiv.org/abs/1510.03859) or [field theories](https://arxiv.org/abs/1111.3633v2) without having to compromise our choice of experiments by requiring $t$ to be an integer.
 
-### Random Walk Phase Estimation ###
+### Random Walk Phase Estimation
 
 Q# provides a useful approximation of Bayesian phase estimation designed for use close to quantum devices that operates by conditioning a random walk on the data record obtained from iterative phase estimation.
 This method is both adaptive and entirely deterministic, allowing for near-optimal scaling of errors in the estimated phase $\hat{\phi}$ with very low memory overheads.
@@ -174,7 +174,7 @@ It recovers from failure by performing experiments to test whether the current m
 If they are not, then the algorithm does an inverse step of the walk and the process continues.
 The ability to step backwards also allows the algorithm to learn even if the initial prior standard deviation is inapropriately small.
 
-## Calling Phase Estimation Algorithms ##
+## Calling Phase Estimation Algorithms
 
 Each phase estimation operation provided with the Q# canon takes a different set of inputs parameterizing the quality that we demand out of the final estimate $\hat{\phi}$.
 These various inputs, however, all share several inputs in common, such that partial application over the quality parameters results in a common signature.

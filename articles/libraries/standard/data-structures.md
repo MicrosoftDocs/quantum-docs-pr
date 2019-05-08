@@ -8,16 +8,16 @@ ms.date: 12/11/2017
 ms.topic: article
 ---
 
-# Data Structures and Modeling #
+# Data Structures and Modeling
 
-## Classical Data Structures ##
+## Classical Data Structures
 
 Along with user-defined types for representing quantum concepts, the canon also provides operations, functions, and types for working with classical data used in the control of quantum systems.
 For instance, the <xref:microsoft.quantum.arrays.reversed> function takes an array as input and returns the same array in reverse order.
 This can then be used on an array of type `Qubit[]` to avoid having to apply unnecessary $\operatorname{SWAP}$ gates when converting between quantum representations of integers.
 Similarly, we saw in the previous section that types of the form `(Int, Int -> T)` can be useful for representing random access collections, so the <xref:microsoft.quantum.arrays.lookupfunction> function provides a convienent way of constructing such types from array types.
 
-### Pairs ###
+### Pairs
 
 The canon supports functional-style notation for pairs, complementing accessing tuples by deconstruction:
 
@@ -26,7 +26,7 @@ let pair = (PauliZ, register); // type (Pauli, Qubit[])
 ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ```
 
-### Arrays ###
+### Arrays
 
 The canon provides several functions for manipulating arrays.
 These functions are type-parameterized, and thus can be used with arrays of any Q# type.
@@ -61,7 +61,7 @@ ApplyToEach(
 );
 ```
 
-## Oracles ##
+## Oracles
 
 In the [phase estimation](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) and [amplitude amplification](https://en.wikipedia.org/wiki/Amplitude_amplification) literature the concept of an oracle appears frequently.
 Here the term oracle refers to a blackbox quantum subroutine that acts upon a set of qubits and returns the answer as a phase.
@@ -74,7 +74,7 @@ Such oracles appear in a number of different contexts, including famous examples
 Here we focus on the oracles needed for just two applications: amplitude amplification and phase estimation.
 We will first discuss amplitude amplification oracles before proceding to phase estimation.
 
-### Amplitude Amplification Oracles ###
+### Amplitude Amplification Oracles
 
 The amplitude amplification algorithm aims to perform a rotation between an initial state and a final state by applying a sequence of reflections of the state.
 In order for the algorithm to function, it needs a specification of both of these states.
@@ -142,7 +142,7 @@ is Adj + Ctl {
 
 We can then combine these two oracles together to rotate between the two states and deterministically transform $\ket{+}^{\otimes n}$ to $\ket{0}$ using a number of layers of Hadamard gates that is proportional to $\sqrt{2^n}$ (ie $m\propto \sqrt{2^n}$) versus the roughly $2^n$ layers that would be needed to non-deterministically prepare the $\ket{0}$ state by preparing and measuring the initial state until the outcome $0$ is observed.
 
-### Phase Estimation Oracles ###
+### Phase Estimation Oracles
 
 For phase estimation the oracles are somewhat more natural.
 The aim in phase estimation is to design a subroutine that is capable of sampling from the eigenvalues of a unitary matrix.
@@ -194,7 +194,7 @@ Such a continuous model also has the property that frequencies greater than $2\p
 Thus for problems such as this continuous query models for the phase estimation oracle are not only appropriate but are also preferable to the discrete query model.
 For this reason Q# has functionality for both forms of queries and leave it to the user to decide upon a phase estimation algorithm to fit their needs and the type of oracle that is available.
 
-## Dynamical Generator Modeling ##
+## Dynamical Generator Modeling
 
 Generators of time-evolution describe how states evolve through time. For instance, the dynamics of a quantum state $\ket{\psi}$ is governed by the Schrödinger equation
 $$
@@ -235,7 +235,7 @@ The dynamical generator modeling library provides a framework for systematically
 > For an example based on the Ising model, please see the [**IsingGenerators** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingGenerators).
 > For an example based on molecular Hydrogen, please see the [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) and [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationGUI) samples.
 
-### Complete Description of a Generator ###
+### Complete Description of a Generator
 
 At the top level, a complete description of a Hamiltonian is contained in the `EvolutionGenerator` user-defined type which has two components.:
 
@@ -259,7 +259,7 @@ This is resolved by specifying an `EvolutionSet` user-defined type that maps any
 newtype EvolutionSet = (GeneratorIndex -> EvolutionUnitary);
 ```
 
-### Pauli Operator Generators ###
+### Pauli Operator Generators
 
 A concrete and useful example of generators are Hamiltonians that are a sum of Pauli operators, each possibly with a different coefficient.
 $$
@@ -287,7 +287,7 @@ newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 
 The first parameter represents a time-duration, that will be multiplied by the coefficient in the `GeneratorIndex`, of unitary evolution. The second parameter is the qubit register the unitary acts on. 
 
-### Time-Dependent Generators ###
+### Time-Dependent Generators
 
 In many cases, we are also interested in modelling time-dependent generators, as might occur in the Schrödinger equation
 $$

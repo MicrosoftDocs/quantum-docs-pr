@@ -14,7 +14,7 @@ ms.topic: article
 # ms.technology: tech-name-from-white-list
 ---
 
-# Higher-Order Control Flow #
+# Higher-Order Control Flow
 
 One of the primary roles of the standard library is to make it easier to express high-level algorithmic ideas as [quantum programs](https://en.wikipedia.org/wiki/Quantum_programming).
 Thus, the Q# canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.
@@ -44,7 +44,7 @@ ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 
 In the rest of this section, we will provide a number of examples of how to use the various flow control operations and functions provided by the canon to compactly express quantum programs.
 
-## Applying Operations and Functions over Arrays and Ranges ##
+## Applying Operations and Functions over Arrays and Ranges
 
 One of the primary abstractions provided by the canon is that of iteration.
 For instance, consider a unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.
@@ -103,7 +103,7 @@ function Sum(xs : Int[]) {
 
 Similarly, functions like <xref:microsoft.quantum.canon.mapped> and <xref:microsoft.quantum.canon.mappedbyindex> can be used to express functional programming concepts in Q#.
 
-## Composing Operations and Functions ##
+## Composing Operations and Functions
 
 The control flow constructs offered by the canon take operations and functions as their inputs, such that it is helpful to be able to compose several operations or functions into a single callable.
 For instance, the pattern $UVU^{\dagger}$ is extremely common in quantum programming, such that the canon provides the operation <xref:microsoft.quantum.canon.applywith> as an abstraction for this pattern.
@@ -150,7 +150,7 @@ Combining with iteration patterns can make this especially useful:
 ApplyWith(ApplyToEach(Bind([H, X]), _), QFT, _);
 ```
 
-### Time-Ordered Composition ###
+### Time-Ordered Composition
 
 We can go still further by thinking of flow control in terms of partial application and classical functions, and can model even fairly sophisticated quantum concepts in terms of classical flow control.
 This analogy is made precise by the recognition that unitary operators correspond exactly to the side effects of calling operations, such that any decomposition of unitary operators in terms of other unitary operators corresponds to constructing a particular calling sequence for classical subroutines which emit instructions to act as particular unitary operators.
@@ -188,7 +188,7 @@ DecomposeIntoTimeStepsCA((2, U), 1);
 
 The signature of `DecomposeIntoTimeStepsCA` follows a common pattern in Q#, where collections that may be backed either by arrays or by something which compute elements on the fly are represented by tuples whose first elements are `Int` values indicating their lengths.
 
-## Putting it Together: Controlling Operations ##
+## Putting it Together: Controlling Operations
 
 Finally, the canon builds on the `Controlled` functor by providing additional ways to condition quantum operations.
 It is common, especially in quantum arithmetic, to condition operations on computational basis states other than $\ket{0\cdots 0}$.

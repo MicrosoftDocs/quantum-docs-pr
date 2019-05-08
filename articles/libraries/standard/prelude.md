@@ -30,12 +30,12 @@ Where possible, the operations defined in the prelude which act on qubits allow 
 Many of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.intrinsic" namespace, such that most Q# source files will have an `open Microsoft.Quantum.Intrinsic;` directive immediately following the initial namespace declaration.
 The <xref:microsoft.quantum.core> namespace is automatically opened, so that functions such as <xref:microsoft.quantum.core.length> can be used without an `open` statement at all.
 
-### Common Single-Qubit Unitary Operations ###
+## Common Single-Qubit Unitary Operations
 
 The prelude also defines many common [single-qubit operations](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 All of these operations allow both the `Controlled` and `Adjoint` functors.
 
-#### Pauli Operators ####
+### Pauli Operators
 
 The <xref:microsoft.quantum.intrinsic.x> operation implements the Pauli $X$ operator.
 This is sometimes also known as the `NOT` gate.
@@ -85,7 +85,7 @@ This can be visualised on the Bloch sphere:
 
 ![XX = I](~/media/prelude_blochIdentity.png)
 
-#### Other Single-Qubit Cliffords ####
+### Other Single-Qubit Cliffords
 
 The <xref:microsoft.quantum.intrinsic.h> operation implements the Hadamard gate.
 This interchanges the Pauli $X$ and $Z$ axes of the target qubit, such that $H\ket{0} = \ket{+} \mathrel{:=} (\ket{0} + \ket{1}) / \sqrt{2}$ and $H\ket{+} = \ket{0}$.
@@ -117,7 +117,7 @@ and corresponds to the single-qubit unitary:
     \end{bmatrix}
 \end{equation}
 
-#### Rotations ####
+### Rotations
 
 In addition to the Pauli and Clifford operations above, the Q# prelude provides a variety of ways of expressing rotations.
 As described in [single-qubit operations](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), the ability to rotate is critical to quantum algorithms.
@@ -190,7 +190,7 @@ An example of a rotation operation (around the Pauli $Z$ axis, in this instance)
 
 ![Rotation operation mapped onto the Bloch sphere](~/media/prelude_rotationBloch.png)
 
-#### Multi-Qubit Operations ####
+### Multi-Qubit Operations
 
 In addition to the single-qubit operations above, the prelude also defines several multi-qubit operations.
 
@@ -248,7 +248,7 @@ It has signature `((Pauli[], Int, Int, Qubit[]) => Unit is Adj + Ctl)`.
 > Exponentials of the tensor product of Pauli operators are not the same as tensor products of the exponentials of Pauli operators.
 > That is, $e^{i (Z \otimes Z) \phi} \ne e^{i Z \phi} \otimes e^{i Z \phi}$.
 
-### Measurements ###
+## Measurements
 
 When measuring, the +1 eigenvalue of the operator being measured corresponds to a `Zero` result, and the -1 eigenvalue to a `One` result.
 
@@ -299,7 +299,7 @@ The implementation provided by the Quantum Development Kit uses the classical .N
 While this does not present a problem for a local simulator, this can be a performance issue when using a remote simulator or actual hardware as a target machine.
 That said, an individual target machine may mitigate this performance impact by overriding these operations with versions that are more efficient for that particular system.
 
-### Math ###
+## Math
 
 The <xref:microsoft.quantum.extensions.math> namespace provides many useful functions from the .NET base class library's [`System.Math` class](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1).
 These functions can be used in the same manner as any other Q# functions:
@@ -318,7 +318,7 @@ let y = AbsD(-PI()); // y : Double = 3.1415...
 ```
 
 
-### Bitwise Operations ###
+## Bitwise Operations
 
 Finally, the <xref:microsoft.quantum.extensions.bitwise> namespace provides several useful functions for manipulating integers through bitwise operators.
 For instance, <xref:microsoft.quantum.extensions.bitwise.parity> returns the bitwise parity of an integer as another integer.

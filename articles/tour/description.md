@@ -10,9 +10,9 @@ ms.topic: article
 
 # Q# syntax and logic gates
 
-The following code shows a Q# operation.  The term `operation` is applied to Q# code blocks that resemble functions in C#. Parameters of the operation are listed by name and type. The name `qs` refers to an array of quibits. The parameter `oracle` is like a pointer to function. Following the colon, the `Adjoint` keyword specifies autogeneration of code that reverses the effect of the operation.  The return value in this case is void according to the `Unit` keyword.
+The following code shows a Q# operation.  The term `operation` is applied to Q# code blocks that resemble functions in C#. Parameters of the operation are listed by name and type. In this example the name `qs` refers to an array of quibits. The parameter `oracle` is like a pointer to function. Following the colon, the `Adjoint` keyword specifies autogeneration of code that reverses the effect of the operation.  The return value in this case is void according to the `Unit` keyword.
 
-The body of the operation includes a `for` loop similar to C# syntax.  The logic gate `H` sets a quibit to one of the nonbinary probability states.
+The body of the operation includes a `for` loop similar to C# syntax.  The logic gate `H` sets a quibit to one of the nonbinary probability states, where the result depends on the starting value of the quibit.
 
 ````
 operation ApproximateQFT (a: Int, qs: BigEndian, oracle: (BigEndian => Unit) : Adjoint) : Unit {

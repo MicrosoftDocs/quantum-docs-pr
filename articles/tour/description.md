@@ -10,7 +10,7 @@ ms.topic: article
 
 # Q# syntax and logic gates
 
-The following code shows a Q# operation.  The term `operation` is applied to Q# code blocks that resemble functions in C#. Parameters of the operation are listed by name and type. In this example the name `qs` refers to an array of quibits. The parameter `oracle` is like a pointer to function. Following the colon, the `Adjoint` keyword specifies autogeneration of code that reverses the effect of the operation.  The return value in this case is void according to the `Unit` keyword.
+The following code shows a Q# operation.  The term `operation` is applied to Q# code blocks that resemble functions in C#. Parameters of the operation are listed by name and type. In this example the name `qs` refers to a data structure that is an array of quibits. The parameter `oracle` is like a pointer to function. Following the colon, the `Adjoint` keyword specifies autogeneration of code that reverses the effect of the operation.  The return value in this case is void according to the `Unit` keyword.
 
 The body of the operation includes a `for` loop similar to C# syntax.  The logic gate `H` sets a quibit to one of the nonbinary probability states, where the result depends on the starting value of the quibit.
 
@@ -41,13 +41,10 @@ operation ApproximateQFT (a: Int, qs: BigEndian, oracle: (BigEndian => Unit) : A
 Q# is a strongly typed language.  Q# supports design of generic classes and methods that defer the specification of one or more types until the class or method is declared and instantiated by client code.
 
 ## Functonal programming concepts
-Q# uses concepts from functional programming.
+Q# uses concepts from functional programming.  Q# operations and functions are first-class objects.  Functions can be used as arguments to other functions, returned as values, assigned to variables, or stored in data structures.
 
 ### Immutable or mutable
-Objects declared in Q# are immutable by default.  In the statement `let nQubits = Length(qs!);` from the previous example, the `let` keyword creates an immutable array of quibits.  To declare a variable that can be changed, use the `mutable` keyword.  Immutablity is useful in autogeneration of adjoint operations that reverse the results of an operation.
-
-### First class functions
-Q# operations and functions are first-class objects.  Functions can be used as arguments to other functions, returned as values, assigned to variables, or stored in data structures.
+Objects declared in Q# are immutable by default.  In the statement `let nQubits = Length(qs!);` from the previous example, the `let` keyword assigns the length of an array of quibits to `nQubits` but the object cannot be modified after assignment.  To declare a variable that can be changed, use the `mutable` keyword.  Immutablity is useful for other features of the Q# language, such as autogeneration of an adjoint operation that reverses the results of an operation.
 
 ### Partial application
 Q# operations and functions can be called without supplying all the parameters of their declarations.  The object returned from a partially applied function can be called again, which will apply a new parameter value to the previous result.  For example, the following code adds 1 + 2 to output 3.

@@ -1,0 +1,4 @@
+- name: Installation and validation
+  href: installation.md
+- name: Using quantum numerics
+  href: numerics.md

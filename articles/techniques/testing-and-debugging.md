@@ -197,7 +197,7 @@ using (register = Qubit())
 
 On physical quantum hardware, where the no-cloning theorem prevents examination of quantum state, the `Assert` and `AssertProb` operations simply return `()` with no other effect.
 
-The <xref:microsoft.quantum.extensions> namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. 
+The <xref:microsoft.quantum.diagnostics> namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. 
 
 ## Dump Functions
 

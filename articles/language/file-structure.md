@@ -49,7 +49,7 @@ Declarations may appear in any order in a namespace declaration.
 References to types or callables declared further down in a file are resolved properly;
 there is no need for the type, operation, or function declaration to precede a reference to it.
 
-## Open Directives
+## Open Directives ##
 
 Within a namespace block, the `open` directive may be used to 
 import all types and callables defined in a certain namespace and refer to them by their unqualified name. 

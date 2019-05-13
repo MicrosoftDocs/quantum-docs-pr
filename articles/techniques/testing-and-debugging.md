@@ -180,7 +180,7 @@ Here, the keyword `fail` indicates that the computation should not proceed, rais
 By definition, a failure of this kind cannot be observed from within Q#, as no further Q# code is run after a `fail` statement is reached.
 Thus, if we proceed past a call to `AssertPositive`, we can be assured by that its input was positive.
 
-Building on these ideas, [the prelude](xref:microsoft.quantum.libraries.standard.prelude) offers two especially useful assertions, @"microsoft.quantum.primitive.assert" and @"microsoft.quantum.primitive.assertprob" both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is to be performed, and a hypothetical outcome.
+Building on these ideas, [the prelude](xref:microsoft.quantum.libraries.standard.prelude) offers two especially useful assertions, <xref:microsoft.quantum.intrinsic.assert> and <xref:microsoft.quantum.intrinsic.assertprob> both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is to be performed, and a hypothetical outcome.
 On target machines which work by simulation, we are not bound by [the no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), and can perform such measurements without disturbing the register passed to such assertions.
 A simulator can then, similar to the `AssertPositive` function above, abort computation if the hypothetical outcome would not be observed in practice:
 
@@ -197,11 +197,11 @@ using (register = Qubit())
 
 On physical quantum hardware, where the no-cloning theorem prevents examination of quantum state, the `Assert` and `AssertProb` operations simply return `()` with no other effect.
 
-The <xref:microsoft.quantum.canon> namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. They are detailed in [Q# standard libraries: Testing and Debugging](xref:microsoft.quantum.libraries.standard.testing) section.
+The <xref:microsoft.quantum.extensions> namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. 
 
 ## Dump Functions
 
-To help troubleshooting quantum programs, [the prelude](xref:microsoft.quantum.libraries.standard.prelude) offers two functions that can dump into a file the current status of the target machine: @"microsoft.quantum.extensions.diagnostics.dumpmachine" and @"microsoft.quantum.extensions.diagnostics.dumpregister". The generated output of each depends on the target machine.
+To help troubleshooting quantum programs, the <xref:microsoft.quantum.diagnostics>) namespace offers two functions that can dump into a file the current status of the target machine: <xref:microsoft.quantum.diagnostics.dumpmachine> and <xref:microsoft.quantum.diagnostics.dumpregister>. The generated output of each depends on the target machine.
 
 ### DumpMachine
 
@@ -256,7 +256,7 @@ Notice how the IDs of the qubits are shown at the top in their significant order
 ***
 
 
-@"microsoft.quantum.extensions.diagnostics.dumpmachine" is part of the  <xref:microsoft.quantum.extensions.diagnostics> namespace, so in order to use it you must add an `open` statement:
+@"microsoft.quantum.extensions.diagnostics.dumpmachine" is part of the  <xref:microsoft.quantum.diagnostics> namespace, so in order to use it you must add an `open` statement:
 
 ```qsharp
 namespace Samples

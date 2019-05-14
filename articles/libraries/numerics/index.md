@@ -3,7 +3,7 @@ title: Introduction to the Quantum Numerics Package | Microsoft Docs
 description: Introduction to the Quantum Numerics Package
 author: thomashaener
 ms.author: thhaner
-ms.date: 3/29/2019
+ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
 ---
@@ -17,10 +17,11 @@ To run Shor's algorithm on an actual quantum computer, this function has to be w
 Using the binary representation of $x$ with $x_i$ denoting the $i$-th bit counting from the least-significant bit, $f(x)$ can be written as $f(x) = a^{\sum_{i=0}^{2n-1} x_i 2^i} \operatorname{mod} N$.
 In turn, this can be written as a product (mod N) of terms $a^{2^i x_i}=(a^{2^i})^{x_i}$. The function $f(x)$ can thus be implemented using a sequence of $2n$ (modular) multiplications by $a^{2^i}$ conditional on $x_i$ being nonzero. The constants $a^{2^i}$ can be precomputed and reduced modulo N before running the algorithm.
 
-Similarly, this sequence of controlled modular multiplications can be written: Each such multiplication can be performed using a sequence of $n$ controlled modular additions; and each modular addition can be built from a regular addition and a comparator.
+This sequence of controlled modular multiplications can be simplified further: Each multiplication can be performed using a sequence of $n$ controlled modular additions; and each modular addition can be built from a regular addition and a comparator.
 
 
-Given that so many steps are necessary to arrive at an actual implementation, it would be extremely helpful to have such functionality available from the start. This is why we decided to add support for a wide range of numerics functionality to the QDK.
+Given that so many steps are necessary to arrive at an actual implementation, it would be extremely helpful to have such functionality available from the start.
+This is why the QDK provides support for a wide range of numerics functionality.
 
 
 # Functionality

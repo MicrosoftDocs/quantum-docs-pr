@@ -3,7 +3,7 @@ title: Numerics Library Examples | Microsoft Docs
 description: Numerics Library Examples
 author: thomashaener
 ms.author: thhaner
-ms.date: 3/29/2019
+ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.concepts.examples
 ---
@@ -25,6 +25,17 @@ All of these components can be accessed using a single `open` statement:
 ```qsharp
 open Microsoft.Quantum.Arithmetic
 ```
+
+## Types
+
+The Numerics library supports the following types
+
+1. **`LittleEndian`**: A qubit array `qArr : Qubit[]` that represents an integer where `qArr[0]` denotes the least significant
+bit.
+1. **`SignedLittleEndian`**: Same as `LittleEndian` except that it represents a signed integer stored in two's complement.
+1. **`FixedPoint`**: Represents a real number consisting of a qubit array `qArr2 : Qubit[]` and a
+binary point position `pos`, which counts the number of binary digits to the left of the binary point. `qArr2` is stored
+in the same way as `SignedLittleEndian`.
 
 ## Sample: Integer addition
 

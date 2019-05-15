@@ -30,7 +30,7 @@ $$
 \begin{bmatrix} 0 \\\\  1 \end{bmatrix} = |1\rangle.
 $$
 
-## Hadamard gate notation
+### Example: representing the Hadamard operation with Dirac notation
 The following notation is often used to describe the states that result from applying the Hadamard gate to $|0\rangle$ and $|1\rangle$ (which correspond to the unit vectors in the $+x$ and $-x$ directions on the Bloch sphere):
 
 $$

@@ -42,7 +42,10 @@
     "globalMetadata": {
       "show_latex": true,
       "ms.prod": "quantum",
-      "searchScope": ["quantum", "q#", "qsharp"]
+      "searchScope": ["quantum", "q#", "qsharp"],
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/quantum-docs-pr",
+      "feedback_product_url": "https://github.com/Microsoft/quantum/issues"
     },
     "fileMetadata": {
       "latex_macros": {

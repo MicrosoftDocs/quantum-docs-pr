@@ -67,7 +67,7 @@ O \ket{\psi} & = O \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) \k
 \end{align}
 $$
 
-## Oracle by applying a phase based on input
+## Phase oracles
 Alternatively, we can encode $f$ into an oracle $O$ by applying a _phase_ based on the input to $O$.
 For instance, we might define $O$ such that
 $$

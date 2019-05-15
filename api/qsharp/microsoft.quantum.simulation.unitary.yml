@@ -1,0 +1,8 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.unitary
+name: Unitary
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: Represents evolution under a unitary operator.
+syntax: newtype Unitary = (Qubit[] => Unit is Adj + Ctl);
+...

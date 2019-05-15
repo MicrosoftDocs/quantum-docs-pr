@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.map
+name: Map
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"Microsoft.Quantum.Arrays.Mapped" instead.
+syntax: "function Map (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
+input:
+  content: "(mapper : ('T -> 'U), array : 'T[])"
+  types:
+  - name: mapper
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: array
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'U[]"
+  types:
+  - isArray: true
+    uid: "'U"
+    isLocal: true
+...

@@ -105,7 +105,7 @@ The following is the list of metrics estimated by the `ResourcesEstimator`:
 * __Measure__:  The count of any measurements executed.
 * __R__: The count of any single qubit rotations executed, excluding T, Clifford and Pauli gates.
 * __T__: The count of T gates and their conjugates, including the T gate, T_x = H.T.H, and T_y = Hy.T.Hy, executed.
-* __Depth__: Depth of the quantum circuit executed by the Q# operation.
+* __Depth__: Depth of the quantum circuit executed by the Q# operation. By default, only T gates are counted in the depth, see [depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) for details.
 * __Width__: Maximum number of qubits allocated during the execution of the Q# operation.
 * __BorrowedWidth__: Maximum number of qubits borrowed inside the Q# operation.
 
@@ -118,22 +118,20 @@ of the Q# program. The following example illustrates this:
 
 ```qsharp
 operation Teleportation (source : Qubit, target : Qubit) : Unit {
-    body (...) {
-        using (ancillaRegister = Qubit[1]) {
-            let ancilla = ancillaRegister[0];
 
-            H(ancilla);
-            CNOT(ancilla, target);
+    using (ancilla = Qubit()) {
 
-            CNOT(source, ancilla);
-            H(source);
+        H(ancilla);
+        CNOT(ancilla, target);
 
-            AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-            AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        CNOT(source, ancilla);
+        H(source);
 
-            if (M(source) == One)  { Z(target); X(source); }
-            if (M(ancilla) == One) { X(target); X(ancilla); }
-        }
+        AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+
+        if (M(source) == One)  { Z(target); X(source); }
+        if (M(ancilla) == One) { X(target); X(ancilla); }
     }
 }
 ```

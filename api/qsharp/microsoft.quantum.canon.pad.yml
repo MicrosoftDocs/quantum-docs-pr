@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.pad
+name: Pad
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"Microsoft.Quantum.Arrays.Padded" instead.
+syntax: "function Pad (nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[]) : 'T[]"
+input:
+  content: "(nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[])"
+  types:
+  - name: nElementsTotal
+    isPrimitive: true
+    uid: Int
+  - name: defaultElement
+    uid: "'T"
+    isLocal: true
+  - name: inputArray
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - isArray: true
+    uid: "'T"
+    isLocal: true
+...

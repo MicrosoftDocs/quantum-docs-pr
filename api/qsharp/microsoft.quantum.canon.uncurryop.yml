@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.uncurryop
+name: UncurryOp
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.canon.uncurriedop".
+syntax: "function UncurryOp (curriedOp : ('T -> ('U => Unit))) : (('T, 'U) => Unit)"
+input:
+  content: "(curriedOp : ('T -> ('U => Unit)))"
+  types:
+  - name: curriedOp
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+output:
+  content: (('T, 'U) => Unit)
+  types:
+  - isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+...

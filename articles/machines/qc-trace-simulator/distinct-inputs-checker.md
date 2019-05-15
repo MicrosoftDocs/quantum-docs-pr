@@ -17,11 +17,10 @@ potential bugs in the code. Consider the following piece of Q# code to
 illustrate the issues detected by this package:
 
 ```qsharp
-operation DoBoth( q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => Unit)) : Unit {
-    body (...) {
-        op1(q1);
-        op2(q2);
-    }
+operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => Unit)) : Unit {
+
+    op1(q1);
+    op2(q2);
 }
 ```
 
@@ -32,12 +31,11 @@ example, where this operation is used:
 
 ```qsharp
 operation DisctinctQubitCaptured2Test () : Unit {
-    body (...) {
-        using( q = Qubit[3] ) {
-            let op1 = CNOT(_, q[1]);
-            let op2 = CNOT(q[1], _);
-            DoBoth(q[0], q[2], op1, op2);
-        }
+
+    using (q = Qubit[3]) {
+        let op1 = CNOT(_, q[1]);
+        let op2 = CNOT(q[1], _);
+        DoBoth(q[0], q[2], op1, op2);
     }
 }
 ```

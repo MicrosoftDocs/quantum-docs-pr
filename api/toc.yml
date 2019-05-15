@@ -1,14 +1,5 @@
 - name: Q# library reference
-  href: index.md
-  items:
-  - name: Prelude
-    href: prelude/toc.yml
-  - name: Canon
-    href: canon/toc.yml
-  - name: Research Libraries
-    href: research/toc.yml
-  - name: Chemistry Library
-    href: chemistry/toc.yml
+  href: qsharp/toc.yml
 - name: C# components reference
   items:
   - name: Trace simulator 

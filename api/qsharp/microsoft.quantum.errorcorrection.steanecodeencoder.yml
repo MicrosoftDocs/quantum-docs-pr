@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.steanecodeencoder
+name: SteaneCodeEncoder
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
+syntax: 'operation SteaneCodeEncoder (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
+input:
+  content: '(physRegister : Qubit[], auxQubits : Qubit[])'
+  types:
+  - name: physRegister
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: auxQubits
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
+  types:
+  - uid: microsoft.quantum.errorcorrection.logicalregister
+...

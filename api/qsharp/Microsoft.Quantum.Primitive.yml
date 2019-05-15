@@ -1,0 +1,146 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.primitive
+name: Microsoft.Quantum.Primitive
+functions:
+- uid: microsoft.quantum.primitive.message
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.message".
+operations:
+- uid: microsoft.quantum.primitive.assert
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.assert".
+- uid: microsoft.quantum.primitive.assertprob
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.assertprob".
+- uid: microsoft.quantum.primitive.ccnot
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.ccnot".
+- uid: microsoft.quantum.primitive.cnot
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.cnot".
+- uid: microsoft.quantum.primitive.exp
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.exp".
+- uid: microsoft.quantum.primitive.expfrac
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.expfrac".
+- uid: microsoft.quantum.primitive.h
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.h".
+- uid: microsoft.quantum.primitive.i
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.i".
+- uid: microsoft.quantum.primitive.m
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.m".
+- uid: microsoft.quantum.primitive.measure
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.measure".
+- uid: microsoft.quantum.primitive.multix
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.canon.applytoeachca".
+- uid: microsoft.quantum.primitive.r
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.r".
+- uid: microsoft.quantum.primitive.r1
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.r1".
+- uid: microsoft.quantum.primitive.r1frac
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.r1frac".
+- uid: microsoft.quantum.primitive.random
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.random".
+- uid: microsoft.quantum.primitive.reset
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.reset".
+- uid: microsoft.quantum.primitive.resetall
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.resetall".
+- uid: microsoft.quantum.primitive.rfrac
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.rfrac".
+- uid: microsoft.quantum.primitive.rx
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.rx".
+- uid: microsoft.quantum.primitive.ry
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.ry".
+- uid: microsoft.quantum.primitive.rz
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.rz".
+- uid: microsoft.quantum.primitive.s
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.s".
+- uid: microsoft.quantum.primitive.swap
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.swap".
+- uid: microsoft.quantum.primitive.t
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.t".
+- uid: microsoft.quantum.primitive.x
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.x".
+- uid: microsoft.quantum.primitive.y
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.y".
+- uid: microsoft.quantum.primitive.z
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.intrinsic.z".
+...

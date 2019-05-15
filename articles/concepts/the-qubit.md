@@ -55,12 +55,9 @@ In quantum computing, the valid transformations that we are allowed to perform o
 The *adjoint operation* or the complex conjugate transpose is of crucial importance to quantum computing because it is needed to invert quantum transformations. Q# reflects this by providing methods to automatically compile gate sequences to their adjoint, which saves the programmer from having to hand code adjoints in many cases. An example of this is shown below:
 
 ```qsharp
-operation PrepareSuperposition(qubit : Qubit) : () {
-    body {
-        H(qubit);
-    }
-    // Auto-generate the adjoint of the operation
-    adjoint auto;
+operation PrepareSuperposition(qubit : Qubit) : Unit
+is Adj { // Auto-generate the adjoint of the operation
+    H(qubit);
 }
 ```
 

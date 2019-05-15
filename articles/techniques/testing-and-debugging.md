@@ -46,18 +46,15 @@ Initially this file contains one sample unit test `AllocateQubitTest` which chec
 ```qsharp
 operation AllocateQubitTest () : Unit
 {
-    body (...)
+    using (qs = Qubit()) 
     {
-        using (qs = Qubit()) 
-        {
-            Assert([PauliZ], [qs], Zero, "Newly allocated qubit must be in |0> state");
-        }
-        Message("Test passed");
+        Assert([PauliZ], [qs], Zero, "Newly allocated qubit must be in |0⟩ state");
     }
+    Message("Test passed");
 }
 ```
 
-Any Q# operation with the signature `Unit => Unit` or function with the signature `Unit -> Unit` can be executed as a unit test. 
+Any Q# operation compatible with the type `(Unit => Unit)` or function compatible with `(Unit -> Unit)` can be executed as a unit test. 
 
 The second file, `TestSuiteRunner.cs` contains a method that discovers and runs Q# unit tests. 
 This is the method `TestTarget` annotated with `OperationDriver` attribute.
@@ -69,7 +66,7 @@ op.TestOperationRunner(sim);
 ```
 executes the unit test on `QuantumSimulator`.
 
-By default, the unit test discovery mechanism looks for all Q# functions or operations with signatures `Unit => Unit` or `Unit -> Unit`
+By default, the unit test discovery mechanism looks for all Q# functions or operations of compatible type
 that satisfy the following properties:
 * Located in the same assembly as the method annotated with the `OperationDriver` attribute.
 * Located in the same namespace as the method annotated with the `OperationDriver` attribute.
@@ -137,7 +134,7 @@ This makes functions returning `()` a useful tool for embedding assertions and d
 
 ### Logging
 
-The primitive function @"microsoft.quantum.primitive.message" has type `String -> ()` and enables the creation of diagnostic messages.
+The intrinsic function @"microsoft.quantum.intrinsic.message" has type `(String -> Unit)` and enables the creation of diagnostic messages.
 
 The `onLog` action of `QuantumSimulator` can be used to define actions performed when Q# code calls `Message`. By default logged messages are printed to standard output.
 
@@ -225,7 +222,7 @@ Wavefunction:
 3:      0               0
 ```
 
-Notice how the ids of the qubits are shown at the top in their significant order. For each computational basis state $\ket{n}$, the first column represents the Real part of the amplituted, and the second column represents its Imaginary part.
+Notice how the IDs of the qubits are shown at the top in their significant order. For each computational basis state $\ket{n}$, the first column represents the real part of the amplitude, and the second column represents its imaginary part.
 
   > [!NOTE]
   > The id of a qubit is assigned at runtime and it's not necessarily aligned with the order in which the qubit was allocated or its position within a qubit register.
@@ -264,18 +261,15 @@ Notice how the ids of the qubits are shown at the top in their significant order
 ```qsharp
 namespace Samples
 {
-    open Microsoft.Quantum.Primitive;
-    open Microsoft.Quantum.Extensions.Diagnostics;
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Diagnostics;
 
     operation Operation () : Unit
     {
-        body (...)
+        using (qubits = Qubit[2])
         {
-            using (qubits = Qubit[2])
-            {
-                H(qubits[1]);
-                DumpMachine("dump.txt");
-            }
+            H(qubits[1]);
+            DumpMachine("dump.txt");
         }
     }
 }
@@ -321,25 +315,23 @@ The following example shows you how you can use both @"microsoft.quantum.extensi
 ```qsharp
 namespace app
 {
-    open Microsoft.Quantum.Primitive;
-    open Microsoft.Quantum.Extensions.Diagnostics;
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Diagnostics;
 
     operation Operation () : Unit
     {
-        body (...)
-        {
-            using (qubits = Qubit[2])
-            {
-                X(qubits[1]);
-                H(qubits[1]);
-                R1Frac(1, 2, qubits[1]);
-                
-                DumpMachine("dump.txt");
-                DumpRegister("q0.txt", qubits[0..0]);
-                DumpRegister("q1.txt", qubits[1..1]);
 
-                ResetAll(qubits);
-            }
+        using (qubits = Qubit[2])
+        {
+            X(qubits[1]);
+            H(qubits[1]);
+            R1Frac(1, 2, qubits[1]);
+            
+            DumpMachine("dump.txt");
+            DumpRegister("q0.txt", qubits[0..0]);
+            DumpRegister("q1.txt", qubits[1..1]);
+
+            ResetAll(qubits);
         }
     }
 }

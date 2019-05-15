@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.min
+name: Min
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Given an array of integers, returns the smallest element.
+syntax: 'function Min (value : Int[]) : Int'
+input:
+  content: '(value : Int[])'
+  types:
+  - name: value
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: The smallest element of `values`.
+    isPrimitive: true
+    uid: Int
+...

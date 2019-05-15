@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyreversedoplittleendiana
+name: ApplyReversedOpLittleEndianA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA".
+syntax: 'operation ApplyReversedOpLittleEndianA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+input:
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: op
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: register
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+...

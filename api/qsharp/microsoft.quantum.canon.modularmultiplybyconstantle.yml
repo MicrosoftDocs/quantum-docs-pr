@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.modularmultiplybyconstantle
+name: ModularMultiplyByConstantLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger".
+syntax: 'operation ModularMultiplyByConstantLE (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: constMultiplier
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    isPrimitive: true
+    uid: Int
+  - name: multiplier
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

@@ -20,8 +20,6 @@ From the Browse tab, search for the package name "Microsoft.Quantum.Numerics"
 > [!NOTE]
 > Make sure to tick "Include prerelease"
 
-![](~/media/vs2017-nuget-package-search.png)
-
 This will list the packages available for download.
 Hovering over "Microsoft.Quantum.Numerics" reveals a downward-pointing arrow to the right of the version number.
 Click on the arrow in order to install the numerics package.

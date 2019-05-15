@@ -37,6 +37,37 @@ bit.
 binary point position `pos`, which counts the number of binary digits to the left of the binary point. `qArr2` is stored
 in the same way as `SignedLittleEndian`.
 
+## Operations
+
+For each of the three types above, there are a variety of operations available:
+
+1. **`LittleEndian`**
+    1. **`AddI`**: Add two quantum integers
+    1. **`CompareGTI`**: Check if the first quantum integer is greater than the second
+    1. **`MultiplyI`**: Multiply two quantum integers
+    1. **`SquareI`**: Compute the square of a quantum integer
+    1. **`DivideI`**: Divide first quantum integer by the second (integer division with remainder)
+
+1. **`SignedLittleEndian`**
+    1. **`AddI`**: Also works for signed (2's complement) quantum integers (conversion to `LittleEndian` required)
+    1. **`CompareGTSI`**: Check if the first signed quantum integer is greater than the second
+    1. **`Invert2sSI`**: Invert a quantum integer modulo 2's complement
+    1. **`MultiplySI`**: Multiply two signed quantum integers
+    1. **`SquareSI`**: Compute the square of a signed quantum integer
+
+1. **`FixedPoint`**
+    1. **`InitFxP`**: Initialize a fixed-point number to a classical constant (double)
+    1. **`AddConstantFxP`**: Add a constant to a quantum fixed-point number
+    1. **`AddFxP`**: Add two fixed-point numbers
+    1. **`CompareGTFxP`**: Check if the first quantum fixed-point number if greater than the second
+    1. **`MultiplyFxP`**: Multiply two fixed-point numbers
+    1. **`SquareFxP`**: Square a fixed-point number
+    1. **`EvaluatePolynomialFxP`**: Evaluate a polynomial in fixed-point. For even/odd polynomials, there are the specializations `Evaluate[Even/Odd]PolynomialFxP`.
+    1. **`ComputeReciprocalFxP`**: Compute 1/x for a quantum fixed-point number `x`
+    1. **`MeasureFxP`**: Measure a fixed-point number and return a Double
+
+For more information and detailed documentation for each of these operations, see the Q# library reference docs at [docs.microsoft.com](https://docs.microsoft.com/en-us/quantum)
+
 ## Sample: Integer addition
 
 As a basic example, consider the operation
@@ -59,9 +90,27 @@ operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
         ApplyXorInPlace(xInt, x); // initialize values
         ApplyXorInPlace(yInt, y);
         
-        IntegerAddition(x, y); // perform addition
+        AddI(x, y); // perform addition x+y into y
         
         // ... (use the result)
     }
 }
+```
+
+## More samples
+
+You can find more samples in the [main samples repository](https://github.com/Microsoft/Quantum).
+
+To get started, clone the repo and open the `Numerics` subfolder:
+
+```bash
+git clone https://github.com/Microsoft/Quantum.git
+cd Quantum/Numerics
+```
+
+Then, `cd` into one of the sample folders and run the sample via
+
+```bash
+cd [SampleFolder]
+dotnet run
 ```

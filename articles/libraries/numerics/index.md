@@ -1,6 +1,6 @@
 ---
-title: Introduction to the Quantum Numerics Package | Microsoft Docs
-description: Introduction to the Quantum Numerics Package
+title: Introduction to the Quantum Numerics Library | Microsoft Docs
+description: Introduction to the Quantum Numerics Library
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019

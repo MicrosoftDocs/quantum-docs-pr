@@ -44,7 +44,7 @@ $$
 |+\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle),\qquad |-\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle).
 $$
 
-## Computational basis vectors
+### Computational basis vectors
 This demonstrates why these states are often called a *computational basis*: every quantum state can always be expressed as sums of computational basis vectors and such sums are easily expressed using Dirac notation.  The converse is also true in that the states $|+\rangle$ and $|-\rangle$ also form a basis for quantum states.  You can see this from the fact that
 
 $$

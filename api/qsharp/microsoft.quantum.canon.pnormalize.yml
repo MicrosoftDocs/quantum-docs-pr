@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.pnormalize
+name: PNormalize
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.math.pnormalized".
+syntax: 'function PNormalize (p : Double, array : Double[]) : Double[]'
+input:
+  content: '(p : Double, array : Double[])'
+  types:
+  - name: p
+    isPrimitive: true
+    uid: Double
+  - name: array
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Double
+...

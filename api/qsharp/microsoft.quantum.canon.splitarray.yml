@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.splitarray
+name: SplitArray
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"Microsoft.Quantum.Arrays.Partitioned" instead.
+syntax: "function SplitArray (nElements : Int[], arr : 'T[]) : 'T[][]"
+input:
+  content: "(nElements : Int[], arr : 'T[])"
+  types:
+  - name: nElements
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: arr
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[][]"
+  types:
+  - isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+...

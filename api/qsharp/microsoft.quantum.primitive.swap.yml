@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.swap
+name: SWAP
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.intrinsic.swap".
+syntax: 'operation SWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit'
+input:
+  content: '(qubit1 : Qubit, qubit2 : Qubit)'
+  types:
+  - name: qubit1
+    isPrimitive: true
+    uid: Qubit
+  - name: qubit2
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

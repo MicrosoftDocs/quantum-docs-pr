@@ -15,16 +15,20 @@ uid: microsoft.quantum.libraries.licensing
 ---
 # Licensing #
 
-The canon is an extensive collection of library functions and operations and is open source, licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt). The canon and other libraries, such as the Quantum Chemistry Library, can be obtained from the [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) repository on GitHub. 
+The Quantum Development Kit is provided with an extensive collection of open-source functions and operations, licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt).
+The portions of the standard library that are portable across target machines can be obtained from the [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) repository on GitHub, along with other libraries such as  and other libraries, such as the [quantum chemistry library](xref:microsoft.quantum.chemistry.concepts.intro).
 
-Microsoft's Quantum Development Kit also provides specialized library functions and operations that are licensed under a [Microsoft Research license](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE). These can be obtained from the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository on GitHub.
+Microsoft's Quantum Development Kit also provides specialized library functions and operations that are licensed under a [Microsoft Research license](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE).
+These can be obtained from the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository on GitHub.
 
-There is also an extensive set of samples that explain and illustrate the use of functions and operations from the canon and other libraries. These samples are licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt). The samples can be obtained from the [Microsoft/Quantum](https://github.com/Microsoft/Quantum) repository on GitHub.
-
+There are also many samples that explain and illustrate the use of functions and operations from the standard library and other libraries.
+These samples are licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt).
+The samples can be obtained from the [Microsoft/Quantum](https://github.com/Microsoft/Quantum) repository on GitHub.
 
 ## Contributing ##
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+This project welcomes contributions and suggestions.
+Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit [CLA](https://cla.microsoft.com).
 

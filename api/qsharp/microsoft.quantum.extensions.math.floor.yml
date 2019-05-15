@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.floor
+name: Floor
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.math.floor".
+syntax: 'function Floor (value : Double) : Int'
+input:
+  content: '(value : Double)'
+  types:
+  - name: value
+    isPrimitive: true
+    uid: Double
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+...

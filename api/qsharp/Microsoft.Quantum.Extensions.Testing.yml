@@ -1,0 +1,48 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.testing
+name: Microsoft.Quantum.Extensions.Testing
+operations:
+- uid: microsoft.quantum.extensions.testing.assertallzero
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertallzero".
+- uid: microsoft.quantum.extensions.testing.assertallzerotol
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertallzerowithintolerance".
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
+    Note that the order of the arguments to this operation has changed.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis".
+    Note that the order of the arguments to this operation has changed.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertoperationsequalreferenced".
+    Note that the order of the arguments to this operation has changed.
+- uid: microsoft.quantum.extensions.testing.assertqubit
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertqubit".
+- uid: microsoft.quantum.extensions.testing.assertqubitstate
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
+- uid: microsoft.quantum.extensions.testing.assertqubittol
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+...

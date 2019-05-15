@@ -1,11 +1,11 @@
 ---
-title: Numerics Library Examples | Microsoft Docs
-description: Numerics Library Examples
+title: Using the Numerics Library | Microsoft Docs
+description: Using the Numerics Library
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
-uid: microsoft.quantum.numerics.concepts.examples
+uid: microsoft.quantum.numerics.usage
 ---
 
 # Using the Numerics library
@@ -39,32 +39,32 @@ in the same way as `SignedLittleEndian`.
 
 ## Operations
 
-For each of the three types above, there are a variety of operations available:
+For each of the three types above, a variety of operations is available:
 
 1. **`LittleEndian`**
-    1. **`AddI`**: Add two quantum integers
-    1. **`CompareGTI`**: Check if the first quantum integer is greater than the second
-    1. **`MultiplyI`**: Multiply two quantum integers
-    1. **`SquareI`**: Compute the square of a quantum integer
-    1. **`DivideI`**: Divide first quantum integer by the second (integer division with remainder)
+    - **`AddI`**: Add two quantum integers
+    - **`CompareGTI`**: Check if the first quantum integer is greater than the second
+    - **`MultiplyI`**: Multiply two quantum integers
+    - **`SquareI`**: Compute the square of a quantum integer
+    - **`DivideI`**: Divide first quantum integer by the second (integer division with remainder)
 
 1. **`SignedLittleEndian`**
-    1. **`AddI`**: Also works for signed (2's complement) quantum integers (conversion to `LittleEndian` required)
-    1. **`CompareGTSI`**: Check if the first signed quantum integer is greater than the second
-    1. **`Invert2sSI`**: Invert a quantum integer modulo 2's complement
-    1. **`MultiplySI`**: Multiply two signed quantum integers
-    1. **`SquareSI`**: Compute the square of a signed quantum integer
+    - **`AddI`**: Also works for signed (2's complement) quantum integers (conversion to `LittleEndian` required)
+    - **`CompareGTSI`**: Check if the first signed quantum integer is greater than the second
+    - **`Invert2sSI`**: Invert a quantum integer modulo 2's complement
+    - **`MultiplySI`**: Multiply two signed quantum integers
+    - **`SquareSI`**: Compute the square of a signed quantum integer
 
 1. **`FixedPoint`**
-    1. **`InitFxP`**: Initialize a fixed-point number to a classical constant (double)
-    1. **`AddConstantFxP`**: Add a constant to a quantum fixed-point number
-    1. **`AddFxP`**: Add two fixed-point numbers
-    1. **`CompareGTFxP`**: Check if the first quantum fixed-point number if greater than the second
-    1. **`MultiplyFxP`**: Multiply two fixed-point numbers
-    1. **`SquareFxP`**: Square a fixed-point number
-    1. **`EvaluatePolynomialFxP`**: Evaluate a polynomial in fixed-point. For even/odd polynomials, there are the specializations `Evaluate[Even/Odd]PolynomialFxP`.
-    1. **`ComputeReciprocalFxP`**: Compute 1/x for a quantum fixed-point number `x`
-    1. **`MeasureFxP`**: Measure a fixed-point number and return a Double
+    - **`InitFxP`**: Initialize a fixed-point number to a classical constant (double)
+    - **`AddConstantFxP`**: Add a constant to a quantum fixed-point number
+    - **`AddFxP`**: Add two fixed-point numbers
+    - **`CompareGTFxP`**: Check if the first quantum fixed-point number if greater than the second
+    - **`MultiplyFxP`**: Multiply two fixed-point numbers
+    - **`SquareFxP`**: Square a fixed-point number
+    - **`EvaluatePolynomialFxP`**: Evaluate a polynomial in fixed-point. For even/odd polynomials, there are the specializations `Evaluate[Even/Odd]PolynomialFxP`.
+    - **`ComputeReciprocalFxP`**: Compute 1/x for a quantum fixed-point number `x`
+    - **`MeasureFxP`**: Measure a fixed-point number and return a Double
 
 For more information and detailed documentation for each of these operations, see the Q# library reference docs at [docs.microsoft.com](https://docs.microsoft.com/en-us/quantum)
 

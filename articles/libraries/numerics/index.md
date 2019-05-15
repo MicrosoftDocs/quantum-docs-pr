@@ -24,10 +24,13 @@ Given that so many steps are necessary to arrive at an actual implementation, it
 This is why the QDK provides support for a wide range of numerics functionality.
 
 
-# Functionality
+## Functionality
 
 Besides the integer arithmetic mentioned thus far, the Numerics Library provides
 
  - (Un)signed integer functionality (multiply, square, division with remainder, inversion, ...) with one or two quantum integer numbers as input
  - Fixed-point functionality (add / subtract, multiply, square, 1/x, polynomial evaluation) with one or two quantum fixed-point numbers as input
 
+## Getting started
+
+To get started with the Numerics Library, check out the [installation guide](xref:microsoft.quantum.numerics.installation) and more information on [using the Numerics Library](xref:microsoft.quantum.numerics.usage).

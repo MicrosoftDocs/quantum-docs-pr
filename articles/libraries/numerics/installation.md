@@ -5,7 +5,7 @@ author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
-uid: microsoft.quantum.numerics.concepts.installation
+uid: microsoft.quantum.numerics.installation
 ---
 
 # Numerics Library Installation and Validation

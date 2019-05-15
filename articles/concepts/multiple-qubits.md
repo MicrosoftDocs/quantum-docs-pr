@@ -169,7 +169,7 @@ As in the single-qubit case, a two-qubit gate set is universal if any $4\times 4
 One example of a universal gate set is the Hadamard gate, the T gate, and the CNOT gate. By taking products of these gates, we can approximate any unitary matrix on two qubits.
 
 ## Many-Qubit Systems
-We follow the exact same patterns explored in the two-qubit case to build many-qubit quantum states from smaller systems.  Such states are built by forming tensor products of smaller states.  For example, consider encoding the bit string $1011001$ in a quantum computer.  We can encode this as
+We follow exactly the same patterns explored in the two-qubit case to build many-qubit quantum states from smaller systems.  Such states are built by forming tensor products of smaller states.  For example, consider encoding the bit string $1011001$ in a quantum computer.  We can encode this as
 
 $$
 1011001 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}.
@@ -182,7 +182,7 @@ Quantum gates work in exactly the same way.  For example, if we wish to apply th
 &\qquad\qquad\equiv 0011001.
 \end{align}
 
-In many qubit systems, there is often a need to allocate and de-allocate qubits that serve as temporary memory for the quantum computer.  Such qubit a qubit is called an ancilla.  By default we assume the qubit state is initialized to $e_0$ upon allocation.  We further assume that it is returned again to $e_0$ before de-allocation.  This assumption is important because if an ancilla qubit becomes entangled with another qubit register when it becomes de-allocated then the process of de-allocation will damage the ancilla.  For this reason, we always assume that such qubits are reverted to their initial state before being released.
+In many qubit systems, there is often a need to allocate and de-allocate qubits that serve as temporary memory for the quantum computer.  Such a qubit is called an ancilla.  By default we assume the qubit state is initialized to $e_0$ upon allocation.  We further assume that it is returned again to $e_0$ before de-allocation.  This assumption is important because if an ancilla qubit becomes entangled with another qubit register when it becomes de-allocated then the process of de-allocation will damage the ancilla.  For this reason, we always assume that such qubits are reverted to their initial state before being released.
 
 Finally, although new gates needed to be added to our gate set to achieve universal quantum computing for two qubit quantum computers, no new gates need to be introduced in the multi-qubit case.  The gates $H$, $T$ and CNOT form a universal gate set on many qubits because any general unitary transformation can be broken into a series of two qubit rotations.  We then can leverage the theory developed for the two-qubit case and use it again here when we have many qubits.
 

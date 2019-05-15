@@ -18,7 +18,6 @@ Of course evaluating this tensor product is impractical because the vector lies 
 
 [*Dirac notation*](https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation) solves these issues by presenting a new language to fit the precise needs of quantum mechanics.  For this reason, we recommend the reader not view the examples in this section as a rigid prescription of how to describe quantum states, but rather encourage the reader to view these as suggestions that can be used to concisely express quantum ideas.
 
-## bra ket notation
 There are two types of vectors in Dirac notation: the *bra* vector and the *ket* vector, so named because when put together they form a *braket* or inner product.  If $\psi$ is a column vector then we can write it in Dirac notation as $|\psi \rangle$, where the $|\cdot \rangle$ denotes that it is a unit column vector, i.e., a *ket* vector.  Similarly, the row vector $\psi^\dagger$ is expressed as $\langle \psi |$. In other words, $\psi^\dagger$ is obtained by applying entry-wise complex conjugation to the elements of the transpose of $\psi$. The bra-ket notation directly implies that $\langle \psi |\psi \rangle$ is the inner product of vector $\psi$ with itself, which is by definition $1$.  
 
 More generally, if $\psi$ and $\phi$ are quantum state vectors their inner product is $\langle \phi | \psi \rangle$ which implies that the probability of measuring the state $|{\psi}\rangle$ to be $|{\phi}\rangle$ is $|\langle \phi|\psi\rangle|^2$.  

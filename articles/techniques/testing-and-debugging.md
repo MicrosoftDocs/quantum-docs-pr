@@ -286,7 +286,7 @@ $$
     \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10} = - e^{-i\pi/4} ( (\frac{1}{\sqrt{2}} \ket{0} - \frac{(1 + i)}{2} \ket{1} ) \otimes \frac{-(1 + i)}{\sqrt{2}} \ket{0} ) ,
 \end{align}
 $$
-calling <xref:microsoft.quantum.extensions.diagnostics.dumpregister> for `qubit[0]` generates this output:
+calling <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[0]` generates this output:
 
 ```
 Ids:    [0;]

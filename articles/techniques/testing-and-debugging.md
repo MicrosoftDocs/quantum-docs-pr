@@ -211,7 +211,7 @@ $$
     \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10},
 \end{align}
 $$
-calling <xref:microsoft.quantum.extensions.diagnostics.dumpmachine> generates this output:
+calling <xref:microsoft.quantum.diagnostics.dumpmachine> generates this output:
 
 ```
 Ids:    [1;0;]

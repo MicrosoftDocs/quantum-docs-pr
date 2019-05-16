@@ -104,9 +104,9 @@ the QDK Numerics Library provides the operations `EvaluatePolynomialFxP` and `Ev
 
 The first, `EvaluatePolynomialFxP`, allows to evaluate a polynomial of the form
 $$
-P(x) = a_0 + a_1x + a_2x^2 + \cdots + a_dx^d\;,
+P(x) = a_0 + a_1x + a_2x^2 + \cdots + a_dx^d,
 $$
-where $d$ denotes the *degree*. To do so, all that is needed are the polynomial coefficients `{ a_0, ..., a_d }` (of type `Double[]`),
+where $d$ denotes the *degree*. To do so, all that is needed are the polynomial coefficients `[a_0,..., a_d]` (of type `Double[]`),
 the input `x : FixedPoint` and the output `y : FixedPoint` (initially zero):
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], xFxP, yFxP);

@@ -29,7 +29,20 @@ $$
 
 The vectors
 
-$$\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0\end{bmatrix} and \begin{bmatrix}0 \\\\ 0 \\\\ 1\end{bmatrix}$$
+$$
+\begin{align}
+    \begin{bmatrix}
+        1 \\\\ 0 \\\\ 0
+    \end{bmatrix},
+    \begin{bmatrix}
+        0 \\\\ 1 \\\\ 0
+    \end{bmatrix},
+    \text{ and }
+    \begin{bmatrix}
+        0 \\\\ 0 \\\\ 1
+    \end{bmatrix}
+\end{align}
+$$
 
 are eigenvectors of this matrix with eigenvalues  $d_1$, $d_2$, and $d_3$, respectively. If $d_1$, $d_2$, and $d_3$ are distinct numbers, then these vectors (and their multiples) are the only eigenvectors of the matrix $D$. In general, for a diagonal matrix it is easy to read off the eigenvalues and eigenvectors. The eigenvalues are all the numbers appearing on the diagonal, and their respective eigenvectors are the unit vectors with one entry equal to $1$ and the remaining entries equal to $0$.
 

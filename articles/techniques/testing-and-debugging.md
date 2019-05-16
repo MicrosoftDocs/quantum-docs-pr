@@ -316,7 +316,7 @@ The following example shows you how you can use both <xref:microsoft.quantum.ext
 namespace app
 {
     open Microsoft.Quantum.Intrinsic;
-    open Microsoft.Quantum.extensions.Diagnostics;
+    open Microsoft.Quantum.Diagnostics;
 
     operation Operation () : Unit
     {

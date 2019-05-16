@@ -295,7 +295,7 @@ Wavefunction:
 1:      0               0
 ```
 
-and calling <xref:microsoft.quantum.extensions.diagnostics.dumpregister> for `qubit[1]` generates this output:
+and calling <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[1]` generates this output:
 
 ```
 Ids:    [1;]

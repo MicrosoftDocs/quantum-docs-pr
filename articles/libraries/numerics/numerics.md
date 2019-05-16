@@ -97,6 +97,38 @@ operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
 }
 ```
 
+## Sample: Evaluating smooth functions
+
+To evaluate smooth functions such as $\sin(x)$ on a quantum computer, where $x$ is a quantum `FixedPoint` number,
+the QDK Numerics Library provides the operations `EvaluatePolynomialFxP` and `Evaluate[Even/Odd]PolynomialFxP`.
+
+The first, `EvaluatePolynomialFxP`, allows to evaluate a polynomial of the form
+$$
+P(x) = a_0 + a_1x + a_2x^2 + \cdots + a_dx^d\;,
+$$
+where $d$ denotes the *degree*. To do so, all that is needed are the polynomial coefficients `{ a_0, ..., a_d }` (of type `Double[]`),
+the input `x : FixedPoint` and the output `y : FixedPoint` (initially zero):
+```qsharp
+EvaluatePolynomialFxP([1.0, 2.0], xFxP, yFxP);
+```
+The result, $P(x)=1+2x$, will be stored in `yFxP`.
+
+The second, `EvaluateEvenPolynomialFxP`, and the third, `EvaluateOddPolynomialFxP`, are specializations
+for the cases of even and odd functions, respectively. That is, for an even/odd function $f(x)$ and
+$$
+P_{even}(x)=a_0 + a_1 x^2 + a_2 x^4 + \cdots + a_d x^{2d},
+$$
+$f(x)$ is approximated well by $P_{even}(x)$ or $P_{odd}(x) := x\cdot P_{even}(x)$, respectively.
+In Q#, these two cases can be handled as follows:
+```qsharp
+EvaluateEvenPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+```
+which evaluates $P_{even}(x) = 1 + 2x^2$, and
+```qsharp
+EvaluateOddPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+```
+which evaluates $P_{odd}(x) = x + 2x^3$.
+
 ## More samples
 
 You can find more samples in the [main samples repository](https://github.com/Microsoft/Quantum).

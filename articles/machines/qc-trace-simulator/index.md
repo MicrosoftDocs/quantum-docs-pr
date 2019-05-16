@@ -27,7 +27,7 @@ details on this.
 There are two kinds of measurements that appear in quantum algorithms. The first
 kind plays an auxiliary role where the user usually knows the
 probability of the outcomes. In this case the user can write
-<xref:microsoft.quantum.primitive.assertprob> from the <xref:microsoft.quantum.primitive> namespace to express this knowledge. The following example illustrates this:
+<xref:microsoft.quantum.intrinsic.assertprob> from the <xref:microsoft.quantum.intrinsic> namespace to express this knowledge. The following example illustrates this:
 
 ```qsharp
 operation Teleportation (source : Qubit, target : Qubit) : Unit {
@@ -82,8 +82,8 @@ namespace Quantum.MyProgram
 ```
 
 Note that if there is at least one measurement not annotated using `AssertProb`
-or `ForceMeasure` the simulator will throw `UnconstraintMeasurementException`
-from the `Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime` namespace. See the API documentation on [UnconstraintMeasurementException](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstraintmeasurementexception) for more details.
+or `ForceMeasure` the simulator will throw `UnconstrainedMeasurementException`
+from the `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators` namespace. See the API documentation on [UnconstraintMeasurementException](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception) for more details.
 
 In addition to running quantum programs, the trace simulator comes with five
 components for detecting bugs in programs and performing quantum program

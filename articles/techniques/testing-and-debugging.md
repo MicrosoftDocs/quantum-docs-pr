@@ -304,7 +304,7 @@ Wavefunction:
 1:      -0.5            -0.5
 ```
 
-In general, the state of a register that is entangled with another register is a mixed state rather than a pure state. In this case, <xref:microsoft.quantum.extensions.diagnostics.dumpregister> outputs the following message:
+In general, the state of a register that is entangled with another register is a mixed state rather than a pure state. In this case, <xref:microsoft.quantum.diagnostics.dumpregister> outputs the following message:
 
 ```
 Qubits provided (0;) are entangled with some other qubit.

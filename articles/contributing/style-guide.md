@@ -44,8 +44,8 @@ Summarizing, operations do things while functions are things.
 This distinction suggests that we name operations as verbs and functions as nouns.
 
 > [!NOTE]
-> In many ways, user-defined types can be thought of as functions which construct instances of a UDT.
-> From that perspective, UDTs should be named as functions rather than as operations.
+> When a user-defined type is declared, a new function that constructs instances of that type is implicitly defined at the same time.
+> From that perspective, user-defined types should be named as nouns so that both the type itself and the constructor function have consistent names.
 
 Where reasonable, ensure that operation names begin with verbs that clearly indicate the effect taken by the operation.
 For example:

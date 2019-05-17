@@ -12,7 +12,7 @@ uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 
 The `Width Counter` counts the number of qubits allocated and borrowed by each operation.
  All operations from the `Microsoft.Quantum.Intrinsic` namespace are expressed in terms of single qubit rotations:
-T gates, single qubit Clifford gates, CNOT gates, and measurements of multi-qubit Pauli observables. Some of the primitive operations can allocate extra qubits. For example, multiply controlled `X` gates or controlled `T` gates. The following example computes the number of extra qubits allocated by the implementation of a multiply controlled `X` gate:
+T gates, single qubit Clifford gates, CNOT gates, and measurements of multi-qubit Pauli observables. Some of the `Intrinsic` operations can allocate extra qubits. For example, multiply controlled `X` gates or controlled `T` gates. The following example computes the number of extra qubits allocated by the implementation of a multiply controlled `X` gate:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -39,12 +39,12 @@ int totalNumberOfQubits = 5;
 var res = MultiControlledXDriver.Run(sim, totalNumberOfQubits).Result;
 
 double allocatedQubits = 
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Intrinsic.X, MultiControlledXDriver>(
         WidthCounter.Metrics.ExtraWidth,
         functor: OperationFunctor.Controlled); 
 
 double inputWidth =
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Intrinsic.X, MultiControlledXDriver>(
         WidthCounter.Metrics.InputWidth,
         functor: OperationFunctor.Controlled);
 ```

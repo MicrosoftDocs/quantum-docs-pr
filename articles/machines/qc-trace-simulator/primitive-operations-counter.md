@@ -11,16 +11,16 @@ uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 # Primitive Operations Counter	
 
 The `Primitive Operations Counter` is a part of the quantum computer [Trace
-Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). It counts the number of primitive executions used by
+Simulator]<xref:microsoft.quantum.machines.qc-trace-simulator.intro>. It counts the number of primitive executions used by
 every operation invoked in a quantum program. All operations from
-`Microsoft.Quantum.Primitive` are expressed in terms of single qubit rotations,
+`Microsoft.Quantum.Intrinsic` are expressed in terms of single qubit rotations:
 T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit
 Pauli observables. Collected statistics are aggregated over the edges of the operations
-call graph. Let us now count how many `T` gates are needed to implement the `CCNOT`
+call graph. The following example counts how many `T` gates are needed to implement the `CCNOT`
 operation. 
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
+open Microsoft.Quantum.Intrinsic;
 operation CCNOTDriver() : Unit {
 
     using (qubits = Qubit[3]) {
@@ -48,7 +48,7 @@ double tCount = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(PrimitiveOperationsG
 ```
 
 The first part of the program executes `CCNOTDriver`. In the second part, we use the method
-`QCTraceSimulator.GetMetric` to get the number of T gates executed by `CCNOTDriver`: 
+<xref:microsoft.quantum.simulation.simulators.qctracesimulators.qctraceSimulator.getMetric> to get the number of T gates executed by `CCNOTDriver`: 
 
 ```csharp
 double tCount = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(PrimitiveOperationsGroupsNames.T);

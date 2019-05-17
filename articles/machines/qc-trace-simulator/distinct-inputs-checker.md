@@ -12,9 +12,8 @@ uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
 # Distinct Inputs Checker
 
 The `Distinct Inputs Checker` is a part of the quantum computer [Trace
-Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). It is designed for detecting
-potential bugs in the code. Consider the following piece of Q# code to
-illustrate the issues detected by this package:
+Simulator]<xref:microsoft.quantum.machines.qc-trace-simulator.intro>. It is designed to detect
+potential bugs in the code. Consider the following piece of Q# code to illustrate the issues detected by this package:
 
 ```qsharp
 operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => Unit)) : Unit {
@@ -65,7 +64,7 @@ namespace Quantum.MyProgram
             var traceSimCfg = new QCTraceSimulatorConfiguration();
             traceSimCfg.useDistinctInputsChecker = true; //enables distinct inputs checker
             QCTraceSimulator sim = new QCTraceSimulator(traceSimCfg);
-            var res = MyQuantumProgram.Run().Result;
+            var res = MyQuantumProgram.Run(sim).Result;
             System.Console.WriteLine("Press any key to continue...");
             System.Console.ReadKey();
         }

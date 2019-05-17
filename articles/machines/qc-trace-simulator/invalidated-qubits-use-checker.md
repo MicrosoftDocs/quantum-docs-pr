@@ -10,7 +10,7 @@ uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
 
 # Invalidated Qubits Use Checker
 
-The `Invalidated Qubits Use Checker` is a part of the quantum computer [TraceSimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) designed for detecting potential bugs in the code. Consider the following piece of Q# code to illustrate the issues detected by the `Invalidated Qubits Use Checker`.
+The `Invalidated Qubits Use Checker` is a part of the quantum computer [TraceSimulator]<xref:microsoft.quantum.machines.qc-trace-simulator.intro> designed to detect potential bugs in the code. Consider the following piece of Q# code to illustrate the issues detected by the `Invalidated Qubits Use Checker`.
 
 ```qsharp
 operation UseReleasedQubitTest () : Unit {
@@ -58,4 +58,4 @@ the `Invalidated Qubits Use Checker` is enabled. See the API documentation on [Q
 
 ## See also ##
 
-- The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
+- The quantum computer [Trace Simulator]<xref:microsoft.quantum.machines.qc-trace-simulator.intro> overview.

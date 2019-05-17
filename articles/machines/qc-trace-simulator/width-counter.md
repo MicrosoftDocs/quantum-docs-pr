@@ -11,13 +11,11 @@ uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 # Width Counter
 
 The `Width Counter` counts the number of qubits allocated and borrowed by each operation.
- All operations from the `Microsoft.Quantum.Primitive` namespace are expressed in terms of single qubit rotations,
-T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit
-Pauli observables. Some of the primitive operations can allocate extra qubits. For example, multiply controlled `X` gates or controlled `T` gates. Let us compute the number of extra qubits allocated 
-by the implementation of a multiply controlled `X` gate:
+ All operations from the `Microsoft.Quantum.Intrinsic` namespace are expressed in terms of single qubit rotations:
+T gates, single qubit Clifford gates, CNOT gates, and measurements of multi-qubit Pauli observables. Some of the primitive operations can allocate extra qubits. For example, multiply controlled `X` gates or controlled `T` gates. The following example computes the number of extra qubits allocated by the implementation of a multiply controlled `X` gate:
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
+open Microsoft.Quantum.Intrinsic;
 open Microsoft.Quantum.Arrays;
 operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
 
@@ -52,7 +50,7 @@ double inputWidth =
 ```
 
 The first part of the program executes `MultiControlledXDriver`. In the second part we use the method
-`QCTraceSimulator.GetMetric` to get the number of allocated qubits as well as the number of qubits that Controlled `X`
+<xref:microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric> to get the number of allocated qubits as well as the number of qubits that Controlled `X`
 received as input. 
 
 Finally, to output all the statistics collected by width counter in CSV format we can 
@@ -63,4 +61,4 @@ string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 
 ## See also ##
 
-- The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
+- The quantum computer [Trace Simulator]<xref:microsoft.quantum.machines.qc-trace-simulator.intro> overview.

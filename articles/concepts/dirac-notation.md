@@ -88,7 +88,7 @@ $$
 Here you may wonder why the sum goes from $0$ to $2^{n}-1$ for $n$ bits.  First note that there are $2^{n}$ different configurations that $n$ bits can take.  You can see this by noting that one bit can take $2$ values but two bits can take $4$ values and so forth. In general, this means that there are $2^n$ different possible bit strings but the largest value encoded in any of them $1\cdots 1=2^n-1$ and hence it is the upper limit for the sum.
 As a side note, in this example we did not use $|+\rangle^{\otimes n}=|+\rangle$ in analogy to $|0\rangle^{\otimes n} = |0\rangle$ because this notational convention is usually reserved for the computational basis state with every qubit initialized to zero.  While such a convention would be sensible in this case, it is not employed in the quantum computing literature.
 
-## Dirac linear notation
+### Expressing linearity with Dirac notation
 Another nice feature of Dirac notation is the fact that it is linear.  If we wish to write for any four quantum state vectors, 
 
 $$(\alpha |\psi\rangle +\beta|\phi\rangle)\otimes (\gamma |\chi\rangle + \delta |\omega\rangle)= \alpha\gamma |\psi\rangle|\chi\rangle + \alpha\delta |\psi\rangle|\omega\rangle+\beta\gamma|\phi\rangle|\chi\rangle+\beta\delta|\phi\rangle|\omega\rangle.$$

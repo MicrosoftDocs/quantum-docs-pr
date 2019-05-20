@@ -61,4 +61,4 @@ string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 
 ## See also ##
 
-- The quantum computer [Trace Simulator]<xref:microsoft.quantum.machines.qc-trace-simulator.intro> overview.
+- The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.

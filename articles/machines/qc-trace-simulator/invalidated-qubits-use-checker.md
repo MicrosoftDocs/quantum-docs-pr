@@ -58,4 +58,4 @@ the `Invalidated Qubits Use Checker` is enabled. See the API documentation on [Q
 
 ## See also ##
 
-- The quantum computer [Trace Simulator]<xref:microsoft.quantum.machines.qc-trace-simulator.intro> overview.
+- The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.

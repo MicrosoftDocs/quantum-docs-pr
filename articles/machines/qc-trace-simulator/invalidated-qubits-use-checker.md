@@ -54,7 +54,7 @@ namespace Quantum.MyProgram
 The class `QCTraceSimulatorConfiguration` stores the configuration of the quantum
 computer trace simulator and can be provided as an argument for
 the `QCTraceSimulator` constructor. When `useInvalidatedQubitsUseChecker` is set to true
-the `Invalidated Qubits Use Checker` is enabled. See the API documentation on [QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for more details.
+the `Invalidated Qubits Use Checker` is enabled. See the API documentation on [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for more details.
 
 ## See also ##
 

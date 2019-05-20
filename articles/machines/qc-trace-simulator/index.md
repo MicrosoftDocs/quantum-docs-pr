@@ -97,7 +97,7 @@ resource estimates:
 
 Each of these components may be enabled by setting appropriate flags in
 `QCTraceSimulatorConfiguration`. More details about using each of these
-components are provided in the corresponding reference files. See the API documentation on [QCTraceSimulatorConfiguration](xrefMicrosoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for specific details.
+components are provided in the corresponding reference files. See the API documentation on [QCTraceSimulatorConfiguration](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for specific details.
 
 ## See also
 The quantum computer [trace simulator

@@ -12,7 +12,7 @@ uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
 # Distinct Inputs Checker
 
 The `Distinct Inputs Checker` is a part of the quantum computer [Trace
-Simulator]<xref:microsoft.quantum.machines.qc-trace-simulator.intro>. It is designed to detect
+Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). It is designed to detect
 potential bugs in the code. Consider the following piece of Q# code to illustrate the issues detected by this package:
 
 ```qsharp

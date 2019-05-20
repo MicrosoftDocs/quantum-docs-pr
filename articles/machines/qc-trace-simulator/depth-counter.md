@@ -25,7 +25,7 @@ Let us now compute the <xref:microsoft.quantum.intrinsic.t> depth
 of the <xref:microsoft.quantum.intrinsic.ccnot> operation. We will use the following Q# driver code: 
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
+open Microsoft.Quantum.Intrinsic;
 operation CCNOTDriver() : Unit {
 
     using (qubits = Qubit[3]) {

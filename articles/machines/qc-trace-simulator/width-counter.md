@@ -50,7 +50,7 @@ double inputWidth =
 ```
 
 The first part of the program executes `MultiControlledXDriver`. In the second part we use the method
-<xref:microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric> to get the number of allocated qubits as well as the number of qubits that Controlled `X`
+<xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator.GetMetric> to get the number of allocated qubits as well as the number of qubits that Controlled `X`
 received as input. 
 
 Finally, to output all the statistics collected by width counter in CSV format we can 
@@ -61,4 +61,4 @@ string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 
 ## See also ##
 
-- The quantum computer [Trace Simulator]<xref:microsoft.quantum.machines.qc-trace-simulator.intro> overview.
+- The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.

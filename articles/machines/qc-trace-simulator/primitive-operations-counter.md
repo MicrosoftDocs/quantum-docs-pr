@@ -48,7 +48,7 @@ double tCount = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(PrimitiveOperationsG
 ```
 
 The first part of the program executes `CCNOTDriver`. In the second part, we use the method
-<xref:microsoft.quantum.simulation.simulators.qctracesimulators.qctraceSimulator.getMetric> to get the number of T gates executed by `CCNOTDriver`: 
+<xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator.GetMetric> to get the number of $T$ gates executed by `CCNOTDriver`: 
 
 ```csharp
 double tCount = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(PrimitiveOperationsGroupsNames.T);

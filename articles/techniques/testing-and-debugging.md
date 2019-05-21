@@ -201,7 +201,7 @@ The <xref:microsoft.quantum.diagnostics> namespace provides several more functio
 
 ## Dump Functions
 
-To help troubleshooting quantum programs, the <xref:microsoft.quantum.extensions.diagnostics> namespace offers two functions that can dump into a file the current status of the target machine: <xref:microsoft.quantum.extensions.diagnostics.dumpmachine> and <xref:microsoft.quantum.extensions.diagnostics.dumpregister>. The generated output of each depends on the target machine.
+To help troubleshooting quantum programs, the <xref:microsoft.quantum.diagnostics> namespace offers two functions that can dump into a file the current status of the target machine: <xref:microsoft.quantum.diagnostics.dumpmachine> and <xref:microsoft.quantum.diagnostics.dumpregister>. The generated output of each depends on the target machine.
 
 ### DumpMachine
 

@@ -13,7 +13,7 @@ ms.topic: article
 # ms.technology: tech-name-from-white-list
 ---
 
-# Local Variables #
+# Local variables
 
 A value of any type in Q# can be assigned to a variable for reuse within an operation or function by using the `let` keyword.
 For instance:
@@ -32,8 +32,7 @@ This allows for several beneficial optimizations, including optimization of the 
 
 Variables defined using the `let` binding as above are local to a particular scope, such as the body of an operation or the contents of a `for` loop.
 
-
-## Mutability ##
+## Mutable keyword
 
 As an alternative to creating a variable with `let`, the `mutable` keyword will create a special mutable variable that can be re-bound after it is initially created by using the `set` keyword.
 
@@ -58,20 +57,16 @@ function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
 }
 ```
 
-We will elaborate more on how to work with arrays when discussing Q# statements and expressions. 
+We will elaborate more on how to work with arrays when discussing Q# statements and expressions. <!-- Should have a link -->
 
 Mutability within Q# is a concept that applies to a *symbol* rather than a type or value. 
 Specifically, it does not have a representation in the type system, implicitly or explicitly, and whether or not a binding is mutable (as indicated by the `mutable` keyword) or immutable (as indicated by `let`) does not change the type of the bound variable(s). 
 This provides an important way to isolate mutability inside specialized functions and operations.
-In particular, even though an adjoint specialization for an operation which uses a mutable variable cannot be auto-generated, auto-generation works fine for an operation calling a function which uses mutability.
-For this reason, it is a good practice to make functions and operations which use mutability as short and compact as possible, so that the rest of the quantum program can be written using ordinary immutable variables.
+In particular, even though an adjoint specialization for an operation that uses a mutable variable cannot be auto-generated, auto-generation works fine for an operation calling a function that uses mutability.  For this reason, it is a good practice to make functions and operations that use mutability as short and compact as possible, so that the rest of the quantum program can be written using ordinary immutable variables.
 
+## Deconstruction
 
-## Deconstruction ##
-
-In addition to assigning a single variable, the `let` and `mutable` keywords - or in fact any other binding construct - also allow for unpacking the contents of a [tuple type](#tuple-types).
-An assignment of this form is said to *deconstruct* the elements of that tuple.
-For instance, if we model a term in a Hamiltonian by a tuple, then we can use deconstruction to access the different data that we need to simulate under that term:
+In addition to assigning a single variable, the `let` and `mutable` keywords - or in fact any other binding construct - also allow for unpacking the contents of a [tuple type](../language/type-model#tuple-types).  An assignment of this form is said to *deconstruct* the elements of that tuple.  For instance, if we model a term in a Hamiltonian by a tuple, then we can use deconstruction to access the different data that we need to simulate under that term:
 
 ```qsharp
 // Represents H = 3.1 X_0 Z_1.

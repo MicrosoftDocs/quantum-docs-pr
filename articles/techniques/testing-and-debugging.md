@@ -310,7 +310,7 @@ In general, the state of a register that is entangled with another register is a
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-The following example shows you how you can use both <xref:microsoft.quantum.extensions.diagnostics.dumpregister> and <xref:microsoft.quantum.extensions.diagnostics.dumpmachine> in your Q# code:
+The following example shows you how you can use both <xref:microsoft.quantum.diagnostics.dumpregister> and <xref:microsoft.quantum.diagnostics.dumpmachine> in your Q# code:
 
 ```qsharp
 namespace app

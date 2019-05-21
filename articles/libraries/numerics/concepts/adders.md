@@ -11,10 +11,47 @@ WIP
 
 # Quantum Circuits To Add Integers 
 
-One of the basic tasks when it comes to building quantum circuit libraries for arithmetics is to bootstrap the functionality from simple building blocks. A useful building block are adders, i.e., the operation that takes two inputs $x$ and $y$, each represented on say $n$ bits, and produces the sum $x+y$ which in itself is an $n+1$ bit integers. There are several ways this can be accomplished on a quantum computer. 
+Quantum algorithms 
 
-## Takahashi-Tani-Kunihiro Adder
+One of the basic building blocks of arithmetic operations is integer addition. Some quantum algorithms require that two integers are added together in superposition. This can be done in place, which means that two $n$-qubit registers are given and the sum of the two integers encoded in them is written to one of them, say the second one. Of course, the sum of two $n$-bit integers can have $n+1$ bits, so an additional bit is needed to keep track of the carry bit. This means that the addition of two $n$-qubit integers $x$ and $y$ can be considered as being the operation
+$$
+\ket x\ket y \ket 0\mapsto \ket x\ket{x+y \mod 2^n} \ket c.
+$$
+Both registers $\ket x$ and $\ket y$ are $n$-qubit registers and the carry out qubit initialized as $\ket 0$ holds the carry bit $c$ after the addition. As integers, the identity $x + y = (x+y \mod 2^n) + c\cdot 2^n$.
 
-## Cuccaro-D...-K...-M... Adder
+## Ripple-carry Addition
+Such a quantum addition algorithm can be implemented mirroring classical integer addition while making sure that the computation is reversible. In the first part of the algorithm, a sequence of carry operations propagate the carry bit from the least significant bits up to the carry bit $c$. Then, in the reverse order, it actually computes the sum and reverses the carry operations by using their adjoint counterparts. The carry and sum operations as in the QKD are shown below.
 
-## Draper Adder
+```qsharp
+operation Carry (carryIn: Qubit, summand1: Qubit, summand2: Qubit, carryOut: Qubit) : Unit
+{
+    body (...) {
+        CCNOT (summand1, summand2, carryOut);
+        CNOT (summand1, summand2);
+        CCNOT (carryIn, summand2, carryOut);
+    }
+    adjoint auto;
+    controlled auto;
+    adjoint controlled auto;
+}
+```
+
+```qsharp
+operation Sum (carryIn: Qubit, summand1: Qubit, summand2: Qubit) : Unit
+{
+    body (...) {
+        CNOT (summand1, summand2);
+        CNOT (carryIn, summand2);
+    }
+    adjoint auto;
+    controlled auto;
+    adjoint controlled auto;
+}
+```
+
+## Addition with Fewer Qubits
+Cuccaro-Draper-Kutin-Moulton 
+
+Takahashi-Tani-Kunihiro
+
+

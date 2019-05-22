@@ -13,13 +13,13 @@ ms.topic: article
 # ms.technology: tech-name-from-white-list
 ---
 
-# Going Further #
+# Going further
 
 Now that you've seen how to write interesting quantum programs in Q#, this section goes further by introducing a few more advanced topics that should prove useful going forward.
 
 <!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
-## Generic Operations and Functions ##
+## Generic operations and functions
 
 > [!TIP]
 > This section assumes some basic familiarity with [generics in C#](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics), [generics in F#](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/), [C++ templates](https://docs.microsoft.com/cpp/cpp/templates-cpp), or similar approaches to metaprogramming in other languages.
@@ -65,7 +65,7 @@ For instance, if we find a bug in `Map`, then we must ensure that the fix is app
 Moreover, if we construct a new tuple or UDT, then we must now also construct a new `Map` to go along with the new type.
 While this is tractable for a small number of such functions, as we collect more and more functions of the same form as `Map`, the cost of introducing new types becomes unreasonably large in fairly short order.
 
-Much of this difficulty results, however, from that the we have not given the compiler the information it needs to recognize how the different versions of `Map` are related.
+Much of this difficulty results because we have not given the compiler the information it needs to recognize how the different versions of `Map` are related.
 Effectively, we want the compiler to treat `Map` as some kind of mathematical function from Q# *types* to Q# functions.
 This notion is formalized by allowing functions and operations to have *type parameters*, as well as their ordinary tuple parameters.
 In the examples above, we wish to think of `Map` as having type parameters `Int, Pauli` in the first case and `Double, String` in the second case.
@@ -77,7 +77,7 @@ For the most part, these type parameters can then be used as though they were or
 Returning to the example above, then, we can see that we need `Map` to have type parameters, one to represent the input to `fn` and one to represent the output from `fn`.
 In Q#, this is written by adding angle brackets (that's `<>`, not brakets $\braket{}$!) after the name of a function or operation in its declaration, and by listing each type parameter.
 The name of each type parameter must start with a tick `'`, indicating that it is a type parameter and not a ordinary type (also known as a *concrete* type).
-For `Map`, we thus write:
+Thus, for `Map` we write:
 
 ```qsharp
 function Map<'Input, 'Output>(fn : 'Input -> 'Output, values : 'Input[]) : 'Output {
@@ -135,12 +135,11 @@ function Compose<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B)) : ('A -
 The Q# standard libraries provide a range of such type-parameterized operations and functions to make higher-order control flow easier to express.
 These are discussed further in the [Q# standard library guide](xref:microsoft.quantum.libraries.standard.intro).
 
-## Borrowing Qubits ##
+## Borrowing qubits
 
 The borrowing mechanism allows the allocation of qubits that can be used as scratch space during a computation. These qubits are generally not in a clean state, i.e., they are not necessarily initialized in a known state such as $\ket{0}$. One also speaks of "dirty" qubits as their state is unknown and can even be entangled with other parts of the quantum computer's memory. Among the known use cases of dirty qubits are implementations of multi-controlled CNOT gates that require only very few qubits and implementation of incrementers.
 
-In the canon there are examples that use the `borrowing` keyword, for instance the function `MultiControlledXBorrow` defined below.
-If `controls` denotes the control qubits that should be added to an `X` operation, then an overall of `Length(controls)-2` many dirty ancillas will be added by this implementation.
+In the canon there are examples that use the `borrowing` keyword, for instance the function `MultiControlledXBorrow` defined below.  If `controls` denotes the control qubits that should be added to an `X` operation, then an overall of `Length(controls)-2` many dirty ancillas will be added by this implementation.
 
 ```qsharp
 operation MultiControlledXBorrow ( controls : Qubit[] , target : Qubit ) : Unit
@@ -179,6 +178,6 @@ is Adj + Ctl {
 }
 ```
 
-Note that extensive use of the `With` combinator---in its form that is applicable for operations that support adjoint, i.e., `WithA`---was made in this example which is good programming style as adding control to structures involving `With` only propagates control to the inner operation. Further note that here in addition to the `body` of the operation an implementation of the `controlled` body of the operation was explicitly provided, rather than resorting to a `controlled auto` statement. The reason for this is that we know from the structure of the circuit how to easily add further controls which is beneficial compared to adding control to each and every individual gate in the `body`. 
+Note that extensive use of the `With` combinator---in its form that is applicable for operations that support adjoint, i.e., `WithA`---in this example, which is good programming style as adding control to structures involving `With` only propagates control to the inner operation. Further note that here in addition to the `body` of the operation an implementation of the `controlled` body of the operation is explicitly provided, rather than resorting to a `controlled auto` statement. The reason for this is that we know from the structure of the circuit how to easily add further controls, which is beneficial compared to adding control to each and every individual gate in the `body`. 
 
-It is instructive to compare this code with another canon function `MultiControlledXClean` which achieves the same goal of implementing a multiply-controlled `X` operation, however, which uses several clean qubits using the `using` mechanism. 
+It is instructive to compare this code with another canon function `MultiControlledXClean` that achieves the same goal of implementing a multiply-controlled `X` operation, however, which uses several clean qubits with the `using` mechanism. 

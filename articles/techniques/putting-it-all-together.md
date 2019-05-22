@@ -14,11 +14,11 @@ ms.topic: article
 # ms.technology: tech-name-from-white-list
 ---
 
-# Putting it All Together: Teleportation #
+# Putting it All Together: Teleportation
 Let's return to the example of the teleportation circuit defined in [Quantum Circuits](xref:microsoft.quantum.concepts.circuits). We're going to use this to illustrate the concepts we've learned so far. An explanation of quantum teleportation is provided below for those who are unfamiliar with the theory, followed by a walkthrough of the code implementation in Q#. 
 
 ## Quantum Teleportation: Theory
-Quantum teleportation is a technique for sending an unknown quantum state (which we'll refer to as the '__message__') from a qubit in one location to a qubit in another location (we'll refer to these qubits as '__here__' and '__there__', respectively). We can represent our __message__ as a vector using Dirac notation: 
+Quantum teleportation is a technique for sending an unknown quantum state, which we'll refer to as the '__message__', from a qubit in one location to a qubit in another location (we'll refer to these qubits as '__here__' and '__there__', respectively). We can represent our __message__ as a vector using Dirac notation: 
 
 $$
 \ket{\psi} = \alpha\ket{0} + \beta\ket{1}

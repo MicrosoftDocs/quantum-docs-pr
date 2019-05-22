@@ -14,7 +14,7 @@ ms.topic: article
 # ms.technology: tech-name-from-white-list
 ---
 
-# Q# Type Model #
+# Q# Type Model
 
 In discussing how to define Q# operations and functions, we have seen that inputs to and outputs from callables are each denoted along with their *types*.
 At this point, it is helpful to take a step back and discuss these types in more detail.
@@ -28,7 +28,7 @@ In particular, we note that Q# is a *strongly-typed* language, such that careful
 Q# provides both primitive types, which can be used directly, and a variety of ways to produce new types from other types.
 We describe each in the rest of this section.
 
-## Primitive Types ##
+## Primitive Types
 
 The Q# language provides a small set of *primitive types* that can be used throughout operations and functions.
 
@@ -43,9 +43,9 @@ The Q# language provides a small set of *primitive types* that can be used throu
 
 In addition, Q# defines a primitive type `Qubit` to model an opaque reference to a qubit within a target machine.
 A value of type `Qubit` cannot be directly used in Q#, but can be passed to operations defined by a target machine (such as gates and measurements) in order to do interesting things.
-We will consider the `Qubit` type in much more detail in the section on [using qubits](#using-qubits).
+We will consider the `Qubit` type in much more detail in the section [Working with qubits](working-with-qubits).
 
-## Tuple Types ##
+## Tuple Types
 
 Given zero or more different types `T0`, `T1`, ..., `Tn`, we can denote a new  *tuple type* as `(T0, T1, ..., Tn)`.
 Values of the new tuple type are tuples formed by sequences of values from each type in the tuple.
@@ -60,7 +60,7 @@ In Q#, a tuple type with exactly one element is considered to be equivalent to t
 For instance, there is no difference between the types `Qubit`, `(Qubit)`, and `((((Qubit))))`.
 In particular, this means that an operation or function whose input tuple or output tuple type has one field can be thought of as taking a single argument or returning a single value.
 
-## Array Types ##
+## Array Types
 
 Given any other type `T`, the type `T[]` denotes an array of values of that type.
 For instance, a collection of integers is denoted `Int[]`, while an array of arrays of `(Bool, Pauli)` values is denoted `(Bool, Pauli)[][]`.
@@ -90,7 +90,7 @@ let ten = arr[0]; // 10
 let odds = arr[1..2..4]; // [11, 49]
 ```
 
-## Operation and Function Types ##
+## Operation and Function Types
 
 As noted above, operations and functions are values in and of themselves in Q#.
 The types of these values are constructed from the types of the input and output tuples that each operation and function takes and returns, as well as its characteristics.
@@ -111,14 +111,14 @@ Informally, we can read that type as "a classical function which takes operation
 In order to require support for the `Controlled` and/or `Adjoint` functor in an operation type, we need to add an annotation indicating the corresponding characteristics.
 An annotation `is Ctl` for example indicates that the operation is controllable. 
 If we want to require that an operation of that type supports both the `Adjoint` and `Controlled` functor we can express this as `(Qubit => Unit is Adj + Ctl)`. 
-The used operation characteristics `Adj` and `Ctl` strictly speaking are two pre-defined sets of labels, where each label indicates a particular operation characteristics like e.g. support for a particular functor.
-Hence, `+` is used to indicate the union of those two sets, and `*` is used to indicate the intersection - i.e. the labels that are common to both sets.  
+The used operation characteristics `Adj` and `Ctl` strictly speaking are two pre-defined sets of labels, where each label indicates a particular operation characteristics, e.g. support for a particular functor.
+Hence, `+` is used to indicate the union of those two sets, and `*` is used to indicate the intersection, i.e. the labels that are common to both sets.  
 
-## User-Defined Types ##
+## User-Defined Types
 
 The final way to construct new types in Q# is with *user-defined types* (UDTs).
 For any tuple type `T`, we can declare a new user-defined type that is a subtype of `T` with the `newtype` statement.
-In the @"microsoft.quantum.canon" namespace, for instance, complex numbers are defined as a user-defined type:
+In the <xref:microsoft.quantum.canon> namespace, for instance, complex numbers are defined as a user-defined type:
 
 ```qsharp
 newtype Complex = (Double, Double);
@@ -132,8 +132,7 @@ let realUnit = Complex(1.0, 0.0);
 let imaginaryUnit = Complex(0.0, 1.0);
 ```
 
-In order to access the items in a user defined type, the tuple first needs to be extracted to give an expression of the corresponding tuple type. 
-The postfix operator `!` will do this extraction.
+In order to access the items in a user defined type, the tuple first needs to be extracted to give an expression of the corresponding tuple type.  The postfix operator `!` will do this extraction.
 This lets us write out accessor functions into the structure of a user-defined type, for instance:
 
 ```qsharp

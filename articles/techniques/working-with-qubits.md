@@ -28,9 +28,9 @@ At the end of the `using` block, any qubits allocated by that block are immediat
 > [!WARNING]
 > Target machines expect that qubits are in the $\ket{0}$ state immediately before deallocation, so that they can be reused and offered to other `using` blocks for allocation.
 > Whenever possible, use unitary operations to return any allocated qubits to $\ket{0}$.
-> If need be, the @"microsoft.quantum.intrinsic.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$. Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation. 
+> If need be, the <xref:microsoft.quantum.intrinsic.reset> operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$. Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation. 
 
-## Intrinsic Operations##
+## Intrinsic Operations
 
 Once allocated, a qubit can then be passed to functions and operations.
 In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.
@@ -65,7 +65,7 @@ operation Example() : Unit {
 ```
 
 > [!TIP]
-> Later, we will see more compact ways of writing this operation that do not require manual flow control.
+> Later, we will see more compact ways of writing this operation that do not require manual flow control.  <!-- link? -->
 
 We can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the intrinsic operation `H : (Qubit => Unit is Adj + Ctl)`:
 

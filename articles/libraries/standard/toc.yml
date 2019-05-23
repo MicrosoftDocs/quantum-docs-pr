@@ -18,3 +18,5 @@
   href: error-correction.md
 - name: Applications
   href: applications.md
+- name: Testing and Diagnostics
+  href: diagnostics.md

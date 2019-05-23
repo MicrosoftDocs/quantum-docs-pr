@@ -89,6 +89,6 @@ In addition to the general practice of documentation writing, in writing API doc
 - A reader may read your API documentation on the main API reference site, on the summary for each namespace, or even from within their IDE through the use of hover information. Making sure that `/// # Summary` isn't longer than about a sentence helps your reader quickly sort out whether they need to read further or look elsewhere, and can help in quickly scanning through namespace summaries.
 - Your documentation may well wind up being much longer than the code itself, but that's OK! Even a small piece of code can have unexpected effects to users that don't know the context in which that code exists. By providing concrete examples and clear explanations, you can help users make the best use of the code that's available to them.
 
-## LaTeX Formatting ##
+<!-- ## LaTeX Formatting ##
 
-**TODO**
+**TODO** -->

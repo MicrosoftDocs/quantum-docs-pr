@@ -34,8 +34,6 @@ Having said the above, it's helpful to take a few moments to say what a pull req
 When working with Git, any changes are represented as _commits_ that describe how those changes are related to the state of the repository before those changes.
 We'll often draw diagrams in which commits are drawn as circles with arrows from previous commits.
 
-**TODO: example**
-
 Suppose you have started a contribution in a _branch_ called `feature`.
 Then your fork of **Microsoft/Quantum** might look something like this:
 
@@ -61,6 +59,7 @@ There are two main ways to make a pull request.
 For small changes that only affect a single file, the GitHub web interface can be used to make a pull request entirely online.
 For more complicated contributions, it's most often easier to use your local computer to prepare for a pull request first.
 
+<!--
 ### Using the Web Interface ###
 
 **TODO**
@@ -78,11 +77,12 @@ This way, you can edit your personal fork to your heart's content before making 
 
 **TODO: PR ettiquette, reviews, etc.**
 
+-->
+
 ## Next steps ##
 
 Congratulations on using Git to help out the Quantum Development Kit community!
 To learn more about how to contribute code, please continue with the following guide.
 
-<div class="nextstepaction">
-[Learn how to contribute code](xref:microsoft.quantum.contributing.code)
-</div>
+> [!div class="nextstepaction"]
+> [Learn how to contribute code](xref:microsoft.quantum.contributing.code)

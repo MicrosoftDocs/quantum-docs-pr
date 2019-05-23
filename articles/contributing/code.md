@@ -32,14 +32,14 @@ For instance, the following function is used to ensure that the <xref:microsoft.
 If the output of `Fst` or `Snd` is incorrect, the `fail` statement is used to cause the test to fail.
 
 ```qsharp
-function PairTest () : Unit {    
+function PairTest () : Unit {
     let pair = (12, PauliZ);
-    
+
     if (Fst(pair) != 12) {
         let actual = Fst(pair);
         fail $"Expected 12, actual {actual}.";
     }
-    
+
     if (Snd(pair) != PauliZ) {
         let actual = Snd(pair);
         fail $"Expected PauliZ, actual {actual}.";
@@ -48,11 +48,11 @@ function PairTest () : Unit {
 ```
 
 More complicated conditions can be checked using the techniques in the [testing section](xref:microsoft.quantum.libraries.standard.testing) of the standard libraries guide.
-For instance, the following test checks that `H(q); X(q); H(q);` as called by <xref:microsoft.quantum.canon.with> does the same thing as `Z(q)`.
+For instance, the following test checks that `H(q); X(q); H(q);` as called by <xref:microsoft.quantum.canon.applywith> does the same thing as `Z(q)`.
 
 ```qsharp
-operation WithTest () : Unit {    
-    let actual = With(H, X, _);
+operation WithTest () : Unit {
+    let actual = ApplyWith(H, X, _);
     let expected = Z;
     AssertOperationsEqualReferenced(ApplyToEach(actual, _), ApplyToEachA(expected, _), 4);
 }
@@ -67,10 +67,10 @@ This helps the rest of the community to maintain and develop your feature, and i
 
 Locally, unit tests can be run using the Visual Studio Test Explorer or the `dotnet test` command, so that you can check your contribution before opening up a pull request.
 
-
+<!-- TODO:
 ### Comments and Documentation ###
 
-### Citations and References ###
+### Citations and References ### -->
 
 ## When We'll Reject a Pull Request ##
 
@@ -96,6 +96,5 @@ We appreciate your help in realizing this goal.
 Thanks for helping to make the Quantum Development Kit a great resource for the entire quantum programming community!
 To learn more, please continue with the following guide on Q# style.
 
-<div class="nextstepaction">
-[Learn about Q# style guidelines](xref:microsoft.quantum.contributing.style)
-</div>
+> [!div class="nextstepaction"]
+> [Learn about Q# style guidelines](xref:microsoft.quantum.contributing.style)

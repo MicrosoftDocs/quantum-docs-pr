@@ -77,7 +77,7 @@ For the example of `PrepareTrialState`, we might write something like the follow
 /// algorithm.
 ///
 /// # See Also
-/// - Microsoft.Quantum.Primitive.Ry
+/// - Microsoft.Quantum.Intrinsic.Ry
 operation PrepareTrialState(angles : Double[], register : Qubit[]) : Unit {
     // ...
 }

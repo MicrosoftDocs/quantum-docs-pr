@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.convert.biginttobools
+name: BigIntToBools
+type: function
+namespace: Microsoft.Quantum.Extensions.Convert
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.convert.bigintasboolarray".
+syntax: 'function BigIntToBools (a : BigInt) : Bool[]'
+input:
+  content: '(a : BigInt)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: Bool[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Bool
+...

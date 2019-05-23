@@ -1,0 +1,185 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.math
+name: Microsoft.Quantum.Extensions.Math
+functions:
+- uid: microsoft.quantum.extensions.math.absb
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.absl".
+- uid: microsoft.quantum.extensions.math.absd
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.absd".
+- uid: microsoft.quantum.extensions.math.absi
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.absi".
+- uid: microsoft.quantum.extensions.math.arccos
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.arccos".
+- uid: microsoft.quantum.extensions.math.arcsin
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.arcsin".
+- uid: microsoft.quantum.extensions.math.arctan
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.arctan".
+- uid: microsoft.quantum.extensions.math.arctan2
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.arctan2".
+- uid: microsoft.quantum.extensions.math.ceiling
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.ceiling".
+- uid: microsoft.quantum.extensions.math.cos
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.cos".
+- uid: microsoft.quantum.extensions.math.cosh
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.cosh".
+- uid: microsoft.quantum.extensions.math.divremb
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.divreml".
+- uid: microsoft.quantum.extensions.math.e
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.e".
+- uid: microsoft.quantum.extensions.math.expd
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.expd".
+- uid: microsoft.quantum.extensions.math.floor
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.floor".
+- uid: microsoft.quantum.extensions.math.ieeeremainder
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.ieeeremainder".
+- uid: microsoft.quantum.extensions.math.log
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.log".
+- uid: microsoft.quantum.extensions.math.log10
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.log10".
+- uid: microsoft.quantum.extensions.math.maxb
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.maxl".
+- uid: microsoft.quantum.extensions.math.maxd
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.maxd".
+- uid: microsoft.quantum.extensions.math.maxi
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.maxi".
+- uid: microsoft.quantum.extensions.math.minb
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.minl".
+- uid: microsoft.quantum.extensions.math.mind
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.mind".
+- uid: microsoft.quantum.extensions.math.mini
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.mini".
+- uid: microsoft.quantum.extensions.math.modpowb
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.modpowl".
+- uid: microsoft.quantum.extensions.math.pi
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.pi".
+- uid: microsoft.quantum.extensions.math.powd
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.powd".
+- uid: microsoft.quantum.extensions.math.round
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.round".
+- uid: microsoft.quantum.extensions.math.signb
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.signl".
+- uid: microsoft.quantum.extensions.math.signd
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.signd".
+- uid: microsoft.quantum.extensions.math.signi
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.signi".
+- uid: microsoft.quantum.extensions.math.sin
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.sin".
+- uid: microsoft.quantum.extensions.math.sinh
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.sinh".
+- uid: microsoft.quantum.extensions.math.sqrt
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.sqrt".
+- uid: microsoft.quantum.extensions.math.tan
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.tan".
+- uid: microsoft.quantum.extensions.math.tanh
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.tanh".
+- uid: microsoft.quantum.extensions.math.truncate
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.math.truncate".
+...

@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.measure
+name: Measure
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.intrinsic.measure".
+syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[])'
+  types:
+  - name: bases
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - isPrimitive: true
+    uid: Result
+...

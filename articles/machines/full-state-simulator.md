@@ -9,10 +9,10 @@ ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
 ---
 
-# Quantum Development Kit Full State Simulator 
+# Quantum Development Kit Full State Simulator
 
 The Quantum Development Kit provides a full state quantum simulator 
-similar to [`LIQUi|>`](http://stationq.github.io/Liquid/) from Microsoft Research.
+similar to [LIQ$Ui|\rangle$](http://stationq.github.io/Liquid/) from Microsoft Research.
 This simulator can be used to execute and debug quantum algorithms written in Q#
 on your computer.
 
@@ -30,7 +30,7 @@ of the quantum operation you want to execute along with the rest of the paramete
 
 ## IDisposable
 
-The `QuantumSimulator` class implements `IDisposable` thus the `Dispose` method
+The `QuantumSimulator` class implements <xref:System.IDisposable>, thus the `Dispose` method
 should be called once the instance of the simulator is not used anymore. The best way 
 to do this is to wrap the simulator within a `using` statement, as in the example above.
 

@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyquantumfouriertransformle
+name: ApplyQuantumFourierTransformLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+syntax: 'operation ApplyQuantumFourierTransformLE (qs : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(qs : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: qs
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

@@ -1,0 +1,71 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.adiabaticstateenergyunitary
+name: AdiabaticStateEnergyUnitary
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.simuilation.pnormalized".
+syntax: 'operation AdiabaticStateEnergyUnitary (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
+input:
+  content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
+  types:
+  - name: nQubits
+    isPrimitive: true
+    uid: Int
+  - name: statePrepUnitary
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: adiabaticUnitary
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: qpeUnitary
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: phaseEstAlgorithm
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.oracles.discreteoracle
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Double
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+...

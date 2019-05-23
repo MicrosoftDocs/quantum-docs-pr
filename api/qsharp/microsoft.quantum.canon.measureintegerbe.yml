@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.measureintegerbe
+name: MeasureIntegerBE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  This operation has been removed.
+syntax: 'operation MeasureIntegerBE (target : Microsoft.Quantum.Arithmetic.BigEndian) : Int'
+input:
+  content: '(target : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: target
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+...

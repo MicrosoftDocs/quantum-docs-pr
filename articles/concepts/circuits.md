@@ -83,13 +83,9 @@ For the special cases where $G=X$ and $G=Z$ we introduce the following notation 
 Q# provides methods to automatically generate the controlled version of an operation, which saves the programmer from having to hand code these operations. An example of this is shown below:
 
 ```qsharp
-operation PrepareSuperposition(qubit : Qubit) : () {
-    body {
-        H(qubit);
-    }
-
-    // Auto-generate the controlled version of the operation
-    controlled auto;
+operation PrepareSuperposition(qubit : Qubit) : Unit
+is Ctl { // Auto-generate the controlled specialization of the operation
+    H(qubit);
 }
 ```
 

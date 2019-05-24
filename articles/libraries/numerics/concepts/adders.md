@@ -1,8 +1,8 @@
 ---
 title: Integer Addition | Microsoft Docs
 description: Integer Addition Conceptual Docs
-author: Martin Roetteler
-ms.author: martinro
+author: cryptosidh
+ms.author: mnaehrig
 ms.date: 4/16/2019
 uid: microsoft.quantum.numerics.concepts.adders
 ---
@@ -25,7 +25,7 @@ The signature of such an operation is shown here. The two input $n$-qubit intege
 operation RippleCarryAdderD (xs : LittleEndian, ys : LittleEndian, carry : Qubit) : Unit
 ```
 
-Such a quantum addition algorithm can be implemented mirroring classical integer addition while making sure that the computation is reversible. The classical way of carry propagation for addition is leads to a quantum ripple carry addition algorithm. In the first part of the algorithm, a sequence of carry operations propagate the carry bit from the least significant bits up to the carry bit $c$. Now, the carry-out bit is set and, in the reverse order, the algorithm then computes the sum while uncomputing the carry bits by reversing the carry operations by using their adjoint counterparts. The carry opreration `Carry` as used in `RippleCarryAdderD` is shown below.
+Such a quantum addition algorithm can be implemented mirroring classical integer addition while making sure that the computation is reversible. The classical way of carry propagation for addition leads to a quantum ripple carry addition algorithm. In the first part of the algorithm, a sequence of carry operations propagate the carry bit from the least significant bits up to the carry bit `carry`. Now, the carry-out bit is set and, in the reverse order, the algorithm then computes the sum while uncomputing the carry bits by reversing the carry operations using their adjoint counterparts. The carry opreration `Carry` as used in `RippleCarryAdderD` is shown below.
 
 ```qsharp
 operation Carry (carryIn: Qubit, summand1: Qubit, summand2: Qubit, carryOut: Qubit) : Unit
@@ -77,4 +77,5 @@ Cuccaro-Draper-Kutin-Moulton
 
 Takahashi-Tani-Kunihiro
 
+## Using Integer Addition
 

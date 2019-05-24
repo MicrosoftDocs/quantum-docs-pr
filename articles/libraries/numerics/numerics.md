@@ -28,7 +28,7 @@ open Microsoft.Quantum.Arithmetic;
 
 ## Types
 
-The Numerics library supports the following types
+The numerics library supports the following types
 
 1. **`LittleEndian`**: A qubit array `qArr : Qubit[]` that represents an integer where `qArr[0]` denotes the least significant
 bit.

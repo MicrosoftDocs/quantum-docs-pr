@@ -1,2 +1,10 @@
+- name: Reporting Bugs
+  href: reporting-bugs.md
+- name: Contributing Documentation
+  href: docs.md
+- name: Opening Pull Requests
+  href: pull-requests.md
+- name: Contributing Code
+  href: code.md
 - name: Style Guide
   href: style-guide.md

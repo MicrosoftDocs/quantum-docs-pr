@@ -21,7 +21,7 @@ This sequence of controlled modular multiplications can be simplified further: E
 
 
 Given that so many steps are necessary to arrive at an actual implementation, it would be extremely helpful to have such functionality available from the start.
-This is why the QDK provides support for a wide range of numerics functionality.
+This is why the Quantum Development Kit provides support for a wide range of numerics functionality.
 
 
 ## Functionality

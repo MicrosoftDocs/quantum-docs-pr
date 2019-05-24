@@ -26,7 +26,7 @@ This is why the Quantum Development Kit provides support for a wide range of num
 
 ## Functionality
 
-Besides the integer arithmetic mentioned thus far, the Numerics Library provides
+Besides the integer arithmetic mentioned thus far, the numerics library provides
 
  - (Un)signed integer functionality (multiply, square, division with remainder, inversion, ...) with one or two quantum integer numbers as input
  - Fixed-point functionality (add / subtract, multiply, square, 1/x, polynomial evaluation) with one or two quantum fixed-point numbers as input

@@ -43,7 +43,8 @@ Now `op1` and `op2` are both obtained using partial application and share a
 qubit. When the user calls `DoBoth` in the example above the result of the operation
 will depend on the order of `op1` and `op2` inside `DoBoth`. This is definitely
 not what the user would expect to happen. The `Distinct Inputs Checker` will detect
-such situations when enabled and will throw `DistinctInputsCheckerException`. See the API documentation on [DistinctInputsCheckerException](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) for more details.
+such situations when enabled and will throw `DistinctInputsCheckerException`.
+See the API documentation on [DistinctInputsCheckerException](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) for more details.
 
 ## Using the Distinct Inputs Checker in your C# Program
 

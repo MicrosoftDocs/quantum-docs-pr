@@ -118,7 +118,7 @@ Hence, `+` is used to indicate the union of those two sets, and `*` is used to i
 
 The final way to construct new types in Q# is with *user-defined types* (UDTs).
 For any tuple type `T`, we can declare a new user-defined type that is a subtype of `T` with the `newtype` statement.
-In the <xref:microsoft.quantum.canon> namespace, for instance, complex numbers are defined as a user-defined type:
+In the <xref:microsoft.quantum.math> namespace, for instance, complex numbers are defined as a user-defined type:
 
 ```qsharp
 newtype Complex = (Double, Double);

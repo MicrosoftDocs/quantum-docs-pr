@@ -41,11 +41,11 @@ As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libr
 This lets us prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:
 
 ```qsharp
+open Microsoft.Quantum.Arrays;
+
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit 
 is Adj + Ctl {
-
-    let nQubits = Length(register);
-    for (idxQubit in 0..nQubits - 1) {
+    for (idxQubit in IndexRange(register)) {
         if (bitstring[idxQubit]) {
             X(register[idxQubit]);
         }
@@ -65,7 +65,13 @@ operation Example() : Unit {
 ```
 
 > [!TIP]
-> Later, we will see more compact ways of writing this operation that do not require manual flow control.  <!-- link? -->
+> The `PrepareBitString` operation can also be written out more compactly using <xref:microsoft.quantum.canon.applytoeach> together with <xref:microsoft.quantum.canon.ccontrolled> and <xref:microsoft.quantum.arrays.zip>:
+> ```qsharp
+> operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit 
+> is Adj + Ctl {
+>     ApplyToEach(CControlled(X), Zip(bitstring, register));
+> } 
+> ```
 
 We can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the intrinsic operation `H : (Qubit => Unit is Adj + Ctl)`:
 

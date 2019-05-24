@@ -27,12 +27,14 @@ Now that you've seen how to write interesting quantum programs in Q#, this secti
 Many functions and operations that we might wish to define do not actually heavily rely on the types of their inputs, but rather only implicitly use their types via some other function or operation.
 For example, consider the *map* concept common to many functional languages; given a function $f(x)$ and a collection of values $\{x_1, x_2, \dots, x_n\}$, map returns a new collection $\{f(x_1), f(x_2), \dots, f(x_n)\}$.
 To implement this in Q#, we can take advantage of that functions are first class.
-Let's write out a quick example of `Map`, using ★ as a placeholder while we figure out what types we need.
+Let's write out a quick example of `Mapped`, using ★ as a placeholder while we figure out what types we need.
 
 ```qsharp
-function Map(fn : ★ -> ★, values : ★[]) : ★[] {
+open Microsoft.Quantum.Arrays;
+
+function Mapped(fn : ★ -> ★, values : ★[]) : ★[] {
     mutable mappedValues = new ★[Length(values)];
-    for (idx in 0..Length(values) - 1) {
+    for (idx in IndexRange(values)) {
         set mappedValues w/= idx <- fn(values[idx]);
     }
     return mappedValues;
@@ -43,46 +45,46 @@ Note this function looks very much the same no matter what actual types we subst
 A map from integers to Paulis, for instance, looks much the same as a map from floating-point numbers to strings:
 
 ```qsharp
-function MapIntsToPaulis(fn : Int -> Pauli, values : Int[]) : Pauli[] {
+function MappedIntsToPaulis(fn : Int -> Pauli, values : Int[]) : Pauli[] {
     mutable mappedValues = new Pauli[Length(values)];
-    for (idx in 0..Length(values) - 1) {
+    for (idx in IndexRange(values)) {
         set mappedValues w/= idx <- fn(values[idx]);
     }
     return mappedValues;
 }
 
-function MapDoublesToStrings(fn : Double -> String, values : Double[]) : String[] {
+function MappedDoublesToStrings(fn : Double -> String, values : Double[]) : String[] {
     mutable mappedValues = new String[Length(values)];
-    for (idx in 0..Length(values) - 1) {
+    for (idx in IndexRange(values)) {
         set mappedValues w/= idx <- fn(values[idx]);
     }
     return mappedValues;
 }
 ```
 
-In principle, we could write a version of `Map` for every pair of types that we encounter, but this introduces a number of difficulties.
-For instance, if we find a bug in `Map`, then we must ensure that the fix is applied uniformly across all versions of `Map`.
-Moreover, if we construct a new tuple or UDT, then we must now also construct a new `Map` to go along with the new type.
-While this is tractable for a small number of such functions, as we collect more and more functions of the same form as `Map`, the cost of introducing new types becomes unreasonably large in fairly short order.
+In principle, we could write a version of `Mapped` for every pair of types that we encounter, but this introduces a number of difficulties.
+For instance, if we find a bug in `Mapped`, then we must ensure that the fix is applied uniformly across all versions of `Mapped`.
+Moreover, if we construct a new tuple or UDT, then we must now also construct a new `Mapped` to go along with the new type.
+While this is tractable for a small number of such functions, as we collect more and more functions of the same form as `Mapped`, the cost of introducing new types becomes unreasonably large in fairly short order.
 
-Much of this difficulty results because we have not given the compiler the information it needs to recognize how the different versions of `Map` are related.
-Effectively, we want the compiler to treat `Map` as some kind of mathematical function from Q# *types* to Q# functions.
+Much of this difficulty results because we have not given the compiler the information it needs to recognize how the different versions of `Mapped` are related.
+Effectively, we want the compiler to treat `Mapped` as some kind of mathematical function from Q# *types* to Q# functions.
 This notion is formalized by allowing functions and operations to have *type parameters*, as well as their ordinary tuple parameters.
-In the examples above, we wish to think of `Map` as having type parameters `Int, Pauli` in the first case and `Double, String` in the second case.
+In the examples above, we wish to think of `Mapped` as having type parameters `Int, Pauli` in the first case and `Double, String` in the second case.
 For the most part, these type parameters can then be used as though they were ordinary types: we use values of type parameters to make arrays and tuples, call functions and operations, and assign to ordinary or mutable variables.
 
 > [!NOTE]
 > The most extreme case of indirect dependence is that of qubits, where a Q# program cannot directly rely on the structure of the `Qubit` type, but **must** pass such types to other operations and functions.
 
-Returning to the example above, then, we can see that we need `Map` to have type parameters, one to represent the input to `fn` and one to represent the output from `fn`.
+Returning to the example above, then, we can see that we need `Mapped` to have type parameters, one to represent the input to `fn` and one to represent the output from `fn`.
 In Q#, this is written by adding angle brackets (that's `<>`, not brakets $\braket{}$!) after the name of a function or operation in its declaration, and by listing each type parameter.
 The name of each type parameter must start with a tick `'`, indicating that it is a type parameter and not a ordinary type (also known as a *concrete* type).
-Thus, for `Map` we write:
+Thus, for `Mapped` we write:
 
 ```qsharp
-function Map<'Input, 'Output>(fn : 'Input -> 'Output, values : 'Input[]) : 'Output {
+function Mapped<'Input, 'Output>(fn : 'Input -> 'Output, values : 'Input[]) : 'Output {
     mutable mappedValues = new 'Output[Length(values)];
-    for (idx in 0..Length(values) - 1) {
+    for (idx in IndexRange(values)) {
         set mappedValues w/= idx <- fn(values[idx]);
     }
     return mappedValues;
@@ -90,15 +92,15 @@ function Map<'Input, 'Output>(fn : 'Input -> 'Output, values : 'Input[]) : 'Outp
 ```
 
 Note that the definition of `Map<'Input, 'Output>` looks extremely similar to the versions we wrote out before.
-The only difference is that we have explicitly informed the compiler that `Map` doesn't directly depend on what `'Input` and `'Output` are, but works for any two types by using them indirectly through `fn`.
+The only difference is that we have explicitly informed the compiler that `Mapped` doesn't directly depend on what `'Input` and `'Output` are, but works for any two types by using them indirectly through `fn`.
 Once we have defined `Map<'Input, 'Output>` in this way, we can call it as though it was an ordinary function:
 
 ```qsharp
 // Represent Z₀ Z₁ X₂ Y₃ as a list of ints.
 let ints = [3, 3, 1, 2];
-// Here, we assume IntToPauli : Int -> Pauli
+// Here, we assume IntAsPauli : Int -> Pauli
 // looks up PauliI by 0, PauliX by 1, so forth.
-let paulis = Map(IntToPauli, ints);
+let paulis = Mapped(IntAsPauli, ints);
 ```
 
 > [!TIP]
@@ -162,13 +164,13 @@ is Adj + Ctl {
                 CCNOTByIndex(
                     totalNumberOfQubits - 1, totalNumberOfQubits - 2, lastDirtyQubit, _ );
             
-            WithA(outerOperation1, innerOperation, allQubits);
+            ApplyWithA(outerOperation1, innerOperation, allQubits);
             
             let outerOperation2 = 
                 CCNOTByIndexLadder(
                     numberOfDirtyQubits + 2, 2, 1, numberOfDirtyQubits - 1 , _ );
             
-            WithA(outerOperation2, innerOperation, allQubits);
+            ApplyWithA(outerOperation2, innerOperation, allQubits);
         }
     }
 
@@ -178,6 +180,6 @@ is Adj + Ctl {
 }
 ```
 
-Note that extensive use of the `With` combinator---in its form that is applicable for operations that support adjoint, i.e., `WithA`---in this example, which is good programming style as adding control to structures involving `With` only propagates control to the inner operation. Further note that here in addition to the `body` of the operation an implementation of the `controlled` body of the operation is explicitly provided, rather than resorting to a `controlled auto` statement. The reason for this is that we know from the structure of the circuit how to easily add further controls, which is beneficial compared to adding control to each and every individual gate in the `body`. 
+Note that extensive use of the `ApplyWith` combinator---in its form that is applicable for operations that support adjoint, i.e., `ApplyWithA`---in this example, which is good programming style as adding control to structures involving `ApplyWith` only propagates control to the inner operation. Further note that here in addition to the `body` of the operation an implementation of the `controlled` body of the operation is explicitly provided, rather than resorting to a `controlled auto` statement. The reason for this is that we know from the structure of the circuit how to easily add further controls, which is beneficial compared to adding control to each and every individual gate in the `body`. 
 
 It is instructive to compare this code with another canon function `MultiControlledXClean` that achieves the same goal of implementing a multiply-controlled `X` operation, however, which uses several clean qubits with the `using` mechanism. 

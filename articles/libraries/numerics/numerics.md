@@ -100,7 +100,7 @@ operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
 ## Sample: Evaluating smooth functions
 
 To evaluate smooth functions such as $\sin(x)$ on a quantum computer, where $x$ is a quantum `FixedPoint` number,
-the QDK Numerics Library provides the operations `EvaluatePolynomialFxP` and `Evaluate[Even/Odd]PolynomialFxP`.
+the Quantum Development Kit numerics library provides the operations `EvaluatePolynomialFxP` and `Evaluate[Even/Odd]PolynomialFxP`.
 
 The first, `EvaluatePolynomialFxP`, allows to evaluate a polynomial of the form
 $$

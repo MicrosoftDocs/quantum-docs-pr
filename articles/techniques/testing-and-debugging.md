@@ -134,7 +134,7 @@ This makes functions returning `()` a useful tool for embedding assertions and d
 
 ### Logging
 
-The intrinsic function @"microsoft.quantum.intrinsic.message" has type `(String -> Unit)` and enables the creation of diagnostic messages.
+The intrinsic function <xref:microsoft.quantum.intrinsic.message> has type `(String -> Unit)` and enables the creation of diagnostic messages.
 
 The `onLog` action of `QuantumSimulator` can be used to define actions performed when Q# code calls `Message`. By default logged messages are printed to standard output.
 
@@ -201,7 +201,7 @@ The <xref:microsoft.quantum.diagnostics> namespace provides several more functio
 
 ## Dump Functions
 
-To help troubleshooting quantum programs, the <xref:microsoft.quantum.diagnostics>) namespace offers two functions that can dump into a file the current status of the target machine: <xref:microsoft.quantum.diagnostics.dumpmachine> and <xref:microsoft.quantum.diagnostics.dumpregister>. The generated output of each depends on the target machine.
+To help troubleshooting quantum programs, the <xref:microsoft.quantum.diagnostics> namespace offers two functions that can dump into a file the current status of the target machine: <xref:microsoft.quantum.diagnostics.dumpmachine> and <xref:microsoft.quantum.diagnostics.dumpregister>. The generated output of each depends on the target machine.
 
 ### DumpMachine
 
@@ -211,7 +211,7 @@ $$
     \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10},
 \end{align}
 $$
-calling @"microsoft.quantum.extensions.diagnostics.dumpmachine" generates this output:
+calling <xref:microsoft.quantum.diagnostics.dumpmachine> generates this output:
 
 ```
 Ids:    [1;0;]
@@ -240,7 +240,7 @@ Notice how the IDs of the qubits are shown at the top in their significant order
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
-  > You can figure out a qubit id by using the @"microsoft.quantum.primitive.message" function and passing the qubit variable in the message, for example:
+  > You can figure out a qubit id by using the <xref:microsoft.quantum.intrinsic.message> function and passing the qubit variable in the message, for example:
   >
   > ```qsharp
   > Message($"0={register2[0]}; 1={register2[1]}");
@@ -255,19 +255,15 @@ Notice how the IDs of the qubits are shown at the top in their significant order
 
 ***
 
-
-@"microsoft.quantum.extensions.diagnostics.dumpmachine" is part of the  <xref:microsoft.quantum.diagnostics> namespace, so in order to use it you must add an `open` statement:
+<xref:microsoft.quantum.diagnostics.dumpmachine> is part of the  <xref:microsoft.quantum.diagnostics> namespace, so in order to use it you must add an `open` statement:
 
 ```qsharp
-namespace Samples
-{
+namespace Samples {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Diagnostics;
 
-    operation Operation () : Unit
-    {
-        using (qubits = Qubit[2])
-        {
+    operation Operation () : Unit {
+        using (qubits = Qubit[2]) {
             H(qubits[1]);
             DumpMachine("dump.txt");
         }
@@ -286,7 +282,7 @@ $$
     \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10} = - e^{-i\pi/4} ( (\frac{1}{\sqrt{2}} \ket{0} - \frac{(1 + i)}{2} \ket{1} ) \otimes \frac{-(1 + i)}{\sqrt{2}} \ket{0} ) ,
 \end{align}
 $$
-calling @"microsoft.quantum.extensions.diagnostics.dumpregister" for `qubit[0]` generates this output:
+calling <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[0]` generates this output:
 
 ```
 Ids:    [0;]
@@ -295,7 +291,7 @@ Wavefunction:
 1:      0               0
 ```
 
-and calling @"microsoft.quantum.extensions.diagnostics.dumpregister" for `qubit[1]` generates this output:
+and calling <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[1]` generates this output:
 
 ```
 Ids:    [1;]
@@ -304,7 +300,7 @@ Wavefunction:
 1:      -0.5            -0.5
 ```
 
-In general, the state of a register that is entangled with another register is a mixed state rather than a pure state. In this case, @"microsoft.quantum.extensions.diagnostics.dumpregister" outputs the following message:
+In general, the state of a register that is entangled with another register is a mixed state rather than a pure state. In this case, <xref:microsoft.quantum.diagnostics.dumpregister> outputs the following message:
 
 ```
 Qubits provided (0;) are entangled with some other qubit.

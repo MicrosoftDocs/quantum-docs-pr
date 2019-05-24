@@ -54,7 +54,9 @@ Throughout the rest of this guide, we will see how to use different language con
 
 ## Structure of Q# Source Files
 
-Minimally, a Q# source file consists of a *namespace declaration*, which specifies a .NET namespace which will contain the definitions in the source file.  Definitions from other Q# source files and libraries can be included using the `open` statement.  For instance, most of the operations defining fundamental gates are defined in the <xref:microsoft.quantum.intrinsic> namespace.
+Minimally, a Q# source file consists of a *namespace declaration*, which specifies a .NET namespace which will contain the definitions in the source file.
+Definitions from other Q# source files and libraries can be included using the `open` statement.
+For instance, most of the operations defining fundamental gates are defined in the <xref:microsoft.quantum.intrinsic> namespace.
 To make this available to our code, we simply `open` that namespace at the top of each file:
 
 ```qsharp

@@ -16,9 +16,9 @@ Before delving into the details of how to think of a Pauli measurement, it is us
 
 In order to concisely identify these subspaces, we need a language for describing them.  One way to do this is to describe the two subspaces by specifying them through a matrix that just has two unique eigenvalues, taken by convention to be $\pm 1$.  The simplest example of this is:
 
-  $$
-Z= \begin{bmatrix}1&0\\\\ 0&-1\end{bmatrix}.
-  $$
+$$
+  Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix}.
+$$
 
 The Pauli-$Z$ matrix clearly has two eigenvectors $\ket{0}$ and $|1\rangle$ with eigenvalues $\pm 1$.  Thus if we measure the qubit and obtain $\ket{0}$ we are in the $+1$ eigenspace (the set of all vectors that are formed of sums of  eigenvectors with only positive or only negative eigenvalues) of the operator and if we measure $|1\rangle$ we are in the $-1$ eigenspace of $Z$.  This process is referred to in the language of Pauli measurements as "measuring Pauli $Z$" and is entirely equivalent to performing a computational basis measurement.
 

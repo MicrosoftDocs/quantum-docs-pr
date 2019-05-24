@@ -29,8 +29,8 @@ Message($"About to rotate by an angle of {angle}...");
 
 The <xref:microsoft.quantum.diagnostics.dumpmachine> and <xref:microsoft.quantum.diagnostics.dumpregister> callables instruct target machines to provide diagnostic information about all currently allocated qubits or about a specific register of qubits, respectively.
 Each target machine varies in what diagnostic information is provided in response to a dump instruction.
-The <xref:microsoft.quantum.simulation.simulators.quantumsimulator> target machine, for instance, provides the host program with the state vector that it uses internally to represent a register of qubits.
-By comparison, the <xref:microsoft.quantum.simulation.simulators.toffolisimulator> target machine provides a single classical bit for each qubit.
+The <xref:Microsoft.Quantum.Simulation.QuantumSimulator> target machine, for instance, provides the host program with the state vector that it uses internally to represent a register of qubits.
+By comparison, the <xref:Microsoft.Quantum.Simulation.ToffoliSimulator> target machine provides a single classical bit for each qubit.
 
 
 ## Facts and Assertions ##
@@ -121,7 +121,7 @@ Then, using the likelihood function for quantum measurements,
         \right).
 \end{align}
 
-The <xref:microsoft.quantum.diagnostics.assertqubitstate> implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.math.complex>.
+The <microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.math.complex>.
 This is helpful when the expected state can be computed mathematically.
 
 ### Asserting Equality of Quantum Operations ###

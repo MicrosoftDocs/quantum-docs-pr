@@ -8,8 +8,7 @@
       "monikers": [],
       "moniker_ranges": [],
       "xref_query_tags": [
-        "/qsharp",
-        "/dotnet"
+        "/qsharp"
       ],
       "enable_xrefmap_share": true,
       "open_to_public_contributors": false,
@@ -42,7 +41,8 @@
       "monikers": [],
       "moniker_ranges": [],
       "xref_query_tags": [
-        "/qsharp"
+        "/qsharp",
+        "/dotnet"
       ],
       "enable_xrefmap_share": true,
       "open_to_public_contributors": false,

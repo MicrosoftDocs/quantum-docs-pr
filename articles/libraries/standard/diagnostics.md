@@ -29,8 +29,8 @@ Message($"About to rotate by an angle of {angle}...");
 
 The <xref:microsoft.quantum.diagnostics.dumpmachine> and <xref:microsoft.quantum.diagnostics.dumpregister> callables instruct target machines to provide diagnostic information about all currently allocated qubits or about a specific register of qubits, respectively.
 Each target machine varies in what diagnostic information is provided in response to a dump instruction.
-The <xref:microsoft.quantum.simulation.simulators.quantumsimulator> target machine, for instance, provides the host program with the state vector that it uses internally to represent a register of qubits.
-By comparison, the <xref:microsoft.quantum.simulation.simulators.toffolisimulator> target machine provides a single classical bit for each qubit.
+The <xref:Microsoft.Quantum.Simulation.QuantumSimulator> target machine, for instance, provides the host program with the state vector that it uses internally to represent a register of qubits.
+By comparison, the <xref:Microsoft.Quantum.Simulation.ToffoliSimulator> target machine provides a single classical bit for each qubit.
 
 
 ## Facts and Assertions ##

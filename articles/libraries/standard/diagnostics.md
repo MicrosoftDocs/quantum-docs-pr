@@ -121,7 +121,7 @@ Then, using the likelihood function for quantum measurements,
         \right).
 \end{align}
 
-The <xref:microsoft.quantum.diagnostic.assertqubitstate> implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.canon.complex>.
+The <xref:microsoft.quantum.diagnostics.assertqubitstate> implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.math.complex>.
 This is helpful when the expected state can be computed mathematically.
 
 ### Asserting Equality of Quantum Operations ###
@@ -134,7 +134,7 @@ We may be interested in asserting that $U^\dagger(t) = U(-t)$, as expected if $t
 Broadly speaking, there are two different strategies that we can follow in making the assertion that two operations `U` and `V` act identically.
 First, we can check that `U(target); (Adjoint V)(target);` preserves each state in a given basis.
 Second, we can check that `U(target); (Adjoint V)(target);` acting on half of an entangled state preserves that entanglement.
-These strategies are implemented by the canon operations <xref:microsoft.quantum.dianostics.assertoperationsequalinplace> and <xref:microsoft.quantum.dianostics.assertoperationsequalreferenced>, respectively.
+These strategies are implemented by the canon operations <xref:microsoft.quantum.diagnostics.assertoperationsequalinplace> and <xref:microsoft.quantum.diagnostics.assertoperationsequalreferenced>, respectively.
 
 > [!NOTE]
 > The referenced assertion discussed above works based on the [Choi–Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality), a mathematical framework which relates operations on $n$ qubits to entangled states on $2n$ qubits.

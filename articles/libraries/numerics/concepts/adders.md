@@ -11,24 +11,21 @@ WIP
 
 # Quantum Circuits To Add Integers 
 
-One of the basic building blocks of arithmetic operations is integer addition. Some quantum algorithms require that two integers are added together in superposition. This can be done in place, which means that two $n$-qubit registers are given and the sum of the two integers encoded in them is written to one of them, say the second one. Of course, the sum of two $n$-bit integers can have $n+1$ bits, so an additional bit is needed to keep track of the carry bit. This means that the addition of two $n$-qubit integers $x$ and $y$ can be considered as being the operation
+One of the basic building blocks of arithmetic operations is integer addition. Some quantum algorithms require that two integers are added together in superposition. This can be done in place, which means that two $n$-qubit registers are given and the sum of the two integers encoded in them is written to one of them, say the second one. Of course, the sum of two $n$-bit integers can have $n+1$ bits, so an additional bit is needed to keep track of the carry bit. This means that the addition of two $n$-qubit integers $x$ and $y$ can be considered as the operation
 $$
 \ket x\ket y \ket 0\mapsto \ket x\ket{x+y \mod 2^n} \ket c.
 $$
-Both registers $\ket x$ and $\ket y$ are $n$-qubit registers and the carry out qubit initialized as $\ket 0$ holds the carry bit $c$ after the addition. As integers, the identity $x + y = (x+y \mod 2^n) + c\cdot 2^n$ holds.
+Both registers $\ket x$ and $\ket y$ are $n$-qubit registers and the carry-out qubit initialized as $\ket 0$ holds the carry bit $c$ after the addition. As integers, the result can be written as $x + y = (x+y \mod 2^n) + c\cdot 2^n$.
 
 ## Ripple-carry Addition
 
-The signature of such an operation is shown here.
+The signature of such an operation is shown here. The two input $n$-qubit integers have the type `LittleEndian`, the carry qubit is a single `Qubit`.
 
 ```qsharp
 operation RippleCarryAdderD (xs : LittleEndian, ys : LittleEndian, carry : Qubit) : Unit
 ```
 
-The two input $n$-qubit integers have the type `LittleEndian`, the carry qubit is a single `Qubit`.
-
-
-Such a quantum addition algorithm can be implemented mirroring classical integer addition while making sure that the computation is reversible. In the first part of the algorithm, a sequence of carry operations propagate the carry bit from the least significant bits up to the carry bit $c$. Then, in the reverse order, it actually computes the sum and reverses the carry operations by using their adjoint counterparts. The carry and sum operations as they are used in `RippleCarryAdderD` are shown below.
+Such a quantum addition algorithm can be implemented mirroring classical integer addition while making sure that the computation is reversible. The classical way of carry propagation for addition is leads to a quantum ripple carry addition algorithm. In the first part of the algorithm, a sequence of carry operations propagate the carry bit from the least significant bits up to the carry bit $c$. Now, the carry-out bit is set and, in the reverse order, the algorithm then computes the sum while uncomputing the carry bits by reversing the carry operations by using their adjoint counterparts. The carry opreration `Carry` as used in `RippleCarryAdderD` is shown below.
 
 ```qsharp
 operation Carry (carryIn: Qubit, summand1: Qubit, summand2: Qubit, carryOut: Qubit) : Unit
@@ -43,6 +40,8 @@ operation Carry (carryIn: Qubit, summand1: Qubit, summand2: Qubit, carryOut: Qub
     adjoint controlled auto;
 }
 ```
+All four inputs are single 'Qubit' types. When acting on qubit registers that encode classical bits, the operation flips the qubit `carryOut` if the carry bit in the addition of the bits encoded in `summand1`, `summand2` and `carryIn` is 1. The qubit in `summand2` is changed because of the `CNOT` gate acting on it. The `Sum` operation is a bitwise sum without carry. 
+
 
 ```qsharp
 operation Sum (carryIn: Qubit, summand1: Qubit, summand2: Qubit) : Unit
@@ -57,7 +56,7 @@ operation Sum (carryIn: Qubit, summand1: Qubit, summand2: Qubit) : Unit
 }
 ```
 
-The core of `RippleCarryAdderD` consists of the code shown below. It uses $n$ auxiliary qubits that are used for propagating the carry bit. This code allows to be controlled on a qubit array `controls`. The `Carry` operations in the first and the second loop cancel out when the controls do not trigger the operation and do not need to be controlled separately. 
+ `RippleCarryAdderD` computes the integer addition with the code shown below. It uses $n$ auxiliary qubits that are used for propagating the carry bit. This code allows to be controlled on a qubit array `controls`. The `Carry` operations in the first cancel out with their adjoint counterparts in the second loop when the controls do not trigger the operation and do not need to be controlled separately. 
 
 ```qsharp
 using ( ancillas = Qubit[nQubits] ) {
@@ -65,8 +64,7 @@ using ( ancillas = Qubit[nQubits] ) {
         Carry (ancillas[idx], xs![idx], ys![idx], ancillas[idx+1]);           // (1)
     }
     (Controlled Carry) (controls, (ancillas[nQubits-1], xs![nQubits-1], ys![nQubits-1], carry));
-    (Controlled CNOT) (controls, (xs![nQubits-1], ys![nQubits-1]));
-    (Controlled Sum) (controls, (ancillas[nQubits-1], xs![nQubits-1], ys![nQubits-1]));
+    (Controlled CNOT) (controls, (ancillas[nQubits-1], ys![nQubits-1]));
     for (idx in (nQubits-2)..(-1)..0 ) {
         (Adjoint Carry) (ancillas[idx], xs![idx], ys![idx], ancillas[idx+1]); // cancels with (1)
         (Controlled Sum) (controls, (ancillas[idx], xs![idx], ys![idx]));

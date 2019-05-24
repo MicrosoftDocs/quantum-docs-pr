@@ -24,10 +24,10 @@ The changes are summarized here as well as instructions for upgrading your exist
 
 ## Q# language syntax
 This release adds new Q# language syntax:
-* Add a [shorthand way to express specializations of quantum operations]<xref:microsoft.quantum.language.type-model#functors> (control and adjoints) with `+` operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., `: adjoint`) will continue to work, but a compile time warning will be generated.  
-* Add a new operator for [copy-and-update]<xref:microsoft.quantum.language.expressions#copy-and-update-expressions>, `w/`, can be used to express array creation as a modification of an existing array.
-* Add the common [apply-and-upate statement]<xref:microsoft.quantum.qsharp-ref.statements#rebinding-of-mutable-symbols>, e.g., `+=`, `w/=`.
-* Add a way to specify a short name for namespaces in [open directives]<xref:microsoft.quantum.language.file-structure#open-directives>.
+* Add a [shorthand way to express specializations of quantum operations](xref:microsoft.quantum.language.type-model#functors) (control and adjoints) with `+` operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., `: adjoint`) will continue to work, but a compile time warning will be generated.  
+* Add a new operator for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions), `w/`, can be used to express array creation as a modification of an existing array.
+* Add the common [apply-and-upate statement](xref:microsoft.quantum.qsharp-ref.statements#rebinding-of-mutable-symbols), e.g., `+=`, `w/=`.
+* Add a way to specify a short name for namespaces in [open directives](xref:microsoft.quantum.language.file-structure#open-directives).
 
 With this release, we no longer allow an array element to be specified on the left side of a set statement.  This is because that syntax implies that arrays are mutable when in fact, the result of the operation has always been the creation of a new array with the modification.  Instead, a compiler error will be generated with a suggestion to use the new copy-and-update operator, `w/`, to accomplish the same result.  
 
@@ -45,9 +45,9 @@ With this change, programs that include a single "open" statement for the namesp
 
 * Several namespaces have been deprecated as the operations within have been reorganized to other namespaces. Programs that use these namespaces will continue to work, and a compile time warning will denote the namespace where the operation is defined.  
 
-* The Microsoft.Quantum.Arithmetic namespace has been normalized to use the <xref:microsoft.quantum.arithmetic.littleendian> user-defined type. Use the function [BigEndianAsLittleEndian]<xref:microsoft.quantum.arithmetic.bigendianaslittleendian> when needed to convert to little endian.  
+* The Microsoft.Quantum.Arithmetic namespace has been normalized to use the <xref:microsoft.quantum.arithmetic.littleendian> user-defined type. Use the function [BigEndianAsLittleEndian](xref:microsoft.quantum.arithmetic.bigendianaslittleendian) when needed to convert to little endian.  
 
-* The names of several callables (functions and operations) have been changed to conform to the [Q# Style Guide]<xref:microsoft.quantum.contributing.style>.  The old callable names are deprecated.  Programs that use the old callables will continue to work with a compile time warning. 
+* The names of several callables (functions and operations) have been changed to conform to the [Q# Style Guide](xref:microsoft.quantum.contributing.style).  The old callable names are deprecated.  Programs that use the old callables will continue to work with a compile time warning. 
 
 ## New Samples ##
 
@@ -60,8 +60,8 @@ We added a [sample of using Q# with F# driver](https://github.com/Microsoft/Quan
 ## Migrating existing projects to 0.6.1905.
 
   
-1.  Follow [these instructions]<xref:microsoft.quantum.install#updating-iq> to update IQ#.  
-2.  To update Python, first update IQ# (step 1) and then follow [these instructions]<xref:microsoft.quantum.install.python>.
+1.  Follow [these instructions](xref:microsoft.quantum.install#updating-iq) to update IQ#.  
+2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
 3.  Follow these instructions to update your .csproj file: 
 
 If you have existing Q# projects from version 0.5 of the Quantum Development Kit, the following are the steps to migrate those projects to the newest version.
@@ -102,15 +102,15 @@ This release contains bug fixes.
 
 This release contains the following:
 
-- Adds support for Jupyter Notebook, which offers a great way to learn about Q#.  [Check out new Jupyter Notebook samples and learn how to write your own Notebooks]<xref:microsoft.quantum.install.jupyter>. 
+- Adds support for Jupyter Notebook, which offers a great way to learn about Q#.  [Check out new Jupyter Notebook samples and learn how to write your own Notebooks](xref:microsoft.quantum.install.jupyter). 
 
 - Adds integer adder arithmetic to the Quantum Canon library.  See also a Jupyter Notebook that [describes how to use the new integer adders](https://github.com/Microsoft/Quantum/blob/master/Samples/src/Arithmetic/Adder%20Example.ipynb).
 
 - Bug fix for DumpRegister issue reported by the community ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
-- Added ability to return from within a [using statement]<xref:microsoft.quantum.qsharp-ref.statements>.
+- Added ability to return from within a [using statement](xref:microsoft.quantum.qsharp-ref.statements).
 
-- Revamped [getting started guide]<xref:microsoft.quantum.install>.
+- Revamped [getting started guide](xref:microsoft.quantum.install).
 
 
 # Version 0.5.1902
@@ -119,7 +119,7 @@ This release contains the following:
 
 This release contains the following:
 
-- Adds support for a cross-platform Python host.  The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python. Learn more about [Python interoperability]<xref:microsoft.quantum.install.python>. 
+- Adds support for a cross-platform Python host.  The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python. Learn more about [Python interoperability](xref:microsoft.quantum.install.python). 
 
 - The Visual Studio and Visual Studio Code extensions now support renaming of symbols (e.g., functions and operations).
 
@@ -133,9 +133,9 @@ This release contains the following:
 
 This release contains the following:
 
-- adds support for a new primitive type, BigInt, which represents a signed integer of arbitrary size.  Learn more about [BigInt type]<xref:microsoft.quantum.language.type-model>.
-- adds new Toffoli simulator, a special purpose fast simulator that can simulate X, CNOT and multi-controlled X quantum operations with very large numbers of qubits.  Learn more about [Toffoli simulator]<xref:microsoft.quantum.machines.toffoli-simulator>.
-- adds a simple resource estimator that estimates the resources required to run a given instancee of a Q# operation on a quantum computer.  Learn more about the [Resource Estimator]<xref:microsoft.quantum.machines.resources-estimator>.
+- adds support for a new primitive type, BigInt, which represents a signed integer of arbitrary size.  Learn more about [BigInt type](xref:microsoft.quantum.language.type-model).
+- adds new Toffoli simulator, a special purpose fast simulator that can simulate X, CNOT and multi-controlled X quantum operations with very large numbers of qubits.  Learn more about [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator).
+- adds a simple resource estimator that estimates the resources required to run a given instancee of a Q# operation on a quantum computer.  Learn more about the [Resource Estimator](xref:microsoft.quantum.machines.resources-estimator).
 
 
 # Version 0.3.1811.2802
@@ -157,7 +157,7 @@ Visual Studio Marketplace and press Install. We are sorry about the inconvenienc
 
 This release fixes a bug that prevented some users to successfully load the Visual Studio extension.
 
-If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program]<xref:microsoft.quantum.relnotes.migration-0-3>.
+If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).
 
 # Version 0.3.1811.203
 
@@ -167,9 +167,9 @@ This release includes a few bug fixes, including:
 
 * Invoking `DumpMachine` could change the state of the simulator under certain situations.
 * Removed compilation warnings when building projects using a version of .NET Core previous to 2.1.403.
-* Clean up of documentation, specially the tooltips shown during mouse hover in VS Code or Visual Studio.
+* Clean up of documentation, specially the tooltips shown during mouse hover in VS Code or Visual Studio
 
-If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program]<xref:microsoft.quantum.relnotes.migration-0-3>.
+If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).
 
 # Version 0.3.1810.2508
 
@@ -181,7 +181,7 @@ This release includes new language features and an improved developer experience
 * This update greatly improves diagnostic messages in general, with easy navigation to and precise ranges for diagnostics and additional details in the displayed hover information.
 * The Q# language has been extended in ways that unifies the ways developers can do common operations and new enhancements to the language features to powerfully express quantum computation.  There are a handful of breaking changes to the Q# language with this release.   
 
-Learn more about [Q# language changes and migrating your Q# program]<xref:microsoft.quantum.relnotes.migration-0-3>.
+Learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).
 
 This release also includes a new quantum chemistry library:
 
@@ -197,7 +197,7 @@ This release also includes a new quantum chemistry library:
     - Estimate energy levels of molecules represented by the Broombridge schema.
 * Documentation describes how to use NWChem to generate additional chemical models for quantum simulation with Q#.
 
-Learn more about the [Quantum Development Kit chemistry library]<xref:microsoft.quantum.chemistry.concepts.intro>.
+Learn more about the [Quantum Development Kit chemistry library](xref:microsoft.quantum.chemistry.concepts.intro).
 
 With the new chemistry library, we are separating out the libraries into a new GitHub repo, [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries).  The samples remain in the repo [Microsoft/Quantum](https://github.com/Microsoft/Quantum).  We welcome contributions to both!
 
@@ -267,7 +267,7 @@ This update adds new debugging functionality:
 * In Visual Studio, the probability of measuring a $\ket{1}$ on a single qubit is now automatically shown in the debugging window for the QuantumSimulator target machine.
 * In Visual Studio, improved the display of variable properties in the **Autos** and **Locals** debug windows. 
 
-Learn more about [Testing and Debugging]<xref:microsoft.quantum.techniques.testing-and-debugging>.
+Learn more about [Testing and Debugging](xref:microsoft.quantum.techniques.testing-and-debugging).
 
 
 ### Community Contributions ###

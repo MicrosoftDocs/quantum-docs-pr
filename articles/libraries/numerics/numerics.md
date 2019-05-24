@@ -23,7 +23,7 @@ The Numerics library consists of three components
 
 All of these components can be accessed using a single `open` statement:
 ```qsharp
-open Microsoft.Quantum.Arithmetic
+open Microsoft.Quantum.Arithmetic;
 ```
 
 ## Types

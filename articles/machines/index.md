@@ -133,8 +133,7 @@ There are some subtleties when passing arguments to a `Run` method:
 ### Processing the Results
 
 The results of the quantum algorithm are returned from the `Run` method.
-The `Run` method executes asynchronously thus it returns a 
-[`Task<T>`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1). 
+The `Run` method executes asynchronously thus it returns an instance of <xref:System.Threading.Tasks.Task`1>.
 There are multiple ways to get the actual operation's results. The simplest is
 by using the `Task`'s [`Result` property](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1.result):
 

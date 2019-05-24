@@ -101,7 +101,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Similarly, functions like <xref:microsoft.quantum.canon.mapped> and <xref:microsoft.quantum.canon.mappedbyindex> can be used to express functional programming concepts in Q#.
+Similarly, functions like <xref:microsoft.quantum.arrays.mapped> and <xref:microsoft.quantum.arrays.mappedbyindex> can be used to express functional programming concepts in Q#.
 
 ## Composing Operations and Functions ##
 

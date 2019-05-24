@@ -69,7 +69,7 @@ For this reason, it is a good practice to make functions and operations which us
 
 ## Deconstruction ##
 
-In addition to assigning a single variable, the `let` and `mutable` keywords - or in fact any other binding construct - also allow for unpacking the contents of a [tuple type](#tuple-types).
+In addition to assigning a single variable, the `let` and `mutable` keywords - or in fact any other binding construct - also allow for unpacking the contents of a [tuple type](xref:microsoft.quantum.language.type-model#tuple-types).
 An assignment of this form is said to *deconstruct* the elements of that tuple.
 For instance, if we model a term in a Hamiltonian by a tuple, then we can use deconstruction to access the different data that we need to simulate under that term:
 

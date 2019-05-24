@@ -3,7 +3,7 @@
 title: File Structure | Microsoft Docs 
 description: Q# File Structure
 author: QuantumWriter
-uid: microsoft.quantum.qsharp-ref.file-structure
+uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article

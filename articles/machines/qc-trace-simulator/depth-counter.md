@@ -13,16 +13,16 @@ The `Depth Counter` is a part of the quantum computer [Trace
 Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).
 It is used to gather counts of the depth of
 every operation invoked in a quantum program. All operations from
-<xref:microsoft.quantum.primitive> are expressed in terms of single qubit rotations,
+<xref:microsoft.quantum.intrinsic> are expressed in terms of single qubit rotations,
 T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit
-Pauli observables. Users can set the depth for each of the primitive operations via the `gateTimes` field of <xref:microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration>.
+Pauli observables. Users can set the depth for each of the primitive operations via the `gateTimes` field of <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>.
 
 By default, all operations have depth 0 except the T gate which has depth 1. This means 
 that by default, only the T depth of operations is computed (which is often desirable). Collected statistics
 are aggregated over all the edges of the operations call graph. 
 
-Let us now compute the <xref:microsoft.quantum.primitive.t> depth
-of the <xref:microsoft.quantum.primitive.ccnot> operation. We will use the following Q# driver code: 
+Let us now compute the <xref:microsoft.quantum.intrinsic.t> depth
+of the <xref:microsoft.quantum.intrinsic.ccnot> operation. We will use the following Q# driver code: 
 
 ```qsharp
 open Microsoft.Quantum.Primitive;

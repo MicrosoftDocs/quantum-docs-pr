@@ -43,7 +43,6 @@ The Q# language provides a small set of *primitive types* that can be used throu
 
 In addition, Q# defines a primitive type `Qubit` to model an opaque reference to a qubit within a target machine.
 A value of type `Qubit` cannot be directly used in Q#, but can be passed to operations defined by a target machine (such as gates and measurements) in order to do interesting things.
-We will consider the `Qubit` type in much more detail in the section on [using qubits](#using-qubits).
 
 ## Tuple Types ##
 

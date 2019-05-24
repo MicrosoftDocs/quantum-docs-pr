@@ -259,15 +259,12 @@ Notice how the IDs of the qubits are shown at the top in their significant order
 <xref:microsoft.quantum.extensions.diagnostics.dumpmachine> is part of the  <xref:microsoft.quantum.extensions.diagnostics> namespace, so in order to use it you must add an `open` statement:
 
 ```qsharp
-namespace Samples
-{
+namespace Samples {
     open Microsoft.Quantum.Intrinsic;
-    open Microsoft.Quantum.Extensions.Diagnostics;
+    open Microsoft.Quantum.Diagnostics;
 
-    operation Operation () : Unit
-    {
-        using (qubits = Qubit[2])
-        {
+    operation Operation () : Unit {
+        using (qubits = Qubit[2]) {
             H(qubits[1]);
             DumpMachine("dump.txt");
         }

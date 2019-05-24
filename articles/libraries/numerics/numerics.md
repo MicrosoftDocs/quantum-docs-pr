@@ -78,7 +78,7 @@ that is, an operation that takes an n-qubit integer $x$ and an n- or (n+1)-qubit
 register $y$ as input, the latter of which it maps to the sum $(x+y)$. Note that the
 sum is computed modulo $2^n$ if $y$ is stored in an $n$-bit register.
 
-Using the QDK, this operation can be applied as follows
+Using the Quantum Development Kit, this operation can be applied as follows:
 ```qsharp
 operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
 {

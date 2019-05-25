@@ -255,7 +255,6 @@ Notice how the IDs of the qubits are shown at the top in their significant order
 
 ***
 
-
 <xref:microsoft.quantum.diagnostics.dumpmachine> is part of the  <xref:microsoft.quantum.diagnostics> namespace, so in order to use it you must add an `open` statement:
 
 ```qsharp

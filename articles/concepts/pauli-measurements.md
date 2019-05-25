@@ -10,15 +10,15 @@ ms.topic: article
 
 # Pauli Measurements
 
-  In the previous discussions, we have focused on computational basis measurements.  In fact there are other common measurements that occur in quantum computing that, from a notational perspective, are convenient to express in terms of computational basis measurements.  The most common set of these measurements are *Pauli measurements*.  In such cases, it is common to discuss measuring a Pauli operator, in general an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$ and so forth.  Discussing measurement in terms of Pauli operators is especially common in the subfield of quantum error correction. In Q# we follow a similar convention; we now explain this alternative view of measurements.
+In the previous discussions, we have focused on computational basis measurements.  In fact there are other common measurements that occur in quantum computing that, from a notational perspective, are convenient to express in terms of computational basis measurements.  The most common set of these measurements are *Pauli measurements*.  In such cases, it is common to discuss measuring a Pauli operator, in general an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$ and so forth.  Discussing measurement in terms of Pauli operators is especially common in the subfield of quantum error correction. In Q# we follow a similar convention; we now explain this alternative view of measurements.
 
 Before delving into the details of how to think of a Pauli measurement, it is useful to think about what measuring a single qubit inside a quantum computer does to the quantum state.  Imagine that we have an $n$-qubit quantum state; then measuring one qubit immediately rules out half of the $2^n$ possibilities that state could be in.  In other words, the measurement projects the quantum state onto one of two half-spaces.  We can generalize the way we think about measurement to reflect this.
 
 In order to concisely identify these subspaces, we need a language for describing them.  One way to do this is to describe the two subspaces by specifying them through a matrix that just has two unique eigenvalues, taken by convention to be $\pm 1$.  The simplest example of this is:
 
-  $$
-Z= \begin{bmatrix}1&0\\\\ 0&-1\end{bmatrix}.
-  $$
+$$
+  Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix}.
+$$
 
 The Pauli-$Z$ matrix clearly has two eigenvectors $\ket{0}$ and $|1\rangle$ with eigenvalues $\pm 1$.  Thus if we measure the qubit and obtain $\ket{0}$ we are in the $+1$ eigenspace (the set of all vectors that are formed of sums of  eigenvectors with only positive or only negative eigenvalues) of the operator and if we measure $|1\rangle$ we are in the $-1$ eigenspace of $Z$.  This process is referred to in the language of Pauli measurements as "measuring Pauli $Z$" and is entirely equivalent to performing a computational basis measurement.
 
@@ -41,6 +41,7 @@ $$
 
 It is also equivalent to applying $HS^\dagger$ to the quantum state vector and then measuring $Z$.  The correct state would then be found by transforming back to the computational basis, which amounts to applying $SH$ to the quantum state vector.
 
+## Q# outcome classical information obtained from quantum state
 In Q# we say the outcome, i.e., the classical information extracted from interacting with the state, is $j$ which is in the set $\{0,1\}$ if the result is in the $(-1)^j$ eigenspace of the Pauli operator measured.
 
 Measurements of multi-qubit Pauli operators are defined similarly, as seen from:
@@ -83,6 +84,8 @@ Here the gate $\operatorname{CNOT}\_{10}$ appears for the following reason.  Eac
 
 One additional note, while it may be tempting to assume that measuring $Z\otimes Z$ is the same as measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$, this assumption would be false.  The reason is that measuring $Z\otimes Z$ projects the quantum state into either the $+1$ or $-1$ eigenstate of these operators.  Measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$ projects the quantum state vector first onto a half space of $Z\otimes \mathbb{1}$ and then onto a half space of $\mathbb{1} \otimes Z$.  As there are four computational basis vectors, performing both measurements reduces the state to a quarter-space and hence reduces it to a single computational basis vector.
 
+
+## Correlations between qubits
 Another way of looking at measuring tensor products of Paulis such as $X\otimes X$ or $Z\otimes Z$ is that these measurements let you look at information stored in the correlations between the two qubits.  Measuring $X\otimes \mathbb{1}$ lets you look at information that is locally stored in the first qubit.  While both types of measurements are equally valuable in quantum computing, the former illuminates the power of quantum computing. It reveals that in quantum computing often the information you wish to learn is not stored in any single qubit but rather stored non-locally in all the qubits at once, and only by looking at it through a joint measurement with $Z\otimes Z$ does this information become manifest.
 
 Arbitrary Pauli operators such as $X\otimes Y \otimes Z \otimes \boldone$ can also be measured.  All such tensor products of Pauli operators have only two eigenvalues $\pm 1$ and both eigenspaces constitute half-spaces of the entire vector space.  Thus they coincide with the requirements stated above.

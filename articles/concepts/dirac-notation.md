@@ -34,21 +34,21 @@ $$
 The following notation is often used to describe the states that result from applying the Hadamard gate to $\ket{0}$ and $\ket{1}$ (which correspond to the unit vectors in the $+x$ and $-x$ directions on the Bloch sphere):
 
 $$
-\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  1 \end{bmatrix}=H\ket{0} = |{+}\rangle,\qquad
-\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  -1 \end{bmatrix} =H\ket{1} = |{-}\rangle .
+\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  1 \end{bmatrix}=H\ket{0} = \ket{+},\qquad
+\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  -1 \end{bmatrix} =H\ket{1} = \ket{-} .
 $$
 
 These states can also be expanded using Dirac notation as sums of $\ket{0}$ and $\ket{1}$:
 
 $$
-|+\rangle = \frac{1}{\sqrt{2}}(\ket{0} + \ket{1}),\qquad |-\rangle = \frac{1}{\sqrt{2}}(\ket{0} - \ket{1}).
+\ket{+} = \frac{1}{\sqrt{2}}(\ket{0} + \ket{1}),\qquad \ket{-} = \frac{1}{\sqrt{2}}(\ket{0} - \ket{1}).
 $$
 
 ### Computational basis vectors
-This demonstrates why these states are often called a *computational basis*: every quantum state can always be expressed as sums of computational basis vectors and such sums are easily expressed using Dirac notation.  The converse is also true in that the states $|+\rangle$ and $|-\rangle$ also form a basis for quantum states.  You can see this from the fact that
+This demonstrates why these states are often called a *computational basis*: every quantum state can always be expressed as sums of computational basis vectors and such sums are easily expressed using Dirac notation.  The converse is also true in that the states $\ket{+}$ and $\ket{-}$ also form a basis for quantum states.  You can see this from the fact that
 
 $$
-\ket{0} = \frac{1}{\sqrt{2}}(|+\rangle + |-\rangle),\qquad \ket{1} = \frac{1}{\sqrt{2}}(|+\rangle - |-\rangle).
+\ket{0} = \frac{1}{\sqrt{2}}(\ket{+} + \ket{-}),\qquad \ket{1} = \frac{1}{\sqrt{2}}(\ket{+} - \ket{-}).
 $$
 
 As an example of Dirac notation, consider the braket $\langle 0 | 1\rangle$, which is the inner product between $0$ and $1$.  It can be written as 
@@ -83,11 +83,11 @@ $$
 As another example of how you can use Dirac notation to describe a quantum state, consider the following equivalent ways of writing a quantum state that is an equal superposition over every possible bit string of length $n$
 
 $$
-H^{\otimes n} |{0}\rangle = \frac{1}{2^{n/2}} \sum_{j=0}^{2^n-1} |{j}\rangle=|+\rangle^{\otimes n}.
+H^{\otimes n} |{0}\rangle = \frac{1}{2^{n/2}} \sum_{j=0}^{2^n-1} |{j}\rangle=\ket{+}^{\otimes n}.
 $$
 
 Here you may wonder why the sum goes from $0$ to $2^{n}-1$ for $n$ bits.  First note that there are $2^{n}$ different configurations that $n$ bits can take.  You can see this by noting that one bit can take $2$ values but two bits can take $4$ values and so forth. In general, this means that there are $2^n$ different possible bit strings but the largest value encoded in any of them $1\cdots 1=2^n-1$ and hence it is the upper limit for the sum.
-As a side note, in this example we did not use $|+\rangle^{\otimes n}=|+\rangle$ in analogy to $\ket{0}^{\otimes n} = \ket{0}$ because this notational convention is usually reserved for the computational basis state with every qubit initialized to zero.  While such a convention would be sensible in this case, it is not employed in the quantum computing literature.
+As a side note, in this example we did not use $\ket{+}^{\otimes n}=\ket{+}$ in analogy to $\ket{0}^{\otimes n} = \ket{0}$ because this notational convention is usually reserved for the computational basis state with every qubit initialized to zero.  While such a convention would be sensible in this case, it is not employed in the quantum computing literature.
 
 ### Expressing linearity with Dirac notation
 Another nice feature of Dirac notation is the fact that it is linear.  If we wish to write for any four quantum state vectors, 
@@ -98,7 +98,7 @@ That is to say, you can distribute the tensor product notation in Dirac notation
 
 Bra vectors follow a similar convention to ket vectors.  For example, the vector $\langle\psi|\langle \phi|$ is equivalent to the state vector $\psi^\dagger \otimes \phi^\dagger=(\psi\otimes \phi)^\dagger$. If the ket vector $|\psi\rangle$ is $\alpha \ket{0} + \beta \ket{1}$ then the bra vector version of the vector is $\langle{\psi}|=|\psi\rangle^\dagger = (\langle 0|\alpha^* +\langle 1 |\beta^*)$.
 
-As an example, imagine that we wish to calculate the probability of measuring the state $|\psi\rangle = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ using a quantum program for measuring states to be either $|+\rangle$ or $|-\rangle$. Then the probability that the device would output that the state is $|-\rangle$ is 
+As an example, imagine that we wish to calculate the probability of measuring the state $|\psi\rangle = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ using a quantum program for measuring states to be either $\ket{+}$ or $\ket{-}$. Then the probability that the device would output that the state is $\ket{-}$ is 
 
 $$|\langle - |\psi\rangle|^2= \left|\frac{1}{\sqrt{2}}(\langle 0| - \langle 1|)(\frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}) \right|^2=\left|-\frac{3}{5\sqrt{2}} + \frac{4}{5\sqrt{2}}\right|^2=\frac{1}{50}.$$
 

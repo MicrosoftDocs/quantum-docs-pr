@@ -85,20 +85,26 @@ Rather than manually looping over all Pauli terms in the Jordan-Wigner represent
 Our starting point is a [Jordan–Wigner encoding](xref:microsoft.quantum.chemistry.concepts.jordanwigner) of the Fermionic Hamiltonian, expressed in code as a `JordanWignerEncoding` object.
 
 ```csharp
-    // We create a `FermionHamiltonian` object to store the `FermionTerms`.
-    var hamiltonian = new FermionHamiltonian();
+    // This example uses the following namespaces
+    // using Microsoft.Quantum.Chemistry.OrbitalIntegrals;
+    // using Microsoft.Quantum.Chemistry.Fermion;
+    // using Microsoft.Quantum.Chemistry.Pauli;
+    // using Microsoft.Quantum.Chemistry.QSharpFormat;
 
-    // We create a `OrbitalIntegral` object to store a two-electron molecular orbital integral data.
-    var orbitalIntegral = new OrbitalIntegral(new[] { 0, 1, 2, 3 }, 0.123);
+    // We create a `FermionHamiltonian` object to store the terms.
+    var hamiltonian = new OrbitalIntegralHamiltonian(
+        new[] {
+        new OrbitalIntegral(new[] { 0, 1, 2, 3 }, 0.123),
+        new OrbitalIntegral(new[] { 0, 1 }, 0.456)
+            }
+        )
+        .ToFermionHamiltonian(IndexConvention.UpDown);
 
-    // We now add all `FermionTerm` instances corresponding to the orbital integral.
-    hamiltonian.AddFermionTerm(orbitalIntegral);
-
-    // We convert this Fermion Hamiltonian to a Jordan-Wigner representation.
-    var jordanWignerEncoding = JordanWignerEncoding.Create(Hamiltonian);
+    // We convert this fermion Hamiltonian to a Jordan-Wigner representation.
+    var jordanWignerEncoding = hamiltonian.ToPauliHamiltonian(QubitEncoding.JordanWigner);
 
     // We now convert this representation into a format consumable by Q#.
-    var qSharpData = jordanWignerEncoding.QSharpData();
+    var qSharpData = jordanWignerEncoding.ToQSharpFormat();
 ```
 
 This format of the Jordan–Wigner reprsentation that is consumable by the Q# simulation algorithms is a user-defined type `JordanWignerEncodingData`. Within Q#, this format is passed to a convenience function `TrotterStepOracle` that returns an operator approximating time-evolution using the Trotter—Suzuki integrator, in addition to other parameters required for its execution.

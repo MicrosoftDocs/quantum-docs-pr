@@ -16,6 +16,9 @@ Rather than assigning each of the $N_e$ electrons to a specific state (or orbita
 As an example of second quantization in action, let's assume that $\psi_0\cdots \psi_{N-1}$ are an orthonormal set of spatial orbitals. These orbitals are chosen to represent the system as accurately as possible within the finite basis set considered. A common example of such orbitals are atomic orbitals which form an eigenbasis for the hydrogen atom. Because electrons have two spin states, two electrons can be crammed into each such spatial orbital.  That is to say, the valid basis states are of the form $\psi_{0,\uparrow},\ldots,\psi_{N-1,\uparrow}, \psi_{0,\downarrow},\ldots,\psi_{N-1,\downarrow}$ where $\uparrow$ and $\downarrow$ are labels that specify the two eigenstates of the spin degree of freedom. This combined index of $(j,\sigma)$ for $\sigma \in \{\uparrow,\downarrow\}$ is called a spin-orbital because it stores both the spatial as well as the spin degree of freedom. In the chemistry library, spin-orbitals are stored in a `SpinOrbital` data structure, and are created as follows.
 
 ```csharp
+    // First, we load the namespace containing spin-orbital objects.
+    using Microsoft.Quantum.Chemistry.OrbitalIntegrals;
+
     // First, we assign an orbital index, say `5`. Note that we use 0-indexing,
     // so this is the 6th orbital.
     var orbitalIdx = 5;
@@ -25,9 +28,16 @@ As an example of second quantization in action, let's assume that $\psi_0\cdots 
 
     // the spin-orbital (5, ↓) is then
     var spinOrbital = new SpinOrbital(orbitalIdx, spin);
+
+    // A tuple `(int, Spin)` is also implicitly recognized as a spin-orbital.
+    (int, Spin) tuple = (orbitalIdx, spin);
+
+    // We explicitly specify the type of `spinOrbital1` to demonstrate
+    // the implicit cast to `SpinOrbital`.
+    SpinOrbital spinOrbital1 = tuple;
 ```
 
-This means that we can formally think of the basis for both the spin and spatial part of the wave function as $\psi_{0} \cdots \psi_{2N-1}$ where each of the indices now is an enumeration of a $(j,\sigma)$.  One possible enumeration is $g(j,\sigma) = j+N\sigma'$.  The quantum chemistry library uses such a convention, and the spin-orbitals in such an encoding can be instantiated as follows.
+This means that we can formally think of the basis for both the spin and spatial part of the wave function as $\psi_{0} \cdots \psi_{2N-1}$ where each of the indices now is an enumeration of a $(j,\sigma)$.  One possible enumeration is $g(j,\sigma) = j+N\sigma'$. Another possible enumeration is $h(j,\sigma) = 2*j + \sigma$. The quantum chemistry library can use these conventions, and the spin-orbitals in such an encoding can be instantiated as follows.
 
 ```csharp
     // Let us use the spin orbital created in the previous snippet.
@@ -36,8 +46,16 @@ This means that we can formally think of the basis for both the spin and spatial
    // Let us set the total number of orbitals to be say, `7`.
    var nOrbitals = 7;
 
-   // This converts a spin-orbital index to a unique integer, in this case `12`.
-   var integerIndex = spinOrbital.ToInt(nOrbitals);
+    // This converts a spin-orbital index to a unique integer, in this case `12`,
+    // using the formula `g(j,σ)`.
+    var integerIndexHalfUp = spinOrbital.ToInt(IndexConvention.HalfUp);
+
+    // This converts a spin-orbital index to a unique integer, in this case `11`,
+    // using the formula `h(j,σ)`.
+    var integerIndexUpDown = spinOrbital.ToInt(IndexConvention.UpDown);
+
+    // The default conversion uses the formula `h(j,σ)`, in this case `11`.
+    var integerIndexDefault = spinOrbital.ToInt();
 ```
 
 For Fermionic systems, the Pauli exclusion principle prevents more than one electron from being present in any spin-orbital at the same time.  This means that we can write the two legal states for $\psi_1$ as
@@ -70,26 +88,29 @@ a^\dagger_1 |1\rangle_1 &= 0\nonumber\\\
 a_1 |0\rangle_1 &= 0\nonumber\\\
 a_1 |1\rangle_1 &= |0\rangle_1
 \end{align}
-Note that here $a^\dagger_1 |1\rangle_1=0$ and $a_1 |0\rangle_1$ yield the zero-vector not $|0\rangle_1$.  Such operators are therefore neither Hermitian nor unitary. We represent Fermionic creation and annihilation operators using the `FermionTerm` type. For instance, a single creation operator is represented as follow.
+Note that here $a^\dagger_1 |1\rangle_1=0$ and $a_1 |0\rangle_1$ yield the zero-vector not $|0\rangle_1$.  Such operators are therefore neither Hermitian nor unitary. We represent general creation and annihilation operators using the `LadderOperator` type. For instance, a single creation operator is represented as follow.
 
 ```csharp
+    // We load the namespace containing ladder operator objects.
+    using Microsoft.Quantum.Chemistry.LadderOperators;
+
     // Let us use the spin orbital created in the previous snippet.
-    var spinOrbital = new SpinOrbital(5, Spin.d);
+    var spinOrbitalInteger = new SpinOrbital(5, Spin.d).ToInt();
 
-    // We create an array containing this spin-orbital to allow generalization
-    // to cases where multiple operators are present.
-    var spinOrbitalArray = new[] {spinOrbital};
+    // We specify either a creation or annihilation operator using 
+    // the enumerable type `RaisingLowering.u` or `RaisingLowering.d`
+    // respectively;
+    var creationEnum = RaisingLowering.u;
 
-    // A creation operator is represented by the integer `1L`, whereas
-    // an annihilation operator is represented by the integer `0L`.
-    var conjugateArray = new[] { 1L };
+    // The type representing a creation operator is then initialized 
+    // as follows. Here, we index these operators with integers.
+    // Hence we initialize the generic ladder operator with an
+    // integer index type.
+    var ladderOperator0 = new LadderOperator<int>(creationEnum, spinOrbitalInteger);
 
-    // The single creation operator has a coefficient of 1.0
-    var coefficient = 1.0;
-
-    // We now construct a `FermionTerm` representing a creation operator
-    // on the spin-orbital (5,↓).
-    var fermionTerm = new FermionTerm(conjugateArray, spinOrbitalArray, coefficient);
+    // An alternate constructor for a LadderOperator instead uses
+    // a tuple.
+    var ladderOperator1 = new LadderOperator<int>((creationEnum, spinOrbitalInteger));
 ```
 
 Also using such operators we can express
@@ -98,19 +119,22 @@ $$
 $$
 This sequence of operators would be constructed within the hamiltonian simulation library using C# code that is similar to the single-spin orbital case considered above above:
 ```csharp
-    // Let us use a new method to compactly create a sequence of spin-orbitals
-    var spinOrbitalArray = new[] { (1, Spin.u), (2, Spin.u) }.ToSpinOrbitals();
+    // We load the namespace containing fermion-related objects.
+    using Microsoft.Quantum.Chemistry.Fermion;
 
-    // A creation operator is represented by the integer `1L`, whereas
-    // an annihilation operator is represented by the integer `0L`.
-    var conjugateArray = new[] { 1L ,1L };
+    // Let us initialize an array of tuples representing the
+    // desired sequence of creation operators.
+    var indices = new[] { (RaisingLowering.u, 1), (RaisingLowering.u, 2) };
 
-    // The product of creation operators has a coefficient of 1.0
-    var coefficient = 1.0;
+    // We can convert this array of tuples to a sequence of ladder
+    // operators using the `ToLadderSequence()` methods.
+    var ladderSequences = indices.ToLadderSequence();
 
-    // We now construct a `FermionTerm` representing a creation 
-    // on the spin-orbital (2,↑) followed by (1,↑).
-    var fermionTerm = new FermionTerm(conjugateArray, spinOrbitalArray, coefficient);
+    // Sequences of ladder operators are quite general. For instance,
+    // they could be bosonic operators, intead of fermionic operators.
+    // We specialize them by constructing a `FermionTerm` representing 
+    // a fermion creation operator on the index `2` followed by `1`.
+    var fermionTerm = new FermionTerm(ladderSequences);
 ```
 
 For a system of $k$ Fermions, in second quantization the action of the creation operator $a^\dagger_i$ is given by 
@@ -134,21 +158,16 @@ n_i |1\rangle_i &= |1\rangle_i.
 \end{align}
 Similar to the above `FermionTerm` examples, this number operator is constructed as follows.
 ```csharp
-    // Let us use a new method to compactly create a sequence of spin-orbitals
-    var spinOrbitalArray = new[] { (1, Spin.u), (1, Spin.u) }.ToSpinOrbitals();
-
-    // The term has a coefficient of 1.0
-    var coefficient = 1.0;
+    // Let us use a new method to compactly create a sequence of ladder
+    // operators. Note that we have ommitted specifying whether the 
+    // operators are raising or lowering. In this case, the first half
+    // will be raising operators, and the second half will be lowering 
+    // operators.
+    var indices = new[] { 1, 1 }.ToLadderSequence();
 
     // We now construct a `FermionTerm` representing an annihilation operator
-    // on the spin-orbital (1,↑) followed by the creation operator (1,↑).
-    var fermionTerm = new FermionTerm(spinOrbitalArray, coefficient);
-
-    // Note that we have ommited the `conjugate` array specifying the sequence
-    // of creation and annihilation operators in the FermionTerm constructor.
-    // When unspecified, the number of creation and annihilation operators are
-    // assumed to be equal. It is also assumed that these operators are in normal order,
-    // meaning that all creation operators are applied after all annihilation operators.
+    // on the index 1 followed by the creation operator on the index 1.
+    var fermionTerm0 = new FermionTerm(indices);
 ```
 
 A subtlety emerges though when using creation or annihilation operators in Fermionic systems.  We require that any valid quantum state is anti-symmetric under exchange of labels.  This means that
@@ -160,80 +179,40 @@ Such operators are said to 'anti-commute' and in general for any $i, j$ we have 
 a^\dagger_i a^\dagger_j  &= -(1-\delta_{i,j})a^\dagger_j a^\dagger_i\nonumber\\\
 a^\dagger_i a_j &=\delta_{i,j} - a_j a^\dagger_i.
 \end{align}
-Thus the following two `FermionTerm` instances are considered inequivalent
+Thus the following two `LadderSequence instances are considered inequivalent
 ```csharp
-    // Let us use a new method to compactly create a sequence of spin-orbitals
-    var spinOrbitalArray = new[] { (2, Spin.u), (1, Spin.u) }.ToSpinOrbitals();
+    // Let us initialize an array of tuples representing the
+    // desired sequence of creation operators.
+    var indices = new[] { (RaisingLowering.u, 1), (RaisingLowering.u, 2) };
 
-    // A creation operator is represented by the integer `1L`, whereas
-    // an annihilation operator is represented by the integer `0L`.
-    var conjugateArray = new[] { 1L ,1L };
-
-    // The single creation operator has a coefficient of 1.0
-    var coefficient = 1.0;
-
-    // We now construct a `FermionTerm` representing a creation operator
-    // on the spin-orbital (1,↑) followed by (2,↑) and a term with the reverse ordering.
-    var fermionTerm = new FermionTerm(conjugateArray, spinOrbitalArray, coefficient);
-    var fermionTermReversed = new FermionTerm(conjugateArray, spinOrbitalArray.Reverse(), coefficient);
+    // We now construct a `LadderSequence` representing a creation operator
+    // on the index 1 followed by 2, then a term with the reverse ordering.
+    var laddderSeqeunce = indices.ToLadderSequence();
+    var laddderSeqeunceReversed = indices.Reverse().ToLadderSequence();
 
     // The following Boolean is `false`.
-    var equal = fermionTerm == fermionTermReversed;
+    var equal = laddderSeqeunce == laddderSeqeunceReversed;
 ```
 
 The requirement that each of the creation operators anti-commute means that using a second quantized representation does obviate the challenges faced by the anti-symmetry of Fermions.  Instead the challenge re-emerges in our definition of the creation operators. 
 
-Using the anti-commutation rules, some `FermionTerm` instances actually correspond to the same sequence of Fermionic operators, sometimes up to a minus sign. For instance, consider the Hamiltonian $a_0^\dagger a_1^\dagger a_1 a_0 = - a_1^\dagger a_0^\dagger a_1 a_0$. This motivates us to define a canonical ordering for every `FermionTerm`. Any `FermionTerm` may be put into canonical order as follows.
+Using the anti-commutation rules, some `LadderSequence` instances actually correspond to the same sequence of Fermionic operators, sometimes up to a minus sign. For instance, consider the Hamiltonian $a_0^\dagger a_1^\dagger a_1 a_0 = - a_1^\dagger a_0^\dagger a_1 a_0$. This motivates us to define a canonical ordering for every `FermionTerm`. Any `FermionTerm` is automatrically put into canonical order as follows.
 ```csharp
-    // Let us use a new method to compactly create a sequence of spin-orbitals
-    var spinOrbitalArray = new[] { (0, Spin.u), (1, Spin.u), (1, Spin.u), (0, Spin.u) }.ToSpinOrbitals();
-
-    // A creation operator is represented by the integer `1L`, whereas
-    // an annihilation operator is represented by the integer `0L`.
-    var conjugateArray = new[] { 1L ,1L, 0L, 0L};
-
     // We now construct two `FermionTerms` that are equivalent with respect to
-    // anti-commutation.
-    var fermionTerm0 = new FermionTerm(conjugateArray, new[] 
-        { (0, Spin.u), (1, Spin.u), (1, Spin.u), (0, Spin.u) }.ToSpinOrbitals(), 1.0);
-    var fermionTerm1 = new FermionTerm(conjugateArray, new[] 
-        { (1, Spin.u), (0, Spin.u), (1, Spin.u), (0, Spin.u) }.ToSpinOrbitals(), -1.0);
+    // anti-commutation up to a sign change.
+    var fermionTerm0 = new FermionTerm(new[] { 0, 1, 1, 0 }.ToLadderSequence());
+    var fermionTerm1 = new FermionTerm(new[] { 1, 0, 1, 0 }.ToLadderSequence());
+
+    // The following Boolean is `true`.
+    var sequenceEqual = fermionTerm0 == fermionTerm1;
+
+    // The change in sign is not compared above, but is an internally tracked
+    // property of `FermionTerm`.
+    int sign0 = fermionTerm0.Coefficient;
+    var sign1 = fermionTerm1.Coefficient;
 
     // The following Boolean is `false`.
-    var equal1 = fermionTerm0 == fermionTerm1;
-
-    // Let us now anti-commute terms to canonical order. In general, anti-commutation
-    // can generate new terms -- an array of `FermionTerm` instances.
-    var fermionTerms1CanonicalOrder = fermionTerm1.ToCanonicalOrder();
-
-    // However, since normal-ordering is assumed here, there will only be one term.
-    var fermionTerm1CanonicalOrder = fermionTerms1CanonicalOrder.First();
-
-    // The following Boolean is `true`.
-    var equal2 = fermionTerm0 == fermionTerm1CanonicalOrder;
-
-    // We may also convert a normal-ordered `FermionTerm` in-place.
-    fermionTerm1.ToSpinOrbitalCanonicalOrder();
-
-    // The following Boolean is `true`.
-    var equal3 = fermionTerm0 == fermionTerm1;
-```
-
-Note that the following constructor that omits the `conjugateArray` assumes that the fermionic operators are in normal order. Thus it automatically orders the operators in the canonical order as follows.
-
-```csharp
-    // Let us use a new method to compactly create a sequence of spin-orbitals
-    var spinOrbitalArray = new[] { (0, Spin.u), (1, Spin.u), (1, Spin.u), (0, Spin.u) }.ToSpinOrbitals();
-
-    // We now construct two `FermionTerms` that are equivalent with respect to
-    // anti-commutation. Internally, this constructor calls `ToCanonicalOrder()`.
-    var fermionTerm0 = new FermionTerm(new[] 
-        { (0, Spin.u), (1, Spin.u), (1, Spin.u), (0, Spin.u) }.ToSpinOrbitals(), 1.0);
-    var fermionTerm1 = new FermionTerm(new[] 
-        { (1, Spin.u), (0, Spin.u), (1, Spin.u), (0, Spin.u) }.ToSpinOrbitals(), -1.0);
-
-    // Thus the following Boolean is `true`.
-    var equal1 = fermionTerm0 == fermionTerm1;
+    var signEqual = sign0 == sign1;
 ```
 
 ## Second-Quantized Fermionic Hamiltonian
@@ -256,47 +235,60 @@ They are called integrals because computing the values of these coefficients req
 
 An intuition for what these terms mean can be gleaned from the creation and annihilation operators that comprise each of them.  For example, $h_{pq}a^\dagger_p a_q$ describes the electron hopping from spin orbital $q$ to spin orbital $p$.  Similarly, the term $h_{pqrs} a^\dagger_p a^\dagger_q a_r a_s$ (for distinct $p,q,r,s$) describes two electrons in spin orbitals $r$ and $s$ scattering off of each other and ending up in spin orbitals $p$ and $q$.  If $r=q$ and $p=s$ then $h_{prrp} a^\dagger_p a^\dagger_r a_r a_p = h_{prrp} n_p n_r$ gives the energy penalty associated with the two electrons being near each other, but does not describe a dynamical process.
 
-We may represent such Hamiltonians using the `FermionHamiltonian` class, which is essentially a list containing all the desired `FermionTerm` instances. Let us construct a few illustrative examples. Consider the Hamiltonian $\hat{H} = a_0^\dagger a_1 + a_1^\dagger a_0$.
+We may represent such Hamiltonians using the `FermionHamiltonian` class, which is essentially a list containing all the desired `FermionTerm` instances. As Hamiltonians are Hermitian by definition, we index terms using the more specialized type `HermitianFermionTerm` that also uses Hermitian symmetry when checking whether terms are equivalent.
+
+Let us construct a few illustrative examples. Consider the Hamiltonian $\hat{H} = a_0^\dagger a_1 + a_1^\dagger a_0$.
 ```csharp
-    // We create a `FermionHamiltonian` object to store the `FermionTerms`.
+    // We create a `FermionHamiltonian` object to store the fermion terms.
     var hamiltonian = new FermionHamiltonian();
-    
+
     // We construct the terms to be added.
-    var fermionTerm0 = new FermionTerm(new[] 
-        { (0, Spin.u), (1, Spin.u) }.ToSpinOrbitals(), 1.0);
-    var fermionTerm1 = new FermionTerm(new[] 
-        { (1, Spin.u), (0, Spin.u) }.ToSpinOrbitals(), 1.0);
-    
-    // We add the terms to the Hamiltonian.
-    hamiltonian.AddFermionTerm(fermionTerm0);
-    hamiltonian.AddFermionTerm(fermionTerm1);
+    var fermionTerm0 = new FermionTerm(new[] { 1, 0 }.ToLadderSequence());
+    var fermionTerm1 = new FermionTerm(new[] { 0, 1 }.ToLadderSequence());
+
+    // These fermion terms are not equal. The following Boolean is `false`.
+    var sequenceEqual = fermionTerm0 == fermionTerm1;
+
+    // However, these terms are equal under Hermitian symmetry.
+    // We also take the opportunity to demonstrate equivalent constructors
+    // for hermitian fermion terms
+    var hermitianFermionTerm0 = new HermitianFermionTerm(fermionTerm0);
+    var hermitianFermionTerm1 = new HermitianFermionTerm(new[] { 0, 1 });
+
+    // These Hermitian fermion terms are equal. The following Boolean is `true`.
+    var hermitianSequenceEqual = hermitianFermionTerm0 == hermitianFermionTerm1;
+
+    // We add the terms to the Hamiltonian with the appropriate coefficient.
+    // Note that these terms are identical.
+    hamiltonian.Add(hermitianFermionTerm0, 1.0);
+    hamiltonian.Add(hermitianFermionTerm1, 1.0);
 ```
-We may simplify this construction using the fact that Hamiltonian are Hermitian operators. When adding terms to the Hamiltonian using `AddFermionTerm`, any non-Hermitian term such as `fermionTerm0` is assumed to be paired with its Hermitian conjugate. Thus the following snippet also represents the same Hamiltonian.
+We may simplify this construction using the fact that Hamiltonian are Hermitian operators. When adding terms to the Hamiltonian using `Add`, any non-Hermitian term such as `fermionTerm0` is assumed to be paired with its Hermitian conjugate. Thus the following snippet also represents the same Hamiltonian.
 ```csharp
-    // We create a `FermionHamiltonian` object to store the `FermionTerms`.
+    // We create a `FermionHamiltonian` object to store the fermion terms.
     var hamiltonian = new FermionHamiltonian();
-    
+
     // We construct the term to be added -- note the doubled coefficient.
-    hamiltonian.AddFermionTerm(new FermionTerm(new[] 
-        { (0, Spin.u), (1, Spin.u) }.ToSpinOrbitals(), 2.0));
+    hamiltonian.Add(new HermitianFermionTerm(new[] { 1, 0 }), 2.0);
 ```
 
-Using the anti-commutation rules, some `FermionTerm` instances in the Hamiltonian actually correspond to the same sequence of Fermionic operators, sometimes up to a minus sign. For instance, consider the Hamiltonian $H=a_0^\dagger a_1^\dagger a_1 a_0 - a_1^\dagger a_0^\dagger a_1 a_0 =2a_0^\dagger a_1^\dagger a_1 a_0$, which is a sum of terms constructed above. It may not always be clear to the user that these are equivalent terms, and so they may be added to the Hamiltonian separately. Alternatively, one may be intereted in modifying already-existing terms in the Hamiltonian. In these cases, we may combine equivalent terms as follows.
+Using the anti-commutation rules, some `FermionTerm` instances in the Hamiltonian actually correspond to the same sequence of Fermionic operators, sometimes up to a minus sign. For instance, consider the Hamiltonian $H=a_0^\dagger a_1^\dagger a_1 a_0 - a_1^\dagger a_0^\dagger a_1 a_0 =2a_0^\dagger a_1^\dagger a_1 a_0$, which is a sum of terms constructed above. It may not always be clear to the user that these are equivalent terms, and so they may be added to the Hamiltonian separately. Alternatively, one may be interested in modifying already-existing terms in the Hamiltonian. In these cases, we may combine equivalent terms as follows.
 ```csharp
-    // We create a `FermionHamiltonian` object to store the `FermionTerms`.
+    // We create a `FermionHamiltonian` object to store the fermion terms.
     var hamiltonian = new FermionHamiltonian();
 
-    // We now add two `FermionTerms` that are equivalent with respect to
-    // anti-commutation.
-    hamiltonian.AddFermionTerm(new FermionTerm(new[] 
-        { (0, Spin.u), (1, Spin.u), (1, Spin.u), (0, Spin.u) }.ToSpinOrbitals(), 1.0));
-    hamiltonian.AddFermionTerm(new FermionTerm(new[] 
-        { (1, Spin.u), (0, Spin.u), (1, Spin.u), (0, Spin.u) }.ToSpinOrbitals(), -1.0));
-    // This Hamiltonian contains two terms. 
-    
-    //We combine equivalent terms using
-    hamiltonian.SortAndAccumulate();
-    // Now the Hamiltonian only contains one term.
+    // We now create two Hermitian fermion terms that are equivalent with respect to
+    // anti-commutation and Hermitian symmetry.
+    var terms = new[] {
+        (new[] { 0, 1, 1, 0 }, 1.0),
+        (new[] { 1, 0, 1, 0 }, 1.0) }
+    .Select(o => (new HermitianFermionTerm(o.Item1.ToLadderSequence()), o.Item2.ToDoubleCoeff()));
+
+    // Now add `terms` to the Hamiltonian.
+    hamiltonian.AddRange(terms);
+
+    // There is only one unique term. `nTerms == 1` is `true`.
+    var nTerms = hamiltonian.CountTerms();
 ```
 By combining coefficients of equivalent terms, we reduce the total number of terms in the Hamiltonian. Later on, this reduces the number of quantum gates required to simulate the Hamiltonian.
 

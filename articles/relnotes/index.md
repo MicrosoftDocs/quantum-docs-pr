@@ -108,7 +108,7 @@ This release contains the following:
 
 - Bug fix for DumpRegister issue reported by the community ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
-- Added ability to return from within a [using statement](ref:microsoft.quantum.qsharp-ref.statements).
+- Added ability to return from within a [using statement](xref:microsoft.quantum.qsharp-ref.statements).
 
 - Revamped [getting started guide](xref:microsoft.quantum.install).
 
@@ -167,7 +167,7 @@ This release includes a few bug fixes, including:
 
 * Invoking `DumpMachine` could change the state of the simulator under certain situations.
 * Removed compilation warnings when building projects using a version of .NET Core previous to 2.1.403.
-* Clean up of documentation, specially the tooltips shown during mouse hover in VS Code or Visual Studio.
+* Clean up of documentation, specially the tooltips shown during mouse hover in VS Code or Visual Studio
 
 If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).
 

@@ -21,6 +21,7 @@ The circuit diagram for preparing this maximally entangled quantum state is:
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/Concepts1.png)
 
+## Quantum circuit diagram conventions
 This visual language for quantum operations can be more readily digestible than writing down its equivalent matrix once you understand the conventions for expressing a quantum circuit.
 We review these conventions below.
 
@@ -47,6 +48,7 @@ is the unitary matrix $CBA$.
 Matrix multiplication obeys the opposite convention: the right-most matrix is applied first. In quantum circuit diagrams, however, the left-most gate is applied first.
 This difference can at times lead to confusion, so it is important to note this significant difference between the linear algebraic notation and quantum circuit diagrams.
 
+## Inputs and outputs of quantum circuits
 All previous examples given have had precisely the same number of wires (qubits) input to a quantum gate as the number of wires out from the quantum gate.
 It may at first seem reasonable that quantum circuits could have more, or fewer, outputs than inputs in general.
 This is impossible, however, because all quantum operations, save measurement, are unitary and hence reversible.
@@ -64,6 +66,7 @@ We can also view $B$ as having an action on a single two-qubit register rather t
 Perhaps the most useful property of such abstract circuit diagrams is that they allow complicated quantum algorithms to be described at a high level without having to compile them down to fundamental gates.
 This means that you can get an intuition about the data flow for a large quantum algorithm without needing to understand all the details of how each of the subroutines within the algorithm work.
 
+## Controlled gates
 The other construct that is built into multi-qubit quantum circuit diagrams is control.
 The action of a quantum singly controlled gate, denoted $\Lambda(G)$, where a single qubit's value controls the application of $G$, can be understood by looking at the following example of a product state input $\Lambda(G) (\alpha |0\rangle + \beta |1\rangle) |\psi\rangle = \alpha |0\rangle |\psi\rangle + \beta |1\rangle G|\psi \rangle$.
 That is to say, the controlled gate applies $G$ to the register containing $\psi$ if and only if the control qubit takes the value $1$.
@@ -89,6 +92,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 }
 ```
 
+## Measurement operator
 The remaining operation to visualize in circuit diagrams is measurement.
 Measurement takes a qubit register, measures it, and outputs the result as classical information.
 A measurement operation is denoted by a meter symbol and always takes as input a qubit register (denoted by a solid line) and outputs classical information (denoted by a double line).
@@ -109,6 +113,7 @@ Similarly, the subcircuit
 
 gives a classically controlled gate, where $G$ is applied conditioned on the classical control bit being value $1$.
 
+## Teleportation circuit diagram
 [Quantum teleportation](xref:microsoft.quantum.techniques.puttingittogether) is perhaps the best quantum algorithm for illustrating these components.
 Quantum teleportation is a method for moving data within a quantum computer (or even between distant quantum computers in a quantum network) through the use of entanglement and measurement.
 Interestingly, it is actually capable of moving a quantum state, say the value in a given qubit, from one qubit to another, without even knowing what the qubit's value is!

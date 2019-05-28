@@ -50,9 +50,11 @@ While thinking about a quantum computation as a sequence of rotations is a power
 
 ## Single-Qubit Operations
 
-Quantum computers process data by applying a universal set of quantum gates that can emulate any rotation of the quantum state vector. This notion of universality is akin to the notion of universality for traditional (i.e., classical) computing where a gate set is considered to be universal if every transformation of the input bits can be performed using a finite length circuit.
+Quantum computers process data by applying a universal set of quantum gates that can emulate any rotation of the quantum state vector.
+This notion of universality is akin to the notion of universality for traditional (i.e., classical) computing where a gate set is considered to be universal if every transformation of the input bits can be performed using a finite length circuit.
 In quantum computing, the valid transformations that we are allowed to perform on a qubit are unitary transformations and measurement.
-The *adjoint operation* or the complex conjugate transpose is of crucial importance to quantum computing because it is needed to invert quantum transformations. Q# reflects this by providing methods to automatically compile gate sequences to their adjoint, which saves the programmer from having to hand code adjoints in many cases. An example of this is shown below:
+The *adjoint operation* or the complex conjugate transpose is of crucial importance to quantum computing because it is needed to invert quantum transformations.
+Q# reflects this by providing methods to automatically compile gate sequences to their adjoint, which saves the programmer from having to hand code adjoints in many cases. An example of this is shown below:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -61,7 +63,8 @@ is Adj { // Auto-generate the adjoint of the operation
 }
 ```
 
-Although this is a trivial example (as the Hadamard (`H`) operation is self-adjoint), you can see how this becomes invaluable for more complicated qubit operations. For more information see [Operations and Functions](xref:microsoft.quantum.techniques.opsandfunctions).
+Although this is a trivial example (as the <xref:microsoft.quantum.intrinsic.h> operation is self-adjoint), you can see how this becomes invaluable for more complicated qubit operations.
+For more information, see [Operations and Functions](xref:microsoft.quantum.techniques.opsandfunctions).
 
 There are only four functions that map one bit to one bit on a classical computer. In contrast, there are an infinite number of unitary transformations on a single qubit on a quantum computer. Therefore, no finite set of primitive quantum operations, called [*gates*](https://en.wikipedia.org/wiki/Quantum_logic_gate), can exactly replicate the infinite set of unitary transformations allowed in quantum computing. This means, unlike classical computing, it is impossible for a quantum computer to implement every possible quantum program exactly using a finite number of gates. Thus quantum computers cannot be universal in the same sense of classical computers. As a result, when we say that a set of gates is *universal* for quantum computing we actually mean something slightly weaker than we mean with classical computing.
 For universality, we require that a quantum computer only *approximate* every unitary matrix within a finite error using a finite length gate sequence.

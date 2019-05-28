@@ -121,7 +121,7 @@ Then, using the likelihood function for quantum measurements,
         \right).
 \end{align}
 
-The <microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.math.complex>.
+The <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> operation implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.math.complex>.
 This is helpful when the expected state can be computed mathematically.
 
 ### Asserting Equality of Quantum Operations ###

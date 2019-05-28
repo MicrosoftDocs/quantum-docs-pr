@@ -50,10 +50,10 @@ dotnet add package Microsoft.Quantum.Numerics
 Like the rest of the Quantum Development Kit, the numerics library comes with samples that help you get started as quickly as possible.
 To test your installation using these samples, clone the [main samples repository](https://github.com/Microsoft/Quantum) and then run one of the samples.
 
-To run the [`[TODO]`](LINK) sample:
+To run the [`CustomModAdd`](https://github.com/Microsoft/Quantum/Numerics/CustomModAdd) sample:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics  #TODO
+cd Quantum/Numerics/CustomModAdd
 dotnet run
 ```

@@ -143,6 +143,5 @@ cd Quantum/Numerics
 Then, `cd` into one of the sample folders and run the sample via
 
 ```bash
-cd [SampleFolder]
 dotnet run
 ```

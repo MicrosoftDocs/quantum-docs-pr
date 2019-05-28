@@ -42,29 +42,28 @@ in the same way as `SignedLittleEndian`.
 For each of the three types above, a variety of operations is available:
 
 1. **`LittleEndian`**
-    - **`AddI`**: Add two quantum integers
-    - **`CompareGTI`**: Check if the first quantum integer is greater than the second
-    - **`MultiplyI`**: Multiply two quantum integers
-    - **`SquareI`**: Compute the square of a quantum integer
-    - **`DivideI`**: Divide first quantum integer by the second (integer division with remainder)
+    - Addition
+    - Comparison
+    - Multiplication
+    - Squaring
+    - Division (with remainder)
 
 1. **`SignedLittleEndian`**
-    - **`AddI`**: Also works for signed (2's complement) quantum integers (conversion to `LittleEndian` required)
-    - **`CompareGTSI`**: Check if the first signed quantum integer is greater than the second
-    - **`Invert2sSI`**: Invert a quantum integer modulo 2's complement
-    - **`MultiplySI`**: Multiply two signed quantum integers
-    - **`SquareSI`**: Compute the square of a signed quantum integer
+    - Addition
+    - Comparison
+    - Inversion modulo 2's complement
+    - Multiplication
+    - Squaring
 
 1. **`FixedPoint`**
-    - **`InitFxP`**: Initialize a fixed-point number to a classical constant (double)
-    - **`AddConstantFxP`**: Add a constant to a quantum fixed-point number
-    - **`AddFxP`**: Add two fixed-point numbers
-    - **`CompareGTFxP`**: Check if the first quantum fixed-point number if greater than the second
-    - **`MultiplyFxP`**: Multiply two fixed-point numbers
-    - **`SquareFxP`**: Square a fixed-point number
-    - **`EvaluatePolynomialFxP`**: Evaluate a polynomial in fixed-point. For even/odd polynomials, there are the specializations `Evaluate[Even/Odd]PolynomialFxP`.
-    - **`ComputeReciprocalFxP`**: Compute 1/x for a quantum fixed-point number `x`
-    - **`MeasureFxP`**: Measure a fixed-point number and return a Double
+    - Preparation / initialization to a classical values
+    - Addition (classical constant or other quantum fixed-point)
+    - Comparison
+    - Multiplication
+    - Squaring
+    - Polynomial evaluation with specialization for even and odd functions
+    - Reciprocal (1/x)
+    - Measurement (classical Double)
 
 For more information and detailed documentation for each of these operations, see the Q# library reference docs at [docs.microsoft.com](https://docs.microsoft.com/en-us/quantum)
 

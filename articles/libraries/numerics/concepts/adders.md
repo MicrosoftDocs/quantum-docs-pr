@@ -7,8 +7,6 @@ ms.date: 4/16/2019
 uid: microsoft.quantum.numerics.concepts.adders
 ---
 
-WIP
-
 # Quantum Circuits To Add Integers 
 
 One of the basic building blocks of arithmetic operations is integer addition. Some quantum algorithms require that two integers are added together in superposition. This can be done in place, which means that two $n$-qubit registers are given and the sum of the two integers encoded in them is written to one of them, say the second one. Of course, the sum of two $n$-bit integers can have $n+1$ bits, so an additional bit is needed to keep track of the carry bit. This means that the addition of two $n$-qubit integers $x$ and $y$ can be considered as the operation
@@ -40,7 +38,7 @@ operation Carry (carryIn: Qubit, summand1: Qubit, summand2: Qubit, carryOut: Qub
     adjoint controlled auto;
 }
 ```
-All four inputs are single 'Qubit' types. When acting on qubit registers that encode classical bits, the operation flips the qubit `carryOut` if the carry bit in the addition of the bits encoded in `summand1`, `summand2` and `carryIn` is 1. The qubit in `summand2` is changed because of the `CNOT` gate acting on it. The `Sum` operation is a bitwise sum without carry. 
+All four inputs are single `Qubit` types. When acting on qubit registers that encode classical bits, the operation flips the qubit `carryOut` if the carry bit in the addition of the bits encoded in `summand1`, `summand2` and `carryIn` is 1. The qubit in `summand2` is changed because of the `CNOT` gate acting on it. The `Sum` operation is a bitwise sum without carry. 
 
 
 ```qsharp
@@ -56,7 +54,7 @@ operation Sum (carryIn: Qubit, summand1: Qubit, summand2: Qubit) : Unit
 }
 ```
 
- `RippleCarryAdderD` computes the integer addition with the code shown below. It uses $n$ auxiliary qubits that are used for propagating the carry bit. This code allows to be controlled on a qubit array `controls`. The `Carry` operations in the first cancel out with their adjoint counterparts in the second loop when the controls do not trigger the operation and do not need to be controlled separately. 
+`RippleCarryAdderD` computes the integer addition with the code shown below. It uses $n$ auxiliary qubits that are used for propagating the carry bit. This code allows to be controlled on a qubit array `controls`. The `Carry` operations in the first loop cancel out with their adjoint counterparts in the second loop when the controls do not trigger the operation. So they do not need to be controlled separately. 
 
 ```qsharp
 using ( ancillas = Qubit[nQubits] ) {
@@ -66,16 +64,31 @@ using ( ancillas = Qubit[nQubits] ) {
     (Controlled Carry) (controls, (ancillas[nQubits-1], xs![nQubits-1], ys![nQubits-1], carry));
     (Controlled CNOT) (controls, (ancillas[nQubits-1], ys![nQubits-1]));
     for (idx in (nQubits-2)..(-1)..0 ) {
-        (Adjoint Carry) (ancillas[idx], xs![idx], ys![idx], ancillas[idx+1]); // cancels with (1)
+        (Adjoint Carry) (ancillas[idx], xs![idx], ys![idx], ancillas[idx+1]); // cancels with (1) if controls off
         (Controlled Sum) (controls, (ancillas[idx], xs![idx], ys![idx]));
     }
 }
 ```
 
-## Addition with Fewer Auxiliary Qubits
-Cuccaro-Draper-Kutin-Moulton 
-
-Takahashi-Tani-Kunihiro
-
 ## Using Integer Addition
+
+The integer addition operation 'RippleCarryAdderD' described above can be applied as shown here: 
+
+```qsharp
+operation MyIntegerAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
+{
+    using ((xQubits, yQubits, carry) = (Qubit[n], Qubit[n], Qubit()))
+    {
+        x = LittleEndian(xQubits); // define bit order
+        y = LittleEndian(yQubits);
+        
+        ApplyXorInPlace(xInt, x); // initialize values
+        ApplyXorInPlace(yInt, y);
+        
+        RippleCarryAdderD(x, y, carry); // perform addition x+y into y and carry
+        
+        // ... (use the result)
+    }
+}
+```
 

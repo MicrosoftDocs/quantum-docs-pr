@@ -48,6 +48,25 @@ var qSharpWavefunctionData = wavefunction.ToQSharpFormat();
 var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
+All the above steps may be abbreviated using provided convenience functions as follows.
+```csharp
+// This is the name of the file we want to load
+var filename = "...";
+
+// This deserializes Broombridge.
+var broombridge = Broombridge.Deserializers.DeserializeBroombridge(filename);
+
+// Note that the deserializer returns a list of `ProblemDescriptions` instances 
+// as the file might describe multiple Hamiltonians. In this example, there is 
+// only one Hamiltonian. So we use `.First()`, which selects the first element of the list.
+var problem = broombridge.ProblemDescriptions.First();
+
+// This is a data structure representing the Jordan-Wigner encoding 
+// of the Hamiltonian that we may pass to a Q# algorithm.
+// If no state is specified, the Hartree-Fock state is used by default.
+var qSharpData = problem.ToQSharpFormat("|E1>");
+```
+
 We may also load a Hamiltonian from the LIQUi|> format, using a very similar syntax. 
 
 ```csharp
@@ -59,9 +78,9 @@ var root = @"IntegralData\Liquid";
 // Deserialize the LiQuiD format.
 var problem = LiQuiD.Deserialize($@"{root}\{filename}").First();
 
-// This extracts the `OrbitalIntegralHamiltonian` from problem
-// description format.
-var orbitalIntegralHamiltonian = problem.OrbitalIntegralHamiltonian;
+// This is a data structure representing the Jordan-Wigner encoding 
+// of the Hamiltonian that we may pass to a Q# algorithm.
+var qSharpData = problem.ToQSharpFormat();
 ```
 
-Starting from any such instance of a `FermionHamiltonian`, quantum algorithms such as quantum phase estimation may be run.
+By following this process from any instance of Broombridge, or any intermediate step, quantum algorithms such as quantum phase estimation may be run on the specified electronic structure problem.

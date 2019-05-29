@@ -21,20 +21,9 @@ Let us assume that we already have a `FermionHamiltonian` instance, say, loaded 
     // This deserializes Broombridge.
     var problem = Broombridge.Deserializers.DeserializeBroombridge(filename).ProblemDescriptions.First();
 
-    // This extracts the `OrbitalIntegralHamiltonian` from Broombridge format,
-    // then converts it to a fermion Hamiltonian, then to a Jordan-Wigner
-    // representation.
-    var fermionHamiltonian = problem
-        .OrbitalIntegralHamiltonian
-        .ToFermionHamiltonian(IndexConvention.UpDown);
-    var jordanWignerEncoding = fermionHamiltonian
-        .ToPauliHamiltonian(Pauli.QubitEncoding.JordanWigner);
-
     // This is a data structure representing the Jordan-Wigner encoding 
     // of the Hamiltonian that we may pass to a Q# algorithm.
-    var qSharpHamiltonianData = jordanWignerEncoding.ToQSharpFormat();
-    var qSharpWavefunctionData = fermionHamiltonian.CreateHartreeFockState(nElectrons: 1).ToQSharpFormat();
-    var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
+    var qSharpData = problem.ToQSharpFormat();
 ```
 
 The syntax for obtaining resource estimates is almost identical to running the algorithm on the full-state simulator. We simply choose a different target machine. For the purposes of resource estimates, it suffices to evaluate the cost of a single Trotter step, or a quantum walk created by the Qubitization technique. The boilerplate for invoking these algorithms are as follows.

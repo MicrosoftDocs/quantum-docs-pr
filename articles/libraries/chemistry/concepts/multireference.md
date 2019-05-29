@@ -59,9 +59,10 @@ Thus
 It is also common to split the cluster operator $T = T_1 + T_2 + \cdots$ into parts, where each part $T_j$ contains on $j$-body terms.
 For instance, one-body cluster operators (singles) are of the form
 \begin{align}
-T_1 = \sum_{pq}t^{q}_{p} a^\dagger_p a_q,
+T_1 = \sum_{pq}t^{q}_{p} a^\dagger_p a_q.
 \end{align}
-and two-body cluster operators (doubles) are of the form
+
+The two-body cluster operators (doubles) are of the form
 \begin{align}
 T_2 = \sum_{pqrs}t^{rs}_{pq} a^\dagger_p a^\dagger_q a_r a_s.
 \end{align}

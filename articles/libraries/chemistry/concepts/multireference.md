@@ -17,7 +17,7 @@ The first approach, which we call sparse multi-reference wavefunctions, is effec
 ## Sparse multi-reference wavefunction
 On one hand, multi-reference state $|\psi_{\rm {MCSCF}}\rangle$ may be specified explicitly as a linear combination of $N$-electron Slater determininants.
 \begin{align}
-|\psi_{\rm {MCSCF}}\rangle \propto \sum_{i_1 < i_2 < \cdots < i_N} \lambda_{i_1,i_2} a^\dagger_{i_1}a^\dag_{i_2}\cdots a^\dagger_{i_N}|0\rangle.
+|\psi_{\rm {MCSCF}}\rangle \propto \sum_{i_1 < i_2 < \cdots < i_N} \lambda_{i_1,i_2} a^\dagger_{i_1}a^\dagger_{i_2}\cdots a^\dagger_{i_N}|0\rangle.
 \end{align}
 For example, the state $\propto(0.1 a^\dagger_1a^\dagger_2a^\dagger_6 - 0.2 a^\dagger_2a^\dagger_1a^\dagger_5)|0\rangle$ may be specified in the chemistry library as follows.
 ```csharp
@@ -35,19 +35,21 @@ var wavefunction = new FermionWavefunction<int>(superposition);
 This explicit representation of the superposition components is effective when only a few components need to be specified. One should avoid using this representation many many components are required to accurately capture the desired state. The reason for this is the gate cost of quantum circuit that prepares this state on a quantum computer, which scales at least linearly with the number of superposition components, and at most quadratically in the one-norm of the superposition amplitudes.
 
 ## Unitary coupled-cluster wavefunction
-It is also possible to efficiently specify a multi-reference state that has exponentially many components. One common example is the unitary coupled-cluster wavefunction $|\psi_{\rm {UCC}}\rangle$. In this situation, we have a single-reference state, say, $|\psi_{\rm{SCF}}\rangle$. The components of the unitary coupled-cluster wavefunction is then specified implicity through a unitary operator acting on a reference state. This unitary operator is commonly written as $e^{T-T^\dag}$, where $T-T^\dag$ is the anti-Hermitian cluster operator. Thus
+It is also possible to efficiently specify a multi-reference state that has exponentially many components. One common example is the unitary coupled-cluster wavefunction $|\psi_{\rm {UCC}}\rangle$. In this situation, we have a single-reference state, say, $|\psi_{\rm{SCF}}\rangle$. The components of the unitary coupled-cluster wavefunction is then specified implicity through a unitary operator acting on a reference state. This unitary operator is commonly written as $e^{T-T^\dagger}$, where $T-T^\dagger$ is the anti-Hermitian cluster operator. Thus
 \begin{align}
-|\psi_{\rm {UCC}}\rangle = e^{T-T^\dag}|\psi_{\rm{SCF}}\rangle.
+|\psi_{\rm {UCC}}\rangle = e^{T-T^\dagger}|\psi_{\rm{SCF}}\rangle.
 \end{align}
 
 It is also common to split the cluster operator $T = T_1 + T_2 + \cdots$ into parts, where each part $T_j$ contains on $j$-body terms. For instance, one-body cluster operators (singles) are of the form
 \begin{align}
 T_1 = \sum_{pq}t^{q}_{p} a^\dagger_p a_q,
 \end{align}
+
 and two-body cluster operators (doubles) are of the form
 \begin{align}
 T_2 = \sum_{pqrs}t^{rs}_{pq} a^\dagger_p a^\dagger_q a_r a_s.
 \end{align}
+
 Higher-order terms (triples, quadruples, etc.) are possible, but not currently supported by the chemistry library. It is common, though not always the case, that the annihilation operators share indices with occupied spin-orbitals of the reference state, and the creation operators share indices with unoccupied spin-orbitals. 
 
 For example, let $|\psi_{\rm{SCF}}\rangle = a^\dagger_1 a^\dagger_2|0\rangle$, and let $T= 0.123 a^\dagger_0 a_1 + 0.456 a^\dagger_0a^\dagger_3 a_1 a_2 - 0.789 a^\dagger_3a^\dagger_2 a_1 a_0 + \text{Hermitian conjugate}$. Then this state is instantiated in the chemistry library as follows.
@@ -102,8 +104,8 @@ var wavefunctionSpinOrbital = new FermionWavefunction<SpinOrbital>(reference, cl
 var wavefunctionInteger = wavefunctionSpinOrbital.ToIndexing(IndexConvention.UpDown);
 ```
 
-```csharp
 We also provide a convenience function that enumerates over all spin-conversing cluster operators that annihilate only occupied spin-orbitals and excit to only unoccupied spin-orbitals.
+```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state
 var reference = new[] { (1, Spin.u), (2, Spin.d) }.ToSpinOrbitals();

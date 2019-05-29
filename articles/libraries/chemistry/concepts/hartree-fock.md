@@ -36,7 +36,7 @@ It should be noted that the matrix $u$ represents the orbital rotations and $\wi
 
 The matrix $u$ is then optimized to minimize the expected energy $\bra{0} \prod_{j=0}^{N-1}  \widetilde{a}\_j  H \prod\_{k=0}^{N-1}  \widetilde{a}^\dagger_k\ket{0}$.
 While such optimization problems may be generically hard, in practice the Hartree–Fock algorithm tends to rapidly converge to a near-optimal solution to the optimization problem, especially for closed-shell molecules in the equilibrium geometries.
-We may specify these states as an instance of the `FermionWavefunction` class.
+We may specify these states as an instance of the <xref:Microsoft.Quantum.Chemistry.Fermion.FermionWavefunction> class.
 For instance, the state $a^\dagger_{1}a^\dagger_{2}a^\dagger_{6}\ket{0}$ is instantiated in the chemistry library as follows.
 ```csharp
 // Create a list of integer indices of the creation operators
@@ -47,7 +47,7 @@ var indices = new[] { 1, 2, 6 };
 // type specialization.
 var wavefunction = new FermionWavefunction<int>(indices);
 ```
-It is also possible to index wave functions with `SpinOrbital` indices, and then convert these indices to integers as follows.
+It is also possible to index wave functions with <xref:Microsoft.Quantum.Chemistry.OrbitalIntegrals.SpinOrbital> indices, and then convert these indices to integers as follows.
 ```csharp
 // Create a list of spin orbital indices of the creation operators
 var indices = new[] { (0, Spin.d), (1,Spin.u), (3, Spin.u) };

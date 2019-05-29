@@ -20,22 +20,29 @@ For example, if $\ket{\psi}$ is any pure quantum state then
 E = \bra{ \psi } \hat{H} \ket{\psi}
 \end{equation}
 gives the mean energy that the system has in that state.
-The ground state then is the state that gives the smallest such value. As a result, choosing a state that is as close as possible to the true ground state is vitally important for estimating the energy either directly (as is done in variational eigensolvers) or through phase estimation.
+The ground state then is the state that gives the smallest such value.
+As a result, choosing a state that is as close as possible to the true ground state is vitally important for estimating the energy either directly (as is done in variational eigensolvers) or through phase estimation.
 
-Hartree–Fock theory gives a simple way to construct the initial state for quantum systems. It yields a single Slater-determinant approximation to the ground state of a quantum system. To that end, it finds a rotation within Fock-space that minimizes the ground state energy. In particular, for a system of $N$ electrons the method performs the rotation
+Hartree–Fock theory gives a simple way to construct the initial state for quantum systems.
+It yields a single Slater-determinant approximation to the ground state of a quantum system.
+To that end, it finds a rotation within Fock-space that minimizes the ground state energy.
+In particular, for a system of $N$ electrons the method performs the rotation
 \begin{equation}
 \prod_{j=0}^{N-1} a^\dagger_j \ket{0} \mapsto \prod_{j=0}^{N-1} e^{u} a^\dagger_j e^{-u} \ket{0}\defeq\prod_{j=0}^{N-1}  \widetilde{a}^\dagger_j  \ket{0},
 \end{equation}
-with an anti-Hermitian (i.e. $u= -u^\dagger$) matrix $u = \sum_{pq} u_{pq} a^\dagger_p a_q$. It should be noted that the matrix $u$ represents the orbital rotations and $\widetilde{a}^\dagger_j$ and $\widetilde{a}_j$ represent creation and annihilation operators for electrons occupying Hartree–Fock molecular spin-orbitals.
+with an anti-Hermitian (i.e. $u= -u^\dagger$) matrix $u = \sum_{pq} u_{pq} a^\dagger_p a_q$.
+It should be noted that the matrix $u$ represents the orbital rotations and $\widetilde{a}^\dagger_j$ and $\widetilde{a}_j$ represent creation and annihilation operators for electrons occupying Hartree–Fock molecular spin-orbitals.
 
 
-The matrix $u$ is then optimized to minimize the expected energy $\bra{0} \prod_{j=0}^{N-1}  \widetilde{a}\_j  H \prod\_{k=0}^{N-1}  \widetilde{a}^\dagger_k\ket{0}$. 
-While such optimization problems may be generically hard, in practice the Hartree–Fock algorithm tends to rapidly converge to a near-optimal solution to the optimization problem, especially for closed-shell molecules in the equilibrium geometries. We may specify these states as an instance of the `FermionWavefunction` object. For instance, the state $a^\dagger_{1}a^\dagger_{2}a^\dagger_{6}|0\rangle$ is instantiated in the chemistry library as follows.
+The matrix $u$ is then optimized to minimize the expected energy $\bra{0} \prod_{j=0}^{N-1}  \widetilde{a}\_j  H \prod\_{k=0}^{N-1}  \widetilde{a}^\dagger_k\ket{0}$.
+While such optimization problems may be generically hard, in practice the Hartree–Fock algorithm tends to rapidly converge to a near-optimal solution to the optimization problem, especially for closed-shell molecules in the equilibrium geometries.
+We may specify these states as an instance of the `FermionWavefunction` class.
+For instance, the state $a^\dagger_{1}a^\dagger_{2}a^\dagger_{6}\ket{0}$ is instantiated in the chemistry library as follows.
 ```csharp
 // Create a list of integer indices of the creation operators
 var indices = new[] { 1, 2, 6 };
 
-// Convert the list of indices to a `FermionWavefunction` object.
+// Convert the list of indices to a `FermionWavefunction` instance.
 // In this case, the indices are integers, so we use the `int`
 // type specialization.
 var wavefunction = new FermionWavefunction<int>(indices);
@@ -45,7 +52,7 @@ It is also possible to index wave functions with `SpinOrbital` indices, and then
 // Create a list of spin orbital indices of the creation operators
 var indices = new[] { (0, Spin.d), (1,Spin.u), (3, Spin.u) };
 
-// Convert the list of indices to a `FermionWavefunction` object.
+// Convert the list of indices to a `FermionWavefunction` instance.
 var wavefunctionSpinOrbital = new FermionWavefunction<SpinOrbital>(indices.ToSpinOrbitals());
 
 // Convert a wavefunction indexed by spin orbitals to
@@ -62,7 +69,7 @@ it the workhorse of state preparation in quantum computing and a spring board on
 For this reason, the [Broombridge schema](xref:microsoft.quantum.libraries.chemistry.schema.spec) used to input quantum chemistry Hamiltonians into the chemistry library incorporates a field that gives Hartree–Fock data if available.
 This is useful not only as a diagnostic, but also because it allows the correlation energy to be reported, which is the difference between the Hartree–Fock energy and the true ground state energy as yielded by full-configuration interaction simulations or quantum computation.
 
-The Hartree-Fock state may also be reconstructed from a `FermionHamiltonian`  as follows.
+The Hartree-Fock state may also be reconstructed from an instance of the `FermionHamiltonian` class as follows.
 ```csharp
 // We initialize a fermion Hamiltonian.
 var fermionHamiltonian = new FermionHamiltonian();

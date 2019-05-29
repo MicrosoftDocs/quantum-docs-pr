@@ -26,7 +26,7 @@ Our first step is to construct the Hamiltonian representing molecular Hydrogen. 
         new OrbitalIntegral(new[] { 0,1,0,1 }, 0.181287518),
         new OrbitalIntegral(new[] { 0,1,1,0 }, 0.663472101),
         new OrbitalIntegral(new[] { 1,1,1,1 }, 0.697398010),
-        // Add the identity term
+        // This line adds the identity term.
         new OrbitalIntegral(new int[] { }, energyOffset)
     };
 

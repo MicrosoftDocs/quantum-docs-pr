@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifc
+name: ApplyIfC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  Given an operation `op` and a bit value `bit`, applies `op` to the `target`
+  if `bit` is true. If false, nothing happens to the `target`.
+  The modifier `C` indicates that the operation is controllable.
+syntax: "operation ApplyIfC (op : ('T => Unit is Ctl), bit : Bool, target : 'T) : Unit"
+input:
+  content: "(op : ('T => Unit is Ctl), bit : Bool, target : 'T)"
+  types:
+  - name: op
+    summary: An operation to be conditionally applied.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: bit
+    summary: a boolean that controls whether op is applied or not.
+    isPrimitive: true
+    uid: Bool
+  - name: target
+    summary: The input to which the operation is applied.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: The input type of the operation to be conditionally applied.
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyif
+...

@@ -32,7 +32,7 @@ Hamiltonian simulation is a major component of many other quantum simulation pro
 
 Additional assumptions of the format of the input are therefore required. A fine balance must be struck between input models that are sufficiently descriptive to encompass interesting Hamiltonians, such as those for realistic physical systems or interesting computational problems, and input models that are sufficiently restrictive to be efficiently implementable on a quantum computer. A variety of non-trivial input model may be found in the literature, and they range from quantum to classical. 
 
-As examples of quantum input models, [sample-based Hamiltonian simulation](http://www.nature.com/articles/s41534-017-0013-7) assumes black-box access to quantum operations that produce copies of a density matrix $\rho$, which are taken to be the Hamiltonian $H$. In the [unitary access model](https://arxiv.org/abs/1202.5822) one supposes that the Hamiltonian instead decomposes into a sum of unitaries 
+As examples of quantum input models, [sample-based Hamiltonian simulation](http://www.nature.com/articles/s41534-017-0013-7) assumes black-box access to quantum operations that produce copies of a density matrix $\rho$, which are taken to be the Hamiltonian $H$. In the [unitary access model](https://arxiv.org/abs/1202.5822) one supposes that the Hamiltonian instead decomposes into a sum of unitaries
 $$
 \begin{align}
     H & = \sum^{d-1}\_{j=0} a\_j \hat{U}\_j,
@@ -67,8 +67,8 @@ $$
 using a product of $r d$ terms. 
 
 > [!TIP]
-> Applications of the Trotter-Suzuki simulation algorithm are covered in the samples. 
-> For the Ising model using only the primitive library, please see the [**SimpleIsing** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing).
+> Applications of the Trotter-Suzuki simulation algorithm are covered in the samples.
+> For the Ising model using only the intrinsic operations provided by each target machine, please see the [**SimpleIsing** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing).
 > For the Ising model using the Trotter-Suzuki library control structure, please see the [**IsingTrotter** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingTrotterEvolution).
 > For molecular Hydrogen using the Trotter-Suzuki library control structure, please see the [**H2 simulation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine).
 
@@ -84,7 +84,7 @@ $$
 using a product of $2rd$ terms. Larger orders will involve even more terms and optimized variants may require highly non-trivial orderings on the exponentials. Other advanced algorithms may also involve the use of ancilla qubits in intermediate steps. Thus we package simulation algorithms in the canon as the user-defined type
 
 ```qsharp
-newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit : Adjoint, Controlled);
+newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
 ```
 
 The first parameter `Double` is the time of simulation, the second parameter `EvolutionGenerator`, covered in the Dynamical Generator Representation section of [data-structures](xref:microsoft.quantum.libraries.data-structures), is a classical description of a time-independent Hamiltonian packaged with instructions on how each term in the Hamiltonian may be simulated by a quantum circuit. Types of this form approximate the unitary operation $e^{-iHt}$ on the third parameter `Qubit[]`, which is the register storing the quantum state of the simulated system. Similarly for the time-dependent case, we define a user-defined type with an `EvolutionSchedule` type instead, which is a classical description of a time-dependent Hamiltonian.
@@ -132,7 +132,7 @@ function InterpolatedEvolution(
         evolutionGeneratorStart: EvolutionGenerator,
         evolutionGeneratorEnd: EvolutionGenerator,
         timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
-        : (Qubit[] => Unit : Adjoint, Controlled) {
+        : (Qubit[] => Unit is Adj + Ctl) {
         ...
 }
  
@@ -147,7 +147,7 @@ operation AdiabaticStateEnergyEstimate(
     nQubits : Int, 
     statePrepUnitary: (Qubit[] => Unit),
     adiabaticUnitary: (Qubit[] => Unit),
-    qpeUnitary: (Qubit[] => Unit :  Adjoint, Controlled),
+    qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
     phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
     : Double {
 ...
@@ -209,10 +209,10 @@ The controlled-$U_a$ gate maps $|x\rangle$ to $|(ax)\text{ mod } N\rangle$ if th
 To achieve $(a^nx)\text{ mod } N$,  we can simply apply controlled-$U_{a^n}$, where we calculate $a^n \text{ mod } N$ classically to plug into the quantum circuit.  
 The circuits to achieve such modular arithmetic have been described in the [quantum arithmetic documentation](./algorithms.md#arithmetic), specifically we require a modular exponentiation circuit to implement the controlled-$U\_{a^i}$ operations.
 
-While the circuit above corresponds to [Quantum Phase Estimation](xref:microsoft.quantum.canon.quantumphaseestimation) and explicitly enables order finding, we can reduce the number of qubits required. We can either follow Beauregard's method for order finding as described 
+While the circuit above corresponds to [Quantum Phase Estimation](xref:microsoft.quantum.characterization.quantumphaseestimation) and explicitly enables order finding, we can reduce the number of qubits required. We can either follow Beauregard's method for order finding as described 
 [on Page 8 of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), or 
 use one of the phase estimation routines available in Microsoft.Quantum.Canon. For example, 
-[Robust Phase Estimation](xref:microsoft.quantum.canon.robustphaseestimation) also uses one extra qubit.
+[Robust Phase Estimation](xref:microsoft.quantum.characterization.robustphaseestimation) also uses one extra qubit.
  
 ### Factoring ###
 The goal of factoring is to determine the two prime factors of integer $N$, where $N$ is an $n$-bit number.  

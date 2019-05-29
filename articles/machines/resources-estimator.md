@@ -118,22 +118,20 @@ of the Q# program. The following example illustrates this:
 
 ```qsharp
 operation Teleportation (source : Qubit, target : Qubit) : Unit {
-    body (...) {
-        using (ancillaRegister = Qubit[1]) {
-            let ancilla = ancillaRegister[0];
 
-            H(ancilla);
-            CNOT(ancilla, target);
+    using (ancilla = Qubit()) {
 
-            CNOT(source, ancilla);
-            H(source);
+        H(ancilla);
+        CNOT(ancilla, target);
 
-            AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-            AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        CNOT(source, ancilla);
+        H(source);
 
-            if (M(source) == One)  { Z(target); X(source); }
-            if (M(ancilla) == One) { X(target); X(ancilla); }
-        }
+        AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+
+        if (M(source) == One)  { Z(target); X(source); }
+        if (M(ancilla) == One) { X(target); X(ancilla); }
     }
 }
 ```

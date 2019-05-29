@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
+name: FiveQubitCodeDecoder
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
+syntax: 'operation FiveQubitCodeDecoder (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : (Qubit[], Qubit[])'
+input:
+  content: '(logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
+  types:
+  - name: logicalRegister
+    uid: microsoft.quantum.errorcorrection.logicalregister
+output:
+  content: (Qubit[], Qubit[])
+  types:
+  - types:
+    - isArray: true
+      isPrimitive: true
+      uid: Qubit
+    - isArray: true
+      isPrimitive: true
+      uid: Qubit
+...

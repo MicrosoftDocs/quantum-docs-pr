@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.equalityfactl
+name: EqualityFactL
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Asserts that a classical BigInt variable has the expected value.
+syntax: 'function EqualityFactL (actual : BigInt, expected : BigInt, message : String) : Unit'
+input:
+  content: '(actual : BigInt, expected : BigInt, message : String)'
+  types:
+  - name: actual
+    summary: The number to be checked.
+    isPrimitive: true
+    uid: BigInt
+  - name: expected
+    summary: The expected value.
+    isPrimitive: true
+    uid: BigInt
+  - name: message
+    summary: Failure message string to be used when the assertion is triggered.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

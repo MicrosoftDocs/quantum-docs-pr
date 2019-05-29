@@ -36,7 +36,7 @@ That is, they are either integer or floating-point numbers.
 
 `Int` literals in Q# are identical to integer literals in C#,
 except that no trailing "l" or "L" is required (or allowed).
-Hexadecimal integers are supported with a "0x" prefix.
+Hexadecimal and binary integers are supported with a "0x" and "0b" prefix respectively.
 
 `BigInt` literals in Q# are identical to big integer strings in .NET,
 with a trailing "l" or "L".
@@ -129,9 +129,7 @@ Given any two expressions of the same primitive type, the `==`
 and `!=` binary operators may be used to construct a `Bool` expression.
 The expression will be true if the two expressions are (resp. are not) equal.
 
-:new: Values of user-defined types may not be compared.
-The unwrap operator must be used to compare user-defined type values
-for types based on primitive types.
+Values of user-defined types may not be compared, only their values can be compared. 
 For example,
 
 ```qsharp
@@ -156,7 +154,7 @@ Given any two numeric expressions, the binary operators
 that is true if the first expression is respectively greater than, less than,
 greater than or equal to, or less than or equal to the second expression.
 
-Given any two Boolean expressions, the `&&` and `||` binary operators
+Given any two Boolean expressions, the `and` and `or` binary operators
 may be used to construct a new Boolean expression that is true if both of
 (resp. either or both of) the two expressions are true.
 
@@ -254,7 +252,7 @@ Similarly, if the operation supports the `Controlled` functor, then
 The types of these expressions are specified in
 [Functors](xref:microsoft.quantum.language.type-model#functors).
 
-:new: Functor modifiers (`Adjoint` and `Controlled`) bind more closely than
+Functors (`Adjoint` and `Controlled`) bind more closely than
 all other operators, except for the unwrap operator `!` and array indexing
 with `[]`.
 Thus, the following are all legal, assuming that the operations support the
@@ -316,12 +314,12 @@ It is also sometimes useful when passing operations with different functor
 supports to a callable.
 
 For instance, if `Func` has signature `('T1, 'T2, 'T1) -> 'T2`, `Op1` and
-`Op2` have signature `(Qubit[] => Unit : Adjoint)`, and `Op3` has signature
+`Op2` have signature `(Qubit[] => Unit is Adj)`, and `Op3` has signature
 `(Qubit[] => Unit)`, to invoke `Func` with `Op1` as the first argument, `Op2`
 as the second, and `Op3` as the third:
 
 ```qsharp
-let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit : Adjoint)>(Op1, Op2, Op3);
+let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
 ```
 
 The type specification is required because `Op3` and `Op1` have different
@@ -347,15 +345,15 @@ Changing the value of the variable afterward will not impact the partial
 application.
 
 For example, if `Op` has type
-`((Int, ((Qubit, Qubit), Double)) => Unit : Adjoint)`:
+`((Int, ((Qubit, Qubit), Double)) => Unit is Adj)`:
 
-- `Op(5,(_,_))` has type `(((Qubit,Qubit), Double) => Unit:Adjoint)`,
+- `Op(5,(_,_))` has type `(((Qubit,Qubit), Double) => Unit is Adj)`,
   and so has `Op(5,_)`.
-- `Op(_,(_,1.0))` has type `((Int, (Qubit,Qubit)) => Unit:Adjoint)`.
-- `Op(_,((q1,q2),_))` has type `((Int,Double) => Unit:Adjoint)`.
+- `Op(_,(_,1.0))` has type `((Int, (Qubit,Qubit)) => Unit is Adj)`.
+- `Op(_,((q1,q2),_))` has type `((Int,Double) => Unit is Adj)`.
    Note that we have applied singleton tuple equivalence here.
 
-:new: If the partially-applied callable has type parameters that cannot be
+If the partially-applied callable has type parameters that cannot be
 inferred by the compiler, they must be provided at the invocation site.
 The partial application cannot have any unspecified type parameters.
 
@@ -363,8 +361,8 @@ For example, if `Op` has type
 `(('T1, Qubit, 'T1) => Unit : Adjoint)`:
 
 ```qsharp
-let f1 = Op<Int>(_, qb, _); // f1 is (Int,Int)=>Unit:Adjoint
-let f2 = Op(5, qb, _);      // f2 is Int=>Unit:Adjoint
+let f1 = Op<Int>(_, qb, _); // f1 has type ((Int,Int) => Unit is Adj)
+let f2 = Op(5, qb, _);      // f2 has type (Int => Unit is Adj)
 let f3 = Op(_,qb, _);       // f3 generates a compilation error
 ```
 
@@ -405,21 +403,16 @@ Other than literals, the only expressions of a user-defined type are symbols
 that are bound to values of that type, array elements of arrays of that type,
 and callable invocations that return that type.
 
-## :new: Unwrap Expressions
+## Unwrap Expressions
 
-> [!IMPORTANT]
-> Q# 0.3 introduces a significant difference in the behavior of user-defined types.
-
-To access the base value of a user-defined type value, the value must be
-unwrapped.
 In Q#, the unwrap operator is a trailing exclamation mark `!`.
-For instance, if `IntPair` is a user-defined type based on `(Int, Int)`,
+For instance, if `IntPair` is a user-defined type with underlying type `(Int, Int)`,
 and `s` was a variable with value `IntPair(2,3)`, then `s!` would be `(2,3)`.
 
 For user-defined types defined in terms of other user-defined types. the
 unwrap operator may be repeated; for instance, `s!!` indicates the
 doubly-unwrapped value of `s`.
-Thus, if `WrappedPair` is a user-defined type based on `IntPair`, and
+Thus, if `WrappedPair` is a user-defined type with underlying type `IntPair`, and
 `t` is a variable with value `WrappedPair(IntPair(1,2))`, then `t!!` would
 be `(1,2)`.
 
@@ -443,7 +436,7 @@ let g = Foo(arg)!;      // Syntax error
 ## Array Expressions
 
 An array literal is a sequence of one or more element expressions,
-separated by :new: commas ~~semi-colons~~, enclosed in `[` and `]`.
+separated by commas, enclosed in `[` and `]`.
 All elements must be compatible with the same type.
 
 If the common element type is an operation or function type, all of the
@@ -454,8 +447,8 @@ For example, if `Op1`, `Op2`, and `Op3` all are `Qubit[] => Unit`, but `Op1`
 supports `Adjoint`, `Op2` supports `Controlled`, and `Op3` supports both:
 
 - `[Op1, Op2]` is an array of `(Qubit[] => Unit)` operations.
-- `[Op1, Op3]` is an array of `(Qubit[] => Unit) : Adjoint` operations.
-- `[Op2, Op3]` is an array of `(Qubit[] => Unit) : Controlled)` operations.
+- `[Op1, Op3]` is an array of `(Qubit[] => Unit is Adj)` operations.
+- `[Op2, Op3]` is an array of `(Qubit[] => Unit is Ctl)` operations.
 
 Empty array literals, `[]`, are not allowed.
 Instead using `new ★[0]`,
@@ -481,18 +474,16 @@ reasonable default value.
 Thus, for these types, the default is an invalid
 reference that cannot be used without causing a runtime error.
 This is similar to a null reference in languages such as C# or Java.
-Arrays containing qubits or callables must be filled in using
-[`set`](xref:microsoft.quantum.qsharp-ref.statements#updating-mutable-symbols)
-statements before their elements may be safely used.
-Array elements can only be set if the array is declared as mutable, e.g.
-`mutable array = new Int[5]`.
-Arrays passed as arguments are immutable.
+Arrays containing qubits or callables must be properly initialized 
+with non-default values before their elements may be safely used. 
+Suitable initialization routines can be found in <xref:microsoft.quantum.arrays>.
 
 The default values for each type are:
 
 Type | Default
 ---------|----------
  `Int` | `0`
+ `BigInt` | `0L`
  `Double` | `0.0`
  `Bool` | `false`
  `String` | `""`
@@ -505,10 +496,6 @@ Type | Default
 
 Tuple types are initialized element-by-element.
 
-Array creation is primarily of use initializing mutable arrays, on the
-right-hand side of a
-[`mutable`](xref:microsoft.quantum.qsharp-ref.statements#mutable-symbols)
-statement.
 
 ### Jagged Arrays
 
@@ -518,10 +505,12 @@ A jagged array, sometimes called an "array of arrays", is an array whose element
 let N = 4;
 mutable multiplicationTable = new Int[][N];
 for (i in 1..N) {
-    set multiplicationTable[i-1] = new Int[i];
+
+    mutable row = new Int[i];
     for (j in 1..i) {
-        set multiplicationTable[i-1][j-1] = i * j;
+        set row w/= j-1 <- i * j;
     }
+    set multiplicationTable w/= i-1 <- row;
 }
 ```
 
@@ -571,7 +560,7 @@ concatenation would be expressed as:
 All arrays in Q# are zero-based.
 That is, the first element of an array `a` is always `a[0]`.
 
-## :new: Conditional Expressions
+## Conditional Expressions
 
 Given two other expressions of the same type and a Boolean expression,
 the conditional expression may be formed using the question mark `?` and
@@ -588,9 +577,9 @@ expressions.
 For example, if `Op1`, `Op2`, and `Op3` all are `Qubit[]=>Unit`, but `Op1`
 supports `Adjoint`, `Op2` supports `Controlled`, and `Op3` supports both:
 
-- `flag ? Op1 | Op2` is a `(Qubit[]=>Unit)` operation.
-- `flag ? Op1 | Op3` is a `(Qubit[]=>Unit):Adjoint` operation.
-- `flag ? Op2 | Op3` is a `(Qubit[]=>Unit:Controlled)` operation.
+- `flag ? Op1 | Op2` is a `(Qubit[] => Unit)` operation.
+- `flag ? Op1 | Op3` is a `(Qubit[] => Unit is Adj)` operation.
+- `flag ? Op2 | Op3` is a `(Qubit[] => Unit is Ctl)` operation.
 
 If either of the two possible result expressions include a function or
 operation call, that call will only take place if that result is the one
@@ -599,6 +588,18 @@ For instance, in the case `a==b ? C(qs) | D(qs)`, if `a==b` is true then
 the `C` operation will be invoked, and if it is false then only `D` will
 be invoked.
 This is similar to short-circuiting in other languages.
+
+## Copy-and-Update Expressions
+
+New arrays can be created from existing ones via copy-and-update expressions.
+A copy-and-update expression is an expression of the form `expression1 w/ expression2 <- expression3`, where `expression1` has to be of type `T[]` for some type `T`. The second `expression2` defines the indices of the element(s) to modify compared to the array in `expression1` and has to be either of type `Int` or of type `Range`. If `expression2` is of type `Int`, `expression3` has to be of type `T`. If `expression2` is of type `Range`, `expression3` has to be of type `T[]`.
+
+A copy-and-update expression `arr w/ idx <- value` constructs a new array with all elements set to the corresponding element in `arr`, except for the element(s) at `idx`, which are set to the one(s) in `value`. 
+For example, if `arr` contains an array `[0,1,2,3]`, then 
+- `arr w/ 0 <- 10` is the array `[10,1,2,3]`.
+- `arr w/ 2 <- 10` is the array `[0,1,10,3]`.
+- `arr w/ 0..2..3 <- [10,12]` is the array `[10,1,12,3]`.
+
 
 ## Operator Precedence
 
@@ -618,15 +619,18 @@ Operators in order of precedence, from highest to lowest:
 Operator | Arity | Description | Operand Types
 ---------|----------|---------|---------------
  trailing `!` | Unary | Unwrap | Any user-defined type
- `-`, `~~~`,`not` | Unary | Numeric negative, bitwise complement, logical negation | `Int` or `Double` for `-`, `Int` for `~~~`, `Bool` for `not`
- `^` | Binary | Integer power | `Int`
- `/`, `*`, `%` | Binary | Division, multiplication, integer modulus | `Int` or `Double` for `/` and `*`, `Int` for `%`
- `+`, `-` | Binary | Addition or string and array concatenation, subtraction | `Int` or `Double`, additionally `String` or any array type for `+`
- `<<<`, `>>>` | Binary | Left shift, right shift | `Int`
- `<`, `<=`, `>`, `>=` | Binary | Less-than, less-than-or-equal, greater-than, greater-than-or-equal comparisons | `Int` or `Double`
+ `-`, `~~~`, `not` | Unary | Numeric negative, bitwise complement, logical negation | `Int`, `BigInt` or `Double` for `-`, `Int` or `BigInt` for `~~~`, `Bool` for `not`
+ `^` | Binary | Integer power | `Int` or `BigInt` for the base, `Int` for the exponent
+ `/`, `*`, `%` | Binary | Division, multiplication, integer modulus | `Int`, `BigInt` or `Double` for `/` and `*`, `Int` or `BigInt` for `%`
+ `+`, `-` | Binary | Addition or string and array concatenation, subtraction | `Int`, `BigInt` or `Double`, additionally `String` or any array type for `+`
+ `<<<`, `>>>` | Binary | Left shift, right shift | `Int` or `BigInt`
+ `<`, `<=`, `>`, `>=` | Binary | Less-than, less-than-or-equal, greater-than, greater-than-or-equal comparisons | `Int`, `BigInt` or `Double`
  `==`, `!=` | Binary | equal, not-equal comparisons | any primitive type
- `&&&` | Binary | Bitwise AND | `Int`
- `^^^` | Binary | Bitwise XOR | `Int`
- <code>\|\|\|</code> | Binary | Bitwise OR | `Int`
- `&&` | Binary | Logical AND | `Bool`
- <code>\|\|</code> | Binary | Logical OR | `Bool`
+ `&&&` | Binary | Bitwise AND | `Int` or `BigInt`
+ `^^^` | Binary | Bitwise XOR | `Int` or `BigInt`
+ <code>\|\|\|</code> | Binary | Bitwise OR | `Int` or `BigInt`
+ `and` | Binary | Logical AND | `Bool`
+ `or` | Binary | Logical OR | `Bool`
+ `..` | Binary/Ternary | Range operator | `Int`
+ `?` `|` | Ternary | Conditional | `Bool` for the left-hand-side
+`w/` `<-` | Ternary | Copy-and-update | see [copy-and-update expressions](#copy-and-update-expressions)

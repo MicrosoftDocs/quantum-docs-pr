@@ -70,7 +70,7 @@ Higher-order terms (triples, quadruples, etc.) are possible, but not currently s
 It is common, though not always the case, that the annihilation operators share indices with occupied spin-orbitals of the reference state, and the creation operators share indices with unoccupied spin-orbitals. 
 
 For example, let $\ket{\psi_{\rm{SCF}}} = a^\dagger_1 a^\dagger_2\ket{0}$, and let $T= 0.123 a^\dagger_0 a_1 + 0.456 a^\dagger_0a^\dagger_3 a_1 a_2 - 0.789 a^\dagger_3a^\dagger_2 a_1 a_0 + \text{Hermitian conjugate}$.
-Then this state is instantiated in the chemistry library as follows.
+Then this state is instantiated as follows.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state.
@@ -96,7 +96,7 @@ var wavefunction = new FermionWavefunction<int>(reference, clusterOperator);
 
 Spin convervation may be made explicit by instead specifying `SpinOrbital` indices instead of integer indices.
 For example, let $\ket{\psi_{\rm{SCF}}} = a^\dagger_{1,\uparrow} a^\dagger_{2, \downarrow}\ket{0}$, and let $T= 0.123 a^\dagger_{0, \uparrow} a_{1, \uparrow} + 0.456 a^\dagger_{0, \uparrow} a^\dagger_{3, \downarrow} a_{1, \uparrow} a_{2, \downarrow} - 0.789 a^\dagger_{3,\uparrow} a^\dagger_{2,\uparrow} a_{1,\uparrow} a_{0, \uparrow} + \text{Hermitian conjugate}$ by spin convserving.
-Then this state is instantiated in the chemistry library as follows.
+Then this state is instantiated as follows.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state.

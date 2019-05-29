@@ -30,15 +30,15 @@ Our first step is to construct the Hamiltonian representing molecular Hydrogen. 
         new OrbitalIntegral(new int[] { }, energyOffset)
     };
 
-    // We initialize a fermion Hamiltonian data structure and add terms to it
+    // We initialize a fermion Hamiltonian data structure and add terms to it.
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-Simulating the Hamiltonian requires us to convert the Fermion operators to qubit operators. This conversion is performed through the Jordan-Wigner encoding as follows.
+Simulating the Hamiltonian requires us to convert the fermion operators to qubit operators. This conversion is performed through the Jordan-Wigner encoding as follows.
 
 ```csharp
-    // The Jordan-Wigner encoding converts the Fermion Hamiltonian, 
-    // expressed in terms of Fermionic operators, to a qubit Hamiltonian,
+    // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
+    // expressed in terms of fermionic operators, to a qubit Hamiltonian,
     // expressed in terms of Pauli matrices. This is an essential step
     // for simulating our constructed Hamiltonians on a qubit quantum
     // computer.
@@ -49,7 +49,7 @@ Simulating the Hamiltonian requires us to convert the Fermion operators to qubit
     var fermionWavefunction = fermionHamiltonian.CreateHartreeFockState(nElectrons);
 
     // This Jordan-Wigner data structure also contains a representation 
-    // of the Hamiltonian and wavefunction made for consumption by the Q# algorithms.
+    // of the Hamiltonian and wavefunction made for consumption by the Q# operations.
     var qSharpHamiltonianData = jordanWignerEncoding.ToQSharpFormat();
     var qSharpWavefunctionData = fermionWavefunction.ToQSharpFormat();
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);

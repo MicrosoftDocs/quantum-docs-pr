@@ -296,9 +296,9 @@ Consider the Hamiltonian $\hat{H} = a_0^\dagger a_1 + a_1^\dagger a_0$.
     hamiltonian.Add(hermitianFermionTerm0, 1.0);
     hamiltonian.Add(hermitianFermionTerm1, 1.0);
 ```
-We may simplify this construction using the fact that Hamiltonian are Hermitian operators.
+We may simplify this construction using the fact that Hamiltonian operators are Hermitian operators.
 When adding terms to the Hamiltonian using `Add`, any non-Hermitian term such as `fermionTerm0` is assumed to be paired with its Hermitian conjugate.
-Thus the following snippet also represents the same Hamiltonian.
+Thus the following snippet also represents the same Hamiltonian:
 ```csharp
     // We create a `FermionHamiltonian` instance to store the fermion terms.
     var hamiltonian = new FermionHamiltonian();
@@ -335,7 +335,6 @@ Later on, this reduces the number of quantum gates required to simulate the Hami
 ### Internal Representation
 
 A fermionic Hamiltonian with one- and two-body interactions is represented in second-quantized notation as
-
 $$
 \begin{align}
 H=\sum\_{pq}h\_{pq}a^\dagger\_{p}a\_{q}+\frac{1}{2}\sum\_{pqrs}h\_{pqrs}a^\dagger\_{p}a^\dagger\_{q}a\_{r}a\_{s}.
@@ -345,7 +344,6 @@ $$
 In this notation, there are at most $N^2+N^4$ coefficients.
 However, many of these coefficients may be collected as they correspond to the same operator.
 For instance, in the case where $p,q,r,s$ are distinct indices, we may use the anti-commutation rules to show that:
-
 $$
 a^\dagger\_{p}a^\dagger\_{q}a\_{r}a\_{s} =
 -a^\dagger\_{q}a^\dagger\_{p}a\_{r}a\_{s} =

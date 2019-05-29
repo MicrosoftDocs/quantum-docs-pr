@@ -19,10 +19,10 @@ var filename = @"n2_1_00Re_sto3g.nw.out.yaml";
 // This is the directory containing the file
 var root = @"IntegralData\YAML";
 
-// This deserializes Broombridge.
+// This deserializes a Broombridge file, given its filename.
 var broombridge = Broombridge.Deserializers.DeserializeBroombridge($@"{root}\{filename}");
 
-// Note that the deserializer returns a list of `ProblemDescriptions` instances 
+// Note that the deserializer returns a list of `ProblemDescription` instances 
 // as the file might describe multiple Hamiltonians. In this example, there is 
 // only one Hamiltonian. So we use `.First()`, which selects the first element of the list.
 var problem = broombridge.ProblemDescriptions.First();
@@ -48,18 +48,18 @@ var qSharpWavefunctionData = wavefunction.ToQSharpFormat();
 var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-All the above steps may be abbreviated using provided convenience functions as follows.
+All the above steps may be abbreviated using provided convenience methods as follows.
 ```csharp
 // This is the name of the file we want to load
 var filename = "...";
 
-// This deserializes Broombridge.
+// This deserializes a Broombridge file, given its filename.
 var broombridge = Broombridge.Deserializers.DeserializeBroombridge(filename);
 
-// Note that the deserializer returns a list of `ProblemDescriptions` instances 
+// Note that the deserializer returns a list of `ProblemDescription` instances 
 // as the file might describe multiple Hamiltonians. In this example, there is 
-// only one Hamiltonian. So we use `.First()`, which selects the first element of the list.
-var problem = broombridge.ProblemDescriptions.First();
+// only one Hamiltonian. So we use `.Single()`, which selects the only element of the list.
+var problem = broombridge.ProblemDescriptions.Single();
 
 // This is a data structure representing the Jordan-Wigner encoding 
 // of the Hamiltonian that we may pass to a Q# algorithm.

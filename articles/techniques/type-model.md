@@ -22,7 +22,7 @@ In particular, we note that Q# is a *strongly-typed* language, such that careful
 
 > [!WARNING] 
 > In order to provide the strongest guarantees possible, conversions between types in Q# **must** be made explicitly using calls to functions which express that conversion. 
-> A variety of such functions are provided as a part of the @"microsoft.quantum.extensions.convert" namespace.
+> A variety of such functions are provided as a part of the @"microsoft.quantum.convert" namespace.
 > Upcasts to compatible types on the other hand happen implicitly. 
 
 Q# provides both primitive types, which can be used directly, and a variety of ways to produce new types from other types.
@@ -123,36 +123,65 @@ In the @"microsoft.quantum.canon" namespace, for instance, complex numbers are d
 newtype Complex = (Double, Double);
 ```
 
-This statement creates a new type which is effectively a label for a particular tuple type.
-Values of the new type are created by calling the corresponding type constructor:
+This statement creates a new type with two anonymous items of type `Double`.   
+:new: Aside from anonymous items, user defined types also support named items as of Q# version 0.7 or higher. For example, we could have named the to items `Re` for the double representing the real part of a complex number and `Im` for the imaginary part: 
+
+```qsharp
+newtype Complex = (Re : Double, Im : Double);
+```
+Naming one item in a user defined type does not imply that all items need to be named - any combination of named and unnamed items is supported. Furthermore, also inner items may be named.
+The type `Nested` as defined below for example has an underlying type `(Double, (Int, String))`, of which only the item of type `Int` is named and all other items are anonymous. 
+
+```qsharp
+newtype Nested = (Double, (ItemName : Int, String)); 
+```
+Named items have the advantage that they can be accessed directly via the access operator `::`. 
+
+```qsharp
+function Addition (c1 : Complex, c2 : Complex) : Complex {
+    return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
+}
+```
+
+In order to access anonymous items on the other hand, 
+the wrapped value first needs to be extracted using the postfix operator `!`. Take a look at the section on [unwrap expressions](#unwrap-expressions) and [operators precedence](#operator-precedence) for more details.
+
+```qsharp
+function PrintMsg (value : Nested) : Unit {
+    let (d, (_, str)) = value!;
+    Message ($"{str}, value: {d}");
+}
+```
+
+The same language constructs that are supported for array items are also supported for named items in user-defined types. 
+In particular copy-and-update expressions as well as update-and-reassign statements provide support for creating new values of user defined type from existing ones.
+
+```qsharp
+newtype ComplexArray = (Count : Int, Data : Complex[]);
+
+function AsComplexArray (data : Double[]) : ComplexArray {
+
+    mutable res = ComplexArray(0, new Complex[0]);
+    for (item in data) {
+        set res w/= Data <- res::Data + [Complex(item, 0.)]; // update-and-reassign statement
+    }
+    return res w/ Count <- Length(res::Data); // returning a copy-and-update expression
+}
+```
+
+Alternatively, values of the new type are created by calling the corresponding type constructor:
 
 ```
 let realUnit = Complex(1.0, 0.0);
 let imaginaryUnit = Complex(0.0, 1.0);
 ```
 
-In order to access the items in a user defined type, the tuple first needs to be extracted to give an expression of the corresponding tuple type. 
-The postfix operator `!` will do this extraction.
-This lets us write out accessor functions into the structure of a user-defined type, for instance:
-
-```qsharp
-function Re(z : Complex) : Double {
-    let (re, im) = z!;
-    return re;
-}
-
-function Im(z : Complex) : Double {
-    let (re, im) = z!;
-    return im;
-}
-```
-
 In addition to providing short aliases for potentially complicated tuple types, one significant advantage of using UDTs is that they can document the intent of a particular value.
 Returning to the example of `Complex`, one could have also defined 2D polar coordinates as a user-defined type:
 
 ```qsharp
-newtype Polar = (Double, Double);
+newtype Polar = (Radius : Double, Phase : Double);
 ```
 
-Even though both `Complex` and `Polar` are both wrapped versions of `(Double, Double)`, the two types are wholly incompatible in Q#, minimizing the risk of accidentally calling a complex math function with polar coordinates and vice versa.
-In this way, user-defined types can play a similar role to `struct` types in C and other such languages.
+Even though both `Complex` and `Polar` are both have an underlying type `(Double, Double)`, the two types are wholly incompatible in Q#, minimizing the risk of accidentally calling a complex math function with polar coordinates and vice versa.
+In this way, user-defined types have a similar role as Records in F# for example. 

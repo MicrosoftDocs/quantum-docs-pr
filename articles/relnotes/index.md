@@ -10,9 +10,21 @@ uid: microsoft.quantum.relnotes
 
 # Microsoft Quantum Development Kit Release Notes
 
-# Version 0.7
+## Migrating to the newest packages.
 
-*Release date: May 31, 2019)*
+1.  Follow [these instructions](xref:microsoft.quantum.install#updating-iq) to update IQ#.  
+2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
+3.  Follow [these instructions](microsoft.quantum.install.csharp#update) to update your .csproj files, using the PackageReference for the Version below.
+
+> [!NOTE]
+> * The language server included with the Quantum Development Kit does not support multiple workspaces.
+> * In order to work with a project in Visual Studio Code, open the root folder containing the project itself and all referenced projects.   
+> * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
+> * References between projects migrated to 0.6 and higher and projects using older package versions are **not** supported.
+
+# Version 0.7 (*PackageReference 0.7.xxxx.yyy*)
+
+*Release date: May 31, 2019*
 
 This release contains the following:
 - additions to the Q# language, 
@@ -42,29 +54,8 @@ This release reorganizes extends and updates the chemistry library:
 * Updating [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schema to new [version 0.2](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2), adding unitary coupled cluster specification. [Issue #65](https://github.com/microsoft/QuantumLibraries/issues/65).
 * Adding Python interoperability to chemistry library functions. Try out this [sample](https://github.com/microsoft/Quantum/Chemistry/PythonIntegration). [Issue #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
-## Migrating existing projects to 0.7.
-
-1.  Follow [these instructions](xref:microsoft.quantum.install#updating-iq) to update IQ#.  
-2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
-3.  Follow these instructions to update your .csproj files: 
-
-If you have existing Q# projects from version 0.6 of the Quantum Development Kit, the following are the steps to migrate those projects to the newest version.
-
-      1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
-      2. From a command line, run `dotnet clean` to remove all existing binaries and intermediate files.
-      3. In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to version 0.7.xxxx, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
-```xml
-    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.7.xxxx.yyy" />
-    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.7.xxxx.yyy" />
-```
-      4. From the command line, run this command: `dotnet build`  
 
 
-> [!NOTE]
-> * For the 0.7 release, the language server included with the Quantum Development Kit does not support multiple workspaces.
-> * In order to work with a project in Visual Studio Code, open the root folder containing the project itself and all referenced projects.   
-> * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
-> * References between projects migrated to 0.7 and higher and projects using older package versions are **not** supported.
 
 
 # Version 0.6.1905

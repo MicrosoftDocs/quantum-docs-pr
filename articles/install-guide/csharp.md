@@ -41,7 +41,18 @@ C:\>cd myApp
 C:\Repos\myApp>dotnet run
 Hello quantum world!
 ```
+## Update ##
+Follow these instructions to migrate your .csproj files to the newest version: 
 
+* Consult the [Release Notes](xref:microsoft.quantum.relnotes) for the `PackageReference` number, "0.n.xxxx.yyy".
+* Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
+* From a command line, run `dotnet clean` to remove all existing binaries and intermediate files.
+* In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to the package reference number, for example:
+```xml
+    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.n.xxxx.yyy" />
+    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.n.xxxx.yyy" />
+```
+      4. From the command line, run this command: `dotnet build`  
 
 ## Usage ##
 

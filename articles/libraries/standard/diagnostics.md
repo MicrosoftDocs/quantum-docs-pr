@@ -32,6 +32,8 @@ Each target machine varies in what diagnostic information is provided in respons
 The <xref:Microsoft.Quantum.Simulation.QuantumSimulator> target machine, for instance, provides the host program with the state vector that it uses internally to represent a register of qubits.
 By comparison, the <xref:Microsoft.Quantum.Simulation.ToffoliSimulator> target machine provides a single classical bit for each qubit.
 
+ To learn more about the <xref:Microsoft.Quantum.Simulation.QuantumSimulator>'s `DumpMachine` output, take a look at the dump functions section of our [testing and debugging article](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions).
+
 
 ## Facts and Assertions ##
 

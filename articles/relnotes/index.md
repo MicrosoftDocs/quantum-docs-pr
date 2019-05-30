@@ -10,9 +10,67 @@ uid: microsoft.quantum.relnotes
 
 # Microsoft Quantum Development Kit Release Notes
 
+# Version 0.7
+
+*Release date: May 30, 2019)*
+
+This release contains the following:
+- additions to the Q# language, 
+- updates to the chemistry library, 
+- a new numerics library.
+
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) and [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
+
+The changes are summarized here as well as instructions for upgrading your existing programs.  Read more about these changes on devblogs.microsoft.com/qsharp.
+
+## Q# language syntax
+This release adds new Q# language syntax:
+* Add named items for [user-defined types](xref:microsoft.quantum.language.type-model#user-defined-types).  
+* User-defined type constructors can not be used as functions.
+* Add support for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) and [apply-and-reassign]((xref:microsoft.quantum.qsharp-ref.statements#rebinding-of-mutable-symbols)) in user-defined types.
+* Fixup-block for [repeat-until-success](xref:microsoft.quantum.qsharp-ref.statements#repeat-until-success-loop) loops is now optional.
+* We now support while loops in functions (not in operations).
+
+## Library 
+
+This release adds a numerics library: Learn more about how to [use the new numerics library](xref:microsoft.quantum.numerics.usage) and try out the [new samples](https://github.com/microsoft/quantum/numerics).  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102).  
+
+This release reorganizes extends and updates the chemistry library:
+* Improves modularity of components, extensibility, general code cleanup.  [PR #58](https://github.com/microsoft/QuantumLibraries/pull/58).
+* Add support for [multi-reference wavefunctions](xref:microsoft.quantum.chemistry.concepts.multireference), both sparse multi-reference wavefunctions and unitary coupled cluster.  [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* (Thank you!) [1QBit](https://1qbit.com) contributor ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): Energy evaluation using variational ansatz. [PR #120](https://github.com/Microsoft/QuantumLibraries/pull/120).
+* Updating [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schema to new verion 0.2, adding unitary coupled cluster specification. [Issue #65](https://github.com/microsoft/QuantumLibraries/issues/65).
+* Adding Python interoperability to chemistry library functions. [Issue #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+
+## Migrating existing projects to 0.7.
+
+1.  Follow [these instructions](xref:microsoft.quantum.install#updating-iq) to update IQ#.  
+2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
+3.  Follow these instructions to update your .csproj file: 
+
+If you have existing Q# projects from version 0.6 of the Quantum Development Kit, the following are the steps to migrate those projects to the newest version.
+
+      1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
+      2. From a command line, Run `dotnet clean` to remove all existing binaries and intermediate files.
+      3. In a text editor, edit the .csproj file to change the version of all 
+   the "Microsoft.Quantum" `PackageReference` to version 0.7.xxxx, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
+```xml
+    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.7.xxxx.yyy" />
+    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.7.xxxx.yyy" />
+```
+      4. From the command line, run this command: `dotnet msbuild`  
+
+
+> [!NOTE]
+> * For the 0.7 release, the language server included with the Quantum Development Kit does not support multiple workspaces.
+> * In order to work with a project in Visual Studio Code, open the root folder containing the project itself and all referenced projects.   
+> * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
+> * References between projects migrated to 0.7 and higher and projects using older package versions are **not** supported.
+
+
 # Version 0.6.1905
 
-*Release date: May 3, 2019*
+*Release date: May 3, 2019)*
 
 This release contains the following:
 - makes changes to the Q# language, 
@@ -108,7 +166,7 @@ This release contains the following:
 
 - Bug fix for DumpRegister issue reported by the community ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
-- Added ability to return from within a [using statement](xref:microsoft.quantum.qsharp-ref.statements).
+- Added ability to return from within a [using statement](ref:microsoft.quantum.qsharp-ref.statements).
 
 - Revamped [getting started guide](xref:microsoft.quantum.install).
 
@@ -167,7 +225,7 @@ This release includes a few bug fixes, including:
 
 * Invoking `DumpMachine` could change the state of the simulator under certain situations.
 * Removed compilation warnings when building projects using a version of .NET Core previous to 2.1.403.
-* Clean up of documentation, specially the tooltips shown during mouse hover in VS Code or Visual Studio
+* Clean up of documentation, specially the tooltips shown during mouse hover in VS Code or Visual Studio.
 
 If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).
 

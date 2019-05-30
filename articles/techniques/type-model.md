@@ -153,8 +153,17 @@ function PrintMsg (value : Nested) : Unit {
 }
 ```
 
-The same language constructs that are supported for array items are also supported for named items in user-defined types. 
-In particular copy-and-update expressions as well as update-and-reassign statements provide support for creating new values of user defined type from existing ones.
+Values of a user defined type can be created by calling the corresponding type constructor:
+
+```
+let realUnit = Complex(1.0, 0.0);
+let imaginaryUnit = Complex(0.0, 1.0);
+```
+
+Alternatively, new values can be created from existing ones using [copy-and-update expressions](#copy-and-update-expressions). 
+Like for arrays, such expressions copy all item values of the original expression, 
+with the exception of the specified named items. For these the values are set to the ones defined on the right hand side of the expression. 
+Any other language constructs, like for example [update-and-reassign statements](#update-and-reassign-statement), that are available for array items exist for named-items in user defined types as well. 
 
 ```qsharp
 newtype ComplexArray = (Count : Int, Data : Complex[]);
@@ -169,12 +178,7 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 }
 ```
 
-Alternatively, values of the new type are created by calling the corresponding type constructor:
 
-```
-let realUnit = Complex(1.0, 0.0);
-let imaginaryUnit = Complex(0.0, 1.0);
-```
 
 In addition to providing short aliases for potentially complicated tuple types, one significant advantage of using UDTs is that they can document the intent of a particular value.
 Returning to the example of `Complex`, one could have also defined 2D polar coordinates as a user-defined type:

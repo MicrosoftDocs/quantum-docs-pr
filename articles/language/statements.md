@@ -199,7 +199,7 @@ Such a rebinding consists of the keyword `set`, followed by
 a symbol or symbol tuple, an equals sign `=`, an expression to rebind the symbol(s) to, and a terminating semicolon.
 The value must be compatible with the type(s) of the symbol(s) it is bound to.
 
-A particular kind of set-statement we refer to as apply-and-update statement provides a convenient way of 
+A particular kind of set-statement we refer to as apply-and-reassign statement provides a convenient way of 
 concatenation if the right hand side consists of the application of a binary operator an is to be rebound to the left argument to the operator. 
 For example,
 ```qsharp

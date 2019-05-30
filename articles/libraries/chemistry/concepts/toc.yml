@@ -6,9 +6,11 @@
   href: second-quantization.md
 - name: Symmetries of molecular integrals
   href: symmetries-molecular.md
-- name: Hartree-Fock theory
-  href: hartree-fock.md
 - name: Jordan-Wigner representation
   href: jordan-wigner.md
 - name: Simulating Hamiltonian dynamics
   href: algorithms.md
+- name: Hartree-Fock theory
+  href: hartree-fock.md
+- name: Multi-reference wavefunctions
+  href: multireference.md

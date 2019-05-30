@@ -69,7 +69,7 @@ If you have existing Q# projects from version 0.6 of the Quantum Development Kit
 
 # Version 0.6.1905
 
-*Release date: May 3, 2019)*
+*Release date: May 3, 2019*
 
 This release contains the following:
 - makes changes to the Q# language, 

@@ -125,8 +125,7 @@ If you have existing Q# projects from version 0.5 of the Quantum Development Kit
 
       1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
       2. From a command line, Run `dotnet clean` to remove all existing binaries and intermediate files.
-      3. In a text editor, edit the .csproj file to change the version of all 
-   the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
+      3. In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
 ```xml
     <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
     <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />

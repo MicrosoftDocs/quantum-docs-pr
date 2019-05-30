@@ -392,11 +392,24 @@ In particular, the loop variable is not bound after the for loop is completed.
 
 The `repeat` statement supports the quantum “repeat until success” pattern.
 It consists of the keyword `repeat`, followed by a statement block
-(the _loop_ body), the keyword `until`, a Boolean expression,
-the keyword `fixup`, and another statement block (the _fixup_).
+(the _loop_ body), the keyword `until`, a Boolean expression, 
+and either a terminating semicolon or 
+the keyword `fixup` followed by another statement block (the _fixup_).
 The loop body, condition, and fixup are all considered to be a single scope,
 so symbols bound in the body are available in the condition and fixup.
-Note that the fixup block is required, even if there is no fixup to be done.
+
+```qsharp
+mutable iter = 1;
+repeat {
+    ProbabilisticCircuit(qs);
+    let success = ComputeSuccessIndicator(qs);
+}
+until (success || iter > maxIter)
+fixup {
+    iter += 1;
+    ComputeCorrection(qs);
+}
+```
 
 The loop body is executed, and then the condition is evaluated.
 If the condition is true, then the statement is completed;
@@ -429,9 +442,31 @@ using (anc = Qubit()) {
         Z(target);
         H(anc);
         let result = M(anc);
-    } until (result == Zero)
-    fixup {
-    }
+    } until (result == Zero);
+}
+```
+
+> [!TIP]   
+> Avoid using repeat-until-success loops inside functions. 
+> The corresponding functionality is provided by while-loops in functions. 
+
+### While-Loop
+
+Repeat-until-success patterns have a very quantum-specific connotation. They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#. 
+However, loops that break based on a condition and whose execution length is thus unknown at compile time need to be handled with particular care in a quantum runtime. 
+Their usage within function on the other hand is unproblematic, since these only contain code that will be executed on conventional (non-quantum) hardware. 
+
+Q# therefore supports to use of while-loops within functions only. 
+A `while` statement consists of the keyword `while`, an open parenthesis `(`,
+a condition (i.e. a Boolean expression), a close parenthesis `)`, and a statement block.
+The statement block (the body of the loop) is executed as long as the condition evaluates to `false`.
+
+```qsharp
+// ...
+mutable (item, index) = (-1, 0);
+while (index < Length(arr) && item < 0) { 
+    set item = arr[index];
+    set index += 1;
 }
 ```
 

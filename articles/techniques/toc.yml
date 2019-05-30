@@ -4,8 +4,6 @@
   href: operations-and-functions.md
 - name: Local variables
   href: local-variables.md
-- name: Q# type model
-  href: type-model.md
 - name: Working with qubits
   href: working-with-qubits.md
 - name: Putting it all together

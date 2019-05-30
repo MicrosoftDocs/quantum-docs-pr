@@ -31,7 +31,7 @@ can be constructed:
 - The `Int` type represents a 64-bit signed integer, e.g.: `2`, `107`, `-5`.
 - The `BigInt` type represents a signed integer or arbitrary size, e.g. `2L`, `107L`, `-5L`.
    This type is based on the .NET
-   [`BigInteger`](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger)
+   <xref:System.Numerics.BigInteger>
    type.
 - The `Double` type represents a double-precision floating-point number, e.g.: `0.0`, `-1.3`, `4e-7`.
 - The `Bool` type represents a Boolean value which can either be `true` or `false`.

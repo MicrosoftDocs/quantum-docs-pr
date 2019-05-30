@@ -165,9 +165,9 @@ Each problem description object MUST have a property `hamiltonian` whose value i
 The value of the `hamiltonian` property is known as a Hamiltonian object, and MUST have the properties `one_electron_integrals` and `two_electron_integrals` as described in the remainder of this section.
 
 Each problem description object MUST have a property `coulomb_repulsion` whose value is a simple quantity object.
-
+Each problem description object MUST have a property `energy_offet` whose value is a simple quantity object.
 > [NOTE]
-> This captures the identity term of the Hamiltonian.
+> The values of `coulomb_repulsion` and `energy_offet` added together capture the identity term of the Hamiltonian.
 
 ##### One-Electron Integrals Object #####
 

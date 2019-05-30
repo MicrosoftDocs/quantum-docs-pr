@@ -308,13 +308,6 @@ initial_state_suggestions: # optional. If not provided, spin-orbitals will be fi
 If the value of the `method` property is `unitary_coupled_cluster`, the state object MUST have a `cluster_operator` property whose value is a JSON object.
 The JSON object MUST have a `reference_state` property whose value is a basis state.
 The JSON object MAY have a `one_body_amplitudes` property whose value is an array of one-body cluster operators and their amplitudes.
-
-Each `two_electron_integrals` property MUST have a `index_convention` property.
-The value of the `index_convention` property MUST be one of the allowed values listed in Table 1.
-If the value of `index_convention` is `mulliken`, then for each element of the `two_electron_integrals` sparse array quantity, a parser loading a Broombridge document MUST instantiate a Hamiltonian term equal to the two-electron operator $h_{i, j, k, l} a^\dagger_i a^\dagger_j a_k a_l$, where $i$, $j$, $k$, and $l$ MUST be integers of value at least 1, and where $h_{i, j, k, l}$ is the element `[i, j, k, l, h(i, j, k, l)]` of the sparse array quantity.
-
-
-
 The JSON object MAY have a `two_body_amplitudes` property whose value is an array of two-body cluster operators and their amplitudes.
  containing an array of basis states and their unnormalized amplitudes.
 

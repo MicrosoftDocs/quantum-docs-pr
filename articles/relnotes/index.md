@@ -57,7 +57,7 @@ If you have existing Q# projects from version 0.6 of the Quantum Development Kit
     <PackageReference Include="Microsoft.Quantum.Standard" Version="0.7.xxxx.yyy" />
     <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.7.xxxx.yyy" />
 ```
-      4. From the command line, run this command: `dotnet msbuild`  
+      4. From the command line, run this command: `dotnet build`  
 
 
 > [!NOTE]

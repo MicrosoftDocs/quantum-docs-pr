@@ -1,10 +1,10 @@
 ---
 title: Broombridge Schema Specification
-author: cgranade
-ms.author: chgranad@microsoft.com
-ms.date: 10/17/2018
+author:gulow
+ms.author: gulow@microsoft.com
+ms.date: 05/28/2019
 ms.topic: article
-uid: microsoft.quantum.libraries.chemistry.schema.spec
+uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 ---
 
 # Broombridge Specification #
@@ -24,7 +24,7 @@ Broombridge documents are intended to communicate instances of simulation proble
 This section is normative.
 
 A Broombridge document MUST be serialized as a [YAML 1.2 document](http://yaml.org/spec/) representing a JSON object as described in [RFC 4627](https://tools.ietf.org/html/rfc4627) section 2.2.
-The object serialized to YAML MUST have a property `"$schema"` whose value is `"https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/qchem-0.1.schema.json"`, and MUST be valid according to the JSON Schema draft-06 specifications [[1](https://tools.ietf.org/html/draft-wright-json-schema-01), [2](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)].
+The object serialized to YAML MUST have a property `"$schema"` whose value is `"https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/qchem-0.2.schema.json"`, and MUST be valid according to the JSON Schema draft-06 specifications [[1](https://tools.ietf.org/html/draft-wright-json-schema-01), [2](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)].
 
 For the remainder of this specification, "the Broombridge object" will refer to the JSON object deserialized from a Broombridge YAML document.
 
@@ -316,13 +316,10 @@ $$
 \ket{\text{reference}}=(a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{2,\uparrow}a^{\dagger}\_{2,\downarrow})\ket{0}
 $$
 $$
-\ket{\text{UCCSD}}=e^{T-T\dagger}\ket{\text{reference}},
+\ket{\text{UCCSD}}=e^{T-T^\dagger}\ket{\text{reference}},
 $$
 $$
-T 
-= 0.1 a^{\dagger}\_{3,\uparrow}a\_{2,\downarrow}
-+ 0.2 a^{\dagger}\_{2,\uparrow}a\_{2,\downarrow}
-- 0.3 a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{3,\downarrow}a^\_{3,\uparrow}a\_{2,\downarrow}
+T = 0.1 a^{\dagger}\_{3,\uparrow}a\_{2,\downarrow} + 0.2 a^{\dagger}\_{2,\uparrow}a\_{2,\downarrow} - 0.3 a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{3,\downarrow}a^\_{3,\uparrow}a\_{2,\downarrow}
 $$
 is represented by
 ```yaml

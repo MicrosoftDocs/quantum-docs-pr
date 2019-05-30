@@ -1,6 +1,6 @@
 ---
 title: Broombridge Schema Specification
-author: gulow
+author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article

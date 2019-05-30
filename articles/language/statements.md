@@ -231,9 +231,28 @@ for (q in qubits) {
 #### Update-and-Reassign Statement
 
 A similar concatenation exists for copy-and-update expressions on the right hand side. 
-While our standard libraries contain the necessary tools for many common array initialization and manipulation needs, 
-and thus help to avoid having update array items in the first place, 
-such update-and-reassign statements provide an alternative if needed:
+Correspondingly, update-and-reassign statements exist for named items in user-defined types as well as for array items.  
+
+```qsharp
+newtype Complex = (Re : Double, Im : Double);
+
+function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+    mutable res = Complex(0.,0.);
+
+    for (r in reals) {
+        set res w/= Re <- res::Re + r; // update-and-reassign statement
+    }
+    for (i in ims) {
+        set res w/= Im <- res::Im + i; // update-and-reassign statement
+    }
+    return res;
+}
+```
+
+In the case of arrays, 
+our standard libraries contain the necessary tools for many common array initialization and manipulation needs, 
+and thus help to avoid having update array items in the first place. 
+Update-and-reassign statements provide an alternative if needed:
 
 ```qsharp
 operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
@@ -251,7 +270,8 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
     mutable samples = RandomInts(prec, nrSamples);
     
     for (i in IndexRange(samples) {
-        set samples w/= i <- normalization * IntAsDouble(samples[i]);
+        let value = IntAsDouble(samples[i]);
+        set samples w/= i <- normalization * value; // update-and-reassign statement
     }
 }
 
@@ -272,7 +292,8 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
     return pauliArray;
 }
 ```
-for example can simply be expressed using the function `ConstantArray` in `Microsoft.Quantum.Arrays`:
+for example can simply be simplified using the function `ConstantArray` in `Microsoft.Quantum.Arrays`, 
+and returning a copy-and-update expression:
 
 ```qsharp
 function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {

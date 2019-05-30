@@ -21,12 +21,12 @@ This release contains the following:
 
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) and [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
 
-The changes are summarized here as well as instructions for upgrading your existing programs.  Read more about these changes on devblogs.microsoft.com/qsharp.
+The changes are summarized here as well as instructions for upgrading your existing programs.  Read more about these changes on the [qsharp devblog](https://devblogs.microsoft.com/qsharp).
 
 ## Q# language syntax
 This release adds new Q# language syntax:
 * Add named items for [user-defined types](xref:microsoft.quantum.language.type-model#user-defined-types).  
-* User-defined type constructors can not be used as functions.
+* User-defined type constructors can now be used as functions.
 * Add support for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) and [apply-and-reassign]((xref:microsoft.quantum.qsharp-ref.statements#rebinding-of-mutable-symbols)) in user-defined types.
 * Fixup-block for [repeat-until-success](xref:microsoft.quantum.qsharp-ref.statements#repeat-until-success-loop) loops is now optional.
 * We now support while loops in functions (not in operations).
@@ -40,7 +40,7 @@ This release reorganizes extends and updates the chemistry library:
 * Add support for [multi-reference wavefunctions](xref:microsoft.quantum.chemistry.concepts.multireference), both sparse multi-reference wavefunctions and unitary coupled cluster.  [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 * (Thank you!) [1QBit](https://1qbit.com) contributor ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): Energy evaluation using variational ansatz. [PR #120](https://github.com/Microsoft/QuantumLibraries/pull/120).
 * Updating [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schema to new verion 0.2, adding unitary coupled cluster specification. [Issue #65](https://github.com/microsoft/QuantumLibraries/issues/65).
-* Adding Python interoperability to chemistry library functions. [Issue #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* Adding Python interoperability to chemistry library functions. [Sample](https://github.com/microsoft/Quantum/Chemistry/PythonIntegration), [Issue #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## Migrating existing projects to 0.7.
 
@@ -52,8 +52,7 @@ If you have existing Q# projects from version 0.6 of the Quantum Development Kit
 
       1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
       2. From a command line, Run `dotnet clean` to remove all existing binaries and intermediate files.
-      3. In a text editor, edit the .csproj file to change the version of all 
-   the "Microsoft.Quantum" `PackageReference` to version 0.7.xxxx, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
+      3. In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to version 0.7.xxxx, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
 ```xml
     <PackageReference Include="Microsoft.Quantum.Standard" Version="0.7.xxxx.yyy" />
     <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.7.xxxx.yyy" />

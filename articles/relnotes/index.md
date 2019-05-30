@@ -21,7 +21,7 @@ This release contains the following:
 
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) and [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
 
-The changes are summarized here as well as instructions for upgrading your existing programs.  Read more about these changes on the [qsharp devblog](https://devblogs.microsoft.com/qsharp).
+The changes are summarized here as well as instructions for upgrading your existing programs.  Read more about these changes on the [Q# dev blog](https://devblogs.microsoft.com/qsharp).
 
 ## Q# language syntax
 This release adds new Q# language syntax:

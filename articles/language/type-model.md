@@ -17,7 +17,7 @@ We note that Q# is a *strongly-typed* language, such that careful use of these t
 
 In order to provide the strongest guarantees possible, conversions between types in Q# must be explicit 
 using calls to functions which express that conversion. 
-A variety of such functions are provided as a part of the @"microsoft.quantum.convert" namespace.
+A variety of such functions are provided as a part of the <xref:microsoft.quantum.convert> namespace.
 Upcasts to compatible types on the other hand happen implicitly. 
 
 Q# provides both primitive types, which can be used directly, and a variety of ways to produce new types from other types.
@@ -31,7 +31,7 @@ can be constructed:
 - The `Int` type represents a 64-bit signed integer, e.g.: `2`, `107`, `-5`.
 - The `BigInt` type represents a signed integer or arbitrary size, e.g. `2L`, `107L`, `-5L`.
    This type is based on the .NET
-   [`BigInteger`](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger)
+   <xref:System.Numerics.BigInteger>
    type.
 - The `Double` type represents a double-precision floating-point number, e.g.: `0.0`, `-1.3`, `4e-7`.
 - The `Bool` type represents a Boolean value which can either be `true` or `false`.

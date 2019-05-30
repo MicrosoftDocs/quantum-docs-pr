@@ -560,6 +560,26 @@ concatenation would be expressed as:
 All arrays in Q# are zero-based.
 That is, the first element of an array `a` is always `a[0]`.
 
+
+## Copy-and-Update Expressions
+
+New arrays can be created from existing ones via copy-and-update expressions.
+A copy-and-update expression is an expression of the form `expression1 w/ expression2 <- expression3`, where `expression1` has to be of type `T[]` for some type `T`. The second `expression2` defines the indices of the element(s) to modify compared to the array in `expression1` and has to be either of type `Int` or of type `Range`. If `expression2` is of type `Int`, `expression3` has to be of type `T`. If `expression2` is of type `Range`, `expression3` has to be of type `T[]`.
+
+A copy-and-update expression `arr w/ idx <- value` constructs a new array with all elements set to the corresponding element in `arr`, except for the element(s) at `idx`, which are set to the one(s) in `value`. 
+For example, if `arr` contains an array `[0,1,2,3]`, then 
+- `arr w/ 0 <- 10` is the array `[10,1,2,3]`.
+- `arr w/ 2 <- 10` is the array `[0,1,10,3]`.
+- `arr w/ 0..2..3 <- [10,12]` is the array `[10,1,12,3]`.
+
+Similar expressions exist for named items in user-defined types. 
+Consider for example the type 
+
+```qsharp
+newtype Complex = (Re : Double, Im : Double);
+```
+If `c` contains the value of type `Complex(1.,-1.)`, then `c w/ Re <- 0.` is an expression of type `Complex` that evaluates to `Complex(0.,-1.)`.
+
 ## Conditional Expressions
 
 Given two other expressions of the same type and a Boolean expression,
@@ -588,17 +608,6 @@ For instance, in the case `a==b ? C(qs) | D(qs)`, if `a==b` is true then
 the `C` operation will be invoked, and if it is false then only `D` will
 be invoked.
 This is similar to short-circuiting in other languages.
-
-## Copy-and-Update Expressions
-
-New arrays can be created from existing ones via copy-and-update expressions.
-A copy-and-update expression is an expression of the form `expression1 w/ expression2 <- expression3`, where `expression1` has to be of type `T[]` for some type `T`. The second `expression2` defines the indices of the element(s) to modify compared to the array in `expression1` and has to be either of type `Int` or of type `Range`. If `expression2` is of type `Int`, `expression3` has to be of type `T`. If `expression2` is of type `Range`, `expression3` has to be of type `T[]`.
-
-A copy-and-update expression `arr w/ idx <- value` constructs a new array with all elements set to the corresponding element in `arr`, except for the element(s) at `idx`, which are set to the one(s) in `value`. 
-For example, if `arr` contains an array `[0,1,2,3]`, then 
-- `arr w/ 0 <- 10` is the array `[10,1,2,3]`.
-- `arr w/ 2 <- 10` is the array `[0,1,10,3]`.
-- `arr w/ 0..2..3 <- [10,12]` is the array `[10,1,12,3]`.
 
 
 ## Operator Precedence

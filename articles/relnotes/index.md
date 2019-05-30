@@ -46,7 +46,7 @@ This release reorganizes extends and updates the chemistry library:
 
 1.  Follow [these instructions](xref:microsoft.quantum.install#updating-iq) to update IQ#.  
 2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
-3.  Follow these instructions to update your .csproj file: 
+3.  Follow these instructions to update your .csproj files: 
 
 If you have existing Q# projects from version 0.6 of the Quantum Development Kit, the following are the steps to migrate those projects to the newest version.
 

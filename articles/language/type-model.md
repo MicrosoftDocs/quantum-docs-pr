@@ -17,7 +17,7 @@ We note that Q# is a *strongly-typed* language, such that careful use of these t
 
 In order to provide the strongest guarantees possible, conversions between types in Q# must be explicit 
 using calls to functions which express that conversion. 
-A variety of such functions are provided as a part of the @"microsoft.quantum.convert" namespace.
+A variety of such functions are provided as a part of the <xref:microsoft.quantum.convert> namespace.
 Upcasts to compatible types on the other hand happen implicitly. 
 
 Q# provides both primitive types, which can be used directly, and a variety of ways to produce new types from other types.

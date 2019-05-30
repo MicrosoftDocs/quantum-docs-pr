@@ -164,7 +164,7 @@ This release contains the following:
 
 - Bug fix for DumpRegister issue reported by the community ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
-- Added ability to return from within a [using statement](ref:microsoft.quantum.qsharp-ref.statements).
+- Added ability to return from within a [using statement](xref:microsoft.quantum.qsharp-ref.statements).
 
 - Revamped [getting started guide](xref:microsoft.quantum.install).
 

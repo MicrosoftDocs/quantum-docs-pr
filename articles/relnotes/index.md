@@ -12,7 +12,7 @@ uid: microsoft.quantum.relnotes
 
 # Version 0.7
 
-*Release date: May 30, 2019)*
+*Release date: May 31, 2019)*
 
 This release contains the following:
 - additions to the Q# language, 
@@ -40,7 +40,7 @@ This release reorganizes extends and updates the chemistry library:
 * Add support for [multi-reference wavefunctions](xref:microsoft.quantum.chemistry.concepts.multireference), both sparse multi-reference wavefunctions and unitary coupled cluster.  [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 * (Thank you!) [1QBit](https://1qbit.com) contributor ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): Energy evaluation using variational ansatz. [PR #120](https://github.com/Microsoft/QuantumLibraries/pull/120).
 * Updating [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schema to new verion 0.2, adding unitary coupled cluster specification. [Issue #65](https://github.com/microsoft/QuantumLibraries/issues/65).
-* Adding Python interoperability to chemistry library functions. [Sample](https://github.com/microsoft/Quantum/Chemistry/PythonIntegration), [Issue #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* Adding Python interoperability to chemistry library functions. Try out this [Sample](https://github.com/microsoft/Quantum/Chemistry/PythonIntegration). [Issue #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## Migrating existing projects to 0.7.
 

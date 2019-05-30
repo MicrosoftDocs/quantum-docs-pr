@@ -51,7 +51,7 @@ This release reorganizes extends and updates the chemistry library:
 If you have existing Q# projects from version 0.6 of the Quantum Development Kit, the following are the steps to migrate those projects to the newest version.
 
       1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
-      2. From a command line, Run `dotnet clean` to remove all existing binaries and intermediate files.
+      2. From a command line, run `dotnet clean` to remove all existing binaries and intermediate files.
       3. In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to version 0.7.xxxx, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
 ```xml
     <PackageReference Include="Microsoft.Quantum.Standard" Version="0.7.xxxx.yyy" />

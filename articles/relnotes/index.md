@@ -14,7 +14,7 @@ uid: microsoft.quantum.relnotes
 
 1.  Follow [these instructions](xref:microsoft.quantum.install#updating-iq) to update IQ#.  
 2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
-3.  Follow [these instructions](microsoft.quantum.install.csharp#update) to update your .csproj files, using the PackageReference for the Version below.
+3.  Follow [these instructions](xref:microsoft.quantum.install.csharp#update) to update your .csproj files, using the PackageReference for the Version below.
 
 > [!NOTE]
 > * The language server included with the Quantum Development Kit does not support multiple workspaces.

@@ -44,14 +44,13 @@ The first file, `Tests.qs`, provides a convenient place to define new Q# unit te
 Initially this file contains one sample unit test `AllocateQubitTest` which checks that a newly allocated qubit is in the $\ket{0}$ state and prints a message:
 
 ```qsharp
-operation AllocateQubitTest () : Unit
-{
-    using (qs = Qubit()) 
-    {
-        Assert([PauliZ], [qs], Zero, "Newly allocated qubit must be in |0⟩ state");
+    operation AllocateQubitTest () : Unit {
+        using (q = Qubit()) {
+            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+        }
+        
+        Message("Test passed");
     }
-    Message("Test passed");
-}
 ```
 
 Any Q# operation compatible with the type `(Unit => Unit)` or function compatible with `(Unit -> Unit)` can be executed as a unit test. 
@@ -134,7 +133,7 @@ This makes functions returning `()` a useful tool for embedding assertions and d
 
 ### Logging
 
-The intrinsic function @"microsoft.quantum.intrinsic.message" has type `(String -> Unit)` and enables the creation of diagnostic messages.
+The intrinsic function <xref:microsoft.quantum.intrinsic.message> has type `(String -> Unit)` and enables the creation of diagnostic messages.
 
 The `onLog` action of `QuantumSimulator` can be used to define actions performed when Q# code calls `Message`. By default logged messages are printed to standard output.
 
@@ -180,7 +179,7 @@ Here, the keyword `fail` indicates that the computation should not proceed, rais
 By definition, a failure of this kind cannot be observed from within Q#, as no further Q# code is run after a `fail` statement is reached.
 Thus, if we proceed past a call to `AssertPositive`, we can be assured by that its input was positive.
 
-Building on these ideas, [the prelude](xref:microsoft.quantum.libraries.standard.prelude) offers two especially useful assertions, @"microsoft.quantum.primitive.assert" and @"microsoft.quantum.primitive.assertprob" both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is to be performed, and a hypothetical outcome.
+Building on these ideas, [the prelude](xref:microsoft.quantum.libraries.standard.prelude) offers two especially useful assertions, <xref:microsoft.quantum.intrinsic.assert> and <xref:microsoft.quantum.intrinsic.assertprob> both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is to be performed, and a hypothetical outcome.
 On target machines which work by simulation, we are not bound by [the no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), and can perform such measurements without disturbing the register passed to such assertions.
 A simulator can then, similar to the `AssertPositive` function above, abort computation if the hypothetical outcome would not be observed in practice:
 
@@ -197,11 +196,11 @@ using (register = Qubit())
 
 On physical quantum hardware, where the no-cloning theorem prevents examination of quantum state, the `Assert` and `AssertProb` operations simply return `()` with no other effect.
 
-The <xref:microsoft.quantum.canon> namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. They are detailed in [Q# standard libraries: Testing and Debugging](xref:microsoft.quantum.libraries.standard.testing) section.
+The <xref:microsoft.quantum.diagnostics> namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. 
 
 ## Dump Functions
 
-To help troubleshooting quantum programs, [the prelude](xref:microsoft.quantum.libraries.standard.prelude) offers two functions that can dump into a file the current status of the target machine: @"microsoft.quantum.extensions.diagnostics.dumpmachine" and @"microsoft.quantum.extensions.diagnostics.dumpregister". The generated output of each depends on the target machine.
+To help troubleshooting quantum programs, the <xref:microsoft.quantum.diagnostics> namespace offers two functions that can dump into a file the current status of the target machine: <xref:microsoft.quantum.diagnostics.dumpmachine> and <xref:microsoft.quantum.diagnostics.dumpregister>. The generated output of each depends on the target machine.
 
 ### DumpMachine
 
@@ -211,18 +210,83 @@ $$
     \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10},
 \end{align}
 $$
-calling @"microsoft.quantum.extensions.diagnostics.dumpmachine" generates this output:
+calling <xref:microsoft.quantum.diagnostics.dumpmachine> generates this output:
 
 ```
-Ids:    [1;0;]
-Wavefunction:
-0:      0.707107        0
-1:      0               0
-2:      -0.5            -0.5
-3:      0               0
+# wave function for qubits with ids (least to most significant): 0;1
+∣0❭:	 0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]     --- [  0.00000 rad ]
+∣1❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+∣2❭:	-0.500000 + -0.500000 i	 == 	**********           [ 0.500000 ]   /     [ -2.35619 rad ]
+∣3❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
 ```
 
-Notice how the IDs of the qubits are shown at the top in their significant order. For each computational basis state $\ket{n}$, the first column represents the real part of the amplitude, and the second column represents its imaginary part.
+The first row provides a comment with the IDs of the corresponding qubits in their significant order.
+The rest of the rows describe the probability amplitude of measuring the basis state vector $\ket{n}$ in both Cartesian and polar formats. In detail for the first row:
+
+* **`∣0❭:`** this row corresponds to the `0` computational basis state
+* **`0.707107 +  0.000000 i`**: the probability amplitude in Cartesian format.
+* **` == `**: the `equal` sign seperates both equivalent representations.
+* **`**********  `**: A graphical representation of the magnitude, the number of `*` is proportionate to the probability of measuring this state vector.
+* **`[ 0.500000 ]`**: the numeric value of the magnitude
+* **`    ---`**: A graphical representation of the amplitude's phase (see below).
+* **`[ 0.0000 rad ]`**: the numeric value of the phase (in radians).
+
+Both the magnitude and the phase are displayed with a graphical representation. The magnitude representation is straight-forward: it shows a bar of `*`, the bigger the probability the bigger the bar will be. For the phase, we show the following symbols to represent the angle based on ranges:
+
+```
+[ -π/16,   π/16)       ---
+[  π/16,  3π/16)        /-
+[ 3π/16,  5π/16)        / 
+[ 5π/16,  7π/16)       +/ 
+[ 7π/16,  9π/16)      ↑   
+[ 8π/16, 11π/16)    \-    
+[ 7π/16, 13π/16)    \     
+[ 7π/16, 15π/16)   +\     
+[15π/16, 19π/16)   ---    
+[17π/16, 19π/16)   -/     
+[19π/16, 21π/16)    /     
+[21π/16, 23π/16)    /+    
+[23π/16, 25π/16)      ↓   
+[25π/16, 27π/16)       -\ 
+[27π/16, 29π/16)        \ 
+[29π/16, 31π/16)        \+
+[31π/16,   π/16)       ---
+```
+
+The following examples show `DumpMachine` for some common states:
+
+### `∣0❭`
+
+```
+# wave function for qubits with ids (least to most significant): 0
+∣0❭:	 1.000000 +  0.000000 i	 == 	******************** [ 1.000000 ]     --- [  0.00000 rad ]
+∣1❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+```
+
+### `∣1❭`
+
+```
+# wave function for qubits with ids (least to most significant): 0
+∣0❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+∣1❭:	 1.000000 +  0.000000 i	 == 	******************** [ 1.000000 ]     --- [  0.00000 rad ]
+```
+
+### `∣+❭`
+
+```
+# wave function for qubits with ids (least to most significant): 0
+∣0❭:	 0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]      --- [  0.00000 rad ]
+∣1❭:	 0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]      --- [  0.00000 rad ]
+```
+
+### `∣-❭`
+
+```
+# wave function for qubits with ids (least to most significant): 0
+∣0❭:	 0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]      --- [  0.00000 rad ]
+∣1❭:	-0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]  ---     [  3.14159 rad ]
+```
+
 
   > [!NOTE]
   > The id of a qubit is assigned at runtime and it's not necessarily aligned with the order in which the qubit was allocated or its position within a qubit register.
@@ -240,7 +304,7 @@ Notice how the IDs of the qubits are shown at the top in their significant order
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
-  > You can figure out a qubit id by using the @"microsoft.quantum.primitive.message" function and passing the qubit variable in the message, for example:
+  > You can figure out a qubit id by using the <xref:microsoft.quantum.intrinsic.message> function and passing the qubit variable in the message, for example:
   >
   > ```qsharp
   > Message($"0={register2[0]}; 1={register2[1]}");
@@ -255,19 +319,15 @@ Notice how the IDs of the qubits are shown at the top in their significant order
 
 ***
 
-
-@"microsoft.quantum.extensions.diagnostics.dumpmachine" is part of the  <xref:microsoft.quantum.extensions.diagnostics> namespace, so in order to use it you must add an `open` statement:
+<xref:microsoft.quantum.diagnostics.dumpmachine> is part of the  <xref:microsoft.quantum.diagnostics> namespace, so in order to use it you must add an `open` statement:
 
 ```qsharp
-namespace Samples
-{
+namespace Samples {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Diagnostics;
 
-    operation Operation () : Unit
-    {
-        using (qubits = Qubit[2])
-        {
+    operation Operation () : Unit {
+        using (qubits = Qubit[2]) {
             H(qubits[1]);
             DumpMachine("dump.txt");
         }
@@ -278,39 +338,37 @@ namespace Samples
 
 ### DumpRegister
 
-@"microsoft.quantum.extensions.diagnostics.dumpregister" works like @"microsoft.quantum.extensions.diagnostics.dumpmachine", except it also takes an array of qubits to limit the amount of information to only that relevant to the corresponding qubits.
+<xref:microsoft.quantum.diagnostics.dumpregister> works like <xref:microsoft.quantum.diagnostics.dumpmachine>, except it also takes an array of qubits to limit the amount of information to only that relevant to the corresponding qubits.
 
-As with @"microsoft.quantum.extensions.diagnostics.dumpmachine", the information generated by @"microsoft.quantum.extensions.diagnostics.dumpregister" depends on the target machine. For the full-state quantum simulator it writes into the file the wave function up to a global phase of the quantum sub-system generated by the provided qubits in the same format as @"microsoft.quantum.extensions.diagnostics.dumpmachine".  For example, take again a machine with only two qubits allocated and in the quantum state
+As with <xref:microsoft.quantum.diagnostics.dumpmachine>, the information generated by <xref:microsoft.quantum.diagnostics.dumpregister> depends on the target machine. For the full-state quantum simulator it writes into the file the wave function up to a global phase of the quantum sub-system generated by the provided qubits in the same format as <xref:microsoft.quantum.diagnostics.dumpmachine>.  For example, take again a machine with only two qubits allocated and in the quantum state
 $$
 \begin{align}
     \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10} = - e^{-i\pi/4} ( (\frac{1}{\sqrt{2}} \ket{0} - \frac{(1 + i)}{2} \ket{1} ) \otimes \frac{-(1 + i)}{\sqrt{2}} \ket{0} ) ,
 \end{align}
 $$
-calling @"microsoft.quantum.extensions.diagnostics.dumpregister" for `qubit[0]` generates this output:
+calling <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[0]` generates this output:
 
 ```
-Ids:    [0;]
-Wavefunction:
-0:      -0.707107       -0.707107
-1:      0               0
+# wave function for qubits with ids (least to most significant): 0
+∣0❭:	-0.707107 + -0.707107 i	 == 	******************** [ 1.000000 ]  /      [ -2.35619 rad ]
+∣1❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
 ```
 
-and calling @"microsoft.quantum.extensions.diagnostics.dumpregister" for `qubit[1]` generates this output:
+and calling <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[1]` generates this output:
 
 ```
-Ids:    [1;]
-Wavefunction:
-0:      0.707107        0
-1:      -0.5            -0.5
+# wave function for qubits with ids (least to most significant): 1
+∣0❭:	 0.707107 +  0.000000 i	 == 	***********          [ 0.500000 ]     --- [  0.00000 rad ]
+∣1❭:	-0.500000 + -0.500000 i	 == 	***********          [ 0.500000 ]  /      [ -2.35619 rad ]
 ```
 
-In general, the state of a register that is entangled with another register is a mixed state rather than a pure state. In this case, @"microsoft.quantum.extensions.diagnostics.dumpregister" outputs the following message:
+In general, the state of a register that is entangled with another register is a mixed state rather than a pure state. In this case, <xref:microsoft.quantum.diagnostics.dumpregister> outputs the following message:
 
 ```
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-The following example shows you how you can use both @"microsoft.quantum.extensions.diagnostics.dumpregister" and @"microsoft.quantum.extensions.diagnostics.dumpmachine" in your Q# code:
+The following example shows you how you can use both <xref:microsoft.quantum.diagnostics.dumpregister> and <xref:microsoft.quantum.diagnostics.dumpmachine> in your Q# code:
 
 ```qsharp
 namespace app
@@ -318,11 +376,9 @@ namespace app
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Diagnostics;
 
-    operation Operation () : Unit
-    {
+    operation Operation () : Unit {
 
-        using (qubits = Qubit[2])
-        {
+        using (qubits = Qubit[2]) {
             X(qubits[1]);
             H(qubits[1]);
             R1Frac(1, 2, qubits[1]);

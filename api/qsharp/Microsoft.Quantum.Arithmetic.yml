@@ -10,6 +10,16 @@ functions:
   summary: |-
     Converts a `BigEndian` qubit register to a `LittleEndian` qubit
     register by reversing the qubit ordering.
+- uid: microsoft.quantum.arithmetic.identicalformatfactfxp
+  summary: |-
+    Assert that all fixed-point numbers in the provided array
+    have identical point positions and qubit numbers.
+- uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
+  summary: |-
+    Assert that all fixed-point numbers in the provided array
+    have identical point positions when counting from the least-
+    significant bit. I.e., number of bits minus point position must
+    be constant for all fixed-point numbers in the array.
 - uid: microsoft.quantum.arithmetic.littleendianasbigendian
   summary: |-
     Converts a `LittleEndian` qubit register to a `BigEndian` qubit
@@ -47,6 +57,14 @@ functions:
     Given an operation that takes a little-endian input, returns a new
     operation that takes a big-endian input.
 operations:
+- uid: microsoft.quantum.arithmetic.addconstantfxp
+  summary: Adds a classical constant to a quantum fixed-point number.
+- uid: microsoft.quantum.arithmetic.addfxp
+  summary: Adds two fixed-point numbers stored in quantum registers.
+- uid: microsoft.quantum.arithmetic.addi
+  summary: |-
+    Automatically chooses between addition with
+    carry and without, depending on the register size of `ys`.
 - uid: microsoft.quantum.arithmetic.applyleoperationonphasele
   summary: |-
     Applies an operation that takes a
@@ -108,6 +126,10 @@ operations:
     Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
     then `InPlaceXorLE` performs an operation given by the following map:
     $\ket{y}\rightarrow \ket{y\oplus a}$ , where $\oplus$ is the bitwise exclusive OR operator.
+- uid: microsoft.quantum.arithmetic.assertallzerofxp
+  summary: |-
+    Helper function to assert that a quantum fixed-point number is
+    initialized to zero, i.e., all qubits are in state $\ket{0}$.
 - uid: microsoft.quantum.arithmetic.assertmostsignificantbit
   summary: |-
     Asserts that the most significant qubit of a qubit register
@@ -143,6 +165,14 @@ operations:
     position 1 as the target, then from the qubit at position 1 as the control to
     the qubit at position 2 as the target, etc., ending with the qubit in position
     `Length(register)-1` as the target.
+- uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
+  summary: |-
+    Compares two fixed-point numbers stored in quantum registers, and
+    controls a flip on the result.
+- uid: microsoft.quantum.arithmetic.comparegti
+  summary: 'Wrapper for integer comparison: `result = x > y`.'
+- uid: microsoft.quantum.arithmetic.comparegtsi
+  summary: 'Wrapper for signed integer comparison: `result = xs > ys`.'
 - uid: microsoft.quantum.arithmetic.compareusingripplecarry
   summary: |-
     This unitary tests if two integers `x` and `y` stored in equal-size qubit registers
@@ -155,10 +185,25 @@ operations:
     U\ket{x}\ket{y}\ket{z}=\ket{x}\ket{y}\ket{z\oplus (x>y)}.
     \end{align}
     $$.
+- uid: microsoft.quantum.arithmetic.computereciprocalfxp
+  summary: Computes $1/x$ for a fixed-point number $x$.
+- uid: microsoft.quantum.arithmetic.computereciprocali
+  summary: |-
+    Computes the reciprocal 1/x for an unsigned integer x
+    using integer division. The result, interpreted as an integer,
+    will be `floor(2^(2*n-1) / x)`.
 - uid: microsoft.quantum.arithmetic.copymostsignificantbit
   summary: |-
     Copies the most significant bit of a qubit register
     `from` representing an unsigned integer into the qubit `target`.
+- uid: microsoft.quantum.arithmetic.dividei
+  summary: Divides two quantum integers.
+- uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
+  summary: Evaluates an even polynomial in a fixed-point representation.
+- uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
+  summary: Evaluates an odd polynomial in a fixed-point representation.
+- uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
+  summary: Evaluates a polynomial in a fixed-point representation.
 - uid: microsoft.quantum.arithmetic.greaterthan
   summary: |-
     Carries out a strictly greater than comparison of two integers $x$ and $y$, encoded
@@ -197,8 +242,14 @@ operations:
     If we denote output qubit as $z$ and input qubits as $x$ and $y$,
     the operation performs the following transformation:
     $\ket{xyz} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} (x, y, z)}$.
+- uid: microsoft.quantum.arithmetic.invert2ssi
+  summary: Inverts a given integer modulo 2's complement.
 - uid: microsoft.quantum.arithmetic.maj
   summary: This applies the in-place majority operation to 3 qubits.
+- uid: microsoft.quantum.arithmetic.measurefxp
+  summary: |-
+    Measure a fixed-point number, returns its value as Double, and resets
+    all the register to zero.
 - uid: microsoft.quantum.arithmetic.measureinteger
   summary: |-
     Measures the content of a quantum register and converts
@@ -227,6 +278,18 @@ operations:
     then this operation implements a unitary defined by the following map on
     computational basis:
     |y⟩ ↦ |a⋅y (mod N) ⟩, for all y between 0 and N - 1
+- uid: microsoft.quantum.arithmetic.multiplyfxp
+  summary: Multiplies two fixed-point numbers in quantum registers.
+- uid: microsoft.quantum.arithmetic.multiplyi
+  summary: |-
+    Multiply integer `xs` by integer `ys` and store the result in `result`,
+    which must be zero initially.
+- uid: microsoft.quantum.arithmetic.multiplysi
+  summary: |-
+    Multiply signed integer `xs` by signed integer `ys` and store
+    the result in `result`, which must be zero initially.
+- uid: microsoft.quantum.arithmetic.preparefxp
+  summary: Initialize a quantum fixed-point number to a classical constant.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
   summary: |-
     Reversible, in-place ripple-carry addition of two integers.
@@ -255,6 +318,16 @@ operations:
     and a qubit carry, the operation computes the sum of the two integers
     where the $n$ least significant bits of the result are held in `ys` and
     the carry out bit is xored to the qubit `carry`.
+- uid: microsoft.quantum.arithmetic.squarefxp
+  summary: Squares a fixed-point number.
+- uid: microsoft.quantum.arithmetic.squarei
+  summary: |-
+    Computes the square of the integer `xs` into `result`,
+    which must be zero initially.
+- uid: microsoft.quantum.arithmetic.squaresi
+  summary: |-
+    Square signed integer `xs` and store
+    the result in `result`, which must be zero initially.
 - uid: microsoft.quantum.arithmetic.sum
   summary: |-
     Implements a reversible sum gate. Given a carry-in bit encoded in
@@ -266,6 +339,11 @@ newtypes:
   summary: |-
     Register that encodes an unsigned integer in big-endian order. The
     qubit with index `0` encodes the highest bit of an unsigned integer.
+- uid: microsoft.quantum.arithmetic.fixedpoint
+  summary: |-
+    Represents a register of qubits encoding a fixed-point number. Consists of an integer that is equal to the number of
+    qubits to the left of the binary point, i.e., qubits of weight greater
+    than or equal to 1, and a quantum register.
 - uid: microsoft.quantum.arithmetic.littleendian
   summary: |-
     Register that encodes an unsigned integer in little-endian order. The
@@ -278,4 +356,6 @@ newtypes:
     $x$ in the computational basis,
     then $\operatorname{QFTLE} \ket{x}$ is the encoding of $x$ in the QFT
     basis.
+- uid: microsoft.quantum.arithmetic.signedlittleendian
+  summary: Type of a signed integer stored in little endian (see LittleEndian).
 ...

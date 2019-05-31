@@ -19,6 +19,11 @@ operations:
     Given a preparation and measurement, estimates the frequency
     with which that measurement succeeds (returns `Zero`) by
     performing a given number of trials.
+- uid: microsoft.quantum.characterization.estimatefrequencya
+  summary: |-
+    Given a preparation that is adjointable and measurement, estimates the frequency
+    with which that measurement succeeds (returns `Zero`) by
+    performing a given number of trials.
 - uid: microsoft.quantum.characterization.measureallz
   summary: |-
     Jointly measures a register of qubits in the Pauli Z basis.

@@ -1,4 +1,6 @@
-- name: Broombridge - message passing with chemistry software
+- name: Broombridge quantum chemistry schema
   href: broombridge.md
-- name: Specification
-  href: spec.md
+- name: Specification v0.2
+  href: spec_v_0_2.md
+- name: Specification v0.1
+  href: spec_v_0_1.md

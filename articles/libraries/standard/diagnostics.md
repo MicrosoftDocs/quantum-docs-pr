@@ -29,8 +29,10 @@ Message($"About to rotate by an angle of {angle}...");
 
 The <xref:microsoft.quantum.diagnostics.dumpmachine> and <xref:microsoft.quantum.diagnostics.dumpregister> callables instruct target machines to provide diagnostic information about all currently allocated qubits or about a specific register of qubits, respectively.
 Each target machine varies in what diagnostic information is provided in response to a dump instruction.
-The <xref:microsoft.quantum.simulation.simulators.quantumsimulator> target machine, for instance, provides the host program with the state vector that it uses internally to represent a register of qubits.
-By comparison, the <xref:microsoft.quantum.simulation.simulators.toffolisimulator> target machine provides a single classical bit for each qubit.
+The [full state simulator](xref:microsoft.quantum.machines.full-state-simulator) target machine, for instance, provides the host program with the state vector that it uses internally to represent a register of qubits.
+By comparison, the [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator) target machine provides a single classical bit for each qubit.
+
+ To learn more about the [full state simulator's](xref:microsoft.quantum.machines.full-state-simulator) `DumpMachine` output, take a look at the dump functions section of our [testing and debugging article](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions).
 
 
 ## Facts and Assertions ##
@@ -121,7 +123,7 @@ Then, using the likelihood function for quantum measurements,
         \right).
 \end{align}
 
-The <xref:microsoft.quantum.diagnostic.assertqubitstate> implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.canon.complex>.
+The <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> operation implements these assertions given representations of $\alpha$ and $\beta$ as values of type <xref:microsoft.quantum.math.complex>.
 This is helpful when the expected state can be computed mathematically.
 
 ### Asserting Equality of Quantum Operations ###
@@ -134,7 +136,7 @@ We may be interested in asserting that $U^\dagger(t) = U(-t)$, as expected if $t
 Broadly speaking, there are two different strategies that we can follow in making the assertion that two operations `U` and `V` act identically.
 First, we can check that `U(target); (Adjoint V)(target);` preserves each state in a given basis.
 Second, we can check that `U(target); (Adjoint V)(target);` acting on half of an entangled state preserves that entanglement.
-These strategies are implemented by the canon operations <xref:microsoft.quantum.dianostics.assertoperationsequalinplace> and <xref:microsoft.quantum.dianostics.assertoperationsequalreferenced>, respectively.
+These strategies are implemented by the canon operations <xref:microsoft.quantum.diagnostics.assertoperationsequalinplace> and <xref:microsoft.quantum.diagnostics.assertoperationsequalreferenced>, respectively.
 
 > [!NOTE]
 > The referenced assertion discussed above works based on the [Choi–Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality), a mathematical framework which relates operations on $n$ qubits to entangled states on $2n$ qubits.

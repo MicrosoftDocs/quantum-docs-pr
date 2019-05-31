@@ -9,12 +9,20 @@ ms.topic: article
 ---
 
 # Multiple Qubits
-While single-qubit gates possess some counter-intuitive features, such as the ability to be in more than one state at a given time, if all we had in a quantum computer were single-qubit gates then we would have a device with computational power that would be dwarfed by even a calculator let alone a classical supercomputer.  The true power of quantum computing only becomes visible as we increase the number of qubits.  This power arises, in part, because the dimension of the vector space in which quantum state vectors grows exponentially with the number of qubits.  This means that while a single qubit can be trivially modeled, simulating a fifty-qubit quantum computation would arguably push the limits of existing supercomputers.  Increasing the size of the computation by only one additional qubit *doubles* the memory required to store the state and roughly *doubles* the computational time.  This rapid doubling of computational power is why a quantum computer with a relatively small number of qubits can far surpass the most powerful supercomputers of today, tomorrow and beyond for some computational tasks.
 
-Why do we have exponential growth for quantum state vectors?  Our goal in this section is to review the rules used to build multi-qubit states out of single-qubit states as well as discuss the gate operations that we need to include in our gate set to form a universal many-qubit quantum computer.  These tools are absolutely necessary to understand the gate sets that are commonly used in Q# code and also to gain intuition about why quantum effects such as entanglement or interference render quantum computing more powerful than classical computing.
+While single-qubit gates possess some counter-intuitive features, such as the ability to be in more than one state at a given time, if all we had in a quantum computer were single-qubit gates then we would have a device with computational power that would be dwarfed by even a calculator let alone a classical supercomputer.
+The true power of quantum computing only becomes evident as we increase the number of qubits.
+This power arises, in part, because the dimension of the vector space of quantum state vectors grows exponentially with the number of qubits.
+This means that while a single qubit can be trivially modeled, simulating a fifty-qubit quantum computation would arguably push the limits of existing supercomputers.
+Increasing the size of the computation by only one additional qubit *doubles* the memory required to store the state and roughly *doubles* the computational time.
+This rapid doubling of computational power is why a quantum computer with a relatively small number of qubits can far surpass the most powerful supercomputers of today, tomorrow and beyond for some computational tasks.
+
+Why do we have exponential growth for quantum state vectors?  Our goal in this section is to review the rules used to build multi-qubit states out of single-qubit states as well as discuss the gate operations that we need to include in our gate set to form a universal many-qubit quantum computer.
+These tools are absolutely necessary to understand the gate sets that are commonly used in Q# code and also to gain intuition about why quantum effects such as entanglement or interference render quantum computing more powerful than classical computing.
 
 ## Representing Two Qubits
-The main difference between one- and two-qubit states is that two-qubit states are four dimensional rather than two dimensional.  This is because the computational basis for two-qubit states is formed by the tensor products of one-qubit states.  For example, we have
+The main difference between one- and two-qubit states is that two-qubit states are four dimensional rather than two dimensional.
+This is because the computational basis for two-qubit states is formed by the tensor products of one-qubit states.  For example, we have
 \begin{align}
 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} &= \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix},\qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\
 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} &= \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix},\qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}.
@@ -169,7 +177,7 @@ As in the single-qubit case, a two-qubit gate set is universal if any $4\times 4
 One example of a universal gate set is the Hadamard gate, the T gate, and the CNOT gate. By taking products of these gates, we can approximate any unitary matrix on two qubits.
 
 ## Many-Qubit Systems
-We follow the exact same patterns explored in the two-qubit case to build many-qubit quantum states from smaller systems.  Such states are built by forming tensor products of smaller states.  For example, consider encoding the bit string $1011001$ in a quantum computer.  We can encode this as
+We follow exactly the same patterns explored in the two-qubit case to build many-qubit quantum states from smaller systems.  Such states are built by forming tensor products of smaller states.  For example, consider encoding the bit string $1011001$ in a quantum computer.  We can encode this as
 
 $$
 1011001 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}.
@@ -182,7 +190,7 @@ Quantum gates work in exactly the same way.  For example, if we wish to apply th
 &\qquad\qquad\equiv 0011001.
 \end{align}
 
-In many qubit systems, there is often a need to allocate and de-allocate qubits that serve as temporary memory for the quantum computer.  Such qubit a qubit is called an ancilla.  By default we assume the qubit state is initialized to $e_0$ upon allocation.  We further assume that it is returned again to $e_0$ before de-allocation.  This assumption is important because if an ancilla qubit becomes entangled with another qubit register when it becomes de-allocated then the process of de-allocation will damage the ancilla.  For this reason, we always assume that such qubits are reverted to their initial state before being released.
+In many qubit systems, there is often a need to allocate and de-allocate qubits that serve as temporary memory for the quantum computer.  Such a qubit is called an ancilla.  By default we assume the qubit state is initialized to $e_0$ upon allocation.  We further assume that it is returned again to $e_0$ before de-allocation.  This assumption is important because if an ancilla qubit becomes entangled with another qubit register when it becomes de-allocated then the process of de-allocation will damage the ancilla.  For this reason, we always assume that such qubits are reverted to their initial state before being released.
 
 Finally, although new gates needed to be added to our gate set to achieve universal quantum computing for two qubit quantum computers, no new gates need to be introduced in the multi-qubit case.  The gates $H$, $T$ and CNOT form a universal gate set on many qubits because any general unitary transformation can be broken into a series of two qubit rotations.  We then can leverage the theory developed for the two-qubit case and use it again here when we have many qubits.
 

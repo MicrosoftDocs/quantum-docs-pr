@@ -199,8 +199,9 @@ Such a rebinding consists of the keyword `set`, followed by
 a symbol or symbol tuple, an equals sign `=`, an expression to rebind the symbol(s) to, and a terminating semicolon.
 The value must be compatible with the type(s) of the symbol(s) it is bound to.
 
-A particular kind of set-statement we refer to as apply-and-reassign statement provides a convenient way of 
-concatenation if the right hand side consists of the application of a binary operator an is to be rebound to the left argument to the operator. 
+#### Apply-and-Reassign Statement
+
+A particular kind of set-statement we refer to as an apply-and-reassign statement provides a convenient way of concatenation if the right hand side consists of the application of a binary operator and the result is to be rebound to the left argument to the operator. 
 For example,
 ```qsharp
 mutable counter = 0;
@@ -226,11 +227,31 @@ for (q in qubits) {
     // ...
 }
 ```
+#### Update-and-Reassign Statement
 
 A similar concatenation exists for copy-and-update expressions on the right hand side. 
-While our standard libraries contain the necessary tools for many common array initialization and manipulation needs, 
-and thus help to avoid having update array items in the first place, 
-such update-and-reassign statements provide an alternative if needed:
+Correspondingly, update-and-reassign statements exist for named items in user-defined types as well as for array items.  
+
+```qsharp
+newtype Complex = (Re : Double, Im : Double);
+
+function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+    mutable res = Complex(0.,0.);
+
+    for (r in reals) {
+        set res w/= Re <- res::Re + r; // update-and-reassign statement
+    }
+    for (i in ims) {
+        set res w/= Im <- res::Im + i; // update-and-reassign statement
+    }
+    return res;
+}
+```
+
+In the case of arrays, 
+our standard libraries contain the necessary tools for many common array initialization and manipulation needs, 
+and thus help avoid having to update array items in the first place. 
+Update-and-reassign statements provide an alternative if needed:
 
 ```qsharp
 operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
@@ -248,7 +269,8 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
     mutable samples = RandomInts(prec, nrSamples);
     
     for (i in IndexRange(samples) {
-        set samples w/= i <- normalization * IntAsDouble(samples[i]);
+        let value = IntAsDouble(samples[i]);
+        set samples w/= i <- normalization * value; // update-and-reassign statement
     }
 }
 
@@ -269,7 +291,8 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
     return pauliArray;
 }
 ```
-for example can simply be expressed using the function `ConstantArray` in `Microsoft.Quantum.Arrays`:
+for example can simply be simplified using the function `ConstantArray` in `Microsoft.Quantum.Arrays`, 
+and returning a copy-and-update expression:
 
 ```qsharp
 function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
@@ -344,7 +367,7 @@ if (a == b) {
 
 ## Control Flow
 
-### For-Loop
+### For Loop
 
 The `for` statement supports iteration over an integer range or over an array.
 The statement consists of the keyword `for`, an open parenthesis `(`,
@@ -389,11 +412,24 @@ In particular, the loop variable is not bound after the for loop is completed.
 
 The `repeat` statement supports the quantum “repeat until success” pattern.
 It consists of the keyword `repeat`, followed by a statement block
-(the _loop_ body), the keyword `until`, a Boolean expression,
-the keyword `fixup`, and another statement block (the _fixup_).
+(the _loop_ body), the keyword `until`, a Boolean expression, 
+and either a terminating semicolon or 
+the keyword `fixup` followed by another statement block (the _fixup_).
 The loop body, condition, and fixup are all considered to be a single scope,
 so symbols bound in the body are available in the condition and fixup.
-Note that the fixup block is required, even if there is no fixup to be done.
+
+```qsharp
+mutable iter = 1;
+repeat {
+    ProbabilisticCircuit(qs);
+    let success = ComputeSuccessIndicator(qs);
+}
+until (success || iter > maxIter)
+fixup {
+    iter += 1;
+    ComputeCorrection(qs);
+}
+```
 
 The loop body is executed, and then the condition is evaluated.
 If the condition is true, then the statement is completed;
@@ -426,9 +462,31 @@ using (anc = Qubit()) {
         Z(target);
         H(anc);
         let result = M(anc);
-    } until (result == Zero)
-    fixup {
-    }
+    } until (result == Zero);
+}
+```
+
+> [!TIP]   
+> Avoid using repeat-until-success loops inside functions. 
+> The corresponding functionality is provided by while loops in functions. 
+
+### While Loop
+
+Repeat-until-success patterns have a very quantum-specific connotation. They are widely used in particular classes of quantum algorithms -- hence the dedicated language construct in Q#. 
+However, loops that break based on a condition and whose execution length is thus unknown at compile time need to be handled with particular care in a quantum runtime. 
+Their use within functions on the other hand is unproblematic, since these only contain code that will be executed on conventional (non-quantum) hardware. 
+
+Q# therefore supports to use of while loops within functions only. 
+A `while` statement consists of the keyword `while`, an open parenthesis `(`,
+a condition (i.e. a Boolean expression), a close parenthesis `)`, and a statement block.
+The statement block (the body of the loop) is executed as long as the condition evaluates to `true`.
+
+```qsharp
+// ...
+mutable (item, index) = (-1, 0);
+while (index < Length(arr) && item < 0) { 
+    set item = arr[index];
+    set index += 1;
 }
 ```
 

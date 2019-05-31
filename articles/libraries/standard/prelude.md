@@ -229,8 +229,8 @@ It has signature `((Qubit, Qubit) => Unit is Adj + Ctl)`.
 > [!NOTE]
 > The SWAP gate is *not* the same as rearranging the elements of a variable with type `Qubit[]`.
 > Applying `SWAP(q1, q2)` causes a change to the state of the qubits referred to by `q1` and `q2`, while `let swappedRegister = [q2, q1];` only affects how we refer to those qubits.
-> Moreover, `(Controlled SWAP)([q0], (q1, q2))` allows for `SWAP` to be conditioned on the state of a third qubit, which we cannot represent by rearranging elements.
-> The controlled-SWAP gate, also known as the Fredkin gate, is powerful enough to include all classical computation.
+> Moreover, `(Controlled SWAP)([q0], q1, q2)` allows for `SWAP` to be conditioned on the state of a third qubit, which we cannot represent by rearranging elements.
+> The controlled-SWAP gate, also known as the Fredikin gate, is powerful enough to include all classical computation.
 
 Finally, the prelude provides two operations for representing exponentials of multi-qubit Pauli operators.
 The <xref:microsoft.quantum.intrinsic.exp> operation performs a rotation based on a tensor product of Pauli matrices, as represented by the multi-qubit unitary

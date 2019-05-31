@@ -50,9 +50,11 @@ While thinking about a quantum computation as a sequence of rotations is a power
 
 ## Single-Qubit Operations
 
-Quantum computers process data by applying a universal set of quantum gates that can emulate any rotation of the quantum state vector. This notion of universality is akin to the notion of universality for traditional (i.e., classical) computing where a gate set is considered to be universal if every transformation of the input bits can be performed using a finite length circuit.
+Quantum computers process data by applying a universal set of quantum gates that can emulate any rotation of the quantum state vector.
+This notion of universality is akin to the notion of universality for traditional (i.e., classical) computing where a gate set is considered to be universal if every transformation of the input bits can be performed using a finite length circuit.
 In quantum computing, the valid transformations that we are allowed to perform on a qubit are unitary transformations and measurement.
-The *adjoint operation* or the complex conjugate transpose is of crucial importance to quantum computing because it is needed to invert quantum transformations. Q# reflects this by providing methods to automatically compile gate sequences to their adjoint, which saves the programmer from having to hand code adjoints in many cases. An example of this is shown below:
+The *adjoint operation* or the complex conjugate transpose is of crucial importance to quantum computing because it is needed to invert quantum transformations.
+Q# reflects this by providing methods to automatically compile gate sequences to their adjoint, which saves the programmer from having to hand code adjoints in many cases. An example of this is shown below:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -61,7 +63,8 @@ is Adj { // Auto-generate the adjoint of the operation
 }
 ```
 
-Although this is a trivial example (as the Hadamard (`H`) operation is self-adjoint), you can see how this becomes invaluable for more complicated qubit operations. More information can be found [here](xref:microsoft.quantum.techniques.opsandfunctions).
+Although this is a trivial example (as the <xref:microsoft.quantum.intrinsic.h> operation is self-adjoint), you can see how this becomes invaluable for more complicated qubit operations.
+For more information, see [Operations and Functions](xref:microsoft.quantum.techniques.opsandfunctions).
 
 There are only four functions that map one bit to one bit on a classical computer. In contrast, there are an infinite number of unitary transformations on a single qubit on a quantum computer. Therefore, no finite set of primitive quantum operations, called [*gates*](https://en.wikipedia.org/wiki/Quantum_logic_gate), can exactly replicate the infinite set of unitary transformations allowed in quantum computing. This means, unlike classical computing, it is impossible for a quantum computer to implement every possible quantum program exactly using a finite number of gates. Thus quantum computers cannot be universal in the same sense of classical computers. As a result, when we say that a set of gates is *universal* for quantum computing we actually mean something slightly weaker than we mean with classical computing.
 For universality, we require that a quantum computer only *approximate* every unitary matrix within a finite error using a finite length gate sequence.
@@ -94,11 +97,11 @@ $$
 Here the operations $X$, $Y$ and $Z$ are used especially frequently and are named [*Pauli operators*](https://en.wikipedia.org/wiki/Pauli_matrices) after their creator Wolfgang Pauli.
 Together with the non-Clifford gate (the $T$-gate), these operations can be composed to approximate any unitary transformation on a single qubit.
 
-For more information on these operations, their Bloch sphere representations and Q# implementations, please refer to [this](xref:microsoft.quantum.libraries.standard.prelude) article.
+For more information on these operations, their Bloch sphere representations and Q# implementations, see [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude#intrinsic-operations-and-functions).
 
 As an example of how unitary transformations can be built from these primitives, the three transformations pictured in the Bloch spheres above correspond to the gate sequence $\begin{bmatrix} 1 \\\\  0 \end{bmatrix} \mapsto HZH \begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}$.
 
-While the previous constitute the most popular primitive gates for describing operations on the logical level of the stack (think of the logical level as the level of the quantum algorithm), it is often convenient to consider less basic operations at the algorithmic level, for example operations closer to a function description level. Fortunately, Q# also has methods available for implementing higher-level unitaries, which in turn allows high-level algorithms to be implemented without explicitly decomposing everything down to Clifford and $T$-gates.
+While the previous constitute the most popular primitive gates for describing operations on the logical level of the stack (think of the logical level as the level of the quantum algorithm), it is often convenient to consider less basic operations at the algorithmic level, for example operations closer to a function description level. Fortunately, Q# also has methods available for implementing higher-level unitaries, which in turn allow high-level algorithms to be implemented without explicitly decomposing everything down to Clifford and $T$-gates.
 
 The simplest such primitive is the single qubit-rotation. Three single-qubit rotations are typically considered: $R_x$, $R_y$ and $R_z$. To visualize the action of the rotation $R_x(\theta)$, for example, imagine pointing your right thumb along the direction of the $x$-axis of the Bloch sphere and rotating the vector with your hand through an angle of $\theta/2$ radians. This confusing factor of $2$ arises from the fact that orthogonal vectors are $180^\circ$ apart when plotted on the Bloch sphere, yet are actually $90^\circ$ degrees apart geometrically. The corresponding unitary matrices are:
 
@@ -106,4 +109,4 @@ $$
 R_z(\theta) = \begin{bmatrix} e^{-i\theta/2} & 0\\\\  0& e^{i\theta/2} \end{bmatrix},\qquad R_x(\theta) = H R_z(\theta) H, \qquad R_y(\theta) = SHR_z(\theta)HS^\dagger.
 $$
 
-Just as any three rotations can be combined together to perform an arbitrary rotation in three dimensions, it can be seen from the Bloch sphere representation that any unitary matrix can be written as a sequence of three rotations as well. Specifically, for every unitary matrix $U$ there exists $\alpha,\beta,\gamma,\delta$ such that $U= e^{i\alpha} R_x(\beta)R_z(\gamma)R_x(\delta)$. Thus $R_z(\theta)$ and $H$ also form a universal gate set although it is not a discrete set because $\theta$ can take any value. For this reason, and due to applications in quantum simulation, such continuous gates are crucial for quantum computation, especially at the quantum algorithm design level. Ultimately, to achieve fault-tolerant hardware implementation, they will ultimately be compiled into discrete gate sequences that closely approximate these rotations.
+Just as any three rotations can be combined together to perform an arbitrary rotation in three dimensions, it can be seen from the Bloch sphere representation that any unitary matrix can be written as a sequence of three rotations as well. Specifically, for every unitary matrix $U$ there exists $\alpha,\beta,\gamma,\delta$ such that $U= e^{i\alpha} R_x(\beta)R_z(\gamma)R_x(\delta)$. Thus $R_z(\theta)$ and $H$ also form a universal gate set although it is not a discrete set because $\theta$ can take any value. For this reason, and due to applications in quantum simulation, such continuous gates are crucial for quantum computation, especially at the quantum algorithm design level. To achieve fault-tolerant hardware implementation, they will ultimately be compiled into discrete gate sequences that closely approximate these rotations.

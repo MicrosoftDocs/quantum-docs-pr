@@ -44,7 +44,7 @@ Hello quantum world!
 ## Update ##
 Follow these instructions to migrate your .csproj files to the newest version: 
 
-* Consult the [Nuget.org](https://www.nuget.org/packages/Microsoft.Quantum.Development.Kit/) for the `PackageReference` number, "0.n.xxxx.yyy".
+* Consult [Nuget.org](https://www.nuget.org/packages/Microsoft.Quantum.Development.Kit/) for the `PackageReference` number, "0.n.xxxx.yyy" for the Microsoft Quantum Development Kit package.
 * Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
 * From a command line, run `dotnet clean` to remove all existing binaries and intermediate files.
 * In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to the package reference number, for example:

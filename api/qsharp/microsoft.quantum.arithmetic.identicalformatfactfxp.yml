@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.identicalformatfactfxp
+name: IdenticalFormatFactFxP
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: |-
+  Assert that all fixed-point numbers in the provided array
+  have identical point positions and qubit numbers.
+syntax: 'function IdenticalFormatFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[]) : Unit'
+input:
+  content: '(fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[])'
+  types:
+  - name: fixedPoints
+    summary: |-
+      Array of quantum fixed-point numbers that will be checked for
+      compatibility (using assertions).
+    isArray: true
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

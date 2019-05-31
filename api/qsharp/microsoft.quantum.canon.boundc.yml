@@ -12,7 +12,7 @@ examples: |-
   The following are equivalent:
 
   ```qsharp
-  let bound = Bound([U, V]);
+  let bound = BoundC([U, V]);
   bound(x);
   ```
 

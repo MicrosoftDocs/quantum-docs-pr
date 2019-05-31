@@ -51,6 +51,7 @@ The Q# standard libraries provide several different functions for representing f
 - <xref:microsoft.quantum.diagnostics.nearequalityfact>
 - <xref:microsoft.quantum.diagnostics.equalityfacti>
 
+
 ### Testing Qubit States ###
 
 In practice, assertions rely on the fact that classical simulations of quantum mechanics need not obey the [no-cloning theorem](https://arxiv.org/abs/quant-ph/9607018), such that we can make unphysical measurements and assertions when using a simulator for our target machine.

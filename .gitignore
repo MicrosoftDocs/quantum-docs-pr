@@ -10,3 +10,4 @@ tex2pdf.*/
 .openpublishing.buildcore.ps1
 
 *.orig
+.vs/

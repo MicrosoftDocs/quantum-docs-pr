@@ -22,11 +22,15 @@ If we assume that the spin-orbitals are real-valued (as they are for Gaussian or
 \begin{equation}
 h_{pqrs} = h_{qpsr} = h_{srqp} = h_{rspq}=h_{rqps}=h_{psrq}=h_{spqr}=h_{qrsp}.\tag{★}\label{eq:hpqrsreal}
 \end{equation}
-Given such assumptions hold, we can use the above symmetries to reduce the data needed to store the matrix elements of the Hamiltonian by a factor of $8$; although doing so makes importing data in a consistent way slightly more challenging.  Fortunately the Hamiltonian simulation library has subroutines that can be used to import integral files from either [LIQUI$|\rangle$](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) or directly from [NWChem](http://www.nwchem-sw.org/index.php/Main_Page).
+Given such assumptions hold, we can use the above symmetries to reduce the data needed to store the matrix elements of the Hamiltonian by a factor of $8$; although doing so makes importing data in a consistent way slightly more challenging.
+Fortunately the Hamiltonian simulation library has subroutines that can be used to import integral files from either [LIQUI$|\rangle$](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) or directly from [NWChem](http://www.nwchem-sw.org/index.php/Main_Page).
 
 Molecular orbital integrals (i.e. the $h\_{pq}$ and $h\_{pqrs}$ terms) such as these are represented using the `OrbitalIntegral` type, which provides a number of helpful functions to express this symmetry.
 ```csharp
-    // We create a `OrbitalIntegral` object to store a one-electron molecular 
+    // Load the namespace containing orbital integral objects.
+    using Microsoft.Quantum.Chemistry.OrbitalIntegrals;
+
+    // Create a `OrbitalIntegral` instance to store a one-electron molecular 
     // orbital integral data.
     var oneElectronOrbitalIndices = new[] { 0, 1 };
     var oneElectronCoefficient = 1.0;
@@ -34,10 +38,10 @@ Molecular orbital integrals (i.e. the $h\_{pq}$ and $h\_{pqrs}$ terms) such as t
 
     // This enumerates all one-electron integrals with the same coefficient --
     // an array of equivalent `OrbitalIntegral` instances is generated. In this
-    //  case, there are two elements.
+    // case, there are two elements.
     var oneElectronIntegrals = oneElectronIntegral.EnumerateOrbitalSymmetries();
 
-    // We create a `OrbitalIntegral` object to store a two-electron molecular orbital integral data.
+    // Create a `OrbitalIntegral` instance to store a two-electron molecular orbital integral data.
     var twoElectronOrbitalIndices = new[] { 0, 1, 2, 3 };
     var twoElectronCoefficient = 0.123;
     var twoElectronIntegral = new OrbitalIntegral(twoElectronOrbitalIndices, twoElectronCoefficient);
@@ -48,10 +52,10 @@ Molecular orbital integrals (i.e. the $h\_{pq}$ and $h\_{pqrs}$ terms) such as t
     var twoElectronIntegrals = twoElectronIntegral.EnumerateOrbitalSymmetries();
 ```
 
-In addition to enumerating over all orbital integrals that are numerically identical, we may generate a list of all spin-orbital indices contained in the Hamiltonian represented by an `OrbitalIntegral` as follows.
+In addition to enumerating over all orbital integrals that are numerically identical, a list of all spin-orbital indices contained in the Hamiltonian represented by an `OrbitalIntegral` may be generated as follows.
 ```csharp
-    // We create a `OrbitalIntegral` object to store a two-electron molecular
-    //  orbital integral data.
+    // Create a `OrbitalIntegral` instance to store a two-electron molecular
+    // orbital integral data.
     var twoElectronIntegral = new OrbitalIntegral(new[] { 0, 1, 2, 3 }, 0.123);
 
     // This enumerates all spin-orbital indices of the `FermionTerm`s in the 
@@ -61,18 +65,33 @@ In addition to enumerating over all orbital integrals that are numerically ident
 ```
 ## Constructing Fermionic Hamiltonians from Molecular Integrals
 
-Rather than constructing a Fermionic Hamiltonian by adding `FermionTerm`s, we may directly add all terms corresponding to each orbital integral automatically. For example, the following code automatically enumerates over all permutational symmetries and orders the terms in canonical order: 
+Rather than constructing a Fermionic Hamiltonian by adding `FermionTerm`s, all terms corresponding to each orbital integral may be added automatically.
+For example, the following code automatically enumerates over all permutational symmetries and orders the terms in canonical order: 
 ```csharp
-    // We create a `FermionHamiltonian` object to store the `FermionTerm`
-    // instances.
-    var hamiltonian = new FermionHamiltonian();
+    // Load the namespace containing fermion objects. This
+    // example also uses LINQ queries.
+    using Microsoft.Quantum.Chemistry.Fermion;
+    using System.Linq;
 
-    // We create a `OrbitalIntegral` object to store a two-electron molecular 
+    // Create a `OrbitalIntegral` instance to store a two-electron molecular 
     // orbital integral data.
     var orbitalIntegral = new OrbitalIntegral(new[] { 0, 1, 2, 3 }, 0.123);
 
-    // We now add all `FermionTerm`s corresponding to the orbital integral. 
-    // This automatically enumerates over all symmetries, and orders 
-    // the `FermionTerm` instances in canonical order.
-    hamiltonian.AddFermionTerm(orbitalIntegral);
+    // Create an `OrbitalIntegralHamiltonian` instance to store the orbital integral
+    // terms
+    var orbitalIntegralHamiltonian = new OrbitalIntegralHamiltonian();
+    orbitalIntegralHamiltonian.Add(orbitalIntegral);
+
+    // Convert the orbital integral representation to a fermion
+    // representation. This also requires choosing a convention for 
+    // mapping spin orbital indices to integer indices.
+    var fermionHamiltonian = orbitalIntegralHamiltonian.ToFermionHamiltonian(IndexConvention.UpDown);
+
+    // Alternatively, one can add orbital integrals directly to a fermion Hamiltonian
+    // as follows. This automatically enumerates over all symmetries, and then
+    // orders the `HermitianFermionTerm` instances in canonical order. We will need to
+    // choose an indexing convention as well.
+    fermionHamiltonian.AddRange(orbitalIntegral
+        .ToHermitianFermionTerms(0, IndexConvention.UpDown)
+        .Select(o => (o.Item1, o.Item2.ToDoubleCoeff())));
 ```

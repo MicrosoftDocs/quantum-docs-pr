@@ -1,12 +1,12 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstatesinglesiteoccupation
-name: PrepareTrialStateSingleSiteOccupation
+uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
+name: PrepareSingleConfigurationalStateSingleSiteOccupation
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
 summary: |-
   Simple state preparation of trial state by occupying
   spin-orbitals
-syntax: 'operation PrepareTrialStateSingleSiteOccupation (qubitIndices : Int[], qubits : Qubit[]) : Unit'
+syntax: 'operation PrepareSingleConfigurationalStateSingleSiteOccupation (qubitIndices : Int[], qubits : Qubit[]) : Unit'
 input:
   content: '(qubitIndices : Int[], qubits : Qubit[])'
   types:

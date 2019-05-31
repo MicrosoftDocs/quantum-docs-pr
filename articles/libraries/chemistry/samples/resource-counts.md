@@ -15,15 +15,15 @@ The cost of simulating $n$ qubits on a classical computers scales exponentially 
 Let us assume that we already have a `FermionHamiltonian` instance, say, loaded from the Broombridge schema as discussed in the [loading-from-file](xref:microsoft.quantum.chemistry.examples.loadhamiltonian) example. 
 
 ```csharp
-// Filename of Hamiltonian to be loaded.
-var filename = "...";
+    // Filename of Hamiltonian to be loaded.
+    var filename = "...";
 
-// Create `FermionHamiltonian` instance from file.
-var hamiltonian = FermionHamiltonian.LoadFromYAML(filename).Single();      
+    // This deserializes Broombridge.
+    var problem = Broombridge.Deserializers.DeserializeBroombridge(filename).ProblemDescriptions.First();
 
-// This is a data structure representing the Jordan-Wigner encoding 
-// of the Hamiltonian that we may pass to a Q# algorithm.
-var qSharpData = jordanWignerEncoding.QSharpData();
+    // This is a data structure representing the Jordan-Wigner encoding 
+    // of the Hamiltonian that we may pass to a Q# algorithm.
+    var qSharpData = problem.ToQSharpFormat();
 ```
 
 The syntax for obtaining resource estimates is almost identical to running the algorithm on the full-state simulator. We simply choose a different target machine. For the purposes of resource estimates, it suffices to evaluate the cost of a single Trotter step, or a quantum walk created by the Qubitization technique. The boilerplate for invoking these algorithms are as follows.

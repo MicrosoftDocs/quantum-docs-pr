@@ -675,6 +675,58 @@
     uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   - name: Sum
     uid: microsoft.quantum.arithmetic.sum
+  - name: AddConstantFxP
+    uid: microsoft.quantum.arithmetic.addconstantfxp
+  - name: AddFxP
+    uid: microsoft.quantum.arithmetic.addfxp
+  - name: AddI
+    uid: microsoft.quantum.arithmetic.addi
+  - name: AssertAllZeroFxP
+    uid: microsoft.quantum.arithmetic.assertallzerofxp
+  - name: CompareGreaterThanFxP
+    uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
+  - name: CompareGTI
+    uid: microsoft.quantum.arithmetic.comparegti
+  - name: CompareGTSI
+    uid: microsoft.quantum.arithmetic.comparegtsi
+  - name: ComputeReciprocalFxP
+    uid: microsoft.quantum.arithmetic.computereciprocalfxp
+  - name: ComputeReciprocalI
+    uid: microsoft.quantum.arithmetic.computereciprocali
+  - name: DivideI
+    uid: microsoft.quantum.arithmetic.dividei
+  - name: EvaluateEvenPolynomialFxP
+    uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
+  - name: EvaluateOddPolynomialFxP
+    uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
+  - name: EvaluatePolynomialFxP
+    uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
+  - name: FixedPoint
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: IdenticalFormatFactFxP
+    uid: microsoft.quantum.arithmetic.identicalformatfactfxp
+  - name: IdenticalPointPosFactFxP
+    uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
+  - name: Invert2sSI
+    uid: microsoft.quantum.arithmetic.invert2ssi
+  - name: MeasureFxP
+    uid: microsoft.quantum.arithmetic.measurefxp
+  - name: MultiplyFxP
+    uid: microsoft.quantum.arithmetic.multiplyfxp
+  - name: MultiplyI
+    uid: microsoft.quantum.arithmetic.multiplyi
+  - name: MultiplySI
+    uid: microsoft.quantum.arithmetic.multiplysi
+  - name: PrepareFxP
+    uid: microsoft.quantum.arithmetic.preparefxp
+  - name: SignedLittleEndian
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+  - name: SquareFxP
+    uid: microsoft.quantum.arithmetic.squarefxp
+  - name: SquareI
+    uid: microsoft.quantum.arithmetic.squarei
+  - name: SquareSI
+    uid: microsoft.quantum.arithmetic.squaresi
 - uid: microsoft.quantum.arrays
   name: Microsoft.Quantum.Arrays
   items:
@@ -1142,6 +1194,8 @@
     uid: microsoft.quantum.characterization.discretephaseestimationiteration
   - name: EstimateFrequency
     uid: microsoft.quantum.characterization.estimatefrequency
+  - name: EstimateFrequencyA
+    uid: microsoft.quantum.characterization.estimatefrequencya
   - name: MeasureAllZ
     uid: microsoft.quantum.characterization.measureallz
   - name: MeasureIdentity
@@ -1399,6 +1453,10 @@
   items:
   - name: JordanWignerBlockEncodingGeneratorSystem
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggeneratorsystem
+  - name: JordanWignerClusterOperatorEvolutionSet
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorevolutionset
+  - name: JordanWignerClusterOperatorGeneratorSystem
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
   - name: JordanWignerEncodingData
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   - name: JordanWignerFermionEvolutionSet
@@ -1421,18 +1479,31 @@
     uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsystem
   - name: OptimizedQubitizationOracle
     uid: microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle
+  - name: PrepareSingleConfigurationalStateSingleSiteOccupation
+    uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
+  - name: PrepareSparseMultiConfigurationalState
+    uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
   - name: PrepareTrialState
     uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstate
-  - name: PrepareTrialStateCoupledCluster
-    uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstatecoupledcluster
-  - name: PrepareTrialStateSingleSiteOccupation
-    uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstatesinglesiteoccupation
+  - name: PrepareUnitaryCoupledClusterState
+    uid: microsoft.quantum.chemistry.jordanwigner.prepareunitarycoupledclusterstate
   - name: QubitizationOracle
     uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
   - name: SelectZ
     uid: microsoft.quantum.chemistry.jordanwigner.selectz
   - name: TrotterStepOracle
     uid: microsoft.quantum.chemistry.jordanwigner.trottersteporacle
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe
+  name: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+  items:
+  - name: EstimateEnergy
+    uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
+  - name: EstimateTermExpectation
+    uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+  - name: ExpandedCoefficients
+    uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
+  - name: MeasurementOperators
+    uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
 - uid: microsoft.quantum.research.chemistry
   name: Microsoft.Quantum.Research.Chemistry
   items:

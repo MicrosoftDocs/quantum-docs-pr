@@ -7,6 +7,15 @@ functions:
     Converts a Hamiltonian described by `JWOptimizedHTerms`
     to a `GeneratorSystem` expressed in terms of the Pauli
     `GeneratorIndex`.
+- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorevolutionset
+  summary: |-
+    Represents a dynamical generator as a set of simulatable gates and an
+    expansion in the JordanWigner basis.
+- uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
+  summary: |-
+    Converts a Hamiltonian described by `JWOptimizedHTerms`
+    to a `GeneratorSystem` expressed in terms of the
+    `GeneratorIndex` convention defined in this file.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionevolutionset
   summary: |-
     Represents a dynamical generator as a set of simulatable gates and an
@@ -43,16 +52,18 @@ operations:
     U\ket{z}\ket{p}\ket{\psi} = \ket{z}\ket{p}(X^{z+1}\_pY^{z}\_p)Z\_{p-1}...Z_0\ket{\psi}
     \end{align}
     $$
-- uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstate
-  summary: ''
-- uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstatecoupledcluster
-  summary: |-
-    Coupled-cluster state preparation of trial state by adding excitations
-    to initial trial state.
-- uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstatesinglesiteoccupation
+- uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
   summary: |-
     Simple state preparation of trial state by occupying
     spin-orbitals
+- uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
+  summary: |-
+    Sparse multi-configurational state preparation of trial state by adding excitations
+    to initial trial state.
+- uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstate
+  summary: ''
+- uid: microsoft.quantum.chemistry.jordanwigner.prepareunitarycoupledclusterstate
+  summary: Unitary coupled-cluster state preparation of trial state
 - uid: microsoft.quantum.chemistry.jordanwigner.selectz
   summary: |-
     A unitary $U$ that applies the Pauli $Z$ gate on a qubits $p$ conditioned

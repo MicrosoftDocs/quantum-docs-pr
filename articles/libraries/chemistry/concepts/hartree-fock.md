@@ -8,8 +8,7 @@ ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.hartreefock
 ---
 
-
-## Hartree–Fock Theory
+# Hartree–Fock Theory
 
 Perhaps the most important quantity in quantum chemistry simulation is the ground state, which is the minimum energy eigenvector of the Hamiltonian matrix.
 This is because for most molecules at room temperature quantities such as reaction rates are dominated by free energy differences between quantum states that describe the beginning and end of a step in a reaction pathway and at room temperature such intermediate state are usually ground states.
@@ -30,7 +29,28 @@ with an anti-Hermitian (i.e. $u= -u^\dagger$) matrix $u = \sum_{pq} u_{pq} a^\da
 
 
 The matrix $u$ is then optimized to minimize the expected energy $\bra{0} \prod_{j=0}^{N-1}  \widetilde{a}\_j  H \prod\_{k=0}^{N-1}  \widetilde{a}^\dagger_k\ket{0}$. 
-While such optimization problems may be generically hard, in practice the Hartree–Fock algorithm tends to rapidly converge to a near-optimal solution to the optimization problem, especially for closed-shell molecules in the equilibrium geometries. 
+While such optimization problems may be generically hard, in practice the Hartree–Fock algorithm tends to rapidly converge to a near-optimal solution to the optimization problem, especially for closed-shell molecules in the equilibrium geometries. We may specify these states as an instance of the `FermionWavefunction` object. For instance, the state $a^\dagger_{1}a^\dagger_{2}a^\dagger_{6}|0\rangle$ is instantiated in the chemistry library as follows.
+```csharp
+// Create a list of integer indices of the creation operators
+var indices = new[] { 1, 2, 6 };
+
+// Convert the list of indices to a `FermionWavefunction` object.
+// In this case, the indices are integers, so we use the `int`
+// type specialization.
+var wavefunction = new FermionWavefunction<int>(indices);
+```
+It is also possible to index wave functions with `SpinOrbital` indices, and then convert these indices to integers as follows.
+```csharp
+// Create a list of spin orbital indices of the creation operators
+var indices = new[] { (0, Spin.d), (1,Spin.u), (3, Spin.u) };
+
+// Convert the list of indices to a `FermionWavefunction` object.
+var wavefunctionSpinOrbital = new FermionWavefunction<SpinOrbital>(indices.ToSpinOrbitals());
+
+// Convert a wavefunction indexed by spin orbitals to
+// one indexed by integers
+var wavefunctionInt = wavefunctionSpinOrbital.ToIndexing(IndexConvention.UpDown);
+```
 
 The most striking feature about Hartree–Fock theory is that it yields a quantum state that has no entanglement between the electrons.
 This means that, while it is often quite successful, it may not always be well suited to approximate ground states for
@@ -38,5 +58,12 @@ strongly correlated systems that are targets for quantum computation.
 However, the simplicity and accuracy of Hartree-Fock theory for many small systems makes 
 it the workhorse of state preparation in quantum computing and a spring board on top of which most post-Hartree–Fock methods are based.
 
-For this reason, the [Broombridge schema](xref:microsoft.quantum.libraries.chemistry.schema.spec) used to input quantum chemistry Hamiltonians into the chemistry library incorporates a field that gives Hartree–Fock data if available.
-This is useful not only as a diagnostic, but also because it allows the correlation energy to be reported, which is the difference between the Hartree–Fock energy and the true ground state energy as yielded by full-configuration interaction simulations or quantum computation.
+The Hartree-Fock state may also be reconstructed from a `FermionHamiltonian`  as follows.
+```csharp
+// We initialize a fermion Hamiltonian.
+var fermionHamiltonian = new FermionHamiltonian();
+
+// Create a Hartree-Fock state from the Hamiltonian 
+// with, say, `4` occupied spin orbitals.
+var wavefunction = fermionHamiltonian.CreateHartreeFockState(nElectrons: 4);
+```

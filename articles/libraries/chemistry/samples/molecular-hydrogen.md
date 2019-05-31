@@ -14,38 +14,45 @@ Estimating the values of energy levels is one of the principal applications of q
 Our first step is to construct the Hamiltonian representing molecular Hydrogen. Though this can be constructed through the NWChem tool, we manually add Hamiltonian terms for brevity in this sample.
 
 ```csharp
-// These orbital integrals represent terms in molecular Hydrogen
-var orbitalIntegrals = new OrbitalIntegral[]
-{
-    new OrbitalIntegral(new[] { 0,0 }, -1.252477495),
-    new OrbitalIntegral(new[] { 1,1 }, -0.475934275),
-    new OrbitalIntegral(new[] { 0,0,0,0 }, 0.674493166),
-    new OrbitalIntegral(new[] { 0,1,0,1 }, 0.181287518),
-    new OrbitalIntegral(new[] { 0,1,1,0 }, 0.663472101),
-    new OrbitalIntegral(new[] { 1,1,1,1 }, 0.697398010)
-};
+    // These orbital integrals are represented using the OrbitalIntegral
+    // data structure.
+    var energyOffset = 0.713776188; // This is the coulomb repulsion
+    var nElectrons = 2; // Molecular hydrogen has two electrons
+    var orbitalIntegrals = new OrbitalIntegral[]
+    {
+        new OrbitalIntegral(new[] { 0,0 }, -1.252477495),
+        new OrbitalIntegral(new[] { 1,1 }, -0.475934275),
+        new OrbitalIntegral(new[] { 0,0,0,0 }, 0.674493166),
+        new OrbitalIntegral(new[] { 0,1,0,1 }, 0.181287518),
+        new OrbitalIntegral(new[] { 0,1,1,0 }, 0.663472101),
+        new OrbitalIntegral(new[] { 1,1,1,1 }, 0.697398010),
+        // This line adds the identity term.
+        new OrbitalIntegral(new int[] { }, energyOffset)
+    };
 
-// We initialize a Fermion Hamiltonian data structure and add terms to it.
-// Note that all these steps are performed automatically when loading from
-// the `Broombridge` schema.
-var hamiltonian = new FermionHamiltonian();
-hamiltonian.NOrbitals = 2;                    // There are two orbitals
-hamiltonian.NElectrons = 2;                   // Molecular hydrogen has two electrons
-hamiltonian.EnergyOffset = 0.71377618;        // This is the coulomb repulsion
-hamiltonian.AddFermionTerm(orbitalIntegrals); // Add all orbital integrals in the array
+    // We initialize a fermion Hamiltonian data structure and add terms to it.
+    var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-Simulating the Hamiltonian requires us to convert the Fermion operators to qubit operators. This conversion is performed through the Jordan-Wigner encoding as follows.
+Simulating the Hamiltonian requires us to convert the fermion operators to qubit operators. This conversion is performed through the Jordan-Wigner encoding as follows.
 
 ```csharp
-// The Jordan-Wigner encoding converts the Fermion Hamiltonian, 
-// expressed in terms of Fermionic operators, to a qubit Hamiltonian,
-// expressed in terms of Pauli matrices.
-var jordanWignerEncoding = JordanWignerEncoding.Create(hamiltonian);
+    // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
+    // expressed in terms of fermionic operators, to a qubit Hamiltonian,
+    // expressed in terms of Pauli matrices. This is an essential step
+    // for simulating our constructed Hamiltonians on a qubit quantum
+    // computer.
+    var jordanWignerEncoding = fermionHamiltonian.ToPauliHamiltonian(Pauli.QubitEncoding.JordanWigner);
 
-// This is a data structure representing the Jordan-Wigner encoding 
-// of the Hamiltonian that we may pass to a Q# algorithm.
-var qSharpData = jordanWignerEncoding.QSharpData();
+    // We also need to create an input quantum state to this Hamiltonian.
+    // Let us use the Hartree-Fock state.
+    var fermionWavefunction = fermionHamiltonian.CreateHartreeFockState(nElectrons);
+
+    // This Jordan-Wigner data structure also contains a representation 
+    // of the Hamiltonian and wavefunction made for consumption by the Q# operations.
+    var qSharpHamiltonianData = jordanWignerEncoding.ToQSharpFormat();
+    var qSharpWavefunctionData = fermionWavefunction.ToQSharpFormat();
+    var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
 We now pass the `qSharpData` representing the Hamiltonian to the `TrotterStepOracle` function in [Simulating Hamiltonian dynamics](xref:microsoft.quantum.libraries.standard.algorithms). `TrotterStepOracle` returns a quantum operation that approximates the real time-evolution of the Hamiltonian.

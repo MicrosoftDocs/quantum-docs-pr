@@ -22,7 +22,7 @@ uid: microsoft.quantum.relnotes
 > * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
 > * References between projects migrated to 0.6 and higher and projects using older package versions are **not** supported.
 
-# Version 0.7 (*PackageReference 0.7.xxxx.yyy*)
+# Version 0.7 (*PackageReference 0.7.1905.3109*)
 
 *Release date: May 31, 2019*
 

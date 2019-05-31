@@ -472,7 +472,7 @@ using (anc = Qubit()) {
 
 ### While Loop
 
-Repeat-until-success patterns have a very quantum-specific connotation. They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#. 
+Repeat-until-success patterns have a very quantum-specific connotation. They are widely used in particular classes of quantum algorithms -- hence the dedicated language construct in Q#. 
 However, loops that break based on a condition and whose execution length is thus unknown at compile time need to be handled with particular care in a quantum runtime. 
 Their use within functions on the other hand is unproblematic, since these only contain code that will be executed on conventional (non-quantum) hardware. 
 

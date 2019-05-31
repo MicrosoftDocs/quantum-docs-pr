@@ -13,25 +13,33 @@ uid: microsoft.quantum.language.type-model
 
 This section lays out the Q# type model and describes the syntax for
 specifying and working with types.
+We note that Q# is a *strongly-typed* language, such that careful use of these types can help the compiler to provide strong guarantees about Q# programs at compile time.
+
+In order to provide the strongest guarantees possible, conversions between types in Q# must be explicit 
+using calls to functions which express that conversion. 
+A variety of such functions are provided as a part of the <xref:microsoft.quantum.convert> namespace.
+Upcasts to compatible types on the other hand happen implicitly. 
+
+Q# provides both primitive types, which can be used directly, and a variety of ways to produce new types from other types.
+We describe each in the rest of this section.
 
 ## Primitive Types
 
-Q# provides several primitive types, out of which all other types
-are constructed:
+The Q# language provides several *primitive types*, from which other types
+can be constructed:
 
-- The `Int` type represents a 64-bit signed (two's complement) integer.
-- The `BigInt` type represents a signed integer or arbitrary size.
+- The `Int` type represents a 64-bit signed integer, e.g.: `2`, `107`, `-5`.
+- The `BigInt` type represents a signed integer of arbitrary size, e.g. `2L`, `107L`, `-5L`.
    This type is based on the .NET
-   [`BigInteger`](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger)
+   <xref:System.Numerics.BigInteger>
    type.
-- The `Double` type represents a double-precision floating-point number.
-- The `Bool` type represents a Boolean value, either `true` or `false`.
+- The `Double` type represents a double-precision floating-point number, e.g.: `0.0`, `-1.3`, `4e-7`.
+- The `Bool` type represents a Boolean value which can either be `true` or `false`.
 - The `Qubit` type represents a quantum bit or qubit.
    `Qubit`s are opaque to the user; the only operation possible with them,
    other than passing them to another operation, is to test for identity
    (equality).
-   Ultimately, actions on `Qubit`s are implemented by calling operations
-   in the Q# standard library.
+   Ultimately, actions on `Qubit`s are implemented by calling intrinsic instructions on a quantum processor (or a simulation thereof).
 - The `Pauli` type represents one of the four single-qubit Pauli operators.
    This type is used to denote the base operation for rotations and
    to specify the observable being measured.
@@ -42,10 +50,11 @@ are constructed:
    `One` and `Zero`, which are constants of type `Result`.
    `Zero` indicates that the +1 eigenvalue was measured;
    `One` indicates the -1 eigenvalue.
-- The `Range` type represents a sequence of integers.
+- The `Range` type represents a sequence of integers, denoted by `start..step..stop`, where denoting the step is options. 
+   That is `start .. stop` corresponds to `start..1..stop`, and e.g. `1..2..7` represents the sequence $\{1, 3, 5, 7\}$.
 - The `String` type is a sequence of Unicode characters that
   is opaque to the user once created.
-  This type is used to report messages to a classical host.
+  This type is used to report messages to a classical host in the case of an error or diagnostic event.
 - The `Unit` type is the type that allows only one value `()`. 
   This type is used to indicate that Q# function or operation returns no information. 
 
@@ -58,30 +67,59 @@ Given any valid Q# type `'T`, there is a type that represents an
 array of values of type `'T`.
 This array type is represented as `'T[]`;
 for example, `Qubit[]` or `Int[][]`.
+For instance, a collection of integers is denoted `Int[]`, while an array of arrays of `(Bool, Pauli)` values is denoted `(Bool, Pauli)[][]`.
 
 In the second example, note that this represents a potentially
 jagged array of arrays, and not a rectangular two-dimensional array.
 Q# does not provide support for rectangular multi-dimensional arrays.
 
+An array value can be written in Q# source code by using square brackets around the elements of an array, as in `[PauliI, PauliX, PauliY, PauliZ]`.
+The type of an array literal is determined by the common base type of all items in the array. 
+
+> [!WARNING]
+> The elements of an array cannot be changed after the array has been created.
+> Update-and-reassign statements and/or copy-and-update expressions can be used to construct a modified array.
+
+Alternatively, an array can be created from its size using the `new` keyword:
+
+```qsharp
+let zeros = new Int[13];
+// new also allows for creating empty arrays:
+let emptyRegister = new Qubit[0];
+```
+
+In either case, once an array has been constructed, the core function `Length` can be used to obtain the number of elements as an `Int`.
+Arrays can be subscripted using square brackets, with subscripts either having type `Int` or type `Range`, to obtain either single elements or new arrays containing a subset of the elements of an array.
+The subscripts of arrays are zero-based:
+
+```qsharp
+let arr = [10, 11, 36, 49];
+let ten = arr[0]; // 10
+let odds = arr[1..2..4]; // [11, 49]
+```
+
 ## Tuple Types
 
-Given any valid Q# types `'T1`, `'T2`, `'T3`, etc., there is a type that
-represents a tuple of values of types `'T1`, `'T2`, `'T3`, etc.,
-respectively.
-This tuple type is represented as `('T1, 'T2, 'T3, …)`.
-Any number of types may be tupled together.
+Given zero or more different types `T0`, `T1`, ..., `Tn`, we can denote a new  *tuple type* as `(T0, T1, ..., Tn)`.
+The types used to construct a new tuple type can themselves be tuples, as in `(Int, (Qubit, Qubit))`.
+Such nesting is always finite, however, as tuple types cannot under any circumstances contain themselves.
+
+Values of the new tuple type are tuples formed by sequences of values from each type in the tuple.
+For instance, `(3, false)` is a tuple whose type is the tuple type `(Int, Bool)`.
+It is possible to create arrays of tuples, tuples of arrays,
+tuples of sub-tuples, etc.
 
 As of Q# 0.3, `Unit` is the name of the *type*
 of the empty tuple; `()` is used for the empty tuple *value*.
-
-It is possible to create arrays of tuples, tuples of arrays,
-tuples of sub-tuples, etc.
 
 Tuple instances are immutable.
 Q# does not provide a mechanism to change the contents of a tuple
 once created.
 
-## Singleton Tuple Equivalence
+Tuples are a powerful concept used throughout Q# to collect values together into a single value, making it easier to pass them around.
+In particular, using tuple notation, we can express that every operation and callable takes exactly one input and returns exactly one output.
+
+### Singleton Tuple Equivalence
 
 It is possible to create a singleton (single-element) tuple, `('T1)`,
 such as `(5)` or `([1,2,3])`.
@@ -94,16 +132,52 @@ This equivalence applies for all purposes,
 including assignment and expressions.
 It is just as valid to write `(5)+3` as to write `5+3`,
 and both expressions will evaluate to `8`.
+In particular, this means that an operation or function whose input tuple or output tuple type has one field can be thought of as taking a single argument or returning a single value.
 
 We refer to this property as _singleton tuple equivalence_.
 
 ## User-Defined Types
 
-A Q# file may define a new named type containing a single value of any legal type, 
-including an existing user-defined type.
+A Q# file may define a new named type containing a single value of any legal type.
+For any tuple type `T`, we can declare a new user-defined type that is a subtype of `T` with the `newtype` statement.
+In the @"microsoft.quantum.canon" namespace, for instance, complex numbers are defined as a user-defined type:
 
-As of Q# 0.3, the "unwrap" operator, `!`, allows to extract the value contained in a user defined type.
+```qsharp
+newtype Complex = (Double, Double);
+```
+
+This statement creates a new type with two anonymous items of type `Double`.   
+:new: Aside from anonymous items, user defined types also support named items as of Q# version 0.7 or higher. For example, we could have named the to items `Re` for the double representing the real part of a complex number and `Im` for the imaginary part: 
+
+```qsharp
+newtype Complex = (Re : Double, Im : Double);
+```
+Naming one item in a user defined type does not imply that all items need to be named - any combination of named and unnamed items is supported. Furthermore, also inner items may be named.
+The type `Nested` as defined below for example has an underlying type `(Double, (Int, String))`, of which only the item of type `Int` is named and all other items are anonymous. 
+
+```qsharp
+newtype Nested = (Double, (ItemName : Int, String)); 
+```
+Named items have the advantage that they can be accessed directly via the access operator `::`. 
+
+```qsharp
+function Addition (c1 : Complex, c2 : Complex) : Complex {
+    return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
+}
+```
+
+In order to access anonymous items on the other hand, 
+the wrapped value first needs to be extracted using the postfix operator `!`.
+The "unwrap" operator, `!`, allows to extract the value contained in a user defined type.
 The type of such an "unwrap" expression is the underlying type of the user defined type. 
+
+```qsharp
+function PrintMsg (value : Nested) : Unit {
+    let (d, (_, str)) = value!;
+    Message ($"{str}, value: {d}");
+}
+```
+
 The unwrap operator unwraps exactly one layer of wrapping.
 Multiple unwrap operators may be used to access a multiply-wrapped value.
 
@@ -123,6 +197,33 @@ newtype DoublyWrappedInt = WrappedInt;
 ...
 ```
 
+Take a look at the section on [unwrap expressions](xref:microsoft.quantum.language.expressions#unwrap-expressions) and [operators precedence](xref:microsoft.quantum.language.expressions#operator-precedence) for more details.
+
+Values of a user defined type can be created by calling the corresponding type constructor:
+
+```
+let realUnit = Complex(1.0, 0.0);
+let imaginaryUnit = Complex(0.0, 1.0);
+```
+
+Alternatively, new values can be created from existing ones using [copy-and-update expressions](xref:microsoft.quantum.language.expressions#copy-and-update-expressions). 
+Like for arrays, such expressions copy all item values of the original expression, 
+with the exception of the specified named items. For these the values are set to the ones defined on the right hand side of the expression. 
+Any other language constructs, like for example [update-and-reassign statements](xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols), that are available for array items exist for named-items in user defined types as well. 
+
+```qsharp
+newtype ComplexArray = (Count : Int, Data : Complex[]);
+
+function AsComplexArray (data : Double[]) : ComplexArray {
+
+    mutable res = ComplexArray(0, new Complex[0]);
+    for (item in data) {
+        set res w/= Data <- res::Data + [Complex(item, 0.)]; // update-and-reassign statement
+    }
+    return res w/ Count <- Length(res::Data); // returning a copy-and-update expression
+}
+```
+
 User-defined types may be used anywhere any other type may be used.
 In particular, it is possible to define an array of a user-defined type
 and to include a user-defined type as an element of a tuple type.
@@ -139,6 +240,17 @@ newtype TypeB = (Double, TypeC);
 newtype TypeC = (TypeA, Range);
 ```
 
+In addition to providing short aliases for potentially complicated tuple types, one significant advantage of defining such types is that they can document the intent of a particular value.
+Returning to the example of `Complex`, one could have also defined 2D polar coordinates as a user-defined type:
+
+```qsharp
+newtype Polar = (Radius : Double, Phase : Double);
+```
+
+Even though both `Complex` and `Polar` are both have an underlying type `(Double, Double)`, the two types are wholly incompatible in Q#, minimizing the risk of accidentally calling a complex math function with polar coordinates and vice versa.
+In this way, user-defined types have a similar role as Records in F# for example. 
+
+
 ## Operation and Function Types
 
 A Q# _operation_ is a quantum subroutine.
@@ -147,8 +259,9 @@ That is, it is a callable routine that contains quantum operations.
 A Q# _function_ is a classical subroutine used within
 a quantum algorithm.
 It may contain classical code but no quantum operations.
-Functions may not allocate or borrow qubits, nor may they call operations.
+Specifically, functions may not allocate or borrow qubits, nor may they call operations.
 It is possible, however, to pass them operations or qubits for processing.
+Functions are thus entirely deterministic in the sense that calling them with the same arguments will always produce the same result. 
 
 Together, operations and functions are called _callables_.
 
@@ -175,11 +288,18 @@ Such characteristics include information about what functors the operation suppo
 Functors are meta-operations that generate a specialization of a base operation;
 see [Functors](#functors), below.
 
-Operation types are specified by the their input type, output type, and their characteristics. 
+Operation types are specified by the their input type, output type, and their characteristics.    
+In order to require support for the `Controlled` and/or `Adjoint` functor in an operation type, we need to add an annotation indicating the corresponding characteristics.
+An annotation `is Ctl` for example indicates that the operation is controllable. 
+If we want to require that an operation of that type supports both the `Adjoint` and `Controlled` functor we can express this as `(Qubit => Unit is Adj + Ctl)`. 
+The used operation characteristics `Adj` and `Ctl` strictly speaking are two pre-defined sets of labels, where each label indicates a particular operation characteristics like e.g. support for a particular functor.
+Hence, `+` is used to indicate the union of those two sets, and `*` is used to indicate the intersection - i.e. the labels that are common to both sets.  
+
 For example, the Pauli `X` operation has type
 `(Qubit => Unit is Adj + Ctl)`.
 An operation type that does not support any functors is specified
 by its input and output type alone, with no additional annotation.
+
 
 ### Type-Parameterized Functions and Operations
 

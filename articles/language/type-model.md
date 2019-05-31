@@ -29,7 +29,7 @@ The Q# language provides several *primitive types*, from which other types
 can be constructed:
 
 - The `Int` type represents a 64-bit signed integer, e.g.: `2`, `107`, `-5`.
-- The `BigInt` type represents a signed integer or arbitrary size, e.g. `2L`, `107L`, `-5L`.
+- The `BigInt` type represents a signed integer of arbitrary size, e.g. `2L`, `107L`, `-5L`.
    This type is based on the .NET
    <xref:System.Numerics.BigInteger>
    type.

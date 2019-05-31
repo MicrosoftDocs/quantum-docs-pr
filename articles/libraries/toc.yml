@@ -4,3 +4,6 @@
 - name: Quantum chemistry library
   topicHref: chemistry/index.md
   href: chemistry/toc.yml
+- name: Quantum numerics library
+  topicHref: numerics/index.md
+  href: numerics/toc.yml

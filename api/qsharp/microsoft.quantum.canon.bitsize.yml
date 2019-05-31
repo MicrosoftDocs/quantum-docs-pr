@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bitsize
+name: BitSize
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.math.bitsizei".
+syntax: 'function BitSize (a : Int) : Int'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+...

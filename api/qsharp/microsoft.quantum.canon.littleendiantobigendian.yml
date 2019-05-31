@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.littleendiantobigendian
+name: LittleEndianToBigEndian
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian".
+syntax: 'function LittleEndianToBigEndian (input : Microsoft.Quantum.Arithmetic.LittleEndian) : Microsoft.Quantum.Arithmetic.BigEndian'
+input:
+  content: '(input : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: input
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Microsoft.Quantum.Arithmetic.BigEndian
+  types:
+  - uid: microsoft.quantum.arithmetic.bigendian
+...

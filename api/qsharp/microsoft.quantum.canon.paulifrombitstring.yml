@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.paulifrombitstring
+name: PauliFromBitString
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.convert.boolarrayaspauli".
+syntax: 'function PauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[]) : Pauli[]'
+input:
+  content: '(pauli : Pauli, bitApply : Bool, bits : Bool[])'
+  types:
+  - name: pauli
+    isPrimitive: true
+    uid: Pauli
+  - name: bitApply
+    isPrimitive: true
+    uid: Bool
+  - name: bits
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Pauli[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Pauli
+...

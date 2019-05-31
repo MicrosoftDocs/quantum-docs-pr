@@ -21,6 +21,7 @@ Second, even if $n = m$, the function may not be invertible:
 if $f(x) = f(y)$ for some $x \ne y$, then $O\ket{x} = O\ket{y}$ but $O^\dagger O\ket{x} \ne O^\dagger O\ket{y}$.
 This means we won't be able to construct the adjoint operation $O^\dagger$, and oracles have to have an adjoint defined for them.
 
+## Defining an oracle by its effect on computational basis states
 We can deal with both of these problems by introducing a second register of $m$ qubits to hold our answer.
 Then we will define the effect of the oracle on all computational basis states: for all $x \in \\{0, 1\\}^n$ and $y \in \\{0, 1\\}^m$,
 
@@ -66,6 +67,7 @@ O \ket{\psi} & = O \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) \k
 \end{align}
 $$
 
+## Phase oracles
 Alternatively, we can encode $f$ into an oracle $O$ by applying a _phase_ based on the input to $O$.
 For instance, we might define $O$ such that
 $$

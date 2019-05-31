@@ -1,0 +1,62 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.convert
+name: Microsoft.Quantum.Extensions.Convert
+summary: |2-
+   These are some of the functions from System.Convert namespace of .NET CLR
+   that are relevant within Q# type system.
+
+   # Remarks
+   If there are several versions of the function for Bool, Int and Double types, the corresponding
+   functions have suffix B,I and D.
+functions:
+- uid: microsoft.quantum.extensions.convert.biginttobools
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.convert.bigintasboolarray".
+- uid: microsoft.quantum.extensions.convert.boolstobigint
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.convert.boolarrayasbigint".
+- uid: microsoft.quantum.extensions.convert.pauliarraytoint
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.convert.pauliarrayasint".
+- uid: microsoft.quantum.extensions.convert.tobigint
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.convert.intasbigint".
+- uid: microsoft.quantum.extensions.convert.todouble
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.convert.intasdouble".
+- uid: microsoft.quantum.extensions.convert.tostringb
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.convert.boolasstring".
+- uid: microsoft.quantum.extensions.convert.tostringd
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.convert.doubleasstring".
+- uid: microsoft.quantum.extensions.convert.tostringdformat
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.convert.doubleasstringwithformat".
+- uid: microsoft.quantum.extensions.convert.tostringi
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.convert.intasstring".
+- uid: microsoft.quantum.extensions.convert.tostringiformat
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"microsoft.quantum.convert.intasstringwithformat".
+...

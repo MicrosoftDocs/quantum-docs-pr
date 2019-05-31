@@ -32,14 +32,14 @@ This has the advantage that we only require a single additional qubit to perform
 Each of the methods proposed below uses a different strategy for designing experiments and different data processing methods to learn the phase.  They each have unique advantage ranging from having rigorous error bounds, to the abilities to incorporate prior information, tolerate errors or run on memory limitted classical computers.
 
 In discussing iterative phase estimation, we will consider a unitary $U$ given as a black-box operation.
-As described in the section on oracles in [data structures](xref:microsoft.quantum.libraries.data-structures), the Q# canon models such operations by the <xref:microsoft.quantum.canon.discreteoracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.
+As described in the section on oracles in [data structures](xref:microsoft.quantum.libraries.data-structures), the Q# canon models such operations by the <xref:microsoft.quantum.oracles.discreteoracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.
 Concretely, if `U : DiscreteOracle`, then `U(m)` implements $U^m$ for `m : Int`.
 
-With this definition in place, each step of iterative phase estimation proceeds by preparing an ancilla qubit in the $\ket{+}$ state along with the initial state $\ket{\phi}$ that we assume is an [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) of $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi}\ket{\phi}$.  
+With this definition in place, each step of iterative phase estimation proceeds by preparing an auxillary qubit in the $\ket{+}$ state along with the initial state $\ket{\phi}$ that we assume is an [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) of $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi}\ket{\phi}$.  
 A controlled application of `U(m)` is then used which prepares the state $\left(R\_1(m \phi) \ket{+}\right)\ket{\phi}$.
 As in the quantum case, the effect of a controlled application of the oracle `U(m)` is precisely the same as the effect of applying $R_1$ for the unknown phase on $\ket{+}$, such that we can describe the effects of $U$ in this simpler fashion.
 Optionally, the algorithm then rotates the control qubit by applying $R_1(-m\theta)$ to obtain a state $\ket{\psi}=\left(R\_1(m [\phi-\theta]) \ket{+}\right)\ket{\phi}$$.
-The ancilla qubit used as a control for `U(m)` is then measured in the $X$ basis to obtain a single classical `Result`.
+The auxillary qubit used as a control for `U(m)` is then measured in the $X$ basis to obtain a single classical `Result`.
 
 At this point, reconstructing the phase from the `Result` values obtained through iterative phase estimation is a classical statistical inference problem.
 Finding the value of $m$ that maximizes the information gained, given a fixed inference method, is simply a problem in statistics.
@@ -120,7 +120,7 @@ The prior distribution $\Pr(x)$ has support over $2^n$ hypothetical values of $x
 This means that if we need a highly accurate estimate of $x$ then Bayesian phase estimation may need prohibitive memory and processing time.
 While for some applications, such as quantum simulation, the limitted accuracy required does not preclude such methods other applications,
 such as Shor's algorithm, cannot use exact Bayesian inference within its phase estimation step.  For this reason, we also provide implementations
-for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) and also non-Bayesian approaches such as [robust phase estimation](xref:microsoft.quantum.canon.robustphaseestimation).
+for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) and also non-Bayesian approaches such as [robust phase estimation](xref:microsoft.quantum.characterization.robustphaseestimation).
 
 ### Robust Phase Estimation ###
 
@@ -144,9 +144,9 @@ Other relevant details include, say, the small space overhead of just $1$ ancill
 
 ### Continuous Oracles ###
 
-We can also generalize from the oracle model used above to allow for continuous-time oracles, modeled by the canon type <xref:microsoft.quantum.canon.continuousoracle>.
+We can also generalize from the oracle model used above to allow for continuous-time oracles, modeled by the canon type <xref:microsoft.quantum.oracles.continuousoracle>.
 Consider that instead of a single unitary operator $U$, we have a family of unitary operators $U(t)$ for $t \in \mathbb{R}$ such that $U(t) U(s)$ = $U(t + s)$.
-This is a weaker statement than in the discrete case, since we can construct a <xref:microsoft.quantum.canon.discreteoracle> by restricting $t = m\,\delta t$ for some fixed $\delta t$.
+This is a weaker statement than in the discrete case, since we can construct a <xref:microsoft.quantum.oracles.discreteoracle> by restricting $t = m\,\delta t$ for some fixed $\delta t$.
 By [Stone's theorem](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U(t) = \exp(i H t)$ for some operator $H$, where $\exp$ is the matrix exponential as described in [advanced matrices](xref:microsoft.quantum.concepts.matrix-advanced).
 An eigenstate $\ket{\phi}$ of $H$ such that $H \ket{\phi} = \phi \ket{\phi}$ is then also an eigenstate of $U(t)$ for all $t$,
 \begin{equation}
@@ -178,48 +178,43 @@ The ability to step backwards also allows the algorithm to learn even if the ini
 
 Each phase estimation operation provided with the Q# canon takes a different set of inputs parameterizing the quality that we demand out of the final estimate $\hat{\phi}$.
 These various inputs, however, all share several inputs in common, such that partial application over the quality parameters results in a common signature.
-For example, the <xref:microsoft.quantum.canon.robustphaseestimation> operation discussed in the next section has the following signature:
+For example, the <xref:microsoft.quantum.characterization.robustphaseestimation> operation discussed in the next section has the following signature:
 
 ```qsharp
 operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
 ```
 
 The `bitsPrecision` input is unique to `RobustPhaseEstimation`, while `oracle` and `eigenstate` are in common.
-Thus, as seen in **H2Sample**, an operation can accept an iterative phase estimation algorithm with an input of the form `(DiscreteOracle, Qubit[]) => ()` to allow a user to specify arbitrary phase estimation algorithms:
+Thus, as seen in **H2Sample**, an operation can accept an iterative phase estimation algorithm with an input of the form `(DiscreteOracle, Qubit[]) => Unit` to allow a user to specify arbitrary phase estimation algorithms:
 
 ```qsharp
 operation H2EstimateEnergy(
-        idxBondLength: Int, trotterStepSize: Double,
-        phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)
-    ) : Double
+    idxBondLength : Int, 
+    trotterStepSize : Double,
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+: Double
 ```
 
-These myriad phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many ancilla qubits, and other require only one.
+These myriad phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many auxillary qubits, and other require only one.
 
 Similarly, using random walk phase estimation proceeds in much the same way as for other algorithms provided with the canon:
 
 ```qsharp
-operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit {
-    body (...) {
-        Rz(2.0 * eigenphase * time, register[0]);
-    }
-    adjoint auto;
-    controlled auto;
-    controlled adjoint auto;
+operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
+is Adj + Ctl {
+    Rz(2.0 * eigenphase * time, register[0]);
 }
 
 operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
-    body (...) {
-        let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
-        mutable est = Float(0);
-        using (eigenstate = Qubit()) {
-            X(eigenstate);
-            // The additional inputs here specify the mean and variance of the prior, the number of
-            // iterations to perform, how many iterations to perform as a maximum, and how many
-            // steps to roll back on an approximation failure.
-            set est = RandomWalkPhaseEstimation(0.0, 1.0, 61, 100000, 1, oracle, [eigenstate]);
-            Reset(eigenstate);
-        }
+
+    let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+    using (eigenstate = Qubit()) {
+        X(eigenstate);
+        // The additional inputs here specify the mean and variance of the prior, the number of
+        // iterations to perform, how many iterations to perform as a maximum, and how many
+        // steps to roll back on an approximation failure.
+        let est = RandomWalkPhaseEstimation(0.0, 1.0, 61, 100000, 1, oracle, [eigenstate]);
+        Reset(eigenstate);
         return est;
     }
 }

@@ -1,0 +1,31 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.bitwise
+name: Microsoft.Quantum.Bitwise
+functions:
+- uid: microsoft.quantum.bitwise.and
+  summary: |-
+    Returns the bitwise AND of two integers.
+    This performs the same computation as the built-in `&&&` operator.
+- uid: microsoft.quantum.bitwise.not
+  summary: |-
+    Returns the bitwise NOT of an integer.
+    This performs the same computation as the built-in `~~~` operator.
+- uid: microsoft.quantum.bitwise.or
+  summary: |-
+    Returns the bitwise OR of two integers.
+    This performs the same computation as the built-in `|||` operator.
+- uid: microsoft.quantum.bitwise.parity
+  summary: Returns the bitwise PARITY of an integer (1 if its binary representation contains odd number of ones and 0 otherwise).
+- uid: microsoft.quantum.bitwise.xbits
+  summary: |-
+    Returns an integer representing the X bits of an array
+    of Pauli operators.
+- uid: microsoft.quantum.bitwise.xor
+  summary: |-
+    Returns the bitwise exclusive-OR (XOR) of two integers.
+    This performs the same computation as the built-in `^^^` operator.
+- uid: microsoft.quantum.bitwise.zbits
+  summary: |-
+    Returns an integer representing the Z bits of an array
+    of Pauli operators.
+...

@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggeneratorsystem
+name: JordanWignerBlockEncodingGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: |-
+  Converts a Hamiltonian described by `JWOptimizedHTerms`
+  to a `GeneratorSystem` expressed in terms of the Pauli
+  `GeneratorIndex`.
+syntax: 'function JordanWignerBlockEncodingGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)'
+  types:
+  - name: data
+    summary: Description of Hamiltonian in `JWOptimizedHTerms` format.
+    uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
+  types:
+  - summary: Representation of Hamiltonian as `GeneratorSystem`.
+    uid: microsoft.quantum.simulation.generatorsystem
+...

@@ -40,10 +40,9 @@ The following sections detail:
 - [Statements](xref:microsoft.quantum.qsharp-ref.statements)
 - [File Structure](xref:microsoft.quantum.qsharp-ref.file-structure)
 
-# :new: Conventions
+# Conventions
 
-Starting in Q# 0.3, we are working to ensure that common punctuation marks
-are used consistently in all situations.
+We are working to ensure that common punctuation marks are used consistently in all situations.
 We expect that this will make Q# easier to learn and to read because these marks
 always mean the same thing, and the same concept is always represented the same way.
 

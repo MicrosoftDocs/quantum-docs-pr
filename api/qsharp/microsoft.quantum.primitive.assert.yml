@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.assert
+name: Assert
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"microsoft.quantum.intrinsic.assert".
+syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
+  types:
+  - name: bases
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    isPrimitive: true
+    uid: Result
+  - name: msg
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+...

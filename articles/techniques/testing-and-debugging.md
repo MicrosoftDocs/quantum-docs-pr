@@ -221,7 +221,7 @@ calling <xref:microsoft.quantum.diagnostics.dumpmachine> generates this output:
 ```
 
 The first row provides a comment with the IDs of the corresponding qubits in their significant order.
-The rest of the rows describe the probability amplitude of measuring the basis state vector $\ket{n}$ in both, cartesian and polar, formats. In detail for the first row:
+The rest of the rows describe the probability amplitude of measuring the basis state vector $\ket{n}$ in both Cartesian and polar formats. In detail for the first row:
 
 * **`∣0❭:`** this rows correspond to the `0` state vector
 * **`0.707107 +  0.000000 i`**: the probability amplitude in Cartesian format.

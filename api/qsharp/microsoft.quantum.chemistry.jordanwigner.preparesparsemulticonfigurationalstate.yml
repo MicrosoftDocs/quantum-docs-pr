@@ -1,12 +1,12 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstatecoupledcluster
-name: PrepareTrialStateCoupledCluster
+uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
+name: PrepareSparseMultiConfigurationalState
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
 summary: |-
-  Coupled-cluster state preparation of trial state by adding excitations
+  Sparse multi-configurational state preparation of trial state by adding excitations
   to initial trial state.
-syntax: 'operation PrepareTrialStateCoupledCluster (initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[]) : Unit'
+syntax: 'operation PrepareSparseMultiConfigurationalState (initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[]) : Unit'
 input:
   content: '(initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[])'
   types:

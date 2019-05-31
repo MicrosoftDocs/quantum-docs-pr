@@ -12,6 +12,8 @@
   href: data-structures.md
 - name: Quantum algorithms
   href: algorithms.md
+- name: Diagnostics
+  href: diagnostics.md
 - name: Characterization
   href: characterization.md
 - name: Error correction

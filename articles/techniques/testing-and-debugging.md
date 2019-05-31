@@ -46,7 +46,7 @@ Initially this file contains one sample unit test `AllocateQubitTest` which chec
 ```qsharp
     operation AllocateQubitTest () : Unit {
         using (q = Qubit()) {
-            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in |0> state");
+            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");

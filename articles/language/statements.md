@@ -201,8 +201,7 @@ The value must be compatible with the type(s) of the symbol(s) it is bound to.
 
 #### Apply-and-Reassign Statement
 
-A particular kind of set-statement we refer to as apply-and-reassign statement provides a convenient way of 
-concatenation if the right hand side consists of the application of a binary operator an is to be rebound to the left argument to the operator. 
+A particular kind of set-statement we refer to as an apply-and-reassign statement provides a convenient way of concatenation if the right hand side consists of the application of a binary operator and the result is to be rebound to the left argument to the operator. 
 For example,
 ```qsharp
 mutable counter = 0;
@@ -251,7 +250,7 @@ function AddAll (reals : Double[], ims : Double[]) : Complex[] {
 
 In the case of arrays, 
 our standard libraries contain the necessary tools for many common array initialization and manipulation needs, 
-and thus help to avoid having update array items in the first place. 
+and thus help avoid having to update array items in the first place. 
 Update-and-reassign statements provide an alternative if needed:
 
 ```qsharp
@@ -368,7 +367,7 @@ if (a == b) {
 
 ## Control Flow
 
-### For-Loop
+### For Loop
 
 The `for` statement supports iteration over an integer range or over an array.
 The statement consists of the keyword `for`, an open parenthesis `(`,
@@ -469,18 +468,18 @@ using (anc = Qubit()) {
 
 > [!TIP]   
 > Avoid using repeat-until-success loops inside functions. 
-> The corresponding functionality is provided by while-loops in functions. 
+> The corresponding functionality is provided by while loops in functions. 
 
-### While-Loop
+### While Loop
 
-Repeat-until-success patterns have a very quantum-specific connotation. They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#. 
+Repeat-until-success patterns have a very quantum-specific connotation. They are widely used in particular classes of quantum algorithms -- hence the dedicated language construct in Q#. 
 However, loops that break based on a condition and whose execution length is thus unknown at compile time need to be handled with particular care in a quantum runtime. 
-Their usage within function on the other hand is unproblematic, since these only contain code that will be executed on conventional (non-quantum) hardware. 
+Their use within functions on the other hand is unproblematic, since these only contain code that will be executed on conventional (non-quantum) hardware. 
 
-Q# therefore supports to use of while-loops within functions only. 
+Q# therefore supports to use of while loops within functions only. 
 A `while` statement consists of the keyword `while`, an open parenthesis `(`,
 a condition (i.e. a Boolean expression), a close parenthesis `)`, and a statement block.
-The statement block (the body of the loop) is executed as long as the condition evaluates to `false`.
+The statement block (the body of the loop) is executed as long as the condition evaluates to `true`.
 
 ```qsharp
 // ...

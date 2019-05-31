@@ -29,7 +29,7 @@ The Q# language provides several *primitive types*, from which other types
 can be constructed:
 
 - The `Int` type represents a 64-bit signed integer, e.g.: `2`, `107`, `-5`.
-- The `BigInt` type represents a signed integer or arbitrary size, e.g. `2L`, `107L`, `-5L`.
+- The `BigInt` type represents a signed integer of arbitrary size, e.g. `2L`, `107L`, `-5L`.
    This type is based on the .NET
    <xref:System.Numerics.BigInteger>
    type.
@@ -50,7 +50,7 @@ can be constructed:
    `One` and `Zero`, which are constants of type `Result`.
    `Zero` indicates that the +1 eigenvalue was measured;
    `One` indicates the -1 eigenvalue.
-- The `Range` type represents a consecutive sequence of integers, denoted by `start..step..stop`, where denoting the step is options. 
+- The `Range` type represents a sequence of integers, denoted by `start..step..stop`, where denoting the step is options. 
    That is `start .. stop` corresponds to `start..1..stop`, and e.g. `1..2..7` represents the sequence $\{1, 3, 5, 7\}$.
 - The `String` type is a sequence of Unicode characters that
   is opaque to the user once created.

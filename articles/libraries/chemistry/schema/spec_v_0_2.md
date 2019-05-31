@@ -1,13 +1,13 @@
 ---
 title: Broombridge Schema Specification
-author: cgranade
-ms.author: chgranad@microsoft.com
-ms.date: 10/17/2018
+author: guanghaolow
+ms.author: gulow@microsoft.com
+ms.date: 05/28/2019
 ms.topic: article
-uid: microsoft.quantum.libraries.chemistry.schema.spec
+uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 ---
 
-# Broombridge Specification #
+# Broombridge Specification v0.2 #
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
@@ -24,7 +24,7 @@ Broombridge documents are intended to communicate instances of simulation proble
 This section is normative.
 
 A Broombridge document MUST be serialized as a [YAML 1.2 document](http://yaml.org/spec/) representing a JSON object as described in [RFC 4627](https://tools.ietf.org/html/rfc4627) section 2.2.
-The object serialized to YAML MUST have a property `"$schema"` whose value is `"https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/qchem-0.1.schema.json"`, and MUST be valid according to the JSON Schema draft-06 specifications [[1](https://tools.ietf.org/html/draft-wright-json-schema-01), [2](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)].
+The object serialized to YAML MUST have a property `"$schema"` whose value is `"https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/qchem-0.2.schema.json"`, and MUST be valid according to the JSON Schema draft-06 specifications [[1](https://tools.ietf.org/html/draft-wright-json-schema-01), [2](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)].
 
 For the remainder of this specification, "the Broombridge object" will refer to the JSON object deserialized from a Broombridge YAML document.
 
@@ -100,7 +100,7 @@ sparse_example:
 This section is normative.
 
 The Broombridge object MUST have a property `format` whose value is a JSON object with one property called `version`.
-The `version` property MUST have the value `"0.1"`.
+The `version` property MUST have the value `"0.2"`.
 
 ### Example ###
 
@@ -108,18 +108,18 @@ This section is informative.
 
 ```yaml
 format:                        # required
-    version: "0.1"             # must match exactly
+    version: "0.2"             # must match exactly
 ```
 
-## Integral Sets Section ##
+## Problem Description Section ##
 
 This section is normative.
 
-The Broombridge object MUST have a property `integral_sets` whose value is a JSON array.
-Each item in the value of the `integral_sets` property MUST be a JSON object describing one set of integrals, as described in the remainder of this section.
-In the remainder of this section, the term "integral set object" will refer to an item in the value of the `integral_sets` property of the Broombridge object.
+The Broombridge object MUST have a property `problem_description` whose value is a JSON array.
+Each item in the value of the `problem_description` property MUST be a JSON object describing one set of integrals, as described in the remainder of this section.
+In the remainder of this section, the term "problem description object" will refer to an item in the value of the `problem_description` property of the Broombridge object.
 
-Each integral set object MUST have a property `metadata` whose value is a JSON object.
+Each problem description object MUST have a property `metadata` whose value is a JSON object.
 The value of `metadata` MAY be the empty JSON object (that is, `{}`), or MAY contain additional properties defined by the implementor.
 
 ### Hamiltonian Section ###
@@ -128,8 +128,8 @@ The value of `metadata` MAY be the empty JSON object (that is, `{}`), or MAY con
 
 This section is informative.
 
-The `hamiltonian` property of each integral set object describes the Hamiltonian for a particular quantum chemistry problem by listing out its one- and two-body terms as sparse arrays of real numbers.
-The Hamiltonian operators described by each integral set object take the form
+The `hamiltonian` property of each problem description object describes the Hamiltonian for a particular quantum chemistry problem by listing out its one- and two-body terms as sparse arrays of real numbers.
+The Hamiltonian operators described by each problem description object take the form
 
 $$
 H = \sum\_\{i,j\}\sum\_{\sigma\in\\{\uparrow,\downarrow\\}} h\_\{ij\} a^\{\dagger\}\_{i,\sigma} a\_{j,\sigma} + \frac{1}{2}\sum\_\{i,j,k,l\}\sum\_{\sigma,\rho\in\\{\uparrow,\downarrow\\}} h\_{ijkl} a^\dagger\_{i,\sigma} a^\dagger\_{k,\rho} a\_{l,\rho} a\_{j,\sigma},
@@ -161,10 +161,13 @@ $$
 
 This section is normative.
 
-Each integral set MUST have a property `hamiltonian` whose value is a JSON object.
+Each problem description object MUST have a property `hamiltonian` whose value is a JSON object.
 The value of the `hamiltonian` property is known as a Hamiltonian object, and MUST have the properties `one_electron_integrals` and `two_electron_integrals` as described in the remainder of this section.
-A Hamiltonian object MAY also have a property `particle_hole_representation`.
-If present, the value of `particle_hole_representation` MUST follow the format described in the remainder of this section.
+
+Each problem description object MUST have a property `coulomb_repulsion` whose value is a simple quantity object.
+Each problem description object MUST have a property `energy_offet` whose value is a simple quantity object.
+> [NOTE]
+> The values of `coulomb_repulsion` and `energy_offet` added together capture the identity term of the Hamiltonian.
 
 ##### One-Electron Integrals Object #####
 
@@ -208,7 +211,7 @@ Each element of the value of `two_electron_integrals` MUST have four indices.
 
 Each `two_electron_integrals` property MUST have a `index_convention` property.
 The value of the `index_convention` property MUST be one of the allowed values listed in Table 1.
-If the value of `index_convention` is `mulliken`, then for each element of the `two_electron_integrals` sparse array quantity, a parser loading a Broombridge document MUST instantiate a Hamiltonian term equal to the two-electron operator $h_{i, j, k, l} a^\dagger_i a^\dagger_j a_k a_l$, where $i$, $j$, $k$, and $l$ MUST be integers in the inclusive range from 1 to the number of electrons specified by the `n_electrons` property of the integral set object, and where $h_{i, j, k, l}$ is the element `[i, j, k, l, h(i, j, k, l)]` of the sparse array quantity.
+If the value of `index_convention` is `mulliken`, then for each element of the `two_electron_integrals` sparse array quantity, a parser loading a Broombridge document MUST instantiate a Hamiltonian term equal to the two-electron operator $h_{i, j, k, l} a^\dagger_i a^\dagger_j a_k a_l$, where $i$, $j$, $k$, and $l$ MUST be integers of value at least 1, and where $h_{i, j, k, l}$ is the element `[i, j, k, l, h(i, j, k, l)]` of the sparse array quantity.
 
 ###### Symmetries ######
 
@@ -253,64 +256,93 @@ two_electron_integrals:
         - [6, 1, 3, 2, -0.1]
 ```
 
-##### Particle–Hole Representation Object #####
+### Initial State Section ###
 
 This section is normative.
 
-The particle–hole representation object specifies that the integrals stored are defined with respect to particle hole representation wherein the creation and annihilation operators describe excitations away from the reference state used, such as a Hartree–Fock state.
-The object is OPTIONAL.
-If the object is not specified then the Hamiltonian is to be interpreted as not given in particle-hole representation.
-If present, the value of `particle_hole_representation` MUST be a sparse array quantity object whose indices are four integers, and whose values are a number and a string.
-The string portion of the value of each element MUST contain only the characters `'+'` and `'-'` which specifies whether a given factor in the term is a creation or annihilation operator in the particle–hole representation.  For example `"-+++"` coresponds to a hole being created at site $i$ and particles being created at sites $j,k$ and $l$.
-
-> [!NOTE]
-> As the value of the `particle_hole_representation` is a sparse array quantity object, the `unit` and `format` properties must be specified.
-> Acceptable units include are listed in Table 1.
-> The `format` property is required, and indicates whether the Hamiltonian coefficients are specified as a dense or sparse array.
-> In the current version, only sparse arrays are supported, with interpretation that all unspecified elements are $0$, but future versions may add support for additional values of the `format` property.
-
-### Initial State Section ###
-
-The initial_state_suggestion object specifies initial quantum states of interest to the specified Hamiltonian. This object must be an array of JSON `state` objects.
+The `initial_state_suggestion` object whose value is a JSON array specifies initial quantum states of interest to the specified Hamiltonian. 
+Each item in the value of the `initial_state_suggestion` property MUST be a JSON object describing one quantum state, as described in the remainder of this section.
+In the remainder of this section, the term "state object" will refer to an item in the value of the `initial_state_suggestion` property of the Broombridge object.
 
 #### State object ####
 
-Each states represents a superposition of occupied orbitals. Each state object MUST have a `label` property containing a string. Each state object MUST have a `superposition` property containing an array of basis states and their unnormalized amplitudes.
+This section is normative.
+
+Each state object MUST have a `label` property containing a string. 
+Each state object MUST have a `method` property. 
+The value of the `method` property MUST be one of the allowed values listed in Table 3.
+Each state object MAY have a property `energy` whose value MUST be a simple quantity object.
+
+If the value of the `method` property is `sparse_multi_configurational`, the state object MUST have a `superposition` property containing an array of basis states and their unnormalized amplitudes.
 
 For example, the initial states
 $$
 \ket{G0}=\ket{G1}=\ket{G2}=(a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{2,\uparrow}a^{\dagger}\_{2,\downarrow})\ket{0}
 $$
 $$
-\ket{E}=\frac{0.1 (a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{2,\uparrow}a^{\dagger}\_{2,\downarrow})+0.2 (a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{3,\uparrow}a^{\dagger}\_{2,\downarrow})}{\sqrt{|0.1|^2+|0.2|^2}}\ket{0}
+\ket{E}=\frac{0.1 (a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{2,\uparrow}a^{\dagger}\_{2,\downarrow})+0.2 (a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{3,\uparrow}a^{\dagger}\_{2,\downarrow})}{\sqrt{|0.1|^2+|0.2|^2}}\ket{0},
 $$
-are represented by
+where $\ket{E}$ has energy $0.987 \textrm{Ha}$, are represented by
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
-    - state:
-        label: "|G0>"
-        superposition:
-            - [1.0, "(1a)+","(2a)+","(2b)+","|vacuum>"]
-    - state:
-        label: "|G1>"
-        superposition:
-            - [-1.0, "(2a)+","(1a)+","(2b)+","|vacuum>"]
-    - state:
-        label: "|G2>"
-        superposition:
-            - [1.0, "(3a)","(1a)+","(2a)+","(3a)+","(2b)+","|vacuum>"]
-    - state:
-        label: "|E>"
-        superposition:
-            - [0.1, "(1a)+","(2a)+","(2b)+","|vacuum>"]
-            - [0.2, "(1a)+","(3a)+","(2b)+","|vacuum>"]
+  - label: "|G0>"
+    method: sparse_multi_configurational
+    superposition:
+      - [1.0, "(1a)+","(2a)+","(2b)+","|vacuum>"]
+  - label: "|G1>"
+    method: sparse_multi_configurational
+    superposition:
+      - [-1.0, "(2a)+","(1a)+","(2b)+","|vacuum>"]
+  - label: "|G2>"
+    method: sparse_multi_configurational
+    superposition:
+      - [1.0, "(3a)","(1a)+","(2a)+","(3a)+","(2b)+","|vacuum>"]
+  - label: "|E>"
+    energy: {units: hartree, value: 0.987}
+    method: sparse_multi_configurational
+    superposition:
+      - [0.1, "(1a)+","(2a)+","(2b)+","|vacuum>"]
+      - [0.2, "(1a)+","(3a)+","(2b)+","|vacuum>"]
+```
+
+If the value of the `method` property is `unitary_coupled_cluster`, the state object MUST have a `cluster_operator` property whose value is a JSON object.
+The JSON object MUST have a `reference_state` property whose value is a basis state.
+The JSON object MAY have a `one_body_amplitudes` property whose value is an array of one-body cluster operators and their amplitudes.
+The JSON object MAY have a `two_body_amplitudes` property whose value is an array of two-body cluster operators and their amplitudes.
+ containing an array of basis states and their unnormalized amplitudes.
+
+For example, the state
+$$
+\ket{\text{reference}}=(a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{2,\uparrow}a^{\dagger}\_{2,\downarrow})\ket{0},
+$$
+
+$$
+\ket{\text{UCCSD}}=e^{T-T^\dagger}\ket{\text{reference}},
+$$
+
+$$
+T = 0.1 a^{\dagger}\_{3,\uparrow}a\_{2,\downarrow} + 0.2 a^{\dagger}\_{2,\uparrow}a\_{2,\downarrow} - 0.3 a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{3,\downarrow}a\_{3,\uparrow}a\_{2,\downarrow}
+$$
+is represented by
+```yaml
+initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
+  - label: "UCCSD"
+    method: unitary_coupled_cluster
+    cluster_operator: # Initial state that cluster operator is applied to.
+        reference_state: 
+          [1.0, "(1a)+", "(2a)+", "(2b)+", '|vacuum>']
+        one_body_amplitudes: # A one-body cluster term is t^{q}_{p} a^\dag_p a_q   
+            - [0.1, "(3a)+", "(2b)"]
+            - [-0.2, "(2a)+", "(2b)"]
+        two_body_amplitudes: # A two-body unitary cluster term is t^{rs}_{pq} a^\dag_p a^\dag_q a_r a_s
+            - [-0.3, "(1a)+", "(3b)+", "(3a)", "(2b)"]
 ```
 
 #### Basis Set Object ####
 
 This section is normative.
 
-Each integral set object MAY have a `basis_set` property.
+Each problem description object MAY have a `basis_set` property.
 If present, the value of the `basis_set` property MUST be an object with two properties, `type` and `name`.
 
 The basis functions identified by the value of the `basis_set` property MUST be real-valued.
@@ -351,3 +383,16 @@ Additional index conventions may be introduced in future versions of this specif
 #### Interpretation of Index Conventions ####
 
 This section is informative.
+
+### Table 3. Allowed State methods ###
+
+This section is normative.
+
+Any string specifying a state method MUST be one of the following:
+
+- `sparse_multi_configurational`
+- `unitary_coupled_cluster`
+
+This section is informative.
+
+Additional state methods may be introduced in future versions of this specification.

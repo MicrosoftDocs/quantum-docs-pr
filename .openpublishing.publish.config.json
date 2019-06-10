@@ -1,9 +1,9 @@
 {
   "docsets_to_publish": [
     {
-      "docset_name": "quamtum-api",
+      "docset_name": "quantum-api",
       "build_source_folder": "api",
-      "build_output_subfolder": "quamtum-api",
+      "build_output_subfolder": "quantum-api",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
@@ -26,7 +26,7 @@
       },
       "JoinTOCPlugin": [
         {
-          "ReferenceTOC": "api/TOC.yml",
+          "ReferenceTOC": "api/toc.yml",
           "ConceptualTOC": "articles/TOC.yml",
           "ReferenceTOCUrl": "/qsharp/api/toc.json",
           "ConceptualTOCUrl": "/quantum/toc.json"
@@ -59,7 +59,7 @@
       },
       "JoinTOCPlugin": [
         {
-          "ReferenceTOC": "api/TOC.yml",
+          "ReferenceTOC": "api/toc.yml",
           "ConceptualTOC": "articles/TOC.yml",
           "ReferenceTOCUrl": "/qsharp/api/toc.json",
           "ConceptualTOCUrl": "/quantum/toc.json"

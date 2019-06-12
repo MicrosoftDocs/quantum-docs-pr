@@ -81,11 +81,13 @@ As an example, if $N=2$ then the state
 $$
 \ket{0} \ket{1} \ket{1} \ket{0},
 $$
+
 would correspond to spin orbitals $1$ and $2$ being occupied with the remainder empty.
 Similarly, the state
 $$
 \ket{0} \equiv \ket{0}_{0} \cdots \ket{0}_{N-1},
 $$
+
 has no electrons and is known as the 'vacuum state'.
 
 A beautiful side-effect of second quantization is that we no longer have to explicitly keep track of the anti-symmetry of the quantum state.
@@ -99,10 +101,7 @@ These are denoted $a^\dagger_j$ and $a_j$ respectively.
 
 For example,
 \begin{align}
-a^\dagger_1 \ket{0}_1 &= \ket{1}_1\nonumber\\\
-a^\dagger_1 \ket{1}_1 &= 0\nonumber\\\
-a_1 \ket{0}_1 &= 0\nonumber\\\
-a_1 \ket{1}_1 &= \ket{0}_1
+a^\dagger_1 \ket{0}_1 = \ket{1}_1,\quad a^\dagger_1 \ket{1}_1 = 0,\quad a_1 \ket{0}_1 = 0,\quad a_1 \ket{1}_1 = \ket{0}_1.
 \end{align}
 Note that here $a^\dagger_1 \ket{1}_1=0$ and $a_1 \ket{0}_1$ yield the zero-vector not $\ket{0}_1$.
 Such operators are therefore neither Hermitian nor unitary.
@@ -198,8 +197,7 @@ a^\dagger_2 a^\dagger_1 \ket{0} = -a^\dagger_1 a^\dagger_2 \ket{0}.
 $$
 Such operators are said to 'anti-commute' and in general for any $i, j$ we have that
 \begin{align}
-a^\dagger_i a^\dagger_j  &= -(1-\delta_{i,j})a^\dagger_j a^\dagger_i\nonumber\\\
-a^\dagger_i a_j &=\delta_{i,j} - a_j a^\dagger_i.
+a^\dagger_i a^\dagger_j  = -(1-\delta_{i,j})a^\dagger_j a^\dagger_i,\quad a^\dagger_i a_j =\delta_{i,j} - a_j a^\dagger_i.
 \end{align}
 Thus the following two <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderSequence> instances are considered inequivalent
 ```csharp

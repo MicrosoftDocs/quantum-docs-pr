@@ -252,7 +252,7 @@ In particular, if $\psi\_j$ are the spin orbitals that form the basis then
 where $h\_{\textrm nuc}$ is the nuclear energy (which is a constant under the Born-Oppenheimer approximation) and
 
 \begin{align}
-h\_{pq} &= \int\_{-\infty}^\infty \psi^\*\_p(x\_1) \left(-\frac{\nabla^2}{2} -V(x\_1)\right)  \psi\_q(x\_1)\mathrm{d}^3x\_1,
+h\_{pq} &= \int\_{-\infty}^\infty \psi^\*\_p(x\_1) \left(-\frac{\nabla^2}{2} +V(x\_1)\right)  \psi\_q(x\_1)\mathrm{d}^3x\_1,
 \end{align}
 
 where $V(x)$ is the mean-field potential, and

@@ -252,11 +252,13 @@ In particular, if $\psi\_j$ are the spin orbitals that form the basis then
 where $h\_{\textrm nuc}$ is the nuclear energy (which is a constant under the Born-Oppenheimer approximation) and
 
 \begin{align}
-h\_{pq} &= \int\_{-\infty}^\infty \psi^\*\_p(x\_1) \left(-\frac{\nabla^2}{2} -\sum\_{j} \frac{Z_j}{x_1 - R_j|}\right)  \psi\_q(x\_1)\mathrm{d}^3x\_1
+h\_{pq} &= \int\_{-\infty}^\infty \psi^\*\_p(x\_1) \left(-\frac{\nabla^2}{2} -V(x\_1)\right)  \psi\_q(x\_1)\mathrm{d}^3x\_1,
 \end{align}
 
+where $V(x)$ is the mean-field potential, and
+
 \begin{align}
-h\_{pqrs} &= \int\_{-\infty}^\infty \int\_{-\infty}^\infty\psi\_p^\*(x\_1)\psi\_q^\*(x\_2) \left(\frac{1}{2}\frac{e^2}{|x_1-x_2|} \right)\psi\_r(x\_2)\psi\_s(x\_1)\mathrm{d}^3x\_1\mathrm{d}^3x\_2.\tag{★}\label{eq:integrals}
+h\_{pqrs} &= \int\_{-\infty}^\infty \int\_{-\infty}^\infty\psi\_p^\*(x\_1)\psi\_q^\*(x\_2) \left(\frac{1}{|x_1-x_2|} \right)\psi\_r(x\_2)\psi\_s(x\_1)\mathrm{d}^3x\_1\mathrm{d}^3x\_2.\tag{★}\label{eq:integrals}
 \end{align}
 
 The terms $h\_{pq}$ are refered to as one-electron integrals because all such terms only involve single electrons and likewise $h\_{pqrs}$ are the two-electron integrals.

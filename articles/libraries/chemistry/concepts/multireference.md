@@ -58,12 +58,12 @@ Thus
 
 It is also common to split the cluster operator $T = T_1 + T_2 + \cdots$ into parts, where each part $T_j$ contains $j$-body terms. In generalized coupled-cluster theory, the one-body cluster operator (singles) is of the form
 \begin{align}
-T_1 = \sum_{ia}t^{q}_{p} a^\dagger_p a_q,
+T_1 = \sum_{pq}t^{p}_{q} a^\dagger_p a_q,
 \end{align}
 
 and two-body cluster operator (doubles) is of the form
 \begin{align}
-T_2 = \sum_{pqrs}t^{rs}_{pq} a^\dagger_p a^\dagger_q a_r a_s.
+T_2 = \sum_{pqrs}t^{pq}_{rs} a^\dagger_p a^\dagger_q a_r a_s.
 \end{align}
 
 Higher-order terms (triples, quadruples, etc.) are possible, but not currently supported by the chemistry library.

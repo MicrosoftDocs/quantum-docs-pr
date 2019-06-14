@@ -1,0 +1,18 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: mock
+  type: module
+  uid: qsharp.clients.mock
+references:
+- fullName: qsharp.clients.mock.MockClient
+  isExternal: false
+  name: MockClient
+  parent: qsharp.clients.mock
+  uid: qsharp.clients.mock.MockClient

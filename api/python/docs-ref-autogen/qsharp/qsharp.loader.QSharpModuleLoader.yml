@@ -1,0 +1,34 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.loader.QSharpModuleLoader.load_module
+  class: qsharp.loader.QSharpModuleLoader
+  fullName: qsharp.loader.QSharpModuleLoader
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: importlib.abc.Loader
+  langs:
+  - python
+  module: qsharp.loader
+  name: QSharpModuleLoader
+  syntax: {}
+  type: class
+  uid: qsharp.loader.QSharpModuleLoader
+- class: qsharp.loader.QSharpModuleLoader
+  fullName: qsharp.loader.QSharpModuleLoader.load_module
+  langs:
+  - python
+  module: qsharp.loader
+  name: 'load_module(full_name: str)'
+  syntax:
+    content: 'load_module(full_name: str)'
+  type: method
+  uid: qsharp.loader.QSharpModuleLoader.load_module
+references:
+- fullName: qsharp.loader.QSharpModuleLoader.load_module
+  isExternal: false
+  name: 'load_module(full_name: str)'
+  parent: qsharp.loader.QSharpModuleLoader
+  uid: qsharp.loader.QSharpModuleLoader.load_module

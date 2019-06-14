@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.loader.QSharpCallable
+  - qsharp.loader.QSharpModule
+  - qsharp.loader.QSharpModuleFinder
+  - qsharp.loader.QSharpModuleLoader
+  fullName: qsharp.loader
+  langs:
+  - python
+  module: qsharp.loader
+  name: loader
+  type: module
+  uid: qsharp.loader
+references:
+- fullName: qsharp.loader.QSharpCallable
+  isExternal: false
+  name: QSharpCallable
+  parent: qsharp.loader
+  uid: qsharp.loader.QSharpCallable
+- fullName: qsharp.loader.QSharpModule
+  isExternal: false
+  name: QSharpModule
+  parent: qsharp.loader
+  uid: qsharp.loader.QSharpModule
+- fullName: qsharp.loader.QSharpModuleFinder
+  isExternal: false
+  name: QSharpModuleFinder
+  parent: qsharp.loader
+  uid: qsharp.loader.QSharpModuleFinder
+- fullName: qsharp.loader.QSharpModuleLoader
+  isExternal: false
+  name: QSharpModuleLoader
+  parent: qsharp.loader
+  uid: qsharp.loader.QSharpModuleLoader

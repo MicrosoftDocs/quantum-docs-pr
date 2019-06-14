@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.tests.test_iqsharp.test_chemistry_compile
+  - qsharp.tests.test_iqsharp.test_estimate
+  - qsharp.tests.test_iqsharp.test_multi_compile
+  - qsharp.tests.test_iqsharp.test_simple_compile
+  - qsharp.tests.test_iqsharp.test_simulate
+  - qsharp.tests.test_iqsharp.test_tuples
+  fullName: qsharp.tests.test_iqsharp
+  langs:
+  - python
+  module: qsharp.tests.test_iqsharp
+  name: test_iqsharp
+  type: module
+  uid: qsharp.tests.test_iqsharp
+- fullName: qsharp.tests.test_iqsharp.test_chemistry_compile
+  langs:
+  - python
+  module: qsharp.tests.test_iqsharp
+  name: test_chemistry_compile()
+  summary: Verifies that that adding packages and compile works
+  syntax:
+    content: test_chemistry_compile()
+  type: function
+  uid: qsharp.tests.test_iqsharp.test_chemistry_compile
+- fullName: qsharp.tests.test_iqsharp.test_estimate
+  langs:
+  - python
+  module: qsharp.tests.test_iqsharp
+  name: test_estimate()
+  summary: Verifies that resource estimation works.
+  syntax:
+    content: test_estimate()
+  type: function
+  uid: qsharp.tests.test_iqsharp.test_estimate
+- fullName: qsharp.tests.test_iqsharp.test_multi_compile
+  langs:
+  - python
+  module: qsharp.tests.test_iqsharp
+  name: test_multi_compile()
+  summary: Verifies that compile works
+  syntax:
+    content: test_multi_compile()
+  type: function
+  uid: qsharp.tests.test_iqsharp.test_multi_compile
+- fullName: qsharp.tests.test_iqsharp.test_simple_compile
+  langs:
+  - python
+  module: qsharp.tests.test_iqsharp
+  name: test_simple_compile()
+  summary: Verifies that compile works
+  syntax:
+    content: test_simple_compile()
+  type: function
+  uid: qsharp.tests.test_iqsharp.test_simple_compile
+- fullName: qsharp.tests.test_iqsharp.test_simulate
+  langs:
+  - python
+  module: qsharp.tests.test_iqsharp
+  name: test_simulate()
+  summary: Checks that a simple simulate works correctly
+  syntax:
+    content: test_simulate()
+  type: function
+  uid: qsharp.tests.test_iqsharp.test_simulate
+- fullName: qsharp.tests.test_iqsharp.test_tuples
+  langs:
+  - python
+  module: qsharp.tests.test_iqsharp
+  name: test_tuples()
+  summary: Checks that tuples are correctly encoded both ways.
+  syntax:
+    content: test_tuples()
+  type: function
+  uid: qsharp.tests.test_iqsharp.test_tuples
+references:
+- fullName: qsharp.tests.test_iqsharp.test_chemistry_compile
+  isExternal: false
+  name: test_chemistry_compile()
+  parent: qsharp.tests.test_iqsharp
+  uid: qsharp.tests.test_iqsharp.test_chemistry_compile
+- fullName: qsharp.tests.test_iqsharp.test_estimate
+  isExternal: false
+  name: test_estimate()
+  parent: qsharp.tests.test_iqsharp
+  uid: qsharp.tests.test_iqsharp.test_estimate
+- fullName: qsharp.tests.test_iqsharp.test_multi_compile
+  isExternal: false
+  name: test_multi_compile()
+  parent: qsharp.tests.test_iqsharp
+  uid: qsharp.tests.test_iqsharp.test_multi_compile
+- fullName: qsharp.tests.test_iqsharp.test_simple_compile
+  isExternal: false
+  name: test_simple_compile()
+  parent: qsharp.tests.test_iqsharp
+  uid: qsharp.tests.test_iqsharp.test_simple_compile
+- fullName: qsharp.tests.test_iqsharp.test_simulate
+  isExternal: false
+  name: test_simulate()
+  parent: qsharp.tests.test_iqsharp
+  uid: qsharp.tests.test_iqsharp.test_simulate
+- fullName: qsharp.tests.test_iqsharp.test_tuples
+  isExternal: false
+  name: test_tuples()
+  parent: qsharp.tests.test_iqsharp
+  uid: qsharp.tests.test_iqsharp.test_tuples

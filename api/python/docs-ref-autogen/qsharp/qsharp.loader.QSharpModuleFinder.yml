@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.loader.QSharpModuleFinder.find_module
+  class: qsharp.loader.QSharpModuleFinder
+  fullName: qsharp.loader.QSharpModuleFinder
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: importlib.abc.Finder
+    type: importlib.abc.MetaPathFinder
+  langs:
+  - python
+  module: qsharp.loader
+  name: QSharpModuleFinder
+  syntax: {}
+  type: class
+  uid: qsharp.loader.QSharpModuleFinder
+- class: qsharp.loader.QSharpModuleFinder
+  fullName: qsharp.loader.QSharpModuleFinder.find_module
+  langs:
+  - python
+  module: qsharp.loader
+  name: 'find_module(full_name: str, path: typing.Union[str, NoneType] = None) ->
+    importlib.abc.Loader'
+  syntax:
+    content: 'find_module(full_name: str, path: typing.Union[str, NoneType] = None)
+      -> importlib.abc.Loader'
+  type: method
+  uid: qsharp.loader.QSharpModuleFinder.find_module
+references:
+- fullName: qsharp.loader.QSharpModuleFinder.find_module
+  isExternal: false
+  name: 'find_module(full_name: str, path: typing.Union[str, NoneType] = None) ->
+    importlib.abc.Loader'
+  parent: qsharp.loader.QSharpModuleFinder
+  uid: qsharp.loader.QSharpModuleFinder.find_module

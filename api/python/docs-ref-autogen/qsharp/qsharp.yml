@@ -1,0 +1,185 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.compile
+  - qsharp.reload
+  - qsharp.get_available_operations
+  - qsharp.get_available_operations_by_namespace
+  - qsharp.get_workspace_operations
+  - qsharp.IQSharpError
+  - qsharp.Result
+  - qsharp.Pauli
+  - qsharp.loader
+  - qsharp.packages
+  - qsharp.serialization
+  - qsharp.types
+  - qsharp.utils
+  - qsharp.version
+  - qsharp.clients
+  - qsharp.tests
+  fullName: qsharp
+  kind: import
+  langs:
+  - python
+  module: qsharp
+  name: qsharp
+  type: package
+  uid: qsharp
+- fullName: qsharp.compile
+  langs:
+  - python
+  module: qsharp
+  name: 'compile(code: str) -> typing.Union[qsharp.loader.QSharpCallable, typing.List[qsharp.loader.QSharpCallable]]'
+  summary: 'Given a string containing Q# source code, compiles it into the current
+
+    workspace and returns one or more Q# callable objects that can be used to
+
+    invoke the new code.'
+  syntax:
+    content: 'compile(code: str) -> typing.Union[qsharp.loader.QSharpCallable, typing.List[qsharp.loader.QSharpCallable]]'
+    parameters:
+    - description: A string containing Q# source code to be compiled.
+      id: code
+    return:
+      description: 'A list of callables compiled from *code*, or a callable if exactly
+
+        one callable is found.'
+  type: function
+  uid: qsharp.compile
+- fullName: qsharp.reload
+  langs:
+  - python
+  module: qsharp
+  name: reload() -> None
+  summary: 'Reloads the current IQ# workspace, recompiling source files in the
+
+    workspace.
+
+
+    If the workspace fails to compile (e.g., because of a missing package),
+
+    Q# compilation errors are raised as an exception.'
+  syntax:
+    content: reload() -> None
+  type: function
+  uid: qsharp.reload
+- fullName: qsharp.get_available_operations
+  langs:
+  - python
+  module: qsharp
+  name: get_available_operations() -> typing.List[str]
+  summary: 'Returns a list containing the names of all operations and functions defined
+
+    in the current workspace, and that have been compiled dynamically from
+
+    snippets.'
+  syntax:
+    content: get_available_operations() -> typing.List[str]
+  type: function
+  uid: qsharp.get_available_operations
+- fullName: qsharp.get_available_operations_by_namespace
+  langs:
+  - python
+  module: qsharp
+  name: get_available_operations_by_namespace() -> typing.Dict[str, typing.List[str]]
+  summary: 'Returns a dictionary from namespaces to lists of operations and functions
+
+    defined in the current workspace that are members of each namespace.'
+  syntax:
+    content: get_available_operations_by_namespace() -> typing.Dict[str, typing.List[str]]
+  type: function
+  uid: qsharp.get_available_operations_by_namespace
+- fullName: qsharp.get_workspace_operations
+  langs:
+  - python
+  module: qsharp
+  name: get_workspace_operations() -> typing.List[str]
+  summary: 'Returns a list containing the names of all operations and functions defined
+
+    in the current workspace, excluding dynamically compiled snippets.'
+  syntax:
+    content: get_workspace_operations() -> typing.List[str]
+  type: function
+  uid: qsharp.get_workspace_operations
+references:
+- fullName: qsharp.compile
+  isExternal: false
+  name: 'compile(code: str) -> typing.Union[qsharp.loader.QSharpCallable, typing.List[qsharp.loader.QSharpCallable]]'
+  parent: qsharp
+  uid: qsharp.compile
+- fullName: qsharp.reload
+  isExternal: false
+  name: reload() -> None
+  parent: qsharp
+  uid: qsharp.reload
+- fullName: qsharp.get_available_operations
+  isExternal: false
+  name: get_available_operations() -> typing.List[str]
+  parent: qsharp
+  uid: qsharp.get_available_operations
+- fullName: qsharp.get_available_operations_by_namespace
+  isExternal: false
+  name: get_available_operations_by_namespace() -> typing.Dict[str, typing.List[str]]
+  parent: qsharp
+  uid: qsharp.get_available_operations_by_namespace
+- fullName: qsharp.get_workspace_operations
+  isExternal: false
+  name: get_workspace_operations() -> typing.List[str]
+  parent: qsharp
+  uid: qsharp.get_workspace_operations
+- fullName: qsharp.IQSharpError
+  isExternal: false
+  name: IQSharpError
+  parent: qsharp
+  uid: qsharp.IQSharpError
+- fullName: qsharp.Result
+  isExternal: false
+  name: Result
+  parent: qsharp
+  uid: qsharp.Result
+- fullName: qsharp.Pauli
+  isExternal: false
+  name: Pauli
+  parent: qsharp
+  uid: qsharp.Pauli
+- fullName: qsharp.loader
+  isExternal: false
+  name: loader
+  parent: qsharp
+  uid: qsharp.loader
+- fullName: qsharp.packages
+  isExternal: false
+  name: packages
+  parent: qsharp
+  uid: qsharp.packages
+- fullName: qsharp.serialization
+  isExternal: false
+  name: serialization
+  parent: qsharp
+  uid: qsharp.serialization
+- fullName: qsharp.types
+  isExternal: false
+  name: types
+  parent: qsharp
+  uid: qsharp.types
+- fullName: qsharp.utils
+  isExternal: false
+  name: utils
+  parent: qsharp
+  uid: qsharp.utils
+- fullName: qsharp.version
+  isExternal: false
+  name: version
+  parent: qsharp
+  uid: qsharp.version
+- fullName: qsharp.clients
+  isExternal: false
+  name: clients
+  parent: qsharp
+  uid: qsharp.clients
+- fullName: qsharp.tests
+  isExternal: false
+  name: tests
+  parent: qsharp
+  uid: qsharp.tests

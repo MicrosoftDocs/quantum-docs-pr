@@ -1,0 +1,53 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.loader.QSharpCallable.estimate_resources
+  - qsharp.loader.QSharpCallable.simulate
+  class: qsharp.loader.QSharpCallable
+  fullName: qsharp.loader.QSharpCallable
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: qsharp.loader
+  name: QSharpCallable
+  summary: ''
+  syntax:
+    content: 'QSharpCallable(callable_name: str, source: str)'
+  type: class
+  uid: qsharp.loader.QSharpCallable
+- class: qsharp.loader.QSharpCallable
+  fullName: qsharp.loader.QSharpCallable.estimate_resources
+  langs:
+  - python
+  module: qsharp.loader
+  name: estimate_resources(**kwargs) -> typing.Dict[str, int]
+  syntax:
+    content: estimate_resources(**kwargs) -> typing.Dict[str, int]
+  type: method
+  uid: qsharp.loader.QSharpCallable.estimate_resources
+- class: qsharp.loader.QSharpCallable
+  fullName: qsharp.loader.QSharpCallable.simulate
+  langs:
+  - python
+  module: qsharp.loader
+  name: simulate(**kwargs) -> typing.Any
+  summary: 'Executes this function or operation on the QuantumSimulator target
+
+    machine, returning its output as a Python object.'
+  syntax:
+    content: simulate(**kwargs) -> typing.Any
+  type: method
+  uid: qsharp.loader.QSharpCallable.simulate
+references:
+- fullName: qsharp.loader.QSharpCallable.estimate_resources
+  isExternal: false
+  name: estimate_resources(**kwargs) -> typing.Dict[str, int]
+  parent: qsharp.loader.QSharpCallable
+  uid: qsharp.loader.QSharpCallable.estimate_resources
+- fullName: qsharp.loader.QSharpCallable.simulate
+  isExternal: false
+  name: simulate(**kwargs) -> typing.Any
+  parent: qsharp.loader.QSharpCallable
+  uid: qsharp.loader.QSharpCallable.simulate

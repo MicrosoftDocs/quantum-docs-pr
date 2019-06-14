@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.Result.sample
+  - qsharp.Result.One
+  - qsharp.Result.Zero
+  class: qsharp.Result
+  fullName: qsharp.Result
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: builtins.int
+    - inheritance:
+      - type: builtins.object
+      type: enum.Enum
+    type: enum.IntEnum
+  langs:
+  - python
+  module: qsharp
+  name: Result
+  summary: An enumeration.
+  syntax: {}
+  type: class
+  uid: qsharp.Result
+- class: qsharp.Result
+  fullName: qsharp.Result.sample
+  langs:
+  - python
+  module: qsharp
+  name: sample()
+  syntax:
+    content: sample()
+    parameters:
+    - id: cls
+  type: method
+  uid: qsharp.Result.sample
+- class: qsharp.Result
+  fullName: qsharp.Result.One
+  langs:
+  - python
+  module: qsharp
+  name: One
+  syntax:
+    content: One = 1
+  type: attribute
+  uid: qsharp.Result.One
+- class: qsharp.Result
+  fullName: qsharp.Result.Zero
+  langs:
+  - python
+  module: qsharp
+  name: Zero
+  syntax:
+    content: Zero = 0
+  type: attribute
+  uid: qsharp.Result.Zero
+references:
+- fullName: qsharp.Result.sample
+  isExternal: false
+  name: sample()
+  parent: qsharp.Result
+  uid: qsharp.Result.sample
+- fullName: qsharp.Result.One
+  isExternal: false
+  name: One
+  parent: qsharp.Result
+  uid: qsharp.Result.One
+- fullName: qsharp.Result.Zero
+  isExternal: false
+  name: Zero
+  parent: qsharp.Result
+  uid: qsharp.Result.Zero

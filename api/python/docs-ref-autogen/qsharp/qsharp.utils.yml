@@ -1,0 +1,30 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.utils.log_messages
+  fullName: qsharp.utils
+  langs:
+  - python
+  module: qsharp.utils
+  name: utils
+  type: module
+  uid: qsharp.utils
+- fullName: qsharp.utils.log_messages
+  langs:
+  - python
+  module: qsharp.utils
+  name: 'log_messages(data, action: typing.Callable[str, NoneType] = <bound method
+    Logger.error of <Logger qsharp.utils (WARNING)>>)'
+  syntax:
+    content: 'log_messages(data, action: typing.Callable[str, NoneType] = <bound method
+      Logger.error of <Logger qsharp.utils (WARNING)>>)'
+  type: function
+  uid: qsharp.utils.log_messages
+references:
+- fullName: qsharp.utils.log_messages
+  isExternal: false
+  name: 'log_messages(data, action: typing.Callable[str, NoneType] = <bound method
+    Logger.error of <Logger qsharp.utils (WARNING)>>)'
+  parent: qsharp.utils
+  uid: qsharp.utils.log_messages

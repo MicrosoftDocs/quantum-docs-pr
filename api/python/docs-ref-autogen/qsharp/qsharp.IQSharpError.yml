@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children: []
+  class: qsharp.IQSharpError
+  fullName: qsharp.IQSharpError
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - inheritance:
+        - type: builtins.object
+        type: builtins.BaseException
+      type: builtins.Exception
+    type: builtins.RuntimeError
+  langs:
+  - python
+  module: qsharp
+  name: IQSharpError
+  syntax:
+    content: 'IQSharpError(iqsharp_errors: typing.List[str])'
+  type: class
+  uid: qsharp.IQSharpError
+references: []

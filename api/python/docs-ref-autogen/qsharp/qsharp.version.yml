@@ -1,0 +1,12 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children: []
+  fullName: qsharp.version
+  langs:
+  - python
+  module: qsharp.version
+  name: version
+  type: module
+  uid: qsharp.version
+references: []

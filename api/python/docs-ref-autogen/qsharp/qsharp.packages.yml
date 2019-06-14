@@ -1,0 +1,18 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.packages.Packages
+  fullName: qsharp.packages
+  langs:
+  - python
+  module: qsharp.packages
+  name: packages
+  type: module
+  uid: qsharp.packages
+references:
+- fullName: qsharp.packages.Packages
+  isExternal: false
+  name: Packages
+  parent: qsharp.packages
+  uid: qsharp.packages.Packages

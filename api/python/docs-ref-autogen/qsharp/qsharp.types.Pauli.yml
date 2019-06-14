@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.types.Pauli.sample
+  - qsharp.types.Pauli.I
+  - qsharp.types.Pauli.X
+  - qsharp.types.Pauli.Y
+  - qsharp.types.Pauli.Z
+  class: qsharp.types.Pauli
+  fullName: qsharp.types.Pauli
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: builtins.int
+    - inheritance:
+      - type: builtins.object
+      type: enum.Enum
+    type: enum.IntEnum
+  langs:
+  - python
+  module: qsharp.types
+  name: Pauli
+  summary: An enumeration.
+  syntax: {}
+  type: class
+  uid: qsharp.types.Pauli
+- class: qsharp.types.Pauli
+  fullName: qsharp.types.Pauli.sample
+  langs:
+  - python
+  module: qsharp.types
+  name: sample()
+  syntax:
+    content: sample()
+    parameters:
+    - id: cls
+  type: method
+  uid: qsharp.types.Pauli.sample
+- class: qsharp.types.Pauli
+  fullName: qsharp.types.Pauli.I
+  langs:
+  - python
+  module: qsharp.types
+  name: I
+  syntax:
+    content: I = 0
+  type: attribute
+  uid: qsharp.types.Pauli.I
+- class: qsharp.types.Pauli
+  fullName: qsharp.types.Pauli.X
+  langs:
+  - python
+  module: qsharp.types
+  name: X
+  syntax:
+    content: X = 1
+  type: attribute
+  uid: qsharp.types.Pauli.X
+- class: qsharp.types.Pauli
+  fullName: qsharp.types.Pauli.Y
+  langs:
+  - python
+  module: qsharp.types
+  name: Y
+  syntax:
+    content: Y = 2
+  type: attribute
+  uid: qsharp.types.Pauli.Y
+- class: qsharp.types.Pauli
+  fullName: qsharp.types.Pauli.Z
+  langs:
+  - python
+  module: qsharp.types
+  name: Z
+  syntax:
+    content: Z = 3
+  type: attribute
+  uid: qsharp.types.Pauli.Z
+references:
+- fullName: qsharp.types.Pauli.sample
+  isExternal: false
+  name: sample()
+  parent: qsharp.types.Pauli
+  uid: qsharp.types.Pauli.sample
+- fullName: qsharp.types.Pauli.I
+  isExternal: false
+  name: I
+  parent: qsharp.types.Pauli
+  uid: qsharp.types.Pauli.I
+- fullName: qsharp.types.Pauli.X
+  isExternal: false
+  name: X
+  parent: qsharp.types.Pauli
+  uid: qsharp.types.Pauli.X
+- fullName: qsharp.types.Pauli.Y
+  isExternal: false
+  name: Y
+  parent: qsharp.types.Pauli
+  uid: qsharp.types.Pauli.Y
+- fullName: qsharp.types.Pauli.Z
+  isExternal: false
+  name: Z
+  parent: qsharp.types.Pauli
+  uid: qsharp.types.Pauli.Z

@@ -1,0 +1,69 @@
+- items:
+  - items:
+    - items:
+      - items:
+        - name: qsharp.clients.iqsharp.AlreadyExecutingError
+          uid: qsharp.clients.iqsharp.AlreadyExecutingError
+        - name: qsharp.clients.iqsharp.IQSharpClient
+          uid: qsharp.clients.iqsharp.IQSharpClient
+        - name: qsharp.clients.iqsharp.IQSharpError
+          uid: qsharp.clients.iqsharp.IQSharpError
+        name: qsharp.clients.iqsharp
+        uid: qsharp.clients.iqsharp
+      - items:
+        - name: qsharp.clients.mock.MockClient
+          uid: qsharp.clients.mock.MockClient
+        name: qsharp.clients.mock
+        uid: qsharp.clients.mock
+      name: qsharp.clients
+      uid: qsharp.clients
+    - items:
+      - name: qsharp.loader.QSharpCallable
+        uid: qsharp.loader.QSharpCallable
+      - name: qsharp.loader.QSharpModule
+        uid: qsharp.loader.QSharpModule
+      - name: qsharp.loader.QSharpModuleFinder
+        uid: qsharp.loader.QSharpModuleFinder
+      - name: qsharp.loader.QSharpModuleLoader
+        uid: qsharp.loader.QSharpModuleLoader
+      name: qsharp.loader
+      uid: qsharp.loader
+    - items:
+      - name: qsharp.packages.Packages
+        uid: qsharp.packages.Packages
+      name: qsharp.packages
+      uid: qsharp.packages
+    - name: qsharp.serialization
+      uid: qsharp.serialization
+    - items:
+      - name: qsharp.tests.test_iqsharp
+        uid: qsharp.tests.test_iqsharp
+      - items:
+        - name: qsharp.tests.test_serialization.TestSerialization
+          uid: qsharp.tests.test_serialization.TestSerialization
+        name: qsharp.tests.test_serialization
+        uid: qsharp.tests.test_serialization
+      name: qsharp.tests
+      uid: qsharp.tests
+    - items:
+      - name: qsharp.types.Pauli
+        uid: qsharp.types.Pauli
+      - name: qsharp.types.Result
+        uid: qsharp.types.Result
+      name: qsharp.types
+      uid: qsharp.types
+    - name: qsharp.utils
+      uid: qsharp.utils
+    - name: qsharp.version
+      uid: qsharp.version
+    - name: qsharp.IQSharpError
+      uid: qsharp.IQSharpError
+    - name: qsharp.Pauli
+      uid: qsharp.Pauli
+    - name: qsharp.Result
+      uid: qsharp.Result
+    name: qsharp
+    uid: qsharp
+  name: qsharp
+  uid: project-qsharp
+

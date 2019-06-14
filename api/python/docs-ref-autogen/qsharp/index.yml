@@ -1,0 +1,17 @@
+### YamlMime:UniversalReference
+items:
+- children:
+  - qsharp
+  fullName: qsharp
+  kind: distribution
+  langs:
+  - python
+  name: qsharp
+  summary: ''
+  type: package
+  uid: project-qsharp
+references:
+- fullname: qsharp
+  isExternal: false
+  name: qsharp
+  uid: qsharp

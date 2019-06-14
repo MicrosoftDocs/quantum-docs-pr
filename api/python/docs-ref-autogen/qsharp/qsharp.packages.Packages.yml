@@ -1,0 +1,41 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.packages.Packages.add
+  class: qsharp.packages.Packages
+  fullName: qsharp.packages.Packages
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: qsharp.packages
+  name: Packages
+  summary: 'Represents the list of packages loaded into the current Q# session, and
+
+    allows for adding new packages from NuGet.org or any other configured feeds.'
+  syntax:
+    content: Packages(client)
+  type: class
+  uid: qsharp.packages.Packages
+- class: qsharp.packages.Packages
+  fullName: qsharp.packages.Packages.add
+  langs:
+  - python
+  module: qsharp.packages
+  name: 'add(package_name: str) -> None'
+  summary: 'Adds a NuGet package with the given package name to the current Q#
+
+    session, downloading the package from NuGet.org or any other configured
+
+    feeds as necessary.'
+  syntax:
+    content: 'add(package_name: str) -> None'
+  type: method
+  uid: qsharp.packages.Packages.add
+references:
+- fullName: qsharp.packages.Packages.add
+  isExternal: false
+  name: 'add(package_name: str) -> None'
+  parent: qsharp.packages.Packages
+  uid: qsharp.packages.Packages.add

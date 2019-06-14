@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.types.Pauli
+  - qsharp.types.Result
+  fullName: qsharp.types
+  langs:
+  - python
+  module: qsharp.types
+  name: types
+  type: module
+  uid: qsharp.types
+references:
+- fullName: qsharp.types.Pauli
+  isExternal: false
+  name: Pauli
+  parent: qsharp.types
+  uid: qsharp.types.Pauli
+- fullName: qsharp.types.Result
+  isExternal: false
+  name: Result
+  parent: qsharp.types
+  uid: qsharp.types.Result

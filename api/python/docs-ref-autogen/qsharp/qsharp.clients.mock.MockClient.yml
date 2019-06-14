@@ -1,0 +1,251 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.clients.mock.MockClient.add_package
+  - qsharp.clients.mock.MockClient.check_status
+  - qsharp.clients.mock.MockClient.compile
+  - qsharp.clients.mock.MockClient.component_versions
+  - qsharp.clients.mock.MockClient.estimate
+  - qsharp.clients.mock.MockClient.get_available_operations
+  - qsharp.clients.mock.MockClient.get_operation_metadata
+  - qsharp.clients.mock.MockClient.get_packages
+  - qsharp.clients.mock.MockClient.get_workspace_operations
+  - qsharp.clients.mock.MockClient.is_ready
+  - qsharp.clients.mock.MockClient.reload
+  - qsharp.clients.mock.MockClient.simulate
+  - qsharp.clients.mock.MockClient.start
+  - qsharp.clients.mock.MockClient.stop
+  class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: MockClient
+  summary: ''
+  syntax:
+    content: MockClient()
+  type: class
+  uid: qsharp.clients.mock.MockClient
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.add_package
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: 'add_package(name: str) -> None'
+  syntax:
+    content: 'add_package(name: str) -> None'
+  type: method
+  uid: qsharp.clients.mock.MockClient.add_package
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.check_status
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: check_status()
+  syntax:
+    content: check_status()
+    parameters: []
+  type: method
+  uid: qsharp.clients.mock.MockClient.check_status
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.compile
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: compile(body)
+  syntax:
+    content: compile(body)
+    parameters:
+    - id: body
+  type: method
+  uid: qsharp.clients.mock.MockClient.compile
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.component_versions
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: component_versions(**kwargs) -> typing.Dict[str, distutils.version.LooseVersion]
+  summary: 'Returns a dictionary from components of the IQ# kernel to their
+
+    versions.'
+  syntax:
+    content: component_versions(**kwargs) -> typing.Dict[str, distutils.version.LooseVersion]
+  type: method
+  uid: qsharp.clients.mock.MockClient.component_versions
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.estimate
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: estimate(op, **params) -> typing.Dict[str, int]
+  syntax:
+    content: estimate(op, **params) -> typing.Dict[str, int]
+  type: method
+  uid: qsharp.clients.mock.MockClient.estimate
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.get_available_operations
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: get_available_operations() -> typing.List[str]
+  syntax:
+    content: get_available_operations() -> typing.List[str]
+  type: method
+  uid: qsharp.clients.mock.MockClient.get_available_operations
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.get_operation_metadata
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: 'get_operation_metadata(name: str) -> typing.Dict[str, typing.Any]'
+  syntax:
+    content: 'get_operation_metadata(name: str) -> typing.Dict[str, typing.Any]'
+  type: method
+  uid: qsharp.clients.mock.MockClient.get_operation_metadata
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.get_packages
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: get_packages() -> typing.List[str]
+  syntax:
+    content: get_packages() -> typing.List[str]
+  type: method
+  uid: qsharp.clients.mock.MockClient.get_packages
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.get_workspace_operations
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: get_workspace_operations() -> typing.List[str]
+  syntax:
+    content: get_workspace_operations() -> typing.List[str]
+  type: method
+  uid: qsharp.clients.mock.MockClient.get_workspace_operations
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.is_ready
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: is_ready()
+  syntax:
+    content: is_ready()
+    parameters: []
+  type: method
+  uid: qsharp.clients.mock.MockClient.is_ready
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.reload
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: reload() -> None
+  syntax:
+    content: reload() -> None
+  type: method
+  uid: qsharp.clients.mock.MockClient.reload
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.simulate
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: simulate(op, **params) -> typing.Any
+  syntax:
+    content: simulate(op, **params) -> typing.Any
+  type: method
+  uid: qsharp.clients.mock.MockClient.simulate
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.start
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: start()
+  syntax:
+    content: start()
+    parameters: []
+  type: method
+  uid: qsharp.clients.mock.MockClient.start
+- class: qsharp.clients.mock.MockClient
+  fullName: qsharp.clients.mock.MockClient.stop
+  langs:
+  - python
+  module: qsharp.clients.mock
+  name: stop()
+  syntax:
+    content: stop()
+    parameters: []
+  type: method
+  uid: qsharp.clients.mock.MockClient.stop
+references:
+- fullName: qsharp.clients.mock.MockClient.add_package
+  isExternal: false
+  name: 'add_package(name: str) -> None'
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.add_package
+- fullName: qsharp.clients.mock.MockClient.check_status
+  isExternal: false
+  name: check_status()
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.check_status
+- fullName: qsharp.clients.mock.MockClient.compile
+  isExternal: false
+  name: compile(body)
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.compile
+- fullName: qsharp.clients.mock.MockClient.component_versions
+  isExternal: false
+  name: component_versions(**kwargs) -> typing.Dict[str, distutils.version.LooseVersion]
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.component_versions
+- fullName: qsharp.clients.mock.MockClient.estimate
+  isExternal: false
+  name: estimate(op, **params) -> typing.Dict[str, int]
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.estimate
+- fullName: qsharp.clients.mock.MockClient.get_available_operations
+  isExternal: false
+  name: get_available_operations() -> typing.List[str]
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.get_available_operations
+- fullName: qsharp.clients.mock.MockClient.get_operation_metadata
+  isExternal: false
+  name: 'get_operation_metadata(name: str) -> typing.Dict[str, typing.Any]'
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.get_operation_metadata
+- fullName: qsharp.clients.mock.MockClient.get_packages
+  isExternal: false
+  name: get_packages() -> typing.List[str]
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.get_packages
+- fullName: qsharp.clients.mock.MockClient.get_workspace_operations
+  isExternal: false
+  name: get_workspace_operations() -> typing.List[str]
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.get_workspace_operations
+- fullName: qsharp.clients.mock.MockClient.is_ready
+  isExternal: false
+  name: is_ready()
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.is_ready
+- fullName: qsharp.clients.mock.MockClient.reload
+  isExternal: false
+  name: reload() -> None
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.reload
+- fullName: qsharp.clients.mock.MockClient.simulate
+  isExternal: false
+  name: simulate(op, **params) -> typing.Any
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.simulate
+- fullName: qsharp.clients.mock.MockClient.start
+  isExternal: false
+  name: start()
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.start
+- fullName: qsharp.clients.mock.MockClient.stop
+  isExternal: false
+  name: stop()
+  parent: qsharp.clients.mock.MockClient
+  uid: qsharp.clients.mock.MockClient.stop

@@ -1,0 +1,18 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.tests.test_serialization.TestSerialization
+  fullName: qsharp.tests.test_serialization
+  langs:
+  - python
+  module: qsharp.tests.test_serialization
+  name: test_serialization
+  type: module
+  uid: qsharp.tests.test_serialization
+references:
+- fullName: qsharp.tests.test_serialization.TestSerialization
+  isExternal: false
+  name: TestSerialization
+  parent: qsharp.tests.test_serialization
+  uid: qsharp.tests.test_serialization.TestSerialization

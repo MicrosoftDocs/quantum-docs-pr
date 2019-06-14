@@ -1,0 +1,22 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children: []
+  class: qsharp.clients.iqsharp.AlreadyExecutingError
+  fullName: qsharp.clients.iqsharp.AlreadyExecutingError
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - inheritance:
+        - type: builtins.object
+        type: builtins.BaseException
+      type: builtins.Exception
+    type: builtins.OSError
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: AlreadyExecutingError
+  syntax: {}
+  type: class
+  uid: qsharp.clients.iqsharp.AlreadyExecutingError
+references: []

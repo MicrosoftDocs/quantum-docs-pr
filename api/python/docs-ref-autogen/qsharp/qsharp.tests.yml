@@ -1,0 +1,25 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.tests.test_iqsharp
+  - qsharp.tests.test_serialization
+  fullName: qsharp.tests
+  kind: import
+  langs:
+  - python
+  module: qsharp.tests
+  name: tests
+  type: package
+  uid: qsharp.tests
+references:
+- fullName: qsharp.tests.test_iqsharp
+  isExternal: false
+  name: test_iqsharp
+  parent: qsharp.tests
+  uid: qsharp.tests.test_iqsharp
+- fullName: qsharp.tests.test_serialization
+  isExternal: false
+  name: test_serialization
+  parent: qsharp.tests
+  uid: qsharp.tests.test_serialization

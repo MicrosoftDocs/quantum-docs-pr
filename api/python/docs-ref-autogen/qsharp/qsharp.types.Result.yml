@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.types.Result.sample
+  - qsharp.types.Result.One
+  - qsharp.types.Result.Zero
+  class: qsharp.types.Result
+  fullName: qsharp.types.Result
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: builtins.int
+    - inheritance:
+      - type: builtins.object
+      type: enum.Enum
+    type: enum.IntEnum
+  langs:
+  - python
+  module: qsharp.types
+  name: Result
+  summary: An enumeration.
+  syntax: {}
+  type: class
+  uid: qsharp.types.Result
+- class: qsharp.types.Result
+  fullName: qsharp.types.Result.sample
+  langs:
+  - python
+  module: qsharp.types
+  name: sample()
+  syntax:
+    content: sample()
+    parameters:
+    - id: cls
+  type: method
+  uid: qsharp.types.Result.sample
+- class: qsharp.types.Result
+  fullName: qsharp.types.Result.One
+  langs:
+  - python
+  module: qsharp.types
+  name: One
+  syntax:
+    content: One = 1
+  type: attribute
+  uid: qsharp.types.Result.One
+- class: qsharp.types.Result
+  fullName: qsharp.types.Result.Zero
+  langs:
+  - python
+  module: qsharp.types
+  name: Zero
+  syntax:
+    content: Zero = 0
+  type: attribute
+  uid: qsharp.types.Result.Zero
+references:
+- fullName: qsharp.types.Result.sample
+  isExternal: false
+  name: sample()
+  parent: qsharp.types.Result
+  uid: qsharp.types.Result.sample
+- fullName: qsharp.types.Result.One
+  isExternal: false
+  name: One
+  parent: qsharp.types.Result
+  uid: qsharp.types.Result.One
+- fullName: qsharp.types.Result.Zero
+  isExternal: false
+  name: Zero
+  parent: qsharp.types.Result
+  uid: qsharp.types.Result.Zero

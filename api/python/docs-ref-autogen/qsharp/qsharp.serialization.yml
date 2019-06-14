@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.serialization.map_tuples
+  - qsharp.serialization.unmap_tuples
+  fullName: qsharp.serialization
+  langs:
+  - python
+  module: qsharp.serialization
+  name: serialization
+  type: module
+  uid: qsharp.serialization
+- fullName: qsharp.serialization.map_tuples
+  langs:
+  - python
+  module: qsharp.serialization
+  name: map_tuples(obj)
+  summary: 'Given a Python object to be serialized, converts any tuples to dictionaries
+
+    of a form expected by the Q# backend.'
+  syntax:
+    content: map_tuples(obj)
+    parameters:
+    - id: obj
+  type: function
+  uid: qsharp.serialization.map_tuples
+- fullName: qsharp.serialization.unmap_tuples
+  langs:
+  - python
+  module: qsharp.serialization
+  name: unmap_tuples(obj)
+  summary: 'Given a Python object deserialized from JSON, converts any dictionaries
+    that
+
+    represent tuples back to Python tuples. Dictionaries are considered to be
+
+    tuples if they either contain a key *@type* with the value *tuple*, or if
+
+    they have a key *item1*.'
+  syntax:
+    content: unmap_tuples(obj)
+    parameters:
+    - id: obj
+  type: function
+  uid: qsharp.serialization.unmap_tuples
+references:
+- fullName: qsharp.serialization.map_tuples
+  isExternal: false
+  name: map_tuples(obj)
+  parent: qsharp.serialization
+  uid: qsharp.serialization.map_tuples
+- fullName: qsharp.serialization.unmap_tuples
+  isExternal: false
+  name: unmap_tuples(obj)
+  parent: qsharp.serialization
+  uid: qsharp.serialization.unmap_tuples

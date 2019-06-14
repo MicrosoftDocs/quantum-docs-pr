@@ -1,0 +1,30 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.clients.iqsharp.AlreadyExecutingError
+  - qsharp.clients.iqsharp.IQSharpClient
+  - qsharp.clients.iqsharp.IQSharpError
+  fullName: qsharp.clients.iqsharp
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: iqsharp
+  type: module
+  uid: qsharp.clients.iqsharp
+references:
+- fullName: qsharp.clients.iqsharp.AlreadyExecutingError
+  isExternal: false
+  name: AlreadyExecutingError
+  parent: qsharp.clients.iqsharp
+  uid: qsharp.clients.iqsharp.AlreadyExecutingError
+- fullName: qsharp.clients.iqsharp.IQSharpClient
+  isExternal: false
+  name: IQSharpClient
+  parent: qsharp.clients.iqsharp
+  uid: qsharp.clients.iqsharp.IQSharpClient
+- fullName: qsharp.clients.iqsharp.IQSharpError
+  isExternal: false
+  name: IQSharpError
+  parent: qsharp.clients.iqsharp
+  uid: qsharp.clients.iqsharp.IQSharpError

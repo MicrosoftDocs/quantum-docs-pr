@@ -1,0 +1,122 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.tests.test_serialization.TestSerialization.test_map_deep_tuple
+  - qsharp.tests.test_serialization.TestSerialization.test_map_shallow_tuple
+  - qsharp.tests.test_serialization.TestSerialization.test_roundtrip_deep_tuple
+  - qsharp.tests.test_serialization.TestSerialization.test_roundtrip_dict
+  - qsharp.tests.test_serialization.TestSerialization.test_roundtrip_shallow_tuple
+  - qsharp.tests.test_serialization.TestSerialization.test_roundtrip_very_deep_tuple
+  class: qsharp.tests.test_serialization.TestSerialization
+  fullName: qsharp.tests.test_serialization.TestSerialization
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: unittest.case.TestCase
+  langs:
+  - python
+  module: qsharp.tests.test_serialization
+  name: TestSerialization
+  summary: ''
+  syntax:
+    content: TestSerialization(methodName='runTest')
+  type: class
+  uid: qsharp.tests.test_serialization.TestSerialization
+- class: qsharp.tests.test_serialization.TestSerialization
+  fullName: qsharp.tests.test_serialization.TestSerialization.test_map_deep_tuple
+  langs:
+  - python
+  module: qsharp.tests.test_serialization
+  name: test_map_deep_tuple()
+  syntax:
+    content: test_map_deep_tuple()
+    parameters: []
+  type: method
+  uid: qsharp.tests.test_serialization.TestSerialization.test_map_deep_tuple
+- class: qsharp.tests.test_serialization.TestSerialization
+  fullName: qsharp.tests.test_serialization.TestSerialization.test_map_shallow_tuple
+  langs:
+  - python
+  module: qsharp.tests.test_serialization
+  name: test_map_shallow_tuple()
+  syntax:
+    content: test_map_shallow_tuple()
+    parameters: []
+  type: method
+  uid: qsharp.tests.test_serialization.TestSerialization.test_map_shallow_tuple
+- class: qsharp.tests.test_serialization.TestSerialization
+  fullName: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_deep_tuple
+  langs:
+  - python
+  module: qsharp.tests.test_serialization
+  name: test_roundtrip_deep_tuple()
+  syntax:
+    content: test_roundtrip_deep_tuple()
+    parameters: []
+  type: method
+  uid: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_deep_tuple
+- class: qsharp.tests.test_serialization.TestSerialization
+  fullName: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_dict
+  langs:
+  - python
+  module: qsharp.tests.test_serialization
+  name: test_roundtrip_dict()
+  syntax:
+    content: test_roundtrip_dict()
+    parameters: []
+  type: method
+  uid: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_dict
+- class: qsharp.tests.test_serialization.TestSerialization
+  fullName: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_shallow_tuple
+  langs:
+  - python
+  module: qsharp.tests.test_serialization
+  name: test_roundtrip_shallow_tuple()
+  syntax:
+    content: test_roundtrip_shallow_tuple()
+    parameters: []
+  type: method
+  uid: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_shallow_tuple
+- class: qsharp.tests.test_serialization.TestSerialization
+  fullName: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_very_deep_tuple
+  langs:
+  - python
+  module: qsharp.tests.test_serialization
+  name: test_roundtrip_very_deep_tuple()
+  syntax:
+    content: test_roundtrip_very_deep_tuple()
+    parameters: []
+  type: method
+  uid: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_very_deep_tuple
+references:
+- fullName: qsharp.tests.test_serialization.TestSerialization.test_map_deep_tuple
+  isExternal: false
+  name: test_map_deep_tuple()
+  parent: qsharp.tests.test_serialization.TestSerialization
+  uid: qsharp.tests.test_serialization.TestSerialization.test_map_deep_tuple
+- fullName: qsharp.tests.test_serialization.TestSerialization.test_map_shallow_tuple
+  isExternal: false
+  name: test_map_shallow_tuple()
+  parent: qsharp.tests.test_serialization.TestSerialization
+  uid: qsharp.tests.test_serialization.TestSerialization.test_map_shallow_tuple
+- fullName: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_deep_tuple
+  isExternal: false
+  name: test_roundtrip_deep_tuple()
+  parent: qsharp.tests.test_serialization.TestSerialization
+  uid: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_deep_tuple
+- fullName: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_dict
+  isExternal: false
+  name: test_roundtrip_dict()
+  parent: qsharp.tests.test_serialization.TestSerialization
+  uid: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_dict
+- fullName: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_shallow_tuple
+  isExternal: false
+  name: test_roundtrip_shallow_tuple()
+  parent: qsharp.tests.test_serialization.TestSerialization
+  uid: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_shallow_tuple
+- fullName: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_very_deep_tuple
+  isExternal: false
+  name: test_roundtrip_very_deep_tuple()
+  parent: qsharp.tests.test_serialization.TestSerialization
+  uid: qsharp.tests.test_serialization.TestSerialization.test_roundtrip_very_deep_tuple

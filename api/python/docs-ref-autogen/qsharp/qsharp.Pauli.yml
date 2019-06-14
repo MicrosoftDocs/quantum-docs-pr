@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.Pauli.sample
+  - qsharp.Pauli.I
+  - qsharp.Pauli.X
+  - qsharp.Pauli.Y
+  - qsharp.Pauli.Z
+  class: qsharp.Pauli
+  fullName: qsharp.Pauli
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: builtins.int
+    - inheritance:
+      - type: builtins.object
+      type: enum.Enum
+    type: enum.IntEnum
+  langs:
+  - python
+  module: qsharp
+  name: Pauli
+  summary: An enumeration.
+  syntax: {}
+  type: class
+  uid: qsharp.Pauli
+- class: qsharp.Pauli
+  fullName: qsharp.Pauli.sample
+  langs:
+  - python
+  module: qsharp
+  name: sample()
+  syntax:
+    content: sample()
+    parameters:
+    - id: cls
+  type: method
+  uid: qsharp.Pauli.sample
+- class: qsharp.Pauli
+  fullName: qsharp.Pauli.I
+  langs:
+  - python
+  module: qsharp
+  name: I
+  syntax:
+    content: I = 0
+  type: attribute
+  uid: qsharp.Pauli.I
+- class: qsharp.Pauli
+  fullName: qsharp.Pauli.X
+  langs:
+  - python
+  module: qsharp
+  name: X
+  syntax:
+    content: X = 1
+  type: attribute
+  uid: qsharp.Pauli.X
+- class: qsharp.Pauli
+  fullName: qsharp.Pauli.Y
+  langs:
+  - python
+  module: qsharp
+  name: Y
+  syntax:
+    content: Y = 2
+  type: attribute
+  uid: qsharp.Pauli.Y
+- class: qsharp.Pauli
+  fullName: qsharp.Pauli.Z
+  langs:
+  - python
+  module: qsharp
+  name: Z
+  syntax:
+    content: Z = 3
+  type: attribute
+  uid: qsharp.Pauli.Z
+references:
+- fullName: qsharp.Pauli.sample
+  isExternal: false
+  name: sample()
+  parent: qsharp.Pauli
+  uid: qsharp.Pauli.sample
+- fullName: qsharp.Pauli.I
+  isExternal: false
+  name: I
+  parent: qsharp.Pauli
+  uid: qsharp.Pauli.I
+- fullName: qsharp.Pauli.X
+  isExternal: false
+  name: X
+  parent: qsharp.Pauli
+  uid: qsharp.Pauli.X
+- fullName: qsharp.Pauli.Y
+  isExternal: false
+  name: Y
+  parent: qsharp.Pauli
+  uid: qsharp.Pauli.Y
+- fullName: qsharp.Pauli.Z
+  isExternal: false
+  name: Z
+  parent: qsharp.Pauli
+  uid: qsharp.Pauli.Z

@@ -1,0 +1,283 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - qsharp.clients.iqsharp.IQSharpClient.add_package
+  - qsharp.clients.iqsharp.IQSharpClient.check_status
+  - qsharp.clients.iqsharp.IQSharpClient.compile
+  - qsharp.clients.iqsharp.IQSharpClient.component_versions
+  - qsharp.clients.iqsharp.IQSharpClient.estimate
+  - qsharp.clients.iqsharp.IQSharpClient.get_available_operations
+  - qsharp.clients.iqsharp.IQSharpClient.get_operation_metadata
+  - qsharp.clients.iqsharp.IQSharpClient.get_packages
+  - qsharp.clients.iqsharp.IQSharpClient.get_workspace_operations
+  - qsharp.clients.iqsharp.IQSharpClient.is_ready
+  - qsharp.clients.iqsharp.IQSharpClient.reload
+  - qsharp.clients.iqsharp.IQSharpClient.simulate
+  - qsharp.clients.iqsharp.IQSharpClient.start
+  - qsharp.clients.iqsharp.IQSharpClient.stop
+  - qsharp.clients.iqsharp.IQSharpClient.kernel_client
+  - qsharp.clients.iqsharp.IQSharpClient.kernel_manager
+  class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: IQSharpClient
+  summary: ''
+  syntax:
+    content: IQSharpClient()
+  type: class
+  uid: qsharp.clients.iqsharp.IQSharpClient
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.add_package
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: 'add_package(name: str) -> None'
+  syntax:
+    content: 'add_package(name: str) -> None'
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.add_package
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.check_status
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: check_status()
+  syntax:
+    content: check_status()
+    parameters: []
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.check_status
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.compile
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: compile(body)
+  syntax:
+    content: compile(body)
+    parameters:
+    - id: body
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.compile
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.component_versions
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: component_versions(**kwargs) -> typing.Dict[str, distutils.version.LooseVersion]
+  summary: 'Returns a dictionary from components of the IQ# kernel to their
+
+    versions.'
+  syntax:
+    content: component_versions(**kwargs) -> typing.Dict[str, distutils.version.LooseVersion]
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.component_versions
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.estimate
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: estimate(op, **params) -> typing.Dict[str, int]
+  syntax:
+    content: estimate(op, **params) -> typing.Dict[str, int]
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.estimate
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.get_available_operations
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: get_available_operations() -> typing.List[str]
+  syntax:
+    content: get_available_operations() -> typing.List[str]
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.get_available_operations
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.get_operation_metadata
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: 'get_operation_metadata(name: str) -> typing.Dict[str, typing.Any]'
+  syntax:
+    content: 'get_operation_metadata(name: str) -> typing.Dict[str, typing.Any]'
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.get_operation_metadata
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.get_packages
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: get_packages() -> typing.List[str]
+  syntax:
+    content: get_packages() -> typing.List[str]
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.get_packages
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.get_workspace_operations
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: get_workspace_operations() -> typing.List[str]
+  syntax:
+    content: get_workspace_operations() -> typing.List[str]
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.get_workspace_operations
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.is_ready
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: is_ready()
+  syntax:
+    content: is_ready()
+    parameters: []
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.is_ready
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.reload
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: reload() -> None
+  syntax:
+    content: reload() -> None
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.reload
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.simulate
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: simulate(op, **params) -> typing.Any
+  syntax:
+    content: simulate(op, **params) -> typing.Any
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.simulate
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.start
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: start()
+  syntax:
+    content: start()
+    parameters: []
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.start
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.stop
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: stop()
+  syntax:
+    content: stop()
+    parameters: []
+  type: method
+  uid: qsharp.clients.iqsharp.IQSharpClient.stop
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.kernel_client
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: kernel_client
+  syntax:
+    content: kernel_client = None
+  type: attribute
+  uid: qsharp.clients.iqsharp.IQSharpClient.kernel_client
+- class: qsharp.clients.iqsharp.IQSharpClient
+  fullName: qsharp.clients.iqsharp.IQSharpClient.kernel_manager
+  langs:
+  - python
+  module: qsharp.clients.iqsharp
+  name: kernel_manager
+  syntax:
+    content: kernel_manager = None
+  type: attribute
+  uid: qsharp.clients.iqsharp.IQSharpClient.kernel_manager
+references:
+- fullName: qsharp.clients.iqsharp.IQSharpClient.add_package
+  isExternal: false
+  name: 'add_package(name: str) -> None'
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.add_package
+- fullName: qsharp.clients.iqsharp.IQSharpClient.check_status
+  isExternal: false
+  name: check_status()
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.check_status
+- fullName: qsharp.clients.iqsharp.IQSharpClient.compile
+  isExternal: false
+  name: compile(body)
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.compile
+- fullName: qsharp.clients.iqsharp.IQSharpClient.component_versions
+  isExternal: false
+  name: component_versions(**kwargs) -> typing.Dict[str, distutils.version.LooseVersion]
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.component_versions
+- fullName: qsharp.clients.iqsharp.IQSharpClient.estimate
+  isExternal: false
+  name: estimate(op, **params) -> typing.Dict[str, int]
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.estimate
+- fullName: qsharp.clients.iqsharp.IQSharpClient.get_available_operations
+  isExternal: false
+  name: get_available_operations() -> typing.List[str]
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.get_available_operations
+- fullName: qsharp.clients.iqsharp.IQSharpClient.get_operation_metadata
+  isExternal: false
+  name: 'get_operation_metadata(name: str) -> typing.Dict[str, typing.Any]'
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.get_operation_metadata
+- fullName: qsharp.clients.iqsharp.IQSharpClient.get_packages
+  isExternal: false
+  name: get_packages() -> typing.List[str]
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.get_packages
+- fullName: qsharp.clients.iqsharp.IQSharpClient.get_workspace_operations
+  isExternal: false
+  name: get_workspace_operations() -> typing.List[str]
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.get_workspace_operations
+- fullName: qsharp.clients.iqsharp.IQSharpClient.is_ready
+  isExternal: false
+  name: is_ready()
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.is_ready
+- fullName: qsharp.clients.iqsharp.IQSharpClient.reload
+  isExternal: false
+  name: reload() -> None
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.reload
+- fullName: qsharp.clients.iqsharp.IQSharpClient.simulate
+  isExternal: false
+  name: simulate(op, **params) -> typing.Any
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.simulate
+- fullName: qsharp.clients.iqsharp.IQSharpClient.start
+  isExternal: false
+  name: start()
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.start
+- fullName: qsharp.clients.iqsharp.IQSharpClient.stop
+  isExternal: false
+  name: stop()
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.stop
+- fullName: qsharp.clients.iqsharp.IQSharpClient.kernel_client
+  isExternal: false
+  name: kernel_client
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.kernel_client
+- fullName: qsharp.clients.iqsharp.IQSharpClient.kernel_manager
+  isExternal: false
+  name: kernel_manager
+  parent: qsharp.clients.iqsharp.IQSharpClient
+  uid: qsharp.clients.iqsharp.IQSharpClient.kernel_manager

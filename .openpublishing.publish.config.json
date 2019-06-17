@@ -48,7 +48,8 @@
       "type_mapping": {
         "Conceptual": "Content",
         "QSharpNamespace": "Content",
-        "QSharpType": "Content"
+        "QSharpType": "Content",
+        "UniversalReference": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",

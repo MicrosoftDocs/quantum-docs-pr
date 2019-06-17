@@ -6,3 +6,6 @@
     href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators
   - name: Quantum chemistry
     href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry
+- name: Q# Python library reference
+  items:
+    href: https://review.docs.microsoft.com/en-us/python/qsharp/index?branch=master

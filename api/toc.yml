@@ -8,4 +8,5 @@
     href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry
 - name: Q# Python library reference
   items:
+  - name: Q# Python
     href: https://review.docs.microsoft.com/en-us/python/qsharp/index?branch=master

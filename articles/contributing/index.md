@@ -51,13 +51,16 @@ Each of these different pieces finds its home on a different repository, so the 
 - [**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): Self-paced programming exercises for learning quantum computing and the Q# programming language.
 - [**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): The Q# compiler, Visual Studio extension, and Visual Studio Code extension.
 - [**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime): Simulation framework, code generation, and simulation target machines for the Quantum Development Kit.
-- [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Jupyter kernel and Python host functionality for Q#.
+- [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Jupyter kernel and Python host functionality for Q#, as well as Docker images for using IQ# in cloud environments.
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): Source code for the documentation published at https://docs.microsoft.com/quantum.
-
-There are also a few other, more specialized repositories focusing on different events, or on auxillary functionality related to the Quantum Development Kit.
 
 > [!NOTE]
 > We unfortunately cannot accept code and documentation contributions on the [**Microsoft/Quantum-NC**](https://github.com/Microsoft/Quantum-NC) repository at this time, but we still very much appreciate bug reports.
+
+There are also a few other, more specialized repositories focusing on different events, or on auxillary functionality related to the Quantum Development Kit.
+
+- [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): LaTeX formatting support for Q# syntax.
+- [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): IQ# Notebook for Deutsch–Jozsa tutorial given at the 2019 intern workshop.
 
 ## Next steps ##
 

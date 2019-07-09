@@ -55,7 +55,7 @@ Each of these different pieces finds its home on a different repository, so the 
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): Source code for the documentation published at https://docs.microsoft.com/quantum.
 
 > [!NOTE]
-> We unfortunately cannot accept code and documentation contributions on the [**Microsoft/Quantum-NC**](https://github.com/Microsoft/Quantum-NC) repository at this time, but we still very much appreciate bug reports.
+> We unfortunately cannot accept code and documentation contributions on the [**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC) repository at this time, but we still very much appreciate bug reports.
 
 There are also a few other, more specialized repositories focusing on different events, or on auxillary functionality related to the Quantum Development Kit.
 

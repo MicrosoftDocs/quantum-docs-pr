@@ -17,7 +17,7 @@ To get started with the `qsharp` package, you'll need the following prerequisite
 - IQ#.
 - Python 3.6 or later,
 
-Make sure you have followed the installation steps in the [getting started guide](xref:microsoft.quantum.install) for IQ#.
+[!INCLUDE [Installing IQ#](installingiqsharp.md)]
 
 To install Python, we recommend using the Anaconda distribution of Python.
 Please see https://www.anaconda.com/distribution/ for more details.

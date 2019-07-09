@@ -17,7 +17,7 @@ To get started you need:
 - IQ#.
 - Jupyter
 
-Make sure you have followed the installation steps in the [getting started guide](xref:microsoft.quantum.install) for IQ#.
+[!INCLUDE [Installing IQ#](installingiqsharp.md)]
 
 To install Jupyter, follow the instructions provided at https://jupyter.org/install.
 

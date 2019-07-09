@@ -30,7 +30,7 @@ If you'd like more general information about Microsoft's quantum computing initi
 
 ## Microsoft Quantum Development Kit Components
 
-The Quantum Development Kit preview provides a complete quantum program development and simulation environment that contains the following components.  To find the open-source GitHub source code repository for these components, see [Contributing to the Quantum Development  Kit](xref:microsoft.com.contributing).
+The Quantum Development Kit preview provides a complete quantum program development and simulation environment that contains the following components.  To find the open-source GitHub source code repository for these components, see [Contributing to the Quantum Development Kit](xref:microsoft.quantum.contributing).
 
 | Component | Function |
 | --------- | -------- |

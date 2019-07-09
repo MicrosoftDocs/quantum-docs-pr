@@ -42,7 +42,7 @@ The Quantum Development Kit preview provides a complete quantum program developm
 | Visual Studio extension | This extension contains templates for Q# files and projects as well as syntax highlighting and IntelliSense support. |
 | Visual Studio Code extension | This extension contains syntax highlighting, as well as code snippets for Q# and IntelliSense support. |
 | `qsharp` for Python | The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python. |
-|  IQ# | IQ# (pronounced i-q-sharp) is an extension to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations. |
+|  IQ# | IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations. |
 
 ## Quantum Development Kit Documentation
 

@@ -17,7 +17,7 @@ To get started with the `qsharp` package, you'll need the following prerequisite
 - IQ#.
 - Python 3.6 or later,
 
-[!INCLUDE [Installing IQ#](../installingiqsharp.md)]
+[!INCLUDE [Installing IQ#](install-guide/installingiqsharp.md)]
 
 To install Python, we recommend using the Anaconda distribution of Python.
 Please see https://www.anaconda.com/distribution/ for more details.

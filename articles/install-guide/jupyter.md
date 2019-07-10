@@ -17,7 +17,7 @@ To get started you need:
 - IQ#.
 - Jupyter
 
-[!INCLUDE [Installing IQ#](../installingiqsharp.md)]
+[!INCLUDE [Installing IQ#](install-guide/installingiqsharp.md)]
 
 To install Jupyter, follow the instructions provided at https://jupyter.org/install.
 

@@ -9,7 +9,7 @@ uid: microsoft.quantum.install
 
 # Getting Started with the Microsoft Quantum Development Kit #
 
-## Choose the environment that's right for you ##
+## Choose the Environment That's Right for You ##
 
 ### Jupyter Notebooks ###
 
@@ -41,7 +41,7 @@ Then, check our [Quickstart guide for step-by-step](quickstart?tabs=tabid-vscode
 
 If you are a Python user, check out our [Getting Started with Python and the Quantum Development Kit guide](xref:microsoft.quantum.install.python).
 
-## Learning Quantum Computing with Q# ##
+## Learn Quantum Computing with Q# ##
 
 * [Quantum Katas](https://github.com/Microsoft/QuantumKatas)
 * [Samples](https://github.com/Microsoft/Quantum)

@@ -551,7 +551,7 @@ then the inferred start value
 
 If the range end value is omitted, 
 then the inferred end value 
-- is assumed to be the length of sliced array minus one if no step is specified or the specified step is positive, and 
+- is the length of sliced array minus one if no step is specified or the specified step is positive, and 
 - is assumed to be zero if the specified step is negative. 
 
 ```qsharp

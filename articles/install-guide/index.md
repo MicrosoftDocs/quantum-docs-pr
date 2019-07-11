@@ -28,7 +28,7 @@ To run these locally, install IQ# on your machine (see below) and take a look at
 
 ### Visual Studio Code ###
 
- If you are already a Visual Studio Code user, you can install the extension to get started developing Q# in Visual Studio Code.
+ If you are already a Visual Studio Code user, start by installing the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) by following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download). Then you can install the extension to get started developing Q# in Visual Studio Code.
 > [!div class="button"]
 > [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
 
@@ -38,13 +38,14 @@ To run these locally, install IQ# on your machine (see below) and take a look at
 * [Samples](https://github.com/Microsoft/Quantum)
 * [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro)
 * [Microsoft Quantum Blog](https://cloudblogs.microsoft.com/quantum/?ext)
+* [Microsoft Quantum Developer Blog](https://devblogs.microsoft.com/qsharp/)
 
 ## Installing IQ# ##
 
 IQ# (pronounced i-q-sharp) provides the core functionality of compiling and simulating Q# operations.
 Installing IQ# on your machine typically takes less than 10 minutes; just follow these two steps:
 
-1. Install the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.1 or later) by 
+1. Install the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) by 
   following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download).
 2. From the command line, execute:
    ```Command Prompt

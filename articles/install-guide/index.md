@@ -9,12 +9,35 @@ uid: microsoft.quantum.install
 
 # Getting Started with the Microsoft Quantum Development Kit #
 
-A great way to get started with Q# before installing the Quantum Development Kit is via some of the Jupyter notebooks available in our [GitHub Quantum repository](https://github.com/Microsoft/Quantum.git).  In particular:
+## Choose the environment that's right for you ##
+
+### Jupyter ###
+
+ A great way to get started with Q# before installing the Quantum Development Kit is via some of the Jupyter notebooks available in our [GitHub Quantum repository](https://github.com/Microsoft/Quantum.git).  In particular:
 
 * **[Q# Notebooks](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IntroToIQSharp/Notebook.ipynb)** [(Run online)](https://mybinder.org/v2/gh/Microsoft/Quantum/master?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb) : explains how to compile and simulate Q# operations inside a Jupyter notebook.
 * **[Teleport](https://github.com/Microsoft/Quantum/tree/master/Samples/src/Teleportation/Notebook.ipynb)** [(Run online)](https://mybinder.org/v2/gh/microsoft/Quantum/master?filepath=Samples%2Fsrc%2FTeleportation%2FNotebook.ipynb): shows how to implement the teleport algorithm using Q#.
 
 To run these locally, install IQ# on your machine (see below) and take a look at our [Jupyter notebooks getting started guide](xref:microsoft.quantum.install.jupyter).
+
+### Visual Studio ###
+
+ If you are already a Visual Studio user, you can install the extension to get started developing Q# in Visual Studio. 
+> [!div class="button"]
+> [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+
+### Visual Studio Code ###
+
+ If you are already a Visual Studio Code user, you can install the extension to get started developing Q# in Visual Studio Code. Using the Visual Studio Code extension you can develop in Q# using Python or C#. 
+> [!div class="button"]
+> [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+
+## Learning Quantum Computing with Q# ##
+
+* [Quantum Katas](https://github.com/Microsoft/QuantumKatas)
+* [Samples](https://github.com/Microsoft/Quantum)
+* [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro)
+* [Microsoft Quantum Blog](https://cloudblogs.microsoft.com/quantum/?ext)
 
 ## Installing IQ# ##
 
@@ -48,7 +71,6 @@ Jupyter core: 1.1.12077.0
 > Microsoft's quantum simulator utilizes OpenMP at runtime, on Linux systems you might need to manually install `libgomp`.
 > See [this thread](https://stackoverflow.com/questions/52428334/unable-to-load-dll-microsoft-quantum-simulator-runtime-dll-centos-7) at stackoverflow.
 
-
 ## Updating IQ# ##
 
 To update IQ# to the latest version, from the command line, execute:
@@ -67,31 +89,7 @@ Applications developed with Microsoft's Quantum Development Kit typically consis
 Once you have installed IQ#, these articles explain how to enable interoperability between Q# and classical languages:
 
 * [C# getting started](xref:microsoft.quantum.install.csharp)
-* [Jupyter notebooks getting started](xref:microsoft.quantum.install.jupyter)
+
 * [Python getting started](xref:microsoft.quantum.install.python)
-
-## Editor extensions ##
-
-The Quantum Development Kit offers extensions to [Visual Studio](https://visualstudio.microsoft.com/vs/) 
-and [Visual Studio Code](https://code.visualstudio.com/) to improve the development experience. 
-These extensions are available from [Visual Studio's Marketplace](https://marketplace.visualstudio.com/) 
-and provide features like:
-* Code colorization and highlighting
-* Live diagnostics
-* Document symbols
-* Documentation on hover
-* Signature help
-* Go to symbol definition
-* Find all references
-* Rename of symbols
-* Code actions (e.g. namespace import helper)
-* Debug breakpoints (Visual Studio)
-
-To install the extensions, follow the instructions at:
-> [!div class="button"]
-> [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
-
-> [!div class="button"]
-> [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
 
 

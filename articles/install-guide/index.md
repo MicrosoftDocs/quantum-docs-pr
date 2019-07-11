@@ -47,6 +47,7 @@ If you are a Python user, check out our [Getting Started with Python and the Qua
 * [Samples](https://github.com/Microsoft/Quantum)
 * [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro)
 * [Microsoft Quantum Blog](https://cloudblogs.microsoft.com/quantum/?ext)
+* [Q# Blog](https://devblogs.microsoft.com/qsharp/)
 
 ## Installing IQ# ##
 

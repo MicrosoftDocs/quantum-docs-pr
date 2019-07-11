@@ -11,7 +11,7 @@ uid: microsoft.quantum.install
 
 ## Choose the environment that's right for you ##
 
-### Jupyter ###
+### Jupyter Notebooks ###
 
  A great way to get started with Q# before installing the Quantum Development Kit is via some of the Jupyter notebooks available in our [GitHub Quantum repository](https://github.com/Microsoft/Quantum.git).  In particular:
 
@@ -28,7 +28,7 @@ To run these locally, install IQ# on your machine (see below) and take a look at
 
 ### Visual Studio Code ###
 
- If you are already a Visual Studio Code user, you can install the extension to get started developing Q# in Visual Studio Code. Using the Visual Studio Code extension you can develop in Q# using Python or C#. 
+ If you are already a Visual Studio Code user, you can install the extension to get started developing Q# in Visual Studio Code.
 > [!div class="button"]
 > [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
 

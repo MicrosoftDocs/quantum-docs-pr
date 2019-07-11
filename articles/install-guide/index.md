@@ -30,7 +30,7 @@ Then, check our [quickstart guide](../quickstart?tabs=tabid-vs2017) for step-by-
 
 ### Visual Studio Code ###
 
- If you are already a Visual Studio Code user, start by installing the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) by following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download). Then you can install the extension to get started developing Q# in Visual Studio Code.
+ If you are already a Visual Studio Code user, start by installing the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) by following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download). Then, you can install the extension to get started developing Q# in Visual Studio Code.
 > [!div class="button"]
 > [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
 

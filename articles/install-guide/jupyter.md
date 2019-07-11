@@ -15,7 +15,7 @@ The Quantum Development Kit provides a Jupyter kernel for the Q# language, makin
 
 To get started you need:
 - IQ#
-- Jupyter,
+- Jupyter
 
 ### Installing IQ# ##
 

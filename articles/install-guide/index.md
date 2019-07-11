@@ -22,15 +22,24 @@ To run these locally, install IQ# on your machine (see below) and take a look at
 
 ### Visual Studio ###
 
- If you are already a Visual Studio user, you can install the extension to get started developing Q# in Visual Studio. 
+ If you are already a [Visual Studio](https://visualstudio.microsoft.com/vs/) user, you can install the extension to get started developing Q# in Visual Studio. 
 > [!div class="button"]
 > [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
 
+Then, check our [Quickstart guide for step-by-step](quickstart?tabs=tabid-vs2017) instructions for your first quantum program.
+
 ### Visual Studio Code ###
 
- If you are already a Visual Studio Code user, you can install the extension to get started developing Q# in Visual Studio Code.
+ If you are already a [Visual Studio Code](https://code.visualstudio.com/) user, you can install the extension to get started developing Q# in Visual Studio Code.
 > [!div class="button"]
 > [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+
+Then, check our [Quickstart guide for step-by-step](quickstart?tabs=tabid-vscode) instructions for your first quantum program.
+
+
+### Python ###
+
+If you are a Python user, check out our [Getting Started with Python and the Quantum Development Kit guide](xref:microsoft.quantum.install.python).
 
 ## Learning Quantum Computing with Q# ##
 

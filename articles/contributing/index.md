@@ -46,15 +46,21 @@ In the rest of the guide, we'll offer advice on how to make each kind of contrib
 The Quantum Development Kit includes a number of different pieces that all work together to realize a platform for writing quantum programs.
 Each of these different pieces finds its home on a different repository, so the one of the earlier things to sort out is where each contribution best belongs.
 
-- [**Microsoft/Quantum**](https://github.com/Microsoft/Quantum): Samples and tools to help get started with the Quantum Development Kit.
-- [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries): Standard and domain-specific libraries for the Quantum Development Kit.
-- [**Microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): Self-paced programming exercises for learning quantum computing and the Q# programming language.
+- [**microsoft/Quantum**](https://github.com/Microsoft/Quantum): Samples and tools to help get started with the Quantum Development Kit.
+- [**microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries): Standard and domain-specific libraries for the Quantum Development Kit.
+- [**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): Self-paced programming exercises for learning quantum computing and the Q# programming language.
+- [**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): The Q# compiler, Visual Studio extension, and Visual Studio Code extension.
+- [**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime): Simulation framework, code generation, and simulation target machines for the Quantum Development Kit.
+- [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Jupyter kernel and Python host functionality for Q#, as well as Docker images for using IQ# in cloud environments.
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): Source code for the documentation published at https://docs.microsoft.com/quantum.
+
+> [!NOTE]
+> We unfortunately cannot accept code and documentation contributions on the [**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC) repository at this time, but we still very much appreciate bug reports.
 
 There are also a few other, more specialized repositories focusing on different events, or on auxillary functionality related to the Quantum Development Kit.
 
-> [!NOTE]
-> We unfortunately cannot accept code and documentation contributions on the [**Microsoft/Quantum-NC**](https://github.com/Microsoft/Quantum-NC) repository at this time, but we still very much appreciate bug reports.
+- [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): LaTeX formatting support for Q# syntax.
+- [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): IQ# Notebook for Deutsch–Jozsa tutorial given at the 2019 intern workshop.
 
 ## Next steps ##
 

@@ -17,8 +17,7 @@ To get started with the `qsharp` package, you'll need the following prerequisite
 - **.NET Core 2.2 or later**,
 - **Python 3.6 or later**,
 
-To install the latest version of [.NET Core SDK](https://dotnet.microsoft.com/),  
-follow the instructions from the [.NET downloads page](https://www.microsoft.com/net/download).
+To install the latest version of [.NET Core SDK](https://dotnet.microsoft.com/), follow the instructions from the [.NET downloads page](https://www.microsoft.com/net/download).
   
 To install Python, we recommend using the Anaconda distribution of Python.
 Please see https://www.anaconda.com/distribution/ for more details.

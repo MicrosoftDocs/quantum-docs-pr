@@ -54,6 +54,10 @@
       "feedback_github_repo": "Microsoft/quantum",
       "feedback_product_url": "https://github.com/microsoft/quantum/issues"
     },
+    "titleSuffix": {
+      "*.md": "Q# reference - Microsoft Quantum"
+      }
+    },
     "fileMetadata": {},
     "template": [],
     "dest": "quantum-api"

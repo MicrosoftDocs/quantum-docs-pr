@@ -30,11 +30,7 @@ Then, check our [quickstart guide](../quickstart?tabs=tabid-vs2017) for step-by-
 
 ### Visual Studio Code ###
 
-<<<<<<< HEAD
  If you are already a Visual Studio Code user, start by installing the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) by following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download). Then you can install the extension to get started developing Q# in Visual Studio Code.
-=======
- If you are already a [Visual Studio Code](https://code.visualstudio.com/) user, you can install the extension to get started developing Q# in Visual Studio Code.
->>>>>>> ff24a2c6a7f7087cf427a273f8e379d7484629a9
 > [!div class="button"]
 > [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
 
@@ -52,11 +48,7 @@ If you are a Python user, check out our [getting started with Python and the Qua
 * [Samples](https://github.com/Microsoft/Quantum)
 * [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro)
 * [Microsoft Quantum Blog](https://cloudblogs.microsoft.com/quantum/?ext)
-<<<<<<< HEAD
-* [Microsoft Quantum Developer Blog](https://devblogs.microsoft.com/qsharp/)
-=======
 * [Q# Blog](https://devblogs.microsoft.com/qsharp/)
->>>>>>> ff24a2c6a7f7087cf427a273f8e379d7484629a9
 
 ## Installing IQ# ##
 

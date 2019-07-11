@@ -545,7 +545,7 @@ In particular, range start and end values may be omitted in the context of a ran
 In that case, the compiler will apply the following rules to infer the intended delimiters for the range. 
 
 For example, if the range start value is omitted, 
-then the intended start value 
+then the inferred start value 
 - is assumed to be zero if no step is specified or the specified step is positive, and 
 - is assumed to be the length of sliced array minus one if the specified step is negative. 
 

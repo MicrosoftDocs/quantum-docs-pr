@@ -25,6 +25,23 @@ dotnet tool update -g Microsoft.Quantum.IQSharp
 > * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
 > * References between projects migrated to 0.6 and higher and projects using older package versions are **not** supported.
 
+# Version 0.8 (*TO ADD*)
+
+*Release date: July 12, 2019*
+
+This release contains the following:
+
+- New indexing locations for slicing arrays, [click here for more information](xref:microsoft.quantum.language.expressions#array-slices)
+- MCR Image //NEW SECTION IN IQ# README, copy same sentence & point to the README
+- Breaking change for TraceSimulator, update to new interface [click here for more information](https://docs.microsoft.com/en-us/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration?view=quantum-dotnet-latest)
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) and [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
+
+The changes are summarized here as well as instructions for upgrading your existing programs.  Read more about these changes on the [Q# dev blog](https://devblogs.microsoft.com/qsharp).
+
+
+
+
+
 # Version 0.7 (*PackageReference 0.7.1905.3109*)
 
 *Release date: May 31, 2019*

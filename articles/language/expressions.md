@@ -542,7 +542,7 @@ That is, the first element of an array `a` is always `a[0]`.
 
 :new: Starting with our 0.8 release, we are supporting contextual expressions for range slicing. 
 In particular, range start and end values may be omitted in the context of a range slicing expression. 
-In that case, the compiler will make a best guess as to what the intended delimiters are for the range. 
+In that case, the compiler will apply the following rules to infer the intended delimiters for the range. 
 
 For example, if the range start value is omitted, 
 then the intended start value 

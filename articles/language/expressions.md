@@ -556,14 +556,15 @@ then the intended end value
 
 ```qsharp
 let arr = [1,2,3,4,5,6];
-let slice1 = arr[3...];      // slice1 is [4,5,6];
-let slice2 = arr[0..2...];   // slice2 is [1,3,5];
-let slice3 = arr[...2];      // slice3 is [1,2,3];
-let slice4 = arr[...2..3];   // slice4 is [1,3];
-let slice5 = arr[...2...];   // slice5 is [1,3,5];
-let slice7 = arr[4..-2...];  // slice7 is [5,3,1];
-let slice8 = arr[...-1..3];  // slice8 is [6,5,4];
-let slice9 = arr[...-1...];  // slice9 is [6,5,4,3,2,1];
+let slice1  = arr[3...];      // slice1 is [4,5,6];
+let slice2  = arr[0..2...];   // slice2 is [1,3,5];
+let slice3  = arr[...2];      // slice3 is [1,2,3];
+let slice4  = arr[...2..3];   // slice4 is [1,3];
+let slice5  = arr[...2...];   // slice5 is [1,3,5];
+let slice7  = arr[4..-2...];  // slice7 is [5,3,1];
+let slice8  = arr[...-1..3];  // slice8 is [6,5,4];
+let slice9  = arr[...-1...];  // slice9 is [6,5,4,3,2,1];
+let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 ```
 
 ## Array Element Expressions

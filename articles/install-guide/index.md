@@ -51,7 +51,7 @@ If you are a Python user, check out our [Getting Started with Python and the Qua
 
 ## Installing IQ# ##
 
-IQ# (pronounced i-q-sharp) provides the core functionality of compiling and simulating Q# operations.
+IQ# (pronounced i-q-sharp) provides the core functionality of compiling and simulating Q# operations for Jupyter and Python.
 Installing IQ# on your machine typically takes less than 10 minutes; just follow these two steps:
 
 1. Install the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.1 or later) by 

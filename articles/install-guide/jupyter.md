@@ -22,7 +22,7 @@ To get started you need:
 IQ# (pronounced i-q-sharp) provides the core functionality of compiling and simulating Q# operations for Jupyter and Python.
 Installing IQ# on your machine typically takes less than 10 minutes; just follow these two steps:
 
-1. Install the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) by 
+1. Install the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) by 
   following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download).
 2. From the command line, execute:
    ```Command Prompt

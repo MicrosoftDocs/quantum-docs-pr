@@ -56,8 +56,7 @@
     },
     "titleSuffix": {
       "*.md": "Q# reference - Microsoft Quantum"
-      }
-    },
+      },
     "fileMetadata": {},
     "template": [],
     "dest": "quantum-api"

@@ -12,7 +12,10 @@ uid: microsoft.quantum.relnotes
 
 ## Migrating to the newest packages.
 
-1.  Follow [these instructions](xref:microsoft.quantum.install#updating-iq) to update IQ#.  
+1.  To update IQ# to the latest version, from the command line, execute:
+```Command Prompt
+dotnet tool update -g Microsoft.Quantum.IQSharp
+```  
 2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
 3.  Follow [these instructions](xref:microsoft.quantum.install.csharp#update) to update your .csproj files, using the PackageReference for the Version below.
 
@@ -108,7 +111,10 @@ We added a [sample of using Q# with F# driver](https://github.com/Microsoft/Quan
 ## Migrating existing projects to 0.6.1905.
 
   
-1.  Follow [these instructions](xref:microsoft.quantum.install#updating-iq) to update IQ#.  
+1.  To update IQ# to the latest version, from the command line, execute:
+```Command Prompt
+dotnet tool update -g Microsoft.Quantum.IQSharp
+```  
 2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
 3.  Follow these instructions to update your .csproj file: 
 

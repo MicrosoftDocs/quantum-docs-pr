@@ -64,6 +64,10 @@
         }
       }
     },
+    "titleSuffix": {
+      "*.md": "Microsoft Quantum"
+      } 
+    },
     "template": [],
     "dest": "quantum-docs"
   }

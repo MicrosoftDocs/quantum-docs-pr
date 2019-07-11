@@ -56,14 +56,6 @@ To update IQ# to the latest version, from the command line, execute:
 dotnet tool update -g Microsoft.Quantum.IQSharp
 ```
 
-### Classical Hosts ###
-
-Applications developed with Microsoft's Quantum Development Kit typically consists of two parts:
-1. One or more quantum algorithms, implemented using the Q# quantum programming language.
-2. A classical program, implemented in a classical programming language like Python or C#, 
-  that serves as the main entry point and will invoke Q# operations 
-  when it wants to execute a quantum algorithm.
-
 ### Installing Python ###
 
 To install Python, we recommend using the Anaconda distribution of Python.

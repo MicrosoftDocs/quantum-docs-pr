@@ -552,7 +552,7 @@ then the inferred start value
 If the range end value is omitted, 
 then the inferred end value 
 - is the length of sliced array minus one if no step is specified or the specified step is positive, and 
-- is assumed to be zero if the specified step is negative. 
+- is zero if the specified step is negative. 
 
 ```qsharp
 let arr = [1,2,3,4,5,6];

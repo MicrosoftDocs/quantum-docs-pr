@@ -53,10 +53,7 @@ var wavefunctionInt = wavefunctionSpinOrbital.ToIndexing(IndexConvention.UpDown)
 ```
 
 The most striking feature about Hartree–Fock theory is that it yields a quantum state that has no entanglement between the electrons.
-This means that, while it is often quite successful, it may not always be well suited to approximate ground states for
-strongly correlated systems that are targets for quantum computation.
-However, the simplicity and accuracy of Hartree-Fock theory for many small systems makes 
-it the workhorse of state preparation in quantum computing and a spring board on top of which most post-Hartree–Fock methods are based.
+This means that it often provides a suitable qualitative description of properties of molecular systems. 
 
 The Hartree-Fock state may also be reconstructed from a `FermionHamiltonian`  as follows.
 ```csharp
@@ -67,3 +64,5 @@ var fermionHamiltonian = new FermionHamiltonian();
 // with, say, `4` occupied spin orbitals.
 var wavefunction = fermionHamiltonian.CreateHartreeFockState(nElectrons: 4);
 ```
+
+However, obtaining accurate results, especially for strongly correlated systems, necessitate quantum states that go beyond Hartree–Fock theory.

@@ -547,7 +547,7 @@ In that case, the compiler will apply the following rules to infer the intended 
 For example, if the range start value is omitted, 
 then the inferred start value 
 - is zero if no step is specified or the specified step is positive, and 
-- is assumed to be the length of sliced array minus one if the specified step is negative. 
+- is the length of sliced array minus one if the specified step is negative. 
 
 If the range end value is omitted, 
 then the intended end value 

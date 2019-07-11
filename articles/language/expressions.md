@@ -540,6 +540,33 @@ concatenation would be expressed as:
 All arrays in Q# are zero-based.
 That is, the first element of an array `a` is always `a[0]`.
 
+:new: Starting with our 0.8 release, we support contextual expressions for range slicing. 
+In particular, range start and end values may be omitted in the context of a range slicing expression. 
+In that case, the compiler will apply the following rules to infer the intended delimiters for the range. 
+
+For example, if the range start value is omitted, 
+then the inferred start value 
+- is zero if no step is specified or the specified step is positive, and 
+- is the length of sliced array minus one if the specified step is negative. 
+
+If the range end value is omitted, 
+then the inferred end value 
+- is the length of sliced array minus one if no step is specified or the specified step is positive, and 
+- is zero if the specified step is negative. 
+
+```qsharp
+let arr = [1,2,3,4,5,6];
+let slice1  = arr[3...];      // slice1 is [4,5,6];
+let slice2  = arr[0..2...];   // slice2 is [1,3,5];
+let slice3  = arr[...2];      // slice3 is [1,2,3];
+let slice4  = arr[...2..3];   // slice4 is [1,3];
+let slice5  = arr[...2...];   // slice5 is [1,3,5];
+let slice7  = arr[4..-2...];  // slice7 is [5,3,1];
+let slice8  = arr[...-1..3];  // slice8 is [6,5,4];
+let slice9  = arr[...-1...];  // slice9 is [6,5,4,3,2,1];
+let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
+```
+
 ## Array Element Expressions
 
 Given an array expression and an `Int` expression, a new expression

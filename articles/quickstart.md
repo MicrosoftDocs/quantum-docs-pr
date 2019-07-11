@@ -17,6 +17,14 @@ uid: microsoft.quantum.write-program
 > * How to call a Q# operation from C#
 > * How to build and execute your quantum algorithm
 
+Applications developed with Microsoft's Quantum Development Kit typically consists of two parts:
+1. One or more quantum algorithms, implemented using the Q# quantum programming language.
+2. A classical program, implemented in a classical programming language like Python or C#, 
+  that serves as the main entry point and will invoke Q# operations 
+  when it wants to execute a quantum algorithm.
+
+This guide will walk you through how to create applications using Q#, and using C# as the classical component in Visual Studio or Visual Studio Code.
+
 ## Creating a Bell State in Q#
 
 Now that you’ve [installed the Microsoft Quantum Development Kit](xref:microsoft.quantum.install), let’s write your first quantum application.

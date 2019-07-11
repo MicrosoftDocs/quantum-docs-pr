@@ -9,40 +9,58 @@ uid: microsoft.quantum.install
 
 # Getting Started with the Microsoft Quantum Development Kit #
 
-## Choose the environment that's right for you ##
+## Choose the Environment That's Right for You ##
 
 ### Jupyter Notebooks ###
 
  A great way to get started with Q# before installing the Quantum Development Kit is via some of the Jupyter notebooks available in our [GitHub Quantum repository](https://github.com/Microsoft/Quantum.git).  In particular:
 
-* **[Q# Notebooks](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IntroToIQSharp/Notebook.ipynb)** [(Run online)](https://mybinder.org/v2/gh/Microsoft/Quantum/master?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb) : explains how to compile and simulate Q# operations inside a Jupyter notebook.
+* **[Q# Notebooks](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IntroToIQSharp/Notebook.ipynb)** [(Run online)](https://mybinder.org/v2/gh/Microsoft/Quantum/master?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb): explains how to compile and simulate Q# operations inside a Jupyter notebook.
 * **[Teleport](https://github.com/Microsoft/Quantum/tree/master/Samples/src/Teleportation/Notebook.ipynb)** [(Run online)](https://mybinder.org/v2/gh/microsoft/Quantum/master?filepath=Samples%2Fsrc%2FTeleportation%2FNotebook.ipynb): shows how to implement the teleport algorithm using Q#.
 
-To run these locally, install IQ# on your machine (see below) and take a look at our [Jupyter notebooks getting started guide](xref:microsoft.quantum.install.jupyter).
+To run these locally, take a look at our [Jupyter notebooks getting started guide](xref:microsoft.quantum.install.jupyter).
 
 ### Visual Studio ###
 
- If you are already a Visual Studio user, you can install the extension to get started developing Q# in Visual Studio. 
+ If you are already a [Visual Studio](https://visualstudio.microsoft.com/vs/) user, you can install the extension to get started developing Q# in Visual Studio. 
 > [!div class="button"]
 > [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
 
+Then, check our [quickstart guide](../quickstart?tabs=tabid-vs2017) for step-by-step instructions for your first quantum program.
+
 ### Visual Studio Code ###
 
+<<<<<<< HEAD
  If you are already a Visual Studio Code user, start by installing the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) by following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download). Then you can install the extension to get started developing Q# in Visual Studio Code.
+=======
+ If you are already a [Visual Studio Code](https://code.visualstudio.com/) user, you can install the extension to get started developing Q# in Visual Studio Code.
+>>>>>>> ff24a2c6a7f7087cf427a273f8e379d7484629a9
 > [!div class="button"]
 > [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
 
-## Learning Quantum Computing with Q# ##
+Then, check our [quickstart guide](../quickstart?tabs=tabid-vscode) for step-by-step instructions for your first quantum program.
+
+
+### Python ###
+
+If you are a Python user, check out our [getting started with Python and the Quantum Development Kit guide](xref:microsoft.quantum.install.python).
+
+
+## Learn Quantum Computing with Q# ##
 
 * [Quantum Katas](https://github.com/Microsoft/QuantumKatas)
 * [Samples](https://github.com/Microsoft/Quantum)
 * [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro)
 * [Microsoft Quantum Blog](https://cloudblogs.microsoft.com/quantum/?ext)
+<<<<<<< HEAD
 * [Microsoft Quantum Developer Blog](https://devblogs.microsoft.com/qsharp/)
+=======
+* [Q# Blog](https://devblogs.microsoft.com/qsharp/)
+>>>>>>> ff24a2c6a7f7087cf427a273f8e379d7484629a9
 
 ## Installing IQ# ##
 
-IQ# (pronounced i-q-sharp) provides the core functionality of compiling and simulating Q# operations.
+IQ# (pronounced i-q-sharp) provides the core functionality of compiling and simulating Q# operations for Jupyter and Python.
 Installing IQ# on your machine typically takes less than 10 minutes; just follow these two steps:
 
 1. Install the latest version of [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) by 

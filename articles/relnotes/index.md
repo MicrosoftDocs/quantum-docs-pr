@@ -25,7 +25,7 @@ dotnet tool update -g Microsoft.Quantum.IQSharp
 > * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
 > * References between projects migrated to 0.6 and higher and projects using older package versions are **not** supported.
 
-# Version 0.8 (*TO ADD*)
+# Version 0.8 (*PackageReference 0.8.1907.1701*)
 
 *Release date: July 12, 2019*
 

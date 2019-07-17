@@ -11,7 +11,7 @@ summary: |-
   collection is assumed to be known.
 remarks: |-
   Instances of `GeneratorSystem` can be defined easily using the
-  <xref:microsoft.quantum.canon.lookupfunction> function.
+  <xref:microsoft.quantum.arrays.lookupfunction> function.
 syntax: newtype GeneratorSystem = (Int, (Int -> Microsoft.Quantum.Simulation.GeneratorIndex));
 seeAlso:
 - microsoft.quantum.canon.lookupfunction

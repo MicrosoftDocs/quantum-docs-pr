@@ -20,7 +20,7 @@ remarks: |-
   > with reference to a particular set of generators.
 
   ### Examples
-  Using  <xref:microsoft.quantum.canon.paulievolutionset>, the operator
+  Using  <xref:microsoft.quantum.simulation.paulievolutionset>, the operator
   $\pi X_2 X_5 Y_9$ is represented as:
 
   ```qsharp
@@ -28,6 +28,6 @@ remarks: |-
   ```
 syntax: newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 seeAlso:
-- microsoft.quantum.canon.paulievolutionset
-- microsoft.quantum.canon.evolutionset
+- evolutionset
+- paulievolutionset
 ...

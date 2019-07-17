@@ -1,7 +1,9 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.environment
 name: Microsoft.Quantum.Environment
-summary: ' These functions provide information about the environment in which the quantum computation is occuring.'
+summary: |2-
+   # Summary
+   These functions provide information about the environment in which the quantum computation is occuring.
 operations:
 - uid: microsoft.quantum.environment.getqubitsavailabletoborrow
   summary: |-

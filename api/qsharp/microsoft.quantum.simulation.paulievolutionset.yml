@@ -8,7 +8,7 @@ summary: |-
   expansion in the Pauli basis.
 remarks: |-
   This is obtained by partial application of
-  <xref:microsoft.quantum.canon.paulievolutionfunction>.
+  <xref:microsoft.quantum.simulation.paulievolutionfunction>.
 syntax: 'function PauliEvolutionSet () : Microsoft.Quantum.Simulation.EvolutionSet'
 input:
   content: ()

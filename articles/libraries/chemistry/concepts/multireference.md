@@ -1,5 +1,5 @@
 ---
-title: Multireference wavefunctions | Microsoft Docs
+title: Correlated wavefunctions | Microsoft Docs
 description: Quantum Dynamics Conceptual Docs
 author: guanghaolow
 ms.author: gulow@microsoft.com
@@ -8,18 +8,28 @@ ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
 ---
 
-# Multi-reference wavefunctions
+# Correlated wavefunctions
 
-The quantum states of many electronic structure problems of interest are strongly correlated. In these situations, the single-reference [Hartree–Fock](xref:microsoft.quantum.chemistry.concepts.hartreefock) state, composed of a single Slater determiniant, is inadequate. Then, multi-reference approaches, which represent superpositions of Slater determinants, are required to approximate eigenstates of the electronic structure Hamiltonian to the desired accuracy. The chemistry library provides two ways to specify multi-reference state for such problems, and also constructs the quantum circuits that generate these states on a quantum computer. 
+For many systems, particularly those near the equilibrium geometry, [Hartree–Fock](xref:microsoft.quantum.chemistry.concepts.hartreefock) theory provides a qualitative description of molecular properties through a single-determinant reference state. 
+However, in order to achieve quantitative accuracy, one must also consider correlation effects. 
 
-The first approach, which we call sparse multi-reference wavefunctions, is effective when only a few components suffice to specify the superposition. The second component, known as unitary coupled-cluster methods, specify the state implicity through a unitary operator acting on a reference state. These states may be specified in the [Broombridge schema](xref:microsoft.quantum.libraries.chemistry.schema.broombridge), and we also provide the functionality to manually specify these states through the chemistry library.
+In this context, it is important to dinstinguish between dynamic and non-dynamic correlations.
+Dynamical correlations arise from the tendency of electrons to stay apart, such as due to interelectronic repulsion. 
+This effect can be modelled by considering excitations of electrons out of the reference state. 
+Non-dynamic correlations arise when the wavefunction is dominated by two or more configurations at zeroth order, even to achieve only a qualitative description of the system.
+This necessitates a superposition of determinants and is an example of a multireference wavefunction.
+
+The chemistry library provides a way to specify a zeroth order wavefunction for the multireference problem as a superposition of determinants. 
+This approach, which we call sparse multireference wavefunctions, is effective when only a few components suffice to specify the superposition. 
+The library also provides a method to include dynamic correlations on top of a single-determinant reference via the generalized unitary coupled-cluster ansatz. Furthermore, it also constructs quantum circuits that generate these states on a quantum computer. These states may be specified in the [Broombridge schema](xref:microsoft.quantum.libraries.chemistry.schema.broombridge), and we also provide the functionality to manually specify these states through the chemistry
+library.
 
 ## Sparse multi-reference wavefunction
-On one hand, multi-reference state $|\psi_{\rm {MCSCF}}\rangle$ may be specified explicitly as a linear combination of $N$-electron Slater determininants.
+A multi-reference state $\ket{\psi_{\rm {MCSCF}}}$ may be specified explicitly as a linear combination of $N$-electron Slater determininants.
 \begin{align}
-|\psi_{\rm {MCSCF}}\rangle \propto \sum_{i_1 < i_2 < \cdots < i_N} \lambda_{i_1,i_2} a^\dagger_{i_1}a^\dagger_{i_2}\cdots a^\dagger_{i_N}|0\rangle.
+\ket{\psi_{\rm {MCSCF}}} \propto \sum_{i_1 < i_2 < \cdots < i_N} \lambda_{i_1,i_2,\cdots,i_N} a^\dagger_{i_1}a^\dagger_{i_2}\cdots a^\dagger_{i_N}\ket{0}.
 \end{align}
-For example, the state $\propto(0.1 a^\dagger_1a^\dagger_2a^\dagger_6 - 0.2 a^\dagger_2a^\dagger_1a^\dagger_5)|0\rangle$ may be specified in the chemistry library as follows.
+For example, the state $\propto(0.1 a^\dagger_1a^\dagger_2a^\dagger_6 - 0.2 a^\dagger_2a^\dagger_1a^\dagger_5)\ket{0}$ may be specified in the chemistry library as follows.
 ```csharp
 // Create a list of tuples where the first item of each 
 // tuple are indices to the creation operators acting on the
@@ -32,27 +42,33 @@ var superposition = new[] {
 // Create a fermion wavefunction object that represents the superposition.
 var wavefunction = new FermionWavefunction<int>(superposition);
 ```
-This explicit representation of the superposition components is effective when only a few components need to be specified. One should avoid using this representation when many components are required to accurately capture the desired state. The reason for this is the gate cost of quantum circuit that prepares this state on a quantum computer, which scales at least linearly with the number of superposition components, and at most quadratically with the one-norm of the superposition amplitudes.
+This explicit representation of the superposition components is effective when only a few components need to be specified. 
+One should avoid using this representation when many components are required to accurately capture the desired state. 
+The reason for this is the gate cost of quantum circuit that prepares this state on a quantum computer, which scales at least linearly with the number of superposition components, and at most quadratically with the one-norm of the superposition amplitudes.
 
 ## Unitary coupled-cluster wavefunction
-It is also possible to efficiently specify a multi-reference state that has exponentially many components. One common example is the unitary coupled-cluster wavefunction $|\psi_{\rm {UCC}}\rangle$. In this situation, we have a single-reference state, say, $|\psi_{\rm{SCF}}\rangle$. The components of the unitary coupled-cluster wavefunction is then specified implicity through a unitary operator acting on a reference state. This unitary operator is commonly written as $e^{T-T^\dagger}$, where $T-T^\dagger$ is the anti-Hermitian cluster operator. Thus
+It is also possible to specify a unitary coupled-cluster wavefunction $\ket{\psi_{\rm {UCC}}}$ using the chemistery library. 
+In this situation, we have a single-determinant reference state, say, $\ket{\psi_{\rm{SCF}}}$. 
+The components of the unitary coupled-cluster wavefunction are then specified implicity through a unitary operator acting on a reference state.
+This unitary operator is commonly written as $e^{T-T^\dagger}$, where $T-T^\dagger$ is the anti-Hermitian cluster operator. 
+Thus
 \begin{align}
-|\psi_{\rm {UCC}}\rangle = e^{T-T^\dagger}|\psi_{\rm{SCF}}\rangle.
+\ket{\psi_{\rm {UCC}}} = e^{T-T^\dagger}\ket{\psi_{\rm{SCF}}}.
 \end{align}
 
-It is also common to split the cluster operator $T = T_1 + T_2 + \cdots$ into parts, where each part $T_j$ contains on $j$-body terms. For instance, one-body cluster operators (singles) are of the form
+It is also common to split the cluster operator $T = T_1 + T_2 + \cdots$ into parts, where each part $T_j$ contains $j$-body terms. In generalized coupled-cluster theory, the one-body cluster operator (singles) is of the form
 \begin{align}
-T_1 = \sum_{pq}t^{q}_{p} a^\dagger_p a_q,
+T_1 = \sum_{pq}t^{p}_{q} a^\dagger_p a_q,
 \end{align}
 
-and two-body cluster operators (doubles) are of the form
+and two-body cluster operator (doubles) is of the form
 \begin{align}
-T_2 = \sum_{pqrs}t^{rs}_{pq} a^\dagger_p a^\dagger_q a_r a_s.
+T_2 = \sum_{pqrs}t^{pq}_{rs} a^\dagger_p a^\dagger_q a_r a_s.
 \end{align}
 
-Higher-order terms (triples, quadruples, etc.) are possible, but not currently supported by the chemistry library. It is common, though not always the case, that the annihilation operators share indices with occupied spin-orbitals of the reference state, and the creation operators share indices with unoccupied spin-orbitals. 
+Higher-order terms (triples, quadruples, etc.) are possible, but not currently supported by the chemistry library.
 
-For example, let $|\psi_{\rm{SCF}}\rangle = a^\dagger_1 a^\dagger_2|0\rangle$, and let $T= 0.123 a^\dagger_0 a_1 + 0.456 a^\dagger_0a^\dagger_3 a_1 a_2 - 0.789 a^\dagger_3a^\dagger_2 a_1 a_0 + \text{Hermitian conjugate}$. Then this state is instantiated in the chemistry library as follows.
+For example, let $\ket{\psi_{\rm{SCF}}} = a^\dagger_1 a^\dagger_2\ket{0}$, and let $T= 0.123 a^\dagger_0 a_1 + 0.456 a^\dagger_0a^\dagger_3 a_1 a_2 - 0.789 a^\dagger_3a^\dagger_2 a_1 a_0$. Then this state is instantiated in the chemistry library as follows.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state
@@ -76,7 +92,7 @@ var clusterOperator = new[]
 var wavefunction = new FermionWavefunction<int>(reference, clusterOperator);
 ```
 
-Spin convervation may be made explicit by instead specifying `SpinOrbital` indices instead of integer indices. For example, let $|\psi_{\rm{SCF}}\rangle = a^\dagger_{1,\uparrow} a^\dagger_{2, \downarrow}|0\rangle$, and let $T= 0.123 a^\dagger_{0, \uparrow} a_{1, \uparrow} + 0.456 a^\dagger_{0, \uparrow} a^\dagger_{3, \downarrow} a_{1, \uparrow} a_{2, \downarrow} - 0.789 a^\dagger_{3,\uparrow} a^\dagger_{2,\uparrow} a_{1,\uparrow} a_{0, \uparrow} + \text{Hermitian conjugate}$ be spin convserving. Then this state is instantiated in the chemistry library as follows.
+Spin convervation may be made explicit by instead specifying `SpinOrbital` indices instead of integer indices. For example, let $\ket{\psi_{\rm{SCF}}} = a^\dagger_{1,\uparrow} a^\dagger_{2, \downarrow}\ket{0}$, and let $T= 0.123 a^\dagger_{0, \uparrow} a_{1, \uparrow} + 0.456 a^\dagger_{0, \uparrow} a^\dagger_{3, \downarrow} a_{1, \uparrow} a_{2, \downarrow} - 0.789 a^\dagger_{3,\uparrow} a^\dagger_{2,\uparrow} a_{1,\uparrow} a_{0, \uparrow}$ be spin convserving. Then this state is instantiated in the chemistry library as follows.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state

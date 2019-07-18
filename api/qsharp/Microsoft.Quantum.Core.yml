@@ -2,6 +2,7 @@
 uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
 summary: |2-
+   # Summary
    This namespace includes Q# core functions and operations.
 
    # Remarks

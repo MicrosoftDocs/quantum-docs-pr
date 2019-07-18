@@ -7,7 +7,7 @@ summary: |-
   Asserts that a classical floating point variable has the expected value up to a
   small tolerance of 1e-10.
 remarks: |-
-  This is equivalent to <xref:microsoft.quantum.diagnostics.claimequalwithtolerance> with
+  This is equivalent to <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact> with
   hardcoded tolerance of $10^{-10}$.
 syntax: 'function NearEqualityFact (actual : Double, expected : Double) : Unit'
 input:

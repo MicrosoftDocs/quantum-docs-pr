@@ -68,8 +68,8 @@ operations:
 - uid: microsoft.quantum.arithmetic.applyleoperationonphasele
   summary: |-
     Applies an operation that takes a
-    <xref:microsoft.quantum.canon.phaselittleendian> register as input
-    on a target register of type <xref:microsoft.quantum.canon.littleendian>.
+    <xref:microsoft.quantum.arithmetic.phaselittleendian> register as input
+    on a target register of type <xref:microsoft.quantum.arithmetic.littleendian>.
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
   summary: ''
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
@@ -79,8 +79,8 @@ operations:
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
   summary: |-
     Applies an operation that takes a
-    <xref:microsoft.quantum.canon.littleendian> register as input
-    on a target register of type <xref:microsoft.quantum.canon.phaselittleendian>.
+    <xref:microsoft.quantum.arithmetic.littleendian> register as input
+    on a target register of type <xref:microsoft.quantum.arithmetic.phaselittleendian>.
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
   summary: ''
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlec

@@ -13,7 +13,7 @@ input:
   - name: idxTerm
     summary: |-
       This input is ignored, and is defined for consistency with the
-      <xref:microsoft.quantum.canon.generatorsystem> user-defined type.
+      <xref:microsoft.quantum.simulation.generatorsystem> user-defined type.
     isPrimitive: true
     uid: Int
 output:

@@ -1,6 +1,6 @@
 ---
 title: Setup Overview
-author: gibeck
+author: gillenhaalb
 ms.author: gillenhaalb@gmail.com
 ms.date: 7/19/2019
 ms.topic: article

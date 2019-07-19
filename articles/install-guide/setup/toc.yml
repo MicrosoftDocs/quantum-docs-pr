@@ -1,0 +1,6 @@
+- name: Editors
+  href: vs-editors/toc.yml
+- name: Command Line
+  href: command-line.md
+- name: Classical Hosts
+  href: classical-hosts/toc.yml

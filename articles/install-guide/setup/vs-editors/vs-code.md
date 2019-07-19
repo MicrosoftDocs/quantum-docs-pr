@@ -9,6 +9,12 @@ ms.topic: article
 
 # Installing the Quantum Development Kit for Visual Studio Code #
 
+If you are already a Visual Studio Code user (and have installed the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) from the [.NET downloads page](https://www.microsoft.com/net/download)), you can install the extension to get started developing Q# in Visual Studio Code.
+> [!div class="button"]
+> [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+
+Then, you can scroll ahead to the "Validating the Quantum Development Kit installation" section below, and be sure to check our [quickstart guide](xref:microsoft.quantum.write-program) for step-by-step instructions for your first quantum program.
+
 ## Installing Visual Studio Code and the .NET Core SDK (Windows 10, macOS, Linux) ##
 
 The Quantum Development Kit uses the .NET Core SDK (2.0 or later) to make it easy to create, build, and run Q# projects from the command line.
@@ -53,7 +59,7 @@ Some of the samples demonstrate using the Quantum Development Kit with other pro
   Please see the [README](https://github.com/Microsoft/Quantum/blob/master/Samples/src/PythonInterop/README.md) file provided with the Python sample for more details.
 
 
-# Validating the Quantum Development Kit installation
+# Validating the Quantum Development Kit installation #
 
 In this section you will clone the quantum samples & libraries repository, and run a sample application to verify that your Q# environment is correctly installed and configured.
 

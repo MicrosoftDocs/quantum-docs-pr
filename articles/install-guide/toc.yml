@@ -1,6 +1,7 @@
-- name: C#
-  href: csharp.md
-- name: Jupyter Notebooks
-  href: jupyter.md
-- name: Python
-  href: python.md
+- name: Try Q# Online
+  href: tryqonline.md
+- name: Setup Your Machine
+  topicHref: setup/index.md
+  href: setup/toc.yml
+- name: Write Your First Quantum Program
+  href: quickstart.md

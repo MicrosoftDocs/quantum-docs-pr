@@ -46,9 +46,11 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/quantum-docs-pr",
       "feedback_product_url": "https://github.com/Microsoft/quantum/issues",
-      "titleSuffix": "Microsoft Quantum"
     },
     "fileMetadata": {
+      "titleSuffix": {
+        "**/**.md": "Microsoft Quantum"
+      },
       "latex_macros": {
         "**/**.md": {
           "ket": ["\\left| #1\\right\\rangle", 1],

@@ -7,7 +7,7 @@ summary: |-
   Represents a time-independent simulation algorithm.
 
   A time-independent simulation technique converts an
-  <xref:microsoft.quantum.canon.evolutiongenerator>
+  <xref:microsoft.quantum.simulation.evolutiongenerator>
   to unitary time evolution for some time-interval.
 syntax: newtype SimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
 ...

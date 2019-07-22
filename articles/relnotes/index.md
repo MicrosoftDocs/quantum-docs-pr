@@ -12,7 +12,10 @@ uid: microsoft.quantum.relnotes
 
 ## Migrating to the newest packages.
 
-1.  Follow [these instructions](xref:microsoft.quantum.install#updating-iq) to update IQ#.  
+1.  To update IQ# to the latest version, from the command line, execute:
+```Command Prompt
+dotnet tool update -g Microsoft.Quantum.IQSharp
+```  
 2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
 3.  Follow [these instructions](xref:microsoft.quantum.install.csharp#update) to update your .csproj files, using the PackageReference for the Version below.
 
@@ -21,6 +24,23 @@ uid: microsoft.quantum.relnotes
 > * In order to work with a project in Visual Studio Code, open the root folder containing the project itself and all referenced projects.   
 > * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
 > * References between projects migrated to 0.6 and higher and projects using older package versions are **not** supported.
+
+# Version 0.8 (*PackageReference 0.8.1907.1701*)
+
+*Release date: July 12, 2019*
+
+This release contains the following:
+
+- New indexing locations for slicing arrays, [see the language reference](xref:microsoft.quantum.language.expressions#array-slices) for more information.
+- Added Dockerfile hosted on the [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry), see the [IQ# repository for more information](https://github.com/microsoft/iqsharp/blob/master/README.md)
+- Breaking change for [the trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), update to configuration settings, name changes; see the [.NET API Browser for the updated names](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration).
+
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) and [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
+
+
+
+
+
 
 # Version 0.7 (*PackageReference 0.7.1905.3109*)
 
@@ -108,7 +128,10 @@ We added a [sample of using Q# with F# driver](https://github.com/Microsoft/Quan
 ## Migrating existing projects to 0.6.1905.
 
   
-1.  Follow [these instructions](xref:microsoft.quantum.install#updating-iq) to update IQ#.  
+1.  To update IQ# to the latest version, from the command line, execute:
+```Command Prompt
+dotnet tool update -g Microsoft.Quantum.IQSharp
+```  
 2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
 3.  Follow these instructions to update your .csproj file: 
 

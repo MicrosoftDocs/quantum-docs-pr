@@ -9,6 +9,10 @@ ms.topic: article
 
 # Installing the Quantum Development Kit for Visual Studio Code #
 
+The Quantum Development Kit can be used with Visual Studio Code, Microsoft's open-source cross-platform development environment, making it easy to use Q# with C# or Python.
+
+## Already have Visual Studio Code and the .NET Core SDK? ##
+
 If you are already a Visual Studio Code user (and have installed the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) from the [.NET downloads page](https://www.microsoft.com/net/download)), you can install the extension to get started developing Q# in Visual Studio Code.
 > [!div class="button"]
 > [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)

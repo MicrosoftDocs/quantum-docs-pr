@@ -17,7 +17,7 @@ The Quantum Development Kit uses the [.NET Core SDK](https://dotnet.microsoft.co
 
 ### Visual Studio Editors and the Command Line ###
 
-With the .NET core SDK now installed, you can implement programs in Q# directly in either the command line, or editors such as Visual Studio Code and Visual Studio. To get started, install the Quantum Development Kit Samples and Libraries following these instructions for your preferred environment (links to download the corresponding editors are included within):
+With the .NET Core SDK now installed, you can implement programs in Q# directly in either the command line, or editors such as Visual Studio Code and Visual Studio. To get started, install the Quantum Development Kit Samples and Libraries following these instructions for your preferred environment (links to download the corresponding editors are included within):
 * [Installing the QDK for Visual Studio Code](xref:microsoft.quantum.install.vs-code)
 * [Installing the QDK for Visual Studio](xref:microsoft.quantum.install.vs-2017)
 * [Installing the QDK in the command line](xref:microsoft.quantum.install.cmd-line)

@@ -1,0 +1,16 @@
+- name: The basics of Q#
+  href: basics.md 
+- name: Q# type model
+  href: type-model.md
+- name: Expressions
+  href: expressions.md
+- name: Operations and Functions
+  href: operations-functions.md
+- name: Statements, flow control and other constructs
+  href: statements.md
+- name: File structure
+  href: file-structure.md
+- name: Testing and Debugging
+  href: testing-and-debugging.md
+- name: Putting it all together
+  href: putting-it.all.together.md

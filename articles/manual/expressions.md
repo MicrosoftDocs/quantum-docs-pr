@@ -5,7 +5,7 @@ author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article
-uid: microsoft.quantum.language.expressions
+uid: microsoft.quantum.manual.expressions
 ---
 
 # Expressions
@@ -19,7 +19,7 @@ For instance, `(7)` is an `Int` expression,
 and `((1,2))` is an expression with type `(Int, Int)`.
 
 The equivalence between simple values and single-element tuples described in
-[the type model](xref:microsoft.quantum.language.type-model#tuple-types) removes the ambiguity
+[the type model](xref:microsoft.quantum.manual.type-model#tuple-types) removes the ambiguity
 between `(6)` as a group and `(6)` as a single-element tuple.
 
 ## Symbols
@@ -250,7 +250,7 @@ is an operation expression.
 Similarly, if the operation supports the `Controlled` functor, then
 `Controlled op` is an operation expression.
 The types of these expressions are specified in
-[Functors](xref:microsoft.quantum.language.type-model#functors).
+[Functors](xref:microsoft.quantum.manual.type-model#functors).
 
 Functors (`Adjoint` and `Controlled`) bind more closely than
 all other operators, except for the unwrap operator `!` and array indexing

@@ -2,7 +2,7 @@
 # Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Q# techniques - putting it all together | Microsoft Docs 
 description: Q# techniques - putting it all together
-uid: microsoft.quantum.techniques.puttingittogether
+uid: microsoft.quantum.manual.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017

@@ -11,14 +11,11 @@
 - name: Managing quantum machines and drivers
   topicHref: machines/index.md
   href: machines/toc.yml
-- name: Quantum development techniques
-  topicHref: techniques/index.md
-  href: techniques/toc.yml
 - name: Q# libraries
   href: libraries/toc.yml
-- name: Q# programming language
-  topicHref: language/index.md
-  href: language/toc.yml
+- name: Q# manual 
+  topicHref: manual/index.md
+  href: manual/toc.yml
 - name: Contributing to the Quantum Development Kit
   href: contributing/toc.yml
   topicHref: contributing/index.md

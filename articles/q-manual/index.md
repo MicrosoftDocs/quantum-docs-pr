@@ -11,6 +11,11 @@ uid: microsoft.quantum.manual.intro
 # Q# Manual
 
 # What is Q#?
+Q# (Q-sharp) is a domain-specific programming language used for
+expressing quantum algorithms.
+It is to be used for writing subroutines that execute on an adjunct
+quantum processor, under the control of a classical host program and computer.
+Until quantum processors are widely available, Q# subroutines execute on a simulator.
 
 A natural model for quantum computation is to treat the quantum computer
 as a coprocessor, similar to that used for GPUs, FPGAs, and other adjunct
@@ -20,12 +25,6 @@ When appropriate and necessary, the host program can invoke a subroutine
 that runs on the adjunct processor.
 When the subroutine completes, the host program gets access to the
 subroutine's results.
-
-Q# (Q-sharp) is a domain-specific programming language used for
-expressing quantum algorithms.
-It is to be used for writing subroutines that execute on an adjunct
-quantum processor, under the control of a classical host program and computer.
-Until quantum processors are widely available, Q# subroutines execute on a simulator.
 
 Q# provides a small set of primitive types, along with two ways
 (arrays and tuples) for creating new, structured types.

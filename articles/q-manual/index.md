@@ -1,11 +1,11 @@
 ---
-title: The Q# Programming Language | Microsoft Docs 
-description: The Q# Programming Language
+title: Q# Manual | Microsoft Docs 
+description: Q# Manual
 author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com 
-ms.date: 12/11/2017
+ms.author: ------@microsoft.com 
+ms.date: 07/31/2019
 ms.topic: article
-uid: microsoft.quantum.language.intro
+uid: microsoft.quantum.manual.intro
 ---
 
 # Q# Manual

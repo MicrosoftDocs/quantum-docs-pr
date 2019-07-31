@@ -14,8 +14,8 @@
 - name: Q# libraries
   href: libraries/toc.yml
 - name: Q# manual 
-  topicHref: q-manual/index.md
-  href: q-manual/toc.yml
+  topicHref: manual/index.md
+  href: manual/toc.yml
 - name: Contributing to the Quantum Development Kit
   href: contributing/toc.yml
   topicHref: contributing/index.md

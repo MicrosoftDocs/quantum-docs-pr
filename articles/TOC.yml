@@ -13,7 +13,7 @@
   href: machines/toc.yml
 - name: Q# libraries
   href: libraries/toc.yml
-  topicHref: q-maual/index.md
+  topicHref: q-manual/index.md
   href: q-manual/toc.yml
 - name: Contributing to the Quantum Development Kit
   href: contributing/toc.yml

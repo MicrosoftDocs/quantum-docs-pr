@@ -2,7 +2,6 @@
 title: The basics of Q# | Microsoft Docs 
 description: Basics concepts of Q#
 author: QuantumWriter
-uid: microsoft.quantum.qsharp-ref.basics
 ms.author:
 ms.date: 07/25/2019
 ms.topic: article

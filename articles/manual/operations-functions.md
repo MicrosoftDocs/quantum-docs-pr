@@ -6,7 +6,6 @@ uid: microsoft.quantum.manual.operations-functions
 ms.author: 
 ms.date: 07/30/2019
 ms.topic: article
-uid: microsoft.quantum.manual.operations-functions
 ---
 # Q# Operations and Functions
 

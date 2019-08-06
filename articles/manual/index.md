@@ -44,7 +44,7 @@ Q# is scalable: it can be used to write simple demonstration programs like telep
  to build software for quantum computers to take advantage
  of the quantum power of computation when the time comes. Q# is a tool 
  made to provide a platform where developers can write and test programs 
- to be run in a future generation of quantum computers.
+ to be run on a future generation of quantum computers.
 
 For more information about the foundations and 
 motivation of Q# check out 

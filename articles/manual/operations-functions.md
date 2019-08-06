@@ -252,7 +252,7 @@ This approach will be used throughout the Q# standard library for expressing cla
 
 Many functions and operations that we might wish to define do not actually heavily rely on the types of their inputs, but rather only implicitly use their types via some other function or operation.
 For example, consider the *map* concept common to many functional languages; given a function $f(x)$ and a collection of values $\{x_1, x_2, \dots, x_n\}$, map returns a new collection $\{f(x_1), f(x_2), \dots, f(x_n)\}$.
-To implement this in Q#, we can take advantage of that functions are first class.
+To implement this in Q#, we can take advantage of first class functions.
 Let's write out a quick example of `Map`, using ★ as a placeholder while we figure out what types we need.
 
 ```qsharp

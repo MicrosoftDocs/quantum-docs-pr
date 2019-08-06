@@ -68,7 +68,7 @@ understand the basics of quantum computation.
   notation for linear algebra widely used in quantum physics.
 * **Basic concepts of quantum mechanics:** while it is not required to 
   have a deep understanding of quantum mechanics to use Q#, it is highly 
-  recommendable to be familiar with some basic concepts, namely 
+  recommended to be familiar with some basic concepts, namely 
   *quantum state*, *qubit*, *observable*, *measurement*, *Hamiltonian*,
   *superposition*, *entanglement*, *interference*, among others.  
 ## Learning materials

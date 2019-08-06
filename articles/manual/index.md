@@ -40,7 +40,7 @@ Q# is scalable: it can be used to write simple demonstration programs like telep
 
 [![](http://img.youtube.com/vi/cOUrzxyng04/0.jpg)](http://www.youtube.com/watch?v=cOUrzxyng04 "")
 
- While quantum hardware is still in an early developing stage, we need 
+ While quantum hardware is still in early development, we need 
  to build adequate software for quantum computers to take advance 
  of the quantum power of computation when time comes. Q# is a tool 
  made to provide a platform where developers can write and test programs 

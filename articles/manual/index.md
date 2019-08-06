@@ -66,7 +66,7 @@ understand the basics of quantum computation.
 * **Dirac notation:** most quantum computing texts use Dirac notation 
   to express the mathematical concepts. Dirac notation is just a simple 
   notation for linear algebra widely used in quantum physics.
-* **Basic concepts of quantum mechanics:** wether it is not required to 
+* **Basic concepts of quantum mechanics:** while it is not required to 
   have a deep understanding of quantum mechanics to use Q#, it is highly 
   recommendable to be familiar with some basic concepts, namely 
   *quantum state*, *qubit*, *observable*, *measurement*, *Hamiltonian*,

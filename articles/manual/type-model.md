@@ -6,7 +6,7 @@ uid: microsoft.quantum.qsharp-ref.type-model
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article
-uid: microsoft.quantum.language.type-model
+uid: microsoft.quantum.manual.type-model
 ---
 
 # The Type Model
@@ -197,7 +197,7 @@ newtype DoublyWrappedInt = WrappedInt;
 ...
 ```
 
-Take a look at the section on [unwrap expressions](xref:microsoft.quantum.language.expressions#unwrap-expressions) and [operators precedence](xref:microsoft.quantum.language.expressions#operator-precedence) for more details.
+Take a look at the section on [unwrap expressions](xref:microsoft.quantum.manual.expressions#unwrap-expressions) and [operators precedence](xref:microsoft.quantum.manual.expressions#operator-precedence) for more details.
 
 Values of a user defined type can be created by calling the corresponding type constructor:
 
@@ -206,10 +206,10 @@ let realUnit = Complex(1.0, 0.0);
 let imaginaryUnit = Complex(0.0, 1.0);
 ```
 
-Alternatively, new values can be created from existing ones using [copy-and-update expressions](xref:microsoft.quantum.language.expressions#copy-and-update-expressions). 
+Alternatively, new values can be created from existing ones using [copy-and-update expressions](xref:microsoft.quantum.manual.expressions#copy-and-update-expressions). 
 Like for arrays, such expressions copy all item values of the original expression, 
 with the exception of the specified named items. For these the values are set to the ones defined on the right hand side of the expression. 
-Any other language constructs, like for example [update-and-reassign statements](xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols), that are available for array items exist for named-items in user defined types as well. 
+Any other language constructs, like for example [update-and-reassign statements](xref:microsoft.quantum.manual.statements#rebinding-of-mutable-symbols), that are available for array items exist for named-items in user defined types as well. 
 
 ```qsharp
 newtype ComplexArray = (Count : Int, Data : Complex[]);

@@ -3,7 +3,7 @@
 title: File Structure | Microsoft Docs 
 description: Q# File Structure
 author: QuantumWriter
-uid: microsoft.quantum.language.file-structure
+uid: microsoft.quantum.manual.file-structure
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article
@@ -77,7 +77,7 @@ The `open` directive applies to the entire namespace block within a file.
 ## User-Defined Type Declarations
 
 Q# provides a way for users to declare new user-defined types, as described in
-the [Q# type model](xref:microsoft.quantum.language.type-model) section.
+the [Q# type model](xref:microsoft.quantum.manual.type-model) section.
 User-defined types are distinct even if the base types are identical.
 In particular, there is no automatic conversion between values of two
 user-defined types even if the underlying types are identical.
@@ -277,7 +277,7 @@ auto-generating an adjoint specialization following the `invert` or `auto` direc
 The controlled version of an operation specifies how a quantum-controlled
 version of the operation is implemented, i.e. how an operation acts when applied conditioned on the state of a quantum register.
 A more complete description is provided in the
-[Controlled](xref:microsoft.quantum.language.type-model#controlled)
+[Controlled](xref:microsoft.quantum.manual.type-model#controlled)
 section.
 
 It is legal to specify an operation with no controlled version;

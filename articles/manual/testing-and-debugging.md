@@ -3,7 +3,7 @@ title: Q# techniques - testing and debugging | Microsoft Docs
 description: Q# techniques - testing and debugging
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
-uid: microsoft.quantum.techniques.testing-and-debugging
+uid: microsoft.quantum.manual.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
 ---

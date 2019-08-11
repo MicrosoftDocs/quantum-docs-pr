@@ -1,8 +1,8 @@
 ---
 title: Q# Manual | Microsoft Docs 
 description: Q# Manual
-author: QuantumWriter
-ms.author: ------@microsoft.com 
+author: E. Gonzalez
+ms.author: v-edsanc@microsoft.com 
 ms.date: 07/31/2019
 ms.topic: article
 uid: microsoft.quantum.manual.intro
@@ -53,11 +53,13 @@ There is no need to be an expert on quantum physics to start writing your first 
 
 * **Complex numbers:** quantum mechanics makes use of complex numbers to express quantum states. Some experience with complex numbers is crucial to
 understand the basics of quantum computation.
-* **Linear algebra (vectors and matrices):** quantum states are vectors
-  in a vector space over the complex numbers. Quantum computing makes
+* **Linear algebra (vectors and matrices):** quantum states are vectors 
+  in a vector space over the complex numbers. Quantum computing makes 
+  intense use of linear operators acting on these states. Therefore 
   some level of expertise in linear algebra is indispensable to use Q#.
-* **Dirac notation:** most quantum computing texts use Dirac notation
-  to express the mathematical concepts. Dirac notation is just a simple
+* **Dirac notation:** most quantum computing texts use Dirac notation 
+  to express the mathematical concepts. Dirac notation is just a simple 
+  notation for linear algebra widely used in quantum physics.
 * **Basic concepts of quantum mechanics:** while it is not required to
   have a deep understanding of quantum mechanics to use Q#, it is highly
   recommended to be familiar with some basic concepts, namely

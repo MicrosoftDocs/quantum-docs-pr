@@ -9,6 +9,7 @@ ms.topic: article
 ---
 
 # Statements work flow and Other Constructs
+
 This section contains description of statements,work flow elements like loops or conditonals and other kind of constructs.
 
 ## Comments
@@ -149,6 +150,7 @@ is required.
 
 Statements, like expressions, declarations, and directives, may be broken out across multiple lines.
 Having multiple statements on a single line should be avoided.
+.
 
 ## Statement Blocks
 
@@ -160,17 +162,7 @@ A statement block that is lexically enclosed within another block
 is considered to be a sub-block of the containing block;
 containing and sub-blocks are also called outer and inner blocks.
 
-## Statement Blocks
-
-Q# statements are grouped into statement blocks.
-A statement block starts with an opening `{` and ends with a
-closing `}`.
-
-A statement block that is lexically enclosed within another block
-is considered to be a sub-block of the containing block;
-containing and sub-blocks are also called outer and inner blocks.
-
-##Local variables: Symbol Binding and Assignment
+## Local variables: Symbol Binding and Assignment
 
 Q# distinguishes between mutable and immutable symbols.
 
@@ -312,6 +304,7 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 > Avoid unnecessary use of update-and-reassign statements by leveraging the tools provided in <xref:microsoft.quantum.arrays>.
 
 The function
+
 ```qsharp
 function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
 {
@@ -319,10 +312,11 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
     for (index in 0 .. n - 1) {
         set pauliArray w/= index <- 
             index == location ? pauli | PauliI;
-    }    
+    }
     return pauliArray;
 }
 ```
+
 for example can simply be simplified using the function `ConstantArray` in `Microsoft.Quantum.Arrays`, 
 and returning a copy-and-update expression:
 
@@ -331,6 +325,7 @@ function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
     return ConstantArray(n, PauliI) w/ i <- pauli;
 }
 ```
+
 ### Tuple Deconstruction
 
 If the right-hand side of the binding is a tuple,
@@ -345,6 +340,7 @@ mutable (x, y) = ((1, 2), [3, 4]); // x is bound to (1,2), y is bound to [3,4]
 set (x, _, y) = ((5, 6), 7, [8]);  // x is rebound to (5,6), y is rebound to [8]
 let (r1, r2) = MeasureTwice(q1, PauliX, q2, PauliY);
 ```
+
 ### Binding Scopes
 
 In general, symbol bindings go out of scope and become inoperative
@@ -411,6 +407,7 @@ if (a == b) {
 ```
 
 ## Control Flow
+
 Within an operation or function, each statement executes in order, similar to most common imperative classical languages.
 This flow of control can be modified, however, in three distinct ways:
 

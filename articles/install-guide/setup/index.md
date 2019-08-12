@@ -19,14 +19,14 @@ You can do this by following the instructions from the [.NET downloads page](htt
 
 ## 2. Install the Quantum Development Kit for Your Preferred Environment ##
 
-### Visual Studio Editors and the Command Line ###
+### Visual Studio Editors and the Command Line: ###
 
 After installing the [.NET Core SDK](https://dotnet.microsoft.com/), install the Quantum Development Kit following these instructions for your preferred environment:
 * [Installing the QDK for Visual Studio Code](xref:microsoft.quantum.install.vs-code) (Windows 10, Linux, macOS)
 * [Installing the QDK for Visual Studio](xref:microsoft.quantum.install.vs-2017) (Windows 10 only)
 * [Installing the QDK in the command line](xref:microsoft.quantum.install.cmd-line)
 
-### C#, Python, and Jupyter Notebooks ###
+### C#, Python, and Jupyter Notebooks: ###
 
 In addition to the environments mentioned above, we provide interoperability allowing you to invoke Q# quantum algorithms using C#, Python, and Jupyter Notebooks.
 Details and instructions are provided here:

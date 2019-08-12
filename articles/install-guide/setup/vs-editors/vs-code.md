@@ -9,63 +9,36 @@ ms.topic: article
 
 # Installing the Quantum Development Kit for Visual Studio Code #
 
-The Quantum Development Kit can be used with Visual Studio Code, Microsoft's open-source cross-platform development environment, making it easy to use Q# with C# or Python. Additionally, Visual Studio Code is available for Windows, Linux, and macOS.
+The Quantum Development Kit can be used with Visual Studio Code, Microsoft's open-source cross-platform development environment, making it easy to use Q# with C# or Python. Visual Studio Code is available for Windows, Linux, and macOS.
 
-Below, you will first find instructions for installing the Quantum Development Kit extension directly--follow these if you already have Visual Studio Code.
-If you do not, then you may skip ahead to the "Installing Visual Studio Code" section.
-
-Lastly, we take you through running a sample application to validate that your Q# environment has been correctly installed and configured. 
+Below, you will find the instructions to:
+* Install Visual Studio Code 
+* Install the Quantum Development Kit extension
+* Validate the install with a sample application.
 Upon successful validation, you will be ready to start developing!
 
-## Already have Visual Studio Code and the .NET Core SDK? ##
+## Installing Visual Studio Code ##
 
-If you are already a Visual Studio Code user (and have installed the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) from the [.NET downloads page](https://www.microsoft.com/net/download)), you can [install the extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) to get started developing Q# in Visual Studio Code.
-
-Then, you can scroll ahead to the "Validating the Quantum Development Kit installation" section below, and be sure to check our [quickstart guide](xref:microsoft.quantum.write-program) for step-by-step instructions for your first quantum program.
-
-## Installing Visual Studio Code and the .NET Core SDK ##
-
-The Quantum Development Kit uses the .NET Core SDK (2.0 or later) to make it easy to create, build, and run Q# projects from the command line.
-We recommend using the Quantum Development Kit together with Visual Studio Code (version 1.26.0 or later).
-
-1. Download and install the **.NET Core SDK** 2.0 or later from the [.NET downloads page](https://www.microsoft.com/net/download).
-
-2. Once the .NET Core SDK is installed, run the following command in your favorite command line (e.g.: PowerShell or Bash) to download the latest templates for creating new Q# applications and libraries:
-   ```Bash
-   dotnet new -i Microsoft.Quantum.ProjectTemplates
-   ```
-
-3. Go to the [Visual Studio Code website](https://code.visualstudio.com/).
-
-4. Pick the download for your platform and follow the installation prompts.
-
-5. Once Visual Studio Code is installed, go to the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) extension on the Visual Studio Marketplace and press Install.
+If you do not have Visual Studio Code installed, you can do so by visiting the [Visual Studio Code website](https://code.visualstudio.com/). Pick the download for your platform and follow the installation prompts.
 
 > [!NOTE]
 > When you run Visual Studio Code for the first time, you may be prompted to install Git if you have not already done so.
 > Git is not required to use the Quantum Development Kit, but works great for managing and sharing Q# projects, and for contributing back to the Q# libraries and samples.
 > If you would like to use Git, please download and run [Git for Windows](https://git-scm.com/download/win).
 
+
+## Installing the Quantum Development Kit Extension ##
+
+Once you have installed Visual Studio Code (and the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later)), you can find the [Microsoft Quantum Development Kit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) extension in the Visual Studio Marketplace and press Install.
+
 > [!TIP]
 > You can also install the Quantum Development Kit extension for Visual Studio Code from the *Go to file...* palette.
 > Press **Ctrl+P** or **⌘+P** from within Visual Studio Code, type or paste `ext install quantum.quantum-devkit-vscode`, and press **Enter**.
 
-You should now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
-
-## Common Issues ##
+### Common Issues ###
 
 - Depending on your network configuration, when using the Microsoft Quantum Development Kit for Visual Studio Code on Windows 10, you may see a popup from Windows Defender asking you to approve network access for the extension.
   The Visual Studio Code extension uses network access on the local machine to send information between Visual Studio Code and the Q# compiler framework, allowing for diagnostic information to be reported immediately through intelliSense.
-
-## Optional Dependencies ##
-
-Some of the samples demonstrate using the Quantum Development Kit with other programming environments, and have additional installation requirement:
-
-- Some samples use the Node.js Package Manager (NPM) to handle user interface dependencies.
-  NPM can be installed [manually](https://nodejs.org/en/download/current/) or through a [package manager](https://nodejs.org/en/download/package-manager/).
-- The Python interoperability feature (currently in Windows-only preview) has been developed for the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3.6.
-  Please see the [README](https://github.com/Microsoft/Quantum/blob/master/Samples/src/PythonInterop/README.md) file provided with the Python sample for more details.
-
 
 # Validating the Quantum Development Kit installation #
 
@@ -114,3 +87,12 @@ If the program runs and the output is similar to the following (has 8 rounds of 
 
 In addition to these libraries and samples, the Quantum Development Kit is provided along with further libraries for non-commercial use.
 These libraries may be found in the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository on GitHub.
+
+## Optional Dependencies ##
+
+Some of the samples demonstrate using the Quantum Development Kit with other programming environments, and have additional installation requirement:
+
+- Some samples use the Node.js Package Manager (NPM) to handle user interface dependencies.
+  NPM can be installed [manually](https://nodejs.org/en/download/current/) or through a [package manager](https://nodejs.org/en/download/package-manager/).
+- The Python interoperability feature (currently in Windows-only preview) has been developed for the [Anaconda distribution](https://www.anaconda.com/download/) of Python 3.6.
+  Please see the [README](https://github.com/Microsoft/Quantum/blob/master/Samples/src/PythonInterop/README.md) file provided with the Python sample for more details.

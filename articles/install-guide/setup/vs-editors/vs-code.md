@@ -37,7 +37,7 @@ Once you have installed Visual Studio Code (and the latest version of the [.NET 
 > You can also install the Quantum Development Kit extension for Visual Studio Code from the *Go to file...* palette.
 > Press **Ctrl+P** or **⌘+P** from within Visual Studio Code, type or paste `ext install quantum.quantum-devkit-vscode`, and press **Enter**.
 
-### Common Issues: ##
+### Common Issue: ##
 
 - Depending on your network configuration, when using the Microsoft Quantum Development Kit for Visual Studio Code on Windows 10, you may see a popup from Windows Defender asking you to approve network access for the extension.
   The Visual Studio Code extension uses network access on the local machine to send information between Visual Studio Code and the Q# compiler framework, allowing for diagnostic information to be reported immediately through intelliSense.

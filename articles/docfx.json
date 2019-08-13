@@ -42,6 +42,7 @@
     "globalMetadata": {
       "show_latex": true,
       "ms.prod": "quantum",
+      "ms.devlang": "qsharp",
       "ms.topic": "conceptual",
       "searchScope": ["quantum", "q#", "qsharp"],
       "feedback_system": "GitHub",

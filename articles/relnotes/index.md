@@ -92,7 +92,7 @@ The changes are summarized here as well as instructions for upgrading your exist
 
 ## Q# language syntax
 This release adds new Q# language syntax:
-* Add a [shorthand way to express specializations of quantum operations](xref:microsoft.quantummanual.type-model#functors) (control and adjoints) with `+` operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., `: adjoint`) will continue to work, but a compile time warning will be generated.  
+* Add a [shorthand way to express specializations of quantum operations](xref:microsoft.quantum.manual.type-model#functors) (control and adjoints) with `+` operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., `: adjoint`) will continue to work, but a compile time warning will be generated.  
 * Add a new operator for [copy-and-update](xref:microsoft.quantum.manual.expressions#copy-and-update-expressions), `w/`, can be used to express array creation as a modification of an existing array.
 * Add the common [apply-and-upate statement](xref:microsoft.quantum.qsharp-ref.statements#rebinding-of-mutable-symbols), e.g., `+=`, `w/=`.
 * Add a way to specify a short name for namespaces in [open directives](xref:microsoft.quantum.manual.file-structure#open-directives).

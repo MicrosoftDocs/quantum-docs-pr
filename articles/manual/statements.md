@@ -1,6 +1,6 @@
 ---
 title: Q# statements | Microsoft Docs 
-description: Q# statements, work flow and other constructs
+description: Q# statements, Control Flow and other constructs
 author: QuantumWriter
 uid: microsoft.quantum.manual.statements
 ms.author: Alan.Geller@microsoft.com 
@@ -8,7 +8,7 @@ ms.date: 12/11/2017
 ms.topic: article
 ---
 
-# Statements, flow control and other constructs 
+# Statements, Control Flow and other constructs 
 
 This section contains description of statements,work flow elements like loops or conditonals and other kind of constructs.
 

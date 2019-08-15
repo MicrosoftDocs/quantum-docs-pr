@@ -72,7 +72,7 @@ Quantum computing is an emerging field and fortunately, there is an immense amou
 
 #### Quantum computing concepts
 
-In this list you can find resources for learning concepts related with quantum computation:
+On this list you can find resources for learning concepts related with quantum computation:
 
 * A good place to start is our guide for [Quantum computing concepts](xref:microsoft.quantum.concepts.intro), a compilation of basic concepts for quantum computing.
 * The book *Learn Quantum Computing with Python and Q#* (Sarah C. Kaiser and Christopher E. Granade) provides an excellent introduction for people who have little to no experience with quantum mechanics, but some programming background.

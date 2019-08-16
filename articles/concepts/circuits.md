@@ -122,3 +122,8 @@ The quantum teleportation circuit is given below; we also provide an annotated v
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
 ![](~/media/concepts_tp2.png)
+
+## Generating circuit diagrams from Q# code
+
+Q# provides tools that allows you to create the circuit diagram for simple quantum operations.
+For more information, please take a look at the [generating quantum circuits from Q#](xref:microsoft.quantum.machines.circuitizer) topic.

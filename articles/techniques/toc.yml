@@ -12,3 +12,5 @@
   href: going-further.md
 - name: Testing and debugging
   href: testing-and-debugging.md
+- name: Circuit diagrams
+  href: circuitizer.md

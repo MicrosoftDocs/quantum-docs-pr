@@ -38,7 +38,7 @@ The following sections detail:
 - [The Type Model](xref:microsoft.quantum.language.type-model)
 - [Expressions](xref:microsoft.quantum.language.expressions)
 - [Statements](xref:microsoft.quantum.qsharp-ref.statements)
-- [File Structure](microsoft.quantum.language.file-structure)
+- [File Structure](xref:microsoft.quantum.language.file-structure)
 
 # Conventions
 

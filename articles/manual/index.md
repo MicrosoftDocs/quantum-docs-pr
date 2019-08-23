@@ -38,7 +38,7 @@ Q# is scalable: it can be used to write simple demonstration programs like telep
 
 ## Why Q#?
 
-[![Quantum computing video](http://img.youtube.com/vi/cOUrzxyng04/0.jpg)](http://www.youtube.com/watch?v=cOUrzxyng04 "")
+[!VIDEO https://www.youtube.com/embed/iAtwVM-Z7rY]
 
  While quantum hardware is still in early development, we need to build software for quantum computers to take advantage
  of the quantum power of computation when the time comes. Q# is a tool made to provide a platform where developers can write and test programs to be run on a future generation of quantum computers.

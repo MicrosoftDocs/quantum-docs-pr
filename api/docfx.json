@@ -40,9 +40,9 @@
     "externalReference": [],
     "globalMetadata": {
       "latex_macros": {
-        "ket": [ "\\left| #1\\right\\rangle", 1 ],
-        "bra": [ "\\left\\langle #1\\right|", 1 ],
-        "braket": [ "\\left\\langle #1 \\right\\rangle", 1 ],
+        "ket": ["\\left| #1\\right\\rangle", 1],
+        "bra": ["\\left\\langle #1\\right|", 1],
+        "braket": ["\\left\\langle #1 \\right\\rangle", 1],
         "boldone": "\\mathbf{1}",
         "expect": "\\mathbb{E}",
         "variance": "\\operatorname{Var}",
@@ -51,7 +51,7 @@
       "ms.prod": "quantum",
       "ms.technology": "devlang-qsharp",
       "ms.topic": "managed-reference",
-      "searchScope": [ "quantum", "q#", "qsharp" ],
+      "searchScope": ["quantum", "q#", "qsharp"],
       "feedback_system": "GitHub",
       "feedback_github_repo": "Microsoft/quantum",
       "feedback_product_url": "https://github.com/microsoft/quantum/issues"

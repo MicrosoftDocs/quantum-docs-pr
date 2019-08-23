@@ -7,7 +7,6 @@ ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 ---
-
 # The Qubit
 
 Just as bits are the fundamental object of information in classical computing, [*qubits*](https://en.wikipedia.org/wiki/Qubit) (quantum bits) are the fundamental object of information in quantum computing.  To understand this correspondence, let's look at the simplest example: a single qubit.

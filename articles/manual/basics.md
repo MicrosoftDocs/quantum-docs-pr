@@ -1,5 +1,5 @@
 ---
-title: The basics of Q# | Microsoft Docs 
+title: The basics of Q#
 description: Basics concepts of Q#
 author: Eduardo G.
 ms.author: v-edsanc@microsoft.com

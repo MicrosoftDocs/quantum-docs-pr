@@ -57,7 +57,7 @@ An expression in a programming language is a combination of one or more constant
 ### Statements 
   A statement is a syntactic unit of an imperative programming language that expresses some action to be carried out. Statements contrast with expressions in that statements do not return results and are executed solely for their side effects, while expressions always return a result and often do not have side effects at all. This distinction is frequently observed in wording: a statement is executed, while an expression is evaluated. An example of a Q# statement is the loop `for` which supports iteration over an integer range.
 
-## Structure fo Q# Source Files
+## Structure of Q# Source Files
 
 Minimally, a Q# source file consists of a *namespace declaration*, which specifies a .NET namespace which will contain the definitions in the source file.
 Definitions from other Q# source files and libraries can be included using the `open` statement.

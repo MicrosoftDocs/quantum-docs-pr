@@ -846,7 +846,7 @@ Finally, we show an example of a RUS pattern to prepare a quantum state $\frac{1
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
 
-    using( ancilla = Qubit() ) {
+    using (auxillaryQubit = Qubit()) {
         H(ancilla);
         repeat {
             // We expect target and ancilla qubit to be in |+⟩ state.

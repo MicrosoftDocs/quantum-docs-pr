@@ -820,7 +820,7 @@ In a typical use case, the following circuit implements a rotation around an irr
 ```qsharp
 operation RUSCircuit (qubit : Qubit) : Unit {
 
-    using(ancillas = Qubit[2]) {
+    using (auxillaryQubits = Qubit[2]) {
         ApplyToEachA(H, ancillas);
         mutable finished = false;
         repeat {

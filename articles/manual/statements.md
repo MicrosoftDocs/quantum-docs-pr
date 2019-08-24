@@ -814,7 +814,7 @@ fixup {
     statementBlock2
 }
 ```
-where `statementBlock1` and `statementBlock2` are zero or more Q# statements, and `expression` any valid expression that evaluates to a value of type `Bool`. 
+where `statementBlock1` and `statementBlock2` are zero or more Q# statements, and where `expression` is any valid expression that evaluates to a value of type `Bool`. 
 In a typical use case, the following circuit implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere. This is accomplished by using a known RUS pattern: 
 
 ```qsharp

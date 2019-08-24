@@ -818,7 +818,7 @@ where `statementBlock1` and `statementBlock2` are zero or more Q# statements, an
 In a typical use case, the following circuit implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere. This is accomplished by using a known RUS pattern: 
 
 ```qsharp
-operation RUScircuit (qubit : Qubit) : Unit {
+operation RUSCircuit (qubit : Qubit) : Unit {
 
     using(ancillas = Qubit[2]) {
         ApplyToEachA(H, ancillas);

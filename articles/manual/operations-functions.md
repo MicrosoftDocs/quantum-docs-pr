@@ -249,7 +249,7 @@ function SquareOperation(op : (Qubit => Unit)) : (Qubit => Unit) {
 In principle, the classical logic within `SquareOperation` could have been much more involved, but it is still isolated from the rest of an operation by the guarantees that the compiler can offer about functions.
 This approach will be used throughout the Q# standard library for expressing classical control flow in a way that can be readily used within quantum programs.
 
-## Generic Operations and Functions
+## Type-Parameterized Operations and Functions
 
 > [!TIP]
 > This section assumes some basic familiarity with [generics in C#](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics), [generics in F#](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/), [C++ templates](https://docs.microsoft.com/cpp/cpp/templates-cpp), or similar approaches to metaprogramming in other languages.

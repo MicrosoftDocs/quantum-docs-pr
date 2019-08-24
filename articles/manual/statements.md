@@ -644,6 +644,7 @@ fail $"Syndrome {syn} is incorrect";
 
 Note that none of these statements are allowed within the body of a function.
 They are only valid within operations.
+
 ### Allocating Qubits
 In Q# we can allocate qubits through two different statements: `using` and `borrowing`. The qubits acquired with the statement `using` are called *clean qubits* and those aquired with the statement `borrowing` are called *dirty qubits*.
 

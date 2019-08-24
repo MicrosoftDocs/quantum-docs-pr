@@ -188,7 +188,7 @@ a symbol or symbol tuple, an equals sign `=`, an expression to bind the symbol(s
 The type of the bound symbol(s) is inferred based on the expression on the right hand side. For instance:
 
 ```qsharp
-let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
+let measurementOperators = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 ```
 
 This assigns a particular array of Pauli operators to a variable called `measurementOperator`.

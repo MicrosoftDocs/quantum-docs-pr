@@ -25,6 +25,24 @@ dotnet tool update -g Microsoft.Quantum.IQSharp
 > * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
 > * References between projects migrated to 0.6 and higher and projects using older package versions are **not** supported.
 
+# Version 0.9 (*PackageReference 0.9.1908.240*)
+
+*Release date: August 28th, 2019
+
+This release contains the following:
+
+- New support for conjugate statements in Q#
+- New code actions in the compiler, such as: "replace with", "add documentation", and simple array item update
+- Added install template and new project commands to Visual Studio Code extension
+- Added new variants of ApplyIf combinator to [Microsoft.Quantum.Canon](xref:microsoft.quantum.canon)
+
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed) and [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
+
+The changes are summarized here as well as instructions for upgrading your existing programs.  Read more about these changes on the [Q# dev blog](https://devblogs.microsoft.com/qsharp).
+
+
+
+
 # Version 0.8 (*PackageReference 0.8.1907.1701*)
 
 *Release date: July 12, 2019*

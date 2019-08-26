@@ -81,11 +81,13 @@ As an example, if $N=2$ then the state
 $$
 \ket{0} \ket{1} \ket{1} \ket{0},
 $$
+
 would correspond to spin orbitals $1$ and $2$ being occupied with the remainder empty.
 Similarly, the state
 $$
 \ket{0} \equiv \ket{0}_{0} \cdots \ket{0}_{N-1},
 $$
+
 has no electrons and is known as the 'vacuum state'.
 
 A beautiful side-effect of second quantization is that we no longer have to explicitly keep track of the anti-symmetry of the quantum state.
@@ -99,10 +101,7 @@ These are denoted $a^\dagger_j$ and $a_j$ respectively.
 
 For example,
 \begin{align}
-a^\dagger_1 \ket{0}_1 &= \ket{1}_1\nonumber\\\
-a^\dagger_1 \ket{1}_1 &= 0\nonumber\\\
-a_1 \ket{0}_1 &= 0\nonumber\\\
-a_1 \ket{1}_1 &= \ket{0}_1
+a^\dagger_1 \ket{0}_1 = \ket{1}_1,\quad a^\dagger_1 \ket{1}_1 = 0,\quad a_1 \ket{0}_1 = 0,\quad a_1 \ket{1}_1 = \ket{0}_1.
 \end{align}
 Note that here $a^\dagger_1 \ket{1}_1=0$ and $a_1 \ket{0}_1$ yield the zero-vector not $\ket{0}_1$.
 Such operators are therefore neither Hermitian nor unitary.
@@ -198,8 +197,7 @@ a^\dagger_2 a^\dagger_1 \ket{0} = -a^\dagger_1 a^\dagger_2 \ket{0}.
 $$
 Such operators are said to 'anti-commute' and in general for any $i, j$ we have that
 \begin{align}
-a^\dagger_i a^\dagger_j  &= -(1-\delta_{i,j})a^\dagger_j a^\dagger_i\nonumber\\\
-a^\dagger_i a_j &=\delta_{i,j} - a_j a^\dagger_i.
+a^\dagger_i a^\dagger_j  = -(1-\delta_{i,j})a^\dagger_j a^\dagger_i,\quad a^\dagger_i a_j =\delta_{i,j} - a_j a^\dagger_i.
 \end{align}
 Thus the following two <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderSequence> instances are considered inequivalent
 ```csharp
@@ -247,13 +245,18 @@ It is perhaps unsurprising that the Hamiltonian in [Quantum Models for Electroni
 In particular, if $\psi\_j$ are the spin orbitals that form the basis then
 
 \begin{equation}
-\hat{H} = \sum\_{pq} h\_{pq}a^\dagger\_p a\_q + \frac{1}{2}\sum\_{pqrs} h\_{pqrs}a^\dagger\_p a^\dagger\_q a\_ra\_s +h\_{\textrm nuc},\tag{★}\label{eq:totalHam}
+\hat{H} = \sum\_{pq} h\_{pq}a^\dagger\_p a\_q + \frac{1}{2}\sum\_{pqrs} h\_{pqrs}a^\dagger\_p a^\dagger\_q a\_ra\_s +h\_{\textrm nuc},\label{eq:totalHam}
 \end{equation}
 where $h\_{\textrm nuc}$ is the nuclear energy (which is a constant under the Born-Oppenheimer approximation) and
 
 \begin{align}
-h\_{pq} &= \int\_{-\infty}^\infty \psi^\*\_p(x\_1) \left(\sum\_{i} \frac{|\hat{p}\_i|^2}{2m\_e} -\sum\_{i, k} \frac{e^2}{|\hat{x}\_i - y\_k|}\right)  \psi\_q(x\_1)\mathrm{d}^3x\_1\nonumber\\\
-h\_{pqrs} &= \int\_{-\infty}^\infty \int\_{-\infty}^\infty\psi\_p^\*(x\_1)\psi\_q^\*(x\_2) \left(\frac{1}{2}\sum\_{i\ne j} \frac{e^2}{|\hat{x}\_i - \hat{x}\_j|} \right)\psi\_r(x\_2)\psi\_s(x\_1)\mathrm{d}^3x\_1\mathrm{d}^3x\_2.\tag{★}\label{eq:integrals}
+h\_{pq} &= \int\_{-\infty}^\infty \psi^\*\_p(x\_1) \left(-\frac{\nabla^2}{2} +V(x\_1)\right)  \psi\_q(x\_1)\mathrm{d}^3x\_1,
+\end{align}
+
+where $V(x)$ is the mean-field potential, and
+
+\begin{align}
+h\_{pqrs} &= \int\_{-\infty}^\infty \int\_{-\infty}^\infty\psi\_p^\*(x\_1)\psi\_q^\*(x\_2) \left(\frac{1}{|x_1-x_2|} \right)\psi\_r(x\_2)\psi\_s(x\_1)\mathrm{d}^3x\_1\mathrm{d}^3x\_2.\label{eq:integrals}
 \end{align}
 
 The terms $h\_{pq}$ are refered to as one-electron integrals because all such terms only involve single electrons and likewise $h\_{pqrs}$ are the two-electron integrals.

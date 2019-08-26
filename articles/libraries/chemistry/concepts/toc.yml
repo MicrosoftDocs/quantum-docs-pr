@@ -12,5 +12,5 @@
   href: algorithms.md
 - name: Hartree-Fock theory
   href: hartree-fock.md
-- name: Multi-reference wavefunctions
+- name: Correlated wavefunctions
   href: multireference.md

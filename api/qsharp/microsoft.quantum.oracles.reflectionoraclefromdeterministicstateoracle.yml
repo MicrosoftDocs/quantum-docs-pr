@@ -7,7 +7,7 @@ summary: |-
   Constructs reflection about a given state from an oracle.
 
   Given the oracle $O$ of type
-  <xref:microsoft.quantum.canon.deterministicstateoracle>,
+  <xref:microsoft.quantum.oracles.deterministicstateoracle>,
   the result of this function is a reflection around the state $\ket{\psi}$
   where $O\ket{0} = \ket{\psi}$.
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
@@ -23,6 +23,6 @@ output:
   - summary: A `ReflectionOracle` that reflects about the state $\ket{\psi}$.
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
-- microsoft.quantum.canon.deterministicstateoracle
-- microsoft.quantum.canon.reflectionoracle
+- deterministicstateoracle
+- reflectionoracle
 ...

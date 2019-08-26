@@ -23,7 +23,7 @@ subroutine's results.
 
 Q# (Q-sharp) is a domain-specific programming language used for
 expressing quantum algorithms.
-It is to be used for writing subroutine that execute on an adjunct
+It is to be used for writing subroutines that execute on an adjunct
 quantum processor, under the control of a classical host program and computer.
 Until quantum processors are widely available, Q# subroutines execute on a simulator.
 
@@ -38,7 +38,7 @@ The following sections detail:
 - [The Type Model](xref:microsoft.quantum.language.type-model)
 - [Expressions](xref:microsoft.quantum.language.expressions)
 - [Statements](xref:microsoft.quantum.qsharp-ref.statements)
-- [File Structure](xref:microsoft.quantum.qsharp-ref.file-structure)
+- [File Structure](xref:microsoft.quantum.language.file-structure)
 
 # Conventions
 

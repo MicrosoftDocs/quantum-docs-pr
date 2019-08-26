@@ -2,6 +2,7 @@
 uid: microsoft.quantum.extensions.convert
 name: Microsoft.Quantum.Extensions.Convert
 summary: |2-
+   # Summary
    These are some of the functions from System.Convert namespace of .NET CLR
    that are relevant within Q# type system.
 

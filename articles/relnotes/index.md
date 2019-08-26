@@ -27,7 +27,7 @@ dotnet tool update -g Microsoft.Quantum.IQSharp
 
 # Version 0.9 (*PackageReference 0.9.1908.240*)
 
-*Release date: August 28th, 2019
+*Release date: August 28th, 2019*
 
 This release contains the following:
 

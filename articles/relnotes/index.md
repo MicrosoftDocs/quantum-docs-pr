@@ -45,7 +45,6 @@ The changes are summarized here as well as instructions for upgrading your exist
 
 
 
-
 # Version 0.8 (*PackageReference 0.8.1907.1701*)
 
 *Release date: July 12, 2019*
@@ -57,7 +56,6 @@ This release contains the following:
 - Breaking change for [the trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), update to configuration settings, name changes; see the [.NET API Browser for the updated names](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration).
 
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) and [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
-
 
 
 

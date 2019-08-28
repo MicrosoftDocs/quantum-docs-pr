@@ -109,21 +109,21 @@ functions:
 - uid: microsoft.quantum.canon.ccontrolled
   summary: |-
     Given an operation op, returns a new operation which
-    applies the op if a classical control bit is true. If false, nothing happens.
+    applies the op if a classical control bit is true. If `false`, nothing happens.
 - uid: microsoft.quantum.canon.ccontrolleda
   summary: |-
     Given an operation op, returns a new operation which
-    applies the op if a classical control bit is true. If false, nothing happens.
+    applies the op if a classical control bit is true. If `false`, nothing happens.
     The modifier `A` indicates that the operation is adjointable.
 - uid: microsoft.quantum.canon.ccontrolledc
   summary: |-
     Given an operation op, returns a new operation which
-    applies the op if a classical control bit is true. If false, nothing happens.
+    applies the op if a classical control bit is true. If `false`, nothing happens.
     The modifier `C` indicates that the operation is controllable.
 - uid: microsoft.quantum.canon.ccontrolledca
   summary: |-
     Given an operation op, returns a new operation which
-    applies the op if a classical control bit is true. If false, nothing happens.
+    applies the op if a classical control bit is true. If `false`, nothing happens.
     The modifier `CA` indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.compose
   summary: |-
@@ -172,6 +172,22 @@ functions:
   summary: |-
     Returns an operation implementing the Trotter–Suzuki integrator for
     a given operation.
+- uid: microsoft.quantum.canon.delayed
+  summary: |-
+    Returns an operation that applies
+    given operation with given argument.
+- uid: microsoft.quantum.canon.delayeda
+  summary: |-
+    Returns an operation that applies
+    given operation with given argument.
+- uid: microsoft.quantum.canon.delayedc
+  summary: |-
+    Returns an operation that applies
+    given operation with given argument.
+- uid: microsoft.quantum.canon.delayedca
+  summary: |-
+    Returns an operation that applies
+    given operation with given argument.
 - uid: microsoft.quantum.canon.embedpauli
   summary: |-
     Given a single-qubit Pauli operator and the index of a qubit,
@@ -499,25 +515,64 @@ operations:
     $e^{i \theta_j}$ on the $n$-qubit number state $\ket{j}$.
 
     $U = \sum^{2^n-1}_{j=0}e^{i\theta_j}\ket{j}\bra{j}$.
+- uid: microsoft.quantum.canon.applyfermionicswap
+  summary: Applies the Fermionic SWAP.
 - uid: microsoft.quantum.canon.applyif
-  summary: |-
-    Given an operation `op` and a bit value `bit`, applies `op` to the `target`
-    if `bit` is true. If false, nothing happens to the `target`.
+  summary: Applies an operation conditioned on a classical bit.
 - uid: microsoft.quantum.canon.applyifa
-  summary: |-
-    Given an operation `op` and a bit value `bit`, applies `op` to the `target`
-    if `bit` is true. If false, nothing happens to the `target`.
-    The modifier `A` indicates that the operation is adjointable.
+  summary: Applies a adjointable operation conditioned on a classical bit.
 - uid: microsoft.quantum.canon.applyifc
-  summary: |-
-    Given an operation `op` and a bit value `bit`, applies `op` to the `target`
-    if `bit` is true. If false, nothing happens to the `target`.
-    The modifier `C` indicates that the operation is controllable.
+  summary: Applies a controllable operation conditioned on a classical bit.
 - uid: microsoft.quantum.canon.applyifca
+  summary: Applies a unitary operation conditioned on a classical bit.
+- uid: microsoft.quantum.canon.applyifelseb
   summary: |-
-    Given an operation `op` and a bit value `bit`, applies `op` to the `target`
-    if `bit` is true. If false, nothing happens to the `target`.
-    The modifier `CA` indicates that the operation is controllable and adjointable.
+    Applies one of two operations, depending on the value of a classical
+    bit.
+- uid: microsoft.quantum.canon.applyifelseba
+  summary: |-
+    Applies one of two adjointable operations, depending on the value of a
+    classical bit.
+- uid: microsoft.quantum.canon.applyifelsebc
+  summary: |-
+    Applies one of two controllable operations, depending on the value of a
+    classical bit.
+- uid: microsoft.quantum.canon.applyifelsebca
+  summary: |-
+    Applies one of two unitary operations, depending on the value of a
+    classical bit.
+- uid: microsoft.quantum.canon.applyifelser
+  summary: |-
+    Applies one of two operations, depending on the value of a classical
+    result.
+- uid: microsoft.quantum.canon.applyifelsera
+  summary: |-
+    Applies one of two adjointable operations, depending on the value of a
+    classical result.
+- uid: microsoft.quantum.canon.applyifelserc
+  summary: |-
+    Applies one of two controllable operations, depending on the value of a
+    classical result.
+- uid: microsoft.quantum.canon.applyifelserca
+  summary: |-
+    Applies one of two unitary operations, depending on the value of a
+    classical result.
+- uid: microsoft.quantum.canon.applyifone
+  summary: Applies an operation conditioned on a classical result value being one.
+- uid: microsoft.quantum.canon.applyifonea
+  summary: Applies an adjointable operation conditioned on a classical result value being one.
+- uid: microsoft.quantum.canon.applyifonec
+  summary: Applies a controllable operation conditioned on a classical result value being one.
+- uid: microsoft.quantum.canon.applyifoneca
+  summary: Applies a unitary operation conditioned on a classical result value being one.
+- uid: microsoft.quantum.canon.applyifzero
+  summary: Applies an operation conditioned on a classical result value being zero.
+- uid: microsoft.quantum.canon.applyifzeroa
+  summary: Applies an adjointable operation conditioned on a classical result value being zero.
+- uid: microsoft.quantum.canon.applyifzeroc
+  summary: Applies a controllable operation conditioned on a classical result value being zero.
+- uid: microsoft.quantum.canon.applyifzeroca
+  summary: Applies a unitary operation conditioned on a classical result value being zero.
 - uid: microsoft.quantum.canon.applymulticontrolledc
   summary: |-
     Applies a multiply controlled version of a singly controlled
@@ -818,6 +873,14 @@ operations:
     \end{align},
     $$
     where rows and columns are organized as in the quantum concepts guide.
+- uid: microsoft.quantum.canon.delay
+  summary: Applies a given operation with a delay.
+- uid: microsoft.quantum.canon.delaya
+  summary: Applies a given operation with a delay.
+- uid: microsoft.quantum.canon.delayc
+  summary: Applies a given operation with a delay.
+- uid: microsoft.quantum.canon.delayca
+  summary: Applies a given operation with a delay.
 - uid: microsoft.quantum.canon.hy
   summary: |-
     Applies the Y-basis analog to the Hadamard transformation

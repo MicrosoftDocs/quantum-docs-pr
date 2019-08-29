@@ -31,7 +31,7 @@ dotnet tool update -g Microsoft.Quantum.IQSharp
 
 This release contains the following:
 
-- New support for conjugate statements in Q#
+- New support for conjugation statements in Q#
 - New code actions in the compiler, such as: "replace with", "add documentation", and simple array item update
 - Added install template and new project commands to Visual Studio Code extension
 - Added new variants of ApplyIf combinator to [Microsoft.Quantum.Canon](xref:microsoft.quantum.canon)

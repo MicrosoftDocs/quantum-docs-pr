@@ -146,7 +146,7 @@ If you have existing Q# projects from version 0.5 of the Quantum Development Kit
 ```
       4. From the command line, run this command: `dotnet msbuild`  
       5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
-            - Open the root folder of the project or the containing solution in Visual Studio 2017 or Visual Studio Code.
+            - Open the root folder of the project or the containing solution in Visual Studio 2019 or Visual Studio Code.
             - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
             - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
 

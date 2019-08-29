@@ -2,7 +2,7 @@
 title: Q# type model | Microsoft Docs 
 description: Q# type model
 author: QuantumWriter
-uid: microsoft.quantum.qsharp-ref.type-model
+uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article

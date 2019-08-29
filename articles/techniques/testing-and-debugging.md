@@ -22,9 +22,9 @@ Q# supports creating unit tests for quantum programs, and which can be executed 
 
 ### Creating a Test Project
 
-#### [Visual Studio 2017](#tab/tabid-vs2017)
+#### [Visual Studio 2019](#tab/tabid-vs2019)
 
-Open Visual Studio 2017. Go to the `File` menu and select `New` > `Project...`.
+Open Visual Studio 2019. Go to the `File` menu and select `New` > `Project...`.
 In the project template explorer, under `Installed` > `Visual C#`,
 select the `Q# Test Project` template.
 
@@ -83,7 +83,7 @@ of found tests. This can be useful to indicate, for instance, which simulator is
 
 ### Running Q# Unit Tests
 
-#### [Visual Studio 2017](#tab/tabid-vs2017)
+#### [Visual Studio 2019](#tab/tabid-vs2019)
 
 As a one-time per-solution setup, go to `Test` menu and select `Test Settings` > `Default Processor Architecture` > `X64`.
 
@@ -148,7 +148,7 @@ using (var sim = new QuantumSimulator())
 }
 ```
 
-#### [Visual Studio 2017](#tab/tabid-vs2017)
+#### [Visual Studio 2019](#tab/tabid-vs2019)
 
 After you execute a test in Test Explorer and click on the test, a panel will appear with information about test execution: Passed/Failed status, elapsed time and an "Output" link. If you click the "Output" link, test output will open in a new window.
 
@@ -292,7 +292,7 @@ The following examples show `DumpMachine` for some common states:
   > The id of a qubit is assigned at runtime and it's not necessarily aligned with the order in which the qubit was allocated or its position within a qubit register.
 
 
-#### [Visual Studio 2017](#tab/tabid-vs2017)
+#### [Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
   > You can figure out a qubit id in Visual Studio by putting a breakpoint in your code and inspecting the value of a qubit variable, for example:

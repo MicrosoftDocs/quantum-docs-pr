@@ -50,7 +50,7 @@ $ cd Bell
 $ code . # To open in Visual Studio Code.
 ```
 
-#### [Visual Studio](#tab/tabid-vs2017)
+#### [Visual Studio](#tab/tabid-vs2019)
 
 - Open up Visual Studio.
 - Go to the `File` menu and select `New` > `Project...`.
@@ -315,7 +315,7 @@ Alternatively, press **F1** to open the Command Palette and select "Debug: Start
 You may be prompted to create a new ``launch.json`` file describing how to start the program.
 The default ``launch.json`` should work well for most applications.
 
-#### [Visual Studio](#tab/tabid-vs2017)
+#### [Visual Studio](#tab/tabid-vs2019)
 
 Just hit `F5`, and your program should build and run!
 

@@ -1,10 +1,11 @@
 ---
 uid: microsoft.quantum.index
-title: Setting up the Q# development environment 
+title: Microsoft Quantum Development Kit Documentation - Tutorials, API Reference
+description: Learn how to use Quantum Development Kit to develop quantum computing programs and experiments. Tutorials, API, reference, and code samples for Q#, C#, and Jupyter Notebooks.
 author: QuantumWriter
 ms.author:  
-ms.date: 10/09/2017
-ms.topic: article
+ms.date: 08/23/2019
+ms.topic: landing-page
 ---
 
 # Welcome to the Microsoft Quantum Development Kit Preview

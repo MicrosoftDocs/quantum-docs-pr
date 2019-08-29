@@ -29,7 +29,8 @@
         "exclude": [
           "**/obj/**",
           "**/includes/**"
-        ]
+        ],
+        "version": "qsharp-preview"
       }
     ],
     "versions": {

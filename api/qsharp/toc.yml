@@ -36,6 +36,8 @@
     uid: microsoft.quantum.convert.intasstring
   - name: IntAsStringWithFormat
     uid: microsoft.quantum.convert.intasstringwithformat
+  - name: MaybeBigIntAsInt
+    uid: microsoft.quantum.convert.maybebigintasint
   - name: PauliArrayAsInt
     uid: microsoft.quantum.convert.pauliarrayasint
   - name: BoolArrayAsInt
@@ -768,6 +770,10 @@
     uid: microsoft.quantum.arrays.rest
   - name: Reversed
     uid: microsoft.quantum.arrays.reversed
+  - name: SequenceI
+    uid: microsoft.quantum.arrays.sequencei
+  - name: SequenceL
+    uid: microsoft.quantum.arrays.sequencel
   - name: Subarray
     uid: microsoft.quantum.arrays.subarray
   - name: Tail
@@ -787,6 +793,8 @@
     uid: microsoft.quantum.canon.andladder
   - name: ApplyDiagonalUnitary
     uid: microsoft.quantum.canon.applydiagonalunitary
+  - name: ApplyFermionicSWAP
+    uid: microsoft.quantum.canon.applyfermionicswap
   - name: ApplyIf
     uid: microsoft.quantum.canon.applyif
   - name: ApplyIfA
@@ -795,6 +803,38 @@
     uid: microsoft.quantum.canon.applyifc
   - name: ApplyIfCA
     uid: microsoft.quantum.canon.applyifca
+  - name: ApplyIfElseB
+    uid: microsoft.quantum.canon.applyifelseb
+  - name: ApplyIfElseBA
+    uid: microsoft.quantum.canon.applyifelseba
+  - name: ApplyIfElseBC
+    uid: microsoft.quantum.canon.applyifelsebc
+  - name: ApplyIfElseBCA
+    uid: microsoft.quantum.canon.applyifelsebca
+  - name: ApplyIfElseR
+    uid: microsoft.quantum.canon.applyifelser
+  - name: ApplyIfElseRA
+    uid: microsoft.quantum.canon.applyifelsera
+  - name: ApplyIfElseRC
+    uid: microsoft.quantum.canon.applyifelserc
+  - name: ApplyIfElseRCA
+    uid: microsoft.quantum.canon.applyifelserca
+  - name: ApplyIfOne
+    uid: microsoft.quantum.canon.applyifone
+  - name: ApplyIfOneA
+    uid: microsoft.quantum.canon.applyifonea
+  - name: ApplyIfOneC
+    uid: microsoft.quantum.canon.applyifonec
+  - name: ApplyIfOneCA
+    uid: microsoft.quantum.canon.applyifoneca
+  - name: ApplyIfZero
+    uid: microsoft.quantum.canon.applyifzero
+  - name: ApplyIfZeroA
+    uid: microsoft.quantum.canon.applyifzeroa
+  - name: ApplyIfZeroC
+    uid: microsoft.quantum.canon.applyifzeroc
+  - name: ApplyIfZeroCA
+    uid: microsoft.quantum.canon.applyifzeroca
   - name: ApplyMultiControlledC
     uid: microsoft.quantum.canon.applymulticontrolledc
   - name: ApplyMultiControlledCA
@@ -995,6 +1035,22 @@
     uid: microsoft.quantum.canon.cz
   - name: DecomposeIntoTimeStepsCA
     uid: microsoft.quantum.canon.decomposeintotimestepsca
+  - name: Delay
+    uid: microsoft.quantum.canon.delay
+  - name: DelayA
+    uid: microsoft.quantum.canon.delaya
+  - name: DelayC
+    uid: microsoft.quantum.canon.delayc
+  - name: DelayCA
+    uid: microsoft.quantum.canon.delayca
+  - name: Delayed
+    uid: microsoft.quantum.canon.delayed
+  - name: DelayedA
+    uid: microsoft.quantum.canon.delayeda
+  - name: DelayedC
+    uid: microsoft.quantum.canon.delayedc
+  - name: DelayedCA
+    uid: microsoft.quantum.canon.delayedca
   - name: EmbedPauli
     uid: microsoft.quantum.canon.embedpauli
   - name: ExpMod

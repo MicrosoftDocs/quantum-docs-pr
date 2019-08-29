@@ -12,7 +12,7 @@ uid: microsoft.quantum.numerics.installation
 
 The Quantum Development Kit provides support for numerics functionality through the [`Microsoft.Quantum.Numerics`](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) NuGet package.
 
-**Visual Studio >=2017:** If you are using Visual Studio 2017 or later, you can add the numerics package using the NuGet Package Manager.
+**Visual Studio >=2019:** If you are using Visual Studio 2019 or later, you can add the numerics package using the NuGet Package Manager.
 To do so, select "Manage NuGet Packages..." from the "Project" menu item in Visual Studio.
 
 From the Browse tab, search for the package name "Microsoft.Quantum.Numerics"

@@ -13,7 +13,7 @@ uid: microsoft.quantum.chemistry.concepts.installation
 The Quantum Development Kit provides support for quantum chemistry applications through the [`Microsoft.Quantum.Chemistry`](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) NuGet package.
 As with other NuGet packages, it's straightforward to add the chemistry library to your project.
 
-**Visual Studio 2017:** If you are using Visual Studio 2017, you can add the quantum chemistry packages by using the NuGet Package Manager.
+**Visual Studio 2019:** If you are using Visual Studio 2019, you can add the quantum chemistry packages by using the NuGet Package Manager.
 To open the Package Manager, right-click on the project you'd like to add the chemistry library to and select "Manage NuGet Packages...," as in the screenshot below.
 
 ![](~/media/vs2017-nuget-manage-packages.png)
@@ -44,7 +44,7 @@ Install-Package Microsoft.Quantum.Chemistry
 
 For more details, see the [Package Manager Console guide](https://docs.microsoft.com/nuget/tools/package-manager-console).
 
-**Command line or Visual Studio Code 2017:** Using the command line on its own or from within Visual Studio Code, you can use the `dotnet` command to add NuGet package reference to your project:
+**Command line or Visual Studio Code:** Using the command line on its own or from within Visual Studio Code, you can use the `dotnet` command to add NuGet package reference to your project:
 
 ```bash
 dotnet add package Microsoft.Quantum.Chemistry

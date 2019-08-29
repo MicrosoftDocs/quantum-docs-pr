@@ -1,33 +1,54 @@
-- name: Welcome
+- name: Quantum Development Kit Preview Documentation
   href: index.md
-- name: Getting Started
-  topicHref: install-guide/index.md
-  href: install-guide/toc.yml
-- name: Quantum computing concepts
-  topicHref: concepts/index.md
-  href: concepts/toc.yml
-- name: Quickstart - your first quantum program
-  href: quickstart.md
-- name: Managing quantum machines and drivers
-  topicHref: machines/index.md
-  href: machines/toc.yml
-- name: Quantum development techniques
-  topicHref: techniques/index.md
-  href: techniques/toc.yml
-- name: Q# libraries
-  href: libraries/toc.yml
-- name: Q# programming language
-  topicHref: language/index.md
-  href: language/toc.yml
-- name: Contributing to the Quantum Development Kit
-  href: contributing/toc.yml
-  topicHref: contributing/index.md
-- name: Glossary
-  href: Glossary.md
-- name: For more information
-  href: for-more-info.md
-- name: Release Notes
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
-- name: License
-  href: license.md
+- name: Overview
+  items:
+  - name: Getting started
+    href: install-guide/index.md
+  - name: Contributing to the Quantum Development Kit
+    href: contributing/toc.yml
+    topicHref: contributing/index.md
+- name: Quickstarts
+  items:
+  - name: C#
+    href: install-guide/csharp.md
+  - name: Create a Bell State in Q#
+    href: quickstart.md
+  - name: Jupyter Notebooks
+    href: install-guide/jupyter.md
+  - name: Python
+    href: install-guide/python.md
+- name: Concepts
+  items:
+  - name: Quantum computing concepts
+    topicHref: concepts/index.md
+    href: concepts/toc.yml
+- name: How-to guides
+  items:
+  - name: Managing quantum machines and drivers
+    topicHref: machines/index.md
+    href: machines/toc.yml
+  - name: Quantum development techniques
+    topicHref: techniques/index.md
+    href: techniques/toc.yml
+- name: Reference
+  items:
+  - name: Glossary
+    href: Glossary.md
+  - name: Q# libraries
+    href: libraries/toc.yml
+  - name: Q# programming language
+    topicHref: language/index.md
+    href: language/toc.yml
+- name: Resources
+  items:
+  - name: Quantum blog
+    href: https://cloudblogs.microsoft.com/quantum/
+  - name: Q# blog
+    href: https://devblogs.microsoft.com/qsharp/
+  - name: For more information
+    href: for-more-info.md
+  - name: Release notes
+    topicHref: relnotes/index.md
+    href: relnotes/toc.yml
+  - name: License
+    href: license.md

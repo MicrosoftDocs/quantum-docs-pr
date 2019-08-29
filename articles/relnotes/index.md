@@ -78,8 +78,8 @@ The changes are summarized here as well as instructions for upgrading your exist
 This release adds new Q# language syntax:
 * Add named items for [user-defined types](xref:microsoft.quantum.language.type-model#user-defined-types).  
 * User-defined type constructors can now be used as functions.
-* Add support for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) and [apply-and-reassign]((xref:microsoft.quantum.qsharp-ref.statements#rebinding-of-mutable-symbols)) in user-defined types.
-* Fixup-block for [repeat-until-success](xref:microsoft.quantum.qsharp-ref.statements#repeat-until-success-loop) loops is now optional.
+* Add support for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) and [apply-and-reassign]((xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols)) in user-defined types.
+* Fixup-block for [repeat-until-success](xref:microsoft.quantum.language.statements#repeat-until-success-loop) loops is now optional.
 * We now support while loops in functions (not in operations).
 
 ## Library 
@@ -113,7 +113,7 @@ The changes are summarized here as well as instructions for upgrading your exist
 This release adds new Q# language syntax:
 * Add a [shorthand way to express specializations of quantum operations](xref:microsoft.quantum.language.type-model#functors) (control and adjoints) with `+` operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., `: adjoint`) will continue to work, but a compile time warning will be generated.  
 * Add a new operator for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions), `w/`, can be used to express array creation as a modification of an existing array.
-* Add the common [apply-and-upate statement](xref:microsoft.quantum.qsharp-ref.statements#rebinding-of-mutable-symbols), e.g., `+=`, `w/=`.
+* Add the common [apply-and-upate statement](xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols), e.g., `+=`, `w/=`.
 * Add a way to specify a short name for namespaces in [open directives](xref:microsoft.quantum.language.file-structure#open-directives).
 
 With this release, we no longer allow an array element to be specified on the left side of a set statement.  This is because that syntax implies that arrays are mutable when in fact, the result of the operation has always been the creation of a new array with the modification.  Instead, a compiler error will be generated with a suggestion to use the new copy-and-update operator, `w/`, to accomplish the same result.  
@@ -197,7 +197,7 @@ This release contains the following:
 
 - Bug fix for DumpRegister issue reported by the community ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
-- Added ability to return from within a [using statement](xref:microsoft.quantum.qsharp-ref.statements).
+- Added ability to return from within a [using statement](xref:microsoft.quantum.language.statements).
 
 - Revamped [getting started guide](xref:microsoft.quantum.install).
 

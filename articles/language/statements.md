@@ -2,7 +2,7 @@
 title: Q# statements | Microsoft Docs 
 description: Q# statements
 author: QuantumWriter
-uid: microsoft.quantum.qsharp-ref.statements
+uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article

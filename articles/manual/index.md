@@ -29,8 +29,8 @@ subroutine's results.
 
 Q# provides a small set of built-in types, along with two ways
 (arrays and tuples) for creating new, structured types.
-It supports a basic procedural model for writing programs,
-with loops and if/then statements.
+It also supports flow control structures like loops and if/then statements
+to write readable and compact programs.
 The top-level constructs in Q# are user defined types, operations,
 and functions.
 

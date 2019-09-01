@@ -295,7 +295,7 @@ For instance, if we find a bug in `Map`, then we must ensure that the fix is app
 Moreover, if we construct a new tuple or UDT, then we must now also construct a new `Map` to go along with the new type.
 While this is tractable for a small number of such functions, as we collect more and more functions of the same form as `Map`, the cost of introducing new types becomes unreasonably large in fairly short order.
 
-Much of this difficulty results, from not having given the compiler the information it needs to recognize how the different versions of `Map` are related.
+Much of this difficulty results from not having given the compiler the information it needs to recognize how the different versions of `Map` are related.
 Effectively, we want the compiler to treat `Map` as some kind of mathematical function from Q# *types* to Q# functions.
 This notion is formalized by allowing functions and operations to have *type parameters*, as well as their ordinary tuple parameters.
 In the examples above, we wish to think of `Map` as having type parameters `Int, Pauli` in the first case and `Double, String` in the second case.

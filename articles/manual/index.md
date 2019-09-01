@@ -27,7 +27,7 @@ that runs on the adjunct processor.
 When the subroutine completes, the host program gets access to the
 subroutine's results.
 
-Q# provides a small set of primitive types, along with two ways
+Q# provides a small set of built-in types, along with two ways
 (arrays and tuples) for creating new, structured types.
 It supports a basic procedural model for writing programs,
 with loops and if/then statements.

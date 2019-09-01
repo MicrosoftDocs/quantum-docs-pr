@@ -787,6 +787,25 @@ operation MeasureOneQubit() : Result {
     }
 }
 ```
+> [!TIP]
+> A great number of typical operations can be done in a simpler fashin by using the [libraries](xref:microsoft.quantum.libraries). For 
+> example, the code above can be implemented using the operation [`MResetZ`](xref:microsoft.quantum.measurement.mresetz):
+
+```qsharp
+open Microsoft.Quantum.Measurement;
+
+operation MeasureOneQubit() : Result {
+   // The following using block creates a fresh qubit and initializes it 
+    // in the |0〉 state.
+    using (qubit = Qubit()) {
+        // We apply a Hadamard operation H to the state, thereby creating the 
+        // state 1/sqrt(2)(|0〉+|1〉). 
+        H(qubit); 
+        // Now we measure the qubit in Z-basis and return the result.
+        return MResetZ(qubit);
+    }
+}
+```
 
 A slightly more complicated example is given by the following operation which returns the Boolean value `true` if all qubits in a register of type `Qubit[]` are in the state zero when measured in a specified Pauli basis, and `false` otherwise. 
 

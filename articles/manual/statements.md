@@ -720,7 +720,7 @@ In some sense, this is all that a Q# program can do with a qubit, as the actions
 More information of these operations can be found in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude) and [Operations and Functions](xref:microsoft.quantum.manual.operations-functions).
 
 Here we present an example of operation implementation:
-First, the single-qubit Pauli operators [$X$](xref:microsoft.quantum.intrinsic.x), [$Y$](microsoft.quantum.intrinsic.y), and [$Z$](microsoft.quantum.intrinsic.z) are represented in Q# by the intrinsic operations `X`, `Y`, and `Z`, each of which has type `(Qubit => Unit is Adj + Ctl)`.
+First, the single-qubit Pauli operators [$X$](xref:microsoft.quantum.intrinsic.x), [$Y$](xref:microsoft.quantum.intrinsic.y), and [$Z$](xref:microsoft.quantum.intrinsic.z) are represented in Q# by the intrinsic operations `X`, `Y`, and `Z`, each of which has type `(Qubit => Unit is Adj + Ctl)`.
 As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), we can think of $X$ and hence of `X` as a bit-flip operation or NOT gate.
 This lets us prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:
 

@@ -191,7 +191,7 @@ The type of the bound symbol(s) is inferred based on the expression on the right
 let measurementOperators = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 ```
 
-This assigns a particular array of Pauli operators to a variable called `measurementOperator`.
+This assigns a particular array of Pauli operators to an immutable variable called `measurementOperators`.
 
 > [!TIP]
 > Note that we did not need to explicitly specify the type of our new variable, as the expression on the right-hand side of the `let` statement is unambiguous and the type is inferred by the compiler.

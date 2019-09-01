@@ -788,8 +788,8 @@ operation MeasureOneQubit() : Result {
 }
 ```
 > [!TIP]
-> A great number of typical operations can be done in a simpler fashin by using the [libraries](xref:microsoft.quantum.libraries). For 
-> example, the code above can be implemented using the operation [`MResetZ`](xref:microsoft.quantum.measurement.mresetz):
+> A great number of typical operations can be implemented in a simpler fashion by using the [libraries](xref:microsoft.quantum.libraries). For 
+> example, the code above can be shortened by using the operation [`MResetZ`](xref:microsoft.quantum.measurement.mresetz):
 
 ```qsharp
 open Microsoft.Quantum.Measurement;

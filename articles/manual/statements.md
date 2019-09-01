@@ -769,7 +769,7 @@ The input to `Measure` is a Pauli axis on the Bloch sphere, represented by an ob
 A simple example is the following operation which creates one qubit in the $\ket{0}$ state, then applies a Hadamard gate ``H`` to it and then measures the result in the `PauliZ` basis. 
 
 ```qsharp
-operation MeasurementOneQubit () : Result {
+operation MeasureOneQubit() : Result {
 
     // The following using block creates a fresh qubit and initializes it 
     // in the |0〉 state.

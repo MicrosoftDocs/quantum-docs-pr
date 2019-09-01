@@ -8,7 +8,7 @@ ms.date: 12/11/2017
 ms.topic: article
 ---
 
-# Statements, Control Flow and other constructs 
+# Statements, Control Flow, and Other Constructs 
 
 This section contains description of statements,work flow elements like loops or conditonals and other kind of constructs.
 

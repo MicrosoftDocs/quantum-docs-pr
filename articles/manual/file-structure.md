@@ -1,6 +1,6 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: File Structure | Microsoft Docs 
+title: File Structure
 description: Q# File Structure
 author: QuantumWriter
 uid: microsoft.quantum.manual.file-structure

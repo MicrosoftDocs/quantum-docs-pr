@@ -1,5 +1,5 @@
 ---
-title: Q# Manual | Microsoft Docs 
+title: Q# Manual 
 description: Q# Manual
 author: E. Gonzalez
 ms.author: v-edsanc@microsoft.com 

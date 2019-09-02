@@ -1,5 +1,5 @@
 ---
-title: Q# Operations and Functions | Microsoft Docs 
+title: Q# Operations and Functions
 description: Q# Operations and Functions
 author: QuantumWriter
 uid: microsoft.quantum.manual.operations-functions

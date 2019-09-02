@@ -1,5 +1,5 @@
 ---
-title: Q# type model | Microsoft Docs 
+title: Q# type model
 description: Q# type model
 author: QuantumWriter
 uid: microsoft.quantum.qsharp-ref.type-model

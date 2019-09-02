@@ -1,5 +1,5 @@
 ---
-title: Q# statements | Microsoft Docs 
+title: Q# statements
 description: Q# statements, Control Flow and other constructs
 author: QuantumWriter
 uid: microsoft.quantum.manual.statements

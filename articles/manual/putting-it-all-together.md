@@ -1,6 +1,6 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Q# techniques - putting it all together | Microsoft Docs 
+title: Q# techniques - putting it all together 
 description: Q# techniques - putting it all together
 uid: microsoft.quantum.manual.puttingittogether
 author: QuantumWriter

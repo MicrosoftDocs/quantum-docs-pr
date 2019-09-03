@@ -48,6 +48,8 @@
         "variance": "\\operatorname{Var}",
         "defeq": "\\mathrel{:=}"
       },
+      "ms.prod": "quantum",
+      "ms.topic": "managed-reference",
       "ms.devlang":"qsharp",
       "searchScope": ["quantum", "q#", "qsharp"],
       "feedback_system": "GitHub",

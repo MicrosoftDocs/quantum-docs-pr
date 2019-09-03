@@ -18,7 +18,7 @@ Of course evaluating this tensor product is impractical because the vector lies 
 
 [*Dirac notation*](https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation) solves these issues by presenting a new language to fit the precise needs of quantum mechanics.  For this reason, we recommend the reader not view the examples in this section as a rigid prescription of how to describe quantum states, but rather encourage the reader to view these as suggestions that can be used to concisely express quantum ideas.
 
-There are two types of vectors in Dirac notation: the *bra* vector and the *ket* vector, so named because when put together they form a *braket* or inner product.  If $\psi$ is a column vector then we can write it in Dirac notation as $|\psi \rangle$, where the $|\cdot \rangle$ denotes that it is a unit column vector, i.e., a *ket* vector.  Similarly, the row vector $\psi^\dagger$ is expressed as $\langle \psi |$. In other words, $\psi^\dagger$ is obtained by applying entry-wise complex conjugation to the elements of the transpose of $\psi$. The bra-ket notation directly implies that $\langle \psi |\psi \rangle$ is the inner product of vector $\psi$ with itself, which is by definition $1$.  
+There are two types of vectors in Dirac notation: the *bra* vector and the *ket* vector, so named because when put together they form a *braket* or inner product.  If $\psi$ is a column vector then we can write it in Dirac notation as $\ket{\psi}$, where the $|\cdot \rangle$ denotes that it is a unit column vector, i.e., a *ket* vector.  Similarly, the row vector $\psi^\dagger$ is expressed as $\langle \psi |$. In other words, $\psi^\dagger$ is obtained by applying entry-wise complex conjugation to the elements of the transpose of $\psi$. The bra-ket notation directly implies that $\langle \psi |\psi \rangle$ is the inner product of vector $\psi$ with itself, which is by definition $1$.  
 
 More generally, if $\psi$ and $\phi$ are quantum state vectors their inner product is $\langle \phi | \psi \rangle$ which implies that the probability of measuring the state $|{\psi}\rangle$ to be $|{\phi}\rangle$ is $|\langle \phi|\psi\rangle|^2$.  
 
@@ -56,12 +56,12 @@ As an example of Dirac notation, consider the braket $\langle 0 | 1\rangle$, whi
 $$\langle 0| 1 \rangle=\begin{bmatrix} 1 & 0 \end{bmatrix}\begin{bmatrix}0\\\\ 1\end{bmatrix}=0.$$
 
 This says that $\ket{0}$ and $\ket{1}$ are orthogonal vectors, meaning that $\langle 0 \ket{1} = \langle 1 | 0\rangle =0$.  Also by definition $\langle 0 | 0 \rangle = \langle 1 | 1\rangle=1$, which means that the two computational basis vectors can also be called *orthonormal*.
-These orthonormal properties will be useful in the following example. If we have a state $|\psi\rangle = {\frac{3}{5}} \ket{1} + {\frac{4}{5}} \ket{0}$ then because $\langle 1 | 0\rangle =0$ the probability of measuring $1$  is  
+These orthonormal properties will be useful in the following example. If we have a state $\ket{\psi} = {\frac{3}{5}} \ket{1} + {\frac{4}{5}} \ket{0}$ then because $\langle 1 | 0\rangle =0$ the probability of measuring $1$  is  
 
 $$\big|\langle 1 | \psi\rangle \big|^2= \left|\frac{3}{5}\langle 1 | 1\rangle +\frac{4}{5}\langle 1 |0 \rangle\right|^2=\frac{9}{25}.$$ 
 
 ### Tensor product notation
-Dirac notation also includes an implicit tensor product structure within it.  This is important because in quantum computing, the state vector described by two uncorrelated quantum registers is the tensor products of the two state vectors.  Concisely describing the tensor product structure, or lack thereof, is vital if you want to explain a quantum computation.  The tensor product structure implies that we can write $\psi \otimes \phi$ for any two quantum state vectors $\phi$ and $\psi$ as $|\psi\rangle |\phi\rangle$, sometimes explicitly written as $|\psi\rangle \otimes |\phi\rangle$, however by convention writing $\otimes$ in between the vectors is unnecessary.  For example, the state with two qubits initialized to the zero state is given by
+Dirac notation also includes an implicit tensor product structure within it.  This is important because in quantum computing, the state vector described by two uncorrelated quantum registers is the tensor products of the two state vectors.  Concisely describing the tensor product structure, or lack thereof, is vital if you want to explain a quantum computation.  The tensor product structure implies that we can write $\psi \otimes \phi$ for any two quantum state vectors $\phi$ and $\psi$ as $\ket{\psi} \ket{\phi}$, sometimes explicitly written as $\ket{\psi} \otimes \ket{\phi}$, however by convention writing $\otimes$ in between the vectors is unnecessary.  For example, the state with two qubits initialized to the zero state is given by
 
 $$
 \begin{bmatrix} 1 \\\\  0 \\\\  0 \\\\  0 \end{bmatrix}= \begin{bmatrix} 1 \\\\  0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \ket{0} \otimes \ket{0}= \ket{0} \ket{0}.
@@ -92,33 +92,33 @@ As a side note, in this example we did not use $\ket{+}^{\otimes n}=\ket{+}$ in 
 ### Expressing linearity with Dirac notation
 Another nice feature of Dirac notation is the fact that it is linear.  If we wish to write for any four quantum state vectors, 
 
-$$(\alpha |\psi\rangle +\beta|\phi\rangle)\otimes (\gamma |\chi\rangle + \delta |\omega\rangle)= \alpha\gamma |\psi\rangle|\chi\rangle + \alpha\delta |\psi\rangle|\omega\rangle+\beta\gamma|\phi\rangle|\chi\rangle+\beta\delta|\phi\rangle|\omega\rangle.$$
+$$(\alpha \ket{\psi} +\beta\ket{\phi})\otimes (\gamma \ket{\chi} + \delta \ket{\omega})= \alpha\gamma \ket{\psi}\ket{\chi} + \alpha\delta \ket{\psi}\ket{\omega}+\beta\gamma\ket{\phi}\ket{\chi}+\beta\delta\ket{\phi}\ket{\omega}.$$
 
 That is to say, you can distribute the tensor product notation in Dirac notation so that taking tensor products between state vectors ends up looking just like ordinary multiplication.
 
-Bra vectors follow a similar convention to ket vectors.  For example, the vector $\langle\psi|\langle \phi|$ is equivalent to the state vector $\psi^\dagger \otimes \phi^\dagger=(\psi\otimes \phi)^\dagger$. If the ket vector $|\psi\rangle$ is $\alpha \ket{0} + \beta \ket{1}$ then the bra vector version of the vector is $\langle{\psi}|=|\psi\rangle^\dagger = (\langle 0|\alpha^* +\langle 1 |\beta^*)$.
+Bra vectors follow a similar convention to ket vectors.  For example, the vector $\bra{\psi}\langle \phi|$ is equivalent to the state vector $\psi^\dagger \otimes \phi^\dagger=(\psi\otimes \phi)^\dagger$. If the ket vector $\ket{\psi}$ is $\alpha \ket{0} + \beta \ket{1}$ then the bra vector version of the vector is $\langle{\psi}|=\ket{\psi}^\dagger = (\bra{0}\alpha^* +\langle 1 |\beta^*)$.
 
-As an example, imagine that we wish to calculate the probability of measuring the state $|\psi\rangle = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ using a quantum program for measuring states to be either $\ket{+}$ or $\ket{-}$. Then the probability that the device would output that the state is $\ket{-}$ is 
+As an example, imagine that we wish to calculate the probability of measuring the state $\ket{\psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ using a quantum program for measuring states to be either $\ket{+}$ or $\ket{-}$. Then the probability that the device would output that the state is $\ket{-}$ is 
 
-$$|\langle - |\psi\rangle|^2= \left|\frac{1}{\sqrt{2}}(\langle 0| - \langle 1|)(\frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}) \right|^2=\left|-\frac{3}{5\sqrt{2}} + \frac{4}{5\sqrt{2}}\right|^2=\frac{1}{50}.$$
+$$|\langle - \ket{\psi}|^2= \left|\frac{1}{\sqrt{2}}(\bra{0} - \bra{1})(\frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}) \right|^2=\left|-\frac{3}{5\sqrt{2}} + \frac{4}{5\sqrt{2}}\right|^2=\frac{1}{50}.$$
 
 The fact that the negative sign appears in the calculation of the probability is a manifestation of quantum interference, which is one of the mechanisms by which quantum computing gains advantages over classical computing.
 
 ## ketbra or outer product
-The final item worth discussing in Dirac notation is the *ketbra* or outer product.  The outer product is represented within Dirac notations as $|\psi\rangle \langle \phi|$, and sometimes called ketbras because the bras and kets occur in the opposite order as brakets.  The outer product is defined via matrix multiplication as $|\psi\rangle \langle \phi| = \psi \phi^\dagger$ for quantum state vectors $\psi$ and $\phi$.  The simplest, and arguably most common example of this notation, is
+The final item worth discussing in Dirac notation is the *ketbra* or outer product.  The outer product is represented within Dirac notations as $\ket{\psi} \langle \phi|$, and sometimes called ketbras because the bras and kets occur in the opposite order as brakets.  The outer product is defined via matrix multiplication as $\ket{\psi} \langle \phi| = \psi \phi^\dagger$ for quantum state vectors $\psi$ and $\phi$.  The simplest, and arguably most common example of this notation, is
 
 $$
-\ket{0} \langle 0| = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1&0 \end{bmatrix}= \begin{bmatrix}1 &0\\\\ 0 &0\end{bmatrix} \qquad \ket{1} \langle 1| = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0&1 \end{bmatrix}= \begin{bmatrix}0 &0\\\\ 0 &1\end{bmatrix}.
+\ket{0} \bra{0} = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1&0 \end{bmatrix}= \begin{bmatrix}1 &0\\\\ 0 &0\end{bmatrix} \qquad \ket{1} \bra{1} = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0&1 \end{bmatrix}= \begin{bmatrix}0 &0\\\\ 0 &1\end{bmatrix}.
 $$
 
-Ketbras are often called projectors because they project a quantum state onto a fixed value.  Since these operations are not unitary (and do not even preserve the norm of a vector), it should come as no surprise that a quantum computer cannot deterministically apply a projector.  However projectors do a beautiful job of describing the action that measurement has on a quantum state.  For example, if we measure a state $|\psi \rangle$ to be $0$ then the resulting transformation that the state experiences as a result of the measurement is
+Ketbras are often called projectors because they project a quantum state onto a fixed value.  Since these operations are not unitary (and do not even preserve the norm of a vector), it should come as no surprise that a quantum computer cannot deterministically apply a projector.  However projectors do a beautiful job of describing the action that measurement has on a quantum state.  For example, if we measure a state $\ket{\psi}$ to be $0$ then the resulting transformation that the state experiences as a result of the measurement is
 
-  $$|\psi \rangle \rightarrow \frac{(\ket{0} \langle 0|)|\psi\rangle}{|\langle 0|\psi\rangle|}= \ket{0},$$
+  $$\ket{\psi} \rightarrow \frac{(\ket{0} \langle 0|)\ket{\psi}}{|\langle 0|\psi\rangle|}= \ket{0},$$
 
 as one expects if you were to measure the state and find it to be $\ket{0}$.  To reiterate, such projectors cannot be applied on a state in a quantum computer deterministically.  Instead, they can at best be applied randomly with the result $\ket{0}$ appearing with some fixed probability.  The probability of such a measurement succeeding can be written as the expectation value of the quantum projector in the state
 
 $$
-\langle \psi| (\ket{0} \langle 0|)|\psi\rangle = |\langle \psi\ket{0}|^2,
+\bra{\psi} (\ket{0} \bra{0})\ket{\psi} = |\langle \psi\ket{0}|^2,
 $$
 
 which illustrates that projectors simply give a new way of expressing the measurement process.
@@ -126,19 +126,19 @@ which illustrates that projectors simply give a new way of expressing the measur
 If instead we consider measuring the first qubit of a multi-qubit state to be $1$ then we can also describe this process conveniently using projectors and Dirac notation:
 
 $$
-P(\text{first qubit = 1})= \langle\psi|\left(\ket{1}\langle{1}|\otimes \boldone^{\otimes n-1}\right) |\psi\rangle.
+P(\text{first qubit = 1})= \bra{\psi}\left(\ket{1}\bra{1}\otimes \boldone^{\otimes n-1}\right) \ket{\psi}.
 $$
 
 Here the identity matrix can be conveniently written in Dirac notation as
 
 $$
-\boldone = \ket{0} \langle 0|+\ket{1} \langle 1|= \begin{bmatrix}1&0\\\\ 0&1 \end{bmatrix}.
+\boldone = \ket{0} \bra{0}+\ket{1} \bra{1}= \begin{bmatrix}1&0\\\\ 0&1 \end{bmatrix}.
 $$
 
 For the case where there are two-qubits the projector can be expanded as 
 
 $$
-\ket{1} \langle 1| \otimes \mathbb{1} = \ket{1}\langle 1| \otimes (\ket{0} \langle 0|+\ket{1} \langle 1|)= |10\rangle\langle 10| + |11\rangle\langle 11|.
+\ket{1} \bra{1} \otimes \id = \ket{1}\bra{1} \otimes (\ket{0} \bra{0}+\ket{1} \bra{1})= \ket{10}\bra{10} + \ket{11}\bra{11}.
 $$
 
 We can then see that this is consistent with the discussion about measurement likelihoods for multiqubit states using column-vector notation:
@@ -152,7 +152,7 @@ which matches the multi-qubit measurement discussion.  The generalization of thi
 ## Density operators
 
 Another useful operator to express using Dirac notation is a *density operator*, sometimes also known as a *state operator*.
-A density operator for a quantum state vector takes the form $\rho = |\psi\rangle \langle \psi|$.
+A density operator for a quantum state vector takes the form $\rho = \ket{\psi} \bra{\psi}$.
 This concept of representing the state as a matrix, rather than a vector, is often convenient because it gives a convenient way of representing probability calculations, and also allows one to describe both statistical uncertainty as well as quantum uncertainty within the same formalism.
 General quantum state operators, rather than vectors, are ubiquitous in some areas of quantum computing but are not necessary to understand the basics of the field.
 For the interested reader, we recommend reading one of the reference books provided in [For more information](xref:microsoft.quantum.more-information).

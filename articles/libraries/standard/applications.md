@@ -182,7 +182,7 @@ Having seen how the quantum Fourier transform and phase estimation work (see [Qu
 Given two integers $a$ and $N$, where $a<N$, the goal of period finding, also called order finding, is to find the _order_ $r$ of $a$ modulo $N$, where $r$ is defined to be the least positive integer such that $a^r \equiv 1 \text{ mod } N$.  
 
 To find the order using a quantum computer, we can use the phase estimation algorithm applied to the following unitary operator $U_a$:
-$$ U_a|x\rangle \equiv |(ax)\text{ mod }N\rangle .$$
+$$ U_a\ket{x} \equiv |(ax)\text{ mod }N\rangle .$$
 The eigenvectors of $U_a$ are for integer $s$ and $0\leq s \leq r - 1$,
 $$|x_s\rangle \equiv 1 / \sqrt{r} \sum\_{k=0}^{r-1} e^{\frac{-2\pi i sk}{r}} | a^k \text{ mod } N \rangle,$$
 are _eigenstates_ of $U_a$.
@@ -195,16 +195,16 @@ The circuit diagram for quantum period finding is:
 
 ![](./../../media/QPE.svg)
 
-Here $2n$ qubits are initialized to $|0\rangle$ and $n$ qubits are initialized to $|1\rangle$.
-The reader again may wonder why the quantum register to hold the eigenstates is initialized to $|1\rangle$.
+Here $2n$ qubits are initialized to $\ket{0}$ and $n$ qubits are initialized to $\ket{1}$.
+The reader again may wonder why the quantum register to hold the eigenstates is initialized to $\ket{1}$.
 As one does not know the order $r$ in advance, we cannot actually prepare $|x_s\rangle$ states directly.
-Luckily, it turns out that $1/\sqrt{r} \sum\_{s=0}^{r-1} |x\_s\rangle = |1\rangle$.
-We don't need to actually prepare $|x\rangle$!
-We can just prepare a quantum register of $n$ qubits in state $|1\rangle$. 
+Luckily, it turns out that $1/\sqrt{r} \sum\_{s=0}^{r-1} |x\_s\rangle = \ket{1}$.
+We don't need to actually prepare $\ket{x}$!
+We can just prepare a quantum register of $n$ qubits in state $\ket{1}$. 
 
 The circuit contains the QFT and several controlled gates.
 The QFT gate has been described [previously](xref:microsoft.quantum.libraries.standard.algorithms).
-The controlled-$U_a$ gate maps $|x\rangle$ to $|(ax)\text{ mod } N\rangle$ if the control qubit is $|1\rangle$, and maps $|x\rangle$ to $|x\rangle$ otherwise.
+The controlled-$U_a$ gate maps $\ket{x}$ to $|(ax)\text{ mod } N\rangle$ if the control qubit is $\ket{1}$, and maps $\ket{x}$ to $\ket{x}$ otherwise.
 
 To achieve $(a^nx)\text{ mod } N$,  we can simply apply controlled-$U_{a^n}$, where we calculate $a^n \text{ mod } N$ classically to plug into the quantum circuit.  
 The circuits to achieve such modular arithmetic have been described in the [quantum arithmetic documentation](./algorithms.md#arithmetic), specifically we require a modular exponentiation circuit to implement the controlled-$U\_{a^i}$ operations.

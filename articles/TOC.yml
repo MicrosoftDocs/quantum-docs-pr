@@ -22,6 +22,11 @@
   - name: Quantum computing concepts
     topicHref: concepts/index.md
     href: concepts/toc.yml
+  - name: Q# libraries
+    href: libraries/toc.yml
+  - name: Q# programming language
+    topicHref: language/index.md
+    href: language/toc.yml
 - name: How-to guides
   items:
   - name: Managing quantum machines and drivers
@@ -34,16 +39,19 @@
   items:
   - name: Glossary
     href: Glossary.md
-  - name: Q# libraries
-    href: libraries/toc.yml
-  - name: Q# programming language
-    topicHref: language/index.md
-    href: language/toc.yml
+  - name: Q# library
+    href: ../api/qsharp/toc.yml
+  - name: C# components
+    items:
+    - name: Trace simulator 
+      href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators
+    - name: Quantum chemistry
+      href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry
 - name: Resources
   items:
   - name: Quantum blog
     href: https://cloudblogs.microsoft.com/quantum/
-  - name: Q# blog
+  - name: Q# development blog
     href: https://devblogs.microsoft.com/qsharp/
   - name: For more information
     href: for-more-info.md

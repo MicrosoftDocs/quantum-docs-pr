@@ -19,7 +19,7 @@ The circuit diagram for preparing this maximally entangled quantum state is:
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/Concepts1.png)
+![](../media/Concepts1.png)
 
 ## Quantum circuit diagram conventions
 This visual language for quantum operations can be more readily digestible than writing down its equivalent matrix once you understand the conventions for expressing a quantum circuit.
@@ -32,7 +32,7 @@ For example, the symbol
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_2.png)
+![](../media/concepts_2.png)
 
 is the [Hadamard](xref:microsoft.quantum.primitive.h) gate acting on a single-qubit register.
 
@@ -42,7 +42,7 @@ That is to say
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_3.png)
+![](../media/concepts_3.png)
 
 is the unitary matrix $CBA$.
 Matrix multiplication obeys the opposite convention: the right-most matrix is applied first. In quantum circuit diagrams, however, the left-most gate is applied first.
@@ -60,7 +60,7 @@ As a clarifying example, we can define a two-qubit unitary operation $B$ to be $
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_4.png)
+![](../media/concepts_4.png)
 
 We can also view $B$ as having an action on a single two-qubit register rather than two one-qubit registers depending on the context in which the circuit is used. 
 Perhaps the most useful property of such abstract circuit diagrams is that they allow complicated quantum algorithms to be described at a high level without having to compile them down to fundamental gates.
@@ -74,14 +74,14 @@ In general, we describe such controlled operations in circuit diagrams as
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_5.png)
+![](../media/concepts_5.png)
 
 Here the black circle denotes the quantum bit on which the gate is controlled and a vertical wire denotes the unitary that is applied when the control qubit takes the value $1$.
 For the special cases where $G=X$ and $G=Z$ we introduce the following notation to describe the controlled version of the gates (note that the controlled-X gate is the [$CNOT$ gate](xref:microsoft.quantum.primitive.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_6.png)
+![](../media/concepts_6.png)
 
 Q# provides methods to automatically generate the controlled version of an operation, which saves the programmer from having to hand code these operations. An example of this is shown below:
 
@@ -100,7 +100,7 @@ Specifically, such a subcircuit looks like:
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Measurement circuit](~/media/concepts_7.png)
+![Measurement circuit](../media/concepts_7.png)
 
 Q# implements a [Measure operator](xref:microsoft.quantum.primitive.measure) for this purpose.
 See the [section on measurements](xref:microsoft.quantum.libraries.standard.prelude#measurements) for more information.
@@ -109,7 +109,7 @@ Similarly, the subcircuit
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_8.png)
+![](../media/concepts_8.png)
 
 gives a classically controlled gate, where $G$ is applied conditioned on the classical control bit being value $1$.
 
@@ -121,4 +121,4 @@ This is necessary for the protocol to work according to the laws of quantum mech
 The quantum teleportation circuit is given below; we also provide an annotated version of the circuit to illustrate how to read the quantum circuit.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![](~/media/concepts_tp2.png)
+![](../media/concepts_tp2.png)

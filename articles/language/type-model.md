@@ -263,7 +263,7 @@ Specifically, functions may not allocate or borrow qubits, nor may they call ope
 It is possible, however, to pass them operations or qubits for processing.
 Functions are thus entirely deterministic in the sense that calling them with the same arguments will always produce the same result. 
 
-Together, operations and functions are called _callables_.  You can see some [Examples](#examples) of these below.
+Together, operations and functions are called _callables_.  You can see some [examples](#examples) of these below.
 
 All Q# callables are considered to take a single value as input
 and return a single value as output.

@@ -529,7 +529,7 @@ function GateMasksToToffoliGates (qubits : Qubit[], masks : MCMTMask[]) : MCTGat
         let tQubits = Subarray(targetBits, qubits);
 
         for (target in tQubits) {
-            set result = result + [MCTGate(cQubits, tQubits[t])];
+            set result += [MCTGate(cQubits, target)];
         }
     }
 

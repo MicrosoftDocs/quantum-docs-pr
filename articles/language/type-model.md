@@ -479,7 +479,7 @@ This example of a Q# operation comes from the [Measurement](https://github.com/M
 
 ```qsharp
 /// # Summary
-/// Creates a state and measures it in the Pauli-Z basis.
+/// Prepares a state and measures it in the Pauli-Z basis.
 operation MeasureOneQubit () : Result {
         mutable result = Zero;
 

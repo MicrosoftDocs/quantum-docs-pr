@@ -483,7 +483,7 @@ This example of a Q# operation comes from the [Measurement](https://github.com/M
 operation MeasurementOneQubit () : Result {
         mutable result = Zero;
 
-        using (qubits = Qubit[1]) { // Allocate a qubit
+        using (qubit = Qubit()) { // Allocate a qubit
             let qubit = qubits[0];
             H(qubit);               // Use a quantum operation on that qubit
 

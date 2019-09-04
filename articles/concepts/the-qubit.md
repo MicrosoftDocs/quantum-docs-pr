@@ -42,7 +42,7 @@ A final important property of measurement is that it does not necessarily damage
 Qubits may also be pictured in $3$D using the [*Bloch sphere*](https://en.wikipedia.org/wiki/Bloch_sphere) representation.  The Bloch sphere gives a way of describing a single-qubit quantum state (which is a two-dimensional complex vector) as a three-dimensional real-valued vector.  This is important because it allows us to visualize single-qubit states and thereby develop reasoning that can be invaluable in understanding multi-qubit states (where sadly the Bloch sphere representation breaks down).  The Bloch sphere can be visualized as follows:
 
 <!--- ![](.\media\bloch.svg){ width=50% } --->
-![Bloch sphere](../media/concepts_bloch.png)
+![Bloch sphere](~/media/concepts_bloch.png)
 
 The arrows in this diagram show the direction in which the quantum state vector is pointing and each transformation of the arrow can be thought of as a rotation about one of the cardinal axes.
 While thinking about a quantum computation as a sequence of rotations is a powerful intuition, it is challenging to use this intuition to design and describe algorithms. Q# alleviates this issue by providing a language for describing such rotations.

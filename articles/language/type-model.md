@@ -501,7 +501,6 @@ This example of a function comes from the [PhaseEstimation](https://github.com/M
 /// Given two arrays, returns a new array that is the pointwise product
 /// of each of the given arrays.
 function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
-
     mutable product = new Double[Length(left)];
 
     for (idxElement in 0 .. Length(left) - 1) {

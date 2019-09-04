@@ -2,7 +2,7 @@
 title: Q# type model | Microsoft Docs 
 description: Q# type model
 author: QuantumWriter
-uid: microsoft.quantum.qsharp-ref.type-model
+uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article
@@ -147,7 +147,7 @@ newtype Complex = (Double, Double);
 ```
 
 This statement creates a new type with two anonymous items of type `Double`.   
-:new: Aside from anonymous items, user defined types also support named items as of Q# version 0.7 or higher. For example, we could have named the to items `Re` for the double representing the real part of a complex number and `Im` for the imaginary part: 
+Aside from anonymous items, user defined types also support named items as of Q# version 0.7 or higher. For example, we could have named the to items `Re` for the double representing the real part of a complex number and `Im` for the imaginary part: 
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);

@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: |-
   Given an operation op, returns a new operation which
-  applies the op if a classical control bit is true. If false, nothing happens.
+  applies the op if a classical control bit is true. If `false`, nothing happens.
 syntax: "function CControlled (op : ('T => Unit)) : ((Bool, 'T) => Unit)"
 input:
   content: "(op : ('T => Unit))"

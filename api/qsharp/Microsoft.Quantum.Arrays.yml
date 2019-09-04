@@ -77,6 +77,10 @@ functions:
   summary: |-
     Create an array that contains the same elements as an input array but in Reversed
     order.
+- uid: microsoft.quantum.arrays.sequencei
+  summary: Get an array of integers in a given interval.
+- uid: microsoft.quantum.arrays.sequencel
+  summary: Get an array of integers in a given interval.
 - uid: microsoft.quantum.arrays.subarray
   summary: |-
     Takes an array and a list of locations and

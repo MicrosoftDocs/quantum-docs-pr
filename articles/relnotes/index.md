@@ -25,6 +25,27 @@ dotnet tool update -g Microsoft.Quantum.IQSharp
 > * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
 > * References between projects migrated to 0.6 and higher and projects using older package versions are **not** supported.
 
+# Version 0.9 (*PackageReference 0.9.1908.2906*)
+
+*Release date: August 29th, 2019*
+
+This release contains the following:
+
+- New support for [conjugation statements](xref:microsoft.quantum.language.statements#conjugations) in Q#
+- New code actions in the compiler, such as: "replace with", "add documentation", and simple array item update
+- Added install template and new project commands to Visual Studio Code extension
+- Added new variants of ApplyIf combinator such as [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone)
+- Additional [Quantum Katas](https://github.com/Microsoft/QuantumKatas) converted to Jupyter Notebooks
+- Visual Studio Extension now requires Visual Studio 2019
+
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
+The changes are summarized here as well as instructions for upgrading your existing programs.  Read more about these changes on the [Q# dev blog](https://devblogs.microsoft.com/qsharp).
+
+
+
+
+
 # Version 0.8 (*PackageReference 0.8.1907.1701*)
 
 *Release date: July 12, 2019*
@@ -36,7 +57,6 @@ This release contains the following:
 - Breaking change for [the trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), update to configuration settings, name changes; see the [.NET API Browser for the updated names](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration).
 
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) and [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
-
 
 
 
@@ -59,8 +79,8 @@ The changes are summarized here as well as instructions for upgrading your exist
 This release adds new Q# language syntax:
 * Add named items for [user-defined types](xref:microsoft.quantum.language.type-model#user-defined-types).  
 * User-defined type constructors can now be used as functions.
-* Add support for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) and [apply-and-reassign]((xref:microsoft.quantum.qsharp-ref.statements#rebinding-of-mutable-symbols)) in user-defined types.
-* Fixup-block for [repeat-until-success](xref:microsoft.quantum.qsharp-ref.statements#repeat-until-success-loop) loops is now optional.
+* Add support for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) and [apply-and-reassign]((xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols)) in user-defined types.
+* Fixup-block for [repeat-until-success](xref:microsoft.quantum.language.statements#repeat-until-success-loop) loops is now optional.
 * We now support while loops in functions (not in operations).
 
 ## Library 
@@ -94,7 +114,7 @@ The changes are summarized here as well as instructions for upgrading your exist
 This release adds new Q# language syntax:
 * Add a [shorthand way to express specializations of quantum operations](xref:microsoft.quantum.language.type-model#functors) (control and adjoints) with `+` operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., `: adjoint`) will continue to work, but a compile time warning will be generated.  
 * Add a new operator for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions), `w/`, can be used to express array creation as a modification of an existing array.
-* Add the common [apply-and-upate statement](xref:microsoft.quantum.qsharp-ref.statements#rebinding-of-mutable-symbols), e.g., `+=`, `w/=`.
+* Add the common [apply-and-upate statement](xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols), e.g., `+=`, `w/=`.
 * Add a way to specify a short name for namespaces in [open directives](xref:microsoft.quantum.language.file-structure#open-directives).
 
 With this release, we no longer allow an array element to be specified on the left side of a set statement.  This is because that syntax implies that arrays are mutable when in fact, the result of the operation has always been the creation of a new array with the modification.  Instead, a compiler error will be generated with a suggestion to use the new copy-and-update operator, `w/`, to accomplish the same result.  
@@ -146,7 +166,7 @@ If you have existing Q# projects from version 0.5 of the Quantum Development Kit
 ```
       4. From the command line, run this command: `dotnet msbuild`  
       5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
-            - Open the root folder of the project or the containing solution in Visual Studio 2017 or Visual Studio Code.
+            - Open the root folder of the project or the containing solution in Visual Studio 2019 or Visual Studio Code.
             - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
             - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
 
@@ -178,7 +198,7 @@ This release contains the following:
 
 - Bug fix for DumpRegister issue reported by the community ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
-- Added ability to return from within a [using statement](xref:microsoft.quantum.qsharp-ref.statements).
+- Added ability to return from within a [using statement](xref:microsoft.quantum.language.statements).
 
 - Revamped [getting started guide](xref:microsoft.quantum.install).
 

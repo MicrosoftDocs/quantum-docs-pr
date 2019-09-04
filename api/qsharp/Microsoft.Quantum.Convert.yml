@@ -54,6 +54,11 @@ functions:
   summary: |-
     Converts a given integer number to an equivalent string representation,
     using the given format.
+- uid: microsoft.quantum.convert.maybebigintasint
+  summary: |-
+    Converts a given big integer to an equivalent integer, if possible.
+    The function returns a pair of the resulting integer and a Boolean flag
+    which is true, if and only if the conversion was possible.
 - uid: microsoft.quantum.convert.pauliarrayasint
   summary: |-
     Encodes a multi-qubit Pauli operator represented as an array of

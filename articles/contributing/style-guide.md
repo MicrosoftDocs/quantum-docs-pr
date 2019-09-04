@@ -337,7 +337,7 @@ Similarly, the language server provided with the Quantum Development Kit uses th
 Making use of documentation comments can thus help users to make sense of code by providing a useful reference for details that are not easily expressed using the other conventions in this document.
 
 <div class="nextstepaction">
-    [Documentation comment syntax reference](xref:microsoft.quantum.qsharp-ref.statements#documentation-comments)
+    [Documentation comment syntax reference](xref:microsoft.quantum.language.statements#documentation-comments)
 </div>
 
 In order to effectively use this functionality to help users, we recommend keeping a few things in mind as you write documentation comments.

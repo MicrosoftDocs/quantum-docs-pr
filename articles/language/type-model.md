@@ -503,7 +503,7 @@ This example of a function comes from the [PhaseEstimation](https://github.com/M
 function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
     mutable product = new Double[Length(left)];
 
-    for (idxElement in 0 .. Length(left) - 1) {
+    for (idxElement in IndexRange(left)) {
         set product[idxElement] = left[idxElement] * right[idxElement];
     }
     return product;

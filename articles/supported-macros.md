@@ -1,3 +1,13 @@
+---
+title: Supported latex macros for authoring
+description: List of supported latex macros
+author: natke
+ms.author: nakersha
+ms.date: 09/04/2019
+ms.topic: article
+uid: microsoft.quantum.contribute.macros
+---
+
 # Supported Macros
 
 <table>

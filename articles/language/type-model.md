@@ -475,7 +475,7 @@ If a target should be controlled by 2 control qubits (CCNOT), we can use `Contro
 
 ### Examples
 
-This example of a Q# operation comes from the [Measurement](https://github.com/Microsoft/Quantum/tree/master/Samples/Measurement) sample. Within operations we can allocate qubits and use quantum operations on those qubits such as `H` and `X`:
+This example of a Q# operation comes from the [Measurement](https://github.com/Microsoft/Quantum/tree/master/Samples/Measurement) sample. Within operations, we can allocate qubits and use quantum operations on those qubits such as `H` and `X`:
 
 ```qsharp
 /// # Summary

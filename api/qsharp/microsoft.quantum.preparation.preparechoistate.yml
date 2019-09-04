@@ -12,7 +12,7 @@ remarks: |-
   $$
   \begin{align}
   J(\Lambda) \mathrel{:=} (\boldone \otimes \Lambda)
-  (|\boldone\rangle\!\rangle\langle\!\langle\boldone|),
+  (\ket{\boldone}\!\rangle\langle\!\bra{\boldone}),
   \end{align}
   $$
   where $\ket{X}\!\rangle$ is the *vectorization* of a matrix $X$

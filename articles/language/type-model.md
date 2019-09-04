@@ -504,7 +504,7 @@ function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
     mutable product = new Double[Length(left)];
 
     for (idxElement in IndexRange(left)) {
-        set product[idxElement] = left[idxElement] * right[idxElement];
+        set product w/= idxElement <- left[idxElement] * right[idxElement];
     }
     return product;
 }

@@ -484,7 +484,6 @@ operation MeasurementOneQubit () : Result {
         mutable result = Zero;
 
         using (qubit = Qubit()) { // Allocate a qubit
-            let qubit = qubits[0];
             H(qubit);               // Use a quantum operation on that qubit
 
             if (result == One) {

@@ -1,17 +1,18 @@
 ---
 uid: microsoft.quantum.index
-title: Setting up the Q# development environment 
+title: Microsoft Quantum Development Kit Documentation - Tutorials, API Reference
+description: Learn how to use Quantum Development Kit to develop quantum computing programs and experiments. Tutorials, API, reference, and code samples for Q#, C#, and Jupyter Notebooks.
 author: QuantumWriter
 ms.author:  
-ms.date: 10/09/2017
-ms.topic: article
+ms.date: 08/23/2019
+ms.topic: landing-page
 ---
 
 # Welcome to the Microsoft Quantum Development Kit Preview
 
 Thank you for your interest in Microsoft Quantum Development Kit preview. The development kit contains the tools you'll need to build your own quantum computing programs and experiments. 
 
-To jump right in, go to [Getting Started with the Quantum Development Kit](xref:microsoft.quantum.install).  This shows you how to explore Q# through Jupyter Notebooks, an open source web application, without installing the Quantum Development Kit.  You'll then be guided through installing the Quantum Development Kit on Windows, Linux, or macOS machines so that you can write your own quantum programs.  With the Quantum Development Kit, you can choose which classical host (Python, C# or other .NET programming language) to use to invoke your Q# program. The development kit also offers extentions to Visual Studio and Visual Studio Code for a great developer experience.  Choose the development environment that's right for you!
+To jump right in, go to [Getting Started with the Quantum Development Kit](xref:microsoft.quantum.install).  This shows you how to explore Q# through Jupyter Notebooks, an open source web application, without installing the Quantum Development Kit.  You'll then be guided through installing the Quantum Development Kit on Windows, Linux, or macOS machines so that you can write your own quantum programs.  With the Quantum Development Kit, you can choose which classical host (Python, C# or other .NET programming language) to use to invoke your Q# program. The development kit also offers extensions to Visual Studio and Visual Studio Code for a great developer experience.  Choose the development environment that's right for you!
 
 Next, follow [Quickstart - your first quantum program](xref:microsoft.quantum.write-program) to write your first quantum program using your command line, Visual Studio or Visual Studio Code.  Learn about the structure of a Q# project and develop the quantum equivalent of "Hello, world!" - creating entanglement, or what is also known as a Bell State, in Q#.
 

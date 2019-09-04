@@ -11,7 +11,7 @@ uid: microsoft.quantum.libraries.standard.prelude
 
 # The Prelude #
 
-The Q# compiler and the target machines included with the Quantum Development Kit provide a set of intrinsic functions and operations that can be used when writing quantum programsin Q#.
+The Q# compiler and the target machines included with the Quantum Development Kit provide a set of intrinsic functions and operations that can be used when writing quantum programs in Q#.
 
 ## Intrinsic Operations and Functions ##
 

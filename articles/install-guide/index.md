@@ -26,7 +26,7 @@ To run these locally, take a look at our [Jupyter notebooks getting started guid
 > [!div class="button"]
 > [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
 
-Then, check our [quickstart guide](xref:microsoft.quantum.write-program?tabs=tabid-vs2017) for step-by-step instructions for your first quantum program.
+Then, check our [quickstart guide](xref:microsoft.quantum.write-program?tabs=tabid-vs2019) for step-by-step instructions for your first quantum program.
 
 ### Visual Studio Code ###
 

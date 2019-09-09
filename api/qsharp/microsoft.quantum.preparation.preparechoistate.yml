@@ -12,10 +12,10 @@ remarks: |-
   $$
   \begin{align}
   J(\Lambda) \mathrel{:=} (\boldone \otimes \Lambda)
-  (|\boldone\rangle\!\rangle\langle\!\langle\boldone|),
+  (\ket{\boldone}\!\rangle\langle\!\bra{\boldone}),
   \end{align}
   $$
-  where $|X\rangle\!\rangle$ is the *vectorization* of a matrix $X$
+  where $\ket{X}\!\rangle$ is the *vectorization* of a matrix $X$
   in the column-stacking convention. Learning a classical description
   of this state provides full information about the effect of $\Lambda$
   acting on arbitrary input states, and forms the foundation of

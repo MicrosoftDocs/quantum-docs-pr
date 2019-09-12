@@ -295,7 +295,7 @@ This helps in order to clearly separate named items from references to locally s
 
 We suggest:
 
-- Named items in UDT constructors should named as `CamelCase`; that is, they should begin with an initial uppercase.
+- Named items in UDT constructors should be named as `CamelCase`; that is, they should begin with an initial uppercase.
 - Named items that resolve to operations should be named as verb phases.
 - Named items that do not resolve to operations should be named as noun phrases.
 - For UDTs that wrap operations, a single named item called `Apply` should be defined.

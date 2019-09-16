@@ -29,7 +29,7 @@ Q# introduces amplitude amplification as a specialization of oblivious amplitude
 
 The general routine (`AmpAmpObliviousByReflectionPhases`) has two registers that we call `ancillaRegister` and `systemRegister`. It also accepts two oracles for the necessary reflections. The `ReflectionOracle` acts only on the `ancillaRegister` while the `ObliviousOracle` acts jointly on both registers. The input to `ancillaRegister` must be initialized to a -1 eigenstate of the first reflection operator $\boldone -2P_1$.
 
-Typically, the oracle prepares the state in the computational basis $|0...0\rangle$. In our implementation, the `ancillaRegister` consistes of one qubit (`flagQubit`) that controls the `stateOracle` and the rest of the desired ancillas. The `stateOracle` is applied when the `flagQubit` is $|1\rangle$.
+Typically, the oracle prepares the state in the computational basis $\ket{0...0}$. In our implementation, the `ancillaRegister` consistes of one qubit (`flagQubit`) that controls the `stateOracle` and the rest of the desired ancillas. The `stateOracle` is applied when the `flagQubit` is $\ket{1}$.
 
 One may also provide oracles `StateOracle` and `ObliviousOracle` instead of reflections via a call to `AmpAmpObliviousByOraclePhases`.
 

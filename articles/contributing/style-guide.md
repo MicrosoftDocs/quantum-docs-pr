@@ -85,10 +85,10 @@ We suggest:
 
 - Use verbs for operation names.
 - Use nouns or adjectives for function names.
-- Use nouns for user-defined types.
+- Use nouns for user-defined types and attributes.
 - For all callable names, use `CamelCase` in strong preference to `pascalCase`, `snake_case`, or `ANGRY_CASE`. In particular, ensure that callable names start with uppercase letters.
 - For all local variables, use `pascalCase` in strong preference to `CamelCase`, `snake_case`, or `ANGRY_CASE`. In particular, ensure that local variables start with lowercase letters.
-- Avoid the use of underscores `_` in function and operation names.
+- Avoid the use of underscores `_` in function and operation names; where additional levels of hierarchy are needed, use namespaces and namespace aliases.
 
 # [Examples](#tab/examples)
 
@@ -97,10 +97,13 @@ We suggest:
 | ☑ | `operation ReflectAboutStart` | Clear use of a verb ("reflect") to indicate the effect of the operation. |
 | ☒ | <s>`operation XRotation`</s> | Use of noun phrase suggests function, rather than operation. |
 | ☒ | <s>`operation search_oracle`</s> | Use of `snake_case` contravenes Q# notation. |
+| ☒ | <s>`operation Search_Oracle`</s> | Use of underscores internal to operation name contravenes Q# notation. |
 | ☑ | `function StatePreparationOracle` | Use of noun phrase suggests that the function returns an operation. |
-| ☑ | `function ClaimEqual` | Clear use of noun ("claim") to indicate that this is a function. |
+| ☑ | `function EqualityFact` | Clear use of noun ("fact") to indicate that this is a function, while the adjective. |
 | ☒ | <s>`function GetRotationAngles`</s> | Use of verb ("get") suggests that this is an operation. |
 | ☑ | `newtype GeneratorTerm` | Use of noun phrase clearly refers to the result of calling the UDT constructor. |
+| ☒ | <s>`@Attribute() newtype RunOnce()`</s> | Use of verb phrase suggests that the UDT constructor is an operation. |
+| ☑ | `@Attribute() newtype Deprecated(Reason : String)` | Use of noun phrase communicates the use of the attribute. |
 
 ***
 
@@ -122,7 +125,7 @@ Thus, an operation implementing the QFT could either be called `QFT` as shorthan
 For particularly commonly used operations and functions, it may be desirable to provide a shorthand name as an _alias_ for a longer form:
 
 ```qsharp
-operation CCNOT(control0 : Qubit, control1 : Qubit, target : Qubit) 
+operation CCNOT(control0 : Qubit, control1 : Qubit, target : Qubit)
 is Adj + Ctl {
     Controlled X([control0, control1], target);
 }
@@ -209,15 +212,20 @@ We suggest:
 
 In many cases, a name is intended strictly for use internal to a library or project, and is not a guaranteed part of the API offered by a library.
 It is helpful to clearly indicate that this is the case when naming functions and operations so that accidental dependencies on internal-only code are made obvious.
-If an operation or function is not intended for direct use, but rather should be used by a matching callable which acts by partial application, consider using a name ending with `Impl` for the callable that is partially applied.
+If an operation or function is not intended for direct use, but rather should be used by a matching callable which acts by partial application, consider using a name starting with `_` for the callable that is partially applied, and marking the function or operation as private with the <xref:microsoft.quantum.core.private> attribute:
+
+```Q#
+@Private()
+operation _ApplyDecomposedOperation(decomposition : Int[], targets : Qubit[]) : Unit {
+    // ...
+}
+```
 
 # [Guidance](#tab/guidance)
 
 We suggest:
 
 - When a function, operation, or user-defined type is not a part of the public API for a Q# library or program, ensure that its name begins with a leading underscore (`_`).
-- When a function or operation is used only in when partially applied, ensure that its name ends with `Impl`.
-  Alternatively, refactor to make the `Impl` callable useful in its own right.
 
 # [Examples](#tab/examples)
 
@@ -225,7 +233,6 @@ We suggest:
 |---|------|-------------|
 | ☒ | <s>`ApplyDecomposedOperation_`</s> | The underscore `_` should not appear at the end of the name. |
 | ☑ | `_ApplyDecomposedOperation` | The underscore `_` at the beginning clearly indicates that this operation is for internal use only. |
-| ☑ | `ComposeImpl` | The suffix `Impl` clearly indicates that this callable is meant to support the `Compose` callable. |
 
 ***
 
@@ -260,7 +267,7 @@ A key goal of the Q# code for a function or operation is for it to be easily rea
 Similarly, the names of inputs and type arguments should communicate how a function or argument will be used once provided.
 
 
-# [Guidance](#tab/guidance) 
+# [Guidance](#tab/guidance)
 
 We suggest:
 
@@ -276,6 +283,30 @@ We suggest:
 - Variables used to hold lengths of arrays should begin with `n` and should be pluralized (e.g.: `nThings`).
 
 # [Examples](#tab/examples)
+
+***
+
+### User Defined Type Named Items ###
+
+Named items in user-defined types should be named as `CamelCase`, even in input to UDT constructors.
+This helps in order to clearly separate named items from references to locally scoped variables when using accessor notation (e.g.: `callable::Apply`) or copy-and-update notation (`set arr w/= Data <- newData`).
+
+# [Guidance](#tab/guidance)
+
+We suggest:
+
+- Named items in UDT constructors should be named as `CamelCase`; that is, they should begin with an initial uppercase.
+- Named items that resolve to operations should be named as verb phases.
+- Named items that do not resolve to operations should be named as noun phrases.
+- For UDTs that wrap operations, a single named item called `Apply` should be defined.
+
+# [Examples](#tab/examples)
+
+|   | Snippet | Description |
+|---|---------|-------------|
+| ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | The name `Apply` is a `CamelCase`-formatted verb phrase, suggesting that the named item is an operation. |
+| ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Named items should begin with an initial uppercase letter. |
+| ☒ | <s>`newtype Collection = (Length : Int, Get : Int -> (Qubit => Unit)) `</s> | Named items which resolve to functions should be named as noun phrases, not as verb phrases. |
 
 ***
 
@@ -308,8 +339,9 @@ operation ApplyPhaseEstimationIteration(
     callable : (Qubit => () is Ctl),
     scaleFactors : Double[],
     controlQubit : Qubit,
-    targetQubits : Qubit[]) 
-: Unit 
+    targetQubits : Qubit[]
+)
+: Unit
 ...
 ```
 As a special case of minimizing surprise, some functions and operations mimic the behavior of the built-in functors `Adjoint` and `Controlled`.
@@ -392,7 +424,7 @@ We suggest:
 /// # See Also
 /// - Ry
 /// - Rz
-operation Rx(theta : Double, qubit : Qubit) : Unit 
+operation Rx(theta : Double, qubit : Qubit) : Unit
 is Adj + Ctl {
     body (...) { R(PauliX, theta, qubit); }
     adjoint (...) { R(PauliX, -theta, qubit); }
@@ -422,6 +454,8 @@ We suggest:
 - Use spaces around binary operators.
 - Use spaces on either side of colons used for type annotations.
 - Use a single space after commas used in array and tuple literals (e.g.: in inputs to functions and operations).
+- Do not use spaces after function, operation, or UDT names, or after the `@` in attribute declarations.
+- Each attribute declaration should be on its own line.
 
 # [Examples](#tab/examples)
 
@@ -430,6 +464,7 @@ We suggest:
 | ☒ | <s>`2+3`</s> | Use spaces around binary operators. |
 | ☒ | <s>`target:Qubit`</s> | Use spaces around type annotation colons. |
 | ☑ | `Example(a, b, c)` | Items in input tuple are correctly spaced for readability. |
+| ☒ | <s>`Example (a, b, c)`</s> | Spaces should be suppressed after function, operation, or UDT names. |
 
 ***
 

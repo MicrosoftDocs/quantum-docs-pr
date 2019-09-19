@@ -24,9 +24,10 @@ Installing IQ# on your machine typically takes less than 10 minutes; just follow
 
 1. Install the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) by 
   following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download).
-2. From the command line, execute:
+2. From the command line, execute the two commands:
    ```Command Prompt
    dotnet tool install -g Microsoft.Quantum.IQSharp
+   dotnet iqsharp install
    ```
 
 Your installation of the Quantum Development Kit is now complete!

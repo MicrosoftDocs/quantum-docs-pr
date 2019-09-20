@@ -1,3 +1,5 @@
+- name: Classical machines and drivers
+  href: index.md
 - name: Quantum simulator
   href: full-state-simulator.md
 - name: Resources estimator

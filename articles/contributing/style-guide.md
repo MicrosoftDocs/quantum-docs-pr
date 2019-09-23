@@ -212,14 +212,7 @@ We suggest:
 
 In many cases, a name is intended strictly for use internal to a library or project, and is not a guaranteed part of the API offered by a library.
 It is helpful to clearly indicate that this is the case when naming functions and operations so that accidental dependencies on internal-only code are made obvious.
-If an operation or function is not intended for direct use, but rather should be used by a matching callable which acts by partial application, consider using a name starting with `_` for the callable that is partially applied, and marking the function or operation as private with the <xref:microsoft.quantum.core.private> attribute:
-
-```Q#
-@Private()
-operation _ApplyDecomposedOperation(decomposition : Int[], targets : Qubit[]) : Unit {
-    // ...
-}
-```
+If an operation or function is not intended for direct use, but rather should be used by a matching callable which acts by partial application, consider using a name starting with `_` for the callable that is partially applied.
 
 # [Guidance](#tab/guidance)
 

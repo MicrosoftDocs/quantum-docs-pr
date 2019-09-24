@@ -48,28 +48,24 @@
       "searchScope": ["quantum", "q#", "qsharp"],
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/quantum-docs-pr",
-      "feedback_product_url": "https://github.com/Microsoft/quantum/issues"
+      "feedback_product_url": "https://github.com/Microsoft/quantum/issues",
+      "titleSuffix": "Microsoft Quantum"
     },
     "fileMetadata": {
       "latex_macros": {
         "**/**.md": {
           "ket": ["\\left| #1\\right\\rangle", 1],
           "bra": ["\\left\\langle #1\\right|", 1],
-          "braket": ["\\left\\langle #1 \\right\\rangle", 1],
+          "braket": [ "\\left\\langle #1 \\right\\rangle", 1 ],
+          "id": "\\mathbb{1}",
           "boldone": "\\mathbf{1}",
           "expect": "\\mathbb{E}",
           "variance": "\\operatorname{Var}",
           "defeq": "\\mathrel{:=}",
-          "dd": "\\mathrm{d}",
-          "feedback_system": "GitHub",
-          "feedback_github_repo": "MicrosoftDocs/quantum-docs-pr",
-          "feedback_product_url": "https://github.com/Microsoft/Quantum/issues"
+          "dd": "\\mathrm{d}"
         }
       }
     },
-    "titleSuffix": {
-      "*.md": "Microsoft Quantum"
-      },
     "template": [],
     "dest": "quantum-docs"
   }

@@ -26,7 +26,7 @@ remarks: |-
 
   The tolerance is
   the $L\_{\infty}$ distance between 3 dimensional real vector (x₂,x₃,x₄) defined by
-  $\langle\psi|\psi\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z$ and real vector (y₂,y₃,y₄) defined by
+  $\braket{\psi|\psi} = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z$ and real vector (y₂,y₃,y₄) defined by
   ρ = y₁I + y₂X + y₃Y + y₄Z where ρ is the density matrix corresponding to the state of the register.
   This is only true under the assumption that Tr(ρ) and Tr(|ψ⟩⟨ψ|) are both 1 (e.g. x₁ = 1/2, y₁ = 1/2).
   If this is not the case, the function asserts that l∞ distance between

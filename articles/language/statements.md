@@ -393,8 +393,7 @@ for (qb in qubits) { // qubits contains a Qubit[]
 
 mutable results = new (Int, Results)[Length(qubits)];
 for (index in 0 .. Length(qubits) - 1) {
-    let measured = 
-    set results w/= index <- (index, M(qubits[i]));
+    set results w/= index <- (index, M(qubits[index]));
 }
 
 mutable accumulated = 0;

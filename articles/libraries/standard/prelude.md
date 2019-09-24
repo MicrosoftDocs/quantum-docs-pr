@@ -11,7 +11,7 @@ uid: microsoft.quantum.libraries.standard.prelude
 
 # The Prelude #
 
-The Q# compiler and the target machines included with the Quantum Development Kit provide a set of intrinsic functions and operations that can be used when writing quantum programsin Q#.
+The Q# compiler and the target machines included with the Quantum Development Kit provide a set of intrinsic functions and operations that can be used when writing quantum programs in Q#.
 
 ## Intrinsic Operations and Functions ##
 
@@ -277,7 +277,7 @@ First, since performing single-qubit measurements is quite common, the prelude d
 The <xref:microsoft.quantum.intrinsic.m> operation measures the Pauli $Z$ operator on a single qubit, and has signature `(Qubit => Result)`.
 `M(q)` is equivalent to `Measure([PauliZ], [q])`.
 
-The <xref:microsoft.quantum.canon.multim> measures the Pauli $Z$ operator *separately* on each of an array of qubits, returning the *array* of `Result` values obtained for each qubit.
+The <xref:microsoft.quantum.measurement.multim> measures the Pauli $Z$ operator *separately* on each of an array of qubits, returning the *array* of `Result` values obtained for each qubit.
 In some cases this can be optimized. 
 It has signature (`Qubit[] => Result[])`.
 `MultiM(qs)` is equivalent to:

@@ -105,7 +105,7 @@ a^\dagger_1 \ket{0}_1 = \ket{1}_1,\quad a^\dagger_1 \ket{1}_1 = 0,\quad a_1 \ket
 \end{align}
 Note that here $a^\dagger_1 \ket{1}_1=0$ and $a_1 \ket{0}_1$ yield the zero-vector not $\ket{0}_1$.
 Such operators are therefore neither Hermitian nor unitary.
-We represent general creation and annihilation operators using the <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderOperator> type.
+We represent general creation and annihilation operators using the <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderOperator`1> type.
 For instance, a single creation operator is represented as follow.
 
 ```csharp
@@ -199,7 +199,7 @@ Such operators are said to 'anti-commute' and in general for any $i, j$ we have 
 \begin{align}
 a^\dagger_i a^\dagger_j  = -(1-\delta_{i,j})a^\dagger_j a^\dagger_i,\quad a^\dagger_i a_j =\delta_{i,j} - a_j a^\dagger_i.
 \end{align}
-Thus the following two <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderSequence> instances are considered inequivalent
+Thus the following two <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderSequence`1> instances are considered inequivalent
 ```csharp
     // Let us initialize an array of tuples representing the
     // desired sequence of creation operators.

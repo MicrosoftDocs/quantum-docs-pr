@@ -12,7 +12,7 @@ ms.topic: article
 Consider for a moment the unitary transformation $\text{ CNOT}_{01}(H\otimes 1)$.
 This gate sequence is of fundamental significance to quantum computing because it creates a maximally entangled two-qubit state:
 
-$$\mathrm{CNOT}_{01}(H\otimes 1)|00\rangle = \frac{1}{\sqrt{2}} \left(|00\rangle + |11\rangle \right),$$
+$$\mathrm{CNOT}_{01}(H\otimes 1)\ket{00} = \frac{1}{\sqrt{2}} \left(\ket{00} + \ket{11} \right),$$
 
 Operations with this or greater complexity are ubiquitous in quantum algorithms and quantum error correction, so it should come as a great relief that there is a simple method for their visualization called a *quantum circuit diagram*.
 The circuit diagram for preparing this maximally entangled quantum state is:
@@ -68,7 +68,7 @@ This means that you can get an intuition about the data flow for a large quantum
 
 ## Controlled gates
 The other construct that is built into multi-qubit quantum circuit diagrams is control.
-The action of a quantum singly controlled gate, denoted $\Lambda(G)$, where a single qubit's value controls the application of $G$, can be understood by looking at the following example of a product state input $\Lambda(G) (\alpha |0\rangle + \beta |1\rangle) |\psi\rangle = \alpha |0\rangle |\psi\rangle + \beta |1\rangle G|\psi \rangle$.
+The action of a quantum singly controlled gate, denoted $\Lambda(G)$, where a single qubit's value controls the application of $G$, can be understood by looking at the following example of a product state input $\Lambda(G) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket{\psi}$.
 That is to say, the controlled gate applies $G$ to the register containing $\psi$ if and only if the control qubit takes the value $1$.
 In general, we describe such controlled operations in circuit diagrams as
 

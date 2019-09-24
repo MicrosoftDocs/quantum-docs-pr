@@ -38,7 +38,7 @@ Depending on your chosen development environment, there are different installati
    conda install -c quantum-engineering iqsharp
    ```
 
-1. Verify the installation
+1. Verify the installation by creating a `Hello World` application
 
     - Create a minimal Q# operation, by creating a file called `Operation.qs`, and adding the following code to it:
 
@@ -90,7 +90,7 @@ Depending on your chosen development environment, there are different installati
     conda install -c quantum-engineering iqsharp
     ```
 
-1. Verify the installation:
+1. Verify the installation by creating a `Hello World` application
 
     - Run the following command to start the notebook server:
 
@@ -123,7 +123,7 @@ Depending on your chosen development environment, there are different installati
     - Download the [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
     - Add the extension to Visual Studio
 
-1. Verify the installation:
+1. Verify the installation by creating a `Hello World` application
 
     - Create a new Q# application
 
@@ -163,7 +163,7 @@ Depending on your chosen development environment, there are different installati
 
     You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
 
-1. Verify the installation
+1. Verify the installation by creating a `Hello World` application
 
     - Create a new project:
 
@@ -195,19 +195,19 @@ Depending on your chosen development environment, there are different installati
 
     You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
 
-1. Verify the installation
+1. Verify the installation by creating a `Hello World` application
 
     - Create a new application
 
-    ```bash
-    dotnet new console -lang Q# -o runHelloQ
-    ```
+       ```bash
+       dotnet new console -lang Q# -o runHelloQ
+       ```
 
     - Navigate to the new application directory
 
-    ```bash
-    cd runHelloQ
-    ```
+       ```bash
+       cd runHelloQ
+       ```
 
     You should see that two files have been created, along with the project files of the application: a Q# file (`Operation.qs`) and a C# host file (`Driver.cs`).
 

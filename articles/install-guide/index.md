@@ -42,19 +42,19 @@ Depending on your chosen development environment, there are different installati
 
     - Create a minimal Q# operation, by creating a file called `Operation.qs`, and adding the following code to it:
 
-    ```qsharp
-    namespace HelloWorld
-    {
-        open Microsoft.Quantum.Intrinsic;
-        open Microsoft.Quantum.Canon;
-
-        operation HelloQ() : Result
+        ```qsharp
+        namespace HelloWorld
         {
-            Message($"Hello from quantum world!");
-            return Zero;
+            open Microsoft.Quantum.Intrinsic;
+            open Microsoft.Quantum.Canon;
+
+            operation HelloQ() : Result
+            {
+                Message($"Hello from quantum world!");
+                return Zero;
+            }
         }
-    }
-    ```
+        ```
 
     - Create a python program called `run_hello_q.py` to call the Q# `HelloQ()` operation:
 
@@ -161,6 +161,8 @@ Depending on your chosen development environment, there are different installati
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
+    You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
+
 1. Verify the installation
 
     - Create a new project:
@@ -190,6 +192,8 @@ Depending on your chosen development environment, there are different installati
     ```bash
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
+
+    You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
 
 1. Verify the installation
 

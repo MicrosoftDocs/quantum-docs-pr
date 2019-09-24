@@ -219,3 +219,7 @@ Depending on your chosen development environment, there are different installati
         ```
 
         You should see the following output: `Hello quantum world!`
+
+## What's next?
+
+Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.write-program).

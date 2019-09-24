@@ -40,7 +40,7 @@ Depending on your chosen development environment, there are different installati
 
 1. Verify the installation
 
-    - Create a minimal Q# operation, by creating a file called `Operation.qs`, and and adding the following code to it:
+    - Create a minimal Q# operation, by creating a file called `Operation.qs`, and adding the following code to it:
 
     ```qsharp
     namespace HelloWorld
@@ -58,24 +58,24 @@ Depending on your chosen development environment, there are different installati
 
     - Create a python program called `run_hello_q.py` to call the Q# `HelloQ()` operation:
 
-      ```python
-      from HelloWorld import HelloQ
+        ```python
+        from HelloWorld import HelloQ
 
-      HelloQ.simulate()
-      ```
+        HelloQ.simulate()
+        ```
 
     - Run the program:
 
-    ```bash
-    python run_hello_q.py
-    ```
+        ```bash
+        python run_hello_q.py
+        ```
 
     - Verify the output. Your program should output the following lines:
 
-    ```bash
-    Hello from quantum world!
-    0
-    ```
+        ```bash
+        Hello from quantum world!
+       0
+       ```
 
 ## Develop with Jupyter notebooks
 
@@ -94,27 +94,23 @@ Depending on your chosen development environment, there are different installati
 
     - Run the following command to start the notebook server:
 
-    ```bash
-    jupyter notebook
-    ```
+        ```bash
+        jupyter notebook
+        ```
 
-    - Browse to the URL shown on the command line. For example:
-
-    ```bash
-    http://localhost:8888
-    ```
+    - Browse to the URL shown on the command line. For example: http://localhost:8888
 
     - Create a jupyter notebook with a Q# kernel, and add the following code to the first notebook cell:
 
-    ```qsharp
-    operation HelloQ () : Unit {
-        Message($"Hello from quantum world!");
-    }
-    ```
+        ```qsharp
+        operation HelloQ () : Unit {
+            Message($"Hello from quantum world!");
+        }
+        ```
 
     - Run this cell of the notebook:
 
-    You should see `HelloQ` in the output of the cell. When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
+        You should see `HelloQ` in the output of the cell. When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
 
 ## Develop with C# on Windows, using Visual Studio
 
@@ -127,9 +123,25 @@ Depending on your chosen development environment, there are different installati
     - Download the [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
     - Add the extension to Visual Studio
 
-1. Create a new Q# application
+1. Verify the installation:
 
-1. Verify the installation
+    - Create a new Q# application
+
+        - Go to **File** -> **New** -> **Project**
+        - Type `Q#` in the search box
+        - Select **Q# Application**
+        - Select **Next**
+        - Choose a name and location for your application
+        - Select **Create**
+
+    - Inspect the project
+
+        You should see that two files have been created: `Driver.cs` which is the C# host application; and `Operation.qs`, which is a Q# program that defines a simple operation to print a message to the console.
+
+    - Run the application
+
+        - Select **Debug** -> **Start Without Debugging**
+        - You should see the text `Hello quantum world!` printed to a console window.
 
 ## Develop with C#, using VS Code
 
@@ -149,23 +161,25 @@ Depending on your chosen development environment, there are different installati
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
-1. Create a new project:
+1. Verify the installation
 
-   - Go to **View** -> **Command Palette**
-   - Select **Q#: Create New Project**
-   - Navigate to the location on the file system where you would like to create the application
+    - Create a new project:
 
-1. Open the new project:
+        - Go to **View** -> **Command Palette**
+        - Select **Q#: Create New Project**
+        - Navigate to the location on the file system where you would like to create the application
 
-   - Back in VS Code, navigate to the new project
-   - You should see two files, along with the project files: `Operation.qs` and `Driver.cs`
+    - Open the new project:
 
-1. Run the project, to verify the installation:
+        - Back in VS Code, navigate to the new project
+        - You should see two files, along with the project files: `Operation.qs` and `Driver.cs`
 
-   - Go to **Debug** -> **Start Without Debugging**
-   - You should see the following text in the output window `Hello quantum world!`
+    - Run the application:
 
-## Develop with C#, using the `dotnet` command line tool
+        - Go to **Debug** -> **Start Without Debugging**
+        - You should see the following text in the output window `Hello quantum world!`
+
+## Develop with C#, using the `dotnet` command-line tool
 
 1. Pre-requisites
 
@@ -195,13 +209,9 @@ Depending on your chosen development environment, there are different installati
 
     - Run the application
 
-    ```bash
-    cd runHelloQ
-    dotnet run
-    ```
+        ```bash
+        cd runHelloQ
+        dotnet run
+        ```
 
-    You should see the following output:
-
-    ```bash
-    Hello quantum world!
-    ```
+        You should see the following output: `Hello quantum world!`

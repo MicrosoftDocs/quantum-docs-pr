@@ -1,53 +1,207 @@
 ---
-title: Getting Started with the Microsoft Quantum Development Kit
-author: anpaz-msft
-ms.author: andres.paz@microsoft.com 
-ms.date: 3/26/2019
+title: Learn how to install the Microsoft Quantum Development Kit (QDK)
+author: natke
+ms.author: nakersha
+ms.date: 9/23/2019
 ms.topic: article
+ms.custom: how-to
 uid: microsoft.quantum.install
 ---
 
-# Getting Started with the Microsoft Quantum Development Kit #
+# Install the Microsoft Quantum Development Kit (QDK)
 
-## Choose the Environment That's Right for You ##
+Learn how to install the Microsoft Quantum Development Kit (QDK), so that you can get started with quantum programming. The QDK consists of:
 
-### Jupyter Notebooks ###
+- the Q# programming language
+- a set of libraries that abstract complex functionality in Q#
+- a host application (written in Python or a .NET language) that runs quantum operations written in Q#
+- tools to facilitate your development
 
- A great way to get started with Q# before installing the Quantum Development Kit is via some of the Jupyter notebooks available in our [GitHub Quantum repository](https://github.com/Microsoft/Quantum.git).  In particular:
+Depending on your chosen development environment, there are different installation steps. Choose your environment from the sections below.
 
-* **[Q# Notebooks](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IntroToIQSharp/Notebook.ipynb)** [(Run online)](https://mybinder.org/v2/gh/Microsoft/Quantum/master?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb): explains how to compile and simulate Q# operations inside a Jupyter notebook.
-* **[Teleport](https://github.com/Microsoft/Quantum/tree/master/Samples/src/Teleportation/Notebook.ipynb)** [(Run online)](https://mybinder.org/v2/gh/microsoft/Quantum/master?filepath=Samples%2Fsrc%2FTeleportation%2FNotebook.ipynb): shows how to implement the teleport algorithm using Q#.
+## Develop with Python
 
-To run these locally, take a look at our [Jupyter notebooks getting started guide](xref:microsoft.quantum.install.jupyter).
+1. Pre-requisites
 
-### Visual Studio ###
+    - [Python](https://www.python.org/downloads/) 3.6 or later
+    - The [anaconda](https://docs.anaconda.com/anaconda/install/) package manager
 
- If you are already a [Visual Studio](https://visualstudio.microsoft.com/vs/) user, you can install the extension to get started developing Q# in Visual Studio. 
-> [!div class="button"]
-> [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+1. Install the `qsharp` package
 
-Then, check our [quickstart guide](xref:microsoft.quantum.write-program?tabs=tabid-vs2019) for step-by-step instructions for your first quantum program.
+    ```bash
+    conda install -c quantum-engineering qsharp
+    ```
 
-### Visual Studio Code ###
+1. Install the `iqsharp` package
 
- If you are already a Visual Studio Code user, start by installing the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) by following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download). Then, you can install the extension to get started developing Q# in Visual Studio Code.
-> [!div class="button"]
-> [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+   ```bash
+   conda install -c quantum-engineering iqsharp
+   ```
 
-Then, check our [quickstart guide](xref:microsoft.quantum.write-program?tabs=tabid-vscode) for step-by-step instructions for your first quantum program.
+1. Verify the installation
 
+    - Create a minimal Q# operation, by creating a file called `Operation.qs`, and and adding the following code to it:
 
-### Python ###
+    ```qsharp
+    namespace HelloWorld
+    {
+        open Microsoft.Quantum.Intrinsic;
+        open Microsoft.Quantum.Canon;
 
-If you are a Python user, check out our [getting started with Python and the Quantum Development Kit guide](xref:microsoft.quantum.install.python).
+        operation HelloQ() : Result
+        {
+            Message($"Hello from quantum world!");
+            return Zero;
+        }
+    }
+    ```
 
+    - Create a python program called `run_hello_q.py` to call the Q# `HelloQ()` operation:
 
-## Learn Quantum Computing with Q# ##
+      ```python
+      from HelloWorld import HelloQ
 
-* [Quantum Katas](https://github.com/Microsoft/QuantumKatas)
-* [Samples](https://github.com/Microsoft/Quantum)
-* [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro)
-* [Microsoft Quantum Blog](https://cloudblogs.microsoft.com/quantum/?ext)
-* [Q# Blog](https://devblogs.microsoft.com/qsharp/)
+      HelloQ.simulate()
+      ```
 
+    - Run the program:
 
+    ```bash
+    python run_hello_q.py
+    ```
+
+    - Verify the output. Your program should output the following lines:
+
+    ```bash
+    Hello from quantum world!
+    0
+    ```
+
+## Develop with Jupyter notebooks
+
+1. Pre-requisites
+
+    - [Python](https://www.python.org/downloads/) 3.6 or later
+    - [Jupyter notebooks](https://jupyter.readthedocs.io/en/latest/install.html)
+
+1. Install the `iqsharp` package:
+
+    ```bash
+    conda install -c quantum-engineering iqsharp
+    ```
+
+1. Verify the installation:
+
+    - Run the following command to start the notebook server:
+
+    ```bash
+    jupyter notebook
+    ```
+
+    - Browse to the URL shown on the command line. For example:
+
+    ```bash
+    http://localhost:8888
+    ```
+
+    - Create a jupyter notebook with a Q# kernel, and add the following code to the first notebook cell:
+
+    ```qsharp
+    operation HelloQ () : Unit {
+        Message($"Hello from quantum world!");
+    }
+    ```
+
+    - Run this cell of the notebook:
+
+    You should see `HelloQ` in the output of the cell. When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
+
+## Develop with C# on Windows, using Visual Studio
+
+1. Pre-requisites
+
+    - Visual Studio, version, with the .NET Core cross-platform development workload enabled
+
+1. Install the Q# Visual Studio extension
+
+    - Download the [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+    - Add the extension to Visual Studio
+
+1. Create a new Q# application
+
+1. Verify the installation
+
+## Develop with C#, using VS Code
+
+1. Pre-requisites
+
+   - [VS Code](https://code.visualstudio.com/download)
+   - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+
+1. Install the Quantum VS Code extension
+
+    - Download the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+    - Add the extension to VS Code
+
+1. Install the Quantum project templates:
+
+    ```bash
+    dotnet new -i Microsoft.Quantum.ProjectTemplates
+    ```
+
+1. Create a new project:
+
+   - Go to **View** -> **Command Palette**
+   - Select **Q#: Create New Project**
+   - Navigate to the location on the file system where you would like to create the application
+
+1. Open the new project:
+
+   - Back in VS Code, navigate to the new project
+   - You should see two files, along with the project files: `Operation.qs` and `Driver.cs`
+
+1. Run the project, to verify the installation:
+
+   - Go to **Debug** -> **Start Without Debugging**
+   - You should see the following text in the output window `Hello quantum world!`
+
+## Develop with C#, using the `dotnet` command line tool
+
+1. Pre-requisites
+
+    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+
+1. Install the Quantum project templates for .NET
+
+    ```bash
+    dotnet new -i Microsoft.Quantum.ProjectTemplates
+    ```
+
+1. Verify the installation
+
+    - Create a new application
+
+    ```bash
+    dotnet new console -lang Q# -o runHelloQ
+    ```
+
+    - Navigate to the new application directory
+
+    ```bash
+    cd runHelloQ
+    ```
+
+    You should see that two files have been created, along with the project files of the application: a Q# file (`Operation.qs`) and a C# host file (`Driver.cs`).
+
+    - Run the application
+
+    ```bash
+    cd runHelloQ
+    dotnet run
+    ```
+
+    You should see the following output:
+
+    ```bash
+    Hello quantum world!
+    ```

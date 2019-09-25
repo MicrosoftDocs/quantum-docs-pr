@@ -32,12 +32,6 @@ Depending on your chosen development environment, there are different installati
     conda install -c quantum-engineering qsharp
     ```
 
-1. Install the `iqsharp` package
-
-   ```bash
-   conda install -c quantum-engineering iqsharp
-   ```
-
 1. Verify the installation by creating a `Hello World` application
 
     - Create a minimal Q# operation, by creating a file called `Operation.qs`, and adding the following code to it:

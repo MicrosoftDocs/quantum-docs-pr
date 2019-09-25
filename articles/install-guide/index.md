@@ -77,7 +77,7 @@ Depending on your chosen development environment, there are different installati
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - The [Anaconda](https://docs.anaconda.com/anaconda/install/) distribution of the conda package manager
-    - [Jupyter notebooks](https://jupyter.readthedocs.io/en/latest/install.html)
+    - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
 
 1. Install the `iqsharp` package:
 

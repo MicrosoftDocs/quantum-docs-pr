@@ -137,7 +137,7 @@ Depending on your chosen development environment, there are different installati
 
     - Inspect the project
 
-        You should see that two files have been created: `Driver.cs` which is the C# host application; and `Operation.qs`, which is a Q# program that defines a simple operation to print a message to the console.
+        You should see that two files have been created: `Driver.cs`, which is the C# host application; and `Operation.qs`, which is a Q# program that defines a simple operation to print a message to the console.
 
     - Run the application
 

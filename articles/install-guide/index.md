@@ -24,7 +24,7 @@ Depending on your chosen development environment, there are different installati
 1. Pre-requisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
-    - The [Anaconda](https://docs.anaconda.com/anaconda/install/) distribution of the conda package manager
+    - The [Anaconda](https://docs.anaconda.com/anaconda/install/) distribution
 
 1. Install the `qsharp` package
 
@@ -76,7 +76,7 @@ Depending on your chosen development environment, there are different installati
 1. Pre-requisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
-    - The [Anaconda](https://docs.anaconda.com/anaconda/install/) distribution of the conda package manager
+    - The [Anaconda](https://docs.anaconda.com/anaconda/install/) distribution
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
 
 1. Install the `iqsharp` package:
@@ -111,7 +111,7 @@ Depending on your chosen development environment, there are different installati
 
 1. Pre-requisites
 
-    - [Visual Studio](https://visualstudio.microsoft.com/downloads/), with the .NET Core cross-platform development workload enabled
+    - [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, with the .NET Core cross-platform development workload enabled
 
 1. Install the Q# Visual Studio extension
 

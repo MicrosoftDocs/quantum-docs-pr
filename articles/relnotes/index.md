@@ -31,7 +31,7 @@ dotnet tool update -g Microsoft.Quantum.IQSharp
 
 This release contains the following:
 
-- New support for Q# code completion in Visual Studio 2019 & Visual Studio Code
+- New support for Q# code completion in Visual Studio 2019 (versions 16.3 & later) & Visual Studio Code
 - New support for installing the QDK for Python using Conda packages, new installation instructions can be found [here](xref:microsoft.quantum.install) 
 - New [Quantum Kata](https://github.com/Microsoft/QuantumKatas) for quantum adders
 

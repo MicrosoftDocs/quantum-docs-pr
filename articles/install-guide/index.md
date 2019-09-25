@@ -24,7 +24,7 @@ Depending on your chosen development environment, there are different installati
 1. Pre-requisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
-    - The [Anaconda](https://docs.anaconda.com/anaconda/install/) package manager
+    - The [Anaconda](https://docs.anaconda.com/anaconda/install/) distribution of the conda package manager
 
 1. Install the `qsharp` package
 
@@ -82,7 +82,7 @@ Depending on your chosen development environment, there are different installati
 1. Pre-requisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
-    - The [Anaconda](https://docs.anaconda.com/anaconda/install/) package manager
+    - The [Anaconda](https://docs.anaconda.com/anaconda/install/) distribution of the conda package manager
     - [Jupyter notebooks](https://jupyter.readthedocs.io/en/latest/install.html)
 
 1. Install the `iqsharp` package:

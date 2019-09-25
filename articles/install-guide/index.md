@@ -24,7 +24,7 @@ Depending on your chosen development environment, there are different installati
 1. Pre-requisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
-    - The [anaconda](https://docs.anaconda.com/anaconda/install/) package manager
+    - The [Anaconda](https://docs.anaconda.com/anaconda/install/) package manager
 
 1. Install the `qsharp` package
 
@@ -82,6 +82,7 @@ Depending on your chosen development environment, there are different installati
 1. Pre-requisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
+    - The [Anaconda](https://docs.anaconda.com/anaconda/install/) package manager
     - [Jupyter notebooks](https://jupyter.readthedocs.io/en/latest/install.html)
 
 1. Install the `iqsharp` package:
@@ -100,7 +101,7 @@ Depending on your chosen development environment, there are different installati
 
     - Browse to the URL shown on the command line. For example: http://localhost:8888
 
-    - Create a jupyter notebook with a Q# kernel, and add the following code to the first notebook cell:
+    - Create a Jupyter notebook with a Q# kernel, and add the following code to the first notebook cell:
 
         ```qsharp
         operation HelloQ () : Unit {
@@ -116,7 +117,7 @@ Depending on your chosen development environment, there are different installati
 
 1. Pre-requisites
 
-    - Visual Studio, version, with the .NET Core cross-platform development workload enabled
+    - [Visual Studio](https://visualstudio.microsoft.com/downloads/), with the .NET Core cross-platform development workload enabled
 
 1. Install the Q# Visual Studio extension
 
@@ -152,14 +153,12 @@ Depending on your chosen development environment, there are different installati
 
 1. Install the Quantum VS Code extension
 
-    - Download the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
-    - Add the extension to VS Code
+    - Install the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
 
 1. Install the Quantum project templates:
 
-    ```bash
-    dotnet new -i Microsoft.Quantum.ProjectTemplates
-    ```
+   - Go to **View** -> **Command Palette**
+   - Select **Q#: Install project templates**
 
     You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
 
@@ -170,11 +169,7 @@ Depending on your chosen development environment, there are different installati
         - Go to **View** -> **Command Palette**
         - Select **Q#: Create New Project**
         - Navigate to the location on the file system where you would like to create the application
-
-    - Open the new project:
-
-        - Back in VS Code, navigate to the new project
-        - You should see two files, along with the project files: `Operation.qs` and `Driver.cs`
+        - Click on the **Open new project...** button, once the project has been created
 
     - Run the application:
 

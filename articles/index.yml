@@ -1,0 +1,109 @@
+### YamlMime:Landing
+
+title: Microsoft Quantum Documentation
+summary: Learn how to use the Microsoft Quantum SDK and Q#, a language for quantum algorithms. Follow step-by-step tutorials and learn the basics of quantum computing.  
+
+metadata:
+  title: Microsoft Quantum Documentation - Q# API Reference
+  description: Learn how to use the Microsoft Quantum SDK and Q#, a language for quantum algorithms. Follow step-by-step tutorials and learn the basics of quantum computing.
+  ms.prod: quantum
+  ms.topic: landing-page
+  ms.collection: collection
+  author: cjgronlund
+  ms.author: cgronlun
+  ms.date: 09/25/2019
+
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card (optional)
+  - title: Get started with Microsoft Quantum
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is the Microsoft Quantum QDK?
+            url: what-is-quantum-sdk.md
+      - linkListType: get-started
+        links:
+          - text: Install the QDK
+            url: install-guide.md
+          - text: C# & the QDK
+            url: install-guide/csharp.md
+          - text: Jupyter notebooks & the QDK
+            url: install-guide/jupyter.md
+          - text: Python & the QDK
+            url: install-guide/python.md
+
+   # Model Builder Card
+  - title: Learn about quantum computing 
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: What is quantum computing?
+            url: quantum/concepts.md
+          - text: Vectors & matrices
+            url: concepts/vectors-and-matrices.md
+          - text: Advanced matrix concepts
+            url: concepts/advanced-matrices.md
+          - text: The qubit
+            url: concepts/the-qubit.md
+          - text: The qubit
+            url: concepts/the-qubit.md
+          - text: The qubit
+            url: concepts/the-qubit.md                        
+ 
+  # API Card
+  - title: Get started with the API
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Build a TensorFlow image classifier with transfer learning
+            url: tutorials/image-classification.md
+          - text: Analyze website comment sentiment
+            url: tutorials/sentiment-analysis.md
+          - text: Detect objects in images using ONNX
+            url: tutorials/object-detection-onnx.md
+      - linkListType: how-to-guide
+        links:
+          - text: Load data from various sources  
+            url: how-to-guides/load-data-ml-net.md
+          - text: Prepare data for building a model
+            url: how-to-guides/prepare-data-ml-net.md
+          - text: Train & evaluate a model
+            url: how-to-guides/train-machine-learning-model-ml-net.md
+          - text: Make predictions with a trained model
+            url: how-to-guides/machine-learning-model-predictions-ml-net.md
+          - text: Save & load a trained model
+            url: how-to-guides/save-load-machine-learning-models-ml-net.md                         
+  
+  # CLI card
+  - title:  Use the ML.NET CLI
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Automate model training with the ML.NET CLI
+            url: automate-training-with-cli.md
+      - linkListType: quickstart
+        links:
+          - text: Install ML.NET CLI
+            url: how-to-guides/install-ml-net-cli.md
+      - linkListType: tutorial
+        links:
+          - text: Analyze sentiment - ML.NET CLI & AutoML
+            url: tutorials/mlnet-cli.md
+
+  # Reference card
+  - title: API reference
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: ML.NET API reference  
+            url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+          - text: ML.NET API reference (preview)
+            url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview
+          - text: ML.NET CLI reference
+            url: reference/ml-net-cli-reference.md
+          - text: AutoML API reference
+            url: https://docs.microsoft.com/dotnet/api/?view=automl-dotnet

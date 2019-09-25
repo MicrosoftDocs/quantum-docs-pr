@@ -25,6 +25,19 @@ dotnet tool update -g Microsoft.Quantum.IQSharp
 > * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
 > * References between projects migrated to 0.6 and higher and projects using older package versions are **not** supported.
 
+# Version 0.10 (*PackageReference 0.10.XXX.YYY*)
+
+*Release date: September 26th, 2019*
+
+This release contains the following:
+
+- New support for Q# code completion in Visual Studio 2019 & Visual Studio Code
+- New support for installing the QDK for Python using Conda packages, new installation instructions can be found [here](xref:microsoft.quantum.install) 
+- New [Quantum Kata](https://github.com/Microsoft/QuantumKatas) for quantum adders
+
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
+
 # Version 0.9 (*PackageReference 0.9.1908.2902*)
 
 *Release date: August 29th, 2019*

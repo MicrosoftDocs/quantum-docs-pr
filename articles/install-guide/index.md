@@ -62,7 +62,7 @@ Depending on your chosen development environment, there are different installati
     - Run the program:
 
         ```bash
-        python run_hello_q.py
+        python hello_world.py
         ```
 
     - Verify the output. Your program should output the following lines:

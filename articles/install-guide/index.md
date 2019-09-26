@@ -42,8 +42,7 @@ Depending on your chosen development environment, there are different installati
             open Microsoft.Quantum.Intrinsic;
             open Microsoft.Quantum.Canon;
 
-            operation HelloQ() : Result
-            {
+            operation SayHello() : Result {
                 Message($"Hello from quantum world!");
                 return Zero;
             }
@@ -53,9 +52,9 @@ Depending on your chosen development environment, there are different installati
     - Create a Python program called `run_hello_q.py` to call the Q# `HelloQ()` operation:
 
         ```python
-        from HelloWorld import HelloQ
+        from HelloWorld import SayHello
 
-        HelloQ.simulate()
+        SayHello.simulate()
         ```
 
     - Run the program:
@@ -98,7 +97,7 @@ Depending on your chosen development environment, there are different installati
     - Create a Jupyter notebook with a Q# kernel, and add the following code to the first notebook cell:
 
         ```qsharp
-        operation HelloQ () : Unit {
+        operation SayHello () : Unit {
             Message($"Hello from quantum world!");
         }
         ```
@@ -189,13 +188,13 @@ Depending on your chosen development environment, there are different installati
     - Create a new application
 
        ```bash
-       dotnet new console -lang Q# -o runHelloQ
+       dotnet new console -lang Q# -o runSayHello
        ```
 
     - Navigate to the new application directory
 
        ```bash
-       cd runHelloQ
+       cd runSayHello
        ```
 
     You should see that two files have been created, along with the project files of the application: a Q# file (`Operation.qs`) and a C# host file (`Driver.cs`).
@@ -203,7 +202,6 @@ Depending on your chosen development environment, there are different installati
     - Run the application
 
         ```bash
-        cd runHelloQ
         dotnet run
         ```
 

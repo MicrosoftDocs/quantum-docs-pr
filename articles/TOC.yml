@@ -5,7 +5,7 @@
   href: concepts/toc.yml
 - name: Quickstarts
   items:
-  - name: Install the Quantum Development Kit
+  - name: Install the QDK
     href: install-guide/index.md
   - name: Write your first Quantum program
     href: quickstart.md

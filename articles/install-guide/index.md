@@ -49,9 +49,11 @@ Depending on your chosen development environment, there are different installati
         }
         ```
 
-    - Create a Python program called `run_hello_q.py` to call the Q# `SayHello()` operation:
+    - Create a Python program called `hello_world.py` to call the Q# `SayHello()` operation:
 
         ```python
+        import qsharp
+
         from HelloWorld import SayHello
 
         SayHello.simulate()

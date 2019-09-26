@@ -49,7 +49,7 @@ Depending on your chosen development environment, there are different installati
         }
         ```
 
-    - Create a Python program called `run_hello_q.py` to call the Q# `HelloQ()` operation:
+    - Create a Python program called `run_hello_q.py` to call the Q# `SayHello()` operation:
 
         ```python
         from HelloWorld import SayHello
@@ -104,7 +104,7 @@ Depending on your chosen development environment, there are different installati
 
     - Run this cell of the notebook:
 
-        You should see `HelloQ` in the output of the cell. When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
+        You should see `SayHello` in the output of the cell. When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
 
 ## Develop with C# on Windows, using Visual Studio
 

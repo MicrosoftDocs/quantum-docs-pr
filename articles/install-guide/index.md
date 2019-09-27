@@ -115,6 +115,8 @@ Depending on your chosen development environment, there are different installati
 
     - Run this cell of the notebook:
 
+        ![Jupyter notebook cell](~/media/install-guide-jupyter.png)
+
         You should see `SayHello` in the output of the cell. When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
 
 ## Develop with C# on Windows, using Visual Studio

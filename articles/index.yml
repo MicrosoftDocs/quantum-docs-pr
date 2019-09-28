@@ -24,12 +24,12 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What is the Microsoft Quantum QDK?
-            url: what-is-quantum-sdk.md
+          - text: Welcome to the Microsoft Quantum QDK
+            url: welcome.md
       - linkListType: get-started
         links:
           - text: Install the QDK
-            url: install-guide.md
+            url: install-guide/index.md
           - text: C# & the QDK
             url: install-guide/csharp.md
           - text: Jupyter notebooks & the QDK
@@ -39,7 +39,7 @@ landingContent:
       - linkListType: quickstart
         links:
           - text: Build a first quantum program
-            url: quantum/quickstart.md            
+            url: quickstart.md            
 
   # Concept
   - title: Learn about quantum computing 
@@ -47,7 +47,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: What is quantum computing?
-            url: quantum/concepts.md
+            url: concepts/index.md
           - text: Vectors & matrices
             url: concepts/vectors-and-matrices.md
           - text: Advanced matrix concepts
@@ -79,13 +79,13 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Classical drivers & machines
-            url: quantum/machines.md
+            url: machines/index.md
           - text: QDK full state simlulator
             url: machines/full-state-simulator.md
           - text: Resources estimator
             url: machines/resources-estimator.md
           - text: Quantum trace similator
-            url: machines/qc-trace-simulator.md
+            url: machines/qc-trace-simulator/index.md
           - text: QDK Toffoli simulator
             url: machines/toffoli-simulator.md
 
@@ -95,15 +95,15 @@ landingContent:
       - linkListType: concept
         links:
           - text: Q# language introduction
-            url: quantum/language.md
+            url: language/index.md
       - linkListType: reference
         links:
           - text: Standard libraries
-            url: libraries/standard.md
+            url: libraries/standard/index.md
           - text: Chemistry library
-            url: libraries/chemistry.md
+            url: libraries/chemistry/index.md
           - text: Numerics library
-            url: libraries/numerics.md
+            url: libraries/numerics/index.md
       - linkListType: reference
         links:
           - text: Q# reference

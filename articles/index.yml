@@ -11,7 +11,7 @@ metadata:
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
-  ms.date: 09/25/2019
+  ms.date: 09/30/2019
 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -49,10 +49,8 @@ landingContent:
             url: concepts/advanced-matrices.md
           - text: The qubit
             url: concepts/the-qubit.md
-          - text: The qubit
-            url: concepts/the-qubit.md
-          - text: The qubit
-            url: concepts/the-qubit.md                        
+          - text: Software stack 
+            url: concepts/software-stack.md                        
  
   # API Card
   - title: Get started with the API
@@ -78,7 +76,7 @@ landingContent:
           - text: Save & load a trained model
             url: how-to-guides/save-load-machine-learning-models-ml-net.md                         
   
-  # CLI card
+
   - title:  Use the ML.NET CLI
     linkLists:
       - linkListType: overview
@@ -95,15 +93,24 @@ landingContent:
             url: tutorials/mlnet-cli.md
 
   # Reference card
-  - title: API reference
+  - title: Q# language & libraries
     linkLists:
+      - linkListType: concept
+        links:
+          - text: Q# language introduction
+            url: quantum/language.md
       - linkListType: reference
         links:
-          - text: ML.NET API reference  
-            url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
-          - text: ML.NET API reference (preview)
-            url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview
-          - text: ML.NET CLI reference
-            url: reference/ml-net-cli-reference.md
-          - text: AutoML API reference
-            url: https://docs.microsoft.com/dotnet/api/?view=automl-dotnet
+          - text: Standard libraries
+            url: libraries/standard.md
+          - text: Chemistry library
+            url: libraries/chemistry.md
+          - text: Numerics library
+            url: libraries/numerics.md
+      - linkListType: reference
+        links:
+          - text: Q# reference
+            url: https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.bitwise?view=qsharp-preview
+          - text: C# components
+            url: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators?view=quantum-dotnet-latest
+      

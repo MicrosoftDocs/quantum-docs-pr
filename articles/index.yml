@@ -35,8 +35,12 @@ landingContent:
             url: install-guide/jupyter.md
           - text: Python & the QDK
             url: install-guide/python.md
+      - linkListType: quickstart
+        links:
+          - text: Build a first quantum program
+            url: quantum/quickstart.md            
 
-   # Model Builder Card
+   # Concept
   - title: Learn about quantum computing 
     linkLists:
       - linkListType: concept
@@ -52,46 +56,37 @@ landingContent:
           - text: Software stack 
             url: concepts/software-stack.md                        
  
-  # API Card
-  - title: Get started with the API
+  # Development
+  - title: Quantum development techniques
     linkLists:
-      - linkListType: tutorial
-        links:
-          - text: Build a TensorFlow image classifier with transfer learning
-            url: tutorials/image-classification.md
-          - text: Analyze website comment sentiment
-            url: tutorials/sentiment-analysis.md
-          - text: Detect objects in images using ONNX
-            url: tutorials/object-detection-onnx.md
       - linkListType: how-to-guide
         links:
-          - text: Load data from various sources  
-            url: how-to-guides/load-data-ml-net.md
-          - text: Prepare data for building a model
-            url: how-to-guides/prepare-data-ml-net.md
-          - text: Train & evaluate a model
-            url: how-to-guides/train-machine-learning-model-ml-net.md
-          - text: Make predictions with a trained model
-            url: how-to-guides/machine-learning-model-predictions-ml-net.md
-          - text: Save & load a trained model
-            url: how-to-guides/save-load-machine-learning-models-ml-net.md                         
-  
+          - text: What is Q#?
+            url: techniques/file-structure.md
+          - text: Operations & functions
+            url: techniques/operations-and-functions.md
+          - text: Local variables
+            url: techniques/local-variables.md
+          - text: Working with qubits
+            url: techniques/working-with-qubits.md
+          - text: 'Put it together: Teleportation'
+            url: techniques/putting-it-all-together.md                      
 
-  - title:  Use the ML.NET CLI
+# Manage machines and drivers
+  - title:  Manage machines & drivers
     linkLists:
-      - linkListType: overview
+      - linkListType: how-to-guide
         links:
-          - text: Automate model training with the ML.NET CLI
-            url: automate-training-with-cli.md
-      - linkListType: quickstart
-        links:
-          - text: Install ML.NET CLI
-            url: how-to-guides/install-ml-net-cli.md
-      - linkListType: tutorial
-        links:
-          - text: Analyze sentiment - ML.NET CLI & AutoML
-            url: tutorials/mlnet-cli.md
-
+          - text: Classical drivers & machines
+            url: quantum/machines.md
+          - text: QDK full state simlulator
+            url: machines/full-state-simulator.md
+          - text: Resources estimator
+            url: machines/resources-estimator.md
+          - text: Quantum trace similator
+            url: machines/qc-trace-simulator.md
+          - text: QDK Toffoli simulator
+            url: machines/toffoli-simulator.md
   # Reference card
   - title: Q# language & libraries
     linkLists:

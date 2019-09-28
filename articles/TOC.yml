@@ -1,5 +1,7 @@
+- name: Microsoft Quantum
+  href: index.yml
 - name: Welcome
-  href: index.md
+  href: welcome.md
 - name: Getting Started
   topicHref: install-guide/index.md
   href: install-guide/toc.yml

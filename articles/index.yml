@@ -6,6 +6,7 @@ summary: Learn how to use the Microsoft Quantum SDK and Q#, a language for quant
 metadata:
   title: Microsoft Quantum Documentation - Q# API Reference
   description: Learn how to use the Microsoft Quantum SDK and Q#, a language for quantum algorithms. Follow step-by-step tutorials and learn the basics of quantum computing.
+  
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
@@ -40,7 +41,7 @@ landingContent:
           - text: Build a first quantum program
             url: quantum/quickstart.md            
 
-   # Concept
+  # Concept
   - title: Learn about quantum computing 
     linkLists:
       - linkListType: concept
@@ -72,7 +73,7 @@ landingContent:
           - text: 'Put it together: Teleportation'
             url: techniques/putting-it-all-together.md                      
 
-# Manage machines and drivers
+  # Manage machines and drivers
   - title:  Manage machines & drivers
     linkLists:
       - linkListType: how-to-guide
@@ -87,6 +88,7 @@ landingContent:
             url: machines/qc-trace-simulator.md
           - text: QDK Toffoli simulator
             url: machines/toffoli-simulator.md
+
   # Reference card
   - title: Q# language & libraries
     linkLists:

@@ -1,4 +1,4 @@
-- name: Microsoft Quantum
+- name: Microsoft Quantum Documentation
   href: index.yml
 - name: Welcome
   href: welcome.md

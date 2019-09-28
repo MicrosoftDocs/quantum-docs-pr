@@ -200,7 +200,7 @@
             "redirect_url": "language/file-structure",
             "redirect_document_id": true
         },
-        
+
         {
             "source_path": "articles/quantum-ForMoreInfo.md",
             "redirect_url": "for-more-info",

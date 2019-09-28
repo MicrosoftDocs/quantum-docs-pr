@@ -1,53 +1,225 @@
 ---
-title: Getting Started with the Microsoft Quantum Development Kit
-author: anpaz-msft
-ms.author: andres.paz@microsoft.com 
-ms.date: 3/26/2019
+title: Learn how to install the Microsoft Quantum Development Kit (QDK)
+author: natke
+ms.author: nakersha
+ms.date: 9/23/2019
 ms.topic: article
+ms.custom: how-to
 uid: microsoft.quantum.install
 ---
 
-# Getting Started with the Microsoft Quantum Development Kit #
+# Install the Microsoft Quantum Development Kit (QDK)
 
-## Choose the Environment That's Right for You ##
+Learn how to install the Microsoft Quantum Development Kit (QDK), so that you can get started with quantum programming. The QDK consists of:
 
-### Jupyter Notebooks ###
+- the Q# programming language
+- a set of libraries that abstract complex functionality in Q#
+- a host application (written in Python or a .NET language) that runs quantum operations written in Q#
+- tools to facilitate your development
 
- A great way to get started with Q# before installing the Quantum Development Kit is via some of the Jupyter notebooks available in our [GitHub Quantum repository](https://github.com/Microsoft/Quantum.git).  In particular:
+Depending on your chosen development environment, there are different installation steps. Choose your environment from the sections below.
 
-* **[Q# Notebooks](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IntroToIQSharp/Notebook.ipynb)** [(Run online)](https://mybinder.org/v2/gh/Microsoft/Quantum/master?filepath=Samples%2Fsrc%2FIntroToIQSharp%2FNotebook.ipynb): explains how to compile and simulate Q# operations inside a Jupyter notebook.
-* **[Teleport](https://github.com/Microsoft/Quantum/tree/master/Samples/src/Teleportation/Notebook.ipynb)** [(Run online)](https://mybinder.org/v2/gh/microsoft/Quantum/master?filepath=Samples%2Fsrc%2FTeleportation%2FNotebook.ipynb): shows how to implement the teleport algorithm using Q#.
+## Develop with Python
 
-To run these locally, take a look at our [Jupyter notebooks getting started guide](xref:microsoft.quantum.install.jupyter).
+1. Pre-requisites
 
-### Visual Studio ###
+    - [Python](https://www.python.org/downloads/) 3.6 or later
+    - The [PIP](https://pip.pypa.io/en/stable/installing) Python package manager
+    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
 
- If you are already a [Visual Studio](https://visualstudio.microsoft.com/vs/) user, you can install the extension to get started developing Q# in Visual Studio. 
-> [!div class="button"]
-> [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+1. Install the `iqsharp` package
 
-Then, check our [quickstart guide](xref:microsoft.quantum.write-program?tabs=tabid-vs2019) for step-by-step instructions for your first quantum program.
+    ```bash
+    dotnet tool install -g Microsoft.Quantum.IQSharp
+    dotnet iqsharp install
+    ```
 
-### Visual Studio Code ###
+1. Install the `qsharp` package
 
- If you are already a Visual Studio Code user, start by installing the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/) (2.2 or later) by following the instructions from the [.NET downloads page](https://www.microsoft.com/net/download). Then, you can install the extension to get started developing Q# in Visual Studio Code.
-> [!div class="button"]
-> [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+    ```bash
+    pip install qsharp
+    ```
 
-Then, check our [quickstart guide](xref:microsoft.quantum.write-program?tabs=tabid-vscode) for step-by-step instructions for your first quantum program.
+1. Verify the installation by creating a `Hello World` application
 
+    - Create a minimal Q# operation, by creating a file called `Operation.qs`, and adding the following code to it:
 
-### Python ###
+        ```qsharp
+        namespace HelloWorld
+        {
+            open Microsoft.Quantum.Intrinsic;
+            open Microsoft.Quantum.Canon;
 
-If you are a Python user, check out our [getting started with Python and the Quantum Development Kit guide](xref:microsoft.quantum.install.python).
+            operation SayHello() : Result {
+                Message("Hello from quantum world!");
+                return Zero;
+            }
+        }
+        ```
 
+    - Create a Python program called `hello_world.py` to call the Q# `SayHello()` operation:
 
-## Learn Quantum Computing with Q# ##
+        ```python
+        import qsharp
 
-* [Quantum Katas](https://github.com/Microsoft/QuantumKatas)
-* [Samples](https://github.com/Microsoft/Quantum)
-* [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro)
-* [Microsoft Quantum Blog](https://cloudblogs.microsoft.com/quantum/?ext)
-* [Q# Blog](https://devblogs.microsoft.com/qsharp/)
+        from HelloWorld import SayHello
 
+        SayHello.simulate()
+        ```
 
+    - Run the program:
+
+        ```bash
+        python hello_world.py
+        ```
+
+    - Verify the output. Your program should output the following lines:
+
+        ```bash
+        Hello from quantum world!
+       0
+       ```
+
+## Develop with Jupyter notebooks
+
+1. Pre-requisites
+
+    - [Python](https://www.python.org/downloads/) 3.6 or later
+    - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
+    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+
+1. Install the `iqsharp` package
+
+    ```bash
+    dotnet tool install -g Microsoft.Quantum.IQSharp
+    dotnet iqsharp install
+    ```
+
+1. Verify the installation by creating a `Hello World` application
+
+    - Run the following command to start the notebook server:
+
+        ```bash
+        jupyter notebook
+        ```
+
+    - Browse to the URL shown on the command line. For example: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
+
+    - Create a Jupyter notebook with a Q# kernel, and add the following code to the first notebook cell:
+
+        ```qsharp
+        operation SayHello () : Unit {
+            Message("Hello from quantum world!");
+        }
+        ```
+
+    - Run this cell of the notebook:
+
+        ![Jupyter notebook cell](~/media/install-guide-jupyter.png)
+
+        You should see `SayHello` in the output of the cell. When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
+
+## Develop with C# on Windows, using Visual Studio
+
+1. Pre-requisites
+
+    - [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, with the .NET Core cross-platform development workload enabled
+
+1. Install the Q# Visual Studio extension
+
+    - Download the [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+    - Add the extension to Visual Studio
+
+1. Verify the installation by creating a `Hello World` application
+
+    - Create a new Q# application
+
+        - Go to **File** -> **New** -> **Project**
+        - Type `Q#` in the search box
+        - Select **Q# Application**
+        - Select **Next**
+        - Choose a name and location for your application
+        - Select **Create**
+
+    - Inspect the project
+
+        You should see that two files have been created: `Driver.cs`, which is the C# host application; and `Operation.qs`, which is a Q# program that defines a simple operation to print a message to the console.
+
+    - Run the application
+
+        - Select **Debug** -> **Start Without Debugging**
+        - You should see the text `Hello quantum world!` printed to a console window.
+
+## Develop with C#, using VS Code
+
+1. Pre-requisites
+
+   - [VS Code](https://code.visualstudio.com/download)
+   - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+
+1. Install the Quantum VS Code extension
+
+    - Install the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+
+1. Install the Quantum project templates:
+
+   - Go to **View** -> **Command Palette**
+   - Select **Q#: Install project templates**
+
+    You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
+
+1. Verify the installation by creating a `Hello World` application
+
+    - Create a new project:
+
+        - Go to **View** -> **Command Palette**
+        - Select **Q#: Create New Project**
+        - Navigate to the location on the file system where you would like to create the application
+        - Click on the **Open new project...** button, once the project has been created
+
+    - Run the application:
+
+        - Go to **Debug** -> **Start Without Debugging**
+        - You should see the following text in the output window `Hello quantum world!`
+
+## Develop with C#, using the `dotnet` command-line tool
+
+1. Pre-requisites
+
+    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+
+1. Install the Quantum project templates for .NET
+
+    ```bash
+    dotnet new -i Microsoft.Quantum.ProjectTemplates
+    ```
+
+    You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
+
+1. Verify the installation by creating a `Hello World` application
+
+    - Create a new application
+
+       ```bash
+       dotnet new console -lang Q# -o runSayHello
+       ```
+
+    - Navigate to the new application directory
+
+       ```bash
+       cd runSayHello
+       ```
+
+    You should see that two files have been created, along with the project files of the application: a Q# file (`Operation.qs`) and a C# host file (`Driver.cs`).
+
+    - Run the application
+
+        ```bash
+        dotnet run
+        ```
+
+        You should see the following output: `Hello quantum world!`
+
+## What's next?
+
+Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.write-program).

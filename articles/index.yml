@@ -24,21 +24,21 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Welcome to the Microsoft Quantum QDK
+          - text: Welcome to the Microsoft Quantum Developer Kit
             url: welcome.md
       - linkListType: get-started
         links:
           - text: Install the QDK
             url: install-guide/index.md
-          - text: C# & the QDK
+          - text: C# with the QDK
             url: install-guide/csharp.md
-          - text: Jupyter notebooks & the QDK
+          - text: Jupyter notebooks with the QDK
             url: install-guide/jupyter.md
-          - text: Python & the QDK
+          - text: Python with the QDK
             url: install-guide/python.md
       - linkListType: quickstart
         links:
-          - text: Build a first quantum program
+          - text: Write a first quantum program
             url: quickstart.md            
 
   # Concept

@@ -1,3 +1,5 @@
+- name: What is quantum computing?
+  href: index.md
 - name: Vectors and matrices
   href: vectors-and-matrices.md
 - name: Advanced matrix concepts

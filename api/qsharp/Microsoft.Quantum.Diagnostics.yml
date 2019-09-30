@@ -10,6 +10,10 @@ functions:
   summary: Dumps the current target machine's status associated with the given qubits.
 - uid: microsoft.quantum.diagnostics.equalityfactb
   summary: Asserts that a classical Bool variable has the expected value.
+- uid: microsoft.quantum.diagnostics.equalityfactc
+  summary: Asserts that a complex number has the expected value.
+- uid: microsoft.quantum.diagnostics.equalityfactcp
+  summary: Asserts that a complex number has the expected value.
 - uid: microsoft.quantum.diagnostics.equalityfacti
   summary: Asserts that a classical Int variable has the expected value.
 - uid: microsoft.quantum.diagnostics.equalityfactl
@@ -23,9 +27,17 @@ functions:
     absolute tolerance.
 - uid: microsoft.quantum.diagnostics.fact
   summary: Declares that a classical condition is true.
-- uid: microsoft.quantum.diagnostics.nearequalityfact
+- uid: microsoft.quantum.diagnostics.nearequalityfactc
   summary: |-
-    Asserts that a classical floating point variable has the expected value up to a
+    Asserts that a classical complex number has the expected value up to a
+    small tolerance of 1e-10.
+- uid: microsoft.quantum.diagnostics.nearequalityfactcp
+  summary: |-
+    Asserts that a classical complex number has the expected value up to a
+    small tolerance of 1e-10.
+- uid: microsoft.quantum.diagnostics.nearequalityfactd
+  summary: |-
+    Asserts that a classical floating point value has the expected value up to a
     small tolerance of 1e-10.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero

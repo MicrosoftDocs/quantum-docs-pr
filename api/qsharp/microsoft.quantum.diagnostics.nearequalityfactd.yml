@@ -1,15 +1,15 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.diagnostics.nearequalityfact
-name: NearEqualityFact
+uid: microsoft.quantum.diagnostics.nearequalityfactd
+name: NearEqualityFactD
 type: function
 namespace: Microsoft.Quantum.Diagnostics
 summary: |-
-  Asserts that a classical floating point variable has the expected value up to a
+  Asserts that a classical floating point value has the expected value up to a
   small tolerance of 1e-10.
 remarks: |-
   This is equivalent to <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact> with
   hardcoded tolerance of $10^{-10}$.
-syntax: 'function NearEqualityFact (actual : Double, expected : Double) : Unit'
+syntax: 'function NearEqualityFactD (actual : Double, expected : Double) : Unit'
 input:
   content: '(actual : Double, expected : Double)'
   types:

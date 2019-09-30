@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.nearequalityfact
+name: NearEqualityFact
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: |-
+  > [!WARNING]
+  > Deprecated
+
+  Please use @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" instead.
+syntax: 'function NearEqualityFact (actual : Double, expected : Double) : Unit'
+input:
+  content: '(actual : Double, expected : Double)'
+  types:
+  - name: actual
+    isPrimitive: true
+    uid: Double
+  - name: expected
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+...

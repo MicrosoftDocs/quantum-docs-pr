@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.negationi
+name: NegationI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Returns the unary negation of an input.
+syntax: 'function NegationI (input : Int) : Int'
+input:
+  content: '(input : Int)'
+  types:
+  - name: input
+    summary: A value whose negation is to be returned.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: The unary negation of `input`.
+    isPrimitive: true
+    uid: Int
+...

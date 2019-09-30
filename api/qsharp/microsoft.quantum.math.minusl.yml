@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.minusl
+name: MinusL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Returns the difference between two inputs.
+syntax: 'function MinusL (a : BigInt, b : BigInt) : BigInt'
+input:
+  content: '(a : BigInt, b : BigInt)'
+  types:
+  - name: a
+    summary: The first input $a$ to be subtracted.
+    isPrimitive: true
+    uid: BigInt
+  - name: b
+    summary: The second input $b$ to be subtracted.
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - summary: The difference $a - b$.
+    isPrimitive: true
+    uid: BigInt
+...

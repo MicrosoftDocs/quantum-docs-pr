@@ -1,15 +1,14 @@
 - name: Welcome
   href: index.md
-- name: Getting Started
-  topicHref: install-guide/index.md
-  href: install-guide/toc.yml
 - name: Quantum computing concepts
-  topicHref: concepts/index.md
   href: concepts/toc.yml
-- name: Quickstart - your first quantum program
-  href: quickstart.md
+- name: Quickstarts
+  items:
+  - name: Install the QDK
+    href: install-guide/index.md
+  - name: Write your first Quantum program
+    href: quickstart.md
 - name: Managing quantum machines and drivers
-  topicHref: machines/index.md
   href: machines/toc.yml
 - name: Quantum development techniques
   topicHref: techniques/index.md

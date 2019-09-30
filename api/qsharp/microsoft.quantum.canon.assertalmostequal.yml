@@ -7,7 +7,7 @@ summary: |-
   > [!WARNING]
   > Deprecated
 
-  Please use @"Microsoft.Quantum.Diagnostics.NearEqualityFact" instead.
+  Please use @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" instead.
 syntax: 'function AssertAlmostEqual (actual : Double, expected : Double) : Unit'
 input:
   content: '(actual : Double, expected : Double)'

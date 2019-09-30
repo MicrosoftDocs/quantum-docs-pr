@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.minusc
+name: MinusC
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Returns the difference between two inputs.
+syntax: 'function MinusC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
+input:
+  content: '(a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex)'
+  types:
+  - name: a
+    summary: The first input $a$ to be subtracted.
+    uid: microsoft.quantum.math.complex
+  - name: b
+    summary: The second input $b$ to be subtracted.
+    uid: microsoft.quantum.math.complex
+output:
+  content: Microsoft.Quantum.Math.Complex
+  types:
+  - summary: The difference $a - b$.
+    uid: microsoft.quantum.math.complex
+...

@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.lessthand
+name: LessThanD
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Returns true if and only if a number is less than another number.
+remarks: |-
+  The following are equivalent:
+
+  ```Q#
+  let cond = a < b;
+  let cond = LessThanD(a, b);
+  ```
+syntax: 'function LessThanD (a : Double, b : Double) : Bool'
+input:
+  content: '(a : Double, b : Double)'
+  types:
+  - name: a
+    summary: The first value to be compared.
+    isPrimitive: true
+    uid: Double
+  - name: b
+    summary: The second value to be compared.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Bool
+  types:
+  - summary: '`true` if and only if `a` is strictly less than `b`.'
+    isPrimitive: true
+    uid: Bool
+...

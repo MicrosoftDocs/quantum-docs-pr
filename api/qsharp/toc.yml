@@ -15,6 +15,14 @@
     uid: microsoft.quantum.bitwise.xor
   - name: ZBits
     uid: microsoft.quantum.bitwise.zbits
+  - name: LeftShiftedI
+    uid: microsoft.quantum.bitwise.leftshiftedi
+  - name: LeftShiftedL
+    uid: microsoft.quantum.bitwise.leftshiftedl
+  - name: RightShiftedI
+    uid: microsoft.quantum.bitwise.rightshiftedi
+  - name: RightShiftedL
+    uid: microsoft.quantum.bitwise.rightshiftedl
 - uid: microsoft.quantum.convert
   name: Microsoft.Quantum.Convert
   items:
@@ -102,6 +110,10 @@
     uid: microsoft.quantum.diagnostics.allequalityfactb
   - name: EqualityFactB
     uid: microsoft.quantum.diagnostics.equalityfactb
+  - name: EqualityFactC
+    uid: microsoft.quantum.diagnostics.equalityfactc
+  - name: EqualityFactCP
+    uid: microsoft.quantum.diagnostics.equalityfactcp
   - name: EqualityFactI
     uid: microsoft.quantum.diagnostics.equalityfacti
   - name: EqualityFactL
@@ -112,8 +124,12 @@
     uid: microsoft.quantum.diagnostics.equalitywithintolerancefact
   - name: Fact
     uid: microsoft.quantum.diagnostics.fact
-  - name: NearEqualityFact
-    uid: microsoft.quantum.diagnostics.nearequalityfact
+  - name: NearEqualityFactC
+    uid: microsoft.quantum.diagnostics.nearequalityfactc
+  - name: NearEqualityFactCP
+    uid: microsoft.quantum.diagnostics.nearequalityfactcp
+  - name: NearEqualityFactD
+    uid: microsoft.quantum.diagnostics.nearequalityfactd
 - uid: microsoft.quantum.environment
   name: Microsoft.Quantum.Environment
   items:
@@ -420,8 +436,12 @@
     uid: microsoft.quantum.math.bitsizei
   - name: BitSizeL
     uid: microsoft.quantum.math.bitsizel
+  - name: ComplexAsComplexPolar
+    uid: microsoft.quantum.math.complexascomplexpolar
   - name: ComplexPolar
     uid: microsoft.quantum.math.complexpolar
+  - name: ComplexPolarAsComplex
+    uid: microsoft.quantum.math.complexpolarascomplex
   - name: ComplexPolarToComplex
     uid: microsoft.quantum.math.complexpolartocomplex
   - name: ComplexToComplexPolar
@@ -430,6 +450,16 @@
     uid: microsoft.quantum.math.continuedfractionconvergenti
   - name: ContinuedFractionConvergentL
     uid: microsoft.quantum.math.continuedfractionconvergentl
+  - name: DividedByC
+    uid: microsoft.quantum.math.dividedbyc
+  - name: DividedByCP
+    uid: microsoft.quantum.math.dividedbycp
+  - name: DividedByD
+    uid: microsoft.quantum.math.dividedbyd
+  - name: DividedByI
+    uid: microsoft.quantum.math.dividedbyi
+  - name: DividedByL
+    uid: microsoft.quantum.math.dividedbyl
   - name: ExpModI
     uid: microsoft.quantum.math.expmodi
   - name: ExpModL
@@ -460,14 +490,58 @@
     uid: microsoft.quantum.math.max
   - name: Min
     uid: microsoft.quantum.math.min
+  - name: MinusC
+    uid: microsoft.quantum.math.minusc
+  - name: MinusCP
+    uid: microsoft.quantum.math.minuscp
+  - name: MinusD
+    uid: microsoft.quantum.math.minusd
+  - name: MinusI
+    uid: microsoft.quantum.math.minusi
+  - name: MinusL
+    uid: microsoft.quantum.math.minusl
+  - name: ModI
+    uid: microsoft.quantum.math.modi
+  - name: ModL
+    uid: microsoft.quantum.math.modl
   - name: ModulusI
     uid: microsoft.quantum.math.modulusi
   - name: ModulusL
     uid: microsoft.quantum.math.modulusl
+  - name: NegationC
+    uid: microsoft.quantum.math.negationc
+  - name: NegationCP
+    uid: microsoft.quantum.math.negationcp
+  - name: NegationD
+    uid: microsoft.quantum.math.negationd
+  - name: NegationI
+    uid: microsoft.quantum.math.negationi
+  - name: NegationL
+    uid: microsoft.quantum.math.negationl
+  - name: PlusA
+    uid: microsoft.quantum.math.plusa
+  - name: PlusC
+    uid: microsoft.quantum.math.plusc
+  - name: PlusCP
+    uid: microsoft.quantum.math.pluscp
+  - name: PlusD
+    uid: microsoft.quantum.math.plusd
+  - name: PlusI
+    uid: microsoft.quantum.math.plusi
+  - name: PlusL
+    uid: microsoft.quantum.math.plusl
   - name: PNorm
     uid: microsoft.quantum.math.pnorm
   - name: PNormalized
     uid: microsoft.quantum.math.pnormalized
+  - name: PowC
+    uid: microsoft.quantum.math.powc
+  - name: PowCP
+    uid: microsoft.quantum.math.powcp
+  - name: PowI
+    uid: microsoft.quantum.math.powi
+  - name: PowL
+    uid: microsoft.quantum.math.powl
   - name: RandomInt
     uid: microsoft.quantum.math.randomint
   - name: RandomIntPow2
@@ -478,6 +552,16 @@
     uid: microsoft.quantum.math.randomsinglequbitpauli
   - name: RealMod
     uid: microsoft.quantum.math.realmod
+  - name: TimesC
+    uid: microsoft.quantum.math.timesc
+  - name: TimesCP
+    uid: microsoft.quantum.math.timescp
+  - name: TimesD
+    uid: microsoft.quantum.math.timesd
+  - name: TimesI
+    uid: microsoft.quantum.math.timesi
+  - name: TimesL
+    uid: microsoft.quantum.math.timesl
 - uid: microsoft.quantum.primitive
   name: Microsoft.Quantum.Primitive
   items:
@@ -1131,6 +1215,8 @@
     uid: microsoft.quantum.canon.multiplexpauli
   - name: MultiplexZ
     uid: microsoft.quantum.canon.multiplexz
+  - name: NearEqualityFact
+    uid: microsoft.quantum.canon.nearequalityfact
   - name: NoOp
     uid: microsoft.quantum.canon.noop
   - name: OperationPow
@@ -1333,6 +1419,71 @@
     uid: microsoft.quantum.errorcorrection.syndromemeasop
   - name: TableLookupRecovery
     uid: microsoft.quantum.errorcorrection.tablelookuprecovery
+- uid: microsoft.quantum.logical
+  name: Microsoft.Quantum.Logical
+  items:
+  - name: And
+    uid: microsoft.quantum.logical.and
+  - name: Conditioned
+    uid: microsoft.quantum.logical.conditioned
+  - name: EqualB
+    uid: microsoft.quantum.logical.equalb
+  - name: EqualC
+    uid: microsoft.quantum.logical.equalc
+  - name: EqualCP
+    uid: microsoft.quantum.logical.equalcp
+  - name: EqualD
+    uid: microsoft.quantum.logical.equald
+  - name: EqualI
+    uid: microsoft.quantum.logical.equali
+  - name: EqualL
+    uid: microsoft.quantum.logical.equall
+  - name: EqualR
+    uid: microsoft.quantum.logical.equalr
+  - name: GreaterThanD
+    uid: microsoft.quantum.logical.greaterthand
+  - name: GreaterThanI
+    uid: microsoft.quantum.logical.greaterthani
+  - name: GreaterThanL
+    uid: microsoft.quantum.logical.greaterthanl
+  - name: GreaterThanOrEqualD
+    uid: microsoft.quantum.logical.greaterthanorequald
+  - name: GreaterThanOrEqualI
+    uid: microsoft.quantum.logical.greaterthanorequali
+  - name: GreaterThanOrEqualL
+    uid: microsoft.quantum.logical.greaterthanorequall
+  - name: LessThanD
+    uid: microsoft.quantum.logical.lessthand
+  - name: LessThanI
+    uid: microsoft.quantum.logical.lessthani
+  - name: LessThanL
+    uid: microsoft.quantum.logical.lessthanl
+  - name: LessThanOrEqualD
+    uid: microsoft.quantum.logical.lessthanorequald
+  - name: LessThanOrEqualI
+    uid: microsoft.quantum.logical.lessthanorequali
+  - name: LessThanOrEqualL
+    uid: microsoft.quantum.logical.lessthanorequall
+  - name: Not
+    uid: microsoft.quantum.logical.not
+  - name: NotEqualB
+    uid: microsoft.quantum.logical.notequalb
+  - name: NotEqualC
+    uid: microsoft.quantum.logical.notequalc
+  - name: NotEqualCP
+    uid: microsoft.quantum.logical.notequalcp
+  - name: NotEqualD
+    uid: microsoft.quantum.logical.notequald
+  - name: NotEqualI
+    uid: microsoft.quantum.logical.notequali
+  - name: NotEqualL
+    uid: microsoft.quantum.logical.notequall
+  - name: NotEqualR
+    uid: microsoft.quantum.logical.notequalr
+  - name: Or
+    uid: microsoft.quantum.logical.or
+  - name: Xor
+    uid: microsoft.quantum.logical.xor
 - uid: microsoft.quantum.measurement
   name: Microsoft.Quantum.Measurement
   items:

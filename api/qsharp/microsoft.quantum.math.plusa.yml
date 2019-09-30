@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.plusa
+name: PlusA
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Returns the sum (concatenation) of two inputs.
+syntax: "function PlusA (a : 'Element[], b : 'Element[]) : 'Element[]"
+input:
+  content: "(a : 'Element[], b : 'Element[])"
+  types:
+  - name: a
+    summary: The first input $a$ to be summed.
+    isArray: true
+    uid: "'Element"
+    isLocal: true
+  - name: b
+    summary: The second input $b$ to be summed.
+    isArray: true
+    uid: "'Element"
+    isLocal: true
+output:
+  content: "'Element[]"
+  types:
+  - summary: The sum $a + b$.
+    isArray: true
+    uid: "'Element"
+    isLocal: true
+typeParameters:
+- uid: "'Element"
+  summary: The type of each element in each of the two input arrays.
+...

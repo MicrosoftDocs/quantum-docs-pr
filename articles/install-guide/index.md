@@ -2,7 +2,7 @@
 title: Learn how to install the Microsoft Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha
-ms.date: 9//2019
+ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
@@ -186,7 +186,7 @@ Depending on your chosen development environment, there are different installati
         - You should see the following text in the output window `Hello quantum world!`
 
 > [!NOTE]
-> * A Quantum VS Code workspace can only have a single root folder.
+> * > * Workspaces with multiple root folders are not currently supported by the Visual Studio Code extension. If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.
 
 ## Develop with C#, using the `dotnet` command-line tool
 

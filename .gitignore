@@ -11,3 +11,4 @@ tex2pdf.*/
 
 *.orig
 .vs/
+.DS_Store

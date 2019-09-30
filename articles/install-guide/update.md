@@ -104,7 +104,7 @@ The update steps depend on your development environment. Choose your environment
 
 1. You can now run your application with the latest QDK
 
-## Develop with C#, using VS Code
+## C#, using VS Code
 
 1. Update the Quantum VS Code extension
 
@@ -131,7 +131,7 @@ The update steps depend on your development environment. Choose your environment
 
 1. You can now run your application with the updated QDK
 
-## Develop with C#, using the `dotnet` command-line tool
+## C#, using the `dotnet` command-line tool
 
 1. Update the Quantum project templates for .NET
 

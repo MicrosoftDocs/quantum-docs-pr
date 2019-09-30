@@ -60,14 +60,18 @@ functions:
     that $a < 2^n$.
 - uid: microsoft.quantum.math.ceiling
   summary: Returns the smallest integer greater than or equal to the specified number.
-- uid: microsoft.quantum.math.complexpolartocomplex
-  summary: |-
-    Converts a complex number of type `ComplexPolar` to a complex
-    number of type `Complex`.
-- uid: microsoft.quantum.math.complextocomplexpolar
+- uid: microsoft.quantum.math.complexascomplexpolar
   summary: |-
     Converts a complex number of type `Complex` to a complex
     number of type `ComplexPolar`.
+- uid: microsoft.quantum.math.complexpolarascomplex
+  summary: |-
+    Converts a complex number of type `ComplexPolar` to a complex
+    number of type `Complex`.
+- uid: microsoft.quantum.math.complexpolartocomplex
+  summary: ''
+- uid: microsoft.quantum.math.complextocomplexpolar
+  summary: ''
 - uid: microsoft.quantum.math.continuedfractionconvergenti
   summary: |-
     Finds the continued fraction convergent closest to `fraction`
@@ -80,6 +84,16 @@ functions:
   summary: Returns the cosine of the specified angle.
 - uid: microsoft.quantum.math.cosh
   summary: Returns the hyperbolic cosine of the specified angle.
+- uid: microsoft.quantum.math.dividedbyc
+  summary: Returns the quotient of two inputs.
+- uid: microsoft.quantum.math.dividedbycp
+  summary: Returns the quotient of two inputs.
+- uid: microsoft.quantum.math.dividedbyd
+  summary: Returns the quotient of two inputs.
+- uid: microsoft.quantum.math.dividedbyi
+  summary: Returns the quotient of two inputs.
+- uid: microsoft.quantum.math.dividedbyl
+  summary: Returns the quotient of two inputs.
 - uid: microsoft.quantum.math.divreml
   summary: Divides one BigInteger value by another, returns the result and the remainder as a tuple.
 - uid: microsoft.quantum.math.e
@@ -144,14 +158,50 @@ functions:
   summary: Returns the smaller of two specified numbers.
 - uid: microsoft.quantum.math.minl
   summary: Returns the smaller of two specified numbers.
+- uid: microsoft.quantum.math.minusc
+  summary: Returns the difference between two inputs.
+- uid: microsoft.quantum.math.minuscp
+  summary: Returns the difference between two inputs.
+- uid: microsoft.quantum.math.minusd
+  summary: Returns the difference between two inputs.
+- uid: microsoft.quantum.math.minusi
+  summary: Returns the difference between two inputs.
+- uid: microsoft.quantum.math.minusl
+  summary: Returns the difference between two inputs.
+- uid: microsoft.quantum.math.modi
+  summary: Returns the modulus of a number with respect to another number.
+- uid: microsoft.quantum.math.modl
+  summary: Returns the modulus of a number with respect to another number.
 - uid: microsoft.quantum.math.modpowl
   summary: Performs modular division on a number raised to the power of another number.
 - uid: microsoft.quantum.math.modulusi
   summary: Computes the canonical residue of `value` modulo `modulus`.
 - uid: microsoft.quantum.math.modulusl
   summary: Computes the canonical residue of `value` modulo `modulus`.
+- uid: microsoft.quantum.math.negationc
+  summary: Returns the unary negation of an input.
+- uid: microsoft.quantum.math.negationcp
+  summary: Returns the unary negation of an input.
+- uid: microsoft.quantum.math.negationd
+  summary: Returns the unary negation of an input.
+- uid: microsoft.quantum.math.negationi
+  summary: Returns the unary negation of an input.
+- uid: microsoft.quantum.math.negationl
+  summary: Returns the unary negation of an input.
 - uid: microsoft.quantum.math.pi
   summary: Represents the ratio of the circumference of a circle to its diameter, specified by the constant, π.
+- uid: microsoft.quantum.math.plusa
+  summary: Returns the sum (concatenation) of two inputs.
+- uid: microsoft.quantum.math.plusc
+  summary: Returns the sum of two inputs.
+- uid: microsoft.quantum.math.pluscp
+  summary: Returns the sum of two inputs.
+- uid: microsoft.quantum.math.plusd
+  summary: Returns the sum of two inputs.
+- uid: microsoft.quantum.math.plusi
+  summary: Returns the sum of two inputs.
+- uid: microsoft.quantum.math.plusl
+  summary: Returns the sum of two inputs.
 - uid: microsoft.quantum.math.pnorm
   summary: |-
     Returns the `L(p)` norm of a vector of `Double`s.
@@ -164,8 +214,16 @@ functions:
 
     That is, given an array $x$ of type `Double[]`, this returns an array where
     all elements are divided by the $p$-norm $\|x\|_p$.
+- uid: microsoft.quantum.math.powc
+  summary: Returns a number raised to a given power.
+- uid: microsoft.quantum.math.powcp
+  summary: Returns a number raised to a given power.
 - uid: microsoft.quantum.math.powd
   summary: Returns the number x raised to the power y.
+- uid: microsoft.quantum.math.powi
+  summary: Returns a number raised to a given power.
+- uid: microsoft.quantum.math.powl
+  summary: Returns a number raised to a given power.
 - uid: microsoft.quantum.math.realmod
   summary: Computes the modulus between two real numbers.
 - uid: microsoft.quantum.math.round
@@ -186,6 +244,16 @@ functions:
   summary: Returns the tangent of the specified angle.
 - uid: microsoft.quantum.math.tanh
   summary: Returns the hyperbolic tangent of the specified angle.
+- uid: microsoft.quantum.math.timesc
+  summary: Returns the product of two inputs.
+- uid: microsoft.quantum.math.timescp
+  summary: Returns the product of two inputs.
+- uid: microsoft.quantum.math.timesd
+  summary: Returns the product of two inputs.
+- uid: microsoft.quantum.math.timesi
+  summary: Returns the product of two inputs.
+- uid: microsoft.quantum.math.timesl
+  summary: Returns the product of two inputs.
 - uid: microsoft.quantum.math.truncate
   summary: Calculates the integral part of a number.
 newtypes:

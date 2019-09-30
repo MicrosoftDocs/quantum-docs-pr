@@ -1,4 +1,5 @@
 ---
+uid: microsoft.quantum.welcome
 title: Welcome to the Microsoft Quantum Development Kit
 description: Welcome to the Microsoft Quantum Development Kit preview. The development kit contains the tools you'll need to build your own quantum computing programs and experiments.
 author: natke

@@ -34,7 +34,7 @@ The update steps depend on your development environment. Choose your environment
     You should see the following output:
 
     ```bash
-    iqsharp: 0.9.1908.2906
+    iqsharp: 0.9.1909.3002
     Jupyter Core: 1.1.14623.0
     ```
 
@@ -54,7 +54,7 @@ The update steps depend on your development environment. Choose your environment
 
     ```bash
     Name: qsharp
-    Version: 0.9.1908.2906
+    Version: 0.9.1909.3002
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -79,7 +79,7 @@ The update steps depend on your development environment. Choose your environment
     You should see the following output:
 
     ```bash
-    iqsharp: 0.9.1908.2906
+    iqsharp: 0.9.1909.3002
     Jupyter Core: 1.1.14623.0
     ```
 
@@ -89,25 +89,34 @@ The update steps depend on your development environment. Choose your environment
 
 1. Update the Q# Visual Studio extension
 
-    - Download the [Quantum Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
-    - Add the extension to Visual Studio
+    - Visual Studio prompts you to accept updates to the [Quantum Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+    - Accept the update
 
-1. Open an existing Q# project in Visual Studio
+    > [!NOTE]
+    > The project templates are updated with the extension. The updated templates apply to newly created projects only. The code for your existing projects is not updated when the extension is updated.
 
-    - TODO
+1. Update the QDK packages
+
+    - Open an existing application
+    - Select **Dependencies** in the Solution Explorer
+    - Select **Manage NuGet Packages**
+    - Update the **Microsoft.Quantum** packages to the latest version
+
+1. You can now run your application with the latest QDK
 
 ## Develop with C#, using VS Code
 
 1. Update the Quantum VS Code extension
 
-    - Update the [Quantum VS Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+    - Restart VS Code
+    - Navigate to the **Extensions** tab
+    - Select the **Microsoft Quantum Development Kit for Visual Studio Code** extension
+    - Reload the extension
 
 1. Update the Quantum project templates:
 
    - Go to **View** -> **Command Palette**
    - Select **Q#: Install project templates**
-
-    You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
 
 1. Open an existing application in VS Code
 
@@ -115,12 +124,12 @@ The update steps depend on your development environment. Choose your environment
 
     ```xml
     <ItemGroup>
-        <PackageReference Include="Microsoft.Quantum.Standard" Version="0.9.1908.2906" />
-        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.9.1908.2906" />
+        <PackageReference Include="Microsoft.Quantum.Standard" Version="0.9.1909.3002" />
+        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.9.1909.3002" />
     </ItemGroup>
     ```
 
-   - Run the application
+1. You can now run your application with the updated QDK
 
 ## Develop with C#, using the `dotnet` command-line tool
 
@@ -147,7 +156,7 @@ The update steps depend on your development environment. Choose your environment
         dotnet run
         ```
 
-    - Your application should run with the new package versions
+    - Your application will run with the new package versions
 
 ## What's next?
 

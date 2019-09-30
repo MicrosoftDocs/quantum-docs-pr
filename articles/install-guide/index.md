@@ -2,7 +2,7 @@
 title: Learn how to install the Microsoft Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha
-ms.date: 9/23/2019
+ms.date: 9//2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
@@ -150,6 +150,9 @@ Depending on your chosen development environment, there are different installati
         - Select **Debug** -> **Start Without Debugging**
         - You should see the text `Hello quantum world!` printed to a console window.
 
+> [!NOTE]
+> * If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its subfolders.  
+
 ## Develop with C#, using VS Code
 
 1. Pre-requisites
@@ -181,6 +184,9 @@ Depending on your chosen development environment, there are different installati
 
         - Go to **Debug** -> **Start Without Debugging**
         - You should see the following text in the output window `Hello quantum world!`
+
+> [!NOTE]
+> * If you have multiple projects within one VS Code workspace, all projects contained in the workspace need to be in the same folder as the solution, or in one of its subfolders.
 
 ## Develop with C#, using the `dotnet` command-line tool
 

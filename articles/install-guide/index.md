@@ -186,7 +186,7 @@ Depending on your chosen development environment, there are different installati
         - You should see the following text in the output window `Hello quantum world!`
 
 > [!NOTE]
-> * If you have multiple projects within one VS Code workspace, all projects contained in the workspace need to be in the same folder as the solution, or in one of its subfolders.
+> * A Quantum VS Code workspace can only have a single root folder.
 
 ## Develop with C#, using the `dotnet` command-line tool
 

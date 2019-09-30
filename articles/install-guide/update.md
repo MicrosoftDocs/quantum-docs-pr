@@ -12,7 +12,7 @@ uid: microsoft.quantum.update
 
 Learn how to update the Microsoft Quantum Development Kit (QDK) to the latest version.
 
-This article assumes that you already have the QDK installed. If you are installing for the first time, then please refer to the [installation guide](xref:microsoft.quantum.install)
+This article assumes that you already have the QDK installed. If you are installing for the first time, then please refer to the [installation guide](xref:microsoft.quantum.install).
 
 The update steps depend on your development environment. Choose your environment from the following sections.
 
@@ -50,7 +50,7 @@ The update steps depend on your development environment. Choose your environment
     pip show qsharp
     ```
 
-    You see the following output:
+    You should see the following output:
 
     ```bash
     Name: qsharp
@@ -102,7 +102,7 @@ The update steps depend on your development environment. Choose your environment
     - Select **Manage NuGet Packages**
     - Update the **Microsoft.Quantum** packages to the latest version
 
-1. You can now run your application with the latest QDK
+1. You can now run your application with the latest QDK.
 
 ## C#, using VS Code
 
@@ -129,6 +129,8 @@ The update steps depend on your development environment. Choose your environment
     </ItemGroup>
     ```
 
+    If you use other `Microsoft.Quantum` packages, update these too.
+
 1. You can now run your application with the updated QDK
 
 ## C#, using the `dotnet` command-line tool
@@ -139,8 +141,6 @@ The update steps depend on your development environment. Choose your environment
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
-    You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
-
 1. Update and run an existing application
 
     - Update the QDK package versions in your application
@@ -149,6 +149,8 @@ The update steps depend on your development environment. Choose your environment
         dotnet add package Microsoft.Quantum.Development.Kit
         dotnet add package Microsoft.Quantum.Standard
         ```
+
+        If your application uses any other `Microsoft.Quantum` packages, update these too.
 
     - Run the application
 

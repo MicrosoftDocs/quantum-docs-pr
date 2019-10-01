@@ -1,7 +1,7 @@
 ---
 title: Quantum Signal Processing | Microsoft Docs 
 description: Concept of quantum signal processing
-author: Jeongwan Haah
+author: jwhaah
 uid: microsoft.quantum.libraries.quantumsignalprocessing.index
 ms.author: jwhaah@microsoft.com 
 ms.date: 9/20/2019

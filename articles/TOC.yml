@@ -1,5 +1,7 @@
+- name: Microsoft Quantum Documentation
+  href: index.yml
 - name: Welcome
-  href: index.md
+  href: welcome.md
 - name: Quantum computing concepts
   href: concepts/toc.yml
 - name: Quickstarts

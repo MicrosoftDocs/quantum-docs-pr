@@ -31,7 +31,7 @@ $$
 where each $\lambda_k$ is a complex number of modulus one.
 An important feature of the transformation $W \mapsto f(W)$ is that it does not change the eigenvectors of $W$:
 $$
-f(W) = \sum_k f(\lambda_k) \ket{\psi_k}\bra{psi_k}.
+f(W) = \sum_k f(\lambda_k) \ket{\psi_k}\bra{\psi_k}.
 $$
 So, conceptually we aim to express and implement the scalar function $f$ on the eigenvalues.
 Note that the eigenvalues of a unitary is on the unit circle in the complex plane,

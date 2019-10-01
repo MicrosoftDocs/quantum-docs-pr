@@ -7,3 +7,5 @@
 - name: Quantum numerics library
   topicHref: numerics/index.md
   href: numerics/toc.yml
+- name: Quantum signal processing
+  topicHref: quantumsignalprocessing/index.md

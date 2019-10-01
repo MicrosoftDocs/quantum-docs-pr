@@ -30,12 +30,8 @@ landingContent:
         links:
           - text: Install the QDK
             url: install-guide/index.md
-          - text: C# with the QDK
-            url: install-guide/csharp.md
-          - text: Jupyter notebooks with the QDK
-            url: install-guide/jupyter.md
-          - text: Python with the QDK
-            url: install-guide/python.md
+          - text: Update the QDK
+            url: install-guide/update.md            
       - linkListType: quickstart
         links:
           - text: Write a first quantum program
@@ -96,6 +92,8 @@ landingContent:
         links:
           - text: Q# language introduction
             url: language/index.md
+          - text: Release notes
+            url: relnotes/index.md                 
       - linkListType: reference
         links:
           - text: Standard libraries
@@ -105,7 +103,7 @@ landingContent:
           - text: Numerics library
             url: libraries/numerics/index.md
       - linkListType: reference
-        links:
+        links:   
           - text: Q# reference
             url: https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.bitwise?view=qsharp-preview
           - text: C# components

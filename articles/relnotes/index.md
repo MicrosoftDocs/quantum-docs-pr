@@ -137,37 +137,29 @@ We added a [sample of using Q# with F# driver](https://github.com/Microsoft/Quan
 
 ### Migrating existing projects to 0.6.1905.
 
+See the [install guide](xref:microsoft.quantum.install) to update the QDK.
   
-1.  To update IQ# to the latest version, from the command line, execute:
-```Command Prompt
-dotnet tool update -g Microsoft.Quantum.IQSharp
-```  
-2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
-3.  Follow these instructions to update your .csproj file: 
-
 If you have existing Q# projects from version 0.5 of the Quantum Development Kit, the following are the steps to migrate those projects to the newest version.
 
-      1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
-      2. From a command line, Run `dotnet clean` to remove all existing binaries and intermediate files.
-      3. In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
-```xml
-    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
-    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
-```
-      4. From the command line, run this command: `dotnet msbuild`  
-      5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
-            - Open the root folder of the project or the containing solution in Visual Studio 2019 or Visual Studio Code.
-            - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
-            - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
+    1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
+    2. From a command line, Run `dotnet clean` to remove all existing binaries and intermediate files.
+    3. In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
 
+         ```xml
+        <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
+        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
+        ```
+    4. From the command line, run this command: `dotnet msbuild`  
+    5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
+        - Open the root folder of the project or the containing solution in Visual Studio 2019 or Visual Studio Code.
+        - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
+        - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
 
 > [!NOTE]
 > * For the 0.6 release, the language server included with the Quantum Development Kit does not support multiple workspaces.
 > * In order to work with a project in Visual Studio Code, open the root folder containing the project itself and all referenced projects.   
 > * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
 > * References between projects migrated to 0.6 and higher and projects using older package versions are **not** supported.
-
-
 
 ## Version 0.5.1904
 
@@ -182,7 +174,7 @@ This release contains bug fixes.
 
 This release contains the following:
 
-- Adds support for Jupyter Notebook, which offers a great way to learn about Q#.  [Check out new Jupyter Notebook samples and learn how to write your own Notebooks](xref:microsoft.quantum.install.jupyter). 
+- Adds support for Jupyter Notebook, which offers a great way to learn about Q#.  [Check out new Jupyter Notebook samples and learn how to write your own Notebooks](xref:microsoft.quantum.install). 
 
 - Adds integer adder arithmetic to the Quantum Canon library.  See also a Jupyter Notebook that [describes how to use the new integer adders](https://github.com/Microsoft/Quantum/blob/master/Samples/src/Arithmetic/Adder%20Example.ipynb).
 
@@ -199,13 +191,11 @@ This release contains the following:
 
 This release contains the following:
 
-- Adds support for a cross-platform Python host.  The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python. Learn more about [Python interoperability](xref:microsoft.quantum.install.python). 
+- Adds support for a cross-platform Python host.  The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python. Learn more about [Python interoperability](xref:microsoft.quantum.install). 
 
 - The Visual Studio and Visual Studio Code extensions now support renaming of symbols (e.g., functions and operations).
 
 - The Visual Studio extension can now be installed on Visual Studio 2019.
-
-
 
 ## Version 0.4.1901
 

@@ -109,7 +109,7 @@ For example, an operation named `Op` in the `X.Y` namespace must be
 referenced by its fully-qualified name `X.Y.Op`, unless the `X.Y`
 namespace has been opened earlier in the current block. 
 As mentioned above, even if the `X` namespace has been opened, it is not possible to reference the operation as `Y.Op`.
-If a short name `Z` for `X.Y` has been defined in that namespace and file, then `Op` needs to be referred to as `Y.Op`. 
+If a short name `Z` for `X.Y` has been defined in that namespace and file, then `Op` needs to be referred to as `Z.Op`. 
 
 ```qsharp
 namespace NS {

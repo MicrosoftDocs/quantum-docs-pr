@@ -10,7 +10,7 @@
     href: install-guide/index.md
   - name: Update the QDK
     href: install-guide/update.md  
-  - name: Write your first Quantum program
+  - name: Write your first quantum program
     href: quickstart.md
 - name: Managing quantum machines and drivers
   href: machines/toc.yml

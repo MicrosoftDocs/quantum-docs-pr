@@ -11,7 +11,7 @@ functions:
   summary: |-
     > [!WARNING]
     > Deprecated
-    Please use @"Microsoft.Quantum.Diagnostics.NearEqualityFact" instead.
+    Please use @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" instead.
 - uid: microsoft.quantum.canon.assertalmostequaltol
   summary: |-
     > [!WARNING]
@@ -288,6 +288,11 @@ functions:
     unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
 
     $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
+- uid: microsoft.quantum.canon.nearequalityfact
+  summary: |-
+    > [!WARNING]
+    > Deprecated
+    Please use @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" instead.
 - uid: microsoft.quantum.canon.operationpow
   summary: |-
     Raises an operation to a power.

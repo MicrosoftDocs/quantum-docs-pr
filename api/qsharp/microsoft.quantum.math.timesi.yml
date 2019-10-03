@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.timesi
+name: TimesI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Returns the product of two inputs.
+syntax: 'function TimesI (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: The first input $a$ to be multiplied.
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: The second input $b$ to be multiplied.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: The product $a \times b$.
+    isPrimitive: true
+    uid: Int
+...

@@ -3,19 +3,14 @@ uid: microsoft.quantum.math.complexpolartocomplex
 name: ComplexPolarToComplex
 type: function
 namespace: Microsoft.Quantum.Math
-summary: |-
-  Converts a complex number of type `ComplexPolar` to a complex
-  number of type `Complex`.
 syntax: 'function ComplexPolarToComplex (input : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.Complex'
 input:
   content: '(input : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: input
-    summary: Complex number $c = r e^{i t}$.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: Microsoft.Quantum.Math.Complex
   types:
-  - summary: Complex number $c = x + i y$.
-    uid: microsoft.quantum.math.complex
+  - uid: microsoft.quantum.math.complex
 ...

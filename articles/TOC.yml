@@ -1,11 +1,15 @@
+- name: Microsoft Quantum Documentation
+  href: index.yml
 - name: Welcome
-  href: index.md
+  href: welcome.md
 - name: Quantum computing concepts
   href: concepts/toc.yml
 - name: Quickstarts
   items:
   - name: Install the QDK
     href: install-guide/index.md
+  - name: Update the QDK
+    href: install-guide/update.md  
   - name: Write your first quantum program
     href: quickstart.md
 - name: Managing quantum machines and drivers

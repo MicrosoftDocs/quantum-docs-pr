@@ -16,8 +16,7 @@ $$
 f(W) = \sum_k f_k W^k.
 $$
 A number of quantum algorithms can be thought of as implementing $f(W)$ using already implemented $W$ one or more times.
-Since unitary operations are meant to be composed rather than superposed,
-the expression $f(W) = \sum_k f_k W^k$ does not make much sense as it reads.
+This may sound weird; unitary operations are meant to be composed (multiplied) rather than superposed (summed)!
 Quantum signal processing is a general technique to overcome this apparent mismatch.
 
 ## Eigenvalue transformation
@@ -34,29 +33,27 @@ $$
 f(W) = \sum_k f(\lambda_k) \ket{\psi_k}\bra{\psi_k}.
 $$
 So, conceptually we aim to express and implement the scalar function $f$ on the eigenvalues.
-Note that the eigenvalues of a unitary is on the unit circle in the complex plane,
-so we regard that the function $f$ is defined only on the complex unit circle.
 
 ### Enlarging the space
 
-A typical, well, actually the only way to access eigenvalues of a unitary in quantum computing 
-is through an ancilla on which $W$ is controlled.
+A typical, well, actually the only, way to access eigenvalues of a unitary in quantum computing 
+is through an ancilla qubit by which $W$ is controlled.
 Imagine that we have a controlled unitary
 $$
 V = \ket{0}\bra{0} \otimes I + \ket{1}\bra{1} \otimes W,
 $$
 which is concretely implementable by, for example, replacing each elementary gate in $W$ by a controlled version.
 In Q# this is conveniently done via [functor Controlled](xref:microsoft.quantum.language.type-model#functors).
-If the control qubit was initialized in $\ket{+}$ and we applied $V$, and if we measure the control qubit to project it to $\ket{+}$,
+If the control qubit was initialized in $\ket{+}$ and we applied $V$, and if we measured the control qubit to project it onto $\ket{+}$,
 then the overall action on the qubits on which $W$ acts would be
 $$
-(\bra{+} \otimes I) V (\ket{+} \otimes I) = \frac{1}{2} I + \frac{1}{2} W.
+\big(\bra{+} \otimes I\big) V \big(\ket{+} \otimes I \big) = \frac{1}{2} I + \frac{1}{2} W.
 $$
 This is a linear combination (superposition) of unitaries!
 This exactly corresponds to a transformation function $f(z) = (1+z)/2$.
 Similarly, the following corresponds to a transformation function $f(z) = (1+z^{-1})/2$
 $$
-(\bra{+} \otimes I) V^\dagger (\ket{+} \otimes I) = \frac{1}{2} I + \frac{1}{2} W^\dagger.
+\big(\bra{+} \otimes I\big) V^\dagger \big(\ket{+} \otimes I\big) = \frac{1}{2} I + \frac{1}{2} W^\dagger.
 $$
 
 ### Unitary to (non)unitary
@@ -65,29 +62,34 @@ The above trick is easily generalized with multiple calls to $V$ or $V^\dagger$,
 in between which we may insert some single qubit rotations $E_k$:
 $$
 f(W) =
-\left(\bra{+} \otimes I\right)  E_0 V E_1 V^\dagger E_2 V E_3 V^\dagger E_4 \cdots E_{2n-1} V E_{2n} \left(\ket{+} \otimes I\right) .
+\big(\bra{+} \otimes I\big)  E_0 V E_1 V^\dagger E_2 V E_3 V^\dagger E_4 \cdots E_{2n-1} V E_{2n} \big(\ket{+} \otimes I\big) .
 $$ 
 There are $2n+1$ interspersing single qubit unitaries $E_k$ and $2n$ calls to $V$ or $V^\dagger$.
 The alternating appearance of $V$ and $V^\dagger$ is a special choice.
-(This is due to a technical convenience that we do not explain here, but interested readers might want to see this [paper](https://arxiv.org/abs/1806.10236).
+(This is due to a technical convenience that we do not explain here, but interested readers are encouraged to read this [paper](https://arxiv.org/abs/1806.10236).
 One may consider more general sequences where $V$ and $V^\dagger$ are not necessarily balanced.)
+The bra vector on the far left of this equation means that we will(!) measure the ancilla out to $\ket{+}$ state.
 
 At this point, it is somewhat mysterious how we measure $\ket{+}$ on the ancilla qubit.
-As a matter of fact, we cannot and do not ensure we always measure $\ket{+}$.
-Especially, if $f(W)$ is not a unitary, there is always a nonzero probability that we measure $\ket{-}$ 
-at the end of the sequence, and that is unavoidable.
-Thus, the implementation of $f(W)$ is probabilistic.
-However, this should be regarded as a feature rather than a bug.
+As a matter of fact, we cannot and do not ensure that we always measure $\ket{+}$.
+Especially, if $f(W)$ is not a unitary, there is always a nonzero probability that we end up with $\ket{-}$ on the ancilla
+at the end of the sequence, which is unavoidable.
+Thus, the implementation of $f(W)$ is probabilistic;
+we declare success for the implementation of $f(W)$ only if we observe $\ket{+}$ on the ancilla.
+This is usually referred to as ``post-selection.''
+However, the post-selection should be regarded as a feature rather than a bug.
 By giving up executions with certainty, we acquire flexibility in algorithm design
 that we may use nonunitary transformations.
-This comes with a price; a nonunitary transformation may fail and we may have to try many times.
+Of course, the post-selection comes with a price; a nonunitary transformation may fail (whenever we observe $\ket{-}$ on the ancilla) 
+and we may have to try many times.
 On the other hand, if $f(W)$ is a unitary, that is, if the function $f(e^{i\theta})$ is valued in the complex unit circle,
-then we know that the ancilla will be in the $\ket{+}$ state (apart from an unimportant phase factor) in the end,
+then we know that the ancilla will be in the $\ket{+}$ state (apart from an unimportant global phase factor) in the end,
 and we may omit the measurement on the ancilla.
 
 ## Application scope
 
-It is nontrivial when and how $f(W)$ can be expressed as in the sequence above.
+It is nontrivial when and how $f(W)$ can be expressed as in the sequence above, 
+where $V$ and $V^\dagger$ are alternating interspersed by single-qubit unitary $E_k$ on the ancilla.
 A useful mathematical fact is that the form of the sequence above covers a very broad class of transformation functions $f$.
 Namely, the sequence above can express any complex valued function $f$ satisfying all of the following conditions.
 

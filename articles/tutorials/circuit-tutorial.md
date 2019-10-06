@@ -49,7 +49,7 @@ Here, we will write the Q# file that defines the circuits within operations in Q
 In the section below, we will write the classical driver file that calls the Q# operations, and then processes the returned classical measurement data.
 
 
-In your development environment, create a Q# sharp file: `Operations.qs`. 
+In your development environment, create a Q# file: `Operations.qs`. 
 - To be filled with more description on the operations themselves, as well as the gates. (mention Microsoft.Quantum.Intrinsic and .Canon, perhaps link to them?)
 - @anyone, is it possible or appropriate to make it annotated code in the docs itself? i.e. include annotations along the right side, as opposed to including them in the code itself as comments, because I found that jumbling everything up and making the code itself difficult to discern
 

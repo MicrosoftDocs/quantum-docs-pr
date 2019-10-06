@@ -128,14 +128,15 @@ The driver.py file is constructed as follows:
 2. Then, we directly import the Q# operations which we will be directly interacting with. 
 	Note that we can import directly from the `Quantum.Operations` namespace defined in our `.qs` file, and also that we do not need to import "helper" operations like `Set` which are used by other Q# operations but never called directly from our driver file. 
 	Additionally, the operations must be imported individually (i.e. `from Quantum.Operations import *` or `import Quantum.Operations` will cause an error.) 
-	@chris et al., is there a more elegant way that doesn't throw errors?
+	- @chris et al., is there a more elegant way that doesn't throw errors?
 3. In calling the functions, we simply use the form `<Q# function>.simulate(<args>)` to run them on the `QuantumSimulator()` target machine. 
 	Here, the only argument we defined was `count`, the number of times to repeat the circuit.
 
 > [!NOTE]
 > If we wanted to call the operation on a different machine, for example the `ResourceEstimator()`, we would simply use `<Q# function>.estimate_resources(<args>)`.
 > 
-> @anyone, it'd be very helpful to have and/or link-to a place where all these Python nuances are defined more clearly (I've been having to scrape through random docs and files just to figure this out)
+> - @anyone, it'd be very helpful to have and/or link-to a place where all these Python nuances are defined more clearly (I've been having to scrape through random docs and files just to figure this out)
+> - for example, the fact that if we're in Python, we can use `0` and `1` to refer to the result state of a qubit, whereas in C# we use `Result.Zero` and `Result.One`. Not relevant in this tutorial specifically, but certainly useful info.
 
 4. Upon performing the simulation, the operation calls will return values as defined in `Operations.qs`.
 	In our case, these are simply tuples of our results of the form `(numberOfZeros, numberOfOnes)`, to which we assign names in standard Python fashion.
@@ -164,7 +165,7 @@ Simply run the Python file, and your output should match that below.
 
 #### [C#](#tab/tabid-csharp)
 
-@anyone, I'm hoping to define running the .cs file in a more general way than is described in the Quickstart. Only way I could get this to run was by using the `dotnet run` terminal command was by following those terminal based steps (creating a VS Code project), then deleting the HelloQ stuff that was automatically there, and replacing it with my .qs and .cs files. The C# code below indeed works perfectly, but I could use someone's help penning these create/run instructions.
+- @anyone, I'm hoping to define running the .cs file in a more general way than is described in the Quickstart. Only way I could get this to run was by using the `dotnet run` terminal command was by following those terminal based steps (creating a VS Code project), then deleting the HelloQ stuff that was automatically there, and replacing it with my .qs and .cs files. The C# code below indeed works perfectly, but I could use someone's help penning these create/run instructions.
 
 The C# driver has four parts:
 1. Construct a quantum simulator. 
@@ -218,10 +219,10 @@ namespace Quantum.Operations
 
 ```
 
-????? something about how to run the file goes here. 
+- something about how to run the file goes here. 
+
 ... and your output should match that below.
 The program will exit after you press a key.
-
 ***
 
 ```Output

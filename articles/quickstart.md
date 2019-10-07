@@ -76,11 +76,11 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 * * *
 
-## Create the Q# code
+## Write a Q# operation
 
 Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates, and measurement.
 
-### Q# operation
+### Q# operation code
 
 1. Replace the contents of the Bell.qs file with the following code:
 
@@ -97,23 +97,22 @@ Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) s
     }
     ```
 
-This operation may now be called to set a qubit to a known state (`Zero` or `One`).
+    This operation may now be called to set a qubit to a known state (`Zero` or `One`).
 
-We measure the qubit, if it's in the state we want, we leave it alone, otherwise, we flip it with the `X` gate.
+    We measure the qubit, if it's in the state we want, we leave it alone, otherwise, we flip it with the `X` gate.
 
-> [!NOTE]
-> This code defines a Q# __operation__.
-> An operation is the basic unit of quantum execution in Q#.
-> It is roughly equivalent to a function in C or C++ or Python,
-> or a static method in C# or Java.
->
-> The arguments to an operation are specified as a tuple, within parentheses.
-> The return type of the operation is specified after a colon.
-> In this case, the `Set` operation has no return, so it is marked as
-> returning `Unit`.
-> This is the Q# equivalent of `unit` in F#, which is roughly analogous to
-> `void` in C#.
->
+### About Q# operations
+
+An operation is the basic unit of quantum execution in Q#. It is roughly equivalent to a function in C or C++ or Python, or a static method in C# or Java. The arguments to an operation are specified as a tuple, within parentheses. The return type of the operation is specified after a colon. In this case, the `Set` operation has no return, so it is marked as returning `Unit`. This is the Q# equivalent of `unit` in F#, which is roughly analogous to `void` in C#.
+
+### About quantum gates
+
+You have used two quantum gates in your first Q# operation:
+
+* The [M](xref:microsoft.quantum.intrinsic.m) gate, which measures the state of the qubit
+* The [X](xref:microsoft.quantum.intrinsic.x) gate, which flips the state of a qubit
+
+A quantum gate transforms the state of a qubit.
 
 ### Add Q# test code
 
@@ -145,50 +144,17 @@ We measure the qubit, if it's in the state we want, we leave it alone, otherwise
 
     This operation (`BellTest`) will loop for `count` iterations, set a specified `initial` value on a qubit and then measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
 
-    All of these calls use intrinsic quantum operations that are defined in the `Microsoft.Quantum.Intrinsic` namespace. For instance, the `M` operation measures its argument qubit in the computational (`Z`) basis, and `X` applies a state flip around the x axis to its argument qubit.
+### About variables in Q#
 
-> [!NOTE]
-> As you can see, Q# uses C#-like semicolons and braces to indicate
-> program structure.
->
-> Q# has an __if__ statement that is very much like C#.
->
-> Q# deals with variables in a unique way.
-> By default, variables in Q# are immutable; their value may not be changed
-> after they are bound.
-> The `let` keyword is used to indicate the binding of an immutable variable.
-> Operation arguments are always immutable.
->
-> If you need a variable whose value can change, such as `numOnes`
-> in the example, you can declare the variable with the `mutable` keyword.
-> A mutable variable's value may be changed using a `set` statement.
->
-> In both cases, the type of a variable is inferred by the compiler.
-> Q# doesn't require any type annotations for variables.
->
-> The `using` statement is also special to Q#.
-> It is used to allocate qubits for use in a block of code.
-> In Q#, all qubits are dynamically allocated and released,
-> rather than being fixed resources that are there for the entire
-> lifetime of a complex algorithm.
-> A `using` statement allocates a set of qubits at the start and releases
-> those qubits at the end of the block.
-> There is an analogous `borrowing` statement that is used to allocate
-> potentially dirty ancilla qubits.
->
-> A `for` loop in Q# iterates through a range or array.
-> There is no Q# equivalent to a traditional C-style computer __for__ statement.
-> A range may be specified by the first and last integers in the range, as in
-> the example: `1..10` is the range 1, 2, 3, 4, 5, 6, 7, 8, 9, and 10.
-> If a step other than +1 is needed, then three integers with `..` between
-> them is used: `1..2..10` is the range 1, 3, 5, 7, and 9.
-> Note that ranges are inclusive at both ends.
->
-> The `BellTest` operation returns two values as a tuple.
-> The operation's return type is `(Int, Int)`, and the `return` statement
-> has an explicit tuple containing two integer variables.
-> Q# uses tuples as a way to pass multiple values, rather than using
-> structures or records.
+Q# deals with variables in a unique way. By default, variables in Q# are immutable; their value may not be changed after they are bound. The `let` keyword is used to indicate the binding of an immutable variable. Operation arguments are always immutable.
+
+If you need a variable whose value can change, such as `numOnes` in the example, you can declare the variable with the `mutable` keyword. A mutable variable's value may be changed using a `set` statement.
+
+In both cases, the type of a variable is inferred by the compiler. Q# doesn't require any type annotations for variables.
+
+### About `using` statements in Q#
+
+The `using` statement is also special to Q#. It is used to allocate qubits for use in a block of code. In Q#, all qubits are dynamically allocated and released, rather than being fixed resources that are there for the entire lifetime of a complex algorithm. A `using` statement allocates a set of qubits at the start, and releases those qubits at the end of the block.
 
 ## Create the host application code
 

@@ -9,7 +9,7 @@ uid: microsoft.quantum.write-program
 ---
 # Write your first quantum program
 
-Learn how to write a quantum program using the Microsoft QDK. You will write an application to demonstrate quantum entanglement. This is also known as **Bell State**.
+Learn how to write a quantum program using the Microsoft QDK. You will write an application to demonstrate the simplest form of quantum entanglement, also known as **Bell State**.
 
 You start with the simplest program possible and build it up to demonstrate [quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) and [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement).
 
@@ -216,7 +216,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
     }
     ```
 
-#### [](#tab/tabid-vs-2019)
+#### [](#tab/tabid-vs2019)
 
 * * *
 
@@ -239,7 +239,7 @@ The C# host application has four parts:
 * Run the quantum algorithm. Each Q# operation generates a C# class with the same name. This class has a `Run` method that **asynchronously** executes the operation. The execution is asynchronous because execution on actual hardware will be asynchronous. Because the `Run` method is asynchronous, we fetch the `Result` property; this blocks execution until the task completes and returns the result synchronously.
 * Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`numZeros`) and number of ones (`numOnes`) measured by the simulator. This is returned as a ValueTuple in C#. We deconstruct the tuple to get the two fields, print the results, and wait for a keypress.
 
-#### [](#tab/tabid-vs-2019)
+#### [](#tab/tabid-vs2019)
 
 * * *
 
@@ -468,7 +468,7 @@ for i in initials:
             Console.ReadKey();
 ```
 
-#### [](#tab/tabid-vs-2019)
+#### [](#tab/tabid-vs2019)
 
 * * *
 

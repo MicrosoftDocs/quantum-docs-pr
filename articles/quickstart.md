@@ -103,7 +103,11 @@ Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) s
 
 ### About Q# operations
 
-An operation is the basic unit of quantum execution in Q#. It is roughly equivalent to a function in C or C++ or Python, or a static method in C# or Java. The arguments to an operation are specified as a tuple, within parentheses. The return type of the operation is specified after a colon. In this case, the `Set` operation has no return, so it is marked as returning `Unit`. This is the Q# equivalent of `unit` in F#, which is roughly analogous to `void` in C#.
+An operation is the basic unit of quantum execution in Q#. It is roughly equivalent to a function in C or C++ or Python, or a static method in C# or Java.
+
+The arguments to an operation are specified as a tuple, within parentheses.
+
+The return type of the operation is specified after a colon. In this case, the `Set` operation has no return, so it is marked as returning `Unit`. This is the Q# equivalent of `unit` in F#, which is roughly analogous to `void` in C#.
 
 ### About quantum gates
 
@@ -179,30 +183,6 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
 #### [C#](#tab/tabid-csharp-lang)
 
 1. Replace the contents of the `Driver.cs` file with the following code:
-This file should have the following contents:
-
-    ```csharp
-    using System;
-
-    using Microsoft.Quantum.Simulation.Core;
-    using Microsoft.Quantum.Simulation.Simulators;
-
-    namespace Quantum.Bell
-    {
-        class Driver
-        {
-            static void Main(string[] args)
-            {
-                using (var qsim = new QuantumSimulator())
-                {
-                    HelloQ.Run(qsim).Wait();
-                }
-            }
-        }
-    }
-    ```
-
-1. Replace the body of the `Main` method with the following code:
 
     ```csharp
     using System;
@@ -238,27 +218,18 @@ This file should have the following contents:
 
 * * *
 
-> [!NOTE]
-> The C# driver has four parts:
-> * Construct a quantum simulator. 
->   In the example, `qsim` is the simulator.
-> * Compute any arguments required for the quantum algorithm.
->   In the example, `count` is fixed at a 1000 and `initial` is the initial value of the qubit.
-> * Run the quantum algorithm.
->   Each Q# operation generates a C# class with the same name.
->   This class has a `Run` method that **asynchronously** executes the operation.
->   The execution is asynchronous because execution on actual hardware will be
->   asynchronous. 
->
->   Because the `Run` method is asynchronous, we fetch the `Result` property;
->   this blocks execution until the task completes and returns the result synchronously.
->   
-> * Process the result of the operation.
->   In the example, `res` receives the result of the operation.
->   Here the result is a tuple of the number of zeros (`numZeros`) and number of ones (`numOnes`)
->   measured by the simulator. This is returned as a ValueTuple in C#.
->   We deconstruct the tuple to get the two fields, print the results,
->   and wait for a keypress.
+### About the host application code
+
+#### [Python](#tab/tabid-python-lang)
+
+#### [C#](#tab/tabid-csharp-lang)
+
+The C# host application has four parts:
+
+* Construct a quantum simulator. In the example, `qsim` is the simulator.
+* Compute any arguments required for the quantum algorithm. In the example, `count` is fixed at a 1000 and `initial` is the initial value of the qubit.
+* Run the quantum algorithm. Each Q# operation generates a C# class with the same name. This class has a `Run` method that **asynchronously** executes the operation. The execution is asynchronous because execution on actual hardware will be asynchronous. Because the `Run` method is asynchronous, we fetch the `Result` property; this blocks execution until the task completes and returns the result synchronously.
+* Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`numZeros`) and number of ones (`numOnes`) measured by the simulator. This is returned as a ValueTuple in C#. We deconstruct the tuple to get the two fields, print the results, and wait for a keypress.
 
 ## Build and run
 

@@ -35,7 +35,7 @@ The update steps depend on your development environment. Choose your environment
 
     ```bash
     iqsharp: 0.9.1909.3002
-    Jupyter Core: 1.1.14623.0
+    Jupyter Core: 1.1.18837.0
     ```
 
 1. Update the `qsharp` package
@@ -80,7 +80,7 @@ The update steps depend on your development environment. Choose your environment
 
     ```bash
     iqsharp: 0.9.1909.3002
-    Jupyter Core: 1.1.14623.0
+    Jupyter Core: 1.1.18837.0
     ```
 
 1. You can now open an existing Jupyter notebook and run it with the updated QDK.

@@ -30,7 +30,7 @@ At the end of the `using` block, any qubits allocated by that block are immediat
 > Whenever possible, use unitary operations to return any allocated qubits to $\ket{0}$.
 > If need be, the @"microsoft.quantum.intrinsic.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$. Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation. 
 
-## Intrinsic Operations##
+## Intrinsic Operations ##
 
 Once allocated, a qubit can then be passed to functions and operations.
 In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.

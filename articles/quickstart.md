@@ -116,7 +116,7 @@ You have used two quantum gates in your first Q# operation:
 * The [M](xref:microsoft.quantum.intrinsic.m) gate, which measures the state of the qubit
 * The [X](xref:microsoft.quantum.intrinsic.x) gate, which flips the state of a qubit
 
-A quantum gate transforms the state of a qubit.
+A quantum gate transforms the state of a qubit. The name comes from the analogy of a classical logic gate such as a `NOT` gate, which inverts the state of a classical bit.
 
 ### Add Q# test code
 
@@ -297,8 +297,6 @@ Press any key to continue...
 ```
 
 The program will exit after you press a key.
-
-
 
 * * *
 

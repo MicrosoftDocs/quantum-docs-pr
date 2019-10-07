@@ -33,7 +33,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 1. One or more quantum algorithms, implemented using the Q# quantum programming language.
 1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
 
-### [Python](#tab/tabid-python)
+#### [Python](#tab/tabid-python)
 
 1. Choose a location for your application
 
@@ -41,7 +41,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 1. Create a file called `host.py`. This file will contain your python host code.
 
-### [C# Command Line](#tab/tabid-commandline)
+#### [C# Command Line](#tab/tabid-commandline)
 
 1. Create a new Q# project:
 
@@ -58,7 +58,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
     mv Operation.qs Bell.qs
     ```
 
-### [Visual Studio](#tab/tabid-vs2019)
+#### [Visual Studio](#tab/tabid-vs2019)
 
 1. Create a new project
 
@@ -192,7 +192,7 @@ We measure the qubit, if it's in the state we want, we leave it alone, otherwise
 
 ## Create the host application code
 
-### [Python](#tab/tabid-python)
+#### [Python](#tab/tabid-python)
 
 1. Open the `host.py` file and add the following code:
 
@@ -209,7 +209,7 @@ We measure the qubit, if it's in the state we want, we leave it alone, otherwise
         print(res)
     ```
 
-### [C# Command Line](#tab/tabid-csharp)
+#### [C# Command Line](#tab/tabid-csharp)
 
 1. Open the `Driver.cs` file in your development environment.
 This file should have the following contents:
@@ -281,7 +281,7 @@ This file should have the following contents:
 
 ## Build and Run
 
-### [Python](#tab/tabid-python)
+#### [Python](#tab/tabid-python)
 
 1. Run the following command at your terminal:
 
@@ -289,7 +289,7 @@ This file should have the following contents:
     python host.py
     ```
 
-### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
 1. Run the following at your terminal:
 
@@ -303,7 +303,7 @@ This file should have the following contents:
 You may be prompted to create a new ``launch.json`` file describing how to start the program.
 The default ``launch.json`` should work well for most applications.
 
-### [Visual Studio](#tab/tabid-vs2019)
+#### [Visual Studio](#tab/tabid-vs2019)
 
 1. Just hit `F5`, and your program should build and run!
 
@@ -449,7 +449,7 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
 
 The new return value (`agree`) keeps track of every time the measurement from the first qubit matches the measurement of the second qubit. We also have to update the host application accordingly:
 
-### [Python](#tab/tabid-python)
+#### [Python](#tab/tabid-python)
 
     ```python
     import qsharp
@@ -464,7 +464,7 @@ The new return value (`agree`) keeps track of every time the measurement from th
         print(res)
     ```
 
-### [C# Command Line](#tab/tabid-commandline)
+#### [C# Command Line](#tab/tabid-commandline)
 
 ```csharp
             using (var qsim = new QuantumSimulator())

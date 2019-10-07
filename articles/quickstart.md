@@ -82,28 +82,7 @@ Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) s
 
 ### Q# operation
 
-1. Replace the contents of your Q# file with the following code:
-
-    ```qsharp
-    namespace Quantum.Bell {
-        open Microsoft.Quantum.Intrinsic;
-        open Microsoft.Quantum.Canon;
-
-        operation Set (desired: Result, q1: Qubit) : Unit {
-            Message("Hello quantum world!");
-        }
-    }
-    ```
-
-2. Replace the contents of the body of the `Set` operation with the following code:
-
-    ```qsharp
-        if (desired != M(q1)) {
-            X(q1);
-        }
-    ```
-
-3. The file should now look like:
+1. Replace the contents of the Bell.qs file with the following code:
 
     ```qsharp
     namespace Quantum.Bell {
@@ -138,7 +117,7 @@ We measure the qubit, if it's in the state we want, we leave it alone, otherwise
 
 ### Add Q# test code
 
-1. Add the following operation to the namespace, after the end of the
+1. Add the following operation to the `Bell.qs` file, inside the namespace, after the end of the
 `Set` operation:
 
     ```qsharp
@@ -230,7 +209,7 @@ We measure the qubit, if it's in the state we want, we leave it alone, otherwise
         print(res)
     ```
 
-### [C# Command Line](#tab/tabid-commandline)
+### [C# Command Line](#tab/tabid-csharp)
 
 1. Open the `Driver.cs` file in your development environment.
 This file should have the following contents:
@@ -276,6 +255,8 @@ This file should have the following contents:
             Console.ReadKey();
     ```
 
+* * *
+
 > [!NOTE]
 > The C# driver has four parts:
 > * Construct a quantum simulator. 
@@ -297,8 +278,6 @@ This file should have the following contents:
 >   measured by the simulator. This is returned as a ValueTuple in C#.
 >   We deconstruct the tuple to get the two fields, print the results,
 >   and wait for a keypress.
-
-* * *
 
 ## Build and Run
 

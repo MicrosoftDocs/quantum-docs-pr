@@ -1,136 +1,128 @@
 ---
-title: Write a quantum program | Microsoft Docs
-description: Learn how to write a quantum program in Q#. Develop a Bell  State application in Visual Studio.
-author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com 
-ms.date: 12/11/2017
-ms.topic: article
+title: Write a quantum program
+description: Learn how to write a quantum program in Q#. Develop a Bell State application using the Quantum Development Kit (QDK)
+author: natke
+ms.author: nakersha 
+ms.date: 10/04/2019
+ms.topic: tutorial
 uid: microsoft.quantum.write-program
 ---
-# Writing a Quantum Program
+# Write your first quantum program
 
 ## What You'll Learn
 
 > [!div class="checklist"]
 > * How to set up a quantum solution and project
 > * The components of a Q# operation
-> * How to call a Q# operation from C#
-> * How to build and execute your quantum algorithm
+> * How to call a Q# operation from a host program
+> * How to create entanglement between two qubits
 
-Applications developed with Microsoft's Quantum Development Kit typically consists of two parts:
+Applications developed with Microsoft's Quantum Development Kit consist of two parts:
+
 1. One or more quantum algorithms, implemented using the Q# quantum programming language.
-2. A classical program, implemented in a classical programming language like Python or C#, 
-  that serves as the main entry point and will invoke Q# operations 
-  when it wants to execute a quantum algorithm.
+1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
 
-This guide will walk you through how to create applications using Q#, and using C# as the classical component in Visual Studio or Visual Studio Code.
+This quickstart shows you how to create a quantum application. You can select your host program language and development environment.
 
-## Creating a Bell State in Q#
+## Pre-requisites
 
-Now that you’ve [installed the Microsoft Quantum Development Kit](xref:microsoft.quantum.install), let’s write your first quantum application.
-We'll start with the simplest program possible and build it up to demonstrate [quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) 
-and [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement). We will start with a qubit in a 
-basis state $\ket{0}$, perform some operations on it and then measure the result.
+* [Install](xref:microsoft.quantum.install) the Quantum Development Kit using your preferred language and development environment
+* If you already have the QDK installed, make sure you have [updated](xref:microsoft.quantum.update) to the latest version
 
-The instructions on the page are written for both the command line and Visual Studio.
-For Visual Studio, it assumes you have installed the 
-[Microsoft Quantum Development Kit Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
-If you are using a different development environment, like Visual Studio Code, please 
-follow the instructions to call the .NET Core SDK from the command line.
+## What is a Bell State?
 
-### Step 1: Create a Project and Solution
+We'll start with the simplest program possible and build it up to demonstrate [quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) and [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement). We will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
 
-#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+## Setup
 
-Run the following commands in your favorite command line (e.g.: PowerShell or Bash):
+### [Python](#tab/tabid-python)
 
-```bash
-$ dotnet new console -lang Q# --output Bell
-$ cd Bell 
-$ code . # To open in Visual Studio Code.
-```
+1. Choose a location for your application
 
-#### [Visual Studio](#tab/tabid-vs2019)
+1. Create a file called `Bell.qs` This file will contain your Q# code.
 
-- Open up Visual Studio.
-- Go to the `File` menu and select `New` > `Project...`.
-- In the project template explorer, under `Installed` > `Visual C#`, select the `Q# Application` template.
-- Make sure you have `.NET Framework 4.6.1` selected in the list at the bottom of the `New Project` dialog box.
-- Give your project the name `Bell`.
+1. Create a file called `host.py`. This file will contain your python host code.
 
-***
+### [C# Command Line](#tab/tabid-commandline)
 
-### Step 2: Enter the Q# Code
+1. Create a new Q# project:
+
+    ```bash
+    dotnet new console -lang Q# --output Bell
+    cd Bell
+    ```
+
+    You should see a `.csproj` file, a Q# file called `Operation.qs`, and a host program file called `Driver.cs`
+
+2. Rename the Q# file
+
+    ```bash
+    mv Operation.qs Bell.qs
+    ```
+
+### [Visual Studio](#tab/tabid-vs2019)
+
+1. Create a new project
+
+   * Open Visual Studio
+   * Go to the **File** menu and select **New** -> **Project...**
+   * In the project template explorer, under `Installed` > `Visual C#`, select the `Q# Application` template
+   * Make sure you have `.NET Framework 4.6.1` selected in the list at the bottom of the `New Project` dialog box.
+   * Give your project the name `Bell`
+
+1. Rename the Q# file
+
+   * Navigate to the **Solution Explorer**
+   * Right click on the `Operation.qs` file
+   * Rename it to `Bell.qs`
+
+* * *
+
+## Create the Q# code
 
 Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
 
-#### Source files for a quantum application
-Your development environment should have two files open:
-`Driver.cs`, which will hold the C# driver for your quantum code,
-and `Operations.qs`, which will hold the quantum code itself.
+### Q# operation
 
-#### Q# source
-The first step is to rename the Q# file to `Bell.qs`.
-Right-click on `Operations.qs` in the Visual Studio Solution Explorer (Ctrl+Alt+L to focus) or the Visual Studio Code Explorer (Ctrl/⌘+Shift+E to focus), and select the Rename option.
-Replace `Operations` with `Bell` and hit return.
+1. Replace the contents of your Q# file with the following code:
 
-To enter the Q# code, make sure that you are editing the
-`Bell.qs` window.
-The `Bell.qs` file should have the following contents:
+    ```qsharp
+    namespace Quantum.Bell {
+        open Microsoft.Quantum.Intrinsic;
+        open Microsoft.Quantum.Canon;
 
-```qsharp
-namespace Quantum.Bell {
-    open Microsoft.Quantum.Intrinsic;
-    open Microsoft.Quantum.Canon;
-
-    operation HelloQ () : Unit {
-        Message("Hello quantum world!");
+        operation Set (desired: Result, q1: Qubit) : Unit {
+            Message("Hello quantum world!");
+        }
     }
-}
-```
+    ```
 
-#### Q# operation
-First, replace the string `HelloQ` with `Set`, and change the operation
-parameters (the content of the parentheses) to contain the string
-`desired: Result, q1: Qubit`.
-The file should now look like:
+2. Replace the contents of the body of the `Set` operation with the following code:
 
-```qsharp
-namespace Quantum.Bell {
-    open Microsoft.Quantum.Intrinsic;
-    open Microsoft.Quantum.Canon;
-
-    operation Set (desired: Result, q1: Qubit) : Unit {
-        Message("Hello quantum world!");
-    }
-}
-```
-
-Now, replace `Message("Hello quantum world!");` with the following code between the braces that enclose the operation body:
-
-```qsharp
+    ```qsharp
         if (desired != M(q1)) {
             X(q1);
         }
-```
+    ```
 
-The file should now look like:
+3. The file should now look like:
 
-```qsharp
-namespace Quantum.Bell {
-    open Microsoft.Quantum.Intrinsic;
-    open Microsoft.Quantum.Canon;
+    ```qsharp
+    namespace Quantum.Bell {
+        open Microsoft.Quantum.Intrinsic;
+        open Microsoft.Quantum.Canon;
 
-    operation Set (desired: Result, q1: Qubit) : Unit {
-        if (desired != M(q1)) {
-            X(q1);
+        operation Set (desired: Result, q1: Qubit) : Unit {
+            if (desired != M(q1)) {
+                X(q1);
+            }
         }
     }
-}
-```
+    ```
 
-#### Set or flip a qubit
-This operation may now be called to set a qubit in a known state (`Zero` or `One`). We measure the qubit, if it's in the state we want, we leave it alone, otherwise, we flip it with the `X` gate.
+This operation may now be called to set a qubit to a known state (`Zero` or `One`).
+
+We measure the qubit, if it's in the state we want, we leave it alone, otherwise, we flip it with the `X` gate.
 
 > [!NOTE]
 > This code defines a Q# __operation__.
@@ -144,20 +136,14 @@ This operation may now be called to set a qubit in a known state (`Zero` or `One
 > returning `Unit`.
 > This is the Q# equivalent of `unit` in F#, which is roughly analogous to
 > `void` in C#.
-> 
-> An operation has a __body__ section, which contains the implementation
-> of the operation.
-> An operation may also have __adjoint__, __controlled__, and 
-> __controlled adjoint__ sections.
-> These are used to specify specific variants of appropriate operations.
-> See the [Q# language reference](xref:microsoft.quantum.language.intro) for more
-> information.
+>
 
-#### Measure a qubit
-Add the following operation to the namespace, after the end of the
+### Add Q# test code
+
+1. Add the following operation to the namespace, after the end of the
 `Set` operation:
 
-```qsharp
+    ```qsharp
     operation BellTest (count : Int, initial: Result) : (Int, Int) {
 
         mutable numOnes = 0;
@@ -178,14 +164,11 @@ Add the following operation to the namespace, after the end of the
         // Return number of times we saw a |0> and number of times we saw a |1>
         return (count-numOnes, numOnes);
     }
-```
+    ```
 
-This operation (`BellTest`) will loop for `count` iterations, set a specified `initial` value on a qubit and then measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
+    This operation (`BellTest`) will loop for `count` iterations, set a specified `initial` value on a qubit and then measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
 
-All of these calls use intrinsic quantum operations that are defined in the `Microsoft.Quantum.Intrinsic` namespace.
-For instance, the `M` operation measures its argument qubit in the
-computational (`Z`) basis, and `X` applies a state flip around the x axis
-to its argument qubit.
+    All of these calls use intrinsic quantum operations that are defined in the `Microsoft.Quantum.Intrinsic` namespace. For instance, the `M` operation measures its argument qubit in the computational (`Z`) basis, and `X` applies a state flip around the x axis to its argument qubit.
 
 > [!NOTE]
 > As you can see, Q# uses C#-like semicolons and braces to indicate
@@ -230,36 +213,54 @@ to its argument qubit.
 > Q# uses tuples as a way to pass multiple values, rather than using
 > structures or records.
 
-### Step 3: Enter the C# Driver Code
+## Create the host application code
 
-Switch to the `Driver.cs` file in your development environment.
+### [Python](#tab/tabid-python)
+
+1. Open the `host.py` file and add the following code:
+
+    ```python
+    import qsharp
+
+    from qsharp import Result
+    from Quantum.Bell import BellTest
+
+    initials = {Result.Zero, Result.One} 
+
+    for i in initials:
+        res = BellTest.simulate(count=1000, initial=i)  
+        print(res)
+    ```
+
+### [C# Command Line](#tab/tabid-commandline)
+
+1. Open the `Driver.cs` file in your development environment.
 This file should have the following contents:
 
-```csharp
-using System;
+    ```csharp
+    using System;
 
-using Microsoft.Quantum.Simulation.Core;
-using Microsoft.Quantum.Simulation.Simulators;
+    using Microsoft.Quantum.Simulation.Core;
+    using Microsoft.Quantum.Simulation.Simulators;
 
-namespace Quantum.Bell
-{
-    class Driver
+    namespace Quantum.Bell
     {
-        static void Main(string[] args)
+        class Driver
         {
-            using (var qsim = new QuantumSimulator())
+            static void Main(string[] args)
             {
-                HelloQ.Run(qsim).Wait();
+                using (var qsim = new QuantumSimulator())
+                {
+                    HelloQ.Run(qsim).Wait();
+                }
             }
         }
     }
-}
-```
+    ```
 
-#### Run quantum operations from a C# host program
-Replace the body of the `Main` method with the following code:
+1. Replace the body of the `Main` method with the following code:
 
-```csharp
+    ```csharp
             using (var qsim = new QuantumSimulator())
             {
                 // Try initial values
@@ -275,7 +276,7 @@ Replace the body of the `Main` method with the following code:
 
             System.Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
-```
+    ```
 
 > [!NOTE]
 > The C# driver has four parts:
@@ -299,46 +300,53 @@ Replace the body of the `Main` method with the following code:
 >   We deconstruct the tuple to get the two fields, print the results,
 >   and wait for a keypress.
 
-### Step 4: Build and Run
+* * *
 
-#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+## Build and Run
 
-Run the following at your terminal:
+### [Python](#tab/tabid-python)
 
-```bash
-$ dotnet run
-```
+1. Run the following at your terminal:
 
-This will automatically download all required packages, build the application, then run it at the commmand line.
+    ```
+    python host.py
+    ```
 
-Alternatively, press **F1** to open the Command Palette and select "Debug: Start Without Debugging."
+### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+
+1. Run the following at your terminal:
+
+    ```bash
+    dotnet run
+    ```
+
+    This will automatically download all required packages, build the application, then run it at the command line.
+
+1. Alternatively, press **F1** to open the Command Palette and select "Debug: Start Without Debugging."
 You may be prompted to create a new ``launch.json`` file describing how to start the program.
 The default ``launch.json`` should work well for most applications.
 
-#### [Visual Studio](#tab/tabid-vs2019)
+### [Visual Studio](#tab/tabid-vs2019)
 
-Just hit `F5`, and your program should build and run!
+1. Just hit `F5`, and your program should build and run!
 
-***
+    The results should be:
 
+    ```Output
+    Init:Zero 0s=1000 1s=0
+    Init:One  0s=0    1s=1000
+    Press any key to continue...
+    ```
 
-The results should be:
+    The program will exit after you press a key.
 
-```Output
-Init:Zero 0s=1000 1s=0
-Init:One  0s=0    1s=1000
-Press any key to continue...
-```
-
-The program will exit after you press a key.
-
-### Step 5: Creating Superposition
+## Create superposition
 
 Now we want to manipulate the qubit. First we'll just try to flip it. This is accomplished by performing an `X` gate before we measure it in `BellTest`:
 
 ```qsharp
-                X(qubit);
-                let res = M (qubit);
+X(qubit);
+let res = M (qubit);
 ```
 
 Now the results (after pressing `F5`) are reversed:
@@ -351,8 +359,8 @@ Init:One  0s=1000 1s=0
 However, everything we've seen so far is classical. Let's get a quantum result. All we need to do is replace the `X` gate in the previous run with an `H` or Hadamard gate. Instead of flipping the qubit all the way from 0 to 1, we will only flip it halfway. The replaced lines in `BellTest` now look like:
 
 ```qsharp
-                H(qubit);
-                let res = M (qubit);
+H(qubit);
+let res = M (qubit);
 ```
 
 Now the results get more interesting:
@@ -364,32 +372,32 @@ Init:One  0s=522  1s=478
 
 Every time we measure, we ask for a classical value, but the qubit is halfway between 0 and 1, so we get (statistically) 0 half the time and 1 half the time. This is known as __superposition__ and gives us our first real view into a quantum state.
 
-### Step 6: Creating Entanglement
+## Create entanglement
 
 Now we'll make the promised [Bell State](https://en.wikipedia.org/wiki/Bell_state) and show off __entanglement__. The first thing we'll need to do is allocate 2 qubits instead of one in `BellTest`:
 
 ```qsharp
-        using ((q0, q1) = (Qubit(), Qubit())) {
+using ((q0, q1) = (Qubit(), Qubit())) {
 ```
 
 This will allow us to add a new gate (`CNOT`) before we measure  (`M`) in `BellTest`:
 
 ```qsharp
-                Set (initial, q0);
-                Set (Zero, q1);
+Set (initial, q0);
+Set (Zero, q1);
 
-                H(q0);
-                CNOT(q0,q1);
-                let res = M (q0);
+H(q0);
+CNOT(q0,q1);
+let res = M (q0);
 ```
 
-We've added another `Set` operation to initialize qubit 1 to make sure that it's always in the `Zero` state when we start.
+We've added another `Set` operation to initialize the first qubit to make sure that it's always in the `Zero` state when we start.
 
-We also need to reset the second qubit before releasing it (this could also be done with a `for` loop). We'll add a line after qubit 0 is reset:
+We also need to reset the second qubit before releasing it.
 
 ```qsharp
-            Set(Zero, q0);
-            Set(Zero, q1);
+Set(Zero, q0);
+Set(Zero, q1);
 ```
 
 The full routine now looks like this:
@@ -460,7 +468,24 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
     }
 ```
 
-There is now a new return value (`agree`) that will keep track of every time the measurement from the first qubit matches the measurement of the second qubit. Of course, we also have to update the __Driver.cs__ file accordingly:
+There is now a new return value (`agree`) that will keep track of every time the measurement from the first qubit matches the measurement of the second qubit. Of course, we also have to update the host application accordingly:
+
+### [Python](#tab/tabid-python)
+
+    ```python
+    import qsharp
+
+    from qsharp import Result
+    from Quantum.Bell import BellTest
+
+    initials = {Result.Zero, Result.One} 
+
+    for i in initials:
+        res = BellTest.simulate(count=1000, initial=i)  
+        print(res)
+    ```
+
+### [C# Command Line](#tab/tabid-commandline)
 
 ```csharp
             using (var qsim = new QuantumSimulator())
@@ -479,6 +504,8 @@ There is now a new return value (`agree`) that will keep track of every time the
             System.Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
 ```
+* * *
+
 Now when we run, we get something pretty amazing:
 
 ```Output
@@ -488,41 +515,11 @@ Init:One  0s=490  1s=510  agree=1000
 
 Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1), but now when we measure the second qubit, it is __always__ the same as what we measured for the first qubit. Our `CNOT` has entangled the two qubits, so that whatever happens to one of them, happens to the other. If you reversed the measurements (did the second qubit before the first), the same thing would happen. The first measurement would be random and the second would be in lock step with whatever was discovered for the first.
 
+Congratulations, you've written your first quantum program!
 
-## Estimating Resources
-
-Sometimes the quantum program is impossible to simulate on a classical computer (for example, if it uses too many qubits). In this case the researchers need to get an estimate of how many resources (qubits or certain gates) the program will use on a quantum computer as it would be impossible to simulate the program on a classical computer. We can do this without changing the Q# operation but using a different target machine, a  `ResourcesEstimator`, for executing it in the C# host code; 
-for example, modify the code in the the __Driver.cs__ file to be:
-
-```csharp
-            var estimator = new ResourcesEstimator();
-            BellTest.Run(estimator, 1000, Result.Zero).Wait();
-
-            System.Console.WriteLine(estimator.ToTSV());
-            
-            System.Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
-```
-
-This change indicates to run the `BellTest` operation using the `estimator` as the target machine. When completed,
-we output the results to the console in TSV (tab-seperated values) format using the `ResourcesEstimator`'s `ToTSV()` method.
-The output of the program is:
-
-```Output
-Metric          Sum
-CNOT            1000
-QubitClifford   1000
-R               0
-Measure         4002
-T               0
-Depth           0
-Width           2
-BorrowedWidth   0
-```
+## What's next?
 
 For more information about the metrics reported and accessing the data programmatically,
 take a look at the [`ResourcesEstimator` documentation](xref:microsoft.quantum.machines.resources-estimator).
 
-
-To learn more about the other type of simulators and target machines provided in the Quantum Development Kit, 
-how they work and how to use them, take a look at the [Managing Quantum machines and drivers topic](xref:microsoft.quantum.machines) in the documentation.
+To learn more about the other type of simulators and target machines provided in the Quantum Development Kit, how they work and how to use them, take a look at the [Managing Quantum machines and drivers topic](xref:microsoft.quantum.machines) in the documentation.

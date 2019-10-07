@@ -177,7 +177,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
     for i in initials:
       res = BellTest.simulate(count=1000, initial=i)  
       (num_zeros, num_ones) = res
-        print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
+      print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
 #### [C#](#tab/tabid-csharp)
@@ -216,6 +216,8 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
     }
     ```
 
+#### [](#tab/tabid-vs-2019)
+
 * * *
 
 ### About the host application code
@@ -237,6 +239,8 @@ The C# host application has four parts:
 * Run the quantum algorithm. Each Q# operation generates a C# class with the same name. This class has a `Run` method that **asynchronously** executes the operation. The execution is asynchronous because execution on actual hardware will be asynchronous. Because the `Run` method is asynchronous, we fetch the `Result` property; this blocks execution until the task completes and returns the result synchronously.
 * Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`numZeros`) and number of ones (`numOnes`) measured by the simulator. This is returned as a ValueTuple in C#. We deconstruct the tuple to get the two fields, print the results, and wait for a keypress.
 
+#### [](#tab/tabid-vs-2019)
+
 * * *
 
 ## Build and run
@@ -248,6 +252,15 @@ The C# host application has four parts:
     ```
     python host.py
     ```
+
+    This command runs the host application, which simulates the Q# operation.
+
+The results should be:
+
+```Output
+Init:0    0s=1000 1s=0   
+Init:1    0s=0    1s=1000
+```
 
 #### [Command Line / Visual Studio Code](#tab/tabid-csharp)
 
@@ -263,19 +276,29 @@ The C# host application has four parts:
 You may be prompted to create a new ``launch.json`` file describing how to start the program.
 The default ``launch.json`` should work well for most applications.
 
+The results should be:
+
+```Output
+Init:Zero 0s=1000 1s=0
+Init:One  0s=0    1s=1000
+Press any key to continue...
+```
+
 #### [Visual Studio](#tab/tabid-vs2019)
 
 1. Just hit `F5`, and your program should build and run!
 
-    The results should be:
+The results should be:
 
-    ```Output
-    Init:Zero 0s=1000 1s=0
-    Init:One  0s=0    1s=1000
-    Press any key to continue...
-    ```
+```Output
+Init:Zero 0s=1000 1s=0
+Init:One  0s=0    1s=1000
+Press any key to continue...
+```
 
-    The program will exit after you press a key.
+The program will exit after you press a key.
+
+
 
 * * *
 
@@ -444,6 +467,8 @@ for i in initials:
             System.Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
 ```
+
+#### [](#tab/tabid-vs-2019)
 
 * * *
 

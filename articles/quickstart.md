@@ -33,7 +33,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 1. One or more quantum algorithms, implemented using the Q# quantum programming language.
 1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
 
-#### [Python](#tab/tabid-python-env)
+#### [Python](#tab/tabid-python)
 
 1. Choose a location for your application
 
@@ -41,7 +41,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 1. Create a file called `host.py`. This file will contain your python host code.
 
-#### [C# Command Line](#tab/tabid-commandline-env)
+#### [C# Command Line](#tab/tabid-csharp)
 
 1. Create a new Q# project:
 
@@ -58,7 +58,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
     mv Operation.qs Bell.qs
     ```
 
-#### [Visual Studio](#tab/tabid-vs2019-env)
+#### [Visual Studio](#tab/tabid-vs2019)
 
 1. Create a new project
 
@@ -162,7 +162,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
 
 ## Create the host application code
 
-#### [Python](#tab/tabid-python-lang)
+#### [Python](#tab/tabid-python)
 
 1. Open the `host.py` file and add the following code:
 
@@ -180,7 +180,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
         print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### [C#](#tab/tabid-csharp-lang)
+#### [C#](#tab/tabid-csharp)
 
 1. Replace the contents of the `Driver.cs` file with the following code:
 
@@ -220,7 +220,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
 
 ### About the host application code
 
-#### [Python](#tab/tabid-python-lang)
+#### [Python](#tab/tabid-python)
 
 The Python host application has three parts:
 
@@ -228,7 +228,7 @@ The Python host application has three parts:
 * Run the quantum algorithm by calling the `simulate()` method of the imported Q# operation.
 * Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`num_zeros`) and number of ones (`num_ones`) measured by the simulator. We deconstruct the tuple to get the two fields, and print the results.
 
-#### [C#](#tab/tabid-csharp-lang)
+#### [C#](#tab/tabid-csharp)
 
 The C# host application has four parts:
 
@@ -241,7 +241,7 @@ The C# host application has four parts:
 
 ## Build and run
 
-#### [Python](#tab/tabid-python-env)
+#### [Python](#tab/tabid-python)
 
 1. Run the following command at your terminal:
 
@@ -249,7 +249,7 @@ The C# host application has four parts:
     python host.py
     ```
 
-#### [Command Line / Visual Studio Code](#tab/tabid-vscode-env)
+#### [Command Line / Visual Studio Code](#tab/tabid-csharp)
 
 1. Run the following at your terminal:
 
@@ -263,7 +263,7 @@ The C# host application has four parts:
 You may be prompted to create a new ``launch.json`` file describing how to start the program.
 The default ``launch.json`` should work well for most applications.
 
-#### [Visual Studio](#tab/tabid-vs2019-env)
+#### [Visual Studio](#tab/tabid-vs2019)
 
 1. Just hit `F5`, and your program should build and run!
 
@@ -409,7 +409,7 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
 
 The new return value (`agree`) keeps track of every time the measurement from the first qubit matches the measurement of the second qubit. We also have to update the host application accordingly:
 
-#### [Python](#tab/tabid-python-lang)
+#### [Python](#tab/tabid-python)
 
 ```python
 import qsharp
@@ -425,7 +425,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### [C#](#tab/tabid-csharp-lang)
+#### [C#](#tab/tabid-csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())

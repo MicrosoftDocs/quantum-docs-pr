@@ -1,13 +1,22 @@
 ---
-title: Write a quantum program
+title: Write your first quantum program
 description: Learn how to write a quantum program in Q#. Develop a Bell State application using the Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha 
-ms.date: 10/04/2019
+ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 ---
 # Write your first quantum program
+
+Learn how to write a quantum program using the Microsoft QDK. You will write an application to demonstrate quantum entanglement. This is also known as **Bell State**.
+
+You start with the simplest program possible and build it up to demonstrate [quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) and [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement).
+
+## Pre-requisites
+
+* [Install](xref:microsoft.quantum.install) the Quantum Development Kit using your preferred language and development environment
+* If you already have the QDK installed, make sure you have [updated](xref:microsoft.quantum.update) to the latest version
 
 ## What You'll Learn
 
@@ -17,29 +26,18 @@ uid: microsoft.quantum.write-program
 > * How to call a Q# operation from a host program
 > * How to create entanglement between two qubits
 
+## Setup
+
 Applications developed with Microsoft's Quantum Development Kit consist of two parts:
 
 1. One or more quantum algorithms, implemented using the Q# quantum programming language.
 1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
 
-This quickstart shows you how to create a quantum application. You can select your host program language and development environment.
-
-## Pre-requisites
-
-* [Install](xref:microsoft.quantum.install) the Quantum Development Kit using your preferred language and development environment
-* If you already have the QDK installed, make sure you have [updated](xref:microsoft.quantum.update) to the latest version
-
-## What is a Bell State?
-
-We'll start with the simplest program possible and build it up to demonstrate [quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) and [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement). We will start with a qubit in a basis state $\ket{0}$, perform some operations on it and then measure the result.
-
-## Setup
-
 ### [Python](#tab/tabid-python)
 
 1. Choose a location for your application
 
-1. Create a file called `Bell.qs` This file will contain your Q# code.
+1. Create a file called `Bell.qs`. This file will contain your Q# code.
 
 1. Create a file called `host.py`. This file will contain your python host code.
 
@@ -54,7 +52,7 @@ We'll start with the simplest program possible and build it up to demonstrate [q
 
     You should see a `.csproj` file, a Q# file called `Operation.qs`, and a host program file called `Driver.cs`
 
-2. Rename the Q# file
+1. Rename the Q# file
 
     ```bash
     mv Operation.qs Bell.qs
@@ -80,7 +78,7 @@ We'll start with the simplest program possible and build it up to demonstrate [q
 
 ## Create the Q# code
 
-Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
+Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates, and measurement.
 
 ### Q# operation
 
@@ -306,7 +304,7 @@ This file should have the following contents:
 
 ### [Python](#tab/tabid-python)
 
-1. Run the following at your terminal:
+1. Run the following command at your terminal:
 
     ```
     python host.py
@@ -320,9 +318,9 @@ This file should have the following contents:
     dotnet run
     ```
 
-    This will automatically download all required packages, build the application, then run it at the command line.
+    This command will automatically download all required packages, build the application, then run it at the command line.
 
-1. Alternatively, press **F1** to open the Command Palette and select "Debug: Start Without Debugging."
+1. Alternatively, press **F1** to open the Command Palette and select **Debug: Start Without Debugging.**
 You may be prompted to create a new ``launch.json`` file describing how to start the program.
 The default ``launch.json`` should work well for most applications.
 
@@ -339,6 +337,8 @@ The default ``launch.json`` should work well for most applications.
     ```
 
     The program will exit after you press a key.
+
+* * *
 
 ## Create superposition
 
@@ -432,7 +432,7 @@ The full routine now looks like this:
     }
 ```
 
-If we run this, we'll get exactly the same 50-50 result we got before. However, what we're really interested in is how the second qubit reacts to the first being measured. We'll add this statistic with a new version of the `BellTest` operation:
+If we run this, we'll get exactly the same 50-50 result we got before. However, what we're interested in is how the second qubit reacts to the first being measured. We'll add this statistic with a new version of the `BellTest` operation:
 
 ```qsharp
     operation BellTest (count : Int, initial: Result) : (Int, Int, Int) {
@@ -468,7 +468,7 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
     }
 ```
 
-There is now a new return value (`agree`) that will keep track of every time the measurement from the first qubit matches the measurement of the second qubit. Of course, we also have to update the host application accordingly:
+The new return value (`agree`) keeps track of every time the measurement from the first qubit matches the measurement of the second qubit. We also have to update the host application accordingly:
 
 ### [Python](#tab/tabid-python)
 
@@ -504,6 +504,7 @@ There is now a new return value (`agree`) that will keep track of every time the
             System.Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
 ```
+
 * * *
 
 Now when we run, we get something pretty amazing:

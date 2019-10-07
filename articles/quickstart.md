@@ -207,10 +207,10 @@ We measure the qubit, if it's in the state we want, we leave it alone, otherwise
     for i in initials:
       res = BellTest.simulate(count=1000, initial=i)  
       (num_zeros, num_ones) = res
-      print('Init:{0: <4} 0s={0: <4} 1s={0: <4}'.format(i, num_zeros, num_ones))
+        print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### [C# Command Line](#tab/tabid-csharp-lang)
+#### [C#](#tab/tabid-csharp-lang)
 
 1. Replace the contents of the `Driver.cs` file with the following code:
 This file should have the following contents:
@@ -464,7 +464,7 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
 
 The new return value (`agree`) keeps track of every time the measurement from the first qubit matches the measurement of the second qubit. We also have to update the host application accordingly:
 
-#### [Python](#tab/tabid-python)
+#### [Python](#tab/tabid-python-lang)
 
 ```python
 import qsharp
@@ -476,10 +476,11 @@ initials = {Result.Zero, Result.One}
 
 for i in initials:
     res = BellTest.simulate(count=1000, initial=i)  
-    print(res)
+    (num_zeros, num_ones, agree) = res
+    print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### [C# Command Line](#tab/tabid-commandline)
+#### [C#](#tab/tabid-csharp-lang)
 
 ```csharp
             using (var qsim = new QuantumSimulator())

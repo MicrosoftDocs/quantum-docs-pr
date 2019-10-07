@@ -33,7 +33,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 1. One or more quantum algorithms, implemented using the Q# quantum programming language.
 1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
 
-#### [Python](#tab/tabid-python)
+#### [Python](#tab/tabid-python-env)
 
 1. Choose a location for your application
 
@@ -41,7 +41,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 1. Create a file called `host.py`. This file will contain your python host code.
 
-#### [C# Command Line](#tab/tabid-commandline)
+#### [C# Command Line](#tab/tabid-commandline-env)
 
 1. Create a new Q# project:
 
@@ -58,7 +58,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
     mv Operation.qs Bell.qs
     ```
 
-#### [Visual Studio](#tab/tabid-vs2019)
+#### [Visual Studio](#tab/tabid-vs2019-env)
 
 1. Create a new project
 
@@ -192,7 +192,7 @@ We measure the qubit, if it's in the state we want, we leave it alone, otherwise
 
 ## Create the host application code
 
-#### [Python](#tab/tabid-python)
+#### [Python](#tab/tabid-python-lang)
 
 1. Open the `host.py` file and add the following code:
 
@@ -202,16 +202,17 @@ We measure the qubit, if it's in the state we want, we leave it alone, otherwise
     from qsharp import Result
     from Quantum.Bell import BellTest
 
-    initials = {Result.Zero, Result.One} 
+    initials = (Result.Zero, Result.One)
 
     for i in initials:
-        res = BellTest.simulate(count=1000, initial=i)  
-        print(res)
+      res = BellTest.simulate(count=1000, initial=i)  
+      (num_zeros, num_ones) = res
+      print('Init:{0: <4} 0s={0: <4} 1s={0: <4}'.format(i, num_zeros, num_ones))
     ```
 
-#### [C# Command Line](#tab/tabid-csharp)
+#### [C# Command Line](#tab/tabid-csharp-lang)
 
-1. Open the `Driver.cs` file in your development environment.
+1. Replace the contents of the `Driver.cs` file with the following code:
 This file should have the following contents:
 
     ```csharp
@@ -238,21 +239,35 @@ This file should have the following contents:
 1. Replace the body of the `Main` method with the following code:
 
     ```csharp
-            using (var qsim = new QuantumSimulator())
-            {
-                // Try initial values
-                Result[] initials = new Result[] { Result.Zero, Result.One };
-                foreach (Result initial in initials)
-                {
-                    var res = BellTest.Run(qsim, 1000, initial).Result;
-                    var (numZeros, numOnes) = res;
-                    System.Console.WriteLine(
-                        $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4}");
-                }
-            }
+    using System;
 
-            System.Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
+    using Microsoft.Quantum.Simulation.Core;
+    using Microsoft.Quantum.Simulation.Simulators;
+
+    namespace Quantum.Bell
+    {
+        class Driver
+        {
+            static void Main(string[] args)
+            {
+                using (var qsim = new QuantumSimulator())
+                {
+                    // Try initial values
+                    Result[] initials = new Result[] { Result.Zero, Result.One };
+                    foreach (Result initial in initials)
+                    {
+                        var res = BellTest.Run(qsim, 1000, initial).Result;
+                        var (numZeros, numOnes) = res;
+                        System.Console.WriteLine(
+                            $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4}");
+                    }
+                }
+
+                System.Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+            }
+        }
+    }
     ```
 
 * * *
@@ -279,9 +294,9 @@ This file should have the following contents:
 >   We deconstruct the tuple to get the two fields, print the results,
 >   and wait for a keypress.
 
-## Build and Run
+## Build and run
 
-#### [Python](#tab/tabid-python)
+#### [Python](#tab/tabid-python-env)
 
 1. Run the following command at your terminal:
 
@@ -289,7 +304,7 @@ This file should have the following contents:
     python host.py
     ```
 
-#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+#### [Command Line / Visual Studio Code](#tab/tabid-vscode-env)
 
 1. Run the following at your terminal:
 
@@ -303,7 +318,7 @@ This file should have the following contents:
 You may be prompted to create a new ``launch.json`` file describing how to start the program.
 The default ``launch.json`` should work well for most applications.
 
-#### [Visual Studio](#tab/tabid-vs2019)
+#### [Visual Studio](#tab/tabid-vs2019-env)
 
 1. Just hit `F5`, and your program should build and run!
 
@@ -451,18 +466,18 @@ The new return value (`agree`) keeps track of every time the measurement from th
 
 #### [Python](#tab/tabid-python)
 
-    ```python
-    import qsharp
+```python
+import qsharp
 
-    from qsharp import Result
-    from Quantum.Bell import BellTest
+from qsharp import Result
+from Quantum.Bell import BellTest
 
-    initials = {Result.Zero, Result.One} 
+initials = {Result.Zero, Result.One} 
 
-    for i in initials:
-        res = BellTest.simulate(count=1000, initial=i)  
-        print(res)
-    ```
+for i in initials:
+    res = BellTest.simulate(count=1000, initial=i)  
+    print(res)
+```
 
 #### [C# Command Line](#tab/tabid-commandline)
 

@@ -222,6 +222,12 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
 
 #### [Python](#tab/tabid-python-lang)
 
+The Python host application has three parts:
+
+* Compute any arguments required for the quantum algorithm. In the example, `count` is fixed at a 1000 and `initial` is the initial value of the qubit.
+* Run the quantum algorithm by calling the `simulate()` method of the imported Q# operation.
+* Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`num_zeros`) and number of ones (`num_ones`) measured by the simulator. We deconstruct the tuple to get the two fields, and print the results.
+
 #### [C#](#tab/tabid-csharp-lang)
 
 The C# host application has four parts:
@@ -230,6 +236,8 @@ The C# host application has four parts:
 * Compute any arguments required for the quantum algorithm. In the example, `count` is fixed at a 1000 and `initial` is the initial value of the qubit.
 * Run the quantum algorithm. Each Q# operation generates a C# class with the same name. This class has a `Run` method that **asynchronously** executes the operation. The execution is asynchronous because execution on actual hardware will be asynchronous. Because the `Run` method is asynchronous, we fetch the `Result` property; this blocks execution until the task completes and returns the result synchronously.
 * Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`numZeros`) and number of ones (`numOnes`) measured by the simulator. This is returned as a ValueTuple in C#. We deconstruct the tuple to get the two fields, print the results, and wait for a keypress.
+
+* * *
 
 ## Build and run
 

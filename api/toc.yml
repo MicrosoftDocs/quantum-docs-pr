@@ -1,8 +1,10 @@
 - name: Q# library reference
   href: qsharp/toc.yml
-- name: C# components reference
+- name: C# libraries
   items:
   - name: Trace simulator 
     href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators
   - name: Quantum chemistry
     href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry
+- name: Python libraries
+  href: https://docs.microsoft.com/python/qsharp    

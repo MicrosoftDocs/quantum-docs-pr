@@ -8,5 +8,5 @@ ms.topic: article
 uid: microsoft.quantum.quickstarts.search
 ---
 
-[!code-qsharp[](~/samples/Samples/src/TODO?highlight=2,5)]
+[!code-qsharp[](~/samples/algorithms/simple-grover/SimpleGrover.qs?highlight=2,5)]
 

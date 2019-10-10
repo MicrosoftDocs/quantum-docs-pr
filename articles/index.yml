@@ -76,7 +76,7 @@ landingContent:
         links:
           - text: Classical drivers & machines
             url: machines/index.md
-          - text: QDK full state simlulator
+          - text: QDK full state simulator
             url: machines/full-state-simulator.md
           - text: Resources estimator
             url: machines/resources-estimator.md

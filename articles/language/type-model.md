@@ -481,17 +481,20 @@ This example of a Q# operation comes from the [Measurement](https://github.com/M
 /// # Summary
 /// Prepares a state and measures it in the Pauli-Z basis.
 operation MeasureOneQubit () : Result {
-        mutable result = Zero;
+        result = Zero;
 
         using (qubit = Qubit()) { // Allocate a qubit
             H(qubit);               // Use a quantum operation on that qubit
 
-            if (result == One) {
+            result = M(qubit);      // Measure the qubit
+
+            if (result == One) {    // Reset the qubit so that it can be released
                 X(qubit);
             }
+
+            return result;
         }
-        return result;
-}
+ }
 ```
 
 This example of a function comes from the [PhaseEstimation](https://github.com/Microsoft/Quantum/tree/master/Samples/PhaseEstimation) sample. It contains purely classical code. You can see that, unlike the example above, no qubits are allocated, and no quantum operations are used.

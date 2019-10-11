@@ -2,8 +2,6 @@
   href: index.yml
 - name: Overview
   href: welcome.md
-- name: Quantum computing concepts
-  href: concepts/toc.yml
 - name: Quickstarts
   items:
   - name: Install the QDK
@@ -14,6 +12,8 @@
     href: quickstart.md
 - name: Concepts
   items:
+  - name: Quantum computing concepts
+    href: concepts/toc.yml
   - name: Quantum development techniques
     topicHref: techniques/index.md
     href: techniques/toc.yml

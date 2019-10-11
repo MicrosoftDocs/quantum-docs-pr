@@ -80,7 +80,7 @@ landingContent:
             url: machines/full-state-simulator.md
           - text: Resources estimator
             url: machines/resources-estimator.md
-          - text: Quantum trace similator
+          - text: Quantum trace simulator
             url: machines/qc-trace-simulator/index.md
           - text: QDK Toffoli simulator
             url: machines/toffoli-simulator.md

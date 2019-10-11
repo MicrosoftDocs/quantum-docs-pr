@@ -32,11 +32,11 @@ $ cd Grover
 Grover's algorithm itself can be written using just a few lines.
 Add the following code to the `Operations.qs` file in your new project:
 
-[!code-qsharp[](~/samples/samples/algorithms/simple-grover/SimpleGrover.qs?highlight=5,27)]
+[!code-qsharp[](~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs?highlight=5,27)]
 
 To define the list that we're searching, create a new file `Reflections.qs`, and paste in the following code:
 
-[!code-qsharp[](~/samples/samples/algorithms/simple-grover/Reflections.qs)]
+[!code-qsharp[](~/quantum/samples/algorithms/simple-grover/Reflections.qs)]
 
 The `ReflectAboutMarked` operation in this file represents the problem we're trying to solve with Grover's algorithm, in this case by reflecting bitstings made up of alternating zeros and ones.
 

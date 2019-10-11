@@ -481,7 +481,7 @@ This example of a Q# operation comes from the [Measurement](https://github.com/M
 /// # Summary
 /// Prepares a state and measures it in the Pauli-Z basis.
 operation MeasureOneQubit () : Result {
-        result = Zero;
+        mutable result = Zero;
 
         using (qubit = Qubit()) { // Allocate a qubit
             H(qubit);               // Use a quantum operation on that qubit

@@ -69,7 +69,7 @@
       "branch_mapping": {}
     },
     {
-      "path_to_root": "quantum",
+      "path_to_root": "articles/quantum",
       "url": "https://github.com/microsoft/quantum",
       "branch": "master",
       "branch_mapping": {}

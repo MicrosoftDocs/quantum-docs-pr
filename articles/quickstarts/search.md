@@ -36,9 +36,49 @@ Add the following code to the `Operations.qs` file in your new project:
 
 To define the list that we're searching, create a new file `Reflections.qs`, and paste in the following code:
 
-[!code-qsharp[](~/samples/samples/algorithms/simple-grover/Reflections.qs?highlight=5,27)]
+[!code-qsharp[](~/samples/samples/algorithms/simple-grover/Reflections.qs)]
 
-<!-- TODO: pick up here -->
+The `ReflectAboutMarked` operation in this file represents the problem we're trying to solve with Grover's algorithm, in this case by reflecting bitstings made up of alternating zeros and ones.
+
+Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.
+
+### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
+
+```bash
+$ python host.py
+Preparing Q# environment...
+Reflecting about marked state...
+Reflecting about marked state...
+Reflecting about marked state...
+Reflecting about marked state...
+[0, 1, 0, 1, 0]
+```
+
+### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
+
+```bash
+$ dotnet run
+Result: [Zero,One,Zero,One,Zero]
+
+
+Press any key to continue...
+```
+
+### [C# with Visual Studio 2019](#tab/tabid-vs2019)
+
+<!-- TODO: write this tab -->
+
+***
+
+Note that the `ReflectAboutMarked` operation is called four times, but that your Q# program was able to find the "01010" input amongst $2^5 = 32$ possible inputs!
+
+## Going Further
+
+If you enjoyed this quickstart, checkout some of the resources below to learn more about how you can use Q# to write your own quantum applications today.
+
+- [Quantum computing concepts](xref:microsoft.quantum.concepts.intro)
+- [Quantum Development Kit Samples](https://docs.microsoft.com/en-us/samples/browse/?products=qdk)
+
 
 <!-- LINKS -->
 

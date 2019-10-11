@@ -79,7 +79,6 @@ If you enjoyed this quickstart, checkout some of the resources below to learn mo
 - [Quantum computing concepts](xref:microsoft.quantum.concepts.intro)
 - [Quantum Development Kit Samples](https://docs.microsoft.com/en-us/samples/browse/?products=qdk)
 
-
 <!-- LINKS -->
 
 [install]: xref:microsoft.quantum.install

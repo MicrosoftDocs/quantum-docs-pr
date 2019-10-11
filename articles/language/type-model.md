@@ -486,7 +486,7 @@ operation MeasureOneQubit () : Result {
         using (qubit = Qubit()) { // Allocate a qubit
             H(qubit);               // Use a quantum operation on that qubit
 
-            result = M(qubit);      // Measure the qubit
+            set result = M(qubit);      // Measure the qubit
 
             if (result == One) {    // Reset the qubit so that it can be released
                 X(qubit);

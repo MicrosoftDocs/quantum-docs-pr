@@ -1,4 +1,4 @@
----
+﻿---
 title: Tutorial: Simulate a quantum circuit | Microsoft Docs
 description: Step-by-step tutorial to simulate a basic quantum circuit in Q#. Explore quantum gates and superposition.
 author: gillenhaalb
@@ -58,27 +58,7 @@ Initially, we proceed to simulate the circuit without measurement, and simply us
 Later, we will add measurement to the end of our circuit, and discuss some of the limitations of quantum computation that become glaringly clear.
 
 In your development environment, create a Q# file: `Operations.qs`. 
-Inside the file, we define the namespace `Quantum.Operations`, which will be accessed/imported by the classical host. 
-After opening the relevant `Microsoft.Quantum.<>` namespaces to access existing Q# operations, we proceed to define the `perform_3qubit_qft` operation.
-For now, the operation takes no arguments, and does not return anything. 
-Later, we will modify it to return an array of measurement results, at which point `Unit` will be replaced by `Result[]`.
-
-
-Within our Q# operation, we first allocate a register of three qubits with the `using` statement.
-Note that the qubits are allocated in the $\ket{0}$ state, as we can verify by using `Message(<string>)` and `DumpMachine()` to print our system's current state ($\ket{000}$) to the host console.
-
-> [!NOTE]
-> The `Message(<string>)` and `DumpMachine()` functions (from `Microsoft.Quantum.Intrinsic` and `Microsoft.Quantum.Diagnostics`, respectively) both print directly to our classical host's console. 
-> Just like a real quantum computation, Q# does not allow us access to the state of qubits.
-> However, as `DumpMachine` prints the current state of the target machine (in this case, the full simulated state), it can provide valuable insight for debugging and learning.
-
-Next, we apply the gates which comprise the QFT.
-Q# already contains many basic quantum gates as operations in the `Microsoft.Quantum.Intrinsic` namespace, and these are no exception. 
-To apply a gate to a specific qubit from a register (i.e. a single `Qubit()` from an array `Qubit[]`), we need only use standard index notation to reference the qubit.
-That is, for register `qs`, we use `qs[0]` to refer to the first qubit.
-Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled `R1` rotations. 
-
-
+Here we present the full code, with the explanation and description below:
 
 ```qsharp
 namespace Quantum.Operations {
@@ -87,7 +67,7 @@ namespace Quantum.Operations {
 	open Microsoft.Quantum.Math;
     open Microsoft.Quantum.Arrays;
 
-    operation perform_3qubit_qft () : Unit {
+    operation perform_3qubit_qft() : Unit {
 
         using (qs = Qubit[3]) {
 
@@ -109,92 +89,122 @@ namespace Quantum.Operations {
 
             SWAP(qs[2], qs[0]);
 
-            //Message("After:");
-            //DumpMachine();
-
-            }
+            Message("After:");
+            DumpMachine();
 
             ResetAll(qs);
-
         }
-        return r;
     }
-
-
 }
 ```
 
+#### Namespaces to access other Q# operations
+Inside the file, we define the namespace `Quantum.Operations`, which will be accessed/imported by the classical host. 
+After opening the relevant `Microsoft.Quantum.<>` namespaces to access existing Q# operations, we proceed to define the `perform_3qubit_qft` operation.
+For now, the operation takes no arguments, and does not return anything. 
+Later, we will modify it to return an array of measurement results, at which point `Unit` will be replaced by `Result[]`.
+
+#### Allocating qubits with `using`
+Within our Q# operation, we first allocate a register of three qubits with the `using` statement.
+Note that the qubits are allocated in the $\ket{0}$ state, as we can verify by using `Message(<string>)` and `DumpMachine()` to print our system's current state ($\ket{000}$) to the host console.
+
+> [!NOTE]
+> The `Message(<string>)` and `DumpMachine()` functions (from `Microsoft.Quantum.Intrinsic` and `Microsoft.Quantum.Diagnostics`, respectively) both print directly to our classical host's console. 
+> Just like a real quantum computation, Q# does not allow us access to the state of qubits.
+> However, as `DumpMachine` prints the current state of the target machine (in this case, the full simulated state), it can provide valuable insight for debugging and learning.
+
+#### Applying normal and controlled gates
+Next, we apply the gates which comprise the QFT.
+Q# already contains many basic quantum gates as operations in the `Microsoft.Quantum.Intrinsic` namespace, and these are no exception. 
+To apply a gate to a specific qubit from a register (i.e. a single `Qubit()` from an array `Qubit[]`), we need only use standard index notation to reference the qubit.
+That is, for register `qs`, we use `qs[0]` to refer to the first qubit.
+
+Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled `R1` rotations.
+An `R1($\theta$, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{i\theta}$ to the $\ket{1}$ component.
+To define the QFT rotations in terms of pi radians, we use the `PI()` function from the `Microsoft.Quantum.Math` namespace, and divide by a `Double` (e.g. `2.0`).
+Dividing by an integer `2` would throw a type error. 
+
+> [!NOTE]
+> `R1($\pi$/2)` and `R1($\pi$/4)` are equivalent to the `S` and `T` operations (also in `Microsoft.Quantum.Intrinsic`)
 
 
+Q# makes it extremely easy to condition the execution of an operation upon one or multiple control qubits.
+As seen below, we merely preface the call with `Controlled`, and the operation arguments change as:
+
+* `Op(<normal args>)` --> `Controlled Op([<control qubits>], (<normal args>))`.
+
+Note that the control qubits must be provided as an array, even if it is a single qubit.
+
+After applying all the relevant Hadamards and controlled rotations, we need only apply a `SWAP` gate to complete the circuit.
+This is necessary because the nature of the QFT outputs the qubits in reverse order, so the swaps allow for seamless integration of the QFT subroutine into larger algorithms.
+
+#### De-allocate qubits
+We then call `DumpMachine()` again to see the post-QFT state, and finally apply `ResetAll` to the qubit register to reset our qubits to $\ket{0}$ before completing the operation. 
+Requiring that all de-allocated qubits be explicitly set to $\ket{0}$ is a basic feature of Q#.
+If it is not performed at the end of a `using` allocation block, a runtime error will be thrown.
+
+With the Q# file and operation complete, we move on to the classical host file.
 
 
-## Setup the classical driver
+## Setup the classical host
 
-
-- In the section above, we defined our Q# operations, and now we will write the classical driver file that calls them and processes the returned classical measurement data. 
-- While the Q# program is ubiquitous across classical host languages, the driver programs of course will vary slightly. As such, please follow the instructions in the tab corresponding to the development environment you set up.
+In the previous section, we defined our Q# operation in a `.qs` file.
+Now, we must write the classical host file that calls the Q# operation, and processes any returned classical data. 
+Initially, there is no returned data to process---recall that our operation defined above returns `Unit`.
+Later, upon adding measurements, we will modify the Q# operation to return an array of measurement results (`Result[]`), and therefore we will also modify the host file to process these values.
+While the Q# program is ubiquitous across classical host languages, the host programs of course will vary slightly. As such, please follow the instructions in the tab corresponding to the development environment you set up.
 
 #### [Python](#tab/tabid-python)
 
-The driver.py file is constructed as follows: 
-1. First, we import qsharp to make sure...? (@chris et al.) 
-2. Then, we directly import the Q# operations which we will be directly interacting with. 
-	Note that we can import directly from the `Quantum.Operations` namespace defined in our `.qs` file, and also that we do not need to import "helper" operations like `Set` which are used by other Q# operations but never called directly from our driver file. 
-	Additionally, the operations must be imported individually (i.e. `from Quantum.Operations import *` or `import Quantum.Operations` will cause an error.) 
-	- @chris et al., is there a more elegant way that doesn't throw errors?
-3. In calling the functions, we simply use the form `<Q# function>.simulate(<args>)` to run them on the `QuantumSimulator()` target machine. 
-	Here, the only argument we defined was `count`, the number of times to repeat the circuit.
+Create a Python file titled `host.py`.
+The host file is constructed as follows: 
+1. First, we import the `qsharp` module, which registers the module loader for Q# interoperability. 
+	This allows Q# namespaces (e.g. the `Quantum.Operations` defined above) to appear as Python modules, from which we can import Q# operations.
+2. Then, import the Q# operations which we will be directly invoking---that is, we need only import the entry point into a Q# program.
+	We do _not_ need to import operations like `H` and `R1`, which are called by other Q# operations but never by the classical host.
+3. In simulating the Q# operations or functions, we simply use the form `<Q# callable>.simulate(<args>)` to run them on the `QuantumSimulator()` target machine. 
+	For now, our operation is defined to take no arguments.
 
 > [!NOTE]
 > If we wanted to call the operation on a different machine, for example the `ResourceEstimator()`, we would simply use `<Q# function>.estimate_resources(<args>)`.
-> 
-> - @anyone, it'd be very helpful to have and/or link-to a place where all these Python nuances are defined more clearly (I've been having to scrape through random docs and files just to figure this out)
-> - for example, the fact that if we're in Python, we can use `0` and `1` to refer to the result state of a qubit, whereas in C# we use `Result.Zero` and `Result.One`. Not relevant in this tutorial specifically, but certainly useful info.
+> In general, Q# operations are agnostic to the machines on which they're run.
+> However, some features such as `DumpMachine` will behave differently.
 
-4. Upon performing the simulation, the operation calls will return values as defined in `Operations.qs`.
-	In our case, these are simply tuples of our results of the form `(numberOfZeros, numberOfOnes)`, to which we assign names in standard Python fashion.
+4. Upon performing the simulation, the operation call will return values as defined in `Operations.qs`.
+	For now there is nothing returned, but later on we will see an example of assigning and processing these values.
 	With the resultant data in our hands and totally classical, we can do whatever we'd like with it. 
 	Here, we simply print it to easily compare the effect the gates had on our measurement statistics.
 
-Your full `driver.py` file should be this:
+Your full `host.py` file should be this:
 
 ```python
 import qsharp
-from Quantum.Operations import OneQubitNoGate, OneQubitX, OneQubitH
+from Quantum.Operations import perform_3qubit_qft
 
-resNoGate = OneQubitNoGate.simulate(count=100)
-resX = OneQubitX.simulate(count=100)
-resH = OneQubitH.simulate(count=100)
-
-print("Measured results: (# |0>'s, # |1>'s):\n"
-      "No gate: " + str(resNoGate) +"\n"
-      "X gate: " + str(resX) +"\n"
-      "H gate: " + str(resH))
+perform_3qubit_qft.simulate()
 
 ```
 
-Simply run the Python file, and your output should match that below.
+Simply run the Python file, and printed in your console you should see the `Message` and `DumpMachine` outputs below. 
+
 
 
 #### [C#](#tab/tabid-csharp)
 
 - @anyone, I'm hoping to define running the .cs file in a more general way than is described in the Quickstart. Only way I could get this to run was by using the `dotnet run` terminal command was by following those terminal based steps (creating a VS Code project), then deleting the HelloQ stuff that was automatically there, and replacing it with my .qs and .cs files. The C# code below indeed works perfectly, but I could use someone's help penning these create/run instructions.
 
-The C# driver has four parts:
+The C# host has four parts:
 1. Construct a quantum simulator. 
 	In the example, `qsim` is the simulator.
 2. Compute any arguments required for the quantum algorithm. 
-	In the example, `count` is fixed at a 100---the number of times the Q# operation will repeat the simulation.
+	For now, there are none.
 3. Run the quantum algorithm. 
 	Each Q# operation generates a C# class with the same name. 
 	This class has a `Run` method that **asynchronously** executes the operation.
 	The execution is asynchronous because execution on actual hardware will be asynchronous. 
 	Because the `Run` method is asynchronous, we fetch the `Result` property; this blocks execution until the task completes and returns the result synchronously. 
 4. Process the result of the operation. 
-	In the example, `res` receives the result of the operation.
-	Here the result is a tuple of the number of zeros (`numZeros`) and number of ones (`numOnes`) measured by the simulator. 
-	This is returned as a ValueTuple in C#.
-	We deconstruct the tuple to get the two fields, print the results, and wait for a keypress.
+	For now, there is none.
 
 
 ```csharp
@@ -211,17 +221,7 @@ namespace Quantum.Operations
         {
             using (var qsim = new QuantumSimulator())
             {
-                var resNoGate = OneQubitNoGate.Run(qsim, 100).Result;
-                var resX = OneQubitX.Run(qsim, 100).Result;
-                var resH = OneQubitH.Run(qsim, 100).Result;
-                System.Console.WriteLine(
-                    $"Measured results: (# |0>'s, |1>'s):");
-                System.Console.WriteLine(
-                    $"No Gate: {resNoGate}");
-                System.Console.WriteLine(
-                    $"X Gate:  {resX}");
-                System.Console.WriteLine(
-                    $"H Gate:  {resH}");
+                perform_3qubit_qft.Run(qsim);
             }
 
             System.Console.WriteLine("Press any key to continue...");
@@ -232,33 +232,50 @@ namespace Quantum.Operations
 
 ```
 
-- something about how to run the file goes here. 
-
-... and your output should match that below.
+- something about how to run the file...
+- ... and your output should match that below.
 The program will exit after you press a key.
 ***
 
 ```Output
-Measured results: (# |0>'s, # |1>'s):
-No gate: (100, 0)
-X gate: (0, 100)
-H gate: (51, 49)
+Initial state |000>:
+# wave function for qubits with ids (least to most significant): 0;1;2
+∣0❭:	 1.000000 +  0.000000 i	 == 	******************** [ 1.000000 ]     --- [  0.00000 rad ]
+∣1❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+∣2❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+∣3❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+∣4❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+∣5❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+∣6❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+∣7❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+After:
+# wave function for qubits with ids (least to most significant): 0;1;2
+∣0❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+∣1❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+∣2❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+∣3❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+∣4❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+∣5❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+∣6❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+∣7❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+
 ```
 
-- discuss...
+- add description of DumpMachine output from https://docs.microsoft.com/en-us/quantum/techniques/testing-and-debugging?view=qsharp-preview&tabs=tabid-vs2019#dump-functions
+
+- add full state LaTeX description of what we're seeing
 
 
-## Using multiple qubits
+## Adding Measurements
 
-- simply doing same as above on a register of n qubits (use n=3 in running example)
-- get input as to best way to track the above counts
-- CNOT to create Bell state
-- maybe 3 qubit bit flip error correction code?
-
-## (maybe)Observe wavefunction of full quantum system
-
-- use DumpMachine
-
+- more interesting input to QFT than $\ket{000}$, done by adding Hadamards on first and third qubits before QFT
+	- observe the DumpMachine output
+- add measurements --> discussion of limitation: processing $2^3$ bits but can't access them directly. 
+	with measuring, each shot only yields the 3 bits corresponding to each qubit's measurement
+- add classical logic within Q# to aggregate measurement counts over 1000 shots
+	- see that the amplitude statistics begin to appear, but it's hardly efficient anymore. 
+	hence why the QFT likely won't replace classcial FFT, but rather has an important place as a subroutine
+	--> link to Phase Estimation page
 
 
 
@@ -267,14 +284,11 @@ H gate: (51, 49)
 If you're not going to continue to use this application, delete
 <resources> with the following steps:
 
-1. From the left-hand menu...
-2. ...click Delete, type...and then click Delete
-
+1. ...
 
 
 ## Next steps
 
-- tutorial with 3 qubit bit flip error correction?
 - tutorial on passing qubits between operations, more complicated development flows between driver and q#, etc.?
 
 

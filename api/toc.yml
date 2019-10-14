@@ -2,7 +2,7 @@
   items:
   - name: Q# libraries
     href: qsharp/toc.yml
-  - name: C# libraries
+  - name: .NET libraries
     items:
     - name: Trace simulator
       href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators

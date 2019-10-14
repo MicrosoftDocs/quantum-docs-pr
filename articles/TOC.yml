@@ -8,6 +8,10 @@
     href: install-guide/index.md
   - name: Write your first Quantum program
     href: quickstart.md
+- name: Tutorials
+  items:
+  - name: Quantum circuit
+    href: tutorials/circuit-tutorial.md
 - name: Managing quantum machines and drivers
   href: machines/toc.yml
 - name: Quantum development techniques

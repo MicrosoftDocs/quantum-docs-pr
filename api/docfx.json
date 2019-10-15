@@ -57,7 +57,14 @@
       "feedback_product_url": "https://github.com/microsoft/quantum/issues",
       "titleSuffix": "Q# reference - Microsoft Quantum"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "monikers":
+      {
+        "docs-ref-autogen/**": [ "qsharp-py" ],
+        "breadcrumb/**": [ "qsharp-py" ],
+        "docs-ref-joined/**": [ "qsharp-py" ]
+      }
+    },
     "template": [],
     "dest": "quantum-api"
   }

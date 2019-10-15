@@ -9,7 +9,7 @@ uid: microsoft.quantum.write-program
 ---
 # Write your first quantum program
 
-Learn how to write a quantum program using the Microsoft QDK. You will write an application to demonstrate the simplest form of quantum entanglement, also known as **Bell State**.
+Learn how to write a quantum program using the Microsoft QDK. You will write an application to demonstrate quantum entanglement using a **Bell State**.
 
 You start with the simplest program possible and build it up to demonstrate [quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) and [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement).
 
@@ -24,7 +24,7 @@ You start with the simplest program possible and build it up to demonstrate [qua
 > * How to set up a quantum solution and project
 > * The components of a Q# operation
 > * How to call a Q# operation from a host program
-> * How to create entanglement between two qubits
+> * How to entangle two qubits
 
 ## Setup
 
@@ -39,7 +39,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 1. Create a file called `Bell.qs`. This file will contain your Q# code.
 
-1. Create a file called `host.py`. This file will contain your python host code.
+1. Create a file called `host.py`. This file will contain your Python host code.
 
 #### [C# Command Line](#tab/tabid-csharp)
 
@@ -65,7 +65,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
    * Open Visual Studio
    * Go to the **File** menu and select **New** -> **Project...**
    * In the project template explorer, under `Installed` > `Visual C#`, select the `Q# Application` template
-   * Make sure you have `.NET Framework 4.6.1` selected in the list at the bottom of the `New Project` dialog box.
+   * Make sure you have `.NET Framework 4.6.1` selected in the list at the bottom of the `New Project` dialog box
    * Give your project the name `Bell`
 
 1. Rename the Q# file
@@ -78,7 +78,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 ## Write a Q# operation
 
-Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates, and measurement.
+Our goal is to prepare two qubits in a [Bell state](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to demonstrate qubit states, gates, and measurement.
 
 ### Q# operation code
 
@@ -89,7 +89,7 @@ Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) s
         open Microsoft.Quantum.Intrinsic;
         open Microsoft.Quantum.Canon;
 
-        operation Set (desired: Result, q1: Qubit) : Unit {
+        operation Set(desired : Result, q1 : Qubit) : Unit {
             if (desired != M(q1)) {
                 X(q1);
             }
@@ -107,7 +107,7 @@ An operation is the basic unit of quantum execution in Q#. It is roughly equival
 
 The arguments to an operation are specified as a tuple, within parentheses.
 
-The return type of the operation is specified after a colon. In this case, the `Set` operation has no return, so it is marked as returning `Unit`. This is the Q# equivalent of `unit` in F#, which is roughly analogous to `void` in C#.
+The return type of the operation is specified after a colon. In this case, the `Set` operation has no return, so it is marked as returning `Unit`. This is the Q# equivalent of `unit` in F#, which is roughly analogous to `void` in C#, and an empty tuple (`Tuple[()]`) in Python.
 
 ### About quantum gates
 
@@ -300,7 +300,7 @@ The program will exit after you press a key.
 
 * * *
 
-## Create superposition
+## Prepare superposition
 
 Now we want to manipulate the qubit. First we'll just try to flip it. This is accomplished by performing an `X` gate before we measure it in `BellTest`:
 
@@ -332,9 +332,9 @@ Init:One  0s=522  1s=478
 
 Every time we measure, we ask for a classical value, but the qubit is halfway between 0 and 1, so we get (statistically) 0 half the time and 1 half the time. This is known as __superposition__ and gives us our first real view into a quantum state.
 
-## Create entanglement
+## Prepare entanglement
 
-Now we'll make the promised [Bell State](https://en.wikipedia.org/wiki/Bell_state) and show off __entanglement__. The first thing we'll need to do is allocate 2 qubits instead of one in `BellTest`:
+Now we'll make the promised [Bell state](https://en.wikipedia.org/wiki/Bell_state) and show off __entanglement__. The first thing we'll need to do is allocate 2 qubits instead of one in `BellTest`:
 
 ```qsharp
 using ((q0, q1) = (Qubit(), Qubit())) {
@@ -486,4 +486,4 @@ Congratulations, you've written your first quantum program!
 For more information about the metrics reported and accessing the data programmatically,
 take a look at the [`ResourcesEstimator` documentation](xref:microsoft.quantum.machines.resources-estimator).
 
-To learn more about the other type of simulators and target machines provided in the Quantum Development Kit, how they work and how to use them, take a look at the [Managing Quantum machines and drivers topic](xref:microsoft.quantum.machines) in the documentation.
+To learn more about the other type of simulators and target machines provided in the Quantum Development Kit, how they work and how to use them, take a look at the [Managing quantum machines and drivers topic](xref:microsoft.quantum.machines) in the documentation.

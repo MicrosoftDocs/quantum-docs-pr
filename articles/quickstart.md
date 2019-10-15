@@ -146,7 +146,7 @@ A quantum gate transforms the state of a qubit. The name comes from the analogy 
     }
     ```
 
-    This operation (`BellTest`) will loop for `count` iterations, set a specified `initial` value on a qubit and then measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
+    This operation (`TestBellState`) will loop for `count` iterations, set a specified `initial` value on a qubit and then measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
 
 ### About variables in Q#
 
@@ -170,12 +170,12 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
     import qsharp
 
     from qsharp import Result
-    from Quantum.Bell import BellTest
+    from Quantum.Bell import TestBellState
 
     initials = (Result.Zero, Result.One)
 
     for i in initials:
-      res = BellTest.simulate(count=1000, initial=i)  
+      res = TestBellState.simulate(count=1000, initial=i)
       (num_zeros, num_ones) = res
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
@@ -202,7 +202,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
                     Result[] initials = new Result[] { Result.Zero, Result.One };
                     foreach (Result initial in initials)
                     {
-                        var res = BellTest.Run(qsim, 1000, initial).Result;
+                        var res = TestBellState.Run(qsim, 1000, initial).Result;
                         var (numZeros, numOnes) = res;
                         System.Console.WriteLine(
                             $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4}");
@@ -302,7 +302,7 @@ The program will exit after you press a key.
 
 ## Prepare superposition
 
-Now we want to manipulate the qubit. First we'll just try to flip it. This is accomplished by performing an `X` gate before we measure it in `BellTest`:
+Now we want to manipulate the qubit. First we'll just try to flip it. This is accomplished by performing an `X` gate before we measure it in `TestBellState`:
 
 ```qsharp
 X(qubit);
@@ -398,14 +398,14 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
         mutable agree = 0;
         using ((q0, q1) = (Qubit(), Qubit())) {
             for (test in 1..count) {
-                Set (initial, q0);
-                Set (Zero, q1);
+                Set(initial, q0);
+                Set(Zero, q1);
 
                 H(q0);
-                CNOT(q0,q1);
-                let res = M (q0);
+                CNOT(q0, q1);
+                let res = M(q0);
 
-                if (M (q1) == res) {
+                if (M(q1) == res) {
                     set agree += 1;
                 }
 
@@ -413,7 +413,6 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
                 if (res == One) {
                     set numOnes += 1;
                 }
-                
             }
             
             Set(Zero, q0);
@@ -433,12 +432,12 @@ The new return value (`agree`) keeps track of every time the measurement from th
 import qsharp
 
 from qsharp import Result
-from Quantum.Bell import BellTest
+from Quantum.Bell import TestBellState
 
 initials = {Result.Zero, Result.One} 
 
 for i in initials:
-    res = BellTest.simulate(count=1000, initial=i)  
+    res = TestBellState.simulate(count=1000, initial=i)
     (num_zeros, num_ones, agree) = res
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
@@ -452,7 +451,7 @@ for i in initials:
                 Result[] initials = new Result[] { Result.Zero, Result.One };
                 foreach (Result initial in initials)
                 {
-                    var res = BellTest.Run(qsim, 1000, initial).Result;
+                    var res = TestBellState.Run(qsim, 1000, initial).Result;
                     var (numZeros, numOnes, agree) = res;
                     System.Console.WriteLine(
                         $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4} agree={agree,-4}");

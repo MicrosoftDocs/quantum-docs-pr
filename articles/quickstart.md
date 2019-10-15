@@ -124,14 +124,14 @@ A quantum gate transforms the state of a qubit. The name comes from the analogy 
 `Set` operation:
 
     ```qsharp
-    operation BellTest (count : Int, initial: Result) : (Int, Int) {
+    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
 
         mutable numOnes = 0;
         using (qubit = Qubit()) {
 
             for (test in 1..count) {
-                Set (initial, qubit);
-                let res = M (qubit);
+                Set(initial, qubit);
+                let res = M(qubit);
 
                 // Count the number of ones we saw:
                 if (res == One) {
@@ -306,7 +306,7 @@ Now we want to manipulate the qubit. First we'll just try to flip it. This is ac
 
 ```qsharp
 X(qubit);
-let res = M (qubit);
+let res = M(qubit);
 ```
 
 Now the results (after pressing `F5`) are reversed:
@@ -316,11 +316,11 @@ Init:Zero 0s=0    1s=1000
 Init:One  0s=1000 1s=0
 ```
 
-However, everything we've seen so far is classical. Let's get a quantum result. All we need to do is replace the `X` gate in the previous run with an `H` or Hadamard gate. Instead of flipping the qubit all the way from 0 to 1, we will only flip it halfway. The replaced lines in `BellTest` now look like:
+However, everything we've seen so far is classical. Let's get a quantum result. All we need to do is replace the `X` gate in the previous run with an `H` or Hadamard gate. Instead of flipping the qubit all the way from 0 to 1, we will only flip it halfway. The replaced lines in `TestBellState` now look like:
 
 ```qsharp
 H(qubit);
-let res = M (qubit);
+let res = M(qubit);
 ```
 
 Now the results get more interesting:
@@ -334,21 +334,21 @@ Every time we measure, we ask for a classical value, but the qubit is halfway be
 
 ## Prepare entanglement
 
-Now we'll make the promised [Bell state](https://en.wikipedia.org/wiki/Bell_state) and show off __entanglement__. The first thing we'll need to do is allocate 2 qubits instead of one in `BellTest`:
+Now we'll prepare the promised [Bell state](https://en.wikipedia.org/wiki/Bell_state) and show off __entanglement__. The first thing we'll need to do is allocate 2 qubits instead of one in `TestBellState`:
 
 ```qsharp
 using ((q0, q1) = (Qubit(), Qubit())) {
 ```
 
-This will allow us to add a new gate (`CNOT`) before we measure  (`M`) in `BellTest`:
+This will allow us to add a new gate (`CNOT`) before we measure  (`M`) in `TestBellState`:
 
 ```qsharp
-Set (initial, q0);
-Set (Zero, q1);
+Set(initial, q0);
+Set(Zero, q1);
 
 H(q0);
-CNOT(q0,q1);
-let res = M (q0);
+CNOT(q0, q1);
+let res = M(q0);
 ```
 
 We've added another `Set` operation to initialize the first qubit to make sure that it's always in the `Zero` state when we start.
@@ -363,13 +363,11 @@ Set(Zero, q1);
 The full routine now looks like this:
 
 ```qsharp
-    operation BellTest (count : Int, initial: Result) : (Int,Int) {
+    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
 
         mutable numOnes = 0;
         using ((q0, q1) = (Qubit(), Qubit())) {
-        {
-            for (test in 1..count)
-            {
+            for (test in 1..count) {
                 Set (initial, q0);
                 Set (Zero, q1);
 
@@ -392,15 +390,14 @@ The full routine now looks like this:
     }
 ```
 
-If we run this, we'll get exactly the same 50-50 result we got before. However, what we're interested in is how the second qubit reacts to the first being measured. We'll add this statistic with a new version of the `BellTest` operation:
+If we run this, we'll get exactly the same 50-50 result we got before. However, what we're interested in is how the second qubit reacts to the first being measured. We'll add this statistic with a new version of the `TestBellState` operation:
 
 ```qsharp
-    operation BellTest (count : Int, initial: Result) : (Int, Int, Int) {
+    operation TestBellState(count : Int, initial : Result) : (Int, Int, Int) {
         mutable numOnes = 0;
         mutable agree = 0;
         using ((q0, q1) = (Qubit(), Qubit())) {
-            for (test in 1..count)
-            {
+            for (test in 1..count) {
                 Set (initial, q0);
                 Set (Zero, q1);
 

@@ -9,7 +9,7 @@ uid: microsoft.quantum.write-program
 ---
 # Write your first quantum program
 
-Learn how to write a quantum program using the Microsoft QDK. You will write an application to demonstrate quantum entanglement using a **Bell State**.
+Learn how to write a quantum program using the Microsoft QDK. You will write an application to demonstrate quantum entanglement using a **Bell state**.
 
 You start with the simplest program possible and build it up to demonstrate [quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) and [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement).
 

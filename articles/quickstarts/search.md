@@ -44,6 +44,12 @@ Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.
 
 ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
 
+To run your new Q# program from Python, save the following code as `host.py`:
+
+[!code-python[](~/quantum/samples/algorithms/simple-grover/host.py)]
+
+You can then run your Python host program from the command line:
+
 ```bash
 $ python host.py
 Preparing Q# environment...
@@ -55,6 +61,12 @@ Reflecting about marked state...
 ```
 
 ### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
+
+To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
+
+[!code-python[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+
+You can then run your C# host program from the command line:
 
 ```bash
 $ dotnet run

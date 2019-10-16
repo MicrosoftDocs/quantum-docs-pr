@@ -38,7 +38,7 @@ To define the list that we're searching, create a new file `Reflections.qs`, and
 
 [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/Reflections.qs)]
 
-The `ReflectAboutMarked` operation in this file represents the problem we're trying to solve with Grover's algorithm, in this case by reflecting bitstings made up of alternating zeros and ones.
+The `ReflectAboutMarked` operation in this file represents the problem we're trying to solve with Grover's algorithm, in this case by reflecting bitstrings made up of alternating zeros and ones.
 
 Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.
 

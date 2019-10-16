@@ -64,7 +64,7 @@ Reflecting about marked state...
 
 To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
 
-[!code-python[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+[!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
 
 You can then run your C# host program from the command line:
 

@@ -14,7 +14,7 @@ This introduction uses [Grover's Algorithm][grover] to search inputs to a functi
 This algorithm can be used to search for inputs with some special property, to find items in an unstructured list, and so forth.
 Grover's algorithm lets us use a quantum computer to run this search in less steps than the number of items in the list that we're searching — something no classical algorithm can do.
 
-In this introduction, we see how we can use Q# and the Quantum Development Kit to run Grover's algorithm with just a few lines of code.
+You can use Q# and the Quantum Development Kit to run Grover's algorithm with just a few lines of code.
 
 ## Prerequisites
 

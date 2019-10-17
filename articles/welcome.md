@@ -1,6 +1,6 @@
 ---
 uid: microsoft.quantum.welcome
-title: Getting started with Microsoft Quantum
+title: Get started with Microsoft Quantum
 description: Learn how to get started with Microsoft Quantum and the QDK. 
 author: natke
 ms.author: nakersha
@@ -8,7 +8,7 @@ ms.date: 10/17/2019
 ms.topic: overview
 ---
 
-# Getting started with Microsoft Quantum and the Quantum Development Kit (QDK)
+# Get started with Microsoft Quantum and the Quantum Development Kit (QDK)
 
 Microsoft Quantum, and the QDK give you the ability to program quantum algorithms, and learn quantum computing. We provide you with a multitude of learning journeys and examples.
 

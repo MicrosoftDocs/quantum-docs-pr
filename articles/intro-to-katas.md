@@ -28,7 +28,7 @@ You can develop using the Katas in your environment of choice:
 * Visual Studio
 * VS Code
 
-## Kata topic highlights
+## What can I learn with a kata?
 
 ### Quantum computing concepts
 

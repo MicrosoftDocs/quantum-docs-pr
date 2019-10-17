@@ -32,9 +32,11 @@ You can learn about the libraries that are provided with the QDK.
 
 ## Code first
 
-Dive into a 5-minute [quickstart](xref:microsoft.quantum.write-program) to code a Bell state
+Dive into a 5-minute [quickstart](xref:microsoft.quantum.write-program) to code a Bell state.
 
-Implement [Grover's algorithm](xref:microsoft.quantum.quickstart.grover) in just a few lines of code
+Implement [Grover's algorithm](xref:microsoft.quantum.quickstart.grover) in just a few lines of code.
+
+Try one of the [Quantum Katas](xref:microsoft.quantum.overview.katas), short training exercises to teach you how to program in Q# and learn quantum computing.
 
 ## Learn about the libraries
 

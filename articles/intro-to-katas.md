@@ -5,7 +5,7 @@ author: natke
 ms.author: nakersha 
 ms.date: 10/17/2019
 ms.topic: overview
-uid: microsoft.quantum.katas
+uid: microsoft.quantum.overview.katas
 ---
 
 # Get started with the Quantum Katas

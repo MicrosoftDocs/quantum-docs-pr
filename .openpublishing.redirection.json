@@ -209,22 +209,22 @@
         {
             "source_path": "articles/install-guide/command-line.md",
             "redirect_url": "articles/install-guide",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "articles/install-guide/csharp.md",
             "redirect_url": "articles/install-guide",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "articles/install-guide/jupyter.md",
             "redirect_url": "articles/install-guide",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "articles/install-guide/python.md",
             "redirect_url": "articles/install-guide",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "articles/install-guide/vs-2017.md",
@@ -234,7 +234,7 @@
         {
             "source_path": "articles/install-guide/vs-code.md",
             "redirect_url": "articles/install-guide",
-            "redirect_document_id": true
+            "redirect_document_id": false
         }
     ]
 }

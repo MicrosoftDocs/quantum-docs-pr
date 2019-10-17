@@ -209,7 +209,7 @@ let imaginaryUnit = Complex(0.0, 1.0);
 Alternatively, new values can be created from existing ones using [copy-and-update expressions](xref:microsoft.quantum.language.expressions#copy-and-update-expressions). 
 Like for arrays, such expressions copy all item values of the original expression, 
 with the exception of the specified named items. For these the values are set to the ones defined on the right hand side of the expression. 
-Any other language constructs, like for example [update-and-reassign statements](xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols), that are available for array items exist for named-items in user defined types as well. 
+Any other language constructs, like for example [update-and-reassign statements](xref:microsoft.quantum.language.statements#update-and-reassign-statement), that are available for array items exist for named-items in user defined types as well.
 
 ```qsharp
 newtype ComplexArray = (Count : Int, Data : Complex[]);
@@ -263,7 +263,7 @@ Specifically, functions may not allocate or borrow qubits, nor may they call ope
 It is possible, however, to pass them operations or qubits for processing.
 Functions are thus entirely deterministic in the sense that calling them with the same arguments will always produce the same result. 
 
-Together, operations and functions are called _callables_.
+Together, operations and functions are called _callables_.  You can see some [examples](#examples) of these below.
 
 All Q# callables are considered to take a single value as input
 and return a single value as output.
@@ -472,3 +472,71 @@ a valid invocation of `Controlled Rz` (note the parentheses around `0.1, target`
 
 As another example, `CNOT(control, target)` can be implemented as `Controlled X([control], target)`. 
 If a target should be controlled by 2 control qubits (CCNOT), we can use `Controlled X([control1, control2], target)` statement.
+
+### Examples
+
+This example of a Q# operation comes from the [Measurement](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/measurement) sample. Within operations, we can allocate qubits and use quantum operations on those qubits such as `H` and `X`:
+
+```qsharp
+/// # Summary
+/// Prepares a state and measures it in the Pauli-Z basis.
+operation MeasureOneQubit () : Result {
+        mutable result = Zero;
+
+        using (qubit = Qubit()) { // Allocate a qubit
+            H(qubit);               // Use a quantum operation on that qubit
+
+            set result = M(qubit);      // Measure the qubit
+
+            if (result == One) {    // Reset the qubit so that it can be released
+                X(qubit);
+            }
+
+            return result;
+        }
+ }
+```
+
+This example of a function comes from the [PhaseEstimation](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) sample. It contains purely classical code. You can see that, unlike the example above, no qubits are allocated, and no quantum operations are used.
+
+
+```qsharp
+/// # Summary
+/// Given two arrays, returns a new array that is the pointwise product
+/// of each of the given arrays.
+function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
+    mutable product = new Double[Length(left)];
+
+    for (idxElement in IndexRange(left)) {
+        set product w/= idxElement <- left[idxElement] * right[idxElement];
+    }
+    return product;
+}
+```
+
+It is also possible for a function to be passed qubits for processing, as in this example from the [ReversibleLogicSynthesis](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/reversible-logic-synthesis) sample. Qubits are passed to the function and used for processing, although at no point are the qubit states themselves modified.
+
+```qsharp
+/// # Summary
+/// Translate MCT masks into multiple-controlled Toffoli gates (with single
+/// targets).
+function GateMasksToToffoliGates (qubits : Qubit[], masks : MCMTMask[]) : MCTGate[] {
+
+    mutable result = new MCTGate[0];
+    let n = Length(qubits);
+
+    for (i in 0 .. Length(masks) - 1) {
+        let (controls, targets) = (masks[i])!;
+        let controlBits = IntegerBits(controls, n);
+        let targetBits = IntegerBits(targets, n);
+        let cQubits = Subarray(controlBits, qubits);
+        let tQubits = Subarray(targetBits, qubits);
+
+        for (target in tQubits) {
+            set result += [MCTGate(cQubits, target)];
+        }
+    }
+
+    return result;
+}
+```

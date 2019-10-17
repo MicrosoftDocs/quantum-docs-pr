@@ -10,7 +10,7 @@ ms.topic: overview
 
 # Get started with Microsoft Quantum and the Quantum Development Kit (QDK)
 
-Microsoft Quantum, and the QDK give you the ability to program quantum algorithms, and learn quantum computing. We provide you with a multitude of learning journeys and examples.
+Microsoft Quantum, and the QDK give you the tools to program quantum algorithms, and learn quantum computing. We provide you with a multitude of learning journeys and examples.
 
 You can read up about how quantum computing works and what quantum computers can do.
 

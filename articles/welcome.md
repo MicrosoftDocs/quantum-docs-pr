@@ -10,7 +10,7 @@ ms.topic: overview
 
 # Getting started with Microsoft Quantum and the Quantum Development Kit (QDK)
 
-Microsoft quantum and the QDK with its Q# language give you the ability to program quantum algorithms, and learn quantum computing. We provide you with a multitude of learning journeys and examples.
+Microsoft Quantum, and the QDK give you the ability to program quantum algorithms, and learn quantum computing. We provide you with a multitude of learning journeys and examples.
 
 You can read up about how quantum computing works and what quantum computers can do.
 
@@ -47,7 +47,6 @@ Watch this [video](https://www.microsoft.com/en-us/videoplayer/embed/RE2JOJf) to
 
 ## Go deeper
 
-* Introduction to the [katas](link to new page)
 * Develop on your local machine with the host programming language and development environment of choice:
   * Develop with [Python](~/install-guide/install.md#develop-with-python)
   * Develop with [Visual Studio](~/install-guide/install.md#develop-with-visual-studio)

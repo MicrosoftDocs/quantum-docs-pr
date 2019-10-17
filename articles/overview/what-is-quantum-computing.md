@@ -1,11 +1,11 @@
 ---
 title: What is quantum computing?
-description: 
+description: Learn what quantum computing is, and what a quantum computer can do
 author: natke
-ms.author:  
+ms.author: nakersha
 ms.date: 10/14/2019
 ms.topic: article
-uid: microsoft.quantum.overview.whatis
+uid: microsoft.quantum.overview.what
 ---
 
 # What is quantum computing?
@@ -14,13 +14,15 @@ Quantum computing is the application of quantum physics to the field of computer
 
 ## The qubit
 
-The basic unit of quantum computing is the `qubit`. Unlike a `bit` in classical computing, which can be `0` or `1`, a qubit can be in an infinite number of states - a **superposition** of both 0 and 1.
+In quantum computing, a quantum bit is a unit of quantum information, like a classical bit. Where classical bits hold a single binary value such as a 0 or 1, a qubit can hold both values at the same time. This is called **superposition**.
 
 The act of **measurement** changes a qubit. It goes from being in the infinite states of superposition to one of the binary states of 0 or 1. Again, measurement of a qubit is unlike a classical bit, which when 0 is measured as 0, and when 1 is measured as 1.
 
 Qubits can also be **entangled**: when we make a measurement of one entangled qubit, it affects the state of the other, even if the qubits are physically far apart.
 
 ## What can a quantum computer do?
+
+When multiple qubits act coherently, they can process multiple options simultaneously. This allows them to process information in a fraction of the time it would take even the fastest nonquantum systems.
 
 Quantum algorithms can be designed to take advantage of qubit superposition and entanglement to speed up classical algorithms, or to provide entirely new ways of modeling physical systems.
 

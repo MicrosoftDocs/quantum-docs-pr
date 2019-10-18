@@ -11,7 +11,7 @@ uid: microsoft.quantum.quickstarts.search
 # Search for marked inputs with Grover's Algorithm
 
 This introduction uses [Grover's Algorithm][grover] to search inputs to a function for an input with some particular property; that is, for a _marked input_.
-This algorithm can be used to search for inputs with some special property, to find items in an unstructured list, and so forth.
+Grover's algorithm is used to search for inputs with some special property, to find items in an unstructured list, and so forth.
 Grover's algorithm lets us use a quantum computer to run this search in less steps than the number of items in the list that we're searching — something no classical algorithm can do.
 
 You can use Q# and the Quantum Development Kit to run Grover's algorithm with just a few lines of code.

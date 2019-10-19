@@ -24,7 +24,7 @@ You can build Grover's search algorithm with just a few lines of code.
 
 Grover's algorithm asks whether an item in a list is the one we are searching for. It does this by constructing a quantum superposition of the indexes of the list, with each coefficient, or probability amplitude, representing the probability of that specific index being the one you are looking for.
 
-At the heart of the algorithm are two steps that incrementally boosts the coefficient of the index that we are looking for, until the probability amplitude of that coefficient is one.
+At the heart of the algorithm are two steps that incrementally boost the coefficient of the index that we are looking for, until the probability amplitude of that coefficient is one.
 
 The number of incremental boosts is less than the number of items in the list. This is why Grover's search algorithm performs the search in less steps than any classical algorithm.
 

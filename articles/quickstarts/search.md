@@ -1,26 +1,36 @@
 ---
-title: "Q# quickstart: TODO"
-description: TODO
+title: Implement Grover's search algorithm in Q# using the Quantum Development Kit
+description: Build a Q# project that demonstrates one the canonical quantum algorithms.
 author: cgranade
 ms.author: chgranad@microsoft.com
-ms.date: 10/9/2019
+ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
 ---
 
-# Search for marked inputs with Grover's Algorithm
+# Quickstart: Implement Grover's search algorithm in Q#
 
-This introduction uses [Grover's Algorithm][grover] to search inputs to a function for an input with some particular property; that is, for a _marked input_.
-Grover's algorithm is used to search for inputs with some special property, to find items in an unstructured list, and so forth.
-Grover's algorithm lets us use a quantum computer to run this search in less steps than the number of items in the list that we're searching — something no classical algorithm can do.
+[Grover's search algorithm](grover) searches a list of unstructured data for specific items. For example, it can answer the question: is this card drawn from a pack of cards an ace of hearts? The labeling of the specific item is called _marked input_.
 
-You can use Q# and the Quantum Development Kit to run Grover's algorithm with just a few lines of code.
+Using Grover's search algorithm, a quantum computer is guaranteed to run this search in less steps than the number of items in the list that we're searching — something no classical algorithm can do. The speed-up in the case of a pack of cards is negligible, however in lists containing millions or billions of items, it becomes significant.
+
+You can build Grover's search algorithm with just a few lines of code.
 
 ## Prerequisites
 
 - The Microsoft [Quantum Development Kit][install].
 
-## Writing Grover's Algorithm
+## What does Grover's search algorithm do?
+
+Grover's algorithm asks whether an item in a list is the one we are searching for. It does this by constructing a quantum superposition of the indexes of the list, with each coefficient, or probability amplitude, representing the probability of that specific index being the one you are looking for.
+
+At the heart of the algorithm are two steps that incrementally boosts the coefficient of the index that we are looking for, until the probability amplitude of that coefficient is one.
+
+The number of incremental boosts is less than the number of items in the list. This is why Grover's search algorithm performs the search in less steps than any classical algorithm.
+
+![Functional diagram of Grover's search algorithm](~/media/grover.png)
+
+## Write the code
 
 Using the Quantum Development Kit, create a new Q# project:
 
@@ -29,7 +39,6 @@ $ dotnet new console -lang Q# --output Grover
 $ cd Grover
 ```
 
-Grover's algorithm itself can be written using just a few lines.
 Add the following code to the `Operations.qs` file in your new project:
 
 [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs?highlight=5,27)]

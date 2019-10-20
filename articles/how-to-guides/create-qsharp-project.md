@@ -69,7 +69,7 @@ You can now continue to develop your quantum program.
 
 1. Pre-requisites
 
-    - The [Quantum Development Kit for Jupyter notebooks](~/install-guide/index.md#develop-with-jupyter)
+    - The [Quantum Development Kit for Jupyter notebooks](~/install-guide/index.md#develop-with-jupyter-notebooks)
 
 1. Run the following command to start the notebook server:
 
@@ -99,7 +99,7 @@ You can now add other Q# operations to continue your quantum development.
 
 1. Pre-requisites
 
-    - The [Quantum Development Kit for Visual Studio](~/install-guide/index.md#develop-with-visual-studio)
+    - The [Quantum Development Kit for Visual Studio](~/install-guide/index.md#develop-with-c-on-windows-using-visual-studio)
 
 1. Create a new Q# application
 
@@ -128,7 +128,7 @@ You can now continue your quantum development using Visual Studio
 
 1. Pre-requisites
 
-    - The [Quantum Development Kit for VS Code](~/install-guide/index.md#develop-with-vs-code)
+    - The [Quantum Development Kit for VS Code](~/install-guide/index.md#develop-with-c-using-vs-code)
 
 1. Create a new project:
 
@@ -151,7 +151,7 @@ You can now continue your quantum development using Visual Studio Code.
 
 1. Pre-requisites
 
-    - The [Quantum Development Kit for the Command Line](~/install-guide/index.md#develop-with-command-line)
+    - The [Quantum Development Kit for the Command Line](~/install-guide/index.md#develop-with-c-using-the-dotnet-command-line-tool)
 
 1. Create a new application
 

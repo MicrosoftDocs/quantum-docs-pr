@@ -106,7 +106,7 @@ So, applying the [`H`](microsoft.quantum.intrinsic.h) (Hadamard) to the first qu
 ```qsharp
 
 Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled [`R1`](microsoft.quantum.intrinsic.r1) rotations.
-An `R1($\theta$, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{i\theta}$ to the $\ket{1}$ component.
+An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{iθ}$ to the $\ket{1}$ component.
 
 
 #### Controlled operations
@@ -128,7 +128,7 @@ Note that we use the `PI()` function from the `Microsoft.Quantum.Math` namespace
 Additionally, we divide by a `Double` (e.g. `2.0`) because dividing by an integer `2` would throw a type error. 
 
 > [!NOTE]
-> `R1($\pi$/2)` and `R1($\pi$/4)` are equivalent to the `S` and `T` operations (also in `Microsoft.Quantum.Intrinsic`)
+> `R1(π/2)` and `R1(π/4)` are equivalent to the `S` and `T` operations (also in `Microsoft.Quantum.Intrinsic`)
 
 
 After applying the relevant Hadamards and controlled rotations to the second and third qubits:

@@ -34,8 +34,7 @@ Choose your development environment and language from the sections below:
 1. Create a Q# file called `Operation.qs`, and add your Q# code to it. For example:
 
     ```qsharp
-    namespace HelloWorld
-    {
+    namespace HelloWorld {
         open Microsoft.Quantum.Intrinsic;
         open Microsoft.Quantum.Canon;
 

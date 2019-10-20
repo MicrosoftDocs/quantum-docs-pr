@@ -21,7 +21,7 @@ Choose your development environment and language from the sections below:
 * [Create a Jupyter notebooks project](#create-a-jupyter-notebook-project)
 * [Create a C# project, using Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
 * [Create a C# project, using VS Code](#create-a-c-project-using-vs-code)
-* [Create a C# project, using the command line](create-a-c-project-using-the-dotnet-command-line-tool)
+* [Create a C# project, using the command line](#create-a-c-project-using-the-dotnet-command-line-tool)
 
 ## Create a Python project
 

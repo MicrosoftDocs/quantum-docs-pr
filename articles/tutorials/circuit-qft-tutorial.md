@@ -102,7 +102,7 @@ namespace Quantum.Operations {
 Inside the file, we define the namespace `Quantum.Operations`, which will be accessed/imported by the classical host. 
 After opening the relevant `Microsoft.Quantum.<>` namespaces to access existing Q# operations, we proceed to define the `perform_3qubit_qft` operation.
 For now, the operation takes no arguments, and does not return anything. 
-Later, we will modify it to return an array of measurement results, at which point `Unit` will be replaced by `Result[]`.
+Later, we will modify it to return an array of measurement results, at which point `Unit` will be replaced by `Result[]`. 
 
 #### Allocating qubits with `using`
 Within our Q# operation, we first allocate a register of three qubits with the `using` statement.

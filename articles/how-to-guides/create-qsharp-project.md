@@ -17,17 +17,17 @@ A Q# project contains Q# files containing quantum code, as well as a host progra
 
 Choose your development environment and language from the sections below:
 
-* [Create a Python project](#create-a-python-project)
-* [Create a Jupyter notebooks project](#create-a-jupyter-notebook-project)
-* [Create a C# project, using Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
-* [Create a C# project, using VS Code](#create-a-c-project-using-vs-code)
-* [Create a C# project, using the command line](#create-a-c-project-using-the-dotnet-command-line-tool)
+* [Python](#create-a-python-project)
+* [Jupyter notebooks](#create-a-jupyter-notebook-project)
+* [C#, using Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
+* [C#, using VS Code](#create-a-c-project-using-vs-code)
+* [C#, using the command line](#create-a-c-project-using-the-dotnet-command-line-tool)
 
 ## Create a Python project
 
 1. Pre-requisites
 
-    - The [Quantum Development Kit for Python](~/install-guide/index.md#develop-with-python)
+     * The [Quantum Development Kit for Python](~/install-guide/index.md#develop-with-python)
 
 1. Create a folder for your project, and navigate to that folder
 
@@ -75,7 +75,7 @@ You can now continue to develop your quantum program.
 
 1. Pre-requisites
 
-    - The [Quantum Development Kit for Jupyter notebooks](~/install-guide/index.md#develop-with-jupyter-notebooks)
+    * The [Quantum Development Kit for Jupyter notebooks](~/install-guide/index.md#develop-with-jupyter-notebooks)
 
 1. Run the following command to start the notebook server:
 
@@ -105,16 +105,16 @@ You can now add other Q# operations to continue your quantum development.
 
 1. Pre-requisites
 
-    - The [Quantum Development Kit for Visual Studio](~/install-guide/index.md#develop-with-c-on-windows-using-visual-studio)
+    * The [Quantum Development Kit for Visual Studio](~/install-guide/index.md#develop-with-c-on-windows-using-visual-studio)
 
 1. Create a new Q# application
 
-    - Go to **File** -> **New** -> **Project**
-    - Type `Q#` in the search box
-    - Select **Q# Application**
-    - Select **Next**
-    - Choose a name and location for your application
-    - Select **Create**
+    * Go to **File** -> **New** -> **Project**
+    * Type `Q#` in the search box
+    * Select **Q# Application**
+    * Select **Next**
+    * Choose a name and location for your application
+    * Select **Create**
 
 1. Inspect the project
 
@@ -122,8 +122,8 @@ You can now add other Q# operations to continue your quantum development.
 
 1. Run the application
 
-    - Select **Debug** -> **Start Without Debugging**
-    - You should see the text `Hello quantum world!` printed to a console window.
+    * Select **Debug** -> **Start Without Debugging**
+    * You should see the text `Hello quantum world!` printed to a console window.
 
 You can now continue your quantum development using Visual Studio
 
@@ -134,19 +134,19 @@ You can now continue your quantum development using Visual Studio
 
 1. Pre-requisites
 
-    - The [Quantum Development Kit for VS Code](~/install-guide/index.md#develop-with-c-using-vs-code)
+    * The [Quantum Development Kit for VS Code](~/install-guide/index.md#develop-with-c-using-vs-code)
 
 1. Create a new project:
 
-    - Go to **View** -> **Command Palette**
-    - Select **Q#: Create New Project**
-    - Navigate to the location on the file system where you would like to create the application
-    - Click on the **Open new project...** button, once the project has been created
+    * Go to **View** -> **Command Palette**
+    * Select **Q#: Create New Project**
+    * Navigate to the location on the file system where you would like to create the application
+    * Click on the **Open new project...** button, once the project has been created
 
 1. Run the application:
 
-    - Go to **Debug** -> **Start Without Debugging**
-    - You should see the following text in the output window `Hello quantum world!`
+    * Go to **Debug** -> **Start Without Debugging**
+    * You should see the following text in the output window `Hello quantum world!`
 
 You can now continue your quantum development using Visual Studio Code.
 
@@ -157,7 +157,7 @@ You can now continue your quantum development using Visual Studio Code.
 
 1. Pre-requisites
 
-    - The [Quantum Development Kit for the Command Line](~/install-guide/index.md#develop-with-c-using-the-dotnet-command-line-tool)
+    * The [Quantum Development Kit for the Command Line](~/install-guide/index.md#develop-with-c-using-the-dotnet-command-line-tool)
 
 1. Create a new application
 

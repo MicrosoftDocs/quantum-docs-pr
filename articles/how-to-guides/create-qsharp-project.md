@@ -1,6 +1,6 @@
 ---
 title: Learn how to create a Q# project with the Quantum Development Kit (QDK)
-description: 
+description: Initialize a project for quantum development with the QDK and Q# in the development environment of you choice
 author: natke
 ms.author: nakersha
 ms.date: 10/19/2019
@@ -9,7 +9,7 @@ ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
 ---
 
-# Install the Microsoft Quantum Development Kit (QDK)
+# Create a Q# project in your development environment
 
 Learn how to create a Q# project with the QDK.
 

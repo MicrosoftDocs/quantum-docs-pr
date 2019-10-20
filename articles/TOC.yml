@@ -4,12 +4,16 @@
   href: welcome.md
 - name: Quickstarts
   items:
+  - name: Write your first quantum program
+    href: quickstart.md
+- name: How-to guides
+  items:
   - name: Install the QDK
     href: install-guide/index.md
   - name: Update the QDK
     href: install-guide/update.md  
-  - name: Write your first quantum program
-    href: quickstart.md
+  - name: Create a Q# project
+    href: how-to-guides/create-qsharp-project.md
 - name: Concepts
   items:
   - name: Quantum development techniques

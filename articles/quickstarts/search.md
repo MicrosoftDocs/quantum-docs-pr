@@ -32,12 +32,7 @@ The number of incremental boosts is less than the number of items in the list. T
 
 ## Write the code
 
-Using the Quantum Development Kit, create a new Q# project:
-
-```
-$ dotnet new console -lang Q# --output Grover
-$ cd Grover
-```
+Using the Quantum Development Kit, [create a new Q# project](xref:microsoft.quantum.howto.createproject) called **Grover**, in your development environment of choice.
 
 Add the following code to the `Operations.qs` file in your new project:
 

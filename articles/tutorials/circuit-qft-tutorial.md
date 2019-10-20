@@ -1,27 +1,28 @@
 ﻿---
-title: Tutorial: Simulate a quantum circuit | Microsoft Docs
-description: Step-by-step tutorial to simulate a basic quantum circuit in Q#. Explore quantum gates and superposition.
+title: Tutorial: Addressing individual qubits in a quantum program | Microsoft Docs
+description: Step-by-step tutorial on writing and simulating a quantum program which operates at the individual qubit level
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.topic: tutorial 
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
-# Customer intent: As a newcomer to the Q# (any amount of quantum experience), I want to know how to write and simulate a quantum circuit in Q# so that I can explore further on my own.
 ---
 
 
 
-# Tutorial: Simulate quantum circuits in Q#
-Welcome to the Quantum Development Kit tutorial on setting up and simulating a basic quantum circuit. 
-It is important to note that the Q# language is far more than a new syntax for simulating quantum circuits. 
-If that were the only goal, a mere library of classical functions would have sufficed, because a quantum circuit is nothing more than the state's evolution through a specific sequence of gates---all of which can be fully expressed through matrix multiplication.
-Just as higher level classical languages like C and Python allow one to go beyond simulating sequences of AND and OR gates, Q# has been specifically designed with a computational paradigm shift in mind. 
-It is to be used for writing subroutines that, under the control of a classical host program and computer, execute on a separate quantum processing unit, thereby allowing developers to fully harness this classical-quantum symbiosis in full-scale quantum programs.
+# Tutorial: Write and simulate qubit-level programs in Q#
+Welcome to the Quantum Development Kit tutorial on writing and simulating a basic quantum program operating on individual qubits. 
 
-However, if you are new to the ideas of quantum computation, or a researcher interested in fiddling with some ideas, small scale circuit simulation can nevertheless be a valuable tool---and, of course, it is still made easy with Q#.
-Having already [installed the QDK and set up your environment](xref:microsoft.quantum.install), you're probably eager to get started. 
-In this tutorial, we will show you the necessary components of running an application with Q# as we set up and simulate the circuit for the quantum Fourier transform, a subroutine that is integral to many larger quantum algorithms.
-By the end, you will be ready to take quantum circuits from paper and run them in Q#.
+While higher-level algorithms such as Grover's search are where the power of quantum computation (link to Eduardo's doc on impact?) is manifested, even the most complex programs are built upon operations at the qubit-level. 
+The flexibility of Q# allows users to approach quantum systems from any such level of abstraction, and in this tutorial we dive down to individual qubits.
+This low-level view of quantum information processing is often desribed in terms of ["quantum circuits"](xref:microsoft.quantum.concepts.circuits) as it simply corresponds to the sequential application of gates to specific qubits of a system.
+Specifically, we take a look under the hood of the [quantum Fourier transform](https://en.wikipedia.org/wiki/Quantum_Fourier_transform), a subroutine that is integral to many larger quantum algorithms.
+
+
+## Pre-requisites
+
+* [Install](xref:microsoft.quantum.install) the Quantum Development Kit using your preferred language and development environment
+* If you already have the QDK installed, make sure you have [updated](xref:microsoft.quantum.update) to the latest version
 
 
 ## In this tutorial, you'll learn how to:
@@ -36,29 +37,134 @@ Applications developed with Microsoft's Quantum Development Kit typically consis
 1. One or more quantum algorithms, implemented using the Q# quantum programming language, and invoked by the classical host program. These consist of 
 	- Q# operations: subroutines containing quantum operations, and 
 	- Q# functions: classical subroutines used within the quantum algorithm.
-2. A classical program, implemented in a classical programming language like Python or C#, 
-  that serves as the main entry point and will invoke Q# operations 
-  when it wants to execute a quantum algorithm.
-
-In this tutorial we will first set up the Q# program, allocating qubits and applying those quantum gates which comprise the quantum Fourier transform. 
-Additionally, we show how the `DumpMachine` function can be used to print the wavefunction of our full simulated system---a useful tool for debugging more complex quantum programs or simply exploring how quantum gates behave.
-Then, we will direct our attention to the classical host file which calls our Q# program on a target machine (in our case, the full state simulator) and processes any returned output. 
-We describe this process in both Python and C#.
-
+2. A classical program, implemented in a classical programming language like Python or C#, that serves as the main entry point and will invoke Q# operations when it wants to execute a quantum algorithm.
 
 ## Allocate qubits and define quantum operations
 
 The first part of this tutorial will consist of defining the Q# operation `perform_3qubit_qft`, which will perform the quantum Fourier transform on three qubits. 
-Here, we will create the Q# file that defines the circuit in terms of basic gates (from the `Microsoft.Quantum.Intrinsic` namespace) within a single Q# operation. 
-That operation can then be called and simulated by the classical host, returning classical values to it when complete (e.g. measurement counts). 
 
-### Simulate the circuit without measurement
+The [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) function is a useful tool for debugging complex quantum programs, as it prints the simulated full wavefunction of the quantum system whenever called. 
+Of course, within smaller programs we can also use it to simply observe how quantum states evolve across an operation---precisely what we will do with the quantum Fourier transform.
 
-Initially, we proceed to simulate the circuit without measurement, and simply use the `DumpMachine` function to print the simulated wavefunction at various steps. 
-Later, we will add measurement to the end of our circuit, and discuss some of the limitations of quantum computation that become glaringly clear.
+In your development environment, create a Q# file: `Operations.qs`.
+We will walk you through the components of the file step-by-step, but you can still find the code as a full block below.
 
-In your development environment, create a Q# file: `Operations.qs`. 
-Here we present the full code, with the explanation and description below:
+### Namespaces to access other Q# operations
+Inside the file, we first define the namespace `Quantum.Operations` which will be accessed/imported by the classical host, and then open the relevant `Microsoft.Quantum.<>` namespaces so our operation can access existing Q# operations:
+
+```qsharp
+namespace Quantum.Operations {
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Diagnostics;
+	open Microsoft.Quantum.Math;
+    open Microsoft.Quantum.Arrays;
+
+}
+```
+
+### Define operations with arguments and returns
+Next, we proceed to define the `perform_3qubit_qft` operation:
+
+```qsharp
+    operation perform_3qubit_qft() : Unit {
+
+	}
+```
+For now, the operation takes no arguments, and does not return anything. 
+Later, we will modify it to return an array of measurement results, at which point `Unit` will be replaced by `Result[]`. 
+
+### Allocating qubits with `using`
+Within our Q# operation, we first allocate a register of three qubits with the `using` statement:
+
+```qsharp
+        using (qs = Qubit[3]) {
+
+            Message("Initial state |000>:");
+            DumpMachine();
+
+		}
+
+```
+
+Note that with `using` the qubits are allocated in the $\ket{0}$ state, as we verify with [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) and [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) to print the system's current state ($\ket{000}$) to the host console.
+
+> [!NOTE]
+> The `Message(<string>)` and `DumpMachine()` functions (from `Microsoft.Quantum.Intrinsic` and `Microsoft.Quantum.Diagnostics`, respectively) both print directly to our classical host's console. 
+> Just like a real quantum computation, Q# does not allow us access to the state of qubits.
+> However, as `DumpMachine` prints the target machine's current state, it can provide valuable insight for debugging and learning in conjunction with the full state simulator.
+
+
+### Applying single-qubit and controlled gates
+
+Next, we apply the gates which comprise the operation itself (see the circuit diagram and explanation for the three-qubit example [here](https://en.wikipedia.org/wiki/Quantum_Fourier_transform#Example).
+Q# already contains many basic quantum gates as operations in the `Microsoft.Quantum.Intrinsic` namespace, and these are no exception. 
+To apply an operation to a specific qubit from a register (i.e. a single `Qubit()` from an array `Qubit[]`), we need only use standard index notation.
+So, applying the [`H`](microsoft.quantum.intrinsic.h) (Hadamard) to the first qubit of our register `qs` takes the form:
+
+```qsharp
+            H(qs[0]);
+```qsharp
+
+Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled [`R1`](microsoft.quantum.intrinsic.r1) rotations.
+An `R1($\theta$, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{i\theta}$ to the $\ket{1}$ component.
+
+
+#### Controlled operations
+
+Q# makes it extremely easy to condition the execution of an operation upon one or multiple control qubits.
+In general, we merely preface the call with `Controlled`, and the operation arguments change as:
+
+* `Op(<normal args>)` --> `Controlled Op([<control qubits>], (<normal args>))`.
+
+Note that the control qubits must be provided as an array, even if it is a single qubit.
+So, we call the `R1` gates acting on the first qubit (and controlled by the second third) as:
+
+```qsharp
+            Controlled R1([qs[1]], (PI()/2.0, qs[0]));
+            Controlled R1([qs[2]], (PI()/4.0, qs[0]));
+```
+
+Note that we use the `PI()` function from the `Microsoft.Quantum.Math` namespace to define the rotations in terms of pi radians.
+Additionally, we divide by a `Double` (e.g. `2.0`) because dividing by an integer `2` would throw a type error. 
+
+> [!NOTE]
+> `R1($\pi$/2)` and `R1($\pi$/4)` are equivalent to the `S` and `T` operations (also in `Microsoft.Quantum.Intrinsic`)
+
+
+After applying the relevant Hadamards and controlled rotations to the second and third qubits:
+
+```qsharp
+            //second qubit:
+            H(qs[1]);
+            Controlled R1([qs[2]], (PI()/2.0, qs[1]));
+
+            //third qubit:
+            H(qs[2]);
+```qsharp
+
+we need only apply a [`SWAP`](microsoft.quantum.intrinsic.swap) gate to complete the circuit:
+
+```qsharp
+            SWAP(qs[2], qs[0]);
+```qsharp
+
+This is necessary because the nature of the quantum Fourier transform outputs the qubits in reverse order, so the swaps allow for seamless integration of the subroutine into larger algorithms.
+
+
+#### De-allocate qubits
+We then call [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) again to see the post-operation state, and finally apply [`ResetAll`](microsoft.quantum.intrinsic.resetall) to the qubit register to reset our qubits to $\ket{0}$ before completing the operation:
+
+```qsharp
+            Message("After:");
+            DumpMachine();
+
+            ResetAll(qs);
+```
+
+Requiring that all de-allocated qubits be explicitly set to $\ket{0}$ is a basic feature of Q#.
+If it is not performed at the end of a `using` allocation block, a runtime error will be thrown.
+
+Your full Q# file should now look like this:
 
 ```qsharp
 namespace Quantum.Operations {
@@ -98,53 +204,8 @@ namespace Quantum.Operations {
 }
 ```
 
-#### Namespaces to access other Q# operations
-Inside the file, we define the namespace `Quantum.Operations`, which will be accessed/imported by the classical host. 
-After opening the relevant `Microsoft.Quantum.<>` namespaces to access existing Q# operations, we proceed to define the `perform_3qubit_qft` operation.
-For now, the operation takes no arguments, and does not return anything. 
-Later, we will modify it to return an array of measurement results, at which point `Unit` will be replaced by `Result[]`. 
 
-#### Allocating qubits with `using`
-Within our Q# operation, we first allocate a register of three qubits with the `using` statement.
-Note that the qubits are allocated in the $\ket{0}$ state, as we can verify by using `Message(<string>)` and `DumpMachine()` to print our system's current state ($\ket{000}$) to the host console.
-
-> [!NOTE]
-> The `Message(<string>)` and `DumpMachine()` functions (from `Microsoft.Quantum.Intrinsic` and `Microsoft.Quantum.Diagnostics`, respectively) both print directly to our classical host's console. 
-> Just like a real quantum computation, Q# does not allow us access to the state of qubits.
-> However, as `DumpMachine` prints the current state of the target machine (in this case, the full simulated state), it can provide valuable insight for debugging and learning.
-
-#### Applying normal and controlled gates
-Next, we apply the gates which comprise the QFT.
-Q# already contains many basic quantum gates as operations in the `Microsoft.Quantum.Intrinsic` namespace, and these are no exception. 
-To apply a gate to a specific qubit from a register (i.e. a single `Qubit()` from an array `Qubit[]`), we need only use standard index notation to reference the qubit.
-That is, for register `qs`, we use `qs[0]` to refer to the first qubit.
-
-Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled `R1` rotations.
-An `R1($\theta$, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{i\theta}$ to the $\ket{1}$ component.
-To define the QFT rotations in terms of pi radians, we use the `PI()` function from the `Microsoft.Quantum.Math` namespace, and divide by a `Double` (e.g. `2.0`).
-Dividing by an integer `2` would throw a type error. 
-
-> [!NOTE]
-> `R1($\pi$/2)` and `R1($\pi$/4)` are equivalent to the `S` and `T` operations (also in `Microsoft.Quantum.Intrinsic`)
-
-
-Q# makes it extremely easy to condition the execution of an operation upon one or multiple control qubits.
-As seen below, we merely preface the call with `Controlled`, and the operation arguments change as:
-
-* `Op(<normal args>)` --> `Controlled Op([<control qubits>], (<normal args>))`.
-
-Note that the control qubits must be provided as an array, even if it is a single qubit.
-
-After applying all the relevant Hadamards and controlled rotations, we need only apply a `SWAP` gate to complete the circuit.
-This is necessary because the nature of the QFT outputs the qubits in reverse order, so the swaps allow for seamless integration of the QFT subroutine into larger algorithms.
-
-#### De-allocate qubits
-We then call `DumpMachine()` again to see the post-QFT state, and finally apply `ResetAll` to the qubit register to reset our qubits to $\ket{0}$ before completing the operation. 
-Requiring that all de-allocated qubits be explicitly set to $\ket{0}$ is a basic feature of Q#.
-If it is not performed at the end of a `using` allocation block, a runtime error will be thrown.
-
-With the Q# file and operation complete, we move on to the classical host file.
-
+With the Q# file and operation complete, it is ready to be called and simulated by the classical host.
 
 ## Setup the classical host
 
@@ -261,6 +322,9 @@ After:
 
 ```
 
+
+To be filled:
+
 - add description of DumpMachine output from https://docs.microsoft.com/en-us/quantum/techniques/testing-and-debugging?view=qsharp-preview&tabs=tabid-vs2019#dump-functions
 
 - add full state LaTeX description of what we're seeing
@@ -276,15 +340,6 @@ After:
 	- see that the amplitude statistics begin to appear, but it's hardly efficient anymore. 
 	hence why the QFT likely won't replace classcial FFT, but rather has an important place as a subroutine
 	--> link to Phase Estimation page
-
-
-
-## Clean up resources
-
-If you're not going to continue to use this application, delete
-<resources> with the following steps:
-
-1. ...
 
 
 ## Next steps

@@ -10,6 +10,10 @@
     href: install-guide/update.md  
   - name: Write your first quantum program
     href: quickstart.md
+- name: Tutorials
+  items:
+  - name: Programs at the qubit level
+    href: tutorials/circuit-qft-tutorial.md
 - name: Concepts
   items:
   - name: Quantum development techniques

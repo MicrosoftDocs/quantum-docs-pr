@@ -10,9 +10,9 @@ summary: |-
   if `result` is `Zero`. If `One`, nothing happens to the `target`.
   The suffix `CA` indicates that the operation to be applied is unitary
   (controllable and adjointable).
-syntax: "operation ApplyIfZeroCA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
+syntax: "operation ApplyIfZeroCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
 input:
-  content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
+  content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
   types:
   - name: result
     summary: A measurement result that controls whether op is applied or not.
@@ -31,6 +31,7 @@ input:
         uid: Unit
     functors:
     - Adjoint
+    - Controlled
   - name: target
     summary: The input to which the operation is applied.
     uid: "'T"
@@ -45,6 +46,7 @@ typeParameters:
   summary: The input type of the operation to be conditionally applied.
 functors:
 - Adjoint
+- Controlled
 seeAlso:
 - microsoft.quantum.canon.applyifzeroc
 - microsoft.quantum.canon.applyifzeroa

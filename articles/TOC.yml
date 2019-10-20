@@ -1,36 +1,40 @@
-- name: Welcome
-  href: index.md
-- name: Quantum computing concepts
-  href: concepts/toc.yml
+- name: Microsoft Quantum Documentation
+  href: index.yml
+- name: Overview
+  href: welcome.md
 - name: Quickstarts
   items:
   - name: Install the QDK
     href: install-guide/index.md
-  - name: Write your first Quantum program
+  - name: Update the QDK
+    href: install-guide/update.md  
+  - name: Write your first quantum program
     href: quickstart.md
-- name: Tutorials
+- name: Concepts
   items:
-  - name: Quantum circuit
-    href: tutorials/circuit-tutorial.md
-- name: Managing quantum machines and drivers
-  href: machines/toc.yml
-- name: Quantum development techniques
-  topicHref: techniques/index.md
-  href: techniques/toc.yml
-- name: Q# libraries
-  href: libraries/toc.yml
-- name: Q# programming language
-  topicHref: language/index.md
-  href: language/toc.yml
-- name: Contributing to the Quantum Development Kit
-  href: contributing/toc.yml
-  topicHref: contributing/index.md
-- name: Glossary
-  href: Glossary.md
-- name: For more information
-  href: for-more-info.md
-- name: Release Notes
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
-- name: License
-  href: license.md
+  - name: Quantum development techniques
+    topicHref: techniques/index.md
+    href: techniques/toc.yml
+  - name: Q# programming language
+    topicHref: language/index.md
+    href: language/toc.yml
+  - name: Q# libraries
+    href: libraries/toc.yml
+  - name: Quantum computing concepts
+    href: concepts/toc.yml
+  - name: How to host a quantum machine
+    href: machines/toc.yml
+- name: Resources
+  items:
+  - name: QDK Release Notes
+    topicHref: relnotes/index.md
+    href: relnotes/toc.yml
+  - name: Contributing to the QDK
+    href: contributing/toc.yml
+    topicHref: contributing/index.md
+  - name: Glossary
+    href: Glossary.md
+  - name: For more information
+    href: for-more-info.md
+  - name: License
+    href: license.md

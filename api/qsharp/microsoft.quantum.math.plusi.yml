@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.plusi
+name: PlusI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Returns the sum of two inputs.
+syntax: 'function PlusI (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: The first input $a$ to be summed.
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: The second input $b$ to be summed.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: The sum $a + b$.
+    isPrimitive: true
+    uid: Int
+...

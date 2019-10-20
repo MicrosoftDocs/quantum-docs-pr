@@ -1,31 +1,33 @@
 ---
-title: Quantum Development Kit preview release notes| Microsoft Docs 
+title: Quantum Development Kit preview release notes
 description: Quantum Development Kit preview release notes
-author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com 
-ms.date: 10/09/2017
+author: natke
+ms.author: nakersha
+ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
 ---
 
 # Microsoft Quantum Development Kit Release Notes
 
-## Migrating to the newest packages.
+This article contains information on each Quantum Development Kit release.
 
-1.  To update IQ# to the latest version, from the command line, execute:
-```Command Prompt
-dotnet tool update -g Microsoft.Quantum.IQSharp
-```  
-2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
-3.  Follow [these instructions](xref:microsoft.quantum.install.csharp#update) to update your .csproj files, using the PackageReference for the Version below.
+For installation instructions, please refer to the [install guide](xref:microsoft.quantum.install).
 
-> [!NOTE]
-> * The language server included with the Quantum Development Kit does not support multiple workspaces.
-> * In order to work with a project in Visual Studio Code, open the root folder containing the project itself and all referenced projects.   
-> * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
-> * References between projects migrated to 0.6 and higher and projects using older package versions are **not** supported.
+For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
-# Version 0.9 (*PackageReference 0.9.1908.2906*)
+## Version 0.9.1909.3002
+
+*Release date: September 30th, 2019*
+
+This release contains the following:
+
+- New support for Q# code completion in Visual Studio 2019 (versions 16.3 & later) & Visual Studio Code
+- New [Quantum Kata](https://github.com/Microsoft/QuantumKatas) for quantum adders
+
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
+## Version 0.9 (*PackageReference 0.9.1908.2902*)
 
 *Release date: August 29th, 2019*
 
@@ -42,11 +44,7 @@ See the full list of closed PRs for [libraries](https://github.com/Microsoft/Qua
 
 The changes are summarized here as well as instructions for upgrading your existing programs.  Read more about these changes on the [Q# dev blog](https://devblogs.microsoft.com/qsharp).
 
-
-
-
-
-# Version 0.8 (*PackageReference 0.8.1907.1701*)
+## Version 0.8 (*PackageReference 0.8.1907.1701*)
 
 *Release date: July 12, 2019*
 
@@ -58,11 +56,7 @@ This release contains the following:
 
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) and [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
 
-
-
-
-
-# Version 0.7 (*PackageReference 0.7.1905.3109*)
+## Version 0.7 (*PackageReference 0.7.1905.3109*)
 
 *Release date: May 31, 2019*
 
@@ -75,7 +69,7 @@ See the full list of closed PRs for [libraries](https://github.com/Microsoft/Qua
 
 The changes are summarized here as well as instructions for upgrading your existing programs.  Read more about these changes on the [Q# dev blog](https://devblogs.microsoft.com/qsharp).
 
-## Q# language syntax
+### Q# language syntax
 This release adds new Q# language syntax:
 * Add named items for [user-defined types](xref:microsoft.quantum.language.type-model#user-defined-types).  
 * User-defined type constructors can now be used as functions.
@@ -83,7 +77,7 @@ This release adds new Q# language syntax:
 * Fixup-block for [repeat-until-success](xref:microsoft.quantum.language.statements#repeat-until-success-loop) loops is now optional.
 * We now support while loops in functions (not in operations).
 
-## Library 
+### Library 
 
 This release adds a numerics library: Learn more about how to [use the new numerics library](xref:microsoft.quantum.numerics.usage) and try out the [new samples](https://github.com/microsoft/quantum/tree/master/Numerics).  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102).  
 
@@ -94,11 +88,7 @@ This release reorganizes extends and updates the chemistry library:
 * Updating [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schema to new [version 0.2](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2), adding unitary coupled cluster specification. [Issue #65](https://github.com/microsoft/QuantumLibraries/issues/65).
 * Adding Python interoperability to chemistry library functions. Try out this [sample](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Issue #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
-
-
-
-
-# Version 0.6.1905
+## Version 0.6.1905
 
 *Release date: May 3, 2019*
 
@@ -110,7 +100,7 @@ This release contains the following:
 
 The changes are summarized here as well as instructions for upgrading your existing programs.  You can read more about these changes on devblogs.microsoft.com/qsharp.
 
-## Q# language syntax
+### Q# language syntax
 This release adds new Q# language syntax:
 * Add a [shorthand way to express specializations of quantum operations](xref:microsoft.quantum.language.type-model#functors) (control and adjoints) with `+` operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., `: adjoint`) will continue to work, but a compile time warning will be generated.  
 * Add a new operator for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions), `w/`, can be used to express array creation as a modification of an existing array.
@@ -119,7 +109,7 @@ This release adds new Q# language syntax:
 
 With this release, we no longer allow an array element to be specified on the left side of a set statement.  This is because that syntax implies that arrays are mutable when in fact, the result of the operation has always been the creation of a new array with the modification.  Instead, a compiler error will be generated with a suggestion to use the new copy-and-update operator, `w/`, to accomplish the same result.  
 
-## Library restructuring
+### Library restructuring
 This release reorganizes the libraries to enable their growth in a consistent way:
 * Renames the Microsoft.Quantum.Primitive namespace  to Microsoft.Quantum.Intrinsic.  These operations are implemented by the target machine.  The Microsoft.Quantum.Primitive namespace is deprecated.  A runtime warning will advise when programs call operations and functions using deprecated names.
 
@@ -137,7 +127,7 @@ With this change, programs that include a single "open" statement for the namesp
 
 * The names of several callables (functions and operations) have been changed to conform to the [Q# Style Guide](xref:microsoft.quantum.contributing.style).  The old callable names are deprecated.  Programs that use the old callables will continue to work with a compile time warning. 
 
-## New Samples ##
+### New Samples
 
 We added a [sample of using Q# with F# driver](https://github.com/Microsoft/Quantum/pull/164).  
 
@@ -145,31 +135,25 @@ We added a [sample of using Q# with F# driver](https://github.com/Microsoft/Quan
 
 * Mathias Soeken ([@msoeken](https://github.com/msoeken)): Oracle function synthesis. [PR #135](https://github.com/Microsoft/Quantum/pull/135).
 
-## Migrating existing projects to 0.6.1905.
+### Migrating existing projects to 0.6.1905.
 
+See the [install guide](xref:microsoft.quantum.install) to update the QDK.
   
-1.  To update IQ# to the latest version, from the command line, execute:
-```Command Prompt
-dotnet tool update -g Microsoft.Quantum.IQSharp
-```  
-2.  To update Python, first update IQ# (step 1) and then follow [these instructions](xref:microsoft.quantum.install.python).
-3.  Follow these instructions to update your .csproj file: 
-
 If you have existing Q# projects from version 0.5 of the Quantum Development Kit, the following are the steps to migrate those projects to the newest version.
 
-      1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
-      2. From a command line, Run `dotnet clean` to remove all existing binaries and intermediate files.
-      3. In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
-```xml
-    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
-    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
-```
-      4. From the command line, run this command: `dotnet msbuild`  
-      5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
-            - Open the root folder of the project or the containing solution in Visual Studio 2019 or Visual Studio Code.
-            - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
-            - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
+    1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
+    2. From a command line, Run `dotnet clean` to remove all existing binaries and intermediate files.
+    3. In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
 
+         ```xml
+        <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
+        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
+        ```
+    4. From the command line, run this command: `dotnet msbuild`  
+    5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
+        - Open the root folder of the project or the containing solution in Visual Studio 2019 or Visual Studio Code.
+        - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
+        - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
 
 > [!NOTE]
 > * For the 0.6 release, the language server included with the Quantum Development Kit does not support multiple workspaces.
@@ -177,22 +161,20 @@ If you have existing Q# projects from version 0.5 of the Quantum Development Kit
 > * In order to work with a solution in Visual Studio, all projects contained in the solution need to be in the same folder as the solution or in one of its subfolders.  
 > * References between projects migrated to 0.6 and higher and projects using older package versions are **not** supported.
 
-
-
-# Version 0.5.1904
+## Version 0.5.1904
 
 *Release date: April 15, 2019*
 
 This release contains bug fixes.
 
 
-# Version 0.5.1903
+## Version 0.5.1903
 
 *Release date: March 27, 2019*
 
 This release contains the following:
 
-- Adds support for Jupyter Notebook, which offers a great way to learn about Q#.  [Check out new Jupyter Notebook samples and learn how to write your own Notebooks](xref:microsoft.quantum.install.jupyter). 
+- Adds support for Jupyter Notebook, which offers a great way to learn about Q#.  [Check out new Jupyter Notebook samples and learn how to write your own Notebooks](xref:microsoft.quantum.install). 
 
 - Adds integer adder arithmetic to the Quantum Canon library.  See also a Jupyter Notebook that [describes how to use the new integer adders](https://github.com/Microsoft/Quantum/blob/master/Samples/src/Arithmetic/Adder%20Example.ipynb).
 
@@ -203,21 +185,19 @@ This release contains the following:
 - Revamped [getting started guide](xref:microsoft.quantum.install).
 
 
-# Version 0.5.1902
+## Version 0.5.1902
 
 *Release date: February 27, 2019*
 
 This release contains the following:
 
-- Adds support for a cross-platform Python host.  The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python. Learn more about [Python interoperability](xref:microsoft.quantum.install.python). 
+- Adds support for a cross-platform Python host.  The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python. Learn more about [Python interoperability](xref:microsoft.quantum.install). 
 
 - The Visual Studio and Visual Studio Code extensions now support renaming of symbols (e.g., functions and operations).
 
 - The Visual Studio extension can now be installed on Visual Studio 2019.
 
-
-
-# Version 0.4.1901
+## Version 0.4.1901
 
 *Release date: January 30, 2019*
 
@@ -228,7 +208,7 @@ This release contains the following:
 - adds a simple resource estimator that estimates the resources required to run a given instancee of a Q# operation on a quantum computer.  Learn more about the [Resource Estimator](xref:microsoft.quantum.machines.resources-estimator).
 
 
-# Version 0.3.1811.2802
+## Version 0.3.1811.2802
 
 *Release date: November 28, 2018*
 
@@ -241,7 +221,7 @@ the [Microsoft Quantum Development Kit for Visual Studio Code](vscode:extension/
 Visual Studio Marketplace and press Install. We are sorry about the inconvenience.
 
 
-# Version 0.3.1811.1511
+## Version 0.3.1811.1511
 
 *Release date: November 20, 2018*
 
@@ -249,7 +229,7 @@ This release fixes a bug that prevented some users to successfully load the Visu
 
 If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).
 
-# Version 0.3.1811.203
+## Version 0.3.1811.203
 
 *Release date: November 2, 2018*
 
@@ -261,7 +241,7 @@ This release includes a few bug fixes, including:
 
 If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).
 
-# Version 0.3.1810.2508
+## Version 0.3.1810.2508
 
 *Release date: October 29, 2018*
 
@@ -300,7 +280,7 @@ This release includes bug fixes and features for issues reported by the communit
 * Error Running Provided BitFlipCode ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
 * H2SimulationGUI displays big peaks sometimes ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34668370)).
 
-### Community Contributions ###
+### Community Contributions
 
 **Thank you!** to the following contributors to our open code base at http://github.com/Microsoft/Quantum. These contributions add significantly to the rich samples of Q# code:
 
@@ -310,10 +290,7 @@ This release includes bug fixes and features for issues reported by the communit
 
 Thank you also to Rohit Gupta ([@guptarohit](https://github.com/guptarohit),[PR #90](https://github.com/Microsoft/quantum/pull/90)), Tanaka Takayoshi ([@tanaka-takayoshi](https://github.com/tanaka-takayoshi),[PR #289](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/289)), and Lee James O'Riordan ([@mlxd](https://github.com/mlxd),[PR #96](https://github.com/Microsoft/Quantum/pull/96)) for their work improving the content for all of us through documentation, spelling and typo corrections! 
 
-
-
-
-# Version 0.2.1809.701
+## Version 0.2.1809.701
 
 *Release date: September 10, 2018*
 
@@ -327,14 +304,13 @@ This release includes bug fixes for issues reported by the community. Including:
 
 Thanks! 
 
-# Version 0.2.1806.3001
+## Version 0.2.1806.3001
 
 *Release date: June 30, 2018*
 
 This releases is just a quick fix for [issue #48 reported on GitHub](https://github.com/Microsoft/Quantum/issues/48) (Q# compilation fails if user name contains a blank space). Follow same update instructions as `0.2.1806.1503` with the corresponding new version (`0.2.1806.3001-preview`).
 
-
-# Version 0.2.1806.1503
+## Version 0.2.1806.1503
 
 *Release date: June 22, 2018*
 
@@ -344,13 +320,11 @@ This release includes several community contributions as well as an improved deb
 * Improved debugging functionality.
 * Community contributions in bug fixes, new helper functions, operations and new samples.
 
-
-### Performance improvements ###
+### Performance improvements
 
 This update includes significant performance improvements for simulation of large and small numbers of qubits for all the target machines.  This improvement is easily visible with the H<sub>2</sub> simulation that is a standard sample in the Quantum Development Kit.
 
-
-### Improved debugging functionality ###
+### Improved debugging functionality
 
 This update adds new debugging functionality:
 * Added two new operations,  @"microsoft.quantum.extensions.diagnostics.dumpmachine" and @"microsoft.quantum.extensions.diagnostics.dumpregister" that output wave function information about the target quantum machine at a point in time.  
@@ -359,8 +333,7 @@ This update adds new debugging functionality:
 
 Learn more about [Testing and Debugging](xref:microsoft.quantum.techniques.testing-and-debugging).
 
-
-### Community Contributions ###
+### Community Contributions
 
 The Q# coder community is growing and we are thrilled to see the first user contributed libraries and samples that were submitted to our open code base at http://github.com/Microsoft/quantum.  **A big Thank you!** to the following contributors:
 * Mathias Soeken ([@msoeken](https://github.com/msoeken)):  contributed a sample defining a transformation based logic synthesis method that constructs Toffoli networks to implement a given permutation. The code is written entirely in Q# functions and operations.  [PR #41](https://github.com/Microsoft/Quantum/pull/41).
@@ -379,7 +352,7 @@ Additionally, a big **Thank You!** to these Microsoft Software Engineers from th
 * Frances Tibble
 * Alessandro Vozza
 
-### Update existing projects ###
+### Update existing projects
 
 This release is fully backwards compatible. Just update the nuget pakages in your projects to version `0.2.1806.1503-preview` and do a **full rebuild** to make sure all intermediate files are regenerated.
 
@@ -414,12 +387,12 @@ After the update, make sure you remove all temporary files generated by the prev
 dotnet clean 
 ```
 
-### Known Issues ###
+### Known Issues
 
 No aditional known issues to report.
 
 
-# Version 0.2.1802.2202
+## Version 0.2.1802.2202
 
 *Release date: February 26, 2018*
 
@@ -431,7 +404,7 @@ This release brings support for development on more platforms, language interope
 - Improved simulator performance on projects requiring 20 or more qubits.
 - Interoperability with the Python language (preview release available on Windows).
 
-### .NET Editions ###
+### .NET Editions
 
 The .NET platform is available through two different editions, the .NET Framework that is provided with Windows, and the open-source .NET Core that is available on Windows, macOS and Linux.
 With this release, most parts of the Quantum Development Kit are provided as libraries for .NET Standard, the set of classes common to both Framework and Core.
@@ -449,12 +422,12 @@ Projects created using previous versions of Quantum Development Kit will still w
 
 Please note that the operation RandomWalkPhaseEstimation from the namespace Microsoft.Quantum.Canon was moved into the namespace Microsoft.Research.Quantum.RandomWalkPhaseEstimation in the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository.
 
-### Known Issues ###
+### Known Issues
 
 - The `--filter` option to `dotnet test` does not work correctly for tests written in Q#.
   As a result, individual unit tests cannot be run in Visual Studio Code; we recommend using `dotnet test` at the command line to re-run all tests.
 
-# Version 0.1.1801.1707
+## Version 0.1.1801.1707
 
 *Release date: January 18, 2018*
 
@@ -465,22 +438,22 @@ This release fixes some issues reported by the community. Namely:
 - `SignD` primitive operation now returns `Int` rather than `Double`.
 
 
-# Version 0.1.1712.901
+## Version 0.1.1712.901
 
 *Release date: December 11, 2017*
 
-## Known Issues
+### Known Issues
 
-### Hardware and Software Requirements
+#### Hardware and Software Requirements
 
 - The simulator included with the Quantum Development Kit requires a 64-bit installation of Microsoft Windows to run.
 - Microsoft's quantum simulator, installed with the Quantum Development Kit, utilizes Advance Vector Extensions (AVX), and requires an AVX-enabled CPU. Intel processors shipped in Q1 2011 (Sandy Bridge) or later support AVX. We are evaluating support for earlier CPUs and may announce details at a later time.
 
-### Project Creation
+#### Project Creation
 
 - When creating a solution (.sln) that will use Q#, the solution must be one directory higher than each project (.csproj) in the solution. When creating a new solution, this can be accomplished by making sure that the "Create directory for solution" checkbox on the "New Project" dialog box is checked. If this is not done, the Quantum Development Kit NuGet packages will need to be installed manually.
 
-### Q#
+#### Q#
 
 - Intellisense does not display proper errors for Q# code. Make sure that you are displaying Build errors in the Visual Studio Error List to see correct Q# errors. Also note that Q# errors will not show up until after you've done a build.
 - Using a mutable array in a partial application may lead to unexpected behavior.
@@ -488,25 +461,25 @@ This release fixes some issues reported by the community. Namely:
 - Profiling, code coverage and other VS plugins may not always count Q# lines and blocks accurately.
 - The Q# compiler does not validate interpolated strings. It is possible to create C# compilation errors by misspelling variable names or using expressions in Q# interpolated strings.
 
-### Simulation
+#### Simulation
 
 - The Quantum Simulator uses OpenMP to parallelize the linear algebra required. By default OpenMP uses all available hardware threads, which means that programs with small numbers of qubits will often run slowly because the coordination required will dwarf the actual work. This can be fixed by setting the environment variable OMP_NUM_THREADS to a small number. As a very rough rule of thumb, 1 thread is good for up to about 4 qubits, and then an additional thread per qubit is good, although this is highly dependent on your algorithm.
 
-### Debugging
+#### Debugging
 
 - F11 (step in) doesn't work in Q# code.
 - Code highlighting in Q# code at a breakpoint or single-step pause is sometimes inaccurate. The correct line will be highlighted, but sometimes the highlight will start and end at incorrect columns on the line.
 
-### Testing
+#### Testing
 
 - Tests must be executed in 64-bit mode. If your tests are failing with a BadImageFormatException, go to the Test menu and select Test Settings > Default Processor Architecture > X64.
 - Some tests take a long time (possibly as much as 5 minutes depending on your computer) to run. This is normal, as some use over twenty qubits; our largest test currently runs on 23 qubits.
 
-### Samples
+#### Samples
 
 - On some machines, some small samples may run slowly unless the environment variable OMP_NUM_THREADS is set to "1". See also the release note under "Simulation".
 
-### Libraries
+#### Libraries
 
 - There is an implicit assumption that the qubits passed to an operation in different arguments are all distinct. For instance, all of the library operations (and all of the simulators) assume that the two qubits passed to a controlled NOT are different qubits. Violating this assumption may lead to unpredictable unexpected. It is possible to test for this using the quantum computer tracer simulator.
 - The Microsoft.Quantum.Bind function may not act as expected in all cases.

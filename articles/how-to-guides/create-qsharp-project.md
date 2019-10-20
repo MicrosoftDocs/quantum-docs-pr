@@ -97,7 +97,7 @@ You can now continue to develop your quantum program.
 
     ![Jupyter notebook cell](~/media/install-guide-jupyter.png)
 
-    You should see `SayHello` in the output of the cell. When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
+    You should see `SayHello` in the output of the cell. When running in Jupyter Notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
 
 You can now add other Q# operations to continue your quantum development.
 

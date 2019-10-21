@@ -25,7 +25,7 @@ Fortunately, you don’t need to know quantum physics to start writing quantum a
 Now that we have the basics, we are ready to start writing our first quantum programs. There are many options to get started. Here we recommend you some of them:
 
 * [Write your first quantum program](xref:microsoft.quantum.write-program)
-* Learn with the [Quantum Katas](https://github.com/microsoft/QuantumKatas): an open-source project containing programming exercises aimed at teaching quantum computing. In particular, the online version of the Quantum Katas in form of Q# Jupyter Notebooks is especially easy to use. In less than 5 min you can start to write your first quantum program without needing to install anything.
+* Learn with the [Quantum Katas](xref:microsoft.quantum.overview.katas): an open-source project containing programming exercises aimed at teaching quantum computing. In particular, the online version of the Quantum Katas in form of Q# Jupyter Notebooks is especially easy to use. In less than 5 min you can start to write your first quantum program without needing to install anything.
 * [Tutorials and samples]()
 
 ## Dive into the theory

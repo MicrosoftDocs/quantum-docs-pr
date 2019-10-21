@@ -46,4 +46,4 @@ Fortunately, there exists a quantum algorithm that allows us to approximately so
 
 ## Dive deeper
 
-You can learn how to implement some of these quantum algorithms with the [Quantum Katas](~/intro-to-katas.md)
+You can learn how to implement some of these quantum algorithms with the [Quantum Katas](xref:microsoft.quantum.overview.katas)

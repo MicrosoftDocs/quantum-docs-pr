@@ -23,7 +23,7 @@ Each kata is a separate project which includes:
 
 You can develop using the Katas in your environment of choice:
 
-* Jupyter notebooks online within the Binder environment
+* Jupyter Notebooks online within the Binder environment
 * Jupyter notebooks running on your local machine
 * Visual Studio
 * VS Code

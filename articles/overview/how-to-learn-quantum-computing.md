@@ -18,7 +18,7 @@ Fortunately, you don’t need to know quantum physics to start writing quantum a
 
 * [Linear algebra (vectors and matrices)](xref:microsoft.quantum.concepts.vectors): in quantum computing, quantum states are represented by vectors, with quantum operations being linear transformations applied to these vectors.
 * [Complex numbers](https://en.wikipedia.org/wiki/Complex_number): the coefficients of quantum state vectors are complex numbers. You can understand some basic quantum computing concepts without them, but you won't get far before you need to incorporate them into your quantum toolkit.
-* [Basic quantum mechanics](): ok, I know we just said that you don’t need to know quantum physics to start coding (and it’s true!). But some basic concepts of quantum mechanics and its mathematical notation will be helpful to understand quantum programming.
+* [Basic quantum mechanics](xref:microsoft.quantum.concepts.intro): We just said that you don’t need to know quantum physics to start coding (and it’s true!). But some basic concepts of quantum mechanics and its mathematical notation will be helpful to understand quantum programming.
 
 ## Code first, then learn!
 

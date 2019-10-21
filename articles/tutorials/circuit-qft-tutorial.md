@@ -90,10 +90,10 @@ Within our Q# operation, we first allocate a register of three qubits with the `
 
 ```
 
-With `using`, the qubits are allocated in the $\ket{0}$ state, which we verify with `[Message(<string>)](xref:microsoft.quantum.intrinsic.message)` and [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) to print the system's current state ($\ket{000}$) to the host console.
+With `using`, the qubits are allocated in the $\ket{0}$ state, which we verify with [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) and [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) to print the system's current state ($\ket{000}$) to the host console.
 
 > [!NOTE]
-> The `Message(<string>)` and `DumpMachine()` functions (from `[Microsoft.Quantum.Intrinsic](xref:microsoft.quantum.intrinsic)` and `[Microsoft.Quantum.Diagnostics](xref:microsoft.quantum.diagnostics)`, respectively) both print directly to our classical host's console. 
+> The `Message(<string>)` and `DumpMachine()` functions (from [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) and [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics), respectively) both print directly to our classical host's console. 
 > Just like a real quantum computation, Q# does not allow us access to the state of qubits.
 > However, as `DumpMachine` prints the target machine's current state, it can provide valuable insight for debugging and learning in conjunction with the full state simulator.
 

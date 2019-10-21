@@ -10,7 +10,13 @@ uid: microsoft.quantum.overview.what
 
 # What is quantum computing?
 
-Quantum computing is the application of quantum physics to the field of computer science. Quantum computing might sound daunting, but with the right resources you can start building quantum applications today.
+Quantum computing is the application of quantum physics to the field of computer science.
+
+The theory of quantum physics posits that matter, at a quantum level is simultaneously in multiple states. And those many states interfere with each other like waves in a tide pool.
+
+Quantum computing stores information in quantum states of matter and uses quantum operations to compute on that information, by harnessing and learning to program quantum interference.
+
+Quantum computing might sound daunting, but with the right resources you can start building quantum applications today.
 
 ## The qubit
 

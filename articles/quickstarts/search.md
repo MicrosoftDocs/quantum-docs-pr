@@ -85,7 +85,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
     ***
 
-    Note that the `ReflectAboutMarked` operation is called four times, but that your Q# program was able to find the "01010" input amongst $2^5 = 32$ possible inputs!
+    The `ReflectAboutMarked` operation is called only four times, but your Q# program was able to find the "01010" input amongst $2^{5} = 32$ possible inputs!
 
 ## Next steps
 

@@ -209,7 +209,7 @@ let imaginaryUnit = Complex(0.0, 1.0);
 Alternatively, new values can be created from existing ones using [copy-and-update expressions](xref:microsoft.quantum.language.expressions#copy-and-update-expressions). 
 Like for arrays, such expressions copy all item values of the original expression, 
 with the exception of the specified named items. For these the values are set to the ones defined on the right hand side of the expression. 
-Any other language constructs, like for example [update-and-reassign statements](xref:microsoft.quantum.qsharp-ref.statements#update-and-reassign-statement), that are available for array items exist for named-items in user defined types as well.
+Any other language constructs, like for example [update-and-reassign statements](xref:microsoft.quantum.language.statements#update-and-reassign-statement), that are available for array items exist for named-items in user defined types as well.
 
 ```qsharp
 newtype ComplexArray = (Count : Int, Data : Complex[]);
@@ -475,7 +475,7 @@ If a target should be controlled by 2 control qubits (CCNOT), we can use `Contro
 
 ### Examples
 
-This example of a Q# operation comes from the [Measurement](https://github.com/Microsoft/Quantum/tree/master/Samples/Measurement) sample. Within operations, we can allocate qubits and use quantum operations on those qubits such as `H` and `X`:
+This example of a Q# operation comes from the [Measurement](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/measurement) sample. Within operations, we can allocate qubits and use quantum operations on those qubits such as `H` and `X`:
 
 ```qsharp
 /// # Summary
@@ -497,7 +497,8 @@ operation MeasureOneQubit () : Result {
  }
 ```
 
-This example of a function comes from the [PhaseEstimation](https://github.com/Microsoft/Quantum/tree/master/Samples/PhaseEstimation) sample. It contains purely classical code. You can see that, unlike the example above, no qubits are allocated, and no quantum operations are used.
+This example of a function comes from the [PhaseEstimation](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) sample. It contains purely classical code. You can see that, unlike the example above, no qubits are allocated, and no quantum operations are used.
+
 
 ```qsharp
 /// # Summary
@@ -513,7 +514,7 @@ function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
 }
 ```
 
-It is also possible for a function to be passed qubits for processing, as in this example from the [ReversibleLogicSynthesis](https://github.com/Microsoft/Quantum/tree/master/Samples/ReversibleLogicSynthesis) sample. Qubits are passed to the function and used for processing, although at no point are the qubit states themselves modified.
+It is also possible for a function to be passed qubits for processing, as in this example from the [ReversibleLogicSynthesis](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/reversible-logic-synthesis) sample. Qubits are passed to the function and used for processing, although at no point are the qubit states themselves modified.
 
 ```qsharp
 /// # Summary

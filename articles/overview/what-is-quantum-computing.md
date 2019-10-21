@@ -50,5 +50,5 @@ Up to a certain scale (number of qubits), quantum computing can be simulated on 
 
 ## Get started today
 
-* Build a quantum program that implements [Grover's algorithm](quickstarts/grovers.md)
-* Take a quick look at Q# by developing a [Bell State](quickstart.md) program
+* Build a quantum program that implements [Grover's algorithm](xref:microsoft.quantum.quickstarts.search)
+* Take a quick look at Q# by developing a [Bell State](xref:microsoft.quantum.microsoft.quantum.write-program) program

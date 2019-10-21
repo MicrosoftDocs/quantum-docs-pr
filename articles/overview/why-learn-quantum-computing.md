@@ -23,7 +23,6 @@ To achieve efficient quantum computing is arguably one of the greatest challenge
 ## Get inspired by the quantum world
 
 Even if we are still far from achieving fault-tolerant quantum computers, we are already observing some impactful consequences of quantum computing in classical computer science. In the last few years, many new algorithms were developed based on the techniques used in quantum computing. These are the so-called quantum inspired algorithms and can run on classical computers. Some examples of these algorithms are recommendation systems or genetic algorithms that perform faster than any previous classical method. By learning quantum computing you will also discover a new way of thinking about computation that will shift your perspective on classical programming! 
-Quantum computing is fun!
 
 ## Quantum computing is fun!
 

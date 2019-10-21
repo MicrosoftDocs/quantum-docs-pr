@@ -13,9 +13,12 @@ uid: microsoft.quantum.circuit-tutorial
 # Tutorial: Write and simulate qubit-level programs in Q#
 Welcome to the Quantum Development Kit tutorial on writing and simulating a basic quantum program operating on individual qubits. 
 
-While higher-level algorithms such as Grover's search are where the power of quantum computation (link to Eduardo's doc on impact?) is manifested, even the most complex programs are built upon operations at the qubit-level. 
-The flexibility of Q# allows users to approach quantum systems from any such level of abstraction, and in this tutorial we dive down to individual qubits.
-This low-level view of quantum information processing is often desribed in terms of ["quantum circuits"](xref:microsoft.quantum.concepts.circuits) as it simply corresponds to the sequential application of gates to specific qubits of a system.
+Although the power of quantum computation is revealed at the higher level of "what a quantum algorithm does", we should remember that even the most complex quantum programs are built upon operations occuring at the level of individual qubits.
+The flexibility of Q# allows users to approach quantum systems from any such level of abstraction, and in this tutorial we dive into the qubits themselves.
+
+> [!NOTE]
+> This low-level view of quantum information processing is often desribed in terms of "[quantum circuits](xref:microsoft.quantum.concepts.circuits)," which represent the sequential application of gates to specific qubits of a system.
+
 Specifically, we take a look under the hood of the [quantum Fourier transform](https://en.wikipedia.org/wiki/Quantum_Fourier_transform), a subroutine that is integral to many larger quantum algorithms.
 
 
@@ -47,7 +50,7 @@ The [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) function is 
 Of course, within smaller programs we can also use it to simply observe how quantum states evolve across an operation---precisely what we will do with the quantum Fourier transform.
 
 In your development environment, create a Q# file: `Operations.qs`.
-We will walk you through the components of the file step-by-step, but you can still find the code as a full block below.
+We will walk you through the components of the file step-by-step, and you can also find the code as a full block below.
 
 ### Namespaces to access other Q# operations
 Inside the file, we first define the namespace `Quantum.Operations` which will be accessed/imported by the classical host, and then open the relevant `Microsoft.Quantum.<>` namespaces so our operation can access existing Q# operations:
@@ -59,21 +62,22 @@ namespace Quantum.Operations {
 	open Microsoft.Quantum.Math;
     open Microsoft.Quantum.Arrays;
 
+	// operations go here
 }
 ```
 
 ### Define operations with arguments and returns
-Next, we proceed to define the `perform_3qubit_qft` operation:
+Next, we define the `perform_3qubit_qft` operation:
 
 ```qsharp
     operation perform_3qubit_qft() : Unit {
-
+		// do stuff
 	}
 ```
-For now, the operation takes no arguments, and does not return anything. 
+For now, the operation takes no arguments and does not return anything. 
 Later, we will modify it to return an array of measurement results, at which point `Unit` will be replaced by `Result[]`. 
 
-### Allocating qubits with `using`
+### Allocate qubits with `using`
 Within our Q# operation, we first allocate a register of three qubits with the `using` statement:
 
 ```qsharp
@@ -86,10 +90,10 @@ Within our Q# operation, we first allocate a register of three qubits with the `
 
 ```
 
-Note that with `using` the qubits are allocated in the $\ket{0}$ state, as we verify with [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) and [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) to print the system's current state ($\ket{000}$) to the host console.
+With `using`, the qubits are allocated in the $\ket{0}$ state, which we verify with `[Message(<string>)](xref:microsoft.quantum.intrinsic.message)` and [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) to print the system's current state ($\ket{000}$) to the host console.
 
 > [!NOTE]
-> The `Message(<string>)` and `DumpMachine()` functions (from `Microsoft.Quantum.Intrinsic` and `Microsoft.Quantum.Diagnostics`, respectively) both print directly to our classical host's console. 
+> The `Message(<string>)` and `DumpMachine()` functions (from `[Microsoft.Quantum.Intrinsic](xref:microsoft.quantum.intrinsic)` and `[Microsoft.Quantum.Diagnostics](xref:microsoft.quantum.diagnostics)`, respectively) both print directly to our classical host's console. 
 > Just like a real quantum computation, Q# does not allow us access to the state of qubits.
 > However, as `DumpMachine` prints the target machine's current state, it can provide valuable insight for debugging and learning in conjunction with the full state simulator.
 
@@ -103,7 +107,7 @@ So, applying the [`H`](microsoft.quantum.intrinsic.h) (Hadamard) to the first qu
 
 ```qsharp
             H(qs[0]);
-```qsharp
+```
 
 Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled [`R1`](microsoft.quantum.intrinsic.r1) rotations.
 An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{iθ}$ to the $\ket{1}$ component.
@@ -140,13 +144,13 @@ After applying the relevant Hadamards and controlled rotations to the second and
 
             //third qubit:
             H(qs[2]);
-```qsharp
+```
 
 we need only apply a [`SWAP`](microsoft.quantum.intrinsic.swap) gate to complete the circuit:
 
 ```qsharp
             SWAP(qs[2], qs[0]);
-```qsharp
+```
 
 This is necessary because the nature of the quantum Fourier transform outputs the qubits in reverse order, so the swaps allow for seamless integration of the subroutine into larger algorithms.
 

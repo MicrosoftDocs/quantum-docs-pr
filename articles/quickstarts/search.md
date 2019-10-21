@@ -32,7 +32,7 @@ The number of incremental boosts is less than the number of items in the list. T
 
 ## Write the code
 
-1. Using the Quantum Development Kit, [create a new Q# project](xref:microsoft.quantum.howto.createproject) called **Grover**, in your development environment of choice.
+1. Using the Quantum Development Kit, [create a new Q# project](xref:microsoft.quantum.howto.createproject) called `Grover`, in your development environment of choice.
 
 1. Add the following code to the `Operations.qs` file in your new project:
 
@@ -42,7 +42,7 @@ The number of incremental boosts is less than the number of items in the list. T
 
     [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/Reflections.qs)]
 
-    The `ReflectAboutMarked` operation in this file represents the problem we're trying to solve with Grover's algorithm, in this case by reflecting bitstrings made up of alternating zeros and ones.
+    The `ReflectAboutMarked` operation defines the marked input that you are searching for: the string of alternating zeros and ones. This sample hard codes the marked input, and can be extended to search for different inputs, or generalized for any input.
 
 1. Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.
 

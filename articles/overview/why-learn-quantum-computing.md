@@ -26,4 +26,4 @@ Even if we are still far from achieving fault-tolerant quantum computers, we are
 
 ## Quantum computing is fun!
 
-Even if the preceding reasons don't convince you, you should still consider learning quantum computing, just for fun! Learning how to code quantum programs, and use the properties of quantum mechanics to solve problems, is a challenging but rewarding experience.
+In addition to the real-world impact discussed above, we believe quantum computing can be fun. Learning quantum computing is a rewarding experience where you will come away with cutting-edge knowledge and the skills to help build the technology of the future. Check the section: [How can you learn quantum computing?](xref...) to start writing your first quantum programs!  

@@ -39,7 +39,7 @@ Maybe you want to take a deeper look into the theory of quantum mechanics and qu
 
 ## Join the quantum community
 
-You don’t have to learn this alone, there is a big community of amateurs and experts who are willing to help you. Don’t be afraid to ask!
+You don’t have to learn this alone, there is a big community of amateurs and experts alike who are willing to help you. Don’t be afraid to ask!
 
 * If you have any questions about Q# or quantum computing don’t hesitate and take a look at the Quantum Computing StackExchange site. If you don’t find your specific question you can always ask a new one. 
 * Check out Q# blog and Microsoft Quantum Blog to stay up to date with the latest news and resources about Q#.

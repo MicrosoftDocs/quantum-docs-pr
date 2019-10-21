@@ -14,11 +14,11 @@ Learn how to write your first quantum program.
 
 ## Getting the basics: what do you need to know?
 
-Fortunately, you don’t need to know quantum physics to start writing quantum applications. However, there are some concepts that are especially important to understand quantum computing. But don’t worry if you don’t know something! We will give you the resources to learn the necessary tools in a light and interactive way.
+Fortunately, you don’t need to know quantum physics to start writing quantum applications. However, there are some concepts that are especially important to understand quantum computing. But don’t worry if you don’t know something! We will give you the resources to learn the necessary tools.
 
-* Linear algebra (vector and matrices): quantum states are vectors in a vector space over the complex numbers. Quantum gates are just linear operations acting on these states. Here you can find a tutorial to get everything you need to know about linear algebra. (Link to a Binder for the tutorial on linear algebra).
-* Complex numbers: quantum mechanics makes use of complex numbers to express quantum states. They are crucial to understand the basics of quantum computation. Here you can find a tutorial to get everything you need to know about complex numbers.
-* Basic quantum mechanics: ok, I know we just said that you don’t need to know quantum physics to start coding (and it’s true!). But some basic concepts of quantum mechanics and its mathematical notation will be helpful to understand quantum programming. Here you can find a tutorial to get everything you need to know about quantum mechanics. (Link to a Binder for the tutorial on basic quantum mechanics).
+* [Linear algebra (vectors and matrices)](xref:microsoft.quantum.concepts.vectors): in quantum computing, quantum states are represented by vectors, with quantum operations being linear transformations applied to these vectors.
+* [Complex numbers](https://en.wikipedia.org/wiki/Complex_number): the coefficients of quantum state vectors are complex numbers. You can understand some basic quantum computing concepts without them, but you won't get far before you need to incorporate them into your quantum toolkit.
+* [Basic quantum mechanics](): ok, I know we just said that you don’t need to know quantum physics to start coding (and it’s true!). But some basic concepts of quantum mechanics and its mathematical notation will be helpful to understand quantum programming.
 
 ## Code first, then learn!
 
@@ -26,7 +26,7 @@ Now that you have the basics, you're ready to start writing your first quantum p
 
 * [Write your first quantum program](xref:microsoft.quantum.write-program)
 * Learn with the [Quantum Katas](xref:microsoft.quantum.overview.katas): an open-source project containing programming exercises aimed at teaching quantum computing. In particular, the online version of the Quantum Katas in form of Q# Jupyter Notebooks is especially easy to use. In less than 5 min you can start to write your first quantum program without needing to install anything.
-* [Tutorials and samples]()
+* [Tutorials and samples](https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp)
 
 ## Dive into the theory
 

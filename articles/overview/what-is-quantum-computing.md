@@ -32,11 +32,11 @@ When multiple qubits act coherently, they can process multiple options simultane
 
 Quantum algorithms can be designed to take advantage of qubit superposition and entanglement to speed up classical algorithms, or to provide entirely new ways of modeling physical systems.
 
-One of the most famous quantum algorithms is `Shor's algorithm` for factorization, which makes the classically intractable problem of factorization of a large number into two prime numbers fast enough to challenge traditional cryptography.
+One of the most famous quantum algorithms is _Shor's algorithm_ for factorization, which makes the classically intractable problem of factorization of a large number into two prime numbers fast enough to challenge traditional cryptography.
 
 On the more constructive side, algorithms for secure cryptographic key distribution are made possible by superposition, quantum entanglement, and the **no cloning** property of qubits: the inability for qubits to be copied without detection.
 
-`Grover's algorithm` provides a quadratic factor speed-up for database searching.
+_Grover's algorithm_ provides a quadratic factor speed-up for database searching.
 
 Using quantum programs to model quantum systems themselves is another application of quantum computing. Photosynthesis, superconductors, and chemical molecules are examples of quantum systems that can be simulated using quantum programs.
 
@@ -50,5 +50,5 @@ Up to a certain scale (number of qubits), quantum computing can be simulated on 
 
 ## Get started today
 
-* Build a quantum program that implements [Grover's algorithm](xref:microsoft.quantum.quickstarts.search)
-* Take a quick look at Q# by developing a [Bell State](xref:microsoft.quantum.write-program) program
+* [Build a quantum program that implements Grover's algorithm](xref:microsoft.quantum.quickstarts.search)
+* [Take a quick look at Q# by developing a Bell State](xref:microsoft.quantum.write-program) program

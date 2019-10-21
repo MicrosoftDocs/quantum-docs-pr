@@ -46,4 +46,6 @@ Fortunately, there exists a quantum algorithm that allows us to approximately so
 
 ## Dive deeper
 
-You can learn how to implement some of these quantum algorithms with the [Quantum Katas](xref:microsoft.quantum.overview.katas)
+Write code to implement [Grover's algorithm](xref:microsoft.quantum.quickstarts.search)
+
+Learn how to implement quantum algorithms with the [Quantum Katas](xref:microsoft.quantum.overview.katas)

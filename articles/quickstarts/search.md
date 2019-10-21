@@ -93,6 +93,8 @@ If you enjoyed this quickstart, checkout some of the resources below to learn mo
 
 - [Quantum computing concepts](xref:microsoft.quantum.concepts.intro)
 - [Quantum Development Kit Samples](https://docs.microsoft.com/en-us/samples/browse/?products=qdk)
+- Try a more general Grover's search algorithm [sample](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)
+- Read more about [Amplitude amplification](xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification)
 
 <!-- LINKS -->
 

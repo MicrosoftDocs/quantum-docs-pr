@@ -12,7 +12,7 @@ uid: microsoft.quantum.quickstarts.search
 
 Grover's algorithm searches a list of unstructured data for specific items. For example, it can answer the question: Is this card drawn from a pack of cards an ace of hearts? The labeling of the specific item is called _marked input_.
 
-Using Grover's search algorithm, a quantum computer is guaranteed to run this search in fewer steps than the number of items in the list that you're searching — something no classical algorithm can do. The speed-up in the case of a pack of cards is negligible; however, in lists containing millions or billions of items, it becomes significant.
+Using Grover's search algorithm, a quantum computer is guaranteed to run this search in fewer steps than the number of items in the list that you're searching — something no classical algorithm can do. The increased speed in the case of a pack of cards is negligible; however, in lists containing millions or billions of items, it becomes significant.
 
 You can build Grover's search algorithm with just a few lines of code.
 
@@ -42,7 +42,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
     [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/Reflections.qs)]
 
-    The `ReflectAboutMarked` operation defines the marked input that you are searching for: the string of alternating zeros and ones. This sample hard codes the marked input, and can be extended to search for different inputs or generalized for any input.
+    The `ReflectAboutMarked` operation defines the marked input that you are searching for: the string of alternating zeros and ones. This sample hard-codes the marked input, and can be extended to search for different inputs or generalized for any input.
 
 1. Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.
 

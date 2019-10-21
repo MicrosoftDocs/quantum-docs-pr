@@ -76,7 +76,7 @@ landingContent:
             url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
  
   # Development
-  - title: Quantum development techniques
+  - title: Quantum development with the Q# and the QDK
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -89,24 +89,12 @@ landingContent:
           - text: Working with qubits
             url: techniques/working-with-qubits.md
           - text: 'Put it together: Teleportation'
-            url: techniques/putting-it-all-together.md                      
-
-  # Manage machines and drivers
-  - title: Quantum simulators and resource estimators
-    linkLists:
+            url: techniques/putting-it-all-together.md
       - linkListType: how-to-guide
         links:
-          - text: Classical drivers & machines
-            url: machines/index.md
-          - text: QDK full state simulator
-            url: machines/full-state-simulator.md
-          - text: Resources estimator
-            url: machines/resources-estimator.md
-          - text: Quantum trace simulator
-            url: machines/qc-trace-simulator/index.md
-          - text: QDK Toffoli simulator
-            url: machines/toffoli-simulator.md
-
+          - text: Quantum simulators and resource estimators
+          - url: machines/index.md
+  
   # Reference card
   - title: Q# language & libraries
     linkLists:

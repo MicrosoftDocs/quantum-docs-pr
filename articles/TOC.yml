@@ -6,6 +6,8 @@
   items:
   - name: Write your first quantum program
     href: quickstart.md
+  - name: Implement Grover's search algorithm
+    href: quickstarts/search.md
 - name: How-to guides
   items:
   - name: Install the QDK

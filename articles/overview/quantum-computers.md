@@ -18,7 +18,7 @@ Where current computers would require billions of years to solve the world’s m
 
 In a quantum computer, we don’t need to model all of the states of a complex system. Instead the computer itself can be in superposition. We embed the quantum state of the system that we want to simulate in the computer and run the simulation with a specific set of quantum gates. In other words, we use a quantum computer to simulate a quantum system.
 
-Chemical molecules can be analyzed in this way. One such specific chemical is the `nitrogenase` enzyme, which has the potential to reduce the energy consumption and greenhouse gas emission of current fertilizers.
+Chemical molecules can be analyzed in this way. One such specific chemical is the _nitrogenase_ enzyme, which has the potential to reduce the energy consumption and greenhouse gas emission of current fertilizers.
 
 ## Data security and cryptography
 

@@ -35,7 +35,7 @@ Maybe you want to take a deeper look into the theory of quantum mechanics and qu
 * Start with our guide to [Quantum computing concepts](xref:microsoft.quantum.concepts.intro), a compilation of basic concepts for quantum computing.
 * _Learn Quantum Computing with Python and Q#_ (Sarah C. Kaiser and Christopher E. Granade) provides an excellent introduction for people who have little to no experience with quantum mechanics, but some programming background.
 * _Quantum Computation and Quantum Information_ (Michael A. Nielsen, Isaac L. Chuang) is the most cited text in the field of quantum computation. It is regarded as the standard text on the subject. The book assumes minimal prior experience with quantum mechanics and computer science. It is an excellent choice for those readers who want a rigorous introduction to the topic as well as for those who are looking for references for advanced concepts.
-* MIT OpenCourseWare has an excellent online course imparted by Allan Adams for learning the basics of quantum mechanics. Perfect for those who want a better understanding of the underlying physics.
+* MIT OpenCourseWare has an excellent [online course](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) imparted by Allan Adams for learning the basics of quantum mechanics. Perfect for those who want a better understanding of the underlying physics.
 
 ## Join the quantum community
 

@@ -20,7 +20,7 @@ You can learn about the libraries that are provided with the QDK.
 
 ## Five things you should know about quantum computing
 
-[What is quantum computing?](xref:microsoft.quantum.overview.whatis)
+[What is quantum computing?](xref:microsoft.quantum.overview.what)
 
 [What can I do with a quantum computer?](xref:microsoft.quantum.overview.computer)
 
@@ -34,7 +34,7 @@ You can learn about the libraries that are provided with the QDK.
 
 Dive into a 5-minute [quickstart](xref:microsoft.quantum.write-program) to code a Bell state.
 
-Implement [Grover's search algorithm](xref:microsoft.quantum.quickstart.grover) in just a few lines of code.
+Implement [Grover's search algorithm](xref:microsoft.quantum.quickstart.search) in just a few lines of code.
 
 Try one of the [Quantum Katas](xref:microsoft.quantum.overview.katas), short training exercises to teach you how to program in Q# and learn quantum computing.
 
@@ -48,8 +48,8 @@ Watch this [video](https://www.microsoft.com/en-us/videoplayer/embed/RE2JOJf) to
 ## Go deeper
 
 * Develop on your local machine with the host programming language and development environment of choice:
-  * Develop with [Python](~/install-guide/install.md#develop-with-python)
-  * Develop with [Visual Studio](~/install-guide/install.md#develop-with-visual-studio)
-  * Develop with [Visual Studio Code](~/install-guide/install.md#develop-with-visual-studio-code)
-  * Develop with [Jupyter Notebooks](~/install-guide/install.md#develop-with-jupter-notebooks)
+  * Develop with [Python](xref:microsoft.quantum.install#develop-with-python)
+  * Develop with [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
+  * Develop with [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-vs-code)
+  * Develop with [Jupyter Notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
 * Become part of the Microsoft Quantum community by contributing to the [QDK](xref:microsoft.quantum.contributing) open source project

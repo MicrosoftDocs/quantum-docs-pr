@@ -16,7 +16,7 @@ The Q# programming language takes care of all the quantum computer's internal lo
 
 ## We want to code algorithms, not to draw circuits
 
-In [What is quantum computing?[(xref:microsoft.quantum.overview.whatis)] we saw that we can write quantum computations as quantum circuits like we do in classical computing. The circuit model has been very useful for many years in quantum computing research.
+In [What is quantum computing?](xref:microsoft.quantum.overview.whatis) we saw that we can write quantum computations as quantum circuits like we do in classical computing. The circuit model has been very useful for many years in quantum computing research.
 
 However, when we write classical programs for normal computers, we don’t think in terms of circuits but in terms of logic.
 

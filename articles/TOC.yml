@@ -1,7 +1,11 @@
 - name: Microsoft Quantum Documentation
   href: index.yml
 - name: Overview
-  href: welcome.md
+  items:
+  - name: Get started
+    href: welcome.md
+  - name: Quantum Katas
+    href: intro-to-katas.md
 - name: Quickstarts
   items:
   - name: Write your first quantum program

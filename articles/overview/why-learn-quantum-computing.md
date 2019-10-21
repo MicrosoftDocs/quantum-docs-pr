@@ -10,7 +10,7 @@ uid: microsoft.quantum.overview.why
 
 # Why should you learn Quantum Computing?
 
-Ok, quantum computers are cool. But, why should you learn quantum computing? In this section, we are going to give you some reasons why learning quantum computing today is a great idea.
+Quantum computers are cool but why should you learn quantum computing? In this section, we are going to give you some reasons why learning quantum computing today is a great idea.
 
 ## Join the quantum revolution
 

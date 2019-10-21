@@ -14,7 +14,7 @@ Q# is a programming language created by Microsoft to develop applications for qu
 
 The Q# programming language takes care of all the quantum computer's internal logic and provides you with an intuitive set of types, operations and logic expressions to develop algorithms without having to worry about the internal logic of the quantum computer.
 
-## We want to code algorithms, not to draw circuits
+## We want to code algorithms, not draw circuits
 
 In [What is quantum computing?](xref:microsoft.quantum.overview.what) we saw that we can write quantum computations as quantum circuits like we do in classical computing. The circuit model has been very useful for many years in quantum computing research.
 
@@ -24,7 +24,7 @@ Here in Microsoft, we believe in empowering developers to go beyond quantum circ
 
 ## How does Q# work?
 
-Q# is a programming language designed to be great a writing quantum programs, by providing features that are special to quantum computing. Q# provides quantum programmers a framework that allows them to focus on the algorithms without having to care about technical details like gate sequence optimization or the physical implementation of a quantum computer.
+Q# is a programming language designed to be great at writing quantum programs, by providing features that are special to quantum computing. Q# provides quantum programmers a framework that allows them to focus on the algorithms without having to care about technical details like gate sequence optimization or the physical implementation of a quantum computer.
 
 For example, one of the fundamental building blocks of Q# is the `Qubit` type, which cannot be copied or directly accessed, just like a real qubit. Instead, we can measure it and store the outcome of the measurement in a `Result` variable, a Q# type that can take two possible values: `Zero` and `One`. Constructs like this one guarantee that algorithms always respect the laws of quantum mechanics and can run correctly on quantum computers or simulators.
 
@@ -36,6 +36,6 @@ Q# programs are often paired with a host program written in C# or Python, which 
 
 Until now, to learn quantum computing you needed to learn the circuit model to understand the algorithms in the form of ordered sequences of quantum gates and measurements. With Q# you can take another path: learn quantum computing by writing quantum programs.
 
-Q# provides you with an increasing number of libraries and user-defined types that will help you to implement tools and functions already created by others to build advanced quantum algorithms. For example, you need to entangle two-qubits q1 and q2? Instead of applying individually the necessary gates to get the qubits entangled you can use the already built-in operation `PrepareEntangledState(q1, q2)`.
+Q# provides you with an increasing number of libraries and user-defined types that will help you to implement tools and functions already created by others to build advanced quantum algorithms. For example, you need to entangle two-qubits q1 and q2? Instead of applying individually the necessary gates to get the qubits entangled you can use the already built-in operation `PrepareEntangledState([q1], [q2])`.
 
 Just as in classical computing, building programs on top of what others have already created will empower you to solve greater challenges. To know more about how you can learn quantum computing by coding in Q# check out [How to learn quantum computing?](xref:microsoft.quantum.overview.learn).

@@ -12,13 +12,13 @@ uid: microsoft.quantum.overview.computers
 
 What we can do with a quantum computer that can't be done with a classical one?
 
-Where current computers would require billions of years to solve the world’s most challenging problems, a quantum computer would find a solution in minutes, hours, or days. Quantum computing will enable researchers to develop new catalysts and materials, improve medicines, accelerate advances in artificial intelligence, and answer fundamental questions about the origins of our universe.
+To solve some of the world's most challenging problems, where finding a solution would take current computers billions of years, a quantum computer could do so in days, hours, or even minutes. Quantum computing will enable researchers to develop new catalysts and materials, improve medicines, accelerate advances in artificial intelligence, and answer fundamental questions about the origins of our universe.
 
 ## Molecular simulations
 
 In a quantum computer, we don’t need to model all of the states of a complex system. Instead the computer itself can be in superposition. We embed the quantum state of the system that we want to simulate in the computer and run the simulation with a specific set of quantum gates. In other words, we use a quantum computer to simulate a quantum system.
 
-Chemical molecules can be analyzed in this way. One such specific chemical is the _nitrogenase_ enzyme, which has the potential to reduce the energy consumption and greenhouse gas emission of current fertilizers.
+Chemical molecules are quantum systems and therefore can be analyzed in this way. One such specific chemical is the _nitrogenase_ enzyme, which, with a better understanding of its properties, could have the potential to reduce the energy consumption and greenhouse gas emission of current fertilizers.
 
 ## Data security and cryptography
 

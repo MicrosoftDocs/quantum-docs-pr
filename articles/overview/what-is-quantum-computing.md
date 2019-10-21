@@ -20,15 +20,15 @@ Quantum computing might sound daunting, but with the right resources you can sta
 
 ## The qubit
 
-In quantum computing, a quantum bit is a unit of quantum information, like a classical bit. Where classical bits hold a single binary value such as a 0 or 1, a qubit can hold both values at the same time. This is called **superposition**.
+In quantum computing, a quantum bit - **qubit** - is a unit of quantum information, like a classical bit. Where classical bits hold a single binary value such as a 0 or 1, a qubit can hold both values at the same time. This is called **superposition**.
 
-The act of **measurement** changes a qubit. It goes from being in the infinite states of superposition to one of the binary states of 0 or 1. Again, measurement of a qubit is unlike a classical bit, which when 0 is measured as 0, and when 1 is measured as 1.
+The act of **measurement** changes a qubit. It goes from being in superposition to one of the binary states of 0 or 1. Again, measurement of a qubit is unlike a classical bit, which when 0 is measured as 0, and when 1 is measured as 1.
 
 Qubits can also be **entangled**: when we make a measurement of one entangled qubit, it affects the state of the other, even if the qubits are physically far apart.
 
 ## What can a quantum computer do?
 
-When multiple qubits act coherently, they can process multiple options simultaneously. This allows them to process information in a fraction of the time it would take even the fastest nonquantum systems.
+When multiple qubits act coherently, they can process multiple options simultaneously. This allows them to process information in a fraction of the time it would take even the fastest non-quantum systems.
 
 Quantum algorithms can be designed to take advantage of qubit superposition and entanglement to speed up classical algorithms, or to provide entirely new ways of modeling physical systems.
 
@@ -38,7 +38,7 @@ On the more constructive side, algorithms for secure cryptographic key distribut
 
 _Grover's algorithm_ provides a quadratic factor speed-up for database searching.
 
-Using quantum programs to model quantum systems themselves is another application of quantum computing. Photosynthesis, superconductors, and chemical molecules are examples of quantum systems that can be simulated using quantum programs.
+Using quantum programs to model quantum systems themselves is another application of quantum computing. Photosynthesis, superconductors, and complex molecules are examples of quantum systems that can be simulated using quantum programs.
 
 ## Quantum hardware
 

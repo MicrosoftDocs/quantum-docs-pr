@@ -20,13 +20,13 @@ You can learn about the libraries that are provided with the QDK.
 
 ## Five things you should know about quantum computing
 
-[What is quantum computing](xref:microsoft.quantum.overview.whatis)
+[What is quantum computing?](xref:microsoft.quantum.overview.whatis)
 
 [What can I do with a quantum computer?](xref:microsoft.quantum.overview.computer)
 
-[Why should I learn quantum computing](xref:microsoft.quantum.overview.why)
+[Why should I learn quantum computing?](xref:microsoft.quantum.overview.why)
 
-[How can I learn quantum computing](xref:microsoft.quantum.overview.learn)
+[How can I learn quantum computing?](xref:microsoft.quantum.overview.learn)
 
 [What is the Q# programming language?](xref:microsoft.quantum.overview.qsharp)
 
@@ -34,7 +34,7 @@ You can learn about the libraries that are provided with the QDK.
 
 Dive into a 5-minute [quickstart](xref:microsoft.quantum.write-program) to code a Bell state.
 
-Implement [Grover's algorithm](xref:microsoft.quantum.quickstart.grover) in just a few lines of code.
+Implement [Grover's search algorithm](xref:microsoft.quantum.quickstart.grover) in just a few lines of code.
 
 Try one of the [Quantum Katas](xref:microsoft.quantum.overview.katas), short training exercises to teach you how to program in Q# and learn quantum computing.
 
@@ -52,4 +52,4 @@ Watch this [video](https://www.microsoft.com/en-us/videoplayer/embed/RE2JOJf) to
   * Develop with [Visual Studio](~/install-guide/install.md#develop-with-visual-studio)
   * Develop with [Visual Studio Code](~/install-guide/install.md#develop-with-visual-studio-code)
   * Develop with [Jupyter Notebooks](~/install-guide/install.md#develop-with-jupter-notebooks)
-* Become part of the [Microsoft Quantum community](xref:microsoft.quantum.contributing)
+* Become part of the Microsoft Quantum community by contributing to the [QDK](xref:microsoft.quantum.contributing) open source project

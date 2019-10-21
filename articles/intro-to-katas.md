@@ -16,7 +16,7 @@ The Quantum Katas are an open source series of self-paced tutorials aimed at tea
 
 Each kata is a separate project which includes:
 
-* A sequence of tasks on the topic progressing from trivial to challenging. Each task requires you to fill in some code; the first task might require just one line, and the last one might require a sizable fragment of code.
+* A sequence of tasks on the topic progressing from foundational to challenging. Each task requires you to fill in some code; the first task might require just one line, and the last one might require a sizable fragment of code.
 * A testing framework that sets up, runs and validates your solutions. Each task is covered by a unit test which initially fails; once the test passes, you can move on to the next task!
 * Pointers to reference materials you might need to solve the tasks, both on quantum computing and on Q#.
 * Reference solutions, for when all else fails.

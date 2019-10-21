@@ -38,10 +38,11 @@ Implement [Grover's search algorithm](xref:microsoft.quantum.quickstarts.search)
 
 Try one of the [Quantum Katas](xref:microsoft.quantum.overview.katas), short training exercises to teach you how to program in Q# and learn quantum computing.
 
+Browse the [Q# samples](https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp)
+
 ## Learn about the libraries
 
-Included in the QDK are a set of libraries that abstract scenario specific functionality, to make it easier for you to write quantum programs that target that scenario. For example, [Quantum Chemistry](https://cloudblogs.microsoft.com/quantum/2018/12/04/simulating-nature-with-the-new-microsoft-quantum-development-kit-chemistry-library/
-) is a library for modeling chemical processes at the quantum level. 
+In addition to the standard and numeric Q# libraries, the QDK includes libraries that abstract scenario specific functionality, to make it easier for you to write quantum programs that target that scenario. For example, [Quantum Chemistry](https://cloudblogs.microsoft.com/quantum/2018/12/04/simulating-nature-with-the-new-microsoft-quantum-development-kit-chemistry-library/) is a library for modeling chemical processes at the quantum level.
 
 Watch this [video](https://www.microsoft.com/en-us/videoplayer/embed/RE2JOJf) to learn more about the chemistry library.
 

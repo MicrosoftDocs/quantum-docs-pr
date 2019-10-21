@@ -20,11 +20,11 @@ Quantum computing might sound daunting, but with the right resources you can sta
 
 ## The qubit
 
-In quantum computing, a quantum bit - **qubit** - is a unit of quantum information, like a classical bit. Where classical bits hold a single binary value such as a 0 or 1, a qubit can hold both values at the same time. This is called **superposition**.
+In quantum computing, a quantum bit - **qubit** - is a unit of quantum information, like a classical bit. Where classical bits hold a single binary value such as a 0 or 1, the state of a qubit is between the values of 0 and 1. This is called **superposition**.
 
 The act of **measurement** changes a qubit. It goes from being in superposition to one of the binary states of 0 or 1. Again, measurement of a qubit is unlike a classical bit, which when 0 is measured as 0, and when 1 is measured as 1.
 
-Qubits can also be **entangled**: when we make a measurement of one entangled qubit, it affects the state of the other, even if the qubits are physically far apart.
+Qubits can also be **entangled**: when we make a measurement of one entangled qubit, our knowledge of the state of the other is updated, even if the qubits are physically far apart.
 
 ## What can a quantum computer do?
 

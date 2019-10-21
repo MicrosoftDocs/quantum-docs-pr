@@ -44,7 +44,7 @@ landingContent:
     linkLists:
     - linkListType: how-to-guide
       links:
-      - text: No install with Jupyter
+      - text: Run Q# online in Jupyter
         url: https://mybinder.org/v2/gh/Microsoft/QuantumKatas/master?filepath=Superposition%2FSuperposition.ipynb
       - text: Python install
         url: install-guide/index.md#develop-with-python
@@ -142,8 +142,10 @@ landingContent:
         links:   
           - text: Q# reference
             url: https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.bitwise?view=qsharp-preview
-          - text: C# components
+          - text: C# reference
             url: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators?view=quantum-dotnet-latest
+          - text: Python reference
+            url: https://docs.microsoft.com/python/qsharp/
 
   # Community and contribution
   - title: Community & contribution
@@ -151,7 +153,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Contribute to the QDK
-            url: contribute/index.md
+            url: contributing/index.md
           - text: Read the Microsoft Quantum blog
             url: https://cloudblogs.microsoft.com/quantum
 

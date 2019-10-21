@@ -26,7 +26,7 @@ You can develop using the Katas in your environment of choice:
 * Jupyter Notebooks online within the Binder environment
 * Jupyter Notebooks running on your local machine
 * Visual Studio
-* VS Code
+* Visual Studio Code
 
 ## What can I learn with a kata?
 

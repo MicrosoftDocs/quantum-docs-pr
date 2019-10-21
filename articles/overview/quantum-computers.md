@@ -44,7 +44,7 @@ A great number of numerical calculations on classical computing consist mainly i
 
 Fortunately, there exists a quantum algorithm that allows us to approximately solve the system exponentially faster than a classical computer. This opens the door to great speedups in every problem that needs the solution to linear systems of equations.
 
-## What's next?
+## Next steps
 
 Write code to implement [Grover's algorithm](xref:microsoft.quantum.quickstarts.search)
 

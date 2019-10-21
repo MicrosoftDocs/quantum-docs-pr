@@ -53,5 +53,5 @@ You can develop using the Katas in your environment of choice:
 
 ## Resources
 
-See the full series of [Quantum Katas](https://github.com/microsoft/QuantumKatas)
-[Run the katas online](aka.ms/try-quantum-katas) in Jupyter
+* See the full series of [Quantum Katas](https://github.com/microsoft/QuantumKatas)
+* [Run the katas online](aka.ms/try-quantum-katas) in Jupyter

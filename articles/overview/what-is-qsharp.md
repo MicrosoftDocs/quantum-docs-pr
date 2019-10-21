@@ -38,4 +38,4 @@ Until now, to learn quantum computing you needed to learn the circuit model to u
 
 Q# provides you with an increasing number of libraries and user-defined types that will help you to implement tools and functions already created by others to build advanced quantum algorithms. For example, you need to entangle two-qubits q1 and q2? Instead of applying individually the necessary gates to get the qubits entangled you can use the already built-in operation `PrepareEntangledState([q1], [q2])`.
 
-Just as in classical computing, building programs on top of what others have already created will empower you to solve greater challenges. To know more about how you can learn quantum computing by coding in Q# check out [How to learn quantum computing?](xref:microsoft.quantum.overview.learn).
+Just as in classical computing, building programs on top of what others have already created will empower you to solve greater challenges. To know more about how you can learn quantum computing by coding in Q# check out [How to learn quantum computing](xref:microsoft.quantum.overview.learn).

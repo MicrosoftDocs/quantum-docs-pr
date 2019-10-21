@@ -36,7 +36,7 @@ Quantum-inspired algorithms are being applied to medical research. For example, 
 
 ### Search
 
-By exploiting superposition, Grover's algorithm only needs O(√N) queries to find a specific item in a database, rather than having to access every item. It means that if we have a database of, for example, one million elements, we only need around 1000 tries to find the target.
+By exploiting superposition, Grover's algorithm only needs $O(\sqrt{N})$ queries to find a specific item in a database, rather than having to access every item. It means that if we have a database of, for example, one million elements, we only need around 1000 tries to find the target.
 
 ### Solving linear systems of equations
 

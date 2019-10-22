@@ -1,14 +1,14 @@
 ---
-title: Quantum Computing Concepts
-description: What is quantum computing?
+title: Quantum computing history and background
+description: Learn about the history of quantum computing, some background describing how it works, and about the Microsoft Quantum Development Kit. 
 author: QuantumWriter
-ms.author: nawiebe@microsoft.com
+ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
 ---
 
-# What is Quantum Computing?
+# Quantum computing history and background
 
 A host of new computer technologies have emerged within the last few years, and quantum computing is arguably the technology requiring the greatest paradigm shift on the part of developers.  Quantum computers were proposed in the 1980s by [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) and [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin).  The intuition behind quantum computing stemmed from what was often seen as one of the greatest embarrassments of physics: remarkable scientific progress faced with an inability to model even simple systems. You see, quantum mechanics was developed between 1900 and 1925 and it remains the cornerstone on which chemistry, condensed matter physics and technologies ranging from computer chips to LED lighting ultimately rests.  Yet despite these successes, even some of the simplest systems seemed to be beyond the human ability to model with quantum mechanics.  This is because simulating systems of even a few dozen interacting particles requires more computing power than any conventional computer can provide over thousands of years!
 

@@ -46,7 +46,7 @@
     href: libraries/toc.yml
   - name: Quantum computing concepts
     href: concepts/toc.yml
-  - name: How to host a quantum machine
+  - name: Quantum simulators and resource estimators
     href: machines/toc.yml
 - name: Resources
   items:

@@ -3,7 +3,7 @@ title: What is Q#?
 description: Learn about the Q#, a programming language created by Microsoft to develop applications for quantum computers
 author: natke
 ms.author:  nakersha
-ms.date: 10/16/2019
+ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
 ---

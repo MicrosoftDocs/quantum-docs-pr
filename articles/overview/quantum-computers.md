@@ -3,7 +3,7 @@ title: What can quantum computers do?
 description: Learn about the impact of quantum computing, from novel quantum algorithms to quantum inspired algorithms running on classical computers.
 author: natke
 ms.author: nakersha
-ms.date: 10/16/2019
+ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
 ---

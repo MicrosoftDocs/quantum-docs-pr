@@ -18,7 +18,7 @@
       href: overview/why-learn-quantum-computing.md
     - name: What is Q#?
       href: overview/what-is-qsharp.md
-  - name: Quantum Katas
+  - name: Learn with the Quantum Katas
     href: intro-to-katas.md
 - name: Quickstarts
   items:

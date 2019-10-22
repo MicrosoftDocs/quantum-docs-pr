@@ -22,7 +22,7 @@ You can learn about the libraries that are provided with the QDK.
 
 [What is quantum computing?](xref:microsoft.quantum.overview.what)
 
-[What can I do with a quantum computer?](xref:microsoft.quantum.overview.computer)
+[What can I do with a quantum computer?](xref:microsoft.quantum.overview.computers)
 
 [Why should I learn quantum computing?](xref:microsoft.quantum.overview.why)
 

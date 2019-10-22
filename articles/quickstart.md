@@ -1,171 +1,137 @@
 ---
-title: Write a quantum program | Microsoft Docs
-description: Learn how to write a quantum program in Q#. Develop a Bell  State application in Visual Studio.
-author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com 
-ms.date: 12/11/2017
-ms.topic: article
+title: Write your first quantum program
+description: Learn how to write a quantum program in Q#. Develop a Bell State application using the Quantum Development Kit (QDK)
+author: natke
+ms.author: nakersha 
+ms.date: 10/07/2019
+ms.topic: tutorial
 uid: microsoft.quantum.write-program
 ---
-# Writing a Quantum Program
+# Write your first quantum program
+
+Learn how to write a quantum program using the Microsoft QDK. You will write an application to demonstrate quantum entanglement using a **Bell state**.
+
+You start with the simplest program possible and build it up to demonstrate [quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) and [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement).
+
+## Pre-requisites
+
+* [Install](xref:microsoft.quantum.install) the Quantum Development Kit using your preferred language and development environment
+* If you already have the QDK installed, make sure you have [updated](xref:microsoft.quantum.update) to the latest version
 
 ## What You'll Learn
 
 > [!div class="checklist"]
 > * How to set up a quantum solution and project
 > * The components of a Q# operation
-> * How to call a Q# operation from C#
-> * How to build and execute your quantum algorithm
+> * How to call a Q# operation from a host program
+> * How to entangle two qubits
 
-Applications developed with Microsoft's Quantum Development Kit typically consists of two parts:
+## Setup
+
+Applications developed with Microsoft's Quantum Development Kit consist of two parts:
+
 1. One or more quantum algorithms, implemented using the Q# quantum programming language.
-2. A classical program, implemented in a classical programming language like Python or C#, 
-  that serves as the main entry point and will invoke Q# operations 
-  when it wants to execute a quantum algorithm.
+1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
 
-This guide will walk you through how to create applications using Q#, and using C# as the classical component in Visual Studio or Visual Studio Code.
+#### [Python](#tab/tabid-python)
 
-## Creating a Bell State in Q#
+1. Choose a location for your application
 
-Now that you’ve [installed the Microsoft Quantum Development Kit](xref:microsoft.quantum.install), let’s write your first quantum application.
-We'll start with the simplest program possible and build it up to demonstrate [quantum superposition](https://en.wikipedia.org/wiki/Quantum_superposition) 
-and [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement). We will start with a qubit in a 
-basis state $\ket{0}$, perform some operations on it and then measure the result.
+1. Create a file called `Bell.qs`. This file will contain your Q# code.
 
-The instructions on the page are written for both the command line and Visual Studio.
-For Visual Studio, it assumes you have installed the 
-[Microsoft Quantum Development Kit Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
-If you are using a different development environment, like Visual Studio Code, please 
-follow the instructions to call the .NET Core SDK from the command line.
+1. Create a file called `host.py`. This file will contain your Python host code.
 
-### Step 1: Create a Project and Solution
+#### [C# Command Line](#tab/tabid-csharp)
 
-#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
+1. Create a new Q# project:
 
-Run the following commands in your favorite command line (e.g.: PowerShell or Bash):
+    ```bash
+    dotnet new console -lang Q# --output Bell
+    cd Bell
+    ```
 
-```bash
-$ dotnet new console -lang Q# --output Bell
-$ cd Bell 
-$ code . # To open in Visual Studio Code.
-```
+    You should see a `.csproj` file, a Q# file called `Operation.qs`, and a host program file called `Driver.cs`
+
+1. Rename the Q# file
+
+    ```bash
+    mv Operation.qs Bell.qs
+    ```
 
 #### [Visual Studio](#tab/tabid-vs2019)
 
-- Open up Visual Studio.
-- Go to the `File` menu and select `New` > `Project...`.
-- In the project template explorer, under `Installed` > `Visual C#`, select the `Q# Application` template.
-- Make sure you have `.NET Framework 4.6.1` selected in the list at the bottom of the `New Project` dialog box.
-- Give your project the name `Bell`.
+1. Create a new project
 
-***
+   * Open Visual Studio
+   * Go to the **File** menu and select **New** -> **Project...**
+   * In the project template explorer, under `Installed` > `Visual C#`, select the `Q# Application` template
+   * Make sure you have `.NET Framework 4.6.1` selected in the list at the bottom of the `New Project` dialog box
+   * Give your project the name `Bell`
 
-### Step 2: Enter the Q# Code
+1. Rename the Q# file
 
-Our goal is to create a [Bell State](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to show the concepts of qubit state, gates and measurement.
+   * Navigate to the **Solution Explorer**
+   * Right click on the `Operation.qs` file
+   * Rename it to `Bell.qs`
 
-#### Source files for a quantum application
-Your development environment should have two files open:
-`Driver.cs`, which will hold the C# driver for your quantum code,
-and `Operations.qs`, which will hold the quantum code itself.
+* * *
 
-#### Q# source
-The first step is to rename the Q# file to `Bell.qs`.
-Right-click on `Operations.qs` in the Visual Studio Solution Explorer (Ctrl+Alt+L to focus) or the Visual Studio Code Explorer (Ctrl/⌘+Shift+E to focus), and select the Rename option.
-Replace `Operations` with `Bell` and hit return.
+## Write a Q# operation
 
-To enter the Q# code, make sure that you are editing the
-`Bell.qs` window.
-The `Bell.qs` file should have the following contents:
+Our goal is to prepare two qubits in a [Bell state](https://en.wikipedia.org/wiki/Bell_state) showing entanglement. We will build this up piece by piece to demonstrate qubit states, gates, and measurement.
 
-```qsharp
-namespace Quantum.Bell {
-    open Microsoft.Quantum.Intrinsic;
-    open Microsoft.Quantum.Canon;
+### Q# operation code
 
-    operation HelloQ () : Unit {
-        Message("Hello quantum world!");
-    }
-}
-```
+1. Replace the contents of the Bell.qs file with the following code:
 
-#### Q# operation
-First, replace the string `HelloQ` with `Set`, and change the operation
-parameters (the content of the parentheses) to contain the string
-`desired: Result, q1: Qubit`.
-The file should now look like:
+    ```qsharp
+    namespace Quantum.Bell {
+        open Microsoft.Quantum.Intrinsic;
+        open Microsoft.Quantum.Canon;
 
-```qsharp
-namespace Quantum.Bell {
-    open Microsoft.Quantum.Intrinsic;
-    open Microsoft.Quantum.Canon;
-
-    operation Set (desired: Result, q1: Qubit) : Unit {
-        Message("Hello quantum world!");
-    }
-}
-```
-
-Now, replace `Message("Hello quantum world!");` with the following code between the braces that enclose the operation body:
-
-```qsharp
-        if (desired != M(q1)) {
-            X(q1);
-        }
-```
-
-The file should now look like:
-
-```qsharp
-namespace Quantum.Bell {
-    open Microsoft.Quantum.Intrinsic;
-    open Microsoft.Quantum.Canon;
-
-    operation Set (desired: Result, q1: Qubit) : Unit {
-        if (desired != M(q1)) {
-            X(q1);
+        operation Set(desired : Result, q1 : Qubit) : Unit {
+            if (desired != M(q1)) {
+                X(q1);
+            }
         }
     }
-}
-```
+    ```
 
-#### Set or flip a qubit
-This operation may now be called to set a qubit in a known state (`Zero` or `One`). We measure the qubit, if it's in the state we want, we leave it alone, otherwise, we flip it with the `X` gate.
+    This operation may now be called to set a qubit to a known state (`Zero` or `One`).
 
-> [!NOTE]
-> This code defines a Q# __operation__.
-> An operation is the basic unit of quantum execution in Q#.
-> It is roughly equivalent to a function in C or C++ or Python,
-> or a static method in C# or Java.
->
-> The arguments to an operation are specified as a tuple, within parentheses.
-> The return type of the operation is specified after a colon.
-> In this case, the `Set` operation has no return, so it is marked as
-> returning `Unit`.
-> This is the Q# equivalent of `unit` in F#, which is roughly analogous to
-> `void` in C#.
-> 
-> An operation has a __body__ section, which contains the implementation
-> of the operation.
-> An operation may also have __adjoint__, __controlled__, and 
-> __controlled adjoint__ sections.
-> These are used to specify specific variants of appropriate operations.
-> See the [Q# language reference](xref:microsoft.quantum.language.intro) for more
-> information.
+    We measure the qubit, if it's in the state we want, we leave it alone, otherwise, we flip it with the `X` gate.
 
-#### Measure a qubit
-Add the following operation to the namespace, after the end of the
+### About Q# operations
+
+An operation is the basic unit of quantum execution in Q#. It is roughly equivalent to a function in C or C++ or Python, or a static method in C# or Java.
+
+The arguments to an operation are specified as a tuple, within parentheses.
+
+The return type of the operation is specified after a colon. In this case, the `Set` operation has no return, so it is marked as returning `Unit`. This is the Q# equivalent of `unit` in F#, which is roughly analogous to `void` in C#, and an empty tuple (`Tuple[()]`) in Python.
+
+### About quantum gates
+
+You have used two quantum gates in your first Q# operation:
+
+* The [M](xref:microsoft.quantum.intrinsic.m) gate, which measures the state of the qubit
+* The [X](xref:microsoft.quantum.intrinsic.x) gate, which flips the state of a qubit
+
+A quantum gate transforms the state of a qubit. The name comes from the analogy of a classical logic gate such as a `NOT` gate, which inverts the state of a classical bit.
+
+### Add Q# test code
+
+1. Add the following operation to the `Bell.qs` file, inside the namespace, after the end of the
 `Set` operation:
 
-```qsharp
-    operation BellTest (count : Int, initial: Result) : (Int, Int) {
+    ```qsharp
+    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
 
         mutable numOnes = 0;
         using (qubit = Qubit()) {
 
             for (test in 1..count) {
-                Set (initial, qubit);
-                let res = M (qubit);
+                Set(initial, qubit);
+                let res = M(qubit);
 
                 // Count the number of ones we saw:
                 if (res == One) {
@@ -178,149 +144,149 @@ Add the following operation to the namespace, after the end of the
         // Return number of times we saw a |0> and number of times we saw a |1>
         return (count-numOnes, numOnes);
     }
-```
+    ```
 
-This operation (`BellTest`) will loop for `count` iterations, set a specified `initial` value on a qubit and then measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
+    This operation (`TestBellState`) will loop for `count` iterations, set a specified `initial` value on a qubit and then measure (`M`) the result. It will gather statistics on how many zeros and ones we've measured and return them to the caller. It performs one other necessary operation. It resets the qubit to a known state (`Zero`) before returning it allowing others to allocate this qubit in a known state. This is required by the `using` statement.
 
-All of these calls use intrinsic quantum operations that are defined in the `Microsoft.Quantum.Intrinsic` namespace.
-For instance, the `M` operation measures its argument qubit in the
-computational (`Z`) basis, and `X` applies a state flip around the x axis
-to its argument qubit.
+### About variables in Q#
 
-> [!NOTE]
-> As you can see, Q# uses C#-like semicolons and braces to indicate
-> program structure.
->
-> Q# has an __if__ statement that is very much like C#.
->
-> Q# deals with variables in a unique way.
-> By default, variables in Q# are immutable; their value may not be changed
-> after they are bound.
-> The `let` keyword is used to indicate the binding of an immutable variable.
-> Operation arguments are always immutable.
->
-> If you need a variable whose value can change, such as `numOnes`
-> in the example, you can declare the variable with the `mutable` keyword.
-> A mutable variable's value may be changed using a `set` statement.
->
-> In both cases, the type of a variable is inferred by the compiler.
-> Q# doesn't require any type annotations for variables.
->
-> The `using` statement is also special to Q#.
-> It is used to allocate qubits for use in a block of code.
-> In Q#, all qubits are dynamically allocated and released,
-> rather than being fixed resources that are there for the entire
-> lifetime of a complex algorithm.
-> A `using` statement allocates a set of qubits at the start and releases
-> those qubits at the end of the block.
-> There is an analogous `borrowing` statement that is used to allocate
-> potentially dirty ancilla qubits.
->
-> A `for` loop in Q# iterates through a range or array.
-> There is no Q# equivalent to a traditional C-style computer __for__ statement.
-> A range may be specified by the first and last integers in the range, as in
-> the example: `1..10` is the range 1, 2, 3, 4, 5, 6, 7, 8, 9, and 10.
-> If a step other than +1 is needed, then three integers with `..` between
-> them is used: `1..2..10` is the range 1, 3, 5, 7, and 9.
-> Note that ranges are inclusive at both ends.
->
-> The `BellTest` operation returns two values as a tuple.
-> The operation's return type is `(Int, Int)`, and the `return` statement
-> has an explicit tuple containing two integer variables.
-> Q# uses tuples as a way to pass multiple values, rather than using
-> structures or records.
+Q# deals with variables in a unique way. By default, variables in Q# are immutable; their value may not be changed after they are bound. The `let` keyword is used to indicate the binding of an immutable variable. Operation arguments are always immutable.
 
-### Step 3: Enter the C# Driver Code
+If you need a variable whose value can change, such as `numOnes` in the example, you can declare the variable with the `mutable` keyword. A mutable variable's value may be changed using a `set` statement.
 
-Switch to the `Driver.cs` file in your development environment.
-This file should have the following contents:
+In both cases, the type of a variable is inferred by the compiler. Q# doesn't require any type annotations for variables.
 
-```csharp
-using System;
+### About `using` statements in Q#
 
-using Microsoft.Quantum.Simulation.Core;
-using Microsoft.Quantum.Simulation.Simulators;
+The `using` statement is also special to Q#. It is used to allocate qubits for use in a block of code. In Q#, all qubits are dynamically allocated and released, rather than being fixed resources that are there for the entire lifetime of a complex algorithm. A `using` statement allocates a set of qubits at the start, and releases those qubits at the end of the block.
 
-namespace Quantum.Bell
-{
-    class Driver
+## Create the host application code
+
+#### [Python](#tab/tabid-python)
+
+1. Open the `host.py` file and add the following code:
+
+    ```python
+    import qsharp
+
+    from qsharp import Result
+    from Quantum.Bell import TestBellState
+
+    initials = (Result.Zero, Result.One)
+
+    for i in initials:
+      res = TestBellState.simulate(count=1000, initial=i)
+      (num_zeros, num_ones) = res
+      print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
+    ```
+
+#### [C#](#tab/tabid-csharp)
+
+1. Replace the contents of the `Driver.cs` file with the following code:
+
+    ```csharp
+    using System;
+
+    using Microsoft.Quantum.Simulation.Core;
+    using Microsoft.Quantum.Simulation.Simulators;
+
+    namespace Quantum.Bell
     {
-        static void Main(string[] args)
+        class Driver
         {
-            using (var qsim = new QuantumSimulator())
+            static void Main(string[] args)
             {
-                HelloQ.Run(qsim).Wait();
+                using (var qsim = new QuantumSimulator())
+                {
+                    // Try initial values
+                    Result[] initials = new Result[] { Result.Zero, Result.One };
+                    foreach (Result initial in initials)
+                    {
+                        var res = TestBellState.Run(qsim, 1000, initial).Result;
+                        var (numZeros, numOnes) = res;
+                        System.Console.WriteLine(
+                            $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4}");
+                    }
+                }
+
+                System.Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
             }
         }
     }
-}
+    ```
+
+#### [](#tab/tabid-vs2019)
+
+* * *
+
+### About the host application code
+
+#### [Python](#tab/tabid-python)
+
+The Python host application has three parts:
+
+* Compute any arguments required for the quantum algorithm. In the example, `count` is fixed at a 1000 and `initial` is the initial value of the qubit.
+* Run the quantum algorithm by calling the `simulate()` method of the imported Q# operation.
+* Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`num_zeros`) and number of ones (`num_ones`) measured by the simulator. We deconstruct the tuple to get the two fields, and print the results.
+
+#### [C#](#tab/tabid-csharp)
+
+The C# host application has four parts:
+
+* Construct a quantum simulator. In the example, `qsim` is the simulator.
+* Compute any arguments required for the quantum algorithm. In the example, `count` is fixed at a 1000 and `initial` is the initial value of the qubit.
+* Run the quantum algorithm. Each Q# operation generates a C# class with the same name. This class has a `Run` method that **asynchronously** executes the operation. The execution is asynchronous because execution on actual hardware will be asynchronous. Because the `Run` method is asynchronous, we fetch the `Result` property; this blocks execution until the task completes and returns the result synchronously.
+* Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`numZeros`) and number of ones (`numOnes`) measured by the simulator. This is returned as a ValueTuple in C#. We deconstruct the tuple to get the two fields, print the results, and wait for a keypress.
+
+#### [](#tab/tabid-vs2019)
+
+* * *
+
+## Build and run
+
+#### [Python](#tab/tabid-python)
+
+1. Run the following command at your terminal:
+
+    ```
+    python host.py
+    ```
+
+    This command runs the host application, which simulates the Q# operation.
+
+The results should be:
+
+```Output
+Init:0    0s=1000 1s=0   
+Init:1    0s=0    1s=1000
 ```
 
-#### Run quantum operations from a C# host program
-Replace the body of the `Main` method with the following code:
+#### [Command Line / Visual Studio Code](#tab/tabid-csharp)
 
-```csharp
-            using (var qsim = new QuantumSimulator())
-            {
-                // Try initial values
-                Result[] initials = new Result[] { Result.Zero, Result.One };
-                foreach (Result initial in initials)
-                {
-                    var res = BellTest.Run(qsim, 1000, initial).Result;
-                    var (numZeros, numOnes) = res;
-                    System.Console.WriteLine(
-                        $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4}");
-                }
-            }
+1. Run the following at your terminal:
 
-            System.Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
-```
+    ```bash
+    dotnet run
+    ```
 
-> [!NOTE]
-> The C# driver has four parts:
-> * Construct a quantum simulator. 
->   In the example, `qsim` is the simulator.
-> * Compute any arguments required for the quantum algorithm.
->   In the example, `count` is fixed at a 1000 and `initial` is the initial value of the qubit.
-> * Run the quantum algorithm.
->   Each Q# operation generates a C# class with the same name.
->   This class has a `Run` method that **asynchronously** executes the operation.
->   The execution is asynchronous because execution on actual hardware will be
->   asynchronous. 
->
->   Because the `Run` method is asynchronous, we fetch the `Result` property;
->   this blocks execution until the task completes and returns the result synchronously.
->   
-> * Process the result of the operation.
->   In the example, `res` receives the result of the operation.
->   Here the result is a tuple of the number of zeros (`numZeros`) and number of ones (`numOnes`)
->   measured by the simulator. This is returned as a ValueTuple in C#.
->   We deconstruct the tuple to get the two fields, print the results,
->   and wait for a keypress.
+    This command will automatically download all required packages, build the application, then run it at the command line.
 
-### Step 4: Build and Run
-
-#### [Command Line / Visual Studio Code](#tab/tabid-vscode)
-
-Run the following at your terminal:
-
-```bash
-$ dotnet run
-```
-
-This will automatically download all required packages, build the application, then run it at the commmand line.
-
-Alternatively, press **F1** to open the Command Palette and select "Debug: Start Without Debugging."
+1. Alternatively, press **F1** to open the Command Palette and select **Debug: Start Without Debugging.**
 You may be prompted to create a new ``launch.json`` file describing how to start the program.
 The default ``launch.json`` should work well for most applications.
 
+The results should be:
+
+```Output
+Init:Zero 0s=1000 1s=0
+Init:One  0s=0    1s=1000
+Press any key to continue...
+```
+
 #### [Visual Studio](#tab/tabid-vs2019)
 
-Just hit `F5`, and your program should build and run!
-
-***
-
+1. Just hit `F5`, and your program should build and run!
 
 The results should be:
 
@@ -332,13 +298,15 @@ Press any key to continue...
 
 The program will exit after you press a key.
 
-### Step 5: Creating Superposition
+* * *
 
-Now we want to manipulate the qubit. First we'll just try to flip it. This is accomplished by performing an `X` gate before we measure it in `BellTest`:
+## Prepare superposition
+
+Now we want to manipulate the qubit. First we'll just try to flip it. This is accomplished by performing an `X` gate before we measure it in `TestBellState`:
 
 ```qsharp
-                X(qubit);
-                let res = M (qubit);
+X(qubit);
+let res = M(qubit);
 ```
 
 Now the results (after pressing `F5`) are reversed:
@@ -348,11 +316,11 @@ Init:Zero 0s=0    1s=1000
 Init:One  0s=1000 1s=0
 ```
 
-However, everything we've seen so far is classical. Let's get a quantum result. All we need to do is replace the `X` gate in the previous run with an `H` or Hadamard gate. Instead of flipping the qubit all the way from 0 to 1, we will only flip it halfway. The replaced lines in `BellTest` now look like:
+However, everything we've seen so far is classical. Let's get a quantum result. All we need to do is replace the `X` gate in the previous run with an `H` or Hadamard gate. Instead of flipping the qubit all the way from 0 to 1, we will only flip it halfway. The replaced lines in `TestBellState` now look like:
 
 ```qsharp
-                H(qubit);
-                let res = M (qubit);
+H(qubit);
+let res = M(qubit);
 ```
 
 Now the results get more interesting:
@@ -364,44 +332,42 @@ Init:One  0s=522  1s=478
 
 Every time we measure, we ask for a classical value, but the qubit is halfway between 0 and 1, so we get (statistically) 0 half the time and 1 half the time. This is known as __superposition__ and gives us our first real view into a quantum state.
 
-### Step 6: Creating Entanglement
+## Prepare entanglement
 
-Now we'll make the promised [Bell State](https://en.wikipedia.org/wiki/Bell_state) and show off __entanglement__. The first thing we'll need to do is allocate 2 qubits instead of one in `BellTest`:
+Now we'll prepare the promised [Bell state](https://en.wikipedia.org/wiki/Bell_state) and show off __entanglement__. The first thing we'll need to do is allocate 2 qubits instead of one in `TestBellState`:
 
 ```qsharp
-        using ((q0, q1) = (Qubit(), Qubit())) {
+using ((q0, q1) = (Qubit(), Qubit())) {
 ```
 
-This will allow us to add a new gate (`CNOT`) before we measure  (`M`) in `BellTest`:
+This will allow us to add a new gate (`CNOT`) before we measure  (`M`) in `TestBellState`:
 
 ```qsharp
-                Set (initial, q0);
-                Set (Zero, q1);
+Set(initial, q0);
+Set(Zero, q1);
 
-                H(q0);
-                CNOT(q0,q1);
-                let res = M (q0);
+H(q0);
+CNOT(q0, q1);
+let res = M(q0);
 ```
 
-We've added another `Set` operation to initialize qubit 1 to make sure that it's always in the `Zero` state when we start.
+We've added another `Set` operation to initialize the first qubit to make sure that it's always in the `Zero` state when we start.
 
-We also need to reset the second qubit before releasing it (this could also be done with a `for` loop). We'll add a line after qubit 0 is reset:
+We also need to reset the second qubit before releasing it.
 
 ```qsharp
-            Set(Zero, q0);
-            Set(Zero, q1);
+Set(Zero, q0);
+Set(Zero, q1);
 ```
 
 The full routine now looks like this:
 
 ```qsharp
-    operation BellTest (count : Int, initial: Result) : (Int,Int) {
+    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
 
         mutable numOnes = 0;
         using ((q0, q1) = (Qubit(), Qubit())) {
-        {
-            for (test in 1..count)
-            {
+            for (test in 1..count) {
                 Set (initial, q0);
                 Set (Zero, q1);
 
@@ -424,23 +390,22 @@ The full routine now looks like this:
     }
 ```
 
-If we run this, we'll get exactly the same 50-50 result we got before. However, what we're really interested in is how the second qubit reacts to the first being measured. We'll add this statistic with a new version of the `BellTest` operation:
+If we run this, we'll get exactly the same 50-50 result we got before. However, what we're interested in is how the second qubit reacts to the first being measured. We'll add this statistic with a new version of the `TestBellState` operation:
 
 ```qsharp
-    operation BellTest (count : Int, initial: Result) : (Int, Int, Int) {
+    operation TestBellState(count : Int, initial : Result) : (Int, Int, Int) {
         mutable numOnes = 0;
         mutable agree = 0;
         using ((q0, q1) = (Qubit(), Qubit())) {
-            for (test in 1..count)
-            {
-                Set (initial, q0);
-                Set (Zero, q1);
+            for (test in 1..count) {
+                Set(initial, q0);
+                Set(Zero, q1);
 
                 H(q0);
-                CNOT(q0,q1);
-                let res = M (q0);
+                CNOT(q0, q1);
+                let res = M(q0);
 
-                if (M (q1) == res) {
+                if (M(q1) == res) {
                     set agree += 1;
                 }
 
@@ -448,7 +413,6 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
                 if (res == One) {
                     set numOnes += 1;
                 }
-                
             }
             
             Set(Zero, q0);
@@ -460,7 +424,25 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
     }
 ```
 
-There is now a new return value (`agree`) that will keep track of every time the measurement from the first qubit matches the measurement of the second qubit. Of course, we also have to update the __Driver.cs__ file accordingly:
+The new return value (`agree`) keeps track of every time the measurement from the first qubit matches the measurement of the second qubit. We also have to update the host application accordingly:
+
+#### [Python](#tab/tabid-python)
+
+```python
+import qsharp
+
+from qsharp import Result
+from Quantum.Bell import TestBellState
+
+initials = {Result.Zero, Result.One} 
+
+for i in initials:
+    res = TestBellState.simulate(count=1000, initial=i)
+    (num_zeros, num_ones, agree) = res
+    print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
+```
+
+#### [C#](#tab/tabid-csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())
@@ -469,7 +451,7 @@ There is now a new return value (`agree`) that will keep track of every time the
                 Result[] initials = new Result[] { Result.Zero, Result.One };
                 foreach (Result initial in initials)
                 {
-                    var res = BellTest.Run(qsim, 1000, initial).Result;
+                    var res = TestBellState.Run(qsim, 1000, initial).Result;
                     var (numZeros, numOnes, agree) = res;
                     System.Console.WriteLine(
                         $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4} agree={agree,-4}");
@@ -479,6 +461,11 @@ There is now a new return value (`agree`) that will keep track of every time the
             System.Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
 ```
+
+#### [](#tab/tabid-vs2019)
+
+* * *
+
 Now when we run, we get something pretty amazing:
 
 ```Output
@@ -488,41 +475,11 @@ Init:One  0s=490  1s=510  agree=1000
 
 Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1), but now when we measure the second qubit, it is __always__ the same as what we measured for the first qubit. Our `CNOT` has entangled the two qubits, so that whatever happens to one of them, happens to the other. If you reversed the measurements (did the second qubit before the first), the same thing would happen. The first measurement would be random and the second would be in lock step with whatever was discovered for the first.
 
+Congratulations, you've written your first quantum program!
 
-## Estimating Resources
-
-Sometimes the quantum program is impossible to simulate on a classical computer (for example, if it uses too many qubits). In this case the researchers need to get an estimate of how many resources (qubits or certain gates) the program will use on a quantum computer as it would be impossible to simulate the program on a classical computer. We can do this without changing the Q# operation but using a different target machine, a  `ResourcesEstimator`, for executing it in the C# host code; 
-for example, modify the code in the the __Driver.cs__ file to be:
-
-```csharp
-            var estimator = new ResourcesEstimator();
-            BellTest.Run(estimator, 1000, Result.Zero).Wait();
-
-            System.Console.WriteLine(estimator.ToTSV());
-            
-            System.Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
-```
-
-This change indicates to run the `BellTest` operation using the `estimator` as the target machine. When completed,
-we output the results to the console in TSV (tab-seperated values) format using the `ResourcesEstimator`'s `ToTSV()` method.
-The output of the program is:
-
-```Output
-Metric          Sum
-CNOT            1000
-QubitClifford   1000
-R               0
-Measure         4002
-T               0
-Depth           0
-Width           2
-BorrowedWidth   0
-```
+## What's next?
 
 For more information about the metrics reported and accessing the data programmatically,
 take a look at the [`ResourcesEstimator` documentation](xref:microsoft.quantum.machines.resources-estimator).
 
-
-To learn more about the other type of simulators and target machines provided in the Quantum Development Kit, 
-how they work and how to use them, take a look at the [Managing Quantum machines and drivers topic](xref:microsoft.quantum.machines) in the documentation.
+To learn more about the other type of simulators and target machines provided in the Quantum Development Kit, how they work and how to use them, take a look at the [Managing quantum machines and drivers topic](xref:microsoft.quantum.machines) in the documentation.

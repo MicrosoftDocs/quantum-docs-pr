@@ -4,7 +4,7 @@
       {
         "files": [
           "**/*.md",
-          "TOC.yml"
+          "*.yml"
         ],
         "src": ".",
         "version": "qsharp-preview",
@@ -15,7 +15,8 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"
+          "ThirdPartyNotices",
+          "quantum/**"
         ]
       }
     ],

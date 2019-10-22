@@ -4,7 +4,7 @@
   items:
   - name: Get started
     href: welcome.md
-  - name: Five things you should know about quantum computing
+  - name: Five things to know about quantum computing
     items:
     - name: Overview
       href: overview/index.md

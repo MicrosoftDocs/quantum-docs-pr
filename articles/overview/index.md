@@ -13,6 +13,5 @@ uid: microsoft.quantum.overview.index
 * [What is quantum computing?](xref:microsoft.quantum.overview.what)
 * [What can I do with a quantum computer?](xref:microsoft.quantum.overview.computers)
 * [Why should I learn quantum computing?](xref:microsoft.quantum.overview.why)
-* [How can I learn quantum computing?](xref:microsoft.quantum.overview.learn)
 * [What is the Q# programming language?](xref:microsoft.quantum.overview.qsharp)
-
+* [How can I learn quantum computing?](xref:microsoft.quantum.overview.learn)

@@ -47,7 +47,7 @@ landingContent:
     - linkListType: how-to-guide
       links:
       - text: Run Q# online in Jupyter
-        url: aka.ms/try-quantum-katas
+        url: https://aka.ms/try-quantum-katas
       - text: Python install
         url: install-guide/index.md#develop-with-python
       - text: Jupyter install

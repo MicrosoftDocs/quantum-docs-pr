@@ -10,7 +10,7 @@ uid: microsoft.quantum.overview.learn
 
 # How to learn quantum computing
 
-Learn how to write your first quantum program.
+Learn how to start writing quantum programs.
 
 ## Getting the basics: what do you need to know?
 

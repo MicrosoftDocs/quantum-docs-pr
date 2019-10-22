@@ -16,11 +16,7 @@ The Q# programming language takes care of all the quantum computer's internal lo
 
 ## We want to code algorithms, not draw circuits
 
-We can write quantum computations as quantum circuits like we do in classical computing. The circuit model has been very useful for many years in quantum computing research.
-
-However, when we write classical programs for normal computers, we don’t think in terms of circuits but in terms of logic.
-
-Here in Microsoft, we believe in empowering developers to go beyond quantum circuits by offering the tools to develop quantum algorithms. Q# allows you to use the knowledge of other high level programming languages and apply them to developing applications on quantum computers.
+While the circuit model has been very useful for many years in quantum computing research, here at Microsoft, we believe that developers can go beyond quantum circuits and develop quantum algorithms and applications using Q#. The Q# language was built to take advantage of what we’ve learned through decades of classical software development, and empower quantum developers with the high-level language functionality they have become accustomed to in classical programming.
 
 ## How does Q# work?
 

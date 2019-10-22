@@ -16,7 +16,7 @@ To solve some of the world's most challenging problems, where finding a solution
 
 ## Molecular simulations
 
-In a quantum computer, we don’t need to model all of the states of a complex system. Instead the computer itself can be in superposition. We embed the quantum state of the system that we want to simulate in the computer and run the simulation with a specific set of quantum gates. In other words, we use a quantum computer to simulate a quantum system.
+Simulating microscopic systems that behave according to the laws of quantum mechanics is computationally expensive. We need to take into account all the possible states that can be in superposition and the number of states grows exponentially with the size of the system. In a quantum computer, we don’t need to model all of the states of the system. Instead, we embed the quantum state of the system that we want to simulate in the qubits of the computer itself, and run the simulation with a specific set of quantum gates. In other words, we use a quantum computer to simulate a quantum system.
 
 Chemical molecules are quantum systems and therefore can be analyzed in this way. One such specific chemical is the _nitrogenase_ enzyme, which, with a better understanding of its properties, could have the potential to reduce the energy consumption and greenhouse gas emission of current fertilizers.
 

@@ -26,9 +26,9 @@ You can learn about the libraries that are provided with the QDK.
 
 [Why should I learn quantum computing?](xref:microsoft.quantum.overview.why)
 
-[How can I learn quantum computing?](xref:microsoft.quantum.overview.learn)
-
 [What is the Q# programming language?](xref:microsoft.quantum.overview.qsharp)
+
+[How can I learn quantum computing?](xref:microsoft.quantum.overview.learn)
 
 ## Code first
 

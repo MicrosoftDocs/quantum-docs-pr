@@ -12,12 +12,12 @@
       href: overview/what-is-quantum-computing.md
     - name: What can a quantum computer do?
       href: overview/quantum-computers.md
-    - name: How can I learn quantum computing?
-      href: overview/how-to-learn-quantum-computing.md
     - name: Why should I learn quantum computing?
       href: overview/why-learn-quantum-computing.md
     - name: What is Q#?
       href: overview/what-is-qsharp.md
+    - name: How can I learn quantum computing?
+      href: overview/how-to-learn-quantum-computing.md
   - name: Learn with the Quantum Katas
     href: intro-to-katas.md
 - name: Quickstarts

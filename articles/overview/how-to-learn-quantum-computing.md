@@ -44,3 +44,8 @@ You don’t have to learn this alone, there is a big community of amateurs and e
 * If you have any questions about Q# or quantum computing don’t hesitate and take a look at the Quantum Computing StackExchange site. If you don’t find your specific question you can always ask a new one. 
 * Check out [Q# blog](https://devblogs.microsoft.com/qsharp/) and [Microsoft Quantum Blog](https://cloudblogs.microsoft.com/quantum/) to stay up to date with the latest news and resources about Q#.
 * Check [Q# Community](https://qsharp.community/) and [Awesome Q#](https://project-awesome.org/ebraminio/awesome-qsharp) to look for more resources and material.
+
+## Next steps
+
+* [Learn quantum computing concepts with Q#?](xref:microsoft.quantum.quickstart)
+* [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)

@@ -48,7 +48,7 @@ In classical computers, bits correspond to voltage levels in silicon circuits. Q
 
 Up to a certain scale (number of qubits), quantum computing can be simulated on a classical computer. Using simulations is how you can start to write quantum programs using Microsoft Quantum, the Quantum Development Kit (QDK), and the Q# language.
 
-## Get started today
+## Next steps
 
-* [Build a quantum program that implements Grover's algorithm](xref:microsoft.quantum.quickstarts.search)
-* [Take a quick look at Q# by developing a Bell State](xref:microsoft.quantum.write-program) program
+* [What can I do with a quantum computer](xref:microsoft.quantum.overview.computers)
+* [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)

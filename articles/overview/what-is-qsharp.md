@@ -36,4 +36,5 @@ Q# provides you with an increasing number of libraries and user-defined types th
 
 ## Next steps
 
-Just as in classical computing, building programs on top of what others have already created will empower you to solve greater challenges. To know more about how you can learn quantum computing by coding in Q# check out [How to learn quantum computing](xref:microsoft.quantum.overview.learn).
+* [How do I learn quantum computing?](xref:microsoft.quantum.overview.learn)
+* [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)

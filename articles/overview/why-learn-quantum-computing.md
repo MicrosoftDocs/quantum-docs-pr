@@ -26,4 +26,9 @@ Even if we are still far from achieving fault-tolerant quantum computers, we are
 
 ## Quantum computing is fun!
 
-In addition to the real-world impact discussed above, we believe quantum computing can be fun. Learning quantum computing is a rewarding experience where you will come away with cutting-edge knowledge and the skills to help build the technology of the future. Check the section: [How to learn quantum computing?](xref:microsoft.quantum.overview.learn) to start writing your first quantum programs!  
+In addition to the real-world impact discussed above, we quantum computing is fun. Learning quantum computing is a rewarding experience where you will come away with cutting-edge knowledge and the skills to help build the technology of the future.
+
+## Next steps
+
+* [What is Q#?](xref:microsoft.quantum.overview.qsharp)
+* [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)

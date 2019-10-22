@@ -37,7 +37,7 @@ landingContent:
           - text: Learn with the Quantum Katas
             url: intro-to-katas.md
           - text: Browse quantum code samples
-            url: https://docs.microsoft.com/samples/microsoft/quantum
+            url: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
           - text: Quantum computing concepts
             url: concepts/index.md
 

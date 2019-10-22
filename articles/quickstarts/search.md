@@ -1,6 +1,6 @@
 ---
-title: Implement Grover's search algorithm in Q# using the Quantum Development Kit
-description: Build a Q# project that demonstrates one the canonical quantum algorithms.
+title: Run Grover's search algorithm in Q# - Quantum Development Kit
+description: Build a Q# project that demonstrates Grover's algorithm, one of the canonical quantum algorithms.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
@@ -10,9 +10,9 @@ uid: microsoft.quantum.quickstarts.search
 
 # Quickstart: Implement Grover's search algorithm in Q#
 
-Grover's algorithm searches a list of unstructured data for specific items. For example, it can answer the question: is this card drawn from a pack of cards an ace of hearts? The labeling of the specific item is called _marked input_.
+Grover's algorithm searches a list of unstructured data for specific items. For example, it can answer the question: Is this card drawn from a pack of cards an ace of hearts? The labeling of the specific item is called _marked input_.
 
-Using Grover's search algorithm, a quantum computer is guaranteed to run this search in less steps than the number of items in the list that we're searching — something no classical algorithm can do. The speed-up in the case of a pack of cards is negligible, however in lists containing millions or billions of items, it becomes significant.
+Using Grover's search algorithm, a quantum computer is guaranteed to run this search in fewer steps than the number of items in the list that you're searching — something no classical algorithm can do. The increased speed in the case of a pack of cards is negligible; however, in lists containing millions or billions of items, it becomes significant.
 
 You can build Grover's search algorithm with just a few lines of code.
 
@@ -22,11 +22,11 @@ You can build Grover's search algorithm with just a few lines of code.
 
 ## What does Grover's search algorithm do?
 
-Grover's algorithm asks whether an item in a list is the one we are searching for. It does this by constructing a quantum superposition of the indexes of the list, with each coefficient, or probability amplitude, representing the probability of that specific index being the one you are looking for.
+Grover's algorithm asks whether an item in a list is the one we are searching for. It does this by constructing a quantum superposition of the indexes of the list with each coefficient, or probability amplitude, representing the probability of that specific index being the one you are looking for.
 
 At the heart of the algorithm are two steps that incrementally boost the coefficient of the index that we are looking for, until the probability amplitude of that coefficient approaches one.
 
-The number of incremental boosts is less than the number of items in the list. This is why Grover's search algorithm performs the search in less steps than any classical algorithm.
+The number of incremental boosts is fewer than the number of items in the list. This is why Grover's search algorithm performs the search in fewer steps than any classical algorithm.
 
 ![Functional diagram of Grover's search algorithm](~/media/grover.png)
 
@@ -42,7 +42,7 @@ The number of incremental boosts is less than the number of items in the list. T
 
     [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/Reflections.qs)]
 
-    The `ReflectAboutMarked` operation defines the marked input that you are searching for: the string of alternating zeros and ones. This sample hard codes the marked input, and can be extended to search for different inputs, or generalized for any input.
+    The `ReflectAboutMarked` operation defines the marked input that you are searching for: the string of alternating zeros and ones. This sample hard-codes the marked input, and can be extended to search for different inputs or generalized for any input.
 
 1. Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.
 
@@ -85,11 +85,11 @@ The number of incremental boosts is less than the number of items in the list. T
 
     ***
 
-    Note that the `ReflectAboutMarked` operation is called four times, but that your Q# program was able to find the "01010" input amongst $2^5 = 32$ possible inputs!
+    The `ReflectAboutMarked` operation is called only four times, but your Q# program was able to find the "01010" input amongst $2^{5} = 32$ possible inputs!
 
-## Going Further
+## Next steps
 
-If you enjoyed this quickstart, checkout some of the resources below to learn more about how you can use Q# to write your own quantum applications today.
+If you enjoyed this quickstart, check out some of the resources below to learn more about how you can use Q# to write your own quantum applications:
 
 - [Quantum computing concepts](xref:microsoft.quantum.concepts.intro)
 - [Quantum Development Kit Samples](https://docs.microsoft.com/en-us/samples/browse/?products=qdk)

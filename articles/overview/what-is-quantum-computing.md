@@ -50,5 +50,5 @@ Up to a certain scale (number of qubits), quantum computing can be simulated on 
 
 ## Next steps
 
-* [What can I do with a quantum computer](xref:microsoft.quantum.overview.computers)
+* [What can I do with a quantum computer?](xref:microsoft.quantum.overview.computers)
 * [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)

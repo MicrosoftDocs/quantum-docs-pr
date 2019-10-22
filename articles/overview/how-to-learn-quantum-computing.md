@@ -47,5 +47,5 @@ You don’t have to learn this alone, there is a big community of amateurs and e
 
 ## Next steps
 
-* [Learn quantum computing concepts with Q#?](xref:microsoft.quantum.write-program)
+* [Learn quantum computing concepts with Q#](xref:microsoft.quantum.write-program)
 * [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)

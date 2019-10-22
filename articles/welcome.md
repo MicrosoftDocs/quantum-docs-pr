@@ -46,8 +46,9 @@ In addition to the standard and numeric Q# libraries, the QDK includes libraries
 
 Watch this [video](https://www.microsoft.com/en-us/videoplayer/embed/RE2JOJf) to learn more about the chemistry library.
 
-## Go deeper
+## Next steps
 
+* You can [try the Quantum Katas directly in your browser](https://aka.ms/try-quantum-katas)
 * Develop on your local machine with the host programming language and development environment of choice:
   * Develop with [Python](xref:microsoft.quantum.install#develop-with-python)
   * Develop with [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)

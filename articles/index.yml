@@ -20,18 +20,20 @@ landingContent:
   # Card (optional)
   - title: Get started with Microsoft Quantum
     linkLists:
+      - linkListType: overview
+        links:
+          - text: Overview
+            url: welcome.md
+          - text: Five things you should know
+            url: overview/index.md
       - linkListType: get-started
         links:
-          - text: Get started with the Quantum Developer Kit
-            url: welcome.md
-          - text: Five things you should know about quantum computing
-            url: overview/index.md
-      - linkListType: quickstart
-        links:
-          - text: Write your first quantum program
+          - text: Learn quantum concepts with Q#
             url: quickstart.md            
-          - text: Implement Grover's algorithm
+          - text: Learn about impactful quantum programs with Q#
             url: quickstarts/search.md
+          - text: Learn about solving our biggest challenges in chemistry
+            url: https://cloudblogs.microsoft.com/quantum/2018/12/04/simulating-nature-with-the-new-microsoft-quantum-development-kit-chemistry-library/
       - linkListType: learn
         links:
           - text: Learn with the Quantum Katas

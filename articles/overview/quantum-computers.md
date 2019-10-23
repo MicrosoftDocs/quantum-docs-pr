@@ -3,7 +3,7 @@ title: What can quantum computers do?
 description: Learn about the impact of quantum computing, from novel quantum algorithms to quantum inspired algorithms running on classical computers.
 author: natke
 ms.author: nakersha
-ms.date: 10/16/2019
+ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
 ---
@@ -26,12 +26,6 @@ Quantum computing is relevant to cryptography in two ways: the first is that cla
 
 Quantum computing makes this factorization theoretically tractable (via Shor's algorithm). Whilst implementation of this algorithm is not physically possible with the current scale of quantum hardware, it has spawned development of quantum resistant algorithms to future-proof data security, including novel quantum algorithms for encryption and cryptographic key distribution.
 
-## Quantum-inspired computing
-
-Quantum-inspired algorithms are implemented with classical software, but use quantum principles for increased speed and accuracy.
-
-Quantum-inspired algorithms are being applied to medical research. For example, to improve the accuracy of Magnetic Resonance Imaging (MRI) scans. Quantum-inspired computing is being used to optimize the configuration of the MRI machines for identification of specific diseases.
-
 ## Big data and machine learning
 
 ### Search
@@ -44,8 +38,13 @@ A great number of numerical calculations on classical computing consist mainly i
 
 Fortunately, there exists a quantum algorithm that allows us to approximately solve the system exponentially faster than a classical computer. This opens the door to great speedups in every problem that needs the solution to linear systems of equations.
 
+## Quantum-inspired computing
+
+Quantum-inspired algorithms are implemented with classical software, but use quantum principles for increased speed and accuracy.
+
+Quantum-inspired algorithms are being applied to medical research. For example, to improve the accuracy of Magnetic Resonance Imaging (MRI) scans. Quantum-inspired computing is being used to optimize the configuration of the MRI machines for identification of specific diseases.
+
 ## Next steps
 
-Write code to implement [Grover's algorithm](xref:microsoft.quantum.quickstarts.search)
-
-Learn how to implement quantum algorithms with the [Quantum Katas](xref:microsoft.quantum.overview.katas)
+* [Why should I learn quantum computing?](xref:microsoft.quantum.overview.why)
+* [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)

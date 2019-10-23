@@ -3,26 +3,24 @@ title: What is Q#?
 description: Learn about the Q#, a programming language created by Microsoft to develop applications for quantum computers
 author: natke
 ms.author:  nakersha
-ms.date: 10/16/2019
+ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
 ---
 
 # What is Q#?
 
-Q# is a programming language created by Microsoft to develop applications for quantum computers.
+Q# is a programming language with features that are special to quantum computing. Q# provides quantum programmers a framework that allows you to focus on the algorithms without having to care about technical details like gate sequence optimization or the physical implementation of a quantum computer.
 
-The Q# programming language takes care of all the quantum computer's internal logic and provides you with an intuitive set of types, operations and logic expressions to develop algorithms without having to worry about the internal logic of the quantum computer.
+The Q# programming language provides you with an intuitive set of types, operations and logic expressions to develop algorithms without having to worry about the internal logic of the quantum computer.
 
-## We want to code algorithms, not draw circuits
+## Code algorithms
 
-While the circuit model has been very useful for many years in quantum computing research, here at Microsoft, we believe that developers can go beyond quantum circuits and develop quantum algorithms and applications using Q#. The Q# language was built to take advantage of what we’ve learned through decades of classical software development, and empower quantum developers with the high-level language functionality they have become accustomed to in classical programming.
+While the circuit model has been very useful for many years in quantum computing research, here at Microsoft, we believe that developers can go beyond quantum circuits and develop quantum algorithms and applications using Q#. The Q# language was built to take advantage of what we’ve learned through decades of classical software development, and empower quantum developers with high-level language functionality specifically targeted for quantum computing.
 
 ## How does Q# work?
 
-Q# is a programming language designed to be great at writing quantum programs, by providing features that are special to quantum computing. Q# provides quantum programmers a framework that allows them to focus on the algorithms without having to care about technical details like gate sequence optimization or the physical implementation of a quantum computer.
-
-For example, one of the fundamental building blocks of Q# is the `Qubit` type, which cannot be copied or directly accessed, just like a real qubit. Instead, we can measure it and store the outcome of the measurement in a `Result` variable, a Q# type that can take two possible values: `Zero` and `One`. Constructs like this one guarantee that algorithms always respect the laws of quantum mechanics and can run correctly on quantum computers or simulators.
+One of the fundamental building blocks of Q# is the `Qubit` type, which cannot be copied or directly accessed, just like a real qubit. Instead, we can measure it and store the outcome of the measurement in a `Result` variable, a Q# type that can take two possible values: `Zero` and `One`. Constructs like this one guarantee that algorithms always respect the laws of quantum physics and can run correctly on quantum computers or simulators.
 
 Q# also includes classical logic features like conditionals or loops with some subtleties to make sure that all the quantum rules are being respected. For example, quantum operations need to be reversible. This enforces some constraints on the way loops are executed.
 
@@ -36,4 +34,5 @@ Q# provides you with an increasing number of libraries and user-defined types th
 
 ## Next steps
 
-Just as in classical computing, building programs on top of what others have already created will empower you to solve greater challenges. To know more about how you can learn quantum computing by coding in Q# check out [How to learn quantum computing](xref:microsoft.quantum.overview.learn).
+* [How do I learn quantum computing?](xref:microsoft.quantum.overview.learn)
+* [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)

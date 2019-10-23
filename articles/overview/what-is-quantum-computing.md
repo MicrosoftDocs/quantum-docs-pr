@@ -10,7 +10,7 @@ uid: microsoft.quantum.overview.what
 
 # What is quantum computing?
 
-There are some problems so difficult, so incredibly vast, that even if every supercomputer in the world worked on the problem in tandem would still take longer than the lifetime of the universe to solve. Quantum computers hold the promise to solve some of our planets’ biggest challenges - in environment, agriculture, health, energy, climate, materials science and those we’ve not yet even imagined. The impact of quantum computers will be far-reaching and have as great an impact as the creation of the transistor in 1947, which paved the way for today’s digital economy.
+There are some problems so difficult, so incredibly vast, that even if every supercomputer in the world worked on the problem in tandem it would still take longer than the lifetime of the universe to solve. Quantum computers hold the promise to solve some of our planet's biggest challenges - in environment, agriculture, health, energy, climate, materials science and those we’ve not yet even imagined. The impact of quantum computers will be far-reaching and have as great an impact as the creation of the transistor in 1947, which paved the way for today’s digital economy.
 
 Quantum computing harnesses the unique behavior of quantum physics to provide a new and very powerful model of computing. The theory of quantum physics posits that matter, at a quantum level can be in a superposition of multiple classical states. And those many states interfere with each other like waves in a tide pool.
 

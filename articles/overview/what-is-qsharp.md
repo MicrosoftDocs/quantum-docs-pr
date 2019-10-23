@@ -14,7 +14,7 @@ Q# is a programming language with features that are special to quantum computing
 
 The Q# programming language provides you with an intuitive set of types, operations and logic expressions to develop algorithms without having to worry about the internal logic of the quantum computer.
 
-## We want to code algorithms, not draw circuits
+## Code algorithms
 
 While the circuit model has been very useful for many years in quantum computing research, here at Microsoft, we believe that developers can go beyond quantum circuits and develop quantum algorithms and applications using Q#. The Q# language was built to take advantage of what we’ve learned through decades of classical software development, and empower quantum developers with high-level language functionality specifically targeted for quantum computing.
 

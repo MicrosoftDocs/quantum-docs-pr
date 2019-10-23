@@ -10,7 +10,7 @@ uid: microsoft.quantum.overview.learn
 
 # How to learn quantum computing
 
-Learn how to start writing quantum programs.
+Get guidance for learning about quantum computing and writing your first programs. This isn't an exhaustive guide, but rather a good place to start.
 
 ## Getting the basics: what do you need to know?
 
@@ -22,13 +22,13 @@ Before embarking on the Getting Started journey, this last article on the “Fiv
 
 These concepts will give you a good introduction to the fundamental knowledge you need to start coding quantum programs.  Those who are not yet ready to start coding, but want to learn more about Q# and quantum programming can still review these concepts at a high level here and then proceed to the Getting Started Guide to learn more about quantum computing and Q# without having to start coding.
 
-* [Linear algebra (vectors and matrices)](xref:microsoft.quantum.concepts.vectors): in quantum computing, quantum states are represented by vectors, with quantum operations being linear transformations applied to these vectors.
-* [Complex numbers](https://en.wikipedia.org/wiki/Complex_number): the coefficients of quantum state vectors are complex numbers. You can understand some basic quantum computing concepts without them, but you won't get far before you need to incorporate them into your quantum toolkit.
+* [Linear algebra (vectors and matrices)](xref:microsoft.quantum.concepts.vectors): In quantum computing, quantum states are represented by vectors, with quantum operations being linear transformations applied to these vectors.
+* [Complex numbers](https://en.wikipedia.org/wiki/Complex_number): The coefficients of quantum state vectors are complex numbers. You can understand some basic quantum computing concepts without them, but you won't get far before you need to incorporate them into your quantum toolkit.
 * [Basic quantum mechanics](xref:microsoft.quantum.concepts.intro): We just said that you don’t need to know quantum physics to start coding (and it’s true!). But some basic concepts of quantum mechanics and its mathematical notation will be helpful to understand quantum programming.
 
 ## Code first, then learn! Or learn more, then code!
 
-Now that you have the basics, you're ready to start writing your first quantum programs.  Or maybe you want to learn more before coding.  Either way, our Getting Started with the Quantum Development Kit provides a series of steps in learning, which includes:
+Now that you have the basics, you're ready to start writing your first quantum programs.  Or maybe you want to learn more before coding.  Either way, our [Getting Started with the Quantum Development Kit](xref:microsoft.quantum.welcome) provides a series of steps in learning, which includes:
 
 * A tutorial for [writing your first Q# quantum program](xref:microsoft.quantum.write-program) and learning more about the basics of Q#
 * A tutorial introduction to a Q# program (Grover’s search algorithm) that demonstrates the [different way of solving real problems with quantum computing](xref:microsoft.quantum.quickstarts.search)

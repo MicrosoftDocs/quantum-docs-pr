@@ -3,7 +3,7 @@ title: Five things you should know about quantum computing
 description: Learn about quantum computing, what computers can do, and how you can learn quantum computing
 author: natke
 ms.author:  nakersha
-ms.date: 10/21/2019
+ms.date: 10/22/2019
 ms.topic: landing-page
 uid: microsoft.quantum.overview.index
 ---

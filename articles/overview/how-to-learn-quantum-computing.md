@@ -3,7 +3,7 @@ title: How to learn quantum computing
 description: 
 author: natke
 ms.author:  nakersha
-ms.date: 10/16/2019
+ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
 ---

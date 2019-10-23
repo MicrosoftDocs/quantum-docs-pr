@@ -14,7 +14,7 @@ Welcome to the Microsoft Quantum Development Kit!  Here, you will find all the t
 
 ## Five things you should know about quantum computing
 
-We begin with a series short articles that summarizes the “Five things you should know about quantum computing.  These short articles offer a quick overview of quantum computing for the new learner.  
+We begin with a series short articles that summarizes the _Five things you should know about quantum computing_. These short articles offer a quick overview of quantum computing for the new learner.
 
 [What is quantum computing?](xref:microsoft.quantum.overview.what)
 

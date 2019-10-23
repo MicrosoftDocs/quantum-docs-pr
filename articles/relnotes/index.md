@@ -16,6 +16,17 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version 0.x
+
+*Release date: October 30th, 2019*
+
+This release contains the following:
+
+- Updates to the Python installation, Python can now be installed using conda
+- Updates to Visual Studio Code extension to provide richer language server support with Python
+- Migration to .NET 3.0
+- Breaking change to SimulatorBase with new OnFail event //todo link to new API reference
+
 ## Version 0.9.1909.3002
 
 *Release date: September 30th, 2019*

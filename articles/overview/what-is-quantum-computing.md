@@ -46,7 +46,7 @@ In classical computers, bits correspond to voltage levels in silicon circuits. Q
 
 Microsoft is developing a quantum computer based on topological qubits. We believe a topological qubit will be less impacted by changes in its environment, therefore reducing the degree of external error correction. Qubits are fragile by nature and become less coherent as they interact with their environment. Topological qubits feature increased stability and resistance to environmental noise, which means they can more readily scale and remain reliable longer.
 
-## Quantum computing software – The Microsoft Quantum Development Kit
+## Quantum computing software – the Microsoft Quantum Development Kit
 
 Designing a quantum program to harness interference may sound like a daunting challenge.  The Microsoft Quantum Development Kit (QDK) has been been introduced to make quantum programming and algorithm development more accessible. Our high-level programming language, Q#, addresses the challenges of quantum programming; it is integrated in a software stack that enables a quantum algorithm to be compiled down to the primitive operations of a quantum computer.
 

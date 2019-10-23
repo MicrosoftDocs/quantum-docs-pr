@@ -1,4 +1,4 @@
-- name: What is quantum computing?
+- name: Quantum computing history & background
   href: index.md
 - name: Vectors and matrices
   href: vectors-and-matrices.md

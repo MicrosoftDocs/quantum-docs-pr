@@ -31,7 +31,7 @@ These concepts will give you a good introduction to the fundamental knowledge yo
 Now that you have the basics, you're ready to start writing your first quantum programs.  Or maybe you want to learn more before coding.  Either way, our Getting Started with the Quantum Development Kit provides a series of steps in learning, which includes:
 
 * A tutorial for [writing your first Q# quantum program](xref:microsoft.quantum.write-program) and learning more about the basics of Q#
-* A tutorial introduction to a Q# program (Grover’s search) that demonstrates the [different way of solving real problems with quantum computing](xref:microsoft.quantum.quickstarts.search)
+* A tutorial introduction to a Q# program (Grover’s search algorithm) that demonstrates the [different way of solving real problems with quantum computing](xref:microsoft.quantum.quickstarts.search)
 * An introduction to the Q# libraries, our Quantum Katas, and other tools of the QDK that provide you with what you need to develop quantum programs for today’s greatest challenges
 
 ## Dive into the theory

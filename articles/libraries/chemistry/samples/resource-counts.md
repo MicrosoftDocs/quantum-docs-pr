@@ -8,7 +8,7 @@ ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
 ---
 
-## Obtaining resource counts
+# Obtaining resource counts
 
 The cost of simulating $n$ qubits on a classical computers scales exponentially with $n$. This greatly limits the size of an quantum chemistry simulation we may perform with the full-state simulator. For large instances of chemistry, we may nevertheless obtain useful information. Here, we examine how resource costs, such as the number of T-gates or CNOT gates, for simulating chemistry may be obtained in an automated fashion using the [trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Such information informs us of when quantum computers might be large enough to run these quantum chemistry algorithms. For reference, see the provided `GetGateCount` sample.
 

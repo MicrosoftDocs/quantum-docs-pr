@@ -8,7 +8,7 @@ ms.topic: article
 uid: microsoft.quantum.numerics.intro
 ---
 
-# Introduction
+# Introduction to the Quantum Numerics Library
 
 Many quantum algorithms rely on [oracles](xref:microsoft.quantum.concepts.oracles) that evaluate mathematical functions on a superposition of inputs.
 The main component of Shor's algorithm, for example, evaluates $f(x) = a^x\operatorname{mod} N$ for a fixed $a$, the number to factor $N$, and $x$ a $2n$-qubit integer in a uniform superposition over all $2n$-bit strings.

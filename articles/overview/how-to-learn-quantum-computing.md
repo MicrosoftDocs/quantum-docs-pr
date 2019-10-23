@@ -26,7 +26,7 @@ These concepts will give you a good introduction to the fundamental knowledge yo
 * [Complex numbers](https://en.wikipedia.org/wiki/Complex_number): the coefficients of quantum state vectors are complex numbers. You can understand some basic quantum computing concepts without them, but you won't get far before you need to incorporate them into your quantum toolkit.
 * [Basic quantum mechanics](xref:microsoft.quantum.concepts.intro): We just said that you don’t need to know quantum physics to start coding (and it’s true!). But some basic concepts of quantum mechanics and its mathematical notation will be helpful to understand quantum programming.
 
-## Code first, then learn! Or Learn more, then code!
+## Code first, then learn! Or learn more, then code!
 
 Now that you have the basics, you're ready to start writing your first quantum programs.  Or maybe you want to learn more before coding.  Either way, our Getting Started with the Quantum Development Kit provides a series of steps in learning, which includes:
 

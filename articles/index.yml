@@ -94,7 +94,7 @@ landingContent:
             url: techniques/putting-it-all-together.md
       - linkListType: how-to-guide
         links:
-          - text: Quantum simulators and resource estimators
+          - text: Quantum simulators & host applications
             url: machines/index.md
   
   # Reference card

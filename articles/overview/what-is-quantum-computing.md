@@ -24,7 +24,7 @@ In quantum computing, a quantum bit - **qubit** - is a unit of quantum informati
 
 The act of **measurement** changes a qubit. It goes from being in superposition to one of the binary states of 0 or 1. Again, measurement of a qubit is unlike a classical bit, which when 0 is measured as 0, and when 1 is measured as 1.
 
-Qubits can also be **entangled**: when we make a measurement of one entangled qubit, our knowledge of the state of the other is updated, even if the qubits are physically far apart.
+Qubits can also be **entangled**: When we make a measurement of one entangled qubit, our knowledge of the state of the other is updated, even if the qubits are physically far apart.
 
 ## Quantum operations and algorithms
 
@@ -34,7 +34,7 @@ When multiple qubits act coherently, they can process multiple options simultane
 
 One of the most famous quantum algorithms is _Shor's algorithm_ for factorization, which makes the classically intractable problem of factorization of a large number into two prime numbers fast enough to challenge traditional cryptography.
 
-On the more constructive side, algorithms for secure cryptographic key distribution are made possible by superposition, quantum entanglement, and the **no cloning** property of qubits: the inability for qubits to be copied without detection.
+On the more constructive side, algorithms for secure cryptographic key distribution are made possible by superposition, quantum entanglement, and the **no cloning** property of qubits, meaning the inability for qubits to be copied without detection.
 
 _Grover's algorithm_ provides a quadratic factor speed-up for database searching.
 

@@ -26,12 +26,6 @@ Quantum computing is relevant to cryptography in two ways: the first is that cla
 
 Quantum computing makes this factorization theoretically tractable (via Shor's algorithm). Whilst implementation of this algorithm is not physically possible with the current scale of quantum hardware, it has spawned development of quantum resistant algorithms to future-proof data security, including novel quantum algorithms for encryption and cryptographic key distribution.
 
-## Quantum-inspired computing
-
-Quantum-inspired algorithms are implemented with classical software, but use quantum principles for increased speed and accuracy.
-
-Quantum-inspired algorithms are being applied to medical research. For example, to improve the accuracy of Magnetic Resonance Imaging (MRI) scans. Quantum-inspired computing is being used to optimize the configuration of the MRI machines for identification of specific diseases.
-
 ## Big data and machine learning
 
 ### Search
@@ -43,6 +37,12 @@ By exploiting superposition, Grover's algorithm only needs $O(\sqrt{N})$ queries
 A great number of numerical calculations on classical computing consist mainly in solving linear systems of equations. This is especially true in the field of machine learning where most of the computation cost goes into calculating the inverse of huge matrices.
 
 Fortunately, there exists a quantum algorithm that allows us to approximately solve the system exponentially faster than a classical computer. This opens the door to great speedups in every problem that needs the solution to linear systems of equations.
+
+## Quantum-inspired computing
+
+Quantum-inspired algorithms are implemented with classical software, but use quantum principles for increased speed and accuracy.
+
+Quantum-inspired algorithms are being applied to medical research. For example, to improve the accuracy of Magnetic Resonance Imaging (MRI) scans. Quantum-inspired computing is being used to optimize the configuration of the MRI machines for identification of specific diseases.
 
 ## Next steps
 

@@ -10,6 +10,8 @@ uid: microsoft.quantum.quickstarts.search
 
 # Quickstart: Implement Grover's search algorithm in Q#
 
+This a new intro.
+
 Grover's algorithm searches a list of unstructured data for specific items. For example, it can answer the question: Is this card drawn from a pack of cards an ace of hearts? The labeling of the specific item is called _marked input_.
 
 Using Grover's search algorithm, a quantum computer is guaranteed to run this search in fewer steps than the number of items in the list that you're searching — something no classical algorithm can do. The increased speed in the case of a pack of cards is negligible; however, in lists containing millions or billions of items, it becomes significant.

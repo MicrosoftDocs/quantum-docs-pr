@@ -18,69 +18,20 @@ The update steps depend on your development environment. Choose your environment
 
 ## Python
 
-1. Update the `iqsharp` kernel
-
-    ```bash
-    dotnet tool update -g Microsoft.Quantum.IQSharp
-    dotnet iqsharp install
-    ```
-
-1. Verify the `iqsharp` version
-
-    ```bash
-    dotnet iqsharp --version
-    ```
-
-    You should see the following output:
-
-    ```bash
-    iqsharp: 0.9.1909.3002
-    Jupyter Core: 1.1.18837.0
-    ```
-
 1. Update the `qsharp` package
 
     ```bash
-    pip install qsharp --upgrade
-    ```
-
-1. Verify the `qsharp` version
-
-    ```bash
-    pip show qsharp
-    ```
-
-    You should see the following output:
-
-    ```bash
-    Name: qsharp
-    Version: 0.9.1909.3002
-    Summary: Python client for Q#, a domain-specific quantum programming language
-    ...
+    conda update -c quantum-engineering qsharp
     ```
 
 1. You can now use the updated QDK version to run your existing quantum programs.
 
 ## Jupyter notebooks
 
-1. Update the `iqsharp` kernel
+1. Update the `qsharp` package
 
     ```bash
-    dotnet tool update -g Microsoft.Quantum.IQSharp
-    dotnet iqsharp install
-    ```
-
-1. Verify the `iqsharp` version
-
-    ```bash
-    dotnet iqsharp --version
-    ```
-
-    You should see the following output:
-
-    ```bash
-    iqsharp: 0.9.1909.3002
-    Jupyter Core: 1.1.18837.0
+    conda update -c quantum-engineering qsharp
     ```
 
 1. You can now open an existing Jupyter notebook and run it with the updated QDK.

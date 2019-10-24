@@ -2,7 +2,7 @@
 title: Learn how to install the Microsoft Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha
-ms.date: 9/30/2019
+ms.date: 10/23/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
@@ -24,20 +24,12 @@ Depending on your chosen development environment, there are different installati
 1. Pre-requisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
-    - The [PIP](https://pip.pypa.io/en/stable/installing) Python package manager
-    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
-
-1. Install the `iqsharp` package
-
-    ```bash
-    dotnet tool install -g Microsoft.Quantum.IQSharp
-    dotnet iqsharp install
-    ```
+    - The [Anaconda](https://docs.anaconda.com/anaconda/install/) distribution
 
 1. Install the `qsharp` package
 
     ```bash
-    pip install qsharp
+    conda install -c quantum-engineering qsharp
     ```
 
 1. Verify the installation by creating a `Hello World` application
@@ -85,15 +77,13 @@ Depending on your chosen development environment, there are different installati
 1. Pre-requisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
+    - The [Anaconda](https://docs.anaconda.com/anaconda/install/) distribution
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
 
-1. Install the `iqsharp` package
+1. Install the `iqsharp` package:
 
     ```bash
-    dotnet tool install -g Microsoft.Quantum.IQSharp
-    dotnet iqsharp install
-    ```
+    conda install -c quantum-engineering iqsharp
 
 1. Verify the installation by creating a `Hello World` application
 
@@ -103,7 +93,7 @@ Depending on your chosen development environment, there are different installati
         jupyter notebook
         ```
 
-    - Browse to the URL shown on the command line. For example: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
+    - Browse to the URL shown on the command line. For example: http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85
 
     - Create a Jupyter notebook with a Q# kernel, and add the following code to the first notebook cell:
 
@@ -158,7 +148,7 @@ Depending on your chosen development environment, there are different installati
 1. Pre-requisites
 
    - [VS Code](https://code.visualstudio.com/download)
-   - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+   - [.NET Core SDK 3 or later](https://www.microsoft.com/net/download)
 
 1. Install the Quantum VS Code extension
 
@@ -192,7 +182,7 @@ Depending on your chosen development environment, there are different installati
 
 1. Pre-requisites
 
-    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3 or later](https://www.microsoft.com/net/download)
 
 1. Install the Quantum project templates for .NET
 

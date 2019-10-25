@@ -20,7 +20,7 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 
 ## Write a Q# operation
 
-As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) a qubit is a unit of quantum information that can be in superposition. When measured, a qubit can only be either 0 or 1, however during execution, the state of the qubit represents the probability of reading either a 0 or a 1 during measurement. We can use this probability to generate random numbers.
+As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition. When measured, a qubit can only be either 0 or 1, however during execution, the state of the qubit represents the probability of reading either a 0 or a 1 during measurement. This probabilistic state is known as superposition. We can use this probability to generate random numbers.
 
 ### Q# operation code
 

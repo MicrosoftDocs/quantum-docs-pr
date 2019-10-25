@@ -22,6 +22,8 @@
     href: intro-to-katas.md
 - name: Quickstarts
   items:
+  - name: Build a quantum random number generator
+    href: quickstarts/qrng.md
   - name: Write your first quantum program
     href: quickstart.md
   - name: Implement Grover's search algorithm

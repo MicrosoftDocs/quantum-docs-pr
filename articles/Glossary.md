@@ -1,5 +1,5 @@
 ---
-title: Glossary | Microsoft Docs 
+title: Quantum computing glossary | Microsoft Docs 
 description: Quantum terms glossary
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com 
@@ -7,6 +7,8 @@ ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
 ---
+
+# Quantum computing glossary
 
 |Term|Definition|
 |-------------|----------|

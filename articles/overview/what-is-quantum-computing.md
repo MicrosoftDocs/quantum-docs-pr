@@ -3,16 +3,16 @@ title: What is quantum computing?
 description: Learn what quantum computing is, and what a quantum computer can do
 author: natke
 ms.author: nakersha
-ms.date: 10/14/2019
+ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.what
 ---
 
 # What is quantum computing?
 
-Quantum computing is a model of computation based on the underlying logic of quantum physics.
+There are some problems so difficult, so incredibly vast, that even if every supercomputer in the world worked on the problem in tandem it would still take longer than the lifetime of the universe to solve. Quantum computers hold the promise to solve some of our planet's biggest challenges - in environment, agriculture, health, energy, climate, materials science and those we’ve not yet even imagined. The impact of quantum computers will be far-reaching and have as great an impact as the creation of the transistor in 1947, which paved the way for today’s digital economy.
 
-The theory of quantum physics posits that matter, at a quantum level can be in a superposition of multiple classical states. And those many states interfere with each other like waves in a tide pool.
+Quantum computing harnesses the unique behavior of quantum physics to provide a new and very powerful model of computing. The theory of quantum physics posits that matter, at a quantum level can be in a superposition of multiple classical states. And those many states interfere with each other like waves in a tide pool.
 
 Quantum computing stores information in quantum states of matter and uses quantum operations to compute on that information, by harnessing and learning to program quantum interference.
 
@@ -24,9 +24,9 @@ In quantum computing, a quantum bit - **qubit** - is a unit of quantum informati
 
 The act of **measurement** changes a qubit. It goes from being in superposition to one of the binary states of 0 or 1. Again, measurement of a qubit is unlike a classical bit, which when 0 is measured as 0, and when 1 is measured as 1.
 
-Qubits can also be **entangled**: when we make a measurement of one entangled qubit, our knowledge of the state of the other is updated, even if the qubits are physically far apart.
+Qubits can also be **entangled**: When we make a measurement of one entangled qubit, our knowledge of the state of the other is updated, even if the qubits are physically far apart.
 
-## What can a quantum computer do?
+## Quantum operations and algorithms
 
 Quantum algorithms can be designed to take advantage of qubit superposition and entanglement to speed up classical algorithms, or to provide entirely new ways of modeling physical systems.
 
@@ -34,7 +34,7 @@ When multiple qubits act coherently, they can process multiple options simultane
 
 One of the most famous quantum algorithms is _Shor's algorithm_ for factorization, which makes the classically intractable problem of factorization of a large number into two prime numbers fast enough to challenge traditional cryptography.
 
-On the more constructive side, algorithms for secure cryptographic key distribution are made possible by superposition, quantum entanglement, and the **no cloning** property of qubits: the inability for qubits to be copied without detection.
+On the more constructive side, algorithms for secure cryptographic key distribution are made possible by superposition, quantum entanglement, and the **no cloning** property of qubits, meaning the inability for qubits to be copied without detection.
 
 _Grover's algorithm_ provides a quadratic factor speed-up for database searching.
 
@@ -44,11 +44,16 @@ Using quantum programs to model quantum systems themselves is another applicatio
 
 In classical computers, bits correspond to voltage levels in silicon circuits. Quantum computing hardware can be implemented by many different physical realizations of qubits: trapped ions, superconducting, neutral atoms, electron spin, light polarization, topological qubits. Quantum hardware is an emergent technology. It requires balancing fidelity of the system with scalability. The larger the scale (that is, number of qubits), the higher the error rate.
 
-## Quantum simulations
+Microsoft is developing a quantum computer based on topological qubits. We believe a topological qubit will be less impacted by changes in its environment, therefore reducing the degree of external error correction. Qubits are fragile by nature and become less coherent as they interact with their environment. Topological qubits feature increased stability and resistance to environmental noise, which means they can more readily scale and remain reliable longer.
 
-Up to a certain scale (number of qubits), quantum computing can be simulated on a classical computer. Using simulations is how you can start to write quantum programs using Microsoft Quantum, the Quantum Development Kit (QDK), and the Q# language.
+## Quantum computing software – the Microsoft Quantum Development Kit
 
-## Get started today
+Designing a quantum program to harness interference may sound like a daunting challenge.  The Microsoft Quantum Development Kit (QDK) has been been introduced to make quantum programming and algorithm development more accessible. Our high-level programming language, Q#, addresses the challenges of quantum programming; it is integrated in a software stack that enables a quantum algorithm to be compiled down to the primitive operations of a quantum computer.
 
-* [Build a quantum program that implements Grover's algorithm](xref:microsoft.quantum.quickstarts.search)
-* [Take a quick look at Q# by developing a Bell State](xref:microsoft.quantum.write-program) program
+Up to a certain scale (number of qubits), quantum computing can be simulated on a classical computer. Using simulation, you can start to write quantum programs today for running on quantum hardware tomorrow.  
+
+## Next steps
+
+* [What can I do with a quantum computer?](xref:microsoft.quantum.overview.computers)
+* [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)
+* Read more about [Quantum computing concepts](xref:microsoft.quantum.concepts.intro)

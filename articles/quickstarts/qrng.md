@@ -15,56 +15,8 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 ## Prerequisites
 
 - The Microsoft [Quantum Development Kit][install].
+- [Create a Q# Project][xref:microsoft.quantum.howto.createproject]
 
-## Setup
-
-Applications developed with Microsoft's Quantum Development Kit consist of two parts:
-
-1. One or more quantum algorithms, implemented using the Q# quantum programming language.
-1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
-
-#### [Python](#tab/tabid-python)
-
-1. Choose a location for your application
-
-1. Create a file called `Bell.qs`. This file will contain your Q# code.
-
-1. Create a file called `host.py`. This file will contain your Python host code.
-
-#### [C# Command Line](#tab/tabid-csharp)
-
-1. Create a new Q# project:
-
-    ```bash
-    dotnet new console -lang Q# --output Bell
-    cd Bell
-    ```
-
-    You should see a `.csproj` file, a Q# file called `Operation.qs`, and a host program file called `Driver.cs`
-
-1. Rename the Q# file
-
-    ```bash
-    mv Operation.qs Bell.qs
-    ```
-
-#### [Visual Studio](#tab/tabid-vs2019)
-
-1. Create a new project
-
-   * Open Visual Studio
-   * Go to the **File** menu and select **New** -> **Project...**
-   * In the project template explorer, under `Installed` > `Visual C#`, select the `Q# Application` template
-   * Make sure you have `.NET Framework 4.6.1` selected in the list at the bottom of the `New Project` dialog box
-   * Give your project the name `Bell`
-
-1. Rename the Q# file
-
-   * Navigate to the **Solution Explorer**
-   * Right click on the `Operation.qs` file
-   * Rename it to `Bell.qs`
-
-* * *
 
 ## Write a Q# operation
 

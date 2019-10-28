@@ -1,36 +1,36 @@
 ---
 uid: microsoft.quantum.welcome
-title: Get started with Microsoft Quantum
-description: Learn how to get started with Microsoft Quantum and the QDK. 
+title: Get started with the Quantum Development Kit (QDK)
+description: Learn how to get started with the QDK. 
 author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
 ---
 
-# Get started with Microsoft Quantum and the Quantum Development Kit (QDK)
+# Get started with the Quantum Development Kit (QDK)
 
 Welcome to the Microsoft Quantum Development Kit!  Here, you will find all the tools you need to learn about quantum programming with Q#.  To guide you in learning quantum computing with Q#, here we provide a Getting Started Guide, a journey guide for both those who want to start coding quantum programs and those who are not yet ready to start coding, but want to learn more about Q# and quantum programming.
 
-## Five things you should know about quantum computing
+## Five questions about quantum computing
 
-We begin with a series short articles that summarizes the _Five things you should know about quantum computing_. These short articles offer a quick overview of quantum computing for the new learner.
+We begin with a series short articles that summarizes the _Five questions about quantum computing_. These short articles offer a quick overview of quantum computing for the new learner.
 
 [What is quantum computing?](xref:microsoft.quantum.overview.what)
 
-[What can I do with a quantum computer?](xref:microsoft.quantum.overview.computers)
+[What can quantum computers do?](xref:microsoft.quantum.overview.computers)
 
-[Why should I learn quantum computing?](xref:microsoft.quantum.overview.why)
+[Why learn quantum computing?](xref:microsoft.quantum.overview.why)
 
-[What is the Q# programming language?](xref:microsoft.quantum.overview.qsharp)
+[What is Q#?](xref:microsoft.quantum.overview.qsharp)
 
-[How can I learn quantum computing?](xref:microsoft.quantum.overview.learn)
+[How to learn quantum computing with Q#?](xref:microsoft.quantum.overview.learn)
 
 ## Tutorials to get you started learning and coding
 
-Next, we provide a short tutorial of how to [write your first Q# program](xref:microsoft.quantum.write-program). If you are ready to start coding, this tutorial guides you on installing the QDK and writing your first Q# program that demonstrates some of the first concepts of quantum programming. If you are not ready to start coding, you can still follow along with the tutorial without installing the QDK and get an overview of the Q# programming language and the first concepts of quantum computing.
+Next, we provide a short Getting Started guide of how to [write your first Q# program](xref:microsoft.quantum.write-program). If you are ready to start coding, this guides you on installing the QDK and writing your first Q# program that demonstrates some of the first concepts of quantum programming. If you are not ready to start coding, you can still follow along without installing the QDK and get an overview of the Q# programming language and the first concepts of quantum computing.
 
-The second tutorial, [Grover’s search](xref:microsoft.quantum.quickstarts.search), offers a nice example of a Q# program that demonstrates the different way of solving real problems with quantum computing.  With this tutorial, you get a sense of how different quantum computing is from classical computing and you get an idea of the power of Q# for expressing the quantum algorithm in a way that abstracts the low level quantum operations.  Again, if you want to start coding, this tutorial guides you in developing the program using a variety of programming environments (with a Python host or with .NET language host and with Visual Studio, Visual Studio Code).  If you are not a coder, you don’t have to install the QDK.  Just follow along the tutorial to get a sense of the nature of quantum computing with Q#.  
+The second Getting Started guide, [Grover’s search](xref:microsoft.quantum.quickstarts.search), offers an example of a Q# program get an idea of the power of Q# for expressing the quantum algorithm in a way that abstracts the low level quantum operations.  Again, if you want to start coding, this guides you in developing the program using a variety of programming environments (with a Python host or with .NET language host and with Visual Studio, Visual Studio Code).  If you are not a coder, you don’t have to install the QDK.  Just follow along the to get a sense of the nature of quantum computing with Q#.  
 
 ## Learn about the libraries
 
@@ -40,7 +40,9 @@ Watch this [video](https://www.microsoft.com/en-us/videoplayer/embed/RE2JOJf) to
 
 ## Next steps
 
-The tutorials and articles above are meant to guide both the coder and non-coder through an introduction to quantum computing and Q#.  When you’re ready to continue to learn how to program quantum computers with Q#, here are the next steps:
+The Getting Started guides and articles above are meant to guide both the coder and non-coder through an introduction to quantum computing and Q#.  When you’re ready to continue to learn how to program quantum computers with Q#, here are the next steps:
+
+* Review the basic concepts in [How to learn quantum computing with Q#](xref:microsoft.quantum.overview.learn) for a review of quantum computing concepts.
 
 * Learn quantum programming with our [self-paced Quantum Katas](https://aka.ms/try-quantum-katas). This series of short training exercises teach you how to program in Q# and learn quantum computing.  
 * Explore our [Q# samples](https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp) and discover the problems you can solve with quantum computing.

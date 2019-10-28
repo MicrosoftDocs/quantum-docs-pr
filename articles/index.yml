@@ -24,7 +24,7 @@ landingContent:
         links:
           - text: Overview
             url: welcome.md
-          - text: Five things you should know
+          - text: Five questions about quantum
             url: overview/index.md
       - linkListType: get-started
         links:
@@ -66,7 +66,7 @@ landingContent:
         url: install-guide/index.md#develop-with-c-using-vs-code
 
   # Samples
-  - title: Samples
+  - title: Q# Samples
     linkLists:
       - linkListType: learn
         links:
@@ -78,7 +78,7 @@ landingContent:
             url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
  
   # Development
-  - title: Quantum development with the Q# and the QDK
+  - title: Quantum development with Q# and the QDK
     linkLists:
       - linkListType: how-to-guide
         links:

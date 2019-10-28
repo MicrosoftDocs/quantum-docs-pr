@@ -16,8 +16,7 @@ Welcome to the Quantum Development Kit tutorial on writing and simulating a basi
 Although the power of quantum computation is revealed at the higher level of "what a quantum algorithm does", we should remember that even the most complex quantum programs are built upon operations occuring at the level of individual qubits.
 The flexibility of Q# allows users to approach quantum systems from any such level of abstraction, and in this tutorial we dive into the qubits themselves.
 
-> [!NOTE]
-> This low-level view of quantum information processing is often desribed in terms of "[quantum circuits](xref:microsoft.quantum.concepts.circuits)," which represent the sequential application of gates to specific qubits of a system.
+This low-level view of quantum information processing is often desribed in terms of "[quantum circuits](xref:microsoft.quantum.concepts.circuits)," which represent the sequential application of gates to specific qubits of a system.
 
 Specifically, we take a look under the hood of the [quantum Fourier transform](https://en.wikipedia.org/wiki/Quantum_Fourier_transform), a subroutine that is integral to many larger quantum algorithms.
 
@@ -87,7 +86,6 @@ Within our Q# operation, we first allocate a register of three qubits with the `
             DumpMachine();
 
 		}
-
 ```
 
 With `using`, the qubits are allocated in the $\ket{0}$ state, which we verify with [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) and [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) to print the system's current state ($\ket{000}$) to the host console.
@@ -118,7 +116,7 @@ An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the 
 Q# makes it extremely easy to condition the execution of an operation upon one or multiple control qubits.
 In general, we merely preface the call with `Controlled`, and the operation arguments change as:
 
-* `Op(<normal args>)` --> `Controlled Op([<control qubits>], (<normal args>))`.
+> `Op(<normal args>)` --> `Controlled Op([<control qubits>], (<normal args>))`.
 
 Note that the control qubits must be provided as an array, even if it is a single qubit.
 So, we call the `R1` gates acting on the first qubit (and controlled by the second third) as:
@@ -350,8 +348,4 @@ To be filled:
 
 - tutorial on passing qubits between operations, more complicated development flows between driver and q#, etc.?
 
-
-Advance to the next article to learn how to create...
-> [!div class="nextstepaction"]
-> [Next steps button](contribute-get-started-mvc.md)
 

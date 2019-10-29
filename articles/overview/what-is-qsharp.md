@@ -16,7 +16,7 @@ The Q# programming language provides you with an intuitive set of types, operati
 
 ## Code algorithms
 
-In the early days of quantum computing algorithms were visualized as diagrams similarly to circuit diagrams in classical computing.  While the circuit model has been very useful for many years in quantum computing research, here at Microsoft, we believe that developers can go beyond quantum circuits and develop quantu algorithms and applications using Q#. The Q# language was built to take advantage of what we’ve learned through decades of classical software development, and empower quantum developers with high-level language functionality specifically targeted for quantum computing.
+In the early days of quantum computing algorithms were visualized as diagrams similarly to circuit diagrams in classical computing.  While the circuit model has been very useful for many years in quantum computing research, here at Microsoft, we believe that developers can go beyond quantum circuits and develop quantum algorithms and applications using Q#. The Q# language was built to take advantage of what we’ve learned through decades of classical software development, and empower quantum developers with high-level language functionality specifically targeted for quantum computing.
 
 
 ## How does Q# work?

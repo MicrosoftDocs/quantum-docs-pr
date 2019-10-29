@@ -84,7 +84,7 @@ You can now continue to develop your quantum program.
 
 1. Browse to the URL shown on the command line. For example: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
-1. Create a Jupyter notebook with a Q# kernel, and add the following code to the first notebook cell:
+1. On the Jupyter page that opens, select **New** > **Q#** to create a Jupyter notebook with a Q# kernel , and add the following code to the first notebook cell:
 
     ```qsharp
     operation SayHello() : Unit {
@@ -92,11 +92,11 @@ You can now continue to develop your quantum program.
     }
     ```
 
-1. Run the notebook:
+1. Run the notebook by selecting from the Jupyter menu **Cell** > **Run Cells**. You should see `SayHello` in the output of the cell:
 
     ![Jupyter notebook cell](~/media/install-guide-jupyter.png)
 
-    You should see `SayHello` in the output of the cell. When running in Jupyter Notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
+    When running in Jupyter Notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
 
 You can now add other Q# operations to continue your quantum development.
 

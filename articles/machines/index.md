@@ -125,7 +125,7 @@ There are some subtleties when passing arguments to a `Run` method:
     A `QArray` class has a constructor that can take any ordered collection
     (`IEnumerable<T>`) of appropriate objects.
 * The empty tuple, `()` in Q#, is represented by `QVoid.Instance` in C#.
-* Non-empty tuples are represented as .NET `ValueType` instances.
+* Non-empty tuples are represented as .NET `ValueTuple` instances.
 * Q# user-defined types are passed as their base type.
 * To pass an operation or a function to a `Run` method, you have to obtain an
     instance of the operation's or function's class, using the simulator's `Get<>` method.

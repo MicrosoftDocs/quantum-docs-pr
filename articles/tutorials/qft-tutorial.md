@@ -11,15 +11,13 @@ uid: microsoft.quantum.circuit-tutorial
 
 
 # Tutorial: Write and simulate qubit-level programs in Q#
-Welcome to the Quantum Development Kit tutorial on writing and simulating a basic quantum program operating on individual qubits. 
+Welcome to the Quantum Development Kit tutorial on writing and simulating a basic quantum program which operates on individual qubits. 
 
 Although the power of quantum computation is revealed at the higher level of "what a quantum algorithm does", we should remember that even the most complex quantum programs are built upon operations occuring at the level of individual qubits.
 The flexibility of Q# allows users to approach quantum systems from any such level of abstraction, and in this tutorial we dive into the qubits themselves.
-
-This low-level view of quantum information processing is often desribed in terms of "[quantum circuits](xref:microsoft.quantum.concepts.circuits)," which represent the sequential application of gates to specific qubits of a system.
-
 Specifically, we take a look under the hood of the [quantum Fourier transform](https://en.wikipedia.org/wiki/Quantum_Fourier_transform), a subroutine that is integral to many larger quantum algorithms.
 
+Note that this low-level view of quantum information processing is often desribed in terms of "[quantum circuits](xref:microsoft.quantum.concepts.circuits)," which represent the sequential application of gates to specific qubits of a system.
 
 ## Pre-requisites
 
@@ -73,7 +71,7 @@ Next, we define the `perform_3qubit_qft` operation:
 		// do stuff
 	}
 ```
-For now, the operation takes no arguments and does not return anything. 
+For now, the operation takes no arguments and does not return anything (_technically_ it returns a `Unit` object, which is akin to `void` in C# or an empty tuple `Tuple[()]` in Python).
 Later, we will modify it to return an array of measurement results, at which point `Unit` will be replaced by `Result[]`. 
 
 ### Allocate qubits with `using`
@@ -100,7 +98,7 @@ With `using`, the qubits are allocated in the $\ket{0}$ state, which we verify w
 
 Next, we apply the gates which comprise the operation itself (see the circuit diagram and explanation for the three-qubit example [here](https://en.wikipedia.org/wiki/Quantum_Fourier_transform#Example).
 Q# already contains many basic quantum gates as operations in the `Microsoft.Quantum.Intrinsic` namespace, and these are no exception. 
-To apply an operation to a specific qubit from a register (i.e. a single `Qubit()` from an array `Qubit[]`), we need only use standard index notation.
+To apply an operation to a specific qubit from a register (i.e. a single `Qubit()` from an array `Qubit[]`) we use standard index notation.
 So, applying the [`H`](microsoft.quantum.intrinsic.h) (Hadamard) to the first qubit of our register `qs` takes the form:
 
 ```qsharp
@@ -129,7 +127,7 @@ So, we call the `R1` gates acting on the first qubit (and controlled by the seco
 Note that we use the `PI()` function from the `Microsoft.Quantum.Math` namespace to define the rotations in terms of pi radians.
 Additionally, we divide by a `Double` (e.g. `2.0`) because dividing by an integer `2` would throw a type error. 
 
-> [!NOTE]
+> [!TIP]
 > `R1(π/2)` and `R1(π/4)` are equivalent to the `S` and `T` operations (also in `Microsoft.Quantum.Intrinsic`)
 
 
@@ -212,10 +210,10 @@ With the Q# file and operation complete, it is ready to be called and simulated 
 ## Setup the classical host
 
 In the previous section, we defined our Q# operation in a `.qs` file.
-Now, we must write the classical host file that calls the Q# operation, and processes any returned classical data. 
-Initially, there is no returned data to process---recall that our operation defined above returns `Unit`.
-Later, upon adding measurements, we will modify the Q# operation to return an array of measurement results (`Result[]`), and therefore we will also modify the host file to process these values.
-While the Q# program is ubiquitous across classical host languages, the host programs of course will vary slightly. As such, please follow the instructions in the tab corresponding to the development environment you set up.
+Now, we write the classical host file to call that Q# operation, and process any returned classical data (for now, there isn't anything to process---recall that our operation defined above returns `Unit`).
+Once we add measurements, we will modify the Q# operation to return an array of measurement results (`Result[]`), and therefore we will also modify the host file to process these values.
+
+While the Q# program is ubiquitous across classical host languages, the host programs of course will vary slightly. As such, please follow the instructions in the tab corresponding to your development environment.
 
 #### [Python](#tab/tabid-python)
 
@@ -230,13 +228,11 @@ The host file is constructed as follows:
 
 > [!NOTE]
 > If we wanted to call the operation on a different machine, for example the `ResourceEstimator()`, we would simply use `<Q# function>.estimate_resources(<args>)`.
-> In general, Q# operations are agnostic to the machines on which they're run.
-> However, some features such as `DumpMachine` will behave differently.
+> In general, Q# operations are agnostic to the machines on which they're run, but some features such as `DumpMachine` may behave differently.
 
 4. Upon performing the simulation, the operation call will return values as defined in `Operations.qs`.
 	For now there is nothing returned, but later on we will see an example of assigning and processing these values.
-	With the resultant data in our hands and totally classical, we can do whatever we'd like with it. 
-	Here, we simply print it to easily compare the effect the gates had on our measurement statistics.
+	With the resultant data in our hands and totally classical, we can do whatever we'd like with it.
 
 Your full `host.py` file should be this:
 
@@ -245,11 +241,9 @@ import qsharp
 from Quantum.Operations import perform_3qubit_qft
 
 perform_3qubit_qft.simulate()
-
 ```
 
 Simply run the Python file, and printed in your console you should see the `Message` and `DumpMachine` outputs below. 
-
 
 
 #### [C#](#tab/tabid-csharp)
@@ -321,7 +315,6 @@ After:
 ∣5❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
 ∣6❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
 ∣7❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-
 ```
 
 
@@ -347,5 +340,13 @@ To be filled:
 ## Next steps
 
 - tutorial on passing qubits between operations, more complicated development flows between driver and q#, etc.?
+
+
+
+
+
+
+
+
 
 

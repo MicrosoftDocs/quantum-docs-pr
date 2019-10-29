@@ -48,6 +48,10 @@
     href: concepts/toc.yml
   - name: Quantum simulators and resource estimators
     href: machines/toc.yml
+- name: Tutorials
+  items:
+  - name: Qubit level programming
+    href: tutorials/qft-tutorial.md
 - name: Resources
   items:
   - name: QDK Release Notes

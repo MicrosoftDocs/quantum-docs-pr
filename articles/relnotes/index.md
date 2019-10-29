@@ -23,9 +23,9 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 This release contains the following:
 
 - Updates to the Python installation, Python can now be installed using conda
-- Updates to Visual Studio Code extension to provide richer language server support with Python
+- Updates to Visual Studio Code & Visual Studio extensions to include language server support 
 - Migration to .NET 3.0
-- Breaking change to SimulatorBase with new OnFail event //todo link to new API reference
+- Breaking change to Microsoft.Quantum.Simulation.Core.IOperationFactory with introduction of new `Fail` method
 
 ## Version 0.9.1909.3002
 

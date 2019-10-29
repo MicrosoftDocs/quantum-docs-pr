@@ -1,4 +1,4 @@
-﻿---
+---
 title: Tutorial: Addressing individual qubits in a quantum program | Microsoft Docs
 description: Step-by-step tutorial on writing and simulating a quantum program which operates at the individual qubit level
 author: gillenhaalb
@@ -46,7 +46,7 @@ The first part of this tutorial will consist of defining the Q# operation `perfo
 The [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) function is a useful tool for debugging complex quantum programs, as it prints the simulated full wavefunction of the quantum system whenever called. 
 Of course, within smaller programs we can also use it to simply observe how quantum states evolve across an operation---precisely what we will do with the quantum Fourier transform.
 
-In your development environment, create a Q# file: `Operations.qs`.
+To create a your Q# project, follow these [instructions](xref:microsoft.quantum.howto.createproject), and create a Q# file entitled `Operations.qs`.
 We will walk you through the components of the file step-by-step, and you can also find the code as a full block below.
 
 ### Namespaces to access other Q# operations
@@ -106,7 +106,7 @@ So, applying the [`H`](microsoft.quantum.intrinsic.h) (Hadamard) to the first qu
 ```
 
 Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled [`R1`](microsoft.quantum.intrinsic.r1) rotations.
-An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{iθ}$ to the $\ket{1}$ component.
+An `R1($\theta$, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{i\theta}$ to the $\ket{1}$ component.
 
 
 #### Controlled operations
@@ -114,7 +114,7 @@ An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the 
 Q# makes it extremely easy to condition the execution of an operation upon one or multiple control qubits.
 In general, we merely preface the call with `Controlled`, and the operation arguments change as:
 
-> `Op(<normal args>)` --> `Controlled Op([<control qubits>], (<normal args>))`.
+> `Op(<normal args>)` $\to$ `Controlled Op([<control qubits>], (<normal args>))`.
 
 Note that the control qubits must be provided as an array, even if it is a single qubit.
 So, we call the `R1` gates acting on the first qubit (and controlled by the second third) as:
@@ -128,7 +128,7 @@ Note that we use the `PI()` function from the `Microsoft.Quantum.Math` namespace
 Additionally, we divide by a `Double` (e.g. `2.0`) because dividing by an integer `2` would throw a type error. 
 
 > [!TIP]
-> `R1(π/2)` and `R1(π/4)` are equivalent to the `S` and `T` operations (also in `Microsoft.Quantum.Intrinsic`)
+> `R1($\pi$/2)` and `R1($\pi$/4)` are equivalent to the `S` and `T` operations (also in `Microsoft.Quantum.Intrinsic`)
 
 
 After applying the relevant Hadamards and controlled rotations to the second and third qubits:
@@ -209,15 +209,15 @@ With the Q# file and operation complete, it is ready to be called and simulated 
 
 ## Setup the classical host
 
-In the previous section, we defined our Q# operation in a `.qs` file.
-Now, we write the classical host file to call that Q# operation, and process any returned classical data (for now, there isn't anything to process---recall that our operation defined above returns `Unit`).
-Once we add measurements, we will modify the Q# operation to return an array of measurement results (`Result[]`), and therefore we will also modify the host file to process these values.
+Having defined our Q# operation in a `.qs` file, we now write the classical host file to call that operation and process any returned classical data (for now, there isn't anything to process---recall that our operation defined above returns `Unit`).
+When we later modify the Q# operation to return an array of measurement results (`Result[]`), we will update the host file correspondingly.
 
 While the Q# program is ubiquitous across classical host languages, the host programs of course will vary slightly. As such, please follow the instructions in the tab corresponding to your development environment.
 
 #### [Python](#tab/tabid-python)
 
-Create a Python file titled `host.py`.
+Following the same [instructions](xref:microsoft.quantum.howto.createproject) as above, create a Python host file: `host.py`.
+
 The host file is constructed as follows: 
 1. First, we import the `qsharp` module, which registers the module loader for Q# interoperability. 
 	This allows Q# namespaces (e.g. the `Quantum.Operations` defined above) to appear as Python modules, from which we can import Q# operations.
@@ -248,7 +248,7 @@ Simply run the Python file, and printed in your console you should see the `Mess
 
 #### [C#](#tab/tabid-csharp)
 
-- @anyone, I'm hoping to define running the .cs file in a more general way than is described in the Quickstart. Only way I could get this to run was by using the `dotnet run` terminal command was by following those terminal based steps (creating a VS Code project), then deleting the HelloQ stuff that was automatically there, and replacing it with my .qs and .cs files. The C# code below indeed works perfectly, but I could use someone's help penning these create/run instructions.
+Following the same [instructions](xref:microsoft.quantum.howto.createproject) as above, create a C# host file, and rename it to `host.cs`.
 
 The C# host has four parts:
 1. Construct a quantum simulator. 
@@ -297,24 +297,24 @@ The program will exit after you press a key.
 ```Output
 Initial state |000>:
 # wave function for qubits with ids (least to most significant): 0;1;2
-∣0❭:	 1.000000 +  0.000000 i	 == 	******************** [ 1.000000 ]     --- [  0.00000 rad ]
-∣1❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-∣2❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-∣3❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-∣4❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-∣5❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-∣6❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-∣7❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+?0?:	 1.000000 +  0.000000 i	 == 	******************** [ 1.000000 ]     --- [  0.00000 rad ]
+?1?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+?2?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+?3?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+?4?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+?5?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+?6?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+?7?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
 After:
 # wave function for qubits with ids (least to most significant): 0;1;2
-∣0❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-∣1❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-∣2❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-∣3❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-∣4❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-∣5❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-∣6❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-∣7❭:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+?0?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+?1?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+?2?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+?3?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+?4?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+?5?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+?6?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+?7?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
 ```
 
 

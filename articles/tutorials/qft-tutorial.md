@@ -288,58 +288,72 @@ namespace Quantum.Operations
 }
 
 ```
-
-- something about how to run the file...
-- ... and your output should match that below.
+Run the application, and your output should match that below.
 The program will exit after you press a key.
 ***
 
 ```Output
 Initial state |000>:
 # wave function for qubits with ids (least to most significant): 0;1;2
-?0?:	 1.000000 +  0.000000 i	 == 	******************** [ 1.000000 ]     --- [  0.00000 rad ]
-?1?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-?2?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-?3?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-?4?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-?5?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-?6?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-?7?:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|0>:	 1.000000 +  0.000000 i	 == 	******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|1>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|2>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|3>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|4>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|5>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|6>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|7>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
 After:
 # wave function for qubits with ids (least to most significant): 0;1;2
-?0?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-?1?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-?2?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-?3?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-?4?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-?5?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-?6?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
-?7?:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
 ```
 
+When called on the full-state simulator, `DumpMachine()` provides these mutliple representations of the quantum state's wavefunction. 
+The possible states of an $n$-qubit system can be represented by $2^n$ computational basis states, each with a corresponding complex coefficient (simply an amplitude and a phase).
 
-To be filled:
+The first row provides a comment with the IDs of the corresponding qubits in their significant order.
+The rest of the rows describe the probability amplitude of measuring the basis state vector $\ket{n}$ in both Cartesian and polar formats. In detail for the first row of our input state $\ket{000}$:
 
-- add description of DumpMachine output from https://docs.microsoft.com/en-us/quantum/techniques/testing-and-debugging?view=qsharp-preview&tabs=tabid-vs2019#dump-functions
+* **`|0>:`** this row corresponds to the `0` computational basis state (given that our initial state post-allocation was $\ket{000}$, we would expect this to be the only state with probability amplitude at this point).
+* **`1.000000 +  0.000000 i`**: the probability amplitude in Cartesian format.
+* **` == `**: the `equal` sign seperates both equivalent representations.
+* **`********************`**: A graphical representation of the magnitude, the number of `*` is proportionate to the probability of measuring this state vector. 
+* **`[ 1.000000 ]`**: the numeric value of the magnitude
+* **`    ---`**: A graphical representation of the amplitude's phase.
+* **`[ 0.0000 rad ]`**: the numeric value of the phase (in radians).
 
-- add full state LaTeX description of what we're seeing
+Both the magnitude and the phase are displayed with a graphical representation. The magnitude representation is straight-forward: it shows a bar of `*`, the bigger the probability the bigger the bar will be. For the phase, see the DumpMachine section [here](xref:microsoft.quantum.techniques.testing-and-debugging) for the possible symbol representations based on angle ranges.
 
+
+So, the printed output is illustrating that our programmed gates transformed our state from
+$$
+\begin{align}
+    \ket{\psi}_{initial} = \ket{000} \frac{1}{\sqrt{2^n}}\sum_{i=0}^{2^n-1} \ket{i}
+\end{align}
+$$
+to 
+\begin{align}
+    \ket{\psi}_{final} &= \frac{1}{\sqrt{8}} \left( \ket{000} + \ket{001} + \ket{010} + \ket{011} + \ket{100} + \ket{101} + \ket{110} + \ket{111} \right) \\
+	&= \frac{1}{\sqrt{2^n}}\sum_{j=0}^{2^n-1} \ket{j},
+\end{align}
+$$
+
+which is precisely the behavior of the 3-qubit Fourier transform. 
+If you are curious about how other input states are affected, we encourage you to play around with applying qubit operations before the transform.
 
 ## Adding Measurements
 
-- more interesting input to QFT than $\ket{000}$, done by adding Hadamards on first and third qubits before QFT
-	- observe the DumpMachine output
-- add measurements --> discussion of limitation: processing $2^3$ bits but can't access them directly. 
-	with measuring, each shot only yields the 3 bits corresponding to each qubit's measurement
-- add classical logic within Q# to aggregate measurement counts over 1000 shots
-	- see that the amplitude statistics begin to appear, but it's hardly efficient anymore. 
-	hence why the QFT likely won't replace classcial FFT, but rather has an important place as a subroutine
-	--> link to Phase Estimation page
 
 
 ## Next steps
 
-- tutorial on passing qubits between operations, more complicated development flows between driver and q#, etc.?
 
 
 

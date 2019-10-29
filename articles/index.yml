@@ -90,7 +90,7 @@ landingContent:
   - title: Q# language & development techniques
     linkLists:
       - linkListType: learn
-          links:
+        links:
         - text: Q# language introduction
           url: language/index.md
       - linkListType: how-to-guide

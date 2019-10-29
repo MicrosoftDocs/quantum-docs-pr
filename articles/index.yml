@@ -94,6 +94,7 @@ landingContent:
         - text: Q# language introduction
           url: language/index.md
       - linkListType: how-to-guide
+        links:
           - text: Quantum simulators & host applications
             url: machines/index.md
       - linkListType: how-to-guide

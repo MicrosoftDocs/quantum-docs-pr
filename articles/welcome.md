@@ -47,6 +47,6 @@ The tutorials and articles above are meant to guide both the coder and non-coder
 * Develop on your local machine with the host programming language and development environment of choice:
   * Develop with [Python](xref:microsoft.quantum.install#develop-with-python)
   * Develop with [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
-  * Develop with [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-vs-code)
+  * Develop with [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
   * Develop with [Jupyter Notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
 * Become part of the Microsoft Quantum community by contributing to the [QDK](xref:microsoft.quantum.contributing) open source project

@@ -16,7 +16,7 @@ The Q# programming language provides you with an intuitive set of types, operati
 
 ## Code algorithms
 
-In the early days of quantum computing algorithms were visualized as diagrams similarly to circuit diagrams in classical computing.  While the circuit model has been very useful for many years in quantum computing research, here at Microsoft, we believe that developers can go beyond quantum circuits and develop quantu algorithms and applications using Q#. The Q# language was built to take advantage of what we’ve learned through decades of classical software development, and empower quantum developers with high-level language functionality specifically targeted for quantum computing.
+In the early days of quantum computing algorithms were visualized as diagrams similarly to circuit diagrams in classical computing.  While the circuit model has been very useful for many years in quantum computing research, here at Microsoft, we believe that developers can go beyond quantum circuits and develop quantum algorithms and applications using Q#. The Q# language was built to take advantage of what we’ve learned through decades of classical software development, and empower quantum developers with high-level language functionality specifically targeted for quantum computing.
 
 
 ## How does Q# work?
@@ -37,7 +37,7 @@ Q# provides you with an increasing number of libraries and user-defined types th
 
 ## Use Q# to estimate quantum resources
 
-YOu can simulate the execution of your Q# program using the full state quantum simulator that provided with the Quantum Development Kit (QDK).  The QDK also provides resource estimators that give you insights on the performace of Q# programs that are too big to be run on a simulator.  This is highly valuable for algorithm designers, because they can tune their programs to use fewer resources (e.g. fewer number of qubits running for fewer numbers of operations), to be runnable when on earlier smaller scale quantum hardware.   
+You can simulate the execution of your Q# program using the full state quantum simulator that provided with the Quantum Development Kit (QDK).  The QDK also provides resource estimators that give you insights on the performace of Q# programs that are too big to be run on a simulator.  This is highly valuable for algorithm designers, because they can tune their programs to use fewer resources (e.g. fewer number of qubits running for fewer numbers of operations), to be runnable when on earlier smaller scale quantum hardware.   
 
 ## Use Q# to validate hardware performance
 

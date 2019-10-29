@@ -1,19 +1,39 @@
 - name: Microsoft Quantum Documentation
   href: index.yml
 - name: Overview
-  href: welcome.md
+  items:
+  - name: Get started
+    href: welcome.md
+  - name: Five things to know about quantum computing
+    items:
+    - name: Overview
+      href: overview/index.md
+    - name: What is quantum computing?
+      href: overview/what-is-quantum-computing.md
+    - name: What can a quantum computer do?
+      href: overview/quantum-computers.md
+    - name: Why should I learn quantum computing?
+      href: overview/why-learn-quantum-computing.md
+    - name: What is Q#?
+      href: overview/what-is-qsharp.md
+    - name: How can I learn quantum computing?
+      href: overview/how-to-learn-quantum-computing.md
+  - name: Learn with the Quantum Katas
+    href: intro-to-katas.md
 - name: Quickstarts
+  items:
+  - name: Write your first quantum program
+    href: quickstart.md
+  - name: Implement Grover's search algorithm
+    href: quickstarts/search.md
+- name: How-to guides
   items:
   - name: Install the QDK
     href: install-guide/index.md
   - name: Update the QDK
     href: install-guide/update.md  
-  - name: Write your first quantum program
-    href: quickstart.md
-- name: Tutorials
-  items:
-  - name: Programs at the qubit level
-    href: tutorials/circuit-qft-tutorial.md
+  - name: Create a Q# project
+    href: how-to-guides/create-qsharp-project.md
 - name: Concepts
   items:
   - name: Quantum development techniques
@@ -26,7 +46,7 @@
     href: libraries/toc.yml
   - name: Quantum computing concepts
     href: concepts/toc.yml
-  - name: How to host a quantum machine
+  - name: Quantum simulators and resource estimators
     href: machines/toc.yml
 - name: Resources
   items:

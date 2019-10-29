@@ -1,7 +1,6 @@
 ---
 title: Symmetries of Molecular Integrals | Microsoft Docs
 description: Symmetries of Molecular Integrals Conceptual Docs
-keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
@@ -9,7 +8,7 @@ ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
 ---
 
-## Symmetries of Molecular Integrals
+# Symmetries of Molecular Integrals
 
 The inherent symmetry of the Coulomb Hamiltonian, which is the Hamiltonian given in [Quantum Models for Electronic Systems](xref:microsoft.quantum.chemistry.concepts.quantummodels), that describes electrons interacting electrically with each other and with the nuclei, leads to a number of symmetries that can be exploited to compress the terms in the Hamiltonian.
 In general if no further assumptions are made about the basis functions $\psi_j$ then we only have that

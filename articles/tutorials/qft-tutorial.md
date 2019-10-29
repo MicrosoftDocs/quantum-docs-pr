@@ -339,6 +339,7 @@ $$
 \end{align}
 $$
 to 
+$$
 \begin{align}
     \ket{\psi}_{final} &= \frac{1}{\sqrt{8}} \left( \ket{000} + \ket{001} + \ket{010} + \ket{011} + \ket{100} + \ket{101} + \ket{110} + \ket{111} \right) \\
 	&= \frac{1}{\sqrt{2^n}}\sum_{j=0}^{2^n-1} \ket{j},

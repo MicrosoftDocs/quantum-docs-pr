@@ -6,14 +6,12 @@ summary: Learn how to use the Microsoft Quantum Developer Kit and Q#, a language
 metadata:
   title: Microsoft Quantum Documentation - Q# API Reference
   description: Learn how to use the Microsoft Quantum Developer Kit and Q#, a language for quantum algorithms. Learn key concepts and write your first quantum program.
-  
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
-  ms.date: 09/30/2019
-
+  ms.date: 10/21/2019
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -24,37 +22,63 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Welcome to the Microsoft Quantum Developer Kit
+          - text: Overview
             url: welcome.md
+          - text: Five things you should know
+            url: overview/index.md
       - linkListType: get-started
         links:
-          - text: Install the QDK
-            url: install-guide/index.md
-          - text: Update the QDK
-            url: install-guide/update.md            
-      - linkListType: quickstart
-        links:
-          - text: Write a first quantum program
+          - text: Learn quantum concepts with Q#
             url: quickstart.md            
-
-  # Concept
-  - title: Learn about quantum computing 
-    linkLists:
-      - linkListType: concept
+          - text: Learn about impactful quantum programs with Q#
+            url: quickstarts/search.md
+          - text: Learn about solving our biggest challenges in chemistry
+            url: https://cloudblogs.microsoft.com/quantum/2018/12/04/simulating-nature-with-the-new-microsoft-quantum-development-kit-chemistry-library/
+      - linkListType: learn
         links:
-          - text: What is quantum computing?
+          - text: Learn with the Quantum Katas
+            url: intro-to-katas.md
+          - text: Browse quantum code samples
+            url: https://docs.microsoft.com/samples/browse/?languages=qsharp
+          - text: Quantum computing concepts
             url: concepts/index.md
-          - text: Vectors & matrices
-            url: concepts/vectors-and-matrices.md
-          - text: Advanced matrix concepts
-            url: concepts/advanced-matrices.md
-          - text: The qubit
-            url: concepts/the-qubit.md
-          - text: Software stack 
-            url: concepts/software-stack.md                        
+
+  # Develop
+  - title: Develop with Q# and Python or Jupyter notebooks
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Run Q# online in Jupyter
+        url: https://aka.ms/try-quantum-katas
+      - text: Python install
+        url: install-guide/index.md#develop-with-python
+      - text: Jupyter install
+        url: install-guide/index.md#develop-with-jupyter-notebooks
+
+  # Develop
+  - title: Develop with Q# and .NET
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Visual Studio install
+        url: install-guide/index.md#develop-with-c-on-windows-using-visual-studio
+      - text: Visual Studio Code install
+        url: install-guide/index.md#develop-with-c-using-vs-code
+
+  # Samples
+  - title: Q# samples
+    linkLists:
+      - linkListType: learn
+        links:
+          - text: Three simple algorithms
+            url: https://docs.microsoft.com/samples/microsoft/quantum/simple-quantum-algorithms
+          - text: Searching with Grover's algorithm
+            url: https://docs.microsoft.com/samples/microsoft/quantum/searching-with-grovers-algorithm
+          - text: Quantum Teleportation
+            url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
  
   # Development
-  - title: Quantum development techniques
+  - title: Quantum development with Q# and the QDK
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -67,24 +91,12 @@ landingContent:
           - text: Working with qubits
             url: techniques/working-with-qubits.md
           - text: 'Put it together: Teleportation'
-            url: techniques/putting-it-all-together.md                      
-
-  # Manage machines and drivers
-  - title:  Manage machines & drivers
-    linkLists:
+            url: techniques/putting-it-all-together.md
       - linkListType: how-to-guide
         links:
-          - text: Classical drivers & machines
+          - text: Quantum simulators & host applications
             url: machines/index.md
-          - text: QDK full state simulator
-            url: machines/full-state-simulator.md
-          - text: Resources estimator
-            url: machines/resources-estimator.md
-          - text: Quantum trace simulator
-            url: machines/qc-trace-simulator/index.md
-          - text: QDK Toffoli simulator
-            url: machines/toffoli-simulator.md
-
+  
   # Reference card
   - title: Q# language & libraries
     linkLists:
@@ -106,6 +118,19 @@ landingContent:
         links:   
           - text: Q# reference
             url: https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.bitwise?view=qsharp-preview
-          - text: C# components
+          - text: C# reference
             url: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators?view=quantum-dotnet-latest
+          - text: Python reference
+            url: https://docs.microsoft.com/python/qsharp/
+
+  # Community and contribution
+  - title: Community & contribution
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Contribute to the QDK
+            url: contributing/index.md
+          - text: Read the Microsoft Quantum blog
+            url: https://cloudblogs.microsoft.com/quantum
+
       

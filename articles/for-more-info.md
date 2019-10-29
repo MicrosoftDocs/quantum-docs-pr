@@ -1,6 +1,6 @@
 ---
-title: Quantum information references | Microsoft Docs
-description: Quantum information references
+title: Quantum computing learning resources | Microsoft Docs
+description: A reference list with deep coverage of quantum computing topics if you want to learn more about quantum computer programming.
 author: QuantumWriter
 uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
@@ -8,11 +8,11 @@ ms.date: 12/11/2017
 ms.topic: article
 ---
 
-# For More Information
+# More quantum computing learning resources
 
 We have reviewed, in this brief introduction, how a quantum computer can be viewed as a device that stores information as a unit vector in an exponentially large vector space, and seen how quantum gates can be used to rotate the information in a way so as to perform a calculation.  We have also discussed useful language for describing quantum operations such as quantum circuits and Dirac notation which allow complex quantum states and subroutines to be quickly understood by a developer.
 
-While these tools are foundational for any developer of quantum software, they by no means span the depth or breadth of what is known about quantum computer programming and algorithm design.  Since quantum computing remains a rapidly developing field, there is no one resource that has all of the information needed to learn how to best use these tools in order to solve problems.  For this reason we have compiled a list of below  that may interest the reader who wishes to learn more about the art and beauty of quantum computer programming.
+While these tools are foundational for any developer of quantum software, they by no means span the depth or breadth of what is known about quantum computer programming and algorithm design.  Since quantum computing remains a rapidly developing field, there is no one resource that has all of the information needed to learn how to best use these tools in order to solve problems.  For this reason we have compiled a reference list  that may interest the reader who wishes to learn more about the art and beauty of quantum computer programming.
 This section contains selected references to deep coverage of quantum computing topics.
 
 ## Basic quantum computing ##

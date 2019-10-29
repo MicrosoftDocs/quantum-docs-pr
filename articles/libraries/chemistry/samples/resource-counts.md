@@ -8,9 +8,9 @@ ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
 ---
 
-## Obtaining resource counts
+# Obtaining resource counts
 
-The cost of simulating $n$ qubits on a classical computers scales exponentially with $n$. This greatly limits the size of an quantum chemistry simulation we may perform with the full-state simulator. For large instances of chemistry, we may nevertheless obtain useful information. Here, we examine how resource costs, such as the number of T-gates or CNOT gates, for simulating chemistry may be obtained in an automated fashion using the [trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Such information informs us of when quantum computers might be large enough to run these quantum chemistry algorithms. For reference, see the provided `GetGateCount` sample.
+The cost of simulating $n$ qubits on classical computers scales exponentially with $n$. This greatly limits the size of a quantum chemistry simulation we may perform with the full-state simulator. For large instances of chemistry, we may nevertheless obtain useful information. Here, we examine how resource costs, such as the number of T-gates or CNOT gates, for simulating chemistry may be obtained in an automated fashion using the [trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Such information informs us of when quantum computers might be large enough to run these quantum chemistry algorithms. For reference, see the provided `GetGateCount` sample.
 
 Let us assume that we already have a `FermionHamiltonian` instance, say, loaded from the Broombridge schema as discussed in the [loading-from-file](xref:microsoft.quantum.chemistry.examples.loadhamiltonian) example. 
 
@@ -26,7 +26,7 @@ Let us assume that we already have a `FermionHamiltonian` instance, say, loaded 
     var qSharpData = problem.ToQSharpFormat();
 ```
 
-The syntax for obtaining resource estimates is almost identical to running the algorithm on the full-state simulator. We simply choose a different target machine. For the purposes of resource estimates, it suffices to evaluate the cost of a single Trotter step, or a quantum walk created by the Qubitization technique. The boilerplate for invoking these algorithms are as follows.
+The syntax for obtaining resource estimates is almost identical to running the algorithm on the full-state simulator. We simply choose a different target machine. For the purposes of resource estimates, it suffices to evaluate the cost of a single Trotter step, or a quantum walk created by the Qubitization technique. The boilerplate for invoking these algorithms is as follows.
 
 ```qsharp
 //////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-We now configure the trace simulator to track the resources we are interested in. In this case, we count primitive quantum operations by setting the `usePrimitiveOperationsCounter` flag to `true`. A technical detail `throwOnUnconstraintMeasurement` is set to `false` to avoid exceptions in cases where the Q# code does not correctly assert of probabiltiy of measurement outcomes, if any are performed.
+We now configure the trace simulator to track the resources we are interested in. In this case, we count primitive quantum operations by setting the `usePrimitiveOperationsCounter` flag to `true`. A technical detail `throwOnUnconstraintMeasurement` is set to `false` to avoid exceptions in cases where the Q# code does not correctly assert of probability of measurement outcomes, if any are performed.
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()

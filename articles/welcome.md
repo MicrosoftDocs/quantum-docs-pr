@@ -43,7 +43,7 @@ Watch this [video](https://www.microsoft.com/videoplayer/embed/RE2JOJf) to learn
 The tutorials and articles above are meant to guide both the coder and non-coder through an introduction to quantum computing and Q#.  When you’re ready to continue to learn how to program quantum computers with Q#, here are the next steps:
 
 * Learn quantum programming with our [self-paced Quantum Katas](https://aka.ms/try-quantum-katas). This series of short training exercises teach you how to program in Q# and learn quantum computing.  
-* Explore our [Q# samples](https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp) and discover the problems you can solve with quantum computing.
+* Explore our [Q# samples](https://docs.microsoft.com/samples/browse/?languages=qsharp) and discover the problems you can solve with quantum computing.
 * Develop on your local machine with the host programming language and development environment of choice:
   * Develop with [Python](xref:microsoft.quantum.install#develop-with-python)
   * Develop with [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)

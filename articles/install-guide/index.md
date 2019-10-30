@@ -27,7 +27,7 @@ The qsharp package for Python makes it easy to simulate Q# operations
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - The [PIP](https://pip.pypa.io/en/stable/installing) Python package manager
-    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
 1. Install the `iqsharp` package
 
@@ -92,7 +92,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter an
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
 1. Install the `iqsharp` package
 
@@ -168,7 +168,7 @@ Visual Studio Code (VS Code) offers a rich environment for developing Q# program
 1. Pre-requisites
 
    - [VS Code](https://code.visualstudio.com/download)
-   - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+   - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
 1. Install the Quantum VS Code extension
 
@@ -204,7 +204,7 @@ Of course, you can also build and run Q# programs from the command line by simpl
 
 1. Pre-requisites
 
-    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
 1. Install the Quantum project templates for .NET
 

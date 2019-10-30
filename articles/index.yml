@@ -112,7 +112,7 @@ landingContent:
 
   
   # Reference card
-  - title: Quantum computuing concepts
+  - title: Quantum computing concepts
     linkLists:
       - linkListType: concept
         links:
@@ -127,17 +127,18 @@ landingContent:
       - linkListType: reference
         links:
           - text: Amplitude Amplification
-            url: microsoft.quantum.libraries.standard.algorithms#amplitude-amplification
+            url: libraries/standard/algorithms.md
           - text: Quantum Phase Estimation
             url: microsoft.quantum.libraries.standard.algorithms#quantum-phase-estimation
           - text: Shor's Algorithm
-            url: microsoft.quantum.libraries.applications#Shor's-Algorithm
+            url: libraries/standard/applications#shors-algorithm
           - text: Hamiltonian Simulation
-            url: microsoft.quantum.libraries.applications#hamiltonian-simulation
+            url: microsoft.quantum.libraries.applications
 
 
 # Library card
-  - title: Q# libraries
+  -  title: Q# libraries
+     linkLists:
       - linkListType: reference
         links:
           - text: Standard libraries

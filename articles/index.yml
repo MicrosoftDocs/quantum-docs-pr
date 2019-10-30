@@ -148,7 +148,7 @@ landingContent:
           - text: Chemistry library
             url: libraries/chemistry/index.md
           - text: Chemistry concepts
-            url: libraries/chemistry/concepts/quantumdynamics.md
+            url: libraries/chemistry/concepts/quantum-dynamics.md
       - linkListType: how-to-guide
         links:   
           - text: Numerics Q# Samples

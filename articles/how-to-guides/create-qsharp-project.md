@@ -133,7 +133,7 @@ You can now continue your quantum development using Visual Studio
 
 1. Pre-requisites
 
-    * The [Quantum Development Kit for VS Code](xref:microsoft.quantum.install#develop-with-c-using-vs-code)
+    * The [Quantum Development Kit for VS Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
 
 1. Create a new project:
 

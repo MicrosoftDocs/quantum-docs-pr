@@ -339,6 +339,10 @@ $$
 \ket{\psi}_{initial} = \ket{000} \frac{1}{\sqrt{2^n}}\sum_{i=0}^{2^n-1} \ket{i}
 $$
 
+$$
+\frac{1}{2}\big[\alpha(\ket{0} + \ket{1})\ket{00} + \alpha(\ket{0} + \ket{1})\ket{11} + \beta(\ket{0} - \ket{1})\ket{10} + \beta(\ket{0} - \ket{1})\ket{01}\big]
+$$
+
 to 
 
 $$

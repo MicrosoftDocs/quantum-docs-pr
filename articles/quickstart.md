@@ -9,7 +9,7 @@ uid: microsoft.quantum.write-program
 ---
 # Write your first quantum program
 
-In this QuickStart, we show you how to write your first Q# program that manipulates and measures qubits and demonstrates the effects of superposition and entanglement.  If you are ready to start coding, this guides you on installing the QDK, building the program and executing that program on a quantum simulator.  If you are not ready to start coding, you can still follow along with the narrative without installing the QDK, reviewing the overviews of the Q# programming language and the first concepts of quantum computing.
+In this QuickStart, we show you how to write your first Q# program that manipulates and measures qubits and demonstrates the effects of superposition and entanglement.  This guides you on installing the QDK, building the program and executing that program on a quantum simulator.  
 
 You will write an application called Bell to demonstrate quantum entanglement.  The name Bell is in reference to Bell states, which are specific quantum states of two qubits that are used to represent the simplest examples of superposition and quantum entanglement. 
 
@@ -20,13 +20,15 @@ If you are ready to start coding, follow these steps before proceeding:
 * [Install](xref:microsoft.quantum.install) the Quantum Development Kit using your preferred language and development environment
 * If you already have the QDK installed, make sure you have [updated](xref:microsoft.quantum.update) to the latest version
 
+You can also follow along with the narrative without installing the QDK, reviewing the overviews of the Q# programming language and the first concepts of quantum computing.
+
 ## Demonstrating qubit behavior with Q#
 
-Recall our simple [definition of a qubit](xref:microsoft.quantum.overview.what#the-qubit).  Where classical bits hold a single binary value such as a 0 or 1, the state of a qubit can be in a **superposition** of 0 and 1 simultaneously.  Conceptually, a classical bit may be represented by a line with 0 on one end and 1 on the other.  A qubit can be thought of as a direction in space (also known as a vector) originating from the midpoint of the line.  A qubit can be in any of the possible directions. The two **classical states** are the two directions on the line; towards 0 and towards 1.  This representation is also more formally representedvisualized by the [block sphere](xref:microsoft.quantum.concepts.qubit#Visualizing-Qubits-and-Transformations-using-the-Bloch-Sphere).  
+Recall our simple [definition of a qubit](xref:microsoft.quantum.overview.what#the-qubit).  Where classical bits hold a single binary value such as a 0 or 1, the state of a qubit can be in a **superposition** of 0 and 1 simultaneously.  Conceptually, a qubit can be thought of as a direction in space (also known as a vector).  A qubit can be in any of the possible directions. The two **classical states** are the two directions; representing 100% chance of measuring 0 and 100% chance of measureing 1.  This representation is also more formally visualized by the [block sphere](xref:microsoft.quantum.concepts.qubit#Visualizing-Qubits-and-Transformations-using-the-Bloch-Sphere).  
 
-The act of measurement produces a binary result and changes a qubit state. Measurement produces a binary value, either 0 or 1.  The qubit goes from being in superposition (any direction) to one of the classical states (one of two directions; towards 0 or towards 1).  Thereafter, repeating the same measurement without any intervening operations produces the same binary result.  
+The act of measurement produces a binary result and changes a qubit state. Measurement produces a binary value, either 0 or 1.  The qubit goes from being in superposition (any direction) to one of the classical states.  Thereafter, repeating the same measurement without any intervening operations produces the same binary result.  
 
-Multiple qubits can also be **entangled**. When we make a measurement of one entangled qubit, our knowledge of the state of the other(s) is updated as well.
+Multiple qubits can be **entangled**. When we make a measurement of one entangled qubit, our knowledge of the state of the other(s) is updated as well.
 
 New, we're ready to demonstrate how Q# expresses this behavior.  You start with the simplest program possible and build it up to demonstrate quantum superposition and quantum entanglement.
 
@@ -492,7 +494,7 @@ Congratulations, you've written your first quantum program!
 
 ## What's next?
 
-The QuickStart [Grover’s search](xref:microsoft.quantum.quickstarts.search) shows you how to build and run Grover search, one of the most popular quantum computing algorithms and offers a nice example of a Q# program that demonstrates way of solving real problems with quantum computing.  
+The QuickStart [Grover’s search](xref:microsoft.quantum.quickstarts.search) shows you how to build and run Grover search, one of the most popular quantum computing algorithms and offers a nice example of a Q# program that can be used to solve real problems with quantum computing.  
 
 [Get Started with the Quantum Development Kit](xref:microsoft.quantum.welcome) recommends more ways to learn Q# and quantum programming.
 

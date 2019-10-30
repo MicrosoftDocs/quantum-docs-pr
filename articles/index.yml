@@ -131,7 +131,7 @@ landingContent:
           - text: Quantum Phase Estimation
             url: libraries/standard/algorithms.md#quantum-phase-estimation
           - text: Shor's Algorithm
-            url: libraries/standard/applications#shors-algorithm
+            url: libraries/standard/applications.md#shors-algorithm
           - text: Hamiltonian Simulation
             url: libraries/standard/applications.md
 
@@ -148,15 +148,15 @@ landingContent:
           - text: Chemistry library
             url: libraries/chemistry/index.md
           - text: Chemistry concepts
-            url: microsoft.quantum.chemistry.concepts.quantumdynamics
+            url: libraries/chemistry/concepts/quantumdynamics.md
       - linkListType: how-to-guide
         links:   
           - text: Numerics Q# Samples
-            url:  numerics/numerics.md
+            url:  libraries/numerics/numerics.md
           - text: Chemistry Q# Examples
-            url: chemistry/samples/index.md
+            url: libraries/chemistry/samples/index.md
           - text: End-End with NWChem
-            url: chemistry/samples/end-to-end.md
+            url: libraries/chemistry/samples/end-to-end.md
 
 
   # Community and contribution

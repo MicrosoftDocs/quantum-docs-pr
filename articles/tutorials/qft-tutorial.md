@@ -339,14 +339,20 @@ $$
 \ket{\psi}_{initial} = \ket{000}
 $$
 
-$$
-\frac{1}{2}\big[\alpha(\ket{0} + \ket{1})\ket{00} + \alpha(\ket{0} + \ket{1})\ket{11} + \beta(\ket{0} - \ket{1})\ket{10} + \beta(\ket{0} - \ket{1})\ket{01}\big]
-$$
-
 to 
 
 $$
-\ket{\psi}_{final} = \frac{1}{\sqrt{8}} \left( \ket{000} + \ket{001} + \ket{010} + \ket{011} + \ket{100} + \ket{101} + \ket{110} + \ket{111} \right)
+\begin{align}
+	\ket{\psi}_{final} &= \frac{1}{\sqrt{8}} \left( \ket{000} + \ket{001} + \ket{010} + \ket{011} + \ket{100} + \ket{101} + \ket{110} + \ket{111} \right)
+	&= \frac{1}{\sqrt{2^n}}\sum_{j=0}^{2^n-1} \ket{j}
+\end{align}
+$$
+
+$$
+\begin{align}
+\ket{\psi}_{final} &= \frac{1}{\sqrt{8}} \left( \ket{000} + \ket{001} + \ket{010} + \ket{011} + \ket{100} + \ket{101} + \ket{110} + \ket{111} \right)
+&= \frac{1}{\sqrt{2^n}}\sum_{j=0}^{2^n-1} \ket{j}
+\end{align}
 $$
 
 $$

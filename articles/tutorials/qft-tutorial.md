@@ -41,7 +41,7 @@ Applications developed with Microsoft's Quantum Development Kit typically consis
 
 ## Allocate qubits and define quantum operations
 
-The first part of this tutorial consists of defining the Q# operation `perform_3qubit_qft`, which performs the quantum Fourier transform on three qubits. 
+The first part of this tutorial consists of defining the Q# operation `Perform3qubitQFT`, which performs the quantum Fourier transform on three qubits. 
 
 In addition, we will use the [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) function to observe how the simulated wavefunction of our three qubit system evolves across the operation.
 
@@ -64,10 +64,10 @@ namespace Quantum.Operations {
 ```
 
 ### Define operations with arguments and returns
-Next, we define the `perform_3qubit_qft` operation:
+Next, we define the `Perform3qubitQFT` operation:
 
 ```qsharp
-    operation perform_3qubit_qft() : Unit {
+    operation Perform3qubitQFT() : Unit {
 		// do stuff
 	}
 ```
@@ -174,7 +174,7 @@ namespace Quantum.Operations {
 	open Microsoft.Quantum.Math;
     open Microsoft.Quantum.Arrays;
 
-    operation perform_3qubit_qft() : Unit {
+    operation Perform3qubitQFT() : Unit {
 
         using (qs = Qubit[3]) {
 
@@ -239,12 +239,12 @@ Your full `host.py` file should be this:
 
 ```python
 import qsharp
-from Quantum.Operations import perform_3qubit_qft
+from Quantum.Operations import Perform3qubitQFT
 
-perform_3qubit_qft.simulate()
+Perform3qubitQFT.simulate()
 ```
 
-Simply run the Python file, and printed in your console you should see the `Message` and `DumpMachine` outputs below. 
+Run the Python file, and printed in your console you should see the `Message` and `DumpMachine` outputs below. 
 
 
 #### [C#](#tab/tabid-csharp)
@@ -279,7 +279,7 @@ namespace Quantum.Operations
         {
             using (var qsim = new QuantumSimulator())
             {
-                perform_3qubit_qft.Run(qsim);
+                Perform3qubitQFT.Run(qsim);
             }
 
             System.Console.WriteLine("Press any key to continue...");
@@ -336,7 +336,7 @@ Both the magnitude and the phase are displayed with a graphical representation. 
 So, the printed output is illustrating that our programmed gates transformed our state from
 
 $$
-\ket{\psi}_{initial} = \ket{000} \frac{1}{\sqrt{2^n}}\sum_{i=0}^{2^n-1} \ket{i}
+\ket{\psi}_{initial} = \ket{000}
 $$
 
 $$
@@ -346,7 +346,10 @@ $$
 to 
 
 $$
-\ket{\psi}_{final} = \frac{1}{\sqrt{8}} \left( \ket{000} + \ket{001} + \ket{010} + \ket{011} + \ket{100} + \ket{101} + \ket{110} + \ket{111} \right) \\
+\ket{\psi}_{final} = \frac{1}{\sqrt{8}} \left( \ket{000} + \ket{001} + \ket{010} + \ket{011} + \ket{100} + \ket{101} + \ket{110} + \ket{111} \right)
+$$
+
+$$
 = \frac{1}{\sqrt{2^n}}\sum_{j=0}^{2^n-1} \ket{j},
 $$
 

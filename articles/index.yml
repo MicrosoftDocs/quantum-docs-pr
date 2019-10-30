@@ -54,11 +54,11 @@ landingContent:
     - linkListType: how-to-guide
       links:
       - text: Q# Samples with Python
-        url: https://docs.microsoft.com/en-us/samples/browse/?languages=python&products=qdk
+        url: https://docs.microsoft.com/samples/browse/?languages=python&products=qdk
       - text: Teleport Q# Jupyter notebook
-        url: https://docs.microsoft.com/en-us/samples/microsoft/quantum/quantum-teleportation/
+        url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
       - text: How to build your Q# Jupyter notebooks
-        url: https://docs.microsoft.com/en-us/samples/microsoft/quantum/intro-to-qsharp-jupyter/
+        url: https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/
 
 
   # Develop
@@ -69,7 +69,7 @@ landingContent:
       - text: Visual Studio install
         url: install-guide/index.md#develop-with-c-on-windows-using-visual-studio
       - text: Visual Studio Code install
-        url: install-guide/index.md#develop-with-c-using-vs-code
+        url: install-guide/index.md#develop-with-c-using-visual-studio-code
 
   # Samples
   - title: Q# samples
@@ -83,7 +83,7 @@ landingContent:
           - text: Quantum Teleportation
             url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
           - text: All Samples
-            url: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
+            url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 
  
   # Development
@@ -119,7 +119,7 @@ landingContent:
           - text: Quantum computing concepts
             url: concepts/index.md
           - text: Glossary
-            url: microsoft.quantum.glossary
+            url: Glossary.md
 
   # Reference card
   - title: Q# algorithms & applications 
@@ -129,11 +129,11 @@ landingContent:
           - text: Amplitude Amplification
             url: libraries/standard/algorithms.md
           - text: Quantum Phase Estimation
-            url: microsoft.quantum.libraries.standard.algorithms#quantum-phase-estimation
+            url: libraries/standard/algorithms.md#quantum-phase-estimation
           - text: Shor's Algorithm
             url: libraries/standard/applications#shors-algorithm
           - text: Hamiltonian Simulation
-            url: microsoft.quantum.libraries.applications
+            url: libraries/standard/applications.md
 
 
 # Library card
@@ -152,11 +152,11 @@ landingContent:
       - linkListType: how-to-guide
         links:   
           - text: Numerics Q# Samples
-            url:  microsoft.quantum.numerics.usage
+            url:  numerics/numerics.md
           - text: Chemistry Q# Examples
-            url: microsoft.quantum.chemistry.examples
+            url: chemistry/samples/index.md
           - text: End-End with NWChem
-            url: microsoft.quantum.chemistry.examples.endtoend
+            url: chemistry/samples/end-to-end.md
 
 
   # Community and contribution

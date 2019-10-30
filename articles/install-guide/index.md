@@ -21,7 +21,7 @@ Depending on your chosen development environment, there are different installati
 
 ## Develop with Python
 
-The qsharp package for Python makes it easy to simulate Q# operations and functions from within Python. IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
+The qsharp package for Python makes it easy to simulate Q# operations and functions from within Python. IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python that provides the core functionality for compiling and simulating Q# operations.
 
 1. Pre-requisites
 

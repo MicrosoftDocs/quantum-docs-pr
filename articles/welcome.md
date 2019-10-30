@@ -36,7 +36,7 @@ The second tutorial, [Grover’s search](xref:microsoft.quantum.quickstarts.sear
 
 The Q# and the Quantum Development Kit gives you the tools you need to develop programs for quantum computing that will solve our most challenging problems in computing. The QDK comes with Q# standard and numerics libraries that provide powerful computational abstractions that help you develop these solutions. We also provide the Quantum Chemistry Library, a Q# a library for modeling chemical processes at the quantum level.
 
-Watch this [video](https://www.microsoft.com/en-us/videoplayer/embed/RE2JOJf) to learn more about the chemistry library.
+Watch this [video](https://www.microsoft.com/videoplayer/embed/RE2JOJf) to learn more about the chemistry library.
 
 ## Next steps
 

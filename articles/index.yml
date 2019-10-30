@@ -112,7 +112,7 @@ landingContent:
 
   
   # Reference card
-  - title: Quantum computuing concepts
+  - title: Quantum computing concepts
     linkLists:
       - linkListType: concept
         links:
@@ -137,7 +137,8 @@ landingContent:
 
 
 # Library card
-  - title: Q# libraries
+  -  title: Q# libraries
+     linkLists:
       - linkListType: reference
         links:
           - text: Standard libraries

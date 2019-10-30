@@ -22,9 +22,9 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 This release contains the following:
 
-- Updates to the Python installation, Python can now be installed using conda
-- Updates to Visual Studio Code & Visual Studio extensions to deploy language server as a self-contained executable, no longer requiring the .NET Core SDK to be installed 
-- Migration to .NET 3.0
+- IQ# and Python host functionality can now be installed using conda
+- Updates to Visual Studio Code & Visual Studio extensions to deploy language server as a self-contained executable, no longer requiring the .NET Core SDK to be installed  
+- Migration to .NET Core 3.0
 - Breaking change to Microsoft.Quantum.Simulation.Core.IOperationFactory with introduction of new `Fail` method. It affects only custom simulators that do not extend SimulatorBase. For more details, [view the pull request on GitHub](https://github.com/microsoft/qsharp-runtime/pull/59).
 
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  

@@ -342,24 +342,10 @@ $$
 to 
 
 $$
-\begin{align}
-	\ket{\psi}_{final} &= \frac{1}{\sqrt{8}} \left( \ket{000} + \ket{001} + \ket{010} + \ket{011} + \ket{100} + \ket{101} + \ket{110} + \ket{111} \right)
-	&= \frac{1}{\sqrt{2^n}}\sum_{j=0}^{2^n-1} \ket{j}
-\end{align}
+\ket{\psi}_{final} = \frac{1}{\sqrt{2^n}}\sum_{j=0}^{2^n-1} \ket{j},
 $$
 
-$$
-\begin{align}
-\ket{\psi}_{final} &= \frac{1}{\sqrt{8}} \left( \ket{000} + \ket{001} + \ket{010} + \ket{011} + \ket{100} + \ket{101} + \ket{110} + \ket{111} \right)
-&= \frac{1}{\sqrt{2^n}}\sum_{j=0}^{2^n-1} \ket{j}
-\end{align}
-$$
-
-$$
-= \frac{1}{\sqrt{2^n}}\sum_{j=0}^{2^n-1} \ket{j},
-$$
-
-which is precisely the behavior of the 3-qubit Fourier transform. 
+the equally weighted superposition over our computational basis---precisely the behavior of the 3-qubit Fourier transform. 
 If you are curious about how other input states are affected, we encourage you to play around with applying qubit operations before the transform.
 
 ## Adding Measurements

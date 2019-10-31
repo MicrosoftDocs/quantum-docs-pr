@@ -24,7 +24,7 @@ As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview
 
 There's no unique way for a qubit to be in superposition, there are infinite ways to exist in superposition. The probabiliities of obtaining either **0** or **1** when measuring the qubit depends on the especific superposition. For example, we can have a qubit in superposition in which the probability of obtaining **1** is very high, let's say a 90%. Therefore the probability of obtaining **0** is low (10%). Or maybe we have a qubit in a different superposition in which the probabilities to obtain **0** and **1** when measuring are the same (50%). As there are infinites ways for the qubit to be in a superposition, a clever way to express the state of a qubit is the *Bolch sphere*.
 
-<img src="./Bloch.svg" width="100">
+<img src="./Bloch.svg" width="175">
 ### Q# operation code
 
 1. Replace the contents of the Operation.qs file with the following code:

@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.modulus
 name: Modulus
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.modulusi".
+summary: Modulus has been deprecated. Please use @"Microsoft.Quantum.Math.ModulusI" instead.
 syntax: 'function Modulus (value : Int, modulus : Int) : Int'
 input:
   content: '(value : Int, modulus : Int)'

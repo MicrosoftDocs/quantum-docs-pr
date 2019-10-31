@@ -73,6 +73,14 @@
 - uid: microsoft.quantum.core
   name: Microsoft.Quantum.Core
   items:
+  - name: Attribute
+    uid: microsoft.quantum.core.attribute
+  - name: Default
+    uid: microsoft.quantum.core.default
+  - name: Deprecated
+    uid: microsoft.quantum.core.deprecated
+  - name: EntryPoint
+    uid: microsoft.quantum.core.entrypoint
   - name: Length
     uid: microsoft.quantum.core.length
   - name: RangeEnd

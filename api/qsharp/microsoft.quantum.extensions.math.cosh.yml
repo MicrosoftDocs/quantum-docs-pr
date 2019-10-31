@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.math.cosh
 name: Cosh
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.cosh".
+summary: Cosh has been deprecated. Please use @"Microsoft.Quantum.Math.Cosh" instead.
 syntax: 'function Cosh (theta : Double) : Double'
 input:
   content: '(theta : Double)'

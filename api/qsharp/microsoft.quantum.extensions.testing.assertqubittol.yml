@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.testing.assertqubittol
 name: AssertQubitTol
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+summary: AssertQubitTol has been deprecated. Please use @"Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance" instead.
 syntax: 'operation AssertQubitTol (expected : Result, q : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Result, q : Qubit, tolerance : Double)'

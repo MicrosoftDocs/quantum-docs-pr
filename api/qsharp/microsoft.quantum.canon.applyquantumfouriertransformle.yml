@@ -3,6 +3,7 @@ uid: microsoft.quantum.canon.applyquantumfouriertransformle
 name: ApplyQuantumFourierTransformLE
 type: operation
 namespace: Microsoft.Quantum.Canon
+summary: ApplyQuantumFourierTransformLE has been deprecated. Please use @"Microsoft.Quantum.Canon.ApplyQuantumFourierTransform" instead.
 syntax: 'operation ApplyQuantumFourierTransformLE (qs : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(qs : Microsoft.Quantum.Arithmetic.LittleEndian)'

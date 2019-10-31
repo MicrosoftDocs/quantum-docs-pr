@@ -3,144 +3,228 @@ uid: microsoft.quantum.primitive
 name: Microsoft.Quantum.Primitive
 functions:
 - uid: microsoft.quantum.primitive.message
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    Message has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Message" instead.
     Please use @"microsoft.quantum.intrinsic.message".
 operations:
 - uid: microsoft.quantum.primitive.assert
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    Assert has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Assert" instead.
     Please use @"microsoft.quantum.intrinsic.assert".
 - uid: microsoft.quantum.primitive.assertprob
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    AssertProb has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.AssertProb" instead.
     Please use @"microsoft.quantum.intrinsic.assertprob".
 - uid: microsoft.quantum.primitive.ccnot
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    CCNOT has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.CCNOT" instead.
     Please use @"microsoft.quantum.intrinsic.ccnot".
 - uid: microsoft.quantum.primitive.cnot
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    CNOT has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.CNOT" instead.
     Please use @"microsoft.quantum.intrinsic.cnot".
 - uid: microsoft.quantum.primitive.exp
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    Exp has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Exp" instead.
     Please use @"microsoft.quantum.intrinsic.exp".
 - uid: microsoft.quantum.primitive.expfrac
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    ExpFrac has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.ExpFrac" instead.
     Please use @"microsoft.quantum.intrinsic.expfrac".
 - uid: microsoft.quantum.primitive.h
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    H has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.H" instead.
     Please use @"microsoft.quantum.intrinsic.h".
 - uid: microsoft.quantum.primitive.i
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    I has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.I" instead.
     Please use @"microsoft.quantum.intrinsic.i".
 - uid: microsoft.quantum.primitive.m
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    M has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.M" instead.
     Please use @"microsoft.quantum.intrinsic.m".
 - uid: microsoft.quantum.primitive.measure
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    Measure has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Measure" instead.
     Please use @"microsoft.quantum.intrinsic.measure".
 - uid: microsoft.quantum.primitive.multix
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    MultiX has been deprecated. Please use @"ApplyToEachCA(X, _)" instead.
     Please use @"microsoft.quantum.canon.applytoeachca".
 - uid: microsoft.quantum.primitive.r
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    R has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.R" instead.
     Please use @"microsoft.quantum.intrinsic.r".
 - uid: microsoft.quantum.primitive.r1
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    R1 has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.R1" instead.
     Please use @"microsoft.quantum.intrinsic.r1".
 - uid: microsoft.quantum.primitive.r1frac
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    R1Frac has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.R1Frac" instead.
     Please use @"microsoft.quantum.intrinsic.r1frac".
 - uid: microsoft.quantum.primitive.random
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    Random has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Random" instead.
     Please use @"microsoft.quantum.intrinsic.random".
 - uid: microsoft.quantum.primitive.reset
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    Reset has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Reset" instead.
     Please use @"microsoft.quantum.intrinsic.reset".
 - uid: microsoft.quantum.primitive.resetall
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    ResetAll has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.ResetAll" instead.
     Please use @"microsoft.quantum.intrinsic.resetall".
 - uid: microsoft.quantum.primitive.rfrac
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    RFrac has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.RFrac" instead.
     Please use @"microsoft.quantum.intrinsic.rfrac".
 - uid: microsoft.quantum.primitive.rx
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    Rx has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Rx" instead.
     Please use @"microsoft.quantum.intrinsic.rx".
 - uid: microsoft.quantum.primitive.ry
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    Ry has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Ry" instead.
     Please use @"microsoft.quantum.intrinsic.ry".
 - uid: microsoft.quantum.primitive.rz
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    Rz has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Rz" instead.
     Please use @"microsoft.quantum.intrinsic.rz".
 - uid: microsoft.quantum.primitive.s
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    S has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.S" instead.
     Please use @"microsoft.quantum.intrinsic.s".
 - uid: microsoft.quantum.primitive.swap
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    SWAP has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.SWAP" instead.
     Please use @"microsoft.quantum.intrinsic.swap".
 - uid: microsoft.quantum.primitive.t
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    T has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.T" instead.
     Please use @"microsoft.quantum.intrinsic.t".
 - uid: microsoft.quantum.primitive.x
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    X has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.X" instead.
     Please use @"microsoft.quantum.intrinsic.x".
 - uid: microsoft.quantum.primitive.y
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    Y has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Y" instead.
     Please use @"microsoft.quantum.intrinsic.y".
 - uid: microsoft.quantum.primitive.z
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    Z has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Z" instead.
     Please use @"microsoft.quantum.intrinsic.z".
 ...

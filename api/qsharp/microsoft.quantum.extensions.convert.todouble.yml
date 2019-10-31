@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.convert.todouble
 name: ToDouble
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.convert.intasdouble".
+summary: ToDouble has been deprecated. Please use @"Microsoft.Quantum.Convert.IntAsDouble" instead.
 syntax: 'function ToDouble (a : Int) : Double'
 input:
   content: '(a : Int)'

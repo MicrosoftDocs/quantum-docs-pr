@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.extendedgcd
 name: ExtendedGCD
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.extendedgreatestcommondivisori".
+summary: ExtendedGCD has been deprecated. Please use @"Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorI" instead.
 syntax: 'function ExtendedGCD (a : Int, b : Int) : (Int, Int)'
 input:
   content: '(a : Int, b : Int)'

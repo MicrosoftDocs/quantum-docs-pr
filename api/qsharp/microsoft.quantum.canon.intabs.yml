@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.intabs
 name: IntAbs
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  This function has been removed.
+summary: IntAbs has been deprecated. Please use @"Microsoft.Quantum.Math.AbsI" instead.
 syntax: 'function IntAbs (input : Int) : Int'
 input:
   content: '(input : Int)'

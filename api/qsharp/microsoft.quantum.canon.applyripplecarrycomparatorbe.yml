@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
 name: ApplyRippleCarryComparatorBE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  This operation has been removed.
+summary: ApplyRippleCarryComparatorBE has been deprecated. Please use @"CompareUsingRippleCarry(BigEndianAsLittleEndian(x), BigEndianAsLittleEndian(y), output)" instead.
 syntax: 'operation ApplyRippleCarryComparatorBE (x : Microsoft.Quantum.Arithmetic.BigEndian, y : Microsoft.Quantum.Arithmetic.BigEndian, output : Qubit) : Unit'
 input:
   content: '(x : Microsoft.Quantum.Arithmetic.BigEndian, y : Microsoft.Quantum.Arithmetic.BigEndian, output : Qubit)'
@@ -24,7 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-functors:
-- Adjoint
-- Controlled
 ...

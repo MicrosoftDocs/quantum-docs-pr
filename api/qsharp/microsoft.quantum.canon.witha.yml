@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.witha
 name: WithA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Canon.ApplyWithA".
+summary: WithA has been deprecated. Please use @"Microsoft.Quantum.Canon.ApplyWithA" instead.
 syntax: "operation WithA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T) : Unit"
 input:
   content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T)"

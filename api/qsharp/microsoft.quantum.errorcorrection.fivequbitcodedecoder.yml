@@ -3,11 +3,7 @@ uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
 name: FiveQubitCodeDecoder
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
+summary: FiveQubitCodeDecoder has been deprecated. Please use @"Microsoft.Quantum.ErrorCorrection.DecodeFromFiveQubitCode" instead.
 syntax: 'operation FiveQubitCodeDecoder (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : (Qubit[], Qubit[])'
 input:
   content: '(logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'

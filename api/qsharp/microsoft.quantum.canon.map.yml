@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.map
 name: Map
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Arrays.Mapped" instead.
+summary: Map has been deprecated. Please use @"Microsoft.Quantum.Arrays.Mapped" instead.
 syntax: "function Map (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ('T -> 'U), array : 'T[])"

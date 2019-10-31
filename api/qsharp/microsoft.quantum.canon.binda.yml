@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.binda
 name: BindA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.canon.bounda".
+summary: BindA has been deprecated. Please use @"Microsoft.Quantum.Canon.BoundA" instead.
 syntax: "function BindA (operations : ('T => Unit is Adj)[]) : ('T => Unit is Adj)"
 input:
   content: "(operations : ('T => Unit is Adj)[])"

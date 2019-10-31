@@ -3,11 +3,7 @@ uid: microsoft.quantum.errorcorrection.bitflipencoder
 name: BitFlipEncoder
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.errorcorrection.encodeintobitflipcode".
+summary: BitFlipEncoder has been deprecated. Please use @"Microsoft.Quantum.ErrorCorrection.EncodeIntoBitFlipCode" instead.
 syntax: 'operation BitFlipEncoder (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
 input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'

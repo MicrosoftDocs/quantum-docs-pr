@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.math.floor
 name: Floor
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.floor".
+summary: Floor has been deprecated. Please use @"Microsoft.Quantum.Math.Floor" instead.
 syntax: 'function Floor (value : Double) : Int'
 input:
   content: '(value : Double)'

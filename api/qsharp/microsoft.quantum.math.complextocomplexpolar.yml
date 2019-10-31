@@ -3,6 +3,7 @@ uid: microsoft.quantum.math.complextocomplexpolar
 name: ComplexToComplexPolar
 type: function
 namespace: Microsoft.Quantum.Math
+summary: ComplexToComplexPolar has been deprecated. Please use @"Microsoft.Quantum.Math.ComplexAsComplexPolar" instead.
 syntax: 'function ComplexToComplexPolar (input : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.ComplexPolar'
 input:
   content: '(input : Microsoft.Quantum.Math.Complex)'

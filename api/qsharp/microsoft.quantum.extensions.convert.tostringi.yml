@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.convert.tostringi
 name: ToStringI
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.convert.intasstring".
+summary: ToStringI has been deprecated. Please use @"Microsoft.Quantum.Convert.IntAsString" instead.
 syntax: 'function ToStringI (a : Int) : String'
 input:
   content: '(a : Int)'

@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.bitwise.and
 name: And
 type: function
 namespace: Microsoft.Quantum.Extensions.Bitwise
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.bitwise.and".
+summary: And has been deprecated. Please use @"Microsoft.Quantum.Bitwise.And" instead.
 syntax: 'function And (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'

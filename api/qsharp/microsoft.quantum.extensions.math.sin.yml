@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.math.sin
 name: Sin
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.sin".
+summary: Sin has been deprecated. Please use @"Microsoft.Quantum.Math.Sin" instead.
 syntax: 'function Sin (theta : Double) : Double'
 input:
   content: '(theta : Double)'

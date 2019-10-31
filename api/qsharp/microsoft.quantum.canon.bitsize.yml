@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.bitsize
 name: BitSize
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.bitsizei".
+summary: BitSize has been deprecated. Please use @"Microsoft.Quantum.Math.BitSizeI" instead.
 syntax: 'function BitSize (a : Int) : Int'
 input:
   content: '(a : Int)'

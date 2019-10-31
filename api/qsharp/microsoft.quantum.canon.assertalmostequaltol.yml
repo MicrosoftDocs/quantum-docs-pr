@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.assertalmostequaltol
 name: AssertAlmostEqualTol
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact" instead.
+summary: AssertAlmostEqualTol has been deprecated. Please use @"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact" instead.
 syntax: 'function AssertAlmostEqualTol (actual : Double, expected : Double, tolerance : Double) : Unit'
 input:
   content: '(actual : Double, expected : Double, tolerance : Double)'

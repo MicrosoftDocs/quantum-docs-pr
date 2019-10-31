@@ -3,11 +3,7 @@ uid: microsoft.quantum.primitive.message
 name: Message
 type: function
 namespace: Microsoft.Quantum.Primitive
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.intrinsic.message".
+summary: Message has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Message" instead.
 syntax: 'function Message (msg : String) : Unit'
 input:
   content: '(msg : String)'

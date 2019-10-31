@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.math.signb
 name: SignB
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.signl".
+summary: SignB has been deprecated. Please use @"Microsoft.Quantum.Math.SignL" instead.
 syntax: 'function SignB (a : BigInt) : Int'
 input:
   content: '(a : BigInt)'

@@ -3,11 +3,7 @@ uid: microsoft.quantum.primitive.s
 name: S
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.intrinsic.s".
+summary: S has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.S" instead.
 syntax: 'operation S (qubit : Qubit) : Unit'
 input:
   content: '(qubit : Qubit)'

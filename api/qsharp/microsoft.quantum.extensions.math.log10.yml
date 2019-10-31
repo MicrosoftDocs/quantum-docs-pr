@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.math.log10
 name: Log10
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.log10".
+summary: Log10 has been deprecated. Please use @"Microsoft.Quantum.Math.Log10" instead.
 syntax: 'function Log10 (input : Double) : Double'
 input:
   content: '(input : Double)'

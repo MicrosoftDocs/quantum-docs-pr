@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.bigendiantolittleendian
 name: BigEndianToLittleEndian
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian".
+summary: BigEndianToLittleEndian has been deprecated. Please use @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian" instead.
 syntax: 'function BigEndianToLittleEndian (input : Microsoft.Quantum.Arithmetic.BigEndian) : Microsoft.Quantum.Arithmetic.LittleEndian'
 input:
   content: '(input : Microsoft.Quantum.Arithmetic.BigEndian)'

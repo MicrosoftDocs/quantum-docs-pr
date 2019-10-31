@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.modularincrementle
 name: ModularIncrementLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger".
+summary: ModularIncrementLE has been deprecated. Please use @"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger" instead.
 syntax: 'operation ModularIncrementLE (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'

@@ -3,13 +3,19 @@ uid: microsoft.quantum.extensions.diagnostics
 name: Microsoft.Quantum.Extensions.Diagnostics
 functions:
 - uid: microsoft.quantum.extensions.diagnostics.dumpmachine
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    DumpMachine has been deprecated. Please use @"Microsoft.Quantum.Diagnostics.DumpMachine" instead.
     Please use @"microsoft.quantum.diagnostics.dumpmachine".
 - uid: microsoft.quantum.extensions.diagnostics.dumpregister
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    DumpRegister has been deprecated. Please use @"Microsoft.Quantum.Diagnostics.DumpRegister" instead.
     Please use @"microsoft.quantum.diagnostics.dumpregister".
 ...

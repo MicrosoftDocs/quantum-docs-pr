@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.diagnostics.dumpmachine
 name: DumpMachine
 type: function
 namespace: Microsoft.Quantum.Extensions.Diagnostics
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.diagnostics.dumpmachine".
+summary: DumpMachine has been deprecated. Please use @"Microsoft.Quantum.Diagnostics.DumpMachine" instead.
 syntax: "function DumpMachine (location : 'T) : Unit"
 input:
   content: "(location : 'T)"

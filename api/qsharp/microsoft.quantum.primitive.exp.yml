@@ -3,11 +3,7 @@ uid: microsoft.quantum.primitive.exp
 name: Exp
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.intrinsic.exp".
+summary: Exp has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Exp" instead.
 syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'

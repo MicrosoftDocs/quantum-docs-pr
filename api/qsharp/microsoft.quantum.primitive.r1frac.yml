@@ -3,11 +3,7 @@ uid: microsoft.quantum.primitive.r1frac
 name: R1Frac
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.intrinsic.r1frac".
+summary: R1Frac has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.R1Frac" instead.
 syntax: 'operation R1Frac (numerator : Int, power : Int, qubit : Qubit) : Unit'
 input:
   content: '(numerator : Int, power : Int, qubit : Qubit)'

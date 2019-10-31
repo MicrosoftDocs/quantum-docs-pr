@@ -3,11 +3,7 @@ uid: microsoft.quantum.primitive.ry
 name: Ry
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.intrinsic.ry".
+summary: Ry has been deprecated. Please use @"Microsoft.Quantum.Intrinsic.Ry" instead.
 syntax: 'operation Ry (theta : Double, qubit : Qubit) : Unit'
 input:
   content: '(theta : Double, qubit : Qubit)'

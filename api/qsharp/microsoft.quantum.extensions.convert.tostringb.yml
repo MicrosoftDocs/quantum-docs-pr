@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.convert.tostringb
 name: ToStringB
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.convert.boolasstring".
+summary: ToStringB has been deprecated. Please use @"Microsoft.Quantum.Convert.BoolAsString" instead.
 syntax: 'function ToStringB (a : Bool) : String'
 input:
   content: '(a : Bool)'

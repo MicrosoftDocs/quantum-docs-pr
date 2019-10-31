@@ -95,10 +95,10 @@ If you enjoyed this quickstart, check out some of the resources below to learn m
 
 - [Back to the Getting Started with QDK guide](xref:microsoft.quantum.welcome)
 - Try a more general Grover's search algorithm [sample](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)
-- [Learn more about Grover's search with the Quantum Katas](microsoft.quantum.overview.katas)
+- [Learn more about Grover's search with the Quantum Katas](xref:microsoft.quantum.overview.katas)
 - Read more about [Amplitude amplification](xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification), the quantum computing technique behind Grover's search algorithm
 - [Quantum computing concepts](xref:microsoft.quantum.concepts.intro)
-- [Quantum Development Kit Samples](https://docs.microsoft.com/en-us/samples/browse/?products=qdk)
+- [Quantum Development Kit Samples](https://docs.microsoft.com/samples/browse/?products=qdk)
 
 <!-- LINKS -->
 

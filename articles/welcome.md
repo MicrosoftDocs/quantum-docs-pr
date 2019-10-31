@@ -34,7 +34,7 @@ For the fifth question:  "_How to learn quantum computing with Q#?_", we begin b
 
 * a Getting Started guide, [Grover’s search](xref:microsoft.quantum.quickstarts.search), offers an example of a Q# program get an idea of the power of Q# for expressing the quantum algorithm in a way that abstracts the low level quantum operations.  This guides you in developing the program using a variety of programming environments (with a Python host or with .NET language host and with Visual Studio, Visual Studio Code).    
 
-*  a [video](https://www.microsoft.com/en-us/videoplayer/embed/RE2JOJf) to learn more about building quantum programs with the Q# libraries.  The QDK comes with Q# standard and numerics libraries that provide powerful computational abstractions that help you develop these solutions. We also provide the Quantum Chemistry Library, a Q# a library for modeling chemical processes at the quantum level.
+*  a [video](https://www.microsoft.com/videoplayer/embed/RE2JOJf) to learn more about building quantum programs with the Q# libraries.  The QDK comes with Q# standard and numerics libraries that provide powerful computational abstractions that help you develop these solutions. We also provide the Quantum Chemistry Library, a Q# a library for modeling chemical processes at the quantum level.
 
 ## Next steps
 

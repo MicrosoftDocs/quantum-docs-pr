@@ -40,7 +40,7 @@ One of the most famous quantum algorithms is _Shor's algorithm_ for factorizatio
 
 On the more constructive side, algorithms for secure cryptographic key distribution are made possible by superposition, quantum entanglement, and the **no cloning** property of qubits, meaning the inability for qubits to be copied without detection.
 
-_Grover's algorithm_ highlights a quantum algorithm technique that provides a quadratic factor speed-up for searching unstructured data.
+_Grover's algorithm_ highlights a quantum algorithm technique that provides a quadratic speed-up for searching unstructured data.
 
 
 ## Quantum hardware

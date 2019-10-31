@@ -21,11 +21,7 @@ Depending on your chosen development environment, there are different installati
 
 ## Develop with Python
 
-<<<<<<< HEAD
 The qsharp package for Python makes it easy to simulate Q# operations and functions from within Python. IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python that provides the core functionality for compiling and simulating Q# operations.
-=======
-The qsharp package for Python makes it easy to simulate Q# operations and functions from within Python. IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python that provides the core functionality for compiling and simulating Q# operations.
->>>>>>> 0dd95f388217fbc05823ed8681fc84d566e730c3
 
 1. Pre-requisites
 
@@ -88,15 +84,10 @@ The qsharp package for Python makes it easy to simulate Q# operations
 
 ## Develop with Jupyter notebooks
 
-<<<<<<< HEAD
 A favorite of academic settings, scientific labs, and online-based collaborative programming, Jupyter Notebooks offer in-place code execution—now including Q# code—along with instructions, notes, and other content.  Here's what you need to do to start creating your own Q# notebooks.
 
 IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
-=======
-A favorite of academic settings, scientific labs, and online-based collaborative programming, Jupyter Notebooks offer in-place code execution—now including Q# code—along with instructions, notes, and other content.  Here's what you need to do to start creating your own Q# notebooks.
 
-IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
->>>>>>> 0dd95f388217fbc05823ed8681fc84d566e730c3
 
 1. Pre-requisites
 
@@ -137,11 +128,8 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter an
 
 ## Develop with C# on Windows, using Visual Studio
 
-<<<<<<< HEAD
 Visual Studio offers a rich environment for developing Q# programs, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# Visual Studio extension contains templates for Q# files and projects as well as syntax highlighting and IntelliSense support.
-=======
-Visual Studio offers a rich environment for developing Q# programs, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# Visual Studio extension contains templates for Q# files and projects as well as syntax highlighting and IntelliSense support.  
->>>>>>> 0dd95f388217fbc05823ed8681fc84d566e730c3
+
 
 1. Pre-requisites
 

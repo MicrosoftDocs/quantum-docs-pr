@@ -22,9 +22,11 @@ You don’t need to know quantum physics to learn about Q# and quantum computing
 
 These concepts will give you a good introduction to the fundamental knowledge you need to start coding quantum programs.  
 
-* [Linear algebra (vectors and matrices)](xref:microsoft.quantum.concepts.vectors): In quantum computing, quantum states are represented by vectors, with quantum operations being linear transformations applied to these vectors.
-* [Complex numbers](https://en.wikipedia.org/wiki/Complex_number): The coefficients of quantum state vectors are complex numbers. You can understand some basic quantum computing concepts without them, but you won't get far before you need to incorporate them into your quantum toolkit.
 * [Basic quantum mechanics](xref:microsoft.quantum.concepts.intro): We just said that you don’t need to know quantum physics to start coding (and it’s true!). But some basic concepts of quantum mechanics and its mathematical notation will be helpful to understand quantum programming.
+
+* **Linear algebra (vectors and matrices)**: In quantum computing, quantum states are represented by vectors, with quantum operations being linear transformations applied to these vectors.  Here is a [Jupyter notebook tutorial on Linear Algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra).  You can also read more about this in our concept guide about [vectors and matrices](xref:microsoft.quantum.concepts.vectors).
+
+* **Complex arithmetic**: The coefficients of quantum state vectors are complex numbers. You can understand some basic quantum computing concepts without them, but you won't get far before you need to incorporate them into your quantum toolkit.  Here is a [Jupyter notebook tutorial on complex arithmetic](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic) that explains some of the mathematical background required to work with quantum computing. 
 
 Now that you have the basics, you're ready to start learning how to write quantum programs.  There are many ways to proceed:
 

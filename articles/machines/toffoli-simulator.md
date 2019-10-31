@@ -4,7 +4,7 @@ title: Quantum Development Kit Toffoli Simulator | Microsoft Docs
 description: Overview of Microsoft's Quantum Development Kit Toffoli Simulator 
 author: alan-geller
 ms.author: ageller@microsoft.com 
-ms.date: 1/16/20179
+ms.date: 01/16/2019
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
 ---

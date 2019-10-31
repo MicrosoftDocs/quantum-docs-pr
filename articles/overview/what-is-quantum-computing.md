@@ -28,7 +28,7 @@ Multiple qubits can also be **entangled**. When we make a measurement of one ent
 
 ## Quantum algorithms
 
-Quantum algorithms are designed to take advantage of quantun nature and behavior to speed up classical algorithms, or to provide entirely new ways of modeling physical systems.  These algorithms exploit the information capacity of qubits and the parallel nature of operating on multiple entangled qubits in superposition.  
+Quantum algorithms are designed to take advantage of quantum nature and behavior to speed up classical algorithms, or to provide entirely new ways of modeling physical systems.  These algorithms exploit the information capacity of qubits and the parallel nature of operating on multiple entangled qubits in superposition.  
 
 Classical computers encode information in bits; each bit encoding 2 possible values, 0 or 1.  One qubit encodes two values simultaneously, 0 and 1.  Two classical bits encode one of 4 possible values, (00, 01, 10, 11) whereas 2 qubits encodes any superposition of those 4 simultaneously, although we can obtain ony one of those values when measuring.  Four bits encode one of 16 values.  Four qubits encode any superposition of 16 values simultaneously, and so on, exponentially.  100 qubits can encode more information than is available in the largest computer systems today.  
 

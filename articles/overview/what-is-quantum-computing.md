@@ -40,7 +40,7 @@ One of the most famous quantum algorithms is _Shor's algorithm_ for factorizatio
 
 On the more constructive side, algorithms for secure cryptographic key distribution are made possible by superposition, quantum entanglement, and the **no cloning** property of qubits, meaning the inability for qubits to be copied without detection.
 
-_Grover's algorithm_ is highlights another quantum algorithm technique that provides a quadratic factor speed-up for searching unstructured data.
+_Grover's algorithm_ highlights a quantum algorithm technique that provides a quadratic factor speed-up for searching unstructured data.
 
 
 ## Quantum hardware
@@ -49,7 +49,7 @@ In classical computers, bits correspond to voltage levels in silicon circuits. Q
 
 Microsoft is developing a quantum computer based on topological qubits. We believe a topological qubit will be less impacted by changes in its environment, therefore reducing the degree of external error correction. Topological qubits feature increased stability and resistance to environmental noise, which means they can more readily scale and remain reliable longer.
 
-## Quantum software – a full software stack 
+## Quantum computing – a full hardware and software stack 
 
 Microsoft's quantum program is unique in that we focus on scaling each and every component of the system to deliver real quantum impact. This comprehensive approach involves: 
 * building a quantum computer using reliable, scalable and fault-tolerant topological qubits, 

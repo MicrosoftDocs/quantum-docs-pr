@@ -28,7 +28,7 @@ We begin with a series short articles that summarizes the _questions about quant
 
 Q# and the Quantum Development Kit gives you the tools you need to develop programs for quantum computing that will solve our most challenging problems in computing. 
 
-For the fifth question:  "_How to learn quantum computing with Q#?_", we begin by providing three Getting Started guides of Q# and the QDK:
+For the fifth question:  "_How to learn quantum computing with Q#?_", we begin by providing three overviews:
 
 * a Getting Started guide of how to [write your first Q# program](xref:microsoft.quantum.write-program) guides you on installing the QDK and writing your first Q# program that demonstrates some of the first concepts of quantum programming. If you are not ready to start coding, you can still follow along without installing the QDK and get an overview of the Q# programming language and the first concepts of quantum computing.
 

@@ -18,7 +18,7 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 - [Create a Q# Project](xref:microsoft.quantum.howto.createproject)
 
 
-## Write a Q# operation
+## Understanding the qubit
 
 As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition. A classical bit can only take the values **0** or **1**. A qubit can exist in a quantum superposition between the two classical values **0** and **1**. However, when we measure a qubit we can only observe the states **0** or **1**. We say that a measurement *collapses* the state the qubit from the superposition to the state corresponding the classical value that we observe.
 

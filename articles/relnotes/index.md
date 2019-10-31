@@ -447,7 +447,7 @@ This release fixes some issues reported by the community. Namely:
 #### Hardware and Software Requirements
 
 - The simulator included with the Quantum Development Kit requires a 64-bit installation of Microsoft Windows to run.
-- Microsoft's quantum simulator, installed with the Quantum Development Kit, utilizes Advance Vector Extensions (AVX), and requires an AVX-enabled CPU. Intel processors shipped in Q1 2011 (Sandy Bridge) or later support AVX. We are evaluating support for earlier CPUs and may announce details at a later time.
+- Microsoft's quantum simulator, installed with the Quantum Development Kit, utilizes Advanced Vector Extensions (AVX), and requires an AVX-enabled CPU. Intel processors shipped in Q1 2011 (Sandy Bridge) or later support AVX. We are evaluating support for earlier CPUs and may announce details at a later time.
 
 #### Project Creation
 

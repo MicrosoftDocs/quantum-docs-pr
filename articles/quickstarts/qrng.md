@@ -28,9 +28,12 @@ There's no unique way for a qubit to be in superposition, there are infinite way
 
 In the Bloch sphere the north pole represents the classical value **0** and the south pole represents the classical value **1**. Any superposition can be represented by a point in the sphere. This point is typically represented by an arrow starting at the center of the sphere (also called vector). When the closer the end of the arrow to a pole, the higher the probability the qubit collapses into the classical value assigned to that pole when measured. For example, the qubit state represented by the red arrow above has a higher probability of giving the value **0** if we measure it.
 
-Let's visualize with the Bloch sphere how the state of the qubit transforms when we measure it. For example, suposse that we have the state depicted by the red arrow above and we measure it to be **1** (although the odds are low it can happen as well). In the Bloch sphere representation this looks:
+Let's visualize with the Bloch sphere how the state of the qubit transforms when we measure it. For example, suposse that we have the state depicted by the red arrow above and we measure it to be **1** (although the odds are low it can happen as well). In the Bloch sphere this process looks like this:
 
 <img src="./Measurement.svg" width="450">
+
+Measurements are not the only way to modify the state of a qubit, we can also apply operations to change the state of the qubit. As any state is represented by a point on the sphere, one operation that transforms the state of the qubit into another can also be understod as a rotation of the arrow along the sphere. For example, the most famous operation that we can apply to a qubit is the `H` operation (H stands for Hadamard, the mathematician that studied it). The `H`operation does the following: takes a qubit in the state 0 and transform it to a balanced state in which the odds of obtaining **1** and **0** are both 50%. In the Bloch sphere:
+
 
 ### Q# operation code
 

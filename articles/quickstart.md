@@ -50,7 +50,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
     cd Bell
     ```
 
-    You should see a `.csproj` file, a Q# file called `Operation.qs`, and a host program file called `Driver.cs`
+    You should see a `.csproj` file, a Q# file called `Operations.qs`, and a host program file called `Driver.cs`
 
 1. Rename the Q# file
 
@@ -71,7 +71,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 1. Rename the Q# file
 
    * Navigate to the **Solution Explorer**
-   * Right click on the `Operation.qs` file
+   * Right click on the `Operations.qs` file
    * Rename it to `Bell.qs`
 
 * * *

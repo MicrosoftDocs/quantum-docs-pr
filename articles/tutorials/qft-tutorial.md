@@ -350,6 +350,113 @@ If you are curious about how other input states are affected, we encourage you t
 
 ## Adding Measurements
 
+Unfortunately though, the fundamentals of quantum mechanics tell us that a real quantum system cannot have such a `DumpMachine` function. 
+Instead, we're forced to extract information through measurements, which in general not only fail to provide us the full quantum state, but can also drastically alter the system itself.
+There are many sorts of quantum measurements, but we will focus on the most basic: projective measurements on single qubits.
+Upon measurement in a given basis (e.g. the computational basis $\{\ket{0},\ \ket{1}\}$), the qubit state is projected onto whichever basis state was measured---hence destroying any superposition between the two.
+
+To implement measurements within a Q# program, we use the `M` operation from the `Microsoft.Quantum.()` namespace, which returns a `Result` type.
+
+First, we modify our `Perform3QubitQFT` operation to return an array of measurement results, `Result[]`, instead of `Unit`.
+
+```qsharp
+    operation Perform3QubitQFT() : Result[] {
+```
+
+#### Instantiate `Result[]` array
+
+Before even allocating qubits then, we instantiate this length-3 array (one `Result` for each qubit): 
+
+```qsharp
+    operation Perform3QubitQFT() : Result[] {
+
+        mutable r = new Result[3];
+
+        using (qs = Qubit[3]) {
+```
+
+The GET WORD `mutable` indicates .... (compare to `set` and `let`)
+
+#### Perform measurements and add results to array
+
+After the Fourier transorm operations inside the `using` block, we then perform 
+
+
+
+
+
+
+
+
+```qsharp
+    operation Perform3QubitQFT() : Result[] {
+
+        mutable r = new Result[3];
+
+        using (qs = Qubit[3]) {
+
+            // QFT operations
+
+            for(i in IndexRange(qs)) {
+            // other languages: set r[i] <- M(qs[i]);
+            set r w/= i <- M(qs[i]);
+            }
+            ResetAll(qs);
+        }
+        return r;
+    }
+```
+
+
+
+
+
+
+
+
+
+
+
+```qsharp
+    operation Perform3QubitQFT() : Result[] {
+
+        mutable r = new Result[3];
+
+        using (qs = Qubit[3]) {
+
+            //QFT:
+            //first qubit:
+            H(qs[0]);
+            Controlled R1([qs[1]], (PI()/2.0, qs[0]));
+            Controlled R1([qs[2]], (PI()/4.0, qs[0]));
+
+            //second qubit:
+            H(qs[1]);
+            Controlled R1([qs[2]], (PI()/2.0, qs[1]));
+
+            //third qubit:
+            H(qs[2]);
+
+            SWAP(qs[2], qs[0]);
+
+            for(i in IndexRange(qs)) {
+            // other languages: set r[i] <- M(qs[i]);
+            set r w/= i <- M(qs[i]);
+            }
+
+            ResetAll(qs);
+
+        }
+        return r;
+    }
+```
+
+
+
+
+In the computational basis, the returns will be either `Result.Zero` or `Result.One`.
+
+
 
 
 ## Next steps

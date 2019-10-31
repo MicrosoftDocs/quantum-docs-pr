@@ -26,7 +26,11 @@ There's no unique way for a qubit to be in superposition, there are infinite way
 
 <img src="./Bloch.svg" width="175">
 
-In the Bloch sphere the north pole represents the classical value **0** and the south pole represents the classical value **1**. Any superposition can be represented by a point in the sphere. This point is typically represented by an arrow starting at the center of the sphere (also called vector). When the closer the point to a pole, the higher the probability the qubit collapses into the classical value of the pole when measured. For example, the qubit state represented by the red arrow above has a higher probability of giving the value **0** if we measure it.
+In the Bloch sphere the north pole represents the classical value **0** and the south pole represents the classical value **1**. Any superposition can be represented by a point in the sphere. This point is typically represented by an arrow starting at the center of the sphere (also called vector). When the closer the end of the arrow to a pole, the higher the probability the qubit collapses into the classical value assigned to that pole when measured. For example, the qubit state represented by the red arrow above has a higher probability of giving the value **0** if we measure it.
+
+Let's visualize with the Bloch sphere how the state of the qubit transforms when we measure it. For example, suposse that we have the state depicted by the red arrow above and we measure it to be **1** (although the odds are low it can happen as well). In the Bloch sphere representation this looks:
+
+<img src="./Measurement.svg" width="450">
 
 ### Q# operation code
 

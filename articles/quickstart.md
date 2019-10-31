@@ -64,8 +64,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
    * Open Visual Studio
    * Go to the **File** menu and select **New** -> **Project...**
-   * In the project template explorer, under `Installed` > `Visual C#`, select the `Q# Application` template
-   * Make sure you have `.NET Framework 4.6.1` selected in the list at the bottom of the `New Project` dialog box
+   * In the project template explorer, type `Q#` into the search field and select the `Q# Application` template
    * Give your project the name `Bell`
 
 1. Rename the Q# file

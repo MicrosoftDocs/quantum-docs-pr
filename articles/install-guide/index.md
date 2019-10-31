@@ -21,7 +21,7 @@ Depending on your chosen development environment, there are different installati
 
 ## Develop with Python
 
-The qsharp package for Python makes it easy to simulate Q# operations and functions from within Python. IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python that provides the core functionality for compiling and simulating Q# operations.
+The qsharp package for Python makes it easy to simulate Q# operations and functions from within Python. IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python that provides the core functionality for compiling and simulating Q# operations.
 
 1. Pre-requisites
 
@@ -127,7 +127,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
 ## Develop with C# on Windows, using Visual Studio
 
-Visual Studio offers a rich environment for developing Q# programs, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# Visual Studio extension contains templates for Q# files and projects as well as syntax highlighting and IntelliSense support.
+Visual Studio offers a rich environment for developing Q# programs, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# Visual Studio extension contains templates for Q# files and projects as well as syntax highlighting and IntelliSense support.  
 
 1. Pre-requisites
 
@@ -161,7 +161,9 @@ Visual Studio offers a rich environment for developing Q# programs, offering gre
 > [!NOTE]
 > * If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its subfolders.  
 
-## Develop with C#, using VS Code
+## Develop with C#, using Visual Studio Code
+
+Visual Studio Code (VS Code) offers a rich environment for developing Q# programs across many multiple computer environments, including Windows, Linux and Mac, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# VS Code extension contains syntax highlighting, and Q# code snippets.
 
 Visual Studio Code (VS Code) offers a rich environment for developing Q# programs across many multiple computer environments, including Windows, Linux and Mac, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# VS Code extension contains syntax highlighting, and Q# code snippets.
 

@@ -23,8 +23,7 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition. A classical bit can only take the values **0** or **1**. A qubit can exist in a quantum superposition between the two classical values **0** and **1**. However, when we measure a qubit we can only observe the states **0** or **1**. We say that a measurement *collapses* the state the qubit from the superposition to the state corresponding the classical value that we observe.
 
 There's no unique way for a qubit to be in superposition, there are infinite ways to exist in superposition. The probabiliities of obtaining either **0** or **1** when measuring the qubit depends on the especific superposition. For example, we can have a qubit in superposition in which the probability of obtaining **1** is very high, let's say a 90%. Therefore the probability of obtaining **0** is low (10%). Or maybe we have a qubit in a different superposition in which the probabilities to obtain **0** and **1** when measuring are the same (50%). As there are infinites ways for the qubit to be in a superposition, a clever way to express the state of a qubit is the *Bolch sphere*.
-![](./Bloch.svg =100x100)
-
+<img src="./Bloch.svg" width="48">
 ### Q# operation code
 
 1. Replace the contents of the Operation.qs file with the following code:

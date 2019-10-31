@@ -36,17 +36,17 @@ The second tutorial, [Grover’s search](xref:microsoft.quantum.quickstarts.sear
 
 The Q# and the Quantum Development Kit gives you the tools you need to develop programs for quantum computing that will solve our most challenging problems in computing. The QDK comes with Q# standard and numerics libraries that provide powerful computational abstractions that help you develop these solutions. We also provide the Quantum Chemistry Library, a Q# a library for modeling chemical processes at the quantum level.
 
-Watch this [video](https://www.microsoft.com/en-us/videoplayer/embed/RE2JOJf) to learn more about the chemistry library.
+Watch this [video](https://www.microsoft.com/videoplayer/embed/RE2JOJf) to learn more about the chemistry library.
 
 ## Next steps
 
 The tutorials and articles above are meant to guide both the coder and non-coder through an introduction to quantum computing and Q#.  When you’re ready to continue to learn how to program quantum computers with Q#, here are the next steps:
 
 * Learn quantum programming with our [self-paced Quantum Katas](https://aka.ms/try-quantum-katas). This series of short training exercises teach you how to program in Q# and learn quantum computing.  
-* Explore our [Q# samples](https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp) and discover the problems you can solve with quantum computing.
+* Explore our [Q# samples](https://docs.microsoft.com/samples/browse/?languages=qsharp) and discover the problems you can solve with quantum computing.
 * Develop on your local machine with the host programming language and development environment of choice:
   * Develop with [Python](xref:microsoft.quantum.install#develop-with-python)
   * Develop with [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
-  * Develop with [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-vs-code)
+  * Develop with [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
   * Develop with [Jupyter Notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
 * Become part of the Microsoft Quantum community by contributing to the [QDK](xref:microsoft.quantum.contributing) open source project

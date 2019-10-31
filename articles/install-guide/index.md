@@ -21,6 +21,8 @@ Depending on your chosen development environment, there are different installati
 
 ## Develop with Python
 
+The qsharp package for Python makes it easy to simulate Q# operations and functions from within Python. IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python that provides the core functionality for compiling and simulating Q# operations.
+
 1. Pre-requisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
@@ -82,6 +84,10 @@ Depending on your chosen development environment, there are different installati
 
 ## Develop with Jupyter notebooks
 
+A favorite of academic settings, scientific labs, and online-based collaborative programming, Jupyter Notebooks offer in-place code execution—now including Q# code—along with instructions, notes, and other content.  Here's what you need to do to start creating your own Q# notebooks.
+
+IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
+
 1. Pre-requisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
@@ -121,6 +127,8 @@ Depending on your chosen development environment, there are different installati
 
 ## Develop with C# on Windows, using Visual Studio
 
+Visual Studio offers a rich environment for developing Q# programs, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# Visual Studio extension contains templates for Q# files and projects as well as syntax highlighting and IntelliSense support.  
+
 1. Pre-requisites
 
     - [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, with the .NET Core cross-platform development workload enabled
@@ -153,7 +161,9 @@ Depending on your chosen development environment, there are different installati
 > [!NOTE]
 > * If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its subfolders.  
 
-## Develop with C#, using VS Code
+## Develop with C#, using Visual Studio Code
+
+Visual Studio Code (VS Code) offers a rich environment for developing Q# programs across many multiple computer environments, including Windows, Linux and Mac, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# VS Code extension contains syntax highlighting, and Q# code snippets.
 
 1. Pre-requisites
 
@@ -189,6 +199,8 @@ Depending on your chosen development environment, there are different installati
 > * > * Workspaces with multiple root folders are not currently supported by the Visual Studio Code extension. If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.
 
 ## Develop with C#, using the `dotnet` command-line tool
+
+Of course, you can also build and run Q# programs from the command line by simply installing the .NET Core SDK and the QDK project templates. 
 
 1. Pre-requisites
 

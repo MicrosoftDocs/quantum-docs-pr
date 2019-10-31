@@ -32,7 +32,7 @@ Let's visualize with the Bloch sphere how the state of the qubit transforms when
 
 <img src="./Measurement.svg" width="450">
 
-Measurements are not the only way to modify the state of a qubit, we can also apply operations to change the state of the qubit. As any state is represented by a point on the sphere, one operation that transforms the state of the qubit into another can also be understod as a rotation of the arrow along the sphere. For example, the most famous operation that we can apply to a qubit is the `H` operation (H stands for Hadamard, the mathematician that studied it). The `H`operation does the following: takes a qubit in the state 0 and transform it to a balanced state in which the odds of obtaining **1** and **0** are both 50%. In the Bloch sphere:
+Measurements are not the only way to modify the state of a qubit, we can also apply operations to change the state of the qubit. As any state is represented by a point on the sphere, one operation that transforms the state of the qubit into another can also be understod as a rotation of the arrow along the sphere. For example, the most famous operation that we can apply to a qubit is the `H` operation (H stands for Hadamard, the mathematician that studied it). The `H` operation does the following: takes a qubit in the state 0 and transform it to a balanced state in which the odds of obtaining **1** and **0** are both 50%. In the Bloch sphere:
 
 <img src="./H.svg" width="450">
 
@@ -40,7 +40,7 @@ The distance of the purple arrow to each pole is the same, therefore the probabi
 
 > [!NOTE]
 > Why to use a sphere and not a circle? Since we have only two classical states it can seem that having a quarter of a circle would 
-> suffice to encode all the possible superpositions. However, the superpositions in quantum mechanics are *complex* and to describe them > we need also to encode the information of the *phase* of the superposition. Therefore we need an extra dimension. For
+> suffice to encode all the possible superpositions. However, the superpositions in quantum mechanics are *complex* and to describe them  we need also to encode the information of the *phase* of the superposition. Therefore we need an extra dimension. For
 > this exercise we don't need the phase, but later it will become an essential tool to harness the quantum world.
 
 ### Q# operation code

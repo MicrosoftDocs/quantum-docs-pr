@@ -18,9 +18,9 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 - [Create a Q# Project](xref:microsoft.quantum.howto.createproject)
 
 
-## Understanding the qubit
+## Write a Q# operation
 
-As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition. A classical bit can only take the values **0** or **1**. A qubit can exist in a quantum superposition between the two classical values **0** and **1**. However, when we measure a qubit we can only observe the states **0** or **1**. We say that a measurement *collapses* the state the qubit from the superposition to the state corresponding the classical value that we observe.
+As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition. When measured, a qubit can only be either 0 or 1, however during execution, the state of the qubit represents the probability of reading either a 0 or a 1 during measurement. This probabilistic state is known as superposition. We can use this probability to generate random numbers.
 
 ### Q# operation code
 Let's see how we can implement the concepts showed above to create a quantum random number generator in Q#:
@@ -52,16 +52,16 @@ When a `Qubit` is de-allocated it must be explicitly set back to the `Zero` stat
 
 ### Visualizating the code with the Bloch sphere
 
-In the Bloch sphere the north pole represents the classical value **0** and the south pole represents the classical value **1**. Any superposition can be represented by a point in the sphere (represented by an arrow). When the closer the end of the arrow to a pole, the higher the probability the qubit collapses into the classical value assigned to that pole when measured. For example, the qubit state represented by the red arrow above has a higher probability of giving the value **0** if we measure it.
+In the Bloch sphere the north pole represents the classical value **0** and the south pole represents the classical value **1**. Any superposition can be represented by a point in the sphere (represented by an arrow). When the closer the end of the arrow to a pole, the higher the probability the qubit collapses into the classical value assigned to that pole when measured. For example, the qubit state represented by the red arrow below has a higher probability of giving the value **0** if we measure it.
 
 <img src="./Bloch.svg" width="175">
 
 We can use this representation to visualize what the code is doing:
 
-* First we start with a qubit initalizated in the state **0** and apply `H` to create a balanced superposition in which the probabilities for **0** and **1** are the same.
+* First we start with a qubit initalizated in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.
 
 <img src="./H.svg" width="450">
 
 * Then we measure the qubit and save the output:
 
-<img src="./Measurement.svg" width="450">
+<img src="./Measurement2.svg" width="450">

@@ -65,3 +65,5 @@ We can use this representation to visualize what the code is doing:
 * Then we measure the qubit and save the output:
 
 <img src="./Measurement2.svg" width="450">
+
+Since the outcome obtained by the measurement is completely random we have obtained a random bit. We can call this function several times to create integers. For example, if we call the function three times to obtain three random bits, we can build random 3-bit numbers (this is, a random number between 1 and 8).

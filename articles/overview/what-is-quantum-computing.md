@@ -20,9 +20,9 @@ Quantum computing might sound daunting, but with the right resources you can sta
 
 ## The qubit
 
-In quantum computing, a quantum bit - **qubit** - is a unit of quantum information, like a classical bit. Where classical bits hold a single binary value such as a 0 or 1, the state of a qubit is between the values of 0 and 1. This is called **superposition**.
+In quantum computing, a quantum bit - **qubit** - is a unit of quantum information, like a classical bit. Where classical bits hold a single binary value such as a 0 or 1, the state of a qubit can be in a **superposition of 0 and 1**.  Visually, A qubit can be thought of as a direction in space (also known as a vector).  Within that space, the two classical states are two directions in that space. A qubit can be in any of the possible directions.  
 
-The act of **measurement** changes a qubit. It goes from being in superposition to one of the binary states of 0 or 1. Again, measurement of a qubit is unlike a classical bit, which when 0 is measured as 0, and when 1 is measured as 1.
+The act of **measurement** changes a qubit. It goes from being in superposition (any direction) to one of the two classical states (one of two directions).  A [Bloch sphere](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) is used to visualize a single qubit state. 
 
 Qubits can also be **entangled**: When we make a measurement of one entangled qubit, our knowledge of the state of the other is updated, even if the qubits are physically far apart.
 

@@ -148,7 +148,7 @@ Depending on your chosen development environment, there are different installati
 1. Pre-requisites
 
    - [VS Code](https://code.visualstudio.com/download)
-   - [.NET Core SDK 3 or later](https://www.microsoft.com/net/download)
+   - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
 1. Install the Quantum VS Code extension
 
@@ -182,7 +182,7 @@ Depending on your chosen development environment, there are different installati
 
 1. Pre-requisites
 
-    - [.NET Core SDK 3 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
 1. Install the Quantum project templates for .NET
 

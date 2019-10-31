@@ -39,12 +39,12 @@ landingContent:
           - text: Learn with the Quantum Katas
             url: intro-to-katas.md
           - text: Browse quantum code samples
-            url: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
+            url: https://docs.microsoft.com/samples/browse/?languages=qsharp
           - text: Quantum computing concepts
             url: concepts/index.md
 
   # Develop
-  - title: Develop with Q# and Python or Jupyter Notebooks
+  - title: Develop with Q# and Python or Jupyter notebooks
     linkLists:
     - linkListType: how-to-guide
       links:
@@ -66,7 +66,7 @@ landingContent:
         url: install-guide/index.md#develop-with-c-using-vs-code
 
   # Samples
-  - title: Samples
+  - title: Q# samples
     linkLists:
       - linkListType: learn
         links:
@@ -78,7 +78,7 @@ landingContent:
             url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
  
   # Development
-  - title: Quantum development with the Q# and the QDK
+  - title: Quantum development with Q# and the QDK
     linkLists:
       - linkListType: how-to-guide
         links:

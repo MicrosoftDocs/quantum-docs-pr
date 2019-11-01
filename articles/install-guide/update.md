@@ -32,9 +32,9 @@ dotnet --version
  1. Select Tools > Command Line > Developer Command Prompt
  1. For each project in the solution, run the following command:
  ```bash
- dotnet add Path\To\[project name].csproj package Microsoft.Quantum.Development.Kit` where "Path\To\[project name].csproj
+ dotnet add Path\To\[project_name].csproj package Microsoft.Quantum.Development.Kit`
  ```
- 1. Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
+ Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
 
 ### In Visual Studio Code
 
@@ -45,7 +45,7 @@ dotnet --version
 ### Using the command line
 
 1. Navigate to the folder containing your project file
-1. Run the following commands:
+2. Run the following commands:
 ```bash
 dotnet clean MyProj.csproj
 ```
@@ -55,11 +55,11 @@ and
 ```bash
 dotnet add package Microsoft.Quantum.Development.Kit
 ```
-1. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
-1. Save and close all files
-1. Repeat for each project dependency, then navigate back to the folder containing your main project and run:
+3. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
+4. Save and close all files
+5. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:
 ```bash
-dotnet build [project name].csproj
+dotnet build [project_name].csproj
 ```
 
 ## Update IQ# for Python

@@ -110,7 +110,8 @@ In this code snippet, an operation `Set` is defined that takes as a parameter a 
 
     This operation may now be called to set a qubit to a classical state, either returning `Zero` 100% of the time or returning `One` 100% of the time.  `Zero` and `One` are constants that represent the only two possible results of a measurement of a qubit.
 
-    The operation `Set` measures the qubit, if it's in the state we want, we leave it alone, otherwise, by executing the `X` operation, we change the qubit state to the desired state.
+    The operation `Set` measures the qubit.
+    If the qubit is in the state we want, `Set` leaves it alone; otherwise, by executing the `X` operation, we change the qubit state to the desired state.
 
 ### About Q# operations
 

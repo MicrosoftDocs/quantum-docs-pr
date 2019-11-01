@@ -25,7 +25,7 @@ dotnet --version
 
 ### In Visual Studio
  
- 1. Run Build > Clean Solution 
+ 1. From the menu, select Build > Clean Solution 
  1. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
  1. Save and close all files in your solution
  1. Select Tools > Command Line > Developer Command Prompt

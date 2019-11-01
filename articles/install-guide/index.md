@@ -115,14 +115,14 @@ Depending on your chosen development environment, there are different installati
 
     - Run this cell of the notebook:
 
-        ![Jupyter notebook cell](~/media/install-guide-jupyter.png)
+        ![Jupyter notebook cell with Q# code](~/media/install-guide-jupyter.png)
 
         You should see `SayHello` in the output of the cell. When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
 
 
     - In a new cell, simulate the execution in a quantum computer of the operation you just created by using the `%simulate` magic:
 
-        ![Jupyter notebook cell](~/media/install-guide-jupyter-simulate.png)
+        ![Jupyter notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
 
         You should see the message printed on the screen along with the result of the operation you invoked (in this case, empty).
 

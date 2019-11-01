@@ -175,8 +175,6 @@ Visual Studio offers a rich environment for developing Q# programs, offering gre
 
 Visual Studio Code (VS Code) offers a rich environment for developing Q# programs across many multiple computer environments, including Windows, Linux and Mac, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# VS Code extension contains syntax highlighting, and Q# code snippets.
 
-Visual Studio Code (VS Code) offers a rich environment for developing Q# programs across many multiple computer environments, including Windows, Linux and Mac, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# VS Code extension contains syntax highlighting, and Q# code snippets.
-
 1. Pre-requisites
 
    - [VS Code](https://code.visualstudio.com/download)

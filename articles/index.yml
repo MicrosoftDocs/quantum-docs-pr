@@ -22,10 +22,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Overview
-            url: welcome.md
           - text: Five questions about quantum computing
-            url: overview/index.md
+            url: welcome.md
       - linkListType: get-started
         links:
           - text: Learn quantum concepts with Q#

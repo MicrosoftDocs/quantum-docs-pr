@@ -12,7 +12,7 @@ ms.topic: overview
 
 Welcome to the Microsoft Quantum Development Kit!  Here, you will find all the tools you need to learn about quantum programming with Q#.  To guide you in learning quantum computing with Q#, here we provide a Getting Started Guide, a journey guide for both those who want to start coding quantum programs and those who are not yet ready to start coding, but want to learn more about Q# and quantum programming.
 
-## Introduction to quantum computing and Q#
+## Five questions about quantum computing
 
 We begin with a series short articles that summarizes the _questions about quantum computing_. These short articles offer a quick overview of quantum computing for the new learner.
 

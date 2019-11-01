@@ -9,7 +9,7 @@ uid: microsoft.quantum.write-program
 ---
 # Write your first quantum program
 
-In this QuickStart, we show you how to write your first Q# program that manipulates and measures qubits and demonstrates the effects of superposition and entanglement.  This guides you on installing the QDK, building the program and executing that program on a quantum simulator.  
+In this Quickstart, we show you how to write your first Q# program that manipulates and measures qubits and demonstrates the effects of superposition and entanglement.  This guides you on installing the QDK, building the program and executing that program on a quantum simulator.  
 
 You will write an application called Bell to demonstrate quantum entanglement.  The name Bell is in reference to Bell states, which are specific quantum states of two qubits that are used to represent the simplest examples of superposition and quantum entanglement. 
 

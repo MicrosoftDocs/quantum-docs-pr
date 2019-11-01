@@ -83,8 +83,8 @@ dotnet build [project_name].csproj
     You should see the following output:
 
     ```bash
-    iqsharp: 0.9.1909.3002
-    Jupyter Core: 1.1.18837.0
+    iqsharp: 0.10.1910.3107
+    Jupyter Core: 1.2.20112.0
     ```
 
 1. Update the `qsharp` package
@@ -103,7 +103,7 @@ dotnet build [project_name].csproj
 
     ```bash
     Name: qsharp
-    Version: 0.9.1909.3002
+    Version: 0.10.1910.3107
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -132,8 +132,8 @@ python -c "import qsharp; qsharp.reload()
     You should see the following output:
 
     ```bash
-    iqsharp: 0.9.1909.3002
-    Jupyter Core: 1.1.18837.0
+    iqsharp: 0.10.1910.3107
+    Jupyter Core: 1.2.20112.0
     ```
 1. Run the following command from a cell in your Jupyter Notebook:
 ```
@@ -152,13 +152,6 @@ python -c "import qsharp; qsharp.reload()
     > [!NOTE]
     > The project templates are updated with the extension. The updated templates apply to newly created projects only. The code for your existing projects is not updated when the extension is updated.
 
-1. Update the QDK packages
-
-    - Open an existing application
-    - Select **Dependencies** in the Solution Explorer
-    - Select **Manage NuGet Packages**
-    - Update the **Microsoft.Quantum** packages to the latest version
-
 1. You can now run your application with the latest QDK.
 
 ## Update VS Code QDK extension
@@ -175,20 +168,7 @@ python -c "import qsharp; qsharp.reload()
    - Go to **View** -> **Command Palette**
    - Select **Q#: Install project templates**
 
-1. Open an existing application in VS Code
-
-   - Edit the .csproj file to add the new package versions
-
-    ```xml
-    <ItemGroup>
-        <PackageReference Include="Microsoft.Quantum.Standard" Version="0.9.1909.3002" />
-        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.9.1909.3002" />
-    </ItemGroup>
-    ```
-
-    If you use other `Microsoft.Quantum` packages, update these too.
-
-1. You can now run your application with the updated QDK
+1. You can now run your application with the latest QDK.
 
 ## C#, using the `dotnet` command-line tool
 
@@ -197,25 +177,8 @@ python -c "import qsharp; qsharp.reload()
     ```bash
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
-
-1. Update and run an existing application
-
-    - Update the QDK package versions in your application
-
-        ```bash
-        dotnet add package Microsoft.Quantum.Development.Kit
-        dotnet add package Microsoft.Quantum.Standard
-        ```
-
-        If your application uses any other `Microsoft.Quantum` packages, update these too.
-
-    - Run the application
-
-        ```bash
-        dotnet run
-        ```
-
-    - Your application will run with the new package versions
+    
+1. You can now run your application with the latest QDK.
 
 ## What's next?
 

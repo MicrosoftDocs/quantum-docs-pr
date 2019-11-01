@@ -1,5 +1,5 @@
 ---
-title: How to learn quantum computing
+title: How to learn quantum computing with Q#?
 description: 
 author: natke
 ms.author:  nakersha
@@ -8,31 +8,31 @@ ms.topic: article
 uid: microsoft.quantum.overview.learn
 ---
 
-# How to learn quantum computing
+# How to learn quantum computing?
 
 Get guidance for learning about quantum computing and writing your first programs. This isn't an exhaustive guide, but rather a good place to start.
 
-## Getting the basics: what do you need to know?
+## Getting Started overview
+
+[Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome) provides a high-level overview of quantum computing with Q#, including tutorials for writing your first Q# program, getting started guides and and introduction to the Q# quantum libraries for developing quantum programs.
+
+## Learning the basics: what do you need to know?
 
 You don’t need to know quantum physics to learn about Q# and quantum computing or start writing quantum applications.
 
-To guide you in learning quantum computing with Q#, we provide a Getting Started Guide (link below) for the Quantum Development Kit, which provides a journey guide for both those who want to start coding quantum programs and those who are not yet ready to start coding, but want to learn more about Q# and quantum programming.
+These concepts will give you a good introduction to the fundamental knowledge you need to start coding quantum programs.  
 
-Before embarking on the Getting Started journey, this last article on the “Five things to know about quantum computing” introduces you to some basic concepts that are especially important to understand quantum computing and points to further resources for you along your journey.
-
-These concepts will give you a good introduction to the fundamental knowledge you need to start coding quantum programs.  Those who are not yet ready to start coding, but want to learn more about Q# and quantum programming can still review these concepts at a high level here and then proceed to the Getting Started Guide to learn more about quantum computing and Q# without having to start coding.
-
-* [Linear algebra (vectors and matrices)](xref:microsoft.quantum.concepts.vectors): In quantum computing, quantum states are represented by vectors, with quantum operations being linear transformations applied to these vectors.
-* [Complex numbers](https://en.wikipedia.org/wiki/Complex_number): The coefficients of quantum state vectors are complex numbers. You can understand some basic quantum computing concepts without them, but you won't get far before you need to incorporate them into your quantum toolkit.
 * [Basic quantum mechanics](xref:microsoft.quantum.concepts.intro): We just said that you don’t need to know quantum physics to start coding (and it’s true!). But some basic concepts of quantum mechanics and its mathematical notation will be helpful to understand quantum programming.
 
-## Code first, then learn! Or learn more, then code!
+* **Linear algebra (vectors and matrices)**: In quantum computing, quantum states are represented by vectors, with quantum operations being linear transformations applied to these vectors.  Here is a [Jupyter notebook tutorial on Linear Algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra).  You can also read more about this in our concept guide about [vectors and matrices](xref:microsoft.quantum.concepts.vectors).
 
-Now that you have the basics, you're ready to start writing your first quantum programs.  Or maybe you want to learn more before coding.  Either way, our [Getting Started with the Quantum Development Kit](xref:microsoft.quantum.welcome) provides a series of steps in learning, which includes:
+* **Complex arithmetic**: The coefficients of quantum state vectors are complex numbers. You can understand some basic quantum computing concepts without them, but you won't get far before you need to incorporate them into your quantum toolkit.  Here is a [Jupyter notebook tutorial on complex arithmetic](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic) that explains some of the mathematical background required to work with quantum computing. 
 
-* A tutorial for [writing your first Q# quantum program](xref:microsoft.quantum.write-program) and learning more about the basics of Q#
-* A tutorial introduction to a Q# program (Grover’s search algorithm) that demonstrates the [different way of solving real problems with quantum computing](xref:microsoft.quantum.quickstarts.search)
-* An introduction to the Q# libraries, our Quantum Katas, and other tools of the QDK that provide you with what you need to develop quantum programs for today’s greatest challenges
+Now that you have the basics, you're ready to start learning how to write quantum programs.  There are many ways to proceed:
+
+## Do the Quantum Katas
+
+The [Quantum Katas](xref:microsoft.quantum.overview.katas) are our open source series of self-paced tutorials aimed at teaching you elements of quantum computing and Q# programming at the same time.  Each kata references additional learning materials you can use to learn the quantum computing concepts needed to successfully complete the katas.  
 
 ## Dive into the theory
 
@@ -51,7 +51,5 @@ You don’t have to learn this alone, there is a big community of amateurs and e
 * Check out [Q# blog](https://devblogs.microsoft.com/qsharp/) and [Microsoft Quantum Blog](https://cloudblogs.microsoft.com/quantum/) to stay up to date with the latest news and resources about Q#.
 * Check [Q# Community](https://qsharp.community/) and [Awesome Q#](https://project-awesome.org/ebraminio/awesome-qsharp) to look for more resources and material.
 
-## Next steps
+ If you’re looking to teach a course on quantum computing, the [Microsoft Quantum Network](https://info.microsoft.com/LearnMoreAboutMicrosoftQuantumNetwork.html) can help provide curriculum assistance.  
 
-* [Learn quantum computing concepts with Q#](xref:microsoft.quantum.write-program)
-* [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)

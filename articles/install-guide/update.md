@@ -25,16 +25,17 @@ dotnet --version
 
 ### In Visual Studio
  
- 1. From the menu, select Build > Clean Solution 
- 1. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
- 1. Save and close all files in your solution
- 1. Select Tools > Command Line > Developer Command Prompt
- 1. For each project in the solution, run the following command:
+ 1. Open your solution in Visual Studio
+ 2. From the menu, select Build > Clean Solution 
+ 3. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
+ 4. Save and close all files in your solution
+ 5. Select Tools > Command Line > Developer Command Prompt
+ 6. For each project in the solution, run the following command:
  ```bash
  dotnet add [path\to\project_name].csproj package Microsoft.Quantum.Development.Kit`
  ```
 If your projects use any other Microsoft.Quantum packages, run the command for these too. 
-1. Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
+7. Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
 
 ### In Visual Studio Code
 
@@ -45,20 +46,20 @@ If your projects use any other Microsoft.Quantum packages, run the command for t
 ### Using the command line
 
 1. Navigate to the folder containing your project file
-2. Run the following commands:
+2. Run the following command:
 ```bash
-dotnet clean MyProj.csproj
+dotnet clean [project_name].csproj
 ```
 
-and
-
+3. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
+4. Run the following command:
 ```bash
 dotnet add package Microsoft.Quantum.Development.Kit
 ```
 if your project uses any other Microsoft.Quantum packages, run the command for these too.
-3. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
-4. Save and close all files
-5. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:
+
+5. Save and close all files
+6. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:
 ```bash
 dotnet build [project_name].csproj
 ```

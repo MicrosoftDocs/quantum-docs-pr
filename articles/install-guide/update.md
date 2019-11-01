@@ -54,6 +54,7 @@ and
 ```bash
 dotnet add package Microsoft.Quantum.Development.Kit
 ```
+if your project uses any other Microsoft.Quantum packages, run the command for these too.
 3. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
 4. Save and close all files
 5. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:

@@ -14,7 +14,7 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 
 ## Prerequisites
 
-- The Microsoft [Quantum Development Kit](install).
+- The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
 - [Create a Q# Project](xref:microsoft.quantum.howto.createproject)
 
 

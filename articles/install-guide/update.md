@@ -25,17 +25,18 @@ dotnet --version
 
 ### In Visual Studio
  
- 1. Open your solution in Visual Studio
- 2. From the menu, select Build > Clean Solution 
- 3. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
- 4. Save and close all files in your solution
- 5. Select Tools > Command Line > Developer Command Prompt
- 6. For each project in the solution, run the following command:
+ 1. Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/en-us/visualstudio/install/update-visual-studio?view=vs-2019) for instructions
+ 2. Open your solution in Visual Studio
+ 3. From the menu, select Build > Clean Solution 
+ 4. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
+ 5. Save and close all files in your solution
+ 6. Select Tools > Command Line > Developer Command Prompt
+ 7. For each project in the solution, run the following command:
  ```bash
  dotnet add [path\to\project_name].csproj package Microsoft.Quantum.Development.Kit`
  ```
 If your projects use any other Microsoft.Quantum packages, run the command for these too. 
-7. Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
+ 8. Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
 
 ### In Visual Studio Code
 

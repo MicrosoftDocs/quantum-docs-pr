@@ -25,7 +25,7 @@ dotnet --version
 
 ### In Visual Studio
  
- 1. Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/en-us/visualstudio/install/update-visual-studio?view=vs-2019) for instructions
+ 1. Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions
  2. Open your solution in Visual Studio
  3. From the menu, select Build > Clean Solution 
  4. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)

@@ -33,7 +33,8 @@ dotnet --version
  ```bash
  dotnet add [path\to\project_name].csproj package Microsoft.Quantum.Development.Kit`
  ```
- Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
+If your projects use any other Microsoft.Quantum packages, run the command for these too. 
+1. Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
 
 ### In Visual Studio Code
 

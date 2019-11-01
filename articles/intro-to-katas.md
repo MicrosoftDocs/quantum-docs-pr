@@ -8,50 +8,64 @@ ms.topic: overview
 uid: microsoft.quantum.overview.katas
 ---
 
-# Get started with the Quantum Katas
+# Learn quantum computing with the Quantum Katas
 
-The Quantum Katas are an open source series of self-paced tutorials aimed at teaching you elements of quantum computing and Q# programming at the same time.
+[The Quantum Katas](https://github.com/Microsoft/QuantumKatas/) is an open-source collection of self-paced tutorials and sets of programming exercises aimed at teaching you elements of quantum computing and Q# programming at the same time.
 
-## Learning with the Katas
+## Learning by Doing
 
-Each kata is a separate project which includes:
+The tutorials and katas collected in this project emphasize learning by doing: they offer programming tasks that cover certain topics which progress from very simple to quite challenging. Each task asks you to fill in some code; the first tasks might require just one line, and the later ones might require a sizable fragment of code.
 
-* A sequence of tasks on the topic progressing from foundational to challenging. Each task requires you to fill in some code; the first task might require just one line, and the last one might require a sizable fragment of code.
-* A testing framework that sets up, runs and validates your solutions. Each task is covered by a unit test which initially fails; once the test passes, you can move on to the next task!
-* Pointers to reference materials you might need to solve the tasks, both on quantum computing and on Q#.
-* Reference solutions, for when all else fails.
+Most importantly, the katas include testing frameworks that sets up, runs and validates the solutions to the tasks. This allows you to get immediate feedback on your solution and to reconsider your approach if it is incorrect.
 
-You can develop using the Katas in your environment of choice:
+You can use the Katas for learning in your environment of choice:
 
 * Jupyter Notebooks online within the Binder environment
 * Jupyter Notebooks running on your local machine
 * Visual Studio
 * Visual Studio Code
 
-## What can I learn with a kata?
+## What can I learn with the Quantum Katas?
 
-### Quantum computing concepts
+Here is a summary of the main topics covered in the Quantum Katas. We recommend you to follow this learning path in the beginning to make sure you have a solid grasp on the fundamental concepts of quantum computing. Of course, you can skip the topics you're comfortable with, such as complex arithmetic, and learn the algorithms in any order you want.
 
-* [Basic quantum gates](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)
-* [Qubit superposition](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)
-* [Quantum state measurement](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)
+### Introduction to quantum computing concepts
+
+* [Complex arithmetic](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ComplexArithmetic)
+* [Linear algebra](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/LinearAlgebra)
+* [The concept of a qubit](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/Qubit)
+* [Single-qubit quantum gates](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/SingleQubitGates)
+
+### Quantum computing fundamentals
+
+* [Recognizing quantum gates](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)
+* [Creating quantum superposition](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)
+* [Distinguishing quantum states using measurements](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)
+* [Joint measurements](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)
 
 ### Algorithms
 
 * [Quantum teleportation](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)
 * [Superdense coding](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)
-* [Grover's algorithm for search](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)
+* [Deutsch–Jozsa algorithm](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/DeutschJozsaAlgorithm)
+* [Implementing Grover's search algorithm](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)
+* [Exploring high-level properties of Grover's search algorithm](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ExploringGroversAlgorithm)
+* Solving real problems using Grover's algorithm: [SAT problems](https://github.com/microsoft/QuantumKatas/blob/master/SolveSATWithGrover) and [graph coloring problems](https://github.com/microsoft/QuantumKatas/blob/master/GraphColoring)
 
-### Protocols
+### Protocols and libraries
 
-* [BB84 protocol for cryptographic key distribution](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)
-* [Bit flip error correcting code](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)
+* [BB84 protocol for quantum key distribution](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)
+* Quantum error correction: [bit-flip error correcting code](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)
+* [Phase estimation](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)
+* Quantum arithmetic: [building ripple-carry adders](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)
 
-### Games
+### Entanglement games
 
-* [Magic square game](https://github.com/microsoft/QuantumKatas/tree/master/MagicSquareGame)
+* [CHSH game](https://github.com/microsoft/QuantumKatas/blob/master/CHSHGame)
+* [GHZ game](https://github.com/microsoft/QuantumKatas/blob/master/GHZGame)
+* [Mermin-Peres magic square game](https://github.com/microsoft/QuantumKatas/tree/master/MagicSquareGame)
 
 ## Resources
 
 * See the full series of [Quantum Katas](https://github.com/microsoft/QuantumKatas)
-* [Run the katas online](https://aka.ms/try-quantum-katas) in Jupyter
+* [Run the katas online](https://aka.ms/try-quantum-katas)

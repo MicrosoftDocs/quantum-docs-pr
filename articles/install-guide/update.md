@@ -16,7 +16,53 @@ This article assumes that you already have the QDK installed. If you are install
 
 The update steps depend on your development environment. Choose your environment from the following sections.
 
-## Python
+## Updating Q# Projects 
+
+1. First, install the latest version of the [.NET Core SDK 3.0](https://dotnet.microsoft.com/download) and run the following command in the command prompt:
+```bash
+dotnet --version
+```
+ Verify the output is 3.0.100 or higher, then follow the instructions below for your setup.
+
+### In Visual Studio
+ 
+ 1. Run Build > Clean Solution 
+ 1. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
+ 1. Save and close all files in your solution
+ 1. Select Tools > Command Line > Developer Command Prompt
+ 1. For each project in the solution, run the following command:
+ ```bash
+ dotnet add Path\To\[project name].csproj package Microsoft.Quantum.Development.Kit` where "Path\To\[project name].csproj
+ ```
+ 1. Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
+
+### In Visual Studio Code
+
+1. In Visual Studio Code, open the folder containing the project to update
+1. Select Terminal > New Terminal
+1. Follow the instructions for updating using the command line
+
+### Using the command line
+
+1. Navigate to the folder containing your project file
+1. Run the following commands:
+```bash
+dotnet clean MyProj.csproj
+```
+
+and
+
+```bash
+dotnet add package Microsoft.Quantum.Development.Kit
+```
+1. Update the target framework in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
+1. Save and close all files
+1. Repeat for each project dependency, then navigate back to the folder containing your main project and run:
+```bash
+dotnet build [project name].csproj
+```
+
+## Update IQ# for Python
 
 1. Update the `iqsharp` kernel
 
@@ -61,7 +107,7 @@ The update steps depend on your development environment. Choose your environment
 
 1. You can now use the updated QDK version to run your existing quantum programs.
 
-## Jupyter notebooks
+## Update IQ# for Jupyter notebooks
 
 1. Update the `iqsharp` kernel
 
@@ -85,15 +131,7 @@ The update steps depend on your development environment. Choose your environment
 
 1. You can now open an existing Jupyter notebook and run it with the updated QDK.
 
-## C# on Windows, using Visual Studio
-
- > [!NOTE]
- > If you are updating to .NET Core SDK 3.0, you will need to go through these additional update instructions:
- > 1. Run Build > Clean Solution 
- > 2. Update the Q# Visual Studio extension using the instructions below
- > 3. Update the target framework in your .csproj file to netcoreapp3.0, save and close your solution
- > 4. Download and install [.NET Core SDK 3.0](https://docs.microsoft.com/en-us/quantum/relnotes/?view=qsharp-preview)
- > 5. Re-open your solution and run Build > Rebuild Solution
+## Update Visual Studio QDK extension
 
 1. Update the Q# Visual Studio extension
 
@@ -112,7 +150,7 @@ The update steps depend on your development environment. Choose your environment
 
 1. You can now run your application with the latest QDK.
 
-## C#, using VS Code
+## Update VS Code QDK extension
 
 1. Update the Quantum VS Code extension
 

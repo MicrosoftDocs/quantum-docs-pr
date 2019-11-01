@@ -24,7 +24,7 @@ landingContent:
         links:
           - text: Overview
             url: welcome.md
-          - text: Five questions about quantum
+          - text: Five questions about quantum computing
             url: overview/index.md
       - linkListType: get-started
         links:

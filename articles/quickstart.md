@@ -1,5 +1,5 @@
 ---
-title: Write your first quantum program
+title: Create a Bell State using Q#
 description: Learn how to write a quantum program in Q#. Develop a Bell State application using the Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha 
@@ -7,9 +7,10 @@ ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 ---
-# Write your first quantum program
 
-In this Quickstart, we show you how to write your first Q# program that manipulates and measures qubits and demonstrates the effects of superposition and entanglement.  This guides you on installing the QDK, building the program and executing that program on a quantum simulator.  
+# Create a Bell State using Q#
+
+In this Quickstart, we show you how to write a Q# program that manipulates and measures qubits and demonstrates the effects of superposition and entanglement.  This guides you on installing the QDK, building the program and executing that program on a quantum simulator.  
 
 You will write an application called Bell to demonstrate quantum entanglement.  The name Bell is in reference to Bell states, which are specific quantum states of two qubits that are used to represent the simplest examples of superposition and quantum entanglement. 
 

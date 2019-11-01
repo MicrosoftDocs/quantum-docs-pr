@@ -94,9 +94,15 @@ You can now continue to develop your quantum program.
 
 1. Select **Cell** > **Run Cells** to run the notebook. `SayHello` will soon appear in the cell output:
 
-    ![Jupyter notebook cell](~/media/install-guide-jupyter.png)
+    ![Jupyter notebook cell with Q# code](~/media/install-guide-jupyter.png)
 
     When running in Jupyter Notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
+
+1. In a new cell, simulate the execution in a quantum computer of the operation you just created by using the `%simulate` magic:
+
+    ![Jupyter notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
+
+    You should see the message printed on the screen along with the result of the operation you invoked (in this case, empty).
 
 You can now add other Q# operations to continue your quantum development.
 

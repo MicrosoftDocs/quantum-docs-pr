@@ -20,7 +20,9 @@
     href: intro-to-katas.md
 - name: Quickstarts
   items:
-  - name: Write your first quantum program
+  - name: A quantum random number generator
+    href: quickstarts/qrng.md
+  - name: Create a Bell state
     href: quickstart.md
   - name: Implement Grover's search algorithm
     href: quickstarts/search.md

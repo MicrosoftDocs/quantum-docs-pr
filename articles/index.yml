@@ -57,7 +57,7 @@ landingContent:
         url: https://docs.microsoft.com/samples/browse/?languages=python&products=qdk
       - text: Teleport Q# Jupyter notebook
         url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
-      - text: How to build your Q# Jupyter notebooks
+      - text: How to build Q# Jupyter notebooks
         url: https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/
 
 

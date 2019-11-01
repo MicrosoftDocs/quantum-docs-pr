@@ -38,7 +38,7 @@ For the fifth question:  "_How to learn quantum computing with Q#?_", we begin b
 
 ## Next steps
 
-The Getting Started guides and articles above are meant to guide both the coder and non-coder through an introduction to quantum computing and Q#.  When you’re ready to continue to learn how to program quantum computers with Q#:
+The Getting Started guides and articles above are meant to guide both the coder and non-coder through an introduction to quantum computing and Q#.  To continue to learn how to program quantum computers with Q#:
 
 * [How to learn quantum computing with Q#](xref:microsoft.quantum.overview.learn) provides guidance for learning quantum computing concepts with Q#.   
 

@@ -10,7 +10,7 @@ uid: microsoft.quantum.language.intro
 
 # The Q# Programming Language
 
-# Introduction
+## Introduction
 
 A natural model for quantum computation is to treat the quantum computer
 as a coprocessor, similar to that used for GPUs, FPGAs, and other adjunct
@@ -40,7 +40,7 @@ The following sections detail:
 - [Statements](xref:microsoft.quantum.language.statements)
 - [File Structure](xref:microsoft.quantum.language.file-structure)
 
-# Conventions
+## Conventions
 
 We are working to ensure that common punctuation marks are used consistently in all situations.
 We expect that this will make Q# easier to learn and to read because these marks

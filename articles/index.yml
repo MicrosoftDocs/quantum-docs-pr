@@ -22,10 +22,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Overview
+          - text: Five questions about quantum computing
             url: welcome.md
-          - text: Five questions about quantum
-            url: overview/index.md
       - linkListType: get-started
         links:
           - text: Learn quantum concepts with Q#
@@ -57,7 +55,7 @@ landingContent:
         url: https://docs.microsoft.com/samples/browse/?languages=python&products=qdk
       - text: Teleport Q# Jupyter notebook
         url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
-      - text: How to build your Q# Jupyter notebooks
+      - text: How to build Q# Jupyter notebooks
         url: https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/
 
 

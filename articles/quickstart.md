@@ -314,7 +314,7 @@ The program will exit after you press a key.
 
 **Overview** Now let’s look at how Q# expresses ways to put qubits in superposition.  Recall that the state of a qubit can be in a superposition of 0 and 1.  We’ll use the `Hadamard` operation to accomplish this. If the qubit is in either of the classical states (where a measurement returns `Zero` always or `One` always), then the `Hadamard` or `H` operation will put the qubit in a state where a measurement of the qubit will return `Zero` 50% of the time and return `One` 50% of the time.  Conceputually, the qubit can be thought of as halfway between the `Zero` and `One`.  Now, when we simulate the `TestBellState` operation, we will see the results will return roughly an equal number of `Zero` and `One` after measurement.  
 
-First we'll just try to flip the qubit. This is accomplished by performing an `X` operation before we measure it in `TestBellState`:
+First we'll just try to flip the qubit (if the qubit is in `Zero` state will flip to `One` and vice versa). This is accomplished by performing an `X` operation before we measure it in `TestBellState`:
 
 ```qsharp
 X(qubit);

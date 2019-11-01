@@ -7,9 +7,10 @@ ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 ---
-# Write your first quantum program
 
-Learn how to write a quantum program using the Microsoft QDK. You will write an application to demonstrate quantum entanglement, which is called a **Bell state**.
+# Create a Bell State using Q#
+
+On tihs tutorial you will write an application to demonstrate quantum entanglement, which is called a **Bell state**.
 
 You start with the simplest program possible and build it up to demonstrate [quantum superposition and quantum entanglement](xref:microsoft.quantum.overview.what#the-qubit).
 

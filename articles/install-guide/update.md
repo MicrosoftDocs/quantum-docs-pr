@@ -28,7 +28,7 @@ dotnet --version
  1. Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions
  2. Open your solution in Visual Studio
  3. From the menu, select Build > Clean Solution 
- 4. [Update the target framework](https://docs.microsoft.com/en-us/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2019#change-the-target-framework) in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
+ 4. [Update the target framework](https://docs.microsoft.com/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2019#change-the-target-framework) in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
  5. Save and close all files in your solution
  6. Select Tools > Command Line > Developer Command Prompt
  7. For each project in the solution, run the following command:

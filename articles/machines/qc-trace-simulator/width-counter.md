@@ -27,7 +27,7 @@ operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
 }
 ```
 
-# Using Width Counter within a C# Program
+## Using Width Counter within a C# Program
 
 Multiply controlled `X` acting on a total of 5 qubits will allocate 2 ancillary qubits 
 and its input width will be 5. To check that this is the case, we can use the following 

@@ -1,10 +1,28 @@
 - name: Microsoft Quantum Documentation
   href: index.yml
 - name: Overview
-  href: welcome.md
+  items:
+  - name: Get started
+    href: welcome.md
+  - name: Five questions about quantum computing
+    items:
+    - name: What is quantum computing?
+      href: overview/what-is-quantum-computing.md
+    - name: What can a quantum computer do?
+      href: overview/quantum-computers.md
+    - name: Why learn quantum computing?
+      href: overview/why-learn-quantum-computing.md
+    - name: What is Q#?
+      href: overview/what-is-qsharp.md
+    - name: How to learn quantum computing?
+      href: overview/how-to-learn-quantum-computing.md
+  - name: Learn with the Quantum Katas
+    href: intro-to-katas.md
 - name: Quickstarts
   items:
-  - name: Write your first quantum program
+  - name: A quantum random number generator
+    href: quickstarts/qrng.md
+  - name: Create a Bell state
     href: quickstart.md
   - name: Implement Grover's search algorithm
     href: quickstarts/search.md
@@ -28,7 +46,7 @@
     href: libraries/toc.yml
   - name: Quantum computing concepts
     href: concepts/toc.yml
-  - name: How to host a quantum machine
+  - name: Quantum simulators and resource estimators
     href: machines/toc.yml
 - name: Resources
   items:

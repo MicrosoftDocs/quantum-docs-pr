@@ -8,7 +8,7 @@ ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
 ---
 
-## Obtaining energy level estimates
+# Obtaining energy level estimates
 Estimating the values of energy levels is one of the principal applications of quantum chemistry. Here, we outline how this may be performed for the canonical example of molecular Hydrogen. The sample referenced in this section is `MolecularHydrogen` in the chemistry samples repository. A more visual example that plots the output is the `MolecularHydrogenGUI` demo.
 
 Our first step is to construct the Hamiltonian representing molecular Hydrogen. Though this can be constructed through the NWChem tool, we manually add Hamiltonian terms for brevity in this sample.

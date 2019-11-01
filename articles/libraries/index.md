@@ -6,7 +6,7 @@ ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries
 ---
-
+# Overview of Q# Libraries
 The Quantum Development Kit is provided with several libraries to make it easier to develop quantum applications in Q#.
 In this section of the documentation, we describe these libraries and how to use them in your programs.
 

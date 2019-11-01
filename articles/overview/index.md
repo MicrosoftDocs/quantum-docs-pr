@@ -1,18 +1,17 @@
 ---
-title: Five things you should know about quantum computing
+title: Five questions about quantum computing
 description: Learn about quantum computing, what computers can do, and how you can learn quantum computing
 author: natke
 ms.author:  nakersha
-ms.date: 10/21/2019
+ms.date: 10/22/2019
 ms.topic: landing-page
 uid: microsoft.quantum.overview.index
 ---
 
-# Five things you should know about quantum computing
+# Five questions about quantum computing
 
 * [What is quantum computing?](xref:microsoft.quantum.overview.what)
-* [What can I do with a quantum computer?](xref:microsoft.quantum.overview.computers)
-* [Why should I learn quantum computing?](xref:microsoft.quantum.overview.why)
-* [How can I learn quantum computing?](xref:microsoft.quantum.overview.learn)
-* [What is the Q# programming language?](xref:microsoft.quantum.overview.qsharp)
-
+* [What can quantum computers do?](xref:microsoft.quantum.overview.computers)
+* [Why learn quantum computing?](xref:microsoft.quantum.overview.why)
+* [What is the Q#?](xref:microsoft.quantum.overview.qsharp)
+* [How to learn quantum computing with Q#?](xref:microsoft.quantum.overview.learn)

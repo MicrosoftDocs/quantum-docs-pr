@@ -76,6 +76,10 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
     ```bash
     $ dotnet run
+    Reflecting about marked state...
+    Reflecting about marked state...
+    Reflecting about marked state...
+    Reflecting about marked state...
     Result: [Zero,One,Zero,One,Zero]
 
     Press any key to continue...
@@ -83,8 +87,22 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
     ### [C# with Visual Studio 2019](#tab/tabid-vs2019)
 
-    <!-- TODO: write this tab -->
+    To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:
 
+    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+
+    Then press F5, the program will start execution and a new windows will pop-up with the following results: 
+
+    ```bash
+    $ dotnet run
+    Reflecting about marked state...
+    Reflecting about marked state...
+    Reflecting about marked state...
+    Reflecting about marked state...
+    Result: [Zero,One,Zero,One,Zero]
+
+    Press any key to continue...
+    ```
     ***
 
     The `ReflectAboutMarked` operation is called only four times, but your Q# program was able to find the "01010" input amongst $2^{5} = 32$ possible inputs!

@@ -52,7 +52,7 @@ If your projects use any other Microsoft.Quantum packages, run the command for t
 dotnet clean [project_name].csproj
 ```
 
-3. [Update the target framework](https://docs.microsoft.com/en-us/dotnet/standard/frameworks#how-to-specify-target-frameworks) in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
+3. [Update the target framework](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks) in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
 4. Run the following command:
 ```bash
 dotnet add package Microsoft.Quantum.Development.Kit

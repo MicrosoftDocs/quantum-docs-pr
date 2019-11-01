@@ -111,7 +111,7 @@ dotnet build [project_name].csproj
 
 ## Update IQ# for Jupyter notebooks
 
-1. Run the following command in your Jupyter Notebook:
+1. Run the following command from a cell in your Jupyter Notebook:
 ```
 %workspace reload
 ```

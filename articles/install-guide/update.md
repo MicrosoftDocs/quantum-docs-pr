@@ -109,7 +109,7 @@ dotnet build [project_name].csproj
     ```
 1. Run the following command from the location of your `.qs` files
     ```bash
-    python -c "import qsharp; qsharp.reload()
+    python -c "import qsharp; qsharp.reload()"
     ```
 
 1. You can now use the updated QDK version to run your existing quantum programs.

@@ -111,6 +111,11 @@ dotnet build [project_name].csproj
 
 ## Update IQ# for Jupyter notebooks
 
+1. Run the following command in your Jupyter Notebook:
+```
+%workspace reload
+```
+
 1. Update the `iqsharp` kernel
 
     ```bash

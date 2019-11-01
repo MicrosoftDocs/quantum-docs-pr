@@ -1,5 +1,5 @@
 ---
-title: Quantum simulators and classical drivers | Microsoft Docs 
+title: Quantum simulators and host applications | Microsoft Docs
 description: Describes how to drive quantum simulators with a classical computing .NET language, typically either C# or Q#.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com 
@@ -8,7 +8,7 @@ ms.topic: article
 uid: microsoft.quantum.machines
 ---
 
-# Classical Drivers and Machines
+# Quantum simulators and host applications
 
 ## What You'll Learn
 
@@ -64,7 +64,7 @@ All of them are defined in the `Microsoft.Quantum.Simulation.Simulators` namespa
   it allows advanced analysis of resources consumptions for the algorithm's entire call-graph.
 * A [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator), the `ToffoliSimulator` class.
 
-## Writing a Classical Driver Program
+## Writing a host application
 
 In [Writing a quantum program](xref:microsoft.quantum.write-program), we wrote a simple C# driver for
 our teleport algorithm. A C# driver has 4 main purposes:
@@ -125,7 +125,7 @@ There are some subtleties when passing arguments to a `Run` method:
     A `QArray` class has a constructor that can take any ordered collection
     (`IEnumerable<T>`) of appropriate objects.
 * The empty tuple, `()` in Q#, is represented by `QVoid.Instance` in C#.
-* Non-empty tuples are represented as .NET `ValueType` instances.
+* Non-empty tuples are represented as .NET `ValueTuple` instances.
 * Q# user-defined types are passed as their base type.
 * To pass an operation or a function to a `Run` method, you have to obtain an
     instance of the operation's or function's class, using the simulator's `Get<>` method.

@@ -1,62 +1,57 @@
 ---
 uid: microsoft.quantum.welcome
-title: Welcome to the Microsoft Quantum Development Kit
-description: Welcome to the Microsoft Quantum Development Kit preview. The development kit contains the tools you'll need to build your own quantum computing programs and experiments.
+title: Get started with the Quantum Development Kit (QDK)
+description: Learn how to get started with the QDK. 
 author: natke
 ms.author: nakersha
-ms.date: 08/23/2019
+ms.date: 10/23/2019
 ms.topic: overview
 ---
 
-# Welcome to the Microsoft Quantum Development Kit Preview
+# Get started with the Quantum Development Kit (QDK)
 
-Thank you for your interest in Microsoft Quantum Development Kit preview. The development kit contains the tools you'll need to build your own quantum computing programs and experiments. 
+Welcome to the Microsoft Quantum Development Kit!  Here, you will find all the tools you need to learn about quantum programming with Q#.  To guide you in learning quantum computing with Q#, here we provide a Getting Started Guide, a journey guide for both those who want to start coding quantum programs and those who are not yet ready to start coding, but want to learn more about Q# and quantum programming.
 
-To jump right in, go to [Getting Started with the Quantum Development Kit](xref:microsoft.quantum.install).  This shows you how to explore Q# through Jupyter Notebooks, an open source web application, without installing the Quantum Development Kit.  You'll then be guided through installing the Quantum Development Kit on Windows, Linux, or macOS machines so that you can write your own quantum programs.  With the Quantum Development Kit, you can choose which classical host (Python, C# or other .NET programming language) to use to invoke your Q# program. The development kit also offers extensions to Visual Studio and Visual Studio Code for a great developer experience.  Choose the development environment that's right for you!
+## Five questions about quantum computing
 
-Next, follow [Quickstart - your first quantum program](xref:microsoft.quantum.write-program) to write your first quantum program using your command line, Visual Studio or Visual Studio Code.  Learn about the structure of a Q# project and develop the quantum equivalent of "Hello, world!" - creating entanglement, or what is also known as a Bell State, in Q#.
+We begin with a series short articles that summarizes the _questions about quantum computing_. These short articles offer a quick overview of quantum computing for the new learner.
 
-To go further, the Quantum Development Kit provides many ways to learn how to develop a quantum program with Q#.  
-* Visit our [samples repository](https://github.com/Microsoft/Quantum) that showcases multiple examples on how to write quantum programs using Q#. Most of these samples are written using our open-source [quantum libraries](https://github.com/Microsoft/QuantumLibraries), including our [standard](xref:microsoft.quantum.libraries.standard.intro) and [chemistry](xref:microsoft.quantum.chemistry.concepts.intro) libraries. 
-* If you want to dive deeper into Q# programming, check out the [Quantum Katas](https://github.com/Microsoft/QuantumKatas) - a collection of self-paced programming exercises that introduce you to quantum computing via programming exercises in Q#.  Many of these katas are also available as Q# Notebooks.  
-* [Quantum computing concepts](xref:microsoft.quantum.concepts.intro) includes more in-depth topics such as the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.  See also the full list of documentation at the end of this article.
+[What is quantum computing?](xref:microsoft.quantum.overview.what)
 
-## Be a part of the Q# Open-Source Community
+[What can quantum computers do?](xref:microsoft.quantum.overview.computers)
 
-The Quantum Development Kit is an open-source development kit that empowers developers to make quantum computing more accessible to all so that we can solve some of the world's most pressing challenges.  Academic institutions who require open-source software will be able to deploy Q# for their quantum learning and development. Open-sourcing the development kit also empowers developers and domain experts an opportunity to contribute improvements and ideas via their code.
+[Why learn quantum computing?](xref:microsoft.quantum.overview.why)
 
-Your feedback, participation and contributions to the Quantum Development Kit is important.  To learn more about the Quantum Development Kit sources, provide feedback, and find out how you can participate in the decisions and contribute to this growing quantum development platform, see [Contributing to the Quantum Development Kit](xref:microsoft.quantum.contributing).
+[What is Q#?](xref:microsoft.quantum.overview.qsharp)
 
-If you'd like more general information about Microsoft's quantum computing initiative, see [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/).
+## How to learn quantum computing with Q#?
 
-## Microsoft Quantum Development Kit Components
+Q# and the Quantum Development Kit gives you the tools you need to develop programs for quantum computing that will solve our most challenging problems in computing. 
 
-The Quantum Development Kit preview provides a complete quantum program development and simulation environment that contains the following components.  To find the open-source GitHub source code repository for these components, see [Contributing to the Quantum Development Kit](xref:microsoft.quantum.contributing).
+For the fifth question:  "_How to learn quantum computing with Q#?_", we begin by providing these overviews:
 
-| Component | Function |
-| --------- | -------- |
-| Q# language and compiler | Q# is a domain-specific programming language used for expressing quantum algorithms. It is used for writing sub-programs that execute on an adjunct quantum processor under the control of a classical host program and computer. |
-| Q# library | The library contains operations and functions that support both the classical language control requirement and the Q# quantum algorithms. |
-| Local quantum machine simulator | A full state vector simulator optimized for accurate vector simulation and speed. |
-| Quantum computer trace simulator | The trace simulator does not simulate the quantum environment like the local quantum simulator. It is used to estimate the resources required to execute a quantum program and also allow faster debugging of the non-Q# control code. |
-| Resource Estimator | The resource estimator estimates the resources required to run a given instance of a Q# operation on a quantum computer. |
-| Visual Studio extension | This extension contains templates for Q# files and projects as well as syntax highlighting and IntelliSense support. |
-| Visual Studio Code extension | This extension contains syntax highlighting, as well as code snippets for Q# and IntelliSense support. |
-| `qsharp` for Python | The `qsharp` package for Python makes it easy to simulate Q# operations and functions from within Python. |
-|  IQ# | IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations. |
+* a Getting Started guide on how to build a [quantum random number generator](xref:microsoft.quantum.quickstarts.qrng) guides you on installing the QDK and writing your first Q# program along with a brief introduction to some quantum concepts. This guides you through a "Q# Hello World" style application, letting you build and run a quantum application in minutes.
 
-## Quantum Development Kit Documentation
+* a Getting Started guide on [quantum basics with Q#](xref:microsoft.quantum.write-program) guides you on writing a Q# program that demonstrates some of the foundational concepts of quantum programming. If you are not ready to start coding, you can still follow along without installing the QDK and get an overview of the Q# programming language and the first concepts of quantum computing.
 
-The current documentation includes the following topics.
+* a Getting Started guide, [Grover’s search](xref:microsoft.quantum.quickstarts.search), offers an example of a Q# program get an idea of the power of Q# for expressing the quantum algorithm in a way that abstracts the low level quantum operations.  This guides you in developing the program using a variety of programming environments (with a Python host or with .NET language host and with Visual Studio or Visual Studio Code).    
 
-* [Microsoft Quantum Development kit release notes](xref:microsoft.quantum.relnotes).
-* [Quantum computing concepts](xref:microsoft.quantum.concepts.intro) includes topics such as the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
-* [Getting Started with the Quantum Development Kit](xref:microsoft.quantum.install) describes how to quickly set up your quantum development environment from any platform (Windows 10, Linux, and Mac) using Visual Studio, Visual Studio Code or the command line.  
-* [Quickstart - your first quantum program](xref:microsoft.quantum.write-program) walks you through how to write an application that creates a quantum entanglment state in the Visual Studio development environment. You'll learn how to define a Q# operation, call the Q# operation using C#, and how to execute your quantum algorithm.
-* [Managing quantum machines and drivers](xref:microsoft.quantum.machines) describes how quantum algorithms are executed, what quantum machines are available, and how to write a non-Q# driver for the quantum program.
-* [Quantum development techniques](xref:microsoft.quantum.techniques.intro) specifies the core concepts used to create quantum programs in Q#. Topics include file structures, operations and functions, working with qubits, and some advanced topics.
-* [Q# standard libraries](xref:microsoft.quantum.libraries.standard.intro) describes the operations and functions that support both the classical language control requirement and the Q# quantum algorithms. Topics include control flow, data structures, error correction, testing, and debugging. 
-* [Q# language reference](xref:microsoft.quantum.language.intro) details the Q# language including the type model, expressions, statements, and compiler use.
-* [For more information](xref:microsoft.quantum.more-information) contains specially selected references to deep coverage of quantum computing topics.
-* [Quantum trace simulator reference](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators) contains reference material about trace simulator entities and exceptions.
-* [Q# library reference](xref:microsoft.quantum.standardlibsintro) contains reference information about library entities by namespace.
+*  a [video](https://www.microsoft.com/videoplayer/embed/RE2JOJf) to learn more about building quantum programs with the Q# libraries.  The QDK comes with Q# standard and numerics libraries that provide powerful computational abstractions that help you develop these solutions. We also provide the Quantum Chemistry Library, a Q# a library for modeling chemical processes at the quantum level.
+
+## Next steps
+
+The Getting Started guides and articles above are meant to guide both the coder and non-coder through an introduction to quantum computing and Q#.  To continue to learn how to program quantum computers with Q#:
+
+* [How to learn quantum computing with Q#](xref:microsoft.quantum.overview.learn) provides guidance for learning quantum computing concepts with Q#.   
+
+* Learn quantum programming with our [self-paced Quantum Katas](https://aka.ms/try-quantum-katas). This series of short training exercises teach you how to program in Q# and learn quantum computing. 
+
+* Explore our [Q# samples](https://docs.microsoft.com/samples/browse/?languages=qsharp) and discover the problems you can solve with quantum computing.
+
+* Develop on your local machine with the host programming language and development environment of choice:
+  * Develop with [Python](xref:microsoft.quantum.install#develop-with-python)
+  * Develop with [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
+  * Develop with [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
+  * Develop with [Jupyter Notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+
+* Become part of the Microsoft Quantum community by contributing to the [QDK](xref:microsoft.quantum.contributing) open source project

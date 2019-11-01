@@ -26,7 +26,9 @@ landingContent:
             url: welcome.md
       - linkListType: get-started
         links:
-          - text: Learn quantum concepts with Q#
+          - text: Build a quantum random number generator
+            url: quickstarts/qrng.md
+          - text: Quantum basics with Q#
             url: quickstart.md            
           - text: Learn about impactful quantum programs with Q#
             url: quickstarts/search.md

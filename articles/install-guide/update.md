@@ -31,7 +31,7 @@ dotnet --version
  1. Select Tools > Command Line > Developer Command Prompt
  1. For each project in the solution, run the following command:
  ```bash
- dotnet add Path\To\[project_name].csproj package Microsoft.Quantum.Development.Kit`
+ dotnet add [path\to\project_name].csproj package Microsoft.Quantum.Development.Kit`
  ```
  Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
 

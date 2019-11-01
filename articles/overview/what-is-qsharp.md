@@ -37,7 +37,7 @@ Q# provides you with an increasing number of libraries and user-defined types th
 
 ## Use Q# to estimate quantum resources
 
-You can simulate the execution of your Q# program using the full state quantum simulator that provided with the Quantum Development Kit (QDK).  The QDK also provides resource estimators that give you insights on the performace of Q# programs that are too big to be run on a simulator.  This is highly valuable for algorithm designers, because they can tune their programs to use fewer resources (e.g. fewer number of qubits running for fewer numbers of operations), to be runnable when on earlier smaller scale quantum hardware.   
+You can simulate the execution of your Q# program using the full state quantum simulator that is provided with the Quantum Development Kit (QDK).  The QDK also provides resource estimators that give you insights on the performance of Q# programs that are too big to be run on a simulator.  This is highly valuable for algorithm designers, because they can tune their programs to use fewer resources (e.g. fewer number of qubits running for fewer numbers of operations), to run on earlier smaller scale quantum hardware.   
 
 ## Use Q# to validate hardware performance
 

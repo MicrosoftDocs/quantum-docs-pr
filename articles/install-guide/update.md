@@ -88,7 +88,7 @@ The update steps depend on your development environment. Choose your environment
 ## C# on Windows, using Visual Studio
 
  > [!NOTE]
- > If you are updating to .NET Core 3.0, you will need to go through these additional update instructions:
+ > If you are updating to .NET Core SDK 3.0, you will need to go through these additional update instructions:
  > 1. Run Build > Clean Solution 
  > 2. Update the Q# Visual Studio extension using the instructions below
  > 3. Update the target framework in your .csproj file to netcoreapp3.0, save and close your solution

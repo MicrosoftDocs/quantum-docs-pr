@@ -21,7 +21,7 @@ This article assumes that you already have the QDK installed. If you are install
 ```bash
 dotnet --version
 ```
- Verify the output is 3.0.100 or higher, then follow the instructions below for your setup.
+ Verify the output is 3.0.100 or higher, then follow the instructions below depending on your setup.
 
 ### In Visual Studio
  

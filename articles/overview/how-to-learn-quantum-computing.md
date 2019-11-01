@@ -14,7 +14,7 @@ Get guidance for learning about quantum computing and writing your first program
 
 ## Getting Started overview
 
-[Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome) provides a high-level overview of quantum computing with Q#, including tutorials for writing your first Q# program, including getting started guides and and introduction to the Q# quantum libraries for developing quantum programs.
+[Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome) provides a high-level overview of quantum computing with Q#, including tutorials for writing your first Q# program, getting started guides and and introduction to the Q# quantum libraries for developing quantum programs.
 
 ## Learning the basics: what do you need to know?
 

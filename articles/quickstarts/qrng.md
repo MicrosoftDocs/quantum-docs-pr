@@ -65,4 +65,4 @@ We can use this representation to visualize what the code is doing:
 
 <img src="./Measurement2.svg" width="450">
 
-Since the outcome of the measurement is completely random, we have obtained a random bit. We can call this function several times to create integers. For example, if we call the function three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).
+Since the outcome of the measurement is completely random, we have obtained a random bit. We can call this operation several times to create integers. For example, if we call the operation three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).

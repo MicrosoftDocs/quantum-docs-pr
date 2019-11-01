@@ -8,7 +8,7 @@ ms.topic: article
 uid: microsoft.quantum.overview.learn
 ---
 
-# How to learn quantum computing
+# How to learn quantum computing?
 
 Get guidance for learning about quantum computing and writing your first programs. This isn't an exhaustive guide, but rather a good place to start.
 

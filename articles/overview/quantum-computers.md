@@ -8,7 +8,7 @@ ms.topic: article
 uid: microsoft.quantum.overview.computers
 ---
 
-# What can we do with quantum computers?
+# What can a quantum computer do?
 
 What we can do with a quantum computer that can't be done with a classical one?
 

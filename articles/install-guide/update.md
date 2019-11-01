@@ -108,9 +108,9 @@ dotnet build [project_name].csproj
     ...
     ```
 1. Run the following command from the location of your `.qs` files
-```bash
-python -c "import qsharp; qsharp.reload()
-```
+    ```bash
+    python -c "import qsharp; qsharp.reload()
+    ```
 
 1. You can now use the updated QDK version to run your existing quantum programs.
 
@@ -136,9 +136,9 @@ python -c "import qsharp; qsharp.reload()
     Jupyter Core: 1.2.20112.0
     ```
 1. Run the following command from a cell in your Jupyter Notebook:
-```
-%workspace reload
-```
+    ```
+    %workspace reload
+    ```
 
 1. You can now open an existing Jupyter notebook and run it with the updated QDK.
 

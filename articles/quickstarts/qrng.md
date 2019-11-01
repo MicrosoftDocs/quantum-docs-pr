@@ -20,8 +20,6 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 
 ## Write a Q# operation
 
-As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition. When measured, a qubit can only be either 0 or 1, however during execution, the state of the qubit represents the probability of reading either a 0 or a 1 during measurement. This probabilistic state is known as superposition. We can use this probability to generate random numbers.
-
 ### Q# operation code
 Let's see how we can implement the concepts showed above to create a quantum random number generator in Q#:
 
@@ -33,16 +31,18 @@ Let's see how we can implement the concepts showed above to create a quantum ran
 
     operation QuantumRandomNumberGenerator() : Result {
         using(q = Qubit())  { // Allocate a qubit.
-            H(q);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
-            let r = M(q);     // Measure the qubit value.
-            Reset(q);
-            return r;
+                H(q);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
+                let r = M(q);     // Measure the qubit value.
+                Reset(q);
+                return r;
             }
         }
     }
     ```
 
-Here we introduce the `Qubit` datatype, native to Q#. We can only allocate a `Qubit` with a `using` statement. When it gets allocated a qubit is always in the `Zero`  state. 
+As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition. When measured, a qubit can only be either 0 or 1, however during execution, the state of the qubit represents the probability of reading either a 0 or a 1 during measurement. This probabilistic state is known as superposition. We can use this probability to generate random numbers.
+
+In our Q# operation, we introduce the `Qubit` datatype, native to Q#. We can only allocate a `Qubit` with a `using` statement. When it gets allocated a qubit is always in the `Zero`  state. 
 
 Using the `H` operation, we are able to put our `Qubit` in superposition. To measure a qubit and read its value you use the `M` intrinsic operation.
 

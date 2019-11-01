@@ -21,7 +21,6 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 ## Write a Q# operation
 
 ### Q# operation code
-Let's see how we can implement the concepts showed above to create a quantum random number generator in Q#:
 
 1. Replace the contents of the Operation.qs file with the following code:
 

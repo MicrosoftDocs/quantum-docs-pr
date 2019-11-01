@@ -27,6 +27,8 @@ You can use the Katas for learning in your environment of choice:
 
 ## What can I learn with the Quantum Katas?
 
+Here is a summary of the main topics covered in the Quantum Katas. We recommend you to follow this learning path in the beginning to make sure you have a solid grasp on the fundamental concepts of quantum computing. Of course, you can skip the topics you're comfortable with, such as complex arithmetic, and learn the algorithms in any order you want.
+
 ### Introduction to quantum computing concepts
 
 * [Complex arithmetic](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ComplexArithmetic)

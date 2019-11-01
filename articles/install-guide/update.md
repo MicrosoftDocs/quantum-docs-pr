@@ -107,15 +107,14 @@ dotnet build [project_name].csproj
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
+1. Run the following command from the location of your `.qs` files
+```bash
+python -c "import qsharp; qsharp.reload()
+```
 
 1. You can now use the updated QDK version to run your existing quantum programs.
 
 ## Update IQ# for Jupyter notebooks
-
-1. Run the following command from a cell in your Jupyter Notebook:
-```
-%workspace reload
-```
 
 1. Update the `iqsharp` kernel
 
@@ -136,6 +135,10 @@ dotnet build [project_name].csproj
     iqsharp: 0.9.1909.3002
     Jupyter Core: 1.1.18837.0
     ```
+1. Run the following command from a cell in your Jupyter Notebook:
+```
+%workspace reload
+```
 
 1. You can now open an existing Jupyter notebook and run it with the updated QDK.
 

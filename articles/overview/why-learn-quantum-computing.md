@@ -1,5 +1,5 @@
 ---
-title: Why you should learn quantum computing?
+title: Why learn quantum computing?
 description: 
 author: natke
 ms.author:  nakersha
@@ -8,7 +8,7 @@ ms.topic: article
 uid: microsoft.quantum.overview.why
 ---
 
-# Why should you learn Quantum Computing?
+# Why learn quantum computing?
 
 Quantum computers are cool but why should you learn quantum computing? In this section, we are going to give you some reasons why learning quantum computing today is a great idea.
 
@@ -22,8 +22,13 @@ To achieve efficient quantum computing is arguably one of the greatest challenge
 
 ## Get inspired by the quantum world
 
-Even if we are still far from achieving fault-tolerant quantum computers, we are already observing some impactful consequences of quantum computing in classical computer science. In the last few years, many new algorithms were developed based on the techniques used in quantum computing. These are the so-called quantum inspired algorithms and can run on classical computers. Some examples of these algorithms are recommendation systems or genetic algorithms that perform faster than any previous classical method. By learning quantum computing you will also discover a new way of thinking about computation that will shift your perspective on classical programming! 
+Even if we are still far from achieving fault-tolerant quantum computers, we are already observing some impactful consequences of quantum computing in classical computer science. In the last few years, many new algorithms were developed based on the techniques used in quantum computing. These are the so-called quantum inspired algorithms and can run on classical computers. Some examples of these algorithms are recommendation systems or genetic algorithms that perform faster than any previous classical method. By learning quantum computing you will also discover a new way of thinking about computation that will shift your perspective on classical programming!
 
 ## Quantum computing is fun!
 
-In addition to the real-world impact discussed above, we believe quantum computing can be fun. Learning quantum computing is a rewarding experience where you will come away with cutting-edge knowledge and the skills to help build the technology of the future. Check the section: [How to learn quantum computing?](xref:microsoft.quantum.overview.learn) to start writing your first quantum programs!  
+In addition to the real-world impact discussed above, we believe quantum computing is fun. Learning quantum computing is a rewarding experience where you will come away with cutting-edge knowledge and the skills to help build the technology of the future.
+
+## Next steps
+
+* [What is Q#?](xref:microsoft.quantum.overview.qsharp)
+* [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)

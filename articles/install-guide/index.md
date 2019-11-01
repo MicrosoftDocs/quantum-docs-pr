@@ -21,11 +21,13 @@ Depending on your chosen development environment, there are different installati
 
 ## Develop with Python
 
+The qsharp package for Python makes it easy to simulate Q# operations and functions from within Python. IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python that provides the core functionality for compiling and simulating Q# operations.
+
 1. Pre-requisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - The [PIP](https://pip.pypa.io/en/stable/installing) Python package manager
-    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
 1. Install the `iqsharp` package
 
@@ -82,11 +84,16 @@ Depending on your chosen development environment, there are different installati
 
 ## Develop with Jupyter notebooks
 
+A favorite of academic settings, scientific labs, and online-based collaborative programming, Jupyter Notebooks offer in-place code execution—now including Q# code—along with instructions, notes, and other content.  Here's what you need to do to start creating your own Q# notebooks.
+
+IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
+
+
 1. Pre-requisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
 1. Install the `iqsharp` package
 
@@ -115,11 +122,22 @@ Depending on your chosen development environment, there are different installati
 
     - Run this cell of the notebook:
 
-        ![Jupyter notebook cell](~/media/install-guide-jupyter.png)
+        ![Jupyter notebook cell with Q# code](~/media/install-guide-jupyter.png)
 
         You should see `SayHello` in the output of the cell. When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
 
+
+    - In a new cell, simulate the execution in a quantum computer of the operation you just created by using the `%simulate` magic:
+
+        ![Jupyter notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
+
+        You should see the message printed on the screen along with the result of the operation you invoked (in this case, empty).
+
+
 ## Develop with C# on Windows, using Visual Studio
+
+Visual Studio offers a rich environment for developing Q# programs, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# Visual Studio extension contains templates for Q# files and projects as well as syntax highlighting and IntelliSense support.
+
 
 1. Pre-requisites
 
@@ -153,12 +171,16 @@ Depending on your chosen development environment, there are different installati
 > [!NOTE]
 > * If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its subfolders.  
 
-## Develop with C#, using VS Code
+## Develop with C#, using Visual Studio Code
+
+Visual Studio Code (VS Code) offers a rich environment for developing Q# programs across many multiple computer environments, including Windows, Linux and Mac, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# VS Code extension contains syntax highlighting, and Q# code snippets.
+
+Visual Studio Code (VS Code) offers a rich environment for developing Q# programs across many multiple computer environments, including Windows, Linux and Mac, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# VS Code extension contains syntax highlighting, and Q# code snippets.
 
 1. Pre-requisites
 
    - [VS Code](https://code.visualstudio.com/download)
-   - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+   - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
 1. Install the Quantum VS Code extension
 
@@ -190,9 +212,11 @@ Depending on your chosen development environment, there are different installati
 
 ## Develop with C#, using the `dotnet` command-line tool
 
+Of course, you can also build and run Q# programs from the command line by simply installing the .NET Core SDK and the QDK project templates. 
+
 1. Pre-requisites
 
-    - [.NET Core SDK 2.1 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
 1. Install the Quantum project templates for .NET
 

@@ -13,7 +13,7 @@ ms.topic: article
 # ms.technology: tech-name-from-white-list
 ---
 
-# What is Q#? #
+# Q# program overview
 
 Q# is a scalable, multi-paradigm, domain-specific programming language for quantum computing. Q# is a quantum programming language in that it can be used to describe how instructions are executed on quantum machines. The machines that can be targeted range from simulators to actual quantum hardware. Q# is scalable: it can be used to write simple demonstration programs like teleport that run on a few qubits, but also supports writing large, sophisticated programs such as simulations of complex molecules that will require large machines with millions of qubits. Even though large physical machines are still in the future, Q# allows a programmer to program complex quantum algorithms now. What is more, Q# supports various tasks such as debugging, profiling, resource estimation, and certain special-purpose simulations in a scalable way. 
 

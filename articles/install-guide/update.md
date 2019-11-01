@@ -152,8 +152,6 @@ dotnet build [project_name].csproj
     > [!NOTE]
     > The project templates are updated with the extension. The updated templates apply to newly created projects only. The code for your existing projects is not updated when the extension is updated.
 
-1. You can now run your application with the latest QDK.
-
 ## Update VS Code QDK extension
 
 1. Update the Quantum VS Code extension
@@ -168,8 +166,6 @@ dotnet build [project_name].csproj
    - Go to **View** -> **Command Palette**
    - Select **Q#: Install project templates**
 
-1. You can now run your application with the latest QDK.
-
 ## C#, using the `dotnet` command-line tool
 
 1. Update the Quantum project templates for .NET
@@ -177,8 +173,6 @@ dotnet build [project_name].csproj
     ```bash
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
-    
-1. You can now run your application with the latest QDK.
 
 ## What's next?
 

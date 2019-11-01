@@ -28,7 +28,7 @@ We begin with a series short articles that summarizes the _questions about quant
 
 Q# and the Quantum Development Kit gives you the tools you need to develop programs for quantum computing that will solve our most challenging problems in computing. 
 
-For the fifth question:  "_How to learn quantum computing with Q#?_", we begin by providing three overviews:
+For the fifth question:  "_How to learn quantum computing with Q#?_", we begin by providing these overviews:
 
 * a Getting Started guide on how to build a [quantum random number generator](xref:microsoft.quantum.quickstarts.qrng) guides you on installing the QDK and writing your first Q# program along with a brief introduction to some quantum concepts. This guides you through a "Q# Hello World" style application, letting you build and run a quantum application in minutes.
 

@@ -87,6 +87,14 @@ The update steps depend on your development environment. Choose your environment
 
 ## C# on Windows, using Visual Studio
 
+ > [!NOTE]
+ > If you are updating to .NET Core 3.0, you will need to go through these additional update instructions:
+ > 1. Run Build > Clean Solution 
+ > 2. Go through the instructions below to update the Q# Visual Studio extension
+ > 3. Update the target framework in your .csproj file to netcoreapp3.0, save and close your solution
+ > 4. Download and install [.NET Core SDK 3.0](https://docs.microsoft.com/en-us/quantum/relnotes/?view=qsharp-preview)
+ > 5. Re-open your solution and run Build > Rebuild Solution
+
 1. Update the Q# Visual Studio extension
 
     - Visual Studio prompts you to accept updates to the [Quantum Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)

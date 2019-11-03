@@ -25,7 +25,7 @@ One of the fundamental building blocks of Q# is the `Qubit` type, which cannot b
 
 Q# also includes classical logic features like conditionals or loops with some subtleties to make sure that all the quantum rules are being respected. For example, quantum operations need to be reversible. This enforces some constraints on the way loops are executed.
 
-Q# programs are often paired with a host program written in C# or Python, which can provide convenient organization of classical and quantum code. In addition to supporting .NET languages such as C# and Python, the QDK provides Jupyter Notebook support with the IQ# Jupyter kernel.
+Q# programs are often paired with a host program written in C# or Python, which can provide convenient organization of classical and quantum code. In addition to supporting languages such as C# and Python, the QDK provides Jupyter Notebook support with the IQ# Jupyter kernel.
 
 ## Use Q# to learn quantum computing
 

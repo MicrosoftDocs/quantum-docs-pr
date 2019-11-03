@@ -48,10 +48,10 @@ The Getting Started guides and articles above are meant to guide both the coder 
 
 * Explore our [Q# samples](https://docs.microsoft.com/samples/browse/?languages=qsharp) and discover the problems you can solve with quantum computing.
 
-* Develop on your local machine with the host programming language and development environment of choice:
+* Develop on a local machine with the host programming language and development environment of your choice:
   * Develop with [Python](xref:microsoft.quantum.install#develop-with-python)
   * Develop with [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
   * Develop with [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
   * Develop with [Jupyter Notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
 
-* Become part of the Microsoft Quantum community by contributing to the [QDK](xref:microsoft.quantum.contributing) open source project
+* Become part of the Microsoft Quantum community by contributing to the [QDK](xref:microsoft.quantum.contributing) open source project.

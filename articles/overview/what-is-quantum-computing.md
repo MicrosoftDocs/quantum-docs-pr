@@ -14,7 +14,7 @@ There are some problems so difficult, so incredibly vast, that even if every sup
 
 Quantum computing harnesses the unique behavior of quantum physics to provide a new and very powerful model of computing. The theory of quantum physics posits that matter, at a quantum level can be in a superposition of multiple classical states. And those many states interfere with each other like waves in a tide pool.  The state of matter after a measurement is assumed to "collapse" into one of the classical states. Thereafter, repeating the same measurement will produce the same classical result.  Quantum entanglement occurs when particles interact in ways such that the quantum state of each cannot be completely described independently of the others, even if the particles are physically far apart.  
 
-Quantum computing stores information in quantum states of matter and use its quantum nature of superposition and entanglement to realize quantum operations that compute on that information, thereby harnessing and learning to program quantum interference.
+Quantum computing stores information in quantum states of matter and uses its quantum nature of superposition and entanglement to realize quantum operations that compute on that information, thereby harnessing and learning to program quantum interference.
 
 Quantum computing might sound daunting, but with the right resources you can start building quantum applications today.
 
@@ -60,6 +60,6 @@ The open source Quantum Development Kit (QDK) has been been introduced to make q
 
 ## Next steps
 
-* [What can I do with a quantum computer?](xref:microsoft.quantum.overview.computers)
+* [What can quantum computers do?](xref:microsoft.quantum.overview.computers)
 * [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)
 * Read more about [Quantum computing concepts](xref:microsoft.quantum.concepts.intro)

@@ -83,7 +83,7 @@ dotnet build [project_name].csproj
     You should see the following output:
 
     ```bash
-    iqsharp: 0.10.1910.3107
+    iqsharp: 0.10.1911.307
     Jupyter Core: 1.2.20112.0
     ```
 
@@ -103,7 +103,7 @@ dotnet build [project_name].csproj
 
     ```bash
     Name: qsharp
-    Version: 0.10.1910.3107
+    Version: 0.10.1911.307
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -132,7 +132,7 @@ dotnet build [project_name].csproj
     You should see the following output:
 
     ```bash
-    iqsharp: 0.10.1910.3107
+    iqsharp: 0.10.1911.307
     Jupyter Core: 1.2.20112.0
     ```
 1. Run the following command from a cell in your Jupyter Notebook:

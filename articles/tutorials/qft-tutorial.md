@@ -318,10 +318,15 @@ After:
 
 When called on the full-state simulator, `DumpMachine()` provides these mutliple representations of the quantum state's wavefunction. 
 The possible states of an $n$-qubit system can be represented by $2^n$ computational basis states, each with a corresponding complex coefficient (simply an amplitude and a phase).
+The computational basis states correspond to all the possible binary strings of length $n$---that is, all the possible combinations of qubit states $\ket{0}$ and $\ket{1}$, where each binary digit corresponds to an individual qubit.
 
 The first row provides a comment with the IDs of the corresponding qubits in their significant order.
-The rest of the rows describe the probability amplitude of measuring the basis state vector $\ket{n}$ in both Cartesian and polar formats. In detail for the first row of our input state $\ket{000}$:
+Qubit `2` being the "most significant" simply means that in the binary representation of basis state vector $\ket{i}$, the state of qubit `2` corresponds to the left-most digit. 
+For example, $\ket{6} = \ket{110}$ comprises qubits `2` and `1` both in $\ket{1}$ and qubit `0` in $\ket{0}$.
 
+
+The rest of the rows describe the probability amplitude of measuring the basis state vector $\ket{i}$ in both Cartesian and polar formats.
+In detail for the first row of our input state $\ket{000}$:
 * **`|0>:`** this row corresponds to the `0` computational basis state (given that our initial state post-allocation was $\ket{000}$, we would expect this to be the only state with probability amplitude at this point).
 * **`1.000000 +  0.000000 i`**: the probability amplitude in Cartesian format.
 * **` == `**: the `equal` sign seperates both equivalent representations.
@@ -342,7 +347,7 @@ $$
 to 
 
 $$
-\ket{\psi}_{final} = \frac{1}{\sqrt{2^n}}\sum_{j=0}^{2^n-1} \ket{j},
+\ket{\psi}_{final} = \frac{1}{\sqrt{2^n}} \sum_{j=0}^{2^n-1} \ket{j},
 $$
 
 which is precisely the behavior of the 3-qubit Fourier transform. 
@@ -350,7 +355,7 @@ If you are curious about how other input states are affected, we encourage you t
 
 ## Adding Measurements
 
-Unfortunately though, the fundamentals of quantum mechanics tell us that a real quantum system cannot have such a `DumpMachine` function. 
+Unfortunately though, a cornerstone of quantum mechanics tells us that a real quantum system cannot have such a `DumpMachine` function. 
 Instead, we're forced to extract information through measurements, which in general not only fail to provide us the full quantum state, but can also drastically alter the system itself.
 There are many sorts of quantum measurements, but we will focus on the most basic: projective measurements on single qubits.
 Upon measurement in a given basis (e.g. the computational basis $\{\ket{0},\ \ket{1}\}$), the qubit state is projected onto whichever basis state was measured---hence destroying any superposition between the two.
@@ -363,59 +368,52 @@ First, we modify our `Perform3QubitQFT` operation to return an array of measurem
     operation Perform3QubitQFT() : Result[] {
 ```
 
-#### Instantiate `Result[]` array
+#### Define and initialize `Result[]` array
 
-Before even allocating qubits then, we instantiate this length-3 array (one `Result` for each qubit): 
+Before even allocating qubits then, we declare and bind this length-3 array (one `Result` for each qubit): 
 
 ```qsharp
     operation Perform3QubitQFT() : Result[] {
 
-        mutable r = new Result[3];
+        mutable resultArray = new Result[3];
 
         using (qs = Qubit[3]) {
 ```
 
-The GET WORD `mutable` indicates .... (compare to `set` and `let`)
+The `mutable` keyword prefacing `resultArray` allows the variable to be rebound later in the code---for example, when adding our measurement results.
 
-#### Perform measurements and add results to array
+#### Perform measurements in a `for` loop and add results to array
 
-After the Fourier transorm operations inside the `using` block, we then perform 
-
-
-
-
-
-
-
+After the Fourier transorm operations inside the `using` block, insert the following code:
 
 ```qsharp
-    operation Perform3QubitQFT() : Result[] {
-
-        mutable r = new Result[3];
-
-        using (qs = Qubit[3]) {
-
-            // QFT operations
-
             for(i in IndexRange(qs)) {
-            // other languages: set r[i] <- M(qs[i]);
-            set r w/= i <- M(qs[i]);
+				set resultArray w/= i <- M(qs[i]);
             }
-            ResetAll(qs);
-        }
-        return r;
-    }
 ```
+The [`IndexRange`](xref:microsoft.quantum.arrays.indexrange) function called on an array (e.g. our array of qubits, `qs`) returns a range over the indices of the array. 
+Here, we use it in our `for` loop to sequentially measure each qubit using the `M(qs[i])` statement.
+Each measured `Result` type (either `Zero` or `One`) is then added to the corresponding index position in `resultArray` with an update-and-reassign statement.
 
+> [!NOTE]
+> The syntax of this statement is unique to Q#, but corresponds to the similar `set r[i] <- M(qs[i]);` seen in other languages.
 
+The keyword `set` is always used to reassign variables bound using `mutable`.
 
+#### Return `resultArray`
 
+With all three qubits measured and the results added to `resultArray`, we are safe to reset and de-allocate the qubits as before.
+After the `using` block's close, insert
 
+```qsharp
+        return resultArray;
+```
+to ultimately return the output of our operation. 
 
+### Understanding the effects of measurement
 
-
-
-
+Let's change the placement of our `DumpMachine` functions to output the state before and after the measurements.
+The final operation code should look like: 
 
 ```qsharp
     operation Perform3QubitQFT() : Result[] {
@@ -439,24 +437,104 @@ After the Fourier transorm operations inside the `using` block, we then perform
 
             SWAP(qs[2], qs[0]);
 
+            Message("Before measurement: ");
+            DumpMachine();
+
             for(i in IndexRange(qs)) {
-            // other languages: set r[i] <- M(qs[i]);
-            set r w/= i <- M(qs[i]);
+                set r w/= i <- M(qs[i]);
             }
 
-            ResetAll(qs);
+            Message("After measurement: ");
+            DumpMachine();
 
+            ResetAll(qs);
         }
         return r;
     }
+}
 ```
 
+Additionally, update your host file to process the returned array:
 
+#### [Python](#tab/tabid-python)
+```python
+import qsharp
+from Quantum.OperationsQFT import Perform3QubitQFT
 
+measurementResult = Perform3QubitQFT.simulate()
+print("\n")
+print("Measured post-QFT state: [qubit0, qubit1, qubit2]")
+print(measurementResult)
 
-In the computational basis, the returns will be either `Result.Zero` or `Result.One`.
+# reversing order to show corresponding basis state in binary form
+binaryCompBasisState = ""
+for i in measurementResult:
+    binaryCompBasisState = str(i) + binaryCompBasisState
+print("Corresponding basis state in binary:")
+print("|" + binaryCompBasisState + ">")
+```
 
+#### [C#](#tab/tabid-csharp)
+```csharp
+INSERT CODE
+```
+***
 
+Run the file, and your output should look similar to the following:
+
+```Output
+Before measurement: 
+# wave function for qubits with ids (least to most significant): 0;1;2
+|0>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:	 0.353553 +  0.000000 i	 == 	***                  [ 0.125000 ]     --- [  0.00000 rad ]
+After measurement: 
+# wave function for qubits with ids (least to most significant): 0;1;2
+|0>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|1>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|2>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|3>:	 1.000000 +  0.000000 i	 == 	******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|4>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|5>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|6>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|7>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+
+Post-QFT measurement results [qubit0, qubit1, qubit2]: 
+[1, 1, 0]
+Corresponding basis state in binary:
+|011>
+```
+
+This output illustrates a few different things:
+1. Comparing the returned result to the pre-measurement `DumpMachine`, it clearly does _not_ illustrate the post-QFT superposition over basis states.
+	A measurement only returns a single basis state, with a probability determined by the amplitude of that state in the system's wavefunction.
+2. From the post-measurement `DumpMachine`, we see that measurement _changes_ the state itself, projecting it from the initial superposition over basis states to the single basis state that corresponds to the measured value.
+
+If we were to repeat this operation many times, we would see the result statistics begin to illustrate the equally weighted superposition of the post-QFT state that give rise to a random result on each shot.
+_However_, besides being inefficient and still imperfect, this would nevertheless only reproduce the relative amplitudes of the basis states, not the relative phases between them.
+The latter is not an issue in this example, but we would see relative phases appear if given a more complex input to the QFT than $\ket{000}$.
+
+#### Partial measurements 
+To explore how measuring only some qubits of the register can affect the system's state, try adding the following inside the `for` loop, after the measurement line:
+```qsharp
+                let iString = IntAsString(i);
+                Message("After measurement of qubit: ");
+                Message(iString);
+                DumpMachine();
+```
+
+Note that to access the `IntAsString` function you will have to add 
+```qsharp
+    open Microsoft.Quantum.Convert;
+```
+with the rest of the namespace `open` statements.
+
+In the resulting output, you will see the gradual projection into subspaces as each qubit is measured.
 
 
 ## Next steps

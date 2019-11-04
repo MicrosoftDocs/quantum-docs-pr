@@ -224,11 +224,11 @@ The host file is constructed as follows:
 	This allows Q# namespaces (e.g. the `Quantum.Operations` defined above) to appear as Python modules, from which we can import Q# operations.
 2. Then, import the Q# operations which we will be directly invoking---that is, we need only import the entry point into a Q# program.
 	We do _not_ need to import operations like `H` and `R1`, which are called by other Q# operations but never by the classical host.
-3. In simulating the Q# operations or functions, we simply use the form `<Q# callable>.simulate(<args>)` to run them on the `QuantumSimulator()` target machine. 
+3. In simulating the Q# operations or functions, we simply use the form `<Q#callable>.simulate(<args>)` to run them on the `QuantumSimulator()` target machine. 
 	For now, our operation is defined to take no arguments.
 
 > [!NOTE]
-> If we wanted to call the operation on a different machine, for example the `ResourceEstimator()`, we would simply use `<Q# function>.estimate_resources(<args>)`.
+> If we wanted to call the operation on a different machine, for example the `ResourceEstimator()`, we would simply use `<Q#function>.estimate_resources(<args>)`.
 > In general, Q# operations are agnostic to the machines on which they're run, but some features such as `DumpMachine` may behave differently.
 
 4. Upon performing the simulation, the operation call will return values as defined in `Operations.qs`.

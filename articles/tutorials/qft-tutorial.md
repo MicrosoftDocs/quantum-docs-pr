@@ -29,7 +29,7 @@ Note that this low-level view of quantum information processing is often desribe
 
 > [!div class="checklist"]
 > * Define quantum operations in Q#
-> * Setup the classical host program to call and simulate Q# operations
+> * Set up the classical host program to call and simulate Q# operations
 > * Simulate a quantum circuit from qubit allocation to measurement output
 > * Observe the full quantum system's simulated wavefunction at various points in our circuit
 
@@ -208,7 +208,7 @@ namespace Quantum.Operations {
 
 With the Q# file and operation complete, it is ready to be called and simulated by the classical host.
 
-## Setup the classical host
+## Set Up the classical host
 
 Having defined our Q# operation in a `.qs` file, we now write the classical host file to call that operation and process any returned classical data (for now, there isn't anything to process---recall that our operation defined above returns `Unit`).
 When we later modify the Q# operation to return an array of measurement results (`Result[]`), we will update the host file correspondingly.

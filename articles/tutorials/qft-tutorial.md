@@ -99,13 +99,13 @@ With `using`, the qubits are automatically allocated in the $\ket{0}$ state. We 
 Next, we apply the gates which comprise the operation itself (see the circuit diagram and explanation for the three-qubit example [here](https://en.wikipedia.org/wiki/Quantum_Fourier_transform#Example).
 Q# already contains many basic quantum gates as operations in the [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) namespace, and these are no exception. 
 To apply an operation to a specific qubit from a register (i.e. a single `Qubit()` from an array `Qubit[]`) we use standard index notation.
-So, applying the [`H`](microsoft.quantum.intrinsic.h) (Hadamard) to the first qubit of our register `qs` takes the form:
+So, applying the [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) to the first qubit of our register `qs` takes the form:
 
 ```qsharp
             H(qs[0]);
 ```
 
-Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled [`R1`](microsoft.quantum.intrinsic.r1) rotations.
+Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled [`R1`](xref:microsoft.quantum.intrinsic.r1) rotations.
 An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{i\theta}$ to the $\ket{1}$ component.
 
 
@@ -125,7 +125,7 @@ So, we call the `R1` gates acting on the first qubit (and controlled by the seco
             Controlled R1([qs[2]], (PI()/4.0, qs[0]));
 ```
 
-Note that we use the [`PI()`](microsoft.quantum.math.pi) function from the [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) namespace to define the rotations in terms of pi radians.
+Note that we use the [`PI()`](xref:microsoft.quantum.math.pi) function from the [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) namespace to define the rotations in terms of pi radians.
 Additionally, we divide by a `Double` (e.g. `2.0`) because dividing by an integer `2` would throw a type error. 
 
 > [!TIP]
@@ -143,7 +143,7 @@ After applying the relevant Hadamards and controlled rotations to the second and
             H(qs[2]);
 ```
 
-we need only apply a [`SWAP`](microsoft.quantum.intrinsic.swap) gate to complete the circuit:
+we need only apply a [`SWAP`](xref:microsoft.quantum.intrinsic.swap) gate to complete the circuit:
 
 ```qsharp
             SWAP(qs[2], qs[0]);
@@ -153,7 +153,7 @@ This is necessary because the nature of the quantum Fourier transform outputs th
 
 
 #### De-allocate qubits
-We then call [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) again to see the post-operation state, and finally apply [`ResetAll`](microsoft.quantum.intrinsic.resetall) to the qubit register to reset our qubits to $\ket{0}$ before completing the operation:
+We then call [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) again to see the post-operation state, and finally apply [`ResetAll`](xref:microsoft.quantum.intrinsic.resetall) to the qubit register to reset our qubits to $\ket{0}$ before completing the operation:
 
 ```qsharp
             Message("After:");

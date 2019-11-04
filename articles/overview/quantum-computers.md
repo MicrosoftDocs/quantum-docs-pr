@@ -10,7 +10,7 @@ uid: microsoft.quantum.overview.computers
 
 # What can a quantum computer do?
 
-What we can do with a quantum computer that can't be done with a classical one?
+What can we do with a quantum computer that can't be done with a classical one?
 
 To solve some of the world's most challenging problems, where finding a solution would take current computers billions of years, a quantum computer could do so in days, hours, or even minutes.
 

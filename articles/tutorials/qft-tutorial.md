@@ -341,17 +341,17 @@ Both the magnitude and the phase are displayed with a graphical representation. 
 So, the printed output is illustrating that our programmed gates transformed our state from
 
 $$
-\ket{\psi}_{initial} = \ket{000}
+\ket{\psi}\_{initial} = \ket{000}
 $$
 
 to 
 
 $$
-\ket{\psi}_{final} = \frac{1}{\sqrt{2^n}} \sum_{j=0}^{2^{n}-1}\ket{j}
+\ket{\psi}\_{final} = \frac{1}{\sqrt{2^n}}\sum\_{j=0}^{2^n-1} \ket{j},
 $$
 
-
 which is precisely the behavior of the 3-qubit Fourier transform. 
+
 If you are curious about how other input states are affected, we encourage you to play around with applying qubit operations before the transform.
 
 ## Adding Measurements

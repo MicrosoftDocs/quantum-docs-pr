@@ -18,10 +18,12 @@ This article assumes that you already have the QDK installed. If you are install
 ## Updating Q# Projects 
 
 1. First, install the latest version of the [.NET Core SDK 3.0](https://dotnet.microsoft.com/download) and run the following command in the command prompt:
-```bash
+
+```dotnetcli
 dotnet --version
 ```
- Verify the output is 3.0.100 or higher, then follow the instructions below depending on your setup.
+
+Verify the output is 3.0.100 or higher, then follow the instructions below depending on your setup.
 
 ### In Visual Studio
  
@@ -48,35 +50,39 @@ If your projects use any other Microsoft.Quantum packages, run the command for t
 
 1. Navigate to the folder containing your project file
 2. Run the following command:
-```bash
-dotnet clean [project_name].csproj
-```
+
+   ```dotnetcli
+   dotnet clean [project_name].csproj
+   ```
 
 3. [Update the target framework](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks) in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
 4. Run the following command:
-```bash
-dotnet add package Microsoft.Quantum.Development.Kit
-```
-if your project uses any other Microsoft.Quantum packages, run the command for these too.
+
+   ```dotnetcli
+   dotnet add package Microsoft.Quantum.Development.Kit
+   ```
+
+   if your project uses any other Microsoft.Quantum packages, run the command for these too.
 
 5. Save and close all files
 6. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:
-```bash
-dotnet build [project_name].csproj
-```
+
+   ```dotnetcli
+   dotnet build [project_name].csproj
+   ```
 
 ## Update IQ# for Python
 
 1. Update the `iqsharp` kernel
 
-    ```bash
+    ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
 1. Verify the `iqsharp` version
 
-    ```bash
+    ```dotnetcli
     dotnet iqsharp --version
     ```
 
@@ -108,6 +114,7 @@ dotnet build [project_name].csproj
     ...
     ```
 1. Run the following command from the location of your `.qs` files
+
     ```bash
     python -c "import qsharp; qsharp.reload()"
     ```
@@ -118,14 +125,14 @@ dotnet build [project_name].csproj
 
 1. Update the `iqsharp` kernel
 
-    ```bash
+    ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
 1. Verify the `iqsharp` version
 
-    ```bash
+    ```dotnetcli
     dotnet iqsharp --version
     ```
 
@@ -135,7 +142,9 @@ dotnet build [project_name].csproj
     iqsharp: 0.10.1911.307
     Jupyter Core: 1.2.20112.0
     ```
+    
 1. Run the following command from a cell in your Jupyter Notebook:
+
     ```
     %workspace reload
     ```
@@ -170,7 +179,7 @@ dotnet build [project_name].csproj
 
 1. Update the Quantum project templates for .NET
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 

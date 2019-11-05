@@ -1,28 +1,15 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Microsoft Quantum Development Kit license | Microsoft Docs 
+title: Microsoft Quantum Development Kit license 
 description: Microsoft Quantum Development Kit license
-services: service-name-with-dashes-AZURE-ONLY 
-keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
-ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
-# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
-# ms.service: service-name-from-white-list
-# product-name-from-white-list
+ms.author: cpalmer
+ms.date: 11/04/2019
 
-# Optional fields. Don't forget to remove # if you need a field.
-# ms.custom: can-be-multiple-comma-separated
-# ms.devlang:devlang-from-white-list
-# ms.suite: 
-# ms.tgt_pltfrm:
-# ms.reviewer:
-# manager: MSFT-alias-manager-or-PM-counterpart
 ---
 
 # MICROSOFT SOFTWARE LICENSE TERMS 
-# MICROSOFT QUANTUM DEVELOPMENT KIT (PREVIEW)
+## MICROSOFT QUANTUM DEVELOPMENT KIT (PREVIEW)
 
 
 * * *
@@ -68,13 +55,13 @@ IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE RIGHTS BELOW. BY USING THE 
     
     e. share, publish, distribute, or lend the software, provide the software as a stand-alone hosted solution for others to use, or transfer the software or this agreement to any third party.
 
-1. **EXPORT RESTRICTIONS**. You must comply with all domestic and international export laws and regulations that apply to the software, which include restrictions on destinations, end users, and end use. For further information on export restrictions, visit http://aka.ms/exporting.
+1. **EXPORT RESTRICTIONS**. You must comply with all domestic and international export laws and regulations that apply to the software, which include restrictions on destinations, end users, and end use. For further information on export restrictions, visit https://aka.ms/exporting.
 
 1. **SUPPORT SERVICES**. Microsoft is not obligated under this agreement to provide any support services for the software. Any support provided is “as is”, “with all faults”, and without warranty of any kind.
 
 1. **UPDATES**. The software may periodically check for updates, and download and install them for you. You may obtain updates only from Microsoft or authorized sources. Microsoft may need to update your system to provide you with updates. You agree to receive these automatic updates without any additional notice. Updates may not include or support all existing software features, services, or peripheral devices.
 
-1. **BINDING ARBITRATION AND CLASS ACTION WAIVER. This Section applies if you live in (or, if a business, your principal place of business is in) the United States**.  If you and Microsoft have a dispute, you and Microsoft agree to try for 60 days to resolve it informally. If you and Microsoft can’t, you and Microsoft agree to **binding individual arbitration before the American Arbitration Association** under the Federal Arbitration Act (“FAA”), and **not to sue in court in front of a judge or jury**. Instead, a neutral arbitrator will decide. **Class action lawsuits, class-wide arbitrations, private attorney-general actions**, and any other proceeding where someone acts in a representative capacity **are not allowed**; nor is combining individual proceedings without the consent of all parties. The complete Arbitration Agreement contains more terms and is at http://aka.ms/arb-agreement-1. You and Microsoft agree to these terms.
+1. **BINDING ARBITRATION AND CLASS ACTION WAIVER. This Section applies if you live in (or, if a business, your principal place of business is in) the United States**.  If you and Microsoft have a dispute, you and Microsoft agree to try for 60 days to resolve it informally. If you and Microsoft can’t, you and Microsoft agree to **binding individual arbitration before the American Arbitration Association** under the Federal Arbitration Act (“FAA”), and **not to sue in court in front of a judge or jury**. Instead, a neutral arbitrator will decide. **Class action lawsuits, class-wide arbitrations, private attorney-general actions**, and any other proceeding where someone acts in a representative capacity **are not allowed**; nor is combining individual proceedings without the consent of all parties. The complete Arbitration Agreement contains more terms and is at https://aka.ms/arb-agreement-1. You and Microsoft agree to these terms.
 
 1. **ENTIRE AGREEMENT**. This agreement, and any other terms Microsoft may provide for supplements, updates, or third-party applications, is the entire agreement for the software.
 

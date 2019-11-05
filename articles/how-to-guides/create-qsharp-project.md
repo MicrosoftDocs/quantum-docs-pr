@@ -139,6 +139,7 @@ You can now continue your quantum development using Visual Studio
 
     * Go to **View** -> **Command Palette**
     * Select **Q#: Create New Project**
+	* Select **Standalone console application**
     * Navigate to the location on the file system where you would like to create the application
     * Click on the **Open new project...** button, once the project has been created
 

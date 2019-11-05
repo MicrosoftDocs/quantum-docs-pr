@@ -166,7 +166,7 @@ You can now continue your quantum development using Visual Studio Code.
 
 1. Create a new application
 
-    ```bash
+    ```dotnetcli
     dotnet new console -lang Q# -o <project name>
     ```
 
@@ -180,7 +180,7 @@ You can now continue your quantum development using Visual Studio Code.
 
 1. Run the application
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 

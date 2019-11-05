@@ -30,8 +30,8 @@ Note that this low-level view of quantum information processing is often desribe
 > [!div class="checklist"]
 > * Define quantum operations in Q#
 > * Set up the classical host program to call and simulate Q# operations
-> * Simulate a quantum circuit from qubit allocation to measurement output
-> * Observe the full quantum system's simulated wavefunction at various points in our circuit
+> * Simulate a quantum operation from qubit allocation to measurement output
+> * Observe how the quantum system's simulated wavefunction evolves throughout the operation
 
 Applications developed with Microsoft's Quantum Development Kit typically consists of two parts:
 1. One or more quantum algorithms, implemented using the Q# quantum programming language, and invoked by the classical host program. These consist of 
@@ -115,7 +115,7 @@ An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the 
 Q# makes it extremely easy to condition the execution of an operation upon one or multiple control qubits.
 In general, we merely preface the call with `Controlled`, and the operation arguments change as:
 
-> `Op(<normal args>)` $\to$ `Controlled Op([<control qubits>], (<normal args>))`.
+>> `Op(<normal args>)` $\to$ `Controlled Op([<control qubits>], (<normal args>))`.
 
 Note that the control qubits must be provided as an array, even if it is a single qubit.
 So, we call the `R1` gates acting on the first qubit (and controlled by the second third) as:
@@ -252,17 +252,17 @@ Run the Python file, and printed in your console you should see the `Message` an
 Following the same [instructions](xref:microsoft.quantum.howto.createproject) as above, create a C# host file, and rename it to `host.cs`.
 
 The C# host has four parts:
-1. Construct a quantum simulator. 
-	In the example, `qsim` is the simulator.
-2. Compute any arguments required for the quantum algorithm. 
-	For now, there are none.
+1. Construct a quantum simulator.
+	In the code below, this is the variable `qsim`.
+2. Compute any arguments required for the quantum algorithm.
+	There are none in this example.
 3. Run the quantum algorithm. 
 	Each Q# operation generates a C# class with the same name. 
 	This class has a `Run` method that **asynchronously** executes the operation.
 	The execution is asynchronous because execution on actual hardware will be asynchronous. 
-	Because the `Run` method is asynchronous, we fetch the `Result` property; this blocks execution until the task completes and returns the result synchronously. 
-4. Process the result of the operation. 
-	For now, there is none.
+	Because the `Run` method is asynchronous, we call the `Wait()` method; this blocks execution until the task completes and returns the result synchronously. 
+4. Process the returned result of the operation.
+	For now, the operation returns nothing.
 
 
 ```csharp
@@ -279,9 +279,9 @@ namespace Quantum.Operations
         {
             using (var qsim = new QuantumSimulator())
             {
-                Perform3qubitQFT.Run(qsim);
+                Perform3QubitQFT.Run(qsim).Wait();
             }
-
+            
             System.Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
@@ -335,7 +335,7 @@ In detail for the first row of our input state $\ket{000}$:
 * **`    ---`**: A graphical representation of the amplitude's phase.
 * **`[ 0.0000 rad ]`**: the numeric value of the phase (in radians).
 
-Both the magnitude and the phase are displayed with a graphical representation. The magnitude representation is straight-forward: it shows a bar of `*`, the bigger the probability the bigger the bar will be. For the phase, see the DumpMachine section [here](xref:microsoft.quantum.techniques.testing-and-debugging) for the possible symbol representations based on angle ranges.
+Both the magnitude and the phase are displayed with a graphical representation. The magnitude representation is straight-forward: it shows a bar of `*`, the bigger the probability the bigger the bar will be. For the phase, see the DumpMachine section [here](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) for the possible symbol representations based on angle ranges.
 
 
 So, the printed output is illustrating that our programmed gates transformed our state from
@@ -347,8 +347,9 @@ $$
 to 
 
 $$
-\ket{\psi}_{final} = \frac{1}{\sqrt{2^n}} \sum_{j=0}^{2^n-1} \ket{j}
+\ket{\psi}_{final} = \frac{1}{\sqrt{2^n}} \sum_{j=0}^{2^{n}-1}\ket{j}
 $$
+
 
 which is precisely the behavior of the 3-qubit Fourier transform. 
 If you are curious about how other input states are affected, we encourage you to play around with applying qubit operations before the transform.
@@ -370,14 +371,10 @@ First, we modify our `Perform3QubitQFT` operation to return an array of measurem
 
 #### Define and initialize `Result[]` array
 
-Before even allocating qubits then, we declare and bind this length-3 array (one `Result` for each qubit): 
+Before even allocating qubits (i.e. before the `using` statement), we declare and bind this length-3 array (one `Result` for each qubit): 
 
 ```qsharp
-    operation Perform3QubitQFT() : Result[] {
-
         mutable resultArray = new Result[3];
-
-        using (qs = Qubit[3]) {
 ```
 
 The `mutable` keyword prefacing `resultArray` allows the variable to be rebound later in the code---for example, when adding our measurement results.
@@ -474,12 +471,6 @@ print("Corresponding basis state in binary:")
 print("|" + binaryCompBasisState + ">")
 ```
 
-#### [C#](#tab/tabid-csharp)
-```csharp
-INSERT CODE
-```
-***
-
 Run the file, and your output should look similar to the following:
 
 ```Output
@@ -506,9 +497,90 @@ After measurement:
 
 Post-QFT measurement results [qubit0, qubit1, qubit2]: 
 [1, 1, 0]
+
 Corresponding basis state in binary:
 |011>
 ```
+
+#### [C#](#tab/tabid-csharp)
+Now that our operation is returning a result, replace the method call `Wait()` with fetching the `Result` property. 
+This still accomplishes the same synchronicity discussed earlier, and we can directly bind this value to the variable `measurementResult`.
+
+```csharp
+using System;
+
+using Microsoft.Quantum.Simulation.Core;
+using Microsoft.Quantum.Simulation.Simulators;
+
+namespace Quantum.Operations
+{
+    class Driver
+    {
+        static void Main(string[] args)
+        {
+            using (var qsim = new QuantumSimulator())
+            {
+                var measurementResult = Perform3QubitQFT.Run(qsim).Result;
+                System.Console.WriteLine(
+                    $"Post-QFT measurement results [qubit0, qubit1, qubit2]: ");
+                System.Console.WriteLine(
+                    measurementResult);
+
+                // reversing order to show corresponding basis state in binary form
+                string binaryCompBasisState = String.Empty;
+
+                foreach (Result i in measurementResult)
+                {
+                    string iString = i.ToString();
+                    binaryCompBasisState = iString + binaryCompBasisState;
+                }
+                binaryCompBasisState = "|" + binaryCompBasisState + ">";
+                System.Console.WriteLine(
+                    $"Corresponding basis state in binary:");
+                System.Console.WriteLine(
+                    binaryCompBasisState);
+            }
+            
+            System.Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+        }
+    }
+}
+```
+
+Run the project, and your output should look similar to the following:
+
+```Output
+Before measurement: 
+# wave function for qubits with ids (least to most significant): 0;1;2
+|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+After measurement:
+# wave function for qubits with ids (least to most significant): 0;1;2
+|0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+|1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+|2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+|5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+|6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+|7>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+
+Post-QFT measurement results [qubit0, qubit1, qubit2]: 
+[One,One,Zero]
+
+Corresponding basis state in binary:
+|ZeroOneOne>
+
+Press any key to continue...
+```
+***
 
 This output illustrates a few different things:
 1. Comparing the returned result to the pre-measurement `DumpMachine`, it clearly does _not_ illustrate the post-QFT superposition over basis states.
@@ -523,8 +595,7 @@ The latter is not an issue in this example, but we would see relative phases app
 To explore how measuring only some qubits of the register can affect the system's state, try adding the following inside the `for` loop, after the measurement line:
 ```qsharp
                 let iString = IntAsString(i);
-                Message("After measurement of qubit: ");
-                Message(iString);
+                Message("After measurement of qubit " + iString + ":");
                 DumpMachine();
 ```
 

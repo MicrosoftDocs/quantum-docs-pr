@@ -13,15 +13,11 @@ uid: microsoft.quantum.contributing.style
 
 The conventions suggested in this guide are intended to help make programs and libraries written in Q# easier to read and understand.
 
-# [Guidance](#tab/guidance)
+## Guidance
 
 We suggest:
 
 - Never disregard a convention unless you’re doing so intentionally in order to provide more readable and understandable code for your users.
-
-# [Examples](#tab/examples)
-
-***
 
 ## Naming Conventions ##
 

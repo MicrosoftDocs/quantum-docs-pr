@@ -24,5 +24,5 @@ At a high level, the interplay between NWChem and the Microsoft Quantum Developm
 ![Chemistry stack](~/media/broombridge.png)
 The blue shaded box represents the Broombridge schema, the various grey shaded boxes represent other internal data representations that were chosen to represent and process quantum algorithms for computational chemistry based on real-world chemistry problems. 
 
-Multiple chemical representations defined using the Broombridge schema are provided [here](https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/IntegralData/YAML/).
+Multiple chemical representations defined using the Broombridge schema are provided [here](https://github.com/microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML).
 

@@ -14,6 +14,15 @@ Learn how to update the Microsoft Quantum Development Kit (QDK) to the latest ve
 
 This article assumes that you already have the QDK installed. If you are installing for the first time, then please refer to the [installation guide](xref:microsoft.quantum.install).
 
+Choose your necessary update and development environment from the sections below:
+
+* [Update Q# Projects in Visual Studio, VS Code, or command line](#updating-q-projects)
+* [Update IQ# for Python](#update-iq-for-python)
+* [Update IQ# for Jupyter notebooks](#update-iq-for-jupyter-notebooks)
+* [Update QDK Extension for Visual Studio](#update-visual-studio-qdk-extension)
+* [Update QDK Extension for VS Code](#update-vs-code-qdk-extension)
+* [Update project templates for C# in command line](#c-using-the-dotnet-command-line-tool)
+
 
 ## Updating Q# Projects 
 
@@ -22,6 +31,7 @@ This article assumes that you already have the QDK installed. If you are install
 dotnet --version
 ```
  Verify the output is 3.0.100 or higher, then follow the instructions below depending on your setup.
+
 
 ### In Visual Studio
  

@@ -23,7 +23,7 @@ Choose your development environment and language from the sections below:
 * [Python](#develop-with-python)
 * [Jupyter notebooks](#develop-with-jupyter-notebooks)
 * [C# with Visual Studio](#develop-with-c-on-windows-using-visual-studio)
-* [C# with VS Code](#develop-with-c-using-vs-code)
+* [C# with VS Code](#develop-with-c-using-visual-studio-code)
 * [C# with the command line](#develop-with-c-using-the-dotnet-command-line-tool)
 
 ## Develop with Python

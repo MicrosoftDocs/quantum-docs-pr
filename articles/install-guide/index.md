@@ -183,7 +183,8 @@ Depending on your chosen development environment, there are different installati
 
     - Run the application:
 
-        - Go to **Debug** -> **Start Without Debugging**
+        - Go to **Terminal** -> **New Terminal**
+		- Enter `dotnet run`
         - You should see the following text in the output window `Hello quantum world!`
 
 > [!NOTE]

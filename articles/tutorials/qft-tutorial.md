@@ -228,7 +228,7 @@ The host file is constructed as follows:
 	For now, our operation is defined to take no arguments.
 
 > [!NOTE]
-> If we wanted to call the operation on a different machine, for example the `ResourceEstimator()`, we would simply use `<Q#function>.estimate_resources(<args>)`.
+> If we wanted to call the operation on a different machine, for example the `ResourceEstimator()`, we would simply use `<Q#callable>.estimate_resources(<args>)`.
 > In general, Q# operations are agnostic to the machines on which they're run, but some features such as `DumpMachine` may behave differently.
 
 4. Upon performing the simulation, the operation call will return values as defined in `Operations.qs`.

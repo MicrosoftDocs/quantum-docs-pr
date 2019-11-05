@@ -31,7 +31,7 @@ The qsharp package for Python makes it easy to simulate Q# operations and functi
 
 1. Install the `iqsharp` package
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -97,7 +97,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
 1. Install the `iqsharp` package
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -218,7 +218,7 @@ Of course, you can also build and run Q# programs from the command line by simpl
 
 1. Install the Quantum project templates for .NET
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -228,7 +228,7 @@ Of course, you can also build and run Q# programs from the command line by simpl
 
     - Create a new application
 
-       ```bash
+       ```dotnetcli
        dotnet new console -lang Q# -o runSayHello
        ```
 
@@ -242,7 +242,7 @@ Of course, you can also build and run Q# programs from the command line by simpl
 
     - Run the application
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 

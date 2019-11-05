@@ -14,7 +14,14 @@ Learn how to update the Microsoft Quantum Development Kit (QDK) to the latest ve
 
 This article assumes that you already have the QDK installed. If you are installing for the first time, then please refer to the [installation guide](xref:microsoft.quantum.install).
 
-The update steps depend on your development environment. Choose your environment from the following sections.
+The update steps depend on your development environment. 
+Choose your development environment and language from the sections below:
+
+* [Python](#python)
+* [Jupyter notebooks](#jupyter-notebooks)
+* [C# with Visual Studio](#c-on-windows-using-visual-studio)
+* [C# with VS Code](#c-using-vs-code)
+* [C# with the command line](#c-using-the-dotnet-command-line-tool)
 
 ## Python
 

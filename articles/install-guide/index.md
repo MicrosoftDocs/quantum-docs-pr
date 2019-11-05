@@ -17,7 +17,14 @@ Learn how to install the Microsoft Quantum Development Kit (QDK), so that you ca
 - a host application (written in Python or a .NET language) that runs quantum operations written in Q#
 - tools to facilitate your development
 
-Depending on your chosen development environment, there are different installation steps. Choose your environment from the sections below.
+Depending on your chosen development environment, there are different installation steps.
+Choose your development environment and language from the sections below:
+
+* [Python](#develop-with-python)
+* [Jupyter notebooks](#develop-with-jupyter-notebooks)
+* [C# with Visual Studio](#develop-with-c-on-windows-using-visual-studio)
+* [C# with VS Code](#develop-with-c-using-vs-code)
+* [C# with the command line](#develop-with-c-using-the-dotnet-command-line-tool)
 
 ## Develop with Python
 

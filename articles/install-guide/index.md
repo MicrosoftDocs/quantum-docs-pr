@@ -29,17 +29,17 @@ The qsharp package for Python makes it easy to simulate Q# operations and functi
     - The [PIP](https://pip.pypa.io/en/stable/installing) Python package manager
     - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
+1. Install the `qsharp` package
+
+    ```bash
+    pip install qsharp
+    ```
+
 1. Install the `iqsharp` package
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
-    ```
-
-1. Install the `qsharp` package
-
-    ```bash
-    pip install qsharp
     ```
 
 1. Verify the installation by creating a `Hello World` application

@@ -16,8 +16,8 @@ This article assumes that you already have the QDK installed. If you are install
 
 If you saw that a new version of the QDK was released and you would like to get with the times, then you're in the right place.
 The process consists of two parts:
-	1. updating your existing Q# files and projects to align your code with any updated syntax
-	2. updating the QDK itself for your chosen development environment 
+1. updating your existing Q# files and projects to align your code with any updated syntax
+2. updating the QDK itself for your chosen development environment 
 
 ## 1. Updating Q# Projects 
 
@@ -34,7 +34,7 @@ Verify the output is 3.0.100 or higher, then follow the instructions below depen
 1. Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions
 2. Open your solution in Visual Studio
 3. From the menu, select Build > Clean Solution 
-4. [Update the target framework](https://docs.microsoft.com/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2019#change-the-target-framework) in each of your .csproj files to netcoreapp3.0 (or netstandard2.1 if it is a library project)
+4. [Update the target framework](https://docs.microsoft.com/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2019#change-the-target-framework) in each of your .csproj files to `netcoreapp3.0` (or `netstandard2.1` if it is a library project)
 5. Save and close all files in your solution
 6. Select Tools > Command Line > Developer Command Prompt
 7. For each project in the solution, run the following command:

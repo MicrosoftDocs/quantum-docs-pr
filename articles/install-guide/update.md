@@ -24,17 +24,17 @@ The process consists of two parts:
 Regardless of whether you are using C# or Python to host Q# operations, follow these instructions to update your Q# projects.
 
 1. First, install the latest version of the [.NET Core SDK 3.0](https://dotnet.microsoft.com/download) and run the following command in the command prompt:
-```bash
-dotnet --version
-```
+	```bash
+	dotnet --version
+	```
 Verify the output is 3.0.100 or higher, then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).
 
-### In Visual Studio
+### Update Q# projects in Visual Studio
  
 1. Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions
 2. Open your solution in Visual Studio
 3. From the menu, select Build > Clean Solution 
-4. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project)
+4. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project).
 	That is, edit lines of the form:
 	```xml
 	<TargetFramework>netcoreapp3.0</TargetFramework>
@@ -52,21 +52,22 @@ Verify the output is 3.0.100 or higher, then follow the instructions below depen
 You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).
 
 
-### In Visual Studio Code
+### Update Q# projects in Visual Studio Code
 
 1. In Visual Studio Code, open the folder containing the project to update
 2. Select Terminal > New Terminal
 3. Follow the instructions for updating using the command line (directly below)
 
-### Using the command line
+### Update Q# projects using the command line
 
 1. Navigate to the folder containing your project file
 2. Run the following command:
 	```bash
 	dotnet clean [project_name].csproj
 	```
-3. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project)
-	That is, the lines of the form:
+
+3. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project).
+	That is, edit lines of the form:
 	```xml
 	<TargetFramework>netcoreapp3.0</TargetFramework>
 	```
@@ -75,6 +76,7 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 	```bash
 	dotnet add package Microsoft.Quantum.Development.Kit
 	```
+
 	If your project uses any other Microsoft.Quantum packages, run the command for these too.
 5. Save and close all files.
 6. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:
@@ -84,7 +86,7 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 
 With your Q# projects now updated, follow the instructions below to update the QDK itself.
 
-## 2. Update the QDK
+## 2. Updating the QDK
 
 The process to update the QDK varies depending on your development language and environment.
 Select yours below to be taken to the proper instructions.

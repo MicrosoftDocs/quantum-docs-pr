@@ -34,7 +34,12 @@ Verify the output is 3.0.100 or higher, then follow the instructions below depen
 1. Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions
 2. Open your solution in Visual Studio
 3. From the menu, select Build > Clean Solution 
-4. [Update the target framework](https://docs.microsoft.com/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2019#change-the-target-framework) in each of your .csproj files to `netcoreapp3.0` (or `netstandard2.1` if it is a library project)
+4. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project)
+	That is, edit lines of the form:
+	```xml
+	<TargetFramework>netcoreapp3.0</TargetFramework>
+	```
+	You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
 5. Save and close all files in your solution
 6. Select Tools > Command Line > Developer Command Prompt
 7. For each project in the solution, run the following command:
@@ -55,22 +60,22 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 ### Using the command line
 
 1. Navigate to the folder containing your project file
-
 2. Run the following command:
 	```bash
 	dotnet clean [project_name].csproj
 	```
-
-3. [Update the target framework](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks) in each of your .csproj files to `netcoreapp3.0` (or `netstandard2.1` if it is a library project)
-
+3. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project)
+	That is, the lines of the form:
+	```xml
+	<TargetFramework>netcoreapp3.0</TargetFramework>
+	```
+	You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
 4. Run the following command:
 	```bash
 	dotnet add package Microsoft.Quantum.Development.Kit
 	```
 	If your project uses any other Microsoft.Quantum packages, run the command for these too.
-
 5. Save and close all files.
-
 6. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:
 	```bash
 	dotnet build [project_name].csproj
@@ -192,6 +197,7 @@ Select yours below to be taken to the proper instructions.
 
    - Go to **View** -> **Command Palette**
    - Select **Q#: Install project templates**
+   - After a few seconds you should get a popup confirming "project templates installed successfully"
 
 ### C#, using the `dotnet` command-line tool
 

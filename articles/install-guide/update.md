@@ -27,13 +27,13 @@ Regardless of whether you are using C# or Python to host Q# operations, follow t
 	```bash
 	dotnet --version
 	```
-Verify the output is 3.0.100 or higher, then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).
+Verify the output is `3.0.100` or higher, then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).
 
 ### Update Q# projects in Visual Studio
  
 1. Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions
 2. Open your solution in Visual Studio
-3. From the menu, select Build > Clean Solution 
+3. From the menu, select **Build** -> **Clean Solution**
 4. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project).
 	That is, edit lines of the form:
 	```xml
@@ -41,13 +41,13 @@ Verify the output is 3.0.100 or higher, then follow the instructions below depen
 	```
 	You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
 5. Save and close all files in your solution
-6. Select Tools > Command Line > Developer Command Prompt
+6. Select **Tools** -> **Command Line** > **Developer Command Prompt**
 7. For each project in the solution, run the following command:
 	```bash
 	dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
 	```
 	If your projects use any other Microsoft.Quantum packages, run the command for these too.
-8. Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
+8. Close the command prompt and select **Build** -> **Build Solution** (do *not* select Rebuild Solution, as rebuilding will initially fail)
 
 You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).
 
@@ -55,7 +55,7 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 ### Update Q# projects in Visual Studio Code
 
 1. In Visual Studio Code, open the folder containing the project to update
-2. Select Terminal > New Terminal
+2. Select **Terminal** -> **New Terminal**
 3. Follow the instructions for updating using the command line (directly below)
 
 ### Update Q# projects using the command line

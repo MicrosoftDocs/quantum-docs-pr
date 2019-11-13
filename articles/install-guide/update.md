@@ -38,10 +38,10 @@ Verify the output is 3.0.100 or higher, then follow the instructions below depen
 5. Save and close all files in your solution
 6. Select Tools > Command Line > Developer Command Prompt
 7. For each project in the solution, run the following command:
-```bash
-dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
-```
-If your projects use any other Microsoft.Quantum packages, run the command for these too. 
+	```bash
+	dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
+	```
+	If your projects use any other Microsoft.Quantum packages, run the command for these too. 
 8. Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
 You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).
 
@@ -57,24 +57,24 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 1. Navigate to the folder containing your project file
 
 2. Run the following command:
-```bash
-dotnet clean [project_name].csproj
-```
+	```bash
+	dotnet clean [project_name].csproj
+	```
 
 3. [Update the target framework](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks) in each of your .csproj files to `netcoreapp3.0` (or `netstandard2.1` if it is a library project)
 
 4. Run the following command:
-```bash
-dotnet add package Microsoft.Quantum.Development.Kit
-```
-If your project uses any other Microsoft.Quantum packages, run the command for these too.
+	```bash
+	dotnet add package Microsoft.Quantum.Development.Kit
+	```
+	If your project uses any other Microsoft.Quantum packages, run the command for these too.
 
 5. Save and close all files.
 
 6. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:
-```bash
-dotnet build [project_name].csproj
-```
+	```bash
+	dotnet build [project_name].csproj
+	```
 
 With your Q# projects now updated, follow the instructions below to update the QDK itself.
 

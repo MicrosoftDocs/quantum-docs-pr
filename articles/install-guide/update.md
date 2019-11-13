@@ -41,7 +41,7 @@ Verify the output is `3.0.100` or higher, then follow the instructions below dep
 	```
 	You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
 5. Save and close all files in your solution
-6. Select **Tools** -> **Command Line** > **Developer Command Prompt**
+6. Select **Tools** -> **Command Line** -> **Developer Command Prompt**
 7. For each project in the solution, run the following command:
 	```bash
 	dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit

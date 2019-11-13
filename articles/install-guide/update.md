@@ -46,8 +46,9 @@ Verify the output is 3.0.100 or higher, then follow the instructions below depen
 	```bash
 	dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
 	```
-	If your projects use any other Microsoft.Quantum packages, run the command for these too. 
+	If your projects use any other Microsoft.Quantum packages, run the command for these too.
 8. Close the command prompt and select Build > Build Solution (do *not* select Rebuild Solution, as rebuilding will initially fail)
+
 You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).
 
 

@@ -55,17 +55,22 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 ### Using the command line
 
 1. Navigate to the folder containing your project file
+
 2. Run the following command:
 ```bash
 dotnet clean [project_name].csproj
 ```
+
 3. [Update the target framework](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks) in each of your .csproj files to `netcoreapp3.0` (or `netstandard2.1` if it is a library project)
+
 4. Run the following command:
 ```bash
 dotnet add package Microsoft.Quantum.Development.Kit
 ```
 If your project uses any other Microsoft.Quantum packages, run the command for these too.
-5. Save and close all files
+
+5. Save and close all files.
+
 6. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:
 ```bash
 dotnet build [project_name].csproj

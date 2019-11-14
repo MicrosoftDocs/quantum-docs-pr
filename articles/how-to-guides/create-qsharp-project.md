@@ -27,7 +27,7 @@ Choose your development environment and language from the sections below:
 
 1. Pre-requisites
 
-     * The [Quantum Development Kit for Python](xref:microsoft.quantum.install#develop-with-python)
+     * The [Quantum Development Kit for Python](xref:microsoft.quantum.install.python)
 
 1. Create a folder for your project, and navigate to that folder
 
@@ -74,7 +74,7 @@ You can now continue to develop your quantum program.
 
 1. Pre-requisites
 
-    * The [Quantum Development Kit for Jupyter notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+    * The [Quantum Development Kit for Jupyter notebooks](xref:microsoft.quantum.install.jupyter)
 
 1. Run the following command to start the notebook server:
 
@@ -110,7 +110,7 @@ You can now add other Q# operations to continue your quantum development.
 
 1. Pre-requisites
 
-    * The [Quantum Development Kit for Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
+    * The [Quantum Development Kit for Visual Studio](xref:microsoft.quantum.install.cs)
 
 1. Create a new Q# application
 
@@ -139,7 +139,7 @@ You can now continue your quantum development using Visual Studio
 
 1. Pre-requisites
 
-    * The [Quantum Development Kit for VS Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
+    * The [Quantum Development Kit for VS Code](xref:microsoft.quantum.install.cs)
 
 1. Create a new project:
 
@@ -162,7 +162,7 @@ You can now continue your quantum development using Visual Studio Code.
 
 1. Pre-requisites
 
-    * The [Quantum Development Kit for the Command Line](xref:microsoft.quantum.install#develop-with-c-using-the-dotnet-command-line-tool)
+    * The [Quantum Development Kit for the Command Line](xref:microsoft.quantum.install.cs)
 
 1. Create a new application
 

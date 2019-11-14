@@ -28,7 +28,7 @@
     href: quickstarts/search.md
 - name: How-to guides
   items:
-  - name: Install the QD
+  - name: Install the QDK
     topicHref: install-guide/index.md
     href: install-guide/toc.yml
   - name: Update the QDK

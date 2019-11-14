@@ -95,7 +95,7 @@ Visual Studio Code (VS Code) offers a rich environment for developing Q# program
 
 
 > [!NOTE]
-> * > * Workspaces with multiple root folders are not currently supported by the Visual Studio Code extension. If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.
+> * Workspaces with multiple root folders are not currently supported by the Visual Studio Code extension. If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.
 
 ## Develop with Q# + C#, using the `dotnet` command-line tool
 

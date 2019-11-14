@@ -28,8 +28,9 @@
     href: quickstarts/search.md
 - name: How-to guides
   items:
-  - name: Install the QDK
-    href: install-guide/index.md
+  - name: Install the QD
+    topicHref: install-guide/index.md
+    href: install-guide/toc.yml
   - name: Update the QDK
     href: install-guide/update.md  
   - name: Create a Q# project

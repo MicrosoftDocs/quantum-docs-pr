@@ -19,7 +19,7 @@ This is the installation guide for the QDK environment to program hybrid Q# and 
     - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
 
-1. Install the `qsharp` package, a Python package allows the interoperation between Q# and Python.
+1. Install the `qsharp` package, a Python package that allows the interoperation between Q# and Python.
 
     ```bash
     pip install qsharp

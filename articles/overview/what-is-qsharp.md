@@ -20,12 +20,11 @@ The Q# programming language provides you with an intuitive set of types, operati
 
 In the early days of quantum computing algorithms were visualized as diagrams similarly to circuit diagrams in classical computing.  While the circuit model has been useful for many years in quantum computing research, here at Microsoft, we believe that developers can go beyond quantum circuits and develop quantum algorithms and applications using Q#. The Q# language was built to take advantage of what we’ve learned through decades of classical software development, and empower quantum developers with high-level language functionality targeted for quantum computing.
 
-
 ## How does Q# work?
 
 One of the fundamental building blocks of Q# is the `Qubit` type, which cannot be copied or directly accessed, just like a real qubit. Instead, we can measure it and store the outcome of the measurement in a `Result` variable, a Q# type that can take two possible values: `Zero` and `One`. Constructs like this one guarantee that algorithms always respect the laws of quantum physics and can run correctly on quantum computers or simulators.
 
-Q# also includes classical logic features like conditionals and loops with some subtleties to make sure that all the quantum rules are being respected. For example, constraining the way loops are executed to ensure quantum operations are.
+Q# also includes classical logic features like conditionals and loops with some subtleties to make sure that all the quantum rules are being respected. For example, constraining the way loops are executed to ensure that quantum operations are not called within functions which may only contain classical subroutines.
 
 Q# programs are often paired with a host program written in C# or Python, which can provide convenient organization of classical and quantum code. In addition to supporting languages such as C# and Python, the QDK provides Jupyter Notebook support with the IQ# Jupyter kernel.
 

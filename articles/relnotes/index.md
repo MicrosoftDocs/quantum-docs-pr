@@ -18,7 +18,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 ## Version 0.10.1911.1607
 
-*Release date: November 11th, 2019*
+*Release date: November 17th, 2019*
 
 This release contains the following:
 

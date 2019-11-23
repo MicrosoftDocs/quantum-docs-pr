@@ -1,12 +1,12 @@
 
-- name: Develop with Q# + Python
+- name: Q# + Python
 
   href: pyinstall.md
 
-- name: Develop with Q# Jupyter Notebooks
-
-  href: qjupyter.md
-
-- name: Develop with Q# + C#
+- name: Q# + C#
 
   href: csinstall.md
+  
+- name: Q# Jupyter Notebooks
+
+  href: qjupyter.md

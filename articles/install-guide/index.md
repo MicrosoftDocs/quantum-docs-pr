@@ -24,4 +24,4 @@ You are free to choose whichever environment you are most comfortable with. Depe
 
 - [Q# + Python:](xref:microsoft.quantum.install.python) choose this environment if you want to combine Python and Q# to create a Python host program that calls Q# operations whenever they are needed.
 - [Q# + C#:](xref:microsoft.quantum.install.cs) choose this environment if you want to combine C# and Q# to create a C# host program that calls Q# operations whenever they are needed.
-- [Q# Jupyter Notebooks:](xref:microsoft.quantum.install.jupyter) this environment is great for writing Q# code with embedded explanations or quantum computing interactive tutorials. Do not choose this environment if you want to combine Q# with a classical host program.
+- [Q# Jupyter Notebooks:](xref:microsoft.quantum.install.jupyter) this environment is great for writing Q# code with embedded explanations or quantum computing interactive tutorials. Do not choose this environment if you want to combine Q# with an external classical host program.

@@ -88,7 +88,8 @@ Visual Studio Code (VS Code) offers a rich environment for developing Q# program
 
     - Run the application:
 
-        - Go to **Debug** -> **Start Without Debugging**
+        - Go to **Terminal** -> **New Terminal**
+		- Enter `dotnet run`
         - Alternatively, go to **Terminal** and type: `dotnet run`
         - You should see the following text in the output window `Hello quantum world!`
 

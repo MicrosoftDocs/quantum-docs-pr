@@ -59,7 +59,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
         ![Jupyter notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
 
-        You should see the message printed on the screen along with the result of the operation you invoked (in this case, empty).
+        You should see the message printed on the screen along with the result of the operation you invoked (here, we see the empty tuple `()` because our operation simply returns a `Unit` type).
 
 ## What's next?
 

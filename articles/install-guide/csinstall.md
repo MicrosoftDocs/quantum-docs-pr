@@ -52,7 +52,6 @@ Visual Studio offers a rich environment for developing Q# programs, offering gre
         - You should see the text `Hello quantum world!` printed to a console window.
 
 > [!NOTE]
-
 > * If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its subfolders.  
 
 ## Develop with Q# + C#, using Visual Studio Code

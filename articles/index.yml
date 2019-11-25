@@ -24,16 +24,16 @@ landingContent:
         links:
           - text: The Quantum Development Kit
             url: welcome.md
-		  - text: What is quantum computing?
-		    url: overview/what-is-quantum-computing.md
-		  - text: What can a quantum computer do?
-		    url: overview/quantum-computers.md
-		  - text: Why learn quantum computing?
-		    url: overview/why-learn-quantum-computing.md
-		  - text: What is Q#?
-		    url: overview/what-is-qsharp.md
-		  - text: How can I learn about quantum computing?
-		    url: overview/how-to-learn-quantum-computing.md
+          - text: What is quantum computing?
+            url: overview/what-is-quantum-computing.md
+          - text: What can a quantum computer do?
+            url: overview/quantum-computers.md
+          - text: Why learn quantum computing?
+            url: overview/why-learn-quantum-computing.md
+          - text: What is Q#?
+            url: overview/what-is-qsharp.md
+          - text: How can I learn about quantum computing?
+            url: overview/how-to-learn-quantum-computing.md
 
 
   # Develop
@@ -41,10 +41,10 @@ landingContent:
     linkLists:
     - linkListType: download
       links:
-      - text: Install the QDK
-        url: install-guide/index.md
-      - text: Update the QDK
-        url: install-guide/update.md
+        - text: Install the QDK
+          url: install-guide/index.md
+        - text: Update the QDK
+          url: install-guide/update.md
 
 
   # Develop
@@ -58,10 +58,10 @@ landingContent:
             url: quickstart.md            
           - text: Learn about impactful quantum programs with Q#
             url: quickstarts/search.md
-    - linkListType: tutorial
-      links:
-      - text: Qubit-level programming
-        url: tutorials/qft-tutorial.md
+      - linkListType: tutorial
+        links:
+          - text: Qubit-level programming
+            url: tutorials/qft-tutorial.md
 
 
   # Samples
@@ -69,7 +69,7 @@ landingContent:
     linkLists:
       - linkListType: learn
         links:
-		  - text: Learn with the Quantum Katas
+          - text: Learn with the Quantum Katas
             url: intro-to-katas.md
           - text: Browse Q# code samples
             url: https://docs.microsoft.com/samples/browse/?languages=qsharp
@@ -80,29 +80,29 @@ landingContent:
     linkLists:
       - linkListType: learn
         links:
-        - text: Q# language introduction
-          url: language/index.md
-		- text: Q# development techniques
-          url: techniques/index.md
+          - text: Q# language introduction
+            url: language/index.md
+          - text: Q# development techniques
+            url: techniques/index.md
 
 
-# Reference card
-- title: Target machines
-  linkLists:
-    - linkListType: overview
-      links:
-        - text: Quantum simulators & host applications
-          url: machines/index.md
-	- linkListType: architecture
-      links:
-        - text: Full-state simulator
-          url: machines/full-state-simulator.md
-		- text: Resource estimator
-          url: machines/resource-estimator.md
-		- text: Trace simulator
-          url: machines/qc-trace-simulator/index.md
-		- text: Toffoli simulator
-          url: machines/toffoli-simulator.md
+  # Reference card
+  - title: Target machines
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Quantum simulators & host applications
+            url: machines/index.md
+      - linkListType: architecture
+        links:
+          - text: Full-state simulator
+            url: machines/full-state-simulator.md
+          - text: Resource estimator
+            url: machines/resource-estimator.md
+          - text: Trace simulator
+            url: machines/qc-trace-simulator/index.md
+          - text: Toffoli simulator
+            url: machines/toffoli-simulator.md
   
   # Reference card
   - title: Quantum computing concepts
@@ -114,9 +114,9 @@ landingContent:
 
 
 
-# Library card
-  -  title: Q# libraries
-     linkLists:
+  # Library card
+  - title: Q# libraries
+    linkLists:
       - linkListType: reference
         links:
           - text: Standard libraries
@@ -153,5 +153,3 @@ landingContent:
             url: contributing/index.md
           - text: Read the Microsoft Quantum blog
             url: https://cloudblogs.microsoft.com/quantum
-
-      

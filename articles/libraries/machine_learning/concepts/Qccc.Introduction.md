@@ -26,8 +26,8 @@ where $P(M=y|z)$ is the probability of measuring $y$ in quantum state $z$.
 ## Classifier bias and training score
 Given some intermediate (or final) values of the parameters in $\theta$, we need to identify a single real value $b$ know as `classifier bias` to do the inference. The label inference rule works as follows:
 	A sample $x$ is assigned label $y_2$ if and only if
-$$ P(M=y_2|U(\theta) x) + b > 0.5 $$  (*)
+$$ P(M=y_2|U(\theta) x) + b > 0.5 $$  (RULE1)
 (otherwise it is assigned label $y_1$)
 Clearly $b$ must be in the interval $(-0.5,+0.5)$ to be meaningful.
-A training case $(x,y) \in \mathcal{D}$ is considered a `misclassification` given the bias $b$ if the label inferred for $x$ as per rule (*) is actually different from $y$. The overall number of misclassifications is the `training score` of the classifier given the bias $b$. The `optimal` classifier bias $b$ minimizes the training score.
+A training case $(x,y) \in \mathcal{D}$ is considered a `misclassification` given the bias $b$ if the label inferred for $x$ as per RULE1 is actually different from $y$. The overall number of misclassifications is the `training score` of the classifier given the bias $b$. The `optimal` classifier bias $b$ minimizes the training score.
 It is easy to see that, given the precomputed probability estimates $\{ P(M=y_2|U(\theta) x) | (x,*)\in\mathcal{D}$, the optimal classifier bias can be found by binary search in interval $(-0.5,+0.5)$ by making at most $\log_2(|\mathcal{D}|)$ steps.

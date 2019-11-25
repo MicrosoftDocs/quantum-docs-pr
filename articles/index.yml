@@ -58,7 +58,7 @@ landingContent:
             url: quickstarts/qrng.md
           - text: Quantum basics with Q#
             url: quickstart.md            
-          - text: Quantum speedup: Grover's search algorithm
+          - text: "Quantum speedup: Grover's search algorithm"
             url: quickstarts/search.md
       - linkListType: tutorial
         links:

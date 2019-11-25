@@ -97,8 +97,8 @@ landingContent:
         links:
           - text: Full-state simulator
             url: machines/full-state-simulator.md
-          - text: Resource estimator
-            url: machines/resource-estimator.md
+          - text: Resources estimator
+            url: machines/resources-estimator.md
           - text: Trace simulator
             url: machines/qc-trace-simulator/index.md
           - text: Toffoli simulator

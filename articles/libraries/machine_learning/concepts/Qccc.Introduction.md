@@ -12,3 +12,22 @@ Both the encoding and the computing of the classifier state are done by means of
 ![Rapidly entangling quantum circuit on 5 qubits (with two cyclic layers).](./5qubitCircuit.png)
 
 The circuit consists of 6 single-qubit gates $(G_1,\ldots,G_5; G_{16})$ and 10 two-qubits gates $(G_6,\ldots,G_{15})$. Assuming that each of the gates is defined with one learnable parameter we have 16 learnable parameters, while the dimension of the 5-qubit Hilbert space is 32. Such circuit geometry can be easily generalized to any $n$-qubit register, when $n$ is odd, yielding circuits with $3\, n+1$ parameters for $2^n$-dimensional feature space.
+
+#Classifier training as a supervised learning task
+Training of a classifier model involves finding optimal values of its operational parameters, such that they maximize the average likelihood of inferring the correct training labels across the training samples.
+Here  we concern ourselves with two level classification only, i.e. the case of $d=2$ and only two classes with the labels $y_1,y_2$. \footnote{A principled way of generalizing our methods to arbitrary number of classes is to replace qubits with q-dits, i.e. quantum units with $d$ basis states, end the two-way measurement with $d$-way measurement.}
+
+##Likelihood as the training goal
+Given a learnable quantum circuit $U(\theta)$, where $\theta$ is a vector of parameters, and denoting the final measurement by $M$, the average likelihood of the correct label inference is
+$$\mathcal{L}(\theta)=\frac{1}{|\mathcal{D}|} \left( \sum{(x,y_1)\in\mathcal{D}} P(M=y_1|U(\theta) x) + \sum{(x,y_2)\in\mathcal{D}} P(M=y_2|U(\theta) x)\right)$$
+where $P(M=y|z)$ is the probability of measuring $y$ in quantum state $z$.
+ Here it suffices to understand that the likelihood function $\mathcal{L}(\theta)$ is smooth in $\theta$ and its derivative in any $\theta_j$ can be computed by essentially the same quantum protocol as used for computing the likelihood function itself. This allows for optimizing the $\mathcal{L}(\theta)$ by gradient descent.
+
+##Classifier bias and training score
+Given some intermediate (or final) values of the parameters in $\theta$, we need to identify a single real value $b$ know as `classifier bias` to do the inference. The label inference rule works as follows:
+	A sample $x$ is assigned label $y_2$ if and only if
+$$ P(M=y_2|U(\theta) x) + b > 0.5 $$  (*)
+(otherwise it is assigned label $y_1$)
+Clearly $b$ must be in the interval $(-0.5,+0.5)$ to be meaningful.
+A training case $(x,y) \in \mathcal{D}$ is considered a `misclassification` given the bias $b$ if the label inferred for $x$ as per rule (*) is actually different from $y$. The overall number of misclassifications is the `training score` of the classifier given the bias $b$. The `optimal` classifier bias $b$ minimizes the training score.
+It is easy to see that, given the precomputed probability estimates $\{ P(M=y_2|U(\theta) x) | (x,*)\in\mathcal{D}$, the optimal classifier bias can be found by binary search in interval $(-0.5,+0.5)$ by making at most $\log_2(|\mathcal{D}|)$ steps.

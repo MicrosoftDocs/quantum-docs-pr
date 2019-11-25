@@ -24,6 +24,8 @@ landingContent:
         links:
           - text: The Quantum Development Kit
             url: welcome.md
+      - linkListType: learn
+        links:
           - text: What is quantum computing?
             url: overview/what-is-quantum-computing.md
           - text: What can a quantum computer do?
@@ -56,7 +58,7 @@ landingContent:
             url: quickstarts/qrng.md
           - text: Quantum basics with Q#
             url: quickstart.md            
-          - text: Learn about impactful quantum programs with Q#
+          - text: Quantum speedup: Grover's search algorithm
             url: quickstarts/search.md
       - linkListType: tutorial
         links:
@@ -64,19 +66,17 @@ landingContent:
             url: tutorials/qft-tutorial.md
 
 
-  # Samples
-  - title: Q# learning resources
+  # Reference card
+  - title: Quantum computing concepts
     linkLists:
-      - linkListType: learn
+      - linkListType: concept
         links:
-          - text: Learn with the Quantum Katas
-            url: intro-to-katas.md
-          - text: Browse Q# code samples
-            url: https://docs.microsoft.com/samples/browse/?languages=qsharp
+          - text: Quantum computing concepts
+            url: concepts/index.md
 
  
   # Development
-  - title: Q# language & development techniques
+  - title: Q# programming language
     linkLists:
       - linkListType: learn
         links:
@@ -104,14 +104,15 @@ landingContent:
           - text: Toffoli simulator
             url: machines/toffoli-simulator.md
   
-  # Reference card
-  - title: Quantum computing concepts
+  # Samples
+  - title: Q# learning resources
     linkLists:
-      - linkListType: concept
+      - linkListType: learn
         links:
-          - text: Quantum computing concepts
-            url: concepts/index.md
-
+          - text: Learn with the Quantum Katas
+            url: intro-to-katas.md
+          - text: Browse Q# code samples
+            url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 
 
   # Library card

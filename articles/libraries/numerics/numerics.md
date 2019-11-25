@@ -65,7 +65,7 @@ For each of the three types above, a variety of operations is available:
     - Reciprocal (1/x)
     - Measurement (classical Double)
 
-For more information and detailed documentation for each of these operations, see the Q# library reference docs at [docs.microsoft.com](https://docs.microsoft.com/en-us/quantum)
+For more information and detailed documentation for each of these operations, see the Q# library reference docs at [docs.microsoft.com](https://docs.microsoft.com/quantum)
 
 ## Sample: Integer addition
 

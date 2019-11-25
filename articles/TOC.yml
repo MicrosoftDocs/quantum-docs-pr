@@ -16,7 +16,7 @@
       href: overview/what-is-qsharp.md
     - name: How to learn quantum computing?
       href: overview/how-to-learn-quantum-computing.md
-- name: Install and update the QDK
+- name: Install and update
   items:
   - name: Install the QDK
     href: install-guide/index.md

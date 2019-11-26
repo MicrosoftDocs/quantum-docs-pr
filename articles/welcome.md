@@ -15,7 +15,7 @@ The QDK contains all the tools you'll need to build your own quantum programs an
 Specifically, Q# allows you to write sub-programs that execute on an adjunct quantum processor under the control of a classical host program and computer. 
 
 To jump right in, you can head over to the [QDK installation guide](xref:microsoft.quantum.install).
-You'll then be guided through installing the Quantum Development Kit on Windows, Linux, or macOS machines so that you can write your own quantum programs.
+You'll then be guided through installing the Quantum Development Kit on Windows, Linux, or MacOS machines so that you can write your own quantum programs.
 
 If you don't feel quite ready to start coding, but want to learn more about quantum computing and Q#, we encourage you to still read this article to get a feel for the resources at your disposal. 
 In the [five questions about quantum computing](#five-questions-about-quantum-computing) section, you'll find links to precisely what you're looking for!

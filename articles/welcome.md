@@ -12,7 +12,6 @@ ms.topic: overview
 
 Welcome to the Microsoft Quantum Development Kit!  
 The QDK contains all the tools you'll need to build your own quantum programs and experiments with Q#, a programming language designed specifically for quantum application development. 
-Specifically, Q# allows you to write sub-programs that execute on an adjunct quantum processor under the control of a classical host program and computer. 
 
 To jump right in, you can head over to the [QDK installation guide](xref:microsoft.quantum.install).
 You'll then be guided through installing the Quantum Development Kit on Windows, Linux, or MacOS machines so that you can write your own quantum programs.
@@ -32,13 +31,13 @@ To get up and running with the power of quantum, you can try out our *quickstart
 	This quickstart guides you through developing the program in a variety programming environments (with a Python host or with .NET language host and with Visual Studio or Visual Studio Code).
 
 ### Learning further
-* Our [samples repository](https://github.com/Microsoft/Quantum) showcases multiple examples on how to write quantum programs using Q#. Most of these samples are written using our open-source [quantum libraries](https://github.com/Microsoft/QuantumLibraries), including our [standard](xref:microsoft.quantum.libraries.standard.intro) and [chemistry](xref:microsoft.quantum.chemistry.concepts.intro) libraries (more info on these below). 
 * If you want to dive deeper into Q# programming, check out the [Quantum Katas](https://github.com/Microsoft/QuantumKatas) - a collection of self-paced programming exercises that introduce you to quantum computing via programming exercises in Q#.
-	Many of these katas are also available as Q# Notebooks.  
+	Many of these katas are also available as Q# Notebooks. 
+* Our [samples repository](https://github.com/Microsoft/Quantum) showcases multiple examples on how to write quantum programs using Q#. Most of these samples are written using our open-source [quantum libraries](https://github.com/Microsoft/QuantumLibraries), including our [standard](xref:microsoft.quantum.libraries.standard.intro) and [chemistry](xref:microsoft.quantum.chemistry.concepts.intro) libraries (more info on these below).
 
 ## Five questions about quantum computing
 
-If you are a newcomer to the quantum development, we know that this can all seem a bit daunting. We've provided resources to help you get started with learning about quantum computing. 
+If you are a newcomer to quantum development, we know that this can all seem a bit daunting. We've provided resources to help you get started with learning about quantum computing. 
 With the help of these short articles, we're confident you'll be eager to get started programming in no time.
 * [What is quantum computing?](xref:microsoft.quantum.overview.what)
 * [What can quantum computers do?](xref:microsoft.quantum.overview.computers)
@@ -49,11 +48,6 @@ With the help of these short articles, we're confident you'll be eager to get st
 ## Quantum Development Kit Documentation
 
 The current documentation includes the following additional topics.
-
-### General quantum computing
-* [Quantum computing concepts](xref:microsoft.quantum.concepts.intro) includes topics such as the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
-* [Quantum computing glossary](xref:microsoft.quantum.glossary) is a glossary of some crucial terms specific to quantum computing and program development. 
-	If you are new to the field, this could be a handy reference as you read through our documentation.
 
 ### Using Q#
 * [Quantum development techniques](xref:microsoft.quantum.techniques.intro) specifies the core concepts used to create quantum programs in Q#. Topics include file structures, operations and functions, working with qubits, and some advanced topics.
@@ -67,8 +61,13 @@ The current documentation includes the following additional topics.
 * [Q# numerics library](xref:microsoft.quantum.numerics.intro) describes the operations and functions that support expressing complicated arithmetic functions in terms of the native operations of target machines.
 * [Q# library reference](xref:microsoft.quantum.standardlibsintro) contains reference information about library entities by namespace.
 
-### Additional info
+### General quantum computing
+* [Quantum computing concepts](xref:microsoft.quantum.concepts.intro) includes topics such as the relevance of linear algebra to quantum computing, the nature and use of a qubit, how to read a quantum circuit, and more.
+* [Quantum computing glossary](xref:microsoft.quantum.glossary) is a glossary of some crucial terms specific to quantum computing and program development. 
+	If you are new to the field, this could be a handy reference as you read through our documentation.
 * [Further reading](xref:microsoft.quantum.more-information) contains specially selected references for in-depth coverage of quantum computing topics.
+
+### Additional info
 * [Microsoft Quantum Development kit release notes](xref:microsoft.quantum.relnotes).
 
 

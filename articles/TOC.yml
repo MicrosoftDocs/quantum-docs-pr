@@ -44,10 +44,10 @@
     href: language/toc.yml
   - name: Q# libraries
     href: libraries/toc.yml
-  - name: Quantum computing concepts
-    href: concepts/toc.yml
   - name: Quantum simulators and resource estimators
     href: machines/toc.yml
+  - name: Quantum computing concepts
+    href: concepts/toc.yml
 - name: Q# Learning Resources
   items:
   - name: Learn with the Quantum Katas

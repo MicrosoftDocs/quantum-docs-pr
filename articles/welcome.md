@@ -38,7 +38,7 @@ To get up and running with the power of quantum, you can try out our *quickstart
 
 ## Five questions about quantum computing
 
-If you are a newcomer to the quantum realm, we know that this can all seem a bit daunting. The best advice we can give is to not be discouraged! 
+If you are a newcomer to the quantum development, we know that this can all seem a bit daunting. We've provided resources to help you get started with learning about quantum computing. 
 With the help of these short articles, we're confident you'll be eager to get started programming in no time.
 * [What is quantum computing?](xref:microsoft.quantum.overview.what)
 * [What can quantum computers do?](xref:microsoft.quantum.overview.computers)

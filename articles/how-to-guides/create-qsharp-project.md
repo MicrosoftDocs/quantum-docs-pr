@@ -70,7 +70,7 @@ Choose your development environment and language from the sections below:
 
 You can now continue to develop your quantum program.
 
-## Create a Jupyter Notebook project
+## Create a Q# Jupyter Notebook project
 
 1. Pre-requisites
 

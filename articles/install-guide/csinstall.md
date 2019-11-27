@@ -56,7 +56,7 @@ Visual Studio offers a rich environment for developing Q# programs. The Q# Visua
 
 ## Develop with Q# + C#, using Visual Studio Code
 
-Visual Studio Code (VS Code) offers a rich environment for developing Q# programs across many multiple computer environments, including Windows, Linux and Mac, offering great features like code completion and syntax highlighting that guide the developer in building their applications.  The Q# VS Code extension contains syntax highlighting, and Q# code snippets.
+Visual Studio Code (VS Code) offers a rich environment for developing Q# programs on Windows, Linux and Mac.  The Q# VS Code extension includes support for Q# syntax highlighting, code completion, and Q# code snippets.
 
 1. Pre-requisites
 

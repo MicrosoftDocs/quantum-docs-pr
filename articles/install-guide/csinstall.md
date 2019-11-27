@@ -19,7 +19,7 @@ Q# is a member of the .NET ecosystem and therefore is built to play well with ot
 
 ## Develop with Q# + C# on Windows, using Visual Studio
 
-Visual Studio offers a rich environment for developing Q# programs, offering great features like code completion and syntax highlighting that guide the developer in building their applications. The Q# Visual Studio extension contains templates for Q# files and projects as well as syntax highlighting and IntelliSense support.
+Visual Studio offers a rich environment for developing Q# programs. The Q# Visual Studio extension contains templates for Q# files and projects as well as syntax highlighting, code completion and IntelliSense support.
 
 
 1. Pre-requisites

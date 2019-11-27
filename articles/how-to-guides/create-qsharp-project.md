@@ -74,7 +74,7 @@ You can now continue to develop your quantum program.
 
 1. Pre-requisites
 
-    * The [Quantum Development Kit for Jupyter notebooks](xref:microsoft.quantum.install.jupyter)
+    * Install the [Quantum Development Kit for Jupyter notebooks](xref:microsoft.quantum.install.jupyter)
 
 1. Run the following command to start the notebook server:
 

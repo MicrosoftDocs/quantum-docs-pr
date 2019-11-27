@@ -27,7 +27,7 @@ Choose your development environment and language from the sections below:
 
 1. Pre-requisites
 
-     * The [Quantum Development Kit for Python](xref:microsoft.quantum.install.python)
+     * Install the [Quantum Development Kit for Python](xref:microsoft.quantum.install.python)
 
 1. Create a folder for your project, and navigate to that folder
 

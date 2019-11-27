@@ -35,7 +35,7 @@ This is the installation guide for the QDK environment to program hybrid Q# and 
 1. Although it's not strictly necessary, we highly recommend to use the lightweight Visual Studio Code (VS Code) IDE to edit the Q# and Python files. Together with the QDK extension for VS Code this will provide code completion and syntax syntax highlighting features to make the coding easier.
 
     - Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac)
-    - Install the [QDK extension for VS Code].
+    - Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
 1. Verify the installation by creating a `Hello World` application
 

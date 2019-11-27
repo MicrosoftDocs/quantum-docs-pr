@@ -162,7 +162,7 @@ You can now continue your quantum development using Visual Studio Code.
 
 1. Pre-requisites
 
-    * The [Quantum Development Kit for the Command Line](xref:microsoft.quantum.install.cs)
+    * Install the [Quantum Development Kit for the Command Line](xref:microsoft.quantum.install.cs)
 
 1. Create a new application
 

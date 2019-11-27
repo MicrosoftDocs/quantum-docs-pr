@@ -11,7 +11,7 @@ uid: microsoft.quantum.install.jupyter
 # Develop with Q# Jupyter notebooks
 
 > [!WARNING]
-> * In Q# Jupyter Notebooks you only can run Q# code and you cannot call operations defined in the notebook from an external classical host program in Python or C#. This environment is not appropiate if your goal is to combine an external classical host program with the quantum program.
+> * In Q# Jupyter Notebooks you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files). This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.
 
 Commonplace in academic settings, scientific labs, and online-based collaborative programming, Jupyter Notebooks allow in-place code execution alongside instructions, notes, and other content. This environment is great for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
 

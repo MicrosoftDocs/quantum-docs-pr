@@ -110,7 +110,7 @@ You can now add other Q# operations to continue your quantum development.
 
 1. Pre-requisites
 
-    * The [Quantum Development Kit for Visual Studio](xref:microsoft.quantum.install.cs)
+    * Install the [Quantum Development Kit extension for Visual Studio](xref:microsoft.quantum.install.cs)
 
 1. Create a new Q# application
 

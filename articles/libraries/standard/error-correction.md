@@ -129,4 +129,4 @@ using (scratch = Qubit[nScratch]) {
 
 We explore this in more detail in the [bit flip code sample](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
 
-Aside from the bit-flip code, the Q# canon is provided with implementations of the [five-qubit perfect code](https://arxiv.org/abs/1305.08), and the [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052), both of which can correct an arbitrary single-qubit error.
+Aside from the bit-flip code, the Q# canon is provided with implementations of the [five-qubit perfect code](https://arxiv.org/abs/quant-ph/9602019), and the [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052), both of which can correct an arbitrary single-qubit error.

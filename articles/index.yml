@@ -50,7 +50,7 @@ landingContent:
 
 
   # Develop
-  - title: Quickstarts and tutorials
+  - title: Quickstarts
     linkLists:
       - linkListType: quickstart
         links:
@@ -60,10 +60,6 @@ landingContent:
             url: quickstart.md            
           - text: "Quantum speedup: Grover's search algorithm"
             url: quickstarts/search.md
-      - linkListType: tutorial
-        links:
-          - text: Qubit-level programming
-            url: tutorials/qft-tutorial.md
 
 
   # Reference card

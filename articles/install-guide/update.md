@@ -107,7 +107,6 @@ Select your development environment below.
     dotnet iqsharp install
     ```
 	If after the second command you see an error message `Could not install iqsharp into your Jupyter configuration...`, do not fret. 
-	Simply keep following the steps below, and enter the command again after step 3.
 
 2. Verify the `iqsharp` version
 

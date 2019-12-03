@@ -14,7 +14,7 @@ Learn how to update the Microsoft Quantum Development Kit (QDK) to the latest ve
 
 This article assumes that you already have the QDK installed. If you are installing for the first time, then please refer to the [installation guide](xref:microsoft.quantum.install).
 
-If you saw that a new version of the QDK was released and you would like to get with the times, then you're in the right place.
+We recommend keeping up to date with the latest QDK release. Follow this update guide to upgrade to the most recent QDK version. 
 The process consists of two parts:
 1. updating your existing Q# files and projects to align your code with any updated syntax
 2. updating the QDK itself for your chosen development environment 

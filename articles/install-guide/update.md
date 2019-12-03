@@ -106,7 +106,7 @@ Select your development environment below.
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
-	If after the second command you see an error message `Could not install iqsharp into your Jupyter configuration...`, do not fret. 
+	If after the second command you see an error message `Could not install iqsharp into your Jupyter configuration...`, you can keep following the steps below and enter the command again after step 3. 
 
 2. Verify the `iqsharp` version
 

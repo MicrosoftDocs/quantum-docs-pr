@@ -86,7 +86,7 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 
 With your Q# projects now updated, follow the instructions below to update the QDK itself.
 
-## 2. Updating the QDK
+## Updating the QDK
 
 The process to update the QDK varies depending on your development language and environment.
 Select your development environment below.

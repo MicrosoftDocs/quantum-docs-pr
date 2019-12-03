@@ -27,7 +27,7 @@ Regardless of whether you are using C# or Python to host Q# operations, follow t
 	```bash
 	dotnet --version
 	```
-Verify the output is `3.0.100` or higher, then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).
+Verify the output is `3.0.100` or higher. If not, install the [latest version](https://dotnet.microsoft.com/download) and check again. Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).
 
 ### Update Q# projects in Visual Studio
  

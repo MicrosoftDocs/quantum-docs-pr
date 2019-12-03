@@ -89,7 +89,7 @@ With your Q# projects now updated, follow the instructions below to update the Q
 ## 2. Updating the QDK
 
 The process to update the QDK varies depending on your development language and environment.
-Select yours below to be taken to the proper instructions.
+Select your development environment below.
 
 * [Python: update the IQ# extension](#update-iq-for-python)
 * [Jupyter Notebooks: update the IQ# extension](#update-iq-for-jupyter-notebooks)

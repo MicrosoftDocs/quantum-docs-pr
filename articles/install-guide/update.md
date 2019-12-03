@@ -19,7 +19,7 @@ The process consists of two parts:
 1. updating your existing Q# files and projects to align your code with any updated syntax
 2. updating the QDK itself for your chosen development environment 
 
-## 1. Updating Q# Projects 
+## Updating Q# Projects 
 
 Regardless of whether you are using C# or Python to host Q# operations, follow these instructions to update your Q# projects.
 

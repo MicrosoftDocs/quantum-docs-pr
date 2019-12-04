@@ -7,7 +7,10 @@ ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.index
 ---
 # Framework and goals
-Quantum encoding and processing of information is a powerful alternative to traditional predictive data analysis (that uses tools such as support vector machines, neural nets, decision trees etc.) Quantum classifiers, in particular, encode data in quantum registers that are concise relative to the number of features, systematically employ quantum entanglement as computational resource and employ quantum measurement for class inference. Circuit centric quantum classifier is a relatively simple quantum solution that combines data encoding with a rapidly entangling/disentangling quantum circuit followed by measurement to infer class labels of data samples. The goal is to ensure classical characterization and storage of subject circuits, as well as hybrid quantum/classical training of the circuit parameters even for extremely large feature spaces.
+Quantum encoding and processing of information is a powerful alternative to traditional predictive data analysis (that uses tools such as support vector machines, neural nets, decision trees etc.)
+Quantum classifiers, in particular, encode data in quantum registers that are concise relative to the number of features, systematically employ quantum entanglement as computational resource and employ quantum measurement for class inference.
+Circuit centric quantum classifier is a relatively simple quantum solution that combines data encoding with a rapidly entangling/disentangling quantum circuit followed by measurement to infer class labels of data samples.
+The goal is to ensure classical characterization and storage of subject circuits, as well as hybrid quantum/classical training of the circuit parameters even for extremely large feature spaces.
 
 # Classifier architecture
 Classification is a supervised machine learning task, where the goal is to infer class labels $\{y_1,y_2,\ldots,y_d\}$ of certain data samples. The `training data set` is a collection of samples $\mathcal{D}=\{(x,y)}$ with known pre-assigned labels. Here $x$ is a data sample and $y$ is its known label called `training label`.

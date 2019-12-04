@@ -22,8 +22,8 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 This release contains the following:
 
-- New support for Test attribute for unit testing, see [here](xref:https://docs.microsoft.com/en-us/quantum/techniques/testing-and-debugging?view=qsharp-preview&tabs=tabid-vs2019) for updated documentation
-- Support for stack trace in the case of a Q# program execution error
+- New Test attribute for Q# unit testing, see [here](xref:https://docs.microsoft.com/en-us/quantum/techniques/testing-and-debugging?view=qsharp-preview&tabs=tabid-vs2019) for updated documentation
+- Added stack trace in the case of a Q# program execution error
 - Support for breakpoints in Visual Studio Code due to an update in the [OmniSharp C# Visual Studio Code extension](xref:https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  

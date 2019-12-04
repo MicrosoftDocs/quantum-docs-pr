@@ -33,7 +33,8 @@ A usual default value of MBS is 10.
 
 ## Training epochs, tolerance, gridlocks
 
-`Epoch` means one complete pass through the scheduled training data. The maximum number of epochs per a training thread (see below) should be capped. 
+"Epoch" means one complete pass through the scheduled training data.
+The maximum number of epochs per a training thread (see below) should be capped. 
 The training thread is defined to terminate (with the best known candidate parameters) when the maximum number of epochs has been executed. However such training
  would terminate earlier when misclassification rate on validation schedule falls below a chosen tolerance. Suppose, for example, that misclassification tolerance
  is 0.01 (1%); if on validation set of 2000 samples we are seeing fewer than 20 misclassifications, then the tolerance level has been achieved. A training thread

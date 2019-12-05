@@ -107,6 +107,14 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
+Unit tests can be filtered according to their name and/or the execution target:
+
+```bash 
+$ dotnet test --filter "Target=QuantumSimulator"
+$ dotnet test --filter "Name=AllocateQubit"
+```
+
+
 ***
 
 The intrinsic function <xref:microsoft.quantum.intrinsic.message> has type `(String -> Unit)` and enables the creation of diagnostic messages.

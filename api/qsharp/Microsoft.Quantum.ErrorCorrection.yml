@@ -42,14 +42,20 @@ functions:
     perform a table-lookup decoding with respect to the given array of Pauli operations.
 operations:
 - uid: microsoft.quantum.errorcorrection.bitflipdecoder
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    BitFlipDecoder has been deprecated. Please use @"microsoft.quantum.errorcorrection.decodefrombitflipcode" instead.
     Please use @"microsoft.quantum.errorcorrection.encodeintobitflipcode".
 - uid: microsoft.quantum.errorcorrection.bitflipencoder
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    BitFlipEncoder has been deprecated. Please use @"microsoft.quantum.errorcorrection.encodeintobitflipcode" instead.
     Please use @"microsoft.quantum.errorcorrection.encodeintobitflipcode".
 - uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
   summary: Decodes from the [3, 1, 3] / ⟦3, 1, 1⟧ bit-flip code.
@@ -68,14 +74,20 @@ operations:
     An encoding operation that maps an unencoded quantum register to an encoded quantum register
     under the ⟦7, 1, 3⟧ Steane quantum code.
 - uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    FiveQubitCodeDecoder has been deprecated. Please use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode" instead.
     Please use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
 - uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    FiveQubitCodeEncoder has been deprecated. Please use @"microsoft.quantum.errorcorrection.encodeintofivequbitcode" instead.
     Please use @"microsoft.quantum.errorcorrection.encodeintofivequbitcode".
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
   summary: |-
@@ -110,14 +122,20 @@ operations:
     Performs a single round of error correction by a quantum code
     described by a `CSS` type.
 - uid: microsoft.quantum.errorcorrection.steanecodedecoder
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    SteaneCodeDecoder has been deprecated. Please use @"microsoft.quantum.errorcorrection.decodefromsteanecode" instead.
     Please use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
 - uid: microsoft.quantum.errorcorrection.steanecodeencoder
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    SteaneCodeEncoder has been deprecated. Please use @"microsoft.quantum.errorcorrection.encodeintosteanecode" instead.
     Please use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
 newtypes:
 - uid: microsoft.quantum.errorcorrection.css

@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.math.absd
 name: AbsD
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.absd".
+summary: AbsD has been deprecated. Please use @"microsoft.quantum.math.absd" instead.
 syntax: 'function AbsD (a : Double) : Double'
 input:
   content: '(a : Double)'

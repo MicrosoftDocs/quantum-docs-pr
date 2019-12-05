@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.assertprobintbe
 name: AssertProbIntBE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  This operation has been removed.
+summary: AssertProbIntBE has been deprecated. Please use @"assertprobint(stateindex, prob, bigendianaslittleendian(qubits), tolerance)" instead.
 syntax: 'operation AssertProbIntBE (stateIndex : Int, prob : Double, qubits : Microsoft.Quantum.Arithmetic.BigEndian, tolerance : Double) : Unit'
 input:
   content: '(stateIndex : Int, prob : Double, qubits : Microsoft.Quantum.Arithmetic.BigEndian, tolerance : Double)'

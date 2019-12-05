@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.iscoprime
 name: IsCoprime
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.greatestcommondivisori".
+summary: IsCoprime has been deprecated. Please use @"microsoft.quantum.math.iscoprimei" instead.
 syntax: 'function IsCoprime (a : Int, b : Int) : Bool'
 input:
   content: '(a : Int, b : Int)'

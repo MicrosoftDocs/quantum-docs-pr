@@ -25,8 +25,7 @@ Q# supports creating unit tests for quantum programs, and which can be executed 
 #### [Visual Studio 2019](#tab/tabid-vs2019)
 
 Open Visual Studio 2019. Go to the `File` menu and select `New` > `Project...`.
-In the project template explorer, under `Installed` > `Visual C#`,
-select the `Q# Test Project` template.
+In the upper right corner, search for `Q#`, and select the `Q# Test Project` template.
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
@@ -39,12 +38,13 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-In either case, your new project will have two files open.
-The first file, `Tests.qs`, provides a convenient place to define new Q# unit tests.
-Initially this file contains one sample unit test `AllocateQubitTest` which checks that a newly allocated qubit is in the $\ket{0}$ state and prints a message:
+Your new project will have a single file `Tests.qs`, which provides a convenient place to define new Q# unit tests.
+Initially this file contains one sample unit test `AllocateQubit` which checks that a newly allocated qubit is in the $\ket{0}$ state and prints a message:
 
 ```qsharp
-    operation AllocateQubitTest () : Unit {
+    @Test("QuantumSimulator")
+    operation AllocateQubit () : Unit {
+
         using (q = Qubit()) {
             Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
@@ -53,33 +53,17 @@ Initially this file contains one sample unit test `AllocateQubitTest` which chec
     }
 ```
 
-Any Q# operation compatible with the type `(Unit => Unit)` or function compatible with `(Unit -> Unit)` can be executed as a unit test. 
-
-The second file, `TestSuiteRunner.cs` contains a method that discovers and runs Q# unit tests. 
-This is the method `TestTarget` annotated with `OperationDriver` attribute.
-The `OperationDriver` attribute is a part of the Xunit extension library Microsoft.Quantum.Simulation.Xunit.
-The unit testing framework calls `TestTarget` method for every Q# unit test it has discovered.
-The framework passes the unit test description to the method through `op` argument. The following line of code:
-```csharp
-op.TestOperationRunner(sim);
+:new: Any Q# operation or function that takes an argument of type `Unit` and returns `Unit` can be marked as a unit test via the `@Test("...")` attribute. 
+The argument to that attribute, `"QuantumSimulator"` above, specifies the target on which the test is executed. A single test can be executed on multiple targets. For example, add an attribute `@Test("ResourcesEstimator")` above `AllocateQubit`. 
+```qsharp
+    @Test("QuantumSimulator")
+    @Test("ResourcesEstimator")
+    operation AllocateQubit () : Unit {
+        ...
 ```
-executes the unit test on `QuantumSimulator`.
+Save the file and execute all tests. There should now be two unit tests, one where AllocateQubit is executed on the QuantumSimulator, and one where it is executed in the ResourceEstimator. 
 
-By default, the unit test discovery mechanism looks for all Q# functions or operations of compatible type
-that satisfy the following properties:
-* Located in the same assembly as the method annotated with the `OperationDriver` attribute.
-* Located in the same namespace as the method annotated with the `OperationDriver` attribute.
-* Has a name ending with `Test`.
-
-An assembly, a namespace, and a suffix for unit test functions and operations can be set using optional parameters of the `OperationDriver` attribute:
-* `AssemblyName` parameter sets the name of the assembly which is being searched for tests.
-* `TestNamespace` parameter sets the name of the namespace which is being searched for tests.
-* `Suffix` sets the suffix of operation or function names that are considered to be unit tests.
-
-In addition, the `TestCasePrefix` optional parameter lets you set a prefix for the name of the test case. 
-The prefix in front of the operation name will appear in the list of test cases. For example, 
-`TestCasePrefix = "QSim:"` will cause `AllocateQubitTest` to appear as `QSim:AllocateQubitTest` in the list 
-of found tests. This can be useful to indicate, for instance, which simulator is used to run a test.
+The Q# compiler recognizes the built-in targets "QuantumSimulator", "ToffoliSimulator", and "ResourcesEstimator" as valid execution targets for unit tests. It is also possible to specify any fully qualified name to define a custom execution target. 
 
 ### Running Q# Unit Tests
 
@@ -91,7 +75,7 @@ As a one-time per-solution setup, go to `Test` menu and select `Test Settings` >
 > The default processor architecture setting for Visual Studio is stored in the solution options (`.suo`) file for each solution.
 > If you delete this file, then you will need to select `X64` as your processor architecture again.
 
-Build the project, go to the `Test` menu and select `Windows` > `Test Explorer`. `AllocateQubitTest` will show up in the list of tests in the `Not Run Tests` group. Select `Run All` or run this individual test, and it should pass!
+Build the project, go to the `Test` menu and select `Windows` > `Test Explorer`. `AllocateQubit` will show up in the list of tests in the `Not Run Tests` group. Select `Run All` or run this individual test, and it should pass!
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
@@ -123,30 +107,17 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
+Unit tests can be filtered according to their name and/or the execution target:
+
+```bash 
+$ dotnet test --filter "Target=QuantumSimulator"
+$ dotnet test --filter "Name=AllocateQubit"
+```
+
+
 ***
 
-## Logging and Assertions
-
-One important consequence of the fact that functions in Q# have no side effects is that any effects of executing a function whose output type is the empty tuple `()` can never be observed from within a Q# program.
-That is, a target machine can choose not to execute any function which returns `()` with the guarantee that this omission will not modify the behavior of any following Q# code.
-This makes functions returning `()` a useful tool for embedding assertions and debugging logic into Q# programs. 
-
-### Logging
-
 The intrinsic function <xref:microsoft.quantum.intrinsic.message> has type `(String -> Unit)` and enables the creation of diagnostic messages.
-
-The `onLog` action of `QuantumSimulator` can be used to define actions performed when Q# code calls `Message`. By default logged messages are printed to standard output.
-
-When defining a unit test suite, the logged messages can be directed to the test output. When a project is created from Q# Test Project template, this redirection is pre-configured for the suite and created by default as follows:
-
-```qsharp
-using (var sim = new QuantumSimulator())
-{
-    // OnLog defines action(s) performed when Q# test calls operation Message
-    sim.OnLog += (msg) => { output.WriteLine(msg); };
-    op.TestOperationRunner(sim);
-}
-```
 
 #### [Visual Studio 2019](#tab/tabid-vs2019)
 
@@ -157,11 +128,15 @@ After you execute a test in Test Explorer and click on the test, a panel will ap
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
 The pass/fail status for each test is printed to the console by `dotnet test`.
-For failing tests, the outputs logged as a result of the `output.WriteLine(msg)` call above are also printed to the console to help diagnose the failure.
+For failing tests, the outputs are also printed to the console to help diagnose the failure.
 
 ***
 
-### Assertions
+## Assertions
+
+Because functions in Q# have no _logical_ side effects, any _other kinds_ of effects of executing a function whose output type is the empty tuple `()` can never be observed from within a Q# program.
+That is, a target machine can choose not to execute any function which returns `()` with the guarantee that this omission will not modify the behavior of any following Q# code.
+This makes functions returning `()` a useful tool for embedding assertions and debugging logic into Q# programs. 
 
 The same logic can be applied to implementing assertions. Let's consider a simple example:
 
@@ -397,5 +372,4 @@ namespace app
 
 On top of `Assert` and `Dump` functions and operations, Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) and [inspecting values of classic variables](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) are all possible during code execution on the simulator.
 
-Debugging in Visual Studio Code is not yet supported.
-
+Debugging in Visual Studio Code leverages the debugging capabilities provided by the C# for Visual Studio Code extension powered by OmniSharp and requires installing the [latest version](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp). 

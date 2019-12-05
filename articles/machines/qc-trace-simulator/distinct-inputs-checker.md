@@ -30,7 +30,7 @@ and operations acting on different qubits commute. Let us now consider an
 example, where this operation is used:
 
 ```qsharp
-operation DisctinctQubitCaptured2Test () : Unit {
+operation CapturedQubits () : Unit {
 
     using (q = Qubit[3]) {
         let op1 = CNOT(_, q[1]);

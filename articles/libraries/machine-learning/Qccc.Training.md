@@ -6,16 +6,16 @@ Training of a circuit-centric quantum classifier is a process with many moving p
 calibration by trial and error as training of traditional classifiers. Here we define the main concepts and ingredients of this training process. 
 
 # Training/testing schedules
-The the context of classifier training a `schedule` describes a subset of data samples in an overall training or testing set. A schedule is usually defined as a
+The the context of classifier training a *schedule* describes a subset of data samples in an overall training or testing set. A schedule is usually defined as a
 collection of sample indices.
 
 # Parameter/bias scores
-Given a candidate parameter vector and a classifier bias, their `validation score` is measured relative to a chosen validation schedule S and is expressed by a number of misclassifications
+Given a candidate parameter vector and a classifier bias, their *validation score* is measured relative to a chosen validation schedule S and is expressed by a number of misclassifications
  counted over all the samples in the schedule S
 
 
 # Hyperparameters
-The model training process is governed by certain pre-set values called `hyperparameters`:
+The model training process is governed by certain pre-set values called *hyperparameters*:
 
 ## Learning rate (LR) 
 

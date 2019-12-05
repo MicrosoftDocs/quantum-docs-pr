@@ -17,7 +17,6 @@ ms.topic: article
 
 Now that you've seen how to write interesting quantum programs in Q#, this section goes further by introducing a few more advanced topics that should prove useful going forward.
 
-<!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
 ## Generic Operations and Functions ##
 

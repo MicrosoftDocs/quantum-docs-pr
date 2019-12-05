@@ -6,7 +6,9 @@ namespace: Microsoft.Quantum.Convert
 summary: |-
   Produces a binary representation of a positive integer, using the
   little-endian representation for the returned array.
-remarks: The input `number` must be at most $2^{\texttt{bits}} - 1$.
+remarks: |-
+  The input `bits` must be between 0 and 63.
+  The input `number` must be between 0 and $2^{\texttt{bits}} - 1$.
 syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
 input:
   content: '(number : Int, bits : Int)'

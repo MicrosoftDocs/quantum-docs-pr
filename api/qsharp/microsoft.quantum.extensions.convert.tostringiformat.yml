@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.convert.tostringiformat
 name: ToStringIFormat
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.convert.intasstringwithformat".
+summary: ToStringIFormat has been deprecated. Please use @"microsoft.quantum.convert.intasstringwithformat" instead.
 syntax: 'function ToStringIFormat (a : Int, fmt : String) : String'
 input:
   content: '(a : Int, fmt : String)'

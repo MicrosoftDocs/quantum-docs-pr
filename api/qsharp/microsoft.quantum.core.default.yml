@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.default
+name: Default
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Returns a default instance of the specified type.
+syntax: "function Default () : 'T"
+input:
+  content: ()
+  types: []
+output:
+  content: "'T"
+  types:
+  - summary: Default value.
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: The type of the default value to return.
+...

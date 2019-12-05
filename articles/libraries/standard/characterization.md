@@ -73,7 +73,7 @@ Phase estimation for this reason appears within a number of quantum algorithms t
 ### Bayesian Phase Estimation ###
 
 > [!TIP]
-> For more details on Bayesian phase estimation in practice, please see the [**PhaseEstimation**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation) sample.
+> For more details on Bayesian phase estimation in practice, please see the [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) sample.
 
 The idea of Bayesian phase estimation is simple.
 You collect measurement statistics from the phase estimation protocol and then you process the results using Bayesian inference and provide an estimate of the parameter.
@@ -139,7 +139,10 @@ where the lower bound is reached in the limit of asymptotically large $Q$, and t
 Other relevant details include, say, the small space overhead of just $1$ ancilla qubit, or that the procedure is non-adaptive, meaning the required sequence of quantum experiments is independent of the intermediate measurement outcomes. In this and forthcoming examples where the choice of phase estimation algorithm is important, one should one should refer to the documentation such as @"microsoft.quantum.canon.robustphaseestimation" and the referenced publications therein for more information and for their the implementation.
 
 > [!TIP]
-> There are many samples where robust phase estimation is used. For phase estimation in extracting the ground state energy of various physical system, please see the [**H2 simulation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine), the [**SimpleIsing** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing), and the [**Hubbard model** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/HubbardSimulation).
+> There are many samples where robust phase estimation is used. For phase estimation in extracting the ground state energy of various physical system, 
+> please see the [**H2 simulation** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), 
+> the [**SimpleIsing** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple), 
+> and the [**Hubbard model** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
 
 
 ### Continuous Oracles ###

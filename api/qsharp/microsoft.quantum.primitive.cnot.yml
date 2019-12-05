@@ -3,11 +3,7 @@ uid: microsoft.quantum.primitive.cnot
 name: CNOT
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.intrinsic.cnot".
+summary: CNOT has been deprecated. Please use @"microsoft.quantum.intrinsic.cnot" instead.
 syntax: 'operation CNOT (control : Qubit, target : Qubit) : Unit'
 input:
   content: '(control : Qubit, target : Qubit)'

@@ -145,12 +145,14 @@ You can now continue your quantum development using Visual Studio
 
     * Go to **View** -> **Command Palette**
     * Select **Q#: Create New Project**
+	* Select **Standalone console application**
     * Navigate to the location on the file system where you would like to create the application
     * Click on the **Open new project...** button, once the project has been created
 
 1. Run the application:
 
-    * Go to **Debug** -> **Start Without Debugging**
+    * Go to **Terminal** -> **New Terminal**
+	* Enter `dotnet run`
     * You should see the following text in the output window `Hello quantum world!`
 
 You can now continue your quantum development using Visual Studio Code.

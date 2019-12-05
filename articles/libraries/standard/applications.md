@@ -68,9 +68,9 @@ using a product of $r d$ terms.
 
 > [!TIP]
 > Applications of the Trotter-Suzuki simulation algorithm are covered in the samples.
-> For the Ising model using only the intrinsic operations provided by each target machine, please see the [**SimpleIsing** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing).
-> For the Ising model using the Trotter-Suzuki library control structure, please see the [**IsingTrotter** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingTrotterEvolution).
-> For molecular Hydrogen using the Trotter-Suzuki library control structure, please see the [**H2 simulation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine).
+> For the Ising model using only the intrinsic operations provided by each target machine, please see the [**SimpleIsing** sample](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple).
+> For the Ising model using the Trotter-Suzuki library control structure, please see the [**IsingTrotter** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution).
+> For molecular Hydrogen using the Trotter-Suzuki library control structure, please see the [**H2 simulation** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line).
 
 In many cases, we would like to implement the simulation algorithm, but are not interested in the details of its implementation. For instance, the second-order integrator approximates
 $$
@@ -112,13 +112,13 @@ function TimeDependentTrotterSimulationAlgorithm(
 
 > [!TIP]
 > Applications of the simulation library are covered in the samples. 
-> For phase estimation in the Ising model using `SimulationAlgorithm`, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
-> For adiabatic state preparation in the Ising model using `TimeDependentSimulationAlgorithm`, please see the [**AdiabaticIsing** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/AdiabaticIsing).
+> For phase estimation in the Ising model using `SimulationAlgorithm`, please see the [**IsingPhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> For adiabatic state preparation in the Ising model using `TimeDependentSimulationAlgorithm`, please see the [**AdiabaticIsing** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
 
 
 ### Adiabatic State Preparation & Phase Estimation ###
 
-One common application of Hamiltonian simulation is adiabatic state preparation. Here, one is provided with two Hamiltonians $H\_{\text{start}}$ and $H\_{\text{end}}$, and a quantum state $\ket{\psi(0)}$ that is a ground state of the start Hamiltonian $H\_{\text{start}}$. Typically, $H\_{\text{start}}$ is chosen such that $\ket{\psi(0)}$ is easy to prepare from a computational basis state $\ket{0\cdots 0}$. By interpolating between these Hamiltonians in the time-dependent simulation problem sufficientl slowly, it is possible to end up, with high probability, in a ground state of the final Hamiltonian $H\_{\text{end}}$. Though preparing good approximations to Hamiltonian ground states could proceed in this manner by calling upon on time-dependent Hamiltonian simulation algorithms as a subroutine, other conceptually different approaches such as the variational quantum eigensolver are possible.
+One common application of Hamiltonian simulation is adiabatic state preparation. Here, one is provided with two Hamiltonians $H\_{\text{start}}$ and $H\_{\text{end}}$, and a quantum state $\ket{\psi(0)}$ that is a ground state of the start Hamiltonian $H\_{\text{start}}$. Typically, $H\_{\text{start}}$ is chosen such that $\ket{\psi(0)}$ is easy to prepare from a computational basis state $\ket{0\cdots 0}$. By interpolating between these Hamiltonians in the time-dependent simulation problem sufficiently slowly, it is possible to end up, with high probability, in a ground state of the final Hamiltonian $H\_{\text{end}}$. Though preparing good approximations to Hamiltonian ground states could proceed in this manner by calling upon on time-dependent Hamiltonian simulation algorithms as a subroutine, other conceptually different approaches such as the variational quantum eigensolver are possible.
 
 Yet another application ubiquitous in quantum chemistry is estimating the ground state energy of Hamiltonians representing the intermediate steps of chemical reaction. Such a scheme could, for instance, rely on adiabatic state preparation to create the ground state, and then incorporate time-independent Hamiltonian simulation as a subroutine in phase estimation characterization to extract this energy with some finite error and probability of success. 
 
@@ -158,11 +158,11 @@ operation AdiabaticStateEnergyEstimate(
 
 > [!TIP]
 > Applications of adiabatic state preparation are covered in the samples. 
-> For the Ising model using a manual implementation of adiabatic state preparation versus using the `AdiabaticEvolution` function, please see the [**AdiabaticIsing** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/AdiabaticIsing).
-> For phase estimation and adiabatic state preparation in the Ising model, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
+> For the Ising model using a manual implementation of adiabatic state preparation versus using the `AdiabaticEvolution` function, please see the [**AdiabaticIsing** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
+> For phase estimation and adiabatic state preparation in the Ising model, please see the [**IsingPhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
 
 > [!TIP]
-> The [simulation of molecular Hydrogen](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) is an interesting and brief sample. The model and experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) only requires Pauli matrices and takes the form $\hat H = g\_{0}I\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$. This is an effective Hamiltonian only requiring only 2 qubits, where the constants $g$ are computed from the distance $R$ between the two Hydrogen atoms. Using canon functions, the Paulis are converted to unitaries and then evolved over short periods of time using the Trotter-Suzuki decomposition. A good approximation to the $H_2$ ground state can be created without using adiabatic state preparation, and so the ground state energy may be found directly by utilizing phase estimation from the canon.
+> The [simulation of molecular Hydrogen](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) is an interesting and brief sample. The model and experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) only requires Pauli matrices and takes the form $\hat H = g\_{0}I\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$. This is an effective Hamiltonian only requiring only 2 qubits, where the constants $g$ are computed from the distance $R$ between the two Hydrogen atoms. Using canon functions, the Paulis are converted to unitaries and then evolved over short periods of time using the Trotter-Suzuki decomposition. A good approximation to the $H_2$ ground state can be created without using adiabatic state preparation, and so the ground state energy may be found directly by utilizing phase estimation from the canon.
 
 ## Shor's Algorithm ##
 Shor's algorithm remains one of the most significant developments in quantum computing because it showed that quantum computers could be used to solve important, currently classically intractable problems.

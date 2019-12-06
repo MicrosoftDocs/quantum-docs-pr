@@ -2,6 +2,3 @@
   href: introduction.md
 - name: Introduction into training of machine learning models
   href: training.md
-- name: Description of traning and validation API
-  href: qsharp.md
-

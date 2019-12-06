@@ -1,10 +1,7 @@
 - name: Introduction into quantum machine learning
   topicHref: Qccc.Introduction.md
-  href: toc.yml
 - name: Introduction into training of machine learning models
   topicHref: Qccc.Training.md
-  href: toc.yml
 - name: Description of traning and validation API
   topicHref: Qccc.Qsharp.md
-  href: toc.yml
 

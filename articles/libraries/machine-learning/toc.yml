@@ -1,7 +1,7 @@
 - name: Introduction into quantum machine learning
-  topicHref: Qccc.Introduction.md
+  href: introduction.md
 - name: Introduction into training of machine learning models
-  topicHref: Qccc.Training.md
+  href: training.md
 - name: Description of traning and validation API
-  topicHref: Qccc.Qsharp.md
+  href: qsharp.md
 

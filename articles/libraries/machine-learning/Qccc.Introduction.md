@@ -25,7 +25,7 @@ The circuit consists of 6 single-qubit gates $(G_1,\ldots,G_5; G_{16})$ and 10 t
 
 # Classifier training as a supervised learning task
 Training of a classifier model involves finding optimal values of its operational parameters, such that they maximize the average likelihood of inferring the correct training labels across the training samples.
-Here  we concern ourselves with two level classification only, i.e. the case of $d=2$ and only two classes with the labels $y_1,y_2$. [document](footnote1.md)
+Here  we concern ourselves with two level classification only, i.e. the case of $d=2$ and only two classes with the labels $y_1,y_2$. [note on multiclass](footnote1.md)
 
 ## Likelihood as the training goal
 Given a learnable quantum circuit $U(\theta)$, where $\theta$ is a vector of parameters, and denoting the final measurement by $M$, the average likelihood of the correct label inference is

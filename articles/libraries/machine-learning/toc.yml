@@ -1,5 +1,3 @@
-- name: Quantum machine learning concepts
-  href: toc.yml
 - name: Introduction into quantum machine learning
   topicHref: Qccc.Introduction.md
   href: toc.yml

@@ -6,7 +6,7 @@ Training of a circuit-centric quantum classifier is a process with many moving p
 calibration by trial and error as training of traditional classifiers. Here we define the main concepts and ingredients of this training process. 
 
 # Training/testing schedules
-The the context of classifier training a *schedule* describes a subset of data samples in an overall training or testing set. A schedule is usually defined as a
+In the context of classifier training a *schedule* describes a subset of data samples in an overall training or testing set. A schedule is usually defined as a
 collection of sample indices.
 
 # Parameter/bias scores
@@ -21,8 +21,7 @@ The model training process is governed by certain pre-set values called *hyperpa
 
 is one of key hyperparameters. It defines how much current stochastic gradient estimate impacts the parameter update. The size of parameter update delta is 
 proportional to LR. Smaller LR values lead to slower parameter evolution and slower convergence, but excessively large values of LR may break the convergence 
-altogether as the gradient descent never commits to a particular local minimum. While LR is adaptively adjusted by the training algorithm to some extent, s
-electing a good initial value for it is important. A usual default initial value for LR is 0.1
+altogether as the gradient descent never commits to a particular local minimum. While LR is adaptively adjusted by the training algorithm to some extent, selecting a good initial value for it is important. A usual default initial value for LR is 0.1. Selecting the best value of LR is a fine art (see, for example, section 4.3 of Goodfellow et al.,"Deep learning", MIT Press, 2017).
 
 ## Minibatch size (MBS). 
 

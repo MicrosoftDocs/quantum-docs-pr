@@ -17,17 +17,17 @@ Given a candidate parameter vector and a classifier bias, their *validation scor
 ## Hyperparameters
 The model training process is governed by certain pre-set values called *hyperparameters*:
 
-### Learning rate (LR) 
+### Learning rate
 
 is one of key hyperparameters. It defines how much current stochastic gradient estimate impacts the parameter update. The size of parameter update delta is 
-proportional to LR. Smaller LR values lead to slower parameter evolution and slower convergence, but excessively large values of LR may break the convergence 
-altogether as the gradient descent never commits to a particular local minimum. While LR is adaptively adjusted by the training algorithm to some extent, selecting a good initial value for it is important. A usual default initial value for LR is 0.1. Selecting the best value of LR is a fine art (see, for example, section 4.3 of Goodfellow et al.,"Deep learning", MIT Press, 2017).
+proportional to the learning rate. Smaller learning rate values lead to slower parameter evolution and slower convergence, but excessively large values of LR may break the convergence 
+altogether as the gradient descent never commits to a particular local minimum. While learning rate is adaptively adjusted by the training algorithm to some extent, selecting a good initial value for it is important. A usual default initial value for learning rate is 0.1. Selecting the best value of learning rate is a fine art (see, for example, section 4.3 of Goodfellow et al.,"Deep learning", MIT Press, 2017).
 
-### Minibatch size (MBS). 
+### Minibatch size 
 
-Defines how many data samples is used for a single estimation of stochastic gradient. Larger values of MBS generally lead to more robust and more monotonic 
-convergence but can potentially slow down the training process, as the cost of any one gradient estimation is proportional to MBS. 
-A usual default value of MBS is 10.
+Defines how many data samples is used for a single estimation of stochastic gradient. Larger values of minibatch size generally lead to more robust and more monotonic 
+convergence but can potentially slow down the training process, as the cost of any one gradient estimation is proportional to the minimatch size. 
+A usual default value for the minimatch size is 10.
 
 
 ### Training epochs, tolerance, gridlocks

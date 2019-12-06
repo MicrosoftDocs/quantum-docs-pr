@@ -34,9 +34,13 @@ Here  we concern ourselves with two level classification only, i.e. the case of 
 
 ### Likelihood as the training goal
 Given a learnable quantum circuit $U(\theta)$, where $\theta$ is a vector of parameters, and denoting the final measurement by $M$, the average likelihood of the correct label inference is
-$$\mathcal{L}(\theta)=\frac{1}{|\mathcal{D}|} \left( \sum_{(x,y_1)\in\mathcal{D}} P(M=y_1|U(\theta) x) + \sum_{(x,y_2)\in\mathcal{D}} P(M=y_2|U(\theta) x)\right)$$
+$$
+\begin{align}
+    \mathcal{L}(\theta)=\frac{1}{|\mathcal{D}|} \left( \sum_{(x,y_1)\in\mathcal{D}} P(M=y_1|U(\theta) x) + \sum_{(x,y_2)\in\mathcal{D}} P(M=y_2|U(\theta) x)\right)
+\end{align}
+$$
 where $P(M=y|z)$ is the probability of measuring $y$ in quantum state $z$.
- Here it suffices to understand that the likelihood function $\mathcal{L}(\theta)$ is smooth in $\theta$ and its derivative in any $\theta_j$ can be computed by essentially the same quantum protocol as used for computing the likelihood function itself. This allows for optimizing the $\mathcal{L}(\theta)$ by gradient descent.
+Here, it suffices to understand that the likelihood function $\mathcal{L}(\theta)$ is smooth in $\theta$ and its derivative in any $\theta_j$ can be computed by essentially the same quantum protocol as used for computing the likelihood function itself. This allows for optimizing the $\mathcal{L}(\theta)$ by gradient descent.
 
 ### Classifier bias and training score
 Given some intermediate (or final) values of the parameters in $\theta$, we need to identify a single real value $b$ know as *classifier bias* to do the inference. The label inference rule works as follows:A sample $x$ is assigned label $y_2$ if and only if $P(M=y_2|U(\theta) x) + b > 0.5$  (RULE1)

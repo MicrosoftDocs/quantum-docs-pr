@@ -10,7 +10,7 @@ uid: microsoft.quantum.update
 
 # Update the Microsoft Quantum Development Kit (QDK)
 
-Learn how to update the Microsoft Quantum Development Kit (QDK) to the latest version. 
+Learn how to update the Microsoft Quantum Development Kit (QDK) to the latest version.
 
 This article assumes that you already have the QDK installed. If you are installing for the first time, then please refer to the [installation guide](xref:microsoft.quantum.install).
 
@@ -46,7 +46,7 @@ Verify the output is `3.0.100` or higher. If not, install the [latest version](h
 	```bash
 	dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
 	```
-	If your projects use any other Microsoft.Quantum packages, run the command for these too.
+	If your projects use any other Microsoft.Quantum packages, run the command for these too. 
 8. Close the command prompt and select **Build** -> **Build Solution** (do *not* select Rebuild Solution, as rebuilding will initially fail)
 
 You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).
@@ -77,7 +77,7 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 	dotnet add package Microsoft.Quantum.Development.Kit
 	```
 
-	If your project uses any other Microsoft.Quantum packages, run the command for these too.
+	If your project uses any other Microsoft.Quantum packages, run the command for these too. 
 5. Save and close all files.
 6. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:
 	```bash

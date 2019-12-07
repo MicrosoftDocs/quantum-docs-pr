@@ -100,7 +100,7 @@ Select your development environment below.
 
 ### Update IQ# for Python
 
-1. Update the `iqsharp` kernel
+1. Update the `iqsharp` kernel 
 
     ```bash
     dotnet tool update -g Microsoft.Quantum.IQSharp

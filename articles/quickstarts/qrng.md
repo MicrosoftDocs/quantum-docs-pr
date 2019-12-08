@@ -66,3 +66,32 @@ We can use this representation to visualize what the code is doing:
 <img src="./Measurement2.svg" width="450">
 
 Since the outcome of the measurement is completely random, we have obtained a random bit. We can call this operation several times to create integers. For example, if we call the operation three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).
+
+## Creating a complete random number generator using a host program
+
+Now that we have a Q# operation that generate random bits we can use it to build a complete random number generator with a host program.
+
+ ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
+ 
+ To run your new Q# program from Python, save the following code as `host.py`:
+ 
+ [!code-python[](~/quantum-docs-pr/articles/quickstarts/host.py)]
+
+ You can then run your Python host program from the command line:
+ ```bash
+ $ python host.py
+ Preparing Q# environment...
+ ..The random number generated is 42
+ ```
+ ### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
+ 
+ To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
+ 
+ [!code-csharp[]((~/quantum-docs-pr/articles/quickstarts/Host.cs)]
+ 
+ You can then run your C# host program from the command line:
+ 
+ ```bash
+ dotnet run
+ The random number generated is 42
+ ```

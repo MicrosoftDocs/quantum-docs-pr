@@ -15,8 +15,8 @@ namespace Quantum{
                 int Max = 50; // The maximum of the range 
                 bool b = false; // Auxiliary bool
                 int size = Convert.ToInt32(Math.Floor(Math.Log(Max, 2.0) + 1));
-                int output = Max + 1; // Int to store the output
                 // To calculate the amount of needed bits
+                int output = Max + 1; // Int to store the output
                 while(output > Max){ // Loop to generate the number
                     bit_string = "0"; // Restart the bit string if fails 
                     for(int counter = 0; counter < size ; counter++){
@@ -32,6 +32,6 @@ namespace Quantum{
                 + output.ToString());
                 // Print the result
             }
-        }
-    }
+         }
+      }
     }

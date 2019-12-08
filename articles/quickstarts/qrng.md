@@ -75,7 +75,7 @@ Now that we have a Q# operation that generate random bits we can use it to build
  
  To run your new Q# program from Python, save the following code as `host.py`:
  
- [!code-python[](~/host.py)]
+ [!code-python[](./host.py)]
 
  You can then run your Python host program from the command line:
  ```bash
@@ -87,7 +87,7 @@ Now that we have a Q# operation that generate random bits we can use it to build
  
  To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
  
- [!code-csharp[](~/Host.cs)]
+ [!code-csharp[](./Host.cs)]
  
  You can then run your C# host program from the command line:
  

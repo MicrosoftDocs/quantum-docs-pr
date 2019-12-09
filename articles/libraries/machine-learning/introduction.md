@@ -7,7 +7,7 @@ ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.introduction
 ---
 
-# Introduction into Circuit Centric Classification
+# Introduction to Circuit Centric Classification
 
 ## Framework and goals
 

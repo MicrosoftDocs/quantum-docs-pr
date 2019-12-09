@@ -65,6 +65,7 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 	```bash
 	dotnet clean [project_name].csproj
 	```
+
 3. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project).
 	That is, edit lines of the form:
 	```xml

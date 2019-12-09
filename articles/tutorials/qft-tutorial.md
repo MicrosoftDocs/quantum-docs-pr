@@ -46,7 +46,7 @@ The first part of this tutorial consists of defining the Q# operation `Perform3q
 In addition, we will use the [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) function to observe how the simulated wavefunction of our three qubit system evolves across the operation.
 
 To create a your Q# project, follow these [instructions](xref:microsoft.quantum.howto.createproject), and create a Q# file entitled `Operations.qs`.
-We will walk you through the components of the file step-by-step, and the code is available as a full block below.
+We will walk you through the components of the file step-by-step, but the code is also available as a full block below.
 
 ### Namespaces to access other Q# operations
 Inside the file, we first define the namespace `Quantum.Operations` which will be accessed/imported by the classical host.
@@ -71,7 +71,7 @@ Next, we define the `Perform3qubitQFT` operation:
 		// do stuff
 	}
 ```
-For now, the operation takes no arguments and does not return anything---in this case we write that it returns a `Unit` object, which is akin to `void` in C# or an empty tuple `Tuple[()]` in Python.
+For now, the operation takes no arguments and does not return anything---in this case we write that it returns a `Unit` object, which is akin to `void` in C# or an empty tuple, `Tuple[()]`, in Python.
 Later, we will modify it to return an array of measurement results, at which point `Unit` will be replaced by `Result[]`. 
 
 ### Allocate qubits with `using`
@@ -90,13 +90,13 @@ With `using`, the qubits are automatically allocated in the $\ket{0}$ state. We 
 
 > [!NOTE]
 > The `Message(<string>)` and `DumpMachine()` functions (from [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) and [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics), respectively) both print directly to our classical host's console. 
-> Just like a real quantum computation, Q# does not allow us access to the state of qubits.
-> However, as `DumpMachine` prints the target machine's current state, it can provide valuable insight for debugging and learning in conjunction with the full state simulator.
+> Just like a real quantum computation, Q# does not allow us to directly access qubit states.
+> However, as `DumpMachine` prints the target machine's current state, it can provide valuable insight for debugging and learning when used in conjunction with the full state simulator.
 
 
 ### Applying single-qubit and controlled gates
 
-Next, we apply the gates which comprise the operation itself (see the circuit diagram and explanation for the three-qubit example [here](https://en.wikipedia.org/wiki/Quantum_Fourier_transform#Example).
+Next, we apply the gates which comprise the operation itself (see the circuit diagram and explanation for the three-qubit example [here](https://en.wikipedia.org/wiki/Quantum_Fourier_transform#Example)).
 Q# already contains many basic quantum gates as operations in the [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) namespace, and these are no exception. 
 To apply an operation to a specific qubit from a register (i.e. a single `Qubit()` from an array `Qubit[]`) we use standard index notation.
 So, applying the [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) to the first qubit of our register `qs` takes the form:
@@ -115,10 +115,10 @@ An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the 
 Q# makes it extremely easy to condition the execution of an operation upon one or multiple control qubits.
 In general, we merely preface the call with `Controlled`, and the operation arguments change as:
 
->> `Op(<normal args>)` $\to$ `Controlled Op([<control qubits>], (<normal args>))`.
+ `Op(<normal args>)` $\to$ `Controlled Op([<control qubits>], (<normal args>))`.
 
 Note that the control qubits must be provided as an array, even if it is a single qubit.
-So, we call the `R1` gates acting on the first qubit (and controlled by the second third) as:
+So, we call the `R1` gates acting on the first qubit (and controlled by the second/third) as:
 
 ```qsharp
             Controlled R1([qs[1]], (PI()/2.0, qs[0]));
@@ -129,7 +129,7 @@ Note that we use the [`PI()`](xref:microsoft.quantum.math.pi) function from the 
 Additionally, we divide by a `Double` (e.g. `2.0`) because dividing by an integer `2` would throw a type error. 
 
 > [!TIP]
-> `R1(π/2)` and `R1(π/4)` are equivalent to the `S` and `T` operations (also in `Microsoft.Quantum.Intrinsic`)
+> `R1(π/2)` and `R1(π/4)` are equivalent to the `S` and `T` operations (also in `Microsoft.Quantum.Intrinsic`).
 
 
 After applying the relevant Hadamards and controlled rotations to the second and third qubits:
@@ -208,7 +208,7 @@ namespace Quantum.Operations {
 
 With the Q# file and operation complete, it is ready to be called and simulated by the classical host.
 
-## Set Up the classical host
+## Set up the classical host
 
 Having defined our Q# operation in a `.qs` file, we now write the classical host file to call that operation and process any returned classical data (for now, there isn't anything to process---recall that our operation defined above returns `Unit`).
 When we later modify the Q# operation to return an array of measurement results (`Result[]`), we will update the host file correspondingly.
@@ -221,11 +221,10 @@ Following the same [instructions](xref:microsoft.quantum.howto.createproject) as
 
 The host file is constructed as follows: 
 1. First, we import the `qsharp` module, which registers the module loader for Q# interoperability. 
-	This allows Q# namespaces (e.g. the `Quantum.Operations` defined above) to appear as Python modules, from which we can import Q# operations.
-2. Then, import the Q# operations which we will be directly invoking---that is, we need only import the entry point into a Q# program.
-	We do _not_ need to import operations like `H` and `R1`, which are called by other Q# operations but never by the classical host.
-3. In simulating the Q# operations or functions, we simply use the form `<Q#callable>.simulate(<args>)` to run them on the `QuantumSimulator()` target machine. 
-	For now, our operation is defined to take no arguments.
+	This allows Q# namespaces (e.g. the `Quantum.Operations` we defined in `Operations.qs`) to appear as Python modules, from which we can import Q# operations.
+2. Then, import the Q# operations which we will directly invoke---in this case, `Perform3qubitQFT`.
+	We need only import the entry point into a Q# program (i.e. _not_ operations like `H` and `R1`, which are called by other Q# operations but never by the classical host).
+3. In simulating Q# operations or functions, use the form `<Q#callable>.simulate(<args>)` to run them on the `QuantumSimulator()` target machine. 
 
 > [!NOTE]
 > If we wanted to call the operation on a different machine, for example the `ResourceEstimator()`, we would simply use `<Q#callable>.estimate_resources(<args>)`.
@@ -335,7 +334,7 @@ In detail for the first row of our input state $\ket{000}$:
 * **`    ---`**: A graphical representation of the amplitude's phase.
 * **`[ 0.0000 rad ]`**: the numeric value of the phase (in radians).
 
-Both the magnitude and the phase are displayed with a graphical representation. The magnitude representation is straight-forward: it shows a bar of `*`, the bigger the probability the bigger the bar will be. For the phase, see the DumpMachine section [here](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) for the possible symbol representations based on angle ranges.
+Both the magnitude and the phase are displayed with a graphical representation. The magnitude representation is straight-forward: it shows a bar of `*`, and the higher the probability, the larger the bar will be. For the phase, see the DumpMachine section [here](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) for the possible symbol representations based on angle ranges.
 
 
 So, the printed output is illustrating that our programmed gates transformed our state from
@@ -357,14 +356,14 @@ which is precisely the behavior of the 3-qubit Fourier transform.
 
 If you are curious about how other input states are affected, we encourage you to play around with applying qubit operations before the transform.
 
-## Adding Measurements
+## Adding measurements
 
-Unfortunately though, a cornerstone of quantum mechanics tells us that a real quantum system cannot have such a `DumpMachine` function. 
+Unfortunately, a cornerstone of quantum mechanics tells us that a real quantum system cannot have such a `DumpMachine` function. 
 Instead, we're forced to extract information through measurements, which in general not only fail to provide us the full quantum state, but can also drastically alter the system itself.
 There are many sorts of quantum measurements, but we will focus on the most basic: projective measurements on single qubits.
-Upon measurement in a given basis (e.g. the computational basis $\{\ket{0},\ \ket{1}\}$), the qubit state is projected onto whichever basis state was measured---hence destroying any superposition between the two.
+Upon measurement in a given basis (e.g. the computational basis $ \{ \ket{0}, \ket{1} \} $), the qubit state is projected onto whichever basis state was measured---hence destroying any superposition between the two.
 
-To implement measurements within a Q# program, we use the `M` operation from the `Microsoft.Quantum.()` namespace, which returns a `Result` type.
+To implement measurements within a Q# program, we use the `M` operation (from `Microsoft.Quantum.Intrinsic`), which returns a `Result` type.
 
 First, we modify our `Perform3QubitQFT` operation to return an array of measurement results, `Result[]`, instead of `Unit`.
 

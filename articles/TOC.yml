@@ -1,4 +1,4 @@
-- name: Microsoft Quantum Documentation
+- name: Microsoft Quantum Development Kit
   href: index.yml
 - name: Overview
   items:

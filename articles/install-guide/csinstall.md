@@ -9,7 +9,7 @@ uid: microsoft.quantum.install.cs
 ---
 # Develop with Q# + C#
 
-This is the installation guide for the QDK environment to program hybrid Q# and C# programs.
+Install the QDK to develop C# host programs to call Q# operations.
 
 Q# is a member of the .NET ecosystem and therefore is built to play well with other .NET languages--specifically C#. You can work with this pairing inside different development environments:
 

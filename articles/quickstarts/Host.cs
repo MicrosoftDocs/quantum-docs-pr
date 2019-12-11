@@ -20,8 +20,8 @@ namespace Quantum{
                 while(output > Max){ // Loop to generate the number
                     bit_string = "0"; // Restart the bit string if fails 
                     for(int counter = 0; counter < size ; counter++){
-                        b = QuantumRandomNumberGenerator.Run(sim).Result; 
-                        // Call the Q# operation to give a boolean
+                        b = (QuantumRandomNumberGenerator.Run(sim).Result == Result.One); 
+                        // Call the Q# operation and transform the resutl to bool
                         a = b ? "0" : "1"; // Transform the bool to string
                         bit_string = bit_string + a; // Concatenate bits
                     }

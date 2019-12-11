@@ -53,6 +53,6 @@ The Getting Started guides and articles above are meant to guide both the coder 
 * Develop on a local machine with the host programming language and development environment of your choice:
   * Develop with [Q# + Python](xref:microsoft.quantum.install.python)
   * Develop with [Q# + C#](xref:microsoft.quantum.install.cs)
-  * Develop with [Jupyter Notebooks](xref:microsoft.quantum.install.jupyter)
+  * Develop with [Q# Jupyter Notebooks](xref:microsoft.quantum.install.jupyter)
 
 * Become part of the Microsoft Quantum community by contributing to the [QDK](xref:microsoft.quantum.contributing) open source project.

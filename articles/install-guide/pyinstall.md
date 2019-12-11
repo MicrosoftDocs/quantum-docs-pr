@@ -10,7 +10,7 @@ uid: microsoft.quantum.install.python
 
 # Develop with Q# + Python
 
-This is the installation guide for the QDK environment to program hybrid Q# and Python programs.
+Install the QDK to develop Python host programs to call Q# operations.
 
 1. Pre-requisites
 
@@ -78,7 +78,7 @@ This is the installation guide for the QDK environment to program hybrid Q# and 
 
 
 > [!NOTE]
-> * You can also use Python Jupyter notebooks to write the classical Python program and call from the cells the Q# operations whenever they're needed. The Python code is just a normal Python program.
+> * You can also use Python Jupyter notebooks to write the classical Python program and call from the cells the Q# operations. The Python code is just a normal Python program.
 
 ## What's next?
 

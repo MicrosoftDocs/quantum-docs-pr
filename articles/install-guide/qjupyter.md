@@ -10,12 +10,12 @@ uid: microsoft.quantum.install.jupyter
 
 # Develop with Q# Jupyter notebooks
 
-> [!WARNING]
-> * In Q# Jupyter Notebooks you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files). This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.
-
-Commonplace in academic settings, scientific labs, and online-based collaborative programming, Jupyter Notebooks allow in-place code execution alongside instructions, notes, and other content. This environment is great for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
+Jupyter Notebooks allow in-place code execution alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
 
 IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
+
+> [!WARNING]
+> * In Q# Jupyter Notebooks you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files). This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.
 
 1. Pre-requisites
 

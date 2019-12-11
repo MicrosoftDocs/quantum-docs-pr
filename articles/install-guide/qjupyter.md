@@ -10,6 +10,8 @@ uid: microsoft.quantum.install.jupyter
 
 # Develop with Q# Jupyter notebooks
 
+Install the QDK for developing Q# operations on Q# Jupyter Notebooks.
+
 Jupyter Notebooks allow in-place code execution alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
 
 IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.

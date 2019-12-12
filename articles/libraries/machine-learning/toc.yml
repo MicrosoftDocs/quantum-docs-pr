@@ -1,0 +1,4 @@
+- name: Introduction into quantum machine learning
+  href: introduction.md
+- name: Introduction into training of machine learning models
+  href: training.md

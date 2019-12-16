@@ -8,7 +8,8 @@ namespace Quantum{
     {
         static void Main(string[] args)
         {
-            using (var sim = new QuantumSimulator()){
+            using (var sim = new QuantumSimulator())
+            {
                 // First we initialize all the variables:
                 string bit_string = "0"; // To save the bit string
                 string a = "0"; // Auxiliary string variable

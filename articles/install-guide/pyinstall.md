@@ -43,7 +43,6 @@ This is the installation guide for the QDK environment to program hybrid Q# and 
 
         ```qsharp
         namespace HelloWorld {
-        {
             open Microsoft.Quantum.Intrinsic;
             open Microsoft.Quantum.Canon;
 

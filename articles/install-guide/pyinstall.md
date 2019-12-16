@@ -42,7 +42,7 @@ This is the installation guide for the QDK environment to program hybrid Q# and 
     - Create a minimal Q# operation, by creating a file called `Operation.qs`, and adding the following code to it:
 
         ```qsharp
-        namespace HelloWorld
+        namespace HelloWorld {
         {
             open Microsoft.Quantum.Intrinsic;
             open Microsoft.Quantum.Canon;

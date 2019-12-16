@@ -23,7 +23,7 @@ namespace Quantum{
                     bit_string = "0"; // Restart the bit string if fails 
                     for(int counter = 0; counter < size ; counter++){
                         b = (QuantumRandomNumberGenerator.Run(sim).Result == Result.One); 
-                        // Call the Q# operation and transform the resutl to bool
+                        // Call the Q# operation and transform the result to bool
                         a = b ? "0" : "1"; // Transform the bool to string
                         bit_string = bit_string + a; // Concatenate bits
                     }

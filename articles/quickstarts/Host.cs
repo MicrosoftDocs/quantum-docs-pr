@@ -11,7 +11,7 @@ namespace Quantum{
             using (var sim = new QuantumSimulator())
             {
                 // First we initialize all the variables:
-                string bit_string = "0"; // To save the bit string
+                var bitString = "0"; // To save the bit string
                 string a = "0"; // Auxiliary string variable
                 int Max = 50; // The maximum of the range 
                 bool b = false; // Auxiliary bool

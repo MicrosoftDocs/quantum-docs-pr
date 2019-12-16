@@ -18,7 +18,8 @@ namespace Quantum{
                 int size = Convert.ToInt32(Math.Floor(Math.Log(Max, 2.0) + 1));
                 // To calculate the amount of needed bits
                 int output = Max + 1; // Int to store the output
-                while(output > Max){ // Loop to generate the number
+                while(output > Max)  // Loop to generate the number
+                {
                     bit_string = "0"; // Restart the bit string if fails 
                     for(int counter = 0; counter < size ; counter++){
                         b = (QuantumRandomNumberGenerator.Run(sim).Result == Result.One); 

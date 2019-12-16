@@ -30,7 +30,8 @@ namespace Quantum{
                     output = Convert.ToInt32(bit_string, 2);
                     // Convert the bit string to an integer
                 }
-                Console.WriteLine("The random number generated is " 
+                // Print the result
+                Console.WriteLine($"The random number generated is {output}.");
                 + output.ToString());
                 // Print the result
             }

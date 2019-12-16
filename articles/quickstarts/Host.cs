@@ -32,7 +32,6 @@ namespace Quantum{
                 }
                 // Print the result
                 Console.WriteLine($"The random number generated is {output}.");
-                + output.ToString());
                 // Print the result
             }
          }

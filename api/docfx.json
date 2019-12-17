@@ -39,6 +39,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "show_latex": true,
       "latex_macros": {
         "ket": ["\\left| #1\\right\\rangle", 1],
         "bra": ["\\left\\langle #1\\right|", 1],

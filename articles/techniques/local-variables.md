@@ -1,11 +1,12 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Q# techniques - local variables | Microsoft Docs 
-description: Q# techniques - local variables
+title: Local variables - Q# techniques | Microsoft Docs 
+description: Local variables - Q# techniques 
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+uid: microsoft.quantum.techniques.local-variables
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # For Quantum products none of these categories have been defined  yet.
 # ms.service: service-name-from-white-list

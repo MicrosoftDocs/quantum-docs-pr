@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Q# techniques - putting it all together | Microsoft Docs 
-description: Q# techniques - putting it all together
+title: Putting it all together - Q# techniques | Microsoft Docs 
+description: Putting it all together - Q# techniques
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
@@ -14,7 +14,7 @@ ms.topic: article
 # ms.technology: tech-name-from-white-list
 ---
 
-# Putting it All Together: Teleportation #
+# Putting It All Together: Teleportation #
 Let's return to the example of the teleportation circuit defined in [Quantum Circuits](xref:microsoft.quantum.concepts.circuits). We're going to use this to illustrate the concepts we've learned so far. An explanation of quantum teleportation is provided below for those who are unfamiliar with the theory, followed by a walkthrough of the code implementation in Q#. 
 
 ## Quantum Teleportation: Theory

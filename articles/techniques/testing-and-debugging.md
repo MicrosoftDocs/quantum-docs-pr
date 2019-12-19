@@ -1,6 +1,6 @@
 ---
-title: Q# techniques - testing and debugging | Microsoft Docs
-description: Q# techniques - testing and debugging
+title: Testing and debugging - Q# techniques | Microsoft Docs
+description: Testing and debugging - Q# techniques
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging

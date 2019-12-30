@@ -13,7 +13,12 @@ ms.topic: article
 In the previous discussions, we have focused on computational basis measurements.
 In fact, there are other common measurements that occur in quantum computing that, from a notational perspective, are convenient to express in terms of computational basis measurements.
 As you work with Q#, the most common kind of measurements that you'll run into will likely be *Pauli measurements*.
-In such cases, it is common to discuss measuring a Pauli operator, in general an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$ and so forth.
+In such cases, it is common to discuss measuring a Pauli operator, in general an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$, and so forth.
+
+> [!TIP]
+> In Q#, multi-qubit Pauli operators are generally represented by arrays of type `Pauli[]`.
+> For example, to represent $X \otimes Z \otimes Y$, you can use the array `[PauliX, PauliZ, PauliY]`.
+
 Discussing measurement in terms of Pauli operators is especially common in the subfield of quantum error correction.
 In Q# we follow a similar convention; we now explain this alternative view of measurements.
 

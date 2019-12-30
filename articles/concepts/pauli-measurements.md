@@ -20,16 +20,16 @@ In such cases, it is common to discuss measuring a Pauli operator, in general an
 > For example, to represent $X \otimes Z \otimes Y$, you can use the array `[PauliX, PauliZ, PauliY]`.
 
 Discussing measurement in terms of Pauli operators is especially common in the subfield of quantum error correction.
-In Q# we follow a similar convention; we now explain this alternative view of measurements.
+In Q#, we follow a similar convention; we now explain this alternative view of measurements.
 
 Before delving into the details of how to think of a Pauli measurement, it is useful to think about what measuring a single qubit inside a quantum computer does to the quantum state.
 Imagine that we have an $n$-qubit quantum state; then measuring one qubit immediately rules out half of the $2^n$ possibilities that state could be in.
 In other words, the measurement projects the quantum state onto one of two half-spaces.
-We can generalize the way we think about measurement to reflect this.
+We can generalize the way we think about measurement to reflect this intuition.
 
 In order to concisely identify these subspaces, we need a language for describing them.
-One way to do this is to describe the two subspaces by specifying them through a matrix that just has two unique eigenvalues, taken by convention to be $\pm 1$.
-The simplest example of this is:
+One way to describe the two subspaces is by specifying them through a matrix that just has two unique eigenvalues, taken by convention to be $\pm 1$.
+For a simple example of describing subspaces in this way, consider $Z$:
 
 $$
 \begin{align}
@@ -37,13 +37,13 @@ $$
 \end{align}
 $$
 
-The Pauli-$Z$ matrix clearly has two eigenvectors $\ket{0}$ and $\ket{1}$ with eigenvalues $\pm 1$.
-Thus if we measure the qubit and obtain $\ket{0}$ we are in the $+1$ eigenspace (the set of all vectors that are formed of sums of  eigenvectors with only positive or only negative eigenvalues) of the operator and if we measure $\ket{1}$ we are in the $-1$ eigenspace of $Z$.
+By reading the diagonal elements of the Pauli-$Z$ matrix, we can see that $Z$ has two eigenvectors, $\ket{0}$ and $\ket{1}$, with corresponding eigenvalues $\pm 1$.
+Thus, if we measure the qubit and obtain $\ket{0}$ we are in the $+1$ eigenspace (the set of all vectors that are formed of sums of  eigenvectors with only positive or only negative eigenvalues) of the operator and if we measure $\ket{1}$ we are in the $-1$ eigenspace of $Z$.
 This process is referred to in the language of Pauli measurements as "measuring Pauli $Z$" and is entirely equivalent to performing a computational basis measurement.
 
-Of course any $2\times 2$ matrix that is a unitary transformation of $Z$ also satisfies this criteria.
-This is to say that we could also consider matrix $A=U^\dagger Z U$, for any unitary matrix $U$, to give a matrix that defines the two outcomes of a measurement in its $\pm 1$ eigenvectors.
-The notation of Pauli measurements references this by identifying $X,Y,Z$ measurements as equivalent measurements that one could do to gain information from a qubit.
+Any $2\times 2$ matrix that is a unitary transformation of $Z$ also satisfies this criteria.
+That is, we could also use a matrix $A=U^\dagger Z U$, where $U$ is any other unitary matrix, to give a matrix that defines the two outcomes of a measurement in its $\pm 1$ eigenvectors.
+The notation of Pauli measurements references this unitary equivalence by identifying $X,Y,Z$ measurements as equivalent measurements that one could do to gain information from a qubit.
 These measurements are given below for convenience.
 
 
@@ -78,9 +78,9 @@ operation MeasureY(q : Qubit) : Result {
 }
 ```
 
-The correct state would then be found by transforming back to the computational basis, which amounts to applying $SH$ to the quantum state vector; in the above snippet, this is handled automatically by the use of the `within … apply` block.
+The correct state would then be found by transforming back to the computational basis, which amounts to applying $SH$ to the quantum state vector; in the above snippet, the transformation back to the computational basis is handled automatically by the use of the `within … apply` block.
 
-In Q# we say the outcome, i.e., the classical information extracted from interacting with the state, is given by a `Result` value $j \in \{\texttt{Zero}, \texttt{One}\}$ indicating if the result is in the $(-1)^j$ eigenspace of the Pauli operator measured.
+In Q#, we say the outcome, that is, the classical information extracted from interacting with the state, is given by a `Result` value $j \in \{\texttt{Zero}, \texttt{One}\}$ indicating if the result is in the $(-1)^j$ eigenspace of the Pauli operator measured.
 
 
 ## Multiple-qubit measurements
@@ -149,7 +149,7 @@ We enumerate the transformations in the following table.
 Here, the [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) operation appears for the following reason.
 Each Pauli measurement that does not include the $\boldone$ matrix is equivalent up to a unitary to $Z\otimes Z$ by the above reasoning.
 The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector and the controlled-not operations that appear in this list serve to compute this parity and store it in the first bit.
-Then once the first bit is measured, we can recover the identity of the resultant half-space which is equivalent to measuring the Pauli operator.
+Then once the first bit is measured, we can recover the identity of the resultant half-space, which is equivalent to measuring the Pauli operator.
 
 One additional note, while it may be tempting to assume that measuring $Z\otimes Z$ is the same as measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$, this assumption would be false.
 The reason is that measuring $Z\otimes Z$ projects the quantum state into either the $+1$ or $-1$ eigenstate of these operators.
@@ -157,7 +157,7 @@ Measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$ projects the qua
 As there are four computational basis vectors, performing both measurements reduces the state to a quarter-space and hence reduces it to a single computational basis vector.
 
 ## Correlations between qubits
-Another way of looking at measuring tensor products of Paulis such as $X\otimes X$ or $Z\otimes Z$ is that these measurements let you look at information stored in the correlations between the two qubits.
+Another way of looking at measuring tensor products of Pauli matrices such as $X\otimes X$ or $Z\otimes Z$ is that these measurements let you look at information stored in the correlations between the two qubits.
 Measuring $X\otimes \id$ lets you look at information that is locally stored in the first qubit.
 While both types of measurements are equally valuable in quantum computing, the former illuminates the power of quantum computing.
 It reveals that in quantum computing often the information you wish to learn is not stored in any single qubit but rather stored non-locally in all the qubits at once, and only by looking at it through a joint measurement with $Z\otimes Z$ does this information become manifest.
@@ -167,10 +167,10 @@ All such tensor products of Pauli operators have only two eigenvalues $\pm 1$ an
 Thus they coincide with the requirements stated above.
 
 In Q#, such measurements return $j$ if the measurement yields a result in the eigenspace of sign $(-1)^j$.
-Having this as a built-in feature in Q# is helpful because measuring such operators requires long chains of controlled-NOT gates and basis transformations to describe the diagonalizing $U$ gate needed to express the operation as a tensor product of $Z$ and $\id$.
-By simply being able to specify that you wish to do one of these pre-defined measurements, you don't need to worry about how to transform your basis such that a computational basis measurement provides the necessary information.
+Having Pauli measurements as a built-in feature in Q# is helpful because measuring such operators requires long chains of controlled-NOT gates and basis transformations to describe the diagonalizing $U$ gate needed to express the operation as a tensor product of $Z$ and $\id$.
+By being able to specify that you wish to do one of these pre-defined measurements, you don't need to worry about how to transform your basis such that a computational basis measurement provides the necessary information.
 Q# handles all the necessary basis transformations for you automatically.
-See the [`Measure`](xref:microsoft.quantum.intrinsic.measure) and [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) operations for more details.
+For more information, see the [`Measure`](xref:microsoft.quantum.intrinsic.measure) and [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) operations.
 
 ## The No-Cloning Theorem
 

@@ -11,10 +11,11 @@ ms.topic: article
 # Pauli Measurements
 
 In the previous discussions, we have focused on computational basis measurements.
-In fact there are other common measurements that occur in quantum computing that, from a notational perspective, are convenient to express in terms of computational basis measurements.
-The most common set of these measurements are *Pauli measurements*.
+In fact, there are other common measurements that occur in quantum computing that, from a notational perspective, are convenient to express in terms of computational basis measurements.
+As you work with Q#, the most common kind of measurements that you'll run into will likely be *Pauli measurements*.
 In such cases, it is common to discuss measuring a Pauli operator, in general an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$ and so forth.
-Discussing measurement in terms of Pauli operators is especially common in the subfield of quantum error correction. In Q# we follow a similar convention; we now explain this alternative view of measurements.
+Discussing measurement in terms of Pauli operators is especially common in the subfield of quantum error correction.
+In Q# we follow a similar convention; we now explain this alternative view of measurements.
 
 Before delving into the details of how to think of a Pauli measurement, it is useful to think about what measuring a single qubit inside a quantum computer does to the quantum state.
 Imagine that we have an $n$-qubit quantum state; then measuring one qubit immediately rules out half of the $2^n$ possibilities that state could be in.
@@ -45,7 +46,7 @@ These measurements are given below for convenience.
 |-------------------|------------------------|
 | $Z$               | $\boldone$             |
 | $X$               | $H$                    |
-| $Y$               | $HS^{\dagger}          |
+| $Y$               | $HS^{\dagger}$         |
 
 That is, using this language, "measure $Y$" is equivalent to applying $HS^\dagger$ and then measuring in the computational basis, where [`S`](xref:microsoft.quantum.intrinsic.s) is an intrinsic quantum operation sometimes called the "phase gate," and can be simulated by the unitary matrix
 
@@ -111,12 +112,12 @@ We enumerate the transformations in the following table.
 > $$
 > \begin{align}
 >     \operatorname{SWAP} & =
->     \left(
+>     \left(\begin{matrix}
 >         1 & 0 & 0 & 0 \\\\
 >         0 & 0 & 1 & 0 \\\\
 >         0 & 1 & 0 & 0 \\\\
 >         0 & 0 & 0 & 1
->     \right)
+>     \end{matrix}\right)
 > \end{align}
 > $$
 > used to simulate the intrinsic operation [`SWAP`](xref:microsoft.quantum.intrinsic).
@@ -176,7 +177,7 @@ One such limitation is given by the *No-Cloning Theorem*.
 The No-Cloning Theorem is aptly named.
 It disallows cloning of generic quantum states by a quantum computer.
 The proof of the theorem is remarkably straightforward.
-While a full proof of the no-cloning theorem is a little too technical for our discussion here, the proof of the theorem in the case where the quantum computer in question has no additional auxillary qubits is within our scope (auxillary qubits are qubits used for scratch space during a computation and are easily used and managed in Q#, see <xref:microsoft.quantum.techniques.qubits>).
+While a full proof of the no-cloning theorem is a little too technical for our discussion here, the proof of the theorem in the case where the quantum computer in question has no additional auxiliary qubits is within our scope (auxiliary qubits are qubits used for scratch space during a computation and are easily used and managed in Q#, see <xref:microsoft.quantum.techniques.qubits>).
 For such a quantum computer, the cloning operation must be described by a unitary matrix.
 We disallow measurement, since it would corrupt the quantum state we are trying to clone.
 We want the unitary matrix used to simulate our cloning operation to have the property that
@@ -195,7 +196,7 @@ $$
 $$
 
 This provides the fundamental intuition behind the No-Cloning Theorem: any device that copies an unknown quantum state must induce errors on at least some of the states it copies.
-While the key assumption that the cloner acts linearly on the input state can be violated through the addition and measurement of auxillary qubits, such interactions also leak information about the system through the measurement statistics and prevent exact cloning in such cases as well.
+While the key assumption that the cloner acts linearly on the input state can be violated through the addition and measurement of auxiliary qubits, such interactions also leak information about the system through the measurement statistics and prevent exact cloning in such cases as well.
 For a more complete proof of the No-Cloning Theorem see [For more information](xref:microsoft.quantum.more-information).
 
 The No-Cloning Theorem is important for qualitative understanding of quantum computing because if you could clone quantum states inexpensively then you would be granted a near-magical ability to learn from quantum states.

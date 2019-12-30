@@ -38,7 +38,7 @@ We will see these operations in more detail in [Intrinsic Operations and Functio
 
 First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations `X`, `Y`, and `Z`, each of which has type `(Qubit => Unit is Adj + Ctl)`.
 As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), we can think of $X$ and hence of `X` as a bit-flip operation or NOT gate.
-This lets us prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:
+The `X` operation lets us prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit
@@ -85,18 +85,18 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ## Measurements
 
-Using the `Measure` operation, which is a built in intrinsic non-unitary operation, we can extract classical information from an object of type `Qubit` and assign a classical value as a result, which has a reserved type `Result`, indicating that the result is no longer a quantum state.
-The input to `Measure` is a Pauli axis on the Bloch sphere, represented by an object of type `Pauli` (i.e., for instance `PauliX`) and an object of type `Qubit`.
+Using the `Measure` operation, which is a built-in intrinsic non-unitary operation, we can extract classical information from an object of type `Qubit` and assign a classical value as a result, which has a reserved type `Result`, indicating that the result is no longer a quantum state.
+The input to `Measure` is a Pauli axis on the Bloch sphere, represented by an value of type `Pauli` (for instance `PauliX`) and an value of type `Qubit`.
 
-A simple example is the following operation which creates one qubit in the $\ket{0}$ state, then applies a Hadamard gate ``H`` to it and then measures the result in the `PauliZ` basis.
+A simple example is the following operation, which allocates one qubit in the $\ket{0}$ state, then applies a Hadamard operation `H` to it and then measures the result in the `PauliZ` basis.
 
 ```qsharp
 operation MeasureOneQubit() : Result {
     // The following using block creates a fresh qubit and initializes it
     // in the |0〉 state.
     using (qubit = Qubit()) {
-        // We apply a Hadamard operation H to the state, thereby creating the
-        // state 1/sqrt(2)(|0〉+|1〉).
+        // We apply a Hadamard operation H to the state, thereby preparing the
+        // state 1 / sqrt(2) (|0〉 + |1〉).
         H(qubit);
         // Now we measure the qubit in Z-basis.
         let result = M(qubit);
@@ -109,7 +109,7 @@ operation MeasureOneQubit() : Result {
 }
 ```
 
-A slightly more complicated example is given by the following operation which returns the Boolean value `true` if all qubits in a register of type `Qubit[]` are in the state zero, when measured in a specified Pauli basis and `false` otherwise.
+A slightly more complicated example is given by the following operation, which returns the Boolean value `true` if all qubits in a register of type `Qubit[]` are in the state zero when measured in a specified Pauli basis, and which returns `false` otherwise.
 
 ```qsharp
 operation MeasureIfAllQubitsAreZero(qs : Qubit[], pauli : Pauli) : Bool {
@@ -123,8 +123,10 @@ operation MeasureIfAllQubitsAreZero(qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-The Q# language allows dependencies of classical control flow on measurement results of qubits. This in turn enables to implement powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries.
-As an example, it is easy to implement so-called *Repeat-Until-Success* in Q# which are probabilistic programs that have an *expected* low cost in terms of elementary gates, but for which the true cost depends on an actual run and an actual interleaving of various possible branchings.
+The Q# language allows classical control flow to depend on the results of measuring qubits.
+This capability in turn enables implementing powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries.
+As an example, it is easy to implement so-called *Repeat-Until-Success* (RUS) patterns in Q#.
+These RUS patterns are probabilistic programs that have an *expected* low cost in terms of elementary gates, but for which the true cost depends on an actual run and an actual interleaving of various possible branchings.
 
 To facilitate Repeat-Until-Success (RUS) patterns, Q# supports the construct
 
@@ -212,5 +214,5 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Notable programmatic features shown in this operation are a more complex `fixup` part of the loop which involves quantum operations, and the use of `AssertProb` statements to ascertain the probability of measuring the quantum state at certain specified points in the program.
+Notable programmatic features shown in this operation are a more complex `fixup` part of the loop, which involves quantum operations, and the use of `AssertProb` statements to ascertain the probability of measuring the quantum state at certain specified points in the program.
 See also [Testing and debugging](xref:microsoft.quantum.techniques.testing-and-debugging) for more information about the [`Assert`](xref:microsoft.quantum.intrinsic.assert) and [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) operations.

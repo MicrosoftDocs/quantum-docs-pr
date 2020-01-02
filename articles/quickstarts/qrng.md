@@ -75,7 +75,7 @@ Now that we have a Q# operation that generate random bits we can use it to build
  
  To run your new Q# program from Python, save the following code as `host.py`:
  
- [!code-python[](~/Quantum/blob/master/samples/getting-started/qrng/host.py)]
+ [!code-python[](~/quantum/samples/getting-started/qrng/host.py)]
 
  You can then run your Python host program from the command line:
  ```bash
@@ -87,11 +87,25 @@ Now that we have a Q# operation that generate random bits we can use it to build
  
  To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
  
- [!code-csharp[](~/Quantum/blob/master/samples/getting-started/qrng/Host.cs)]
+ [!code-csharp[](~/quantum/samples/getting-started/qrng/Host.cs)]
  
  You can then run your C# host program from the command line:
  
  ```bash
- dotnet run
+ $ dotnet run
  The random number generated is 42
  ```
+
+ ### [C# with Visual Studio 2019](#tab/tabid-vs2019)
+
+ To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:
+
+ [!code-csharp[](~/quantum/samples/getting-started/qrng/Host.cs)]
+
+ Then press F5, the program will start execution and a new windows will pop-up with the following results: 
+
+ ```bash
+ $ dotnet run
+ The random number generated is 4
+ ```
+ ***

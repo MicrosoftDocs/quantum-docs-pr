@@ -43,7 +43,6 @@ The `X` operation lets us prepare states of the form $\ket{s_0 s_1 \dots s_n}$ f
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit
 is Adj + Ctl {
-
     let nQubits = Length(register);
     for (idxQubit in 0..nQubits - 1) {
         if (bitstring[idxQubit]) {
@@ -52,14 +51,15 @@ is Adj + Ctl {
     }
 }
 
-operation Example() : Unit {
-
+operation RunExample() : Unit {
     using (register = Qubit[8]) {
         PrepareBitString(
             [true, true, false, false, true, false, false, true],
             register
         );
         // At this point, register now has the state |11001001〉.
+        // Resetting the qubits will allow us to deallocate them properly.
+        ResetAll(register);
     }
 }
 ```
@@ -71,7 +71,6 @@ We can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
-
     // First, get a computational basis state of the form
     // |s_0 s_1 ... s_n〉 by using PrepareBitString, above.
     PrepareBitString(bitstring, register);

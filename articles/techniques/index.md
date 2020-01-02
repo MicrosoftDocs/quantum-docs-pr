@@ -30,7 +30,7 @@ Their contents are as follows.
 
 - [Working with qubits](xref:microsoft.quantum.techniques.qubits) describes the features of Q# that you can use to address individual qubits and systems of qubits. 
 	Specifically, that entails their allocation, or blocking off a certain number of qubits for an operation or program to use; performing operations on them; and ultimately their measurement. 
-	Additionally, you will learn some useful control-flow techniques.
+	Additionally, you will learn some useful control flow techniques.
 
 - In [Putting it all together](xref:microsoft.quantum.techniques.puttingittogether), you will leverage the techniques from the sections above to create a program which performs **quantum teleportation**: using two classical bits to "teleport" the full state of one qubit onto another.
 

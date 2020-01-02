@@ -1,6 +1,6 @@
 ---
-title: Q# techniques - operations and functions | Microsoft Docs
-description: Q# techniques - operations and functions
+title: Operations and functions - Q# techniques | Microsoft Docs
+description: Operations and functions - Q# techniques 
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com

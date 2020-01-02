@@ -1,11 +1,12 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Q# techniques - going further | Microsoft Docs
-description: Q# techniques - going further
+title: Going further - Q# techniques | Microsoft Docs
+description: Going further - Q# techniques
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+uid: microsoft.quantum.techniques.going-further
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # For Quantum products none of these categories have been defined  yet.
 # ms.service: service-name-from-white-list

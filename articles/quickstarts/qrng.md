@@ -59,7 +59,7 @@ We can use this representation to visualize what the code is doing:
 
 * First we start with a qubit initalizated in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.
 
-<img src="~/media/qrng-H.svg" width="450">
+<img src="~/media/qrng-H.png" width="450">
 
 * Then we measure the qubit and save the output:
 

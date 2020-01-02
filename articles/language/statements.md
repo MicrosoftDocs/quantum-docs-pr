@@ -60,8 +60,7 @@ For example:
 ///
 /// # See Also
 /// - Microsoft.Quantum.Intrinsic.H
-operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
-{
+operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
     op(target);
     op(target);
 }
@@ -113,7 +112,6 @@ If a short name `Z` for `X.Y` has been defined in that namespace and file, then 
 
 ```qsharp
 namespace NS {
-
     open Microsoft.Quantum.Intrinsic; // opens the namespace
     open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
 }
@@ -232,10 +230,11 @@ for (q in qubits) {
 A similar concatenation exists for copy-and-update expressions on the right hand side. 
 Correspondingly, update-and-reassign statements exist for named items in user-defined types as well as for array items.  
 
+TODO:
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+function AddAll(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -254,19 +253,17 @@ and thus help avoid having to update array items in the first place.
 Update-and-reassign statements provide an alternative if needed:
 
 ```qsharp
-operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-
+operation GenerateRandomInts(max : Int, nSamples : Int) : Int[] {
     mutable samples = new Double[0];
-    for (i in 1 .. nrSamples) {
-        set samples += [RandomInt(maxInt)];
+    for (i in 1 .. nSamples) {
+        set samples += [RandomInt(max)];
     }
     return samples;
 }
 
-operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
-
-    let normalization = 1. / IntAsDouble(prec);
-    mutable samples = RandomInts(prec, nrSamples);
+operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
+    let normalization = 1. / IntAsDouble(nSteps);
+    mutable samples = GenerateRandomInts(nSteps, nSamples);
     
     for (i in IndexRange(samples) {
         let value = IntAsDouble(samples[i]);
@@ -281,10 +278,9 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 
 The function
 ```qsharp
-function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
-{
-    mutable pauliArray = new Pauli[n];
-    for (index in 0 .. n - 1) {
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    mutable pauliArray = new Pauli[length];
+    for (index in 0 .. length - 1) {
         set pauliArray w/= index <- 
             index == location ? pauli | PauliI;
     }    
@@ -295,8 +291,8 @@ for example can simply be simplified using the function `ConstantArray` in `Micr
 and returning a copy-and-update expression:
 
 ```qsharp
-function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
-    return ConstantArray(n, PauliI) w/ i <- pauli;
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    return ConstantArray(length, PauliI) w/ location <- pauli;
 }
 ```
 
@@ -387,8 +383,8 @@ For example,
 
 ```qsharp
 // ...
-for (qb in qubits) { // qubits contains a Qubit[]
-    H(qb);
+for (q in qubits) { // qubits contains a Qubit[]
+    H(q);
 }
 
 mutable results = new (Int, Results)[Length(qubits)];
@@ -420,13 +416,13 @@ so symbols bound in the body are available in the condition and fixup.
 ```qsharp
 mutable iter = 1;
 repeat {
-    ProbabilisticCircuit(qs);
-    let success = ComputeSuccessIndicator(qs);
+    ProbabilisticCircuit(qubits);
+    let success = ComputeSuccessIndicator(qubits);
 }
 until (success || iter > maxIter)
 fixup {
     iter += 1;
-    ComputeCorrection(qs);
+    ComputeCorrection(qubits);
 }
 ```
 
@@ -441,26 +437,26 @@ available in subsequent repetitions.
 For example, the following code is a probabilistic circuit that implements
 an important rotation gate $V_3 = (\boldone + 2 i Z) / \sqrt{5}$ using the
 Hadamard and T gates.
-The loop terminates in 8/5 repetitions on average.
+The loop terminates in $\frac{8}{5}$ repetitions on average.
 See [*Repeat-Until-Success: Non-deterministic decomposition of single-qubit unitaries*](https://arxiv.org/abs/1311.1074)
 (Paetznick and Svore, 2014) for details.
 
 ```qsharp
-using (anc = Qubit()) {
+using (q = Qubit()) {
     repeat {
-        H(anc);
-        T(anc);
-        CNOT(target,anc);
-        H(anc);
-        Adjoint T(anc);
-        H(anc);
-        T(anc);
-        H(anc);
-        CNOT(target,anc);
-        T(anc);
+        H(q);
+        T(q);
+        CNOT(target,q);
+        H(q);
+        Adjoint T(q);
+        H(q);
+        T(q);
+        H(q);
+        CNOT(target,q);
+        T(q);
         Z(target);
-        H(anc);
-        let result = M(anc);
+        H(q);
+        let result = M(q);
     } until (result == Zero);
 }
 ```
@@ -618,12 +614,12 @@ For example,
 using (q = Qubit()) {
     // ...
 }
-using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
 
-### Dirty Qubits
+### Borrowed Qubits
 
 The `borrowing` statement is used to obtain qubits for temporary use. 
 The statement consists of the keyword `borrowing`, followed by an open
@@ -637,7 +633,7 @@ For example,
 borrowing (q = Qubit()) {
     // ...
 }
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+borrowing ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
@@ -648,9 +644,8 @@ i.e. their state at the beginning and at the end of the statement block is expec
 This state in particular is not necessarily a classical state, such that in most cases, 
 borrowing scopes should not contain measurements. 
 
-Such qubits are often known as “dirty ancilla”.
 See [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995)
-(Haner, Roetteler, and Svore 2017) for an example of dirty ancilla use.
+(Haner, Roetteler, and Svore 2017) for an example of borrowed qubit use.
 
 When borrowing qubits, the system will first try to fill the request
 from qubits that are in use but that are not accessed during the body of the `borrowing` statement.

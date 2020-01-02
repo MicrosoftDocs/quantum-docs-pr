@@ -161,7 +161,7 @@ newtype Nested = (Double, (ItemName : Int, String));
 Named items have the advantage that they can be accessed directly via the access operator `::`. 
 
 ```qsharp
-function Addition (c1 : Complex, c2 : Complex) : Complex {
+function ComplexAddition (c1 : Complex, c2 : Complex) : Complex {
     return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
 }
 ```
@@ -172,7 +172,7 @@ The "unwrap" operator, `!`, allows to extract the value contained in a user defi
 The type of such an "unwrap" expression is the underlying type of the user defined type. 
 
 ```qsharp
-function PrintMsg (value : Nested) : Unit {
+function PrintedMessage (value : Nested) : Unit {
     let (d, (_, str)) = value!;
     Message ($"{str}, value: {d}");
 }
@@ -338,17 +338,18 @@ with the same result type and an input type that is compatible with `'A`.
 That is, given the following definitions:
 
 ```qsharp
-operation Invertible (qs : Qubit[]) : Unit 
+operation Invert(qs : Qubit[]) : Unit 
 is Adj {...} 
-operation Unitary (qs : Qubit[]) : Unit 
+
+operation Unitary(qs : Qubit[]) : Unit 
 is Adj + Ctl {...} 
 
-function ConjugateInvertibleWith (
+function ConjugateInvertibleWith(
    inner: (Qubit[] => Unit is Adj),
    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj) {...}
 
-function ConjugateUnitaryWith (
+function ConjugateUnitaryWith(
    inner: (Qubit[] => Unit is Adj + Ctl),
    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj + Ctl) {...}

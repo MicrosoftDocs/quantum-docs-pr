@@ -143,12 +143,12 @@ This returns a unitary operation that implements all steps of adiabatic state pr
 We also define a helpful operation that automatically performs all steps of a typical quantum chemistry experiment. For instance we have the following, which returns an energy estimate of the state produced by adiabatic state preparation:
 
 ```qsharp
-operation AdiabaticStateEnergyEstimate( 
-    nQubits : Int, 
+operation EstimateAdiabaticStateEnergy(
+    nQubits : Int,
     statePrepUnitary: (Qubit[] => Unit),
     adiabaticUnitary: (Qubit[] => Unit),
     qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
     : Double {
 ...
 }

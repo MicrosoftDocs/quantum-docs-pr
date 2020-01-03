@@ -80,7 +80,7 @@ operation MeasureY(q : Qubit) : Result {
 
 The correct state would then be found by transforming back to the computational basis, which amounts to applying $SH$ to the quantum state vector; in the above snippet, the transformation back to the computational basis is handled automatically by the use of the `within … apply` block.
 
-In Q#, we say the outcome, that is, the classical information extracted from interacting with the state, is given by a `Result` value $j \in \{\texttt{Zero}, \texttt{One}\}$ indicating if the result is in the $(-1)^j$ eigenspace of the Pauli operator measured.
+In Q#, we say the outcome---that is, the classical information extracted from interacting with the state---is given by a `Result` value $j \in \{\texttt{Zero}, \texttt{One}\}$ indicating if the result is in the $(-1)^j$ eigenspace of the Pauli operator measured.
 
 
 ## Multiple-qubit measurements
@@ -148,10 +148,10 @@ We enumerate the transformations in the following table.
 
 Here, the [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) operation appears for the following reason.
 Each Pauli measurement that does not include the $\boldone$ matrix is equivalent up to a unitary to $Z\otimes Z$ by the above reasoning.
-The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector and the controlled-not operations that appear in this list serve to compute this parity and store it in the first bit.
+The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector, and the controlled-not operations serve to compute this parity and store it in the first bit.
 Then once the first bit is measured, we can recover the identity of the resultant half-space, which is equivalent to measuring the Pauli operator.
 
-One additional note, while it may be tempting to assume that measuring $Z\otimes Z$ is the same as measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$, this assumption would be false.
+One additional note: while it may be tempting to assume that measuring $Z\otimes Z$ is the same as sequentially measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$, this assumption would be false.
 The reason is that measuring $Z\otimes Z$ projects the quantum state into either the $+1$ or $-1$ eigenstate of these operators.
 Measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$ projects the quantum state vector first onto a half space of $Z\otimes \mathbb{1}$ and then onto a half space of $\mathbb{1} \otimes Z$.
 As there are four computational basis vectors, performing both measurements reduces the state to a quarter-space and hence reduces it to a single computational basis vector.
@@ -160,7 +160,7 @@ As there are four computational basis vectors, performing both measurements redu
 Another way of looking at measuring tensor products of Pauli matrices such as $X\otimes X$ or $Z\otimes Z$ is that these measurements let you look at information stored in the correlations between the two qubits.
 Measuring $X\otimes \id$ lets you look at information that is locally stored in the first qubit.
 While both types of measurements are equally valuable in quantum computing, the former illuminates the power of quantum computing.
-It reveals that in quantum computing often the information you wish to learn is not stored in any single qubit but rather stored non-locally in all the qubits at once, and only by looking at it through a joint measurement with $Z\otimes Z$ does this information become manifest.
+It reveals that in quantum computing, often the information you wish to learn is not stored in any single qubit but rather stored non-locally in all the qubits at once, and therefore only by looking at it through a joint measurement (e.g. $Z\otimes Z$) does this information become manifest.
 
 Arbitrary Pauli operators such as $X\otimes Y \otimes Z \otimes \boldone$ can also be measured.
 All such tensor products of Pauli operators have only two eigenvalues $\pm 1$ and both eigenspaces constitute half-spaces of the entire vector space.
@@ -182,10 +182,11 @@ One such limitation is given by the *No-Cloning Theorem*.
 The No-Cloning Theorem is aptly named.
 It disallows cloning of generic quantum states by a quantum computer.
 The proof of the theorem is remarkably straightforward.
-While a full proof of the no-cloning theorem is a little too technical for our discussion here, the proof of the theorem in the case where the quantum computer in question has no additional auxiliary qubits is within our scope (auxiliary qubits are qubits used for scratch space during a computation and are easily used and managed in Q#, see <xref:microsoft.quantum.techniques.qubits>).
+While a full proof of the no-cloning theorem is a little too technical for our discussion here, the proof in the case of no additional auxiliary qubits is within our scope (auxiliary qubits are qubits used for scratch space during a computation and are easily used and managed in Q#, see <xref:microsoft.quantum.techniques.qubits>).
+
 For such a quantum computer, the cloning operation must be described by a unitary matrix.
 We disallow measurement, since it would corrupt the quantum state we are trying to clone.
-We want the unitary matrix used to simulate our cloning operation to have the property that
+To simulate the cloning operation, we want the unitary matrix used to have the property that
 $$
   U \ket{\psi} \ket{0} = \ket{\psi} \ket{\psi}
 $$
@@ -212,4 +213,3 @@ Similarly, without prior information we cannot perfectly clone a quantum state j
 
 Information is not free in quantum computing.
 Each qubit measured gives a single bit of information, and the No-Cloning Theorem shows that there is no backdoor that can be exploited to get around the fundamental tradeoff between information gained about the system and the disturbance invoked upon it.
-

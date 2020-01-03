@@ -85,9 +85,9 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 ## Measurements
 
 Using the `Measure` operation, which is a built-in intrinsic non-unitary operation, we can extract classical information from an object of type `Qubit` and assign a classical value as a result, which has a reserved type `Result`, indicating that the result is no longer a quantum state.
-The input to `Measure` is a Pauli axis on the Bloch sphere, represented by an value of type `Pauli` (for instance `PauliX`) and an value of type `Qubit`.
+The input to `Measure` is a Pauli axis on the Bloch sphere, represented by a value of type `Pauli` (for instance `PauliX`) and an value of type `Qubit`.
 
-A simple example is the following operation, which allocates one qubit in the $\ket{0}$ state, then applies a Hadamard operation `H` to it and then measures the result in the `PauliZ` basis.
+A simple example is the following operation, which allocates one qubit in the $\ket{0}$ state, then applies a Hadamard operation `H` to it and measures the result in the `PauliZ` basis.
 
 ```qsharp
 operation MeasureOneQubit() : Result {

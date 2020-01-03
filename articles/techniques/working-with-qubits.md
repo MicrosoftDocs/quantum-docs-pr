@@ -1,6 +1,6 @@
 ---
 title: Working with Qubits
-description: Working with Qubits
+description: Working with Qubits - Q# techniques
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017

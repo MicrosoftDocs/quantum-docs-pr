@@ -47,9 +47,8 @@ Install the QDK to develop Python host programs to call Q# operations.
             open Microsoft.Quantum.Intrinsic;
             open Microsoft.Quantum.Canon;
 
-            operation SayHello() : Result {
+            operation SayHello() : Unit {
                 Message("Hello from quantum world!");
-                return Zero;
             }
         }
         ```

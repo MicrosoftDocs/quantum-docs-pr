@@ -18,7 +18,7 @@ A Q# project contains Q# files containing quantum code, as well as a host progra
 Choose your development environment and language from the sections below:
 
 * [Python](#create-a-python-project)
-* [Q# Jupyter notebooks](#create-a-Q-jupyter-notebook-project)
+* [Q# Jupyter notebooks](#create-a-q-jupyter-notebook-project)
 * [C# with Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
 * [C# with VS Code](#create-a-c-project-using-vs-code)
 * [C# with the command line](#create-a-c-project-using-the-dotnet-command-line-tool)

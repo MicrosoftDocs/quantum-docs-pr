@@ -12,7 +12,7 @@ ms.topic: article
 
 In the previous discussions, we have focused on computational basis measurements.
 In fact, there are other common measurements that occur in quantum computing that, from a notational perspective, are convenient to express in terms of computational basis measurements.
-As you work with Q#, the most common kind of measurements that you'll run into will likely be *Pauli measurements*.
+As you work with Q#, the most common kind of measurements that you'll run into will likely be *Pauli measurements*, which generalize computational basis measurements to include measurements in other bases, of parity between different qubits, and so forth.
 In such cases, it is common to discuss measuring a Pauli operator, in general an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$, and so forth.
 
 > [!TIP]
@@ -38,8 +38,9 @@ $$
 $$
 
 By reading the diagonal elements of the Pauli-$Z$ matrix, we can see that $Z$ has two eigenvectors, $\ket{0}$ and $\ket{1}$, with corresponding eigenvalues $\pm 1$.
-Thus, if we measure the qubit and obtain $\ket{0}$ we are in the $+1$ eigenspace (the set of all vectors that are formed of sums of  eigenvectors with only positive or only negative eigenvalues) of the operator and if we measure $\ket{1}$ we are in the $-1$ eigenspace of $Z$.
-This process is referred to in the language of Pauli measurements as "measuring Pauli $Z$" and is entirely equivalent to performing a computational basis measurement.
+Thus, if we measure the qubit and obtain `Zero` (corresponding to the state $\ket{0}$), we know that the state of our qubit is a $+1$ eigenstate of the $Z$ operator.
+Similarly, if we obtain `One`, we know that the state of our qubit is a $-1$ eigenstate of $Z$.
+This process is referred to in the language of Pauli measurements as "measuring Pauli $Z$," and is entirely equivalent to performing a computational basis measurement.
 
 Any $2\times 2$ matrix that is a unitary transformation of $Z$ also satisfies this criteria.
 That is, we could also use a matrix $A=U^\dagger Z U$, where $U$ is any other unitary matrix, to give a matrix that defines the two outcomes of a measurement in its $\pm 1$ eigenvectors.
@@ -162,6 +163,10 @@ Measuring $X\otimes \id$ lets you look at information that is locally stored in 
 While both types of measurements are equally valuable in quantum computing, the former illuminates the power of quantum computing.
 It reveals that in quantum computing often the information you wish to learn is not stored in any single qubit but rather stored non-locally in all the qubits at once, and only by looking at it through a joint measurement with $Z\otimes Z$ does this information become manifest.
 
+For example, in error correction, we often wish to learn what error occured while learning nothing about the state that we're trying to protect.
+The [bit-flip code sample](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) shows an example of how you can do that using measurements like $Z \otimes Z \otimes \id$ and $\id \otimes Z \otimes Z$.
+<!-- TODO: change this to a link to the samples browser as soon as the bit-flip code sample is on-boarded. -->
+
 Arbitrary Pauli operators such as $X\otimes Y \otimes Z \otimes \boldone$ can also be measured.
 All such tensor products of Pauli operators have only two eigenvalues $\pm 1$ and both eigenspaces constitute half-spaces of the entire vector space.
 Thus they coincide with the requirements stated above.
@@ -194,9 +199,19 @@ The linearity property of matrix multiplication then implies that for any second
 
 $$
 \begin{align}
-&U\left[\frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right)\right]\ket{0}=\frac{1}{\sqrt{2}}U\ket{\phi}\ket{0}+\frac{1}{\sqrt{2}}U\ket{\psi}\ket{0}\\\\
-&\qquad\qquad=\frac{1}{\sqrt{2}}\left(\ket{\phi}\ket{\phi}+\ket{\psi}\ket{\psi}\right)\\\\
-&\qquad\qquad\ne \left(\frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right)\right)\otimes\left(\frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right)\right).
+    U \left[
+      \frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right)
+    \right] \ket{0}
+    & = \frac{1}{\sqrt{2}} U\ket{\phi}\ket{0}
+      + \frac{1}{\sqrt{2}} U\ket{\psi}\ket{0} \\\\
+    & = \frac{1}{\sqrt{2}} \left(
+            \ket{\phi} \ket{\phi} + \ket{\psi} \ket{\psi}
+        \right) \\\\
+    & \ne \left(
+          \frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right)
+      \right) \otimes \left(
+          \frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right)
+      \right).
 \end{align}
 $$
 

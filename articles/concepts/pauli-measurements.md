@@ -81,7 +81,7 @@ operation MeasureY(q : Qubit) : Result {
 
 The correct state would then be found by transforming back to the computational basis, which amounts to applying $SH$ to the quantum state vector; in the above snippet, the transformation back to the computational basis is handled automatically by the use of the `within … apply` block.
 
-In Q#, we say the outcome---that is, the classical information extracted from interacting with the state---is given by a `Result` value $j \in \{\texttt{Zero}, \texttt{One}\}$ indicating if the result is in the $(-1)^j$ eigenspace of the Pauli operator measured.
+In Q#, we say the outcome---that is, the classical information extracted from interacting with the state---is given by a `Result` value $j \in \\{\texttt{Zero}, \texttt{One}\\}$ indicating if the result is in the $(-1)^j$ eigenspace of the Pauli operator measured.
 
 
 ## Multiple-qubit measurements

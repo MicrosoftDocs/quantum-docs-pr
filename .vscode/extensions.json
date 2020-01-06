@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        // Suggest that users have the MS Docs Authoring Pack, which provides
+        // a number of tools for working with DocFX-based documentation repos.
+        "docsmsft.docs-authoring-pack"
+    ]
+}

@@ -498,7 +498,6 @@ operation MeasureOneQubit() : Result {
 
 This example of a function comes from the [PhaseEstimation](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) sample. It contains purely classical code. You can see that, unlike the example above, no qubits are allocated, and no quantum operations are used.
 
-TODO: evaluate doc string use
 ```qsharp
 /// # Summary
 /// Given two arrays, returns a new array that is the pointwise product

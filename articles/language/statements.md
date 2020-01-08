@@ -230,7 +230,6 @@ for (q in qubits) {
 A similar concatenation exists for copy-and-update expressions on the right hand side. 
 Correspondingly, update-and-reassign statements exist for named items in user-defined types as well as for array items.  
 
-TODO:
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 

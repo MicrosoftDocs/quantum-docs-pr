@@ -111,7 +111,6 @@ Our starting point is a [Jordan–Wigner encoding](xref:microsoft.quantum.chemis
 This format of the Jordan–Wigner representation that is consumable by the Q# simulation algorithms is a user-defined type `JordanWignerEncodingData`.
 Within Q#, this format is passed to a convenience function `TrotterStepOracle` that returns an operator approximating time-evolution using the Trotter—Suzuki integrator, in addition to other parameters required for its execution.
 
-TODO:
 ```qsharp
 // qSharpData passed from driver
 let qSharpData = ... 
@@ -204,7 +203,6 @@ An example that involves simulating the Hubbard model can be found as a [Q# samp
 Manually specifying these steps for arbitrary chemistry problems would require much effort, which is avoided using the chemistry library.
 Similarly to the Trotter–Suzuki simulation algorithm above, the `JordanWignerEncodingData` is passed to the convenience function `QubitizationOracle` that returns the walk-operator, in addition to other parameters required for its execution.
 
-TODO:
 ```qsharp
 // qSharpData passed from driver
 let qSharpData = ... 

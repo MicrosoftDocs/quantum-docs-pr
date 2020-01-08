@@ -47,11 +47,8 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "Microsoft/quantum",
       "feedback_product_url": "https://github.com/microsoft/quantum/issues",
-      "titleSuffix": "Q# reference - Microsoft Quantum"
-    },
-    "fileMetadata": {
+      "titleSuffix": "Q# reference - Microsoft Quantum",
       "latex_macros": {
-        "**/**.yml": {
           "ket": ["\\left| #1\\right\\rangle", 1],
           "bra": ["\\left\\langle #1\\right|", 1],
           "braket": [ "\\left\\langle #1 \\right\\rangle", 1 ],
@@ -62,7 +59,6 @@
           "defeq": "\\mathrel{:=}",
           "dd": "\\mathrm{d}"
         }
-      }
     },
     "template": [],
     "dest": "quantum-api"

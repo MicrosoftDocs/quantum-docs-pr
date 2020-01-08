@@ -53,9 +53,9 @@ In Q#, we might use <xref:microsoft.quantum.arrays.indexrange> to represent this
 ```qsharp
 /// # Summary
 /// Applies $H$ to all qubits in a register.
-operation HAll(register : Qubit[]) : Unit 
-is Adj + Ctl {
-
+operation ApplyHadamardToAll(
+    register : Qubit[])
+: Unit is Adj + Ctl {
     for (qubit in register) {
         H(qubit);
     }
@@ -135,26 +135,26 @@ Since controlling operations can be expensive in general, using controlled varia
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-Similarly, <xref:microsoft.quantum.canon.bind> produces operations which apply a sequence of other operations in turn.
+Similarly, <xref:microsoft.quantum.canon.bound> produces operations which apply a sequence of other operations in turn.
 For instance, the following are equivalent:
 
 ```qsharp
 H(qubit); X(qubit);
-Bind([H, X], qubit);
+Bound([H, X], qubit);
 ```
 
 Combining with iteration patterns can make this especially useful:
 
 ```qsharp
 // Bracket the quantum Fourier transform with $XH$ on each qubit.
-ApplyWith(ApplyToEach(Bind([H, X]), _), QFT, _);
+ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
 ### Time-Ordered Composition ###
 
 We can go still further by thinking of flow control in terms of partial application and classical functions, and can model even fairly sophisticated quantum concepts in terms of classical flow control.
 This analogy is made precise by the recognition that unitary operators correspond exactly to the side effects of calling operations, such that any decomposition of unitary operators in terms of other unitary operators corresponds to constructing a particular calling sequence for classical subroutines which emit instructions to act as particular unitary operators.
-Under this view, `Bind` is precisely the representation of the matrix product, since `Bind([A, B])(target)` is equivalent to `A(target); B(target);`, which in turn is the calling sequence corresponding to $BA$.
+Under this view, `Bound` is precisely the representation of the matrix product, since `Bound([A, B])(target)` is equivalent to `A(target); B(target);`, which in turn is the calling sequence corresponding to $BA$.
 
 A more sophisticated example is the [Trotter–Suzuki expansion](https://arxiv.org/abs/math-ph/0506007v1).
 As discussed in the Dynamical Generator Representation section of [data structures](xref:microsoft.quantum.libraries.data-structures), the Trotter–Suzuki expansion provides a particularly useful way of expressing matrix exponentials.
@@ -199,12 +199,11 @@ We won't call this operation directly, however, and so we add `_` to the beginni
 
 ```qsharp
 operation _ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl),
-        controlRegister : Qubit[],
-        targetRegister: Qubit[]) 
-: Unit 
-is Adj + Ctl {
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl),
+    controlRegister : Qubit[],
+    targetRegister: Qubit[])
+: Unit is Adj + Ctl
 ```
 
 Note that we take a string of bits, represented as a `Bool` array, that we use to specify the conditioning that we want to apply to the operation `oracle` that we are given.
@@ -217,6 +216,7 @@ Thus, we can apply $P = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{
 This construction is precisely `ApplyWith`, so we write the body of our new operation accordingly:
 
 ```qsharp
+{
     ApplyWithCA(
         ApplyPauliFromBitString(PauliX, false, bits, _),
         (Controlled oracle)(_, targetRegister),
@@ -235,8 +235,8 @@ In this way, our new function looks and feels very much like `Controlled`, illus
 
 ```qsharp
 function ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl)) 
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl))
 : ((Qubit[], Qubit[]) => Unit is Adj + Ctl) {
     return _ControlledOnBitString(bits, oracle, _, _);
 }

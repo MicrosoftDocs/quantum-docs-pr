@@ -35,11 +35,11 @@ In discussing iterative phase estimation, we will consider a unitary $U$ given a
 As described in the section on oracles in [data structures](xref:microsoft.quantum.libraries.data-structures), the Q# canon models such operations by the <xref:microsoft.quantum.oracles.discreteoracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.
 Concretely, if `U : DiscreteOracle`, then `U(m)` implements $U^m$ for `m : Int`.
 
-With this definition in place, each step of iterative phase estimation proceeds by preparing an auxillary qubit in the $\ket{+}$ state along with the initial state $\ket{\phi}$ that we assume is an [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) of $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi}\ket{\phi}$.  
+With this definition in place, each step of iterative phase estimation proceeds by preparing an auxiliary qubit in the $\ket{+}$ state along with the initial state $\ket{\phi}$ that we assume is an [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) of $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi}\ket{\phi}$.  
 A controlled application of `U(m)` is then used which prepares the state $\left(R\_1(m \phi) \ket{+}\right)\ket{\phi}$.
 As in the quantum case, the effect of a controlled application of the oracle `U(m)` is precisely the same as the effect of applying $R_1$ for the unknown phase on $\ket{+}$, such that we can describe the effects of $U$ in this simpler fashion.
 Optionally, the algorithm then rotates the control qubit by applying $R_1(-m\theta)$ to obtain a state $\ket{\psi}=\left(R\_1(m [\phi-\theta]) \ket{+}\right)\ket{\phi}$$.
-The auxillary qubit used as a control for `U(m)` is then measured in the $X$ basis to obtain a single classical `Result`.
+The auxiliary qubit used as a control for `U(m)` is then measured in the $X$ basis to obtain a single classical `Result`.
 
 At this point, reconstructing the phase from the `Result` values obtained through iterative phase estimation is a classical statistical inference problem.
 Finding the value of $m$ that maximizes the information gained, given a fixed inference method, is simply a problem in statistics.
@@ -198,7 +198,7 @@ operation H2EstimateEnergy(
 : Double
 ```
 
-These myriad phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many auxillary qubits, and other require only one.
+These myriad phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For instance, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many auxiliary qubits, and others require only one.
 
 Similarly, using random walk phase estimation proceeds in much the same way as for other algorithms provided with the canon:
 

@@ -112,32 +112,32 @@ The following is the list of metrics estimated by the `ResourcesEstimator`:
 
 ## Providing the Probability of Measurement Outcomes
 
-<xref:microsoft.quantum.primitive.assertprob> from the <xref:microsoft.quantum.primitive> namespace can 
+<xref:microsoft.quantum.primitive.assertprob> from the <xref:microsoft.quantum.intrinsic> namespace can 
 be used to provide information about the expected probability of a measurement to help drive the execution 
 of the Q# program. The following example illustrates this:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
+operation Teleport(source : Qubit, target : Qubit) : Unit {
 
-    using (ancilla = Qubit()) {
+    using (q = Qubit()) {
 
-        H(ancilla);
-        CNOT(ancilla, target);
+        H(q);
+        CNOT(q, target);
 
-        CNOT(source, ancilla);
+        CNOT(source, q);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(q) == One) { X(target); X(q); }
     }
 }
 ```
 
 When the `ResourcesEstimator` encounters `AssertProb` it will record that measuring
-`PauliZ` on `source` and `ancilla` should be given an outcome of `Zero` with probability
+`PauliZ` on `source` and `q` should be given an outcome of `Zero` with probability
 0.5. When it executes `M` later, it will find the recorded values of
 the outcome probabilities and `M` will return `Zero` or `One` with probability
 0.5.

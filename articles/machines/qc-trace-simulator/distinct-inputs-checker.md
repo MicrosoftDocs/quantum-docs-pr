@@ -17,8 +17,12 @@ potential bugs in the code. Consider the following piece of Q# code to
 illustrate the issues detected by this package:
 
 ```qsharp
-operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => Unit)) : Unit {
-
+operation ApplyBoth(
+    q1 : Qubit,
+    q2 : Qubit,
+    op1 : (Qubit => Unit),
+    op2 : (Qubit => Unit))
+: Unit {
     op1(q1);
     op2(q2);
 }
@@ -30,19 +34,18 @@ and operations acting on different qubits commute. Let us now consider an
 example, where this operation is used:
 
 ```qsharp
-operation CapturedQubits () : Unit {
-
+operation ApplyNotDistinctInputs() : Unit {
     using (q = Qubit[3]) {
         let op1 = CNOT(_, q[1]);
         let op2 = CNOT(q[1], _);
-        DoBoth(q[0], q[2], op1, op2);
+        ApplyBoth(q[0], q[2], op1, op2);
     }
 }
 ```
 
 Now `op1` and `op2` are both obtained using partial application and share a
-qubit. When the user calls `DoBoth` in the example above the result of the operation
-will depend on the order of `op1` and `op2` inside `DoBoth`. This is definitely
+qubit. When the user calls `ApplyBoth` in the example above the result of the operation
+will depend on the order of `op1` and `op2` inside `ApplyBoth`. This is definitely
 not what the user would expect to happen. The `Distinct Inputs Checker` will detect
 such situations when enabled and will throw `DistinctInputsCheckerException`. See the API documentation on [DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) for more details.
 

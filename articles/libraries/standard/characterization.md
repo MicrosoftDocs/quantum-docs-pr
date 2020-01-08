@@ -192,9 +192,9 @@ Thus, as seen in **H2Sample**, an operation can accept an iterative phase estima
 
 ```qsharp
 operation H2EstimateEnergy(
-    idxBondLength : Int, 
+    idxBondLength : Int,
     trotterStepSize : Double,
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
 : Double
 ```
 
@@ -203,8 +203,11 @@ These myriad phase estimation algorithms are optimized for different properties 
 Similarly, using random walk phase estimation proceeds in much the same way as for other algorithms provided with the canon:
 
 ```qsharp
-operation ApplyExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
-is Adj + Ctl {
+operation ApplyExampleOracle(
+    eigenphase : Double,
+    time : Double,
+    register : Qubit[])
+: Unit is Adj + Ctl {
     Rz(2.0 * eigenphase * time, register[0]);
 }
 

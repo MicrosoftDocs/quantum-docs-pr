@@ -34,7 +34,7 @@ and operations acting on different qubits commute. Let us now consider an
 example, where this operation is used:
 
 ```qsharp
-operation ApplyNotDistinctInputs() : Unit {
+operation ApplyWithNonDistinctInputs() : Unit {
     using (q = Qubit[3]) {
         let op1 = CNOT(_, q[1]);
         let op2 = CNOT(q[1], _);

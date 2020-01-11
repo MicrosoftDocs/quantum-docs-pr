@@ -79,8 +79,7 @@ sum is computed modulo $2^n$ if $y$ is stored in an $n$-bit register.
 
 Using the Quantum Development Kit, this operation can be applied as follows:
 ```qsharp
-operation TestMyAddition (xValue : Int, yValue : Int, n : Int) : Unit
-{
+operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
         x = LittleEndian(xQubits); // define bit order

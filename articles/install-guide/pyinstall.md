@@ -25,7 +25,7 @@ Install the QDK to develop Python host programs to call Q# operations.
     pip install qsharp
     ```
 
-1. Install the `iqsharp`, an extension primarily used by Jupyter and Python that provides the core functionality for compiling and simulating Q# operations.
+1. Install `iqsharp`, a kernel used by Jupyter and Python that provides the core functionality for compiling and executing Q# operations.
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp

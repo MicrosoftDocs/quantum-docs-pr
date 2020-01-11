@@ -84,7 +84,7 @@ Visual Studio Code (VS Code) offers a rich environment for developing Q# program
         - Navigate to the location on the file system where you would like to create the application
         - Click on the **Open new project...** button, once the project has been created
 
-    - If you don't have already installed the C# extension for VS Code a pop-up will appear. Install the extension. 
+    - If you don't already have the C# extension for VS Code installed, a pop-up will appear. Install the extension. 
 
     - Run the application:
 

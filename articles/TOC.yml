@@ -32,10 +32,10 @@
     items:
     - name: Installation overview
       href: install-guide/index.md
-    - name: Q# + Python
-      href: install-guide/pyinstall.md
     - name: Q# + C#
       href: install-guide/csinstall.md
+    - name: Q# + Python
+      href: install-guide/pyinstall.md
     - name: Q# Jupyter notebooks
       href: install-guide/qjupyter.md
   - name: Update the QDK

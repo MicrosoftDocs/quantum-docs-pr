@@ -19,7 +19,7 @@ Install the QDK to develop Python host programs to call Q# operations.
     - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
 
 
-1. Install the `qsharp` package, a Python package that allows the interoperation between Q# and Python.
+1. Install the `qsharp` package, a Python package that enables interop between Q# and Python.
 
     ```bash
     pip install qsharp

@@ -11,7 +11,7 @@ uid: microsoft.quantum.install.cs
 
 Install the QDK to develop C# host programs to call Q# operations.
 
-Q# is a member of the .NET ecosystem and therefore is built to play well with other .NET languages--specifically C#. You can work with this pairing inside different development environments:
+Q# is built to play well with .NET languages--specifically C#. You can work with this pairing inside different development environments:
 
 - Q# + C# using Visual Studio (Windows)
 - Q# + C# using Visual Studio Code (Windows, Linux and Mac)

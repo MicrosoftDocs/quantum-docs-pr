@@ -28,8 +28,7 @@ Visual Studio offers a rich environment for developing Q# programs. The Q# Visua
 
 1. Install the Q# Visual Studio extension
 
-    - Download the [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
-    - Add the extension to Visual Studio
+    - Download and install the [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
 
 1. Verify the installation by creating a `Hello World` application
 

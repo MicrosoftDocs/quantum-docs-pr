@@ -220,7 +220,7 @@ Similar statements are available for all binary operators in which the type of t
 This provides for example a convenient way to accumulate values:
 ```qsharp
 mutable results = new Result[0];
-for (q in qubits) {
+for (qubit in qubits) {
     set results += [M(q)];
     // ...
 }
@@ -382,8 +382,8 @@ For example,
 
 ```qsharp
 // ...
-for (q in qubits) { // qubits contains a Qubit[]
-    H(q);
+for (qubit in qubits) { // qubits contains a Qubit[]
+    H(qubit);
 }
 
 mutable results = new (Int, Results)[Length(qubits)];
@@ -441,21 +441,21 @@ See [*Repeat-Until-Success: Non-deterministic decomposition of single-qubit unit
 (Paetznick and Svore, 2014) for details.
 
 ```qsharp
-using (q = Qubit()) {
+using (qubit = Qubit()) {
     repeat {
-        H(q);
-        T(q);
-        CNOT(target,q);
-        H(q);
-        Adjoint T(q);
-        H(q);
-        T(q);
-        H(q);
-        CNOT(target,q);
-        T(q);
+        H(qubit);
+        T(qubit);
+        CNOT(target, qubit);
+        H(qubit);
+        Adjoint T(qubit);
+        H(qubit);
+        T(qubit);
+        H(qubit);
+        CNOT(target, qubit);
+        T(qubit);
         Z(target);
-        H(q);
-        let result = M(q);
+        H(qubit);
+        let result = M(qubit);
     } until (result == Zero);
 }
 ```
@@ -610,7 +610,7 @@ an array of qubits, indicated by `Qubit[`, an `Int` expression, and `]`.
 For example,
 
 ```qsharp
-using (q = Qubit()) {
+using (qubit = Qubit()) {
     // ...
 }
 using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
@@ -629,7 +629,7 @@ The binding follows the same pattern and rules as the one in a `using` statement
 For example,
 
 ```qsharp
-borrowing (q = Qubit()) {
+borrowing (qubit = Qubit()) {
     // ...
 }
 borrowing ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {

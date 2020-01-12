@@ -119,19 +119,19 @@ of the Q# program. The following example illustrates this:
 ```qsharp
 operation Teleport(source : Qubit, target : Qubit) : Unit {
 
-    using (q = Qubit()) {
+    using (qubit = Qubit()) {
 
         H(q);
-        CNOT(q, target);
+        CNOT(qubit, target);
 
-        CNOT(source, q);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(q) == One) { X(target); X(q); }
+        if (M(qubit) == One) { X(target); X(qubit); }
     }
 }
 ```

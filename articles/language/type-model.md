@@ -338,10 +338,10 @@ with the same result type and an input type that is compatible with `'A`.
 That is, given the following definitions:
 
 ```qsharp
-operation Invert(qs : Qubit[]) : Unit 
+operation Invert(qubits : Qubit[]) : Unit 
 is Adj {...} 
 
-operation Unitary(qs : Qubit[]) : Unit 
+operation ApplyUnitary(qubits : Qubit[]) : Unit 
 is Adj + Ctl {...} 
 
 function ConjugateInvertWith(
@@ -358,9 +358,9 @@ function ConjugateUnitaryWith(
 the following are true:
 
 - The operation `ConjugateInvertWith` may be invoked with an `inner`
-  argument of either `Invert` or `Unitary`.
+  argument of either `Invert` or `ApplyUnitary`.
 - The operation `ConjugateUnitaryWith` may be invoked with an `inner`
-  argument of `Unitary`, but not `Invert`.
+  argument of `ApplyUnitary`, but not `Invert`.
 - A value of type `(Qubit[] => Unit is Adj + Ctl)` may be returned
   from `ConjugateInvertWith`.
 
@@ -502,7 +502,7 @@ This example of a function comes from the [PhaseEstimation](https://github.com/m
 /// # Summary
 /// Given two arrays, returns a new array that is the pointwise product
 /// of each of the given arrays.
-function PointwiseMultiplication (left : Double[], right : Double[]) : Double[] {
+function PointwiseProduct(left : Double[], right : Double[]) : Double[] {
     mutable product = new Double[Length(left)];
 
     for (idxElement in IndexRange(left)) {

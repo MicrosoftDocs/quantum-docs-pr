@@ -35,10 +35,10 @@ example, where this operation is used:
 
 ```qsharp
 operation ApplyWithNonDistinctInputs() : Unit {
-    using (q = Qubit[3]) {
-        let op1 = CNOT(_, q[1]);
-        let op2 = CNOT(q[1], _);
-        ApplyBoth(q[0], q[2], op1, op2);
+    using (qubits = Qubit[3]) {
+        let op1 = CNOT(_, qubits[1]);
+        let op2 = CNOT(qubits[1], _);
+        ApplyBoth(qubits[0], qubits[2], op1, op2);
     }
 }
 ```

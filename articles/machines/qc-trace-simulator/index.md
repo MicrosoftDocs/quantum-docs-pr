@@ -31,10 +31,10 @@ probability of the outcomes. In this case the user can write
 
 ```qsharp
 operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
-    using (q = Qubit()) {
-        H(q);
-        CNOT(q, target);
-        CNOT(source, q);
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);

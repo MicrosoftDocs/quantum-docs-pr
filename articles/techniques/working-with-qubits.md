@@ -111,10 +111,10 @@ operation MeasureOneQubit() : Result {
 A slightly more complicated example is given by the following operation, which returns the Boolean value `true` if all qubits in a register of type `Qubit[]` are in the state zero when measured in a specified Pauli basis, and which returns `false` otherwise.
 
 ```qsharp
-operation MeasureIfAllQubitsAreZero(qs : Qubit[], pauli : Pauli) : Bool {
+operation MeasureIfAllQubitsAreZero(qubits : Qubit[], pauli : Pauli) : Bool {
     mutable value = true;
-    for (q in qs) {
-        if (Measure([pauli], [q]) == One) {
+    for (qubit in qubits) {
+        if (Measure([pauli], [qubit]) == One) {
             set value = false;
         }
     }

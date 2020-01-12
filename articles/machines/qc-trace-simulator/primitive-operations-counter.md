@@ -58,7 +58,7 @@ double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroups
 When `GetMetric` is called with two type parameters it returns the value of the
 metric associated with a given call graph edge. In our example operation
 `Primitive.CCNOT` is called within `ApplySampleWithCCNOT` and therefore the call graph contains
-the edge `<Primitive.CCNOT,ApplySampleWithCCNOT>`. 
+the edge `<Primitive.CCNOT, ApplySampleWithCCNOT>`. 
 
 To get the number of `CNOT` gates used, we can add the following line:
 ```csharp

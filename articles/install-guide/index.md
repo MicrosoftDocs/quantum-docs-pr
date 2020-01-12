@@ -14,7 +14,7 @@ Learn how to install the Microsoft Quantum Development Kit (QDK), so that you ca
 
 - the Q# programming language
 - a set of libraries that abstract complex functionality in Q#
-- a host application (written in Python or a .NET language) that runs quantum operations written in Q#
+- APIs for Python and .NET languages (i.e.: C#, F#, and VB.NET) for running quantum programs written in Q#
 - tools to facilitate your development
 
 Q# programs are often paired with a host program written in a .NET language (typically C#) or Python. This allows us to call quantum operations from inside a classical program.

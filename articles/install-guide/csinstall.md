@@ -13,11 +13,11 @@ Install the QDK to develop C# host programs to call Q# operations.
 
 Q# is built to play well with .NET languages--specifically C#. You can work with this pairing inside different development environments:
 
-- Q# + C# using Visual Studio (Windows)
-- Q# + C# using Visual Studio Code (Windows, Linux and Mac)
-- Q# + C# using the `dotnet` command-line tool
+- [Q# + C# using Visual Studio (Windows)](#VS)
+- [Q# + C# using Visual Studio Code (Windows, Linux and Mac)](#VSC)
+- [Q# + C# using the `dotnet` command-line tool](#command)
 
-## Develop with Q# + C# using Visual Studio
+## Develop with Q# + C# using Visual Studio <a name="VS"></a>
 
 Visual Studio offers a rich environment for developing Q# programs. The Q# Visual Studio extension contains templates for Q# files and projects as well as syntax highlighting, code completion and IntelliSense support.
 
@@ -54,7 +54,7 @@ Visual Studio offers a rich environment for developing Q# programs. The Q# Visua
 > [!NOTE]
 > * If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its subfolders.  
 
-## Develop with Q# + C# using Visual Studio Code
+## Develop with Q# + C# using Visual Studio Code <a name="VSC"></a>
 
 Visual Studio Code (VS Code) offers a rich environment for developing Q# programs on Windows, Linux and Mac.  The Q# VS Code extension includes support for Q# syntax highlighting, code completion, and Q# code snippets.
 
@@ -96,7 +96,7 @@ Visual Studio Code (VS Code) offers a rich environment for developing Q# program
 > [!NOTE]
 > * Workspaces with multiple root folders are not currently supported by the Visual Studio Code extension. If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.
 
-## Develop with Q# + C# using the `dotnet` command-line tool
+## Develop with Q# + C# using the `dotnet` command-line tool <a name="command"></a>
 
 Of course, you can also build and run Q# programs from the command line by simply installing the .NET Core SDK and the QDK project templates. 
 

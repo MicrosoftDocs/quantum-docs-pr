@@ -357,9 +357,9 @@ function ConjugateUnitaryWith(
 
 the following are true:
 
-- The operation `ConjugateInvertWith` may be invoked with an `inner`
+- The function `ConjugateInvertWith` may be invoked with an `inner`
   argument of either `Invert` or `ApplyUnitary`.
-- The operation `ConjugateUnitaryWith` may be invoked with an `inner`
+- The function `ConjugateUnitaryWith` may be invoked with an `inner`
   argument of `ApplyUnitary`, but not `Invert`.
 - A value of type `(Qubit[] => Unit is Adj + Ctl)` may be returned
   from `ConjugateInvertWith`.

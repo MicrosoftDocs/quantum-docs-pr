@@ -77,7 +77,7 @@ Exponentials of Pauli operators can be implemented directly in Q# using the <xre
         let pauliString = [PauliX, PauliX];
         let evolutionTime = 1.0;
 
-        // This applies e^{- i X \otimes X t} to qubits 0 and 1.
+        // This applies 𝑒^{- 𝑖 𝑋⊗𝑋 𝑡} to qubits 0 and 1.
         Exp(pauliString, - evolutionTime, qubits);
     }
 ```

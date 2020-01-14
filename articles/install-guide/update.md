@@ -46,7 +46,7 @@ Verify the output is `3.0.100` or higher. If not, install the [latest version](h
 	```bash
 	dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
 	```
-	If your projects use any other Microsoft.Quantum packages, run the command for these too.
+	If your projects use any other Microsoft.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the command for these too.
 8. Close the command prompt and select **Build** -> **Build Solution** (do *not* select Rebuild Solution, as rebuilding will initially fail)
 
 You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).
@@ -76,8 +76,7 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 	```bash
 	dotnet add package Microsoft.Quantum.Development.Kit
 	```
-
-	If your project uses any other Microsoft.Quantum packages, run the command for these too.
+	If your project uses any other Microsoft.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the command for these too.
 5. Save and close all files.
 6. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:
 	```bash
@@ -100,13 +99,12 @@ Select your development environment below.
 
 ### Update IQ# for Python
 
-1. Update the `iqsharp` kernel
+1. Update the `iqsharp` kernel 
 
     ```bash
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
-	If after the second command you see an error message `Could not install iqsharp into your Jupyter configuration...`, you can keep following the steps below and enter the command again after step 3. 
 
 2. Verify the `iqsharp` version
 
@@ -117,9 +115,10 @@ Select your development environment below.
     You should see the following output:
 
     ```bash
-    iqsharp: 0.10.1911.307
+    iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
+	Don't worry if your `iqsharp` version is higher, it should match the [latest release](xref:microsoft.quantum.relnotes).
 
 3. Update the `qsharp` package
 
@@ -137,7 +136,7 @@ Select your development environment below.
 
     ```bash
     Name: qsharp
-    Version: 0.10.1911.307
+    Version: 0.10.1912.501
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -163,12 +162,14 @@ Select your development environment below.
     dotnet iqsharp --version
     ```
 
-    You should see the following output:
+    Your output should be similar to the following:
 
     ```bash
-    iqsharp: 0.10.1911.307
+    iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
+	Don't worry if your `iqsharp` version is higher, it should match the [latest release](xref:microsoft.quantum.relnotes).
+
 3. Run the following command from a cell in your Jupyter Notebook:
     ```
     %workspace reload

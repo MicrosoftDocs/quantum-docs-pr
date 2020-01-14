@@ -233,7 +233,7 @@ Correspondingly, update-and-reassign statements exist for named items in user-de
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function AddAll(reals : Double[], ims : Double[]) : Complex[] {
+function ComplexAddition(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {

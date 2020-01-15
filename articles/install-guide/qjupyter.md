@@ -57,7 +57,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
         You should see `SayHello` in the output of the cell. When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
 
 
-    - In a new cell, simulate the execution in a quantum computer of the operation you just created by using the `%simulate` magic:
+    - In a new cell, execute the operation you just created (in a simulator) by using the `%simulate` command:
 
         ![Jupyter notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
 

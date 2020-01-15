@@ -53,16 +53,59 @@ When a `Qubit` is de-allocated it must be explicitly set back to the `Zero` stat
 
 In the Bloch sphere the north pole represents the classical value **0** and the south pole represents the classical value **1**. Any superposition can be represented by a point on the sphere (represented by an arrow). When the closer the end of the arrow to a pole, the higher the probability the qubit collapses into the classical value assigned to that pole when measured. For example, the qubit state represented by the red arrow below has a higher probability of giving the value **0** if we measure it.
 
-<img src="./Bloch.svg" width="175">
+<img src="~/media/qrng-Bloch.png" width="175">
 
 We can use this representation to visualize what the code is doing:
 
 * First we start with a qubit initalizated in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.
 
-<img src="./H.svg" width="450">
+<img src="~/media/qrng-H.png" width="450">
 
 * Then we measure the qubit and save the output:
 
-<img src="./Measurement2.svg" width="450">
+<img src="~/media/qrng-meas.png" width="450">
 
 Since the outcome of the measurement is completely random, we have obtained a random bit. We can call this operation several times to create integers. For example, if we call the operation three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).
+
+## Creating a complete random number generator using a host program
+
+Now that we have a Q# operation that generate random bits we can use it to build a complete random number generator with a host program.
+
+ ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
+ 
+ To run your new Q# program from Python, save the following code as `host.py`:
+ 
+ [!code-python[](~/quantum/samples/getting-started/qrng/host.py)]
+
+ You can then run your Python host program from the command line:
+ ```bash
+ $ python host.py
+ Preparing Q# environment...
+ ..The random number generated is 42
+ ```
+ ### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
+ 
+ To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
+ 
+ [!code-csharp[](~/quantum/samples/getting-started/qrng/Host.cs)]
+ 
+ You can then run your C# host program from the command line:
+ 
+ ```bash
+ $ dotnet run
+ The random number generated is 42
+ ```
+
+ ### [C# with Visual Studio 2019](#tab/tabid-vs2019)
+
+ To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:
+
+ [!code-csharp[](~/quantum/samples/getting-started/qrng/Host.cs)]
+
+ Then press F5, the program will start execution and a new windows will pop-up with the following results: 
+
+ ```bash
+ $ dotnet run
+ The random number generated is 4
+ ```
+ ***

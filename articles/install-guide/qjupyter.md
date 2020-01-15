@@ -40,7 +40,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
         jupyter notebook
         ```
 
-    - To open the Jupyter notebook copy and paste the URL provided by the command line into your browswer.
+    - To open the Jupyter notebook copy and paste the URL provided by the command line into your browser.
 
     - Create a Jupyter notebook with a Q# kernel, and add the following code to the first notebook cell:
 

@@ -29,7 +29,15 @@
 - name: How-to guides
   items:
   - name: Install the QDK
-    href: install-guide/index.md
+    items:
+    - name: Installation overview
+      href: install-guide/index.md
+    - name: Q# + C#
+      href: install-guide/csinstall.md
+    - name: Q# + Python
+      href: install-guide/pyinstall.md
+    - name: Q# Jupyter notebooks
+      href: install-guide/qjupyter.md
   - name: Update the QDK
     href: install-guide/update.md  
   - name: Create a Q# project

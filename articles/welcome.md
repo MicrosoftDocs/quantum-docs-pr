@@ -10,7 +10,9 @@ ms.topic: overview
 
 # Get started with the Quantum Development Kit (QDK)
 
-Welcome to the Microsoft Quantum Development Kit!  Here, you will find all the tools you need to learn about quantum programming with Q#.  To guide you in learning quantum computing with Q#, we provide this Getting Started Guide, a journey guide for both those of you who want to start coding quantum programs, and people who are not yet ready to start coding but want to learn more about Q# and quantum programming.
+Welcome to the Microsoft Quantum Development Kit!  Here, you will find all the tools you need to learn about quantum programming with Q#.  To guide you in learning quantum computing with Q#, we provide this Getting Started Guide, a guide for those of you who want to start coding quantum programs, and people who are not yet ready to start coding but want to learn more about Q# and quantum programming. 
+
+If you are ready to start coding, [install the QDK now](xref:microsoft.quantum.install).
 
 ## Questions about quantum computing
 
@@ -49,9 +51,8 @@ The Getting Started guides and articles above are meant to guide both the coder 
 * Explore our [Q# samples](https://docs.microsoft.com/samples/browse/?languages=qsharp) and discover the problems you can solve with quantum computing.
 
 * Develop on a local machine with the host programming language and development environment of your choice:
-  * Develop with [Python](xref:microsoft.quantum.install#develop-with-python)
-  * Develop with [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
-  * Develop with [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
-  * Develop with [Jupyter Notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+  * Develop with [Q# + Python](xref:microsoft.quantum.install.python)
+  * Develop with [Q# + C#](xref:microsoft.quantum.install.cs)
+  * Develop with [Q# Jupyter Notebooks](xref:microsoft.quantum.install.jupyter)
 
 * Become part of the Microsoft Quantum community by contributing to the [QDK](xref:microsoft.quantum.contributing) open source project.

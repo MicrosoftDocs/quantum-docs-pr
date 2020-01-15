@@ -106,6 +106,6 @@ Now that we have a Q# operation that generate random bits we can use it to build
 
  ```bash
  $ dotnet run
- The random number generated is 4
+ The random number generated is 42
  ```
  ***

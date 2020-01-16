@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.mapindex
 name: MapIndex
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Arrays.MappedByIndex" instead.
+summary: MapIndex has been deprecated. Please use @"microsoft.quantum.arrays.mappedbyindex" instead.
 syntax: "function MapIndex (mapper : ((Int, 'T) -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"

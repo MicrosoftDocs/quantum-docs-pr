@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.assertboolequal
 name: AssertBoolEqual
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Diagnostics.EqualityFactB" instead.
+summary: AssertBoolEqual has been deprecated. Please use @"microsoft.quantum.diagnostics.equalityfactb" instead.
 syntax: 'function AssertBoolEqual (actual : Bool, expected : Bool, message : String) : Unit'
 input:
   content: '(actual : Bool, expected : Bool, message : String)'

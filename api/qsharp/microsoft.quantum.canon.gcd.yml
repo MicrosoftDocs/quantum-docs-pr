@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.gcd
 name: GCD
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.math.greatestcommondivisori".
+summary: GCD has been deprecated. Please use @"microsoft.quantum.math.greatestcommondivisori" instead.
 syntax: 'function GCD (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'

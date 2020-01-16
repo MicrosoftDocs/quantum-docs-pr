@@ -161,7 +161,7 @@ newtype Nested = (Double, (ItemName : Int, String));
 Named items have the advantage that they can be accessed directly via the access operator `::`. 
 
 ```qsharp
-function Addition (c1 : Complex, c2 : Complex) : Complex {
+function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
     return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
 }
 ```
@@ -172,7 +172,7 @@ The "unwrap" operator, `!`, allows to extract the value contained in a user defi
 The type of such an "unwrap" expression is the underlying type of the user defined type. 
 
 ```qsharp
-function PrintMsg (value : Nested) : Unit {
+function PrintedMessage(value : Nested) : Unit {
     let (d, (_, str)) = value!;
     Message ($"{str}, value: {d}");
 }
@@ -338,30 +338,31 @@ with the same result type and an input type that is compatible with `'A`.
 That is, given the following definitions:
 
 ```qsharp
-operation Invertible (qs : Qubit[]) : Unit 
+operation Invert(qubits : Qubit[]) : Unit 
 is Adj {...} 
-operation Unitary (qs : Qubit[]) : Unit 
+
+operation ApplyUnitary(qubits : Qubit[]) : Unit 
 is Adj + Ctl {...} 
 
-function ConjugateInvertibleWith (
-   inner: (Qubit[] => Unit is Adj),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateInvertWith(
+    inner : (Qubit[] => Unit is Adj),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj) {...}
 
-function ConjugateUnitaryWith (
-   inner: (Qubit[] => Unit is Adj + Ctl),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateUnitaryWith(
+    inner : (Qubit[] => Unit is Adj + Ctl),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj + Ctl) {...}
 ```
 
 the following are true:
 
-- The operation `ConjugateInvertibleWith` may be invoked with an `inner`
-  argument of either `Invertible` or `Unitary`.
-- The operation `ConjugateUnitaryWith` may be invoked with an `inner`
-  argument of `Unitary`, but not `Invertible`.
+- The function `ConjugateInvertWith` may be invoked with an `inner`
+  argument of either `Invert` or `ApplyUnitary`.
+- The function `ConjugateUnitaryWith` may be invoked with an `inner`
+  argument of `ApplyUnitary`, but not `Invert`.
 - A value of type `(Qubit[] => Unit is Adj + Ctl)` may be returned
-  from `ConjugateInvertibleWith`.
+  from `ConjugateInvertWith`.
 
 > [!IMPORTANT]
 > Q# 0.3 introduces a significant difference in the behavior of
@@ -480,14 +481,12 @@ This example of a Q# operation comes from the [Measurement](https://github.com/m
 ```qsharp
 /// # Summary
 /// Prepares a state and measures it in the Pauli-Z basis.
-operation MeasureOneQubit () : Result {
+operation MeasureOneQubit() : Result {
         mutable result = Zero;
 
         using (qubit = Qubit()) { // Allocate a qubit
             H(qubit);               // Use a quantum operation on that qubit
-
             set result = M(qubit);      // Measure the qubit
-
             if (result == One) {    // Reset the qubit so that it can be released
                 X(qubit);
             }
@@ -499,12 +498,11 @@ operation MeasureOneQubit () : Result {
 
 This example of a function comes from the [PhaseEstimation](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) sample. It contains purely classical code. You can see that, unlike the example above, no qubits are allocated, and no quantum operations are used.
 
-
 ```qsharp
 /// # Summary
 /// Given two arrays, returns a new array that is the pointwise product
 /// of each of the given arrays.
-function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
+function PointwiseProduct(left : Double[], right : Double[]) : Double[] {
     mutable product = new Double[Length(left)];
 
     for (idxElement in IndexRange(left)) {
@@ -520,7 +518,10 @@ It is also possible for a function to be passed qubits for processing, as in thi
 /// # Summary
 /// Translate MCT masks into multiple-controlled Toffoli gates (with single
 /// targets).
-function GateMasksToToffoliGates (qubits : Qubit[], masks : MCMTMask[]) : MCTGate[] {
+function GateMasksToToffoliGates(
+    qubits : Qubit[], 
+    masks : MCMTMask[]) 
+: MCTGate[] {
 
     mutable result = new MCTGate[0];
     let n = Length(qubits);

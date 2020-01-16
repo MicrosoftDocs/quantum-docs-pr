@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.measureintegerbe
 name: MeasureIntegerBE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  This operation has been removed.
+summary: MeasureIntegerBE has been deprecated. Please use @"measureinteger(bigendianaslittleendian(target))" instead.
 syntax: 'operation MeasureIntegerBE (target : Microsoft.Quantum.Arithmetic.BigEndian) : Int'
 input:
   content: '(target : Microsoft.Quantum.Arithmetic.BigEndian)'

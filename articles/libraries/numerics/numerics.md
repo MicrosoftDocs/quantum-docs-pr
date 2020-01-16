@@ -79,15 +79,14 @@ sum is computed modulo $2^n$ if $y$ is stored in an $n$-bit register.
 
 Using the Quantum Development Kit, this operation can be applied as follows:
 ```qsharp
-operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
-{
+operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
         x = LittleEndian(xQubits); // define bit order
         y = LittleEndian(yQubits);
         
-        ApplyXorInPlace(xInt, x); // initialize values
-        ApplyXorInPlace(yInt, y);
+        ApplyXorInPlace(xValue, x); // initialize values
+        ApplyXorInPlace(yValue, y);
         
         AddI(x, y); // perform addition x+y into y
         
@@ -108,7 +107,7 @@ $$
 where $d$ denotes the *degree*. To do so, all that is needed are the polynomial coefficients `[a_0,..., a_d]` (of type `Double[]`),
 the input `x : FixedPoint` and the output `y : FixedPoint` (initially zero):
 ```qsharp
-EvaluatePolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
 The result, $P(x)=1+2x$, will be stored in `yFxP`.
 
@@ -120,11 +119,11 @@ $$
 $f(x)$ is approximated well by $P_{even}(x)$ or $P_{odd}(x) := x\cdot P_{even}(x)$, respectively.
 In Q#, these two cases can be handled as follows:
 ```qsharp
-EvaluateEvenPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```
 which evaluates $P_{even}(x) = 1 + 2x^2$, and
 ```qsharp
-EvaluateOddPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
 which evaluates $P_{odd}(x) = x + 2x^3$.
 

@@ -27,30 +27,27 @@ details on this.
 There are two kinds of measurements that appear in quantum algorithms. The first
 kind plays an auxiliary role where the user usually knows the
 probability of the outcomes. In this case the user can write
-<xref:microsoft.quantum.primitive.assertprob> from the <xref:microsoft.quantum.primitive> namespace to express this knowledge. The following example illustrates this:
+<xref:microsoft.quantum.intrinsic.assertprob> from the <xref:microsoft.quantum.intrinsic> namespace to express this knowledge. The following example illustrates this:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
-
-    using (ancilla = Qubit()) {
-
-        H(ancilla);
-        CNOT(ancilla, target);
-
-        CNOT(source, ancilla);
+operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(q) == One) { X(target); X(q); }
     }
 }
 ```
 
 When the trace simulator executes `AssertProb` it will record that measuring
-`PauliZ` on `source` and `ancilla` should be given an outcome of `Zero` with probability
+`PauliZ` on `source` and `q` should be given an outcome of `Zero` with probability
 0.5. When the simulator executes `M` later, it will find the recorded values of
 the outcome probabilities and `M` will return `Zero` or `One` with probability
 0.5. When the same code is executed on a simulator that keeps track of the

@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.uncurryopa
 name: UncurryOpA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.canon.uncurriedopa".
+summary: UncurryOpA has been deprecated. Please use @"microsoft.quantum.canon.uncurriedopa" instead.
 syntax: "function UncurryOpA (curriedOp : ('T -> ('U => Unit is Adj))) : (('T, 'U) => Unit is Adj)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Adj)))"

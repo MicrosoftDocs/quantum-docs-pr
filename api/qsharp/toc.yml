@@ -73,6 +73,14 @@
 - uid: microsoft.quantum.core
   name: Microsoft.Quantum.Core
   items:
+  - name: Attribute
+    uid: microsoft.quantum.core.attribute
+  - name: Default
+    uid: microsoft.quantum.core.default
+  - name: Deprecated
+    uid: microsoft.quantum.core.deprecated
+  - name: EntryPoint
+    uid: microsoft.quantum.core.entrypoint
   - name: Length
     uid: microsoft.quantum.core.length
   - name: RangeEnd
@@ -106,6 +114,8 @@
     uid: microsoft.quantum.diagnostics.dumpmachine
   - name: DumpRegister
     uid: microsoft.quantum.diagnostics.dumpregister
+  - name: Test
+    uid: microsoft.quantum.diagnostics.test
   - name: AllEqualityFactB
     uid: microsoft.quantum.diagnostics.allequalityfactb
   - name: EqualityFactB
@@ -860,8 +870,12 @@
     uid: microsoft.quantum.arrays.sequencel
   - name: Subarray
     uid: microsoft.quantum.arrays.subarray
+  - name: Swapped
+    uid: microsoft.quantum.arrays.swapped
   - name: Tail
     uid: microsoft.quantum.arrays.tail
+  - name: TupleArrayAsNestedArray
+    uid: microsoft.quantum.arrays.tuplearrayasnestedarray
   - name: Zip
     uid: microsoft.quantum.arrays.zip
   - name: Zip3
@@ -923,6 +937,14 @@
     uid: microsoft.quantum.canon.applymulticontrolledc
   - name: ApplyMultiControlledCA
     uid: microsoft.quantum.canon.applymulticontrolledca
+  - name: ApplyOpRepeatedlyOver
+    uid: microsoft.quantum.canon.applyoprepeatedlyover
+  - name: ApplyOpRepeatedlyOverA
+    uid: microsoft.quantum.canon.applyoprepeatedlyovera
+  - name: ApplyOpRepeatedlyOverC
+    uid: microsoft.quantum.canon.applyoprepeatedlyoverc
+  - name: ApplyOpRepeatedlyOverCA
+    uid: microsoft.quantum.canon.applyoprepeatedlyoverca
   - name: ApplyPauli
     uid: microsoft.quantum.canon.applypauli
   - name: ApplyPauliFromBitString
@@ -953,6 +975,14 @@
     uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
   - name: ApplyRippleCarryComparatorLE
     uid: microsoft.quantum.canon.applyripplecarrycomparatorle
+  - name: ApplySeriesOfOps
+    uid: microsoft.quantum.canon.applyseriesofops
+  - name: ApplySeriesOfOpsA
+    uid: microsoft.quantum.canon.applyseriesofopsa
+  - name: ApplySeriesOfOpsC
+    uid: microsoft.quantum.canon.applyseriesofopsc
+  - name: ApplySeriesOfOpsCA
+    uid: microsoft.quantum.canon.applyseriesofopsca
   - name: ApplyToEach
     uid: microsoft.quantum.canon.applytoeach
   - name: ApplyToEachA
@@ -1231,6 +1261,8 @@
     uid: microsoft.quantum.canon.pad
   - name: PauliFromBitString
     uid: microsoft.quantum.canon.paulifrombitstring
+  - name: PermuteQubits
+    uid: microsoft.quantum.canon.permutequbits
   - name: PNormalize
     uid: microsoft.quantum.canon.pnormalize
   - name: PositiveIntFromBoolArr

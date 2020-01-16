@@ -52,7 +52,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
     To run your new Q# program from Python, save the following code as `host.py`:
 
-    [!code-python[](~/quantum/samples/algorithms/simple-grover/host.py)]
+    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/host.py" range="9-14":::
 
     You can then run your Python host program from the command line:
 
@@ -70,7 +70,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
     To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     You can then run your C# host program from the command line:
 
@@ -89,7 +89,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
     To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     Then press F5, the program will start execution and a new windows will pop-up with the following results: 
 

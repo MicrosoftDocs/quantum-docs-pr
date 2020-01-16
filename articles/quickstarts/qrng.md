@@ -100,7 +100,7 @@ Now that we have a Q# operation that generates random bits, we can use it to bui
 
  To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:
 
- [!code-csharp[](~/quantum/samples/getting-started/qrng/Host.cs)]
+ :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="3-24,26":::
 
  Then press F5, the program will start execution and a new window will pop up with the random number generated: 
 

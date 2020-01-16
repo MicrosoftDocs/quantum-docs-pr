@@ -69,7 +69,7 @@ Since the outcome of the measurement is completely random, we have obtained a ra
 
 ## Creating a complete random number generator using a host program
 
-Now that we have a Q# operation that generates random bits, we can use it to build a complete random number generator with a host program.
+Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator with a host program.
 
  ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
  

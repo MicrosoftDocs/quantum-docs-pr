@@ -38,10 +38,6 @@
     href: quickstart.md
   - name: Implement Grover's search algorithm
     href: quickstarts/search.md
-- name: How-to guides
-  items:
-  - name: Create a Q# project
-    href: how-to-guides/create-qsharp-project.md
 - name: Concepts
   items:
   - name: Quantum development techniques
@@ -56,6 +52,10 @@
     href: machines/toc.yml
   - name: Quantum computing concepts
     href: concepts/toc.yml
+- name: How-to guides
+  items:
+  - name: Create a Q# project
+    href: how-to-guides/create-qsharp-project.md
 - name: Q# Learning Resources
   items:
   - name: Learn with the Quantum Katas

@@ -42,8 +42,7 @@ Install the QDK to develop Python host programs to call Q# operations.
     - Create a minimal Q# operation, by creating a file called `Operation.qs`, and adding the following code to it:
 
         ```qsharp
-        namespace HelloWorld
-        {
+        namespace HelloWorld {
             open Microsoft.Quantum.Intrinsic;
             open Microsoft.Quantum.Canon;
 

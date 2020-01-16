@@ -41,7 +41,7 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 
 As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition. When measured, a qubit can only be either 0 or 1. However, during execution the state of the qubit represents the probability of reading either a 0 or a 1 with a measurement. This probabilistic state is known as superposition. We can use this probability to generate random numbers.
 
-In our Q# operation, we introduce the `Qubit` datatype, native to Q#. We can only allocate a `Qubit` with a `using` statement. When it gets allocated a qubit is always in the `Zero`  state. 
+In our Q# operation, we introduce the `Qubit` datatype, native to Q#. We can only allocate a `Qubit` with a `using` statement. When it gets allocated, a qubit is always in the `Zero`  state. 
 
 Using the `H` operation, we are able to put our `Qubit` in superposition. To measure a qubit and read its value, you use the `M` intrinsic operation.
 
@@ -51,18 +51,61 @@ When a `Qubit` is de-allocated it must be explicitly set back to the `Zero` stat
 
 ### Visualizing the code with the Bloch sphere
 
-In the Bloch sphere the north pole represents the classical value **0** and the south pole represents the classical value **1**. Any superposition can be represented by a point on the sphere (represented by an arrow). When the closer the end of the arrow to a pole, the higher the probability the qubit collapses into the classical value assigned to that pole when measured. For example, the qubit state represented by the red arrow below has a higher probability of giving the value **0** if we measure it.
+In the Bloch sphere, the north pole represents the classical value **0** and the south pole represents the classical value **1**. Any superposition can be represented by a point on the sphere (represented by an arrow). The closer the end of the arrow to a pole the higher the probability the qubit collapses into the classical value assigned to that pole when measured. For example, the qubit state represented by the red arrow below has a higher probability of giving the value **0** if we measure it.
 
-<img src="./Bloch.svg" width="175">
+<img src="~/media/qrng-Bloch.png" width="175">
 
 We can use this representation to visualize what the code is doing:
 
 * First we start with a qubit initalizated in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.
 
-<img src="./H.svg" width="450">
+<img src="~/media/qrng-H.png" width="450">
 
 * Then we measure the qubit and save the output:
 
-<img src="./Measurement2.svg" width="450">
+<img src="~/media/qrng-meas.png" width="450">
 
 Since the outcome of the measurement is completely random, we have obtained a random bit. We can call this operation several times to create integers. For example, if we call the operation three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).
+
+## Creating a complete random number generator using a host program
+
+Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator with a host program.
+
+ ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
+ 
+ To run your new Q# program from Python, save the following code as `host.py`:
+ 
+:::code language="python" source="~/quantum/samples/getting-started/qrng/host.py" range="11-30":::
+
+ You can then run your Python host program from the command line:
+ ```bash
+ $ python host.py
+ Preparing Q# environment...
+ ..The random number generated is 42
+ ```
+ ### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
+ 
+ To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
+ 
+ :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+ 
+ You can then run your C# host program from the command line:
+ 
+ ```bash
+ $ dotnet run
+ The random number generated is 42
+ ```
+
+ ### [C# with Visual Studio 2019](#tab/tabid-vs2019)
+
+ To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:
+
+ :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+
+ Then press F5, the program will start execution and a new window will pop up with the random number generated: 
+
+ ```bash
+ $ dotnet run
+ The random number generated is 42
+ ```
+ ***

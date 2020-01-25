@@ -69,7 +69,7 @@ See the full list of closed PRs for [libraries](https://github.com/Microsoft/Qua
 
 This release contains the following:
 
-- New support for [conjugation statements](xref:microsoft.quantum.language.statements#conjugations) in Q#
+- New support for [conjugation statements](xref:microsoft.quantum.manual.statements#conjugations) in Q#
 - New code actions in the compiler, such as: "replace with", "add documentation", and simple array item update
 - Added install template and new project commands to Visual Studio Code extension
 - Added new variants of ApplyIf combinator such as [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone)
@@ -86,7 +86,7 @@ The changes are summarized here as well as instructions for upgrading your exist
 
 This release contains the following:
 
-- New indexing locations for slicing arrays, [see the language reference](xref:microsoft.quantum.language.expressions#array-slices) for more information.
+- New indexing locations for slicing arrays, [see the language reference](xref:microsoft.quantum.manual.expressions#array-slices) for more information.
 - Added Dockerfile hosted on the [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry), see the [IQ# repository for more information](https://github.com/microsoft/iqsharp/blob/master/README.md)
 - Breaking change for [the trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), update to configuration settings, name changes; see the [.NET API Browser for the updated names](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration).
 
@@ -107,10 +107,10 @@ The changes are summarized here as well as instructions for upgrading your exist
 
 ### Q# language syntax
 This release adds new Q# language syntax:
-* Add named items for [user-defined types](xref:microsoft.quantum.language.type-model#user-defined-types).  
+* Add named items for [user-defined types](xref:microsoft.quantum.manual.type-model#user-defined-types).  
 * User-defined type constructors can now be used as functions.
-* Add support for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) and [apply-and-reassign]((xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols)) in user-defined types.
-* Fixup-block for [repeat-until-success](xref:microsoft.quantum.language.statements#repeat-until-success-loop) loops is now optional.
+* Add support for [copy-and-update](xref:microsoft.quantum.manual.expressions#copy-and-update-expressions) and [apply-and-reassign]((xref:microsoft.quantum.manual.statements#rebinding-of-mutable-symbols)) in user-defined types.
+* Fixup-block for [repeat-until-success](xref:microsoft.quantum.manual.statements#repeat-until-success-loop) loops is now optional.
 * We now support while loops in functions (not in operations).
 
 ### Library 
@@ -138,10 +138,10 @@ The changes are summarized here as well as instructions for upgrading your exist
 
 ### Q# language syntax
 This release adds new Q# language syntax:
-* Add a [shorthand way to express specializations of quantum operations](xref:microsoft.quantum.language.type-model#functors) (control and adjoints) with `+` operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., `: adjoint`) will continue to work, but a compile time warning will be generated.  
-* Add a new operator for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions), `w/`, can be used to express array creation as a modification of an existing array.
-* Add the common [apply-and-upate statement](xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols), e.g., `+=`, `w/=`.
-* Add a way to specify a short name for namespaces in [open directives](xref:microsoft.quantum.language.file-structure#open-directives).
+* Add a [shorthand way to express specializations of quantum operations](xref:microsoft.quantum.manual.type-model#functors) (control and adjoints) with `+` operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., `: adjoint`) will continue to work, but a compile time warning will be generated.  
+* Add a new operator for [copy-and-update](xref:microsoft.quantum.manual.expressions#copy-and-update-expressions), `w/`, can be used to express array creation as a modification of an existing array.
+* Add the common [apply-and-update statement](xref:microsoft.quantum.manual.statements#rebinding-of-mutable-symbols), e.g., `+=`, `w/=`.
+* Add a way to specify a short name for namespaces in [open directives](xref:microsoft.quantum.manual.file-structure#open-directives).
 
 With this release, we no longer allow an array element to be specified on the left side of a set statement.  This is because that syntax implies that arrays are mutable when in fact, the result of the operation has always been the creation of a new array with the modification.  Instead, a compiler error will be generated with a suggestion to use the new copy-and-update operator, `w/`, to accomplish the same result.  
 
@@ -216,7 +216,7 @@ This release contains the following:
 
 - Bug fix for DumpRegister issue reported by the community ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
-- Added ability to return from within a [using statement](xref:microsoft.quantum.language.statements).
+- Added ability to return from within a [using statement](xref:microsoft.quantum.manual.statements).
 
 - Revamped [getting started guide](xref:microsoft.quantum.install).
 
@@ -239,7 +239,7 @@ This release contains the following:
 
 This release contains the following:
 
-- adds support for a new primitive type, BigInt, which represents a signed integer of arbitrary size.  Learn more about [BigInt type](xref:microsoft.quantum.language.type-model).
+- adds support for a new primitive type, BigInt, which represents a signed integer of arbitrary size.  Learn more about [BigInt type](xref:microsoft.quantum.manual.type-model).
 - adds new Toffoli simulator, a special purpose fast simulator that can simulate X, CNOT and multi-controlled X quantum operations with very large numbers of qubits.  Learn more about [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator).
 - adds a simple resource estimator that estimates the resources required to run a given instancee of a Q# operation on a quantum computer.  Learn more about the [Resource Estimator](xref:microsoft.quantum.machines.resources-estimator).
 

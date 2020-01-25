@@ -44,6 +44,9 @@
     href: how-to-guides/create-qsharp-project.md
 - name: Concepts
   items:
+  - name: Q# manual
+	topicHref: manual/index.md
+	href: manual/toc.yml
   - name: Quantum development techniques
     topicHref: techniques/index.md
     href: techniques/toc.yml

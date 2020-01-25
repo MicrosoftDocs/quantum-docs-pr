@@ -169,6 +169,44 @@ This violates the definition of the adjoint that we saw in [Vectors and Matrices
 On the other hand, allowing function calls such as `Square` is safe, in that the compiler can be assured that it only needs to preserve the input to `Square` in order to keep its output stable.
 Thus, isolating as much classical logic as possible into functions makes it easy to reuse that logic in other functions and operations alike.
 
+## Control Flow
+
+`******` This section was deleted in Eduardo's PR, did it go elsewhere?
+
+Within an operation or function, each statement executes in order, similar to most common imperative classical languages.
+This flow of control can be modified, however, in three distinct ways:
+
+- `if` Statements
+- `for` Loops
+- `repeat`-`until` Loops
+
+We defer discussion of the latter until we discuss [Repeat Until Success (RUS)](xref:microsoft.quantum.techniques.qubits#measurements) circuits.
+The `if` and `for` control flow constructs, however, proceed in a familiar sense to most classical programming languages.
+In particular, an `if` statement can take a condition, may be followed by one or more `elif` statements, and may end with an `else`:
+
+```qsharp
+if (pauli == PauliX) {
+    X(qubit);
+} elif (pauli == PauliY) {
+    Y(qubit);
+} elif (pauli == PauliZ) {
+    Z(qubit);
+} else {
+    fail "Cannot use PauliI here.";
+}
+```
+
+Similarly, `for` loops indicate iteration over a range of integers or over the elements of an array:
+
+```qsharp
+for (idxQubit in 0..nQubits - 1) {
+    // Do something to idxQubit...
+}
+```
+
+Importantly, `for` loops and `if` statements can even be used in operations for which specializations are auto-generated. In that case the adjoint of a `for` loop reverses the direction and takes the adjoint of each iteration.
+This follows the "shoes-and-socks" principle: if you wish to undo putting on socks and then shoes, you must undo putting on shoes and then undo putting on socks.
+It works decidedly less well to try and take your socks off while you're still wearing your shoes!
 
 ## Operations and Functions as First-Class Values
 

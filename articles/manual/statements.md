@@ -388,48 +388,12 @@ if (a == b) {
 ## Control Flow
 
 Within an operation or function, each statement executes in order, similar to most common imperative classical languages.
-This flow of control can be modified, however, in distinct ways:
+This flow of control can be modified, however, in three distinct ways:
 
 - `if` statements
 - `for` loops
 - `repeat`-`until` loops (quantum specific)
 - `while` loops
-
-The `if` and `for` control flow constructs proceed in a familiar sense to most classical programming languages.
-
-### Conditional Execution
-
-The `if` statement supports conditional execution.
-It consists of the keyword `if`, an open parenthesis `(`, a Boolean expression, a close parenthesis `)`, and a statement block (the _then_ block).
-This may be followed by any number of else-if clauses, each of which consists of the keyword `elif`, an open parenthesis `(`, a Boolean expression, a close parenthesis `)`, and a statement block (the _else-if_ block).
-Finally, the statement may optionally finish with an else clause, which consists of the keyword `else` followed by another statement block (the _else_ block).
-The condition is evaluated, and if it is true, the then block is executed.
-If the condition is false, then the first else-if condition is evaluated; if it is true, that else-if block is executed.
-Otherwise, the second else-if block is tested, and then the third, and so on, until either a clause with a true condition is encountered or there are no more else-if clauses.
-If the original if condition and all else-if clauses evaluate to false, the else block is executed if one was provided.
-
-Note that whichever block is executed is executed in its own scope.
-Bindings made inside of a then, else-if, or else block are not visible after the end of the `if` statement.
-
-For example,
-
-```qsharp
-if (result == One) {
-    X(target);
-} 
-```
-
-or
-
-```qsharp
-if (i == 1) {
-    X(target);
-} elif (i == 2) {
-    Y(target);
-} else {
-    Z(target);
-}
-```
 
 ### For Loop
 
@@ -470,11 +434,6 @@ for ((index, measured) in results) {
 
 The loop variable is bound at each entrance to the loop body, and unbound at the end of the body.
 In particular, the loop variable is not bound after the for loop is completed.
-
-
-Importantly, `for` loops and `if` statements can even be used in operations for which specializations are auto-generated. In that case the adjoint of a `for` loop reverses the direction and takes the adjoint of each iteration.
-This follows the "shoes-and-socks" principle: if you wish to undo putting on socks and then shoes, you must undo putting on shoes and then undo putting on socks.
-
 
 ### Repeat-Until-Success Loop
 
@@ -555,6 +514,50 @@ mutable (item, index) = (-1, 0);
 while (index < Length(arr) && item < 0) { 
     set item = arr[index];
     set index += 1;
+}
+```
+
+### Conditional Statement
+
+The `if` statement supports conditional execution.
+It consists of the keyword `if`, an open parenthesis `(`, a Boolean
+expression, a close parenthesis `)`, and a statement block (the _then_ block).
+This may be followed by any number of else-if clauses, each of which consists
+of the keyword `elif`, an open parenthesis `(`, a Boolean expression,
+a close parenthesis `)`, and a statement block (the _else-if_ block).
+Finally, the statement may optionally finish with an else clause, which
+consists of the keyword `else` followed by another statement block
+(the _else_ block).
+The condition is evaluated, and if it is true, the then block is executed.
+If the condition is false, then the first else-if condition is evaluated;
+if it is true, that else-if block is executed.
+Otherwise, the second else-if block is tested, and then the third, and so on
+until either a clause with a true condition is encountered or there are no
+more else-if clauses.
+If the original if condition and all else-if clauses evaluate to false,
+the else block is executed if one was provided.
+
+Note that whichever block is executed is executed in its own scope.
+Bindings made inside of a then, else-if, or else block are not visible
+after the end of the if statement.
+
+For example,
+
+```qsharp
+if (result == One) {
+    X(target);
+} 
+```
+
+or
+
+```qsharp
+if (i == 1) {
+    X(target);
+} elif (i == 2) {
+    Y(target);
+} else {
+    Z(target);
 }
 ```
 

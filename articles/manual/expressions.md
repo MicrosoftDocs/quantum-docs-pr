@@ -1,4 +1,4 @@
-﻿---
+---
 title: Expressions | Microsoft Docs 
 description: Expressions
 author: QuantumWriter
@@ -395,7 +395,7 @@ return tuples.
 ## User-Defined Type Expressions
 
 A literal of a user-defined type consists of the type name followed by a
-tuple literal of the type’s base tuple type.
+tuple literal of the type�s base tuple type.
 For instance, if `IntPair` is a user-defined type based on `(Int, Int)`,
 then `IntPair(2,3)` would be a valid literal of that type.
 
@@ -451,8 +451,8 @@ supports `Adjoint`, `Op2` supports `Controlled`, and `Op3` supports both:
 - `[Op2, Op3]` is an array of `(Qubit[] => Unit is Ctl)` operations.
 
 Empty array literals, `[]`, are not allowed.
-Instead using `new ★[0]`,
-where `★` is as placeholder for a suitable type, allows to create the
+Instead using `new STAR[0]`,
+where `STAR` is as placeholder for a suitable type, allows to create the
 desired array of length zero.
 
 Given two arrays of the same type, the binary `+` operator may be used to

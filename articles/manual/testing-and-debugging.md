@@ -1,4 +1,4 @@
-﻿---
+---
 title: Testing and debugging | Microsoft Docs
 description: Testing and debugging
 author: tcNickolas
@@ -165,7 +165,7 @@ using (register = Qubit())
     Assert([PauliX], [register], Zero);
     // Even though we do not have access to states in Q#,
     // we know by the anthropic principle that the state
-    // of register at this point is |+〉.
+    // of register at this point is |+>.
 }
 ```
 
@@ -189,16 +189,16 @@ calling <xref:microsoft.quantum.diagnostics.dumpmachine> generates this output:
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
-∣0❭:	 0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]     --- [  0.00000 rad ]
-∣1❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-∣2❭:	-0.500000 + -0.500000 i	 == 	**********           [ 0.500000 ]   /     [ -2.35619 rad ]
-∣3❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|0>:	 0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]     --- [  0.00000 rad ]
+|1>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|2>:	-0.500000 + -0.500000 i	 == 	**********           [ 0.500000 ]   /     [ -2.35619 rad ]
+|3>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
 ```
 
 The first row provides a comment with the IDs of the corresponding qubits in their significant order.
 The rest of the rows describe the probability amplitude of measuring the basis state vector $\ket{n}$ in both Cartesian and polar formats. In detail for the first row:
 
-* **`∣0❭:`** this row corresponds to the `0` computational basis state
+* **`|0>:`** this row corresponds to the `0` computational basis state
 * **`0.707107 +  0.000000 i`**: the probability amplitude in Cartesian format.
 * **` == `**: the `equal` sign seperates both equivalent representations.
 * **`**********  `**: A graphical representation of the magnitude, the number of `*` is proportionate to the probability of measuring this state vector.
@@ -209,57 +209,57 @@ The rest of the rows describe the probability amplitude of measuring the basis s
 Both the magnitude and the phase are displayed with a graphical representation. The magnitude representation is straight-forward: it shows a bar of `*`, the bigger the probability the bigger the bar will be. For the phase, we show the following symbols to represent the angle based on ranges:
 
 ```
-[ -π/16,   π/16)       ---
-[  π/16,  3π/16)        /-
-[ 3π/16,  5π/16)        / 
-[ 5π/16,  7π/16)       +/ 
-[ 7π/16,  9π/16)      ↑   
-[ 8π/16, 11π/16)    \-    
-[ 7π/16, 13π/16)    \     
-[ 7π/16, 15π/16)   +\     
-[15π/16, 19π/16)   ---    
-[17π/16, 19π/16)   -/     
-[19π/16, 21π/16)    /     
-[21π/16, 23π/16)    /+    
-[23π/16, 25π/16)      ↓   
-[25π/16, 27π/16)       -\ 
-[27π/16, 29π/16)        \ 
-[29π/16, 31π/16)        \+
-[31π/16,   π/16)       ---
+[ -pi/16,   pi/16)       ---
+[  pi/16,  3pi/16)        /-
+[ 3pi/16,  5pi/16)        / 
+[ 5pi/16,  7pi/16)       +/ 
+[ 7pi/16,  9pi/16)      up   
+[ 8pi/16, 11pi/16)    \-    
+[ 7pi/16, 13pi/16)    \     
+[ 7pi/16, 15pi/16)   +\     
+[15pi/16, 19pi/16)   ---    
+[17pi/16, 19pi/16)   -/     
+[19pi/16, 21pi/16)    /     
+[21pi/16, 23pi/16)    /+    
+[23pi/16, 25pi/16)      down   
+[25pi/16, 27pi/16)       -\ 
+[27pi/16, 29pi/16)        \ 
+[29pi/16, 31pi/16)        \+
+[31pi/16,   pi/16)       ---
 ```
 
 The following examples show `DumpMachine` for some common states:
 
-### `∣0❭`
+### `|0>`
 
 ```
 # wave function for qubits with ids (least to most significant): 0
-∣0❭:	 1.000000 +  0.000000 i	 == 	******************** [ 1.000000 ]     --- [  0.00000 rad ]
-∣1❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|0>:	 1.000000 +  0.000000 i	 == 	******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|1>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
 ```
 
-### `∣1❭`
-
-```
-# wave function for qubits with ids (least to most significant): 0
-∣0❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
-∣1❭:	 1.000000 +  0.000000 i	 == 	******************** [ 1.000000 ]     --- [  0.00000 rad ]
-```
-
-### `∣+❭`
+### `|1>`
 
 ```
 # wave function for qubits with ids (least to most significant): 0
-∣0❭:	 0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]      --- [  0.00000 rad ]
-∣1❭:	 0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]      --- [  0.00000 rad ]
+|0>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|1>:	 1.000000 +  0.000000 i	 == 	******************** [ 1.000000 ]     --- [  0.00000 rad ]
 ```
 
-### `∣-❭`
+### `|+>`
 
 ```
 # wave function for qubits with ids (least to most significant): 0
-∣0❭:	 0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]      --- [  0.00000 rad ]
-∣1❭:	-0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]  ---     [  3.14159 rad ]
+|0>:	 0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]      --- [  0.00000 rad ]
+|1>:	 0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]      --- [  0.00000 rad ]
+```
+
+### `|->`
+
+```
+# wave function for qubits with ids (least to most significant): 0
+|0>:	 0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]      --- [  0.00000 rad ]
+|1>:	-0.707107 +  0.000000 i	 == 	**********           [ 0.500000 ]  ---     [  3.14159 rad ]
 ```
 
 
@@ -325,16 +325,16 @@ calling <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[0]` generat
 
 ```
 # wave function for qubits with ids (least to most significant): 0
-∣0❭:	-0.707107 + -0.707107 i	 == 	******************** [ 1.000000 ]  /      [ -2.35619 rad ]
-∣1❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
+|0>:	-0.707107 + -0.707107 i	 == 	******************** [ 1.000000 ]  /      [ -2.35619 rad ]
+|1>:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
 ```
 
 and calling <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[1]` generates this output:
 
 ```
 # wave function for qubits with ids (least to most significant): 1
-∣0❭:	 0.707107 +  0.000000 i	 == 	***********          [ 0.500000 ]     --- [  0.00000 rad ]
-∣1❭:	-0.500000 + -0.500000 i	 == 	***********          [ 0.500000 ]  /      [ -2.35619 rad ]
+|0>:	 0.707107 +  0.000000 i	 == 	***********          [ 0.500000 ]     --- [  0.00000 rad ]
+|1>:	-0.500000 + -0.500000 i	 == 	***********          [ 0.500000 ]  /      [ -2.35619 rad ]
 ```
 
 In general, the state of a register that is entangled with another register is a mixed state rather than a pure state. In this case, <xref:microsoft.quantum.diagnostics.dumpregister> outputs the following message:

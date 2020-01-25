@@ -1,4 +1,4 @@
-﻿---
+---
 title: Q# Operations and Functions | Microsoft Docs
 description: Q# Operations and Functions
 uid: microsoft.quantum.manual.operations-functions
@@ -261,11 +261,11 @@ This approach will be used throughout the Q# standard library for expressing cla
 Many functions and operations that we might wish to define do not actually heavily rely on the types of their inputs, but rather only implicitly use their types via some other function or operation.
 For example, consider the *map* concept common to many functional languages; given a function $f(x)$ and a collection of values $\{x_1, x_2, \dots, x_n\}$, mapping $f(x)$ on the collection returns a new collection $\{f(x_1), f(x_2), \dots, f(x_n)\}$.
 To implement this in Q#, we can take advantage of first class functions.
-Let's write out a quick example of `Mapped`, using ★ as a placeholder while we figure out what types we need.
+Let's write out a quick example of `Mapped`, using STAR as a placeholder while we figure out what types we need.
 
 ```qsharp
-function Mapped(fn : ★ -> ★, values : ★[]) : ★[] {
-    mutable mappedValues = new ★[Length(values)];
+function Mapped(fn : STAR -> STAR, values : STAR[]) : STAR[] {
+    mutable mappedValues = new STAR[Length(values)];
     for (idx in 0..Length(values) - 1) {
         set mappedValues w/= idx <- fn(values[idx]);
     }
@@ -326,7 +326,7 @@ The only difference is that we have explicitly informed the compiler that `Mappe
 Once we have defined `Mapped<'Input, 'Output>` in this way, we can call it as though it was an ordinary function:
 
 ```qsharp
-// Represent Z₀ Z₁ X₂ Y₃ as a list of ints.
+// Represent Z_0 Z_1 X_2 Y_3 as a list of ints.
 let ints = [3, 3, 1, 2];
 // Here, we assume IntToPauli : Int -> Pauli
 // looks up PauliI by 0, PauliX by 1, so forth.

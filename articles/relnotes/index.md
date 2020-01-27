@@ -25,7 +25,9 @@ This release contains the following:
 - New Microsoft Quantum .NET Core SDK, see the [README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md) for more details
 - Added support for .NET Core 3.1, it is highly recommended to have version 3.1.100 install since building with older .NET Core SDK versions may cause issues
 - New compiler transformations available under Microsoft.Quantum.QsCompiler.Experimental
-
+- New functionality to expose output state vectors as HTML in IQ#
+- Added support for EstimateFrequencyA to Microsoft.Quantum.Characterization for Hadamard and SWAP tests
+- AmplitudeAmplification namespace now uses Q# style guide
 
 ## Version 0.10.1912.0501
 

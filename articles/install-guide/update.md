@@ -23,11 +23,11 @@ The process consists of two parts:
 
 Regardless of whether you are using C# or Python to host Q# operations, follow these instructions to update your Q# projects.
 
-1. First, check that you have the latest version of the [.NET Core SDK 3.0](https://dotnet.microsoft.com/download). Run the following command in the command prompt:
+1. First, check that you have the latest version of the [.NET Core SDK 3.1](https://dotnet.microsoft.com/download). Run the following command in the command prompt:
 	```bash
 	dotnet --version
 	```
-Verify the output is `3.0.100` or higher. If not, install the [latest version](https://dotnet.microsoft.com/download) and check again. Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).
+Verify the output is `3.1.100` or higher. If not, install the [latest version](https://dotnet.microsoft.com/download) and check again. Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).
 
 ### Update Q# projects in Visual Studio
  

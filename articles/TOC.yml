@@ -47,12 +47,6 @@
   - name: Q# manual
 	topicHref: manual/index.md
 	href: manual/toc.yml
-  - name: Quantum development techniques
-    topicHref: techniques/index.md
-    href: techniques/toc.yml
-  - name: Q# programming language
-    topicHref: language/index.md
-    href: language/toc.yml
   - name: Q# libraries
     href: libraries/toc.yml
   - name: Quantum computing concepts

@@ -45,8 +45,8 @@
 - name: Concepts
   items:
   - name: Q# manual
-	topicHref: manual/index.md
-	href: manual/toc.yml
+    topicHref: manual/index.md
+    href: manual/toc.yml
   - name: Quantum development techniques
     topicHref: techniques/index.md
     href: techniques/toc.yml

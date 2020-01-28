@@ -36,7 +36,6 @@ uid: microsoft.quantum.glossary
 |Quantum State|A representation of the qubits in the system. This is usually denoted as a complex column vector. For more information, see <xref:microsoft.quantum.concepts.vectors>. |
 |Qubit|Unit of quantum storage. See the <xref:microsoft.quantum.concepts.qubit> section for more details.|
 |Repeat-until-success|A quantum algorithm that probabilistically succeeds. Upon failure, the routine will re-try until successful (or a limit has been reached). |
-|Software Stack|The complete set of classical and quantum software as well as the compilers, simulators and runtimes necessary to operate a quantum computer. See the <xref:microsoft.quantum.concepts.software-stack> section for more details. |
 |Target machine|A compilation target that lowers an abstract quantum program towards hardware or simulation. This typically include re-writes for many purposes including gate replacement, encoding for error correction, geometric layout and others.|
 |Tuple|Comma separated types grouped together via parenthesis. |
 |User-defined type|Collection of built-in or previously defined types that may be referred to as a single unit.|

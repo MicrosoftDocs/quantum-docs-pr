@@ -48,7 +48,7 @@ The Q# standard libraries provide several different functions for representing f
 
 - <xref:microsoft.quantum.diagnostics.fact>
 - <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>
-- <xref:microsoft.quantum.diagnostics.nearequalityfact>
+- <xref:microsoft.quantum.diagnostics.nearequalityfactc>
 - <xref:microsoft.quantum.diagnostics.equalityfacti>
 
 

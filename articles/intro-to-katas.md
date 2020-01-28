@@ -14,7 +14,7 @@ uid: microsoft.quantum.overview.katas
 
 ## Learning by Doing
 
-The tutorials and katas collected in this project emphasize learning by doing: they offer programming tasks that cover certain topics which progress from very simple to quite challenging. Each task asks you to fill in some code; the first tasks might require just one line, and the later ones might require a sizable fragment of code.
+The tutorials and exercises collected in this project emphasize learning by doing: they offer programming tasks that cover certain topics which progress from very simple to quite challenging. Each task asks you to fill in some code; the first tasks might require just one line, and the later ones might require a sizable fragment of code.
 
 Most importantly, the katas include testing frameworks that sets up, runs and validates the solutions to the tasks. This allows you to get immediate feedback on your solution and to reconsider your approach if it is incorrect.
 
@@ -31,10 +31,12 @@ Here is a summary of the main topics covered in the Quantum Katas. We recommend 
 
 ### Introduction to quantum computing concepts
 
-* [Complex arithmetic](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ComplexArithmetic)
-* [Linear algebra](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/LinearAlgebra)
-* [The concept of a qubit](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/Qubit)
-* [Single-qubit quantum gates](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/SingleQubitGates)
+* [Complex arithmetic](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+* [Linear algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
+* [The concept of a qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)
+* [Single-qubit quantum gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)
+* [Multi-qubit systems](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)
+* [Multi-qubit gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)
 
 ### Quantum computing fundamentals
 
@@ -47,10 +49,10 @@ Here is a summary of the main topics covered in the Quantum Katas. We recommend 
 
 * [Quantum teleportation](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)
 * [Superdense coding](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)
-* [Deutsch–Jozsa algorithm](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/DeutschJozsaAlgorithm)
+* [Deutsch–Jozsa algorithm](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringDeutschJozsaAlgorithm)
 * [Implementing Grover's search algorithm](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)
-* [Exploring high-level properties of Grover's search algorithm](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ExploringGroversAlgorithm)
-* Solving real problems using Grover's algorithm: [SAT problems](https://github.com/microsoft/QuantumKatas/blob/master/SolveSATWithGrover) and [graph coloring problems](https://github.com/microsoft/QuantumKatas/blob/master/GraphColoring)
+* [Exploring high-level properties of Grover's search algorithm](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringGroversAlgorithm)
+* Solving real problems using Grover's algorithm: [SAT problems](https://github.com/microsoft/QuantumKatas/tree/master/SolveSATWithGrover) and [graph coloring problems](https://github.com/microsoft/QuantumKatas/tree/master/GraphColoring)
 
 ### Protocols and libraries
 
@@ -61,8 +63,8 @@ Here is a summary of the main topics covered in the Quantum Katas. We recommend 
 
 ### Entanglement games
 
-* [CHSH game](https://github.com/microsoft/QuantumKatas/blob/master/CHSHGame)
-* [GHZ game](https://github.com/microsoft/QuantumKatas/blob/master/GHZGame)
+* [CHSH game](https://github.com/microsoft/QuantumKatas/tree/master/CHSHGame)
+* [GHZ game](https://github.com/microsoft/QuantumKatas/tree/master/GHZGame)
 * [Mermin-Peres magic square game](https://github.com/microsoft/QuantumKatas/tree/master/MagicSquareGame)
 
 ## Resources

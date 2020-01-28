@@ -45,7 +45,7 @@ The Fourier transform is a fundamental tool of classical analysis and is just as
 In addition, the efficiency of the *quantum Fourier transform* (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm.
 
 As an approximate generalization of the QFT, we provide the <xref:microsoft.quantum.canon.approximateqft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
-The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.primitive.rfrac> as well as the <xref:microsoft.quantum.intrinsic.h> operation.
+The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.intrinsic.rfrac> as well as the <xref:microsoft.quantum.intrinsic.h> operation.
 The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as [ket notation](xref:microsoft.quantum.concepts.dirac)).
 The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
 In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.

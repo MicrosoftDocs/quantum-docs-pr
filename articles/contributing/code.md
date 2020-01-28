@@ -54,7 +54,7 @@ For instance, the following test checks that `H(q); X(q); H(q);` as called by <x
 
 ```qsharp
 @Test("QuantumSimulator")
-operation WithTest () : Unit {
+operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
     let expected = Z;
     AssertOperationsEqualReferenced(ApplyToEach(actual, _), ApplyToEachA(expected, _), 4);

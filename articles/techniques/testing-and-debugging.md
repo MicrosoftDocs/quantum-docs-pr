@@ -1,6 +1,6 @@
 ---
-title: Q# techniques - testing and debugging | Microsoft Docs
-description: Q# techniques - testing and debugging
+title: Testing and debugging - Q# techniques | Microsoft Docs
+description: Testing and debugging - Q# techniques
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
@@ -45,8 +45,8 @@ Initially this file contains one sample unit test `AllocateQubit` which checks t
     @Test("QuantumSimulator")
     operation AllocateQubit () : Unit {
 
-        using (q = Qubit()) {
-            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+        using (qubit = Qubit()) {
+            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");

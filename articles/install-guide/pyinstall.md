@@ -16,7 +16,7 @@ Install the QDK to develop Python host programs to call Q# operations.
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - The [PIP](https://pip.pypa.io/en/stable/installing) Python package manager
-    - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
 
 
 1. Install the `qsharp` package, a Python package that enables interop between Q# and Python.
@@ -42,8 +42,7 @@ Install the QDK to develop Python host programs to call Q# operations.
     - Create a minimal Q# operation, by creating a file called `Operation.qs`, and adding the following code to it:
 
         ```qsharp
-        namespace HelloWorld
-        {
+        namespace HelloWorld {
             open Microsoft.Quantum.Intrinsic;
             open Microsoft.Quantum.Canon;
 

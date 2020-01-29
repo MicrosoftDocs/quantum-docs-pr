@@ -9,11 +9,11 @@ summary: |-
 
   That is, given an operation representing a gate $U$, returns a new operation
   $U^m$ for a power $m$.
-syntax: "function OperationPowC (oracle : ('T => Unit is Ctl), power : Int) : ('T => Unit is Ctl)"
+syntax: "function OperationPowC (op : ('T => Unit is Ctl), power : Int) : ('T => Unit is Ctl)"
 input:
-  content: "(oracle : ('T => Unit is Ctl), power : Int)"
+  content: "(op : ('T => Unit is Ctl), power : Int)"
   types:
-  - name: oracle
+  - name: op
     summary: An operation $U$ representing the gate to be repeated.
     isOperation: true
     input:

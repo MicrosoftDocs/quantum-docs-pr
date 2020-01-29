@@ -22,6 +22,7 @@ input:
   content: '(target : Qubit)'
   types:
   - name: target
+    summary: Qubit to which the gate should be applied.
     isPrimitive: true
     uid: Qubit
 output:

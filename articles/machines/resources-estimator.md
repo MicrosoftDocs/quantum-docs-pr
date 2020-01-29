@@ -112,7 +112,7 @@ The following is the list of metrics estimated by the `ResourcesEstimator`:
 
 ## Providing the Probability of Measurement Outcomes
 
-<xref:microsoft.quantum.primitive.assertprob> from the <xref:microsoft.quantum.intrinsic> namespace can 
+<xref:microsoft.quantum.intrinsic.assertprob> from the <xref:microsoft.quantum.intrinsic> namespace can 
 be used to provide information about the expected probability of a measurement to help drive the execution 
 of the Q# program. The following example illustrates this:
 

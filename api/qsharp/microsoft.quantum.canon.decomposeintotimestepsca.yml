@@ -3,14 +3,8 @@ uid: microsoft.quantum.canon.decomposeintotimestepsca
 name: DecomposeIntoTimeStepsCA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  Returns an operation implementing the Trotter–Suzuki integrator for
-  a given operation.
+summary: DecomposeIntoTimeStepsCA has been deprecated. Please use @"microsoft.quantum.canon.decomposedintotimestepsca" instead.
 syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
-references: |-
-  We use the implementation in
-
-  - [ *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* ](https://arxiv.org/abs/quant-ph/0508139)
 input:
   content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int)"
   types:
@@ -35,19 +29,12 @@ input:
     - Adjoint
     - Controlled
   - name: trotterOrder
-    summary: |-
-      Selects the order of the Trotter–Suzuki integrator to be used.
-      Order 1 and even orders 2,4,6,... are currently supported.
     isPrimitive: true
     uid: Int
 output:
   content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
-  - summary: |-
-      Returns a unitary implementing the Trotter–Suzuki integrator, where
-      the first parameter `Double` is the integration step size, and the
-      second parameter is the target acted upon.
-    isOperation: true
+  - isOperation: true
     input:
       types:
       - isPrimitive: true
@@ -61,9 +48,4 @@ output:
     functors:
     - Adjoint
     - Controlled
-typeParameters:
-- uid: "'T"
-  summary: |-
-    The type which each time step should act upon; typically, either
-    `Qubit[]` or `Qubit`.
 ...

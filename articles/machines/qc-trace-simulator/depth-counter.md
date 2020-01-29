@@ -48,7 +48,7 @@ config.useDepthCounter = true;
 var sim = new QCTraceSimulator(config);
 var res = ApplySampleWithCCNOT.Run(sim).Result;
 
-double tDepth = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
+double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
@@ -56,7 +56,7 @@ The first part of the program executes `ApplySampleWithCCNOT`. In the second par
 `QCTraceSimulator.GetMetric` to get the `T` depth of `CCNOT` and `ApplySampleWithCCNOT`: 
 
 ```csharp
-double tDepth = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
+double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 

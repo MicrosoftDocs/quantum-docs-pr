@@ -46,7 +46,8 @@ In addition, the efficiency of the *quantum Fourier transform* (QFT) far surpass
 
 As an approximate generalization of the QFT, we provide the <xref:microsoft.quantum.canon.approximateqft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
 The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.primitive.rfrac> as well as the <xref:microsoft.quantum.intrinsic.h> operation.
-The input and output are assumed to be encoded in big endian encoding (lowest bit/qubit is on the left, same as [ket notation](xref:microsoft.quantum.concepts.dirac)).
+The input and output are assumed to be encoded in big endian encoding---that is, the qubit with index `0` is encoded in the left-most (highest) bit of the binary integer representation.
+This aligns with [ket notation](xref:microsoft.quantum.concepts.dirac), as a register of three qubits in the state $\ket{100}$ corresponds to $q_0$ being in the state $\ket{1}$ while $q_1$ and $q_2$ are both in state $\ket{0}$.
 The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
 In this case all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QFT circuit.
 It is known that for $k \ge \log_2(n) + \log_2(1 / \epsilon) + 3$. one can bound $\\| \operatorname{QFT} - \operatorname{AQFT} \\| < \epsilon$.

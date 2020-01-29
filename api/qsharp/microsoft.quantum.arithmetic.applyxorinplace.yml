@@ -4,7 +4,11 @@ name: ApplyXorInPlace
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: |-
-  Applies `X` operations to qubits in a little-endian register based on 1 bits in an integer.
+  Applies a bitwise-XOR operation between a classical integer and an
+  integer represented by a register of qubits.
+
+  Applies `X` operations to qubits in a little-endian register based on
+  1 bits in an integer.
 
   Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
   then `InPlaceXorLE` performs an operation given by the following map:

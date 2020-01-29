@@ -3,18 +3,16 @@ uid: microsoft.quantum.canon.stackcapacity
 name: StackCapacity
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Retrieves the capacity of a <xref:microsoft.quantum.canon.resultstack>.
+summary: StackCapacity has been deprecated.
 syntax: 'function StackCapacity (stack : Microsoft.Quantum.Canon.ResultStack) : Int'
 input:
   content: '(stack : Microsoft.Quantum.Canon.ResultStack)'
   types:
   - name: stack
-    summary: The stack whose capacity is to be determined.
     uid: microsoft.quantum.canon.resultstack
 output:
   content: Int
   types:
-  - summary: The number of elements fitting into the stack.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 ...

@@ -4,11 +4,11 @@ name: MultiplyAndAddPhaseByModularInteger
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: |-
-  The same as ModularAddProductLE, but assumes that summand encodes
-  integers in QFT basis
+  The same as MultiplyAndAddByModularInteger, but assumes that the summand encodes
+  integers in QFT basis.
 remarks: |-
   Assumes that `phaseSummand` has the highest bit set to 0.
-  Also assumes that the value of `phaseSummand` is less than N.
+  Also assumes that the value of `phaseSummand` is less than $N$.
 syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -17,11 +17,18 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
+    summary: The modulus $N$ which addition and multiplication is taken with respect to.
     isPrimitive: true
     uid: Int
   - name: multiplier
+    summary: |-
+      A quantum register representing an unsigned integer whose value is to
+      be added to each basis state label of `summand`.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: phaseSummand
+    summary: |-
+      A quantum register representing an unsigned integer to use as the target
+      for this operation.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -32,5 +39,5 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- microsoft.quantum.canon.modularaddproductle
+- microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 ...

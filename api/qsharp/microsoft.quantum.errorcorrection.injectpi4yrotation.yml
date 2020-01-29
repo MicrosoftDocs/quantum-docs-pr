@@ -4,6 +4,8 @@ name: InjectPi4YRotation
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
 summary: |-
+  Rotates a single qubit by π/4 about the Y-axis.
+
   Performs a π/4 rotation about `Y`.
 
   The rotation is performed by consuming a magic

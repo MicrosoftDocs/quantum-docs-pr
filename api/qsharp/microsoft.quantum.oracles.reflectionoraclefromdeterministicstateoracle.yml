@@ -6,23 +6,24 @@ namespace: Microsoft.Quantum.Oracles
 summary: |-
   Constructs reflection about a given state from an oracle.
 
-  Given the oracle $O$ of type
-  <xref:microsoft.quantum.oracles.deterministicstateoracle>,
-  the result of this function is a reflection around the state $\ket{\psi}$
-  where $O\ket{0} = \ket{\psi}$.
+  Given a determinstic state preparation oracle represented by a unitary
+  matrix $O$,
+  the result of this function is an oracle that applies a reflection
+  around the state $\ket{\psi}$ prepared by the oracle $O$; that is,
+  the state $\ket{\psi}$ such that $O\ket{0} = \ket{\psi}$.
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
   - name: oracle
-    summary: Oracle of type "DeterministicStateOracle"
+    summary: An oracle that prepares copies of the state $\ket{\psi}$.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: A `ReflectionOracle` that reflects about the state $\ket{\psi}$.
+  - summary: An oracle that reflects about the state $\ket{\psi}$.
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
-- deterministicstateoracle
-- reflectionoracle
+- microsoft.quantum.oracles.deterministicstateoracle
+- microsoft.quantum.oracles.reflectionoracle
 ...

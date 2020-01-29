@@ -21,6 +21,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: targets
+    summary: Qubit register, used for controls and as target.
     isArray: true
     isPrimitive: true
     uid: Qubit

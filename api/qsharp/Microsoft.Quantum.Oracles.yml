@@ -16,13 +16,7 @@ functions:
     Given an operation representing a "black-box" oracle, returns a discrete-time oracle
     which represents the "black-box" oracle repeated multiple times.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
-  summary: |-
-    Constructs reflection about a given state from an oracle.
-
-    Given the oracle $O$ of type
-    <xref:microsoft.quantum.oracles.deterministicstateoracle>,
-    the result of this function is a reflection around the state $\ket{\psi}$
-    where $O\ket{0} = \ket{\psi}$.
+  summary: Constructs reflection about a given state from an oracle.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
   summary: Converts an oracle of type `DeterministicStateOracle` to `StateOracle`.
 newtypes:

@@ -237,7 +237,7 @@ functions:
 - uid: microsoft.quantum.math.realmod
   summary: Computes the modulus between two real numbers.
 - uid: microsoft.quantum.math.round
-  summary: Rounds a value to the nearest integer or to the specified number of fractional digits.
+  summary: Rounds a value to the nearest integer.
 - uid: microsoft.quantum.math.signd
   summary: Returns an integer that indicates the sign of a number.
 - uid: microsoft.quantum.math.signi

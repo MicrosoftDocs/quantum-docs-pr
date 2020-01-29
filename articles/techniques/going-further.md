@@ -30,7 +30,7 @@ To implement this in Q#, we can take advantage of that functions are first class
 Let's write out a quick example of `Map`, using ★ as a placeholder while we figure out what types we need.
 
 ```qsharp
-function Map(fn : ★ -> ★, values : ★[]) : ★[] {
+function Map(fn : (★ -> ★), values : ★[]) : ★[] {
     mutable mappedValues = new ★[Length(values)];
     for (idx in 0..Length(values) - 1) {
         set mappedValues w/= idx <- fn(values[idx]);
@@ -43,7 +43,7 @@ Note this function looks very much the same no matter what actual types we subst
 A map from integers to Paulis, for instance, looks much the same as a map from floating-point numbers to strings:
 
 ```qsharp
-function MapIntsToPaulis(fn : Int -> Pauli, values : Int[]) : Pauli[] {
+function MapIntsToPaulis(fn : (Int -> Pauli), values : Int[]) : Pauli[] {
     mutable mappedValues = new Pauli[Length(values)];
     for (idx in 0..Length(values) - 1) {
         set mappedValues w/= idx <- fn(values[idx]);
@@ -51,7 +51,7 @@ function MapIntsToPaulis(fn : Int -> Pauli, values : Int[]) : Pauli[] {
     return mappedValues;
 }
 
-function MapDoublesToStrings(fn : Double -> String, values : Double[]) : String[] {
+function MapDoublesToStrings(fn : (Double -> String), values : Double[]) : String[] {
     mutable mappedValues = new String[Length(values)];
     for (idx in 0..Length(values) - 1) {
         set mappedValues w/= idx <- fn(values[idx]);
@@ -80,7 +80,7 @@ The name of each type parameter must start with a tick `'`, indicating that it i
 For `Map`, we thus write:
 
 ```qsharp
-function Map<'Input, 'Output>(fn : 'Input -> 'Output, values : 'Input[]) : 'Output {
+function Map<'Input, 'Output>(fn : ('Input -> 'Output), values : 'Input[]) : 'Output[] {
     mutable mappedValues = new 'Output[Length(values)];
     for (idx in 0..Length(values) - 1) {
         set mappedValues w/= idx <- fn(values[idx]);

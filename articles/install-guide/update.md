@@ -24,10 +24,12 @@ The process consists of two parts:
 Regardless of whether you are using C# or Python to host Q# operations, follow these instructions to update your Q# projects.
 
 1. First, check that you have the latest version of the [.NET Core SDK 3.1](https://dotnet.microsoft.com/download). Run the following command in the command prompt:
-	```bash
-	dotnet --version
-	```
-Verify the output is `3.1.100` or higher. If not, install the [latest version](https://dotnet.microsoft.com/download) and check again. Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).
+
+    ```dotnetcli
+    dotnet --version
+    ```
+
+    Verify the output is `3.1.100` or higher. If not, install the [latest version](https://dotnet.microsoft.com/download) and check again. Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).
 
 ### Update Q# projects in Visual Studio
  
@@ -35,18 +37,22 @@ Verify the output is `3.1.100` or higher. If not, install the [latest version](h
 2. Open your solution in Visual Studio
 3. From the menu, select **Build** -> **Clean Solution**
 4. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project).
-	That is, edit lines of the form:
-	```xml
-	<TargetFramework>netcoreapp3.0</TargetFramework>
-	```
-	You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
+    That is, edit lines of the form:
+
+    ```xml
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    ```
+
+    You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
 5. Save and close all files in your solution
 6. Select **Tools** -> **Command Line** -> **Developer Command Prompt**
 7. For each project in the solution, run the following command:
-	```bash
-	dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
-	```
-	If your projects use any other Microsoft.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the command for these too.
+
+    ```dotnetcli
+    dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
+    ```
+
+   If your projects use any other Microsoft.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the command for these too.
 8. Close the command prompt and select **Build** -> **Build Solution** (do *not* select Rebuild Solution)
 
 You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).
@@ -62,26 +68,32 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 
 1. Navigate to the folder containing your project file
 2. Run the following command:
-	```bash
-	dotnet clean [project_name].csproj
-	```
+
+    ```dotnetcli
+    dotnet clean [project_name].csproj
+    ```
 
 3. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project).
-	That is, edit lines of the form:
-	```xml
-	<TargetFramework>netcoreapp3.0</TargetFramework>
-	```
-	You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
+    That is, edit lines of the form:
+
+    ```xml
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    ```
+
+    You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
 4. Run the following command:
-	```bash
-	dotnet add package Microsoft.Quantum.Development.Kit
-	```
-	If your project uses any other Microsoft.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the command for these too.
+
+    ```dotnetcli
+    dotnet add package Microsoft.Quantum.Development.Kit
+    ```
+
+    If your project uses any other Microsoft.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the command for these too.
 5. Save and close all files.
 6. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:
-	```bash
-	dotnet build [project_name].csproj
-	```
+
+    ```dotnetcli
+    dotnet build [project_name].csproj
+    ```
 
 With your Q# projects now updated, follow the instructions below to update the QDK itself.
 
@@ -101,14 +113,14 @@ Select your development environment below.
 
 1. Update the `iqsharp` kernel 
 
-    ```bash
+    ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
 2. Verify the `iqsharp` version
 
-    ```bash
+    ```dotnetcli
     dotnet iqsharp --version
     ```
 
@@ -118,7 +130,8 @@ Select your development environment below.
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
-	Don't worry if your `iqsharp` version is higher, it should match the [latest release](xref:microsoft.quantum.relnotes).
+
+    Don't worry if your `iqsharp` version is higher, it should match the [latest release](xref:microsoft.quantum.relnotes).
 
 3. Update the `qsharp` package
 
@@ -140,7 +153,9 @@ Select your development environment below.
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
+
 5. Run the following command from the location of your `.qs` files
+
     ```bash
     python -c "import qsharp; qsharp.reload()"
     ```
@@ -151,14 +166,14 @@ Select your development environment below.
 
 1. Update the `iqsharp` kernel
 
-    ```bash
+    ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
 2. Verify the `iqsharp` version
 
-    ```bash
+    ```dotnetcli
     dotnet iqsharp --version
     ```
 
@@ -168,9 +183,11 @@ Select your development environment below.
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
-	Don't worry if your `iqsharp` version is higher, it should match the [latest release](xref:microsoft.quantum.relnotes).
+
+    Don't worry if your `iqsharp` version is higher, it should match the [latest release](xref:microsoft.quantum.relnotes).
 
 3. Run the following command from a cell in your Jupyter Notebook:
+
     ```
     %workspace reload
     ```
@@ -206,7 +223,7 @@ Select your development environment below.
 
 1. Update the Quantum project templates for .NET
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 

@@ -25,11 +25,11 @@ Regardless of whether you are using C# or Python to host Q# operations, follow t
 
 1. First, check that you have the latest version of the [.NET Core SDK 3.1](https://dotnet.microsoft.com/download). Run the following command in the command prompt:
 
-   ```bash
-	 dotnet --version
-	 ```
+    ```bash
+    dotnet --version
+    ```
 
-   Verify the output is `3.1.100` or higher. If not, install the [latest version](https://dotnet.microsoft.com/download) and check again. Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).
+    Verify the output is `3.1.100` or higher. If not, install the [latest version](https://dotnet.microsoft.com/download) and check again. Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).
 
 ### Update Q# projects in Visual Studio
  
@@ -37,20 +37,20 @@ Regardless of whether you are using C# or Python to host Q# operations, follow t
 2. Open your solution in Visual Studio
 3. From the menu, select **Build** -> **Clean Solution**
 4. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project).
-   That is, edit lines of the form:
+    That is, edit lines of the form:
 
-   ```xml
-   <TargetFramework>netcoreapp3.0</TargetFramework>
-   ```
+    ```xml
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    ```
 
-   You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
+    You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
 5. Save and close all files in your solution
 6. Select **Tools** -> **Command Line** -> **Developer Command Prompt**
 7. For each project in the solution, run the following command:
 
-   ```dotnetcli
-   dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
-   ```
+    ```dotnetcli
+    dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
+    ```
 
    If your projects use any other Microsoft.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the command for these too.
 8. Close the command prompt and select **Build** -> **Build Solution** (do *not* select Rebuild Solution)

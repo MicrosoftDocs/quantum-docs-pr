@@ -25,7 +25,7 @@ Regardless of whether you are using C# or Python to host Q# operations, follow t
 
 1. First, check that you have the latest version of the [.NET Core SDK 3.1](https://dotnet.microsoft.com/download). Run the following command in the command prompt:
 
-    ```bash
+    ```dotnetcli
     dotnet --version
     ```
 

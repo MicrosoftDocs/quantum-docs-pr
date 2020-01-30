@@ -3,25 +3,16 @@ uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
 name: AmpAmpPhasesStandard
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: |-
-  Computes partial reflection phases for standard amplitude
-  amplification.
-remarks: |-
-  All phases are $\pi$, except for the first reflection about the start
-  state and the last reflection about the target state, which are $0$.
+summary: AmpAmpPhasesStandard has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.standardreflectionphases" instead.
 syntax: 'function AmpAmpPhasesStandard (nIterations : Int) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 input:
   content: '(nIterations : Int)'
   types:
   - name: nIterations
-    summary: |-
-      Number of amplitude amplification iterations to generate partial
-      reflection phases for.
     isPrimitive: true
     uid: Int
 output:
   content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
   types:
-  - summary: An operation that implements phases specified as partial reflections
-    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  - uid: microsoft.quantum.amplitudeamplification.reflectionphases
 ...

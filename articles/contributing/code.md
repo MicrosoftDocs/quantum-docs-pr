@@ -25,13 +25,15 @@ Thus, it is helpful when functionality added by a contribution is well-tested an
 
 The Q# functions, operations, and user-defined types that make up libraries such as the canon are automatically tested as a part of development on the [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) repository.
 When a new pull request is opened, for instance, our [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) configuration will check that the changes in the pull request do not break any existing functionality that the quantum programming community depends on.
-These tests are written using the [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) package, which exposes Q# functions and operations as tests for the [xUnit](https://xunit.github.io/) framework.
 
-The [`Standard/tests/Standard.Tests.csproj`](https://github.com/microsoft/QuantumLibraries/blob/master/Standard/tests/Standard.Tests.csproj) uses this xUnit integration to run any functions or operations ending in `Test`.
-For instance, the following function is used to ensure that the <xref:microsoft.quantum.canon.fst> and <xref:microsoft.quantum.canon.snd> functions both return the right outputs in a representative example.
+With the latest Q# version, unit test are defined using the `@Test("QuantumSimulator")` attribute. The argument may be either "QuantumSimulator", "ToffoliSimulator", "TraceSimulator", or any fully qualified name specifying the execution target. Several attributes defining different execution targets may be attached to the same callable. 
+Some of our tests still use the deprecated [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) package that exposes all Q# functions and operations ending in `Test` to the [xUnit](https://xunit.github.io/) framework. This package is no longer needed for defining unit tests. 
+
+The following function is used to ensure that the <xref:microsoft.quantum.canon.fst> and <xref:microsoft.quantum.canon.snd> functions both return the right outputs in a representative example.
 If the output of `Fst` or `Snd` is incorrect, the `fail` statement is used to cause the test to fail.
 
 ```qsharp
+@Test("QuantumSimulator")
 function PairTest () : Unit {
     let pair = (12, PauliZ);
 
@@ -51,7 +53,8 @@ More complicated conditions can be checked using the techniques in the [testing 
 For instance, the following test checks that `H(q); X(q); H(q);` as called by <xref:microsoft.quantum.canon.applywith> does the same thing as `Z(q)`.
 
 ```qsharp
-operation WithTest () : Unit {
+@Test("QuantumSimulator")
+operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
     let expected = Z;
     AssertOperationsEqualReferenced(ApplyToEach(actual, _), ApplyToEachA(expected, _), 4);

@@ -4,6 +4,8 @@ name: ApplyWithC
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: |-
+  Given two operations, applies one as conjugated with the other.
+
   Given two operations, respectively described by unitary operators $U$
   and $V$, applies them in the sequence $U^{\dagger} V U$. That is,
   this operation implements the unitary operator given by $V$ conjugated

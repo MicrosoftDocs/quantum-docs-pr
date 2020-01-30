@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.nearequalityfact
 name: NearEqualityFact
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" instead.
+summary: NearEqualityFact has been deprecated. Please use @"microsoft.quantum.diagnostics.nearequalityfactd" instead.
 syntax: 'function NearEqualityFact (actual : Double, expected : Double) : Unit'
 input:
   content: '(actual : Double, expected : Double)'

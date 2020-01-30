@@ -86,8 +86,12 @@ functions:
     Takes an array and a list of locations and
     produces a new array formed from the elements of the original
     array that match the given locations.
+- uid: microsoft.quantum.arrays.swapped
+  summary: Applies a swap of two elements in an array.
 - uid: microsoft.quantum.arrays.tail
   summary: Returns the last element of the array.
+- uid: microsoft.quantum.arrays.tuplearrayasnestedarray
+  summary: Turns a list of 2-tuples into a nested array.
 - uid: microsoft.quantum.arrays.zip
   summary: |-
     Given two arrays, returns a new array of pairs such that each pair

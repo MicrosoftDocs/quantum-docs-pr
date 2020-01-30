@@ -11,53 +11,83 @@ summary: |2-
    functions have suffix B,I and D.
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    BigIntToBools has been deprecated. Please use @"microsoft.quantum.convert.bigintasboolarray" instead.
     Please use @"microsoft.quantum.convert.bigintasboolarray".
 - uid: microsoft.quantum.extensions.convert.boolstobigint
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    BoolsToBigInt has been deprecated. Please use @"microsoft.quantum.convert.boolarrayasbigint" instead.
     Please use @"microsoft.quantum.convert.boolarrayasbigint".
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    PauliArrayToInt has been deprecated. Please use @"microsoft.quantum.convert.pauliarrayasint" instead.
     Please use @"microsoft.quantum.convert.pauliarrayasint".
 - uid: microsoft.quantum.extensions.convert.tobigint
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    ToBigInt has been deprecated. Please use @"microsoft.quantum.convert.intasbigint" instead.
     Please use @"microsoft.quantum.convert.intasbigint".
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    ToDouble has been deprecated. Please use @"microsoft.quantum.convert.intasdouble" instead.
     Please use @"microsoft.quantum.convert.intasdouble".
 - uid: microsoft.quantum.extensions.convert.tostringb
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    ToStringB has been deprecated. Please use @"microsoft.quantum.convert.boolasstring" instead.
     Please use @"microsoft.quantum.convert.boolasstring".
 - uid: microsoft.quantum.extensions.convert.tostringd
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    ToStringD has been deprecated. Please use @"microsoft.quantum.convert.doubleasstring" instead.
     Please use @"microsoft.quantum.convert.doubleasstring".
 - uid: microsoft.quantum.extensions.convert.tostringdformat
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    ToStringDFormat has been deprecated. Please use @"microsoft.quantum.convert.doubleasstringwithformat" instead.
     Please use @"microsoft.quantum.convert.doubleasstringwithformat".
 - uid: microsoft.quantum.extensions.convert.tostringi
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    ToStringI has been deprecated. Please use @"microsoft.quantum.convert.intasstring" instead.
     Please use @"microsoft.quantum.convert.intasstring".
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-  summary: |-
+  summary: |2-
+
     > [!WARNING]
     > Deprecated
+
+    ToStringIFormat has been deprecated. Please use @"microsoft.quantum.convert.intasstringwithformat" instead.
     Please use @"microsoft.quantum.convert.intasstringwithformat".
 ...

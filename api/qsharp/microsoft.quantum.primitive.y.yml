@@ -3,11 +3,7 @@ uid: microsoft.quantum.primitive.y
 name: Y
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.intrinsic.y".
+summary: Y has been deprecated. Please use @"microsoft.quantum.intrinsic.y" instead.
 syntax: 'operation Y (qubit : Qubit) : Unit'
 input:
   content: '(qubit : Qubit)'

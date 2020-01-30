@@ -90,12 +90,7 @@ functions:
     Extracts the Pauli string and its qubit indices of a Pauli term described
     by a `GeneratorIndex`.
 - uid: microsoft.quantum.simulation.quantumwalkbyqubitization
-  summary: |-
-    Converts a `BlockEncodingReflection` into a quantum walk.
-
-    That is, given a `BlockEncodingReflection` unitary $U$
-    that encodes some operator $H$ of interest, converts it into a quantum walk
-    $W$ containing the spectrum of $\pm e^{\pm i\sin^{-1}(H)}$.
+  summary: Converts a block-encoding reflection into a quantum walk.
 - uid: microsoft.quantum.simulation.sumgeneratorsystems
   summary: Adds multiple `GeneratorSystem`s to create a new GeneratorSystem.
 - uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm

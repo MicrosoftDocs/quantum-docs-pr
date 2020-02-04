@@ -127,10 +127,10 @@ The two `Bool` literal values are `true` and `false`.
 
 Given any two expressions of the same primitive type, the `==`
 and `!=` binary operators may be used to construct a `Bool` expression.
-The expression will be true if the two expressions are (resp. are not) equal.
+The expression will be true if the two expressions are equal, and false if not.
 
-Values of user-defined types may not be compared, only their values can be compared. 
-For example,
+Values of user-defined types may not be compared, only their unwrapped values can be compared. 
+For example, using the "unwrap" operator `!` (explained in the [Q# type model page](xref:microsoft.quantum.language.type-model#user-defined-types)),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example

@@ -33,6 +33,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: controlQubit
+    summary: An auxillary qubit used to control the application of the given oracle.
     isPrimitive: true
     uid: Qubit
 output:

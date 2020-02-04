@@ -90,27 +90,9 @@ operations:
     FiveQubitCodeEncoder has been deprecated. Please use @"microsoft.quantum.errorcorrection.encodeintofivequbitcode" instead.
     Please use @"microsoft.quantum.errorcorrection.encodeintofivequbitcode".
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
-  summary: |-
-    Performs a π/4 rotation about `Y`.
-
-    The rotation is performed by consuming a magic
-    state; that is, a copy of the state
-    $$
-    \begin{align}
-    \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
-    \end{align}
-    $$
+  summary: Rotates a single qubit by π/4 about the Y-axis.
 - uid: microsoft.quantum.errorcorrection.knilldistill
-  summary: |-
-    Implements the Knill magic state distillation algorithm.
-
-    Given 15 approximate copies of a magic state
-    $$
-    \begin{align}
-    \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}
-    \end{align},
-    $$
-    yields one higher-quality copy.
+  summary: Implements the Knill magic state distillation algorithm.
 - uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
   summary: Measures the given set of generators of a stabilizer group.
 - uid: microsoft.quantum.errorcorrection.recover

@@ -4,11 +4,11 @@ name: QuantumWalkByQubitization
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: |-
-  Converts a `BlockEncodingReflection` into a quantum walk.
+  Converts a block-encoding reflection into a quantum walk.
 
-  That is, given a `BlockEncodingReflection` unitary $U$
-  that encodes some operator $H$ of interest, converts it into a quantum walk
-  $W$ containing the spectrum of $\pm e^{\pm i\sin^{-1}(H)}$.
+  Given a `BlockEncodingReflection` represented by a unitary $U$
+  that encodes some operator $H$ of interest, converts it into a quantum
+  walk $W$ containing the spectrum of $\pm e^{\pm i\sin^{-1}(H)}$.
 syntax: 'function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 references: |-
   - Hamiltonian Simulation by Qubitization

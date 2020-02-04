@@ -55,7 +55,7 @@ Here $\\|\cdot\\|$ is the operator norm which in this case is the square root of
 
 ## Arithmetic ##
 
-Just as arithmetic plays a central role in classical computing, it is also indispensible in quantum computing.  Algorithms such as Shor's factoring algorithm, quantum simulation methods as well as many oracular algorithms rely upon coherent arithmetic operations.  Most approaches to arithmetic build upon quantum adder circuits.  The simplest adder takes a classical input $b$ and adds the value to a quantum state holding an integer $\ket{a}$.  Mathematically, the adder (which we denote $\operatorname{Add}(b)$ for classical input $b$) has the property that
+Just as arithmetic plays a central role in classical computing, it is also indispensable in quantum computing.  Algorithms such as Shor's factoring algorithm, quantum simulation methods as well as many oracular algorithms rely upon coherent arithmetic operations.  Most approaches to arithmetic build upon quantum adder circuits.  The simplest adder takes a classical input $b$ and adds the value to a quantum state holding an integer $\ket{a}$.  Mathematically, the adder (which we denote $\operatorname{Add}(b)$ for classical input $b$) has the property that
 
 $$
 \operatorname{Add}(b)\ket{a}=\ket{a + b}.

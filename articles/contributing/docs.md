@@ -46,42 +46,46 @@ When we compile each release of the Quantum Development Kit, these comments are 
 > Please make sure to not manually edit the generated API documentation, as these files are overwritten with each new release.
 > We value your contribution to the community, and want to make sure that your changes continue to help users release after release.
 
-For example, consider an operation `PrepareTrialState(angles : Double[], register : Qubit[]) : Unit`.
-A documentation comment should help a user learn how to interpret `angles`, what the operation assumes about the initial state of `register`, what the effect on `register` is, and so forth.
+For example, consider the operation `GreaterThan(xs : LittleEndian, ys : LittleEndian, result : Qubit) : Unit`.
+A documentation comment should help a user learn how to interpret `xs` and `ys`, what the operation assumes about the initial state of `result`, what the effect on `result` is, and so forth.
 Each of these different pieces of information can be provided to the Q# compiler by a specially named Markdown section in the documentation comment.
-For the example of `PrepareTrialState`, we might write something like the following:
+For the example of `GreaterThan`, we might write something like the following:
 
 ```qsharp
 /// # Summary
-/// Given a register of qubits, prepares them in a trial state by rotating each
-/// independently.
+/// Applies a greater-than comparison between two integers encoded into
+/// qubit registers, flipping a target qubit based on the result of the
+/// comparison.
 ///
 /// # Description
-/// This operation prepares the input register by performing a
-/// $Y$ rotation on each qubit by an angle given in `angles`.
+/// Carries out a strictly greater than comparison of two integers $x$ and $y$, encoded
+/// in qubit registers xs and ys. If $x > y$, then the result qubit will be flipped,
+/// otherwise the result qubit will retain its state.
 ///
 /// # Input
-/// ## angles
-/// An array of parameters
-/// ## register
-/// A register of qubits initially in the $\ket{00\cdots0}$ state.
+/// ## xs
+/// LittleEndian qubit register encoding the first integer $x$.
+/// ## ys
+/// LittleEndian qubit register encoding the second integer $y
+/// ## result
+/// Single qubit that will be flipped if $x > y$.
 ///
-/// # Example
-/// To prepare an equal superposition $\ket{++\cdots+}$ over all input qubits:
-/// ```qsharp
-/// PrepareTrialState(ConstantArray(Length(register), PI() / 2.0), register);
-/// ```
+/// # References
+/// - Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David
+///   Petrie Moulton: "A new quantum ripple-carry addition circuit", 2004.
+///   https://arxiv.org/abs/quant-ph/0410184v1
+///
+/// - Thomas Haener, Martin Roetteler, Krysta M. Svore: "Factoring using 2n+2 qubits
+///     with Toffoli based modular multiplication", 2016
+///     https://arxiv.org/abs/1611.07995
 ///
 /// # Remarks
-/// This operation is generally useful in the inner loop of an optimization
-/// algorithm.
-///
-/// # See Also
-/// - Microsoft.Quantum.Intrinsic.Ry
-operation PrepareTrialState(angles : Double[], register : Qubit[]) : Unit {
+/// Uses the trick that $x - y = (x'+y)'$, where ' denotes the one's complement.
+operation GreaterThan(xs : LittleEndian, ys : LittleEndian, result : Qubit) : Unit is Adj + Ctl {
     // ...
 }
 ```
+You can see the rendered version of the code above [here](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.arithmetic.greaterthan?view=qsharp-preview)
 
 In addition to the general practice of documentation writing, in writing API documentation comments it helps to keep a few things in mind:
 

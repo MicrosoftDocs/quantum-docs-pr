@@ -64,7 +64,7 @@ For the example of `GreaterThan`, we might write something like the following:
 ///
 /// # Input
 /// ## xs
-/// LittleEndian qubit register encoding the first integer $x$.
+/// A register encoding the first integer $x$ in a little-endian representation.
 /// ## ys
 /// LittleEndian qubit register encoding the second integer $y
 /// ## result

@@ -74,18 +74,18 @@ For the example of `GreaterThan`, we might write something like the following:
 /// - Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David
 ///   Petrie Moulton: "A new quantum ripple-carry addition circuit", 2004.
 ///   https://arxiv.org/abs/quant-ph/0410184v1
-///
 /// - Thomas Haener, Martin Roetteler, Krysta M. Svore: "Factoring using 2n+2 qubits
 ///     with Toffoli based modular multiplication", 2016
 ///     https://arxiv.org/abs/1611.07995
 ///
 /// # Remarks
-/// Uses the trick that $x - y = (x'+y)'$, where ' denotes the one's complement.
-operation GreaterThan(xs : LittleEndian, ys : LittleEndian, result : Qubit) : Unit is Adj + Ctl {
+/// This operation uses the technique that $x - y = (x'+y)'$, where ' denotes the one's complement.
+operation GreaterThan(xs : LittleEndian, ys : LittleEndian, result : Qubit)
+: Unit is Adj + Ctl {
     // ...
 }
 ```
-You can see the rendered version of the code above [here](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.arithmetic.greaterthan?view=qsharp-preview)
+You can see the rendered version of the code above in the [API documentation for the `GreaterThan` operation](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.arithmetic.greaterthan?view=qsharp-preview)
 
 In addition to the general practice of documentation writing, in writing API documentation comments it helps to keep a few things in mind:
 

@@ -16,13 +16,14 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+
 ## Version 0.10.2001.2831
 
 *Release date: January 29th, 2020*
 
 This release contains the following:
 
-- New Microsoft.Quantum.SDK NuGet package, see the [README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md) for more details
+- New Microsoft.Quantum.SDK NuGet package
 - Added support for .NET Core 3.1, it is highly recommended to have version 3.1.100 installed since building with older .NET Core SDK versions may cause issues
 - New compiler transformations available under Microsoft.Quantum.QsCompiler.Experimental
 - New functionality to expose output state vectors as HTML in IQ#

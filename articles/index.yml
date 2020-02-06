@@ -37,6 +37,7 @@ landingContent:
           - text: Quantum computing concepts
             url: concepts/index.md
 
+
   # Develop
   - title: Get the Quantum Development Kit
     linkLists:
@@ -101,4 +102,3 @@ landingContent:
             url: contributing/index.md
           - text: Read the Microsoft Quantum blog
             url: https://cloudblogs.microsoft.com/quantum
-

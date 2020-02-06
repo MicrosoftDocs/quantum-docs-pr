@@ -52,7 +52,6 @@ landingContent:
             url: install-guide/update.md
 
 
- 
   # Development
   - title: Q# programming language
     linkLists:
@@ -69,7 +68,7 @@ landingContent:
           - text: Build a quantum random number generator
             url: quickstarts/qrng.md
           - text: Quantum basics with Q#
-            url: quickstart.md            
+            url: quickstart.md
           - text: "Quantum speedup: Grover's search algorithm"
             url: quickstarts/search.md
       - linkListType: learn
@@ -78,7 +77,6 @@ landingContent:
             url: intro-to-katas.md
           - text: Browse Q# code samples
             url: https://docs.microsoft.com/samples/browse/?languages=qsharp
-
 
 
   # Library card
@@ -103,3 +101,4 @@ landingContent:
             url: contributing/index.md
           - text: Read the Microsoft Quantum blog
             url: https://cloudblogs.microsoft.com/quantum
+

@@ -1,6 +1,6 @@
 - name: Microsoft Quantum Documentation
   href: index.yml
-- name: Overview
+- name: Getting started
   items:
   - name: Get started with the QDK
     href: welcome.md
@@ -46,7 +46,7 @@
     href: intro-to-katas.md
   - name: Q# Samples
     href: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
-- name: Q# and the QDK
+- name: The Quantum Development Kit
   items:
   - name: Quantum development techniques
     topicHref: techniques/index.md
@@ -58,14 +58,12 @@
     href: libraries/toc.yml
   - name: Quantum simulators and resource estimators
     href: machines/toc.yml
-- name: Quantum computing concepts
-  href: concepts/toc.yml
-- name: Resources
-  items:
   - name: Glossary
     href: Glossary.md
-  - name: Further reading
-    href: for-more-info.md
+- name: Quantum computing concepts
+  href: concepts/toc.yml
+- name: Release notes and contributing
+  items:
   - name: QDK Release Notes
     topicHref: relnotes/index.md
     href: relnotes/toc.yml

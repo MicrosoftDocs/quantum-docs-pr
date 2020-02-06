@@ -18,7 +18,7 @@ metadata:
 landingContent:
 
   # Card (optional)
-  - title: Get started with quantum computing
+  - title: Quantum computing
     linkLists:
       - linkListType: learn
         links:

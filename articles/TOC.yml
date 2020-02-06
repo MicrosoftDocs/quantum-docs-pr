@@ -44,9 +44,7 @@
     href: libraries/toc.yml
   - name: Quantum simulators and resource estimators
     href: machines/toc.yml
-  - name: Glossary
-    href: Glossary.md
-- name: Q# examples
+- name: Q# quickstarts and examples
   items:
   - name: Quickstarts
     items:

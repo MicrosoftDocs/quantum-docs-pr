@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Microsoft Quantum Documentation
-summary: Learn how to use the Microsoft Quantum Developer Kit and Q#, a language for quantum algorithms. Learn key concepts and write your first quantum program.  
+summary: Learn how to use the Microsoft Quantum Developer Kit (QDK) and Q#, a language for quantum algorithms. Learn key concepts and write your first quantum program.  
 
 metadata:
   title: Microsoft Quantum Documentation - Q# API Reference
@@ -28,7 +28,7 @@ landingContent:
             url: overview/quantum-computers.md
           - text: Why learn quantum computing?
             url: overview/why-learn-quantum-computing.md
-          - text: What is Q#?
+          - text: What are Q# and QDK?
             url: overview/what-is-qsharp.md
           - text: How can I learn more?
             url: overview/how-to-learn-quantum-computing.md
@@ -66,10 +66,10 @@ landingContent:
             url: machines/index.md
       - linkListType: quickstart
         links:
-          - text: Build a quantum random number generator
-            url: quickstarts/qrng.md
           - text: Quantum basics with Q#
             url: quickstart.md
+          - text: Build a quantum random number generator
+            url: quickstarts/qrng.md
           - text: "Quantum speedup: Grover's search algorithm"
             url: quickstarts/search.md
       - linkListType: learn

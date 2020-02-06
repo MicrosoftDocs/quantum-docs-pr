@@ -2,37 +2,35 @@
   href: index.yml
 - name: Getting started
   items:
-  - name: Five questions about quantum computing
-    items:
-    - name: What is quantum computing?
-      href: overview/what-is-quantum-computing.md
-    - name: What can a quantum computer do?
-      href: overview/quantum-computers.md
-    - name: Why learn quantum computing?
-      href: overview/why-learn-quantum-computing.md
-    - name: What are Q# and QDK?
-      href: overview/what-is-qsharp.md
-    - name: How to learn quantum computing?
-      href: overview/how-to-learn-quantum-computing.md
-  - name: Get started with the Quantum Development Kit (QDK)
-    href: welcome.md
-    items:
-    - name: Install and update
-      items:
-      - name: Install the QDK
-        items:
-        - name: Installation overview
-          href: install-guide/index.md
-        - name: Q# + C#
-          href: install-guide/csinstall.md
-        - name: Q# + Python
-          href: install-guide/pyinstall.md
-        - name: Q# Jupyter notebooks
-          href: install-guide/qjupyter.md
-      - name: Update the QDK
-        href: install-guide/update.md
-      - name: How to create a Q# project
-        href: how-to-guides/create-qsharp-project.md
+   - name: What is quantum computing?
+     href: overview/what-is-quantum-computing.md
+   - name: What can a quantum computer do?
+     href: overview/quantum-computers.md
+   - name: Why learn quantum computing?
+     href: overview/why-learn-quantum-computing.md
+   - name: What are Q# and QDK?
+     href: overview/what-is-qsharp.md
+   - name: How can I learn more?
+     href: overview/how-to-learn-quantum-computing.md
+ - name: The Quantum Development Kit (QDK) introduction
+   href: welcome.md
+   items:
+   - name: Install and update
+     items:
+     - name: Install the QDK
+       items:
+       - name: Installation overview
+         href: install-guide/index.md
+       - name: Q# + C#
+         href: install-guide/csinstall.md
+       - name: Q# + Python
+         href: install-guide/pyinstall.md
+       - name: Q# Jupyter notebooks
+         href: install-guide/qjupyter.md
+     - name: Update the QDK
+       href: install-guide/update.md
+     - name: How to create a Q# project
+       href: how-to-guides/create-qsharp-project.md
 - name: Q# examples
   items:
   - name: Quickstarts
@@ -45,7 +43,7 @@
       href: quickstarts/search.md
   - name: Learn Q# with the Quantum Katas
     href: intro-to-katas.md
-  - name: Q# Samples
+  - name: Sample code
     href: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
 - name: The QDK in-depth
   items:
@@ -59,7 +57,7 @@
     href: libraries/toc.yml
   - name: Quantum simulators and resource estimators
     href: machines/toc.yml
-- name: Quantum computing concepts
+- name: Quantum computing theoretical concepts
   href: concepts/toc.yml
 - name: Resources
   items:

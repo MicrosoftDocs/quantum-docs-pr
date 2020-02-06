@@ -26,7 +26,7 @@ uid: microsoft.quantum.contributing.api-design
       from the get-go. Put differently, don't introduce public APIs in
       case they are useful, but make sure that each part of an API has
       a *concrete* example in which it will be useful. For example:
-    - `ApplyToEachCA` can be used as `ApplyToEachCA(H, _)` to prepare
+    - @"microsoft.quantum.canon.applytoeachca" can be used as `ApplyToEachCA(H, _)` to prepare
         registers in a uniform superposition state, a common task in
         many quantum algorithms. The same operation can also be used
         for many other tasks in preparation, numerics, and
@@ -60,7 +60,7 @@ uid: microsoft.quantum.contributing.api-design
         `EstimateExpectation` that calls the original operation at
         its new name, so that existing code can continue to work
         correctly.
-  - **DO** use the `@Deprecated` attribute to communicate
+  - **DO** use the @"microsoft.quantum.core.deprecated" attribute to communicate
       deprecations to the user.
   - When renaming an operation or function, **DO** provide the new
       name as a string input to `@Deprecated`.
@@ -68,7 +68,7 @@ uid: microsoft.quantum.contributing.api-design
       deprecation period of at least six months for preview releases,
       or at least two years for supported releases.
 
-- **DO** follow the common Q\# [style guide](xref:microsoft.quantum.contributing.style)
+- **DO** follow the common [Q\# style guide](xref:microsoft.quantum.contributing.style)
     whenever applicable.
 
 ## Functions and Operations
@@ -259,9 +259,9 @@ uid: microsoft.quantum.contributing.api-design
     - Functions, operations, and UDTs published by Microsoft as a
         part of the quantum simulation feature of the Quantum
         Development Kit are placed in the
-        "Microsoft.Quantum.Simulation" namespace.
+        `Microsoft.Quantum.Simulation` namespace.
 
-    - For example, Microsoft.Quantum.Math represents a namespace
+    - For example, `Microsoft.Quantum.Math` represents a namespace
         published by Microsoft as part of the Quantum Development
         Kit pertaining to the mathematics domain area.
 
@@ -272,10 +272,10 @@ uid: microsoft.quantum.contributing.api-design
 
     - State preparation APIs published by Microsoft as a part of
         the Quantum Development Kit would be placed into
-        "Microsoft.Quantum.Preparation," while quantum simulation
+        `Microsoft.Quantum.Preparation`, while quantum simulation
         APIs published by Microsoft as a part of the Quantum
         Development Kit would be placed into
-        "Microsoft.Quantum.Simulation."
+        `Microsoft.Quantum.Simulation`.
 
   - **DO** place operations, functions, and user-defined types used
       only within specific domains into namespaces indicating their
@@ -285,9 +285,9 @@ uid: microsoft.quantum.contributing.api-design
 
     - Quantum chemistry APIs published by Microsoft as a part of
         the Quantum Development Kit should be placed into
-        "Microsoft.Quantum.Chemistry." Functionality specific to
+        `Microsoft.Quantum.Chemistry`. Functionality specific to
         implementing the Jordan--Wigner decomposition may be placed
-        in "Microsoft.Quantum.Chemistry.JordanWigner," so that the
+        in `Microsoft.Quantum.Chemistry.JordanWigner`, so that the
         primary interface for the quantum chemistry domain area is
         not concerned with implementations.
 
@@ -304,15 +304,15 @@ uid: microsoft.quantum.contributing.api-design
 
     - The operation name `_Features` indicates a function that is
         private to a given namespace and assembly, and should be
-        accompanied by either the "private" or "internal" keyword.
+        accompanied by either the `private` or `internal` keyword.
 
   - In the rare case that an extensive set of private functions or
     operations are needed to implement the API for a given
     namespace, **DO** place them in a new namespace matching the
-    namespace being implemented and ending in ".Private."
+    namespace being implemented and ending in `.Private`.
 
   - **DO** place all unit tests into namespaces matching the
-      namespace under test and ending in ".Tests."
+      namespace under test and ending in `.Tests`.
 
 ## Naming Conventions and Vocabulary
 
@@ -370,7 +370,7 @@ uid: microsoft.quantum.contributing.api-design
 
       - **Prepare**: Apply a quantum operation or sequence of
           operations to one or more qubits assumed to start in a
-          particular initial state (typically \|0⋯​0⟩​), causing
+          particular initial state (typically $\ket{00\cdots 0}$​), causing
           the state of those qubits to evolve to a desired end
           state. In general, acting on states other than the given
           starting state **MAY** result in an undefined unitary

@@ -30,22 +30,8 @@
       href: install-guide/qjupyter.md
   - name: Update the QDK
     href: install-guide/update.md
-  - name: Create a Q# project
+  - name: How to create a Q# project
     href: how-to-guides/create-qsharp-project.md
-- name: "Using Q#: quickstarts and examples"
-  items:
-  - name: Quickstarts
-    items:
-    - name: Quantum basics with Q#
-      href: quickstart.md
-    - name: Quantum random number generator
-      href: quickstarts/qrng.md
-    - name: Implement Grover's search algorithm
-      href: quickstarts/search.md
-  - name: Learn with the Quantum Katas
-    href: intro-to-katas.md
-  - name: Q# Samples
-    href: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
 - name: The Quantum Development Kit
   items:
   - name: Quantum development techniques
@@ -60,9 +46,23 @@
     href: machines/toc.yml
   - name: Glossary
     href: Glossary.md
+- name: Q# examples
+  items:
+  - name: Quickstarts
+    items:
+    - name: Quantum basics with Q#
+      href: quickstart.md
+    - name: Quantum random number generator
+      href: quickstarts/qrng.md
+    - name: Implement Grover's search algorithm
+      href: quickstarts/search.md
+  - name: Learn with the Quantum Katas
+    href: intro-to-katas.md
+  - name: Q# Samples
+    href: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
 - name: Quantum computing concepts
   href: concepts/toc.yml
-- name: Release notes and contributing
+- name: Resources
   items:
   - name: QDK Release Notes
     topicHref: relnotes/index.md

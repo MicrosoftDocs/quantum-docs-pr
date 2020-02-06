@@ -8,3 +8,5 @@
   href: code.md
 - name: Style Guide
   href: style-guide.md
+- name: API Design Principles
+  href: api-design-principles.md

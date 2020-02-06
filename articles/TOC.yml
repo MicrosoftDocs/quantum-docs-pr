@@ -32,7 +32,7 @@
     href: install-guide/update.md
   - name: Create a Q# project
     href: how-to-guides/create-qsharp-project.md
-- name: Using Q#: quickstarts and examples
+- name: "Using Q#: quickstarts and examples"
   items:
   - name: Quickstarts
     items:

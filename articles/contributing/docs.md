@@ -101,7 +101,6 @@ For the example of `ControlledOnBitString`, we might write something like the fo
  ///     Controlled oracle(controlRegister, targetRegister);
  /// }
  /// ```
- ///
  /// The following code prepares a state $\frac{1}{2}(\ket{00} - \ket{01} + \ket{10} + \ket{11})$:
  /// ```qsharp
  /// using (register = Qubit[2]) {
@@ -114,7 +113,7 @@ For the example of `ControlledOnBitString`, we might write something like the fo
      return ControlledOnBitStringImpl(bits, oracle, _, _);
  }
 ```
-You can see the rendered version of the code above in the [API documentation for the `ControlledOnBitString` function](https://docs.microsoft.com/en-us/qsharp/api/qsharp/microsoft.quantum.canon.controlledonbitstring?view=qsharp-preview).
+You can see the rendered version of the code above in the [API documentation for the `ControlledOnBitString` function](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.canon.controlledonbitstring?view=qsharp-preview).
 
 In addition to the general practice of documentation writing, in writing API documentation comments it helps to keep a few things in mind:
 

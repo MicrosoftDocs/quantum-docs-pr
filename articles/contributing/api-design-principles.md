@@ -22,8 +22,8 @@ uid: microsoft.quantum.contributing.api-design
 - **DO** start each API design with sample use cases to ensure that
     APIs are intuitive to use.
   - **DO** ensure that each component of a public API has a
-      corresponding use case, rather than trying to design the world
-      from the get-go. Put differently, don't introduce public APIs in
+      corresponding use case, rather than trying to design for all possible uses from the start.
+      Put differently, don't introduce public APIs in
       case they are useful, but make sure that each part of an API has
       a *concrete* example in which it will be useful. For example:
     - @"microsoft.quantum.canon.applytoeachca" can be used as `ApplyToEachCA(H, _)` to prepare

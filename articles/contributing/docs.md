@@ -53,38 +53,42 @@ For the example of `ControlledOnBitString`, we might write something like the fo
 
 ```qsharp
  /// # Summary
- /// Returns a unitary operator that applies an oracle on the target register if the control register state corresponds 
- /// to a specified bit mask.
+ /// Returns a unitary operation that applies an oracle on the target register if the 
+ /// control register state corresponds to a specified bit mask.
  ///
  /// # Description
- /// The output of this function can be represented by a unitary transformation $U$ such that
+ /// The output of this function is an operation that can be represented by a
+ /// unitary transformation $U$ such that
  /// \begin{align}
- ///     U \ket{b_0 b_1 \cdots b_{n - 1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_{n-1}} \otimes 
+ ///     U \ket{b_0 b_1 \cdots b_{n - 1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_{n-1}} \otimes
  ///     \begin{cases}
  ///         V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_{n - 1}) = \texttt{bits} \\\\
  ///         \ket{\psi} & \textrm{otherwise}
  ///     \end{cases},
  /// \end{align}
- /// where $V$ is a unitary transformation that represents the action of the `oracle` operation.
+ /// where $V$ is a unitary transformation that represents the action of the
+ /// `oracle` operation.
  ///
  /// # Input
  /// ## bits
- /// The bit string to control the given unitary operator on.
+ /// The bit string to control the given unitary operation on.
  /// ## oracle
- /// Unitary operator to be applied on the target register.
+ /// The unitary operation to be applied on the target register.
  ///
  /// # Output
- /// A unitary operator that applies `oracle` on the target register if the control register state corresponds to the bit mask `bits`.
+ /// A unitary operation that applies `oracle` on the target register if the control 
+ /// register state corresponds to the bit mask `bits`.
  ///
  /// # Remarks
  /// The length of `bits` and `controlRegister` must be equal.
- /// 
+ ///
  /// Given a Boolean array `bits` and a unitary operation `oracle`, the output of this function
  /// is an operation that performs the following steps:
- /// * apply an `X` operation to each qubit of the control register that corresponds to `false` element of the `bits`;
+ /// * apply an `X` operation to each qubit of the control register that corresponds to `false` 
+ /// element of the `bits`;
  /// * apply `Controlled oracle` to the control and target registers;
- /// * apply an `X` operation to each qubit of the control register that corresponds to `false` element of the `bits` again to return 
- /// the control register to the original state.
+ /// * apply an `X` operation to each qubit of the control register that corresponds to `false` 
+ /// element of the `bits` again to return the control register to the original state.
  ///
  /// The output of the `Controlled` functor is a special case of `ControlledOnBitString` where `bits` is equal to `[true, ..., true]`.
  ///
@@ -101,6 +105,7 @@ For the example of `ControlledOnBitString`, we might write something like the fo
  ///     Controlled oracle(controlRegister, targetRegister);
  /// }
  /// ```
+ ///
  /// The following code prepares a state $\frac{1}{2}(\ket{00} - \ket{01} + \ket{10} + \ket{11})$:
  /// ```qsharp
  /// using (register = Qubit[2]) {
@@ -113,7 +118,7 @@ For the example of `ControlledOnBitString`, we might write something like the fo
      return ControlledOnBitStringImpl(bits, oracle, _, _);
  }
 ```
-You can see the rendered version of the code above in the [API documentation for the `ControlledOnBitString` function](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.canon.controlledonbitstring?view=qsharp-preview).
+You can see the rendered version of the code above in the [API documentation for the `ControlledOnBitString` function](xref:microsoft.quantum.canon.controlledonbitstring).
 
 In addition to the general practice of documentation writing, in writing API documentation comments it helps to keep a few things in mind:
 

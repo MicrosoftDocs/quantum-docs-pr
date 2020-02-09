@@ -13,8 +13,9 @@
   - name: How can I learn more?
     href: overview/how-to-learn-quantum-computing.md
 - name: The QDK introduction
-  href: welcome.md
   items:
+  - name: Get started with the Quantum Development Kit
+    href: welcome.md
   - name: Install and update
     items:
     - name: Install the QDK

@@ -8,7 +8,7 @@ ms.topic: article
 uid: microsoft.quantum.manual.intro
 ---
 
-# Q# Manual
+# Q# Introduction
 
 `*****` THIS PAGE TO BE UPDATED/EDITED (in general, and also w/ comments from old PR)
 

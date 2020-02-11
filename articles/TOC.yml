@@ -14,7 +14,7 @@
     href: overview/how-to-learn-quantum-computing.md
 - name: Get the QDK
   items:
-  - name: Get started with the Quantum Development Kit
+  - name: Get started with the QDK
     href: welcome.md
   - name: Install the QDK
     items:
@@ -30,8 +30,6 @@
     href: install-guide/update.md
   - name: How to create a Q# project
     href: how-to-guides/create-qsharp-project.md
-  - name: License
-    href: license.md
 - name: The QDK in-depth
   items:
   - name: Quantum development techniques

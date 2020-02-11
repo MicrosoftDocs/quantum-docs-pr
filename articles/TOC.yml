@@ -32,13 +32,15 @@
       href: install-guide/update.md
     - name: How to create a Q# project
       href: how-to-guides/create-qsharp-project.md
-- name: Q# examples
+- name: Q# libraries
+  href: libraries/toc.yml
+- name: Q# learning resources
   items:
   - name: Quickstarts
     items:
     - name: Quantum random number generator
       href: quickstarts/qrng.md
-    - name: Quantum basics with Q#
+    - name: Exploring entanglement with Q#
       href: quickstart.md
     - name: Implement Grover's search algorithm
       href: quickstarts/search.md
@@ -54,8 +56,7 @@
   - name: Q# programming language
     topicHref: language/index.md
     href: language/toc.yml
-  - name: Q# libraries
-    href: libraries/toc.yml
+
   - name: Quantum simulators and resource estimators
     href: machines/toc.yml
 - name: Theoretical concepts

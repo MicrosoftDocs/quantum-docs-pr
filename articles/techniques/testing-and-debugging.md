@@ -132,16 +132,16 @@ For failing tests, the outputs are also printed to the console to help diagnose 
 
 ***
 
-## Assertions
+## Facts and Assertions
 
 Because functions in Q# have no _logical_ side effects, any _other kinds_ of effects of executing a function whose output type is the empty tuple `()` can never be observed from within a Q# program.
 That is, a target machine can choose not to execute any function which returns `()` with the guarantee that this omission will not modify the behavior of any following Q# code.
-This makes functions returning `()` a useful tool for embedding assertions and debugging logic into Q# programs. 
+This makes functions returning `()` (i.e. `Unit`) a useful tool for embedding assertions and debugging logic into Q# programs. 
 
-The same logic can be applied to implementing assertions. Let's consider a simple example:
+Let's consider a simple example:
 
 ```qsharp
-function AssertPositive(value : Double) : Unit 
+function PositivityFact(value : Double) : Unit 
 {
     if (value <= 0) 
     {
@@ -152,11 +152,32 @@ function AssertPositive(value : Double) : Unit
 
 Here, the keyword `fail` indicates that the computation should not proceed, raising an exception in the target machine running the Q# program.
 By definition, a failure of this kind cannot be observed from within Q#, as no further Q# code is run after a `fail` statement is reached.
-Thus, if we proceed past a call to `AssertPositive`, we can be assured by that its input was positive.
+Thus, if we proceed past a call to `PositivityFact`, we can be assured by that its input was positive.
+
+Note that we can implement the same behavior as `PositivityFact` using the [`Fact`](xref:microsoft.quantum.diagnostics.fact) function from the <xref:microsoft.quantum.diagnostics> namespace:
+
+```qsharp
+	Fact(value <= 0, "Expected a positive number.");
+```
+
+*Assertions*, on the other hand, are used similarly to facts, but may be dependent on the state of the target machine. 
+Correspondingly, they are defined as operations, whereas facts are defined as functions (as above).
+To understand the distinction, consider the following use of a fact within an assertion:
+
+```qsharp
+operation AssertQubitsAreAvailable() : Unit
+{
+     Fact(GetQubitsAvailableToUse() > 0, "No qubits were actually available");
+}
+```
+
+Here, we are using the operation <xref:microsoft.quantum.environment.getqubitsavailabletouse> to return the number of qubits available to use.
+As this clearly depends on the global state of the program and its execution environment, our definition of  `AssertQubitsAreAvailable` must be an operation as well.
+However, we can use that global state to yield a simple `Bool` value as input to the `Fact` function.
 
 Building on these ideas, [the prelude](xref:microsoft.quantum.libraries.standard.prelude) offers two especially useful assertions, <xref:microsoft.quantum.intrinsic.assert> and <xref:microsoft.quantum.intrinsic.assertprob> both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is to be performed, and a hypothetical outcome.
 On target machines which work by simulation, we are not bound by [the no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), and can perform such measurements without disturbing the register passed to such assertions.
-A simulator can then, similar to the `AssertPositive` function above, abort computation if the hypothetical outcome would not be observed in practice:
+A simulator can then, similar to the `PositivityFact` function above, abort computation if the hypothetical outcome would not be observed in practice:
 
 ```qsharp
 using (register = Qubit()) 

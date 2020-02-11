@@ -160,7 +160,7 @@ Note that we can implement the same behavior as `PositivityFact` using the [`Fac
 	Fact(value <= 0, "Expected a positive number.");
 ```
 
-*Assertions*, on the other hand, are used similarly to facts, but are dependent on the state of the target machine. 
+*Assertions*, on the other hand, are used similarly to facts, but may be dependent on the state of the target machine. 
 Correspondingly, they are defined as operations, whereas facts are defined as functions (as above).
 To understand the distinction, consider the following use of a fact within an assertion:
 

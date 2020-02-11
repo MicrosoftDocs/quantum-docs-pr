@@ -12,7 +12,7 @@
     href: overview/what-is-qsharp.md
   - name: How can I learn more?
     href: overview/how-to-learn-quantum-computing.md
-- name: The QDK introduction
+- name: Get the QDK
   items:
   - name: Get started with the Quantum Development Kit
     href: welcome.md
@@ -60,13 +60,11 @@
     href: machines/toc.yml
 - name: Theoretical concepts
   href: concepts/toc.yml
-- name: Resources
-  items:
-  - name: QDK Release Notes
-    topicHref: relnotes/index.md
-    href: relnotes/toc.yml
-  - name: Contributing to the QDK
-    href: contributing/toc.yml
-    topicHref: contributing/index.md
-  - name: License
-    href: license.md
+- name: QDK Release Notes
+  topicHref: relnotes/index.md
+  href: relnotes/toc.yml
+- name: Contributing to the QDK
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: License
+  href: license.md

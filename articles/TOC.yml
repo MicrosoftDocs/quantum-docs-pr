@@ -60,11 +60,13 @@
     href: machines/toc.yml
 - name: Theoretical concepts
   href: concepts/toc.yml
-- name: QDK Release Notes
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
-- name: Contributing to the QDK
-  href: contributing/toc.yml
-  topicHref: contributing/index.md
-- name: License
-  href: license.md
+- name: Resources
+  items:
+  - name: QDK Release Notes
+    topicHref: relnotes/index.md
+    href: relnotes/toc.yml
+  - name: Contributing to the QDK
+    href: contributing/toc.yml
+    topicHref: contributing/index.md
+  - name: License
+    href: license.md

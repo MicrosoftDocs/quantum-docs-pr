@@ -1,6 +1,6 @@
 - name: Microsoft Quantum Documentation
   href: index.yml
-- name: Getting started
+- name: Getting started: quantum computing
   items:
   - name: What is quantum computing?
     href: overview/what-is-quantum-computing.md

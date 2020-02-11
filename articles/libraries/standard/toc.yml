@@ -1,5 +1,3 @@
-- name: OSS licensing
-  href: licensing.md
 - name: The prelude
   href: prelude.md
 - name: Classical mathematics
@@ -20,3 +18,5 @@
   href: error-correction.md
 - name: Applications
   href: applications.md
+- name: OSS licensing
+  href: licensing.md

@@ -1,6 +1,6 @@
 - name: Microsoft Quantum Documentation
   href: index.yml
-- name: Getting started: quantum computing
+- name: Get started with quantum computing
   items:
   - name: What is quantum computing?
     href: overview/what-is-quantum-computing.md
@@ -32,8 +32,8 @@
       href: install-guide/update.md
     - name: How to create a Q# project
       href: how-to-guides/create-qsharp-project.md
-- name: Q# libraries
-  href: libraries/toc.yml
+    - name: License
+      href: license.md
 - name: Q# learning resources
   items:
   - name: Quickstarts
@@ -56,18 +56,15 @@
   - name: Q# programming language
     topicHref: language/index.md
     href: language/toc.yml
-
   - name: Quantum simulators and resource estimators
     href: machines/toc.yml
+- name: Q# libraries
+  href: libraries/toc.yml
 - name: Theoretical concepts
   href: concepts/toc.yml
-- name: Resources
-  items:
-  - name: QDK Release Notes
-    topicHref: relnotes/index.md
-    href: relnotes/toc.yml
-  - name: Contributing to the QDK
-    href: contributing/toc.yml
-    topicHref: contributing/index.md
-  - name: License
-    href: license.md
+- name: QDK Release Notes
+  topicHref: relnotes/index.md
+  href: relnotes/toc.yml
+- name: Contributing to the QDK
+  href: contributing/toc.yml
+  topicHref: contributing/index.md

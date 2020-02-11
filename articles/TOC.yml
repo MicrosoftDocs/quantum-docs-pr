@@ -36,10 +36,10 @@
   items:
   - name: Quickstarts
     items:
-    - name: Quantum basics with Q#
-      href: quickstart.md
     - name: Quantum random number generator
       href: quickstarts/qrng.md
+    - name: Quantum basics with Q#
+      href: quickstart.md
     - name: Implement Grover's search algorithm
       href: quickstarts/search.md
   - name: Learn Q# with the Quantum Katas

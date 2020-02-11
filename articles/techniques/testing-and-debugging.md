@@ -172,7 +172,7 @@ operation AssertQubitsAreAvailable() : Unit
 ```
 
 Here, we are using the operation <xref:microsoft.quantum.environment.getqubitsavailabletouse> to return the number of qubits available to use.
-As this clearly depends on the global state of the program and its execution environment, our defined `AssertQubitsAreAvailable` must be an operation as well.
+As this clearly depends on the global state of the program and its execution environment, our definition of  `AssertQubitsAreAvailable` must be an operation as well.
 However, we can use that global state to yield a simple `Bool` value as input to the `Fact` function.
 
 Building on these ideas, [the prelude](xref:microsoft.quantum.libraries.standard.prelude) offers two especially useful assertions, <xref:microsoft.quantum.intrinsic.assert> and <xref:microsoft.quantum.intrinsic.assertprob> both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is to be performed, and a hypothetical outcome.

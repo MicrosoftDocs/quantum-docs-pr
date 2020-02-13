@@ -27,7 +27,7 @@ BULLET Q# operations: subroutines containing quantum operations, and
 BULLET Q# functions: classical subroutines used within the quantum algorithm.
 TWO A classical program, implemented in a classical programming language like Python or C#, that serves as the main entry point and will invoke Q# operations when it wants to execute a quantum algorithm.
 
-## Write quantum algorithms, not quantum circuits
+## Write quantum algorithms not quantum circuits
 
 In the early days of quantum computing algorithms were visualized as diagrams similarly to circuit diagrams in classical computing.  While the circuit model has been useful for many years in quantum computing research, here at Microsoft, we believe that developers can go beyond quantum circuits and develop quantum algorithms and applications using Q#. The Q# language was built to take advantage of what we’ve learned through decades of classical software development, and empower quantum developers with high-level language functionality targeted for quantum computing.
 

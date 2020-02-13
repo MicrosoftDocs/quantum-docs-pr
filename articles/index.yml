@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
 title: Microsoft Quantum Documentation
-summary: Learn how to use the Microsoft Quantum Development Kit and Q#, a language for quantum programming. Learn key concepts and write your first quantum program.  Explore the rich tools and libraries of the QDK.  
+summary: Learn how to use the Microsoft Quantum Development Kit and Q#, a language for quantum programming. Learn key concepts and write your first quantum program. Explore the rich tools and libraries of the QDK.
 
 metadata:
   title: Microsoft Quantum Documentation - Q# API Reference
-  description: Learn how to use the Microsoft Quantum Development Kit and Q#, a language for quantum programming. Learn key concepts and write your first quantum program.  Explore the rich tools and libraries of the QDK.
+  description: Learn how to use the Microsoft Quantum Development Kit and Q#, a language for quantum programming. Learn key concepts and write your first quantum program. Explore the rich tools and libraries of the QDK.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
@@ -62,7 +62,7 @@ landingContent:
             url: language/index.md
           - text: Q# development techniques
             url: techniques/index.md
-          - text: Quantum simulators & host applications
+          - text: "Quantum simulators & host applications"
             url: machines/index.md
       - linkListType: quickstart
         links:
@@ -81,7 +81,7 @@ landingContent:
 
 
   # Community and contribution
-  - title: Community & contribution
+  - title: "Community & contribution"
     linkLists:
       - linkListType: how-to-guide
         links:

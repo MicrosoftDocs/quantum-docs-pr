@@ -1,6 +1,6 @@
-- name: Reference
+- name: API reference
   items:
-  - name: Q# libraries
+  - name: Q# libraries (API)
     href: qsharp/toc.yml
   - name: .NET libraries
     items:

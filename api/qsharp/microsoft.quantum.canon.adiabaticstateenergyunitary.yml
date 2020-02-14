@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.adiabaticstateenergyunitary
 name: AdiabaticStateEnergyUnitary
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.simuilation.pnormalized".
+summary: AdiabaticStateEnergyUnitary has been deprecated. Please use @"microsoft.quantum.simulation.estimateenergywithadiabaticevolution" instead.
 syntax: 'operation AdiabaticStateEnergyUnitary (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'

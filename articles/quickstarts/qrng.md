@@ -24,20 +24,7 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 
 1. Replace the contents of the Operation.qs file with the following code:
 
-    ```qsharp
-    namespace Quantum {
-        open Microsoft.Quantum.Intrinsic;
-
-        operation QuantumRandomNumberGenerator() : Result {
-            using(q = Qubit())  { // Allocate a qubit.
-                H(q);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
-                let r = M(q);     // Measure the qubit value.
-                Reset(q);
-                return r;
-            }
-        }
-    }
-    ```
+ :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-14":::
 
 As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition. When measured, a qubit can only be either 0 or 1. However, during execution the state of the qubit represents the probability of reading either a 0 or a 1 with a measurement. This probabilistic state is known as superposition. We can use this probability to generate random numbers.
 

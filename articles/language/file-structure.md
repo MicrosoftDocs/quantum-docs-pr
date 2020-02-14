@@ -243,12 +243,12 @@ If one or more specializations besides the default body need to be explicitly de
 then the implementation for the default body needs to be wrapped into a suitable specialization declaration as well:
 
 ```qsharp
-operation CountOnes(qs: Qubit[]) : Int {
+operation CountOnes(qubits: Qubit[]) : Int {
 
     body (...) // default body specialization
     {
         mutable n = 0;
-        for (q in qs) {
+        for (qubit in qubits) {
             set n += M(q) == One ? 1 | 0;
         }
         return n;
@@ -311,7 +311,7 @@ An operation declaration might be as simple as the following,
 which defines the primitive Pauli X operation:
 
 ```qsharp
-operation X (q : Qubit) : Unit
+operation X (qubit : Qubit) : Unit
 is Adj + Ctl {
     body intrinsic;
     adjoint self;

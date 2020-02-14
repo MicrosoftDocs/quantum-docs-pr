@@ -23,7 +23,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
 
 1. Install the `iqsharp` package
 

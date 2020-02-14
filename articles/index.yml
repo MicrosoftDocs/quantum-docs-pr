@@ -122,23 +122,6 @@ landingContent:
             url: libraries/numerics/index.md
           - text: Chemistry library
             url: libraries/chemistry/index.md
-          - text: Chemistry concepts
-            url: libraries/chemistry/concepts/quantum-dynamics.md
-
-
-  # Reference card
-  - title: Q# algorithms & applications (from the standard libraries)
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: Amplitude Amplification
-            url: libraries/standard/algorithms.md
-          - text: Quantum Phase Estimation
-            url: libraries/standard/algorithms.md#quantum-phase-estimation
-          - text: Shor's Algorithm
-            url: libraries/standard/applications.md#shors-algorithm
-          - text: Hamiltonian Simulation
-            url: libraries/standard/applications.md
 
 
   # Community and contribution

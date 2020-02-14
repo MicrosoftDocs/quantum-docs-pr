@@ -74,5 +74,3 @@
   - name: Contributing to the QDK
     href: contributing/toc.yml
     topicHref: contributing/index.md
-  - name: License
-    href: license.md

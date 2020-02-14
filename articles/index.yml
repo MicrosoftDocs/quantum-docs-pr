@@ -28,7 +28,7 @@ landingContent:
             url: overview/quantum-computers.md
           - text: Why learn quantum computing?
             url: overview/why-learn-quantum-computing.md
-          - text: What are Q# and QDK?
+          - text: What are Q# and the QDK?
             url: overview/what-is-qsharp.md
           - text: How can I learn more?
             url: overview/how-to-learn-quantum-computing.md

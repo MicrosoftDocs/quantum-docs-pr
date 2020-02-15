@@ -12,7 +12,7 @@
     href: overview/what-is-qsharp.md
   - name: How can I learn more?
     href: overview/how-to-learn-quantum-computing.md
-- name: Get the QDK
+- name: Get the Quantum Development Kit
   items:
   - name: Get started with the QDK
     href: welcome.md
@@ -56,7 +56,7 @@
     href: machines/toc.yml
 - name: Q# libraries
   href: libraries/toc.yml
-- name: Theoretical concepts
+- name: Quantum computing concepts
   href: concepts/toc.yml
 - name: Contributing to the QDK
   href: contributing/toc.yml

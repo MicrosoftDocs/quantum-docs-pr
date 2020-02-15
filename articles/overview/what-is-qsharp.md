@@ -15,10 +15,11 @@ A key component of Microsoft's Quantum Development Kit (QDK), it provides quantu
 
 The QDK comprises a wide range of tools which give developers everything they need to start writing quantum programs.
 Alongside the Q# language, the QDK includes:
-    - the Q# libraries, which allow developers to hit the ground running and create real-world quantum applications today
-    - various target machines on which Q# programs can be run. These include resource estimators and simulators for larger quantum programs, as well as a full-state quantum simulator, which behaves as a noise-free quantum computer. The latter is very useful for tinkering with ideas, debugging programs, and learning about quantum physics, but only efficient for programs with no more than a few tens of qubits. We're very much looking forward to introducing real quantum computers as target machines in the future.
-    - tools for making work with Q# as seamless as possible, such as extensions for Visual Studio and VS Code, as well as packages for use with Python and Jupyter Notebooks.
-    - API documentation for pairing Q# with classical host languages such as Python and C#
+
+* the Q# libraries, which allow developers to hit the ground running and create real-world quantum applications today
+* various target machines on which Q# programs can be run. These include resource estimators and simulators for larger quantum programs, as well as a full-state quantum simulator, which behaves as a noise-free quantum computer. The latter is very useful for tinkering with ideas, debugging programs, and learning about quantum physics, but only efficient for programs with no more than a few tens of qubits. We're very much looking forward to introducing real quantum computers as target machines in the future.
+* tools for making work with Q# as seamless as possible, such as extensions for Visual Studio and VS Code, as well as packages for use with Python and Jupyter Notebooks.
+* API documentation for pairing Q# with classical host languages such as Python and C#
 
 Applications developed with Microsoft's Quantum Development Kit typically consist of two parts:
 1. One or more quantum algorithms, implemented using the Q# quantum programming language, and invoked by the classical host program. These consist of 

@@ -16,7 +16,7 @@ A key component of Microsoft's Quantum Development Kit (QDK), it provides quantu
 The QDK comprises a wide range of tools which give developers everything they need to start writing quantum programs.
 Alongside the Q# language, the QDK includes:
 * the *Q# libraries*, which allow developers to hit the ground running and create real-world quantum applications today
-* various *target machines* on which Q# programs can be run. These include resource estimators and simulators for larger quantum programs, as well as a full-state quantum simulator, which behaves as a noise-free quantum computer. The latter is very useful for tinkering with ideas, debugging programs, and learning about quantum physics, but only efficient for programs with no more than a few tens of qubits. We're very much looking forward to introducing real quantum computers as target machines in the future.
+* various *target machines* on which Q# programs can be run. These include resource estimators and simulators for larger quantum programs, as well as a full-state quantum simulator, which behaves as a noise-free quantum computer. The latter is very useful for tinkering with ideas, debugging programs, and learning about quantum physics, but only efficient for programs with relatively few qubits. We're very much looking forward to introducing real quantum computers as target machines in the future.
 * *tools* for making work with Q# as seamless as possible, such as extensions for Visual Studio and VS Code, and packages for use with Python and Jupyter Notebooks.
 * *API documentation* for pairing Q# with classical host languages such as Python and C#
 
@@ -66,5 +66,5 @@ The beauty of Q# is that a program can be written once and run on quantum simula
 
 ## Next steps
 
-* [How do I learn quantum computing?](xref:microsoft.quantum.overview.learn)
+* [How do I learn about quantum computing?](xref:microsoft.quantum.overview.learn)
 * [Get started with the Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)

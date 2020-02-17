@@ -51,4 +51,4 @@ Suppose we have a dataset with 784 features per instance (for example, images of
 **Exercise:** come back to the [previous tutorial](xref:microsoft.quantum.libraries.machine-learning.basics) and with the help of the [API documentation](link to the API) write the structure of the model declaring individually the gates like in the example of this page.
 
 ## What's next? 
- Try different structures in the examples provided by the samples. Do you see any changes in the performance of the model? In the next tutorial,[`Load your own datasets`](xref:microsoft.quantum.libraries.machine-learning.load) you will learn how to load datasets to try and explore new architectures of classifiers.
+ Try different structures in the examples provided by the samples. Do you see any changes in the performance of the model? In the next tutorial, [`Load your own datasets`](xref:microsoft.quantum.libraries.machine-learning.load) you will learn how to load datasets to try and explore new architectures of classifiers.

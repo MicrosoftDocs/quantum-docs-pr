@@ -7,7 +7,7 @@ ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
 ---
 
-# Basic classification: classify wines with the QDK
+# basic classification: classify wines with the QDK
 
 In this Quickstart, you will learn how to execute a quantum sequential classifier written in Q# using the Quantum Machine Learning library of the QDK. It's okay if you don't understand everything, this is a quick overview of a complete QDK classifier. You will get more details explained as you go through the rest of the tutorials.
 

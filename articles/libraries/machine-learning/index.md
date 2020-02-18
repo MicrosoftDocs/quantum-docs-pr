@@ -14,7 +14,7 @@ The Quantum Machine Learning Library is a high-level API, written in Q#, that pr
 
 - Basic tools to load your own data to classify with quantum simulators.
 - Slow performance compared to current classical machine learning frameworks (remember that this library is highly experimental).
-- Samples and tutorials to get introduced to the field of Quantum Machine Learning.
+- Samples and tutorials to get introduced to the field of quantum machine learning.
 
 The purpose of this documentation is to provide a concise introduction to machine learning tools (written in Q\#) for hybrid quantum/classical learning. We begin with a brief introduction to machine learning concepts and specifically their realization in quantum circuit centric classifiers (also known as quantum sequential classifiers). We then introduce with a set of tutorials the basics to start using the tools provided by the library. We then discuss the training and validation methods for such classifiers and how they map on specific Q\# operations provided by the library.
 

@@ -38,7 +38,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
 1. Add the following code to the `Operations.qs` file in your new project:
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-23" highlight="5,27":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
 
 1. To define the list that we're searching, create a new file `Reflections.qs`, and paste in the following code:
 

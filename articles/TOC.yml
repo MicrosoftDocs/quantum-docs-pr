@@ -61,6 +61,8 @@
 - name: Contributing to the QDK
   href: contributing/toc.yml
   topicHref: contributing/index.md
+- name: Further reading
+  href: for-more-info.md
 - name: QDK Release Notes
   topicHref: relnotes/index.md
   href: relnotes/toc.yml

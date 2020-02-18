@@ -11,12 +11,12 @@ uid: microsoft.quantum.overview.qsharp
 # What are Q# and the QDK?
 
 Q# is a programming language with features specifically designed for use with quantum computing.
-A key component of Microsoft's Quantum Development Kit (QDK), it provides quantum programmers a framework that allows you to focus on the algorithms without having to worry about technical details like gate sequence optimization or the physical implementation of a quantum computer.
+As a key component of Microsoft's Quantum Development Kit (QDK), it provides quantum programmers a framework that allows you to focus on the algorithms without having to worry about technical details like gate sequence optimization or the physical implementation of a quantum computer.
 
 The QDK comprises a wide range of tools which give developers everything they need to start writing quantum programs.
 Alongside the Q# language, the QDK includes:
 * the *Q# libraries*, which allow developers to hit the ground running and create real-world quantum applications today
-* various *target machines* on which Q# programs can be run. These include resource estimators and simulators for larger quantum programs, as well as a full-state quantum simulator, which behaves as a noise-free quantum computer. The latter is very useful for tinkering with ideas, debugging programs, and learning about quantum physics, but only efficient for programs with relatively few qubits. We're very much looking forward to introducing real quantum computers as target machines in the future.
+* various *target machines* on which Q# programs can be run. These include resource estimators and simulators for larger quantum programs, as well as a full-state quantum simulator, which behaves as a noise-free quantum computer. The latter is very useful for tinkering with ideas, debugging programs, and learning about quantum physics, but only efficient for programs with relatively few qubits. We're very much looking forward to making quantum computing hardware available as target machines in the future.
 * *tools* for making work with Q# as seamless as possible, such as extensions for Visual Studio and VS Code, and packages for use with Python and Jupyter Notebooks.
 * *API documentation* for pairing Q# with classical host languages such as Python and C#
 

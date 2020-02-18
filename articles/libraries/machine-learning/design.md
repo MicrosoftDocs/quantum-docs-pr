@@ -38,7 +38,7 @@ Let's see an example of a classifier. In the [half-moons sample](link to the sam
     }
     ```
 
-What we are defining here is a function that returns an array of `ControlledRotation` elements, that together with an array of parameters and a bias will define our [`SequentialModel`](link to API). This type is fundamental in the Quantum Machine Learning library and defines the classifier. The circuit defined in the function above is part of a classifier in which each sample of the dataset contains two features. Therefore we only need two qubits. The graphical representation of the circuit is:
+What we are defining here is a function that returns an array of `ControlledRotation` elements, that together with an array of parameters and a bias will define our [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel). This type is fundamental in the Quantum Machine Learning library and defines the classifier. The circuit defined in the function above is part of a classifier in which each sample of the dataset contains two features. Therefore we only need two qubits. The graphical representation of the circuit is:
 
  ![Circuit model example](~/media/circuit_model_1.PNG)
 

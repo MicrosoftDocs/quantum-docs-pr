@@ -15,7 +15,7 @@ In this guide we will use the [wine dataset](https://archive.ics.uci.edu/ml/data
 
 ## Execute the classifier from the host program
 
-First, let's take a look at the host programs to see how the process looks like. It consists of three parts:
+First, let's take a look at the host programs to see what the process looks like. Your host program will consist of three parts:
 
 - Initialization of the target machine, in this case a quantum simulator.
 - Execution of the training to obtain the parameters and the bias that determine the model.

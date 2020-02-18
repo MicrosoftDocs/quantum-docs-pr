@@ -78,7 +78,7 @@ First, let's take a look at the host programs to see how the process looks like.
 
 Now let's see how the functions invoked by the host program are defined in Q#. We save the following code in a file named `Training.qs`.
 
-code language="csharp" source="~/quantum/samples/machine-learning/wine/Host.cs" range="4-84"
+code language="qsharp" source="~/quantum/samples/machine-learning/wine/Host.cs" range="4-84"
 
 The most important functions and operations defined in the code above are:
 

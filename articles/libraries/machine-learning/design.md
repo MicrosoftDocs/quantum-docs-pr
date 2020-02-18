@@ -13,7 +13,7 @@ In this tutorial you will learn the basic concepts behind the design of circuit 
 
 As in classical deep learning, there is no general rule for choosing a specific architecture. Depending on the problem some architectures will perform better than others. But there are some concepts that might be useful when designing the circuit:
 
-- A large number of parameters implies a more flexible model, which may be suitable to draw complicated classification boundaries but also more susceptible to overfitting.
+- A large number of parameters implies a more flexible model, which may be suitable to draw complicated classification boundaries but which may also be more susceptible to overfitting.
 
 - Entangling gates between qubits are essential to capture the correlations between the quantum features.
 

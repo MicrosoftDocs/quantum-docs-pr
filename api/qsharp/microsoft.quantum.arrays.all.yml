@@ -42,7 +42,8 @@ typeParameters:
   summary: The type of `array` elements.
   
  examples: |-
-  The following `for` loops are equivalent:
+  The following example demonstrates use of All function :
+  Here we check if all values in an array are nonzero :
   ```Q#
 open Microsoft.Quantum.Arrays;
 open Microsoft.Quantum.Logical;

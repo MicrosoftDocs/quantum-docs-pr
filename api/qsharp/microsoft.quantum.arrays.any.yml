@@ -50,6 +50,4 @@ examples: |-
       return Any(EqualI(_, n), array);
   }
   ```
-seeAlso:
-- [EqualI]<xref:microsoft.quantum.logical.equali>
 ...

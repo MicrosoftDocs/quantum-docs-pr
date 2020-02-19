@@ -40,17 +40,16 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of `array` elements.
-  
- examples: |-
+examples: |-
   The following example demonstrates use of All function to check if all values in an array are nonzero :
   ```Q#
-open Microsoft.Quantum.Arrays;
-open Microsoft.Quantum.Logical;
-
-operation All_Demo() : Unit {
+  open Microsoft.Quantum.Arrays;
+  open Microsoft.Quantum.Logical;
+  
+  operation All_Demo() : Unit {
     let predicate = NotEqualI(_,0);
     let isnonzero = All (predicate,[2,3,4,5,6,0]);
     Message($"{isnonzero}");
-}
-```
+  }
+  ```
 ...

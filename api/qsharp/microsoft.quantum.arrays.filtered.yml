@@ -41,15 +41,14 @@ typeParameters:
 - uid: "'T"
   summary: The type of `array` elements.
 examples: |-
-  The following code creates an array of 3 Boolean values `true`:
+  The following code demostrates the "Filtered" function. A predicate is defined using a function called "GreaterTahnI" from the Microsoft.Quantum.Logical namespace:
   ```qsharp
-open Microsoft.Quantum.Arrays;
-open Microsoft.Quantum.Logical;
-
-operation Filtered_Demo () : Unit {
-    let predicate = GreaterThanI(_, 5);
-    let filteredArray = Filtered (predicate,[2,5,9,1,8]);
-    Message($"{filteredArray}");
-}
+  open Microsoft.Quantum.Arrays;
+  open Microsoft.Quantum.Logical;
+  operation Filtered_Demo () : Unit {
+      let predicate = GreaterThanI(_, 5);
+      let filteredArray = Filtered (predicate,[2,5,9,1,8]);
+      Message($"{filteredArray}");
+  }
   ```
 ...

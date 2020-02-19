@@ -13,7 +13,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: value
-    summary: A value that will be contained at each index of the new array.
+    summary: A value of each element of the new array.
     uid: "'T"
     isLocal: true
 output:
@@ -23,4 +23,9 @@ output:
     isArray: true
     uid: "'T"
     isLocal: true
+examples: |-
+  The following code creates an array of 3 Boolean values `true`:
+  ```qsharp
+  let array = ConstantArray(3, true);
+  ```
 ...

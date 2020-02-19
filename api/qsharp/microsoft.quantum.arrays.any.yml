@@ -40,7 +40,7 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of `array` elements.
-example: |-
+examples: |-
   ```qsharp
   open Microsoft.Quantum.Intrinsic;
   open Microsoft.Quantum.Arrays;

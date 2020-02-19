@@ -46,10 +46,11 @@ examples: |-
   open Microsoft.Quantum.Arrays;
   open Microsoft.Quantum.Logical;
 
-  operation ArrayAny_Demo() : Unit {
-      let arrayOfInts = [1, 2, 3, 4, 5];
-      let is3Present = Any(EqualI(_, 3), arrayOfInts);
-      Message($"{is3Present}");
+  function IsNumberPresentInArray(n: Int, array: Int[]): Bool {
+      return Any(EqualI(_, n), array);
   }
   ```
+seeAlso:
+- types:
+    uid: microsoft.quantum.logical.equali
 ...

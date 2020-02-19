@@ -40,4 +40,16 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of `array` elements.
+example: |-
+  ```qsharp
+  open Microsoft.Quantum.Intrinsic;
+  open Microsoft.Quantum.Arrays;
+  open Microsoft.Quantum.Logical;
+
+  operation ArrayAny_Demo() : Unit {
+      let arrayOfInts = [1, 2, 3, 4, 5];
+      let is3Present = Any(EqualI(_, 3), arrayOfInts);
+      Message($"{is3Present}");
+  }
+  ```
 ...

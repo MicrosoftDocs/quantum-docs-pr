@@ -51,5 +51,5 @@ examples: |-
   }
   ```
 seeAlso:
-- @"microsoft.quantum.logical.equali"
+- [EqualI]<xref:microsoft.quantum.logical.equali>
 ...

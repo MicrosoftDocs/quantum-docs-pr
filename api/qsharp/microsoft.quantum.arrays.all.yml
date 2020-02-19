@@ -40,4 +40,13 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of `array` elements.
+  
+ examples: |-
+  The following `for` loops are equivalent:
+  ```Q#
+  for (idx in IndexRange(array)) {
+      let element = array[idx];
+      ...
+  }
+  for ((idx, element) in Enumerated(array)) { ... }
 ...

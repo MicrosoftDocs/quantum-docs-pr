@@ -1,6 +1,6 @@
 ---
 title: How to learn quantum computing with Q#?
-description: 
+description: Resources for basic math and physics knowledge to help you get started with quantum computing. 
 author: natke
 ms.author:  nakersha
 ms.date: 10/23/2019

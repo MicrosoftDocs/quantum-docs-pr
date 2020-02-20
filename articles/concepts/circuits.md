@@ -34,7 +34,7 @@ For example, the symbol
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Symbol for a Hadamard operation acting on a single-qubit register](~/media/concepts_2.png)
 
-is the [Hadamard](xref:microsoft.quantum.intrinsic.h) gate acting on a single-qubit register.
+is a [Hadamard](xref:microsoft.quantum.intrinsic.h) operation acting on a single-qubit register.
 
 Quantum gates are ordered in chronological order with the left-most gate as the gate first applied to the qubits.
 In other words, if you picture the wires as holding the quantum state, the wires bring the quantum state through each of the gates in the diagram from left to right.

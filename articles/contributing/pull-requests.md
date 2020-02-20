@@ -37,7 +37,7 @@ We'll often draw diagrams in which commits are drawn as circles with arrows from
 Suppose you have started a contribution in a _branch_ called `feature`.
 Then your fork of **Microsoft/Quantum** might look something like this:
 
-![A working branch in Github](~/media/git-workflow-step0.png)
+![A working branch in GitHub](~/media/git-workflow-step0.png)
 
 If you make your changes in your local repository, you can _pull_ changes from another repository into yours to catch up to any changes that happened upstream.
 
@@ -49,7 +49,7 @@ Pull requests work the same way, but in reverse: when you open a pull request, y
 
 When you open a pull request to one of our repositories, GitHub will offer an opportunity for others in the community to see a summary of your changes, to comment on them, and to make suggestions for how to help make an even better contribution.
 
-![Screenshot of a pull request in Github](~/media/pull-request-header.png)
+![Screenshot of a pull request in GitHub](~/media/pull-request-header.png)
 
 Using this process helps us use GitHub functionality to improve contributions and to maintain a high-quality product for the quantum programming community.
 

@@ -19,7 +19,7 @@ The circuit diagram for preparing this maximally entangled quantum state is:
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Circuit diagram for a maximally entangled two-cubit state](~/media/Concepts1.png)
+![Circuit diagram for a maximally entangled two-qubit state](~/media/Concepts1.png)
 
 ## Quantum circuit diagram conventions
 This visual language for quantum operations can be more readily digestible than writing down its equivalent matrix once you understand the conventions for expressing a quantum circuit.
@@ -32,7 +32,7 @@ For example, the symbol
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Symbol for a Hadamard gate acting on a single-qubit register](~/media/concepts_2.png)
+![Symbol for a Hadamard operation acting on a single-qubit register](~/media/concepts_2.png)
 
 is the [Hadamard](xref:microsoft.quantum.intrinsic.h) gate acting on a single-qubit register.
 
@@ -60,7 +60,7 @@ As a clarifying example, we can define a two-qubit unitary operation $B$ to be $
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Circuit diagram of a two-cubit unitary operation](~/media/concepts_4.png)
+![Circuit diagram of a two-qubit unitary operation](~/media/concepts_4.png)
 
 We can also view $B$ as having an action on a single two-qubit register rather than two one-qubit registers depending on the context in which the circuit is used. 
 Perhaps the most useful property of such abstract circuit diagrams is that they allow complicated quantum algorithms to be described at a high level without having to compile them down to fundamental gates.
@@ -100,7 +100,7 @@ Specifically, such a subcircuit looks like:
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Symbol of subcircuit measurement operation](~/media/concepts_7.png)
+![Symbol representing a measurement operation](~/media/concepts_7.png)
 
 Q# implements a [Measure operator](xref:microsoft.quantum.intrinsic.measure) for this purpose.
 See the [section on measurements](xref:microsoft.quantum.libraries.standard.prelude#measurements) for more information.
@@ -109,7 +109,7 @@ Similarly, the subcircuit
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Circuit diagram of a subcircuit for a controlled gate](~/media/concepts_8.png)
+![Circuit diagram representing a controlled operation](~/media/concepts_8.png)
 
 gives a classically controlled gate, where $G$ is applied conditioned on the classical control bit being value $1$.
 

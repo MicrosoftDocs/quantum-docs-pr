@@ -40,13 +40,13 @@ When a `Qubit` is de-allocated it must be explicitly set back to the `Zero` stat
 
 In the Bloch sphere, the north pole represents the classical value **0** and the south pole represents the classical value **1**. Any superposition can be represented by a point on the sphere (represented by an arrow). The closer the end of the arrow to a pole the higher the probability the qubit collapses into the classical value assigned to that pole when measured. For example, the qubit state represented by the red arrow below has a higher probability of giving the value **0** if we measure it.
 
-![A qubit state with a high probability of zero value](~/media/qrng-Bloch.png)
+![A qubit state with a high probability of measuring zero](~/media/qrng-Bloch.png)
 
 We can use this representation to visualize what the code is doing:
 
 * First we start with a qubit initialized in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.
 
-![Putting a zero-state qubit into superposition](~/media/qrng-H.png)
+![Preparing a qubit in superposition](~/media/qrng-H.png)
 
 * Then we measure the qubit and save the output:
 

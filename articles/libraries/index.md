@@ -1,6 +1,6 @@
 ---
 title: Quantum Development Kit Libraries
-description: Overview of the Standard, Chemistry, and Numerics libraries included in the Microsoft Quantum Development Kit.
+description: Overview of the standard, chemistry, and numerics libraries included in the Microsoft Quantum Development Kit.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018

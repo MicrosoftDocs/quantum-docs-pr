@@ -25,7 +25,7 @@ First, let's take a look at the host programs to see what the process looks like
 
     To run your the Q# classifier from Python, save the following code as `host.py`. Remember that you also need the Q# file `Training.qs` that is explained later in this tutorial.
 
-    code language="python" source="~/quantum/samples/machine-learning/wine/host.py" range="9-14"
+    :::code language="python" source="~/quantum/samples/machine-learning/wine/host.py" range="3-17":::
 
     You can then run your Python host program from the command line:
 
@@ -39,7 +39,7 @@ First, let's take a look at the host programs to see what the process looks like
 
     To run your the Q# classifier from C#, save the following code as `Host.cs`. Remember that you also need the Q# file `Training.qs` that is explained later in this tutorial.
 
-    code language="csharp" source="~/quantum/samples/machine-learning/wine/Host.cs" range="5-43"
+    :::code language="csharp" source="~/quantum/samples/machine-learning/wine/Host.cs" range="5-43":::
 
     You can then run your C# host program from the command line:
 
@@ -58,7 +58,7 @@ First, let's take a look at the host programs to see what the process looks like
 
     To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code. Remember that you also need the Q# file `Training.qs` that is explained later in this tutorial.
 
-    code language="csharp" source="~/quantum/samples/machine-learning/wine/Host.cs" range="4-23"
+    :::code language="csharp" source="~/quantum/samples/machine-learning/wine/Host.cs" range="4-23":::
 
     Then press F5, the program will start execution and a new windows will pop-up with the following results: 
 

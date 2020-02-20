@@ -1,6 +1,6 @@
 ---
 title: Why learn quantum computing?
-description: 
+description: Discover the inspiring and rewarding challenges of quantum computing. 
 author: natke
 ms.author:  nakersha
 ms.date: 10/16/2019

@@ -1,5 +1,6 @@
 ---
 title: Broombridge - Quantum Chemistry Schema
+description: Overview of the Boombridge Quantum Chemistry Schema, used to model real-world chemistry problems with the Microsoft Quantum Development Kit. 
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 10/17/2018

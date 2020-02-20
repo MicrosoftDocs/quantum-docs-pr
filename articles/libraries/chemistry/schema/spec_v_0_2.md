@@ -1,5 +1,6 @@
 ---
-title: Broombridge Schema Specification
+title: Broombridge Schema Specification v0.2
+description: Details the specifications for the Broombridge Quantum Chemistry Schema v0.2 for the Microsoft Quantum Chemistry library. 
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019

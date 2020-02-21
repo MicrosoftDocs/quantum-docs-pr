@@ -6,8 +6,6 @@
   href: design.md
 - name: Load your own datasets
   href: load.md
-- name: Validate your models
-  href: validate.md
 - name: Glossary (QML)
   href: glossary-qml.md
   

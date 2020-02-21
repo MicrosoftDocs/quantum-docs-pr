@@ -1,10 +1,6 @@
 ---
-<<<<<<< HEAD
-title: Broombridge Schema Specification v0.1
-description: Details the specifications for the Broombridge quantum chemistry schema v0.1 for the Microsoft quantum chemistry library. 
-=======
 title: Broombridge Schema Specification (ver 0.1)
->>>>>>> cf432bb5711e10a912b43a3dd3ebdc5becdde236
+description: Details the specifications for the Broombridge quantum chemistry schema v0.1 for the Microsoft quantum chemistry library. 
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018

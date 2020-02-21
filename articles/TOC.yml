@@ -58,6 +58,8 @@
   href: libraries/toc.yml
 - name: Quantum computing concepts
   href: concepts/toc.yml
+- name: Further reading
+  href: for-more-info.md
 - name: Contributing to the QDK
   href: contributing/toc.yml
   topicHref: contributing/index.md

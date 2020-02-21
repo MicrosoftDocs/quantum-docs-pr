@@ -28,7 +28,7 @@ For more details, see the [Package Manager UI guide](https://docs.microsoft.com/
 
 Alternatively, you can use the Package Manager Console to add the numerics library to your project via the command line interface.
 
-![](../../media/vs2017-nuget-console-menu.png)
+![Use the Package Manager Console from the command line](../../media/vs2017-nuget-console-menu.png)
 
 From the package manager console, run the following:
 

@@ -1,5 +1,5 @@
 ---
-title: Broombridge Schema Specification
+title: Broombridge Schema Specification (ver 0.2)
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019

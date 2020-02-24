@@ -40,7 +40,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 1. One or more quantum algorithms, implemented using the Q# quantum programming language.
 1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
 
-#### [Python](#tab/python-cli/python)
+# [Python](#tab/python-cli/python)
 
 1. Choose a location for your application
 
@@ -48,7 +48,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 1. Create a file called `host.py`. This file will contain your Python host code.
 
-#### [C# Command Line](#tab/dotnet-cli/csharp)
+# [C# Command Line](#tab/dotnet-cli/csharp)
 
 1. Create a new Q# project:
 
@@ -65,7 +65,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
     mv Operation.qs Bell.qs
     ```
 
-#### [Visual Studio](#tab/vs2019/csharp)
+# [Visual Studio](#tab/vs2019/csharp)
 
 1. Create a new project
 
@@ -171,7 +171,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
 
 ## Create the host application code
 
-#### [Python](#tab/python)
+# [Python](#tab/python)
 
 1. Open the `host.py` file and add the following code:
 
@@ -189,7 +189,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### [C#](#tab/csharp)
+# [C#](#tab/csharp)
 
 1. Replace the contents of the `Driver.cs` file with the following code:
 

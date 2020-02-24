@@ -40,7 +40,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 1. One or more quantum algorithms, implemented using the Q# quantum programming language.
 1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
 
-#### [Python](#tab/cli/python)
+#### [Python](#tab/clix/python)
 
 1. Choose a location for your application
 
@@ -48,7 +48,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 1. Create a file called `host.py`. This file will contain your Python host code.
 
-#### [C# Command Line](#tab/cli/csharp)
+#### [C# Command Line](#tab/cliy/csharp)
 
 1. Create a new Q# project:
 

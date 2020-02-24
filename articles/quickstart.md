@@ -16,7 +16,7 @@ You will write an application called Bell to demonstrate quantum entanglement.  
 
 ## Pre-requisites
 
-If you are ready to start coding, follow these steps before proceeding: 
+If you are ready to start coding, follow these steps before proceeding:
 
 * [Install](xref:microsoft.quantum.install) the Quantum Development Kit using your preferred language and development environment
 * If you already have the QDK installed, make sure you have [updated](xref:microsoft.quantum.update) to the latest version
@@ -26,7 +26,6 @@ You can also follow along with the narrative without installing the QDK, reviewi
 ## Demonstrating qubit behavior with Q#
 
 Recall our simple [definition of a qubit](xref:microsoft.quantum.overview.what#the-qubit).  Where classical bits hold a single binary value such as a 0 or 1, the state of a qubit can be in a **superposition** of 0 and 1 simultaneously.  Conceptually, a qubit can be thought of as a direction in space (also known as a vector).  A qubit can be in any of the possible directions. The two **classical states** are the two directions; representing 100% chance of measuring 0 and 100% chance of measuring 1.  This representation is also more formally visualized by the [bloch sphere](/quantum/concepts/the-qubit?view=qsharp-preview#visualizing-qubits-and-transformations-using-the-bloch-sphere).
-
 
 The act of measurement produces a binary result and changes a qubit state. Measurement produces a binary value, either 0 or 1.  The qubit goes from being in superposition (any direction) to one of the classical states.  Thereafter, repeating the same measurement without any intervening operations produces the same binary result.  
 
@@ -41,7 +40,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 1. One or more quantum algorithms, implemented using the Q# quantum programming language.
 1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
 
-#### [Python](#tab/tabid-python)
+#### [Python](#tab/python)
 
 1. Choose a location for your application
 
@@ -49,7 +48,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 1. Create a file called `host.py`. This file will contain your Python host code.
 
-#### [C# Command Line](#tab/tabid-csharp)
+#### [C# Command Line](#tab/cli/csharp)
 
 1. Create a new Q# project:
 
@@ -66,7 +65,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
     mv Operation.qs Bell.qs
     ```
 
-#### [Visual Studio](#tab/tabid-vs2019)
+#### [Visual Studio](#tab/vs2019/csharp)
 
 1. Create a new project
 
@@ -90,7 +89,6 @@ Our goal is to prepare two qubits in a specific quantum state, demonstrating how
 **Overview:**  In the first code below, we show you how to work with qubits in Q#.  We’ll introduce two operations, `M` and `X` that transform the state of a qubit. 
 
 In this code snippet, an operation `Set` is defined that takes as a parameter a qubit and another parameter, `desired`, representing the state that we would like the qubit to be in.  The operation `Set` performs a measurement on the qubit using the operation `M`.  In Q#, a qubit measurement always returns either  `Zero` or `One`.  If the measurement returns a value not equal to a desired value, Set “flips” the qubit; that is, it executes an `X` operation, which changes the qubit state to a new state in which the probabilities of a measurement returning `Zero` and `One` are reversed.  To demonstrate the effect of the `Set` operation, a `TestBellState` operation is then added.  This operation takes as input a `Zero` or `One`, and calls the `Set` operation some number of times with that input, and counts the number of times that `Zero` was returned from the measurement of the qubit and the number of times that `One` was returned. Of course, in this first simulation of the `TestBellState` operation, we expect that the output will show that all measurements of the qubit set with `Zero` as the parameter input will return `Zero`, and all measurements of a qubit set with `One` as the parameter input will return `One`.  Further on, we’ll add code to `TestBellState` to demonstrating superposition and entanglement.
-
 
 ### Q# operation code
 
@@ -173,7 +171,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
 
 ## Create the host application code
 
-#### [Python](#tab/tabid-python)
+#### [Python](#tab/python)
 
 1. Open the `host.py` file and add the following code:
 
@@ -191,7 +189,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### [C#](#tab/tabid-csharp)
+#### [C#](#tab/csharp)
 
 1. Replace the contents of the `Driver.cs` file with the following code:
 
@@ -227,13 +225,11 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
     }
     ```
 
-#### [](#tab/tabid-vs2019)
-
 * * *
 
 ### About the host application code
 
-#### [Python](#tab/tabid-python)
+#### [Python](#tab/python)
 
 The Python host application has three parts:
 
@@ -241,7 +237,7 @@ The Python host application has three parts:
 * Run the quantum algorithm by calling the `simulate()` method of the imported Q# operation.
 * Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`num_zeros`) and number of ones (`num_ones`) measured by the simulator. We deconstruct the tuple to get the two fields, and print the results.
 
-#### [C#](#tab/tabid-csharp)
+#### [C#](#tab/csharp)
 
 The C# host application has four parts:
 
@@ -250,13 +246,11 @@ The C# host application has four parts:
 * Run the quantum algorithm. Each Q# operation generates a C# class with the same name. This class has a `Run` method that **asynchronously** executes the operation. The execution is asynchronous because execution on actual hardware will be asynchronous. Because the `Run` method is asynchronous, we fetch the `Result` property; this blocks execution until the task completes and returns the result synchronously.
 * Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`numZeros`) and number of ones (`numOnes`) measured by the simulator. This is returned as a ValueTuple in C#. We deconstruct the tuple to get the two fields, print the results, and wait for a keypress.
 
-#### [](#tab/tabid-vs2019)
-
 * * *
 
 ## Build and run
 
-#### [Python](#tab/tabid-python)
+#### [Python](#tab/python)
 
 1. Run the following command at your terminal:
 
@@ -273,7 +267,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-#### [Command Line / Visual Studio Code](#tab/tabid-csharp)
+#### [Command Line / Visual Studio Code](#tab/cli/csharp)
 
 1. Run the following at your terminal:
 
@@ -295,7 +289,7 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 
-#### [Visual Studio](#tab/tabid-vs2019)
+#### [Visual Studio](#tab/vs2019/csharp)
 
 1. Just hit `F5`, and your program should build and run!
 
@@ -347,7 +341,7 @@ Every time we measure, we ask for a classical value, but the qubit is halfway be
 
 ## Prepare entanglement
 
-**Overview:**  Now let’s look at how Q# expresses ways to entangle qubits.  First, we set the first qubit to the initial state and then use the `H` operation to put it into superposition.  Then, before we measure the first qubit, we use a new operation (`CNOT`), which stands for Controlled-Not.  The result of executing this operation on two qubits is to flip the second qubit if the first qubit is `One`.  Now, the two qubits are entangled.  Our statistics for the first qubit haven't changed (50-50 chance of a `Zero` or a `One` after measurement), but now when we measure the second qubit, it is __always__ the same as what we measured for the first qubit. Our `CNOT` has entangled the two qubits, so that whatever happens to one of them, happens to the other. If you reversed the measurements (did the second qubit before the first), the same thing would happen. The first measurement would be random and the second would be in lock step with whatever was discovered for the first.
+Now let’s look at how Q# expresses ways to entangle qubits.  First, we set the first qubit to the initial state and then use the `H` operation to put it into superposition.  Then, before we measure the first qubit, we use a new operation (`CNOT`), which stands for Controlled-Not.  The result of executing this operation on two qubits is to flip the second qubit if the first qubit is `One`.  Now, the two qubits are entangled.  Our statistics for the first qubit haven't changed (50-50 chance of a `Zero` or a `One` after measurement), but now when we measure the second qubit, it is __always__ the same as what we measured for the first qubit. Our `CNOT` has entangled the two qubits, so that whatever happens to one of them, happens to the other. If you reversed the measurements (did the second qubit before the first), the same thing would happen. The first measurement would be random and the second would be in lock step with whatever was discovered for the first.
 
 The first thing we'll need to do is allocate 2 qubits instead of one in `TestBellState`:
 
@@ -441,7 +435,7 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
 
 The new return value (`agree`) keeps track of every time the measurement from the first qubit matches the measurement of the second qubit. We also have to update the host application accordingly:
 
-#### [Python](#tab/tabid-python)
+#### [Python](#tab/python)
 
 ```python
 import qsharp
@@ -457,7 +451,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### [C#](#tab/tabid-csharp)
+#### [C#](#tab/csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())
@@ -477,8 +471,6 @@ for i in initials:
             Console.ReadKey();
 ```
 
-#### [](#tab/tabid-vs2019)
-
 * * *
 
 Now when we run, we get something pretty amazing:
@@ -492,9 +484,8 @@ As stated in the overview, our statistics for the first qubit haven't changed (5
 
 Congratulations, you've written your first quantum program!
 
-## What's next?
+## Next steps?
 
 The QuickStart [Grover’s search](xref:microsoft.quantum.quickstarts.search) shows you how to build and run Grover search, one of the most popular quantum computing algorithms and offers a nice example of a Q# program that can be used to solve real problems with quantum computing.  
 
 [Get Started with the Quantum Development Kit](xref:microsoft.quantum.welcome) recommends more ways to learn Q# and quantum programming.
-

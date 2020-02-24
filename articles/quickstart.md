@@ -229,7 +229,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
 
 ### About the host application code
 
-#### [Python](#tab/python)
+# [Python](#tab/python)
 
 The Python host application has three parts:
 
@@ -237,7 +237,7 @@ The Python host application has three parts:
 * Run the quantum algorithm by calling the `simulate()` method of the imported Q# operation.
 * Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`num_zeros`) and number of ones (`num_ones`) measured by the simulator. We deconstruct the tuple to get the two fields, and print the results.
 
-#### [C#](#tab/csharp)
+# [C#](#tab/csharp)
 
 The C# host application has four parts:
 
@@ -250,7 +250,7 @@ The C# host application has four parts:
 
 ## Build and run
 
-#### [Python](#tab/python-cli/python)
+# [Python](#tab/python-cli/python)
 
 1. Run the following command at your terminal:
 
@@ -267,7 +267,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-#### [C# Command Line](#tab/dotnet-cli/csharp)
+# [C# Command Line](#tab/dotnet-cli/csharp)
 
 1. Run the following at your terminal:
 
@@ -289,7 +289,7 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 
-#### [Visual Studio](#tab/vs2019/csharp)
+# [Visual Studio](#tab/vs2019/csharp)
 
 1. Just hit `F5`, and your program should build and run!
 
@@ -307,7 +307,7 @@ The program will exit after you press a key.
 
 ## Prepare superposition
 
-**Overview** Now let’s look at how Q# expresses ways to put qubits in superposition.  Recall that the state of a qubit can be in a superposition of 0 and 1.  We’ll use the `Hadamard` operation to accomplish this. If the qubit is in either of the classical states (where a measurement returns `Zero` always or `One` always), then the `Hadamard` or `H` operation will put the qubit in a state where a measurement of the qubit will return `Zero` 50% of the time and return `One` 50% of the time.  Conceputually, the qubit can be thought of as halfway between the `Zero` and `One`.  Now, when we simulate the `TestBellState` operation, we will see the results will return roughly an equal number of `Zero` and `One` after measurement.  
+Now let’s look at how Q# expresses ways to put qubits in superposition.  Recall that the state of a qubit can be in a superposition of 0 and 1.  We’ll use the `Hadamard` operation to accomplish this. If the qubit is in either of the classical states (where a measurement returns `Zero` always or `One` always), then the `Hadamard` or `H` operation will put the qubit in a state where a measurement of the qubit will return `Zero` 50% of the time and return `One` 50% of the time.  Conceputually, the qubit can be thought of as halfway between the `Zero` and `One`.  Now, when we simulate the `TestBellState` operation, we will see the results will return roughly an equal number of `Zero` and `One` after measurement.  
 
 First we'll just try to flip the qubit (if the qubit is in `Zero` state will flip to `One` and vice versa). This is accomplished by performing an `X` operation before we measure it in `TestBellState`:
 
@@ -435,7 +435,7 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
 
 The new return value (`agree`) keeps track of every time the measurement from the first qubit matches the measurement of the second qubit. We also have to update the host application accordingly:
 
-#### [Python](#tab/python)
+# [Python](#tab/python)
 
 ```python
 import qsharp
@@ -451,7 +451,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### [C#](#tab/csharp)
+# [C#](#tab/csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())

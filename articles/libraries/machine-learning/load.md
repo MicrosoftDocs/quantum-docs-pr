@@ -78,7 +78,7 @@ The process is:
 - Secondly, we need to assign a numeric label to each class. Note that, for the moment, the QML library only admits binary classification problems. So we will assign the label 0 to the class `Dog` and the number 1 to the class `Cat`.
 - Finally, we fill the template using the data from our dataset. Note that for big datasets you should build a small script to automatically generate the template from your specific dataset. This script will depend on the original format of your dataset.
 
-For our dataset the ´data.json´ file is:
+For our dataset the `data.json` file is:
 
 ```json
 {

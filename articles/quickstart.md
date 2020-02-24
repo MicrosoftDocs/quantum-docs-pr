@@ -40,7 +40,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 1. One or more quantum algorithms, implemented using the Q# quantum programming language.
 1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
 
-#### [Python](#tab/clix/python)
+#### [Python](#tab/python-cli/python)
 
 1. Choose a location for your application
 
@@ -48,7 +48,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 1. Create a file called `host.py`. This file will contain your Python host code.
 
-#### [C# Command Line](#tab/cliy/csharp)
+#### [C# Command Line](#tab/dotnet-cli/csharp)
 
 1. Create a new Q# project:
 
@@ -86,7 +86,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 Our goal is to prepare two qubits in a specific quantum state, demonstrating how to operate on qubits with Q# to change their state and demonstrate the effects of superposition and entanglement. We will build this up piece by piece to demonstrate qubit states, operations, and measurement.
 
-**Overview:**  In the first code below, we show you how to work with qubits in Q#.  We’ll introduce two operations, `M` and `X` that transform the state of a qubit. 
+In the first code below, we show you how to work with qubits in Q#.  We’ll introduce two operations, `M` and `X` that transform the state of a qubit.
 
 In this code snippet, an operation `Set` is defined that takes as a parameter a qubit and another parameter, `desired`, representing the state that we would like the qubit to be in.  The operation `Set` performs a measurement on the qubit using the operation `M`.  In Q#, a qubit measurement always returns either  `Zero` or `One`.  If the measurement returns a value not equal to a desired value, Set “flips” the qubit; that is, it executes an `X` operation, which changes the qubit state to a new state in which the probabilities of a measurement returning `Zero` and `One` are reversed.  To demonstrate the effect of the `Set` operation, a `TestBellState` operation is then added.  This operation takes as input a `Zero` or `One`, and calls the `Set` operation some number of times with that input, and counts the number of times that `Zero` was returned from the measurement of the qubit and the number of times that `One` was returned. Of course, in this first simulation of the `TestBellState` operation, we expect that the output will show that all measurements of the qubit set with `Zero` as the parameter input will return `Zero`, and all measurements of a qubit set with `One` as the parameter input will return `One`.  Further on, we’ll add code to `TestBellState` to demonstrating superposition and entanglement.
 
@@ -250,7 +250,7 @@ The C# host application has four parts:
 
 ## Build and run
 
-#### [Python](#tab/cli/python)
+#### [Python](#tab/python-cli/python)
 
 1. Run the following command at your terminal:
 
@@ -267,7 +267,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-#### [Command Line / Visual Studio Code](#tab/cli/csharp)
+#### [C# Command Line](#tab/dotnet-cli/csharp)
 
 1. Run the following at your terminal:
 

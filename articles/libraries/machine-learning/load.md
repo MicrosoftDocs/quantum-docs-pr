@@ -13,9 +13,9 @@ In this short tutorial we are going to learn how to load your own dataset to tra
 
 We highly recommend the use of [JSON files](https://en.wikipedia.org/wiki/JSON) to store the data due to its high compatibility with different frameworks like Python and the .NET ecosystem. In particular we recommend to use our template for loading the data, so you can copy-paste the code directly from the samples.  
 
-## Template for loading creating your dataset
+## Template for loading your datasets
 
-Suppose we have a training dataset $(x,y)$ of size $N=2$ where each instance $x_i$ of $x$ has three features: $x_{i1}$, $x_{i2}$ and $x_{i3}$. The validation dataset has the same structure. Then our ´data.json´ file would be the following:
+Suppose we have a training dataset $(x,y)$ of size $N=2$ where each instance $x_i$ of $x$ has three features: $x_{i1}$, $x_{i2}$ and $x_{i3}$. The validation dataset has the same structure. Then our `data.json` file would be the following:
 
 ```json
 {
@@ -61,7 +61,7 @@ Suppose we have a training dataset $(x,y)$ of size $N=2$ where each instance $x_
 
 ### Example using the template
 
-Suppose we have a small dataset with the heights and weights of different cats and dogs. This dataset is very small to train a model but will be enough to show the process.
+Suppose we have a small dataset with the heights and weights of different cats and dogs. This dataset is very small to train a model but will be enough to show the process of loading a dataset.
 
 | Height (m) | Weight (kg) | Animal |
 |-----------|------------|--------|
@@ -75,8 +75,8 @@ Suppose we have a small dataset with the heights and weights of different cats a
 The process is:
 
 - First we need to separate the dataset into training and validation. In this case we can just take the first three samples for training and the rest of samples for validation. In general it is a good practice to sample randomly the training and validation dataset to avoid unwanted biases in the training data.
-- Secondly, we need to assign a numeric label to each class. Note that, for the moment, the QML library only admits binary classification problems. So we will assign the label 0 to the class ´Dog´ and the number 1 to the class ´Cat´.
-- Finally we fill the dataset using the template. Note that for big datasets you should build a small script to automatically generate the template from your specific dataset.
+- Secondly, we need to assign a numeric label to each class. Note that, for the moment, the QML library only admits binary classification problems. So we will assign the label 0 to the class `Dog` and the number 1 to the class `Cat`.
+- Finally, we fill the template using the data from our dataset. Note that for big datasets you should build a small script to automatically generate the template from your specific dataset. This script will depend on the original format of your dataset.
 
 For our dataset the ´data.json´ file is:
 

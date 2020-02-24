@@ -40,7 +40,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 1. One or more quantum algorithms, implemented using the Q# quantum programming language.
 1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
 
-#### [Python](#tab/python)
+#### [Python](#tab/cli/python)
 
 1. Choose a location for your application
 
@@ -250,7 +250,7 @@ The C# host application has four parts:
 
 ## Build and run
 
-#### [Python](#tab/python)
+#### [Python](#tab/cli/python)
 
 1. Run the following command at your terminal:
 
@@ -484,7 +484,7 @@ As stated in the overview, our statistics for the first qubit haven't changed (5
 
 Congratulations, you've written your first quantum program!
 
-## Next steps?
+## Next steps
 
 The QuickStart [Grover’s search](xref:microsoft.quantum.quickstarts.search) shows you how to build and run Grover search, one of the most popular quantum computing algorithms and offers a nice example of a Q# program that can be used to solve real problems with quantum computing.  
 

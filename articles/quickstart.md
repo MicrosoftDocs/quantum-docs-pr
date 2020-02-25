@@ -3,16 +3,62 @@ title: Quantum basics with Q#
 description: Learn how to write a quantum program in Q#. Develop a Bell State application using the Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha 
-ms.date: 10/07/2019
+ms.date: 25/02/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 ---
 
 # Quantum basics with Q#
 
-In this Quickstart, we show you how to write a Q# program that manipulates and measures qubits and demonstrates the effects of superposition and entanglement.  This guides you on installing the QDK, building the program and executing that program on a quantum simulator.  
+Learn how to write a Q# program that manipulates and measures qubits and demonstrates the effects of superposition and entanglement.  
 
 You will write an application called Bell to demonstrate quantum entanglement.  The name Bell is in reference to Bell states, which are specific quantum states of two qubits that are used to represent the simplest examples of superposition and quantum entanglement. 
+
+Applications developed with Microsoft's Quantum Development Kit consist of two parts:
+
+1. One or more quantum algorithms, implemented using the Q# quantum programming language. For example:
+
+    ```qsharp
+    namespace Quantum.Simple {
+
+        operation RunOperation() {
+            Message("Running operation ...);
+        }
+    }
+    ```
+
+1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm. For example:
+
+# [Python](#tab/python)
+
+    ```python
+    import qsharp
+
+    from Quantum.Simple import RunOperation
+
+      RunOperation.simulate()
+    ```
+
+# [C#](#tab/csharp)
+
+    ```csharp
+    using System;
+
+    namespace Quantum.Simple
+    {
+        class Host
+        {
+            static void Main(string[] args)
+            {
+                Operation.Run();
+
+                System.Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+            }
+        }
+    }
+    ```
+---
 
 ## Pre-requisites
 
@@ -32,23 +78,6 @@ The act of measurement produces a binary result and changes a qubit state. Measu
 Multiple qubits can be **entangled**. When we make a measurement of one entangled qubit, our knowledge of the state of the other(s) is updated as well.
 
 Now, we're ready to demonstrate how Q# expresses this behavior.  You start with the simplest program possible and build it up to demonstrate quantum superposition and quantum entanglement.
-
-## Setup
-
-Applications developed with Microsoft's Quantum Development Kit consist of two parts:
-
-1. One or more quantum algorithms, implemented using the Q# quantum programming language.
-1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
-
-# [Python](#tab/python)
-
-This is a test python tab
-
-# [C#](#tab/csharp)
-
-This is a test C# tab
-
----
 
 # [Python](#tab/python-cli/python)
 

@@ -48,7 +48,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 1. Create a file called `host.py`. This file will contain your Python host code.
 
-# [C# Command Line](#tab/dotnet-cli/csharp)
+# [C Sharp Command Line](#tab/dotnet-cli/csharp)
 
 1. Create a new Q# project:
 
@@ -189,7 +189,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-# [C#](#tab/csharp)
+# [C Sharp](#tab/csharp)
 
 1. Replace the contents of the `Driver.cs` file with the following code:
 
@@ -237,7 +237,7 @@ The Python host application has three parts:
 * Run the quantum algorithm by calling the `simulate()` method of the imported Q# operation.
 * Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`num_zeros`) and number of ones (`num_ones`) measured by the simulator. We deconstruct the tuple to get the two fields, and print the results.
 
-# [C#](#tab/csharp)
+# [C Sharp](#tab/csharp)
 
 The C# host application has four parts:
 
@@ -267,7 +267,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-# [C# Command Line](#tab/dotnet-cli/csharp)
+# [C Sharp Command Line](#tab/dotnet-cli/csharp)
 
 1. Run the following at your terminal:
 
@@ -451,7 +451,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-# [C#](#tab/csharp)
+# [C Sharp](#tab/csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())

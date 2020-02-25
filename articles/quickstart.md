@@ -29,17 +29,17 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm. For example:
 
-# [Python](#tab/python)
+    # [Python](#tab/python)
 
     ```python
     import qsharp
 
     from Quantum.Simple import RunOperation
 
-      RunOperation.simulate()
+    RunOperation.simulate()
     ```
 
-# [C#](#tab/csharp)
+    # [C#](#tab/csharp)
 
     ```csharp
     using System;
@@ -58,7 +58,8 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
         }
     }
     ```
----
+
+    ***
 
 ## Pre-requisites
 
@@ -87,7 +88,7 @@ Now, we're ready to demonstrate how Q# expresses this behavior.  You start with 
 
 1. Create a file called `host.py`. This file will contain your Python host code.
 
-# [C Sharp Command Line](#tab/dotnet-cli/csharp)
+# [C# with the dotnet CLI](#tab/dotnet-cli/csharp)
 
 1. Create a new Q# project:
 
@@ -104,7 +105,7 @@ Now, we're ready to demonstrate how Q# expresses this behavior.  You start with 
     mv Operation.qs Bell.qs
     ```
 
-# [Visual Studio](#tab/vs2019/csharp)
+# [C# with Visual Studio](#tab/vs2019/csharp)
 
 1. Create a new project
 

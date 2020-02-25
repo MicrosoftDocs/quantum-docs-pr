@@ -5,6 +5,7 @@ author: natke
 ms.author: nakersha 
 ms.date: 25/02/2020
 ms.topic: tutorial
+zone_pivot_groups: host-language
 uid: microsoft.quantum.write-program
 ---
 
@@ -12,54 +13,13 @@ uid: microsoft.quantum.write-program
 
 Learn how to write a Q# program that manipulates and measures qubits and demonstrates the effects of superposition and entanglement.  
 
-You will write an application called Bell to demonstrate quantum entanglement.  The name Bell is in reference to Bell states, which are specific quantum states of two qubits that are used to represent the simplest examples of superposition and quantum entanglement. 
+You will write an application called Bell to demonstrate quantum entanglement.  The name Bell is in reference to Bell states, which are specific quantum states of two qubits that are used to represent the simplest examples of superposition and quantum entanglement.
 
 Applications developed with Microsoft's Quantum Development Kit consist of two parts:
 
-1. One or more quantum algorithms, implemented using the Q# quantum programming language. For example:
+1. One or more quantum algorithms, implemented using the Q# quantum programming language.
 
-    ```qsharp
-    namespace Quantum.Simple {
-
-        operation RunOperation() {
-            Message("Running operation ...);
-        }
-    }
-    ```
-
-1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm. For example:
-
-    # [Python](#tab/python)
-
-    ```python
-    import qsharp
-
-    from Quantum.Simple import RunOperation
-
-    RunOperation.simulate()
-    ```
-
-    # [C#](#tab/csharp)
-
-    ```csharp
-    using System;
-
-    namespace Quantum.Simple
-    {
-        class Host
-        {
-            static void Main(string[] args)
-            {
-                Operation.Run();
-
-                System.Console.WriteLine("Press any key to continue...");
-                Console.ReadKey();
-            }
-        }
-    }
-    ```
-
-    ***
+1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
 
 ## Pre-requisites
 
@@ -80,7 +40,7 @@ Multiple qubits can be **entangled**. When we make a measurement of one entangle
 
 Now, we're ready to demonstrate how Q# expresses this behavior.  You start with the simplest program possible and build it up to demonstrate quantum superposition and quantum entanglement.
 
-# [Python](#tab/python-cli/python)
+::: zone pivot="host-language-python"
 
 1. Choose a location for your application
 
@@ -88,7 +48,11 @@ Now, we're ready to demonstrate how Q# expresses this behavior.  You start with 
 
 1. Create a file called `host.py`. This file will contain your Python host code.
 
-# [C# with the dotnet CLI](#tab/dotnet-cli/csharp)
+::: zone-end
+
+::: zone pivot="host-language-csharp"
+
+# [C# with the dotnet CLI](#tab/dotnet-cli)
 
 1. Create a new Q# project:
 
@@ -105,7 +69,7 @@ Now, we're ready to demonstrate how Q# expresses this behavior.  You start with 
     mv Operation.qs Bell.qs
     ```
 
-# [C# with Visual Studio](#tab/vs2019/csharp)
+# [C# with Visual Studio](#tab/vs2019)
 
 1. Create a new project
 
@@ -120,7 +84,7 @@ Now, we're ready to demonstrate how Q# expresses this behavior.  You start with 
    * Right click on the `Operations.qs` file
    * Rename it to `Bell.qs`
 
-* * *
+::: zone-end
 
 ## Write a Q# operation
 
@@ -211,7 +175,7 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
 
 ## Create the host application code
 
-# [Python](#tab/python)
+::: zone pivot="host-language-python"
 
 1. Open the `host.py` file and add the following code:
 
@@ -229,7 +193,9 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-# [C Sharp](#tab/csharp)
+::: zone-end
+
+::: zone pivot="host-language-csharp"
 
 1. Replace the contents of the `Driver.cs` file with the following code:
 
@@ -265,11 +231,11 @@ The `using` statement is also special to Q#. It is used to allocate qubits for u
     }
     ```
 
-* * *
+::: zone-end
 
 ### About the host application code
 
-# [Python](#tab/python)
+::: zone pivot="host-language-python"
 
 The Python host application has three parts:
 
@@ -277,7 +243,9 @@ The Python host application has three parts:
 * Run the quantum algorithm by calling the `simulate()` method of the imported Q# operation.
 * Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`num_zeros`) and number of ones (`num_ones`) measured by the simulator. We deconstruct the tuple to get the two fields, and print the results.
 
-# [C Sharp](#tab/csharp)
+::: zone-end
+
+::: zone pivot="host-language-csharp"
 
 The C# host application has four parts:
 
@@ -286,11 +254,11 @@ The C# host application has four parts:
 * Run the quantum algorithm. Each Q# operation generates a C# class with the same name. This class has a `Run` method that **asynchronously** executes the operation. The execution is asynchronous because execution on actual hardware will be asynchronous. Because the `Run` method is asynchronous, we fetch the `Result` property; this blocks execution until the task completes and returns the result synchronously.
 * Process the result of the operation. In the example, `res` receives the result of the operation. Here the result is a tuple of the number of zeros (`numZeros`) and number of ones (`numOnes`) measured by the simulator. This is returned as a ValueTuple in C#. We deconstruct the tuple to get the two fields, print the results, and wait for a keypress.
 
-* * *
+::: zone-end
 
 ## Build and run
 
-# [Python](#tab/python-cli/python)
+::: zone pivot="host-language-python"
 
 1. Run the following command at your terminal:
 
@@ -307,7 +275,11 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-# [C Sharp Command Line](#tab/dotnet-cli/csharp)
+::: zone-end
+
+::: zone pivot="host-language-csharp"
+
+# [C Sharp Command Line](#tab/dotnet-cli)
 
 1. Run the following at your terminal:
 
@@ -329,7 +301,7 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 
-# [Visual Studio](#tab/vs2019/csharp)
+# [Visual Studio](#tab/vs2019)
 
 1. Just hit `F5`, and your program should build and run!
 
@@ -343,7 +315,9 @@ Press any key to continue...
 
 The program will exit after you press a key.
 
-* * *
+***
+
+::: zone-end
 
 ## Prepare superposition
 
@@ -475,7 +449,9 @@ If we run this, we'll get exactly the same 50-50 result we got before. However, 
 
 The new return value (`agree`) keeps track of every time the measurement from the first qubit matches the measurement of the second qubit. We also have to update the host application accordingly:
 
-# [Python](#tab/python)
+
+
+::: zone pivot="host-language-python"
 
 ```python
 import qsharp
@@ -491,7 +467,9 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-# [C Sharp](#tab/csharp)
+::: zone-end
+
+::: zone pivot="host-language-csharp"
 
 ```csharp
             using (var qsim = new QuantumSimulator())
@@ -506,12 +484,12 @@ for i in initials:
                         $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4} agree={agree,-4}");
                 }
             }
-            
+
             System.Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
 ```
 
-* * *
+::: zone-end
 
 Now when we run, we get something pretty amazing:
 

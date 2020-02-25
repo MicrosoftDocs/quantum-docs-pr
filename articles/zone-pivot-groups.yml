@@ -1,0 +1,10 @@
+# YamlMime:ZonePivotGroups
+groups:
+- id: host-language
+  title: Host Language
+  prompt: Choose a host programming language
+  pivots:
+  - id: host-language-python
+    title: Python
+  - id: host-language-csharp
+    title: C#

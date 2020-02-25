@@ -5,13 +5,14 @@ summary: Learn how to use the Microsoft Quantum Development Kit and Q#, a langua
 
 metadata:
   title: Microsoft Quantum Documentation - Q# API Reference
-  description: Learn how to use the Microsoft Quantum Development Kit and Q#, a language for quantum programming. Learn key concepts and write your first quantum program. Explore the rich tools and libraries of the QDK.
+  description: Explore the concepts of quantum computing and how to use the Microsoft Quantum Development Kit (QDK) and Q#, an open source quantum programming language.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
+
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

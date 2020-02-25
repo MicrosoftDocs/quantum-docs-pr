@@ -3,7 +3,7 @@ title: Quantum basics with Q#
 description: Learn how to write a quantum program in Q#. Develop a Bell State application using the Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha 
-ms.date: 25/02/2020
+ms.date: 02/25/2020
 ms.topic: tutorial
 zone_pivot_groups: host-language
 uid: microsoft.quantum.write-program

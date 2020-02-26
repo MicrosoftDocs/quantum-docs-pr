@@ -1,6 +1,7 @@
 ---
 title: Quantum machine learning library
 author: geduardo
+description: Learn how to load your own dataset to train a classifier model with the Microsoft QDK.
 ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article

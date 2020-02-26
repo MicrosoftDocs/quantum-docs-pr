@@ -1,6 +1,7 @@
 ---
 title: Quantum machine learning library
 author: geduardo
+description: Learn the basic concepts of designing circuit models for the quantum circuit centric classifier.
 ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article

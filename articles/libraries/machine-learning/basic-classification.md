@@ -1,6 +1,7 @@
 ---
 title: Quantum machine learning library
 author: geduardo
+description: Learn how to execute a quantum sequential classifier written in Q# using the Quantum Machine Learning library of the Microsoft QDK.
 ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article

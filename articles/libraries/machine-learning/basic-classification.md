@@ -9,7 +9,7 @@ uid: microsoft.quantum.libraries.machine-learning.basics
 
 # Basic classification: Classify data with the QDK
 
-In this Quickstart, you will learn how to execute a quantum sequential classifier written in Q# using the Quantum Machine Learning library of the QDK. It's okay if you don't understand everything, this is a quick overview of a complete QDK classifier. You will get more details explained as you go through the rest of the tutorials.
+In this Quickstart, you will learn how to execute a quantum sequential classifier written in Q# using the Quantum Machine Learning library of the QDK. 
 
 In this guide we will use the half-moon dataset, using a classifier structure defined in Q#.
 

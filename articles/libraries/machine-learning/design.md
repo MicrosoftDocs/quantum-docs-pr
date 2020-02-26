@@ -19,7 +19,7 @@ As in classical deep learning, there is no general rule for choosing a specific 
 
 ## How to build a classifier with Q\#
 
-To build a classifier we are going to concatenate parametrized controlled rotations in our circuit model. To do it we can use the type [`ControlledRotation`](link to API article) defined in the Quantum Machine Learning library. This type accepts four arguments that determine: the index of the target qubit, the array of indices of the control qubits, the axis of rotation, and index of the associated parameter in the array of parameters defining the model.
+To build a classifier we are going to concatenate parametrized controlled rotations in our circuit model. To do it we can use the type [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) defined in the Quantum Machine Learning library. This type accepts four arguments that determine: the index of the target qubit, the array of indices of the control qubits, the axis of rotation, and index of the associated parameter in the array of parameters defining the model.
 
 Let's see an example of a classifier. In the [half-moons sample](link to the sample), we can find the following classifier defined in the file `Training.qs`.
 
@@ -44,9 +44,12 @@ What we are defining here is a function that returns an array of `ControlledRota
 
 ## Use the library functions to write layers of gates
 
-Suppose we have a dataset with 784 features per instance, e.g. images of 28×28 pixels like the MNIST dataset. In this case, the width of the circuit becomes large enough so that writing by hand each individual gate becomes a possible but impractical task. This is why the Quantum Machine Learning library provides a set of tools to automatically generate layers of parametrized rotations. For instance, the function [`LocalRotationsLayer`](link to API) returns an array of uncontrolled single-qubit rotations along a given axis, with one rotation for each qubit in the register, each parametrized by a different model parameter. For example, `LocalRotationsLayer(4, X)` returns the following set of gates:
+Suppose we have a dataset with 784 features per instance, e.g. images of 28×28 pixels like the MNIST dataset. In this case, the width of the circuit becomes large enough so that writing by hand each individual gate becomes a possible but impractical task. This is why the Quantum Machine Learning library provides a set of tools to automatically generate layers of parametrized rotations. For instance, the function [`LocalRotationsLayer`](xref:microsoft.quantum.machinelearning.sequentialmodel.localrotationslayer) returns an array of uncontrolled single-qubit rotations along a given axis, with one rotation for each qubit in the register, each parametrized by a different model parameter. For example, `LocalRotationsLayer(4, X)` returns the following set of gates:
 
  ![Local rotations layer](~/media/local_rotations_layer.PNG)
 
-## What's next? 
- Try different structures in the examples provided by the samples. Do you see any changes in the performance of the model? In the next tutorial, [`Load your own datasets`](xref:microsoft.quantum.libraries.machine-learning.load) you will learn how to load datasets to try and explore new architectures of classifiers.
+ We recommend you to explore the [API referenece of the Quantum Machine Learning library](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.machinelearning?view=qsharp-preview) to discover all the available tools to automatize the circuit design.
+
+## Next steps
+
+ Try different structures in the examples provided by the samples. Do you see any changes in the performance of the model? In the next tutorial, [`Load your own datasets`](xref:microsoft.quantum.libraries.machine-learning.load), you will learn how to load datasets to try and explore new architectures of classifiers.

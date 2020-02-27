@@ -1,5 +1,5 @@
 ---
-title: Microsoft Q# chemistry library - Hartree-Fock Theory
+title: Hartree-Fock Theory
 description: Learn about the Hartree–Fock theory, a simple way to construct the initial state for quantum systems.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com

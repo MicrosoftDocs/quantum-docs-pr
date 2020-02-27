@@ -14,13 +14,13 @@ In this Quickstart, you will learn how to execute a quantum sequential classifie
 
 In this guide we will use the half-moon dataset, using a classifier structure defined in Q#.
 
-## Execute the classifier from the host program
+## Host program
 
-First, let's take a look at the host programs to see what the process looks like. Your host program will consist of three parts:
+Your host program consists of three parts:
 
-- Loading of the data from the dataset.
-- Execution of the training to obtain the parameters and the bias that determine the model.
-- Validation of the model to test the accuracy.
+- Loads the dataset
+- Executes training to determine the parameters and bias of the model.
+- Validates the model to determine its accuracy
 
     ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
 
@@ -66,7 +66,7 @@ First, let's take a look at the host programs to see what the process looks like
     ```
     ***
 
-## The Q\# code of the classifier
+## Q\# classifier code
 
 Now let's see how the operations invoked by the host program are defined in Q#.
 We save the following code in a file named `Training.qs`.

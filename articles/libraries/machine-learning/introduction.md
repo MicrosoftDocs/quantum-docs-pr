@@ -7,11 +7,11 @@ ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.introduction
 ---
 
-# Introduction to Circuit Centric Classification
+# Introduction to Quantum Machine Learning
 
 ## Framework and goals
 
-Quantum encoding and processing of information is a powerful alternative to traditional predictive data analysis (that uses tools such as support vector machines, neural nets, decision trees etc.)
+Quantum encoding and processing of information is a powerful alternative to classical machine learning
 Quantum classifiers, in particular, encode data in quantum registers that are concise relative to the number of features, systematically employ quantum entanglement as computational resource and employ quantum measurement for class inference.
 Circuit centric quantum classifier is a relatively simple quantum solution that combines data encoding with a rapidly entangling/disentangling quantum circuit followed by measurement to infer class labels of data samples.
 The goal is to ensure classical characterization and storage of subject circuits, as well as hybrid quantum/classical training of the circuit parameters even for extremely large feature spaces.
@@ -19,7 +19,11 @@ The goal is to ensure classical characterization and storage of subject circuits
 ## Classifier architecture
 
 Classification is a supervised machine learning task, where the goal is to infer class labels $\{y_1,y_2,\ldots,y_d\}$ of certain data samples. The "training data set" is a collection of samples $\mathcal{D}=\{(x,y)}$ with known pre-assigned labels. Here $x$ is a data sample and $y$ is its known label called "training label".
-Somewhat similar to traditional methods, quantum classification consists of three steps: data encoding, preparing of a classifier state, taking a measurement. Due to probabilistic nature of the measurement, these three steps must be repeated multiple times. The measurement may be viewed as a quantum equivalent of some non-linear activation.
+Somewhat similar to traditional methods, quantum classification consists of three steps:
+- data encoding
+- preparation of a classifier state
+- measurement
+Due to the probabilistic nature of the measurement, these three steps must be repeated multiple times. The measurement may be viewed as a quantum equivalent of non-linear activation.
 Both the encoding and the computing of the classifier state are done by means of *quantum circuits*. While the encoding circuit is usually data-driven and parameter-free, the classifier circuit contains a sufficient set of learnable parameters. In the proposed solution the classifier circuit is composed of single-qubit rotations and two-qubit controlled rotations. The learnable parameters here are the rotation angles. The rotation and controlled rotation gates are known to be *universal* for quantum computation, which means that any unitary weight matrix can be decomposed into a long enough circuit consisting of such gates.
 
 ![Multilayer perceptron vs. Circuit Centric Classifier](~/media/DLvsQCC.png)

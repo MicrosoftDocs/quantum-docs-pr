@@ -1,6 +1,6 @@
 ---
 title: Advanced matrix concepts
-description: Learn about eigenvectors, eigenvalues and exponentials, the fundamental tools used to describe and implement quantum algorithms. 
+description: Learn about eigenvectors, eigenvalues, and matrix exponentials, the fundamental tools used to describe and simulate quantum algorithms. 
 author: QuantumWriter
 uid: microsoft.quantum.concepts.matrix-advanced
 ms.author: nawiebe@microsoft.com

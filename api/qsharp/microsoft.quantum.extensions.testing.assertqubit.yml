@@ -3,11 +3,7 @@ uid: microsoft.quantum.extensions.testing.assertqubit
 name: AssertQubit
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.diagnostics.assertqubit".
+summary: AssertQubit has been deprecated. Please use @"microsoft.quantum.diagnostics.assertqubit" instead.
 syntax: 'operation AssertQubit (expected : Result, q : Qubit) : Unit'
 input:
   content: '(expected : Result, q : Qubit)'

@@ -11,16 +11,15 @@ uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 # Width Counter
 
 The `Width Counter` counts the number of qubits allocated and borrowed by each operation.
- All operations from the `Microsoft.Quantum.Primitive` namespace are expressed in terms of single qubit rotations,
+ All operations from the `Microsoft.Quantum.Intrinsic` namespace are expressed in terms of single qubit rotations,
 T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit
 Pauli observables. Some of the primitive operations can allocate extra qubits. For example, multiply controlled `X` gates or controlled `T` gates. Let us compute the number of extra qubits allocated 
 by the implementation of a multiply controlled `X` gate:
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
+open Microsoft.Quantum.Intrinsic;
 open Microsoft.Quantum.Arrays;
-operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
-
+operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
     using(qubits = Qubit[numberOfQubits]) {
         Controlled X (Rest(qubits), Head(qubits));
     } 
@@ -38,20 +37,20 @@ var config = new QCTraceSimulatorConfiguration();
 config.useWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 int totalNumberOfQubits = 5;
-var res = MultiControlledXDriver.Run(sim, totalNumberOfQubits).Result;
+var res = ApplyMultiControlledX.Run(sim, totalNumberOfQubits).Result;
 
 double allocatedQubits = 
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Primitive.X, ApplyMultiControlledX>(
         WidthCounter.Metrics.ExtraWidth,
         functor: OperationFunctor.Controlled); 
 
 double inputWidth =
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Primitive.X, ApplyMultiControlledX>(
         WidthCounter.Metrics.InputWidth,
         functor: OperationFunctor.Controlled);
 ```
 
-The first part of the program executes `MultiControlledXDriver`. In the second part we use the method
+The first part of the program executes `ApplyMultiControlledX`. In the second part we use the method
 `QCTraceSimulator.GetMetric` to get the number of allocated qubits as well as the number of qubits that Controlled `X`
 received as input. 
 

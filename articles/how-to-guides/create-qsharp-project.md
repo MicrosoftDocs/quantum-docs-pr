@@ -18,7 +18,7 @@ A Q# project contains Q# files containing quantum code, as well as a host progra
 Choose your development environment and language from the sections below:
 
 * [Python](#create-a-python-project)
-* [Jupyter notebooks](#create-a-jupyter-notebook-project)
+* [Q# Jupyter notebooks](#create-a-q-jupyter-notebook-project)
 * [C# with Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
 * [C# with VS Code](#create-a-c-project-using-vs-code)
 * [C# with the command line](#create-a-c-project-using-the-dotnet-command-line-tool)
@@ -27,7 +27,7 @@ Choose your development environment and language from the sections below:
 
 1. Pre-requisites
 
-     * The [Quantum Development Kit for Python](xref:microsoft.quantum.install#develop-with-python)
+     * Install the [Quantum Development Kit for Python](xref:microsoft.quantum.install.python)
 
 1. Create a folder for your project, and navigate to that folder
 
@@ -70,11 +70,11 @@ Choose your development environment and language from the sections below:
 
 You can now continue to develop your quantum program.
 
-## Create a Jupyter Notebook project
+## Create a Q# Jupyter Notebook project
 
 1. Pre-requisites
 
-    * The [Quantum Development Kit for Jupyter notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+    * Install the [Quantum Development Kit for Jupyter notebooks](xref:microsoft.quantum.install.jupyter)
 
 1. Run the following command to start the notebook server:
 
@@ -110,7 +110,7 @@ You can now add other Q# operations to continue your quantum development.
 
 1. Pre-requisites
 
-    * The [Quantum Development Kit for Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
+    * Install the [Quantum Development Kit extension for Visual Studio](xref:microsoft.quantum.install.cs)
 
 1. Create a new Q# application
 
@@ -139,18 +139,20 @@ You can now continue your quantum development using Visual Studio
 
 1. Pre-requisites
 
-    * The [Quantum Development Kit for VS Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
+    * Install the [Quantum Development Kit extension for VS Code](xref:microsoft.quantum.install.cs)
 
 1. Create a new project:
 
     * Go to **View** -> **Command Palette**
     * Select **Q#: Create New Project**
+	* Select **Standalone console application**
     * Navigate to the location on the file system where you would like to create the application
     * Click on the **Open new project...** button, once the project has been created
 
 1. Run the application:
 
-    * Go to **Debug** -> **Start Without Debugging**
+    * Go to **Terminal** -> **New Terminal**
+	* Enter `dotnet run`
     * You should see the following text in the output window `Hello quantum world!`
 
 You can now continue your quantum development using Visual Studio Code.
@@ -162,11 +164,11 @@ You can now continue your quantum development using Visual Studio Code.
 
 1. Pre-requisites
 
-    * The [Quantum Development Kit for the Command Line](xref:microsoft.quantum.install#develop-with-c-using-the-dotnet-command-line-tool)
+    * Install the [Quantum Development Kit for the Command Line](xref:microsoft.quantum.install.cs)
 
 1. Create a new application
 
-    ```bash
+    ```dotnetcli
     dotnet new console -lang Q# -o <project name>
     ```
 
@@ -180,7 +182,7 @@ You can now continue your quantum development using Visual Studio Code.
 
 1. Run the application
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 

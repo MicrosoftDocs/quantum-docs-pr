@@ -38,11 +38,11 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
 1. Add the following code to the `Operations.qs` file in your new project:
 
-    [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs?highlight=5,27)]
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
 
 1. To define the list that we're searching, create a new file `Reflections.qs`, and paste in the following code:
 
-    [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/Reflections.qs)]
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/Reflections.qs" range="4-70":::
 
     The `ReflectAboutMarked` operation defines the marked input that you are searching for: the string of alternating zeros and ones. This sample hard-codes the marked input, and can be extended to search for different inputs or generalized for any input.
 
@@ -52,7 +52,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
     To run your new Q# program from Python, save the following code as `host.py`:
 
-    [!code-python[](~/quantum/samples/algorithms/simple-grover/host.py)]
+    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/host.py" range="9-14":::
 
     You can then run your Python host program from the command line:
 
@@ -70,7 +70,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
     To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     You can then run your C# host program from the command line:
 
@@ -89,7 +89,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
     To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     Then press F5, the program will start execution and a new windows will pop-up with the following results: 
 

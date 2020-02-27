@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.intmax
 name: IntMax
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  This function has been removed.
+summary: IntMax has been deprecated. Please use @"microsoft.quantum.math.maxi" instead.
 syntax: 'function IntMax (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'

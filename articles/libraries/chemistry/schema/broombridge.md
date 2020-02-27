@@ -1,5 +1,6 @@
 ---
 title: Broombridge - Quantum Chemistry Schema
+description: Overview of the Broombridge quantum chemistry schema, used to model real-world chemistry problems with the Microsoft Quantum Development Kit. 
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 10/17/2018
@@ -25,4 +26,3 @@ At a high level, the interplay between NWChem and the Microsoft Quantum Developm
 The blue shaded box represents the Broombridge schema, the various grey shaded boxes represent other internal data representations that were chosen to represent and process quantum algorithms for computational chemistry based on real-world chemistry problems. 
 
 Multiple chemical representations defined using the Broombridge schema are provided [here](https://github.com/microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML).
-

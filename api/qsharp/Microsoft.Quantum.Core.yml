@@ -9,6 +9,8 @@ summary: |2-
    This namespace is opened automatically by the Q# compiler, so all
    elements of this namespace are always available.
 functions:
+- uid: microsoft.quantum.core.default
+  summary: Returns a default instance of the specified type.
 - uid: microsoft.quantum.core.length
   summary: Returns the number of elements in an array.
 - uid: microsoft.quantum.core.rangeend
@@ -21,4 +23,11 @@ functions:
   summary: Returns the defined start value of the given range.
 - uid: microsoft.quantum.core.rangestep
   summary: Returns the integer that specifies how the next value of a range is calculated.
+newtypes:
+- uid: microsoft.quantum.core.attribute
+  summary: Compiler recognized attribute used to mark user defined types as attributes.
+- uid: microsoft.quantum.core.deprecated
+  summary: Compiler recognized attribute used to mark a type or callable as deprecated.
+- uid: microsoft.quantum.core.entrypoint
+  summary: Compiler recognized attribute used to mark the entry point of an executable.
 ...

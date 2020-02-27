@@ -37,7 +37,7 @@ By comparison, the [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-s
 
 ## Facts and Assertions ##
 
-As discussed in [Testing and Debugging](xref:microsoft.quantum.techniques.testing-and-debugging), a function or operation with signature `Unit -> Unit` or `Unit => Unit`, respectively, can be called as a *unit test*.
+As discussed in [Testing and Debugging](xref:microsoft.quantum.techniques.testing-and-debugging), a function or operation with signature `Unit -> Unit` or `Unit => Unit`, respectively, can be marked as a *unit test*.
 Each unit test generally consists of a small quantum program, along with one or more conditions that check the correctness of that program.
 These conditions can come in the form of either _facts_, which check the values of their inputs, or _assertions_, which check the states of one or more qubits passed as input.
 
@@ -48,7 +48,7 @@ The Q# standard libraries provide several different functions for representing f
 
 - <xref:microsoft.quantum.diagnostics.fact>
 - <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>
-- <xref:microsoft.quantum.diagnostics.nearequalityfact>
+- <xref:microsoft.quantum.diagnostics.nearequalityfactc>
 - <xref:microsoft.quantum.diagnostics.equalityfacti>
 
 

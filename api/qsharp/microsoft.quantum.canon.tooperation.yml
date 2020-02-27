@@ -3,11 +3,7 @@ uid: microsoft.quantum.canon.tooperation
 name: ToOperation
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.convert.functionasoperation".
+summary: ToOperation has been deprecated. Please use @"microsoft.quantum.convert.functionasoperation" instead.
 syntax: "function ToOperation (fn : ('Input -> 'Output)) : ('Input => 'Output)"
 input:
   content: "(fn : ('Input -> 'Output))"

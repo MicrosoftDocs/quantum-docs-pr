@@ -16,6 +16,8 @@ functions:
     Given an array and a predicate that is defined
     for the elements of the array, checks if at least one element of
     the array satisfies the predicate.
+- uid: microsoft.quantum.arrays.chunks
+  summary: Splits an array into multiple parts of equal length.
 - uid: microsoft.quantum.arrays.constantarray
   summary: Creates an array of given length with all elements equal to given value.
 - uid: microsoft.quantum.arrays.enumerated
@@ -45,6 +47,8 @@ functions:
   summary: |-
     Given an array, returns a range over the indices of that array, suitable
     for use in a for loop.
+- uid: microsoft.quantum.arrays.isempty
+  summary: Returns true if and only if an array is empty.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: |-
     Given an array, returns a function which returns elements of that
@@ -86,8 +90,16 @@ functions:
     Takes an array and a list of locations and
     produces a new array formed from the elements of the original
     array that match the given locations.
+- uid: microsoft.quantum.arrays.swapped
+  summary: Applies a swap of two elements in an array.
 - uid: microsoft.quantum.arrays.tail
   summary: Returns the last element of the array.
+- uid: microsoft.quantum.arrays.tuplearrayasnestedarray
+  summary: Turns a list of 2-tuples into a nested array.
+- uid: microsoft.quantum.arrays.where
+  summary: |-
+    Given a predicate and an array, returns the indices of that
+    array where the predicate is true.
 - uid: microsoft.quantum.arrays.zip
   summary: |-
     Given two arrays, returns a new array of pairs such that each pair

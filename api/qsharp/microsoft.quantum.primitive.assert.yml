@@ -3,11 +3,7 @@ uid: microsoft.quantum.primitive.assert
 name: Assert
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: |-
-  > [!WARNING]
-  > Deprecated
-
-  Please use @"microsoft.quantum.intrinsic.assert".
+summary: Assert has been deprecated. Please use @"microsoft.quantum.intrinsic.assert" instead.
 syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'

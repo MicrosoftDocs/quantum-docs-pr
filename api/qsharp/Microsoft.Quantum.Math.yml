@@ -69,9 +69,19 @@ functions:
     Converts a complex number of type `ComplexPolar` to a complex
     number of type `Complex`.
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: ''
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    ComplexPolarToComplex has been deprecated. Please use @"microsoft.quantum.math.complexpolarascomplex" instead.
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: ''
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    ComplexToComplexPolar has been deprecated. Please use @"microsoft.quantum.math.complexascomplexpolar" instead.
 - uid: microsoft.quantum.math.continuedfractionconvergenti
   summary: |-
     Finds the continued fraction convergent closest to `fraction`
@@ -227,7 +237,7 @@ functions:
 - uid: microsoft.quantum.math.realmod
   summary: Computes the modulus between two real numbers.
 - uid: microsoft.quantum.math.round
-  summary: Rounds a value to the nearest integer or to the specified number of fractional digits.
+  summary: Rounds a value to the nearest integer.
 - uid: microsoft.quantum.math.signd
   summary: Returns an integer that indicates the sign of a number.
 - uid: microsoft.quantum.math.signi
@@ -240,6 +250,8 @@ functions:
   summary: Returns the hyperbolic sine of the specified angle.
 - uid: microsoft.quantum.math.sqrt
   summary: Returns the square root of a specified number.
+- uid: microsoft.quantum.math.squarednorm
+  summary: Returns the squared 2-norm of a vector.
 - uid: microsoft.quantum.math.tan
   summary: Returns the tangent of the specified angle.
 - uid: microsoft.quantum.math.tanh

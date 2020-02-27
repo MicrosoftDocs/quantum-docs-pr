@@ -22,12 +22,12 @@ that by default, only the T depth of operations is computed (which is often desi
 are aggregated over all the edges of the operations call graph. 
 
 Let us now compute the <xref:microsoft.quantum.intrinsic.t> depth
-of the <xref:microsoft.quantum.intrinsic.ccnot> operation. We will use the following Q# driver code: 
+of the <xref:microsoft.quantum.intrinsic.ccnot> operation. We will use the following Q# sample code:
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
-operation CCNOTDriver() : Unit {
+open Microsoft.Quantum.Intrinsic;
 
+operation ApplySampleWithCCNOT() : Unit {
     using (qubits = Qubit[3]) {
         CCNOT(qubits[0], qubits[1], qubits[2]);
         T(qubits[0]);
@@ -37,7 +37,7 @@ operation CCNOTDriver() : Unit {
 
 ## Using Depth Counter within a C# Program
 
-To check that `CCNOT` has `T` depth 5 and `CCNOTDriver` has `T` depth 6
+To check that `CCNOT` has `T` depth 5 and `ApplySampleWithCCNOT` has `T` depth 6
 we can use the following C# code:
 
 ```csharp 
@@ -46,18 +46,18 @@ using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
 config.useDepthCounter = true;
 var sim = new QCTraceSimulator(config);
-var res = CCNOTDriver.Run(sim).Result;
+var res = ApplySampleWithCCNOT.Run(sim).Result;
 
-double tDepth = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(DepthCounter.Metrics.Depth);
-double tDepthAll = sim.GetMetric<CCNOTDriver>(DepthCounter.Metrics.Depth);
+double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
+double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
-The first part of the program executes `CCNOTDriver`. In the second part, we use the method
-`QCTraceSimulator.GetMetric` to get the `T` depth of `CCNOT` and `CCNOTDriver`: 
+The first part of the program executes `ApplySampleWithCCNOT`. In the second part, we use the method
+`QCTraceSimulator.GetMetric` to get the `T` depth of `CCNOT` and `ApplySampleWithCCNOT`: 
 
 ```csharp
-double tDepth = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(DepthCounter.Metrics.Depth);
-double tDepthAll = sim.GetMetric<CCNOTDriver>(DepthCounter.Metrics.Depth);
+double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
+double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
 Finally, to output all the statistics collected by `Depth Counter` in CSV format we can 

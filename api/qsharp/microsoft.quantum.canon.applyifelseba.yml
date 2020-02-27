@@ -15,6 +15,9 @@ input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U))"
   types:
   - name: bit
+    summary: |-
+      The boolean value used to determine whether `trueOp` or `falseOp` is
+      applied.
     isPrimitive: true
     uid: Bool
   - name: trueOp

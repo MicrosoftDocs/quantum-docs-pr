@@ -1,5 +1,5 @@
 ---
-title: Microsoft Q# chemistry library - Correlated wavefunctions
+title: Correlated wavefunctions
 description: Learn about dynamic and non-dynamic correlations in wavefunctions using the Microsoft Quantum chemistry library. 
 author: guanghaolow
 ms.author: gulow@microsoft.com

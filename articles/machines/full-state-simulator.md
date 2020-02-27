@@ -1,6 +1,6 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Quantum Development Kit - Full State Simulator
+title: Full State Simulator
 description: Learn how to run your Q# programs on the Microsoft Quantum Development Kit Full State Simulator.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com 

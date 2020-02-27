@@ -1,5 +1,5 @@
 ---
-title: Contributing code
+title: Contributing code to the Microsoft QDK
 description: Learn the guidelines for contributing sample code to the Microsoft Quantum Development Kit (QDK).
 author: cgranade
 ms.author: chgranad

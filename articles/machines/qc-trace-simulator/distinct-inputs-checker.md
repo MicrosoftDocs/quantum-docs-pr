@@ -1,6 +1,6 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Quantum computer trace simulator - Distinct Inputs Checker
+title: Distinct Inputs Checker
 description: Learn about the Microsoft QDK Distinct Inputs Checker, which checks your Q# code for potential conflicts with shared qubits.
 author: vadym-kl
 ms.author: vadym@microsoft.com

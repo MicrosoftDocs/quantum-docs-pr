@@ -1,6 +1,6 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Q# standard libraries - Error correction
+title: Error correction
 description: Learn how to use error correcting codes in your Q# programs while protecting the state of the qubits.  
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction

@@ -10,7 +10,7 @@ uid: microsoft.quantum.machine-learning.concepts.intro
 
 # Introduction to the Quantum Machine Learning Library
 
-The Quantum Machine Learning Library is a high-level API, written in Q#, that provides the first playground to run hybrid quantum/classical machine learning experiments. From this library you can expect:
+The Quantum Machine Learning Library is an API, written in Q#, that gives you the ability to run hybrid quantum/classical machine learning experiments. The library gives you the ability to:
 
 - Basic tools to load your own data to classify with quantum simulators
 - Slow performance compared to current classical machine learning frameworks (remember that everything is running on top of the simulation of a quantum device that is already computationally expensive)

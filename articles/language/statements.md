@@ -1,6 +1,6 @@
 ---
 title: Q# Statements
-description: Learn about the correct use of statements in Q# code, including comments, namespaces, statement blocks and others. 
+description: Learn about the correct use of statements in Q#, including function and operation declarations, variable declarations and assignments, and operation calls. 
 author: QuantumWriter
 uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com 

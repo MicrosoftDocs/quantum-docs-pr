@@ -1,6 +1,6 @@
 ---
 title: The Q# Programming Language
-description: Introduction to the Q# programming language for quantum programs. 
+description: Introduction to the Q# language for quantum program development. 
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017

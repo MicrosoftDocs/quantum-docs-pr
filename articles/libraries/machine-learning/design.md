@@ -1,5 +1,5 @@
 ---
-title: Quantum machine learning library
+title: Design your own classifier with the QDK
 description: Learn the basic concepts of designing circuit models for the quantum circuit centric classifier.
 author: geduardo
 ms.author: v-edsanc@microsoft.com
@@ -10,7 +10,7 @@ uid: microsoft.quantum.libraries.machine-learning.design
 
 # Design your own classifier
 
-In this tutorial you, will learn the basic concepts behind the design of circuit models for the quantum circuit centric classifier.
+In this guide you will learn the basic concepts behind the design of circuit models for the quantum circuit centric classifier.
 
 As in classical deep learning, there is no general rule for choosing a specific architecture. Depending on the problem some architectures will perform better than others. But, there are some concepts that might be useful when designing the circuit:
 
@@ -22,9 +22,9 @@ As in classical deep learning, there is no general rule for choosing a specific 
 
 To build a classifier we are going to concatenate parametrized controlled rotations in our circuit model. To do it we can use the type [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) defined in the Quantum Machine Learning library. This type accepts four arguments that determine: the index of the target qubit, the array of indices of the control qubits, the axis of rotation, and index of the associated parameter in the array of parameters defining the model.
 
-Let's see an example of a classifier. In the [half-moons sample](link to the sample), we can find the following classifier defined in the file `Training.qs`.
+Let's see an example of a classifier. In the [half-moons sample](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons), we can find the following classifier defined in the file `Training.qs`.
 
-    ```qsharp
+```qsharp
     function ClassifierStructure() : ControlledRotation[] {
         return [
             ControlledRotation((0, new Int[0]), PauliX, 4),
@@ -37,7 +37,7 @@ Let's see an example of a classifier. In the [half-moons sample](link to the sam
             ControlledRotation((1, new Int[0]), PauliX, 3)
         ];
     }
-    ```
+ ```
 
 What we are defining here is a function that returns an array of `ControlledRotation` elements, that together with an array of parameters and a bias will define our [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel). This type is fundamental in the Quantum Machine Learning library and defines the classifier. The circuit defined in the function above is part of a classifier in which each sample of the dataset contains two features. Therefore we only need two qubits. The graphical representation of the circuit is:
 

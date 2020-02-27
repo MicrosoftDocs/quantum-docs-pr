@@ -1,6 +1,6 @@
 ---
 title: Q# Data types
-description: Learn about the different types used in the Q# programming language, including arrays, tuples, operations and functions. 
+description: Learn about the different types used in the Q# programming language, including built-in types, arrays, tuples, operations, functions., and user-defined types. 
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com 

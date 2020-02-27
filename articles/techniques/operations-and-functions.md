@@ -230,7 +230,7 @@ Additionally we specify the characteristics of that operation type, which contai
 An operation of type `(Qubit => Unit)` supports neither the `Adjoint` nor the `Controlled` functor. 
 If we want to indicate that an operation of that type has to support e.g. the `Adjoint` functor, we have to declare it as being adjointable. This is done by using the annotation `is Adj` to the type. 
 Similarly, `(Qubit => Unit is Ctl)` denotes that an operation of that type supports the `Controlled` functor. 
-We will explore this further when we discuss [types in Q#] (xref:microsoft.quantum.language.type-model) more generally.
+We will explore this further when we discuss [types in Q#](xref:microsoft.quantum.language.type-model) more generally.
 
 For now, we emphasize that we can also return operations as a part of outputs, such that we can isolate some kinds of classical conditional logic as a classical function which returns a description of a quantum program in the form of an operation.
 As a simple example, consider the teleportation example, in which the party receiving a two-bit classical message needs to use the message to decode their qubit into the proper teleported state.

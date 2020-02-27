@@ -24,7 +24,9 @@ Somewhat similar to traditional methods, quantum classification consists of thre
 - preparation of a classifier state
 - measurement
 Due to the probabilistic nature of the measurement, these three steps must be repeated multiple times. The measurement may be viewed as a quantum equivalent of non-linear activation.
-Both the encoding and the computing of the classifier state are done by means of *quantum circuits*. While the encoding circuit is usually data-driven and parameter-free, the classifier circuit contains a sufficient set of learnable parameters. In the proposed solution the classifier circuit is composed of single-qubit rotations and two-qubit controlled rotations. The learnable parameters here are the rotation angles. The rotation and controlled rotation gates are known to be *universal* for quantum computation, which means that any unitary weight matrix can be decomposed into a long enough circuit consisting of such gates.
+Both the encoding and the computing of the classifier state are done by means of *quantum circuits*. While the encoding circuit is usually data-driven and parameter-free, the classifier circuit contains a sufficient set of learnable parameters. 
+
+In the proposed solution the classifier circuit is composed of single-qubit rotations and two-qubit controlled rotations. The learnable parameters here are the rotation angles. The rotation and controlled rotation gates are known to be *universal* for quantum computation, which means that any unitary weight matrix can be decomposed into a long enough circuit consisting of such gates.
 
 ![Multilayer perceptron vs. Circuit Centric Classifier](~/media/DLvsQCC.png)
 
@@ -57,11 +59,12 @@ Here, it suffices to understand that the likelihood function $\mathcal{L}(\theta
 
 ### Classifier bias and training score
 
-Given some intermediate (or final) values of the parameters in $\theta$, we need to identify a single real value $b$ know as *classifier bias* to do the inference. The label inference rule works as follows:A sample $x$ is assigned label $y_2$ if and only if $P(M=y_2|U(\theta) x) + b > 0.5$  (RULE1)
-(otherwise it is assigned label $y_1$)
+Given some intermediate (or final) values of the parameters in $\theta$, we need to identify a single real value $b$ know as *classifier bias* to do the inference. The label inference rule works as follows: 
+- A sample $x$ is assigned label $y_2$ if and only if $P(M=y_2|U(\theta) x) + b > 0.5$  (RULE1) (otherwise it is assigned label $y_1$)
+
 Clearly $b$ must be in the interval $(-0.5,+0.5)$ to be meaningful.
-A training case $(x,y) \in \mathcal{D}$ is considered a *misclassification* given the bias $b$ if the label inferred for $x$ as per RULE1 is actually different from $y$. The overall number of misclassifications is the *training score* of the classifier given the bias $b$. The *optimal* classifier bias $b$ minimizes the training score.
-It is easy to see that, given the precomputed probability estimates $\{ P(M=y_2|U(\theta) x) | (x,*)\in\mathcal{D} \}$, the optimal classifier bias can be found by binary search in interval $(-0.5,+0.5)$ by making at most $\log_2(|\mathcal{D}|)$ steps.
+
+A training case $(x,y) \in \mathcal{D}$ is considered a *misclassification* given the bias $b$ if the label inferred for $x$ as per RULE1 is actually different from $y$. The overall number of misclassifications is the *training score* of the classifier given the bias $b$. The *optimal* classifier bias $b$ minimizes the training score. It is easy to see that, given the precomputed probability estimates $\{ P(M=y_2|U(\theta) x) | (x,*)\in\mathcal{D} \}$, the optimal classifier bias can be found by binary search in interval $(-0.5,+0.5)$ by making at most $\log_2(|\mathcal{D}|)$ steps.
 
 ### Reference
 

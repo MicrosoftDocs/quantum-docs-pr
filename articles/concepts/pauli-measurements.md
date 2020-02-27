@@ -1,5 +1,5 @@
 ---
-title: Microsoft Quantum Development Kit - Pauli Measurements
+title: Pauli Measurements
 description: Learn how to work with measurements of single- and multi-qubit Pauli operators. 
 author: QuantumWriter
 uid: microsoft.quantum.concepts.pauli

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Q# standard libraries - Prelude
+title: Prelude
 description: Learn about the intrinsic operations and functions in the QDK, including classical functions and unitary, rotation and measurement operations. 
 author: QuantumWriter
 uid: microsoft.quantum.libraries.prelude

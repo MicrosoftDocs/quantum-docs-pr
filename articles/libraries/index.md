@@ -1,5 +1,6 @@
 ---
-title: Quantum Development Kit Libraries | Microsoft Docs
+title: Quantum Development Kit Libraries
+description: Overview of the standard, chemistry, and numerics libraries included in the Microsoft Quantum Development Kit.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
@@ -17,4 +18,4 @@ In this section of the documentation, we describe these libraries and how to use
 - [**Quantum numerics library**](xref:microsoft.quantum.numerics.intro):
   This section describes the quantum numerics library, which provides implementations for a host of mathematical functions. It supports integer (signed & unsigned) and fixed-point representations.
 
-Sources of the libraries as well as code samples can be obtained from GitHub. See also the [licensing](xref:microsoft.quantum.libraries.licensing) section for further information. It should be noted that package references ("binaries") are available also for the libraries which offers another way of including the libraries in projects. A convenient way of obtaining them is via [nuget](https://nuget.org).  
+Sources of the libraries as well as code samples can be obtained from GitHub. See also the [licensing](xref:microsoft.quantum.libraries.licensing) section for further information. It should be noted that package references ("binaries") are available also for the libraries which offers another way of including the libraries in projects. A convenient way of obtaining them is via [nuget](https://nuget.org).

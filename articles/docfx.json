@@ -7,7 +7,6 @@
           "*.yml"
         ],
         "src": ".",
-        "version": "qsharp-preview",
         "dest": "",
         "exclude": [
           "**/obj/**",
@@ -30,15 +29,9 @@
         "exclude": [
           "**/obj/**",
           "**/includes/**"
-        ],
-        "version": "qsharp-preview"
+        ]
       }
     ],
-    "versions": {
-      "qsharp-preview": {
-        "dest": "qsharp-preview"
-      }
-    },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {

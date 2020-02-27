@@ -1,6 +1,6 @@
 ---
-title: Q# standard libraries - characterization | Microsoft Docs
-description: Q# standard libraries - characterization
+title: Quantum characterization and statistics 
+description: Learn how measurement statistics from phase estimations are used to estimate result values in quantum programming. 
 author: QuantumWriter
 uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com 

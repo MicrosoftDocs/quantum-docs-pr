@@ -1,6 +1,6 @@
 ---
-title: Expressions | Microsoft Docs 
-description: Expressions
+title: Q# Expressions
+description: Understand how to specify, reference and combine constants, variables, operators, operations and functions as expressions in Q#.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017

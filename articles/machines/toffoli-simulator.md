@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Quantum Development Kit Toffoli Simulator | Microsoft Docs 
-description: Overview of Microsoft's Quantum Development Kit Toffoli Simulator 
+title: Quantum Development Kit Toffoli Simulator 
+description: Learn about the Microsoft QDK Toffoli Simulator, a special purpose quantum simulator that can be used with millions of qubits. 
 author: alan-geller
 ms.author: ageller@microsoft.com 
 ms.date: 01/16/2019

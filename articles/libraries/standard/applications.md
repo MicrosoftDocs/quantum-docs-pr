@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Q# standard libraries - applications | Microsoft Docs
-description: Q# standard libraries
+title: Applications in the Q# standard libraries
+description: Learn about two fundamental applications in quantum computing - Hamiltonian simulation and Shor's search algorithm. 
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com 
@@ -194,7 +194,7 @@ Phase estimation thus outputs the eigenvalues $e^{2\pi i s / r}$ from which $r$ 
 
 The circuit diagram for quantum period finding is:
 
-![](./../../media/QPE.svg)
+![Circuit diagram for quantum period finding](./../../media/QPE.svg)
 
 Here $2n$ qubits are initialized to $\ket{0}$ and $n$ qubits are initialized to $\ket{1}$.
 The reader again may wonder why the quantum register to hold the eigenstates is initialized to $\ket{1}$.

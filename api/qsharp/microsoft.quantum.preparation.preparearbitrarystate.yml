@@ -4,15 +4,24 @@ name: PrepareArbitraryState
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: |-
-  Returns an operation that prepares a given quantum state.
+  Given a set of coefficients and a little-endian encoded quantum register,
+  prepares an state on that register described by the given coefficients.
 
-  The returned operation $U$ prepares an arbitrary quantum
+  This operation prepares an arbitrary quantum
   state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from
-  the $n$-qubit computational basis state $\ket{0...0}$.
+  the $n$-qubit computational basis state $\ket{0 \cdots 0}$.
+  In particular, the action of this operation can be simulated by the
+  a unitary transformation $U$ which acts on the all-zeros state as
 
   $$
   \begin{align}
-  U\ket{0...0}=\ket{\psi}=\frac{\sum_{j=0}^{2^n-1}r_j e^{i t_j}\ket{j}}{\sqrt{\sum_{j=0}^{2^n-1}|r_j|^2}}.
+  U\ket{0...0}
+  & = \ket{\psi} \\\\
+  & = \frac{
+  \sum_{j=0}^{2^n-1} r_j e^{i t_j} \ket{j}
+  }{
+  \sqrt{\sum_{j=0}^{2^n-1} |r_j|^2}
+  }.
   \end{align}
   $$
 remarks: |-
@@ -49,4 +58,6 @@ output:
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.preparation.approximatelypreparearbitrarystate
 ...

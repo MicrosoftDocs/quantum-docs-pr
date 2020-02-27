@@ -29,4 +29,8 @@ operations:
     |0〉 following the measurement.
 - uid: microsoft.quantum.measurement.multim
   summary: Measures each qubit in a given array in the standard basis.
+- uid: microsoft.quantum.measurement.settobasisstate
+  summary: |-
+    Sets a qubit to a given computational basis state by measuring the
+    qubit and applying a bit flip if needed.
 ...

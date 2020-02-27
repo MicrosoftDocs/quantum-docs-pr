@@ -1,6 +1,6 @@
 ---
-title: Multiple qubits | Microsoft Docs 
-description: Multiple qubits
+title: Multiple qubits
+description: Learn how to perform operations on two or more qubits.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com 

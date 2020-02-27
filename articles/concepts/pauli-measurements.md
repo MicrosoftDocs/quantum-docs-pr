@@ -1,6 +1,6 @@
 ---
 title: Pauli Measurements
-description: Pauli Measurements
+description: Learn how to work with single- and multi-qubit Pauli measurement operations. 
 author: QuantumWriter
 uid: microsoft.quantum.concepts.pauli
 ms.author: nawiebe@microsoft.com

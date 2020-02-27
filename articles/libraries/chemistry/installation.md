@@ -1,6 +1,6 @@
 ---
-title: Chemistry Library Installation and Validation | Microsoft Docs
-description: Chemistry Library Installation and Validation
+title: Microsoft Q# Chemistry Library Installation and Validation
+description: Learn how to install the Microsoft Quantum chemistry library and use it with the NWChem computational chemistry platform. 
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
@@ -16,25 +16,25 @@ As with other NuGet packages, it's straightforward to add the chemistry library 
 **Visual Studio 2019:** If you are using Visual Studio 2019, you can add the quantum chemistry packages by using the NuGet Package Manager.
 To open the Package Manager, right-click on the project you'd like to add the chemistry library to and select "Manage NuGet Packages...," as in the screenshot below.
 
-![](~/media/vs2017-nuget-manage-packages.png)
+![Using the NuGet Package Manager in Visual Studio 2019](~/media/vs2017-nuget-manage-packages.png)
 
 From the Browse tab, search for the package name "Microsoft.Quantum.Chemistry."
 
 > [!NOTE]
 > Make sure to tick "Include prerelease."
 
-![](~/media/vs2017-nuget-package-search.png)
+![Include pre-release checkbox](~/media/vs2017-nuget-package-search.png)
 
 This will list the packages available for download.
 Click on the "Microsoft.Quantum.Chemistry on the left-hand pane, select the latest pre-release version on the right-hand pane, and click "Install":
 
-![](~/media/vs2017-nuget-select-chem.png)
+![Install the latest Microsoft.Quantum.Chemistry package](~/media/vs2017-nuget-select-chem.png)
 
 For more details, see the [Package Manager UI guide](https://docs.microsoft.com/nuget/tools/package-manager-ui).
 
 Alternatively, you can use the Package Manager Console to add the quantum chemistry library to your project with a command line interface.
 
-![](~/media/vs2017-nuget-console-menu.png)
+![Use the Package Manager Console from the command line](~/media/vs2017-nuget-console-menu.png)
 
 From the package manager console, run the following:
 

@@ -6,11 +6,16 @@ namespace: Microsoft.Quantum.Canon
 summary: |-
   Applies a Pauli Z rotation conditioned on an array of qubits.
 
-  This applies the multiply-controlled unitary operation $U$ that performs
+  This applies the multiply controlled unitary operation that performs
   rotations by angle $\theta_j$ about single-qubit Pauli operator $Z$
   when controlled by the $n$-qubit number state $\ket{j}$.
+  In particular, this operation can be represented by the unitary
 
-  $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes e^{i Z \theta_j}$.
+  $$
+  \begin{align}
+  U = \sum^{2^n-1}_{j=0} \ket{j}\bra{j} \otimes e^{i Z \theta_j}.
+  \end{align}
+  $$
 remarks: |-
   `coefficients` will be padded with elements $\theta_j = 0.0$ if
   fewer than $2^n$ are specified.
@@ -46,4 +51,6 @@ output:
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- approximatelymultiplexz
 ...

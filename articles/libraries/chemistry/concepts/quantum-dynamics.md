@@ -1,6 +1,6 @@
 ---
-title: Quantum Dynamics | Microsoft Docs
-description: Quantum Dynamics Conceptual Docs
+title: Quantum Dynamics 
+description: Learn the similarities and differences between quantum dynamics and classical dynamics. 
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017

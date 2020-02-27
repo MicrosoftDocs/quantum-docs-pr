@@ -1,6 +1,6 @@
 ---
 title: Working with Qubits
-description: Working with Qubits - Q# techniques
+description: Learn how to allocate qubits, use them in operations and functions and measure the results. 
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017

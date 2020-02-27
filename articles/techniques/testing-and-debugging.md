@@ -1,6 +1,6 @@
 ---
-title: Testing and debugging - Q# techniques | Microsoft Docs
-description: Testing and debugging - Q# techniques
+title: Testing and debugging Q# programs
+description: Learn how to use unit tests, facts and assertions, and dump functions to test and debug quantum programs. 
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging

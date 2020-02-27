@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Quantum oracles | Microsoft Docs 
-description: Quantum oracles
+title: Quantum oracles
+description: Learn how to work with and define quantum oracles. 
 author: cgranade
 uid: microsoft.quantum.concepts.oracles
 ms.author: Christopher.Granade@microsoft.com

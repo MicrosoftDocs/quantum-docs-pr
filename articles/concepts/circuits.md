@@ -1,6 +1,6 @@
 ---
-title: Quantum circuits | Microsoft Docs
-description: Quantum circuits
+title: Quantum circuits
+description: Learn how to visually represent simple and complex quantum operations with quantum circuit diagrams. 
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com

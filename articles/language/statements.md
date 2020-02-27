@@ -1,6 +1,6 @@
 ---
-title: Q# statements | Microsoft Docs 
-description: Q# statements
+title: Q# Programming language - Statements
+description: Learn about the correct use of statements in Q# code, including comments, namespaces, statement blocks and others. 
 author: QuantumWriter
 uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com 

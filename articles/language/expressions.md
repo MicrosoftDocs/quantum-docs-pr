@@ -1,6 +1,6 @@
 ---
-title: Expressions | Microsoft Docs 
-description: Expressions
+title: Expressions
+description: Understand the expression syntax for different data types in the Q# programming language. 
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017

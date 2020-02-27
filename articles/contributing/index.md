@@ -1,6 +1,6 @@
 ---
-title: Contributing to the Quantum Development Kit | Microsoft Docs
-description: Contributing to the Quantum Development Kit
+title: Contributing to the Microsoft Quantum Development Kit
+description: Learn how to contribute to the Microsoft Quantum Development Kit and the quantum programming community. 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018

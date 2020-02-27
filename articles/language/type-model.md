@@ -1,6 +1,6 @@
 ---
-title: Q# type model | Microsoft Docs 
-description: Q# type model
+title: Microsoft Q# language type model
+description: Learn about the different types used in the Q# programming language, including arrays, tuples, operations and functions. 
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com 

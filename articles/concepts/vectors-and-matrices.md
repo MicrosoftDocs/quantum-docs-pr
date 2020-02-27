@@ -1,6 +1,6 @@
 ---
-title: Vectors and matrices | Microsoft Docs
-description: Vectors and matrices
+title: Vectors and matrices in quantum computing
+description: Learn the basics of vector and matrix multiplication and notation as it relates to quantum computing.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.vectors
 ms.author: nawiebe@microsoft.com

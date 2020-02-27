@@ -1,6 +1,6 @@
 ---
-title: Dirac notation | Microsoft Docs 
-description: Dirac notation
+title: Microsoft Quantum Development Kit - Dirac notation
+description: Learn about using Dirac notation to represent quantum vectors and operations. 
 author: QuantumWriter
 uid: microsoft.quantum.concepts.dirac
 ms.author: nawiebe@microsoft.com 

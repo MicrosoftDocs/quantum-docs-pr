@@ -1,6 +1,6 @@
 ---
-title: Q# standard libraries - algorithms | Microsoft Docs
-description: Q# standard libraries
+title: Microsoft Q# standard libraries - Algorithms
+description: Learn about amplitude amplification, one of the fundamental tools of quantum computing. 
 author: QuantumWriter
 ms.author: martinro@microsoft.com 
 ms.date: 12/11/2017

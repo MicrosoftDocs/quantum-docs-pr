@@ -1,7 +1,7 @@
 ---
 uid: microsoft.quantum.welcome
 title: Get started with the Quantum Development Kit (QDK)
-description: Learn how to get started with the QDK. 
+description: Learn how to start programming quantum projects in Q# with the Microsoft Quantum Development Kit (QDK). 
 author: natke
 ms.author: nakersha
 ms.date: 10/23/2019

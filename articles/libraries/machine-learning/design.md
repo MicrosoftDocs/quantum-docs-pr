@@ -10,7 +10,7 @@ uid: microsoft.quantum.libraries.machine-learning.design
 
 # Design your own classifier
 
-In this tutorial you will learn the basic concepts behind the design of circuit models for the quantum circuit centric classifier.
+In this tutorial you, will learn the basic concepts behind the design of circuit models for the quantum circuit centric classifier.
 
 As in classical deep learning, there is no general rule for choosing a specific architecture. Depending on the problem some architectures will perform better than others. But, there are some concepts that might be useful when designing the circuit:
 

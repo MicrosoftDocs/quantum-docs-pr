@@ -1,5 +1,5 @@
 ---
-title: Microsoft Quantum Development Kit - Quantum Dynamics 
+title: Quantum Dynamics 
 description: Learn the similarities and differences between quantum dynamics and classical dynamics. 
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com

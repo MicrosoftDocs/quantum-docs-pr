@@ -23,9 +23,9 @@ In this guide we will use the half-moon dataset, using a classifier structure de
 
 Your host program consists of three parts:
 
-- Loads the dataset and choose a set of starting parameters for your model.
-- Executes training to determine the parameters and bias of the model.
-- Validates the model to determine its accuracy
+- Load the dataset and choose a set of starting parameters for your model.
+- Execute training to determine the parameters and bias of the model.
+- Validate the model to determine its accuracy
 
     ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
 

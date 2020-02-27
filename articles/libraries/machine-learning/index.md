@@ -16,7 +16,7 @@ The Quantum Machine Learning Library is an API, written in Q#, that gives you th
 
 - Use samples and tutorials to get introduced to the field of quantum machine learning
 
-You can expect low performance compared to current classical machine learning frameworks (remember that everything is running on top of the simulation of a quantum device that is already computationally expensive)
+You can expect low performance compared to current classical machine learning frameworks (remember that everything is running on top of the simulation of a quantum device that is already computationally expensive).
 
 The purpose of this documentation is:
 

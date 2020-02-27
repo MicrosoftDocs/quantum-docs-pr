@@ -1,5 +1,5 @@
 ---
-title: Type conversions
+title: Type conversions in the Q# standard libraries
 description: Learn about common and user-defined type conversion functions in the Q# standard libraries. 
 author: cgranade
 uid: microsoft.quantum.libraries.convert

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Quantum chemistry library - Loading a Hamiltonian from file
+title: Loading a Hamiltonian from file
 description: Learn how to automatically generate a large Hamiltonian using the Broombridge schema. 
 author: guanghaolow
 ms.author: gulow

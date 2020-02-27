@@ -1,5 +1,5 @@
 ---
-title: Microsoft Q# chemistry library - Jordan-Wigner Representation
+title: Jordan-Wigner Representation
 description: Learn about the Jordan-Wigner Representation, which maps Hamiltonian operators to unitary matrices that can more easily implemented on a quantum computer. 
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com

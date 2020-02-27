@@ -1,5 +1,5 @@
 ---
-title: Microsoft Q# language type model
+title: Q# Data types
 description: Learn about the different types used in the Q# programming language, including arrays, tuples, operations and functions. 
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model

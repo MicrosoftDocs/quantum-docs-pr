@@ -20,7 +20,7 @@ You can expect low performance compared to current classical machine learning fr
 
 The purpose of this documentation is:
 
-- To provide a concise introduction to machine learning tools (written in Q\#) for hybrid quantum/classical learning.
+- A concise introduction to machine learning tools (written in Q\#) for hybrid quantum/classical learning.
 - Introduce machine learning concepts and specifically their realization in quantum circuit centric classifiers (also known as quantum sequential classifiers).
 - Provide a set of tutorials on the basics to start using the tools provided by the library.
 - Discuss the training and validation methods for such classifiers and how they translate into specific Q\# operations provided by the library.

@@ -1,5 +1,5 @@
 ---
-title: End-to-end sample quantum program with NWChem
+title: Sample NWChem quantum program
 description: Using an NWChem input deck, walk through an example of getting gate counts for quantum chemistry simulation.
 author: cgranade
 ms.author: chgranad@microsoft.com

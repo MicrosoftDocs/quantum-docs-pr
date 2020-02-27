@@ -142,7 +142,7 @@ Python provides the [built-in `json` package](https://docs.python.org/3.7/librar
 
 :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="4-5,20-22":::
 
-### [C#](#tab/tabid-python)
+### [C#](#tab/tabid-csharp)
 
 The .NET Core platform provides the [`System.Text.Json` package](https://www.nuget.org/packages/System.Text.Json) for working with JSON-serialized data:
 

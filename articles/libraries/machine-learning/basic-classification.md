@@ -68,7 +68,8 @@ First, let's take a look at the host programs to see what the process looks like
 
 ## The Q\# code of the classifier
 
-Now let's see how the functions invoked by the host program are defined in Q#. We save the following code in a file named `Training.qs`.
+Now let's see how the operations invoked by the host program are defined in Q#.
+We save the following code in a file named `Training.qs`.
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::
 

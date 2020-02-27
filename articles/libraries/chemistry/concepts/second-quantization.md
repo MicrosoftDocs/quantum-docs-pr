@@ -1,5 +1,5 @@
 ---
-title: Microsoft Q# chemistry library - Second Quantization
+title: Second Quantization
 description: Learn about the Second Quantization approach to modeling electronic structures in quantum programming. 
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com

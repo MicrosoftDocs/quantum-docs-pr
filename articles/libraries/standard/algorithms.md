@@ -1,5 +1,5 @@
 ---
-title: Algorithms
+title: Quantum algorithms in Q#
 description: Learn about amplitude amplification, one of the fundamental tools of quantum computing. 
 author: QuantumWriter
 ms.author: martinro@microsoft.com 

@@ -1,5 +1,5 @@
 ---
-title: Q# standard libraries - Math
+title: Math
 description: Learn about the classical math functions in the Q# standard libraries that are used with the built-in data types. 
 author: cgranade
 uid: microsoft.quantum.libraries.math

@@ -1,6 +1,6 @@
 ---
-title: Quantum machine learning library
-description: Learn how to load your own dataset to train a classifier model with the Microsoft QDK.
+title: Loading classical data
+description: Learn how to load your own dataset to train a classifier model with the Microsoft Quantum Development Kit (QDK).
 author: geduardo
 ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
@@ -10,13 +10,17 @@ uid: microsoft.quantum.libraries.machine-learning.load
 
 # Load and classify your own datasets
 
-In this short tutorial we are going to learn how to load your own dataset to train a classifier model with the QDK.
+In this short tutorial, we are going to learn how to load your own dataset to train a classifier model with the Quantum Development Kit (QDK).
 
-We highly recommend the use of [JSON files](https://en.wikipedia.org/wiki/JSON) to store the data due to its high compatibility with different frameworks like Python and the .NET ecosystem. In particular we recommend to use our template for loading the data, so you can copy-paste the code directly from the samples.  
+We highly recommend the use of a standardized serialization format such as [JSON files](https://en.wikipedia.org/wiki/JSON) to store your data.
+Such formats offer high compatibility with different frameworks like Python and the .NET ecosystem.
+In particular, we recommend using our template for loading the data, so that you can copy-paste the code directly from the samples.
 
 ## Template for loading your datasets
 
-Suppose we have a training dataset $(x,y)$ of size $N=2$ where each instance $x_i$ of $x$ has three features: $x_{i1}$, $x_{i2}$ and $x_{i3}$. The validation dataset has the same structure. Then our `data.json` file would be the following:
+Suppose we have a training dataset $(x, y)$ of size $N=2$ where each instance $x_i$ of $x$ has three features: $x_{i1}$, $x_{i2}$ and $x_{i3}$.
+The validation dataset has the same structure.
+These datsets can be represented by a `data.json` file similar to the following:
 
 ```json
 {
@@ -57,7 +61,6 @@ Suppose we have a training dataset $(x,y)$ of size $N=2$ where each instance $x_
         ]
     }
 }
-
 ```
 
 ### Example using the template
@@ -128,6 +131,24 @@ For our dataset the `data.json` file is:
 }
 
 ```
+
+## Loading the data
+
+Once you have your data serialized as a JSON file, you can load it in using JSON libraries provided with your host language of choice.
+
+### [Python](#tab/tabid-python)
+
+Python provides the [built-in `json` package](https://docs.python.org/3.7/library/json.html) for working with JSON-serialized data:
+
+:::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="4-5,20-22":::
+
+### [C#](#tab/tabid-python)
+
+The .NET Core platform provides the [`System.Text.Json` package](https://www.nuget.org/packages/System.Text.Json) for working with JSON-serialized data:
+
+:::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="10,64-82":::
+
+***
 
 ## What's next?
 

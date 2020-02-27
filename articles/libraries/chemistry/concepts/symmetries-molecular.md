@@ -1,5 +1,5 @@
 ---
-title: Microsoft Q# chemistry library - Symmetries of Molecular Integrals
+title: Symmetries of Molecular Integrals
 description: Learn about using the Q# OrbitalIntegral type to enumerate molecular symmetries. 
 author: nathanwiebe2
 ms.author: nawiebe

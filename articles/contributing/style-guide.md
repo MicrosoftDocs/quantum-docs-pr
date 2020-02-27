@@ -1,5 +1,5 @@
 ---
-title: Q# Style Guide | Microsoft Docs
+title: Microsoft Q# Style Guide
 description: Learn the naming, input, documentation and formatting conventions for Q# programs and libraries.
 author: cgranade
 ms.author: chgranad

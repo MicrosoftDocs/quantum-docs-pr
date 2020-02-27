@@ -1,6 +1,6 @@
 ---
 title: Multiple qubits
-description: Learn how to build, perform operations and measure two-qubit states. 
+description: Learn how to perform operations on registers with two or more qubits.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com 

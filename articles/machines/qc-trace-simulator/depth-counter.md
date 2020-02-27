@@ -1,5 +1,5 @@
 ---
-title: Quantum computer trace simulator - Depth Counter
+title: Depth Counter
 description: Learn about the Microsoft QDK Depth Counter, which gathers counts of the depth of every operation invoked in a quantum program.
 author: vadym-kl
 ms.author: vadym@microsoft.com

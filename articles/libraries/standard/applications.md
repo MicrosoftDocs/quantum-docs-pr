@@ -1,6 +1,6 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Applications
+title: Applications in the Q# standard libraries
 description: Learn about two fundamental applications in quantum computing - Hamiltonian simulation and Shor's search algorithm. 
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications

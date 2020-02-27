@@ -59,6 +59,10 @@ functions:
   summary: |-
     Returns true if and only if a number is less than or equal to another
     number.
+- uid: microsoft.quantum.logical.nearlyequald
+  summary: |-
+    Returns true if and only if two inputs are nearly equal (that is, within
+    a tolerance of 1e-12).
 - uid: microsoft.quantum.logical.not
   summary: Returns the Boolean negation of a value.
 - uid: microsoft.quantum.logical.notequalb
@@ -75,6 +79,10 @@ functions:
   summary: Returns true if and only if two inputs are not equal.
 - uid: microsoft.quantum.logical.notequalr
   summary: Returns true if and only if two inputs are not equal.
+- uid: microsoft.quantum.logical.notnearlyequald
+  summary: |-
+    Returns true if and only if two inputs are not nearly equal (that is,
+    are not within a tolerance of 1e-12).
 - uid: microsoft.quantum.logical.or
   summary: Returns the Boolean disjunction of two values.
 - uid: microsoft.quantum.logical.xor

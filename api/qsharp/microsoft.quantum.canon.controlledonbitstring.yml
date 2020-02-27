@@ -4,9 +4,10 @@ name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: |-
-  Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
+  Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
 
-  The output of this function can be represented by a unitary transformation $U$ such that
+  The output of this function is an operation that can be represented by a
+  unitary transformation $U$ such that
   \begin{align}
   U \ket{b_0 b_1 \cdots b_{n - 1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_{n-1}} \otimes
   \begin{cases}
@@ -14,7 +15,8 @@ summary: |-
   \ket{\psi} & \textrm{otherwise}
   \end{cases},
   \end{align}
-  where $V$ is a unitary transformation that represents the action of the `oracle` operation.
+  where $V$ is a unitary transformation that represents the action of the
+  `oracle` operation.
 remarks: |-
   The length of `bits` and `controlRegister` must be equal.
 
@@ -56,12 +58,12 @@ input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: The bit string to control the given unitary operator on.
+    summary: The bit string to control the given unitary operation on.
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: Unitary operator to be applied on the target register.
+    summary: The unitary operation to be applied on the target register.
     isOperation: true
     input:
       types:
@@ -77,7 +79,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: A unitary operator that applies `oracle` on the target register if the control register state corresponds to the bit mask `bits`.
+  - summary: A unitary operation that applies `oracle` on the target register if the control register state corresponds to the bit mask `bits`.
     isOperation: true
     input:
       types:

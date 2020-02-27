@@ -246,6 +246,8 @@ operations:
     the result in `result`, which must be zero initially.
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: Initialize a quantum fixed-point number to a classical constant.
+- uid: microsoft.quantum.arithmetic.reflectaboutinteger
+  summary: Reflects a quantum register about a given classical integer.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
   summary: Reversible, in-place ripple-carry addition of two integers.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderd

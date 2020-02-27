@@ -1,5 +1,5 @@
 ---
-title: Contributing documentation
+title: Contributing documentation to the Microsoft QDK
 description: Learn how to contribute conceptual or API content to the Microsoft Quantum documentation set. 
 author: cgranade
 ms.author: chgranad

@@ -45,11 +45,11 @@ What we are defining here is a function that returns an array of `ControlledRota
 
 ## Use the library functions to write layers of gates
 
-Suppose we have a dataset with 784 features per instance, e.g. images of 28×28 pixels like the MNIST dataset. In this case, the width of the circuit becomes large enough so that writing by hand each individual gate becomes a possible but impractical task. This is why the Quantum Machine Learning library provides a set of tools to automatically generate layers of parametrized rotations. For instance, the function [`LocalRotationsLayer`](xref:microsoft.quantum.machinelearning.sequentialmodel.localrotationslayer) returns an array of uncontrolled single-qubit rotations along a given axis, with one rotation for each qubit in the register, each parametrized by a different model parameter. For example, `LocalRotationsLayer(4, X)` returns the following set of gates:
+Suppose we have a dataset with 784 features per instance, e.g. images of 28×28 pixels like the MNIST dataset. In this case, the width of the circuit becomes large enough so that writing by hand each individual gate becomes a possible but impractical task. This is why the Quantum Machine Learning library provides a set of tools to automatically generate layers of parametrized rotations. For instance, the function [`LocalRotationsLayer`](xref:microsoft.quantum.machinelearning.localrotationslayer) returns an array of uncontrolled single-qubit rotations along a given axis, with one rotation for each qubit in the register, each parametrized by a different model parameter. For example, `LocalRotationsLayer(4, X)` returns the following set of gates:
 
  ![Local rotations layer](~/media/local_rotations_layer.PNG)
 
-We recommend you to explore the [API referenece of the Quantum Machine Learning library](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.machinelearning?view=qsharp-preview) to discover all the tools available to streamline the circuit design.
+We recommend you to explore the [API referenece of the Quantum Machine Learning library](xref:microsoft.quantum.machinelearning) to discover all the tools available to streamline the circuit design.
 
 ## Next steps
 

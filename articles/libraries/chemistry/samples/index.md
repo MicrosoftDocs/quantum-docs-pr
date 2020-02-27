@@ -1,5 +1,5 @@
 ---
-title: Microsoft Quantum chemistry library sample applications
+title:  Quantum chemistry sample applications
 description: Explore sample applications of the Microsoft Quantum chemistry library. 
 author: guanghaolow
 ms.author: gulow

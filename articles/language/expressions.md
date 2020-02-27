@@ -1,6 +1,6 @@
 ---
 title: Q# Expressions
-description: Understand the syntax used for expressions of different data types in the Q# programming language. 
+description: Understand how to specify, reference and combine constants, variables, operators, operations and functions as expressions in Q#.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017

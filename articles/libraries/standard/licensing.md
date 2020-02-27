@@ -1,6 +1,6 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: OSS licensing
+title: Open source licensing for the QDK
 description: Learn about the licensing for using and contributing to the Microsoft Q# standard libraries - licensing and contributing.
 author: martinro
 ms.author: martinro@microsoft.com 

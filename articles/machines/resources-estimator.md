@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Quantum Development Kit Resources Estimator | Microsoft Docs 
-description: Overview of Microsoft's Quantum Development Kit Resources estimator 
+title: Quantum Development Kit Resources Estimator 
+description: Learn about the Resources Estimator, which estimates the resources required to run a given instance of a Q# operation on a quantum computer.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com 
 ms.date: 1/22/2019

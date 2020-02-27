@@ -1,6 +1,6 @@
 ---
-title: Operations and functions - Q# techniques | Microsoft Docs
-description: Operations and functions - Q# techniques 
+title: Q# Operations and Functions
+description: Learn about Q# operations and functions, and how they are applied in a quantum program. 
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com

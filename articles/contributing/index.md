@@ -1,6 +1,6 @@
 ---
-title: Contributing to the Quantum Development Kit | Microsoft Docs
-description: Contributing to the Quantum Development Kit
+title: Contributing to the Microsoft Quantum Development Kit
+description: Learn how to contribute to the Microsoft Quantum Development Kit and the quantum development community. 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
@@ -75,4 +75,3 @@ If you'd like to learn more about contributing, please continue with one of the 
 
 > [!div class="nextstepaction"]
 > [Learn how to open pull requests](xref:microsoft.quantum.contributing.pulls)
-

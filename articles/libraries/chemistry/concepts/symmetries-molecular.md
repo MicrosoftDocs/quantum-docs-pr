@@ -1,6 +1,6 @@
 ---
-title: Symmetries of Molecular Integrals | Microsoft Docs
-description: Symmetries of Molecular Integrals Conceptual Docs
+title: Symmetries of Molecular Integrals
+description: Learn about using the Q# OrbitalIntegral type to enumerate molecular symmetries. 
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017

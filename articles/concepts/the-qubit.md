@@ -1,6 +1,6 @@
 ---
-title: The qubit | Microsoft Docs
-description: The qubit
+title: The qubit in quantum computing
+description: Learn about qubits, the fundamental unit of information in quantum computing.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.qubit
 ms.author: nawiebe@microsoft.com

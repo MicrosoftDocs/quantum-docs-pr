@@ -1,6 +1,6 @@
 ---
 title: What is quantum computing?
-description: Learn what quantum computing is, and what a quantum computer can do
+description: An introduction to quantum computing features, algorithms and hardware, and the Microsoft Quantum Development Kit (QDK).  
 author: natke
 ms.author: nakersha
 ms.date: 10/22/2019

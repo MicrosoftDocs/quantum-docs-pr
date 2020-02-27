@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. 
-title: Quantum computer trace simulator | Microsoft Docs 
-description: Overview of quantum computer trace simulator 
+title: Quantum computer trace simulator
+description: Learn how to use the Microsoft Quantum computer trace simulator to debug classical code and to estimate resource requirements of a quantum program. 
 author: vadym-kl 
 ms.author: vadym@microsoft.com 
 ms.date: 12/11/2017 

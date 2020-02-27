@@ -1,6 +1,6 @@
 ---
-title: Using the Numerics Library | Microsoft Docs
-description: Using the Numerics Library
+title: Using the Microsoft Q# Numerics Library
+description: Learn about the types and operations available in the Microsoft Quantum Numerics library.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019

@@ -1,6 +1,6 @@
 ---
-title: Second Quantization | Microsoft Docs
-description: Second Quantization Conceptual Docs
+title: Second Quantization
+description: Learn about the Second Quantization approach to modeling electronic structures in quantum programming. 
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017

@@ -176,6 +176,8 @@
     uid: microsoft.quantum.arithmetic.phaselittleendian
   - name: PrepareFxP
     uid: microsoft.quantum.arithmetic.preparefxp
+  - name: ReflectAboutInteger
+    uid: microsoft.quantum.arithmetic.reflectaboutinteger
   - name: ReversedOpBE
     uid: microsoft.quantum.arithmetic.reversedopbe
   - name: ReversedOpBEA
@@ -217,6 +219,8 @@
     uid: microsoft.quantum.arrays.all
   - name: Any
     uid: microsoft.quantum.arrays.any
+  - name: Chunks
+    uid: microsoft.quantum.arrays.chunks
   - name: ConstantArray
     uid: microsoft.quantum.arrays.constantarray
   - name: Enumerated
@@ -235,6 +239,8 @@
     uid: microsoft.quantum.arrays.indexof
   - name: IndexRange
     uid: microsoft.quantum.arrays.indexrange
+  - name: IsEmpty
+    uid: microsoft.quantum.arrays.isempty
   - name: LookupFunction
     uid: microsoft.quantum.arrays.lookupfunction
   - name: Mapped
@@ -263,6 +269,8 @@
     uid: microsoft.quantum.arrays.tail
   - name: TupleArrayAsNestedArray
     uid: microsoft.quantum.arrays.tuplearrayasnestedarray
+  - name: Where
+    uid: microsoft.quantum.arrays.where
   - name: Zip
     uid: microsoft.quantum.arrays.zip
   - name: Zip3
@@ -419,6 +427,14 @@
     uid: microsoft.quantum.canon.applytoeachindexc
   - name: ApplyToEachIndexCA
     uid: microsoft.quantum.canon.applytoeachindexca
+  - name: ApplyToElement
+    uid: microsoft.quantum.canon.applytoelement
+  - name: ApplyToElementA
+    uid: microsoft.quantum.canon.applytoelementa
+  - name: ApplyToElementC
+    uid: microsoft.quantum.canon.applytoelementc
+  - name: ApplyToElementCA
+    uid: microsoft.quantum.canon.applytoelementca
   - name: ApplyToFirstQubit
     uid: microsoft.quantum.canon.applytofirstqubit
   - name: ApplyToFirstQubitA
@@ -475,6 +491,12 @@
     uid: microsoft.quantum.canon.applywithinputtransformationc
   - name: ApplyWithInputTransformationCA
     uid: microsoft.quantum.canon.applywithinputtransformationca
+  - name: ApproximatelyApplyDiagonalUnitary
+    uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
+  - name: ApproximatelyMultiplexPauli
+    uid: microsoft.quantum.canon.approximatelymultiplexpauli
+  - name: ApproximatelyMultiplexZ
+    uid: microsoft.quantum.canon.approximatelymultiplexz
   - name: ApproximateQFT
     uid: microsoft.quantum.canon.approximateqft
   - name: AsQubitArray
@@ -954,6 +976,8 @@
   items:
   - name: AllEqualityFactB
     uid: microsoft.quantum.diagnostics.allequalityfactb
+  - name: AllEqualityFactI
+    uid: microsoft.quantum.diagnostics.allequalityfacti
   - name: AssertAllZero
     uid: microsoft.quantum.diagnostics.assertallzero
   - name: AssertAllZeroWithinTolerance
@@ -1319,6 +1343,8 @@
     uid: microsoft.quantum.logical.lessthanorequali
   - name: LessThanOrEqualL
     uid: microsoft.quantum.logical.lessthanorequall
+  - name: NearlyEqualD
+    uid: microsoft.quantum.logical.nearlyequald
   - name: Not
     uid: microsoft.quantum.logical.not
   - name: NotEqualB
@@ -1335,10 +1361,80 @@
     uid: microsoft.quantum.logical.notequall
   - name: NotEqualR
     uid: microsoft.quantum.logical.notequalr
+  - name: NotNearlyEqualD
+    uid: microsoft.quantum.logical.notnearlyequald
   - name: Or
     uid: microsoft.quantum.logical.or
   - name: Xor
     uid: microsoft.quantum.logical.xor
+- uid: microsoft.quantum.machinelearning
+  name: Microsoft.Quantum.MachineLearning
+  items:
+  - name: ApplySequentialClassifier
+    uid: microsoft.quantum.machinelearning.applysequentialclassifier
+  - name: ApproximateInputEncoder
+    uid: microsoft.quantum.machinelearning.approximateinputencoder
+  - name: CombinedStructure
+    uid: microsoft.quantum.machinelearning.combinedstructure
+  - name: ControlledRotation
+    uid: microsoft.quantum.machinelearning.controlledrotation
+  - name: CyclicEntanglingLayer
+    uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
+  - name: DefaultTrainingOptions
+    uid: microsoft.quantum.machinelearning.defaulttrainingoptions
+  - name: EstimateClassificationProbabilities
+    uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
+  - name: EstimateClassificationProbability
+    uid: microsoft.quantum.machinelearning.estimateclassificationprobability
+  - name: EstimateGradient
+    uid: microsoft.quantum.machinelearning.estimategradient
+  - name: FeatureRegisterSize
+    uid: microsoft.quantum.machinelearning.featureregistersize
+  - name: InferredLabel
+    uid: microsoft.quantum.machinelearning.inferredlabel
+  - name: InferredLabels
+    uid: microsoft.quantum.machinelearning.inferredlabels
+  - name: InputEncoder
+    uid: microsoft.quantum.machinelearning.inputencoder
+  - name: LabeledSample
+    uid: microsoft.quantum.machinelearning.labeledsample
+  - name: LocalRotationsLayer
+    uid: microsoft.quantum.machinelearning.localrotationslayer
+  - name: Misclassifications
+    uid: microsoft.quantum.machinelearning.misclassifications
+  - name: NMisclassifications
+    uid: microsoft.quantum.machinelearning.nmisclassifications
+  - name: NQubitsRequired
+    uid: microsoft.quantum.machinelearning.nqubitsrequired
+  - name: PartialRotationsLayer
+    uid: microsoft.quantum.machinelearning.partialrotationslayer
+  - name: Sampled
+    uid: microsoft.quantum.machinelearning.sampled
+  - name: SamplingSchedule
+    uid: microsoft.quantum.machinelearning.samplingschedule
+  - name: ScheduleLength
+    uid: microsoft.quantum.machinelearning.schedulelength
+  - name: SequentialModel
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: StateGenerator
+    uid: microsoft.quantum.machinelearning.stategenerator
+  - name: TrainingOptions
+    uid: microsoft.quantum.machinelearning.trainingoptions
+  - name: TrainSequentialClassifier
+    uid: microsoft.quantum.machinelearning.trainsequentialclassifier
+  - name: TrainSequentialClassifierAtModel
+    uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
+  - name: ValidateSequentialClassifier
+    uid: microsoft.quantum.machinelearning.validatesequentialclassifier
+  - name: ValidationResults
+    uid: microsoft.quantum.machinelearning.validationresults
+- uid: microsoft.quantum.machinelearning.datasets
+  name: Microsoft.Quantum.MachineLearning.Datasets
+  items:
+  - name: IrisTrainingData
+    uid: microsoft.quantum.machinelearning.datasets.iristrainingdata
+  - name: WineData
+    uid: microsoft.quantum.machinelearning.datasets.winedata
 - uid: microsoft.quantum.math
   name: Microsoft.Quantum.Math
   items:
@@ -1550,6 +1646,8 @@
     uid: microsoft.quantum.math.sinh
   - name: Sqrt
     uid: microsoft.quantum.math.sqrt
+  - name: SquaredNorm
+    uid: microsoft.quantum.math.squarednorm
   - name: Tan
     uid: microsoft.quantum.math.tan
   - name: Tanh
@@ -1583,6 +1681,15 @@
     uid: microsoft.quantum.measurement.mresetz
   - name: MultiM
     uid: microsoft.quantum.measurement.multim
+  - name: SetToBasisState
+    uid: microsoft.quantum.measurement.settobasisstate
+- uid: microsoft.quantum.optimization
+  name: Microsoft.Quantum.Optimization
+  items:
+  - name: LocalUnivariateMinimum
+    uid: microsoft.quantum.optimization.localunivariateminimum
+  - name: UnivariateOptimizationResult
+    uid: microsoft.quantum.optimization.univariateoptimizationresult
 - uid: microsoft.quantum.oracles
   name: Microsoft.Quantum.Oracles
   items:
@@ -1611,6 +1718,8 @@
 - uid: microsoft.quantum.preparation
   name: Microsoft.Quantum.Preparation
   items:
+  - name: ApproximatelyPrepareArbitraryState
+    uid: microsoft.quantum.preparation.approximatelypreparearbitrarystate
   - name: BlochSphereCoordinates
     uid: microsoft.quantum.preparation.blochspherecoordinates
   - name: PrepareArbitraryState

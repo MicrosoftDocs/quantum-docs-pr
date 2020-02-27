@@ -11,6 +11,21 @@ remarks: |-
   The function is defined for generic types, i.e., whenever we have
   an array `'T[]` and a function `predicate: 'T -> Bool` we can produce
   a `Bool` value that indicates if some element satisfies `predicate`.
+examples: |-
+  ```qsharp
+  open Microsoft.Quantum.Arrays;
+  open Microsoft.Quantum.Logical;
+
+  function IsThreePresent() : Bool {
+      let arrayOfInts = [1, 2, 3, 4, 5];
+      let is3Present = IsNumberPresentInArray(3, arrayOfInts);
+      return is3Present;
+  }
+
+  function IsNumberPresentInArray(n : Int, array : Int[]) : Bool {
+      return Any(EqualI(_, n), array);
+  }
+  ```
 syntax: "function Any (predicate : ('T -> Bool), array : 'T[]) : Bool"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"

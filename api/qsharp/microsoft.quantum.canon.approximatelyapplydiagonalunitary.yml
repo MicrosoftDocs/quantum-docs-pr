@@ -1,11 +1,12 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.applydiagonalunitary
-name: ApplyDiagonalUnitary
+uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
+name: ApproximatelyApplyDiagonalUnitary
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: |-
   Applies an array of complex phases to numeric basis states of a register
-  of qubits.
+  of qubits, truncating small rotation angles according to a given
+  tolerance.
 
   This operation implements a diagonal unitary that applies a complex phase
   $e^{i \theta_j}$ on the $n$-qubit number state $\ket{j}$.
@@ -19,14 +20,18 @@ summary: |-
 remarks: |-
   `coefficients` will be padded with elements $\theta_j = 0.0$ if
   fewer than $2^n$ are specified.
-syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: |-
   - Synthesis of Quantum Logic Circuits
     Vivek V. Shende, Stephen S. Bullock, Igor L. Markov
     https://arxiv.org/abs/quant-ph/0406176
 input:
-  content: '(coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
+  - name: tolerance
+    summary: A tolerance below which small coefficients are truncated.
+    isPrimitive: true
+    uid: Double
   - name: coefficients
     summary: |-
       Array of up to $2^n$ coefficients $\theta_j$. The $j$th coefficient
@@ -45,5 +50,5 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- approximatelyapplydiagonalunitary
+- applydiagonalunitary
 ...

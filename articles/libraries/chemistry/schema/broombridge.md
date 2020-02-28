@@ -1,5 +1,5 @@
 ---
-title: Broombridge - Quantum Chemistry Schema
+title: Broombridge Quantum Chemistry Schema
 description: Overview of the Broombridge quantum chemistry schema, used to model real-world chemistry problems with the Microsoft Quantum Development Kit. 
 author: martinro
 ms.author: martinro@microsoft.com
@@ -19,7 +19,7 @@ Being YAML-based, Broombridge is a structured, human-readable and human-editable
 - Ground and excited states can be presented using creation sequences.
 - Upper and lower bounds of energy levels can be specified.
 
-Data can be generated from NWChem using various methods. such as using a full installation of NWChem to run chemistry decks (for example the ones provided [here](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) that output Broombridge as part of the run), or a docker image of NWChem which can also be used to generate Broombridge from chemistry decks. To get started with computational chemistry quickly without having to install any chemistry software, you can use the visual interface to NWChem provided by [EMSL Arrows](https://arrows.emsl.pnnl.gov/api/qsharp_chem).
+Data can be generated from NWChem using various methods, such as using a full installation of NWChem to run chemistry decks (for example the ones provided in the [NWChem library](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) that output Broombridge as part of the run), or a docker image of NWChem which can also be used to generate Broombridge from chemistry decks. To get started with computational chemistry quickly without having to install any chemistry software, you can use the visual interface to NWChem provided by [EMSL Arrows](https://arrows.emsl.pnnl.gov/api/qsharp_chem).
 
 At a high level, the interplay between NWChem and the Microsoft Quantum Development Kit can be visualized as follows:
 ![Chemistry stack](~/media/broombridge.png)

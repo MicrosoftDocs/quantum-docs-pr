@@ -1,6 +1,6 @@
 ---
-title: Second Quantization | Microsoft Docs
-description: Second Quantization Conceptual Docs
+title: Second Quantization
+description: Learn about the Second Quantization approach to modeling electronic structures in quantum programming. 
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
@@ -178,7 +178,7 @@ n_i \ket{1}_i &= \ket{1}_i.
 Similar to the above `FermionTerm` examples, this number operator is constructed as follows.
 ```csharp
     // Let us use a new method to compactly create a sequence of ladder
-    // operators. Note that we have ommitted specifying whether the 
+    // operators. Note that we have omitted specifying whether the 
     // operators are raising or lowering. In this case, the first half
     // will be raising operators, and the second half will be lowering 
     // operators.
@@ -259,7 +259,7 @@ where $V(x)$ is the mean-field potential, and
 h\_{pqrs} &= \int\_{-\infty}^\infty \int\_{-\infty}^\infty\psi\_p^\*(x\_1)\psi\_q^\*(x\_2) \left(\frac{1}{|x_1-x_2|} \right)\psi\_r(x\_2)\psi\_s(x\_1)\mathrm{d}^3x\_1\mathrm{d}^3x\_2.\label{eq:integrals}
 \end{align}
 
-The terms $h\_{pq}$ are refered to as one-electron integrals because all such terms only involve single electrons and likewise $h\_{pqrs}$ are the two-electron integrals.
+The terms $h\_{pq}$ are referred to as one-electron integrals because all such terms only involve single electrons and likewise $h\_{pqrs}$ are the two-electron integrals.
 They are called integrals because computing the values of these coefficients requires an integral.
 The one electron terms describe the kinetic energy of the individual electrons and their interactions with the electric fields of the nuclei.
 The two-electron integrals on the other hand describe the interactions between the electrons.

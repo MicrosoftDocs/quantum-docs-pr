@@ -1,6 +1,6 @@
 ---
-title: Depth Counter | Quantum computer trace simulator | Microsoft Docs
-description: Overview of quantum computer trace simulator
+title: Depth Counter
+description: Learn about the Microsoft QDK Depth Counter, which gathers counts of the depth of every operation invoked in a quantum program.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
@@ -40,7 +40,7 @@ operation ApplySampleWithCCNOT() : Unit {
 To check that `CCNOT` has `T` depth 5 and `ApplySampleWithCCNOT` has `T` depth 6
 we can use the following C# code:
 
-```csharp 
+```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
@@ -48,7 +48,7 @@ config.useDepthCounter = true;
 var sim = new QCTraceSimulator(config);
 var res = ApplySampleWithCCNOT.Run(sim).Result;
 
-double tDepth = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
+double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
@@ -56,7 +56,7 @@ The first part of the program executes `ApplySampleWithCCNOT`. In the second par
 `QCTraceSimulator.GetMetric` to get the `T` depth of `CCNOT` and `ApplySampleWithCCNOT`: 
 
 ```csharp
-double tDepth = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
+double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 

@@ -1,0 +1,8 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.samplingschedule
+name: SamplingSchedule
+type: newtype
+namespace: Microsoft.Quantum.MachineLearning
+summary: A schedule for drawing batches from a set of samples.
+syntax: newtype SamplingSchedule = Range[];
+...

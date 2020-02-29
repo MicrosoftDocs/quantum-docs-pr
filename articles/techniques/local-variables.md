@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Local variables - Q# techniques | Microsoft Docs 
-description: Local variables - Q# techniques 
+title: Local variables - Q# techniques
+description: Learn how to define and work with local variables in Q#. 
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017

@@ -174,11 +174,7 @@ functions:
     applies the op if a classical control bit is true. If `false`, nothing happens.
     The modifier `CA` indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.compose
-  summary: |-
-    Generates the composition of two functions.
-
-    That is, given two functions $f$ and $g$, returns a new function representing
-    $f \circ g$.
+  summary: Returns the composition of two functions.
 - uid: microsoft.quantum.canon.conjugatedby
   summary: |-
     Given outer and inner operations, returns a new operation that
@@ -204,7 +200,7 @@ functions:
     ContinuedFractionConvergent has been deprecated. Please use @"microsoft.quantum.math.continuedfractionconvergenti" instead.
     Please use @"microsoft.quantum.math.continuedfractionconvergenti".
 - uid: microsoft.quantum.canon.controlledonbitstring
-  summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
+  summary: Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
 - uid: microsoft.quantum.canon.controlledonint
   summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified positive integer.
 - uid: microsoft.quantum.canon.curriedop
@@ -222,10 +218,17 @@ functions:
 
     CurryOp has been deprecated. Please use @"microsoft.quantum.canon.curriedop" instead.
     Please use @"microsoft.quantum.canon.curriedop".
-- uid: microsoft.quantum.canon.decomposeintotimestepsca
+- uid: microsoft.quantum.canon.decomposedintotimestepsca
   summary: |-
     Returns an operation implementing the Trotter–Suzuki integrator for
     a given operation.
+- uid: microsoft.quantum.canon.decomposeintotimestepsca
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    DecomposeIntoTimeStepsCA has been deprecated. Please use @"microsoft.quantum.canon.decomposedintotimestepsca" instead.
 - uid: microsoft.quantum.canon.delayed
   summary: |-
     Returns an operation that applies
@@ -551,19 +554,47 @@ functions:
     SplitArray has been deprecated. Please use @"microsoft.quantum.arrays.partitioned" instead.
     Please use @"Microsoft.Quantum.Arrays.Partitioned" instead.
 - uid: microsoft.quantum.canon.stackcapacity
-  summary: Retrieves the capacity of a <xref:microsoft.quantum.canon.resultstack>.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    StackCapacity has been deprecated.
 - uid: microsoft.quantum.canon.stacklength
-  summary: |-
-    Retrieves the number of elements stored in a
-    <xref:microsoft.quantum.canon.resultstack>.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    StackLength has been deprecated.
 - uid: microsoft.quantum.canon.stacknew
-  summary: Creates a new empty <xref:microsoft.quantum.canon.resultstack> with given capacity.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    StackNew has been deprecated.
 - uid: microsoft.quantum.canon.stackpeek
-  summary: Retrieves the topmost element of a <xref:microsoft.quantum.canon.resultstack>.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    StackPeek has been deprecated.
 - uid: microsoft.quantum.canon.stackpop
-  summary: Removes the topmost element from a <xref:microsoft.quantum.canon.resultstack>.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    StackPop has been deprecated.
 - uid: microsoft.quantum.canon.stackpush
-  summary: Pushes a new element onto a <xref:microsoft.quantum.canon.resultstack>.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    StackPush has been deprecated.
 - uid: microsoft.quantum.canon.tooperation
   summary: |2-
 
@@ -648,7 +679,13 @@ functions:
     Returns an array of all weight-1 Pauli operators
     on a given number of qubits.
 - uid: microsoft.quantum.canon.xor
-  summary: This computes the exclusive-OR of two bits.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    XOR has been deprecated. Please use @"microsoft.quantum.logical.xor" instead.
+    Please use @"microsoft.quantum.logical.xor".
 operations:
 - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
   summary: |2-
@@ -659,29 +696,19 @@ operations:
     AdiabaticStateEnergyUnitary has been deprecated. Please use @"microsoft.quantum.simulation.estimateenergywithadiabaticevolution" instead.
     Please use @"microsoft.quantum.simuilation.pnormalized".
 - uid: microsoft.quantum.canon.andladder
+  summary: Performs a controlled "AND ladder" on a register of target qubits.
+- uid: microsoft.quantum.canon.applyand
   summary: |-
-    Performs a controlled 'AND ladder' on the target qubits.
-
-    This applies a unitary given by the following map on computational basis vectors:
-    $$
-    \begin{align}
-    \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n - 1}} \mapsto
-    \ket{x\_1, \dots, x\_n} \ket{
-    y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n - 1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n - 1}
-    },
-    \end{align}
-    $$
-    where $\ket{x\_1, \dots, x\_n}$ refers to the computational basis
-    states of `controls`, and where $\ket{y\_1, \dots, y\_{n - 1}}$
-    refers to the computational basis states of `targets`.
+    Inverts a given target qubit if and only if both control qubits are in the 1 state,
+    using measurement to perform the adjoint operation.
+- uid: microsoft.quantum.canon.applycnotchain
+  summary: Computes the parity of a register of qubits in-place.
+- uid: microsoft.quantum.canon.applycnotchainwithtarget
+  summary: Computes the parity of an array of qubits into a target qubit.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: |-
-    Applies an array of complex phases to numeric basis states of a register of qubits.
-
-    That is, this implements the diagonal unitary operation $U$ that applies a complex phase
-    $e^{i \theta_j}$ on the $n$-qubit number state $\ket{j}$.
-
-    $U = \sum^{2^n-1}_{j=0}e^{i\theta_j}\ket{j}\bra{j}$.
+    Applies an array of complex phases to numeric basis states of a register
+    of qubits.
 - uid: microsoft.quantum.canon.applyfermionicswap
   summary: Applies the Fermionic SWAP.
 - uid: microsoft.quantum.canon.applyif
@@ -740,6 +767,11 @@ operations:
   summary: Applies a controllable operation conditioned on a classical result value being zero.
 - uid: microsoft.quantum.canon.applyifzeroca
   summary: Applies a unitary operation conditioned on a classical result value being zero.
+- uid: microsoft.quantum.canon.applylowdepthand
+  summary: |-
+    Inverts a given target qubit if and only if both control qubits are in
+    the 1 state, with T-depth 1, using measurement to perform the adjoint
+    operation.
 - uid: microsoft.quantum.canon.applymulticontrolledc
   summary: |-
     Applies a multiply controlled version of a singly controlled
@@ -905,6 +937,14 @@ operations:
     Applies a single-qubit operation to each indexed element in a register.
     The modifier `CA` indicates that the single-qubit operation is adjointable
     and controllable.
+- uid: microsoft.quantum.canon.applytoelement
+  summary: Applies an operation to a given element of an array.
+- uid: microsoft.quantum.canon.applytoelementa
+  summary: Applies an operation to a given element of an array.
+- uid: microsoft.quantum.canon.applytoelementc
+  summary: Applies an operation to a given element of an array.
+- uid: microsoft.quantum.canon.applytoelementca
+  summary: Applies an operation to a given element of an array.
 - uid: microsoft.quantum.canon.applytofirstqubit
   summary: Applies an operation to the first qubit in the register.
 - uid: microsoft.quantum.canon.applytofirstqubita
@@ -985,7 +1025,7 @@ operations:
 - uid: microsoft.quantum.canon.applywitha
   summary: Given two operations, applies one as conjugated with the other.
 - uid: microsoft.quantum.canon.applywithc
-  summary: ''
+  summary: Given two operations, applies one as conjugated with the other.
 - uid: microsoft.quantum.canon.applywithca
   summary: Given two operations, applies one as conjugated with the other.
 - uid: microsoft.quantum.canon.applywithinputtransformation
@@ -1012,6 +1052,19 @@ operations:
     returns an output compatible with that operation, and an input to that
     function, applies the operation using the function to transform the
     input to a form expected by the operation.
+- uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
+  summary: |-
+    Applies an array of complex phases to numeric basis states of a register
+    of qubits, truncating small rotation angles according to a given
+    tolerance.
+- uid: microsoft.quantum.canon.approximatelymultiplexpauli
+  summary: |-
+    Applies a Pauli rotation conditioned on an array of qubits, truncating
+    small rotation angles according to a given tolerance.
+- uid: microsoft.quantum.canon.approximatelymultiplexz
+  summary: |-
+    Applies a Pauli Z rotation conditioned on an array of qubits, truncating
+    small rotation angles according to a given tolerance.
 - uid: microsoft.quantum.canon.approximateqft
   summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
 - uid: microsoft.quantum.canon.asserthighestbit
@@ -1046,20 +1099,28 @@ operations:
 
     AssertProbIntBE has been deprecated. Please use @"assertprobint(stateindex, prob, bigendianaslittleendian(qubits), tolerance)" instead.
     This operation has been removed.
+- uid: microsoft.quantum.canon.cascadecnot
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    CascadeCNOT has been deprecated. Please use @"microsoft.quantum.canon.applycnotchain" instead.
+    Please use @"microsoft.quantum.canon.applycnotchain".
 - uid: microsoft.quantum.canon.cnotchain
-  summary: |-
-    Computes the parity of an array of qubits in-place.
+  summary: |2-
 
-    It follows the pattern
-    $\ket{q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cdots$.
+    > [!WARNING]
+    > Deprecated
+
+    CNOTChain has been deprecated. Please use @"microsoft.quantum.canon.applycnotchain" instead.
 - uid: microsoft.quantum.canon.cnotchaintarget
-  summary: |-
-    Computes the parity of an array of qubits into a target qubit.
+  summary: |2-
 
-    If the array is initially in the state
-    $\ket{q_0} \ket{q_1} \cdots \ket{q_{\text{target}}}$,
-    the final state is given by
-    $\ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n - 1} \oplus \cdots \oplus q_0 \oplus q_{\text{target}}}$.
+    > [!WARNING]
+    > Deprecated
+
+    CNOTChainTarget has been deprecated. Please use @"microsoft.quantum.canon.applycnotchainwithtarget" instead.
 - uid: microsoft.quantum.canon.copymostsignificantbitle
   summary: |2-
 
@@ -1130,6 +1191,14 @@ operations:
     i & -i
     \end{bmatrix}.
     \end{align}
+- uid: microsoft.quantum.canon.inplacemajority
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    InPlaceMajority has been deprecated. Please use @"microsoft.quantum.arithmetic.applymajorityinplace" instead.
+    Please use @"microsoft.quantum.arithmetic.applymajorityinplace".
 - uid: microsoft.quantum.canon.inplacexorbe
   summary: |2-
 
@@ -1164,14 +1233,12 @@ operations:
     Please use @"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger".
 - uid: microsoft.quantum.canon.iteratethroughcartesianpower
   summary: |-
-    Iterates a variable, say arr, through Cartesian product
-    [ 0, bound - 1 ] × [ 0, bound - 1 ] × [ 0, bound - 1 ]
-    and calls op(arr) for every element of the Cartesian product
+    Applies an operation for each index in the Cartesian power of an
+    integer range.
 - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
   summary: |-
-    Iterates a variable, say `arr`, through a Cartesian product
-    [ 0, bounds[0]-1 ] × [ 0, bounds[1]-1 ] × [ 0, bounds[Length(bounds)-1]-1 ]
-    and calls op(arr) for every element of the Cartesian product
+    Applies an operation for each index in the Cartesian product of several
+    ranges.
 - uid: microsoft.quantum.canon.measureintegerbe
   summary: |2-
 
@@ -1241,23 +1308,9 @@ operations:
 
     $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplexpauli
-  summary: |-
-    Applies a Pauli rotation conditioned on an array of qubits.
-
-    This applies the multiply-controlled unitary operation $U$ that performs
-    rotations by angle $\theta_j$ about single-qubit Pauli operator $P$
-    when controlled by the $n$-qubit number state $\ket{j}$.
-
-    $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes e^{i P \theta_j}$.
+  summary: Applies a Pauli rotation conditioned on an array of qubits.
 - uid: microsoft.quantum.canon.multiplexz
-  summary: |-
-    Applies a Pauli Z rotation conditioned on an array of qubits.
-
-    This applies the multiply-controlled unitary operation $U$ that performs
-    rotations by angle $\theta_j$ about single-qubit Pauli operator $Z$
-    when controlled by the $n$-qubit number state $\ket{j}$.
-
-    $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes e^{i Z \theta_j}$.
+  summary: Applies a Pauli Z rotation conditioned on an array of qubits.
 - uid: microsoft.quantum.canon.noop
   summary: Performs the identity operation (no-op) on an argument.
 - uid: microsoft.quantum.canon.permutequbits
@@ -1320,7 +1373,10 @@ newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: The signature type of CCNOT gate.
 - uid: microsoft.quantum.canon.resultstack
-  summary: |-
-    A last-in-first-out stack of `Result` variables.
-    The stack consists of an integer capacity, a stack pointer and a `Result` array.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    ResultStack has been deprecated.
 ...

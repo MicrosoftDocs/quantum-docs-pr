@@ -9,7 +9,7 @@ summary: |-
   Implements the map
   $$
   \begin{align}
-  \ket{x} \ket{b} \mapsto \ket{x} \ket{b + a \cdot x \operatorname{mod} N}
+  \ket{x} \ket{b} \mapsto \ket{x} \ket{(b + a \cdot x) \operatorname{mod} N}
   \end{align}
   $$
   for a given modulus $N$, constant multiplier $a$, and summand $y$.
@@ -47,4 +47,6 @@ output:
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 ...

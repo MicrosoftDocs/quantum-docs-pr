@@ -5,6 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: |-
   Reversible, in-place ripple-carry addition of two integers without carry out.
+
   Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`,
   the operation computes the sum of the two integers modulo $2^n$,
   where $n$ is the bit size of the inputs `xs` and `ys`. It does not compute

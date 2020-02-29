@@ -1,6 +1,6 @@
 ---
-title: Simulating Hamiltonian Dynamics | Microsoft Docs
-description: Simulating Hamiltonian Dynamics Conceptual Docs
+title: Simulating Hamiltonian Dynamics
+description: Learn how to use Trotter-Suzuki formulas and qubitization to work with Hamiltonian simulations.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
@@ -71,7 +71,7 @@ $$
 $$
 Here, $e^{-iHt} \ket{00} = e^{it} \ket{00}$ and $e^{-iHt} \ket{01} = e^{-it} \ket{01}$, which can be seen directly as a consequence of the fact that the parity of $00$ is $0$ while the parity of the bit string $01$ is $1$.
 
-Exponentials of Pauli operators can be implemented directly in Q# using the <xref:microsoft.quantum.primitive.exp> operation:
+Exponentials of Pauli operators can be implemented directly in Q# using the <xref:microsoft.quantum.intrinsic.exp> operation:
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];

@@ -60,7 +60,7 @@ Visual Studio Code (VS Code) offers a rich environment for developing Q# program
 1. Pre-requisites
 
    - [VS Code](https://code.visualstudio.com/download)
-   - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
+   - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
 
 1. Install the Quantum VS Code extension
 
@@ -101,11 +101,11 @@ Of course, you can also build and run Q# programs from the command line by simpl
 
 1. Pre-requisites
 
-    - [.NET Core SDK 3.0 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
 
 1. Install the Quantum project templates for .NET
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -115,8 +115,8 @@ Of course, you can also build and run Q# programs from the command line by simpl
 
     - Create a new application
 
-       ```bash
-       dotnet new console -lang Q# -o runSayHello
+       ```dotnetcli
+       dotnet new console -lang "Q#" -o runSayHello
        ```
 
     - Navigate to the new application directory
@@ -129,7 +129,7 @@ Of course, you can also build and run Q# programs from the command line by simpl
 
     - Run the application
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 

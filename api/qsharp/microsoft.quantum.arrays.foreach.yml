@@ -16,6 +16,7 @@ input:
   content: "(action : ('T => 'U), array : 'T[])"
   types:
   - name: action
+    summary: An operation from `'T` to `'U` that is applied to each element.
     isOperation: true
     input:
       types:

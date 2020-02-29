@@ -1,6 +1,6 @@
 ---
-title: Q# type model | Microsoft Docs 
-description: Q# type model
+title: Q# Data types
+description: Learn about the different types used in the Q# programming language, including built-in types, arrays, tuples, operations, functions and user-defined types. 
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com 
@@ -140,7 +140,7 @@ We refer to this property as _singleton tuple equivalence_.
 
 A Q# file may define a new named type containing a single value of any legal type.
 For any tuple type `T`, we can declare a new user-defined type that is a subtype of `T` with the `newtype` statement.
-In the @"microsoft.quantum.canon" namespace, for instance, complex numbers are defined as a user-defined type:
+In the @"microsoft.quantum.math" namespace, for instance, complex numbers are defined as a user-defined type:
 
 ```qsharp
 newtype Complex = (Double, Double);

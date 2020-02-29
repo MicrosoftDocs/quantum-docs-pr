@@ -1,6 +1,6 @@
 ---
-title: Obtaining energy level estimates | Microsoft Docs
-description: Obtaining energy level estimates Docs
+title: Obtaining energy level estimates
+description: Walk through a sample Q# program that estimates the energy level values of molecular hydrogen. 
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018

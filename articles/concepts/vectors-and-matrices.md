@@ -1,6 +1,6 @@
 ---
-title: Vectors and matrices | Microsoft Docs
-description: Vectors and matrices
+title: Vectors and matrices in quantum computing
+description: Learn the basics of how to work with vectors and matrices.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.vectors
 ms.author: nawiebe@microsoft.com
@@ -191,4 +191,3 @@ A final useful notational convention surrounding tensor products is that, for an
 \\\\
   &\begin{bmatrix}	0 & 1 \\\\ 1& 0 	\end{bmatrix}^{\otimes 1}= \begin{bmatrix}	0& 1 \\\\ 1& 0 	\end{bmatrix},	\qquad\begin{bmatrix}	0 & 1 \\\\ 1& 0 	\end{bmatrix}^{\otimes 2}= \begin{bmatrix} 0 &0&0&1 \\\\ 0 &0&1&0 \\\\ 0 &1&0&0\\\\ 1 &0&0&0\end{bmatrix}.
 \end{align}
-

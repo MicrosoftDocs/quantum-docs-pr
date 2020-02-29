@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Q# standard libraries - control and flow | Microsoft Docs
-description: Q# standard libraries - control and flow
+title: Flow controls in the Q# standard libararies
+description: Learn about the flow control operations and functions in the Microsoft Q# standard library. 
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com 

@@ -1,10 +1,12 @@
 - name: Q# Basics
   href: basics.md 
-- name: Q# type model
-  href: type-model.md
-- name: Expressions
+- name: Types in Q#
+  href: types.md
+- name: "Expressions: working with types"
   href: expressions.md
-- name: Operations and Functions
+- name: Callable types and expressions
+  href: callables.md
+- name: Defining and using callables
   href: operations-functions.md
 - name: Statements and Control Flow
   href: statements.md

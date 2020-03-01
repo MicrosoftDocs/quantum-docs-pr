@@ -1,16 +1,17 @@
 ﻿---
-title: Q# Operations and Functions | Microsoft Docs
-description: Q# Operations and Functions
-uid: microsoft.quantum.manual.operations-functions
+title: Defining and using Q# callables | Microsoft Docs
+description: Details the actual code implementation of operations and functions
+uid: microsoft.quantum.guide.operations-functions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 ---
 
-# Q# Operations and Functions
+# Defining and using Q# callables
 
-Q# programs consist of one or more *operations* that describe side effects quantum operations can have on quantum data, and one or more *functions* that allow modifications to classical data. In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values.
+Q# programs consist of one or more *operations* that describe side effects quantum operations can have on quantum data, and one or more *functions* that allow modifications to classical data. 
+In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values.
 
 Each operation defined in Q# may then call any number of other operations, including the built-in intrinsic operations defined by the language. The particular way in which these intrinsic operations are defined depends on the target machine. When compiled, each operation is represented as a .NET class type that can be provided to target machines.
 

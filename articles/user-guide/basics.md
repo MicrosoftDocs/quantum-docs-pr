@@ -1,22 +1,18 @@
 ---
-# Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Q# basics | Microsoft Docs 
+title: Q# Basics | Microsoft Docs 
 description: Basic concepts of Q#
-author: QuantumWriter
-ms.author: Christopher.Granade@microsoft.com
-ms.date: 12/11/2017
+author: Gillenhaal Beck
+ms.author: a-gibec@microsoft.com
+ms.date: 02/28/2020
 ms.topic: article
-uid: microsoft.quantum.manual.basics
-# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
-# For Quantum products none of these categories have been defined  yet.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-# ms.technology: tech-name-from-white-list
+uid: microsoft.quantum.guide.basics
 ---
 
 # Q# Basics
 
-In this section we will present a brief introduction to the basic building blocks of Q#.
+In this section we present a brief introduction to the basic building blocks of Q#.
+
+For a quick overview of what Q# *is*, you can head [here](xref:microsoft.quantum.overview.qsharp), and for more information about the foundations and motivation behind Q#, check out [Why do we need Q#?](https://devblogs.microsoft.com/qsharp/why-do-we-need-q/).
 
 ## What is a quantum program?
 
@@ -69,11 +65,12 @@ In Q# we can classify the elements of its syntax in three different groups: type
 ### Types
 Q# is a strongly-typed language, such that careful use of types can help the compiler provide strong guarantees about Q# programs at compile time.
 In addition to built-in primitive types---both standard (`Int`, `Bool`, `String`, etc.) and quantum-specific (e.g. `Qubit` and `Result`, the type returned by `Measure`)---Q# also provides support for user defined types.
+We go into detail on the next page of this user guide: [Q# types](xref:microsoft.quantum.guide.types).
 
 ### Expressions
 An expression in a programming language is a combination of one or more constants, variables, operators, and functions that the programming language interprets and computes to produce another value.
 For example, `2+3` is an arithmetic and programming expression which evaluates to `5`.
-Q# has its own expressions and rules.
+Q# has its own expressions and rules, which we detail on the ["Expressions: working with types"](xref:microsoft.quantum.guide.expressions) page.
 
 ### Statements 
   A statement is a syntactic unit of an imperative programming language that expresses some action to be carried out.
@@ -85,10 +82,14 @@ Q# has its own expressions and rules.
 ## Q# source and host files
 
 `******` ADDITION NEEDED: picture and text describing the purpose/role of source files vs. host files. I think we have have this written somewhere, but a diagram would be nice too.
-Might be good to have this even before we get into the above section
+
+
+
+
+`*****` Add the below to the section on Q# file structure
 
 Minimally, a Q# source file consists of a *namespace declaration*, which creates a Q# namespace containing the definitions in the source file.
-The host file will then handle with the namespace accordingly, so that it can easily call the Q# operations and functions.
+The host file will then handle the namespace accordingly, so that it can easily call the Q# operations and functions.
 For example, if C# is the host language, a .NET namespace will be created containing the definitions, whereas if you are using Python, the `qsharp` package automatically creates Python modules from the Q# namespaces.
 
 Definitions from other Q# source files and libraries can be included using the `open` statement.

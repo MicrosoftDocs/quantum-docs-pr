@@ -26,15 +26,19 @@ uid: microsoft.quantum.contributing.api-design
     corresponding use case, rather than trying to design for all possible uses from the start.
     Put differently, don't introduce public APIs in
     case they are useful, but make sure that each part of an API has
-    a *concrete* example in which it will be useful. For example:
+    a *concrete* example in which it will be useful.
+
+  *Examples:*
   - @"microsoft.quantum.canon.applytoeachca" can be used as `ApplyToEachCA(H, _)` to prepare
       registers in a uniform superposition state, a common task in
       many quantum algorithms. The same operation can also be used
       for many other tasks in preparation, numerics, and
       oracle-based algorithms.
+
 - ✅ **DO** brainstorm and workshop new API designs to double-check
-    that they are intuitive and meet proposed use cases. For
-    example:
+    that they are intuitive and meet proposed use cases.
+
+  *Examples:*
   - Inspect current Q\# code to see how new API designs could
       simplify and clarify existing implementations.
   - Review proposed API designs with representatives of primary
@@ -57,8 +61,9 @@ uid: microsoft.quantum.contributing.api-design
     required.
 
 - ✅ **DO** provide "shim" operations and functions that allow
-    existing user code to operate correctly during deprecation. For
-    example:
+    existing user code to operate correctly during deprecation.
+
+  *Examples:*
   - When renaming an operation called `EstimateExpectation` to
       `EstimateAverage`, introduce a new operation called
       `EstimateExpectation` that calls the original operation at
@@ -88,8 +93,9 @@ uid: microsoft.quantum.contributing.api-design
     existing libraries.
 
 - ✅ **DO** expose purely deterministic classical logic as
-    as functions rather than operations. For example:
+    as functions rather than operations.
 
+  *Examples:*
   - A subroutine which squares its floating-point input can be
       written deterministically, and so should be exposed to the
       user as `Squared : Double -> Double` rather than as an
@@ -98,21 +104,19 @@ uid: microsoft.quantum.contributing.api-design
       other functions), and provides useful optimization
       information to the compiler that can affect performance and
       optimizations.
-  
   - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]`
       and `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]`
       differ in the guarantees made with respect to
       determinism; both are useful in different circumstances.
-  
   - API routines that transform the application of quantum
       operations can often be carried out in a deterministic
         fashion and hence can be made available as functions such as
       `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)`.
 
 - ✅ **DO** generalize the input type as much as reasonable for each
-    function and operation, using type parameters as needed. For
-    example:
+    function and operation, using type parameters as needed.
 
+  *Examples:*
   - `ApplyToEach` has type `<'T>(('T => Unit), 'T[]) => Unit`
       rather than the specific type of its most common
       application, `((Qubit => Unit), Qubit[]) => Unit`.
@@ -121,13 +125,13 @@ uid: microsoft.quantum.contributing.api-design
 
 - ✅ **DO** use tuple types to logically group inputs and outputs
     that are only significant when considered together. Consider
-    using a user-defined type in these cases. For example:
+    using a user-defined type in these cases.
 
+  *Examples:*
   - A function to output the local minima of another function
       may need to take bounds of a search interval as input, such
       that `LocalMinima(fn : (Double -> Double), (left : Double, right : Double)) : Double`
       may be an appropriate signature.
-
   - An operation to estimate a derivative of a machine learning
       classifier using the parameter shift technique may need to
       take both the shifted and unshifted parameter vectors as
@@ -136,8 +140,9 @@ uid: microsoft.quantum.contributing.api-design
       this case.
 
 - ✅ **DO** order items in input and output tuples consistently
-    across different functions and operations. For example:
+    across different functions and operations.
 
+  *Examples:*
   - If considering two or functions or operations that each take
       a rotation angle and a target qubit as inputs, ensure that
       they are ordered the same in each input tuple. That is,
@@ -150,8 +155,9 @@ uid: microsoft.quantum.contributing.api-design
 
 - ✅ **DO** order items in input tuples such that the most commonly
     applied inputs occur first (i.e.: so that partial application
-    acts similarly to currying). For example:
+    acts similarly to currying).
 
+  *Examples:*
   - An operation `ApplyRotation` that takes a
       floating-point number and a qubit as inputs may often be
       partially applied with the floating-point input first for
@@ -159,7 +165,6 @@ uid: microsoft.quantum.contributing.api-design
       `Qubit => Unit`. Thus, a signature of
       `operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
       would work most consistently with partial application.
-
   - Typically, this guidance means placing all classical data
       before all qubits in input tuples, but use good judgment and
       examine how your API is called in practice.
@@ -169,8 +174,9 @@ uid: microsoft.quantum.contributing.api-design
 **Key principle:** use user-defined types to help make APIs more expressive and convenient to use.
 
 - ✅ **DO** introduce new user-defined types to provide helpful
-    shorthand for long and/or complicated types. For example:
+    shorthand for long and/or complicated types.
 
+  *Examples:*
   - In cases where an operation type with three qubit array
       inputs is commonly taken as an input or returned as an
       output, providing a UDT such as
@@ -178,9 +184,9 @@ uid: microsoft.quantum.contributing.api-design
       can help provide a useful shorthand.
 
 - ✅ **DO** introduce new user-defined types to indicate that a given
-    base type should only be used in a very particular sense. For
-    example:
+    base type should only be used in a very particular sense.
 
+  *Examples:*
   - An operation that should be interpreted specifically as an
       operation that encodes classical data into a quantum
       register may be appropriate to label with a user-defined
@@ -188,8 +194,9 @@ uid: microsoft.quantum.contributing.api-design
 
 - ✅ **DO** introduce new user-defined types with named items that
     allow for future extensibility (e.g.: a results structure that
-    may contain additional named items in the future). For example:
+    may contain additional named items in the future).
 
+  *Examples:*
   - When an operation `TrainModel` exposes a large number of
       configuration options, exposing these options as a new
       `TrainingOptions` UDT and providing a new function
@@ -200,8 +207,9 @@ uid: microsoft.quantum.contributing.api-design
 
 - ✅ **DO** declare named items for new user-defined types in
     preference to requiring users to know the correct tuple
-    deconstruction. For example:
+    deconstruction.
 
+  *Examples:*
   - When representing a complex number in its polar
       decomposition, prefer
       `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` to
@@ -224,20 +232,20 @@ uid: microsoft.quantum.contributing.api-design
       "wrapped" UDT instances directly.
 
 - ⛔️ **DON'T** introduce new user-defined types that duplicate
-    built-in types without providing additional expressiveness. For
-    example:
+    built-in types without providing additional expressiveness.
 
+  *Examples:*
   - A UDT `newtype QubitRegister = Qubit[]` provides no
       additional expressiveness over `Qubit[]`, and is thus harder
       to use with no discernable benefit.
-
   - A UDT `newtype LittleEndian = Qubit[]` documents how the
       underlying register is to be used and interpreted, and thus
       provides additional expressiveness over its base type.
 
 - ⛔️ **DON'T** introduce accessor functions unless strictly required;
-    strongly prefer named items in this case. For example:
+    strongly prefer named items in this case.
 
+  *Examples:*
   - When introducing a UDT `newtype Complex = (Double, Double)`,
       prefer modifying the definition to
       `newtype Complex = (Real : Double, Imag : Double)` to introducing
@@ -246,69 +254,75 @@ uid: microsoft.quantum.contributing.api-design
 
 ## Namespaces and Organization
 
-- ✅ **DO** choose namespace names that are predictable and that clearly
+**Key principle:** choose namespace names that are predictable and that clearly
     communicate the purpose of functions, operations, and user-defined
     types in each namespace.
 
-  - ✅ **DO** name namespaces as "Publisher.Product.DomainArea." For
-      example:
+- ✅ **DO** name namespaces as `Publisher.Product.DomainArea`.
 
-    - Functions, operations, and UDTs published by Microsoft as a
-        part of the quantum simulation feature of the Quantum
-        Development Kit are placed in the
-        `Microsoft.Quantum.Simulation` namespace.
+  *Examples:*
+  - Functions, operations, and UDTs published by Microsoft as a
+      part of the quantum simulation feature of the Quantum
+      Development Kit are placed in the
+      `Microsoft.Quantum.Simulation` namespace.
+  - `Microsoft.Quantum.Math` represents a namespace
+      published by Microsoft as part of the Quantum Development
+      Kit pertaining to the mathematics domain area.
 
-    - For example, `Microsoft.Quantum.Math` represents a namespace
-        published by Microsoft as part of the Quantum Development
-        Kit pertaining to the mathematics domain area.
+- ✅ **DO** place operations, functions, and user-defined types used
+    for specific functionality into a namespace that describes that
+    functionality, even when that functionality is used across
+    different problem domains.
 
-  - ✅ **DO** place operations, functions, and user-defined types used
-      for specific functionality into a namespace that describes that
-      functionality, even when that functionality is used across
-      different problem domains. For example:
+  *Examples:*
+  - State preparation APIs published by Microsoft as a part of
+      the Quantum Development Kit would be placed into
+      `Microsoft.Quantum.Preparation`.
+  - Quantum simulation APIs published by Microsoft as a part of the Quantum
+      Development Kit would be placed into
+      `Microsoft.Quantum.Simulation`.
 
-    - State preparation APIs published by Microsoft as a part of
-        the Quantum Development Kit would be placed into
-        `Microsoft.Quantum.Preparation`, while quantum simulation
-        APIs published by Microsoft as a part of the Quantum
-        Development Kit would be placed into
-        `Microsoft.Quantum.Simulation`.
+- ✅ **DO** place operations, functions, and user-defined types used
+    only within specific domains into namespaces indicating their
+    domain of utility. If needed, use subnamespaces to indicate
+    focused tasks within each domain-specific namespace.
 
-  - ✅ **DO** place operations, functions, and user-defined types used
-      only within specific domains into namespaces indicating their
-      domain of utility. If needed, use subnamespaces to indicate
-      focused tasks within each domain-specific namespace. For
-      example:
+  *Examples:*
+  - The quantum machine learning library published by Microsoft is largely
+      placed into the @"microsoft.quantum.machinelearning" namespace, but example
+      datasets are provided by the @"microsoft.quantum.machinelearning.datasets"
+      namespace.
+  - Quantum chemistry APIs published by Microsoft as a part of
+      the Quantum Development Kit should be placed into
+      `Microsoft.Quantum.Chemistry`. Functionality specific to
+      implementing the Jordan--Wigner decomposition may be placed
+      in `Microsoft.Quantum.Chemistry.JordanWigner`, so that the
+      primary interface for the quantum chemistry domain area is
+      not concerned with implementations.
 
-    - Quantum chemistry APIs published by Microsoft as a part of
-        the Quantum Development Kit should be placed into
-        `Microsoft.Quantum.Chemistry`. Functionality specific to
-        implementing the Jordan--Wigner decomposition may be placed
-        in `Microsoft.Quantum.Chemistry.JordanWigner`, so that the
-        primary interface for the quantum chemistry domain area is
-        not concerned with implementations.
+**Key principle:** Use namespaces and access modifiers together to be
+  intentional about the API surface exposed to users, and to hide internal
+  details related to implementation and testing of your APIs.
 
-- **DON'T** expose internal details related to implementation and
-    testing along with your API.
+- ✅ Whenever reasonable, **DO** place all functions and operations
+    needed to implement an API into the same namespace as the API
+    being implemented, but marked with the "private" or "internal"
+    keywords to indicate that they are not part of the public API
+    surface for a library. Use a name beginning with an underscore
+    (`_`) to visually distinguish private and internal operations and
+    functions from public callables.
 
-  - Whenever reasonable, **DO** place all functions and operations
-      needed to implement an API into the same namespace as the API
-      being implemented, but marked with the "private" or "internal"
-      keywords to indicate that they are not part of the public API
-      surface for a library. Use a name beginning with an underscore
-      (`_`) to visually distinguish private and internal operations and
-      functions from public callables. For example:
+  *Examples:*
+  - The operation name `_Features` indicates a function that is
+      private to a given namespace and assembly, and should be
+      accompanied by either the `internal` keyword.
 
-    - The operation name `_Features` indicates a function that is
-        private to a given namespace and assembly, and should be
-        accompanied by either the `private` or `internal` keyword.
+- ✅ In the rare case that an extensive set of private functions or
+  operations are needed to implement the API for a given
+  namespace, **DO** place them in a new namespace matching the
+  namespace being implemented and ending in `.Private`.
 
-  - In the rare case that an extensive set of private functions or
-    operations are needed to implement the API for a given
-    namespace, **DO** place them in a new namespace matching the
-    namespace being implemented and ending in `.Private`.
-
-  - ✅ **DO** place all unit tests into namespaces matching the
+- ✅ **DO** place all unit tests into namespaces matching the
       namespace under test and ending in `.Tests`.
 
 ## Naming Conventions and Vocabulary

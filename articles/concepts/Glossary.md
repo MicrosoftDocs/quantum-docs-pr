@@ -41,3 +41,4 @@ uid: microsoft.quantum.glossary
 |Tuple|Comma separated types grouped together via parenthesis. |
 |User-defined type|Collection of built-in or previously defined types that may be referred to as a single unit.|
 
+# bottom link

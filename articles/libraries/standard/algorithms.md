@@ -9,9 +9,11 @@ uid: microsoft.quantum.libraries.standard.algorithms
 ---
 # Quantum Algorithms #
 
-[Global Phase](xref:microsoft.quantum.glossary#global-phase)
+[Global Phase](https://docs.microsoft.com/en-us/quantum/concepts/glossary#global-phase)
 
-<xref:microsoft.quantum.glossary#hamiltonian>
+[Hamiltonian](https://docs.microsoft.com/en-us/quantum/concepts/glossary#hamiltonian)
+
+[Test](https://docs.microsoft.com/en-us/quantum/concepts/glossary#bottom-link)
 
 
 ## Amplitude Amplification ##

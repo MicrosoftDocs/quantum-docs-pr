@@ -22,7 +22,7 @@ uid: microsoft.quantum.glossary
 |Evolution|How the state changes over time. See the section on <xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials> for an example. |
 |Function|Purely classical routines in the Q# language|
 |<a id="global-phase"></a>Global phase | Two states that are identical up to a multiple of a complex number $e^{i\phi}$ are said to differ up to a global phase. Unlike local phases, global phases cannot be observed through any measurement. See [Pauli measurements](xref:microsoft.quantum.concepts.pauli) for more details. |
-|[Hamiltonian](####hamiltonian)|&lt;description&gt; &lt;glossary link&gt; &lt;topic link&gt;|
+|<a id="hamiltonian"></a>Hamiltonian|&lt;description&gt; &lt;glossary link&gt; &lt;topic link&gt;|
 |Measurement|Obtaining a classical bit from a qubit (or set of qubits). See the [Qubit Concepts](xref:microsoft.quantum.concepts.qubit) section for more details.|
 |Mutable|A variable whose value may be changed after it is created.|
 |Namespace|A label for a collection of related names (typically operations, functions, and types). For instance the namespace [`Microsoft.Quantum.Preparation`](xref:microsoft.quantum.preparation) labels all of the symbols defined in the standard library that help with preparing initial states.|

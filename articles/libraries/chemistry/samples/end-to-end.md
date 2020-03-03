@@ -27,7 +27,7 @@ For more information:
 If you haven't already done so, clone the [Microsoft/Quantum repository](https://github.com/Microsoft/Quantum), which contains samples and utilities for working with the Quantum Development Kit:
 
 ```powershell
-git clone https://github.com/Microsoft/Quantum 
+git clone https://github.com/Microsoft/Quantum
 ```
 
 Once you've cloned `Microsoft/Quantum`, perform `cd` into the `utilities/` folder and import the PowerShell module for working with Docker and NWChem:

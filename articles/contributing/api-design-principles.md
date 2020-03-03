@@ -14,10 +14,10 @@ uid: microsoft.quantum.contributing.api-design
 
 **Key principle:** Expose APIs that places the focus on quantum applications.
 
-- ⛔️ **DON'T** expose APIs that focus primarily on low-level
-    implementation details.
 - ✅ **DO** choose operation and function names that reflect the
     high-level structure of algorithms and applications.
+- ⛔️ **DON'T** expose APIs that focus primarily on low-level
+    implementation details.
 
 **Key principle:** Start each API design with sample use cases to ensure that
     APIs are intuitive to use.
@@ -86,11 +86,17 @@ uid: microsoft.quantum.contributing.api-design
 - ⛔️ **DON'T** expose functions and operations that perform multiple
     unrelated tasks.
 
-**Key principle:**  design functions and operations to be as reusable as possible, and to anticipate future needs.
+**Key principle:** design functions and operations to be as reusable as possible, and to anticipate future needs.
 
 - ✅ **DO** design functions and operations to compose well with other
     functions and operations, both in the same API and in previously
     existing libraries.
+
+  *Examples:*
+  - The @"microsoft.quantum.canon.delay" operation makes minimal assumptions
+      about its input, and thus can be used to delay applications of either
+      operations across the Q# standard library or as defined by users.
+  <!-- TODO: define bad example. -->
 
 - ✅ **DO** expose purely deterministic classical logic as
     as functions rather than operations.
@@ -120,6 +126,10 @@ uid: microsoft.quantum.contributing.api-design
   - `ApplyToEach` has type `<'T>(('T => Unit), 'T[]) => Unit`
       rather than the specific type of its most common
       application, `((Qubit => Unit), Qubit[]) => Unit`.
+
+> [!TIP]
+> It is important to anticipate future needs, but it is also important to solve concrete problems for your users.
+> Acting on this key principle thus always requires careful consideration and balancing to avoid developing APIs "just in case."
 
 **Key principle:** choose input and output types for functions and operations that are predictable, and that communicate the purpose of a callable.
 
@@ -327,111 +337,137 @@ uid: microsoft.quantum.contributing.api-design
 
 ## Naming Conventions and Vocabulary
 
-- ✅ **DO** choose names and terminology that are clear, accessible, and
+**Key principle:** Choose names and terminology that are clear, accessible, and
     readable across a diverse range of audiences, including both quantum
     novices and experts.
 
-  - **DON'T** use discriminatory or exclusionary identifier names,
-      nor terminology in API documentation comments.
+- ⛔️ **DON'T** use discriminatory or exclusionary identifier names,
+    nor terminology in API documentation comments.
 
-  - ✅ **DO** use API documentation comments to provide relevant
-      context, examples, and references, especially for more difficult
-      concepts.
+- ✅ **DO** use API documentation comments to provide relevant
+    context, examples, and references, especially for more difficult
+    concepts.
 
-  - **DON'T** use identifier names that are unnecessarily esoteric,
-      or that require significant quantum algorithms knowledge to
-      read. For example:
+- ⛔️ **DON'T** use identifier names that are unnecessarily esoteric,
+    or that require significant quantum algorithms knowledge to
+    read.
 
-    - Prefer a "amplitude amplification iteration" to "Grover
-        iteration."
+  *Examples:*
+  - Prefer "amplitude amplification iteration" to "Grover
+      iteration."
 
-  - ✅ **DO** choose operations and function names that clearly
-      communicate the intended effect of a callable, and not its
-      implementation. Note that the implementation can and should be
-      documented in API documentation comments. For example:
+- ✅ **DO** choose operations and function names that clearly
+    communicate the intended effect of a callable, and not its
+    implementation. Note that the implementation can and should be
 
-    - Prefer "estimate overlap" to "Hadamard test," as the latter
-        communicates how the former is implemented.
+  *Examples:*
+  - Prefer "estimate overlap" to "Hadamard test," as the latter
+      communicates how the former is implemented.
 
-  - ✅ **DO** use words in a consistent fashion across all Q\# APIs:
+- ✅ **DO** use words in a consistent fashion across all Q\# APIs:
 
-    - **Verbs:**
+  - **Verbs:**
 
-      - **Apply**: Apply a quantum operation or sequence of
-          operations to one or more qubits, causing the state of
-          those qubits to change in a coherent fashion. This verb
-          is the most general verb in Q\# nomenclature, and
-          **SHOULD NOT BE** used when a less general verb is more
-          directly relevant.
+    - **Assert**: Check that an assumption about the state of
+        a target machine and its qubits holds, possibly by using
+        unphysical resources. Operations using this verb should
+        always be safely removable without affecting the
+        functionality of libraries and executable programs. Note
+        that unlike facts, assertions may in general depend on
+        external state, such as the state of a qubit register,
+        the execution environment or so forth. As dependency on
+        external state is a kind of side effect, assertions must
+        be exposed as operations rather than functions.
 
-      - **Assert**: Check that an assumption about the state of
-          a target machine and its qubits holds, possibly by using
-          unphysical resources. Operations using this verb should
-          always be safely removable without affecting the
-          functionality of libraries and executable programs. Note
-          that unlike facts, assertions may in general depend on
-          external state, such as the state of a qubit register,
-          the execution environment or so forth. As dependency on
-          external state is a kind of side effect, assertions must
-          be exposed as operations rather than functions.
+    - **Estimate**: Using one or more possibly repeated
+        measurements, estimate a classical quantity from
+        measurement results.
 
-      - **Estimate**: Using one or more possibly repeated
-          measurements, estimate a classical quantity from
-          measurement results.
+      *Examples:*
+      - @"microsoft.quantum.characterization.estimatefrequency"
+      - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-      - **Prepare**: Apply a quantum operation or sequence of
-          operations to one or more qubits assumed to start in a
-          particular initial state (typically $\ket{00\cdots 0}$​), causing
-          the state of those qubits to evolve to a desired end
-          state. In general, acting on states other than the given
-          starting state **MAY** result in an undefined unitary
-          transformation, but **SHOULD** still preserve that an
-          operation and its adjoint "cancel out" and apply a
-          no-op.
+    - **Prepare**: Apply a quantum operation or sequence of
+        operations to one or more qubits assumed to start in a
+        particular initial state (typically $\ket{00\cdots 0}$​), causing
+        the state of those qubits to evolve to a desired end
+        state. In general, acting on states other than the given
+        starting state **MAY** result in an undefined unitary
+        transformation, but **SHOULD** still preserve that an
+        operation and its adjoint "cancel out" and apply a
+        no-op.
 
-      - **Measure**: Apply a quantum operation or sequence of
-          operations to one or more qubits, reading classical data
-          back out.
+      *Examples:*
+      - @"microsoft.quantum.preparation.preparearbitrarystate"
+      - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Nouns**:
+    - **Measure**: Apply a quantum operation or sequence of
+        operations to one or more qubits, reading classical data
+        back out.
 
-      - **Fact**: A Boolean condition which depends only on its
-          inputs and not on the state of a target machine, its
-        environment, or the state of the machine's qubits. By
-        contrast with an assertion, a fact is only sensitive to
-        the *values* provided to that fact. For example:
+      *Examples:*
+      - @"microsoft.quantum.intrinsic.measure"
+      - @"microsoft.quantum.arithmetic.measurefxp"
+      - @"microsoft.quantum.arithmetic.measureinteger"
 
-        - `EqualityFactI` represents an equality fact about two
-          integer inputs; either the integers provided as
-          input are equal to each other, or they are not,
-          independent of any other program state.
+    - **Apply**: Apply a quantum operation or sequence of
+        operations to one or more qubits, causing the state of
+        those qubits to change in a coherent fashion. This verb
+        is the most general verb in Q\# nomenclature, and
+        **SHOULD NOT BE** used when a more specific verb is more
+        directly relevant.
 
-      - **Options:** A UDT containing several named items that
-          can act as "optional arguments" to a function or
-          operation. For example:
+  - **Nouns**:
 
-        - The `TrainingOptions` UDT includes named items for
-          learning rate, minibatch size, and other
-          configurable parameters for ML training.
+    - **Fact**: A Boolean condition which depends only on its
+        inputs and not on the state of a target machine, its
+      environment, or the state of the machine's qubits. By
+      contrast with an assertion, a fact is only sensitive to
+      the *values* provided to that fact. For example:
 
-    - **Prepositions:** In some cases, prepositions can be used to
-        further disambiguate or clarify the roles of nouns and verbs
-        in function and operation names. Care should be taken to do
-        so sparingly and consistently, however.
+      *Examples:*
+      - @"microsoft.quantum.diagnostics.equalityfacti":
+        represents an equality fact about two
+        integer inputs; either the integers provided as
+        input are equal to each other, or they are not,
+        independent of any other program state.
 
-      - **As:** Represents that a function's input and output
-          represent the same information, but that the output
-          represents that information **as** an *X* instead of its
-          original representation. This is especially common for
-          type conversion functions. For example, IntAsDouble(2)
-          indicates that both the input (2) and the output (2.0)
+    - **Options:** A UDT containing several named items that
+        can act as "optional arguments" to a function or
+        operation. For example:
+
+      *Examples:*
+      - The @"microsoft.quantum.machinelearning.trainingoptions" UDT includes
+        named items for learning rate, minibatch size, and other
+        configurable parameters for ML training.
+
+  - **Adjectives**:
+
+    - ⛔️ **New**: This adjective **SHOULD NOT** be used, as to avoid confusion
+        with its usage as a verb in many
+        programming languages (e.g.: C++, C#, Java, TypeScript, PowerShell).
+
+  - **Prepositions:** In some cases, prepositions can be used to
+      further disambiguate or clarify the roles of nouns and verbs
+      in function and operation names. Care should be taken to do
+      so sparingly and consistently, however.
+
+    - **As:** Represents that a function's input and output
+        represent the same information, but that the output
+        represents that information **as** an *X* instead of its
+        original representation. This is especially common for
+        type conversion functions.
+
+      *Examples:*
+      - `IntAsDouble(2)`
+          indicates that both the input (`2`) and the output (`2.0`)
           represent qualitatively the same information, but using
           different Q\# data types to do so.
 
-      - **From:** To ensure consistency, this preposition
-          **SHOULD NOT** be used to indicate type conversion
-          functions or any other case where **As** is appropriate.
+    - **From:** To ensure consistency, this preposition
+        **SHOULD NOT** be used to indicate type conversion
+        functions or any other case where **As** is appropriate.
 
-      - **To:** This preposition **SHOULD NOT** be used, as to
-          avoid confusion with its usage as a verb in many
-          programming languages.
+    - ⛔️ **To:** This preposition **SHOULD NOT** be used, as to
+        avoid confusion with its usage as a verb in many
+        programming languages.

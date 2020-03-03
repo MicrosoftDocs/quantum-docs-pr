@@ -11,9 +11,9 @@ uid: microsoft.quantum.libraries.standard.algorithms
 
 [Global Phase](https://docs.microsoft.com/en-us/quantum/concepts/glossary#global-phase)
 
-[Hamiltonian](https://docs.microsoft.com/en-us/quantum/concepts/glossary#hamiltonian)
+[Hamiltonian](https://github.com/Bradben/quantum-docs-pr/blob/bradben-lib-algorithm/articles/concepts/Glossary.md#hamiltonian)
 
-[Test](https://docs.microsoft.com/en-us/quantum/concepts/glossary#bottom-link)
+[Test](https://github.com/Bradben/quantum-docs-pr/blob/bradben-lib-algorithm/articles/concepts/Glossary.md#bottom-link)
 
 
 ## Amplitude Amplification ##

@@ -9,6 +9,11 @@ uid: microsoft.quantum.libraries.standard.algorithms
 ---
 # Quantum Algorithms #
 
+[Global Phase](xref:microsoft.quantum.glossary#global-phase)
+
+<xref:microsoft.quantum.glossary#hamiltonian>
+
+
 ## Amplitude Amplification ##
 
 *Amplitude Amplification* is one of the fundamental tools of Quantum Computing. It is the fundamental idea that underlies Grover's search, amplitude estimation and many quantum machine learning algorithms.  There are many variants, and in Q# we provide a general version based on Oblivious Amplitude Amplification with Partial Reflections to allow for the widest area of application.

@@ -9,6 +9,6 @@ ms.topic: landing-page
 ---
 
 
-# Q# standard libraries #
+# Q# libraries #
 
 Q# is supported by a range of different useful operations, functions, and user-defined types that comprise the Q# *standard library*.

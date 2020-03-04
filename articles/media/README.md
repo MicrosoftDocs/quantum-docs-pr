@@ -1,3 +1,12 @@
+---
+title: Media Readme
+description: Tips on uploading images
+author: geduardp
+ms.author: v-edsanc@microsoft.com
+ms.date: 03/04/2020
+ms.topic: readme
+---
+
 # README
 **IMPORTANT**: to have the images rendering properly in dark mode you must avoid transparencies.
 - For .jpg files you don't need to do anything since the file format doesn't support transparent elements.

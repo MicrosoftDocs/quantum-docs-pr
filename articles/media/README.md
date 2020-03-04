@@ -1,7 +1,7 @@
 ---
 title: Media Readme
 description: Tips on uploading images
-author: geduardp
+author: geduardo
 ms.author: v-edsanc@microsoft.com
 ms.date: 03/04/2020
 ms.topic: readme

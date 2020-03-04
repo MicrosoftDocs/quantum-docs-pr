@@ -1,3 +1,5 @@
+- uid: microsoft.quantum.qsharplibintro
+  name: Q# libraries
 - uid: microsoft.quantum.amplitudeamplification
   name: Microsoft.Quantum.AmplitudeAmplification
   items:

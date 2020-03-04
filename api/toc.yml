@@ -1,5 +1,7 @@
 - name: API reference
   items:
+  - name: API reference
+    href: index.md   
   - name: Q# libraries
     href: qsharp/toc.yml
   - name: .NET libraries

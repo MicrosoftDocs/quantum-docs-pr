@@ -1,6 +1,6 @@
 ---
-title: Dirac notation | Microsoft Docs 
-description: Dirac notation
+title: Dirac notation
+description: Learn about using Dirac notation to represent quantum states and to simulate quantum operations. 
 author: QuantumWriter
 uid: microsoft.quantum.concepts.dirac
 ms.author: nawiebe@microsoft.com 
@@ -159,4 +159,3 @@ For the interested reader, we recommend reading one of the reference books provi
 
 ## Q# gate sequences equivalent to quantum states
 A final point worth raising about quantum notation and the Q# programming language: at the onset of this document we mentioned that the quantum state is the fundamental object of information in quantum computing.  It may then come as a surprise that in Q# there is no notion of a quantum state.  Instead, all states are described only by the operations used to prepare them.  The previous example is an excellent illustration of this.  Rather than expressing a uniform superposition over every quantum bit string in a register, we can represent the result as $H^{\otimes n} \ket{0}$.  This exponentially shorter description of the state not only has the advantage that we can classically reason about it, but it also concisely defines the operations needed to be propagated through the software stack to implement the algorithm.  For this reason, Q# is designed to emit gate sequences rather than quantum states; however, at a theoretical level the two perspectives are equivalent.
-

@@ -1,6 +1,6 @@
 ---
-title: Simulating Hamiltonian Dynamics | Microsoft Docs
-description: Simulating Hamiltonian Dynamics Conceptual Docs
+title: Simulating Hamiltonian Dynamics
+description: Learn how to use Trotter-Suzuki formulas and qubitization to work with Hamiltonian simulations.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017

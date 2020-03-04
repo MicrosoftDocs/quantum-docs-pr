@@ -1,6 +1,6 @@
 ---
-title: Primitive Operations Counter | Quantum computer trace simulator | Microsoft Docs 
-description: Overview of quantum computer trace simulator 
+title: Primitive Operations Counter
+description: Learn about the Microsoft QDK Primitive Operation Counter, which tracks the number of primitive executions used by operations in a quantum program. 
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017

@@ -1,0 +1,13 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.machinelearning.datasets
+name: Microsoft.Quantum.MachineLearning.Datasets
+summary: |2-
+   # Summary
+   This namespace provides example datasets for use
+   with quantum machine learning classifiers.
+operations:
+- uid: microsoft.quantum.machinelearning.datasets.iristrainingdata
+  summary: ''
+- uid: microsoft.quantum.machinelearning.datasets.winedata
+  summary: ''
+...

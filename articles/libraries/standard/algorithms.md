@@ -1,6 +1,6 @@
 ---
-title: Q# standard libraries - algorithms | Microsoft Docs
-description: Q# standard libraries
+title: Quantum algorithms in Q#
+description: Learn about fundamental quantum computing algorithms, including amplitude amplification, Fourier transform, Draper and Beauregard adders, and phase estimation. 
 author: QuantumWriter
 ms.author: martinro@microsoft.com 
 ms.date: 12/11/2017

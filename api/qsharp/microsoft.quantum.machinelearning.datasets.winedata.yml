@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.datasets.winedata
+name: WineData
+type: operation
+namespace: Microsoft.Quantum.MachineLearning.Datasets
+syntax: 'operation WineData () : Microsoft.Quantum.MachineLearning.LabeledSample[]'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.MachineLearning.LabeledSample[]
+  types:
+  - isArray: true
+    uid: microsoft.quantum.machinelearning.labeledsample
+...

@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Putting it all together - Q# techniques | Microsoft Docs 
-description: Putting it all together - Q# techniques
+title: Q# techniques - Putting it all together
+description: Walk through a basic Q# program that demonstrates quantum teleportation. 
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com

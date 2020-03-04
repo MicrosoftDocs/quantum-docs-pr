@@ -1,6 +1,6 @@
 ---
-title: Reporting bugs | Microsoft Docs
-description: Reporting bugs
+title: Reporting bugs
+description: Learn how to report bugs or issues with the Microsoft Quantum Development Kit (QDK). 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018

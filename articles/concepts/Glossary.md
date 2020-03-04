@@ -1,6 +1,6 @@
 ---
-title: Quantum computing glossary | Microsoft Docs 
-description: Quantum terms glossary
+title: Quantum computing glossary
+description: A glossary of common terms, actions and objects used in quantum computing.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017

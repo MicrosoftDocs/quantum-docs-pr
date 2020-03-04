@@ -4,12 +4,18 @@ name: ApplyDiagonalUnitary
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: |-
-  Applies an array of complex phases to numeric basis states of a register of qubits.
+  Applies an array of complex phases to numeric basis states of a register
+  of qubits.
 
-  That is, this implements the diagonal unitary operation $U$ that applies a complex phase
+  This operation implements a diagonal unitary that applies a complex phase
   $e^{i \theta_j}$ on the $n$-qubit number state $\ket{j}$.
+  In particular, this operation can be represented by the unitary
 
-  $U = \sum^{2^n-1}_{j=0}e^{i\theta_j}\ket{j}\bra{j}$.
+  $$
+  \begin{align}
+  U = \sum^{2^n-1}_{j=0}e^{i\theta_j}\ket{j}\bra{j}.
+  \end{align}
+  $$
 remarks: |-
   `coefficients` will be padded with elements $\theta_j = 0.0$ if
   fewer than $2^n$ are specified.
@@ -38,4 +44,6 @@ output:
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- approximatelyapplydiagonalunitary
 ...

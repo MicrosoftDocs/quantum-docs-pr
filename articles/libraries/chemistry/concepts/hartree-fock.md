@@ -1,6 +1,6 @@
 ---
-title: Hartree-Fock Theory | Microsoft Docs
-description: Hartree-Fock Theory Docs
+title: Hartree-Fock Theory
+description: Learn about the Hartree–Fock theory, a simple way to construct the initial state for quantum systems.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017

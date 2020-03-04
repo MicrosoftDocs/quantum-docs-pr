@@ -1,6 +1,6 @@
 ---
-title: Width Counter | Quantum computer trace simulator | Microsoft Docs
-description: Overview of quantum computer trace simulator
+title: Width Counter
+description: Learn about the Microsoft QDK Width Counter, which counts the number of qubits allocated and borrowed by each operation in a quantum program. 
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017

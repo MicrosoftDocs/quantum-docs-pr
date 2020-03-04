@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: File Structure | Microsoft Docs 
-description: Q# File Structure
+title: Q# File Structure
+description: Learn how to structure namespaces, and operation, function, and user-defined-type declarations in Q# programs and libraries. 
 author: QuantumWriter
 uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com 

@@ -1,4 +1,4 @@
-- name: Quantum computing history & background
+- name: "Quantum computing history & background"
   href: index.md
 - name: Vectors and matrices
   href: vectors-and-matrices.md
@@ -16,3 +16,5 @@
   href: circuits.md
 - name: Quantum oracles
   href: oracles.md
+- name: Glossary
+  href: glossary.md

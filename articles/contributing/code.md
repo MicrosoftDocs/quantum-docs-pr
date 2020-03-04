@@ -133,9 +133,7 @@ Looking at the files that make up each folder, let's dive into the [`algorithms/
 Not all samples will have the exact same set of files (e.g.: some samples may be C#-only, others may not have a Python host, or some samples may require auxillary data files to work).
 One especially important file, though, is the `README.md` file, as that's what users need to get started with your sample!
 
-```markdown
 :::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md":::
-```
 
 <!-- ## Contributing to the Quantum Development Kit Libraries -->
 

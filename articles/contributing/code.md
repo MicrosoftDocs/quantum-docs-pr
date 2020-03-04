@@ -8,20 +8,20 @@ ms.topic: article
 uid: microsoft.quantum.contributing.code
 ---
 
-# Contributing Code #
+# Contributing Code
 
 In addition to reporting issues and improving documentation, contributing code to the Quantum Development Kit can be a very direct way to help your peers in the quantum programming community.
 By contributing code, you can help to fix issues, provide new examples, make existing libraries easier to use, or even add entirely new features.
 
 In this guide, we'll detail a bit of what we look for when we review pull requests to help your contribution do the most good.
 
-## What We Look For ##
+## What We Look For
 
 An ideal code contribution builds on the existing work in a Quantum Development Kit repository to fix issues, expand existing features, or to add new features that are within the scope of a repository.
 When we accept a code contribution, it becomes a part of the Quantum Development Kit itself, such that new features will be released, maintained, and developed in the same way as the rest of the Quantum Development Kit.
 Thus, it is helpful when functionality added by a contribution is well-tested and is documented.
 
-### Unit Tests ###
+### Unit Tests
 
 The Q# functions, operations, and user-defined types that make up libraries such as the canon are automatically tested as a part of development on the [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) repository.
 When a new pull request is opened, for instance, our [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) configuration will check that the changes in the pull request do not break any existing functionality that the quantum programming community depends on.
@@ -75,7 +75,8 @@ Locally, unit tests can be run using the Visual Studio Test Explorer or the `dot
 
 ### Citations and References ### -->
 
-## When We'll Reject a Pull Request ##
+
+## When We'll Reject a Pull Request
 
 Sometimes, we'll reject the pull request for a contribution.
 If this happens to you, it doesn't mean that it's bad, as there's a number of reasons why we might not be able to accept a particular contribution.
@@ -94,7 +95,7 @@ Finally, we cannot accept contributions that cause harm the quantum computing co
 We want to ensure that contributions serve the entire quantum computing community, both in its current wonderful diversity, and in the future as it grows to become still more inclusive.
 We appreciate your help in realizing this goal.
 
-## Next steps ##
+## Next steps
 
 Thanks for helping to make the Quantum Development Kit a great resource for the entire quantum programming community!
 To learn more, please continue with the following guide on Q# style.

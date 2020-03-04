@@ -52,7 +52,7 @@ function PairTest () : Unit {
 More complicated conditions can be checked using the techniques in the [testing section](xref:microsoft.quantum.libraries.diagnostics) of the standard libraries guide.
 For instance, the following test checks that `H(q); X(q); H(q);` as called by <xref:microsoft.quantum.canon.applywith> does the same thing as `Z(q)`.
 
-```qsharp
+```Q#
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
@@ -94,6 +94,50 @@ In these cases, we'll try to offer some advice in code reviews about what can be
 Finally, we cannot accept contributions that cause harm the quantum computing community, as outlined in the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 We want to ensure that contributions serve the entire quantum computing community, both in its current wonderful diversity, and in the future as it grows to become still more inclusive.
 We appreciate your help in realizing this goal.
+
+## What a Good Sample Looks Like
+
+If you're interested in contributing code to the [samples repository](https://github.com/Microsoft/Quantum), thank you for your contribution to the quantum development community!
+To help you prepare your contribution to help out as much as possible, it's helpful to take a quick look at how the samples repository is laid out:
+
+```plaintext
+microsoft/Quantum
+📁 samples/
+  📁 algorithms/
+    📁 chsh-game/
+      📝 CHSHGame.csproj
+      📝 Game.qs
+      📝 Host.cs
+      📝 host.py
+      📝 README.md
+     ⋮
+  📁 arithmetic/
+  📁 characterization/
+  📁 chemistry/
+   ⋮
+```
+
+That is, the samples in the [microsoft/Quantum repository](https://github.com/microsoft/Quantum) are broken down by subject area into different folders such as `algorithms/`, `arithmetic/`, or `characterization/`.
+Within the folder for each subject area, each sample consists of a single folder that collects everything a user will need to explore and make use of that sample.
+
+Looking at the files that make up each folder, let's dive into the [`algorithms/chsh-game/`](todo:todo) sample.
+
+| File              | Description                                                |
+|-------------------|------------------------------------------------------------|
+| `CHSHGame.csproj` | Q# project used to build the sample with the .NET Core SDK |
+| `Game.qs`         | Q# operations and functions for the sample                 |
+| `Host.cs`         | C# host program used to run the sample                     |
+| `host.py`         | Python host program used to run the sample                 |
+| `README.md`       | Documentation on what the sample does and how to use it    |
+
+Not all samples will have the exact same set of files (e.g.: some samples may be C#-only, others may not have a Python host, or some samples may require auxillary data files to work).
+One especially important file, though, is the `README.md` file, as that's what users need to get started with your sample!
+
+```markdown
+:::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md":::
+```
+
+<!-- ## Contributing to the Quantum Development Kit Libraries -->
 
 ## Next steps
 

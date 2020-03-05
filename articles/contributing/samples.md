@@ -63,6 +63,10 @@ This metadata is provided as a [YAML header](https://dotnet.github.io/docfx/spec
 
 :::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md" range="1-11":::
 
+> [!IMPORTANT]
+> The `page_type: sample` key in the header is required for your sample to appear at docs.microsoft.com/samples.
+> Similarly, the `product` and `language` keys are critical for helping users to find and run your sample.
+
 After that, it's helpful to give a short intro that says what your new sample does:
 
 :::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md" range="13-21":::

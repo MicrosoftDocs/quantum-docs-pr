@@ -133,7 +133,33 @@ Looking at the files that make up each folder, let's dive into the [`algorithms/
 Not all samples will have the exact same set of files (e.g.: some samples may be C#-only, others may not have a Python host, or some samples may require auxillary data files to work).
 One especially important file, though, is the `README.md` file, as that's what users need to get started with your sample!
 
-:::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md":::
+Each `README.md` should start with some metadata that helps docs.microsoft.com/samples find your contribution.
+
+> [!div class="nextstepaction"]
+> [See how the chsh-game sample is rendered](https://docs.microsoft.com/samples/microsoft/quantum/validating-quantum-mechanics/)
+
+This metadata is provided as a [YAML header](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#yaml-header) that indicates what languages your sample covers (typically, this will be `qsharp`, `csharp`, and `python`), and what products your sample covers (typically, just `qdk`).
+
+:::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md" range="1-11":::
+
+After that, it's helpful to give a short intro that says what your new sample does:
+
+:::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md" range="13-21":::
+
+Users of your sample will also appreciate knowing what they need to run it (e.g.: do users just need the Quantum Development Kit itself, or do they need additional software such as node.js?):
+
+:::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md" range="23-25":::
+
+With all that in place, you can tell users how to run your sample:
+
+:::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md" range="27-50":::
+
+Finally, it's helpful to tell users what each file in your sample does, and where they can go for more information:
+
+:::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md" range="52-61":::
+
+> [!WARNING]
+> Make sure to use absolute URLs here, since your sample will appear at a different URL when rendered at docs.microsoft.com/samples!
 
 <!-- ## Contributing to the Quantum Development Kit Libraries -->
 

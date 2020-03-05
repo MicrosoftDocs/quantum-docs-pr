@@ -8,7 +8,8 @@ ms.date: 03/04/2020
 ms.topic: landing-page
 ---
 
-
 # Q# libraries #
 
-Q# is supported by a range of different useful operations, functions, and user-defined types that comprise the Q# *standard library*.
+The Q# standard library includes operations, functions and user-defined types used to develop quantum programs. Three additional libraries built on top of the standard library are also included - the chemistry, numerics, and machine learning libraries.
+
+For more information about the Q# libraries, see <xref:microsoft.quantum.libraries>.

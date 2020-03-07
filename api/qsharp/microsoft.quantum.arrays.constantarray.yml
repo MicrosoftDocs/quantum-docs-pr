@@ -4,6 +4,12 @@ name: ConstantArray
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Creates an array of given length with all elements equal to given value.
+examples: |-
+  The following code creates an array of 3 Boolean values, each equal to `true`:
+
+  ```qsharp
+  let array = ConstantArray(3, true);
+  ```
 syntax: "function ConstantArray (length : Int, value : 'T) : 'T[]"
 input:
   content: "(length : Int, value : 'T)"
@@ -13,7 +19,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: value
-    summary: A value that will be contained at each index of the new array.
+    summary: The value of each element of the new array.
     uid: "'T"
     isLocal: true
 output:

@@ -1,6 +1,6 @@
 ---
-title: The Q# Programming Language | Microsoft Docs 
-description: The Q# Programming Language
+title: The Q# Programming Language
+description: Introduction to the Q# language for quantum program development. 
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 12/11/2017

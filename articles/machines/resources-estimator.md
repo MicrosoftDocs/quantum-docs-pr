@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Quantum Development Kit Resources Estimator | Microsoft Docs 
-description: Overview of Microsoft's Quantum Development Kit Resources estimator 
+title: Quantum Development Kit Resources Estimator 
+description: Learn about the Resources Estimator, which estimates the resources required to run a given instance of a Q# operation on a quantum computer.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com 
 ms.date: 1/22/2019
@@ -112,7 +112,7 @@ The following is the list of metrics estimated by the `ResourcesEstimator`:
 
 ## Providing the Probability of Measurement Outcomes
 
-<xref:microsoft.quantum.primitive.assertprob> from the <xref:microsoft.quantum.intrinsic> namespace can 
+<xref:microsoft.quantum.intrinsic.assertprob> from the <xref:microsoft.quantum.intrinsic> namespace can 
 be used to provide information about the expected probability of a measurement to help drive the execution 
 of the Q# program. The following example illustrates this:
 

@@ -1,6 +1,6 @@
 ---
-title: Using the Numerics Library | Microsoft Docs
-description: Using the Numerics Library
+title: Using the Microsoft Q# Numerics Library
+description: Learn about the types and operations available in the Microsoft Quantum Numerics library.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
@@ -65,7 +65,7 @@ For each of the three types above, a variety of operations is available:
     - Reciprocal (1/x)
     - Measurement (classical Double)
 
-For more information and detailed documentation for each of these operations, see the Q# library reference docs at [docs.microsoft.com](https://docs.microsoft.com/en-us/quantum)
+For more information and detailed documentation for each of these operations, see the Q# library reference docs at [docs.microsoft.com](https://docs.microsoft.com/quantum)
 
 ## Sample: Integer addition
 

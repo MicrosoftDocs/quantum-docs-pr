@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Putting it all together - Q# techniques | Microsoft Docs 
-description: Putting it all together - Q# techniques
+title: Q# techniques - Putting it all together
+description: Walk through a basic Q# program that demonstrates quantum teleportation. 
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
@@ -146,7 +146,7 @@ We also need to allocate a qubit `here` which we achieve with a `using` block:
 ```
 
 ### Step 1: Create an entangled state
-We can then create the entangled pair between `here` and `there` by using the @"microsoft.quantum.primitive.h" and @"microsoft.quantum.primitive.cnot" operations:
+We can then create the entangled pair between `here` and `there` by using the @"microsoft.quantum.intrinsic.h" and @"microsoft.quantum.intrinsic.cnot" operations:
 
 ```qsharp
         H(here);
@@ -162,7 +162,7 @@ We then use the next $\operatorname{CNOT}$ and $H$ gates to move our message qub
 ```
 
 ### Step 3 & 4: Measuring and interpreting the result
-Finally, we use @"microsoft.quantum.primitive.m" to perform the measurements and perform the necessary gate operations to get the desired state, as denoted by `if` statements:
+Finally, we use @"microsoft.quantum.intrinsic.m" to perform the measurements and perform the necessary gate operations to get the desired state, as denoted by `if` statements:
 
 ```qsharp
         // Measure out the entanglement

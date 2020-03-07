@@ -1,6 +1,6 @@
 ---
-title: Q# standard libraries - diagnostics | Microsoft Docs
-description: Q# standard libraries - diagnostics
+title: Diagnostics in the Q# standard libraries
+description: Learn about the diagnostic functions and operations in the Q# standard libraries used to catch mistakes or errors in quantum programs. 
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com 
@@ -48,7 +48,7 @@ The Q# standard libraries provide several different functions for representing f
 
 - <xref:microsoft.quantum.diagnostics.fact>
 - <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>
-- <xref:microsoft.quantum.diagnostics.nearequalityfact>
+- <xref:microsoft.quantum.diagnostics.nearequalityfactc>
 - <xref:microsoft.quantum.diagnostics.equalityfacti>
 
 

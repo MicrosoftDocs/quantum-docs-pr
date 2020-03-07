@@ -1,6 +1,6 @@
 ---
-title: Chemistry Library Installation and Validation | Microsoft Docs
-description: Chemistry Library Installation and Validation
+title: Microsoft Q# Chemistry Library Installation and Validation
+description: Learn how to install the Microsoft Quantum chemistry library and use it with the NWChem computational chemistry platform. 
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
@@ -16,25 +16,25 @@ As with other NuGet packages, it's straightforward to add the chemistry library 
 **Visual Studio 2019:** If you are using Visual Studio 2019, you can add the quantum chemistry packages by using the NuGet Package Manager.
 To open the Package Manager, right-click on the project you'd like to add the chemistry library to and select "Manage NuGet Packages...," as in the screenshot below.
 
-![](~/media/vs2017-nuget-manage-packages.png)
+![Using the NuGet Package Manager in Visual Studio 2019](~/media/vs2017-nuget-manage-packages.png)
 
 From the Browse tab, search for the package name "Microsoft.Quantum.Chemistry."
 
 > [!NOTE]
 > Make sure to tick "Include prerelease."
 
-![](~/media/vs2017-nuget-package-search.png)
+![Include pre-release checkbox](~/media/vs2017-nuget-package-search.png)
 
 This will list the packages available for download.
 Click on the "Microsoft.Quantum.Chemistry on the left-hand pane, select the latest pre-release version on the right-hand pane, and click "Install":
 
-![](~/media/vs2017-nuget-select-chem.png)
+![Install the latest Microsoft.Quantum.Chemistry package](~/media/vs2017-nuget-select-chem.png)
 
 For more details, see the [Package Manager UI guide](https://docs.microsoft.com/nuget/tools/package-manager-ui).
 
 Alternatively, you can use the Package Manager Console to add the quantum chemistry library to your project with a command line interface.
 
-![](~/media/vs2017-nuget-console-menu.png)
+![Use the Package Manager Console from the command line](~/media/vs2017-nuget-console-menu.png)
 
 From the package manager console, run the following:
 
@@ -46,18 +46,18 @@ For more details, see the [Package Manager Console guide](https://docs.microsoft
 
 **Command line or Visual Studio Code:** Using the command line on its own or from within Visual Studio Code, you can use the `dotnet` command to add NuGet package reference to your project:
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Chemistry
 ```
 
 ## Verifying Your Installation 
 
 Like the rest of the Quantum Development Kit, the quantum chemistry library comes with a number of fully documented samples to help you get up and running quickly.
-To test your installation using these samples, clone the [main samples repository](https://github.com/Microsoft/Quantum), then run one of the samples.  For example, to run the [`MolecularHydrogen`](https://github.com/Microsoft/Quantum/tree/master/Chemistry/MolecularHydrogen) sample:
+To test your installation using these samples, clone the [main samples repository](https://github.com/Microsoft/Quantum), then run one of the samples.  For example, to run the [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) sample:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Chemistry/MolecularHydrogen
+cd Quantum/samples/chemistry/MolecularHydrogen
 dotnet run
 ```
 
@@ -77,7 +77,7 @@ The quantum chemistry library for the Quantum Development Kit is designed to wor
 In particular, the `Microsoft.Quantum.Chemistry` package provides tools for loading instances of quantum chemistry simulation problems represented in the [Broombridge schema](xref:microsoft.quantum.libraries.chemistry.schema.broombridge), also supported for export by recent versions of NWChem.
 
 To get up and running using NWChem together with the Quantum Development Kit, we suggest one of the following methods:
-- Get started using existing Broombridge files provided with the samples at [IntegralData/YAML](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML).
+- Get started using existing Broombridge files provided with the samples at [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML).
 - Use the [EMSL Arrows Builder for the Microsoft Quantum Development Kit](https://arrows.emsl.pnnl.gov/api/qsharp_chem) which is a web-based frontend to NWChem, to generate new Broombridge-formated molecular input files.  
 - Use the [Docker image](https://hub.docker.com/r/nwchemorg/nwchem-qc/) provided by PNNL to run NWChem, or
 - [Compile NWChem](http://www.nwchem-sw.org/index.php/Compiling_NWChem) for your platform.
@@ -85,9 +85,10 @@ To get up and running using NWChem together with the Quantum Development Kit, we
 See [End-to-end with NWChem](xref:microsoft.quantum.chemistry.examples.endtoend) for more information on how to work with NWChem to chemical models to analyze with the Quantum Developmen Kit chemistry library.
 
 ### Getting started using Broombridge files provided with the samples
-The [IntegralData/YAML](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML) folder in the Quantum Development Kit Samples repository contains Broombridge-formated molecule data files.  
 
-As a simple example, use the chemistry library sample, [GetGateCount](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount) to load the Hamiltonian from one of Broombridge files and perform gate estimates of quantum simulation algorigthms:
+The [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML) folder in the Quantum Development Kit Samples repository contains Broombridge-formated molecule data files.  
+
+As a simple example, use the chemistry library sample, [GetGateCount](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/GetGateCount) to load the Hamiltonian from one of Broombridge files and perform gate estimates of quantum simulation algorigthms:
 
 ```bash
 cd Quantum/Chemistry/GetGateCount
@@ -166,5 +167,3 @@ More information can be obtained by using PowerShell's built-in help functionali
 Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
 ```
-
-

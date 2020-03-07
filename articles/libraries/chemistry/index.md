@@ -1,6 +1,6 @@
 ---
-title: Introduction to the Quantum Chemistry Package | Microsoft Docs
-description: Introduction to the Quantum Chemistry Package
+title: Introduction to the Quantum Chemistry Library
+description: Learn about the Microsoft Quantum Chemistry Library and how it is used to simulate electronic structure problems on quantum computers.  
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017

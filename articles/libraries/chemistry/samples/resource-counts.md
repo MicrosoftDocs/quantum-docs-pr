@@ -1,6 +1,6 @@
 ---
-title: Obtaining resource counts | Microsoft Docs
-description: Obtaining resource counts Docs
+title: Obtaining resource counts
+description: Learn how to obtain resource estimates using a quantum trace simulator. 
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018

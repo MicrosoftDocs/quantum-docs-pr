@@ -1,5 +1,6 @@
 ---
 title: Learn how to install the Microsoft Quantum Development Kit (QDK)
+description: How to install the Microsoft Quantum Development Kit for C#, Python, and Jupyter Notebook environments.
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
@@ -14,7 +15,7 @@ Learn how to install the Microsoft Quantum Development Kit (QDK), so that you ca
 
 - the Q# programming language
 - a set of libraries that abstract complex functionality in Q#
-- APIs for Python and .NET languages (i.e.: C#, F#, and VB.NET) for running quantum programs written in Q#
+- APIs for Python and .NET languages (C#, F#, and VB.NET) for running quantum programs written in Q#
 - tools to facilitate your development
 
 Q# programs are often paired with a host program written in a .NET language (typically C#) or Python. This allows us to call quantum operations from inside a classical program.

@@ -1,6 +1,6 @@
 ---
-title: Q# statements | Microsoft Docs 
-description: Q# statements
+title: Q# Statements
+description: Learn about the correct use of statements in Q#, including function and operation declarations, variable declarations and assignments, and operation calls. 
 author: QuantumWriter
 uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com 
@@ -233,7 +233,7 @@ Correspondingly, update-and-reassign statements exist for named items in user-de
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
+function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {

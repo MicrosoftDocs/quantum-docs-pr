@@ -24,12 +24,29 @@ operations:
     Given a preparation that is adjointable and measurement, estimates the frequency
     with which that measurement succeeds (returns `Zero`) by
     performing a given number of trials.
-- uid: microsoft.quantum.characterization.measureallz
+- uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
   summary: |-
-    Jointly measures a register of qubits in the Pauli Z basis.
+    Given two operations which each prepare copies of a state, estimates
+    the imaginary part of the overlap between the states prepared by each
+    operation.
+- uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
+  summary: |-
+    Given two operations which each prepare copies of a state, estimates
+    the squared overlap between the states prepared by each
+    operation.
+- uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
+  summary: |-
+    Given two operations which each prepare copies of a state, estimates
+    the real part of the overlap between the states prepared by each
+    operation.
+- uid: microsoft.quantum.characterization.measureallz
+  summary: |2-
 
-    In other words, measures the operation $Z \otimes Z \otimes \cdots \otimes Z$ on
-    a given register.
+    > [!WARNING]
+    > Deprecated
+
+    MeasureAllZ has been deprecated. Please use @"microsoft.quantum.measurement.measureallz" instead.
+    Please use @"microsoft.quantum.measurement.measureAllZ".
 - uid: microsoft.quantum.characterization.measureidentity
   summary: |-
     Measures the identity operator on a register

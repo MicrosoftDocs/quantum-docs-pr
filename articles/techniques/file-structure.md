@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Q# program overview - Q# techniques | Microsoft Docs 
-description: Q# program overview - Q# techniques
+title: Q# program overview
+description: Learn the basic structure of a quantum program and how it represents transformations of quantum states.
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017

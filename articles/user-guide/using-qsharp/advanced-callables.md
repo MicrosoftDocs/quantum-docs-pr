@@ -1,6 +1,6 @@
 ---
 title: Advanced techniques for defining callables
-description: Advanced techniques of defining callables: type-parameterization, etc.
+description: Advanced techniques of defining callables such as type-parameterization, etc.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020

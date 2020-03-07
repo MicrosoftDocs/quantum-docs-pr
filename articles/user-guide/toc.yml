@@ -1,0 +1,10 @@
+- name: Contents and layout
+  href: index.md
+- name: Q# basics
+  href: basics.md
+- name: Q# language details
+  href: language/toc.yml
+- name: Using Q#
+  href: using-qsharp/toc.yml
+- name: Quick reference pages
+  href: quickref/toc.yml

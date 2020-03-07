@@ -5,13 +5,13 @@ author: Gillenhaal Beck
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
-uid: microsoft.quantum.guide.language.overview
+uid: microsoft.quantum.guide.using
 ---
 
 # Using Q#
 
 
-blah blah blah
+words
 
 
 ## Contents

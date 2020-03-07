@@ -1,11 +1,11 @@
 ---
 title: The Q# User Guide
 description: Overview of the User Guide's purpose and contents
-author: Gillenhaal Beck
+author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
-uid: microsoft.quantum.guide.overview
+uid: microsoft.quantum.guide
 ---
 
 # The Q# User Guide

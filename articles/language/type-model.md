@@ -50,7 +50,7 @@ can be constructed:
    `One` and `Zero`, which are constants of type `Result`.
    `Zero` indicates that the +1 eigenvalue was measured;
    `One` indicates the -1 eigenvalue.
-- The `Range` type represents a sequence of integers, denoted by `start..step..stop`, where denoting the step is options. 
+- The `Range` type represents a sequence of integers, denoted by `start..step..stop`, where denoting the step is optional.
    That is `start .. stop` corresponds to `start..1..stop`, and e.g. `1..2..7` represents the sequence $\{1, 3, 5, 7\}$.
 - The `String` type is a sequence of Unicode characters that
   is opaque to the user once created.
@@ -78,7 +78,9 @@ The type of an array literal is determined by the common base type of all items 
 
 > [!WARNING]
 > The elements of an array cannot be changed after the array has been created.
-> Update-and-reassign statements and/or copy-and-update expressions can be used to construct a modified array.
+> [Update-and-reassign statements](xref:microsoft.quantum.language.statements#update-and-reassign-statement) and/or
+> [copy-and-update expressions](xref:microsoft.quantum.language.expressions#copy-and-update-expressions)
+> can be used to construct a modified array.
 
 Alternatively, an array can be created from its size using the `new` keyword:
 
@@ -147,7 +149,7 @@ newtype Complex = (Double, Double);
 ```
 
 This statement creates a new type with two anonymous items of type `Double`.   
-Aside from anonymous items, user-defined types also support named items as of Q# version 0.7 or higher. For example, we could have named the to items `Re` for the double representing the real part of a complex number and `Im` for the imaginary part:
+Aside from anonymous items, user-defined types also support named items as of Q# version 0.7 or higher. For example, we could have named the two items `Re` for the double representing the real part of a complex number and `Im` for the imaginary part:
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -166,7 +168,7 @@ function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
 }
 ```
 
-In order to access anonymous items on the other hand, 
+In order to access anonymous items, on the other hand,
 the wrapped value first needs to be extracted using the postfix operator `!`.
 The "unwrap" operator, `!`, allows to extract the value contained in a user-defined type.
 The type of such an "unwrap" expression is the underlying type of the user-defined type. 
@@ -197,7 +199,7 @@ newtype DoublyWrappedInt = WrappedInt;
 ...
 ```
 
-Take a look at the section on [unwrap expressions](xref:microsoft.quantum.language.expressions#unwrap-expressions) and [operators precedence](xref:microsoft.quantum.language.expressions#operator-precedence) for more details.
+Take a look at the section on [unwrap expressions](xref:microsoft.quantum.language.expressions#unwrap-expressions) and [operator precedence](xref:microsoft.quantum.language.expressions#operator-precedence) for more details.
 
 Values of a user-defined type can be created by calling the corresponding type constructor:
 
@@ -209,7 +211,7 @@ let imaginaryUnit = Complex(0.0, 1.0);
 Alternatively, new values can be created from existing ones using [copy-and-update expressions](xref:microsoft.quantum.language.expressions#copy-and-update-expressions). 
 Like for arrays, such expressions copy all item values of the original expression, 
 with the exception of the specified named items. For these the values are set to the ones defined on the right hand side of the expression. 
-Any other language constructs, like for example [update-and-reassign statements](xref:microsoft.quantum.language.statements#update-and-reassign-statement), that are available for array items exist for named-items in user-defined types as well.
+Any other language constructs, like for example [update-and-reassign statements](xref:microsoft.quantum.language.statements#update-and-reassign-statement), that are available for array items exist for named items in user-defined types as well.
 
 ```qsharp
 newtype ComplexArray = (Count : Int, Data : Complex[]);
@@ -469,10 +471,10 @@ For instance, `Controlled Rz` is the controlled version of the
 so `Controlled Rz` has type
 `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)`.
 Thus, `Controlled Rz(controls, (0.1, target))` would be
-a valid invocation of `Controlled Rz` (note the parentheses around `0.1, target`).
+a valid invocation of `Controlled Rz`. (Note the parentheses around `0.1, target`.)
 
 As another example, `CNOT(control, target)` can be implemented as `Controlled X([control], target)`. 
-If a target should be controlled by 2 control qubits (CCNOT), we can use `Controlled X([control1, control2], target)` statement.
+If a target should be controlled by 2 control qubits (CCNOT), we can use `Controlled X([control1, control2], target)`.
 
 ### Examples
 

@@ -285,17 +285,14 @@ Function types are completely specified by their signature.
 For example, a function that computes the sine of an angle
 would have type `(Double -> Double)`.
 
-Operations—but not functions—have certain additional _characteristics_ that are expressed as part of the operation type. 
-Such characteristics include information about what functors the operation supports.
-Functors are meta-operations that generate a specialization of a base operation;
-see [Functors](#functors), below.
-
+Operations—but not functions—may have certain additional _characteristics_ that are expressed as part of the operation type.
 Operation types are specified by the their input type, output type, and their characteristics.    
-In order to require support for the `Controlled` and/or `Adjoint` functor in an operation type, we need to add an annotation indicating the corresponding characteristics.
-An annotation `is Ctl` for example indicates that the operation is controllable. 
-If we want to require that an operation of that type supports both the `Adjoint` and `Controlled` functor we can express this as `(Qubit => Unit is Adj + Ctl)`. 
-The used operation characteristics `Adj` and `Ctl` strictly speaking are two pre-defined sets of labels, where each label indicates a particular operation characteristics like e.g. support for a particular functor.
-Hence, `+` is used to indicate the union of those two sets, and `*` is used to indicate the intersection - i.e. the labels that are common to both sets.  
+
+Characteristics describe what [functors](#functors) the operation supports.
+The annotation `is Ctl` indicates that the operation supports the `Controlled` functor (i.e., it is controllable).
+The annotation `is Adj` indicates that the operation supports the `Adjoint` functor (i.e., it is adjointable).
+To describe the type of an operation that supports both `Adjoint` and `Controlled`, we say `is Adj + Ctl`
+(or, equivalently, `is Ctl + Adj`).
 
 For example, the Pauli `X` operation has type
 `(Qubit => Unit is Adj + Ctl)`.

@@ -19,7 +19,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 > [!NOTE]
 > * In Q# Jupyter Notebooks you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files). This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.
 
-1. Pre-requisites
+1. Prerequisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)

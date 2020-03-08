@@ -22,7 +22,7 @@ Q# is built to play well with .NET languages--specifically C#. You can work with
 Visual Studio offers a rich environment for developing Q# programs. The Q# Visual Studio extension contains templates for Q# files and projects as well as syntax highlighting, code completion and IntelliSense support.
 
 
-1. Pre-requisites
+1. Prerequisites
 
     - [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, with the .NET Core cross-platform development workload enabled
 
@@ -57,7 +57,7 @@ Visual Studio offers a rich environment for developing Q# programs. The Q# Visua
 
 Visual Studio Code (VS Code) offers a rich environment for developing Q# programs on Windows, Linux and Mac.  The Q# VS Code extension includes support for Q# syntax highlighting, code completion, and Q# code snippets.
 
-1. Pre-requisites
+1. Prerequisites
 
    - [VS Code](https://code.visualstudio.com/download)
    - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
@@ -99,7 +99,7 @@ Visual Studio Code (VS Code) offers a rich environment for developing Q# program
 
 Of course, you can also build and run Q# programs from the command line by simply installing the .NET Core SDK and the QDK project templates. 
 
-1. Pre-requisites
+1. Prerequisites
 
     - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
 

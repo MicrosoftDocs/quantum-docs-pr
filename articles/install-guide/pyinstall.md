@@ -12,7 +12,7 @@ uid: microsoft.quantum.install.python
 
 Install the QDK to develop Python host programs to call Q# operations.
 
-1. Pre-requisites
+1. Prerequisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - The [PIP](https://pip.pypa.io/en/stable/installing) Python package manager

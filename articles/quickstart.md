@@ -14,7 +14,7 @@ In this Quickstart, we show you how to write a Q# program that manipulates and m
 
 You will write an application called Bell to demonstrate quantum entanglement.  The name Bell is in reference to Bell states, which are specific quantum states of two qubits that are used to represent the simplest examples of superposition and quantum entanglement. 
 
-## Pre-requisites
+## Prerequisites
 
 If you are ready to start coding, follow these steps before proceeding: 
 

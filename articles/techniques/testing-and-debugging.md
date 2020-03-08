@@ -221,7 +221,7 @@ The rest of the rows describe the probability amplitude of measuring the basis s
 
 * **`∣0❭:`** this row corresponds to the `0` computational basis state
 * **`0.707107 +  0.000000 i`**: the probability amplitude in Cartesian format.
-* **` == `**: the `equal` sign seperates both equivalent representations.
+* **` == `**: the `equal` sign separates both equivalent representations.
 * **`**********  `**: A graphical representation of the magnitude, the number of `*` is proportionate to the probability of measuring this state vector.
 * **`[ 0.500000 ]`**: the numeric value of the magnitude
 * **`    ---`**: A graphical representation of the amplitude's phase (see below).

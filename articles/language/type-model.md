@@ -437,8 +437,7 @@ after the controlled operation.
 For example, applying an `X` operation to a control qubit before and after
 a controlled operation will cause the operation to control
 on the `Zero` state ($\ket{0}$) for that qubit; applying an `H` operation before and after will control
-on the `PauliX` `One` state, that is -1 eigenvalue of Pauli X, $\ket{-} \mathrel{:=} (\ket{0} - \ket{1}) / \sqrt{2}$
-rather than the `PauliZ` `One` state.
+on the `PauliX` `One` state, that is, $\ket{-} \mathrel{:=} (\ket{0} - \ket{1}) / \sqrt{2}$.
 
 Given an operation expression, a new operation expression
 may be formed using the `Controlled` functor.

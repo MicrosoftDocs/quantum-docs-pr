@@ -48,7 +48,7 @@ always mean the same thing, and the same concept is always represented the same 
 
 Specifically:
 
-- The semi-colon, `;`, is used to end a statement or single-line directive.
+- The semicolon, `;`, is used to end a statement or single-line directive.
   It is not used for any other purpose.
 - The comma, `,`, is used to separate elements of a sequence. It is used for tuple literals,
   array literals, argument lists, tuple definitions, and type lists. **In a change from earlier

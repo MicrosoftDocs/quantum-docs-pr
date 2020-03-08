@@ -217,7 +217,7 @@ followed by one of:
     appropriate directive to apply.
     `auto` may not be used for the `body` specialization.
 
-The directives and `auto` all require a closing semi-colon `;`.
+The directives and `auto` all require a closing semicolon `;`.
 The `auto` directive resolves to the following generation directive if an explicit declaration of the `body` is provided:
 
 - The `adjoint` specialization is generated according to the directive `invert`.

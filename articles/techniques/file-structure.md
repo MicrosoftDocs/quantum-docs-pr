@@ -45,11 +45,11 @@ In this way, Q# makes it easy to express the logic underlying quantum and hybrid
 
 ## Q# operations and functions
 
-Concretely, a Q# program is composed of one or more *operations*, one or more *functions*, and user defined types. Operations are used to describe the transformations of the state of a quantum machine and are the most basic building block of Q# programs.
+Concretely, a Q# program is composed of one or more *operations*, one or more *functions*, and user-defined types. Operations are used to describe the transformations of the state of a quantum machine and are the most basic building block of Q# programs.
 Each operation defined in Q# may then call any number of other operations, including the built-in *intrinsic* operations implemented by a target machine.
 When compiled, each operation is represented as a .NET class type that can be provided to target machines.
 
-In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values. Q# is a strongly typed language and comes with a set of built-in primitive types as well as support for user defined types. 
+In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values. Q# is a strongly typed language and comes with a set of built-in primitive types as well as support for user-defined types. 
 
 Throughout the rest of this guide, we will see how to use different language concepts and constructs to help us define complex quantum programs through the basic building blocks of operations, functions, and types. 
 

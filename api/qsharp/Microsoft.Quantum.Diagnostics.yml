@@ -89,7 +89,7 @@ operations:
     a given tolerance.
 newtypes:
 - uid: microsoft.quantum.diagnostics.test
-  summary: Compiler recognized attribute used to mark a unit test.
+  summary: Compiler-recognized attribute used to mark a unit test.
 summary: |2-
    # Summary
    This namespace contains functions and operations useful for diagnostic

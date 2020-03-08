@@ -147,12 +147,12 @@ newtype Complex = (Double, Double);
 ```
 
 This statement creates a new type with two anonymous items of type `Double`.   
-Aside from anonymous items, user defined types also support named items as of Q# version 0.7 or higher. For example, we could have named the to items `Re` for the double representing the real part of a complex number and `Im` for the imaginary part: 
+Aside from anonymous items, user-defined types also support named items as of Q# version 0.7 or higher. For example, we could have named the to items `Re` for the double representing the real part of a complex number and `Im` for the imaginary part:
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 ```
-Naming one item in a user defined type does not imply that all items need to be named - any combination of named and unnamed items is supported. Furthermore, also inner items may be named.
+Naming one item in a user-defined type does not imply that all items need to be named - any combination of named and unnamed items is supported. Furthermore, also inner items may be named.
 The type `Nested` as defined below for example has an underlying type `(Double, (Int, String))`, of which only the item of type `Int` is named and all other items are anonymous. 
 
 ```qsharp
@@ -168,8 +168,8 @@ function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
 
 In order to access anonymous items on the other hand, 
 the wrapped value first needs to be extracted using the postfix operator `!`.
-The "unwrap" operator, `!`, allows to extract the value contained in a user defined type.
-The type of such an "unwrap" expression is the underlying type of the user defined type. 
+The "unwrap" operator, `!`, allows to extract the value contained in a user-defined type.
+The type of such an "unwrap" expression is the underlying type of the user-defined type. 
 
 ```qsharp
 function PrintedMessage(value : Nested) : Unit {
@@ -199,7 +199,7 @@ newtype DoublyWrappedInt = WrappedInt;
 
 Take a look at the section on [unwrap expressions](xref:microsoft.quantum.language.expressions#unwrap-expressions) and [operators precedence](xref:microsoft.quantum.language.expressions#operator-precedence) for more details.
 
-Values of a user defined type can be created by calling the corresponding type constructor:
+Values of a user-defined type can be created by calling the corresponding type constructor:
 
 ```
 let realUnit = Complex(1.0, 0.0);
@@ -209,7 +209,7 @@ let imaginaryUnit = Complex(0.0, 1.0);
 Alternatively, new values can be created from existing ones using [copy-and-update expressions](xref:microsoft.quantum.language.expressions#copy-and-update-expressions). 
 Like for arrays, such expressions copy all item values of the original expression, 
 with the exception of the specified named items. For these the values are set to the ones defined on the right hand side of the expression. 
-Any other language constructs, like for example [update-and-reassign statements](xref:microsoft.quantum.language.statements#update-and-reassign-statement), that are available for array items exist for named-items in user defined types as well.
+Any other language constructs, like for example [update-and-reassign statements](xref:microsoft.quantum.language.statements#update-and-reassign-statement), that are available for array items exist for named-items in user-defined types as well.
 
 ```qsharp
 newtype ComplexArray = (Count : Int, Data : Complex[]);

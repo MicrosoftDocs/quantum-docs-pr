@@ -25,9 +25,9 @@ functions:
   summary: Returns the integer that specifies how the next value of a range is calculated.
 newtypes:
 - uid: microsoft.quantum.core.attribute
-  summary: Compiler recognized attribute used to mark user defined types as attributes.
+  summary: Compiler-recognized attribute used to mark user-defined types as attributes.
 - uid: microsoft.quantum.core.deprecated
-  summary: Compiler recognized attribute used to mark a type or callable as deprecated.
+  summary: Compiler-recognized attribute used to mark a type or callable as deprecated.
 - uid: microsoft.quantum.core.entrypoint
-  summary: Compiler recognized attribute used to mark the entry point of an executable.
+  summary: Compiler-recognized attribute used to mark the entry point of an executable.
 ...

@@ -275,7 +275,7 @@ We suggest:
 
 ***
 
-### User Defined Type Named Items ###
+### User-Defined Type Named Items ###
 
 Named items in user-defined types should be named as `CamelCase`, even in input to UDT constructors.
 This helps in order to clearly separate named items from references to locally scoped variables when using accessor notation (e.g.: `callable::Apply`) or copy-and-update notation (`set arr w/= Data <- newData`).

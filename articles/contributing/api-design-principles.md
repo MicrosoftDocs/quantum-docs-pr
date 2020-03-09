@@ -10,6 +10,19 @@ uid: microsoft.quantum.contributing.api-design
 
 # Q# API Design Principles
 
+## Introduction
+
+As a language and as a platform, Q# empowers users to write, run, understand, and explore quantum applications.
+In order to empower users, when we design Q# libraries, we follow a set of API design principles to guide our designs and to help us make usable libraries for the the quantum development community.
+This article lists these principles, and gives examples to help guide how to apply them when designing Q# APIs.
+
+> [!TIP]
+> This is a fairly detailed document that's intended to help guide library development and in-depth library contributions.
+> You'll probably find it most useful if you're writing your own libraries in Q#, or if you're contributing larger features to the [Q# libraries repository](https://github.com/microsoft/QuantumLibraries).
+>
+> On the other hand, if you're looking to learn how to contribute to the Quantum Development Kit more generally, we suggest starting with the [contribution guide](xref:microsoft.quantum.contributing).
+> If you're looking for more general information about how we recommend formatting your Q# code, you may be interested in checking out the [style guide](xref:microsoft.quantum.contributing.style).
+
 ## General Principles
 
 **Key principle:** Expose APIs that places the focus on quantum applications.

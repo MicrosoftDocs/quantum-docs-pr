@@ -3,7 +3,7 @@ title: Q# API Design Principles
 description: Q# API Design Principles
 author: cgranade
 ms.author: chgranad
-ms.date: 3/3/2020
+ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
 ---

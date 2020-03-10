@@ -8,37 +8,12 @@ ms.date: 09/04/2019
 ms.topic: landing-page
 ---
 
+# Q# API reference #
 
-# Q# standard libraries #
+This API reference includes the Q# standard library and the three libraries built on top of it - the chemistry, numerics, and machine learning libraries. There are also .NET and Python libraries available for Q#.
 
-Q# is supported by a range of different useful operations, functions, and user-defined types that comprise the Q# *standard library*.
-The Q# standard library is split into two main parts:
+- [Q# libraries](xref:microsoft.quantum.qsharplibintro)
+- [.NET libraries](xref:microsoft.quantum.dotnetlibsintro)
+- [Python libraries](https://docs.microsoft.com/python/qsharp)
 
-- **The prelude**: operations and functions defined as a part of the target machine and compiler, typically in classical native .NET code.
-  In general, different target machines may have different implementations of the prelude appropriate to each system.
-- **The canon**: operations and functions defined in Q# building on the logic defined in the prelude.
-  The canon implementation is agnostic with respect to target machines.
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+For more information about the Q# libraries, see <xref:microsoft.quantum.libraries>.

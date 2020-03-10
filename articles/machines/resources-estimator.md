@@ -15,7 +15,7 @@ As the name implies, the `ResourcesEstimator` estimates the resources
 required to run a given instance of a Q# operation on a quantum computer.
 It accomplishes this by executing the quantum operation without actually 
 simulating the state of a quantum computer; for this reason, 
-it can estimate resources for Q# operations that use thousands of qubits.
+it can estimate resources for Q# operations that use thousands of qubits, if the classical part of the code can be run in a reasonable time.
 
 ## Usage
 

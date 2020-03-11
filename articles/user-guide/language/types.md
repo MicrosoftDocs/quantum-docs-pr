@@ -10,6 +10,39 @@ uid: microsoft.quantum.guide.language.types
 
 # Types in Q#
 
+To do:
+- pare down the callable types info, direct to callable types page
+- group the quantum-specific types in the big list of primitive types
+
+
+## from 'file structure'
+## User-Defined Type Declarations
+
+Q# provides a way for users to declare new user-defined types, as described in
+the [Q# type model](xref:microsoft.quantum.language.type-model) section.
+User-defined types are distinct even if the base types are identical.
+In particular, there is no automatic conversion between values of two
+user-defined types even if the underlying types are identical.
+
+A user-defined type declaration consists of the keyword `newtype`, followed by
+the name of the user-defined type, an `=`, a valid type specification, and
+a terminating semicolon.
+
+For example:
+
+```qsharp
+newtype PairOfInts = (Int, Int);
+```
+
+Each Q# source file may declare any number of user-defined types.
+Type names must be unique within a namespace and may not conflict with
+operation and function names.
+
+It is not possible to define circular dependencies between user defined types. 
+Recursive types are thus not possible within Q#.
+
+
+## from 'Types'
 This section lays out the Q# type model and describes the syntax for
 specifying and working with types.
 We note that Q# is a *strongly-typed* language, such that careful use of these types can help the compiler to provide strong guarantees about Q# programs at compile time.
@@ -300,243 +333,5 @@ An operation type that does not support any functors is specified
 by its input and output type alone, with no additional annotation.
 
 
-### Type-Parameterized Functions and Operations
 
-Callable types may contain type parameters.
-Type parameters are indicated by a symbol prefixed by a single quote;
-for example, `'A` is a legal type parameter.
 
-A type parameter may appear more than once in a single signature.
-For example, a function that applies another function to each element
-of an array and returns the collected results would have signature
-`(('A[], 'A->'A) -> 'A[])`.
-Similarly, a function that returns the composition of two operations
-might have signature `((('A=>'B), ('B=>'C)) -> ('A=>'C))`.
-
-When invoking a type-parameterized callable, all arguments that have the same
-type parameter must be of the same type.
-
-Q# does not provide a mechanism for constraining the possible types
-that might be substituted for a type parameter.
-
-### Type Compatibility
-
-An operation with additional functors supported may be used anywhere
-an operation with fewer functors but the same signature is expected.
-For instance, an operation of type `(Qubit => Unit is Adj)` may be used
-anywhere an operation of type `(Qubit => Unit)` is expected.
-
-Q# is covariant with respect to callable return types:
-a callable that returns a type `'A` is compatible with a callable with
-the same input type and a result type that `'A` is compatible with.
-
-Q# is contravariant with respect to input types:
-a callable that takes a type `'A` as input is compatible with a callable
-with the same result type and an input type that is compatible with `'A`.
-
-That is, given the following definitions:
-
-```qsharp
-operation Invert(qubits : Qubit[]) : Unit 
-is Adj {...} 
-
-operation ApplyUnitary(qubits : Qubit[]) : Unit 
-is Adj + Ctl {...} 
-
-function ConjugateInvertWith(
-    inner : (Qubit[] => Unit is Adj),
-    outer : (Qubit[] => Unit is Adj))
-: (Qubit[] => Unit is Adj) {...}
-
-function ConjugateUnitaryWith(
-    inner : (Qubit[] => Unit is Adj + Ctl),
-    outer : (Qubit[] => Unit is Adj))
-: (Qubit[] => Unit is Adj + Ctl) {...}
-```
-
-the following are true:
-
-- The function `ConjugateInvertWith` may be invoked with an `inner`
-  argument of either `Invert` or `ApplyUnitary`.
-- The function `ConjugateUnitaryWith` may be invoked with an `inner`
-  argument of `ApplyUnitary`, but not `Invert`.
-- A value of type `(Qubit[] => Unit is Adj + Ctl)` may be returned
-  from `ConjugateInvertWith`.
-
-> [!IMPORTANT]
-> Q# 0.3 introduces a significant difference in the behavior of
-> user-defined types.
-
-User-defined types are treated as a wrapped version of
-the underlying type, rather than as a subtype.
-This means that a value of a user-defined type is not usable
-where a value of the underlying type is expected.
-
-### Functors
-
-A functor in Q# is a factory that defines a new operation
-from another operation.
-Functors have access to the implementation of the base operation when
-defining the implementation of the new operation.
-Thus, functors can perform more complex functions than
-traditional higher-level functions.
-
-Functors do not have a representation in the Q# type system. 
-It is thus currently not possible to bind them to a variable or pass them as arguments. 
-
-A functor is used by applying it to an operation, returning a new operation.
-For example, the operation that results from applying the `Adjoint` functor
-to the `Y` operation is written as `Adjoint Y`.
-The new operation may then be invoked like any other operation.
-Thus, `Adjoint Y(q1)` applies the Adjoint functor to the `Y` operation to
-generate a new operation, and applies that new operation to `q1`.
-
-Similarly, `Controlled X(controls, target)` applies the Controlled functor
-to the `X` operation to generate a new operation, and applies that new
-operation to `controls` and `target`.
-
-The two standard functors in Q# are `Adjoint` and `Controlled`.
-
-#### Adjoint
-
-In quantum computing, the adjoint of an operation is the
-complex conjugate transpose of the operation.
-For operations that implement a unitary operator, the adjoint is the
-inverse of the operation.
-For a simple operation that just invokes a sequence of other
-unitary operations on a set of qubits, the adjoint may be computed
-by applying the adjoints of the sub-operations on the same qubits,
-in the reverse sequence.
-
-Given an operation expression, a new operation expression may be formed
-using the `Adjoint` functor.
-For instance, `Adjoint QFT` designates the adjoint of the `QFT` operation.
-The new operation has the same signature and type as the base operation.
-In particular, the new operation also allows `Adjoint`, and will allow
-`Controlled` if and only if the base operation did.
-
-The Adjoint functor is its own inverse; that is, `Adjoint Adjoint Op` is
-always the same as `Op`.
-
-#### Controlled
-
-The controlled version of an operation is a new operation that effectively
-applies the base operation only if all of the control qubits are in a
-specified state.
-If the control qubits are in superposition, then the base operation is
-applied coherently to the appropriate part of the superposition.
-Thus, controlled operations are often used to generate entanglement.
-
-In Q#, controlled versions always take an array of control qubits,
-and the specified state is always for all of the control qubits to be
-in the computational (`PauliZ`) `One` state, $\ket{1}$.
-Controlling based on other states may be achieved by applying the
-appropriate unitary operation to the control qubits before the
-controlled operation, and then applying the inverses of the unitary operation
-after the controlled operation.
-For example, applying an `X` operation to a control qubit before and after
-a controlled operation will cause the operation to control
-on the `Zero` state ($\ket{0}$) for that qubit; applying an `H` operation before and after will control
-on the `PauliX` `One` state, that is -1 eigenvalue of Pauli X, $\ket{-} \mathrel{:=} (\ket{0} - \ket{1}) / \sqrt{2}$
-rather than the `PauliZ` `One` state.
-
-Given an operation expression, a new operation expression
-may be formed using the `Controlled` functor.
-The signature of the new operation is based on the signature of the
-original operation.
-The result type is the same, but the input type is a two-tuple with a
-qubit array that holds the control qubit(s) as the first element and
-the arguments of the original operation as the second element.
-The new operation supports `Controlled`, and will support
-`Adjoint` if and only if the original operation did.
-
-If the original operation took only a single argument, then singleton
-tuple equivalence will come into play here.
-For instance, `Controlled X` is the controlled version of the
-`X` operation.
-`X` has type `(Qubit => Unit is Adj + Ctl)`, so `Controlled X`
-has type `((Qubit[], (Qubit)) => Unit is Adj + Ctl)`;
-because of singleton tuple equivalence, this is the same as
-`((Qubit[], Qubit) => Unit is Adj + Ctl)`.
-
-If the base operation took several arguments, remember to enclose 
-the corresponding arguments of the controlled version of the operation in parentheses 
-to convert them into a tuple.
-For instance, `Controlled Rz` is the controlled version of the
-`Rz` operation.
-`Rz` has type `((Double, Qubit) => Unit is Adj + Ctl)`,
-so `Controlled Rz` has type
-`((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)`.
-Thus, `Controlled Rz(controls, (0.1, target))` would be
-a valid invocation of `Controlled Rz` (note the parentheses around `0.1, target`).
-
-As another example, `CNOT(control, target)` can be implemented as `Controlled X([control], target)`. 
-If a target should be controlled by 2 control qubits (CCNOT), we can use `Controlled X([control1, control2], target)` statement.
-
-### Examples
-
-This example of a Q# operation comes from the [Measurement](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/measurement) sample. Within operations, we can allocate qubits and use quantum operations on those qubits such as `H` and `X`:
-
-```qsharp
-/// # Summary
-/// Prepares a state and measures it in the Pauli-Z basis.
-operation MeasureOneQubit() : Result {
-        mutable result = Zero;
-
-        using (qubit = Qubit()) { // Allocate a qubit
-            H(qubit);               // Use a quantum operation on that qubit
-            set result = M(qubit);      // Measure the qubit
-            if (result == One) {    // Reset the qubit so that it can be released
-                X(qubit);
-            }
-
-            return result;
-        }
- }
-```
-
-This example of a function comes from the [PhaseEstimation](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) sample. It contains purely classical code. You can see that, unlike the example above, no qubits are allocated, and no quantum operations are used.
-
-```qsharp
-/// # Summary
-/// Given two arrays, returns a new array that is the pointwise product
-/// of each of the given arrays.
-function PointwiseProduct(left : Double[], right : Double[]) : Double[] {
-    mutable product = new Double[Length(left)];
-
-    for (idxElement in IndexRange(left)) {
-        set product w/= idxElement <- left[idxElement] * right[idxElement];
-    }
-    return product;
-}
-```
-
-It is also possible for a function to be passed qubits for processing, as in this example from the [ReversibleLogicSynthesis](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/reversible-logic-synthesis) sample. Qubits are passed to the function and used for processing, although at no point are the qubit states themselves modified.
-
-```qsharp
-/// # Summary
-/// Translate MCT masks into multiple-controlled Toffoli gates (with single
-/// targets).
-function GateMasksToToffoliGates(
-    qubits : Qubit[], 
-    masks : MCMTMask[]) 
-: MCTGate[] {
-
-    mutable result = new MCTGate[0];
-    let n = Length(qubits);
-
-    for (i in 0 .. Length(masks) - 1) {
-        let (controls, targets) = (masks[i])!;
-        let controlBits = IntegerBits(controls, n);
-        let targetBits = IntegerBits(targets, n);
-        let cQubits = Subarray(controlBits, qubits);
-        let tQubits = Subarray(targetBits, qubits);
-
-        for (target in tQubits) {
-            set result += [MCTGate(cQubits, target)];
-        }
-    }
-
-    return result;
-}
-```

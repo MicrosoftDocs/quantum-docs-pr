@@ -10,8 +10,10 @@ uid: microsoft.quantum.guide.basics
 
 # Q# Basics
 
-`**` TO ADD: 
+To do:
 - descriptions/links to where these things are covered in the user guide
+- fill out descriptions of types, statements, and expressions (*in Q# specifically*, instead of simply giving a vague sentence and saying "Q# has its own ...") so the other pages won't have to 
+- 
 
 
 

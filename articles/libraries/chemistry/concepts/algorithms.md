@@ -29,19 +29,19 @@ Note that if $e^{-i H t}$ were an ordinary exponential then the error in this ap
 This error occurs because $e^{-iHt}$ is an operator exponential and as a result there is an error incurred when using this formula due to the fact that the $H_j$ terms do not commute (*i.e.*, $H_j H_k \ne H_k H_j$ in general).
 
 If $t$ is large, Trotter–Suzuki formulas can still be used to simulate the dynamics accurately by breaking it up into a sequence of short time-steps.
-Let $r$ be the number of steps taken in the time evolution.
+Let $r$ be the number of steps taken in the time evolution, so each time step runs for time $t/r$. 
 Then, we have that
 $$
-    e^{-i\sum_{j=1}^m H_j t} =\left(\prod_{j=1}^m e^{-iH_j t/r}\right)^r + O(m^2 t^2/r),
+    e^{-i\sum_{j=1}^m H_j t} =\left(\prod_{j=1}^m e^{-iH_j t/r}\right)^r + O(m^3 t^2/r),
 $$
-which implies that if $r$ scales as $m^2 t^2/\epsilon$ then the error can be made at most $\epsilon$ for any $\epsilon>0$.
+which implies that if $r$ scales as $m^3 t^2/\epsilon$ then the error can be made at most $\epsilon$ for any $\epsilon>0$.
 
 More accurate approximations can be built by constructing a sequence of operator exponentials such that the error terms cancel.
 The simplest such formula, the symmetric Trotter formula or Strang splitting, takes the form
 $$
-    U_1(t) =\prod_{j=1}^m e^{-iH_j t/2}\prod_{j=m}^1 e^{-iH_j t} = e^{-iHt} + O(m^3 t^3),
+    U_1(t) = \left(\prod_{j=1}^{m-1} e^{-iH_j t/2r} e^{-iH_m t/r} \prod_{j=m-1}^1 e^{-iH_j t/2r}\right)^r = e^{-iHt} + O(m^4 t^3/r^2),
 $$
-which can be made less than $\epsilon$ for any $\epsilon>0$ by choosing $r$ to scale as $m^{3/2}t^{3/2}/\sqrt{\epsilon}$.
+the error of which can be made less than $\epsilon$ for any $\epsilon>0$ by choosing $r$ to scale as $m^{2}t^{3/2}/\sqrt{\epsilon}$.
 
 Even higher-order Trotter formulas can be constructed based on $U_1$.
 The simplest is the following fourth order formula, originally introduced by Suzuki:

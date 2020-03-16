@@ -22,7 +22,7 @@ Note that this low-level view of quantum information processing is often describ
 Thus, the single- and multi-qubit operations we sequentially apply can be readily represented in a "circuit diagram."
 In our case, we will define a Q# operation to perform the full three-qubit quantum Fourier transform, which has the following representation as a circuit:
 
-![Three qubit quantum Fourier transform circuit diagram](./qft_full.PNG | height=100)
+<img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" height="70">
 
 ## Prerequisites
 
@@ -113,7 +113,7 @@ So, applying the [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) to the fir
 
 In terms of a circuit representation, we are here:
 
-![Circuit diagram for three qubit QFT through first Hadamard](./qft_firstH.PNG | height=100)
+<img src="./qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" height="70">
 
 Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled [`R1`](xref:microsoft.quantum.intrinsic.r1) rotations.
 An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{i\theta}$ to the $\ket{1}$ component.
@@ -137,8 +137,7 @@ So, we call the `R1` gates acting on the first qubit (and controlled by the seco
 
 Hence we are here:
 
-<img src="./qft_firstqubit.PNG" alt="Circuit diagram for three qubit QFT through first qubit" height="100">
-![Circuit diagram for three qubit QFT through first qubit](./qft_firstqubit.PNG | height=100)
+<img src="./qft_firstqubit.PNG" alt="Circuit diagram for three qubit QFT through first qubit" height="70">
 
 Note that we use the [`PI()`](xref:microsoft.quantum.math.pi) function from the [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) namespace to define the rotations in terms of pi radians.
 Additionally, we divide by a `Double` (e.g. `2.0`) because dividing by an integer `2` would throw a type error. 
@@ -168,7 +167,7 @@ This is necessary because the nature of the quantum Fourier transform outputs th
 
 Hence we have finished writing the qubit-level operations of the quantum Fourier transform into our Q# operation:
 
-FULL CIRCUIT PIC
+<img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" height="70">
 
 *However*, we can't call it a day just yet.
 Our qubits were in state $\ket{0}$ when we allocated them, and we need to leave them the way we found them. 

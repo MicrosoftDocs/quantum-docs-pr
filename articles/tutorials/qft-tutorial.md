@@ -17,9 +17,14 @@ Although the power of quantum computation is revealed at the higher level of "wh
 The flexibility of Q# allows users to approach quantum systems from any such level of abstraction, and in this tutorial we dive into the qubits themselves.
 Specifically, we take a look under the hood of the [quantum Fourier transform](https://en.wikipedia.org/wiki/Quantum_Fourier_transform), a subroutine that is integral to many larger quantum algorithms.
 
-Note that this low-level view of quantum information processing is often desribed in terms of "[quantum circuits](xref:microsoft.quantum.concepts.circuits)," which represent the sequential application of gates to specific qubits of a system.
+Note that this low-level view of quantum information processing is often described in terms of "[quantum circuits](xref:microsoft.quantum.concepts.circuits)," which represent the sequential application of gates to specific qubits of a system.
 
-## Pre-requisites
+Thus, the single- and multi-qubit operations we sequentially apply can be readily represented in a "circuit diagram."
+In our case, we will define a Q# operation to perform the full three-qubit quantum Fourier transform, which has the following representation as a circuit:
+
+<img src="./qft_full.PNG" height="50">
+
+## Prerequisites
 
 * [Install](xref:microsoft.quantum.install) the Quantum Development Kit using your preferred language and development environment
 * If you already have the QDK installed, make sure you have [updated](xref:microsoft.quantum.update) to the latest version
@@ -56,10 +61,10 @@ For our operation to make use of existing Q# operations, we open the relevant `M
 namespace Quantum.Operations {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Diagnostics;
-	open Microsoft.Quantum.Math;
+    open Microsoft.Quantum.Math;
     open Microsoft.Quantum.Arrays;
 
-	// operations go here
+    // operations go here
 }
 ```
 
@@ -68,8 +73,8 @@ Next, we define the `Perform3qubitQFT` operation:
 
 ```qsharp
     operation Perform3qubitQFT() : Unit {
-		// do stuff
-	}
+        // do stuff
+    }
 ```
 For now, the operation takes no arguments and does not return anything---in this case we write that it returns a `Unit` object, which is akin to `void` in C# or an empty tuple, `Tuple[()]`, in Python.
 Later, we will modify it to return an array of measurement results, at which point `Unit` will be replaced by `Result[]`. 
@@ -83,7 +88,7 @@ Within our Q# operation, we first allocate a register of three qubits with the `
             Message("Initial state |000>:");
             DumpMachine();
 
-		}
+        }
 ```
 
 With `using`, the qubits are automatically allocated in the $\ket{0}$ state. We can verify this by using [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) and [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine), which print a string and the system's current state to the host console.
@@ -96,7 +101,8 @@ With `using`, the qubits are automatically allocated in the $\ket{0}$ state. We 
 
 ### Applying single-qubit and controlled gates
 
-Next, we apply the gates which comprise the operation itself (see the circuit diagram and explanation for the three-qubit example [here](https://en.wikipedia.org/wiki/Quantum_Fourier_transform#Example)).
+Next, we apply the gates which comprise the operation itself.
+
 Q# already contains many basic quantum gates as operations in the [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) namespace, and these are no exception. 
 To apply an operation to a specific qubit from a register (i.e. a single `Qubit()` from an array `Qubit[]`) we use standard index notation.
 So, applying the [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) to the first qubit of our register `qs` takes the form:
@@ -104,6 +110,11 @@ So, applying the [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) to the fir
 ```qsharp
             H(qs[0]);
 ```
+
+In terms of a circuit representation, we are here:
+
+<img src="./qft_firstH.PNG" width="50">
+
 
 Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled [`R1`](xref:microsoft.quantum.intrinsic.r1) rotations.
 An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{i\theta}$ to the $\ket{1}$ component.
@@ -124,6 +135,10 @@ So, we call the `R1` gates acting on the first qubit (and controlled by the seco
             Controlled R1([qs[1]], (PI()/2.0, qs[0]));
             Controlled R1([qs[2]], (PI()/4.0, qs[0]));
 ```
+
+Hence we are here:
+
+<img src="./qft_firstqubit.PNG" width="150">
 
 Note that we use the [`PI()`](xref:microsoft.quantum.math.pi) function from the [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) namespace to define the rotations in terms of pi radians.
 Additionally, we divide by a `Double` (e.g. `2.0`) because dividing by an integer `2` would throw a type error. 
@@ -150,6 +165,13 @@ we need only apply a [`SWAP`](xref:microsoft.quantum.intrinsic.swap) gate to com
 ```
 
 This is necessary because the nature of the quantum Fourier transform outputs the qubits in reverse order, so the swaps allow for seamless integration of the subroutine into larger algorithms.
+
+Hence we have finished writing the qubit-level operations of the quantum Fourier transform into our Q# operation:
+
+FULL CIRCUIT PIC
+
+*However*, we can't call it a day just yet.
+Our qubits were in state $\ket{0}$ when we allocated them, and we need to leave them the way we found them. 
 
 
 #### De-allocate qubits

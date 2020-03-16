@@ -4,9 +4,10 @@ name: AndLadder
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: |-
-  Performs a controlled 'AND ladder' on the target qubits.
+  Performs a controlled "AND ladder" on a register of target qubits.
 
-  This applies a unitary given by the following map on computational basis vectors:
+  This operation applies a transformation described by the following
+  mapping of the computational basis,
   $$
   \begin{align}
   \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n - 1}} \mapsto

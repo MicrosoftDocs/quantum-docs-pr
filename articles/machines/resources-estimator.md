@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Quantum Development Kit Resources Estimator | Microsoft Docs 
-description: Overview of Microsoft's Quantum Development Kit Resources estimator 
+title: Quantum Development Kit Resources Estimator 
+description: Learn about the Resources Estimator, which estimates the resources required to run a given instance of a Q# operation on a quantum computer.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com 
 ms.date: 1/22/2019
@@ -15,7 +15,7 @@ As the name implies, the `ResourcesEstimator` estimates the resources
 required to run a given instance of a Q# operation on a quantum computer.
 It accomplishes this by executing the quantum operation without actually 
 simulating the state of a quantum computer; for this reason, 
-it can estimate resources for Q# operations that use thousands of qubits.
+it can estimate resources for Q# operations that use thousands of qubits, if the classical part of the code can be run in a reasonable time.
 
 ## Usage
 
@@ -112,32 +112,32 @@ The following is the list of metrics estimated by the `ResourcesEstimator`:
 
 ## Providing the Probability of Measurement Outcomes
 
-<xref:microsoft.quantum.primitive.assertprob> from the <xref:microsoft.quantum.primitive> namespace can 
+<xref:microsoft.quantum.intrinsic.assertprob> from the <xref:microsoft.quantum.intrinsic> namespace can 
 be used to provide information about the expected probability of a measurement to help drive the execution 
 of the Q# program. The following example illustrates this:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
+operation Teleport(source : Qubit, target : Qubit) : Unit {
 
-    using (ancilla = Qubit()) {
+    using (qubit = Qubit()) {
 
-        H(ancilla);
-        CNOT(ancilla, target);
+        H(q);
+        CNOT(qubit, target);
 
-        CNOT(source, ancilla);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(qubit) == One) { X(target); X(qubit); }
     }
 }
 ```
 
 When the `ResourcesEstimator` encounters `AssertProb` it will record that measuring
-`PauliZ` on `source` and `ancilla` should be given an outcome of `Zero` with probability
+`PauliZ` on `source` and `q` should be given an outcome of `Zero` with probability
 0.5. When it executes `M` later, it will find the recorded values of
 the outcome probabilities and `M` will return `Zero` or `One` with probability
 0.5.

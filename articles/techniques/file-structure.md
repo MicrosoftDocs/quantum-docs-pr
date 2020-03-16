@@ -1,11 +1,12 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Quantum development techniques introduction | Microsoft Docs 
-description: Quantum development techniques introduction
+title: Q# program overview
+description: Learn the basic structure of a quantum program and how it represents transformations of quantum states.
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+uid: microsoft.quantum.techniques.file-structure
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # For Quantum products none of these categories have been defined  yet.
 # ms.service: service-name-from-white-list

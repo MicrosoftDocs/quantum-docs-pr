@@ -35,6 +35,6 @@ output:
     uid: Unit
 seeAlso:
 - microsoft.quantum.canon.applyleoperationonphaselea
-- microsoft.quantum.canon.applyleoperationonphaselea
+- microsoft.quantum.canon.applyleoperationonphaselec
 - microsoft.quantum.canon.applyleoperationonphaseleca
 ...

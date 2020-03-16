@@ -1,0 +1,8 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.deprecated
+name: Deprecated
+type: newtype
+namespace: Microsoft.Quantum.Core
+summary: Compiler recognized attribute used to mark a type or callable as deprecated.
+syntax: newtype Deprecated = String;
+...

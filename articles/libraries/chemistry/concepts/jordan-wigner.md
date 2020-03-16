@@ -1,6 +1,6 @@
 ---
-title: Jordan-Wigner Representation | Microsoft Docs
-description: Jordan-Wigner Representation Conceptual Docs
+title: Jordan-Wigner Representation
+description: Learn about the Jordan-Wigner Representation, which maps Hamiltonian operators to unitary matrices that can more easily implemented on a quantum computer. 
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
@@ -23,10 +23,15 @@ This means that qubits can naturally store the occupation of a given spin orbita
 We then have that $a^\dagger_j \ket{0}_j = \ket{1}_j$ and $a^\dagger_j \ket{1}_j = 0$.
 It is easy to verify that
 \begin{align}
-a^\dagger_j &= \begin{bmatrix}0 & 1 \\\ 0 &0 \end{bmatrix}=\frac{X_j + iY_j}{2}, \nonumber\\\\
-a_j &= \begin{bmatrix}0 & 0 \\\ 1 &0 \end{bmatrix}=\frac{X_j - iY_j}{2},
+a^\dagger_j &= \begin{bmatrix}0 & 0 \\\ 1 &0 \end{bmatrix}=\frac{X_j - iY_j}{2}, \nonumber\\\\
+a_j &= \begin{bmatrix}0 & 1 \\\ 0 &0 \end{bmatrix}=\frac{X_j + iY_j}{2},
 \end{align}
 where $X_j$ and $Y_j$ are the Pauli-$X$ and -$Y$ operators acting on qubit $j$.
+
+>[!NOTE]
+> In Q# the $\ket{0}$ state represents the +1 eigenstate of the $Z$ operator. In some areas of physics $\ket{0}$ represents the low-energy ground state and thus the -1 eigenstate of the $Z$ operator. Therefore some formulas might differ from popular literature.
+
+In the chemistry library we use $\ket{0}$ to represent an unoccupied spin-orbital.
 This shows that for a single spin orbital it is easy to represent creation and annihilation operators in terms of unitary matrices that quantum computers understand.
  Note that while $X$ and $Y$ are unitary $a^\dagger$ and $a$ are not.
  We will see later that this does not pose a challenge for simulation.

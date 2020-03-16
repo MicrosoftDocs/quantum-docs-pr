@@ -1,6 +1,6 @@
 ---
-title: Quantum chemistry examples | Microsoft Docs
-description: Quantum chemistry examples Docs
+title:  Quantum chemistry sample applications
+description: Explore sample applications of the Microsoft Quantum chemistry library. 
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018

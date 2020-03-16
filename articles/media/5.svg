@@ -14,7 +14,7 @@
    version="1.1"
    id="svg45"
    sodipodi:docname="5.svg"
-   inkscape:version="0.92.1 r15371">
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
      id="metadata49">
     <rdf:RDF>
@@ -23,7 +23,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -36,20 +36,20 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="640"
-     inkscape:window-height="480"
+     inkscape:window-width="2736"
+     inkscape:window-height="1699"
      id="namedview47"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.21024124"
-     inkscape:cx="0.91143748"
-     inkscape:cy="-421.07944"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:zoom="19.028865"
+     inkscape:cx="11.620193"
+     inkscape:cy="13.80112"
+     inkscape:window-x="-13"
+     inkscape:window-y="-13"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg45" />
   <defs
      id="defs16">
@@ -97,6 +97,13 @@
       </symbol>
     </g>
   </defs>
+  <rect
+     style="fill:#ffffff;stroke-width:0.74999994"
+     id="rect837"
+     width="24.475973"
+     height="27.668491"
+     x="-1.1035866"
+     y="-0.59525692" />
   <g
      id="surface1"
      transform="translate(-296.95442,-79.008125)">

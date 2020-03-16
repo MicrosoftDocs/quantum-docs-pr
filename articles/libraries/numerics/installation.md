@@ -1,9 +1,9 @@
 ---
-title: Numerics Library Installation and Validation | Microsoft Docs
-description: Numerics Library Installation and Validation
+title: Microsoft Quantum numerics library - Installation and Validation
+description: Learn how to add the Microsoft Quantum numerics library to your Visual Studio 2019 or later installation. 
 author: thomashaener
 ms.author: thhaner
-ms.date: 5/14/2019
+ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
 ---
@@ -28,7 +28,7 @@ For more details, see the [Package Manager UI guide](https://docs.microsoft.com/
 
 Alternatively, you can use the Package Manager Console to add the numerics library to your project via the command line interface.
 
-![](~/media/vs2017-nuget-console-menu.png)
+![Use the Package Manager Console from the command line](../../media/vs2017-nuget-console-menu.png)
 
 From the package manager console, run the following:
 
@@ -40,7 +40,7 @@ For more details, see the [Package Manager Console guide](https://docs.microsoft
 
 **Command line or Visual Studio Code:** Using the command line on its own or from within Visual Studio Code, you can use the `dotnet` command to add NuGet package reference to your project:
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Numerics
 ```
 
@@ -50,10 +50,10 @@ dotnet add package Microsoft.Quantum.Numerics
 Like the rest of the Quantum Development Kit, the numerics library comes with samples that help you get started as quickly as possible.
 To test your installation using these samples, clone the [main samples repository](https://github.com/Microsoft/Quantum) and then run one of the samples.
 
-To run the [`CustomModAdd`](https://github.com/microsoft/Quantum/tree/master/Numerics/CustomModAdd) sample:
+To run the [`CustomModAdd`](https://github.com/microsoft/Quantum/tree/master/samples/numerics/CustomModAdd) sample:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics/CustomModAdd
+cd Quantum/samples/numerics/CustomModAdd
 dotnet run
 ```

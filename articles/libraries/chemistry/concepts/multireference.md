@@ -1,6 +1,6 @@
 ---
-title: Correlated wavefunctions | Microsoft Docs
-description: Quantum Dynamics Conceptual Docs
+title: Correlated wavefunctions
+description: Learn about dynamic and non-dynamic correlations in wavefunctions using the Microsoft Quantum chemistry library. 
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019

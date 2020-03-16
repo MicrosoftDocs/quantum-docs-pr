@@ -1,6 +1,6 @@
 ---
-title: Q# standard libraries - data structures | Microsoft Docs
-description: Q# standard libraries - data structures
+title: Data structures in the Q# standard libraries
+description: Learn about data structures, oracles and dynamical generators in the Microsoft Q# standard libraries.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com 
@@ -15,7 +15,7 @@ ms.topic: article
 Along with user-defined types for representing quantum concepts, the canon also provides operations, functions, and types for working with classical data used in the control of quantum systems.
 For instance, the <xref:microsoft.quantum.arrays.reversed> function takes an array as input and returns the same array in reverse order.
 This can then be used on an array of type `Qubit[]` to avoid having to apply unnecessary $\operatorname{SWAP}$ gates when converting between quantum representations of integers.
-Similarly, we saw in the previous section that types of the form `(Int, Int -> T)` can be useful for representing random access collections, so the <xref:microsoft.quantum.arrays.lookupfunction> function provides a convienent way of constructing such types from array types.
+Similarly, we saw in the previous section that types of the form `(Int, Int -> T)` can be useful for representing random access collections, so the <xref:microsoft.quantum.arrays.lookupfunction> function provides a convenient way of constructing such types from array types.
 
 ### Pairs ###
 
@@ -68,11 +68,11 @@ Here the term oracle refers to a blackbox quantum subroutine that acts upon a se
 This subroutine often can be thought of as an input to a quantum algorithm that accepts the oracle, in addition to some other parameters, and applies a series of quantum operations and treating a call to this quantum subroutine as if it were a fundamental gate.
 Obviously, in order to actually implement the larger algorithm a concrete decomposition of the oracle into fundamental gates must be provided but such a decomposition is not needed in order to understand the algorithm that calls the oracle.
 In Q#, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.
-Moreover, user-defined types are used to label the different oracle representations in a type-safe way, making it difficult to accidently conflate different kinds of black box operations.
+Moreover, user-defined types are used to label the different oracle representations in a type-safe way, making it difficult to accidentally conflate different kinds of black box operations.
 
 Such oracles appear in a number of different contexts, including famous examples such as [Grover's search](https://en.wikipedia.org/wiki/Grover%27s_algorithm) and quantum simulation algorithms.
 Here we focus on the oracles needed for just two applications: amplitude amplification and phase estimation.
-We will first discuss amplitude amplification oracles before proceding to phase estimation.
+We will first discuss amplitude amplification oracles before proceeding to phase estimation.
 
 ### Amplitude Amplification Oracles ###
 
@@ -146,14 +146,14 @@ We can then combine these two oracles together to rotate between the two states 
 
 For phase estimation the oracles are somewhat more natural.
 The aim in phase estimation is to design a subroutine that is capable of sampling from the eigenvalues of a unitary matrix.
-This method is indispensible in quantum simulation because for many physical problems in chemistry and material science these eigenvalues give the ground-state energies of quantum systems which provides us valuable information about the phase diagrams of materials and reaction dynamics for molecules.
+This method is indispensable in quantum simulation because for many physical problems in chemistry and material science these eigenvalues give the ground-state energies of quantum systems which provides us valuable information about the phase diagrams of materials and reaction dynamics for molecules.
 Every flavor of phase estimation needs an input unitary.
 This unitary is customarily described by one of two types of oracles.
 
 > [!TIP]
 > Both of the oracle types described below are covered in the samples.
-> To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation).
-> To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
+> To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation).
+> To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
 
 The first type of oracle, which we call a discrete query oracle and represent with the user-defined type <xref:microsoft.quantum.oracles.discreteoracle>, simply involves a unitary matrix.
 If $U$ is the unitary whose eigenvalues we wish to estimate then the oracle for $U$ is simply a stand-in for a subroutine that implements $U$.
@@ -232,8 +232,8 @@ The dynamical generator modeling library provides a framework for systematically
 
 > [!TIP]
 > The dynamical generator library described below is covered in the samples. 
-> For an example based on the Ising model, please see the [**IsingGenerators** sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingGenerators).
-> For an example based on molecular Hydrogen, please see the [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) and [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationGUI) samples.
+> For an example based on the Ising model, please see the [**IsingGenerators** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
+> For an example based on molecular Hydrogen, please see the [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) and [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) samples.
 
 ### Complete Description of a Generator ###
 

@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Q# standard libraries - error correction | Microsoft Docs
-description: Q# standard libraries - error correction
+title: Error correction in the Q# standard libraries
+description: Learn how to use error correcting codes in your Q# programs while protecting the state of the qubits.  
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com 
@@ -55,7 +55,7 @@ For example, if we measure $Z_0$, we get a different result for $\ket{\overline{
 On the other hand, consider measuring $Z_0 Z_1$, the parity of the first two bits in each computational basis state.
 Recall that each measurement of a Pauli operator checks which eigenvalue  the state being measured corresponds to, so for each state $\ket{\psi}$ in the table above, we can compute $Z_0 Z_1 \ket{\psi}$ to see if we get $\pm\ket{\psi}$.
 Note that $Z_0 Z_1 \ket{000} = \ket{000}$ and that $Z_0 Z_1 \ket{111} = \ket{111}$, so that we conclude that this measurement does the same thing to both encoded states.
-On the other hand, $Z_0 Z_1 \ket{100} = - \ket{100}$ and $Z_0 Z_1 \ket{011} = -\ket{011}$, so the result of measuring $Z_0 Z_1$ reveals useful information about which error occured.
+On the other hand, $Z_0 Z_1 \ket{100} = - \ket{100}$ and $Z_0 Z_1 \ket{011} = -\ket{011}$, so the result of measuring $Z_0 Z_1$ reveals useful information about which error occurred.
 
 To emphasize this, we repeat the table above, but add the results of measuring $Z_0 Z_1$ and $Z_1 Z_2$ on each row.
 We denote the results of each measurement by the sign of the eigenvalue that is observed, either $+$ or $-$, corresponding to the Q# `Result` values of `Zero` and `One`, respectively.
@@ -67,9 +67,9 @@ We denote the results of each measurement by the sign of the eigenvalue that is 
 | $X_1$ | $\ket{010}$ | $\ket{101}$ | $-$ | $-$ |
 | $X_2$ | $\ket{001}$ | $\ket{110}$ | $+$ | $-$ |
 
-Thus, the results of the two measurements uniquely determines which bit-flip error occured, but without revealing any information about which state we encoded.
+Thus, the results of the two measurements uniquely determines which bit-flip error occurred, but without revealing any information about which state we encoded.
 We call these results a *syndrome*, and refer to the process of mapping a syndrome back to the error that caused it as *recovery*.
-In particular, we emphasize that recovery is a *classical* inference procedure which takes as its input the syndrome which occured, and returns a prescription for how to fix any errors that may have occured.
+In particular, we emphasize that recovery is a *classical* inference procedure which takes as its input the syndrome which occurred, and returns a prescription for how to fix any errors that may have occurred.
 
 > [!NOTE]
 > The bit-flip code above can only correct against single bit-flip errors; that is, an `X` operation acting on a single qubit.
@@ -77,7 +77,7 @@ In particular, we emphasize that recovery is a *classical* inference procedure w
 > Similarly, applying a phase flip operation `Z` will map $\ket{\overline{1}}$ to $-\ket{\overline{1}}$, and hence will map $\ket{\overline{+}}$ to $\ket{\overline{-}}$.
 > More generally, codes can be created to handle larger number of errors, and to handle $Z$ errors as well as $X$ errors.
 
-The insight that we can describe measurements in quantum error correction that act the same way on all code states, is the essense of the *stabilizer formalism*.
+The insight that we can describe measurements in quantum error correction that act the same way on all code states, is the essence of the *stabilizer formalism*.
 The Q# canon provides a framework for describing encoding into and decoding from stabilizer codes, and for describing how one recovers from errors.
 In this section, we describe this framework and its application to a few simple quantum error-correcting codes.
 
@@ -127,6 +127,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-We explore this in more detail in the [bit flip code sample](https://github.com/Microsoft/Quantum/tree/master/Samples/src/BitFlipCode).
+We explore this in more detail in the [bit flip code sample](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
 
-Aside from the bit-flip code, the Q# canon is provided with implementations of the [five-qubit perfect code](https://arxiv.org/abs/1305.08), and the [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052), both of which can correct an arbitrary single-qubit error.
+Aside from the bit-flip code, the Q# canon is provided with implementations of the [five-qubit perfect code](https://arxiv.org/abs/quant-ph/9602019), and the [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052), both of which can correct an arbitrary single-qubit error.

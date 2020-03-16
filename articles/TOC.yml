@@ -1,40 +1,50 @@
 - name: Microsoft Quantum Documentation
   href: index.yml
-- name: Overview
+- name: Get started with quantum computing
   items:
-  - name: Get started
+  - name: What is quantum computing?
+    href: overview/what-is-quantum-computing.md
+  - name: What can a quantum computer do?
+    href: overview/quantum-computers.md
+  - name: Why learn quantum computing?
+    href: overview/why-learn-quantum-computing.md
+  - name: What are Q# and the QDK?
+    href: overview/what-is-qsharp.md
+  - name: How can I learn more?
+    href: overview/how-to-learn-quantum-computing.md
+- name: Get the Quantum Development Kit
+  items:
+  - name: Get started with the QDK
     href: welcome.md
-  - name: Five questions about quantum computing
-    items:
-    - name: What is quantum computing?
-      href: overview/what-is-quantum-computing.md
-    - name: What can a quantum computer do?
-      href: overview/quantum-computers.md
-    - name: Why learn quantum computing?
-      href: overview/why-learn-quantum-computing.md
-    - name: What is Q#?
-      href: overview/what-is-qsharp.md
-    - name: How to learn quantum computing?
-      href: overview/how-to-learn-quantum-computing.md
-  - name: Learn with the Quantum Katas
-    href: intro-to-katas.md
-- name: Quickstarts
-  items:
-  - name: Quantum random number generator
-    href: quickstarts/qrng.md
-  - name: Quantum basics with Q#
-    href: quickstart.md
-  - name: Implement Grover's search algorithm
-    href: quickstarts/search.md
-- name: How-to guides
-  items:
   - name: Install the QDK
-    href: install-guide/index.md
+    items:
+    - name: Installation overview
+      href: install-guide/index.md
+    - name: Q# + C#
+      href: install-guide/csinstall.md
+    - name: Q# + Python
+      href: install-guide/pyinstall.md
+    - name: Q# Jupyter notebooks
+      href: install-guide/qjupyter.md
   - name: Update the QDK
-    href: install-guide/update.md  
-  - name: Create a Q# project
+    href: install-guide/update.md
+  - name: How to create a Q# project
     href: how-to-guides/create-qsharp-project.md
-- name: Concepts
+- name: Q# learning resources
+  items:
+  - name: Quickstarts
+    items:
+    - name: Quantum random number generator
+      href: quickstarts/qrng.md
+    - name: Exploring entanglement with Q#
+      href: quickstart.md
+    - name: "Implement Grover's search algorithm"
+      href: quickstarts/search.md
+  - name: Learn Q# with the Quantum Katas
+    href: intro-to-katas.md
+  - name: Q# code samples
+    href: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
+- name: The QDK in-depth
   items:
   - name: Quantum development techniques
     topicHref: techniques/index.md
@@ -42,27 +52,17 @@
   - name: Q# programming language
     topicHref: language/index.md
     href: language/toc.yml
-  - name: Q# libraries
-    href: libraries/toc.yml
-  - name: Quantum computing concepts
-    href: concepts/toc.yml
   - name: Quantum simulators and resource estimators
     href: machines/toc.yml
-- name: Tutorials
-  items:
-  - name: Qubit level programming
-    href: tutorials/qft-tutorial.md
-- name: Resources
-  items:
-  - name: QDK Release Notes
-    topicHref: relnotes/index.md
-    href: relnotes/toc.yml
-  - name: Contributing to the QDK
-    href: contributing/toc.yml
-    topicHref: contributing/index.md
-  - name: Glossary
-    href: Glossary.md
-  - name: For more information
-    href: for-more-info.md
-  - name: License
-    href: license.md
+- name: Q# libraries
+  href: libraries/toc.yml
+- name: Quantum computing concepts
+  href: concepts/toc.yml
+- name: Further reading
+  href: for-more-info.md
+- name: Contributing to the QDK
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: QDK Release Notes
+  topicHref: relnotes/index.md
+  href: relnotes/toc.yml

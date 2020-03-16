@@ -1,6 +1,6 @@
 ---
-title: Contributing to the Quantum Development Kit | Microsoft Docs
-description: Contributing to the Quantum Development Kit
+title: Contributing to the Microsoft Quantum Development Kit
+description: Learn how to contribute to the Microsoft Quantum Development Kit and the quantum development community. 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
@@ -8,7 +8,7 @@ ms.topic: article
 uid: microsoft.quantum.contributing
 ---
 
-# Contributing to the Quantum Development Kit #
+# Contributing to the Quantum Development Kit
 
 The Quantum Development Kit is more than a collection of tools for writing quantum programs.
 It's part of a broad community of people discovering quantum computing, performing research in quantum algorithms, developing new applications for quantum devices, and otherwise working to make the most out of the quantum programming.
@@ -18,7 +18,7 @@ We're very thankful for your kind contributions, and for the opportunity to work
 
 In this guide, we provide some advice on how to make your contribution as useful as possible to the broader quantum programming community.
 
-## Building Community ##
+## Building Community
 
 The very first thing about making a contribution is to always keep in mind the community that you are contributing to.
 By acting respectfully and professionally towards your peers in the quantum programming community and more broadly, you can help to make sure that your efforts build the best and most welcoming community possible.
@@ -27,7 +27,7 @@ As a part of that effort, all Quantum Development Kit projects have adopted the 
 For more information, please see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-## What Kinds of Contributions Help the Community? ##
+## What Kinds of Contributions Help the Community?
 
 There are lots of different ways to help the quantum programming community through your contributions.
 In this guide, we'll focus on three ways that are especially relevant to the Quantum Development Kit.
@@ -41,7 +41,7 @@ That said, this is definitely not an exhaustive list — we encourage you to exp
 These different kinds of contributions are all immensely valuable, and are greatly appreciated.
 In the rest of the guide, we'll offer advice on how to make each kind of contribution.
 
-## Where Do Contributions Go? ##
+## Where Do Contributions Go?
 
 The Quantum Development Kit includes a number of different pieces that all work together to realize a platform for writing quantum programs.
 Each of these different pieces finds its home on a different repository, so the one of the earlier things to sort out is where each contribution best belongs.
@@ -57,12 +57,12 @@ Each of these different pieces finds its home on a different repository, so the 
 > [!NOTE]
 > We unfortunately cannot accept code and documentation contributions on the [**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC) repository at this time, but we still very much appreciate bug reports.
 
-There are also a few other, more specialized repositories focusing on different events, or on auxillary functionality related to the Quantum Development Kit.
+There are also a few other, more specialized repositories focusing on different events, or on auxiliary functionality related to the Quantum Development Kit.
 
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): LaTeX formatting support for Q# syntax.
 - [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): IQ# Notebook for Deutsch–Jozsa tutorial given at the 2019 intern workshop.
 
-## Next steps ##
+## Next steps
 
 Thanks for being a part of the Quantum Development Kit community, we're excited for your contributions!
 If you'd like to learn more about contributing, please continue with one of the following guides.
@@ -75,4 +75,3 @@ If you'd like to learn more about contributing, please continue with one of the 
 
 > [!div class="nextstepaction"]
 > [Learn how to open pull requests](xref:microsoft.quantum.contributing.pulls)
-

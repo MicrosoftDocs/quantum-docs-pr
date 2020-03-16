@@ -15,7 +15,7 @@
    viewBox="0 0 158.71394 38.872234"
    version="1.1"
    id="svg11485"
-   inkscape:version="0.92.1 r15371"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="tp.svg">
   <defs
      id="defs11479">
@@ -161,15 +161,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.9126821"
-     inkscape:cx="-15.700008"
+     inkscape:cx="246.90587"
      inkscape:cy="76.459301"
      inkscape:document-units="mm"
      inkscape:current-layer="g13197"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="1912"
-     inkscape:window-y="-8"
+     inkscape:window-width="3840"
+     inkscape:window-height="2035"
+     inkscape:window-x="5459"
+     inkscape:window-y="-13"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -183,7 +183,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -195,6 +195,13 @@
     <g
        id="g13197"
        transform="translate(-4.5357143,-60.47619)">
+      <rect
+         style="fill:#ffffff;stroke-width:0.27514988"
+         id="rect1047"
+         width="161.81941"
+         height="42.804714"
+         x="-52.776142"
+         y="142.58788" />
       <g
          id="g14633"
          transform="translate(5.4258082,-12.373489)">

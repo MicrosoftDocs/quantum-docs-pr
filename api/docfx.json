@@ -7,7 +7,6 @@
           "**/*.yml"
         ],
         "src": ".",
-        "version": "qsharp-preview",
         "dest": "api",
         "exclude": [
           "**/obj/**",
@@ -31,23 +30,10 @@
         ]
       }
     ],
-    "versions": {
-      "qsharp-preview": {
-        "dest": "qsharp-preview"
-      }
-    },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "latex_macros": {
-        "ket": ["\\left| #1\\right\\rangle", 1],
-        "bra": ["\\left\\langle #1\\right|", 1],
-        "braket": ["\\left\\langle #1 \\right\\rangle", 1],
-        "boldone": "\\mathbf{1}",
-        "expect": "\\mathbb{E}",
-        "variance": "\\operatorname{Var}",
-        "defeq": "\\mathrel{:=}"
-      },
+      "show_latex": true,
       "ms.prod": "quantum",
       "ms.topic": "managed-reference",
       "ms.devlang":"qsharp",
@@ -57,7 +43,21 @@
       "feedback_product_url": "https://github.com/microsoft/quantum/issues",
       "titleSuffix": "Q# reference - Microsoft Quantum"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "latex_macros": {
+        "**/**.yml": {
+          "ket": ["\\left| #1\\right\\rangle", 1],
+          "bra": ["\\left\\langle #1\\right|", 1],
+          "braket": [ "\\left\\langle #1 \\right\\rangle", 1 ],
+          "id": "\\mathbb{1}",
+          "boldone": "\\mathbf{1}",
+          "expect": "\\mathbb{E}",
+          "variance": "\\operatorname{Var}",
+          "defeq": "\\mathrel{:=}",
+          "dd": "\\mathrm{d}"
+        }
+      }
+    },
     "template": [],
     "dest": "quantum-api"
   }

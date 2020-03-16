@@ -43,15 +43,15 @@ $$
 $$
 the error of which can be made less than $\epsilon$ for any $\epsilon>0$ by choosing $r$ to scale as $m^{3/2}t^{3/2}/\sqrt{\epsilon}$.
 
-Even higher-order formulas, specifically (2$k$)th-order for $k>0$, can be constructed recursively:
+Even higher-order formulas, specifically ($2k$)th-order for $k>0$, can be constructed recursively:
 $$
-    U_{2k}(t) = U_{2k-2}^2(s_k t) U_{2k-2}([1-4s_k]t) U_{2k-2}^2(s_k t) = e^{-iHt} + O(\frac{(m t)^{2k+1}}{r^{2k}}),
+    U_{2k}(t) = [U_{2k-2}(s_k\, t)]^2 U_{2k-2}([1-4s_k]t) [U_{2k-2}(s_k\, t)]^2 = e^{-iHt} + O((m t)^{2k+1}/r^{2k}),
 $$
 where $s_k = (4-4^{1/(2k-1)})^{-1}$.
 
 The simplest is the following fourth order ($k=2$) formula, originally introduced by Suzuki:
 $$
-    U_4(t) = U_2^2(s_2t) U_2([1-4s_2]t)U_2^2(s_2 t) = e^{-iHt} +O(m^5t^5/r^4),
+    U_4(t) = [U_2(s_2\,t)]^2 U_2([1-4s_2]t) [U_2(s_2 t)]^2 = e^{-iHt} +O(m^5t^5/r^4),
 $$
 where $s_2 = (4-4^{1/3})^{-1}$.
 In general, arbitrarily high-order formulas can be similarly constructed; however, the costs incurred from using more complex integrators often outweigh the benefits beyond fourth order for most practical problems.

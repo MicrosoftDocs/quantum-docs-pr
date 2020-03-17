@@ -10,6 +10,131 @@ uid: microsoft.quantum.guide.using.controlflow
 
 # Control flow in Q#
 
+## from ops and fns in qdevtechs
+Split some of this to ops/fns page? 
+## Control Flow
+
+Within an operation or function, each statement executes in order, similar to most common imperative classical languages.
+This flow of control can be modified, however, in three distinct ways:
+
+- `if` Statements
+- `for` Loops
+- `repeat`-`until` Loops
+
+We defer discussion of the latter until we discuss [Repeat Until Success (RUS)](xref:microsoft.quantum.techniques.qubits#measurements) circuits.
+The `if` and `for` control flow constructs, however, proceed in a familiar sense to most classical programming languages.
+In particular, an `if` statement can take a condition, may be followed by one or more `elif` statements, and may end with an `else`:
+
+```qsharp
+if (pauli == PauliX) {
+    X(qubit);
+} elif (pauli == PauliY) {
+    Y(qubit);
+} elif (pauli == PauliZ) {
+    Z(qubit);
+} else {
+    fail "Cannot use PauliI here.";
+}
+```
+
+Similarly, `for` loops indicate iteration over a range of integers or over the elements of an array:
+
+```qsharp
+for (idxQubit in 0..nQubits - 1) {
+    // Do something to idxQubit...
+}
+```
+
+Importantly, `for` loops and `if` statements can even be used in operations for which specializations are auto-generated. In that case the adjoint of a `for` loop reverses the direction and takes the adjoint of each iteration.
+This follows the "shoes-and-socks" principle: if you wish to undo putting on socks and then shoes, you must undo putting on shoes and then undo putting on socks.
+It works decidedly less well to try and take your socks off while you're still wearing your shoes!
+
+## Operations and Functions as First-Class Values
+
+One critical technique for reasoning about control flow and classical logic using functions rather than operations is to utilize that operations and functions in Q# are *first-class*.
+That is, they are each values in the language in their own right.
+For instance, the following is perfectly valid Q# code, if a little indirect:
+
+```qsharp
+operation FirstClassExample(target : Qubit) : Unit {
+    let ourH = H;
+    ourH(target);
+}
+```
+
+The value of the variable `ourH` in the snippet above is then the operation <xref:microsoft.quantum.intrinsic.h>, such that we can call that value like any other operation.
+This allows us to write operations that take operations as a part of their input, forming higher-order control flow concepts.
+For instance, we could imagine wanting to "square" an operation by applying it twice to the same target qubit.
+
+```qsharp
+operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
+    op(target);
+    op(target);
+}
+```
+
+In this example, the `=>` arrow that appears in the type `(Qubit => Unit)` denotes that the input field `op` is an operation which takes as its input the type `Qubit` and produces an empty tuple as its output.
+Additionally we specify the characteristics of that operation type, which contain the information about which functors are supported.
+An operation of type `(Qubit => Unit)` supports neither the `Adjoint` nor the `Controlled` functor. 
+If we want to indicate that an operation of that type has to support e.g. the `Adjoint` functor, we have to declare it as being adjointable. This is done by using the annotation `is Adj` to the type. 
+Similarly, `(Qubit => Unit is Ctl)` denotes that an operation of that type supports the `Controlled` functor. 
+We will explore this further when we discuss [types in Q#](xref:microsoft.quantum.language.type-model) more generally.
+
+For now, we emphasize that we can also return operations as a part of outputs, such that we can isolate some kinds of classical conditional logic as a classical function which returns a description of a quantum program in the form of an operation.
+As a simple example, consider the teleportation example, in which the party receiving a two-bit classical message needs to use the message to decode their qubit into the proper teleported state.
+We could write this in terms of a function that takes those two classical bits and returns the proper decoding operation.
+
+```qsharp
+function TeleporationDecoderForMessage(hereBit : Result, thereBit : Result)
+: (Qubit => Unit is Adj + Ctl) {
+
+    if (hereBit == Zero && thereBit == Zero) {
+        return I;
+    } elif (hereBit == One && thereBit == Zero) {
+        return X;
+    } elif (hereBit == Zero && thereBit == One) {
+        return Z;
+    } else {
+        return Y;
+    }
+}
+```
+
+This new function is indeed a function, in that if we call it with the same values of `hereBit` and `thereBit`, we will always get back the same operation.
+Thus, the decoder can be safely run inside operations without having to reason about how the decoding logic interacts with the definitions of the different operation specializations.
+That is, we have isolated the classical logic inside a function, guaranteeing to the compiler that the function call can be reordered with impunity so long as the input is preserved.
+
+We can also treat functions as first-class values, as we will see in more detail when we discuss [operations and function types](#operations-and-functions-as-first-class-values).
+
+## Partially Applying Operations and Functions
+
+We can do significantly more with functions that return operations by using *partial application*, in which we can provide one or more parts of the input to a function or operation without actually calling it. For example, recalling the `ApplyTwice` example above, we can indicate that we don't want to specify, right away, to which qubit the input operation should apply:
+
+```qsharp
+operation PartialApplicationExample(op : (Qubit => Unit), target : Qubit) : Unit {
+    let twiceOp = ApplyTwice(op, _);
+    twiceOp(target);
+}
+```
+
+In this case, the local variable `twiceOp` holds the partially applied operation `ApplyTwice(op, _)`, where parts of the input that have not yet been specified are indicated by `_`.
+When we actually call `twiceOp` in the next line, we pass as input to the partially applied operation all of the remaining parts of the input to the original operation.
+Thus, the above snippet is effectively identical to having called `ApplyTwice(op, target)` directly, save for that we have introduced a new local variable that allows us to delay the call while providing some parts of the input.
+
+Since an operation that has been partially applied is not actually called until its entire input has been provided, we can safely partially apply operations even from within functions.
+
+```qsharp
+function SquareOperation(op : (Qubit => Unit)) : (Qubit => Unit) {
+    return ApplyTwice(op, _);
+}
+```
+
+In principle, the classical logic within `SquareOperation` could have been much more involved, but it is still isolated from the rest of an operation by the guarantees that the compiler can offer about functions.
+This approach will be used throughout the Q# standard library for expressing classical control flow in a way that can be readily used within quantum programs.
+
+
+
+
 
 # from 'Statements'
 ## Control Flow

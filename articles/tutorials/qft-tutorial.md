@@ -23,7 +23,7 @@ Thus, the single- and multi-qubit operations we sequentially apply can be readil
 In our case, we will define a Q# operation to perform the full three-qubit quantum Fourier transform, which has the following representation as a circuit:
 
 <br/>
-<img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="400">
+<img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
 ## Prerequisites
 
@@ -104,19 +104,20 @@ With `using`, the qubits are automatically allocated in the $\ket{0}$ state. We 
 ### Applying single-qubit and controlled gates
 
 Next, we apply the gates which comprise the operation itself.
-
 Q# already contains many basic quantum gates as operations in the [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) namespace, and these are no exception. 
+
+Within a Q# operation, the statements invoking callables will of course be executed in sequential order.
+Hence, the first gate to apply is the [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) to the first qubit:
+
+<br/>
+<img src="./qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" width="150">
+
 To apply an operation to a specific qubit from a register (i.e. a single `Qubit` from an array `Qubit[]`) we use standard index notation.
-So, applying the [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) to the first qubit of our register `qs` takes the form:
+So, applying the [`H`](xref:microsoft.quantum.intrinsic.h) to the first qubit of our register `qs` takes the form:
 
 ```qsharp
             H(qs[0]);
 ```
-
-In terms of a circuit representation, we are now here:
-
-<br/>
-<img src="./qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" width="100">
 
 Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled [`R1`](xref:microsoft.quantum.intrinsic.r1) rotations.
 An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{i\theta}$ to the $\ket{1}$ component.
@@ -129,17 +130,18 @@ In general, we merely preface the call with `Controlled`, and the operation argu
  `Op(<normal args>)` $\to$ `Controlled Op([<control qubits>], (<normal args>))`.
 
 Note that the control qubits must be provided as an array, even if it is a single qubit.
-So, we call the `R1` gates acting on the first qubit (and controlled by the second/third) as:
+
+After the `H`, we see that the next gates are the `R1` gates acting on the first qubit (and controlled by the second/third):
+
+<br/>
+<img src="./qft_firstqubit.PNG" alt="Circuit diagram for three qubit QFT through first qubit" width="350">
+
+We call these with
 
 ```qsharp
             Controlled R1([qs[1]], (PI()/2.0, qs[0]));
             Controlled R1([qs[2]], (PI()/4.0, qs[0]));
 ```
-
-Hence we've added the operations up to this point:
-
-<br/>
-<img src="./qft_firstqubit.PNG" alt="Circuit diagram for three qubit QFT through first qubit" width="200">
 
 Note that we use the [`PI()`](xref:microsoft.quantum.math.pi) function from the [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) namespace to define the rotations in terms of pi radians.
 Additionally, we divide by a `Double` (e.g. `2.0`) because dividing by an integer `2` would throw a type error. 
@@ -169,7 +171,7 @@ This is necessary because the nature of the quantum Fourier transform outputs th
 
 Hence we have finished writing the qubit-level operations of the quantum Fourier transform into our Q# operation:
 
-<img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="400">
+<img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
 However, we can't call it a day just yet.
 Our qubits were in state $\ket{0}$ when we allocated them, and much like in life, in Q# we should leave things the same way we found them (or better!).

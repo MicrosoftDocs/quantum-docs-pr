@@ -7,7 +7,7 @@ This repository contains open-source documentation articles and automatically ge
 > :warning: If you want to modify an article of the API reference DO NOT modify the `*.yml` file in this repository. These files are automatically generated from the comments in the source code files of the repositories: [Quantum Libraries](https://github.com/microsoft/QuantumLibraries) and [Q# runtime](https://github.com/microsoft/qsharp-runtime). This means that any change made in those `*.yml` files will be override in the next build. To modify the article you should go to the original source file and apply the changes in the comments there.
 
 ## Getting started
-If you are new to the QDK documentation and want to learn how to contribute you can follow our [Contributors Guide](https://docs.microsoft.com/quantum/contributing/?view=qsharp-preview)
+If you are new to the QDK documentation and want to learn how to contribute you can follow our [Contributors Guide](https://docs.microsoft.com/quantum/contributing/?view=qsharp-preview).
 
 ## Microsoft Open Source Code of Conduct
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).

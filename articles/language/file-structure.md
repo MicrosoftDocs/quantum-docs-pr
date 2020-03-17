@@ -385,3 +385,28 @@ function DotProduct(a : Double[], b : Double[]) : Double {
     return accum;
 }
 ```
+
+
+## Internal Declarations
+
+User-defined types, operations, and functions can also be declared as *internal*.
+This means that they can only be accessed from within the Q# project that they are declared in.
+When a project is used as a reference, all of its non-internal declarations are made available, but trying to use an internal declaration from another project is an error.
+This is useful for writing modular code that can be reused by other parts of your project, but which can still be changed later without breaking other projects that might depend on it.
+
+An internal user-defined type, operation, or function can be declared simply by adding `internal` at the beginning of the declaration.
+For example,
+
+```qsharp
+internal newtype PairOfInts = (Int, Int);
+
+internal operation EPR (q1 : Qubit, q2 : Qubit) : Unit 
+is Adj + Ctl {
+    H(q2);
+    CNOT(q2, q1);
+}
+
+internal function DotProduct(a : Double[], b : Double[]) : Double {
+    ...
+}
+```

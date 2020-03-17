@@ -116,7 +116,7 @@ So, applying the [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) to the fir
 In terms of a circuit representation, we are now here:
 
 <br/>
-<img src="./qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" height="60">
+<img src="./qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" height="120">
 
 Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled [`R1`](xref:microsoft.quantum.intrinsic.r1) rotations.
 An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{i\theta}$ to the $\ket{1}$ component.
@@ -139,7 +139,7 @@ So, we call the `R1` gates acting on the first qubit (and controlled by the seco
 Hence we've added the operations up to this point:
 
 <br/>
-<img src="./qft_firstqubit.PNG" alt="Circuit diagram for three qubit QFT through first qubit" height="60">
+<img src="./qft_firstqubit.PNG" alt="Circuit diagram for three qubit QFT through first qubit" height="30">
 
 Note that we use the [`PI()`](xref:microsoft.quantum.math.pi) function from the [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) namespace to define the rotations in terms of pi radians.
 Additionally, we divide by a `Double` (e.g. `2.0`) because dividing by an integer `2` would throw a type error. 

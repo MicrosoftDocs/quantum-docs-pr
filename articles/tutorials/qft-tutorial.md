@@ -9,8 +9,8 @@ uid: microsoft.quantum.circuit-tutorial
 ---
 
 
-
 # Tutorial: Write and simulate qubit-level programs in Q#
+
 Welcome to the Quantum Development Kit tutorial on writing and simulating a basic quantum program that operates on individual qubits. 
 
 Although the power of quantum computation is revealed at the higher level of "what a quantum algorithm does", we should remember that even the most complex quantum programs are built upon operations at the level of individual qubits.
@@ -22,7 +22,8 @@ Note that this low-level view of quantum information processing is often describ
 Thus, the single- and multi-qubit operations we sequentially apply can be readily represented in a "circuit diagram."
 In our case, we will define a Q# operation to perform the full three-qubit quantum Fourier transform, which has the following representation as a circuit:
 
-<img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" height="70">
+<br/>
+<img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" height="60">
 
 ## Prerequisites
 
@@ -40,8 +41,8 @@ In our case, we will define a Q# operation to perform the full three-qubit quant
 
 Applications developed with Microsoft's Quantum Development Kit typically consists of two parts:
 1. One or more quantum algorithms, implemented using the Q# quantum programming language, and invoked by the classical host program. These consist of 
-	- Q# operations: subroutines containing quantum operations, and 
-	- Q# functions: classical subroutines used within the quantum algorithm.
+    - Q# operations: subroutines containing quantum operations, and 
+    - Q# functions: classical subroutines used within the quantum algorithm.
 2. A classical program, implemented in a classical programming language like Python or C#, that serves as the main entry point and will invoke Q# operations when it wants to execute a quantum algorithm.
 
 ## Allocate qubits and define quantum operations
@@ -76,6 +77,7 @@ Next, we define the `Perform3qubitQFT` operation:
         // do stuff
     }
 ```
+
 For now, the operation takes no arguments and does not return anything---in this case we write that it returns a `Unit` object, which is akin to `void` in C# or an empty tuple, `Tuple[()]`, in Python.
 Later, we will modify it to return an array of measurement results, at which point `Unit` will be replaced by `Result[]`. 
 
@@ -104,21 +106,20 @@ With `using`, the qubits are automatically allocated in the $\ket{0}$ state. We 
 Next, we apply the gates which comprise the operation itself.
 
 Q# already contains many basic quantum gates as operations in the [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) namespace, and these are no exception. 
-To apply an operation to a specific qubit from a register (i.e. a single `Qubit()` from an array `Qubit[]`) we use standard index notation.
+To apply an operation to a specific qubit from a register (i.e. a single `Qubit` from an array `Qubit[]`) we use standard index notation.
 So, applying the [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) to the first qubit of our register `qs` takes the form:
 
 ```qsharp
             H(qs[0]);
 ```
 
-In terms of a circuit representation, we are here:
+In terms of a circuit representation, we are now here:
 
-<img src="./qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" height="70">
+<br/>
+<img src="./qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" height="60">
 
 Besides applying the `H` (Hadamard) gate to individual qubits, the QFT circuit consists primarily of controlled [`R1`](xref:microsoft.quantum.intrinsic.r1) rotations.
 An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the qubit unchanged, while applying a rotation of $e^{i\theta}$ to the $\ket{1}$ component.
-
-
 
 #### Controlled operations
 
@@ -135,9 +136,10 @@ So, we call the `R1` gates acting on the first qubit (and controlled by the seco
             Controlled R1([qs[2]], (PI()/4.0, qs[0]));
 ```
 
-Hence we are here:
+Hence we've added the operations up to this point:
 
-<img src="./qft_firstqubit.PNG" alt="Circuit diagram for three qubit QFT through first qubit" height="70">
+<br/>
+<img src="./qft_firstqubit.PNG" alt="Circuit diagram for three qubit QFT through first qubit" height="60">
 
 Note that we use the [`PI()`](xref:microsoft.quantum.math.pi) function from the [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) namespace to define the rotations in terms of pi radians.
 Additionally, we divide by a `Double` (e.g. `2.0`) because dividing by an integer `2` would throw a type error. 
@@ -167,14 +169,14 @@ This is necessary because the nature of the quantum Fourier transform outputs th
 
 Hence we have finished writing the qubit-level operations of the quantum Fourier transform into our Q# operation:
 
-<img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" height="70">
+<img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" height="60">
 
-*However*, we can't call it a day just yet.
-Our qubits were in state $\ket{0}$ when we allocated them, and we need to leave them the way we found them. 
+However, we can't call it a day just yet.
+Our qubits were in state $\ket{0}$ when we allocated them, and much like in life, in Q# we should leave things the same way we found them (or better!).
 
+### Deallocate qubits
 
-#### De-allocate qubits
-We then call [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) again to see the post-operation state, and finally apply [`ResetAll`](xref:microsoft.quantum.intrinsic.resetall) to the qubit register to reset our qubits to $\ket{0}$ before completing the operation:
+We call [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) again to see the post-operation state, and finally apply [`ResetAll`](xref:microsoft.quantum.intrinsic.resetall) to the qubit register to reset our qubits to $\ket{0}$ before completing the operation:
 
 ```qsharp
             Message("After:");
@@ -183,7 +185,7 @@ We then call [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) a
             ResetAll(qs);
 ```
 
-Requiring that all de-allocated qubits be explicitly set to $\ket{0}$ is a basic feature of Q#.
+Requiring that all deallocated qubits be explicitly set to $\ket{0}$ is a basic feature of Q#.
 If it is not performed at the end of a `using` allocation block, a runtime error will be thrown.
 
 Your full Q# file should now look like this:
@@ -192,7 +194,7 @@ Your full Q# file should now look like this:
 namespace Quantum.Operations {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Diagnostics;
-	open Microsoft.Quantum.Math;
+    open Microsoft.Quantum.Math;
     open Microsoft.Quantum.Arrays;
 
     operation Perform3qubitQFT() : Unit {
@@ -231,7 +233,7 @@ With the Q# file and operation complete, it is ready to be called and simulated 
 
 ## Set up the classical host
 
-Having defined our Q# operation in a `.qs` file, we now write the classical host file to call that operation and process any returned classical data (for now, there isn't anything to process---recall that our operation defined above returns `Unit`).
+Having defined our Q# operation in a `.qs` file, we now write the classical host program to call that operation and process any returned classical data (for now, there isn't anything to process---recall that our operation defined above returns `Unit`).
 When we later modify the Q# operation to return an array of measurement results (`Result[]`), we will update the host file correspondingly.
 
 While the Q# program is ubiquitous across classical host languages, the host programs of course will vary slightly. As such, please follow the instructions in the tab corresponding to your development environment.
@@ -242,9 +244,9 @@ Following the same [instructions](xref:microsoft.quantum.howto.createproject) as
 
 The host file is constructed as follows: 
 1. First, we import the `qsharp` module, which registers the module loader for Q# interoperability. 
-	This allows Q# namespaces (e.g. the `Quantum.Operations` we defined in `Operations.qs`) to appear as Python modules, from which we can import Q# operations.
+    This allows Q# namespaces (e.g. the `Quantum.Operations` we defined in `Operations.qs`) to appear as Python modules, from which we can import Q# operations.
 2. Then, import the Q# operations which we will directly invoke---in this case, `Perform3qubitQFT`.
-	We need only import the entry point into a Q# program (i.e. _not_ operations like `H` and `R1`, which are called by other Q# operations but never by the classical host).
+    We need only import the entry point into a Q# program (i.e. _not_ operations like `H` and `R1`, which are called by other Q# operations but never by the classical host).
 3. In simulating Q# operations or functions, use the form `<Q#callable>.simulate(<args>)` to run them on the `QuantumSimulator()` target machine. 
 
 > [!NOTE]
@@ -252,8 +254,8 @@ The host file is constructed as follows:
 > In general, Q# operations are agnostic to the machines on which they're run, but some features such as `DumpMachine` may behave differently.
 
 4. Upon performing the simulation, the operation call will return values as defined in `Operations.qs`.
-	For now there is nothing returned, but later on we will see an example of assigning and processing these values.
-	With the resultant data in our hands and totally classical, we can do whatever we'd like with it.
+    For now there is nothing returned, but later on we will see an example of assigning and processing these values.
+    With the resultant data in our hands and totally classical, we can do whatever we'd like with it.
 
 Your full `host.py` file should be this:
 
@@ -273,16 +275,16 @@ Following the same [instructions](xref:microsoft.quantum.howto.createproject) as
 
 The C# host has four parts:
 1. Construct a quantum simulator.
-	In the code below, this is the variable `qsim`.
+    In the code below, this is the variable `qsim`.
 2. Compute any arguments required for the quantum algorithm.
-	There are none in this example.
+    There are none in this example.
 3. Run the quantum algorithm. 
-	Each Q# operation generates a C# class with the same name. 
-	This class has a `Run` method that **asynchronously** executes the operation.
-	The execution is asynchronous because execution on actual hardware will be asynchronous. 
-	Because the `Run` method is asynchronous, we call the `Wait()` method; this blocks execution until the task completes and returns the result synchronously. 
+    Each Q# operation generates a C# class with the same name. 
+    This class has a `Run` method that **asynchronously** executes the operation.
+    The execution is asynchronous because execution on actual hardware will be asynchronous. 
+    Because the `Run` method is asynchronous, we call the `Wait()` method; this blocks execution until the task completes and returns the result synchronously. 
 4. Process the returned result of the operation.
-	For now, the operation returns nothing.
+    For now, the operation returns nothing.
 
 
 ```csharp
@@ -349,13 +351,13 @@ The rest of the rows describe the probability amplitude of measuring the basis s
 In detail for the first row of our input state $\ket{000}$:
 * **`|0>:`** this row corresponds to the `0` computational basis state (given that our initial state post-allocation was $\ket{000}$, we would expect this to be the only state with probability amplitude at this point).
 * **`1.000000 +  0.000000 i`**: the probability amplitude in Cartesian format.
-* **` == `**: the `equal` sign seperates both equivalent representations.
+* **` == `**: the `equal` sign separates both equivalent representations.
 * **`********************`**: A graphical representation of the magnitude, the number of `*` is proportionate to the probability of measuring this state vector. 
 * **`[ 1.000000 ]`**: the numeric value of the magnitude
 * **`    ---`**: A graphical representation of the amplitude's phase.
 * **`[ 0.0000 rad ]`**: the numeric value of the phase (in radians).
 
-Both the magnitude and the phase are displayed with a graphical representation. The magnitude representation is straight-forward: it shows a bar of `*`, and the higher the probability, the larger the bar will be. For the phase, see the DumpMachine section [here](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) for the possible symbol representations based on angle ranges.
+Both the magnitude and the phase are displayed with a graphical representation. The magnitude representation is straightforward: it shows a bar of `*`, and the higher the probability, the larger the bar will be. For the phase, see the DumpMachine section [here](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) for the possible symbol representations based on angle ranges.
 
 
 So, the printed output is illustrating that our programmed gates transformed our state from
@@ -404,11 +406,11 @@ The `mutable` keyword prefacing `resultArray` allows the variable to be rebound 
 
 #### Perform measurements in a `for` loop and add results to array
 
-After the Fourier transorm operations inside the `using` block, insert the following code:
+After the Fourier transform operations inside the `using` block, insert the following code:
 
 ```qsharp
             for(i in IndexRange(qs)) {
-				set resultArray w/= i <- M(qs[i]);
+                set resultArray w/= i <- M(qs[i]);
             }
 ```
 The [`IndexRange`](xref:microsoft.quantum.arrays.indexrange) function called on an array (e.g. our array of qubits, `qs`) returns a range over the indices of the array. 
@@ -416,13 +418,13 @@ Here, we use it in our `for` loop to sequentially measure each qubit using the `
 Each measured `Result` type (either `Zero` or `One`) is then added to the corresponding index position in `resultArray` with an update-and-reassign statement.
 
 > [!NOTE]
-> The syntax of this statement is unique to Q#, but corresponds to the similar `set r[i] <- M(qs[i]);` seen in other languages.
+> The syntax of this statement is unique to Q#, but corresponds to the similar variable reassignment `r[i] <- M(qs[i])` seen in other languages such as F# and R.
 
 The keyword `set` is always used to reassign variables bound using `mutable`.
 
 #### Return `resultArray`
 
-With all three qubits measured and the results added to `resultArray`, we are safe to reset and de-allocate the qubits as before.
+With all three qubits measured and the results added to `resultArray`, we are safe to reset and deallocate the qubits as before.
 After the `using` block's close, insert
 
 ```qsharp
@@ -474,7 +476,7 @@ The final operation code should look like:
 }
 ```
 
-Additionally, update your host file to process the returned array:
+Additionally, update your host program to process the returned array:
 
 #### [Python](#tab/tabid-python)
 ```python
@@ -607,10 +609,10 @@ Press any key to continue...
 
 This output illustrates a few different things:
 1. Comparing the returned result to the pre-measurement `DumpMachine`, it clearly does _not_ illustrate the post-QFT superposition over basis states.
-	A measurement only returns a single basis state, with a probability determined by the amplitude of that state in the system's wavefunction.
+    A measurement only returns a single basis state, with a probability determined by the amplitude of that state in the system's wavefunction.
 2. From the post-measurement `DumpMachine`, we see that measurement _changes_ the state itself, projecting it from the initial superposition over basis states to the single basis state that corresponds to the measured value.
 
-If we were to repeat this operation many times, we would see the result statistics begin to illustrate the equally weighted superposition of the post-QFT state that give rise to a random result on each shot.
+If we were to repeat this operation many times, we would see the result statistics begin to illustrate the equally weighted superposition of the post-QFT state that gives rise to a random result on each shot.
 _However_, besides being inefficient and still imperfect, this would nevertheless only reproduce the relative amplitudes of the basis states, not the relative phases between them.
 The latter is not an issue in this example, but we would see relative phases appear if given a more complex input to the QFT than $\ket{000}$.
 

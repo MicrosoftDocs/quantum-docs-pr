@@ -53,7 +53,7 @@
         },
         {
             "source_path": "articles/quantum-concepts-9-SoftwareStack.md",
-            "redirect_url": "concepts/software-stack",
+            "redirect_url": "concepts/",
             "redirect_document_id": true
         },
         {
@@ -208,33 +208,38 @@
         },
         {
             "source_path": "articles/install-guide/command-line.md",
-            "redirect_url": "/quantum/install-guide",
+            "redirect_url": "index",
             "redirect_document_id": false
         },
         {
             "source_path": "articles/install-guide/csharp.md",
-            "redirect_url": "/quantum/install-guide",
+            "redirect_url": "csinstall",
             "redirect_document_id": false
         },
         {
             "source_path": "articles/install-guide/jupyter.md",
-            "redirect_url": "/quantum/install-guide",
+            "redirect_url": "qjupyter",
             "redirect_document_id": false
         },
         {
             "source_path": "articles/install-guide/python.md",
-            "redirect_url": "/quantum/install-guide",
+            "redirect_url": "pyinstall",
             "redirect_document_id": false
         },
         {
             "source_path": "articles/install-guide/vs-2017.md",
-            "redirect_url": "/quantum/install-guide",
+            "redirect_url": "index",
             "redirect_document_id": true
         },
         {
             "source_path": "articles/install-guide/vs-code.md",
-            "redirect_url": "/quantum/install-guide",
+            "redirect_url": "index",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "articles/Glossary.md",
+            "redirect_url": "concepts/glossary",
+            "redirect_document_id": true
         }
     ]
 }

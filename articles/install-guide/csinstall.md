@@ -9,13 +9,14 @@ uid: microsoft.quantum.install.cs
 ---
 # Develop with Q# + C#
 
-Install the QDK to develop C# host programs to call Q# operations.
+Install the QDK to develop C# and other .NET languages host programs to call Q# operations.
 
 Q# is built to play well with .NET languages--specifically C#. You can work with this pairing inside different development environments:
 
 - [Q# + C# using Visual Studio (Windows)](#VS)
 - [Q# + C# using Visual Studio Code (Windows, Linux and Mac)](#VSC)
 - [Q# + C# using the `dotnet` command-line tool](#command)
+- [Q# with other .NET languages](#dotnet)
 
 ## Develop with Q# + C# using Visual Studio <a name="VS"></a>
 
@@ -88,7 +89,7 @@ Visual Studio Code (VS Code) offers a rich environment for developing Q# program
     - Run the application:
 
         - Go to **Terminal** -> **New Terminal**
-		- Enter `dotnet run`
+        - Enter `dotnet run`
         - You should see the following text in the output window `Hello quantum world!`
 
 
@@ -135,7 +136,86 @@ Of course, you can also build and run Q# programs from the command line by simpl
 
         You should see the following output: `Hello quantum world!`
 
+## Q# with other .NET languages
+
+Q# is compiled to C# for the purposes of local simulation. This makes them very easy to combine. However, you can also use other .NET languages like F# or VB\.NET, although the process is less straightforward.
+
+### Develop with Q# + F# creating a Q# library
+
+You can't mix Q# and F# files like we do with Q# and C#. To combine F# with Q# you need to create a Q# library which will yield a .csproj project with only Q# files in it. Then you need to reference it from a purely F# application.
+
+1. Pre-requisites
+
+    - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
+
+1. Create a Q# library `QuantumCode` and write your quantum code in it.
+
+1. Create an F# application (in this case a console app targeting .NET Core) `FsharpDriver`.
+
+1. Add a reference to the Q# library to the F# application.
+
+   You can use [Reference Manager](https://docs.microsoft.com/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager) in Visual Studio to do that, or you can add the reference from the command line:
+
+    ```PowerShell
+    PS>  dotnet add .\FsharpDriver\FsharpDriver.vbproj reference .\QuantumCode\QuantumCode.csproj
+    ```
+   
+   This will transitively include the [`Microsoft.Quantum.Development.Kit` NuGet package](https://www.nuget.org/packages/Microsoft.Quantum.Development.Kit) to the F# application.
+   You will not be writing any Q# code in `FsharpDriver`, but you will need to use functionality provided by the Quantum Development Kit to create a quantum simulator to run your quantum code on, and to define data types used to pass the parameters to your quantum program.
+1. Write the classical driver in `FsharpDriver`:
+
+    ```fsharp    // Namespace in which quantum simulator resides
+        open Microsoft.Quantum.Simulation.Simulators
+        // Namespace in which QArray resides
+        open Microsoft.Quantum.Simulation.Core
+        
+        [<EntryPoint>]
+        let main argv =
+            printfn "Hello Classical World!"
+            // Create a full-state simulator
+            use simulator = new QuantumSimulator()
+            // Construct the parameter
+            // QArray is a data type for fixed-length arrays
+            let bits = new QArray<int64>([| 0L; 1L; 1L |])
     
+            // Run the quantum algorithm
+            let ret = QuantumCode.RunAlgorithm.Run(simulator, bits).Result
+    
+            // Process the results
+            printfn "%A" ret
+    
+            0 // return an integer exit code
+    ```
+1. To run the code open the F# solution in Visual Studio an set project `FsharpDriver` as the startup project. Press Start to run the sample.
+
+### Develop with Q# + Visual Basic .NET creating a Q# library
+
+You can't mix Q# and VB.NET files like we do with Q# and C#. To combine VB.NET with Q# you need to create a Q# library which will yield a .csproj project with only Q# files in it. Then you need to reference it from a purely VB.NET application.
+
+1. Pre-requisites
+
+    - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
+
+1. Create a Q# library `QuantumCode` and write your quantum code in it.
+
+1. Create an VB.NET application (in this case a console app targeting .NET Core) `VBNetDriver`.
+
+1. Add a reference to the Q# library to the VB.NET application.
+
+   You can use [Reference Manager](https://docs.microsoft.com/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager) in Visual Studio to do that, or you can add the reference from the command line:
+
+    ```PowerShell
+    PS>  dotnet add .\VBNetDriver\VBNetDriver.vbproj reference .\QuantumCode\QuantumCode.csproj
+    ```
+   
+1. Install the NuGet package Microsoft.Quantum.Development.Kit which adds Q# support to the VB.NET application.
+
+   You will not be writing any Q# code in `VBNetDriver`, but you will need to use functionality provided by the Quantum Development Kit to create a quantum simulator to run your quantum code on, and to define data types used to pass the parameters to your quantum program.
+
+1. Write the classical driver in `VBNetDriver`.
+
+1. To run the code open the VB.NET solution in Visual Studio an set project `VBNetDriver` as the startup project. Press Start to run the sample.
+
 ## What's next?
 
 Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.write-program).

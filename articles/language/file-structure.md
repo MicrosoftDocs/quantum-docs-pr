@@ -391,8 +391,12 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 User-defined types, operations, and functions can also be declared as *internal*.
 This means that they can only be accessed from within the Q# project that they are declared in.
-When a project is used as a reference, all of its non-internal declarations are made available, but trying to use an internal declaration from another project will produce an error.
+When a project is used as a reference, all of its *public* (non-internal) declarations are made available, but trying to use an internal declaration from another project will produce an error.
 Internal declarations are useful for writing modular code that can be reused by other parts of your project, but still be changed later without breaking other projects that might depend on it.
+
+> [!WARNING]
+> Internal user-defined types cannot be used in the signatures of public callables or as underlying types of public user-defined types.
+> They can only be used in signatures or underlying types if the corresponding callable or user-defined type is also internal.
 
 An internal user-defined type, operation, or function can be declared simply by adding `internal` at the beginning of the declaration.
 For example,

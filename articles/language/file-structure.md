@@ -400,7 +400,7 @@ For example,
 ```qsharp
 internal newtype PairOfInts = (Int, Int);
 
-internal operation EPR (q1 : Qubit, q2 : Qubit) : Unit 
+internal operation PrepareEntangledPair(q1 : Qubit, q2 : Qubit) : Unit 
 is Adj + Ctl {
     H(q2);
     CNOT(q2, q1);

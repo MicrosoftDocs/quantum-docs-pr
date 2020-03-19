@@ -136,7 +136,7 @@ Of course, you can also build and run Q# programs from the command line by simpl
 
         You should see the following output: `Hello quantum world!`
 
-## Q# with other .NET languages
+## Q# with other .NET languages <a name="dotnet"></a>
 
 Q# is compiled to C# for the purposes of local simulation. This makes them very easy to combine. However, you can also use other .NET languages like F# or VB\.NET, although the process is less straightforward.
 

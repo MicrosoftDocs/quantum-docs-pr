@@ -323,7 +323,7 @@ The following defines the teleport operation.
 ```qsharp
 // Entangle two qubits.
 // Assumes that both qubits are in the |0> state.
-operation EPR (q1 : Qubit, q2 : Qubit) : Unit 
+operation PrepareEntangledPair (q1 : Qubit, q2 : Qubit) : Unit 
 is Adj + Ctl {
     H(q2);
     CNOT(q2, q1);
@@ -337,10 +337,10 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
     using (ancilla = Qubit())
     {
         // Create a Bell pair between the temporary and the target
-        EPR(target, ancilla);
+        PrepareEntangledPair(target, ancilla);
 
         // Do the teleportation
-        Adjoint EPR (ancilla, source);
+        Adjoint PrepareEntangledPair(ancilla, source);
 
         if (MResetZ(source) == One) {
             X(target);

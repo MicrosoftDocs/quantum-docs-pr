@@ -399,7 +399,8 @@ Internal declarations are useful for writing modular code that can be reused by 
 > They can only be used in signatures or underlying types if the corresponding callable or user-defined type is also internal.
 >
 > For example, if a UDT `InternalOptions` is defined with the `internal` keyword, then the following declarations will result in errors:
-> ```Q#
+>
+> ```qsharp
 > function DefaultInternalOptions() : InternalOptions { ... } // error: can't use InternalOptions as an output type
 > newtype ExtendedOptions = (Internal : InternalOptions); // error: can't use InternalOptions as an item
 > ```

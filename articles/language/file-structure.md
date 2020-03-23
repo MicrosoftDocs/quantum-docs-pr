@@ -398,7 +398,7 @@ Internal declarations are useful for writing modular code that can be reused by 
 > Internal user-defined types cannot be used in the signatures of public callables, or in the underlying types of public user-defined types.
 > They can only be used in signatures or underlying types if the corresponding callable or user-defined type is also internal.
 >
-> For example, if a UDT `InternalOptions` is defined with the `internal` keyword, then the following declarations will result in errors:
+> For example, if there is a user-defined type `InternalOptions` that was declared with the `internal` keyword, then the following declarations will result in errors:
 >
 > ```qsharp
 > // Error: Can't use InternalOptions as an output type.

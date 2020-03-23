@@ -401,8 +401,10 @@ Internal declarations are useful for writing modular code that can be reused by 
 > For example, if a UDT `InternalOptions` is defined with the `internal` keyword, then the following declarations will result in errors:
 >
 > ```qsharp
-> function DefaultInternalOptions() : InternalOptions { ... } // error: can't use InternalOptions as an output type
-> newtype ExtendedOptions = (Internal : InternalOptions); // error: can't use InternalOptions as an item
+> // Error: Can't use InternalOptions as an output type.
+> function DefaultInternalOptions() : InternalOptions { ... }
+> // Error: Can't use InternalOptions as an item.
+> newtype ExtendedOptions = (Internal : InternalOptions);
 > ```
 
 An internal user-defined type, operation, or function can be declared simply by adding `internal` at the beginning of the declaration.

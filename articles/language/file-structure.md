@@ -418,6 +418,7 @@ internal function DotProduct(a : Double[], b : Double[]) : Double {
 > ```qsharp
 > // Error: Can't use InternalOptions as an output type of a public function.
 > function DefaultInternalOptions() : InternalOptions { ... }
+>
 > // Error: Can't use InternalOptions as an item in a public user-defined type.
 > newtype ExtendedOptions = (Internal : InternalOptions);
 > ```

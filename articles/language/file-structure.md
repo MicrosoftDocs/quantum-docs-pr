@@ -398,10 +398,11 @@ An internal user-defined type, operation, or function can be declared simply by 
 For example,
 
 ```qsharp
-internal newtype PairOfInts = (Int, Int);
+internal newtype PairOfQubits = (Qubit, Qubit);
 
-internal operation PrepareEntangledPair(q1 : Qubit, q2 : Qubit) : Unit 
+internal operation PrepareEntangledPair(pair : PairOfQubits) : Unit 
 is Adj + Ctl {
+    let (q1, q2) = pair!;
     H(q2);
     CNOT(q2, q1);
 }

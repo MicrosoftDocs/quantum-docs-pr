@@ -412,14 +412,12 @@ internal function DotProduct(a : Double[], b : Double[]) : Double {
 ```
 
 > [!WARNING]
-> Internal user-defined types cannot be used in the signatures of public callables, or in the underlying types of public user-defined types.
-> They can only be used in signatures or underlying types if the corresponding callable or user-defined type is also internal.
->
+> Internal user-defined types can only be used in signatures or underlying types if the corresponding callable or user-defined type is also internal.
 > For example, if there is a user-defined type `InternalOptions` that was declared with the `internal` keyword, then the following declarations will result in errors:
 >
 > ```qsharp
-> // Error: Can't use InternalOptions as an output type.
+> // Error: Can't use InternalOptions as an output type of a public function.
 > function DefaultInternalOptions() : InternalOptions { ... }
-> // Error: Can't use InternalOptions as an item.
+> // Error: Can't use InternalOptions as an item in a public user-defined type.
 > newtype ExtendedOptions = (Internal : InternalOptions);
 > ```

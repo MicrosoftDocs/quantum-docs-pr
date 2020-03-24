@@ -1,6 +1,6 @@
 ---
-title: End-to-end with NWChem | Microsoft Docs
-description: End-to-end with NWChem Docs
+title: Sample NWChem quantum program
+description: Using an NWChem input deck, walk through an example of getting gate counts for quantum chemistry simulation.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
@@ -9,7 +9,7 @@ uid: microsoft.quantum.chemistry.examples.endtoend
 
 # End-to-end with NWChem #
 
-In this page, we will walk through an example of getting gate counts for quantum chemistry simulation, starting from an [NWChem](http://www.nwchem-sw.org/index.php/Main_Page) input deck.
+In this article, you will walk through an example of getting gate counts for quantum chemistry simulation, starting from an [NWChem](http://www.nwchem-sw.org/index.php/Main_Page) input deck.
 Before proceeding with this example, make sure that you've installed Docker, following the [installation and validation guide](xref:microsoft.quantum.chemistry.concepts.installation).
 
 For more information:
@@ -57,7 +57,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Next, we'll import the `Get-GateCount` command provided with the **GetGateCount** sample.
-For full details, see the [instructions provided with the sample](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount).
+For full details, see the [instructions provided with the sample](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount).
 Next, run the following, substituting `<runtime>` with either `win10-x64`, `osx-x64`, or `linux-x64`, depending on your operating system:
 
 ```powershell
@@ -107,7 +107,7 @@ set tce:qelb  9
 
 ## Producing and Consuming Broombridge Output from NWChem ##
 
-We now have everything we need to produce and consume Broombridge documents.
+You now have everything you need to produce and consume Broombridge documents.
 To run NWChem and produce a Broombridge document for the `h4_sto6g_0.000.nw` input deck, run `Convert-NWChemToBroombridge`:
 
 > [!NOTE]
@@ -118,7 +118,7 @@ To run NWChem and produce a Broombridge document for the `h4_sto6g_0.000.nw` inp
 Convert-NWChemToBroombridge h4_sto6g_0.000.nw 
 ```
 
-This will produce a Broombridge document called `h4_sto6g_0.000.yaml` that we can use with `Get-GateCount`:
+This will produce a Broombridge document called `h4_sto6g_0.000.yaml` that you can use with `Get-GateCount`:
 
 ```powershell
 Get-GateCount -Format YAML h4_sto6g_0.000.yaml
@@ -159,7 +159,7 @@ There are many things to go do from here:
 - Try out different predefined input decks, e.g., by varying the parameter `alpha` in `h4_sto6g_alpha.nw`, 
 - Try modifying the decks by editing the NWChem decks directly, e.g., exploring `STO-nG` models for various choices of n, 
 - Try other predefined NWChem input decks that are available at `nwchem/qa/chem_library_tests`,
-- Try out a suite of predefined Broombridge YAML benchmarks that were generated from NWChem and are available as part of the [Microsoft/Quantum repository](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML). These benchmarks include: 
+- Try out a suite of predefined Broombridge YAML benchmarks that were generated from NWChem and are available as part of the [Microsoft/Quantum repository](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML). These benchmarks include: 
     - small molecules such as molecular hydrogen (H2), Beryllium (Be), Lithium hydride (LiH),
     - larger molecules such as ozone (O3), beta-carotene, cytosine, and many more. 
 - Try out the graphical front-end [EMSL Arrows](https://arrows.emsl.pnnl.gov/api/qsharp_chem) that features an interface to the Microsoft Quantum Development Kit. 

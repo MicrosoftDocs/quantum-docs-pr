@@ -1,6 +1,6 @@
 ---
-title: Quantum development techniques | Microsoft Docs 
-description: Quantum development techniques 
+title: Quantum development techniques
+description: Learn the basics of Q# program development, work with operations, functions, variables and qubits, and create a simple quantum program. 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL

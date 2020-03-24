@@ -1,6 +1,6 @@
 ---
-title: Microsoft Quantum Development Kit Third Party Software | Microsoft Docs 
-description: Microsoft Quantum Development Kit Third Party Software
+title: Microsoft Quantum Development Kit Third Party Software 
+description: Microsoft Quantum Development Kit third party software notices and information.  
 services: service-name-with-dashes-AZURE-ONLY 
 keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter

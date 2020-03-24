@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Microsoft Quantum Development Kit license 
-description: Microsoft Quantum Development Kit license
+description: License terms, disclaimers and user rights for the Microsoft Quantum Development Kit.
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019

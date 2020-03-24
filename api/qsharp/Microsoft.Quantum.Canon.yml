@@ -200,7 +200,7 @@ functions:
     ContinuedFractionConvergent has been deprecated. Please use @"microsoft.quantum.math.continuedfractionconvergenti" instead.
     Please use @"microsoft.quantum.math.continuedfractionconvergenti".
 - uid: microsoft.quantum.canon.controlledonbitstring
-  summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
+  summary: Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
 - uid: microsoft.quantum.canon.controlledonint
   summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified positive integer.
 - uid: microsoft.quantum.canon.curriedop
@@ -707,12 +707,8 @@ operations:
   summary: Computes the parity of an array of qubits into a target qubit.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: |-
-    Applies an array of complex phases to numeric basis states of a register of qubits.
-
-    That is, this implements the diagonal unitary operation $U$ that applies a complex phase
-    $e^{i \theta_j}$ on the $n$-qubit number state $\ket{j}$.
-
-    $U = \sum^{2^n-1}_{j=0}e^{i\theta_j}\ket{j}\bra{j}$.
+    Applies an array of complex phases to numeric basis states of a register
+    of qubits.
 - uid: microsoft.quantum.canon.applyfermionicswap
   summary: Applies the Fermionic SWAP.
 - uid: microsoft.quantum.canon.applyif
@@ -941,6 +937,14 @@ operations:
     Applies a single-qubit operation to each indexed element in a register.
     The modifier `CA` indicates that the single-qubit operation is adjointable
     and controllable.
+- uid: microsoft.quantum.canon.applytoelement
+  summary: Applies an operation to a given element of an array.
+- uid: microsoft.quantum.canon.applytoelementa
+  summary: Applies an operation to a given element of an array.
+- uid: microsoft.quantum.canon.applytoelementc
+  summary: Applies an operation to a given element of an array.
+- uid: microsoft.quantum.canon.applytoelementca
+  summary: Applies an operation to a given element of an array.
 - uid: microsoft.quantum.canon.applytofirstqubit
   summary: Applies an operation to the first qubit in the register.
 - uid: microsoft.quantum.canon.applytofirstqubita
@@ -1048,6 +1052,19 @@ operations:
     returns an output compatible with that operation, and an input to that
     function, applies the operation using the function to transform the
     input to a form expected by the operation.
+- uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
+  summary: |-
+    Applies an array of complex phases to numeric basis states of a register
+    of qubits, truncating small rotation angles according to a given
+    tolerance.
+- uid: microsoft.quantum.canon.approximatelymultiplexpauli
+  summary: |-
+    Applies a Pauli rotation conditioned on an array of qubits, truncating
+    small rotation angles according to a given tolerance.
+- uid: microsoft.quantum.canon.approximatelymultiplexz
+  summary: |-
+    Applies a Pauli Z rotation conditioned on an array of qubits, truncating
+    small rotation angles according to a given tolerance.
 - uid: microsoft.quantum.canon.approximateqft
   summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
 - uid: microsoft.quantum.canon.asserthighestbit
@@ -1291,23 +1308,9 @@ operations:
 
     $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplexpauli
-  summary: |-
-    Applies a Pauli rotation conditioned on an array of qubits.
-
-    This applies the multiply-controlled unitary operation $U$ that performs
-    rotations by angle $\theta_j$ about single-qubit Pauli operator $P$
-    when controlled by the $n$-qubit number state $\ket{j}$.
-
-    $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes e^{i P \theta_j}$.
+  summary: Applies a Pauli rotation conditioned on an array of qubits.
 - uid: microsoft.quantum.canon.multiplexz
-  summary: |-
-    Applies a Pauli Z rotation conditioned on an array of qubits.
-
-    This applies the multiply-controlled unitary operation $U$ that performs
-    rotations by angle $\theta_j$ about single-qubit Pauli operator $Z$
-    when controlled by the $n$-qubit number state $\ket{j}$.
-
-    $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes e^{i Z \theta_j}$.
+  summary: Applies a Pauli Z rotation conditioned on an array of qubits.
 - uid: microsoft.quantum.canon.noop
   summary: Performs the identity operation (no-op) on an argument.
 - uid: microsoft.quantum.canon.permutequbits

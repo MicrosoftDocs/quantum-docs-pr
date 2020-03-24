@@ -1,0 +1,15 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.optimization
+name: Microsoft.Quantum.Optimization
+summary: |2-
+   # Summary
+   Contains functions and optimizations for finding minima.
+functions:
+- uid: microsoft.quantum.optimization.localunivariateminimum
+  summary: |-
+    Returns the local minimum for a univariate function over a bounded interval,
+    using a golden interval search.
+newtypes:
+- uid: microsoft.quantum.optimization.univariateoptimizationresult
+  summary: Represents the result of optimizing a univariate function.
+...

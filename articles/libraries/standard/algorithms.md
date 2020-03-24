@@ -1,6 +1,6 @@
 ---
-title: Q# standard libraries - algorithms | Microsoft Docs
-description: Q# standard libraries
+title: Quantum algorithms in Q#
+description: Learn about fundamental quantum computing algorithms, including amplitude amplification, Fourier transform, Draper and Beauregard adders, and phase estimation. 
 author: QuantumWriter
 ms.author: martinro@microsoft.com 
 ms.date: 12/11/2017
@@ -117,7 +117,7 @@ This expansion can be further simplified by noting that for any integer $j$ and 
 $$\ket{\phi\_k(a+b)}=\frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi [a/2^k+0.b\_k\ldots b\_1]}\ket{1} \right).$$
 This means that if we perform addition by incrementing each of the tensor factors in the expansion of the Fourier transform of $\ket{a}$ then the number of rotations shrinks as $k$ decreases.  This substantially reduces the number of quantum gates needed in the adder.  We denote the Fourier transform, phase addition and the inverse Fourier transform steps that comprise the Draper adder as $\operatorname{QFT}^{-1} \left(\phi\\\!\operatorname{ADD}\right) \operatorname{QFT}$. A quantum circuit that uses this simplification to implement the entire process can be seen below.
 
-![Draper adder shown as circuit diagram](~/media/draper.png)
+![Draper adder shown as circuit diagram](~/media/draper.svg)
 
 Each controlled $e^{i2\pi/k}$ gate in the circuit refers to a controlled-phase gate.  Such gates have the property that on the pair of qubits on which they act, $\ket{00}\mapsto \ket{00}$ but $\ket{11}\mapsto e^{i2\pi/k}\ket{11}$.  This circuit allows us to perform addition using no additional qubits apart from those needed to store the inputs and the outputs.
 
@@ -131,7 +131,7 @@ $$
 
 The Beauregard adder uses the Draper adder, or more specifically $\phi\\\!\operatorname{ADD}$, to add $a$ and $b$ in phase.  It then uses the same operation to identify whether $a+b <N$ by subtracting $N$ and testing if $a+b-N<0$.  The circuit stores this information in an ancillary qubit and then adds $N$ back the register if $a+b<N$.  It then concludes by uncomputing this ancillary bit (this step is needed to ensure that the ancilla can be de-allocated after calling the adder).  The circuit for the Beauregard adder is given below.
 
-![Beauregard adder shown as circuit diagram](~/media/beau.png)
+![Beauregard adder shown as circuit diagram](~/media/beau.svg)
 
 Here the gate $\Phi\\\!\operatorname{ADD}$ takes the same form as $\phi\\\!\operatorname{ADD}$ except that in this context the input is classical rather than quantum.  This allows the controlled phases in $\Phi\\\!\operatorname{ADD}$ to be replaced with phase gates that can then be compiled together into fewer operations to reduce both the number of qubits and number of gates needed for the adder.
 

@@ -1,6 +1,6 @@
 ---
-title: Jordan-Wigner Representation | Microsoft Docs
-description: Jordan-Wigner Representation Conceptual Docs
+title: Jordan-Wigner Representation
+description: Learn about the Jordan-Wigner Representation, which maps Hamiltonian operators to unitary matrices that can more easily implemented on a quantum computer. 
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017

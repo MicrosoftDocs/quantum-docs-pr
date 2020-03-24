@@ -1,6 +1,6 @@
 ---
-title: Chemistry Library Installation and Validation | Microsoft Docs
-description: Chemistry Library Installation and Validation
+title: Microsoft Q# Chemistry Library Installation and Validation
+description: Learn how to install the Microsoft Quantum chemistry library and use it with the NWChem computational chemistry platform. 
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018

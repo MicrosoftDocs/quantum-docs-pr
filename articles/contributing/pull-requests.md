@@ -1,6 +1,6 @@
 ---
-title: Opening pull requests | Microsoft Docs
-description: Opening pull requests
+title: Opening pull requests
+description: Learn how to submit a GitHub pull request when you are ready to contribute code or documentation to the Microsoft Quantum Development Kit. 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018

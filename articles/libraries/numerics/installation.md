@@ -1,6 +1,6 @@
 ---
-title: Numerics Library Installation and Validation | Microsoft Docs
-description: Numerics Library Installation and Validation
+title: Microsoft Quantum numerics library - Installation and Validation
+description: Learn how to add the Microsoft Quantum numerics library to your Visual Studio 2019 or later installation. 
 author: thomashaener
 ms.author: thhaner
 ms.date: 05/14/2019

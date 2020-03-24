@@ -1,0 +1,8 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.labeledsample
+name: LabeledSample
+type: newtype
+namespace: Microsoft.Quantum.MachineLearning
+summary: A sample, labeled with a class to which that sample belongs.
+syntax: newtype LabeledSample = (Double[], Int);
+...

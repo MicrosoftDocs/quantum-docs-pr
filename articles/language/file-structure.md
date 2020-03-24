@@ -394,18 +394,15 @@ This means that they can only be accessed from within the Q# project that they a
 When a project is used as a reference, all of its *public* (non-internal) declarations are made available, but trying to use an internal declaration from another project will produce an error.
 Internal declarations are useful for writing modular code that can be reused by other parts of your project, but still be changed later without breaking other projects that might depend on it.
 
-> [!WARNING]
-> Internal user-defined types cannot be used in the signatures of public callables or in the underlying types of public user-defined types.
-> They can only be used in signatures or underlying types if the corresponding callable or user-defined type is also internal.
-
 An internal user-defined type, operation, or function can be declared simply by adding `internal` at the beginning of the declaration.
 For example,
 
 ```qsharp
-internal newtype PairOfInts = (Int, Int);
+internal newtype PairOfQubits = (Qubit, Qubit);
 
-internal operation PrepareEntangledPair(q1 : Qubit, q2 : Qubit) : Unit 
+internal operation PrepareEntangledPair(pair : PairOfQubits) : Unit 
 is Adj + Ctl {
+    let (q1, q2) = pair!;
     H(q2);
     CNOT(q2, q1);
 }
@@ -414,3 +411,15 @@ internal function DotProduct(a : Double[], b : Double[]) : Double {
     ...
 }
 ```
+
+> [!WARNING]
+> Internal user-defined types can only be used in signatures or underlying types if the corresponding callable or user-defined type is also internal.
+> For example, if there is a user-defined type `InternalOptions` that was declared with the `internal` keyword, then the following declarations will result in errors:
+>
+> ```qsharp
+> // Error: Can't use InternalOptions as an output type of a public function.
+> function DefaultInternalOptions() : InternalOptions { ... }
+>
+> // Error: Can't use InternalOptions as an item in a public user-defined type.
+> newtype ExtendedOptions = (Internal : InternalOptions);
+> ```

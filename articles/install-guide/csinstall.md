@@ -142,7 +142,7 @@ Q# is compiled to C# for the purposes of local simulation. This makes them very 
 
 ### Develop with Q# + F# creating a Q# library
 
-You can't mix Q# and F# files like we do with Q# and C#. To combine F# with Q# you need to create a Q# library which will yield a .csproj project with only Q# files in it. Then you need to reference it from a purely F# application.
+You can't mix Q# and F# files in the same project like we do with Q# and C#. To combine F# with Q# you need to create a Q# library which will yield a .csproj project with only Q# files in it. Then you need to reference it from a purely F# application.
 
 1. Pre-requisites
 

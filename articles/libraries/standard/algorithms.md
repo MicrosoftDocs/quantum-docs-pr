@@ -60,6 +60,11 @@ Just as arithmetic plays a central role in classical computing, it is also indis
 $$
 \operatorname{Add}(b)\ket{a}=\ket{a + b}.
 $$
+
+Here is some code that shows the usage of the add operation.
+
+[!notebook-python[] (~/quantum/Quantum/Samples/arithmetic/AdderExample.ipynb?name=add-operation)]
+
 This basic adder circuit is more of an incrementer than an adder.
 It can be converted into an adder that has two quantum inputs via
 $$

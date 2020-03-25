@@ -1,5 +1,5 @@
 ---
-title: Quantum Development Kit preview release notes
+title: Quantum Development Kit Release Notes
 description: Learn about the latest updates to the Microsoft Quantum Development Kit preview.
 author: natke
 ms.author: nakersha

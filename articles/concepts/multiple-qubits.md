@@ -91,7 +91,7 @@ P(\text{outcome}=1)= \sum_{e_k \text{ in the set } S}\psi^\dagger e_k e_k^\dagge
 $$
 
 > [!NOTE]
-> In this document we are using the Little-endian format to label the computational basis. In little endian format, the least significant bits come first. For example, the number four in Little-endian format is represented by the string of bits 001.
+> In this document we are using the little-endian format to label the computational basis. In little endian format, the least significant bits come first. For example, the number four in little-endian format is represented by the string of bits 001.
 
 Since each qubit measurement can only yield $0$ or $1$, the probability of measuring $0$ is simply $1-P(\text{outcome}=1)$.  This is why we only explicitly give a formula for the probability of measuring $1$.
 

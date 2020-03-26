@@ -29,7 +29,7 @@ Note that if $e^{-i H t}$ were an ordinary exponential then the error in this ap
 This error occurs because $e^{-iHt}$ is an operator exponential and as a result there is an error incurred when using this formula due to the fact that the $H_j$ terms do not commute (*i.e.*, $H_j H_k \ne H_k H_j$ in general).
 
 If $t$ is large, Trotter–Suzuki formulas can still be used to simulate the dynamics accurately by breaking it up into a sequence of short time-steps.
-Let $r$ be the number of steps taken in the time evolution.
+Let $r$ be the number of steps taken in the time evolution, so each time step runs for time $t/r$. 
 Then, we have that
 $$
     e^{-i\sum_{j=1}^m H_j t} =\left(\prod_{j=1}^m e^{-iH_j t/r}\right)^r + O(m^2 t^2/r),
@@ -37,18 +37,23 @@ $$
 which implies that if $r$ scales as $m^2 t^2/\epsilon$ then the error can be made at most $\epsilon$ for any $\epsilon>0$.
 
 More accurate approximations can be built by constructing a sequence of operator exponentials such that the error terms cancel.
-The simplest such formula, the symmetric Trotter formula or Strang splitting, takes the form
+The simplest such formula, the second order Trotter-Suzuki formula, takes the form
 $$
-    U_1(t) =\prod_{j=1}^m e^{-iH_j t/2}\prod_{j=m}^1 e^{-iH_j t} = e^{-iHt} + O(m^3 t^3),
+    U_2(t) = \left(\prod_{j=1}^{m} e^{-iH_j t/2r} \prod_{j=m}^1 e^{-iH_j t/2r}\right)^r = e^{-iHt} + O(m^3 t^3/r^2),
 $$
-which can be made less than $\epsilon$ for any $\epsilon>0$ by choosing $r$ to scale as $m^{3/2}t^{3/2}/\sqrt{\epsilon}$.
+the error of which can be made less than $\epsilon$ for any $\epsilon>0$ by choosing $r$ to scale as $m^{3/2}t^{3/2}/\sqrt{\epsilon}$.
 
-Even higher-order Trotter formulas can be constructed based on $U_1$.
-The simplest is the following fourth order formula, originally introduced by Suzuki:
+Even higher-order formulas, specifically ($2k$)th-order for $k>0$, can be constructed recursively:
 $$
-    U_2(t) = U_1^2(s_1t) U_1([1-4s_1]t)U_1^2(s_1 t) = e^{-iHt} +O(m^5t^5),
+    U_{2k}(t) = [U_{2k-2}(s_k\~ t)]^2 U_{2k-2}([1-4s_k]t) [U_{2k-2}(s_k\~ t)]^2 = e^{-iHt} + O((m t)^{2k+1}/r^{2k}),
 $$
-where $s_1 = (4-4^{1/3})^{-1}$.
+where $s_k = (4-4^{1/(2k-1)})^{-1}$.
+
+The simplest is the following fourth order ($k=2$) formula, originally introduced by Suzuki:
+$$
+    U_4(t) = [U_2(s_2\~ t)]^2 U_2([1-4s_2]t) [U_2(s_2\~ t)]^2 = e^{-iHt} +O(m^5t^5/r^4),
+$$
+where $s_2 = (4-4^{1/3})^{-1}$.
 In general, arbitrarily high-order formulas can be similarly constructed; however, the costs incurred from using more complex integrators often outweigh the benefits beyond fourth order for most practical problems.
 
 In order to make the above strategies work, we need to have a method for simulating a wide class of $e^{-iH_j t}$.

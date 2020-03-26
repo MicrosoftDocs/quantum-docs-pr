@@ -225,6 +225,8 @@
     uid: microsoft.quantum.arrays.constantarray
   - name: Enumerated
     uid: microsoft.quantum.arrays.enumerated
+  - name: EqualA
+    uid: microsoft.quantum.arrays.equala
   - name: Exclude
     uid: microsoft.quantum.arrays.exclude
   - name: Filtered

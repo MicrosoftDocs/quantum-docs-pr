@@ -24,6 +24,10 @@ functions:
   summary: |-
     Given an array, returns a new array containing elements of the original
     array along with the indices of each element.
+- uid: microsoft.quantum.arrays.equala
+  summary: |-
+    Given two arrays of the same type and a predicate that is defined
+    for pairs of elements of the arrays, checks whether the arrays are equal.
 - uid: microsoft.quantum.arrays.exclude
   summary: |-
     Returns an array containing the elements of another array,

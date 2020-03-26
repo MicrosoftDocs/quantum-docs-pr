@@ -99,7 +99,10 @@ landingContent:
         links:
           - text: Standard libraries
             url: libraries/standard/index.md
-          - text: Numerics library
-            url: libraries/numerics/index.md
           - text: Chemistry library
             url: libraries/chemistry/index.md
+          - text: Machine learning library
+            url: libraries/machine-learning/index.md
+          - text: Numerics library
+            url: libraries/numerics/index.md
+

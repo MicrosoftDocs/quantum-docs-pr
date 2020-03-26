@@ -1,6 +1,6 @@
 - name: Reporting Bugs
   href: reporting-bugs.md
-- name: Contributing Documentation
+- name: Improving Documentation
   href: docs.md
 - name: Opening Pull Requests
   href: pull-requests.md

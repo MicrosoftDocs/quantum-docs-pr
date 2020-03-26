@@ -17,6 +17,17 @@ For installation instructions, please refer to the [install guide](xref:microsof
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
 
+## Version 0.11.2003.2506
+
+*Release date: March 26th, 2020*
+
+This release contains the following:
+
+- New support for access modifiers in Q#, for more information see [File Structures](xref:microsoft.quantum.language.file-structure)
+- Updated to .NET Core SDK 3.1
+
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
 ## Version 0.10.2002.2610
 
 *Release date: February 27th, 2020*

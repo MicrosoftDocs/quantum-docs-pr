@@ -1,5 +1,5 @@
 # Microsoft Quantum Documenation
-Welcome to the official repository for the Microsoft Quantum Development Kit. 
+Welcome to the official documentation repository for the Microsoft Quantum Development Kit. 
 
 This repository contains open-source documentation articles and automatically generated API files. There are two main folders:
 - **[articles/](./articles)**: this folder contains the Markdown articles and YAML files that constitute the source of [the live version of the documentation](https://docs.microsoft.com/quantum/?view=qsharp-preview).

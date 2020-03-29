@@ -73,7 +73,7 @@ In Q# we can classify the elements of its syntax in three different groups: type
 
 ### Types
 Q# is a strongly-typed language, such that careful use of types can help the compiler provide strong guarantees about Q# programs at compile time.
-In addition to standard and quantum-specific built-in primitive types (e.g. `Int`, `Bool`, `Qubit`, and `Result`), Q# provides support for user defined types.
+In addition to standard and quantum-specific built-in primitive types (e.g. `Int`, `Bool`, `Qubit`, and `Result`), Q# provides support for user-defined types.
 All of Q#'s various primitive types are described on the [Types in Q#](xref:microsoft.quantum.guide.language.types) page, along with details on array and tuple types, as well as how to define new types within a Q# file.
 
 ### Expressions

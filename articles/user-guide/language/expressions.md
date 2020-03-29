@@ -31,10 +31,7 @@ between `(6)` as a group and `(6)` as a single-element tuple.
 
 ## Symbols
 
-The name of a symbol bound or assigned to a value of type `'T`
-is an expression of type `'T`.
-For instance, if the symbol `count` is bound to the integer value `5`,
-then `count` is an integer expression.
+
 
 ## Numeric Expressions
 

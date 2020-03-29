@@ -1,5 +1,5 @@
 ---
-title: Mutable and immutable variables in Q#
+title: Variables in Q#
 description: fill description
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -8,7 +8,7 @@ ms.topic: article
 uid: microsoft.quantum.guide.using.variables
 ---
 
-# Mutable and immutable variables in Q#
+# Variables in Q#
 
 ## from local variables page
 ## Local Variables 

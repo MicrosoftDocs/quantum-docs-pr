@@ -11,8 +11,7 @@ uid: microsoft.quantum.guide.basics
 # Q# Basics
 
 To do:
-- descriptions/links to where these things are covered in the user guide
-- fill out descriptions of types, statements, and expressions (*in Q# specifically*, instead of simply giving a vague sentence and saying "Q# has its own ...") so the other pages won't have to 
+- Where to direct them next?
 - 
 
 
@@ -56,6 +55,7 @@ In this way, Q# makes it easy to express the logic underlying quantum and hybrid
 ## Q# operations and functions
 
 Concretely, a Q# program is comprised of *operations*, *functions*, and any user-defined types. 
+
 Operations are used to describe the transformations of quantum systems and are the most basic building block of Q# programs. 
 Each operation defined in Q# may then call any number of other operations.
 
@@ -63,7 +63,8 @@ In contrast to operations, functions are used to describe purely *deterministic*
 For example, suppose we would like to measure our qubits at the end of a program, and add the measurement results to an array.
 In this case `Measure` is an *operation* which instructs the target machine to perform a measurement on the (real or simulated) qubits, and the classical process of adding the returned results to an array will be handled by *functions*.
 
-Throughout the rest of this guide, we will show you how to use Q# to construct complex quantum programs through the basic building blocks of operations, functions, and types. 
+Together, operations and functions are referred to as *callables*, and their underlying structure and behavior is introduced on the [Callables in Q#](xref:microsoft.quantum.guide.language.callables) page.
+
 
 ## Q# syntax overview
 
@@ -72,19 +73,49 @@ In Q# we can classify the elements of its syntax in three different groups: type
 
 ### Types
 Q# is a strongly-typed language, such that careful use of types can help the compiler provide strong guarantees about Q# programs at compile time.
-In addition to built-in primitive types---both standard (`Int`, `Bool`, `String`, etc.) and quantum-specific (e.g. `Qubit` and `Result`, the type returned by `Measure`)---Q# also provides support for user defined types.
+In addition to standard and quantum-specific built-in primitive types (e.g. `Int`, `Bool`, `Qubit`, and `Result`), Q# provides support for user defined types.
+All of Q#'s various primitive types are described on the [Types in Q#](xref:microsoft.quantum.guide.language.types) page, along with details on array and tuple types, as well as how to define new types within a Q# file.
 
 ### Expressions
-An expression in a programming language is a combination of one or more constants, variables, operators, and functions that the programming language interprets and computes to produce another value.
-For example, `2+3` is an arithmetic and programming expression which evaluates to `5`.
-Q# has its own expressions and rules.
+An expression in a programming language is a combination of one or more constants, variables, operators, and functions that the programming language interprets and evaluates to a specific value.
+Most simply, for every type in a language, expressions of that type can be either *literals* or symbols bound to a value of that type.
+For example, `5` is an `Int` literal (thus also an expression of type `Int`), and if the symbol `count` is bound to the integer value `5`, then `count` is also an integer expression.
+
+Additionally, an expression can consist of other expressions combined with certain operators.
+Hence another example of an `Int` expression which evaluates to `5` is `2+3`.
+
+The possible expressions of types in Q#, as well as the compatible operators that can be used to form them, are detailed on the [Type Expressions in Q#](xref:microsoft.quantum.guide.language.expressions) page. 
 
 ### Statements 
-  A statement is a syntactic unit of an imperative programming language that expresses some action to be carried out.
-  Statements contrast with expressions in that statements do not return results and are executed solely for their side effects, while expressions always return a result and often do not have side effects at all.
-  This distinction is frequently observed in wording: a statement is executed, while an expression is evaluated.
-  An example of a Q# statement is the loop `for` which supports iteration over an integer range.
+A statement is a syntactic unit of an imperative programming language that expresses some action to be carried out.
+Statements contrast with expressions in that statements do not return results and are executed solely for their side effects, while expressions always return a result and often do not have side effects at all.
+This distinction is frequently observed in wording: an expression is evaluated, whereas a statement is executed.
+
+A very basic example of a statement in Q# is assigning a symbol to an expression:
+```qsharp
+let count = 5;
+```
+
+A slightly more interesting example is the `for` statement which supports iteration and includes a *statement block*.
+Suppose `qubits` is the symbol bound to a register of qubits (technically of type `Qubit[]`, i.e. an array of `Qubit` types). 
+Then
+```qsharp
+for (qubit in qubits) {
+    H(qubit);
+}
+```
+is a statement which iterates over each qubit in the register, performing the `H` operation on each. 
+(Note that `H(qubit);` is a statement in itself as well!)
+
+Nearly every aspect of a Q# program is built using statements, so no single page could encompass all the information relating to them.
+However, their lexical structure and formatting is described on the [Q# File Structure](xref:microsoft.quantum.guide.using.filestructure) page, symbol binding assignment and scope at [Variables in Q#](xref:microsoft.quantum.guide.using.variables), and control flow loops such as `for` at [Control Flow in Q#](xref:microsoft.quantum.guide.using.controlflow).
 
 
 ## Q# source and host files
 
+fill
+
+## What's next?
+Throughout the rest of this guide, we will show you how to use Q# to construct complex quantum programs through the basic building blocks of operations, functions, and types.
+
+Link SOMEWHERE (or multiple places, seeing as this was the basic overview page)

@@ -35,7 +35,7 @@ uid: microsoft.quantum.tutorial-template
     * Provide a bullet list of what is covered, based on the H2 procedure steps 
 -->
 
- ## Prerequisites
+## Prerequisites
  <!-- 
  Provide as necessary:
      * Software versions of installations

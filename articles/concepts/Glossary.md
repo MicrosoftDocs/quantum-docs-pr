@@ -12,7 +12,7 @@ uid: microsoft.quantum.glossary
 
 ## Adjoint
 
-The complex conjugate transpose of an [operation](xref:microsoft.quantum.glossary#operation). For operations that implement a [unitary](xref:microsoft.quantum.glossary#unitary) operator, the adjoint is the inverse of the operation and is indicated by a dagger symbol. For example, if the operation `U` represents the unitary operator $U$, then `Adjoint U` represents $U^\dagger$. For more information, see [Adjoint](xref:microsoft.quantum.language.file-structure#adjoint).
+The complex conjugate transpose of an [operation](xref:microsoft.quantum.glossary#operation). For operations that implement a [unitary](xref:microsoft.quantum.glossary#unitary-operator) operator, the adjoint is the inverse of the operation and is indicated by a dagger symbol. For example, if the operation `U` represents the unitary operator $U$, then `Adjoint U` represents $U^\dagger$. For more information, see [Adjoint](xref:microsoft.quantum.language.file-structure#adjoint).
 
 ## Ancilla
 
@@ -20,7 +20,7 @@ A [qubit](xref:microsoft.quantum.glossary#qubit) that serves as temporary memory
 
 ## Bell state
 
-One of four specific maximally [entangled](xref:microsoft.quantum.glossary#entanglement) [quantum states](xref:microsoft.quantum.glossary#quantum-state) of two qubits. The four states are defined $\ket{\beta_{ij}} = (\mathbb{I} \otimes X^iZ^j) (\ket{00} + \ket{11}) / \sqrt{2}$. A Bell state is also known as an [EPR pair](xref:microsoft.quantum.glossary#epr).
+One of four specific maximally [entangled](xref:microsoft.quantum.glossary#entanglement) [quantum states](xref:microsoft.quantum.glossary#quantum-state) of two qubits. The four states are defined $\ket{\beta_{ij}} = (\mathbb{I} \otimes X^iZ^j) (\ket{00} + \ket{11}) / \sqrt{2}$. A Bell state is also known as an [EPR pair](xref:microsoft.quantum.glossary#epr-pair).
 
 ## Bloch sphere
 
@@ -32,7 +32,7 @@ An [operation](xref:microsoft.quantum.glossary#operation) or [function](xref:mic
 
 ## Clifford group
 
-The set of operations that occupy the octants of the [Bloch sphere](xref:microsoft.quantum.glossary#bloch) and effect permutations of the [Pauli operators](xref:microsoft.quantum.glossary#pauli). These include the operations [$X$](xref:microsoft.quantum.intrinsic.x), [$Y$](xref:microsoft.quantum.intrinsic.y), [$Z$](xref:microsoft.quantum.intrinsic.z), [$H$](xref:microsoft.quantum.intrinsic.h) and [$S$](xref:microsoft.quantum.intrinsic.s).
+The set of operations that occupy the octants of the [Bloch sphere](xref:microsoft.quantum.glossary#bloch-sphere) and effect permutations of the [Pauli operators](xref:microsoft.quantum.glossary#pauli-operators). These include the operations [$X$](xref:microsoft.quantum.intrinsic.x), [$Y$](xref:microsoft.quantum.intrinsic.y), [$Z$](xref:microsoft.quantum.intrinsic.z), [$H$](xref:microsoft.quantum.intrinsic.h) and [$S$](xref:microsoft.quantum.intrinsic.s).
 
 ## Controlled
 
@@ -67,7 +67,7 @@ A type of subroutine in the Q# language that is purely classical (non-quantum). 
 
 ## Gate
 
-A legacy term for a quantum [operation](xref:microsoft.quantum.glossary#operation), based on the concept of classical logic gates. A [quantum circuit](xref:microsoft.quantum.glossary#circuit) is a network of gates (or operations), based on the similar concept of classical logic circuits.
+A legacy term for a quantum [operation](xref:microsoft.quantum.glossary#operation), based on the concept of classical logic gates. A [quantum circuit](xref:microsoft.quantum.glossary#quantum-circuit-diagram) is a network of gates (or operations), based on the similar concept of classical logic circuits.
 
 ## Global phase
 
@@ -91,7 +91,7 @@ A variable whose value may be changed after it is created. A mutable variable in
 
 ## Namespace
 
-A label for a collection of related names (i.e., [operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function), and [user-defined types](xref:microsoft.quantum.glossary#user-def)). For instance the namespace [Microsoft.Quantum.Preparation](xref:microsoft.quantum.preparation) labels all of the symbols defined in the standard library that help with preparing initial states.
+A label for a collection of related names (i.e., [operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function), and [user-defined types](xref:microsoft.quantum.glossary#user-defined-type)). For instance the namespace [Microsoft.Quantum.Preparation](xref:microsoft.quantum.preparation) labels all of the symbols defined in the standard library that help with preparing initial states.
 
 ## Operation
 
@@ -119,7 +119,7 @@ A method to graphically represent the sequence of [operations](xref:microsoft.qu
 
 ## Quantum libraries
 
-Collections of [operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function) and [user-defined types](xref:microsoft.quantum.glossary#user-def) for creating Q# programs. The [Standard library](xref:microsoft.quantum.libraries.standard.intro) is installed by default. Other libraries available are the [Chemistry library](xref:microsoft.quantum.chemistry.concepts.intro), the [Numerics library](xref:microsoft.quantum.numerics.intro) and the [Machine learning library](xref:microsoft.quantum.machine-learning.concepts.intro).
+Collections of [operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function) and [user-defined types](xref:microsoft.quantum.glossary#user-defined-type) for creating Q# programs. The [Standard library](xref:microsoft.quantum.libraries.standard.intro) is installed by default. Other libraries available are the [Chemistry library](xref:microsoft.quantum.chemistry.concepts.intro), the [Numerics library](xref:microsoft.quantum.numerics.intro) and the [Machine learning library](xref:microsoft.quantum.machine-learning.concepts.intro).
 
 ## Quantum state
 
@@ -135,7 +135,7 @@ A quantum algorithm that probabilistically succeeds. Upon failure, the routine w
 
 ## Standard libraries
 
-[Operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function) and [user-defined types](xref:microsoft.quantum.glossary#user-def) that are installed along with the Q# compiler during installation. The standard library implementation is agnostic with respect to target machines. For more information, see [Standard libraries](xref:microsoft.quantum.libraries.standard.intro).
+[Operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function) and [user-defined types](xref:microsoft.quantum.glossary#user-defined-type) that are installed along with the Q# compiler during installation. The standard library implementation is agnostic with respect to target machines. For more information, see [Standard libraries](xref:microsoft.quantum.libraries.standard.intro).
 
 ## Superposition
 

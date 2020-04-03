@@ -7,9 +7,16 @@ ms.date: 04/01/2020
 ms.topic: article
 uid: microsoft.quantum.tutorial-template
 
+# title: <title should match the H1 title - Google displays this on the search results page. (example) "Tutorial: Write and Simulate Qubit-level programs in Q#">
+# description: <Description of the tutorial for SEO - this text also appears on the search results page> 
+# author: <GitHub handle>
+# ms.author: <ms alias>
+# ms.date: 04/01/2020
+# ms.topic: tutorial
+# uid: microsoft.quantum.tutorial.<unique name for tutorial>
+
 # For future contributors, describe the customer intent of the tutorial
 # Customer intent: As a <type of user>, I want to <what?> so that <why>.
-# ms.topic: tutorial
 ---
 
 <!-- General guidelines
@@ -17,9 +24,9 @@ uid: microsoft.quantum.tutorial-template
     * DO:
         * Comment your code generously
         * Include a "Clean Up" section before the Summary section if an environment or configuration needs to be reset
-    * DO NOT:
+    * DO NOT: 
         * Include links to other content (such as our doc set or APIs) in the procedures. Explain everything that the user needs to know to do the task. This helps keep them focused and on task. EXCEPTION for the Prerequisites section for links to installation, configuration, etc.
-        * Include a more Info, Resources, or See Also section
+        * Include a 'More Info', 'Resources', or 'See Also' section
     * AVOID:
         * Notes, Tips, and Important boxes. Users find them distracting and generally skip over them. 
         * Excessive bulleted or numbered lists. Use only as needed for clarity. 
@@ -27,13 +34,18 @@ uid: microsoft.quantum.tutorial-template
 -->
 
 # Tutorial: <verb and action> 
- <!-- (example) "Tutorial: Write and Simulate Qubit-level programs in Q#" -->
+ <!-- (example) "Tutorial: Write and Simulate Qubit-level programs in Q#". This should match the title in the metadata-->
 
  <!-- 
     * Provide a high-level abstract of the tutorial: what the user will do, accomplish, and learn. "In this tutorial you will do..." 
 
-    * Provide a bullet list of what is covered, based on the H2 procedure steps 
+    * Provide a bullet list of what is covered, based on the H2 procedure steps. Use the 'checklist' class to display green checkmarks (for this checklist only)
 -->
+
+> [!div class="checklist"]
+> * Procedure-1
+> * Procedure-2
+> * Procedure-3
 
 ## Prerequisites
  <!-- 

@@ -14,255 +14,232 @@ To do:
 - 
 
 
-## from 'file structure'
-## Operation Declarations
+For an operation to support application of the `Adjoint` and/or `Controlled` functor, its return type necessarily needs to be `Unit`. 
 
-Operations are the core of Q#, roughly analogous to functions in other languages.
-Each Q# source file may define any number of operations.
+## Q# Operations and Functions
 
-Operation names must be unique within a namespace and may not conflict with type and function names.
+Q# programs consist of one or more *operations* that describe side effects quantum operations can have on quantum data, and one or more *functions* that allow modifications to classical data. 
+In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values.
 
-An operation declarations consists of the keyword `operation`, followed by the symbol that is the operation’s name, a typed identifier tuple that defines the arguments to the operation, a colon `:`, a type annotation that describes the operation’s result type, optionally an annotation with the operation characteristics, an open brace `{`, the body of the operation declaration, and a final closing brace `}`.
+Each operation defined in Q# may then call any number of other operations, including the built-in intrinsic operations defined by the language. 
+The particular way in which these intrinsic operations are defined depends on the target machine.
+When compiled, each operation is represented as a .NET class type that can be provided to target machines.
 
-The body of the operation declaration either consists of the default implementation or of a list of specializations.
-The default implementation can be specified directly within the declaration if only the implementation of the default body specialization needs to specified explicitly.
-In this case, an annotation with the operation characteristics in the declaration is useful to ensure that the compiler auto-generates other specializations based on the default implementation. 
+## Defining New Operations
 
-For example 
+As described above, the most basic building block of a quantum program written in Q# is an *operation*, which can either be called from classical .NET applications, e.g., using a simulator, or by other operations within Q#.
+Each operation takes an input, produces an output, and specifies the implementation for one or more operation specializations.
+For instance, the following operation defines only a default body specialization and takes a single qubit as its input, then calls the built-in `X` operation on that input:
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
+operation BitFlip(target : Qubit) : Unit {
+    X(target);
+}
+```
+
+The keyword `operation` begins the operation definition, and is followed by the name; here, `BitFlip`.
+Next, the type of the input is defined as `Qubit`, along with a name `target` for referring to the input within the new operation.
+Similarly, the `Unit` defines that the operation's output is empty.
+This is used similarly to `void` in C# and other imperative languages, and is equivalent to `unit` in F# and other functional languages.
+
+> [!NOTE]
+> We will explore this in more detail below, but each operation in Q# takes exactly one input and returns exactly one output.
+> Multiple inputs and outputs are then represented using *tuples*, which collect multiple values together into a single value.
+> Informally, we say that Q# is a "tuple-in tuple-out" language.
+> Following this concept, `()` should then be read as the "empty" tuple, which has the type `Unit`.
+
+Within the new operation, the implementation can be specified directly within the declaration if only the implementation of the default body specialization needs to be specified explicitly. Additionally, it is possible to define the implementations of, for example, one or more `functor` operations, as elaborated below. In the example above, the only statement is to call the built-in Q# operation <xref:microsoft.quantum.intrinsic.x>.
+
+Operations can also return more interesting types than `Unit`.
+For instance, the <xref:microsoft.quantum.intrinsic.m> operation returns an output of type `Result`, representing having performed a measurement. We can either pass the output from an operation to another operation, or can use it with the `let` keyword to define a new variable.
+<!-- Link to UID for superdense conceptual and example documentation. -->
+This allows for representing classical computation that interacts with quantum operations at a low level, such as in superdense coding:
+
+```qsharp
+operation Superdense(here : Qubit, there : Qubit) : (Result, Result) {
+
+    CNOT(there, here);
+    H(there);
+
+    let firstBit = M(there);
+    let secondBit = M(here);
+
+    return (firstBit, secondBit);
+}
+```
+### Functors: adjoint and controlled operations
+
+If an operation implements a unitary transformation, then it is possible to define how the operation acts when *adjointed* or *controlled*. 
+An adjoint specialization of an operation specifies how it acts when run in reverse, while a controlled specialization specifies how an operation acts when applied conditioned on the state of a quantum register.
+
+The existence of these specializations can be declared as part of the operation signature: `is Adj + Ctl` in the following example. 
+The corresponding implementation for each such implicitly declared specialization is then generated by the compiler. 
+
+```qsharp
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
 }
 ```
 
-Operation characteristics define what kinds of functors can be applied to the declared operation, and what effect they have. 
-If an operation implements a unitary transformation, then it is possible to define how the operation acts when *adjointed* or *controlled*.
-The existence of these specializations can be declared as part of the operation signature. The corresponding implementation for each such implicitly declared specialization is then generated by the compiler. 
-In the example above, an adjoint, a controlled, and a controlled adjoint specialization are generated by the compiler. 
+> [!NOTE]
+> Many operations in Q# represent unitary gates.
+> If $U$ is the unitary gate represented by an operation `U`, then `Adjoint U` represents the unitary gate $U^\dagger$, which is the complex conjugate transpose.
 
-In the case where the implementation cannot be generated by the compiler, it can be explicitly specified. 
-Such explicit specialization declarations can either consist of a suitable generation directive that clarify how a certain specialization is to be built, or a user defined implementation. 
-The code in `PrepareEntangledPair` above for example is equivalent to the code below containing explicit specialization declarations: 
+To call a specialization of an operation, use the `Adjoint` or `Controlled` keywords.
+For example, the superdense coding example above can be written more compactly by using the adjoint of `PrepareEntangledPair` to transform the entangled state back into an unentangled pair of qubits:
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
-    body (...) { // default body specialization
-        H(here);
-        CNOT(here, there);
-    }
+operation Superdense(here : Qubit, there : Qubit) : (Result, Result) {
+    Adjoint PrepareEntangledPair(there, here);
 
-    adjoint auto; // auto-generate adjoint specialization
-    controlled auto; // auto-generate controlled specialization
-    controlled adjoint auto; // auto-generate controlled adjoint specialization
-}
-```
-The keyword `auto` indicates that the compiler should determine how to generate the specialization implementation.
-If the compiler cannot generate the implementation for a certain specialization without further instructions - like a more precise generation directive -, or if a more efficient implementation can be given, then the implementation may also be manually defined.
+    let firstBit = M(there);
+    let secondBit = M(here);
 
-```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
-is Ctl + Adj {
-    body (...) { // default body specialization
-        H(here);
-        CNOT(here, there);
-    }
-
-    controlled (cs, ...) { // user defined implementation for the controlled specialization
-        Controlled H(cs, here);
-        Controlled X(cs + [here], there);
-    }
-
-    adjoint invert; 
-    controlled adjoint invert; 
+    return (firstBit, secondBit);
 }
 ```
 
-In the example above, `adjoint invert;` indicates that the adjoint specialization is to be generated by inverting the body implementation, and `controlled adjoint invert;` indicates that the controlled adjoint specialization is to be generated by inverting the given implementation of the controlled specialization.
+There are a number of important limitations to consider when designing operations for use with functors.
+Most critically, specializations for an operation that uses the output value of any other operation cannot be auto-generated by the compiler, as it is ambiguous how to reorder the statements in such an operation to obtain the same effect.
 
-For an operation to support application of the `Adjoint` and/or `Controlled` functor, its return type necessarily needs to be `Unit`. 
+Functors do not have a representation in the Q# type system. 
+It is thus currently not possible to bind them to a variable or pass them as arguments. 
 
+## (MORE) Functors: adjoint and controlled operations
+NEED TO BRING THIS TOGETHER WITH THE ABOVE SECTION, OR CREATE A NEW PAGE FOR 'ADVANCED STUFF'
 
-### Explicit Specialization Declarations
+A functor in Q# is a factory that defines a new operation from another operation.
+Functors have access to the implementation of the base operation when defining the implementation of the new operation.
+Thus, functors can perform more complex functions than traditional higher-level functions. 
+The two standard functors in Q# are `Adjoint` and `Controlled`.
 
-Q# operations may contain the following explicit specialization declarations:
+A functor is used by applying it to an operation, returning a new operation.
+For example, the operation that results from applying the `Adjoint` functor to the `Y` operation is written as `Adjoint Y`.
+The new operation may then be invoked like any other operation.
+Thus, `Adjoint Y(q1)` applies the Adjoint functor to the `Y` operation to generate a new operation, and applies that new operation to `q1`.
 
-- The `body` specialization specifies the implementation of the operation with no functors applied.
-- The `adjoint` specialization specifies the implementation of the operation with the `Adjoint` functor applied.
-- The `controlled` specialization specifies the implementation of the operation with the `Controlled` functor applied.
-- The `controlled adjoint` specialization specifies the implementation of the
-  operation with both the `Adjoint` and `Controlled` functors applied.
-  This specialization can also be named `adjoint controlled`, since the two functors commute.
-
-
-An operation specialization consists of the specialization tag (e.g. `body`, or `adjoint`, etc.) followed by one of:
-
-- An explicit declaration as described below.
-- A directive that tells the compiler how to generate the specialization,
-  one of:
-  - `intrinsic`, which indicates that the specialization is provided by the target machine.
-  - `distribute`, which may be used with the `controlled` and `controlled adjoint` specializations.
-    When used with `controlled`, it indicates that the compiler should compute
-    the specialization by applying `Controlled` to all of the operations in the `body`.
-    When used with `controlled adjoint`, it indicates that the compiler
-    should compute the specialization by applying `Controlled` to all of the
-    operations in the `adjoint` specialization.
-  - `invert`, which indicates that the compiler should compute the
-    `adjoint` specialization by inverting the `body`, i.e. reversing the order of operations and
-    applying the adjoint to each one.
-    When used with `adjoint controlled`, this indicates that the compiler
-    should compute the specialization by inverting the `controlled` specialization.
-  - `self`, to indicate that the adjoint specialization is the
-    the same as the `body` specialization.
-    This is legal for the `adjoint` and `adjoint controlled` specializations.
-    For `adjoint controlled`, `self` implies that the `adjoint controlled`
-    specialization is the same as the `controlled` specialization.
-  - `auto`, to indicate that the compiler should select an
-    appropriate directive to apply.
-    `auto` may not be used for the `body` specialization.
-
-The directives and `auto` all require a closing semi-colon `;`.
-The `auto` directive resolves to the following generation directive if an explicit declaration of the `body` is provided:
-
-- The `adjoint` specialization is generated according to the directive `invert`.
-- The `controlled` specialization is generated according to the directive `distribute`.
-- The `adjoint controlled` specialization is generated according to the directive `invert` if an explicit
-  declaration for `controlled` is given but not one for `adjoint`, and
-  `distribute` otherwise.
-
-> [!TIP]   
-> If an operation is self-adjoint, explicitly specify either the adjoint or the controlled adjoint specialization via the generation directive `self` to allow the compiler to make use of that information for optimization purposes.
-
-A specialization declaration containing a user defined implementation consists of an argument tuple followed by a statement block with the Q# code that implements the specialization.
-In the argument list, `...` is used to represent the arguments declared for the operation as a whole.
-For `body` and `adjoint`, the argument list should always be `(...)`; for `controlled` and `adjoint controlled`, the argument list should be a symbol that represents the array of control qubits, followed by `...`, enclosed in parentheses; for example, `(controls,...)`.
-
-If one or more specializations besides the default body need to be explicitly declared, then the implementation for the default body needs to be wrapped into a suitable specialization declaration as well:
-
-```qsharp
-operation CountOnes(qubits: Qubit[]) : Int {
-
-    body (...) // default body specialization
-    {
-        mutable n = 0;
-        for (qubit in qubits) {
-            set n += M(q) == One ? 1 | 0;
-        }
-        return n;
-    }
-
-    ...
-```
+Similarly, `Controlled X(controls, target)` applies the Controlled functor to the `X` operation to generate a new operation, and applies that new operation to `controls` and `target`.
 
 ### Adjoint
 
-The adjoint of an operation specifies how the complex conjugate transpose of the operation is implemented, i.e. how the operation acts when "run in reverse".
-It is legal to specify an operation with no adjoint; for instance, measurement operations have no adjoint because they are not invertible.
-An operation supports the `Adjoint` functor if its declaration contains an implicit or explicit declaration of an adjoint specialization.
-An explicitly declared controlled adjoint specialization implies the existence of an adjoint specialization. 
+In quantum computing, the adjoint of an operation specifies how the complex conjugate transpose of the operation is implemented; i.e. the "inverse" of the operation, such that successively applying an operation and then its adjoint to a state leaves the state unchanged. 
+In the matrix representation of such an operation, this means that the operation and its adjoint multiply to the identity matrix.
+For a simple operation that just invokes a sequence of other unitary operations on a set of qubits, the adjoint may be computed by applying the adjoints of the sub-operations on the same qubits, in the reverse order.
 
-For operation whose body contains repeat-until-success loops, set statements, measurements, return statements, or calls to other operations that do not support the `Adjoint` functor, auto-generating an adjoint specialization following the `invert` or `auto` directive is not possible.
+Given an operation expression, a new operation expression may be formed using the `Adjoint` functor.
+For instance, `Adjoint QFT` designates the adjoint of the `QFT` operation.
+The new operation has the same signature and type as the base operation.
+In particular, the new operation also allows `Adjoint`, and will allow `Controlled` if and only if the base operation did.
+
+The Adjoint functor is its own inverse; that is, `Adjoint Adjoint Op` is always the same as `Op`.
+
 
 ### Controlled
 
-The controlled version of an operation specifies how a quantum-controlled version of the operation is implemented, i.e. how an operation acts when applied conditioned on the state of a quantum register.
-A more complete description is provided in the [Controlled](xref:microsoft.quantum.language.type-model#controlled) section.
+The controlled version of an operation is a new operation that effectively applies the base operation only if all of the control qubits are in a specified state.
+If the control qubits are in superposition, then the base operation is applied coherently to the appropriate part of the superposition.
+Thus, controlled operations are often used to generate entanglement.
 
-It is legal to specify an operation with no controlled version; for instance, measurement operations have no controlled version because they are not controllable.
-An operation supports the `Controlled` functor if and only if its declaration contains an implicit or explicit declaration of a controlled specialization.
-An explicitly declared controlled adjoint specialization implies the existence of a controlled specialization. 
+In Q#, controlled versions always take an array of control qubits, and the specified state is always for all of the control qubits to be in the computational (`PauliZ`) `One` state, $\ket{1}$.
+Controlling based on other states may be achieved by applying the appropriate unitary operation to the control qubits before the controlled operation, and then applying the inverses of the unitary operation after the controlled operation.
+For example, applying an `X` operation to a control qubit before and after a controlled operation will cause the operation to control on the `Zero` state ($\ket{0}$) for that qubit; applying an `H` operation before and after will control on the `PauliX` `One` state, that is -1 eigenvalue of Pauli X, $\ket{-} \mathrel{:=} (\ket{0} - \ket{1}) / \sqrt{2}$ rather than the `PauliZ` `One` state.
 
-For an operation whose body contains calls to other operations that does not support the `Controlled` functor, auto-generating a controlled specialization following the `distribute` or `auto` directive is not possible.
+Given an operation expression, a new operation expression may be formed using the `Controlled` functor.
+The signature of the new operation is based on the signature of the original operation.
+The result type is the same, but the input type is a two-tuple with a qubit array that holds the control qubit(s) as the first element and the arguments of the original operation as the second element.
+The new operation supports `Controlled`, and will support `Adjoint` if and only if the original operation did.
 
-### Controlled Adjoint
+If the original operation took only a single argument, then singleton tuple equivalence will come into play here.
+For instance, `Controlled X` is the controlled version of the `X` operation. 
+`X` has type `(Qubit => Unit is Adj + Ctl)`, so `Controlled X` has type `((Qubit[], (Qubit)) => Unit is Adj + Ctl)`; because of singleton tuple equivalence, this is the same as `((Qubit[], Qubit) => Unit is Adj + Ctl)`.
 
-The controlled adjoint version of an operation specifies how a quantum-controlled version of the adjoint of the operation is implemented.
-It is legal to specify an operation with no controlled adjoint version; for instance, measurement operations have no controlled adjoint version because they are neither controllable nor invertible.
+If the base operation took several arguments, remember to enclose the corresponding arguments of the controlled version of the operation in parentheses to convert them into a tuple.
+For instance, `Controlled Rz` is the controlled version of the `Rz` operation. 
+`Rz` has type `((Double, Qubit) => Unit is Adj + Ctl)`, so `Controlled Rz` has type
+`((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)`.
+Thus, `Controlled Rz(controls, (0.1, target))` would be a valid invocation of `Controlled Rz` (note the parentheses around `0.1, target`).
 
-A controlled adjoint specialization for an operation needs to exist if and only if both an adjoint and a controlled specialization exist. In that case, the existence of the controlled adjoint specialization is inferred and an appropriate specialization is generated by the compiler if no implementation has been defined explicitly. 
+As another example, `CNOT(control, target)` can be implemented as `Controlled X([control], target)`. 
+If a target should be controlled by 2 control qubits (CCNOT), we can use `Controlled X([control1, control2], target)` statement.
 
-For an operation whose body contains calls to other operations that do not have a controlled adjoint version, auto-generating an adjoint specialization following the `invert`, `distribute` or `auto` directive is not possible.
+### Type Compatibility
 
+An operation with additional functors supported may be used anywhere an operation with fewer functors but the same signature is expected.
+For instance, an operation of type `(Qubit => Unit is Adj)` may be used anywhere an operation of type `(Qubit => Unit)` is expected.
 
-### Examples
+Q# is *covariant* with respect to callable return types: a callable that returns a type `'A` is compatible with a callable with the same input type and a result type that `'A` is compatible with.
 
-An operation declaration might be as simple as the following, which defines the primitive Pauli X operation:
+Q# is *contravariant* with respect to input types: a callable that takes a type `'A` as input is compatible with a callable with the same result type and an input type that is compatible with `'A`.
+
+That is, given the following definitions:
 
 ```qsharp
-operation X (qubit : Qubit) : Unit
-is Adj + Ctl {
-    body intrinsic;
-    adjoint self;
+operation Invert(qubits : Qubit[]) : Unit 
+is Adj {...} 
+
+operation ApplyUnitary(qubits : Qubit[]) : Unit 
+is Adj + Ctl {...} 
+
+function ConjugateInvertWith(
+    inner : (Qubit[] => Unit is Adj),
+    outer : (Qubit[] => Unit is Adj))
+: (Qubit[] => Unit is Adj) {...}
+
+function ConjugateUnitaryWith(
+    inner : (Qubit[] => Unit is Adj + Ctl),
+    outer : (Qubit[] => Unit is Adj))
+: (Qubit[] => Unit is Adj + Ctl) {...}
+```
+
+the following are true:
+
+- The function `ConjugateInvertWith` may be invoked with an `inner` argument of either `Invert` or `ApplyUnitary`.
+- The function `ConjugateUnitaryWith` may be invoked with an `inner` argument of `ApplyUnitary`, but not `Invert`.
+- A value of type `(Qubit[] => Unit is Adj + Ctl)` may be returned from `ConjugateInvertWith`.
+
+> [!IMPORTANT]
+> Q# 0.3 introduces a significant difference in the behavior of user-defined types.
+
+User-defined types are treated as a wrapped version of the underlying type, rather than as a subtype.
+This means that a value of a user-defined type is not usable where a value of the underlying type is expected.
+
+
+## Defining New Functions
+
+Q# also allows for defining *functions*, which are distinct from operations in that they are not allowed to have any effects beyond calculating an output value.
+In particular, functions cannot call operations, act on qubits, sample random numbers, or otherwise depend on state beyond the input value to a function.
+As a consequence, Q# functions are *pure*, in that they always map the same input values to the same output values.
+This allows the Q# compiler to safely reorder how and when functions are called when generating operation specializations.
+
+Defining a function works similarly to defining an operation, except that no adjoint or controlled specializations can be defined for a function.
+For instance:
+
+```qsharp
+function Square(x : Double) : (Double) {
+    return x * x;
+}
+```
+Whenever it is possible to do so, it is helpful to write out classical logic in terms of functions rather than operations, so that it can be more readily used from within operations.
+If we had written `Square` as an operation, for example, then the compiler would not have been able to guarantee that calling it with the same input would consistently produce the same outputs.
+
+To underscore the difference between functions and operations, consider the problem of classically sampling a random number from within a Q# operation:
+
+```qsharp
+operation U(target : Qubit) : Unit {
+
+    let angle = RandomReal()
+    Rz(angle, target)
 }
 ```
 
-The following defines the teleport operation.
+Each time that `U` is called, it will have a different action on `target`.
+In particular, the compiler cannot guarantee that if we added an `adjoint auto` specialization declaration to `U`, then `U(target); Adjoint U(target);` acts as identity (that is, as a no-op).
+This violates the definition of the adjoint that we saw in [Vectors and Matrices](xref:microsoft.quantum.concepts.vectors), such that allowing to auto-generate an adjoint specialization in an operation where we have called the operation <xref:microsoft.quantum.math.randomreal> would break the guarantees provided by the compiler; <xref:microsoft.quantum.math.randomreal> is an operation for which no adjoint or controlled version exists.
 
-```qsharp
-// Entangle two qubits.
-// Assumes that both qubits are in the |0> state.
-operation EPR (q1 : Qubit, q2 : Qubit) : Unit 
-is Adj + Ctl {
-    H(q2);
-    CNOT(q2, q1);
-}
-
-// Teleport the quantum state of the source to the target.
-// Assumes that the target is in the |0> state.
-operation Teleport (source : Qubit, target : Qubit) : Unit {
-
-    // Get a temporary for the Bell pair
-    using (ancilla = Qubit())
-    {
-        // Create a Bell pair between the temporary and the target
-        EPR(target, ancilla);
-
-        // Do the teleportation
-        Adjoint EPR (ancilla, source);
-
-        if (MResetZ(source) == One) {
-            X(target);
-        }
-        if (MResetZ(ancilla) == One) {
-            Z(target);
-        }
-    }
-}
-```
-
-## Function Declarations
-
-Functions are purely classical routines in Q#.
-Each Q# source file may define any number of functions.
-
-A function declaration consists of the keyword `function`, followed by the symbol that is the function’s name, a typed identifier tuple, a type annotation that describes the function's return type, and a statement block that describes the implementation of the function.
-
-The statement block defining a function must be enclosed in
-`{` and `}` like any other statement block.
-
-Function names must be unique within a namespace and may not conflict with operation and type names.
-Functions may not allocate or borrow qubits, or call operations. 
-Partial application of operations or passing around operation typed values is fine.
-
-For example,
-
-```qsharp
-function DotProduct(a : Double[], b : Double[]) : Double {
-    if (Length(a) != Length(b)) {
-        fail "Arrays are not compatible";
-    }
-
-    mutable accum = 0.0;
-    for (i in 0..Length(a)-1) {
-        set accum += a[i] * b[i];
-    }
-    return accum;
-}
-```
-
-
+On the other hand, allowing function calls such as `Square` is safe, in that the compiler can be assured that it only needs to preserve the input to `Square` in order to keep its output stable.
+Thus, isolating as much classical logic as possible into functions makes it easy to reuse that logic in other functions and operations alike.
 
 ## from 'Statements'
 ## Conjugations
@@ -306,112 +283,10 @@ Such a conjugation statement obviously becomes far more useful if the outer and 
 The inverse transformation for the statements defined in the within-block is automatically generated by the compiler and executed after the apply-block completes.
 Since any mutable variables used as part of the within-block cannot be rebound in the apply-block, the generated transformation is guaranteed to be the adjoint of the computation in the within-block. 
 
-## Expression Evaluation Statements
-
-Any call expression of type `Unit` may be used as a statement.
-This is primarily of use when calling operations on qubits that return `Unit` because the purpose of the statement is to modify the implicit quantum state.
-Expression evaluation statements require a terminating semicolon.
-
-For example,
-
-```qsharp
-X(q);
-CNOT(control, target);
-Adjoint T(q);
-```
 
 
 ## From "Expressions"
-## Callable Expressions
 
-A callable literal is the name of an operation or function defined in the compilation scope.
-For instance, `X` is an operation literal that refers to the standard library `X` operation, and `Message` is a function literal that refers to the standard library `Message` function.
-
-If an operation supports the `Adjoint` functor, then `Adjoint op` is an operation expression.
-Similarly, if the operation supports the `Controlled` functor, then `Controlled op` is an operation expression.
-The types of these expressions are specified in [Functors](xref:microsoft.quantum.language.type-model#functors).
-
-Functors (`Adjoint` and `Controlled`) bind more closely than all other operators, except for the unwrap operator `!` and array indexing with []`.
-Thus, the following are all legal, assuming that the operations support the functors used:
-
-```qsharp
-Adjoint Op(qs)
-Controlled Op(controls, targets)
-Controlled Adjoint Op(controls, targets)
-Adjoint WrappedOp!(qs)
-```
-
-A callable literal may be used as a value, say to assign to a variable or to pass to another callable.
-In this case, if the callable has type parameters, they must be provided as part of the callable value.
-A callable value cannot have any unspecified type parameters.
-
-For instance, if `Fun` is a function with signature `'T1->Unit`:
-
-```qsharp
-let f = Fun<Int>;            // f is Int->Unit.
-SomeOtherFun(Fun<Double>);   // A Double->Unit is passed to SomOtherFun.
-let g = Fun;                 // This causes a compilation error.
-SomeOtherFun(Fun);           // This also causes a compilation error.
-```
-
-## Callable Invocation Expressions
-
-Given a callable (operation or function) expression and a tuple expression of the input type of the callable's signature, an invocation expression may be formed by appending the tuple expression to the callable expression.
-The type of the invocation expression is the output type of the callable's signature.
-
-For example, if `Op` is an operation with signature `((Int, Qubit) => Double)`, `Op(3, qubit1)` is an expression of type `Double`.
-Similarly, if `Sin` is a function with signature `(Double -> Double)`, `Sin(0.1)` is an expression of type `Double`.
-Finally, if `Builder` is a function with signature `(Int -> (Int -> Int))`, then `Builder(3)` is a function from Into to Int.
-
-Invoking the result of a callable-valued expression requires an extra pair of parentheses around the callable expression.
-Thus, to invoke the result of calling `Builder` from the previous paragraph, the correct syntax is:
-
-```qsharp
-(Builder(3))(2)
-```
-
-When invoking a type-parameterized callable, the actual type parameters may be specified within angle brackets `<` and `>` after the callable expression.
-This is usually unnecessary as the Q# compiler will infer the actual types.
-It is required for partial application (see below) if a type-parameterized argument is left unspecified.
-It is also sometimes useful when passing operations with different functor supports to a callable.
-
-For instance, if `Func` has signature `('T1, 'T2, 'T1) -> 'T2`, `Op1` and `Op2` have signature `(Qubit[] => Unit is Adj)`, and `Op3` has signature `(Qubit[] => Unit)`, to invoke `Func` with `Op1` as the first argument, `Op2` as the second, and `Op3` as the third:
-
-```qsharp
-let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
-```
-
-The type specification is required because `Op3` and `Op1` have different types, so the compiler will treat this as ambiguous without the specification.
-
-### Partial Application
-
-Given a callable expression, a new callable may be created by providing a subset of the arguments to the callable.
-This is called _partial application_.
-
-In Q#, a partially applied callable is expressed by writing a normal invocation expression, but using an underscore, `_`, for the unspecified arguments.
-The resulting callable has the same result type as the base callable, and the same specializations for operations.
-The input type of the partial application is simply the original type with the specified arguments removed.
-
-If a mutable variable is passed as a specified argument when creating a partial application, the current value of the variable is used.
-Changing the value of the variable afterward will not impact the partial application.
-
-For example, if `Op` has type `((Int, ((Qubit, Qubit), Double)) => Unit is Adj)`:
-
-- `Op(5,(_,_))` has type `(((Qubit,Qubit), Double) => Unit is Adj)`, and so has `Op(5,_)`.
-- `Op(_,(_,1.0))` has type `((Int, (Qubit,Qubit)) => Unit is Adj)`.
-- `Op(_,((q1,q2),_))` has type `((Int,Double) => Unit is Adj)`.
-   Note that we have applied singleton tuple equivalence here.
-
-If the partially-applied callable has type parameters that cannot be inferred by the compiler, they must be provided at the invocation site.
-The partial application cannot have any unspecified type parameters.
-
-For example, if `Op` has type `(('T1, Qubit, 'T1) => Unit : Adjoint)`:
-
-```qsharp
-let f1 = Op<Int>(_, qb, _); // f1 has type ((Int,Int) => Unit is Adj)
-let f2 = Op(5, qb, _);      // f2 has type (Int => Unit is Adj)
-let f3 = Op(_,qb, _);       // f3 generates a compilation error
-```
 
 ### Recursion
 
@@ -428,117 +303,8 @@ There are two important comments about the use of recursion, however:
 
 ## From "Types"
 
-### Type-Parameterized Functions and Operations
 
-Callable types may contain type parameters.
-Type parameters are indicated by a symbol prefixed by a single quote; for example, `'A` is a legal type parameter.
 
-A type parameter may appear more than once in a single signature.
-For example, a function that applies another function to each element of an array and returns the collected results would have signature `(('A[], 'A->'A) -> 'A[])`.
-Similarly, a function that returns the composition of two operations might have signature `((('A=>'B), ('B=>'C)) -> ('A=>'C))`.
 
-When invoking a type-parameterized callable, all arguments that have the same type parameter must be of the same type.
-
-Q# does not provide a mechanism for constraining the possible types that might be substituted for a type parameter.
-
-### Type Compatibility
-
-An operation with additional functors supported may be used anywhere an operation with fewer functors but the same signature is expected.
-For instance, an operation of type `(Qubit => Unit is Adj)` may be used anywhere an operation of type `(Qubit => Unit)` is expected.
-
-Q# is *covariant* with respect to callable return types: a callable that returns a type `'A` is compatible with a callable with the same input type and a result type that `'A` is compatible with.
-
-Q# is *contravariant* with respect to input types: a callable that takes a type `'A` as input is compatible with a callable with the same result type and an input type that is compatible with `'A`.
-
-That is, given the following definitions:
-
-```qsharp
-operation Invert(qubits : Qubit[]) : Unit 
-is Adj {...} 
-
-operation ApplyUnitary(qubits : Qubit[]) : Unit 
-is Adj + Ctl {...} 
-
-function ConjugateInvertWith(
-    inner : (Qubit[] => Unit is Adj),
-    outer : (Qubit[] => Unit is Adj))
-: (Qubit[] => Unit is Adj) {...}
-
-function ConjugateUnitaryWith(
-    inner : (Qubit[] => Unit is Adj + Ctl),
-    outer : (Qubit[] => Unit is Adj))
-: (Qubit[] => Unit is Adj + Ctl) {...}
-```
-
-the following are true:
-
-- The function `ConjugateInvertWith` may be invoked with an `inner` argument of either `Invert` or `ApplyUnitary`.
-- The function `ConjugateUnitaryWith` may be invoked with an `inner` argument of `ApplyUnitary`, but not `Invert`.
-- A value of type `(Qubit[] => Unit is Adj + Ctl)` may be returned from `ConjugateInvertWith`.
-
-> [!IMPORTANT]
-> Q# 0.3 introduces a significant difference in the behavior of user-defined types.
-
-User-defined types are treated as a wrapped version of the underlying type, rather than as a subtype.
-This means that a value of a user-defined type is not usable where a value of the underlying type is expected.
-
-### Functors
-
-A functor in Q# is a factory that defines a new operation from another operation.
-Functors have access to the implementation of the base operation when defining the implementation of the new operation.
-Thus, functors can perform more complex functions than traditional higher-level functions.
-
-Functors do not have a representation in the Q# type system. 
-It is thus currently not possible to bind them to a variable or pass them as arguments. 
-
-A functor is used by applying it to an operation, returning a new operation.
-For example, the operation that results from applying the `Adjoint` functor to the `Y` operation is written as `Adjoint Y`.
-The new operation may then be invoked like any other operation.
-Thus, `Adjoint Y(q1)` applies the Adjoint functor to the `Y` operation to generate a new operation, and applies that new operation to `q1`.
-
-Similarly, `Controlled X(controls, target)` applies the Controlled functor to the `X` operation to generate a new operation, and applies that new operation to `controls` and `target`.
-
-The two standard functors in Q# are `Adjoint` and `Controlled`.
-
-#### Adjoint
-
-In quantum computing, the adjoint of an operation is the complex conjugate transpose of the operation.
-For operations that implement a unitary operator, the adjoint is the inverse of the operation.
-For a simple operation that just invokes a sequence of other unitary operations on a set of qubits, the adjoint may be computed by applying the adjoints of the sub-operations on the same qubits, in the reverse sequence.
-
-Given an operation expression, a new operation expression may be formed using the `Adjoint` functor.
-For instance, `Adjoint QFT` designates the adjoint of the `QFT` operation.
-The new operation has the same signature and type as the base operation.
-In particular, the new operation also allows `Adjoint`, and will allow `Controlled` if and only if the base operation did.
-
-The Adjoint functor is its own inverse; that is, `Adjoint Adjoint Op` is always the same as `Op`.
-
-#### Controlled
-
-The controlled version of an operation is a new operation that effectively applies the base operation only if all of the control qubits are in a specified state.
-If the control qubits are in superposition, then the base operation is applied coherently to the appropriate part of the superposition.
-Thus, controlled operations are often used to generate entanglement.
-
-In Q#, controlled versions always take an array of control qubits, and the specified state is always for all of the control qubits to be in the computational (`PauliZ`) `One` state, $\ket{1}$.
-Controlling based on other states may be achieved by applying the appropriate unitary operation to the control qubits before the controlled operation, and then applying the inverses of the unitary operation after the controlled operation.
-For example, applying an `X` operation to a control qubit before and after a controlled operation will cause the operation to control on the `Zero` state ($\ket{0}$) for that qubit; applying an `H` operation before and after will control on the `PauliX` `One` state, that is -1 eigenvalue of Pauli X, $\ket{-} \mathrel{:=} (\ket{0} - \ket{1}) / \sqrt{2}$ rather than the `PauliZ` `One` state.
-
-Given an operation expression, a new operation expression may be formed using the `Controlled` functor.
-The signature of the new operation is based on the signature of the original operation.
-The result type is the same, but the input type is a two-tuple with a qubit array that holds the control qubit(s) as the first element and the arguments of the original operation as the second element.
-The new operation supports `Controlled`, and will support `Adjoint` if and only if the original operation did.
-
-If the original operation took only a single argument, then singleton tuple equivalence will come into play here.
-For instance, `Controlled X` is the controlled version of the `X` operation. 
-`X` has type `(Qubit => Unit is Adj + Ctl)`, so `Controlled X` has type `((Qubit[], (Qubit)) => Unit is Adj + Ctl)`; because of singleton tuple equivalence, this is the same as `((Qubit[], Qubit) => Unit is Adj + Ctl)`.
-
-If the base operation took several arguments, remember to enclose the corresponding arguments of the controlled version of the operation in parentheses to convert them into a tuple.
-For instance, `Controlled Rz` is the controlled version of the `Rz` operation. 
-`Rz` has type `((Double, Qubit) => Unit is Adj + Ctl)`, so `Controlled Rz` has type
-`((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)`.
-Thus, `Controlled Rz(controls, (0.1, target))` would be a valid invocation of `Controlled Rz` (note the parentheses around `0.1, target`).
-
-As another example, `CNOT(control, target)` can be implemented as `Controlled X([control], target)`. 
-If a target should be controlled by 2 control qubits (CCNOT), we can use `Controlled X([control1, control2], target)` statement.
 
 

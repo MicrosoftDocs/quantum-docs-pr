@@ -15,17 +15,7 @@ To do:
 - maybe move array stuff to own page? it's a lot of useful info but easily lost here (also seems to get slightly tangential to this page)
 - copy-and-update expressions? Would they feel more at home elsewhere?
 
-
-# From expressions page
-## Grouping
-
-
-
-The equivalence between simple values and single-element tuples described in
-[the type model](xref:microsoft.quantum.language.type-model#tuple-types) removes the ambiguity
-between `(6)` as a group and `(6)` as a single-element tuple.
-
-
+PAGE INTRO GOES HERE
 
 ## Numeric Expressions
 
@@ -184,30 +174,6 @@ for the C# syntax.
 Expressions inside of an interpolated string follow Q# syntax, not C# syntax.
 Any valid Q# expression may appear in an interpolated string.
 
-## Qubit Expressions
-
-The only `Qubit` expressions are symbols that are bound to `Qubit` values
-or array elements of `Qubit` arrays.
-There are no `Qubit` literals.
-
-## Pauli Expressions
-
-The four `Pauli` values, `PauliI`, `PauliX`, `PauliY`, and `PauliZ`,
-are all valid `Pauli` expressions.
-
-Other than that, the only `Pauli` expressions are symbols that are
-bound to `Pauli` values or array elements of `Pauli` arrays.
-
-## Result Expressions
-
-The two `Result` values, `One` and `Zero`, are valid `Result` expressions.
-
-Other than that, the only `Result` expressions are symbols that are
-bound to `Result` values or array elements of `Result` arrays.
-In particular, note that `One` is not the same as the integer `1`,
-and there is no direct conversion between them.
-The same is true for `Zero` and `0`.
-
 ## Range Expressions
 
 Given any three `Int` expressions `start`, `step`, and `stop`,
@@ -235,6 +201,29 @@ Some example ranges are:
 - `2..2..1` is the empty range.
 - `1..-1..2` is the empty range.
 
+## Qubit Expressions
+
+The only `Qubit` expressions are symbols that are bound to `Qubit` values
+or array elements of `Qubit` arrays.
+There are no `Qubit` literals.
+
+## Pauli Expressions
+
+The four `Pauli` values, `PauliI`, `PauliX`, `PauliY`, and `PauliZ`,
+are all valid `Pauli` expressions.
+
+Other than that, the only `Pauli` expressions are symbols that are
+bound to `Pauli` values or array elements of `Pauli` arrays.
+
+## Result Expressions
+
+The two `Result` values, `One` and `Zero`, are valid `Result` expressions.
+
+Other than that, the only `Result` expressions are symbols that are
+bound to `Result` values or array elements of `Result` arrays.
+In particular, note that `One` is not the same as the integer `1`,
+and there is no direct conversion between them.
+The same is true for `Zero` and `0`.
 
 ## Tuple Expressions
 
@@ -289,47 +278,25 @@ let g = Foo(arg)!;      // Syntax error
 
 ## Array Expressions
 
-An array literal is a sequence of one or more element expressions,
-separated by commas, enclosed in `[` and `]`.
+An array literal is a sequence of one or more element expressions, separated by commas, enclosed in `[` and `]`.
 All elements must be compatible with the same type.
 
-If the common element type is an operation or function type, all of the
-elements must have the same input and output types.
-The element type of the array will support any functors that are supported
-by all of the elements.
-For example, if `Op1`, `Op2`, and `Op3` all are `Qubit[] => Unit`, but `Op1`
-supports `Adjoint`, `Op2` supports `Controlled`, and `Op3` supports both:
 
-- `[Op1, Op2]` is an array of `(Qubit[] => Unit)` operations.
-- `[Op1, Op3]` is an array of `(Qubit[] => Unit is Adj)` operations.
-- `[Op2, Op3]` is an array of `(Qubit[] => Unit is Ctl)` operations.
-
-Empty array literals, `[]`, are not allowed.
-Instead using `new ★[0]`,
-where `★` is as placeholder for a suitable type, allows to create the
-desired array of length zero.
-
-Given two arrays of the same type, the binary `+` operator may be used to
-form a new array that is the concatenation of the two arrays.
+Given two arrays of the same type, the binary `+` operator may be used to form a new array that is the concatenation of the two arrays.
 For instance, `[1,2,3] + [4,5,6]` is `[1,2,3,4,5,6]`.
 
 ### Array Creation
 
-Given a type and an `Int` expression, the `new` operator may be used
-to allocate a new array of the given size.
-For instance, `new Int[i+1]` would allocate a new `Int` array with
-`i+1` elements.
+Given a type and an `Int` expression, the `new` operator may be used to allocate a new array of the given size.
+For instance, `new Int[i+1]` would allocate a new `Int` array with `i+1` elements.
 
 The elements of a new array are initialized to a type-dependent default value.
 In most cases this is some variation of zero.
 
-For qubits and callables, which are references to entities, there is no
-reasonable default value.
-Thus, for these types, the default is an invalid
-reference that cannot be used without causing a runtime error.
+For qubits and callables, which are references to entities, there is no reasonable default value.
+Thus, for these types, the default is an invalid reference that cannot be used without causing a runtime error.
 This is similar to a null reference in languages such as C# or Java.
-Arrays containing qubits or callables must be properly initialized 
-with non-default values before their elements may be safely used. 
+Arrays containing qubits or callables must be properly initialized with non-default values before their elements may be safely used. 
 Suitable initialization routines can be found in <xref:microsoft.quantum.arrays>.
 
 The default values for each type are:
@@ -351,60 +318,49 @@ Type | Default
 Tuple types are initialized element-by-element.
 
 
-### Jagged Arrays
+### Array Elements
 
-A jagged array, sometimes called an "array of arrays", is an array whose elements are arrays. The elements of a jagged array can be of different sizes. The following example shows how to declare and initialize a jagged array representing a multiplication table.
+Given an array expression and an `Int` expression, a new expression may be formed using the `[` and `]` array element operator.
+The new expression will be the same type as the element type of the array.
+For instance, if `a` is bound to an array of `Double`s, then `a[4]` is a `Double` expression.
 
-```qsharp
-let N = 4;
-mutable multiplicationTable = new Int[][N];
-for (i in 1..N) {
-
-    mutable row = new Int[i];
-    for (j in 1..i) {
-        set row w/= j-1 <- i * j;
-    }
-    set multiplicationTable w/= i-1 <- row;
-}
-```
-
-
-### Array Slices
-
-Given an array expression and a `Range` expression, a new expression
-may be formed using the `[` and `]` array slice operator.
-The new expression will be the same type as the array and will contain
-the array items indexed by the elements of the `Range`,
-in the order defined by the `Range`.
-For instance, if `a` is bound to an array of `Double`s,
-then `a[3..-1..0]` is a `Double[]` expression that contains the first four
-elements of `a` but in the reverse order as they appear in `a`.
-
-If the `Range` is empty, then the resulting array slice will be zero length.
-
-If the array expression is not a simple identifier, it must be enclosed
-it parentheses in order to slice.
-For instance, if `a` and `b` are both arrays of `Int`s, a slice from the
-concatenation would be expressed as:
+If the array expression is not a simple identifier, it must be enclosed in parentheses in order to select an element.
+For instance, if `a` and `b` are both arrays of `Int`s, an element from the concatenation would be expressed as:
 
 ```qsharp
-(a+b)[1..2..7]
+(a+b)[13]
 ```
 
 All arrays in Q# are zero-based.
 That is, the first element of an array `a` is always `a[0]`.
 
+
+### Array Slices
+
+Given an array expression and a `Range` expression, a new expression may be formed using the `[` and `]` array slice operator.
+The new expression will be the same type as the array and will contain the array items indexed by the elements of the `Range`, in the order defined by the `Range`.
+For instance, if `a` is bound to an array of `Double`s, then `a[3..-1..0]` is a `Double[]` expression that contains the first four elements of `a` but in the reverse order as they appear in `a`.
+
+If the `Range` is empty, then the resulting array slice will be zero length.
+
+Just as with referencing array elements, if the array expression is not a simple identifier, it must be enclosed it parentheses in order to slice.
+If `a` and `b` are both arrays of `Int`s, a slice from the concatenation would be expressed as:
+
+```qsharp
+(a+b)[1..2..7]
+```
+
+#### Inferred start/end values
+
 Starting with our 0.8 release, we support contextual expressions for range slicing. 
 In particular, range start and end values may be omitted in the context of a range slicing expression. 
 In that case, the compiler will apply the following rules to infer the intended delimiters for the range. 
 
-For example, if the range start value is omitted, 
-then the inferred start value 
+For example, if the range start value is omitted,  then the inferred start value 
 - is zero if no step is specified or the specified step is positive, and 
 - is the length of sliced array minus one if the specified step is negative. 
 
-If the range end value is omitted, 
-then the inferred end value 
+If the range end value is omitted,  then the inferred end value 
 - is the length of sliced array minus one if no step is specified or the specified step is positive, and 
 - is zero if the specified step is negative. 
 
@@ -421,28 +377,7 @@ let slice9  = arr[...-1...];  // slice9 is [6,5,4,3,2,1];
 let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 ```
 
-## Array Element Expressions
-
-Given an array expression and an `Int` expression, a new expression
-may be formed using the `[` and `]` array element operator.
-The new expression will be the same type as the element type of the array.
-For instance, if `a` is bound to an array of `Double`s,
-then `a[4]` is a `Double` expression.
-
-If the array expression is not a simple identifier, it must be enclosed
-it parentheses in order to select an element.
-For instance, if `a` and `b` are both arrays of `Int`s, an element from the
-concatenation would be expressed as:
-
-```qsharp
-(a+b)[13]
-```
-
-All arrays in Q# are zero-based.
-That is, the first element of an array `a` is always `a[0]`.
-
-
-## Copy-and-Update Expressions
+### Copy-and-Update Expressions
 
 New arrays can be created from existing ones via copy-and-update expressions.
 A copy-and-update expression is an expression of the form `expression1 w/ expression2 <- expression3`, where `expression1` has to be of type `T[]` for some type `T`. The second `expression2` defines the indices of the element(s) to modify compared to the array in `expression1` and has to be either of type `Int` or of type `Range`. If `expression2` is of type `Int`, `expression3` has to be of type `T`. If `expression2` is of type `Range`, `expression3` has to be of type `T[]`.
@@ -461,6 +396,40 @@ newtype Complex = (Re : Double, Im : Double);
 ```
 If `c` contains the value of type `Complex(1.,-1.)`, then `c w/ Re <- 0.` is an expression of type `Complex` that evaluates to `Complex(0.,-1.)`.
 
+### Jagged Arrays
+
+A jagged array, sometimes called an "array of arrays", is an array whose elements are arrays.
+The elements of a jagged array can be of different sizes.
+The following example shows how to declare and initialize a jagged array representing a multiplication table.
+
+```qsharp
+let N = 4;
+mutable multiplicationTable = new Int[][N];
+for (i in 1..N) {
+    mutable row = new Int[i];
+    for (j in 1..i) {
+        set row w/= j-1 <- i * j;
+    }
+    set multiplicationTable w/= i-1 <- row;
+}
+```
+
+### Arrays of callables 
+
+Note that more details on callable types can be found below, as well as on the next page, [Q# callables: functions and operations](xref:microsoft.quantum.guide.callables).
+
+If the common element type is an operation or function type, all of the elements must have the same input and output types.
+The element type of the array will support any functors that are supported by all of the elements.
+For example, if `Op1`, `Op2`, and `Op3` all are `Qubit[] => Unit`, but `Op1` supports `Adjoint`, `Op2` supports `Controlled`, and `Op3` supports both:
+
+- `[Op1, Op2]` is an array of `(Qubit[] => Unit)` operations.
+- `[Op1, Op3]` is an array of `(Qubit[] => Unit is Adj)` operations.
+- `[Op2, Op3]` is an array of `(Qubit[] => Unit is Ctl)` operations.
+
+Empty array literals, `[]`, are not allowed.
+Instead using `new ★[0]`, where `★` is as placeholder for a suitable type, allows to create the desired array of length zero.
+
+
 ## Conditional Expressions
 
 Given two other expressions of the same type and a Boolean expression,
@@ -470,39 +439,120 @@ For instance, `a==b ? c | d`.
 In this example, the value of the conditional expression will be `c` if
 `a==b` is true and `d` if it is false.
 
-The two expressions may evaluate to operations that have the same inputs
-and outputs but support different functors.
-In this case, the type of the conditional expression is an operation with
-those inputs and outputs that supports any functors supported by both
-expressions.
-For example, if `Op1`, `Op2`, and `Op3` all are `Qubit[]=>Unit`, but `Op1`
-supports `Adjoint`, `Op2` supports `Controlled`, and `Op3` supports both:
+### Conditional expressions with callables
+
+The two expressions may evaluate to operations that have the same inputs and outputs but support different functors.
+In this case, the type of the conditional expression is an operation with those inputs and outputs that supports any functors supported by both expressions.
+For example, if `Op1`, `Op2`, and `Op3` all are `Qubit[]=>Unit`, but `Op1` supports `Adjoint`, `Op2` supports `Controlled`, and `Op3` supports both:
 
 - `flag ? Op1 | Op2` is a `(Qubit[] => Unit)` operation.
 - `flag ? Op1 | Op3` is a `(Qubit[] => Unit is Adj)` operation.
 - `flag ? Op2 | Op3` is a `(Qubit[] => Unit is Ctl)` operation.
 
-If either of the two possible result expressions include a function or
-operation call, that call will only take place if that result is the one
-that will be the value of the call.
-For instance, in the case `a==b ? C(qs) | D(qs)`, if `a==b` is true then
-the `C` operation will be invoked, and if it is false then only `D` will
-be invoked.
+If either of the two possible result expressions include a function or operation call, that call will only take place if that result is the one that will be the value of the call.
+For instance, in the case `a==b ? C(qs) | D(qs)`, if `a==b` is true then the `C` operation will be invoked, and if it is false then only `D` will be invoked.
 This is similar to short-circuiting in other languages.
 
+## Callable Expressions
+
+A callable literal is the name of an operation or function defined in the compilation scope.
+For instance, `X` is an operation literal that refers to the standard library `X` operation, and `Message` is a function literal that refers to the standard library `Message` function.
+
+If an operation supports the `Adjoint` functor, then `Adjoint op` is an operation expression.
+Similarly, if the operation supports the `Controlled` functor, then `Controlled op` is an operation expression.
+The types of these expressions are specified in [Functors](xref:microsoft.quantum.language.type-model#functors).
+
+Functors (`Adjoint` and `Controlled`) bind more closely than all other operators, except for the unwrap operator `!` and array indexing with []`.
+Thus, the following are all legal, assuming that the operations support the functors used:
+
+```qsharp
+Adjoint Op(qs)
+Controlled Op(controls, targets)
+Controlled Adjoint Op(controls, targets)
+Adjoint WrappedOp!(qs)
+```
+
+A callable literal may be used as a value, say to assign to a variable or to pass to another callable.
+In this case, if the callable has type parameters, they must be provided as part of the callable value.
+A callable value cannot have any unspecified type parameters.
+
+For instance, if `Fun` is a function with signature `'T1->Unit`:
+
+```qsharp
+let f = Fun<Int>;            // f is (Int->Unit).
+let g = Fun;                 // This causes a compilation error.
+SomeOtherFun(Fun<Double>);   // A (Double->Unit) is passed to SomOtherFun.
+SomeOtherFun(Fun);           // This also causes a compilation error.
+```
+
+## Callable Invocation Expressions
+
+Given a callable (operation or function) expression and a tuple expression of the input type of the callable's signature, an invocation expression may be formed by appending the tuple expression to the callable expression.
+The type of the invocation expression is the output type of the callable's signature.
+
+For example, if `Op` is an operation with signature `((Int, Qubit) => Double)`, `Op(3, qubit1)` is an expression of type `Double`.
+Similarly, if `Sin` is a function with signature `(Double -> Double)`, `Sin(0.1)` is an expression of type `Double`.
+Finally, if `Builder` is a function with signature `(Int -> (Int -> Int))`, then `Builder(3)` is a function from Into to Int.
+
+Invoking the result of a callable-valued expression requires an extra pair of parentheses around the callable expression.
+Thus, to invoke the result of calling `Builder` from the previous paragraph, the correct syntax is:
+
+```qsharp
+(Builder(3))(2)
+```
+
+When invoking a type-parameterized callable, the actual type parameters may be specified within angle brackets `<` and `>` after the callable expression.
+This is usually unnecessary as the Q# compiler will infer the actual types.
+It is required for partial application (see below) if a type-parameterized argument is left unspecified.
+It is also sometimes useful when passing operations with different functor supports to a callable.
+
+For instance, if `Func` has signature `('T1, 'T2, 'T1) -> 'T2`, `Op1` and `Op2` have signature `(Qubit[] => Unit is Adj)`, and `Op3` has signature `(Qubit[] => Unit)`, to invoke `Func` with `Op1` as the first argument, `Op2` as the second, and `Op3` as the third:
+
+```qsharp
+let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
+```
+
+The type specification is required because `Op3` and `Op1` have different types, so the compiler will treat this as ambiguous without the specification.
+
+### Partial Application
+
+Given a callable expression, a new callable may be created by providing a subset of the arguments to the callable.
+This is called _partial application_.
+
+In Q#, a partially applied callable is expressed by writing a normal invocation expression, but using an underscore, `_`, for the unspecified arguments.
+The resulting callable has the same result type as the base callable, and the same specializations for operations.
+The input type of the partial application is simply the original type with the specified arguments removed.
+
+If a mutable variable is passed as a specified argument when creating a partial application, the current value of the variable is used.
+Changing the value of the variable afterward will not impact the partial application.
+
+For example, if `Op` has type `((Int, ((Qubit, Qubit), Double)) => Unit is Adj)`:
+
+- `Op(5,(_,_))` has type `(((Qubit,Qubit), Double) => Unit is Adj)`, and so has `Op(5,_)`.
+- `Op(_,(_,1.0))` has type `((Int, (Qubit,Qubit)) => Unit is Adj)`.
+- `Op(_,((q1,q2),_))` has type `((Int,Double) => Unit is Adj)`.
+   Note that we have applied singleton tuple equivalence here.
+
+If the partially-applied callable has type parameters that cannot be inferred by the compiler, they must be provided at the invocation site.
+The partial application cannot have any unspecified type parameters.
+
+For example, if `Op` has type `(('T1, Qubit, 'T1) => Unit : Adjoint)`:
+
+```qsharp
+let f1 = Op<Int>(_, qb, _); // f1 has type ((Int,Int) => Unit is Adj)
+let f2 = Op(5, qb, _);      // f2 has type (Int => Unit is Adj)
+let f3 = Op(_,qb, _);       // f3 generates a compilation error
+```
 
 ## Operator Precedence
 
 All binary operators are right-associative, except for `^`.
 
-Brackets, `[` and `]`, for array slicing and indexing,
-bind before any operator.
+Brackets, `[` and `]`, for array slicing and indexing, bind before any operator.
 
-The functors `Adjoint` and `Controlled` bind after array indexing
-but before all other operators.
+The functors `Adjoint` and `Controlled` bind after array indexing but before all other operators.
 
-Parentheses for operation and function invocation also bind before any
-operator but after array indexing and functors.
+Parentheses for operation and function invocation also bind before any operator but after array indexing and functors.
 
 Operators in order of precedence, from highest to lowest:
 

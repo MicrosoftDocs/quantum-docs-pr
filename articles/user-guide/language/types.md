@@ -273,15 +273,29 @@ For example, a function that computes the sine of an angle would have type `(Dou
 *Operations*---but not functions---have certain additional characteristics that are expressed as part of the operation type. 
 Such characteristics include information about what *functors* the operation supports.
 For example, if execution of the operation can be conditioned on the state of other qubits, it should support the `Controlled` functor; if the operation has an inverse, it should support the `Adjoint` functor. 
-Functors and operations are discussed in detail at [Callables in Q#](xref:microsoft.quantum.guide.language.callables) we simply discuss how this alters the operation signature.
+Functors and operations are discussed in detail at [Callables in Q#](xref:microsoft.quantum.guide.language.callables), but here we simply discuss how this alters the operation signature.
 
 In order to require support for the `Controlled` and/or `Adjoint` functor in an operation type, we need to add an annotation indicating the corresponding characteristics.
-An annotation `is Ctl` for example indicates that the operation is controllable (i.e. it's execution conditioned on the state of another qubit or qubits). 
-If we want to require that an operation of that type supports both the `Adjoint` and `Controlled` functor we can express this as `(Qubit => Unit is Adj + Ctl)`. 
+An annotation `is Ctl` (e.g. `(Qubit => Unit is Ctl)`) indicates that the operation is controllable---that is, it's execution conditioned on the state of another qubit or qubits. 
+Similarly, `is Adj` indicates that the operation has an adjoint; or simply, it can be "inverted" such that successively applying an operation and then its adjoint to a state leaves the state unchanged. 
 
+If we want to require that an operation of that type supports both the `Adjoint` and `Controlled` functor we can express this as `(Qubit => Unit is Adj + Ctl)`. 
 For example, the Pauli `X` operation has type `(Qubit => Unit is Adj + Ctl)`.
 An operation type that does not support any functors is specified by its input and output type alone, with no additional annotation.
 
+### Type-Parameterized Functions and Operations
+
+Callable types may contain type parameters.
+Type parameters are indicated by a symbol prefixed by a single quote; for example, `'A` is a legal type parameter.
+Details on defining type-parameterized callables are provided at [Callables in Q#](xref:microsoft.quantum.guide.language.callables).
+
+A type parameter may appear more than once in a single signature.
+For example, a function that applies another function to each element of an array and returns the collected results would have signature `(('A[], 'A->'A) -> 'A[])`.
+Similarly, a function that returns the composition of two operations might have signature `((('A=>'B), ('B=>'C)) -> ('A=>'C))`.
+
+When invoking a type-parameterized callable, all arguments that have the same type parameter must be of the same type.
+
+Q# does not provide a mechanism for constraining the possible types that might be substituted for a type parameter.
 
 ## What's Next?
 Now that you've seen all the types which comprise the Q# language, you can head to [Expressions in Q#](xref:microsoft.quantum.guide.language.expressions) to see how to create and manipulate expressions of these various types.

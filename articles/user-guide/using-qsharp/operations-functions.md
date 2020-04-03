@@ -1,5 +1,5 @@
----
-title: Basics of defining operations and functions
+﻿---
+title: Defining operations and functions
 description: The fundamentals of defining operations and functions
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -8,72 +8,39 @@ ms.topic: article
 uid: microsoft.quantum.guide.using.opsfns
 ---
 
-# Basics of defining operations and functions
+# Defining operations and functions
 
 ## from operations and functions in qdevtechs
-## Q# Operations and Functions
 
-Q# programs consist of one or more *operations* that describe side effects quantum operations can have on quantum data, and one or more *functions* that allow modifications to classical data. In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values.
 
-Each operation defined in Q# may then call any number of other operations, including the built-in intrinsic operations defined by the language. The particular way in which these intrinsic operations are defined depends on the target machine. When compiled, each operation is represented as a .NET class type that can be provided to target machines.
 
-## Defining New Operations
+## Operation Declarations
 
-As described above, the most basic building block of a quantum program written in Q# is an *operation*, which can either be called from classical .NET applications, e.g., using a simulator, or by other operations within Q#.
-Each operation takes an input, produces an output, and specifies the implementation for one or more operation specializations.
-For instance, the following operation defines only a default body specialization and takes a single qubit as its input, then calls the built-in `X` operation on that input:
+Operations are the core of Q#, roughly analogous to functions in other languages.
+Each Q# source file may define any number of operations.
 
-```qsharp
-operation BitFlip(target : Qubit) : Unit {
-    X(target);
-}
-```
+Operation names must be unique within a namespace and may not conflict with type and function names.
 
-The keyword `operation` begins the operation definition, and is followed by the name; here, `BitFlip`.
-Next, the type of the input is defined as `Qubit`, along with a name `target` for referring to the input within the new operation.
-Similarly, the `Unit` defines that the operation's output is empty.
-This is used similarly to `void` in C# and other imperative languages, and is equivalent to `unit` in F# and other functional languages.
+An operation declarations consists of the keyword `operation`, followed by the symbol that is the operation's name, a typed identifier tuple that defines the arguments to the operation, a colon `:`, a type annotation that describes the operation's result type, optionally an annotation with the operation characteristics, an open brace `{`, the body of the operation declaration, and a final closing brace `}`.
 
-> [!NOTE]
-> We will explore this in more detail below, but each operation in Q# takes exactly one input and returns exactly one output.
-> Multiple inputs and outputs are then represented using *tuples*, which collect multiple values together into a single value.
-> Informally, we say that Q# is a "tuple-in tuple-out" language.
-> Following this concept, `()` should then be read as the "empty" tuple, which has the type `Unit`.
+The body of the operation declaration either consists of the default implementation or of a list of specializations.
+The default implementation can be specified directly within the declaration if only the implementation of the default body specialization needs to specified explicitly.
+In this case, an annotation with the operation characteristics in the declaration is useful to ensure that the compiler auto-generates other specializations based on the default implementation. 
 
-Within the new operation, the implementation can be specified directly within the declaration if only the implementation of the default body specialization needs to be specified explicitly. Additionally, it is possible to define the implementations of, for example, one or more `functor` operations, as elaborated below. In the example above, the only statement is to call the built-in Q# operation <xref:microsoft.quantum.intrinsic.x>.
-
-Operations can also return more interesting types than `Unit`.
-For instance, the <xref:microsoft.quantum.intrinsic.m> operation returns an output of type `Result`, representing having performed a measurement. We can either pass the output from an operation to another operation, or can use it with the `let` keyword to define a new variable.
-<!-- Link to UID for superdense conceptual and example documentation. -->
-This allows for representing classical computation that interacts with quantum operations at a low level, such as in superdense coding:
+For example 
 
 ```qsharp
-operation Superdense(here : Qubit, there : Qubit) : (Result, Result) {
-
-    CNOT(there, here);
-    H(there);
-
-    let firstBit = M(there);
-    let secondBit = M(here);
-
-    return (firstBit, secondBit);
-}
-```
-### Functors, adjoint and controlled
-If an operation implements a unitary transformation, then it is possible to define how the operation acts when *adjointed* or *controlled*. An adjoint specialization of an operation specifies how it acts when run in reverse, while a controlled specialization specifies how an operation acts when applied conditioned on the state of a quantum register.
-The existence of these specializations can be declared as part of the operation signature: `is Adj + Ctl` in the following example. The corresponding implementation for each such implicitly declared specialization is then generated by the compiler. 
-
-```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
 }
 ```
 
-> [!NOTE]
-> Many operations in Q# represent unitary gates.
-> If $U$ is the unitary gate represented by an operation `U`, then `Adjoint U` represents the unitary gate $U^\dagger$.
+Operation characteristics define what kinds of functors can be applied to the declared operation, and what effect they have. 
+If an operation implements a unitary transformation, then it is possible to define how the operation acts when *adjointed* or *controlled*.
+The existence of these specializations can be declared as part of the operation signature. The corresponding implementation for each such implicitly declared specialization is then generated by the compiler. 
+In the example above, an adjoint, a controlled, and a controlled adjoint specialization are generated by the compiler. 
 
 In the case where the implementation cannot be generated by the compiler, it can be explicitly specified. 
 Such explicit specialization declarations can consist of a suitable generation directive or a user defined implementation. The code in `PrepareEntangledPair` above for example is equivalent to the code below containing explicit specialization declarations: 
@@ -112,57 +79,261 @@ is Ctl + Adj {
 ```
 In the example above, `adjoint invert;` indicates that the adjoint specialization is to be generated by inverting the body implementation, and `controlled adjoint invert;` indicates that the controlled adjoint specialization is to be generated by inverting the given implementation of the controlled specialization.
 
-We will see more examples of this in [Higher-Order Control Flow](xref:microsoft.quantum.concepts.control-flow).
 
-To call a specialization of an operation, use the `Adjoint` or `Controlled` keywords.
-For example, the superdense coding example above can be written more compactly by using the adjoint of `PrepareEntangledPair` to transform the entangled state back into an unentangled pair of qubits:
+### Explicit Specialization Declarations
+
+Q# operations may contain the following explicit specialization declarations:
+
+- The `body` specialization specifies the implementation of the operation with no functors applied.
+- The `adjoint` specialization specifies the implementation of the operation with the `Adjoint` functor applied.
+- The `controlled` specialization specifies the implementation of the operation with the `Controlled` functor applied.
+- The `controlled adjoint` specialization specifies the implementation of the
+  operation with both the `Adjoint` and `Controlled` functors applied.
+  This specialization can also be named `adjoint controlled`, since the two functors commute.
+
+
+An operation specialization consists of the specialization tag (e.g. `body`, or `adjoint`, etc.) followed by one of:
+
+- An explicit declaration as described below.
+- A directive that tells the compiler how to generate the specialization, one of:
+  - `intrinsic`, which indicates that the specialization is provided by the target machine.
+  - `distribute`, which may be used with the `controlled` and `controlled adjoint` specializations.
+    When used with `controlled`, it indicates that the compiler should compute
+    the specialization by applying `Controlled` to all of the operations in the `body`.
+    When used with `controlled adjoint`, it indicates that the compiler
+    should compute the specialization by applying `Controlled` to all of the
+    operations in the `adjoint` specialization.
+  - `invert`, which indicates that the compiler should compute the
+    `adjoint` specialization by inverting the `body`, i.e. reversing the order of operations and
+    applying the adjoint to each one.
+    When used with `adjoint controlled`, this indicates that the compiler
+    should compute the specialization by inverting the `controlled` specialization.
+  - `self`, to indicate that the adjoint specialization is the
+    the same as the `body` specialization.
+    This is legal for the `adjoint` and `adjoint controlled` specializations.
+    For `adjoint controlled`, `self` implies that the `adjoint controlled`
+    specialization is the same as the `controlled` specialization.
+  - `auto`, to indicate that the compiler should select an
+    appropriate directive to apply.
+    `auto` may not be used for the `body` specialization.
+
+The directives and `auto` all require a closing semi-colon `;`.
+The `auto` directive resolves to the following generation directive if an explicit declaration of the `body` is provided:
+
+- The `adjoint` specialization is generated according to the directive `invert`.
+- The `controlled` specialization is generated according to the directive `distribute`.
+- The `adjoint controlled` specialization is generated according to the directive `invert` if an explicit
+  declaration for `controlled` is given but not one for `adjoint`, and
+  `distribute` otherwise.
+
+> [!TIP]   
+> If an operation is self-adjoint, explicitly specify either the adjoint or the controlled adjoint specialization via the generation directive `self` to allow the compiler to make use of that information for optimization purposes.
+
+A specialization declaration containing a user defined implementation consists of an argument tuple followed by a statement block with the Q# code that implements the specialization.
+In the argument list, `...` is used to represent the arguments declared for the operation as a whole.
+For `body` and `adjoint`, the argument list should always be `(...)`; for `controlled` and `adjoint controlled`, the argument list should be a symbol that represents the array of control qubits, followed by `...`, enclosed in parentheses; for example, `(controls,...)`.
+
+If one or more specializations besides the default body need to be explicitly declared, then the implementation for the default body needs to be wrapped into a suitable specialization declaration as well:
 
 ```qsharp
-operation Superdense(here : Qubit, there : Qubit) : (Result, Result) {
-    Adjoint PrepareEntangledPair(there, here);
+operation CountOnes(qubits: Qubit[]) : Int {
 
-    let firstBit = M(there);
-    let secondBit = M(here);
+    body (...) // default body specialization
+    {
+        mutable n = 0;
+        for (qubit in qubits) {
+            set n += M(q) == One ? 1 | 0;
+        }
+        return n;
+    }
 
-    return (firstBit, secondBit);
+    ...
+```
+
+
+### Operation declarations with adjoint/controlled
+
+It is legal to specify an operation with no adjoint or controlled versions. 
+For instance, measurement operations have neither, because they are not invertible or controllable.
+
+An operation supports the `Adjoint` and/or `Controlled` functors if its declaration contains an implicit or explicit declaration of the respective specializations.
+
+An explicitly declared adjoint/controlled specialization implies the existence of an adjoint/controlled specialization. 
+
+For an operation whose body contains repeat-until-success loops, set statements, measurements, return statements, or calls to other operations that do not support the `Adjoint` functor, auto-generating an adjoint specialization following the `invert` or `auto` directive is not possible.
+
+For an operation whose body contains calls to other operations that does not support the `Controlled` functor, auto-generating a controlled specialization following the `distribute` or `auto` directive is not possible.
+
+### Controlled Adjoint
+
+The controlled adjoint version of an operation specifies how a quantum-controlled version of the adjoint of the operation is implemented.
+It is legal to specify an operation with no controlled adjoint version; for instance, measurement operations have no controlled adjoint version because they are neither controllable nor invertible.
+
+A controlled adjoint specialization for an operation needs to exist if and only if both an adjoint and a controlled specialization exist. In that case, the existence of the controlled adjoint specialization is inferred and an appropriate specialization is generated by the compiler if no implementation has been defined explicitly. 
+
+For an operation whose body contains calls to other operations that do not have a controlled adjoint version, auto-generating an adjoint specialization following the `invert`, `distribute` or `auto` directive is not possible.
+
+
+### Examples
+
+An operation declaration might be as simple as the following, which defines the primitive Pauli X operation:
+
+```qsharp
+operation X (qubit : Qubit) : Unit
+is Adj + Ctl {
+    body intrinsic;
+    adjoint self;
 }
 ```
 
-There are a number of important limitations to consider when designing operations for use with functors.
-Most critically, specializations for an operation that uses the output value of any other operation cannot be auto-generated by the compiler, as it is ambiguous how to reorder the statements in such an operation to obtain the same effect.
+Note that the adjoint of the Pauli X operation is defined with the directive `self` because by definition `X` is its own inverse.
 
 
-## Defining New Functions
+## Function Declarations
 
-Q# also allows for defining *functions*, which are distinct from operations in that they are not allowed to have any effects beyond calculating an output value.
-In particular, functions cannot call operations, act on qubits, sample random numbers, or otherwise depend on state beyond the input value to a function.
-As a consequence, Q# functions are *pure*, in that they always map the same input values to the same output values.
-This allows the Q# compiler to safely reorder how and when functions are called when generating operation specializations.
+Functions are purely classical routines in Q#.
+Each Q# source file may define any number of functions.
 
-Defining a function works similarly to defining an operation, except that no adjoint or controlled specializations can be defined for a function.
-For instance:
+A function declaration consists of the keyword `function`, followed by the symbol that is the function's name, a typed identifier tuple, a type annotation that describes the function's return type, and a statement block that describes the implementation of the function.
 
-```qsharp
-function Square(x : Double) : (Double) {
-    return x * x;
-}
-```
-Whenever it is possible to do so, it is helpful to write out classical logic in terms of functions rather than operations, so that it can be more readily used from within operations.
-If we had written `Square` as an operation, for example, then the compiler would not have been able to guarantee that calling it with the same input would consistently produce the same outputs.
+The statement block defining a function must be enclosed in
+`{` and `}` like any other statement block.
 
-To underscore the difference between functions and operations, consider the problem of classically sampling a random number from within a Q# operation:
+Function names must be unique within a namespace and may not conflict with operation and type names.
+Functions may not allocate or borrow qubits, or call operations. 
+Partial application of operations or passing around operation typed values is fine.
+
+For example,
 
 ```qsharp
-operation U(target : Qubit) : Unit {
+function DotProduct(a : Double[], b : Double[]) : Double {
+    if (Length(a) != Length(b)) {
+        fail "Arrays are not compatible";
+    }
 
-    let angle = RandomReal()
-    Rz(angle, target)
+    mutable accum = 0.0;
+    for (i in 0..Length(a)-1) {
+        set accum += a[i] * b[i];
+    }
+    return accum;
 }
 ```
 
-Each time that `U` is called, it will have a different action on `target`.
-In particular, the compiler cannot guarantee that if we added an `adjoint auto` specialization declaration to `U`, then `U(target); Adjoint U(target);` acts as identity (that is, as a no-op).
-This violates the definition of the adjoint that we saw in [Vectors and Matrices](xref:microsoft.quantum.concepts.vectors), such that allowing to auto-generate an adjoint specialization in an operation where we have called the operation <xref:microsoft.quantum.math.randomreal> would break the guarantees provided by the compiler; <xref:microsoft.quantum.math.randomreal> is an operation for which no adjoint or controlled version exists.
 
-On the other hand, allowing function calls such as `Square` is safe, in that the compiler can be assured that it only needs to preserve the input to `Square` in order to keep its output stable.
-Thus, isolating as much classical logic as possible into functions makes it easy to reuse that logic in other functions and operations alike.
+## from 'going further'
+
+## Generic Operations and Functions ##
+
+> [!TIP]
+> This section assumes some basic familiarity with [generics in C#](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics), [generics in F#](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/), [C++ templates](https://docs.microsoft.com/cpp/cpp/templates-cpp), or similar approaches to metaprogramming in other languages.
+
+Many functions and operations that we might wish to define do not actually heavily rely on the types of their inputs, but rather only implicitly use their types via some other function or operation.
+For example, consider the *map* concept common to many functional languages; given a function $f(x)$ and a collection of values $\{x_1, x_2, \dots, x_n\}$, map returns a new collection $\{f(x_1), f(x_2), \dots, f(x_n)\}$.
+To implement this in Q#, we can take advantage of that functions are first class.
+Let's write out a quick example of `Map`, using ★ as a placeholder while we figure out what types we need.
+
+```qsharp
+function Map(fn : (★ -> ★), values : ★[]) : ★[] {
+    mutable mappedValues = new ★[Length(values)];
+    for (idx in 0..Length(values) - 1) {
+        set mappedValues w/= idx <- fn(values[idx]);
+    }
+    return mappedValues;
+}
+```
+
+Note this function looks very much the same no matter what actual types we substitute in.
+A map from integers to Paulis, for instance, looks much the same as a map from floating-point numbers to strings:
+
+```qsharp
+function MapIntsToPaulis(fn : (Int -> Pauli), values : Int[]) : Pauli[] {
+    mutable mappedValues = new Pauli[Length(values)];
+    for (idx in 0..Length(values) - 1) {
+        set mappedValues w/= idx <- fn(values[idx]);
+    }
+    return mappedValues;
+}
+
+function MapDoublesToStrings(fn : (Double -> String), values : Double[]) : String[] {
+    mutable mappedValues = new String[Length(values)];
+    for (idx in 0..Length(values) - 1) {
+        set mappedValues w/= idx <- fn(values[idx]);
+    }
+    return mappedValues;
+}
+```
+
+In principle, we could write a version of `Map` for every pair of types that we encounter, but this introduces a number of difficulties.
+For instance, if we find a bug in `Map`, then we must ensure that the fix is applied uniformly across all versions of `Map`.
+Moreover, if we construct a new tuple or UDT, then we must now also construct a new `Map` to go along with the new type.
+While this is tractable for a small number of such functions, as we collect more and more functions of the same form as `Map`, the cost of introducing new types becomes unreasonably large in fairly short order.
+
+Much of this difficulty results, however, from that the we have not given the compiler the information it needs to recognize how the different versions of `Map` are related.
+Effectively, we want the compiler to treat `Map` as some kind of mathematical function from Q# *types* to Q# functions.
+This notion is formalized by allowing functions and operations to have *type parameters*, as well as their ordinary tuple parameters.
+In the examples above, we wish to think of `Map` as having type parameters `Int, Pauli` in the first case and `Double, String` in the second case.
+For the most part, these type parameters can then be used as though they were ordinary types: we use values of type parameters to make arrays and tuples, call functions and operations, and assign to ordinary or mutable variables.
+
+> [!NOTE]
+> The most extreme case of indirect dependence is that of qubits, where a Q# program cannot directly rely on the structure of the `Qubit` type, but **must** pass such types to other operations and functions.
+
+Returning to the example above, then, we can see that we need `Map` to have type parameters, one to represent the input to `fn` and one to represent the output from `fn`.
+In Q#, this is written by adding angle brackets (that's `<>`, not brakets $\braket{}$!) after the name of a function or operation in its declaration, and by listing each type parameter.
+The name of each type parameter must start with a tick `'`, indicating that it is a type parameter and not a ordinary type (also known as a *concrete* type).
+For `Map`, we thus write:
+
+```qsharp
+function Map<'Input, 'Output>(fn : ('Input -> 'Output), values : 'Input[]) : 'Output[] {
+    mutable mappedValues = new 'Output[Length(values)];
+    for (idx in 0..Length(values) - 1) {
+        set mappedValues w/= idx <- fn(values[idx]);
+    }
+    return mappedValues;
+}
+```
+
+Note that the definition of `Map<'Input, 'Output>` looks extremely similar to the versions we wrote out before.
+The only difference is that we have explicitly informed the compiler that `Map` doesn't directly depend on what `'Input` and `'Output` are, but works for any two types by using them indirectly through `fn`.
+Once we have defined `Map<'Input, 'Output>` in this way, we can call it as though it was an ordinary function:
+
+```qsharp
+// Represent Z₀ Z₁ X₂ Y₃ as a list of ints.
+let ints = [3, 3, 1, 2];
+// Here, we assume IntToPauli : Int -> Pauli
+// looks up PauliI by 0, PauliX by 1, so forth.
+let paulis = Map(IntToPauli, ints);
+```
+
+> [!TIP]
+> Writing generic functions and operations is one place where "tuple-in tuple-out" is a very useful way to think about Q# functions and operations.
+> Since every function takes exactly one input and returns exactly one output, an input of type `'T -> 'U` matches *any* Q# function whatsoever.
+> Similarly, any operation can be passed to an input of type `'T => 'U`.
+
+As a second example, consider the challenge of writing a function that returns the composition of two other functions:
+
+```qsharp
+function ComposeImpl(outerFn : (B -> C), innerFn : (A -> B), input : A) : C {
+    return outerFn(innerFn(input));
+}
+
+function Compose(outerFn : (B -> C), innerFn : (A -> B)) : (A -> C) {
+    return ComposeImpl(outerFn, innerFn, _);
+}
+```
+
+Here, we must specify exactly what `A`, `B`, and `C` are, hence severely limiting the utility of our new `Compose` function.
+After all, `Compose` only depends on `A`, `B`, and `C` *via* `innerFn` and `outerFn`.
+As an alternative, then, we can add type parameters to `Compose` that indicate that it works for *any* `A`, `B`, and `C`, so long as these parameters match those expected by `innerFn` and `outerFn`:
+
+```qsharp
+function ComposeImpl<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B), input : 'A) : 'C {
+    return outerFn(innerFn(input));
+}
+
+function Compose<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B)) : ('A -> 'C) {
+    return ComposeImpl(outerFn, innerFn, _);
+}
+```
+
+The Q# standard libraries provide a range of such type-parameterized operations and functions to make higher-order control flow easier to express.
+These are discussed further in the [Q# standard library guide](xref:microsoft.quantum.libraries.standard.intro).

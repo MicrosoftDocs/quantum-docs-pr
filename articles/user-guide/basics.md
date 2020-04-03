@@ -11,15 +11,15 @@ uid: microsoft.quantum.guide.basics
 # Q# Basics
 
 To do:
+- fill info for the host program stuff? (or remove mention of it and put it solely on the page for it?)
 - Where to direct them next?
-- 
-
-
+- Maybe bring some of the "What is Q#" page info to this intro instead of linking to it?
 
 
 In this section we present a brief introduction to the basic building blocks of Q#.
 
-For a quick overview of what Q# *is*, you can head [here](xref:microsoft.quantum.overview.qsharp), and for more information about the foundations and motivation behind Q#, check out [Why do we need Q#?](https://devblogs.microsoft.com/qsharp/why-do-we-need-q/).
+For a quick overview of what Q# is and where it fits in as a fundamental component of the Quantum Development Kit, you can head [here](xref:microsoft.quantum.overview.qsharp). 
+For more information about the foundations and motivation behind Q#, check out [Why do we need Q#?](https://devblogs.microsoft.com/qsharp/why-do-we-need-q/).
 
 ## What is a quantum program?
 
@@ -105,7 +105,11 @@ for (qubit in qubits) {
 }
 ```
 is a statement which iterates over each qubit in the register, performing the `H` operation on each. 
-(Note that `H(qubit);` is a statement in itself as well!)
+Note that `H(qubit);` is a statement in itself as well.
+
+In fact, any call expression of type `Unit` (those callables that do not return any information) may be used as a statement.
+This is primarily of use when calling operations on qubits that return `Unit` because the purpose of the statement is to modify the implicit quantum state.
+Expression evaluation statements require a terminating semicolon.
 
 Nearly every aspect of a Q# program is built using statements, so no single page could encompass all the information relating to them.
 However, their lexical structure and formatting is described on the [Q# File Structure](xref:microsoft.quantum.guide.using.filestructure) page, symbol binding assignment and scope at [Variables in Q#](xref:microsoft.quantum.guide.using.variables), and control flow loops such as `for` at [Control Flow in Q#](xref:microsoft.quantum.guide.using.controlflow).

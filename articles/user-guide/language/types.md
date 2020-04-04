@@ -280,7 +280,8 @@ An annotation `is Ctl` (e.g. `(Qubit => Unit is Ctl)`) indicates that the operat
 Similarly, `is Adj` indicates that the operation has an adjoint; or simply, it can be "inverted" such that successively applying an operation and then its adjoint to a state leaves the state unchanged. 
 
 If we want to require that an operation of that type supports both the `Adjoint` and `Controlled` functor we can express this as `(Qubit => Unit is Adj + Ctl)`. 
-For example, the Pauli `X` operation has type `(Qubit => Unit is Adj + Ctl)`.
+For example, the built-in Pauli <xref:microsoft.quantum.intrinsic.x> operation has type `(Qubit => Unit is Adj + Ctl)`. 
+
 An operation type that does not support any functors is specified by its input and output type alone, with no additional annotation.
 
 ### Type-Parameterized Functions and Operations

@@ -170,9 +170,17 @@ Finally, we use @"microsoft.quantum.intrinsic.m" to perform the measurements and
         if (M(here) == One) { X(there); }
 ```
 
-This finishes the definition of our teleportation operator, so we can deallocate `here`, end the body, and end the operation.
+### Step 5: Restarting the qubit register
+
+At the end of every Q# operation we need to let the qubits in the state $\ket{0}$. We can use @"microsoft.quantum.intrinsic.reset"
+to restart all the qubits to the zero state and this will finish our operation.
 
 ```qsharp
+        Reset(msg);
+        Reset(here);
+        Reset(there);
     }
 }
 ```
+
+

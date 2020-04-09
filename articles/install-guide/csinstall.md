@@ -157,7 +157,7 @@ You can't mix Q# and F# files in the same project like we do with Q# and C#. To 
    You can use [Reference Manager](https://docs.microsoft.com/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager) in Visual Studio to do that, or you can add the reference from the command line:
 
     ```PowerShell
-    PS>  dotnet add .\FsharpDriver\FsharpDriver.vbproj reference .\QuantumCode\QuantumCode.csproj
+    PS>  dotnet add .\FsharpDriver\FsharpDriver.fsproj reference .\QuantumCode\QuantumCode.csproj
     ```
    
    This will transitively include the [`Microsoft.Quantum.Development.Kit` NuGet package](https://www.nuget.org/packages/Microsoft.Quantum.Development.Kit) to the F# application.

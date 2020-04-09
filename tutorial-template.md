@@ -52,7 +52,7 @@ uid: microsoft.quantum.tutorial-template
  Provide as necessary:
      * Software versions of installations
      * Previous tutorials or knowledge
-     * Preparations such as creating a host project
+     * Preparations such as creating a host project (this can be a link to How to Create a Q# Project)
 -->
 
 ## Procedure_1 (Build the Scenario)
@@ -82,6 +82,7 @@ uid: microsoft.quantum.tutorial-template
 <!-- Include:
     * A short sentence or two describing what happens in this section
     * (If more than 2 or 3 steps) List and link the steps performed in this section
+    * A tabbed structure with code examples for (at the minimum) Python, C# for VS, and C# for VS Code hosts )
 -->
 ### Step_1
 <!-- Include (as needed)
@@ -95,7 +96,11 @@ uid: microsoft.quantum.tutorial-template
 ## Procedure_3 (Results)
 <!-- "This procedure analyzes the output of the scenario..."  -->
 
-<!-- Display the results and explain how they relate to the code and concept -->
+<!-- Display the results and explain how they relate to the code and concept 
+
+     Create output results for each of the host code examples used in Procedure 2.
+
+-->
 
 ## Procedure_4 (Variations and exercises)
 <!-- As applicable, take advantage of the working environment the user just built to demonstrate variations of the scenario and to expand and reinforce learning, ie., "What if the input to X was negative?", "Replace <that code> with <this code> and compare the results" -->

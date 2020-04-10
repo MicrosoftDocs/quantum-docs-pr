@@ -1,10 +1,26 @@
-- name: Contents and layout
+- name: Contents
   href: index.md
 - name: Q# basics
   href: basics.md
-- name: Q# language details
-  href: language/toc.yml
-- name: Using Q#
-  href: using-qsharp/toc.yml
+- name: Host programs
+  href: hosts.md
+- name: Q# libraries
+  href: libraries.md
+- name: Structure of a Q# file
+  href: file-structure.md
+- name: Types in Q#
+  href: types.md
+- name: Type expressions
+  href: expressions.md
+- name: Operations and Functions
+  href: operations-functions.md
+- name: Variables
+  href: variables.md
+- name: Working with qubits
+  href: working-with-qubits.md
+- name: Control flow
+  href: control-flow.md
+- name: Testing and debugging
+  href: testing-debugging.md
 - name: Quick reference pages
   href: quickref/toc.yml

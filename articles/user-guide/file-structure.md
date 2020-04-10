@@ -5,7 +5,7 @@ author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
-uid: microsoft.quantum.guide.using.filestructure
+uid: microsoft.quantum.guide.filestructure
 ---
 
 # Structure of a Q# file

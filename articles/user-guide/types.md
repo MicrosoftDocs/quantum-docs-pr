@@ -5,13 +5,14 @@ author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
-uid: microsoft.quantum.guide.language.types
+uid: microsoft.quantum.guide.types
 ---
 
 # Types in Q#
 
 To do:
 - link to where more info on arrays can be found (or bring it back here from wherever I moved it).
+- fix links to copy/update expressions
 
 This section lays out the Q# type model and describes the syntax for specifying and working with types.
 We note that Q# is a *strongly-typed* language, such that careful use of these types can help the compiler to provide strong guarantees about Q# programs at compile time.
@@ -212,7 +213,7 @@ newtype DoublyWrappedInt = WrappedInt;
 ...
 ```
 
-More details on the unwrap operator can be found at [Expressions in Q#](xref:microsoft.quantum.guide.language.expressions).
+More details on the unwrap operator can be found at [Type Expressions in Q#](xref:microsoft.quantum.guide.expressions).
 
 ### Creating values of user-defined types
 
@@ -273,7 +274,7 @@ For example, a function that computes the sine of an angle would have type `(Dou
 *Operations*---but not functions---have certain additional characteristics that are expressed as part of the operation type. 
 Such characteristics include information about what *functors* the operation supports.
 For example, if execution of the operation can be conditioned on the state of other qubits, it should support the `Controlled` functor; if the operation has an inverse, it should support the `Adjoint` functor. 
-Functors and operations are discussed in detail at [Callables in Q#](xref:microsoft.quantum.guide.language.callables), but here we simply discuss how this alters the operation signature.
+Functors and operations are discussed in detail at [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions), but here we simply discuss how this alters the operation signature.
 
 In order to require support for the `Controlled` and/or `Adjoint` functor in an operation type, we need to add an annotation indicating the corresponding characteristics.
 An annotation `is Ctl` (e.g. `(Qubit => Unit is Ctl)`) indicates that the operation is controllable---that is, it's execution conditioned on the state of another qubit or qubits. 
@@ -288,7 +289,7 @@ An operation type that does not support any functors is specified by its input a
 
 Callable types may contain type parameters.
 Type parameters are indicated by a symbol prefixed by a single quote; for example, `'A` is a legal type parameter.
-Details on defining type-parameterized callables are provided at [Callables in Q#](xref:microsoft.quantum.guide.language.callables).
+Details on defining type-parameterized callables are provided on the [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) page.
 
 A type parameter may appear more than once in a single signature.
 For example, a function that applies another function to each element of an array and returns the collected results would have signature `(('A[], 'A->'A) -> 'A[])`.
@@ -299,6 +300,6 @@ When invoking a type-parameterized callable, all arguments that have the same ty
 Q# does not provide a mechanism for constraining the possible types that might be substituted for a type parameter.
 
 ## What's Next?
-Now that you've seen all the types which comprise the Q# language, you can head to [Expressions in Q#](xref:microsoft.quantum.guide.language.expressions) to see how to create and manipulate expressions of these various types.
+Now that you've seen all the types which comprise the Q# language, you can head to [Type Expressions in Q#](xref:microsoft.quantum.guide.expressions) to see how to create and manipulate expressions of these various types.
 
 

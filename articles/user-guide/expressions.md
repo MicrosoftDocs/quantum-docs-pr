@@ -5,7 +5,7 @@ author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
-uid: microsoft.quantum.guide.language.expressions
+uid: microsoft.quantum.guide.expressions
 ---
 
 # Type Expressions in Q#
@@ -118,7 +118,7 @@ and `!=` binary operators may be used to construct a `Bool` expression.
 The expression will be true if the two expressions are equal, and false if not.
 
 Values of user-defined types may not be compared, only their unwrapped values can be compared. 
-For example, using the "unwrap" operator `!` (explained in the [Q# type model page](xref:microsoft.quantum.language.type-model#user-defined-types)),
+For example, using the "unwrap" operator `!` (explained in detail at [Types in Q#](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -416,7 +416,7 @@ for (i in 1..N) {
 
 ### Arrays of callables 
 
-Note that more details on callable types can be found below, as well as on the next page, [Q# callables: functions and operations](xref:microsoft.quantum.guide.callables).
+Note that more details on callable types can be found below, as well as on the next page, [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions).
 
 If the common element type is an operation or function type, all of the elements must have the same input and output types.
 The element type of the array will support any functors that are supported by all of the elements.
@@ -460,7 +460,7 @@ For instance, `X` is an operation literal that refers to the standard library `X
 
 If an operation supports the `Adjoint` functor, then `Adjoint op` is an operation expression.
 Similarly, if the operation supports the `Controlled` functor, then `Controlled op` is an operation expression.
-The types of these expressions are specified in [Functors](xref:microsoft.quantum.language.type-model#functors).
+The types of these expressions are specified at [Calling operation specializations](xref:microsoft.quantum.guide.operationsfunctions#calling-operation-specializations).
 
 Functors (`Adjoint` and `Controlled`) bind more closely than all other operators, except for the unwrap operator `!` and array indexing with []`.
 Thus, the following are all legal, assuming that the operations support the functors used:
@@ -472,8 +472,10 @@ Controlled Adjoint Op(controls, targets)
 Adjoint WrappedOp!(qs)
 ```
 
+### Type-parameterized callable expressions
+
 A callable literal may be used as a value, say to assign to a variable or to pass to another callable.
-In this case, if the callable has type parameters, they must be provided as part of the callable value.
+In this case, if the callable has [type parameters](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables), they must be provided as part of the callable value.
 A callable value cannot have any unspecified type parameters.
 
 For instance, if `Fun` is a function with signature `'T1->Unit`:
@@ -501,9 +503,9 @@ Thus, to invoke the result of calling `Builder` from the previous paragraph, the
 (Builder(3))(2)
 ```
 
-When invoking a type-parameterized callable, the actual type parameters may be specified within angle brackets `<` and `>` after the callable expression.
+When invoking a [type-parameterized](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) callable, the actual type parameters may be specified within angle brackets `<` and `>` after the callable expression.
 This is usually unnecessary as the Q# compiler will infer the actual types.
-It is required for partial application (see below) if a type-parameterized argument is left unspecified.
+However, it *is* required for [partial application](xref:microsoft.quantum.guide.operationsfunctions#partial-application) if a type-parameterized argument is left unspecified.
 It is also sometimes useful when passing operations with different functor supports to a callable.
 
 For instance, if `Func` has signature `('T1, 'T2, 'T1) -> 'T2`, `Op1` and `Op2` have signature `(Qubit[] => Unit is Adj)`, and `Op3` has signature `(Qubit[] => Unit)`, to invoke `Func` with `Op1` as the first argument, `Op2` as the second, and `Op3` as the third:
@@ -514,35 +516,6 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 The type specification is required because `Op3` and `Op1` have different types, so the compiler will treat this as ambiguous without the specification.
 
-### Partial Application
-
-Given a callable expression, a new callable may be created by providing a subset of the arguments to the callable.
-This is called _partial application_.
-
-In Q#, a partially applied callable is expressed by writing a normal invocation expression, but using an underscore, `_`, for the unspecified arguments.
-The resulting callable has the same result type as the base callable, and the same specializations for operations.
-The input type of the partial application is simply the original type with the specified arguments removed.
-
-If a mutable variable is passed as a specified argument when creating a partial application, the current value of the variable is used.
-Changing the value of the variable afterward will not impact the partial application.
-
-For example, if `Op` has type `((Int, ((Qubit, Qubit), Double)) => Unit is Adj)`:
-
-- `Op(5,(_,_))` has type `(((Qubit,Qubit), Double) => Unit is Adj)`, and so has `Op(5,_)`.
-- `Op(_,(_,1.0))` has type `((Int, (Qubit,Qubit)) => Unit is Adj)`.
-- `Op(_,((q1,q2),_))` has type `((Int,Double) => Unit is Adj)`.
-   Note that we have applied singleton tuple equivalence here.
-
-If the partially-applied callable has type parameters that cannot be inferred by the compiler, they must be provided at the invocation site.
-The partial application cannot have any unspecified type parameters.
-
-For example, if `Op` has type `(('T1, Qubit, 'T1) => Unit : Adjoint)`:
-
-```qsharp
-let f1 = Op<Int>(_, qb, _); // f1 has type ((Int,Int) => Unit is Adj)
-let f2 = Op(5, qb, _);      // f2 has type (Int => Unit is Adj)
-let f3 = Op(_,qb, _);       // f3 generates a compilation error
-```
 
 ## Operator Precedence
 
@@ -575,3 +548,5 @@ Operator | Arity | Description | Operand Types
  `?` `|` | Ternary | Conditional | `Bool` for the left-hand-side
 `w/` `<-` | Ternary | Copy-and-update | see [copy-and-update expressions](#copy-and-update-expressions)
 
+## What's Next?
+Now that you can work with expressions in Q#, you can head to [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.

@@ -5,7 +5,7 @@ author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
-uid: microsoft.quantum.guide.using.variables
+uid: microsoft.quantum.guide.variables
 ---
 
 # Variables in Q#

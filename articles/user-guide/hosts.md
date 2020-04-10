@@ -5,11 +5,11 @@ author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
-uid: microsoft.quantum.guide.using.hosts
+uid: microsoft.quantum.guide.hosts
 ---
 
 # Host programs
 
-Explain
+Describe the role that host programs play in implementing Q#
 
 

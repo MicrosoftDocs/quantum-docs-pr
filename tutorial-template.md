@@ -82,7 +82,7 @@ uid: microsoft.quantum.tutorial-template
 <!-- Include:
     * A short sentence or two describing what happens in this section
     * (If more than 2 or 3 steps) List and link the steps performed in this section
-    * A tabbed structure with code examples for (at the minimum) Python, C# for VS, and C# for VS Code hosts )
+    * A tabbed structure with code examples for the Python (if supported for the scenario), C# for VS, and C# for VS Code hosts'
 -->
 ### Step_1
 <!-- Include (as needed)

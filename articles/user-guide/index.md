@@ -10,6 +10,9 @@ uid: microsoft.quantum.guide
 
 # The Q# User Guide
 
+To do:
+- make this page the repurposing of the de-facto landing page: the index.md from the "Q# Programming Language" section
+
 Welcome to the Q# User Guide! 
 From basic constructs to designing complex algorithms, the material herein should serve as a useful learning tool and reference as you start writing your own quantum programs.
 

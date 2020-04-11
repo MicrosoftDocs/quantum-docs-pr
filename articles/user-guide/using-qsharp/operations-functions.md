@@ -463,7 +463,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 }
 ```
 
-### "Classical logic in functions = good"
+### Classical logic in functions == good
 
 Whenever it is possible to do so, it is helpful to write out classical logic in terms of functions rather than operations, so that it can be more readily used from within operations.
 For example, if we had written the `Square` declaration above as an *operation*, then the compiler would not have been able to guarantee that calling it with the same input would consistently produce the same outputs.

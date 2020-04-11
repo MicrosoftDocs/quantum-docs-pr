@@ -16,7 +16,6 @@ To do:
 - outline the page contents
 - decide "What's Next?"
 
-
 Q# programs consist of one or more *operations* that describe side effects quantum operations can have on quantum data, and one or more *functions* that allow modifications to classical data. 
 In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values.
 

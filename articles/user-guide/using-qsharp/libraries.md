@@ -10,4 +10,5 @@ uid: microsoft.quantum.guide.libraries
 
 # Q# Libraries
 
-Explain the libraries in a broad sense, as well as linking to the specific ones used throughout the user guide
+PLUG THE LIBRARIES
+

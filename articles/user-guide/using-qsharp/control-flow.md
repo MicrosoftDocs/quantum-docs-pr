@@ -53,10 +53,6 @@ It works decidedly less well to try and take your socks off while you're still w
 
 
 
-
-
-
-
 # from 'Statements'
 ## Control Flow
 

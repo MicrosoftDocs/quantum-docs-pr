@@ -1,16 +1,15 @@
 ﻿---
 title: Testing and debugging
-description: fill description
-author: gillenhaalb
-ms.author: a-gibec@microsoft.com
-ms.date: 03/05/2020
+description: Learn how to use unit tests, facts and assertions, and dump functions to test and debug quantum programs. 
+author: tcNickolas
+ms.author: mamykhai@microsoft.com
+ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
 ---
 
 # Testing and debugging
 
-## from 'testing and debugging'
 As with classical programming, it is essential to be able to check that quantum programs act as intended, and to be able to diagnose a quantum program that is incorrect.
 In this section, we cover the tools offered by Q# for testing and debugging quantum programs.
 

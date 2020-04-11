@@ -10,11 +10,6 @@ uid: microsoft.quantum.guide.expressions
 
 # Type Expressions in Q#
 
-To do:
-- *mention* callable expressions, but direct to callables page
-- maybe move array stuff to own page? it's a lot of useful info but easily lost here (also seems to get slightly tangential to this page)
-- copy-and-update expressions? Would they feel more at home elsewhere?
-
 PAGE INTRO GOES HERE
 
 ## Numeric Expressions
@@ -379,8 +374,18 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### Copy-and-Update Expressions
 
-New arrays can be created from existing ones via copy-and-update expressions.
-A copy-and-update expression is an expression of the form `expression1 w/ expression2 <- expression3`, where `expression1` has to be of type `T[]` for some type `T`. The second `expression2` defines the indices of the element(s) to modify compared to the array in `expression1` and has to be either of type `Int` or of type `Range`. If `expression2` is of type `Int`, `expression3` has to be of type `T`. If `expression2` is of type `Range`, `expression3` has to be of type `T[]`.
+Since all Q# types are value types---with the qubits taking a somewhat special role---formally a "copy" is created when a value is bound to a symbol, or when a symbol is rebound. 
+That is to say, the behavior of Q# is the same as if a copy were created on assignment.
+Of course in practice only the relevant pieces are actually recreated as needed. 
+
+This in particular also includes arrays.
+In particular, it is not possible to update array items. 
+To modify an existing array requires leveraging a *copy-and-update* mechanism.
+
+New arrays can be created from existing ones via *copy-and-update* expressions.
+A copy-and-update expression is an expression of the form `expression1 w/ expression2 <- expression3`, where `expression1` has to be of type `T[]` for some type `T`.
+The second `expression2` defines the indices of the element(s) to modify compared to the array in `expression1` and has to be either of type `Int` or of type `Range`.
+If `expression2` is of type `Int`, `expression3` has to be of type `T`. If `expression2` is of type `Range`, `expression3` has to be of type `T[]`.
 
 A copy-and-update expression `arr w/ idx <- value` constructs a new array with all elements set to the corresponding element in `arr`, except for the element(s) at `idx`, which are set to the one(s) in `value`. 
 For example, if `arr` contains an array `[0,1,2,3]`, then 
@@ -388,7 +393,10 @@ For example, if `arr` contains an array `[0,1,2,3]`, then
 - `arr w/ 2 <- 10` is the array `[0,1,10,3]`.
 - `arr w/ 0..2..3 <- [10,12]` is the array `[10,1,12,3]`.
 
+#### Copy-and-update expressions for named items
+
 Similar expressions exist for named items in user-defined types. 
+
 Consider for example the type 
 
 ```qsharp

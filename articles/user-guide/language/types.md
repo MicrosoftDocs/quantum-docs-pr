@@ -67,7 +67,7 @@ The type of an array literal is determined by the common base type of all items 
 
 > [!WARNING]
 > The elements of an array cannot be changed after the array has been created.
-> Update-and-reassign statements and/or copy-and-update expressions can be used to construct a modified array.
+> [Update-and-reassign statements](xref:microsoft.quantum.guide.variables#update-and-reassign-statements) and/or [copy-and-update expressions](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) can be used to construct a modified array.
 
 Alternatively, an array can be created from its size using the `new` keyword:
 

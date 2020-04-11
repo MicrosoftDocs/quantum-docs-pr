@@ -10,76 +10,93 @@ uid: microsoft.quantum.guide.filestructure
 
 # Structure of a Q# file
 
-To do:
-- *mention* declaring user defined types, operations, functions, but direct to proper pages
+Every Q# operation, function, and user-defined type is defined within a namespace.
 
-## from 'File Structure'
-A Q# file consists of a sequence of namespace declarations.
+A Q# file consists of a sequence of *namespace declarations*.
 Each namespace declaration contains declarations for user-defined types, operations, and functions.
 A namespace declaration may contain any number of each type of declaration, and in any order.
+Follow these links for more details on declaring [user-defined types](xref:microsoft.quantum.guide.types#user-defined-types), [operations](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations), and [functions](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions) within a namespace.
+
 The only text that can appear outside of a namespace declaration is comments.
-In particular, documentation comments for a namespace precede the declaration.
+In particular, documentation comments (more details below) for a namespace precede the declaration.
 
 ## Namespace Declarations
 
-A Q# file will typically have exactly one namespace declaration,
-but may have none (and be empty or just contain comments) or may contain
-multiple namespaces.
+A Q# file will typically have exactly one namespace declaration, but may have none (and be empty or just contain comments) or may contain multiple namespaces.
 Namespace declarations may not be nested.
 
-The same namespace may be declared in multiple Q# files that are compiled
-together, as long as there are no type, operation, or function declarations
-with the same name.
-In particular, it is invalid to define the same type in the same namespace
-in multiple files, even if the declarations are identical.
+The same namespace may be declared in multiple Q# files that are compiled together, as long as there are no type, operation, or function declarations with the same name.
+In particular, it is invalid to define the same type in the same namespace in multiple files, even if the declarations are identical.
 
-A namespace declaration consists of the keyword `namespace`, followed by the
-name of the namespace, an open brace `{`, the declarations contained in the
-namespace, and a close brace `}`.
-Namespace names follow the .NET pattern of a sequence of one or more legal
-symbols separated by periods `.`.
-For instance, `MyQuantumStuff` and `Microsoft.Quantum.Canon` are valid
-namespace names.
-By convention, the symbols in a namespace name are capitalized,
-but this is not required.
+A namespace declaration consists of the keyword `namespace`, followed by the name of the namespace, an open brace `{`, the declarations contained in the namespace, and a close brace `}`.
+Namespace names follow the .NET pattern of a sequence of one or more legal symbols separated by periods `.`.
+For instance, `MyQuantumStuff` and `Microsoft.Quantum.Intrinsic` are valid namespace names.
+By convention, the symbols in a namespace name are capitalized, but this is not required.
 
-Declarations may appear in any order in a namespace declaration.
-References to types or callables declared further down in a file are resolved properly;
-there is no need for the type, operation, or function declaration to precede a reference to it.
+References to types or callables declared further down in a file are resolved properly; there is no need for the type, operation, or function declaration to precede a reference to it.
 
 ## Open Directives
 
-Within a namespace block, the `open` directive may be used to 
-import all types and callables defined in a certain namespace and refer to them by their unqualified name. 
+Within a namespace block, the `open` directive may be used to import all types and callables declared in a certain namespace and refer to them by their unqualified name.
+Such an `open` directive consists of the `open` keyword, followed by the namespace to be opened and a terminating semicolon.
 
-Such an `open` directive consists of the `open` keyword, followed by the namespace to be
-opened and a terminating semicolon.
+> [!NOTE] 
+> All `open` directives must appear before any `function`, `operation`, or `newtype` declarations in the namespace block.
 
-For instance,
-
-```qsharp
-open Microsoft.Quantum.Canon;
-```
-
-Optionally, a short name for the opened namespace may be defined 
-such that all elements from that namespace can (and need) to be qualified by the defined short name. 
-Such a short name is defined by adding the keyword `as` followed by the desired short name before the semicolon in an `open` directive:
+Optionally, a short name for the opened namespace may be defined such that all elements from that namespace can (and need) to be qualified by the defined short name. 
+For example, given the following namespace declaration and open directives,
 
 ```qsharp
-open Microsoft.Quantum.Math as Math;
+namespace NS {
+    open Microsoft.Quantum.Intrinsic; // opens the namespace
+    open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
+
+    // operation, function, and newtype declarations
+
+}
 ```
 
-All `open` directives must appear before any `function`, `operation`, or `newtype` declarations in the namespace block.
+if an operation we declare uses an operation `Op` from `Microsoft.Quantum.Intrinsic`, we would call it by simply using `Op`.
+However, if we wanted a call a certain function `Fn` from `Microsoft.Quantum.Math`, we would need to call it using `Math.Fn`.
+
 The `open` directive applies to the entire namespace block within a file.
+Hence, if we were to define an additional namespace in the same Q# file as `NS` above, then any operations/functions/types defined in the second namespace would not have access to anything from `Microsoft.Quantum.Intrinsic` or `Microsoft.Quantum.Math` unless we repeated the open directives therein. 
 
-## from 'Statements'
+A type or callable defined in another namespace that is *not* opened in the current namespace must be referenced by its fully-qualified name.
+For example, an operation named `Op` from the `X.Y` namespace must be referenced by its fully-qualified name `X.Y.Op`, unless the `X.Y` namespace has been opened earlier in the current block. 
+As mentioned above, even if the `X` namespace has been opened, it is not possible to reference the operation as `Y.Op`.
+If a short name `Z` for `X.Y` has been defined in that namespace and file, then `Op` needs to be referred to as `Z.Op`. 
+
+It is usually better to include a namespace by using an `open` directive.
+Using a fully-qualified name is required if two namespaces define constructs with the same name, and the current source uses constructs from both.
+
+Q# follows the same rules for naming as other .NET languages.
+However, Q# does not support relative references to namespaces.
+That is, if the namespace `a.b` has been opened, a reference to an operation named `c.d` will *not* be resolved to an operation with full name `a.b.c.d`.
+
+## Formatting
+
+Most Q# statements and directives end with a terminating semicolon, `;`.
+Statements and declarations such as `for` and `operation` that end with a statement block (see below) do not require a terminating semicolon.
+Each statement description notes whether the terminating semicolon is required.
+
+Statements, like expressions, declarations, and directives, may be broken out across multiple lines.
+Having multiple statements on a single line should be avoided.
+
+## Statement Blocks
+
+Q# statements are grouped into statement blocks.
+A statement block starts with an opening `{` and ends with a closing `}`.
+
+A statement block that is lexically enclosed within another block is considered to be a sub-block of the containing block; containing and sub-blocks are also called outer and inner blocks.
+
 ## Comments
 
 Comments begin with two forward slashes, `//`,
 and continue until the end of line.
 A comment may appear anywhere in a Q# source file.
 
-### Documentation Comments
+## Documentation Comments
 
 Comments that begin with three forward slashes, `///`,
 are treated specially by the compiler when they appear immediately before
@@ -152,55 +169,3 @@ The following names are recognized as documentation comment headers.
 - **References**: A list of references and citations for the item being
   documented.
 
-## Namespaces
-
-Every Q# operation, function, and user-defined type is
-defined within a namespace.
-Q# follows the same rules for naming as other .NET languages.
-However, Q# does not support relative references to namespaces.
-That is, if the namespace `a.b` has been opened, a reference to an operation
-names `c.d` will not be resolved to an operation with full name `a.b.c.d`.
-
-Within a namespace block, the `open` directive may be used to 
-import all types and callables declared in a certain namespace and refer to them by their unqualified name. Optionally, a short name for the opened namespace may be defined such that all elements from that namespace can (and need) to be qualified by the defined short name. 
-The `open` directive applies to the entire namespace block within a file.
-
-A type or callable defined in another namespace that is not
-opened in the current namespace must be referenced by its fully-qualified name.
-For example, an operation named `Op` in the `X.Y` namespace must be
-referenced by its fully-qualified name `X.Y.Op`, unless the `X.Y`
-namespace has been opened earlier in the current block. 
-As mentioned above, even if the `X` namespace has been opened, it is not possible to reference the operation as `Y.Op`.
-If a short name `Z` for `X.Y` has been defined in that namespace and file, then `Op` needs to be referred to as `Z.Op`. 
-
-```qsharp
-namespace NS {
-    open Microsoft.Quantum.Intrinsic; // opens the namespace
-    open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
-}
-```
-
-It is usually better to include a namespace by using an `open` directive.
-Using a fully-qualified name is required if two namespaces define constructs
-with the same name, and the current source uses constructs from both.
-
-## Formatting
-
-Most Q# statements and directives end with a terminating semicolon, `;`.
-Statements and declarations such as `for` and `operation` that end with
-a statement block do not require a terminating semicolon.
-Each statement description notes whether the terminating semicolon
-is required.
-
-Statements, like expressions, declarations, and directives, may be broken out across multiple lines.
-Having multiple statements on a single line should be avoided.
-
-## Statement Blocks
-
-Q# statements are grouped into statement blocks.
-A statement block starts with an opening `{` and ends with a
-closing `}`.
-
-A statement block that is lexically enclosed within another block
-is considered to be a sub-block of the containing block;
-containing and sub-blocks are also called outer and inner blocks.

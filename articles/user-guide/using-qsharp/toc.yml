@@ -1,0 +1,16 @@
+- name: Host programs
+  href: hosts.md
+- name: Q# libraries
+  href: libraries.md
+- name: Structure of a Q# file
+  href: file-structure.md
+- name: Operations and Functions
+  href: operations-functions.md
+- name: Variables
+  href: variables.md
+- name: Working with qubits
+  href: working-with-qubits.md
+- name: Control flow
+  href: control-flow.md
+- name: Testing and debugging
+  href: testing-debugging.md

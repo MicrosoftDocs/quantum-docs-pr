@@ -10,13 +10,10 @@ uid: microsoft.quantum.guide.types
 
 # Types in Q#
 
-To do:
-- link to where more info on arrays can be found (or bring it back here from wherever I moved it).
-- fix links to copy/update expressions
+This page lays out the Q# type model and describes the syntax for specifying and working with types.
+The next page, [Type Expressions](xref:microsoft.quantum.guide.expressions), details how to create and operate on expressions of these types.
 
-This section lays out the Q# type model and describes the syntax for specifying and working with types.
 We note that Q# is a *strongly-typed* language, such that careful use of these types can help the compiler to provide strong guarantees about Q# programs at compile time.
-
 In order to provide the strongest guarantees possible, conversions between types in Q# must be explicit using calls to functions which express that conversion. 
 A variety of such functions are provided as a part of the <xref:microsoft.quantum.convert> namespace.
 Upcasts to compatible types on the other hand happen implicitly. 

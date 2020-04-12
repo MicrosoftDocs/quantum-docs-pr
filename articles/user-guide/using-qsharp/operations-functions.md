@@ -10,15 +10,6 @@ uid: microsoft.quantum.guide.operationsfunctions
 
 # Operations and Functions in Q#
 
-To do:
-- bring together the two function definition sections
-- make this intro overview better
-- outline the page contents
-- decide "What's Next?"
-
-Q# programs consist of one or more *operations* that describe side effects quantum operations can have on quantum data, and one or more *functions* that allow modifications to classical data. 
-In contrast to operations, functions are used to describe purely classical behavior and do not have any effects besides computing classical output values.
-
 ## Defining New Operations
 
 Operations are the core of Q#.
@@ -691,3 +682,4 @@ There are two important comments about the use of recursion, however:
   In particular, the Q# compiler and runtime do not identify and optimize tail recursion.
 
 ## What's Next?
+Learn about [Variables](xref:microsoft.quantum.guide.variables) in Q#.

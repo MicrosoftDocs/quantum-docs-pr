@@ -10,16 +10,10 @@ uid: microsoft.quantum.guide.variables
 
 # Variables in Q#
 
-To-do:
-- write what `n` is in the `//n is ??` second example in binding scopes section (undefined?)
-- intro section/page outline
-
-## Symbol Binding and Assignment
-
-Q# distinguishes between mutable and immutable symbols, or "variables".
+Q# distinguishes between mutable and immutable symbols, or "variables", which are bound/assigned to expressions.
 In general, the use of immutable symbols is encouraged because it allows the compiler to perform more optimizations.
 
-The left-hand-side of the binding consists of a symbol tuple, and the right hand side of an expression.
+The left-hand-side of a binding consists of a symbol tuple, and the right hand side of an expression.
 
 ## Immutable Variables
 
@@ -235,3 +229,6 @@ if (a == b) {
 }
 ...
 ```
+
+## What's Next?
+Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in Q#.

@@ -10,16 +10,9 @@ uid: microsoft.quantum.guide.basics
 
 # Q# Basics
 
-To do:
-- fill info for the host program stuff? (or remove mention of it and put it solely on the page for it?)
-- Where to direct them next?
-- Maybe bring some of the "What is Q#" page info to this intro instead of linking to it?
-
-
 In this section we present a brief introduction to the basic building blocks of Q#.
 
-For a quick overview of what Q# is and where it fits in as a fundamental component of the Quantum Development Kit, you can head [here](xref:microsoft.quantum.overview.qsharp). 
-For more information about the foundations and motivation behind Q#, check out [Why do we need Q#?](https://devblogs.microsoft.com/qsharp/why-do-we-need-q/).
+For a quick overview of what Q# is and where it fits in as a fundamental component of the Quantum Development Kit, you can check out [What is Q#?](xref:microsoft.quantum.overview.qsharp). 
 
 ## What is a quantum program?
 
@@ -63,7 +56,7 @@ In contrast to operations, functions are used to describe purely *deterministic*
 For example, suppose we would like to measure our qubits at the end of a program, and add the measurement results to an array.
 In this case `Measure` is an *operation* which instructs the target machine to perform a measurement on the (real or simulated) qubits, and the classical process of adding the returned results to an array will be handled by *functions*.
 
-Together, operations and functions are referred to as *callables*, and their underlying structure and behavior is introduced on the [Operations and Functions in Q#](xref:microsoft.quantum.guide.callables) page.
+Together, operations and functions are referred to as *callables*, and their underlying structure and behavior is introduced on the [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions) page.
 
 
 ## Q# syntax overview
@@ -115,11 +108,9 @@ Nearly every aspect of a Q# program is built using statements, so no single page
 However, their lexical structure and formatting is described on the [Q# File Structure](xref:microsoft.quantum.guide.filestructure) page, symbol binding assignment and scope at [Variables in Q#](xref:microsoft.quantum.guide.variables), and control flow loops such as `for` at [Control Flow in Q#](xref:microsoft.quantum.guide.controlflow).
 
 
-## Q# source and host files
-
-fill
-
 ## What's next?
 Throughout the rest of this guide, we will show you how to use Q# to construct complex quantum programs through the basic building blocks of operations, functions, and types.
 
-Link SOMEWHERE (or multiple places, seeing as this was the basic overview page)
+To get started, you can start learning about [Types in Q#](xref:microsoft.quantum.guide.types).
+
+If you are interested in learning more about the foundations and motivation behind Q#, check out [Why do we need Q#?](https://devblogs.microsoft.com/qsharp/why-do-we-need-q/).

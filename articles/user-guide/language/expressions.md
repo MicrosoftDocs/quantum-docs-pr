@@ -10,8 +10,6 @@ uid: microsoft.quantum.guide.expressions
 
 # Type Expressions in Q#
 
-PAGE INTRO GOES HERE
-
 ## Numeric Expressions
 
 Numeric expressions are expressions of type `Int`, `BigInt`, or `Double`.

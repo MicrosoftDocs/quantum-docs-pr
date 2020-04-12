@@ -10,9 +10,6 @@ uid: microsoft.quantum.guide.controlflow
 
 # Control Flow in Q#
 
-To-do:
-- whats next
-
 Within an operation or function, each statement executes in order, similar to most common imperative classical languages.
 This flow of control can be modified, however, in three distinct ways:
 
@@ -329,3 +326,4 @@ See also [Testing and debugging](xref:microsoft.quantum.guide.testingdebugging) 
 
 
 ## What's Next?
+Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in Q#.

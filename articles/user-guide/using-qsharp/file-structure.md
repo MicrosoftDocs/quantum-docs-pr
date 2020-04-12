@@ -1,5 +1,5 @@
 ---
-title: Structure of a Q# file
+title: Q# File Structure
 description: Describes the structure and syntax of a Q# file.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -8,7 +8,7 @@ ms.topic: article
 uid: microsoft.quantum.guide.filestructure
 ---
 
-# Structure of a Q# file
+# Q# File Structure
 
 Every Q# operation, function, and user-defined type is defined within a namespace.
 

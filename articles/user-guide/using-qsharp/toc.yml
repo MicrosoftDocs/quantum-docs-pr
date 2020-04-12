@@ -1,10 +1,6 @@
-- name: Host programs
-  href: hosts.md
-- name: Q# libraries
-  href: libraries.md
-- name: Structure of a Q# file
+- name: Q# file structure
   href: file-structure.md
-- name: Operations and Functions
+- name: Operations and functions
   href: operations-functions.md
 - name: Variables
   href: variables.md

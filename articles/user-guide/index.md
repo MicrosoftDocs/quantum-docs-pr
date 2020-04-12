@@ -16,7 +16,7 @@ Here we detail the core concepts of the Q# language as well provide all the info
 
 ## User Guide Contents
 
-- [Q# Basics](xref:microsoft.quantum.techniques.file-structure): an introductory overview of the purpose and functionality of the Q# programming language.  
+- [Q# Basics](xref:microsoft.quantum.techniques.file-structure): an introductory overview of the purpose and functionality of the Q# programming language. 
 
 ### Q# Language
 
@@ -26,12 +26,7 @@ Here we detail the core concepts of the Q# language as well provide all the info
 
 ### Using Q#
 
-- [Host Programs](xref:microsoft.quantum.guide.hosts): describes the role that classical host programs play in executing Q# programs, as well as how to implement them for various classical host languages (C#, Python, etc.).
-
-- [Q# Libraries](xref:microsoft.quantum.guide.libraries): introduces the available Q# Libraries and their role as part of the QDK, allowing you to get straight into developing quantum programs for a wide range of uses. 
-    These include numerics, quantum chemistry, quantum machine learning, as well as the standard libraries which provide general tools for writing Q# programs.
-
-- [Structure of a Q# File](xref:microsoft.quantum.guide.filestructure): describes the structure and syntax of a `.qs` Q# file.
+- [Q# File Structure](xref:microsoft.quantum.guide.filestructure): describes the structure and syntax of a `.qs` Q# file.
 
 - [Operations and Functions](xref:microsoft.quantum.guide.operationsfunctions) details the two callable types of the Q# language: *operations*, which include action on qubits and quantum systems; and *functions*, which strictly work with classical information. 
     Here you see how to define and call them, including the adjoint and controlled versions of quantum operations.

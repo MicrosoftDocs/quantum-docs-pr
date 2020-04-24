@@ -7,7 +7,7 @@ ms.date: 04/01/2020
 ms.topic: article
 uid: microsoft.quantum.tutorial-template
 
-# title: <title should match the H1 title - Google displays this on the search results page. (example) "Tutorial: Write and Simulate Qubit-level programs in Q#">
+# title: <title should express the intent of the article. Google displays the title on the search results page, best to keep length to 60-65 characters including spaces. For example "Tutorial: Write and simulate qubit-level programs in Q#">
 # description: <Description of the tutorial for SEO - this text also appears on the search results page> 
 # author: <GitHub handle>
 # ms.author: <ms alias>
@@ -33,8 +33,8 @@ uid: microsoft.quantum.tutorial-template
 
 -->
 
-# Tutorial: <verb and action> 
- <!-- (example) "Tutorial: Write and Simulate Qubit-level programs in Q#". This should match the title in the metadata-->
+# Tutorial: <state what the tutorial accomplishes> 
+ <!-- (example) "Tutorial: Write and simulate qubit-level programs in Q#". This should reflect the title in the metadata but doesn't need to match exactly-->
 
  <!-- 
     * Provide a high-level abstract of the tutorial: what the user will do, accomplish, and learn. "In this tutorial you will do..." 
@@ -55,7 +55,7 @@ uid: microsoft.quantum.tutorial-template
      * Preparations such as creating a host project (this can be a link to How to Create a Q# Project)
 -->
 
-## Procedure_1 (Build the Scenario)
+## Procedure_1 (Write the Q# code)
 <!-- "This procedure walks you through writing the code to..."  -->
 
 <!-- Include:
@@ -76,7 +76,7 @@ uid: microsoft.quantum.tutorial-template
 
 ### Step_3
 
-## Procedure_2 (Run the Scenario)
+## Procedure_2 (Write the host code and run the program)
 <!-- "This procedure walks you through running the code to..."  -->
 
 <!-- Include:
@@ -93,23 +93,13 @@ uid: microsoft.quantum.tutorial-template
 -->
 ### Step_2
 
-## Procedure_3 (Results)
+## Procedure_3 (Analyze results)
 <!-- "This procedure analyzes the output of the scenario..."  -->
 
 <!-- Display the results and explain how they relate to the code and concept 
 
      Create output results for each of the host code examples used in Procedure 2.
 
--->
-
-## Procedure_4 (Variations and exercises)
-<!-- As applicable, take advantage of the working environment the user just built to demonstrate variations of the scenario and to expand and reinforce learning, ie., "What if the input to X was negative?", "Replace <that code> with <this code> and compare the results" -->
-### Step_1
-<!-- Include (as needed)
-    * Brief description of what this step does
-    * Individual steps as needed
-    * Explain what this step accomplishes, what commands were used
-    * Other pertinent notes or comments
 -->
 ## Summary
 <!-- Review the scenario and highlight:
@@ -121,5 +111,12 @@ uid: microsoft.quantum.tutorial-template
 ## Next Steps
 <!-- Include one link only to:
     * The next logical tutorial in the series, or
+    * The continuation or variations on this tutorial (see below)
     * Another related task that the user can do
 -->
+
+<!-- As applicable, add a second tutorial to take advantage of the working environment the user just built to demonstrate variations of the scenario and to expand and reinforce learning, ie., "What if the input to X was negative?", "Replace <that code> with <this code> and compare the results" 
+
+    * Indicate that this is a continuation of the previous tutorial
+    * Procedures may be streamlined, for example to Proc_Apply_Variations, and Proc_View_New_Results
+    -->

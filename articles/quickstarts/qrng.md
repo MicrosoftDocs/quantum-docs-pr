@@ -22,7 +22,7 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 
 ### Q# operation code
 
-1. Replace the contents of the Operation.qs file with the following code:
+1. Replace the contents of the Program.qs file with the following code:
 
     ```qsharp
     namespace Quantum {
@@ -67,9 +67,9 @@ We can use this representation to visualize what the code is doing:
 
 Since the outcome of the measurement is completely random, we have obtained a random bit. We can call this operation several times to create integers. For example, if we call the operation three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).
 
- ## Creating a complete random number generator using the Q# standalone executables   
+ ## Creating a complete random number generator using the Q# standalone executables
 
-Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator using the standalone executables.
+Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator using the standalone executables. The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator, resource estimator, or submit it to Azure Quantum, depending on the project configuration and command-line options.
 
     ```
     namespace Qrng {
@@ -84,26 +84,48 @@ Now that we have a Q# operation that generates random bits, we can use it to bui
             return MResetZ(q);  // Measure the qubit value.
         }
     }
-    internal operation GenerateRandomBits(max : Int) : Int {
+
+    //This step can be run directly on a quantum hardware that provides random outputs of 0s or 1s. Remove the comments when the quantum hardware is available for testing.
+    //@EntryPoint()
+    //operation Main() : Result {
+    //    Message($"Random bit: ");        
+    //    return SampleQuantumRandomNumberGenerator();
+    //}
+  
+    //This step makes a randomly generated 0s or 1s into random integers from 0 to 10. 
+    @EntryPoint()
+    operation Main() : Int {
+        let max = 10;
+        Message($"Random number between 0 and {max}: ");  
+        
         let nBits = Floor(Log(IntAsDouble(max))/LogOf2() + 1.);
+    
         mutable bits = new Result[0];
         for(bit in 1 .. nBits) {
             set bits += [SampleQuantumRandomNumberGenerator()];
         }
+    
         let output = ResultArrayAsInt(bits);   
-        return output <= max ? output | GenerateRandomBits(max);
-    }
-    @EntryPoint()
-    operation Main(max : Int) : Int {
-        Message($"Random number between 0 and {max}: ");        
-        return GenerateRandomBits(max);
+        return output <= max ? output | Main();
     }
 }
-```   
+```
+
+In VS Codes, Build the Program.qs the first time by typing the below in the terminal: 
+```
+dotnet build
+```
+For subsequent runs, no need to build it again:
+```
+dotnet run --no-build
+```
+
+In Visual Studio, simply do ctrl+F5 to execute the script.
+
 
 ## Creating a complete random number generator using a host program
 
-Alternatively, we build a quantum random number generator with a host program.
+Alternatively, we build a quantum random number generator with a host program. 
 
  ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
  

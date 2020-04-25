@@ -103,7 +103,7 @@ The executable will run the operation or function marked with the `@EntryPoint()
         let nBits = Floor(Log(IntAsDouble(max)) / LogOf2() + 1.);
     
         mutable bits = new Result[0];
-        for(bit in 1 .. nBits) {
+        for (bit in 1..nBits) {
             set bits += [SampleQuantumRandomNumberGenerator()];
         }
     

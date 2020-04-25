@@ -100,7 +100,7 @@ The executable will run the operation or function marked with the `@EntryPoint()
         let max = 10;
         Message($"Random number between 0 and {max}: ");  
         
-        let nBits = Floor(Log(IntAsDouble(max))/LogOf2() + 1.);
+        let nBits = Floor(Log(IntAsDouble(max)) / LogOf2() + 1.);
     
         mutable bits = new Result[0];
         for(bit in 1 .. nBits) {

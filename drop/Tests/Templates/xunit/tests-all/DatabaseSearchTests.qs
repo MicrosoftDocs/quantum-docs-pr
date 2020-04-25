@@ -1,0 +1,64 @@
+// Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the
+// Microsoft Software License Terms for Microsoft Quantum Development Kit Libraries
+// and Samples. See LICENSE in the project root for license information.
+namespace tests_all {
+    open Microsoft.Quantum.Arrays;
+    open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Math;
+    open Microsoft.Quantum.Convert;
+    open Microsoft.Quantum.Intrinsic;
+    open Samples.DatabaseSearch;
+    
+    
+    /// # Summary
+    /// Performs quantum search for the marked element and checks whether
+    /// the success probability matches theoretical predictions. Then checks
+    /// whether the correct index is found, post-selected on success.
+    operation GroverTest () : Unit {
+        
+        for (nDatabaseQubits in 4 .. 6) {
+            for (nIterations in 0 .. 5) {
+                
+                using (qubits = Qubit[nDatabaseQubits + 1]) {
+                    ResetAll(qubits);
+                    let markedQubit = qubits[0];
+                    let databaseRegister = qubits[1 .. nDatabaseQubits];
+                    
+                    // Choose marked elements to be 1, 4, and 9.
+                    let markedElements = [1, 4, 9];
+                    let nMarkedElements = Length(markedElements);
+                    (GroverSearch(markedElements, nIterations, 0))(qubits);
+                    
+                    // Theoretical success probability.
+                    let successAmplitude = Sin(IntAsDouble(2 * nIterations + 1) * ArcSin(Sqrt(IntAsDouble(nMarkedElements) / IntAsDouble(2 ^ nDatabaseQubits))));
+                    let successProbability = successAmplitude * successAmplitude;
+                    AssertProb([PauliZ], [markedQubit], One, successProbability, $"Error: Success probability does not match theory", 1E-10);
+                    let result = M(markedQubit);
+                    
+                    if (result == One) {
+                        let results = ForEach(M, databaseRegister);
+                        let number = ResultArrayAsInt(results);
+                        mutable elementFound = false;
+                        
+                        // Verify that found index is in markedElements.
+                        for (idxElement in 0 .. nMarkedElements - 1) {
+                            
+                            if (markedElements[idxElement] == number) {
+                                set elementFound = true;
+                            }
+                        }
+                        
+                        if (not elementFound) {
+                            fail $"Found index should be in MarkedElements.";
+                        }
+                    }
+                    
+                    ResetAll(qubits);
+                }
+            }
+        }
+    }
+    
+}
+
+

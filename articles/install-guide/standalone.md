@@ -10,7 +10,7 @@ uid: microsoft.quantum.update
 
 # Q# Standalone Executables
 
-Standalone executables allow Q# programs to executed as its own language, without a driver in a host language like C#, F#, or Python.
+Standalone executables allow Q# programs to be executed on their own, without a driver in a host language like C#, F#, or Python.
 
 1. Pre-requisites
 

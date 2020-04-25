@@ -67,7 +67,7 @@ We can use this representation to visualize what the code is doing:
 
 Since the outcome of the measurement is completely random, we have obtained a random bit. We can call this operation several times to create integers. For example, if we call the operation three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).
 
- ## Creating a complete random number generator using the Q# standalone executables
+ ## Creating a complete random number generator using Q# standalone executables
 
 Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator using the standalone executables. The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator, resource estimator, or submit it to Azure Quantum, depending on the project configuration and command-line options.
 

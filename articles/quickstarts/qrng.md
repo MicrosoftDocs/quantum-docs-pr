@@ -96,7 +96,7 @@ The executable will run the operation or function marked with the `@EntryPoint()
   
     //This step makes a randomly generated 0s or 1s into random integers from 0 to 10. 
     @EntryPoint()
-    operation Main() : Int {
+    operation RunMain() : Int {
         let max = 10;
         Message($"Random number between 0 and {max}: ");  
         

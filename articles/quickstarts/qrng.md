@@ -69,7 +69,8 @@ Since the outcome of the measurement is completely random, we have obtained a ra
 
  ## Creating a complete random number generator using Q# standalone executables
 
-Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator using the standalone executables. The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator, resource estimator, or submit it to Azure Quantum, depending on the project configuration and command-line options.
+Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator.
+The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator, resource estimator, depending on the project configuration and command-line options.
 
     ```
     namespace Qrng {

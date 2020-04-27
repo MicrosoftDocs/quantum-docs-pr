@@ -18,7 +18,8 @@ Standalone executables allow Q# programs to be executed on their own, without a 
 
 2. Installation
 
-While you can use the Q# standalone executables in any IDE, we highly recommend using Visual Studio Code (VS Code) or Visual Studio IDE for your Q# applications. By using VS Code or Visual Studio and the QDK Visual Studio Code extension you gain access to richer functionality.(These are convenient tools for the Q# + C# and Q# + Python applications, if you choose to use them instead.) 
+While you can use the Q# standalone executables in any IDE, we highly recommend using Visual Studio Code (VS Code) or Visual Studio IDE for your Q# applications. By using VS Code or Visual Studio and the QDK Visual Studio Code extension you gain access to richer functionality.
+These are also convenient tools for using [Q# and Python together](xref:todo) or for using [Q# and C# together](xref:todo), if you choose to use those workflows instead.
 
     - Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac)
     - Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)

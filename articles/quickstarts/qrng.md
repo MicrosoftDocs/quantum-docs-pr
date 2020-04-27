@@ -53,23 +53,24 @@ When a `Qubit` is de-allocated it must be explicitly set back to the `Zero` stat
 
 In the Bloch sphere, the north pole represents the classical value **0** and the south pole represents the classical value **1**. Any superposition can be represented by a point on the sphere (represented by an arrow). The closer the end of the arrow to a pole the higher the probability the qubit collapses into the classical value assigned to that pole when measured. For example, the qubit state represented by the red arrow below has a higher probability of giving the value **0** if we measure it.
 
-<img src="~/media/qrng-Bloch.png" width="175">
+<img src="~/media/qrng-Bloch.png" width="175" alt="A qubit state with a high probability of measuring zero">
 
 We can use this representation to visualize what the code is doing:
 
 * First we start with a qubit initalizated in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.
 
-<img src="~/media/qrng-H.png" width="450">
+<img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
 
 * Then we measure the qubit and save the output:
 
-<img src="~/media/qrng-meas.png" width="450">
+<img src="~/media/qrng-meas.png" width="450" alt="Measuring a qubit and saving the output">
 
 Since the outcome of the measurement is completely random, we have obtained a random bit. We can call this operation several times to create integers. For example, if we call the operation three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).
 
- ## Creating a complete random number generator using the Q# standalone executables
+ ## Creating a complete random number generator using Q# standalone executables
 
-Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator using the standalone executables. The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator, resource estimator, or submit it to Azure Quantum, depending on the project configuration and command-line options.
+Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator.
+The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator, resource estimator, depending on the project configuration and command-line options.
 
     ```
     namespace Qrng {
@@ -78,6 +79,7 @@ Now that we have a Q# operation that generates random bits, we can use it to bui
     open Microsoft.Quantum.Measurement;
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;
+
     operation SampleQuantumRandomNumberGenerator() : Result {
         using (q = Qubit())  {  // Allocate a qubit.
             H(q);               // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
@@ -94,14 +96,14 @@ Now that we have a Q# operation that generates random bits, we can use it to bui
   
     //This step makes a randomly generated 0s or 1s into random integers from 0 to 10. 
     @EntryPoint()
-    operation Main() : Int {
+    operation RunMain() : Int {
         let max = 10;
         Message($"Random number between 0 and {max}: ");  
         
-        let nBits = Floor(Log(IntAsDouble(max))/LogOf2() + 1.);
+        let nBits = Floor(Log(IntAsDouble(max)) / LogOf2() + 1.);
     
         mutable bits = new Result[0];
-        for(bit in 1 .. nBits) {
+        for (bit in 1..nBits) {
             set bits += [SampleQuantumRandomNumberGenerator()];
         }
     

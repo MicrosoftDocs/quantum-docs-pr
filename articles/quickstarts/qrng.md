@@ -57,7 +57,7 @@ In the Bloch sphere, the north pole represents the classical value **0** and the
 
 We can use this representation to visualize what the code is doing:
 
-* First we start with a qubit initalizated in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.
+* First we start with a qubit initialized in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.
 
 <img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
 

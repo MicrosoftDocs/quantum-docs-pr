@@ -281,7 +281,7 @@ For instance, `[1,2,3] + [4,5,6]` is `[1,2,3,4,5,6]`.
 ### Array Creation
 
 Given a type and an `Int` expression, the `new` operator may be used to allocate a new array of the given size.
-For instance, `new Int[i+1]` would allocate a new `Int` array with `i+1` elements.
+For instance, `new Int[i + 1]` would allocate a new `Int` array with `i + 1` elements.
 
 The elements of a new array are initialized to a type-dependent default value.
 In most cases this is some variation of zero.

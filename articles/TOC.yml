@@ -20,7 +20,7 @@
     items:
     - name: Installation overview
       href: install-guide/index.md
-    - name: Q# standalone executable
+    - name: Q# command line applications
       href: install-guide/standalone.md
     - name: Q# + C#
       href: install-guide/csinstall.md

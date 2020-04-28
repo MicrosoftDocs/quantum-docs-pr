@@ -54,8 +54,6 @@
   - name: Q# programming language
     topicHref: language/index.md
     href: language/toc.yml
-  - name: Quantum simulators and resource estimators
-    href: machines/toc.yml
 - name: Q# libraries
   href: libraries/toc.yml
 - name: Quantum computing concepts

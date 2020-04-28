@@ -6,5 +6,7 @@
   href: language/toc.yml
 - name: Using Q#
   href: using-qsharp/toc.yml
+- name: Simulators and resource estimators
+  href: /machines/toc.yml
 - name: Quick reference pages
   href: quickref/toc.yml

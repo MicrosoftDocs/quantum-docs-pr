@@ -9,7 +9,7 @@ ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
 ---
 
-# The ResourcesEstimator Target Machine
+# The Resources Estimator Target Machine
 
 As the name implies, the `ResourcesEstimator` estimates the resources 
 required to run a given instance of a Q# operation on a quantum computer.

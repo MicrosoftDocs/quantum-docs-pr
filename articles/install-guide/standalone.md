@@ -5,7 +5,7 @@ ms.author: kitty
 ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
-uid: microsoft.quantum.update
+uid: microsoft.quantum.install.standalone
 ---
 
 # Q# Command Line Applications```

@@ -70,9 +70,9 @@ Since the outcome of the measurement is completely random, we have obtained a ra
 
 ## Creating a complete random number generator
 
-Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator. We cans use the Q# standalone executable or use a host program. 
+Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator. We can use the Q# command line applications or use a host program. 
 
- ### [Q# standalone executable with Visual Studio or Visual Studio Code](#tab/tabid-qsharp)
+ ### [Q# command line applications with Visual Studio or Visual Studio Code](#tab/tabid-qsharp)
 
  The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator, resource estimator, depending on the project configuration and command-line options.
 

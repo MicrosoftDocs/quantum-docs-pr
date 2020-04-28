@@ -321,7 +321,7 @@ If the array expression is not a simple identifier, it must be enclosed in paren
 For instance, if `a` and `b` are both arrays of `Int`s, an element from the concatenation would be expressed as:
 
 ```qsharp
-(a+b)[13]
+(a + b)[13]
 ```
 
 All arrays in Q# are zero-based.

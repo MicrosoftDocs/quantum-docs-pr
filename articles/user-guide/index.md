@@ -44,7 +44,7 @@ Here we detail the core concepts of the Q# language as well provide all the info
     Fortunately, Q# supports many of the classical debugging techniques programmers are used to, as well as those that are quantum-specific. These include creating/running unit tests in Q#, embedding *assertions* on values and probabilities in your code, and the `Dump` functions which output the state of target machine. 
     The latter can be used alongside our full-state simulator to debug certain parts of computations by skirting some quantum limitations (e.g. the no-cloning theorem).
 
-### Quantum Simulators and Resource Estimators
+### Target machines
 
 - [Quantum simulators and host applications](xref:microsoft.quantum.machines): an overview of the different simulators available, as well as the general execution model between host program and target machines.
 

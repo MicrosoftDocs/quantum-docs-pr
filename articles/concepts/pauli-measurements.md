@@ -64,7 +64,7 @@ $$
 \end{align}
 $$
 
-It is also equivalent to applying $HS^\dagger$ to the quantum state vector and then measuring $Z$, such that the following operation is equivalent to `Measure([PauliY], [q]])`:
+It is also equivalent to applying $HS^\dagger$ to the quantum state vector and then measuring $Z$, such that the following operation is equivalent to `Measure([PauliY], [q])`:
 
 ```Q#
 operation MeasureY(qubit : Qubit) : Result {

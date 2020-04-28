@@ -84,11 +84,14 @@ H^{\otimes 2} \left( \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix
 $$
 Both outcomes have 50% probability of occurring.  The outcome being 50% probability for both can be intuited from the fact that the initial quantum state vector is invariant under swapping $0$ with $1$ on the first qubit.
 
-The mathematical rule for measuring the first or second qubit is simple.  If we let $e_k$ be the $k^{\rm th}$ computational basis vector and let $S$ be the set of all $e_k$ such that the qubit in question takes the value $1$ for that value of $k$.  For example, if we are interested in measuring the first qubit then $S$ would consist of $e_2\equiv 10$ and $e_3\equiv 11$.  Similarly, if we are interested in the second qubit $S$ would consist of $e_1\equiv 01$ and $e_3 \equiv 11$.  Then the probability of measuring the chosen qubit to be $1$ is for state vector $\psi$
+The mathematical rule for measuring the first or second qubit is simple.  If we let $e_k$ be the $k^{\rm th}$ computational basis vector and let $S$ be the set of all $e_k$ such that the qubit in question takes the value $1$ for that value of $k$.  For example, if we are interested in measuring the first qubit then $S$ would consist of $e_1\equiv 10$ and $e_3\equiv 11$.  Similarly, if we are interested in the second qubit $S$ would consist of $e_2\equiv 01$ and $e_3 \equiv 11$.  Then the probability of measuring the chosen qubit to be $1$ is for state vector $\psi$
 
 $$
 P(\text{outcome}=1)= \sum_{e_k \text{ in the set } S}\psi^\dagger e_k e_k^\dagger \psi.
 $$
+
+> [!NOTE]
+> In this document we are using the little-endian format to label the computational basis. In little endian format, the least significant bits come first. For example, the number four in little-endian format is represented by the string of bits 001.
 
 Since each qubit measurement can only yield $0$ or $1$, the probability of measuring $0$ is simply $1-P(\text{outcome}=1)$.  This is why we only explicitly give a formula for the probability of measuring $1$.
 
@@ -104,7 +107,7 @@ The cautious reader may worry about what happens when the probability of the mea
 If we take $\psi$ to be the uniform state vector given above and are interested in measuring the first qubit then 
 
 $$
-P(\text{measurement of first qubit}=1) = (\psi^\dagger e_2)(e_2^\dagger \psi)+(\psi^\dagger e_3)(e_3^\dagger \psi)=|e_2^\dagger \psi|^2+|e_3^\dagger \psi|^2.
+P(\text{measurement of first qubit}=1) = (\psi^\dagger e_1)(e_1^\dagger \psi)+(\psi^\dagger e_3)(e_3^\dagger \psi)=|e_1^\dagger \psi|^2+|e_3^\dagger \psi|^2.
 $$
 
 Note that this is just the sum of the two probabilities that would be expected for measuring the results $10$ and $11$ were all the qubits to be measured.
@@ -117,13 +120,13 @@ $$
 which perfectly matches what our intuition tells us the probability should be.  Similarly, the state can be written as
 
 $$
-\frac{\frac{e_2}{2}+\frac{e_3}{2}}{\sqrt{\frac{1}{2}}}=\frac{1}{\sqrt{2}}\begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1\end{bmatrix}
+\frac{\frac{e_1}{2}+\frac{e_3}{2}}{\sqrt{\frac{1}{2}}}=\frac{1}{\sqrt{2}}\begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1\end{bmatrix}
 $$
 
 again in accordance with our intuition.
 
 ## Two-Qubit Operations
-As in the single-qubit case, any unitary transformation is a valid operation on qubits. In general, a unitary transformation on $n$ qubits is a matrix $U$ of size $2^n \times 2^n$ (so that it acts on vectors of size $2^n$), such that $U^{-1} = U^\dagger$.	
+As in the single-qubit case, any unitary transformation is a valid operation on qubits. In general, a unitary transformation on $n$ qubits is a matrix $U$ of size $2^n \times 2^n$ (so that it acts on vectors of size $2^n$), such that $U^{-1} = U^\dagger$.
 For example, the CNOT (controlled-NOT) gate is a commonly used two-qubit gate and is represented by the following unitary matrix:
 
 $$
@@ -153,12 +156,12 @@ a\ b\\\\ c\ d
 \begin{bmatrix}
 e\ f\\\\ g\ h
 \end{bmatrix}=
-	\begin{bmatrix}
-	ae\ af\ be\ bf \\\\
-	ag\ ah\ bg\ bh \\\\
-	ce\ cf\ de\ df \\\\
-	cg\ ch\ dg\ dh
-	\end{bmatrix}.$$
+    \begin{bmatrix}
+    ae\ af\ be\ bf \\\\
+    ag\ ah\ bg\ bh \\\\
+    ce\ cf\ de\ df \\\\
+    cg\ ch\ dg\ dh
+    \end{bmatrix}.$$
 Thus we can form two-qubit gates by taking the tensor product of some known single-qubit gates. Some examples of two-qubit gates include $H \otimes H$, $X \otimes \boldone$, and $X \otimes Z$.
 
 Note that while any two single-qubit gates define a two-qubit gate by taking their tensor product, the converse is not true. Not all two-qubit gates can be written as the tensor product of single-qubit gates.  Such a gate is called an *entangling* gate. One example of an entangling gate is the CNOT gate.

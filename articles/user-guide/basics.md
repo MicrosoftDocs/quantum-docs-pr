@@ -20,7 +20,7 @@ From a technical perspective, a quantum program can be seen as a particular set 
 An important consequence of that view is that a program written in Q# does not directly model qubits themselves, but rather describes how a classical control computer interacts with those qubits.
 By design, Q# thus does not define quantum states or other properties of quantum mechanics directly.
 For instance, consider the state $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ discussed in the [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro) guide.
-To prepare this state in Q#, we use the facts that the qubits are initialized in the $\ket{0}$ state, and that $\ket{+} = H\ket{0}$, where $H$ is the [Hadamard](xref:microsoft.quantum.intrinsic.h) transform:
+To prepare this state in Q#, we use the facts that the qubits are initialized in the $\ket{0}$ state, and that $\ket{+} = H\ket{0}$, where $H$ is the Hadamard transform, implemented by the [`H` operation](](xref:microsoft.quantum.intrinsic.h):
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -43,7 +43,7 @@ For example, if running the program on our [full-state simulator](xref:microsoft
 But looking toward the future, when the target machine is a real quantum computer, calling such operations in Q# will direct the quantum computer to perform the corresponding *real* operations on the *real* quantum system (e.g. precisely timed laser pulses).
 
 A Q# program recombines these operations as defined by a target machine to create new, higher-level operations to express quantum computation.
-In this way, Q# makes it easy to express the logic underlying quantum and hybrid quantum–classical algorithms, while also being general with respect to the structure of a target machine or simulator.
+In this way, Q# makes it easy to express the logic underlying quantum and hybrid quantumâ€“classical algorithms, while also being general with respect to the structure of a target machine or simulator.
 
 ## Q# operations and functions
 

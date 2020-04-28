@@ -7,6 +7,7 @@
 - name: Using Q#
   href: using-qsharp/toc.yml
 - name: Simulators and resource estimators
+  topicHref: /machines/index.md
   href: /machines/toc.yml
 - name: Quick reference pages
   href: quickref/toc.yml

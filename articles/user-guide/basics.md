@@ -26,7 +26,7 @@ To prepare this state in Q#, we use the facts that the qubits are initialized in
 using (qubit = Qubit()) {
     // At this point, qubit is in the state |0⟩.
     H(qubit);
-    // We've now applied H, such that our qubit is in H|0> = |+>, as we wanted.
+    // We've now applied H, such that our qubit is in H|0⟩ = |+⟩, as we wanted.
 }
 ```
 

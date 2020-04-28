@@ -372,7 +372,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### Copy-and-Update Expressions
 
-Since all Q# types are value types---with the qubits taking a somewhat special role---formally a "copy" is created when a value is bound to a symbol, or when a symbol is rebound. 
+Since all Q# types are value types — with the qubits taking a somewhat special role —formally a "copy" is created when a value is bound to a symbol, or when a symbol is rebound. 
 That is to say, the behavior of Q# is the same as if a copy were created on assignment.
 Of course in practice only the relevant pieces are actually recreated as needed. 
 

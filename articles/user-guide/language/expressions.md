@@ -400,7 +400,7 @@ Consider for example the type
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 ```
-If `c` contains the value of type `Complex(1.,-1.)`, then `c w/ Re <- 0.` is an expression of type `Complex` that evaluates to `Complex(0.,-1.)`.
+If `c` contains the value of type `Complex(1., -1.)`, then `c w/ Re <- 0.` is an expression of type `Complex` that evaluates to `Complex(0., -1.)`.
 
 ### Jagged Arrays
 

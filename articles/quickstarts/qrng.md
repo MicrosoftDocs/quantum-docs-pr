@@ -74,17 +74,17 @@ Now that we have a Q# operation that generates random bits, we can use it to bui
 
  ### [Q# command line applications with Visual Studio or Visual Studio Code](#tab/tabid-qsharp)
 
- The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator, resource estimator, depending on the project configuration and command-line options.
+ The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
 
  :::code language="python" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-33":::
 
-In Visual Studio, simply do F5 to execute the script.
+In Visual Studio, simply press Ctrl + F5 to execute the script.
 
-In VS Code, Build the Program.qs the first time by typing the below in the terminal: 
+In VS Code, build the Program.qs the first time by typing the below in the terminal: 
 ```
 dotnet build
 ```
-For subsequent runs, no need to build it again:
+For subsequent runs, there is no need to build it again. To run it, type the following command and press enter:
 ```
 dotnet run --no-build
 ```

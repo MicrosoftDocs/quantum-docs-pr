@@ -404,7 +404,7 @@ If `c` contains the value of type `Complex(1.,-1.)`, then `c w/ Re <- 0.` is an 
 
 ### Jagged Arrays
 
-A jagged array, sometimes called an "array of arrays", is an array whose elements are arrays.
+A jagged array, sometimes called an "array of arrays," is an array whose elements are arrays.
 The elements of a jagged array can be of different sizes.
 The following example shows how to declare and initialize a jagged array representing a multiplication table.
 

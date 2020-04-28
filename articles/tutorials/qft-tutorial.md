@@ -13,7 +13,7 @@ uid: microsoft.quantum.circuit-tutorial
 
 Welcome to the Quantum Development Kit tutorial on writing and simulating a basic quantum program that operates on individual qubits. 
 
-Although the power of quantum computation is revealed at the higher level of "what a quantum algorithm does", we should remember that even the most complex quantum programs are built upon operations at the level of individual qubits.
+Although Q# was primarily created as a high-level programming language for large-scale quantum programs, it can just as easily be used to explore the lower level of quantum programs: directly addressing specific qubits.
 The flexibility of Q# allows users to approach quantum systems from any such level of abstraction, and in this tutorial we dive into the qubits themselves.
 Specifically, we take a look under the hood of the [quantum Fourier transform](https://en.wikipedia.org/wiki/Quantum_Fourier_transform), a subroutine that is integral to many larger quantum algorithms.
 
@@ -40,7 +40,7 @@ In our case, we will define a Q# operation to perform the full three-qubit quant
 > * Observe how the quantum system's simulated wavefunction evolves throughout the operation
 
 Applications developed with Microsoft's Quantum Development Kit typically consists of two parts:
-1. One or more quantum algorithms, implemented using the Q# quantum programming language, and invoked by the classical host program. These consist of 
+1. A quantum program, implemented using the Q# quantum programming language, which is then invoked by the classical host program to run on a quantum computer or quantum simulator. These consist of 
     - Q# operations: subroutines containing quantum operations, and 
     - Q# functions: classical subroutines used within the quantum algorithm.
 2. A classical program, implemented in a classical programming language like Python or C#, that serves as the main entry point and will invoke Q# operations when it wants to execute a quantum algorithm.
@@ -187,8 +187,9 @@ We call [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) again 
             ResetAll(qs);
 ```
 
-Requiring that all deallocated qubits be explicitly set to $\ket{0}$ is a basic feature of Q#.
-If it is not performed at the end of a `using` allocation block, a runtime error will be thrown.
+Requiring that all deallocated qubits be explicitly set to $\ket{0}$ is a basic feature of Q#, as it allows other operations to know their state precisely when they begin using those same qubits (a scarce resource).
+Additionally, this assures that they not be entangled with any other qubits in the system.
+If the reset is not performed at the end of a `using` allocation block, a runtime error will be thrown.
 
 Your full Q# file should now look like this:
 
@@ -635,7 +636,41 @@ with the rest of the namespace `open` statements.
 In the resulting output, you will see the gradual projection into subspaces as each qubit is measured.
 
 
+## Use the Q# libraries
+As we mentioned in the introduction, much of Q#'s power rests in the fact that it allows you to abstract-away the worries of dealing with individual qubits.
+Indeed, if you want to develop full-scale, applicable quantum programs, worrying about whether a Hadamard goes before or after a particular rotation would only slow you down. 
+
+The Q# libraries of course contain the [QFT](xref:microsoft.quantum.canon.qft) operation, which you can simply take and apply for any number of qubits.
+To give it a try, define a new operation in your Q# file which has the same contents of `Perform3QubitQFT`, but with everything from the first `H` to the `SWAP` replaced by two easy lines:
+```qsharp
+            let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
+            QFT(register);                   //from Microsoft.Quantum.Canon
+```
+The first line simply creates the [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) representation of the allocated array of qubits, `qs`, which is what the [QFT](xref:microsoft.quantum.canon.qft) operation takes as an argument.
+This corresponds to index ordering of the qubits in the register.
+
+To have access to these operations, add `open` statements for their respective namespaces at the beginning of the Q# file:
+```qsharp
+    open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Arithmetic;
+```
+
+Now, adjust your host program to call the name of your new operation (e.g. `PerformIntrinsicQFT`), and give it a whirl!
+
+To see the real benefit of using the Q# library operations, change the number of qubits to something other than `3`:
+```qsharp
+        mutable r = new Result[4]; 
+
+        using (qs = Qubit[4]) {
+            //...
+        }
+```
+You can thus apply the proper QFT for any given number of qubits, without having to worry about the mess of new Hadamards and rotations on each qubit.
+
+Note, of course, that the quantum simulator takes exponentially more time to run as you increase the number of qubits---precisely why we look forward to real quantum hardware!
+
 ## Next steps
+
 
 
 

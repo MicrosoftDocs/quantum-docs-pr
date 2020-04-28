@@ -233,7 +233,7 @@ return tuples.
 A literal of a user-defined type consists of the type name followed by a
 tuple literal of the type’s base tuple type.
 For instance, if `IntPair` is a user-defined type based on `(Int, Int)`,
-then `IntPair(2,3)` would be a valid literal of that type.
+then `IntPair(2, 3)` would be a valid literal of that type.
 
 Other than literals, the only expressions of a user-defined type are symbols
 that are bound to values of that type, array elements of arrays of that type,

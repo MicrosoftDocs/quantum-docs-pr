@@ -24,31 +24,28 @@ Visual Studio offers a rich environment for developing Q# programs. The Q# Visua
 
 1. Pre-requisites
 
-    - [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, with the .NET Core cross-platform development workload enabled
+- [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, with the .NET Core cross-platform development workload enabled
 
 1. Install the Q# Visual Studio extension
 
-    - Download and install the [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+- Download and install the [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
 
 1. Verify the installation by creating a `Hello World` application
 
-    - Create a new Q# application
+- Create a new Q# application
+  - Go to **File** -> **New** -> **Project**
+  - Type `Q#` in the search box
+  - Select **Q# Application**
+  - Select **Next**
+  - Choose a name and location for your application
+  - Select **Create**
 
-        - Go to **File** -> **New** -> **Project**
-        - Type `Q#` in the search box
-        - Select **Q# Application**
-        - Select **Next**
-        - Choose a name and location for your application
-        - Select **Create**
+- Inspect the project
+  You should see that two files have been created: `Driver.cs`, which is the C# host application; and `Operation.qs`, which is a Q# program that defines a simple operation to print a message to the console.
 
-    - Inspect the project
-
-        You should see that two files have been created: `Driver.cs`, which is the C# host application; and `Operation.qs`, which is a Q# program that defines a simple operation to print a message to the console.
-
-    - Run the application
-
-        - Select **Debug** -> **Start Without Debugging**
-        - You should see the text `Hello quantum world!` printed to a console window.
+- Run the application
+  - Select **Debug** -> **Start Without Debugging**
+  - You should see the text `Hello quantum world!` printed to a console window.
 
 > [!NOTE]
 > * If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its subfolders.  

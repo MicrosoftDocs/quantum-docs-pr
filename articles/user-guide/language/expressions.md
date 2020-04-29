@@ -15,12 +15,10 @@ uid: microsoft.quantum.guide.expressions
 Numeric expressions are expressions of type `Int`, `BigInt`, or `Double`.
 That is, they are either integer or floating-point numbers.
 
-`Int` literals in Q# are identical to integer literals in C#,
-except that no trailing "l" or "L" is required (or allowed).
-Hexadecimal and binary integers are supported with a "0x" and "0b" prefix respectively.
+`Int` literals in Q# are written simply as a sequence of digits.
+Hexadecimal and binary integers are supported with a `0x` and `0b` prefix, respectively.
 
-`BigInt` literals in Q# are identical to big integer strings in .NET,
-with a trailing "l" or "L".
+`BigInt` literals in Q# are written with a trailing `l` or `L` suffix.
 Hexadecimal big integers are supported with a "0x" prefix.
 Thus, the following are all valid uses of `BigInt` literals:
 
@@ -30,12 +28,11 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double` literals in Q# are identical to double literals in C#,
-except that no trailing "d" or "D" is required (or allowed).
+`Double` literals in Q# are floating-point numbers written using decimal digits.
+They can be written with a decimal point, `.`, and/or an exponential part indicated with 'e' or 'E' (after which only a possible negative sign and decimal digits are valid).
+The following are valid `Double` literals: `0.0`, `1.2e5`, `1e-5`.
 
-Given an array expression of any element type, an `Int` expression
-may be formed using the `Length` built-in function, with the array
-expression enclosed in parentheses, `(` and `)`.
+Given an array expression of any element type, an `Int` expression may be formed using the [`Length`](xref:microsoft.quantum.core.length) built-in function, with the array expression enclosed in parentheses, `(` and `)`.
 For instance, if `a` is bound to an array, then `Length(a)` is
 an integer expression.
 If `b` is an array of arrays of integers, `Int[][]`, then
@@ -144,10 +141,11 @@ a new Boolean expression that is true if the constituent expression is false.
 
 ## String Expressions
 
-Q# allows strings to be used in the `fail` statement and the `Log`
-standard function.
+Q# allows strings to be used in the `fail` statement (explained at [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:microsoft.quantum.intrinsic.message) standard function.
+The specific behavior of the latter depends on the simulator being used, but typically writes a message to the host console when called during a Q# program.
 
 Strings in Q# are either literals or interpolated strings.
+
 String literals are similar to simple string literals in most languages:
 a sequence of Unicode characters enclosed in double quotes, `"`.
 Inside of a string, the back-slash character `\` may be used to escape
@@ -158,14 +156,26 @@ For instance:
 ```qsharp
 "\"Hello world!\", she said.\n"
 ```
+### Interpolated strings
 
-The Q# syntax for string interpolations is a subset of the C# 7.0 syntax;
-Q# does not support verbatim (multi-line) interpolated strings.
-See [*Interpolated Strings*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings)
-for the C# syntax.
+The Q# syntax for string interpolations is a subset of the C# syntax, but we summarize here the key points as they pertain to Q#.
+The main distinctions are discussed below.
 
-Expressions inside of an interpolated string follow Q# syntax, not C# syntax.
+To identify a string literal as an interpolated string, prepend it with the `$` symbol.
+You cannot have any white space between the `$`and the `"` that starts a string literal.
+
+The following is a basic example using the [`Message`](xref:microsoft.quantum.intrinsic.message) function to write the result of a measurement to the console, alongside other Q# expressions.
+
+```qsharp
+    let num = 8;       // some Q# expression
+    let res = M(q);
+    Message($"Number: {num}, Result: {res}");
+```
 Any valid Q# expression may appear in an interpolated string.
+
+Further details on the C# syntax can be found at [*Interpolated Strings*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
+The most notable distinction is that Q# does not support verbatim (multi-line) interpolated strings.
+Expressions inside of an interpolated string follow Q# syntax, not C# syntax.
 
 ## Range Expressions
 

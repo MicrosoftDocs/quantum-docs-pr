@@ -24,8 +24,7 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 
 1. Replace the contents of the Program.qs file with the following code:
 
-:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-14":::
-
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-16,33":::
 
 As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition. When measured, a qubit can only be either 0 or 1. However, during execution the state of the qubit represents the probability of reading either a 0 or a 1 with a measurement. This probabilistic state is known as superposition. We can use this probability to generate random numbers.
 
@@ -61,29 +60,14 @@ Since the outcome of the measurement is completely random, we have obtained a ra
 Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator. We can use the Q# command line applications or use a host program. 
 
 To create the full Q# command line application, add the following entry point to your Q# program: 
-    ```qsharp
-        @EntryPoint()
-        operation Main() : Int {
-            let max = 10;
-            Message($"Random number between 0 and {max}: ");  
-        
-            let nBits = Floor(Log(IntAsDouble(max))/LogOf2() + 1.);
-    
-            mutable bits = new Result[0];
-            for(bit in 1 .. nBits) {
-                set bits += [SampleQuantumRandomNumberGenerator()];
-            }
-    
-            let output = ResultArrayAsInt(bits); 
-            return output <= max ? output | Main();
-        }
-    ```
 
- ### [Q# command line applications with Visual Studio or Visual Studio Code](#tab/tabid-qsharp)
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="18-32":::
 
- The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
+### [Q# command line applications with Visual Studio or Visual Studio Code](#tab/tabid-qsharp)
 
- :::code language="python" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-33":::
+The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
+
+:::code language="python" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-33":::
 
 In Visual Studio, simply press Ctrl + F5 to execute the script.
 
@@ -96,41 +80,41 @@ For subsequent runs, there is no need to build it again. To run it, type the fol
 dotnet run --no-build
 ```
 
- ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
- 
- To run your new Q# program from Python, save the following code as `host.py`:
- 
+### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
+
+To run your new Q# program from Python, save the following code as `host.py`:
+
 :::code language="python" source="~/quantum/samples/getting-started/qrng/host.py" range="11-30":::
 
- You can then run your Python host program from the command line:
- ```bash
- $ python host.py
- Preparing Q# environment...
- ..The random number generated is 42
- ```
- ### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
- 
- To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
- 
- :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
- 
- You can then run your C# host program from the command line:
- 
- ```bash
- $ dotnet run
- The random number generated is 42
- ```
+You can then run your Python host program from the command line:
+```bash
+$ python host.py
+Preparing Q# environment...
+..The random number generated is 42
+```
+### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
 
- ### [C# with Visual Studio 2019](#tab/tabid-vs2019)
+To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
 
- To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:
+:::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
 
- :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+You can then run your C# host program from the command line:
 
- Then press F5, the program will start execution and a new window will pop up with the random number generated: 
+```bash
+$ dotnet run
+The random number generated is 42
+```
 
- ```bash
- $ dotnet run
- The random number generated is 42
- ```
- ***
+### [C# with Visual Studio 2019](#tab/tabid-vs2019)
+
+To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:
+
+:::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+
+Then press F5, the program will start execution and a new window will pop up with the random number generated: 
+
+```bash
+$ dotnet run
+The random number generated is 42
+```
+***

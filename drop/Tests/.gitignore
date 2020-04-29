@@ -1,6 +1,0 @@
-# where tests are generated
-tests.generated
-
-# test results
-**/*.coverage
-**/test-results.xml

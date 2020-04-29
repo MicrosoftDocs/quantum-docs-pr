@@ -46,14 +46,6 @@
     href: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
 - name: Q# User Guide
   href: user-guide/toc.yml
-- name: The QDK in-depth
-  items:
-  - name: Quantum development techniques
-    topicHref: techniques/index.md
-    href: techniques/toc.yml
-  - name: Q# programming language
-    topicHref: language/index.md
-    href: language/toc.yml
 - name: Q# libraries
   href: libraries/toc.yml
 - name: Quantum computing concepts

@@ -16,6 +16,15 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version 0.xx.xxxx.xxxx
+
+- New support for standalone Q# executables, which no longer require a C# or Python host file. For more information on getting started with Q# standalone, see [here]()
+
+
+*Release date: March 26th, 2020*
+
+This release contains the following:
+
 ## Version 0.11.2003.3107
 
 *Release date: March 31, 2020*

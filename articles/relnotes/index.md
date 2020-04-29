@@ -18,7 +18,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 ## Version 0.xx.xxxx.xxxx
 
-- New support for standalone Q# executables, which no longer require a C# or Python host file. For more information on getting started with Q# standalone, see [here]()
+- New support for Q# command line applications, which no longer require a C# or Python host file. For more information on getting started with Q# command line applications, see [here]()
 
 
 *Release date: March 26th, 2020*

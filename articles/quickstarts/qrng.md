@@ -35,7 +35,7 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
         operation QuantumRandomNumberGenerator() : Result {
             using(qubit = Qubit())  { // Allocate a qubit.
                 H(qubit);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
-                return MResetZ(q);  // Measure the qubit value, reset it, and return the result.
+                return MResetZ(q);    // Measure the qubit value, reset it, and return the result.
             }
         }
     }

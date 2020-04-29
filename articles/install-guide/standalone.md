@@ -8,7 +8,7 @@ ms.custom: how-to
 uid: microsoft.quantum.install.standalone
 ---
 
-# Q# Command Line Applications```
+# Q# Command Line Applications
 
 Q# programs can be executed on their own, without a driver in a host language like C#, F#, or Python.
 

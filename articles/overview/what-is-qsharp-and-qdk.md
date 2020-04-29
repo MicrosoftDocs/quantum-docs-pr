@@ -20,7 +20,7 @@ The QDK is a full-featured development kit for Q# that you can use with common t
 
 ### Develop in common tools and environments
 
-Integrate your quantum development with Visual Studio, Visual Studio Code, and Jupyter notebooks. Use the built-in APIs for pairing your programs with Python and C# host languages.
+Integrate your quantum development with Visual Studio, Visual Studio Code, and Jupyter Notebooks. Use the built-in APIs for pairing your programs with Python and C# host languages.
 
 ### Try quantum operations and domain-specific libraries
 
@@ -35,7 +35,7 @@ Run your quantum programs on a full-state quantum simulator, a limited-scope Tof
 |||
 | ---- | ---- |
 | **I'm new to quantum computing** | Review some basics of quantum physics and quantum computing in Key Concepts.|
-| **I want to dive deeper into the Q# language** | Explore types, expressions, variables and quantum program structure in the Q# User Guide.|
+| **I want to dive deeper into the Q# language** | Explore types, expressions, variables, and quantum program structure in the Q# User Guide.|
 | **I just want to start writing quantum programs** | Set up your Q# environment and start writing quantum programs in QuickStarts.|
 
 ## How does Q# work?
@@ -53,13 +53,13 @@ Isolating the Q# code in the simulator ensures that the algorithms follow the la
 
 Everything you need to write and run Q# programs, including the Q# compiler, the Q# libraries, and the quantum simulators, can be installed and run from your local computer. Eventually you will be able to run your Q# programs remotely on an actual quantum computer, but until then the quantum simulators provided with the QDK provide accurate and reliable results.
 
-If you are new to programming, using Python as your host programming platform is the easiest way to get started. Python enjoys widespread use not only among developers, but also scientists, researchers and teachers, and is easy to learn.
+If you are new to programming, using Python as your host programming platform is the easiest way to get started. Python enjoys widespread use not only among developers, but also scientists, researchers and teachers, and it is easy to learn.
 
 If you already have experience with C# and are familiar with the Visual Studio development environment, there are just a few extensions you need to add to Visual Studio to prepare it for Q#.  
 
 ## Summary
 
-Q# is an open-source programming language for developing quantum programs. It has libraries that let you create complex quantum operations, and quantum simulators to accurately run and test your programs. Q# programs are called from a host program written either in Python or C# and can be written, run and tested from your local computer.
+Q# is an open-source programming language for developing quantum programs. It has libraries that let you create complex quantum operations, and quantum simulators to accurately run and test your programs. Q# programs are called from a host program written either in Python or C# and can be written, run, and tested from your local computer.
 
 ## Next Steps
 

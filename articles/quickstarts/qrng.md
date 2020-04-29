@@ -26,6 +26,10 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 
     ```qsharp
     namespace Quantum {
+        open Microsoft.Quantum.Convert;
+        open Microsoft.Quantum.Math;
+        open Microsoft.Quantum.Measurement;
+        open Microsoft.Quantum.Canon;
         open Microsoft.Quantum.Intrinsic;
 
         operation QuantumRandomNumberGenerator() : Result {

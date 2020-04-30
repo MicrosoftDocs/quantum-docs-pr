@@ -67,7 +67,7 @@ Verify the installation by creating a `Hello World` application
   - Select **Create**
 
 - Inspect the project
-  - You should see that a file called `Program.qs` created, which is a Q# program that defines a simple operation to print a message to the console.
+  - You should see that a file called `Program.qs` has been created, which is a Q# program that defines a simple operation to print a message to the console.
 
 - Run the application
   - Select **Debug** -> **Start Without Debugging**

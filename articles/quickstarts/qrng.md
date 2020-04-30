@@ -95,7 +95,6 @@ Preparing Q# environment...
 ..The random number generated is 42
 ```
 
--
 ### [C# with Visual Studio Code or Visual Studio](#tab/tabid-csharp)
 
 To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:

@@ -23,7 +23,7 @@ In addition, the QDK provides Q# support for Jupyter Notebooks with the IQ# Jupy
 
 The QDK is available for multiple development environments. Select your preferred setup from the sections below:
 
-- [Q# command line application](xref:microsoft.quantum.install.standalone) choose this approach if you want to work with Q# from the command line. This does not require a driver or a host program like the below options.
+- [Q# command line application:](xref:microsoft.quantum.install.standalone) choose this approach if you want to work with Q# from the command line. This does not require a driver or a host program like the below options.
 - [Install Q# for Jupyter Notebooks:](xref:microsoft.quantum.install.jupyter) choose this environment to execute Q# code in cells with embedded text or create quantum computing interactive tutorials. 
 <!---
 - [Install Q# for C#:](xref:microsoft.quantum.install.cs) choose this environment if you want to combine C# and Q# to create a C# host program that calls Q# operations.

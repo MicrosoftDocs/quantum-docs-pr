@@ -72,7 +72,7 @@ The documentation includes a Q# language guide, tutorials, and sample code to ge
 
 ## Microsoft quantum hardware partners
 
-Microsoft is partnering with quantum hardware companies to provide developers with cloud access to quantum computers. Leveraging the [Azure Quantum](https://azure.microsoft.com/en-us/services/quantum/) platform and the Q# language, developers will be able to explore quantum algorithms and run their quantum programs on different types of quantum hardware.
+Microsoft is partnering with quantum hardware companies to provide developers with cloud access to quantum computers. Leveraging the [Azure Quantum](https://azure.microsoft.com/services/quantum/) platform and the Q# language, developers will be able to explore quantum algorithms and run their quantum programs on different types of quantum hardware.
 
 [IonQ](https://ionq.com/news/november-4-2019-microsoft-partnership) and [Honeywell](https://www.honeywell.com/en-us/newsroom/news/2019/11/the-future-of-quantum-computing) both use **trapped ion** based processors, utilizing individual ions trapped in an electronic field, whereas [QCI](https://quantumcircuits.com/news-and-publications/quantum-circuits-partners-with-microsoft-on-azure-quantum) uses superconducting metal circuits.
 

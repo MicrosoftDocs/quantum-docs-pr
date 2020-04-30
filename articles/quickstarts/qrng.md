@@ -86,7 +86,7 @@ dotnet run --no-build
 
 To run your new Q# program from Python, save the following code as `host.py`:
 
-:::code language="python" source="~/quantum/samples/interoperabilty/qrng/host.py" range="11-30":::
+:::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
 You can then run your Python host program from the command line:
 ```bash
@@ -100,7 +100,7 @@ Preparing Q# environment...
 
 To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
 
-:::code language="csharp" source="~/quantum/samples/interoperabilty/qrng/Host.cs" range="4-39":::
+:::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 
 You can then run your C# host program from the command line (in Visual Studio you should press F5):
 

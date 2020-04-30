@@ -38,7 +38,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
 1. Add the following code to the `Program.qs` file in your new project:
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-41":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="3-41":::
 
 1. To define the list that we're searching, create a new file `Reflections.qs`, and paste in the following code:
 
@@ -48,11 +48,9 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
 1. Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.
 
-    ### [Q# command line applications with Visual Studio or Visual Studio Code](#tab/tabid-qsharp)
+    ### Q# command line applications with Visual Studio or Visual Studio Code
     
     The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
-    
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="3-41":::
     
     In Visual Studio, simply press Ctrl + F5 to execute the script.
     
@@ -64,7 +62,38 @@ The number of incremental boosts is fewer than the number of items in the list. 
     ```
     dotnet run --no-build
     ```
+    You should see the following message displayed in the terminal:
+    ```
+    operations.qs:
+    This operation applies Grover's algorithm to search all possible inputs to an operation to find a particular marked state.
+    Usage:
+    operations.qs [options] [command]
+    
+    --n-qubits <n-qubits> (REQUIRED)
+    -s, --simulator <simulator>         The name of the simulator to use.
+    --version                           Show version information
+    -?, -h, --help                      Show help and usage information
+    Commands:
+    ```
+    This is because you didn't specify the number of qubits we wanted to use, so
+    the terminal tells you the commands available for the executable. If we want
+    to use 5 qubits we should type:
+    ```
+    dotnet run --n-qubits 5
+    ```
+    Pressing enter you should see the following output:
 
+    ```
+    Reflecting about marked state...
+    Reflecting about marked state...
+    Reflecting about marked state...
+    Reflecting about marked state...
+    [Zero,One,Zero,One,Zero]
+    ```
+
+
+
+<!---
     ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
 
     To run your new Q# program from Python, save the following code as `host.py`:
@@ -83,8 +112,6 @@ The number of incremental boosts is fewer than the number of items in the list. 
     [0, 1, 0, 1, 0]
     ```
 
-
-<!---
 
     ### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
 

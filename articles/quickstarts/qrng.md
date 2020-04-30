@@ -86,7 +86,7 @@ dotnet run --no-build
 
 To run your new Q# program from Python, save the following code as `host.py`:
 
-:::code language="python" source="~/quantum/samples/getting-started/qrng/host.py" range="11-30":::
+:::code language="python" source="~/quantum/samples/interoperabilty/qrng/host.py" range="11-30":::
 
 You can then run your Python host program from the command line:
 ```bash
@@ -95,31 +95,17 @@ Preparing Q# environment...
 ..The random number generated is 42
 ```
 
-<!---
-### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
+-
+### [C# with Visual Studio Code or Visual Studio](#tab/tabid-csharp)
 
 To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
 
-:::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+:::code language="csharp" source="~/quantum/samples/interoperabilty/qrng/Host.cs" range="4-39":::
 
-You can then run your C# host program from the command line:
-
-```bash
-$ dotnet run
-The random number generated is 42
-```
-
-### [C# with Visual Studio 2019](#tab/tabid-vs2019)
-
-To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:
-
-:::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
-
-Then press F5, the program will start execution and a new window will pop up with the random number generated: 
+You can then run your C# host program from the command line (in Visual Studio you should press F5):
 
 ```bash
 $ dotnet run
 The random number generated is 42
 ```
 ***
--->

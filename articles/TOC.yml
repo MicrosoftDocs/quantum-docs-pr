@@ -16,7 +16,7 @@
   items:
   - name: Get started with the QDK
     href: welcome.md
-  - name: Use the QDK
+  - name: Install the QDK
     items:
     - name: Installation overview
       href: install-guide/index.md

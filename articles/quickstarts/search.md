@@ -36,9 +36,9 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
 1. Using the Quantum Development Kit, [create a new Q# project](xref:microsoft.quantum.howto.createproject) called `Grover`, in your development environment of choice.
 
-1. Add the following code to the `Operations.qs` file in your new project:
+1. Add the following code to the `Program.qs` file in your new project:
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-41":::
 
 1. To define the list that we're searching, create a new file `Reflections.qs`, and paste in the following code:
 
@@ -47,6 +47,23 @@ The number of incremental boosts is fewer than the number of items in the list. 
     The `ReflectAboutMarked` operation defines the marked input that you are searching for: the string of alternating zeros and ones. This sample hard-codes the marked input, and can be extended to search for different inputs or generalized for any input.
 
 1. Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.
+
+    ### [Q# command line applications with Visual Studio or Visual Studio Code](#tab/tabid-qsharp)
+    
+    The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
+    
+    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="3-41":::
+    
+    In Visual Studio, simply press Ctrl + F5 to execute the script.
+    
+    In VS Code, build the `Program.qs` the first time by typing the below in the terminal: 
+    ```
+    dotnet build
+    ```
+    For subsequent runs, there is no need to build it again. To run it, type the following command and press enter:
+    ```
+    dotnet run --no-build
+    ```
 
     ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
 
@@ -66,7 +83,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
     [0, 1, 0, 1, 0]
     ```
 
-    
+
 <!---
 
     ### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)

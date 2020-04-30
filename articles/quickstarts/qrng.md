@@ -57,13 +57,15 @@ Since the outcome of the measurement is completely random, we have obtained a ra
 
 ## Creating a complete random number generator
 
-Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator. We can use the Q# command line applications or use a host program. 
+Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator. We can use the Q# command line applications or use a host program.
+
+
+
+### [Q# command line applications with Visual Studio or Visual Studio Code](#tab/tabid-qsharp)
 
 To create the full Q# command line application, add the following entry point to your Q# program: 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="18-32":::
-
-### [Q# command line applications with Visual Studio or Visual Studio Code](#tab/tabid-qsharp)
 
 The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
 
@@ -92,6 +94,8 @@ $ python host.py
 Preparing Q# environment...
 ..The random number generated is 42
 ```
+
+<!---
 ### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
 
 To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
@@ -118,3 +122,4 @@ $ dotnet run
 The random number generated is 42
 ```
 ***
+-->

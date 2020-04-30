@@ -66,6 +66,9 @@ The number of incremental boosts is fewer than the number of items in the list. 
     [0, 1, 0, 1, 0]
     ```
 
+    
+<!---
+
     ### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
 
     To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
@@ -106,6 +109,8 @@ The number of incremental boosts is fewer than the number of items in the list. 
     ***
 
     The `ReflectAboutMarked` operation is called only four times, but your Q# program was able to find the "01010" input amongst $2^{5} = 32$ possible inputs!
+-->
+
 
 ## Next steps
 

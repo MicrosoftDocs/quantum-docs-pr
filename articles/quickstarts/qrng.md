@@ -69,7 +69,7 @@ To create the full Q# command line application, add the following entry point to
 
 The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
 
-:::code language="python" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-33":::
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-33":::
 
 In Visual Studio, simply press Ctrl + F5 to execute the script.
 

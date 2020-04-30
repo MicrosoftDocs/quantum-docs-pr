@@ -52,7 +52,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
     
     The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
     
-    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="3-41":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="3-41":::
     
     In Visual Studio, simply press Ctrl + F5 to execute the script.
     

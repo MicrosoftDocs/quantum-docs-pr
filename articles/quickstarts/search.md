@@ -75,9 +75,9 @@ The number of incremental boosts is fewer than the number of items in the list. 
     -?, -h, --help                      Show help and usage information
     Commands:
     ```
-    This is because you didn't specify the number of qubits we wanted to use, so
-    the terminal tells you the commands available for the executable. If we want
-    to use 5 qubits we should type:
+    This is because you didn't specify the number of qubits ypu wanted to use,
+    so the terminal tells you the commands available for the executable. If we
+    want to use 5 qubits we should type:
     ```
     dotnet run --n-qubits 5
     ```

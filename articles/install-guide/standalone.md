@@ -1,5 +1,5 @@
 ---
-title: Execute Q# programs without a driver in a host language 
+title: Execute Q# programs without a driver and a host language 
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020

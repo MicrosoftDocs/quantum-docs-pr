@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Check that samples branch refers to master.
         run: |
+          Get-ChildItem | Write-Host;
+          Get-Location | Write-Host;
           $configPath = ".openpublishing.publish.config.json";
           $config = Get-Content $configPath | ConvertFrom-Json;
           $samplesRepo = $config.dependent_repositories | Where-Object {

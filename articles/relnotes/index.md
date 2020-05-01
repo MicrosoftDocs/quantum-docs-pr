@@ -28,7 +28,7 @@ This release contains the following:
 
 > [!NOTE]
 > Q# command-line applications using the new [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) attribute currently cannot be called from Python or .NET host programs.
-> See the [Python](microsoft.quantum.install.python) and [.NET interoperability](microsoft.quantum.install.cs) guides for more information.
+> See the [Python](xref:microsoft.quantum.install.python) and [.NET interoperability](xref:microsoft.quantum.install.cs) guides for more information.
 
 
 ## Version 0.11.2003.3107

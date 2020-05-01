@@ -19,5 +19,6 @@ jobs:
           }
           if ($samplesRepo.branch -ne "master") {
             Write-Host "::error file=$configPath::Samples repository branch is not set to master for a PR targeting master."
+            exit 1;
           }
         shell: pwsh

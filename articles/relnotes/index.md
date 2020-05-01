@@ -22,9 +22,13 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 This release contains the following:
 
-- New support for Q# command line applications, which no longer require a C# or Python host file. For more information on getting started with Q# command line applications, see [here](xref:microsoft.quantum.install.standalone)
+- New support for Q# command line applications, which no longer require a C# or Python host file. For more information on getting started with Q# command line applications, see [here](xref:microsoft.quantum.install.standalone).
 - Updated quantum random number generator quickstart to no longer require a C# or Python host file. See the updated  [Quickstart](xref:microsoft.quantum.quickstarts.qrng)
 - Performance improvements to IQ# Docker images
+
+> [!NOTE]
+> Q# command-line applications using the new [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) attribute currently cannot be called from Python or .NET host programs.
+> See the [Python](xref:microsoft.quantum.install.python) and [.NET interoperability](xref:microsoft.quantum.install.cs) guides for more information.
 
 
 ## Version 0.11.2003.3107

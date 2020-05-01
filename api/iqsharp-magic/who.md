@@ -1,7 +1,7 @@
 ---
 title: '%who (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.who
-ms.date: '2020-04-29'
+ms.date: '2020-05-01'
 ms.topic: article
 ---
 

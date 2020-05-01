@@ -18,7 +18,7 @@ Quantum simulators are software programs that run on classical computers and mak
 
 A quantum computer has three primary parts: the qubit storage, a method for transferring signals to the qubits, and a classical computer to run a program and send instructions.
 
-- The quantum particles used for qubits are fragile and highly sensitive to environmental interferences. The unit that houses the qubits is kept at a temperature just above absolute zero to maximize their coherence.  
+- The quantum particles used for qubits are fragile and highly sensitive to environmental interferences. For some methods of qubit storage, the unit that houses the qubits is kept at a temperature just above absolute zero to maximize their coherence.  
 - Signals are sent to the qubits using microwaves or lasers.
 
 Quantum computers face a multitude of challenges to operate correctly.  Labs that hold quantum computers are designed to minimize vibrations, and quantum computers are often sealed in a vacuum chamber to isolate them.  Error correction in quantum computers is a significant issue, and scaling up (adding more qubits) increases the error rate.
@@ -33,9 +33,9 @@ Quantum simulators that run on classical computers allow you to simulate the exe
 
 Microsoft is developing a quantum computer based on topological qubits. A topological qubit will be less impacted by changes in its environment, therefore reducing the degree of external error correction. Topological qubits feature increased stability and resistance to environmental noise, which means they can more readily scale and remain reliable longer.
 
-## Microsoft and IonQ partnership
+## Microsoft and quantum hardware partnerships
 
-In 2019, Microsoft and IonQ, a quantum computer manufacturer, announced a partnership to make their laser-based quantum computers available to developers and researchers via the cloud. Users will be able to use Microsoft’s Quantum Development Kit (QDK) and Q# to write quantum programs and run them on IonQ hardware.
+Microsoft is partnering with quantum hardware manufacturers IonQ, Honeywell, and QCI to make quantum computers accessible to developers in the future. Leveraging the Azure Quantum platform, developers will be able to use Microsoft’s Quantum Development Kit (QDK) and Q# to write quantum programs and run them remotely.
 
 ## Quantum computations
 
@@ -61,4 +61,4 @@ Quantum computing shares some of the same concepts as classical computing but ad
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [What is the Q# programming language and QDK?](index.md)
+> [What is the Q# programming language and QDK?](xref:microsoft.quantum.overview.q-sharp)

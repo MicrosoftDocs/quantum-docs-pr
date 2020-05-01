@@ -34,9 +34,9 @@ Run your quantum programs on a full-state quantum simulator, a limited-scope Tof
 
 |||
 | ---- | ---- |
-| **I'm new to quantum computing** | Review some basics of quantum physics and quantum computing in Key Concepts.|
-| **I want to dive deeper into the Q# language** | Explore types, expressions, variables, and quantum program structure in the Q# User Guide.|
-| **I just want to start writing quantum programs** | Set up your Q# environment and start writing quantum programs in QuickStarts.|
+| **I'm new to quantum computing** | Review some basics of quantum physics and quantum computing in [Key Concepts](xref:microsoft.quantum.overview.understanding).|
+| **I want to dive deeper into the Q# language** | Explore types, expressions, variables, and quantum program structure in the [Q# User Guide](xref:microsoft.quantum.guide).|
+| **I just want to start writing quantum programs** | Set up your Q# environment and start writing quantum programs in [QuickStarts](xref:microsoft.quantum.install).|
 
 ## How does Q# work?
 
@@ -46,8 +46,7 @@ When you compile and run the host program, it creates an instance of the quantum
 
 Isolating the Q# code in the simulator ensures that the algorithms follow the laws of quantum physics and can run correctly on quantum computers.
 
-<!-- ![qsharp-code-flow](~/media/qsharp-code-flow.png) -->
-![qsharp-code-flow](qsharp-code-flow.png)
+[qsharp-code-flow](~/media/qsharp-code-flow.png)
 
 ## How do I use the QDK?
 
@@ -64,4 +63,4 @@ Q# is an open-source programming language for developing quantum programs. It ha
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Linear algebra for quantum computing](index.md)
+> [Linear algebra for quantum computing](xref:microsoft.quantum.overview.algebra)

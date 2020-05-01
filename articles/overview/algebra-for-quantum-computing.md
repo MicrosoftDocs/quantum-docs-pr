@@ -42,4 +42,4 @@ Linear algebra is the standard language for describing quantum computing and qua
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [QuickStarts](index.md)
+> [Install the QDK](xref:microsoft.quantum.install)

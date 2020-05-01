@@ -9,14 +9,14 @@ uid: microsoft.quantum.quickstarts.qrng
 ---
 
 
-# Quickstart: Implement a Quantum Random Number Generator in Q#
-A simple example of a quantum algorithm written in Q# is a quantum random number generator. This algorithm leverages the nature of quantum mechanics to produce a random number. 
+# Quickstart: Implement a Quantum Random Number Generator in Q\#
+
+A simple example of a quantum algorithm written in Q# is a quantum random number generator. This algorithm leverages the nature of quantum mechanics to produce a random number.
 
 ## Prerequisites
 
 - The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
 - [Create a Q# Project](xref:microsoft.quantum.howto.createproject)
-
 
 ## Write a Q# operation
 
@@ -32,7 +32,7 @@ In our Q# operation, we introduce the `Qubit` datatype, native to Q#. We can onl
 
 Using the `H` operation, we are able to put our `Qubit` in superposition. To measure a qubit and read its value, you use the `M` intrinsic operation.
 
-By putting our `Qubit` in superposition and measuring it, our result will be a different value each time the code is invoked. 
+By putting our `Qubit` in superposition and measuring it, our result will be a different value each time the code is invoked.
 
 When a `Qubit` is de-allocated it must be explicitly set back to the `Zero` state, otherwise the simulator will report a runtime error. An easy way to achieve this is invoking `Reset`.
 
@@ -92,6 +92,7 @@ To run your new Q# program from Python, save the following code as `host.py`:
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
 You can then run your Python host program from the command line:
+
 ```bash
 $ python host.py
 Preparing Q# environment...
@@ -110,4 +111,5 @@ You can then run your C# host program from the command line (in Visual Studio yo
 $ dotnet run
 The random number generated is 42
 ```
+
 ***

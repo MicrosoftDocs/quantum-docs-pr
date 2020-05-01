@@ -1,13 +1,13 @@
 items:
 - name: Installation overview
-  href: install-guide/index.md
+  href: index.md
 - name: Q# command line applications
-  href: install-guide/standalone.md
+  href: standalone.md
 - name: Q# Jupyter notebooks
-  href: install-guide/qjupyter.md
+  href: qjupyter.md
 - name: Using Q# with other languages
   items:
   - name: Using Q# with Python
-    href: install-guide/pyinstall.md
+    href: pyinstall.md
   - name: Using Q# with .NET
-    href: install-guide/csinstall.md
+    href: csinstall.md

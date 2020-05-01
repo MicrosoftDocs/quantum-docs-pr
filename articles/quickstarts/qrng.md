@@ -8,15 +8,14 @@ ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
 ---
 
+# Quickstart: Implement a Quantum Random Number Generator in Q\#
 
-# Quickstart: Implement a Quantum Random Number Generator in Q#
-A simple example of a quantum algorithm written in Q# is a quantum random number generator. This algorithm leverages the nature of quantum mechanics to produce a random number. 
+A simple example of a quantum algorithm written in Q# is a quantum random number generator. This algorithm leverages the nature of quantum mechanics to produce a random number.
 
 ## Prerequisites
 
 - The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
 - [Create a Q# Project](xref:microsoft.quantum.howto.createproject)
-
 
 ## Write a Q# operation
 
@@ -24,7 +23,7 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 
 1. Replace the contents of the Program.qs file with the following code:
 
-:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,39":::
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
 As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition. When measured, a qubit can only be either 0 or 1. However, during execution the state of the qubit represents the probability of reading either a 0 or a 1 with a measurement. This probabilistic state is known as superposition. We can use this probability to generate random numbers.
 
@@ -32,7 +31,7 @@ In our Q# operation, we introduce the `Qubit` datatype, native to Q#. We can onl
 
 Using the `H` operation, we are able to put our `Qubit` in superposition. To measure a qubit and read its value, you use the `M` intrinsic operation.
 
-By putting our `Qubit` in superposition and measuring it, our result will be a different value each time the code is invoked. 
+By putting our `Qubit` in superposition and measuring it, our result will be a different value each time the code is invoked.
 
 When a `Qubit` is de-allocated it must be explicitly set back to the `Zero` state, otherwise the simulator will report a runtime error. An easy way to achieve this is invoking `Reset`.
 
@@ -65,11 +64,11 @@ Now that we have a Q# operation that generates random bits, we can use it to bui
 
 To create the full Q# command line application, add the following entry point to your Q# program: 
 
-:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="18-38":::
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
 The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
 
-:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-39":::
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
 
 In Visual Studio, simply press Ctrl + F5 to execute the script.
 
@@ -92,6 +91,7 @@ To run your new Q# program from Python, save the following code as `host.py`:
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
 You can then run your Python host program from the command line:
+
 ```bash
 $ python host.py
 Preparing Q# environment...
@@ -110,4 +110,5 @@ You can then run your C# host program from the command line (in Visual Studio yo
 $ dotnet run
 The random number generated is 42
 ```
+
 ***

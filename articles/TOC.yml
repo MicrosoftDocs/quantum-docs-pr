@@ -51,7 +51,7 @@
   - name: Q# libraries
     href: libraries/toc.yml
 - name: Reference 
-  items: ../api/toc.yml
+  items: 
 - name: Resources 
   items: 
   - name: Glossary

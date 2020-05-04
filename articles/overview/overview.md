@@ -48,7 +48,7 @@ Optimization is the task of balancing a system for maximum efficiency and minimu
 > [!NOTE]
 > Read more about how Microsoft quantum-inspired computing is being used in [materials science](https://cloudblogs.microsoft.com/quantum/2020/01/21/oti-lumionics-accelerating-materials-design-microsoft-azure-quantum/), [risk management](https://cloudblogs.microsoft.com/quantum/2019/05/22/microsoft-quantum-collaborates-with-willis-towers-watson-to-transform-risk-management-solutions/), and [medicine](https://blogs.microsoft.com/blog/2018/05/18/microsoft-quantum-helps-case-western-reserve-university-advance-mri-research/).
 
-### Machine learning
+### Quantum machine learning
 
 Machine learning on classical computers is revolutionizing the world of science and business. However, the high computational cost of training the models hinders the development and scope of the field. The field of quantum machine learning explores how to devise and implement quantum software that could enable machine learning that is faster than that of classical computers.
 

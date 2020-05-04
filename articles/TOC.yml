@@ -50,8 +50,6 @@
     href: concepts/toc.yml
   - name: Q# libraries
     href: libraries/toc.yml
-- name: Reference 
-  items: 
 - name: Resources 
   items: 
   - name: Glossary

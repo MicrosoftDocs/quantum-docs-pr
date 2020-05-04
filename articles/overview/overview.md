@@ -3,7 +3,7 @@ title: Introduction to quantum computing
 description: Learn what quantum computing is, what quantum computers can do, and how you can learn quantum computing.
 author: bradben
 ms.author:  bradben
-ms.date: 04/22/2020
+ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
 ---

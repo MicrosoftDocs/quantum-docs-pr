@@ -34,16 +34,10 @@ In 1994, Peter Shor showed that a scalable quantum computer could break every wi
 
 ### Search and Grover’s algorithm
 
-In 1996, Lov Grover developed a quantum algorithm that dramatically sped up the solution to unstructured data searches, running the search in fewer steps than any classical algorithm could. This increased speed becomes significant in lists that contain millions or billions of items.
+In 1996, Lov Grover developed a quantum algorithm that dramatically sped up the solution to unstructured data searches, running the search in fewer steps than any classical algorithm could.
 
-> [!NOTE] 
+> [!NOTE]
 > Ready to try it out? Jump to the Q# tutorial [Implement Grover's search algorithm in Q#](xref:microsoft.quantum.quickstarts.search).
-
-### Machine Learning
-
-A majority of numerical calculations in classical computing consists of solving linear systems of equations. This is especially true in the field of machine learning where most of the computation cost goes into calculating the inverse of huge matrices.
-
-Fortunately, there is a quantum algorithm that allows us to approximate a solution exponentially faster than a classical computer. Reducing computation times in these areas will help address the energy crisis, climate change, food scarcity, and personal and precise medical diagnosis.
 
 ### Quantum-inspired computing and optimization
 

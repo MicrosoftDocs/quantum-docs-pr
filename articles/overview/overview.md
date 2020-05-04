@@ -22,7 +22,7 @@ Harnessing the unique behavior of quantum physics and applying it to computing, 
 
 ## What can a quantum computer do?
 
-A quantum computer isn't a supercomputer that can do everything faster: it just does some select things exceptionally well.
+A quantum computer isn't a supercomputer that can do everything faster; it just does some select things exceptionally well.
 
 ### Quantum simulation
 

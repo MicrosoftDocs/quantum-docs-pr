@@ -640,13 +640,13 @@ In the resulting output, you will see the gradual projection into subspaces as e
 As we mentioned in the introduction, much of Q#'s power rests in the fact that it allows you to abstract-away the worries of dealing with individual qubits.
 Indeed, if you want to develop full-scale, applicable quantum programs, worrying about whether a Hadamard goes before or after a particular rotation would only slow you down. 
 
-The Q# libraries of course contain the [QFT](xref:microsoft.quantum.canon.qft) operation, which you can simply take and apply for any number of qubits.
+The Q# libraries contain the [QFT](xref:microsoft.quantum.canon.qft) operation, which you can simply take and apply for any number of qubits.
 To give it a try, define a new operation in your Q# file which has the same contents of `Perform3QubitQFT`, but with everything from the first `H` to the `SWAP` replaced by two easy lines:
 ```qsharp
             let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
             QFT(register);                   //from Microsoft.Quantum.Canon
 ```
-The first line simply creates the [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) representation of the allocated array of qubits, `qs`, which is what the [QFT](xref:microsoft.quantum.canon.qft) operation takes as an argument.
+The first line simply creates a [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) expression of the allocated array of qubits, `qs`, which is what the [QFT](xref:microsoft.quantum.canon.qft) operation takes as an argument.
 This corresponds to index ordering of the qubits in the register.
 
 To have access to these operations, add `open` statements for their respective namespaces at the beginning of the Q# file:
@@ -655,7 +655,7 @@ To have access to these operations, add `open` statements for their respective n
     open Microsoft.Quantum.Arithmetic;
 ```
 
-Now, adjust your host program to call the name of your new operation (e.g. `PerformIntrinsicQFT`), and give it a whirl!
+Now, adjust your host program to call the name of your new operation (e.g. `PerformIntrinsicQFT`), and give it a whirl.
 
 To see the real benefit of using the Q# library operations, change the number of qubits to something other than `3`:
 ```qsharp
@@ -667,7 +667,7 @@ To see the real benefit of using the Q# library operations, change the number of
 ```
 You can thus apply the proper QFT for any given number of qubits, without having to worry about the mess of new Hadamards and rotations on each qubit.
 
-Note, of course, that the quantum simulator takes exponentially more time to run as you increase the number of qubits---precisely why we look forward to real quantum hardware!
+Note that the quantum simulator takes exponentially more time to run as you increase the number of qubits---precisely why we look forward to real quantum hardware!
 
 ## Next steps
 

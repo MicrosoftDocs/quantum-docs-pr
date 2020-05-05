@@ -62,7 +62,7 @@ The Quantum Development Kit comes with the [quantum machine learning library](xr
 
 ## Q# and the Microsoft Quantum Development Kit (QDK)
 
-Q# is Microsoft's open-source programming language for developing and running quantum algorithms. It is part of the [QDK](https://docs.microsoft.com/en-us/quantum/), a full-featured development kit for Q# that you can use with standard tools and languages to develop quantum applications that you can run in various environments, including the built-in full-state quantum simulator.
+Q# is Microsoft's open-source programming language for developing and running quantum algorithms. It is part of the [QDK](https://docs.microsoft.com/quantum/), a full-featured development kit for Q# that you can use with standard tools and languages to develop quantum applications that you can run in various environments, including the built-in full-state quantum simulator.
 
 There are extensions for Visual Studio and VS Code, and packages for use with Python and Jupyter Notebooks.
 

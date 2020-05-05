@@ -300,6 +300,11 @@
       "source_path": "articles/techniques/putting-it-all-together.md",
       "redirect_url": "/quantum/intro-to-katas",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/language/index.md",
+      "redirect_url": "/quantum/overview/what-is-qsharp",
+      "redirect_document_id": true
     }
   ]
 }

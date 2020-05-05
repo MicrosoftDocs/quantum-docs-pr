@@ -82,8 +82,8 @@ Using the Quantum Development Kit, this operation can be applied as follows:
 operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
-        x = LittleEndian(xQubits); // define bit order
-        y = LittleEndian(yQubits);
+        let x = LittleEndian(xQubits); // define bit order
+        let y = LittleEndian(yQubits);
         
         ApplyXorInPlace(xValue, x); // initialize values
         ApplyXorInPlace(yValue, y);

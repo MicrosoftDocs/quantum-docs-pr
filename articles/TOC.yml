@@ -20,8 +20,6 @@
     href: install-guide/toc.yml
   - name: Update the QDK
     href: install-guide/update.md
-  - name: How to create a Q# project
-    href: how-to-guides/create-qsharp-project.md
 - name: Tutorials
   items:
   - name: Quantum random number generator

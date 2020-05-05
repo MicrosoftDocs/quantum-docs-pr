@@ -4,9 +4,9 @@
   href: operations-functions.md
 - name: Variables
   href: variables.md
-- name: Working with qubits
+- name: Work with qubits
   href: working-with-qubits.md
 - name: Control flow
   href: control-flow.md
-- name: Testing and debugging
+- name: Test and debug
   href: testing-debugging.md

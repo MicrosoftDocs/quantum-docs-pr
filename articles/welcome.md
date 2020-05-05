@@ -49,9 +49,8 @@ With the help of these short articles, we're confident you'll be eager to get st
 
 The current documentation includes the following additional topics.
 
-### Using Q#
-* [Quantum development techniques](xref:microsoft.quantum.techniques.intro) specifies the core concepts used to create quantum programs in Q#. Topics include file structures, operations and functions, working with qubits, and some advanced topics.
-* [Q# language reference](xref:microsoft.quantum.language.intro) details the Q# language including the type model, expressions, statements, and compiler use.
+* [Q# User Guide](xref:microsoft.quantum.guide) details the core concepts used to create quantum programs in Q#. 
+    The User Guide also contains the following section.
 * [Quantum simulators and host applications](xref:microsoft.quantum.machines) describes how quantum algorithms are executed, what quantum machines are available, and how to write a non-Q# driver for the quantum program.
 
 ### Q# libraries

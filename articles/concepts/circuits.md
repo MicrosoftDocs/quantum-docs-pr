@@ -114,7 +114,8 @@ Similarly, the subcircuit
 gives a classically controlled gate, where $G$ is applied conditioned on the classical control bit being value $1$.
 
 ## Teleportation circuit diagram
-[Quantum teleportation](xref:microsoft.quantum.techniques.puttingittogether) is perhaps the best quantum algorithm for illustrating these components.
+Quantum teleportation is perhaps the best quantum algorithm for illustrating these components.
+You can learn hands-on with the corresponding [Quantum Kata](xref:microsoft.quantum.overview.katas)
 Quantum teleportation is a method for moving data within a quantum computer (or even between distant quantum computers in a quantum network) through the use of entanglement and measurement.
 Interestingly, it is actually capable of moving a quantum state, say the value in a given qubit, from one qubit to another, without even knowing what the qubit's value is!
 This is necessary for the protocol to work according to the laws of quantum mechanics.

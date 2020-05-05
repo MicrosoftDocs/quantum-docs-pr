@@ -16,7 +16,7 @@ Here we detail the core concepts of the Q# language as well provide all the info
 
 ## User Guide Contents
 
-- [Q# Basics](xref:microsoft.quantum.techniques.file-structure): an introductory overview of the purpose and functionality of the Q# programming language. 
+- [Q# Basics](xref:microsoft.quantum.guide.basics): an introductory overview of the purpose and functionality of the Q# programming language. 
 
 ### Q# Language
 

@@ -5,5 +5,8 @@
         // cause problems working with the Samples Browser.
         "MD003": {"style": "atx"},
         "MD013": false
-    }
+    },
+    "cSpell.words": [
+        "Quickstart"
+    ]
 }

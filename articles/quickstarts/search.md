@@ -8,9 +8,9 @@ ms.topic: article
 uid: microsoft.quantum.quickstarts.search
 ---
 
-# Quickstart: Implement Grover's search algorithm in Q#
+# Quickstart: Implement Grover's search algorithm in Q\#
 
-In this Quickstart, you can learn how to build and run Grover search to speed up the search of unstructured data.  Grover's search is one of the most popular quantum computing algorithms, and this relatively small Q# implementation gives you a sense of some of the advantages of programming quantum solutions with a high-level Q# quantum programming language to express quantum algorithms.  At the end of the guide, you will see the simulation output demonstrates successfully finding a specific string among a list of onordered entries in a fraction of the time it would take to search the whole list on a classical computer.
+In this Quickstart, you can learn how to build and run Grover search to speed up the search of unstructured data.  Grover's search is one of the most popular quantum computing algorithms, and this relatively small Q# implementation gives you a sense of some of the advantages of programming quantum solutions with a high-level Q# quantum programming language to express quantum algorithms.  At the end of the guide, you will see the simulation output demonstrates successfully finding a specific string among a list of unordered entries in a fraction of the time it would take to search the whole list on a classical computer.
 
 Grover's algorithm searches a list of unstructured data for specific items. For example, it can answer the question: Is this card drawn from a pack of cards an ace of hearts? The labeling of the specific item is called _marked input_.
 
@@ -36,9 +36,9 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
 1. Using the Quantum Development Kit, [create a new Q# project](xref:microsoft.quantum.howto.createproject) called `Grover`, in your development environment of choice.
 
-1. Add the following code to the `Operations.qs` file in your new project:
+1. Add the following code to the `Program.qs` file in your new project:
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-41":::
 
 1. To define the list that we're searching, create a new file `Reflections.qs`, and paste in the following code:
 
@@ -48,64 +48,56 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
 1. Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.
 
-    ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
+### Q# command line applications with Visual Studio or Visual Studio Code
 
-    To run your new Q# program from Python, save the following code as `host.py`:
+The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
 
-    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/host.py" range="9-14":::
+In Visual Studio, simply press Ctrl + F5 to execute the script.
 
-    You can then run your Python host program from the command line:
+In VS Code, build the `Program.qs` the first time by typing the below in the terminal:
 
-    ```bash
-    $ python host.py
-    Preparing Q# environment...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    [0, 1, 0, 1, 0]
-    ```
+```Command line
+dotnet build
+```
 
-    ### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
+For subsequent runs, there is no need to build it again. To run it, type the following command and press enter:
 
-    To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
+```Command line
+dotnet run --no-build
+```
 
-    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
+You should see the following message displayed in the terminal:
 
-    You can then run your C# host program from the command line:
+```
+operations.qs:
+This operation applies Grover's algorithm to search all possible inputs to an operation to find a particular marked state.
+Usage:
+operations.qs [options] [command]
 
-    ```bash
-    $ dotnet run
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Result: [Zero,One,Zero,One,Zero]
+--n-qubits <n-qubits> (REQUIRED)
+-s, --simulator <simulator>         The name of the simulator to use.
+--version                           Show version information
+-?, -h, --help                      Show help and usage information
+Commands:
+```
 
-    Press any key to continue...
-    ```
+This is because you didn't specify the number of qubits you wanted to use,
+so the terminal tells you the commands available for the executable. If we
+want to use 5 qubits we should type:
 
-    ### [C# with Visual Studio 2019](#tab/tabid-vs2019)
+```Command line
+dotnet run --n-qubits 5
+```
 
-    To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:
+Pressing enter you should see the following output:
 
-    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
-
-    Then press F5, the program will start execution and a new windows will pop-up with the following results: 
-
-    ```bash
-    $ dotnet run
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Result: [Zero,One,Zero,One,Zero]
-
-    Press any key to continue...
-    ```
-    ***
-
-    The `ReflectAboutMarked` operation is called only four times, but your Q# program was able to find the "01010" input amongst $2^{5} = 32$ possible inputs!
+```
+Reflecting about marked state...
+Reflecting about marked state...
+Reflecting about marked state...
+Reflecting about marked state...
+[Zero,One,Zero,One,Zero]
+```
 
 ## Next steps
 
@@ -114,10 +106,11 @@ If you enjoyed this quickstart, check out some of the resources below to learn m
 - [Back to the Getting Started with QDK guide](xref:microsoft.quantum.welcome)
 - Try a more general Grover's search algorithm [sample](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)
 - [Learn more about Grover's search with the Quantum Katas](xref:microsoft.quantum.overview.katas)
-- Read more about [Amplitude amplification](xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification), the quantum computing technique behind Grover's search algorithm
+- Read more about [Amplitude amplification][amplitude-amplification], the quantum computing technique behind Grover's search algorithm
 - [Quantum computing concepts](xref:microsoft.quantum.concepts.intro)
 - [Quantum Development Kit Samples](https://docs.microsoft.com/samples/browse/?products=qdk)
 
 <!-- LINKS -->
 
 [install]: xref:microsoft.quantum.install
+[amplitude-amplification]: xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification

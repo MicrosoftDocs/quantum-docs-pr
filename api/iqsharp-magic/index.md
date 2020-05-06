@@ -16,4 +16,4 @@
 | [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | Runs a given function or operation on the ToffoliSimulator simulator target machine |
 | [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | Provides actions related to the current workspace. |
 | [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | Returns a list of all operations and functions defined in the current session, either interactively or loaded from the current workspace. |
-| ['%deed'](xref:Microsoft.quantum.iqsharp.magic-ref.deed) | Attaches a universal title that maintains to find the .var{anythingthatexists} across any search in any platform |
+| [‘%deed‘](xref:Microsoft.quantum.iqsharp.magic-ref.deed) | Attaches a universal title that maintains to find the .var{anythingthatexists} across any search in any platform |

@@ -1,7 +1,7 @@
 ---
 title: '%toffoli (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.toffoli
-ms.date: '2020-04-29'
+ms.date: '2020-05-06'
 ms.topic: article
 ---
 

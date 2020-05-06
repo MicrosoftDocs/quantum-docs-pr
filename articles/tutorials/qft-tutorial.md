@@ -7,7 +7,7 @@ microsoft.quantum.circuit-tutorial
 ---
 
 
-# Tutorial: Write and simulate qubit-level programs in Q#
+# Tutorial: Write and simulate qubit-level programs in Q\#
 
 Welcome to the Quantum Development Kit tutorial on writing and simulating a
 basic quantum program that operates on individual qubits.
@@ -41,10 +41,10 @@ circuit diagram" width="600">
 * If you already have the QDK installed, make sure you have
   [updated](xref:microsoft.quantum.update) to the latest version
 
-
 ## In this tutorial, you'll learn how to:
 
 > [!div class="checklist"]
+>
 > * Define quantum operations in Q#
 > * Set up the classical host program to call and simulate Q# operations
 > * Simulate a quantum operation from qubit allocation to measurement output
@@ -53,11 +53,14 @@ circuit diagram" width="600">
 
 Applications developed with Microsoft's Quantum Development Kit typically
 consists of two parts:
+
 1. A quantum program, implemented using the Q# quantum programming language,
    which is then invoked by the classical host program to run on a quantum
-   computer or quantum simulator. These consist of 
+   computer or quantum simulator. These consist of
+
     - Q# operations: subroutines containing quantum operations, and 
     - Q# functions: classical subroutines used within the quantum algorithm.
+
 2. A classical program, implemented in a classical programming language like
    Python or C#, that serves as the main entry point and will invoke Q#
    operations when it wants to execute a quantum algorithm.
@@ -79,6 +82,7 @@ entitled `Operations.qs`. We will walk you through the components of the file
 step-by-step, but the code is also available as a full block below.
 
 ### Namespaces to access other Q# operations
+
 Inside the file, we first define the namespace `Quantum.Operations` which will
 be accessed/imported by the classical host. For our operation to make use of
 existing Q# operations, we open the relevant `Microsoft.Quantum.<>` namespaces.
@@ -95,6 +99,7 @@ namespace Quantum.Operations {
 ```
 
 ### Define operations with arguments and returns
+
 Next, we define the `Perform3qubitQFT` operation:
 
 ```qsharp
@@ -110,6 +115,7 @@ array of measurement results, at which point `Unit` will be replaced by
 `Result[]`. 
 
 ### Allocate qubits with `using`
+
 Within our Q# operation, we first allocate a register of three qubits with the
 `using` statement:
 
@@ -294,7 +300,6 @@ namespace Quantum.Operations {
 }
 ```
 
-
 With the Q# file and operation complete, it is ready to be called and simulated
 by the classical host.
 
@@ -310,7 +315,7 @@ While the Q# program is ubiquitous across classical host languages, the host
 programs of course will vary slightly. As such, please follow the instructions
 in the tab corresponding to your development environment.
 
-#### [Python](#tab/tabid-python)
+### [Python](#tab/tabid-python)
 
 Following the same [instructions](xref:microsoft.quantum.howto.createproject) as
 above, create a Python host file: `host.py`.
@@ -353,12 +358,13 @@ Run the Python file, and printed in your console you should see the `Message`
 and `DumpMachine` outputs below. 
 
 
-#### [C#](#tab/tabid-csharp)
+### [C#](#tab/tabid-csharp)
 
 Following the same [instructions](xref:microsoft.quantum.howto.createproject) as
 above, create a C# host file, and rename it to `host.cs`.
 
 The C# host has four parts:
+
 1. Construct a quantum simulator. In the code below, this is the variable
     `qsim`.
 2. Compute any arguments required for the quantum algorithm. There are none in
@@ -371,7 +377,6 @@ The C# host has four parts:
     returns the result synchronously. 
 4. Process the returned result of the operation. For now, the operation returns
     nothing.
-
 
 ```csharp
 using System;
@@ -397,6 +402,7 @@ namespace Quantum.Operations
 }
 
 ```
+
 Run the application, and your output should match that below. The program will
 exit after you press a key.
 ***
@@ -442,6 +448,7 @@ comprises qubits `2` and `1` both in $\ket{1}$ and qubit `0` in $\ket{0}$.
 The rest of the rows describe the probability amplitude of measuring the basis
 state vector $\ket{i}$ in both Cartesian and polar formats. In detail for the
 first row of our input state $\ket{000}$:
+
 * **`|0>:`** this row corresponds to the `0` computational basis state (given
   that our initial state post-allocation was $\ket{000}$, we would expect this
   to be the only state with probability amplitude at this point).
@@ -460,7 +467,6 @@ higher the probability, the larger the bar will be. For the phase, see the
 DumpMachine section
 [here](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions)
 for the possible symbol representations based on angle ranges.
-
 
 So, the printed output is illustrating that our programmed gates transformed our
 state from
@@ -505,7 +511,7 @@ measurement results, `Result[]`, instead of `Unit`.
     operation Perform3QubitQFT() : Result[] {
 ```
 
-#### Define and initialize `Result[]` array
+### Define and initialize `Result[]` array
 
 Before even allocating qubits (i.e. before the `using` statement), we declare
 and bind this length-3 array (one `Result` for each qubit): 
@@ -517,7 +523,7 @@ and bind this length-3 array (one `Result` for each qubit):
 The `mutable` keyword prefacing `resultArray` allows the variable to be rebound
 later in the code---for example, when adding our measurement results.
 
-#### Perform measurements in a `for` loop and add results to array
+### Perform measurements in a `for` loop and add results to array
 
 After the Fourier transform operations inside the `using` block, insert the
 following code:
@@ -527,6 +533,7 @@ following code:
                 set resultArray w/= i <- M(qs[i]);
             }
 ```
+
 The [`IndexRange`](xref:microsoft.quantum.arrays.indexrange) function called on
 an array (e.g. our array of qubits, `qs`) returns a range over the indices of
 the array. Here, we use it in our `for` loop to sequentially measure each qubit
@@ -540,7 +547,7 @@ an update-and-reassign statement.
 
 The keyword `set` is always used to reassign variables bound using `mutable`.
 
-#### Return `resultArray`
+### Return `resultArray`
 
 With all three qubits measured and the results added to `resultArray`, we are
 safe to reset and deallocate the qubits as before. After the `using` block's
@@ -549,6 +556,7 @@ close, insert
 ```qsharp
         return resultArray;
 ```
+
 to ultimately return the output of our operation. 
 
 ### Understanding the effects of measurement
@@ -598,6 +606,7 @@ before and after the measurements. The final operation code should look like:
 Additionally, update your host program to process the returned array:
 
 #### [Python](#tab/tabid-python)
+
 ```python
 import qsharp
 from Quantum.OperationsQFT import Perform3QubitQFT
@@ -647,6 +656,7 @@ Corresponding basis state in binary:
 ```
 
 #### [C#](#tab/tabid-csharp)
+
 Now that our operation is returning a result, replace the method call `Wait()`
 with fetching the `Result` property. This still accomplishes the same
 synchronicity discussed earlier, and we can directly bind this value to the
@@ -726,9 +736,11 @@ Corresponding basis state in binary:
 
 Press any key to continue...
 ```
+
 ***
 
 This output illustrates a few different things:
+
 1. Comparing the returned result to the pre-measurement `DumpMachine`, it
     clearly does _not_ illustrate the post-QFT superposition over basis states.
     A measurement only returns a single basis state, with a probability
@@ -747,9 +759,11 @@ relative phases appear if given a more complex input to the QFT than
 $\ket{000}$.
 
 #### Partial measurements 
+
 To explore how measuring only some qubits of the register can affect the
 system's state, try adding the following inside the `for` loop, after the
 measurement line:
+
 ```qsharp
                 let iString = IntAsString(i);
                 Message("After measurement of qubit " + iString + ":");
@@ -757,9 +771,11 @@ measurement line:
 ```
 
 Note that to access the `IntAsString` function you will have to add 
+
 ```qsharp
     open Microsoft.Quantum.Convert;
 ```
+
 with the rest of the namespace `open` statements.
 
 In the resulting output, you will see the gradual projection into subspaces as
@@ -767,6 +783,7 @@ each qubit is measured.
 
 
 ## Use the Q# libraries
+
 As we mentioned in the introduction, much of Q#'s power rests in the fact that
 it allows you to abstract-away the worries of dealing with individual qubits.
 Indeed, if you want to develop full-scale, applicable quantum programs, worrying
@@ -778,10 +795,12 @@ which you can simply take and apply for any number of qubits. To give it a try,
 define a new operation in your Q# file which has the same contents of
 `Perform3QubitQFT`, but with everything from the first `H` to the `SWAP`
 replaced by two easy lines:
+
 ```qsharp
             let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
             QFT(register);                   //from Microsoft.Quantum.Canon
 ```
+
 The first line simply creates a
 [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) expression of the
 allocated array of qubits, `qs`, which is what the
@@ -790,6 +809,7 @@ corresponds to index ordering of the qubits in the register.
 
 To have access to these operations, add `open` statements for their respective
 namespaces at the beginning of the Q# file:
+
 ```qsharp
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Arithmetic;
@@ -800,6 +820,7 @@ Now, adjust your host program to call the name of your new operation (e.g.
 
 To see the real benefit of using the Q# library operations, change the number of
 qubits to something other than `3`:
+
 ```qsharp
         mutable r = new Result[4]; 
 
@@ -807,6 +828,7 @@ qubits to something other than `3`:
             //...
         }
 ```
+
 You can thus apply the proper QFT for any given number of qubits, without having
 to worry about the mess of new Hadamards and rotations on each qubit.
 
@@ -815,15 +837,3 @@ increase the number of qubits---precisely why we look forward to real quantum
 hardware!
 
 ## Next steps
-
-
-
-
-
-
-
-
-
-
-
-

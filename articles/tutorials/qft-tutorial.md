@@ -1,6 +1,6 @@
 ---
 title: Addressing individual qubits in a quantum program
-Docs description: Step-by-step tutorial on writing and simulating a quantum
+description: Step-by-step tutorial on writing and simulating a quantum
 program which operates at the individual qubit level
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com

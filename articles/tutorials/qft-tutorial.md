@@ -199,7 +199,7 @@ rotations in terms of pi radians. Additionally, we divide by a `Double` (e.g.
 `2.0`) because dividing by an integer `2` would throw a type error. 
 
 > [!TIP] 
-> `R1(π/2)` and `R1(π/4)` are equivalent to the `S` and `T` operations
+> `R1(PI() / 2.0)` and `R1(PI() / 4.0)` are equivalent to the [`S`](xref:microsoft.quantum.intrinsic.s) and [`T`](xref:microsoft.quantum.intrinsic.t) operations
 > (also in [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic)).
 
 

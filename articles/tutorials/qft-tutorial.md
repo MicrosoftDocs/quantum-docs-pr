@@ -200,7 +200,7 @@ rotations in terms of pi radians. Additionally, we divide by a `Double` (e.g.
 
 > [!TIP] 
 > `R1(π/2)` and `R1(π/4)` are equivalent to the `S` and `T` operations
-> (also in `Microsoft.Quantum.Intrinsic`).
+> (also in [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic)).
 
 
 After applying the relevant Hadamards and controlled rotations to the second and

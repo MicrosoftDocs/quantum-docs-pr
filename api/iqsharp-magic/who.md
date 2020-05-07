@@ -1,16 +1,16 @@
 ---
 title: '%who (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.who
-ms.date: '2020-04-29'
+ms.date: '2020-05-07'
 ms.topic: article
 ---
 
 <!--
-    NB: This file has been automatically generated from Microsoft.Quantum.IQSharp.Jupyter.dll,
+    NB: This file has been automatically generated from Microsoft.Quantum.IQSharp.Kernel.dll,
         please do not manually edit it.
 
     [DEBUG] JSON source:
-        {"Name": "%who", "Documentation": {"Summary": "Provides actions related to the current workspace.", "Full": null, "Description": null, "Remarks": null, "Examples": null, "SeeAlso": null}, "AssemblyName": "Microsoft.Quantum.IQSharp.Jupyter"}
+        {"Name": "%who", "Documentation": {"Summary": "Provides actions related to the current workspace.", "Full": null, "Description": null, "Remarks": null, "Examples": null, "SeeAlso": null}, "AssemblyName": "Microsoft.Quantum.IQSharp.Kernel"}
 -->
 
 # `%who`

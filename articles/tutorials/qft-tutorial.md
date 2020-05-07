@@ -6,10 +6,8 @@ author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.topic: tutorial
 ms.date: 10/06/2019
-uid:
-microsoft.quantum.circuit-tutorial
+uid:microsoft.quantum.circuit-tutorial
 ---
-
 
 # Tutorial: Write and simulate qubit-level programs in Q\#
 

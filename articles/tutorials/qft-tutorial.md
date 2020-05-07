@@ -298,7 +298,7 @@ namespace Quantum.Operations {
 }
 ```
 
-Note that we added an extra line, `@EntryPoint()` before the operation. This is
+Note that we added an extra line, `@EntryPoint()` before the operation. This attribute is
 a label to point the compiler the entry point to start the computation.
 
 With the Q# file and operation complete we can save it. Now it is ready to be

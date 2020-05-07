@@ -63,7 +63,7 @@ consists of:
 ## Allocate qubits and define quantum operations
 
 The first part of this tutorial consists of defining the Q# operation
-`Perform3qubitQFT`, which performs the quantum Fourier transform on three
+`Perform3QubitQFT`, which performs the quantum Fourier transform on three
 qubits.
 
 In addition, we will use the
@@ -93,10 +93,10 @@ namespace Quantum.Operations {
 
 ### Define operations with arguments and returns
 
-Next, we define the `Perform3qubitQFT` operation:
+Next, we define the `Perform3QubitQFT` operation:
 
 ```qsharp
-    operation Perform3qubitQFT() : Unit {
+    operation Perform3QubitQFT() : Unit {
         // do stuff
     }
 ```
@@ -265,7 +265,7 @@ namespace Quantum.Operations {
     open Microsoft.Quantum.Arrays;
 
     @EntryPoint()
-    operation Perform3qubitQFT() : Unit {
+    operation Perform3QubitQFT() : Unit {
 
         using (qs = Qubit[3]) {
 

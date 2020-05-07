@@ -546,7 +546,7 @@ using the `M(qs[i])` statement. Each measured `Result` type (either `Zero` or
 an update-and-reassign statement.
 
 > [!NOTE] The syntax of this statement is unique to Q#, but corresponds to the
-> similar variable reassignment `r[i] <- M(qs[i])` seen in other languages such
+> similar variable reassignment `resultArray[i] <- M(qs[i])` seen in other languages such
 > as F# and R.
 
 The keyword `set` is always used to reassign variables bound using `mutable`.
@@ -823,7 +823,7 @@ To see the real benefit of using the Q# library operations, change the number of
 qubits to something other than `3`:
 
 ```qsharp
-        mutable r = new Result[4]; 
+        mutable resultArray = new Result[4]; 
 
         using (qs = Qubit[4]) {
             //...

@@ -610,7 +610,7 @@ before and after the measurements. The final operation code should look like:
 
             ResetAll(qs);
         }
-        Message("Post-QFT measurement results [qubit0, qubit1, qubit2]: ");
+        Message($"Post-QFT measurement results [qubit0, qubit1, qubit2]: {resultArray}");
         return resultArray;
     }
 }

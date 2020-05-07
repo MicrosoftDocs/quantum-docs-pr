@@ -54,12 +54,6 @@ circuit diagram" width="600">
 > * Observe how the quantum system's simulated wavefunction evolves throughout
 >   the operation
 
-Applications developed with Microsoft's Quantum Development Kit typically
-consists of:
-
-- Q# operations: subroutines containing quantum operations, and 
-- Q# functions: classical subroutines used within the quantum algorithm.
-
 ## Allocate qubits and define quantum operations
 
 The first part of this tutorial consists of defining the Q# operation

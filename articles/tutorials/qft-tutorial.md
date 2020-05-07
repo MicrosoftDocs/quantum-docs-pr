@@ -1,7 +1,8 @@
 ﻿---
 title: Tutorial: Addressing individual qubits in a quantum program | Microsoft
 Docs description: Step-by-step tutorial on writing and simulating a quantum
-program which operates at the individual qubit level author: gillenhaalb
+program which operates at the individual qubit level
+author: gillenhaalb
 ms.author: a-gibec@microsoft.com ms.topic: tutorial ms.date: 10/06/2019 uid:
 microsoft.quantum.circuit-tutorial
 ---

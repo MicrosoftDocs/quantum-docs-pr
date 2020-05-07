@@ -125,7 +125,8 @@ can verify this by using
 [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine), which print a
 string and the system's current state to the command line.
 
-> [!NOTE] The `Message(<string>)` and `DumpMachine()` functions (from
+> [!NOTE] 
+> The `Message(<string>)` and `DumpMachine()` functions (from
 > [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) and
 > [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics),
 > respectively) both print directly to the command line. Just like a
@@ -193,7 +194,8 @@ Note that we use the [`PI()`](xref:microsoft.quantum.math.pi) function from the
 rotations in terms of pi radians. Additionally, we divide by a `Double` (e.g.
 `2.0`) because dividing by an integer `2` would throw a type error. 
 
-> [!TIP] `R1(π/2)` and `R1(π/4)` are equivalent to the `S` and `T` operations
+> [!TIP] 
+> `R1(π/2)` and `R1(π/4)` are equivalent to the `S` and `T` operations
 > (also in `Microsoft.Quantum.Intrinsic`).
 
 
@@ -545,7 +547,8 @@ using the `M(qs[i])` statement. Each measured `Result` type (either `Zero` or
 `One`) is then added to the corresponding index position in `resultArray` with
 an update-and-reassign statement.
 
-> [!NOTE] The syntax of this statement is unique to Q#, but corresponds to the
+> [!NOTE] 
+> The syntax of this statement is unique to Q#, but corresponds to the
 > similar variable reassignment `resultArray[i] <- M(qs[i])` seen in other languages such
 > as F# and R.
 

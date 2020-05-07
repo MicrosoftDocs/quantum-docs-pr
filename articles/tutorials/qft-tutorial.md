@@ -46,45 +46,36 @@ circuit diagram" width="600">
 > [!div class="checklist"]
 >
 > * Define quantum operations in Q#
-> * Set up the classical host program to call and simulate Q# operations
+>* Call and simulate Q# operations with the command line
+>  application for Q#.
 > * Simulate a quantum operation from qubit allocation to measurement output
 > * Observe how the quantum system's simulated wavefunction evolves throughout
 >   the operation
 
 Applications developed with Microsoft's Quantum Development Kit typically
-consists of two parts:
+consists of:
 
-1. A quantum program, implemented using the Q# quantum programming language,
-   which is then invoked by the classical host program to run on a quantum
-   computer or quantum simulator. These consist of
-
-    - Q# operations: subroutines containing quantum operations, and 
-    - Q# functions: classical subroutines used within the quantum algorithm.
-
-2. A classical program, implemented in a classical programming language like
-   Python or C#, that serves as the main entry point and will invoke Q#
-   operations when it wants to execute a quantum algorithm.
+- Q# operations: subroutines containing quantum operations, and 
+- Q# functions: classical subroutines used within the quantum algorithm.
 
 ## Allocate qubits and define quantum operations
 
 The first part of this tutorial consists of defining the Q# operation
 `Perform3qubitQFT`, which performs the quantum Fourier transform on three
-qubits. 
+qubits.
 
 In addition, we will use the
 [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) function to
 observe how the simulated wavefunction of our three qubit system evolves across
 the operation.
 
-To create a your Q# project, follow these
-[instructions](xref:microsoft.quantum.howto.createproject), and create a Q# file
-entitled `Operations.qs`. We will walk you through the components of the file
-step-by-step, but the code is also available as a full block below.
+First you need to create a Q# project. If you don't know how to do it you can 
+take a look to the [installation guide]
 
 ### Namespaces to access other Q# operations
 
 Inside the file, we first define the namespace `Quantum.Operations` which will
-be accessed/imported by the classical host. For our operation to make use of
+be accessed by the compiler. For our operation to make use of
 existing Q# operations, we open the relevant `Microsoft.Quantum.<>` namespaces.
 
 ```qsharp
@@ -132,12 +123,12 @@ With `using`, the qubits are automatically allocated in the $\ket{0}$ state. We
 can verify this by using
 [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) and
 [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine), which print a
-string and the system's current state to the host console.
+string and the system's current state to the command line.
 
 > [!NOTE] The `Message(<string>)` and `DumpMachine()` functions (from
 > [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) and
 > [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics),
-> respectively) both print directly to our classical host's console. Just like a
+> respectively) both print directly to the command line. Just like a
 > real quantum computation, Q# does not allow us to directly access qubit
 > states. However, as `DumpMachine` prints the target machine's current state,
 > it can provide valuable insight for debugging and learning when used in
@@ -269,6 +260,7 @@ namespace Quantum.Operations {
     open Microsoft.Quantum.Math;
     open Microsoft.Quantum.Arrays;
 
+    @EntryPoint()
     operation Perform3qubitQFT() : Unit {
 
         using (qs = Qubit[3]) {
@@ -300,10 +292,21 @@ namespace Quantum.Operations {
 }
 ```
 
-With the Q# file and operation complete, it is ready to be called and simulated
-by the classical host.
+Note that we added an extra line, `@EntryPoint()` before the operation. This is
+a label to point the compiler the entry point to start the computation.
 
-## Set up the classical host
+With the Q# file and operation complete we can save it. Now it is ready to be
+simulated by executing the file from the command line.
+
+## Execute the program
+
+To execute open the terminal in the folder of your project and enter:
+
+```dotnetcli
+dotnet run
+```
+
+<!-- ## Set up the classical host
 
 Having defined our Q# operation in a `.qs` file, we now write the classical host
 program to call that operation and process any returned classical data (for now,
@@ -405,7 +408,9 @@ namespace Quantum.Operations
 
 Run the application, and your output should match that below. The program will
 exit after you press a key.
-***
+*** -->
+
+You should observe the following output:
 
 ```Output
 Initial state |000>:
@@ -430,7 +435,7 @@ After:
 |7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
 ```
 
-When called on the full-state simulator, `DumpMachine()` provides these mutliple
+When called on the full-state simulator, `DumpMachine()` provides these multiple
 representations of the quantum state's wavefunction. The possible states of an
 $n$-qubit system can be represented by $2^n$ computational basis states, each
 with a corresponding complex coefficient (simply an amplitude and a phase). The
@@ -443,7 +448,6 @@ their significant order. Qubit `2` being the "most significant" simply means
 that in the binary representation of basis state vector $\ket{i}$, the state of
 qubit `2` corresponds to the left-most digit. For example, $\ket{6} = \ket{110}$
 comprises qubits `2` and `1` both in $\ket{1}$ and qubit `0` in $\ket{0}$.
-
 
 The rest of the rows describe the probability amplitude of measuring the basis
 state vector $\ket{i}$ in both Cartesian and polar formats. In detail for the
@@ -554,20 +558,21 @@ safe to reset and deallocate the qubits as before. After the `using` block's
 close, insert
 
 ```qsharp
+        Message("Post-QFT measurement results [qubit0, qubit1, qubit2]: ");
         return resultArray;
 ```
 
-to ultimately return the output of our operation. 
+to ultimately return and print the output of our operation.
 
 ### Understanding the effects of measurement
 
 Let's change the placement of our `DumpMachine` functions to output the state
-before and after the measurements. The final operation code should look like: 
+before and after the measurements. The final operation code should look like:
 
 ```qsharp
     operation Perform3QubitQFT() : Result[] {
 
-        mutable r = new Result[3];
+        mutable resultArray = new Result[3];
 
         using (qs = Qubit[3]) {
 
@@ -590,7 +595,7 @@ before and after the measurements. The final operation code should look like:
             DumpMachine();
 
             for(i in IndexRange(qs)) {
-                set r w/= i <- M(qs[i]);
+                set resultArray w/= i <- M(qs[i]);
             }
 
             Message("After measurement: ");
@@ -598,14 +603,15 @@ before and after the measurements. The final operation code should look like:
 
             ResetAll(qs);
         }
-        return r;
+        Message("Post-QFT measurement results [qubit0, qubit1, qubit2]: ");
+        return resultArray;
     }
 }
 ```
 
-Additionally, update your host program to process the returned array:
+<!-- Additionally, update your host program to process the returned array: -->
 
-#### [Python](#tab/tabid-python)
+<!-- #### [Python](#tab/tabid-python)
 
 ```python
 import qsharp
@@ -702,7 +708,7 @@ namespace Quantum.Operations
         }
     }
 }
-```
+``` -->
 
 Run the project, and your output should look similar to the following:
 
@@ -730,11 +736,6 @@ After measurement:
 
 Post-QFT measurement results [qubit0, qubit1, qubit2]: 
 [One,One,Zero]
-
-Corresponding basis state in binary:
-|ZeroOneOne>
-
-Press any key to continue...
 ```
 
 ***
@@ -815,8 +816,8 @@ namespaces at the beginning of the Q# file:
     open Microsoft.Quantum.Arithmetic;
 ```
 
-Now, adjust your host program to call the name of your new operation (e.g.
-`PerformIntrinsicQFT`), and give it a whirl.
+<!-- Now, adjust your host program to call the name of your new operation (e.g.
+`PerformIntrinsicQFT`), and give it a whirl. -->
 
 To see the real benefit of using the Q# library operations, change the number of
 qubits to something other than `3`:

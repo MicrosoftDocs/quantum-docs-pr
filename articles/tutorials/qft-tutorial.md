@@ -1,5 +1,5 @@
-﻿---
-title: Tutorial: Addressing individual qubits in a quantum program | Microsoft
+---
+title: Tutorial: Addressing individual qubits in a quantum program
 Docs description: Step-by-step tutorial on writing and simulating a quantum
 program which operates at the individual qubit level
 author: gillenhaalb
@@ -312,109 +312,8 @@ To execute open the terminal in the folder of your project and enter:
 dotnet run
 ```
 
-<!-- ## Set up the classical host
-
-Having defined our Q# operation in a `.qs` file, we now write the classical host
-program to call that operation and process any returned classical data (for now,
-there isn't anything to process---recall that our operation defined above
-returns `Unit`). When we later modify the Q# operation to return an array of
-measurement results (`Result[]`), we will update the host file correspondingly.
-
-While the Q# program is ubiquitous across classical host languages, the host
-programs of course will vary slightly. As such, please follow the instructions
-in the tab corresponding to your development environment.
-
-### [Python](#tab/tabid-python)
-
-Following the same [instructions](xref:microsoft.quantum.howto.createproject) as
-above, create a Python host file: `host.py`.
-
-The host file is constructed as follows: 
-1. First, we import the `qsharp` module, which registers the module loader for
-    Q# interoperability. This allows Q# namespaces (e.g. the
-    `Quantum.Operations` we defined in `Operations.qs`) to appear as Python
-    modules, from which we can import Q# operations.
-2. Then, import the Q# operations which we will directly invoke---in this case,
-    `Perform3qubitQFT`. We need only import the entry point into a Q# program
-    (i.e. _not_ operations like `H` and `R1`, which are called by other Q#
-    operations but never by the classical host).
-3. In simulating Q# operations or functions, use the form
-   `<Q#callable>.simulate(<args>)` to run them on the `QuantumSimulator()`
-   target machine. 
-
-> [!NOTE] If we wanted to call the operation on a different machine, for example
-> the `ResourceEstimator()`, we would simply use
-> `<Q#callable>.estimate_resources(<args>)`. In general, Q# operations are
-> agnostic to the machines on which they're run, but some features such as
-> `DumpMachine` may behave differently.
-
-4. Upon performing the simulation, the operation call will return values as
-    defined in `Operations.qs`. For now there is nothing returned, but later on
-    we will see an example of assigning and processing these values. With the
-    resultant data in our hands and totally classical, we can do whatever we'd
-    like with it.
-
-Your full `host.py` file should be this:
-
-```python
-import qsharp
-from Quantum.Operations import Perform3qubitQFT
-
-Perform3qubitQFT.simulate()
-```
-
-Run the Python file, and printed in your console you should see the `Message`
-and `DumpMachine` outputs below. 
-
-
-### [C#](#tab/tabid-csharp)
-
-Following the same [instructions](xref:microsoft.quantum.howto.createproject) as
-above, create a C# host file, and rename it to `host.cs`.
-
-The C# host has four parts:
-
-1. Construct a quantum simulator. In the code below, this is the variable
-    `qsim`.
-2. Compute any arguments required for the quantum algorithm. There are none in
-    this example.
-3. Run the quantum algorithm. Each Q# operation generates a C# class with the
-    same name. This class has a `Run` method that **asynchronously** executes
-    the operation. The execution is asynchronous because execution on actual
-    hardware will be asynchronous. Because the `Run` method is asynchronous, we
-    call the `Wait()` method; this blocks execution until the task completes and
-    returns the result synchronously. 
-4. Process the returned result of the operation. For now, the operation returns
-    nothing.
-
-```csharp
-using System;
-
-using Microsoft.Quantum.Simulation.Core;
-using Microsoft.Quantum.Simulation.Simulators;
-
-namespace Quantum.Operations
-{
-    class Driver
-    {
-        static void Main(string[] args)
-        {
-            using (var qsim = new QuantumSimulator())
-            {
-                Perform3QubitQFT.Run(qsim).Wait();
-            }
-            
-            System.Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
-        }
-    }
-}
-
-```
-
 Run the application, and your output should match that below. The program will
 exit after you press a key.
-*** -->
 
 You should observe the following output:
 
@@ -481,18 +380,14 @@ for the possible symbol representations based on angle ranges.
 So, the printed output is illustrating that our programmed gates transformed our
 state from
 
-$$
-\ket{\psi}\_{initial} = \ket{000}
-$$
+$$\ket{\psi}\_{initial} = \ket{000}$$
 
 to 
 
-$$
-\begin{align} \ket{\psi}\_{final} &= \frac{1}{\sqrt{8}} \left( \ket{000} +
+$$\begin{align} \ket{\psi}\_{final} &= \frac{1}{\sqrt{8}} \left( \ket{000} +
     \ket{001} + \ket{010} + \ket{011} + \ket{100} + \ket{101} + \ket{110} +
     \ket{111}  \right) \\\\
-    &= \frac{1}{\sqrt{2^n}}\sum\_{j=0}^{2^n-1} \ket{j}, \end{align}
-$$
+    &= \frac{1}{\sqrt{2^n}}\sum\_{j=0}^{2^n-1} \ket{j}, \end{align}$$
 
 which is precisely the behavior of the 3-qubit Fourier transform. 
 
@@ -616,107 +511,6 @@ before and after the measurements. The final operation code should look like:
 }
 ```
 
-<!-- Additionally, update your host program to process the returned array: -->
-
-<!-- #### [Python](#tab/tabid-python)
-
-```python
-import qsharp
-from Quantum.OperationsQFT import Perform3QubitQFT
-
-measurementResult = Perform3QubitQFT.simulate()
-print("\n")
-print("Measured post-QFT state: [qubit0, qubit1, qubit2]")
-print(measurementResult)
-
-# reversing order to show corresponding basis state in binary form
-binaryCompBasisState = ""
-for i in measurementResult:
-    binaryCompBasisState = str(i) + binaryCompBasisState
-print("Corresponding basis state in binary:")
-print("|" + binaryCompBasisState + ">")
-```
-
-Run the file, and your output should look similar to the following:
-
-```Output
-Before measurement: 
-# wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-After measurement: 
-# wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
-|1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
-|2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
-|4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
-|5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
-|6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
-|7>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
-
-Post-QFT measurement results [qubit0, qubit1, qubit2]: 
-[1, 1, 0]
-
-Corresponding basis state in binary:
-|011>
-```
-
-#### [C#](#tab/tabid-csharp)
-
-Now that our operation is returning a result, replace the method call `Wait()`
-with fetching the `Result` property. This still accomplishes the same
-synchronicity discussed earlier, and we can directly bind this value to the
-variable `measurementResult`.
-
-```csharp
-using System;
-
-using Microsoft.Quantum.Simulation.Core;
-using Microsoft.Quantum.Simulation.Simulators;
-
-namespace Quantum.Operations
-{
-    class Driver
-    {
-        static void Main(string[] args)
-        {
-            using (var qsim = new QuantumSimulator())
-            {
-                var measurementResult = Perform3QubitQFT.Run(qsim).Result;
-                System.Console.WriteLine(
-                    $"Post-QFT measurement results [qubit0, qubit1, qubit2]: ");
-                System.Console.WriteLine(
-                    measurementResult);
-
-                // reversing order to show corresponding basis state in binary form
-                string binaryCompBasisState = String.Empty;
-
-                foreach (Result i in measurementResult)
-                {
-                    string iString = i.ToString();
-                    binaryCompBasisState = iString + binaryCompBasisState;
-                }
-                binaryCompBasisState = "|" + binaryCompBasisState + ">";
-                System.Console.WriteLine(
-                    $"Corresponding basis state in binary:");
-                System.Console.WriteLine(
-                    binaryCompBasisState);
-            }
-            
-            System.Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
-        }
-    }
-}
-``` -->
-
 Run the project, and your output should look similar to the following:
 
 ```Output
@@ -822,9 +616,6 @@ namespaces at the beginning of the Q# file:
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Arithmetic;
 ```
-
-<!-- Now, adjust your host program to call the name of your new operation (e.g.
-`PerformIntrinsicQFT`), and give it a whirl. -->
 
 To see the real benefit of using the Q# library operations, change the number of
 qubits to something other than `3`:

@@ -70,7 +70,7 @@ observe how the simulated wavefunction of our three qubit system evolves across
 the operation.
 
 First you need to create a Q# project. If you don't know how to do it you can 
-take a look to the [installation guide]
+take a look to the [installation guide](xref:microsoft.quantum.install.standalone).
 
 ### Namespaces to access other Q# operations
 

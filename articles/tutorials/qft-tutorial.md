@@ -104,7 +104,7 @@ Next, we define the `Perform3qubitQFT` operation:
 ```
 
 For now, the operation takes no arguments and does not return anything---in this
-case we write that it returns a `Unit` object, which is akin to `void` in C# or
+case we write that it returns a `Unit` value, which is akin to `void` in C# or
 an empty tuple, `Tuple[()]`, in Python. Later, we will modify it to return an
 array of measurement results, at which point `Unit` will be replaced by
 `Result[]`. 

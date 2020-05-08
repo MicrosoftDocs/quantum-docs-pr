@@ -3,7 +3,7 @@ title: Quantum computers and quantum simulators
 description: Learn about quantum hardware, quantum simulators, and how quantum operations work.
 author: bradben
 ms.author:  bradben
-ms.date: 04/22/2020
+ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
 ---
@@ -16,14 +16,12 @@ Quantum simulators are software programs that run on classical computers and mak
 
 ## Quantum hardware
 
-A quantum computer has three primary parts: the qubit storage, a method for transferring signals to the qubits, and a classical computer to run a program and send instructions.
+A quantum computer has three primary parts: an area that houses the qubits, a method for transferring signals to the qubits, and a classical computer to run a program and send instructions.
 
-- The quantum particles used for qubits are fragile and highly sensitive to environmental interferences. For some methods of qubit storage, the unit that houses the qubits is kept at a temperature just above absolute zero to maximize their coherence.  
-- Signals are sent to the qubits using microwaves or lasers.
+- The quantum material used for qubits is fragile and highly sensitive to environmental interferences. For some methods of qubit storage, the unit that houses the qubits is kept at a temperature just above absolute zero to maximize their coherence. Other types of qubit housing use a vacuum chamber to help minimize vibrations and stabilize the qubits.  
+- Signals can be sent to the qubits using a variety of methods including microwaves, laser, and voltage.
 
-Quantum computers face a multitude of challenges to operate correctly.  Labs that hold quantum computers are designed to minimize vibrations, and quantum computers are often sealed in a vacuum chamber to isolate them.  Error correction in quantum computers is a significant issue, and scaling up (adding more qubits) increases the error rate.
-
-Because of these limitations, a quantum PC for your desktop is far in the future, but a commercially-viable lab-based quantum computer is closer.
+Quantum computers face a multitude of challenges to operate correctly. Error correction in quantum computers is a significant issue, and scaling up (adding more qubits) increases the error rate. Because of these limitations, a quantum PC for your desktop is far in the future, but a commercially-viable lab-based quantum computer is closer.
 
 ## Quantum simulators
 
@@ -31,7 +29,9 @@ Quantum simulators that run on classical computers allow you to simulate the exe
 
 ## Topological qubit
 
-Microsoft is developing a quantum computer based on topological qubits. A topological qubit will be less impacted by changes in its environment, therefore reducing the degree of external error correction. Topological qubits feature increased stability and resistance to environmental noise, which means they can more readily scale and remain reliable longer.
+Microsoft is developing a quantum computer based on topological qubits. A topological qubit will be less impacted by changes in its environment, therefore reducing the degree of external error correction required.
+
+Topological qubits feature increased stability and resistance to environmental noise, which means they can more readily scale and remain reliable longer.
 
 ## Microsoft and quantum hardware partnerships
 
@@ -48,7 +48,9 @@ Performing computations on a quantum computer or quantum simulator follow a basi
 
 Initializing and transforming qubits is done using **quantum operations** (sometimes called quantum gates). Quantum operations are similar to logic operations in classical computing, such as AND, OR, NOT, and XOR. An operation can be as basic as flipping a qubit's state from 1 to 0 or entangling a pair of qubits, to using multiple operations in series to affect the probability of a superposed qubit collapsing one way or the other.
 
-Measuring the result of the computation tells us an answer, but not necessarily the correct answer. Because the result is based on the probability that was configured by the quantum operations, quantum computations are run multiple times to get a probability distribution and refine the accuracy of the results.  Assurance that an operation returned a correct answer is known as quantum verification and is a significant challenge in quantum computing.
+> [!NOTE] The [Q# libraries](xref:microsoft.quantum.libraries) provide built-in operations that define complex combinations of lower-level quantum operations. You can use the library operations to transform qubits and to create more complex user-defined operations.  
+
+Measuring the result of the computation tells us an answer, but for some quantum algorithms, not necessarily the correct answer. Because the result of some quantum algorithms is based on the probability that was configured by the quantum operations, these computations are run multiple times to get a probability distribution and refine the accuracy of the results.  Assurance that an operation returned a correct answer is known as quantum verification and is a significant challenge in quantum computing.
 
 ## Summary
 
@@ -56,7 +58,9 @@ Quantum computing shares some of the same concepts as classical computing but ad
 
 - Quantum hardware is expensive and fragile to work with, so quantum simulators are used to write and test programs.
 - Both classical and quantum computers use logic operations (or gates) to prepare computations.
-- Quantum computations return probabilities and are run multiple times to refine the results.
+- Quantum computations return probabilities.
+
+Advancements in quantum hardware and techniques is rapidly changing the field. Here are just a few of the [current developments](https://phys.org/search/?search=quantum+computer&s=0).
 
 ## Next steps
 

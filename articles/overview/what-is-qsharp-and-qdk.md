@@ -3,24 +3,24 @@ title: What is the Q# programming language and QDK?
 description: Learn about the Microsoft Quantum Development Kit, the Q# programming language, and how you can create quantum programs.
 author: bradben
 ms.author:  bradben
-ms.date: 04/22/2020
+ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
 ---
 
 # What is the Q# programming language and QDK?
 
-Q# is Microsoft’s open-source programming language for developing and running quantum algorithms. It’s part of the Quantum Development Kit (QDK), which includes Q# libraries, quantum simulators, extensions for other programming environments, and API documentation. In addition the Standard Q# library, the QDK includes Chemistry, Machine Learning, and Numeric libraries.
+Q# is Microsoft’s open-source programming language for developing and running quantum algorithms. It’s part of the Quantum Development Kit (QDK), which includes [Q# libraries](xref:microsoft.quantum.libraries), [quantum simulators](xref:microsoft.quantum.machines), [extensions for other programming environments](xref:microsoft.quantum.install), and [API documentation](https://docs.microsoft.com/qsharp/api/). In addition the Standard Q# library, the QDK includes Chemistry, Machine Learning, and Numeric libraries.
 
 As a programming language, Q# draws familiar elements from Python, C#, and F# and supports a basic procedural model for writing programs with loops, if/then statements, and common data types. It also introduces new quantum-specific data structures and operations.
 
 ## What can I do with the QDK?
 
-The QDK is a full-featured development kit for Q# that you can use with common tools and languages to develop quantum applications that you can run in various environments.
+The QDK is a full-featured development kit for Q# that you can use with common tools and languages to develop quantum applications that you can run in various environments. Q# programs can run as a command-line app, through Jupyter Notebooks, or use a Python or .NET host program.
 
 ### Develop in common tools and environments
 
-Integrate your quantum development with Visual Studio, Visual Studio Code, and Jupyter Notebooks. Use the built-in APIs for pairing your programs with Python and C# host languages.
+Integrate your quantum development with [Visual Studio, Visual Studio Code](xref:xref:microsoft.quantum.install.standalone), and [Jupyter Notebooks](xref:xref:microsoft.quantum.install.jupyter). Use the built-in APIs for pairing your programs with [Python](xref:xref:microsoft.quantum.install.python) and [.NET](xref:xref:microsoft.quantum.install.cs) host languages.
 
 ### Try quantum operations and domain-specific libraries
 
@@ -40,9 +40,9 @@ Run your quantum programs on a full-state quantum simulator, a limited-scope Tof
 
 ## How does Q# work?
 
-A Q# program doesn’t compile into a standalone executable. Instead, it is a collection of subroutines that runs inside a quantum simulator, and is called by another host program that is written either in Python or C#.
+A Q# program can compile into a standalone executable or be called by a host program that is written either in Python or a .NET language.
 
-When you compile and run the host program, it creates an instance of the quantum simulator and passes the Q# code to it. The simulator uses the Q# code to create qubits (simulations of quantum particles) and apply transformations to modify their state. The results of the quantum operations in the simulator are then returned to the host program.  
+When you compile and run the program, it creates an instance of the quantum simulator and passes the Q# code to it. The simulator uses the Q# code to create qubits (simulations of quantum particles) and apply transformations to modify their state. The results of the quantum operations in the simulator are then returned to the program.  
 
 Isolating the Q# code in the simulator ensures that the algorithms follow the laws of quantum physics and can run correctly on quantum computers.
 
@@ -52,13 +52,15 @@ Isolating the Q# code in the simulator ensures that the algorithms follow the la
 
 Everything you need to write and run Q# programs, including the Q# compiler, the Q# libraries, and the quantum simulators, can be installed and run from your local computer. Eventually you will be able to run your Q# programs remotely on an actual quantum computer, but until then the quantum simulators provided with the QDK provide accurate and reliable results.
 
-If you are new to programming, using Python as your host programming platform is the easiest way to get started. Python enjoys widespread use not only among developers, but also scientists, researchers and teachers, and it is easy to learn.
+- Running [Q# from the command line](xref:microsoft.quantum.install.standalone) is the quickest way to get started.
 
-If you already have experience with C# and are familiar with the Visual Studio development environment, there are just a few extensions you need to add to Visual Studio to prepare it for Q#.  
+- If you are familiar with [Python](xref:microsoft.quantum.install.python), you can use it as a host programming platform to get started. Python enjoys widespread use not only among developers, but also scientists, researchers and teachers.
+
+- If you already have experience with [C#, F#, or VB.NET](xref:microsoft.quantum.install.cs) and are familiar with the Visual Studio development environment, there are just a few extensions you need to add to Visual Studio to prepare it for Q#.  
 
 ## Summary
 
-Q# is an open-source programming language for developing quantum programs. It has libraries that let you create complex quantum operations, and quantum simulators to accurately run and test your programs. Q# programs are called from a host program written either in Python or C# and can be written, run, and tested from your local computer.
+Q# is an open-source programming language for developing quantum programs. It has libraries that let you create complex quantum operations, and quantum simulators to accurately run and test your programs. Q# programs can run as standalone apps or be called from a Python or .NET host program, and can be written, run, and tested from your local computer.
 
 ## Next Steps
 

@@ -22,7 +22,7 @@ Just like being familiar with the [basic concepts of quantum physics](xref:micro
 
 ## Vectors and matrices in quantum computing
 
-In [Understanding quantum computing](xref:microsoft.quantum.overview.understanding,), you saw that a qubit can be in a state of 1 or 0 or a superposition or both. Using linear algebra, the state of a qubit is described as a vector and is represented by a single column **matrix** $\begin{bmatrix} a \\\\  b \end{bmatrix}$. It is also known as a **quantum state vector** and must meet the requirement that $|a|^2 + |b|^2 = 1$.  
+In [Understanding quantum computing](xref:microsoft.quantum.overview.understanding), you saw that a qubit can be in a state of 1 or 0 or a superposition or both. Using linear algebra, the state of a qubit is described as a vector and is represented by a single column **matrix** $\begin{bmatrix} a \\\\  b \end{bmatrix}$. It is also known as a **quantum state vector** and must meet the requirement that $|a|^2 + |b|^2 = 1$.  
 
 The elements of the matrix represent the probability of the qubit collapsing one way or the other, with $|a|^2$ being the probability of collapsing to zero, and $|b|^2$ being the probability of collapsing to one. The following matrices all represent valid quantum state vectors:
 

@@ -10,7 +10,7 @@ uid: microsoft.quantum.overview.q-sharp
 
 # What is the Q# programming language and QDK?
 
-Q# is Microsoft’s open-source programming language for developing and running quantum algorithms. It’s part of the Quantum Development Kit (QDK), which includes [Q# libraries](xref:microsoft.quantum.libraries), [quantum simulators](xref:microsoft.quantum.machines), [extensions for other programming environments](xref:microsoft.quantum.install), and [API documentation](https://docs.microsoft.com/qsharp/api/). In addition the Standard Q# library, the QDK includes Chemistry, Machine Learning, and Numeric libraries.
+Q# is Microsoft’s open-source programming language for developing and running quantum algorithms. It’s part of the Quantum Development Kit (QDK), which includes [Q# libraries](xref:microsoft.quantum.libraries), [quantum simulators](xref:microsoft.quantum.machines), [extensions for other programming environments](xref:microsoft.quantum.install), and [API documentation](xref:microsoft.quantum.standardlibsintro). In addition the Standard Q# library, the QDK includes Chemistry, Machine Learning, and Numeric libraries.
 
 As a programming language, Q# draws familiar elements from Python, C#, and F# and supports a basic procedural model for writing programs with loops, if/then statements, and common data types. It also introduces new quantum-specific data structures and operations.
 

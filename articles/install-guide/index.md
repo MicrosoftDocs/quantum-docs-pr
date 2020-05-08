@@ -3,7 +3,7 @@ title: Learn how to install the Microsoft Quantum Development Kit (QDK)
 description: How to install the Microsoft Quantum Development Kit for C#, Python, and Jupyter Notebook environments.
 author: natke
 ms.author: nakersha
-ms.date: 9/30/2019
+ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
@@ -13,17 +13,21 @@ uid: microsoft.quantum.install
 
 Learn how to install the Microsoft Quantum Development Kit (QDK), so that you can get started with quantum programming. The QDK consists of:
 
-- the Q# programming language
-- a set of libraries that abstract complex functionality in Q#
+- The Q# programming language
+- A set of libraries that abstract complex functionality in Q#
 - APIs for Python and .NET languages (C#, F#, and VB.NET) for running quantum programs written in Q#
-- tools to facilitate your development
+- Tools to facilitate your development
 
-Q# programs are often paired with a host program written in a .NET language (typically C#) or Python. This allows us to call quantum operations from inside a classical program.
-In addition, the QDK provides Q# support for Jupyter Notebooks with the IQ# Jupyter kernel.
+Q# programs can run as standalone applications using Visual Studio Code or Visual Studio, or through Jupyter Notebooks with the IQ# Jupyter kernel.
 
-The QDK is available for multiple development environments. Select your preferred setup from the sections below:
+They can also be paired with a host program written in a .NET language (typically C#) or Python, enabling you to call quantum operations from inside a classical program.
 
-- [Q# command line application:](xref:microsoft.quantum.install.standalone) choose this approach if you want to work with Q# from the command line. This does not require a driver or a host program like the below options.
-- [Install Q# for Jupyter Notebooks:](xref:microsoft.quantum.install.jupyter) choose this environment to execute Q# code in cells with embedded text or create quantum computing interactive tutorials. 
-- [Develop with Q# and Python:](xref:microsoft.quantum.install.python) if you want to combine Python and Q# to create a Python host program that calls Q# operations.
-- [Develop with Q# and C# or F#:](xref:microsoft.quantum.install.cs) if you want to combine C# or F# and Q# to create a .NET host program that calls Q# operations.
+The QDK is available for multiple development environments. Select your preferred setup from:
+
+[**Q# for command line applications**](xref:microsoft.quantum.install.standalone) - Choose this approach to work with Q# from the command line. This does not require a driver or a host program like the below options.
+
+[**Q# with Jupyter Notebooks**](xref:microsoft.quantum.install.jupyter) - Select this environment to run Q# code in cells with embedded text or create quantum computing interactive tutorials. 
+
+[**Q# with Python**](xref:microsoft.quantum.install.python) - Enables you to combine Python and Q# to create a Python host program that calls Q# operations.
+
+[**Q# with .NET**](xref:microsoft.quantum.install.cs) - Combine C#, F#, or VB.NET with Q# to create a .NET host program that calls Q# operations.

@@ -32,7 +32,7 @@ Here we detail the core concepts of the Q# language and all the information you 
     Here you see how to define and call them, including the adjoint and controlled versions of quantum operations.
 
 - [Variables](xref:microsoft.quantum.guide.variables): describes the role of variables within Q# programs and how to leverage them effectively. 
-    For example, you will learn about binding scopes, as well as the difference between immutable/mutable variables and how to assign/re-assign them.
+    For example, you can find information about binding scopes, as well as the difference between immutable/mutable variables and how to assign/re-assign them.
 
 - [Working with qubits](xref:microsoft.quantum.guide.qubits): describes the features of Q# that you can use to address individual qubits and systems of qubits. 
     Specifically, that entails their allocation, performing operations on them, and ultimately their measurement. 

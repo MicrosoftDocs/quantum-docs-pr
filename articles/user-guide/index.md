@@ -34,7 +34,7 @@ Here we detail the core concepts of the Q# language and all the information you 
 - [Variables](xref:microsoft.quantum.guide.variables): describes the role of variables within Q# programs and how to leverage them effectively. 
     For example, you can find information about binding scopes, as well as the difference between immutable/mutable variables and how to assign/re-assign them.
 
-- [Working with qubits](xref:microsoft.quantum.guide.qubits): describes the features of Q# that you can use to address individual qubits and systems of qubits. 
+- [Working with qubits](xref:microsoft.quantum.guide.qubits): describes the features of Q# used to address individual qubits and systems of qubits. 
     Specifically, that entails their allocation, performing operations on them, and ultimately their measurement. 
 
 - [Control Flow](xref:microsoft.quantum.guide.controlflow): details the programming control flow patterns available in Q#, which includes many standard techniques (conditional execution, for loops, while loops, etc.) as well as the quantum-specific "Repeat-Until-Success" pattern.

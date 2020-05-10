@@ -26,7 +26,7 @@ Here we detail the core concepts of the Q# language as well provide all the info
 
 ### Using Q#
 
-- [Q# File Structure](xref:microsoft.quantum.guide.filestructure): describes the structure and syntax of a `.qs` Q# file.
+- [Q# File Structure](xref:microsoft.quantum.guide.filestructure): describes the structure and syntax of a `*.qs` Q# file.
 
 - [Operations and Functions](xref:microsoft.quantum.guide.operationsfunctions): details the two callable types of the Q# language: *operations*, which include action on qubits and quantum systems; and *functions*, which strictly work with classical information. 
     Here you see how to define and call them, including the adjoint and controlled versions of quantum operations.

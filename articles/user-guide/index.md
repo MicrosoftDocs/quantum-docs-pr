@@ -12,7 +12,7 @@ uid: microsoft.quantum.guide
 
 Welcome to the Q# User Guide! 
 
-Here we detail the core concepts of the Q# language as well provide all the information you need to start writing your own quantum programs.
+Here we detail the core concepts of the Q# language and all the information you need to write quantum programs.
 
 ## User Guide Contents
 

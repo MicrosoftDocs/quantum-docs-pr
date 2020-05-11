@@ -18,63 +18,65 @@ Q# programs can be executed on their own, without a driver in a host language li
 
 ## Installation
 
-While you can build Q# command line applications in any IDE, we highly recommend using Visual Studio Code (VS Code) or Visual Studio IDE for your Q# applications. By using VS Code or Visual Studio and the QDK Visual Studio Code extension you gain access to richer functionality.
+While you can build Q# command line applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for your Q# applications. Developing in these tools provides access to rich functionality.
 
-- Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac)
-- Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
-OR
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, with the .NET Core cross-platform development workload enabled
-- Download and install the [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+To configure VS Code:
+
+1. Download and install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
+2. Install the [Microsoft QDK for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
+
+To configure Visual Studio:
+
+1. Download and install [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 or greater, with the .NET Core cross-platform development workload enabled.
+2. Download and install the [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
 
 ## Develop with Q# using VS Code
 
-Install the Quantum project templates:
+Install the Q# project templates:
 
-- Go to **View** -> **Command Palette**
-- Select **Q#: Install project templates**
+1. Open VS Code.
+2. Click **View** -> **Command Palette**.
+3. Select **Q#: Install project templates**.
 
-You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.
-- Create a new project:
-  - Go to **View** -> **Command Palette**
-  - Select **Q#: Create New Project**
-  - Select **Standalone console application**
-  - Navigate to the location on the file system where you would like to create the application
-  - Click on the **Open new project...** button, once the project has been created
+When **Project templates installed successfully** displays, the QDK is ready to use with your own applications and libraries.
+
+To create a new project:
+
+1. Click **View** -> **Command Palette** and select **Q#: Create New Project**.
+2. Click **Standalone console application**.
+3. Navigate to the location to save the project and click **Create Project**.
+4. When the project is successfully created, click **Open new project...** in the lower right.
         
-- Inspect the project
-  - You should see that a file called `Program.qs` created, which is a Q# program that defines a simple operation to print a message to the console.
+Inspect the project. You should see a source file named `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.
 
-- Run the application:
-  - Go to **Terminal** -> **New Terminal**
-  - Enter `dotnet run`
-  - You should see the following text in the output window `Hello quantum world!`
+To run the application:
+1. Click **Terminal** -> **New Terminal**.
+2. At the terminal prompt, enter `dotnet run`.
+3. You should see the following text in the output window `Hello quantum world!`
 
 
 > [!NOTE]
-> * Workspaces with multiple root folders are not currently supported by the Visual Studio Code extension. If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.
+> Workspaces with multiple root folders are not currently supported by the VS Code Q# extension. If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.
 
 ## Develop with Q# using Visual Studio
 
-Verify the installation by creating a `Hello World` application
+Verify your Visual Studio installation by creating a Q# `Hello World` application.
 
-- Create a new Q# application
-  - Go to **File** -> **New** -> **Project**
-  - Type `Q#` in the search box
-  - Select **Q# Application**
-  - Select **Next**
-  - Choose a name and location for your application
-  - Select **Create**
+To create a new Q# application:
+1. Open Visual Studio and click **File** -> **New** -> **Project**.
+2. Type `Q#` in the search box, select **Q# Application** and click **Next**.
+3. Enter a name and location for your application and click **Create**.
 
-- Inspect the project
-  - You should see that a file called `Program.qs` has been created, which is a Q# program that defines a simple operation to print a message to the console.
 
-- Run the application
-  - Select **Debug** -> **Start Without Debugging**
-  - You should see the text `Hello quantum world!` printed to a console window.
+Inspect the project. You should see a source file named `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.
+
+To run the application:
+1. Select **Debug** -> **Start Without Debugging**.
+2. You should see the text `Hello quantum world!` printed to a console window.
 
 > [!NOTE]
-> * If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its subfolders.  
+> If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its sub-folders.  
 
 
 ## What's next?

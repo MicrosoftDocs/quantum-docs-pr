@@ -1,6 +1,6 @@
 ---
 title: Learn how to install the Microsoft Quantum Development Kit (QDK)
-description: How to install the Microsoft Quantum Development Kit for C#, Python, and Jupyter Notebook environments.
+description: How to install the Microsoft Quantum Development Kit for different environments.
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019

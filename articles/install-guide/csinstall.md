@@ -92,4 +92,4 @@ To call this operation from .NET on a quantum simulator, you can use the `Run` m
     
 ## What's next?
 
-Now that you have Quantum Development Kit set up for both Q# command-line programs, and for interoperability with .NET, you can write and run [your first quantum program](xref:microsoft.quantum.write-program).
+Now that you have Quantum Development Kit set up for both Q# command-line programs, and for interoperability with .NET, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng).

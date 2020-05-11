@@ -24,7 +24,7 @@
   items:
   - name: Quantum random number generator
     href: quickstarts/qrng.md
-  - name: Exploring entanglement with Q#
+  - name: Explore entanglement with Q#
     href: quickstart.md
   - name: Implement Grover's search algorithm
     href: quickstarts/search.md

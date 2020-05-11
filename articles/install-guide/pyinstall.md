@@ -8,7 +8,7 @@ ms.custom: how-to
 uid: microsoft.quantum.install.python
 ---
 
-# Develop with Q# + Python
+# Develop with Q# and Python
 
 Install the QDK to develop Python host programs to call Q# operations.
 

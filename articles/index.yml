@@ -69,7 +69,7 @@ landingContent:
         links:
           - text: Build a quantum random number generator
             url: quickstarts/qrng.md
-          - text: Exploring entanglement with Q#
+          - text: Explore entanglement with Q#
             url: quickstart.md
           - text: "Quantum speedup: Grover's search algorithm"
             url: quickstarts/search.md

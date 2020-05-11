@@ -8,7 +8,7 @@ ms.topic: tutorial
 uid: microsoft.quantum.write-program
 ---
 
-# Quickstart: Exploring entanglement with Q\#
+# Tutorial: Explore entanglement with Q\#
 
 In this Quickstart, we show you how to write a Q# program that manipulates and
 measures qubits and demonstrates the effects of superposition and entanglement.

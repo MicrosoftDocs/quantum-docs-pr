@@ -1,7 +1,7 @@
 ---
 title: '%lsmagic (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.lsmagic
-ms.date: '2020-04-29'
+ms.date: '2020-05-11'
 ms.topic: article
 ---
 

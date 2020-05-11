@@ -1,7 +1,7 @@
 ---
 title: '%simulate (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.simulate
-ms.date: '2020-04-29'
+ms.date: '2020-05-11'
 ms.topic: article
 ---
 

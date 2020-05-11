@@ -499,7 +499,6 @@ before and after the measurements. The final operation code should look like:
         Message($"Post-QFT measurement results [qubit0, qubit1, qubit2]: ");
         return resultArray;
     }
-}
 ```
 
 Run the project, and your output should look similar to the following:

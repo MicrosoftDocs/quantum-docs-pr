@@ -42,9 +42,6 @@ In 1994, Peter Shor showed that a scalable quantum computer could break widely u
 
 In 1996, Lov Grover developed a quantum algorithm that dramatically sped up the solution to unstructured data searches, running the search in fewer steps than any classical algorithm could.
 
-> [!NOTE]
-> Ready to try it out? Jump to the Q# tutorial [Implement Grover's search algorithm in Q#](xref:microsoft.quantum.quickstarts.search).
-
 ## Quantum-inspired computing and optimization
 
 Quantum-inspired algorithms use quantum principles for increased speed and accuracy but implement on classical computer systems. This approach allows developers to leverage the power of new quantum techniques today without waiting for quantum hardware, which is still an emerging industry.
@@ -64,15 +61,15 @@ The Quantum Development Kit comes with the [quantum machine learning library](xr
 
 Q# is Microsoft's open-source programming language for developing and running quantum algorithms. It is part of the [QDK](https://docs.microsoft.com/quantum/), a full-featured development kit for Q# that you can use with standard tools and languages to develop quantum applications that you can run in various environments, including the built-in full-state quantum simulator.
 
-There are extensions for Visual Studio and VS Code, and packages for use with Python and Jupyter Notebooks.
+There are extensions for Visual Studio and VS Code, and packages for use with Python and Jupyter Notebook.
 
-The QDK includes a standard library along with customized chemistry, machine learning, and numerics libraries.
+The QDK includes a standard library along with specialized chemistry, machine learning, and numerics libraries.
 
 The documentation includes a Q# language guide, tutorials, and sample code to get you started quickly, and rich articles to help you dive deeper into quantum computing concepts.  
 
 ## Microsoft quantum hardware partners
 
-Microsoft is partnering with quantum hardware companies to provide developers with cloud access to quantum computers. Leveraging the [Azure Quantum](https://azure.microsoft.com/services/quantum/) platform and the Q# language, developers will be able to explore quantum algorithms and run their quantum programs on different types of quantum hardware.
+Microsoft is partnering with quantum hardware companies to provide developers with cloud access to quantum hardware. Leveraging the [Azure Quantum](https://azure.microsoft.com/services/quantum/) platform and the Q# language, developers will be able to explore quantum algorithms and run their quantum programs on different types of quantum hardware.
 
 [IonQ](https://ionq.com/news/november-4-2019-microsoft-partnership) and [Honeywell](https://www.honeywell.com/en-us/newsroom/news/2019/11/the-future-of-quantum-computing) both use **trapped ion** based processors, utilizing individual ions trapped in an electronic field, whereas [QCI](https://quantumcircuits.com/news-and-publications/quantum-circuits-partners-with-microsoft-on-azure-quantum) uses superconducting circuits.
 

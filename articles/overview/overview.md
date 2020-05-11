@@ -55,7 +55,7 @@ Optimization is the task of balancing a system for maximum efficiency and minimu
 
 Machine learning on classical computers is revolutionizing the world of science and business. However, the high computational cost of training the models hinders the development and scope of the field. The field of quantum machine learning explores how to devise and implement quantum software that could enable machine learning that is faster than that of classical computers.
 
-The Quantum Development Kit comes with the [quantum machine learning library](xref:microsoft.quantum.machine-learning.concepts.intro) that gives you the ability to run hybrid quantum/classical machine learning experiments. The library includes samples and tutorials, and provides the necessary tools to implement a new hybrid quantum-classical algorithm, the circuit-centric quantum classifier, to solve supervised classification problems.
+The Quantum Development Kit comes with the [quantum machine learning library](xref:microsoft.quantum.machine-learning.concepts.intro) that gives you the ability to run hybrid quantum/classical machine learning experiments. The library includes samples and tutorials, and provides the necessary tools to implement a new hybrid quantum–classical algorithm, the circuit-centric quantum classifier, to solve supervised classification problems.
 
 ## Q# and the Microsoft Quantum Development Kit (QDK)
 

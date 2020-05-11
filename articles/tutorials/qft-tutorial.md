@@ -606,7 +606,8 @@ namespaces at the beginning of the Q# file:
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Arithmetic;
 ```
-
+> [!NOTE]
+> Be sure to move the `@EntryPoint()` attribute to directly precede your newly defined operation.
 To see the real benefit of using the Q# library operations, change the number of
 qubits to something other than `3`:
 

@@ -8,23 +8,22 @@ ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
 ---
 
+# Quickstart: Implement a Quantum Random Number Generator in Q\#
 
-# Quickstart: Implement a Quantum Random Number Generator in Q#
-A simple example of a quantum algorithm written in Q# is a quantum random number generator. This algorithm leverages the nature of quantum mechanics to produce a random number. 
+A simple example of a quantum algorithm written in Q# is a quantum random number generator. This algorithm leverages the nature of quantum mechanics to produce a random number.
 
 ## Prerequisites
 
 - The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
 - [Create a Q# Project](xref:microsoft.quantum.howto.createproject)
 
-
 ## Write a Q# operation
 
 ### Q# operation code
 
-1. Replace the contents of the Operation.qs file with the following code:
+1. Replace the contents of the Program.qs file with the following code:
 
- :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-14":::
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
 As mentioned in our [What is Quantum Computing?](xref:microsoft.quantum.overview.what) article, a qubit is a unit of quantum information that can be in superposition. When measured, a qubit can only be either 0 or 1. However, during execution the state of the qubit represents the probability of reading either a 0 or a 1 with a measurement. This probabilistic state is known as superposition. We can use this probability to generate random numbers.
 
@@ -32,7 +31,7 @@ In our Q# operation, we introduce the `Qubit` datatype, native to Q#. We can onl
 
 Using the `H` operation, we are able to put our `Qubit` in superposition. To measure a qubit and read its value, you use the `M` intrinsic operation.
 
-By putting our `Qubit` in superposition and measuring it, our result will be a different value each time the code is invoked. 
+By putting our `Qubit` in superposition and measuring it, our result will be a different value each time the code is invoked.
 
 When a `Qubit` is de-allocated it must be explicitly set back to the `Zero` state, otherwise the simulator will report a runtime error. An easy way to achieve this is invoking `Reset`.
 
@@ -48,52 +47,68 @@ We can use this representation to visualize what the code is doing:
 
 <img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
 
-
 * Then we measure the qubit and save the output:
 
 <img src="~/media/qrng-meas.png" width="450" alt="Measuring a qubit and saving the output">
 
 Since the outcome of the measurement is completely random, we have obtained a random bit. We can call this operation several times to create integers. For example, if we call the operation three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).
 
-## Creating a complete random number generator using a host program
 
-Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator with a host program.
+## Creating a complete random number generator
 
- ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
- 
- To run your new Q# program from Python, save the following code as `host.py`:
- 
-:::code language="python" source="~/quantum/samples/getting-started/qrng/host.py" range="11-30":::
+Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator. We can use the Q# command line applications or use a host program.
 
- You can then run your Python host program from the command line:
- ```bash
- $ python host.py
- Preparing Q# environment...
- ..The random number generated is 42
- ```
- ### [C# with Visual Studio Code or the Command Line](#tab/tabid-csharp)
- 
- To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
- 
- :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
- 
- You can then run your C# host program from the command line:
- 
- ```bash
- $ dotnet run
- The random number generated is 42
- ```
 
- ### [C# with Visual Studio 2019](#tab/tabid-vs2019)
 
- To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:
+### [Q# command line applications with Visual Studio or Visual Studio Code](#tab/tabid-qsharp)
 
- :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+To create the full Q# command line application, add the following entry point to your Q# program: 
 
- Then press F5, the program will start execution and a new window will pop up with the random number generated: 
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
- ```bash
- $ dotnet run
- The random number generated is 42
- ```
- ***
+The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
+
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
+
+In Visual Studio, simply press Ctrl + F5 to execute the script.
+
+In VS Code, build the Program.qs the first time by typing the below in the terminal:
+
+```dotnetcli
+dotnet build
+```
+
+For subsequent runs, there is no need to build it again. To run it, type the following command and press enter:
+
+```dotnetcli
+dotnet run --no-build
+```
+
+### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
+
+To run your new Q# program from Python, save the following code as `host.py`:
+
+:::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
+
+You can then run your Python host program from the command line:
+
+```bash
+$ python host.py
+Preparing Q# environment...
+..The random number generated is 42
+```
+
+### [C# with Visual Studio Code or Visual Studio](#tab/tabid-csharp)
+
+To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:
+
+:::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
+
+You can then run your C# host program from the command line (in Visual Studio you should press F5):
+
+```bash
+$ dotnet run
+The random number generated is 42
+```
+
+***

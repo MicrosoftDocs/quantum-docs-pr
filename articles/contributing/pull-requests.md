@@ -55,9 +55,9 @@ Using this process helps us use GitHub functionality to improve contributions an
 
 ## How to Make a Pull Request ##
 
-There are two main ways to make a pull request.
-For small changes that only affect a single file, the GitHub web interface can be used to make a pull request entirely online.
-For more complicated contributions, it's most often easier to use your local computer to prepare for a pull request first.
+There are two main ways to make a pull request.  
+For small changes that only affect a single file, the GitHub web interface can be used to make a pull request entirely online. Simply navigate to the file you want to edit and use the edit icon.  
+For more complicated contributions, it's most often easier to clone the repository to your local computer to prepare for a pull request first.
 
 <!--
 ### Using the Web Interface ###

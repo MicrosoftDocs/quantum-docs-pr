@@ -1,6 +1,6 @@
 - name: Microsoft Quantum Documentation
   href: index.yml
-- name: Get started with quantum computing
+- name: Overview
   items:
   - name: What is quantum computing?
     href: overview/what-is-quantum-computing.md
@@ -12,39 +12,27 @@
     href: overview/what-is-qsharp.md
   - name: How can I learn more?
     href: overview/how-to-learn-quantum-computing.md
-- name: Get the Quantum Development Kit
+- name: Quickstarts
   items:
   - name: Get started with the QDK
     href: welcome.md
   - name: Install the QDK
-    items:
-    - name: Installation overview
-      href: install-guide/index.md
-    - name: Q# + C#
-      href: install-guide/csinstall.md
-    - name: Q# + Python
-      href: install-guide/pyinstall.md
-    - name: Q# Jupyter notebooks
-      href: install-guide/qjupyter.md
+    href: install-guide/toc.yml
   - name: Update the QDK
     href: install-guide/update.md
-  - name: How to create a Q# project
-    href: how-to-guides/create-qsharp-project.md
-- name: Q# learning resources
+- name: Tutorials
   items:
-  - name: Quickstarts
-    items:
-    - name: Quantum random number generator
-      href: quickstarts/qrng.md
-    - name: Exploring entanglement with Q#
-      href: quickstart.md
-    - name: "Implement Grover's search algorithm"
-      href: quickstarts/search.md
+  - name: Quantum random number generator
+    href: quickstarts/qrng.md
+  - name: Exploring entanglement with Q#
+    href: quickstart.md
+  - name: Implement Grover's search algorithm
+    href: quickstarts/search.md
   - name: Learn Q# with the Quantum Katas
     href: intro-to-katas.md
   - name: Q# code samples
     href: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
-- name: The QDK in-depth
+- name: Q# user guide
   items:
   - name: Quantum development techniques
     topicHref: techniques/index.md
@@ -54,15 +42,21 @@
     href: language/toc.yml
   - name: Quantum simulators and resource estimators
     href: machines/toc.yml
-- name: Q# libraries
-  href: libraries/toc.yml
-- name: Quantum computing concepts
-  href: concepts/toc.yml
-- name: Further reading
-  href: for-more-info.md
-- name: Contributing to the QDK
-  href: contributing/toc.yml
-  topicHref: contributing/index.md
-- name: QDK Release Notes
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
+- name: Concepts 
+  items: 
+  - name: Quantum computing concepts
+    href: concepts/toc.yml
+  - name: Q# libraries
+    href: libraries/toc.yml
+- name: Resources 
+  items: 
+  - name: Glossary
+    href: concepts/Glossary.md
+  - name: Contributing to the QDK
+    href: contributing/toc.yml
+    topicHref: contributing/index.md
+  - name: QDK Release Notes
+    topicHref: relnotes/index.md
+    href: relnotes/toc.yml
+  - name: Further reading
+    href: for-more-info.md

@@ -275,7 +275,7 @@ For instance, if `Fun` is a function with signature `'T1->Unit`:
 
 ```qsharp
 let f = Fun<Int>;            // f is Int->Unit.
-SomeOtherFun(Fun<Double>);   // A Double->Unit is passed to SomOtherFun.
+SomeOtherFun(Fun<Double>);   // A Double->Unit is passed to SomeOtherFun.
 let g = Fun;                 // This causes a compilation error.
 SomeOtherFun(Fun);           // This also causes a compilation error.
 ```

@@ -1,12 +1,19 @@
 - name: API reference
   items:
+  - name: API reference
+    href: index.md   
   - name: Q# libraries
+    topicHref: qsharp/index.md
     href: qsharp/toc.yml
   - name: .NET libraries
     items:
+    - name: .NET libraries
+      href: dot-net-libraries.md
     - name: Trace simulator
       href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators
     - name: Quantum chemistry
       href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry
   - name: Python libraries
     href: https://docs.microsoft.com/python/qsharp
+  - name: IQ# magic commands
+    href: iqsharp-magic/toc.yml

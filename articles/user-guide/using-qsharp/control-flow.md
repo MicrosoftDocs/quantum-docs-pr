@@ -56,7 +56,7 @@ if (i == 1) {
     let n = 1;
 } elif (i == 2) {
     Y(target);
-    let m = n + 1; // error, because n is not bound
+    let m = n + 1; // would cause an error, because n is no longer bound
 } else {
     Z(target);
 }

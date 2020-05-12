@@ -16,7 +16,7 @@ For some of these problems, even our most powerful computers run into problems. 
 
 ## What is quantum computing?
 
-In modern usage, the word quantum means the smallest possible discrete unit of any physical property, usually referring to properties of atomic or sub-atomic particles. Quantum computers use actual quantum particles, artificial atoms, or collective properties of quantum particles as processing units, and are large, complex, and expensive devices.
+In modern usage, the word quantum means the smallest possible discrete unit of any physical property, usually referring to properties of atomic or subatomic particles. Quantum computers use actual quantum particles, artificial atoms, or collective properties of quantum particles as processing units, and are large, complex, and expensive devices.
 
 Harnessing the unique behavior of quantum physics and applying it to computing, quantum computers introduce new concepts to traditional programming methods, making use of quantum physics behaviors such as superposition, entanglement, and quantum interference.
 
@@ -32,7 +32,7 @@ A quantum computer isn't a supercomputer that can do everything faster, but ther
 
 ## Quantum simulation
 
-Since quantum computers use quantum phenomena in computation, they are well-suited for modeling other quantum systems. Photosynthesis, superconductivity, and complex molecular formations are examples of quantum mechanisms that quantum programs can simulate.
+Since quantum computers use quantum phenomena in computation, they are well suited for modeling other quantum systems. Photosynthesis, superconductivity, and complex molecular formations are examples of quantum mechanisms that quantum programs can simulate.
 
 ## Cryptography and Shor’s algorithm
 
@@ -53,7 +53,7 @@ Optimization is the process of finding the best solution to a problem, given its
 
 ## Quantum machine learning
 
-Machine learning on classical computers is revolutionizing the world of science and business. However, the high computational cost of training the models hinders the development and scope of the field. The field of quantum machine learning explores how to devise and implement quantum software that could enable machine learning that is faster than that of classical computers.
+Machine learning on classical computers is revolutionizing the world of science and business. However, the high computational cost of training the models hinders the development and scope of the field. The area of quantum machine learning explores how to devise and implement quantum software that enables machine learning that runs faster than classical computers.
 
 The Quantum Development Kit comes with the [quantum machine learning library](xref:microsoft.quantum.machine-learning.concepts.intro) that gives you the ability to run hybrid quantum/classical machine learning experiments. The library includes samples and tutorials, and provides the necessary tools to implement a new hybrid quantum–classical algorithm, the circuit-centric quantum classifier, to solve supervised classification problems.
 
@@ -71,7 +71,7 @@ The documentation includes a Q# language guide, tutorials, and sample code to ge
 
 Microsoft is partnering with quantum hardware companies to provide developers with cloud access to quantum hardware. Leveraging the [Azure Quantum](https://azure.microsoft.com/services/quantum/) platform and the Q# language, developers will be able to explore quantum algorithms and run their quantum programs on different types of quantum hardware.
 
-[IonQ](https://ionq.com/news/november-4-2019-microsoft-partnership) and [Honeywell](https://www.honeywell.com/en-us/newsroom/news/2019/11/the-future-of-quantum-computing) both use **trapped ion** based processors, utilizing individual ions trapped in an electronic field, whereas [QCI](https://quantumcircuits.com/news-and-publications/quantum-circuits-partners-with-microsoft-on-azure-quantum) uses superconducting circuits.
+[IonQ](https://ionq.com/news/november-4-2019-microsoft-partnership) and [Honeywell](https://www.honeywell.com/en-us/newsroom/news/2019/11/the-future-of-quantum-computing) both use **trapped ion-based** processors, utilizing individual ions trapped in an electronic field, whereas [QCI](https://quantumcircuits.com/news-and-publications/quantum-circuits-partners-with-microsoft-on-azure-quantum) uses superconducting circuits.
 
 ## Next steps
 Key concepts for quantum computing

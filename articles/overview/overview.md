@@ -74,8 +74,6 @@ Microsoft is partnering with quantum hardware companies to provide developers wi
 [IonQ](https://ionq.com/news/november-4-2019-microsoft-partnership) and [Honeywell](https://www.honeywell.com/en-us/newsroom/news/2019/11/the-future-of-quantum-computing) both use **trapped ion-based** processors, utilizing individual ions trapped in an electronic field, whereas [QCI](https://quantumcircuits.com/news-and-publications/quantum-circuits-partners-with-microsoft-on-azure-quantum) uses superconducting circuits.
 
 ## Next steps
-Key concepts for quantum computing
 
-Quickstarts
-<!-- >> [!div class="nextstepaction"]
-> [Next steps button](contribute-get-started-mvc.md) -->
+[Key concepts for quantum computing](xref:microsoft.quantum.overview.understanding)
+[Quickstarts](xref:microsoft.quantum.welcome)

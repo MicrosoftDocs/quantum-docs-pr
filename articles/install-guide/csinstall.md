@@ -1,5 +1,5 @@
 ---
-title: Develop with Q# + C#
+title: Develop with Q# and .NET
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019

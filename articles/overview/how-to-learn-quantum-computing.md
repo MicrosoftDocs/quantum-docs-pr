@@ -1,5 +1,5 @@
 ---
-title: How to learn quantum computing?
+title: How to learn quantum computing
 description: Resources for basic math and physics knowledge to help you get started with quantum computing. 
 author: natke
 ms.author:  nakersha
@@ -52,4 +52,3 @@ You don’t have to learn this alone, there is a large community of amateurs and
 * Check [Q# Community](https://qsharp.community/) and [Awesome Q#](https://project-awesome.org/ebraminio/awesome-qsharp) to look for more resources and material.
 
  If you’re looking to teach a course on quantum computing, the [Microsoft Quantum Network](https://info.microsoft.com/LearnMoreAboutMicrosoftQuantumNetwork.html) can help provide curriculum assistance.  
-

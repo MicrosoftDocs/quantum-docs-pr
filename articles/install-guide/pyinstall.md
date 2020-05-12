@@ -1,5 +1,5 @@
 ---
-title: Develop with Q# + Python
+title: Develop with Q# and Python
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019

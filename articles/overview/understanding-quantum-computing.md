@@ -10,9 +10,9 @@ uid: microsoft.quantum.overview.understanding
 
 # Understanding quantum computing
 
-Quantum computing uses the principles of quantum mechanics to process information. Because of this, quantum computing requires a different approach than classical computing.  One example of this is the processor used in quantum computers.  Where classical computers use familiar silicon-based chips, quantum computers use quantum material such as atoms, ions, photons, or electrons.  
+Quantum computing uses the principles of quantum mechanics to process information. Because of this, quantum computing requires a different approach than classical computing.  One example of this difference is the processor used in quantum computers.  Where classical computers use familiar silicon-based chips, quantum computers use quantum material such as atoms, ions, photons, or electrons.  
 
-This quantum material behaves according to the laws of quantum mechanics, leveraging concepts such as probabilistic computation, superposition, and entanglement, which provide the basis for quantum algorithms that harness the power of quantum computing to solve complex problems. This article describes some of the essential concepts of quantum mechanics on which quantum computing is based.
+The quantum material behaves according to the laws of quantum mechanics, leveraging concepts such as probabilistic computation, superposition, and entanglement. These concepts provide the basis for quantum algorithms that harness the power of quantum computing to solve complex problems. This article describes some of the essential concepts of quantum mechanics on which quantum computing is based.
 
 ## A bird’s-eye view of quantum mechanics
 
@@ -22,9 +22,9 @@ Quantum mechanics, also called quantum theory, is a branch of physics that deals
 
 Imagine that you are exercising in your living room. You turn all the way to your left and then all the way to your right. Now turn to your left and your right at the same time. You can’t do it (not without splitting yourself in two, at least).  Obviously, you can’t be in both of those states at once – you can’t be facing left and facing right at the same time.
 
-However, if you were a quantum particle, then you could be *facing left* AND *facing right* AND *anywhere in-between* at the same time due to a phenomenon known as **superposition** (also known as **coherence**).
+However, if you are a quantum particle, then you can be *facing left* AND *facing right* AND *anywhere in-between* at the same time due to a phenomenon known as **superposition** (also known as **coherence**).
 
-A quantum particle such as an electron has its own “facing left or facing right” property called **spin**, generally referred to as either up or down, or to make it more relatable to classical binary computing, let’s just say 1 or 0. When a quantum particle is in a superposition state, it’s a linear combination of an infinite number of states between 1 and 0, but you don’t know which one it will be until you actually look at it, which brings up our next phenomenon, **quantum measurement**.
+A quantum particle such as an electron has its own “facing left or facing right” property called **spin**, referred to as either up or down, or to make it more relatable to classical binary computing, let’s just say 1 or 0. When a quantum particle is in a superposition state, it’s a linear combination of an infinite number of states between 1 and 0, but you don’t know which one it will be until you actually look at it, which brings up our next phenomenon, **quantum measurement**.
 
 ### Quantum measurement
 

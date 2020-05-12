@@ -10,9 +10,9 @@ uid: microsoft.quantum.overview.algebra
 
 # Linear algebra for quantum computing
 
-Linear algebra is the language of quantum computing. Although you don’t need to know it to implement or write quantum programs, be aware that it is widely used to describe qubit states, quantum operations, and to predict what a quantum computer will do in response to a sequence of instructions.
+Linear algebra is the language of quantum computing. Although you don’t need to know it to implement or write quantum programs, it is widely used to describe qubit states, quantum operations, and to predict what a quantum computer will do in response to a sequence of instructions.
 
-Just like being familiar with the [basic concepts of quantum physics](xref:microsoft.quantum.overview.understanding) can help you understand quantum computing, knowing some basic linear algebra can help you understand how quantum algorithms work. At the very least, you’ll want to be familiar with **vectors** and **matrix multiplication**. If you need to refresh your knowledge of these algebra concepts, here are some tutorials that cover the basics:
+Just like being familiar with the [basic concepts of quantum physics](xref:microsoft.quantum.overview.understanding) can help you understand quantum computing, knowing some basic linear algebra can help you understand how quantum algorithms work. At the least, you’ll want to be familiar with **vectors** and **matrix multiplication**. If you need to refresh your knowledge of these algebra concepts, here are some tutorials that cover the basics:
 
 - [Jupyter notebook tutorial on linear algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
 - [Jupyter notebook tutorial on complex arithmetic](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
@@ -22,7 +22,7 @@ Just like being familiar with the [basic concepts of quantum physics](xref:micro
 
 ## Vectors and matrices in quantum computing
 
-In [Understanding quantum computing](xref:microsoft.quantum.overview.understanding), you saw that a qubit can be in a state of 1 or 0 or a superposition or both. Using linear algebra, the state of a qubit is described as a vector and is represented by a single column **matrix** $\begin{bmatrix} a \\\\  b \end{bmatrix}$. It is also known as a **quantum state vector** and must meet the requirement that $|a|^2 + |b|^2 = 1$.  
+In the topic [Understanding quantum computing](xref:microsoft.quantum.overview.understanding), you saw that a qubit can be in a state of 1 or 0 or a superposition or both. Using linear algebra, the state of a qubit is described as a vector and is represented by a single column **matrix** $\begin{bmatrix} a \\\\  b \end{bmatrix}$. It is also known as a **quantum state vector** and must meet the requirement that $|a|^2 + |b|^2 = 1$.  
 
 The elements of the matrix represent the probability of the qubit collapsing one way or the other, with $|a|^2$ being the probability of collapsing to zero, and $|b|^2$ being the probability of collapsing to one. The following matrices all represent valid quantum state vectors:
 
@@ -52,7 +52,7 @@ $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
 $$\frac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  1 \end{bmatrix}=\left(\frac{1}{\sqrt{2}}\right)^2=\frac{1}{2}.$$
 
-A matrix that represents a quantum operation has one requirement – it must be a **unitary** matrix. This means that the **inverse** of the matrix must be equal to the **conjugate transpose** of the matrix.
+A matrix that represents a quantum operation has one requirement – it must be a **unitary** matrix. A matrix is unitary if the **inverse** of the matrix is equal to the **conjugate transpose** of the matrix.
 
 ## Representing two-qubit states
 

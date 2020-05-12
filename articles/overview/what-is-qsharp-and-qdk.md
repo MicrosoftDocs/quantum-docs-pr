@@ -1,5 +1,5 @@
 ---
-title: What is the Q# programming language and QDK?
+title: What are the Q# programming language and QDK?
 description: Learn about the Microsoft Quantum Development Kit, the Q# programming language, and how you can create quantum programs.
 author: bradben
 ms.author:  bradben

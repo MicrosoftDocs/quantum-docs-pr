@@ -1,5 +1,5 @@
 ---
-title: Develop with Q# + C#
+title: Develop with Q# and .NET
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
@@ -7,7 +7,7 @@ ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
 ---
-# Using Q# with C\# and F\#
+# Develop with Q# and .NET
 
 Q# is built to play well with .NET languages such as C# and F#.
 In this guide, we'll demonstrate how to use Q# with a host program written in a .NET language.

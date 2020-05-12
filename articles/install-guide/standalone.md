@@ -1,5 +1,5 @@
 ---
-title: Execute Q# programs without a driver and a host language 
+title: Develop with Q# command line applications
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
@@ -8,7 +8,7 @@ ms.custom: how-to
 uid: microsoft.quantum.install.standalone
 ---
 
-# Q# Command Line Applications
+# Develop with Q# command line applications
 
 Q# programs can be executed on their own, without a driver in a host language like C#, F#, or Python.
 

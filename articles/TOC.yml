@@ -10,7 +10,7 @@
     href: overview/why-learn-quantum-computing.md
   - name: What are Q# and the QDK?
     href: overview/what-is-qsharp.md
-  - name: How can I learn more?
+  - name: How to learn quantum computing
     href: overview/how-to-learn-quantum-computing.md
 - name: Quickstarts
   items:
@@ -24,7 +24,7 @@
   items:
   - name: Quantum random number generator
     href: quickstarts/qrng.md
-  - name: Exploring entanglement with Q#
+  - name: Explore entanglement with Q#
     href: quickstart.md
   - name: Implement Grover's search algorithm
     href: quickstarts/search.md

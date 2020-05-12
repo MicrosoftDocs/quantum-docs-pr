@@ -1,6 +1,6 @@
 ---
-title: Learn how to install the Microsoft Quantum Development Kit (QDK)
-description: How to install the Microsoft Quantum Development Kit for C#, Python, and Jupyter Notebook environments.
+title: Install the Microsoft Quantum Development Kit (QDK)
+description: How to install the Microsoft Quantum Development Kit for different environments.
 author: natke
 ms.author: nakersha
 ms.date: 5/8/2020
@@ -24,10 +24,10 @@ They can also be paired with a host program written in a .NET language (typicall
 
 The QDK is available for multiple development environments. Select your preferred setup from:
 
-[**Q# for command line applications**](xref:microsoft.quantum.install.standalone) - Choose this approach to work with Q# from the command line. This does not require a driver or a host program like the below options.
+[**Develop with Q# command line applications**](xref:microsoft.quantum.install.standalone) - Choose this approach to work with Q# from the command line. This does not require a driver or a host program like the below options.
 
-[**Q# with Jupyter Notebooks**](xref:microsoft.quantum.install.jupyter) - Select this environment to run Q# code in cells with embedded text or create quantum computing interactive tutorials. 
+[**Develop with Q# Jupyter Notebooks**](xref:microsoft.quantum.install.jupyter) - Select this environment to run Q# code in cells with embedded text or create quantum computing interactive tutorials. 
 
-[**Q# with Python**](xref:microsoft.quantum.install.python) - Enables you to combine Python and Q# to create a Python host program that calls Q# operations.
+[**Develop with Q# and Python**](xref:microsoft.quantum.install.python) - Enables you to combine Python and Q# to create a Python host program that calls Q# operations.
 
-[**Q# with .NET**](xref:microsoft.quantum.install.cs) - Combine C#, F#, or VB.NET with Q# to create a .NET host program that calls Q# operations.
+[**Develop with Q# and .NET**](xref:microsoft.quantum.install.cs) - Combine C#, F#, or VB.NET with Q# to create a .NET host program that calls Q# operations.

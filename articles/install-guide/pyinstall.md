@@ -1,5 +1,5 @@
 ---
-title: Develop with Q# + Python
+title: Develop with Q# and Python
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
@@ -8,7 +8,7 @@ ms.custom: how-to
 uid: microsoft.quantum.install.python
 ---
 
-# Develop with Q# + Python
+# Develop with Q# and Python
 
 Install the QDK to develop Python host programs to call Q# operations.
 

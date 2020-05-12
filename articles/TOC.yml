@@ -33,15 +33,7 @@
   - name: Q# code samples
     href: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
 - name: Q# user guide
-  items:
-  - name: Quantum development techniques
-    topicHref: techniques/index.md
-    href: techniques/toc.yml
-  - name: Q# programming language
-    topicHref: language/index.md
-    href: language/toc.yml
-  - name: Quantum simulators and resource estimators
-    href: machines/toc.yml
+  href: user-guide/toc.yml
 - name: Concepts 
   items: 
   - name: Quantum computing concepts

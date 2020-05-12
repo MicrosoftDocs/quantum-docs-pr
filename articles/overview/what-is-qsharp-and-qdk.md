@@ -24,7 +24,7 @@ Integrate your quantum development with [Visual Studio, Visual Studio Code](xref
 
 ### Try quantum operations and domain-specific libraries
 
-Write and test quantum algorithms to explore superpositioning, entanglement, and other quantum operations. The Q# libraries enable you to run complex quantum operations without having to design low-level operation sequences.
+Write and test quantum algorithms to explore superposition, entanglement, and other quantum operations. The Q# libraries enable you to run complex quantum operations without having to design low-level operation sequences.
 
 ### Run programs in simulators
 

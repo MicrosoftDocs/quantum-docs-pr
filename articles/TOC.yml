@@ -10,7 +10,7 @@
     href: overview/why-learn-quantum-computing.md
   - name: What are Q# and the QDK?
     href: overview/what-is-qsharp.md
-  - name: How to learn quantum computing?
+  - name: How to learn quantum computing
     href: overview/how-to-learn-quantum-computing.md
 - name: Quickstarts
   items:

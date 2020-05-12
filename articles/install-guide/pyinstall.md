@@ -78,6 +78,6 @@ Install the QDK to develop Python host programs to call Q# operations.
 > [!NOTE]
 > * You can also use Python Jupyter notebooks to write the classical Python program and call Q# operations from the cells. The Python code is just a normal Python program.
 
-## What's next?
+## Next steps
 
-Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.write-program).
+Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng).

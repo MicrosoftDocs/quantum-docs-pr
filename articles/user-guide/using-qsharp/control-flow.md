@@ -110,15 +110,15 @@ To facilitate Repeat-Until-Success (RUS) patterns, Q# supports the constructs
 
 ```qsharp
 repeat {
-    statementBlock1
+    // do stuff
 }
 until (expression)
 fixup {
-    statementBlock2
+    // do other stuff
 }
 ```
 
-where `statementBlock1` and `statementBlock2` are zero or more Q# statements, and `expression` is any valid expression that evaluates to a value of type `Bool`.
+where `expression` is any valid expression that evaluates to a value of type `Bool`.
 The loop body is executed, and then the condition is evaluated.
 If the condition is true, then the statement is completed; otherwise, the fixup is executed, and the statement is re-executed starting with the loop body.
 
@@ -129,7 +129,7 @@ Further, the `fixup` statement is often useful but not always necessary.
 In cases that it is not needed, the construct
 ```qsharp
 repeat {
-    statementBlock1
+    // do stuff
 }
 until (expression);
 ```
@@ -204,7 +204,7 @@ For example,
 ```qsharp
 fail $"Impossible state reached";
 ```
-or
+or, using [interpolated strings](xref:microsoft.quantum.guide.expressions#interpolated-strings),
 ```qsharp
 fail $"Syndrome {syn} is incorrect";
 ```

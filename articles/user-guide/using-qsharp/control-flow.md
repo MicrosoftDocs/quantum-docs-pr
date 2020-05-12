@@ -44,14 +44,19 @@ For example,
 ```qsharp
 if (result == One) {
     X(target);
+    let n = 1;
+    // n is bound
 } 
+// n is not bound
 ```
 or
 ```qsharp
 if (i == 1) {
     X(target);
+    let n = 1;
 } elif (i == 2) {
     Y(target);
+    let m = n + 1; // error, because n is not bound
 } else {
     Z(target);
 }
@@ -77,6 +82,7 @@ For some examples, supposing `qubits` is a register of qubits (i.e. of type `Qub
 for (qubit in qubits) {  // iterate over each qubit value in the array qubits
     H(qubit);
 }
+// 'qubit' is no longer bound
 
 mutable results = new (Int, Results)[Length(qubits)];
 for (index in 0 .. Length(qubits) - 1) {  // iterates over the integers in the Range 0 .. (Length(qubits) - 1)
@@ -115,7 +121,9 @@ fixup {
 where `statementBlock1` and `statementBlock2` are zero or more Q# statements, and `expression` is any valid expression that evaluates to a value of type `Bool`.
 The loop body is executed, and then the condition is evaluated.
 If the condition is true, then the statement is completed; otherwise, the fixup is executed, and the statement is re-executed starting with the loop body.
-Note that completing the execution of the fixup ends the scope for the statement, so that symbol bindings made during the body or fixup are not available in subsequent repetitions.
+
+All three portions of a repeat/until loop (the body, the test, and the fixup) are treated as a single scope *for each repetition*, so symbols that are bound in the body are available in the test and in the fixup.
+However completing the execution of the fixup ends the scope for the statement, so that symbol bindings made during the body or fixup are not available in subsequent repetitions.
 
 Further, the `fixup` statement is often useful but not always necessary.
 In cases that it is not needed, the construct

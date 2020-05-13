@@ -9,8 +9,12 @@ type: operation
 namespace: Microsoft.Quantum.Measurement
 summary: |-
   Measures a single qubit in the X basis,
-  and resets it to the standard basis state
-  |0〉 following the measurement.
+  and resets it to a fixed initial state
+  following the measurement.
+
+  Performs a single-qubit measurement in the $X$-basis,
+  and ensures that the qubit is returned to $\ket{0}$
+  following the measurement.
 syntax: 'operation MResetX (target : Qubit) : Result'
 input:
   content: '(target : Qubit)'

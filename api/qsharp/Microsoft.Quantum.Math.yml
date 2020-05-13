@@ -72,20 +72,6 @@ functions:
   summary: |-
     Converts a complex number of type `ComplexPolar` to a complex
     number of type `Complex`.
-- uid: microsoft.quantum.math.complexpolartocomplex
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ComplexPolarToComplex has been deprecated. Please use @"microsoft.quantum.math.complexpolarascomplex" instead.
-- uid: microsoft.quantum.math.complextocomplexpolar
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ComplexToComplexPolar has been deprecated. Please use @"microsoft.quantum.math.complexascomplexpolar" instead.
 - uid: microsoft.quantum.math.continuedfractionconvergenti
   summary: |-
     Finds the continued fraction convergent closest to `fraction`

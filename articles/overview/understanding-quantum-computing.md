@@ -44,7 +44,7 @@ In addition to this interdependency, particles can maintain this connection even
 
 ### Qubits and probability
 
-Classical computers store and process information in bits, which can have a state of either 1 or 0, but never both. The equivalent in quantum computing is the **qubit**, which represents the state of a quantum particle. Because of superposition, qubits can either be 1 or 0 or anything in between. Depending on its configuration, a qubit has a certain *probability* of collapsing to 1 or 0. The ability to configure a qubit's probability of collapsing one way or the other is called **quantum interference**. 
+Classical computers store and process information in bits, which can have a state of either 1 or 0, but never both. The equivalent in quantum computing is the **qubit**, which represents the state of a quantum particle. Because of superposition, qubits can either be 1 or 0 or anything in between. Depending on its configuration, a qubit has a certain *probability* of collapsing to 1 or 0. The qubit's probability of collapsing one way or the other is determined by **quantum interference**. 
 
 Remember your friend that was taking your picture? Suppose they have special filters on their camera called *Interference* filters. If they select the *70/30* filter and start taking pictures, in 70% of them you will be facing left, and in 30% you will be facing right. The filter has interfered with the regular state of the camera to influence the probability of its behavior.
 
@@ -60,7 +60,7 @@ These concepts just scratch the surface of quantum mechanics, but are fundamenta
 - **Quantum measurement** - The act of observing a quantum particle in superposition and resulting in one of the possible states.
 - **Entanglement** - The ability of quantum particles to correlate their measurement results with each other.
 - **Qubit** - The basic unit of information in quantum computing. A qubit represents a quantum particle in superposition of all possible states.
-- **Interference** - Actions applied to a qubit to influence the probability of it collapsing one way or another.
+- **Interference** - Intrinsic behavior of a qubit due to superposition to influence the probability of it collapsing one way or another.
 
 ## Next Steps
 

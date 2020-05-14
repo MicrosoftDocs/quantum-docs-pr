@@ -10,7 +10,7 @@ uid: microsoft.quantum.write-program
 
 # Tutorial: Explore entanglement with Q\#
 
-In this Quickstart, we show you how to write a Q# program that manipulates and
+In this tutorial, we show you how to write a Q# program that manipulates and
 measures qubits and demonstrates the effects of superposition and entanglement.
 This guides you on installing the QDK, building the program and executing that
 program on a quantum simulator.  
@@ -500,7 +500,7 @@ Congratulations, you've written your first quantum program!
 
 ## What's next?
 
-The QuickStart [Grover’s search](xref:microsoft.quantum.quickstarts.search) shows you how to build and run Grover search, one of the most popular quantum computing algorithms and offers a nice example of a Q# program that can be used to solve real problems with quantum computing.  
+The tutorial [Grover’s search](xref:microsoft.quantum.quickstarts.search) shows you how to build and run Grover search, one of the most popular quantum computing algorithms and offers a nice example of a Q# program that can be used to solve real problems with quantum computing.  
 
 [Get Started with the Quantum Development Kit](xref:microsoft.quantum.welcome) recommends more ways to learn Q# and quantum programming.
 

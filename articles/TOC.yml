@@ -4,7 +4,7 @@
   items:
   - name: Introduction to quantum computing
     href: overview/overview.md
-    name: Key concepts
+  - name: Key concepts
     items: 
     - name: Understanding quantum computing
       href: overview/understanding-quantum-computing.md

@@ -38,9 +38,9 @@ landingContent:
 
 
   # Develop
-  - title: Get the Quantum Development Kit
+  - title: Start with the Quantum Development Kit
     linkLists:
-      - linkListType: overview
+      - linkListType: get-started
         links:
           - text: The Quantum Development Kit
             url: welcome.md
@@ -55,9 +55,9 @@ landingContent:
   # Development
   - title: Q# programming language
     linkLists:
-      - linkListType: overview
+      - linkListType: how-to-guide
         links:
-          - text: Q# language introduction
+          - text: Q# user guide
             url: user-guide/index.md
           - text: "Quantum simulators and host applications"
             url: machines/index.md

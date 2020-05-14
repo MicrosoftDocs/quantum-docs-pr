@@ -1,13 +1,3 @@
-- href: chemistry.broombridge.md
-  name: '%chemistry.broombridge magic command'
-- href: chemistry.encode.md
-  name: '%chemistry.encode magic command'
-- href: chemistry.fh.add_terms.md
-  name: '%chemistry.fh.add_terms magic command'
-- href: chemistry.fh.load.md
-  name: '%chemistry.fh.load magic command'
-- href: chemistry.inputstate.load.md
-  name: '%chemistry.inputstate.load magic command'
 - href: config.md
   name: '%config magic command'
 - href: estimate.md

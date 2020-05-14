@@ -24,7 +24,7 @@
     {
       "source_path": "articles/quantum-concepts-3-MatrixAdvanced.md",
       "redirect_url": "concepts/advanced-matrices",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-concepts-4-Qubit.md",
@@ -86,12 +86,12 @@
     {
       "source_path": "articles/quantum-techniques-1-Qsharp_FileStructure.md", 
       "redirect_url": "user-guide/basics",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-techniques-2-OperationsandFunctions.md", 
       "redirect_url": "user-guide/using-qsharp/operations-functions",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-techniques-3-LocalVariables.md", 
@@ -101,12 +101,12 @@
     { 
       "source_path": "articles/quantum-techniques-4-TypeModel.md", 
       "redirect_url": "user-guide/language/types",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-techniques-5-WorkingWithQubits.md",  
       "redirect_url": "user-guide/using-qsharp/working-with-qubits",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-techniques-6-PuttingItAllTogether.md",
@@ -116,12 +116,12 @@
     {
       "source_path": "articles/quantum-techniques-7-going-further.md",  
       "redirect_url": "user-guide/using-qsharp/operations-functions",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-techniques-TestingAndDebugging.md",
       "redirect_url": "user-guide/using-qsharp/testing-debugging",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
 
     {
@@ -178,27 +178,27 @@
     {
       "source_path": "articles/quantum-QR-Intro.md",  
       "redirect_url": "user-guide/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-QR-TypeModel.md", 
       "redirect_url": "user-guide/language/types",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-QR-Expressions.md",  
       "redirect_url": "user-guide/language/expressions",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-QR-Statements.md",   
       "redirect_url": "user-guide/using-qsharp/control-flow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-QR-FileStructure.md",  
       "redirect_url": "user-guide/using-qsharp/file-structure",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
 
     {
@@ -313,23 +313,23 @@
     },
     {
       "source_path": "articles/overview/what-is-quantum-computing.md",
-      "redirect_url": "overview",
+      "redirect_url": "understanding-quantum-computing",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/overview/quantum-computers.md",
-      "redirect_url": "overview",
+      "redirect_url": "quantum-computers-and-simulators",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/overview/why-learn-quantum-computing.md",
       "redirect_url": "overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/overview/what-is-qsharp.md",
       "redirect_url": "what-is-qsharp-and-qkd",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/overview/how-to-learn-quantum-computing.md",

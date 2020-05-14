@@ -11,7 +11,7 @@ metadata:
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
-  ms.date: 10/21/2019
+  ms.date: 5/10/2020
 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -23,16 +23,14 @@ landingContent:
     linkLists:
       - linkListType: learn
         links:
-          - text: What is quantum computing?
-            url: overview/what-is-quantum-computing.md
-          - text: What can a quantum computer do?
-            url: overview/quantum-computers.md
-          - text: Why learn quantum computing?
-            url: overview/why-learn-quantum-computing.md
+          - text: Understanding quantum computing
+            url: overview/understanding-quantum-computing.md
+          - text: Quantum computers and quantum simulators
+            url: overview/quantum-computers-and-simulators.md
           - text: What are Q# and the QDK?
-            url: overview/what-is-qsharp.md
-          - text: How can I learn more?
-            url: overview/how-to-learn-quantum-computing.md
+            url: overview/what-is-qsharp-and-qdk.md
+          - text: Linear algebra for quantum computing
+            url: overview/algebra-for-quantum-computing.md
       - linkListType: concept
         links:
           - text: Quantum computing concepts
@@ -40,9 +38,9 @@ landingContent:
 
 
   # Develop
-  - title: Get the Quantum Development Kit
+  - title: Start with the Quantum Development Kit
     linkLists:
-      - linkListType: overview
+      - linkListType: get-started
         links:
           - text: The Quantum Development Kit
             url: welcome.md
@@ -57,15 +55,13 @@ landingContent:
   # Development
   - title: Q# programming language
     linkLists:
-      - linkListType: overview
+      - linkListType: how-to-guide
         links:
-          - text: Q# language introduction
-            url: language/index.md
-          - text: Q# development techniques
-            url: techniques/index.md
-          - text: "Quantum simulators & host applications"
+          - text: Q# user guide
+            url: user-guide/index.md
+          - text: "Quantum simulators and host applications"
             url: machines/index.md
-      - linkListType: quickstart
+      - linkListType: tutorial
         links:
           - text: Build a quantum random number generator
             url: quickstarts/qrng.md

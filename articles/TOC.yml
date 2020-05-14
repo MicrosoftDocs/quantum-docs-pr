@@ -2,17 +2,20 @@
   href: index.yml
 - name: Overview
   items:
-  - name: What is quantum computing?
-    href: overview/what-is-quantum-computing.md
-  - name: What can a quantum computer do?
-    href: overview/quantum-computers.md
-  - name: Why learn quantum computing?
-    href: overview/why-learn-quantum-computing.md
-  - name: What are Q# and the QDK?
-    href: overview/what-is-qsharp.md
-  - name: How to learn quantum computing
-    href: overview/how-to-learn-quantum-computing.md
+  - name: Introduction to quantum computing
+    href: overview/overview.md
+  - name: Key concepts
+    items: 
+    - name: Understanding quantum computing
+      href: overview/understanding-quantum-computing.md
+    - name: Quantum computers and simulators
+      href: overview/quantum-computers-and-simulators.md
+    - name: What are Q# and the QDK?
+      href: overview/what-is-qsharp-and-qdk.md
+    - name: Linear algebra for quantum computing
+      href: overview/algebra-for-quantum-computing.md
 - name: Quickstarts
+  expanded: true 
   items:
   - name: Get started with the QDK
     href: welcome.md

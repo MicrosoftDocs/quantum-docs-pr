@@ -12,7 +12,7 @@ uid: microsoft.quantum.guide.basics
 
 In this section we present a brief introduction to the basic building blocks of Q#.
 
-For a quick overview of what Q# is and where it fits in as a fundamental component of the Quantum Development Kit, you can check out [What is Q#?](xref:microsoft.quantum.overview.qsharp). 
+For a quick overview of what Q# is and where it fits in as a fundamental component of the Quantum Development Kit, you can check out [What is Q#?](xref:microsoft.quantum.overview.q-sharp). 
 
 ## What is a quantum program?
 

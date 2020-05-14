@@ -8,9 +8,9 @@ ms.topic: article
 uid: microsoft.quantum.quickstarts.search
 ---
 
-# Quickstart: Implement Grover's search algorithm in Q\#
+# Tutorial: Implement Grover's search algorithm in Q\#
 
-In this Quickstart, you can learn how to build and run Grover search to speed up the search of unstructured data.  Grover's search is one of the most popular quantum computing algorithms, and this relatively small Q# implementation gives you a sense of some of the advantages of programming quantum solutions with a high-level Q# quantum programming language to express quantum algorithms.  At the end of the guide, you will see the simulation output demonstrates successfully finding a specific string among a list of unordered entries in a fraction of the time it would take to search the whole list on a classical computer.
+In this tutorial, you can learn how to build and run Grover search to speed up the search of unstructured data.  Grover's search is one of the most popular quantum computing algorithms, and this relatively small Q# implementation gives you a sense of some of the advantages of programming quantum solutions with a high-level Q# quantum programming language to express quantum algorithms.  At the end of the guide, you will see the simulation output demonstrates successfully finding a specific string among a list of unordered entries in a fraction of the time it would take to search the whole list on a classical computer.
 
 Grover's algorithm searches a list of unstructured data for specific items. For example, it can answer the question: Is this card drawn from a pack of cards an ace of hearts? The labeling of the specific item is called _marked input_.
 
@@ -101,7 +101,7 @@ Reflecting about marked state...
 
 ## Next steps
 
-If you enjoyed this quickstart, check out some of the resources below to learn more about how you can use Q# to write your own quantum applications:
+If you enjoyed this tutorial, check out some of the resources below to learn more about how you can use Q# to write your own quantum applications:
 
 - [Back to the Getting Started with QDK guide](xref:microsoft.quantum.welcome)
 - Try a more general Grover's search algorithm [sample](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)

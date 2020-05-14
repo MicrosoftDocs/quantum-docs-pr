@@ -8,9 +8,13 @@ name: MResetZ
 type: operation
 namespace: Microsoft.Quantum.Measurement
 summary: |-
-  Measures a single qubit in the `Z` basis,
-  and resets it to the standard basis state
-  |0〉 following the measurement.
+  Measures a single qubit in the Z basis,
+  and resets it to a fixed initial state
+  following the measurement.
+
+  Performs a single-qubit measurement in the $Z$-basis,
+  and ensures that the qubit is returned to $\ket{0}$
+  following the measurement.
 syntax: 'operation MResetZ (target : Qubit) : Result'
 input:
   content: '(target : Qubit)'

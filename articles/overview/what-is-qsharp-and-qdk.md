@@ -20,7 +20,7 @@ The QDK is a full-featured development kit for Q# that you can use with common t
 
 ### Develop in common tools and environments
 
-Integrate your quantum development with [Visual Studio, Visual Studio Code](xref:xref:microsoft.quantum.install.standalone), and [Jupyter Notebooks](xref:xref:microsoft.quantum.install.jupyter). Use the built-in APIs for pairing your programs with [Python](xref:xref:microsoft.quantum.install.python) and [.NET](xref:xref:microsoft.quantum.install.cs) host languages.
+Integrate your quantum development with [Visual Studio, Visual Studio Code](xref:microsoft.quantum.install.standalone), and [Jupyter Notebooks](xref:microsoft.quantum.install.jupyter). Use the built-in APIs for pairing your programs with [Python](xref:microsoft.quantum.install.python) and [.NET](xref:microsoft.quantum.install.cs) host languages.
 
 ### Try quantum operations and domain-specific libraries
 
@@ -35,7 +35,7 @@ Run your quantum programs on a full-state quantum simulator, a limited-scope Tof
 |||
 | ---- | ---- |
 | **I'm new to quantum computing** | Review some basics of quantum physics and quantum computing in [Key Concepts](xref:microsoft.quantum.overview.understanding).|
-| **I want to dive deeper into the Q# language** | Explore types, expressions, variables, and quantum program structure in the [Q# User Guide](xref:microsoft.quantum.language.intro).|
+| **I want to dive deeper into the Q# language** | Explore types, expressions, variables, and quantum program structure in the [Q# User Guide](xref:microsoft.quantum.guide).|
 | **I just want to start writing quantum programs** | Set up your Q# environment and start writing quantum programs in [QuickStarts](xref:microsoft.quantum.install).|
 
 ## How does Q# work?
@@ -46,7 +46,7 @@ When you compile and run the program, it creates an instance of the quantum simu
 
 Isolating the Q# code in the simulator ensures that the algorithms follow the laws of quantum physics and can run correctly on quantum computers.
 
-[qsharp-code-flow](~/media/qsharp-code-flow.png)
+![qsharp-code-flow](~/media/qsharp-code-flow.png)
 
 ## How do I use the QDK?
 

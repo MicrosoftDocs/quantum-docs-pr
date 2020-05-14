@@ -139,7 +139,7 @@ A quantum algorithm that probabilistically succeeds. Upon failure, the routine w
 
 ## Superposition
 
-The concept in quantum computing that a [qubit](xref:microsoft.quantum.glossary#qubit) is a linear combination of two states, $\ket{\0}$ and $\ket{\1}$, until it is [measured](xref:microsoft.quantum.glossary#measurement).  For more information, see [What is quantum computing](xref:microsoft.quantum.overview.what).
+The concept in quantum computing that a [qubit](xref:microsoft.quantum.glossary#qubit) is a linear combination of two states, $\ket{\0}$ and $\ket{\1}$, until it is [measured](xref:microsoft.quantum.glossary#measurement).  For more information, see [Understanding quantum computing](xref:microsoft.quantum.overview.understanding).
 
 ## Target machine
 

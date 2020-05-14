@@ -11,7 +11,7 @@
     - name: Quantum computers and simulators
       href: overview/quantum-computers-and-simulators.md
     - name: What are Q# and the QDK?
-      href: overview/what-is-qsharp-and qdk.md
+      href: overview/what-is-qsharp-and-qdk.md
     - name: Linear algebra for quantum computing
       href: overview/algebra-for-quantum-computing.md
 - name: Quickstarts

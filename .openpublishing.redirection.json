@@ -96,7 +96,7 @@
     {
       "source_path": "articles/quantum-techniques-3-LocalVariables.md", 
       "redirect_url": "user-guide/using-qsharp/variables",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     { 
       "source_path": "articles/quantum-techniques-4-TypeModel.md", 

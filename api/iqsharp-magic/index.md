@@ -2,11 +2,6 @@
 
 | Magic Command | Summary |
 |---------------|---------|
-| [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge) | Loads and returns Broombridge electronic structure problem representation from a given .yaml file. |
-| [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode) | Encodes a fermion Hamiltonian to a format consumable by Q#. |
-| [`%chemistry.fh.add_terms`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms) | Adds terms to a fermion Hamiltonian. |
-| [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load) | Loads the fermion Hamiltonian for an electronic structure problem. The problem is loaded from a file or passed as an argument. |
-| [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load) | Loads Broombridge electronic structure problem and returns selected input state. |
 | [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config) | Allows setting or querying configuration options. |
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Runs a given function or operation on the ResourcesEstimator target machine. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Returns a list of all currently available magic commands. |

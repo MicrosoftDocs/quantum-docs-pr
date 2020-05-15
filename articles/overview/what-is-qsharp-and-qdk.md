@@ -54,6 +54,8 @@ Everything you need to write and run Q# programs, including the Q# compiler, the
 
 - Running [Q# from the command line](xref:microsoft.quantum.install.standalone) is the quickest way to get started.
 
+- Run standalone [Jupyter Notebooks with IQ#](xref:microsoft.quantum.install.jupyter), a Jupyter extension for compiling, simulating, and visualizing Q# programs.
+
 - If you are familiar with [Python](xref:microsoft.quantum.install.python), you can use it as a host programming platform to get started. Python enjoys widespread use not only among developers, but also scientists, researchers and teachers.
 
 - If you already have experience with [C#, F#, or VB.NET](xref:microsoft.quantum.install.cs) and are familiar with the Visual Studio development environment, there are just a few extensions you need to add to Visual Studio to prepare it for Q#.  

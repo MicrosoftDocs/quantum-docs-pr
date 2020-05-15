@@ -10,7 +10,7 @@ ms.topic: article
 # Diagnostics #
 
 As with classical development, it is important to be able to diagnose mistakes and errors in quantum programs.
-The Q# standard libraries provide a variety of different ways to ensure the correctness of quantum programs, as detailed in <xref:microsoft.quantum.techniques.testing-and-debugging>.
+The Q# standard libraries provide a variety of different ways to ensure the correctness of quantum programs, as detailed in <xref:microsoft.quantum.guide.testingdebugging>.
 Largely speaking, this support comes in the form of functions and operations that either instruct the target machine to provide additional diagnostic information to the host program or developer, or enforce the correctness of conditions and invariants expressed by the function or operation call.
 
 ## Machine Diagnostics ##
@@ -32,12 +32,12 @@ Each target machine varies in what diagnostic information is provided in respons
 The [full state simulator](xref:microsoft.quantum.machines.full-state-simulator) target machine, for instance, provides the host program with the state vector that it uses internally to represent a register of qubits.
 By comparison, the [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator) target machine provides a single classical bit for each qubit.
 
- To learn more about the [full state simulator's](xref:microsoft.quantum.machines.full-state-simulator) `DumpMachine` output, take a look at the dump functions section of our [testing and debugging article](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions).
+ To learn more about the [full state simulator's](xref:microsoft.quantum.machines.full-state-simulator) `DumpMachine` output, take a look at the dump functions section of our [testing and debugging article](xref:microsoft.quantum.guide.testingdebugging#dump-functions).
 
 
 ## Facts and Assertions ##
 
-As discussed in [Testing and Debugging](xref:microsoft.quantum.techniques.testing-and-debugging), a function or operation with signature `Unit -> Unit` or `Unit => Unit`, respectively, can be marked as a *unit test*.
+As discussed in [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging), a function or operation with signature `Unit -> Unit` or `Unit => Unit`, respectively, can be marked as a *unit test*.
 Each unit test generally consists of a small quantum program, along with one or more conditions that check the correctness of that program.
 These conditions can come in the form of either _facts_, which check the values of their inputs, or _assertions_, which check the states of one or more qubits passed as input.
 
@@ -160,5 +160,5 @@ Both of these tests are useful in ensuring the correctness of quantum programs.
 
 ## Further Reading ##
 
-- <xref:microsoft.quantum.techniques.testing-and-debugging>
+- <xref:microsoft.quantum.guide.testingdebugging>
 - <xref:microsoft.quantum.diagnostics>

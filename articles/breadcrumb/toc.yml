@@ -1,0 +1,7 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Microsoft Quantum
+    tocHref: /quantum/
+    topicHref: /quantum/index

@@ -22,7 +22,7 @@ Quantum mechanics, also called quantum theory, is a branch of physics that deals
 
 Imagine that you are exercising in your living room. You turn all the way to your left and then all the way to your right. Now turn to your left and your right at the same time. You can’t do it (not without splitting yourself in two, at least).  Obviously, you can’t be in both of those states at once – you can’t be facing left and facing right at the same time.
 
-However, if you are a quantum particle, then you can be *facing left* AND *facing right* AND *anywhere in-between* at the same time due to a phenomenon known as **superposition** (also known as **coherence**).
+However, if you are a quantum particle, then you can have a certain probability of *facing left* AND a certain probability of *facing right* due to a phenomenon known as **superposition** (also known as **coherence**).
 
 A quantum particle such as an electron has its own “facing left or facing right” properties, for example **spin**, referred to as either up or down, or to make it more relatable to classical binary computing, let’s just say 1 or 0. When a quantum particle is in a superposition state, it’s a linear combination of an infinite number of states between 1 and 0, but you don’t know which one it will be until you actually look at it, which brings up our next phenomenon, **quantum measurement**.
 

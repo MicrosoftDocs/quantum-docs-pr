@@ -230,10 +230,12 @@ The general scheme is shown here, and we discuss the specific implementations fo
 <img src="./images/host_program_diagram.png" alt="Q# program from a host program" width="700">
 
 
+### Python, C#, F# tabs
+....
 
 
 FUTURE TO DO:
-- cheat sheets for each host 
+- cheat sheets for each host?
 
 ## Q# Jupyter Notebooks
 - limitations?

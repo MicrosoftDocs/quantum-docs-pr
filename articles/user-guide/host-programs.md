@@ -1,6 +1,6 @@
 ---
-title: Running Q#: host programs vs. standalone applications
-description: Overview of the different ways to run Q# programs: command line, Q# Jupyter Notebooks, and classical host programs in Python a .NET language.
+title: Run Q# with standalone applications or host programs
+description: Overview of the different ways to run Q# programs. Command line, Q# Jupyter Notebooks, and classical host programs in Python a .NET language.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 05/15/2020
@@ -8,7 +8,7 @@ ms.topic: article
 uid: microsoft.quantum.guide.host-programs
 ---
 
-# Running Q#: standalone applications vs. host programs
+# Run Q# with standalone applications or host programs
 
 One of the Quantum Development Kit's greatest strengths is its flexibility across platforms and development environments.
 However, this also means that new Q# users may find themselves confused or overwhelmed by the numerous options found in the [install guide](xref:microsoft.quantum.install).
@@ -56,7 +56,7 @@ However, it requires a few more additions to comprise a full `*.qs` Q# file.
 
 All Q# types and callables are defined within *namespaces*, which the compiler can then open individually 
 
-Firstly, the [`H`](xref:microsoft.quantum.intrinsic.h) and [`MResetZ`](xref:microsoft.quantum.measurements) actually belong to the [Q# Standard Libraries](xref:microsoft.quantum.qsharplibintro).
+Firstly, the [`H`](xref:microsoft.quantum.intrinsic.h) and [`MResetZ`](xref:microsoft.quantum.measurements.mresetz) actually belong to the [Q# Standard Libraries](xref:microsoft.quantum.qsharplibintro).
 To be available for use, their respective *namespaces* need to be opened.
 All Q# callables and types (both those you define and those intrinsic to the language) are defined within namespaces.
 To access them, the compiler needs to be made aware of which namespaces to open.
@@ -82,14 +82,14 @@ namespace NamespaceName {
 Now the general execution model of a Q# program becomes clear.
 
 <br/>
-<img src="./images/general_execution_model.png" alt="Q# program execution diagram" width="300">
+<img src="./images/general_execution_model.png" alt="Q# program execution diagram" width="500">
 
 Firstly, the specific operation to be executed has access to any other callables and types defined in the same namespace.
 Thanks to `open` statements, it can also access those from any of the [Q# libraries](xref:microsoft.quantum.libraries). 
 
-The operation itself is then executed on a *target machine*.
+The operation itself is then executed on a *[target machine](xref:microsoft.quantum.machines)*.
 In the future, one such target machine will be a real quantum computer, but there are currently multiple simulators available, each with a particular use.
-For our purposes here, the target machine will simply be an instance of the full-state simulator, which calculates the program's behavior as if it were being executed on a noise-free quantum computer.
+For our purposes here, the most useful target machine is instance of the full-state simulator, `QuantumSimulator`, which calculates the program's behavior as if it were being executed on a noise-free quantum computer.
 
 So far, we've described what happens when a specific Q# operation is being executed.
 Regardless of whether Q# is used in a standalone application or with a host program, this general process is more or less the same---hence the QDK's flexibility.
@@ -100,14 +100,138 @@ We reserve the standalone application of Q# Jupyter Notebooks for last, because 
 
 
 ## Q# from the command line
-- diagram
-- what are limitations of command line? Operations with arguments not possible?
+One of the easiest ways to get started writing Q# programs is to avoid worrying about separate files and a second language altogether.
+Using Visual Studio Code or Visual Studio with the QDK extension allows for a seamless work flow in which we run Q# operations from only a single Q# file.
+
+For this, we will ultimately invoke the program's execution by entering
+```bash
+dotnet run
+```
+in the command line.
+Note that the terminal's directory location needs to be the same as the Q# file, so we recommend simply using the integrated terminal in VS Code or Visual Studio.
+
+### Add entry point to Q# file
+Of course, most Q# files will contain more than one operation.
+So, we need to let the compiler know *which* operation to execute when we provide the `dotnet run` command.
+
+This is done with a simple change to the Q# file itself: add a line with `@EntryPoint()` directly preceding the operation.
+
+Our file from above would therefore become
+```qsharp
+namespace NamespaceName {
+    open Microsoft.Quantum.Intrinsic;     // for the H operation
+    open Microsoft.Quantum.Measurement;   // for MResetZ
+
+	@EntryPoint()
+    operation MeasureSuperposition() : Result {
+        using (q = Qubit()) { 
+            H(q);
+            return MResetZ(q);
+        }
+    }
+}
+```
+
+Now, a call of `dotnet run` from the command line leads to `MeasureSuperposition` being run, and the returned value is then printed directly to the terminal.
+So, you will see either `One` or `Zero` printed. 
+
+Note that it doesn't matter if you have more operations defined below it, only `MeasureSuperposition` will be run.
+Additionally, it's no problem if your operation includes [documentation comments](xref:microsoft.quantum.guide.filestructure#documentation-comments) before the operation declaration, the `@EntryPoint()` attribute can be simply placed above them.
+
+### Operation arguments
+
+So far, we've only considered an operation that takes no arguments.
+Suppose we wanted to perform a similar operation, but on multiple qubits---the number of which is provided as an argument.
+Such an operation could be written as
+```qsharp
+    operation MeasureSuperpositionArray(n : Int) : Result[] {
+        mutable resultArray = new Result[n];     // instantiate a length n array for the measurement Results 
+        using (qubits = Qubit[n]) {              // allocate a register of n qubits
+            ApplyToEach( H , qubits);            // apply H to each qubit in the register (from Microsoft.Quantum.Canon)
+            set resultArray = MultiM(qubits);    // measure the array of qubits
+            ResetAll(qubits);                    // reset all the qubits
+        }
+        return resultArray;
+    }
+```
+where the returned value is an array of the measurement results.
+Note that the [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) operation is in the `Microsoft.Quantum.Canon` namespace, requiring another `open` statement with the others.
+
+If we move the `@EntryPoint()` to precede this new operation (note there can only be one such line in a file), attempting to run it with simply `dotnet run` results in a helpful error message.
+This message indicates what additional command line options are required, and how to express them.
+
+The general format for the command line is actually `dotnet run [options]`, and operation arguments are provided there.
+In this case, the argument `n` is missing, and it shows that we need to provide the option `-n <n>`. 
+To run `MeasureSuperpositionArray` for `n=4` qubits, we therefore use
+
+```bash
+dotnet run -n 4
+```
+
+yielding an output similar to
+
+```bash
+[Zero,One,One,One]
+```
+
+This of course extends to multiple arguments.
+
+The error message also provides other options which can be used, including how to change the target machine.
+
+### Different target machines
+
+From the output of our operation thus far, it's clear that the default target machine from the command line is the full-state quauntum simulator, `QuantumSimulator`.
+However, we can instruct the operation to be run on a specific target machine with the option `--simulator` (or the shorthand `-s`).
+
+For example, we could run it on [`ResourcesEstimator`](xref:microsoft.quantum.machines.resources-estimator):
+
+```bash
+dotnet run -n 4 -s ResourcesEstimator
+```
+
+The printed output is then
+
+```bash
+Metric          Sum
+CNOT            0
+QubitClifford   4
+R               0
+Measure         8
+T               0
+Depth           0
+Width           4
+BorrowedWidth   0
+```
+
+Note that the [`Reset`](xref:microsoft.quantum.intrinsic.reset) and [`ResetAll`](xref:microsoft.quantum.intrinsic.resetall) operations utilize measurement to reset the qubits to $\ket{0}$, hence the reported 8 measurements as opposed to the 4 which yield the actual results.
+Details on what these metrics indicate can be found [here](xref:microsoft.quantum.machines.resources-estimator#metrics-reported).
+
+### Command line execution summary
+<br/>
+<img src="./images/command_line_diagram.png" alt="Q# program from command line" width="700">
 
 
 ## Q# with host programs
-- diagram
-- specify target machine (in C# we actually instantiate it before calling simulation)
-- able to process returned data: e.g. plot it
+
+With our Q# file in hand, an alternative to calling an operation directly from the command line is to use a *host program* in another classical language. 
+Specifically, this can be done with either Python or a .NET language such as C# or F# (for the sake of brevity we will only detail C# here).
+A little more setup is required to enable the interoperability, but those details can be found in the [install guides](xref:microsoft.quantum.install).
+
+In a nutshell, the situation now includes a host program file (e.g. `*.py` or `*.cs`) in the same location as our Q# file.
+It's now the *host* program that gets run, and in the course of its execution it calls specific Q# operations from the Q# file.
+The core of the interoperability is based on the Q# compiler making the contents of the Q# file accessible to the host program so that they can be called.
+
+One of the main benefits of using a host program is that the classical data returned by the Q# program can then be further processed in the host language.
+This could consist of some advanced data processing (e.g. something that can't be performed internally in Q#), and then calling further Q# actions based on those results, or something as simple as plotting the Q# results.
+
+The general scheme is shown here, and we discuss the specific implementations for Python and C# below.
+
+<br/>
+<img src="./images/host_program_diagram.png" alt="Q# program from a host program" width="700">
+
+
+
+
 FUTURE TO DO:
 - cheat sheets for each host 
 

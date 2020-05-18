@@ -224,22 +224,154 @@ The core of the interoperability is based on the Q# compiler making the contents
 One of the main benefits of using a host program is that the classical data returned by the Q# program can then be further processed in the host language.
 This could consist of some advanced data processing (e.g. something that can't be performed internally in Q#), and then calling further Q# actions based on those results, or something as simple as plotting the Q# results.
 
-The general scheme is shown here, and we discuss the specific implementations for Python and C# below.
+The general scheme is shown here, and we discuss the specific implementations for Python, C#, and F# below.
 
 <br/>
 <img src="./images/host_program_diagram.png" alt="Q# program from a host program" width="700">
 
+> [!NOTE]
+> The `@EntryPoint()` attribute used for Q# command line applications cannot be used with host programs.
+> An error will be raised if it is present in the Q# file being called by a host. 
 
-### Python, C#, F# tabs
-....
+To work with different host programs, there are no changes required to a `*.qs` Q# file.
+The following host program implementations all work with the same Q# file:
 
+```qsharp
+namespace NamespaceName {
+    open Microsoft.Quantum.Intrinsic;     // for the H operation
+    open Microsoft.Quantum.Measurement;   // for MResetZ and MultiM
+	open Microsoft.Quantum.Canon;         // for ApplyToEach
+
+    operation MeasureSuperposition() : Result {
+        using (q = Qubit()) { 
+            H(q);
+            return MResetZ(q);
+        }
+    }
+
+    operation MeasureSuperpositionArray(n : Int) : Result[] {
+        mutable resultArray = new Result[n];
+        using (qubits = Qubit[n]) {
+            ApplyToEach( H , qubits);
+            set resultArray = MultiM(qubits);
+            ResetAll(qubits);
+        }
+        return resultArray;
+    }
+}
+```
+
+### [Python](#tab/tabid-python)
+A python host file is constructed as follows:
+1. Import the `qsharp` module, which registers the module loader for Q# interoperability. 
+    This allows Q# namespaces to appear as Python modules, from which we can import Q# operations.
+
+2. Import those Q# operations which we will directly invoke---in this case, `MeasureSuperposition` and `MeasureSuperpositionArray`.
+    ```python
+    import qsharp
+    from NamespaceName import MeasureSuperposition, MeasureSuperpositionArray
+    ```
+    Note that with the `qsharp` module imported, you can also import operations directly from the Q# library namespaces.
+
+3. Among any other Python code, you can now call those operations on specific target machines, and assign their returns to variables (if they return a value) for further use.
+
+#### Specifying target machines
+Calling an operation to be run on a specific target machine is done via different Python methods on the imported operation.
+For example, `.simulate(<args>)`, uses the `QuantumSimulator` to run the operation, whereas `.estimate_resources(<args>)` does so on the `ResourcesEstimator`.
+
+#### Arguments
+Arguments for the Q# callable should be provided in the form of a keyword argument, where the keyword is the argument name in the callable definition.
+That is, `MeasureSuperpositionArray.simulate(n=4)` is valid, whereas `MeasureSuperpositionArray.simulate(4)` would throw an error.
+
+Therefore, the Python host program 
+
+```python
+import qsharp
+from NamespaceName import MeasureSuperposition, MeasureSuperpositionArray
+
+single_qubit_result = MeasureSuperposition.simulate()
+single_qubit_resources = MeasureSuperposition.estimate_resources()
+
+multi_qubit_result = MeasureSuperpositionArray.simulate(n=4)
+multi_qubit_resources = MeasureSuperpositionArray.estimate_resources(n=4)
+
+print('Single qubit:')
+print(single_qubit_result)
+print(single_qubit_resources)
+
+print('\nMultiple qubits:')
+print(multi_qubit_result)
+print(multi_qubit_resources)
+```
+
+results in an output like the following:
+
+```python
+Single qubit:
+1
+{'CNOT': 0, 'QubitClifford': 1, 'R': 0, 'Measure': 1, 'T': 0, 'Depth': 0, 'Width': 1, 'BorrowedWidth': 0}
+
+Multiple qubits:
+[1, 1, 0, 0]
+{'CNOT': 0, 'QubitClifford': 4, 'R': 0, 'Measure': 8, 'T': 0, 'Depth': 0, 'Width': 4, 'BorrowedWidth': 0}
+```
+
+### [C#](#tab/tabid-csharp)
+
+- need to be in directory location of C# file
+- resource estimator: simply link to info page (shows details there)
+- mention namespace confusion: either name same as Q# namespace, or include `using <Q#NamespaceName>;`.
+
+C# host program:
+
+```csharp
+using System;
+using Microsoft.Quantum.Simulation.Core;
+using Microsoft.Quantum.Simulation.Simulators;
+
+namespace NamespaceName
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            using (var sim = new QuantumSimulator())
+            {
+                var single_qubit_result = MeasureSuperposition.Run(sim).Result;
+                var multi_qubit_result = MeasureSuperpositionArray.Run(sim, 4).Result;
+
+                Console.WriteLine($"Single qubit result: {single_qubit_result}");
+                Console.WriteLine($"Multiple qubits result: {multi_qubit_result}");
+            }
+        }
+    }
+}
+```
+
+From the command line, enter
+
+```bash
+dotnet run
+```
+
+and see output similar to 
+
+```bash
+Single qubit result: Zero
+Multiple qubits result: [One,One,Zero,Zero]
+```
+
+### [F#](#tab/tabid-csharp)
+
+- ?
 
 FUTURE TO DO:
 - cheat sheets for each host?
 
 ## Q# Jupyter Notebooks
 - limitations?
-- link to Q# sample code which details the nuances of Q# Jupyter Notebooks
+- diagram?
+- link to Q# sample code which details the nuances/limitations of Q# Jupyter Notebooks
 
 
 

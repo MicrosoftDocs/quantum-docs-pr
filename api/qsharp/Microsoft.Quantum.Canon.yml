@@ -6,62 +6,6 @@
 uid: microsoft.quantum.canon
 name: Microsoft.Quantum.Canon
 functions:
-- uid: microsoft.quantum.canon.asqubitarray
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AsQubitArray has been deprecated.
-    This function has been removed.
-- uid: microsoft.quantum.canon.assertalmostequal
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AssertAlmostEqual has been deprecated. Please use @"microsoft.quantum.diagnostics.nearequalityfactd" instead.
-    Please use @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" instead.
-- uid: microsoft.quantum.canon.assertalmostequaltol
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AssertAlmostEqualTol has been deprecated. Please use @"microsoft.quantum.diagnostics.equalitywithintolerancefact" instead.
-    Please use @"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact" instead.
-- uid: microsoft.quantum.canon.assertboolarrayequal
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AssertBoolArrayEqual has been deprecated. Please use @"microsoft.quantum.diagnostics.allequalityfactb" instead.
-    Please use @"Microsoft.Quantum.Diagnostics.AllEqualityFactB" instead.
-- uid: microsoft.quantum.canon.assertboolequal
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AssertBoolEqual has been deprecated. Please use @"microsoft.quantum.diagnostics.equalityfactb" instead.
-    Please use @"Microsoft.Quantum.Diagnostics.EqualityFactB" instead.
-- uid: microsoft.quantum.canon.assertintequal
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AssertIntEqual has been deprecated. Please use @"microsoft.quantum.diagnostics.equalityfacti" instead.
-    Please use @"Microsoft.Quantum.Diagnostics.EqualityFactI" instead.
-- uid: microsoft.quantum.canon.assertresultequal
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AssertResultEqual has been deprecated. Please use @"microsoft.quantum.diagnostics.equalityfactr" instead.
-    Please use @"Microsoft.Quantum.Diagnostics.EqualityFactR" instead.
 - uid: microsoft.quantum.canon.bigendiantolittleendian
   summary: |2-
 
@@ -70,70 +14,6 @@ functions:
 
     BigEndianToLittleEndian has been deprecated. Please use @"microsoft.quantum.arithmetic.bigendianaslittleendian" instead.
     Please use @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian".
-- uid: microsoft.quantum.canon.bind
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Bind has been deprecated. Please use @"microsoft.quantum.canon.bound" instead.
-    Please use @"microsoft.quantum.canon.bound".
-- uid: microsoft.quantum.canon.binda
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    BindA has been deprecated. Please use @"microsoft.quantum.canon.bounda" instead.
-    Please use @"microsoft.quantum.canon.bounda".
-- uid: microsoft.quantum.canon.bindc
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    BindC has been deprecated. Please use @"microsoft.quantum.canon.boundc" instead.
-    Please use @"microsoft.quantum.canon.boundc".
-- uid: microsoft.quantum.canon.bindca
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    BindCA has been deprecated. Please use @"microsoft.quantum.canon.boundca" instead.
-    Please use @"microsoft.quantum.canon.boundca".
-- uid: microsoft.quantum.canon.bitsize
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    BitSize has been deprecated. Please use @"microsoft.quantum.math.bitsizei" instead.
-    Please use @"microsoft.quantum.math.bitsizei".
-- uid: microsoft.quantum.canon.boolarrfrompositiveint
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    BoolArrFromPositiveInt has been deprecated. Please use @"microsoft.quantum.convert.intasboolarray" instead.
-    Please use @"microsoft.quantum.convert.intasboolarray".
-- uid: microsoft.quantum.canon.boolarrfromresultarr
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    BoolArrFromResultArr has been deprecated. Please use @"microsoft.quantum.convert.resultarrayasboolarray" instead.
-    Please use @"microsoft.quantum.convert.resultarrayasboolarray".
-- uid: microsoft.quantum.canon.boolfromresult
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    BoolFromResult has been deprecated. Please use @"microsoft.quantum.convert.resultasbool" instead.
-    Please use @"microsoft.quantum.convert.resultasbool".
 - uid: microsoft.quantum.canon.bound
   summary: |-
     Given an array of operations acting on a single input,
@@ -195,14 +75,6 @@ functions:
   summary: |-
     Given outer and inner operations, returns a new operation that
     conjugates the inner operation by the outer operation.
-- uid: microsoft.quantum.canon.continuedfractionconvergent
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ContinuedFractionConvergent has been deprecated. Please use @"microsoft.quantum.math.continuedfractionconvergenti" instead.
-    Please use @"microsoft.quantum.math.continuedfractionconvergenti".
 - uid: microsoft.quantum.canon.controlledonbitstring
   summary: Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
 - uid: microsoft.quantum.canon.controlledonint
@@ -214,14 +86,6 @@ functions:
     That is, given an operation with two inputs, this function applies Curry's isomorphism
     $f(x, y) \equiv f(x)(y)$ to return an operation of one input which
     returns an operation of one input.
-- uid: microsoft.quantum.canon.curryop
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    CurryOp has been deprecated. Please use @"microsoft.quantum.canon.curriedop" instead.
-    Please use @"microsoft.quantum.canon.curriedop".
 - uid: microsoft.quantum.canon.decomposedintotimestepsca
   summary: |-
     Returns an operation implementing the Trotter–Suzuki integrator for
@@ -254,98 +118,10 @@ functions:
     Given a single-qubit Pauli operator and the index of a qubit,
     returns a multi-qubit Pauli operator with the given single-qubit
     operator at that index and `PauliI` at every other index.
-- uid: microsoft.quantum.canon.expmod
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ExpMod has been deprecated. Please use @"microsoft.quantum.math.expmodi" instead.
-    Please use @"microsoft.quantum.math.expmodi".
-- uid: microsoft.quantum.canon.extendedgcd
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ExtendedGCD has been deprecated. Please use @"microsoft.quantum.math.extendedgreatestcommondivisori" instead.
-    Please use @"microsoft.quantum.math.extendedgreatestcommondivisori".
-- uid: microsoft.quantum.canon.filter
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Filter has been deprecated. Please use @"microsoft.quantum.arrays.filtered" instead.
-    Please use @"Microsoft.Quantum.Arrays.Filtered" instead.
-- uid: microsoft.quantum.canon.forall
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ForAll has been deprecated. Please use @"microsoft.quantum.arrays.all" instead.
-    Please use @"Microsoft.Quantum.Arrays.All" instead.
-- uid: microsoft.quantum.canon.forany
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ForAny has been deprecated. Please use @"microsoft.quantum.arrays.any" instead.
-    Please use @"Microsoft.Quantum.Arrays.Any" instead.
 - uid: microsoft.quantum.canon.fst
   summary: Given a pair, returns its first element.
-- uid: microsoft.quantum.canon.gcd
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    GCD has been deprecated. Please use @"microsoft.quantum.math.greatestcommondivisori" instead.
-    Please use @"microsoft.quantum.math.greatestcommondivisori".
 - uid: microsoft.quantum.canon.ignore
   summary: Ignores the output of an operation or function.
-- uid: microsoft.quantum.canon.intabs
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    IntAbs has been deprecated. Please use @"microsoft.quantum.math.absi" instead.
-    This function has been removed.
-- uid: microsoft.quantum.canon.intarrayfromrange
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    IntArrayFromRange has been deprecated. Please use @"microsoft.quantum.convert.rangeasintarray" instead.
-    Please use @"microsoft.quantum.convert.rangeasintarray".
-- uid: microsoft.quantum.canon.intmax
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    IntMax has been deprecated. Please use @"microsoft.quantum.math.maxi" instead.
-    This function has been removed.
-- uid: microsoft.quantum.canon.inversemod
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    InverseMod has been deprecated. Please use @"microsoft.quantum.math.inversemodi" instead.
-    Please use @"microsoft.quantum.math.inversemodi".
-- uid: microsoft.quantum.canon.iscoprime
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    IsCoprime has been deprecated. Please use @"microsoft.quantum.math.iscoprimei" instead.
-    Please use @"microsoft.quantum.math.greatestcommondivisori".
 - uid: microsoft.quantum.canon.isresultone
   summary: Tests if a given Result value is equal to `One`.
 - uid: microsoft.quantum.canon.isresultzero
@@ -358,30 +134,6 @@ functions:
 
     LittleEndianToBigEndian has been deprecated. Please use @"microsoft.quantum.arithmetic.littleendianasbigendian" instead.
     Please use @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian".
-- uid: microsoft.quantum.canon.map
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Map has been deprecated. Please use @"microsoft.quantum.arrays.mapped" instead.
-    Please use @"Microsoft.Quantum.Arrays.Mapped" instead.
-- uid: microsoft.quantum.canon.mapindex
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    MapIndex has been deprecated. Please use @"microsoft.quantum.arrays.mappedbyindex" instead.
-    Please use @"Microsoft.Quantum.Arrays.MappedByIndex" instead.
-- uid: microsoft.quantum.canon.modulus
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Modulus has been deprecated. Please use @"microsoft.quantum.math.modulusi" instead.
-    Please use @"microsoft.quantum.math.modulusi".
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: |-
     Returns a multiply-controlled unitary operation $U$ that applies a
@@ -394,14 +146,6 @@ functions:
     unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
 
     $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
-- uid: microsoft.quantum.canon.nearequalityfact
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    NearEqualityFact has been deprecated. Please use @"microsoft.quantum.diagnostics.nearequalityfactd" instead.
-    Please use @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" instead.
 - uid: microsoft.quantum.canon.operationpow
   summary: |-
     Raises an operation to a power.
@@ -429,46 +173,6 @@ functions:
 
     That is, given an operation representing a gate $U$, returns a new operation
     $U^m$ for a power $m$.
-- uid: microsoft.quantum.canon.pad
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Pad has been deprecated. Please use @"microsoft.quantum.arrays.padded" instead.
-    Please use @"Microsoft.Quantum.Arrays.Padded" instead.
-- uid: microsoft.quantum.canon.paulifrombitstring
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    PauliFromBitString has been deprecated. Please use @"microsoft.quantum.convert.boolarrayaspauli" instead.
-    Please use @"microsoft.quantum.convert.boolarrayaspauli".
-- uid: microsoft.quantum.canon.pnormalize
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    PNormalize has been deprecated. Please use @"microsoft.quantum.math.pnormalized" instead.
-    Please use @"microsoft.quantum.math.pnormalized".
-- uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    PositiveIntFromBoolArr has been deprecated. Please use @"microsoft.quantum.convert.boolarrayasint" instead.
-    Please use @"microsoft.quantum.convert.boolarrayasint".
-- uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    PositiveIntFromResultArr has been deprecated. Please use @"microsoft.quantum.convert.resultarrayasint" instead.
-    Please use @"microsoft.quantum.canon.resultarrayasint".
 - uid: microsoft.quantum.canon.restrictedtosubregister
   summary: Restricts an operation to an array of indices of a register, i.e., a subregister.
 - uid: microsoft.quantum.canon.restrictedtosubregistera
@@ -483,80 +187,8 @@ functions:
   summary: |-
     Restricts an operation to an array of indices of a register, i.e., a subregister.
     The modifier `CA` indicates that the operation is controllable and adjointable.
-- uid: microsoft.quantum.canon.restricttosubregister
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    RestrictToSubregister has been deprecated. Please use @"microsoft.quantum.canon.restrictedtosubregister" instead.
-    Please use @"microsoft.quantum.canon.restrictedtosubregister".
-- uid: microsoft.quantum.canon.restricttosubregistera
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    RestrictToSubregisterA has been deprecated. Please use @"microsoft.quantum.canon.restrictedtosubregistera" instead.
-    Please use @"microsoft.quantum.canon.restrictedtosubregistera".
-- uid: microsoft.quantum.canon.restricttosubregisterc
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    RestrictToSubregisterC has been deprecated. Please use @"microsoft.quantum.canon.restrictedtosubregisterc" instead.
-    Please use @"microsoft.quantum.canon.restrictedtosubregisterc".
-- uid: microsoft.quantum.canon.restricttosubregisterca
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    RestrictToSubregisterCA has been deprecated. Please use @"microsoft.quantum.canon.restrictedtosubregisterca" instead.
-    Please use @"microsoft.quantum.canon.restrictedtosubregisterca".
-- uid: microsoft.quantum.canon.resultarrfromboolarr
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ResultArrFromBoolArr has been deprecated. Please use @"microsoft.quantum.convert.boolarrayasresultarray" instead.
-    Please use @"microsoft.quantum.convert.resultarrayasboolarray".
-- uid: microsoft.quantum.canon.resultasint
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ResultAsInt has been deprecated. Please use @"microsoft.quantum.convert.resultarrayasint" instead.
-    Please use @"microsoft.quantum.convert.resultarrayasint".
-- uid: microsoft.quantum.canon.resultfrombool
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ResultFromBool has been deprecated. Please use @"microsoft.quantum.convert.boolasresult" instead.
-    Please use @"microsoft.quantum.convert.boolasresult".
-- uid: microsoft.quantum.canon.reverse
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Reverse has been deprecated. Please use @"microsoft.quantum.arrays.reversed" instead.
-    Please use @"Microsoft.Quantum.Arrays.Reversed" instead.
 - uid: microsoft.quantum.canon.snd
   summary: Given a pair, returns its second element.
-- uid: microsoft.quantum.canon.splitarray
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    SplitArray has been deprecated. Please use @"microsoft.quantum.arrays.partitioned" instead.
-    Please use @"Microsoft.Quantum.Arrays.Partitioned" instead.
 - uid: microsoft.quantum.canon.stackcapacity
   summary: |2-
 
@@ -599,14 +231,6 @@ functions:
     > Deprecated
 
     StackPush has been deprecated.
-- uid: microsoft.quantum.canon.tooperation
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ToOperation has been deprecated. Please use @"microsoft.quantum.convert.functionasoperation" instead.
-    Please use @"microsoft.quantum.convert.functionasoperation".
 - uid: microsoft.quantum.canon.transformedoperation
   summary: |-
     Given a function and an operation, returns a new operation whose
@@ -646,38 +270,6 @@ functions:
     returns a new operation which takes both inputs
     as a tuple.
     The modifier `CA` indicates that the operations are controllable and adjointable.
-- uid: microsoft.quantum.canon.uncurryop
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    UncurryOp has been deprecated. Please use @"microsoft.quantum.canon.uncurriedop" instead.
-    Please use @"microsoft.quantum.canon.uncurriedop".
-- uid: microsoft.quantum.canon.uncurryopa
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    UncurryOpA has been deprecated. Please use @"microsoft.quantum.canon.uncurriedopa" instead.
-    Please use @"microsoft.quantum.canon.uncurriedopa".
-- uid: microsoft.quantum.canon.uncurryopc
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    UncurryOpC has been deprecated. Please use @"microsoft.quantum.canon.uncurriedopc" instead.
-    Please use @"microsoft.quantum.canon.uncurriedopc".
-- uid: microsoft.quantum.canon.uncurryopca
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    UncurryOpCA has been deprecated. Please use @"microsoft.quantum.canon.uncurriedopca" instead.
-    Please use @"microsoft.quantum.canon.uncurriedopca".
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: |-
     Returns an array of all weight-1 Pauli operators
@@ -691,20 +283,20 @@ functions:
     XOR has been deprecated. Please use @"microsoft.quantum.logical.xor" instead.
     Please use @"microsoft.quantum.logical.xor".
 operations:
-- uid: microsoft.quantum.canon.adiabaticstateenergyunitary
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AdiabaticStateEnergyUnitary has been deprecated. Please use @"microsoft.quantum.simulation.estimateenergywithadiabaticevolution" instead.
-    Please use @"microsoft.quantum.simuilation.pnormalized".
 - uid: microsoft.quantum.canon.andladder
   summary: Performs a controlled "AND ladder" on a register of target qubits.
 - uid: microsoft.quantum.canon.applyand
   summary: |-
     Inverts a given target qubit if and only if both control qubits are in the 1 state,
     using measurement to perform the adjoint operation.
+- uid: microsoft.quantum.canon.applyccnotchain
+  summary: |-
+    Implements a cascade of CCNOT gates controlled on corresponding bits of two
+    qubit registers, acting on the next qubit of one of the registers.
+    Starting from the qubits at position 0 in both registers as controls, CCNOT is
+    applied to the qubit at position 1 of the target register, then controlled by
+    the qubits at position 1 acting on the qubit at position 2 in the target register,
+    etc., ending with an action on the target qubit in position `Length(nQubits)-1`.
 - uid: microsoft.quantum.canon.applycnotchain
   summary: Computes the parity of a register of qubits in-place.
 - uid: microsoft.quantum.canon.applycnotchainwithtarget
@@ -807,30 +399,6 @@ operations:
   summary: |-
     Performs the Quantum Fourier Transform on a quantum register containing an
     integer in the little-endian representation.
-- uid: microsoft.quantum.canon.applyquantumfouriertransformbe
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ApplyQuantumFourierTransformBE has been deprecated. Please use @"applyquantumfouriertransform(bigendianaslittleendian(qs))" instead.
-    This operation has been removed.
-- uid: microsoft.quantum.canon.applyquantumfouriertransformle
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ApplyQuantumFourierTransformLE has been deprecated. Please use @"microsoft.quantum.canon.applyquantumfouriertransform" instead.
-    Please use @"microsoft.quantum.canon.applyquantumfouriertransform".
-- uid: microsoft.quantum.canon.applyreversedopbigendian
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ApplyReversedOpBigEndian has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopbe" instead.
-    Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE".
 - uid: microsoft.quantum.canon.applyreversedopbigendiana
   summary: |2-
 
@@ -855,14 +423,6 @@ operations:
 
     ApplyReversedOpBigEndianCA has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopbeca" instead.
     Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".
-- uid: microsoft.quantum.canon.applyreversedoplittleendian
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ApplyReversedOpLittleEndian has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedople" instead.
-    Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE".
 - uid: microsoft.quantum.canon.applyreversedoplittleendiana
   summary: |2-
 
@@ -887,14 +447,6 @@ operations:
 
     ApplyReversedOpLittleEndianCA has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopleca" instead.
     Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC".
-- uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ApplyRippleCarryComparatorBE has been deprecated. Please use @"compareusingripplecarry(bigendianaslittleendian(x), bigendianaslittleendian(y), output)" instead.
-    This operation has been removed.
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorle
   summary: |2-
 
@@ -1095,14 +647,13 @@ operations:
     that may be expressed as
     $\frac{e^{i t}}{\sqrt{2}}(e^{i\phi}\ket{0} + e^{-i\phi}\ket{1})$
     for some arbitrary real t has the expected value.
-- uid: microsoft.quantum.canon.assertprobintbe
+- uid: microsoft.quantum.canon.cascadeccnot
   summary: |2-
 
     > [!WARNING]
     > Deprecated
 
-    AssertProbIntBE has been deprecated. Please use @"assertprobint(stateindex, prob, bigendianaslittleendian(qubits), tolerance)" instead.
-    This operation has been removed.
+    CascadeCCNOT has been deprecated. Please use @"microsoft.quantum.canon.applyccnotchain" instead.
 - uid: microsoft.quantum.canon.cascadecnot
   summary: |2-
 
@@ -1125,14 +676,6 @@ operations:
     > Deprecated
 
     CNOTChainTarget has been deprecated. Please use @"microsoft.quantum.canon.applycnotchainwithtarget" instead.
-- uid: microsoft.quantum.canon.copymostsignificantbitle
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    CopyMostSignificantBitLE has been deprecated. Please use @"microsoft.quantum.arithmetic.copymostsignificantbit" instead.
-    Please use @"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit".
 - uid: microsoft.quantum.canon.cx
   summary: |-
     Applies the controlled-X (CX) gate to a pair of qubits.
@@ -1243,14 +786,6 @@ operations:
   summary: |-
     Applies an operation for each index in the Cartesian product of several
     ranges.
-- uid: microsoft.quantum.canon.measureintegerbe
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    MeasureIntegerBE has been deprecated. Please use @"measureinteger(bigendianaslittleendian(target))" instead.
-    This operation has been removed.
 - uid: microsoft.quantum.canon.modularaddproductle
   summary: |2-
 
@@ -1341,38 +876,6 @@ operations:
   summary: |-
     Uses SWAP gates to Reversed the order of the qubits in
     a register.
-- uid: microsoft.quantum.canon.with
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    With has been deprecated. Please use @"microsoft.quantum.canon.applywith" instead.
-    Please use @"Microsoft.Quantum.Canon.ApplyWith".
-- uid: microsoft.quantum.canon.witha
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    WithA has been deprecated. Please use @"microsoft.quantum.canon.applywitha" instead.
-    Please use @"Microsoft.Quantum.Canon.ApplyWithA".
-- uid: microsoft.quantum.canon.withc
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    WithC has been deprecated. Please use @"microsoft.quantum.canon.applywithc" instead.
-    Please use @"Microsoft.Quantum.Canon.ApplyWithC".
-- uid: microsoft.quantum.canon.withca
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    WithCA has been deprecated. Please use @"microsoft.quantum.canon.applywithca" instead.
-    Please use @"Microsoft.Quantum.Canon.ApplyWithCA".
 newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: The signature type of CCNOT gate.

@@ -65,4 +65,6 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
 ## Next steps
 
-Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng).
+- You can take a look to the [IQ\# code sample](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb). There you will find a Q# Jupyter Notebook that shows how to use Q# in this environment.
+- The [Quantum Katas](xref:microsoft.quantum.overview.katas) is an open-source collection of self-paced tutorials and sets of programming exercises in form of Q# Jupyter notebooks. They are aimed at teaching you elements of quantum computing and Q# programming at the same time. They're an excellent example of what kind of content you can create with Q# Jupyter Notebooks.
+- Now that you have installed the Quantum Development Kit, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng).

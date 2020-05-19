@@ -19,18 +19,18 @@ operations:
 - uid: microsoft.quantum.measurement.mresetx
   summary: |-
     Measures a single qubit in the X basis,
-    and resets it to the standard basis state
-    |0〉 following the measurement.
+    and resets it to a fixed initial state
+    following the measurement.
 - uid: microsoft.quantum.measurement.mresety
   summary: |-
     Measures a single qubit in the Y basis,
-    and resets it to the standard basis state
-    |0〉 following the measurement.
+    and resets it to a fixed initial state
+    following the measurement.
 - uid: microsoft.quantum.measurement.mresetz
   summary: |-
-    Measures a single qubit in the `Z` basis,
-    and resets it to the standard basis state
-    |0〉 following the measurement.
+    Measures a single qubit in the Z basis,
+    and resets it to a fixed initial state
+    following the measurement.
 - uid: microsoft.quantum.measurement.multim
   summary: Measures each qubit in a given array in the standard basis.
 - uid: microsoft.quantum.measurement.settobasisstate

@@ -56,7 +56,7 @@ However, it requires a few more additions to comprise a full `*.qs` Q# file.
 
 All Q# types and callables are defined within *namespaces*, which the compiler can then open individually 
 
-Firstly, the [`H`](xref:microsoft.quantum.intrinsic.h) and [`MResetZ`](xref:microsoft.quantum.measurements.mresetz) actually belong to the [Q# Standard Libraries](xref:microsoft.quantum.qsharplibintro).
+Firstly, the [`H`](xref:microsoft.quantum.intrinsic.h) and [`MResetZ`](xref:microsoft.quantum.measurement.mresetz) actually belong to the [Q# Standard Libraries](xref:microsoft.quantum.qsharplibintro).
 To be available for use, their respective *namespaces* need to be opened.
 All Q# callables and types (both those you define and those intrinsic to the language) are defined within namespaces.
 To access them, the compiler needs to be made aware of which namespaces to open.
@@ -408,11 +408,11 @@ Single qubit result: Zero
 Multiple qubits result: [One,One,Zero,Zero]
 ```
 
-
 > [!NOTE]
 > Due to the compiler's interoperability with namespaces, we could alternatively make our Q# operations available without the `using NamespaceName;` statement, and simply matching the C# namespace title to it.
 > That is, replacing `namespace host` with `namespace NamespaceName`.
----
+
+***
 
 ## Q# Jupyter Notebooks
 Q# Jupyter Notebooks make use of the IQ# kernel, which allows you to define, compile, and run Q# operations in a single notebook---all alongside instructions, notes, and other content.

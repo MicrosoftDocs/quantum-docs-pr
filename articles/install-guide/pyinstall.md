@@ -16,7 +16,7 @@ Install the QDK to develop Python host programs to call Q# operations.
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - The [PIP](https://pip.pypa.io/en/stable/installing) Python package manager
-    - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 
 1. Install the `qsharp` package, a Python package that enables interop between Q# and Python.

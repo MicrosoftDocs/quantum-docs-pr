@@ -32,7 +32,7 @@ The Q# language provides several *primitive types*, from which other types can b
    type.
 - The `Double` type represents a double-precision floating-point number, e.g.: `0.0`, `-1.3`, `4e-7`.
 - The `Bool` type represents a Boolean value which can either be `true` or `false`.
-- The `Range` type represents a sequence of integers, denoted by `start..step..stop`, where denoting the step is options. 
+- The `Range` type represents a sequence of integers, denoted by `start..step..stop`, where denoting the step is optional. 
    That is `start .. stop` corresponds to `start..1..stop`, and e.g. `1..2..7` represents the sequence $\{1, 3, 5, 7\}$.
 - The `String` type is a sequence of Unicode characters that is opaque to the user once created.
   This type is used to report messages to a classical host in the case of an error or diagnostic event.

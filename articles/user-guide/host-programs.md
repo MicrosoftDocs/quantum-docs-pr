@@ -318,7 +318,6 @@ Multiple qubits:
 [1, 1, 0, 0]
 {'CNOT': 0, 'QubitClifford': 4, 'R': 0, 'Measure': 8, 'T': 0, 'Depth': 0, 'Width': 4, 'BorrowedWidth': 0}
 ```
----
 
 ### [C#](#tab/tabid-csharp)
 

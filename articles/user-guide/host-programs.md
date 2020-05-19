@@ -82,7 +82,7 @@ namespace NamespaceName {
 Now the general execution model of a Q# program becomes clear.
 
 <br/>
-<img src="./images/general_execution_model.png" alt="Q# program execution diagram" width="500">
+<img src="./images/general_execution_model.png" alt="Q# program execution diagram" width="400">
 
 Firstly, the specific operation to be executed has access to any other callables and types defined in the same namespace.
 Thanks to `open` statements, it can also access those from any of the [Q# libraries](xref:microsoft.quantum.libraries). 
@@ -432,7 +432,7 @@ Upon running a cell with such a statement, the definitions from those namespaces
 
 Similarly, defining operations requires only writing the Q# code and running the cell.
 
-<img src="./images/jupyter_op_def.png" alt="Jupyter cell defining Q# operations" width="700">
+<img src="./images/jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="450">
 
 The output then lists those operations, which can then be called from future cells.
 
@@ -441,14 +441,14 @@ The output then lists those operations, which can then be called from future cel
 The functionality to run operations on specific target machines is provided via [IQ# Magic Commands](xref:microsoft.quantum.guide.quickref.iqsharp).
 For example, `%simulate` makes use of the `QuantumSimulator`, and `%estimate` uses the `ResourcesEstimator`:
 
-<img src="./images/jupyter_no_args_sim_est.png" alt="Simulate and estimate resources Jupyter cell" width="700">
+<img src="./images/jupyter_no_args_sim_est_crop.png" alt="Simulate and estimate resources Jupyter cell" width="500">
 
 ### Arguments
 
 Currently the execution magic commands can only be used with operations that take no arguments. 
 So, to run `MeasureSuperpositionArray`, we need to define a "wrapper" operation which then calls the operation with the arguments:
 
-<img src="./images/jupyter_wrapper_def_sim.png" alt="Wrapper function and simulate Jupyter cell" width="700">
+<img src="./images/jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="500">
 
 This operation can of course be used similarly with `%estimate` and other execution commands.
 

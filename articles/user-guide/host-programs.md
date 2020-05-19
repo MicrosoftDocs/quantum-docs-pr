@@ -224,7 +224,8 @@ The core of the interoperability is based on the Q# compiler making the contents
 One of the main benefits of using a host program is that the classical data returned by the Q# program can then be further processed in the host language.
 This could consist of some advanced data processing (e.g. something that can't be performed internally in Q#), and then calling further Q# actions based on those results, or something as simple as plotting the Q# results.
 
-The general scheme is shown here, and we discuss the specific implementations for Python, C#, and F# below.
+The general scheme is shown here, and we discuss the specific implementations for Python and C# below. 
+A sample using an F# host program can be found at the [.NET interoperability samples](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet).
 
 <br/>
 <img src="./images/host_program_diagram.png" alt="Q# program from a host program" width="700">
@@ -318,66 +319,136 @@ Multiple qubits:
 
 ### [C#](#tab/tabid-csharp)
 
-- need to be in directory location of C# file
-- resource estimator: simply link to info page (shows details there)
-- mention namespace confusion: either name same as Q# namespace, or include `using <Q#NamespaceName>;`.
+A C# host program has multiple components, and works very closely with some components of the QDK, such as the simulators, which are also built on the .NET language.
 
-C# host program:
+The Q# compiler works here by generating an equivalently named C# namespace from the Q# namespace in our Q# file.
+It further generates an equivalently named C# class for each of the Q# callables or types defined therein.
+
+First, we make any classes used in our host program available with `using` statements:
 
 ```csharp
 using System;
-using Microsoft.Quantum.Simulation.Core;
-using Microsoft.Quantum.Simulation.Simulators;
+using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines, e.g. QuantumSimulator
+using NamespaceName;                              // make the Q# namespace available
+```
 
-namespace NamespaceName
+Next, we declare our C# namespace, a few other bits and pieces (see the full code block below), and then any classical programming we would like (e.g. computing arguments for the Q# operations).
+The latter isn't necessary in our case, but an example of such usage can be found at the  [.NET interoperability sample](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet).
+
+#### Target machines
+
+Getting back to Q#, we must create an instance of whatever target machine we will execute our operations on.
+
+```csharp
+            using var sim = new QuantumSimulator();
+```
+
+Using other target machines is as simple as instantiating a different one, although processing the returns could require different action.
+For an example, you can check out how to use the [`ResourceEstimator` with C#](xref:microsoft.quantum.machines.resources-estimator).
+
+Each C# class generated from the Q# operations have a `Run` method, the first argument of which must be the target machine instance.
+So, to run `MeasureSuperposition` on the `QuantumSimulator`, we use `MeasureSuperposition.Run(sim)`.
+The returned results can then be assigned to variables in C# by fetching the `Result` property:
+
+```csharp
+            var single_qubit_result = MeasureSuperposition.Run(sim).Result;
+```
+
+> [!NOTE]
+> If the Q# operation does not have any returns (i.e. has return type `Unit`), use the `.Wait()` method call instead of `.Result`.
+> The `Run` method is actually executed asynchronously, because this will be the case for real quantum hardware.
+> Therefore the `Wait()` method blocks further execution until the task completes.
+
+#### Arguments
+
+Any arguments to the Q# operation are simply passed as additional arguments afer the target machine.
+Hence the results of `MeasureSuperpositionArray` on `n=4` qubits would fetched via 
+
+```csharp
+            var multi_qubit_result = MeasureSuperpositionArray.Run(sim, 4).Result;
+```
+
+A full C# host program could thus look like
+
+```csharp
+using System;
+using Microsoft.Quantum.Simulation.Simulators;
+using NamespaceName;
+
+namespace host
 {
     class Program
     {
         static void Main(string[] args)
         {
-            using (var sim = new QuantumSimulator())
-            {
-                var single_qubit_result = MeasureSuperposition.Run(sim).Result;
-                var multi_qubit_result = MeasureSuperpositionArray.Run(sim, 4).Result;
+            using var sim = new QuantumSimulator();
 
-                Console.WriteLine($"Single qubit result: {single_qubit_result}");
-                Console.WriteLine($"Multiple qubits result: {multi_qubit_result}");
-            }
+            var single_qubit_result = MeasureSuperposition.Run(sim).Result;
+            var multi_qubit_result = MeasureSuperpositionArray.Run(sim, 4).Result;
+
+            Console.WriteLine($"Single qubit result: {single_qubit_result}");
+            Console.WriteLine($"Multiple qubits result: {multi_qubit_result}");
         }
     }
 }
 ```
 
-From the command line, enter
+At the location of the C# file, the host program can be run from the command line by entering
 
 ```bash
 dotnet run
 ```
 
-and see output similar to 
+and in this case you will see output written to the console similar to 
 
 ```bash
 Single qubit result: Zero
 Multiple qubits result: [One,One,Zero,Zero]
 ```
 
-### [F#](#tab/tabid-csharp)
 
-- ?
+> [!NOTE]
+> Due to the compiler's interoperability with namespaces, we could alternatively make our Q# operations available without the `using NamespaceName;` statement, and simply matching the C# namespace title to it.
+> That is, replacing `namespace host` with `namespace NamespaceName`.
 
-FUTURE TO DO:
-- cheat sheets for each host?
 
 ## Q# Jupyter Notebooks
-- limitations?
-- diagram?
-- link to Q# sample code which details the nuances/limitations of Q# Jupyter Notebooks
+Q# Jupyter Notebooks make use of the IQ# kernel, which allows you to define, compile, and run Q# operations in a single notebook---all alongside instructions, notes, and other content.
+This means that while it is possible to import and use the contents of `*.qs` Q# files, they are not necessary in the execution model.
 
+Here, we will detail how to run the Q# operations defined above, but another good introduction to using Q# Jupyter Notebooks is provided at [Intro to Q# and Jupyter Notebook](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb).
 
+### Defining operations
 
+In a Q# Jupyter Notebook, you enter Q# code just as we would from inside the namespace of a Q# file.
 
+So, we can enable access to operations from the [Q# standard libraries](xref:microsoft.quantum.qsharplibintro) with `open` statements for their respective namespaces.
+Upon running a cell with such a statement, the definitions from those namespaces are available throughout the workspace.
 
+> [!NOTE]
+> [Operations from [Microsoft.Quantum.Intrinsic](xref:microsoft.quantum.intrinsic) and [Microsoft.Quantum.Canon](xref:microsoft.quantum.canon) (e.g. [`H`](xref:microsoft.quantum.intrinsic.h) and [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach)) are automatically available in Q# Jupyter Notebooks.
 
+Similarly, defining operations requires only writing the Q# code and running the cell.
+
+<img src="./images/jupyter_op_def.png" alt="Jupyter cell defining Q# operations" width="700">
+
+The output then lists those operations, which can then be called from future cells.
+
+### Target machines
+
+The functionality to run operations on specific target machines is provided via [IQ# Magic Commands](xref:microsoft.quantum.guide.quickref.iqsharp).
+For example, `%simulate` makes use of the `QuantumSimulator`, and `%estimate` uses the `ResourcesEstimator`:
+
+<img src="./images/jupyter_no_args_sim_est.png" alt="Simulate and estimate resources Jupyter cell" width="700">
+
+### Arguments
+
+Currently the execution magic commands can only be used with operations that take no arguments. 
+So, to run `MeasureSuperpositionArray`, we need to define a "wrapper" operation which then calls the operation with the arguments:
+
+<img src="./images/jupyter_wrapper_def_sim.png" alt="Wrapper function and simulate Jupyter cell" width="700">
+
+This operation can of course be used similarly with `%estimate` and other execution commands.
 
 
 

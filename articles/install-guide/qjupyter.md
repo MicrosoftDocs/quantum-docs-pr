@@ -70,5 +70,5 @@ Now that you have installed the QDK for Q# Jupyter Notebooks, you can write and 
 ## Samples
 
 For more examples of what you can do with Q# Jupyter Notebooks, please see:
-- [Intro to Q# and Jupyter Notebook](https://docs.microsoft.com/en-us/samples/microsoft/quantum/intro-to-qsharp-jupyter/)
+- [Intro to Q# and Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/)
 - [Quantum Katas tutorial notebooks](https://github.com/microsoft/QuantumKatas#tutorial-topics)

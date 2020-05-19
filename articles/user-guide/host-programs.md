@@ -262,6 +262,8 @@ namespace NamespaceName {
 }
 ```
 
+Select the tab corresponding to your host language of interest.
+
 ### [Python](#tab/tabid-python)
 A python host file is constructed as follows:
 1. Import the `qsharp` module, which registers the module loader for Q# interoperability. 
@@ -316,6 +318,7 @@ Multiple qubits:
 [1, 1, 0, 0]
 {'CNOT': 0, 'QubitClifford': 4, 'R': 0, 'Measure': 8, 'T': 0, 'Depth': 0, 'Width': 4, 'BorrowedWidth': 0}
 ```
+---
 
 ### [C#](#tab/tabid-csharp)
 
@@ -410,7 +413,7 @@ Multiple qubits result: [One,One,Zero,Zero]
 > [!NOTE]
 > Due to the compiler's interoperability with namespaces, we could alternatively make our Q# operations available without the `using NamespaceName;` statement, and simply matching the C# namespace title to it.
 > That is, replacing `namespace host` with `namespace NamespaceName`.
-
+---
 
 ## Q# Jupyter Notebooks
 Q# Jupyter Notebooks make use of the IQ# kernel, which allows you to define, compile, and run Q# operations in a single notebook---all alongside instructions, notes, and other content.

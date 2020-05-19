@@ -48,6 +48,7 @@ Hence it takes the form
 ```
 and we now have defined an operation, `MeasureSuperposition`, which takes no arguments and returns a value of type [Result](xref:microsoft.quantum.guide.types).
 More details on defining callables can be found at [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
+For the sake of brevity we refer primarily to Q# *operations* on this page, however all of the concepts discussed work in the same manner for Q# *functions*, as well as any user-defined Q# types. 
 
 ### Operation defined in a Q# file
 

@@ -433,7 +433,7 @@ Upon running a cell with such a statement, the definitions from those namespaces
 
 Similarly, defining operations requires only writing the Q# code and running the cell.
 
-<img src="./images/jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="450">
+<img src="./images/jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="600">
 
 The output then lists those operations, which can then be called from future cells.
 
@@ -449,40 +449,7 @@ For example, `%simulate` makes use of the `QuantumSimulator`, and `%estimate` us
 Currently the execution magic commands can only be used with operations that take no arguments. 
 So, to run `MeasureSuperpositionArray`, we need to define a "wrapper" operation which then calls the operation with the arguments:
 
-<img src="./images/jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="500">
+<img src="./images/jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="550">
 
 This operation can of course be used similarly with `%estimate` and other execution commands.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

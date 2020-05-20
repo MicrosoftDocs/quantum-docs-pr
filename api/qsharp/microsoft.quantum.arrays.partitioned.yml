@@ -10,7 +10,7 @@ namespace: Microsoft.Quantum.Arrays
 summary: Splits an array into multiple parts.
 examples: |-
   ```qsharp
-  // The following returns [[1,5],[3],[7]];
+  // The following returns [[1, 5], [3], [7]];
   let split = Partitioned([2,1], [1,5,3,7]);
   ```
 syntax: "function Partitioned (nElements : Int[], arr : 'T[]) : 'T[][]"

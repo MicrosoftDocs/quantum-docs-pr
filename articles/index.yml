@@ -32,7 +32,7 @@ landingContent:
           - text: Linear algebra for quantum computing
             url: overview/algebra-for-quantum-computing.md
           - text: Microsoft Learn modules for quantum computing
-            url: https://docs.microsoft.com/en-us/users/buildcollections2020-6557/collections/1o2iogrmn8x4r
+            url: https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r
       - linkListType: concept
         links:
           - text: Quantum computing concepts

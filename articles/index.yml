@@ -31,6 +31,8 @@ landingContent:
             url: overview/what-is-qsharp-and-qdk.md
           - text: Linear algebra for quantum computing
             url: overview/algebra-for-quantum-computing.md
+          - text: Microsoft Learn modules for quantum computing
+            url: https://docs.microsoft.com/learn/browse/?term=quantum
       - linkListType: concept
         links:
           - text: Quantum computing concepts

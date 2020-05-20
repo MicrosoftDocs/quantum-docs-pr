@@ -1,15 +1,7 @@
-- href: chemistry.broombridge.md
-  name: '%chemistry.broombridge magic command'
-- href: chemistry.encode.md
-  name: '%chemistry.encode magic command'
-- href: chemistry.fh.add_terms.md
-  name: '%chemistry.fh.add_terms magic command'
-- href: chemistry.fh.load.md
-  name: '%chemistry.fh.load magic command'
-- href: chemistry.inputstate.load.md
-  name: '%chemistry.inputstate.load magic command'
 - href: config.md
   name: '%config magic command'
+- href: connect.md
+  name: '%connect magic command'
 - href: estimate.md
   name: '%estimate magic command'
 - href: lsmagic.md
@@ -20,6 +12,12 @@
   name: '%performance magic command'
 - href: simulate.md
   name: '%simulate magic command'
+- href: status.md
+  name: '%status magic command'
+- href: submit.md
+  name: '%submit magic command'
+- href: target.md
+  name: '%target magic command'
 - href: toffoli.md
   name: '%toffoli magic command'
 - href: who.md

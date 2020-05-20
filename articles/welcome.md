@@ -31,7 +31,7 @@ To get up and running with the power of quantum, you can try out our tutorials:
 	This tutorial guides you through developing the program as a Q# command line application, using Visual Studio or Visual Studio Code.
 
 ### Learning further
-
+* The [Microsoft Learn modules for quantum computing](https://docs.microsoft.com/learn/browse/?term=quantum) will teach you to master core concepts at your speed and on your schedule. You can learn the basics of how to create quantum programs with the QDK with our [first module](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/).
 * If you want to dive deeper into Q# programming, check out the [Quantum Katas](https://github.com/Microsoft/QuantumKatas) - a collection of self-paced programming exercises that introduce you to quantum computing via programming exercises in Q#.
 	Many of these katas are also available as Q# Notebooks. 
 * Our [samples repository](https://github.com/Microsoft/Quantum) showcases multiple examples on how to write quantum programs using Q#. Most of these samples are written using our open-source [quantum libraries](https://github.com/Microsoft/QuantumLibraries), including our [standard](xref:microsoft.quantum.libraries.standard.intro) and [chemistry](xref:microsoft.quantum.chemistry.concepts.intro) libraries (more info on these below).

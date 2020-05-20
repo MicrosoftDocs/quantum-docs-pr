@@ -16,7 +16,7 @@ summary: |-
   the carry out bit is xored to the qubit `carry`.
 remarks: |-
   This operation has the same functionality as RippleCarryAdderD, but
-  only uses one ancilla qubit instead of $n$.
+  only uses one auxiliary qubit instead of $n$.
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: |-
   - Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David

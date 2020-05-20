@@ -113,8 +113,6 @@
     uid: microsoft.quantum.arithmetic.bigendianaslittleendian
   - name: Carry
     uid: microsoft.quantum.arithmetic.carry
-  - name: CascadeCCNOT
-    uid: microsoft.quantum.arithmetic.cascadeccnot
   - name: CompareGreaterThanFxP
     uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
   - name: CompareGTI
@@ -248,6 +246,8 @@
     uid: microsoft.quantum.arrays.indexrange
   - name: IsEmpty
     uid: microsoft.quantum.arrays.isempty
+  - name: IsPermutation
+    uid: microsoft.quantum.arrays.ispermutation
   - name: LookupFunction
     uid: microsoft.quantum.arrays.lookupfunction
   - name: Mapped
@@ -312,12 +312,12 @@
 - uid: microsoft.quantum.canon
   name: Microsoft.Quantum.Canon
   items:
-  - name: AdiabaticStateEnergyUnitary
-    uid: microsoft.quantum.canon.adiabaticstateenergyunitary
   - name: AndLadder
     uid: microsoft.quantum.canon.andladder
   - name: ApplyAnd
     uid: microsoft.quantum.canon.applyand
+  - name: ApplyCCNOTChain
+    uid: microsoft.quantum.canon.applyccnotchain
   - name: ApplyCNOTChain
     uid: microsoft.quantum.canon.applycnotchain
   - name: ApplyCNOTChainWithTarget
@@ -386,28 +386,18 @@
     uid: microsoft.quantum.canon.applypaulifrombitstring
   - name: ApplyQuantumFourierTransform
     uid: microsoft.quantum.canon.applyquantumfouriertransform
-  - name: ApplyQuantumFourierTransformBE
-    uid: microsoft.quantum.canon.applyquantumfouriertransformbe
-  - name: ApplyQuantumFourierTransformLE
-    uid: microsoft.quantum.canon.applyquantumfouriertransformle
-  - name: ApplyReversedOpBigEndian
-    uid: microsoft.quantum.canon.applyreversedopbigendian
   - name: ApplyReversedOpBigEndianA
     uid: microsoft.quantum.canon.applyreversedopbigendiana
   - name: ApplyReversedOpBigEndianC
     uid: microsoft.quantum.canon.applyreversedopbigendianc
   - name: ApplyReversedOpBigEndianCA
     uid: microsoft.quantum.canon.applyreversedopbigendianca
-  - name: ApplyReversedOpLittleEndian
-    uid: microsoft.quantum.canon.applyreversedoplittleendian
   - name: ApplyReversedOpLittleEndianA
     uid: microsoft.quantum.canon.applyreversedoplittleendiana
   - name: ApplyReversedOpLittleEndianC
     uid: microsoft.quantum.canon.applyreversedoplittleendianc
   - name: ApplyReversedOpLittleEndianCA
     uid: microsoft.quantum.canon.applyreversedoplittleendianca
-  - name: ApplyRippleCarryComparatorBE
-    uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
   - name: ApplyRippleCarryComparatorLE
     uid: microsoft.quantum.canon.applyripplecarrycomparatorle
   - name: ApplySeriesOfOps
@@ -506,46 +496,14 @@
     uid: microsoft.quantum.canon.approximatelymultiplexz
   - name: ApproximateQFT
     uid: microsoft.quantum.canon.approximateqft
-  - name: AsQubitArray
-    uid: microsoft.quantum.canon.asqubitarray
-  - name: AssertAlmostEqual
-    uid: microsoft.quantum.canon.assertalmostequal
-  - name: AssertAlmostEqualTol
-    uid: microsoft.quantum.canon.assertalmostequaltol
-  - name: AssertBoolArrayEqual
-    uid: microsoft.quantum.canon.assertboolarrayequal
-  - name: AssertBoolEqual
-    uid: microsoft.quantum.canon.assertboolequal
   - name: AssertHighestBit
     uid: microsoft.quantum.canon.asserthighestbit
-  - name: AssertIntEqual
-    uid: microsoft.quantum.canon.assertintequal
   - name: AssertLessThanPhaseLE
     uid: microsoft.quantum.canon.assertlessthanphasele
   - name: AssertPhase
     uid: microsoft.quantum.canon.assertphase
-  - name: AssertProbIntBE
-    uid: microsoft.quantum.canon.assertprobintbe
-  - name: AssertResultEqual
-    uid: microsoft.quantum.canon.assertresultequal
   - name: BigEndianToLittleEndian
     uid: microsoft.quantum.canon.bigendiantolittleendian
-  - name: Bind
-    uid: microsoft.quantum.canon.bind
-  - name: BindA
-    uid: microsoft.quantum.canon.binda
-  - name: BindC
-    uid: microsoft.quantum.canon.bindc
-  - name: BindCA
-    uid: microsoft.quantum.canon.bindca
-  - name: BitSize
-    uid: microsoft.quantum.canon.bitsize
-  - name: BoolArrFromPositiveInt
-    uid: microsoft.quantum.canon.boolarrfrompositiveint
-  - name: BoolArrFromResultArr
-    uid: microsoft.quantum.canon.boolarrfromresultarr
-  - name: BoolFromResult
-    uid: microsoft.quantum.canon.boolfromresult
   - name: Bound
     uid: microsoft.quantum.canon.bound
   - name: BoundA
@@ -554,6 +512,8 @@
     uid: microsoft.quantum.canon.boundc
   - name: BoundCA
     uid: microsoft.quantum.canon.boundca
+  - name: CascadeCCNOT
+    uid: microsoft.quantum.canon.cascadeccnot
   - name: CascadeCNOT
     uid: microsoft.quantum.canon.cascadecnot
   - name: CCNOTop
@@ -580,18 +540,12 @@
     uid: microsoft.quantum.canon.conjugatedbyc
   - name: ConjugatedByCA
     uid: microsoft.quantum.canon.conjugatedbyca
-  - name: ContinuedFractionConvergent
-    uid: microsoft.quantum.canon.continuedfractionconvergent
   - name: ControlledOnBitString
     uid: microsoft.quantum.canon.controlledonbitstring
   - name: ControlledOnInt
     uid: microsoft.quantum.canon.controlledonint
-  - name: CopyMostSignificantBitLE
-    uid: microsoft.quantum.canon.copymostsignificantbitle
   - name: CurriedOp
     uid: microsoft.quantum.canon.curriedop
-  - name: CurryOp
-    uid: microsoft.quantum.canon.curryop
   - name: CX
     uid: microsoft.quantum.canon.cx
   - name: CY
@@ -620,20 +574,8 @@
     uid: microsoft.quantum.canon.delayedca
   - name: EmbedPauli
     uid: microsoft.quantum.canon.embedpauli
-  - name: ExpMod
-    uid: microsoft.quantum.canon.expmod
-  - name: ExtendedGCD
-    uid: microsoft.quantum.canon.extendedgcd
-  - name: Filter
-    uid: microsoft.quantum.canon.filter
-  - name: ForAll
-    uid: microsoft.quantum.canon.forall
-  - name: ForAny
-    uid: microsoft.quantum.canon.forany
   - name: Fst
     uid: microsoft.quantum.canon.fst
-  - name: GCD
-    uid: microsoft.quantum.canon.gcd
   - name: HY
     uid: microsoft.quantum.canon.hy
   - name: Ignore
@@ -644,20 +586,10 @@
     uid: microsoft.quantum.canon.inplacexorbe
   - name: InPlaceXorLE
     uid: microsoft.quantum.canon.inplacexorle
-  - name: IntAbs
-    uid: microsoft.quantum.canon.intabs
-  - name: IntArrayFromRange
-    uid: microsoft.quantum.canon.intarrayfromrange
   - name: IntegerIncrementLE
     uid: microsoft.quantum.canon.integerincrementle
   - name: IntegerIncrementPhaseLE
     uid: microsoft.quantum.canon.integerincrementphasele
-  - name: IntMax
-    uid: microsoft.quantum.canon.intmax
-  - name: InverseMod
-    uid: microsoft.quantum.canon.inversemod
-  - name: IsCoprime
-    uid: microsoft.quantum.canon.iscoprime
   - name: IsResultOne
     uid: microsoft.quantum.canon.isresultone
   - name: IsResultZero
@@ -668,12 +600,6 @@
     uid: microsoft.quantum.canon.iteratethroughcartesianproduct
   - name: LittleEndianToBigEndian
     uid: microsoft.quantum.canon.littleendiantobigendian
-  - name: Map
-    uid: microsoft.quantum.canon.map
-  - name: MapIndex
-    uid: microsoft.quantum.canon.mapindex
-  - name: MeasureIntegerBE
-    uid: microsoft.quantum.canon.measureintegerbe
   - name: ModularAddProductLE
     uid: microsoft.quantum.canon.modularaddproductle
   - name: ModularAddProductPhaseLE
@@ -684,8 +610,6 @@
     uid: microsoft.quantum.canon.modularincrementphasele
   - name: ModularMultiplyByConstantLE
     uid: microsoft.quantum.canon.modularmultiplybyconstantle
-  - name: Modulus
-    uid: microsoft.quantum.canon.modulus
   - name: MultiplexerBruteForceFromGenerator
     uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   - name: MultiplexerFromGenerator
@@ -700,8 +624,6 @@
     uid: microsoft.quantum.canon.multiplexpauli
   - name: MultiplexZ
     uid: microsoft.quantum.canon.multiplexz
-  - name: NearEqualityFact
-    uid: microsoft.quantum.canon.nearequalityfact
   - name: NoOp
     uid: microsoft.quantum.canon.noop
   - name: OperationPow
@@ -712,18 +634,8 @@
     uid: microsoft.quantum.canon.operationpowc
   - name: OperationPowCA
     uid: microsoft.quantum.canon.operationpowca
-  - name: Pad
-    uid: microsoft.quantum.canon.pad
-  - name: PauliFromBitString
-    uid: microsoft.quantum.canon.paulifrombitstring
   - name: PermuteQubits
     uid: microsoft.quantum.canon.permutequbits
-  - name: PNormalize
-    uid: microsoft.quantum.canon.pnormalize
-  - name: PositiveIntFromBoolArr
-    uid: microsoft.quantum.canon.positiveintfromboolarr
-  - name: PositiveIntFromResultArr
-    uid: microsoft.quantum.canon.positiveintfromresultarr
   - name: QFT
     uid: microsoft.quantum.canon.qft
   - name: QFTLE
@@ -740,28 +652,10 @@
     uid: microsoft.quantum.canon.restrictedtosubregisterc
   - name: RestrictedToSubregisterCA
     uid: microsoft.quantum.canon.restrictedtosubregisterca
-  - name: RestrictToSubregister
-    uid: microsoft.quantum.canon.restricttosubregister
-  - name: RestrictToSubregisterA
-    uid: microsoft.quantum.canon.restricttosubregistera
-  - name: RestrictToSubregisterC
-    uid: microsoft.quantum.canon.restricttosubregisterc
-  - name: RestrictToSubregisterCA
-    uid: microsoft.quantum.canon.restricttosubregisterca
-  - name: ResultArrFromBoolArr
-    uid: microsoft.quantum.canon.resultarrfromboolarr
-  - name: ResultAsInt
-    uid: microsoft.quantum.canon.resultasint
-  - name: ResultFromBool
-    uid: microsoft.quantum.canon.resultfrombool
   - name: ResultStack
     uid: microsoft.quantum.canon.resultstack
-  - name: Reverse
-    uid: microsoft.quantum.canon.reverse
   - name: Snd
     uid: microsoft.quantum.canon.snd
-  - name: SplitArray
-    uid: microsoft.quantum.canon.splitarray
   - name: StackCapacity
     uid: microsoft.quantum.canon.stackcapacity
   - name: StackLength
@@ -776,8 +670,6 @@
     uid: microsoft.quantum.canon.stackpush
   - name: SwapReverseRegister
     uid: microsoft.quantum.canon.swapreverseregister
-  - name: ToOperation
-    uid: microsoft.quantum.canon.tooperation
   - name: TransformedOperation
     uid: microsoft.quantum.canon.transformedoperation
   - name: TransformedOperationA
@@ -794,24 +686,8 @@
     uid: microsoft.quantum.canon.uncurriedopc
   - name: UncurriedOpCA
     uid: microsoft.quantum.canon.uncurriedopca
-  - name: UncurryOp
-    uid: microsoft.quantum.canon.uncurryop
-  - name: UncurryOpA
-    uid: microsoft.quantum.canon.uncurryopa
-  - name: UncurryOpC
-    uid: microsoft.quantum.canon.uncurryopc
-  - name: UncurryOpCA
-    uid: microsoft.quantum.canon.uncurryopca
   - name: WeightOnePaulis
     uid: microsoft.quantum.canon.weightonepaulis
-  - name: With
-    uid: microsoft.quantum.canon.with
-  - name: WithA
-    uid: microsoft.quantum.canon.witha
-  - name: WithC
-    uid: microsoft.quantum.canon.withc
-  - name: WithCA
-    uid: microsoft.quantum.canon.withca
   - name: XOR
     uid: microsoft.quantum.canon.xor
 - uid: microsoft.quantum.characterization
@@ -1001,6 +877,8 @@
     uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   - name: AssertQubitWithinTolerance
     uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
+  - name: Contradiction
+    uid: microsoft.quantum.diagnostics.contradiction
   - name: DumpMachine
     uid: microsoft.quantum.diagnostics.dumpmachine
   - name: DumpRegister
@@ -1043,10 +921,6 @@
   items:
   - name: BitFlipCode
     uid: microsoft.quantum.errorcorrection.bitflipcode
-  - name: BitFlipDecoder
-    uid: microsoft.quantum.errorcorrection.bitflipdecoder
-  - name: BitFlipEncoder
-    uid: microsoft.quantum.errorcorrection.bitflipencoder
   - name: BitFlipRecoveryFn
     uid: microsoft.quantum.errorcorrection.bitfliprecoveryfn
   - name: CSS
@@ -1069,10 +943,6 @@
     uid: microsoft.quantum.errorcorrection.encodeop
   - name: FiveQubitCode
     uid: microsoft.quantum.errorcorrection.fivequbitcode
-  - name: FiveQubitCodeDecoder
-    uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
-  - name: FiveQubitCodeEncoder
-    uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
   - name: FiveQubitCodeRecoveryFn
     uid: microsoft.quantum.errorcorrection.fivequbitcoderecoveryfn
   - name: InjectPi4YRotation
@@ -1093,10 +963,6 @@
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: SteaneCode
     uid: microsoft.quantum.errorcorrection.steanecode
-  - name: SteaneCodeDecoder
-    uid: microsoft.quantum.errorcorrection.steanecodedecoder
-  - name: SteaneCodeEncoder
-    uid: microsoft.quantum.errorcorrection.steanecodeencoder
   - name: SteaneCodeRecoveryFns
     uid: microsoft.quantum.errorcorrection.steanecoderecoveryfns
   - name: SteaneCodeRecoveryX
@@ -1495,10 +1361,6 @@
     uid: microsoft.quantum.math.complexpolar
   - name: ComplexPolarAsComplex
     uid: microsoft.quantum.math.complexpolarascomplex
-  - name: ComplexPolarToComplex
-    uid: microsoft.quantum.math.complexpolartocomplex
-  - name: ComplexToComplexPolar
-    uid: microsoft.quantum.math.complextocomplexpolar
   - name: ContinuedFractionConvergentI
     uid: microsoft.quantum.math.continuedfractionconvergenti
   - name: ContinuedFractionConvergentL

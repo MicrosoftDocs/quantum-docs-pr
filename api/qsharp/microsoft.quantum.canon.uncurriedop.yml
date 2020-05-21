@@ -52,9 +52,9 @@ output:
         uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: The type of the first argument of a curried function.
+  summary: The type of the first input to a curried operation.
 - uid: "'U"
-  summary: The type of the second argument of a curried function.
+  summary: The type of the second input to a curried operation.
 seeAlso:
 - microsoft.quantum.canon.uncurryopc
 - microsoft.quantum.canon.uncurryopa

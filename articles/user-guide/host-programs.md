@@ -22,7 +22,7 @@ To best understand the process and differences, we consider a simple Q# program 
 
 ## Basic Q# program
 
-A very basic quantum program might consist of preparing a qubit in an equal superposition of states $\ket{0}$ and $\ket{1}$, measuring it, and returning the result, which will be randomly either one of the states with equal probability.
+A basic quantum program might consist of preparing a qubit in an equal superposition of states $\ket{0}$ and $\ket{1}$, measuring it, and returning the result, which will be randomly either one of these two states with equal probability.
 Indeed, this process is at the core of the [quantum random number generator](xref:microsoft.quantum.quickstarts.qrng) quickstart.
 
 In Q#, this would be performed by the following code:
@@ -36,7 +36,7 @@ In Q#, this would be performed by the following code:
 
 However, this code alone can't be executed by Q#.
 For that, it needs to make up the body of an [operation](xref:microsoft.quantum.guide.basics#q-operations-and-functions), which is then executed when called---either directly or by another operation. 
-Hence it takes the form
+Hence, you can write an operation of the following form:
 ```qsharp
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) {
@@ -45,7 +45,7 @@ Hence it takes the form
         }
     }
 ```
-and we now have defined an operation, `MeasureSuperposition`, which takes no arguments and returns a value of type [Result](xref:microsoft.quantum.guide.types).
+You have defined an operation, `MeasureSuperposition`, which takes no inputs and returns a value of type [Result](xref:microsoft.quantum.guide.types).
 More details on defining callables can be found at [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
 For the sake of brevity we refer primarily to Q# *operations* on this page, however all of the concepts discussed work in the same manner for Q# *functions*, as well as any user-defined Q# types. 
 
@@ -56,7 +56,7 @@ However, it requires a few more additions to comprise a full `*.qs` Q# file.
 
 All Q# types and callables are defined within *namespaces*, which the compiler can then open individually 
 
-Firstly, the [`H`](xref:microsoft.quantum.intrinsic.h) and [`MResetZ`](xref:microsoft.quantum.measurement.mresetz) actually belong to the [Q# Standard Libraries](xref:microsoft.quantum.qsharplibintro).
+Firstly, the [`H`](xref:microsoft.quantum.intrinsic.h) and [`MResetZ`](xref:microsoft.quantum.measurement.mresetz) operations actually belong to the [Q# Standard Libraries](xref:microsoft.quantum.qsharplibintro).
 To be available for use, their respective *namespaces* need to be opened.
 All Q# callables and types (both those you define and those intrinsic to the language) are defined within namespaces.
 To access them, the compiler needs to be made aware of which namespaces to open.
@@ -140,7 +140,7 @@ Additionally, it's no problem if your operation includes [documentation comments
 
 ### Operation arguments
 
-So far, we've only considered an operation that takes no arguments.
+So far, we've only considered an operation that takes no inputs.
 Suppose we wanted to perform a similar operation, but on multiple qubits---the number of which is provided as an argument.
 Such an operation could be written as
 ```qsharp
@@ -155,9 +155,9 @@ Such an operation could be written as
     }
 ```
 where the returned value is an array of the measurement results.
-Note that the [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) operation is in the `Microsoft.Quantum.Canon` namespace, requiring another `open` statement with the others.
+Note that the [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) operation is in the [`Microsoft.Quantum.Canon` namespace](xref:microsoft.quantum.canon), requiring another `open` statement with the others.
 
-If we move the `@EntryPoint()` to precede this new operation (note there can only be one such line in a file), attempting to run it with simply `dotnet run` results in a helpful error message.
+If we move the `@EntryPoint()` attribute to precede this new operation (note there can only be one such line in a file), attempting to run it with simply `dotnet run` results in a helpful error message.
 This message indicates what additional command line options are required, and how to express them.
 
 The general format for the command line is actually `dotnet run [options]`, and operation arguments are provided there.
@@ -282,7 +282,7 @@ A python host file is constructed as follows:
 Calling an operation to be run on a specific target machine is done via different Python methods on the imported operation.
 For example, `.simulate(<args>)`, uses the `QuantumSimulator` to run the operation, whereas `.estimate_resources(<args>)` does so on the `ResourcesEstimator`.
 
-#### Arguments
+#### Passing inputs to Q\#
 Arguments for the Q# callable should be provided in the form of a keyword argument, where the keyword is the argument name in the callable definition.
 That is, `MeasureSuperpositionArray.simulate(n=4)` is valid, whereas `MeasureSuperpositionArray.simulate(4)` would throw an error.
 
@@ -410,7 +410,7 @@ Multiple qubits result: [One,One,Zero,Zero]
 
 > [!NOTE]
 > Due to the compiler's interoperability with namespaces, we could alternatively make our Q# operations available without the `using NamespaceName;` statement, and simply matching the C# namespace title to it.
-> That is, replacing `namespace host` with `namespace NamespaceName`.
+> That is, by replacing `namespace host` with `namespace NamespaceName`.
 
 ***
 
@@ -443,7 +443,7 @@ For example, `%simulate` makes use of the `QuantumSimulator`, and `%estimate` us
 
 <img src="./images/jupyter_no_args_sim_est_crop.png" alt="Simulate and estimate resources Jupyter cell" width="500">
 
-### Arguments
+### Passing inputs to functions and operations
 
 Currently the execution magic commands can only be used with operations that take no arguments. 
 So, to run `MeasureSuperpositionArray`, we need to define a "wrapper" operation which then calls the operation with the arguments:

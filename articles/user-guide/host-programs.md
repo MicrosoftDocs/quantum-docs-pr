@@ -93,7 +93,7 @@ For our purposes here, the most useful target machine is instance of the full-st
 
 So far, we've described what happens when a specific Q# operation is being executed.
 Regardless of whether Q# is used in a standalone application or with a host program, this general process is more or less the same---hence the QDK's flexibility.
-The differences between the methods therefore reveal themselves in *how* that Q# operation is called to be executed, and in what manner any results are returned.
+The differences between the different ways of calling into the Quantum Development Kit therefore reveal themselves in *how* that Q# operation is called to be executed, and in what manner any results are returned.
 
 First, we discuss how this done with the Q# standalone application from the command line, and then proceed to using Python and C# host programs.
 We reserve the standalone application of Q# Jupyter Notebooks for last, because unlike the first three, it does not actually require a Q# file.
@@ -265,7 +265,7 @@ namespace NamespaceName {
 Select the tab corresponding to your host language of interest.
 
 ### [Python](#tab/tabid-python)
-A python host file is constructed as follows:
+A Python host program is constructed as follows:
 1. Import the `qsharp` module, which registers the module loader for Q# interoperability. 
     This allows Q# namespaces to appear as Python modules, from which we can import Q# operations.
 

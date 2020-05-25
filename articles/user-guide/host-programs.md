@@ -22,7 +22,6 @@ To best understand the process and differences, we consider a simple Q# program 
 
 ## Basic Q# program
 
-It would be very surprising if you've made it this far without hearing the word "superposition."
 A very basic quantum program might consist of preparing a qubit in an equal superposition of states $\ket{0}$ and $\ket{1}$, measuring it, and returning the result, which will be randomly either one of the states with equal probability.
 Indeed, this process is at the core of the [quantum random number generator](xref:microsoft.quantum.quickstarts.qrng) quickstart.
 
@@ -452,4 +451,3 @@ So, to run `MeasureSuperpositionArray`, we need to define a "wrapper" operation 
 <img src="./images/jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="550">
 
 This operation can of course be used similarly with `%estimate` and other execution commands.
-

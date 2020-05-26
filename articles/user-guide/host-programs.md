@@ -1,5 +1,5 @@
 ---
-title: Run Q# with standalone applications or host programs
+title: Run Q# standalone or with host programs
 description: Overview of the different ways to run Q# programs. Command line, Q# Jupyter Notebooks, and classical host programs in Python a .NET language.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -8,17 +8,17 @@ ms.topic: article
 uid: microsoft.quantum.guide.host-programs
 ---
 
-# Run Q# with standalone applications or host programs
+# Run Q# standalone or with host programs
 
 One of the Quantum Development Kit's greatest strengths is its flexibility across platforms and development environments.
 However, this also means that new Q# users may find themselves confused or overwhelmed by the numerous options found in the [install guide](xref:microsoft.quantum.install).
 On this page, we explain what happens when a Q# program is run, and compare the different ways in which users can do so.
 
-A primary distinction is between running Q#:
+A primary distinction is between running Q#
     - as a standalone application, where Q# is the only language involved and the program is invoked directly, or
     - with an additional *host program*, written in Python or a .NET language (e.g. C# or F#), which then invokes the program and can further process returned results.
 
-To best understand the process and differences, we consider a simple Q# program and compare the ways it can be executed.
+To best understand these processes and their differences, we consider a simple Q# program and compare the ways it can be executed.
 
 ## Basic Q# program
 
@@ -46,12 +46,13 @@ Hence, you can write an operation of the following form:
     }
 ```
 You have defined an operation, `MeasureSuperposition`, which takes no inputs and returns a value of type [Result](xref:microsoft.quantum.guide.types).
-More details on defining callables can be found at [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
-For the sake of brevity we refer primarily to Q# *operations* on this page, however all of the concepts discussed work in the same manner for Q# *functions*, as well as any user-defined Q# types. 
 
-### Operation defined in a Q# file
+While the examples on this page only consist of Q# *operations*, all of the concepts we will discuss pertain equally to Q# *functions*, and therefore we refer to them collectively as *callables*. 
+Their differences are discussed at [Q# basics: operations and functions](xref:microsoft.quantum.guide.basics#q-operations-and-functions), and more details on defining them can be found at [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
 
-The operation is precisely what's called and run by Q#.
+### Callable defined in a Q# file
+
+The callable is precisely what's called and run by Q#.
 However, it requires a few more additions to comprise a full `*.qs` Q# file.
 
 All Q# types and callables are defined within *namespaces*, which the compiler can then open individually 
@@ -61,7 +62,7 @@ To be available for use, their respective *namespaces* need to be opened.
 All Q# callables and types (both those you define and those intrinsic to the language) are defined within namespaces.
 To access them, the compiler needs to be made aware of which namespaces to open.
 
-So, the full Q# file containing our operation consists of defining our own namespace, opening the namespaces for the operations our operation uses, and then our operation:
+So, the full Q# file containing our operation consists of defining our own namespace, opening the namespaces for the callables our operation uses, and then our operation:
 
 ```qsharp
 namespace NamespaceName {
@@ -77,6 +78,9 @@ namespace NamespaceName {
 }
 ```
 
+> [!NOTE]
+> Info on aliasing namespaces as well as the not actual need to them. NSs are just name designators.
+
 ### Execution of a Q# program
 
 Now the general execution model of a Q# program becomes clear.
@@ -84,16 +88,16 @@ Now the general execution model of a Q# program becomes clear.
 <br/>
 <img src="./images/general_execution_model.png" alt="Q# program execution diagram" width="400">
 
-Firstly, the specific operation to be executed has access to any other callables and types defined in the same namespace.
+Firstly, the specific callable to be executed has access to any other callables and types defined in the same namespace.
 Thanks to `open` statements, it can also access those from any of the [Q# libraries](xref:microsoft.quantum.libraries). 
 
-The operation itself is then executed on a *[target machine](xref:microsoft.quantum.machines)*.
+The callable itself is then executed on a *[target machine](xref:microsoft.quantum.machines)*.
 In the future, one such target machine will be a real quantum computer, but there are currently multiple simulators available, each with a particular use.
 For our purposes here, the most useful target machine is instance of the full-state simulator, `QuantumSimulator`, which calculates the program's behavior as if it were being executed on a noise-free quantum computer.
 
-So far, we've described what happens when a specific Q# operation is being executed.
+So far, we've described what happens when a specific Q# callable is being executed.
 Regardless of whether Q# is used in a standalone application or with a host program, this general process is more or less the same---hence the QDK's flexibility.
-The differences between the different ways of calling into the Quantum Development Kit therefore reveal themselves in *how* that Q# operation is called to be executed, and in what manner any results are returned.
+The differences between the different ways of calling into the Quantum Development Kit therefore reveal themselves in *how* that Q# callable is called to be executed, and in what manner any results are returned.
 
 First, we discuss how this done with the Q# standalone application from the command line, and then proceed to using Python and C# host programs.
 We reserve the standalone application of Q# Jupyter Notebooks for last, because unlike the first three, it does not actually require a Q# file.
@@ -101,7 +105,7 @@ We reserve the standalone application of Q# Jupyter Notebooks for last, because 
 
 ## Q# from the command line
 One of the easiest ways to get started writing Q# programs is to avoid worrying about separate files and a second language altogether.
-Using Visual Studio Code or Visual Studio with the QDK extension allows for a seamless work flow in which we run Q# operations from only a single Q# file.
+Using Visual Studio Code or Visual Studio with the QDK extension allows for a seamless work flow in which we run Q# callables from only a single Q# file.
 
 For this, we will ultimately invoke the program's execution by entering
 ```bash
@@ -110,11 +114,14 @@ dotnet run
 in the command line.
 Note that the terminal's directory location needs to be the same as the Q# file, so we recommend simply using the integrated terminal in VS Code or Visual Studio.
 
-### Add entry point to Q# file
-Of course, most Q# files will contain more than one operation.
-So, we need to let the compiler know *which* operation to execute when we provide the `dotnet run` command.
+> [!NOTE]
+> Update with details and link to more .NET options (e.g. `--project <PATH>`)
 
-This is done with a simple change to the Q# file itself: add a line with `@EntryPoint()` directly preceding the operation.
+### Add entry point to Q# file
+Of course, most Q# files will contain more than one callable.
+So, we need to let the compiler know *which* callable to execute when we provide the `dotnet run` command.
+
+This is done with a simple change to the Q# file itself: add a line with `@EntryPoint()` directly preceding the callable.
 
 Our file from above would therefore become
 ```qsharp
@@ -135,10 +142,10 @@ namespace NamespaceName {
 Now, a call of `dotnet run` from the command line leads to `MeasureSuperposition` being run, and the returned value is then printed directly to the terminal.
 So, you will see either `One` or `Zero` printed. 
 
-Note that it doesn't matter if you have more operations defined below it, only `MeasureSuperposition` will be run.
-Additionally, it's no problem if your operation includes [documentation comments](xref:microsoft.quantum.guide.filestructure#documentation-comments) before the operation declaration, the `@EntryPoint()` attribute can be simply placed above them.
+Note that it doesn't matter if you have more callables defined below it, only `MeasureSuperposition` will be run.
+Additionally, it's no problem if your callable includes [documentation comments](xref:microsoft.quantum.guide.filestructure#documentation-comments) before its declaration, the `@EntryPoint()` attribute can be simply placed above them.
 
-### Operation arguments
+### Callable arguments
 
 So far, we've only considered an operation that takes no inputs.
 Suppose we wanted to perform a similar operation, but on multiple qubits---the number of which is provided as an argument.
@@ -157,10 +164,10 @@ Such an operation could be written as
 where the returned value is an array of the measurement results.
 Note that the [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) operation is in the [`Microsoft.Quantum.Canon` namespace](xref:microsoft.quantum.canon), requiring another `open` statement with the others.
 
-If we move the `@EntryPoint()` attribute to precede this new operation (note there can only be one such line in a file), attempting to run it with simply `dotnet run` results in a helpful error message.
+If we move the `@EntryPoint()` attribute to precede this new operation (note there can only be one such line in a file), attempting to run it with simply `dotnet run` results in an error message.
 This message indicates what additional command line options are required, and how to express them.
 
-The general format for the command line is actually `dotnet run [options]`, and operation arguments are provided there.
+The general format for the command line is actually `dotnet run [options]`, and callable arguments are provided there.
 In this case, the argument `n` is missing, and it shows that we need to provide the option `-n <n>`. 
 To run `MeasureSuperpositionArray` for `n=4` qubits, we therefore use
 
@@ -176,12 +183,16 @@ yielding an output similar to
 
 This of course extends to multiple arguments.
 
+> [!NOTE]
+> Argument names defined in `camelCase` are slightly altered by the compiler to be accepted as Q# inputs. 
+> For example, if instead of `n`, we used the name `numQubits` above, then this input would be provided in the command line via ``--num-qubits 4` instead of `-n 4`.
+
 The error message also provides other options which can be used, including how to change the target machine.
 
 ### Different target machines
 
-From the output of our operation thus far, it's clear that the default target machine from the command line is the full-state quauntum simulator, `QuantumSimulator`.
-However, we can instruct the operation to be run on a specific target machine with the option `--simulator` (or the shorthand `-s`).
+As the outputs from our operations thus far have been the expected results of their action on real qubits, it's clear that the default target machine from the command line is the full-state quauntum simulator, `QuantumSimulator`.
+However, we can instruct callables to be run on a specific target machine with the option `--simulator` (or the shorthand `-s`).
 
 For example, we could run it on [`ResourcesEstimator`](xref:microsoft.quantum.machines.resources-estimator):
 
@@ -213,12 +224,12 @@ Details on what these metrics indicate can be found [here](xref:microsoft.quantu
 
 ## Q# with host programs
 
-With our Q# file in hand, an alternative to calling an operation directly from the command line is to use a *host program* in another classical language. 
+With our Q# file in hand, an alternative to calling an operation or function directly from the command line is to use a *host program* in another classical language. 
 Specifically, this can be done with either Python or a .NET language such as C# or F# (for the sake of brevity we will only detail C# here).
 A little more setup is required to enable the interoperability, but those details can be found in the [install guides](xref:microsoft.quantum.install).
 
 In a nutshell, the situation now includes a host program file (e.g. `*.py` or `*.cs`) in the same location as our Q# file.
-It's now the *host* program that gets run, and in the course of its execution it calls specific Q# operations from the Q# file.
+It's now the *host* program that gets run, and in the course of its execution it can call specific Q# operations and functions from the Q# file.
 The core of the interoperability is based on the Q# compiler making the contents of the Q# file accessible to the host program so that they can be called.
 
 One of the main benefits of using a host program is that the classical data returned by the Q# program can then be further processed in the host language.
@@ -241,7 +252,7 @@ The following host program implementations all work with the same Q# file:
 namespace NamespaceName {
     open Microsoft.Quantum.Intrinsic;     // for the H operation
     open Microsoft.Quantum.Measurement;   // for MResetZ and MultiM
-	open Microsoft.Quantum.Canon;         // for ApplyToEach
+    open Microsoft.Quantum.Canon;         // for ApplyToEach
 
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) { 
@@ -267,19 +278,22 @@ Select the tab corresponding to your host language of interest.
 ### [Python](#tab/tabid-python)
 A Python host program is constructed as follows:
 1. Import the `qsharp` module, which registers the module loader for Q# interoperability. 
-    This allows Q# namespaces to appear as Python modules, from which we can import Q# operations.
+    This allows Q# namespaces to appear as Python modules, from which we can "import" Q# callables.
+	Note that it is technically not the Q# callables themselves which are imported, but rather Python stubs which allow calling into them.
+	These then behave as objects of Python classes, on which we use methods to execute them on target machines. 
 
-2. Import those Q# operations which we will directly invoke---in this case, `MeasureSuperposition` and `MeasureSuperpositionArray`.
+
+2. Import those Q# callables which we will directly invoke---in this case, `MeasureSuperposition` and `MeasureSuperpositionArray`.
     ```python
     import qsharp
     from NamespaceName import MeasureSuperposition, MeasureSuperpositionArray
     ```
-    Note that with the `qsharp` module imported, you can also import operations directly from the Q# library namespaces.
+    With the `qsharp` module imported, you can also import callables directly from the Q# library namespaces.
 
-3. Among any other Python code, you can now call those operations on specific target machines, and assign their returns to variables (if they return a value) for further use.
+3. Among any other Python code, you can now call those callables on specific target machines, and assign their returns to variables (if they return a value) for further use.
 
 #### Specifying target machines
-Calling an operation to be run on a specific target machine is done via different Python methods on the imported operation.
+Calling an operation to be run on a specific target machine is done via different Python methods on the imported object.
 For example, `.simulate(<args>)`, uses the `QuantumSimulator` to run the operation, whereas `.estimate_resources(<args>)` does so on the `ResourcesEstimator`.
 
 #### Passing inputs to Q\#
@@ -321,12 +335,12 @@ Multiple qubits:
 
 ### [C#](#tab/tabid-csharp)
 
-A C# host program has multiple components, and works very closely with some components of the QDK, such as the simulators, which are also built on the .NET language.
+A C# host program has multiple components, and works very closely with some components of the QDK, such as the simulators, which are themselves built on C#.
 
 The Q# compiler works here by generating an equivalently named C# namespace from the Q# namespace in our Q# file.
 It further generates an equivalently named C# class for each of the Q# callables or types defined therein.
 
-First, we make any classes used in our host program available with `using` statements:
+First, we make any classes used in our host program available with `using` statements, which are roughly analagous to the `open` statements in our Q# file:
 
 ```csharp
 using System;
@@ -334,7 +348,7 @@ using Microsoft.Quantum.Simulation.Simulators;    // contains the target machine
 using NamespaceName;                              // make the Q# namespace available
 ```
 
-Next, we declare our C# namespace, a few other bits and pieces (see the full code block below), and then any classical programming we would like (e.g. computing arguments for the Q# operations).
+Next, we declare our C# namespace, a few other bits and pieces (see the full code block below), and then any classical programming we would like (e.g. computing arguments for the Q# callables).
 The latter isn't necessary in our case, but an example of such usage can be found at the  [.NET interoperability sample](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet).
 
 #### Target machines
@@ -357,13 +371,13 @@ The returned results can then be assigned to variables in C# by fetching the `Re
 ```
 
 > [!NOTE]
-> If the Q# operation does not have any returns (i.e. has return type `Unit`), use the `.Wait()` method call instead of `.Result`.
+> If the Q# callable does not have any returns (i.e. has return type `Unit`), use the `.Wait()` method call instead of `.Result`.
 > The `Run` method is actually executed asynchronously, because this will be the case for real quantum hardware.
 > Therefore the `Wait()` method blocks further execution until the task completes.
 
 #### Arguments
 
-Any arguments to the Q# operation are simply passed as additional arguments afer the target machine.
+Any arguments to the Q# callable are simply passed as additional arguments afer the target machine.
 Hence the results of `MeasureSuperpositionArray` on `n=4` qubits would fetched via 
 
 ```csharp
@@ -409,26 +423,28 @@ Multiple qubits result: [One,One,Zero,Zero]
 ```
 
 > [!NOTE]
-> Due to the compiler's interoperability with namespaces, we could alternatively make our Q# operations available without the `using NamespaceName;` statement, and simply matching the C# namespace title to it.
+> Due to the compiler's interoperability with namespaces, we could alternatively make our Q# callables available without the `using NamespaceName;` statement, and simply matching the C# namespace title to it.
 > That is, by replacing `namespace host` with `namespace NamespaceName`.
 
 ***
 
 ## Q# Jupyter Notebooks
-Q# Jupyter Notebooks make use of the IQ# kernel, which allows you to define, compile, and run Q# operations in a single notebook---all alongside instructions, notes, and other content.
+Q# Jupyter Notebooks make use of the IQ# kernel, which allows you to define, compile, and run Q# callables in a single notebook---all alongside instructions, notes, and other content.
 This means that while it is possible to import and use the contents of `*.qs` Q# files, they are not necessary in the execution model.
 
-Here, we will detail how to run the Q# operations defined above, but another good introduction to using Q# Jupyter Notebooks is provided at [Intro to Q# and Jupyter Notebook](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb).
+Here, we will detail how to run the Q# operations defined above, but a more broad introduction to using Q# Jupyter Notebooks is provided at [Intro to Q# and Jupyter Notebooks](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb).
 
 ### Defining operations
 
 In a Q# Jupyter Notebook, you enter Q# code just as we would from inside the namespace of a Q# file.
 
-So, we can enable access to operations from the [Q# standard libraries](xref:microsoft.quantum.qsharplibintro) with `open` statements for their respective namespaces.
+So, we can enable access to callables from the [Q# standard libraries](xref:microsoft.quantum.qsharplibintro) with `open` statements for their respective namespaces.
 Upon running a cell with such a statement, the definitions from those namespaces are available throughout the workspace.
 
 > [!NOTE]
-> Operations from [Microsoft.Quantum.Intrinsic](xref:microsoft.quantum.intrinsic) and [Microsoft.Quantum.Canon](xref:microsoft.quantum.canon) (e.g. [`H`](xref:microsoft.quantum.intrinsic.h) and [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach)) are automatically available in Q# Jupyter Notebooks.
+> Callables from [Microsoft.Quantum.Intrinsic](xref:microsoft.quantum.intrinsic) and [Microsoft.Quantum.Canon](xref:microsoft.quantum.canon) (e.g. [`H`](xref:microsoft.quantum.intrinsic.h) and [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach)) are automatically available to operations defined within cells in Q# Jupyter Notebooks.
+> However, this is not true for code brought in from external Q# source files (a process shown at [Intro to Q# and Jupyter Notebooks](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)). 
+> 
 
 Similarly, defining operations requires only writing the Q# code and running the cell.
 

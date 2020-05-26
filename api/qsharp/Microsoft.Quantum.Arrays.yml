@@ -57,6 +57,8 @@ functions:
     for use in a for loop.
 - uid: microsoft.quantum.arrays.isempty
   summary: Returns true if and only if an array is empty.
+- uid: microsoft.quantum.arrays.ispermutation
+  summary: Outputs true if and only if a given array represents a permutation.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: |-
     Given an array, returns a function which returns elements of that

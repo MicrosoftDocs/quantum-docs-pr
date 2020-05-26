@@ -55,14 +55,13 @@ Their differences are discussed at [Q# basics: operations and functions](xref:mi
 The callable is precisely what's called and run by Q#.
 However, it requires a few more additions to comprise a full `*.qs` Q# file.
 
-All Q# types and callables are defined within *namespaces*, which the compiler can then open individually 
+All Q# types and callables (both those you define and those intrinsic to the language) are defined within *namespaces*, which provide each a full name that can then be referenced.
 
-Firstly, the [`H`](xref:microsoft.quantum.intrinsic.h) and [`MResetZ`](xref:microsoft.quantum.measurement.mresetz) operations actually belong to the [Q# Standard Libraries](xref:microsoft.quantum.qsharplibintro).
-To be available for use, their respective *namespaces* need to be opened.
-All Q# callables and types (both those you define and those intrinsic to the language) are defined within namespaces.
-To access them, the compiler needs to be made aware of which namespaces to open.
+For example, the [`H`](xref:microsoft.quantum.intrinsic.h) and [`MResetZ`](xref:microsoft.quantum.measurement.mresetz) operations are found in the [`Microsoft.Quantum.Instrinsic`](xref:microsoft.quantum.intrinsic) and [`Microsoft.Quantum.Measurement`](xref:microsoft.quantum.measurement) namespaces (part of the [Q# Standard Libraries](xref:microsoft.quantum.qsharplibintro)).
+As such, they can always be called via their *full* names, `Microsoft.Quantum.Intrinsic.H(<qubit>)` and `Microsoft.Quantum.Measurement.MResetZ(<qubit>)`, but always doing this would lead to very cluttered code.
 
-So, the full Q# file containing our operation consists of defining our own namespace, opening the namespaces for the callables our operation uses, and then our operation:
+Instead, `open` statements allow callables to be referenced with more concise shorthand, as we've done in the operation body above.
+The full Q# file containing our operation would therefore consist of defining our own namespace, opening the namespaces for those callables our operation uses, and then our operation:
 
 ```qsharp
 namespace NamespaceName {
@@ -79,9 +78,14 @@ namespace NamespaceName {
 ```
 
 > [!NOTE]
-> Info on aliasing namespaces as well as the not actual need to them. NSs are just name designators.
+> Namespaces can also be *aliased* when opened, which can be helpful if callable/type names in two namespaces conflict.
+> For example, we could instead use `open Microsoft.Quantum.Instrinsic as NamespaceWithH;` above, and then call `H` via `NamespaceWithH.H(<qubit>)`.
 
-### Execution of a Q# program
+> [!NOTE]
+> One exception to all of this is the [`Microsoft.Quantum.Core`](xref:microsoft.quantum.core) namespace, which is always automatically opened.
+> Therefore, callables like [`Length`](xref:microsoft.quantum.core.length) can always be used directly.
+
+### Execution on target machines
 
 Now the general execution model of a Q# program becomes clear.
 
@@ -89,19 +93,26 @@ Now the general execution model of a Q# program becomes clear.
 <img src="./images/general_execution_model.png" alt="Q# program execution diagram" width="400">
 
 Firstly, the specific callable to be executed has access to any other callables and types defined in the same namespace.
-Thanks to `open` statements, it can also access those from any of the [Q# libraries](xref:microsoft.quantum.libraries). 
+It also access those from any of the [Q# libraries](xref:microsoft.quantum.libraries), but those must be referenced either via their full name, or through the use of `open` statements described above.
 
 The callable itself is then executed on a *[target machine](xref:microsoft.quantum.machines)*.
-In the future, one such target machine will be a real quantum computer, but there are currently multiple simulators available, each with a particular use.
-For our purposes here, the most useful target machine is instance of the full-state simulator, `QuantumSimulator`, which calculates the program's behavior as if it were being executed on a noise-free quantum computer.
+Such target machines can be actual quantum hardware (as currently in private preview on Azure Quantum), or the multiple simulators available as part of the QDK.
+For our purposes here, the most useful target machine is an instance of the [full-state simulator](xref:microsoft.quantum.machines.full-state-simulator), `QuantumSimulator`, which calculates the program's behavior as if it were being executed on a noise-free quantum computer.
 
 So far, we've described what happens when a specific Q# callable is being executed.
 Regardless of whether Q# is used in a standalone application or with a host program, this general process is more or less the same---hence the QDK's flexibility.
 The differences between the different ways of calling into the Quantum Development Kit therefore reveal themselves in *how* that Q# callable is called to be executed, and in what manner any results are returned.
+More specifically, the differences revolve around 
+    1. indicating which Q# callable is to be executed,
+    2. how potential callable arguments are provided,
+    3. specifying the target machine on which to execute it, and
+    4. how any results are returned.
 
-First, we discuss how this done with the Q# standalone application from the command line, and then proceed to using Python and C# host programs.
-We reserve the standalone application of Q# Jupyter Notebooks for last, because unlike the first three, it does not actually require a Q# file.
+First, we discuss how this is done with the Q# standalone application from the command line, and then proceed to using Python and C# host programs.
+We reserve the standalone application of Q# Jupyter Notebooks for last, because unlike the first three, it's primary functionality does not center around a local Q# file.
 
+> [!NOTE]
+> Although we don't illustrate it in these examples, one commonality between the execution methods is that any messages printed from inside the Q# program (by way of [`Message`](xref:microsoft.quantum.intrinsic.message) or [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine), for example) will typically always be printed to the respective console.
 
 ## Q# from the command line
 One of the easiest ways to get started writing Q# programs is to avoid worrying about separate files and a second language altogether.
@@ -112,16 +123,14 @@ For this, we will ultimately invoke the program's execution by entering
 dotnet run
 ```
 in the command line.
-Note that the terminal's directory location needs to be the same as the Q# file, so we recommend simply using the integrated terminal in VS Code or Visual Studio.
+The simplest workflow is when the terminal's directory location is the same as the Q# file, which can be easily handled alongside Q# file editing by using the integrated terminal in VS Code, for example.
+However, the [`dotnet run` command](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) accepts numerous options, and the program can also be run from a different location by simply providing `--project <PATH>` with the location of the Q# file.
 
-> [!NOTE]
-> Update with details and link to more .NET options (e.g. `--project <PATH>`)
 
 ### Add entry point to Q# file
-Of course, most Q# files will contain more than one callable.
-So, we need to let the compiler know *which* callable to execute when we provide the `dotnet run` command.
-
-This is done with a simple change to the Q# file itself: add a line with `@EntryPoint()` directly preceding the callable.
+Most Q# files will contain more than one callable, so naturally we need to let the compiler know *which* callable to execute when we provide the `dotnet run` command.
+This is done with a simple change to the Q# file itself: 
+    - add a line with `@EntryPoint()` directly preceding the callable.
 
 Our file from above would therefore become
 ```qsharp
@@ -152,20 +161,16 @@ Suppose we wanted to perform a similar operation, but on multiple qubits---the n
 Such an operation could be written as
 ```qsharp
     operation MeasureSuperpositionArray(n : Int) : Result[] {
-        mutable resultArray = new Result[n];     // instantiate a length n array for the measurement Results 
         using (qubits = Qubit[n]) {              // allocate a register of n qubits
-            ApplyToEach( H , qubits);            // apply H to each qubit in the register (from Microsoft.Quantum.Canon)
-            set resultArray = MultiM(qubits);    // measure the array of qubits
-            ResetAll(qubits);                    // reset all the qubits
+            ApplyToEach(H, qubits);              // apply H to each qubit in the register
+            return ForEach(MResetZ, qubits);     // perform MResetZ on each qubit, returns the resulting array
         }
-        return resultArray;
     }
 ```
 where the returned value is an array of the measurement results.
-Note that the [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) operation is in the [`Microsoft.Quantum.Canon` namespace](xref:microsoft.quantum.canon), requiring another `open` statement with the others.
+Note that [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) and [`ForEach`](xref:microsoft.quantum.arrays.foreach) are in the [`Microsoft.Quantum.Canon`](xref:microsoft.quantum.canon) and [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) namespaces, requiring additional `open` statements for each.
 
-If we move the `@EntryPoint()` attribute to precede this new operation (note there can only be one such line in a file), attempting to run it with simply `dotnet run` results in an error message.
-This message indicates what additional command line options are required, and how to express them.
+If we move the `@EntryPoint()` attribute to precede this new operation (note there can only be one such line in a file), attempting to run it with simply `dotnet run` results in an error message which indicates what additional command line options are required, and how to express them.
 
 The general format for the command line is actually `dotnet run [options]`, and callable arguments are provided there.
 In this case, the argument `n` is missing, and it shows that we need to provide the option `-n <n>`. 
@@ -207,20 +212,24 @@ Metric          Sum
 CNOT            0
 QubitClifford   4
 R               0
-Measure         8
+Measure         4
 T               0
 Depth           0
 Width           4
 BorrowedWidth   0
 ```
 
-Note that the [`Reset`](xref:microsoft.quantum.intrinsic.reset) and [`ResetAll`](xref:microsoft.quantum.intrinsic.resetall) operations utilize measurement to reset the qubits to $\ket{0}$, hence the reported 8 measurements as opposed to the 4 which yield the actual results.
-Details on what these metrics indicate can be found [here](xref:microsoft.quantum.machines.resources-estimator#metrics-reported).
+For details on what these metrics indicate, see [Resource estimator: metrics reported](xref:microsoft.quantum.machines.resources-estimator#metrics-reported).
 
 ### Command line execution summary
 <br/>
 <img src="./images/command_line_diagram.png" alt="Q# program from command line" width="700">
 
+### Non-Q# `dotnet run` options
+
+As we briefly mentioned above with the `--project` option, the [`dotnet run` command](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) also accepts options unrelated to the Q# callable arguments.
+If providing both kinds of options, the `dotnet`-specific options must be provided first, followed by a delimeter `--`, and then the Q#-specific options.
+For example, specifiying a path along with a number qubits for the operation above would be executed via `dotnet run --project <PATH> -- -n <n>`.
 
 ## Q# with host programs
 
@@ -250,9 +259,10 @@ The following host program implementations all work with the same Q# file:
 
 ```qsharp
 namespace NamespaceName {
-    open Microsoft.Quantum.Intrinsic;     // for the H operation
-    open Microsoft.Quantum.Measurement;   // for MResetZ and MultiM
-    open Microsoft.Quantum.Canon;         // for ApplyToEach
+    open Microsoft.Quantum.Intrinsic;     // contains H
+    open Microsoft.Quantum.Measurement;   // MResetZ
+    open Microsoft.Quantum.Canon;         // ApplyToEach
+    open Microsoft.Quantum.Arrays;        // ForEach
 
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) { 
@@ -262,13 +272,10 @@ namespace NamespaceName {
     }
 
     operation MeasureSuperpositionArray(n : Int) : Result[] {
-        mutable resultArray = new Result[n];
-        using (qubits = Qubit[n]) {
-            ApplyToEach( H , qubits);
-            set resultArray = MultiM(qubits);
-            ResetAll(qubits);
+        using (qubits = Qubit[n]) {  
+            ApplyToEach(H, qubits); 
+            return ForEach(MResetZ, qubits);    
         }
-        return resultArray;
     }
 }
 ```
@@ -279,8 +286,9 @@ Select the tab corresponding to your host language of interest.
 A Python host program is constructed as follows:
 1. Import the `qsharp` module, which registers the module loader for Q# interoperability. 
     This allows Q# namespaces to appear as Python modules, from which we can "import" Q# callables.
-	Note that it is technically not the Q# callables themselves which are imported, but rather Python stubs which allow calling into them.
-	These then behave as objects of Python classes, on which we use methods to execute them on target machines. 
+    Note that it is technically not the Q# callables themselves which are imported, but rather Python stubs which allow calling into them.
+    These then behave as objects of Python classes, on which we use methods to specify the target machines to send the operation to for execution.
+	Arguments for those
 
 
 2. Import those Q# callables which we will directly invoke---in this case, `MeasureSuperposition` and `MeasureSuperpositionArray`.
@@ -297,7 +305,7 @@ Calling an operation to be run on a specific target machine is done via differen
 For example, `.simulate(<args>)`, uses the `QuantumSimulator` to run the operation, whereas `.estimate_resources(<args>)` does so on the `ResourcesEstimator`.
 
 #### Passing inputs to Q\#
-Arguments for the Q# callable should be provided in the form of a keyword argument, where the keyword is the argument name in the callable definition.
+Arguments for the Q# callable should be provided in the form of a keyword argument, where the keyword is the argument name in the Q# callable definition.
 That is, `MeasureSuperpositionArray.simulate(n=4)` is valid, whereas `MeasureSuperpositionArray.simulate(4)` would throw an error.
 
 Therefore, the Python host program 
@@ -312,12 +320,10 @@ single_qubit_resources = MeasureSuperposition.estimate_resources()
 multi_qubit_result = MeasureSuperpositionArray.simulate(n=4)
 multi_qubit_resources = MeasureSuperpositionArray.estimate_resources(n=4)
 
-print('Single qubit:')
-print(single_qubit_result)
+print('Single qubit:\n' + str(single_qubit_result))
 print(single_qubit_resources)
 
-print('\nMultiple qubits:')
-print(multi_qubit_result)
+print('\nMultiple qubits:\n' + str(multi_qubit_result))
 print(multi_qubit_resources)
 ```
 
@@ -329,8 +335,8 @@ Single qubit:
 {'CNOT': 0, 'QubitClifford': 1, 'R': 0, 'Measure': 1, 'T': 0, 'Depth': 0, 'Width': 1, 'BorrowedWidth': 0}
 
 Multiple qubits:
-[1, 1, 0, 0]
-{'CNOT': 0, 'QubitClifford': 4, 'R': 0, 'Measure': 8, 'T': 0, 'Depth': 0, 'Width': 4, 'BorrowedWidth': 0}
+[0, 1, 1, 1]
+{'CNOT': 0, 'QubitClifford': 4, 'R': 0, 'Measure': 4, 'T': 0, 'Depth': 0, 'Width': 4, 'BorrowedWidth': 0}
 ```
 
 ### [C#](#tab/tabid-csharp)
@@ -344,7 +350,8 @@ First, we make any classes used in our host program available with `using` state
 
 ```csharp
 using System;
-using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines, e.g. QuantumSimulator
+using System.Threading.Tasks;
+using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines (e.g. QuantumSimulator, ResourcesEstimator)
 using NamespaceName;                              // make the Q# namespace available
 ```
 
@@ -359,21 +366,25 @@ Getting back to Q#, we must create an instance of whatever target machine we wil
             using var sim = new QuantumSimulator();
 ```
 
-Using other target machines is as simple as instantiating a different one, although processing the returns could require different action.
-For an example, you can check out how to use the [`ResourceEstimator` with C#](xref:microsoft.quantum.machines.resources-estimator).
+Using other target machines is as simple as instantiating a different one, although the manner of doing so and processing the returns can be slightly different.
+For brevity, we stick to the [`QuantumSimulator`](xref:microsoft.quantum.machines.full-state-simulator) for now, and include the [`ResourcesEstimator`](xref:microsoft.quantum.machines.resources-estimator) [below](#including-the-resources-estimator).
 
 Each C# class generated from the Q# operations have a `Run` method, the first argument of which must be the target machine instance.
 So, to run `MeasureSuperposition` on the `QuantumSimulator`, we use `MeasureSuperposition.Run(sim)`.
-The returned results can then be assigned to variables in C# by fetching the `Result` property:
+The returned results can then be assigned to variables in C#:
 
 ```csharp
-            var single_qubit_result = MeasureSuperposition.Run(sim).Result;
+            var singleQubitResult = await MeasureSuperposition.Run(sim);
 ```
 
 > [!NOTE]
-> If the Q# callable does not have any returns (i.e. has return type `Unit`), use the `.Wait()` method call instead of `.Result`.
-> The `Run` method is actually executed asynchronously, because this will be the case for real quantum hardware.
-> Therefore the `Wait()` method blocks further execution until the task completes.
+> The `Run` method is executed asynchronously because this will be the case for real quantum hardware, and therefore the `await` keyword blocks further execution until the task completes.
+
+If the Q# callable does not have any returns (i.e. has return type `Unit`), then the execution can still be done in the same manner without assigning it to a variable.
+In that case, the entire line would simply consist of 
+```csharp
+await <callable>.Run(<simulator>);
+```
 
 #### Arguments
 
@@ -381,50 +392,135 @@ Any arguments to the Q# callable are simply passed as additional arguments afer 
 Hence the results of `MeasureSuperpositionArray` on `n=4` qubits would fetched via 
 
 ```csharp
-            var multi_qubit_result = MeasureSuperpositionArray.Run(sim, 4).Result;
+            var multiQubitResult = await MeasureSuperpositionArray.Run(sim, 4);
 ```
 
 A full C# host program could thus look like
 
 ```csharp
 using System;
+using System.Threading.Tasks;
 using Microsoft.Quantum.Simulation.Simulators;
 using NamespaceName;
 
 namespace host
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             using var sim = new QuantumSimulator();
 
-            var single_qubit_result = MeasureSuperposition.Run(sim).Result;
-            var multi_qubit_result = MeasureSuperpositionArray.Run(sim, 4).Result;
+            var singleQubitResult = await MeasureSuperposition.Run(sim);
+            var multiQubitResult = await MeasureSuperpositionArray.Run(sim, 4);
 
-            Console.WriteLine($"Single qubit result: {single_qubit_result}");
-            Console.WriteLine($"Multiple qubits result: {multi_qubit_result}");
+            Console.WriteLine($"Single qubit result: {singleQubitResult}");
+            Console.WriteLine($"Multiple qubit result: {multiQubitResult}");
         }
     }
 }
 ```
 
 At the location of the C# file, the host program can be run from the command line by entering
-
 ```bash
 dotnet run
 ```
-
 and in this case you will see output written to the console similar to 
-
 ```bash
-Single qubit result: Zero
-Multiple qubits result: [One,One,Zero,Zero]
+Single qubit result: One
+Multiple qubit result: [One,One,Zero,Zero]
 ```
 
 > [!NOTE]
 > Due to the compiler's interoperability with namespaces, we could alternatively make our Q# callables available without the `using NamespaceName;` statement, and simply matching the C# namespace title to it.
 > That is, by replacing `namespace host` with `namespace NamespaceName`.
+
+#### Including the resources estimator
+
+The [`ResourcesEstimator`](xref:microsoft.quantum.machines.resources-estimator) requires a slightly different implementation to retrieve the output.
+
+Firstly, instead of instantiating them as a variable with a `using` statement (as we do with the `QuantumSimulator`), we more directly instantiate objects of the class via
+
+```csharp
+            ResourcesEstimator estimatorSingleQ = new ResourcesEstimator();
+            ResourcesEstimator estimatorMultiQ = new ResourcesEstimator();
+```
+
+Notice that instead of a single target simulator to be used by multiple Q# operations, we have instantiated one for each. 
+This is because the objects themselves are modified when used as target machines, and their results can then be retrieved afterwards with the class method `.ToTSV()`.
+
+To run the operations on the resource estimators, we use
+
+```csharp
+            await MeasureSuperposition.Run(estimatorSingleQ);
+            await MeasureSuperpositionArray.Run(estimatorMultiQ, 4);
+```
+and then fetch the results as tab-separated-values (TSV) with `estimatorSingleQ.ToTSV()` and `estimatorMultiQ.ToTSV()`.
+
+So, a full C# host program making use of both the `QuantumSimulator` and `ResourcesEstimator` could take the form:
+
+```csharp
+using System;
+using System.Threading.Tasks;
+using Microsoft.Quantum.Simulation.Simulators;
+using NamespaceName;
+
+namespace host
+{
+    static class Program
+    {
+        static async Task Main(string[] args)
+        {
+            using var sim = new QuantumSimulator();
+            ResourcesEstimator estimatorSingleQ = new ResourcesEstimator();
+            ResourcesEstimator estimatorMultiQ = new ResourcesEstimator();
+
+            var singleQubitResult = await MeasureSuperposition.Run(sim);
+            var multiQubitResult = await MeasureSuperpositionArray.Run(sim, 4);
+
+            await MeasureSuperposition.Run(estimatorSingleQ);
+            await MeasureSuperpositionArray.Run(estimatorMultiQ, 4);
+
+            Console.WriteLine($"Single qubit result: {singleQubitResult}");
+            Console.WriteLine("Single qubit resources:");
+            Console.WriteLine(estimatorSingleQ.ToTSV());
+
+            Console.WriteLine($"\nMultiple qubit result: {multiQubitResult}");
+            Console.WriteLine("Multiple qubit resources:");
+            Console.WriteLine(estimatorMultiQ.ToTSV());
+        }
+    }
+}
+```
+
+
+which would yield output similar to
+
+```bash
+Single qubit result: One
+Single qubit resources:
+Metric          Sum
+CNOT            0
+QubitClifford   1
+R               0
+Measure         1
+T               0
+Depth           0
+Width           1
+BorrowedWidth   0
+
+Multiple qubit result: [One,One,One,Zero]
+Multiple qubit resources:
+Metric          Sum
+CNOT            0
+QubitClifford   4
+R               0
+Measure         4
+T               0
+Depth           0
+Width           4
+BorrowedWidth   0
+```
 
 ***
 

@@ -96,10 +96,10 @@ landingContent:
       - linkListType: reference
         links:
           - text: Standard libraries
-            url: resources/libraries/standard/index.md
+            url: concepts/libraries/standard/index.md
           - text: Chemistry library
-            url: resources/libraries/chemistry/index.md
+            url: concepts/libraries/chemistry/index.md
           - text: Machine learning library
-            url: resources/libraries/machine-learning/index.md
+            url: concepts/libraries/machine-learning/index.md
           - text: Numerics library
-            url: resources/libraries/numerics/index.md
+            url: concepts/libraries/numerics/index.md

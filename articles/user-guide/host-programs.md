@@ -103,10 +103,10 @@ So far, we've described what happens when a specific Q# callable is being execut
 Regardless of whether Q# is used in a standalone application or with a host program, this general process is more or less the same---hence the QDK's flexibility.
 The differences between the different ways of calling into the Quantum Development Kit therefore reveal themselves in *how* that Q# callable is called to be executed, and in what manner any results are returned.
 More specifically, the differences revolve around 
-    1. indicating which Q# callable is to be executed,
-    2. how potential callable arguments are provided,
-    3. specifying the target machine on which to execute it, and
-    4. how any results are returned.
+1. indicating which Q# callable is to be executed,
+2. how potential callable arguments are provided,
+3. specifying the target machine on which to execute it, and
+4. how any results are returned.
 
 First, we discuss how this is done with the Q# standalone application from the command line, and then proceed to using Python and C# host programs.
 We reserve the standalone application of Q# Jupyter Notebooks for last, because unlike the first three, it's primary functionality does not center around a local Q# file.
@@ -138,7 +138,7 @@ namespace NamespaceName {
     open Microsoft.Quantum.Intrinsic;     // for the H operation
     open Microsoft.Quantum.Measurement;   // for MResetZ
 
-	@EntryPoint()
+    @EntryPoint()
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) { 
             H(q);
@@ -190,7 +190,7 @@ This of course extends to multiple arguments.
 
 > [!NOTE]
 > Argument names defined in `camelCase` are slightly altered by the compiler to be accepted as Q# inputs. 
-> For example, if instead of `n`, we used the name `numQubits` above, then this input would be provided in the command line via ``--num-qubits 4` instead of `-n 4`.
+> For example, if instead of `n`, we used the name `numQubits` above, then this input would be provided in the command line via `--num-qubits 4` instead of `-n 4`.
 
 The error message also provides other options which can be used, including how to change the target machine.
 
@@ -288,8 +288,6 @@ A Python host program is constructed as follows:
     This allows Q# namespaces to appear as Python modules, from which we can "import" Q# callables.
     Note that it is technically not the Q# callables themselves which are imported, but rather Python stubs which allow calling into them.
     These then behave as objects of Python classes, on which we use methods to specify the target machines to send the operation to for execution.
-	Arguments for those
-
 
 2. Import those Q# callables which we will directly invoke---in this case, `MeasureSuperposition` and `MeasureSuperpositionArray`.
     ```python

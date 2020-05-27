@@ -1,0 +1,8 @@
+  expanded: true 
+  items:
+  - name: Get started with the QDK
+    href: get-started.md
+  - name: Install the QDK
+    href: install-guide/toc.yml
+  - name: Update the QDK
+    href: update.md

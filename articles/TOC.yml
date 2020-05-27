@@ -1,28 +1,9 @@
 - name: Microsoft Quantum Documentation
   href: index.yml
 - name: Overview
-  items:
-  - name: Introduction to quantum computing
-    href: overview/overview.md
-  - name: Key concepts
-    items: 
-    - name: Understanding quantum computing
-      href: overview/understanding-quantum-computing.md
-    - name: Quantum computers and simulators
-      href: overview/quantum-computers-and-simulators.md
-    - name: What are Q# and the QDK?
-      href: overview/what-is-qsharp-and-qdk.md
-    - name: Linear algebra for quantum computing
-      href: overview/algebra-for-quantum-computing.md
+  href: overview/toc.yml
 - name: Quickstarts
-  expanded: true 
-  items:
-  - name: Get started with the QDK
-    href: quickstarts/get-started.md
-  - name: Install the QDK
-    href: quickstarts/install-guide/toc.yml
-  - name: Update the QDK
-    href: quickstarts/update.md
+  href: quickstarts/toc.yml
 - name: Tutorials
   href: tutorials/toc.yml
 - name: Q# user guide

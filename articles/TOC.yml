@@ -18,7 +18,7 @@
   expanded: true 
   items:
   - name: Get started with the QDK
-    href: welcome.md
+    href: quickstarts/get-started.md
   - name: Install the QDK
     href: quickstarts/install-guide/toc.yml
   - name: Update the QDK
@@ -42,7 +42,7 @@
   - name: Quantum computing concepts
     href: concepts/toc.yml
   - name: Q# libraries
-    href: libraries/toc.yml
+    href: concepts/libraries/toc.yml
 - name: Resources 
   items: 
   - name: Glossary

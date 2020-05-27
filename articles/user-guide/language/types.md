@@ -61,6 +61,8 @@ Q# does not provide support for rectangular multi-dimensional arrays.
 
 An array value can be written in Q# source code by using square brackets around the elements of an array, as in `[PauliI, PauliX, PauliY, PauliZ]`.
 The type of an array literal is determined by the common base type of all items in the array. 
+Hence trying to construct an array with elements that have no common base type will raise an error.  
+See [arrays of callables](xref:microsoft.quantum.guide.expressions#arrays-of-callables) for an example of this.
 
 > [!WARNING]
 > The elements of an array cannot be changed after the array has been created.

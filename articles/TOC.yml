@@ -40,7 +40,7 @@
 - name: Concepts 
   items: 
   - name: Quantum computing concepts
-    href: concepts/toc.yml
+    href: concepts/quantum-computing-concepts/toc.yml
   - name: Q# libraries
     href: concepts/libraries/toc.yml
 - name: Resources 

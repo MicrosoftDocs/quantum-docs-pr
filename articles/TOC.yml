@@ -24,25 +24,11 @@
   - name: Update the QDK
     href: quickstarts/update.md
 - name: Tutorials
-  items:
-  - name: Quantum random number generator
-    href: tutorials/qrng.md
-  - name: Explore entanglement with Q#
-    href: tutorials/explore-entanglement.md
-  - name: Implement Grover's search algorithm
-    href: tutorials/search.md
-  - name: Learn Q# with the Quantum Katas
-    href: tutorials/intro-to-katas.md
-  - name: Q# code samples
-    href: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
+  href: tutorials/toc.yml
 - name: Q# user guide
   href: user-guide/toc.yml
 - name: Concepts 
-  items: 
-  - name: Quantum computing concepts
-    href: concepts/quantum-computing-concepts/toc.yml
-  - name: Q# libraries
-    href: concepts/libraries/toc.yml
+  href: concepts/toc.yml
 - name: Resources
   href: resources/toc.yml
 

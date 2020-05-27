@@ -49,9 +49,9 @@ landingContent:
       - linkListType: download
         links:
           - text: Install the QDK
-            url: install-guide/index.md
+            url: quickstarts/install-guide/index.md
           - text: Update the QDK
-            url: install-guide/update.md
+            url: quikcstarts/update.md
 
 
   # Development
@@ -66,15 +66,15 @@ landingContent:
       - linkListType: tutorial
         links:
           - text: Build a quantum random number generator
-            url: quickstarts/qrng.md
+            url: tutorials/qrng.md
           - text: Explore entanglement with Q#
-            url: quickstart.md
+            url: tutorials/explore-entanglement.md
           - text: "Quantum speedup: Grover's search algorithm"
-            url: quickstarts/search.md
+            url: tutorials/search.md
       - linkListType: learn
         links:
           - text: Learn with the Quantum Katas
-            url: intro-to-katas.md
+            url: tutorials/intro-to-katas.md
           - text: Browse Q# code samples
             url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 

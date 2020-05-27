@@ -20,9 +20,9 @@
   - name: Get started with the QDK
     href: welcome.md
   - name: Install the QDK
-    href: install-guide/toc.yml
+    href: quickstarts/install-guide/toc.yml
   - name: Update the QDK
-    href: install-guide/update.md
+    href: quickstarts/update.md
 - name: Tutorials
   items:
   - name: Quantum random number generator

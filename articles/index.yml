@@ -62,7 +62,7 @@ landingContent:
           - text: Q# user guide
             url: user-guide/index.md
           - text: "Quantum simulators and host applications"
-            url: machines/index.md
+            url: user-guide/machines/index.md
       - linkListType: tutorial
         links:
           - text: Build a quantum random number generator

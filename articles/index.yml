@@ -51,7 +51,7 @@ landingContent:
           - text: Install the QDK
             url: quickstarts/install-guide/index.md
           - text: Update the QDK
-            url: quikcstarts/update.md
+            url: quickstarts/update.md
 
 
   # Development

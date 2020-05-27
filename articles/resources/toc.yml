@@ -1,0 +1,10 @@
+- name: Glossary
+  href: resources/glossary.md
+- name: Contributing to the QDK
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: QDK Release Notes
+  topicHref: resources/relnotes/index.md
+  href: resources/relnotes/toc.yml
+- name: Further reading
+  href: resources/further-reading.md

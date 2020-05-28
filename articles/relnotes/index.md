@@ -24,7 +24,7 @@ This release contains the following:
 
 - IQ# will no longer fail when a Q# entry point is present
 - Updates to [Standard library](xref:microsoft.quantum.libraries.standard.intro) to use access modifiers
-- Compiler now allows plug-in of rewrite steps between built-in rewrite steps, see [here]() for more info
+- Compiler now allows plug-in of rewrite steps between built-in rewrite steps
 - Several deprecated functions and operations have been removed following the schedule described in our [API principles](xref:microsoft.quantum.contributing.api-design). Q# programs and libraries that build without warnings in version 0.11.2004.2825 will continue to work unmodified.
 
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  

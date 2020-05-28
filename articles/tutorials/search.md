@@ -20,7 +20,7 @@ You can build Grover's search algorithm with just a few lines of code.
 
 ## Prerequisites
 
-- The Microsoft [Quantum Development Kit][install].
+- The Microsoft [Quantum Development Kit][xref:microsoft.quantum.install].
 
 ## What does Grover's search algorithm do?
 
@@ -34,7 +34,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
 ## Write the code
 
-1. Using the Quantum Development Kit, [create a new Q# project](xref:microsoft.quantum.howto.createproject) called `Grover`, in your development environment of choice.
+1. Using the Quantum Development Kit, create a new Q# project called `Grover`, in your development environment of choice.
 
 1. Add the following code to the `Program.qs` file in your new project:
 

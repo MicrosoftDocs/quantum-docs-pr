@@ -22,7 +22,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 This release contains the following:
 
-- IQ# will no longer fail when a Q# entry point is present
+- Q# notebooks and Python host programs will no longer fail when a Q# entry point is present
 - Updates to [Standard library](xref:microsoft.quantum.libraries.standard.intro) to use access modifiers
 - Compiler now allows plug-in of rewrite steps between built-in rewrite steps
 - Several deprecated functions and operations have been removed following the schedule described in our [API principles](xref:microsoft.quantum.contributing.api-design). Q# programs and libraries that build without warnings in version 0.11.2004.2825 will continue to work unmodified.

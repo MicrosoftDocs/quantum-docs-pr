@@ -4,7 +4,6 @@
   href: contributing/toc.yml
   topicHref: contributing/index.md
 - name: QDK Release Notes
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
+  href: relnotes.md
 - name: Further reading
   href: further-reading.md

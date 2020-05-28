@@ -65,4 +65,4 @@ Advancements in quantum hardware and techniques is rapidly changing the field. H
 
 ## Next steps
 
-[What is the Q# programming language and QDK?](xref:microsoft.quantum.overview.q-sharp)
+[What are the Q# programming language and QDK?](xref:microsoft.quantum.overview.q-sharp)

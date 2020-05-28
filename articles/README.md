@@ -38,7 +38,7 @@ for contributors:
   organization of the table of contents of the documentation website.
 - All the images should be stored in `articles\media` and not in the articles
   folder.
-- The titles of the articles, the names in the TOC and the *iud* of the metadata
+- The titles of the articles, the names in the TOC and the *uid* of the metadata
   should be as close as possible among them and represent clearly the H1 header
   of the Markdown document.
 

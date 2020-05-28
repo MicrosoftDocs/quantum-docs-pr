@@ -16,15 +16,31 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
-## Version 0.11.2004.2825
+## Version 0.xx.xxxx.xxxx
 
-- New support for Q# command line applications, which no longer require a C# or Python host file. For more information on getting started with Q# command line applications, see [here](xref:microsoft.quantum.install.standalone)
-- Updated quantum random number generator quickstart to no longer require C# or Python host fil. See the updated  [Quickstart](xref:microsoft.quantum.quickstarts.qrng)
-- Performance improvements to IQ# Docker images
-
-*Release date: March 26th, 2020*
+*Release date: June 3rd, 2020*
 
 This release contains the following:
+
+- IQ# will no longer fail when a Q# entry point is present
+- Updates to [Standard library](xref:microsoft.quantum.libraries.standard.intro) to use access modifiers
+- Compiler now allows plug-in of rewrite steps between built-in rewrite steps, see [here]() for more info
+
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
+## Version 0.11.2004.2825
+
+*Release date: April 30th, 2020*
+
+This release contains the following:
+
+- New support for Q# command line applications, which no longer require a C# or Python host file. For more information on getting started with Q# command line applications, see [here](xref:microsoft.quantum.install.standalone).
+- Updated quantum random number generator quickstart to no longer require a C# or Python host file. See the updated  [Quickstart](xref:microsoft.quantum.quickstarts.qrng)
+- Performance improvements to IQ# Docker images
+
+> [!NOTE]
+> Q# command-line applications using the new [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) attribute currently cannot be called from Python or .NET host programs.
+> See the [Python](xref:microsoft.quantum.install.python) and [.NET interoperability](xref:microsoft.quantum.install.cs) guides for more information.
 
 ## Version 0.11.2003.3107
 
@@ -38,7 +54,7 @@ This release contains minor bugfixes for version 0.11.2003.2506.
 
 This release contains the following:
 
-- New support for access modifiers in Q#, for more information see [File Structures](xref:microsoft.quantum.language.file-structure#internal-declarations)
+- New support for access modifiers in Q#, for more information see [File Structures](xref:microsoft.quantum.guide.filestructure)
 - Updated to .NET Core SDK 3.1
 
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
@@ -76,7 +92,7 @@ See the full list of closed PRs for [libraries](https://github.com/Microsoft/Qua
 
 This release contains the following:
 
-- New Test attribute for Q# unit testing, see updated API documentation [here](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) and updated testing & debugging guide [here](xref:microsoft.quantum.techniques.testing-and-debugging)
+- New Test attribute for Q# unit testing, see updated API documentation [here](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) and updated testing & debugging guide [here](xref:microsoft.quantum.guide.testingdebugging)
 - Added stack trace in the case of a Q# program execution error
 - Support for breakpoints in Visual Studio Code due to an update in the [OmniSharp C# Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
@@ -123,7 +139,7 @@ See the full list of closed PRs for [libraries](https://github.com/Microsoft/Qua
 
 This release contains the following:
 
-- New support for [conjugation statements](xref:microsoft.quantum.language.statements#conjugations) in Q#
+- New support for [conjugation statements](xref:microsoft.quantum.guide.operationsfunctions#conjugations) in Q#
 - New code actions in the compiler, such as: "replace with", "add documentation", and simple array item update
 - Added install template and new project commands to Visual Studio Code extension
 - Added new variants of ApplyIf combinator such as [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone)
@@ -140,7 +156,7 @@ The changes are summarized here as well as instructions for upgrading your exist
 
 This release contains the following:
 
-- New indexing locations for slicing arrays, [see the language reference](xref:microsoft.quantum.language.expressions#array-slices) for more information.
+- New indexing locations for slicing arrays, [see the language reference](xref:microsoft.quantum.guide.expressions#array-slices) for more information.
 - Added Dockerfile hosted on the [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry), see the [IQ# repository for more information](https://github.com/microsoft/iqsharp/blob/master/README.md)
 - Breaking change for [the trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), update to configuration settings, name changes; see the [.NET API Browser for the updated names](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration).
 
@@ -161,10 +177,10 @@ The changes are summarized here as well as instructions for upgrading your exist
 
 ### Q# language syntax
 This release adds new Q# language syntax:
-* Add named items for [user-defined types](xref:microsoft.quantum.language.type-model#user-defined-types).  
+* Add named items for [user-defined types](xref:microsoft.quantum.guide.types#user-defined-types).  
 * User-defined type constructors can now be used as functions.
-* Add support for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) and [apply-and-reassign]((xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols)) in user-defined types.
-* Fixup-block for [repeat-until-success](xref:microsoft.quantum.language.statements#repeat-until-success-loop) loops is now optional.
+* Add support for [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) and [apply-and-reassign](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) in user-defined types.
+* Fixup-block for [repeat-until-success](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop) loops is now optional.
 * We now support while loops in functions (not in operations).
 
 ### Library 
@@ -192,10 +208,10 @@ The changes are summarized here as well as instructions for upgrading your exist
 
 ### Q# language syntax
 This release adds new Q# language syntax:
-* Add a [shorthand way to express specializations of quantum operations](xref:microsoft.quantum.language.type-model#functors) (control and adjoints) with `+` operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., `: adjoint`) will continue to work, but a compile time warning will be generated.  
-* Add a new operator for [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions), `w/`, can be used to express array creation as a modification of an existing array.
-* Add the common [apply-and-upate statement](xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols), e.g., `+=`, `w/=`.
-* Add a way to specify a short name for namespaces in [open directives](xref:microsoft.quantum.language.file-structure#open-directives).
+* Add a [shorthand way to express specializations of quantum operations](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations) (control and adjoints) with `+` operators.  The old syntax is deprecated.  Programs that use the old syntax (e.g., `: adjoint`) will continue to work, but a compile time warning will be generated.  
+* Add a new operator for [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions), `w/`, can be used to express array creation as a modification of an existing array.
+* Add the common [apply-and-update statement](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols), e.g., `+=`, `w/=`.
+* Add a way to specify a short name for namespaces in [open directives](xref:microsoft.quantum.guide.filestructure#open-directives).
 
 With this release, we no longer allow an array element to be specified on the left side of a set statement.  This is because that syntax implies that arrays are mutable when in fact, the result of the operation has always been the creation of a new array with the modification.  Instead, a compiler error will be generated with a suggestion to use the new copy-and-update operator, `w/`, to accomplish the same result.  
 
@@ -270,7 +286,7 @@ This release contains the following:
 
 - Bug fix for DumpRegister issue reported by the community ([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
-- Added ability to return from within a [using statement](xref:microsoft.quantum.language.statements).
+- Added ability to return from within a [using statement](xref:microsoft.quantum.guide.qubits#allocating-qubits).
 
 - Revamped [getting started guide](xref:microsoft.quantum.install).
 
@@ -293,7 +309,7 @@ This release contains the following:
 
 This release contains the following:
 
-- adds support for a new primitive type, BigInt, which represents a signed integer of arbitrary size.  Learn more about [BigInt type](xref:microsoft.quantum.language.type-model).
+- adds support for a new primitive type, BigInt, which represents a signed integer of arbitrary size.  Learn more about [BigInt type](xref:microsoft.quantum.guide.types).
 - adds new Toffoli simulator, a special purpose fast simulator that can simulate X, CNOT and multi-controlled X quantum operations with very large numbers of qubits.  Learn more about [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator).
 - adds a simple resource estimator that estimates the resources required to run a given instancee of a Q# operation on a quantum computer.  Learn more about the [Resource Estimator](xref:microsoft.quantum.machines.resources-estimator).
 
@@ -421,7 +437,7 @@ This update adds new debugging functionality:
 * In Visual Studio, the probability of measuring a $\ket{1}$ on a single qubit is now automatically shown in the debugging window for the QuantumSimulator target machine.
 * In Visual Studio, improved the display of variable properties in the **Autos** and **Locals** debug windows. 
 
-Learn more about [Testing and Debugging](xref:microsoft.quantum.techniques.testing-and-debugging).
+Learn more about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging).
 
 ### Community Contributions
 

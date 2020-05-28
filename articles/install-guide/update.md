@@ -1,5 +1,5 @@
 ---
-title: Learn how to update the Microsoft Quantum Development Kit (QDK)
+title: Update the Quantum Development Kit (QDK)
 description: Describes how to update your Q# projects and the Microsoft Quantum Development Kit to the current version.  
 author: natke
 ms.author: nakersha
@@ -37,11 +37,11 @@ Regardless of whether you are using C# or Python to host Q# operations, follow t
 1. Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions
 2. Open your solution in Visual Studio
 3. From the menu, select **Build** -> **Clean Solution**
-4. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project).
+4. In each of your .csproj files, update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project).
     That is, edit lines of the form:
 
     ```xml
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     ```
 
     You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
@@ -74,11 +74,11 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
     dotnet clean [project_name].csproj
     ```
 
-3. In each of your .csproj files, update the target framework to `netcoreapp3.0` (or `netstandard2.1` if it is a library project).
+3. In each of your .csproj files, update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project).
     That is, edit lines of the form:
 
     ```xml
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     ```
 
     You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
@@ -227,7 +227,3 @@ Select your development environment below.
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
-
-## What's next?
-
-Now that you have updated the Quantum Development Kit in your preferred environment, you can continue to develop and run your quantum programs. If you have not written a program yet, you can get started with [your first quantum program](xref:microsoft.quantum.write-program).

@@ -1,5 +1,5 @@
 ---
-title: Develop with Q# + Python
+title: Develop with Q# and Python
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
@@ -8,7 +8,7 @@ ms.custom: how-to
 uid: microsoft.quantum.install.python
 ---
 
-# Develop with Q# + Python
+# Develop with Q# and Python
 
 Install the QDK to develop Python host programs to call Q# operations.
 
@@ -16,7 +16,7 @@ Install the QDK to develop Python host programs to call Q# operations.
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - The [PIP](https://pip.pypa.io/en/stable/installing) Python package manager
-    - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 
 1. Install the `qsharp` package, a Python package that enables interop between Q# and Python.
@@ -25,7 +25,7 @@ Install the QDK to develop Python host programs to call Q# operations.
     pip install qsharp
     ```
 
-1. Install `iqsharp`, a kernel used by Jupyter and Python that provides the core functionality for compiling and executing Q# operations.
+1. Install IQ#, a kernel used by Jupyter and Python that provides the core functionality for compiling and executing Q# operations.
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -78,6 +78,6 @@ Install the QDK to develop Python host programs to call Q# operations.
 > [!NOTE]
 > * You can also use Python Jupyter notebooks to write the classical Python program and call Q# operations from the cells. The Python code is just a normal Python program.
 
-## What's next?
+## Next steps
 
-Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.write-program).
+Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng).

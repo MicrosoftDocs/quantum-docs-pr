@@ -91,7 +91,7 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
         <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.11.2004.2825" />
         ```
         
-        To determine the most recent QDK version, you can review the [release notes](https://docs.microsoft.com/en-us/quantum/relnotes/).
+        To determine the most recent QDK version, you can review the [release notes](https://docs.microsoft.com/quantum/relnotes/).
         
         Microsoft Quantum packages are named with the following patterns:
 

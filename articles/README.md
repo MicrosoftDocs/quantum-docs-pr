@@ -14,8 +14,7 @@ Development Kit. This directory contains:
   - Articles sub-directories. These
     sub-directories should also contain their own `toc.yml` file.
 
->[!NOTE]
-> Although it's possible to refer the `*.md` files directly in the parent
+> :pencil: Although it's possible to refer the `*.md` files directly in the parent
 > `TOC.yml` file, to keep things ordered we only refer them from the `toc.yml`
 > of their current directory.
 
@@ -35,7 +34,7 @@ for contributors:
 
 - Every directory or sub-directory should contain its own `toc.yml` file in
   which are referred the same-level articles or the `toc.yml` files of its child directories.
-- The organization of the directories should be as close as possible to the
+- The organization of the directories of the repository should be as close as possible to the
   organization of the table of contents of the documentation website.
 - All the images should be stored in `articles\media` and not in the articles
   folder.

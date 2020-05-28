@@ -34,7 +34,7 @@ for contributors:
 
 - Every directory or sub-directory should contain its own `toc.yml` file in
   which are referred the same-level articles or the `toc.yml` files of its child directories.
-- The organization of the directories should be as close as possible to the
+- The organization of the directories of the repository should be as close as possible to the
   organization of the table of contents of the documentation website.
 - All the images should be stored in `articles\media` and not in the articles
   folder.

@@ -10,6 +10,8 @@ functions:
   summary: Asserts that two arrays of boolean values are equal.
 - uid: microsoft.quantum.diagnostics.allequalityfacti
   summary: Asserts that two arrays of integer values are equal.
+- uid: microsoft.quantum.diagnostics.contradiction
+  summary: Declares that a classical condition is false.
 - uid: microsoft.quantum.diagnostics.dumpmachine
   summary: Dumps the current target machine's status.
 - uid: microsoft.quantum.diagnostics.dumpregister

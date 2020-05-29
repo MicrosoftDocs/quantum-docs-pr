@@ -1,17 +1,22 @@
+---
 
-### "\sqrt{2}" resolves correctly, but displays the no-loc tag
+---
+
+# Testing no-loc tag
+
+### "\sqrt{2}" resolves correctly in VS code, but displays the no-loc tag
 
 :::no-loc text="$\sqrt{2}$":::
 
 :::no-loc text="$\\sqrt{2}$"::: (with extra backslash)
 
-### Matrices and formulas work, but including \sqrt{x} displays the no-loc tag
+### Matrices and formulas work in VS code, but including \sqrt{x} displays the no-loc tag
 
 :::no-loc text="$\\begin{bmatrix}1 \\\\  0 \end{bmatrix}\otimes \cdots \otimes\begin{bmatrix}1 \\\\  0 \end{bmatrix}$":::  (formula with no sqrt, double slash)
 
 :::no-loc text="$\\begin{bmatrix}1 \\\\  0 \end{bmatrix}\otimes \cdots \otimes\begin{bmatrix}1 \\\\  0 \end{bmatrix} + \sqrt{2}$"::: (formula with sqrt, double slash)
 
-#### Double slashes on different components
+#### Double slashes on different components that work in VS code
 
 :::no-loc text="text only $\ test":::
 
@@ -31,8 +36,10 @@
 
 :::no-loc text="$\\alpha : \\\{0, 1\\\}^n \\times \\\{0, 1\\\}^m \\to \\mathbb{C}$":::
 
-#### Double $$ for centering formula
+#### Double $$ for centering formula 
 
 $$\begin{bmatrix}1 \\\\  0 \end{bmatrix}$$  (without no-loc tag)
+
+:::no-loc text="$$\begin{bmatrix}1 \\\\  0 \end{bmatrix}$$"::: (with no-loc tag, single slash)
 
 :::no-loc text="$$\\begin{bmatrix}1 \\\\\  0 \\end{bmatrix}$$"::: (with no-loc tag, double slash)

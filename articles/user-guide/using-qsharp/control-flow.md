@@ -213,7 +213,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### RUS pattern for single qubit rotation about an irrational axis 
 
-In a typical use case, the following Q# operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere. This is accomplished by using a known RUS pattern:
+In a typical use case, the following Q# operation implements a rotation around an irrational axis of :::no-loc text="$(I + 2i Z)/\sqrt{5}$"::: on the Bloch sphere. This is accomplished by using a known RUS pattern:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -255,8 +255,8 @@ fixup {
 
 ### RUS without `fixup`
 
-For example, the following code is a probabilistic circuit that implements an important rotation gate $V_3 = (\boldone + 2 i Z) / \sqrt{5}$ using the `H` and `T` gates.
-The loop terminates in $\frac{8}{5}$ repetitions on average.
+For example, the following code is a probabilistic circuit that implements an important rotation gate :::no-loc text="$V_3 = (\boldone + 2 i Z) / \sqrt{5}$"::: using the `H` and `T` gates.
+The loop terminates in :::no-loc text="$\frac{8}{5}$"::: repetitions on average.
 See [*Repeat-Until-Success: Non-deterministic decomposition of single-qubit unitaries*](https://arxiv.org/abs/1311.1074) (Paetznick and Svore, 2014) for more details.
 
 ```qsharp
@@ -281,7 +281,7 @@ using (qubit = Qubit()) {
 
 ### RUS to prepare a quantum state
 
-Finally, we show an example of a RUS pattern to prepare a quantum state $\frac{1}{\sqrt{3}}\left(\sqrt{2}\ket{0}+\ket{1}\right)$, starting from the $\ket{+}$ state.
+Finally, we show an example of a RUS pattern to prepare a quantum state :::no-loc text="$\frac{1}{\sqrt{3}}\left(\sqrt{2}\ket{0}+\ket{1}\right)$":::, starting from the :::no-loc text="$\ket{+}$"::: state.
 See also the [unit testing sample provided with the standard library](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ```qsharp

@@ -78,8 +78,8 @@ Thus, controlled operations are often used to generate entanglement.
 Naturally, a *controlled adjoint* specialization could exist as well, specifying the controlled application of an operation's adjoint.
 
 > [!NOTE]
-> If $U$ is the unitary transformation implemented by an operation `U`, then `Adjoint U` represents the unitary transformation $U^\dagger$, which is the complex conjugate transpose.
-> Successively applying an operation and then its adjoint to a state leaves the state unchanged, as illustrated by the fact that $UU^\dagger = U^\dagger U = \id$, the identity matrix.
+> If :::no-loc text="$U$"::: is the unitary transformation implemented by an operation `U`, then `Adjoint U` represents the unitary transformation :::no-loc text="$U^\dagger$":::, which is the complex conjugate transpose.
+> Successively applying an operation and then its adjoint to a state leaves the state unchanged, as illustrated by the fact that :::no-loc text="$UU^\dagger = U^\dagger U = \id$":::, the identity matrix.
 > The unitary representation of a controlled operation is slightly more nuanced, but you can find more details at [Quantum computing concepts: multiple qubits](xref:microsoft.quantum.concepts.multiple-qubits).
 
 The following section describes how to call these various specializations in your Q# code.
@@ -112,9 +112,9 @@ The Adjoint functor is its own inverse; that is, `Adjoint Adjoint Op` is always 
 Similarly, `Controlled X(controls, target)` applies the Controlled functor to the `X` operation to generate a new operation, and applies that new operation to `controls` and `target`.
 
 > [!NOTE]
-> In Q#, controlled versions always take an array of control qubits, and the specified state is always for all of the control qubits to be in the computational (`PauliZ`) `One` state, $\ket{1}$.
+> In Q#, controlled versions always take an array of control qubits, and the specified state is always for all of the control qubits to be in the computational (`PauliZ`) `One` state, :::no-loc text="$\ket{1}$":::.
 > Controlling based on other states may be achieved by applying the appropriate unitary operation to the control qubits before the controlled operation, and then applying the inverses of the unitary operation after the controlled operation.
-> For example, applying an `X` operation to a control qubit before and after a controlled operation will cause the operation to control on the `Zero` state ($\ket{0}$) for that qubit; applying an `H` operation before and after will control on the `PauliX` `One` state, that is -1 eigenvalue of Pauli X, $\ket{-} \mathrel{:=} (\ket{0} - \ket{1}) / \sqrt{2}$ rather than the `PauliZ` `One` state.
+> For example, applying an `X` operation to a control qubit before and after a controlled operation will cause the operation to control on the `Zero` state (:::no-loc text="$\ket{0}$":::) for that qubit; applying an `H` operation before and after will control on the `PauliX` `One` state, that is -1 eigenvalue of Pauli X, :::no-loc text="$\ket{-} \mathrel{:=} (\ket{0} - \ket{1}) / \sqrt{2}$"::: rather than the `PauliZ` `One` state.
 
 Given an operation expression, a new operation expression may be formed using the `Controlled` functor.
 The signature of the new operation is based on the signature of the original operation.
@@ -479,7 +479,7 @@ Thus, isolating as much classical logic as possible into functions makes it easy
 ## Generic (Type-Parameterized) Callables
 
 Many functions and operations that we might wish to define do not actually heavily rely on the types of their inputs, but rather only implicitly use their types via some other function or operation.
-For example, consider the *map* concept common to many functional languages; given a function $f(x)$ and a collection of values $\{x_1, x_2, \dots, x_n\}$, map returns a new collection $\{f(x_1), f(x_2), \dots, f(x_n)\}$.
+For example, consider the *map* concept common to many functional languages; given a function :::no-loc text="$f(x)$"::: and a collection of values :::no-loc text="$\{x_1, x_2, \dots, x_n\}$":::, map returns a new collection :::no-loc text="$\{f(x_1), f(x_2), \dots, f(x_n)\}$":::.
 To implement this in Q#, we can take advantage of that functions are first class.
 Let's write out a quick example of `Map`, using ★ as a placeholder while we figure out what types we need.
 
@@ -530,7 +530,7 @@ For the most part, these type parameters can then be used as though they were or
 > The most extreme case of indirect dependence is that of qubits, where a Q# program cannot directly rely on the structure of the `Qubit` type, but **must** pass such types to other operations and functions.
 
 Returning to the example above, then, we can see that we need `Map` to have type parameters, one to represent the input to `fn` and one to represent the output from `fn`.
-In Q#, this is written by adding angle brackets (that's `<>`, not brakets $\braket{}$!) after the name of a function or operation in its declaration, and by listing each type parameter.
+In Q#, this is written by adding angle brackets (that's `<>`, not brakets :::no-loc text="$\braket{}$":::!) after the name of a function or operation in its declaration, and by listing each type parameter.
 The name of each type parameter must start with a tick `'`, indicating that it is a type parameter and not a ordinary type (also known as a *concrete* type).
 For `Map`, we thus write:
 

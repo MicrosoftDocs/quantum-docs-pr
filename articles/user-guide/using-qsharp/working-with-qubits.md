@@ -36,13 +36,13 @@ using ((auxiliary, register) = (Qubit(), Qubit[5])) {
 }
 ```
 
-Any qubits allocated in this way start off in the $\ket{0}$ state; in the example above, `register` is thus in the state $\ket{00000} = \ket{0} \otimes \ket{0} \otimes \cdots \otimes \ket{0}$.
+Any qubits allocated in this way start off in the :::no-loc text="$\ket{0}$"::: state; in the example above, `register` is thus in the state :::no-loc text="$\ket{00000} = \ket{0} \otimes \ket{0} \otimes \cdots \otimes \ket{0}$":::.
 At the end of the `using` block, any qubits allocated by that block are immediately deallocated and cannot be used further.
 
 > [!WARNING]
-> Target machines expect that qubits are in the $\ket{0}$ state immediately before deallocation, so that they can be reused and offered to other `using` blocks for allocation.
-> Whenever possible, use unitary operations to return any allocated qubits to $\ket{0}$.
-> If need be, the @"microsoft.quantum.intrinsic.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$. Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation.
+> Target machines expect that qubits are in the :::no-loc text="$\ket{0}$"::: state immediately before deallocation, so that they can be reused and offered to other `using` blocks for allocation.
+> Whenever possible, use unitary operations to return any allocated qubits to :::no-loc text="$\ket{0}$":::.
+> If need be, the @"microsoft.quantum.intrinsic.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to :::no-loc text="$\ket{0}$":::. Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation.
 
 
 ### Borrowed Qubits
@@ -50,7 +50,7 @@ At the end of the `using` block, any qubits allocated by that block are immediat
 The `borrowing` statement is used to make qubits available for temporary use, which do not need be in a specific state.
 
 The borrowing mechanism allows the allocation of qubits that can be used as scratch space during a computation.
-These qubits are generally not in a clean state, i.e., they are not necessarily initialized in a known state such as $\ket{0}$.
+These qubits are generally not in a clean state, i.e., they are not necessarily initialized in a known state such as :::no-loc text="$\ket{0}$":::.
 These are often referred to as "dirty" qubits because their state is unknown and can even be entangled with other parts of the quantum computer's memory.
 
 The binding follows the same pattern and rules as the one in a `using` statement.
@@ -82,9 +82,9 @@ Once allocated, a qubit can then be passed to functions and operations.
 In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.
 We will see these operations in more detail in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), but for now, we mention a few useful operations that can be used to interact with qubits.
 
-First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations `X`, `Y`, and `Z`, each of which has type `(Qubit => Unit is Adj + Ctl)`.
-As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), we can think of $X$ and hence of `X` as a bit-flip operation or NOT gate.
-The `X` operation lets us prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:
+First, the single-qubit Pauli operators :::no-loc text="$X$":::, :::no-loc text="$Y$":::, and :::no-loc text="$Z$"::: are represented in Q# by the intrinsic operations `X`, `Y`, and `Z`, each of which has type `(Qubit => Unit is Adj + Ctl)`.
+As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), we can think of :::no-loc text="$X$"::: and hence of `X` as a bit-flip operation or NOT gate.
+The `X` operation lets us prepare states of the form :::no-loc text="$\ket{s_0 s_1 \dots s_n}$"::: for some classical bit string :::no-loc text="$s$":::
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit
@@ -113,7 +113,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Later, we will see more compact ways of writing this operation that do not require manual flow control.
 
-We can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the intrinsic operation `H : (Qubit => Unit is Adj + Ctl)`:
+We can also prepare states such as :::no-loc text="$\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$"::: and :::no-loc text="$\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$"::: by using the Hadamard transform :::no-loc text="$H$":::, which is represented in Q# by the intrinsic operation `H : (Qubit => Unit is Adj + Ctl)`:
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -133,7 +133,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 Using the `Measure` operation, which is a built-in intrinsic non-unitary operation, we can extract classical information from an object of type `Qubit` and assign a classical value as a result, which has a reserved type `Result`, indicating that the result is no longer a quantum state.
 The input to `Measure` is a Pauli axis on the Bloch sphere, represented by a value of type `Pauli` (for instance `PauliX`) and an value of type `Qubit`.
 
-A simple example is the following operation, which allocates one qubit in the $\ket{0}$ state, then applies a Hadamard operation `H` to it and measures the result in the `PauliZ` basis.
+A simple example is the following operation, which allocates one qubit in the :::no-loc text="$\ket{0}$"::: state, then applies a Hadamard operation `H` to it and measures the result in the `PauliZ` basis.
 
 ```qsharp
 operation MeasureOneQubit() : Result {

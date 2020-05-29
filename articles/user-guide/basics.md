@@ -19,8 +19,9 @@ For a quick overview of what Q# is and where it fits in as a fundamental compone
 From a technical perspective, a quantum program can be seen as a particular set of classical subroutines which, when called, perform certain operations on a quantum system.
 An important consequence of that view is that a program written in Q# does not directly model qubits themselves, but rather describes how a classical control computer interacts with those qubits.
 By design, Q# thus does not define quantum states or other properties of quantum mechanics directly.
-For instance, consider the state $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ discussed in the [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro) guide.
-To prepare this state in Q#, we use the facts that the qubits are initialized in the $\ket{0}$ state, and that $\ket{+} = H\ket{0}$, where $H$ is the Hadamard transform, implemented by the [`H` operation](](xref:microsoft.quantum.intrinsic.h):
+
+For instance, consider the state :::no-loc text="$\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$"::: discussed in the [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro) guide.
+To prepare this state in Q#, we use the facts that the qubits are initialized in the :::no-loc text="$\ket{0}$"::: state, and that :::no-loc text="$\ket{+} = H\ket{0}$":::, where :::no-loc text="$H$"::: is the Hadamard transform, implemented by the [`H` operation](xref:microsoft.quantum.intrinsic.h):
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -38,6 +39,7 @@ This allows us to be entirely agnostic about what a quantum state even *is* on e
 A Q# program has no ability to introspect into the state of a qubit.
 Rather, a program can call operations such as [`Measure`](xref:microsoft.quantum.intrinsic.measure) to learn information from a qubit, and call operations such as [`X`](xref:microsoft.quantum.intrinsic.x) and [`H`](xref:microsoft.quantum.intrinsic.h) to act on the state of a qubit.
 What these operations actually *do* is only made concrete by the target machine we use to run the particular Q# program.
+
 For example, if running the program on our [full-state simulator](xref:microsoft.quantum.machines.full-state-simulator), the simulator will perform the corresponding mathematical operations to the simulated quantum system.
 But looking toward the future, when the target machine is a real quantum computer, calling such operations in Q# will direct the quantum computer to perform the corresponding *real* operations on the *real* quantum system (e.g. precisely timed laser pulses).
 

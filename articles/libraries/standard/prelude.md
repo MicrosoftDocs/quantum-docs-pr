@@ -294,14 +294,14 @@ return rs;
 ## Extension Functions and Operations ##
 
 In addition, the prelude defines a rich set of mathematical and type conversion functions at the .NET level for use within Q# code.
-For instance, the <xref:microsoft.quantum.extensions.math> namespace defines useful operations such as <xref:microsoft.quantum.extensions.math.sin> and <xref:microsoft.quantum.extensions.math.log>.
+For instance, the <xref:microsoft.quantum.math> namespace defines useful operations such as <xref:microsoft.quantum.math.sin> and <xref:microsoft.quantum.math.log>.
 The implementation provided by the Quantum Development Kit uses the classical .NET base class library, and thus may involve an additional communications round trip between quantum programs and their classical drivers.
 While this does not present a problem for a local simulator, this can be a performance issue when using a remote simulator or actual hardware as a target machine.
 That said, an individual target machine may mitigate this performance impact by overriding these operations with versions that are more efficient for that particular system.
 
 ### Math ###
 
-The <xref:microsoft.quantum.extensions.math> namespace provides many useful functions from the .NET base class library's [`System.Math` class](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1).
+The <xref:microsoft.quantum.math> namespace provides many useful functions from the .NET base class library's [`System.Math` class](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1).
 These functions can be used in the same manner as any other Q# functions:
 
 ```qsharp
@@ -320,5 +320,5 @@ let y = AbsD(-PI()); // y : Double = 3.1415...
 
 ### Bitwise Operations ###
 
-Finally, the <xref:microsoft.quantum.extensions.bitwise> namespace provides several useful functions for manipulating integers through bitwise operators.
-For instance, <xref:microsoft.quantum.extensions.bitwise.parity> returns the bitwise parity of an integer as another integer.
+Finally, the <xref:microsoft.quantum.bitwise> namespace provides several useful functions for manipulating integers through bitwise operators.
+For instance, <xref:microsoft.quantum.bitwise.parity> returns the bitwise parity of an integer as another integer.

@@ -34,7 +34,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
 ## Write the code
 
-1. Using the Quantum Development Kit, [create a new Q# project](xref:microsoft.quantum.howto.createproject) called `Grover`, in your development environment of choice.
+1. Using the Quantum Development Kit, [create a new Q# project](xref:microsoft.quantum.howto.createproject) called `Grover` in your development environment of choice.
 
 1. Add the following code to the `Program.qs` file in your new project:
 

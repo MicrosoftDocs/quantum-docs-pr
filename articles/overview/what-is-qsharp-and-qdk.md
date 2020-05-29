@@ -66,5 +66,4 @@ Q# is an open-source programming language for developing quantum programs. It ha
 
 ## Next Steps
 
-> [!div class="nextstepaction"]
-> [Linear algebra for quantum computing](xref:microsoft.quantum.overview.algebra)
+[Linear algebra for quantum computing](xref:microsoft.quantum.overview.algebra)

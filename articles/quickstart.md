@@ -3,7 +3,7 @@ title: Explore entanglement with Q#
 description: Learn how to write a quantum program in Q#. Develop a Bell State application using the Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha 
-ms.date: 10/07/2019
+ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 ---
@@ -497,7 +497,7 @@ As stated in the overview, our statistics for the first qubit haven't changed (5
 
 Congratulations, you've written your first quantum program!
 
-## What's next?
+## Next steps
 
 The tutorial [Grover’s search](xref:microsoft.quantum.quickstarts.search) shows you how to build and run Grover search, one of the most popular quantum computing algorithms and offers a nice example of a Q# program that can be used to solve real problems with quantum computing.  
 

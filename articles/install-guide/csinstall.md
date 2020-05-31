@@ -1,5 +1,5 @@
 ---
-title: Develop with Q# + C#
+title: Develop with Q# and .NET
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
@@ -7,7 +7,7 @@ ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
 ---
-# Using Q# with C\# and F\#
+# Develop with Q# and .NET
 
 Q# is built to play well with .NET languages such as C# and F#.
 In this guide, we'll demonstrate how to use Q# with a host program written in a .NET language.
@@ -90,6 +90,6 @@ To call this operation from .NET on a quantum simulator, you can use the `Run` m
 
 ***
     
-## What's next?
+## Next steps
 
-Now that you have Quantum Development Kit set up for both Q# command-line programs, and for interoperability with .NET, you can write and run [your first quantum program](xref:microsoft.quantum.write-program).
+Now that you have Quantum Development Kit set up for both Q# command-line programs, and for interoperability with .NET, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng).

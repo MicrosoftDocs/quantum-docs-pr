@@ -1,10 +1,10 @@
 - name: Overview
   href: index.md
-- name: Quantum simulator
+- name: Full state simulator
   href: full-state-simulator.md
 - name: Resources estimator
   href: resources-estimator.md
-- name: Quantum computer trace simulator
+- name: Trace simulator
   topicHref: qc-trace-simulator/index.md
   href: qc-trace-simulator/toc.yml
 - name: Toffoli simulator

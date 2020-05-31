@@ -300,7 +300,7 @@ Run the Python file, and printed in your console you should see the `Message` an
 
 #### [C#](#tab/tabid-csharp)
 
-Following the same [instructions](xref:microsoft.quantum.howto.createproject) as above, create a C# host file, and rename it to `host.cs`.
+Following the same instructions as in the [install guide](xref:microsoft.quantum.install.cs), create a C# host file, and rename it to `host.cs`.
 
 The C# host has four parts:
 1. Construct a quantum simulator.

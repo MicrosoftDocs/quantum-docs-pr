@@ -17,8 +17,8 @@ This article assumes that you already have the QDK installed. If you are install
 
 We recommend keeping up to date with the latest QDK release. Follow this update guide to upgrade to the most recent QDK version. 
 The process consists of two parts:
-1. updating your existing Q# files and projects to align your code with any updated syntax
-2. updating the QDK itself for your chosen development environment 
+1. Updating your existing Q# files and projects to align your code with any updated syntax.
+2. Updating the QDK itself for your chosen development environment.
 
 ## Updating Q# Projects 
 
@@ -47,13 +47,20 @@ Regardless of whether you are using C# or Python to host Q# operations, follow t
     You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
 5. Save and close all files in your solution
 6. Select **Tools** -> **Command Line** -> **Developer Command Prompt**
-7. For each project in the solution, run the following command:
+7. For each project in the solution, run the following commands:
 
     ```dotnetcli
-    dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
+    dotnet remove [project_name].csproj package Microsoft.Quantum.Development.Kit
+
+    dotnet add [project_name].csproj package Microsoft.Quantum.Sdk
     ```
 
-   If your projects use any other Microsoft.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the command for these too.
+   If your projects use any other Microsoft.Quantum or Microsoft.Azure.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the command for these too.
+
+    ```dotnetcli
+    dotnet add [project_name].csproj package [package_name]
+    ```
+
 8. Close the command prompt and select **Build** -> **Build Solution** (do *not* select Rebuild Solution)
 
 You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).
@@ -75,7 +82,9 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
     dotnet clean [project_name].csproj
     ```
 
-3. In each of your `.csproj` files, go through the following steps:
+3. Determine the current version of the QDK. To find it, you can review the [release notes](https://docs.microsoft.com/quantum/relnotes/). The version will be in a format similar to the following: `0.11.2005.2905`.
+
+4. In each of your `.csproj` files, go through the following steps:
 
     - Update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project). That is, edit lines of the form:
 
@@ -85,19 +94,29 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 
         You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
 
-    - Update the version of the all the Microsoft Quantum packages to the most recently released. The version of the packages is specified in the following lines:
+    - Replace the reference to the SDK in the project definition. Make sure that the version number corresponds to the value determined in **step 3**.
 
         ```xml
-        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.11.2004.2825" />
+        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2005.2905">
         ```
-        
-        To determine the most recent QDK version, you can review the [release notes](https://docs.microsoft.com/quantum/relnotes/).
-        
-        Microsoft Quantum packages are named with the following patterns:
+
+    - Remove the reference to package `Microsoft.Quantum.Development.Kit` if present, which will be specified in the following entry:
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.11.2005.2905" />
+        ```
+
+    - Update the version of the all the Microsoft Quantum packages to the most recently released version of the QDK (determined in **step 3**). Those packages are named with the following patterns:
 
         ```
         Microsoft.Quantum.*
         Microsoft.Azure.Quantum.*
+        ```
+    
+        References to packages have the following format:
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2005.2905" />
         ```
 
     - Save the updated file.

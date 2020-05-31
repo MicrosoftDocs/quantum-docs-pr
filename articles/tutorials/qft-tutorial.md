@@ -1,15 +1,15 @@
 ﻿---
-title: Tutorial: Addressing individual qubits in a quantum program | Microsoft Docs
+title: Write and simulate qubit-level programs in Q#
 description: Step-by-step tutorial on writing and simulating a quantum program which operates at the individual qubit level
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
-ms.topic: tutorial 
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
+ms.topic: tutorial 
 ---
 
 
-# Tutorial: Write and simulate qubit-level programs in Q#
+# Tutorial: Write and simulate qubit-level programs in Q\#
 
 Welcome to the Quantum Development Kit tutorial on writing and simulating a basic quantum program that operates on individual qubits. 
 
@@ -27,7 +27,7 @@ In our case, we will define a Q# operation to perform the full three-qubit quant
 
 ## Prerequisites
 
-* [Install](xref:microsoft.quantum.install) the Quantum Development Kit using your preferred language and development environment
+* [Install](xref:microsoft.quantum.install) the Quantum Development Kit using your preferred language and development environment.
 * If you already have the QDK installed, make sure you have [updated](xref:microsoft.quantum.update) to the latest version
 
 
@@ -35,15 +35,17 @@ In our case, we will define a Q# operation to perform the full three-qubit quant
 
 > [!div class="checklist"]
 > * Define quantum operations in Q#
-> * Set up the classical host program to call and simulate Q# operations
+> * Call Q# operations directly from the command line or using a classical host program
 > * Simulate a quantum operation from qubit allocation to measurement output
 > * Observe how the quantum system's simulated wavefunction evolves throughout the operation
 
-Applications developed with Microsoft's Quantum Development Kit typically consists of two parts:
-1. A quantum program, implemented using the Q# quantum programming language, which is then invoked by the classical host program to run on a quantum computer or quantum simulator. These consist of 
+Running a quantum program with Microsoft's Quantum Development Kit typically consists of two parts:
+1. The program itself, which is implemented using the Q# quantum programming language, and then invoked to run on a quantum computer or quantum simulator. These consist of 
     - Q# operations: subroutines containing quantum operations, and 
     - Q# functions: classical subroutines used within the quantum algorithm.
-2. A classical program, implemented in a classical programming language like Python or C#, that serves as the main entry point and will invoke Q# operations when it wants to execute a quantum algorithm.
+2. The entry point used to call the quantum program and specify the target machine on which it should be run.
+    This can be done directly from the command line, or through a host program written in a classical programming language like Python or C#.
+    This tutorial includes instructions for whichever method you prefer.
 
 ## Allocate qubits and define quantum operations
 
@@ -51,15 +53,17 @@ The first part of this tutorial consists of defining the Q# operation `Perform3q
 
 In addition, we will use the [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) function to observe how the simulated wavefunction of our three qubit system evolves across the operation.
 
-To create a your Q# project, follow these [instructions](xref:microsoft.quantum.howto.createproject), and create a Q# file entitled `Operations.qs`.
+The first step is creating your Q# project and file.
+The steps for this depend on the environment you will use to call the program, and you can find the details in the respective [installation guides](xref:microsoft.quantum.install).
+
 We will walk you through the components of the file step-by-step, but the code is also available as a full block below.
 
 ### Namespaces to access other Q# operations
-Inside the file, we first define the namespace `Quantum.Operations` which will be accessed/imported by the classical host.
+Inside the file, we first define the namespace `NamespaceQFT` which will be accessed by the compiler.
 For our operation to make use of existing Q# operations, we open the relevant `Microsoft.Quantum.<>` namespaces.
 
 ```qsharp
-namespace Quantum.Operations {
+namespace NamespaceQFT {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Diagnostics;
     open Microsoft.Quantum.Math;
@@ -93,10 +97,10 @@ Within our Q# operation, we first allocate a register of three qubits with the `
         }
 ```
 
-With `using`, the qubits are automatically allocated in the $\ket{0}$ state. We can verify this by using [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) and [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine), which print a string and the system's current state to the host console.
+With `using`, the qubits are automatically allocated in the $\ket{0}$ state. We can verify this by using [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) and [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine), which print a string and the system's current state to the console.
 
 > [!NOTE]
-> The `Message(<string>)` and `DumpMachine()` functions (from [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) and [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics), respectively) both print directly to our classical host's console. 
+> The `Message(<string>)` and `DumpMachine()` functions (from [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) and [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics), respectively) both print directly to the console. 
 > Just like a real quantum computation, Q# does not allow us to directly access qubit states.
 > However, as `DumpMachine` prints the target machine's current state, it can provide valuable insight for debugging and learning when used in conjunction with the full state simulator.
 
@@ -194,7 +198,7 @@ If the reset is not performed at the end of a `using` allocation block, a runtim
 Your full Q# file should now look like this:
 
 ```qsharp
-namespace Quantum.Operations {
+namespace NamespaceQFT {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Diagnostics;
     open Microsoft.Quantum.Math;
@@ -232,22 +236,44 @@ namespace Quantum.Operations {
 ```
 
 
-With the Q# file and operation complete, it is ready to be called and simulated by the classical host.
+With the Q# file and operation complete, our quantum program is ready to be called and simulated.
 
-## Set up the classical host
+## Execute the program
 
-Having defined our Q# operation in a `.qs` file, we now write the classical host program to call that operation and process any returned classical data (for now, there isn't anything to process---recall that our operation defined above returns `Unit`).
-When we later modify the Q# operation to return an array of measurement results (`Result[]`), we will update the host file correspondingly.
+Having defined our Q# operation in a `.qs` file, we now need to call that operation and observe any returned classical data.
+For now, there isn't anything returned (recall that our operation defined above returns `Unit`), but when we later modify the Q# operation to return an array of measurement results (`Result[]`), we will address this.
 
-While the Q# program is ubiquitous across classical host languages, the host programs of course will vary slightly. As such, please follow the instructions in the tab corresponding to your development environment.
+While the Q# program is ubiquitous across the environments used to call it, the manner of doing so will of course vary. 
+As such, simply follow the instructions in the tab corresponding to your setup: working from the Q# command line application or using a host program in Python or C#.
+
+#### [Command line](#tab/tabid-cmdline)
+
+Running the Q# program from the command line requires only a small change to the Q# file.
+
+Simply add `@EntryPoint()` to a line preceding the operation definition:
+
+```qsharp
+    @EntryPoint()
+    operation Perform3qubitQFT() : Unit {
+        // ...
+```
+
+To run the program, open the terminal in the folder of your project and enter
+
+```dotnetcli
+dotnet run
+```
+
+Upon execution, you should see the `Message` and `DumpMachine` outputs below printed in your console.
+
 
 #### [Python](#tab/tabid-python)
 
-Following the same [instructions](xref:microsoft.quantum.howto.createproject) as above, create a Python host file: `host.py`.
+Create a Python host file: `host.py`.
 
 The host file is constructed as follows: 
 1. First, we import the `qsharp` module, which registers the module loader for Q# interoperability. 
-    This allows Q# namespaces (e.g. the `Quantum.Operations` we defined in `Operations.qs`) to appear as Python modules, from which we can import Q# operations.
+    This allows Q# namespaces (e.g. the `NamespaceQFT` we defined in our Q# file) to appear as Python modules, from which we can import Q# operations.
 2. Then, import the Q# operations which we will directly invoke---in this case, `Perform3qubitQFT`.
     We need only import the entry point into a Q# program (i.e. _not_ operations like `H` and `R1`, which are called by other Q# operations but never by the classical host).
 3. In simulating Q# operations or functions, use the form `<Q#callable>.simulate(<args>)` to run them on the `QuantumSimulator()` target machine. 
@@ -256,7 +282,7 @@ The host file is constructed as follows:
 > If we wanted to call the operation on a different machine, for example the `ResourceEstimator()`, we would simply use `<Q#callable>.estimate_resources(<args>)`.
 > In general, Q# operations are agnostic to the machines on which they're run, but some features such as `DumpMachine` may behave differently.
 
-4. Upon performing the simulation, the operation call will return values as defined in `Operations.qs`.
+4. Upon performing the simulation, the operation call will return values as defined in the Q# file.
     For now there is nothing returned, but later on we will see an example of assigning and processing these values.
     With the resultant data in our hands and totally classical, we can do whatever we'd like with it.
 
@@ -264,7 +290,7 @@ Your full `host.py` file should be this:
 
 ```python
 import qsharp
-from Quantum.Operations import Perform3qubitQFT
+from NamespaceQFT import Perform3qubitQFT
 
 Perform3qubitQFT.simulate()
 ```
@@ -296,7 +322,7 @@ using System;
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.Simulation.Simulators;
 
-namespace Quantum.Operations
+namespace NamespaceQFT
 {
     class Driver
     {
@@ -373,8 +399,8 @@ to
 
 $$
 \begin{align}
-	\ket{\psi}\_{final} &= \frac{1}{\sqrt{8}} \left( \ket{000} + \ket{001} + \ket{010} + \ket{011} + \ket{100} + \ket{101} + \ket{110} + \ket{111}  \right) \\\\
-	&= \frac{1}{\sqrt{2^n}}\sum\_{j=0}^{2^n-1} \ket{j},
+    \ket{\psi}\_{final} &= \frac{1}{\sqrt{8}} \left( \ket{000} + \ket{001} + \ket{010} + \ket{011} + \ket{100} + \ket{101} + \ket{110} + \ket{111}  \right) \\\\
+    &= \frac{1}{\sqrt{2^n}}\sum\_{j=0}^{2^n-1} \ket{j},
 \end{align}
 $$
 
@@ -421,7 +447,7 @@ Here, we use it in our `for` loop to sequentially measure each qubit using the `
 Each measured `Result` type (either `Zero` or `One`) is then added to the corresponding index position in `resultArray` with an update-and-reassign statement.
 
 > [!NOTE]
-> The syntax of this statement is unique to Q#, but corresponds to the similar variable reassignment `r[i] <- M(qs[i])` seen in other languages such as F# and R.
+> The syntax of this statement is unique to Q#, but corresponds to the similar variable reassignment `resultArray[i] <- M(qs[i])` seen in other languages such as F# and R.
 
 The keyword `set` is always used to reassign variables bound using `mutable`.
 
@@ -443,7 +469,7 @@ The final operation code should look like:
 ```qsharp
     operation Perform3QubitQFT() : Result[] {
 
-        mutable r = new Result[3];
+        mutable resultArray = new Result[3];
 
         using (qs = Qubit[3]) {
 
@@ -466,7 +492,7 @@ The final operation code should look like:
             DumpMachine();
 
             for(i in IndexRange(qs)) {
-                set r w/= i <- M(qs[i]);
+                set resultArray w/= i <- M(qs[i]);
             }
 
             Message("After measurement: ");
@@ -474,17 +500,58 @@ The final operation code should look like:
 
             ResetAll(qs);
         }
-        return r;
+        return resultArray;
     }
 }
 ```
 
-Additionally, update your host program to process the returned array:
+If you are working from the command line, the returned array will simply be printed directly to the console at the end of the execution.
+Otherwise, update your host program to process the returned array.
+
+#### [Command line](#tab/tabid-cmdline)
+
+To have more understanding of the returned array which will be printed in the console, we can add another `Message` in the Q# file just before the `return` statement:
+
+```qsharp
+        Message("Post-QFT measurement results [qubit0, qubit1, qubit2]: ");
+        return resultArray;
+```
+
+Run the project, and your output should look similar to the following:
+
+```Output
+Before measurement: 
+# wave function for qubits with ids (least to most significant): 0;1;2
+|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+After measurement:
+# wave function for qubits with ids (least to most significant): 0;1;2
+|0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+|1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+|2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+|5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+|6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+|7>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
+
+Post-QFT measurement results [qubit0, qubit1, qubit2]: 
+[One,One,Zero]
+```
 
 #### [Python](#tab/tabid-python)
+
+Update your Python program to the following:
+
 ```python
 import qsharp
-from Quantum.OperationsQFT import Perform3QubitQFT
+from NamespaceQFT import Perform3QubitQFT
 
 measurementResult = Perform3QubitQFT.simulate()
 print("\n")
@@ -531,6 +598,7 @@ Corresponding basis state in binary:
 ```
 
 #### [C#](#tab/tabid-csharp)
+
 Now that our operation is returning a result, replace the method call `Wait()` with fetching the `Result` property. 
 This still accomplishes the same synchronicity discussed earlier, and we can directly bind this value to the variable `measurementResult`.
 
@@ -540,7 +608,7 @@ using System;
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.Simulation.Simulators;
 
-namespace Quantum.Operations
+namespace NamespaceQFT
 {
     class Driver
     {
@@ -659,7 +727,7 @@ Now, adjust your host program to call the name of your new operation (e.g. `Perf
 
 To see the real benefit of using the Q# library operations, change the number of qubits to something other than `3`:
 ```qsharp
-        mutable r = new Result[4]; 
+        mutable resultArray = new Result[4]; 
 
         using (qs = Qubit[4]) {
             //...
@@ -669,7 +737,7 @@ You can thus apply the proper QFT for any given number of qubits, without having
 
 Note that the quantum simulator takes exponentially more time to run as you increase the number of qubits---precisely why we look forward to real quantum hardware!
 
-## Next steps
+
 
 
 

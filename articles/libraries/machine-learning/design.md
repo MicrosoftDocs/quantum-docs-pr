@@ -49,7 +49,7 @@ Suppose we have a dataset with 784 features per instance, e.g. images of 28×28 
 
  ![Local rotations layer](~/media/local_rotations_layer.PNG)
 
-We recommend you to explore the [API referenece of the Quantum Machine Learning library](xref:microsoft.quantum.machinelearning) to discover all the tools available to streamline the circuit design.
+We recommend you  explore the [API reference of the Quantum Machine Learning library](xref:microsoft.quantum.machinelearning) to discover all the tools available to streamline the circuit design.
 
 ## Next steps
 

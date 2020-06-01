@@ -255,7 +255,7 @@ In Q#, the unwrap operator is a trailing exclamation mark `!`.
 For instance, if `IntPair` is a user-defined type with underlying type `(Int, Int)`,
 and `s` was a variable with value `IntPair(2, 3)`, then `s!` would be `(2, 3)`.
 
-For user-defined types defined in terms of other user-defined types. the
+For user-defined types defined in terms of other user-defined types, the
 unwrap operator may be repeated; for instance, `s!!` indicates the
 doubly-unwrapped value of `s`.
 Thus, if `WrappedPair` is a user-defined type with underlying type `IntPair`, and

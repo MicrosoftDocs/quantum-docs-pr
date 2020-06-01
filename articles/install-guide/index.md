@@ -19,10 +19,11 @@ Learn how to install the Microsoft Quantum Development Kit (QDK), so that you ca
 - Tools to facilitate your development
 
 Q# programs can run as standalone applications using Visual Studio Code or Visual Studio, or through Jupyter Notebooks with the IQ# Jupyter kernel.
-
 They can also be paired with a host program written in a .NET language (typically C#) or Python, enabling you to call quantum operations from inside a classical program.
 
-The QDK is available for multiple development environments. Select your preferred setup from:
+The workflows for each of these setups are described and compared at [Run Q# standalone or with host programs](xref:microsoft.quantum.guide.host-programs).
+
+To proceed with installing the QDK and creating Q# projects, select your preferred setup:
 
 [**Develop with Q# command line applications**](xref:microsoft.quantum.install.standalone) - Choose this approach to work with Q# from the command line. This does not require a driver or a host program like the below options.
 

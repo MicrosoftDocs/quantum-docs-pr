@@ -1,7 +1,7 @@
 ---
 title: '%chemistry.inputstate.load (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load
-ms.date: '2020-04-29'
+ms.date: '2020-06-01'
 ms.topic: article
 ---
 

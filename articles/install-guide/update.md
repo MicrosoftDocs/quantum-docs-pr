@@ -87,7 +87,7 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
     dotnet clean [project_name].csproj
     ```
 
-3. Determine the current version of the QDK. To find it, you can review the [release notes](https://docs.microsoft.com/quantum/relnotes/). The version will be in a format similar to the following: `0.11.2005.2905`
+3. Determine the current version of the QDK. To find it, you can review the [release notes](https://docs.microsoft.com/quantum/relnotes/). The version will be in a format similar to `0.11.2005.2905`.
 
 4. In each of your `.csproj` files, go through the following steps:
 

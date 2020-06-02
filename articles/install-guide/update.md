@@ -54,13 +54,13 @@ Regardless of whether you are using C# or Python to host Q# operations, follow t
 
 6. Save and close all files in your solution.
 7. Select **Tools** -> **Command Line** -> **Developer Command Prompt**.
-8. For each project in the solution, run the following command:
+8. For each project in the solution, run the following command to **remove** this package:
 
     ```dotnetcli
     dotnet remove [project_name].csproj package Microsoft.Quantum.Development.Kit
     ```
 
-   If your projects use any other Microsoft.Quantum or Microsoft.Azure.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the command for these too.
+   If your projects use any other Microsoft.Quantum or Microsoft.Azure.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the **add** command for these to update the version used.
 
     ```dotnetcli
     dotnet add [project_name].csproj package [package_name]

@@ -566,5 +566,6 @@ Operator | Arity | Description | Operand Types
  `?` `|` | Ternary | Conditional | `Bool` for the left-hand-side
 `w/` `<-` | Ternary | Copy-and-update | see [copy-and-update expressions](#copy-and-update-expressions)
 
-## What's Next?
+## Next steps
+
 Now that you can work with expressions in Q#, you can head to [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.

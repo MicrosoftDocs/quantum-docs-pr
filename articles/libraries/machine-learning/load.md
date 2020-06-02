@@ -150,6 +150,6 @@ The .NET Core platform provides the [`System.Text.Json` package](https://www.nug
 
 ***
 
-## What's next?
+## Next steps
 
 Now you are ready to start running your own experiments with your own datasets. Try different classifiers and dataset and contribute to the community sharing your results!

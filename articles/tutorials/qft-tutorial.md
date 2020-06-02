@@ -41,7 +41,7 @@ In our case, we will define a Q# operation to perform the full three-qubit quant
 
 Running a quantum program with Microsoft's Quantum Development Kit typically consists of two parts:
 1. The program itself, which is implemented using the Q# quantum programming language, and then invoked to run on a quantum computer or quantum simulator. These consist of 
-    - Q# operations: subroutines containing quantum operations, and 
+    - Q# operations: subroutines acting on quantum registers, and 
     - Q# functions: classical subroutines used within the quantum algorithm.
 2. The entry point used to call the quantum program and specify the target machine on which it should be run.
     This can be done directly from the command line, or through a host program written in a classical programming language like Python or C#.
@@ -154,7 +154,7 @@ Additionally, we divide by a `Double` (e.g. `2.0`) because dividing by an intege
 > `R1(π/2)` and `R1(π/4)` are equivalent to the `S` and `T` operations (also in `Microsoft.Quantum.Intrinsic`).
 
 
-After applying the relevant Hadamards and controlled rotations to the second and third qubits:
+After applying the relevant `H` operations and controlled rotations to the second and third qubits:
 
 ```qsharp
             //second qubit:
@@ -706,7 +706,7 @@ In the resulting output, you will see the gradual projection into subspaces as e
 
 ## Use the Q# libraries
 As we mentioned in the introduction, much of Q#'s power rests in the fact that it allows you to abstract-away the worries of dealing with individual qubits.
-Indeed, if you want to develop full-scale, applicable quantum programs, worrying about whether a Hadamard goes before or after a particular rotation would only slow you down. 
+Indeed, if you want to develop full-scale, applicable quantum programs, worrying about whether an `H` operation goes before or after a particular rotation would only slow you down. 
 
 The Q# libraries contain the [QFT](xref:microsoft.quantum.canon.qft) operation, which you can simply take and apply for any number of qubits.
 To give it a try, define a new operation in your Q# file which has the same contents of `Perform3QubitQFT`, but with everything from the first `H` to the `SWAP` replaced by two easy lines:
@@ -733,10 +733,9 @@ To see the real benefit of using the Q# library operations, change the number of
             //...
         }
 ```
-You can thus apply the proper QFT for any given number of qubits, without having to worry about the mess of new Hadamards and rotations on each qubit.
+You can thus apply the proper QFT for any given number of qubits, without having to worry about the mess of new `H` operations and rotations on each qubit.
 
 Note that the quantum simulator takes exponentially more time to run as you increase the number of qubits---precisely why we look forward to real quantum hardware!
-
 
 
 

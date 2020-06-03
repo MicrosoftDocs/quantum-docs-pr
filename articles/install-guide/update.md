@@ -17,8 +17,8 @@ This article assumes that you already have the QDK installed. If you are install
 
 We recommend keeping up to date with the latest QDK release. Follow this update guide to upgrade to the most recent QDK version. 
 The process consists of two parts:
-1. updating your existing Q# files and projects to align your code with any updated syntax
-2. updating the QDK itself for your chosen development environment 
+1. Updating your existing Q# files and projects to align your code with any updated syntax.
+2. Updating the QDK itself for your chosen development environment.
 
 ## Updating Q# Projects 
 
@@ -34,9 +34,9 @@ Regardless of whether you are using C# or Python to host Q# operations, follow t
 
 ### Update Q# projects in Visual Studio
  
-1. Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions
-2. Open your solution in Visual Studio
-3. From the menu, select **Build** -> **Clean Solution**
+1. Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions.
+2. Open your solution in Visual Studio.
+3. From the menu, select **Build** -> **Clean Solution**.
 4. In each of your .csproj files, update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project).
     That is, edit lines of the form:
 
@@ -45,52 +45,96 @@ Regardless of whether you are using C# or Python to host Q# operations, follow t
     ```
 
     You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
-5. Save and close all files in your solution
-6. Select **Tools** -> **Command Line** -> **Developer Command Prompt**
-7. For each project in the solution, run the following command:
 
-    ```dotnetcli
-    dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
+5. In each of the .csproj files, set the SDK to `Microsoft.Quantum.Sdk`, as indicated in the line below. Please notice that the version number should be the latest available, and you can determine it by reviewing the [release notes](https://docs.microsoft.com/quantum/relnotes/).
+
+    ```xml
+    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
     ```
 
-   If your projects use any other Microsoft.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the command for these too.
-8. Close the command prompt and select **Build** -> **Build Solution** (do *not* select Rebuild Solution)
+6. Save and close all files in your solution.
+
+7. Select **Tools** -> **Command Line** -> **Developer Command Prompt**. Alternatively, you can use the package management console in Visual Studio.
+
+8. For each project in the solution, run the following command to **remove** this package:
+
+    ```dotnetcli
+    dotnet remove [project_name].csproj package Microsoft.Quantum.Development.Kit
+    ```
+
+   If your projects use any other Microsoft.Quantum or Microsoft.Azure.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the **add** command for these to update the version used.
+
+    ```dotnetcli
+    dotnet add [project_name].csproj package [package_name]
+    ```
+
+9. Close the command prompt and select **Build** -> **Build Solution** (do *not* select Rebuild Solution).
 
 You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).
 
 
 ### Update Q# projects in Visual Studio Code
 
-1. In Visual Studio Code, open the folder containing the project to update
-2. Select **Terminal** -> **New Terminal**
-3. Follow the instructions for updating using the command line (directly below)
+1. In Visual Studio Code, open the folder containing the project to update.
+2. Select **Terminal** -> **New Terminal**.
+3. Follow the instructions for updating using the command line (directly below).
 
 ### Update Q# projects using the command line
 
-1. Navigate to the folder containing your project file
+1. Navigate to the folder containing your main project file.
+
 2. Run the following command:
 
     ```dotnetcli
     dotnet clean [project_name].csproj
     ```
 
-3. In each of your .csproj files, update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project).
-    That is, edit lines of the form:
+3. Determine the current version of the QDK. To find it, you can review the [release notes](https://docs.microsoft.com/quantum/relnotes/). The version will be in a format similar to `0.11.2006.207`.
 
-    ```xml
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    ```
+4. In each of your `.csproj` files, go through the following steps:
 
-    You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
-4. Run the following command:
+    - Update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project). That is, edit lines of the form:
 
-    ```dotnetcli
-    dotnet add package Microsoft.Quantum.Development.Kit
-    ```
+        ```xml
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        ```
 
-    If your project uses any other Microsoft.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the command for these too.
-5. Save and close all files.
-6. Repeat 1-4 for each project dependency, then navigate back to the folder containing your main project and run:
+        You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
+
+    - Replace the reference to the SDK in the project definition. Make sure that the version number corresponds to the value determined in **step 3**.
+
+        ```xml
+        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        ```
+
+    - Remove the reference to package `Microsoft.Quantum.Development.Kit` if present, which will be specified in the following entry:
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.10.1910.3107" />
+        ```
+
+    - Update the version of the all the Microsoft Quantum packages to the most recently released version of the QDK (determined in **step 3**). Those packages are named with the following patterns:
+
+        ```
+        Microsoft.Quantum.*
+        Microsoft.Azure.Quantum.*
+        ```
+    
+        References to packages have the following format:
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        ```
+
+    - Save the updated file.
+
+    - Restore the dependencies of the project, by doing the following:
+
+        ```dotnetcli
+        dotnet restore [project_name].csproj
+        ```
+
+4. Navigate back to the folder containing your main project and run:
 
     ```dotnetcli
     dotnet build [project_name].csproj

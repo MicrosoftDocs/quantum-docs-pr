@@ -1,3 +1,5 @@
+- href: check_kata.md
+  name: '%check_kata magic command'
 - href: chemistry.broombridge.md
   name: '%chemistry.broombridge magic command'
 - href: chemistry.encode.md
@@ -12,6 +14,8 @@
   name: '%config magic command'
 - href: estimate.md
   name: '%estimate magic command'
+- href: kata.md
+  name: '%kata magic command'
 - href: lsmagic.md
   name: '%lsmagic magic command'
 - href: package.md

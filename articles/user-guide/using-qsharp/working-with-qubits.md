@@ -217,5 +217,6 @@ The reason for this is that we know from the structure of the circuit how to eas
 
 It is instructive to compare this code with another canon function `MultiControlledXClean` which achieves the same goal of implementing a multiply-controlled `X` operation, however, which uses several clean qubits using the `using` mechanism. 
 
-## What's Next?
+## Next steps
+
 Learn about [Control Flow](xref:microsoft.quantum.guide.controlflow) in Q#.

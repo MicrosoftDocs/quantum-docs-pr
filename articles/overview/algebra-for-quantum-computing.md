@@ -68,7 +68,7 @@ $$
 
 The result is a four-dimensional matrix, with each element representing a probability. For example, $ac$ is the probability of the two qubits collapsing to 0 and 0, $ad$ is the probability of 0 and 1, and so on. 
 
-Just as a single qubit state $\begin{bmatrix} a \\\\  b \end{bmatrix}$ must meet the requirement that $|a|^2 + |b|^2 = 1$ in order to represent a quantum state, a two-qubit state $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ must meet the requirement that $|a|^2 + |b|^2 + |c|^2+ |d|^2 = 1$.
+Just as a single qubit state $\begin{bmatrix} a \\\\  b \end{bmatrix}$ must meet the requirement that $|a|^2 + |b|^2 = 1$ in order to represent a quantum state, a two-qubit state $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ must meet the requirement that $|ac|^2 + |ad|^2 + |bc|^2+ |bd|^2 = 1$.
 
 ## Summary
 
@@ -76,5 +76,4 @@ Linear algebra is the standard language for describing quantum computing and qua
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Install the QDK](xref:microsoft.quantum.install)
+[Install the QDK](xref:microsoft.quantum.install)

@@ -17,7 +17,7 @@ In this guide we will use the half-moon dataset, using a classifier structure de
 ## Prerequisites
 
 - The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- [Create a Q# Project](xref:microsoft.quantum.howto.createproject)
+- Create a Q# project for either a [Python host program](xref:microsoft.quantum.install.python) or a [C# host program](xref:microsoft.quantum.install.cs).
 
 ## Host program
 

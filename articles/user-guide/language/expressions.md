@@ -284,7 +284,6 @@ let g = Foo(arg)!;      // Syntax error
 An array literal is a sequence of one or more element expressions, separated by commas, enclosed in `[` and `]`.
 All elements must be compatible with the same type.
 
-
 Given two arrays of the same type, the binary `+` operator may be used to form a new array that is the concatenation of the two arrays.
 For instance, `[1,2,3] + [4,5,6]` is `[1,2,3,4,5,6]`.
 
@@ -292,6 +291,9 @@ For instance, `[1,2,3] + [4,5,6]` is `[1,2,3,4,5,6]`.
 
 Given a type and an `Int` expression, the `new` operator may be used to allocate a new array of the given size.
 For instance, `new Int[i + 1]` would allocate a new `Int` array with `i + 1` elements.
+
+Empty array literals, `[]`, are not allowed.
+Instead using `new ★[0]`, where `★` is as placeholder for a suitable type, allows to create the desired array of length zero.
 
 The elements of a new array are initialized to a type-dependent default value.
 In most cases this is some variation of zero.
@@ -442,8 +444,8 @@ For example, if `Op1`, `Op2`, and `Op3` all are `Qubit[] => Unit`, but `Op1` sup
 - `[Op1, Op3]` is an array of `(Qubit[] => Unit is Adj)` operations.
 - `[Op2, Op3]` is an array of `(Qubit[] => Unit is Ctl)` operations.
 
-Empty array literals, `[]`, are not allowed.
-Instead using `new ★[0]`, where `★` is as placeholder for a suitable type, allows to create the desired array of length zero.
+However, while `(Qubit[] => Unit is Adj)` and  `(Qubit[] => Unit is Ctl)` operations have the common base type of `(Qubit[] => Unit)`, note that arrays *of* these operators do not share a common base type. 
+For example, `[[Op1], [Op2]]` would currently raise an error because it is attempting to create an array of the incompatible array types `(Qubit[] => Unit is Adj)[]` and `(Qubit[] => Unit is Ctl)[]`.
 
 
 ## Conditional Expressions
@@ -564,5 +566,6 @@ Operator | Arity | Description | Operand Types
  `?` `|` | Ternary | Conditional | `Bool` for the left-hand-side
 `w/` `<-` | Ternary | Copy-and-update | see [copy-and-update expressions](#copy-and-update-expressions)
 
-## What's Next?
+## Next steps
+
 Now that you can work with expressions in Q#, you can head to [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.

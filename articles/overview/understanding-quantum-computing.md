@@ -64,5 +64,4 @@ These concepts just scratch the surface of quantum mechanics, but are fundamenta
 
 ## Next Steps
 
-> [!div class="nextstepaction"]
-> [Quantum computers and quantum simulators](xref:microsoft.quantum.overview.simulators)
+[Quantum computers and quantum simulators](xref:microsoft.quantum.overview.simulators)

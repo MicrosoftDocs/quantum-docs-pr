@@ -28,7 +28,7 @@ You can use the katas for learning in your environment of choice:
 
 ## What can I learn with the Quantum Katas?
 
-Explore the basics and fundamentals of quantum computing, dive deeper into quantum algorithms and protocols, and solve some quantum based games. We recommend you to follow this learning path in the beginning to make sure you have a solid grasp on the fundamental concepts of quantum computing. Of course, you can skip the topics you're comfortable with, such as complex arithmetic, and learn the algorithms in any order you want.
+Explore the basics and fundamentals of quantum computing or dive deeper into quantum algorithms and protocols. We recommend you to follow this learning path in the beginning to make sure you have a solid grasp on the fundamental concepts of quantum computing. Of course, you can skip the topics you're comfortable with, such as complex arithmetic, and learn the algorithms in any order you want.
 
 ### Introduction to quantum computing concepts
 
@@ -38,8 +38,8 @@ Explore the basics and fundamentals of quantum computing, dive deeper into quant
 |[Linear algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|Linear algebra is used to represent quantum states and operations in quantum computing. This tutorial covers the basics, including matrices and vectors.|
 |[The concept of a qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|Learn about qubits - one of the core concepts of quantum computing. |
 |[Single-qubit quantum gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|This tutorial introduces single-qubit quantum gates, which act as the building blocks of quantum algorithms and transform quantum qubit states in various ways.|
-|[Multi-qubit systems](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|This kata introduces multi-qubit systems, their representation in mathematical notation and in Q# code, and the concept of entanglement.|
-|[Multi-qubit quantum gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|This tutorial follows up the [Single-qubit quantum gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) kata, and focuses on applying quantum gates to multi-qubit systems.|
+|[Multi-qubit systems](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|This tutorial introduces multi-qubit systems, their representation in mathematical notation and in Q# code, and the concept of entanglement.|
+|[Multi-qubit quantum gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|This tutorial follows the [Single-qubit quantum gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) tutorial, and focuses on applying quantum gates to multi-qubit systems.|
 
 ### Quantum computing fundamentals
 
@@ -68,7 +68,7 @@ Explore the basics and fundamentals of quantum computing, dive deeper into quant
 |:-----|-------------|
 |[BB84 protocol for quantum key distribution](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|Learn about and implement a quantum key distribution protocol, [BB84](https://en.wikipedia.org/wiki/BB84), using qubits to exchange cryptographic keys. |
 |[Bit-flip error correcting code](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|Explore quantum error correction with the simplest of the quantum error-correction (QEC) codes - the three-qubit bit-flip code.|
-|[Phase estimation](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Phase estimation algorithms are some of the most fundamental building blocks of quantum computing. Learn about phase estimation with these exercises that cover quantum phase estimation, iterative phase estimation, and how to prepare and run phase estimation routines in Q#.|
+|[Phase estimation](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Phase estimation algorithms are some of the most fundamental building blocks of quantum computing. Learn about phase estimation with these exercises that cover quantum phase estimation and how to prepare and run phase estimation routines in Q#.|
 |[Quantum arithmetic: Building ripple-carry adders](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|An in-depth series of exercises that explores [ripple carry](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) addition on a quantum computer. Build an in-place quantum adder, expand on it with a different algorithm, and finally, build an in-place quantum subtractor.   |
 
 ### Entanglement games

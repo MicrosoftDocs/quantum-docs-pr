@@ -16,8 +16,7 @@ uid: microsoft.quantum.overview.katas
 
 The tutorials and exercises collected in this project emphasize learning by doing: they offer programming tasks that cover certain topics which progress from very simple to quite challenging. Each task asks you to fill in some code; the first tasks might require just one line, and the later ones might require a sizable fragment of code.
 
-Most importantly, the katas include testing frameworks that allow you to
- set up, run and validate the solutions to the tasks. This allows you to get immediate feedback on your solution and to reconsider your approach if it is incorrect.
+Most importantly, the katas include testing frameworks that set up, run and validate the solutions to the tasks. This allows you to get immediate feedback on your solution and to reconsider your approach if it is incorrect.
 
 You can use the katas for learning in your environment of choice:
 
@@ -59,8 +58,8 @@ Explore the basics and fundamentals of quantum computing or dive deeper into qua
 |[Deutsch–Jozsa algorithm](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringDeutschJozsaAlgorithm)|This algorithm is famous for being one of the first examples of a quantum algorithm that is exponentially faster than any deterministic classical algorithm.|
 |[Exploring high-level properties of Grover's search algorithm](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringGroversAlgorithm)|A high-level introduction to one of the most famous algorithms in quantum computing. It solves the problem of finding an input to a black box (oracle) that produces a particular output. |
 |[Implementing Grover's search algorithm](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)|This kata dives deeper into Grover's search algorithm, and covers writing oracles, performing steps of the algorithm, and finally putting it all together.|
-|[SAT problems](https://github.com/microsoft/QuantumKatas/tree/master/SolveSATWithGrover)|A series of exercises that uses Grover's algorithm to solve realistic problems, using [boolean satisfiability problems](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) (SAT) as an example.  |
-|[Graph coloring problems](https://github.com/microsoft/QuantumKatas/tree/master/GraphColoring)| This kata further explores Grover's algorithm, this time to solve [constraint satisfaction problems](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem), using a graft coloring problem as an example. |
+|[Solving real problems using Grover's algorithm: SAT problems](https://github.com/microsoft/QuantumKatas/tree/master/SolveSATWithGrover)|A series of exercises that uses Grover's algorithm to solve realistic problems, using [boolean satisfiability problems](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) (SAT) as an example.  |
+|[Solving real problems using Grover's algorithm: Graph coloring problems](https://github.com/microsoft/QuantumKatas/tree/master/GraphColoring)| This kata further explores Grover's algorithm, this time to solve [constraint satisfaction problems](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem), using a graft coloring problem as an example. |
 
 ### Protocols and libraries
 

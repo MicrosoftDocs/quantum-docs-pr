@@ -96,7 +96,7 @@ Firstly, the specific callable to be executed has access to any other callables 
 It also access those from any of the [Q# libraries](xref:microsoft.quantum.libraries), but those must be referenced either via their full name, or through the use of `open` statements described above.
 
 The callable itself is then executed on a *[target machine](xref:microsoft.quantum.machines)*.
-Such target machines can be actual quantum hardware (as currently in private preview on Azure Quantum), or the multiple simulators available as part of the QDK.
+Such target machines can be actual quantum hardware or the multiple simulators available as part of the QDK.
 For our purposes here, the most useful target machine is an instance of the [full-state simulator](xref:microsoft.quantum.machines.full-state-simulator), `QuantumSimulator`, which calculates the program's behavior as if it were being executed on a noise-free quantum computer.
 
 So far, we've described what happens when a specific Q# callable is being executed.

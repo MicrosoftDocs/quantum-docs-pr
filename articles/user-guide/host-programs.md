@@ -1,6 +1,6 @@
 ---
 title: Run Q# standalone or with host programs
-description: Overview of the different ways to run Q# programs: command line, Q# Jupyter Notebooks, and classical host programs in Python or a .NET language.
+description: Overview of the different ways to run Q# programs. From the command line, Q# Jupyter Notebooks, and classical host programs in Python or a .NET language.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 05/15/2020

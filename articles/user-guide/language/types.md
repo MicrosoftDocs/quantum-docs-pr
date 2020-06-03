@@ -298,7 +298,8 @@ When invoking a type-parameterized callable, all arguments that have the same ty
 
 Q# does not provide a mechanism for constraining the possible types that might be substituted for a type parameter.
 
-## What's Next?
+## Next steps
+
 Now that you've seen all the types which comprise the Q# language, you can head to [Type Expressions in Q#](xref:microsoft.quantum.guide.expressions) to see how to create and manipulate expressions of these various types.
 
 

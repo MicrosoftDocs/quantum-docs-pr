@@ -333,5 +333,6 @@ Notable programmatic features shown in this operation are a more complex `fixup`
 See also [Testing and debugging](xref:microsoft.quantum.guide.testingdebugging) for more information about the [`Assert`](xref:microsoft.quantum.intrinsic.assert) and [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) operations.
 
 
-## What's Next?
+## Next steps
+
 Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in Q#.

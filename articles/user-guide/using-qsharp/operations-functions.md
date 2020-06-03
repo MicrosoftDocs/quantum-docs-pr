@@ -681,5 +681,6 @@ There are two important comments about the use of recursion, however:
 - When executing on an actual quantum device, stack space may be limited, and so deep recursion may lead to a runtime error.
   In particular, the Q# compiler and runtime do not identify and optimize tail recursion.
 
-## What's Next?
+## Next steps
+
 Learn about [Variables](xref:microsoft.quantum.guide.variables) in Q#.

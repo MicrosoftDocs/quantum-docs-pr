@@ -1,7 +1,7 @@
 ---
 title: '%chemistry.broombridge (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge
-ms.date: '2020-06-02'
+ms.date: '2020-06-04'
 ms.topic: article
 ---
 

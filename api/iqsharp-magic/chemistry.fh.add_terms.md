@@ -1,7 +1,7 @@
 ---
 title: '%chemistry.fh.add_terms (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms
-ms.date: '2020-06-02'
+ms.date: '2020-06-04'
 ms.topic: article
 ---
 

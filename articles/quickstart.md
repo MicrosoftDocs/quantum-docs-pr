@@ -58,7 +58,7 @@ This tutorial uses a host programs and consists of two parts:
 
 1. Create a new Q# project:
 
-    ```dotnetcli
+    ```
     dotnet new console -lang Q# --output Bell
     cd Bell
     ```
@@ -67,7 +67,7 @@ This tutorial uses a host programs and consists of two parts:
 
 1. Rename the Q# file
 
-    ```bash
+    ```
     mv Operation.qs Bell.qs
     ```
 

@@ -386,7 +386,7 @@ In detail for the first row of our input state $\ket{000}$:
 * **`    ---`**: A graphical representation of the amplitude's phase.
 * **`[ 0.0000 rad ]`**: the numeric value of the phase (in radians).
 
-Both the magnitude and the phase are displayed with a graphical representation. The magnitude representation is straightforward: it shows a bar of `*`, and the higher the probability, the larger the bar will be. For the phase, see the DumpMachine section [here](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) for the possible symbol representations based on angle ranges.
+Both the magnitude and the phase are displayed with a graphical representation. The magnitude representation is straightforward: it shows a bar of `*`, and the higher the probability, the larger the bar will be. For the phase, see [Testing and debugging: dump functions](xref:microsoft.quantum.guide.testingdebugging#dump-functions) for the possible symbol representations based on angle ranges.
 
 
 So, the printed output is illustrating that our programmed gates transformed our state from

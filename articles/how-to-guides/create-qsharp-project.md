@@ -57,13 +57,13 @@ Choose your development environment and language from the sections below:
 
 1. Run the program:
 
-    ```bash
+    ```
     python host.py
     ```
 
 1. Verify the output. Your program should output the following lines:
 
-    ```bash
+    ```
     Hello from quantum world!
     0
     ```
@@ -78,7 +78,7 @@ You can now continue to develop your quantum program.
 
 1. Run the following command to start the notebook server:
 
-    ```bash
+    ```
     jupyter notebook
     ```
 
@@ -174,7 +174,7 @@ You can now continue your quantum development using Visual Studio Code.
 
 1. Navigate to the new application directory
 
-    ```bash
+    ```
     cd <project name>
     ```
 

@@ -58,7 +58,7 @@ This tutorial uses a host programs and consists of two parts:
 
 1. Create a new Q# project:
 
-    ```bash
+    ```dotnetcli
     dotnet new console -lang Q# --output Bell
     cd Bell
     ```
@@ -282,7 +282,7 @@ Init:1    0s=0    1s=1000
 
 1. Run the following at your terminal:
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 

@@ -1,7 +1,7 @@
 ---
 title: '%config (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.config
-ms.date: '2020-06-02'
+ms.date: '2020-06-05'
 ms.topic: article
 ---
 

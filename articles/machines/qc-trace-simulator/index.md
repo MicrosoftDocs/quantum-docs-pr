@@ -70,7 +70,7 @@ namespace Quantum.MyProgram
         static void Main(string[] args)
         {
             QCTraceSimulator sim = new QCTraceSimulator();
-            var res = MyQuantumProgram.Run().Result;
+            var res = MyQuantumProgram.Run(sim).Result;
             System.Console.WriteLine("Press any key to continue...");
             System.Console.ReadKey();
         }

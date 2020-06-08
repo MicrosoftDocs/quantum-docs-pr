@@ -39,6 +39,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
     > /path/to/dotnet-iqsharp --user --path-to-tool="/path/to/dotnet-iqsharp"
     > ```
     > where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
+    > Typically this will be under `.dotnet/tools` in your user profile folder.
 
 1. Verify the installation by creating a `Hello World` application
 

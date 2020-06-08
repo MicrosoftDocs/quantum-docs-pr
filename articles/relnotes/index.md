@@ -20,6 +20,12 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 *Release date: June 4th, 2020*
 
+This release fixes a bug affecting compilation of Q# executable projects.
+
+## Version 0.11.2006.207
+
+*Release date: June 3rd, 2020*
+
 This release contains the following:
 
 - Q# notebooks and Python host programs will no longer fail when a Q# entry point is present
@@ -28,6 +34,9 @@ This release contains the following:
 - Several deprecated functions and operations have been removed following the schedule described in our [API principles](xref:microsoft.quantum.contributing.api-design). Q# programs and libraries that build without warnings in version 0.11.2004.2825 will continue to work unmodified.
 
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
+> [!NOTE]
+> This version contains a bug affecting compilation for Q# executable projects. We recommend upgrading to a newer release.
 
 ## Version 0.11.2004.2825
 

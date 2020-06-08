@@ -20,7 +20,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 *Release date: June 4th, 2020*
 
-This release fixes a bug affecting compilation of Q# executable projects.
+This release fixes a bug affecting compilation of Q# projects.
 
 ## Version 0.11.2006.207
 
@@ -36,7 +36,7 @@ This release contains the following:
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 > [!NOTE]
-> This version contains a bug affecting compilation for Q# executable projects. We recommend upgrading to a newer release.
+> This version contains a bug affecting compilation for Q# projects. We recommend upgrading to a newer release.
 
 ## Version 0.11.2004.2825
 

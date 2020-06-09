@@ -27,7 +27,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
 1. Install the `iqsharp` package
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -36,7 +36,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
     - Run the following command to start the notebook server:
 
-        ```bash
+        ```
         jupyter notebook
         ```
 

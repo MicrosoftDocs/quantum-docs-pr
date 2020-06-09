@@ -21,13 +21,13 @@ Install the QDK to develop Python host programs to call Q# operations.
 
 1. Install the `qsharp` package, a Python package that enables interop between Q# and Python.
 
-    ```bash
+    ```
     pip install qsharp
     ```
 
 1. Install IQ#, a kernel used by Jupyter and Python that provides the core functionality for compiling and executing Q# operations.
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -64,15 +64,15 @@ Install the QDK to develop Python host programs to call Q# operations.
 
     - Run the program:
 
-        ```bash
+        ```
         python hello_world.py
         ```
 
     - Verify the output. Your program should output the following lines:
 
-        ```bash
+        ```
         Hello from quantum world!
-       ```
+        ```
 
 
 > [!NOTE]

@@ -6,6 +6,7 @@ uid: microsoft.quantum.concepts.qubit
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+no-loc: ['$$', '$', '\cdots', 'bmatrix', '\ddots', '\equiv', '\sum', '\begin', '\end', '\sqrt', '\otimes', '{', '}', '\text', '\phi', '\kappa', '\psi', '\alpha', '\beta', '\gamma', '\delta', '\omega', '\bra', '\ket', '\boldone', '\\\\', '\\', '=', '\frac', '\text', '\mapsto', '\dagger', '\to', '\begin{cases}', '\end{cases}', '\operatorname', '\braket', '\id', '\expect', '\defeq', '\variance', '\dd', '&', '\begin{align}', '\end{align}', '\Lambda', '\lambda', '\Omega', '\mathrm', '\left', '\right', '\qquad', '\times', '\big', '\langle', '\rangle', '\bigg', '\Big', '|', '\mathbb', '\vec', '\in', '\texttt', '\ne', '<', '>', '\leq', '\geq', '~~', '~']
 ---
 # The Qubit
 
@@ -63,7 +64,7 @@ is Adj { // Auto-generate the adjoint of the operation
 ```
 
 Although this is a trivial example (as the <xref:microsoft.quantum.intrinsic.h> operation is self-adjoint), you can see how this becomes invaluable for more complicated qubit operations.
-For more information, see [Operations and Functions](xref:microsoft.quantum.techniques.opsandfunctions).
+For more information, see [Operations and Functions](xref:microsoft.quantum.guide.operationsfunctions).
 
 There are only four functions that map one bit to one bit on a classical computer. In contrast, there are an infinite number of unitary transformations on a single qubit on a quantum computer. Therefore, no finite set of primitive quantum operations, called [*gates*](https://en.wikipedia.org/wiki/Quantum_logic_gate), can exactly replicate the infinite set of unitary transformations allowed in quantum computing. This means, unlike classical computing, it is impossible for a quantum computer to implement every possible quantum program exactly using a finite number of gates. Thus quantum computers cannot be universal in the same sense of classical computers. As a result, when we say that a set of gates is *universal* for quantum computing we actually mean something slightly weaker than we mean with classical computing.
 For universality, we require that a quantum computer only *approximate* every unitary matrix within a finite error using a finite length gate sequence.

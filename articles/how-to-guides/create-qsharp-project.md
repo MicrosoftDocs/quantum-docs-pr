@@ -13,12 +13,12 @@ uid: microsoft.quantum.howto.createproject
 
 Learn how to create a Q# project with the QDK.
 
-A Q# project contains Q# files containing quantum code, as well as a host program to run the quantum program. You can write the host program in .NET languages such as C#, or in Python. You can also run Q# code in a Jupyter notebook using the IQ# kernel.
+A Q# project contains Q# files containing quantum code, as well as a host program to run the quantum program. You can write the host program in .NET languages such as C#, or in Python. You can also run Q# code in a Jupyter Notebook using the IQ# kernel.
 
 Choose your development environment and language from the sections below:
 
 * [Python](#create-a-python-project)
-* [Q# Jupyter notebooks](#create-a-q-jupyter-notebook-project)
+* [Q# Jupyter Notebooks](#create-a-q-jupyter-notebook-project)
 * [C# with Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
 * [C# with VS Code](#create-a-c-project-using-vs-code)
 * [C# with the command line](#create-a-c-project-using-the-dotnet-command-line-tool)
@@ -57,13 +57,13 @@ Choose your development environment and language from the sections below:
 
 1. Run the program:
 
-    ```bash
+    ```
     python host.py
     ```
 
 1. Verify the output. Your program should output the following lines:
 
-    ```bash
+    ```
     Hello from quantum world!
     0
     ```
@@ -74,17 +74,17 @@ You can now continue to develop your quantum program.
 
 1. Pre-requisites
 
-    * Install the [Quantum Development Kit for Jupyter notebooks](xref:microsoft.quantum.install.jupyter)
+    * Install the [Quantum Development Kit for Jupyter Notebooks](xref:microsoft.quantum.install.jupyter)
 
 1. Run the following command to start the notebook server:
 
-    ```bash
+    ```
     jupyter notebook
     ```
 
 1. Browse to the URL shown on the command line. For example: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
-1. A Jupyter page appears in the browser. On the **Files** tab, select **New** > **Q#** to create a Jupyter notebook with a Q# kernel. Add the following code to the first notebook cell:
+1. A Jupyter page appears in the browser. On the **Files** tab, select **New** > **Q#** to create a Jupyter Notebook with a Q# kernel. Add the following code to the first notebook cell:
 
     ```qsharp
     operation SayHello() : Unit {
@@ -94,13 +94,13 @@ You can now continue to develop your quantum program.
 
 1. Select **Cell** > **Run Cells** to run the notebook. `SayHello` will soon appear in the cell output:
 
-    ![Jupyter notebook cell with Q# code](~/media/install-guide-jupyter.png)
+    ![Jupyter Notebook cell with Q# code](~/media/install-guide-jupyter.png)
 
     When running in Jupyter Notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
 
 1. In a new cell, simulate the execution in a quantum computer of the operation you just created by using the `%simulate` magic:
 
-    ![Jupyter notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
+    ![Jupyter Notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
 
     You should see the message printed on the screen along with the result of the operation you invoked (in this case, empty).
 
@@ -164,7 +164,7 @@ You can now continue your quantum development using Visual Studio Code.
 
 1. Pre-requisites
 
-    * Install the [Quantum Development Kit for the Command Line](xref:microsoft.quantum.install.cs)
+    * Install the [Quantum Development Kit for the command line](xref:microsoft.quantum.install.standalone)
 
 1. Create a new application
 
@@ -174,7 +174,7 @@ You can now continue your quantum development using Visual Studio Code.
 
 1. Navigate to the new application directory
 
-    ```bash
+    ```
     cd <project name>
     ```
 
@@ -190,6 +190,6 @@ You can now continue your quantum development using Visual Studio Code.
 
 You now continue your quantum development, using command line tools.
 
-## What's next?
+## Next steps
 
 Now that you have created a project in your preferred environment, you can continue your quantum development.

@@ -27,4 +27,6 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+seeAlso:
+- microsoft.quantum.diagnostics.contradiction
 ...

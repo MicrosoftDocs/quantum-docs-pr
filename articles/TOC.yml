@@ -2,17 +2,20 @@
   href: index.yml
 - name: Overview
   items:
-  - name: What is quantum computing?
-    href: overview/what-is-quantum-computing.md
-  - name: What can a quantum computer do?
-    href: overview/quantum-computers.md
-  - name: Why learn quantum computing?
-    href: overview/why-learn-quantum-computing.md
-  - name: What are Q# and the QDK?
-    href: overview/what-is-qsharp.md
-  - name: How can I learn more?
-    href: overview/how-to-learn-quantum-computing.md
+  - name: Introduction to quantum computing
+    href: overview/overview.md
+  - name: Key concepts
+    items: 
+    - name: Understanding quantum computing
+      href: overview/understanding-quantum-computing.md
+    - name: Quantum computers and simulators
+      href: overview/quantum-computers-and-simulators.md
+    - name: What are Q# and the QDK?
+      href: overview/what-is-qsharp-and-qdk.md
+    - name: Linear algebra for quantum computing
+      href: overview/algebra-for-quantum-computing.md
 - name: Quickstarts
+  expanded: true 
   items:
   - name: Get started with the QDK
     href: welcome.md
@@ -24,24 +27,18 @@
   items:
   - name: Quantum random number generator
     href: quickstarts/qrng.md
-  - name: Exploring entanglement with Q#
+  - name: Explore entanglement with Q#
     href: quickstart.md
   - name: Implement Grover's search algorithm
     href: quickstarts/search.md
+  - name: Qubit-level programming
+    href: tutorials/qft-tutorial.md
   - name: Learn Q# with the Quantum Katas
     href: intro-to-katas.md
   - name: Q# code samples
     href: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp
 - name: Q# user guide
-  items:
-  - name: Quantum development techniques
-    topicHref: techniques/index.md
-    href: techniques/toc.yml
-  - name: Q# programming language
-    topicHref: language/index.md
-    href: language/toc.yml
-  - name: Quantum simulators and resource estimators
-    href: machines/toc.yml
+  href: user-guide/toc.yml
 - name: Concepts 
   items: 
   - name: Quantum computing concepts

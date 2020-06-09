@@ -1,45 +1,50 @@
 ---
-title: Quantum basics with Q#
+title: Explore entanglement with Q#
 description: Learn how to write a quantum program in Q#. Develop a Bell State application using the Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha 
-ms.date: 10/07/2019
+ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 ---
 
-# Quantum basics with Q#
+# Tutorial: Explore entanglement with Q\#
 
-In this Quickstart, we show you how to write a Q# program that manipulates and measures qubits and demonstrates the effects of superposition and entanglement.  This guides you on installing the QDK, building the program and executing that program on a quantum simulator.  
+In this tutorial, we show you how to write a Q# program that manipulates and
+measures qubits and demonstrates the effects of superposition and entanglement.
+This guides you on installing the QDK, building the program and executing that
+program on a quantum simulator.  
 
-You will write an application called Bell to demonstrate quantum entanglement.  The name Bell is in reference to Bell states, which are specific quantum states of two qubits that are used to represent the simplest examples of superposition and quantum entanglement. 
+You will write an application called Bell to demonstrate quantum entanglement.
+The name Bell is in reference to Bell states, which are specific quantum states
+of two qubits that are used to represent the simplest examples of superposition
+and quantum entanglement.
 
 ## Pre-requisites
 
 If you are ready to start coding, follow these steps before proceeding: 
 
-* [Install](xref:microsoft.quantum.install) the Quantum Development Kit using your preferred language and development environment
+* Install the Quantum Development Kit for [Python](xref:microsoft.quantum.install.python) or [.NET](xref:microsoft.quantum.install.cs).
 * If you already have the QDK installed, make sure you have [updated](xref:microsoft.quantum.update) to the latest version
 
 You can also follow along with the narrative without installing the QDK, reviewing the overviews of the Q# programming language and the first concepts of quantum computing.
 
 ## Demonstrating qubit behavior with Q#
 
-Recall our simple [definition of a qubit](xref:microsoft.quantum.overview.what#the-qubit).  Where classical bits hold a single binary value such as a 0 or 1, the state of a qubit can be in a **superposition** of 0 and 1 simultaneously.  Conceptually, a qubit can be thought of as a direction in space (also known as a vector).  A qubit can be in any of the possible directions. The two **classical states** are the two directions; representing 100% chance of measuring 0 and 100% chance of measuring 1.  This representation is also more formally visualized by the [bloch sphere](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
-
+Recall our simple [definition of a qubit](xref:microsoft.quantum.overview.understanding).  Where classical bits hold a single binary value such as a 0 or 1, the state of a [qubit](xref:microsoft.quantum.glossary#qubit) can be in a **superposition** of 0 and 1.  Conceptually, a qubit can be thought of as a direction in space (also known as a vector).  A qubit can be in any of the possible directions. The two **classical states** are the two directions; representing 100% chance of measuring 0 and 100% chance of measuring 1.  This representation is also more formally visualized by the [bloch sphere](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 The act of measurement produces a binary result and changes a qubit state. Measurement produces a binary value, either 0 or 1.  The qubit goes from being in superposition (any direction) to one of the classical states.  Thereafter, repeating the same measurement without any intervening operations produces the same binary result.  
 
-Multiple qubits can be **entangled**. When we make a measurement of one entangled qubit, our knowledge of the state of the other(s) is updated as well.
+Multiple qubits can be [**entangled**](xref:microsoft.quantum.glossary#entanglement). When we make a measurement of one entangled qubit, our knowledge of the state of the other(s) is updated as well.
 
 Now, we're ready to demonstrate how Q# expresses this behavior.  You start with the simplest program possible and build it up to demonstrate quantum superposition and quantum entanglement.
 
 ## Setup
 
-Applications developed with Microsoft's Quantum Development Kit consist of two parts:
+This tutorial uses a host programs and consists of two parts:
 
-1. One or more quantum algorithms, implemented using the Q# quantum programming language.
-1. A host program, implemented in a programming language like Python or C# that serves as the main entry point and invokes Q# operations to execute a quantum algorithm.
+1. A series of quantum algorithms, implemented using the Q# quantum programming language.
+1. A host program, implemented in either Python or C#, that serves as the main entry point and invokes Q# operations to execute the quantum algorithms.
 
 #### [Python](#tab/tabid-python)
 
@@ -53,7 +58,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 1. Create a new Q# project:
 
-    ```bash
+    ```
     dotnet new console -lang Q# --output Bell
     cd Bell
     ```
@@ -62,7 +67,7 @@ Applications developed with Microsoft's Quantum Development Kit consist of two p
 
 1. Rename the Q# file
 
-    ```bash
+    ```
     mv Operation.qs Bell.qs
     ```
 
@@ -277,7 +282,7 @@ Init:1    0s=0    1s=1000
 
 1. Run the following at your terminal:
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 
@@ -492,9 +497,8 @@ As stated in the overview, our statistics for the first qubit haven't changed (5
 
 Congratulations, you've written your first quantum program!
 
-## What's next?
+## Next steps
 
-The QuickStart [Grover’s search](xref:microsoft.quantum.quickstarts.search) shows you how to build and run Grover search, one of the most popular quantum computing algorithms and offers a nice example of a Q# program that can be used to solve real problems with quantum computing.  
+The tutorial [Grover’s search](xref:microsoft.quantum.quickstarts.search) shows you how to build and run Grover search, one of the most popular quantum computing algorithms and offers a nice example of a Q# program that can be used to solve real problems with quantum computing.  
 
 [Get Started with the Quantum Development Kit](xref:microsoft.quantum.welcome) recommends more ways to learn Q# and quantum programming.
-

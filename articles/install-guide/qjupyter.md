@@ -1,5 +1,5 @@
 ---
-title: Develop with Q# Jupyter notebooks
+title: Develop with Q# Jupyter Notebooks
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
@@ -8,7 +8,7 @@ ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
 ---
 
-# Develop with Q# Jupyter notebooks
+# Develop with Q# Jupyter Notebooks
 
 Install the QDK for developing Q# operations on Q# Jupyter Notebooks.
 
@@ -23,11 +23,11 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 1. Install the `iqsharp` package
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -36,13 +36,13 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
     - Run the following command to start the notebook server:
 
-        ```bash
+        ```
         jupyter notebook
         ```
 
-    - To open the Jupyter notebook copy and paste the URL provided by the command line into your browser.
+    - To open the Jupyter Notebook, copy and paste the URL provided by the command line into your browser.
 
-    - Create a Jupyter notebook with a Q# kernel, and add the following code to the first notebook cell:
+    - Create a Jupyter Notebook with a Q# kernel, and add the following code to the first notebook cell:
 
         ```qsharp
         operation SayHello () : Unit {
@@ -52,17 +52,21 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
     - Run this cell of the notebook:
 
-        ![Jupyter notebook cell with Q# code](~/media/install-guide-jupyter.png)
+        ![Jupyter Notebook cell with Q# code](~/media/install-guide-jupyter.png)
 
-        You should see `SayHello` in the output of the cell. When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
+        You should see `SayHello` in the output of the cell. When running in Jupyter Notebook, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
 
 
     - In a new cell, execute the operation you just created (in a simulator) by using the `%simulate` command:
 
-        ![Jupyter notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
+        ![Jupyter Notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
 
         You should see the message printed on the screen along with the result of the operation you invoked (here, we see the empty tuple `()` because our operation simply returns a `Unit` type).
 
-## What's next?
+## Next steps
 
-Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.write-program).
+Now that you have installed the QDK for Q# Jupyter Notebooks, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng) by writing your Q# code directly within the Jupyter Notebook environment.
+
+For more examples of what you can do with Q# Jupyter Notebooks, please take a look at:
+- [Intro to Q# and Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). There you will find a Q# Jupyter Notebook that shows how to use Q# in this environment.
+- [Quantum Katas](xref:microsoft.quantum.overview.katas), an open-source collection of self-paced tutorials and sets of programming exercises in the form of Q# Jupyter Notebooks. The [Quantum Katas tutorial notebooks](https://github.com/microsoft/QuantumKatas#tutorial-topics) are a good starting point. The Quantum Katas are aimed at teaching you elements of quantum computing and Q# programming at the same time. They're an excellent example of what kind of content you can create with Q# Jupyter Notebooks.

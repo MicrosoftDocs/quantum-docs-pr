@@ -235,7 +235,7 @@ The `auto` directive resolves to the following generation directive if an explic
 > [!TIP]   
 > If an operation is self-adjoint, explicitly specify either the adjoint or the controlled adjoint specialization via the generation directive `self` to allow the compiler to make use of that information for optimization purposes.
 
-A specialization declaration containing a user defined implementation consists of an argument tuple followed by a statement block with the Q# code that implements the specialization.
+A specialization declaration containing a user-defined implementation consists of an argument tuple followed by a statement block with the Q# code that implements the specialization.
 In the argument list, `...` is used to represent the arguments declared for the operation as a whole.
 For `body` and `adjoint`, the argument list should always be `(...)`; for `controlled` and `adjoint controlled`, the argument list should be a symbol that represents the array of control qubits, followed by `...`, enclosed in parentheses; for example, `(controls,...)`.
 
@@ -281,7 +281,7 @@ is Ctl + Adj {
         CNOT(here, there);
     }
 
-    controlled (cs, ...) { // user defined implementation for the controlled specialization
+    controlled (cs, ...) { // user-defined implementation for the controlled specialization
         Controlled H(cs, here);
         Controlled X(cs + [here], there);
     }

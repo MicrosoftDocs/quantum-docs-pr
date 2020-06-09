@@ -20,7 +20,7 @@ The name Bell is in reference to Bell states, which are specific quantum states
 of two qubits that are used to represent the simplest examples of superposition
 and quantum entanglement.
 
-## Pre-requisites
+## Prerequisites
 
 If you are ready to start coding, follow these steps before proceeding: 
 

@@ -34,7 +34,7 @@ If the condition is *false*, then the first else-if condition is evaluated; if t
 Otherwise, the second else-if block evaluates, and then the third, and so on until either a clause with a true condition is encountered or there are no more else-if clauses.
 If the original *if* condition and all the else-if clauses evaluate to *false*, the else block runs, if provided.
 
-Note that whichever block runs, it runs within its scope.
+Note that whichever block runs, it runs within its own scope.
 Bindings made inside of an `if`, `elif`, or `else` block are not visible after the block ends.
 
 For example,
@@ -63,7 +63,7 @@ if (i == 1) {
 ## For loop
 
 The `for` statement supports iteration over an integer range or an array.
-The statement consists of the keyword `for`, followed by a symbol or symbol tuple, the keyword `in`, and an expression of type `Range` or array, all in  parentheses, and a statement block.
+The statement consists of the keyword `for`, followed by a symbol or symbol tuple, the keyword `in`, and an expression of type `Range` or array, all in parentheses, and a statement block.
 
 The statement block (the body of the loop) runs repeatedly, with the defined symbol (the loop variable) bound to each value in the range or array.
 Note that if the range expression evaluates to an empty range or array, the body does not run at all.

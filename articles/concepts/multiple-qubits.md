@@ -6,6 +6,7 @@ uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article
+no-loc: ['$$', '$', '\cdots', 'bmatrix', '\ddots', '\equiv', '\sum', '\begin', '\end', '\sqrt', '\otimes', '{', '}', '\text', '\phi', '\kappa', '\psi', '\alpha', '\beta', '\gamma', '\delta', '\omega', '\bra', '\ket', '\boldone', '\\\\', '\\', '=', '\frac', '\text', '\mapsto', '\dagger', '\to', '\begin{cases}', '\end{cases}', '\operatorname', '\braket', '\id', '\expect', '\defeq', '\variance', '\dd', '&', '\begin{align}', '\end{align}', '\Lambda', '\lambda', '\Omega', '\mathrm', '\left', '\right', '\qquad', '\times', '\big', '\langle', '\rangle', '\bigg', '\Big', '|', '\mathbb', '\vec', '\in', '\texttt', '\ne', '<', '>', '\leq', '\geq', '~~', '~']
 ---
 
 # Multiple Qubits
@@ -193,7 +194,7 @@ Quantum gates work in exactly the same way.  For example, if we wish to apply th
 &\qquad\qquad\equiv 0011001.
 \end{align}
 
-In many qubit systems, there is often a need to allocate and de-allocate qubits that serve as temporary memory for the quantum computer.  Such a qubit is called an ancilla.  By default we assume the qubit state is initialized to $e_0$ upon allocation.  We further assume that it is returned again to $e_0$ before de-allocation.  This assumption is important because if an ancilla qubit becomes entangled with another qubit register when it becomes de-allocated then the process of de-allocation will damage the ancilla.  For this reason, we always assume that such qubits are reverted to their initial state before being released.
+In many qubit systems, there is often a need to allocate and deallocate qubits that serve as temporary memory for the quantum computer.  Such a qubit is called an ancilla.  By default we assume the qubit state is initialized to $e_0$ upon allocation.  We further assume that it is returned again to $e_0$ before deallocation.  This assumption is important because if an ancilla qubit becomes entangled with another qubit register when it becomes deallocated then the process of deallocation will damage the ancilla.  For this reason, we always assume that such qubits are reverted to their initial state before being released.
 
 Finally, although new gates needed to be added to our gate set to achieve universal quantum computing for two qubit quantum computers, no new gates need to be introduced in the multi-qubit case.  The gates $H$, $T$ and CNOT form a universal gate set on many qubits because any general unitary transformation can be broken into a series of two qubit rotations.  We then can leverage the theory developed for the two-qubit case and use it again here when we have many qubits.
 

@@ -29,6 +29,7 @@ The Q# language provides several *primitive types* that are used to construct ot
    This type is based on the .NET
    <xref:System.Numerics.BigInteger>
    type.
+
 - The `Double` type represents a double-precision floating-point number, for example, `0.0`, `-1.3`, `4e-7`.
 - The `Bool` type represents a Boolean value of either `true` or `false`.
 - The `Range` type represents a sequence of integers, denoted by `start..step..stop`, where denoting the step is optional. 

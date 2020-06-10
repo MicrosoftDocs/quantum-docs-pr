@@ -20,7 +20,7 @@ The name Bell is in reference to Bell states, which are specific quantum states
 of two qubits that are used to represent the simplest examples of superposition
 and quantum entanglement.
 
-## Pre-requisites
+## Prerequisites
 
 If you are ready to start coding, follow these steps before proceeding: 
 
@@ -58,7 +58,7 @@ This tutorial uses a host programs and consists of two parts:
 
 1. Create a new Q# project:
 
-    ```bash
+    ```
     dotnet new console -lang Q# --output Bell
     cd Bell
     ```
@@ -67,7 +67,7 @@ This tutorial uses a host programs and consists of two parts:
 
 1. Rename the Q# file
 
-    ```bash
+    ```
     mv Operation.qs Bell.qs
     ```
 
@@ -282,7 +282,7 @@ Init:1    0s=0    1s=1000
 
 1. Run the following at your terminal:
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 

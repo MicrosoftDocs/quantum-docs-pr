@@ -29,12 +29,12 @@ It consists of the keyword `if`, a Boolean expression in parentheses, and a stat
 Optionally, any number of else-if clauses can follow, each of which consists of the keyword `elif`, a Boolean expression in parentheses, and a statement block (the _else-if_ block).
 Finally, the statement can optionally finish with an else clause, which consists of the keyword `else` followed by another statement block (the _else_ block).
 
-The `if` condition is evaluated, and if it is *true*, the then block runs.
-If the condition is *false*, then the first else-if condition is evaluated; if that is true, then the else-if block runs.
+The `if` condition is evaluated, and if it is *true*, the *then* block is run.
+If the condition is *false*, then the first else-if condition is evaluated; if that is true, then the *else-if* block is run.
 Otherwise, the second else-if block evaluates, and then the third, and so on until either a clause with a true condition is encountered or there are no more else-if clauses.
-If the original *if* condition and all the else-if clauses evaluate to *false*, the else block runs, if provided.
+If the original *if* condition and all the else-if clauses evaluate to *false*, the *else* block is run, if provided.
 
-Note that whichever block runs, it runs within its scope.
+Note that whichever block runs, it runs within its own scope.
 Bindings made inside of an `if`, `elif`, or `else` block are not visible after the block ends.
 
 For example,
@@ -135,7 +135,7 @@ until (expression);
 
 is also a valid RUS pattern.
 
-For more examples and details, see [Repeat-until-success examples](#repeat-until-success-examples).
+For more examples and details, see [Repeat-until-success examples](#repeat-until-success-examples) in this article.
 
 > [!TIP]   
 > Avoid using repeat-until-success loops inside functions. 
@@ -167,27 +167,24 @@ and returns a value to the caller.
 It consists of the keyword `return`, followed by an expression of the
 appropriate type, and a terminating semicolon.
 
+For example,
+```qsharp
+return 1;
+```
+or
+```qsharp
+return (results, qubits);
+```
+
 * A callable that returns an empty tuple, `()`, does not require a
 return statement.
-* To specify an early exit from the operation or function, use `return ()`.
+* To specify an early exit from the operation or function, use `return ();`.
 Callables that return any other type require a final return statement.
 * There is no maximum number of return statements within an operation.
 The compiler may emit a warning if statements follow a return statement
 within a block.
 
-    For example,
-    ```qsharp
-    return 1;
-    ```
-    or
-    ```qsharp
-    return ();
-    ```
-    or
-    ```qsharp
-    return (results, qubits);
-    ```
-    
+   
 ## Fail statement
 
 The fail statement ends the run of an operation and returns an error value to the caller.
@@ -280,7 +277,13 @@ using (qubit = Qubit()) {
 ### RUS to prepare a quantum state
 
 Finally, here is an example of an RUS pattern to prepare a quantum state $\frac{1}{\sqrt{3}}\left(\sqrt{2}\ket{0}+\ket{1}\right)$, starting from the $\ket{+}$ state.
-For more information, see [unit testing sample provided with the standard library](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+
+Notable programmatic features shown in this operation are:
+
+* A more complex `fixup` part of the loop, which involves quantum operations. 
+* The use of `AssertProb` statements to ascertain the probability of measuring the quantum state at certain specified points in the program.
+
+For more information about the [`Assert`](xref:microsoft.quantum.intrinsic.assert) and [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) operations, see [Testing and debugging](xref:microsoft.quantum.guide.testingdebugging).
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -327,13 +330,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Notable programmatic features shown in this operation are:
-
-* A more complex `fixup` part of the loop, which involves quantum operations. 
-* The use of `AssertProb` statements to ascertain the probability of measuring the quantum state at certain specified points in the program.
-
-For more information about the [`Assert`](xref:microsoft.quantum.intrinsic.assert) and [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) operations, see [Testing and debugging](xref:microsoft.quantum.guide.testingdebugging).
-
+For more information, see [unit testing sample provided with the standard library](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## Next steps
 

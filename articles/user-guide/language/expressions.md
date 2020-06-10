@@ -156,8 +156,6 @@ For example:
 
 The Q# syntax for string interpolations is a subset of the C# syntax. Following are the key points as they pertain to Q#:
 
-* The most notable distinction is that Q# does not support verbatim (multi-line) interpolated strings.
-
 * To identify a string literal as an interpolated string, prepend it with the `$` symbol. There can be no white space between the `$` and the `"` that starts a string literal.
 
 * The following is a basic example using the [`Message`](xref:microsoft.quantum.intrinsic.message) function to write the result of a measurement to the console, alongside other Q# expressions.
@@ -170,7 +168,7 @@ The Q# syntax for string interpolations is a subset of the C# syntax. Following 
 
 * Any valid Q# expression may appear in an interpolated string.
 
-* Expressions inside of an interpolated string follow Q# syntax, not C# syntax.
+* Expressions inside of an interpolated string follow Q# syntax, not C# syntax. The most notable distinction is that Q# does not support verbatim (multi-line) interpolated strings.
 
 For more details about the C# syntax, see [*Interpolated Strings*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
 

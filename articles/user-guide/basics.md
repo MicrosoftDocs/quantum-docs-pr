@@ -42,7 +42,7 @@ For example, if running the program on our [full-state simulator](xref:microsoft
 But looking toward the future, when the target machine is a real quantum computer, calling such operations in Q# directs the quantum computer to perform the corresponding *real* operations on the *real* quantum system, for example, precisely timed laser pulses).
 
 A Q# program recombines these operations as defined by a target machine to create new, higher-level operations to express quantum computation.
-In this way, Q# makes it easy to express the logic underlying the quantum and hybrid quantum–classical algorithms, while also being general with respect to the structure of a target machine or simulator.
+In this way, Q# makes it easy to express the logic underlying quantum and hybrid quantum–classical algorithms, while also being general with respect to the structure of a target machine or simulator.
 
 ## Q# operations and functions
 
@@ -81,7 +81,7 @@ For more information about expressions and compatible operators in Q#, see [Type
 
 ### Statements 
 A statement is a syntactic unit of an imperative programming language that expresses some action to carry out.
-Statements contrast with expressions in that statements do not return results and are executed solely for their side effects. Expressions, however, always return a result and often do not have side effects at all. In short, the Q# compiler executes a statement and evaluates an expression.
+Statements contrast with expressions in that statements do not return results and are executed solely for their side effects. Expressions, however, always return a result and often do not have side effects at all. In short, Q# statements are executed, while expressions are evaluated.
 
 A simple example of a statement in Q# is assigning a symbol to an expression:
 ```qsharp

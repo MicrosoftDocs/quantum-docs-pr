@@ -18,11 +18,11 @@ Q# provides a variety of such functions as a part of the <xref:microsoft.quantum
 Upcasts to compatible types, on the other hand, happen implicitly. 
 
 Q# provides both primitive types, which are used directly, and a variety of ways to produce new types from other types.
-We describe each in the rest of this section.
+We describe each in the rest of this article.
 
 ## Primitive Types
 
-The Q# language provides several *primitive types* that are used to construct other types:
+The Q# language provides the following *primitive types*, all of which you can use directly in Q# programs. You can also use these primitive types to construct new types.
 
 - The `Int` type represents a 64-bit signed integer, for example, `2`, `107`, `-5`.
 - The `BigInt` type represents a signed integer of arbitrary size, for example, `2L`, `107L`, `-5L`.
@@ -53,7 +53,7 @@ The constants `true`, `false`, `PauliI`, `PauliX`, `PauliY`, `PauliZ`, `One`, an
 
 * For any valid Q# type, there is a type that represents an array of values of that type, for example, `Qubit[]` or `Int[][]`.
 
-* An array of arrays is also valid. For example, an array of `(Bool, Pauli)` values is denoted `(Bool, Pauli)[][]`.
+* An array of arrays is also valid. For example, an array of arrays of `(Bool, Pauli)` values is denoted `(Bool, Pauli)[][]`.
 
     > [!NOTE] 
     > The second example  represents a potentially jagged array of arrays and not a rectangular two-dimensional array. Q# does not support rectangular multi-dimensional arrays.
@@ -177,8 +177,6 @@ newtype Polar = (Radius : Double, Phase : Double);
 ```
 
 Even though both `Complex` and `Polar` both have an underlying type `(Double, Double)`, the two types are wholly incompatible in Q#, minimizing the risk of accidentally calling a complex math function with polar coordinates and vice versa.
-In this way, user-defined types have a similar role as Records in F#, for example. 
-
 
 #### Access anonymous items with the unwrap operator
 
@@ -257,8 +255,8 @@ More generally, user-defined types may not have cyclic dependencies on each othe
 
 Given the types `'Tinput` and `'Tresult`:
 
-* `('Tinput => 'Tresult)` is the basic type for any operation, for example `((Qubit, Pauli) => Result)`.
-* `('Tinput -> 'Tresult)` is the basic type for any function, for example `(Int -> Int)`. 
+* `('Tinput => 'Tresult)` is the basic type for any *operation*, for example `((Qubit, Pauli) => Result)`.
+* `('Tinput -> 'Tresult)` is the basic type for any *function*, for example `(Int -> Int)`. 
 
 These are called the *signature* of the callable.
 

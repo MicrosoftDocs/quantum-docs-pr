@@ -66,7 +66,7 @@ superposition and quantum entanglement.
 
 The first thing we have to do is to create a new Q# project. In this tutorial
 we are going to use the environment based on [command line applications with
-VS Code](microsoft.quantum.install.standalone).
+VS Code](xref:microsoft.quantum.install.standalone).
 
 To create a new project, in VS Code: 
 

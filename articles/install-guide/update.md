@@ -171,7 +171,7 @@ Select your development environment below.
 
     You should see the following output:
 
-    ```bash
+    ```
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
@@ -180,19 +180,19 @@ Select your development environment below.
 
 3. Update the `qsharp` package
 
-    ```bash
+    ```
     pip install qsharp --upgrade
     ```
 
 4. Verify the `qsharp` version
 
-    ```bash
+    ```
     pip show qsharp
     ```
 
     You should see the following output:
 
-    ```bash
+    ```
     Name: qsharp
     Version: 0.10.1912.501
     Summary: Python client for Q#, a domain-specific quantum programming language
@@ -201,7 +201,7 @@ Select your development environment below.
 
 5. Run the following command from the location of your `.qs` files
 
-    ```bash
+    ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
@@ -224,7 +224,7 @@ Select your development environment below.
 
     Your output should be similar to the following:
 
-    ```bash
+    ```
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```

@@ -75,7 +75,7 @@ Most simply, for every type in a language, expressions of that type can be eithe
 For example, `5` is an `Int` literal (thus also an expression of type `Int`), and if the symbol `count` is bound to the integer value `5`, then `count` is also an integer expression.
 
 Additionally, an expression can consist of other expressions combined by certain operators.
-For example, another example of an `Int` expression that evaluates to `5` is `2+3`.
+For example, another `Int` expression that evaluates to `5` is `2+3`.
 
 For more information about expressions and compatible operators in Q#, see [Type Expressions in Q#](xref:microsoft.quantum.guide.expressions). 
 
@@ -104,7 +104,7 @@ This type of expression is useful when calling operations on qubits that return 
 Expression evaluation statements require a terminating semicolon.
 
 You use statements to build nearly every aspect of a Q# program, and no single page could encompass all the information relating to them.
-For more information about their lexical structure and formatting, see [Q# File Structure](xref:microsoft.quantum.guide.filestructure); for symbol binding assignment and scope, see [Variables in Q#](xref:microsoft.quantum.guide.variables), and for control flow loops such as `for`, see [Control Flow in Q#](xref:microsoft.quantum.guide.controlflow).
+For more information about their lexical structure and formatting, see [Q# File Structure](xref:microsoft.quantum.guide.filestructure); for symbol binding assignment and scope, see [Variables in Q#](xref:microsoft.quantum.guide.variables); and for control flow loops such as `for`, see [Control Flow in Q#](xref:microsoft.quantum.guide.controlflow).
 
 ## Next steps
 

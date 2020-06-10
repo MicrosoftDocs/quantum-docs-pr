@@ -177,7 +177,7 @@ For more details about the C# syntax, see [*Interpolated Strings*](https://docs.
 Given any three `Int` expressions `start`, `step`, and `stop`, the expression `start .. step .. stop` is a range expression whose first element is `start`, second element is `start+step`, third element is `start+step+step`, and so on, until you pass `stop`.
 A range may be empty if, for example, `step` is positive and `stop < start`.
 
-The range is inclusive at both ends. That is, if the difference between `start` and `stop` is an integral multiple of `step`, the last element of the range will be `stop`.
+The range is inclusive at both ends. That is, if the difference between `start` and `stop` is an integer multiple of `step`, the last element of the range will be `stop`.
 
 Given any two `Int` expressions `start` and `stop`, the expression `start .. stop` is a range expression that is equal to `start .. 1 .. stop`.
 Note that the implied `step` is +1 even if `stop` is less than `start`;

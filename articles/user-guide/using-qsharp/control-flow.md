@@ -63,7 +63,7 @@ if (i == 1) {
 ## For loop
 
 The `for` statement supports iteration over an integer range or an array.
-The statement consists of the keyword `for`, followed by a symbol or symbol tuple, the keyword `in`, and an expression of type `Range` or array, all in  parentheses, and a statement block.
+The statement consists of the keyword `for`, followed by a symbol or symbol tuple, the keyword `in`, and an expression of type `Range` or array, all in parentheses, and a statement block.
 
 The statement block (the body of the loop) runs repeatedly, with the defined symbol (the loop variable) bound to each value in the range or array.
 Note that if the range expression evaluates to an empty range or array, the body does not run at all.

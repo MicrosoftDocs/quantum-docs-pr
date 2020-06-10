@@ -29,6 +29,7 @@ The Q# language provides the following *primitive types*, all of which you can u
    This type is based on the .NET
    <xref:System.Numerics.BigInteger>
    type.
+
 - The `Double` type represents a double-precision floating-point number, for example, `0.0`, `-1.3`, `4e-7`.
 - The `Bool` type represents a Boolean value of either `true` or `false`.
 - The `Range` type represents a sequence of integers, denoted by `start..step..stop`, where denoting the step is optional. 
@@ -51,9 +52,10 @@ The constants `true`, `false`, `PauliI`, `PauliX`, `PauliY`, `PauliZ`, `One`, an
 
 ## Array Types
 
-* For any valid Q# type, there is a type that represents an array of values of that type, for example, `Qubit[]` or `Int[][]`.
+* For any valid Q# type, there is a type that represents an array of values of that type.
+    For example, `Qubit[]` and `(Bool, Pauli)[]` represent arrays of `Qubit` values and `(Bool, Pauli)` tuple values.
 
-* An array of arrays is also valid. For example, an array of arrays of `(Bool, Pauli)` values is denoted `(Bool, Pauli)[][]`.
+* An array of arrays is also valid. For example, an array of integer arrays is denoted `Int[][]`.
 
     > [!NOTE] 
     > The second example  represents a potentially jagged array of arrays and not a rectangular two-dimensional array. Q# does not support rectangular multi-dimensional arrays.
@@ -114,7 +116,7 @@ It is just as valid to write `(5)+3` as it is to write `5+3`; both expressions e
 
 This equivalence applies for all purposes, including assignment and expressions.
 Given any expression, that same expression enclosed in parentheses is an expression of the same type.
-For example, `(7)` is an expression of type `Int`, `([1,2,3])` is an expression of type array of `Int`s, and `((1,2))` is an expression of type `(Int, Int)`.
+For example, `(7)` is an expression of type `Int`, `([1,2,3])` is an expression of type `Int[]`, and `((1,2))` is an expression of type `(Int, Int)`.
 
 In particular, this means that you can view an operation or function whose input tuple or output tuple type has one field as taking a single argument or returning a single value.
 
@@ -302,5 +304,4 @@ Q# does not provide a mechanism for constraining the possible types that a user 
 ## Next steps
 
 Now that you've seen all the types which comprise the Q# language, see [Type Expressions in Q#](xref:microsoft.quantum.guide.expressions) to learn how to create and manipulate expressions of these various types.
-
 

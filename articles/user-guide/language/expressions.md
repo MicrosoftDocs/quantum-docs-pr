@@ -280,7 +280,7 @@ Given a type and an `Int` expression, use the `new` operator to allocate a new a
 For example, `new Int[i + 1]` allocates a new `Int` array with `i + 1` elements.
 
 Empty array literals, such as `[]`, are not allowed.
-Instead, you can create an array of length zero by using `new type[0]`, where *type* is a placeholder for a suitable type.
+Instead, you can create an array of length zero by using `T[0]`, where `T` is a placeholder for a suitable type.
 
 The elements of a new array initialize to a type-dependent default value.
 In most cases, this is some variation of zero.

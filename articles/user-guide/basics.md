@@ -10,7 +10,7 @@ uid: microsoft.quantum.guide.basics
 
 # Q# Basics
 
-In this section, we present a brief introduction to the basic building blocks of Q#.
+This article presents a brief introduction to the basic building blocks of Q#.
 
 For an overview of what Q# is and where it fits in as a fundamental component of the Quantum Development Kit, see [What is Q#?](xref:microsoft.quantum.overview.q-sharp). 
 
@@ -20,24 +20,25 @@ From a technical perspective, a quantum program is a particular set of classical
 An important consequence of that view is that a Q# program does not directly model qubits themselves, but rather describes how a classically controlled computer interacts with those qubits.
 By design, Q# does not define quantum states or other properties of quantum mechanics directly.
 For instance, consider the state $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ discussed in the [Quantum Computing Concepts](xref:microsoft.quantum.concepts.intro) guide.
-To prepare this state in Q#, we use the facts that the qubits are initialized in the $\ket{0}$ state, and that $\ket{+} = H\ket{0}$, where $H$ is the Hadamard transform, implemented by the [`H` operation](xref:microsoft.quantum.intrinsic.h):
+To prepare this state in Q#, start with the facts that the qubits are initialized in the $\ket{0}$ state, and that $\ket{+} = H\ket{0}$, where $H$ is the [Hadamard transform](xref:microsoft.quantum.glossary#hadamard), implemented by the [`H` operation](xref:microsoft.quantum.intrinsic.h). The basic Q# code to initialize and transform a qubit, then, looks like this:
 
 ```qsharp
 using (qubit = Qubit()) {
     // At this point, the qubit is in the state |0⟩.
     H(qubit);
-    // We've now applied H, such that our qubit is in H|0⟩ = |+⟩, as we wanted.
+    // H is now applied, such that the qubit is in H|0⟩ = |+⟩, as desired.
 }
 ```
+For more information on initializing, or *allocating*, qubits, see [Working with qubits](xref:microsoft.quantum.guide.qubits).
 
 ## Quantum states in Q#
 
-Importantly, in writing the above program, we did not explicitly refer to the state within Q# but described how our program *transformed* the state.
-This approach allows us to be entirely agnostic about what a quantum state even *is* on each target machine, which might have different interpretations depending on the machine. 
+Importantly, the previous program does not explicitly refer to the state within Q# but described how our program *transformed* the state.
+With this approach, you can be entirely agnostic about what a quantum state even *is* on each target machine, which might have different interpretations depending on the machine. 
 
 A Q# program cannot introspect into the state of a qubit.
 Instead, a program can call operations such as [`Measure`](xref:microsoft.quantum.intrinsic.measure) to learn information from a qubit, and call operations such as [`X`](xref:microsoft.quantum.intrinsic.x) and [`H`](xref:microsoft.quantum.intrinsic.h) to act on the state of a qubit.
-What these operations actually *do* is only made concrete by the target machine we use to run the particular Q# program.
+What these operations actually *do* is only made concrete by the target machine used to run the particular Q# program.
 For example, if running the program on our [full-state simulator](xref:microsoft.quantum.machines.full-state-simulator), the simulator performs the corresponding mathematical operations to the simulated quantum system.
 But looking toward the future, when the target machine is a real quantum computer, calling such operations in Q# directs the quantum computer to perform the corresponding *real* operations on the *real* quantum system, for example, precisely timed laser pulses).
 
@@ -52,7 +53,7 @@ Operations are used to describe the transformations of quantum systems and are t
 Each operation defined in Q# may then call any number of other operations.
 
 In contrast to operations, functions are used to describe purely *deterministic* classical behavior and do not have any effects besides computing classical values. 
-For example, suppose we would like to measure our qubits at the end of a program and add the measurement results to an array.
+For example, suppose you want to measure the qubits at the end of a program and add the measurement results to an array.
 In this case, `Measure` is an *operation* that instructs the target machine to perform a measurement on the (real or simulated) qubits. At the same time, *functions* handle the classical process of adding the returned results to an array.
 
 Together, operations and functions are known as *callables*. Their underlying structure and behavior are introduced and detailed in [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions).
@@ -61,7 +62,7 @@ Together, operations and functions are known as *callables*. Their underlying st
 ## Q# syntax overview
 
 The syntax of a language describes the different combinations of symbols that form a syntactically correct program.
-In Q#, we can classify the elements of its syntax in three different groups: types, expressions, and statements.
+In Q#, syntax elements are classified into three different groups: types, expressions, and statements.
 
 ### Types
 Q# is a strongly-typed language, such that careful use of types can help the compiler provide strong guarantees about Q# programs at compile time.

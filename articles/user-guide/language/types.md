@@ -36,7 +36,7 @@ The Q# language provides the following *primitive types*, all of which you can u
    For example, `start .. stop` corresponds to `start..1..stop`, and `1..2..7` represents the sequence $\{1, 3, 5, 7\}$.
 - The `String` type is a sequence of Unicode characters that is opaque to the user once created.
   Use the `string` type to report messages to a classical host in the case of an error or diagnostic event.
-- The `Unit` type allows only one value `()`. 
+- The `Unit` type can have only one value, `()`. 
   Use this type to indicate that a Q# function or operation returns no information. 
 - The `Qubit` type represents a quantum bit or qubit.
    `Qubit`s are opaque to the user. The only operation possible with them, other than passing them to another operation, is to test for identity (equality).
@@ -73,7 +73,7 @@ For an example, see [arrays of callables](xref:microsoft.quantum.guide.expressio
 
     ```qsharp
     let zeros = new Int[13];
-    // new also allows for creating empty arrays:
+    // you can also use new for creating empty arrays:
     let emptyRegister = new Qubit[0];
     ```
 
@@ -90,9 +90,9 @@ The subscripts of arrays are zero-based and must be type `Int` or type `Range`:
 ## Tuple Types
 
 Tuples are a powerful concept used throughout Q# to collect values together into a single value, making it easier to pass them around.
-In particular, using tuple notation, we can express that every operation and callable takes exactly one input and returns exactly one output.
+In particular, using tuple notation, you can express that every operation and callable takes exactly one input and returns exactly one output.
 
-* Given zero or more different types `T0`, `T1`, ..., `Tn`, we can denote a new  *tuple type* as `(T0, T1, ..., Tn)`.
+* Given zero or more different types `T0`, `T1`, ..., `Tn`, you can denote a new  *tuple type* as `(T0, T1, ..., Tn)`.
 The types used to construct a new tuple type can themselves be tuples, as in `(Int, (Qubit, Qubit))`.
 Such nesting is always finite, however, as tuple types cannot under any circumstances contain themselves.
 
@@ -141,7 +141,7 @@ In particular, there is no automatic conversion between the values of two user-d
 ### Named vs. anonymous items
 
 A Q# file may define a new named type containing a single value of any legal type.
-For any tuple type `T`, we can declare a new user-defined type that is a subtype of `T` with the `newtype` statement.
+For any tuple type `T`, you can declare a new user-defined type that is a subtype of `T` with the `newtype` statement.
 In the @"microsoft.quantum.math" namespace, for example, complex numbers are defined as a user-defined type:
 
 ```qsharp
@@ -150,7 +150,7 @@ newtype Complex = (Double, Double);
 This statement creates a new type with two anonymous items of type `Double`.   
 
 Aside from anonymous items, user-defined types also support *named items* as of Q# version 0.7 or higher. 
-For example, we could have named the to items `Re` for the double representing the real part of a complex number and `Im` for the imaginary part: 
+For example, you could name the items to `Re` for the double representing the real part of a complex number and `Im` for the imaginary part: 
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -183,7 +183,7 @@ Even though both `Complex` and `Polar` both have an underlying type `(Double, Do
 #### Access anonymous items with the unwrap operator
 
 To access anonymous items, first extract the wrapped value using the postfix operator `!`.
-The "unwrap" operator, `!`, allows you to extract the value contained in a user-defined type.
+With the "unwrap" operator, `!`, you can extract the value contained in a user-defined type.
 The type of such an "unwrap" expression is the underlying type of the user-defined type. 
 
 ```qsharp
@@ -276,13 +276,13 @@ Such characteristics include information about which *functors* the operation su
 For example, if the execution of the operation relies on the state of other qubits, then it should support the `Controlled` functor; if the operation has an inverse, then it should support the `Adjoint` functor.
 
 > [!NOTE]
-> In this article, we only discuss how functors alter the operation signature. For more details about functors and operations, see [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions). 
+> This article only discuss how functors alter the operation signature. For more details about functors and operations, see [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions). 
 
-To require support for the `Controlled` and/or `Adjoint` functor in an operation type, we need to add an annotation indicating the corresponding characteristics.
+To require support for the `Controlled` and/or `Adjoint` functor in an operation type, you need to add an annotation indicating the corresponding characteristics.
 The annotation `is Ctl` (for example, `(Qubit => Unit is Ctl)`) indicates that the operation is controllable. That is, its execution relies on the state of another qubit or qubits. 
 Similarly, the annotation `is Adj` indicates that the operation has an adjoint, that is, it can be "inverted" such that successively applying an operation and then its adjoint to a state leaves the state unchanged. 
 
-If we want to require that an operation of that type supports both the `Adjoint` and `Controlled` functor we can express this as `(Qubit => Unit is Adj + Ctl)`. 
+If you want to require that an operation of that type supports both the `Adjoint` and `Controlled` functor you can express this as `(Qubit => Unit is Adj + Ctl)`. 
 For example, the built-in Pauli <xref:microsoft.quantum.intrinsic.x> operation has type `(Qubit => Unit is Adj + Ctl)`. 
 
 An operation type that does not support any functors is specified by its input and output type alone, with no additional annotation.

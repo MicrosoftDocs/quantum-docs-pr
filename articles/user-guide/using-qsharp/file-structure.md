@@ -15,12 +15,12 @@ Each namespace declaration contains declarations for user-defined types, operati
 For more information on declarations within a namespace, see [user-defined types](xref:microsoft.quantum.guide.types#user-defined-types), [operations](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations), and [functions](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions).
 
 The only text that can appear outside of a namespace declaration is comments.
-In particular, documentation comments (more details below) for a namespace precede the declaration.
+In particular, documentation comments for a namespace precede the declaration. For more information, see [Documentation comments](#documentation-comments) in this article. 
 
 ## Namespace Declarations
 
-A Q# file typically has just one namespace declaration, but may have none (and be empty or just contain comments) or may contain multiple namespaces.
-Namespace declarations may not be nested.
+A Q# file typically has just one namespace declaration, but could have none (and be empty or just contain comments) or could contain multiple namespaces.
+Namespace declarations can not be nested.
 
 You can declare the same namespace in multiple Q# files that are compiled together, as long as there are no type, operation, or function declarations with the same name.
 In particular, it is invalid to define the same type in the same namespace in multiple files, even if the declarations are identical.
@@ -57,7 +57,7 @@ if a declared operation uses an operation `Op` from `Microsoft.Quantum.Intrinsic
 However, to call a certain function `Fn` from `Microsoft.Quantum.Math`, you must call it using `Math.Fn`.
 
 The `open` directive applies to the entire namespace block within a file.
-Hence, if you define an additional namespace in the same Q# file as `NS` above, then any operations/functions/types defined in the second namespace would not have access to anything from `Microsoft.Quantum.Intrinsic` or `Microsoft.Quantum.Math` unless you repeated the open directives therein. 
+Hence, if you define an additional namespace in the same Q# file as `NS` earlier, then any operations/functions/types defined in the second namespace would not have access to anything from `Microsoft.Quantum.Intrinsic` or `Microsoft.Quantum.Math` unless you repeated the open directives therein. 
 
 To reference a type or callable defined in another namespace that is *not* opened in the current namespace, you must reference it by its fully-qualified name.
 For example, given an operation named `Op` from the `X.Y` namespace:
@@ -76,7 +76,7 @@ For example, if the namespace `a.b` is open, a reference to an operation named `
 ## Formatting
 
 Most Q# statements and directives end with a terminating semicolon, `;`.
-Statements and declarations such as `for` and `operation` that end with a statement block (see below) do not require a terminating semicolon.
+Statements and declarations such as `for` and `operation` that end with a statement block (see the following section) do not require a terminating semicolon.
 Each statement description notes whether the terminating semicolon is required.
 
 Statements, like expressions, declarations, and directives, can be broken out across multiple lines.
@@ -93,7 +93,7 @@ A statement block that is lexically enclosed within another block is considered 
 
 Comments begin with two forward slashes, `//`,
 and continue until the end of the line.
-A comment may appear anywhere in a Q# source file.
+A comment can appear anywhere in a Q# source file.
 
 ## Documentation Comments
 
@@ -149,9 +149,9 @@ The following names are valid as documentation comment headers.
   for hover information. It should be plain text.
 - **Description**: A description of the behavior of a function or operation,
   or the purpose of a type. Together, the summary and description form the generated documentation file for the function, operation, or type.
-  The description may contain in-line LaTeX-formatted symbols and equations.
+  The description supports in-line LaTeX-formatted symbols and equations.
 - **Input**: A description of the input tuple for an operation or function.
-  May contain additional Markdown subsections indicating each element of the input tuple.
+  Can contain additional Markdown subsections indicating each element of the input tuple.
 - **Output**: A description of the tuple returned by an operation or function.
 - **Type Parameters**: An empty section that contains one additional
   subsection for each generic type parameter.

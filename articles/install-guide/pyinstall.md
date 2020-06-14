@@ -41,7 +41,10 @@ Install the QDK to develop Python host programs to call Q# operations.
     > where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
     > Typically this will be under `.dotnet/tools` in your user profile folder.
   
-1. While you can use Q# with Python in any IDE, we highly recommend using Visual Studio Code (VS Code) IDE for your Q# + Python applications. By using Visual Studio Code and the QDK Visual Studio Code extension you gain access to richer functionality.
+1. While you can use Q# with Python in any IDE, we highly recommend using Visual Studio Code (VS Code) IDE for your Q# + Python applications. Through the QDK Visual Studio Code extension you gain access to richer functionality such as warnings, syntax highlighting, project templates, and more.
+    If you would like to use a different editor, the instrucitons above have you all set. 
+
+    If you would like to use VS Code:
 
     - Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac)
     - Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).

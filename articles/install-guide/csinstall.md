@@ -10,7 +10,8 @@ uid: microsoft.quantum.install.cs
 # Develop with Q# and .NET
 
 Q# is built to play well with .NET languages such as C# and F#.
-In this guide, we'll demonstrate how to use Q# with a host program written in a .NET language.
+In this guide, we demonstrate how to use Q# with a host program written in a .NET language.
+First we create the Q# library and .NET host, and then demonstrate how to call to Q# from the host.
 
 ## Prerequisites
 
@@ -19,24 +20,8 @@ In this guide, we'll demonstrate how to use Q# with a host program written in a 
 ## Creating a Q# library and a .NET host
 
 The first step is to create projects for your Q# library, and for the .NET host that will call into the operations and functions defined in your Q# library.
-
-### [Visual Studio 2019](#tab/tabid-vs2019)
-
-- Create a new Q# library
-  - Go to **File** -> **New** -> **Project**
-  - Type "Q#" in the search box
-  - Select **Q# Library**
-  - Select **Next**
-  - Choose a name and location for your library
-  - Make sure that "place project and solution in same directory" is **unchecked**
-  - Select **Create**
-- Create a new C# or F# host program
-  - Go to **File** → **New** → **Project**
-  - Select "Console App (.NET Core")" for either C# or F#
-  - Select **Next**
-  - Under *solution*, select "add to solution"
-  - Choose a name for your host program
-  - Select **Create**
+Follow the instructions in the tab corresponding to your development environment.
+If you are using an editor other than Visual Studio or VS Code, simply follow the command line steps.
 
 ### [Visual Studio Code or Command Line](#tab/tabid-cmdline)
 
@@ -66,6 +51,24 @@ The first step is to create projects for your Q# library, and for the .NET host 
   dotnet sln quantum-dotnet.sln add ./quantum/quantum.csproj
   dotnet sln quantum-dotnet.sln add ./host/host.csproj
   ```
+
+### [Visual Studio 2019](#tab/tabid-vs2019)
+
+- Create a new Q# library
+  - Go to **File** -> **New** -> **Project**
+  - Type "Q#" in the search box
+  - Select **Q# Library**
+  - Select **Next**
+  - Choose a name and location for your library
+  - Make sure that "place project and solution in same directory" is **unchecked**
+  - Select **Create**
+- Create a new C# or F# host program
+  - Go to **File** → **New** → **Project**
+  - Select "Console App (.NET Core")" for either C# or F#
+  - Select **Next**
+  - Under *solution*, select "add to solution"
+  - Choose a name for your host program
+  - Select **Create**
 
 ***
 

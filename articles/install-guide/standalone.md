@@ -31,6 +31,7 @@ To configure Visual Studio:
 2. Download and install the [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
 To install the QDK for another environment, enter the following in the command line:
+
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```

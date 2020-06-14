@@ -128,6 +128,7 @@ However, the [`dotnet run` command](https://docs.microsoft.com/dotnet/core/tools
 
 
 ### Add entry point to Q# file
+
 Most Q# files will contain more than one callable, so naturally we need to let the compiler know *which* callable to execute when we provide the `dotnet run` command.
 This is done with a simple change to the Q# file itself: 
     - add a line with `@EntryPoint()` directly preceding the callable.
@@ -440,8 +441,8 @@ The [`ResourcesEstimator`](xref:microsoft.quantum.machines.resources-estimator) 
 Firstly, instead of instantiating them as a variable with a `using` statement (as we do with the `QuantumSimulator`), we more directly instantiate objects of the class via
 
 ```csharp
-            ResourcesEstimator estimatorSingleQ = new ResourcesEstimator();
-            ResourcesEstimator estimatorMultiQ = new ResourcesEstimator();
+            var estimatorSingleQ = new ResourcesEstimator();
+            var estimatorMultiQ = new ResourcesEstimator();
 ```
 
 Notice that instead of a single target simulator to be used by multiple Q# operations, we have instantiated one for each. 
@@ -470,8 +471,8 @@ namespace host
         static async Task Main(string[] args)
         {
             using var sim = new QuantumSimulator();
-            ResourcesEstimator estimatorSingleQ = new ResourcesEstimator();
-            ResourcesEstimator estimatorMultiQ = new ResourcesEstimator();
+            var estimatorSingleQ = new ResourcesEstimator();
+            var estimatorMultiQ = new ResourcesEstimator();
 
             var singleQubitResult = await MeasureSuperposition.Run(sim);
             var multiQubitResult = await MeasureSuperpositionArray.Run(sim, 4);

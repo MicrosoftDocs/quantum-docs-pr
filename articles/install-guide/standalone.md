@@ -30,10 +30,8 @@ To configure Visual Studio:
 1. Download and install [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 or greater, with the .NET Core cross-platform development workload enabled.
 2. Download and install the [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
-To install the QDK for another environment:
-
-1. From your command line, simply enter
-    ```
+To install the QDK for another environment, enter the following in the command line:
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 

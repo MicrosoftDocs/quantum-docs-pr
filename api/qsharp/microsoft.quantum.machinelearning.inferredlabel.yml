@@ -22,7 +22,7 @@ input:
     uid: Double
   - name: probability
     summary: |-
-      A classification probabilities for a particular sample, typicaly
+      A classification probabilities for a particular sample, typically
       resulting from estimating its classification frequency.
     isPrimitive: true
     uid: Double

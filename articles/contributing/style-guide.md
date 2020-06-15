@@ -220,8 +220,8 @@ We suggest:
 
 |   | Name | Description |
 |---|------|-------------|
-| ☒ | <s>`_ApplyDecomposedOperation`</s> | Do not use an underscore `_` to indicate that this operation is for internal use only. |
-| ☑ | `internalApplyDecomposedOperation` | The `internal` keyword at the beginning clearly indicates that this operation is for internal use only. |
+| ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Do not use an underscore `_` to indicate that this operation is for internal use only. |
+| ☑ | `internal operation ApplyDecomposedOperation` | The `internal` keyword at the beginning clearly indicates that this operation is for internal use only. |
 
 ***
 ### Variants ###

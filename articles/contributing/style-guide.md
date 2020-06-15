@@ -214,7 +214,7 @@ If an operation or function is not intended for direct use, but rather should be
 
 We suggest:
 
-- When a function, operation, or user-defined type is not a part of the public API for a Q# library or program, ensure that its name begins with the leading keyword `internal`.
+- When a function, operation, or user-defined type is not a part of the public API for a Q# library or program, ensure that it is marked as internal by placing the `internal` keyword before the `function`, `operation`, or `newtype` declaration.
 
 # [Examples](#tab/examples)
 
@@ -455,4 +455,3 @@ We suggest:
 | ☒ | <s>`Example (a, b, c)`</s> | Spaces should be suppressed after function, operation, or UDT names. |
 
 ***
-

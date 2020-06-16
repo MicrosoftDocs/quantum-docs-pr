@@ -8,7 +8,7 @@ Development Kit. This directory contains:
   
   - Every directory contains a `toc.yml` file to display the content of the directory
     in the main Table Of Contents (TOC).
-  - Markdown articles that contain the documentation content. These articles
+  - Markdown articles that contain the documentation. These articles
     should follow the guidelines of the [Microsoft Docs contributor
     guide](https://docs.microsoft.com/en-us/contribute/).
   - Articles sub-directories. These

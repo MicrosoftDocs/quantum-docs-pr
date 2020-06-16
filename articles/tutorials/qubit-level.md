@@ -175,7 +175,7 @@ This is necessary because the nature of the quantum Fourier transform outputs th
 
 Hence we have finished writing the qubit-level operations of the quantum Fourier transform into our Q# operation:
 
-<img src="..media//qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
+<img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
 However, we can't call it a day just yet.
 Our qubits were in state $\ket{0}$ when we allocated them, and much like in life, in Q# we should leave things the same way we found them (or better!).

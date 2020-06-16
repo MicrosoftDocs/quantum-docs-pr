@@ -36,7 +36,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Quantum computing concepts
-            url: concepts/index.md
+            url: concepts/quantum-computing-concepts/index.md
 
 
   # Develop
@@ -45,13 +45,13 @@ landingContent:
       - linkListType: get-started
         links:
           - text: The Quantum Development Kit
-            url: welcome.md
+            url: quickstarts/get-started.md
       - linkListType: download
         links:
           - text: Install the QDK
-            url: install-guide/index.md
+            url: quickstarts/install-guide/index.md
           - text: Update the QDK
-            url: install-guide/update.md
+            url: quickstarts/update.md
 
 
   # Development
@@ -62,19 +62,19 @@ landingContent:
           - text: Q# user guide
             url: user-guide/index.md
           - text: "Quantum simulators and host applications"
-            url: machines/index.md
+            url: user-guide/machines/index.md
       - linkListType: tutorial
         links:
           - text: Build a quantum random number generator
-            url: quickstarts/qrng.md
+            url: tutorials/qrng.md
           - text: Explore entanglement with Q#
-            url: quickstart.md
+            url: tutorials/explore-entanglement.md
           - text: "Quantum speedup: Grover's search algorithm"
-            url: quickstarts/search.md
+            url: tutorials/search.md
       - linkListType: learn
         links:
           - text: Learn with the Quantum Katas
-            url: intro-to-katas.md
+            url: tutorials/intro-to-katas.md
           - text: Browse Q# code samples
             url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 
@@ -85,7 +85,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Contribute to the QDK
-            url: contributing/index.md
+            url: resources/contributing/index.md
           - text: Read the Microsoft Quantum blog
             url: https://cloudblogs.microsoft.com/quantum
 
@@ -96,10 +96,10 @@ landingContent:
       - linkListType: reference
         links:
           - text: Standard libraries
-            url: libraries/standard/index.md
+            url: concepts/libraries/standard/index.md
           - text: Chemistry library
-            url: libraries/chemistry/index.md
+            url: concepts/libraries/chemistry/index.md
           - text: Machine learning library
-            url: libraries/machine-learning/index.md
+            url: concepts/libraries/machine-learning/index.md
           - text: Numerics library
-            url: libraries/numerics/index.md
+            url: concepts/libraries/numerics/index.md

@@ -6,6 +6,7 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
+no-loc: ['$$', '$', '\cdots', 'bmatrix', '\ddots', '\equiv', '\sum', '\begin', '\end', '\sqrt', '\otimes', '{', '}', '\text', '\phi', '\kappa', '\psi', '\alpha', '\beta', '\gamma', '\delta', '\omega', '\bra', '\ket', '\boldone', '\\\\', '\\', '=', '\frac', '\text', '\mapsto', '\dagger', '\to', '\begin{cases}', '\end{cases}', '\operatorname', '\braket', '\id', '\expect', '\defeq', '\variance', '\dd', '&', '\begin{align}', '\end{align}', '\Lambda', '\lambda', '\Omega', '\mathrm', '\left', '\right', '\qquad', '\times', '\big', '\langle', '\rangle', '\bigg', '\Big', '|', '\mathbb', '\vec', '\in', '\texttt', '\ne', '<', '>', '\leq', '\geq', '~~', '~']
 ---
 
 # Quantum computing glossary
@@ -115,7 +116,11 @@ A set of three 2 x 2 unitary matrices known as the `X`, `Y` and `Z` quantum oper
 
 ## Quantum circuit diagram
 
-A method to graphically represent the sequence of [operations](xref:microsoft.quantum.glossary#operation) (or [gates](xref:microsoft.quantum.glossary#gate)) for simple quantum programs, for example ![Sample circuit diagram](~/media/qpe.png). For more information, see [Quantum circuits](xref:microsoft.quantum.concepts.circuits).
+A method to graphically represent the sequence of [operations](xref:microsoft.quantum.glossary#operation) (or [gates](xref:microsoft.quantum.glossary#gate)) for simple quantum programs, for example 
+
+![Sample circuit diagram](~/media/qpe.png). 
+
+For more information, see [Quantum circuits](xref:microsoft.quantum.concepts.circuits).
 
 ## Quantum libraries
 
@@ -139,7 +144,7 @@ A quantum algorithm that probabilistically succeeds. Upon failure, the routine w
 
 ## Superposition
 
-The concept in quantum computing that a [qubit](xref:microsoft.quantum.glossary#qubit) is a linear combination of two states, $\ket{\0}$ and $\ket{\1}$, until it is [measured](xref:microsoft.quantum.glossary#measurement).  For more information, see [Understanding quantum computing](xref:microsoft.quantum.overview.understanding).
+The concept in quantum computing that a [qubit](xref:microsoft.quantum.glossary#qubit) is a linear combination of two states, $\ket{0}$ and $\ket{1}$, until it is [measured](xref:microsoft.quantum.glossary#measurement).  For more information, see [Understanding quantum computing](xref:microsoft.quantum.overview.understanding).
 
 ## Target machine
 

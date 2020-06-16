@@ -1,18 +1,4 @@
-- name: "Quantum computing history & background"
-  href: index.md
-- name: Vectors and matrices
-  href: vectors-and-matrices.md
-- name: Advanced matrix concepts
-  href: advanced-matrices.md
-- name: The qubit
-  href: the-qubit.md
-- name: Multiple qubits
-  href: multiple-qubits.md
-- name: Dirac notation
-  href: dirac-notation.md
-- name: Pauli measurements
-  href: pauli-measurements.md
-- name: Quantum circuits
-  href: circuits.md
-- name: Quantum oracles
-  href: oracles.md
+  - name: Quantum computing concepts
+    href: quantum-computing-concepts/toc.yml
+  - name: Q# libraries
+    href: libraries/toc.yml

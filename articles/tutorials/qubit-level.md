@@ -23,7 +23,7 @@ Thus, the single- and multi-qubit operations we sequentially apply can be readil
 In our case, we will define a Q# operation to perform the full three-qubit quantum Fourier transform, which has the following representation as a circuit:
 
 <br/>
-<img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
+<img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
 ## Prerequisites
 
@@ -114,7 +114,7 @@ Within a Q# operation, the statements invoking callables will of course be execu
 Hence, the first gate to apply is the [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) to the first qubit:
 
 <br/>
-<img src="./qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" width="120">
+<img src="../media/qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" width="120">
 
 To apply an operation to a specific qubit from a register (i.e. a single `Qubit` from an array `Qubit[]`) we use standard index notation.
 So, applying the [`H`](xref:microsoft.quantum.intrinsic.h) to the first qubit of our register `qs` takes the form:
@@ -138,7 +138,7 @@ Note that the control qubits must be provided as an array, even if it is a singl
 After the `H`, we see that the next gates are the `R1` gates acting on the first qubit (and controlled by the second/third):
 
 <br/>
-<img src="./qft_firstqubit.PNG" alt="Circuit diagram for three qubit QFT through first qubit" width="310">
+<img src="../media/qft_firstqubit.PNG" alt="Circuit diagram for three qubit QFT through first qubit" width="310">
 
 We call these with
 
@@ -175,7 +175,7 @@ This is necessary because the nature of the quantum Fourier transform outputs th
 
 Hence we have finished writing the qubit-level operations of the quantum Fourier transform into our Q# operation:
 
-<img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
+<img src="..media//qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
 However, we can't call it a day just yet.
 Our qubits were in state $\ket{0}$ when we allocated them, and much like in life, in Q# we should leave things the same way we found them (or better!).

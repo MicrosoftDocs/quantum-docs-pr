@@ -45,6 +45,7 @@
       "feedback_product_url": "https://github.com/Microsoft/quantum/issues",
       "titleSuffix": "Microsoft Quantum",
       "breadcrumb_path": "/quantum/breadcrumb/toc.json"
+      "extendBreadcrumb": true
     },
     "fileMetadata": {
       "latex_macros": {

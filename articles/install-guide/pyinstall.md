@@ -48,7 +48,7 @@ Install the QDK to develop Python host programs to call Q# operations.
     - Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac)
     - Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
-    If you would like to use a different editor, the instrucitons above have you all set. 
+    If you would like to use a different editor, the instructions above have you all set. 
 
 1. Verify the installation by creating a `Hello World` application
 

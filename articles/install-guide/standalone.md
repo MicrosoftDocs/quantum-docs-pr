@@ -85,7 +85,7 @@ To run the application:
 > [!NOTE]
 > If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its sub-folders.  
 
-### [Command line or other editors](#tab/tabid-cmdline)
+### [Other editors with the command line](#tab/tabid-cmdline)
 
 Verify your installation by creating a Q# `Hello World` application.
 
@@ -99,7 +99,7 @@ Verify your installation by creating a Q# `Hello World` application.
     cd runSayHello
     ```
 
-    This directory should now contain a file `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.
+    This directory should now contain a file `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console. You can modfiy this template with a text editor and overwrite it with your own quantum applications. 
 
 3. Run the program:
     ```dotnetcli

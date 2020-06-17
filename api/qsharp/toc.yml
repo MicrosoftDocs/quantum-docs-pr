@@ -1785,4 +1785,72 @@
     uid: microsoft.quantum.simulation.trotterstep
   - name: Unitary
     uid: microsoft.quantum.simulation.unitary
+- uid: microsoft.quantum.simulation.quantumprocessor.extensions
+  name: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+  items:
+  - name: ApplyConditionally
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionally
+  - name: ApplyConditionallyA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallya
+  - name: ApplyConditionallyC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyc
+  - name: ApplyConditionallyCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyca
+  - name: ApplyConditionallyIntrinsic
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyintrinsic
+  - name: ApplyConditionallyIntrinsicA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyintrinsica
+  - name: ApplyConditionallyIntrinsicC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyintrinsicc
+  - name: ApplyConditionallyIntrinsicCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyintrinsicca
+  - name: ApplyIfElseIntrinsic
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelseintrinsic
+  - name: ApplyIfElseIntrinsicA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelseintrinsica
+  - name: ApplyIfElseIntrinsicC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelseintrinsicc
+  - name: ApplyIfElseIntrinsicCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelseintrinsicca
+  - name: ApplyIfElseR
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelser
+  - name: ApplyIfElseRA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelsera
+  - name: ApplyIfElseRC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelserc
+  - name: ApplyIfElseRCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelserca
+  - name: ApplyIfOne
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifone
+  - name: ApplyIfOneA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifonea
+  - name: ApplyIfOneC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifonec
+  - name: ApplyIfOneCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifoneca
+  - name: ApplyIfZero
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifzero
+  - name: ApplyIfZeroA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifzeroa
+  - name: ApplyIfZeroC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifzeroc
+  - name: ApplyIfZeroCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifzeroca
+  - name: Delay
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.delay
+  - name: DelayA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.delaya
+  - name: DelayC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.delayc
+  - name: DelayCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.delayca
+  - name: NoOp
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.noop
+- uid: microsoft.quantum.synthesis
+  name: Microsoft.Quantum.Synthesis
+  items:
+  - name: ApplyPermutationUsingTransformation
+    uid: microsoft.quantum.synthesis.applypermutationusingtransformation
+  - name: ApplyTransposition
+    uid: microsoft.quantum.synthesis.applytransposition
 ...

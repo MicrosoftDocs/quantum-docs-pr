@@ -12,7 +12,7 @@ uid: microsoft.quantum.install.cs
 Q# is built to play well with .NET languages such as C# and F#.
 In this guide, we demonstrate how to use Q# with a host program written in a .NET language.
 
-First we create the Q# library and .NET host, and then demonstrate how to call to Q# from the host.
+First we create the Q# application and .NET host, and then demonstrate how to call to Q# from the host.
 
 ## Prerequisites
 

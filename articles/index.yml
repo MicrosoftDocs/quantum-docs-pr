@@ -49,7 +49,7 @@ landingContent:
       - linkListType: download
         links:
           - text: Install the QDK
-            url: quickstarts/install-guide/index.md
+            url: quickstarts/index.md
           - text: Update the QDK
             url: quickstarts/update.md
 

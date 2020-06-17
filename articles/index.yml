@@ -36,7 +36,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Quantum computing concepts
-            url: concepts/quantum-computing-concepts/index.md
+            url: concepts/index.md
 
 
   # Develop

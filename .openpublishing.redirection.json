@@ -126,52 +126,52 @@
 
     {
       "source_path": "articles/libraries/intro.md",
-      "redirect_url": "concepts/libraries/standard/",
+      "redirect_url": "user-guide/libraries/standard/",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/licensing.md",
-      "redirect_url": "concepts/libraries/standard/licensing",
+      "redirect_url": "user-guide/libraries/standard/licensing",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/prelude.md",
-      "redirect_url": "concepts/libraries/standard/prelude",
+      "redirect_url": "user-guide/libraries/standard/prelude",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/control-flow.md",
-      "redirect_url": "concepts/libraries/standard/control-flow",
+      "redirect_url": "user-guide/libraries/standard/control-flow",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/data-structures.md",
-      "redirect_url": "concepts/libraries/standard/data-structures",
+      "redirect_url": "user-guide/libraries/standard/data-structures",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/algorithms.md",
-      "redirect_url": "concepts/libraries/standard/algorithms",
+      "redirect_url": "user-guide/libraries/standard/algorithms",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/characterization.md",
-      "redirect_url": "concepts/libraries/standard/characterization",
+      "redirect_url": "user-guide/libraries/standard/characterization",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/error-correction.md",
-      "redirect_url": "concepts/libraries/standard/error-correction",
+      "redirect_url": "user-guide/libraries/standard/error-correction",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/applications.md",
-      "redirect_url": "concepts/libraries/standard/applications",
+      "redirect_url": "user-guide/libraries/standard/applications",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/testing.md",
-      "redirect_url": "concepts/libraries/standard/testing",
+      "redirect_url": "user-guide/libraries/standard/testing",
       "redirect_document_id": true
     },
 

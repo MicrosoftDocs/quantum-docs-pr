@@ -32,7 +32,9 @@ To configure Visual Studio:
 
 To install the QDK for another environment, enter in the command line:
 
-    dotnet new -i Microsoft.Quantum.ProjectTemplates
+```dotnetcli
+dotnet new -i Microsoft.Quantum.ProjectTemplates
+```
 
 ## Develop with Q#
 

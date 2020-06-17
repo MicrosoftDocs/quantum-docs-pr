@@ -1,4 +1,2 @@
   - name: Quantum computing concepts
     href: quantum-computing-concepts/toc.yml
-  - name: Q# libraries
-    href: libraries/toc.yml

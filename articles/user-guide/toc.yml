@@ -8,5 +8,7 @@
   href: using-qsharp/toc.yml
 - name: Simulators and resource estimators
   href: machines/toc.yml
+- name: Q# libraries
+  href: libraries/toc.yml
 - name: Quick reference
   href: quickref/toc.yml

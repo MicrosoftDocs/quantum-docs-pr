@@ -7,7 +7,7 @@
     },
     {
       "source_path": "articles/quantum-RelNotes.md",
-      "redirect_url": "relnotes/",
+      "redirect_url": "resources/relnotes",
       "redirect_document_id": true
     },
     {
@@ -62,7 +62,7 @@
     },
     {
       "source_path": "articles/quantum-InstallConfig.md",
-      "redirect_url": "install-guide/",
+      "redirect_url": "quickstarts/",
       "redirect_document_id": true
     },
     {
@@ -72,7 +72,7 @@
     },
     {
       "source_path": "articles/quantum-SimulatorsAndMachines.md",
-      "redirect_url": "machines/",
+      "redirect_url": "user-guide/machines/",
       "redirect_document_id": true
     },
     {
@@ -122,27 +122,27 @@
     },
     {
       "source_path": "articles/libraries/intro.md",
-      "redirect_url": "standard/",
+      "redirect_url": "quantum/user-guide/libraries/standard/",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/control-flow.md",
-      "redirect_url": "standard/control-flow",
+      "redirect_url": "quantum/user-guide/libraries/standard/control-flow",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/algorithms.md",
-      "redirect_url": "standard/algorithms",
+      "redirect_url": "quantum/user-guide/libraries/standard/algorithms",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/error-correction.md",
-      "redirect_url": "standard/error-correction",
+      "redirect_url": "quantum/user-guide/libraries/standard/error-correction",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/applications.md",
-      "redirect_url": "standard/applications",
+      "redirect_url": "quantum/user-guide/libraries/standard/applications",
       "redirect_document_id": true
     },
     {
@@ -212,7 +212,7 @@
     },
     {
       "source_path": "articles/Glossary.md",
-      "redirect_url": "/quantum/concepts/glossary",
+      "redirect_url": "/quantum/resources/glossary",
       "redirect_document_id": true
     },
     {
@@ -431,7 +431,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "articles/libraries/standard/algorithms.md",
+      "source_path": "articles/libraries/chemistry/concepts/algorithms.md",
       "redirect_url": "user-guide/libraries/chemistry/concepts/algorithms",
       "redirect_document_id": true
     },
@@ -571,7 +571,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "articles/libraries/chemistry/concepts/algorithms.md",
+      "source_path": "articles/libraries/standard/algorithms.md",
       "redirect_url": "user-guide/libraries/standard/algorithms",
       "redirect_document_id": true
     },

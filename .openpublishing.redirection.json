@@ -126,33 +126,13 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "articles/libraries/licensing.md",
-      "redirect_url": "standard/licensing",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "articles/libraries/prelude.md",
-      "redirect_url": "standard/prelude",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "articles/libraries/control-flow.md",
       "redirect_url": "standard/control-flow",
       "redirect_document_id": true
     },
     {
-      "source_path": "articles/libraries/data-structures.md",
-      "redirect_url": "standard/data-structures",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "articles/libraries/algorithms.md",
       "redirect_url": "standard/algorithms",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "articles/libraries/characterization.md",
-      "redirect_url": "standard/characterization",
       "redirect_document_id": true
     },
     {
@@ -448,21 +428,6 @@
     {
       "source_path": "articles/quickstarts/search.md",
       "redirect_url": "tutorials/search",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "articles/user-guide/index.md",
-      "redirect_url": "user-guide/index",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "articles/user-guide/language/expressions.md",
-      "redirect_url": "user-guide/language/expressions",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "articles/user-guide/language/types.md",
-      "redirect_url": "user-guide/language/types",
       "redirect_document_id": true
     },
     {

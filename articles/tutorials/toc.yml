@@ -1,5 +1,5 @@
   - name: Quantum random number generator
-    href: qrng.md
+    href: quantum-random-number-generator.md
   - name: Explore entanglement with Q#
     href: explore-entanglement.md
   - name: Implement Grover's search algorithm

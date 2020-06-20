@@ -64,4 +64,4 @@ Quantum machines are instances of normal .NET classes, so they are created by in
 
 * To run the operation, use the `.run` method fo the Q# operation, specifying the `QuantumSimulator` instance that you created,<br>`SampleQuantumRandomNumberGenerator.Run(sim)`
 
-For further details about how Q# programs run in different environments, see [Run Q# with standalone applications or host programs](TBD).
+For further details about how Q# programs run in different environments, see Run Q# with standalone applications or host programs.

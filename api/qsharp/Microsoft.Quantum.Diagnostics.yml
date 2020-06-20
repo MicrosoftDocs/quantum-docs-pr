@@ -96,10 +96,10 @@ operations:
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: |-
-    Compiler recognized attribute via which an alternative name can be defined
+    Compiler-recognized attribute via which an alternative name can be defined
     that may be used when loading a type or callable for testing purposes.
 - uid: microsoft.quantum.diagnostics.test
-  summary: Compiler recognized attribute used to mark a unit test.
+  summary: Compiler-recognized attribute used to mark a unit test.
 summary: |2-
    # Summary
    This namespace contains functions and operations useful for diagnostic

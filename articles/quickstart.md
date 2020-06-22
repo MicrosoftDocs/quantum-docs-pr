@@ -472,7 +472,7 @@ operation:
             Set(Zero, q1);
         }
 
-        // Return number of times we saw a |0> and number of times we saw a |1
+        // Return times we saw |0>, times we saw |1>, and times measurements agreed
         Message("Test results (# of 0s, # of 1s, # of agreements)");
         return (count-numOnes, numOnes, agree);
     }

@@ -316,6 +316,8 @@ halfway between the `Zero` and `One`.  Now, when we simulate the `TestBellState`
 operation, we will see the results will return roughly an equal number of `Zero`
 and `One` after measurement.  
 
+### `X` flips qubit state
+
 First we'll just try to flip the qubit (if the qubit is in `Zero` state will
 flip to `One` and vice versa). This is accomplished by performing an `X`
 operation before we measure it in `TestBellState`:

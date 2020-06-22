@@ -16,7 +16,7 @@ Install the QDK to develop Python host programs to call Q# operations.
 
 ### [Install using conda (recommended)](#tab/tabid-conda)
 
-1. Prerequisites
+1. Prerequisites:
 
     - Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads).
     - (optional) Create a new conda environment by running `conda create --name qsharp-env`. Activate this environment by running `conda activate qsharp-env`.
@@ -27,7 +27,7 @@ Install the QDK to develop Python host programs to call Q# operations.
     conda install -c quantum-engineering qsharp
     ```
 
-### [Install using pip (advanced)](#tab/tabid-pip)
+### [Install using .NET CLI and pip (advanced)](#tab/tabid-dotnetcli)
 
 1. Prerequisites:
 
@@ -64,33 +64,33 @@ That's it! You now have both the `qsharp` Python package and the IQ# kernel for 
 
 ## Write your first Q# program
 
-1. While you can use Q# with Python in any IDE, we highly recommend using Visual Studio Code (VS Code) IDE for your Q# + Python applications. By using Visual Studio Code and the QDK Visual Studio Code extension you gain access to richer functionality.
+While you can use Q# with Python in any IDE, we highly recommend using Visual Studio Code (VS Code) IDE for your Q# + Python applications. By using Visual Studio Code and the QDK Visual Studio Code extension you gain access to richer functionality.
 
     - Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
     - Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
-1. Verify the installation by creating a `Hello World` application
+Now you are ready to verify your `qsharp` Python package installation by writing and executing a simple Q# program.
 
-    - Create a minimal Q# operation by creating a file called `Operation.qs` and adding the following code to it:
+1. Create a minimal Q# operation by creating a file called `Operation.qs` and adding the following code to it:
 
-        :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="3-14":::
+    :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="3-14":::
 
-    - Create a Python program called `host.py` to call the Q# `SampleQuantumRandomNumberGenerator()` operation:
+1. Create a Python program called `host.py` to call the Q# `SampleQuantumRandomNumberGenerator()` operation:
 
-        ```python
-        import qsharp
-        from Qrng import SampleQuantumRandomNumberGenerator
+    ```python
+    import qsharp
+    from Qrng import SampleQuantumRandomNumberGenerator
 
-        SampleQuantumRandomNumberGenerator.simulate()
-        ```
+    SampleQuantumRandomNumberGenerator.simulate()
+    ```
 
-    - Run the program:
+1. Run the program:
 
-        ```
-        python host.py
-        ```
+    ```
+    python host.py
+    ```
 
-    - You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `Zero` or `One` printed on the screen. If you execute the program repeatedly, you should see each result approximately half the time.
+1. You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `Zero` or `One` printed on the screen. If you execute the program repeatedly, you should see each result approximately half the time.
 
 > [!NOTE]
 > * The Python code is just a normal Python program. You can use any Python environment, including Python-based Jupyter Notebooks, to write the Python program and call Q# operations.

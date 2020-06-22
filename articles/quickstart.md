@@ -266,6 +266,7 @@ namespace Bell {
                     set numOnes += 1;
                 }
             }
+
             Set(Zero, qubit);
         }
 

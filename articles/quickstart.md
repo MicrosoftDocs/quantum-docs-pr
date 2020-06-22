@@ -305,7 +305,7 @@ Test results (# of 0s, # of 1s):
 
 ## Prepare superposition
 
-**Overview** Now let’s look at how Q# expresses ways to put qubits in
+Now let’s look at how Q# expresses ways to put qubits in
 superposition.  Recall that the state of a qubit can be in a superposition of 0
 and 1.  We’ll use the `Hadamard` operation to accomplish this. If the qubit is
 in either of the classical states (where a measurement returns `Zero` always or

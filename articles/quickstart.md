@@ -381,7 +381,7 @@ reversed the measurements (did the second qubit before the first), the same
 thing would happen. The first measurement would be random and the second would
 be in lock step with whatever was discovered for the first.
 
-The first thing we'll need to do is allocate 2 qubits instead of one in
+The first thing we'll need to do is allocate two qubits instead of one in
 `TestBellState`:
 
 ```qsharp

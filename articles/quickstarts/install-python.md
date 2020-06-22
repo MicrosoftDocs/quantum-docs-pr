@@ -27,8 +27,6 @@ Install the QDK to develop Python host programs to call Q# operations.
     conda install -c quantum-engineering qsharp
     ```
 
-That's it! You now have both the `qsharp` Python package and the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Python and allows you to use Q# Jupyter Notebooks.
-
 ### [Install using pip (advanced)](#tab/tabid-pip)
 
 1. Prerequisites:
@@ -59,6 +57,10 @@ That's it! You now have both the `qsharp` Python package and the IQ# kernel for 
     > ```
     > where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
     > Typically this will be under `.dotnet/tools` in your user profile folder.
+    
+***
+
+That's it! You now have both the `qsharp` Python package and the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Python and allows you to use Q# Jupyter Notebooks.
 
 ## Write your first Q# program
 

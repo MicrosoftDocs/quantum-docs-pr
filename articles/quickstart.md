@@ -240,7 +240,7 @@ when we provide the `dotnet run` command. This is done with a simple change in
 the Q# file by adding a line with `@EntryPoint()` directly preceding the
 callable: the `TestBellState` operation in this case. The full code should be:
 
-```
+```qsharp
 namespace Bell {
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;

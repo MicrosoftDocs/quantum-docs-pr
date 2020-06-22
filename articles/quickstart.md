@@ -167,7 +167,7 @@ in classical computing.
 
 ### Counting measurement outcomes
 
-**Overview:**  To demonstrate the effect of the `Set` operation, a
+To demonstrate the effect of the `Set` operation, a
 `TestBellState` operation is then added. This operation takes as input a `Zero`
 or `One`, and calls the `Set` operation some number of times with that input,
 and counts the number of times that `Zero` was returned from the measurement of

@@ -340,6 +340,8 @@ Test results (# of 0s, # of 1s):
 ```
 
 However, everything we've seen so far is classical. Let's get a quantum result.
+### `H` prepares superposition
+
 All we need to do is replace the `X` operation in the previous run with an `H`
 or Hadamard operation. Instead of flipping the qubit all the way from 0 to 1, we
 will only flip it halfway. The replaced lines in `TestBellState` now look like:

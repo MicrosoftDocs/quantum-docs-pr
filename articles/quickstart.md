@@ -250,6 +250,7 @@ namespace Bell {
             X(q1);
         }
     }
+
     @EntryPoint()
     operation TestBellState(count : Int, initial : Result) : (Int, Int) {
 

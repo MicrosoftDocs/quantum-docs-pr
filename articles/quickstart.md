@@ -373,7 +373,7 @@ quantum state.
 Now let’s look at how Q# expresses ways to entangle qubits.
 First, we set the first qubit to the initial state and then use the `H`
 operation to put it into superposition.  Then, before we measure the first
-qubit, we use a new operation (`CNOT`), which stands for Controlled-Not.  The
+qubit, we use a new operation (`CNOT`), which stands for Controlled-NOT.  The
 result of executing this operation on two qubits is to flip the second qubit if
 the first qubit is `One`.  Now, the two qubits are entangled.  Our statistics
 for the first qubit haven't changed (50-50 chance of a `Zero` or a `One` after

@@ -102,7 +102,7 @@ to operate on qubits with Q# to change their state and demonstrate the effects
 of superposition and entanglement. We will build this up piece by piece to
 introduce qubit states, operations, and measurement.
 
-### Code for the `Set` operation
+### Initialize qubit using measurement
 
 **Overview:**  In the first code below, we show you how to work with qubits in
 Q#.  We’ll introduce two operations, `M` and `X` that transform the state of a

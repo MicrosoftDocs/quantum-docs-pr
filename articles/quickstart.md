@@ -370,7 +370,7 @@ quantum state.
 
 ## Prepare entanglement
 
-**Overview:**  Now let’s look at how Q# expresses ways to entangle qubits.
+Now let’s look at how Q# expresses ways to entangle qubits.
 First, we set the first qubit to the initial state and then use the `H`
 operation to put it into superposition.  Then, before we measure the first
 qubit, we use a new operation (`CNOT`), which stands for Controlled-Not.  The

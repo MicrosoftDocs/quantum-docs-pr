@@ -71,13 +71,12 @@ That's it! You now have both the `qsharp` Python package and the IQ# kernel for 
 
     - Create a minimal Q# operation by creating a file called `Operation.qs` and adding the following code to it:
 
-        :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3,6,9-15,34":::
+        :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="3-14":::
 
-    - Create a Python program called `random_number.py` to call the Q# `SampleQuantumRandomNumberGenerator()` operation:
+    - Create a Python program called `host.py` to call the Q# `SampleQuantumRandomNumberGenerator()` operation:
 
         ```python
         import qsharp
-
         from Qrng import SampleQuantumRandomNumberGenerator
 
         SampleQuantumRandomNumberGenerator.simulate()
@@ -86,7 +85,7 @@ That's it! You now have both the `qsharp` Python package and the IQ# kernel for 
     - Run the program:
 
         ```
-        python random_number.py
+        python host.py
         ```
 
     - You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `Zero` or `One` printed on the screen. If you execute the program repeatedly, you should see each result approximately half the time.

@@ -74,7 +74,7 @@ Verify the installation by writing and executing a simple Q# operation.
 
 1. Choose "New" → "Q#" to create a Jupyter Notebook with a Q# kernel, and add the following code to the first notebook cell:
 
-    :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="6,9-15":::
+    :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 
 1. Run this cell of the notebook:
 

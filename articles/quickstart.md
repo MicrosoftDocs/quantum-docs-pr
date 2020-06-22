@@ -488,6 +488,7 @@ dotnet run --count 1000 --initial One
 (505, 495, 1000)
 
 dotnet run --count 1000 --initial Zero
+Test results (# of 0s, # of 1s, # of agreements)
 (507, 493, 1000)
 ```
 

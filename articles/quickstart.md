@@ -272,7 +272,7 @@ namespace Bell {
 
     // Return number of times we saw a |0> and number of times we saw a |1>
     Message("Test results (# of 0s, # of 1s): ");
-    return (count-numOnes, numOnes);
+    return (count - numOnes, numOnes);
     }
 }
 ```

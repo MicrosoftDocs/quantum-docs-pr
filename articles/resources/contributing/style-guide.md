@@ -208,23 +208,22 @@ We suggest:
 
 In many cases, a name is intended strictly for use internal to a library or project, and is not a guaranteed part of the API offered by a library.
 It is helpful to clearly indicate that this is the case when naming functions and operations so that accidental dependencies on internal-only code are made obvious.
-If an operation or function is not intended for direct use, but rather should be used by a matching callable which acts by partial application, consider using a name starting with `_` for the callable that is partially applied.
+If an operation or function is not intended for direct use, but rather should be used by a matching callable which acts by partial application, consider using a name starting with the `internal` keyword for the callable that is partially applied.
 
 # [Guidance](#tab/guidance)
 
 We suggest:
 
-- When a function, operation, or user-defined type is not a part of the public API for a Q# library or program, ensure that its name begins with a leading underscore (`_`).
+- When a function, operation, or user-defined type is not a part of the public API for a Q# library or program, ensure that it is marked as internal by placing the `internal` keyword before the `function`, `operation`, or `newtype` declaration.
 
 # [Examples](#tab/examples)
 
 |   | Name | Description |
 |---|------|-------------|
-| ☒ | <s>`ApplyDecomposedOperation_`</s> | The underscore `_` should not appear at the end of the name. |
-| ☑ | `_ApplyDecomposedOperation` | The underscore `_` at the beginning clearly indicates that this operation is for internal use only. |
+| ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Do not use an underscore `_` to indicate that this operation is for internal use only. |
+| ☑ | `internal operation ApplyDecomposedOperation` | The `internal` keyword at the beginning clearly indicates that this operation is for internal use only. |
 
 ***
-
 ### Variants ###
 
 Though this limitation may not persist in future versions of Q#, it is presently the case that there will often be groups of related operations or functions that are distinguished by which functors their inputs support, or by the concrete types of their arguments.
@@ -456,4 +455,3 @@ We suggest:
 | ☒ | <s>`Example (a, b, c)`</s> | Spaces should be suppressed after function, operation, or UDT names. |
 
 ***
-

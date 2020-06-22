@@ -21,7 +21,7 @@ Jupyter Notebooks allow in-place code execution alongside instructions, notes, a
 
 IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
 
-### [Install using Conda (recommended)](#tab/tabid-conda)
+### [Install using conda (recommended)](#tab/tabid-conda)
 
 1. Prerequisites
 

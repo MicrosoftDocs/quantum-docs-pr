@@ -14,7 +14,7 @@ Install the QDK to develop Python host programs to call Q# operations.
 
 ## Install the `qsharp` Python package
 
-### [Install using Conda (recommended)](#tab/tabid-conda)
+### [Install using conda (recommended)](#tab/tabid-conda)
 
 1. Prerequisites
 

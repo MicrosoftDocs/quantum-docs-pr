@@ -242,7 +242,6 @@ callable: the `TestBellState` operation in this case. The full code should be:
 
 ```
 namespace Bell {
-
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;
 

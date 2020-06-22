@@ -110,7 +110,7 @@ qubit. In this code snippet, an operation `Set` is defined that takes as a param
 qubit and another parameter, `desired`, representing the state that we would
 like the qubit to be in.  The operation `Set` performs a measurement on the
 qubit using the operation `M`.  In Q#, a qubit measurement always returns either
-`Zero` or `One`.  If the measurement returns a value not equal to a desired
+`Zero` or `One`.  If the measurement returns a value not equal to the desired
 value, `Set` “flips” the qubit; that is, it executes an `X` operation, which
 changes the qubit state to a new state in which the probabilities of a
 measurement returning `Zero` and `One` are reversed. This way, `Set` always lets

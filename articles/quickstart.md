@@ -143,7 +143,7 @@ the target qubit in the desired state.
 #### About Q# operations
 
 A Q# operation is a quantum subroutine. That is, it is a callable routine that
-contains quantum operations.
+contains calls to other quantum operations.
 
 The arguments to an operation are specified as a tuple, within parentheses.
 

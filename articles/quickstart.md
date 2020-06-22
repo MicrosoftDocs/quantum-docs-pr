@@ -70,10 +70,10 @@ VS Code](xref:microsoft.quantum.install.standalone).
 
 To create a new project, in VS Code: 
 
-1. Click View -> Command Palette and select Q#: Create New Project.
-2. Click Standalone console application.
-3. Navigate to the location to save the project and click Create Project.
-4. When the project is successfully created, click Open new project... in the
+1. Click **View** -> **Command Palette** and select **Q#: Create New Project**.
+2. Click **Standalone console application**.
+3. Navigate to the location to save the project and click **Create Project**.
+4. When the project is successfully created, click **Open new project...** in the
    lower right.
 
 In this case we called the project: `Bell`. This generates two files:

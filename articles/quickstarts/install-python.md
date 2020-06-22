@@ -29,7 +29,7 @@ Install the QDK to develop Python host programs to call Q# operations.
 
 That's it! You now have both the `qsharp` Python package and the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Python and allows you to use Q# Jupyter Notebooks.
 
-### [Install using pip (advanced)](#tab/tabid-conda)
+### [Install using pip (advanced)](#tab/tabid-pip)
 
 1. Prerequisites:
 

@@ -36,7 +36,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
 That's it! You now have both the `qsharp` Python package and the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Python and allows you to use Q# Jupyter Notebooks.
 
-### [Install using .NET CLI (advanced)](#tab/tabid-conda)
+### [Install using .NET CLI (advanced)](#tab/tabid-dotnetcli)
 
 1. Prerequisites:
 

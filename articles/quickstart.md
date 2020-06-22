@@ -76,7 +76,7 @@ To create a new project, in VS Code:
 4. When the project is successfully created, click **Open new project...** in the
    lower right.
 
-In this case we called the project: `Bell`. This generates two files:
+In this case we called the project `Bell`. This generates two files:
 `Bell.csproj`, the project file and `Program.qs`, a template of a Q# application
 that we will use to write our application. The content of `Program.qs` should
 be:

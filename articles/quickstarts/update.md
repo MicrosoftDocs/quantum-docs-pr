@@ -147,7 +147,7 @@ With your Q# projects now updated, follow the instructions below to update the Q
 The process to update the QDK varies depending on your development language and environment.
 Select your development environment below.
 
-* [Python: update the `qsharp` package](#update-the-q-python-package)
+* [Python: update the `qsharp` package](#update-the-qsharp-python-package)
 * [Jupyter Notebooks: update the IQ# kernel](#update-the-iq-jupyter-kernel)
 * [Visual Studio: update the QDK extension](#update-visual-studio-qdk-extension)
 * [VS Code: update the QDK extension](#update-vs-code-qdk-extension)

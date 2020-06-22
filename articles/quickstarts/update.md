@@ -156,6 +156,8 @@ Select your development environment below.
 
 ### Update the `qsharp` Python package
 
+The update procedure depends on whether you originally installed using conda or using the .NET CLI and pip.
+
 #### [Update using conda (recommended)](#tab/tabid-conda)
 
 1. Activate the conda environment where you installed the `qsharp` package, and then run this command to update it:
@@ -226,6 +228,8 @@ Select your development environment below.
 You can now use the updated `qsharp` Python package to run your existing quantum programs.
 
 ### Update the IQ# Jupyter kernel
+
+The update procedure depends on whether you originally installed using conda or using the .NET CLI and pip.
 
 #### [Update using conda (recommended)](#tab/tabid-conda)
 

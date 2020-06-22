@@ -8,12 +8,12 @@
     {
       "source_path": "articles/quantum-RelNotes.md",
       "redirect_url": "/quantum/resources/relnotes",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-concepts-1-Intro.md",
       "redirect_url": "/quantum/concepts/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-concepts-2-VectorsMatrices.md",
@@ -53,7 +53,7 @@
     {
       "source_path": "articles/quantum-concepts-9-SoftwareStack.md",
       "redirect_url": "/quantum/concepts/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-concepts-10-Oracles.md",
@@ -63,7 +63,7 @@
     {
       "source_path": "articles/quantum-InstallConfig.md",
       "redirect_url": "/quantum/quickstarts/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-WriteAQuantumProgram.md",
@@ -73,7 +73,7 @@
     {
       "source_path": "articles/quantum-SimulatorsAndMachines.md",
       "redirect_url": "/quantum/user-guide/machines/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-devguide-1-Intro.md",
@@ -398,7 +398,7 @@
     {
       "source_path": "articles/concepts/glossary.md",
       "redirect_url": "/quantum/resources/glossary",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/relnotes/index.md",
@@ -408,7 +408,7 @@
     {
       "source_path": "articles/relnotes/0.3-migration.md",
       "redirect_url": "/quantum/resources/relnotes",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/intro-to-katas.md",

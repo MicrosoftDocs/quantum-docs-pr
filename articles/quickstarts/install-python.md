@@ -12,7 +12,26 @@ uid: microsoft.quantum.install.python
 
 Install the QDK to develop Python host programs to call Q# operations.
 
+## Install the `qsharp` Python package
+
+### [Install using Conda (recommended)](#tab/tabid-conda)
+
 1. Prerequisites
+
+    - Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads).
+    - (optional) Create a new conda environment by running `conda create --name qsharp-env`. Activate this environment by running `conda activate qsharp-env`.
+
+1. Install the `qsharp` package in your preferred conda environment:
+
+    ```
+    conda install -c quantum-engineering qsharp
+    ```
+
+That's it! You now have both the `qsharp` Python package and the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Python and allows you to use Q# Jupyter Notebooks.
+
+### [Install using pip (advanced)](#tab/tabid-conda)
+
+1. Prerequisites:
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - The [PIP](https://pip.pypa.io/en/stable/installing) Python package manager
@@ -40,52 +59,40 @@ Install the QDK to develop Python host programs to call Q# operations.
     > ```
     > where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
     > Typically this will be under `.dotnet/tools` in your user profile folder.
-  
+
+## Write your first Q# program
+
 1. While you can use Q# with Python in any IDE, we highly recommend using Visual Studio Code (VS Code) IDE for your Q# + Python applications. By using Visual Studio Code and the QDK Visual Studio Code extension you gain access to richer functionality.
 
-    - Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac)
+    - Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
     - Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
 1. Verify the installation by creating a `Hello World` application
 
-    - Create a minimal Q# operation, by creating a file called `Operation.qs`, and adding the following code to it:
+    - Create a minimal Q# operation by creating a file called `Operation.qs` and adding the following code to it:
 
-        ```qsharp
-        namespace HelloWorld {
-            open Microsoft.Quantum.Intrinsic;
-            open Microsoft.Quantum.Canon;
+        :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3,6,9-15,34":::
 
-            operation SayHello() : Unit {
-                Message("Hello from quantum world!");
-            }
-        }
-        ```
-
-    - Create a Python program called `hello_world.py` to call the Q# `SayHello()` operation:
+    - Create a Python program called `random_number.py` to call the Q# `SampleQuantumRandomNumberGenerator()` operation:
 
         ```python
         import qsharp
 
-        from HelloWorld import SayHello
+        from Qrng import SampleQuantumRandomNumberGenerator
 
-        SayHello.simulate()
+        SampleQuantumRandomNumberGenerator.simulate()
         ```
 
     - Run the program:
 
         ```
-        python hello_world.py
+        python random_number.py
         ```
 
-    - Verify the output. Your program should output the following lines:
-
-        ```
-        Hello from quantum world!
-        ```
-
+    - You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `Zero` or `One` printed on the screen. If you execute the program repeatedly, you should see each result approximately half the time.
 
 > [!NOTE]
-> * You can also use Python Jupyter notebooks to write the classical Python program and call Q# operations from the cells. The Python code is just a normal Python program.
+> * The Python code is just a normal Python program. You can use any Python environment, including Python-based Jupyter Notebooks, to write the Python program and call Q# operations.
 
 ## Next steps
 

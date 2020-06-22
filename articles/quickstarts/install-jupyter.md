@@ -14,18 +14,37 @@ Install the QDK for developing Q# operations on Q# Jupyter Notebooks.
 
 Jupyter Notebooks allow in-place code execution alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
 
-IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
-
 > [!NOTE]
 > * In Q# Jupyter Notebooks you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files). This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.
 
+## Install the IQ# Jupyter kernel
+
+IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
+
+### [Install using Conda (recommended)](#tab/tabid-conda)
+
 1. Prerequisites
+
+    - Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads).
+    - (optional) Create a new conda environment by running `conda create --name qsharp-env`. Activate this environment by running `conda activate qsharp-env`.
+
+1. Install the `qsharp` package in your preferred conda environment:
+
+    ```
+    conda install -c quantum-engineering qsharp
+    ```
+
+That's it! You now have both the `qsharp` Python package and the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Python and allows you to use Q# Jupyter Notebooks.
+
+### [Install using .NET CLI (advanced)](#tab/tabid-conda)
+
+1. Prerequisites:
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
     - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-1. Install the `iqsharp` package
+1. Install the `Microsoft.Quantum.IQSharp` package.
 
     ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -41,36 +60,34 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
     > where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
     > Typically this will be under `.dotnet/tools` in your user profile folder.
 
-1. Verify the installation by creating a `Hello World` application
+## Write your first Q# notebook
 
-    - Run the following command to start the notebook server:
+Verify the installation by writing and executing a simple Q# operation.
 
-        ```
-        jupyter notebook
-        ```
+1. Run the following command to start the Jupyter Notebook server:
 
-    - To open the Jupyter Notebook, copy and paste the URL provided by the command line into your browser.
+    ```
+    jupyter notebook
+    ```
 
-    - Create a Jupyter Notebook with a Q# kernel, and add the following code to the first notebook cell:
+    - If the Jupyter Notebook doesn't open automatically in your browser, copy and paste the URL provided by the command line into your browser.
 
-        ```qsharp
-        operation SayHello () : Unit {
-            Message("Hello from quantum world!");
-        }
-        ```
+1. Choose "New" → "Q#" to create a Jupyter Notebook with a Q# kernel, and add the following code to the first notebook cell:
 
-    - Run this cell of the notebook:
+    :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="6,9-15":::
 
-        ![Jupyter Notebook cell with Q# code](~/media/install-guide-jupyter.png)
+1. Run this cell of the notebook:
 
-        You should see `SayHello` in the output of the cell. When running in Jupyter Notebook, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
+    ![Jupyter Notebook cell with Q# code](~/media/install-guide-jupyter.png)
+
+    You should see `SampleQuantumRandomNumberGenerator` in the output of the cell. When running in Jupyter Notebook, the Q# code is compiled, and the cell outputs the name of the operation(s) that it finds.
 
 
-    - In a new cell, execute the operation you just created (in a simulator) by using the `%simulate` command:
+1. In a new cell, execute the operation you just created (in a simulator) by using the `%simulate` command:
 
-        ![Jupyter Notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
+    ![Jupyter Notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
 
-        You should see the message printed on the screen along with the result of the operation you invoked (here, we see the empty tuple `()` because our operation simply returns a `Unit` type).
+    You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `Zero` or `One` printed on the screen. If you execute the cell repeatedly, you should see each result approximately half the time.
 
 ## Next steps
 

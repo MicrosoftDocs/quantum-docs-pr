@@ -165,7 +165,7 @@ is rooted in the early days of quantum computing when algorithms were merely a
 theoretical construct and visualized as diagrams similarly to circuit diagrams
 in classical computing.
 
-### Code for `TestBellState`
+### Counting measurement outcomes
 
 **Overview:**  To demonstrate the effect of the `Set` operation, a
 `TestBellState` operation is then added. This operation takes as input a `Zero`

@@ -42,7 +42,7 @@ of quantum computing.
 
 Where classical bits hold a single binary value such as a 0 or 1, the state of a
 [qubit](xref:microsoft.quantum.glossary#qubit) can be in a **superposition** of
-0 and 1.  Conceptually, a qubit can be thought of as a direction in an abstract
+0 and 1.  Conceptually, the state of a qubit can be thought of as a direction in an abstract
 space (also known as a vector).  A qubit can be in any of the possible
 directions. The two **classical states** are the two directions; representing
 100% chance of measuring 0 and 100% chance of measuring 1.

@@ -123,6 +123,10 @@ functions:
     Given four arrays, returns a new array of 4-tuples such that each 4-tuple
     contains an element from each original array.
 operations:
+- uid: microsoft.quantum.arrays.drawmany
+  summary: |-
+    Repeats an operation for a given number of samples, collecting its outputs
+    in an array.
 - uid: microsoft.quantum.arrays.foreach
   summary: |-
     Given an array and an operation that is defined

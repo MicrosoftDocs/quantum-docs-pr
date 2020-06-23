@@ -12,7 +12,7 @@ uid: microsoft.quantum.install.python
 
 Install the QDK to develop Python host programs to call Q# operations.
 
-1. Pre-requisites
+1. Prerequisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - The [PIP](https://pip.pypa.io/en/stable/installing) Python package manager
@@ -31,6 +31,15 @@ Install the QDK to develop Python host programs to call Q# operations.
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > If you get an error during the `dotnet iqsharp install` step, open a new terminal window and try again.
+    > If this still doesn't work, try locating the installed `dotnet-iqsharp` tool (on Windows, `dotnet-iqsharp.exe`) and running:
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
+    > Typically this will be under `.dotnet/tools` in your user profile folder.
   
 1. While you can use Q# with Python in any IDE, we highly recommend using Visual Studio Code (VS Code) IDE for your Q# + Python applications. By using Visual Studio Code and the QDK Visual Studio Code extension you gain access to richer functionality.
 

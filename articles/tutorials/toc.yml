@@ -1,0 +1,12 @@
+  - name: Quantum random number generator
+    href: quantum-random-number-generator.md
+  - name: Explore entanglement with Q#
+    href: explore-entanglement.md
+  - name: Implement Grover's search algorithm
+    href: search.md
+  - name: Qubit-level prorgramming
+    href: qubit-level.md
+  - name: Learn Q# with the Quantum Katas
+    href: intro-to-katas.md
+  - name: Q# code samples
+    href: https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp

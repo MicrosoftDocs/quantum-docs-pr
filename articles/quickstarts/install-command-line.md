@@ -12,7 +12,7 @@ uid: microsoft.quantum.install.standalone
 
 Q# programs can be executed on their own, without a driver in a host language like C#, F#, or Python.
 
-## Pre-requisites
+## Prerequisites
 
 - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
 

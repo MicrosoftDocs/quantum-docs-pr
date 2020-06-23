@@ -66,8 +66,8 @@ That's it! You now have both the `qsharp` Python package and the IQ# kernel for 
 
 While you can use Q# with Python in any IDE, we highly recommend using Visual Studio Code (VS Code) IDE for your Q# + Python applications. By using Visual Studio Code and the QDK Visual Studio Code extension you gain access to richer functionality.
 
-    - Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
-    - Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
+- Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
+- Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
 Now you are ready to verify your `qsharp` Python package installation by writing and executing a simple Q# program.
 
@@ -75,7 +75,7 @@ Now you are ready to verify your `qsharp` Python package installation by writing
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="3-14":::
 
-1. Create a Python program called `host.py` to call the Q# `SampleQuantumRandomNumberGenerator()` operation:
+1. Create a Python program called `host.py` to simulate the Q# `SampleQuantumRandomNumberGenerator()` operation:
 
     ```python
     import qsharp

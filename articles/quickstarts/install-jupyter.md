@@ -62,7 +62,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
 That's it! You now have the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Q# Jupyter Notebooks.
 
-## Write your first Q# notebook
+## Create your first Q# notebook
 
 Now you are ready to verify your Q# Jupyter Notebook installation by writing and executing a simple Q# operation.
 
@@ -83,7 +83,6 @@ Now you are ready to verify your Q# Jupyter Notebook installation by writing and
     ![Jupyter Notebook cell with Q# code](~/media/install-guide-jupyter.png)
 
     You should see `SampleQuantumRandomNumberGenerator` in the output of the cell. When running in Jupyter Notebook, the Q# code is compiled, and the cell outputs the name of any operations that it finds.
-
 
 1. In a new cell, execute the operation you just created (in a simulator) by using the `%simulate` command:
 

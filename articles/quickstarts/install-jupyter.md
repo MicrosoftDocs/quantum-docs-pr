@@ -92,7 +92,7 @@ Now you are ready to verify your Q# Jupyter Notebook installation by writing and
 
 ## Next steps
 
-Now that you have installed the QDK for Q# Jupyter Notebooks, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng) by writing your Q# code directly within the Jupyter Notebook environment.
+Now that you have installed the QDK for Q# Jupyter Notebooks, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng) by writing Q# code directly within the Jupyter Notebook environment.
 
 For more examples of what you can do with Q# Jupyter Notebooks, please take a look at:
 - [Intro to Q# and Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). There you will find a Q# Jupyter Notebook that provides more details on how to use Q# in the Jupyter environment.

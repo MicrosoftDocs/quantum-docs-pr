@@ -55,10 +55,10 @@ The constants `true`, `false`, `PauliI`, `PauliX`, `PauliY`, `PauliZ`, `One`, an
 * For any valid Q# type, there is a type that represents an array of values of that type.
     For example, `Qubit[]` and `(Bool, Pauli)[]` represent arrays of `Qubit` values and `(Bool, Pauli)` tuple values.
 
-* An array of arrays is also valid. For example, an array of integer arrays is denoted `Int[][]`.
+* An array of arrays is also valid. Expanding on the previous example, an array of `(Bool, Pauli)` arrays is denoted `(Bool, Pauli)[][]`.
 
-    > [!NOTE] 
-    > The second example  represents a potentially jagged array of arrays and not a rectangular two-dimensional array. Q# does not support rectangular multi-dimensional arrays.
+> [!NOTE] 
+> This example, `(Bool, Pauli)[][]`, represents a potentially jagged array of arrays and not a rectangular two-dimensional array. Q# does not support rectangular multi-dimensional arrays.
 
 * An array value can be written in Q# source code by using square brackets around the elements of an array, as in `[PauliI, PauliX, PauliY, PauliZ]`.
 The common base type of all items in the array determines the type of an array literal. 
@@ -67,7 +67,7 @@ For an example, see [arrays of callables](xref:microsoft.quantum.guide.expressio
 
     > [!WARNING]
     > Once created, the elements of an array cannot be changed.
-    > To construct a modified array, use[Update-and-reassign statements](xref:microsoft.quantum.guide.variables#update-and-reassign-statements) or [copy-and-update expressions](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions).
+    > To construct a modified array, use [Update-and-reassign statements](xref:microsoft.quantum.guide.variables#update-and-reassign-statements) or [copy-and-update expressions](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions).
 
 * Alternatively, an array can be created from its size using the `new` keyword:
 
@@ -129,9 +129,9 @@ A user-defined type declaration consists of the keyword `newtype`, followed by t
 
 For example:
 
-    ```qsharp
-    newtype PairOfInts = (Int, Int);
-    ```
+```qsharp
+newtype PairOfInts = (Int, Int);
+```
     
 * Each Q# source file may declare any number of user-defined types.
 * Type names must be unique within a namespace and may not conflict with operation and function names.
@@ -217,7 +217,7 @@ For more details on the unwrap operator, see [Type Expressions in Q#](xref:micro
 
 Create values of a user-defined type by calling the corresponding type constructor:
 
-```
+```qsharp
 let realUnit = Complex(1.0, 0.0);
 let imaginaryUnit = Complex(0.0, 1.0);
 ```

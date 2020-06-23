@@ -93,7 +93,7 @@ Now you are ready to verify your `qsharp` Python package installation by writing
 1. You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `Zero` or `One` printed on the screen. If you execute the program repeatedly, you should see each result approximately half the time.
 
 > [!NOTE]
-> * The Python code is just a normal Python program. You can use any Python environment, including Python-based Jupyter Notebooks, to write the Python program and call Q# operations.
+> * The Python code is just a normal Python program. You can use any Python environment, including Python-based Jupyter Notebooks, to write the Python program and call Q# operations. The Python program can import Q# operations from any .qs files located in the same folder as the Python code itself.
 
 ## Next steps
 

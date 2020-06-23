@@ -1,8 +1,8 @@
 ---
 title: Install the Microsoft Quantum Development Kit (QDK)
 description: How to install the Microsoft Quantum Development Kit for different environments.
-author: natke
-ms.author: nakersha
+author: bradben
+ms.author: bradben
 ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to

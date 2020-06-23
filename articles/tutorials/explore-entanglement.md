@@ -82,17 +82,17 @@ that we will use to write our application. The content of `Program.qs` should
 be:
 
 ```qsharp
-namespace Bell {
+   namespace Bell {
 
-    open Microsoft.Quantum.Canon;
-    open Microsoft.Quantum.Intrinsic;
+      open Microsoft.Quantum.Canon;
+      open Microsoft.Quantum.Intrinsic;
     
 
-    @EntryPoint()
-    operation HelloQ() : Unit {
-        Message("Hello quantum world!");
-    }
-}
+      @EntryPoint()
+      operation HelloQ() : Unit {
+          Message("Hello quantum world!");
+      }
+   }
 ```
 
 ## Write the Q\# application
@@ -118,6 +118,7 @@ the target qubit in the desired state.
 
 Replace the contents of `Program.qs` with the following code:
 
+<<<<<<< HEAD
     ```qsharp
     namespace Bell {
         open Microsoft.Quantum.Intrinsic;
@@ -130,6 +131,20 @@ Replace the contents of `Program.qs` with the following code:
         }
     }
     ```
+=======
+```qsharp
+   namespace Bell {
+       open Microsoft.Quantum.Intrinsic;
+       open Microsoft.Quantum.Canon;
+
+       operation Set(desired : Result, q1 : Qubit) : Unit {
+           if (desired != M(q1)) {
+               X(q1);
+           }
+       }
+   }
+```
+>>>>>>> 22f1280baf5bad6d7d032cd0b5b0e80a0877ccbc
 
 This operation may now be called to set a qubit to a classical state, either
 returning `Zero` 100% of the time or returning `One` 100% of the time.
@@ -154,9 +169,9 @@ an empty tuple (`Tuple[()]`) in Python.
 
 You have used two quantum operations in your first Q# operation:
 
-* The [M](xref:microsoft.quantum.intrinsic.m) operation, which measures the
+* The [`M`](xref:microsoft.quantum.intrinsic.m) operation, which measures the
   state of the qubit
-* The [X](xref:microsoft.quantum.intrinsic.x) operation, which flips the state
+* The [`X`](xref:microsoft.quantum.intrinsic.x) operation, which flips the state
   of a qubit
 
 A quantum operation transforms the state of a qubit. Sometime people talk about
@@ -181,30 +196,41 @@ to demonstrate superposition and entanglement.
 Add the following operation to the `Bell.qs` file, inside the namespace,
    after the end of the `SetQubitState` operation:
 
-    ```qsharp
-    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
+```qsharp
+   operation TestBellState(count : Int, initial : Result) : (Int, Int) {
 
-        mutable numOnes = 0;
-        using (qubit = Qubit()) {
+       mutable numOnes = 0;
+       using (qubit = Qubit()) {
 
+<<<<<<< HEAD
             for (test in 1..count) {
                 SetQubitState(initial, qubit);
                 let res = M(qubit);
+=======
+           for (test in 1..count) {
+               Set(initial, qubit);
+               let res = M(qubit);
+>>>>>>> 22f1280baf5bad6d7d032cd0b5b0e80a0877ccbc
 
-                // Count the number of ones we saw:
-                if (res == One) {
-                    set numOnes += 1;
-                }
-            }
+               // Count the number of ones we saw:
+               if (res == One) {
+                   set numOnes += 1;
+               }
+           }
             
+<<<<<<< HEAD
             SetQubitState(Zero, qubit);
         }
+=======
+           Set(Zero, qubit);
+       }
+>>>>>>> 22f1280baf5bad6d7d032cd0b5b0e80a0877ccbc
 
-        // Return number of times we saw a |0> and number of times we saw a |1>
-        Message("Test results (# of 0s, # of 1s): ");
-        return (count - numOnes, numOnes);
-    }
-    ```
+       // Return number of times we saw a |0> and number of times we saw a |1>
+       Message("Test results (# of 0s, # of 1s): ");
+       return (count - numOnes, numOnes);
+   }
+```
 Note that we added a line before the `return` to print an explanatory message in
 the console with the function (`Message`)[microsoft.quantum.intrinsic.message]
 

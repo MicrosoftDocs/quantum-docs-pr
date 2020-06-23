@@ -154,9 +154,9 @@ an empty tuple (`Tuple[()]`) in Python.
 
 You have used two quantum operations in your first Q# operation:
 
-* The [M](xref:microsoft.quantum.intrinsic.m) operation, which measures the
+* The [`M`](xref:microsoft.quantum.intrinsic.m) operation, which measures the
   state of the qubit
-* The [X](xref:microsoft.quantum.intrinsic.x) operation, which flips the state
+* The [`X`](xref:microsoft.quantum.intrinsic.x) operation, which flips the state
   of a qubit
 
 A quantum operation transforms the state of a qubit. Sometime people talk about
@@ -181,30 +181,30 @@ to demonstrate superposition and entanglement.
 Add the following operation to the `Bell.qs` file, inside the namespace,
    after the end of the `Set` operation:
 
-    ```qsharp
-    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
+```qsharp
+   operation TestBellState(count : Int, initial : Result) : (Int, Int) {
 
-        mutable numOnes = 0;
-        using (qubit = Qubit()) {
+       mutable numOnes = 0;
+       using (qubit = Qubit()) {
 
-            for (test in 1..count) {
-                Set(initial, qubit);
-                let res = M(qubit);
+           for (test in 1..count) {
+               Set(initial, qubit);
+               let res = M(qubit);
 
-                // Count the number of ones we saw:
-                if (res == One) {
-                    set numOnes += 1;
-                }
-            }
+               // Count the number of ones we saw:
+               if (res == One) {
+                   set numOnes += 1;
+               }
+           }
             
-            Set(Zero, qubit);
-        }
+           Set(Zero, qubit);
+       }
 
-        // Return number of times we saw a |0> and number of times we saw a |1>
-        Message("Test results (# of 0s, # of 1s): ");
-        return (count - numOnes, numOnes);
-    }
-    ```
+       // Return number of times we saw a |0> and number of times we saw a |1>
+       Message("Test results (# of 0s, # of 1s): ");
+       return (count - numOnes, numOnes);
+   }
+```
 Note that we added a line before the `return` to print an explanatory message in
 the console with the function (`Message`)[microsoft.quantum.intrinsic.message]
 

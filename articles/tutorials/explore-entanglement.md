@@ -82,17 +82,17 @@ that we will use to write our application. The content of `Program.qs` should
 be:
 
 ```qsharp
-namespace Bell {
+   namespace Bell {
 
-    open Microsoft.Quantum.Canon;
-    open Microsoft.Quantum.Intrinsic;
+      open Microsoft.Quantum.Canon;
+      open Microsoft.Quantum.Intrinsic;
     
 
-    @EntryPoint()
-    operation HelloQ() : Unit {
-        Message("Hello quantum world!");
-    }
-}
+      @EntryPoint()
+      operation HelloQ() : Unit {
+          Message("Hello quantum world!");
+      }
+   }
 ```
 
 ## Write the Q\# application
@@ -118,18 +118,18 @@ the target qubit in the desired state.
 
 Replace the contents of `Program.qs` with the following code:
 
-    ```qsharp
-    namespace Bell {
-        open Microsoft.Quantum.Intrinsic;
-        open Microsoft.Quantum.Canon;
+```qsharp
+   namespace Bell {
+       open Microsoft.Quantum.Intrinsic;
+       open Microsoft.Quantum.Canon;
 
-        operation Set(desired : Result, q1 : Qubit) : Unit {
-            if (desired != M(q1)) {
-                X(q1);
-            }
-        }
-    }
-    ```
+       operation Set(desired : Result, q1 : Qubit) : Unit {
+           if (desired != M(q1)) {
+               X(q1);
+           }
+       }
+   }
+```
 
 This operation may now be called to set a qubit to a classical state, either
 returning `Zero` 100% of the time or returning `One` 100% of the time.

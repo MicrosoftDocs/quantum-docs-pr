@@ -32,7 +32,7 @@ The Q# language provides several *primitive types*, from which other types can b
    type.
 - The `Double` type represents a double-precision floating-point number, e.g.: `0.0`, `-1.3`, `4e-7`.
 - The `Bool` type represents a Boolean value which can either be `true` or `false`.
-- The `Range` type represents a sequence of integers, denoted by `start..step..stop`, where denoting the step is options. 
+- The `Range` type represents a sequence of integers, denoted by `start..step..stop`, where denoting the step is optional. 
    That is `start .. stop` corresponds to `start..1..stop`, and e.g. `1..2..7` represents the sequence $\{1, 3, 5, 7\}$.
 - The `String` type is a sequence of Unicode characters that is opaque to the user once created.
   This type is used to report messages to a classical host in the case of an error or diagnostic event.
@@ -61,6 +61,8 @@ Q# does not provide support for rectangular multi-dimensional arrays.
 
 An array value can be written in Q# source code by using square brackets around the elements of an array, as in `[PauliI, PauliX, PauliY, PauliZ]`.
 The type of an array literal is determined by the common base type of all items in the array. 
+Hence trying to construct an array with elements that have no common base type will raise an error.  
+See [arrays of callables](xref:microsoft.quantum.guide.expressions#arrays-of-callables) for an example of this.
 
 > [!WARNING]
 > The elements of an array cannot be changed after the array has been created.
@@ -296,7 +298,8 @@ When invoking a type-parameterized callable, all arguments that have the same ty
 
 Q# does not provide a mechanism for constraining the possible types that might be substituted for a type parameter.
 
-## What's Next?
+## Next steps
+
 Now that you've seen all the types which comprise the Q# language, you can head to [Type Expressions in Q#](xref:microsoft.quantum.guide.expressions) to see how to create and manipulate expressions of these various types.
 
 

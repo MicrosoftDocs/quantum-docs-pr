@@ -106,8 +106,7 @@ Expression evaluation statements require a terminating semicolon.
 Nearly every aspect of a Q# program is built using statements, so no single page could encompass all the information relating to them.
 However, their lexical structure and formatting is described on the [Q# File Structure](xref:microsoft.quantum.guide.filestructure) page, symbol binding assignment and scope at [Variables in Q#](xref:microsoft.quantum.guide.variables), and control flow loops such as `for` at [Control Flow in Q#](xref:microsoft.quantum.guide.controlflow).
 
-
-## What's next?
+## Next steps
 Throughout the rest of this guide, we will show you how to use Q# to construct complex quantum programs through the basic building blocks of operations, functions, and types.
 
 To get started, you can start learning about [Types in Q#](xref:microsoft.quantum.guide.types).

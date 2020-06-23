@@ -169,5 +169,6 @@ The following names are recognized as documentation comment headers.
 - **References**: A list of references and citations for the item being
   documented.
 
-## What's Next?
+## Next steps
+
 Learn about [Operations and Functions](xref:microsoft.quantum.guide.operationsfunctions) in Q#.

@@ -230,5 +230,6 @@ if (a == b) {
 ...
 ```
 
-## What's Next?
+## Next steps
+
 Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in Q#.

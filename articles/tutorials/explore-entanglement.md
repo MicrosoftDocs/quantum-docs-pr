@@ -106,14 +106,14 @@ introduce qubit states, operations, and measurement.
 
 In the first code below, we show you how to work with qubits in
 Q#.  We’ll introduce two operations, [`M`](xref:microsoft.quantum.intrinsic.m) and [`X`](xref:microsoft.quantum.intrinsic.x) that transform the state of a
-qubit. In this code snippet, an operation `Set` is defined that takes as a parameter a
+qubit. In this code snippet, an operation `SetQubitState` is defined that takes as a parameter a
 qubit and another parameter, `desired`, representing the state that we would
-like the qubit to be in.  The operation `Set` performs a measurement on the
+like the qubit to be in.  The operation `SetQubitState` performs a measurement on the
 qubit using the operation `M`.  In Q#, a qubit measurement always returns either
 `Zero` or `One`.  If the measurement returns a value not equal to the desired
-value, `Set` “flips” the qubit; that is, it executes an `X` operation, which
+value, `SetQubitState` “flips” the qubit; that is, it executes an `X` operation, which
 changes the qubit state to a new state in which the probabilities of a
-measurement returning `Zero` and `One` are reversed. This way, `Set` always puts
+measurement returning `Zero` and `One` are reversed. This way, `SetQubitState` always puts
 the target qubit in the desired state.
 
 Replace the contents of `Program.qs` with the following code:
@@ -123,7 +123,7 @@ Replace the contents of `Program.qs` with the following code:
         open Microsoft.Quantum.Intrinsic;
         open Microsoft.Quantum.Canon;
 
-        operation Set(desired : Result, q1 : Qubit) : Unit {
+        operation SetQubitState(desired : Result, q1 : Qubit) : Unit {
             if (desired != M(q1)) {
                 X(q1);
             }
@@ -136,8 +136,8 @@ returning `Zero` 100% of the time or returning `One` 100% of the time.
 `Zero` and `One` are constants that represent the only two possible results
 of a measurement of a qubit.
 
-The operation `Set` measures the qubit. If the qubit is in the state we
-want, `Set` leaves it alone; otherwise, by executing the `X` operation, we
+The operation `SetQubitState` measures the qubit. If the qubit is in the state we
+want, `SetQubitState` leaves it alone; otherwise, by executing the `X` operation, we
 change the qubit state to the desired state.
 
 #### About Q# operations
@@ -148,7 +148,7 @@ contains calls to other quantum operations.
 The arguments to an operation are specified as a tuple, within parentheses.
 
 The return type of the operation is specified after a colon. In this case, the
-`Set` operation has no return, so it is marked as returning `Unit`. This is the
+`SetQubitState` operation has no return, so it is marked as returning `Unit`. This is the
 Q# equivalent of `unit` in F#, which is roughly analogous to `void` in C#, and
 an empty tuple (`Tuple[()]`) in Python.
 
@@ -167,9 +167,9 @@ in classical computing.
 
 ### Counting measurement outcomes
 
-To demonstrate the effect of the `Set` operation, a
+To demonstrate the effect of the `SetQubitState` operation, a
 `TestBellState` operation is then added. This operation takes as input a `Zero`
-or `One`, and calls the `Set` operation some number of times with that input,
+or `One`, and calls the `SetQubitState` operation some number of times with that input,
 and counts the number of times that `Zero` was returned from the measurement of
 the qubit and the number of times that `One` was returned. Of course, in this
 first simulation of the `TestBellState` operation, we expect that the output
@@ -179,7 +179,7 @@ parameter input will return `One`. Further on, we’ll add code to `TestBellStat
 to demonstrate superposition and entanglement.
 
 Add the following operation to the `Bell.qs` file, inside the namespace,
-   after the end of the `Set` operation:
+   after the end of the `SetQubitState` operation:
 
     ```qsharp
     operation TestBellState(count : Int, initial : Result) : (Int, Int) {
@@ -188,7 +188,7 @@ Add the following operation to the `Bell.qs` file, inside the namespace,
         using (qubit = Qubit()) {
 
             for (test in 1..count) {
-                Set(initial, qubit);
+                SetQubitState(initial, qubit);
                 let res = M(qubit);
 
                 // Count the number of ones we saw:
@@ -197,7 +197,7 @@ Add the following operation to the `Bell.qs` file, inside the namespace,
                 }
             }
             
-            Set(Zero, qubit);
+            SetQubitState(Zero, qubit);
         }
 
         // Return number of times we saw a |0> and number of times we saw a |1>
@@ -224,7 +224,7 @@ immutable variable. Operation arguments are always immutable.
 
 If you need a variable whose value can change, such as `numOnes` in the example,
 you can declare the variable with the `mutable` keyword. A mutable variable's
-value may be changed using a `set` statement.
+value may be changed using a `setQubitState` statement.
 
 In both cases, the type of a variable is inferred by the compiler. Q# doesn't
 require any type annotations for variables.
@@ -249,7 +249,7 @@ namespace Bell {
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;
 
-    operation Set(desired : Result, target : Qubit) : Unit {
+    operation SetQubitState(desired : Result, target : Qubit) : Unit {
         if (desired != M(target)) {
             X(target);
         }
@@ -262,7 +262,7 @@ namespace Bell {
         using (qubit = Qubit()) {
 
             for (test in 1..count) {
-                Set(initial, qubit);
+                SetQubitState(initial, qubit);
                 let res = M(qubit);
 
                 // Count the number of ones we saw:
@@ -271,7 +271,7 @@ namespace Bell {
                 }
             }
 
-            Set(Zero, qubit);
+            SetQubitState(Zero, qubit);
         }
 
     // Return number of times we saw a |0> and number of times we saw a |1>
@@ -414,22 +414,22 @@ This will allow us to add a new operation (`CNOT`) before we measure  (`M`) in
 `TestBellState`:
 
 ```qsharp
-Set(initial, q0);
-Set(Zero, q1);
+SetQubitState(initial, q0);
+SetQubitState(Zero, q1);
 
 H(q0);
 CNOT(q0, q1);
 let res = M(q0);
 ```
 
-We've added another `Set` operation to initialize the first qubit to make sure
+We've added another `SetQubitState` operation to initialize the first qubit to make sure
 that it's always in the `Zero` state when we start.
 
 We also need to reset the second qubit before releasing it.
 
 ```qsharp
-Set(Zero, q0);
-Set(Zero, q1);
+SetQubitState(Zero, q0);
+SetQubitState(Zero, q1);
 ```
 
 The full routine now looks like this:
@@ -440,8 +440,8 @@ The full routine now looks like this:
         mutable numOnes = 0;
         using ((q0, q1) = (Qubit(), Qubit())) {
             for (test in 1..count) {
-                Set (initial, q0);
-                Set (Zero, q1);
+                SetQubitState(initial, q0);
+                SetQubitState(Zero, q1);
 
                 H(q0);
                 CNOT(q0,q1);
@@ -453,8 +453,8 @@ The full routine now looks like this:
                 }
             }
 
-            Set(Zero, q0);
-            Set(Zero, q1);
+            SetQubitState(Zero, q0);
+            SetQubitState(Zero, q1);
         }
 
         // Return number of times we saw a |0> and number of times we saw a |1>
@@ -473,8 +473,8 @@ operation:
         mutable agree = 0;
         using ((q0, q1) = (Qubit(), Qubit())) {
             for (test in 1..count) {
-                Set(initial, q0);
-                Set(Zero, q1);
+                SetQubitState(initial, q0);
+                SetQubitState(Zero, q1);
 
                 H(q0);
                 CNOT(q0, q1);
@@ -490,8 +490,8 @@ operation:
                 }
             }
             
-            Set(Zero, q0);
-            Set(Zero, q1);
+            SetQubitState(Zero, q0);
+            SetQubitState(Zero, q1);
         }
 
         // Return times we saw |0>, times we saw |1>, and times measurements agreed

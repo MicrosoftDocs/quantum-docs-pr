@@ -19,7 +19,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 > [!NOTE]
 > * In Q# Jupyter Notebooks you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files). This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.
 
-1. Pre-requisites
+1. Prerequisites
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
@@ -31,6 +31,15 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > If you get an error during the `dotnet iqsharp install` step, open a new terminal window and try again.
+    > If this still doesn't work, try locating the installed `dotnet-iqsharp` tool (on Windows, `dotnet-iqsharp.exe`) and running:
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
+    > Typically this will be under `.dotnet/tools` in your user profile folder.
 
 1. Verify the installation by creating a `Hello World` application
 

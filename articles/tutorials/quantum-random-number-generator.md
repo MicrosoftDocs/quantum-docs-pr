@@ -33,7 +33,7 @@ Using the `H` operation, we are able to put our `Qubit` in superposition. To mea
 
 By putting our `Qubit` in superposition and measuring it, our result will be a different value each time the code is invoked.
 
-When a `Qubit` is de-allocated it must be explicitly set back to the `Zero` state, otherwise the simulator will report a runtime error. An easy way to achieve this is invoking `Reset`.
+When a `Qubit` is deallocated it must be explicitly set back to the `Zero` state, otherwise the simulator will report a runtime error. An easy way to achieve this is invoking `Reset`.
 
 ### Visualizing the code with the Bloch sphere
 

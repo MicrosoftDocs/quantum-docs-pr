@@ -44,7 +44,7 @@ namespace Quantum.MyProgram
 ```
 
 As the example shows, the `ResourcesEstimator` provides a `ToTSV()` method to generate
-a table with tab-seperated-values (TSV) that can be saved into a file
+a table with tab-separated-values (TSV) that can be saved into a file
 or written to the console for analysis. The output of the above program should look something like this:
 
 ```Output

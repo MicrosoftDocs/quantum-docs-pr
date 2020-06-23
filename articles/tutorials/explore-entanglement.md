@@ -1,8 +1,8 @@
 ---
 title: Explore entanglement with Q#
 description: Learn how to write a quantum program in Q#. Develop a Bell State application using the Quantum Development Kit (QDK)
-author: natke
-ms.author: nakersha 
+author: geduardo
+ms.author: v-edsanc@microsoft.com
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program

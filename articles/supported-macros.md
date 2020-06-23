@@ -1,8 +1,8 @@
 ---
 title: Supported LaTeX macros for authoring
 description: List of supported LaTeX macros for the Microsoft Quantum Development Kit documentation. 
-author: natke
-ms.author: nakersha
+author: bradben
+ms.author: bradben
 ms.date: 09/04/2019
 ms.topic: article
 uid: microsoft.quantum.contribute.macros

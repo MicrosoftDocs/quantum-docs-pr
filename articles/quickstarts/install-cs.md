@@ -1,8 +1,8 @@
 ---
 title: Develop with Q# and .NET
-author: natke
-ms.author: nakersha
-ms.date: 9/30/2019
+author: bradben
+ms.author: bradben
+ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs

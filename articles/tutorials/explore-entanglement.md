@@ -118,33 +118,19 @@ the target qubit in the desired state.
 
 Replace the contents of `Program.qs` with the following code:
 
-<<<<<<< HEAD
-    ```qsharp
-    namespace Bell {
-        open Microsoft.Quantum.Intrinsic;
-        open Microsoft.Quantum.Canon;
 
-        operation SetQubitState(desired : Result, q1 : Qubit) : Unit {
-            if (desired != M(q1)) {
-                X(q1);
-            }
-        }
-    }
-    ```
-=======
 ```qsharp
    namespace Bell {
        open Microsoft.Quantum.Intrinsic;
        open Microsoft.Quantum.Canon;
 
-       operation Set(desired : Result, q1 : Qubit) : Unit {
+       operation SetQubitState(desired : Result, q1 : Qubit) : Unit {
            if (desired != M(q1)) {
                X(q1);
            }
        }
    }
 ```
->>>>>>> 22f1280baf5bad6d7d032cd0b5b0e80a0877ccbc
 
 This operation may now be called to set a qubit to a classical state, either
 returning `Zero` 100% of the time or returning `One` 100% of the time.
@@ -202,15 +188,9 @@ Add the following operation to the `Bell.qs` file, inside the namespace,
        mutable numOnes = 0;
        using (qubit = Qubit()) {
 
-<<<<<<< HEAD
-            for (test in 1..count) {
-                SetQubitState(initial, qubit);
-                let res = M(qubit);
-=======
            for (test in 1..count) {
-               Set(initial, qubit);
+               SetQubitState(initial, qubit);
                let res = M(qubit);
->>>>>>> 22f1280baf5bad6d7d032cd0b5b0e80a0877ccbc
 
                // Count the number of ones we saw:
                if (res == One) {
@@ -218,13 +198,8 @@ Add the following operation to the `Bell.qs` file, inside the namespace,
                }
            }
             
-<<<<<<< HEAD
-            SetQubitState(Zero, qubit);
-        }
-=======
-           Set(Zero, qubit);
+           SetQubitState(Zero, qubit);
        }
->>>>>>> 22f1280baf5bad6d7d032cd0b5b0e80a0877ccbc
 
        // Return number of times we saw a |0> and number of times we saw a |1>
        Message("Test results (# of 0s, # of 1s): ");

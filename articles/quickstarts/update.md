@@ -1,9 +1,9 @@
 ---
 title: Update the Quantum Development Kit (QDK)
 description: Describes how to update your Q# projects and the Microsoft Quantum Development Kit to the current version.  
-author: natke
-ms.author: nakersha
-ms.date: 9/30/2019
+author: bradben
+ms.author: bradben
+ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update

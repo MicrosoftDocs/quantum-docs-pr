@@ -8,7 +8,7 @@ ms.topic: article
 uid: microsoft.quantum.guide.host-programs
 ---
 
-# Run Q# standalone or with host programs
+# Ways to run a Q# program
 
 One of the Quantum Development Kit's greatest strengths is its flexibility across platforms and development environments.
 However, this also means that new Q# users may find themselves confused or overwhelmed by the numerous options found in the [install guide](xref:microsoft.quantum.install).
@@ -90,7 +90,7 @@ namespace NamespaceName {
 Now the general execution model of a Q# program becomes clear.
 
 <br/>
-<img src="./images/general_execution_model.png" alt="Q# program execution diagram" width="400">
+<img src="../media/hostprograms_general_execution_model.png" alt="Q# program execution diagram" width="400">
 
 Firstly, the specific callable to be executed has access to any other callables and types defined in the same namespace.
 It also access those from any of the [Q# libraries](xref:microsoft.quantum.libraries), but those must be referenced either via their full name, or through the use of `open` statements described above.
@@ -119,7 +119,7 @@ One of the easiest ways to get started writing Q# programs is to avoid worrying 
 Using Visual Studio Code or Visual Studio with the QDK extension allows for a seamless work flow in which we run Q# callables from only a single Q# file.
 
 For this, we will ultimately invoke the program's execution by entering
-```bash
+```dotnetcli
 dotnet run
 ```
 in the command line.
@@ -176,13 +176,13 @@ The general format for the command line is actually `dotnet run [options]`, and 
 In this case, the argument `n` is missing, and it shows that we need to provide the option `-n <n>`. 
 To run `MeasureSuperpositionArray` for `n=4` qubits, we therefore use
 
-```bash
+```dotnetcli
 dotnet run -n 4
 ```
 
 yielding an output similar to
 
-```bash
+```output
 [Zero,One,One,One]
 ```
 
@@ -201,13 +201,13 @@ However, we can instruct callables to be run on a specific target machine with t
 
 For example, we could run it on [`ResourcesEstimator`](xref:microsoft.quantum.machines.resources-estimator):
 
-```bash
+```dotnetcli
 dotnet run -n 4 -s ResourcesEstimator
 ```
 
 The printed output is then
 
-```bash
+```output
 Metric          Sum
 CNOT            0
 QubitClifford   4
@@ -223,7 +223,7 @@ For details on what these metrics indicate, see [Resource estimator: metrics rep
 
 ### Command line execution summary
 <br/>
-<img src="./images/command_line_diagram.png" alt="Q# program from command line" width="700">
+<img src="../media/hostprograms_command_line_diagram.png" alt="Q# program from command line" width="700">
 
 ### Non-Q# `dotnet run` options
 
@@ -248,7 +248,7 @@ The general scheme is shown here, and we discuss the specific implementations fo
 A sample using an F# host program can be found at the [.NET interoperability samples](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet).
 
 <br/>
-<img src="./images/host_program_diagram.png" alt="Q# program from a host program" width="700">
+<img src="../media/hostprograms_host_program_diagram.png" alt="Q# program from a host program" width="700">
 
 > [!NOTE]
 > The `@EntryPoint()` attribute used for Q# command line applications cannot be used with host programs.
@@ -420,11 +420,11 @@ namespace host
 ```
 
 At the location of the C# file, the host program can be run from the command line by entering
-```bash
+```dotnetcli
 dotnet run
 ```
 and in this case you will see output written to the console similar to 
-```bash
+```output
 Single qubit result: One
 Multiple qubit result: [One,One,Zero,Zero]
 ```
@@ -494,7 +494,7 @@ namespace host
 
 which would yield output similar to
 
-```bash
+```output
 Single qubit result: One
 Single qubit resources:
 Metric          Sum
@@ -542,7 +542,7 @@ Upon running a cell with such a statement, the definitions from those namespaces
 
 Similarly, defining operations requires only writing the Q# code and running the cell.
 
-<img src="./images/jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="600">
+<img src="../media/hostprograms_jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="600">
 
 The output then lists those operations, which can then be called from future cells.
 
@@ -551,13 +551,13 @@ The output then lists those operations, which can then be called from future cel
 The functionality to run operations on specific target machines is provided via [IQ# Magic Commands](xref:microsoft.quantum.guide.quickref.iqsharp).
 For example, `%simulate` makes use of the `QuantumSimulator`, and `%estimate` uses the `ResourcesEstimator`:
 
-<img src="./images/jupyter_no_args_sim_est_crop.png" alt="Simulate and estimate resources Jupyter cell" width="500">
+<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Simulate and estimate resources Jupyter cell" width="500">
 
 ### Passing inputs to functions and operations
 
 Currently the execution magic commands can only be used with operations that take no arguments. 
 So, to run `MeasureSuperpositionArray`, we need to define a "wrapper" operation which then calls the operation with the arguments:
 
-<img src="./images/jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="550">
+<img src="../media/hostprograms_jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="550">
 
 This operation can of course be used similarly with `%estimate` and other execution commands.

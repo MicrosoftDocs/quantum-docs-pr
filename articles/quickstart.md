@@ -105,7 +105,7 @@ introduce qubit states, operations, and measurement.
 ### Initialize qubit using measurement
 
 In the first code below, we show you how to work with qubits in
-Q#.  We’ll introduce two operations, `M` and `X` that transform the state of a
+Q#.  We’ll introduce two operations, [`M`](xref:microsoft.quantum.intrinsic.m) and [`X`](xref:microsoft.quantum.intrinsic.x) that transform the state of a
 qubit. In this code snippet, an operation `Set` is defined that takes as a parameter a
 qubit and another parameter, `desired`, representing the state that we would
 like the qubit to be in.  The operation `Set` performs a measurement on the
@@ -116,7 +116,7 @@ changes the qubit state to a new state in which the probabilities of a
 measurement returning `Zero` and `One` are reversed. This way, `Set` always puts
 the target qubit in the desired state.
 
-1. Replace the contents of `Program.qs` with the following code:
+Replace the contents of `Program.qs` with the following code:
 
     ```qsharp
     namespace Bell {
@@ -131,14 +131,14 @@ the target qubit in the desired state.
     }
     ```
 
-    This operation may now be called to set a qubit to a classical state, either
-    returning `Zero` 100% of the time or returning `One` 100% of the time.
-    `Zero` and `One` are constants that represent the only two possible results
-    of a measurement of a qubit.
+This operation may now be called to set a qubit to a classical state, either
+returning `Zero` 100% of the time or returning `One` 100% of the time.
+`Zero` and `One` are constants that represent the only two possible results
+of a measurement of a qubit.
 
-    The operation `Set` measures the qubit. If the qubit is in the state we
-    want, `Set` leaves it alone; otherwise, by executing the `X` operation, we
-    change the qubit state to the desired state.
+The operation `Set` measures the qubit. If the qubit is in the state we
+want, `Set` leaves it alone; otherwise, by executing the `X` operation, we
+change the qubit state to the desired state.
 
 #### About Q# operations
 
@@ -178,7 +178,7 @@ input will return `Zero`, and all measurements of a qubit set with `One` as the
 parameter input will return `One`. Further on, we’ll add code to `TestBellState`
 to demonstrate superposition and entanglement.
 
-1. Add the following operation to the `Bell.qs` file, inside the namespace,
+Add the following operation to the `Bell.qs` file, inside the namespace,
    after the end of the `Set` operation:
 
     ```qsharp
@@ -196,21 +196,25 @@ to demonstrate superposition and entanglement.
                     set numOnes += 1;
                 }
             }
+            
             Set(Zero, qubit);
         }
 
         // Return number of times we saw a |0> and number of times we saw a |1>
-        return (count-numOnes, numOnes);
+        Message("Test results (# of 0s, # of 1s): ");
+        return (count - numOnes, numOnes);
     }
     ```
+Note that we added a line before the `return` to print an explanatory message in
+the console with the function (`Message`)[microsoft.quantum.intrinsic.message]
 
-    This operation (`TestBellState`) will loop for `count` iterations, set a
-    specified `initial` value on a qubit and then measure (`M`) the result. It
-    will gather statistics on how many zeros and ones we've measured and return
-    them to the caller. It performs one other necessary operation. It resets the
-    qubit to a known state (`Zero`) before returning it allowing others to
-    allocate this qubit in a known state. This is required by the `using`
-    statement.
+This operation (`TestBellState`) will loop for `count` iterations, set a
+specified `initial` value on a qubit and then measure (`M`) the result. It
+will gather statistics on how many zeros and ones we've measured and return
+them to the caller. It performs one other necessary operation. It resets the
+qubit to a known state (`Zero`) before returning it allowing others to
+allocate this qubit in a known state. This is required by the `using`
+statement.
 
 #### About variables in Q\#
 
@@ -277,9 +281,6 @@ namespace Bell {
 }
 ```
 
-Note that we added a line before the `return` to print an explanatory message in
-the console.
-
 To run the program we need to specify `count` and `initial` arguments from the
 command line. Let's choose for example `count = 1000` and `initial = One`. Enter
 the following command:
@@ -290,7 +291,7 @@ dotnet run --count 1000 --initial One
 
 And you should observe the following output:
 
-```dotnetcli
+```output
 Test results (# of 0s, # of 1s):
 (0, 1000)
 ```
@@ -299,6 +300,8 @@ If you try with `initial = Zero` you should observe:
 
 ```dotnetcli
 dotnet run --count 1000 --initial Zero
+```
+```output
 Test results (# of 0s, # of 1s):
 (1000, 0)
 ```
@@ -331,15 +334,23 @@ Now the results are reversed:
 
 ```dotnetcli
 dotnet run --count 1000 --initial One
+```
+
+```output
 Test results (# of 0s, # of 1s):
 (1000, 0)
+```
 
+```dotnetcli
 dotnet run --count 1000 --initial Zero
+```
+```output
 Test results (# of 0s, # of 1s):
 (0, 1000)
 ```
 
-However, everything we've seen so far is classical. Let's get a quantum result.
+Now let's explore the quantum properties of the qubits.
+
 ### `H` prepares superposition
 
 All we need to do is replace the `X` operation in the previous run with an `H`
@@ -355,10 +366,18 @@ Now the results get more interesting:
 
 ```dotnetcli
 dotnet run --count 1000 --initial One
+```
+
+```output
 Test results (# of 0s, # of 1s):
 (496, 504)
+```
 
+```dotnetcli
 dotnet run --count 1000 --initial Zero
+```
+
+```output
 Test results (# of 0s, # of 1s):
 (506, 494)
 ```
@@ -488,9 +507,14 @@ Running the code we obtain:
 
 ```dotnetcli
 dotnet run --count 1000 --initial One
+```
+```output
 (505, 495, 1000)
-
+```
+```dotnetcli
 dotnet run --count 1000 --initial Zero
+```
+```output
 Test results (# of 0s, # of 1s, # of agreements)
 (507, 493, 1000)
 ```

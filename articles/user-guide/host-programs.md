@@ -1,5 +1,5 @@
 ---
-title: Run Q# standalone or with host programs
+title: Ways to run a Q# program
 description: Overview of the different ways to run Q# programs. From the command line, Q# Jupyter Notebooks, and classical host programs in Python or a .NET language.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -14,9 +14,11 @@ One of the Quantum Development Kit's greatest strengths is its flexibility acros
 However, this also means that new Q# users may find themselves confused or overwhelmed by the numerous options found in the [install guide](xref:microsoft.quantum.install).
 On this page, we explain what happens when a Q# program is run, and compare the different ways in which users can do so.
 
-A primary distinction is between running Q#
-    - as a standalone application, where Q# is the only language involved and the program is invoked directly, or
-    - with an additional *host program*, written in Python or a .NET language (e.g. C# or F#), which then invokes the program and can further process returned results.
+A primary distinction is that Q# can be run:
+- as a standalone application, where Q# is the only language involved and the program is invoked directly. Two methods actually fall in this category:
+  - the command line interface
+  - Q# Jupyter Notebooks
+- with an additional *host program*, written in Python or a .NET language (e.g. C# or F#), which then invokes the program and can further process returned results.
 
 To best understand these processes and their differences, we consider a simple Q# program and compare the ways it can be executed.
 

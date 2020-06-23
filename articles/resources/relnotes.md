@@ -343,8 +343,6 @@ Visual Studio Marketplace and press Install. We are sorry about the inconvenienc
 
 This release fixes a bug that prevented some users to successfully load the Visual Studio extension.
 
-If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).
-
 ## Version 0.3.1811.203
 
 *Release date: November 2, 2018*
@@ -355,8 +353,6 @@ This release includes a few bug fixes, including:
 * Removed compilation warnings when building projects using a version of .NET Core previous to 2.1.403.
 * Clean up of documentation, specially the tooltips shown during mouse hover in VS Code or Visual Studio.
 
-If you are upgrading from a 0.2 version of the Quantum Development Kit, learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).
-
 ## Version 0.3.1810.2508
 
 *Release date: October 29, 2018*
@@ -366,8 +362,6 @@ This release includes new language features and an improved developer experience
 * This release includes a language server for Q#, as well as the client integrations for Visual Studio and Visual Studio Code. This enables a new set of IntelliSense features along with live feedback on typing in form of squiggly underlinings of errors and warnings. 
 * This update greatly improves diagnostic messages in general, with easy navigation to and precise ranges for diagnostics and additional details in the displayed hover information.
 * The Q# language has been extended in ways that unifies the ways developers can do common operations and new enhancements to the language features to powerfully express quantum computation.  There are a handful of breaking changes to the Q# language with this release.   
-
-Learn more about [Q# language changes and migrating your Q# program](xref:microsoft.quantum.relnotes.migration-0-3).
 
 This release also includes a new quantum chemistry library:
 

@@ -18,7 +18,7 @@ Here we detail the core concepts of the Q# language and all the information you 
 
 - [Q# basics](xref:microsoft.quantum.guide.basics): an introductory overview of the purpose and functionality of the Q# programming language. 
 
-- [Q# standalone vs. host programs](xref:microsoft.quantum.guide.host-programs): describes how a Q# program is executed, and provides an overview of the various ways you can call the program: from the command line, in Q# Jupyter Notebooks, or from a classical host program written in Python or a .NET language.
+- [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs): describes how a Q# program is executed, and provides an overview of the various ways you can call the program: from the command line, in Q# Jupyter Notebooks, or from a classical host program written in Python or a .NET language.
 
 ### Q# Language
 

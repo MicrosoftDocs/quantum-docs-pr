@@ -2,7 +2,7 @@
   href: index.md
 - name: Q# basics
   href: basics.md
-- name: Q# standalone vs. host programs 
+- name: Ways to run a Q# program
   href: host-programs.md
 - name: Q# language
   href: language/toc.yml

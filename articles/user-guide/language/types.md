@@ -67,7 +67,7 @@ For an example, see [arrays of callables](xref:microsoft.quantum.guide.expressio
 
     > [!WARNING]
     > Once created, the elements of an array cannot be changed.
-    > To construct a modified array, use [Update-and-reassign statements](xref:microsoft.quantum.guide.variables#update-and-reassign-statements) or [copy-and-update expressions](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions).
+    > To construct a modified array, use [update-and-reassign statements](xref:microsoft.quantum.guide.variables#update-and-reassign-statements) or [copy-and-update expressions](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions).
 
 * Alternatively, an array can be created from its size using the `new` keyword:
 
@@ -304,4 +304,3 @@ Q# does not provide a mechanism for constraining the possible types that a user 
 ## Next steps
 
 Now that you've seen all the types which comprise the Q# language, see [Type Expressions in Q#](xref:microsoft.quantum.guide.expressions) to learn how to create and manipulate expressions of these various types.
-

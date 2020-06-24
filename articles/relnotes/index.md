@@ -16,6 +16,20 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version 0.xx.xxxx.xxx
+
+*Release date: July 1st, 2020*
+
+This release contains the following:
+
+- New qdk-chem chemistry format conversion tool 
+- New synthesis functionality in QuantumLibraries
+- IQ# now allows arguments to %simulate and %estimate
+- New phase display options in IQ#
+- Updated conda package support for IQ# installation to support local installation to a conda environment
+- When using the simulator, qubits no longer need to be in a 0 state upon release and instead can be measured or in a 0 state
+- Bug fixes 
+
 ## Version 0.11.2006.207
 
 *Release date: June 3rd, 2020*

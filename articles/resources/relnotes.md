@@ -23,7 +23,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 This release contains the following:
 
 - New `qdk-chem` tool for converting legacy electronic structure problem serialization formats (e.g.: FCIDUMP) to [Broombridge](xref:todo)
-- New synthesis functionality in QuantumLibraries
+- New functions and operations in the [`Microsoft.Quantum.Synthesis` namespace](xref:microsoft.quantum.synthesis) for coherently applying classical oracles using transformation- and decomposition-based synthesis algorithms.
 - IQ# now allows arguments to %simulate and %estimate
 - New phase display options in IQ#
 - Updated conda package support for IQ# installation to support local installation to a conda environment

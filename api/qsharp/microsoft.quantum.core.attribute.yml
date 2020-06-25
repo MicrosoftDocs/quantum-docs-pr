@@ -7,6 +7,6 @@ uid: microsoft.quantum.core.attribute
 name: Attribute
 type: newtype
 namespace: Microsoft.Quantum.Core
-summary: Compiler recognized attribute used to mark user defined types as attributes.
+summary: Compiler-recognized attribute used to mark user-defined types as attributes.
 syntax: newtype Attribute = Unit;
 ...

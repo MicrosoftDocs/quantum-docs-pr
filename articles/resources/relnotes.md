@@ -22,7 +22,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 This release contains the following:
 
-- New qdk-chem chemistry format conversion tool 
+- New `qdk-chem` tool for converting legacy electronic structure problem serialization formats (e.g.: FCIDUMP) to [Broombridge](xref:todo)
 - New synthesis functionality in QuantumLibraries
 - IQ# now allows arguments to %simulate and %estimate
 - New phase display options in IQ#

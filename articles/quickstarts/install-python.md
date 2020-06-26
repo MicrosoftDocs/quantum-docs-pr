@@ -16,16 +16,21 @@ Install the QDK to develop Python host programs to call Q# operations.
 
 ### [Install using conda (recommended)](#tab/tabid-conda)
 
-1. Prerequisites:
+1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads).
 
-    - Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads).
-    - (optional) Create a new conda environment by running `conda create --name qsharp-env`. Activate this environment by running `conda activate qsharp-env`.
+1. Open an Anaconda Prompt.
 
-1. Install the `qsharp` package in your preferred conda environment:
+   - Or, if you prefer to use PowerShell or pwsh: open a shell, run `conda init powershell`, then close and re-open the shell.
+
+1. Create and activate a new conda environment named `qsharp-env` with the required packages (including Jupyter Notebook and IQ#) by running the following commands:
 
     ```
-    conda install -c quantum-engineering qsharp
+    conda create -n qsharp-env -c quantum-engineering qsharp notebook
+
+    conda activate qsharp-env
     ```
+
+1. Run `python -c "import qsharp"` from the same terminal to verify your installation and populate your local package cache with all required QDK components.
 
 ### [Install using .NET CLI and pip (advanced)](#tab/tabid-dotnetcli)
 
@@ -84,7 +89,7 @@ Now you are ready to verify your `qsharp` Python package installation by writing
     SampleQuantumRandomNumberGenerator.simulate()
     ```
 
-1. Run the program:
+1. From the environment you created during installation (i.e., the conda or Python environment where you installed `qsharp`), run the program:
 
     ```
     python host.py

@@ -2,208 +2,182 @@
   "redirections": [
     {
       "source_path": "articles/quantum-SoftwareLicenseTerms.md",
-      "redirect_url": "license",
+      "redirect_url": "/quantum/license",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/quantum-RelNotes.md",
-      "redirect_url": "relnotes/",
-      "redirect_document_id": true
+      "redirect_url": "/quantum/resources/relnotes",
+      "redirect_document_id": false
     },
-
     {
       "source_path": "articles/quantum-concepts-1-Intro.md",
-      "redirect_url": "concepts/",
-      "redirect_document_id": true
+      "redirect_url": "/quantum/concepts/",
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-concepts-2-VectorsMatrices.md",
-      "redirect_url": "concepts/vectors-and-matrices",
+      "redirect_url": "/quantum/concepts/vectors-and-matrices",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/quantum-concepts-3-MatrixAdvanced.md",
-      "redirect_url": "concepts/advanced-matrices",
+      "redirect_url": "/quantum/concepts/advanced-matrices",
       "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-concepts-4-Qubit.md",
-      "redirect_url": "concepts/the-qubit",
+      "redirect_url": "/quantum/concepts/the-qubit",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/quantum-concepts-5-MultipleQubits.md",
-      "redirect_url": "concepts/multiple-qubits",
+      "redirect_url": "/quantum/concepts/multiple-qubits",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/quantum-concepts-6-DiracNotation.md",
-      "redirect_url": "concepts/dirac-notation",
+      "redirect_url": "/quantum/concepts/dirac-notation",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/quantum-concepts-7-PauliMeasurements.md",
-      "redirect_url": "concepts/pauli-measurements",
+      "redirect_url": "/quantum/concepts/pauli-measurements",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/quantum-concepts-8-QuantumCircuits.md",
-      "redirect_url": "concepts/circuits",
+      "redirect_url": "/quantum/concepts/circuits",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/quantum-concepts-9-SoftwareStack.md",
       "redirect_url": "/quantum/concepts/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-concepts-10-Oracles.md",
-      "redirect_url": "concepts/oracles",
+      "redirect_url": "/quantum/concepts/oracles",
       "redirect_document_id": true
     },
-
     {
       "source_path": "articles/quantum-InstallConfig.md",
-      "redirect_url": "install-guide/",
-      "redirect_document_id": true
+      "redirect_url": "/quantum/quickstarts/",
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-WriteAQuantumProgram.md",
-      "redirect_url": "quickstart",
+      "redirect_url": "/quantum/quickstart",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/quantum-SimulatorsAndMachines.md",
-      "redirect_url": "machines/",
+      "redirect_url": "/quantum/user-guide/machines/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/quantum-devguide-1-Intro.md",
+      "redirect_url": "/quantum/user-guide/",
       "redirect_document_id": true
     },
-
     {
-      "source_path": "articles/quantum-devguide-1-Intro.md", 
-      "redirect_url": "user-guide/",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "articles/quantum-techniques-1-Qsharp_FileStructure.md", 
-      "redirect_url": "user-guide/basics",
+      "source_path": "articles/quantum-techniques-1-Qsharp_FileStructure.md",
+      "redirect_url": "/quantum/user-guide/basics",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/quantum-techniques-2-OperationsandFunctions.md", 
-      "redirect_url": "user-guide/using-qsharp/operations-functions",
+      "source_path": "articles/quantum-techniques-2-OperationsandFunctions.md",
+      "redirect_url": "/quantum/user-guide/using-qsharp/operations-functions",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/quantum-techniques-3-LocalVariables.md", 
-      "redirect_url": "user-guide/using-qsharp/variables",
-      "redirect_document_id": false
-    },
-    { 
-      "source_path": "articles/quantum-techniques-4-TypeModel.md", 
-      "redirect_url": "user-guide/language/types",
+      "source_path": "articles/quantum-techniques-3-LocalVariables.md",
+      "redirect_url": "/quantum/user-guide/using-qsharp/variables",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/quantum-techniques-5-WorkingWithQubits.md",  
-      "redirect_url": "user-guide/using-qsharp/working-with-qubits",
+      "source_path": "articles/quantum-techniques-4-TypeModel.md",
+      "redirect_url": "/quantum/user-guide/language/types",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/quantum-techniques-5-WorkingWithQubits.md",
+      "redirect_url": "/quantum/user-guide/using-qsharp/working-with-qubits",
       "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-techniques-6-PuttingItAllTogether.md",
-      "redirect_url": "https://github.com/microsoft/QuantumKatas/tree/master/Teleportation", 
+      "redirect_url": "/quantum/https://github.com/microsoft/QuantumKatas/tree/master/Teleportation",
       "redirect_document_id": true
     },
     {
-      "source_path": "articles/quantum-techniques-7-going-further.md",  
-      "redirect_url": "user-guide/using-qsharp/operations-functions",
+      "source_path": "articles/quantum-techniques-7-going-further.md",
+      "redirect_url": "/quantum/user-guide/using-qsharp/operations-functions",
       "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-techniques-TestingAndDebugging.md",
-      "redirect_url": "user-guide/using-qsharp/testing-debugging",
+      "redirect_url": "/quantum/user-guide/using-qsharp/testing-debugging",
       "redirect_document_id": false
     },
-
     {
       "source_path": "articles/libraries/intro.md",
-      "redirect_url": "standard/",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "articles/libraries/licensing.md",
-      "redirect_url": "standard/licensing",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "articles/libraries/prelude.md",
-      "redirect_url": "standard/prelude",
+      "redirect_url": "/quantum/quantum/user-guide/libraries/standard/",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/control-flow.md",
-      "redirect_url": "standard/control-flow",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "articles/libraries/data-structures.md",
-      "redirect_url": "standard/data-structures",
+      "redirect_url": "/quantum/quantum/user-guide/libraries/standard/control-flow",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/algorithms.md",
-      "redirect_url": "standard/algorithms",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "articles/libraries/characterization.md",
-      "redirect_url": "standard/characterization",
+      "redirect_url": "/quantum/quantum/user-guide/libraries/standard/algorithms",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/error-correction.md",
-      "redirect_url": "standard/error-correction",
+      "redirect_url": "/quantum/quantum/user-guide/libraries/standard/error-correction",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/applications.md",
-      "redirect_url": "standard/applications",
+      "redirect_url": "/quantum/quantum/user-guide/libraries/standard/applications",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/libraries/testing.md",
-      "redirect_url": "standard/testing",
+      "redirect_url": "/quantum/standard/testing",
       "redirect_document_id": true
     },
-
     {
-      "source_path": "articles/quantum-QR-Intro.md",  
-      "redirect_url": "user-guide/",
+      "source_path": "articles/quantum-QR-Intro.md",
+      "redirect_url": "/quantum/user-guide/",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/quantum-QR-TypeModel.md", 
-      "redirect_url": "user-guide/language/types",
+      "source_path": "articles/quantum-QR-TypeModel.md",
+      "redirect_url": "/quantum/user-guide/language/types",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/quantum-QR-Expressions.md",  
-      "redirect_url": "user-guide/language/expressions",
+      "source_path": "articles/quantum-QR-Expressions.md",
+      "redirect_url": "/quantum/user-guide/language/expressions",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/quantum-QR-Statements.md",   
-      "redirect_url": "user-guide/using-qsharp/control-flow",
+      "source_path": "articles/quantum-QR-Statements.md",
+      "redirect_url": "/quantum/user-guide/using-qsharp/control-flow",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/quantum-QR-FileStructure.md",  
-      "redirect_url": "user-guide/using-qsharp/file-structure",
+      "source_path": "articles/quantum-QR-FileStructure.md",
+      "redirect_url": "/quantum/user-guide/using-qsharp/file-structure",
       "redirect_document_id": false
     },
-
     {
       "source_path": "articles/quantum-ForMoreInfo.md",
-      "redirect_url": "for-more-info",
+      "redirect_url": "/quantum/for-more-info",
       "redirect_document_id": true
     },
     {
@@ -238,7 +212,7 @@
     },
     {
       "source_path": "articles/Glossary.md",
-      "redirect_url": "/quantum/concepts/glossary",
+      "redirect_url": "/quantum/resources/glossary",
       "redirect_document_id": true
     },
     {
@@ -308,32 +282,402 @@
     },
     {
       "source_path": "articles/overview/index.md",
-      "redirect_url": "overview",
+      "redirect_url": "/quantum/overview",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/overview/what-is-quantum-computing.md",
-      "redirect_url": "understanding-quantum-computing",
+      "redirect_url": "/quantum/understanding-quantum-computing",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/overview/quantum-computers.md",
-      "redirect_url": "quantum-computers-and-simulators",
+      "redirect_url": "/quantum/quantum-computers-and-simulators",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/overview/why-learn-quantum-computing.md",
-      "redirect_url": "overview",
+      "redirect_url": "/quantum/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "articles/overview/what-is-qsharp.md",
-      "redirect_url": "what-is-qsharp-and-qkd",
+      "redirect_url": "/quantum/what-is-qsharp-and-qkd",
       "redirect_document_id": false
     },
     {
       "source_path": "articles/overview/how-to-learn-quantum-computing.md",
       "redirect_url": "/quantum/welcome",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/quickstart.md",
+      "redirect_url": "/quantum/tutorials/explore-entanglement",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/how-to-guides/create-qsharp-project.md",
+      "redirect_url": "/quantum/quickstarts/get-started.md",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/install-guide/index.md",
+      "redirect_url": "/quantum/quickstarts/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/install-guide/standalone.md",
+      "redirect_url": "/quantum/quickstarts/install-command-line",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/install-guide/csinstall.md",
+      "redirect_url": "/quantum/quickstarts/install-cs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/install-guide/qjupyter.md",
+      "redirect_url": "/quantum/quickstarts/install-jupyter",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/install-guide/pyinstall.md",
+      "redirect_url": "/quantum/quickstarts/install-python",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/install-guide/update.md",
+      "redirect_url": "/quantum/quickstarts/update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/contributing/api-design-principles.md",
+      "redirect_url": "/quantum/resources/contributing/api-design-principles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/contributing/code.md",
+      "redirect_url": "/quantum/resources/contributing/code",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/contributing/docs.md",
+      "redirect_url": "/quantum/resources/contributing/docs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/contributing/index.md",
+      "redirect_url": "/quantum/resources/contributing/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/contributing/pull-requests.md",
+      "redirect_url": "/quantum/resources/contributing/pull-requests",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/contributing/reporting-bugs.md",
+      "redirect_url": "/quantum/resources/contributing/reporting-bugs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/contributing/samples.md",
+      "redirect_url": "/quantum/resources/contributing/samples",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/contributing/style-guide.md",
+      "redirect_url": "/quantum/resources/contributing/style-guide",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/for-more-info.md",
+      "redirect_url": "/quantum/resources/further-reading",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/concepts/glossary.md",
+      "redirect_url": "/quantum/resources/glossary",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/relnotes/index.md",
+      "redirect_url": "/quantum/resources/relnotes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/relnotes/0.3-migration.md",
+      "redirect_url": "/quantum/resources/relnotes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/intro-to-katas.md",
+      "redirect_url": "/quantum/tutorials/intro-to-katas",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/quickstarts/qrng.md",
+      "redirect_url": "/quantum/tutorials/quantum-random-number-generator",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/tutorials/qft-tutorial.md",
+      "redirect_url": "/quantum/tutorials/qubit-level",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/quickstarts/search.md",
+      "redirect_url": "/quantum/tutorials/search",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/concepts/algorithms.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/concepts/algorithms",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/concepts/hartree-fock.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/concepts/hartree-fock",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/concepts/jordan-wigner.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/concepts/jordan-wigner",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/concepts/multireference.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/concepts/multireference",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/concepts/quantum-dynamics.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/concepts/quantum-dynamics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/concepts/quantum-models.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/concepts/quantum-models",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/concepts/second-quantization.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/concepts/second-quantization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/concepts/symmetries-molecular.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/concepts/symmetries-molecular",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/index.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/installation.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/samples/end-to-end.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/samples/end-to-end",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/samples/index.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/samples/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/samples/loading-from-file.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/samples/loading-from-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/samples/molecular-hydrogen.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/samples/molecular-hydrogen",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/samples/resource-counts.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/samples/resource-counts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/schema/broombridge.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/schema/broombridge",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/schema/spec_v_0_1.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/schema/spec_v_0_1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/chemistry/schema/spec_v_0_2.md",
+      "redirect_url": "/quantum/user-guide/libraries/chemistry/schema/spec_v_0_2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/index.md",
+      "redirect_url": "/quantum/user-guide/libraries/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/machine-learning/basic-classification.md",
+      "redirect_url": "/quantum/user-guide/libraries/machine-learning/basic-classification",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/machine-learning/design.md",
+      "redirect_url": "/quantum/user-guide/libraries/machine-learning/design",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/machine-learning/glossary-qml.md",
+      "redirect_url": "/quantum/user-guide/libraries/machine-learning/glossary-qml",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/machine-learning/index.md",
+      "redirect_url": "/quantum/user-guide/libraries/machine-learning/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/machine-learning/introduction.md",
+      "redirect_url": "/quantum/user-guide/libraries/machine-learning/introduction",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/machine-learning/load.md",
+      "redirect_url": "/quantum/user-guide/libraries/machine-learning/load",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/numerics/index.md",
+      "redirect_url": "/quantum/user-guide/libraries/numerics/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/numerics/installation.md",
+      "redirect_url": "/quantum/user-guide/libraries/numerics/installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/numerics/numerics.md",
+      "redirect_url": "/quantum/user-guide/libraries/numerics/numerics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/standard/algorithms.md",
+      "redirect_url": "/quantum/user-guide/libraries/standard/algorithms",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/standard/applications.md",
+      "redirect_url": "/quantum/user-guide/libraries/standard/applications",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/characterization.md",
+      "redirect_url": "/quantum/user-guide/libraries/standard/characterization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/standard/control-flow.md",
+      "redirect_url": "/quantum/user-guide/libraries/standard/control-flow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/standard/convert.md",
+      "redirect_url": "/quantum/user-guide/libraries/standard/convert",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/data-structures.md",
+      "redirect_url": "/quantum/user-guide/libraries/standard/data-structures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/standard/diagnostics.md",
+      "redirect_url": "/quantum/user-guide/libraries/standard/diagnostics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/standard/error-correction.md",
+      "redirect_url": "/quantum/user-guide/libraries/standard/error-correction",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/standard/index.md",
+      "redirect_url": "/quantum/user-guide/libraries/standard/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/licensing.md",
+      "redirect_url": "/quantum/user-guide/libraries/standard/licensing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/standard/math.md",
+      "redirect_url": "/quantum/user-guide/libraries/standard/math",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/libraries/prelude.md",
+      "redirect_url": "/quantum/user-guide/libraries/standard/prelude",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/machines/full-state-simulator.md",
+      "redirect_url": "/quantum/user-guide/machines/full-state-simulator",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/machines/index.md",
+      "redirect_url": "/quantum/user-guide/machines/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/machines/qc-trace-simulator/depth-counter.md",
+      "redirect_url": "/quantum/user-guide/machines/qc-trace-simulator/depth-counter",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/machines/qc-trace-simulator/distinct-inputs-checker.md",
+      "redirect_url": "/quantum/user-guide/machines/qc-trace-simulator/distinct-inputs-checker",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/machines/qc-trace-simulator/index.md",
+      "redirect_url": "/quantum/user-guide/machines/qc-trace-simulator/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/machines/qc-trace-simulator/invalidated-qubits-use-checker.md",
+      "redirect_url": "/quantum/user-guide/machines/qc-trace-simulator/invalidated-qubits-use-checker",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/machines/qc-trace-simulator/primitive-operations-counter.md",
+      "redirect_url": "/quantum/user-guide/machines/qc-trace-simulator/primitive-operations-counter",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/machines/qc-trace-simulator/width-counter.md",
+      "redirect_url": "/quantum/user-guide/machines/qc-trace-simulator/width-counter",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/machines/resources-estimator.md",
+      "redirect_url": "/quantum/user-guide/machines/resources-estimator",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/machines/toffoli-simulator.md",
+      "redirect_url": "/quantum/user-guide/machines/toffoli-simulator",
       "redirect_document_id": true
     }
   ]

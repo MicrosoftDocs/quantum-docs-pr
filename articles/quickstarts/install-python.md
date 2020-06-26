@@ -80,7 +80,7 @@ Now you are ready to verify your `qsharp` Python package installation by writing
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="3-14":::
 
-1. Create a Python program called `host.py` to simulate the Q# `SampleQuantumRandomNumberGenerator()` operation:
+1. In the same folder as `Operation.qs`, create a Python program called `host.py` to simulate the Q# `SampleQuantumRandomNumberGenerator()` operation:
 
     ```python
     import qsharp

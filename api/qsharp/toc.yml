@@ -226,6 +226,8 @@
     uid: microsoft.quantum.arrays.chunks
   - name: ConstantArray
     uid: microsoft.quantum.arrays.constantarray
+  - name: DrawMany
+    uid: microsoft.quantum.arrays.drawmany
   - name: Enumerated
     uid: microsoft.quantum.arrays.enumerated
   - name: EqualA
@@ -322,6 +324,10 @@
     uid: microsoft.quantum.canon.applycnotchain
   - name: ApplyCNOTChainWithTarget
     uid: microsoft.quantum.canon.applycnotchainwithtarget
+  - name: ApplyControlledOnBitString
+    uid: microsoft.quantum.canon.applycontrolledonbitstring
+  - name: ApplyControlledOnInt
+    uid: microsoft.quantum.canon.applycontrolledonint
   - name: ApplyDiagonalUnitary
     uid: microsoft.quantum.canon.applydiagonalunitary
   - name: ApplyFermionicSWAP
@@ -644,6 +650,14 @@
     uid: microsoft.quantum.canon.rall0
   - name: RAll1
     uid: microsoft.quantum.canon.rall1
+  - name: Repeat
+    uid: microsoft.quantum.canon.repeat
+  - name: RepeatA
+    uid: microsoft.quantum.canon.repeata
+  - name: RepeatC
+    uid: microsoft.quantum.canon.repeatc
+  - name: RepeatCA
+    uid: microsoft.quantum.canon.repeatca
   - name: RestrictedToSubregister
     uid: microsoft.quantum.canon.restrictedtosubregister
   - name: RestrictedToSubregisterA
@@ -865,6 +879,10 @@
     uid: microsoft.quantum.diagnostics.assertallzero
   - name: AssertAllZeroWithinTolerance
     uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
+  - name: AssertMeasurement
+    uid: microsoft.quantum.diagnostics.assertmeasurement
+  - name: AssertMeasurementProbability
+    uid: microsoft.quantum.diagnostics.assertmeasurementprobability
   - name: AssertOperationsEqualInPlace
     uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   - name: AssertOperationsEqualInPlaceCompBasis
@@ -1621,65 +1639,6 @@
     uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
   - name: StatePreparationPositiveCoefficients
     uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
-- uid: microsoft.quantum.primitive
-  name: Microsoft.Quantum.Primitive
-  items:
-  - name: Assert
-    uid: microsoft.quantum.primitive.assert
-  - name: AssertProb
-    uid: microsoft.quantum.primitive.assertprob
-  - name: CCNOT
-    uid: microsoft.quantum.primitive.ccnot
-  - name: CNOT
-    uid: microsoft.quantum.primitive.cnot
-  - name: Exp
-    uid: microsoft.quantum.primitive.exp
-  - name: ExpFrac
-    uid: microsoft.quantum.primitive.expfrac
-  - name: H
-    uid: microsoft.quantum.primitive.h
-  - name: I
-    uid: microsoft.quantum.primitive.i
-  - name: M
-    uid: microsoft.quantum.primitive.m
-  - name: Measure
-    uid: microsoft.quantum.primitive.measure
-  - name: Message
-    uid: microsoft.quantum.primitive.message
-  - name: MultiX
-    uid: microsoft.quantum.primitive.multix
-  - name: R
-    uid: microsoft.quantum.primitive.r
-  - name: R1
-    uid: microsoft.quantum.primitive.r1
-  - name: R1Frac
-    uid: microsoft.quantum.primitive.r1frac
-  - name: Random
-    uid: microsoft.quantum.primitive.random
-  - name: Reset
-    uid: microsoft.quantum.primitive.reset
-  - name: ResetAll
-    uid: microsoft.quantum.primitive.resetall
-  - name: RFrac
-    uid: microsoft.quantum.primitive.rfrac
-  - name: Rx
-    uid: microsoft.quantum.primitive.rx
-  - name: Ry
-    uid: microsoft.quantum.primitive.ry
-  - name: Rz
-    uid: microsoft.quantum.primitive.rz
-  - name: S
-    uid: microsoft.quantum.primitive.s
-  - name: SWAP
-    uid: microsoft.quantum.primitive.swap
-  - name: T
-    uid: microsoft.quantum.primitive.t
-  - name: X
-    uid: microsoft.quantum.primitive.x
-  - name: Y
-    uid: microsoft.quantum.primitive.y
-  - name: Z
-    uid: microsoft.quantum.primitive.z
 - uid: microsoft.quantum.research.characterization
   name: Microsoft.Quantum.Research.Characterization
   items:
@@ -1785,4 +1744,80 @@
     uid: microsoft.quantum.simulation.trotterstep
   - name: Unitary
     uid: microsoft.quantum.simulation.unitary
+- uid: microsoft.quantum.simulation.quantumprocessor.extensions
+  name: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+  items:
+  - name: ApplyConditionally
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionally
+  - name: ApplyConditionallyA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallya
+  - name: ApplyConditionallyC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyc
+  - name: ApplyConditionallyCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyca
+  - name: ApplyConditionallyIntrinsic
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyintrinsic
+  - name: ApplyConditionallyIntrinsicA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyintrinsica
+  - name: ApplyConditionallyIntrinsicC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyintrinsicc
+  - name: ApplyConditionallyIntrinsicCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyintrinsicca
+  - name: ApplyIfElseIntrinsic
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelseintrinsic
+  - name: ApplyIfElseIntrinsicA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelseintrinsica
+  - name: ApplyIfElseIntrinsicC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelseintrinsicc
+  - name: ApplyIfElseIntrinsicCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelseintrinsicca
+  - name: ApplyIfElseR
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelser
+  - name: ApplyIfElseRA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelsera
+  - name: ApplyIfElseRC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelserc
+  - name: ApplyIfElseRCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelserca
+  - name: ApplyIfOne
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifone
+  - name: ApplyIfOneA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifonea
+  - name: ApplyIfOneC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifonec
+  - name: ApplyIfOneCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifoneca
+  - name: ApplyIfZero
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifzero
+  - name: ApplyIfZeroA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifzeroa
+  - name: ApplyIfZeroC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifzeroc
+  - name: ApplyIfZeroCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifzeroca
+  - name: Delay
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.delay
+  - name: DelayA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.delaya
+  - name: DelayC
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.delayc
+  - name: DelayCA
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.delayca
+  - name: NoOp
+    uid: microsoft.quantum.simulation.quantumprocessor.extensions.noop
+- uid: microsoft.quantum.synthesis
+  name: Microsoft.Quantum.Synthesis
+  items:
+  - name: ApplyPermutationUsingDecomposition
+    uid: microsoft.quantum.synthesis.applypermutationusingdecomposition
+  - name: ApplyPermutationUsingDecompositionWithVariableOrder
+    uid: microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
+  - name: ApplyPermutationUsingTransformation
+    uid: microsoft.quantum.synthesis.applypermutationusingtransformation
+  - name: ApplyTransposition
+    uid: microsoft.quantum.synthesis.applytransposition
+  - name: ApplyXControlledOnTruthTable
+    uid: microsoft.quantum.synthesis.applyxcontrolledontruthtable
+  - name: ApplyXControlledOnTruthTableWithCleanTarget
+    uid: microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
 ...

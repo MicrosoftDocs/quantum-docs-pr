@@ -105,8 +105,8 @@ The following is the list of metrics estimated by the `ResourcesEstimator`:
 * __Measure__:  The count of any measurements executed.
 * __R__: The count of any single qubit rotations executed, excluding T, Clifford and Pauli gates.
 * __T__: The count of T gates and their conjugates, including the T gate, T_x = H.T.H, and T_y = Hy.T.Hy, executed.
-* __Depth__: Depth of the quantum circuit executed by the Q# operation. By default, only T gates are counted in the depth, see [depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) for details.
-* __Width__: Maximum number of qubits allocated during the execution of the Q# operation.
+* __Depth__: The lower bound for the depth of the quantum circuit executed by the Q# operation. By default, only T gates are counted in the depth, see [depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) for details.
+* __Width__: The lower bound for the maximum number of qubits allocated during the execution of the Q# operation. It might not be possible to achieve both __Depth__ and __Width__ lower bounds simultaneously.
 * __BorrowedWidth__: Maximum number of qubits borrowed inside the Q# operation.
 
 

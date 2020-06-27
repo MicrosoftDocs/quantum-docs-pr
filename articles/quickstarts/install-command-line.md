@@ -18,7 +18,7 @@ Q# programs can be executed on their own, without a driver in a host language li
 
 ## Installation
 
-While you can build Q# command line applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for your Q# applications. Developing in these tools provides access to rich functionality.
+While you can build Q# command line applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for your Q# applications. Developing in these environments includes the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more.
 
 To configure VS Code:
 
@@ -30,8 +30,17 @@ To configure Visual Studio:
 1. Download and install [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 or greater, with the .NET Core cross-platform development workload enabled.
 2. Download and install the [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
+To install the QDK for another environment, enter in the command line:
 
-## Develop with Q# using VS Code
+```dotnetcli
+dotnet new -i Microsoft.Quantum.ProjectTemplates
+```
+
+## Develop with Q#
+
+Follow the instructions at the tab corresponding to your environment.
+
+### [VS Code](#tab/tabid-vscode)
 
 Install the Q# project templates:
 
@@ -59,7 +68,7 @@ To run the application:
 > [!NOTE]
 > Workspaces with multiple root folders are not currently supported by the VS Code Q# extension. If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.
 
-## Develop with Q# using Visual Studio
+### [Visual Studio](#tab/tabid-vs)
 
 Verify your Visual Studio installation by creating a Q# `Hello World` application.
 
@@ -78,6 +87,30 @@ To run the application:
 > [!NOTE]
 > If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its sub-folders.  
 
+### [Other editors with the command line](#tab/tabid-cmdline)
+
+Verify your installation by creating a Q# `Hello World` application.
+
+1. Create a new application:
+    ```dotnetcli
+    dotnet new console -lang Q# -o runSayHello
+    ```
+
+2. Navigate to the application directory:
+    ```dotnetcli
+    cd runSayHello
+    ```
+
+    This directory should now contain a file `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console. You can modfiy this template with a text editor and overwrite it with your own quantum applications. 
+
+3. Run the program:
+    ```dotnetcli
+    dotnet run
+    ```
+
+4. You should see the following text printed: `Hello quantum world!`
+
+***
 
 ## Next steps
 

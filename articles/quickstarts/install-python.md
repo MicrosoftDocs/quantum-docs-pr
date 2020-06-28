@@ -1,8 +1,8 @@
 ---
 title: Develop with Q# and Python
-author: natke
-ms.author: nakersha
-ms.date: 9/30/2019
+author: bradben
+ms.author: bradben
+ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
@@ -67,12 +67,18 @@ Install the QDK to develop Python host programs to call Q# operations.
 
 That's it! You now have both the `qsharp` Python package and the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Python and allows you to use Q# Jupyter Notebooks.
 
-## Write your first Q# program
+## Choose your IDE
 
-While you can use Q# with Python in any IDE, we highly recommend using Visual Studio Code (VS Code) IDE for your Q# + Python applications. By using Visual Studio Code and the QDK Visual Studio Code extension you gain access to richer functionality.
+While you can use Q# with Python in any IDE, we highly recommend using Visual Studio Code (VS Code) IDE for your Q# + Python applications. By using Visual Studio Code and the QDK Visual Studio Code extension you gain access to richer functionality such as warnings, syntax highlighting, project templates, and more.
+
+If you would like to use VS Code:
 
 - Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
 - Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
+
+If you would like to use a different editor, the instructions above have you all set.
+
+## Write your first Q# program
 
 Now you are ready to verify your `qsharp` Python package installation by writing and executing a simple Q# program.
 

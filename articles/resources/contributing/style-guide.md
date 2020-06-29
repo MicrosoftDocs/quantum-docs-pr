@@ -103,6 +103,31 @@ We suggest:
 
 ***
 
+### Entry Points
+
+When defining an entry point into a Q# program, the Q# compiler recognizes the [`@EntryPoint()` attribute](xref:microsoft.quantum.core.entrypoint) rather requiring that entry points have a particular name (e.g.: `main`, `Main`, or `__main__`).
+That is, from the perspective of a Q# developer, entry points are ordinary operations annotated with `@EntryPoint()`.
+Moreover, Q# entry points may be entry points for an entire application (i.e.: in Q# standalone executables), or may be an interface between a Q# program and the host program for an application (i.e.: when using Q# with Python or .NET), such that the name "main" could be misleading when applied to a Q# entry point.
+
+We suggest using naming entry points to reflect the use of the `@EntryPoint()` attribute by using the general advice for naming operations listed above.
+
+
+# [Guidance](#tab/guidance)
+
+We suggest:
+
+- Do not name point operations as "main."
+- Name entry point operations as ordinary operations.
+
+# [Examples](#tab/examples)
+
+|   | Name | Description |
+|---|------|-------------|
+| ☑ | `@EntryPoint() operation RunSimulation` | Clearly communicates purpose of entry point through operation name. |
+| ☒ | <s>`@EntryPoint() operation Main`</s> | Use of `Main` doesn't clearly communicate purpose of entry point, and is redundant with `@EntryPoint()` attribute. |
+
+***
+
 ### Shorthand and Abbreviations ###
 
 The above advice notwithstanding, there are many forms of shorthand that see common and pervasive use in quantum computing.

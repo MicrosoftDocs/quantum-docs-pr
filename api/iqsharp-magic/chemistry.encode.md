@@ -1,7 +1,7 @@
 ---
 title: '%chemistry.encode (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.encode
-ms.date: '2020-06-02'
+ms.date: '2020-06-29'
 ms.topic: article
 ---
 

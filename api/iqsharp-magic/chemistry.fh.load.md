@@ -1,7 +1,7 @@
 ---
 title: '%chemistry.fh.load (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load
-ms.date: '2020-06-02'
+ms.date: '2020-06-29'
 ms.topic: article
 ---
 

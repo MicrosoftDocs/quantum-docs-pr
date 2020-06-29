@@ -1,3 +1,17 @@
+- href: azure.connect.md
+  name: '%azure.connect magic command'
+- href: azure.execute.md
+  name: '%azure.execute magic command'
+- href: azure.jobs.md
+  name: '%azure.jobs magic command'
+- href: azure.output.md
+  name: '%azure.output magic command'
+- href: azure.status.md
+  name: '%azure.status magic command'
+- href: azure.submit.md
+  name: '%azure.submit magic command'
+- href: azure.target.md
+  name: '%azure.target magic command'
 - href: check_kata.md
   name: '%check_kata magic command'
 - href: chemistry.broombridge.md

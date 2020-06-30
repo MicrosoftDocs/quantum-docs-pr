@@ -157,7 +157,7 @@ Thus, if we proceed past a call to `PositivityFact`, we can be assured by that i
 Note that we can implement the same behavior as `PositivityFact` using the [`Fact`](xref:microsoft.quantum.diagnostics.fact) function from the <xref:microsoft.quantum.diagnostics> namespace:
 
 ```qsharp
-	Fact(value <= 0, "Expected a positive number.");
+	Fact(value > 0, "Expected a positive number.");
 ```
 
 *Assertions*, on the other hand, are used similarly to facts, but may be dependent on the state of the target machine. 

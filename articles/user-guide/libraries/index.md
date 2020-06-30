@@ -18,7 +18,7 @@ In this section of the documentation, we describe these libraries and how to use
   This section describes the quantum chemistry library, which provides a data model for loading representations of fermionic Hamiltonians and quantum simulation operations and functions which act on these representations.
 - [**Quantum numerics library**](xref:microsoft.quantum.numerics.intro):
   This section describes the quantum numerics library, which provides implementations for a host of mathematical functions. It supports integer (signed & unsigned) and fixed-point representations.
-- [**Quantum machine learning library**](xref:microsoft.quantum.machinelearning.intro):
+- [**Quantum machine learning library**](xref:microsoft.quantum.machine-learning.intro):
   This section describes the quantum machine learning library, which provides an implementation of the sequential classifiers that take advantage of quantum computing to understand data.
 
 Sources of the libraries as well as code samples can be obtained from GitHub.

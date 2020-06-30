@@ -10,13 +10,19 @@ functions:
   summary: Logs a message.
 operations:
 - uid: microsoft.quantum.intrinsic.assert
-  summary: |-
-    Asserts that measuring the given qubits in the given Pauli basis will
-    always have the given result.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    Assert has been deprecated. Please use @"microsoft.quantum.diagnostics.assertmeasurement" instead.
 - uid: microsoft.quantum.intrinsic.assertprob
-  summary: |-
-    Asserts that measuring the given qubits in the given Pauli basis will have the given result
-    with the given probability, within some tolerance.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    AssertProb has been deprecated. Please use @"microsoft.quantum.diagnostics.assertmeasurementprobability" instead.
 - uid: microsoft.quantum.intrinsic.ccnot
   summary: Applies the doubly controlled–NOT (CCNOT) gate to three qubits.
 - uid: microsoft.quantum.intrinsic.cnot

@@ -24,7 +24,7 @@ Computation and Quantum Information, UK: Cambridge University Press, 2010.
 
 ## Online Courses ##
 
-+ [MS Learn Quantum Computing modules](aka.ms/learnqc). A ste-by-step tutorial of quantum computing concepts and practices. 
++ [MS Learn Quantum Computing modules](https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r). A ste-by-step tutorial of quantum computing concepts and practices. 
 + [Quantum Computing - Brilliant Course](https://brilliant.org/courses/quantum-computing/). Learn to build quantum algorithms from the ground up with a quantum computer simulated in your browser.
 + [Introduction to Quantum Computing - LinkedIn Learning](https://www.linkedin.com/learning/introduction-to-quantum-computing). 1h25m video introduction. 
 + [Quantum Computing through Comics](https://hackaday.io/project/168554-introduction-to-quantum-computing). Sunday weekly hands-on community class. 

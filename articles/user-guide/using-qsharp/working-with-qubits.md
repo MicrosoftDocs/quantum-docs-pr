@@ -10,7 +10,7 @@ uid: microsoft.quantum.guide.qubits
 
 # Working with qubits
 
-Qubits are the fundamental object of information in quantum computing. For a general introduction to qubits, see [Understanding quantum computing](xref:microsoft.quantum.overview.understanding), and to dive deeper, see [The Qubit](xref:microsoft.quantum.concepts.qubit). 
+Qubits are the fundamental object of information in quantum computing. For a general introduction to qubits, see [Understanding quantum computing](xref:microsoft.quantum.overview.understanding), and to dive deeper into their mathematical representation, see [The Qubit](xref:microsoft.quantum.concepts.qubit). 
 
 This article explores how to use and work with qubits in a Q# program. 
 
@@ -19,7 +19,9 @@ This article explores how to use and work with qubits in a Q# program.
 
 ## Allocating Qubits
 
-Because physical qubits don't exist on a quantum simulator, you need to tell Q# to *allocate* a qubit, or qubits, for your statement block. You can allocate qubits as a single qubit, or as an array of qubits, known as a *register*. 
+Because physical qubits are a precious resource in a quantum computer, part of the compiler's job is to make sure they are being used as efficiently as possible.
+As such, you need to tell Q# to *allocate* qubits for use within a particular statement block.
+You can allocate qubits as a single qubit, or as an array of qubits, known as a *register*. 
 
 ### Clean qubits
 
@@ -40,13 +42,14 @@ using ((auxiliary, register) = (Qubit(), Qubit[5])) {
 }
 ```
 
-Any qubits allocated in this way start off in the $\ket{0}$ state; in the previous example, `register` is thus in the state $\ket{00000} = \ket{0} \otimes \ket{0} \otimes \cdots \otimes \ket{0}$.
+Any qubits allocated in this way start off in the $\ket{0}$ state. 
+Thus in the previous example, `auxiliary` is a single qubit in the state $\ket{0}$, and `register` is in the five-qubit state $\ket{00000} = \ket{0} \otimes \ket{0} \otimes \cdots \otimes \ket{0}$.
 At the end of the `using` block, any qubits allocated by that block are immediately deallocated and cannot be used further.
 
 > [!WARNING]
 > Target machines can reuse deallocated qubits and offer them to other `using` blocks for allocation. As such, the target machine expects that qubits are in the $\ket{0}$ state immediately before deallocation.
 > Whenever possible, use unitary operations to return any allocated qubits to $\ket{0}$.
-> If need be, use the @"microsoft.quantum.intrinsic.reset" operation to measure a qubit instead, and to use that measurement result to ensure that the measured qubit returns to the $\ket{0}$ state. Such a measurement destroys any entanglement with the remaining qubits and can thus impact the computation.
+> If need be, you can use the @"microsoft.quantum.intrinsic.reset" operation, which returns the qubit to $\ket{0}$ by measuring it and conditionally performing an operation based on the result. Such a measurement destroys any entanglement with the remaining qubits and can thus impact the computation.
 
 
 ### Borrowed Qubits
@@ -54,7 +57,7 @@ At the end of the `using` block, any qubits allocated by that block are immediat
 Use the `borrowing` statement to allocate qubits for temporary use, which do not need to be in a specific state.
 
 You can use borrowed qubits as scratch space during a computation.
-These qubits are generally not in a clean state, that is, the `borrowing` statement does not necessarily initialize them in a known state such as $\ket{0}$.
+These qubits are generally not in a clean state, that is, they are not necessarily initialized in a known state such as $\ket{0}$.
 These are often referred to as "dirty" qubits because their state is unknown and can even be entangled with other parts of the quantum computer's memory.
 
 The binding follows the same pattern and rules as the `using` statement.
@@ -68,8 +71,8 @@ borrowing ((auxiliary, register) = (Qubit(), Qubit[5])) {
 }
 ```
 The borrowed qubits are in an unknown state and go out of scope at the end of the statement block.
-The borrower commits to leaving the qubits in the same state they were in when they borrowed them; that is, you can expect their state at the beginning and the end of the statement block to be the same.
-This state, in particular, is not necessarily a classical state, such that in most cases, borrowing scopes should not contain measurements. 
+The borrower commits to leaving the qubits in the same state they were in when they borrowed them; that is, their state at the beginning and the end of the statement block should be the same.
+Because this state is not necessarily a classical state, in most cases borrowing scopes should not contain measurements. 
 
 When borrowing qubits, the system first tries to fill the request from qubits that are in use but not accessed during the body of the `borrowing` statement.
 If there aren't enough such qubits, then it allocates new qubits to complete the request.
@@ -82,11 +85,14 @@ For an example of their use in Q#, see [Borrowing Qubits Example](#borrowing-qub
 
 Once allocated, you can pass a qubit to functions and operations.
 In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.
-For more detail about these operations, see [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude). This article discusses a few useful operations that you can use to interact with qubits.
 
-First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations `X`, `Y`, and `Z`, each of which has type `(Qubit => Unit is Adj + Ctl)`.
+This article discusses a few useful Q# operations that you can use to interact with qubits.
+For more detail about these and others, see [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude). 
+
+First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations [`X`](xref:microsoft.quantum.intrinsic.x), [`Y`](xref:microsoft.quantum.intrinsic.y), and [`Z`](xref:microsoft.quantum.intrinsic.z), each of which has type `(Qubit => Unit is Adj + Ctl)`.
+
 As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), think of $X$ and hence of `X` as a bit-flip operation or NOT gate.
-The `X` operation prepares states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:
+You can use the `X` operation to prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit
@@ -106,16 +112,16 @@ operation RunExample() : Unit {
             register
         );
         // At this point, register now has the state |11001001〉.
-        // After resetting the qubits, you can deallocate them properly.
+        // Remember to reset the qubits before deallocation:
         ResetAll(register);
     }
 }
 ```
 
 > [!TIP]
-> Later, you will see more compact ways of writing this operation that do not require manual flow control.
+> Later, you will see more compact ways of writing this operation that do not require manual control flow.
 
-You can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the intrinsic operation `H : (Qubit => Unit is Adj + Ctl)`:
+You can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the intrinsic operation [`H`](xref:microsoft.quantum.intrinsic.h) (also of type (Qubit => Unit is Adj + Ctl)`):
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -132,8 +138,13 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ## Measurements
 
-Use the `Measure` operation, which is a built-in intrinsic non-unitary operation, to extract classical information from an object of type `Qubit` and assign a classical value as a result. `Measure` has a reserved type `Result`, indicating that the result is no longer a quantum state.
-The input to `Measure` is a Pauli axis on the [Bloch sphere](xref:microsoft.quantum.glossary#bloch-sphere), represented by a value of type `Pauli` (for example, `PauliX`) and a value of type `Qubit`.
+Measurements of individual qubits can be performed in different bases, each represented by a Pauli axis on the [Bloch sphere](xref:microsoft.quantum.glossary#bloch-sphere).
+The *computational basis* refers to the `PauliZ` basis, and is the most common basis used for measurement.
+
+### Measure a single qubit in the `PauliZ` basis
+
+Use the [`M`](xref:microsoft.quantum.intrinsic.m) operation, which is a built-in intrinsic non-unitary operation, to measure a single qubit in the `PauliZ` basis and assign a classical value to the result.
+`M` has a reserved return type, `Result`, which can only take values `Zero` or `One` corresponding to the measured states $\ket{0}$ or $\ket{1}$ - indicating that the result is no longer a quantum state.
 
 A simple example is the following operation, which allocates one qubit in the $\ket{0}$ state, then applies a Hadamard operation `H` to it and measures the result in the `PauliZ` basis.
 
@@ -156,6 +167,12 @@ operation MeasureOneQubit() : Result {
 }
 ```
 
+### Measure one or more qubits in specific bases
+
+To measure an array of one or more qubits in specific bases, you can use the [`Measure`](xref:microsoft.quantum.intrinsic.measure) operation.
+
+The inputs to `Measure` are an array of `Pauli` types (for example, `[PauliX, PauliZ, PauliZ]`) and an array of qubits.
+
 A slightly more complicated example is given by the following operation, which returns the Boolean value `true` if all qubits in a register of type `Qubit[]` are in the state zero when measured in a specified Pauli basis, and which returns `false` otherwise.
 
 ```qsharp
@@ -169,6 +186,8 @@ operation MeasureIfAllQubitsAreZero(qubits : Qubit[], pauli : Pauli) : Bool {
     return value;
 }
 ```
+
+Note that this example still only performs `Measure` on individual qubits one at a time, but the operation can be extended to joint measurements on multiple qubits.
 
 ## Borrowing Qubits Example
 

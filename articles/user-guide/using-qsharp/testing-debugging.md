@@ -24,13 +24,13 @@ Q# supports creating unit tests for quantum programs, and which can run as tests
 
 #### [Visual Studio 2019](#tab/tabid-vs2019)
 
-Open Visual Studio 2019. Go to the `File` menu and select `New` > `Project...`.
-In the upper right corner, search for `Q#`, and select the `Q# Test Project` template.
+Open Visual Studio 2019. Go to the **File** menu and select **New > Project...**.
+In the upper right corner, search for `Q#`, and select the **Q# Test Project** template.
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
 From your favorite command line, run the following command:
-```bash
+```dotnetcli
 $ dotnet new xunit -lang Q# -o Tests
 $ cd Tests
 $ code . # To open in Visual Studio Code
@@ -53,17 +53,17 @@ Initially, this file contains one sample unit test `AllocateQubit` which checks 
     }
 ```
 
-:new: Any Q# operation or function that takes an argument of type `Unit` and returns `Unit` can be marked as a unit test via the `@Test("...")` attribute. 
-In the previous example, the argument to that attribute, `QuantumSimulator`, specifies the target on which the test runs. A single test can run on multiple targets. For example, add an attribute `@Test("ResourcesEstimator")` before `AllocateQubit`. 
+Any Q# operation or function that takes an argument of type `Unit` and returns `Unit` can be marked as a unit test via the `@Test("...")` attribute. 
+In the previous example, the argument to that attribute, `"QuantumSimulator"`, specifies the target on which the test runs. A single test can run on multiple targets. For example, add an attribute `@Test("ResourcesEstimator")` before `AllocateQubit`. 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
     operation AllocateQubit () : Unit {
         ...
 ```
-Save the file and run all tests. There should now be two unit tests, one where AllocateQubit runs on the QuantumSimulator, and one where it runs in the ResourceEstimator. 
+Save the file and run all tests. There should now be two unit tests, one where `AllocateQubit` runs on the `QuantumSimulator`, and one where it runs in the `ResourcesEstimator`. 
 
-The Q# compiler recognizes the built-in targets *QuantumSimulator*, *ToffoliSimulator*, and *ResourcesEstimator* as valid execution targets for unit tests. It is also possible to specify any fully qualified name to define a custom execution target. 
+The Q# compiler recognizes the built-in targets `"QuantumSimulator"`, `"ToffoliSimulator"`, and `"ResourcesEstimator"` as valid execution targets for unit tests. It is also possible to specify any fully qualified name to define a custom execution target. 
 
 ### Running Q# Unit Tests
 
@@ -151,7 +151,7 @@ function PositivityFact(value : Double) : Unit
 ```
 
 Here, the keyword `fail` indicates that the computation should not proceed, and raises an exception in the target machine running the Q# program.
-By definition, a failure of this kind cannot be observed from within Q#, as the target machine no longer runs the Q# code after running a `fail` statement.
+By definition, a failure of this kind cannot be observed from within Q#, as the target machine no longer runs the Q# code after reaching a `fail` statement.
 Thus, if we proceed past a call to `PositivityFact`, we can be assured that its input was positive.
 
 Note that we can implement the same behavior as `PositivityFact` using the [`Fact`](xref:microsoft.quantum.diagnostics.fact) function from the <xref:microsoft.quantum.diagnostics> namespace:
@@ -160,7 +160,7 @@ Note that we can implement the same behavior as `PositivityFact` using the [`Fac
 	Fact(value > 0, "Expected a positive number.");
 ```
 
-*Assertions*, on the other hand, are used similarly to facts but may  depend on the state of the target machine. 
+*Assertions*, on the other hand, are used similarly to facts but may depend on the state of the target machine. 
 Correspondingly, they are defined as operations, whereas facts are defined as functions (as in the previous example).
 To understand the distinction, consider the following use of a fact within an assertion:
 

@@ -116,7 +116,7 @@ We suggest using naming entry points to reflect the use of the `@EntryPoint()` a
 
 We suggest:
 
-- Do not name point operations as "main."
+- Do not name entry point operations as "main."
 - Name entry point operations as ordinary operations.
 
 # [Examples](#tab/examples)

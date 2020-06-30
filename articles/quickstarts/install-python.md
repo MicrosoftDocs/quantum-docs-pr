@@ -76,8 +76,6 @@ If you would like to use VS Code:
 - Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
 - Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
-If you would like to use a different editor, the instructions above have you all set. 
-
 If you would like to use a different editor, the instructions above have you all set.
 
 ## Write your first Q# program

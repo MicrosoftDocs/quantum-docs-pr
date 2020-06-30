@@ -7,6 +7,7 @@ ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries
 ---
+
 # Overview of Q# Libraries
 The Quantum Development Kit is provided with several libraries to make it easier to develop quantum applications in Q#.
 In this section of the documentation, we describe these libraries and how to use them in your programs.
@@ -17,5 +18,9 @@ In this section of the documentation, we describe these libraries and how to use
   This section describes the quantum chemistry library, which provides a data model for loading representations of fermionic Hamiltonians and quantum simulation operations and functions which act on these representations.
 - [**Quantum numerics library**](xref:microsoft.quantum.numerics.intro):
   This section describes the quantum numerics library, which provides implementations for a host of mathematical functions. It supports integer (signed & unsigned) and fixed-point representations.
+- [**Quantum machine learning library**](xref:microsoft.quantum.machinelearning.intro):
+  This section describes the quantum machine learning library, which provides an implementation of the sequential classifiers that take advantage of quantum computing to understand data.
 
-Sources of the libraries as well as code samples can be obtained from GitHub. See also the [licensing](xref:microsoft.quantum.libraries.licensing) section for further information. It should be noted that package references ("binaries") are available also for the libraries which offers another way of including the libraries in projects. A convenient way of obtaining them is via [nuget](https://nuget.org).
+Sources of the libraries as well as code samples can be obtained from GitHub.
+See also the [licensing](xref:microsoft.quantum.libraries.licensing) section for further information. It should be noted that package references ("binaries") are available also for the libraries which offers another way of including the libraries in projects.
+A convenient way of obtaining them is via [NuGet](https://nuget.org).

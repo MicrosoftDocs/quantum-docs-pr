@@ -13,7 +13,7 @@ uid: microsoft.quantum.libraries.using
 The Quantum Development Kit provides additional domain-specific functionality through _NuGet packages_ that can be added to your Q# projects.
 
 | Q# Library  | NuGet package | Notes |
-|---------|---------|
+|---------|---------|--------|
 | [Q# standard library](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft.Quantum.Standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Included by default |
 | [Quantum chemistry library](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
 | [Quantum numerics library](xref:microsoft.quantum.numerics.intro) | [**Microsoft.Quantum.Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) | |

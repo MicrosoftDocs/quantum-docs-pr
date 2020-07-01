@@ -190,8 +190,8 @@ The update procedure depends on whether you originally installed using conda or 
     You should see the following output:
 
     ```
-    iqsharp: 0.11.2006.403
-    Jupyter Core: 1.3.60623.0
+    iqsharp: 0.12.20070114
+    Jupyter Core: 1.4.0.0
     ```
 
     Don't worry if your `iqsharp` version is higher. It should match the [latest release](xref:microsoft.quantum.relnotes).
@@ -212,7 +212,7 @@ The update procedure depends on whether you originally installed using conda or 
 
     ```
     Name: qsharp
-    Version: 0.11.2006.403
+    Version: 0.12.20070114
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -263,8 +263,8 @@ The update procedure depends on whether you originally installed using conda or 
     Your output should be similar to the following:
 
     ```
-    iqsharp: 0.11.2006.403
-    Jupyter Core: 1.3.60623.0
+    iqsharp: 0.12.20070114
+    Jupyter Core: 1.4.0.0
     ```
 
     Don't worry if your `iqsharp` version is higher. It should match the [latest release](xref:microsoft.quantum.relnotes).

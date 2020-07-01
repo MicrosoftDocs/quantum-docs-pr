@@ -124,7 +124,7 @@ To install `qdk-chem`, you can use the .NET Core SDK at the command line:
 dotnet tool install --global Microsoft.Quantum.Chemistry.Tools
 ```
 
-Once you have installed `qdk-chem`, you can use the `--help` option to get more details about the various functionality offered by the `qdk-tool`.
+Once you have installed `qdk-chem`, you can use the `--help` option to get more details about the functionality offered by the `qdk-chem` tool.
 
 To convert to and from Broombridge, you can use the `qdk-chem convert` command:
 

@@ -1,7 +1,7 @@
 ---
 title: '%kata (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.kata
-ms.date: '2020-06-02'
+ms.date: '2020-07-01'
 ms.topic: article
 ---
 

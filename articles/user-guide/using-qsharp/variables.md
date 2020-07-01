@@ -17,7 +17,7 @@ The left-hand-side of a binding consists of a symbol tuple and the right-hand si
 
 ## Immutable Variables
 
-You can assign a value of any type in Q# to a variable for reuse withing an operation or function by using the `let` keyword. 
+You can assign a value of any type in Q# to a variable for reuse within an operation or function by using the `let` keyword. 
 
 An immutable binding consists of the keyword `let`, followed by a symbol or symbol tuple, an equals sign `=`, an expression to bind the symbol(s) to, and a terminating semicolon.
 
@@ -33,18 +33,18 @@ This assigns a particular array of Pauli operators to the variable name (or "sym
 > In the previous example, there is no need to explicitly specify the type of the new variable, as the expression on the right-hand side of the `let` statement is unambiguous, and the compiler infers the correct type. 
 
 Variables defined using `let` are *immutable*, meaning that once you define it, you can no longer change it in any way.
-This provides several beneficial optimizations, including optimization of the classical logic that acts on variables to be reordered for applying the `Adjoint` variant of an operation.
+This allows for several beneficial optimizations, including optimization of the classical logic that acts on variables to be reordered for applying the `Adjoint` variant of an operation.
 
 ## Mutable Variables
 
 As an alternative to creating a variable with `let`, the `mutable` keyword creates a mutable variable that *can* be rebound after it is initially created by using the `set` keyword.
 
-You can rebound symbols declared and bound as part of a `mutable` statement to a different value later in the code. 
+You can rebind symbols declared and bound as part of a `mutable` statement to a different value later in the code. 
 If a symbol is rebound later in the code, its type does not change, and the newly bound value must be compatible with that type.
 
 ### Rebinding of Mutable Symbols
 
-You can rebound a mutable variable using a `set` statement.
+You can rebind a mutable variable using a `set` statement.
 Such a rebinding consists of the keyword `set`, followed by a symbol or symbol tuple, an equals sign `=`, an expression to rebind the symbol(s) to, and a terminating semicolon.
 
 The following are some examples of rebinding statement techniques.
@@ -72,7 +72,7 @@ for (i in 1 .. 2 .. 10) {
 ```
 
 Similar statements are available for all binary operators in which the type of the left-hand side matches the expression type. 
-These statements provide, for example, a convenient way to accumulate values.
+These statements provide a convenient way to accumulate values.
 
 For example, supposing `qubits` is a register of qubits:
 ```qsharp
@@ -130,7 +130,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-Using the library tools for arrays provided in [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays), you can, for example, easily define a function that returns an array of Paulis where the Pauli at index `i` takes the given value, and all other entries are the identity.
+Using the library tools for arrays provided in [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays), you can, for example, easily define a function that returns an array of `Pauli` types where the element at index `i` takes a given `Pauli` value, and all other entries are the identity (`PauliI`).
 
 Here are two definitions of such a function, with the second taking advantage of the tools at our disposal.
 
@@ -139,13 +139,13 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
     mutable pauliArray = new Pauli[length];             // initialize pauliArray of given length
     for (index in 0 .. length - 1) {                    // iterate over the integers in the length range
         set pauliArray w/= index <-                     // change the value at index to input pauli or PauliI
-            index == location ? pauli | PauliI;         // cond. expression evaluating to pauli or PauliI dep. on whether index==location
+            index == location ? pauli | PauliI;         // cond. expression evaluating to pauli if index==location and PauliI if not
     }    
     return pauliArray;
 }
 ```
 
-Instead of iterating over each index in the array, and conditionally setting it to `PauliI` or `Pauli`, you can instead use `ConstantArray` from [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) to create an array of `PauliI` types, and then simply return a copy-and-update expression in which you've changed the specific value at index `location`:
+Instead of iterating over each index in the array, and conditionally setting it to `PauliI` or the given `pauli`, you can instead use `ConstantArray` from [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) to create an array of `PauliI` types, and then simply return a copy-and-update expression in which you've changed the specific value at index `location`:
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {

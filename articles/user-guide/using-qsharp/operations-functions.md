@@ -24,7 +24,7 @@ Operation names must be unique within a namespace and can not conflict with type
 An operation declaration consists of the keyword `operation`, followed by the symbol that is the operation's name, a typed identifier tuple that defines the arguments to the operation, a colon `:`, a type annotation that describes the operation's result type, optionally an annotation with the operation characteristics, an open brace, and then the body of the operation declaration, enclosed in braces `{ }`.
 
 Each operation takes an input, produces an output, and specifies the implementation for one or more operation specializations.
-The possible specializations, and how to define and call them, are detailed the different sections of this article.
+The possible specializations, and how to define and call them, are detailed in the different sections of this article.
 For now, consider the following operation, which defines only a default body specialization and takes a single qubit as its input, then calls the built-in <xref:microsoft.quantum.intrinsic.x> operation on that input:
 
 ```qsharp
@@ -94,22 +94,22 @@ Functors do not have a representation in the Q# type system.
 It is thus currently not possible to bind them to a variable or pass them as arguments. 
 
 Use a functor by applying it to an operation, which returns a new operation.
-For example, applying the `Adjoint functor` to the `Y` operation returns the new operation `Adjoint Y`. You can invoke the new operation like any other operation.
+For example, applying the `Adjoint` functor to the `Y` operation returns the new operation `Adjoint Y`. You can invoke the new operation like any other operation.
 For an operation to support the application of the `Adjoint` or `Controlled` functors, its return type necessarily needs to be `Unit`. 
 
 #### `Adjoint` functor
 
-Thus, `Adjoint Y(q1)` applies the Adjoint functor to the `Y` operation to generate a new operation, and applies that new operation to `q1`.
+Thus, `Adjoint Y(q1)` applies the `Adjoint` functor to the `Y` operation to generate a new operation, and applies that new operation to `q1`.
 The new operation has the same signature and type as the base operation `Y`.
 In particular, the new operation also supports `Adjoint`, and supports `Controlled` if and only if the base operation did.
-The Adjoint functor is its own inverse; that is, `Adjoint Adjoint Op` is always the same as `Op`.
+The `Adjoint` functor is its own inverse; that is, `Adjoint Adjoint Op` is always the same as `Op`.
 
 #### `Controlled` functor
 
-Similarly, `Controlled X(controls, target)` applies the Controlled functor to the `X` operation to generate a new operation, and applies that new operation to `controls` and `target`.
+Similarly, `Controlled X(controls, target)` applies the `Controlled` functor to the `X` operation to generate a new operation, and applies that new operation to `controls` and `target`.
 
 > [!NOTE]
-> In Q#, controlled versions always take an array of control qubits, and the specified state is for all of the control qubits to always be in the computational (`PauliZ`) `One` state, $\ket{1}$.
+> In Q#, controlled versions always take an array of control qubits, and the controlling is always based on all of the control qubits being in the computational (`PauliZ`) `One` state, $\ket{1}$.
 > Controlling based on other states is achieved by applying the appropriate unitary operation to the control qubits before the controlled operation, and then applying the inverses of the unitary operation after the controlled operation.
 > For example, applying an `X` operation to a control qubit before and after a controlled operation causes the operation to control on the `Zero` state ($\ket{0}$) for that qubit; applying an `H` operation before and after controls on the `PauliX` `One` state, that is -1 eigenvalue of Pauli X, $\ket{-} \mathrel{:=} (\ket{0} - \ket{1}) / \sqrt{2}$ rather than the `PauliZ` `One` state.
 
@@ -391,7 +391,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-Starting with our 0.9 release, Q# supportS a conjugation statement that implements the preceding transformation. Using that statement, the operation `ApplyWith` can be implemented in the following way:
+Starting with our 0.9 release, Q# supports a conjugation statement that implements the preceding transformation. Using that statement, the operation `ApplyWith` can be implemented in the following way:
 
 ```qsharp
 operation ApplyWith<'T>(

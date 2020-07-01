@@ -1,11 +1,6 @@
 {
   "redirections": [
     {
-      "source_path": "articles/qsharp.yml",
-      "redirect_url": "/qsharp",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "articles/quantum-SoftwareLicenseTerms.md",
       "redirect_url": "/quantum/license",
       "redirect_document_id": true

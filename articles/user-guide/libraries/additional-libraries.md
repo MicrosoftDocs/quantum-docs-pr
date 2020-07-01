@@ -27,7 +27,7 @@ Once you have installed the Quantum Development Kit for use with your preferred 
 
 ## [Q# command-line applications or .NET interopability](#tab/tabid-csproj)
 
-**Command line or Visual Studio Code:** Using the command line on its own or from within Visual Studio Code, you can use the `dotnet` command to add NuGet package reference to your project.
+**Command line or Visual Studio Code:** Using the command line on its own or from within Visual Studio Code, you can use the `dotnet` command to add a NuGet package reference to your project.
 For example, to add the [**Microsoft.Quantum.Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) package, run the following command:
 
 ```dotnetcli

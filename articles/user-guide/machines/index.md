@@ -38,7 +38,6 @@ The QDK includes several quantum machine classes, all defined in the `Microsoft.
 |[Simple resources estimator](xref:microsoft.quantum.machines.resources-estimator)| `ResourcesEstimator` | Performs a top level analysis of the resources needed to run a quantum algorithm, and supports thousands of qubits.|
 |[Trace-based resource estimator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)|  `QCTraceSimulator` |Runs advanced analysis of resources consumptions for the algorithm's entire call-graph, and supports thousands of qubits.|
 |[Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator)| `ToffoliSimulator` |Simulates quantum algorithms that are limited to `X`, `CNOT`, and multi-controlled `X` quantum operations, and supports million of qubits. |
-|
 
 ## Invoking the quantum simulator
 

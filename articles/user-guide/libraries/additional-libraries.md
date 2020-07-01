@@ -35,7 +35,8 @@ dotnet add package Microsoft.Quantum.Numerics
 ```
 
 **Visual Studio >=2019:** If you are using Visual Studio 2019 or later, you can add additional Q# packages using the NuGet Package Manager.
-To do so, select "Manage NuGet Packages..." from the "Project" menu item in Visual Studio.
+To load a package: 
+1. With a project open in Visual Studio, select **Manage NuGet Packages...** from the **Project** menu.
 
 From the Browse tab, search for the package name "Microsoft.Quantum.Numerics"
 

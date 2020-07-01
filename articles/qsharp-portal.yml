@@ -37,13 +37,13 @@ highlightedContent:
 tools:
   title: Get started with Q#
   items:
-    - imageSrc: todo
+    - imageSrc: https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/44px-Jupyter_logo.svg.png # FIXME: placeholder only for prototyping
       title: Q# with Jupyter Notebook
       url: todo
-    - imageSrc: todo
+    - imageSrc: https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wsYz?ver=514b&q=90&m=6&h=214&w=380&b=%23FFFFFFFF&l=f&o=t&aim=true # FIXME: placeholder only for prototyping
       title: Q# applications
       url: todo
-    - imageSrc: todo
+    - imageSrc: https://code.fb.com/wp-content/uploads/2016/05/2000px-Python-logo-notext.svg_.png # FIXME: placeholder only for prototyping
       title: Q# with Python
       url: todo
     - imageSrc: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png

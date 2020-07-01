@@ -37,5 +37,6 @@ input:
 output:
   content: Microsoft.Quantum.MachineLearning.ValidationResults
   types:
-  - uid: microsoft.quantum.machinelearning.validationresults
+  - summary: The results of the given validation.
+    uid: microsoft.quantum.machinelearning.validationresults
 ...

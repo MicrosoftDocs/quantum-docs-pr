@@ -1,0 +1,50 @@
+### YamlMime:Hub
+
+title: "Q#"
+summary: "Write, test, and understand quantum algorithms with Q#, a high-level quantum development language."
+brand: visual-studio
+
+metadata:
+  title: "Q#"
+  description: "Q# programming language"
+  author: cgranade
+  ms.author: chgranad
+  ms.date: 7/1/2020
+
+highlightedContent:
+  items:
+    - itemType: how-to-guide
+      title: Writing quantum algorithms in Q#
+      url: todo
+    - itemType: deploy
+      title: Running Q# programs on simulators and hardware
+      url: todo
+    - itemType: how-to-guide
+      title: Use Q# programs from Python and .NET
+      url: todo
+    - itemType: whats-new
+      title: What's new in Q#?
+      url: todo
+
+    - itemType: sample
+      title: Q# samples
+      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
+    - itemType: learn
+      title: "Q# in research"
+      url: todo
+
+tools:
+  title: Get started with Q#
+  items:
+    - imageSrc: todo
+      title: Q# with Jupyter Notebook
+      url: todo
+    - imageSrc: todo
+      title: Q# applications
+      url: todo
+    - imageSrc: todo
+      title: Q# with Python
+      url: todo
+    - imageSrc: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+      title: Q# with .NET
+      url: todo

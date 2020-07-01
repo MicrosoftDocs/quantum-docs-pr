@@ -8,7 +8,7 @@ ms.date: 09/04/2019
 ms.topic: landing-page
 ---
 
-# Q# API reference #
+# Q# API reference
 
 This API reference includes the Q# standard library and the three libraries built on top of it - the chemistry, numerics, and machine learning libraries. There are also .NET and Python libraries available for Q#.
 

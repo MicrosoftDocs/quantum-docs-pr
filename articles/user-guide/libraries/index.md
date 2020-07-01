@@ -22,5 +22,5 @@ In this section of the documentation, we describe these libraries and how to use
   This section describes the quantum machine learning library, which provides an implementation of the sequential classifiers that take advantage of quantum computing to understand data.
 
 Sources of the libraries as well as code samples can be obtained from GitHub.
-See also the [licensing](xref:microsoft.quantum.libraries.licensing) section for further information. It should be noted that package references ("binaries") are available also for the libraries which offers another way of including the libraries in projects.
+See [Licensing](xref:microsoft.quantum.libraries.licensing) for further information. Note that package references ("binaries") are available also for the libraries and offer another way of including the libraries in projects.
 A convenient way of obtaining them is via [NuGet](https://nuget.org).

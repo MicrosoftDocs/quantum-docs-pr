@@ -19,9 +19,6 @@ highlightedContent:
     - itemType: deploy
       title: Running Q# programs on simulators and hardware
       url: todo
-    - itemType: how-to-guide
-      title: Use Q# programs from Python and .NET
-      url: todo
     - itemType: whats-new
       title: What's new in Q#?
       url: todo
@@ -31,6 +28,10 @@ highlightedContent:
       url: https://docs.microsoft.com/samples/browse/?languages=qsharp
     - itemType: learn
       title: "Q# in research"
+      url: todo
+
+    - itemType: get-started
+      title: Try Q# without installing
       url: todo
 
 tools:

@@ -23,7 +23,7 @@ Once you have installed the Quantum Development Kit for use with your preferred 
 
 > [!NOTE]
 > Some Q# libraries may work well with additional tools that work alongside your Q# programs, or that integrate with your host applications.
-> For instance, the [chemistry library installation instructions](xref:microsoft.quantum.chemistry.concepts.installation) describe how to use the [**Microsoft.Quantum.Chemistry** package](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) together with the NWChem computational chemistry platform, and how to install the `qdk-chem` command-line tools for working with quantum chemistry data.
+> For example, the [chemistry library installation instructions](xref:microsoft.quantum.chemistry.concepts.installation) describe how to use the [**Microsoft.Quantum.Chemistry** package](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) together with the NWChem computational chemistry platform, and how to install the `qdk-chem` command-line tools for working with quantum chemistry data.
 
 ## [Q# command-line applications or .NET interopability](#tab/tabid-csproj)
 

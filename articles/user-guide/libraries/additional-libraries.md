@@ -38,7 +38,7 @@ dotnet add package Microsoft.Quantum.Numerics
 To load a package: 
 1. With a project open in Visual Studio, select **Manage NuGet Packages...** from the **Project** menu.
 
-From the Browse tab, search for the package name "Microsoft.Quantum.Numerics"
+2. Click ** Browse**, select **Include prerelease** and search for the package name "Microsoft.Quantum.Numerics". 
 
 > [!NOTE]
 > Make sure to tick "Include prerelease"

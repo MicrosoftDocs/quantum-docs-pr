@@ -67,7 +67,7 @@ namespace Quantum.MyProgram
 
 ## See also
 
-- The Quantum Development Kit [Quantum Trace Simulator](xref:Microsoft.Quantum.Machines.qc-trace-simulator.intro) overview.
+- The Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
 - The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.
 - The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.
 - The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException> API reference.

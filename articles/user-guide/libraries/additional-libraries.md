@@ -50,7 +50,7 @@ Alternatively, you can use the Package Manager Console to add the numerics libra
 
 ![Use the Package Manager Console from the command line](~/media/vs2017-nuget-console-menu.png)
 
-From the package manager console, run the following:
+From the Package Manager Console, run the following:
 
 ```
 Install-Package Microsoft.Quantum.Numerics

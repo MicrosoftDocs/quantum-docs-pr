@@ -14,18 +14,40 @@ Install the QDK for developing Q# operations on Q# Jupyter Notebooks.
 
 Jupyter Notebooks allow in-place code execution alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
 
+> [!NOTE]
+> * In Q# Jupyter Notebooks, you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files). This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.
+
+## Install the IQ# Jupyter kernel
+
 IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
 
-> [!NOTE]
-> * In Q# Jupyter Notebooks you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files). This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.
+### [Install using conda (recommended)](#tab/tabid-conda)
 
-1. Prerequisites
+1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads).
+
+1. Open an Anaconda Prompt.
+
+   - Or, if you prefer to use PowerShell or pwsh: open a shell, run `conda init powershell`, then close and re-open the shell.
+
+1. Create and activate a new conda environment named `qsharp-env` with the required packages (including Jupyter Notebook and IQ#) by running the following commands:
+
+    ```
+    conda create -n qsharp-env -c quantum-engineering qsharp notebook
+
+    conda activate qsharp-env
+    ```
+
+1. Run `python -c "import qsharp"` from the same terminal to verify your installation and populate your local package cache with all required QDK components.
+
+### [Install using .NET CLI (advanced)](#tab/tabid-dotnetcli)
+
+1. Prerequisites:
 
     - [Python](https://www.python.org/downloads/) 3.6 or later
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
     - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-1. Install the `iqsharp` package
+1. Install the `Microsoft.Quantum.IQSharp` package.
 
     ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -40,42 +62,44 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
     > ```
     > where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
     > Typically this will be under `.dotnet/tools` in your user profile folder.
+    
+***
 
-1. Verify the installation by creating a `Hello World` application
+That's it! You now have the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Q# Jupyter Notebooks.
 
-    - Run the following command to start the notebook server:
+## Create your first Q# notebook
 
-        ```
-        jupyter notebook
-        ```
+Now you are ready to verify your Q# Jupyter Notebook installation by writing and executing a simple Q# operation.
 
-    - To open the Jupyter Notebook, copy and paste the URL provided by the command line into your browser.
+1. From the environment you created during installation (i.e., either the conda environment you created, or the Python environment where you installed Jupyter), run the following command to start the Jupyter Notebook server:
 
-    - Create a Jupyter Notebook with a Q# kernel, and add the following code to the first notebook cell:
+    ```
+    jupyter notebook
+    ```
 
-        ```qsharp
-        operation SayHello () : Unit {
-            Message("Hello from quantum world!");
-        }
-        ```
+    - If the Jupyter Notebook doesn't open automatically in your browser, copy and paste the URL provided by the command line into your browser.
 
-    - Run this cell of the notebook:
+1. Choose "New" → "Q#" to create a Jupyter Notebook with a Q# kernel, and add the following code to the first notebook cell:
 
-        ![Jupyter Notebook cell with Q# code](~/media/install-guide-jupyter.png)
+    :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 
-        You should see `SayHello` in the output of the cell. When running in Jupyter Notebook, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.
+1. Run this cell of the notebook:
 
+    ![Jupyter Notebook cell with Q# code](~/media/install-guide-jupyter.png)
 
-    - In a new cell, execute the operation you just created (in a simulator) by using the `%simulate` command:
+    You should see `SampleQuantumRandomNumberGenerator` in the output of the cell. When running in Jupyter Notebook, the Q# code is compiled, and the cell outputs the name of any operations that it finds.
 
-        ![Jupyter Notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
+1. In a new cell, execute the operation you just created (in a simulator) by using the `%simulate` command:
 
-        You should see the message printed on the screen along with the result of the operation you invoked (here, we see the empty tuple `()` because our operation simply returns a `Unit` type).
+    ![Jupyter Notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
+
+    You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `Zero` or `One` printed on the screen. If you execute the cell repeatedly, you should see each result approximately half the time.
 
 ## Next steps
 
-Now that you have installed the QDK for Q# Jupyter Notebooks, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng) by writing your Q# code directly within the Jupyter Notebook environment.
+Now that you have installed the QDK for Q# Jupyter Notebooks, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng) by writing Q# code directly within the Jupyter Notebook environment.
 
 For more examples of what you can do with Q# Jupyter Notebooks, please take a look at:
-- [Intro to Q# and Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). There you will find a Q# Jupyter Notebook that shows how to use Q# in this environment.
+
+- [Intro to Q# and Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). There you will find a Q# Jupyter Notebook that provides more details on how to use Q# in the Jupyter environment.
 - [Quantum Katas](xref:microsoft.quantum.overview.katas), an open-source collection of self-paced tutorials and sets of programming exercises in the form of Q# Jupyter Notebooks. The [Quantum Katas tutorial notebooks](https://github.com/microsoft/QuantumKatas#tutorial-topics) are a good starting point. The Quantum Katas are aimed at teaching you elements of quantum computing and Q# programming at the same time. They're an excellent example of what kind of content you can create with Q# Jupyter Notebooks.

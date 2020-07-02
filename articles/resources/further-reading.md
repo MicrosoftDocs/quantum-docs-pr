@@ -20,6 +20,14 @@ Computation and Quantum Information, UK: Cambridge University Press, 2010.
 + Kitaev, A. Y., Shen, A., & Vyalyi, M. N. (2002). Classical and quantum computation (Vol. 47). Providence: American Mathematical Society.
 + Kaye, P., Laﬂamme, R., & Mosca, M. (2007). An introduction to quantum computing. Oxford University Press.
 + Rieﬀel, E. G., & Polak, W. H. (2011). Quantum computing: A gentle introduction. MIT Press.
++ Sarah C. Kaiser and Christopher E. Granade (Manning Early Access Program began April 2019  Publication in Fall 2020). [Learn Quantum Computing with Python and Q# - A hands-on approach](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
+
+## Online Courses ##
+
++ [MS Learn Quantum Computing modules](https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r). A ste-by-step tutorial of quantum computing concepts and practices. 
++ [Quantum Computing - Brilliant Course](https://brilliant.org/courses/quantum-computing/). Learn to build quantum algorithms from the ground up with a quantum computer simulated in your browser.
++ [Introduction to Quantum Computing - LinkedIn Learning](https://www.linkedin.com/learning/introduction-to-quantum-computing). 1h25m video introduction. 
++ [Quantum Computing through Comics](https://hackaday.io/project/168554-introduction-to-quantum-computing). Sunday weekly hands-on community class. 
 
 ## Elementary techniques for building controlled gates ##
 

@@ -10,14 +10,14 @@ uid: microsoft.quantum.guide.variables
 
 # Variables in Q#
 
-Q# distinguishes between mutable and immutable symbols, or "variables", which are bound/assigned to expressions.
+Q# distinguishes between mutable and immutable symbols, or *variables*, which are bound/assigned to expressions.
 In general, the use of immutable symbols is encouraged because it allows the compiler to perform more optimizations.
 
-The left-hand-side of a binding consists of a symbol tuple, and the right hand side of an expression.
+The left-hand-side of a binding consists of a symbol tuple and the right-hand side of an expression.
 
 ## Immutable Variables
 
-A value of any type in Q# can be assigned to a variable for reuse within an operation or function by using the `let` keyword.
+You can assign a value of any type in Q# to a variable for reuse within an operation or function by using the `let` keyword. 
 
 An immutable binding consists of the keyword `let`, followed by a symbol or symbol tuple, an equals sign `=`, an expression to bind the symbol(s) to, and a terminating semicolon.
 
@@ -30,29 +30,30 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 This assigns a particular array of Pauli operators to the variable name (or "symbol"), `measurementOperator`.
 
 > [!NOTE]
-> We did not need to explicitly specify the type of our new variable, as the expression on the right-hand side of the `let` statement is unambiguous and the type is inferred by the compiler. 
+> In the previous example, there is no need to explicitly specify the type of the new variable, as the expression on the right-hand side of the `let` statement is unambiguous, and the compiler infers the correct type. 
 
-Variables defined using `let` are *immutable*, meaning that once it has been defined, it can no longer be changed in any way.
-This allows for several beneficial optimizations, including optimization of the classical logic acting on variables to be reordered for applying the `Adjoint` variant of an operation.
+Variables defined using `let` are *immutable*, meaning that once you define it, you can no longer change it in any way.
+This allows for several beneficial optimizations, including optimization of the classical logic that acts on variables to be reordered for applying the `Adjoint` variant of an operation.
 
 ## Mutable Variables
 
-As an alternative to creating a variable with `let`, the `mutable` keyword will create a mutable variable that *can* be re-bound after it is initially created by using the `set` keyword.
+As an alternative to creating a variable with `let`, the `mutable` keyword creates a mutable variable that *can* be rebound after it is initially created by using the `set` keyword.
 
-Symbols declared and bound as part of a `mutable` statement may be rebound to a different value later in the code. 
-If a symbol is rebound later in the code, its type does not change, and the newly bound value needs to be compatible with that type.
+You can rebind symbols declared and bound as part of a `mutable` statement to a different value later in the code. 
+If a symbol is rebound later in the code, its type does not change, and the newly bound value must be compatible with that type.
 
 ### Rebinding of Mutable Symbols
 
-A mutable variable may be rebound using a `set` statement.
+You can rebind a mutable variable using a `set` statement.
 Such a rebinding consists of the keyword `set`, followed by a symbol or symbol tuple, an equals sign `=`, an expression to rebind the symbol(s) to, and a terminating semicolon.
 
-Here, we provide some possible examples of rebinding statement techniques
+The following are some examples of rebinding statement techniques.
 
-### Apply-and-Reassign Statements
+#### Apply-and-Reassign Statements
 
-A particular kind of `set`-statement we refer to as an *apply-and-reassign* statement provides a convenient way of concatenation if the right hand side consists of the application of a binary operator and the result is to be rebound to the left argument to the operator. 
+A particular kind of `set`-statement, the *apply-and-reassign* statement, provides a convenient way of concatenation if the right-hand side consists of the application of a binary operator, and the result is to be rebound to the left argument to the operator. 
 For example,
+
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -60,7 +61,8 @@ for (i in 1 .. 2 .. 10) {
     // ...
 }
 ```
-increments the value of the counter `counter` in each iteration of the `for` loop. The code above is equivalent to 
+increments the value of the counter `counter` in each iteration of the `for` loop. The previous code is equivalent to 
+
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -69,10 +71,10 @@ for (i in 1 .. 2 .. 10) {
 }
 ```
 
-Similar statements are available for all binary operators in which the type of the left-hand-side matches the expression type. 
-This provides for example a convenient way to accumulate values.
+Similar statements are available for all binary operators in which the type of the left-hand side matches the expression type. 
+These statements provide a convenient way to accumulate values.
 
-For example, supposing `qubits` is a regsiter of qubits:
+For example, supposing `qubits` is a register of qubits:
 ```qsharp
 mutable results = new Result[0];   // results is an empty array of type Result[]
 for (q in qubits) {
@@ -82,9 +84,9 @@ for (q in qubits) {
 ...                                // results contains the measurement outcomes from the whole register
 ```
 
-### Update-and-Reassign Statements
+#### Update-and-Reassign Statements
 
-A similar concatenation exists for [copy-and-update expressions](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) on the right-hand-side.
+A similar concatenation exists for [copy-and-update expressions](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) on the right-hand side.
 Correspondingly, *update-and-reassign* statements exist for *named items* in user-defined types as well as for *array items*.  
 
 ```qsharp
@@ -103,7 +105,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-In the case of arrays, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) in our standard libraries provides the necessary tools for many common array initialization and manipulation needs, and thus help avoid having to update array items in the first place. 
+In the case of arrays, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) in the Q# standard library provides the necessary tools for many common array initialization and manipulation needs, and thus helps avoid having to update array items in the first place. 
 
 Update-and-reassign statements provide an alternative if needed:
 
@@ -128,7 +130,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-Using the library tools for arrays provided in [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays), we can, for example, easily define a function that returns an array of Paulis where the Pauli at index `i` takes the given value and all other entries are the identity.
+Using the library tools for arrays provided in [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays), you can, for example, easily define a function that returns an array of `Pauli` types where the element at index `i` takes a given `Pauli` value, and all other entries are the identity (`PauliI`).
 
 Here are two definitions of such a function, with the second taking advantage of the tools at our disposal.
 
@@ -137,13 +139,13 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
     mutable pauliArray = new Pauli[length];             // initialize pauliArray of given length
     for (index in 0 .. length - 1) {                    // iterate over the integers in the length range
         set pauliArray w/= index <-                     // change the value at index to input pauli or PauliI
-            index == location ? pauli | PauliI;         // cond. expression evaluating to pauli or PauliI dep. on whether index==location
+            index == location ? pauli | PauliI;         // cond. expression evaluating to pauli if index==location and PauliI if not
     }    
     return pauliArray;
 }
 ```
 
-Instead of iterating over each index in the array, and conditionally setting it to `PauliI` or `Pauli`, we can instead use `ConstantArray` from [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) to create an array of `PauliI`'s, and then simply returning a copy-and-update expression in which we've changed the specifc value at index `location`:
+Instead of iterating over each index in the array, and conditionally setting it to `PauliI` or the given `pauli`, you can instead use `ConstantArray` from [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) to create an array of `PauliI` types, and then simply return a copy-and-update expression in which you've changed the specific value at index `location`:
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
@@ -153,11 +155,11 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 
 ## Tuple Deconstruction
 
-In addition to assigning a single variable, the `let` and `mutable` keywords---or in fact any other binding construct, such as `set` (described below)---also allow for unpacking the contents of a [tuple type](xref:microsoft.quantum.guide.types#tuple-types).
+In addition to assigning a single variable, you can use the `let` and `mutable` keywords - or any other binding construct, such as `set` - to unpack the contents of a [tuple type](xref:microsoft.quantum.guide.types#tuple-types).
 An assignment of this form is said to *deconstruct* the elements of that tuple.
 
-If the right-hand side of the binding is a tuple, then that tuple may be deconstructed upon assignment.
-Such deconstructions may involve nested tuples, and any full or partial deconstruction is valid as long as the shape of the tuple on the right hand side is compatible with the shape of the symbol tuple.
+If the right-hand side of the binding is a tuple, then you can deconstruct that tuple upon assignment.
+Such deconstructions can involve nested tuples, and any full or partial deconstruction is valid as long as the shape of the tuple on the right-hand side is compatible with the shape of the symbol tuple.
 
 For example:
 
@@ -175,14 +177,14 @@ In general, symbol bindings go out of scope and become inoperative at the end of
 There are two exceptions to this rule:
 
 - The binding of the loop variable of a `for` loop is in scope for the body of the for loop, but not after the end of the loop.
-- All three portions of a `repeat`/`until` loop (the body, the test, and the fixup) are treated as a single scope, so symbols that are bound in the body are available in the test and in the fixup.
+- All three portions of a `repeat`/`until` loop (the body, the test, and the fixup) act as a single scope, so symbols that are bound in the body are available in the test and the fixup.
 
-For both types of loops, each pass through the loop executes in its own scope, so bindings from an earlier pass are not available in a later pass.
-Details on these loops can be found at [Control Flow](xref:microsoft.quantum.guide.controlflow).
+For both types of loops, each pass through the loop runs in its own scope, so bindings from an earlier pass are not available in a later pass.
+For more information on these loops, see [Control Flow](xref:microsoft.quantum.guide.controlflow).
 
-Symbol bindings from outer blocks are inherited by inner blocks.
-A symbol may only be bound once per block; it is illegal to define a symbol with the same name as another symbol that is within scope (no "shadowing").
-The following sequences would be legal:
+Inner blocks inherit symbol bindings from outer blocks.
+You can only bind a symbol once per block; it is illegal to define a symbol with the same name as another symbol that is within scope (no "shadowing").
+The following sequences are legal:
 
 ```qsharp
 if (a == b) {

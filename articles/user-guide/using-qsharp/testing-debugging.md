@@ -3,34 +3,34 @@ title: Testing and debugging
 description: Learn how to use unit tests, facts and assertions, and dump functions to test and debug quantum programs. 
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
 ---
 
 # Testing and debugging
 
-As with classical programming, it is essential to be able to check that quantum programs act as intended, and to be able to diagnose a quantum program that is incorrect.
+As with classical programming, it is essential to be able to check that quantum programs act as intended, and to be able to diagnose incorrect behavior.
 In this section, we cover the tools offered by Q# for testing and debugging quantum programs.
 
 ## Unit Tests
 
-One common approach to testing classical programs is to write small programs called *unit tests* which run code in a library and compare its output to some expected output.
-For instance, we may want to ensure that `Square(2)` returns `4`, since we know *a priori* that $2^2 = 4$.
+One common approach to testing classical programs is to write small programs called *unit tests*, which run code in a library and compare its output to some expected output.
+For example, you can ensure that `Square(2)` returns `4` since you know *a priori* that $2^2 = 4$.
 
-Q# supports creating unit tests for quantum programs, and which can be executed as tests within the [xUnit](https://xunit.github.io/) unit testing framework.
+Q# supports creating unit tests for quantum programs, and which can run as tests within the [xUnit](https://xunit.github.io/) unit testing framework.
 
 ### Creating a Test Project
 
 #### [Visual Studio 2019](#tab/tabid-vs2019)
 
-Open Visual Studio 2019. Go to the `File` menu and select `New` > `Project...`.
-In the upper right corner, search for `Q#`, and select the `Q# Test Project` template.
+Open Visual Studio 2019. Go to the **File** menu and select **New > Project...**.
+In the upper right corner, search for `Q#`, and select the **Q# Test Project** template.
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
 From your favorite command line, run the following command:
-```bash
+```dotnetcli
 $ dotnet new xunit -lang Q# -o Tests
 $ cd Tests
 $ code . # To open in Visual Studio Code
@@ -38,8 +38,8 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-Your new project will have a single file `Tests.qs`, which provides a convenient place to define new Q# unit tests.
-Initially this file contains one sample unit test `AllocateQubit` which checks that a newly allocated qubit is in the $\ket{0}$ state and prints a message:
+Your new project has a single file `Tests.qs`, which provides a convenient place to define new Q# unit tests.
+Initially, this file contains one sample unit test `AllocateQubit` which checks that a newly allocated qubit is in the $\ket{0}$ state and prints a message:
 
 ```qsharp
     @Test("QuantumSimulator")
@@ -53,33 +53,33 @@ Initially this file contains one sample unit test `AllocateQubit` which checks t
     }
 ```
 
-:new: Any Q# operation or function that takes an argument of type `Unit` and returns `Unit` can be marked as a unit test via the `@Test("...")` attribute. 
-The argument to that attribute, `"QuantumSimulator"` above, specifies the target on which the test is executed. A single test can be executed on multiple targets. For example, add an attribute `@Test("ResourcesEstimator")` above `AllocateQubit`. 
+Any Q# operation or function that takes an argument of type `Unit` and returns `Unit` can be marked as a unit test via the `@Test("...")` attribute. 
+In the previous example, the argument to that attribute, `"QuantumSimulator"`, specifies the target on which the test runs. A single test can run on multiple targets. For example, add an attribute `@Test("ResourcesEstimator")` before `AllocateQubit`. 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
     operation AllocateQubit () : Unit {
         ...
 ```
-Save the file and execute all tests. There should now be two unit tests, one where AllocateQubit is executed on the QuantumSimulator, and one where it is executed in the ResourceEstimator. 
+Save the file and run all tests. There should now be two unit tests, one where `AllocateQubit` runs on the `QuantumSimulator`, and one where it runs in the `ResourcesEstimator`. 
 
-The Q# compiler recognizes the built-in targets "QuantumSimulator", "ToffoliSimulator", and "ResourcesEstimator" as valid execution targets for unit tests. It is also possible to specify any fully qualified name to define a custom execution target. 
+The Q# compiler recognizes the built-in targets `"QuantumSimulator"`, `"ToffoliSimulator"`, and `"ResourcesEstimator"` as valid execution targets for unit tests. It is also possible to specify any fully qualified name to define a custom execution target. 
 
 ### Running Q# Unit Tests
 
 #### [Visual Studio 2019](#tab/tabid-vs2019)
 
-As a one-time per-solution setup, go to `Test` menu and select `Test Settings` > `Default Processor Architecture` > `X64`.
+As a one-time per-solution setup, go to the **Test** menu and select **Test Settings > Default Processor Architecture > X64**.
 
 > [!TIP]
 > The default processor architecture setting for Visual Studio is stored in the solution options (`.suo`) file for each solution.
-> If you delete this file, then you will need to select `X64` as your processor architecture again.
+> If you delete this file, then you need to select **X64** as your processor architecture again.
 
-Build the project, go to the `Test` menu and select `Windows` > `Test Explorer`. `AllocateQubit` will show up in the list of tests in the `Not Run Tests` group. Select `Run All` or run this individual test, and it should pass!
+Build the project, open the **Test** menu, and select **Windows > Test Explorer**. **AllocateQubit** displays in the list of tests in the **Not Run Tests** group. Select **Run All** or run this individual test.
 
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
-To run tests, navigate to the project folder (the folder which contains `Tests.csproj`), and execute the command:
+To run tests, navigate to the project folder (the folder which contains `Tests.csproj`), and run the command:
 
 ```bash
 $ dotnet restore
@@ -107,7 +107,7 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
-Unit tests can be filtered according to their name and/or the execution target:
+Unit tests can be filtered according to their name or the execution target:
 
 ```bash 
 $ dotnet test --filter "Target=QuantumSimulator"
@@ -121,7 +121,7 @@ The intrinsic function <xref:microsoft.quantum.intrinsic.message> has type `(Str
 
 #### [Visual Studio 2019](#tab/tabid-vs2019)
 
-After you execute a test in Test Explorer and click on the test, a panel will appear with information about test execution: Passed/Failed status, elapsed time and an "Output" link. If you click the "Output" link, test output will open in a new window.
+After you run a test in Test Explorer and click on the test, a panel displays with information about test execution: Pass/fail status, elapsed time, and a link to the output. Click **Output** to open the test output in a new window.
 
 ![test output](~/media/unit-test-output.png)
 
@@ -134,9 +134,9 @@ For failing tests, the outputs are also printed to the console to help diagnose 
 
 ## Facts and Assertions
 
-Because functions in Q# have no _logical_ side effects, any _other kinds_ of effects of executing a function whose output type is the empty tuple `()` can never be observed from within a Q# program.
-That is, a target machine can choose not to execute any function which returns `()` with the guarantee that this omission will not modify the behavior of any following Q# code.
-This makes functions returning `()` (i.e. `Unit`) a useful tool for embedding assertions and debugging logic into Q# programs. 
+Because functions in Q# have no _logical_ side effects, you can never observe, from within a Q# program, any other kinds of effects from running a function whose output type is the empty tuple `()`.
+That is, a target machine can choose not to run any function which returns `()` with the guarantee that this omission will not modify the behavior of any following Q# code.
+This behavior makes functions returning `()` (such as `Unit`) a useful tool for embedding assertions and debugging logic into Q# programs. 
 
 Let's consider a simple example:
 
@@ -150,18 +150,18 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-Here, the keyword `fail` indicates that the computation should not proceed, raising an exception in the target machine running the Q# program.
-By definition, a failure of this kind cannot be observed from within Q#, as no further Q# code is run after a `fail` statement is reached.
-Thus, if we proceed past a call to `PositivityFact`, we can be assured by that its input was positive.
+Here, the keyword `fail` indicates that the computation should not proceed, and raises an exception in the target machine running the Q# program.
+By definition, a failure of this kind cannot be observed from within Q#, as the target machine no longer runs the Q# code after reaching a `fail` statement.
+Thus, if we proceed past a call to `PositivityFact`, we can be assured that its input was positive.
 
 Note that we can implement the same behavior as `PositivityFact` using the [`Fact`](xref:microsoft.quantum.diagnostics.fact) function from the <xref:microsoft.quantum.diagnostics> namespace:
 
 ```qsharp
-	Fact(value <= 0, "Expected a positive number.");
+	Fact(value > 0, "Expected a positive number.");
 ```
 
-*Assertions*, on the other hand, are used similarly to facts, but may be dependent on the state of the target machine. 
-Correspondingly, they are defined as operations, whereas facts are defined as functions (as above).
+*Assertions*, on the other hand, are used similarly to facts but may depend on the state of the target machine. 
+Correspondingly, they are defined as operations, whereas facts are defined as functions (as in the previous example).
 To understand the distinction, consider the following use of a fact within an assertion:
 
 ```qsharp
@@ -172,12 +172,12 @@ operation AssertQubitsAreAvailable() : Unit
 ```
 
 Here, we are using the operation <xref:microsoft.quantum.environment.getqubitsavailabletouse> to return the number of qubits available to use.
-As this clearly depends on the global state of the program and its execution environment, our definition of  `AssertQubitsAreAvailable` must be an operation as well.
+As this depends on the global state of the program and its execution environment, our definition of `AssertQubitsAreAvailable` must be an operation as well.
 However, we can use that global state to yield a simple `Bool` value as input to the `Fact` function.
 
-Building on these ideas, [the prelude](xref:microsoft.quantum.libraries.standard.prelude) offers two especially useful assertions, <xref:microsoft.quantum.intrinsic.assert> and <xref:microsoft.quantum.intrinsic.assertprob> both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is to be performed, and a hypothetical outcome.
-On target machines which work by simulation, we are not bound by [the no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), and can perform such measurements without disturbing the register passed to such assertions.
-A simulator can then, similar to the `PositivityFact` function above, abort computation if the hypothetical outcome would not be observed in practice:
+[The prelude](xref:microsoft.quantum.libraries.standard.prelude), building on these ideas, offers two especially useful assertions, <xref:microsoft.quantum.intrinsic.assert> and <xref:microsoft.quantum.intrinsic.assertprob> both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is performed, and a hypothetical outcome.
+Target machines which work by simulation are not bound by [the no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), and can perform such measurements without disturbing the register that passes to such assertions.
+A simulator can then, similar to the `PositivityFact` function previous, stop computation if the hypothetical outcome is not observed in practice:
 
 ```qsharp
 using (register = Qubit()) 
@@ -190,9 +190,9 @@ using (register = Qubit())
 }
 ```
 
-On physical quantum hardware, where the no-cloning theorem prevents examination of quantum state, the `Assert` and `AssertProb` operations simply return `()` with no other effect.
+On physical quantum hardware, where the no-cloning theorem prevents examination of a quantum state, the `Assert` and `AssertProb` operations simply return `()` with no other effect.
 
-The <xref:microsoft.quantum.diagnostics> namespace provides several more functions of the `Assert` family which allow us to check more advanced conditions. 
+The <xref:microsoft.quantum.diagnostics> namespace provides several more functions of the `Assert` family, with which you can check more advanced conditions. 
 
 ## Dump Functions
 
@@ -216,7 +216,7 @@ calling <xref:microsoft.quantum.diagnostics.dumpmachine> generates this output:
 ∣3❭:	 0.000000 +  0.000000 i	 == 	                     [ 0.000000 ]                   
 ```
 
-The first row provides a comment with the IDs of the corresponding qubits in their significant order.
+The first row provides a comment with the ids of the corresponding qubits in their significant order.
 The rest of the rows describe the probability amplitude of measuring the basis state vector $\ket{n}$ in both Cartesian and polar formats. In detail for the first row:
 
 * **`∣0❭:`** this row corresponds to the `0` computational basis state
@@ -224,7 +224,7 @@ The rest of the rows describe the probability amplitude of measuring the basis s
 * **` == `**: the `equal` sign separates both equivalent representations.
 * **`**********  `**: A graphical representation of the magnitude, the number of `*` is proportionate to the probability of measuring this state vector.
 * **`[ 0.500000 ]`**: the numeric value of the magnitude
-* **`    ---`**: A graphical representation of the amplitude's phase (see below).
+* **`    ---`**: A graphical representation of the amplitude's phase (see the following output).
 * **`[ 0.0000 rad ]`**: the numeric value of the phase (in radians).
 
 Both the magnitude and the phase are displayed with a graphical representation. The magnitude representation is straight-forward: it shows a bar of `*`, the bigger the probability the bigger the bar will be. For the phase, we show the following symbols to represent the angle based on ranges:
@@ -285,13 +285,13 @@ The following examples show `DumpMachine` for some common states:
 
 
   > [!NOTE]
-  > The id of a qubit is assigned at runtime and it's not necessarily aligned with the order in which the qubit was allocated or its position within a qubit register.
+  > The id of a qubit is assigned at runtime and is not necessarily aligned with the order in which the qubit was allocated or its position within a qubit register.
 
 
 #### [Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
-  > You can figure out a qubit id in Visual Studio by putting a breakpoint in your code and inspecting the value of a qubit variable, for example:
+  > You can locate a qubit id in Visual Studio by putting a breakpoint in your code and inspecting the value of a qubit variable, for example:
   > 
   > ![show qubit id in Visual Studio](~/media/qubit_id.png)
   >
@@ -300,7 +300,7 @@ The following examples show `DumpMachine` for some common states:
 #### [Command Line / Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
-  > You can figure out a qubit id by using the <xref:microsoft.quantum.intrinsic.message> function and passing the qubit variable in the message, for example:
+  > You can locate a qubit id by using the <xref:microsoft.quantum.intrinsic.message> function and passing the qubit variable in the message, for example:
   >
   > ```qsharp
   > Message($"0={register2[0]}; 1={register2[1]}");
@@ -315,7 +315,7 @@ The following examples show `DumpMachine` for some common states:
 
 ***
 
-<xref:microsoft.quantum.diagnostics.dumpmachine> is part of the  <xref:microsoft.quantum.diagnostics> namespace, so in order to use it you must add an `open` statement:
+Since <xref:microsoft.quantum.diagnostics.dumpmachine> is part of the  <xref:microsoft.quantum.diagnostics> namespace, you must add an `open` statement to access it:
 
 ```qsharp
 namespace Samples {
@@ -334,7 +334,7 @@ namespace Samples {
 
 ### DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister> works like <xref:microsoft.quantum.diagnostics.dumpmachine>, except it also takes an array of qubits to limit the amount of information to only that relevant to the corresponding qubits.
+<xref:microsoft.quantum.diagnostics.dumpregister> works like <xref:microsoft.quantum.diagnostics.dumpmachine>, except that it also takes an array of qubits to limit the amount of information to only that relevant to the corresponding qubits.
 
 As with <xref:microsoft.quantum.diagnostics.dumpmachine>, the information generated by <xref:microsoft.quantum.diagnostics.dumpregister> depends on the target machine. For the full-state quantum simulator it writes into the file the wave function up to a global phase of the quantum sub-system generated by the provided qubits in the same format as <xref:microsoft.quantum.diagnostics.dumpmachine>.  For example, take again a machine with only two qubits allocated and in the quantum state
 $$
@@ -391,6 +391,6 @@ namespace app
 
 ## Debugging
 
-On top of `Assert` and `Dump` functions and operations, Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) and [inspecting values of classic variables](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) are all possible during code execution on the simulator.
+On top of `Assert` and `Dump` functions and operations, Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger), and [inspecting values of classic variables](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) are all possible during code execution on the simulator.
 
 Debugging in Visual Studio Code leverages the debugging capabilities provided by the C# for Visual Studio Code extension powered by OmniSharp and requires installing the [latest version](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp). 

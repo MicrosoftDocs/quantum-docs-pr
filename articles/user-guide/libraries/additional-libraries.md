@@ -1,6 +1,6 @@
 ---
 title: Using additional Q# libraries
-description: Learn how to add the Microsoft Quantum numerics library to your Visual Studio 2019 or later installation. 
+description: Learn how to add additional Q# libraries to your quantum applications.
 author: cgranade
 ms.author: chgranad
 ms.date: 06/30/2020
@@ -80,11 +80,11 @@ To make the package available from Q# code in the current workspace, reload the 
 
 
 Additional packages can be made available for use in a Python host program by using the `qsharp.packages.add` method.
-For example, to add the [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) package for use in an IQ# Notebook, run the following Python code:
+For example, to add the [**Microsoft.Quantum.Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) package for use in an IQ# Notebook, run the following Python code:
 
 ```python
 import qsharp
-qsharp.packages.add("Microsoft.Quantum.Chemistry")
+qsharp.packages.add("Microsoft.Quantum.Numerics")
 ```
 
 Following this command, the package will be made available to any Q# code compiled using `qsharp.compile`.

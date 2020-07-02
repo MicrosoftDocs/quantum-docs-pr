@@ -42,8 +42,7 @@ To load a package:
 
 
 This will list the packages available for download.
-For example, hovering over "Microsoft.Quantum.Numerics" reveals a downward-pointing arrow to the right of the version number.
-Click on the arrow in order to install the numerics package.
+3. Hover over **Microsoft.Quantum.Numerics** and click the downward-pointing arrow to the right of the version number to install the numerics package.
 
 For more details, see the [Package Manager UI guide](https://docs.microsoft.com/nuget/tools/package-manager-ui).
 

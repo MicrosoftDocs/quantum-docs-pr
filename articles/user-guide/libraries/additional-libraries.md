@@ -77,7 +77,7 @@ To make the package available from Q# code in the current workspace, reload the 
 ## [Python interoperability](#tab/tabid-python)
 
 
-Additional packages can be made available for use in a Python host program by using the `qsharp.packages.add` method.
+You can make additional packages available for use in a Python host program by using the [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages) method.
 For example, to add the [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) package for use in an IQ# Notebook, run the following Python code:
 
 ```python

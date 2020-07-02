@@ -190,7 +190,7 @@ The update procedure depends on whether you originally installed using conda or 
     You should see the following output:
 
     ```
-    iqsharp: 0.12.20070114
+    iqsharp: 0.12.20070124
     Jupyter Core: 1.4.0.0
     ```
 
@@ -212,7 +212,7 @@ The update procedure depends on whether you originally installed using conda or 
 
     ```
     Name: qsharp
-    Version: 0.12.20070114
+    Version: 0.12.20070124
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -263,7 +263,7 @@ The update procedure depends on whether you originally installed using conda or 
     Your output should be similar to the following:
 
     ```
-    iqsharp: 0.12.20070114
+    iqsharp: 0.12.20070124
     Jupyter Core: 1.4.0.0
     ```
 

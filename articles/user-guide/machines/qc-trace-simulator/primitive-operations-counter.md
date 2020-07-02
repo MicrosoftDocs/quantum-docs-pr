@@ -16,7 +16,7 @@ All <xref:microsoft.quantum.intrinsic> operations are expressed in terms of sing
 
 ## Invoking the Primitive Operations Counter
 
-To run the Quantum Trace Simulator with the Primitive Operations Counter, you must create a [`QCTraceSimulatorConfiguration`](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) instance, set the `UsePrimitiveOperationsCounter` property to **true**, and then create a new [`QCTraceSimulator`](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.QCTraceSimulator) instance with the `QCTraceSimulatorConfiguration` as the parameter.
+To run the Quantum Trace Simulator with the Primitive Operations Counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UsePrimitiveOperationsCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with the `QCTraceSimulatorConfiguration` as the parameter.
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -53,7 +53,7 @@ double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroups
 double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
 ```
 
-The first part of the program runs `ApplySampleWithCCNOT`. The second part uses the [`QCTraceSimulator.GetMetric`](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.QCTraceSimulator.GetMetric) method to retrieve the number of `T` operations run by `ApplySampleWithCCNOT`: 
+The first part of the program runs `ApplySampleWithCCNOT`. The second part uses the [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the number of `T` operations run by `ApplySampleWithCCNOT`: 
 
 ```csharp
 double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
@@ -75,6 +75,6 @@ string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter]
 ## See also
 
 - The Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
-- The [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) API reference.
-- The [QCTraceSimulatorConfiguration](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) API reference.
-- The [PrimitiveOperationsGroupNames](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.PrimitiveOperationsGroupsNames) API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.PrimitiveOperationsGroupsNames> API reference.

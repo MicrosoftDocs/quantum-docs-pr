@@ -44,11 +44,11 @@ operation ApplyWithNonDistinctInputs() : Unit {
 ```
 
 Note that `op1` and `op2` are both obtained using partial application and share a qubit. When you call `ApplyBoth` in this example, the result of the operation
-depends on the order of `op1` and `op2` inside `ApplyBoth` - not what you would expect to happen. When you enable the Distinct Inputs Checker, it detects such situations and throws a `DistinctInputsCheckerException`. For more information, see [DistinctInputsCheckerException](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) in the Q# API library.
+depends on the order of `op1` and `op2` inside `ApplyBoth` - not what you would expect to happen. When you enable the Distinct Inputs Checker, it detects such situations and throws a `DistinctInputsCheckerException`. For more information, see <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> in the Q# API library.
 
 ## Invoking the Distinct Inputs Checker
 
-To run the Quantum Trace Simulator with the Distinct Inputs Checker you must create a [`QCTraceSimulatorConfiguration`](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) instance, set the `UseDistinctInputsChecker` property to **true**, and then create a new [`QCTraceSimulator`](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.QCTraceSimulator) instance with `QCTraceSimulatorConfiguration` as the parameter. 
+To run the Quantum Trace Simulator with the Distinct Inputs Checker you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UseDistinctInputsChecker` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with `QCTraceSimulatorConfiguration` as the parameter. 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -82,9 +82,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-## ## See also
+## See also
 
 - The Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
-- The [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) API reference.
-- The [QCTraceSimulatorConfiguration](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) API reference.
-- The [DistinctInputsCheckerException](xref:microsoft.quantum.simulation.simulators.qctracesimulators.DistinctInputsCheckerException) API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API reference.

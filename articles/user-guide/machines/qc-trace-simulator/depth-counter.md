@@ -20,7 +20,7 @@ By default, all operations have a depth of **0** except the `T` operation, which
 
 ## Invoking the Depth Counter
 
-To run the Quantum Trace Simulator with the Depth Counter, you must create a [`QCTraceSimulatorConfiguration`](xref:Microsoft.Quantum.simulation.simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) instance, set its `UseDepthCounter` property to **true**, and then create a new [`QCTraceSimulator`](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.QCTraceSimulator) instance with `QCTraceSimulatorConfiguration` as the parameter. 
+To run the Quantum Trace Simulator with the Depth Counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set its `UseDepthCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with `QCTraceSimulatorConfiguration` as the parameter. 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -57,7 +57,7 @@ double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounte
 double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
-The first part of the program runs `ApplySampleWithCCNOT`. The second part uses the [`QCTraceSimulator.GetMetric`](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.QCTraceSimulator.GetMetric) method to retrieve the `T` depth of `CCNOT` and `ApplySampleWithCCNOT`: 
+The first part of the program runs `ApplySampleWithCCNOT`. The second part uses the [`GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the `T` depth of `CCNOT` and `ApplySampleWithCCNOT`: 
 
 ```csharp
 double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
@@ -69,9 +69,9 @@ Finally, you can output all the statistics collected by the Depth Counter in CSV
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## ## See also
+## See also
 
 - The Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
-- The [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) API reference.
-- The [QCTraceSimulatorConfiguration](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) API reference.
-- The [MetricsNames.DepthCounter](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.MetricsNames.DepthCounter) API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.DepthCounter> API reference.

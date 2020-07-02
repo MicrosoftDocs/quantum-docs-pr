@@ -14,7 +14,7 @@ The Width Counter is a part of the Quantum Development Kit [Quantum Trace Simula
 
 ## Invoking the Width Counter
 
-To run the Quantum Trace Simulator with the Width Counter, you must create a [`QCTraceSimulatorConfiguration`](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) instance, set the `UseWidthCounter` property to **true**, and then create a new [`QCTraceSimulator`](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.QCTraceSimulator) instance with the `QCTraceSimulatorConfiguration` as the parameter. 
+To run the Quantum Trace Simulator with the Width Counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UseWidthCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with the `QCTraceSimulatorConfiguration` as the parameter. 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -56,7 +56,7 @@ double inputWidth =
         functor: OperationFunctor.Controlled);
 ```
 
-The first part of the program runs the `ApplyMultiControlledX` operation. The second part uses the [`QCTraceSimulator.GetMetric`](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.QCTraceSimulator.GetMetric) method to retrieve the number of allocated qubits as well as the number of qubits that the `Controlled X` operation received as input. 
+The first part of the program runs the `ApplyMultiControlledX` operation. The second part uses the [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the number of allocated qubits as well as the number of qubits that the `Controlled X` operation received as input. 
 
 Finally, you can output all the statistics collected by the Width Counter in CSV format using the following:
 ```csharp
@@ -66,7 +66,6 @@ string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ## See also
 
 - The Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
-- The [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) API reference.
-- The [QCTraceSimulatorConfiguration](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) API reference.
-- The [MetricsNames.WidthCounter](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.MetricsNames.WidthCounter) API reference.
-
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter> API reference.

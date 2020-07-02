@@ -11,7 +11,7 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 
 # Microsoft Quantum Development Kit (QDK) Quantum Trace Simulator
 
-The QDK [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) class runs a quantum program without actually simulating the state of a quantum computer.  For this reason, the Quantum Trace Simulator is able to run quantum programs that use thousands of qubits.  It is useful for two main purposes: 
+The QDK <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> class runs a quantum program without actually simulating the state of a quantum computer.  For this reason, the Quantum Trace Simulator is able to run quantum programs that use thousands of qubits.  It is useful for two main purposes: 
 
 * Debugging classical code that is part of a quantum program. 
 * Estimating the resources required to run a given instance of a quantum program
@@ -68,7 +68,7 @@ operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
 
 When the Quantum Trace Simulator encounters `AssertProb` it records that measuring `PauliZ` on `source` and `q` should give an outcome of `Zero`, with probability **0.5**. When it runs the `M` operation later, it finds the recorded values of the outcome probabilities, and `M` returns `Zero` or `One`, with probability **0.5**. When the same code runs on a simulator that keeps track of the quantum state, that simulator checks that the provided probabilities in `AssertProb` are correct.
 
-Note that if there is at least one measurement operation that is not annotated using `AssertProb`, the simulator throws an [`UnconstrainedMeasurementException`](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.UnconstrainedMeasurementException).
+Note that if there is at least one measurement operation that is not annotated using `AssertProb`, the simulator throws an [`UnconstrainedMeasurementException`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception).
 
 ## Quantum Trace Simulator tools
 
@@ -86,7 +86,7 @@ Each of these tools is enabled by setting appropriate flags in `QCTraceSimulator
 
 ## QCTraceSimulator methods
 
-`QCTraceSimulator` has several built-in methods to retrieve the values of the metrics tracked during a quantum operation. Examples of the [QCTraceSimulator.GetMetric](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.QCTraceSimulator.GetMetric) and the [QCTraceSimulator.ToCSV](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.QCTraceSimulator.ToCSV) methods can be found in the [Primitive Operations Counter](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter), and [Width Counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) articles. For more information on all available methods, see [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) in the Q# API reference.  
+`QCTraceSimulator` has several built-in methods to retrieve the values of the metrics tracked during a quantum operation. Examples of the [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) and the [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) methods can be found in the [Primitive Operations Counter](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter), and [Width Counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) articles. For more information on all available methods, see [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) in the Q# API reference.  
 
 ## See also
 

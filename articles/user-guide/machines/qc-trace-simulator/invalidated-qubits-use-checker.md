@@ -26,11 +26,11 @@ operation UseReleasedQubit() : Unit {
 }
 ```
 
-When you apply the `H` operation to `q[0]`, it points to an already released qubit, which can cause undefined behavior. When the Invalidated Qubits Use Checker is enabled, it throws the exception `InvalidatedQubitsUseCheckerException` if the program applies an operation to an already released qubit. For more information, see [InvalidatedQubitsUseCheckerException](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException).
+When you apply the `H` operation to `q[0]`, it points to an already released qubit, which can cause undefined behavior. When the Invalidated Qubits Use Checker is enabled, it throws the exception `InvalidatedQubitsUseCheckerException` if the program applies an operation to an already released qubit. For more information, see <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException>.
 
 ## Invoking the Invalidated Qubits Use Checker
 
-To run the Quantum Trace Simulator with the invalidated qubits use checker you must create a [`QCTraceSimulatorConfiguration`](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) instance, set the `UseInvalidatedQubitsUseChecker` property to **true**, and then create a new [`QCTraceSimulator`](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.QCTraceSimulator) instance with `QCTraceSimulatorConfiguration` as the parameter. 
+To run the Quantum Trace Simulator with the invalidated qubits use checker you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UseInvalidatedQubitsUseChecker` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with `QCTraceSimulatorConfiguration` as the parameter. 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -65,9 +65,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-## ## See also
+## See also
 
-- The Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
-- The [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) API reference.
-- The [QCTraceSimulatorConfiguration](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) API reference.
-- The [InvalidatedQubitsUseCheckerException](xref:microsoft.quantum.simulation.simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException) API reference.
+- The Quantum Development Kit [Quantum Trace Simulator](xref:Microsoft.Quantum.Machines.qc-trace-simulator.intro) overview.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException> API reference.

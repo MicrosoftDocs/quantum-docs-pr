@@ -67,7 +67,7 @@ For example, to add the [**Microsoft.Quantum.Numerics**](https://www.nuget.org/p
 %package Microsoft.Quantum.Numerics
 ```
 
-Following this command, the package will be made available to any cells within the notebook.
+Following this command, the package is available to any cells within the notebook.
 To make the package available from Q# code in the current workspace, reload the workspace after adding your package:
 
 ```

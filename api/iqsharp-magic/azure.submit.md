@@ -1,7 +1,7 @@
 ---
 title: '%azure.submit (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.azure.submit
-ms.date: '2020-07-01'
+ms.date: '2020-07-02'
 ms.topic: article
 ---
 

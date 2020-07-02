@@ -40,8 +40,6 @@ To load a package:
 
 2. Click ** Browse**, select **Include prerelease** and search for the package name "Microsoft.Quantum.Numerics". 
 
-> [!NOTE]
-> Make sure to tick "Include prerelease"
 
 This will list the packages available for download.
 For example, hovering over "Microsoft.Quantum.Numerics" reveals a downward-pointing arrow to the right of the version number.

@@ -1,7 +1,7 @@
 ---
 title: '%azure.target (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.azure.target
-ms.date: '2020-07-02'
+ms.date: '2020-07-03'
 ms.topic: article
 ---
 

@@ -57,7 +57,7 @@ Simulating the Hamiltonian requires converting the fermion operators to qubit op
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-Next, pass `qSharpData`, which represents the Hamiltonian, to the `TrotterStepOracle` function. `TrotterStepOracle` returns a quantum operation that approximates the real-time evolution of the Hamiltonian. For more information, see [Simulating Hamiltonian dynamics](xref:microsoft.quantum.chemistry.concepts.SimulationAlgorithms).
+Next, pass `qSharpData`, which represents the Hamiltonian, to the `TrotterStepOracle` function. `TrotterStepOracle` returns a quantum operation that approximates the real-time evolution of the Hamiltonian. For more information, see [Simulating Hamiltonian dynamics](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).
 
 ```qsharp
 // qSharpData passed from driver

@@ -19,7 +19,7 @@ In particular, the [**Microsoft.Quantum.Chemistry** package](https://www.nuget.o
 
 The Quantum Development Kit chemistry library also provides a command-line tool, `qdk-chem`, for converting between legacy formats and [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge).
 
-In this section, we detail how to use the Quantum Development Kit with either NWChem and Broombridge, or legacy formats and `qdk-chem`.
+This section details how to use the Quantum Development Kit with either NWChem and Broombridge, or legacy formats and `qdk-chem`.
 
 ## Using the Quantum Development Kit with NWChem
 

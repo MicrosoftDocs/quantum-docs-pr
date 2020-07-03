@@ -679,6 +679,16 @@
       "source_path": "articles/machines/toffoli-simulator.md",
       "redirect_url": "/quantum/user-guide/machines/toffoli-simulator",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/user-guide/libraries/machine-learning/introduction.md",
+      "redirect_url": "/quantum/user-guide/libraries/machine-learning/intro",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/user-guide/libraries/numerics/installation.md",
+      "redirect_url": "/quantum/user-guide/libraries/numerics/intro",
+      "redirect_document_id": true
     }
   ]
 }

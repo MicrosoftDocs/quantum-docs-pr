@@ -1,7 +1,7 @@
 ---
 title: '%workspace (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.workspace
-ms.date: '2020-07-02'
+ms.date: '2020-07-06'
 ms.topic: article
 ---
 

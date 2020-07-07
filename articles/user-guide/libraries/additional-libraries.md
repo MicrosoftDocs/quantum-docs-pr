@@ -39,9 +39,8 @@ To load a package:
 1. With a project open in Visual Studio, select **Manage NuGet Packages...** from the **Project** menu.
 
 2. Click ** Browse**, select **Include prerelease** and search for the package name "Microsoft.Quantum.Numerics". 
-
-
 This will list the packages available for download.
+
 3. Hover over **Microsoft.Quantum.Numerics** and click the downward-pointing arrow to the right of the version number to install the numerics package.
 
 For more details, see the [Package Manager UI guide](https://docs.microsoft.com/nuget/tools/package-manager-ui).

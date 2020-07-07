@@ -1,7 +1,7 @@
 ---
 title: '%performance (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.performance
-ms.date: '2020-07-02'
+ms.date: '2020-07-07'
 ms.topic: article
 ---
 

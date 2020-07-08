@@ -1,7 +1,7 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Quantum oracles
-description: Learn how to work with and define quantum oracles, black box operations that are used as input to another algorithm.
+description: Learn how to work with and define quantum oracles, opaque box operations that are used as input to another algorithm.
 author: cgranade
 uid: microsoft.quantum.concepts.oracles
 ms.author: Christopher.Granade@microsoft.com
@@ -11,7 +11,7 @@ no-loc: ['$$', "$$", '$', "$", $, $$, '\cdots', 'bmatrix', '\ddots', '\equiv', '
 ---
 # Quantum Oracles
 
-An oracle $O$ is a "black box" operation that is used as input to another algorithm.
+An oracle $O$ is a "opaque box" operation that is used as input to another algorithm.
 Often, such operations are defined using a classical function $f : \\{0, 1\\}^n \to \\{0, 1\\}^m$ which takes an $n$-bit binary input and produces an $m$-bit binary output.
 To do so, consider a particular binary input $x = (x_{0}, x_{1}, \dots, x_{n-1})$.
 We can label qubit states as $\ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_{n-1}}$.

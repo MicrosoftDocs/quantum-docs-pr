@@ -1,7 +1,7 @@
 ---
 title: '%azure.output (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.azure.output
-ms.date: '2020-07-02'
+ms.date: '2020-07-10'
 ms.topic: article
 ---
 

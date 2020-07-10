@@ -1,7 +1,7 @@
 ---
 title: '%estimate (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.estimate
-ms.date: '2020-07-02'
+ms.date: '2020-07-10'
 ms.topic: article
 ---
 

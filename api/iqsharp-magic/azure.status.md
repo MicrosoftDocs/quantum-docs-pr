@@ -1,7 +1,7 @@
 ---
 title: '%azure.status (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.azure.status
-ms.date: '2020-07-02'
+ms.date: '2020-07-11'
 ms.topic: article
 ---
 

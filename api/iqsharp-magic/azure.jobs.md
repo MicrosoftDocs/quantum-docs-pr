@@ -1,7 +1,7 @@
 ---
 title: '%azure.jobs (magic command)'
 uid: microsoft.quantum.iqsharp.magic-ref.azure.jobs
-ms.date: '2020-07-02'
+ms.date: '2020-07-12'
 ms.topic: article
 ---
 

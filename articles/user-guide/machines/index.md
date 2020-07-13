@@ -1,6 +1,6 @@
 ---
 title: Quantum simulators and Q# programs
-description: Describes how Q# programs are passed to quantum simulators to test quantum algorithms.
+description: Describes the quantum simulators available as target machines for Q# programs.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com 
 ms.date: 6/17/2020

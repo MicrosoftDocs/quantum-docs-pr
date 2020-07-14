@@ -1,6 +1,6 @@
 ---
-title: Primitive Operation Counter - Quantum Development Kit
-description: Learn about the Microsoft QDK Primitive Operation Counter, which uses the Quantum Trace Simulator to track primitive executions used by operations in a Q# program. 
+title: Primitive operation counter - Quantum Development Kit
+description: Learn about the Microsoft QDK primitive operation counter, which uses the quantum trace simulator to track primitive executions used by operations in a Q# program. 
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
@@ -8,15 +8,15 @@ ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 ---
 
-# Quantum Trace Simulator: Primitive Operations Counter
+# Quantum trace simulator: primitive operations counter
 
-The Primitive Operations Counter is a part of the Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). It counts the number of primitive executions used by every operation invoked in a quantum program. 
+The primitive operation counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). It counts the number of primitive executions used by every operation invoked in a quantum program. 
 
 All <xref:microsoft.quantum.intrinsic> operations are expressed in terms of single-qubit rotations, T operations, single-qubit Clifford operations, CNOT operations, and measurements of multi-qubit Pauli observables. The Primitive Operations Counter aggregates and collects statistics over all the edges of the operation's [call graph](https://en.wikipedia.org/wiki/Call_graph).
 
-## Invoking the Primitive Operations Counter
+## Invoking the primitive operation counter
 
-To run the Quantum Trace Simulator with the Primitive Operations Counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UsePrimitiveOperationsCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with the `QCTraceSimulatorConfiguration` as the parameter.
+To run the quantum trace simulator with the primitive operation counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UsePrimitiveOperationsCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with the `QCTraceSimulatorConfiguration` as the parameter.
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -24,7 +24,7 @@ config.UsePrimitiveOperationsCounter = true;
 var sim = new QCTraceSimulator(config);
 ```
 
-## Using the Primitive Operations Counter in a C# host program
+## Using the primitive operation counter in a C# host program
 
 The C# example that follows in this section counts how many <xref:microsoft.quantum.intrinsic.t> operations are needed to implement the <xref:microsoft.quantum.intrinsic.ccnot> operation, based on the following Q# sample code:
 
@@ -55,11 +55,6 @@ double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOp
 
 The first part of the program runs `ApplySampleWithCCNOT`. The second part uses the [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the number of `T` operations run by `ApplySampleWithCCNOT`: 
 
-```csharp
-double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-```
-
 When you call `GetMetric` with two type parameters, it returns the value of the metric associated with a given call graph edge. In the preceding example, the program calls the `Primitive.CCNOT` operation  within `ApplySampleWithCCNOT` and therefore the call graph contains the edge `<Primitive.CCNOT, ApplySampleWithCCNOT>`. 
 
 To retrieve the number of `CNOT` operations used, add the following line:
@@ -74,7 +69,7 @@ string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter]
 
 ## See also
 
-- The Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
+- The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
 - The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.
 - The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.
 - The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.PrimitiveOperationsGroupsNames> API reference.

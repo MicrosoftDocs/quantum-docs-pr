@@ -16,7 +16,7 @@ You can use it to gather counts that represent the lower bound of the depth of e
 
 All <xref:microsoft.quantum.intrinsic> operations are expressed in terms of single-qubit rotations, <xref:microsoft.quantum.intrinsic.t> operations, single-qubit Clifford operations, <xref:microsoft.quantum.intrinsic.cnot> operations, and measurements of multi-qubit Pauli observables. Users can set the depth for each of the primitive operations via the `gateTimes` field of <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>.
 
-By default, all operations have a depth of **0** except the `T` operation, which has a depth of **1**. This means that by default, only the `T` depth of operations is computed (which is often desirable). The Depth Counter aggregates and collects statistics over all the edges of the operation's [call graph](https://en.wikipedia.org/wiki/Call_graph). 
+By default, all operations have a depth of **0** except the `T` operation, which has a depth of **1**. This means that by default, only the `T` depth of operations is computed (which is often desirable). The Depth Counter aggregates and collects statistics over all the edges of the operation's [call graph](https://en.wikipedia.org/wiki/Call_graph).  
 
 ## Invoking the Depth Counter
 

@@ -22,8 +22,8 @@ While you can build Q# command line applications in any IDE, we recommend using 
 
 To configure Visual Studio Codespaces:
 
-1. Create an Azure account [here](https://azure.microsoft.com/free/).
-2. Create a Codespaces environment. Please follow the quickstart guide [here](https://docs.microsoft.com/visualstudio/online/quickstarts/browser). When creating the Codespace, make sure to enter microsoft/Quantum in the "Git Repository" field.
+1. Create an [Azure account](https://azure.microsoft.com/free/).
+2. Create a Codespaces environment. Please follow the [quickstart guide](https://docs.microsoft.com/visualstudio/online/quickstarts/browser). When creating the Codespace, make sure to enter microsoft/Quantum in the "Git Repository" field.
 
 To configure VS Code:
 

@@ -19,7 +19,7 @@ Quantum simulators are software programs that run on classical computers and act
 The quantum simulator is responsible for providing implementations of quantum primitives for an algorithm. This includes primitive operations such as `H`, `CNOT`, and `Measure`, as well as qubit management and tracking. The QDK includes different classes of quantum simulators representing different execution models for the same quantum algorithm. 
 
 
-Each type of quantum simulator can provide different implementations of these primitives. For example, the [full state simulator](xref:microsoft.quantum.machines.full-state-simulator) runs the quantum algorithm by fully simulating the [quantum state vector], whereas the [quantum computer trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 
+Each type of quantum simulator can provide different implementations of these primitives. For example, the [full state simulator](xref:microsoft.quantum.machines.full-state-simulator) runs the quantum algorithm by fully simulating the [quantum state vector](xref:microsoft.quantum.glossary#quantum-state), whereas the [quantum computer trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 
 doesn't consider the actual quantum state at all. Rather, it tracks gate, qubit, and other resource usage for the algorithm.
 
 ### Quantum machine classes
@@ -46,18 +46,6 @@ In [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs), three
 
 Quantum machines are instances of normal .NET classes, so they are created by invoking their constructor, just like any .NET class. How you do this depends on how you run the Q# program.
 
-**Command line** - By default, running a Q# program from the command line invokes the full state simulator. However, you can specify a different simulator on the command line using the `--simulator` parameter (or `-s` shorthand). For example, 
+## Next steps
 
-`dotnet run -s ResourcesEstimator`.
-
-**Python host** - In Python, the target machine is specified by using different Python methods on the imported quantum operation. In the following example from the random number generator tutorial, the operation uses the `.simulate()` method to run the full state simulator `QuantumSimulator`,
-
-`SampleQuantumRandomNumberGenerator.simulate()`
-
-**C# host** - With a C# host driver, there are two steps involved: create an instance of the quantum simulator, and then run the Q# program.
-
-* To create a `QuantumSimulator` instance, use the C# `using` statement, <br>`using (var sim = new QuantumSimulator())`.
-
-* To run the operation, use the `.run` method fo the Q# operation, specifying the `QuantumSimulator` instance that you created,<br>`SampleQuantumRandomNumberGenerator.Run(sim)`
-
-For further details about how Q# programs run in different environments, see Run Q# with standalone applications or host programs.
+* For details about how to invoke target machines for Q# programs in different environments, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).

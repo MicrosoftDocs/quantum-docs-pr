@@ -1,6 +1,6 @@
 ---
-title: Quantum Resources Estimator - Quantum Development Kit
-description: Learn about the Microsoft QDK Resources Estimator, which estimates the resources required to run a given instance of a Q# operation on a quantum computer.
+title: Quantum resources estimator - Quantum Development Kit
+description: Learn about the Microsoft QDK resources estimator, which estimates the resources required to run a given instance of a Q# operation on a quantum computer.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com 
 ms.date: 06/26/2020
@@ -8,15 +8,17 @@ ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
 ---
 
-# Quantum Development Kit (QDK) Resources Estimator
+# Quantum Development Kit (QDK) resources estimator
 
 As the name implies, the `ResourcesEstimator` class estimates the resources required to run a given instance of a Q# operation on a quantum computer. It accomplishes this by executing the quantum operation without actually simulating the state of a quantum computer; for this reason, it estimates resources for Q# operations that use thousands of qubits, provided that the classical part of the code runs in a reasonable time.
 
-## Invoking and running the Resources Estimator
+The resources estimator is built on top of the [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), which provides a richer set of metrics and tools to help debug Q# programs.
 
-You can use the Resources Estimator to run any Q# operation.
+## Invoking and running the resources estimator
 
-### Invoking the Resources Estimator from C# 
+You can use the resources estimator to run any Q# operation. For additional details, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).
+
+### Invoking the resources estimator from C# 
 
 As with other target machines, you first create an instance of the `ResourceEstimator` class and then pass it as the first parameter of an operation's `Run` method.
 
@@ -57,7 +59,7 @@ BorrowedWidth   0
 > [!NOTE]
 > A `ResourcesEstimator` instance does not reset its calculations on every run. If you use the same instance to run another operation, it aggregates the new results with the existing results. If you need to reset calculations between runs, create a new instance for every run.
 
-### Invoking the Resources Estimator from Python
+### Invoking the resources estimator from Python
 
 Use the [estimate_resources()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:
 
@@ -65,16 +67,16 @@ Use the [estimate_resources()](https://docs.microsoft.com/python/qsharp/qsharp.l
 qubit_result = myOperation.estimate_resources()
 ```
 
-### Invoking the Resources Estimator from the command line
+### Invoking the resources estimator from the command line
 
-When running a Q# program from the command line, use the *--simulator* (or *-s* shortcut) parameter to specify the `ResourcesEstimator` target machine. The following command runs a program using the Resources Estimator: 
+When running a Q# program from the command line, use the **--simulator** (or **-s** shortcut) parameter to specify the `ResourcesEstimator` target machine. The following command runs a program using the resources estimator: 
 
 ```dotnetcli
 dotnet run -s ResourcesEstimator
 
 ```
 
-### Invoking the Resources Estimator from Juptyer Notebooks
+### Invoking the resources estimator from Juptyer Notebooks
 
 Use the IQ# magic command [%estimate](xref:microsoft.quantum.iqsharp.magic-ref.simulate) to run the Q# operation.
 
@@ -84,7 +86,7 @@ Use the IQ# magic command [%estimate](xref:microsoft.quantum.iqsharp.magic-ref.s
 
 ## Programmatically retrieving the estimated data
 
-In addition to a TSV table, you can programmatically retrieve the resources estimated during the run via the `Data` property of the Resources Estimator. The `Data` property provides a `System.DataTable` instance with two columns: `Metric` and `Sum`, indexed by the metrics' names.
+In addition to a TSV table, you can programmatically retrieve the resources estimated during the run via the `Data` property of the resources estimator. The `Data` property provides a `System.DataTable` instance with two columns: `Metric` and `Sum`, indexed by the metrics' names.
 
 The following code shows how to retrieve and print the total number of `QubitClifford`, `T` and `CNOT` operations used by a Q# operation:
 
@@ -127,10 +129,10 @@ The resources estimator tracks the following metrics:
 
 ## Providing the probability of measurement outcomes
 
-You can use <xref:microsoft.quantum.intrinsic.assertprob> from the <xref:microsoft.quantum.intrinsic> namespace to provide information about the expected probability of a measurement operation. For more information, see [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+You can use <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> from the <xref:microsoft.quantum.diagnostics> namespace to provide information about the expected probability of a measurement operation. For more information, see [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
 ## See also
 
-- [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). The Resources Estimator is built on top of the Quantum Trace Simulator, which provides a richer set of metrics and tools to help debug Q# programs.
-- [Quantum Toffoli Simulator](xref:microsoft.quantum.machines.toffoli-simulator)
-- [Quantum Full State Simulator](xref:microsoft.quantum.machines.full-state-simulator) 
+- [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+- [Quantum Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Quantum full state simulator](xref:microsoft.quantum.machines.full-state-simulator) 

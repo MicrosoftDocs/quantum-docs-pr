@@ -1,10 +1,11 @@
-- name: Depth counter
-  href: depth-counter.md
+
 - name: Distinct inputs checker
   href: distinct-inputs-checker.md
 - name: Invalidated qubits use checker
   href: invalidated-qubits-use-checker.md
 - name: Primitive operations counter
   href: primitive-operations-counter.md
+- name: Depth counter
+  href: depth-counter.md
 - name: Width counter
   href: width-counter.md

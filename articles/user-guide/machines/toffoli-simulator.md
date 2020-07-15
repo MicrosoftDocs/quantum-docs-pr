@@ -44,14 +44,13 @@ When running a Q# program from the command line, use the **--simulator** (or **-
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
-
 ```
 
 ### Invoking the Toffoli simulator from Juptyer Notebooks
 
 Use the IQ# magic command [%toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) to run the Q# operation.
 
-```dotnetcli
+```
 %toffoli myOperation
 ```
 

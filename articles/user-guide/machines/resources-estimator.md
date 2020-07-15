@@ -73,14 +73,13 @@ When running a Q# program from the command line, use the **--simulator** (or **-
 
 ```dotnetcli
 dotnet run -s ResourcesEstimator
-
 ```
 
 ### Invoking the resources estimator from Juptyer Notebooks
 
 Use the IQ# magic command [%estimate](xref:microsoft.quantum.iqsharp.magic-ref.simulate) to run the Q# operation.
 
-```dotnetcli
+```
 %estimate myOperation
 ```
 

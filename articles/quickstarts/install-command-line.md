@@ -18,7 +18,7 @@ Q# programs can be executed on their own, without a driver in a host language li
 
 ## Installation
 
-While you can build Q# command line applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for developing your Q# applications locally. Developing in these environments includes the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more. For developing in the Cloud via the web browser, we recommend Visual Studio Codespaces.
+While you can build Q# command line applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for developing your Q# applications locally. For developing in the Cloud via the web browser, we recommend Visual Studio Codespaces. Developing in these environments includes the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more. 
 
 To configure VS Code:
 

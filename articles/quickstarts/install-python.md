@@ -16,7 +16,7 @@ Install the QDK to develop Python host programs to call Q# operations.
 
 ### [Install using conda (recommended)](#tab/tabid-conda)
 
-1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads).
+1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads). **Note:** 64-bit installation required.
 
 1. Open an Anaconda Prompt.
 

@@ -16,6 +16,16 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+
+## Version x.xx.xxxxxxxx
+
+*Release date: July 22nd, 2020*
+
+This release contains the following:
+
+Opened namespaces in Q# notebooks are now available for all future cell executions. This allows, for example, namespaces to be opened once in a cell at the top of the notebook, rather than needing to open relevant namespaces in each code cell. A new `%lsopen` magic command displays the list of currently-opened namespaces.
+
+
 ## Version 0.12.20070124
 
 *Release date: July 2nd, 2020*

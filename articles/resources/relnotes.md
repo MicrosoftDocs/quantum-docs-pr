@@ -19,7 +19,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 ## Version x.xx.xxxxxxxx
 
-*Release date: July 22nd, 2020*
+*Release date: July 20th, 2020*
 
 This release contains the following:
 

@@ -1,25 +1,25 @@
 ---
-# Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Full State Simulator
-description: Learn how to run your Q# programs on the Microsoft Quantum Development Kit Full State Simulator.
+title: Full state quantum simulator - Quantum Development Kit
+description: Learn how to run your Q# programs on the Microsoft Quantum Development Kit full state simulator.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com 
-ms.date: 12/7/2017 
+ms.date: 06/26/2020 
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
 ---
 
-# Quantum Development Kit Full State Simulator
+# Quantum Development Kit (QDK) full state simulator
 
-The Quantum Development Kit provides a full state quantum simulator 
-similar to [LIQ$Ui|\rangle$](http://stationq.github.io/Liquid/) from Microsoft Research.
-This simulator can be used to execute and debug quantum algorithms written in Q#
-on your computer.
+The QDK provides a full state simulator that simulates a quantum machine on your local computer. You can use the full state simulator to run and debug quantum algorithms written in Q#, utilizing up to 30 qubits. The full state simulator is similar to the quantum simulator used in the  [LIQ$Ui|\rangle$](http://stationq.github.io/Liquid/) platform from Microsoft Research.
 
-This quantum simulator is exposed via the `QuantumSimulator` class. 
-To use the simulator, simply create an instance of this class and pass it to the `Run` method
-of the quantum operation you want to execute along with the rest of the parameters:
+## Invoking and running the full state simulator
 
+You expose the full state simulator via the `QuantumSimulator` class. For additional details, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).
+
+### Invoking the simulator from C#
+
+Create an instance of the `QuantumSimulator` class and then pass it to the `Run` method
+of a quantum operation, along with any additional parameters.
 ```csharp
     using (var sim = new QuantumSimulator())
     {
@@ -28,19 +28,36 @@ of the quantum operation you want to execute along with the rest of the paramete
     }
 ```
 
-## IDisposable
+Because the `QuantumSimulator` class implements the <xref:System.IDisposable> interface, you must call the `Dispose` method once you do not need the instance of the simulator anymore. The best way to do this is to wrap the simulator declaration and operations within a [using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement) statement, which automatically calls the `Dispose` method.
 
-The `QuantumSimulator` class implements <xref:System.IDisposable>, thus the `Dispose` method
-should be called once the instance of the simulator is not used anymore. The best way 
-to do this is to wrap the simulator within a `using` statement, as in the example above.
+### Invoking the simulator from Python
 
-## Seed
+Use the [simulate()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) method from the Q# Python library with the imported Q# operation:
 
-The `QuantumSimulator` uses a random number generator to simulate quantum randomness. 
-For testing purposes, it is sometimes useful to have deterministic results. This can 
-be accomplished by providing a seed for the random number generator in the 
-`QuantumSimulator`'s constructor via the `randomNumberGeneratorSeed`
-parameter:
+```python
+qubit_result = myOperation.simulate()
+```
+
+### Invoking the simulator from the command line
+
+When running a Q# program from the command line, the full state simulator is the default target machine. Optionally, you can use the **--simulator** (or **-s** shortcut) parameter to specify the desired target machine. Both of the following commands run a program using the full state simulator. 
+
+```dotnetcli
+dotnet run
+dotnet run -s QuantumSimulator
+
+```
+
+### Invoking the simulator from Juptyer Notebooks
+
+Use the IQ# magic command [%simulate](xref:microsoft.quantum.iqsharp.magic-ref.simulate) to run the Q# operation.
+
+```dotnetcli
+%simulate myOperation
+```
+## Seeding the simulator
+
+By default, the full state simulator uses a random number generator to simulate quantum randomness. For testing purposes, it is sometimes useful to have deterministic results. In a C# program, you can accomplish this by providing a seed for the random number generator in the `QuantumSimulator` constructor via the `randomNumberGeneratorSeed` parameter.
 
 ```csharp
     using (var sim = new QuantumSimulator(randomNumberGeneratorSeed: 42))
@@ -50,13 +67,12 @@ parameter:
     }
 ```
 
-## Threads
+## Configuring threads
 
-The `QuantumSimulator` uses [OpenMP](http://www.openmp.org/) to parallelize the 
-linear algebra required. By default OpenMP uses all available hardware threads, which means 
-that programs with small numbers of qubits will often run slowly because the coordination 
-required will dwarf the actual work. This can be fixed by setting the environment variable 
-`OMP_NUM_THREADS` to a small number. As a very rough rule of thumb, 1 thread is good for up 
-to about 4 qubits, and then an additional thread per qubit is good, although this is 
-highly dependent on your algorithm.
+The full state simulator uses [OpenMP](http://www.openmp.org/) to parallelize the linear algebra required. By default, OpenMP uses all available hardware threads, which means that programs with small numbers of qubits often runs slowly because the coordination that is required dwarfs the actual work. You can fix this by setting the environment variable `OMP_NUM_THREADS` to a small number. As a rule of thumb, configure one thread for up to four qubits, and then one additional thread per qubit. You might need to adjust the variable depending on your algorithm.
 
+## See also
+
+- [Quantum resources estimator](xref:microsoft.quantum.machines.resources-estimator)
+- [Quantum Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

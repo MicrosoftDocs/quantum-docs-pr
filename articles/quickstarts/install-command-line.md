@@ -49,14 +49,6 @@ Follow the instructions at the tab corresponding to your environment.
 
 ### [VS Code](#tab/tabid-vscode)
 
-Install the Q# project templates:
-
-1. Open VS Code.
-2. Click **View** -> **Command Palette**.
-3. Select **Q#: Install project templates**.
-
-When **Project templates installed successfully** displays, the QDK is ready to use with your own applications and libraries.
-
 To create a new project:
 
 1. Click **View** -> **Command Palette** and select **Q#: Create New Project**.
@@ -98,24 +90,30 @@ To run the application:
 
 Verify your installation by creating a Q# `Hello World` application.
 
+1. Install the project templates.
+
+    ```dotnetcli
+    dotnet new -i Microsoft.Quantum.ProjectTemplates
+    ```
+
 1. Create a new application:
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
-2. Navigate to the application directory:
+1. Navigate to the application directory:
     ```dotnetcli
     cd runSayHello
     ```
 
     This directory should now contain a file `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console. You can modfiy this template with a text editor and overwrite it with your own quantum applications. 
 
-3. Run the program:
+1. Run the program:
     ```dotnetcli
     dotnet run
     ```
 
-4. You should see the following text printed: `Hello quantum world!`
+1. You should see the following text printed: `Hello quantum world!`
 
 ***
 

@@ -298,16 +298,19 @@ You can now use the updated IQ# kernel to run your existing Q# Jupyter Notebooks
     - Select the **Microsoft Quantum Development Kit for Visual Studio Code** extension
     - Reload the extension
 
-2. Update the Quantum project templates:
-
-   - Go to **View** -> **Command Palette**
-   - Select **Q#: Install project templates**
-   - After a few seconds you should get a popup confirming "project templates installed successfully"
-
 ### C#, using the `dotnet` command-line tool
 
 1. Update the Quantum project templates for .NET
 
+    From the command line:
+
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
+
+   Alternatively, if you intend to use the command line templates, and already have the VS Code QDK extension installed, you can update the project templates from the extension itself:
+
+   - [Update the QDK extension](#update-vs-code-qdk-extension)
+   - In VS Code, go to **View** -> **Command Palette**
+   - Select **Q#: Install command line project templates**
+   - After a few seconds you should get a popup confirming "project templates installed successfully"

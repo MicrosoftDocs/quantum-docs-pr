@@ -1,5 +1,12 @@
+---
+title: IQ# Magic Commands
+author: rmshaffer
+uid: microsoft.quantum.iqsharp.magic-ref.index
+ms.author: rmshaffer
+ms.date: 07/18/2020
+ms.topic: article
+---
 # IQ# Magic Commands
-
 | Magic Command | Summary |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Connects to an Azure Quantum workspace or displays current connection status. |
@@ -19,6 +26,7 @@
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Runs a given function or operation on the ResourcesEstimator target machine. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Executes a single test. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Returns a list of all currently available magic commands. |
+| [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | Lists currently opened namespaces and their aliases. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Provides the ability to load a NuGet package. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Reports current performance metrics for this kernel. |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | Runs a given function or operation on the QuantumSimulator target machine. |

@@ -3,7 +3,7 @@ title: '%kata (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.kata
 ms.author: rmshaffer
-ms.date: 07/18/2020
+ms.date: 07/21/2020
 ms.topic: article
 ---
 

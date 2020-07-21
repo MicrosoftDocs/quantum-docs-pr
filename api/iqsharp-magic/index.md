@@ -3,7 +3,7 @@ title: IQ# Magic Commands
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
 ms.author: rmshaffer
-ms.date: 07/18/2020
+ms.date: 07/21/2020
 ms.topic: article
 ---
 # IQ# Magic Commands

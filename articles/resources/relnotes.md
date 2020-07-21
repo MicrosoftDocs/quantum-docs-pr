@@ -16,6 +16,17 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+
+## Version 0.12.20072031
+
+*Release date: July 21st, 2020*
+
+This release contains the following:
+
+- Opened namespaces in Q# notebooks are now available for all future cell executions. This allows, for example, namespaces to be opened once in a cell at the top of the notebook, rather than needing to open relevant namespaces in each code cell. A new `%lsopen` magic command displays the list of currently-opened namespaces.
+
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
 ## Version 0.12.20070124
 
 *Release date: July 2nd, 2020*
@@ -23,7 +34,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 This release contains the following:
 
 - New `qdk-chem` tool for converting legacy electronic structure problem serialization formats (e.g.: FCIDUMP) to [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)
-- New functions and operations in the [`Microsoft.Quantum.Synthesis` namespace](xref:microsoft.quantum.synthesis) for coherently applying classical oracles using transformation- and decomposition-based synthesis algorithms.
+- New functions and operations in the [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) namespace for coherently applying classical oracles using transformation- and decomposition-based synthesis algorithms.
 - IQ# now allows arguments to the `%simulate`, `%estimate`, and other magic commands. See the [`%simulate` magic command reference](xref:microsoft.quantum.iqsharp.magic-ref.simulate) for more details.
 - New phase display options in IQ#. See the [`%config` magic command reference](xref:microsoft.quantum.iqsharp.magic-ref.config) for more details.
 - IQ# and the `qsharp` Python package are now provided via conda packages ([qsharp](https://anaconda.org/quantum-engineering/qsharp) and [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) to simplify local installation of Q# Jupyter and Python functionality to a conda environment. See the [Q# Jupyter Notebooks](xref:microsoft.quantum.install.jupyter) and [Q# with Python](xref:microsoft.quantum.install.python) installation guides for more details.

@@ -7,6 +7,7 @@ ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
 ---
+
 # Quantum Algorithms #
 
 ## Amplitude Amplification ##

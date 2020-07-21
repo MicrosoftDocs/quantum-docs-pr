@@ -56,18 +56,18 @@ The Q# standard libraries provide several different functions for representing f
 
 In practice, assertions rely on the fact that classical simulations of quantum mechanics need not obey the [no-cloning theorem](https://arxiv.org/abs/quant-ph/9607018), such that we can make unphysical measurements and assertions when using a simulator for our target machine.
 Thus, we can test individual operations on a classical simulator before deploying on hardware.
-On target machines which do not allow evaluation of assertions, calls to <xref:microsoft.quantum.intrinsic.assert> can be safely ignored.
+On target machines which do not allow evaluation of assertions, calls to <xref:microsoft.quantum.diagnostics.assertmeasurement> can be safely ignored.
 
-More generally, the <xref:microsoft.quantum.intrinsic.assert> operation asserts that measuring the given qubits in the
+More generally, the <xref:microsoft.quantum.diagnostics.assertmeasurement> operation asserts that measuring the given qubits in the
 given Pauli basis will always have the given result.
 If the assertion fails, the execution ends by calling `fail` with the
 given message.
 By default, this operation is not implemented; simulators that can support it
 should provide an implementation that performs runtime checking.
-`Assert` has signature `((Pauli[], Qubit[], Result, String) -> ())`.
-Since `Assert` is a function with an empty tuple as its output type, no effects from having called `Assert` are observable within a Q# program.
+`AssertMeasurement` has signature `((Pauli[], Qubit[], Result, String) -> ())`.
+Since `AssertMeasurement` is a function with an empty tuple as its output type, no effects from having called `AssertMeasurement` are observable within a Q# program.
 
-The <xref:microsoft.quantum.intrinsic.assertprob> operation function asserts that measuring the given qubits in the
+The <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> operation function asserts that measuring the given qubits in the
 given Pauli basis will have the given result with the given probability,
 within some tolerance.
 Tolerance is additive (e.g. `abs(expected-actual) < tol`).
@@ -75,7 +75,7 @@ If the assertion fails, the execution ends by calling `fail`
 with the given message.
 By default, this operation is not implemented; simulators that can support it
 should provide an implementation that performs runtime checking.
-`AssertProb` has signature `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)`. The first of `Double` parameters gives the desired probability of the result, and the second one the tolerance.
+`AssertMeasurementProbability` has signature `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)`. The first of `Double` parameters gives the desired probability of the result, and the second one the tolerance.
 
 We can do more than assert a single measurement, using that the classical information used by a simulator to represent the internal state of a qubit is amenable to copying, such that we do not need to actually perform a measurement to test our assertion.
 In particular, this allows us to reason about *incompatible* measurements that would be impossible on actual hardware.
@@ -105,7 +105,7 @@ using (register = Qubit()) {
 ```
 
 More generally, however, we may not have access to assertions about states that do not coincide with eigenstates of Pauli operators.
-For example, $\ket{\psi} = (\ket{0} + e^{i \pi / 8} \ket{1}) / \sqrt{2}$ is not an eigenstate of any Pauli operator, such that we cannot use <xref:microsoft.quantum.intrinsic.assertprob> to uniquely determine that a state $\ket{\psi'}$ is equal to $\ket{\psi}$.
+For example, $\ket{\psi} = (\ket{0} + e^{i \pi / 8} \ket{1}) / \sqrt{2}$ is not an eigenstate of any Pauli operator, such that we cannot use <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> to uniquely determine that a state $\ket{\psi'}$ is equal to $\ket{\psi}$.
 Instead, we must decompose the assertion $\ket{\psi'} = \ket{\psi}$ into assumptions that can be directly tested using  the primitives supported by our simulator.
 To do so, let $\ket{\psi} = \alpha \ket{0} + \beta \ket{1}$ for complex numbers $\alpha = a\_r + a\_i i$ and $\beta$.
 Note that this expression requires four real numbers $\{a\_r, a\_i, b\_r, b\_i\}$ to specify, as each complex number can be expressed as the sum of a real and imaginary part.

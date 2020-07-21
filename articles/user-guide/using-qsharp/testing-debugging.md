@@ -46,7 +46,7 @@ Initially, this file contains one sample unit test `AllocateQubit` which checks 
     operation AllocateQubit () : Unit {
 
         using (qubit = Qubit()) {
-            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+            AssertMeasurement([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -175,7 +175,7 @@ Here, we are using the operation <xref:microsoft.quantum.environment.getqubitsav
 As this depends on the global state of the program and its execution environment, our definition of `AssertQubitsAreAvailable` must be an operation as well.
 However, we can use that global state to yield a simple `Bool` value as input to the `Fact` function.
 
-[The prelude](xref:microsoft.quantum.libraries.standard.prelude), building on these ideas, offers two especially useful assertions, <xref:microsoft.quantum.intrinsic.assert> and <xref:microsoft.quantum.intrinsic.assertprob> both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is performed, and a hypothetical outcome.
+[The prelude](xref:microsoft.quantum.libraries.standard.prelude), building on these ideas, offers two especially useful assertions, <xref:microsoft.quantum.diagnostics.assertmeasurement> and <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is performed, and a hypothetical outcome.
 Target machines which work by simulation are not bound by [the no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), and can perform such measurements without disturbing the register that passes to such assertions.
 A simulator can then, similar to the `PositivityFact` function previous, stop computation if the hypothetical outcome is not observed in practice:
 
@@ -183,14 +183,14 @@ A simulator can then, similar to the `PositivityFact` function previous, stop co
 using (register = Qubit()) 
 {
     H(register);
-    Assert([PauliX], [register], Zero);
+    AssertMeasurement([PauliX], [register], Zero);
     // Even though we do not have access to states in Q#,
     // we know by the anthropic principle that the state
     // of register at this point is |+〉.
 }
 ```
 
-On physical quantum hardware, where the no-cloning theorem prevents examination of a quantum state, the `Assert` and `AssertProb` operations simply return `()` with no other effect.
+On physical quantum hardware, where the no-cloning theorem prevents examination of a quantum state, the `AssertMeasurement` and `AssertMeasurementProbability` operations simply return `()` with no other effect.
 
 The <xref:microsoft.quantum.diagnostics> namespace provides several more functions of the `Assert` family, with which you can check more advanced conditions. 
 

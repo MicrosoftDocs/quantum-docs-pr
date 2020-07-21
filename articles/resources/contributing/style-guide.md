@@ -381,9 +381,8 @@ The compiler provided with the Quantum Development Kit extracts these comments a
 Similarly, the language server provided with the Quantum Development Kit uses these comments to provide help to users when they hover over symbols in their Q# code.
 Making use of documentation comments can thus help users to make sense of code by providing a useful reference for details that are not easily expressed using the other conventions in this document.
 
-<div class="nextstepaction">
-    [Documentation comment syntax reference](xref:microsoft.quantum.guide.filestructure#documentation-comments)
-</div>
+> [!div class="nextstepaction"]
+> [Documentation comment syntax reference](xref:microsoft.quantum.guide.filestructure#documentation-comments).
 
 In order to effectively use this functionality to help users, we recommend keeping a few things in mind as you write documentation comments.
 

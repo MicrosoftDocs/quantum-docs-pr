@@ -57,10 +57,9 @@ Each of these different pieces finds its home on a different repository, so the 
 > [!NOTE]
 > We unfortunately cannot accept code and documentation contributions on the [**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC) repository at this time, but we still very much appreciate bug reports.
 
-There are also a few other, more specialized repositories focusing on different events, or on auxiliary functionality related to the Quantum Development Kit.
+There are also a few other, more specialized repositories focusing on auxiliary functionality related to the Quantum Development Kit.
 
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): LaTeX formatting support for Q# syntax.
-- [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): IQ# Notebook for Deutsch–Jozsa tutorial given at the 2019 intern workshop.
 
 ## Next steps
 

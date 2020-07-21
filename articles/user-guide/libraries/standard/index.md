@@ -7,7 +7,8 @@ ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
 ---
-# Introduction to the Q# Standard Libraries #
+
+# Introduction to the Q# Standard Libraries
 
 Q# is supported by a range of different useful operations, functions, and user-defined types that comprise the Q# *standard libraries*.
 The [`Microsoft.Quantum.Development.Kit` NuGet package](https://www.nuget.org/packages/microsoft.quantum.development.kit) installed during [installation and validation](xref:microsoft.quantum.install) provides the Q# compiler, and parts of the standard library that are implemented by the target machines.

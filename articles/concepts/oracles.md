@@ -78,7 +78,7 @@ $$
 $$
 If a phase oracle acts on a register initially in a computational basis state $\ket{x}$, then this phase is a global phase and hence not observable.
 But such an oracle can be a very powerful resource if applied to a superposition or as a controlled operation.
-For example, consider a phase orcale $O_f$ for a single-qubit function $f$.
+For example, consider a phase oracle $O_f$ for a single-qubit function $f$.
 Then,
 $$
 \begin{align}

@@ -1,20 +1,30 @@
 ---
-title: Width Counter
-description: Learn about the Microsoft QDK Width Counter, which counts the number of qubits allocated and borrowed by each operation in a quantum program. 
+title: Width counter - Quantum Development Kit 
+description: Learn about the Microsoft QDK width counter, which uses the Quantum trace simulator to count the number of qubits allocated and borrowed by operations in a Q# program. 
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 ---
 
-# Width Counter
+# Quantum trace simulator: width counter
 
-The `Width Counter` counts the number of qubits allocated and borrowed by each operation.
- All operations from the `Microsoft.Quantum.Intrinsic` namespace are expressed in terms of single qubit rotations,
-T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit
-Pauli observables. Some of the primitive operations can allocate extra qubits. For example, multiply controlled `X` gates or controlled `T` gates. Let us compute the number of extra qubits allocated 
-by the implementation of a multiply controlled `X` gate:
+The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). You can use it to count the number of qubits allocated and borrowed by each operation in a Q# program. Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.
+
+## Invoking the width counter
+
+To run the quantum trace simulator with the width counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UseWidthCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with the `QCTraceSimulatorConfiguration` as the parameter. 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseWidthCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## Using the width counter in a C# host program
+
+The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:microsoft.quantum.intrinsic.x> operation, based on the following Q# sample code:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -26,15 +36,11 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-## Using Width Counter within a C# Program
-
-Multiply controlled `X` acting on a total of 5 qubits will allocate 2 ancillary qubits 
-and its input width will be 5. To check that this is the case, we can use the following 
-C# program:
+The multiply controlled <xref:microsoft.quantum.intrinsic.x> operation acts on a total of five qubits, allocates two [ancillary qubits](xref:microsoft.quantum.glossary#ancilla), and has an input width of **5**. Use the following C# program to verify the counts:
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();
-config.useWidthCounter = true;
+config.UseWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 int totalNumberOfQubits = 5;
 var res = ApplyMultiControlledX.Run(sim, totalNumberOfQubits).Result;
@@ -50,16 +56,16 @@ double inputWidth =
         functor: OperationFunctor.Controlled);
 ```
 
-The first part of the program executes `ApplyMultiControlledX`. In the second part we use the method
-`QCTraceSimulator.GetMetric` to get the number of allocated qubits as well as the number of qubits that Controlled `X`
-received as input. 
+The first part of the program runs the `ApplyMultiControlledX` operation. The second part uses the [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the number of allocated qubits as well as the number of qubits that the `Controlled X` operation received as input. 
 
-Finally, to output all the statistics collected by width counter in CSV format we can 
-use the following:
+Finally, you can output all the statistics collected by the width counter in CSV format using the following:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## See also ##
+## See also
 
-- The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
+- The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.
+- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter> API reference.

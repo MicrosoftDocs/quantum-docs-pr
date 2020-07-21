@@ -49,7 +49,7 @@ Regardless of whether you are using C# or Python to host Q# operations, follow t
 5. In each of the .csproj files, set the SDK to `Microsoft.Quantum.Sdk`, as indicated in the line below. Please notice that the version number should be the latest available, and you can determine it by reviewing the [release notes](https://docs.microsoft.com/quantum/relnotes/).
 
     ```xml
-    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+    <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
     ```
 
 6. Save and close all files in your solution.
@@ -89,7 +89,7 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
     dotnet clean [project_name].csproj
     ```
 
-3. Determine the current version of the QDK. To find it, you can review the [release notes](https://docs.microsoft.com/quantum/relnotes/). The version will be in a format similar to `0.11.2006.207`.
+3. Determine the current version of the QDK. To find it, you can review the [release notes](https://docs.microsoft.com/quantum/relnotes/). The version will be in a format similar to `0.12.20072031`.
 
 4. In each of your `.csproj` files, go through the following steps:
 
@@ -104,7 +104,7 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
     - Replace the reference to the SDK in the project definition. Make sure that the version number corresponds to the value determined in **step 3**.
 
         ```xml
-        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
         ```
 
     - Remove the reference to package `Microsoft.Quantum.Development.Kit` if present, which will be specified in the following entry:
@@ -123,7 +123,7 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
         References to packages have the following format:
 
         ```xml
-        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.12.20072031" />
         ```
 
     - Save the updated file.
@@ -190,7 +190,7 @@ The update procedure depends on whether you originally installed using conda or 
     You should see the following output:
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -212,7 +212,7 @@ The update procedure depends on whether you originally installed using conda or 
 
     ```
     Name: qsharp
-    Version: 0.12.20070124
+    Version: 0.12.2007.2031
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -263,7 +263,7 @@ The update procedure depends on whether you originally installed using conda or 
     Your output should be similar to the following:
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -298,16 +298,19 @@ You can now use the updated IQ# kernel to run your existing Q# Jupyter Notebooks
     - Select the **Microsoft Quantum Development Kit for Visual Studio Code** extension
     - Reload the extension
 
-2. Update the Quantum project templates:
-
-   - Go to **View** -> **Command Palette**
-   - Select **Q#: Install project templates**
-   - After a few seconds you should get a popup confirming "project templates installed successfully"
-
 ### C#, using the `dotnet` command-line tool
 
 1. Update the Quantum project templates for .NET
 
+    From the command line:
+
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
+
+   Alternatively, if you intend to use the command line templates, and already have the VS Code QDK extension installed, you can update the project templates from the extension itself:
+
+   - [Update the QDK extension](#update-vs-code-qdk-extension)
+   - In VS Code, go to **View** -> **Command Palette**
+   - Select **Q#: Install command line project templates**
+   - After a few seconds you should get a popup confirming "project templates installed successfully"

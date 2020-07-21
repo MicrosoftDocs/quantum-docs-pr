@@ -23,7 +23,7 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 
 ### [Install using conda (recommended)](#tab/tabid-conda)
 
-1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads).
+1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads). **Note:** 64-bit installation required.
 
 1. Open an Anaconda Prompt.
 

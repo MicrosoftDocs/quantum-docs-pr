@@ -281,9 +281,9 @@ Finally, here is an example of an RUS pattern to prepare a quantum state $\frac{
 Notable programmatic features shown in this operation are:
 
 * A more complex `fixup` part of the loop, which involves quantum operations. 
-* The use of `AssertProb` statements to ascertain the probability of measuring the quantum state at certain specified points in the program.
+* The use of `AssertMeasurementProbability` statements to ascertain the probability of measuring the quantum state at certain specified points in the program.
 
-For more information about the [`Assert`](xref:microsoft.quantum.intrinsic.assert) and [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) operations, see [Testing and debugging](xref:microsoft.quantum.guide.testingdebugging).
+For more information about the [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) and [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) operations, see [Testing and debugging](xref:microsoft.quantum.guide.testingdebugging).
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -292,10 +292,10 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
         repeat {
             // We expect the target and auxiliary qubits to each be in
             // the |+> state.
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [target], Zero, 1.0,
                 "target qubit should be in the |+> state", 1e-10 );
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [auxiliary], Zero, 1.0,
                 "auxiliary qubit should be in the |+> state", 1e-10 );
 
@@ -305,7 +305,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
             // The probability of measuring |+> state on the auxiliary qubit
             // is 3/4.
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [auxiliary], Zero, 3. / 4.,
                 "Error: the probability to measure |+> in the first
                 auxiliary must be 3/4",

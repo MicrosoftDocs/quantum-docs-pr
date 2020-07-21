@@ -212,7 +212,7 @@ The update procedure depends on whether you originally installed using conda or 
 
     ```
     Name: qsharp
-    Version: 0.12.20072018
+    Version: 0.12.2007.2018
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```

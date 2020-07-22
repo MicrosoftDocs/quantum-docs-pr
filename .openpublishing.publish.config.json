@@ -23,15 +23,7 @@
         "docset_prebuild": [
           "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
         ]
-      },
-      "JoinTOCPlugin": [
-        {
-          "ReferenceTOC": "api/TOC.yml",
-          "ConceptualTOC": "articles/TOC.yml",
-          "ReferenceTOCUrl": "/qsharp/api/toc.json",
-          "ConceptualTOCUrl": "/quantum/toc.json"
-        }
-      ]
+      }
     },
     {
       "docset_name": "quantum-docs",
@@ -54,6 +46,14 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes"
+    }
+  ],
+  "JoinTOCPlugin": [
+    {
+      "ReferenceTOC": "api/TOC.yml",
+      "ConceptualTOC": "articles/TOC.yml",
+      "ReferenceTOCUrl": "/qsharp/api/toc.json",
+      "ConceptualTOCUrl": "/quantum/toc.json"
     }
   ],
   "notification_subscribers": [],

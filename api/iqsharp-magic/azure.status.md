@@ -3,7 +3,7 @@ title: '%azure.status (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.status
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 07/24/2020
 ms.topic: article
 ---
 

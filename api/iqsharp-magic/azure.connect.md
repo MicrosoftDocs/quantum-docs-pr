@@ -3,7 +3,7 @@ title: '%azure.connect (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.connect
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 07/25/2020
 ms.topic: article
 ---
 

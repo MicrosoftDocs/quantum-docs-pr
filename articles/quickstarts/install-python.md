@@ -92,7 +92,7 @@ Now you are ready to verify your `qsharp` Python package installation by writing
     import qsharp
     from Qrng import SampleQuantumRandomNumberGenerator
 
-    SampleQuantumRandomNumberGenerator.simulate()
+    print(SampleQuantumRandomNumberGenerator.simulate())
     ```
 
 1. From the environment you created during installation (i.e., the conda or Python environment where you installed `qsharp`), run the program:
@@ -101,7 +101,7 @@ Now you are ready to verify your `qsharp` Python package installation by writing
     python host.py
     ```
 
-1. You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `Zero` or `One` printed on the screen. If you execute the program repeatedly, you should see each result approximately half the time.
+1. You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `0` or `1` printed on the screen. If you execute the program repeatedly, you should see each result approximately half the time.
 
 > [!NOTE]
 > * The Python code is just a normal Python program. You can use any Python environment, including Python-based Jupyter Notebooks, to write the Python program and call Q# operations. The Python program can import Q# operations from any .qs files located in the same folder as the Python code itself.

@@ -6,6 +6,7 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
+no-loc: ['Q#', '$$v']
 ---
 
 # Quantum Dynamics

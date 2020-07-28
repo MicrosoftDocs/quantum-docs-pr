@@ -6,6 +6,7 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+no-loc: ['Q#', '$$v']
 ---
 
 # More quantum computing learning resources

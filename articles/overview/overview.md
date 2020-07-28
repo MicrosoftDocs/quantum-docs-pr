@@ -6,6 +6,7 @@ ms.author:  bradben
 ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
+no-loc: ['Q#', '$$v']
 ---
 
 # Introduction to quantum computing and the Quantum Development Kit

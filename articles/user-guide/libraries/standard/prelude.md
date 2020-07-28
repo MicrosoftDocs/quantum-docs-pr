@@ -7,6 +7,7 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
+no-loc: ['Q#', '$$v']
 ---
 
 # The Prelude #

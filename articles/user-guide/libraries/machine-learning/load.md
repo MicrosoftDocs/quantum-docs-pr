@@ -6,6 +6,7 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
+no-loc: ['Q#', '$$v']
 ---
 
 # Load and classify your own datasets

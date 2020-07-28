@@ -6,6 +6,7 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
+no-loc: ['Q#', '$$v']
 ---
 
 # Tutorial: Implement Grover's search algorithm in Q\#

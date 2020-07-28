@@ -5,6 +5,7 @@ ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
+no-loc: ['Q#', '$$v']
 ---
 
 # Quantum Machine Learning glossary

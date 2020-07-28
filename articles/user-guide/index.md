@@ -6,6 +6,7 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
+no-loc: ['Q#', '$$v']
 ---
 
 # The Q# User Guide

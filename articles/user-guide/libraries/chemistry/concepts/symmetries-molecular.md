@@ -6,6 +6,7 @@ ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
+no-loc: ['Q#', '$$v']
 ---
 
 # Symmetries of Molecular Integrals

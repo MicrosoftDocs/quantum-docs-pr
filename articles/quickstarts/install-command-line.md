@@ -6,6 +6,7 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
+no-loc: ['Q#', '$$v']
 ---
 
 # Develop with Q# command line applications

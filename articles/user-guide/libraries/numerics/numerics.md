@@ -6,6 +6,7 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
+no-loc: ['Q#', '$$v']
 ---
 
 # Using the Numerics library

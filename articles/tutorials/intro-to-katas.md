@@ -6,6 +6,7 @@ ms.author: bradben
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
+no-loc: ['Q#', '$$v']
 ---
 
 # Learn quantum computing with the Quantum Katas

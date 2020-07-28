@@ -6,6 +6,7 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
+no-loc: ['Q#', '$$v']
 ---
 
 # Introduction to the Quantum Numerics Library

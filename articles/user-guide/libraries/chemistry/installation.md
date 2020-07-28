@@ -6,6 +6,7 @@ ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
+no-loc: ['Q#', '$$v']
 ---
 
 # Chemistry Library Installation

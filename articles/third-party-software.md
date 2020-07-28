@@ -7,6 +7,7 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
+no-loc: ['Q#', '$$v']
 ---
 
 # THIRD-PARTY SOFTWARE NOTICES AND INFORMATION

@@ -4,7 +4,7 @@ description: This article introduces the use of complex numbers for quantum comp
 author: geduardo
 uid: microsoft.quantum.concepts.algebra.complex-numbers
 ms.author: v-edsanc@microsoft.com
-ms.date: 30/07/2020
+ms.date: 07/30/2020
 ms.topic: article
 ---
 
@@ -167,4 +167,4 @@ $zw=(|z|e^{i\varphi_z})(|w|e^{i\varphi_w})=|z||w|e^{i(\varphi_z+\varphi_w)}$
 
 Also the division:
 
-$$\frac{z}{w}=\frac{|z|e^{i\varphi_z}}{|w|e^{i\varphi_w}}=\frac{|z|}{|w|}e^i{\varphi_z-\varphi_w}$$
+$$\frac{z}{w}=\frac{|z|e^{i\varphi_z}}{|w|e^{i\varphi_w}}=\frac{|z|}{|w|}e^{i(\varphi_z-\varphi_w)}$$

@@ -4,7 +4,7 @@ description: This page introduces the linear algebra guide for quantum computing
 author: geduardo
 uid: microsoft.quantum.concepts.algebra.intro
 ms.author: v-edsanc@microsoft.com
-ms.date: 08/06/2020
+ms.date: 07/30/2020
 ms.topic: article
 ---
 
@@ -40,7 +40,7 @@ will be used at some point:
 
 ## Content of the guide
 
-1. Complex numbers in quantum computing
-2. Vectors in quantum computing
-3. Matrices and linear operations in quantum computing
-4. Tensor product in quantum computing
+1. [Complex numbers for quantum computing](todo)
+2. [Vectors in quantum computing](todo)
+3. [Matrices and linear operations in quantum computing](todo)
+4. [Tensor product in quantum computing](todo)

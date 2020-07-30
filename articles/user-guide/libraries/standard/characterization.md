@@ -120,7 +120,7 @@ The prior distribution $\Pr(x)$ has support over $2^n$ hypothetical values of $x
 This means that if we need a highly accurate estimate of $x$ then Bayesian phase estimation may need prohibitive memory and processing time.
 While for some applications, such as quantum simulation, the limitted accuracy required does not preclude such methods other applications,
 such as Shor's algorithm, cannot use exact Bayesian inference within its phase estimation step.  For this reason, we also provide implementations
-for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) and also non-Bayesian approaches such as [robust phase estimation](xref:microsoft.quantum.characterization.robustphaseestimation).
+for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation) and also non-Bayesian approaches such as [robust phase estimation](xref:microsoft.quantum.characterization.robustphaseestimation).
 
 ### Robust Phase Estimation ###
 

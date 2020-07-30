@@ -9,7 +9,7 @@ ms.custom: how-to
 uid: microsoft.quantum.install
 ---
 
-# Install the Microsoft Quantum Development Kit (QDK)
+# Install the Microsoft Quantum Development Kit (QDK) 
 
 Learn how to install the Microsoft Quantum Development Kit (QDK), so that you can get started with quantum programming. The QDK consists of:
 

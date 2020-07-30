@@ -10,7 +10,7 @@ uid: microsoft.quantum.write-program
 
 # Tutorial: Explore entanglement with Q\#
 
-In this tutorial, we show you how to write a Q# program that manipulates and
+In this tutorial, we show you how to write a Q# program that manipulates and 
 measures qubits and demonstrates the effects of superposition and entanglement.
 
 You will write an application called Bell to demonstrate quantum entanglement.

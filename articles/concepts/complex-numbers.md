@@ -54,18 +54,18 @@ The natural numbers: $0, 1, 2, 3, ...$ are often represented by the symbol
 $\mathbb{N}$. We can perform operations with them, like addition or subtraction.
 All additions are allowed within the set of the natural numbers: the sum of two
 natural numbers is always a natural number. However, this is not true for
-subtraction. For example, operation 2-5 is not allowed within the natural numbers.
-This is why we introduce the integer numbers: $... -2, -1, 0, 1, 2 ...$ that are
+subtraction. For example, operation $2-5$ is not allowed within the natural numbers.
+This is why we introduce the integer numbers: $... -2, -1, 0, 1, 2, ...$ that are
 often represented by the symbol $\mathbb{Z}$. The operation $2-5$ is allowed
 within the integer numbers, and its equal to $-3$.
 
-Something similar happens when we try perform division with some integers, for
-example there isn't an integer number equal to $\frac52$. But we can
-create a new set of numbers, the rational numbers, $\mathbb{Q}$, such that all
+Something similar happens when we try perform division with some integers. For
+instance, there isn't an integer number equal to $\frac52$. But we can
+create a new set of numbers, the rational numbers $\mathbb{Q}$, such that all
 divisions are allowed. Similarly, it can be proved that some numbers, like $\pi$
 or $\sqrt2$ cannot be expressed as a division between two integers, but we can
-introduce a bigger set of numbers called the real numbers, $\mathbb{R}$, so that
-$\sqrt2$, $\pi$ and numbers alike are included.
+introduce a bigger set of numbers called the real numbers $\mathbb{R}$, so that
+$\sqrt2$, $\pi$, and numbers alike are included.
 
 Complex numbers follow the same logic that we have follow with the previous sets. The
 square root of negative numbers is not allowed within the set of complex
@@ -81,7 +81,7 @@ How do we express complex numbers? We can express complex numbers in a handy way
 using the imaginary unit $i$. We define the imaginary unit $i$ as the result of
 the operation $\sqrt{-1}$. This is:
 
-$$i=\sqrt{-1}$$
+$$i=\sqrt{-1}$$.
 
 Using the imaginary unit we can express other complex numbers. For example,
 $\sqrt{-5}$ is $i\sqrt{5}$, since
@@ -106,14 +106,14 @@ cartesian representation. If we have two complex numbers $z=a+ib$ and $w=c+id$:
 
 #### Sum
 
-We sum the real and imaginary parts of both numbers as we do usually.
+We sum the real and imaginary parts of both numbers as we usually do.
 
 $$z+w=(a+c)+i(b+d)$$
 
 #### Subtraction
 
-Similarly to sum, we subtract the real and imaginary parts of both numbers as we
-do usually.
+Similarly to the sum, we subtract the real and imaginary parts of both numbers as we
+usually do.
 
 $$z-w=(a-c)+i(b-d)$$
 
@@ -122,7 +122,7 @@ $$z-w=(a-c)+i(b-d)$$
 Multiplication requires a bit more of work. We just need to use distributive
 and associative properties:
 
-$$zw=zw=(a+ib)(c+id)=a(c+id)+ib(c+id)=ac+iad+ibc+i^2bd$$
+$$zw=(a+ib)(c+id)=a(c+id)+ib(c+id)=ac+iad+ibc+i^2bd$$
 
 Since $i=\sqrt{-1}$, we have that $i^2=-1$, and therefore:
 
@@ -133,7 +133,7 @@ $$zw=(ac-bd)+i(ad+bc)$$
 As we just saw, we can represent complex numbers as points in a cartesian
 plane.
 It means that we can also represent any complex number $z$ with polar
-coordinates, this is, a *modulus*, $|z|$, and an angle or *phase*, $\phi$.
+coordinates, this is, a *modulus* $|z|$, and an angle or *phase* $\varphi$.
 
 - The **modulus** or **absolute value** of a complex number $z=a+ib$ is the length
 of the associated vector in the complex plane. It can be calculated from the
@@ -144,7 +144,7 @@ cartesian representation using the Pythagorean theorem: $$|z|=\sqrt{a^2+b^2}$$
 
 ![Complex plane in polar coordinates](~/media/complex-plane-polar.PNG)
 
-Using basic trigonometry is easy to check that the real part is $Re(z)=|z|\cos
+Using basic trigonometry it's easy to check that the real part is $Re(z)=|z|\cos
 \varphi$ and the imaginary part is $Im(z)=|z|sin \varphi$.
 
 ### Euler's formula
@@ -168,3 +168,16 @@ $zw=(|z|e^{i\varphi_z})(|w|e^{i\varphi_w})=|z||w|e^{i(\varphi_z+\varphi_w)}$
 Also the division:
 
 $$\frac{z}{w}=\frac{|z|e^{i\varphi_z}}{|w|e^{i\varphi_w}}=\frac{|z|}{|w|}e^{i(\varphi_z-\varphi_w)}$$
+
+## Next steps
+
+- Check out the next article of this linear algebra guide for quantum computing
+  [Quantum states and Dirac notation in quantum computing](todo). There you will
+  get introduced to the concepts of linearity using the Dirac notation.
+
+- If you want to learn more about complex numbers and resolve practical
+  exercises to gain more experience and intuition, you can try the [Quantum Kata
+  on Complex
+  Arithmetic](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic).
+  This Kata is an introductory tutorial on complex arithmetic using Python
+  exercises.

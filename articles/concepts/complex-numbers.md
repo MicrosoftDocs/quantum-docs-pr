@@ -20,7 +20,7 @@ of the two binary states **0** and **1**. A superposition is mathematically
 represented as a sum of states. For example, the state of qubit can be the
 following superposition:
 
-$$ \ket{\text{qubit}} = a \ket{0} + b \ket{1} $$
+$$ \ket{\text{qubit}} = a \ket{0} + b \ket{1}. $$
 
 The symbol $\ket{}$ is part of the Dirac notation for quantum mechanics and will
 be explained later in detail in this guide. However, for the moment you just
@@ -78,7 +78,7 @@ How do we express complex numbers? We can express complex numbers in a handy way
 using the imaginary unit $i$. We define the imaginary unit $i$ as the result of
 the operation $\sqrt{-1}$. This is:
 
-$$i=\sqrt{-1}$$.
+$$i=\sqrt{-1}.s$$
 
 Using the imaginary unit we can express other complex numbers. For example,
 $\sqrt{-5}$ is $i\sqrt{5}$, since

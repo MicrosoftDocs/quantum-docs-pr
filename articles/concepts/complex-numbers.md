@@ -38,7 +38,7 @@ different properties of quantum systems. In particular, using complex numbers we
 can encode intuitively the *phase* and the *probability* associated with each of
 the superposed states. As we will see in this guide, quantum systems follow
 wave-like equations. To describe wave-like phenomena like interference we need
-to take in account the phase of each state. This is why use complex numbers.
+to take in account the phase of each state. This is why we need complex numbers.
 
 ## Introduction to complex numbers
 

@@ -10,14 +10,6 @@ functions:
   summary: |-
     Returns the bitwise AND of two integers.
     This performs the same computation as the built-in `&&&` operator.
-- uid: microsoft.quantum.bitwise.leftshiftedi
-  summary: |-
-    Shifts the bitwise representation of a number left by a given number of
-    bits.
-- uid: microsoft.quantum.bitwise.leftshiftedl
-  summary: |-
-    Shifts the bitwise representation of a number left by a given number of
-    bits.
 - uid: microsoft.quantum.bitwise.not
   summary: |-
     Returns the bitwise NOT of an integer.
@@ -28,14 +20,6 @@ functions:
     This performs the same computation as the built-in `|||` operator.
 - uid: microsoft.quantum.bitwise.parity
   summary: Returns the bitwise PARITY of an integer (1 if its binary representation contains odd number of ones and 0 otherwise).
-- uid: microsoft.quantum.bitwise.rightshiftedi
-  summary: |-
-    Shifts the bitwise representation of a number right by a given number of
-    bits.
-- uid: microsoft.quantum.bitwise.rightshiftedl
-  summary: |-
-    Shifts the bitwise representation of a number right by a given number of
-    bits.
 - uid: microsoft.quantum.bitwise.xbits
   summary: |-
     Returns an integer representing the X bits of an array
@@ -48,8 +32,4 @@ functions:
   summary: |-
     Returns an integer representing the Z bits of an array
     of Pauli operators.
-summary: |2-
-   # Summary
-   This namespace contains functions for acting on the bitwise representation of
-   classical data types.
 ...

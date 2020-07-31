@@ -6,16 +6,6 @@
 uid: microsoft.quantum.measurement
 name: Microsoft.Quantum.Measurement
 operations:
-- uid: microsoft.quantum.measurement.measureallz
-  summary: Jointly measures a register of qubits in the Pauli Z basis.
-- uid: microsoft.quantum.measurement.measurepaulis
-  summary: |-
-    Given an array of multi-qubit Pauli operators, measures each using a specified measurement
-    gadget, then returns the array of results.
-- uid: microsoft.quantum.measurement.measurewithscratch
-  summary: |-
-    Measures the given Pauli operator using an explicit scratch
-    qubit to perform the measurement.
 - uid: microsoft.quantum.measurement.mresetx
   summary: |-
     Measures a single qubit in the X basis,
@@ -31,8 +21,6 @@ operations:
     Measures a single qubit in the Z basis,
     and resets it to a fixed initial state
     following the measurement.
-- uid: microsoft.quantum.measurement.multim
-  summary: Measures each qubit in a given array in the standard basis.
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: |-
     Sets a qubit to a given computational basis state by measuring the

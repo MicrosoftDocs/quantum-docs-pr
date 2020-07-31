@@ -140,7 +140,7 @@ coordinates, this is, a *modulus* $|z|$, and an angle or *phase* $\varphi$.
 - The **phase** or **argument** of a complex number $z=a+ib$ is the angle
   between the associated vector in the complex plane and the real axis.
 
-<img src="~/media/complex-plane-polar.PNG" width="275" alt="Diagram representing the
+<img src="~/media/complex-plane-polar.PNG" width="375" alt="Diagram representing the
 complex plane and the polar representation of a complex number.">
 
 Using basic trigonometry it's easy to check that the real part is $Re(z)=|z|\cos

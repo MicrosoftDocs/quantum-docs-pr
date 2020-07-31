@@ -1,11 +1,8 @@
 ---
-title: Complex numbers in quantum computing
-description: This article introduces the use of complex numbers for quantum computing.
-author: geduardo
-uid: microsoft.quantum.concepts.algebra.complex-numbers
-ms.author: v-edsanc@microsoft.com
-ms.date: 07/30/2020
-ms.topic: article
+title: Complex numbers in quantum computing description: This article introduces
+the use of complex numbers for quantum computing. author: geduardo uid:
+microsoft.quantum.concepts.algebra.complex-numbers ms.author:
+v-edsanc@microsoft.com ms.date: 07/30/2020 ms.topic: article
 ---
 
 # Complex numbers for quantum computing
@@ -26,9 +23,9 @@ following superposition:
 $$ \ket{\text{qubit}} = a \ket{0} + b \ket{1} $$
 
 The symbol $\ket{}$ is part of the Dirac notation for quantum mechanics and will
-be explained later in detail in this guide. However, for the moment you just need to know
-that the symbol $\ket{}$ is used to represent states. For example, $$\ket{1}$$
-represents the qubit in the state **1**. Then the state of the qubit
+be explained later in detail in this guide. However, for the moment you just
+need to know that the symbol $\ket{}$ is used to represent states. For example,
+$$\ket{1}$$ represents the qubit in the state **1**. Then the state of the qubit
 $\ket{\text{qubit}}$ is just a sum of the possible states $\ket{0}$ and
 $\ket{1}$. Another way to phrase this is by saying that the state
 $\ket{\text{qubit}}$ is a **linear combination** of the states $\ket{0}$ and
@@ -54,24 +51,24 @@ The natural numbers: $0, 1, 2, 3, ...$ are often represented by the symbol
 $\mathbb{N}$. We can perform operations with them, like addition or subtraction.
 All additions are allowed within the set of the natural numbers: the sum of two
 natural numbers is always a natural number. However, this is not true for
-subtraction. For example, operation $2-5$ is not allowed within the natural numbers.
-This is why we introduce the integer numbers: $... -2, -1, 0, 1, 2, ...$ that are
-often represented by the symbol $\mathbb{Z}$. The operation $2-5$ is allowed
-within the integer numbers, and its equal to $-3$.
+subtraction. For example, operation $2-5$ is not allowed within the natural
+numbers. This is why we introduce the integer numbers: $... -2, -1, 0, 1, 2,
+...$ that are often represented by the symbol $\mathbb{Z}$. The operation $2-5$
+is allowed within the integer numbers, and its equal to $-3$.
 
 Something similar happens when we try perform division with some integers. For
-instance, there isn't an integer number equal to $\frac52$. But we can
-create a new set of numbers, the rational numbers $\mathbb{Q}$, such that all
-divisions are allowed. Similarly, it can be proved that some numbers, like $\pi$
-or $\sqrt2$ cannot be expressed as a division between two integers, but we can
+instance, there isn't an integer number equal to $\frac52$. But we can create a
+new set of numbers, the rational numbers $\mathbb{Q}$, such that all divisions
+are allowed. Similarly, it can be proved that some numbers, like $\pi$ or
+$\sqrt2$ cannot be expressed as a division between two integers, but we can
 introduce a bigger set of numbers called the real numbers $\mathbb{R}$, so that
 $\sqrt2$, $\pi$, and numbers alike are included.
 
-Complex numbers follow the same logic that we have follow with the previous sets. The
-square root of negative numbers is not allowed within the set of complex
-numbers. For example, there isn't a real number equal to $\sqrt{-5}$. But
-we can create a new set of numbers, the set of complex numbers $\mathbb{C}$, so
-that $\sqrt{-5}$ is a valid number.
+Complex numbers follow the same logic that we have follow with the previous
+sets. The square root of negative numbers is not allowed within the set of
+complex numbers. For example, there isn't a real number equal to $\sqrt{-5}$.
+But we can create a new set of numbers, the set of complex numbers $\mathbb{C}$,
+so that $\sqrt{-5}$ is a valid number.
 
 ![Numbersdiagram](~/media/numbers.png)
 
@@ -97,7 +94,8 @@ of $z$. This representation is called the *cartesian representation* of a
 complex number, since we can visualize $a$ and $b$ as the cartesian coordinates
 of a point in the *complex plane*.
 
-![Complex plane](~/media/complex-plane.PNG)
+<img src="~/media/complex-plane.PNG" width="275" alt="Diagram representing the
+complex plane and the cartesian representation of a complex number.">
 
 ### Basic operations
 
@@ -112,15 +110,15 @@ $$z+w=(a+c)+i(b+d)$$
 
 #### Subtraction
 
-Similarly to the sum, we subtract the real and imaginary parts of both numbers as we
-usually do.
+Similarly to the sum, we subtract the real and imaginary parts of both numbers
+as we usually do.
 
 $$z-w=(a-c)+i(b-d)$$
 
 #### Multiplication
 
-Multiplication requires a bit more of work. We just need to use distributive
-and associative properties:
+Multiplication requires a bit more of work. We just need to use distributive and
+associative properties:
 
 $$zw=(a+ib)(c+id)=a(c+id)+ib(c+id)=ac+iad+ibc+i^2bd$$
 
@@ -130,19 +128,20 @@ $$zw=(ac-bd)+i(ad+bc)$$
 
 ## Polar representation of complex numbers
 
-As we just saw, we can represent complex numbers as points in a cartesian
-plane.
+As we just saw, we can represent complex numbers as points in a cartesian plane.
 It means that we can also represent any complex number $z$ with polar
 coordinates, this is, a *modulus* $|z|$, and an angle or *phase* $\varphi$.
 
-- The **modulus** or **absolute value** of a complex number $z=a+ib$ is the length
-of the associated vector in the complex plane. It can be calculated from the
-cartesian representation using the Pythagorean theorem: $$|z|=\sqrt{a^2+b^2}$$
+- The **modulus** or **absolute value** of a complex number $z=a+ib$ is the
+  length of the associated vector in the complex plane. It can be calculated
+  from the cartesian representation using the Pythagorean theorem:
+  $$|z|=\sqrt{a^2+b^2}$$
 
-- The **phase** or **argument** of a complex number $z=a+ib$ is the angle between the
-  associated vector in the complex plane and the real axis.
+- The **phase** or **argument** of a complex number $z=a+ib$ is the angle
+  between the associated vector in the complex plane and the real axis.
 
-![Complex plane in polar coordinates](~/media/complex-plane-polar.PNG)
+<img src="~/media/complex-plane-polar.PNG" width="275" alt="Diagram representing the
+complex plane and the polar representation of a complex number.">
 
 Using basic trigonometry it's easy to check that the real part is $Re(z)=|z|\cos
 \varphi$ and the imaginary part is $Im(z)=|z|sin \varphi$.

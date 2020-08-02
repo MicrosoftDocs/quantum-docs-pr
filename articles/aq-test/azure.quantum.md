@@ -1,8 +1,8 @@
 ---
 title: Azure.Quantum
 description: Reference for azure.quantum
-author: KittyYeungQ
-ms.author: kitty
+author: bradben
+ms.author: v-braben
 ms.date: 06/29/2020
 ms.topic: article
 uid: microsoft.azure.quantum.reference.python-sdk.azure.quantum

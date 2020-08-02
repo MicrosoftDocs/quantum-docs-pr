@@ -1,8 +1,8 @@
 ---
 title: Azure Quantum Release Notes
 description: Learn about the latest updates of the Azure Quantum service. 
-author: geduardo
-ms.author: v-edsanc@microsoft.com
+author: bradben
+ms.author: v-braben
 ms.date: 07/27/2020
 ms.topic: article
 uid: microsoft.azure.quantum.relnotes
@@ -20,10 +20,10 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 This release contains the following:
 
-- IQ# support for Azure Quantum to [submit jobs from Q# Jupyter Notebooks](xref:microsoft.azure.quantum.submit-jobs.jupyter) & [Python](xref:microsoft.azure.quantum.submit-jobs.python) with Q#
+- IQ# support for Azure Quantum to submit jobs from Q# Jupyter Notebooks & Python with Q#
 - Support for initial design-time diagnostics to determine whether a program can execute on the set target
 - New support for executing a targeted Q# application on quantum simulators & resource estimator
-- New `qdk-chem` tool for converting legacy electronic structure problem serialization formats (e.g.: FCIDUMP) to [Broombridge](xref:todo)
+- New `qdk-chem` tool for converting legacy electronic structure problem serialization formats (e.g.: FCIDUMP) to Broombridge.
 - New functions and operations in the [`Microsoft.Quantum.Synthesis` namespace](xref:microsoft.quantum.synthesis) for coherently applying classical oracles using transformation- and decomposition-based synthesis algorithms.
 - IQ# now allows arguments to the `%simulate`, `%estimate`, and other magic commands. See the [`%simulate` magic command reference](xref:microsoft.quantum.iqsharp.magic-ref.simulate) for more details.
 - New phase display options in IQ#. See the [`%config` magic command reference](xref:microsoft.quantum.iqsharp.magic-ref.config) for more details.

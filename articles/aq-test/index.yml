@@ -24,9 +24,9 @@ landingContent:
       - linkListType: learn
         links:
           - text: Introduction to Azure Quantum
-            url: ./overview/understanding-quantum-computing.md
+            url: ./overview/understanding-quantum-computing
           - text: Quantum computers and quantum simulators
-            url: ./overview/quantum-computers-and-simulators.md
+            url: ./overview/quantum-computers-and-simulators
           - text: Microsoft Learn modules for quantum computing
             url: https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r
 
@@ -37,13 +37,13 @@ landingContent:
       - linkListType: get-started
         links:
           - text: The Quantum Development Kit
-            url: ./quickstarts/get-started.md
+            url: ./quickstarts/get-started
       - linkListType: download
         links:
           - text: Install the QDK
-            url: ./quickstarts/index.md
+            url: ./quickstarts/index
           - text: Update the QDK
-            url: ./quickstarts/update.md
+            url: ./quickstarts/update
 
   # Develop
   - title: Develop with Azure Quantum
@@ -55,7 +55,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Create Q applications for Azure Quantum
-            url: create-applications-for-azure-quantum.md
+            url: create-quantum-workspaces-with-the-azure-portal.md
 
   # Development
   - title: Q# programming language
@@ -65,19 +65,19 @@ landingContent:
           - text: Q# user guide
             url: ./user-guide/index.md
           - text: "Quantum simulators and host applications"
-            url: ./user-guide/machines/index.md
+            url: ./user-guide/machines/index
       - linkListType: tutorial
         links:
           - text: Build a quantum random number generator
             url: ./tutorials/quantum-random-number-generator.md
           - text: Explore entanglement with Q#
-            url: ./tutorials/explore-entanglement.md
+            url: ./tutorials/explore-entanglement
           - text: "Quantum speedup: Grover's search algorithm"
-            url: ./tutorials/search.md
+            url: ./tutorials/search
       - linkListType: learn
         links:
           - text: Learn with the Quantum Katas
-            url: ./tutorials/intro-to-katas.md
+            url: ./tutorials/intro-to-katas
           - text: Browse Q# code samples
             url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 
@@ -90,10 +90,10 @@ landingContent:
       - linkListType: reference
         links:
           - text: Standard libraries
-            url: ./user-guide/libraries/standard/index.md
+            url: ./user-guide/libraries/standard/index
           - text: Chemistry library
-            url: ./user-guide/libraries/chemistry/index.md
+            url: ./user-guide/libraries/chemistry/index
           - text: Machine learning library
-            url: ./user-guide/libraries/machine-learning/index.md
+            url: ./user-guide/libraries/machine-learning/index
           - text: Numerics library
-            url: ./user-guide/libraries/numerics/index.md
+            url: ./user-guide/libraries/numerics/index

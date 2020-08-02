@@ -46,7 +46,7 @@ conceptualContent:
           itemType: quickstart
           text: Getting started
         - url: /aq-test/targets-in-azure-quantum
-          itemType: concepts
+          itemType: concept
           text: Concepts
         - url: /aq-test/use-the-python-sdk
           itemType: how-to-guide
@@ -74,15 +74,15 @@ tools:
     # Card
     - title: C# 
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: ./media/logos/logo-csharp.svg
+      imageSrc: aq-test/logo-csharp.svg
       url: https://docs.microsoft.com/en-us/qsharp/api/dot-net-libraries
     # Card
     - title: Python for Q#
-      imageSrc: ./media/logos/logo-python.svg
+      imageSrc: aq-test/logo-python.svg
       url: https://docs.microsoft.com/en-us/python/qsharp/qsharp
     # Card
     - title: Python for Azure Quantum (preview)
-      imageSrc: ./media/logos/logo-python.svg
+      imageSrc: aq-test/logo-python.svg
       url: /aq-test/azure.quantum
 
 additionalContent:
@@ -97,5 +97,8 @@ additionalContent:
             url: https://github.com/MicrosoftDocs/quantum-docs-private/tree/feature/onboarding-azure-quantum/azure-quantum/samples/python-sdk-basic
           - text: Azure Quantum glossary
             url: /aq-test/azure-quantum-glossary
+        # Card
+        - title: Additional resources
+          links:
           - text: Azure Quantum release notes
             url: /aq-test/azure-quantum-relnotes

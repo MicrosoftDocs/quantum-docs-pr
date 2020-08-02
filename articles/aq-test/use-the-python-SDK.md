@@ -1,8 +1,8 @@
 ---
 title: Use the Python SDK for Quantum Inspired Optimization
 description: This documents provides a basic usage overview of the Python SDK for Quantum Inspired Optimization.
-author: KittyYeungQ
-ms.author: kitty
+author: bradben
+ms.author: v-braben
 ms.date: 06/29/2020
 ms.topic: article
 uid: microsoft.azure.quantum.qio.python-sdk
@@ -63,7 +63,7 @@ cached so that you do not have to repeat this process for future runs.
 
 To express a simple problem to be solved, create an instance of a `Problem` and
 set the [`problem_type` to either `ProblemType.ising` or
-`ProblemType.pubo`](xref:microsoft.azure.quantum.reference.python-sdk.azure.quantum.optimization):
+`ProblemType.pubo`:
 
 ```py
 from azure.quantum.optimization import Problem, ProblemType, Term, ParallelTempering
@@ -87,13 +87,13 @@ terms = [
 problem.add_terms(terms=terms)
 ```
 
-> Note that there are [multiple ways](xref:microsoft.azure.quantum.qio.python-sdk.advanced#Methods-for-supplying-problem-terms)
+> Note that there are multiple ways
 > to supply terms to the problem, and not all terms must be added at once.
 
 Next, we're ready to solve by applying a solver. In this example we'll use a
 parameter-free version of parallel tempering. You can find documentation on this
-solver and the other available solvers in the [Azure Quantum Provider
-Reference](xref:microsoft.azure.quantum.providers.azure-quantum).
+solver and the other available solvers in the Azure Quantum Provider
+Reference.
 
 ```py
 solver = ParallelTempering(workspace, timeout=100)
@@ -101,8 +101,8 @@ solver = ParallelTempering(workspace, timeout=100)
 
 The solver takes as arguments the `workspace` created previously, plus a single
 parameter which is the maximum amount of time (in seconds) to run the solver.
-Detailed documentation on parameters is available in the [Azure Quantum Provider
-Reference](xref:microsoft.azure.quantum.providers.azure-quantum).
+Detailed documentation on parameters is available in the Azure Quantum Provider
+Reference.
 
 Solvers provide an `optimize` method that expects a `Problem` which uploads the
 problem definition, submits a job, and polls until the job has completed
@@ -128,10 +128,10 @@ This guide provides an overview of a simple use case. `Problem` also provides
 individual methods for `upload` and `submit`; `submit` returns an instance of
 the `Job` which exposes the job metadata and `fetch`, `get_output` and `cancel`
 methods. These provide more fine grain control for the execution, and are
-covered in the next section: [Advanced Usage of the Python
-SDK](xref:microsoft.azure.quantum.qio.python-sdk.advanced).
+covered in the next section: Advanced Usage of the Python
+SDK.
 
 ## Common issues
 
-Refer to this document for common issues you may run into: [Common
-issues](xref:microsoft.azure.quantum.common-issues)
+Refer to this document for common issues you may run into: Common
+issues.

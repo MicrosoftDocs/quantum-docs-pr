@@ -1,8 +1,8 @@
 ---
 title: Glossary for Azure Quantum 
 description: List of common terms of the Azure Quantum service.
-author: geduardo
-ms.author: v-edsanc@microsoft.com
+author: bradben
+ms.author: v-braben
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.azure.quantum.glossary

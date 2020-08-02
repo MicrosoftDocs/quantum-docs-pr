@@ -23,7 +23,7 @@ highlightedContent:
     # Card
     - title: "Azure Quantum"
       itemType: overview
-      url: /aq-test
+      url: aq-test/
     # Card
     - title: "Quantum Development Kit"
       itemType: overview
@@ -31,7 +31,7 @@ highlightedContent:
     # Card
     - title: "Quantum API Reference"
       itemType: overview
-      url: /quantum/api/toc.yml
+      url: /quantum/api/toc.json
 
 
 conceptualContent:
@@ -39,31 +39,31 @@ conceptualContent:
     # Card
     - title: Azure Quantum
       links:
-        - url: /aq-test/azure-quantum-overview
+        - url: aq-test/azure-quantum-overview
           itemType: overview
           text: Overview
-        - url: /aq-test/create-quantum-workspaces-with-the-azure-portal
+        - url: aq-test/create-quantum-workspaces-with-the-azure-portal
           itemType: quickstart
           text: Getting started
-        - url: /aq-test/targets-in-azure-quantum
+        - url: aq-test/targets-in-azure-quantum
           itemType: concept
           text: Concepts
-        - url: /aq-test/use-the-python-sdk
+        - url: aq-test/use-the-python-sdk
           itemType: how-to-guide
           text: Using the Python SDK
     # Card
     - title: Quantum Development Kit
       links:
-        - url: /overview/overview
+        - url: overview/overview
           itemType: overview
           text: Introduction to the QDK
-        - url: /quickstarts/get-started
+        - url: quickstarts/get-started
           itemType: quickstart
           text: Getting started
-        - url: /tutorials/quantum-random-number-generator
+        - url: tutorials/quantum-random-number-generator
           itemType: tutorial
           text: Tutorials
-        - url: /user-guide
+        - url: user-guide/
           itemType: overview
           text: QDK User guide
 
@@ -83,7 +83,7 @@ tools:
     # Card
     - title: Python for Azure Quantum (preview)
       imageSrc: aq-test/logo-python.svg
-      url: /aq-test/azure.quantum
+      url: aq-test/azure.quantum
 
 additionalContent:
   # Supports up to 3 sections
@@ -96,9 +96,9 @@ additionalContent:
           - text: Python SDK samples
             url: https://github.com/MicrosoftDocs/quantum-docs-private/tree/feature/onboarding-azure-quantum/azure-quantum/samples/python-sdk-basic
           - text: Azure Quantum glossary
-            url: /aq-test/azure-quantum-glossary
+            url: aq-test/azure-quantum-glossary
         # Card
         - title: Additional resources
           links:
           - text: Azure Quantum release notes
-            url: /aq-test/azure-quantum-relnotes
+            url: aq-test/azure-quantum-relnotes

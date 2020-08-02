@@ -39,31 +39,31 @@ conceptualContent:
     # Card
     - title: Azure Quantum
       links:
-        - url: aq-test/azure-quantum-overview
+        - url: aq-test/azure-quantum-overview.md
           itemType: overview
           text: Overview
-        - url: aq-test/create-quantum-workspaces-with-the-azure-portal
+        - url: aq-test/create-quantum-workspaces-with-the-azure-portal.md
           itemType: quickstart
           text: Getting started
-        - url: aq-test/targets-in-azure-quantum
+        - url: aq-test/targets-in-azure-quantum.md
           itemType: concept
           text: Concepts
-        - url: aq-test/use-the-python-sdk
+        - url: aq-test/use-the-python-sdk.md
           itemType: how-to-guide
           text: Using the Python SDK
     # Card
     - title: Quantum Development Kit
       links:
-        - url: overview/overview
+        - url: overview/overview.md
           itemType: overview
           text: Introduction to the QDK
-        - url: quickstarts/get-started
+        - url: quickstarts/get-started.md
           itemType: quickstart
           text: Getting started
-        - url: tutorials/quantum-random-number-generator
+        - url: tutorials/quantum-random-number-generator.md
           itemType: tutorial
           text: Tutorials
-        - url: user-guide/
+        - url: user-guide/index.md
           itemType: overview
           text: QDK User guide
 

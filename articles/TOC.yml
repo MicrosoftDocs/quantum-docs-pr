@@ -1,5 +1,5 @@
 - name: Microsoft Quantum Documentation
-  href: index.yml
+  href: index-qdk.yml
 - name: Overview
   href: overview/toc.yml
 - name: Quickstarts

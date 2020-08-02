@@ -21,4 +21,4 @@
 - name: References
   href: targets-in-azure-quantum.md
 - name: Quantum Development Kit
-  href: https://review.docs.microsoft.com/quantum/index-qdk?branch=pr-en-us-992
+  href: /quantum/index-qdk.yml

@@ -23,7 +23,7 @@ highlightedContent:
     # Card
     - title: "Azure Quantum"
       itemType: overview
-      url: aq-test/azure-quantum-overview.md
+      url: aq-test/index.yml
     # Card
     - title: "Quantum Development Kit"
       itemType: overview
@@ -69,7 +69,7 @@ conceptualContent:
 
 tools:
   title: Languages # < 60 chars (optional)
-  summary: Bot Framework SDK language reference documentation # < 160 chars (optional)
+  summary: Quantum language reference documentation # < 160 chars (optional)
   items:
     # Card
     - title: C# 

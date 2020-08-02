@@ -29,7 +29,7 @@ highlightedContent:
       itemType: overview
       url: index-qdk.yml
     # Card
-    - title: "Quantum API Reference"
+    - title: "Q# API Reference"
       itemType: overview
       url: https://docs.microsoft.com/qsharp/api/
 

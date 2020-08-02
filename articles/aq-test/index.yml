@@ -24,9 +24,9 @@ landingContent:
       - linkListType: learn
         links:
           - text: Introduction to Azure Quantum
-            url: /quantum/overview/understanding-quantum-computing.md
+            url: /quantum/overview/understanding-quantum-computing
           - text: Quantum computers and quantum simulators
-            url: /quantum/overview/quantum-computers-and-simulators.md
+            url: /quantum/overview/quantum-computers-and-simulators
           - text: Microsoft Learn modules for quantum computing
             url: https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r
 

@@ -37,13 +37,13 @@ landingContent:
       - linkListType: get-started
         links:
           - text: The Quantum Development Kit
-            url: ./quickstarts/get-started
+            url: /quantum/quickstarts/get-started
       - linkListType: download
         links:
           - text: Install the QDK
-            url: ./quickstarts/index
+            url: /quantum/quickstarts/index
           - text: Update the QDK
-            url: ./quickstarts/update
+            url: /quantum/quickstarts/update
 
   # Develop
   - title: Develop with Azure Quantum
@@ -63,21 +63,21 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Q# user guide
-            url: ./user-guide/index.md
+            url: /quantum/user-guide/index.md
           - text: "Quantum simulators and host applications"
-            url: ./user-guide/machines/index
+            url: /quantum/user-guide/machines/index
       - linkListType: tutorial
         links:
           - text: Build a quantum random number generator
-            url: ./tutorials/quantum-random-number-generator.md
+            url: /quantum/tutorials/quantum-random-number-generator.md
           - text: Explore entanglement with Q#
-            url: ./tutorials/explore-entanglement
+            url: /quantum/tutorials/explore-entanglement
           - text: "Quantum speedup: Grover's search algorithm"
-            url: ./tutorials/search
+            url: /quantum/tutorials/search
       - linkListType: learn
         links:
           - text: Learn with the Quantum Katas
-            url: ./tutorials/intro-to-katas
+            url: /quantum/tutorials/intro-to-katas
           - text: Browse Q# code samples
             url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 
@@ -90,10 +90,10 @@ landingContent:
       - linkListType: reference
         links:
           - text: Standard libraries
-            url: ./user-guide/libraries/standard/index
+            url: /quantum/user-guide/libraries/standard/index
           - text: Chemistry library
-            url: ./user-guide/libraries/chemistry/index
+            url: /quantum/user-guide/libraries/chemistry/index
           - text: Machine learning library
-            url: ./user-guide/libraries/machine-learning/index
+            url: /quantum/user-guide/libraries/machine-learning/index
           - text: Numerics library
-            url: ./user-guide/libraries/numerics/index
+            url: /quantum/user-guide/libraries/numerics/index

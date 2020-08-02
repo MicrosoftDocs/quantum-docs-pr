@@ -31,7 +31,7 @@ highlightedContent:
     # Card
     - title: "Quantum API Reference"
       itemType: overview
-      url: ./api/toc.yml
+      url: /quantum/api/toc.yml
 
 
 conceptualContent:

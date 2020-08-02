@@ -1,0 +1,24 @@
+- name: Azure Quantum Documentation
+  href: index.yml
+- name: Overview
+  href: overview/azure-quantum-overview.md
+- name: Tutorials
+  items: 
+  - name: Create a Quantum Workspace
+    href: create-quantum-workspaces-with-the-azure-portal.md
+  - name: Create applications for Azure Quantum
+    href: create-applications-for-azure-quantum.md
+  - name: Quantum execution
+    href: create-quantum-workspaces-with-the-azure-portal.md
+  - name: Quantum Inspired Optimization
+    href: create-applications-for-azure-quantum.md
+- name: Concepts
+  items:
+  - name: Targets in Azure Quantum
+    href: targets-in-azure-quantum.md
+- name: Resources
+  href: targets-in-azure-quantum.md
+- name: References
+  href: targets-in-azure-quantum.md
+- name: Quantum Development Kit
+  href: targets-in-azure-quantum.md

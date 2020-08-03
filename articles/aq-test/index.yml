@@ -18,82 +18,70 @@ metadata:
 
 landingContent:
 
-  # Card (optional)
+  # AOverview
+  - title: What is Azure Quantum?
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: "How Azure Quantum works: Architecture and concepts"
+            url: qdk/test.md
+
+  # DCard (optional)
   - title: Quantum computing
     linkLists:
       - linkListType: learn
         links:
-          - text: Introduction to Azure Quantum
-            url: /quantum/overview/understanding-quantum-computing
+          - text: Understanding quantum computing
+            url: overview/understanding-quantum-computing.md
           - text: Quantum computers and quantum simulators
-            url: /quantum/overview/quantum-computers-and-simulators
+            url: overview/quantum-computers-and-simulators.md
           - text: Microsoft Learn modules for quantum computing
             url: https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r
 
-
-  # Develop
-  - title: Develop with the Quantum Development Kit
-    linkLists:
-      - linkListType: get-started
-        links:
-          - text: The Quantum Development Kit
-            url: /quantum/quickstarts/get-started
-      - linkListType: download
-        links:
-          - text: Install the QDK
-            url: /quantum/quickstarts/index
-          - text: Update the QDK
-            url: /quantum/quickstarts/update
-
-  # Develop
+  # BCommunity and contribution
   - title: Develop with Azure Quantum
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Create Quantum Workspaces 
-            url: create-quantum-workspaces-with-the-azure-portal.md
-      - linkListType: how-to-guide
-        links:
-          - text: Create Q applications for Azure Quantum
-            url: create-quantum-workspaces-with-the-azure-portal.md
+          - text: Create Quantum Workspaces
+            url: qdk/test.md
+          - text: Create Q# applications for Azure Quantum
+            url: qdk/test.md
 
-  # Development
-  - title: Q# programming language
+  # Community and contribution
+  - title: Quantum Inspired Optimization (QIO)
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: overview
         links:
-          - text: Q# user guide
-            url: /quantum/user-guide/index.md
-          - text: "Quantum simulators and host applications"
-            url: /quantum/user-guide/machines/index
-      - linkListType: tutorial
+          - text: Introduction to Optimization
+            url: qdk/test.md
+      - linkListType: concept
         links:
-          - text: Build a quantum random number generator
-            url: /quantum/tutorials/quantum-random-number-generator.md
-          - text: Explore entanglement with Q#
-            url: /quantum/tutorials/explore-entanglement
-          - text: "Quantum speedup: Grover's search algorithm"
-            url: /quantum/tutorials/search
-      - linkListType: learn
-        links:
-          - text: Learn with the Quantum Katas
-            url: /quantum/tutorials/intro-to-katas
-          - text: Browse Q# code samples
-            url: https://docs.microsoft.com/samples/browse/?languages=qsharp
+          - text: Optimization methods
+            url: qdk/test.md
 
-
-
-
-  # Library card
+  # FLibrary card
   - title: Q# libraries
     linkLists:
       - linkListType: reference
         links:
           - text: Standard libraries
-            url: /quantum/user-guide/libraries/standard/index
+            url: user-guide/libraries/standard/index.md
           - text: Chemistry library
-            url: /quantum/user-guide/libraries/chemistry/index
+            url: user-guide/libraries/chemistry/index.md
           - text: Machine learning library
-            url: /quantum/user-guide/libraries/machine-learning/index
+            url: user-guide/libraries/machine-learning/index.md
           - text: Numerics library
-            url: /quantum/user-guide/libraries/numerics/index
+            url: user-guide/libraries/numerics/index.md
+
+  # EDevelop
+  - title: Develop with the Quantum Development Kit
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: The Quantum Development Kit
+            url: quickstarts/get-started.md
+      - linkListType: how-to-guide
+        links:
+          - text: Q# user guide
+            url: user-guide/index.md

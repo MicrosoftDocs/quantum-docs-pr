@@ -1,4 +1,4 @@
-- name: Microsoft Quantum Documentation
+- name: Quantum Development Kit documentation
   href: index-qdk.yml
 - name: Overview
   href: overview/toc.yml

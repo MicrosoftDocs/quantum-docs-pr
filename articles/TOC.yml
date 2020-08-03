@@ -1,4 +1,4 @@
-- name: Microsoft Quantum Documentation
+- name: Azure Quantum Documentation
   href: index.yml
 - name: Overview
   href: overview/toc.yml

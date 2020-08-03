@@ -1,15 +1,31 @@
-- name: Microsoft Quantum Documentation
+- name: Azure Quantum Documentation
   href: index.yml
 - name: Overview
   href: overview/toc.yml
 - name: Quickstarts
-  href: quickstarts/toc.yml
+  href: aq-test/create-quantum-workspaces-with-the-azure-portal.md
 - name: Tutorials
-  href: tutorials/toc.yml
-- name: Q# user guide
-  href: user-guide/toc.yml
+  items:
+  - name: Create quantum workspaces with the Azure portal
+    href: aq-test/create-quantum-workspaces-with-the-azure-portal.md
+- name: Quantum Development Kit
+  href: aq-test/toc.yml
 - name: Concepts 
   href: concepts/toc.yml
+- name: References
+  items: 
+  - name: Azure Quantum provider
+    href: aq-test/azure-quantum.md
+  - name: IonQ provider
+    href: aq-test/ionq.md
+  - name: Python SDK for Azure Quantum
+    href: aq-test/azure.quantum.md 
+  - name: Q# API 
+    href: https://docs.microsoft.com/en-us/qsharp/api/   
 - name: Resources
-  href: resources/toc.yml
+  items:
+  - name: Azure Quantum
+    href: scratch/toc.yml  
+  - name: QDK
+    href: resources/toc.yml
 

@@ -24,7 +24,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: "How Azure Quantum works: Architecture and concepts"
-            url: qsk/test.md
+            url: qdk/test.md
 
   # Card (optional)
   - title: Quantum computing
@@ -37,10 +37,16 @@ landingContent:
             url: overview/quantum-computers-and-simulators.md
           - text: Microsoft Learn modules for quantum computing
             url: https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r
-      - linkListType: concept
+
+  # Community and contribution
+  - title: Develop with Azure Quantum
+    linkLists:
+      - linkListType: how-to-guide
         links:
-          - text: Quantum computing concepts
-            url: concepts/index.md
+          - text: Create Quantum Workspaces
+            url: qdk/test.md
+          - text: Create Q# applications for Azure Quantum
+            url: qdk/test.md
 
   # Community and contribution
   - title: Quantum Inspired Optimization (QIO)
@@ -54,15 +60,19 @@ landingContent:
           - text: Optimization methods
             url: qdk/test.md
 
-  # Community and contribution
-  - title: Develop with Azure Quantum
+  # Library card
+  - title: Q# libraries
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: reference
         links:
-          - text: Create Quantum Workspaces
-            url: qdk/test.md
-          - text: Create Q# applications for Azure Quantum
-            url: qdk/test.md
+          - text: Standard libraries
+            url: user-guide/libraries/standard/index.md
+          - text: Chemistry library
+            url: user-guide/libraries/chemistry/index.md
+          - text: Machine learning library
+            url: user-guide/libraries/machine-learning/index.md
+          - text: Numerics library
+            url: user-guide/libraries/numerics/index.md
 
 
   # Develop
@@ -78,16 +88,4 @@ landingContent:
             url: user-guide/index.md
      
 
-  # Library card
-  - title: Q# libraries
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: Standard libraries
-            url: user-guide/libraries/standard/index.md
-          - text: Chemistry library
-            url: user-guide/libraries/chemistry/index.md
-          - text: Machine learning library
-            url: user-guide/libraries/machine-learning/index.md
-          - text: Numerics library
-            url: user-guide/libraries/numerics/index.md
+

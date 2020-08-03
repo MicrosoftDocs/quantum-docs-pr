@@ -48,7 +48,7 @@ Notice the Q# samples in this repository require access to pre-release packages
 available in the [public Microsoft Quantum pre-release
 feed](https://dev.azure.com/ms-quantum-public/Microsoft%20Quantum%20(public)/_packaging?_a=feed&feed=alpha).
 To enable this access you will need to copy the
-[NuGet.config](~/samples/qsharp/NuGet.Config) file from our samples to the
+NuGet.config file from our samples to the
 folder (or one of its parents) where your Q# project is located.
 
 ## Next steps

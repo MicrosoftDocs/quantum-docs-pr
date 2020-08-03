@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Azure Quantum Documentation
-summary:Learn how to run quantum programs and solve Quantum-Inspired Optimization (QIO) problems in the cloud.
+summary: Learn how to run quantum programs and solve Quantum-Inspired Optimization (QIO) problems in the cloud.
 metadata:
 
   title: Azure Quantum Documentation and Q# API Reference

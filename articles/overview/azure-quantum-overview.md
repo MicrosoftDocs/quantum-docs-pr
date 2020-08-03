@@ -1,14 +1,14 @@
 ---
-title: Introduction to Azure Quantum
+title: Introduction to Azure Quantum - 
 description: Introductory article for the Azure Quantum platform.
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 06/29/2020
 ms.topic: overview
-uid: microsoft.azure.quantum.overview
+uid: microsoft.azure.quantum.overviewx
 ---
 
-# Introduction to Azure Quantum
+# Introduction to Azure Quantum - 
 
 Azure Quantum allows you to run Quantum Programs and solve Quantum-Inspired
 Optimization (QIO) problems in the cloud. Azure Quantum takes these jobs and

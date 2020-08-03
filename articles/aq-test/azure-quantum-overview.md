@@ -1,8 +1,8 @@
 ---
 title: Introduction to Azure Quantum
 description: Introductory article for the Azure Quantum platform.
-author: KittyYeungQ
-ms.author: kitty
+author: bradben
+ms.author: bradben
 ms.date: 06/29/2020
 ms.topic: overview
 uid: microsoft.azure.quantum.overview

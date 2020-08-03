@@ -1,8 +1,8 @@
 ---
 title: Use the Python SDK for Quantum Inspired Optimization
 description: This documents provides a basic usage overview of the Python SDK for Quantum Inspired Optimization.
-author: KittyYeungQ
-ms.author: kitty
+author: bradben
+ms.author: bradben
 ms.date: 06/29/2020
 ms.topic: article
 uid: microsoft.azure.quantum.qio.python-sdk

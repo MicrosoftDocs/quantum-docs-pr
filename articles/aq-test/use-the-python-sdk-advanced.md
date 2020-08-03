@@ -1,8 +1,8 @@
 ---
 title: Advanced usage of the Python SDK for Quantum Inspired Optimization
 description: This document provides an overview of some advanced usage patterns for the Python SDK for Quantum Inspired Optimization.
-author: KittyYeungQ
-ms.author: kitty
+author: bradben
+ms.author: bradben
 ms.date: 06/29/2020
 ms.topic: article
 uid: microsoft.azure.quantum.qio.python-sdk.advanced

@@ -1,8 +1,8 @@
 ---
 title: Azure Quantum Release Notes
 description: Learn about the latest updates of the Azure Quantum service. 
-author: geduardo
-ms.author: v-edsanc@microsoft.com
+author: bradben
+ms.author: bradben
 ms.date: 07/27/2020
 ms.topic: article
 uid: microsoft.azure.quantum.relnotes

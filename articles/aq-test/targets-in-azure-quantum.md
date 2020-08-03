@@ -1,8 +1,8 @@
 ---
 title: Targets in Azure Quantum
 description: Article describing the different types of targets existing in Azure Quantum
-author: KittyYeungQ
-ms.author: kitty
+author: bradben
+ms.author: bradben
 ms.date: 06/29/2020
 ms.topic: article
 uid: microsoft.azure.quantum.concepts.targets

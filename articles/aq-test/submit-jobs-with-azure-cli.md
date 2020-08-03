@@ -1,8 +1,8 @@
 ---
 title: Submit jobs to Azure Quantum with the Command Line Interface 
 description: This guide will show you how to submit jobs to Azure Quantum using the command line interface (CLI). 
-author: KittyYeungQ 
-ms.author: kitty 
+author: bradben 
+ms.author: bradben 
 ms.date: 06/29/2020
 ms.topic: article 
 uid: microsoft.azure.quantum.submit-jobs.azcli

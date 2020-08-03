@@ -1,8 +1,8 @@
 ---
 title: Prepare your environment to use Azure Quantum
 description: This document provides the information about how to install the necessary tools on your computer to submit Q# programs to Azure Quantum from the command line.
-author: KittyYeungQ
-ms.author: kitty
+author: bradben
+ms.author: bradben
 ms.date: 06/29/2020
 ms.topic: article
 uid: microsoft.azure.quantum.setup.cli

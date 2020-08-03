@@ -1,8 +1,8 @@
 ---
 title: Azure.Quantum.Optimization
 description: Reference for azure.quantum.optimization
-author: KittyYeungQ
-ms.author: kitty
+author: bradben
+ms.author: bradben
 ms.date: 06/29/2020
 ms.topic: article
 uid: microsoft.azure.quantum.reference.python-sdk.azure.quantum.optimization

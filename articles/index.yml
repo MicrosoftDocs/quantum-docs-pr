@@ -18,7 +18,7 @@ metadata:
 
 landingContent:
 
-  # Overview
+  # AOverview
   - title: What is Azure Quantum?
     linkLists:
       - linkListType: overview
@@ -26,7 +26,7 @@ landingContent:
           - text: "How Azure Quantum works: Architecture and concepts"
             url: qdk/test.md
 
-  # Card (optional)
+  # DCard (optional)
   - title: Quantum computing
     linkLists:
       - linkListType: learn
@@ -38,7 +38,7 @@ landingContent:
           - text: Microsoft Learn modules for quantum computing
             url: https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r
 
-  # Community and contribution
+  # BCommunity and contribution
   - title: Develop with Azure Quantum
     linkLists:
       - linkListType: how-to-guide
@@ -60,7 +60,7 @@ landingContent:
           - text: Optimization methods
             url: qdk/test.md
 
-  # Library card
+  # FLibrary card
   - title: Q# libraries
     linkLists:
       - linkListType: reference
@@ -74,8 +74,7 @@ landingContent:
           - text: Numerics library
             url: user-guide/libraries/numerics/index.md
 
-
-  # Develop
+  # EDevelop
   - title: Develop with the Quantum Development Kit
     linkLists:
       - linkListType: get-started

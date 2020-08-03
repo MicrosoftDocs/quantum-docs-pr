@@ -20,7 +20,7 @@ that will work best for your scenario.
 > optimization. Please contact your business development manager if you are
 > interested in trying out other Azure Quantum features in the future.
 
-![Azure Quantum Overview](../media/azure-quantum-flow-diagram.png)
+
 
 ## Quantum Workspace
 
@@ -91,7 +91,7 @@ the following possible states:
 
 The diagram below shows the possible state transitions.
 
-![Job submission diagram](../media/aq-diagram.png)
+
 
 The `succeeded`, `failed`, and `cancelled` states are considered **final
 states** - once in one of these states, no more updates will occur. It also

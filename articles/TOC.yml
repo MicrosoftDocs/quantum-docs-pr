@@ -3,11 +3,17 @@
 - name: Overview
   href: overview/toc.yml
 - name: Quickstarts
-  href: aq-test/create-quantum-workspaces-with-the-azure-portal.md
+  items:
+  - name: Create Quantum Workspaces
+    href: aq-test/create-quantum-workspaces-with-the-azure-portal.md
+  - name: Prepare your environment
+    href: aq-test/prepare-your-environment.md
 - name: Tutorials
   items:
-  - name: Create quantum workspaces with the Azure portal
-    href: aq-test/create-quantum-workspaces-with-the-azure-portal.md
+  - name: Submit jobs with the Azure CLI
+    href: aq-test/submit-jobs-with-azure-cli.md
+  - name: Create applications for Azure Quantum
+    href: aq-test/create-applications-for-azure-quantum.md
 - name: Quantum Development Kit
   href: qdk/toc.yml
 - name: Concepts 

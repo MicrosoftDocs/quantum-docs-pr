@@ -1,7 +1,7 @@
-  - name: Introduction to quantum computing
-    href: overview.md
   - name: Introduction to Azure Quantum
     href: azure-quantum-overview.md
+  - name: Introduction to quantum computing
+    href: overview.md
   - name: Key concepts
     items: 
     - name: Understanding quantum computing

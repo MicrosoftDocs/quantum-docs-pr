@@ -2,14 +2,152 @@
   href: index.yml
 - name: Overview
   href: overview/toc.yml
-- name: Quickstarts
-  href: quickstarts/toc.yml
-- name: Tutorials
-  href: tutorials/toc.yml
-- name: Q# user guide
-  href: user-guide/toc.yml
-- name: Concepts 
+- name: Azure Quantum
+  items:
+  - name: Overview
+    items:
+    - name: What is Azure Quantum?
+      href: readme.md
+    - name: How Azure Quantum works - Architecture and concepts
+      href: readme.md
+  - name: Concepts
+    items:
+    - name: Plan and manage costs for Azure Quantum
+      href: readme.md
+    - name: Workspace
+      href: readme.md  
+    - name: Providers
+      items:
+      - name: Azure Quantum
+        href: readme.md
+      - name: IonQ
+        href: readme.md
+      - name: Honeywell
+        href: readme.md
+      - name: 1QBit
+        href: readme.md
+    - name: Targets
+      items:
+      - name: Simulator
+        href: readme.md
+      - name: Hardware
+        href: readme.md
+      - name: Resource estimator
+        href: readme.md
+      - name: Solver
+        href: readme.md
+      - name: Which target should I use?
+        href: readme.md
+    - name: Jobs
+      items:
+      - name: Properties
+        href: readme.md
+      - name: Lifecycle
+        href: readme.md
+      - name: Cancellation
+        href: readme.md
+      - name: Storage
+        href: readme.md  
+    - name: Enterprise readiness and security
+      items:
+      - name: Enterprise security review
+        href: readme.md
+      - name: Manage users and roles
+        href: readme.md
+      - name: Set up authentication 
+        href: readme.md
+      - name: Monitor Azure Quantum
+        href: readme.md  
+    - name: Responsible quantum development
+      href: readme.md
+  - name: How-to guides
+    items:
+    - name: Create & manage workspaces
+      href: readme.md  
+      items:
+      - name: Use Azure portal
+        href: readme.md 
+      - name: Use Azure CLI
+        href: readme.md 
+      - name: Use REST
+        href: readme.md 
+      - name: Use Resource Manager template
+        href: readme.md 
+    - name: Set up your environment
+      items:
+      - name: Set up dev environments
+        href: readme.md 
+      - name: Run Jupyter Notebooks
+        href: readme.md 
+    - name: Run quantum programs
+      items:
+      - name: Use IonQ
+        href: readme.md 
+      - name: Use Honeywell
+        href: readme.md  
+    - name: Use quantum-inspired optimization
+      items:
+      - name: Use Microsoft QIO Solvers
+        href: readme.md 
+      - name: Use 1QBit solvers
+        href: readme.md 
+  - name: Samples
+    items:
+    - name: Quantum Execution
+      items:
+      - name: Command line
+        href: readme.md 
+      - name: Jupyter Notebook and Python
+        href: readme.md 
+    - name: Optimization
+      items:
+      - name: Jupyter Notebook and Python
+        href: readme.md 
+- name: QIO
+  items:
+  - name: Optimization overview
+    href: readme.md
+  - name: SDK user guide
+    items:
+    - name: Usage
+      href: readme.md
+    - name: Tutorials
+      href: readme.md
+    - name: Reference
+      href: readme.md
+  - name: Concepts
+    items:
+    - name: Introduction to Optimization
+      href: readme.md
+    - name: Optimization methods
+      href: readme.md
+    - name: Problem formulation
+      href: readme.md
+- name: Quantum Development Kit
+  items:
+  - name: QDK Overview
+    href: readme.md
+  - name: Install the QDK
+    items:
+    - name: Overview
+      href: readme.md
+    - name: Command line
+      href: readme.md
+    - name: Jupyter
+      href: readme.md
+    - name: Other languages
+      href: readme.md
+  - name: QDK tutorials
+    href: tutorials/toc.yml
+  - name: Q# user guide
+    href: user-guide/toc.yml
+- name: Concepts (common)
   href: concepts/toc.yml
-- name: Resources
+- name: Resources (common)
   href: resources/toc.yml
+
+
+
+
+
 

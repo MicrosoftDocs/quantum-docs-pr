@@ -166,8 +166,9 @@ $$e^{ix}=\cos x + i \sin x.$$
 
 We can then represent any complex number using complex exponentials:
 
-$$z=|z|e^{i\varphi}$$
+$$z=|z|e^{i\varphi_z}$$
 
+,where $|z|$ is the absolute value of $z$ and $\varphi_z$ is the phase of z.
 This representation is very useful and common, specially in the context of
 quantum computing. For example, it makes the multiplication of complex numbers
 very straightforward.
@@ -183,7 +184,7 @@ Lastly, the complex conjugate in this representation would be:
 $$z^* = |z|^{-i\varphi_z}.$$
 
 This fact is easy to see if we know that $\sin x = -\sin{(-x)}$ and $\cos x =
-\cos{(-x)}$.
+\cos{(-x)}$ for every real number $x$.
 
 ## Next steps
 

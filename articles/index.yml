@@ -26,12 +26,12 @@ highlightedContent:
       url: aq-test/index.yml
     # Card
     - title: "Quantum Development Kit"
-      itemType: overview
+      itemType: deploy
       url: index-qdk.yml
     # Card
     - title: "Q# API Reference"
-      itemType: overview
-      url: ../api/toc.yml
+      itemType: reference
+      url: https://docs.microsoft.com/qsharp/api/
 
 
 conceptualContent:

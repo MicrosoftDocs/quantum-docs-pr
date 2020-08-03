@@ -1,6 +1,6 @@
 - name: Quickstarts
-  href: ./quickstarts/toc.yml
+  href: ../quickstarts/toc.yml
 - name: Tutorials
-  href: ./tutorials/toc.yml
+  href: ../tutorials/toc.yml
 - name: Q# user guide
-  href: ./user-guide/toc.yml
+  href: ../user-guide/toc.yml

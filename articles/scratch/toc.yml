@@ -1,6 +1,6 @@
-- name: Glossary
-  href: /quantum/aq-test/azure-quantum-glossary.md
-- name: Azure Quantum Release Notes
-  href: /quantum/aq-test/azure-quantum-relnotes.md
+- name: Azure Quantum glossary
+  href: azure-quantum-glossary.md
+- name: Azure Quantum release notes
+  href: azure-quantum-relnotes.md
 - name: Azure Quantum sample code
   href: https://github.com/MicrosoftDocs/quantum-docs-private/tree/feature/onboarding-azure-quantum/azure-quantum/samples

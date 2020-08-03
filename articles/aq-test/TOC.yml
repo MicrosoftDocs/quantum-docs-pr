@@ -22,3 +22,5 @@
   href: targets-in-azure-quantum.md
 - name: Quantum Development Kit
   href: ../index-qdk.yml
+- name: Q# API Reference
+  href: https://docs.microsoft.com/qsharp/api/

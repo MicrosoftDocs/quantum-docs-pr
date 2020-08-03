@@ -9,7 +9,7 @@
   - name: Create quantum workspaces with the Azure portal
     href: aq-test/create-quantum-workspaces-with-the-azure-portal.md
 - name: Quantum Development Kit
-  href: aq-test/toc.yml
+  href: qdk/toc.yml
 - name: Concepts 
   href: concepts/toc.yml
 - name: References

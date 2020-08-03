@@ -54,28 +54,6 @@ landingContent:
           - text: Use the Python SDK for Quantum Inspired Optimization 
             url: aq-test/use-the-python-SDK.md
 
-
-  # Develop
-  - title: Develop with the Quantum Development Kit and Q#
-    linkLists:
-      - linkListType: get-started
-        links:
-          - text: The Quantum Development Kit
-            url: quickstarts/get-started.md
-      - linkListType: download
-        links:
-          - text: Install the QDK
-            url: quickstarts/index.md
-          - text: Update the QDK
-            url: quickstarts/update.md
-      - linkListType: how-to-guide
-        links:
-          - text: Q# user guide
-            url: user-guide/index.md
-          - text: "Quantum simulators and host applications"
-            url: user-guide/machines/index.md
-
-
   # Community and contribution
   - title: "Community & contribution"
     linkLists:
@@ -93,10 +71,30 @@ landingContent:
       - linkListType: reference
         links:
           - text: Standard libraries
-            url: user-guide/libraries/standard/index.md
+            url: qdk/user-guide/libraries/standard/index.md
           - text: Chemistry library
-            url: user-guide/libraries/chemistry/index.md
+            url: qdk/user-guide/libraries/chemistry/index.md
           - text: Machine learning library
-            url: user-guide/libraries/machine-learning/index.md
+            url: qdk/user-guide/libraries/machine-learning/index.md
           - text: Numerics library
-            url: user-guide/libraries/numerics/index.md
+            url: qdk/user-guide/libraries/numerics/index.md
+
+  # Develop
+  - title: Develop with the Quantum Development Kit and Q#
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: The Quantum Development Kit
+            url: qdk/quickstarts/get-started.md
+      - linkListType: download
+        links:
+          - text: Install the QDK
+            url: qdk/quickstarts/index.md
+          - text: Update the QDK
+            url: qdk/quickstarts/update.md
+      - linkListType: how-to-guide
+        links:
+          - text: Q# user guide
+            url: qdk/user-guide/index.md
+          - text: "Quantum simulators and host applications"
+            url: qdk/user-guide/machines/index.md

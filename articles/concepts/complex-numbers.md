@@ -126,6 +126,16 @@ Since $i=\sqrt{-1}$, we have that $i^2=-1$, and therefore:
 
 $$zw=(ac-bd)+i(ad+bc)$$
 
+#### Conjugation
+
+Conjugation is a new operation for complex numbers. The complex conjugate $z^*$
+of a complex number $z=a+ib$ is the number with the same real part but an
+imaginary part of the opposite sign. This is:
+
+$$z^* = a -ib.$$
+
+Sometimes the complex conjugate $z^*$ is also written as $\bar z$.
+
 ## Polar representation of complex numbers
 
 As we just saw, we can represent complex numbers as points in a cartesian plane.
@@ -152,7 +162,7 @@ Euler's formula establishes a relationship between the complex exponential
 function and the trigonometric representation of complex numbers. The formula
 states that for any real number $x$ the following relation is true:
 
-$$e^{ix}=\cos x + i \sin x$$
+$$e^{ix}=\cos x + i \sin x.$$
 
 We can then represent any complex number using complex exponentials:
 
@@ -162,11 +172,18 @@ This representation is very useful and common, specially in the context of
 quantum computing. For example, it makes the multiplication of complex numbers
 very straightforward.
 
-$zw=(|z|e^{i\varphi_z})(|w|e^{i\varphi_w})=|z||w|e^{i(\varphi_z+\varphi_w)}$
+$$zw=(|z|e^{i\varphi_z})(|w|e^{i\varphi_w})=|z||w|e^{i(\varphi_z+\varphi_w)}.$$
 
 Also the division:
 
 $$\frac{z}{w}=\frac{|z|e^{i\varphi_z}}{|w|e^{i\varphi_w}}=\frac{|z|}{|w|}e^{i(\varphi_z-\varphi_w)}$$
+
+Lastly, the complex conjugate in this representation would be:
+
+$$z^* = |z|^{-i\varphi_z}.$$
+
+This fact is easy to see if we know that $\sin x = -\sin{(-x)}$ and $\cos x =
+\cos{(-x)}$.
 
 ## Next steps
 

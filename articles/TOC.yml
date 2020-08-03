@@ -7,136 +7,136 @@
   - name: Overview
     items:
     - name: What is Azure Quantum?
-      href: readme.md
+      href: qdk/test.md
     - name: How Azure Quantum works - Architecture and concepts
-      href: readme.md
+      href: qdk/test.md
   - name: Concepts
     items:
     - name: Plan and manage costs for Azure Quantum
-      href: readme.md
+      href: qdk/test.md
     - name: Workspace
-      href: readme.md  
+      href: qdk/test.md  
     - name: Providers
       items:
       - name: Azure Quantum
-        href: readme.md
+        href: qdk/test.md
       - name: IonQ
-        href: readme.md
+        href: qdk/test.md
       - name: Honeywell
-        href: readme.md
+        href: qdk/test.md
       - name: 1QBit
-        href: readme.md
+        href: qdk/test.md
     - name: Targets
       items:
       - name: Simulator
-        href: readme.md
+        href: qdk/test.md
       - name: Hardware
-        href: readme.md
+        href: qdk/test.md
       - name: Resource estimator
-        href: readme.md
+        href: qdk/test.md
       - name: Solver
-        href: readme.md
+        href: qdk/test.md
       - name: Which target should I use?
-        href: readme.md
+        href: qdk/test.md
     - name: Jobs
       items:
       - name: Properties
-        href: readme.md
+        href: qdk/test.md
       - name: Lifecycle
-        href: readme.md
+        href: qdk/test.md
       - name: Cancellation
-        href: readme.md
+        href: qdk/test.md
       - name: Storage
-        href: readme.md  
+        href: qdk/test.md  
     - name: Enterprise readiness and security
       items:
       - name: Enterprise security review
-        href: readme.md
+        href: qdk/test.md
       - name: Manage users and roles
-        href: readme.md
+        href: qdk/test.md
       - name: Set up authentication 
-        href: readme.md
+        href: qdk/test.md
       - name: Monitor Azure Quantum
-        href: readme.md  
+        href: qdk/test.md  
     - name: Responsible quantum development
-      href: readme.md
+      href: qdk/test.md
   - name: How-to guides
     items:
     - name: Create & manage workspaces
-      href: readme.md  
+      href: qdk/test.md  
       items:
       - name: Use Azure portal
-        href: readme.md 
+        href: qdk/test.md 
       - name: Use Azure CLI
-        href: readme.md 
+        href: qdk/test.md 
       - name: Use REST
-        href: readme.md 
+        href: qdk/test.md 
       - name: Use Resource Manager template
-        href: readme.md 
+        href: qdk/test.md 
     - name: Set up your environment
       items:
       - name: Set up dev environments
-        href: readme.md 
+        href: qdk/test.md 
       - name: Run Jupyter Notebooks
-        href: readme.md 
+        href: qdk/test.md 
     - name: Run quantum programs
       items:
       - name: Use IonQ
-        href: readme.md 
+        href: qdk/test.md 
       - name: Use Honeywell
-        href: readme.md  
+        href: qdk/test.md  
     - name: Use quantum-inspired optimization
       items:
       - name: Use Microsoft QIO Solvers
-        href: readme.md 
+        href: qdk/test.md 
       - name: Use 1QBit solvers
-        href: readme.md 
+        href: qdk/test.md 
   - name: Samples
     items:
     - name: Quantum Execution
       items:
       - name: Command line
-        href: readme.md 
+        href: qdk/test.md 
       - name: Jupyter Notebook and Python
-        href: readme.md 
+        href: qdk/test.md 
     - name: Optimization
       items:
       - name: Jupyter Notebook and Python
-        href: readme.md 
+        href: qdk/test.md 
 - name: QIO
   items:
   - name: Optimization overview
-    href: readme.md
+    href: qdk/test.md
   - name: SDK user guide
     items:
     - name: Usage
-      href: readme.md
+      href: qdk/test.md
     - name: Tutorials
-      href: readme.md
+      href: qdk/test.md
     - name: Reference
-      href: readme.md
+      href: qdk/test.md
   - name: Concepts
     items:
     - name: Introduction to Optimization
-      href: readme.md
+      href: qdk/test.md
     - name: Optimization methods
-      href: readme.md
+      href: qdk/test.md
     - name: Problem formulation
-      href: readme.md
+      href: qdk/test.md
 - name: Quantum Development Kit
   items:
   - name: QDK Overview
-    href: readme.md
+    href: qdk/test.md
   - name: Install the QDK
     items:
     - name: Overview
-      href: readme.md
+      href: qdk/test.md
     - name: Command line
-      href: readme.md
+      href: qdk/test.md
     - name: Jupyter
-      href: readme.md
+      href: qdk/test.md
     - name: Other languages
-      href: readme.md
+      href: qdk/test.md
   - name: QDK tutorials
     href: tutorials/toc.yml
   - name: Q# user guide

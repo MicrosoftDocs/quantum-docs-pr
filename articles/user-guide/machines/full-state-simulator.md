@@ -6,6 +6,7 @@ ms.author: anpaz@microsoft.com
 ms.date: 06/26/2020 
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
+no-loc: ['Q#', '$$v']
 ---
 
 # Quantum Development Kit (QDK) full state simulator

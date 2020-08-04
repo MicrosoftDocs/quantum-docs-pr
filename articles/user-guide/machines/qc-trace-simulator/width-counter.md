@@ -6,6 +6,7 @@ ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
+no-loc: ['Q#', '$$v']
 ---
 
 # Quantum trace simulator: width counter

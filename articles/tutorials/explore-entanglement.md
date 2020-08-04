@@ -6,6 +6,7 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
+no-loc: ['Q#', '$$v']
 ---
 
 # Tutorial: Explore entanglement with Q\#

@@ -6,6 +6,7 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
+no-loc: ['Q#', '$$v']
 ---
 
 # Tutorial: Implement a Quantum Random Number Generator in Q\#

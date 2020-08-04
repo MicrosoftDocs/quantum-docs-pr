@@ -6,6 +6,7 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
+no-loc: ['Q#', '$$v']
 ---
 
 # Design your own classifier

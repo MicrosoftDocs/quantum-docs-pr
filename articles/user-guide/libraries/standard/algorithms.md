@@ -6,6 +6,7 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
+no-loc: ['Q#', '$$v']
 ---
 
 # Quantum Algorithms #

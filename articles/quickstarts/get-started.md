@@ -6,6 +6,7 @@ author: bradben
 ms.author: bradben
 ms.date: 5/10/2020
 ms.topic: overview
+no-loc: ['Q#', '$$v']
 ---
 
 # Get started with the Quantum Development Kit (QDK)

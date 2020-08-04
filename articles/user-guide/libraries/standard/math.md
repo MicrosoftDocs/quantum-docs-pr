@@ -5,6 +5,7 @@ author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad@microsoft.com 
 ms.topic: article
+no-loc: ['Q#', '$$v']
 ---
 
 # Classical Mathematical Functions #

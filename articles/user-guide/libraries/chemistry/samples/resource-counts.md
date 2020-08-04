@@ -6,6 +6,7 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
+no-loc: ['Q#', '$$v']
 ---
 
 # Obtaining resource counts

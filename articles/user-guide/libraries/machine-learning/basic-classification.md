@@ -6,6 +6,7 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
+no-loc: ['Q#', '$$v']
 ---
 
 # Basic classification: Classify data with the QDK

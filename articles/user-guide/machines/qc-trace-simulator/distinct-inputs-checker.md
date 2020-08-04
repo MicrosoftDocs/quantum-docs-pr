@@ -6,6 +6,7 @@ ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
+no-loc: ['Q#', '$$v']
 ---
 
 # Quantum trace simulator: distinct inputs checker

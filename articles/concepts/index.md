@@ -6,6 +6,7 @@ ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
+no-loc: ['Q#', '$$v']
 ---
 
 # Quantum computing history and background

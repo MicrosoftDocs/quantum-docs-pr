@@ -6,6 +6,7 @@ ms.author: bradben
 ms.date: 09/04/2019
 ms.topic: article
 uid: microsoft.quantum.contribute.macros
+no-loc: ['Q#', '$$v']
 ---
 
 # Supported Macros

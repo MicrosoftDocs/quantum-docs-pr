@@ -6,6 +6,7 @@ ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
+no-loc: ['Q#', '$$v']
 ---
 
 # Correlated wavefunctions

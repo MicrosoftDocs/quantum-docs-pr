@@ -6,6 +6,7 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
+no-loc: ['Q#', '$$v']
 ---
 
 # Contributing Code

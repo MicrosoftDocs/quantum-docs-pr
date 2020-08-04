@@ -6,6 +6,7 @@ ms.author: alexeib@microsoft.com
 ms.date: 12/5/2019
 ms.topic: article
 uid: microsoft.quantum.machine-learning.concepts.intro
+no-loc: ['Q#', '$$v']
 ---
 
 # Introduction to the Quantum Machine Learning Library

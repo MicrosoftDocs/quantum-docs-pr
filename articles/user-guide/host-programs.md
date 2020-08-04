@@ -6,6 +6,7 @@ ms.author: a-gibec@microsoft.com
 ms.date: 05/15/2020
 ms.topic: article
 uid: microsoft.quantum.guide.host-programs
+no-loc: ['Q#', '$$v']
 ---
 
 # Ways to run a Q# program

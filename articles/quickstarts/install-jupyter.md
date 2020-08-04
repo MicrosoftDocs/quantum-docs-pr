@@ -6,6 +6,7 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
+no-loc: ['Q#', '$$v']
 ---
 
 # Develop with Q# Jupyter Notebooks

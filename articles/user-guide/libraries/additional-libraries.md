@@ -6,6 +6,7 @@ ms.author: chgranad
 ms.date: 06/30/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.using
+no-loc: ['Q#', '$$v']
 ---
 
 # Using Additional Q# Libraries

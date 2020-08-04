@@ -7,6 +7,7 @@ ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
+no-loc: ['Q#', '$$v']
 ---
 
 # Install the Microsoft Quantum Development Kit (QDK)

@@ -1,7 +1,7 @@
 - name: Azure Quantum Documentation
   href: index.yml
 - name: Overview
-  href: overview/toc.yml
+  href: ../overview/toc.yml
 - name: Azure Quantum
   items:
   - name: Overview
@@ -153,7 +153,7 @@
     - name: (additional topics)
       href: test.md
 - name: Concepts (common with QDK)
-  href: concepts/toc.yml
+  href: ../concepts/toc.yml
 - name: Resources (scoped to Azure Quantum)
   items:
   - name: Glossary

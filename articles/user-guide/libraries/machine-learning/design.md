@@ -44,6 +44,10 @@ What we are defining here is a function that returns an array of `ControlledRota
 
  ![Circuit model example](~/media/circuit_model_1.PNG)
 
+Note that by default the operations of the Quantum Machine Learning library
+measure the last qubit of the register to estimate the classification
+probabilities. You should keep in mind this fact when designing your circuit.
+
 ## Use the library functions to write layers of gates
 
 Suppose we have a dataset with 784 features per instance, e.g. images of 28×28 pixels like the MNIST dataset. In this case, the width of the circuit becomes large enough so that writing by hand each individual gate becomes a possible but impractical task. This is why the Quantum Machine Learning library provides a set of tools to automatically generate layers of parametrized rotations. For instance, the function [`LocalRotationsLayer`](xref:microsoft.quantum.machinelearning.localrotationslayer) returns an array of uncontrolled single-qubit rotations along a given axis, with one rotation for each qubit in the register, each parametrized by a different model parameter. For example, `LocalRotationsLayer(4, X)` returns the following set of gates:

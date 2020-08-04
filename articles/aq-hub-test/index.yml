@@ -1,0 +1,87 @@
+### YamlMime:Landing
+
+title: Azure Quantum documentation
+summary: Learn how to run quantum programs and solve Quantum-Inspired Optimization (QIO) problems in the cloud.
+metadata:
+
+  title: Azure Quantum Documentation
+  description: Learn how to run quantum programs and solve Quantum-Inspired Optimization (QIO) problems in the cloud.
+  ms.prod: quantum
+  ms.topic: landing-page
+  ms.collection: collection
+  author: bradben
+  ms.author: v-braben
+  ms.date: 8/1/2020
+
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # AOverview
+  - title: What is Azure Quantum?
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: "How Azure Quantum works: Architecture and concepts"
+            url: qdk/test.md
+
+  # DCard (optional)
+  - title: Quantum computing
+    linkLists:
+      - linkListType: learn
+        links:
+          - text: Understanding quantum computing
+            url: overview/understanding-quantum-computing.md
+          - text: Quantum computers and quantum simulators
+            url: overview/quantum-computers-and-simulators.md
+          - text: Microsoft Learn modules for quantum computing
+            url: https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r
+
+  # BCommunity and contribution
+  - title: Develop with Azure Quantum
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Create Quantum Workspaces
+            url: qdk/test.md
+          - text: Create Q# applications for Azure Quantum
+            url: qdk/test.md
+
+  # Community and contribution
+  - title: Quantum Inspired Optimization (QIO)
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Introduction to Optimization
+            url: qdk/test.md
+      - linkListType: concept
+        links:
+          - text: Optimization methods
+            url: qdk/test.md
+
+  # FLibrary card
+  - title: Q# libraries
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Standard libraries
+            url: user-guide/libraries/standard/index.md
+          - text: Chemistry library
+            url: user-guide/libraries/chemistry/index.md
+          - text: Machine learning library
+            url: user-guide/libraries/machine-learning/index.md
+          - text: Numerics library
+            url: user-guide/libraries/numerics/index.md
+
+  # EDevelop
+  - title: Develop with the Quantum Development Kit
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: The Quantum Development Kit
+            url: quickstarts/get-started.md
+      - linkListType: how-to-guide
+        links:
+          - text: Q# user guide
+            url: user-guide/index.md

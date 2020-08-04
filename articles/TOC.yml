@@ -1,5 +1,5 @@
-- name: Microsoft Quantum Documentation
-  href: index.yml
+- name: Quantum Development Kit documentation
+  href: index-qdk.yml
 - name: Overview
   href: overview/toc.yml
 - name: Quickstarts
@@ -12,4 +12,6 @@
   href: concepts/toc.yml
 - name: Resources
   href: resources/toc.yml
+- name: Azure Quantum documentation
+  href: aq-hub-test/index.yml
 

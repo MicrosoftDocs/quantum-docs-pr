@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.Quantum.Sdk/0.11.2005.2715-beta">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ExecutionTarget>Any</ExecutionTarget>
+  </PropertyGroup>
+
+</Project>

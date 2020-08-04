@@ -23,7 +23,7 @@
       - name: Azure Quantum
         href: azure-quantum.md
       - name: IonQ
-        href: inoq.md
+        href: ionq.md
       - name: Honeywell
         href: test.md
       - name: 1QBit

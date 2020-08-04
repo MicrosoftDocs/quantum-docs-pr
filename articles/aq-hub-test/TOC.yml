@@ -7,161 +7,161 @@
   - name: Overview
     items:
     - name: What is Azure Quantum?
-      href: aq-hub-test/azure-quantum-overview.md
+      href: azure-quantum-overview.md
     - name: How Azure Quantum works - Architecture and concepts
-      href: aq-hub-test/test.md
+      href: test.md
   - name: Concepts
     items:
     - name: Plan and manage costs for Azure Quantum
-      href: aq-hub-test/test.md
+      href: test.md
     - name: Workspace
-      href: aq-hub-test/test.md  
+      href: test.md  
     - name: Providers
       items:
       - name: Providers overview
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Azure Quantum
-        href: aq-hub-test/azure-quantum.md
+        href: azure-quantum.md
       - name: IonQ
-        href: aq-hub-test/inoq.md
+        href: inoq.md
       - name: Honeywell
-        href: aq-hub-test/test.md
+        href: test.md
       - name: 1QBit
-        href: aq-hub-test/test.md
+        href: test.md
     - name: Targets
       items:
       - name: Targets overview
-        href: aq-hub-test/targets-in-azure-quantum.md
+        href: targets-in-azure-quantum.md
       - name: Simulator
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Hardware
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Resource estimator
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Solver
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Which target should I use?
-        href: aq-hub-test/test.md
+        href: test.md
     - name: Jobs
       items:
       - name: Jobs overview
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Properties
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Lifecycle
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Cancellation
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Storage
-        href: aq-hub-test/test.md  
+        href: test.md  
     - name: Enterprise readiness and security
       items:
       - name: Enterprise security review
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Manage users and roles
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Set up authentication 
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Monitor Azure Quantum
-        href: aq-hub-test/test.md  
+        href: test.md  
     - name: Responsible quantum development
-      href: aq-hub-test/test.md
+      href: test.md
   - name: How-to guides
     items:
     - name: Create & manage workspaces
       items:
       - name: Use Azure portal
-        href: aq-hub-test/create-quantum-workspaces-with-the-azure-portal.md 
+        href: create-quantum-workspaces-with-the-azure-portal.md 
       - name: Use Azure CLI
-        href: aq-hub-test/test.md 
+        href: test.md 
       - name: Use REST
-        href: aq-hub-test/test.md 
+        href: test.md 
       - name: Use Resource Manager template
-        href: aq-hub-test/test.md 
+        href: test.md 
     - name: Set up your environment
       items:
       - name: Set up dev environments
-        href: aq-hub-test/prepare-your-environment.md 
+        href: prepare-your-environment.md 
       - name: Run Jupyter Notebooks
-        href: aq-hub-test/test.md 
+        href: test.md 
     - name: Run quantum programs
       items:
       - name: Use IonQ
-        href: aq-hub-test/test.md 
+        href: test.md 
       - name: Use Honeywell
-        href: aq-hub-test/test.md  
+        href: test.md  
     - name: Use quantum-inspired optimization
       items:
       - name: Use Microsoft QIO Solvers
-        href: aq-hub-test/test.md 
+        href: test.md 
       - name: Use 1QBit solvers
-        href: aq-hub-test/test.md 
+        href: test.md 
   - name: Samples
     items:
     - name: Quantum Execution
       items:
       - name: Command line
-        href: aq-hub-test/test.md 
+        href: test.md 
       - name: Jupyter Notebook and Python
-        href: aq-hub-test/test.md 
+        href: test.md 
     - name: Optimization
       items:
       - name: Jupyter Notebook and Python
-        href: aq-hub-test/test.md 
+        href: test.md 
   - name: Quantum-inspired optimization 
     items:
     - name: Optimization overview
-      href: aq-hub-test/test.md
+      href: test.md
     - name: Get started 
       items:
       - name: Install the SDK
-        href: aq-hub-test/test.md
+        href: test.md
       - name: Update the SDK
-        href: aq-hub-test/test.md
+        href: test.md
     - name: SDK user guide
       items:
       - name: Usage
         items:
         - name: (additional topics)
-          href: aq-hub-test/test.md
+          href: test.md
       - name: Tutorials
         items:
         - name: (additional topics)
-          href: aq-hub-test/test.md
+          href: test.md
       - name: Reference
         items:
         - name: (additional topics)
-          href: aq-hub-test/test.md
+          href: test.md
     - name: Concepts
       items:
       - name: Introduction to Optimization
         items:
         - name: (additional topics)
-          href: aq-hub-test/test.md
+          href: test.md
       - name: Optimization methods
         items:
         - name: (additional topics)
-          href: aq-hub-test/test.md
+          href: test.md
       - name: Problem formulation
         items:
         - name: (additional topics)
-          href: aq-hub-test/test.md
+          href: test.md
   - name: Quantum Execution
     items:
     - name: QE overview
-      href: aq-hub-test/test.md
+      href: test.md
     - name: (additional topics)
-      href: aq-hub-test/test.md
+      href: test.md
 - name: Concepts (common with QDK)
   href: concepts/toc.yml
 - name: Resources (scoped to Azure Quantum)
   items:
   - name: Glossary
-    href: aq-hub-test/azure-quantum-glossary.md
+    href: azure-quantum-glossary.md
   - name: Release notes
-    href: aq-hub-test/azure-quantum-relnotes.md
+    href: azure-quantum-relnotes.md
   - name: Known Issues (Azure Quantum preview)
-    href: aq-hub-test/preview-known-issues.md
+    href: preview-known-issues.md
 - name: Quantum Development Kit documentation
   href: ../index-qdk.yml
 

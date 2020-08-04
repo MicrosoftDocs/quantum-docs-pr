@@ -37,7 +37,7 @@ https://aka.ms/quantum-workspaces and follow the next steps:
    should see a tile for the **Azure Quantum (preview)** service.
 
    ![Tile for the Azure Quantum (preview)
-   service](../media/azure-quantum-preview-tile.png)
+   service](media/azure-quantum-preview-tile.png)
 
 1. Click on the tile and then click on **Create**. This will lead you to a form
    to create a Quantum Workspace.
@@ -70,7 +70,7 @@ https://aka.ms/quantum-workspaces and follow the next steps:
    to your workspace. A provider gives you access to a quantum service, that can
    be quantum hardware, a simulator or a quantum inspired optimization service.
 
-   ![Providers](../media/create-providers.png)
+   ![Providers](media/create-providers.png)
 
 1. After adding the providers you want to use, click on "Review + create".
 
@@ -78,7 +78,7 @@ https://aka.ms/quantum-workspaces and follow the next steps:
    the selected providers. If everything is correct click on "Create" to create
    your quantum workspace.
 
-   ![Review](../media/review-providers.png)
+   ![Review](media/review-providers.png)
 
 ## Next steps
 

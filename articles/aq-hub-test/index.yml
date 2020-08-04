@@ -24,7 +24,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: "How Azure Quantum works: Architecture and concepts"
-            url: qdk/test.md
+            url: test.md
 
   # DCard (optional)
   - title: Quantum computing
@@ -32,9 +32,9 @@ landingContent:
       - linkListType: learn
         links:
           - text: Understanding quantum computing
-            url: overview/understanding-quantum-computing.md
+            url: ../overview/understanding-quantum-computing.md
           - text: Quantum computers and quantum simulators
-            url: overview/quantum-computers-and-simulators.md
+            url: ../overview/quantum-computers-and-simulators.md
           - text: Microsoft Learn modules for quantum computing
             url: https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r
 
@@ -44,9 +44,9 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Create Quantum Workspaces
-            url: qdk/test.md
+            url: test.md
           - text: Create Q# applications for Azure Quantum
-            url: qdk/test.md
+            url: test.md
 
   # Community and contribution
   - title: Quantum Inspired Optimization (QIO)
@@ -54,11 +54,11 @@ landingContent:
       - linkListType: overview
         links:
           - text: Introduction to Optimization
-            url: qdk/test.md
+            url: test.md
       - linkListType: concept
         links:
           - text: Optimization methods
-            url: qdk/test.md
+            url: test.md
 
   # FLibrary card
   - title: Q# libraries
@@ -66,13 +66,13 @@ landingContent:
       - linkListType: reference
         links:
           - text: Standard libraries
-            url: user-guide/libraries/standard/index.md
+            url: ../user-guide/libraries/standard/index.md
           - text: Chemistry library
-            url: user-guide/libraries/chemistry/index.md
+            url: ../user-guide/libraries/chemistry/index.md
           - text: Machine learning library
-            url: user-guide/libraries/machine-learning/index.md
+            url: ../user-guide/libraries/machine-learning/index.md
           - text: Numerics library
-            url: user-guide/libraries/numerics/index.md
+            url: ../user-guide/libraries/numerics/index.md
 
   # EDevelop
   - title: Develop with the Quantum Development Kit
@@ -80,8 +80,8 @@ landingContent:
       - linkListType: get-started
         links:
           - text: The Quantum Development Kit
-            url: quickstarts/get-started.md
+            url: ../quickstarts/get-started.md
       - linkListType: how-to-guide
         links:
           - text: Q# user guide
-            url: user-guide/index.md
+            url: ../user-guide/index.md

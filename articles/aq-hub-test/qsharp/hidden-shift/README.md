@@ -23,7 +23,7 @@ dotnet run -- --simulator QuantumSimulator --pattern-int 6 --register-size 4
 ## Running the sample on Azure Quantum
 
 Make sure that you have [created and selected a quantum
-workspace](~/how-to-guides/create-quantum-workspaces-with-the-azure-portal.md),
+workspace](../../create-quantum-workspaces-with-the-azure-portal.md),
 and then run the following at the command line:
 
 ```azcli

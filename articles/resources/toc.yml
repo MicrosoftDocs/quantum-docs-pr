@@ -5,5 +5,7 @@
   topicHref: contributing/index.md
 - name: QDK Release Notes
   href: relnotes.md
+- name: Q# in Research
+  href: research.md
 - name: Further reading
   href: further-reading.md

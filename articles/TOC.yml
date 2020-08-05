@@ -123,7 +123,7 @@
         href: qdk/test.md
       - name: Problem formulation
         href: qdk/test.md
-  - name: Quantum Execution
+  - name: Quantum execution
     items:
     - name: QE overview
       href: qdk/test.md

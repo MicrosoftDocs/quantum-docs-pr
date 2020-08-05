@@ -1,18 +1,50 @@
-- name: "Quantum computing history & background"
-  href: index.md
-- name: Vectors and matrices
-  href: vectors-and-matrices.md
-- name: Advanced matrix concepts
-  href: advanced-matrices.md
-- name: The qubit
-  href: the-qubit.md
-- name: Multiple qubits
-  href: multiple-qubits.md
-- name: Dirac notation
-  href: dirac-notation.md
-- name: Pauli measurements
-  href: pauli-measurements.md
-- name: Quantum circuits
-  href: circuits.md
-- name: Quantum oracles
-  href: oracles.md
+- name: Quantum computing concepts
+  items:
+  - name: "Quantum computing history & background"
+    href: index.md
+  - name: Vectors and matrices
+    href: vectors-and-matrices.md
+  - name: Advanced matrix concepts
+    href: advanced-matrices.md
+  - name: The qubit
+    href: the-qubit.md
+  - name: Multiple qubits
+    href: multiple-qubits.md
+  - name: Dirac notation
+    href: dirac-notation.md
+  - name: Pauli measurements
+    href: pauli-measurements.md
+  - name: Quantum circuits
+    href: circuits.md
+  - name: Quantum oracles
+    href: oracles.md
+- name: Quantum chemistry concepts
+  items:
+  - name: Quantum chemistry concepts
+    href: test.md
+- name: Quantum-inspired optimization concepts
+  items:
+    - name: Optimization methods
+      items:
+      - name: Simulated annealing
+        href: test.md
+      - name: Quantum annealing
+        href: test.md
+      - name: Simulated quantum annealing
+        href: test.md
+      - name: Parallel tempering
+        href: test.md
+      - name: Which method should I use? 
+        href: test.md
+    - name: Problem formulation
+      items:
+      - name: Cost functions
+        href: test.md
+      - name: Ising model
+        href: test.md
+      - name: QUBO
+        href: test.md
+      - name: PUBO
+        href: test.md
+      - name: Example 
+        href: test.md

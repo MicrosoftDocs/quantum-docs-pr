@@ -10,3 +10,11 @@
       href: what-is-qsharp-and-qdk.md
     - name: Linear algebra for quantum computing
       href: algebra-for-quantum-computing.md
+  - name: Introduction to optimization
+    items: 
+    - name: Introduction
+      href: test.md
+    - name: What is quantum-inspired optimization?
+      href: test.md
+    - name: Key concepts
+      href: test.md

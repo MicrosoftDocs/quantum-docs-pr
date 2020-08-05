@@ -1,9 +1,15 @@
-- name: Quantum Glossary 
+- name: Quantum Glossary (QDK, QIO, AQ combined)
   href: glossary.md
 - name: Contributing to the QDK
   href: contributing/toc.yml
   topicHref: contributing/index.md
 - name: Release Notes
-  href: relnotes.md
+  items:
+  - name: Azure Quantum release notes
+    href: relnotes.md
+  - name: QDK release notes
+    href: relnotes.md
 - name: Further reading
   href: further-reading.md
+- name: Azure Quantum Preview - known issues
+  href: relnotes.md

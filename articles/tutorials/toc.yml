@@ -1,3 +1,5 @@
+- name: Q# tutorials
+  items:
   - name: Quantum random number generator
     href: quantum-random-number-generator.md
   - name: Explore entanglement with Q#
@@ -10,3 +12,9 @@
     href: intro-to-katas.md
   - name: Q# code samples
     href: https://docs.microsoft.com/samples/browse/?languages=qsharp
+- name: QIO tutorials
+  items:
+  - name: Ship loading problem
+    href: test.md
+  - name: Job shop scheduling problem
+    href: test.md

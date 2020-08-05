@@ -13,8 +13,8 @@
   - name: Introduction to optimization
     items: 
     - name: Introduction
-      href: test.md
+      href: ../qdk/test.md
     - name: What is quantum-inspired optimization?
-      href: test.md
+      href: ../qdk/test.md
     - name: Key concepts
-      href: test.md
+      href: ../qdk/test.md

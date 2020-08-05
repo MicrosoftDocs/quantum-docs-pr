@@ -15,6 +15,6 @@
 - name: QIO tutorials
   items:
   - name: Ship loading problem
-    href: test.md
+    href: ../qdk/test.md
   - name: Job shop scheduling problem
-    href: test.md
+    href: ../qdk/test.md

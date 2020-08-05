@@ -152,7 +152,7 @@
   href: tutorials/toc.yml
 - name: Concepts
   href: concepts/toc.yml
-- name: Resources (common)
+- name: Resources
   href: resources/toc.yml
 - name: Q# API Reference
   href: /qsharp/api

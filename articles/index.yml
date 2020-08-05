@@ -58,6 +58,15 @@ conceptualContent:
         - url: concepts/index.md
           itemType: concept
           text: Quantum concepts
+    # Card
+    - title: Develop
+      links:
+        - url: index-qdk.yml
+          itemType: get-started
+          text: Quantum Development Kit
+        - url: aq-hub-test/create-applications-for-azure-quantum.md
+          itemType: overview
+          text: Azure Quantum
 
 tools:
   title: Languages # < 60 chars (optional)

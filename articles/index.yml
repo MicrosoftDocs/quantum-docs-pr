@@ -45,28 +45,6 @@ highlightedContent:
 
 conceptualContent:
   items:
-    # Card
-    - title: Azure Quantum
-      links:
-        - url: aq-hub-test/azure-quantum-overview.md
-          itemType: overview
-          text: Overview
-        - url: aq-hub-test/create-quantum-workspaces-with-the-azure-portal.md
-          itemType: quickstart
-          text: Quickstart
-        - url: aq-hub-test/targets-in-azure-quantum.md
-          itemType: concept
-          text: Concepts
-
-    # Card
-    - title: Quantum-inspired optimization
-      links:
-        - url: aq-hub-test/test.md
-          itemType: overview
-          text: Optimization overview
-        - url: aq-hub-test/use-the-python-sdk.md
-          itemType: how-to-guide
-          text: Using the Python SDK
 
     # Card
     - title: Learn

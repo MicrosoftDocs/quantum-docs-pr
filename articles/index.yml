@@ -25,6 +25,14 @@ highlightedContent:
       itemType: overview
       url: aq-hub-test/index.yml
     # Card
+    - title: "Quantum optimization"
+      itemType: reference
+      url: aq-hub-test/use-the-python-sdk.md
+    # Card
+    - title: "Quantum execution"
+      itemType: reference
+      url: aq-hub-test/create-applications-for-azure-quantum.md
+    # Card
     - title: "Quantum Development Kit"
       itemType: how-to-guide
       url: index-qdk.yml
@@ -32,6 +40,7 @@ highlightedContent:
     - title: "Q# API Reference"
       itemType: reference
       url: /qsharp/api
+
 
 
 conceptualContent:

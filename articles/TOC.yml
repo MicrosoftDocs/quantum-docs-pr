@@ -54,6 +54,8 @@
       href: qdk/test.md
     - name: Monitor Azure Quantum
       href: qdk/test.md  
+  - name: Quantum computing concepts
+    href: concepts/toc.yml
 - name: How-to guides
   items:
   - name: Create & manage workspaces
@@ -150,11 +152,6 @@
         href: qdk/test.md
 - name: Tutorials
   href: tutorials/toc.yml
-- name: Concepts
-  href: concepts/toc.yml
 - name: Resources
   href: resources/toc.yml
-
-
-
 

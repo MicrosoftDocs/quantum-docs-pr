@@ -1,15 +1,159 @@
-- name: Microsoft Quantum Documentation
+- name: Azure Quantum Documentation
   href: index.yml
 - name: Overview
   href: overview/toc.yml
-- name: Quickstarts
-  href: quickstarts/toc.yml
-- name: Tutorials
-  href: tutorials/toc.yml
-- name: Q# user guide
-  href: user-guide/toc.yml
-- name: Concepts 
+- name: Azure Quantum
+  items:
+  - name: Overview
+    items:
+    - name: What is Azure Quantum?
+      href: qdk/test.md
+    - name: How Azure Quantum works - Architecture and concepts
+      href: qdk/test.md
+  - name: Concepts
+    items:
+    - name: Plan and manage costs for Azure Quantum
+      href: qdk/test.md
+    - name: Workspace
+      href: qdk/test.md  
+    - name: Providers
+      items:
+      - name: Azure Quantum
+        href: qdk/test.md
+      - name: IonQ
+        href: qdk/test.md
+      - name: Honeywell
+        href: qdk/test.md
+      - name: 1QBit
+        href: qdk/test.md
+    - name: Targets
+      items:
+      - name: Simulator
+        href: qdk/test.md
+      - name: Hardware
+        href: qdk/test.md
+      - name: Resource estimator
+        href: qdk/test.md
+      - name: Solver
+        href: qdk/test.md
+      - name: Which target should I use?
+        href: qdk/test.md
+    - name: Jobs
+      items:
+      - name: Properties
+        href: qdk/test.md
+      - name: Lifecycle
+        href: qdk/test.md
+      - name: Cancellation
+        href: qdk/test.md
+      - name: Storage
+        href: qdk/test.md  
+    - name: Enterprise readiness and security
+      items:
+      - name: Enterprise security review
+        href: qdk/test.md
+      - name: Manage users and roles
+        href: qdk/test.md
+      - name: Set up authentication 
+        href: qdk/test.md
+      - name: Monitor Azure Quantum
+        href: qdk/test.md  
+    - name: Responsible quantum development
+      href: qdk/test.md
+  - name: How-to guides
+    items:
+    - name: Create & manage workspaces
+      href: qdk/test.md  
+      items:
+      - name: Use Azure portal
+        href: qdk/test.md 
+      - name: Use Azure CLI
+        href: qdk/test.md 
+      - name: Use REST
+        href: qdk/test.md 
+      - name: Use Resource Manager template
+        href: qdk/test.md 
+    - name: Set up your environment
+      items:
+      - name: Set up dev environments
+        href: qdk/test.md 
+      - name: Run Jupyter Notebooks
+        href: qdk/test.md 
+    - name: Run quantum programs
+      items:
+      - name: Use IonQ
+        href: qdk/test.md 
+      - name: Use Honeywell
+        href: qdk/test.md  
+    - name: Use quantum-inspired optimization
+      items:
+      - name: Use Microsoft QIO Solvers
+        href: qdk/test.md 
+      - name: Use 1QBit solvers
+        href: qdk/test.md 
+  - name: Samples
+    items:
+    - name: Quantum Execution
+      items:
+      - name: Command line
+        href: qdk/test.md 
+      - name: Jupyter Notebook and Python
+        href: qdk/test.md 
+    - name: Optimization
+      items:
+      - name: Jupyter Notebook and Python
+        href: qdk/test.md 
+  - name: Quantum-inspired optimization
+    items:
+    - name: Optimization overview
+      href: qdk/test.md
+    - name: SDK user guide
+      items:
+      - name: Usage
+        href: qdk/test.md
+      - name: Tutorials
+        href: qdk/test.md
+      - name: Reference
+        href: qdk/test.md
+    - name: Concepts
+      items:
+      - name: Introduction to Optimization
+        href: qdk/test.md
+      - name: Optimization methods
+        href: qdk/test.md
+      - name: Problem formulation
+        href: qdk/test.md
+  - name: Quantum Execution
+    items:
+    - name: QE overview
+      href: qdk/test.md
+    - name: Other topics
+      href: qdk/test.md
+- name: Quantum Development Kit
+  items:
+  - name: QDK Overview
+    href: qdk/test.md
+  - name: Install the QDK
+    items:
+    - name: Overview
+      href: qdk/test.md
+    - name: Command line
+      href: qdk/test.md
+    - name: Jupyter
+      href: qdk/test.md
+    - name: Other languages
+      href: qdk/test.md
+  - name: QDK tutorials
+    href: tutorials/toc.yml
+  - name: Q# user guide
+    href: user-guide/toc.yml
+- name: Concepts (common)
   href: concepts/toc.yml
-- name: Resources
+- name: Resources (common)
   href: resources/toc.yml
+
+
+
+
+
 

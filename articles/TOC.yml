@@ -103,50 +103,50 @@
       items:
       - name: Jupyter Notebook and Python
         href: qdk/test.md 
-  - name: Quantum-inspired optimization
+  - name: Quantum Development Kit
     items:
-    - name: Optimization overview
+    - name: QDK Overview
       href: qdk/test.md
-    - name: SDK user guide
+    - name: Install the QDK
       items:
-      - name: Usage
+      - name: Overview
         href: qdk/test.md
-      - name: Tutorials
+      - name: Command line
         href: qdk/test.md
-      - name: Reference
+      - name: Jupyter
         href: qdk/test.md
-    - name: Concepts
+      - name: Other languages
+        href: qdk/test.md
+    - name: QDK tutorials
+      href: tutorials/toc.yml
+    - name: Q# user guide
+      href: user-guide/toc.yml
+    - name: Quantum-inspired optimization
       items:
-      - name: Introduction to Optimization
+      - name: Optimization overview
         href: qdk/test.md
-      - name: Optimization methods
+      - name: SDK user guide
+        items:
+        - name: Usage
+          href: qdk/test.md
+        - name: Tutorials
+          href: qdk/test.md
+        - name: Reference
+          href: qdk/test.md
+      - name: Concepts
+        items:
+        - name: Introduction to Optimization
+          href: qdk/test.md
+        - name: Optimization methods
+          href: qdk/test.md
+        - name: Problem formulation
+          href: qdk/test.md
+    - name: Quantum execution
+      items:
+      - name: QE overview
         href: qdk/test.md
-      - name: Problem formulation
+      - name: Other topics
         href: qdk/test.md
-  - name: Quantum execution
-    items:
-    - name: QE overview
-      href: qdk/test.md
-    - name: Other topics
-      href: qdk/test.md
-- name: Quantum Development Kit
-  items:
-  - name: QDK Overview
-    href: qdk/test.md
-  - name: Install the QDK
-    items:
-    - name: Overview
-      href: qdk/test.md
-    - name: Command line
-      href: qdk/test.md
-    - name: Jupyter
-      href: qdk/test.md
-    - name: Other languages
-      href: qdk/test.md
-  - name: QDK tutorials
-    href: tutorials/toc.yml
-  - name: Q# user guide
-    href: user-guide/toc.yml
 - name: Concepts (common)
   href: concepts/toc.yml
 - name: Resources (common)

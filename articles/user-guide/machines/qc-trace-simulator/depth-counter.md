@@ -6,6 +6,7 @@ ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
+no-loc: ['Q#', '$$v']
 ---
 # Quantum trace simulator: depth counter
 

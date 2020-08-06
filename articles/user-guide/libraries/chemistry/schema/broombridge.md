@@ -6,6 +6,7 @@ ms.author: martinro@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
+no-loc: ['Q#', '$$v']
 ---
 
 # Broombridge Quantum Chemistry Schema # 

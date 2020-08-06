@@ -6,6 +6,7 @@ ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
+no-loc: ['Q#', '$$v']
 ---
 
 # Broombridge Specification v0.2 #

@@ -7,6 +7,7 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
+no-loc: ['Q#', '$$v']
 ---
 
 # Update the Microsoft Quantum Development Kit (QDK)

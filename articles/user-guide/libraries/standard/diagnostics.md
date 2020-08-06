@@ -5,6 +5,7 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com 
 ms.topic: article
+no-loc: ['Q#', '$$v']
 ---
 
 # Diagnostics #

@@ -6,6 +6,7 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
+no-loc: ['Q#', '$$v']
 ---
 
 # Quantum simulators

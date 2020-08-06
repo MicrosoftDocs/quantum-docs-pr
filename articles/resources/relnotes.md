@@ -6,6 +6,7 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
+no-loc: ['Q#', '$$v']
 ---
 
 # Microsoft Quantum Development Kit Release Notes

@@ -6,6 +6,7 @@ ms.author:  bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
+no-loc: ['Q#', '$$v']
 ---
 
 # Quantum computers and quantum simulators

@@ -7,6 +7,7 @@ uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article
+no-loc: ['Q#', '$$v']
 ---
 
 # Applications #

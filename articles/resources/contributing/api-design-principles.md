@@ -6,6 +6,7 @@ ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
+no-loc: ['Q#', '$$v']
 ---
 
 # Q# API Design Principles

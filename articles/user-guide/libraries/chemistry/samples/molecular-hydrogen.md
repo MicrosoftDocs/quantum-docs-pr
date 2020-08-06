@@ -6,6 +6,7 @@ ms.author: gulow
 ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
+no-loc: ['Q#', '$$v']
 ---
 
 # Obtaining energy level estimates

@@ -6,6 +6,7 @@ uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article
+no-loc: ['Q#', '$$v']
 ---
 
 # Data Structures and Modeling #

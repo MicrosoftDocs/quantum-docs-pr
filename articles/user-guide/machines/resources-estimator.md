@@ -6,6 +6,7 @@ ms.author: anpaz@microsoft.com
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
+no-loc: ['Q#', '$$v']
 ---
 
 # Quantum Development Kit (QDK) resources estimator

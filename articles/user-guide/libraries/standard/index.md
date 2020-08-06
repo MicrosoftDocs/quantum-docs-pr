@@ -6,6 +6,7 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
+no-loc: ['Q#', '$$v']
 ---
 
 # Introduction to the Q# Standard Libraries

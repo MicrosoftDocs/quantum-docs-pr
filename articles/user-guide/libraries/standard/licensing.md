@@ -7,6 +7,7 @@ ms.author: martinro@microsoft.com
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing
+no-loc: ['Q#', '$$v']
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # For Quantum products none of these categories have been defined  yet.
 # ms.service: service-name-from-white-list

@@ -5,6 +5,7 @@ author: gillenhaalb
 ms.author:  a-gibec@microsoft.com
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
+no-loc: ['Q#', '$$v']
 ---
 
 # IQ# Magic Commands

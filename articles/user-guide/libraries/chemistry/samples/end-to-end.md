@@ -5,6 +5,7 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
+no-loc: ['Q#', '$$v']
 ---
 
 # End-to-end with NWChem #

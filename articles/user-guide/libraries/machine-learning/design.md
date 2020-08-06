@@ -6,6 +6,7 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
+no-loc: ['Q#', '$$v']
 ---
 
 # Design your own classifier
@@ -42,6 +43,10 @@ Let's see an example of a classifier. In the [half-moons sample](https://github.
 What we are defining here is a function that returns an array of `ControlledRotation` elements, that together with an array of parameters and a bias will define our [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel). This type is fundamental in the Quantum Machine Learning library and defines the classifier. The circuit defined in the function above is part of a classifier in which each sample of the dataset contains two features. Therefore we only need two qubits. The graphical representation of the circuit is:
 
  ![Circuit model example](~/media/circuit_model_1.PNG)
+
+Note that by default the operations of the Quantum Machine Learning library
+measure the last qubit of the register to estimate the classification
+probabilities. You should keep in mind this fact when designing your circuit.
 
 ## Use the library functions to write layers of gates
 

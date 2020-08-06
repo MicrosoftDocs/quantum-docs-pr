@@ -5,7 +5,8 @@ author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
-ms.topic: tutorial 
+ms.topic: tutorial
+no-loc: ['Q#', '$$v']
 ---
 
 

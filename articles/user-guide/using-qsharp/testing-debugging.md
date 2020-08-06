@@ -6,6 +6,7 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
+no-loc: ['Q#', '$$v']
 ---
 
 # Testing and debugging

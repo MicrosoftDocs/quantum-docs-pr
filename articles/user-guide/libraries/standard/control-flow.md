@@ -7,6 +7,7 @@ uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com 
 ms.date: 12/11/2017
 ms.topic: article
+no-loc: ['Q#', '$$v']
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # For Quantum products none of these categories have been defined  yet.
 # ms.service: service-name-from-white-list

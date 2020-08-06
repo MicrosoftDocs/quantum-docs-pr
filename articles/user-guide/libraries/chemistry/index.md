@@ -6,6 +6,7 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.intro
+no-loc: ['Q#', '$$v']
 ---
 
 # Introduction to the Quantum Chemistry Library

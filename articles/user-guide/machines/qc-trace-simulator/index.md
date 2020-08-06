@@ -7,6 +7,7 @@ ms.author: vadym@microsoft.com
 ms.date: 06/25/2020 
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
+no-loc: ['Q#', '$$v']
 ---
 
 # Microsoft Quantum Development Kit (QDK) quantum trace simulator

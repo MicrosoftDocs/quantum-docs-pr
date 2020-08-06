@@ -6,6 +6,7 @@ ms.author:  bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
+no-loc: ['Q#', '$$v']
 ---
 
 # What are the Q# programming language and QDK?

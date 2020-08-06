@@ -6,6 +6,7 @@ ms.author: ageller@microsoft.com
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
+no-loc: ['Q#', '$$v']
 ---
 
 # Quantum Development Kit (QDK) Toffoli simulator

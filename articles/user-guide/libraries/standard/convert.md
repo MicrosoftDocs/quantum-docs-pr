@@ -5,6 +5,7 @@ author: cgranade
 uid: microsoft.quantum.libraries.convert
 ms.author: chgranad@microsoft.com 
 ms.topic: article
+no-loc: ['Q#', '$$v']
 ---
 
 # Type Conversions #

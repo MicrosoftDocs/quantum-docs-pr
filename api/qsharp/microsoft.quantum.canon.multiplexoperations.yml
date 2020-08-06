@@ -17,7 +17,7 @@ summary: |-
 remarks: |-
   `coefficients` will be padded with identity elements if
   fewer than $2^n$ are specified. This implementation uses
-  $n - 1$ auxiliary qubits.
+  $n - 1$ auxillary qubits.
 syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
 references: |-
   - Toward the first quantum simulation with quantum speedup

@@ -52,14 +52,6 @@ operations:
   summary: Assert that given qubits are all in $\ket{0}$ state.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
   summary: Assert that given qubits are all in $\ket{0}$ state up to a given tolerance.
-- uid: microsoft.quantum.diagnostics.assertmeasurement
-  summary: |-
-    Asserts that measuring the given qubits in the given Pauli basis will
-    always have the given result.
-- uid: microsoft.quantum.diagnostics.assertmeasurementprobability
-  summary: |-
-    Asserts that measuring the given qubits in the given Pauli basis will have the given result
-    with the given probability, within some tolerance.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: |-
     Given two operations, asserts that they act identically for all input states.

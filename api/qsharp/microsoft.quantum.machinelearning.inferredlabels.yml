@@ -22,7 +22,7 @@ input:
     uid: Double
   - name: probabilities
     summary: |-
-      An array of classification probabilities for a set of samples, typically
+      An array of classification probabilities for a set of samples, typicaly
       resulting from estimating classification frequencies.
     isArray: true
     isPrimitive: true

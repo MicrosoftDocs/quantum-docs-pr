@@ -8,9 +8,8 @@ name: T
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: |-
-  Applies the T gate to a single qubit.
+  Applies the π/8 gate to a single qubit.
 
-  This operation can be simulated by the unitary matrix
   \begin{align}
   T \mathrel{:=}
   \begin{bmatrix}

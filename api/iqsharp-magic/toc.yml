@@ -1,39 +1,9 @@
-- href: azure.connect.md
-  name: '%azure.connect magic command'
-- href: azure.execute.md
-  name: '%azure.execute magic command'
-- href: azure.jobs.md
-  name: '%azure.jobs magic command'
-- href: azure.output.md
-  name: '%azure.output magic command'
-- href: azure.status.md
-  name: '%azure.status magic command'
-- href: azure.submit.md
-  name: '%azure.submit magic command'
-- href: azure.target.md
-  name: '%azure.target magic command'
-- href: check_kata.md
-  name: '%check_kata magic command'
-- href: chemistry.broombridge.md
-  name: '%chemistry.broombridge magic command'
-- href: chemistry.encode.md
-  name: '%chemistry.encode magic command'
-- href: chemistry.fh.add_terms.md
-  name: '%chemistry.fh.add_terms magic command'
-- href: chemistry.fh.load.md
-  name: '%chemistry.fh.load magic command'
-- href: chemistry.inputstate.load.md
-  name: '%chemistry.inputstate.load magic command'
 - href: config.md
   name: '%config magic command'
 - href: estimate.md
   name: '%estimate magic command'
-- href: kata.md
-  name: '%kata magic command'
 - href: lsmagic.md
   name: '%lsmagic magic command'
-- href: lsopen.md
-  name: '%lsopen magic command'
 - href: package.md
   name: '%package magic command'
 - href: performance.md

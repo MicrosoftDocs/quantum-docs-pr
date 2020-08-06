@@ -7,10 +7,7 @@ uid: microsoft.quantum.canon.controlledonint
 name: ControlledOnInt
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: |-
-  Returns a unitary operator that applies an oracle on the target register
-  if the control register state corresponds to a specified positive integer.
-remarks: The value of `numberState` is interpreted using a little-endian encoding.
+summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified positive integer.
 syntax: "function ControlledOnInt (numberState : Int, oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
 input:
   content: "(numberState : Int, oracle : ('T => Unit is Adj + Ctl))"
@@ -36,9 +33,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: |-
-      A unitary operator that applies `oracle` on the target register if the
-      control register state corresponds to the number state `numberState`.
+  - summary: A unitary operator that applies `oracle` on the target register if the control register state corresponds to the number state `numberState`.
     isOperation: true
     input:
       types:

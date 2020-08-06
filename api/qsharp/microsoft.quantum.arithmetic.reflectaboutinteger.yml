@@ -19,7 +19,7 @@ summary: |-
   $$
 remarks: |-
   This operation is implemented in-place, without explicit allocation of
-  additional auxiliary qubits.
+  additional auxillary qubits.
 syntax: 'operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian)'

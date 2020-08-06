@@ -22,10 +22,7 @@ summary: |-
   where $V$ is a unitary transformation that represents the action of the
   `oracle` operation.
 remarks: |-
-  The pattern given by `bits` may be shorter than `controlRegister`,
-  in which case additional control qubits are ignored (that is, neither
-  controlled on $\ket{0}$ nor $\ket{1}$).
-  If `bits` is longer than `controlRegister`, an error is raised.
+  The length of `bits` and `controlRegister` must be equal.
 
   Given a Boolean array `bits` and a unitary operation `oracle`, the output of this function
   is an operation that performs the following steps:

@@ -48,7 +48,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: Target auxiliary qubit; must be in state 0
+    summary: Target auxillary qubit; must be in state 0
     isPrimitive: true
     uid: Qubit
 output:

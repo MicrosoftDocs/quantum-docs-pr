@@ -8,9 +8,8 @@ name: S
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: |-
-  Applies the S gate to a single qubit.
+  Applies the π/4 phase gate to a single qubit.
 
-  This operation can be simulated by the unitary matrix
   \begin{align}
   S \mathrel{:=}
   \begin{bmatrix}

@@ -5,6 +5,10 @@
 
 uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
+summary: |2-
+   # Summary
+   This namespace contains functions for creating and manipulating arrays of
+   data.
 functions:
 - uid: microsoft.quantum.arrays.all
   summary: |-
@@ -118,15 +122,7 @@ functions:
   summary: |-
     Given four arrays, returns a new array of 4-tuples such that each 4-tuple
     contains an element from each original array.
-summary: |2-
-   # Summary
-   This namespace contains functions for creating and manipulating arrays of
-   data.
 operations:
-- uid: microsoft.quantum.arrays.drawmany
-  summary: |-
-    Repeats an operation for a given number of samples, collecting its outputs
-    in an array.
 - uid: microsoft.quantum.arrays.foreach
   summary: |-
     Given an array and an operation that is defined

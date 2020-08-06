@@ -78,9 +78,7 @@ functions:
 - uid: microsoft.quantum.canon.controlledonbitstring
   summary: Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
 - uid: microsoft.quantum.canon.controlledonint
-  summary: |-
-    Returns a unitary operator that applies an oracle on the target register
-    if the control register state corresponds to a specified positive integer.
+  summary: Returns a unitary operator that applies an oracle on the target register if the control register state corresponds to a specified positive integer.
 - uid: microsoft.quantum.canon.curriedop
   summary: |-
     Returns a curried version of an operation on two inputs.
@@ -303,14 +301,6 @@ operations:
   summary: Computes the parity of a register of qubits in-place.
 - uid: microsoft.quantum.canon.applycnotchainwithtarget
   summary: Computes the parity of an array of qubits into a target qubit.
-- uid: microsoft.quantum.canon.applycontrolledonbitstring
-  summary: |-
-    Applies a unitary operation on the target register, controlled on a a state specified by a given
-    bit mask.
-- uid: microsoft.quantum.canon.applycontrolledonint
-  summary: |-
-    Applies a unitary operation on the target register if the control
-    register state corresponds to a specified positive integer.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: |-
     Applies an array of complex phases to numeric basis states of a register
@@ -882,14 +872,6 @@ operations:
     Performs a phase shift operation.
 
     $R=\boldone-(1-e^{i \phi})\ket{1\cdots 1}\bra{1\cdots 1}$.
-- uid: microsoft.quantum.canon.repeat
-  summary: Repeats an operation a given number of times.
-- uid: microsoft.quantum.canon.repeata
-  summary: Repeats an operation a given number of times.
-- uid: microsoft.quantum.canon.repeatc
-  summary: Repeats an operation a given number of times.
-- uid: microsoft.quantum.canon.repeatca
-  summary: Repeats an operation a given number of times.
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: |-
     Uses SWAP gates to Reversed the order of the qubits in

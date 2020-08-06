@@ -33,7 +33,7 @@ input:
     uid: Double
   - name: nMeasurements
     summary: |-
-      The number of measurements to use in estimating the classification
+      The number of measusrements to use in estimating the classification
       probability.
     isPrimitive: true
     uid: Int

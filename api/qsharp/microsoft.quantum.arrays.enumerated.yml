@@ -33,7 +33,7 @@ output:
   content: (Int, 'TElement)[]
   types:
   - summary: |-
-      A new array containing elements of the original array along with their
+      A new array containing elments of the original array along with their
       indices.
     isArray: true
     types:

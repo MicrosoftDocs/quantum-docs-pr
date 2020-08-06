@@ -29,7 +29,7 @@ output:
   content: "'T[]"
   types:
   - summary: |-
-      The array with the in place swap applied.
+      The array with the in place swapp applied.
 
       ## Example
 

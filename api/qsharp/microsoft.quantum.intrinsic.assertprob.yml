@@ -7,26 +7,46 @@ uid: microsoft.quantum.intrinsic.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: AssertProb has been deprecated. Please use @"microsoft.quantum.diagnostics.assertmeasurementprobability" instead.
+summary: |-
+  Asserts that measuring the given qubits in the given Pauli basis will have the given result
+  with the given probability, within some tolerance.
+remarks: |-
+  Note that the Adjoint and Controlled versions of this operation will not
+  check the condition.
+examples: |-
+  ```qsharp
+  using (register = Qubit()) {
+      H(register);
+      AssertProb([PauliZ], [register], One, 0.5,
+          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
+  }
+  ```
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
+    summary: |-
+      A measurement effect to assert the probability of, expressed as a
+      multi-qubit Pauli operator.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
+    summary: A register on which to make the assertion.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
+    summary: An expected result of `Measure(bases, qubits)`.
     isPrimitive: true
     uid: Result
   - name: prob
+    summary: The probability with which the given result is expected.
     isPrimitive: true
     uid: Double
   - name: msg
+    summary: A message to be reported if the assertion fails.
     isPrimitive: true
     uid: String
   - name: tol
@@ -40,4 +60,6 @@ output:
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- assert
 ...

@@ -118,6 +118,18 @@
         href: qdk/test.md
       - name: Which method should I use? 
         href: qdk/test.md
+    - name: Problem formulation
+      items:
+      - name: Cost functions
+        href: qdk/test.md
+      - name: Ising method 
+        href: qdk/test.md
+      - name: QUBO (spelled out first time?)
+        href: qdk/test.md
+      - name: PUBO 
+        href: qdk/test.md
+      - name: Example 
+        href: qdk/test.md
   - name: Tutorials
     items:
     - name: Ship loading problem 

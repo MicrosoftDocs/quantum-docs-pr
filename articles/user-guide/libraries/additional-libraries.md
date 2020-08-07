@@ -26,9 +26,9 @@ Once you have installed the Quantum Development Kit for use with your preferred 
 > Some Q# libraries may work well with additional tools that work alongside your Q# programs, or that integrate with your host applications.
 > For example, the [chemistry library installation instructions](xref:microsoft.quantum.chemistry.concepts.installation) describe how to use the [**Microsoft.Quantum.Chemistry** package](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) together with the NWChem computational chemistry platform, and how to install the `qdk-chem` command-line tools for working with quantum chemistry data.
 
-## [Q# command-line applications or .NET interopability](#tab/tabid-csproj)
+## [Q# applications or .NET interopability](#tab/tabid-csproj)
 
-**Command line or Visual Studio Code:** Using the command line on its own or from within Visual Studio Code, you can use the `dotnet` command to add a NuGet package reference to your project.
+**Command prompt or Visual Studio Code:** Using the command prompt on its own or from within Visual Studio Code, you can use the `dotnet` command to add a NuGet package reference to your project.
 For example, to add the [**Microsoft.Quantum.Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) package, run the following command:
 
 ```dotnetcli
@@ -48,7 +48,7 @@ For more details, see the [Package Manager UI guide](https://docs.microsoft.com/
 
 Alternatively, you can use the Package Manager Console to add the numerics library to your project via the command line interface.
 
-![Use the Package Manager Console from the command line](~/media/vs2017-nuget-console-menu.png)
+![Use the Package Manager Console from the command prompt](~/media/vs2017-nuget-console-menu.png)
 
 From the Package Manager Console, run the following:
 

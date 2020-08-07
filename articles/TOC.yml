@@ -1,15 +1,199 @@
-- name: Microsoft Quantum Documentation
+- name: Azure Quantum Documentation
   href: index.yml
 - name: Overview
-  href: overview/toc.yml
-- name: Quickstarts
-  href: quickstarts/toc.yml
-- name: Tutorials
-  href: tutorials/toc.yml
-- name: Q# user guide
-  href: user-guide/toc.yml
-- name: Concepts 
-  href: concepts/toc.yml
+  items:
+  - name: What is Azure Quantum?
+    href: qdk/test.md
+  - name: What is the Quantum Development Kit?
+    href: qdk/test.md
+- name: Getting started (should be Quickstarts)
+  items: 
+  - name: Install the QDK
+    href: quickstarts/toc.yml
+  - name: Create and manage workspaces
+    items:
+    - name: Use Azure portal
+      href: qdk/test.md 
+    - name: Use Azure CLI
+      href: qdk/test.md 
+    - name: Use REST
+      href: qdk/test.md 
+    - name: Use Resource Manager template
+      href: qdk/test.md 
+  - name: Samples
+    items:
+    - name: Quantum Execution
+      items:
+      - name: Use local simulator
+        href: qdk/test.md 
+      - name: Use IonQ
+        href: qdk/test.md 
+      - name: Use Honeywell
+        href: qdk/test.md 
+      - name: Command line
+        href: qdk/test.md 
+      - name: Jupyter Notebook and Python
+        href: qdk/test.md 
+    - name: Optimization
+      items:
+      - name: Use Microsoft QIO Solvers
+        href: qdk/test.md 
+      - name: Use 1QBit solvers
+        href: qdk/test.md 
+      - name: Jupyter Notebook and Pytho
+        href: qdk/test.md         
+- name: Quantum Execution
+  items: 
+  - name: Overview
+    href: overview/toc.yml
+  - name: Q# user guide
+    href: user-guide/toc.yml
+  - name: Concepts
+    items:
+    - name: Quantum computing concepts
+      href: concepts/toc.yml
+    - name: Quantum chemistry concepts (TBD)
+      href: qdk/test.md
+  - name: Tutorials
+    href: tutorials/toc.yml
+- name: Optimization
+  items: 
+  - name: Overview
+    items: 
+    - name: Introduction to optimization
+      href: qdk/test.md
+    - name: What is quantum-inspired optimization (QIO)?
+      href: qdk/test.md
+    - name: Key concepts
+      href: qdk/test.md
+  - name: QIO user guide
+    items:
+    - name: Usage
+      items:
+      - name: Express a problem
+        href: qdk/test.md
+      - name: Apply a solver
+        href: qdk/test.md
+      - name: Understand solver results
+        href: qdk/test.md
+      - name: Solve long-running problems
+        href: qdk/test.md
+      - name: Re-use problem definitions
+        href: qdk/test.md
+      - name: Job management
+        href: qdk/test.md
+    - name: Reference
+      items:
+      - name: Workspace
+        href: qdk/test.md
+      - name: Job
+        href: qdk/test.md
+      - name: Problem
+        href: qdk/test.md
+      - name: ProblemType
+        href: qdk/test.md
+      - name: SimulatedAnnealing
+        href: qdk/test.md
+      - name: SimulatedAnnealing (parameter free)
+        href: qdk/test.md
+      - name: ParallelTempering
+        href: qdk/test.md
+      - name: ParallelTempering (parameter free)
+        href: qdk/test.md
+      - name: SimulatedQuantumAnnealing
+        href: qdk/test.md
+      - name: Uploading a problem via file
+        href: qdk/test.md    
+  - name: Concepts
+    items:
+    - name: Optimization methods
+      items:
+      - name: Simulated annealing 
+        href: qdk/test.md
+      - name: Quantum annealing 
+        href: qdk/test.md
+      - name: Simulated quantum annealing 
+        href: qdk/test.md
+      - name: Parallel tempering 
+        href: qdk/test.md
+      - name: Which method should I use? 
+        href: qdk/test.md
+  - name: Tutorials
+    items:
+    - name: Ship loading problem 
+      href: qdk/test.md
+    - name: Job shop scheduling problem 
+      href: qdk/test.md
 - name: Resources
-  href: resources/toc.yml
+  items:
+  - name: Azure Quantum concepts
+    items:
+    - name: Architecture
+      href: qdk/test.md
+    - name: Plan and manage costs for Azure Quantum
+      href: qdk/test.md
+    - name: Workspace
+      href: qdk/test.md
+    - name: Providers
+      items:
+      - name: Azure Quantum (Microsoft QIO Solvers)
+        href: qdk/test.md
+      - name: IonQ
+        href: qdk/test.md       
+      - name: Honeywell
+        href: qdk/test.md
+      - name: 1QBit (superconducting QIO)
+        href: qdk/test.md
+    - name: Targets
+      items:
+      - name: Simulator
+        href: qdk/test.md
+      - name: Hardware
+        href: qdk/test.md
+      - name: Resource estimator
+        href: qdk/test.md
+      - name: Solver
+        href: qdk/test.md
+      - name: Which target should I use?
+        href: qdk/test.md
+    - name: Jobs
+      items:
+      - name: Properties
+        href: qdk/test.md
+      - name: Lifecycle
+        href: qdk/test.md
+      - name: Cancellation
+        href: qdk/test.md
+      - name: Storage
+        href: qdk/test.md  
+    - name: Enterprise readiness and security
+      items:
+      - name: Enterprise security overview
+        href: qdk/test.md
+      - name: Manage users and roles
+        href: qdk/test.md
+      - name: Set up authentication 
+        href: qdk/test.md
+      - name: Monitor Azure Quantum
+        href: qdk/test.md  
+  - name: Quantum glossary (QDK, QIO, AQ)
+    href: resources/glossary.md
+  - name: Contributing to the QDK
+    href: resources/contributing/toc.yml
+  - name: Release notes
+    items:
+    - name: Azure Quantum release notes 
+      href: qdk/test.md
+    - name: QDK release notes
+      href: qdk/test.md
+    - name: Further reading
+      href: resources/further-reading.md
+    - name: Azure Quantum Preview - Known Issues List
+      href: qdk/test.md
+
+
+
+
+
+
 

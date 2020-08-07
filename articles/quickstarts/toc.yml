@@ -1,13 +1,13 @@
   expanded: true 
   items:
-  - name: Get started with the QDK
-    href: get-started.md
-  - name: Install the QDK
+  - name: QDK installation overview
+    href: ../qdk/test.md
+  - name: Quantum execution
     items:
-    - name: Installation overview
-      href: index.md
     - name: Q# command line applications
       href: install-command-line.md
+    - name: Set up development environments
+      href: ../qdk/test.md
     - name: Q# Jupyter Notebooks
       href: install-jupyter.md
     - name: Q# with other languages
@@ -16,5 +16,9 @@
         href: install-python.md
       - name: Q# with .NET
         href: install-cs.md
+  - name: Optimization
+    items:
+    - name: Optimization Jupyter Notebooks
+      href: ../qdk/test.md
   - name: Update the QDK
     href: update.md

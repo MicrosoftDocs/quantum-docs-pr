@@ -1,16 +1,16 @@
 ### YamlMime:Landing
 
-title: Microsoft Quantum Documentation
-summary: Learn how to use the Microsoft Quantum Development Kit and Q#, a language for quantum programming. Learn key concepts and write your first quantum program. Explore the rich tools and libraries of the QDK.
+title: Azure Quantum Documentation
+summary: Learn how to run quantum programs and solve Quantum-Inspired Optimization (QIO) problems in the cloud.
 metadata:
 
-  title: Microsoft Quantum Documentation and Q# API Reference
+  title: Azure Quantum Documentation and Q# API Reference
   description: Explore the concepts of quantum computing and how to use the Microsoft Quantum Development Kit (QDK) and Q#, an open source quantum programming language.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
-  author: cjgronlund
-  ms.author: cgronlun
+  author: bradben 
+  ms.author: v-benbra
   ms.date: 5/10/2020
 
 
@@ -18,8 +18,18 @@ metadata:
 
 landingContent:
 
-  # Card (optional)
-  - title: Quantum computing
+  # AOverview
+  - title: What is Azure Quantum?
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Azure Quantum?
+            url: qdk/test.md
+          - text: "How Azure Quantum works: Architecture and concepts"
+            url: qdk/test.md
+
+  # DCard (optional)
+  - title: Learn
     linkLists:
       - linkListType: learn
         links:
@@ -27,79 +37,33 @@ landingContent:
             url: overview/understanding-quantum-computing.md
           - text: Quantum computers and quantum simulators
             url: overview/quantum-computers-and-simulators.md
-          - text: What are Q# and the QDK?
-            url: overview/what-is-qsharp-and-qdk.md
-          - text: Linear algebra for quantum computing
-            url: overview/algebra-for-quantum-computing.md
           - text: Microsoft Learn modules for quantum computing
             url: https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r
-      - linkListType: concept
-        links:
-          - text: Quantum computing concepts
-            url: concepts/index.md
 
-
-  # Develop
-  - title: Start with the Quantum Development Kit
+  # BCommunity and contribution
+  - title: Develop with Azure Quantum
     linkLists:
-      - linkListType: get-started
+      - linkListType: how-to-guide
         links:
+          - text: Create Quantum Workspaces
+            url: qdk/test.md
+          - text: Create Q# applications for Azure Quantum
+            url: qdk/test.md
           - text: The Quantum Development Kit
             url: quickstarts/get-started.md
-      - linkListType: download
-        links:
-          - text: Install the QDK
-            url: quickstarts/index.md
-          - text: Update the QDK
-            url: quickstarts/update.md
-
-
-  # Development
-  - title: Q# programming language
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Q# user guide
-            url: user-guide/index.md
-          - text: "Quantum simulators and host applications"
-            url: user-guide/machines/index.md
-      - linkListType: tutorial
-        links:
-          - text: Build a quantum random number generator
-            url: tutorials/quantum-random-number-generator.md
-          - text: Explore entanglement with Q#
-            url: tutorials/explore-entanglement.md
-          - text: "Quantum speedup: Grover's search algorithm"
-            url: tutorials/search.md
-      - linkListType: learn
-        links:
-          - text: Learn with the Quantum Katas
-            url: tutorials/intro-to-katas.md
-          - text: Browse Q# code samples
-            url: https://docs.microsoft.com/samples/browse/?languages=qsharp
-
 
   # Community and contribution
-  - title: "Community & contribution"
+  - title: Quantum Inspired Optimization (QIO)
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: overview
         links:
-          - text: Contribute to the QDK
-            url: resources/contributing/index.md
-          - text: Read the Microsoft Quantum blog
-            url: https://cloudblogs.microsoft.com/quantum
+          - text: What is quantum-inspired optimization?
+            url: qdk/test.md
+      - linkListType: concept
+        links:
+          - text: QIO user guide
+            url: qdk/test.md
 
 
-  # Library card
-  - title: Q# libraries
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: Standard libraries
-            url: user-guide/libraries/standard/index.md
-          - text: Chemistry library
-            url: user-guide/libraries/chemistry/index.md
-          - text: Machine learning library
-            url: user-guide/libraries/machine-learning/index.md
-          - text: Numerics library
-            url: user-guide/libraries/numerics/index.md
+
+

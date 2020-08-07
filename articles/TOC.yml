@@ -189,7 +189,7 @@
       - name: Monitor Azure Quantum
         href: qdk/test.md  
   - name: Quantum glossary (QDK, QIO, AQ)
-    href: resources/glossary.md
+    href: qdk/test.md
   - name: Contributing to the QDK
     href: resources/contributing/toc.yml
   - name: Release notes

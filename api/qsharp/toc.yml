@@ -1639,26 +1639,6 @@
     uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
   - name: StatePreparationPositiveCoefficients
     uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
-- uid: microsoft.quantum.research.characterization
-  name: Microsoft.Quantum.Research.Characterization
-  items:
-  - name: RandomWalkPhaseEstimation
-    uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
-- uid: microsoft.quantum.research.chemistry
-  name: Microsoft.Quantum.Research.Chemistry
-  items:
-  - name: ApplyDeltaParity
-    uid: microsoft.quantum.research.chemistry.applydeltaparity
-  - name: JordanWignerOptimizedFermionEvolutionSet
-    uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
-  - name: JWOptimizedFermionEvolutionFunction
-    uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
-  - name: JWOptimizedGeneratorSystem
-    uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
-  - name: JWOptimizedStatePreparation
-    uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
-  - name: OptimizedTrotterStepOracle
-    uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
 - uid: microsoft.quantum.simulation
   name: Microsoft.Quantum.Simulation
   items:

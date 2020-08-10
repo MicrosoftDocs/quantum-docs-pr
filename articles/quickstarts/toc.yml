@@ -6,7 +6,7 @@
     items:
     - name: Installation overview
       href: index.md
-    - name: Q# command line applications
+    - name: Q# applications
       href: install-command-line.md
     - name: Q# Jupyter Notebooks
       href: install-jupyter.md

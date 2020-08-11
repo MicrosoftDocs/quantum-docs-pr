@@ -34,6 +34,7 @@ Thus, the solution is a quantum analog of a support vector machine with a low-de
 ![Multilayer perceptron vs. Circuit Centric Classifier](~/media/DLvsQCC.png)
 
 A simple quantum classifier design can be compared to a traditional support vector machine (SVM) solution. The inference for a data sample $x$ in case of SVM is done using an optimal kernel form $\sum \alpha_j  k(x_j,x)$ where $k$ is a certain kernel function.
+
 By contrast, a quantum classifier uses the predictor $p(y│x,U(\theta))=〈U(\theta)x|M|U(\theta)x〉$, which is similar in spirit but technically quite different. Thus, when a straightforward amplitude encoding is used,  $p(y│x,U(\theta))$ is a quadratic form in the amplitudes of $x$, but the coefficients of this form are no longer learned independently; they are instead aggregated from the matrix elements of the circuit $U(\theta)$, which typically has significantly fewer learnable parameters $\theta$ than the dimension of the vector $x$. The polynomial degree of $p(y│x,U(\theta))$ in the original features can be increased to $2^l$ by using a quantum product encoding on $l$ copies of $x$.
 
 Our architecture explores relatively shallow circuits, which therefore must be *rapidly entangling* in order to capture all the correlations between the data features at all ranges. An example of the most useful rapidly entangling circuit component is shown on figure below. Even though a circuit with this geometry consists of only $3 n+1$ gates, the unitary weight matrix that it computes ensures significant cross-talk between $2^n$ features.

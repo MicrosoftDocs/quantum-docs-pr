@@ -572,4 +572,4 @@ In a Q# Jupyter Notebook, you can visualize your Q# programs using the `%trace` 
 
 <img src="../media/trace_example.png" alt="Trace example" width="500">
 
-You can find a more detailed explanation of the `%trace` magic command and how to use it in this [Jupyter Notebook sample](https://github.com/microsoft/Quantum/blob/raphael/trace-example/samples/diagnostics/program-visualization/TraceExample.ipynb).
+You can find a more detailed explanation of the `%trace` magic command and how to use it in this [Jupyter Notebook sample](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/program-visualization/TraceExample.ipynb).

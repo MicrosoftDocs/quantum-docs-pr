@@ -568,7 +568,7 @@ This operation can of course be used similarly with `%estimate` and other execut
 
 ### Visualizing Q# programs
 
-In a Q# Jupyter Notebook, you can visualize your Q# programs using the `%trace` magic command (more details about the command [here](https://docs.microsoft.com/qsharp/api/iqsharp-magic/trace)). Given a Q# operation as an argument, `%trace` will simulate that operation and trace out the gates in an execution path. This execution path is then rendered and output as a visualization within the Jupyter Notebook. For example, this is a visualization of a non-deterministic Q# program:
+In a Q# Jupyter Notebook, you can visualize your Q# programs using the `%trace` magic command (more details about the command [here](xref:microsoft.quantum.iqsharp.magic-ref.trace)). Given a Q# operation as an argument, `%trace` will simulate that operation and trace out the gates in an execution path. This execution path is then rendered and output as a visualization within the Jupyter Notebook. For example, this is a visualization of a non-deterministic Q# program:
 
 <img src="../media/trace_example.png" alt="Trace example" width="500">
 

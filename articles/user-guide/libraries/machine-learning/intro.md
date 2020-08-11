@@ -12,7 +12,7 @@ uid: microsoft.quantum.libraries.machine-learning.intro
 ## Framework and goals
 
 Quantum encoding and processing of information is a powerful alternative to classical machine learning
-Quantum classifiers. In particular, it allows to encode data in quantum registers that are concise relative to the number of features, systematically employing quantum entanglement as computational resource and employing quantum measurement for class inference.
+Quantum classifiers. In particular, it allows us to encode data in quantum registers that are concise relative to the number of features, systematically employing quantum entanglement as computational resource and employing quantum measurement for class inference.
 Circuit centric quantum classifier is a relatively simple quantum solution that combines data encoding with a rapidly entangling/disentangling quantum circuit followed by measurement to infer class labels of data samples.
 The goal is to ensure classical characterization and storage of subject circuits, as well as hybrid quantum/classical training of the circuit parameters even for extremely large feature spaces.
 
@@ -28,11 +28,13 @@ Both the encoding and the computing of the classifier state are done by means of
 
 In the proposed solution the classifier circuit is composed of single-qubit rotations and two-qubit controlled rotations. The learnable parameters here are the rotation angles. The rotation and controlled rotation gates are known to be *universal* for quantum computation, which means that any unitary weight matrix can be decomposed into a long enough circuit consisting of such gates.
 
-In the proposed version only one circuit followed by a single frequency estimation is supported, which makes the solution a quantum analog of support vector machine with low-degree polynomial kernel.
+In the proposed version, only one circuit followed by a single frequency estimation is supported.
+Thus, the solution is a quantum analog of a support vector machine with a low-degree polynomial kernel.
 
 ![Multilayer perceptron vs. Circuit Centric Classifier](~/media/DLvsQCC.png)
 
-A simple quantum classifier design can be compared to a traditional support vector machine (SVM) solution. The inference for a data sample $x$ in case of SVM is done using an optimal kernel form $\sum \alpha_j  k(x_j,x)$ where $k$ is a certain kernel function. Quantum classifier uses the predictor $p(y│x,U(\theta))=〈U(\theta)x|M|U(\theta)x〉$ which is similar in spirit but technically quite different. Thus when straightforward amplitude encoding is used,  $p(y│x,U(\theta))$ is a quadratic form in the amplitudes of $x$, but the coefficients of this form are no longer learned independently; they are instead aggregated from the matrix elements of the circuit $U(\theta)$, which typically has significantly fewer learnable parameters $\theta$ than the dimension of the vector $x$. The polynomial degree of $p(y│x,U(\theta))$ in the original features can be increased to $2^l$ by using quantum product encoding on $l$ copies of $x$.
+A simple quantum classifier design can be compared to a traditional support vector machine (SVM) solution. The inference for a data sample $x$ in case of SVM is done using an optimal kernel form $\sum \alpha_j  k(x_j,x)$ where $k$ is a certain kernel function.
+By contrast, a quantum classifier uses the predictor $p(y│x,U(\theta))=〈U(\theta)x|M|U(\theta)x〉$, which is similar in spirit but technically quite different. Thus, when a straightforward amplitude encoding is used,  $p(y│x,U(\theta))$ is a quadratic form in the amplitudes of $x$, but the coefficients of this form are no longer learned independently; they are instead aggregated from the matrix elements of the circuit $U(\theta)$, which typically has significantly fewer learnable parameters $\theta$ than the dimension of the vector $x$. The polynomial degree of $p(y│x,U(\theta))$ in the original features can be increased to $2^l$ by using a quantum product encoding on $l$ copies of $x$.
 
 Our architecture explores relatively shallow circuits, which therefore must be *rapidly entangling* in order to capture all the correlations between the data features at all ranges. An example of the most useful rapidly entangling circuit component is shown on figure below. Even though a circuit with this geometry consists of only $3 n+1$ gates, the unitary weight matrix that it computes ensures significant cross-talk between $2^n$ features.
 

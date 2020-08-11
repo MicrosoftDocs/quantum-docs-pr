@@ -131,7 +131,6 @@ We enumerate the transformations in the following table.
 
 |Pauli Measurement     |Unitary transformation  |
 |----------------------|------------------------|
-| $Z \otimes \boldone$ | $\boldone \otimes \boldone$ |
 | $Z\otimes \boldone$ | $\boldone\otimes \boldone$ |
 | $X\otimes \boldone$ | $H\otimes \boldone$ |
 | $Y\otimes \boldone$ | $HS^\dagger\otimes \boldone$ |

@@ -5,7 +5,7 @@
   - name: Quantum execution
     items:
     - name: Q# command line applications
-      href: install-command-line.md
+      href: ../qdk/test.md
     - name: Set up development environments
       href: ../qdk/test.md
     - name: Q# Jupyter Notebooks

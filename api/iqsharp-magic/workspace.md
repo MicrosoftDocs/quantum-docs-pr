@@ -3,7 +3,7 @@ title: '%workspace (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.workspace
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/13/2020
 ms.topic: article
 ---
 

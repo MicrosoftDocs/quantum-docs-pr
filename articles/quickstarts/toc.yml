@@ -33,4 +33,4 @@
   - name: Update the QDK
     href: update.md
   - name: Contributing to the QDK
-    href: resources/contributing/toc.yml
+    href: ../resources/contributing/toc.yml

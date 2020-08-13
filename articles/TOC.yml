@@ -140,7 +140,7 @@
       href: qdk/test.md
     - name: Job shop scheduling problem 
       href: qdk/test.md
-- name: Azure Quantum concepts
+- name: Azure Quantum
   items:
   - name: Architecture
     href: qdk/test.md
@@ -200,10 +200,10 @@
       href: qdk/test.md
     - name: QDK release notes
       href: qdk/test.md
-    - name: Further reading
-      href: resources/further-reading.md
-    - name: Azure Quantum Preview - Known Issues List
-      href: qdk/test.md
+  - name: Further reading
+    href: resources/further-reading.md
+  - name: Azure Quantum Preview - Known Issues List
+    href: qdk/test.md
 
 
 

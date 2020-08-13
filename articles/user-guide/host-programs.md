@@ -1,6 +1,6 @@
 ---
 title: Ways to run a Q# program
-description: Overview of the different ways to run Q# programs. From the command line, Q# Jupyter Notebooks, and classical host programs in Python or a .NET language.
+description: Overview of the different ways to run Q# programs. From the command prompt, Q# Jupyter Notebooks, and classical host programs in Python or a .NET language.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 05/15/2020
@@ -17,7 +17,7 @@ On this page, we explain what happens when a Q# program is run, and compare the 
 
 A primary distinction is that Q# can be run:
 - as a standalone application, where Q# is the only language involved and the program is invoked directly. Two methods actually fall in this category:
-  - the command line interface
+  - the command-line interface
   - Q# Jupyter Notebooks
 - with an additional *host program*, written in Python or a .NET language (e.g. C# or F#), which then invokes the program and can further process returned results.
 
@@ -111,13 +111,13 @@ More specifically, the differences revolve around
 3. specifying the target machine on which to execute it, and
 4. how any results are returned.
 
-First, we discuss how this is done with the Q# standalone application from the command line, and then proceed to using Python and C# host programs.
+First, we discuss how this is done with the Q# standalone application from the command prompt, and then proceed to using Python and C# host programs.
 We reserve the standalone application of Q# Jupyter Notebooks for last, because unlike the first three, it's primary functionality does not center around a local Q# file.
 
 > [!NOTE]
 > Although we don't illustrate it in these examples, one commonality between the execution methods is that any messages printed from inside the Q# program (by way of [`Message`](xref:microsoft.quantum.intrinsic.message) or [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine), for example) will typically always be printed to the respective console.
 
-## Q# from the command line
+## Q# from the command prompt
 One of the easiest ways to get started writing Q# programs is to avoid worrying about separate files and a second language altogether.
 Using Visual Studio Code or Visual Studio with the QDK extension allows for a seamless work flow in which we run Q# callables from only a single Q# file.
 
@@ -125,7 +125,7 @@ For this, we will ultimately invoke the program's execution by entering
 ```dotnetcli
 dotnet run
 ```
-in the command line.
+at the command prompt.
 The simplest workflow is when the terminal's directory location is the same as the Q# file, which can be easily handled alongside Q# file editing by using the integrated terminal in VS Code, for example.
 However, the [`dotnet run` command](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) accepts numerous options, and the program can also be run from a different location by simply providing `--project <PATH>` with the location of the Q# file.
 
@@ -152,7 +152,7 @@ namespace NamespaceName {
 }
 ```
 
-Now, a call of `dotnet run` from the command line leads to `MeasureSuperposition` being run, and the returned value is then printed directly to the terminal.
+Now, a call of `dotnet run` from the command prompt leads to `MeasureSuperposition` being run, and the returned value is then printed directly to the terminal.
 So, you will see either `One` or `Zero` printed. 
 
 Note that it doesn't matter if you have more callables defined below it, only `MeasureSuperposition` will be run.
@@ -174,7 +174,7 @@ Such an operation could be written as
 where the returned value is an array of the measurement results.
 Note that [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) and [`ForEach`](xref:microsoft.quantum.arrays.foreach) are in the [`Microsoft.Quantum.Canon`](xref:microsoft.quantum.canon) and [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) namespaces, requiring additional `open` statements for each.
 
-If we move the `@EntryPoint()` attribute to precede this new operation (note there can only be one such line in a file), attempting to run it with simply `dotnet run` results in an error message which indicates what additional command line options are required, and how to express them.
+If we move the `@EntryPoint()` attribute to precede this new operation (note there can only be one such line in a file), attempting to run it with simply `dotnet run` results in an error message which indicates what additional command-line options are required, and how to express them.
 
 The general format for the command line is actually `dotnet run [options]`, and callable arguments are provided there.
 In this case, the argument `n` is missing, and it shows that we need to provide the option `-n <n>`. 
@@ -200,7 +200,7 @@ The error message also provides other options which can be used, including how t
 
 ### Different target machines
 
-As the outputs from our operations thus far have been the expected results of their action on real qubits, it's clear that the default target machine from the command line is the full-state quauntum simulator, `QuantumSimulator`.
+As the outputs from our operations thus far have been the expected results of their action on real qubits, it's clear that the default target machine from the command line is the full-state quantum simulator, `QuantumSimulator`.
 However, we can instruct callables to be run on a specific target machine with the option `--simulator` (or the shorthand `-s`).
 
 For example, we could run it on [`ResourcesEstimator`](xref:microsoft.quantum.machines.resources-estimator):
@@ -237,7 +237,7 @@ For example, specifiying a path along with a number qubits for the operation abo
 
 ## Q# with host programs
 
-With our Q# file in hand, an alternative to calling an operation or function directly from the command line is to use a *host program* in another classical language. 
+With our Q# file in hand, an alternative to calling an operation or function directly from the command prompt is to use a *host program* in another classical language. 
 Specifically, this can be done with either Python or a .NET language such as C# or F# (for the sake of brevity we will only detail C# here).
 A little more setup is required to enable the interoperability, but those details can be found in the [install guides](xref:microsoft.quantum.install).
 
@@ -255,7 +255,7 @@ A sample using an F# host program can be found at the [.NET interoperability sam
 <img src="../media/hostprograms_host_program_diagram.png" alt="Q# program from a host program" width="700">
 
 > [!NOTE]
-> The `@EntryPoint()` attribute used for Q# command line applications cannot be used with host programs.
+> The `@EntryPoint()` attribute used for Q# applications cannot be used with host programs.
 > An error will be raised if it is present in the Q# file being called by a host. 
 
 To work with different host programs, there are no changes required to a `*.qs` Q# file.
@@ -423,7 +423,7 @@ namespace host
 }
 ```
 
-At the location of the C# file, the host program can be run from the command line by entering
+At the location of the C# file, the host program can be run from the command prompt by entering
 ```dotnetcli
 dotnet run
 ```

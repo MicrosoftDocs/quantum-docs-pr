@@ -66,7 +66,7 @@ superposition and quantum entanglement.
 ## Creating a Q# project
 
 The first thing we have to do is to create a new Q# project. In this tutorial
-we are going to use the environment based on [command line applications with
+we are going to use the environment based on [Q# applications with
 VS Code](xref:microsoft.quantum.install.standalone).
 
 To create a new project, in VS Code: 
@@ -239,7 +239,7 @@ released, rather than being fixed resources that are there for the entire
 lifetime of a complex algorithm. A `using` statement allocates a set of qubits
 at the start, and releases those qubits at the end of the block.
 
-## Execute the code from the command line
+## Run the code from the command prompt
 
 In order to run the code we need to specify the compiler *which* callable to run
 when we provide the `dotnet run` command. This is done with a simple change in
@@ -284,7 +284,7 @@ namespace Bell {
 ```
 
 To run the program we need to specify `count` and `initial` arguments from the
-command line. Let's choose for example `count = 1000` and `initial = One`. Enter
+command prompt. Let's choose for example `count = 1000` and `initial = One`. Enter
 the following command:
 
 ```dotnetcli

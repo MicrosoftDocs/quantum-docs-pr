@@ -17,7 +17,7 @@ As a programming language, Q# draws familiar elements from Python, C#, and F# an
 
 ## What can I do with the QDK?
 
-The QDK is a full-featured development kit for Q# that you can use with common tools and languages to develop quantum applications that you can run in various environments. Q# programs can run as a command-line app, through Jupyter Notebooks, or use a Python or .NET host program.
+The QDK is a full-featured development kit for Q# that you can use with common tools and languages to develop quantum applications that you can run in various environments. Q# programs can run as a console application, through Jupyter Notebooks, or use a Python or .NET host program.
 
 ### Develop in common tools and environments
 
@@ -41,7 +41,7 @@ Run your quantum programs on a full-state quantum simulator, a limited-scope Tof
 
 ## How does Q# work?
 
-A Q# program can compile into a standalone command line application or be called by a host program that is written either in Python or a .NET language.
+A Q# program can compile into a standalone application or be called by a host program that is written either in Python or a .NET language.
 
 When you compile and run the program, it creates an instance of the quantum simulator and passes the Q# code to it. The simulator uses the Q# code to create qubits (simulations of quantum particles) and apply transformations to modify their state. The results of the quantum operations in the simulator are then returned to the program.  
 
@@ -53,7 +53,7 @@ Isolating the Q# code in the simulator ensures that the algorithms follow the la
 
 Everything you need to write and run Q# programs, including the Q# compiler, the Q# libraries, and the quantum simulators, can be installed and run from your local computer. Eventually you will be able to run your Q# programs remotely on an actual quantum computer, but until then the quantum simulators provided with the QDK provide accurate and reliable results.
 
-- Running [Q# from the command line](xref:microsoft.quantum.install.standalone) is the quickest way to get started.
+- Developing [Q# applications](xref:microsoft.quantum.install.standalone) is the quickest way to get started.
 
 - Run standalone [Jupyter Notebooks with IQ#](xref:microsoft.quantum.install.jupyter), a Jupyter extension for compiling, simulating, and visualizing Q# programs.
 

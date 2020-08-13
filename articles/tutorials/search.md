@@ -35,7 +35,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
 ## Write the code
 
-1. Using the Quantum Development Kit, [create a new Q# project for the command line application](xref:microsoft.quantum.install.standalone). Title the project `Grover`.
+1. Using the Quantum Development Kit, [create a new Q# project for the application](xref:microsoft.quantum.install.standalone). Title the project `Grover`.
 
 1. Add the following code to the `Program.qs` file in your new project:
 
@@ -49,7 +49,7 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
 1. Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.
 
-### Q# command line applications with Visual Studio or Visual Studio Code
+### Q# applications with Visual Studio or Visual Studio Code
 
 The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
 

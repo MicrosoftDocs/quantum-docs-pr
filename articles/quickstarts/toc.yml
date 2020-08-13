@@ -16,9 +16,21 @@
         href: install-python.md
       - name: Q# with .NET
         href: install-cs.md
+    - name: Azure CLI Azure Quantum extension
+      href: ../qdk/test.md
+    - name: Additional Azure Quantum SDKs
+      items:
+      - name: Java
+        href: install-python.md
+      - name: Javascript
+        href: install-cs.md
   - name: Optimization
     items:
+    - name: Get the QIO SDK
+      href: ../qdk/test.md
     - name: Optimization Jupyter Notebooks
       href: ../qdk/test.md
   - name: Update the QDK
     href: update.md
+  - name: Contributing to the QDK
+    href: resources/contributing/toc.yml

@@ -6,9 +6,11 @@
     href: qdk/test.md
   - name: What is the Quantum Development Kit?
     href: qdk/test.md
-- name: Getting started (should be Quickstarts)
+  - name: QE vs. QIO
+    href: qdk/test.md
+- name: Quickstarts
   items: 
-  - name: Install the QDK
+  - name: Use the QDK
     href: quickstarts/toc.yml
   - name: Create and manage workspaces
     items:
@@ -20,7 +22,7 @@
       href: qdk/test.md 
     - name: Use Resource Manager template
       href: qdk/test.md 
-  - name: Samples
+  - name: Examples
     items:
     - name: Quantum Execution
       items:
@@ -30,9 +32,11 @@
         href: qdk/test.md 
       - name: Use Honeywell
         href: qdk/test.md 
-      - name: Command line
+      - name: Q# application (VS Code)
         href: qdk/test.md 
-      - name: Jupyter Notebook and Python
+      - name: Python (VS Code)
+        href: qdk/test.md 
+      - name: Q# application (Jupyter Notebook)
         href: qdk/test.md 
     - name: Optimization
       items:
@@ -40,7 +44,7 @@
         href: qdk/test.md 
       - name: Use 1QBit solvers
         href: qdk/test.md 
-      - name: Jupyter Notebook and Pytho
+      - name: Python (Jupyter Notebook)
         href: qdk/test.md         
 - name: Quantum Execution
   items: 
@@ -122,7 +126,7 @@
       items:
       - name: Cost functions
         href: qdk/test.md
-      - name: Ising method 
+      - name: Ising model 
         href: qdk/test.md
       - name: QUBO (spelled out first time?)
         href: qdk/test.md
@@ -136,62 +140,60 @@
       href: qdk/test.md
     - name: Job shop scheduling problem 
       href: qdk/test.md
+- name: Azure Quantum concepts
+  items:
+  - name: Architecture
+    href: qdk/test.md
+  - name: Plan and manage costs for Azure Quantum
+    href: qdk/test.md
+  - name: Workspace
+    href: qdk/test.md
+  - name: Providers
+    items:
+    - name: Azure Quantum (Microsoft QIO Solvers)
+      href: qdk/test.md
+    - name: IonQ
+      href: qdk/test.md       
+    - name: Honeywell
+      href: qdk/test.md
+    - name: 1QBit (superconducting QIO)
+      href: qdk/test.md
+  - name: Targets
+    items:
+    - name: Simulator
+      href: qdk/test.md
+    - name: Hardware
+      href: qdk/test.md
+    - name: Resource estimator
+      href: qdk/test.md
+    - name: Solver
+      href: qdk/test.md
+    - name: Which target should I use?
+      href: qdk/test.md
+  - name: Jobs
+    items:
+    - name: Properties
+      href: qdk/test.md
+    - name: Lifecycle
+      href: qdk/test.md
+    - name: Cancellation
+      href: qdk/test.md
+    - name: Storage
+      href: qdk/test.md  
+  - name: Enterprise readiness and security
+    items:
+    - name: Enterprise security overview
+      href: qdk/test.md
+    - name: Manage users and roles
+      href: qdk/test.md
+    - name: Set up authentication 
+      href: qdk/test.md
+    - name: Monitor Azure Quantum
+      href: qdk/test.md  
 - name: Resources
   items:
-  - name: Azure Quantum concepts
-    items:
-    - name: Architecture
-      href: qdk/test.md
-    - name: Plan and manage costs for Azure Quantum
-      href: qdk/test.md
-    - name: Workspace
-      href: qdk/test.md
-    - name: Providers
-      items:
-      - name: Azure Quantum (Microsoft QIO Solvers)
-        href: qdk/test.md
-      - name: IonQ
-        href: qdk/test.md       
-      - name: Honeywell
-        href: qdk/test.md
-      - name: 1QBit (superconducting QIO)
-        href: qdk/test.md
-    - name: Targets
-      items:
-      - name: Simulator
-        href: qdk/test.md
-      - name: Hardware
-        href: qdk/test.md
-      - name: Resource estimator
-        href: qdk/test.md
-      - name: Solver
-        href: qdk/test.md
-      - name: Which target should I use?
-        href: qdk/test.md
-    - name: Jobs
-      items:
-      - name: Properties
-        href: qdk/test.md
-      - name: Lifecycle
-        href: qdk/test.md
-      - name: Cancellation
-        href: qdk/test.md
-      - name: Storage
-        href: qdk/test.md  
-    - name: Enterprise readiness and security
-      items:
-      - name: Enterprise security overview
-        href: qdk/test.md
-      - name: Manage users and roles
-        href: qdk/test.md
-      - name: Set up authentication 
-        href: qdk/test.md
-      - name: Monitor Azure Quantum
-        href: qdk/test.md  
   - name: Quantum glossary (QDK, QIO, AQ)
     href: qdk/test.md
-  - name: Contributing to the QDK
-    href: resources/contributing/toc.yml
   - name: Release notes
     items:
     - name: Azure Quantum release notes 

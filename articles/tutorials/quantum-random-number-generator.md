@@ -16,7 +16,7 @@ A simple example of a quantum algorithm written in Q# is a quantum random number
 ## Prerequisites
 
 - The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- Create a Q# project for either [using Q# from the command line](xref:microsoft.quantum.install.standalone), or with a [Python host program](xref:microsoft.quantum.install.python) or [C# host program](xref:microsoft.quantum.install.cs).
+- Create a Q# project for either a [Q# application](xref:microsoft.quantum.install.standalone), with a [Python host program](xref:microsoft.quantum.install.python), or a [C# host program](xref:microsoft.quantum.install.cs).
 
 ## Write a Q# operation
 
@@ -57,13 +57,13 @@ Since the outcome of the measurement is completely random, we have obtained a ra
 
 ## Creating a complete random number generator
 
-Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator. We can use the Q# command line applications or use a host program.
+Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator. We can use a Q# application or use a host program.
 
 
 
-### [Q# command line applications with Visual Studio or Visual Studio Code](#tab/tabid-qsharp)
+### [Q# applications with Visual Studio or Visual Studio Code](#tab/tabid-qsharp)
 
-To create the full Q# command line application, add the following entry point to your Q# program: 
+To create the full Q# application, add the following entry point to your Q# program: 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -85,13 +85,13 @@ For subsequent runs, there is no need to build it again. To run it, type the fol
 dotnet run --no-build
 ```
 
-### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
+### [Python with Visual Studio Code or the command prompt](#tab/tabid-python)
 
 To run your new Q# program from Python, save the following code as `host.py`:
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
-You can then run your Python host program from the command line:
+You can then run your Python host program from the command prompt:
 
 ```bash
 $ python host.py
@@ -105,7 +105,7 @@ To run your new Q# program from C#, modify `Driver.cs` to include the following 
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 
-You can then run your C# host program from the command line (in Visual Studio you should press F5):
+You can then run your C# host program from the command prompt (in Visual Studio you should press F5):
 
 ```bash
 $ dotnet run

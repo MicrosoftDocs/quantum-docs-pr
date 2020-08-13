@@ -1,5 +1,5 @@
 ---
-title: Develop with Q# command line applications
+title: Develop with Q# applications
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
@@ -9,7 +9,7 @@ uid: microsoft.quantum.install.standalone
 no-loc: ['Q#', '$$v']
 ---
 
-# Develop with Q# command line applications
+# Develop with Q# applications
 
 Q# programs can be executed on their own, without a driver in a host language like C#, F#, or Python.
 
@@ -19,7 +19,7 @@ Q# programs can be executed on their own, without a driver in a host language li
 
 ## Installation
 
-While you can build Q# command line applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for developing your Q# applications locally. For developing in the Cloud via the web browser, we recommend Visual Studio Codespaces. Developing in these environments includes the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more. 
+While you can build Q# applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for developing your Q# applications locally. For developing in the Cloud via the web browser, we recommend Visual Studio Codespaces. Developing in these environments includes the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more. 
 
 To configure VS Code:
 
@@ -38,7 +38,7 @@ To configure Visual Studio Codespaces:
 3. You can now launch your new environment and start developing in the browser via the [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments). Alternatively, it is possible to use your local installation of VS Code and use Codespaces as a [remote environment](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
 
 
-To install the QDK for another environment, enter in the command line:
+To install the QDK for another environment, enter at the command prompt:
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
@@ -87,7 +87,7 @@ To run the application:
 > [!NOTE]
 > If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its sub-folders.  
 
-### [Other editors with the command line](#tab/tabid-cmdline)
+### [Other editors with the command prompt](#tab/tabid-cmdline)
 
 Verify your installation by creating a Q# `Hello World` application.
 

@@ -3,7 +3,7 @@ title: '%lsopen (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.lsopen
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/15/2020
 ms.topic: article
 ---
 

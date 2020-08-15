@@ -136,14 +136,12 @@ operations:
     > @"microsoft.quantum.intrinsic.r", and does not include the
     > factor of $1/ 2$ included by @"microsoft.quantum.intrinsic.r1".
 - uid: microsoft.quantum.intrinsic.random
-  summary: |-
-    The random operation takes an array of doubles as input, and returns
-    a randomly-selected index into the array as an `Int`.
-    The probability of selecting a specific index is proportional to the value
-    of the array element at that index.
-    Array elements that are equal to zero are ignored and their indices are never
-    returned. If any array element is less than zero,
-    or if no array element is greater than zero, then the operation fails.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    Random has been deprecated. Please use @"microsoft.quantum.random.drawcategorical" instead.
 - uid: microsoft.quantum.intrinsic.reset
   summary: |-
     Given a single qubit, measures it and ensures it is in the |0⟩ state

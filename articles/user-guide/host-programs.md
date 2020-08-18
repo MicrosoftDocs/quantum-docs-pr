@@ -565,3 +565,11 @@ So, to run `MeasureSuperpositionArray`, we need to define a "wrapper" operation 
 <img src="../media/hostprograms_jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="550">
 
 This operation can of course be used similarly with `%estimate` and other execution commands.
+
+### Visualizing Q# programs
+
+In a Q# Jupyter Notebook, you can visualize your Q# programs using the `%trace` magic command (more details about the command [here](xref:microsoft.quantum.iqsharp.magic-ref.trace)). Given a Q# operation as an argument, `%trace` will simulate that operation and trace out the gates in an execution path. This execution path is then rendered and output as a visualization within the Jupyter Notebook. For example, this is a visualization of a non-deterministic Q# program:
+
+<img src="../media/trace_example.png" alt="Trace example" width="500">
+
+You can find a more detailed explanation of the `%trace` magic command and how to use it in this [Jupyter Notebook sample](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/program-visualization/TraceExample.ipynb).

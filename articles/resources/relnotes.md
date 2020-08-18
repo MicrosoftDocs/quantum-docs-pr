@@ -290,19 +290,19 @@ See the [install guide](xref:microsoft.quantum.install) to update the QDK.
   
 If you have existing Q# projects from version 0.5 of the Quantum Development Kit, the following are the steps to migrate those projects to the newest version.
 
-    1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
-    2. From a command prompt, Run `dotnet clean` to remove all existing binaries and intermediate files.
-    3. In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
+1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
+2. From a command prompt, Run `dotnet clean` to remove all existing binaries and intermediate files.
+3. In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
 
-         ```xml
-        <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
-        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
-        ```
-    4. From the command prompt, run this command: `dotnet msbuild`  
-    5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
-        - Open the root folder of the project or the containing solution in Visual Studio 2019 or Visual Studio Code.
-        - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
-        - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
+    ```xml
+    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
+    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
+    ```
+4. From the command prompt, run this command: `dotnet msbuild`  
+5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
+    - Open the root folder of the project or the containing solution in Visual Studio 2019 or Visual Studio Code.
+    - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
+    - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
 
 > [!NOTE]
 > * For the 0.6 release, the language server included with the Quantum Development Kit does not support multiple workspaces.

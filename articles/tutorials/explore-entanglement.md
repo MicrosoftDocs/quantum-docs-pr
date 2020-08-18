@@ -180,7 +180,7 @@ input will return `Zero`, and all measurements of a qubit set with `One` as the
 parameter input will return `One`. Further on, we’ll add code to `TestBellState`
 to demonstrate superposition and entanglement.
 
-Add the following operation to the `Bell.qs` file, inside the namespace,
+Add the following operation to the `Program.qs` file, inside the namespace,
    after the end of the `SetQubitState` operation:
 
 ```qsharp

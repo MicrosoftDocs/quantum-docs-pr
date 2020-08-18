@@ -282,7 +282,7 @@
     },
     {
       "source_path": "articles/overview/index.md",
-      "redirect_url": "/quantum/overview",
+      "redirect_url": "/quantum/overview/overview",
       "redirect_document_id": true
     },
     {
@@ -297,7 +297,7 @@
     },
     {
       "source_path": "articles/overview/why-learn-quantum-computing.md",
-      "redirect_url": "/quantum/overview",
+      "redirect_url": "/quantum/overview/overview",
       "redirect_document_id": false
     },
     {

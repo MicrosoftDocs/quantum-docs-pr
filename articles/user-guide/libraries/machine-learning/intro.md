@@ -75,3 +75,5 @@ A training case $(x,y) \in \mathcal{D}$ is considered a *misclassification* give
 ### Reference
 
 This information should be enough to start playing with the code. However, if you want to learn more about this model, please read the original proposal: [*'Circuit-centric quantum classifiers', Maria Schuld, Alex Bocharov, Krysta Svore and Nathan Wiebe*](https://arxiv.org/abs/1804.00633)
+
+In addition to the code sample you will see in the next steps, you can also practice the quantum classicication in [this quantum kata(https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification) 

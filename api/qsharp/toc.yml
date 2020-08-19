@@ -57,12 +57,6 @@
 - uid: microsoft.quantum.arithmetic
   name: Microsoft.Quantum.Arithmetic
   items:
-  - name: AddConstantFxP
-    uid: microsoft.quantum.arithmetic.addconstantfxp
-  - name: AddFxP
-    uid: microsoft.quantum.arithmetic.addfxp
-  - name: AddI
-    uid: microsoft.quantum.arithmetic.addi
   - name: ApplyLEOperationOnPhaseLE
     uid: microsoft.quantum.arithmetic.applyleoperationonphasele
   - name: ApplyLEOperationOnPhaseLEA
@@ -99,8 +93,6 @@
     uid: microsoft.quantum.arithmetic.applyreversedopleca
   - name: ApplyXorInPlace
     uid: microsoft.quantum.arithmetic.applyxorinplace
-  - name: AssertAllZeroFxP
-    uid: microsoft.quantum.arithmetic.assertallzerofxp
   - name: AssertMostSignificantBit
     uid: microsoft.quantum.arithmetic.assertmostsignificantbit
   - name: AssertPhaseLessThan
@@ -113,36 +105,12 @@
     uid: microsoft.quantum.arithmetic.bigendianaslittleendian
   - name: Carry
     uid: microsoft.quantum.arithmetic.carry
-  - name: CompareGreaterThanFxP
-    uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
-  - name: CompareGTI
-    uid: microsoft.quantum.arithmetic.comparegti
-  - name: CompareGTSI
-    uid: microsoft.quantum.arithmetic.comparegtsi
   - name: CompareUsingRippleCarry
     uid: microsoft.quantum.arithmetic.compareusingripplecarry
-  - name: ComputeReciprocalFxP
-    uid: microsoft.quantum.arithmetic.computereciprocalfxp
-  - name: ComputeReciprocalI
-    uid: microsoft.quantum.arithmetic.computereciprocali
   - name: CopyMostSignificantBit
     uid: microsoft.quantum.arithmetic.copymostsignificantbit
-  - name: DivideI
-    uid: microsoft.quantum.arithmetic.dividei
-  - name: EvaluateEvenPolynomialFxP
-    uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
-  - name: EvaluateOddPolynomialFxP
-    uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
-  - name: EvaluatePolynomialFxP
-    uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
-  - name: FixedPoint
-    uid: microsoft.quantum.arithmetic.fixedpoint
   - name: GreaterThan
     uid: microsoft.quantum.arithmetic.greaterthan
-  - name: IdenticalFormatFactFxP
-    uid: microsoft.quantum.arithmetic.identicalformatfactfxp
-  - name: IdenticalPointPosFactFxP
-    uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
   - name: IncrementByInteger
     uid: microsoft.quantum.arithmetic.incrementbyinteger
   - name: IncrementByModularInteger
@@ -151,16 +119,12 @@
     uid: microsoft.quantum.arithmetic.incrementphasebyinteger
   - name: IncrementPhaseByModularInteger
     uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
-  - name: Invert2sSI
-    uid: microsoft.quantum.arithmetic.invert2ssi
   - name: LittleEndian
     uid: microsoft.quantum.arithmetic.littleendian
   - name: LittleEndianAsBigEndian
     uid: microsoft.quantum.arithmetic.littleendianasbigendian
   - name: MAJ
     uid: microsoft.quantum.arithmetic.maj
-  - name: MeasureFxP
-    uid: microsoft.quantum.arithmetic.measurefxp
   - name: MeasureInteger
     uid: microsoft.quantum.arithmetic.measureinteger
   - name: MultiplyAndAddByModularInteger
@@ -169,16 +133,8 @@
     uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
   - name: MultiplyByModularInteger
     uid: microsoft.quantum.arithmetic.multiplybymodularinteger
-  - name: MultiplyFxP
-    uid: microsoft.quantum.arithmetic.multiplyfxp
-  - name: MultiplyI
-    uid: microsoft.quantum.arithmetic.multiplyi
-  - name: MultiplySI
-    uid: microsoft.quantum.arithmetic.multiplysi
   - name: PhaseLittleEndian
     uid: microsoft.quantum.arithmetic.phaselittleendian
-  - name: PrepareFxP
-    uid: microsoft.quantum.arithmetic.preparefxp
   - name: ReflectAboutInteger
     uid: microsoft.quantum.arithmetic.reflectaboutinteger
   - name: ReversedOpBE
@@ -205,14 +161,6 @@
     uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
   - name: RippleCarryAdderTTK
     uid: microsoft.quantum.arithmetic.ripplecarryadderttk
-  - name: SignedLittleEndian
-    uid: microsoft.quantum.arithmetic.signedlittleendian
-  - name: SquareFxP
-    uid: microsoft.quantum.arithmetic.squarefxp
-  - name: SquareI
-    uid: microsoft.quantum.arithmetic.squarei
-  - name: SquareSI
-    uid: microsoft.quantum.arithmetic.squaresi
   - name: Sum
     uid: microsoft.quantum.arithmetic.sum
 - uid: microsoft.quantum.arrays
@@ -731,75 +679,6 @@
     uid: microsoft.quantum.characterization.robustphaseestimation
   - name: SingleQubitProcessTomographyMeasurement
     uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
-- uid: microsoft.quantum.chemistry
-  name: Microsoft.Quantum.Chemistry
-  items:
-  - name: HTerm
-    uid: microsoft.quantum.chemistry.hterm
-  - name: HTermsToGenIdx
-    uid: microsoft.quantum.chemistry.htermstogenidx
-  - name: HTermsToGenSys
-    uid: microsoft.quantum.chemistry.htermstogensys
-  - name: HTermToGenIdx
-    uid: microsoft.quantum.chemistry.htermtogenidx
-  - name: IsNotZero
-    uid: microsoft.quantum.chemistry.isnotzero
-- uid: microsoft.quantum.chemistry.jordanwigner
-  name: Microsoft.Quantum.Chemistry.JordanWigner
-  items:
-  - name: JordanWignerBlockEncodingGeneratorSystem
-    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggeneratorsystem
-  - name: JordanWignerClusterOperatorEvolutionSet
-    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorevolutionset
-  - name: JordanWignerClusterOperatorGeneratorSystem
-    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
-  - name: JordanWignerEncodingData
-    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
-  - name: JordanWignerFermionEvolutionSet
-    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionevolutionset
-  - name: JordanWignerFermionFunction
-    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionfunction
-  - name: JordanWignerGeneratorSystem
-    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignergeneratorsystem
-  - name: JordanWignerInputState
-    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
-  - name: JWOptimizedHTerms
-    uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
-  - name: OptimizedBEGeneratorSystem
-    uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
-  - name: OptimizedBETermIndex
-    uid: microsoft.quantum.chemistry.jordanwigner.optimizedbetermindex
-  - name: OptimizedBEXY
-    uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
-  - name: OptimizedBlockEncodingGeneratorSystem
-    uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsystem
-  - name: OptimizedQubitizationOracle
-    uid: microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle
-  - name: PrepareSingleConfigurationalStateSingleSiteOccupation
-    uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
-  - name: PrepareSparseMultiConfigurationalState
-    uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
-  - name: PrepareTrialState
-    uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstate
-  - name: PrepareUnitaryCoupledClusterState
-    uid: microsoft.quantum.chemistry.jordanwigner.prepareunitarycoupledclusterstate
-  - name: QubitizationOracle
-    uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
-  - name: SelectZ
-    uid: microsoft.quantum.chemistry.jordanwigner.selectz
-  - name: TrotterStepOracle
-    uid: microsoft.quantum.chemistry.jordanwigner.trottersteporacle
-- uid: microsoft.quantum.chemistry.jordanwigner.vqe
-  name: Microsoft.Quantum.Chemistry.JordanWigner.VQE
-  items:
-  - name: EstimateEnergy
-    uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
-  - name: EstimateTermExpectation
-    uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
-  - name: ExpandedCoefficients
-    uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
-  - name: MeasurementOperators
-    uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
 - uid: microsoft.quantum.convert
   name: Microsoft.Quantum.Convert
   items:
@@ -1260,74 +1139,6 @@
     uid: microsoft.quantum.logical.or
   - name: Xor
     uid: microsoft.quantum.logical.xor
-- uid: microsoft.quantum.machinelearning
-  name: Microsoft.Quantum.MachineLearning
-  items:
-  - name: ApplySequentialClassifier
-    uid: microsoft.quantum.machinelearning.applysequentialclassifier
-  - name: ApproximateInputEncoder
-    uid: microsoft.quantum.machinelearning.approximateinputencoder
-  - name: CombinedStructure
-    uid: microsoft.quantum.machinelearning.combinedstructure
-  - name: ControlledRotation
-    uid: microsoft.quantum.machinelearning.controlledrotation
-  - name: CyclicEntanglingLayer
-    uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
-  - name: DefaultTrainingOptions
-    uid: microsoft.quantum.machinelearning.defaulttrainingoptions
-  - name: EstimateClassificationProbabilities
-    uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
-  - name: EstimateClassificationProbability
-    uid: microsoft.quantum.machinelearning.estimateclassificationprobability
-  - name: EstimateGradient
-    uid: microsoft.quantum.machinelearning.estimategradient
-  - name: FeatureRegisterSize
-    uid: microsoft.quantum.machinelearning.featureregistersize
-  - name: InferredLabel
-    uid: microsoft.quantum.machinelearning.inferredlabel
-  - name: InferredLabels
-    uid: microsoft.quantum.machinelearning.inferredlabels
-  - name: InputEncoder
-    uid: microsoft.quantum.machinelearning.inputencoder
-  - name: LabeledSample
-    uid: microsoft.quantum.machinelearning.labeledsample
-  - name: LocalRotationsLayer
-    uid: microsoft.quantum.machinelearning.localrotationslayer
-  - name: Misclassifications
-    uid: microsoft.quantum.machinelearning.misclassifications
-  - name: NMisclassifications
-    uid: microsoft.quantum.machinelearning.nmisclassifications
-  - name: NQubitsRequired
-    uid: microsoft.quantum.machinelearning.nqubitsrequired
-  - name: PartialRotationsLayer
-    uid: microsoft.quantum.machinelearning.partialrotationslayer
-  - name: Sampled
-    uid: microsoft.quantum.machinelearning.sampled
-  - name: SamplingSchedule
-    uid: microsoft.quantum.machinelearning.samplingschedule
-  - name: ScheduleLength
-    uid: microsoft.quantum.machinelearning.schedulelength
-  - name: SequentialModel
-    uid: microsoft.quantum.machinelearning.sequentialmodel
-  - name: StateGenerator
-    uid: microsoft.quantum.machinelearning.stategenerator
-  - name: TrainingOptions
-    uid: microsoft.quantum.machinelearning.trainingoptions
-  - name: TrainSequentialClassifier
-    uid: microsoft.quantum.machinelearning.trainsequentialclassifier
-  - name: TrainSequentialClassifierAtModel
-    uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
-  - name: ValidateSequentialClassifier
-    uid: microsoft.quantum.machinelearning.validatesequentialclassifier
-  - name: ValidationResults
-    uid: microsoft.quantum.machinelearning.validationresults
-- uid: microsoft.quantum.machinelearning.datasets
-  name: Microsoft.Quantum.MachineLearning.Datasets
-  items:
-  - name: IrisTrainingData
-    uid: microsoft.quantum.machinelearning.datasets.iristrainingdata
-  - name: WineData
-    uid: microsoft.quantum.machinelearning.datasets.winedata
 - uid: microsoft.quantum.math
   name: Microsoft.Quantum.Math
   items:
@@ -1639,26 +1450,41 @@
     uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
   - name: StatePreparationPositiveCoefficients
     uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
-- uid: microsoft.quantum.research.characterization
-  name: Microsoft.Quantum.Research.Characterization
+- uid: microsoft.quantum.random
+  name: Microsoft.Quantum.Random
   items:
-  - name: RandomWalkPhaseEstimation
-    uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
-- uid: microsoft.quantum.research.chemistry
-  name: Microsoft.Quantum.Research.Chemistry
-  items:
-  - name: ApplyDeltaParity
-    uid: microsoft.quantum.research.chemistry.applydeltaparity
-  - name: JordanWignerOptimizedFermionEvolutionSet
-    uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
-  - name: JWOptimizedFermionEvolutionFunction
-    uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
-  - name: JWOptimizedGeneratorSystem
-    uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
-  - name: JWOptimizedStatePreparation
-    uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
-  - name: OptimizedTrotterStepOracle
-    uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
+  - name: BigDiscreteDistribution
+    uid: microsoft.quantum.random.bigdiscretedistribution
+  - name: CategoricalDistribution
+    uid: microsoft.quantum.random.categoricaldistribution
+  - name: ComplexDistribution
+    uid: microsoft.quantum.random.complexdistribution
+  - name: ContinuousDistribution
+    uid: microsoft.quantum.random.continuousdistribution
+  - name: ContinuousUniformDistribution
+    uid: microsoft.quantum.random.continuousuniformdistribution
+  - name: DiscreteDistribution
+    uid: microsoft.quantum.random.discretedistribution
+  - name: DiscreteUniformDistribution
+    uid: microsoft.quantum.random.discreteuniformdistribution
+  - name: DrawCategorical
+    uid: microsoft.quantum.random.drawcategorical
+  - name: DrawRandomBool
+    uid: microsoft.quantum.random.drawrandombool
+  - name: DrawRandomDouble
+    uid: microsoft.quantum.random.drawrandomdouble
+  - name: DrawRandomInt
+    uid: microsoft.quantum.random.drawrandomint
+  - name: DrawRandomPauli
+    uid: microsoft.quantum.random.drawrandompauli
+  - name: MaybeChooseElement
+    uid: microsoft.quantum.random.maybechooseelement
+  - name: NormalDistribution
+    uid: microsoft.quantum.random.normaldistribution
+  - name: StandardNormalDistribution
+    uid: microsoft.quantum.random.standardnormaldistribution
+  - name: TransformedContinuousDistribution
+    uid: microsoft.quantum.random.transformedcontinuousdistribution
 - uid: microsoft.quantum.simulation
   name: Microsoft.Quantum.Simulation
   items:

@@ -123,17 +123,17 @@
     {
       "source_path": "articles/libraries/intro.md",
       "redirect_url": "/quantum/user-guide/libraries/standard/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/libraries/control-flow.md",
       "redirect_url": "/quantum/user-guide/libraries/standard/control-flow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/libraries/algorithms.md",
       "redirect_url": "/quantum/user-guide/libraries/standard/algorithms",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/libraries/error-correction.md",

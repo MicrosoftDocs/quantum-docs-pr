@@ -1,5 +1,5 @@
 ---
-title: Quantum machine learning library
+title: Quantum machine learning library glossary
 author: alexeib2
 ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020

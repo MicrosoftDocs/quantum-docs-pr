@@ -3,7 +3,7 @@ title: '%azure.output (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.output
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/19/2020
 ms.topic: article
 ---
 

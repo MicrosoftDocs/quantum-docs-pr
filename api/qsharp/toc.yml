@@ -1639,6 +1639,41 @@
     uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
   - name: StatePreparationPositiveCoefficients
     uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
+- uid: microsoft.quantum.random
+  name: Microsoft.Quantum.Random
+  items:
+  - name: BigDiscreteDistribution
+    uid: microsoft.quantum.random.bigdiscretedistribution
+  - name: CategoricalDistribution
+    uid: microsoft.quantum.random.categoricaldistribution
+  - name: ComplexDistribution
+    uid: microsoft.quantum.random.complexdistribution
+  - name: ContinuousDistribution
+    uid: microsoft.quantum.random.continuousdistribution
+  - name: ContinuousUniformDistribution
+    uid: microsoft.quantum.random.continuousuniformdistribution
+  - name: DiscreteDistribution
+    uid: microsoft.quantum.random.discretedistribution
+  - name: DiscreteUniformDistribution
+    uid: microsoft.quantum.random.discreteuniformdistribution
+  - name: DrawCategorical
+    uid: microsoft.quantum.random.drawcategorical
+  - name: DrawRandomBool
+    uid: microsoft.quantum.random.drawrandombool
+  - name: DrawRandomDouble
+    uid: microsoft.quantum.random.drawrandomdouble
+  - name: DrawRandomInt
+    uid: microsoft.quantum.random.drawrandomint
+  - name: DrawRandomPauli
+    uid: microsoft.quantum.random.drawrandompauli
+  - name: MaybeChooseElement
+    uid: microsoft.quantum.random.maybechooseelement
+  - name: NormalDistribution
+    uid: microsoft.quantum.random.normaldistribution
+  - name: StandardNormalDistribution
+    uid: microsoft.quantum.random.standardnormaldistribution
+  - name: TransformedContinuousDistribution
+    uid: microsoft.quantum.random.transformedcontinuousdistribution
 - uid: microsoft.quantum.research.characterization
   name: Microsoft.Quantum.Research.Characterization
   items:

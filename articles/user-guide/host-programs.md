@@ -353,8 +353,8 @@ any packages referenced via `PackageReference` or Q# projects referenced via `Pr
 
 To load packages containing Q# code, use the [`qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages).
 
-To load required external packages or Q# projects during the `import qsharp` command, ensure that the notebook folder contains a 
-a `.csproj` file which references `Microsoft.Quantum.Sdk`. In that `.csproj`, add the property
+To load required external packages or Q# projects during the `import qsharp` command, ensure that the folder with the Python script
+contains a `.csproj` file which references `Microsoft.Quantum.Sdk`. In that `.csproj`, add the property
 `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` to the `<PropertyGroup>`. This will instruct IQ# to recursively
 load any `ProjectReference` or `PackageReference` items found in that `.csproj` during the `import qsharp` command.
 
@@ -603,7 +603,7 @@ To load packages containing Q# code, use the [`%package` magic command](xref:mic
 Loading a package will also make available any custom magic commands or display encoders that are contained in any assemblies
 that are part of the package.
 
-To load external packages or Q# projects at notebook intialization time, ensure that the notebook folder contains a 
+To load external packages or Q# projects at notebook intialization time, ensure that the notebook folder contains
 a `.csproj` file which references `Microsoft.Quantum.Sdk`. In that `.csproj`, add the property
 `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` to the `<PropertyGroup>`. This will instruct IQ# to recursively
 load any `ProjectReference` or `PackageReference` items found in that `.csproj` at notebook load time.

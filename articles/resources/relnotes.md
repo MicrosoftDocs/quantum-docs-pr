@@ -19,14 +19,14 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 ## Version X.XX.XXXXXXXX
 
-*Release date: August 26th, 2020*
+*Release date: August 25th, 2020*
 
 This release contains the following:
 
-- Fixed bug in M.Q.Arithmetic.RippleCarryAdderCDKM.
-- Fixed intermittent QDK build failures due to access violation: "Test host process crashed".
+- General bug fixes.
 - Improved Microsoft.Quantum.Random.
 - Improved Microsoft.Quantum.Diagnostics
+- Added IntelliSense support when using Python as a driver
 
 ## Version 0.12.20072031
 

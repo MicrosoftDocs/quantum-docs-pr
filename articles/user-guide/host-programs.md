@@ -358,9 +358,27 @@ contains a `.csproj` file which references `Microsoft.Quantum.Sdk`. In that `.cs
 `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` to the `<PropertyGroup>`. This will instruct IQ# to recursively
 load any `ProjectReference` or `PackageReference` items found in that `.csproj` during the `import qsharp` command.
 
+For example, here is a simple `.csproj` file that causes IQ# to automatically load the `Microsoft.Quantum.Chemistry` package:
+
+    <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
+        <PropertyGroup>
+            <OutputType>Library</OutputType>
+            <TargetFramework>netstandard2.1</TargetFramework>
+            <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
+        </PropertyGroup>
+        <ItemGroup>
+            <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
+        </ItemGroup>
+    </Project>
+
 > [!NOTE]
 > Currently this custom `<IQSharpLoadAutomatically>` property is required, but in the future, this may become the default
 behavior for a `.csproj` file located in the same folder as the Python script.
+
+> [!NOTE]
+> Currently the `<QsharpCompile>` setting in the `.csproj` is ignored, and all `.qs` files in the folder of the `.csproj`
+> (including subfolders) are loaded and compiled. Support for `.csproj` settings will be improved in the future
+> (see [iqsharp#277](https://github.com/microsoft/iqsharp/issues/277) for more details).
 
 
 ### [C#](#tab/tabid-csharp)
@@ -608,6 +626,24 @@ a `.csproj` file which references `Microsoft.Quantum.Sdk`. In that `.csproj`, ad
 `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` to the `<PropertyGroup>`. This will instruct IQ# to recursively
 load any `ProjectReference` or `PackageReference` items found in that `.csproj` at notebook load time.
 
+For example, here is a simple `.csproj` file that causes IQ# to automatically load the `Microsoft.Quantum.Chemistry` package:
+
+    <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
+        <PropertyGroup>
+            <OutputType>Library</OutputType>
+            <TargetFramework>netstandard2.1</TargetFramework>
+            <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
+        </PropertyGroup>
+        <ItemGroup>
+            <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
+        </ItemGroup>
+    </Project>
+
 > [!NOTE]
 > Currently this custom `<IQSharpLoadAutomatically>` property is required, but in the future, this may become the default
 behavior for a `.csproj` file located in the same folder as the notebook file.
+
+> [!NOTE]
+> Currently the `<QsharpCompile>` setting in the `.csproj` is ignored, and all `.qs` files in the folder of the `.csproj`
+> (including subfolders) are loaded and compiled. Support for `.csproj` settings will be improved in the future
+> (see [iqsharp#277](https://github.com/microsoft/iqsharp/issues/277) for more details).

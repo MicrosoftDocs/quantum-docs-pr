@@ -341,6 +341,28 @@ Multiple qubits:
 {'CNOT': 0, 'QubitClifford': 4, 'R': 0, 'Measure': 4, 'T': 0, 'Depth': 0, 'Width': 4, 'BorrowedWidth': 0}
 ```
 
+#### Using Q# code from other projects or packages
+
+By default, the `import qsharp` command loads all of the `.qs` files in the current folder and makes their Q# operations and functions
+available for use from inside the Python script.
+
+To load Q# code from another folder, the [`qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects)
+can be used to add a reference to a `.csproj` file for a Q# project (that is, a project that references `Microsoft.Quantum.Sdk`).
+This command will compile any `.qs` files in the folder containing the `.csproj` (and subfolders) and will also recursively load
+any packages referenced via `PackageReference` or Q# projects referenced via `ProjectReference` in that `.csproj` file.
+
+To load packages containing Q# code, use the [`qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages).
+
+To load required external packages or Q# projects during the `import qsharp` command, ensure that the notebook folder contains a 
+a `.csproj` file which references `Microsoft.Quantum.Sdk`. In that `.csproj`, add the property
+`<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` to the `<PropertyGroup>`. This will instruct IQ# to recursively
+load any `ProjectReference` or `PackageReference` items found in that `.csproj` during the `import qsharp` command.
+
+> [!NOTE]
+> Currently this custom `<IQSharpLoadAutomatically>` property is required, but in the future, this may become the default
+behavior for a `.csproj` file located in the same folder as the Python script.
+
+
 ### [C#](#tab/tabid-csharp)
 
 A C# host program has multiple components, and works very closely with some components of the QDK, such as the simulators, which are themselves built on C#.
@@ -565,3 +587,27 @@ So, to run `MeasureSuperpositionArray`, we need to define a "wrapper" operation 
 <img src="../media/hostprograms_jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="550">
 
 This operation can of course be used similarly with `%estimate` and other execution commands.
+
+### Using Q# code from other projects or packages
+
+By default, a Q# Jupyter Notebook loads all of the `.qs` files in the current folder and makes their Q# operations and functions
+available for use from inside the notebook. The [`%who` magic command](xref:microsoft.quantum.iqsharp.magic-ref.who) lists all
+currently-available Q# operations and functions.
+
+To load Q# code from another folder, the [`%project` magic command](xref:microsoft.quantum.iqsharp.magic-ref.project) can be used
+to add a reference to a `.csproj` file for a Q# project (that is, a project that references `Microsoft.Quantum.Sdk`). This command
+will compile any `.qs` files in the folder containing the `.csproj` (and subfolders) and will also recursively load any packages
+referenced via `PackageReference` or Q# projects referenced via `ProjectReference` in that `.csproj` file.
+
+To load packages containing Q# code, use the [`%package` magic command](xref:microsoft.quantum.iqsharp.magic-ref.package).
+Loading a package will also make available any custom magic commands or display encoders that are contained in any assemblies
+that are part of the package.
+
+To load external packages or Q# projects at notebook intialization time, ensure that the notebook folder contains a 
+a `.csproj` file which references `Microsoft.Quantum.Sdk`. In that `.csproj`, add the property
+`<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` to the `<PropertyGroup>`. This will instruct IQ# to recursively
+load any `ProjectReference` or `PackageReference` items found in that `.csproj` at notebook load time.
+
+> [!NOTE]
+> Currently this custom `<IQSharpLoadAutomatically>` property is required, but in the future, this may become the default
+behavior for a `.csproj` file located in the same folder as the notebook file.

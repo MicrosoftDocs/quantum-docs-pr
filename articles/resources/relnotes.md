@@ -25,7 +25,7 @@ This release contains the following:
 
 - General bug fixes.
 - Improved Microsoft.Quantum.Random.
-- Improved Microsoft.Quantum.Diagnostics
+- Improved Microsoft.Quantum.Diagnostics.
 - Added IntelliSense support when using Python as a driver
 
 ## Version 0.12.20072031

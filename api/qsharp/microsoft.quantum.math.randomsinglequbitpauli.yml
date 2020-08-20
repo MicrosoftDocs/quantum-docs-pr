@@ -7,12 +7,7 @@ uid: microsoft.quantum.math.randomsinglequbitpauli
 name: RandomSingleQubitPauli
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: |-
-  Returns one of the single-qubit Pauli operators uniformly
-  at random.
-remarks: |-
-  This function calls <xref:microsoft.quantum.intrinsic.random>, so
-  its randomness depends on the implementation of `Random`.
+summary: RandomSingleQubitPauli has been deprecated. Please use @"microsoft.quantum.random.drawrandompauli" instead.
 syntax: 'operation RandomSingleQubitPauli () : Pauli'
 input:
   content: ()
@@ -20,7 +15,6 @@ input:
 output:
   content: Pauli
   types:
-  - summary: A `Pauli` operator that is one of `[PauliI, PauliX, PauliY, PauliZ]`.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Pauli
 ...

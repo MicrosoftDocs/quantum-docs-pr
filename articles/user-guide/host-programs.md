@@ -393,11 +393,12 @@ For example, here is a simple `.csproj` file that causes IQ# to automatically lo
 ```
 
 > [!NOTE]
-> Currently this custom `<IQSharpLoadAutomatically>` property is required, but in the future, this may become the default
-behavior for a `.csproj` file located in the same folder as the Python script.
+> Currently this custom `<IQSharpLoadAutomatically>` property is required by Python hosts, but in the future,
+> this may become the default behavior for a `.csproj` file located in the same folder as the Python script.
 
 > [!NOTE]
-> Currently the `<QsharpCompile>` setting in the `.csproj` is ignored, and all `.qs` files in the folder of the `.csproj`
+> Currently the `<QsharpCompile>` setting in the `.csproj` is ignored by Python hosts, and all `.qs` files
+> in the folder of the `.csproj`
 > (including subfolders) are loaded and compiled. Support for `.csproj` settings will be improved in the future
 > (see [iqsharp#277](https://github.com/microsoft/iqsharp/issues/277) for more details).
 
@@ -667,10 +668,12 @@ For example, here is a simple `.csproj` file that causes IQ# to automatically lo
 ```
 
 > [!NOTE]
-> Currently this custom `<IQSharpLoadAutomatically>` property is required, but in the future, this may become the default
-behavior for a `.csproj` file located in the same folder as the notebook file.
+> Currently this custom `<IQSharpLoadAutomatically>` property is required by Q# Jupyter Notebook hosts,
+> but in the future, this may become the default
+> behavior for a `.csproj` file located in the same folder as the notebook file.
 
 > [!NOTE]
-> Currently the `<QsharpCompile>` setting in the `.csproj` is ignored, and all `.qs` files in the folder of the `.csproj`
+> Currently the `<QsharpCompile>` setting in the `.csproj` is ignored by Q# Jupyter Notebook hosts,
+> and all `.qs` files in the folder of the `.csproj`
 > (including subfolders) are loaded and compiled. Support for `.csproj` settings will be improved in the future
 > (see [iqsharp#277](https://github.com/microsoft/iqsharp/issues/277) for more details).

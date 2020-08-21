@@ -5,6 +5,10 @@
 
 uid: microsoft.quantum.diagnostics
 name: Microsoft.Quantum.Diagnostics
+summary: |2-
+   # Summary
+   This namespace contains functions and operations useful for diagnostic
+   purposes, including assert operations and claim functions.
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: Asserts that two arrays of boolean values are equal.
@@ -108,8 +112,4 @@ newtypes:
     that may be used when loading a type or callable for testing purposes.
 - uid: microsoft.quantum.diagnostics.test
   summary: Compiler-recognized attribute used to mark a unit test.
-summary: |2-
-   # Summary
-   This namespace contains functions and operations useful for diagnostic
-   purposes, including assert operations and claim functions.
 ...

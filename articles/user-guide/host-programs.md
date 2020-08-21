@@ -608,7 +608,7 @@ Upon running a cell with such a statement, the definitions from those namespaces
 
 Similarly, defining operations requires only writing the Q# code and running the cell.
 
-<img src="../media/hostprograms_jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="600">
+<img src="../media/hostprograms_jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="773">
 
 The output then lists those operations, which can then be called from future cells.
 
@@ -617,14 +617,14 @@ The output then lists those operations, which can then be called from future cel
 The functionality to run operations on specific target machines is provided via [IQ# Magic Commands](xref:microsoft.quantum.guide.quickref.iqsharp).
 For example, `%simulate` makes use of the `QuantumSimulator`, and `%estimate` uses the `ResourcesEstimator`:
 
-<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Jupyter cell simulating a Q# operation and running resource estimation" width="600">
+<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Jupyter cell simulating a Q# operation and running resource estimation" width="773">
 
 ### Passing inputs to functions and operations
 
 To pass inputs to the Q# operations, the arguments can be passed as `key=value` pairs to the execution magic command.
 So, to run `MeasureSuperpositionArray`, we can run `%simulate MeasureSuperpositionArray n=4`:
 
-<img src="../media/hostprograms_jupyter_args_sim_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="600">
+<img src="../media/hostprograms_jupyter_args_sim_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="773">
 
 This pattern can be used similarly with `%estimate` and other execution commands.
 
@@ -641,7 +641,7 @@ referenced via `PackageReference` or Q# projects referenced via `ProjectReferenc
 
 As an example, the following cells simulate a Q# operation from an external project, where the project path is referenced relative to the current folder:
 
-<img src="../media/hostprograms_jupyter_project_crop.png" alt="Jupyter cell simulating a Q# operation from an external project" width="600">
+<img src="../media/hostprograms_jupyter_project_crop.png" alt="Jupyter cell simulating a Q# operation from an external project" width="773">
 
 To load external packages containing Q# code, use the [`%package` magic command](xref:microsoft.quantum.iqsharp.magic-ref.package).
 Loading a package will also make available any custom magic commands or display encoders that are contained in any assemblies

@@ -622,7 +622,7 @@ For example, `%simulate` makes use of the `QuantumSimulator`, and `%estimate` us
 ### Passing inputs to functions and operations
 
 To pass inputs to the Q# operations, the arguments can be passed as `key=value` pairs to the execution magic command.
-So, to run `MeasureSuperpositionArray`, we can run `%simulate MeasureSuperpositionArray n=4`:
+So, to run `MeasureSuperpositionArray` with four qubits, we can run `%simulate MeasureSuperpositionArray n=4`:
 
 <img src="../media/hostprograms_jupyter_args_sim_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="773">
 

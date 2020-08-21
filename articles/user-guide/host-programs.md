@@ -379,16 +379,18 @@ load any `ProjectReference` or `PackageReference` items found in that `.csproj` 
 
 For example, here is a simple `.csproj` file that causes IQ# to automatically load the `Microsoft.Quantum.Chemistry` package:
 
-    <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
-        <PropertyGroup>
-            <OutputType>Library</OutputType>
-            <TargetFramework>netstandard2.1</TargetFramework>
-            <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
-        </PropertyGroup>
-        <ItemGroup>
-            <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
-        </ItemGroup>
-    </Project>
+```xml
+<Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
+    </ItemGroup>
+</Project>
+```
 
 > [!NOTE]
 > Currently this custom `<IQSharpLoadAutomatically>` property is required, but in the future, this may become the default
@@ -638,7 +640,7 @@ referenced via `PackageReference` or Q# projects referenced via `ProjectReferenc
 
 As an example, the following cells simulate a Q# operation from an external project, where the project path is referenced relative to the current folder:
 
-<img src="../media/hostprograms_jupyter_project_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="600">
+<img src="../media/hostprograms_jupyter_project_crop.png" alt="Jupyter cell simulating a Q# operation from an external project" width="600">
 
 To load external packages containing Q# code, use the [`%package` magic command](xref:microsoft.quantum.iqsharp.magic-ref.package).
 Loading a package will also make available any custom magic commands or display encoders that are contained in any assemblies
@@ -651,16 +653,18 @@ load any `ProjectReference` or `PackageReference` items found in that `.csproj` 
 
 For example, here is a simple `.csproj` file that causes IQ# to automatically load the `Microsoft.Quantum.Chemistry` package:
 
-    <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
-        <PropertyGroup>
-            <OutputType>Library</OutputType>
-            <TargetFramework>netstandard2.1</TargetFramework>
-            <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
-        </PropertyGroup>
-        <ItemGroup>
-            <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
-        </ItemGroup>
-    </Project>
+```xml
+<Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
+    </ItemGroup>
+</Project>
+```
 
 > [!NOTE]
 > Currently this custom `<IQSharpLoadAutomatically>` property is required, but in the future, this may become the default

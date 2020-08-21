@@ -331,7 +331,7 @@ print(multi_qubit_resources)
 
 results in an output like the following:
 
-```python
+```output
 Single qubit:
 1
 {'CNOT': 0, 'QubitClifford': 1, 'R': 0, 'Measure': 1, 'T': 0, 'Depth': 0, 'Width': 1, 'BorrowedWidth': 0}
@@ -348,11 +348,30 @@ available for use from inside the Python script.
 
 To load Q# code from another folder, the [`qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects)
 can be used to add a reference to a `.csproj` file for a Q# project (that is, a project that references `Microsoft.Quantum.Sdk`).
-This command will compile any `.qs` files in the folder containing the `.csproj` (and subfolders) and will also recursively load
+This command will compile any `.qs` files in the folder containing the `.csproj` (and subfolders). It will also recursively load
 any packages referenced via `PackageReference` or Q# projects referenced via `ProjectReference` in that `.csproj` file.
 
-To load packages containing Q# code, use the [`qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages).
+As an example, the following Python code imports an external project, referencing its path relative to the current folder,
+and invokes one of its Q# operations:
 
+```python
+import qsharp
+qsharp.projects.add("../qrng/Qrng.csproj")
+from Qrng import SampleQuantumRandomNumberGenerator
+print(f"Qrng result: {SampleQuantumRandomNumberGenerator.simulate()}")
+```
+
+This results in output like the following:
+
+```output
+Adding reference to project: ../qrng/Qrng.csproj
+Qrng result: 0
+```
+
+To load external packages containing Q# code, use the [`qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages).
+
+If the Q# code in the current folder depends on external projects or packages, you may see errors when running `import qsharp`,
+since the dependencies have not yet been loaded.
 To load required external packages or Q# projects during the `import qsharp` command, ensure that the folder with the Python script
 contains a `.csproj` file which references `Microsoft.Quantum.Sdk`. In that `.csproj`, add the property
 `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` to the `<PropertyGroup>`. This will instruct IQ# to recursively
@@ -595,16 +614,16 @@ The output then lists those operations, which can then be called from future cel
 The functionality to run operations on specific target machines is provided via [IQ# Magic Commands](xref:microsoft.quantum.guide.quickref.iqsharp).
 For example, `%simulate` makes use of the `QuantumSimulator`, and `%estimate` uses the `ResourcesEstimator`:
 
-<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Simulate and estimate resources Jupyter cell" width="500">
+<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Jupyter cell simulating a Q# operation and running resource estimation" width="600">
 
 ### Passing inputs to functions and operations
 
-Currently the execution magic commands can only be used with operations that take no arguments. 
-So, to run `MeasureSuperpositionArray`, we need to define a "wrapper" operation which then calls the operation with the arguments:
+To pass inputs to the Q# operations, the arguments can be passed as `key=value` pairs to the execution magic command.
+So, to run `MeasureSuperpositionArray`, we can run `%simulate MeasureSuperpositionArray n=4`:
 
-<img src="../media/hostprograms_jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="550">
+<img src="../media/hostprograms_jupyter_args_sim_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="600">
 
-This operation can of course be used similarly with `%estimate` and other execution commands.
+This pattern can be used similarly with `%estimate` and other execution commands.
 
 ### Using Q# code from other projects or packages
 
@@ -614,10 +633,14 @@ currently-available Q# operations and functions.
 
 To load Q# code from another folder, the [`%project` magic command](xref:microsoft.quantum.iqsharp.magic-ref.project) can be used
 to add a reference to a `.csproj` file for a Q# project (that is, a project that references `Microsoft.Quantum.Sdk`). This command
-will compile any `.qs` files in the folder containing the `.csproj` (and subfolders) and will also recursively load any packages
+will compile any `.qs` files in the folder containing the `.csproj` (and subfolders). It will also recursively load any packages
 referenced via `PackageReference` or Q# projects referenced via `ProjectReference` in that `.csproj` file.
 
-To load packages containing Q# code, use the [`%package` magic command](xref:microsoft.quantum.iqsharp.magic-ref.package).
+As an example, the following cells simulate a Q# operation from an external project, where the project path is referenced relative to the current folder:
+
+<img src="../media/hostprograms_jupyter_project_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="600">
+
+To load external packages containing Q# code, use the [`%package` magic command](xref:microsoft.quantum.iqsharp.magic-ref.package).
 Loading a package will also make available any custom magic commands or display encoders that are contained in any assemblies
 that are part of the package.
 

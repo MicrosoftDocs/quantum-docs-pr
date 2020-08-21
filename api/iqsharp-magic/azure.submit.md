@@ -3,7 +3,7 @@ title: '%azure.submit (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.submit
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/21/2020
 ms.topic: article
 ---
 

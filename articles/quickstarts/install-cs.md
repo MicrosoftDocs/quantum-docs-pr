@@ -17,16 +17,16 @@ First we create the Q# application and .NET host, and then demonstrate how to ca
 
 ## Prerequisites
 
-- Install the Quantum Development Kit [for use with Q# command-line projects](xref:microsoft.quantum.install.standalone).
+- Install the Quantum Development Kit [for use with Q# projects](xref:microsoft.quantum.install.standalone).
 
 ## Creating a Q# library and a .NET host
 
 The first step is to create projects for your Q# library, and for the .NET host that will call into the operations and functions defined in your Q# library.
 
 Follow the instructions in the tab corresponding to your development environment.
-If you are using an editor other than Visual Studio or VS Code, simply follow the command line steps.
+If you are using an editor other than Visual Studio or VS Code, simply follow the command prompt steps.
 
-### [Visual Studio Code or Command Line](#tab/tabid-cmdline)
+### [Visual Studio Code or command prompt](#tab/tabid-cmdline)
 
 - Create a new Q# library
 
@@ -98,4 +98,4 @@ To call this operation from .NET on a quantum simulator, you can use the `Run` m
     
 ## Next steps
 
-Now that you have Quantum Development Kit set up for both Q# command-line programs, and for interoperability with .NET, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng).
+Now that you have the Quantum Development Kit set up for both Q# applications and interoperability with .NET, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng).

@@ -31,7 +31,7 @@ Regardless of whether you are using C# or Python to host Q# operations, follow t
     dotnet --version
     ```
 
-    Verify the output is `3.1.100` or higher. If not, install the [latest version](https://dotnet.microsoft.com/download) and check again. Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).
+    Verify the output is `3.1.100` or higher. If not, install the [latest version](https://dotnet.microsoft.com/download) and check again. Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly from the command prompt).
 
 ### Update Q# projects in Visual Studio
  
@@ -78,9 +78,9 @@ You can now skip ahead to [update your Visual Studio QDK extension](#update-visu
 
 1. In Visual Studio Code, open the folder containing the project to update.
 2. Select **Terminal** -> **New Terminal**.
-3. Follow the instructions for updating using the command line (directly below).
+3. Follow the instructions for updating using the command prompt (directly below).
 
-### Update Q# projects using the command line
+### Update Q# projects using the command prompt
 
 1. Navigate to the folder containing your main project file.
 
@@ -152,7 +152,7 @@ Select your development environment below.
 * [Jupyter Notebooks: update the IQ# kernel](#update-the-iq-jupyter-kernel)
 * [Visual Studio: update the QDK extension](#update-visual-studio-qdk-extension)
 * [VS Code: update the QDK extension](#update-vs-code-qdk-extension)
-* [Command-line and C#: update project templates](#c-using-the-dotnet-command-line-tool)
+* [Command line and C#: update project templates](#c-using-the-dotnet-command-line-tool)
 
 
 ### Update the `qsharp` Python package
@@ -303,13 +303,13 @@ You can now use the updated IQ# kernel to run your existing Q# Jupyter Notebooks
 
 1. Update the Quantum project templates for .NET
 
-    From the command line:
+    From the command prompt:
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
-   Alternatively, if you intend to use the command line templates, and already have the VS Code QDK extension installed, you can update the project templates from the extension itself:
+   Alternatively, if you intend to use the command-line templates, and already have the VS Code QDK extension installed, you can update the project templates from the extension itself:
 
    - [Update the QDK extension](#update-vs-code-qdk-extension)
    - In VS Code, go to **View** -> **Command Palette**

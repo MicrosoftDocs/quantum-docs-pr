@@ -77,12 +77,12 @@ See the full list of closed PRs for [libraries](https://github.com/Microsoft/Qua
 
 This release contains the following:
 
-- New support for Q# command line applications, which no longer require a C# or Python host file. For more information on getting started with Q# command line applications, see [here](xref:microsoft.quantum.install.standalone).
+- New support for Q# applications, which no longer require a C# or Python host file. For more information on getting started with Q# applications, see [here](xref:microsoft.quantum.install.standalone).
 - Updated quantum random number generator quickstart to no longer require a C# or Python host file. See the updated  [Quickstart](xref:microsoft.quantum.quickstarts.qrng)
 - Performance improvements to IQ# Docker images
 
 > [!NOTE]
-> Q# command-line applications using the new [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) attribute currently cannot be called from Python or .NET host programs.
+> Q# applications using the new [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) attribute currently cannot be called from Python or .NET host programs.
 > See the [Python](xref:microsoft.quantum.install.python) and [.NET interoperability](xref:microsoft.quantum.install.cs) guides for more information.
 
 ## Version 0.11.2003.3107
@@ -290,19 +290,19 @@ See the [install guide](xref:microsoft.quantum.install) to update the QDK.
   
 If you have existing Q# projects from version 0.5 of the Quantum Development Kit, the following are the steps to migrate those projects to the newest version.
 
-    1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
-    2. From a command line, Run `dotnet clean` to remove all existing binaries and intermediate files.
-    3. In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
+1. Projects need to be upgraded in order.  If you have a solution with multiple projects, update each project in the order they are referenced.
+2. From a command prompt, Run `dotnet clean` to remove all existing binaries and intermediate files.
+3. In a text editor, edit the .csproj file to change the version of all the "Microsoft.Quantum" `PackageReference` to version 0.6.1904, and change the "Microsoft.Quantum.Canon" package name to "Microsoft.Quantum.Standard", for example:
 
-         ```xml
-        <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
-        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
-        ```
-    4. From the command line, run this command: `dotnet msbuild`  
-    5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
-        - Open the root folder of the project or the containing solution in Visual Studio 2019 or Visual Studio Code.
-        - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
-        - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
+    ```xml
+    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
+    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
+    ```
+4. From the command prompt, run this command: `dotnet msbuild`  
+5. After running this, you might still need to manually address errors due to changes listed above.  In many cases, these errors will also be reported by IntelliSense in Visual Studio or Visual Studio Code.
+    - Open the root folder of the project or the containing solution in Visual Studio 2019 or Visual Studio Code.
+    - After opening a .qs file in the editor, you should see the output of the Q# language extension in the output window.
+    - After the project has loaded successfully (indicated in the output window) open each file and manually to address all remaining issues.
 
 > [!NOTE]
 > * For the 0.6 release, the language server included with the Quantum Development Kit does not support multiple workspaces.
@@ -568,7 +568,7 @@ Please note that the operation RandomWalkPhaseEstimation from the namespace Micr
 ### Known Issues
 
 - The `--filter` option to `dotnet test` does not work correctly for tests written in Q#.
-  As a result, individual unit tests cannot be run in Visual Studio Code; we recommend using `dotnet test` at the command line to re-run all tests.
+  As a result, individual unit tests cannot be run in Visual Studio Code; we recommend using `dotnet test` at the command prompt to re-run all tests.
 
 ## Version 0.1.1801.1707
 

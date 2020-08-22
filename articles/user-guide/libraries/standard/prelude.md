@@ -2,7 +2,6 @@
 title: Intrinsic operations and functions in the QDK
 description: Learn about the intrinsic operations and functions in the QDK, including classical functions and unitary, rotation and measurement operations. 
 author: QuantumWriter
-uid: microsoft.quantum.libraries.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article

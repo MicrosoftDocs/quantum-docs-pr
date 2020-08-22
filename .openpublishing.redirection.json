@@ -67,8 +67,8 @@
     },
     {
       "source_path": "articles/quantum-WriteAQuantumProgram.md",
-      "redirect_url": "/quantum/quickstart",
-      "redirect_document_id": true
+      "redirect_url": "/quantum/quickstarts",
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-SimulatorsAndMachines.md",
@@ -78,7 +78,7 @@
     {
       "source_path": "articles/quantum-devguide-1-Intro.md",
       "redirect_url": "/quantum/user-guide/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-techniques-1-Qsharp_FileStructure.md",
@@ -107,8 +107,8 @@
     },
     {
       "source_path": "articles/quantum-techniques-6-PuttingItAllTogether.md",
-      "redirect_url": "/quantum/https://github.com/microsoft/QuantumKatas/tree/master/Teleportation",
-      "redirect_document_id": true
+      "redirect_url": "https://github.com/microsoft/QuantumKatas/tree/master/Teleportation",
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-techniques-7-going-further.md",
@@ -122,33 +122,33 @@
     },
     {
       "source_path": "articles/libraries/intro.md",
-      "redirect_url": "/quantum/quantum/user-guide/libraries/standard/",
-      "redirect_document_id": true
+      "redirect_url": "/quantum/user-guide/libraries/standard/",
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/libraries/control-flow.md",
-      "redirect_url": "/quantum/quantum/user-guide/libraries/standard/control-flow",
-      "redirect_document_id": true
+      "redirect_url": "/quantum/user-guide/libraries/standard/control-flow",
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/libraries/algorithms.md",
-      "redirect_url": "/quantum/quantum/user-guide/libraries/standard/algorithms",
-      "redirect_document_id": true
+      "redirect_url": "/quantum/user-guide/libraries/standard/algorithms",
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/libraries/error-correction.md",
-      "redirect_url": "/quantum/quantum/user-guide/libraries/standard/error-correction",
-      "redirect_document_id": true
+      "redirect_url": "/quantum/user-guide/libraries/standard/error-correction",
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/libraries/applications.md",
-      "redirect_url": "/quantum/quantum/user-guide/libraries/standard/applications",
-      "redirect_document_id": true
+      "redirect_url": "/quantum/user-guide/libraries/standard/applications",
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/libraries/testing.md",
-      "redirect_url": "/quantum/standard/testing",
-      "redirect_document_id": true
+      "redirect_url": "/quantum/user-guide/libraries/",
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quantum-QR-Intro.md",
@@ -217,7 +217,7 @@
     },
     {
       "source_path": "articles/techniques/index.md",
-      "redirect_url": "/quantum/user-guide",
+      "redirect_url": "/quantum/user-guide/",
       "redirect_document_id": true
     },
     {
@@ -282,22 +282,22 @@
     },
     {
       "source_path": "articles/overview/index.md",
-      "redirect_url": "/quantum/overview",
+      "redirect_url": "/quantum/overview/overview",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/overview/what-is-quantum-computing.md",
-      "redirect_url": "/quantum/understanding-quantum-computing",
+      "redirect_url": "/quantum/overview/understanding-quantum-computing",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/overview/quantum-computers.md",
-      "redirect_url": "/quantum/quantum-computers-and-simulators",
+      "redirect_url": "/quantum/overview/quantum-computers-and-simulators",
       "redirect_document_id": true
     },
     {
       "source_path": "articles/overview/why-learn-quantum-computing.md",
-      "redirect_url": "/quantum/overview",
+      "redirect_url": "/quantum/overview/overview",
       "redirect_document_id": false
     },
     {
@@ -307,8 +307,8 @@
     },
     {
       "source_path": "articles/overview/how-to-learn-quantum-computing.md",
-      "redirect_url": "/quantum/welcome",
-      "redirect_document_id": true
+      "redirect_url": "/quantum/overview/overview",
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/quickstart.md",
@@ -317,7 +317,7 @@
     },
     {
       "source_path": "articles/how-to-guides/create-qsharp-project.md",
-      "redirect_url": "/quantum/quickstarts/get-started.md",
+      "redirect_url": "/quantum/quickstarts/get-started",
       "redirect_document_id": true
     },
     {
@@ -687,8 +687,8 @@
     },
     {
       "source_path": "articles/user-guide/libraries/numerics/installation.md",
-      "redirect_url": "/quantum/user-guide/libraries/numerics/intro",
-      "redirect_document_id": true
+      "redirect_url": "/quantum/user-guide/libraries/numerics/index",
+      "redirect_document_id": false
     }
   ]
 }

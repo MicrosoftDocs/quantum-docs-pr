@@ -36,7 +36,7 @@ In our case, we will define a Q# operation to perform the full three-qubit quant
 
 > [!div class="checklist"]
 > * Define quantum operations in Q#
-> * Call Q# operations directly from the command line or using a classical host program
+> * Call Q# operations directly from the command prompt or using a classical host program
 > * Simulate a quantum operation from qubit allocation to measurement output
 > * Observe how the quantum system's simulated wavefunction evolves throughout the operation
 
@@ -45,7 +45,7 @@ Running a quantum program with Microsoft's Quantum Development Kit typically con
     - Q# operations: subroutines acting on quantum registers, and 
     - Q# functions: classical subroutines used within the quantum algorithm.
 2. The entry point used to call the quantum program and specify the target machine on which it should be run.
-    This can be done directly from the command line, or through a host program written in a classical programming language like Python or C#.
+    This can be done directly from the command prompt, or through a host program written in a classical programming language like Python or C#.
     This tutorial includes instructions for whichever method you prefer.
 
 ## Allocate qubits and define quantum operations
@@ -245,11 +245,11 @@ Having defined our Q# operation in a `.qs` file, we now need to call that operat
 For now, there isn't anything returned (recall that our operation defined above returns `Unit`), but when we later modify the Q# operation to return an array of measurement results (`Result[]`), we will address this.
 
 While the Q# program is ubiquitous across the environments used to call it, the manner of doing so will of course vary. 
-As such, simply follow the instructions in the tab corresponding to your setup: working from the Q# command line application or using a host program in Python or C#.
+As such, simply follow the instructions in the tab corresponding to your setup: working from the Q# application or using a host program in Python or C#.
 
-#### [Command line](#tab/tabid-cmdline)
+#### [Command prompt](#tab/tabid-cmdline)
 
-Running the Q# program from the command line requires only a small change to the Q# file.
+Running the Q# program from the command prompt requires only a small change to the Q# file.
 
 Simply add `@EntryPoint()` to a line preceding the operation definition:
 
@@ -506,10 +506,10 @@ The final operation code should look like:
 }
 ```
 
-If you are working from the command line, the returned array will simply be printed directly to the console at the end of the execution.
+If you are working from the command prompt, the returned array will simply be printed directly to the console at the end of the execution.
 Otherwise, update your host program to process the returned array.
 
-#### [Command line](#tab/tabid-cmdline)
+#### [Command prompt](#tab/tabid-cmdline)
 
 To have more understanding of the returned array which will be printed in the console, we can add another `Message` in the Q# file just before the `return` statement:
 

@@ -26,7 +26,7 @@ The workflows for each of these setups are described and compared at [Ways to ru
 
 To proceed with installing the QDK and creating Q# projects, select your preferred setup:
 
-[Develop with Q# command line applications](xref:microsoft.quantum.install.standalone) - Choose this approach to work with Q# from the command line. This does not require a driver or a host program like the below options.
+[Develop with Q# applications](xref:microsoft.quantum.install.standalone) - Choose this approach to work with Q# from the command prompt. This does not require a driver or a host program like the below options.
 
 [Develop with Q# Jupyter Notebooks](xref:microsoft.quantum.install.jupyter) - Select this environment to run Q# code in cells with embedded text or create quantum computing interactive tutorials. 
 

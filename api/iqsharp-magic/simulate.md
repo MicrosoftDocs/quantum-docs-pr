@@ -3,7 +3,7 @@ title: '%simulate (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.simulate
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/22/2020
 ms.topic: article
 ---
 

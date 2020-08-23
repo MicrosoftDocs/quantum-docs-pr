@@ -3,7 +3,7 @@ title: '%azure.target (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.target
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/23/2020
 ms.topic: article
 ---
 

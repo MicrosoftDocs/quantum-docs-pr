@@ -283,19 +283,31 @@ summary: |2-
    This namespace contains classical mathematical functions and data types.
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: |-
-    Generates a uniformly sampled random integer greater than or equal to zero
-    and less than a provided upper bound.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    RandomInt has been deprecated. Please use @"microsoft.quantum.random.drawrandomint" instead.
 - uid: microsoft.quantum.math.randomintpow2
-  summary: |-
-    Generates a random integer uniformly sampled from all integers that can be represented
-    in a given number of bits.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    RandomIntPow2 has been deprecated. Please use @"microsoft.quantum.random.drawrandomint" instead.
 - uid: microsoft.quantum.math.randomreal
-  summary: |-
-    Returns a random real number in the interval greater than or equal to zero
-    and less than one.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    RandomReal has been deprecated. Please use @"microsoft.quantum.random.drawrandomdouble" instead.
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: |-
-    Returns one of the single-qubit Pauli operators uniformly
-    at random.
+  summary: |2-
+
+    > [!WARNING]
+    > Deprecated
+
+    RandomSingleQubitPauli has been deprecated. Please use @"microsoft.quantum.random.drawrandompauli" instead.
 ...

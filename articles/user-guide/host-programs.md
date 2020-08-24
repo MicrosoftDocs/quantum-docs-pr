@@ -348,7 +348,7 @@ available for use from inside the Python script.
 
 To load Q# code from another folder, the [`qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects)
 can be used to add a reference to a `.csproj` file for a Q# project (that is, a project that references `Microsoft.Quantum.Sdk`).
-This command will compile any `.qs` files in the folder containing the `.csproj` (and subfolders). It will also recursively load
+This command will compile any `.qs` files in the folder containing the `.csproj` and its subfolders. It will also recursively load
 any packages referenced via `PackageReference` or Q# projects referenced via `ProjectReference` in that `.csproj` file.
 
 As an example, the following Python code imports an external project, referencing its path relative to the current folder,

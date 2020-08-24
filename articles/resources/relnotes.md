@@ -23,7 +23,6 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 This release contains the following:
 
-- General bug fixes.
 - New [Microsoft.Quantum.Random namespace](xref:microsoft.quantum.random), providing a more convenient way to sample random values from within Q# programs. ([QuantumLibraries#311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-runtime#328](https://github.com/microsoft/qsharp-runtime/pull/328))
 - Improved [Microsoft.Quantum.Diagnostics namespace](xref:microsoft.quantum.diagnostics) with new [`DumpOperation` operation](xref:microsoft.quantum.diagnostics.dumpoperation), and new operations for restricting qubit allocation and oracle calls. ([QuantumLibraries#302](https://github.com/microsoft/QuantumLibraries/pull/302))
 - Added IntelliSense support in VS/VS Code extensions for Q# files in folders without `.csproj` files (for example, when working with `.qs` files directly from Python).
@@ -32,6 +31,7 @@ This release contains the following:
 - Added tunable coupling to SimpleIsing
 - Updated HiddenShift sample
 - Added sample for solving Sudoku with Grover's algorithm (external contribution)
+- General bug fixes. See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## Version 0.12.20072031
 

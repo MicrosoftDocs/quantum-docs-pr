@@ -5,6 +5,10 @@
 
 uid: microsoft.quantum.diagnostics
 name: Microsoft.Quantum.Diagnostics
+summary: |2-
+   # Summary
+   This namespace contains functions and operations useful for diagnostic
+   purposes, including assert operations and claim functions.
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: Asserts that two arrays of boolean values are equal.
@@ -48,6 +52,15 @@ functions:
     Asserts that a classical floating point value has the expected value up to a
     small tolerance of 1e-10.
 operations:
+- uid: microsoft.quantum.diagnostics.allowatmostncallsca
+  summary: |-
+    Between a call to this operation and its adjoint, asserts that
+    a given operation is called at most a certain number of times.
+- uid: microsoft.quantum.diagnostics.allowatmostnqubits
+  summary: |-
+    Between a call to this operation and its adjoint, asserts that
+    at most a given number of additional qubits are allocated with
+    using statements.
 - uid: microsoft.quantum.diagnostics.assertallzero
   summary: Assert that given qubits are all in $\ket{0}$ state.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
@@ -87,6 +100,8 @@ operations:
     This assertion can be used to ensure, for instance, that an optimized version of an
     operation acts identically to its naïve implementation, or that an operation
     which acts on a range of non-quantum inputs agrees with known cases.
+- uid: microsoft.quantum.diagnostics.assertphase
+  summary: Asserts that the phase of an equal superposition state has the expected value.
 - uid: microsoft.quantum.diagnostics.assertqubit
   summary: Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
@@ -101,6 +116,11 @@ operations:
   summary: |-
     Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator up to
     a given tolerance.
+- uid: microsoft.quantum.diagnostics.dumpoperation
+  summary: |-
+    Given an operation, displays diagnostics about
+    the operation that are made available by the current
+    execution target.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: |-
@@ -108,8 +128,4 @@ newtypes:
     that may be used when loading a type or callable for testing purposes.
 - uid: microsoft.quantum.diagnostics.test
   summary: Compiler-recognized attribute used to mark a unit test.
-summary: |2-
-   # Summary
-   This namespace contains functions and operations useful for diagnostic
-   purposes, including assert operations and claim functions.
 ...

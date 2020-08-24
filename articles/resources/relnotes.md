@@ -24,15 +24,14 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 This release contains the following:
 
 - General bug fixes.
-- Improved Microsoft.Quantum.Random.
-- Improved Microsoft.Quantum.Diagnostics.
+- New [Microsoft.Quantum.Random namespace](xref:microsoft.quantum.random), providing a more convenient way to sample random values from within Q# programs. ([QuantumLibraries#311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-runtime#328](https://github.com/microsoft/qsharp-runtime/pull/328))
+- Improved [Microsoft.Quantum.Diagnostics namespace](xref:microsoft.quantum.diagnostics) with new [`DumpOperation` operation](xref:microsoft.quantum.diagnostics.dumpoperation), and new operations for restricting qubit allocation and oracle calls. ([QuantumLibraries#302](https://github.com/microsoft/QuantumLibraries/pull/302))
 - Added IntelliSense support in VS/VS Code extensions for Q# files in folders without `.csproj` files (for example, when working with `.qs` files directly from Python).
 - New [`%project` magic command](xref:microsoft.quantum.iqsharp.magic-ref.project) in IQ# and [`qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) in Python to support references to Q# projects outside the current workspace folder. See [iqsharp#277](https://github.com/microsoft/iqsharp/issues/277) for the current limitations of this feature.
-- Support for automatically loading `.csproj` files for IQ#/Python hosts, which allows external project or package references to be loaded at initialization time. See the guide for using [Q# with Python and Jupyter Notebooks](xref:microsoft.quantum.guide.host-programs) for more details.
-- Improved Microsoft.Quantum.Samples
-    - Added ErrorCorrection.Syndrome sample
-    - Moved samples from SimpleAlgorithms into separate files
-    - Added tunable coupling to SimpleIsing
+- Added ErrorCorrection.Syndrome sample
+- Added tunable coupling to SimpleIsing
+- Updated HiddenShift sample
+- Added sample for solving Sudoku with Grover's algorithm (external contribution)
 
 ## Version 0.12.20072031
 

@@ -19,17 +19,146 @@ Learn how to install the Microsoft Quantum Development Kit (QDK), so that you ca
 - APIs for Python and .NET languages (C#, F#, and VB.NET) for running quantum programs written in Q#
 - Tools to facilitate your development
 
-Q# programs can run as standalone applications using Visual Studio Code or Visual Studio, or through Jupyter Notebooks with the IQ# Jupyter kernel.
-They can also be paired with a host program written in a .NET language (typically C#) or Python, enabling you to call quantum operations from inside a classical program.
+Q# programs can run as standalone applications using Visual Studio Code or Visual Studio, through Jupyter Notebooks with the IQ# Jupyter kernel, or paired with a host program written in a .NET language (typically C#) or Python. You can also run Q# programs online. 
+
+## Installation options
+
+You can use the QDK three ways:
+
+- [Install the QDK locally](#install-the-qdk-locally)
+- [Use the QDK online](#use-the-qdk-online)
+- [Use a QDK Docker image](#use-a-qdk-docker-image)
+
+## Install the QDK locally
+
+You can develop Q# code in most of your favorites IDEs, as well as integrate Q# with other languages such as Python and .NET (C#, F#).
+
+| | **VS Code**| **Visual Studio** | **Jupyter Notebooks** | **Command line**|
+|:-----|:-----:|:-----:|:-----:|:-----:|
+|**OS** |Cross-platform |Windows only |Cross-platform |Cross-platform |
+|**Q# standalone** |&#10004; | &#10004; | &#10004; | &#10004; |
+|**Q#  plus Python** |&#10004; |&#10006; |&#10004; |&#10004; |
+|**Q# plus .NET (C#, F#)**|&#10004; |&#10004;|&#10006; |&#10004; |
+
+### Prerequisites 
+
+- [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
+
+### Configure for VS Code
+
+To configure VS Code:
+
+1. Download and install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
+2. Install the [Microsoft QDK for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
+
+### Configure for Visual Studio
+
+To configure Visual Studio:
+
+1. Download and install [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 or greater, with the .NET Core cross-platform development workload enabled.
+2. Download and install the [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
+
+### Configure for Jupyter Notebooks and Python
+
+Jupyter Notebooks allow running in-place code alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
+
+> [!NOTE]
+> In Q# Jupyter Notebooks, you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files). This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.
+
+IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
+
+### [Install using conda (recommended)](#tab/tabid-conda)
+
+1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads). **Note:** 64-bit installation required.
+
+1. Open an Anaconda Prompt.
+
+   - Or, if you prefer to use PowerShell or pwsh: open a shell, run `conda init powershell`, then close and re-open the shell.
+
+1. Create and activate a new conda environment named `qsharp-env` with the required packages (including Jupyter Notebook and IQ#) by running the following commands:
+
+    ```
+    conda create -n qsharp-env -c quantum-engineering qsharp notebook
+
+    conda activate qsharp-env
+    ```
+
+1. Run `python -c "import qsharp"` from the same terminal to verify your installation and populate your local package cache with all required QDK components.
+
+### [Install using .NET CLI (advanced)](#tab/tabid-dotnetcli)
+
+1. Prerequisites:
+
+    - [Python](https://www.python.org/downloads/) 3.6 or later
+    - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
+    - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+1. Install the `Microsoft.Quantum.IQSharp` package.
+
+    ```dotnetcli
+        dotnet tool install -g Microsoft.Quantum.IQSharp
+        dotnet iqsharp install
+    ```
+
+    > [!NOTE]
+    > If you get an error during the `dotnet iqsharp install` step, open a new terminal window and try again.
+    > If this still doesn't work, try locating the installed `dotnet-iqsharp` tool (on Windows, `dotnet-iqsharp.exe`) and running:
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
+    > Typically this will be under `.dotnet/tools` in your user profile folder.
+    
+***
+
+You now have the IQ# kernel for Jupyter, which provides the core functionality for compiling and running Q# operations from Q# Jupyter Notebooks.
+
+## Use the QDK Online
+
+You can also develop Q# code without installing anything locally with these options:
+
+|Resource|Advantages|Limitations|
+|---|---|---|
+|**Visual Studio Codespaces**|A rich online development environment  |Requires an Azure subscription and plan |
+|**MyBinder** | Free online notebook experience |No persistence |
+
+
+### Using Visual Studio Codespaces
+
+To use Visual Studio Codespaces for Q# development:
+
+1. Create an [Azure account](https://azure.microsoft.com/free/).
+2. Create a Codespaces environment, following the [quickstart guide](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). When creating your codespace, we recommend using *microsoft/quantum* in the **Git Repository** field to load QDK-specific settings.
+3. You can now launch your new environment and start developing in the browser via the [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments). Alternatively, it is possible to use your local installation of VS Code and use Codespaces as a [remote environment](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
+
+### Using MyBinder
+
+You can use MyBinder to run your Jupyter Notebooks online.
+
+To configure MyBinder automatically and experiment with the QDK samples:
+
+- Open a browser and run https://aka.ms/try-qsharp.
+
+To configure MyBinder manually:
+
+1. Go to [mybinder.org](https://mybinder.org).
+1. Fill out the fields, using *microsoft/quantum* as the GitHub URL.
+
+![MyBinder form](~media/mybinder.png)
+
+## Use the QDK with Docker
+
+You can use our QDK Docker image in your local Docker installation or in the cloud via any service that supports Docker images, such as ACI.
+
+The IQ# Docker image can be download from https://github.com/microsoft/iqsharp/#using-iq-as-a-container.
+
+## Next steps
+
+Start developing Q# programs on your desired platform:
+
+- [Develop with Q# applications](xref:microsoft.quantum.install.standalone) - Choose this approach to work with Q# from the command prompt. This does not require a driver or a host program like the below options.
+- [Develop with Q# Jupyter Notebooks](xref:microsoft.quantum.install.jupyter) - Select this environment to run Q# code in cells with embedded text or create quantum computing interactive tutorials. 
+- [Develop with Q# and Python](xref:microsoft.quantum.install.python) - Enables you to combine Python and Q# to create a Python host program that calls Q# operations.
+- [Develop with Q# and .NET](xref:microsoft.quantum.install.cs) - Combine C#, F#, or VB.NET with Q# to create a .NET host program that calls Q# operations.
 
 The workflows for each of these setups are described and compared at [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).
-
-To proceed with installing the QDK and creating Q# projects, select your preferred setup:
-
-[Develop with Q# applications](xref:microsoft.quantum.install.standalone) - Choose this approach to work with Q# from the command prompt. This does not require a driver or a host program like the below options.
-
-[Develop with Q# Jupyter Notebooks](xref:microsoft.quantum.install.jupyter) - Select this environment to run Q# code in cells with embedded text or create quantum computing interactive tutorials. 
-
-[Develop with Q# and Python](xref:microsoft.quantum.install.python) - Enables you to combine Python and Q# to create a Python host program that calls Q# operations.
-
-[Develop with Q# and .NET](xref:microsoft.quantum.install.cs) - Combine C#, F#, or VB.NET with Q# to create a .NET host program that calls Q# operations.

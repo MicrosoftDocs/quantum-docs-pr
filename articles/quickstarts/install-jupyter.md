@@ -11,66 +11,13 @@ no-loc: ['Q#', '$$v']
 
 # Develop with Q# Jupyter Notebooks
 
-Install the QDK for developing Q# operations on Q# Jupyter Notebooks.
+Now you are ready to verify your Q# Jupyter Notebook installation by writing and running a simple Q# operation.
 
-Jupyter Notebooks allow in-place code execution alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
+## Prerequisites
 
-> [!NOTE]
-> * In Q# Jupyter Notebooks, you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files). This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.
-
-## Install the IQ# Jupyter kernel
-
-IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
-
-### [Install using conda (recommended)](#tab/tabid-conda)
-
-1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads). **Note:** 64-bit installation required.
-
-1. Open an Anaconda Prompt.
-
-   - Or, if you prefer to use PowerShell or pwsh: open a shell, run `conda init powershell`, then close and re-open the shell.
-
-1. Create and activate a new conda environment named `qsharp-env` with the required packages (including Jupyter Notebook and IQ#) by running the following commands:
-
-    ```
-    conda create -n qsharp-env -c quantum-engineering qsharp notebook
-
-    conda activate qsharp-env
-    ```
-
-1. Run `python -c "import qsharp"` from the same terminal to verify your installation and populate your local package cache with all required QDK components.
-
-### [Install using .NET CLI (advanced)](#tab/tabid-dotnetcli)
-
-1. Prerequisites:
-
-    - [Python](https://www.python.org/downloads/) 3.6 or later
-    - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-
-1. Install the `Microsoft.Quantum.IQSharp` package.
-
-    ```dotnetcli
-    dotnet tool install -g Microsoft.Quantum.IQSharp
-    dotnet iqsharp install
-    ```
-
-    > [!NOTE]
-    > If you get an error during the `dotnet iqsharp install` step, open a new terminal window and try again.
-    > If this still doesn't work, try locating the installed `dotnet-iqsharp` tool (on Windows, `dotnet-iqsharp.exe`) and running:
-    > ```
-    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
-    > ```
-    > where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
-    > Typically this will be under `.dotnet/tools` in your user profile folder.
-    
-***
-
-That's it! You now have the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Q# Jupyter Notebooks.
+- Install the [Quantum Development Kit](xref:microsoft.quantum.install) for your environment. 
 
 ## Create your first Q# notebook
-
-Now you are ready to verify your Q# Jupyter Notebook installation by writing and executing a simple Q# operation.
 
 1. From the environment you created during installation (i.e., either the conda environment you created, or the Python environment where you installed Jupyter), run the following command to start the Jupyter Notebook server:
 
@@ -90,11 +37,11 @@ Now you are ready to verify your Q# Jupyter Notebook installation by writing and
 
     You should see `SampleQuantumRandomNumberGenerator` in the output of the cell. When running in Jupyter Notebook, the Q# code is compiled, and the cell outputs the name of any operations that it finds.
 
-1. In a new cell, execute the operation you just created (in a simulator) by using the `%simulate` command:
+1. In a new cell, run the operation you just created (in a simulator) by using the `%simulate` command:
 
     ![Jupyter Notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
 
-    You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `Zero` or `One` printed on the screen. If you execute the cell repeatedly, you should see each result approximately half the time.
+    You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `Zero` or `One` printed on the screen. If you run the cell repeatedly, you should see each result approximately half the time.
 
 ## Next steps
 

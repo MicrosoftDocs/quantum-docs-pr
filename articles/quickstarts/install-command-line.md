@@ -11,44 +11,13 @@ no-loc: ['Q#', '$$v']
 
 # Develop with Q# applications
 
-Q# programs can be executed on their own, without a driver in a host language like C#, F#, or Python.
+Follow the instructions at the tab corresponding to your environment.
 
 ## Prerequisites
 
-- [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
+- Install the [Quantum Development Kit](xref:microsoft.quantum.install) for your environment. 
 
-## Installation
-
-While you can build Q# applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for developing your Q# applications locally. For developing in the Cloud via the web browser, we recommend Visual Studio Codespaces. Developing in these environments includes the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more. 
-
-To configure VS Code:
-
-1. Download and install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
-2. Install the [Microsoft QDK for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
-
-To configure Visual Studio:
-
-1. Download and install [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 or greater, with the .NET Core cross-platform development workload enabled.
-2. Download and install the [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
-
-To configure Visual Studio Codespaces:
-
-1. Create an [Azure account](https://azure.microsoft.com/free/).
-2. Create a Codespaces environment. Please follow the [quickstart guide](https://docs.microsoft.com/visualstudio/online/quickstarts/browser). When creating the Codespace, we recommend to enter `microsoft/Quantum` in the "Git Repository" field to load QDK-specific settings.
-3. You can now launch your new environment and start developing in the browser via the [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments). Alternatively, it is possible to use your local installation of VS Code and use Codespaces as a [remote environment](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
-
-
-To install the QDK for another environment, enter at the command prompt:
-
-```dotnetcli
-dotnet new -i Microsoft.Quantum.ProjectTemplates
-```
-
-## Develop with Q#
-
-Follow the instructions at the tab corresponding to your environment.
-
-### [VS Code](#tab/tabid-vscode)
+## [VS Code](#tab/tabid-vscode)
 
 To create a new project:
 
@@ -68,7 +37,7 @@ To run the application:
 > [!NOTE]
 > Workspaces with multiple root folders are not currently supported by the VS Code Q# extension. If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.
 
-### [Visual Studio](#tab/tabid-vs)
+## [Visual Studio](#tab/tabid-vs)
 
 Verify your Visual Studio installation by creating a Q# `Hello World` application.
 

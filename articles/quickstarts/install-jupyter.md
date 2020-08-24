@@ -2,8 +2,8 @@
 title: Develop with Q# Jupyter Notebooks
 description: Learn how to create a Q# application using Jupyter Notebooks.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
@@ -12,7 +12,7 @@ no-loc: ['Q#', '$$v']
 
 # Develop with Q# Jupyter Notebooks
 
-Now you are ready to verify your Q# Jupyter Notebook installation by writing and running a simple Q# operation.
+Verify your Q# Jupyter Notebook installation by writing and running a simple Q# operation.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ Now you are ready to verify your Q# Jupyter Notebook installation by writing and
 
     - If the Jupyter Notebook doesn't open automatically in your browser, copy and paste the URL provided by the command line into your browser.
 
-1. Choose "New" → "Q#" to create a Jupyter Notebook with a Q# kernel, and add the following code to the first notebook cell:
+1. Choose **New → Q#** to create a Jupyter Notebook with a Q# kernel, and add the following code to the first notebook cell:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 

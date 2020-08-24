@@ -2,8 +2,8 @@
 title: Develop with Q# and Python
 description: Learn how to create a Q# application using Python.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
@@ -12,7 +12,7 @@ no-loc: ['Q#', '$$v']
 
 # Develop with Q# and Python
 
-Now you are ready to verify your `qsharp` Python package installation by writing and running a simple Q# program.
+Verify your `qsharp` Python package installation by writing and running a simple Q# program.
 
 ## Prerequisites
 

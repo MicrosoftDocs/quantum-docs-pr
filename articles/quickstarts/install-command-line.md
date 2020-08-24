@@ -1,9 +1,9 @@
 ---
 title: Develop with Q# applications
 description: Learn how to create a Q# application that runs from the command prompt.
-author: KittyYeungQ
-ms.author: kitty
-ms.date: 4/24/2020
+author: bradben
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone

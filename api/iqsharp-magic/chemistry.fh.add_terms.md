@@ -3,7 +3,7 @@ title: '%chemistry.fh.add_terms (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/24/2020
 ms.topic: article
 ---
 

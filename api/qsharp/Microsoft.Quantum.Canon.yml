@@ -650,13 +650,12 @@ operations:
     AssertLessThanPhaseLE has been deprecated. Please use @"microsoft.quantum.arithmetic.assertphaselessthan" instead.
     Please use @"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan".
 - uid: microsoft.quantum.canon.assertphase
-  summary: |-
-    Asserts that the phase of an equal superposition state has the expected value.
+  summary: |2-
 
-    Specifically, asserts that the phase $\phi$ of a quantum state
-    that may be expressed as
-    $\frac{e^{i t}}{\sqrt{2}}(e^{i\phi}\ket{0} + e^{-i\phi}\ket{1})$
-    for some arbitrary real t has the expected value.
+    > [!WARNING]
+    > Deprecated
+
+    AssertPhase has been deprecated. Please use @"microsoft.quantum.diagnostics.assertphase" instead.
 - uid: microsoft.quantum.canon.cascadeccnot
   summary: |2-
 

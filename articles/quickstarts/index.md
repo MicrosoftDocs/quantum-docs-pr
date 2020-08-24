@@ -27,7 +27,7 @@ You can use the QDK three ways:
 
 - [Install the QDK locally](#install-the-qdk-locally)
 - [Use the QDK online](#use-the-qdk-online)
-- [Use a QDK Docker image](#use-a-qdk-docker-image)
+- [Use a QDK Docker image](#use-the-qdk-with-docker)
 
 ## Install the QDK locally
 
@@ -144,7 +144,7 @@ To configure MyBinder manually:
 1. Go to [mybinder.org](https://mybinder.org).
 1. Fill out the fields, using *microsoft/quantum* as the GitHub URL.
 
-![MyBinder form](~media/mybinder.png)
+![MyBinder form](~/media/mybinder.png)
 
 ## Use the QDK with Docker
 

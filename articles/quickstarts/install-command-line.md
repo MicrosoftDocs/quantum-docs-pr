@@ -1,5 +1,6 @@
 ---
 title: Develop with Q# applications
+description: Learn how to create a Q# application that runs from the command prompt.
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020

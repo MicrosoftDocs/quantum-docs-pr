@@ -1,5 +1,6 @@
 ---
 title: Develop with Q# Jupyter Notebooks
+description: Learn how to create a Q# application using Jupyter Notebooks.
 author: bradben
 ms.author: bradben
 ms.date: 5/30/2020

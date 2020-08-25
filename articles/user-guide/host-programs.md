@@ -637,7 +637,7 @@ currently-available Q# operations and functions.
 To load Q# code from another folder, the [`%project` magic command](xref:microsoft.quantum.iqsharp.magic-ref.project) can be used
 to add a reference to a `.csproj` file for a Q# project (that is, a project that references `Microsoft.Quantum.Sdk`). This command
 will compile any `.qs` files in the folder containing the `.csproj` (and subfolders). It will also recursively load any packages
-referenced via `PackageReference` or Q# projects referenced via `ProjectReference` in that `.csproj` file.
+referenced via `PackageReference` or Q# projects referenced via `ProjectReference` in that `.csproj` file. 
 
 As an example, the following cells simulate a Q# operation from an external project, where the project path is referenced relative to the current folder:
 

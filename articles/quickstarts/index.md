@@ -35,8 +35,8 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 
 | | **VS Code (2019 or later)**| **Visual Studio (2019 or later)** | **Jupyter Notebooks** | **Command line**|
 |:-----|:-----:|:-----:|:-----:|:-----:|
-| | | | | | 
 |**OS** |Cross-platform |Windows only |Cross-platform |Cross-platform |
+| | | | | | 
 |**Q# standalone** |&#10004; | &#10004; | &#10004; | &#10004; |
 |**Q#  plus Python** |&#10004; |&#10006; |&#10004; |&#10004; |
 |**Q# plus .NET (C#, F#)**|&#10004; |&#10004;|&#10006; |&#10004; |
@@ -46,7 +46,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
 
 > [!NOTE]
-> If you are only using the [Conda-based Python installation](#install-using-conda-(recommended)), you do not need to install the .NET Core SDK.
+> If you are only using the [Conda-based Python installation](#configure-for-jupyter-notebooks-and-python), you do not need to install the .NET Core SDK.
 
 
 ### Configure for VS Code

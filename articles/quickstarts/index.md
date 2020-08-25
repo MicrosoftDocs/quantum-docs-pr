@@ -48,7 +48,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 
 To configure VS Code:
 
-1. Download and install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
+1. Download and install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and macOS).
 2. Install the [Microsoft QDK for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
 ### Configure for Visual Studio
@@ -56,7 +56,7 @@ To configure VS Code:
 To configure Visual Studio:
 
 1. Download and install [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 or greater, with the .NET Core cross-platform development workload enabled.
-2. Download and install the [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
+2. Download and install the [Microsoft QDK extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
 ### Configure for Jupyter Notebooks and Python
 

@@ -36,8 +36,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 |&nbsp; | **VS Code<br>(2019 or later)**| **Visual Studio<br>(2019 or later)** | **Jupyter Notebooks** | **Command line**|
 |:-----|:-----:|:-----:|:-----:|:-----:|
 |**OS** |Cross-platform |Windows only |Cross-platform |Cross-platform |
-|&nbsp;|&nbsp;|&nbsp; | &nbsp;| &nbsp;| 
-|**Q# standalone** |&#10004; | &#10004; | &#10004; | &#10004; |
+|<br>**Q# standalone** |<br>&#10004; |<br> &#10004; | <br>&#10004; |<br> &#10004; |
 |**Q#  plus Python** |&#10004; |&#10006; |&#10004; |&#10004; |
 |**Q# plus .NET (C#, F#)**|&#10004; |&#10004;|&#10006; |&#10004; |
 
@@ -65,12 +64,11 @@ To configure Visual Studio:
 
 ### Configure for Jupyter Notebooks and Python
 
-Jupyter Notebooks allow running in-place code alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
+Jupyter Notebooks allow running in-place code alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. 
 
-> [!NOTE]
-> In Q# Jupyter Notebooks, you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files). This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.
+IQ# (pronounced i-q-sharp) is an extension to the .NET Core SDK, primarily used by Jupyter and Python, that provides the core functionality for compiling and simulating Q# operations.
 
-IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.
+Here's what you need to do to start creating your own Q# notebooks.
 
 ### [Install using conda (recommended)](#tab/tabid-conda)
 

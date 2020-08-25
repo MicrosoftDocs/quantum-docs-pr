@@ -36,7 +36,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 | | **VS Code (2019 or later)**| **Visual Studio (2019 or later)** | **Jupyter Notebooks** | **Command line**|
 |:-----|:-----:|:-----:|:-----:|:-----:|
 |**OS** |Cross-platform |Windows only |Cross-platform |Cross-platform |
-| | | | | | 
+|&nbsp;|&nbsp;|&nbsp; | &nbsp;| &nbsp;| 
 |**Q# standalone** |&#10004; | &#10004; | &#10004; | &#10004; |
 |**Q#  plus Python** |&#10004; |&#10006; |&#10004; |&#10004; |
 |**Q# plus .NET (C#, F#)**|&#10004; |&#10004;|&#10006; |&#10004; |

@@ -100,7 +100,7 @@ Here's what you need to do to start creating your own Q# notebooks.
 
     > [!NOTE]
     > - If you get an error during the `dotnet iqsharp install` step, open a new terminal window and try again.
-    > - If this still doesn't work, locate the installed `dotnet-iqsharp` tool (on Windows, `dotnet-iqsharp.exe`) and run: <br>`<path to dotnet-iqsharp> install --user --path-to-tool=<path to dotnet-iqsharp>`,<br> where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
+    > - If this still doesn't work, locate the installed `dotnet-iqsharp` tool (on Windows, `dotnet-iqsharp.exe`) and run: <br>`<path to dotnet-iqsharp> install --user --path-to-tool=<path to dotnet-iqsharp>`,<br> where `<path to dotnet-iqsharp>` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
      Typically this will be under `.dotnet/tools` in your user profile folder.
     > - For additional debugging help, see https://natemcmaster.com/blog/2018/02/02/dotnet-global-tool/.
 
@@ -115,7 +115,7 @@ You can also develop Q# code without installing anything locally with these opti
 |Resource|Advantages|Limitations|
 |---|---|---|
 |**Visual Studio Codespaces**|A rich online development environment  |Requires an Azure subscription and plan |
-|**Visual Studio Code GitHub Codespaces (beta)**|Online Visual Studio Code experience |Currently in beta, request early access at https://github.com/features/codespaces|
+|**Visual Studio Code GitHub Codespaces (beta)**|Online Visual Studio Code experience |Currently in beta, request early access at https://github.com/features/codespaces |
 |**MyBinder** | Free online notebook experience |No persistence |
 
 ### Using Visual Studio Codespaces

@@ -3,7 +3,7 @@ title: '%chemistry.inputstate.load (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/25/2020
 ms.topic: article
 ---
 

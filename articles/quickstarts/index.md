@@ -33,8 +33,9 @@ You can use the QDK three ways:
 
 You can develop Q# code in most of your favorites IDEs, as well as integrate Q# with other languages such as Python and .NET (C#, F#).
 
-| | **VS Code**| **Visual Studio** | **Jupyter Notebooks** | **Command line**|
+| | **VS Code (2019 or later)**| **Visual Studio (2019 or later)** | **Jupyter Notebooks** | **Command line**|
 |:-----|:-----:|:-----:|:-----:|:-----:|
+| | | | | | 
 |**OS** |Cross-platform |Windows only |Cross-platform |Cross-platform |
 |**Q# standalone** |&#10004; | &#10004; | &#10004; | &#10004; |
 |**Q#  plus Python** |&#10004; |&#10006; |&#10004; |&#10004; |
@@ -43,6 +44,10 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 ### Prerequisites 
 
 - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
+
+> [!NOTE]
+> If you are only using the [Conda-based Python installation](#install-using-conda-(recommended)), you do not need to install the .NET Core SDK.
+
 
 ### Configure for VS Code
 
@@ -72,17 +77,12 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
 1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads). **Note:** 64-bit installation required.
 
 1. Open an Anaconda Prompt.
-
    - Or, if you prefer to use PowerShell or pwsh: open a shell, run `conda init powershell`, then close and re-open the shell.
-
 1. Create and activate a new conda environment named `qsharp-env` with the required packages (including Jupyter Notebook and IQ#) by running the following commands:
-
     ```
     conda create -n qsharp-env -c quantum-engineering qsharp notebook
-
     conda activate qsharp-env
     ```
-
 1. Run `python -c "import qsharp"` from the same terminal to verify your installation and populate your local package cache with all required QDK components.
 
 ### [Install using .NET CLI (advanced)](#tab/tabid-dotnetcli)
@@ -100,17 +100,18 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
         dotnet iqsharp install
     ```
 
-    > [!NOTE]
-    > If you get an error during the `dotnet iqsharp install` step, open a new terminal window and try again.
-    > If this still doesn't work, try locating the installed `dotnet-iqsharp` tool (on Windows, `dotnet-iqsharp.exe`) and running:
-    > ```
-    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
-    > ```
-    > where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
-    > Typically this will be under `.dotnet/tools` in your user profile folder.
-    
-***
+    **Troubleshooting install issues**
+- If you get an error during the `dotnet iqsharp install` step, open a new terminal window and try again.
+- If this still doesn't work, locate the installed `dotnet-iqsharp` tool (on Windows, `dotnet-iqsharp.exe`) and run:
 
+     ``` dotnetcli
+     /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+     ```
+
+     where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
+     Typically this will be under `.dotnet/tools` in your user profile folder.
+- For additional debugging help, see https://natemcmaster.com/blog/2018/02/02/dotnet-global-tool/.
+ 
 You now have the IQ# kernel for Jupyter, which provides the core functionality for compiling and running Q# operations from Q# Jupyter Notebooks.
 
 ## Use the QDK Online
@@ -120,8 +121,8 @@ You can also develop Q# code without installing anything locally with these opti
 |Resource|Advantages|Limitations|
 |---|---|---|
 |**Visual Studio Codespaces**|A rich online development environment  |Requires an Azure subscription and plan |
+|**Visual Studio Code GitHub Codespaces (beta)**|Online Visual Studio Code experience |Currently in beta, request early access at https://github.com/features/codespaces|
 |**MyBinder** | Free online notebook experience |No persistence |
-
 
 ### Using Visual Studio Codespaces
 
@@ -131,15 +132,15 @@ To use Visual Studio Codespaces for Q# development:
 2. Create a Codespaces environment, following the [quickstart guide](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). When creating your codespace, we recommend using *microsoft/quantum* in the **Git Repository** field to load QDK-specific settings.
 3. You can now launch your new environment and start developing in the browser via the [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments). Alternatively, it is possible to use your local installation of VS Code and use Codespaces as a [remote environment](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
 
-### Using MyBinder
+### Using Binder
 
-You can use MyBinder to run your Jupyter Notebooks online.
+You can use Binder to run your Jupyter Notebooks online.
 
-To configure MyBinder automatically and experiment with the QDK samples:
+To configure Binder automatically and experiment with the QDK samples:
 
 - Open a browser and run https://aka.ms/try-qsharp.
 
-To configure MyBinder manually:
+To configure Binder manually:
 
 1. Go to [mybinder.org](https://mybinder.org).
 1. Fill out the fields, using *microsoft/quantum* as the GitHub URL.
@@ -150,7 +151,10 @@ To configure MyBinder manually:
 
 You can use our QDK Docker image in your local Docker installation or in the cloud via any service that supports Docker images, such as ACI.
 
-The IQ# Docker image can be download from https://github.com/microsoft/iqsharp/#using-iq-as-a-container.
+You can download the IQ# Docker image from https://github.com/microsoft/iqsharp/#using-iq-as-a-container.
+
+> [!NOTE]
+> You can also use Docker with a Visual Studio Code Remote Development Container to quickly define development environments. For more information about VS Code Development Containers, see https://github.com/microsoft/Quantum/tree/master/.devcontainer.
 
 ## Next steps
 

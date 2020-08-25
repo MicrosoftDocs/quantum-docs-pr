@@ -103,7 +103,9 @@ Here's what you need to do to start creating your own Q# notebooks.
     > - If this still doesn't work, locate the installed `dotnet-iqsharp` tool (on Windows, `dotnet-iqsharp.exe`) and run: <br>`<path to dotnet-iqsharp> install --user --path-to-tool=<path to dotnet-iqsharp>`,<br> where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
      Typically this will be under `.dotnet/tools` in your user profile folder.
     > - For additional debugging help, see https://natemcmaster.com/blog/2018/02/02/dotnet-global-tool/.
- 
+
+*** 
+
 You now have the IQ# kernel for Jupyter, which provides the core functionality for compiling and running Q# operations from Q# Jupyter Notebooks.
 
 ## Use the QDK Online

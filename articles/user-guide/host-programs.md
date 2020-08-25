@@ -346,7 +346,7 @@ Multiple qubits:
 By default, the `import qsharp` command loads all of the `.qs` files in the current folder and makes their Q# operations and functions
 available for use from inside the Python script.
 
-To load Q# code from another folder, the [`qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects)
+To load Q# code from another folder, the [`qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects)
 can be used to add a reference to a `.csproj` file for a Q# project (that is, a project that references `Microsoft.Quantum.Sdk`).
 This command will compile any `.qs` files in the folder containing the `.csproj` and its subfolders. It will also recursively load
 any packages referenced via `PackageReference` or Q# projects referenced via `ProjectReference` in that `.csproj` file.
@@ -368,7 +368,7 @@ Adding reference to project: ../qrng/Qrng.csproj
 Qrng result: 0
 ```
 
-To load external packages containing Q# code, use the [`qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages).
+To load external packages containing Q# code, use the [`qsharp.packages` API](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages).
 
 If the Q# code in the current folder depends on external projects or packages, you may see errors when running `import qsharp`,
 since the dependencies have not yet been loaded.

@@ -33,7 +33,7 @@ Because the `QuantumSimulator` class implements the <xref:System.IDisposable> in
 
 ### Invoking the simulator from Python
 
-Use the [simulate()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) method from the Q# Python library with the imported Q# operation:
+Use the [simulate()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) method from the Q# Python library with the imported Q# operation:
 
 ```python
 qubit_result = myOperation.simulate()

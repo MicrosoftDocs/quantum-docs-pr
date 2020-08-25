@@ -33,7 +33,7 @@ You can use the QDK three ways:
 
 You can develop Q# code in most of your favorites IDEs, as well as integrate Q# with other languages such as Python and .NET (C#, F#).
 
-| | **VS Code (2019 or later)**| **Visual Studio (2019 or later)** | **Jupyter Notebooks** | **Command line**|
+|&nbsp; | **VS Code<br>(2019 or later)**| **Visual Studio<br>(2019 or later)** | **Jupyter Notebooks** | **Command line**|
 |:-----|:-----:|:-----:|:-----:|:-----:|
 |**OS** |Cross-platform |Windows only |Cross-platform |Cross-platform |
 |&nbsp;|&nbsp;|&nbsp; | &nbsp;| &nbsp;| 

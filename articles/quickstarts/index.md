@@ -40,7 +40,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 |**Q#  plus Python** |[Install](#configure-for-jupyter-notebooks-and-python) |&#10006; |[Install](#configure-for-jupyter-notebooks-and-python) |[Install](#configure-for-jupyter-notebooks-and-python) |
 |**Q# plus .NET (C#, F#)**|[Install](#configure-for-vs-code) |[Install](#configure-for-visual-studio)|&#10006; |[Install](#configure-for-vs-code) |
 
-### Configure for VS Code and command line
+### Configure for VS Code
 
 #### Prerequisites 
 
@@ -51,7 +51,7 @@ To configure VS Code:
 1. Download and install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and macOS).
 2. Install the [Microsoft QDK for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
-### Configure for Visual Studio and command line
+### Configure for Visual Studio
 
 #### Prerequisites 
 
@@ -62,7 +62,7 @@ To configure Visual Studio:
 1. Download and install [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 or greater, with the .NET Core cross-platform development workload enabled.
 2. Download and install the [Microsoft QDK extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
-### Configure for Jupyter Notebooks and Python and command line
+### Configure for Jupyter Notebooks and Python
 
 Jupyter Notebooks allow running in-place code alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. 
 

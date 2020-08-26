@@ -36,9 +36,9 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 |&nbsp; | **VS Code<br>(2019 or later)**| **Visual Studio<br>(2019 or later)** | **Jupyter Notebooks** | **Command line**|
 |:-----|:-----:|:-----:|:-----:|:-----:|
 |**OS** |Windows, macOS, Linux |Windows only |Windows, macOS, Linux |Windows, macOS, Linux |
-|<br>**Q# standalone** |<br>[Install](#configure-for-vs-code) |<br> [Install](#configure-for-visual-studio)  | [Install](#configure-for-jupyter-notebooks-and-python) |[Install](#configure-for-vs-code) |
+|<br>**Q# standalone** |<br>[Install](#configure-for-vs-code) |<br> [Install](#configure-for-visual-studio)  |<br> [Install](#configure-for-jupyter-notebooks-and-python) |<br>[Install](#configure-for-vs-code) |
 |**Q#  plus Python** |[Install](#configure-for-jupyter-notebooks-and-python) |&#10006; |[Install](#configure-for-jupyter-notebooks-and-python) |[Install](#configure-for-jupyter-notebooks-and-python) |
-|**Q# plus .NET (C#, F#)**|[Install](#configure-for-vs-code) |[Install](#configure-for-visual-studio)|&#10006; |[Install](#configure-for-vs-code) |
+|**Q# plus .NET (C#, F#)**|[Install](#configure-for-vs-code) |[Install](#configure-for-visual-studio)|&#10006; |[Install](#configure-for-visual-studio) |
 
 ### Configure for VS Code
 

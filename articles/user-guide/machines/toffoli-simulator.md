@@ -33,7 +33,7 @@ Note that, unlike the `QuantumSimulator` class, the `ToffoliSimulator` class doe
 
 ### Invoking the Toffoli simulator from Python
 
-Use the [toffoli_simulate()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:
+Use the [toffoli_simulate()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:
 
 ```python
 qubit_result = myOperation.toffoli_simulate()

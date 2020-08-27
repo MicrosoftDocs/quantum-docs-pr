@@ -14,6 +14,6 @@
     - name: Quantum chemistry
       href: https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry
   - name: Python libraries
-    href: https://docs.microsoft.com/python/qsharp
+    href: https://docs.microsoft.com/python/qsharp-core/qsharp
   - name: IQ# magic commands
     href: iqsharp-magic/toc.yml

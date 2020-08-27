@@ -14,6 +14,6 @@ This API reference includes the Q# standard library and the three libraries buil
 
 - [Q# libraries](xref:microsoft.quantum.qsharplibintro)
 - [.NET libraries](xref:microsoft.quantum.dotnetlibsintro)
-- [Python libraries](https://docs.microsoft.com/python/qsharp)
+- [Python libraries](https://docs.microsoft.com/python/qsharp-core/qsharp)
 
 For more information about the Q# libraries, see <xref:microsoft.quantum.libraries>.

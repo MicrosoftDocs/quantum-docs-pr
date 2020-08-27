@@ -62,7 +62,7 @@ BorrowedWidth   0
 
 ### Invoking the resources estimator from Python
 
-Use the [estimate_resources()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:
+Use the [estimate_resources()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:
 
 ```python
 qubit_result = myOperation.estimate_resources()

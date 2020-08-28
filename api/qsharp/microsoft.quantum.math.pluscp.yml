@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.pluscp
 name: PlusCP
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the sum of two inputs.
 syntax: 'function PlusCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.ComplexPolar'
 input:

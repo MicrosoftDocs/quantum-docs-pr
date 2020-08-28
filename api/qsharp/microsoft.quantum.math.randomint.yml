@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.randomint
 name: RandomInt
 type: operation
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: RandomInt has been deprecated. Please use @"microsoft.quantum.random.drawrandomint" instead.
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:

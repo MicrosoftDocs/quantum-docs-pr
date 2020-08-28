@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.negationd
 name: NegationD
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the unary negation of an input.
 syntax: 'function NegationD (input : Double) : Double'
 input:

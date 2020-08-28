@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.dividedbyl
 name: DividedByL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the quotient of two inputs.
 syntax: 'function DividedByL (a : BigInt, b : BigInt) : BigInt'
 input:

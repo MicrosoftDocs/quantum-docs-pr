@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.absl
 name: AbsL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the absolute value of a big integer.
 remarks: See [System.Numerics.BigInteger.Abs](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.abs) for more details.
 syntax: 'function AbsL (a : BigInt) : BigInt'

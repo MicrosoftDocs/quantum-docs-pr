@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.bitsizei
 name: BitSizeI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: |-
   For a non-negative integer `a`, returns the number of bits required to represent `a`.
 

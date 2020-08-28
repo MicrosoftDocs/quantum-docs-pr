@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.maxl
 name: MaxL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the larger of two specified numbers.
 remarks: See [System.Numerics.BigInteger.Max](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.max) for more details.
 syntax: 'function MaxL (a : BigInt, b : BigInt) : BigInt'

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.tanh
 name: Tanh
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the hyperbolic tangent of the specified angle.
 remarks: See [System.Math.Tanh](https://docs.microsoft.com/dotnet/api/system.math.tanh) for more details.
 syntax: 'function Tanh (d : Double) : Double'

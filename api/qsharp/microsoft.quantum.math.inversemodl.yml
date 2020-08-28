@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.inversemodl
 name: InverseModL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns $b$ such that $a \cdot b = 1 (\operatorname{mod} \texttt{modulus})$.
 syntax: 'function InverseModL (a : BigInt, modulus : BigInt) : BigInt'
 input:

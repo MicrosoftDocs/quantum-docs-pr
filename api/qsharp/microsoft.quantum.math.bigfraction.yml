@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.bigfraction
 name: BigFraction
 type: newtype
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: |-
   Represents a rational number of the form `p/q`. Integer `p` is
   the first element of the tuple and `q` is the second element

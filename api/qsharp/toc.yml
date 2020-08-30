@@ -57,12 +57,6 @@
 - uid: microsoft.quantum.arithmetic
   name: Microsoft.Quantum.Arithmetic
   items:
-  - name: AddConstantFxP
-    uid: microsoft.quantum.arithmetic.addconstantfxp
-  - name: AddFxP
-    uid: microsoft.quantum.arithmetic.addfxp
-  - name: AddI
-    uid: microsoft.quantum.arithmetic.addi
   - name: ApplyLEOperationOnPhaseLE
     uid: microsoft.quantum.arithmetic.applyleoperationonphasele
   - name: ApplyLEOperationOnPhaseLEA
@@ -99,8 +93,6 @@
     uid: microsoft.quantum.arithmetic.applyreversedopleca
   - name: ApplyXorInPlace
     uid: microsoft.quantum.arithmetic.applyxorinplace
-  - name: AssertAllZeroFxP
-    uid: microsoft.quantum.arithmetic.assertallzerofxp
   - name: AssertMostSignificantBit
     uid: microsoft.quantum.arithmetic.assertmostsignificantbit
   - name: AssertPhaseLessThan
@@ -113,36 +105,12 @@
     uid: microsoft.quantum.arithmetic.bigendianaslittleendian
   - name: Carry
     uid: microsoft.quantum.arithmetic.carry
-  - name: CompareGreaterThanFxP
-    uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
-  - name: CompareGTI
-    uid: microsoft.quantum.arithmetic.comparegti
-  - name: CompareGTSI
-    uid: microsoft.quantum.arithmetic.comparegtsi
   - name: CompareUsingRippleCarry
     uid: microsoft.quantum.arithmetic.compareusingripplecarry
-  - name: ComputeReciprocalFxP
-    uid: microsoft.quantum.arithmetic.computereciprocalfxp
-  - name: ComputeReciprocalI
-    uid: microsoft.quantum.arithmetic.computereciprocali
   - name: CopyMostSignificantBit
     uid: microsoft.quantum.arithmetic.copymostsignificantbit
-  - name: DivideI
-    uid: microsoft.quantum.arithmetic.dividei
-  - name: EvaluateEvenPolynomialFxP
-    uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
-  - name: EvaluateOddPolynomialFxP
-    uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
-  - name: EvaluatePolynomialFxP
-    uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
-  - name: FixedPoint
-    uid: microsoft.quantum.arithmetic.fixedpoint
   - name: GreaterThan
     uid: microsoft.quantum.arithmetic.greaterthan
-  - name: IdenticalFormatFactFxP
-    uid: microsoft.quantum.arithmetic.identicalformatfactfxp
-  - name: IdenticalPointPosFactFxP
-    uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
   - name: IncrementByInteger
     uid: microsoft.quantum.arithmetic.incrementbyinteger
   - name: IncrementByModularInteger
@@ -151,16 +119,12 @@
     uid: microsoft.quantum.arithmetic.incrementphasebyinteger
   - name: IncrementPhaseByModularInteger
     uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
-  - name: Invert2sSI
-    uid: microsoft.quantum.arithmetic.invert2ssi
   - name: LittleEndian
     uid: microsoft.quantum.arithmetic.littleendian
   - name: LittleEndianAsBigEndian
     uid: microsoft.quantum.arithmetic.littleendianasbigendian
   - name: MAJ
     uid: microsoft.quantum.arithmetic.maj
-  - name: MeasureFxP
-    uid: microsoft.quantum.arithmetic.measurefxp
   - name: MeasureInteger
     uid: microsoft.quantum.arithmetic.measureinteger
   - name: MultiplyAndAddByModularInteger
@@ -169,16 +133,8 @@
     uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
   - name: MultiplyByModularInteger
     uid: microsoft.quantum.arithmetic.multiplybymodularinteger
-  - name: MultiplyFxP
-    uid: microsoft.quantum.arithmetic.multiplyfxp
-  - name: MultiplyI
-    uid: microsoft.quantum.arithmetic.multiplyi
-  - name: MultiplySI
-    uid: microsoft.quantum.arithmetic.multiplysi
   - name: PhaseLittleEndian
     uid: microsoft.quantum.arithmetic.phaselittleendian
-  - name: PrepareFxP
-    uid: microsoft.quantum.arithmetic.preparefxp
   - name: ReflectAboutInteger
     uid: microsoft.quantum.arithmetic.reflectaboutinteger
   - name: ReversedOpBE
@@ -205,14 +161,6 @@
     uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
   - name: RippleCarryAdderTTK
     uid: microsoft.quantum.arithmetic.ripplecarryadderttk
-  - name: SignedLittleEndian
-    uid: microsoft.quantum.arithmetic.signedlittleendian
-  - name: SquareFxP
-    uid: microsoft.quantum.arithmetic.squarefxp
-  - name: SquareI
-    uid: microsoft.quantum.arithmetic.squarei
-  - name: SquareSI
-    uid: microsoft.quantum.arithmetic.squaresi
   - name: Sum
     uid: microsoft.quantum.arithmetic.sum
 - uid: microsoft.quantum.arrays
@@ -1268,74 +1216,6 @@
     uid: microsoft.quantum.logical.or
   - name: Xor
     uid: microsoft.quantum.logical.xor
-- uid: microsoft.quantum.machinelearning
-  name: Microsoft.Quantum.MachineLearning
-  items:
-  - name: ApplySequentialClassifier
-    uid: microsoft.quantum.machinelearning.applysequentialclassifier
-  - name: ApproximateInputEncoder
-    uid: microsoft.quantum.machinelearning.approximateinputencoder
-  - name: CombinedStructure
-    uid: microsoft.quantum.machinelearning.combinedstructure
-  - name: ControlledRotation
-    uid: microsoft.quantum.machinelearning.controlledrotation
-  - name: CyclicEntanglingLayer
-    uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
-  - name: DefaultTrainingOptions
-    uid: microsoft.quantum.machinelearning.defaulttrainingoptions
-  - name: EstimateClassificationProbabilities
-    uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
-  - name: EstimateClassificationProbability
-    uid: microsoft.quantum.machinelearning.estimateclassificationprobability
-  - name: EstimateGradient
-    uid: microsoft.quantum.machinelearning.estimategradient
-  - name: FeatureRegisterSize
-    uid: microsoft.quantum.machinelearning.featureregistersize
-  - name: InferredLabel
-    uid: microsoft.quantum.machinelearning.inferredlabel
-  - name: InferredLabels
-    uid: microsoft.quantum.machinelearning.inferredlabels
-  - name: InputEncoder
-    uid: microsoft.quantum.machinelearning.inputencoder
-  - name: LabeledSample
-    uid: microsoft.quantum.machinelearning.labeledsample
-  - name: LocalRotationsLayer
-    uid: microsoft.quantum.machinelearning.localrotationslayer
-  - name: Misclassifications
-    uid: microsoft.quantum.machinelearning.misclassifications
-  - name: NMisclassifications
-    uid: microsoft.quantum.machinelearning.nmisclassifications
-  - name: NQubitsRequired
-    uid: microsoft.quantum.machinelearning.nqubitsrequired
-  - name: PartialRotationsLayer
-    uid: microsoft.quantum.machinelearning.partialrotationslayer
-  - name: Sampled
-    uid: microsoft.quantum.machinelearning.sampled
-  - name: SamplingSchedule
-    uid: microsoft.quantum.machinelearning.samplingschedule
-  - name: ScheduleLength
-    uid: microsoft.quantum.machinelearning.schedulelength
-  - name: SequentialModel
-    uid: microsoft.quantum.machinelearning.sequentialmodel
-  - name: StateGenerator
-    uid: microsoft.quantum.machinelearning.stategenerator
-  - name: TrainingOptions
-    uid: microsoft.quantum.machinelearning.trainingoptions
-  - name: TrainSequentialClassifier
-    uid: microsoft.quantum.machinelearning.trainsequentialclassifier
-  - name: TrainSequentialClassifierAtModel
-    uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
-  - name: ValidateSequentialClassifier
-    uid: microsoft.quantum.machinelearning.validatesequentialclassifier
-  - name: ValidationResults
-    uid: microsoft.quantum.machinelearning.validationresults
-- uid: microsoft.quantum.machinelearning.datasets
-  name: Microsoft.Quantum.MachineLearning.Datasets
-  items:
-  - name: IrisTrainingData
-    uid: microsoft.quantum.machinelearning.datasets.iristrainingdata
-  - name: WineData
-    uid: microsoft.quantum.machinelearning.datasets.winedata
 - uid: microsoft.quantum.math
   name: Microsoft.Quantum.Math
   items:

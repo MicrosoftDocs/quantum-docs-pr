@@ -19,11 +19,11 @@ Learn how to install the Microsoft Quantum Development Kit (QDK), so that you ca
 - APIs for Python and .NET languages (C#, F#, and VB.NET) for running quantum programs written in Q#
 - Tools to facilitate your development
 
-Q# programs can run as standalone applications using Visual Studio Code or Visual Studio, through Jupyter Notebooks with the IQ# Jupyter kernel, or paired with a host program written in a .NET language (typically C#) or Python. You can also run Q# programs online using [Codespaces](https://online.visualstudio.com/) or [MyBinder.org](https://mybinder.org/). 
+Q# programs can run as standalone applications using Visual Studio Code or Visual Studio, through Jupyter Notebooks with the IQ# Jupyter kernel, or paired with a host program written in Python or a .NET language (C#, F#). You can also run Q# programs online using [Codespaces](https://online.visualstudio.com/), [MyBinder.org](https://mybinder.org/), or [Docker](#use-the-qdk-with-docker). 
 
 ## Installation options
 
-You can use the QDK three ways:
+You can use the QDK in three ways:
 
 - [Install the QDK locally](#install-the-qdk-locally)
 - [Use the QDK online](#use-the-qdk-online)
@@ -37,8 +37,8 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 |:-----|:-----:|:-----:|:-----:|:-----:|
 |**OS** |Windows, macOS, Linux |Windows only |Windows, macOS, Linux |Windows, macOS, Linux |
 |<br>**Q# standalone** |<br>[Install](#configure-for-vs-code) |<br> [Install](#configure-for-visual-studio)  |<br> [Install](#configure-for-jupyter-notebooks-and-python) |<br>[Install](#configure-for-vs-code) |
-|**Q#  plus Python** |[Install](#configure-for-jupyter-notebooks-and-python) |&#10006; |[Install](#configure-for-jupyter-notebooks-and-python) |[Install](#configure-for-jupyter-notebooks-and-python) |
-|**Q# plus .NET (C#, F#)**|[Install](#configure-for-vs-code) |[Install](#configure-for-visual-studio)|&#10006; |[Install](#configure-for-visual-studio) |
+|**Q#  and Python** |[Install](#configure-for-jupyter-notebooks-and-python) |[Install](#configure-for-visual-studio) |[Install](#configure-for-jupyter-notebooks-and-python) |[Install](#configure-for-jupyter-notebooks-and-python) |
+|**Q# and .NET (C#, F#)**|[Install](#configure-for-vs-code) |[Install](#configure-for-visual-studio)|&#10006; |[Install](#configure-for-visual-studio) |
 
 ### Configure for VS Code
 
@@ -51,6 +51,8 @@ To configure VS Code:
 1. Download and install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and macOS).
 2. Install the [Microsoft QDK for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
+To start writing Q# code with VS Code, see [Develop with Q# applications](xref:microsoft.quantum.install.standalone). 
+
 ### Configure for Visual Studio
 
 #### Prerequisites 
@@ -61,6 +63,8 @@ To configure Visual Studio:
 
 1. Download and install [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 or greater, with the .NET Core cross-platform development workload enabled.
 2. Download and install the [Microsoft QDK extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
+
+To start writing Q# code with Visual Studio, see [Develop with Q# applications](xref:microsoft.quantum.install.standalone).
 
 ### Configure for Jupyter Notebooks and Python
 
@@ -83,6 +87,8 @@ Here's what you need to do to start creating your own Q# notebooks.
     ```
 1. Run `python -c "import qsharp"` from the same terminal to verify your installation and populate your local package cache with all required QDK components.
 
+To start writing Q# code with Python, see [Develop with Q# and Python](xref:microsoft.quantum.install.python).
+
 ### [Install using .NET CLI (advanced)](#tab/tabid-dotnetcli)
 
 1. Prerequisites:
@@ -97,6 +103,8 @@ Here's what you need to do to start creating your own Q# notebooks.
         dotnet tool install -g Microsoft.Quantum.IQSharp
         dotnet iqsharp install
     ```
+
+To start writing Q# code with Jupyter Notebooks, see [Develop with Q# Jupyter Notebooks](xref:microsoft.quantum.install.jupyter).
 
     > [!NOTE]
     > - If you get an error during the `dotnet iqsharp install` step, open a new terminal window and try again.
@@ -115,8 +123,7 @@ You can also develop Q# code without installing anything locally with these opti
 |Resource|Advantages|Limitations|
 |---|---|---|
 |**Visual Studio Codespaces**|A rich online development environment  |Requires an Azure subscription and plan |
-|**Visual Studio Code GitHub Codespaces (beta)**|Online Visual Studio Code experience |Currently in beta, request early access at https://github.com/features/codespaces |
-|**MyBinder** | Free online notebook experience |No persistence |
+|**Binder** | Free online notebook experience |No persistence |
 
 ### Using Visual Studio Codespaces
 
@@ -145,10 +152,9 @@ To configure Binder manually:
 
 You can use our QDK Docker image in your local Docker installation or in the cloud via any service that supports Docker images, such as ACI.
 
-You can download the IQ# Docker image from https://github.com/microsoft/iqsharp/#using-iq-as-a-container.
+You can download the IQ# Docker image from https://github.com/microsoft/iqsharp/#using-iq-as-a-container. 
 
-> [!NOTE]
-> You can also use Docker with a Visual Studio Code Remote Development Container to quickly define development environments. For more information about VS Code Development Containers, see https://github.com/microsoft/Quantum/tree/master/.devcontainer.
+You can also use Docker with a Visual Studio Code Remote Development Container to quickly define development environments. For more information about VS Code Development Containers, see https://github.com/microsoft/Quantum/tree/master/.devcontainer.
 
 ## Next steps
 

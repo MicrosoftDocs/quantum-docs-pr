@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.timesl
 name: TimesL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the product of two inputs.
 syntax: 'function TimesL (a : BigInt, b : BigInt) : BigInt'
 input:
@@ -26,4 +26,3 @@ output:
   - summary: The product $a \times b$.
     isPrimitive: true
     uid: BigInt
-...

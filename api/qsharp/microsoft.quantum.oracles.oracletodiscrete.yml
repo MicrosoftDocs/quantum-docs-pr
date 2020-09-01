@@ -6,12 +6,14 @@
 uid: microsoft.quantum.oracles.oracletodiscrete
 name: OracleToDiscrete
 type: function
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: |-
   Given an operation representing a "black-box" oracle, returns a discrete-time oracle
   which represents the "black-box" oracle repeated multiple times.
-examples: '`OracleToDiscrete(U)(3, target)` is equivalent to `U(target)` repeated three times.'
-syntax: 'function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl)) : Microsoft.Quantum.Oracles.DiscreteOracle'
+examples: '`OracleToDiscrete(U)(3, target)` is equivalent to `U(target)` repeated
+  three times.'
+syntax: 'function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl))
+  : Microsoft.Quantum.Oracles.DiscreteOracle'
 input:
   content: '(blackBoxOracle : (Qubit[] => Unit is Adj + Ctl))'
   types:
@@ -33,6 +35,6 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.DiscreteOracle
   types:
-  - summary: An operation partially applied over the "black-box" oracle representing the discrete-time oracle
+  - summary: An operation partially applied over the "black-box" oracle representing
+      the discrete-time oracle
     uid: microsoft.quantum.oracles.discreteoracle
-...

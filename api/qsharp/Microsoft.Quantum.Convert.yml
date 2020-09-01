@@ -35,7 +35,8 @@ functions:
 - uid: microsoft.quantum.convert.boolasstring
   summary: Converts a given boolean value to an equivalent string representation.
 - uid: microsoft.quantum.convert.doubleasstring
-  summary: Converts a given double-precision floating-point number to an equivalent string representation.
+  summary: Converts a given double-precision floating-point number to an equivalent
+    string representation.
 - uid: microsoft.quantum.convert.doubleasstringwithformat
   summary: |-
     Converts a given double-precision floating-point number to an equivalent string representation,
@@ -82,4 +83,3 @@ functions:
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Calls a function with a given input.
-...

@@ -6,12 +6,13 @@
 uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
 name: JordanWignerClusterOperatorGeneratorSystem
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: |-
   Converts a Hamiltonian described by `JWOptimizedHTerms`
   to a `GeneratorSystem` expressed in terms of the
   `GeneratorIndex` convention defined in this file.
-syntax: 'function JordanWignerClusterOperatorGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
+syntax: 'function JordanWignerClusterOperatorGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[])
+  : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[])'
   types:
@@ -24,4 +25,3 @@ output:
   types:
   - summary: Representation of Hamiltonian as `GeneratorSystem`.
     uid: microsoft.quantum.simulation.generatorsystem
-...

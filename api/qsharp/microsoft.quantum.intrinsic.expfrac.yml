@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.expfrac
 name: ExpFrac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: |-
   Applies the exponential of a multi-qubit Pauli operator
   with an argument given by a dyadic fraction.
@@ -16,7 +16,8 @@ summary: |-
   \end{align}
   where $P_i$ is the $i$th element of `paulis`, and where
   $N = $`Length(paulis)`.
-syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
+syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits
+  : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
   types:
@@ -52,4 +53,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

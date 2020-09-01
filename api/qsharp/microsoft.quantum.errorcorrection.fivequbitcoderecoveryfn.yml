@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.fivequbitcoderecoveryfn
 name: FiveQubitCodeRecoveryFn
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: |-
   Returns function that maps error syndrome measurements to the
   appropriate error-correcting Pauli operators by table lookup for
@@ -31,4 +31,3 @@ output:
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - recoveryfn
-...

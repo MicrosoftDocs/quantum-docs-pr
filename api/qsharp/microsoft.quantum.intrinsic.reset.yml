@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.reset
 name: Reset
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: |-
   Given a single qubit, measures it and ensures it is in the |0⟩ state
   such that it can be safely released.
@@ -22,4 +22,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

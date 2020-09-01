@@ -6,11 +6,12 @@
 uid: microsoft.quantum.simulation.paulistringfromgenidx
 name: PauliStringFromGenIdx
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Extracts the Pauli string and its qubit indices of a Pauli term described
   by a `GeneratorIndex`.
-syntax: 'function PauliStringFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : (Pauli[], Int[])'
+syntax: 'function PauliStringFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)
+  : (Pauli[], Int[])'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
@@ -30,4 +31,3 @@ output:
     - isArray: true
       isPrimitive: true
       uid: Int
-...

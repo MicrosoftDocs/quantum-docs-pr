@@ -6,7 +6,7 @@
 uid: microsoft.quantum.measurement.measureallz
 name: MeasureAllZ
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: |-
   Jointly measures a register of qubits in the Pauli Z basis.
 
@@ -27,4 +27,3 @@ output:
   - summary: The result of measuring $Z \otimes Z \otimes \cdots \otimes Z$.
     isPrimitive: true
     uid: Result
-...

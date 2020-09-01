@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.applyleoperationonphasele
 name: ApplyLEOperationOnPhaseLE
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Applies an operation that takes a
   <xref:microsoft.quantum.arithmetic.phaselittleendian> register as input
@@ -15,7 +15,8 @@ remarks: |-
   The register is transformed to `LittleEndian` by the use of
   <xref:microsoft.quantum.canon.qftle> and is then returned to
   its original representation after application of `op`.
-syntax: 'operation ApplyLEOperationOnPhaseLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+syntax: 'operation ApplyLEOperationOnPhaseLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian
+  => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
@@ -41,4 +42,3 @@ seeAlso:
 - microsoft.quantum.canon.applyleoperationonphaselea
 - microsoft.quantum.canon.applyleoperationonphaselec
 - microsoft.quantum.canon.applyleoperationonphaseleca
-...

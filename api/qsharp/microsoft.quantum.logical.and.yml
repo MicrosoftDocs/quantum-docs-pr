@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.and
 name: And
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Returns the Boolean conjunction of two values.
 remarks: |-
   Unlike the `and` operator, this function does not short-circuit, such that
@@ -36,4 +36,3 @@ output:
   - summary: '`true` if and only if `a` and `b` are both `true`.'
     isPrimitive: true
     uid: Bool
-...

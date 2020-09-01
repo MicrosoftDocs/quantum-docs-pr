@@ -97,4 +97,3 @@ newtypes:
     the sum of absolute-values of all term coefficients in the `Double`.
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbetermindex
   summary: Term data in the optimized block-encoding algorithm.
-...

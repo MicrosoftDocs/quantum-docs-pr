@@ -6,7 +6,7 @@
 uid: microsoft.quantum.characterization.estimatefrequencya
 name: EstimateFrequencyA
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: |-
   Given a preparation that is adjointable and measurement, estimates the frequency
   with which that measurement succeeds (returns `Zero`) by
@@ -15,9 +15,11 @@ remarks: |-
   For adjointable operations, certain assumptions can be made such like
   calling the operation will prepare the qubits to exactly the same state,
   which allow target machines to make some performance optimizations.
-syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
+syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement
+  : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
-  content: '(preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
+  content: '(preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result),
+    nQubits : Int, nMeasurements : Int)'
   types:
   - name: preparation
     summary: |-
@@ -70,4 +72,3 @@ output:
       the number of `Zero` results observed.
     isPrimitive: true
     uid: Double
-...

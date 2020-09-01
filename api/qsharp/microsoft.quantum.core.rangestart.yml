@@ -6,7 +6,7 @@
 uid: microsoft.quantum.core.rangestart
 name: RangeStart
 type: function
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: Returns the defined start value of the given range.
 remarks: |-
   A range expression's first element is `start`,
@@ -28,4 +28,3 @@ output:
   - summary: The defined start value of the given range.
     isPrimitive: true
     uid: Int
-...

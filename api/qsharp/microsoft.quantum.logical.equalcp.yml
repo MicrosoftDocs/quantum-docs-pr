@@ -6,9 +6,10 @@
 uid: microsoft.quantum.logical.equalcp
 name: EqualCP
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Returns true if and only if two inputs are equal.
-syntax: 'function EqualCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Bool'
+syntax: 'function EqualCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar)
+  : Bool'
 input:
   content: '(a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar)'
   types:
@@ -24,4 +25,3 @@ output:
   - summary: '`true` if and only if `a` is equal to `b`.'
     isPrimitive: true
     uid: Bool
-...

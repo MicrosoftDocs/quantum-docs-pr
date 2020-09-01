@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.multiplyi
 name: MultiplyI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Multiply integer `xs` by integer `ys` and store the result in `result`,
   which must be zero initially.
@@ -15,9 +15,12 @@ remarks: |-
   The controlled version was improved by copying out $x_i$ to an ancilla
   qubit conditioned on the control qubits, and then controlling the
   addition on the ancilla qubit.
-syntax: 'operation MultiplyI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation MultiplyI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys :
+  Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)
+  : Unit'
 input:
-  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian,
+    result : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: xs
     summary: $n$-bit multiplicand (LittleEndian)
@@ -36,4 +39,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

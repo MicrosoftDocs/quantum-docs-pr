@@ -15,4 +15,3 @@ operations:
     Performs iterative phase estimation using a random walk to approximate
     Bayesian inference on the classical measurement results from a given
     oracle and eigenstate.
-...

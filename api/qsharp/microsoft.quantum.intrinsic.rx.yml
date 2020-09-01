@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.rx
 name: Rx
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: |-
   Applies a rotation about the $x$-axis by a given angle.
 
@@ -44,4 +44,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

@@ -6,9 +6,10 @@
 uid: microsoft.quantum.convert.intasstring
 name: IntAsString
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: Converts a given integer number to an equivalent string representation.
-remarks: See [C# Convert.ToString](https://docs.microsoft.com/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Int64_) for more details.
+remarks: See [C# Convert.ToString](https://docs.microsoft.com/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Int64_)
+  for more details.
 syntax: 'function IntAsString (a : Int) : String'
 input:
   content: '(a : Int)'
@@ -21,4 +22,3 @@ output:
   types:
   - isPrimitive: true
     uid: String
-...

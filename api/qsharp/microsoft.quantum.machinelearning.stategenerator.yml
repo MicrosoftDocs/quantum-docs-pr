@@ -6,9 +6,9 @@
 uid: microsoft.quantum.machinelearning.stategenerator
 name: StateGenerator
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Describes an operation that prepares a given input to a sequential
   classifier.
-syntax: newtype StateGenerator = (Int, (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl));
-...
+syntax: newtype StateGenerator = (Int, (Microsoft.Quantum.Arithmetic.LittleEndian
+  => Unit is Adj + Ctl));

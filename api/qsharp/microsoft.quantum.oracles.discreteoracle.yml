@@ -6,11 +6,10 @@
 uid: microsoft.quantum.oracles.discreteoracle
 name: DiscreteOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: |-
   Represents a discrete-time oracle.
 
   This is an oracle that implements $U^m$ for a fixed operation $U$
   and a non-negative integer $m$.
 syntax: newtype DiscreteOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
-...

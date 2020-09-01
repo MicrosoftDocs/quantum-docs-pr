@@ -6,9 +6,11 @@
 uid: microsoft.quantum.math.ieeeremainder
 name: IEEERemainder
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Returns the remainder resulting from the division of a specified number by another specified number.
-remarks: See [System.Math.IEEERemainder](https://docs.microsoft.com/dotnet/api/system.math.ieeeremainder) for more details.
+namespace: microsoft.quantum.math
+summary: Returns the remainder resulting from the division of a specified number by
+  another specified number.
+remarks: See [System.Math.IEEERemainder](https://docs.microsoft.com/dotnet/api/system.math.ieeeremainder)
+  for more details.
 syntax: 'function IEEERemainder (x : Double, y : Double) : Double'
 input:
   content: '(x : Double, y : Double)'
@@ -24,4 +26,3 @@ output:
   types:
   - isPrimitive: true
     uid: Double
-...

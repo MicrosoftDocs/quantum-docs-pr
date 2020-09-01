@@ -6,11 +6,12 @@
 uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
 name: RotationPhasesAsReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: |-
   Converts phases specified as single-qubit rotations to phases
   specified as partial reflections.
-syntax: 'function RotationPhasesAsReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+syntax: 'function RotationPhasesAsReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases)
+  : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 references: |-
   We use the convention in
 
@@ -29,4 +30,3 @@ output:
   types:
   - summary: An operation that implements phases specified as partial reflections.
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
-...

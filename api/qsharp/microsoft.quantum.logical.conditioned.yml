@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.conditioned
 name: Conditioned
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Returns one of two values, depending on the value of a Boolean condition.
 remarks: |-
   Unlike the `?|` operator, this function does not short-circuit, such that
@@ -40,4 +40,3 @@ output:
   - summary: '`ifTrue` if `condition` is `true`, and `ifFalse` otherwise.'
     uid: "'T"
     isLocal: true
-...

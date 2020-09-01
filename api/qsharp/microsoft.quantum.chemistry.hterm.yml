@@ -6,9 +6,8 @@
 uid: microsoft.quantum.chemistry.hterm
 name: HTerm
 type: newtype
-namespace: Microsoft.Quantum.Chemistry
+namespace: microsoft.quantum.chemistry
 summary: |-
   Format of data passed from C# to Q# to represent a term of the Hamiltonian.
   The meaning of the data represented is determined by the algorithm that receives it.
 syntax: newtype HTerm = (Int[], Double[]);
-...

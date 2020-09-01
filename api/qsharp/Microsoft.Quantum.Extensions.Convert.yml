@@ -94,4 +94,3 @@ functions:
 
     ToStringIFormat has been deprecated. Please use @"microsoft.quantum.convert.intasstringwithformat" instead.
     Please use @"microsoft.quantum.convert.intasstringwithformat".
-...

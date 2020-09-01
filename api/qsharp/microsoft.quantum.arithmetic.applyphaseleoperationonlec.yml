@@ -6,10 +6,12 @@
 uid: microsoft.quantum.arithmetic.applyphaseleoperationonlec
 name: ApplyPhaseLEOperationOnLEC
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-syntax: 'operation ApplyPhaseLEOperationOnLEC (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit is Ctl), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+namespace: microsoft.quantum.arithmetic
+syntax: 'operation ApplyPhaseLEOperationOnLEC (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian
+  => Unit is Ctl), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
-  content: '(op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit is Ctl), target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit is Ctl),
+    target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: op
     isOperation: true
@@ -33,4 +35,3 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applyphaseleoperationonle
-...

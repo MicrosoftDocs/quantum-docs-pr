@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.r1frac
 name: R1Frac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: |-
   Applies a rotation about the $\ket{1}$ state by an angle specified
   as a dyadic fraction.
@@ -55,4 +55,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

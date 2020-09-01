@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.multiplygeneratorindex
 name: MultiplyGeneratorIndex
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: Multiplies the coefficient in a `GeneratorIndex`.
 examples: |-
   ```qsharp
@@ -14,7 +14,8 @@ examples: |-
   let ((idxPaulis, idxDoubles), idxQubits) = MultiplyGeneratorIndex(multiplier, gen);
   // idxDoubles[0] == multiplier * coeff;
   ```
-syntax: 'function MultiplyGeneratorIndex (multiplier : Double, generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Microsoft.Quantum.Simulation.GeneratorIndex'
+syntax: 'function MultiplyGeneratorIndex (multiplier : Double, generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)
+  : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(multiplier : Double, generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
@@ -34,4 +35,3 @@ output:
     uid: microsoft.quantum.simulation.generatorindex
 seeAlso:
 - microsoft.quantum.canon.generatorindex
-...

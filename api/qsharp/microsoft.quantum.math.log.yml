@@ -6,9 +6,10 @@
 uid: microsoft.quantum.math.log
 name: Log
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the natural (base $e$) logarithm of a specified number.
-remarks: See [System.Math.Log](https://docs.microsoft.com/dotnet/api/system.math.log) for more details.
+remarks: See [System.Math.Log](https://docs.microsoft.com/dotnet/api/system.math.log)
+  for more details.
 syntax: 'function Log (input : Double) : Double'
 input:
   content: '(input : Double)'
@@ -21,4 +22,3 @@ output:
   types:
   - isPrimitive: true
     uid: Double
-...

@@ -6,14 +6,17 @@
 uid: microsoft.quantum.arithmetic.multiplyfxp
 name: MultiplyFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Multiplies two fixed-point numbers in quantum registers.
 remarks: |-
   The current implementation requires the three fixed-point numbers
   to have the same point position and the same number of qubits.
-syntax: 'operation MultiplyFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+syntax: 'operation MultiplyFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2
+  : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)
+  : Unit'
 input:
-  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint,
+    result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: fp1
     summary: First fixed-point number.
@@ -32,4 +35,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
 name: IncrementPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Performs a modular increment of a qubit register by an integer constant.
 
@@ -22,7 +22,8 @@ remarks: |-
 
   For the circuit diagram and explanation see Figure 5 on [Page 5
   of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5).
-syntax: 'operation IncrementPhaseByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+syntax: 'operation IncrementPhaseByModularInteger (increment : Int, modulus : Int,
+  target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
@@ -35,7 +36,8 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Integer $y$ in phase-encoded little-endian format that `increment` $a$ is added to.
+    summary: Integer $y$ in phase-encoded little-endian format that `increment` $a$
+      is added to.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -47,4 +49,3 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
-...

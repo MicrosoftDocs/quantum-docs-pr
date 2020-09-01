@@ -6,7 +6,7 @@
 uid: microsoft.quantum.random.discreteuniformdistribution
 name: DiscreteUniformDistribution
 type: function
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: Returns a uniform distribution over a given inclusive range.
 remarks: Fails if `max <= min`.
 examples: |-
@@ -37,4 +37,3 @@ output:
     uid: microsoft.quantum.random.discretedistribution
 seeAlso:
 - microsoft.quantum.drawrandomdouble
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.maj
 name: MAJ
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   This applies the in-place majority operation to 3 qubits.
 
@@ -38,4 +38,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

@@ -6,22 +6,26 @@
 uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 name: MultiplyAndAddPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   The same as MultiplyAndAddByModularInteger, but assumes that the summand encodes
   integers in QFT basis.
 remarks: |-
   Assumes that `phaseSummand` has the highest bit set to 0.
   Also assumes that the value of `phaseSummand` is less than $N$.
-syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus
+  : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)
+  : Unit'
 input:
-  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian,
+    phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: constMultiplier
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: The modulus $N$ which addition and multiplication is taken with respect to.
+    summary: The modulus $N$ which addition and multiplication is taken with respect
+      to.
     isPrimitive: true
     uid: Int
   - name: multiplier
@@ -44,4 +48,3 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
-...

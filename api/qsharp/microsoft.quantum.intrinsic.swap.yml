@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.swap
 name: SWAP
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: |-
   Applies the SWAP gate to a pair of qubits.
 
@@ -49,4 +49,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifelser
 name: ApplyIfElseR
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies one of two operations, depending on the value of a classical
   result.
@@ -14,9 +14,11 @@ summary: |-
   Given a result `result`, applies the operation `zeroOp` with `zeroInput` as
   its input when `result` is equal to `Zero`, and applies `oneOp(oneInput)`
   when `result == One`.
-syntax: "operation ApplyIfElseR (result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U => Unit), oneInput : 'U)) : Unit"
+syntax: "operation ApplyIfElseR (result : Result, (zeroOp : ('T => Unit), zeroInput\
+  \ : 'T), (oneOp : ('U => Unit), oneInput : 'U)) : Unit"
 input:
-  content: "(result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U => Unit), oneInput : 'U))"
+  content: "(result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U\
+    \ => Unit), oneInput : 'U))"
   types:
   - name: result
     summary: |-
@@ -70,4 +72,3 @@ seeAlso:
 - microsoft.quantum.canon.applyifelserc
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.decomposedintotimestepsca
 name: DecomposedIntoTimeStepsCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Returns an operation implementing the Trotter–Suzuki integrator for
   a given operation.
@@ -37,10 +37,12 @@ remarks: |-
 
   Higher even values of `order` are implemented using the recursive
   construction of [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139).
-syntax: "function DecomposedIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
+syntax: "function DecomposedIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T)\
+  \ => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 references: '- [ *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* ](https://arxiv.org/abs/quant-ph/0508139)'
 input:
-  content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int)"
+  content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder\
+    \ : Int)"
   types:
   - name: nSteps
     summary: The number of operations to be decomposed into time steps.
@@ -98,4 +100,3 @@ typeParameters:
   summary: |-
     The type which each time step should act upon; typically, either
     `Qubit[]` or `Qubit`.
-...

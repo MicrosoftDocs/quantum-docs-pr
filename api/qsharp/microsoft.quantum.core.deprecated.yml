@@ -6,7 +6,6 @@
 uid: microsoft.quantum.core.deprecated
 name: Deprecated
 type: newtype
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: Compiler-recognized attribute used to mark a type or callable as deprecated.
 syntax: newtype Deprecated = String;
-...

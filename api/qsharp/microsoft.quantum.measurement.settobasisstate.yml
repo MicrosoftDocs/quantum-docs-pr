@@ -6,7 +6,7 @@
 uid: microsoft.quantum.measurement.settobasisstate
 name: SetToBasisState
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: |-
   Sets a qubit to a given computational basis state by measuring the
   qubit and applying a bit flip if needed.
@@ -30,4 +30,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

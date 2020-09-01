@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.modl
 name: ModL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the modulus of a number with respect to another number.
 syntax: 'function ModL (a : BigInt, b : BigInt) : BigInt'
 input:
@@ -26,4 +26,3 @@ output:
   - summary: The modulus $a \bmod b$.
     isPrimitive: true
     uid: BigInt
-...

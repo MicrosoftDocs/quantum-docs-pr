@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.delay
 name: Delay
 type: operation
-namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+namespace: microsoft.quantum.simulation.quantumprocessor.extensions
 syntax: "operation Delay (op : ('T => Unit), arg : 'T, aux : Unit) : Unit"
 input:
   content: "(op : ('T => Unit), arg : 'T, aux : Unit)"
@@ -32,4 +32,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

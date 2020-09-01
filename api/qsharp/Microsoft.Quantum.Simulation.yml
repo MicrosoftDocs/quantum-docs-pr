@@ -232,4 +232,3 @@ newtypes:
     to unitary time-evolution for some time-interval.
 - uid: microsoft.quantum.simulation.unitary
   summary: Represents evolution under a unitary operator.
-...

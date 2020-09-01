@@ -6,8 +6,9 @@
 uid: microsoft.quantum.canon.inplacemajority
 name: InPlaceMajority
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: InPlaceMajority has been deprecated. Please use @"microsoft.quantum.arithmetic.applymajorityinplace" instead.
+namespace: microsoft.quantum.canon
+summary: InPlaceMajority has been deprecated. Please use @"microsoft.quantum.arithmetic.applymajorityinplace"
+  instead.
 syntax: 'operation InPlaceMajority (output : Qubit, input : Qubit[]) : Unit'
 input:
   content: '(output : Qubit, input : Qubit[])'
@@ -27,4 +28,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

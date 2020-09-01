@@ -6,11 +6,12 @@
 uid: microsoft.quantum.arithmetic.applyreversedopbe
 name: ApplyReversedOpBE
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Applies an operation that takes big-endian input to a register encoding
   an unsigned integer using little-endian format.
-syntax: 'operation ApplyReversedOpBE (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ApplyReversedOpBE (op : (Microsoft.Quantum.Arithmetic.BigEndian
+  => Unit), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit), register : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -36,4 +37,3 @@ seeAlso:
 - applyreversedopbea
 - applyreversedopbec
 - applyreversedopbeca
-...

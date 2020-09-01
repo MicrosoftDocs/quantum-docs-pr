@@ -6,9 +6,10 @@
 uid: microsoft.quantum.math.mini
 name: MinI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the smaller of two specified numbers.
-remarks: See [System.Math.Min](https://docs.microsoft.com/dotnet/api/system.math.min) for more details.
+remarks: See [System.Math.Min](https://docs.microsoft.com/dotnet/api/system.math.min)
+  for more details.
 syntax: 'function MinI (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'
@@ -24,4 +25,3 @@ output:
   types:
   - isPrimitive: true
     uid: Int
-...

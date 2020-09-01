@@ -6,9 +6,10 @@
 uid: microsoft.quantum.math.round
 name: Round
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Rounds a value to the nearest integer.
-remarks: See [System.Math.Round](https://docs.microsoft.com/dotnet/api/system.math.round) for more details.
+remarks: See [System.Math.Round](https://docs.microsoft.com/dotnet/api/system.math.round)
+  for more details.
 syntax: 'function Round (a : Double) : Int'
 input:
   content: '(a : Double)'
@@ -21,4 +22,3 @@ output:
   types:
   - isPrimitive: true
     uid: Int
-...

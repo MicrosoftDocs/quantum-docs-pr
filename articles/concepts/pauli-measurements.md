@@ -71,8 +71,8 @@ It is also equivalent to applying $HS^\dagger$ to the quantum state vector and t
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }

@@ -34,7 +34,7 @@ To configure Visual Studio:
 To configure Visual Studio Codespaces:
 
 1. Create an [Azure account](https://azure.microsoft.com/free/).
-2. Create a Codespaces environment. Please follow the [quickstart guide](https://docs.microsoft.com/visualstudio/online/quickstarts/browser). When creating the Codespace, we recommend to enter `microsoft/Quantum` in the "Git Repository" field to load QDK-specific settings.
+2. Create a Codespaces environment. Please follow the [quickstart guide](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). When creating the Codespace, we recommend to enter `microsoft/Quantum` in the "Git Repository" field to load QDK-specific settings.
 3. You can now launch your new environment and start developing in the browser via the [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments). Alternatively, it is possible to use your local installation of VS Code and use Codespaces as a [remote environment](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
 
 

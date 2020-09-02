@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyfermionicswap
 name: ApplyFermionicSWAP
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Applies the Fermionic SWAP.
 
@@ -50,3 +50,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.intrinsic.swap
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.transformedoperation
 name: TransformedOperation
 type: function
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Given a function and an operation, returns a new operation whose
   input is transformed by the given function.
@@ -21,8 +21,7 @@ examples: |-
   ```qsharp
   let leOp = TransformedOperation(LittleEndianAsBigEndian, ApplyXorInPlaceBE);
   ```
-syntax: "function TransformedOperation (fn : ('U -> 'T), op : ('T => Unit)) : ('U\
-  \ => Unit)"
+syntax: "function TransformedOperation (fn : ('U -> 'T), op : ('T => Unit)) : ('U => Unit)"
 input:
   content: "(fn : ('U -> 'T), op : ('T => Unit))"
   types:
@@ -71,3 +70,4 @@ seeAlso:
 - transformedoperationca
 - applywithinputtransformation
 - compose
+...

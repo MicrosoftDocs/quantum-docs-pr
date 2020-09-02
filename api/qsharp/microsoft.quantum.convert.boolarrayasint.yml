@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.boolarrayasint
 name: BoolArrayAsInt
 type: function
-namespace: microsoft.quantum.convert
+namespace: Microsoft.Quantum.Convert
 summary: Produces a positive integer from a string of bits in little endian format.
 syntax: 'function BoolArrayAsInt (bits : Bool[]) : Int'
 input:
@@ -22,3 +22,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

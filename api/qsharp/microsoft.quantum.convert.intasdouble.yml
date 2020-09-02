@@ -6,12 +6,11 @@
 uid: microsoft.quantum.convert.intasdouble
 name: IntAsDouble
 type: function
-namespace: microsoft.quantum.convert
+namespace: Microsoft.Quantum.Convert
 summary: |-
   Converts a given integer to an equivalent double-precision
   floating-point number.
-remarks: See [C# Convert.ToDouble](https://docs.microsoft.com/dotnet/api/system.convert.todouble?view=netframework-4.7.1#System_Convert_ToDouble_System_Int64_)
-  for more details.
+remarks: See [C# Convert.ToDouble](https://docs.microsoft.com/dotnet/api/system.convert.todouble?view=netframework-4.7.1#System_Convert_ToDouble_System_Int64_) for more details.
 syntax: 'function IntAsDouble (a : Int) : Double'
 input:
   content: '(a : Int)'
@@ -24,3 +23,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.assertphase
 name: AssertPhase
 type: operation
-namespace: microsoft.quantum.diagnostics
+namespace: Microsoft.Quantum.Diagnostics
 summary: |-
   Asserts that the phase of an equal superposition state has the expected value.
 
@@ -27,8 +27,7 @@ examples: |-
   `qubit` is in state $\ket{\psi}=e^{-i 2.2}\sqrt{1/2}\ket{0}+e^{i 0.2}\sqrt{1/2}\ket{1}$;
 
   - `AssertPhase(-1.2,qubit,10e-10);`
-syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double)
-  : Unit'
+syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Double, qubit : Qubit, tolerance : Double)'
   types:
@@ -49,3 +48,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

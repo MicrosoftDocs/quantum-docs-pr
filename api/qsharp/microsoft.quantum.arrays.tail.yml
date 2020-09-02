@@ -6,15 +6,14 @@
 uid: microsoft.quantum.arrays.tail
 name: Tail
 type: function
-namespace: microsoft.quantum.arrays
+namespace: Microsoft.Quantum.Arrays
 summary: Returns the last element of the array.
 syntax: "function Tail (array : 'A[]) : 'A"
 input:
   content: "(array : 'A[])"
   types:
   - name: array
-    summary: Array of which the last element is taken. Array must have length at least
-      1.
+    summary: Array of which the last element is taken. Array must have length at least 1.
     isArray: true
     uid: "'A"
     isLocal: true
@@ -27,3 +26,4 @@ output:
 typeParameters:
 - uid: "'A"
   summary: The type of the array elements.
+...

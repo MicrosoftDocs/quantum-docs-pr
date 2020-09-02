@@ -6,10 +6,9 @@
 uid: microsoft.quantum.math.minuscp
 name: MinusCP
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Returns the difference between two inputs.
-syntax: 'function MinusCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar)
-  : Microsoft.Quantum.Math.ComplexPolar'
+syntax: 'function MinusCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.ComplexPolar'
 input:
   content: '(a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar)'
   types:
@@ -24,3 +23,4 @@ output:
   types:
   - summary: The difference $a - b$.
     uid: microsoft.quantum.math.complexpolar
+...

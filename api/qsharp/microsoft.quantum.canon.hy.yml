@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.hy
 name: HY
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Applies the Y-basis analog to the Hadamard transformation
   that interchanges the Z and Y axes.
@@ -37,3 +37,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

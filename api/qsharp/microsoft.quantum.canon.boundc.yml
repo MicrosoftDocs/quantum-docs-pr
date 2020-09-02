@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.boundc
 name: BoundC
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Given an array of operations acting on a single input,
   produces a new operation that
@@ -65,4 +65,3 @@ typeParameters:
   summary: The target on which each of the operations in the array act.
 seeAlso:
 - microsoft.quantum.canon.bound
-...

@@ -6,8 +6,9 @@
 uid: microsoft.quantum.extensions.math.arctan2
 name: ArcTan2
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
-summary: ArcTan2 has been deprecated. Please use @"microsoft.quantum.math.arctan2" instead.
+namespace: microsoft.quantum.extensions.math
+summary: ArcTan2 has been deprecated. Please use @"microsoft.quantum.math.arctan2"
+  instead.
 syntax: 'function ArcTan2 (y : Double, x : Double) : Double'
 input:
   content: '(y : Double, x : Double)'
@@ -23,4 +24,3 @@ output:
   types:
   - isPrimitive: true
     uid: Double
-...

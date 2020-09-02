@@ -27,7 +27,8 @@ functions:
     Returns the bitwise OR of two integers.
     This performs the same computation as the built-in `|||` operator.
 - uid: microsoft.quantum.bitwise.parity
-  summary: Returns the bitwise PARITY of an integer (1 if its binary representation contains odd number of ones and 0 otherwise).
+  summary: Returns the bitwise PARITY of an integer (1 if its binary representation
+    contains odd number of ones and 0 otherwise).
 - uid: microsoft.quantum.bitwise.rightshiftedi
   summary: |-
     Shifts the bitwise representation of a number right by a given number of
@@ -52,4 +53,3 @@ summary: |2-
    # Summary
    This namespace contains functions for acting on the bitwise representation of
    classical data types.
-...

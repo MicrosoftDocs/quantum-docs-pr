@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applypauli
 name: ApplyPauli
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Given a multi-qubit Pauli operator, applies the corresponding operation to
   a register.
@@ -29,7 +29,8 @@ input:
   content: '(pauli : Pauli[], target : Qubit[])'
   types:
   - name: pauli
-    summary: A multi-qubit Pauli operator represented as an array of single-qubit Pauli operators.
+    summary: A multi-qubit Pauli operator represented as an array of single-qubit
+      Pauli operators.
     isArray: true
     isPrimitive: true
     uid: Pauli
@@ -46,4 +47,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

@@ -6,12 +6,13 @@
 uid: microsoft.quantum.math.extendedgreatestcommondivisorl
 name: ExtendedGreatestCommonDivisorL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: |-
   Computes a tuple $(u,v)$ such that $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$,
   where $\operatorname{GCD}$ is $a$
   greatest common divisor of $a$ and $b$. The GCD is always positive.
-syntax: 'function ExtendedGreatestCommonDivisorL (a : BigInt, b : BigInt) : (BigInt, BigInt)'
+syntax: 'function ExtendedGreatestCommonDivisorL (a : BigInt, b : BigInt) : (BigInt,
+  BigInt)'
 references: '- This implementation is according to https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
 input:
   content: '(a : BigInt, b : BigInt)'
@@ -21,16 +22,17 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: b
-    summary: the second number of which extended greatest common divisor is being computed
+    summary: the second number of which extended greatest common divisor is being
+      computed
     isPrimitive: true
     uid: BigInt
 output:
   content: (BigInt, BigInt)
   types:
-  - summary: Tuple $(u,v)$ with the property $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$.
+  - summary: Tuple $(u,v)$ with the property $u \cdot a + v \cdot b = \operatorname{GCD}(a,
+      b)$.
     types:
     - isPrimitive: true
       uid: BigInt
     - isPrimitive: true
       uid: BigInt
-...

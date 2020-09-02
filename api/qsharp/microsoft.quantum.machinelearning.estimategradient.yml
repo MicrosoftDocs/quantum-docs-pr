@@ -6,16 +6,19 @@
 uid: microsoft.quantum.machinelearning.estimategradient
 name: EstimateGradient
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Estimates the training gradient for a sequential classifier at a
   particular model and for a given encoded input.
 remarks: |-
   This operation uses a Hadamard test and the parameter shift technique
   together to estimate the gradient.
-syntax: 'operation EstimateGradient (model : Microsoft.Quantum.MachineLearning.SequentialModel, encodedInput : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements : Int) : Double[]'
+syntax: 'operation EstimateGradient (model : Microsoft.Quantum.MachineLearning.SequentialModel,
+  encodedInput : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements :
+  Int) : Double[]'
 input:
-  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, encodedInput : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements : Int)'
+  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, encodedInput
+    : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements : Int)'
   types:
   - name: model
     summary: The sequential model whose gradient is to be estimated.
@@ -38,4 +41,3 @@ output:
     isArray: true
     isPrimitive: true
     uid: Double
-...

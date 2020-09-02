@@ -6,11 +6,12 @@
 uid: microsoft.quantum.amplitudeamplification.fixedpointreflectionphases
 name: FixedPointReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: |-
   Computes partial reflection phases for fixed-point amplitude
   amplification.
-syntax: 'function FixedPointReflectionPhases (nQueries : Int, successMin : Double) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+syntax: 'function FixedPointReflectionPhases (nQueries : Int, successMin : Double)
+  : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 references: |-
   We use the phases in "Fixed-Point Amplitude Amplification with
   an Optimal Number of Queries"
@@ -39,4 +40,3 @@ output:
       Array of phases that can be used in fixed-point amplitude amplification
       quantum algorithm implementation.
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
-...

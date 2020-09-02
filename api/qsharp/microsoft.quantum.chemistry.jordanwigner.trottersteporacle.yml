@@ -6,11 +6,14 @@
 uid: microsoft.quantum.chemistry.jordanwigner.trottersteporacle
 name: TrotterStepOracle
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: Returns Trotter step operation and the parameters necessary to run it.
-syntax: 'function TrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
+syntax: 'function TrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData,
+  trotterStepSize : Double, trotterOrder : Int) : (Int, (Double, (Qubit[] => Unit
+  is Adj + Ctl)))'
 input:
-  content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int)'
+  content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData,
+    trotterStepSize : Double, trotterOrder : Int)'
   types:
   - name: qSharpData
     summary: Hamiltonian described by `JordanWignerEncodingData` format.
@@ -49,4 +52,3 @@ output:
         functors:
         - Adjoint
         - Controlled
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.mappedbyindex
 name: MappedByIndex
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Given an array and a function that is defined
   for the indexed elements of the array, returns a new array that consists
@@ -61,4 +61,3 @@ typeParameters:
   summary: The result type of the `mapper` function.
 seeAlso:
 - mapped
-...

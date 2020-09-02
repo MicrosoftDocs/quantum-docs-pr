@@ -6,7 +6,7 @@
 uid: microsoft.quantum.random.drawrandombool
 name: DrawRandomBool
 type: operation
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: |-
   Given a success probability, returns a single Bernoulli trial that
   is true with the given probability.
@@ -32,4 +32,3 @@ output:
       probability `1.0 - successProbability`.
     isPrimitive: true
     uid: Bool
-...

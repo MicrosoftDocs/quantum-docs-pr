@@ -6,7 +6,7 @@
 uid: microsoft.quantum.amplitudeamplification.standardreflectionphases
 name: StandardReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: |-
   Computes partial reflection phases for standard amplitude
   amplification.
@@ -28,4 +28,3 @@ output:
   types:
   - summary: An operation that implements phases specified as partial reflections
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
-...

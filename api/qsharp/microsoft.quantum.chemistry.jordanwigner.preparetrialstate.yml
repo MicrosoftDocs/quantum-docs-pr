@@ -6,10 +6,12 @@
 uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstate
 name: PrepareTrialState
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-syntax: 'operation PrepareTrialState (stateData : (Int, Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]), qubits : Qubit[]) : Unit'
+namespace: microsoft.quantum.chemistry.jordanwigner
+syntax: 'operation PrepareTrialState (stateData : (Int, Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]),
+  qubits : Qubit[]) : Unit'
 input:
-  content: '(stateData : (Int, Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]), qubits : Qubit[])'
+  content: '(stateData : (Int, Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]),
+    qubits : Qubit[])'
   types:
   - name: stateData
     types:
@@ -26,4 +28,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

@@ -6,11 +6,12 @@
 uid: microsoft.quantum.optimization.localunivariateminimum
 name: LocalUnivariateMinimum
 type: function
-namespace: Microsoft.Quantum.Optimization
+namespace: microsoft.quantum.optimization
 summary: |-
   Returns the local minimum for a univariate function over a bounded interval,
   using a golden interval search.
-syntax: 'function LocalUnivariateMinimum (fn : (Double -> Double), bounds : (Double, Double), tolerance : Double) : Microsoft.Quantum.Optimization.UnivariateOptimizationResult'
+syntax: 'function LocalUnivariateMinimum (fn : (Double -> Double), bounds : (Double,
+  Double), tolerance : Double) : Microsoft.Quantum.Optimization.UnivariateOptimizationResult'
 input:
   content: '(fn : (Double -> Double), bounds : (Double, Double), tolerance : Double)'
   types:
@@ -44,4 +45,3 @@ output:
   types:
   - summary: A local optima of the given function, located within the given bounds.
     uid: microsoft.quantum.optimization.univariateoptimizationresult
-...

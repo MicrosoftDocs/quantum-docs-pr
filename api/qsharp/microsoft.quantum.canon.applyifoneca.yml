@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifoneca
 name: ApplyIfOneCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a unitary operation conditioned on a classical result value being one.
 
@@ -14,7 +14,8 @@ summary: |-
   if `result` is `One`. If `Zero`, nothing happens to the `target`.
   The suffix `CA` indicates that the operation to be applied is unitary
   (controllable and adjointable).
-syntax: "operation ApplyIfOneCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
+syntax: "operation ApplyIfOneCA (result : Result, (op : ('T => Unit is Adj + Ctl),\
+  \ target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
   types:
@@ -55,4 +56,3 @@ seeAlso:
 - microsoft.quantum.canon.applyifonec
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
 name: StatePreparationComplexCoefficients
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: |-
   Returns an operation that prepares a specific quantum state.
 
@@ -42,7 +42,8 @@ examples: |-
       op(qubitsLE);
   }
   ```
-syntax: 'function StatePreparationComplexCoefficients (coefficients : Microsoft.Quantum.Math.ComplexPolar[]) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)'
+syntax: 'function StatePreparationComplexCoefficients (coefficients : Microsoft.Quantum.Math.ComplexPolar[])
+  : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)'
 input:
   content: '(coefficients : Microsoft.Quantum.Math.ComplexPolar[])'
   types:
@@ -68,4 +69,3 @@ output:
     functors:
     - Adjoint
     - Controlled
-...

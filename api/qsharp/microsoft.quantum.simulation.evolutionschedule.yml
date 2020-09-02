@@ -6,11 +6,11 @@
 uid: microsoft.quantum.simulation.evolutionschedule
 name: EvolutionSchedule
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Represents a time-dependent dynamical generator.
 
   The `Double`
   parameter is a schedule in $[0, 1]$.
-syntax: newtype EvolutionSchedule = (Microsoft.Quantum.Simulation.EvolutionSet, (Double -> Microsoft.Quantum.Simulation.GeneratorSystem));
-...
+syntax: newtype EvolutionSchedule = (Microsoft.Quantum.Simulation.EvolutionSet, (Double
+  -> Microsoft.Quantum.Simulation.GeneratorSystem));

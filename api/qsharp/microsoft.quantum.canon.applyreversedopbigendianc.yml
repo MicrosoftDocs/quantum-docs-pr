@@ -6,11 +6,14 @@
 uid: microsoft.quantum.canon.applyreversedopbigendianc
 name: ApplyReversedOpBigEndianC
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: ApplyReversedOpBigEndianC has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopbec" instead.
-syntax: 'operation ApplyReversedOpBigEndianC (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+namespace: microsoft.quantum.canon
+summary: ApplyReversedOpBigEndianC has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopbec"
+  instead.
+syntax: 'operation ApplyReversedOpBigEndianC (op : (Microsoft.Quantum.Arithmetic.BigEndian
+  => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
-  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register
+    : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: op
     isOperation: true
@@ -32,4 +35,3 @@ output:
     uid: Unit
 functors:
 - Controlled
-...

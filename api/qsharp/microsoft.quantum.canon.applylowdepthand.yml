@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applylowdepthand
 name: ApplyLowDepthAnd
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Inverts a given target qubit if and only if both control qubits are in
   the 1 state, with T-depth 1, using measurement to perform the adjoint
@@ -17,7 +17,8 @@ summary: |-
   requires one helper qubit, and may therefore be preferable to a CCNOT
   operation, if `target` is known to be 0.  The adjoint of this operation
   is measurement based and requires no T gates, and no helper qubit.
-syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target :
+  Qubit) : Unit'
 references: |-
   - Cody Jones: "Novel constructions for the fault-tolerant Toffoli gate",
     Phys. Rev. A 87, 022328, 2013
@@ -50,4 +51,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.bitfliprecoveryfn
 name: BitFlipRecoveryFn
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: |-
   Function for recovery Pauli operations for given syndrome measurement
   by table lookup for the ⟦3, 1, 1⟧ bit flip code.
@@ -24,4 +24,3 @@ output:
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - microsoft.quantum.canon.recoveryfn
-...

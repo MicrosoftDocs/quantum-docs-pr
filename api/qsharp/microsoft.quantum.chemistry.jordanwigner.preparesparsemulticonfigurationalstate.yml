@@ -6,13 +6,16 @@
 uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
 name: PrepareSparseMultiConfigurationalState
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: |-
   Sparse multi-configurational state preparation of trial state by adding excitations
   to initial trial state.
-syntax: 'operation PrepareSparseMultiConfigurationalState (initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[]) : Unit'
+syntax: 'operation PrepareSparseMultiConfigurationalState (initialStatePreparation
+  : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[],
+  qubits : Qubit[]) : Unit'
 input:
-  content: '(initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[])'
+  content: '(initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[],
+    qubits : Qubit[])'
   types:
   - name: initialStatePreparation
     summary: Unitary to prepare initial trial state.
@@ -43,4 +46,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

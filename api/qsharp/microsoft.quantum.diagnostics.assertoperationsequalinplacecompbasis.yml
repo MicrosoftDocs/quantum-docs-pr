@@ -6,19 +6,22 @@
 uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
 name: AssertOperationsEqualInPlaceCompBasis
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: |-
   Checks if the operation `givenU` is equal to the operation `expectedU` on
   the given input size  by checking the action of the operations only on
   the vectors from the computational basis.
   This is a necessary, but not sufficient, condition for the equality of
   two unitaries.
-syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
+syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU :
+  (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
 input:
-  content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
+  content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit
+    is Adj))'
   types:
   - name: nQubits
-    summary: The number of qubits $n$ that the operations `givenU` and `expectedU` operate on.
+    summary: The number of qubits $n$ that the operations `givenU` and `expectedU`
+      operate on.
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -52,4 +55,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

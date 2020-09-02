@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.dividei
 name: DivideI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Divides two quantum integers.
 
@@ -17,9 +17,11 @@ remarks: |-
   Uses a standard shift-and-subtract approach to implement the division.
   The controlled version is specialized such the subtraction does not
   require additional controls.
-syntax: 'operation DivideI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation DivideI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian,
+  result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
-  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian,
+    result : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: xs
     summary: $n$-bit dividend, will be replaced by the remainder.
@@ -40,4 +42,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

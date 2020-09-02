@@ -6,7 +6,7 @@
 uid: microsoft.quantum.random.drawrandomint
 name: DrawRandomInt
 type: operation
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: Draws a random integer in a given inclusive range.
 remarks: Fails if `max <= min`.
 examples: |-
@@ -37,4 +37,3 @@ output:
     uid: Int
 seeAlso:
 - microsoft.quantum.discreteuniformdistribution
-...

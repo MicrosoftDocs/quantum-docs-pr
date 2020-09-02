@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.featureregistersize
 name: FeatureRegisterSize
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Returns the number of qubits required to encode a particular feature
   vector.
@@ -27,4 +27,3 @@ output:
       as a number of qubits.
     isPrimitive: true
     uid: Int
-...

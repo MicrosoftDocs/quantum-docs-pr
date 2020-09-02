@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.timesi
 name: TimesI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the product of two inputs.
 syntax: 'function TimesI (a : Int, b : Int) : Int'
 input:
@@ -26,4 +26,3 @@ output:
   - summary: The product $a \times b$.
     isPrimitive: true
     uid: Int
-...

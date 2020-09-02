@@ -6,7 +6,7 @@
 uid: microsoft.quantum.random.drawcategorical
 name: DrawCategorical
 type: operation
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: |-
   Draws a random sample from a categorical distribution specified by a
   list of probablities.
@@ -37,4 +37,3 @@ output:
     uid: Int
 seeAlso:
 - microsoft.quantum.random.categoricaldistribution
-...

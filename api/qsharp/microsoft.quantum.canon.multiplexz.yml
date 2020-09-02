@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.multiplexz
 name: MultiplexZ
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a Pauli Z rotation conditioned on an array of qubits.
 
@@ -23,13 +23,15 @@ summary: |-
 remarks: |-
   `coefficients` will be padded with elements $\theta_j = 0.0$ if
   fewer than $2^n$ are specified.
-syntax: 'operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+syntax: 'operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian,
+  target : Qubit) : Unit'
 references: |-
   - Synthesis of Quantum Logic Circuits
     Vivek V. Shende, Stephen S. Bullock, Igor L. Markov
     https://arxiv.org/abs/quant-ph/0406176
 input:
-  content: '(coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  content: '(coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian,
+    target : Qubit)'
   types:
   - name: coefficients
     summary: |-
@@ -57,4 +59,3 @@ functors:
 - Controlled
 seeAlso:
 - approximatelymultiplexz
-...

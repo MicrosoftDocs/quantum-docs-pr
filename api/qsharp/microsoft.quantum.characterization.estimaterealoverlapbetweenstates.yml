@@ -6,7 +6,7 @@
 uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
 name: EstimateRealOverlapBetweenStates
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: |-
   Given two operations which each prepare copies of a state, estimates
   the real part of the overlap between the states prepared by each
@@ -21,10 +21,14 @@ remarks: |-
   where $\ket{\psi}$ is the state prepared by `commonPreparation`,
   $U$ is the unitary representation of the action of `preparation1`,
   and where $V$ corresponds to `preparation2`.
-syntax: 'operation EstimateRealOverlapBetweenStates (commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int) : Double'
+syntax: 'operation EstimateRealOverlapBetweenStates (commonPreparation : (Qubit[]
+  => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[]
+  => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int) : Double'
 references: '- Aharonov *et al.* [quant-ph/0511096](https://arxiv.org/abs/quant-ph/0511096).'
 input:
-  content: '(commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int)'
+  content: '(commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[]
+    => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits
+    : Int, nMeasurements : Int)'
   types:
   - name: commonPreparation
     summary: An operation that prepares a fixed input state.
@@ -88,4 +92,3 @@ output:
 seeAlso:
 - microsoft.quantum.characterization.estimateimagoverlapbetweenstates
 - microsoft.quantum.characterization.estimateoverlapbetweenstates
-...

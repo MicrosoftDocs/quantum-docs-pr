@@ -6,7 +6,7 @@
 uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
 name: RandomWalkPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Research.Characterization
+namespace: microsoft.quantum.research.characterization
 summary: |-
   Performs iterative phase estimation using a random walk to approximate
   Bayesian inference on the classical measurement results from a given
@@ -46,7 +46,9 @@ remarks: |-
 
   See [Bayesian Phase Estimation](xref:microsoft.quantum.libraries.characterization#bayesian-phase-estimation)
   for more details on the statistics of iterative phase estimation.
-syntax: 'operation RandomWalkPhaseEstimation (initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : Microsoft.Quantum.Oracles.ContinuousOracle, targetState : Qubit[]) : Double'
+syntax: 'operation RandomWalkPhaseEstimation (initialMean : Double, initialStdDev
+  : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : Microsoft.Quantum.Oracles.ContinuousOracle,
+  targetState : Qubit[]) : Double'
 references: |-
   - Ferrie *et al.* 2011 [doi:10/tfx](https://doi.org/10.1007/s11128-012-0407-6),
     [arXiv:1110.3067](https://arxiv.org/abs/1110.3067).
@@ -54,7 +56,9 @@ references: |-
     [arXiv:1309.0876](https://arxiv.org/abs/1309.0876)
   - Wiebe and Granade 2018 *(in preparation)*.
 input:
-  content: '(initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : Microsoft.Quantum.Oracles.ContinuousOracle, targetState : Qubit[])'
+  content: '(initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements
+    : Int, unwind : Int, oracle : Microsoft.Quantum.Oracles.ContinuousOracle, targetState
+    : Qubit[])'
   types:
   - name: initialMean
     summary: Mean of the initial normal prior distribution over $\phi$.
@@ -69,7 +73,8 @@ input:
     isPrimitive: true
     uid: Int
   - name: maxMeasurements
-    summary: Total number of measurements than can be taken before the operation is considered to have failed.
+    summary: Total number of measurements than can be taken before the operation is
+      considered to have failed.
     isPrimitive: true
     uid: Int
   - name: unwind
@@ -94,4 +99,3 @@ output:
       the expectation is over the posterior given all accepted data.
     isPrimitive: true
     uid: Double
-...

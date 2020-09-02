@@ -52,4 +52,3 @@ newtypes:
   summary: Represents a univariate probability distribution over real numbers.
 - uid: microsoft.quantum.random.discretedistribution
   summary: Represents a univariate probability distribution over integers.
-...

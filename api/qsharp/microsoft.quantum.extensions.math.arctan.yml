@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.arctan
 name: ArcTan
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: ArcTan has been deprecated. Please use @"microsoft.quantum.math.arctan" instead.
 syntax: 'function ArcTan (theta : Double) : Double'
 input:
@@ -20,4 +20,3 @@ output:
   types:
   - isPrimitive: true
     uid: Double
-...

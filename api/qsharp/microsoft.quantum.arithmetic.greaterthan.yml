@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.greaterthan
 name: GreaterThan
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Applies a greater-than comparison between two integers encoded into
   qubit registers, flipping a target qubit based on the result of the
@@ -16,7 +16,8 @@ summary: |-
   in qubit registers xs and ys. If $x > y$, then the result qubit will be flipped,
   otherwise the result qubit will retain its state.
 remarks: Uses the trick that $x - y = (x'+y)'$, where ' denotes the one's complement.
-syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
+syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys
+  : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
 references: |-
   - Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David
     Petrie Moulton: "A new quantum ripple-carry addition circuit", 2004.
@@ -26,7 +27,8 @@ references: |-
     with Toffoli based modular multiplication", 2016
     https://arxiv.org/abs/1611.07995
 input:
-  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian,
+    result : Qubit)'
   types:
   - name: xs
     summary: LittleEndian qubit register encoding the first integer $x$.
@@ -46,4 +48,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.phaselittleendian
 name: PhaseLittleEndian
 type: newtype
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Little-endian unsigned integers in QFT basis.
 
@@ -19,4 +19,3 @@ syntax: newtype PhaseLittleEndian = Qubit[];
 seeAlso:
 - qft
 - qftle
-...

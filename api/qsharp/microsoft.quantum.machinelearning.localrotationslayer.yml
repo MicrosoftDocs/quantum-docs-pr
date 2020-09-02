@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.localrotationslayer
 name: LocalRotationsLayer
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Returns an array of uncontrolled (single-qubit) rotations along a given
   axis, with one rotation for each qubit in a register, parameterized by
@@ -31,4 +31,3 @@ output:
       `nQubits` qubits.
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.ignore
 name: Ignore
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Ignores the output of an operation or function.
 syntax: "function Ignore (value : 'T) : Unit"
 input:
@@ -21,4 +21,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

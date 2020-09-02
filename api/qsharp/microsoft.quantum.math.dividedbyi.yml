@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.dividedbyi
 name: DividedByI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the quotient of two inputs.
 syntax: 'function DividedByI (a : Int, b : Int) : Int'
 input:
@@ -26,4 +26,3 @@ output:
   - summary: The quotient $a / b$.
     isPrimitive: true
     uid: Int
-...

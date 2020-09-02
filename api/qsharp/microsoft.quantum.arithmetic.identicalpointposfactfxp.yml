@@ -6,13 +6,14 @@
 uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
 name: IdenticalPointPosFactFxP
 type: function
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Assert that all fixed-point numbers in the provided array
   have identical point positions when counting from the least-
   significant bit. I.e., number of bits minus point position must
   be constant for all fixed-point numbers in the array.
-syntax: 'function IdenticalPointPosFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[]) : Unit'
+syntax: 'function IdenticalPointPosFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[])
+  : Unit'
 input:
   content: '(fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[])'
   types:
@@ -27,4 +28,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

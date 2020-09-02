@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applycontrolledonint
 name: ApplyControlledOnInt
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a unitary operation on the target register if the control
   register state corresponds to a specified positive integer.
@@ -16,9 +16,11 @@ remarks: |-
   `numberState` must be at most $2^\texttt{Length(controlRegister)} - 1$.
   For example, `numberState = 537` means that `oracle`
   is applied if and only if `controlRegister` is in the state $\ket{537}$.
-syntax: "operation ApplyControlledOnInt (numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
+syntax: "operation ApplyControlledOnInt (numberState : Int, oracle : ('T => Unit is\
+  \ Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
 input:
-  content: "(numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T)"
+  content: "(numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister\
+    \ : Qubit[], targetRegister : 'T)"
   types:
   - name: numberState
     summary: |-
@@ -57,4 +59,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

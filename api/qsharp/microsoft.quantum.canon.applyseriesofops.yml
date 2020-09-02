@@ -6,14 +6,16 @@
 uid: microsoft.quantum.canon.applyseriesofops
 name: ApplySeriesOfOps
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Applies a list of ops and their targets sequentially on an array.
-syntax: "operation ApplySeriesOfOps (listOfOps : ('T[] => Unit)[], targets : Int[][], register : 'T[]) : Unit"
+syntax: "operation ApplySeriesOfOps (listOfOps : ('T[] => Unit)[], targets : Int[][],\
+  \ register : 'T[]) : Unit"
 input:
   content: "(listOfOps : ('T[] => Unit)[], targets : Int[][], register : 'T[])"
   types:
   - name: listOfOps
-    summary: List of ops, each taking a 'T array, to be applied. They are applied sequentially, lowest index first.
+    summary: List of ops, each taking a 'T array, to be applied. They are applied
+      sequentially, lowest index first.
     isArray: true
     isOperation: true
     input:
@@ -46,4 +48,3 @@ output:
     uid: Unit
 seeAlso:
 - microsoft.quantum.canon.applyoprepeatedlyover
-...

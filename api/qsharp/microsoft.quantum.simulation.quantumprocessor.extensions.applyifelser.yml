@@ -6,10 +6,12 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelser
 name: ApplyIfElseR
 type: operation
-namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
-syntax: "operation ApplyIfElseR (measurementResult : Result, (onResultZeroOp : ('T => Unit), zeroArg : 'T), (onResultOneOp : ('U => Unit), oneArg : 'U)) : Unit"
+namespace: microsoft.quantum.simulation.quantumprocessor.extensions
+syntax: "operation ApplyIfElseR (measurementResult : Result, (onResultZeroOp : ('T\
+  \ => Unit), zeroArg : 'T), (onResultOneOp : ('U => Unit), oneArg : 'U)) : Unit"
 input:
-  content: "(measurementResult : Result, (onResultZeroOp : ('T => Unit), zeroArg : 'T), (onResultOneOp : ('U => Unit), oneArg : 'U))"
+  content: "(measurementResult : Result, (onResultZeroOp : ('T => Unit), zeroArg :\
+    \ 'T), (onResultOneOp : ('U => Unit), oneArg : 'U))"
   types:
   - name: measurementResult
     isPrimitive: true
@@ -45,4 +47,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

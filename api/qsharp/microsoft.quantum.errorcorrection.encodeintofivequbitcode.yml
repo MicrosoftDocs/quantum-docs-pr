@@ -6,9 +6,10 @@
 uid: microsoft.quantum.errorcorrection.encodeintofivequbitcode
 name: EncodeIntoFiveQubitCode
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: Encodes into the ⟦5, 1, 3⟧ quantum code.
-syntax: 'operation EncodeIntoFiveQubitCode (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
+syntax: 'operation EncodeIntoFiveQubitCode (physRegister : Qubit[], auxQubits : Qubit[])
+  : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
 input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
@@ -35,4 +36,3 @@ output:
     uid: microsoft.quantum.errorcorrection.logicalregister
 seeAlso:
 - logicalregister
-...

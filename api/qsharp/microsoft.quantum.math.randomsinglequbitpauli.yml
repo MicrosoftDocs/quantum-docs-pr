@@ -6,8 +6,9 @@
 uid: microsoft.quantum.math.randomsinglequbitpauli
 name: RandomSingleQubitPauli
 type: operation
-namespace: Microsoft.Quantum.Math
-summary: RandomSingleQubitPauli has been deprecated. Please use @"microsoft.quantum.random.drawrandompauli" instead.
+namespace: microsoft.quantum.math
+summary: RandomSingleQubitPauli has been deprecated. Please use @"microsoft.quantum.random.drawrandompauli"
+  instead.
 syntax: 'operation RandomSingleQubitPauli () : Pauli'
 input:
   content: ()
@@ -17,4 +18,3 @@ output:
   types:
   - isPrimitive: true
     uid: Pauli
-...

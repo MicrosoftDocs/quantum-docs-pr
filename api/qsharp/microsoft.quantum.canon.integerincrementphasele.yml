@@ -6,9 +6,11 @@
 uid: microsoft.quantum.canon.integerincrementphasele
 name: IntegerIncrementPhaseLE
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: IntegerIncrementPhaseLE has been deprecated. Please use @"microsoft.quantum.arithmetic.incrementphasebyinteger" instead.
-syntax: 'operation IntegerIncrementPhaseLE (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+namespace: microsoft.quantum.canon
+summary: IntegerIncrementPhaseLE has been deprecated. Please use @"microsoft.quantum.arithmetic.incrementphasebyinteger"
+  instead.
+syntax: 'operation IntegerIncrementPhaseLE (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)
+  : Unit'
 input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
@@ -25,4 +27,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

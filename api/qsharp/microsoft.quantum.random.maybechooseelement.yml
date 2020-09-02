@@ -6,7 +6,7 @@
 uid: microsoft.quantum.random.maybechooseelement
 name: MaybeChooseElement
 type: operation
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: |-
   Given an array of data and an a distribution over its indices,
   attempts to choose an element at random.
@@ -20,7 +20,8 @@ examples: |-
   );
   Fact(succeeded, "Index chosen by MaybeChooseElement was not valid.");
   ```
-syntax: "operation MaybeChooseElement (data : 'T[], indexDistribution : Microsoft.Quantum.Random.DiscreteDistribution) : (Bool, 'T)"
+syntax: "operation MaybeChooseElement (data : 'T[], indexDistribution : Microsoft.Quantum.Random.DiscreteDistribution)\
+  \ : (Bool, 'T)"
 input:
   content: "(data : 'T[], indexDistribution : Microsoft.Quantum.Random.DiscreteDistribution)"
   types:
@@ -40,4 +41,3 @@ output:
       uid: Bool
     - uid: "'T"
       isLocal: true
-...

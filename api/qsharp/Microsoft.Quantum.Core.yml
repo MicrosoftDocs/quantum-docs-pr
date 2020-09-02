@@ -34,4 +34,3 @@ newtypes:
   summary: Compiler-recognized attribute used to mark a type or callable as deprecated.
 - uid: microsoft.quantum.core.entrypoint
   summary: Compiler-recognized attribute used to mark the entry point of an executable.
-...

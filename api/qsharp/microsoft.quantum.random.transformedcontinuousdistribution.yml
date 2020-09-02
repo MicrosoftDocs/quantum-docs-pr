@@ -6,7 +6,7 @@
 uid: microsoft.quantum.random.transformedcontinuousdistribution
 name: TransformedContinuousDistribution
 type: function
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: |-
   Given a continuous distribution, returns a new distribution that
   transforms the original by a given function.
@@ -20,7 +20,8 @@ examples: |-
       ContinuousUniformDistribution(0.0, 1.0)
   );
   ```
-syntax: 'function TransformedContinuousDistribution (transform : (Double -> Double), distribution : Microsoft.Quantum.Random.ContinuousDistribution) : Microsoft.Quantum.Random.ContinuousDistribution'
+syntax: 'function TransformedContinuousDistribution (transform : (Double -> Double),
+  distribution : Microsoft.Quantum.Random.ContinuousDistribution) : Microsoft.Quantum.Random.ContinuousDistribution'
 input:
   content: '(transform : (Double -> Double), distribution : Microsoft.Quantum.Random.ContinuousDistribution)'
   types:
@@ -47,4 +48,3 @@ output:
       A new distribution related to `distribution` by the transformation given
       by `transform`.
     uid: microsoft.quantum.random.continuousdistribution
-...

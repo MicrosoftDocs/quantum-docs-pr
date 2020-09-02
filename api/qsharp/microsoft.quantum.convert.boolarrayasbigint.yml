@@ -6,11 +6,12 @@
 uid: microsoft.quantum.convert.boolarrayasbigint
 name: BoolArrayAsBigInt
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: |-
   Converts a given array of Booleans to an equivalent big integer.
   The 0 element of the array is the least significant bit of the big integer.
-remarks: See [C# BigInteger constructor](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) for more details.
+remarks: See [C# BigInteger constructor](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_)
+  for more details.
 syntax: 'function BoolArrayAsBigInt (a : Bool[]) : BigInt'
 input:
   content: '(a : Bool[])'
@@ -24,4 +25,3 @@ output:
   types:
   - isPrimitive: true
     uid: BigInt
-...

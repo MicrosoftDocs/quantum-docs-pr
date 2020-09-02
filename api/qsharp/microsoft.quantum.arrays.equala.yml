@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.equala
 name: EqualA
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Given two arrays of the same type and a predicate that is defined
   for pairs of elements of the arrays, checks whether the arrays are equal.
@@ -32,7 +32,8 @@ examples: |-
       Message($"Arrays of the same length with different elements are {differentElements ? "equal" | "not equal"}");
   }
   ```
-syntax: "function EqualA (equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[]) : Bool"
+syntax: "function EqualA (equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[])\
+  \ : Bool"
 input:
   content: "(equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[])"
   types:
@@ -70,4 +71,3 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of each array's elements.
-...

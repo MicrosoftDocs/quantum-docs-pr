@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyccnotchain
 name: ApplyCCNOTChain
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Implements a cascade of CCNOT gates controlled on corresponding bits of two
   qubit registers, acting on the next qubit of one of the registers.
@@ -37,4 +37,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

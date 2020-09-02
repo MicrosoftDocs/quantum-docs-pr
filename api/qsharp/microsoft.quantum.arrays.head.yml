@@ -6,14 +6,15 @@
 uid: microsoft.quantum.arrays.head
 name: Head
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Returns the first element of the array.
 syntax: "function Head (array : 'A[]) : 'A"
 input:
   content: "(array : 'A[])"
   types:
   - name: array
-    summary: Array of which the first element is taken. Array must have length at least 1.
+    summary: Array of which the first element is taken. Array must have length at
+      least 1.
     isArray: true
     uid: "'A"
     isLocal: true
@@ -26,4 +27,3 @@ output:
 typeParameters:
 - uid: "'A"
   summary: The type of the array elements.
-...

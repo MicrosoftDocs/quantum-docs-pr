@@ -6,7 +6,7 @@
 uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
 name: ReflectionOracleFromDeterministicStateOracle
 type: function
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: |-
   Constructs reflection about a given state from an oracle.
 
@@ -15,7 +15,8 @@ summary: |-
   the result of this function is an oracle that applies a reflection
   around the state $\ket{\psi}$ prepared by the oracle $O$; that is,
   the state $\ket{\psi}$ such that $O\ket{0} = \ket{\psi}$.
-syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
+syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)
+  : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
@@ -30,4 +31,3 @@ output:
 seeAlso:
 - microsoft.quantum.oracles.deterministicstateoracle
 - microsoft.quantum.oracles.reflectionoracle
-...

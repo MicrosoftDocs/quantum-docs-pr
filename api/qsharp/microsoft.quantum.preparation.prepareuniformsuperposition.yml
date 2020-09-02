@@ -6,7 +6,7 @@
 uid: microsoft.quantum.preparation.prepareuniformsuperposition
 name: PrepareUniformSuperposition
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: |-
   Creates a uniform superposition over states that encode 0 through `nIndices`.
 
@@ -27,7 +27,8 @@ examples: |-
       PrepareUniformSuperposition(nIndices, LittleEndian(indexRegister));
   }
   ```
-syntax: 'operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian)
+  : Unit'
 input:
   content: '(nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -49,4 +50,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
 name: SingleQubitProcessTomographyMeasurement
 type: operation
-namespace: microsoft.quantum.characterization
+namespace: Microsoft.Quantum.Characterization
 summary: |-
   Performs a single-qubit process tomography measurement in the Pauli
   basis, given a particular channel of interest.
@@ -22,8 +22,7 @@ remarks: |-
   $$
   where $M = 2 (\boldone + P)^\mathrm{T} / 2 \cdot (\boldone + Q) / 2$
   is the effective measurement corresponding to $P$ and $Q$.
-syntax: 'operation SingleQubitProcessTomographyMeasurement (preparation : Pauli, measurement
-  : Pauli, channel : (Qubit => Unit)) : Result'
+syntax: 'operation SingleQubitProcessTomographyMeasurement (preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit)) : Result'
 input:
   content: '(preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit))'
   types:
@@ -64,3 +63,4 @@ output:
       $$
     isPrimitive: true
     uid: Result
+...

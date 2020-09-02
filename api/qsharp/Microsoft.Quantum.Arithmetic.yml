@@ -254,8 +254,7 @@ operations:
     where the $n$ least significant bits of the result are held in `ys` and
     the carry out bit is xored to the qubit `carry`.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
-  summary: Reversible, in-place ripple-carry addition of two integers without carry
-    out.
+  summary: Reversible, in-place ripple-carry addition of two integers without carry out.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   summary: |-
     Reversible, in-place ripple-carry addition of two integers.
@@ -303,3 +302,4 @@ newtypes:
     basis.
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Type of a signed integer stored in little endian (see LittleEndian).
+...

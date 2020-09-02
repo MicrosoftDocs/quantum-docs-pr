@@ -29,8 +29,7 @@ functions:
     to a `GeneratorSystem` expressed in terms of the
     `GeneratorIndex` convention defined in this file.
 - uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
-  summary: Returns optimized Trotter step operation and the parameters necessary to
-    run it.
+  summary: Returns optimized Trotter step operation and the parameters necessary to run it.
 operations:
 - uid: microsoft.quantum.research.chemistry.applydeltaparity
   summary: |-
@@ -41,3 +40,4 @@ operations:
   summary: |-
     Simple state preparation of trial state by occupying
     spin-orbitals
+...

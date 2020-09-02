@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.tanh
 name: Tanh
 type: function
-namespace: microsoft.quantum.extensions.math
+namespace: Microsoft.Quantum.Extensions.Math
 summary: Tanh has been deprecated. Please use @"microsoft.quantum.math.tanh" instead.
 syntax: 'function Tanh (d : Double) : Double'
 input:
@@ -20,3 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

@@ -6,8 +6,9 @@
 uid: microsoft.quantum.machinelearning.validationresults
 name: ValidationResults
 type: newtype
-namespace: microsoft.quantum.machinelearning
+namespace: Microsoft.Quantum.MachineLearning
 summary: |-
   The results from having validated a classifier against a set of
   samples.
 syntax: newtype ValidationResults = (Int, Int);
+...

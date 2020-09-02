@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.identitytimedependentgeneratorsystem
 name: IdentityTimeDependentGeneratorSystem
 type: function
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: |-
   Returns a time-dependent generator system consistent with the
   Hamiltonian `H(s) = 0`.
@@ -21,3 +21,4 @@ output:
       A time dependent generator system representing evolution under the Hamiltonian
       $H(s) = 0$ for all $s$.
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
+...

@@ -6,16 +6,14 @@
 uid: microsoft.quantum.characterization.estimatefrequency
 name: EstimateFrequency
 type: operation
-namespace: microsoft.quantum.characterization
+namespace: Microsoft.Quantum.Characterization
 summary: |-
   Given a preparation and measurement, estimates the frequency
   with which that measurement succeeds (returns `Zero`) by
   performing a given number of trials.
-syntax: 'operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement
-  : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
+syntax: 'operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
-  content: '(preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits
-    : Int, nMeasurements : Int)'
+  content: '(preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
   types:
   - name: preparation
     summary: |-
@@ -69,3 +67,4 @@ output:
       physical limitations, such that probabilities cannot be measured.
     isPrimitive: true
     uid: Double
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.most
 name: Most
 type: function
-namespace: microsoft.quantum.arrays
+namespace: Microsoft.Quantum.Arrays
 summary: |-
   Creates an array that is equal to an input array except that the last array
   element is dropped.
@@ -15,8 +15,7 @@ input:
   content: "(array : 'T[])"
   types:
   - name: array
-    summary: An array whose first to second-to-last elements are to form the output
-      array.
+    summary: An array whose first to second-to-last elements are to form the output array.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -30,3 +29,4 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of the array elements.
+...

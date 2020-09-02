@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.powi
 name: PowI
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Returns a number raised to a given power.
 syntax: 'function PowI (a : Int, power : Int) : Int'
 input:
@@ -26,3 +26,4 @@ output:
   - summary: The power $a^b$
     isPrimitive: true
     uid: Int
+...

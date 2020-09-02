@@ -6,9 +6,10 @@
 uid: microsoft.quantum.math.complexpolar
 name: ComplexPolar
 type: newtype
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: |-
   Represents a complex number in polar form.
 
   The polar representation of a complex number is $c=r e^{i t}$.
 syntax: newtype ComplexPolar = (Double, Double);
+...

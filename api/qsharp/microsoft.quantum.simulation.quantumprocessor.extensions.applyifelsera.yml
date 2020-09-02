@@ -6,13 +6,10 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelsera
 name: ApplyIfElseRA
 type: operation
-namespace: microsoft.quantum.simulation.quantumprocessor.extensions
-syntax: "operation ApplyIfElseRA (measurementResult : Result, (onResultZeroOp : ('T\
-  \ => Unit is Adj), zeroArg : 'T), (onResultOneOp : ('U => Unit is Adj), oneArg :\
-  \ 'U)) : Unit"
+namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+syntax: "operation ApplyIfElseRA (measurementResult : Result, (onResultZeroOp : ('T => Unit is Adj), zeroArg : 'T), (onResultOneOp : ('U => Unit is Adj), oneArg : 'U)) : Unit"
 input:
-  content: "(measurementResult : Result, (onResultZeroOp : ('T => Unit is Adj), zeroArg\
-    \ : 'T), (onResultOneOp : ('U => Unit is Adj), oneArg : 'U))"
+  content: "(measurementResult : Result, (onResultZeroOp : ('T => Unit is Adj), zeroArg : 'T), (onResultOneOp : ('U => Unit is Adj), oneArg : 'U))"
   types:
   - name: measurementResult
     isPrimitive: true
@@ -54,3 +51,4 @@ output:
     uid: Unit
 functors:
 - Adjoint
+...

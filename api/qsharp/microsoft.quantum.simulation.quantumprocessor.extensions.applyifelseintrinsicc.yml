@@ -6,12 +6,10 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelseintrinsicc
 name: ApplyIfElseIntrinsicC
 type: operation
-namespace: microsoft.quantum.simulation.quantumprocessor.extensions
-syntax: 'operation ApplyIfElseIntrinsicC (measurementResult : Result, onResultZeroOp
-  : (Unit => Unit is Ctl), onResultOneOp : (Unit => Unit is Ctl)) : Unit'
+namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+syntax: 'operation ApplyIfElseIntrinsicC (measurementResult : Result, onResultZeroOp : (Unit => Unit is Ctl), onResultOneOp : (Unit => Unit is Ctl)) : Unit'
 input:
-  content: '(measurementResult : Result, onResultZeroOp : (Unit => Unit is Ctl), onResultOneOp
-    : (Unit => Unit is Ctl))'
+  content: '(measurementResult : Result, onResultZeroOp : (Unit => Unit is Ctl), onResultOneOp : (Unit => Unit is Ctl))'
   types:
   - name: measurementResult
     isPrimitive: true
@@ -47,3 +45,4 @@ output:
     uid: Unit
 functors:
 - Controlled
+...

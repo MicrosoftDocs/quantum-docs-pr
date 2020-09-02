@@ -6,12 +6,11 @@
 uid: microsoft.quantum.canon.delayedc
 name: DelayedC
 type: function
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Returns an operation that applies
   given operation with given argument.
-syntax: "function DelayedC (op : ('T => Unit is Ctl), arg : 'T) : (Unit => Unit is\
-  \ Ctl)"
+syntax: "function DelayedC (op : ('T => Unit is Ctl), arg : 'T) : (Unit => Unit is Ctl)"
 input:
   content: "(op : ('T => Unit is Ctl), arg : 'T)"
   types:
@@ -53,3 +52,4 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.delayed
 - microsoft.quantum.canon.delay
+...

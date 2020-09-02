@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.intasboolarray
 name: IntAsBoolArray
 type: function
-namespace: microsoft.quantum.convert
+namespace: Microsoft.Quantum.Convert
 summary: |-
   Produces a binary representation of a positive integer, using the
   little-endian representation for the returned array.
@@ -32,3 +32,4 @@ output:
     isArray: true
     isPrimitive: true
     uid: Bool
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.log
 name: Log
 type: function
-namespace: microsoft.quantum.extensions.math
+namespace: Microsoft.Quantum.Extensions.Math
 summary: Log has been deprecated. Please use @"microsoft.quantum.math.log" instead.
 syntax: 'function Log (input : Double) : Double'
 input:
@@ -20,3 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

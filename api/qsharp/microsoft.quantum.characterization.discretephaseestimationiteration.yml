@@ -6,15 +6,13 @@
 uid: microsoft.quantum.characterization.discretephaseestimationiteration
 name: DiscretePhaseEstimationIteration
 type: operation
-namespace: microsoft.quantum.characterization
+namespace: Microsoft.Quantum.Characterization
 summary: |-
   Performs a single iteration of an iterative (classically-controlled) phase
   estimation algorithm using integer powers of a unitary oracle.
-syntax: 'operation DiscretePhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.DiscreteOracle,
-  power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit'
+syntax: 'operation DiscretePhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit'
 input:
-  content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta
-    : Double, targetState : Qubit[], controlQubit : Qubit)'
+  content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
   types:
   - name: oracle
     summary: |-
@@ -50,3 +48,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

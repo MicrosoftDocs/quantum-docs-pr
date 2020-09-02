@@ -6,16 +6,13 @@
 uid: microsoft.quantum.characterization.quantumphaseestimation
 name: QuantumPhaseEstimation
 type: operation
-namespace: microsoft.quantum.characterization
+namespace: Microsoft.Quantum.Characterization
 summary: |-
   Performs the quantum phase estimation algorithm for a given oracle `U` and `targetState`,
   reading the phase into a big-endian quantum register.
-syntax: 'operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOracle,
-  targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian)
-  : Unit'
+syntax: 'operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 input:
-  content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[],
-    controlRegister : Microsoft.Quantum.Arithmetic.BigEndian)'
+  content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian)'
   types:
   - name: oracle
     summary: An operation implementing $U^m$ for given integer powers m.
@@ -42,3 +39,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

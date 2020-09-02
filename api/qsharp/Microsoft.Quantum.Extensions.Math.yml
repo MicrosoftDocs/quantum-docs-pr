@@ -294,3 +294,4 @@ functions:
 
     Truncate has been deprecated. Please use @"microsoft.quantum.math.truncate" instead.
     Please use @"microsoft.quantum.math.truncate".
+...

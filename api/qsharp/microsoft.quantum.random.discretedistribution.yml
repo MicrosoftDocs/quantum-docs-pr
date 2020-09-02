@@ -6,10 +6,11 @@
 uid: microsoft.quantum.random.discretedistribution
 name: DiscreteDistribution
 type: newtype
-namespace: microsoft.quantum.random
+namespace: Microsoft.Quantum.Random
 summary: Represents a univariate probability distribution over integers.
 syntax: newtype DiscreteDistribution = (Unit => Int);
 seeAlso:
 - microsoft.quantum.random.continuousdistribution
 - microsoft.quantum.random.complexdistribution
 - microsoft.quantum.random.bigdiscretedistribution
+...

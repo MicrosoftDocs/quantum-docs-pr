@@ -6,15 +6,14 @@
 uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
 name: AssertQubitWithinTolerance
 type: operation
-namespace: microsoft.quantum.diagnostics
+namespace: Microsoft.Quantum.Diagnostics
 summary: |-
   Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator up to
   a given tolerance.
 remarks: |-
   <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> allows for asserting
   arbitrary qubit states rather than only $Z$ eigenstates.
-syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance
-  : Double) : Unit'
+syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Result, q : Qubit, tolerance : Double)'
   types:
@@ -39,3 +38,4 @@ output:
     uid: Unit
 seeAlso:
 - assertqubitisinstatewithintolerance
+...

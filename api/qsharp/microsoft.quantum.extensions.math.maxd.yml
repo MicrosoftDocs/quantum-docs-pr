@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.maxd
 name: MaxD
 type: function
-namespace: microsoft.quantum.extensions.math
+namespace: Microsoft.Quantum.Extensions.Math
 summary: MaxD has been deprecated. Please use @"microsoft.quantum.math.maxd" instead.
 syntax: 'function MaxD (a : Double, b : Double) : Double'
 input:
@@ -23,3 +23,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

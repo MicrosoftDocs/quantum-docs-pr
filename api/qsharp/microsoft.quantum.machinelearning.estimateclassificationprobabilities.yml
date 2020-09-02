@@ -6,17 +6,14 @@
 uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
 name: EstimateClassificationProbabilities
 type: operation
-namespace: microsoft.quantum.machinelearning
+namespace: Microsoft.Quantum.MachineLearning
 summary: |-
   Given a set of samples and a sequential classifier, estimates the
   classification probability for those samples by repeatedly measuring
   the output of the classifier on each sample.
-syntax: 'operation EstimateClassificationProbabilities (tolerance : Double, model
-  : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Double[][], nMeasurements
-  : Int) : Double[]'
+syntax: 'operation EstimateClassificationProbabilities (tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Double[][], nMeasurements : Int) : Double[]'
 input:
-  content: '(tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel,
-    samples : Double[][], nMeasurements : Int)'
+  content: '(tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Double[][], nMeasurements : Int)'
   types:
   - name: tolerance
     summary: |-
@@ -51,3 +48,4 @@ output:
     isArray: true
     isPrimitive: true
     uid: Double
+...

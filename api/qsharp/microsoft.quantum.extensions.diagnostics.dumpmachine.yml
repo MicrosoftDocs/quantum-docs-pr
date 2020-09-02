@@ -6,9 +6,8 @@
 uid: microsoft.quantum.extensions.diagnostics.dumpmachine
 name: DumpMachine
 type: function
-namespace: microsoft.quantum.extensions.diagnostics
-summary: DumpMachine has been deprecated. Please use @"microsoft.quantum.diagnostics.dumpmachine"
-  instead.
+namespace: Microsoft.Quantum.Extensions.Diagnostics
+summary: DumpMachine has been deprecated. Please use @"microsoft.quantum.diagnostics.dumpmachine" instead.
 syntax: "function DumpMachine (location : 'T) : Unit"
 input:
   content: "(location : 'T)"
@@ -21,3 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

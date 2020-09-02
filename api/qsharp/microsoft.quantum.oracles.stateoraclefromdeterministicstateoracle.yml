@@ -6,10 +6,9 @@
 uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
 name: StateOracleFromDeterministicStateOracle
 type: function
-namespace: microsoft.quantum.oracles
+namespace: Microsoft.Quantum.Oracles
 summary: Converts an oracle of type `DeterministicStateOracle` to `StateOracle`.
-syntax: 'function StateOracleFromDeterministicStateOracle (deterministicStateOracle
-  : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.StateOracle'
+syntax: 'function StateOracleFromDeterministicStateOracle (deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.StateOracle'
 input:
   content: '(deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
@@ -27,3 +26,4 @@ output:
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.stateoracle
+...

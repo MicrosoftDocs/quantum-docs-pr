@@ -6,15 +6,14 @@
 uid: microsoft.quantum.diagnostics.assertmeasurement
 name: AssertMeasurement
 type: operation
-namespace: microsoft.quantum.diagnostics
+namespace: Microsoft.Quantum.Diagnostics
 summary: |-
   Asserts that measuring the given qubits in the given Pauli basis will
   always have the given result.
 remarks: |-
   Note that the Adjoint and Controlled versions of this operation will not
   check the condition.
-syntax: 'operation AssertMeasurement (bases : Pauli[], qubits : Qubit[], result :
-  Result, msg : String) : Unit'
+syntax: 'operation AssertMeasurement (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
   types:
@@ -48,3 +47,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.diagnostics.assertmeasurementprobability
+...

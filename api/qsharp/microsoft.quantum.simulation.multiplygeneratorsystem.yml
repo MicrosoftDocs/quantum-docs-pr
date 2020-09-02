@@ -6,10 +6,9 @@
 uid: microsoft.quantum.simulation.multiplygeneratorsystem
 name: MultiplyGeneratorSystem
 type: function
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: Multiplies the coefficient of all terms in a `GeneratorSystem`.
-syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem :
-  Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
+syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
@@ -29,3 +28,4 @@ output:
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.swapped
 name: Swapped
 type: function
-namespace: microsoft.quantum.arrays
+namespace: Microsoft.Quantum.Arrays
 summary: Applies a swap of two elements in an array.
 syntax: "function Swapped (firstIndex : Int, secondIndex : Int, arr : 'T[]) : 'T[]"
 input:
@@ -40,3 +40,4 @@ output:
     isArray: true
     uid: "'T"
     isLocal: true
+...

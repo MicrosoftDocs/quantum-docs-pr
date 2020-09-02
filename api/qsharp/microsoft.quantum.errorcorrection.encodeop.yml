@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.encodeop
 name: EncodeOp
 type: newtype
-namespace: microsoft.quantum.errorcorrection
+namespace: Microsoft.Quantum.ErrorCorrection
 summary: |-
   Represents an operation which encodes a physical register into a
   logical register, using the provided scratch qubits.
@@ -15,3 +15,4 @@ summary: |-
   be encoded, while the second argument is taken to be the scratch
   register that will be used.
 syntax: newtype EncodeOp = ((Qubit[], Qubit[]) => Microsoft.Quantum.ErrorCorrection.LogicalRegister);
+...

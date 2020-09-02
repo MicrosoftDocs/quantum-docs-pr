@@ -6,7 +6,7 @@
 uid: microsoft.quantum.core.rangestep
 name: RangeStep
 type: function
-namespace: microsoft.quantum.core
+namespace: Microsoft.Quantum.Core
 summary: Returns the integer that specifies how the next value of a range is calculated.
 remarks: |-
   A range expression's first element is `start`,
@@ -25,3 +25,4 @@ output:
   - summary: The defined step value of the given range.
     isPrimitive: true
     uid: Int
+...

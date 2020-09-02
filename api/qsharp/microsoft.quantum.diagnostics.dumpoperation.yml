@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.dumpoperation
 name: DumpOperation
 type: operation
-namespace: microsoft.quantum.diagnostics
+namespace: Microsoft.Quantum.Diagnostics
 summary: |-
   Given an operation, displays diagnostics about
   the operation that are made available by the current
@@ -44,8 +44,7 @@ examples: |-
       DumpOperation(2, ApplyToFirstTwoQubitsCA(CNOT, _));
   }
   ```
-syntax: 'operation DumpOperation (nQubits : Int, op : (Qubit[] => Unit is Adj)) :
-  Unit'
+syntax: 'operation DumpOperation (nQubits : Int, op : (Qubit[] => Unit is Adj)) : Unit'
 input:
   content: '(nQubits : Int, op : (Qubit[] => Unit is Adj))'
   types:
@@ -72,3 +71,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

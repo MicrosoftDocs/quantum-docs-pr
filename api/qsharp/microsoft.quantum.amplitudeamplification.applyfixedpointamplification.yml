@@ -6,16 +6,14 @@
 uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
 name: ApplyFixedPointAmplification
 type: operation
-namespace: microsoft.quantum.amplitudeamplification
+namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: Fixed-Point Amplitude Amplification algorithm
 remarks: |-
   The startQubits must be in the $\ket{0 \cdots 0}$ state. This operation iterates over a number of queries in powers of $2$ until either a maximal number of queries
   is reached, or the target state is found.
-syntax: 'operation ApplyFixedPointAmplification (statePrepOracle : Microsoft.Quantum.Oracles.StateOracle,
-  startQubits : Qubit[]) : Unit'
+syntax: 'operation ApplyFixedPointAmplification (statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[]) : Unit'
 input:
-  content: '(statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits
-    : Qubit[])'
+  content: '(statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[])'
   types:
   - name: statePrepOracle
     summary: Unitary oracle that prepares the start state.
@@ -30,3 +28,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

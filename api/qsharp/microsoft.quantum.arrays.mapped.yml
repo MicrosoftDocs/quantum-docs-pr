@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.mapped
 name: Mapped
 type: function
-namespace: microsoft.quantum.arrays
+namespace: Microsoft.Quantum.Arrays
 summary: |-
   Given an array and a function that is defined
   for the elements of the array, returns a new array that consists
@@ -47,3 +47,4 @@ typeParameters:
   summary: The type of `array` elements.
 - uid: "'U"
   summary: The result type of the `mapper` function.
+...

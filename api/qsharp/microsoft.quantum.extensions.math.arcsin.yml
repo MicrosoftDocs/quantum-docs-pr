@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.arcsin
 name: ArcSin
 type: function
-namespace: microsoft.quantum.extensions.math
+namespace: Microsoft.Quantum.Extensions.Math
 summary: ArcSin has been deprecated. Please use @"microsoft.quantum.math.arcsin" instead.
 syntax: 'function ArcSin (theta : Double) : Double'
 input:
@@ -20,3 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

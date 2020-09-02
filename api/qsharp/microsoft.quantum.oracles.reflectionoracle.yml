@@ -6,7 +6,7 @@
 uid: microsoft.quantum.oracles.reflectionoracle
 name: ReflectionOracle
 type: newtype
-namespace: microsoft.quantum.oracles
+namespace: Microsoft.Quantum.Oracles
 summary: |-
   Represents a reflection oracle.
 
@@ -19,3 +19,4 @@ remarks: |-
   performs a partial reflection by a phase $\phi$ about a single pure state
   $\ket{\psi}$.
 syntax: newtype ReflectionOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
+...

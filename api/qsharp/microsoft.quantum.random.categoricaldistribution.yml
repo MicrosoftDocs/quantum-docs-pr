@@ -6,7 +6,7 @@
 uid: microsoft.quantum.random.categoricaldistribution
 name: CategoricalDistribution
 type: function
-namespace: microsoft.quantum.random
+namespace: Microsoft.Quantum.Random
 summary: |-
   Returns a discrete categorical distribution, in which the probability
   for each of a finite list of given outcomes is explicitly specified.
@@ -36,3 +36,4 @@ output:
       The index `i` with probability `probs[i] / sum`, where `sum` is the sum
       of `probs` given by `Fold(PlusD, 0.0, probs)`.
     uid: microsoft.quantum.random.discretedistribution
+...

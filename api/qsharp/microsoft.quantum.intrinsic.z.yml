@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.z
 name: Z
 type: operation
-namespace: microsoft.quantum.intrinsic
+namespace: Microsoft.Quantum.Intrinsic
 summary: |-
   Applies the Pauli $Z$ gate.
 
@@ -33,3 +33,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

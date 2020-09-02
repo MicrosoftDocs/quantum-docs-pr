@@ -6,8 +6,9 @@
 uid: microsoft.quantum.diagnostics.enabletestingvianame
 name: EnableTestingViaName
 type: newtype
-namespace: microsoft.quantum.diagnostics
+namespace: Microsoft.Quantum.Diagnostics
 summary: |-
   Compiler-recognized attribute via which an alternative name can be defined
   that may be used when loading a type or callable for testing purposes.
 syntax: newtype EnableTestingViaName = String;
+...

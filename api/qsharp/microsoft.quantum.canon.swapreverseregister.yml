@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.swapreverseregister
 name: SwapReverseRegister
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Uses SWAP gates to Reversed the order of the qubits in
   a register.
@@ -27,3 +27,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

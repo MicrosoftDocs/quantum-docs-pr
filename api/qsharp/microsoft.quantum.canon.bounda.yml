@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.bounda
 name: BoundA
 type: function
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Given an array of operations acting on a single input,
   produces a new operation that
@@ -65,3 +65,4 @@ typeParameters:
   summary: The target on which each of the operations in the array act.
 seeAlso:
 - microsoft.quantum.canon.bound
+...

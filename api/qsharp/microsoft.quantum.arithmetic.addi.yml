@@ -6,12 +6,11 @@
 uid: microsoft.quantum.arithmetic.addi
 name: AddI
 type: operation
-namespace: microsoft.quantum.arithmetic
+namespace: Microsoft.Quantum.Arithmetic
 summary: |-
   Automatically chooses between addition with
   carry and without, depending on the register size of `ys`.
-syntax: 'operation AddI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian)
-  : Unit'
+syntax: 'operation AddI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -29,3 +28,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

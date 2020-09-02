@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.curriedop
 name: CurriedOp
 type: function
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Returns a curried version of an operation on two inputs.
 
@@ -68,3 +68,4 @@ typeParameters:
   summary: The type of the first component of a function defined on pairs.
 - uid: "'U"
   summary: The type of the second component of a function defined on pairs.
+...

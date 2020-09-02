@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applydiagonalunitary
 name: ApplyDiagonalUnitary
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Applies an array of complex phases to numeric basis states of a register
   of qubits.
@@ -23,8 +23,7 @@ summary: |-
 remarks: |-
   `coefficients` will be padded with elements $\theta_j = 0.0$ if
   fewer than $2^n$ are specified.
-syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)
-  : Unit'
+syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: |-
   - Synthesis of Quantum Logic Circuits
     Vivek V. Shende, Stephen S. Bullock, Igor L. Markov
@@ -51,3 +50,4 @@ functors:
 - Controlled
 seeAlso:
 - approximatelyapplydiagonalunitary
+...

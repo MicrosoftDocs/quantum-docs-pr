@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.negationcp
 name: NegationCP
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Returns the unary negation of an input.
 syntax: 'function NegationCP (input : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.ComplexPolar'
 input:
@@ -20,3 +20,4 @@ output:
   types:
   - summary: The unary negation of `input`.
     uid: microsoft.quantum.math.complexpolar
+...

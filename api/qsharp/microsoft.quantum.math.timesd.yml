@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.timesd
 name: TimesD
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Returns the product of two inputs.
 syntax: 'function TimesD (a : Double, b : Double) : Double'
 input:
@@ -26,3 +26,4 @@ output:
   - summary: The product $a \times b$.
     isPrimitive: true
     uid: Double
+...

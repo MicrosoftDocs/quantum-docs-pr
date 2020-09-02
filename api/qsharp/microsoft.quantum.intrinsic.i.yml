@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.i
 name: I
 type: operation
-namespace: microsoft.quantum.intrinsic
+namespace: Microsoft.Quantum.Intrinsic
 summary: Performs the identity operation (no-op) on a single qubit.
 remarks: |-
   This is a no-op. It is provided for completeness and because
@@ -26,3 +26,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

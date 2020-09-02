@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.permutequbits
 name: PermuteQubits
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: Permutes qubits by using the SWAP operation.
 examples: |-
   Given ordering = [2, 1, 0] and register $\ket{\alpha_0} \ket{\alpha_1} \ket{\alpha_2}$, PermuteQubits
@@ -22,8 +22,7 @@ input:
   content: '(ordering : Int[], register : Qubit[])'
   types:
   - name: ordering
-    summary: Describes the new ordering of the qubits, where the qubit at index i
-      will now be at ordering[i].
+    summary: Describes the new ordering of the qubits, where the qubit at index i will now be at ordering[i].
     isArray: true
     isPrimitive: true
     uid: Int
@@ -40,3 +39,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

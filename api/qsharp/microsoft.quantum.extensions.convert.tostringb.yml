@@ -6,9 +6,8 @@
 uid: microsoft.quantum.extensions.convert.tostringb
 name: ToStringB
 type: function
-namespace: microsoft.quantum.extensions.convert
-summary: ToStringB has been deprecated. Please use @"microsoft.quantum.convert.boolasstring"
-  instead.
+namespace: Microsoft.Quantum.Extensions.Convert
+summary: ToStringB has been deprecated. Please use @"microsoft.quantum.convert.boolasstring" instead.
 syntax: 'function ToStringB (a : Bool) : String'
 input:
   content: '(a : Bool)'
@@ -21,3 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: String
+...

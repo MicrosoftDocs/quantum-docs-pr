@@ -6,16 +6,14 @@
 uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
 name: EstimateEnergy
 type: operation
-namespace: microsoft.quantum.chemistry.jordanwigner.vqe
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
 summary: |-
   Estimates the energy of the molecule by summing the energy contributed by the individual Jordan-Wigner terms.
 
   This operation implicitly relies on the spin up-down indexing convention.
-syntax: 'operation EstimateEnergy (jwHamiltonian : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData,
-  nSamples : Int) : Double'
+syntax: 'operation EstimateEnergy (jwHamiltonian : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, nSamples : Int) : Double'
 input:
-  content: '(jwHamiltonian : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData,
-    nSamples : Int)'
+  content: '(jwHamiltonian : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, nSamples : Int)'
   types:
   - name: jwHamiltonian
     summary: The Jordan-Wigner Hamiltonian.
@@ -30,3 +28,4 @@ output:
   - summary: The estimated energy of the molecule
     isPrimitive: true
     uid: Double
+...

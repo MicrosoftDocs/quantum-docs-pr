@@ -6,7 +6,7 @@
 uid: microsoft.quantum.core.default
 name: Default
 type: function
-namespace: microsoft.quantum.core
+namespace: Microsoft.Quantum.Core
 summary: Returns a default instance of the specified type.
 syntax: "function Default () : 'T"
 input:
@@ -21,3 +21,4 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of the default value to return.
+...

@@ -6,14 +6,13 @@
 uid: microsoft.quantum.canon.approximateqft
 name: ApproximateQFT
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
 remarks: |-
   AQFT requires Z-rotation gates of the form 2π/2ᵏ and Hadamard gates.
 
   The input and output are assumed to be encoded in big endian encoding.
-syntax: 'operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian)
-  : Unit'
+syntax: 'operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 references: |-
   - [ *M. Roetteler, Th. Beth*,
     Appl. Algebra Eng. Commun. Comput.
@@ -34,8 +33,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: qs
-    summary: quantum register of n qubits to which the Approximate Quantum Fourier
-      Transform is applied.
+    summary: quantum register of n qubits to which the Approximate Quantum Fourier Transform is applied.
     uid: microsoft.quantum.arithmetic.bigendian
 output:
   content: Unit
@@ -45,3 +43,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

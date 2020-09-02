@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.ccnot
 name: CCNOT
 type: operation
-namespace: microsoft.quantum.intrinsic
+namespace: Microsoft.Quantum.Intrinsic
 summary: Applies the doubly controlled–NOT (CCNOT) gate to three qubits.
 remarks: |-
   Equivalent to:
@@ -38,3 +38,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

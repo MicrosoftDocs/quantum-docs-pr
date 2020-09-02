@@ -6,9 +6,8 @@
 uid: microsoft.quantum.math.randomint
 name: RandomInt
 type: operation
-namespace: microsoft.quantum.math
-summary: RandomInt has been deprecated. Please use @"microsoft.quantum.random.drawrandomint"
-  instead.
+namespace: Microsoft.Quantum.Math
+summary: RandomInt has been deprecated. Please use @"microsoft.quantum.random.drawrandomint" instead.
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
@@ -21,3 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

@@ -6,12 +6,11 @@
 uid: microsoft.quantum.arithmetic.reversedopbea
 name: ReversedOpBEA
 type: function
-namespace: microsoft.quantum.arithmetic
+namespace: Microsoft.Quantum.Arithmetic
 summary: |-
   Given an operation that takes a big-endian input, returns a new
   operation that takes a little-endian input.
-syntax: 'function ReversedOpBEA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit
-  is Adj)) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj)'
+syntax: 'function ReversedOpBEA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj)) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj)'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj))'
   types:
@@ -46,3 +45,4 @@ seeAlso:
 - reversedopbe
 - reversedopbec
 - reversedopbeca
+...

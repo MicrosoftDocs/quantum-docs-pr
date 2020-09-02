@@ -6,12 +6,11 @@
 uid: microsoft.quantum.bitwise.xor
 name: Xor
 type: function
-namespace: microsoft.quantum.bitwise
+namespace: Microsoft.Quantum.Bitwise
 summary: |-
   Returns the bitwise exclusive-OR (XOR) of two integers.
   This performs the same computation as the built-in `^^^` operator.
-remarks: See the [C# ^ Operator](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/xor-operator)
-  for more details.
+remarks: See the [C# ^ Operator](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/xor-operator) for more details.
 examples: |-
   ```qsharp
   let a = 248;       //                 11111000₂
@@ -33,3 +32,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

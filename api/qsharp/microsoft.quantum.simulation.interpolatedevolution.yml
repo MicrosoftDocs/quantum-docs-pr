@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.interpolatedevolution
 name: InterpolatedEvolution
 type: function
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: |-
   Interpolates between two generators with a uniform schedule,
   returning an operation that applies simulated evolution under
@@ -15,14 +15,9 @@ remarks: |-
   If the interpolation time is chosen to meet the adiabatic conditions,
   then this function returns an operation which performs adiabatic
   state preparation for the final dynamical generator.
-syntax: 'function InterpolatedEvolution (inerpolationTime : Double, evolutionGeneratorStart
-  : Microsoft.Quantum.Simulation.EvolutionGenerator, evolutionGeneratorEnd : Microsoft.Quantum.Simulation.EvolutionGenerator,
-  timeDependentSimulationAlgorithm : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm)
-  : (Qubit[] => Unit is Adj + Ctl)'
+syntax: 'function InterpolatedEvolution (inerpolationTime : Double, evolutionGeneratorStart : Microsoft.Quantum.Simulation.EvolutionGenerator, evolutionGeneratorEnd : Microsoft.Quantum.Simulation.EvolutionGenerator, timeDependentSimulationAlgorithm : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm) : (Qubit[] => Unit is Adj + Ctl)'
 input:
-  content: '(inerpolationTime : Double, evolutionGeneratorStart : Microsoft.Quantum.Simulation.EvolutionGenerator,
-    evolutionGeneratorEnd : Microsoft.Quantum.Simulation.EvolutionGenerator, timeDependentSimulationAlgorithm
-    : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm)'
+  content: '(inerpolationTime : Double, evolutionGeneratorStart : Microsoft.Quantum.Simulation.EvolutionGenerator, evolutionGeneratorEnd : Microsoft.Quantum.Simulation.EvolutionGenerator, timeDependentSimulationAlgorithm : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm)'
   types:
   - name: inerpolationTime
     isPrimitive: true
@@ -54,3 +49,4 @@ output:
     functors:
     - Adjoint
     - Controlled
+...

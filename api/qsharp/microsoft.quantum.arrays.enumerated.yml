@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.enumerated
 name: Enumerated
 type: function
-namespace: microsoft.quantum.arrays
+namespace: Microsoft.Quantum.Arrays
 summary: |-
   Given an array, returns a new array containing elements of the original
   array along with the indices of each element.
@@ -44,3 +44,4 @@ output:
 typeParameters:
 - uid: "'TElement"
   summary: The type of elements of the array.
+...

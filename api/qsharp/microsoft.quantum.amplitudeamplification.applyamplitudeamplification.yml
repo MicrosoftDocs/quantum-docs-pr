@@ -6,17 +6,13 @@
 uid: microsoft.quantum.amplitudeamplification.applyamplitudeamplification
 name: ApplyAmplitudeAmplification
 type: operation
-namespace: microsoft.quantum.amplitudeamplification
+namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: |-
   Applies amplitude amplification on a given register, using a given set
   of phases and oracles to reflect about the initial and final states.
-syntax: 'operation ApplyAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases,
-  startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection
-  : Microsoft.Quantum.Oracles.ReflectionOracle, target : Qubit[]) : Unit'
+syntax: 'operation ApplyAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, target : Qubit[]) : Unit'
 input:
-  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection
-    : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle,
-    target : Qubit[])'
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, target : Qubit[])'
   types:
   - name: phases
     summary: |-
@@ -44,3 +40,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.greatestcommondivisori
 name: GreatestCommonDivisorI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Computes the greatest common divisor of $a$ and $b$. The GCD is always positive.
 syntax: 'function GreatestCommonDivisorI (a : Int, b : Int) : Int'
 input:
@@ -17,7 +17,8 @@ input:
     isPrimitive: true
     uid: Int
   - name: b
-    summary: the second number of which extended greatest common divisor is being computed
+    summary: the second number of which extended greatest common divisor is being
+      computed
     isPrimitive: true
     uid: Int
 output:
@@ -26,4 +27,3 @@ output:
   - summary: Greatest common divisor of $a$ and $b$
     isPrimitive: true
     uid: Int
-...

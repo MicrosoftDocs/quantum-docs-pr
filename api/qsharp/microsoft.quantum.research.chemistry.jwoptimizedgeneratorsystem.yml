@@ -6,12 +6,13 @@
 uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
 name: JWOptimizedGeneratorSystem
 type: function
-namespace: Microsoft.Quantum.Research.Chemistry
+namespace: microsoft.quantum.research.chemistry
 summary: |-
   Converts a Hamiltonian described by `JWOptimizedHTerms`
   to a `GeneratorSystem` expressed in terms of the
   `GeneratorIndex` convention defined in this file.
-syntax: 'function JWOptimizedGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms) : Microsoft.Quantum.Simulation.GeneratorSystem'
+syntax: 'function JWOptimizedGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)
+  : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)'
   types:
@@ -23,4 +24,3 @@ output:
   types:
   - summary: Representation of Hamiltonian as `GeneratorSystem`.
     uid: microsoft.quantum.simulation.generatorsystem
-...

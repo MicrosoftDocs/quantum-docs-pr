@@ -6,7 +6,6 @@
 uid: microsoft.quantum.machinelearning.labeledsample
 name: LabeledSample
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: A sample, labeled with a class to which that sample belongs.
 syntax: newtype LabeledSample = (Double[], Int);
-...

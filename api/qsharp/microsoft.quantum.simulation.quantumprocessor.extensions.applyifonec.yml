@@ -6,10 +6,12 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifonec
 name: ApplyIfOneC
 type: operation
-namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
-syntax: "operation ApplyIfOneC (measurementResult : Result, (onResultOneOp : ('T => Unit is Ctl), oneArg : 'T)) : Unit"
+namespace: microsoft.quantum.simulation.quantumprocessor.extensions
+syntax: "operation ApplyIfOneC (measurementResult : Result, (onResultOneOp : ('T =>\
+  \ Unit is Ctl), oneArg : 'T)) : Unit"
 input:
-  content: "(measurementResult : Result, (onResultOneOp : ('T => Unit is Ctl), oneArg : 'T))"
+  content: "(measurementResult : Result, (onResultOneOp : ('T => Unit is Ctl), oneArg\
+    \ : 'T))"
   types:
   - name: measurementResult
     isPrimitive: true
@@ -36,4 +38,3 @@ output:
     uid: Unit
 functors:
 - Controlled
-...

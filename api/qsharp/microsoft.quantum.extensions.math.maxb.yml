@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.maxb
 name: MaxB
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: MaxB has been deprecated. Please use @"microsoft.quantum.math.maxl" instead.
 syntax: 'function MaxB (a : BigInt, b : BigInt) : BigInt'
 input:
@@ -23,4 +23,3 @@ output:
   types:
   - isPrimitive: true
     uid: BigInt
-...

@@ -6,9 +6,10 @@
 uid: microsoft.quantum.math.expd
 name: ExpD
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns $e$ raised to the specified power.
-remarks: See [System.Math.Exp](https://docs.microsoft.com/dotnet/api/system.math.exp) for more details.
+remarks: See [System.Math.Exp](https://docs.microsoft.com/dotnet/api/system.math.exp)
+  for more details.
 syntax: 'function ExpD (a : Double) : Double'
 input:
   content: '(a : Double)'
@@ -21,4 +22,3 @@ output:
   types:
   - isPrimitive: true
     uid: Double
-...

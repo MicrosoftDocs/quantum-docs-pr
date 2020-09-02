@@ -6,14 +6,15 @@
 uid: microsoft.quantum.canon.operationpowc
 name: OperationPowC
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Raises an operation to a power.
   The modifier `C` indicates that the operation is controllable.
 
   That is, given an operation representing a gate $U$, returns a new operation
   $U^m$ for a power $m$.
-syntax: "function OperationPowC (op : ('T => Unit is Ctl), power : Int) : ('T => Unit is Ctl)"
+syntax: "function OperationPowC (op : ('T => Unit is Ctl), power : Int) : ('T => Unit\
+  \ is Ctl)"
 input:
   content: "(op : ('T => Unit is Ctl), power : Int)"
   types:
@@ -54,4 +55,3 @@ typeParameters:
   summary: The type of the operation to be powered.
 seeAlso:
 - microsoft.quantum.canon.operationpow
-...

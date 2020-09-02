@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.isnotzero
 name: IsNotZero
 type: function
-namespace: Microsoft.Quantum.Chemistry
+namespace: microsoft.quantum.chemistry
 summary: Checks whether a `Double` number is not approximately zero.
 syntax: 'function IsNotZero (number : Double) : Bool'
 input:
@@ -22,4 +22,3 @@ output:
   - summary: Returns true if `number` has an absolute value greater than `1e-15`.
     isPrimitive: true
     uid: Bool
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.allowatmostncallsca
 name: AllowAtMostNCallsCA
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: |-
   Between a call to this operation and its adjoint, asserts that
   a given operation is called at most a certain number of times.
@@ -28,7 +28,8 @@ examples: |-
       }
   }
   ```
-syntax: "operation AllowAtMostNCallsCA (nTimes : Int, op : ('TInput => 'TOutput is Adj + Ctl), message : String) : Unit"
+syntax: "operation AllowAtMostNCallsCA (nTimes : Int, op : ('TInput => 'TOutput is\
+  \ Adj + Ctl), message : String) : Unit"
 input:
   content: "(nTimes : Int, op : ('TInput => 'TOutput is Adj + Ctl), message : String)"
   types:
@@ -61,4 +62,3 @@ output:
     uid: Unit
 functors:
 - Adjoint
-...

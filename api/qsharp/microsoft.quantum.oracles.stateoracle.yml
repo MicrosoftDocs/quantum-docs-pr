@@ -6,7 +6,7 @@
 uid: microsoft.quantum.oracles.stateoracle
 name: StateOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: |-
   Represents an oracle for state preparation.
 
@@ -22,4 +22,3 @@ remarks: |-
   acts on the on computational basis state $\ket{0}\_{f}\ket{0}\_s$ to create the target state $\ket{\psi}\_s$ with amplitude $\lambda$ in the basis flagged by $\ket{1}\_f$.
   The first parameter is an index to the qubit register of $\ket{0}\_f$. The second parameter encompassed both registers.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
-...

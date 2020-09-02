@@ -6,12 +6,13 @@
 uid: microsoft.quantum.canon.applyquantumfouriertransform
 name: ApplyQuantumFourierTransform
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Performs the Quantum Fourier Transform on a quantum register containing an
   integer in the little-endian representation.
 remarks: The input and output are assumed to be in little endian encoding.
-syntax: 'operation ApplyQuantumFourierTransform (qs : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ApplyQuantumFourierTransform (qs : Microsoft.Quantum.Arithmetic.LittleEndian)
+  : Unit'
 input:
   content: '(qs : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -28,4 +29,3 @@ functors:
 - Controlled
 seeAlso:
 - applyquantumfouriertransformbe
-...

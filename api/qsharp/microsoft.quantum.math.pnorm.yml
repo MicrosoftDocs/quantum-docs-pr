@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.pnorm
 name: PNorm
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: |-
   Returns the `L(p)` norm of a vector of `Double`s.
 
@@ -30,4 +30,3 @@ output:
   - summary: The $p$-norm $\|x\|_p$.
     isPrimitive: true
     uid: Double
-...

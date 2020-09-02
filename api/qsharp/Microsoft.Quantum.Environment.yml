@@ -16,4 +16,3 @@ operations:
     returned by `GetQubitsAvailableToUse`.
 - uid: microsoft.quantum.environment.getqubitsavailabletouse
   summary: Returns the number of qubits currently available to use.
-...

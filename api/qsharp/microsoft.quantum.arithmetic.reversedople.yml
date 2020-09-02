@@ -6,11 +6,12 @@
 uid: microsoft.quantum.arithmetic.reversedople
 name: ReversedOpLE
 type: function
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Given an operation that takes a little-endian input, returns a new
   operation that takes a big-endian input.
-syntax: 'function ReversedOpLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit)) : (Microsoft.Quantum.Arithmetic.BigEndian => Unit)'
+syntax: 'function ReversedOpLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian =>
+  Unit)) : (Microsoft.Quantum.Arithmetic.BigEndian => Unit)'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit))'
   types:
@@ -41,4 +42,3 @@ seeAlso:
 - reversedoplea
 - reversedoplec
 - reversedopleca
-...

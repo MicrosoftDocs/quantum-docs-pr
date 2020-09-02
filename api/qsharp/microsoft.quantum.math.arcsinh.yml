@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.arcsinh
 name: ArcSinh
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Computes the inverse hyperbolic sine of a number.
 syntax: 'function ArcSinh (x : Double) : Double'
 input:
@@ -22,4 +22,3 @@ output:
   - summary: A real number $y$ such that $x = \operatorname{sinh}(y)$.
     isPrimitive: true
     uid: Double
-...

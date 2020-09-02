@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.m
 name: M
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: |-
   Performs a measurement of a single qubit in the
   Pauli $Z$ basis.
@@ -39,4 +39,3 @@ output:
       the $-1$ eigenvalue is observed.
     isPrimitive: true
     uid: Result
-...

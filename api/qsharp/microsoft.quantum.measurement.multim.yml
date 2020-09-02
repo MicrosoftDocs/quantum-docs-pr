@@ -6,7 +6,7 @@
 uid: microsoft.quantum.measurement.multim
 name: MultiM
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: Measures each qubit in a given array in the standard basis.
 syntax: 'operation MultiM (targets : Qubit[]) : Result[]'
 input:
@@ -24,4 +24,3 @@ output:
     isArray: true
     isPrimitive: true
     uid: Result
-...

@@ -6,11 +6,12 @@
 uid: microsoft.quantum.bitwise.or
 name: Or
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: |-
   Returns the bitwise OR of two integers.
   This performs the same computation as the built-in `|||` operator.
-remarks: See the [C# | Operator](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/or-operator) for more details.
+remarks: See the [C# | Operator](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/or-operator)
+  for more details.
 examples: |-
   ```qsharp
   let a = 248;      //                 11111000₂
@@ -32,4 +33,3 @@ output:
   types:
   - isPrimitive: true
     uid: Int
-...

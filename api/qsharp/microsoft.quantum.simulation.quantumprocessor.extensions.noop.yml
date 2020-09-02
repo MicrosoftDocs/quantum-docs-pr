@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.noop
 name: NoOp
 type: operation
-namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+namespace: microsoft.quantum.simulation.quantumprocessor.extensions
 syntax: 'operation NoOp () : Unit'
 input:
   content: ()
@@ -19,4 +19,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

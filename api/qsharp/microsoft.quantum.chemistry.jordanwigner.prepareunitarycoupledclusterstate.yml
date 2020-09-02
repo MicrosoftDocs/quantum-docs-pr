@@ -6,11 +6,14 @@
 uid: microsoft.quantum.chemistry.jordanwigner.prepareunitarycoupledclusterstate
 name: PrepareUnitaryCoupledClusterState
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: Unitary coupled-cluster state preparation of trial state
-syntax: 'operation PrepareUnitaryCoupledClusterState (initialStatePreparation : (Qubit[] => Unit), clusterOperator : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], trotterStepSize : Double, qubits : Qubit[]) : Unit'
+syntax: 'operation PrepareUnitaryCoupledClusterState (initialStatePreparation : (Qubit[]
+  => Unit), clusterOperator : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[],
+  trotterStepSize : Double, qubits : Qubit[]) : Unit'
 input:
-  content: '(initialStatePreparation : (Qubit[] => Unit), clusterOperator : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], trotterStepSize : Double, qubits : Qubit[])'
+  content: '(initialStatePreparation : (Qubit[] => Unit), clusterOperator : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[],
+    trotterStepSize : Double, qubits : Qubit[])'
   types:
   - name: initialStatePreparation
     summary: Unitary to prepare initial trial state.
@@ -40,4 +43,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

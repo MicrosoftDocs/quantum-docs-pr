@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.rest
 name: Rest
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Creates an array that is equal to an input array except that the first array
   element is dropped.
@@ -29,4 +29,3 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of the array elements.
-...

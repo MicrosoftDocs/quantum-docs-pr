@@ -6,9 +6,11 @@
 uid: microsoft.quantum.canon.modularincrementphasele
 name: ModularIncrementPhaseLE
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: ModularIncrementPhaseLE has been deprecated. Please use @"microsoft.quantum.arithmetic.incrementphasebymodularinteger" instead.
-syntax: 'operation ModularIncrementPhaseLE (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+namespace: microsoft.quantum.canon
+summary: ModularIncrementPhaseLE has been deprecated. Please use @"microsoft.quantum.arithmetic.incrementphasebymodularinteger"
+  instead.
+syntax: 'operation ModularIncrementPhaseLE (increment : Int, modulus : Int, target
+  : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
@@ -28,4 +30,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

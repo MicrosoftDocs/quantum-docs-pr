@@ -6,13 +6,14 @@
 uid: microsoft.quantum.arithmetic.carry
 name: Carry
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Implements a reversible carry gate. Given a carry-in bit encoded in
   qubit `carryIn` and two summand bits encoded in `summand1` and `summand2`,
   computes the bitwise xor of `carryIn`, `summand1` and `summand2` in the
   qubit `summand2` and the carry-out is xored to the qubit `carryOut`.
-syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
+syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut
+  : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
   types:
@@ -42,4 +43,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

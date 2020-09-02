@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.assertallzero
 name: AssertAllZero
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Assert that given qubits are all in $\ket{0}$ state.
 syntax: 'operation AssertAllZero (qubits : Qubit[]) : Unit'
 input:
@@ -26,4 +26,3 @@ functors:
 - Controlled
 seeAlso:
 - assertqubit
-...

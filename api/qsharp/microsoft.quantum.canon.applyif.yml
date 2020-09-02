@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyif
 name: ApplyIf
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies an operation conditioned on a classical bit.
 
@@ -60,4 +60,3 @@ seeAlso:
 - microsoft.quantum.canon.applyifc
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
-...

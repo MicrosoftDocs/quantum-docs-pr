@@ -6,11 +6,14 @@
 uid: microsoft.quantum.canon.applytopartition
 name: ApplyToPartition
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: Applies a pair of operations to a given partition of a register into two parts.
-syntax: 'operation ApplyToPartition (op : ((Qubit[], Qubit[]) => Unit), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit'
+namespace: microsoft.quantum.canon
+summary: Applies a pair of operations to a given partition of a register into two
+  parts.
+syntax: 'operation ApplyToPartition (op : ((Qubit[], Qubit[]) => Unit), numberOfQubitsToFirstArgument
+  : Int, target : Qubit[]) : Unit'
 input:
-  content: '(op : ((Qubit[], Qubit[]) => Unit), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
+  content: '(op : ((Qubit[], Qubit[]) => Unit), numberOfQubitsToFirstArgument : Int,
+    target : Qubit[])'
   types:
   - name: op
     summary: The pair of operations to be applied to the given partition.
@@ -49,4 +52,3 @@ seeAlso:
 - microsoft.quantum.canon.applytopartitiona
 - microsoft.quantum.canon.applytopartitionc
 - microsoft.quantum.canon.applytopartitionca
-...

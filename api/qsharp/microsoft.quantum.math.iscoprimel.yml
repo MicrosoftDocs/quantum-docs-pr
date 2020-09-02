@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.iscoprimel
 name: IsCoprimeL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns true if $a$ and $b$ are co-prime and false otherwise.
 syntax: 'function IsCoprimeL (a : BigInt, b : BigInt) : Bool'
 input:
@@ -28,4 +28,3 @@ output:
       and false otherwise
     isPrimitive: true
     uid: Bool
-...

@@ -132,4 +132,3 @@ operations:
     Given an array and an operation that is defined
     for the elements of the array, returns a new array that consists
     of the images of the original array under the operation.
-...

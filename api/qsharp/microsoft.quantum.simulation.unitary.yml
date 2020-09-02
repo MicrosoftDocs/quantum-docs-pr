@@ -6,7 +6,6 @@
 uid: microsoft.quantum.simulation.unitary
 name: Unitary
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: Represents evolution under a unitary operator.
 syntax: newtype Unitary = (Qubit[] => Unit is Adj + Ctl);
-...

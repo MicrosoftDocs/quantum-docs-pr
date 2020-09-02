@@ -6,7 +6,7 @@
 uid: microsoft.quantum.random.bigdiscretedistribution
 name: BigDiscreteDistribution
 type: newtype
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: |-
   Represents a univariate probability distribution over integers of
   arbitrary size.
@@ -15,4 +15,3 @@ seeAlso:
 - microsoft.quantum.random.continuousdistribution
 - microsoft.quantum.random.complexdistribution
 - microsoft.quantum.random.discretedistribution
-...

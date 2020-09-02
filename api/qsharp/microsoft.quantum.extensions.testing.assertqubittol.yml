@@ -6,9 +6,11 @@
 uid: microsoft.quantum.extensions.testing.assertqubittol
 name: AssertQubitTol
 type: operation
-namespace: Microsoft.Quantum.Extensions.Testing
-summary: AssertQubitTol has been deprecated. Please use @"microsoft.quantum.diagnostics.assertqubitwithintolerance" instead.
-syntax: 'operation AssertQubitTol (expected : Result, q : Qubit, tolerance : Double) : Unit'
+namespace: microsoft.quantum.extensions.testing
+summary: AssertQubitTol has been deprecated. Please use @"microsoft.quantum.diagnostics.assertqubitwithintolerance"
+  instead.
+syntax: 'operation AssertQubitTol (expected : Result, q : Qubit, tolerance : Double)
+  : Unit'
 input:
   content: '(expected : Result, q : Qubit, tolerance : Double)'
   types:
@@ -26,4 +28,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

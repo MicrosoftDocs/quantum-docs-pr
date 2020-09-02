@@ -6,9 +6,11 @@
 uid: microsoft.quantum.canon.modularmultiplybyconstantle
 name: ModularMultiplyByConstantLE
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: ModularMultiplyByConstantLE has been deprecated. Please use @"microsoft.quantum.arithmetic.multiplybymodularinteger" instead.
-syntax: 'operation ModularMultiplyByConstantLE (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+namespace: microsoft.quantum.canon
+summary: ModularMultiplyByConstantLE has been deprecated. Please use @"microsoft.quantum.arithmetic.multiplybymodularinteger"
+  instead.
+syntax: 'operation ModularMultiplyByConstantLE (constMultiplier : Int, modulus : Int,
+  multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -28,4 +30,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

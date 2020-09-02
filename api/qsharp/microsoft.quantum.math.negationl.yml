@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.negationl
 name: NegationL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the unary negation of an input.
 syntax: 'function NegationL (input : BigInt) : BigInt'
 input:
@@ -22,4 +22,3 @@ output:
   - summary: The unary negation of `input`.
     isPrimitive: true
     uid: BigInt
-...

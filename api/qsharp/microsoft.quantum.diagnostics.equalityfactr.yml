@@ -6,9 +6,10 @@
 uid: microsoft.quantum.diagnostics.equalityfactr
 name: EqualityFactR
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Asserts that a classical Result variable has the expected value.
-syntax: 'function EqualityFactR (actual : Result, expected : Result, message : String) : Unit'
+syntax: 'function EqualityFactR (actual : Result, expected : Result, message : String)
+  : Unit'
 input:
   content: '(actual : Result, expected : Result, message : String)'
   types:
@@ -29,4 +30,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

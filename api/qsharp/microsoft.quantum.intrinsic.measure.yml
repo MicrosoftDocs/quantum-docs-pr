@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.measure
 name: Measure
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: |-
   Performs a joint measurement of one or more qubits in the
   specified Pauli bases.
@@ -53,4 +53,3 @@ output:
       the $-1$ eigenvalue is observed.
     isPrimitive: true
     uid: Result
-...

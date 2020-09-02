@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.multiplexpauli
 name: MultiplexPauli
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a Pauli rotation conditioned on an array of qubits.
 
@@ -25,9 +25,11 @@ summary: |-
 remarks: |-
   `coefficients` will be padded with elements $\theta_j = 0.0$ if
   fewer than $2^n$ are specified.
-syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control
+  : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
-  content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian,
+    target : Qubit)'
   types:
   - name: coefficients
     summary: |-
@@ -59,4 +61,3 @@ functors:
 - Controlled
 seeAlso:
 - approximatelymultiplexpauli
-...

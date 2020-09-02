@@ -67,4 +67,3 @@ operations:
   summary: |-
     Performs a single-qubit process tomography measurement in the Pauli
     basis, given a particular channel of interest.
-...

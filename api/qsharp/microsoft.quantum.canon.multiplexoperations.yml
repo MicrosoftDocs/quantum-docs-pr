@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.multiplexoperations
 name: MultiplexOperations
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies an array of operations controlled by an array of number states.
 
@@ -18,13 +18,15 @@ remarks: |-
   `coefficients` will be padded with identity elements if
   fewer than $2^n$ are specified. This implementation uses
   $n - 1$ auxiliary qubits.
-syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
+syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index\
+  \ : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
 references: |-
   - Toward the first quantum simulation with quantum speedup
     Andrew M. Childs, Dmitri Maslov, Yunseong Nam, Neil J. Ross, Yuan Su
     https://arxiv.org/abs/1711.10980
 input:
-  content: "(unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
+  content: "(unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian,\
+    \ target : 'T)"
   types:
   - name: unitaries
     summary: |-
@@ -60,4 +62,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.identitygeneratorindex
 name: IdentityGeneratorIndex
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Returns a generator index consistent with the zero
   Hamiltonian, `H = 0`, which corresponds to the identity evolution operation.
@@ -27,4 +27,3 @@ output:
       A generator index representing evolution under the Hamiltonian
       $H = 0$.
     uid: microsoft.quantum.simulation.generatorindex
-...

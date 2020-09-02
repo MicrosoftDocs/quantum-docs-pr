@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytoeacha
 name: ApplyToEachA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a single-qubit operation to each element in a register.
   The modifier `A` indicates that the single-qubit operation is adjointable.
@@ -18,7 +18,8 @@ examples: |-
       ApplyToEach(H, register);
   }
   ```
-syntax: "operation ApplyToEachA (singleElementOperation : ('T => Unit is Adj), register : 'T[]) : Unit"
+syntax: "operation ApplyToEachA (singleElementOperation : ('T => Unit is Adj), register\
+  \ : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ('T => Unit is Adj), register : 'T[])"
   types:
@@ -52,4 +53,3 @@ functors:
 - Adjoint
 seeAlso:
 - microsoft.quantum.canon.applytoeach
-...

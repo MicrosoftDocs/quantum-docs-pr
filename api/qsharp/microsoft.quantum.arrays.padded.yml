@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.padded
 name: Padded
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Returns an array padded at with specified values up to a
   specified length.
@@ -18,7 +18,8 @@ examples: |-
   // The following line returns [2, 2, 2, 10, 12, 15].
   let output = Padded(6, array, 2);
   ```
-syntax: "function Padded (nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[]) : 'T[]"
+syntax: "function Padded (nElementsTotal : Int, defaultElement : 'T, inputArray :\
+  \ 'T[]) : 'T[]"
 input:
   content: "(nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[])"
   types:
@@ -50,4 +51,3 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of the array elements.
-...

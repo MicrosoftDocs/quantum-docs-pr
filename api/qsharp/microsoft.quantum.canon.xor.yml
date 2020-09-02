@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.xor
 name: XOR
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: XOR has been deprecated. Please use @"microsoft.quantum.logical.xor" instead.
 syntax: 'function XOR (bit1 : Bool, bit2 : Bool) : Bool'
 input:
@@ -23,4 +23,3 @@ output:
   types:
   - isPrimitive: true
     uid: Bool
-...

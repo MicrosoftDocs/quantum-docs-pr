@@ -6,7 +6,7 @@
 uid: microsoft.quantum.random.normaldistribution
 name: NormalDistribution
 type: function
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: Returns a normal distribution with a given mean and variance.
 examples: |-
   The following draws 10 samples from the normal distribution with mean
@@ -34,4 +34,3 @@ output:
   - uid: microsoft.quantum.random.continuousdistribution
 seeAlso:
 - microsoft.quantum.random.standardnormaldistribution
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.inputencoder
 name: InputEncoder
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Given a set of coefficients and a tolerance, returns a state preparation
   operation that prepares each coefficient as the corresponding amplitude
@@ -27,4 +27,3 @@ output:
       A state preparation operation that prepares the given coefficients
       as an input state on a given register.
     uid: microsoft.quantum.machinelearning.stategenerator
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.controlledonbitstring
 name: ControlledOnBitString
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
 
@@ -60,7 +60,8 @@ examples: |-
       (ControlledOnBitString([false], Z))(register[0..0], register[1]);
   }
   ```
-syntax: "function ControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
+syntax: "function ControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj\
+  \ + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
 input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
@@ -86,7 +87,8 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: A unitary operation that applies `oracle` on the target register if the control register state corresponds to the bit mask `bits`.
+  - summary: A unitary operation that applies `oracle` on the target register if the
+      control register state corresponds to the bit mask `bits`.
     isOperation: true
     input:
       types:
@@ -102,4 +104,3 @@ output:
     functors:
     - Adjoint
     - Controlled
-...

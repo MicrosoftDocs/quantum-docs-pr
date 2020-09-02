@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.ccontrolled
 name: CControlled
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Given an operation op, returns a new operation which
   applies the op if a classical control bit is true. If `false`, nothing happens.
@@ -47,4 +47,3 @@ seeAlso:
 - microsoft.quantum.canon.ccontrolledc
 - microsoft.quantum.canon.ccontrolleda
 - microsoft.quantum.canon.ccontrolledca
-...

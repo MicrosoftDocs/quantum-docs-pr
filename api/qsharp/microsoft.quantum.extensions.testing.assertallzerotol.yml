@@ -6,8 +6,9 @@
 uid: microsoft.quantum.extensions.testing.assertallzerotol
 name: AssertAllZeroTol
 type: operation
-namespace: Microsoft.Quantum.Extensions.Testing
-summary: AssertAllZeroTol has been deprecated. Please use @"microsoft.quantum.diagnostics.assertallzerowithintolerance" instead.
+namespace: microsoft.quantum.extensions.testing
+summary: AssertAllZeroTol has been deprecated. Please use @"microsoft.quantum.diagnostics.assertallzerowithintolerance"
+  instead.
 syntax: 'operation AssertAllZeroTol (qubits : Qubit[], tolerance : Double) : Unit'
 input:
   content: '(qubits : Qubit[], tolerance : Double)'
@@ -27,4 +28,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.logof2
 name: LogOf2
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the natural logarithm of 2.
 syntax: 'function LogOf2 () : Double'
 input:
@@ -18,4 +18,3 @@ output:
   - summary: Returns a `Double` equal to $0.6931471805599453$.
     isPrimitive: true
     uid: Double
-...

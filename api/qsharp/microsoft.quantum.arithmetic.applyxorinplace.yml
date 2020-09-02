@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.applyxorinplace
 name: ApplyXorInPlace
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Applies a bitwise-XOR operation between a classical integer and an
   integer represented by a register of qubits.
@@ -17,7 +17,8 @@ summary: |-
   Let us denote `value` by a and let y be an unsigned integer encoded in `target`,
   then `InPlaceXorLE` performs an operation given by the following map:
   $\ket{y}\rightarrow \ket{y\oplus a}$ , where $\oplus$ is the bitwise exclusive OR operator.
-syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)
+  : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -36,4 +37,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

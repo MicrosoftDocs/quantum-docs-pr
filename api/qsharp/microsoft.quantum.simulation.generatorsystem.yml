@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.generatorsystem
 name: GeneratorSystem
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Represents a collection of `GeneratorIndex`es.
 
@@ -19,4 +19,3 @@ remarks: |-
 syntax: newtype GeneratorSystem = (Int, (Int -> Microsoft.Quantum.Simulation.GeneratorIndex));
 seeAlso:
 - microsoft.quantum.canon.lookupfunction
-...

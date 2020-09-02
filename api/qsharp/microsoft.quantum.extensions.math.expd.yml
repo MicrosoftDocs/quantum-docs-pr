@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.expd
 name: ExpD
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: ExpD has been deprecated. Please use @"microsoft.quantum.math.expd" instead.
 syntax: 'function ExpD (a : Double) : Double'
 input:
@@ -20,4 +20,3 @@ output:
   types:
   - isPrimitive: true
     uid: Double
-...

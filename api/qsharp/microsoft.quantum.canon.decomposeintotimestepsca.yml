@@ -6,11 +6,14 @@
 uid: microsoft.quantum.canon.decomposeintotimestepsca
 name: DecomposeIntoTimeStepsCA
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: DecomposeIntoTimeStepsCA has been deprecated. Please use @"microsoft.quantum.canon.decomposedintotimestepsca" instead.
-syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
+namespace: microsoft.quantum.canon
+summary: DecomposeIntoTimeStepsCA has been deprecated. Please use @"microsoft.quantum.canon.decomposedintotimestepsca"
+  instead.
+syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T)\
+  \ => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 input:
-  content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int)"
+  content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder\
+    \ : Int)"
   types:
   - name: nSteps
     isPrimitive: true
@@ -52,4 +55,3 @@ output:
     functors:
     - Adjoint
     - Controlled
-...

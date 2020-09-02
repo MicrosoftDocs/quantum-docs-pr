@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.allowatmostnqubits
 name: AllowAtMostNQubits
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: |-
   Between a call to this operation and its adjoint, asserts that
   at most a given number of additional qubits are allocated with
@@ -46,4 +46,3 @@ output:
     uid: Unit
 functors:
 - Adjoint
-...

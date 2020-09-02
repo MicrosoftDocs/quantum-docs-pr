@@ -6,9 +6,11 @@
 uid: microsoft.quantum.canon.assertphase
 name: AssertPhase
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: AssertPhase has been deprecated. Please use @"microsoft.quantum.diagnostics.assertphase" instead.
-syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double) : Unit'
+namespace: microsoft.quantum.canon
+summary: AssertPhase has been deprecated. Please use @"microsoft.quantum.diagnostics.assertphase"
+  instead.
+syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double)
+  : Unit'
 input:
   content: '(expected : Double, qubit : Qubit, tolerance : Double)'
   types:
@@ -26,4 +28,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

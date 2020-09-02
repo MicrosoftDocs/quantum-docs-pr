@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.knilldistill
 name: KnillDistill
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: |-
   Implements the Knill magic state distillation algorithm.
 
@@ -47,4 +47,3 @@ output:
       the state of the register should be considered undefined.
     isPrimitive: true
     uid: Bool
-...

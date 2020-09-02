@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.cz
 name: CZ
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies the controlled-Z (CZ) gate to a pair of qubits.
 
@@ -45,4 +45,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

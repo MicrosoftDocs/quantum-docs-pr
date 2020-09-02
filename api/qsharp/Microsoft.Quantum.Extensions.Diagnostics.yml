@@ -22,4 +22,3 @@ functions:
 
     DumpRegister has been deprecated. Please use @"microsoft.quantum.diagnostics.dumpregister" instead.
     Please use @"microsoft.quantum.diagnostics.dumpregister".
-...

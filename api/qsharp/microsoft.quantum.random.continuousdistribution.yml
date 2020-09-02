@@ -6,11 +6,10 @@
 uid: microsoft.quantum.random.continuousdistribution
 name: ContinuousDistribution
 type: newtype
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: Represents a univariate probability distribution over real numbers.
 syntax: newtype ContinuousDistribution = (Unit => Double);
 seeAlso:
 - microsoft.quantum.random.complexdistribution
 - microsoft.quantum.random.discretedistribution
 - microsoft.quantum.random.bigdiscretedistribution
-...

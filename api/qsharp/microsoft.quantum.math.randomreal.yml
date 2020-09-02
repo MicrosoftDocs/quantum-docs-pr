@@ -6,8 +6,9 @@
 uid: microsoft.quantum.math.randomreal
 name: RandomReal
 type: operation
-namespace: Microsoft.Quantum.Math
-summary: RandomReal has been deprecated. Please use @"microsoft.quantum.random.drawrandomdouble" instead.
+namespace: microsoft.quantum.math
+summary: RandomReal has been deprecated. Please use @"microsoft.quantum.random.drawrandomdouble"
+  instead.
 syntax: 'operation RandomReal (bitsRandom : Int) : Double'
 input:
   content: '(bitsRandom : Int)'
@@ -20,4 +21,3 @@ output:
   types:
   - isPrimitive: true
     uid: Double
-...

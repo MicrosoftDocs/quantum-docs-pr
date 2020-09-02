@@ -6,9 +6,10 @@
 uid: microsoft.quantum.errorcorrection.encodeintobitflipcode
 name: EncodeIntoBitFlipCode
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: Encodes into the [3, 1, 3] / ⟦3, 1, 1⟧ bit-flip code.
-syntax: 'operation EncodeIntoBitFlipCode (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
+syntax: 'operation EncodeIntoBitFlipCode (physRegister : Qubit[], auxQubits : Qubit[])
+  : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
 input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
@@ -33,4 +34,3 @@ output:
     uid: microsoft.quantum.errorcorrection.logicalregister
 seeAlso:
 - logicalregister
-...

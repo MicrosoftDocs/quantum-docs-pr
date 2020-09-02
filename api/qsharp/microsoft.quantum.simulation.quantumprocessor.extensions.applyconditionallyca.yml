@@ -6,10 +6,14 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyca
 name: ApplyConditionallyCA
 type: operation
-namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
-syntax: "operation ApplyConditionallyCA (measurementResults : Result[], resultsValues : Result[], (onEqualOp : ('T => Unit is Ctl + Adj), equalArg : 'T), (onNonEqualOp : ('U => Unit is Ctl + Adj), nonEqualArg : 'U)) : Unit"
+namespace: microsoft.quantum.simulation.quantumprocessor.extensions
+syntax: "operation ApplyConditionallyCA (measurementResults : Result[], resultsValues\
+  \ : Result[], (onEqualOp : ('T => Unit is Ctl + Adj), equalArg : 'T), (onNonEqualOp\
+  \ : ('U => Unit is Ctl + Adj), nonEqualArg : 'U)) : Unit"
 input:
-  content: "(measurementResults : Result[], resultsValues : Result[], (onEqualOp : ('T => Unit is Ctl + Adj), equalArg : 'T), (onNonEqualOp : ('U => Unit is Ctl + Adj), nonEqualArg : 'U))"
+  content: "(measurementResults : Result[], resultsValues : Result[], (onEqualOp :\
+    \ ('T => Unit is Ctl + Adj), equalArg : 'T), (onNonEqualOp : ('U => Unit is Ctl\
+    \ + Adj), nonEqualArg : 'U))"
   types:
   - name: measurementResults
     isArray: true
@@ -59,4 +63,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

@@ -6,8 +6,9 @@
 uid: microsoft.quantum.extensions.testing.assertallzero
 name: AssertAllZero
 type: operation
-namespace: Microsoft.Quantum.Extensions.Testing
-summary: AssertAllZero has been deprecated. Please use @"microsoft.quantum.diagnostics.assertallzero" instead.
+namespace: microsoft.quantum.extensions.testing
+summary: AssertAllZero has been deprecated. Please use @"microsoft.quantum.diagnostics.assertallzero"
+  instead.
 syntax: 'operation AssertAllZero (qubits : Qubit[]) : Unit'
 input:
   content: '(qubits : Qubit[])'
@@ -24,4 +25,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

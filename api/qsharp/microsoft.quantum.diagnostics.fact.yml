@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.fact
 name: Fact
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Declares that a classical condition is true.
 examples: |-
   The following Q# snippet will fail:
@@ -35,4 +35,3 @@ output:
     uid: Unit
 seeAlso:
 - microsoft.quantum.diagnostics.contradiction
-...

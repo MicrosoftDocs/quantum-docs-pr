@@ -6,13 +6,20 @@
 uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
 name: TrainSequentialClassifierAtModel
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Given the structure of a sequential classifier, trains the classifier
   on a given labeled training set, starting from a particular model.
-syntax: 'operation TrainSequentialClassifierAtModel (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel, Int)'
+syntax: 'operation TrainSequentialClassifierAtModel (model : Microsoft.Quantum.MachineLearning.SequentialModel,
+  samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions,
+  trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule
+  : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel,
+  Int)'
 input:
-  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
+  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, samples :
+    Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions,
+    trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule
+    : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
   types:
   - name: model
     summary: The sequential model to be used as a starting point for training.
@@ -54,4 +61,3 @@ output:
 seeAlso:
 - microsoft.quantum.machinelearning.trainsequentialclassifier
 - microsoft.quantum.machinelearning.validatesequentialclassifier
-...

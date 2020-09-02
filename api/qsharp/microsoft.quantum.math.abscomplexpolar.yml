@@ -6,11 +6,12 @@
 uid: microsoft.quantum.math.abscomplexpolar
 name: AbsComplexPolar
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: |-
   Returns the absolute value of a complex number of type
   `ComplexPolar`.
-syntax: 'function AbsComplexPolar (input : Microsoft.Quantum.Math.ComplexPolar) : Double'
+syntax: 'function AbsComplexPolar (input : Microsoft.Quantum.Math.ComplexPolar) :
+  Double'
 input:
   content: '(input : Microsoft.Quantum.Math.ComplexPolar)'
   types:
@@ -23,4 +24,3 @@ output:
   - summary: Absolute value $|c| = r$.
     isPrimitive: true
     uid: Double
-...

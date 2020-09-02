@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.reversed
 name: Reversed
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Create an array that contains the same elements as an input array but in Reversed
   order.
@@ -29,4 +29,3 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of the array elements.
-...

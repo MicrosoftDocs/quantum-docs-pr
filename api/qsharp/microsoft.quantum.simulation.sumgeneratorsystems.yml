@@ -6,9 +6,10 @@
 uid: microsoft.quantum.simulation.sumgeneratorsystems
 name: SumGeneratorSystems
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: Adds multiple `GeneratorSystem`s to create a new GeneratorSystem.
-syntax: 'function SumGeneratorSystems (generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
+syntax: 'function SumGeneratorSystems (generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[])
+  : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[])'
   types:
@@ -25,4 +26,3 @@ output:
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
-...

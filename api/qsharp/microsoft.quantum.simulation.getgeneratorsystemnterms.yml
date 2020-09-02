@@ -6,9 +6,10 @@
 uid: microsoft.quantum.simulation.getgeneratorsystemnterms
 name: GetGeneratorSystemNTerms
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: Retrieves the number of terms in a `GeneratorSystem`.
-syntax: 'function GetGeneratorSystemNTerms (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Int'
+syntax: 'function GetGeneratorSystemNTerms (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)
+  : Int'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
@@ -23,4 +24,3 @@ output:
     uid: Int
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
-...

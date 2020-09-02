@@ -6,7 +6,7 @@
 uid: microsoft.quantum.measurement.mresetx
 name: MResetX
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: |-
   Measures a single qubit in the X basis,
   and resets it to a fixed initial state
@@ -29,4 +29,3 @@ output:
   - summary: The result of measuring `target` in the Pauli $X$ basis.
     isPrimitive: true
     uid: Result
-...

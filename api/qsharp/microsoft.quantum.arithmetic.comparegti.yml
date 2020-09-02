@@ -6,11 +6,13 @@
 uid: microsoft.quantum.arithmetic.comparegti
 name: CompareGTI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: 'Wrapper for integer comparison: `result = x > y`.'
-syntax: 'operation CompareGTI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
+syntax: 'operation CompareGTI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys
+  : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
 input:
-  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian,
+    result : Qubit)'
   types:
   - name: xs
     summary: First $n$-bit number
@@ -30,4 +32,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

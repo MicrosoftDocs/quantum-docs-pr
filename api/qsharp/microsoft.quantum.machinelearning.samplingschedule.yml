@@ -6,7 +6,6 @@
 uid: microsoft.quantum.machinelearning.samplingschedule
 name: SamplingSchedule
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: A schedule for drawing batches from a set of samples.
 syntax: newtype SamplingSchedule = Range[];
-...

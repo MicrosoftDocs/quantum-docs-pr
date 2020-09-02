@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.arccos
 name: ArcCos
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: ArcCos has been deprecated. Please use @"microsoft.quantum.math.arccos" instead.
 syntax: 'function ArcCos (theta : Double) : Double'
 input:
@@ -20,4 +20,3 @@ output:
   types:
   - isPrimitive: true
     uid: Double
-...

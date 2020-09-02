@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.trotterstep
 name: TrotterStep
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Implements a single time-step of time-evolution by the system
   described in an `EvolutionGenerator` using a Trotter–Suzuki
@@ -14,9 +14,11 @@ summary: |-
 remarks: |-
   For more on the Trotter–Suzuki decomposition, see
   [Time-Ordered Composition](/quantum/libraries/control-flow#time-ordered-composition).
-syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
+syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator,
+  trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
 input:
-  content: '(evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double)'
+  content: '(evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator,
+    trotterOrder : Int, trotterStepSize : Double)'
   types:
   - name: evolutionGenerator
     summary: A complete description of the system to be simulated.
@@ -48,4 +50,3 @@ output:
     functors:
     - Adjoint
     - Controlled
-...

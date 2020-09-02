@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.resultasbool
 name: ResultAsBool
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: |-
   Converts a `Result` type to a `Bool` type, where `One` is mapped to
   `true` and `Zero` is mapped to `false`.
@@ -24,4 +24,3 @@ output:
   - summary: A `Bool` representing the `input`.
     isPrimitive: true
     uid: Bool
-...

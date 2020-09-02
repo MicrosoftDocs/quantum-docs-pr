@@ -6,13 +6,15 @@
 uid: microsoft.quantum.measurement.measurepaulis
 name: MeasurePaulis
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: |-
   Given an array of multi-qubit Pauli operators, measures each using a specified measurement
   gadget, then returns the array of results.
-syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result)) : Result[]'
+syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[],
+  Qubit[]) => Result)) : Result[]'
 input:
-  content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result))'
+  content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) =>
+    Result))'
   types:
   - name: paulis
     summary: Array of multi-qubit Pauli operators to measure.
@@ -50,4 +52,3 @@ output:
     isArray: true
     isPrimitive: true
     uid: Result
-...

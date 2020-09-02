@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.absb
 name: AbsB
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: AbsB has been deprecated. Please use @"microsoft.quantum.math.absl" instead.
 syntax: 'function AbsB (a : BigInt) : BigInt'
 input:
@@ -20,4 +20,3 @@ output:
   types:
   - isPrimitive: true
     uid: BigInt
-...

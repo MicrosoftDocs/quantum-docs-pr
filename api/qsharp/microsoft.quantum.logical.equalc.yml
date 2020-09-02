@@ -6,9 +6,10 @@
 uid: microsoft.quantum.logical.equalc
 name: EqualC
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Returns true if and only if two inputs are equal.
-syntax: 'function EqualC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Bool'
+syntax: 'function EqualC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex)
+  : Bool'
 input:
   content: '(a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex)'
   types:
@@ -24,4 +25,3 @@ output:
   - summary: '`true` if and only if `a` is equal to `b`.'
     isPrimitive: true
     uid: Bool
-...

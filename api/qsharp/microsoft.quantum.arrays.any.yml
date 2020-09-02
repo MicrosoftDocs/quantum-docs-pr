@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.any
 name: Any
 type: function
-namespace: microsoft.quantum.arrays
+namespace: Microsoft.Quantum.Arrays
 summary: |-
   Given an array and a predicate that is defined
   for the elements of the array, checks if at least one element of
@@ -59,3 +59,4 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of `array` elements.
+...

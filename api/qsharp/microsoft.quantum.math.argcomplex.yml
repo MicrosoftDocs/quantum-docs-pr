@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.argcomplex
 name: ArgComplex
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: |-
   Returns the phase of a complex number of type
   `Complex`.
@@ -23,3 +23,4 @@ output:
   - summary: Phase $\text{Arg}[c] = \text{ArcTan}(y,x) \in (-\pi,\pi]$.
     isPrimitive: true
     uid: Double
+...

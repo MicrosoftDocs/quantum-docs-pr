@@ -6,7 +6,7 @@
 uid: microsoft.quantum.measurement.measurewithscratch
 name: MeasureWithScratch
 type: operation
-namespace: microsoft.quantum.measurement
+namespace: Microsoft.Quantum.Measurement
 summary: |-
   Measures the given Pauli operator using an explicit scratch
   qubit to perform the measurement.
@@ -34,3 +34,4 @@ output:
       the `target` register.
     isPrimitive: true
     uid: Result
+...

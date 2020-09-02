@@ -6,13 +6,12 @@
 uid: microsoft.quantum.canon.applypaulifrombitstring
 name: ApplyPauliFromBitString
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Applies a Pauli operator on each qubit in an array if the corresponding
   bit of a Boolean array matches a given input.
 remarks: The Boolean array and the quantum register must be of equal length.
-syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits :
-  Bool[], qubits : Qubit[]) : Unit'
+syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : Unit'
 input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
   types:
@@ -25,8 +24,7 @@ input:
     isPrimitive: true
     uid: Bool
   - name: bits
-    summary: Boolean register specifying which corresponding qubit in `qubits` should
-      be operated on
+    summary: Boolean register specifying which corresponding qubit in `qubits` should be operated on
     isArray: true
     isPrimitive: true
     uid: Bool
@@ -43,3 +41,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.h
 name: H
 type: operation
-namespace: microsoft.quantum.intrinsic
+namespace: Microsoft.Quantum.Intrinsic
 summary: |-
   Applies the Hadamard transformation to a single qubit.
 
@@ -34,3 +34,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

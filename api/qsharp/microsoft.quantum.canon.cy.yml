@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.cy
 name: CY
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Applies the controlled-Y (CY) gate to a pair of qubits.
 
@@ -45,3 +45,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

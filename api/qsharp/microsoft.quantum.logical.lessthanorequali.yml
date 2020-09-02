@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.lessthanorequali
 name: LessThanOrEqualI
 type: function
-namespace: microsoft.quantum.logical
+namespace: Microsoft.Quantum.Logical
 summary: |-
   Returns true if and only if a number is less than or equal to another
   number.
@@ -35,3 +35,4 @@ output:
   - summary: '`true` if and only if `a` is less than or equal to `b`.'
     isPrimitive: true
     uid: Bool
+...

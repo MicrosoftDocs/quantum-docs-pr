@@ -6,12 +6,11 @@
 uid: microsoft.quantum.simulation.paulievolutionfunction
 name: PauliEvolutionFunction
 type: function
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: |-
   Represents a dynamical generator as a set of simulatable gates and an
   expansion in the Pauli basis.
-syntax: 'function PauliEvolutionFunction (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)
-  : Microsoft.Quantum.Simulation.EvolutionUnitary'
+syntax: 'function PauliEvolutionFunction (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Microsoft.Quantum.Simulation.EvolutionUnitary'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
@@ -27,3 +26,4 @@ output:
       An `EvolutionUnitary` representing time-evolution by the term
       referenced in `generatorIndex.
     uid: microsoft.quantum.simulation.evolutionunitary
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.synthesis.applyxcontrolledontruthtable
 name: ApplyXControlledOnTruthTable
 type: operation
-namespace: microsoft.quantum.synthesis
+namespace: Microsoft.Quantum.Synthesis
 summary: |-
   Applies the @"microsoft.quantum.intrinsic.x" operation on `target`, if the Boolean function `func` evaluates
   to true for the classical assignment in `controlRegister`.
@@ -27,8 +27,7 @@ summary: |-
 
   The implementation makes use of @"microsoft.quantum.intrinsic.cnot"
   and @"microsoft.quantum.intrinsic.r1" gates.
-syntax: 'operation ApplyXControlledOnTruthTable (func : BigInt, controlRegister :
-  Qubit[], target : Qubit) : Unit'
+syntax: 'operation ApplyXControlledOnTruthTable (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit'
 references: |-
   - [*N. Schuch*, *J. Siewert*, PRL 91, no. 027902, 2003, arXiv:quant-ph/0303063](https://arxiv.org/abs/quant-ph/0303063)
   - [*Mathias Soeken*, *Martin Roetteler*, arXiv:2005.12310](https://arxiv.org/abs/2005.12310)
@@ -58,3 +57,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
+...

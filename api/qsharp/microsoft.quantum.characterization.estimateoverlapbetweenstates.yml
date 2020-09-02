@@ -6,7 +6,7 @@
 uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
 name: EstimateOverlapBetweenStates
 type: operation
-namespace: microsoft.quantum.characterization
+namespace: Microsoft.Quantum.Characterization
 summary: |-
   Given two operations which each prepare copies of a state, estimates
   the squared overlap between the states prepared by each
@@ -20,12 +20,9 @@ remarks: |-
   $$
   where $U$ is the unitary representation of the action of `preparation1`,
   and where $V$ corresponds to `preparation2`.
-syntax: 'operation EstimateOverlapBetweenStates (preparation1 : (Qubit[] => Unit is
-  Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int)
-  : Double'
+syntax: 'operation EstimateOverlapBetweenStates (preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int) : Double'
 input:
-  content: '(preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit
-    is Adj), nQubits : Int, nMeasurements : Int)'
+  content: '(preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int)'
   types:
   - name: preparation1
     summary: The first of the two state preparation operations to be compared.
@@ -73,3 +70,4 @@ output:
 seeAlso:
 - microsoft.quantum.characterization.estimaterealoverlapbetweenstates
 - microsoft.quantum.characterization.estimateimagoverlapbetweenstates
+...

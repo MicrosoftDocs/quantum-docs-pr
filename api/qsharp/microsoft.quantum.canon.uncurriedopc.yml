@@ -6,14 +6,13 @@
 uid: microsoft.quantum.canon.uncurriedopc
 name: UncurriedOpC
 type: function
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Given a function which returns operations,
   returns a new operation which takes both inputs
   as a tuple.
   The modifier `C` indicates that the operations are controllable.
-syntax: "function UncurriedOpC (curriedOp : ('T -> ('U => Unit is Ctl))) : (('T, 'U)\
-  \ => Unit is Ctl)"
+syntax: "function UncurriedOpC (curriedOp : ('T -> ('U => Unit is Ctl))) : (('T, 'U) => Unit is Ctl)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Ctl)))"
   types:
@@ -63,3 +62,4 @@ typeParameters:
   summary: The type of the second argument of a curried function.
 seeAlso:
 - microsoft.quantum.canon.uncurryop
+...

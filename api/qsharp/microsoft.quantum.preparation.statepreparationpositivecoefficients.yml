@@ -6,7 +6,7 @@
 uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
 name: StatePreparationPositiveCoefficients
 type: function
-namespace: microsoft.quantum.preparation
+namespace: Microsoft.Quantum.Preparation
 summary: |-
   Returns an operation that prepares the given quantum state.
 
@@ -36,8 +36,7 @@ examples: |-
       op(qubitsLE);
   }
   ```
-syntax: 'function StatePreparationPositiveCoefficients (coefficients : Double[]) :
-  (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)'
+syntax: 'function StatePreparationPositiveCoefficients (coefficients : Double[]) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)'
 input:
   content: '(coefficients : Double[])'
   types:
@@ -63,3 +62,4 @@ output:
     functors:
     - Adjoint
     - Controlled
+...

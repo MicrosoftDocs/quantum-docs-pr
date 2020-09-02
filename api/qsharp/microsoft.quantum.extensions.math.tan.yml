@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.tan
 name: Tan
 type: function
-namespace: microsoft.quantum.extensions.math
+namespace: Microsoft.Quantum.Extensions.Math
 summary: Tan has been deprecated. Please use @"microsoft.quantum.math.tan" instead.
 syntax: 'function Tan (d : Double) : Double'
 input:
@@ -20,3 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

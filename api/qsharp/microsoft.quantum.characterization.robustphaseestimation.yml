@@ -6,7 +6,7 @@
 uid: microsoft.quantum.characterization.robustphaseestimation
 name: RobustPhaseEstimation
 type: operation
-namespace: microsoft.quantum.characterization
+namespace: Microsoft.Quantum.Characterization
 summary: |-
   Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate,
   and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
@@ -14,15 +14,13 @@ remarks: |-
   In the limit of a large number of queries, Cramer-Rao lower bounds
   for the standard deviation of the estimate of $\phi$ satisfy
   $\sigma \ge 2 \pi / \text{# of queries}$.
-syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle,
-  targetState : Qubit[]) : Double'
+syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
 references: |-
   - Robust Calibration of a Universal Single-Qubit Gate-Set via Robust Phase Estimation
     Shelby Kimmel, Guang Hao Low, Theodore J. Yoder
     https://arxiv.org/abs/1502.02677
 input:
-  content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle,
-    targetState : Qubit[])'
+  content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
   types:
   - name: bitsPrecision
     summary: |-
@@ -46,3 +44,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

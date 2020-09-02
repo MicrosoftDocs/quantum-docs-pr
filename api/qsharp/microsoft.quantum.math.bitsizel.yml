@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.bitsizel
 name: BitSizeL
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: |-
   For a non-negative integer `a`, returns the number of bits required to represent `a`.
 
@@ -26,3 +26,4 @@ output:
   - summary: The bit-size of `a`.
     isPrimitive: true
     uid: Int
+...

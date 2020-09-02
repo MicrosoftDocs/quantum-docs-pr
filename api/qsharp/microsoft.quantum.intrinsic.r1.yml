@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.r1
 name: R1
 type: operation
-namespace: microsoft.quantum.intrinsic
+namespace: Microsoft.Quantum.Intrinsic
 summary: |-
   Applies a rotation about the $\ket{1}$ state by a given angle.
 
@@ -41,3 +41,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

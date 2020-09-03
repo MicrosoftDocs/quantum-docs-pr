@@ -6,13 +6,12 @@
 uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsystem
 name: OptimizedBlockEncodingGeneratorSystem
 type: function
-namespace: microsoft.quantum.chemistry.jordanwigner
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
 summary: |-
   Converts a Hamiltonian described by `JWOptimizedHTerms`
   to a `GeneratorSystem` expressed in terms of the Pauli
   `GeneratorIndex`.
-syntax: 'function OptimizedBlockEncodingGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)
-  : Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem'
+syntax: 'function OptimizedBlockEncodingGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms) : Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)'
   types:
@@ -24,3 +23,4 @@ output:
   types:
   - summary: Representation of Hamiltonian as `GeneratorSystem`.
     uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
+...

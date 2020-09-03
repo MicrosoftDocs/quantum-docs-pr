@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.sinh
 name: Sinh
 type: function
-namespace: microsoft.quantum.extensions.math
+namespace: Microsoft.Quantum.Extensions.Math
 summary: Sinh has been deprecated. Please use @"microsoft.quantum.math.sinh" instead.
 syntax: 'function Sinh (d : Double) : Double'
 input:
@@ -20,3 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

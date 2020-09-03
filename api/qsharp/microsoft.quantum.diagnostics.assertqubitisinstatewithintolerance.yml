@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
 name: AssertQubitIsInStateWithinTolerance
 type: operation
-namespace: microsoft.quantum.diagnostics
+namespace: Microsoft.Quantum.Diagnostics
 summary: |-
   Asserts that a qubit in the expected state.
 
@@ -46,11 +46,9 @@ examples: |-
       AssertQubitIsInStateWithinTolerance((Complex(0., 0.), Complex(0., 1.)), qubits[1], 1e-5);
   }
   ```
-syntax: 'operation AssertQubitIsInStateWithinTolerance (expected : (Microsoft.Quantum.Math.Complex,
-  Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double) : Unit'
+syntax: 'operation AssertQubitIsInStateWithinTolerance (expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double) : Unit'
 input:
-  content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex),
-    register : Qubit, tolerance : Double)'
+  content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
   types:
   - name: expected
     summary: Expected complex amplitudes for $\ket{0}$ and $\ket{1}$, respectively.
@@ -74,3 +72,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

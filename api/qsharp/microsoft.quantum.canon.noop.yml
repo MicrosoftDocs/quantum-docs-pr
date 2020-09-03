@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.noop
 name: NoOp
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Performs the identity operation (no-op) on an argument.
 
@@ -41,3 +41,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.intrinsic.i
+...

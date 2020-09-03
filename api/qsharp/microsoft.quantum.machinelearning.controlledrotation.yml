@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.controlledrotation
 name: ControlledRotation
 type: newtype
-namespace: microsoft.quantum.machinelearning
+namespace: Microsoft.Quantum.MachineLearning
 summary: |-
   Describes a controlled rotation in terms of its target and control
   indices, rotation axis, and index into a model parameter vector.
@@ -27,3 +27,4 @@ remarks: |-
   )
   ```
 syntax: newtype ControlledRotation = ((Int, Int[]), Pauli, Int);
+...

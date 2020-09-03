@@ -6,7 +6,7 @@
 uid: microsoft.quantum.preparation.preparequbit
 name: PrepareQubit
 type: operation
-namespace: microsoft.quantum.preparation
+namespace: Microsoft.Quantum.Preparation
 summary: |-
   Prepares a qubit in the +1 (`Zero`) eigenstate of the given Pauli operator.
   If the identity operator is given, then the qubit is prepared in the maximally
@@ -36,3 +36,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

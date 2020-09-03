@@ -6,7 +6,7 @@
 uid: microsoft.quantum.characterization.measureidentity
 name: MeasureIdentity
 type: operation
-namespace: microsoft.quantum.characterization
+namespace: Microsoft.Quantum.Characterization
 summary: |-
   Measures the identity operator on a register
   of qubits.
@@ -36,3 +36,4 @@ output:
   - summary: The result value `Zero`.
     isPrimitive: true
     uid: Result
+...

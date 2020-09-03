@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.blockencodingbylcu
 name: BlockEncodingByLCU
 type: function
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: |-
   Encodes an operator of interest into a `BlockEncoding`.
 
@@ -18,11 +18,9 @@ summary: |-
 remarks: |-
   This `BlockEncoding` implementation gives it the properties of a
   `BlockEncodingReflection`.
-syntax: "function BlockEncodingByLCU (statePreparation : ('T => Unit is Adj + Ctl),\
-  \ selector : (('T, 'S) => Unit is Adj + Ctl)) : (('T, 'S) => Unit is Adj + Ctl)"
+syntax: "function BlockEncodingByLCU (statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl)) : (('T, 'S) => Unit is Adj + Ctl)"
 input:
-  content: "(statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) =>\
-    \ Unit is Adj + Ctl))"
+  content: "(statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl))"
   types:
   - name: statePreparation
     summary: A unitary $P$ that prepares some target state.
@@ -77,3 +75,4 @@ output:
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
+...

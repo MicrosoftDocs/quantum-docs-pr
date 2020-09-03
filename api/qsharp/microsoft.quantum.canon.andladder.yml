@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.andladder
 name: AndLadder
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Performs a controlled "AND ladder" on a register of target qubits.
 
@@ -27,14 +27,12 @@ remarks: |-
   - Used as a part of <xref:microsoft.quantum.canon.applymulticontrolledc>
     and <xref:microsoft.quantum.canon.applymulticontrolledca>.
   - For the explanation and circuit diagram see Figure 4.10, Section 4.3 in Nielsen & Chuang.
-syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls :
-  Qubit[], targets : Qubit[]) : Unit'
+syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
 references: |-
   - [ *Michael A. Nielsen , Isaac L. Chuang*,
     Quantum Computation and Quantum Information ](http://doi.org/10.1017/CBO9780511976667)
 input:
-  content: '(ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets
-    : Qubit[])'
+  content: '(ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
   types:
   - name: ccnot
     summary: The CCNOT gate to use for the construction.
@@ -63,3 +61,4 @@ output:
     uid: Unit
 functors:
 - Adjoint
+...

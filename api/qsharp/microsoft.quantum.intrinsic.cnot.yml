@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.cnot
 name: CNOT
 type: operation
-namespace: microsoft.quantum.intrinsic
+namespace: Microsoft.Quantum.Intrinsic
 summary: |-
   Applies the controlled-NOT (CNOT) gate to a pair of qubits.
 
@@ -47,3 +47,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

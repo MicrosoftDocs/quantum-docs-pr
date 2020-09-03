@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.cx
 name: CX
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Applies the controlled-X (CX) gate to a pair of qubits.
 
@@ -51,3 +51,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

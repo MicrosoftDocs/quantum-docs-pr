@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.evolutionunitary
 name: EvolutionUnitary
 type: newtype
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: |-
   Represents a unitary time-evolution operator.
 
@@ -14,3 +14,4 @@ summary: |-
   is duration of time-evolution, and the second parameter is the qubit
   register acted upon by the unitary.
 syntax: newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
+...

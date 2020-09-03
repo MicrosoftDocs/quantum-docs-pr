@@ -6,13 +6,11 @@
 uid: microsoft.quantum.diagnostics.equalityfactc
 name: EqualityFactC
 type: function
-namespace: microsoft.quantum.diagnostics
+namespace: Microsoft.Quantum.Diagnostics
 summary: Asserts that a complex number has the expected value.
-syntax: 'function EqualityFactC (actual : Microsoft.Quantum.Math.Complex, expected
-  : Microsoft.Quantum.Math.Complex, message : String) : Unit'
+syntax: 'function EqualityFactC (actual : Microsoft.Quantum.Math.Complex, expected : Microsoft.Quantum.Math.Complex, message : String) : Unit'
 input:
-  content: '(actual : Microsoft.Quantum.Math.Complex, expected : Microsoft.Quantum.Math.Complex,
-    message : String)'
+  content: '(actual : Microsoft.Quantum.Math.Complex, expected : Microsoft.Quantum.Math.Complex, message : String)'
   types:
   - name: actual
     summary: The value to be checked.
@@ -29,3 +27,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

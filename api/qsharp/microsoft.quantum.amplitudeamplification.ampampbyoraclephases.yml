@@ -6,15 +6,11 @@
 uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
 name: AmpAmpByOraclePhases
 type: function
-namespace: microsoft.quantum.amplitudeamplification
-summary: AmpAmpByOraclePhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation"
-  instead.
-syntax: 'function AmpAmpByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases,
-  stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[]
-  => Unit is Adj + Ctl)'
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: AmpAmpByOraclePhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation" instead.
+syntax: 'function AmpAmpByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
-  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle
-    : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
   types:
   - name: phases
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
@@ -39,3 +35,4 @@ output:
     functors:
     - Adjoint
     - Controlled
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.inferredlabels
 name: InferredLabels
 type: function
-namespace: microsoft.quantum.machinelearning
+namespace: Microsoft.Quantum.MachineLearning
 summary: |-
   Given an array of classification probabilities and a bias, returns the
   label inferred from each probability.
@@ -34,3 +34,4 @@ output:
     isArray: true
     isPrimitive: true
     uid: Int
+...

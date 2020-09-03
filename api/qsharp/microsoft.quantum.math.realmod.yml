@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.realmod
 name: RealMod
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Computes the modulus between two real numbers.
 remarks: |-
   This function computes the real modulus by wrapping the real
@@ -43,3 +43,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

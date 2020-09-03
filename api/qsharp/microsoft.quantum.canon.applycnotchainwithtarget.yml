@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applycnotchainwithtarget
 name: ApplyCNOTChainWithTarget
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Computes the parity of an array of qubits into a target qubit.
 
@@ -26,8 +26,7 @@ remarks: |-
   ```qsharp
   ApplyCNOTChain(qs);
   ```
-syntax: 'operation ApplyCNOTChainWithTarget (qubits : Qubit[], targetQubit : Qubit)
-  : Unit'
+syntax: 'operation ApplyCNOTChainWithTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'
 input:
   content: '(qubits : Qubit[], targetQubit : Qubit)'
   types:
@@ -48,3 +47,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

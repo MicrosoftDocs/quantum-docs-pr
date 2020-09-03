@@ -6,13 +6,10 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionally
 name: ApplyConditionally
 type: operation
-namespace: microsoft.quantum.simulation.quantumprocessor.extensions
-syntax: "operation ApplyConditionally (measurementResults : Result[], resultsValues\
-  \ : Result[], (onEqualOp : ('T => Unit), equalArg : 'T), (onNonEqualOp : ('U =>\
-  \ Unit), nonEqualArg : 'U)) : Unit"
+namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+syntax: "operation ApplyConditionally (measurementResults : Result[], resultsValues : Result[], (onEqualOp : ('T => Unit), equalArg : 'T), (onNonEqualOp : ('U => Unit), nonEqualArg : 'U)) : Unit"
 input:
-  content: "(measurementResults : Result[], resultsValues : Result[], (onEqualOp :\
-    \ ('T => Unit), equalArg : 'T), (onNonEqualOp : ('U => Unit), nonEqualArg : 'U))"
+  content: "(measurementResults : Result[], resultsValues : Result[], (onEqualOp : ('T => Unit), equalArg : 'T), (onNonEqualOp : ('U => Unit), nonEqualArg : 'U))"
   types:
   - name: measurementResults
     isArray: true
@@ -53,3 +50,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

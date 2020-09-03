@@ -6,14 +6,13 @@
 uid: microsoft.quantum.canon.applytoelementc
 name: ApplyToElementC
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Applies an operation to a given element of an array.
 
   Given an operation `op`, an index `index`, and an array of targets `targets`,
   applies `op(targets[index])`.
-syntax: "operation ApplyToElementC (op : ('T => Unit is Ctl), index : Int, targets\
-  \ : 'T[]) : Unit"
+syntax: "operation ApplyToElementC (op : ('T => Unit is Ctl), index : Int, targets : 'T[]) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl), index : Int, targets : 'T[])"
   types:
@@ -52,3 +51,4 @@ seeAlso:
 - microsoft.quantum.canon.applytoelement
 - microsoft.quantum.canon.applytoelementa
 - microsoft.quantum.canon.applytoelementca
+...

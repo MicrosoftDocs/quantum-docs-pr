@@ -6,9 +6,8 @@
 uid: microsoft.quantum.intrinsic.random
 name: Random
 type: operation
-namespace: microsoft.quantum.intrinsic
-summary: Random has been deprecated. Please use @"microsoft.quantum.random.drawcategorical"
-  instead.
+namespace: Microsoft.Quantum.Intrinsic
+summary: Random has been deprecated. Please use @"microsoft.quantum.random.drawcategorical" instead.
 syntax: 'operation Random (probs : Double[]) : Int'
 input:
   content: '(probs : Double[])'
@@ -22,3 +21,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

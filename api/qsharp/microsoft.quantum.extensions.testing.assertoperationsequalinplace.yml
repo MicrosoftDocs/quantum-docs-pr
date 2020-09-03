@@ -6,14 +6,11 @@
 uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
 name: AssertOperationsEqualInPlace
 type: operation
-namespace: microsoft.quantum.extensions.testing
-summary: AssertOperationsEqualInPlace has been deprecated. Please use @"microsoft.quantum.diagnostics.assertoperationsequalinplace"
-  instead.
-syntax: 'operation AssertOperationsEqualInPlace (actual : (Qubit[] => Unit), expected
-  : (Qubit[] => Unit is Adj), nQubits : Int) : Unit'
+namespace: Microsoft.Quantum.Extensions.Testing
+summary: AssertOperationsEqualInPlace has been deprecated. Please use @"microsoft.quantum.diagnostics.assertoperationsequalinplace" instead.
+syntax: 'operation AssertOperationsEqualInPlace (actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int) : Unit'
 input:
-  content: '(actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits
-    : Int)'
+  content: '(actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int)'
   types:
   - name: actual
     isOperation: true
@@ -47,3 +44,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

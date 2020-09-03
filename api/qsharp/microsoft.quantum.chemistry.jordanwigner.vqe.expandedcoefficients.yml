@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
 name: ExpandedCoefficients
 type: function
-namespace: microsoft.quantum.chemistry.jordanwigner.vqe
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
 summary: |-
   Expands the compact representation of the Jordan-Wigner coefficients in order
   to obtain a one-to-one mapping between these and Pauli terms.
@@ -15,8 +15,7 @@ input:
   content: '(coeff : Double[], termType : Int)'
   types:
   - name: coeff
-    summary: An array of coefficients, as read from the Jordan-Wigner Hamiltonian
-      data structure.
+    summary: An array of coefficients, as read from the Jordan-Wigner Hamiltonian data structure.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -31,3 +30,4 @@ output:
     isArray: true
     isPrimitive: true
     uid: Double
+...

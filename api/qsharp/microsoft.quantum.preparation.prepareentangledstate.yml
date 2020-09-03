@@ -6,7 +6,7 @@
 uid: microsoft.quantum.preparation.prepareentangledstate
 name: PrepareEntangledState
 type: operation
-namespace: microsoft.quantum.preparation
+namespace: Microsoft.Quantum.Preparation
 summary: |-
   Pairwise entangles two qubit registers.
 
@@ -35,3 +35,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifca
 name: ApplyIfCA
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Applies a unitary operation conditioned on a classical bit.
 
@@ -27,8 +27,7 @@ examples: |-
       ...
   }
   ```
-syntax: "operation ApplyIfCA (op : ('T => Unit is Ctl + Adj), bit : Bool, target :\
-  \ 'T) : Unit"
+syntax: "operation ApplyIfCA (op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T)"
   types:
@@ -69,3 +68,4 @@ seeAlso:
 - microsoft.quantum.canon.applyifc
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.y
 name: Y
 type: operation
-namespace: microsoft.quantum.intrinsic
+namespace: Microsoft.Quantum.Intrinsic
 summary: |-
   Applies the Pauli $Y$ gate.
 
@@ -33,3 +33,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

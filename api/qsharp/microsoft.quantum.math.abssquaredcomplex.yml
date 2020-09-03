@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.abssquaredcomplex
 name: AbsSquaredComplex
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: |-
   Returns the squared absolute value of a complex number of type
   `Complex`.
@@ -23,3 +23,4 @@ output:
   - summary: Squared absolute value $|c|^2 = x^2 + y^2$.
     isPrimitive: true
     uid: Double
+...

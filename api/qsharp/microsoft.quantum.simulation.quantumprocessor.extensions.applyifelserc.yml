@@ -6,13 +6,10 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelserc
 name: ApplyIfElseRC
 type: operation
-namespace: microsoft.quantum.simulation.quantumprocessor.extensions
-syntax: "operation ApplyIfElseRC (measurementResult : Result, (onResultZeroOp : ('T\
-  \ => Unit is Ctl), zeroArg : 'T), (onResultOneOp : ('U => Unit is Ctl), oneArg :\
-  \ 'U)) : Unit"
+namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+syntax: "operation ApplyIfElseRC (measurementResult : Result, (onResultZeroOp : ('T => Unit is Ctl), zeroArg : 'T), (onResultOneOp : ('U => Unit is Ctl), oneArg : 'U)) : Unit"
 input:
-  content: "(measurementResult : Result, (onResultZeroOp : ('T => Unit is Ctl), zeroArg\
-    \ : 'T), (onResultOneOp : ('U => Unit is Ctl), oneArg : 'U))"
+  content: "(measurementResult : Result, (onResultZeroOp : ('T => Unit is Ctl), zeroArg : 'T), (onResultOneOp : ('U => Unit is Ctl), oneArg : 'U))"
   types:
   - name: measurementResult
     isPrimitive: true
@@ -54,3 +51,4 @@ output:
     uid: Unit
 functors:
 - Controlled
+...

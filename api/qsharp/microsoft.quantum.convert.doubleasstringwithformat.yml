@@ -6,12 +6,11 @@
 uid: microsoft.quantum.convert.doubleasstringwithformat
 name: DoubleAsStringWithFormat
 type: function
-namespace: microsoft.quantum.convert
+namespace: Microsoft.Quantum.Convert
 summary: |-
   Converts a given double-precision floating-point number to an equivalent string representation,
   using the given format.
-remarks: See [C# Double.ToString](https://docs.microsoft.com/dotnet/api/system.double.tostring?view=netframework-4.7.1#System_Double_ToString_System_String_)
-  for more details.
+remarks: See [C# Double.ToString](https://docs.microsoft.com/dotnet/api/system.double.tostring?view=netframework-4.7.1#System_Double_ToString_System_String_) for more details.
 syntax: 'function DoubleAsStringWithFormat (a : Double, fmt : String) : String'
 input:
   content: '(a : Double, fmt : String)'
@@ -27,3 +26,4 @@ output:
   types:
   - isPrimitive: true
     uid: String
+...

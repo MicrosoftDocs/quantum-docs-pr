@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytoeach
 name: ApplyToEach
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: Applies a single-qubit operation to each element in a register.
 examples: |-
   Prepare a three-qubit $\ket{+}$ state:
@@ -16,8 +16,7 @@ examples: |-
       ApplyToEach(H, register);
   }
   ```
-syntax: "operation ApplyToEach (singleElementOperation : ('T => Unit), register :\
-  \ 'T[]) : Unit"
+syntax: "operation ApplyToEach (singleElementOperation : ('T => Unit), register : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ('T => Unit), register : 'T[])"
   types:
@@ -49,3 +48,4 @@ seeAlso:
 - microsoft.quantum.canon.applytoeachc
 - microsoft.quantum.canon.applytoeacha
 - microsoft.quantum.canon.applytoeachca
+...

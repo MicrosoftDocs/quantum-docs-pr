@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.rz
 name: Rz
 type: operation
-namespace: microsoft.quantum.intrinsic
+namespace: Microsoft.Quantum.Intrinsic
 summary: |-
   Applies a rotation about the $z$-axis by a given angle.
 
@@ -44,3 +44,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

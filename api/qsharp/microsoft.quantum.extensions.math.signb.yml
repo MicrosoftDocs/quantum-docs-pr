@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.signb
 name: SignB
 type: function
-namespace: microsoft.quantum.extensions.math
+namespace: Microsoft.Quantum.Extensions.Math
 summary: SignB has been deprecated. Please use @"microsoft.quantum.math.signl" instead.
 syntax: 'function SignB (a : BigInt) : Int'
 input:
@@ -20,3 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

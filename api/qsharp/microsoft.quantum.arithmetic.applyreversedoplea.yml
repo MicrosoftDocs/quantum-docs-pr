@@ -6,15 +6,13 @@
 uid: microsoft.quantum.arithmetic.applyreversedoplea
 name: ApplyReversedOpLEA
 type: operation
-namespace: microsoft.quantum.arithmetic
+namespace: Microsoft.Quantum.Arithmetic
 summary: |-
   Applies an operation that takes little-endian input to a register encoding
   an unsigned integer using big-endian format.
-syntax: 'operation ApplyReversedOpLEA (op : (Microsoft.Quantum.Arithmetic.LittleEndian
-  => Unit is Adj), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+syntax: 'operation ApplyReversedOpLEA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 input:
-  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj), register
-    : Microsoft.Quantum.Arithmetic.BigEndian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.BigEndian)'
   types:
   - name: op
     summary: Operation that acts on a little-endian register.
@@ -42,3 +40,4 @@ seeAlso:
 - applyreversedople
 - applyreversedoplec
 - applyreversedopleca
+...

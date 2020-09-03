@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.lessthand
 name: LessThanD
 type: function
-namespace: microsoft.quantum.logical
+namespace: Microsoft.Quantum.Logical
 summary: Returns true if and only if a number is less than another number.
 remarks: |-
   The following are equivalent:
@@ -33,3 +33,4 @@ output:
   - summary: '`true` if and only if `a` is strictly less than `b`.'
     isPrimitive: true
     uid: Bool
+...

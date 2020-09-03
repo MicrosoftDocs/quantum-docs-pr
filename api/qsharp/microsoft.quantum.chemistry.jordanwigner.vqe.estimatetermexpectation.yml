@@ -6,18 +6,16 @@
 uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
 name: EstimateTermExpectation
 type: operation
-namespace: microsoft.quantum.chemistry.jordanwigner.vqe
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
 summary: |-
   Computes the energy associated to a given Jordan-Wigner Hamiltonian term
 
   This operation estimates the expectation value associated to each measurement operator and
   multiplies it by the corresponding coefficient, using sampling.
   The results are aggregated into a variable containing the energy of the Jordan-Wigner term.
-syntax: 'operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is
-  Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int) : Double'
+syntax: 'operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int) : Double'
 input:
-  content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs
-    : Double[], nQubits : Int, nSamples : Int)'
+  content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int)'
   types:
   - name: inputStateUnitary
     summary: The unitary used for state preparation.
@@ -59,3 +57,4 @@ output:
   - summary: The energy associated to the Jordan-Wigner term.
     isPrimitive: true
     uid: Double
+...

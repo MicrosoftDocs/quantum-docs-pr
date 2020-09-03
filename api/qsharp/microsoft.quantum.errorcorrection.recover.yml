@@ -6,15 +6,13 @@
 uid: microsoft.quantum.errorcorrection.recover
 name: Recover
 type: operation
-namespace: microsoft.quantum.errorcorrection
+namespace: Microsoft.Quantum.ErrorCorrection
 summary: |-
   Performs a single round of error correction by a quantum code
   described by a `QECC` type.
-syntax: 'operation Recover (code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn,
-  logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
+syntax: 'operation Recover (code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
-  content: '(code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn,
-    logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
+  content: '(code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
     summary: |-
@@ -39,3 +37,4 @@ seeAlso:
 - microsoft.quantum.canon.qecc
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
+...

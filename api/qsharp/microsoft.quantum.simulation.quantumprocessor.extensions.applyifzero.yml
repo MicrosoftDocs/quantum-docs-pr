@@ -6,12 +6,10 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifzero
 name: ApplyIfZero
 type: operation
-namespace: microsoft.quantum.simulation.quantumprocessor.extensions
-syntax: "operation ApplyIfZero (measurementResult : Result, (onResultZeroOp : ('T\
-  \ => Unit), zeroArg : 'T)) : Unit"
+namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+syntax: "operation ApplyIfZero (measurementResult : Result, (onResultZeroOp : ('T => Unit), zeroArg : 'T)) : Unit"
 input:
-  content: "(measurementResult : Result, (onResultZeroOp : ('T => Unit), zeroArg :\
-    \ 'T))"
+  content: "(measurementResult : Result, (onResultZeroOp : ('T => Unit), zeroArg : 'T))"
   types:
   - name: measurementResult
     isPrimitive: true
@@ -34,3 +32,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

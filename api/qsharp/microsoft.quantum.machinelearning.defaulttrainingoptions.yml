@@ -27,3 +27,4 @@ output:
       A reasonable set of default training options for use when training
       classifiers.
     uid: microsoft.quantum.machinelearning.trainingoptions
+...

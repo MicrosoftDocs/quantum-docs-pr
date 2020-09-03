@@ -7,11 +7,9 @@ uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifoneca
 name: ApplyIfOneCA
 type: operation
 namespace: microsoft.quantum.simulation.quantumprocessor.extensions
-syntax: "operation ApplyIfOneCA (measurementResult : Result, (onResultOneOp : ('T\
-  \ => Unit is Ctl + Adj), oneArg : 'T)) : Unit"
+syntax: "operation ApplyIfOneCA (measurementResult : Result, (onResultOneOp : ('T => Unit is Ctl + Adj), oneArg : 'T)) : Unit"
 input:
-  content: "(measurementResult : Result, (onResultOneOp : ('T => Unit is Ctl + Adj),\
-    \ oneArg : 'T))"
+  content: "(measurementResult : Result, (onResultOneOp : ('T => Unit is Ctl + Adj), oneArg : 'T))"
   types:
   - name: measurementResult
     isPrimitive: true
@@ -40,3 +38,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

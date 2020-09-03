@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.intstopaulis
 name: IntsToPaulis
 type: function
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: |-
   Converts an array of integers to an array of single-qubit Pauli
   operators.
@@ -31,3 +31,4 @@ output:
     isArray: true
     isPrimitive: true
     uid: Pauli
+...

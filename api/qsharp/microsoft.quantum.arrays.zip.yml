@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.zip
 name: Zip
 type: function
-namespace: microsoft.quantum.arrays
+namespace: Microsoft.Quantum.Arrays
 summary: |-
   Given two arrays, returns a new array of pairs such that each pair
   contains an element from each original array.
@@ -51,3 +51,4 @@ typeParameters:
 seeAlso:
 - zip3
 - zip4
+...

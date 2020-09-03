@@ -6,9 +6,8 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifone
 name: ApplyIfOne
 type: operation
-namespace: microsoft.quantum.simulation.quantumprocessor.extensions
-syntax: "operation ApplyIfOne (measurementResult : Result, (onResultOneOp : ('T =>\
-  \ Unit), oneArg : 'T)) : Unit"
+namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+syntax: "operation ApplyIfOne (measurementResult : Result, (onResultOneOp : ('T => Unit), oneArg : 'T)) : Unit"
 input:
   content: "(measurementResult : Result, (onResultOneOp : ('T => Unit), oneArg : 'T))"
   types:
@@ -33,3 +32,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

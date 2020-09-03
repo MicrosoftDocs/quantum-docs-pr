@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.ripplecarryadderttk
 name: RippleCarryAdderTTK
 type: operation
-namespace: microsoft.quantum.arithmetic
+namespace: Microsoft.Quantum.Arithmetic
 summary: |-
   Reversible, in-place ripple-carry addition of two integers.
   Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`,
@@ -16,16 +16,14 @@ summary: |-
 remarks: |-
   This operation has the same functionality as RippleCarryAdderD and,
   RippleCarryAdderCDKM but does not use any ancilla qubits.
-syntax: 'operation RippleCarryAdderTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian,
-  ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
+syntax: 'operation RippleCarryAdderTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: |-
   - Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "Quantum
     Addition Circuits and Unbounded Fan-Out", Quantum Information and
     Computation, Vol. 10, 2010.
     https://arxiv.org/abs/0910.2530
 input:
-  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian,
-    carry : Qubit)'
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit)'
   types:
   - name: xs
     summary: LittleEndian qubit register encoding the first integer summand.
@@ -47,3 +45,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

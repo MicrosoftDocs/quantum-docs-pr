@@ -6,12 +6,11 @@
 uid: microsoft.quantum.math.complexpolarascomplex
 name: ComplexPolarAsComplex
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: |-
   Converts a complex number of type `ComplexPolar` to a complex
   number of type `Complex`.
-syntax: 'function ComplexPolarAsComplex (input : Microsoft.Quantum.Math.ComplexPolar)
-  : Microsoft.Quantum.Math.Complex'
+syntax: 'function ComplexPolarAsComplex (input : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.Complex'
 input:
   content: '(input : Microsoft.Quantum.Math.ComplexPolar)'
   types:
@@ -23,3 +22,4 @@ output:
   types:
   - summary: Complex number $c = x + i y$.
     uid: microsoft.quantum.math.complex
+...

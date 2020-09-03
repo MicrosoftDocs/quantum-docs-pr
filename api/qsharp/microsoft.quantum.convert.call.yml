@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.call
 name: Call
 type: operation
-namespace: microsoft.quantum.convert
+namespace: Microsoft.Quantum.Convert
 summary: |-
   Calls a function with a given input.
 
@@ -41,3 +41,4 @@ output:
   - summary: The result of calling `fn`.
     uid: "'Output"
     isLocal: true
+...

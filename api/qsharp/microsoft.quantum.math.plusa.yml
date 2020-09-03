@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.plusa
 name: PlusA
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Returns the sum (concatenation) of two inputs.
 syntax: "function PlusA (a : 'Element[], b : 'Element[]) : 'Element[]"
 input:
@@ -32,3 +32,4 @@ output:
 typeParameters:
 - uid: "'Element"
   summary: The type of each element in each of the two input arrays.
+...

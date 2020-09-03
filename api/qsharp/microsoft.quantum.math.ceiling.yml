@@ -6,10 +6,9 @@
 uid: microsoft.quantum.math.ceiling
 name: Ceiling
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Returns the smallest integer greater than or equal to the specified number.
-remarks: See [System.Math.Ceiling](https://docs.microsoft.com/dotnet/api/system.math.ceiling)
-  for more details.
+remarks: See [System.Math.Ceiling](https://docs.microsoft.com/dotnet/api/system.math.ceiling) for more details.
 syntax: 'function Ceiling (value : Double) : Int'
 input:
   content: '(value : Double)'
@@ -22,3 +21,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

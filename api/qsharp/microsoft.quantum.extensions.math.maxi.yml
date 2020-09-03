@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.maxi
 name: MaxI
 type: function
-namespace: microsoft.quantum.extensions.math
+namespace: Microsoft.Quantum.Extensions.Math
 summary: MaxI has been deprecated. Please use @"microsoft.quantum.math.maxi" instead.
 syntax: 'function MaxI (a : Int, b : Int) : Int'
 input:
@@ -23,3 +23,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

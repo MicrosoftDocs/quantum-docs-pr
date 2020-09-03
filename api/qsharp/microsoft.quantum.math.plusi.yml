@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.plusi
 name: PlusI
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Returns the sum of two inputs.
 syntax: 'function PlusI (a : Int, b : Int) : Int'
 input:
@@ -26,3 +26,4 @@ output:
   - summary: The sum $a + b$.
     isPrimitive: true
     uid: Int
+...

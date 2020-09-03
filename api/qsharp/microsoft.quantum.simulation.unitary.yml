@@ -9,3 +9,4 @@ type: newtype
 namespace: microsoft.quantum.simulation
 summary: Represents evolution under a unitary operator.
 syntax: newtype Unitary = (Qubit[] => Unit is Adj + Ctl);
+...

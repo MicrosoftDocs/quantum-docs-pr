@@ -12,8 +12,7 @@ summary: |-
   returns a new operation which takes both inputs
   as a tuple.
   The modifier `A` indicates that the operations are adjointable.
-syntax: "function UncurriedOpA (curriedOp : ('T -> ('U => Unit is Adj))) : (('T, 'U)\
-  \ => Unit is Adj)"
+syntax: "function UncurriedOpA (curriedOp : ('T -> ('U => Unit is Adj))) : (('T, 'U) => Unit is Adj)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Adj)))"
   types:
@@ -63,3 +62,4 @@ typeParameters:
   summary: The type of the second argument of a curried function.
 seeAlso:
 - microsoft.quantum.canon.uncurryop
+...

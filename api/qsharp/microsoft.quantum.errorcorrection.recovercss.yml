@@ -10,12 +10,9 @@ namespace: microsoft.quantum.errorcorrection
 summary: |-
   Performs a single round of error correction by a quantum code
   described by a `CSS` type.
-syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX :
-  Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn,
-  logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
+syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
-  content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn,
-    fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
+  content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
     summary: |-
@@ -45,3 +42,4 @@ seeAlso:
 - microsoft.quantum.canon.css
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
+...

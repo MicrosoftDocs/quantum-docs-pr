@@ -6,21 +6,16 @@
 uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
 name: AdiabaticStateEnergyUnitary
 type: operation
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: |-
   Performs state preparation by applying a
   `statePrepUnitary` on the input state, followed by adiabatic state
   preparation using a `adiabaticUnitary`, and finally phase estimation
   with respect to `qpeUnitary`on the resulting state using a
   `phaseEstAlgorithm`.
-syntax: 'operation AdiabaticStateEnergyUnitary (statePrepUnitary : (Qubit[] => Unit),
-  adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl),
-  phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double),
-  qubits : Qubit[]) : Double'
+syntax: 'operation AdiabaticStateEnergyUnitary (statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[]) : Double'
 input:
-  content: '(statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] =>
-    Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle,
-    Qubit[]) => Double), qubits : Qubit[])'
+  content: '(statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[])'
   types:
   - name: statePrepUnitary
     summary: |-
@@ -97,3 +92,4 @@ output:
       of the generator represented by $U$.
     isPrimitive: true
     uid: Double
+...

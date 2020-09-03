@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.resultarrayasboolarray
 name: ResultArrayAsBoolArray
 type: function
-namespace: microsoft.quantum.convert
+namespace: Microsoft.Quantum.Convert
 summary: |-
   Converts a `Result[]` type to a `Bool[]` type, where `One` is mapped to
   `true` and `Zero` is mapped to `false`.
@@ -26,3 +26,4 @@ output:
     isArray: true
     isPrimitive: true
     uid: Bool
+...

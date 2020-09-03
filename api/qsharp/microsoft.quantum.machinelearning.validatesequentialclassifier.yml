@@ -6,18 +6,13 @@
 uid: microsoft.quantum.machinelearning.validatesequentialclassifier
 name: ValidateSequentialClassifier
 type: operation
-namespace: microsoft.quantum.machinelearning
+namespace: Microsoft.Quantum.MachineLearning
 summary: |-
   Validates a given sequential classifier against a given set of
   pre-labeled samples.
-syntax: 'operation ValidateSequentialClassifier (model : Microsoft.Quantum.MachineLearning.SequentialModel,
-  samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double,
-  nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)
-  : Microsoft.Quantum.MachineLearning.ValidationResults'
+syntax: 'operation ValidateSequentialClassifier (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : Microsoft.Quantum.MachineLearning.ValidationResults'
 input:
-  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, samples :
-    Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements
-    : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
+  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
   types:
   - name: model
     summary: The sequential model to be validated.
@@ -44,3 +39,4 @@ output:
   types:
   - summary: The results of the given validation.
     uid: microsoft.quantum.machinelearning.validationresults
+...

@@ -6,10 +6,9 @@
 uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
 name: PauliCoefficientFromGenIdx
 type: function
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: Extracts the coefficient of a Pauli term described by a `GeneratorIndex`.
-syntax: 'function PauliCoefficientFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)
-  : Double'
+syntax: 'function PauliCoefficientFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Double'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
@@ -22,3 +21,4 @@ output:
   - summary: The coefficient of the term described by a `GeneratorIndex`.
     isPrimitive: true
     uid: Double
+...

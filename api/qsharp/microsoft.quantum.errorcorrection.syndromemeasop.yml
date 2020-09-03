@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.syndromemeasop
 name: SyndromeMeasOp
 type: newtype
-namespace: microsoft.quantum.errorcorrection
+namespace: Microsoft.Quantum.ErrorCorrection
 summary: |-
   Represents an operation that is used to measure the syndrome
   of an error-correcting code block.
@@ -27,8 +27,8 @@ remarks: |-
               [PauliI, PauliZ, PauliZ]
           ], _, MeasureWithScratch));
   ```
-syntax: newtype SyndromeMeasOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister
-  => Microsoft.Quantum.ErrorCorrection.Syndrome);
+syntax: newtype SyndromeMeasOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister => Microsoft.Quantum.ErrorCorrection.Syndrome);
 seeAlso:
 - logicalregister
 - syndrome
+...

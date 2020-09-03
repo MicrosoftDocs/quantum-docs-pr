@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytofirstthreequbits
 name: ApplyToFirstThreeQubits
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: Applies an operation to the first three qubits in the register.
 remarks: |-
   This is equivalent to:
@@ -14,8 +14,7 @@ remarks: |-
   ```qsharp
   op(register[0], register[1], register[2]);
   ```
-syntax: 'operation ApplyToFirstThreeQubits (op : ((Qubit, Qubit, Qubit) => Unit),
-  register : Qubit[]) : Unit'
+syntax: 'operation ApplyToFirstThreeQubits (op : ((Qubit, Qubit, Qubit) => Unit), register : Qubit[]) : Unit'
 input:
   content: '(op : ((Qubit, Qubit, Qubit) => Unit), register : Qubit[])'
   types:
@@ -48,3 +47,4 @@ seeAlso:
 - microsoft.quantum.canon.applytofirstthreequbitsc
 - microsoft.quantum.canon.applytofirstthreequbitsa
 - microsoft.quantum.canon.applytofirstthreequbitsca
+...

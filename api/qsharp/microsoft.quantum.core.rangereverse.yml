@@ -25,3 +25,4 @@ output:
   - summary: A new range that is the reverse of the given range.
     isPrimitive: true
     uid: Range
+...

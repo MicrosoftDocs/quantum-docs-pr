@@ -12,3 +12,4 @@ summary: |-
   qubit with index `0` encodes the lowest bit of an unsigned integer.
 remarks: We abbreviate `LittleEndian` as `LE` in the documentation.
 syntax: newtype LittleEndian = Qubit[];
+...

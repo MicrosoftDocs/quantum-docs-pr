@@ -26,3 +26,4 @@ output:
       Returns an implementation of a quantum error correction code by
       specifying a `QECC` type.
     uid: microsoft.quantum.errorcorrection.qecc
+...

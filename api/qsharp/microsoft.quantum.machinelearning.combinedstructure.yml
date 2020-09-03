@@ -27,8 +27,7 @@ examples: |-
       ControlledRotation((2, [1]), PauliX, 4)
   ];
   ```
-syntax: 'function CombinedStructure (layers : Microsoft.Quantum.MachineLearning.ControlledRotation[][])
-  : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+syntax: 'function CombinedStructure (layers : Microsoft.Quantum.MachineLearning.ControlledRotation[][]) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
 input:
   content: '(layers : Microsoft.Quantum.MachineLearning.ControlledRotation[][])'
   types:
@@ -46,3 +45,4 @@ output:
       of all other layers.
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
+...

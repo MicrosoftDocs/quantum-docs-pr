@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.bitflipcode
 name: BitFlipCode
 type: function
-namespace: microsoft.quantum.errorcorrection
+namespace: Microsoft.Quantum.ErrorCorrection
 summary: |-
   Returns a QECC value representing the ⟦3, 1, 1⟧ bit flip code encoder and
   decoder with in-place syndrome measurement.
@@ -21,3 +21,4 @@ output:
       Returns an implementation of a quantum error correction code by
       specifying a `QECC` type.
     uid: microsoft.quantum.errorcorrection.qecc
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.max
 name: Max
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Given an array of integers, returns the largest element.
 syntax: 'function Max (values : Int[]) : Int'
 input:
@@ -23,3 +23,4 @@ output:
   - summary: The largest element of `values`.
     isPrimitive: true
     uid: Int
+...

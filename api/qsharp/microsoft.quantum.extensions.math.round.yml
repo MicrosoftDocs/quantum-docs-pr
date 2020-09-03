@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.round
 name: Round
 type: function
-namespace: microsoft.quantum.extensions.math
+namespace: Microsoft.Quantum.Extensions.Math
 summary: Round has been deprecated. Please use @"microsoft.quantum.math.round" instead.
 syntax: 'function Round (a : Double) : Int'
 input:
@@ -20,3 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

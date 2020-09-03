@@ -6,10 +6,9 @@
 uid: microsoft.quantum.math.e
 name: E
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Returns the natural logarithmic base $e$.
-remarks: See [System.Math.E](https://docs.microsoft.com/dotnet/api/system.math.e)
-  for more details.
+remarks: See [System.Math.E](https://docs.microsoft.com/dotnet/api/system.math.e) for more details.
 syntax: 'function E () : Double'
 input:
   content: ()
@@ -19,3 +18,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

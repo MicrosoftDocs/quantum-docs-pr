@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.assertmeasurementprobability
 name: AssertMeasurementProbability
 type: operation
-namespace: microsoft.quantum.diagnostics
+namespace: Microsoft.Quantum.Diagnostics
 summary: |-
   Asserts that measuring the given qubits in the given Pauli basis will have the given result
   with the given probability, within some tolerance.
@@ -21,11 +21,9 @@ examples: |-
           "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
   }
   ```
-syntax: 'operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[],
-  result : Result, prob : Double, msg : String, tol : Double) : Unit'
+syntax: 'operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
 input:
-  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg
-    : String, tol : Double)'
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
     summary: |-
@@ -64,3 +62,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.diagnostics.assertmeasurement
+...

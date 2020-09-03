@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.isresultone
 name: IsResultOne
 type: function
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: Tests if a given Result value is equal to `One`.
 syntax: 'function IsResultOne (input : Result) : Bool'
 input:
@@ -22,3 +22,4 @@ output:
   - summary: Returns `true` if `input` is equal to `One`.
     isPrimitive: true
     uid: Bool
+...

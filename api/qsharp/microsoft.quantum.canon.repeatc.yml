@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.repeatc
 name: RepeatC
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: Repeats an operation a given number of times.
 examples: |-
   The following are equivalent:
@@ -15,8 +15,7 @@ examples: |-
   RepeatC(U, 17, target);
   (BoundC(ConstantArray(17, U)))(target);
   ```
-syntax: "operation RepeatC (op : ('TInput => Unit is Ctl), nTimes : Int, input : 'TInput)\
-  \ : Unit"
+syntax: "operation RepeatC (op : ('TInput => Unit is Ctl), nTimes : Int, input : 'TInput) : Unit"
 input:
   content: "(op : ('TInput => Unit is Ctl), nTimes : Int, input : 'TInput)"
   types:
@@ -56,3 +55,4 @@ seeAlso:
 - microsoft.quantum.canon.repeat
 - microsoft.quantum.canon.repeata
 - microsoft.quantum.canon.repeatca
+...

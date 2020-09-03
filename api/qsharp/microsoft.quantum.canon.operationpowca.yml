@@ -6,15 +6,14 @@
 uid: microsoft.quantum.canon.operationpowca
 name: OperationPowCA
 type: function
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Raises an operation to a power.
   The modifier `A` indicates that the operation is controllable and adjointable.
 
   That is, given an operation representing a gate $U$, returns a new operation
   $U^m$ for a power $m$.
-syntax: "function OperationPowCA (op : ('T => Unit is Ctl + Adj), power : Int) : ('T\
-  \ => Unit is Ctl + Adj)"
+syntax: "function OperationPowCA (op : ('T => Unit is Ctl + Adj), power : Int) : ('T => Unit is Ctl + Adj)"
 input:
   content: "(op : ('T => Unit is Ctl + Adj), power : Int)"
   types:
@@ -57,3 +56,4 @@ typeParameters:
   summary: The type of the operation to be powered.
 seeAlso:
 - microsoft.quantum.canon.operationpow
+...

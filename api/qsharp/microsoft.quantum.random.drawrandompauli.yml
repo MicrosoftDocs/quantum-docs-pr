@@ -6,7 +6,7 @@
 uid: microsoft.quantum.random.drawrandompauli
 name: DrawRandomPauli
 type: operation
-namespace: microsoft.quantum.random
+namespace: Microsoft.Quantum.Random
 summary: Draws a random Pauli value.
 syntax: 'operation DrawRandomPauli () : Pauli'
 input:
@@ -20,3 +20,4 @@ output:
       probability.
     isPrimitive: true
     uid: Pauli
+...

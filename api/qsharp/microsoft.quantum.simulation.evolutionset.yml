@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.evolutionset
 name: EvolutionSet
 type: newtype
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: |-
   Represents a set of gates that can be readily implemented and used
   to implement simulation algorithms.
@@ -18,3 +18,4 @@ summary: |-
   which are operations
   parameterized by a real number representing time
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
+...

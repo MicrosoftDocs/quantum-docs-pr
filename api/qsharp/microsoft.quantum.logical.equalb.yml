@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.equalb
 name: EqualB
 type: function
-namespace: microsoft.quantum.logical
+namespace: Microsoft.Quantum.Logical
 summary: Returns true if and only if two inputs are equal.
 remarks: |-
   The following are equivalent:
@@ -33,3 +33,4 @@ output:
   - summary: '`true` if and only if `a` is equal to `b`.'
     isPrimitive: true
     uid: Bool
+...

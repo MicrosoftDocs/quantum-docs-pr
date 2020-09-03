@@ -6,7 +6,7 @@
 uid: microsoft.quantum.random.continuousuniformdistribution
 name: ContinuousUniformDistribution
 type: function
-namespace: microsoft.quantum.random
+namespace: Microsoft.Quantum.Random
 summary: Returns a uniform distribution over a given inclusive interval.
 remarks: Fails if `max <= min`.
 examples: |-
@@ -37,3 +37,4 @@ output:
     uid: microsoft.quantum.random.continuousdistribution
 seeAlso:
 - microsoft.quantum.drawrandomdouble
+...

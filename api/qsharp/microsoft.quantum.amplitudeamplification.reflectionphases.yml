@@ -6,7 +6,7 @@
 uid: microsoft.quantum.amplitudeamplification.reflectionphases
 name: ReflectionPhases
 type: newtype
-namespace: microsoft.quantum.amplitudeamplification
+namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: Phases for a sequence of partial reflections in amplitude amplification.
 remarks: |-
   The first parameter is an array of phases for reflection about the
@@ -14,3 +14,4 @@ remarks: |-
   about the target state.
   Both arrays must be of equal length. Note that in many cases, the first phase about the start state and last phase about the target state introduces a global phase shift and may be set to $0$.
 syntax: newtype ReflectionPhases = (Double[], Double[]);
+...

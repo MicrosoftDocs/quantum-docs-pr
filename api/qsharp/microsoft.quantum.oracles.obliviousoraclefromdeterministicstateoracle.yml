@@ -6,17 +6,14 @@
 uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
 name: ObliviousOracleFromDeterministicStateOracle
 type: function
-namespace: microsoft.quantum.oracles
+namespace: Microsoft.Quantum.Oracles
 summary: Combines the oracles `DeterministicStateOracle` and `ObliviousOracle`.
-syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle,
-  signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : Microsoft.Quantum.Oracles.ObliviousOracle'
+syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : Microsoft.Quantum.Oracles.ObliviousOracle'
 input:
-  content: '(ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle
-    : Microsoft.Quantum.Oracles.ObliviousOracle)'
+  content: '(ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
   types:
   - name: ancillaOracle
-    summary: A state preparation oracle $A$ of type `DeterministicStateOracle` acting
-      on register $a$.
+    summary: A state preparation oracle $A$ of type `DeterministicStateOracle` acting on register $a$.
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
     summary: A oracle $U$ of type `ObliviousOracle` acting jointly on register $a,s$.
@@ -29,3 +26,4 @@ output:
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.obliviousoracle
+...

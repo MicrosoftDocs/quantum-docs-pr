@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.qftle
 name: QFTLE
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Performs the Quantum Fourier Transform on a quantum register containing an
   integer in the little-endian representation.
@@ -28,3 +28,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.qft
+...

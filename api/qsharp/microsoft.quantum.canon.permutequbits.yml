@@ -22,8 +22,7 @@ input:
   content: '(ordering : Int[], register : Qubit[])'
   types:
   - name: ordering
-    summary: Describes the new ordering of the qubits, where the qubit at index i
-      will now be at ordering[i].
+    summary: Describes the new ordering of the qubits, where the qubit at index i will now be at ordering[i].
     isArray: true
     isPrimitive: true
     uid: Int
@@ -40,3 +39,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

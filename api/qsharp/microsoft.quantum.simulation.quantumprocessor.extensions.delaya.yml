@@ -36,3 +36,4 @@ output:
     uid: Unit
 functors:
 - Adjoint
+...

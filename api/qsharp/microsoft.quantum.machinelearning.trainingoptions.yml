@@ -21,6 +21,6 @@ remarks: |-
                 w/ NMeasurements <- 100000
                 w/ MaxEpochs <- 8;
   ```
-syntax: newtype TrainingOptions = (Double, Double, Int, Int, Int, Int, Double, Int,
-  (String -> Unit));
+syntax: newtype TrainingOptions = (Double, Double, Int, Int, Int, Int, Double, Int, (String -> Unit));
 references: '- [arXiv:1804.00633](https://arxiv.org/abs/1804.00633)'
+...

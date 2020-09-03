@@ -6,10 +6,9 @@
 uid: microsoft.quantum.math.signd
 name: SignD
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Returns an integer that indicates the sign of a number.
-remarks: See [System.Math.Sign](https://docs.microsoft.com/dotnet/api/system.math.sign)
-  for more details.
+remarks: See [System.Math.Sign](https://docs.microsoft.com/dotnet/api/system.math.sign) for more details.
 syntax: 'function SignD (a : Double) : Int'
 input:
   content: '(a : Double)'
@@ -22,3 +21,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

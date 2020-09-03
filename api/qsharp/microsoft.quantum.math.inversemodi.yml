@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.inversemodi
 name: InverseModI
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Returns $b$ such that $a \cdot b = 1 (\operatorname{mod} \texttt{modulus})$.
 syntax: 'function InverseModI (a : Int, modulus : Int) : Int'
 input:
@@ -26,3 +26,4 @@ output:
   - summary: Integer $b$ such that $a \cdot b = 1 (\operatorname{mod} \texttt{modulus})$.
     isPrimitive: true
     uid: Int
+...

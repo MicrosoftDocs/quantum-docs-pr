@@ -6,10 +6,9 @@
 uid: microsoft.quantum.machinelearning.schedulelength
 name: ScheduleLength
 type: function
-namespace: microsoft.quantum.machinelearning
+namespace: Microsoft.Quantum.MachineLearning
 summary: Returns the number of elements in a given sampling schedule.
-syntax: 'function ScheduleLength (schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)
-  : Int'
+syntax: 'function ScheduleLength (schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : Int'
 input:
   content: '(schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
   types:
@@ -22,3 +21,4 @@ output:
   - summary: The number of elements in the given sampling schedule.
     isPrimitive: true
     uid: Int
+...

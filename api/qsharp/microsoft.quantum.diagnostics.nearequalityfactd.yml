@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.nearequalityfactd
 name: NearEqualityFactD
 type: function
-namespace: microsoft.quantum.diagnostics
+namespace: Microsoft.Quantum.Diagnostics
 summary: |-
   Asserts that a classical floating point value has the expected value up to a
   small tolerance of 1e-10.
@@ -30,3 +30,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

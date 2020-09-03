@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytofirsttwoqubitsa
 name: ApplyToFirstTwoQubitsA
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Applies an operation to the first two qubits in the register.
   The modifier `A` indicates that the operation is adjointable.
@@ -16,8 +16,7 @@ remarks: |-
   ```qsharp
   op(register[0], register[1]);
   ```
-syntax: 'operation ApplyToFirstTwoQubitsA (op : ((Qubit, Qubit) => Unit is Adj), register
-  : Qubit[]) : Unit'
+syntax: 'operation ApplyToFirstTwoQubitsA (op : ((Qubit, Qubit) => Unit is Adj), register : Qubit[]) : Unit'
 input:
   content: '(op : ((Qubit, Qubit) => Unit is Adj), register : Qubit[])'
   types:
@@ -50,3 +49,4 @@ functors:
 - Adjoint
 seeAlso:
 - microsoft.quantum.canon.applytofirsttwoqubits
+...

@@ -6,15 +6,13 @@
 uid: microsoft.quantum.simulation.interpolategeneratorsystems
 name: InterpolateGeneratorSystems
 type: function
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: |-
   Returns a `TimeDependentGeneratorSystem` representing the linear
   interpolation between two `GeneratorSystem`s.
-syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem,
-  generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem'
+syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem'
 input:
-  content: '(generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem,
-    generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem)'
+  content: '(generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystemStart
     summary: The start `GeneratorSystem`.
@@ -33,3 +31,4 @@ output:
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 - microsoft.quantum.canon.timedependentgeneratorsystem
+...

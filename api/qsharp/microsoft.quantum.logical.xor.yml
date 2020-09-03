@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.xor
 name: Xor
 type: function
-namespace: microsoft.quantum.logical
+namespace: Microsoft.Quantum.Logical
 summary: Returns the Boolean exclusive disjunction of two values.
 syntax: 'function Xor (a : Bool, b : Bool) : Bool'
 input:
@@ -26,3 +26,4 @@ output:
   - summary: '`true` if and only if exactly one of `a` and `b` is `true`.'
     isPrimitive: true
     uid: Bool
+...

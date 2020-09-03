@@ -6,10 +6,9 @@
 uid: microsoft.quantum.diagnostics.equalityfactl
 name: EqualityFactL
 type: function
-namespace: microsoft.quantum.diagnostics
+namespace: Microsoft.Quantum.Diagnostics
 summary: Asserts that a classical BigInt variable has the expected value.
-syntax: 'function EqualityFactL (actual : BigInt, expected : BigInt, message : String)
-  : Unit'
+syntax: 'function EqualityFactL (actual : BigInt, expected : BigInt, message : String) : Unit'
 input:
   content: '(actual : BigInt, expected : BigInt, message : String)'
   types:
@@ -30,3 +29,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

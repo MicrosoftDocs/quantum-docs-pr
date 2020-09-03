@@ -14,11 +14,9 @@ summary: |-
   Given a bit `bit`, applies the operation `trueOp` with `trueInput` as
   its input when `bit` is `true`, and applies `falseOp(falseInput)`
   when `bit` is `false`.
-syntax: "operation ApplyIfElseB (bit : Bool, (trueOp : ('T => Unit), trueInput : 'T),\
-  \ (falseOp : ('U => Unit), falseInput : 'U)) : Unit"
+syntax: "operation ApplyIfElseB (bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U)) : Unit"
 input:
-  content: "(bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U =>\
-    \ Unit), falseInput : 'U))"
+  content: "(bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U))"
   types:
   - name: bit
     summary: |-
@@ -72,3 +70,4 @@ seeAlso:
 - microsoft.quantum.canon.applyifelserc
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
+...

@@ -22,3 +22,4 @@ output:
   - summary: The smallest element of `values`.
     isPrimitive: true
     uid: Int
+...

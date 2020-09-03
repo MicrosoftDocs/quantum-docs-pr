@@ -10,5 +10,5 @@ namespace: microsoft.quantum.chemistry.jordanwigner
 summary: |-
   Format of data passed from C# to Q# to represent terms of the Hamiltonian.
   The meaning of the data represented is determined by the algorithm that receives it.
-syntax: newtype JWOptimizedHTerms = (Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[],
-  Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[]);
+syntax: newtype JWOptimizedHTerms = (Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[]);
+...

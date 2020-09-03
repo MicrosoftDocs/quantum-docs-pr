@@ -22,3 +22,4 @@ output:
   - summary: The unary negation of `input`.
     isPrimitive: true
     uid: Double
+...

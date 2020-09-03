@@ -27,3 +27,4 @@ output:
       A state preparation operation that prepares the given coefficients
       as an input state on a given register.
     uid: microsoft.quantum.machinelearning.stategenerator
+...

@@ -13,8 +13,7 @@ summary: |-
   Given an operation `op` and a result value `result`, applies `op` to the `target`
   if `result` is `One`. If `Zero`, nothing happens to the `target`.
   The suffix `C` indicates that the operation to be applied is controllable.
-syntax: "operation ApplyIfOneC (result : Result, (op : ('T => Unit is Ctl), target\
-  \ : 'T)) : Unit"
+syntax: "operation ApplyIfOneC (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Ctl), target : 'T))"
   types:
@@ -53,3 +52,4 @@ seeAlso:
 - microsoft.quantum.canon.applyifonec
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
+...

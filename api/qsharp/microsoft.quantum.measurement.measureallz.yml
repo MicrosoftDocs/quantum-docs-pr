@@ -27,3 +27,4 @@ output:
   - summary: The result of measuring $Z \otimes Z \otimes \cdots \otimes Z$.
     isPrimitive: true
     uid: Result
+...

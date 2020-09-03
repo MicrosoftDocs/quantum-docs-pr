@@ -26,8 +26,7 @@ examples: |-
       ...
   }
   ```
-syntax: "operation ApplyIfC (op : ('T => Unit is Ctl), bit : Bool, target : 'T) :\
-  \ Unit"
+syntax: "operation ApplyIfC (op : ('T => Unit is Ctl), bit : Bool, target : 'T) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl), bit : Bool, target : 'T)"
   types:
@@ -66,3 +65,4 @@ seeAlso:
 - microsoft.quantum.canon.applyifc
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
+...

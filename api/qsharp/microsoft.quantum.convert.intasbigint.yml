@@ -6,10 +6,9 @@
 uid: microsoft.quantum.convert.intasbigint
 name: IntAsBigInt
 type: function
-namespace: microsoft.quantum.convert
+namespace: Microsoft.Quantum.Convert
 summary: Converts a given integer to an equivalent big integer.
-remarks: See [C# BigInteger constructor](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_)
-  for more details.
+remarks: See [C# BigInteger constructor](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) for more details.
 syntax: 'function IntAsBigInt (a : Int) : BigInt'
 input:
   content: '(a : Int)'
@@ -22,3 +21,4 @@ output:
   types:
   - isPrimitive: true
     uid: BigInt
+...

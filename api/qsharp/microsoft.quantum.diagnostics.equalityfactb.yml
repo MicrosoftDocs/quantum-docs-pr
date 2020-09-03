@@ -6,10 +6,9 @@
 uid: microsoft.quantum.diagnostics.equalityfactb
 name: EqualityFactB
 type: function
-namespace: microsoft.quantum.diagnostics
+namespace: Microsoft.Quantum.Diagnostics
 summary: Asserts that a classical Bool variable has the expected value.
-syntax: 'function EqualityFactB (actual : Bool, expected : Bool, message : String)
-  : Unit'
+syntax: 'function EqualityFactB (actual : Bool, expected : Bool, message : String) : Unit'
 input:
   content: '(actual : Bool, expected : Bool, message : String)'
   types:
@@ -30,3 +29,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

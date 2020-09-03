@@ -6,7 +6,7 @@
 uid: microsoft.quantum.random.drawrandomdouble
 name: DrawRandomDouble
 type: operation
-namespace: microsoft.quantum.random
+namespace: Microsoft.Quantum.Random
 summary: Draws a random real number in a given inclusive interval.
 remarks: Fails if `max <= min`.
 examples: |-
@@ -37,3 +37,4 @@ output:
     uid: Double
 seeAlso:
 - microsoft.quantum.continuousuniformdistribution
+...

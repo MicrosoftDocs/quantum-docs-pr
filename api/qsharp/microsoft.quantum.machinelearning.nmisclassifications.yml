@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.nmisclassifications
 name: NMisclassifications
 type: function
-namespace: microsoft.quantum.machinelearning
+namespace: Microsoft.Quantum.MachineLearning
 summary: |-
   Given a set of inferred labels and a set of correct labels, returns
   the number of indices at which each set of labels differ.
@@ -35,3 +35,4 @@ output:
       `inferredLabels[idx] != actualLabels[idx]`.
     isPrimitive: true
     uid: Int
+...

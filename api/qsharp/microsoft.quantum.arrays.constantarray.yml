@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.constantarray
 name: ConstantArray
 type: function
-namespace: microsoft.quantum.arrays
+namespace: Microsoft.Quantum.Arrays
 summary: Creates an array of given length with all elements equal to given value.
 examples: |-
   The following code creates an array of 3 Boolean values, each equal to `true`:
@@ -33,3 +33,4 @@ output:
     isArray: true
     uid: "'T"
     isLocal: true
+...

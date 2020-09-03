@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.chunks
 name: Chunks
 type: function
-namespace: microsoft.quantum.arrays
+namespace: Microsoft.Quantum.Arrays
 summary: Splits an array into multiple parts of equal length.
 remarks: |-
   Note that the last element of the output may be shorter
@@ -33,3 +33,4 @@ output:
     - isArray: true
       uid: "'T"
       isLocal: true
+...

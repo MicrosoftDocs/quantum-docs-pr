@@ -6,15 +6,13 @@
 uid: microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle
 name: OptimizedQubitizationOracle
 type: function
-namespace: microsoft.quantum.chemistry.jordanwigner
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
 summary: |-
   Returns T-count optimized Qubitization operation
   and the parameters necessary to run it.
-syntax: 'function OptimizedQubitizationOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData,
-  targetError : Double) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
+syntax: 'function OptimizedQubitizationOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, targetError : Double) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:
-  content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData,
-    targetError : Double)'
+  content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, targetError : Double)'
   types:
   - name: qSharpData
     summary: Hamiltonian described by `JordanWignerEncodingData` format.
@@ -49,3 +47,4 @@ output:
         functors:
         - Adjoint
         - Controlled
+...

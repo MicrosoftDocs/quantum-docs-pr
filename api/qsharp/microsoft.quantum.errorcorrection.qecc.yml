@@ -6,9 +6,9 @@
 uid: microsoft.quantum.errorcorrection.qecc
 name: QECC
 type: newtype
-namespace: microsoft.quantum.errorcorrection
+namespace: Microsoft.Quantum.ErrorCorrection
 summary: |-
   Represents an error-correcting code as defined by its encoder,
   decoder, and syndrome measurement procedure.
-syntax: newtype QECC = (Microsoft.Quantum.ErrorCorrection.EncodeOp, Microsoft.Quantum.ErrorCorrection.DecodeOp,
-  Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp);
+syntax: newtype QECC = (Microsoft.Quantum.ErrorCorrection.EncodeOp, Microsoft.Quantum.ErrorCorrection.DecodeOp, Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp);
+...

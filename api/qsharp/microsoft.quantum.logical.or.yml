@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.or
 name: Or
 type: function
-namespace: microsoft.quantum.logical
+namespace: Microsoft.Quantum.Logical
 summary: Returns the Boolean disjunction of two values.
 remarks: |-
   Unlike the `or` operator, this function does not short-circuit, such that
@@ -36,3 +36,4 @@ output:
   - summary: '`true` if and only if either `a` or `b` are `true`.'
     isPrimitive: true
     uid: Bool
+...

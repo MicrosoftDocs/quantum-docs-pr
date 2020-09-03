@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.uncurriedop
 name: UncurriedOp
 type: function
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Given a function which returns operations,
   returns a new operation which takes both inputs
@@ -59,3 +59,4 @@ seeAlso:
 - microsoft.quantum.canon.uncurryopc
 - microsoft.quantum.canon.uncurryopa
 - microsoft.quantum.canon.uncurryopca
+...

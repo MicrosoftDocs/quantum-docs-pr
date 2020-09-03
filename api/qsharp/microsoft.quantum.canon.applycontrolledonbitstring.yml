@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applycontrolledonbitstring
 name: ApplyControlledOnBitString
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Applies a unitary operation on the target register, controlled on a a state specified by a given
   bit mask.
@@ -18,11 +18,9 @@ remarks: |-
 
   For example, `bits = [0,1,0,0,1]` means that `oracle` is applied if and only if `controlRegister`
   is in the state $\ket{0}\ket{1}\ket{0}\ket{0}\ket{1}$.
-syntax: "operation ApplyControlledOnBitString (bits : Bool[], oracle : ('T => Unit\
-  \ is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
+syntax: "operation ApplyControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
 input:
-  content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister :\
-    \ Qubit[], targetRegister : 'T)"
+  content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T)"
   types:
   - name: bits
     summary: The bit string to control the given unitary operation on.
@@ -60,3 +58,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.inttopauli
 name: IntToPauli
 type: function
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: Converts a integer to a single-qubit Pauli operator.
 syntax: 'function IntToPauli (idx : Int) : Pauli'
 input:
@@ -22,3 +22,4 @@ output:
   - summary: A `Pauli` operator given by `[PauliI, PauliX, PauliY, PauliZ][idx]`.
     isPrimitive: true
     uid: Pauli
+...

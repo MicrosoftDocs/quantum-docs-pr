@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.functionasoperation
 name: FunctionAsOperation
 type: function
-namespace: microsoft.quantum.convert
+namespace: Microsoft.Quantum.Convert
 summary: |-
   Converts functions to operations.
 
@@ -50,3 +50,4 @@ typeParameters:
   summary: Input type of the function to be converted.
 - uid: "'Output"
   summary: Output type of the function to be converted.
+...

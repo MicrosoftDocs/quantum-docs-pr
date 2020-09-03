@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.assertprobint
 name: AssertProbInt
 type: operation
-namespace: microsoft.quantum.arithmetic
+namespace: Microsoft.Quantum.Arithmetic
 summary: |-
   Asserts that the probability of a specific state of a quantum register has the
   expected value.
@@ -22,11 +22,9 @@ examples: |-
 
   - `AssertProbInt(0,0.125,qubits,10e-10);`
   - `AssertProbInt(6,0.875,qubits,10e-10);`
-syntax: 'operation AssertProbInt (stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian,
-  tolerance : Double) : Unit'
+syntax: 'operation AssertProbInt (stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double) : Unit'
 input:
-  content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian,
-    tolerance : Double)'
+  content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double)'
   types:
   - name: stateIndex
     summary: |-
@@ -50,3 +48,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

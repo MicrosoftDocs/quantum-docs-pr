@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.lookupfunction
 name: LookupFunction
 type: function
-namespace: microsoft.quantum.arrays
+namespace: Microsoft.Quantum.Arrays
 summary: |-
   Given an array, returns a function which returns elements of that
   array.
@@ -43,3 +43,4 @@ typeParameters:
   summary: |-
     The type of the elements of the array being represented as a lookup
     function.
+...

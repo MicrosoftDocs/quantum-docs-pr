@@ -6,7 +6,7 @@
 uid: microsoft.quantum.preparation.prepareidentity
 name: PrepareIdentity
 type: operation
-namespace: microsoft.quantum.preparation
+namespace: Microsoft.Quantum.Preparation
 summary: |-
   Given a register, prepares that register in the maximally mixed state.
 
@@ -31,3 +31,4 @@ output:
     uid: Unit
 seeAlso:
 - microsoft.quantum.canon.preparesinglequbitidentity
+...

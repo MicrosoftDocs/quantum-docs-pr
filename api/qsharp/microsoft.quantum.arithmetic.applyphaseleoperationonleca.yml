@@ -6,12 +6,10 @@
 uid: microsoft.quantum.arithmetic.applyphaseleoperationonleca
 name: ApplyPhaseLEOperationOnLECA
 type: operation
-namespace: microsoft.quantum.arithmetic
-syntax: 'operation ApplyPhaseLEOperationOnLECA (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian
-  => Unit is Adj + Ctl), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+namespace: Microsoft.Quantum.Arithmetic
+syntax: 'operation ApplyPhaseLEOperationOnLECA (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit is Adj + Ctl), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
-  content: '(op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit is Adj +
-    Ctl), target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit is Adj + Ctl), target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: op
     isOperation: true
@@ -37,3 +35,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applyphaseleoperationonle
+...

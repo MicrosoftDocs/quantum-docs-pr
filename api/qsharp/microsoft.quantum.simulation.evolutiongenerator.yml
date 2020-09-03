@@ -6,10 +6,11 @@
 uid: microsoft.quantum.simulation.evolutiongenerator
 name: EvolutionGenerator
 type: newtype
-namespace: microsoft.quantum.simulation
+namespace: Microsoft.Quantum.Simulation
 summary: |-
   Represents a dynamical generator as a set of simulatable gates and
   an expansion in terms of that basis.
 
   Last parameter for number of terms.
 syntax: newtype EvolutionGenerator = (Microsoft.Quantum.Simulation.EvolutionSet, Microsoft.Quantum.Simulation.GeneratorSystem);
+...

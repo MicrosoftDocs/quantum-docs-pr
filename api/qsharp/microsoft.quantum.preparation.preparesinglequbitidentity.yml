@@ -6,7 +6,7 @@
 uid: microsoft.quantum.preparation.preparesinglequbitidentity
 name: PrepareSingleQubitIdentity
 type: operation
-namespace: microsoft.quantum.preparation
+namespace: Microsoft.Quantum.Preparation
 summary: |-
   Prepares a qubit in the maximally mixed state.
 
@@ -41,3 +41,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

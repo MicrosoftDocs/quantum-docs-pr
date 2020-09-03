@@ -6,9 +6,8 @@
 uid: microsoft.quantum.extensions.math.ieeeremainder
 name: IEEERemainder
 type: function
-namespace: microsoft.quantum.extensions.math
-summary: IEEERemainder has been deprecated. Please use @"microsoft.quantum.math.ieeeremainder"
-  instead.
+namespace: Microsoft.Quantum.Extensions.Math
+summary: IEEERemainder has been deprecated. Please use @"microsoft.quantum.math.ieeeremainder" instead.
 syntax: 'function IEEERemainder (x : Double, y : Double) : Double'
 input:
   content: '(x : Double, y : Double)'
@@ -24,3 +23,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

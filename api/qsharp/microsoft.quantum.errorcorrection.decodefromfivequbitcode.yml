@@ -6,10 +6,9 @@
 uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
 name: DecodeFromFiveQubitCode
 type: operation
-namespace: microsoft.quantum.errorcorrection
+namespace: Microsoft.Quantum.ErrorCorrection
 summary: Decodes the ⟦5, 1, 3⟧ quantum code.
-syntax: 'operation DecodeFromFiveQubitCode (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)
-  : (Qubit[], Qubit[])'
+syntax: 'operation DecodeFromFiveQubitCode (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : (Qubit[], Qubit[])'
 input:
   content: '(logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
@@ -32,3 +31,4 @@ output:
 seeAlso:
 - fivequbitcodeencoder
 - logicalregister
+...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.stackpop
 name: StackPop
 type: function
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: StackPop has been deprecated.
 syntax: 'function StackPop (stack : Microsoft.Quantum.Canon.ResultStack) : Microsoft.Quantum.Canon.ResultStack'
 input:
@@ -18,3 +18,4 @@ output:
   content: Microsoft.Quantum.Canon.ResultStack
   types:
   - uid: microsoft.quantum.canon.resultstack
+...

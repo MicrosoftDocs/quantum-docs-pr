@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applywithinputtransformationc
 name: ApplyWithInputTransformationC
 type: operation
-namespace: microsoft.quantum.canon
+namespace: Microsoft.Quantum.Canon
 summary: |-
   Given an operation that accepts some input, a function that
   returns an output compatible with that operation, and an input to that
@@ -22,8 +22,7 @@ examples: |-
   ```qsharp
   ApplyWithInputTransformation(LittleEndianAsBigEndian, ApplyXorInPlaceBE, LittleEndian(qubits));
   ```
-syntax: "operation ApplyWithInputTransformationC (fn : ('U -> 'T), op : ('T => Unit\
-  \ is Ctl), input : 'U) : Unit"
+syntax: "operation ApplyWithInputTransformationC (fn : ('U -> 'T), op : ('T => Unit is Ctl), input : 'U) : Unit"
 input:
   content: "(fn : ('U -> 'T), op : ('T => Unit is Ctl), input : 'U)"
   types:
@@ -69,3 +68,4 @@ seeAlso:
 - applywithinputtransformationa
 - applywithinputtransformationca
 - transformedoperation
+...

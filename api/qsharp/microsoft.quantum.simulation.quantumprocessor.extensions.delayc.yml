@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.delayc
 name: DelayC
 type: operation
-namespace: microsoft.quantum.simulation.quantumprocessor.extensions
+namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 syntax: "operation DelayC (op : ('T => Unit is Ctl), arg : 'T, aux : Unit) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl), arg : 'T, aux : Unit)"
@@ -36,3 +36,4 @@ output:
     uid: Unit
 functors:
 - Controlled
+...

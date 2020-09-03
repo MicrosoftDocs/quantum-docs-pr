@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.tuplearrayasnestedarray
 name: TupleArrayAsNestedArray
 type: function
-namespace: microsoft.quantum.arrays
+namespace: Microsoft.Quantum.Arrays
 summary: Turns a list of 2-tuples into a nested array.
 syntax: "function TupleArrayAsNestedArray (tupleList : ('T, 'T)[]) : 'T[][]"
 input:
@@ -37,3 +37,4 @@ output:
     - isArray: true
       uid: "'T"
       isLocal: true
+...

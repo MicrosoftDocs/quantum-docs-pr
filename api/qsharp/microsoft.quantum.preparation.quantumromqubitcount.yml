@@ -6,12 +6,11 @@
 uid: microsoft.quantum.preparation.quantumromqubitcount
 name: QuantumROMQubitCount
 type: function
-namespace: microsoft.quantum.preparation
+namespace: Microsoft.Quantum.Preparation
 summary: |-
   Returns the total number of qubits that must be allocated
   to the operation returned by `QuantumROM`.
-syntax: 'function QuantumROMQubitCount (targetError : Double, nCoeffs : Int) : (Int,
-  (Int, Int))'
+syntax: 'function QuantumROMQubitCount (targetError : Double, nCoeffs : Int) : (Int, (Int, Int))'
 input:
   content: '(targetError : Double, nCoeffs : Int)'
   types:
@@ -40,3 +39,4 @@ output:
         uid: Int
       - isPrimitive: true
         uid: Int
+...

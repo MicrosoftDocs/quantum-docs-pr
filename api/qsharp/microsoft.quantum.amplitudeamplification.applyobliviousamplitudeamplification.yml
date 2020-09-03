@@ -6,7 +6,7 @@
 uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
 name: ApplyObliviousAmplitudeAmplification
 type: operation
-namespace: microsoft.quantum.amplitudeamplification
+namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: Oblivious amplitude amplification by specifying partial reflections.
 remarks: |-
   Given a particular auxiliary start state $\ket{\text{start}}\_a$, a
@@ -21,10 +21,7 @@ remarks: |-
   adjoint, the success probability of applying U may be altered.
 
   In most cases, `auxiliaryRegister` is initialized in the state $\ket{\text{start}}\_a$.
-syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases,
-  startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection
-  : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle,
-  auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
+syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: |-
   See
 
@@ -34,10 +31,7 @@ references: |-
   - [ *G.H. Low, I.L. Chuang* ](https://arxiv.org/abs/1610.06546)
     for a generalization to partial reflections.
 input:
-  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection
-    : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle,
-    signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister :
-    Qubit[], systemRegister : Qubit[])'
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[])'
   types:
   - name: phases
     summary: Phases of partial reflections
@@ -71,3 +65,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

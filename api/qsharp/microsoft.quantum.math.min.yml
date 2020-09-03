@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.min
 name: Min
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Given an array of integers, returns the smallest element.
 syntax: 'function Min (value : Int[]) : Int'
 input:
@@ -22,3 +22,4 @@ output:
   - summary: The smallest element of `values`.
     isPrimitive: true
     uid: Int
+...

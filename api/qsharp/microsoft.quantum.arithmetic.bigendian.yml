@@ -6,9 +6,10 @@
 uid: microsoft.quantum.arithmetic.bigendian
 name: BigEndian
 type: newtype
-namespace: microsoft.quantum.arithmetic
+namespace: Microsoft.Quantum.Arithmetic
 summary: |-
   Register that encodes an unsigned integer in big-endian order. The
   qubit with index `0` encodes the highest bit of an unsigned integer.
 remarks: We abbreviate `BigEndian` as `BE` in the documentation.
 syntax: newtype BigEndian = Qubit[];
+...

@@ -6,12 +6,11 @@
 uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionfunction
 name: JordanWignerFermionFunction
 type: function
-namespace: microsoft.quantum.chemistry.jordanwigner
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
 summary: |-
   Represents a dynamical generator as a set of simulatable gates and an
   expansion in the JordanWigner basis.
-syntax: 'function JordanWignerFermionFunction (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)
-  : Microsoft.Quantum.Simulation.EvolutionUnitary'
+syntax: 'function JordanWignerFermionFunction (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Microsoft.Quantum.Simulation.EvolutionUnitary'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
@@ -25,3 +24,4 @@ output:
       An `EvolutionUnitary` representing time-evolution by the term
       referenced in `generatorIndex.
     uid: microsoft.quantum.simulation.evolutionunitary
+...

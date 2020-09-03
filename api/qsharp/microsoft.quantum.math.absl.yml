@@ -6,10 +6,9 @@
 uid: microsoft.quantum.math.absl
 name: AbsL
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Returns the absolute value of a big integer.
-remarks: See [System.Numerics.BigInteger.Abs](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.abs)
-  for more details.
+remarks: See [System.Numerics.BigInteger.Abs](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.abs) for more details.
 syntax: 'function AbsL (a : BigInt) : BigInt'
 input:
   content: '(a : BigInt)'
@@ -22,3 +21,4 @@ output:
   types:
   - isPrimitive: true
     uid: BigInt
+...

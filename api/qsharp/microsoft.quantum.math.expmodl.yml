@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.expmodl
 name: ExpModL
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: |-
   Returns an integer raised to a given power, with respect to a given
   modulus.
@@ -15,8 +15,7 @@ summary: |-
   The function returns $x^p \operatorname{mod} N$.
 
   We assume that $N$, $x$ are positive and power is non-negative.
-remarks: Takes time proportional to the number of bits in `power`, not the `power`
-  itself.
+remarks: Takes time proportional to the number of bits in `power`, not the `power` itself.
 syntax: 'function ExpModL (expBase : BigInt, power : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(expBase : BigInt, power : BigInt, modulus : BigInt)'
@@ -35,3 +34,4 @@ output:
   types:
   - isPrimitive: true
     uid: BigInt
+...

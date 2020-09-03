@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.lg
 name: Lg
 type: function
-namespace: microsoft.quantum.math
+namespace: Microsoft.Quantum.Math
 summary: Computes the base-2 logarithm of a number.
 syntax: 'function Lg (input : Double) : Double'
 input:
@@ -22,3 +22,4 @@ output:
   - summary: The base-2 logarithm $y = \log_2(x)$ such that $x = 2^y$.
     isPrimitive: true
     uid: Double
+...

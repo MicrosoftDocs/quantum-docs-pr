@@ -15,3 +15,4 @@ summary: |-
   be encoded, while the second argument is taken to be the scratch
   register that will be used.
 syntax: newtype EncodeOp = ((Qubit[], Qubit[]) => Microsoft.Quantum.ErrorCorrection.LogicalRegister);
+...

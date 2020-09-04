@@ -29,3 +29,4 @@ output:
   - summary: The result of measuring `target` in the Pauli $Y$ basis.
     isPrimitive: true
     uid: Result
+...

@@ -27,8 +27,7 @@ examples: |-
       PrepareUniformSuperposition(nIndices, LittleEndian(indexRegister));
   }
   ```
-syntax: 'operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian)
-  : Unit'
+syntax: 'operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -50,3 +49,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

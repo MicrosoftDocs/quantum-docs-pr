@@ -14,8 +14,7 @@ remarks: |-
   The chosen decoder uses the CSS code property of the ⟦7, 1, 3⟧ Steane code, i.e., it corrects X errors
   and Z errors separately. A property of the code is that the location of the X, respectively, Z correction
   to be applied is the 3-bit encoding of the X, respectively, Z syndrome when considered an integer.
-syntax: 'operation DecodeFromSteaneCode (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)
-  : (Qubit[], Qubit[])'
+syntax: 'operation DecodeFromSteaneCode (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : (Qubit[], Qubit[])'
 references: |-
   - D. Gottesman, "Stabilizer Codes and Quantum Error Correction," Ph.D. Thesis, Caltech, 1997;
     https://arxiv.org/abs/quant-ph/9705052
@@ -42,3 +41,4 @@ seeAlso:
 - steanecodeencoder
 - steanecodedecoder
 - logicalregister
+...

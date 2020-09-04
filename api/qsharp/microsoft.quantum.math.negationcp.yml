@@ -20,3 +20,4 @@ output:
   types:
   - summary: The unary negation of `input`.
     uid: microsoft.quantum.math.complexpolar
+...

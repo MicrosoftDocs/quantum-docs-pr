@@ -9,3 +9,4 @@ type: newtype
 namespace: microsoft.quantum.core
 summary: Compiler-recognized attribute used to mark user-defined types as attributes.
 syntax: newtype Attribute = Unit;
+...

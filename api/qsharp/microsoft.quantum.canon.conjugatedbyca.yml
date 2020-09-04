@@ -14,11 +14,9 @@ remarks: |-
   The outer operation is always assumed to be adjointable, but does not
   need to be controllable in order for the combined operation to be
   controllable.
-syntax: "function ConjugatedByCA (outerOperation : ('T => Unit is Adj), innerOperation\
-  \ : ('T => Unit is Adj + Ctl)) : ('T => Unit is Adj + Ctl)"
+syntax: "function ConjugatedByCA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl)) : ('T => Unit is Adj + Ctl)"
 input:
-  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is\
-    \ Adj + Ctl))"
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl))"
   types:
   - name: outerOperation
     summary: |-
@@ -78,3 +76,4 @@ seeAlso:
 - conjugatedbyc
 - conjugatedbyca
 - applywith
+...

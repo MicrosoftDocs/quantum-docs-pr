@@ -19,13 +19,10 @@ remarks: |-
   \operatorname{AmpAmpByOracle}\ket{0}\_{f}\ket{0}\_s= \sin((2n+1)\sin^{-1}(\lambda))\ket{1}\_f\ket{\text{target}}\_s + \cdots\ket{0}\_f
   \end{align}
   In most cases, `flagQubit` and `auxiliaryRegister` is initialized in the state $\ket{0}\_f\ket{0}\_a$.
-syntax: 'function StandardAmplitudeAmplification (nIterations : Int, stateOracle :
-  Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is
-  Adj + Ctl)'
+syntax: 'function StandardAmplitudeAmplification (nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 references: '- [ *G. Brassard, P. Hoyer, M. Mosca, A. Tapp* ](https://arxiv.org/abs/quant-ph/0005055)'
 input:
-  content: '(nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle,
-    idxFlagQubit : Int)'
+  content: '(nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
   types:
   - name: nIterations
     summary: Number of iterations $n$ of amplitude amplification
@@ -40,8 +37,7 @@ input:
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: An operation that implements the standard amplitude amplification quantum
-      algorithm
+  - summary: An operation that implements the standard amplitude amplification quantum algorithm
     isOperation: true
     input:
       types:
@@ -55,3 +51,4 @@ output:
     functors:
     - Adjoint
     - Controlled
+...

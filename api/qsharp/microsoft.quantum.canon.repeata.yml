@@ -15,8 +15,7 @@ examples: |-
   RepeatA(U, 17, target);
   (BoundA(ConstantArray(17, U)))(target);
   ```
-syntax: "operation RepeatA (op : ('TInput => Unit is Adj), nTimes : Int, input : 'TInput)\
-  \ : Unit"
+syntax: "operation RepeatA (op : ('TInput => Unit is Adj), nTimes : Int, input : 'TInput) : Unit"
 input:
   content: "(op : ('TInput => Unit is Adj), nTimes : Int, input : 'TInput)"
   types:
@@ -56,3 +55,4 @@ seeAlso:
 - microsoft.quantum.canon.repeat
 - microsoft.quantum.canon.repeatc
 - microsoft.quantum.canon.repeatca
+...

@@ -7,8 +7,7 @@ uid: microsoft.quantum.extensions.bitwise.xbits
 name: XBits
 type: function
 namespace: microsoft.quantum.extensions.bitwise
-summary: XBits has been deprecated. Please use @"microsoft.quantum.bitwise.xbits"
-  instead.
+summary: XBits has been deprecated. Please use @"microsoft.quantum.bitwise.xbits" instead.
 syntax: 'function XBits (paulies : Pauli[]) : Int'
 input:
   content: '(paulies : Pauli[])'
@@ -22,3 +21,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

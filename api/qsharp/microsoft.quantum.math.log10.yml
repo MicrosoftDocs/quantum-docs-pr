@@ -8,8 +8,7 @@ name: Log10
 type: function
 namespace: microsoft.quantum.math
 summary: Returns the base 10 logarithm of a specified number.
-remarks: See [System.Math.Log10](https://docs.microsoft.com/dotnet/api/system.math.log10)
-  for more details.
+remarks: See [System.Math.Log10](https://docs.microsoft.com/dotnet/api/system.math.log10) for more details.
 syntax: 'function Log10 (input : Double) : Double'
 input:
   content: '(input : Double)'
@@ -22,3 +21,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

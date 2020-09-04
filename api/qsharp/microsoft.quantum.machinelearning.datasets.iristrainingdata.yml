@@ -16,3 +16,4 @@ output:
   types:
   - isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
+...

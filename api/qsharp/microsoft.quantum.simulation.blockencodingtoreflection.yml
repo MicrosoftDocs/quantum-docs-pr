@@ -15,8 +15,7 @@ summary: |-
   encodes the same operator, but also satisfies $U'^\dagger = U'$.
   This increases the size of the auxiliary register of $U$ by one qubit.
 remarks: This increases the size of the auxiliary register of $U$ by one qubit.
-syntax: 'function BlockEncodingToReflection (blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding)
-  : Microsoft.Quantum.Simulation.BlockEncodingReflection'
+syntax: 'function BlockEncodingToReflection (blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
 references: |-
   - Hamiltonian Simulation by Qubitization
     Guang Hao Low, Isaac L. Chuang
@@ -37,3 +36,4 @@ output:
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
+...

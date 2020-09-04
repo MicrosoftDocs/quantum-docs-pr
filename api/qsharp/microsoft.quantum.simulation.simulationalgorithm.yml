@@ -13,5 +13,5 @@ summary: |-
   A time-independent simulation technique converts an
   <xref:microsoft.quantum.simulation.evolutiongenerator>
   to unitary time evolution for some time-interval.
-syntax: newtype SimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionGenerator,
-  Qubit[]) => Unit is Adj + Ctl);
+syntax: newtype SimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
+...

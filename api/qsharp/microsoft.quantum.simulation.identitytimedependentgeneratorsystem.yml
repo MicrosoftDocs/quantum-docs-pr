@@ -21,3 +21,4 @@ output:
       A time dependent generator system representing evolution under the Hamiltonian
       $H(s) = 0$ for all $s$.
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
+...

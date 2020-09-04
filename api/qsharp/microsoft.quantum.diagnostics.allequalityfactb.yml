@@ -8,8 +8,7 @@ name: AllEqualityFactB
 type: function
 namespace: microsoft.quantum.diagnostics
 summary: Asserts that two arrays of boolean values are equal.
-syntax: 'function AllEqualityFactB (actual : Bool[], expected : Bool[], message :
-  String) : Unit'
+syntax: 'function AllEqualityFactB (actual : Bool[], expected : Bool[], message : String) : Unit'
 input:
   content: '(actual : Bool[], expected : Bool[], message : String)'
   types:
@@ -32,3 +31,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

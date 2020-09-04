@@ -15,8 +15,7 @@ summary: |-
   In particular, the expression `Delay(op, arg, _)` is an operation that
   applies `op` to `arg` when called.
   Expression `Delay(op,arg,_)` allows to delay the application of `op`.
-syntax: "operation DelayCA (op : ('T => Unit is Ctl + Adj), arg : 'T, aux : Unit)\
-  \ : Unit"
+syntax: "operation DelayCA (op : ('T => Unit is Ctl + Adj), arg : 'T, aux : Unit) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl + Adj), arg : 'T, aux : Unit)"
   types:
@@ -58,3 +57,4 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.delay
 - microsoft.quantum.canon.delayed
+...

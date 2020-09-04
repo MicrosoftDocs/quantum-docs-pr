@@ -19,3 +19,4 @@ output:
   types:
   - isPrimitive: true
     uid: Result
+...

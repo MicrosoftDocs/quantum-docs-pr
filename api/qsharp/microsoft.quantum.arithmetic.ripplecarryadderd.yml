@@ -17,14 +17,12 @@ remarks: |-
   The specified controlled operation makes use of symmetry and mutual
   cancellation of operations to improve on the default implementation
   that adds a control to every operation.
-syntax: 'operation RippleCarryAdderD (xs : Microsoft.Quantum.Arithmetic.LittleEndian,
-  ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
+syntax: 'operation RippleCarryAdderD (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: |-
   - Thomas G. Draper: "Addition on a Quantum Computer", 2000.
     https://arxiv.org/abs/quant-ph/0008033
 input:
-  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian,
-    carry : Qubit)'
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit)'
   types:
   - name: xs
     summary: LittleEndian qubit register encoding the first integer summand.
@@ -46,3 +44,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

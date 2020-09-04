@@ -22,3 +22,4 @@ output:
   - summary: A real number $y$ such that $x = \cosh(y)$.
     isPrimitive: true
     uid: Double
+...

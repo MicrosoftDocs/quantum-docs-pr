@@ -11,11 +11,10 @@ functions:
     Expands the compact representation of the Jordan-Wigner coefficients in order
     to obtain a one-to-one mapping between these and Pauli terms.
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
-  summary: Computes all the measurement operators required to compute the expectation
-    of a Jordan-Wigner term.
+  summary: Computes all the measurement operators required to compute the expectation of a Jordan-Wigner term.
 operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
-  summary: Estimates the energy of the molecule by summing the energy contributed
-    by the individual Jordan-Wigner terms.
+  summary: Estimates the energy of the molecule by summing the energy contributed by the individual Jordan-Wigner terms.
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
   summary: Computes the energy associated to a given Jordan-Wigner Hamiltonian term
+...

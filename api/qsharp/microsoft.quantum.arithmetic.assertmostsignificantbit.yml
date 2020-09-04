@@ -11,8 +11,7 @@ summary: |-
   Asserts that the most significant qubit of a qubit register
   representing an unsigned integer is in a particular state.
 remarks: The controlled version of this operation ignores controls.
-syntax: 'operation AssertMostSignificantBit (value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian)
-  : Unit'
+syntax: 'operation AssertMostSignificantBit (value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -33,3 +32,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.intrinsic.assert
+...

@@ -8,8 +8,7 @@ name: ArcTan
 type: function
 namespace: microsoft.quantum.math
 summary: Returns the angle whose tangent is the specified number.
-remarks: See [System.Math.Atan](https://docs.microsoft.com/dotnet/api/system.math.atan)
-  for more details.
+remarks: See [System.Math.Atan](https://docs.microsoft.com/dotnet/api/system.math.atan) for more details.
 syntax: 'function ArcTan (d : Double) : Double'
 input:
   content: '(d : Double)'
@@ -22,3 +21,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

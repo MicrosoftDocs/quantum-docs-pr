@@ -61,3 +61,4 @@ typeParameters:
   summary: The result type of the `mapper` function.
 seeAlso:
 - mapped
+...

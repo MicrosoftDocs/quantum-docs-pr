@@ -27,8 +27,8 @@ remarks: |-
               [PauliI, PauliZ, PauliZ]
           ], _, MeasureWithScratch));
   ```
-syntax: newtype SyndromeMeasOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister
-  => Microsoft.Quantum.ErrorCorrection.Syndrome);
+syntax: newtype SyndromeMeasOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister => Microsoft.Quantum.ErrorCorrection.Syndrome);
 seeAlso:
 - logicalregister
 - syndrome
+...

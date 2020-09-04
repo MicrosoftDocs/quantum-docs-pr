@@ -10,9 +10,7 @@ summary: |2-
    These functions provide information about the environment in which the quantum computation is occuring.
 operations:
 - uid: microsoft.quantum.environment.getqubitsavailabletoborrow
-  summary: |-
-    Returns the number of qubits currently available to borrow.
-    This includes unused qubits; that is, this includes the qubits
-    returned by `GetQubitsAvailableToUse`.
+  summary: Returns the number of qubits currently available to borrow.
 - uid: microsoft.quantum.environment.getqubitsavailabletouse
   summary: Returns the number of qubits currently available to use.
+...

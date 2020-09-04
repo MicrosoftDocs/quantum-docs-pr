@@ -20,3 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: BigInt
+...

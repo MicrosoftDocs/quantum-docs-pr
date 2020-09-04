@@ -14,7 +14,7 @@ no-loc: ['Q#', '$$v']
 
 Follow the instructions at the tab corresponding to your environment.
 
-Q# programs can be executed on their own, without a driver in a host language like C#, F#, or Python.
+Q# programs can run on their own, without a driver in a host language like C#, F#, or Python.
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ To configure Visual Studio Codespaces:
 3. You can now launch your new environment and start developing in the browser via the [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments). Alternatively, it is possible to use your local installation of VS Code and use Codespaces as a [remote environment](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
 
 
-To install the QDK for another environment, enter at the command prompt:
+To install the QDK for another environment, enter the following at the command prompt:
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
@@ -49,7 +49,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 
 ## Develop with Q#
 
-Follow the instructions at the tab corresponding to your environment.
+Follow the instructions on the tab corresponding to your environment.
 
 ### [VS Code](#tab/tabid-vscode)
 

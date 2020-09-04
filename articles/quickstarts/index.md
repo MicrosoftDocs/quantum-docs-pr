@@ -46,8 +46,8 @@ You can also develop Q# code without installing anything locally with these opti
 
 |Resource|Advantages|Limitations|
 |---|---|---|
-|**Visual Studio Codespaces**|A rich online development environment  |Requires an Azure subscription and plan |
-|**Binder** | Free online notebook experience |No persistence |
+|[**Visual Studio Codespaces**](xref:microsoft.quantum.install.standalone)|A rich online development environment  |Requires an Azure subscription and plan |
+|[**Binder**](xref:microsoft.quantum.install.binder) | Free online notebook experience |No persistence |
 
 ## Use the QDK with Docker
 

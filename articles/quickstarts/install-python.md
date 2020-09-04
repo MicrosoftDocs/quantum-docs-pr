@@ -12,13 +12,77 @@ no-loc: ['Q#', '$$v']
 
 # Develop with Q# and Python
 
-Verify your `qsharp` Python package installation by writing and running a simple Q# program.
+Install the QDK to develop Python host programs to call Q# operations.
 
-## Prerequisites
+## Install the `qsharp` Python package
 
-- Install the [Quantum Development Kit](xref:microsoft.quantum.install) for your environment. 
+### [Install using conda (recommended)](#tab/tabid-conda)
+
+1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/individual#Downloads). **Note:** 64-bit installation required.
+
+1. Open an Anaconda Prompt.
+
+   - Or, if you prefer to use PowerShell or pwsh: open a shell, run `conda init powershell`, then close and re-open the shell.
+
+1. Create and activate a new conda environment named `qsharp-env` with the required packages (including Jupyter Notebook and IQ#) by running the following commands:
+
+    ```
+    conda create -n qsharp-env -c quantum-engineering qsharp notebook
+
+    conda activate qsharp-env
+    ```
+
+1. Run `python -c "import qsharp"` from the same terminal to verify your installation and populate your local package cache with all required QDK components.
+
+### [Install using .NET CLI and pip (advanced)](#tab/tabid-dotnetcli)
+
+1. Prerequisites:
+
+    - [Python](https://www.python.org/downloads/) 3.6 or later
+    - The [PIP](https://pip.pypa.io/en/stable/installing) Python package manager
+    - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+
+1. Install the `qsharp` package, a Python package that enables interop between Q# and Python.
+
+    ```
+    pip install qsharp
+    ```
+
+1. Install IQ#, a kernel used by Jupyter and Python that provides the core functionality for compiling and executing Q# operations.
+
+    ```dotnetcli
+    dotnet tool install -g Microsoft.Quantum.IQSharp
+    dotnet iqsharp install
+    ```
+
+    > [!NOTE]
+    > If you get an error during the `dotnet iqsharp install` step, open a new terminal window and try again.
+    > If this still doesn't work, try locating the installed `dotnet-iqsharp` tool (on Windows, `dotnet-iqsharp.exe`) and running:
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > where `/path/to/dotnet-iqsharp` should be replaced by the absolute path to the `dotnet-iqsharp` tool in your file system.
+    > Typically this will be under `.dotnet/tools` in your user profile folder.
+    
+***
+
+That's it! You now have both the `qsharp` Python package and the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Python and allows you to use Q# Jupyter Notebooks.
+
+## Choose your IDE
+
+While you can use Q# with Python in any IDE, we highly recommend using Visual Studio Code (VS Code) IDE for your Q# + Python applications. With the QDK Visual Studio Code extension you gain access to richer functionality such as warnings, syntax highlighting, project templates, and more.
+
+If you would like to use VS Code:
+
+- Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
+- Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
+
+If you would like to use a different editor, the instructions above have you all set.
 
 ## Write your first Q# program
+
+Now you are ready to verify your `qsharp` Python package installation by writing and executing a simple Q# program.
 
 1. Create a minimal Q# operation by creating a file called `Operation.qs` and adding the following code to it:
 

@@ -13,5 +13,5 @@ summary: |-
 
   The argument to a DecodeOp is the same as the return from an
   EncodeOp, and vice versa.
-syntax: newtype DecodeOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister => (Qubit[],
-  Qubit[]));
+syntax: newtype DecodeOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister => (Qubit[], Qubit[]));
+...

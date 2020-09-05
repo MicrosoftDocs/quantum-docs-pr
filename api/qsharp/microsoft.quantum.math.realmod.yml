@@ -43,3 +43,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

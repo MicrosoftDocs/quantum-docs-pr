@@ -60,8 +60,7 @@ examples: |-
       (ControlledOnBitString([false], Z))(register[0..0], register[1]);
   }
   ```
-syntax: "function ControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj\
-  \ + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
+syntax: "function ControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
 input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
@@ -87,8 +86,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: A unitary operation that applies `oracle` on the target register if the
-      control register state corresponds to the bit mask `bits`.
+  - summary: A unitary operation that applies `oracle` on the target register if the control register state corresponds to the bit mask `bits`.
     isOperation: true
     input:
       types:
@@ -104,3 +102,4 @@ output:
     functors:
     - Adjoint
     - Controlled
+...

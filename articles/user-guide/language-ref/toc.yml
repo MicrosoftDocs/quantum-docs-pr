@@ -130,7 +130,7 @@
       href: control-flow/fixup-ref.md
     - name: while
       href: control-flow/while-ref.md
-    - name: apply-within (Conjugation)
+    - name: apply-within (conjugation)
       href: control-flow/apply-within-ref.md
     - name: fail
       href: control-flow/fail-ref.md

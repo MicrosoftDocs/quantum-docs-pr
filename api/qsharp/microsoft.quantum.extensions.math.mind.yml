@@ -7,7 +7,14 @@ uid: microsoft.quantum.extensions.math.mind
 name: MinD
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: MinD has been deprecated. Please use @"microsoft.quantum.math.mind" instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  MinD has been deprecated. Please use @"microsoft.quantum.math.mind" instead.
+  Please use @"microsoft.quantum.math.mind".
 syntax: 'function MinD (a : Double, b : Double) : Double'
 input:
   content: '(a : Double, b : Double)'
@@ -23,3 +30,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

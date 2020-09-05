@@ -7,7 +7,14 @@ uid: microsoft.quantum.extensions.bitwise.or
 name: Or
 type: function
 namespace: microsoft.quantum.extensions.bitwise
-summary: Or has been deprecated. Please use @"microsoft.quantum.bitwise.or" instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  Or has been deprecated. Please use @"microsoft.quantum.bitwise.or" instead.
+  Please use @"microsoft.quantum.bitwise.or".
 syntax: 'function Or (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'
@@ -23,3 +30,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

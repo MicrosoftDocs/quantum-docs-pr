@@ -7,8 +7,14 @@ uid: microsoft.quantum.extensions.convert.todouble
 name: ToDouble
 type: function
 namespace: microsoft.quantum.extensions.convert
-summary: ToDouble has been deprecated. Please use @"microsoft.quantum.convert.intasdouble"
-  instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  ToDouble has been deprecated. Please use @"microsoft.quantum.convert.intasdouble" instead.
+  Please use @"microsoft.quantum.convert.intasdouble".
 syntax: 'function ToDouble (a : Int) : Double'
 input:
   content: '(a : Int)'
@@ -21,3 +27,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

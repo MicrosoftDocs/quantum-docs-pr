@@ -7,8 +7,13 @@ uid: microsoft.quantum.canon.cascadeccnot
 name: CascadeCCNOT
 type: operation
 namespace: microsoft.quantum.canon
-summary: CascadeCCNOT has been deprecated. Please use @"microsoft.quantum.canon.applyccnotchain"
-  instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  CascadeCCNOT has been deprecated. Please use @"microsoft.quantum.canon.applyccnotchain" instead.
 syntax: 'operation CascadeCCNOT (register : Qubit[], targets : Qubit[]) : Unit'
 input:
   content: '(register : Qubit[], targets : Qubit[])'
@@ -29,3 +34,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

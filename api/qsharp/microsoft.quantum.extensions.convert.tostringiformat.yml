@@ -7,8 +7,14 @@ uid: microsoft.quantum.extensions.convert.tostringiformat
 name: ToStringIFormat
 type: function
 namespace: microsoft.quantum.extensions.convert
-summary: ToStringIFormat has been deprecated. Please use @"microsoft.quantum.convert.intasstringwithformat"
-  instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  ToStringIFormat has been deprecated. Please use @"microsoft.quantum.convert.intasstringwithformat" instead.
+  Please use @"microsoft.quantum.convert.intasstringwithformat".
 syntax: 'function ToStringIFormat (a : Int, fmt : String) : String'
 input:
   content: '(a : Int, fmt : String)'
@@ -24,3 +30,4 @@ output:
   types:
   - isPrimitive: true
     uid: String
+...

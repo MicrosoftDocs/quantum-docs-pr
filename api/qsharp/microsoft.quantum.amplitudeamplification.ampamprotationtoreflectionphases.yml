@@ -7,10 +7,16 @@ uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
 name: AmpAmpRotationToReflectionPhases
 type: function
 namespace: microsoft.quantum.amplitudeamplification
-summary: AmpAmpRotationToReflectionPhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases"
-  instead.
-syntax: 'function AmpAmpRotationToReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases)
-  : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  AmpAmpRotationToReflectionPhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases" instead.
+  Please use
+  @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases".
+syntax: 'function AmpAmpRotationToReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 input:
   content: '(rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases)'
   types:
@@ -20,3 +26,4 @@ output:
   content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
   types:
   - uid: microsoft.quantum.amplitudeamplification.reflectionphases
+...

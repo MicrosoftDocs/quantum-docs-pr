@@ -7,8 +7,14 @@ uid: microsoft.quantum.extensions.math.ceiling
 name: Ceiling
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: Ceiling has been deprecated. Please use @"microsoft.quantum.math.ceiling"
-  instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  Ceiling has been deprecated. Please use @"microsoft.quantum.math.ceiling" instead.
+  Please use @"microsoft.quantum.math.ceiling".
 syntax: 'function Ceiling (value : Double) : Int'
 input:
   content: '(value : Double)'
@@ -21,3 +27,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

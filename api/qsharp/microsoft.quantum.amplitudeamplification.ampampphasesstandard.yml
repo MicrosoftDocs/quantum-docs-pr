@@ -7,8 +7,15 @@ uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
 name: AmpAmpPhasesStandard
 type: function
 namespace: microsoft.quantum.amplitudeamplification
-summary: AmpAmpPhasesStandard has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.standardreflectionphases"
-  instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  AmpAmpPhasesStandard has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.standardreflectionphases" instead.
+  Please use
+  @"microsoft.quantum.amplitudeamplification.standardreflectionphases".
 syntax: 'function AmpAmpPhasesStandard (nIterations : Int) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 input:
   content: '(nIterations : Int)'
@@ -20,3 +27,4 @@ output:
   content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
   types:
   - uid: microsoft.quantum.amplitudeamplification.reflectionphases
+...

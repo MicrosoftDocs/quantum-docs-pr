@@ -7,8 +7,14 @@ uid: microsoft.quantum.extensions.convert.boolstobigint
 name: BoolsToBigInt
 type: function
 namespace: microsoft.quantum.extensions.convert
-summary: BoolsToBigInt has been deprecated. Please use @"microsoft.quantum.convert.boolarrayasbigint"
-  instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  BoolsToBigInt has been deprecated. Please use @"microsoft.quantum.convert.boolarrayasbigint" instead.
+  Please use @"microsoft.quantum.convert.boolarrayasbigint".
 syntax: 'function BoolsToBigInt (a : Bool[]) : BigInt'
 input:
   content: '(a : Bool[])'
@@ -22,3 +28,4 @@ output:
   types:
   - isPrimitive: true
     uid: BigInt
+...

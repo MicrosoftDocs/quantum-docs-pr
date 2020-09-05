@@ -71,72 +71,21 @@ summary: |2-
    AmpAmpObliviousByReflectionPhases.
 functions:
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AmpAmpByOracle has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification" instead.
-    Please use @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification".
+  summary: AmpAmpByOracle has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification" instead.
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AmpAmpByOraclePhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation" instead.
-    Please use @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation".
+  summary: AmpAmpByOraclePhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation" instead.
 - uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionphases
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AmpAmpByReflectionPhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections" instead.
-    Please use @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections".
+  summary: AmpAmpByReflectionPhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections" instead.
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AmpAmpObliviousByOraclePhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation" instead.
-    Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation".
+  summary: AmpAmpObliviousByOraclePhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation" instead.
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AmpAmpObliviousByReflectionPhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections" instead.
-    Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections".
+  summary: AmpAmpObliviousByReflectionPhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections" instead.
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AmpAmpPhasesFixedPoint has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases" instead.
-    Please use
-    @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases".
+  summary: AmpAmpPhasesFixedPoint has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases" instead.
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AmpAmpPhasesStandard has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.standardreflectionphases" instead.
-    Please use
-    @"microsoft.quantum.amplitudeamplification.standardreflectionphases".
+  summary: AmpAmpPhasesStandard has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.standardreflectionphases" instead.
 - uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AmpAmpRotationToReflectionPhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases" instead.
-    Please use
-    @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases".
+  summary: AmpAmpRotationToReflectionPhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases" instead.
 - uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections
   summary: Amplitude amplification by partial reflections.
 - uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
@@ -146,13 +95,11 @@ functions:
     Computes partial reflection phases for fixed-point amplitude
     amplification.
 - uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections
-  summary: Returns a unitary that implements oblivious amplitude amplification by
-    specifying for partial reflections.
+  summary: Returns a unitary that implements oblivious amplitude amplification by specifying for partial reflections.
 - uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation
   summary: Oblivious amplitude amplification by oracles for partial reflections.
 - uid: microsoft.quantum.amplitudeamplification.reflectionstart
-  summary: Constructs a reflection about the all-zero string |0...0〉, which is the
-    typical input state to amplitude amplification.
+  summary: Constructs a reflection about the all-zero string |0...0〉, which is the typical input state to amplitude amplification.
 - uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
   summary: |-
     Converts phases specified as single-qubit rotations to phases
@@ -164,19 +111,10 @@ functions:
     Computes partial reflection phases for standard amplitude
     amplification.
 - uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
-  summary: |-
-    Constructs a `ReflectionOracle` about the target state uniquely marked by the flag qubit.
-
-    The target state has a single qubit set to 1, and all others 0: $\ket{1}_f$.
+  summary: Constructs a `ReflectionOracle` about the target state uniquely marked by the flag qubit.
 operations:
 - uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AmpAmpRUSByOracle has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.applyfixedpointamplification" instead.
-    Please use @"microsoft.quantum.amplitudeamplification.applyfixedpointamplification".
+  summary: AmpAmpRUSByOracle has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.applyfixedpointamplification" instead.
 - uid: microsoft.quantum.amplitudeamplification.applyamplitudeamplification
   summary: |-
     Applies amplitude amplification on a given register, using a given set
@@ -190,3 +128,4 @@ newtypes:
   summary: Phases for a sequence of partial reflections in amplitude amplification.
 - uid: microsoft.quantum.amplitudeamplification.rotationphases
   summary: Phases for a sequence of single-qubit rotations in amplitude amplification.
+...

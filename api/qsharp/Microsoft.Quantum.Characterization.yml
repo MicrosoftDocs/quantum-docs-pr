@@ -44,13 +44,7 @@ operations:
     the real part of the overlap between the states prepared by each
     operation.
 - uid: microsoft.quantum.characterization.measureallz
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    MeasureAllZ has been deprecated. Please use @"microsoft.quantum.measurement.measureallz" instead.
-    Please use @"microsoft.quantum.measurement.measureAllZ".
+  summary: MeasureAllZ has been deprecated. Please use @"microsoft.quantum.measurement.measureallz" instead.
 - uid: microsoft.quantum.characterization.measureidentity
   summary: |-
     Measures the identity operator on a register
@@ -67,3 +61,4 @@ operations:
   summary: |-
     Performs a single-qubit process tomography measurement in the Pauli
     basis, given a particular channel of interest.
+...

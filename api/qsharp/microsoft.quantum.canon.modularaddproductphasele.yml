@@ -7,14 +7,17 @@ uid: microsoft.quantum.canon.modularaddproductphasele
 name: ModularAddProductPhaseLE
 type: operation
 namespace: microsoft.quantum.canon
-summary: ModularAddProductPhaseLE has been deprecated. Please use @"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger"
-  instead.
-syntax: 'operation ModularAddProductPhaseLE (constMultiplier : Int, modulus : Int,
-  multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)
-  : Unit'
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  ModularAddProductPhaseLE has been deprecated. Please use @"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger" instead.
+  Please use @"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger".
+syntax: 'operation ModularAddProductPhaseLE (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
-  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian,
-    phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: constMultiplier
     isPrimitive: true
@@ -34,3 +37,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

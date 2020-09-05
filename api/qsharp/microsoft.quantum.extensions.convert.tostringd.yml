@@ -7,8 +7,14 @@ uid: microsoft.quantum.extensions.convert.tostringd
 name: ToStringD
 type: function
 namespace: microsoft.quantum.extensions.convert
-summary: ToStringD has been deprecated. Please use @"microsoft.quantum.convert.doubleasstring"
-  instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  ToStringD has been deprecated. Please use @"microsoft.quantum.convert.doubleasstring" instead.
+  Please use @"microsoft.quantum.convert.doubleasstring".
 syntax: 'function ToStringD (a : Double) : String'
 input:
   content: '(a : Double)'
@@ -21,3 +27,4 @@ output:
   types:
   - isPrimitive: true
     uid: String
+...

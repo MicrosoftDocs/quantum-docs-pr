@@ -254,8 +254,7 @@ operations:
     where the $n$ least significant bits of the result are held in `ys` and
     the carry out bit is xored to the qubit `carry`.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
-  summary: Reversible, in-place ripple-carry addition of two integers without carry
-    out.
+  summary: Reversible, in-place ripple-carry addition of two integers without carry out.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   summary: |-
     Reversible, in-place ripple-carry addition of two integers.
@@ -294,12 +293,7 @@ newtypes:
     Register that encodes an unsigned integer in little-endian order. The
     qubit with index `0` encodes the lowest bit of an unsigned integer.
 - uid: microsoft.quantum.arithmetic.phaselittleendian
-  summary: |-
-    Little-endian unsigned integers in QFT basis.
-
-    For example, if $\ket{x}$ is the little-endian encoding of the integer
-    $x$ in the computational basis,
-    then $\operatorname{QFTLE} \ket{x}$ is the encoding of $x$ in the QFT
-    basis.
+  summary: Little-endian unsigned integers in QFT basis.
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Type of a signed integer stored in little endian (see LittleEndian).
+...

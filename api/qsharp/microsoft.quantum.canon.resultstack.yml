@@ -7,5 +7,12 @@ uid: microsoft.quantum.canon.resultstack
 name: ResultStack
 type: newtype
 namespace: microsoft.quantum.canon
-summary: ResultStack has been deprecated.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  ResultStack has been deprecated.
 syntax: newtype ResultStack = (Int, Int, Result[]);
+...

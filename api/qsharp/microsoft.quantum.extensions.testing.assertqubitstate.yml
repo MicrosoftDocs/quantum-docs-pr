@@ -7,13 +7,17 @@ uid: microsoft.quantum.extensions.testing.assertqubitstate
 name: AssertQubitState
 type: operation
 namespace: microsoft.quantum.extensions.testing
-summary: AssertQubitState has been deprecated. Please use @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance"
-  instead.
-syntax: 'operation AssertQubitState (expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex),
-  register : Qubit, tolerance : Double) : Unit'
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  AssertQubitState has been deprecated. Please use @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance" instead.
+  Please use @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
+syntax: 'operation AssertQubitState (expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double) : Unit'
 input:
-  content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex),
-    register : Qubit, tolerance : Double)'
+  content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
   types:
   - name: expected
     types:
@@ -30,3 +34,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

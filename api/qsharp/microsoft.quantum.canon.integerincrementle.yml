@@ -7,10 +7,15 @@ uid: microsoft.quantum.canon.integerincrementle
 name: IntegerIncrementLE
 type: operation
 namespace: microsoft.quantum.canon
-summary: IntegerIncrementLE has been deprecated. Please use @"microsoft.quantum.arithmetic.incrementbyinteger"
-  instead.
-syntax: 'operation IntegerIncrementLE (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)
-  : Unit'
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  IntegerIncrementLE has been deprecated. Please use @"microsoft.quantum.arithmetic.incrementbyinteger" instead.
+  Please use @"Microsoft.Quantum.Arithmetic.IncrementByInteger".
+syntax: 'operation IntegerIncrementLE (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -27,3 +32,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

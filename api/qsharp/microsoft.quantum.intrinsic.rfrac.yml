@@ -27,8 +27,7 @@ remarks: |-
   // PI() is a Q# function that returns an approximation of π.
   R(pauli, -PI() * IntAsDouble(numerator) / IntAsDouble(2 ^ (power - 1)), qubit);
   ```
-syntax: 'operation RFrac (pauli : Pauli, numerator : Int, power : Int, qubit : Qubit)
-  : Unit'
+syntax: 'operation RFrac (pauli : Pauli, numerator : Int, power : Int, qubit : Qubit) : Unit'
 input:
   content: '(pauli : Pauli, numerator : Int, power : Int, qubit : Qubit)'
   types:
@@ -60,3 +59,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

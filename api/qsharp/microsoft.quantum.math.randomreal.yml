@@ -7,13 +7,24 @@ uid: microsoft.quantum.math.randomreal
 name: RandomReal
 type: operation
 namespace: microsoft.quantum.math
-summary: RandomReal has been deprecated. Please use @"microsoft.quantum.random.drawrandomdouble"
-  instead.
+summary: RandomReal has been deprecated. Please use @"microsoft.quantum.random.drawrandomdouble" instead.
+remarks: |-
+  This function calls <xref:microsoft.quantum.intrinsic.random>, so
+  its randomness depends on the implementation of `Random`.
 syntax: 'operation RandomReal (bitsRandom : Int) : Double'
 input:
   content: '(bitsRandom : Int)'
   types:
   - name: bitsRandom
+    summary: |-
+      The number of bits of precision with which the random number
+      should be sampled.
+
+          # Output
+
+      A real number $x = k / 2^{\texttt{bitsRandom}}$ for an integer
+      $k$ sampled from the interval $[0, 2^{\texttt{bitsRandom}})$
+      with probability $\Pr(k) = 1 / 2^{\texttt{bitsRandom}}$.
     isPrimitive: true
     uid: Int
 output:
@@ -21,3 +32,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

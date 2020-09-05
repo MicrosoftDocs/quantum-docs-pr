@@ -62,6 +62,10 @@
       href: declaration/newtype-ref.md
   - name: Callables
     items:
+    - name: return
+      href: callables/return-ref.md
+    - name: '_ (partial application)'
+      href: callables/partial-app-symb-ref.md
     - name: Functors
       items:
       - name: Controlled
@@ -78,11 +82,11 @@
         href: callables/signature/ctl-ref.md
       - name: Adj
         href: callables/signature/adj-ref.md
-      - name: 'Ctl + Adj'
+      - name: 'Adj + Ctl'
         href: callables/signature/adj-ctl-ref.md
-      - name: '=> (Operation)'
+      - name: '=> (operation)'
         href: callables/signature/op-signature-symb-ref.md
-      - name: '-> (Function)'
+      - name: '-> (function)'
         href: callables/signature/fn-signature-symb-ref.md
     - name: Operation Specializations
       items:
@@ -108,10 +112,6 @@
           href: callables/op-specializations/directives/self-ref.md
         - name: auto
           href: callables/op-specializations/directives/auto-ref.md
-    - name: return
-      href: callables/return-ref.md
-    - name: '_ (Partial Application)'
-      href: callables/partial-app-symb-ref.md
   - name: Control Flow
     items:
     - name: for

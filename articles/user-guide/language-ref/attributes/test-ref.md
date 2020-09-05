@@ -8,6 +8,6 @@ ms.topic: article
 uid: microsoft.quantum.lang-ref.test
 ---
 
-# '`@Test`'
+# `@Test`
 
 fill

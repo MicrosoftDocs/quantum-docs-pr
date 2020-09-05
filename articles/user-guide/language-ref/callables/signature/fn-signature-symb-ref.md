@@ -8,6 +8,6 @@ ms.topic: article
 uid: microsoft.quantum.lang-ref.fn-signature-symb
 ---
 
-# '`->` (Function Signature)'
+# `->` (Function Signature)
 
 fill

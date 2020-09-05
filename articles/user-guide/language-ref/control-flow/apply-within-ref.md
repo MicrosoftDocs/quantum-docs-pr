@@ -1,5 +1,5 @@
 ---
-title: apply-within (Conjugation)
+title: apply-within (conjugation)
 description: Keyword reference apply-within
 author: gillenhaalb
 ms.author: a-gibec
@@ -8,6 +8,6 @@ ms.topic: article
 uid: microsoft.quantum.lang-ref.apply-within
 ---
 
-# `apply-within` (Conjugation)
+# `apply-within` (conjugation)
 
 fill

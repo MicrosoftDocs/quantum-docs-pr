@@ -8,6 +8,6 @@ ms.topic: article
 uid: microsoft.quantum.lang-ref.entrypoint
 ---
 
-# '`@EntryPoint`'
+# `@EntryPoint`
 
 fill

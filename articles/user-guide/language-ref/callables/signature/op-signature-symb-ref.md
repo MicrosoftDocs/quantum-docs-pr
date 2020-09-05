@@ -8,6 +8,6 @@ ms.topic: article
 uid: microsoft.quantum.lang-ref.op-signature-symb
 ---
 
-# '`=>` (Operation Signature)'
+# `=>` (Operation Signature)
 
 fill

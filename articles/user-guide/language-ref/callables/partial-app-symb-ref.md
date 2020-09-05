@@ -1,5 +1,5 @@
 ---
-title: '_ (Partial Application)'
+title: '_ (partial application)'
 description: 'Keyword reference _ partial application symbol'
 author: gillenhaalb
 ms.author: a-gibec
@@ -8,6 +8,6 @@ ms.topic: article
 uid: microsoft.quantum.lang-ref.partial-app-symb
 ---
 
-# '`_` (Partial Application)'
+# `_` (partial application)
 
 fill

@@ -8,6 +8,6 @@ ms.topic: article
 uid: microsoft.quantum.lang-ref.partial-app-symb
 ---
 
-# `_` (Partial Application)
+# '`_` (Partial Application)'
 
 fill

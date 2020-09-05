@@ -152,5 +152,5 @@
     items:
     - name: '@EntryPoint'
       href: attributes/entrypoint-ref.md
-    - name: '@Test("...")'
+    - name: '@Test'
       href: attributes/test-ref.md

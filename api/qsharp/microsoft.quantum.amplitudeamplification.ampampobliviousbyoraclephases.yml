@@ -7,16 +7,10 @@ uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
 name: AmpAmpObliviousByOraclePhases
 type: function
 namespace: microsoft.quantum.amplitudeamplification
-summary: AmpAmpObliviousByOraclePhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation"
-  instead.
-syntax: 'function AmpAmpObliviousByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases,
-  startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle
-  : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[])
-  => Unit is Adj + Ctl)'
+summary: AmpAmpObliviousByOraclePhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation" instead.
+syntax: 'function AmpAmpObliviousByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
-  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle
-    : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle,
-    idxFlagQubit : Int)'
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
   types:
   - name: phases
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
@@ -46,3 +40,4 @@ output:
     functors:
     - Adjoint
     - Controlled
+...

@@ -3,7 +3,7 @@ title: '%config (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.config
 ms.author: rmshaffer
-ms.date: 08/25/2020
+ms.date: 09/05/2020
 ms.topic: article
 ---
 

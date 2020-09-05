@@ -1,6 +1,6 @@
 ---
 title: '_ (Partial Application)'
-description: Keyword reference
+description: 'Keyword reference _ partial application symbol'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

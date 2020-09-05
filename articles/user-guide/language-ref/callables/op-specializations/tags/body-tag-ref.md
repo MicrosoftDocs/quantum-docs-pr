@@ -1,6 +1,6 @@
 ---
 title: body (Specialization Tag)
-description: Keyword reference
+description: Keyword reference (specialization tag) body
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

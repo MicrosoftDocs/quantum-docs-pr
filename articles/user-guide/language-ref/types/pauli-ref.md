@@ -1,6 +1,6 @@
 ---
 title: Pauli
-description: Keyword reference
+description: Keyword reference Pauli
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

@@ -1,6 +1,6 @@
 ---
 title: Double
-description: Keyword reference
+description: Keyword reference Double
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

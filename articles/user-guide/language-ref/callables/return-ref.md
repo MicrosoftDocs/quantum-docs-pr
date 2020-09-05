@@ -1,6 +1,6 @@
 ---
 title: return
-description: Keyword reference
+description: Keyword reference return
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

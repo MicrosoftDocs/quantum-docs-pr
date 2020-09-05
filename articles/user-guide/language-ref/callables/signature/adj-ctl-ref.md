@@ -1,6 +1,6 @@
 ---
 title: 'Adj + Ctl'
-description: Keyword reference
+description: Keyword reference 'Adj + Ctl'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

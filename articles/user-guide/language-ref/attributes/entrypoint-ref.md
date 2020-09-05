@@ -1,6 +1,6 @@
 ---
 title: '@EntryPoint'
-description: Keyword reference
+description: Keyword reference '@EntryPoint'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

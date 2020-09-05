@@ -1,6 +1,6 @@
 ---
 title: '-> (Function Signature)'
-description: Keyword reference
+description: 'Keyword reference -> function signature symbol'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

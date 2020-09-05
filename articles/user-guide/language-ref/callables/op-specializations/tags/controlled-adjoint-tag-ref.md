@@ -1,6 +1,6 @@
 ---
 title: controlled adjoint (Specialization Tag)
-description: Keyword reference
+description: Keyword reference (specialization tag) controlled adjoint
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

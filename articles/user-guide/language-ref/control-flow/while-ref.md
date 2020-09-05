@@ -1,6 +1,6 @@
 ---
 title: while
-description: Keyword reference
+description: Keyword reference while
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

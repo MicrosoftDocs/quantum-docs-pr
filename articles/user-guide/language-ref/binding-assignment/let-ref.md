@@ -1,6 +1,6 @@
 ---
 title: let
-description: Keyword reference
+description: Keyword reference let
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

@@ -1,6 +1,6 @@
 ---
 title: operation
-description: Keyword reference
+description: Keyword reference operation
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

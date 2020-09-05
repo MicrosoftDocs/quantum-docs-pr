@@ -1,6 +1,6 @@
 ---
 title: namespace
-description: Keyword reference
+description: Keyword reference namespace
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

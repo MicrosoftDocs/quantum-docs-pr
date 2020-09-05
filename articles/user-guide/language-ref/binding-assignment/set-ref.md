@@ -1,6 +1,6 @@
 ---
 title: set
-description: Keyword reference
+description: Keyword reference set
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

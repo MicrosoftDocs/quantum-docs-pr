@@ -1,6 +1,6 @@
 ---
 title: Controlled Adjoint
-description: Keyword reference
+description: Keyword reference Controlled Adjoint
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 05/09/2020

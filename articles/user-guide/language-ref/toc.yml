@@ -1,0 +1,156 @@
+  expanded: true 
+  items:
+  - name: Types
+    items:
+    - name: Primitive types
+      items:
+      - name: Int
+        href: types/int-ref.md
+      - name: BigInt
+        href: types/bigint-ref.md
+      - name: Double
+        href: types/double-ref.md
+      - name: Bool
+        href: types/bool-ref.md
+      - name: Range
+        href: types/range-ref.md
+      - name: String
+        href: types/string-ref.md
+      - name: Unit
+        href: types/unit-ref.md
+      - name: Qubit
+        href: types/qubit-ref.md
+      - name: Pauli
+        href: types/pauli-ref.md
+      - name: Result
+        href: types/result-ref.md
+    - name: Reserved symbols
+      items:
+      - name: true
+        href: types/true-ref.md
+      - name: false
+        href: types/false-ref.md
+      - name: PauliI
+        href: types/paulii-ref.md
+      - name: PauliX
+        href: types/paulix-ref.md
+      - name: PauliY
+        href: types/pauliy-ref.md
+      - name: PauliZ
+        href: types/pauliz-ref.md
+      - name: Zero
+        href: types/zero-ref.md
+      - name: One
+        href: types/one-ref.md
+  - name: 'Binding/Assignment'
+    items:
+    - name: new
+      href: binding-assignment/new-ref.md
+    - name: let
+      href: binding-assignment/let-ref.md
+    - name: mutable
+      href: binding-assignment/mutable-ref.md
+    - name: set
+      href: binding-assignment/set-ref.md
+  - name: Declaration
+    items:
+    - name: operation
+      href: declaration/operation-ref.md
+    - name: function
+      href: declaration/function-ref.md
+    - name: newtype
+      href: declaration/newtype-ref.md
+  - name: Callables
+    items:
+    - name: Functors
+      items:
+      - name: Controlled
+        href: callables/functors/controlled-ref.md
+      - name: Adjoint
+        href: callables/functors/adjoint-ref.md
+      - name: Controlled Adjoint
+        href: callables/functors/controlled-adjoint-ref.md
+    - name: Signatures
+      items:
+      - name: is
+        href: callables/signature/is-ref.md
+      - name: Ctl
+        href: callables/signature/ctl-ref.md
+      - name: Adj
+        href: callables/signature/adj-ref.md
+      - name: 'Ctl + Adj'
+        href: callables/signature/adj-ctl-ref.md
+      - name: '=> (Operation)'
+        href: callables/signature/op-signature-symb-ref.md
+      - name: '-> (Function)'
+        href: callables/signature/fn-signature-symb-ref.md
+    - name: Operation Specializations
+      items:
+      - name: Tags
+        items:
+        - name: body
+          href: callables/op-specializations/tags/body-tag-ref.md
+        - name: adjoint
+          href: callables/op-specializations/tags/adjoint-tag-ref.md
+        - name: controlled
+          href: callables/op-specializations/tags/controlled-tag-ref.md
+        - name: controlled adjoint
+          href: callables/op-specializations/tags/controlled-adjoint-tag-ref.md
+      - name: Directives
+        items:
+        - name: intrinsic
+          href: callables/op-specializations/directives/intrinsic-ref.md
+        - name: distribute
+          href: callables/op-specializations/directives/distribute-ref.md
+        - name: invert
+          href: callables/op-specializations/directives/invert-ref.md
+        - name: self
+          href: callables/op-specializations/directives/self-ref.md
+        - name: auto
+          href: callables/op-specializations/directives/auto-ref.md
+    - name: return
+      href: callables/return-ref.md
+    - name: '_ (Partial Application)'
+      href: callables/partial-app-symb-ref.md
+  - name: Control Flow
+    items:
+    - name: for
+      href: control-flow/for-ref.md
+    - name: in
+      href: control-flow/in-ref.md
+    - name: if
+      href: control-flow/if-ref.md
+    - name: elif
+      href: control-flow/elif-ref.md
+    - name: else
+      href: control-flow/else-ref.md
+    - name: repeat-until
+      href: control-flow/repeat-until-ref.md
+    - name: fixup
+      href: control-flow/fixup-ref.md
+    - name: while
+      href: control-flow/while-ref.md
+    - name: apply-within (Conjugation)
+      href: control-flow/apply-within-ref.md
+    - name: fail
+      href: control-flow/fail-ref.md
+  - name: Qubits
+    items:
+    - name: using
+      href: qubits/using-ref.md
+    - name: borrowing
+      href: qubits/borrowing-ref.md
+  - name: Namespace
+    items:
+    - name: namespace
+      href: namespace/namespace-ref.md
+    - name: open
+      href: namespace/open-ref.md
+    - name: as
+      href: namespace/as-ref.md
+  - name: Attributes
+    items:
+    - name: '@EntryPoint'
+      href: attributes/entrypoint-ref.md
+    - name: '@Test("...")'
+      href: attributes/test-ref.md

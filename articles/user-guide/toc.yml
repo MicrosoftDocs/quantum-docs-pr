@@ -14,3 +14,5 @@
   href: libraries/toc.yml
 - name: Quick reference
   href: quickref/toc.yml
+- name: Language reference
+  href: language-ref/toc.yml

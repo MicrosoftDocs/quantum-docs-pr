@@ -26,9 +26,9 @@
         href: types/result-ref.md
     - name: Reserved symbols
       items:
-      - name: true
+      - name: 'true'
         href: types/true-ref.md
-      - name: false
+      - name: 'false'
         href: types/false-ref.md
       - name: PauliI
         href: types/paulii-ref.md

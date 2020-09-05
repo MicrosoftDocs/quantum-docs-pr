@@ -10,8 +10,7 @@ namespace: microsoft.quantum.arithmetic
 summary: |-
   Assert that all fixed-point numbers in the provided array
   have identical point positions and qubit numbers.
-syntax: 'function IdenticalFormatFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[])
-  : Unit'
+syntax: 'function IdenticalFormatFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[]) : Unit'
 input:
   content: '(fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[])'
   types:
@@ -26,3 +25,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

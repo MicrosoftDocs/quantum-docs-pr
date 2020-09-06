@@ -32,3 +32,4 @@ output:
       probability `1.0 - successProbability`.
     isPrimitive: true
     uid: Bool
+...

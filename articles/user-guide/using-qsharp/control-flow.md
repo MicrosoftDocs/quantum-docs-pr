@@ -181,7 +181,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-Starting with our 0.9 release, Q# supports a conjugation statement that implements the preceding transformation. Using that statement, the operation `ApplyWith` can be implemented in the following way:
+Q# supports a conjugation statement that implements the preceding transformation. Using that statement, the operation `ApplyWith` can be implemented in the following way:
 
 ```qsharp
 operation ApplyWith<'T>(

@@ -11,8 +11,7 @@ summary: |-
   `TimeDependentSimulationAlgorithm` function that uses a Trotter–Suzuki
   decomposition to approximate a unitary operator that solves the
   time-dependent Schrodinger equation.
-syntax: 'function TimeDependentTrotterSimulationAlgorithm (trotterStepSize : Double,
-  trotterOrder : Int) : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm'
+syntax: 'function TimeDependentTrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm'
 input:
   content: '(trotterStepSize : Double, trotterOrder : Int)'
   types:
@@ -29,3 +28,4 @@ output:
   types:
   - summary: A `TimeDependentSimulationAlgorithm` type.
     uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
+...

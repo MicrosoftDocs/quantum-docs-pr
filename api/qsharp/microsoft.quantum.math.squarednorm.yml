@@ -27,3 +27,4 @@ output:
   - summary: The squared 2-norm of `array`.
     isPrimitive: true
     uid: Double
+...

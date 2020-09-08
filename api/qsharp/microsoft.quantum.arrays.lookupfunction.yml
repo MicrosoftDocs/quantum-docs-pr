@@ -43,3 +43,4 @@ typeParameters:
   summary: |-
     The type of the elements of the array being represented as a lookup
     function.
+...

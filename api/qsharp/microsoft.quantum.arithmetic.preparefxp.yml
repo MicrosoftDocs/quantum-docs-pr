@@ -8,8 +8,7 @@ name: PrepareFxP
 type: operation
 namespace: microsoft.quantum.arithmetic
 summary: Initialize a quantum fixed-point number to a classical constant.
-syntax: 'operation PrepareFxP (constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint)
-  : Unit'
+syntax: 'operation PrepareFxP (constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
@@ -28,3 +27,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

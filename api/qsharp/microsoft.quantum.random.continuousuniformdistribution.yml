@@ -37,3 +37,4 @@ output:
     uid: microsoft.quantum.random.continuousdistribution
 seeAlso:
 - microsoft.quantum.drawrandomdouble
+...

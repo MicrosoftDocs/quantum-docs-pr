@@ -37,3 +37,4 @@ operations:
   summary: |-
     Sets a qubit to a given computational basis state by measuring the
     qubit and applying a bit flip if needed.
+...

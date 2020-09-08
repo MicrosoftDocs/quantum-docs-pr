@@ -28,3 +28,4 @@ output:
   types:
   - summary: An operation that implements phases specified as partial reflections
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
+...

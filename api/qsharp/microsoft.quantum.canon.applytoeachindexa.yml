@@ -10,8 +10,7 @@ namespace: microsoft.quantum.canon
 summary: |-
   Applies a single-qubit operation to each indexed element in a register.
   The modifier `A` indicates that the single-qubit operation is adjointable.
-syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => Unit\
-  \ is Adj), register : 'T[]) : Unit"
+syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[])"
   types:
@@ -47,3 +46,4 @@ functors:
 - Adjoint
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
+...

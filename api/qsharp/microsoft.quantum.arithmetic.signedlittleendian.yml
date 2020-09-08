@@ -9,3 +9,4 @@ type: newtype
 namespace: microsoft.quantum.arithmetic
 summary: Type of a signed integer stored in little endian (see LittleEndian).
 syntax: newtype SignedLittleEndian = Microsoft.Quantum.Arithmetic.LittleEndian;
+...

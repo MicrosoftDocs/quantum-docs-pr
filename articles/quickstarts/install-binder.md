@@ -11,16 +11,38 @@ no-loc: ['Q#', '$$v']
 ---
 # Develop with Q# and Binder
 
-You can use Binder to run your Jupyter Notebooks online.
+You can use Binder to run and share your Jupyter Notebooks online.
 
-To configure Binder automatically and experiment with the QDK samples:
+## Use Binder with the Microsoft QDK samples
 
-- Open a browser and run https://aka.ms/try-qsharp.
+To configure Binder automatically to use the Microsoft QDK samples:
 
-To configure Binder manually:
+1. Open a browser and run https://aka.ms/try-qsharp.
+1. On the **Quantum Development Kit Samples** landing page, click **Q# notebook** to learn how to use IQ# to write your own quantum application notebooks.
 
-1. Go to [mybinder.org](https://mybinder.org).
-1. Fill out the fields, using *microsoft/quantum* as the GitHub URL.
+![QDK landing page](~/media/binder-install.png)
+
+## Use Binder with your own notebooks and repository
+
+If you already have notebooks in a GitHub repository, you can configure Binder to work with your repo:
+
+1. Ensure that there is a file named **Dockerfile.txt** in the root of your repository. The file must contain at least the following lines:
+
+    ```bash
+    FROM mcr.microsoft.com/quantum/iqsharp-base:0.12.20082513
+    
+    USER root
+    COPY . ${HOME}
+    RUN chown -R ${USER} ${HOME}
+    
+    USER ${USER}
+    
+    ```
+
+    For more information about creating a Dockerfile, see the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
+
+2. Open a browser to [mybinder.org](https://mybinder.org).
+3. Enter your repository name as the **GitHub URL** (for example *MyName/MyRepo*), and click **launch**.
 
 ![MyBinder form](~/media/mybinder.png)
     

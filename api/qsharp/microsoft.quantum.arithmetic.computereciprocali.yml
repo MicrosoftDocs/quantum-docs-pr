@@ -12,8 +12,7 @@ summary: |-
   using integer division. The result, interpreted as an integer,
   will be `floor(2^(2*n-1) / x)`.
 remarks: For the input x=0, the output will be all-ones.
-syntax: 'operation ComputeReciprocalI (xs : Microsoft.Quantum.Arithmetic.LittleEndian,
-  result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ComputeReciprocalI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -31,3 +30,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

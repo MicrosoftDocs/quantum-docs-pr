@@ -11,12 +11,9 @@ summary: Measures the given set of generators of a stabilizer group.
 remarks: |-
   This does not check if the given set of generators are commuting.
   If they are not commuting, the result of measurements may be arbitrary.
-syntax: 'operation MeasureStabilizerGenerators (stabilizerGroup : Pauli[][], logicalRegister
-  : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[])
-  => Result)) : Microsoft.Quantum.ErrorCorrection.Syndrome'
+syntax: 'operation MeasureStabilizerGenerators (stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result)) : Microsoft.Quantum.ErrorCorrection.Syndrome'
 input:
-  content: '(stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister,
-    gadget : ((Pauli[], Qubit[]) => Result))'
+  content: '(stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result))'
   types:
   - name: stabilizerGroup
     summary: |-
@@ -51,3 +48,4 @@ output:
   types:
   - summary: The result of measurements.
     uid: microsoft.quantum.errorcorrection.syndrome
+...

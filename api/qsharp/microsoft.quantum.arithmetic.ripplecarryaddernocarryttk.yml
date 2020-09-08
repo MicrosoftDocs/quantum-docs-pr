@@ -17,8 +17,7 @@ summary: |-
 remarks: |-
   This operation has the same functionality as RippleCarryAdderTTK but does
   not return the carry bit.
-syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian,
-  ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: |-
   - Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "Quantum
     Addition Circuits and Unbounded Fan-Out", Quantum Information and
@@ -43,3 +42,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

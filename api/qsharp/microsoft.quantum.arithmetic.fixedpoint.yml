@@ -12,3 +12,4 @@ summary: |-
   qubits to the left of the binary point, i.e., qubits of weight greater
   than or equal to 1, and a quantum register.
 syntax: newtype FixedPoint = (Int, Qubit[]);
+...

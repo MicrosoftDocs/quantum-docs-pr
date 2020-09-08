@@ -7,14 +7,10 @@ uid: microsoft.quantum.canon.modularaddproductle
 name: ModularAddProductLE
 type: operation
 namespace: microsoft.quantum.canon
-summary: ModularAddProductLE has been deprecated. Please use @"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger"
-  instead.
-syntax: 'operation ModularAddProductLE (constMultiplier : Int, modulus : Int, multiplier
-  : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian)
-  : Unit'
+summary: ModularAddProductLE has been deprecated. Please use @"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger" instead.
+syntax: 'operation ModularAddProductLE (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
-  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian,
-    summand : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: constMultiplier
     isPrimitive: true
@@ -34,3 +30,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

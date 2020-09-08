@@ -12,8 +12,7 @@ summary: |-
   qubit `carryIn` and two summand bits encoded in `summand1` and `summand2`,
   computes the bitwise xor of `carryIn`, `summand1` and `summand2` in the qubit
   `summand2`.
-remarks: In contrast to the `Carry` operation, this does not compute the carry-out
-  bit.
+remarks: In contrast to the `Carry` operation, this does not compute the carry-out bit.
 syntax: 'operation Sum (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit)'
@@ -40,3 +39,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

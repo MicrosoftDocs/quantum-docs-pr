@@ -12,8 +12,7 @@ summary: |-
 
   Given an operation `op`, an index `index`, and an array of targets `targets`,
   applies `op(targets[index])`.
-syntax: "operation ApplyToElementA (op : ('T => Unit is Adj), index : Int, targets\
-  \ : 'T[]) : Unit"
+syntax: "operation ApplyToElementA (op : ('T => Unit is Adj), index : Int, targets : 'T[]) : Unit"
 input:
   content: "(op : ('T => Unit is Adj), index : Int, targets : 'T[])"
   types:
@@ -52,3 +51,4 @@ seeAlso:
 - microsoft.quantum.canon.applytoelement
 - microsoft.quantum.canon.applytoelementc
 - microsoft.quantum.canon.applytoelementca
+...

@@ -24,3 +24,4 @@ output:
       An `EvolutionSet` that maps a `GeneratorIndex` for the Pauli basis to
       an `EvolutionUnitary.
     uid: microsoft.quantum.simulation.evolutionset
+...

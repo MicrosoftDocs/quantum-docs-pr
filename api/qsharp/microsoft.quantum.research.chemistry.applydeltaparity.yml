@@ -12,11 +12,9 @@ summary: |-
   and the next PQRS... term. This difference is computed on a auxiliary
   qubit.
 remarks: This assumes that indices of P < Q < R < S < ... for both prevPQ and nextPQ.
-syntax: 'operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm
-  : Int[], aux : Qubit, qubits : Qubit[]) : Unit'
+syntax: 'operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit'
 input:
-  content: '(prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits
-    : Qubit[])'
+  content: '(prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[])'
   types:
   - name: prevFermionicTerm
     summary: List of indices to previous PQRS... terms.
@@ -45,3 +43,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

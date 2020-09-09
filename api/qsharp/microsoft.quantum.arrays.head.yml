@@ -13,8 +13,7 @@ input:
   content: "(array : 'A[])"
   types:
   - name: array
-    summary: Array of which the first element is taken. Array must have length at
-      least 1.
+    summary: Array of which the first element is taken. Array must have length at least 1.
     isArray: true
     uid: "'A"
     isLocal: true
@@ -27,3 +26,4 @@ output:
 typeParameters:
 - uid: "'A"
   summary: The type of the array elements.
+...

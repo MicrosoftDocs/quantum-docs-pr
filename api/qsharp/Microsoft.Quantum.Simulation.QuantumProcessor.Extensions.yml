@@ -64,3 +64,4 @@ operations:
   summary: ''
 - uid: microsoft.quantum.simulation.quantumprocessor.extensions.noop
   summary: ''
+...

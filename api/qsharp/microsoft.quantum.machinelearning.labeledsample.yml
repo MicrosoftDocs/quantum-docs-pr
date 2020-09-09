@@ -9,3 +9,4 @@ type: newtype
 namespace: microsoft.quantum.machinelearning
 summary: A sample, labeled with a class to which that sample belongs.
 syntax: newtype LabeledSample = (Double[], Int);
+...

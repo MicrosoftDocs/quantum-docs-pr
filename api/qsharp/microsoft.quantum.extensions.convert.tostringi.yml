@@ -7,8 +7,7 @@ uid: microsoft.quantum.extensions.convert.tostringi
 name: ToStringI
 type: function
 namespace: microsoft.quantum.extensions.convert
-summary: ToStringI has been deprecated. Please use @"microsoft.quantum.convert.intasstring"
-  instead.
+summary: ToStringI has been deprecated. Please use @"microsoft.quantum.convert.intasstring" instead.
 syntax: 'function ToStringI (a : Int) : String'
 input:
   content: '(a : Int)'
@@ -21,3 +20,4 @@ output:
   types:
   - isPrimitive: true
     uid: String
+...

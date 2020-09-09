@@ -16,9 +16,7 @@ In quantum mechanics, and therefore in quantum computing, the state of a
 particular system (e.g. a qubit) is often represented as a sum of different
 classical states: this is what is known as a quantum superposition. For example,
 at this point you might know that a qubit can exist in a quantum superposition
-of the two binary states **0** and **1**. A superposition is mathematically
-represented as a sum of states. For example, the state of qubit can be the
-following superposition:
+of the two binary states **0** and **1**:
 
 $$ \ket{\text{qubit}} = a \ket{0} + b \ket{1}. $$
 

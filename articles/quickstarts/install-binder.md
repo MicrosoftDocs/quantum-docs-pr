@@ -26,7 +26,7 @@ To configure Binder automatically to use the Microsoft QDK samples:
 
 If you already have notebooks in a GitHub repository, you can configure Binder to work with your repo:
 
-1. Ensure that there is a file named **Dockerfile.txt** in the root of your repository. The file must contain at least the following lines:
+1. Ensure that there is a file named *Dockerfile* in the root of your repository. The file must contain at least the following lines:
 
     ```bash
     FROM mcr.microsoft.com/quantum/iqsharp-base:0.12.20082513
@@ -36,8 +36,9 @@ If you already have notebooks in a GitHub repository, you can configure Binder t
     RUN chown -R ${USER} ${HOME}
     
     USER ${USER}
-    
     ```
+> [!NOTE]
+> You can verify the most current version of IQ# in the [Release Notes](xref:microsoft.quantum.relnotes).
 
     For more information about creating a Dockerfile, see the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
 

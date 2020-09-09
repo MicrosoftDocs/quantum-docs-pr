@@ -18,8 +18,7 @@ examples: |-
       ApplyToEach(H, register);
   }
   ```
-syntax: "operation ApplyToEachC (singleElementOperation : ('T => Unit is Ctl), register\
-  \ : 'T[]) : Unit"
+syntax: "operation ApplyToEachC (singleElementOperation : ('T => Unit is Ctl), register : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ('T => Unit is Ctl), register : 'T[])"
   types:
@@ -53,3 +52,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applytoeach
+...

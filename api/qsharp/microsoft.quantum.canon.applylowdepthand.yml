@@ -17,8 +17,7 @@ summary: |-
   requires one helper qubit, and may therefore be preferable to a CCNOT
   operation, if `target` is known to be 0.  The adjoint of this operation
   is measurement based and requires no T gates, and no helper qubit.
-syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target :
-  Qubit) : Unit'
+syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: |-
   - Cody Jones: "Novel constructions for the fault-tolerant Toffoli gate",
     Phys. Rev. A 87, 022328, 2013
@@ -51,3 +50,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

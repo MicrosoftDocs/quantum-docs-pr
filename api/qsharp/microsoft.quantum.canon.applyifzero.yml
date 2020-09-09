@@ -12,8 +12,7 @@ summary: |-
 
   Given an operation `op` and a result value `result`, applies `op` to the `target`
   if `result` is `Zero`. If `One`, nothing happens to the `target`.
-syntax: "operation ApplyIfZero (result : Result, (op : ('T => Unit), target : 'T))\
-  \ : Unit"
+syntax: "operation ApplyIfZero (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit), target : 'T))"
   types:
@@ -48,3 +47,4 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroc
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
+...

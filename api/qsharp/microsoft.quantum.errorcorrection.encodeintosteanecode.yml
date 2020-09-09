@@ -10,8 +10,7 @@ namespace: microsoft.quantum.errorcorrection
 summary: |-
   An encoding operation that maps an unencoded quantum register to an encoded quantum register
   under the ⟦7, 1, 3⟧ Steane quantum code.
-syntax: 'operation EncodeIntoSteaneCode (physRegister : Qubit[], auxQubits : Qubit[])
-  : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
+syntax: 'operation EncodeIntoSteaneCode (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
 input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
   types:
@@ -30,9 +29,9 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
   types:
-  - summary: A quantum register holding the state after the Steane encoder has been
-      applied
+  - summary: A quantum register holding the state after the Steane encoder has been applied
     uid: microsoft.quantum.errorcorrection.logicalregister
 seeAlso:
 - logicalregister
 - steanecodedecoder
+...

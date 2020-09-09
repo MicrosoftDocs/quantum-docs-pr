@@ -9,3 +9,4 @@ type: newtype
 namespace: microsoft.quantum.optimization
 summary: Represents the result of optimizing a univariate function.
 syntax: newtype UnivariateOptimizationResult = (Double, Double);
+...

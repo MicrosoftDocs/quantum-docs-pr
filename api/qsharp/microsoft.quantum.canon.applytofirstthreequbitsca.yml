@@ -16,8 +16,7 @@ remarks: |-
   ```qsharp
   op(register[0], register[1], register[2]);
   ```
-syntax: 'operation ApplyToFirstThreeQubitsCA (op : ((Qubit, Qubit, Qubit) => Unit
-  is Adj + Ctl), register : Qubit[]) : Unit'
+syntax: 'operation ApplyToFirstThreeQubitsCA (op : ((Qubit, Qubit, Qubit) => Unit is Adj + Ctl), register : Qubit[]) : Unit'
 input:
   content: '(op : ((Qubit, Qubit, Qubit) => Unit is Adj + Ctl), register : Qubit[])'
   types:
@@ -54,3 +53,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applytofirstthreequbits
+...

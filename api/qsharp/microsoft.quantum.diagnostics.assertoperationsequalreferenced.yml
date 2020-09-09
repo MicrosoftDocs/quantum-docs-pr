@@ -23,11 +23,9 @@ remarks: |-
   Formally, one can specify a transpose operation, which relaxes this requirement,
   but the transpose operation is not in general physically realizable for arbitrary
   quantum operations and thus is not included here as an option.
-syntax: 'operation AssertOperationsEqualReferenced (nQubits : Int, actual : (Qubit[]
-  => Unit), expected : (Qubit[] => Unit is Adj)) : Unit'
+syntax: 'operation AssertOperationsEqualReferenced (nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj)) : Unit'
 input:
-  content: '(nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit
-    is Adj))'
+  content: '(nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
     summary: Number of qubits to pass to each operation.
@@ -64,3 +62,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

@@ -8,10 +8,8 @@ name: ModPowL
 type: function
 namespace: microsoft.quantum.math
 summary: Performs modular division on a number raised to the power of another number.
-remarks: See [System.Numerics.BigInteger.ModPow](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.modpow)
-  for more details.
-syntax: 'function ModPowL (value : BigInt, exponent : BigInt, modulus : BigInt) :
-  BigInt'
+remarks: See [System.Numerics.BigInteger.ModPow](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.modpow) for more details.
+syntax: 'function ModPowL (value : BigInt, exponent : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(value : BigInt, exponent : BigInt, modulus : BigInt)'
   types:
@@ -29,3 +27,4 @@ output:
   types:
   - isPrimitive: true
     uid: BigInt
+...

@@ -36,3 +36,4 @@ output:
   - summary: '`true` if and only if `a` and `b` are both `true`.'
     isPrimitive: true
     uid: Bool
+...

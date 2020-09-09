@@ -37,8 +37,9 @@ If you already have notebooks in a GitHub repository, you can configure Binder t
     
     USER ${USER}
     ```
-> [!NOTE]
-> You can verify the most current version of IQ# in the [Release Notes](xref:microsoft.quantum.relnotes).
+
+    > [!NOTE]
+    > You can verify the most current version of IQ# in the [Release Notes](xref:microsoft.quantum.relnotes).
 
     For more information about creating a Dockerfile, see the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
 

@@ -20,8 +20,7 @@ examples: |-
   );
   Fact(succeeded, "Index chosen by MaybeChooseElement was not valid.");
   ```
-syntax: "operation MaybeChooseElement (data : 'T[], indexDistribution : Microsoft.Quantum.Random.DiscreteDistribution)\
-  \ : (Bool, 'T)"
+syntax: "operation MaybeChooseElement (data : 'T[], indexDistribution : Microsoft.Quantum.Random.DiscreteDistribution) : (Bool, 'T)"
 input:
   content: "(data : 'T[], indexDistribution : Microsoft.Quantum.Random.DiscreteDistribution)"
   types:
@@ -41,3 +40,4 @@ output:
       uid: Bool
     - uid: "'T"
       isLocal: true
+...

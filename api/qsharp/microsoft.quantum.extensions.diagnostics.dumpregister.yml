@@ -7,8 +7,7 @@ uid: microsoft.quantum.extensions.diagnostics.dumpregister
 name: DumpRegister
 type: function
 namespace: microsoft.quantum.extensions.diagnostics
-summary: DumpRegister has been deprecated. Please use @"microsoft.quantum.diagnostics.dumpregister"
-  instead.
+summary: DumpRegister has been deprecated. Please use @"microsoft.quantum.diagnostics.dumpregister" instead.
 syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
 input:
   content: "(location : 'T, qubits : Qubit[])"
@@ -25,3 +24,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

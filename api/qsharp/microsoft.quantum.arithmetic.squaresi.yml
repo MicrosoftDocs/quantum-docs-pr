@@ -11,8 +11,7 @@ summary: |-
   Square signed integer `xs` and store
   the result in `result`, which must be zero initially.
 remarks: The implementation relies on IntegerSquare.
-syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian,
-  result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
+syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
   types:
@@ -32,3 +31,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

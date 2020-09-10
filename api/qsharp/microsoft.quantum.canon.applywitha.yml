@@ -18,11 +18,9 @@ remarks: |-
   The outer operation is always assumed to be adjointable, but does not
   need to be controllable in order for the combined operation to be
   controllable.
-syntax: "operation ApplyWithA (outerOperation : ('T => Unit is Adj), innerOperation\
-  \ : ('T => Unit is Adj), target : 'T) : Unit"
+syntax: "operation ApplyWithA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T) : Unit"
 input:
-  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is\
-    \ Adj), target : 'T)"
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T)"
   types:
   - name: outerOperation
     summary: |-
@@ -71,3 +69,4 @@ seeAlso:
 - applywith
 - applywithc
 - applywithca
+...

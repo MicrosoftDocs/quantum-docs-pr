@@ -21,23 +21,19 @@ summary: |-
   U\ket{x}\ket{y}\ket{z} = \ket{x}\ket{y}\ket{z\oplus (x>y)}.
   \end{align}
   $$
-syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian,
-  y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
+syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
 references: |-
   - A new quantum ripple-carry addition circuit
     Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton
     https://arxiv.org/abs/quant-ph/0410184
 input:
-  content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian,
-    output : Qubit)'
+  content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
   types:
   - name: x
-    summary: First number to be compared stored in `LittleEndian` format in a qubit
-      register.
+    summary: First number to be compared stored in `LittleEndian` format in a qubit register.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: y
-    summary: Second number to be compared stored in `LittleEndian` format in a qubit
-      register.
+    summary: Second number to be compared stored in `LittleEndian` format in a qubit register.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: output
     summary: Qubit that stores the result of the comparison $x>y$.
@@ -51,3 +47,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

@@ -7,11 +7,9 @@ uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelseintrins
 name: ApplyIfElseIntrinsicA
 type: operation
 namespace: microsoft.quantum.simulation.quantumprocessor.extensions
-syntax: 'operation ApplyIfElseIntrinsicA (measurementResult : Result, onResultZeroOp
-  : (Unit => Unit is Adj), onResultOneOp : (Unit => Unit is Adj)) : Unit'
+syntax: 'operation ApplyIfElseIntrinsicA (measurementResult : Result, onResultZeroOp : (Unit => Unit is Adj), onResultOneOp : (Unit => Unit is Adj)) : Unit'
 input:
-  content: '(measurementResult : Result, onResultZeroOp : (Unit => Unit is Adj), onResultOneOp
-    : (Unit => Unit is Adj))'
+  content: '(measurementResult : Result, onResultZeroOp : (Unit => Unit is Adj), onResultOneOp : (Unit => Unit is Adj))'
   types:
   - name: measurementResult
     isPrimitive: true
@@ -47,3 +45,4 @@ output:
     uid: Unit
 functors:
 - Adjoint
+...

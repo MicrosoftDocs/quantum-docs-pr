@@ -62,3 +62,4 @@ functions:
 
     ZBits has been deprecated. Please use @"microsoft.quantum.bitwise.zbits" instead.
     Please use @"microsoft.quantum.bitwise.zbits".
+...

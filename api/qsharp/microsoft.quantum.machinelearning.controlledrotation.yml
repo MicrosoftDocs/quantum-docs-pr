@@ -27,3 +27,4 @@ remarks: |-
   )
   ```
 syntax: newtype ControlledRotation = ((Int, Int[]), Pauli, Int);
+...

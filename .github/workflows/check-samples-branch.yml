@@ -1,7 +1,7 @@
 on:
   pull_request:
     branches:
-    - master
+    - main
 
 jobs:
   check-samples-branch:
@@ -15,7 +15,7 @@ jobs:
           $samplesRepo = $config.dependent_repositories | Where-Object {
             $_.url -eq "https://github.com/microsoft/quantum"
           }
-          if ($samplesRepo.branch -ne "master") {
+          if ($samplesRepo.branch -ne "main") {
             Write-Host "::error file=$configPath::Samples repository branch is not set to master for a PR targeting master."
             exit 1;
           }

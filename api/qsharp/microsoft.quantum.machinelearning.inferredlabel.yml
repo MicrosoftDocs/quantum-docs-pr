@@ -32,3 +32,4 @@ output:
   - summary: The label inferred from the given classification probability.
     isPrimitive: true
     uid: Int
+...

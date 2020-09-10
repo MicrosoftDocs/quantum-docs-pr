@@ -14,3 +14,4 @@ summary: |-
   is duration of time-evolution, and the second parameter is the qubit
   register acted upon by the unitary.
 syntax: newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
+...

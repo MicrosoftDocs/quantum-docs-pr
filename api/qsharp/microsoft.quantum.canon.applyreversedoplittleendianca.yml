@@ -7,13 +7,10 @@ uid: microsoft.quantum.canon.applyreversedoplittleendianca
 name: ApplyReversedOpLittleEndianCA
 type: operation
 namespace: microsoft.quantum.canon
-summary: ApplyReversedOpLittleEndianCA has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopleca"
-  instead.
-syntax: 'operation ApplyReversedOpLittleEndianCA (op : (Microsoft.Quantum.Arithmetic.LittleEndian
-  => Unit is Adj + Ctl), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+summary: ApplyReversedOpLittleEndianCA has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopleca" instead.
+syntax: 'operation ApplyReversedOpLittleEndianCA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 input:
-  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl),
-    register : Microsoft.Quantum.Arithmetic.BigEndian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl), register : Microsoft.Quantum.Arithmetic.BigEndian)'
   types:
   - name: op
     isOperation: true
@@ -37,3 +34,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

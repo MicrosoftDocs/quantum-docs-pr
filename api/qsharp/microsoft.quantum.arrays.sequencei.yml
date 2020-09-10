@@ -38,3 +38,4 @@ output:
     isArray: true
     isPrimitive: true
     uid: Int
+...

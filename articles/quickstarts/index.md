@@ -1,6 +1,6 @@
 ---
-title: Install the Microsoft Quantum Development Kit (QDK)
-description: How to install the Microsoft Quantum Development Kit for different environments.
+title: Setting up the Microsoft Quantum Development Kit (QDK)
+description: Learn how to set up the Microsoft Quantum Development Kit for different environments.
 author: bradben
 ms.author: v-benbra
 ms.date: 5/8/2020
@@ -10,9 +10,9 @@ uid: microsoft.quantum.install
 no-loc: ['Q#', '$$v']
 ---
 
-# Install the Microsoft Quantum Development Kit (QDK)
+# Setting up the Microsoft Quantum Development Kit (QDK)
 
-Learn how to install the Microsoft Quantum Development Kit (QDK), so that you can get started with quantum programming. The QDK consists of:
+Learn how to set up the Microsoft Quantum Development Kit (QDK) for your environment, so that you can get started with quantum programming. The QDK consists of:
 
 - The Q# programming language
 - A set of libraries that abstract complex functionality in Q#
@@ -21,7 +21,7 @@ Learn how to install the Microsoft Quantum Development Kit (QDK), so that you ca
 
 Q# programs can run as standalone applications using Visual Studio Code or Visual Studio, through Jupyter Notebooks with the IQ# Jupyter kernel, or paired with a host program written in Python or a .NET language (C#, F#). You can also run Q# programs online using [Codespaces](https://online.visualstudio.com/), [MyBinder.org](https://mybinder.org/), or [Docker](#use-the-qdk-with-docker). 
 
-## Installation options
+## Options for setting up the QDK
 
 You can use the QDK in three ways:
 

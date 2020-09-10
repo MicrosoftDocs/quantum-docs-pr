@@ -23,7 +23,7 @@ As in classical deep learning, there is no general rule for choosing a specific 
 
 To build a classifier we are going to concatenate parametrized controlled rotations in our circuit model. To do it we can use the type [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) defined in the Quantum Machine Learning library. This type accepts four arguments that determine: the index of the target qubit, the array of indices of the control qubits, the axis of rotation, and index of the associated parameter in the array of parameters defining the model.
 
-Let's see an example of a classifier. In the [half-moons sample](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons), we can find the following classifier defined in the file `Training.qs`.
+Let's see an example of a classifier. In the [half-moons sample](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons), we can find the following classifier defined in the file `Training.qs`.
 
 ```qsharp
     function ClassifierStructure() : ControlledRotation[] {

@@ -2,7 +2,7 @@
 title: Linear algebra for quantum computing
 description: Learn what basic linear algebra concepts are needed to understand quantum computing
 author: bradben
-ms.author:  bradben
+ms.author:  v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra

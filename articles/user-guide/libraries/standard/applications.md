@@ -4,7 +4,7 @@ title: Applications in the Q# standard libraries
 description: Learn about two fundamental applications in quantum computing - Hamiltonian simulation and Shor's search algorithm. 
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
-ms.author: martinro@microsoft.com 
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc: ['Q#', '$$v']

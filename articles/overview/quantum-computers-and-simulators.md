@@ -2,7 +2,7 @@
 title: Quantum computers and quantum simulators
 description: Learn about quantum hardware, quantum simulators, and how quantum operations work.
 author: bradben
-ms.author:  bradben
+ms.author:  v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators

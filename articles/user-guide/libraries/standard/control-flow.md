@@ -4,7 +4,7 @@ title: Flow controls in the Q# standard libararies
 description: Learn about the flow control operations and functions in the Microsoft Q# standard library. 
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
-ms.author: martinro@microsoft.com 
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc: ['Q#', '$$v']

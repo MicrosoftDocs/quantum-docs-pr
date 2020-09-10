@@ -2,7 +2,7 @@
 title: Expressions in Q#
 description: Understand how to specify, reference and combine constants, variables, operators, operations and functions as expressions in Q#.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions

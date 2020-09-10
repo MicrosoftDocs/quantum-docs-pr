@@ -3,7 +3,7 @@
 title: Quantum trace simulator - Quantum Development Kit
 description: Learn how to use the Microsoft quantum computer trace simulator to debug classical code and to estimate resource requirements of a Q# program. 
 author: vadym-kl 
-ms.author: vadym@microsoft.com 
+ms.author: vadym 
 ms.date: 06/25/2020 
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro

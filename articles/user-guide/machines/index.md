@@ -2,7 +2,7 @@
 title: Quantum simulators and Q# programs
 description: Describes the quantum simulators available as target machines for Q# programs.
 author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com 
+ms.author: v-benbra 
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines

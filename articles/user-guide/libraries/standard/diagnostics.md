@@ -3,7 +3,7 @@ title: Diagnostics in the Q# standard libraries
 description: Learn about the diagnostic functions and operations in the Q# standard libraries used to catch mistakes or errors in quantum programs. 
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com 
+ms.author: chgranad 
 ms.topic: article
 no-loc: ['Q#', '$$v']
 ---

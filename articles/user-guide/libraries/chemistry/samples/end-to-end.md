@@ -2,7 +2,7 @@
 title: Sample NWChem quantum program
 description: Using an NWChem input deck, walk through an example of getting gate counts for quantum chemistry simulation.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc: ['Q#', '$$v']

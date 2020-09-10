@@ -2,7 +2,7 @@
 title: Primitive operation counter - Quantum Development Kit
 description: Learn about the Microsoft QDK primitive operation counter, which uses the quantum trace simulator to track primitive executions used by operations in a Q# program. 
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter

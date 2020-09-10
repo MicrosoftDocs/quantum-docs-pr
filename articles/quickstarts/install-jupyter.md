@@ -1,7 +1,7 @@
 ---
 title: Develop with Q# Jupyter Notebooks
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to

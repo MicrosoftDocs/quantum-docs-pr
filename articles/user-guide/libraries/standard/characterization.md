@@ -1,9 +1,9 @@
 ---
 title: Quantum characterization and statistics 
 description: Learn how measurement statistics from phase estimations are used to estimate result values in quantum programming. 
-author: QuantumWriter
+author: bradben
 uid: microsoft.quantum.libraries.characterization
-ms.author: martinro@microsoft.com 
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc: ['Q#', '$$v']

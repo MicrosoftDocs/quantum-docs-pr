@@ -152,7 +152,7 @@ The arguments to an operation are specified as a tuple, within parentheses.
 The return type of the operation is specified after a colon. In this case, the
 `SetQubitState` operation has no return, so it is marked as returning `Unit`. This is the
 Q# equivalent of `unit` in F#, which is roughly analogous to `void` in C#, and
-an empty tuple (`Tuple[()]`) in Python.
+an empty tuple (`tuple[()]`) in Python.
 
 You have used two quantum operations in your first Q# operation:
 

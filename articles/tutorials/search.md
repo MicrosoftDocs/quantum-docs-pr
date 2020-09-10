@@ -105,7 +105,7 @@ Reflecting about marked state...
 If you enjoyed this tutorial, check out some of the resources below to learn more about how you can use Q# to write your own quantum applications:
 
 - [Back to the Getting Started with QDK guide](xref:microsoft.quantum.welcome)
-- Try a more general Grover's search algorithm [sample](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)
+- Try a more general Grover's search algorithm [sample](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/database-search)
 - [Learn more about Grover's search with the Quantum Katas](xref:microsoft.quantum.overview.katas)
 - Read more about [Amplitude amplification][amplitude-amplification], the quantum computing technique behind Grover's search algorithm
 - [Quantum computing concepts](xref:microsoft.quantum.concepts.intro)

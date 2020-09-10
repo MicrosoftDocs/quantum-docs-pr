@@ -164,7 +164,7 @@ While both types of measurements are equally valuable in quantum computing, the 
 It reveals that in quantum computing, often the information you wish to learn is not stored in any single qubit but rather stored non-locally in all the qubits at once, and therefore only by looking at it through a joint measurement (e.g. $Z\otimes Z$) does this information become manifest.
 
 For example, in error correction, we often wish to learn what error occurred while learning nothing about the state that we're trying to protect.
-The [bit-flip code sample](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) shows an example of how you can do that using measurements like $Z \otimes Z \otimes \id$ and $\id \otimes Z \otimes Z$.
+The [bit-flip code sample](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) shows an example of how you can do that using measurements like $Z \otimes Z \otimes \id$ and $\id \otimes Z \otimes Z$.
 <!-- TODO: change this to a link to the samples browser as soon as the bit-flip code sample is on-boarded. -->
 
 Arbitrary Pauli operators such as $X\otimes Y \otimes Z \otimes \boldone$ can also be measured.

@@ -38,8 +38,7 @@ examples: |-
     ApplyPermutationUsingDecomposition([0, 2, 1, 3], LittleEndian(qubits));
   }
   ```
-syntax: 'operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)
-  : Unit'
+syntax: 'operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: |-
   - [*Alexis De Vos*, *Yvan Van Rentergem*,
     Adv. in Math. of Comm. 2(2), 2008, pp. 183--200](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
@@ -67,3 +66,4 @@ functors:
 seeAlso:
 - microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
 - microsoft.quantum.synthesis.applypermutationusingtransformation
+...

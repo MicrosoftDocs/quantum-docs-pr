@@ -16,8 +16,7 @@ summary: |-
   \end{align}
   where $P_i$ is the $i$th element of `paulis`, and where
   $N = $`Length(paulis)`.
-syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits
-  : Qubit[]) : Unit'
+syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
   types:
@@ -53,3 +52,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

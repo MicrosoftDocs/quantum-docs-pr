@@ -21,3 +21,4 @@ summary: |-
   \end{align}
   $$.
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
+...

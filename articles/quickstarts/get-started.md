@@ -3,7 +3,7 @@ uid: microsoft.quantum.welcome
 title: Get started with the Quantum Development Kit (QDK)
 description: Learn how to start programming quantum projects in Q# with the Microsoft Quantum Development Kit. 
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/10/2020
 ms.topic: overview
 no-loc: ['Q#', '$$v']
@@ -15,8 +15,8 @@ Welcome to the Microsoft Quantum Development Kit!
 
 The Quantum Development Kit (QDK) contains all the tools you'll need to build your own quantum programs and experiments with Q#, a programming language designed specifically for quantum application development.
 
-To jump right in, start with the [QDK installation guide](xref:microsoft.quantum.install).
-You'll be guided through installing the Quantum Development Kit on Windows, Linux, or MacOS machines so that you can write your own quantum programs.
+To jump right in, start with the [QDK set up guide](xref:microsoft.quantum.install).
+You'll be guided through setting up the Quantum Development Kit on Windows, Linux, or MacOS machines so that you can write your own quantum programs.
 
 If you're new to quantum computing, review the [Overview](xref:microsoft.quantum.overview.introduction) section to learn what quantum computers can do and the fundamentals of quantum computing.
 
@@ -26,8 +26,7 @@ The Quantum Development Kit provides many ways to learn how to develop a quantum
 To get up and running with the power of quantum, you can try out our tutorials:
 
 * [Quantum random number generator](xref:microsoft.quantum.quickstarts.qrng) - Start with a "Q# Hello World" style application, providing a brief introduction to quantum concepts while letting you build and run a quantum application in minutes.
-* [Explore entanglement with Q#](xref:microsoft.quantum.write-program) - This tutorial guides you on writing a Q# program that demonstrates some of the foundational concepts of quantum programming.
-	If you are not ready to start coding, you can still follow along without installing the QDK and get an overview of the Q# programming language and the first concepts of quantum computing.
+* [Explore entanglement with Q#](xref:microsoft.quantum.write-program) - This tutorial guides you on writing a Q# program that demonstrates some of the foundational concepts of quantum programming. If you are not ready to start coding, you can still follow along without installing the QDK and get an overview of the Q# programming language and the first concepts of quantum computing.
 * [Grover’s search algorithm](xref:microsoft.quantum.quickstarts.search) - Explore this example of a Q# program to get an idea of the power of Q# for expressing the quantum algorithm in a way that abstracts the low-level quantum operations.
 	This tutorial guides you through developing the program as a Q# application, using Visual Studio or Visual Studio Code.
 

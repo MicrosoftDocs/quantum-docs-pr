@@ -32,8 +32,7 @@ examples: |-
       Message($"Arrays of the same length with different elements are {differentElements ? "equal" | "not equal"}");
   }
   ```
-syntax: "function EqualA (equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[])\
-  \ : Bool"
+syntax: "function EqualA (equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[]) : Bool"
 input:
   content: "(equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[])"
   types:
@@ -71,3 +70,4 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of each array's elements.
+...

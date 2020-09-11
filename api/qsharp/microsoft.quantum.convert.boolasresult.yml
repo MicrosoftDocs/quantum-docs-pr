@@ -24,3 +24,4 @@ output:
   - summary: A `Result` representing the `input`.
     isPrimitive: true
     uid: Result
+...

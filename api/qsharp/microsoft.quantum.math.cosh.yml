@@ -8,8 +8,7 @@ name: Cosh
 type: function
 namespace: microsoft.quantum.math
 summary: Returns the hyperbolic cosine of the specified angle.
-remarks: See [System.Math.Cosh](https://docs.microsoft.com/dotnet/api/system.math.cosh)
-  for more details.
+remarks: See [System.Math.Cosh](https://docs.microsoft.com/dotnet/api/system.math.cosh) for more details.
 syntax: 'function Cosh (d : Double) : Double'
 input:
   content: '(d : Double)'
@@ -22,3 +21,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

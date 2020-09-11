@@ -26,3 +26,4 @@ output:
   - summary: The difference $a - b$.
     isPrimitive: true
     uid: Int
+...

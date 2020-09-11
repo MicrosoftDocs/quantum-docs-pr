@@ -13,5 +13,5 @@ summary: |-
   A time-dependent simulation technique converts an
   <xref:microsoft.quantum.simulation.evolutionschedule>
   to unitary time-evolution for some time-interval.
-syntax: newtype TimeDependentSimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionSchedule,
-  Qubit[]) => Unit is Adj + Ctl);
+syntax: newtype TimeDependentSimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionSchedule, Qubit[]) => Unit is Adj + Ctl);
+...

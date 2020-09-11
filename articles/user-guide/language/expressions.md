@@ -79,10 +79,7 @@ That is, shifting one step to the left or right is the same as
 multiplying or dividing by 2, respectively.
 
 Integer division and integer modulus follow the same behavior for
-negative numbers as C#.
-That is, `a % b` always has the same sign as `a`,
-and `b * (a / b) + a % b` always equals `a`.
-For example:
+negative numbers as C#. That is, `a % b` always has the same sign as `a`, and `b * (a / b) + a % b` always equals `a`. For example:
 
 |`A` | `B` | `A / B` | `A % B`|
 |:---------:|:----------:|:---------:|:---------:|

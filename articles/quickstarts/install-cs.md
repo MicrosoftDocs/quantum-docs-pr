@@ -9,6 +9,7 @@ ms.custom: how-to
 uid: microsoft.quantum.install.cs
 no-loc: ['Q#', '$$v']
 ---
+
 # Develop with Q# and .NET
 
 Q# is built to play well with .NET languages such as C# and F#.

@@ -10,11 +10,9 @@ namespace: microsoft.quantum.arithmetic
 summary: |-
   Applies an operation that takes big-endian input to a register encoding
   an unsigned integer using little-endian format.
-syntax: 'operation ApplyReversedOpBEA (op : (Microsoft.Quantum.Arithmetic.BigEndian
-  => Unit is Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ApplyReversedOpBEA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
-  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj), register
-    : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: op
     summary: Operation that acts on a big-endian register.
@@ -42,3 +40,4 @@ seeAlso:
 - applyreversedopbe
 - applyreversedopbec
 - applyreversedopbeca
+...

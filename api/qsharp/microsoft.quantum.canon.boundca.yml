@@ -26,8 +26,7 @@ examples: |-
   ```qsharp
   U(x); V(x);
   ```
-syntax: "function BoundCA (operations : ('T => Unit is Adj + Ctl)[]) : ('T => Unit\
-  \ is Adj + Ctl)"
+syntax: "function BoundCA (operations : ('T => Unit is Adj + Ctl)[]) : ('T => Unit is Adj + Ctl)"
 input:
   content: "(operations : ('T => Unit is Adj + Ctl)[])"
   types:
@@ -69,3 +68,4 @@ typeParameters:
   summary: The target on which each of the operations in the array act.
 seeAlso:
 - microsoft.quantum.canon.bound
+...

@@ -15,8 +15,7 @@ remarks: |-
   $n-1$ qubits compared to the straight-forward solution which first
   copies out xs before applying a regular multiplier and then undoing
   the copy operation.
-syntax: 'operation SquareI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result
-  : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation SquareI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -34,3 +33,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

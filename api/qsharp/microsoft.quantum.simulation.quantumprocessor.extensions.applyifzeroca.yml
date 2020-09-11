@@ -7,11 +7,9 @@ uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifzeroca
 name: ApplyIfZeroCA
 type: operation
 namespace: microsoft.quantum.simulation.quantumprocessor.extensions
-syntax: "operation ApplyIfZeroCA (measurementResult : Result, (onResultZeroOp : ('T\
-  \ => Unit is Ctl + Adj), zeroArg : 'T)) : Unit"
+syntax: "operation ApplyIfZeroCA (measurementResult : Result, (onResultZeroOp : ('T => Unit is Ctl + Adj), zeroArg : 'T)) : Unit"
 input:
-  content: "(measurementResult : Result, (onResultZeroOp : ('T => Unit is Ctl + Adj),\
-    \ zeroArg : 'T))"
+  content: "(measurementResult : Result, (onResultZeroOp : ('T => Unit is Ctl + Adj), zeroArg : 'T))"
   types:
   - name: measurementResult
     isPrimitive: true
@@ -40,3 +38,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

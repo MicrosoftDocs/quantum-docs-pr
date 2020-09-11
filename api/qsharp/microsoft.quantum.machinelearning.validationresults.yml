@@ -11,3 +11,4 @@ summary: |-
   The results from having validated a classifier against a set of
   samples.
 syntax: newtype ValidationResults = (Int, Int);
+...

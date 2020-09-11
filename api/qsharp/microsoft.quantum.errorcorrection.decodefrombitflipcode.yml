@@ -8,8 +8,7 @@ name: DecodeFromBitFlipCode
 type: operation
 namespace: microsoft.quantum.errorcorrection
 summary: Decodes from the [3, 1, 3] / ⟦3, 1, 1⟧ bit-flip code.
-syntax: 'operation DecodeFromBitFlipCode (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)
-  : (Qubit[], Qubit[])'
+syntax: 'operation DecodeFromBitFlipCode (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : (Qubit[], Qubit[])'
 input:
   content: '(logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
@@ -32,3 +31,4 @@ output:
 seeAlso:
 - logicalregister
 - encodeintobitflipcode
+...

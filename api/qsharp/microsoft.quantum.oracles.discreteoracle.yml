@@ -13,3 +13,4 @@ summary: |-
   This is an oracle that implements $U^m$ for a fixed operation $U$
   and a non-negative integer $m$.
 syntax: newtype DiscreteOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
+...

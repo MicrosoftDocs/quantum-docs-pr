@@ -17,3 +17,4 @@ remarks: |-
   This oracle defined by $O\ket{0}=\ket{\psi}$ acts on the on computational basis state $\ket{0}$ to create the state $\ket{\psi}$.
   The first parameter is the qubit register of $\ket{\psi}$.
 syntax: newtype DeterministicStateOracle = (Qubit[] => Unit is Adj + Ctl);
+...

@@ -44,3 +44,4 @@ output:
 typeParameters:
 - uid: "'TElement"
   summary: The type of elements of the array.
+...

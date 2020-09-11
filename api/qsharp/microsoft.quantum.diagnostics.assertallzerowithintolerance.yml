@@ -8,8 +8,7 @@ name: AssertAllZeroWithinTolerance
 type: operation
 namespace: microsoft.quantum.diagnostics
 summary: Assert that given qubits are all in $\ket{0}$ state up to a given tolerance.
-syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double)
-  : Unit'
+syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
 input:
   content: '(qubits : Qubit[], tolerance : Double)'
   types:
@@ -32,3 +31,4 @@ functors:
 - Controlled
 seeAlso:
 - assertqubitwithintolerance
+...

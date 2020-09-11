@@ -47,7 +47,7 @@ When you compile and run the program, it creates an instance of the quantum simu
 
 Isolating the Q# code in the simulator ensures that the algorithms follow the laws of quantum physics and can run correctly on quantum computers.
 
-![qsharp-code-flow](~/media/qsharp-code-flow.png)
+![Qsharp code flow(~/media/qsharp-code-flow.png)
 
 ## How do I use the QDK?
 

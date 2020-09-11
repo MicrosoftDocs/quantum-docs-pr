@@ -1,5 +1,6 @@
 ---
 title: Develop with Q# applications
+description: Learn how to install Q# to develop quantum programs at the command prompt
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020

@@ -1,5 +1,6 @@
 ---
 title: Develop with Q# and .NET
+description: Learn how to develop quantum programs with .NET languages
 author: bradben
 ms.author: v-benbra
 ms.date: 5/30/2020

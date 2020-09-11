@@ -1,6 +1,6 @@
 ---
 title: Variables in Q#
-description: fill description
+description: Learn how to work with different variables in Q#
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020

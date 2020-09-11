@@ -1,5 +1,6 @@
 ---
 title: Develop with Q# and Python
+description: Learn how to install Q# to develop quantum programs with Python
 author: bradben
 ms.author: v-benbra
 ms.date: 5/30/2020

@@ -1,6 +1,6 @@
 ﻿---
 title: Working with qubits
-description: fill description
+description: Learn about working with qubits in Q#
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020

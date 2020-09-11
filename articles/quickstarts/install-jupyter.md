@@ -1,5 +1,6 @@
 ---
 title: Develop with Q# Jupyter Notebooks
+description: Learn how to install Q# to develop quantum programs with Jupyter Notebooks
 author: bradben
 ms.author: v-benbra
 ms.date: 5/30/2020

@@ -84,12 +84,12 @@ That is, `a % b` always has the same sign as `a`,
 and `b * (a / b) + a % b` always equals `a`.
 For example:
 
- `A` | `B` | `A / B` | `A % B`
----------|----------|---------|---------
- 5 | 2 | 2 | 1
- 5 | -2 | -2 | 1
- -5 | 2 | -2 | -1
- -5 | -2 | 2 | -1
+|`A` | `B` | `A / B` | `A % B`|
+|:---------:|:----------:|:---------:|:---------:|
+| 5 | 2 | 2 | 1 |
+| 5 | -2 | -2 | 1 |
+| -5 | 2 | -2 | -1 |
+| -5 | -2 | 2 | -1 |
 
 Big integer division and modulus operations work the same way.
 

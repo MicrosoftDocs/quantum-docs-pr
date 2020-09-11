@@ -101,11 +101,9 @@ operations:
     operation acts identically to its naïve implementation, or that an operation
     which acts on a range of non-quantum inputs agrees with known cases.
 - uid: microsoft.quantum.diagnostics.assertphase
-  summary: Asserts that the phase of an equal superposition state has the expected
-    value.
+  summary: Asserts that the phase of an equal superposition state has the expected value.
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z
-    operator.
+  summary: Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: |-
     Asserts that a qubit in the expected state.
@@ -130,3 +128,4 @@ newtypes:
     that may be used when loading a type or callable for testing purposes.
 - uid: microsoft.quantum.diagnostics.test
   summary: Compiler-recognized attribute used to mark a unit test.
+...

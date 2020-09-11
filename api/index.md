@@ -1,5 +1,5 @@
 ---
-uid: microsoft.quantum.standardlibsintro
+uid: microsoft.quantum.apiref-intro
 title: Q# libraries for Microsoft Quantum
 description: Reference documentation for the Q# libraries for Microsoft Quantum
 author: bradben

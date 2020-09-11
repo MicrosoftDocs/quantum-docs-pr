@@ -164,7 +164,7 @@ We suggest:
 
 # [Examples](#tab/examples)
 
-|&nbsp;   | Name | Description |
+| &nbsp;   | Name | Description |
 |---|------|-------------|
 | ☑ | `X` | Well-understood shorthand for "apply an $X$ transformation" |
 | ☑ | `CNOT` | Well-understood shorthand for "controlled-NOT" |
@@ -221,7 +221,7 @@ We suggest:
 
 # [Examples](#tab/examples)
 
-|&nbsp;   | Name | Description |
+| &nbsp;   | Name | Description |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | The preposition "to" results in a verb phrase, indicating an operation and not a function. |
 | ☒ | <s>`AsDouble`</s> | The input type is not clear from the function name. |
@@ -316,7 +316,7 @@ We suggest:
 
 # [Examples](#tab/examples)
 
-|&nbsp;  | Snippet | Description |
+| &nbsp;  | Snippet | Description |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | The name `Apply` is a `CamelCase`-formatted verb phrase, suggesting that the named item is an operation. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Named items should begin with an initial uppercase letter. |
@@ -472,7 +472,7 @@ We suggest:
 
 # [Examples](#tab/examples)
 
-|&nbsp;| Snippet | Description |
+| &nbsp; | Snippet | Description |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Use spaces around binary operators. |
 | ☒ | <s>`target:Qubit`</s> | Use spaces around type annotation colons. |

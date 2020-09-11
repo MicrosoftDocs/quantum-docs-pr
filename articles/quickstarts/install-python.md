@@ -1,9 +1,9 @@
 ---
 title: Develop with Q# and Python
-description: Learn how to install Q# to develop quantum programs with Python
+description: Learn how to create a Q# application using Python.
 author: bradben
 ms.author: v-benbra
-ms.date: 5/30/2020
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
@@ -103,11 +103,11 @@ Now you are ready to verify your `qsharp` Python package installation by writing
     python host.py
     ```
 
-1. You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `0` or `1` printed on the screen. If you execute the program repeatedly, you should see each result approximately half the time.
+1. You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `0` or `1` printed on the screen. If you run the program repeatedly, you should see each result approximately half the time.
 
 > [!NOTE]
 > * The Python code is just a normal Python program. You can use any Python environment, including Python-based Jupyter Notebooks, to write the Python program and call Q# operations. The Python program can import Q# operations from any .qs files located in the same folder as the Python code itself.
 
 ## Next steps
 
-Now that you have installed the Quantum Development Kit in your preferred environment, you can follow this tutorial to write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng).
+Now that you have tested the Quantum Development Kit in your preferred environment, you can follow this tutorial to write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng).

@@ -1,9 +1,10 @@
 ---
 title: Develop with Q# and .NET
-description: Learn how to develop quantum programs with .NET languages
+=======
+description: Learn how to create a Q# application using .NET languages.
 author: bradben
 ms.author: v-benbra
-ms.date: 5/30/2020
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs

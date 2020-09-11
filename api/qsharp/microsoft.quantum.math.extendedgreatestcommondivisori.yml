@@ -21,17 +21,16 @@ input:
     isPrimitive: true
     uid: Int
   - name: b
-    summary: the second number of which extended greatest common divisor is being
-      computed
+    summary: the second number of which extended greatest common divisor is being computed
     isPrimitive: true
     uid: Int
 output:
   content: (Int, Int)
   types:
-  - summary: Tuple $(u,v)$ with the property $u \cdot a + v \cdot b = \operatorname{GCD}(a,
-      b)$.
+  - summary: Tuple $(u,v)$ with the property $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$.
     types:
     - isPrimitive: true
       uid: Int
     - isPrimitive: true
       uid: Int
+...

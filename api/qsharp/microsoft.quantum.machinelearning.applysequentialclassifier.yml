@@ -10,8 +10,7 @@ namespace: microsoft.quantum.machinelearning
 summary: |-
   Given the structure and parameterization of a sequential classifier,
   applies the classifier to a register of qubits.
-syntax: 'operation ApplySequentialClassifier (model : Microsoft.Quantum.MachineLearning.SequentialModel,
-  qubits : Qubit[]) : Unit'
+syntax: 'operation ApplySequentialClassifier (model : Microsoft.Quantum.MachineLearning.SequentialModel, qubits : Qubit[]) : Unit'
 input:
   content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, qubits : Qubit[])'
   types:
@@ -30,3 +29,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

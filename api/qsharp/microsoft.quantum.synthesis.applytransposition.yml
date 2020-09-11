@@ -23,8 +23,7 @@ examples: |-
     ApplyTransposition(0, 3, register);
   }
   ```
-syntax: 'operation ApplyTransposition (a : Int, b : Int, qubits : Microsoft.Quantum.Arithmetic.LittleEndian)
-  : Unit'
+syntax: 'operation ApplyTransposition (a : Int, b : Int, qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(a : Int, b : Int, qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -47,3 +46,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

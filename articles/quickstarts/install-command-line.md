@@ -1,9 +1,9 @@
 ---
 title: Develop with Q# applications
-description: Learn how to install Q# to develop quantum programs at the command prompt
-author: KittyYeungQ
-ms.author: kitty
-ms.date: 4/24/2020
+description: Learn how to create a Q# application that runs from the command prompt.
+author: bradben
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
@@ -12,7 +12,9 @@ no-loc: ['Q#', '$$v']
 
 # Develop with Q# applications
 
-Q# programs can be executed on their own, without a driver in a host language like C#, F#, or Python.
+Follow the instructions at the tab corresponding to your environment.
+
+Q# programs can run on their own, without a driver in a host language like C#, F#, or Python.
 
 ## Prerequisites
 
@@ -39,7 +41,7 @@ To configure Visual Studio Codespaces:
 3. You can now launch your new environment and start developing in the browser via the [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments). Alternatively, it is possible to use your local installation of VS Code and use Codespaces as a [remote environment](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
 
 
-To install the QDK for another environment, enter at the command prompt:
+To install the QDK for another environment, enter the following at the command prompt:
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
@@ -47,7 +49,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 
 ## Develop with Q#
 
-Follow the instructions at the tab corresponding to your environment.
+Follow the instructions on the tab corresponding to your environment.
 
 ### [VS Code](#tab/tabid-vscode)
 
@@ -57,14 +59,14 @@ To create a new project:
 2. Click **Standalone console application**.
 3. Navigate to the location to save the project and click **Create Project**.
 4. When the project is successfully created, click **Open new project...** in the lower right.
-        
+
 Inspect the project. You should see a source file named `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.
 
 To run the application:
+
 1. Click **Terminal** -> **New Terminal**.
 2. At the terminal prompt, enter `dotnet run`.
 3. You should see the following text in the output window `Hello quantum world!`
-
 
 > [!NOTE]
 > Workspaces with multiple root folders are not currently supported by the VS Code Q# extension. If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.
@@ -74,6 +76,7 @@ To run the application:
 Verify your Visual Studio installation by creating a Q# `Hello World` application.
 
 To create a new Q# application:
+
 1. Open Visual Studio and click **File** -> **New** -> **Project**.
 2. Type `Q#` in the search box, select **Q# Application** and click **Next**.
 3. Enter a name and location for your application and click **Create**.
@@ -82,6 +85,7 @@ To create a new Q# application:
 Inspect the project. You should see a source file named `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.
 
 To run the application:
+
 1. Select **Debug** -> **Start Without Debugging**.
 2. You should see the text `Hello quantum world!` printed to a console window.
 
@@ -99,11 +103,13 @@ Verify your installation by creating a Q# `Hello World` application.
     ```
 
 1. Create a new application:
+
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
 1. Navigate to the application directory:
+
     ```dotnetcli
     cd runSayHello
     ```
@@ -111,6 +117,7 @@ Verify your installation by creating a Q# `Hello World` application.
     This directory should now contain a file `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console. You can modfiy this template with a text editor and overwrite it with your own quantum applications. 
 
 1. Run the program:
+
     ```dotnetcli
     dotnet run
     ```

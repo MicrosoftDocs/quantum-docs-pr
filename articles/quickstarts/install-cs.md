@@ -1,6 +1,5 @@
 ---
 title: Develop with Q# and .NET
-=======
 description: Learn how to create a Q# application using .NET languages.
 author: bradben
 ms.author: v-benbra

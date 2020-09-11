@@ -4,7 +4,7 @@ title: Error correction in the Q# standard libraries
 description: Learn how to use error correcting codes in your Q# programs while protecting the state of the qubits.  
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
-ms.author: martinro@microsoft.com 
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc: ['Q#', '$$v']

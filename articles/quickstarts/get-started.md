@@ -60,7 +60,7 @@ The current documentation includes the following additional topics.
 	Topics include control flow, data structures, error correction, testing, and debugging. 
 * [Q# chemistry library](xref:microsoft.quantum.chemistry.concepts.intro) describes the operations and functions that support quantum chemistry simulation---a critical application of quantum computing. Topics include simulating Hamiltonian dynamics and quantum phase estimation, among others.
 * [Q# numerics library](xref:microsoft.quantum.numerics.intro) describes the operations and functions that support expressing complicated arithmetic functions in terms of the native operations of target machines.
-* [Q# library reference](xref:microsoft.quantum.standardlibsintro) contains reference information about library entities by namespace.
+* [Q# library reference](xref:microsoft.quantum.apiref-intro) contains reference information about library entities by namespace.
 
 ### General quantum computing
 

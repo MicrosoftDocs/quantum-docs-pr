@@ -2,7 +2,7 @@
 title: Operations and functions in Q#
 description: How to define and call operations and functions, as well the controlled and adjoint operation specializations.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions

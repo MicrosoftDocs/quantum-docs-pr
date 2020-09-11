@@ -2,7 +2,7 @@
 title: Understanding quantum computing
 description: What are quantum computers and how do they use the principles of quantum mechanics?
 author: bradben
-ms.author:  bradben
+ms.author:  v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.understanding

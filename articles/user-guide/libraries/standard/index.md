@@ -2,7 +2,7 @@
 title: Introduction to Microsoft Q# standard libraries
 description: Learn about the Microsoft Q# standard libraries that define the operations, functions and data types used in quantum programs. 
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
@@ -15,6 +15,6 @@ Q# is supported by a range of different useful operations, functions, and user-d
 The [`Microsoft.Quantum.Development.Kit` NuGet package](https://www.nuget.org/packages/microsoft.quantum.development.kit) installed during [installation and validation](xref:microsoft.quantum.install) provides the Q# compiler, and parts of the standard library that are implemented by the target machines.
 The [`Microsoft.Quantum.Standard` package](https://www.nuget.org/packages/microsoft.quantum.standard) provides the portion of the Q# standard libraries that are portable across target machines.
 
-The symbols defined by the Q# standard libraries are defined in much greater and more exhaustive detail in the [API documentation](xref:microsoft.quantum.standardlibsintro).
+The symbols defined by the Q# standard libraries are defined in much greater and more exhaustive detail in the [API documentation](xref:microsoft.quantum.apiref-intro).
 
 In the following sections, we will outline the most salient features of each part of the standard library and provide some context about how each feature might be used in practice.

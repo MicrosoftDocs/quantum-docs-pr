@@ -2,7 +2,7 @@
 title: Introduction to the Quantum Katas
 description: Learn about the katas (training exercises) provided with the Microsoft Quantum Development Kit (QDK)
 author: bradben
-ms.author: bradben 
+ms.author: v-benbra 
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas

@@ -2,7 +2,7 @@
 title: Run Grover's search algorithm in Q# - Quantum Development Kit
 description: Build a Q# project that demonstrates Grover's algorithm, one of the canonical quantum algorithms.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search

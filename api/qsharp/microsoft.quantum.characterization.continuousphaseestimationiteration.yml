@@ -10,11 +10,9 @@ namespace: microsoft.quantum.characterization
 summary: |-
   Performs a single iteration of an iterative (classically-controlled) phase
   estimation algorithm using arbitrary real powers of a unitary oracle.
-syntax: 'operation ContinuousPhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.ContinuousOracle,
-  time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit'
+syntax: 'operation ContinuousPhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit'
 input:
-  content: '(oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta
-    : Double, targetState : Qubit[], controlQubit : Qubit)'
+  content: '(oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
   types:
   - name: oracle
     summary: |-
@@ -49,3 +47,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

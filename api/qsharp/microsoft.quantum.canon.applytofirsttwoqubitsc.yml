@@ -16,8 +16,7 @@ remarks: |-
   ```qsharp
   op(register[0], register[1]);
   ```
-syntax: 'operation ApplyToFirstTwoQubitsC (op : ((Qubit, Qubit) => Unit is Ctl), register
-  : Qubit[]) : Unit'
+syntax: 'operation ApplyToFirstTwoQubitsC (op : ((Qubit, Qubit) => Unit is Ctl), register : Qubit[]) : Unit'
 input:
   content: '(op : ((Qubit, Qubit) => Unit is Ctl), register : Qubit[])'
   types:
@@ -50,3 +49,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applytofirsttwoqubits
+...

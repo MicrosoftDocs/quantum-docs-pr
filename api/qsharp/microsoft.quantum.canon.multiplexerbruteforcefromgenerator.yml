@@ -12,9 +12,7 @@ summary: |-
   unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
 
   $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
-syntax: 'function MultiplexerBruteForceFromGenerator (unitaryGenerator : (Int, (Int
-  -> (Qubit[] => Unit is Adj + Ctl)))) : ((Microsoft.Quantum.Arithmetic.LittleEndian,
-  Qubit[]) => Unit is Adj + Ctl)'
+syntax: 'function MultiplexerBruteForceFromGenerator (unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl)))) : ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl))))'
   types:
@@ -48,8 +46,7 @@ input:
           - Adjoint
           - Controlled
 output:
-  content: ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj +
-    Ctl)
+  content: ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)
   types:
   - summary: |-
       A multiply-controlled unitary operation $U$ that applies unitaries
@@ -70,3 +67,4 @@ output:
     - Controlled
 seeAlso:
 - microsoft.quantum.canon.multiplexerbruteforcefromgenerator
+...

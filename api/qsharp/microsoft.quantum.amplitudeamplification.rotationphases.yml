@@ -12,3 +12,4 @@ remarks: |-
   The first parameter is an array of phases for reflections, expressed as a product of single-qubit rotations.
   [ G.H. Low, I. L. Chuang, https://arxiv.org/abs/1707.05391].
 syntax: newtype RotationPhases = Double[];
+...

@@ -17,14 +17,9 @@ remarks: |-
   O\ket{\text{start}}\_{fa}\ket{\psi}\_s= \lambda\ket{1}\_f\ket{\text{anything}}\_a\ket{\text{target}}\_s U \ket{\psi}\_s + \sqrt{1-|\lambda|^2}\ket{0}\_f\cdots,
   \end{align}
   for some unitary $U$.
-syntax: 'function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases,
-  startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle
-  : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[])
-  => Unit is Adj + Ctl)'
+syntax: 'function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
-  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle
-    : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle,
-    idxFlagQubit : Int)'
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
   types:
   - name: phases
     summary: Phases of partial reflections
@@ -44,8 +39,7 @@ input:
 output:
   content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: An operation that implements oblivious amplitude amplification based
-      on partial reflections.
+  - summary: An operation that implements oblivious amplitude amplification based on partial reflections.
     isOperation: true
     input:
       types:
@@ -62,3 +56,4 @@ output:
     functors:
     - Adjoint
     - Controlled
+...

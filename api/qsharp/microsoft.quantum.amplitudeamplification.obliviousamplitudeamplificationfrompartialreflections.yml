@@ -7,17 +7,10 @@ uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfro
 name: ObliviousAmplitudeAmplificationFromPartialReflections
 type: function
 namespace: microsoft.quantum.amplitudeamplification
-summary: Returns a unitary that implements oblivious amplitude amplification by specifying
-  for partial reflections.
-syntax: 'function ObliviousAmplitudeAmplificationFromPartialReflections (phases :
-  Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection
-  : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle,
-  signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : ((Qubit[], Qubit[])
-  => Unit is Adj + Ctl)'
+summary: Returns a unitary that implements oblivious amplitude amplification by specifying for partial reflections.
+syntax: 'function ObliviousAmplitudeAmplificationFromPartialReflections (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
-  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection
-    : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle,
-    signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
   types:
   - name: phases
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
@@ -46,3 +39,4 @@ output:
     functors:
     - Adjoint
     - Controlled
+...

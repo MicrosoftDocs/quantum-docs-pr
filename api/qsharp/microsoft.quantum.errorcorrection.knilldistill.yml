@@ -47,3 +47,4 @@ output:
       the state of the register should be considered undefined.
     isPrimitive: true
     uid: Bool
+...

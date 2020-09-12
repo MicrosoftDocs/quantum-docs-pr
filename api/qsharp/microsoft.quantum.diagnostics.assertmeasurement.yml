@@ -13,8 +13,7 @@ summary: |-
 remarks: |-
   Note that the Adjoint and Controlled versions of this operation will not
   check the condition.
-syntax: 'operation AssertMeasurement (bases : Pauli[], qubits : Qubit[], result :
-  Result, msg : String) : Unit'
+syntax: 'operation AssertMeasurement (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
   types:
@@ -48,3 +47,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.diagnostics.assertmeasurementprobability
+...

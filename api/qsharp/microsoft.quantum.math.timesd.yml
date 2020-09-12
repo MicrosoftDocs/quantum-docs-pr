@@ -26,3 +26,4 @@ output:
   - summary: The product $a \times b$.
     isPrimitive: true
     uid: Double
+...

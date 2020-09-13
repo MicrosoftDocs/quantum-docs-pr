@@ -12,3 +12,4 @@ summary: |-
   qubit with index `0` encodes the highest bit of an unsigned integer.
 remarks: We abbreviate `BigEndian` as `BE` in the documentation.
 syntax: newtype BigEndian = Qubit[];
+...

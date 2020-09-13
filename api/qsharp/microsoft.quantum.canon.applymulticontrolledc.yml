@@ -15,15 +15,12 @@ remarks: |-
   This operation uses only clean ancilla qubits.
 
   For the explanation and circuit diagram see Figure 4.10, Section 4.3 in Nielsen & Chuang
-syntax: 'operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit),
-  ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])
-  : Unit'
+syntax: 'operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
 references: |-
   - [ *Michael A. Nielsen , Isaac L. Chuang*,
     Quantum Computation and Quantum Information ](http://doi.org/10.1017/CBO9780511976667)
 input:
-  content: '(singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop,
-    controls : Qubit[], targets : Qubit[])'
+  content: '(singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
   types:
   - name: singlyControlledOp
     summary: |-
@@ -66,3 +63,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applymulticontrolledca
+...

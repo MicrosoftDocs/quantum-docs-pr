@@ -31,8 +31,7 @@ examples: |-
   //
   op([2, 3, 4]);
   ```
-syntax: 'operation IterateThroughCartesianProduct (bounds : Int[], op : (Int[] =>
-  Unit)) : Unit'
+syntax: 'operation IterateThroughCartesianProduct (bounds : Int[], op : (Int[] => Unit)) : Unit'
 input:
   content: '(bounds : Int[], op : (Int[] => Unit))'
   types:
@@ -62,3 +61,4 @@ output:
     uid: Unit
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianpower
+...

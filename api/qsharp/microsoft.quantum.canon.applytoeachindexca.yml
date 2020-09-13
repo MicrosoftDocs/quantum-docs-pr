@@ -11,11 +11,9 @@ summary: |-
   Applies a single-qubit operation to each indexed element in a register.
   The modifier `CA` indicates that the single-qubit operation is adjointable
   and controllable.
-syntax: "operation ApplyToEachIndexCA (singleElementOperation : ((Int, 'T) => Unit\
-  \ is Adj + Ctl), register : 'T[]) : Unit"
+syntax: "operation ApplyToEachIndexCA (singleElementOperation : ((Int, 'T) => Unit is Adj + Ctl), register : 'T[]) : Unit"
 input:
-  content: "(singleElementOperation : ((Int, 'T) => Unit is Adj + Ctl), register :\
-    \ 'T[])"
+  content: "(singleElementOperation : ((Int, 'T) => Unit is Adj + Ctl), register : 'T[])"
   types:
   - name: singleElementOperation
     summary: Operation to apply to each qubit.
@@ -51,3 +49,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
+...

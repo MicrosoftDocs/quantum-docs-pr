@@ -9,3 +9,4 @@ type: newtype
 namespace: microsoft.quantum.machinelearning
 summary: A schedule for drawing batches from a set of samples.
 syntax: newtype SamplingSchedule = Range[];
+...

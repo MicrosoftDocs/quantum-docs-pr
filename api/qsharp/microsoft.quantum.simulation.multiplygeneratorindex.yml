@@ -14,8 +14,7 @@ examples: |-
   let ((idxPaulis, idxDoubles), idxQubits) = MultiplyGeneratorIndex(multiplier, gen);
   // idxDoubles[0] == multiplier * coeff;
   ```
-syntax: 'function MultiplyGeneratorIndex (multiplier : Double, generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)
-  : Microsoft.Quantum.Simulation.GeneratorIndex'
+syntax: 'function MultiplyGeneratorIndex (multiplier : Double, generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(multiplier : Double, generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
@@ -35,3 +34,4 @@ output:
     uid: microsoft.quantum.simulation.generatorindex
 seeAlso:
 - microsoft.quantum.canon.generatorindex
+...

@@ -9,3 +9,4 @@ type: newtype
 namespace: microsoft.quantum.core
 summary: Compiler-recognized attribute used to mark the entry point of an executable.
 syntax: newtype EntryPoint = Unit;
+...

@@ -13,11 +13,9 @@ summary: |-
 remarks: |-
   The current implementation requires the two fixed-point numbers
   to have the same point position and the same number of qubits.
-syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint,
-  fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
+syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
 input:
-  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint,
-    result : Qubit)'
+  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit)'
   types:
   - name: fp1
     summary: First fixed-point number to be compared.
@@ -37,3 +35,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

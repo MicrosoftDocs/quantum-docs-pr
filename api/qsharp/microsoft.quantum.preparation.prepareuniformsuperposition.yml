@@ -8,7 +8,7 @@ name: PrepareUniformSuperposition
 type: operation
 namespace: microsoft.quantum.preparation
 summary: |-
-  Creates a uniform superposition over states that encode 0 through `nIndices`.
+  Creates a uniform superposition over states that encode 0 through `nIndices - 1`.
 
   That is, this unitary $U$ creates a uniform superposition over all number states
   $0$ to $M-1$, given an input state $\ket{0\cdots 0}$. In other words,
@@ -17,6 +17,9 @@ summary: |-
   U\ket{0}=\frac{1}{\sqrt{M}}\sum_{j=0}^{M-1}\ket{j}.
   \end{align}
   $$.
+remarks: |-
+  The operation is adjointable, but requires that `indexRegister` is in a uniform
+  superposition over the first `nIndices` basis states in that case.
 examples: |-
   The following example prepares the state $\frac{1}{\sqrt{6}}\sum_{j=0}^{5}\ket{j}$
   on $3$ qubits.
@@ -25,10 +28,10 @@ examples: |-
   let nIndices = 6;
   using(indexRegister = Qubit[3]) {
       PrepareUniformSuperposition(nIndices, LittleEndian(indexRegister));
+      // ...
   }
   ```
-syntax: 'operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian)
-  : Unit'
+syntax: 'operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -50,3 +53,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

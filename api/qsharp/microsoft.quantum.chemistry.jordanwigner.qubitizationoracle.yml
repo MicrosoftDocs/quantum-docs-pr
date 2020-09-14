@@ -8,8 +8,7 @@ name: QubitizationOracle
 type: function
 namespace: microsoft.quantum.chemistry.jordanwigner
 summary: Returns Qubitization operation and the parameters necessary to run it.
-syntax: 'function QubitizationOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData)
-  : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
+syntax: 'function QubitizationOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData)'
   types:
@@ -42,3 +41,4 @@ output:
         functors:
         - Adjoint
         - Controlled
+...

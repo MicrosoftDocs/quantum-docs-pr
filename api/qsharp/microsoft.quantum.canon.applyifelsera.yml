@@ -14,11 +14,9 @@ summary: |-
   Given a result `result`, applies the operation `zeroOp` with `zeroInput` as
   its input when `result` is equal to `Zero`, and applies `oneOp(oneInput)`
   when `result == One`.
-syntax: "operation ApplyIfElseRA (result : Result, (zeroOp : ('T => Unit is Adj),\
-  \ zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit"
+syntax: "operation ApplyIfElseRA (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit"
 input:
-  content: "(result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp\
-    \ : ('U => Unit is Adj), oneInput : 'U))"
+  content: "(result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U))"
   types:
   - name: result
     summary: |-
@@ -78,3 +76,4 @@ seeAlso:
 - microsoft.quantum.canon.applyifelserc
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
+...

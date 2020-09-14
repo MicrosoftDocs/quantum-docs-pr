@@ -9,3 +9,4 @@ type: newtype
 namespace: microsoft.quantum.chemistry.jordanwigner
 summary: Term data in the optimized block-encoding algorithm.
 syntax: newtype OptimizedBETermIndex = (Double, Bool, Bool[], Bool[], Int[], Int[]);
+...

@@ -21,3 +21,4 @@ output:
       A generator system representing evolution under the Hamiltonian
       $H = 0$.
     uid: microsoft.quantum.simulation.generatorsystem
+...

@@ -8,8 +8,7 @@ name: Floor
 type: function
 namespace: microsoft.quantum.math
 summary: Returns the largest integer less than or equal to the specified number.
-remarks: See [System.Math.Floor](https://docs.microsoft.com/dotnet/api/system.math.floor)
-  for more details.
+remarks: See [System.Math.Floor](https://docs.microsoft.com/dotnet/api/system.math.floor) for more details.
 syntax: 'function Floor (value : Double) : Int'
 input:
   content: '(value : Double)'
@@ -22,3 +21,4 @@ output:
   types:
   - isPrimitive: true
     uid: Int
+...

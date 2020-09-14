@@ -9,3 +9,4 @@ type: newtype
 namespace: microsoft.quantum.diagnostics
 summary: Compiler-recognized attribute used to mark a unit test.
 syntax: newtype Test = String;
+...

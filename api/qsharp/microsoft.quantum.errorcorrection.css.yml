@@ -11,5 +11,5 @@ summary: |-
   Represents a Calderbank–Shor–Steane (CSS) code as defined by
   its encoder, decoder, and its syndrome measurement procedures
   for `X` and `Z` errors, respectively.
-syntax: newtype CSS = (Microsoft.Quantum.ErrorCorrection.EncodeOp, Microsoft.Quantum.ErrorCorrection.DecodeOp,
-  Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp, Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp);
+syntax: newtype CSS = (Microsoft.Quantum.ErrorCorrection.EncodeOp, Microsoft.Quantum.ErrorCorrection.DecodeOp, Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp, Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp);
+...

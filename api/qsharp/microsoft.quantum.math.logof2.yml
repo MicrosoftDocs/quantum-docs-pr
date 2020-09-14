@@ -18,3 +18,4 @@ output:
   - summary: Returns a `Double` equal to $0.6931471805599453$.
     isPrimitive: true
     uid: Double
+...

@@ -50,3 +50,4 @@ typeParameters:
   summary: Input type of the function to be converted.
 - uid: "'Output"
   summary: Output type of the function to be converted.
+...

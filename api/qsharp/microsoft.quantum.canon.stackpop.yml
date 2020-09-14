@@ -18,3 +18,4 @@ output:
   content: Microsoft.Quantum.Canon.ResultStack
   types:
   - uid: microsoft.quantum.canon.resultstack
+...

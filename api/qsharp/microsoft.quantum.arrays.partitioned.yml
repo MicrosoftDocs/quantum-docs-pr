@@ -39,3 +39,4 @@ output:
     - isArray: true
       uid: "'T"
       isLocal: true
+...

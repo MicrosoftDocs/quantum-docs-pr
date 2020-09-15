@@ -8,11 +8,9 @@ name: AddGeneratorSystems
 type: function
 namespace: microsoft.quantum.simulation
 summary: Adds two `GeneratorSystem`s to create a new `GeneratorSystem`.
-syntax: 'function AddGeneratorSystems (generatorSystemA : Microsoft.Quantum.Simulation.GeneratorSystem,
-  generatorSystemB : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
+syntax: 'function AddGeneratorSystems (generatorSystemA : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemB : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
-  content: '(generatorSystemA : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemB
-    : Microsoft.Quantum.Simulation.GeneratorSystem)'
+  content: '(generatorSystemA : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemB : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystemA
     summary: The first `GeneratorSystem`.
@@ -29,3 +27,4 @@ output:
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
+...

@@ -8,11 +8,9 @@ name: CompareGTSI
 type: operation
 namespace: microsoft.quantum.arithmetic
 summary: 'Wrapper for signed integer comparison: `result = xs > ys`.'
-syntax: 'operation CompareGTSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian,
-  ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Qubit) : Unit'
+syntax: 'operation CompareGTSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Qubit) : Unit'
 input:
-  content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian,
-    result : Qubit)'
+  content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Qubit)'
   types:
   - name: xs
     summary: First $n$-bit number
@@ -32,3 +30,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

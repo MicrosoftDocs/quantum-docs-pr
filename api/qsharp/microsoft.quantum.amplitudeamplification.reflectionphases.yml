@@ -14,3 +14,4 @@ remarks: |-
   about the target state.
   Both arrays must be of equal length. Note that in many cases, the first phase about the start state and last phase about the target state introduces a global phase shift and may be set to $0$.
 syntax: newtype ReflectionPhases = (Double[], Double[]);
+...

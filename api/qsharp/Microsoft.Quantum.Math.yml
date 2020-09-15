@@ -95,8 +95,7 @@ functions:
 - uid: microsoft.quantum.math.dividedbyl
   summary: Returns the quotient of two inputs.
 - uid: microsoft.quantum.math.divreml
-  summary: Divides one BigInteger value by another, returns the result and the remainder
-    as a tuple.
+  summary: Divides one BigInteger value by another, returns the result and the remainder as a tuple.
 - uid: microsoft.quantum.math.e
   summary: Returns the natural logarithmic base $e$.
 - uid: microsoft.quantum.math.expd
@@ -122,14 +121,11 @@ functions:
 - uid: microsoft.quantum.math.floor
   summary: Returns the largest integer less than or equal to the specified number.
 - uid: microsoft.quantum.math.greatestcommondivisori
-  summary: Computes the greatest common divisor of $a$ and $b$. The GCD is always
-    positive.
+  summary: Computes the greatest common divisor of $a$ and $b$. The GCD is always positive.
 - uid: microsoft.quantum.math.greatestcommondivisorl
-  summary: Computes the greatest common divisor of $a$ and $b$. The GCD is always
-    positive.
+  summary: Computes the greatest common divisor of $a$ and $b$. The GCD is always positive.
 - uid: microsoft.quantum.math.ieeeremainder
-  summary: Returns the remainder resulting from the division of a specified number
-    by another specified number.
+  summary: Returns the remainder resulting from the division of a specified number by another specified number.
 - uid: microsoft.quantum.math.inversemodi
   summary: Returns $b$ such that $a \cdot b = 1 (\operatorname{mod} \texttt{modulus})$.
 - uid: microsoft.quantum.math.inversemodl
@@ -193,8 +189,7 @@ functions:
 - uid: microsoft.quantum.math.negationl
   summary: Returns the unary negation of an input.
 - uid: microsoft.quantum.math.pi
-  summary: Represents the ratio of the circumference of a circle to its diameter,
-    specified by the constant, π.
+  summary: Represents the ratio of the circumference of a circle to its diameter, specified by the constant, π.
 - uid: microsoft.quantum.math.plusa
   summary: Returns the sum (concatenation) of two inputs.
 - uid: microsoft.quantum.math.plusc
@@ -315,3 +310,4 @@ operations:
     > Deprecated
 
     RandomSingleQubitPauli has been deprecated. Please use @"microsoft.quantum.random.drawrandompauli" instead.
+...

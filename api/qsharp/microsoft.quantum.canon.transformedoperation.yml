@@ -21,8 +21,7 @@ examples: |-
   ```qsharp
   let leOp = TransformedOperation(LittleEndianAsBigEndian, ApplyXorInPlaceBE);
   ```
-syntax: "function TransformedOperation (fn : ('U -> 'T), op : ('T => Unit)) : ('U\
-  \ => Unit)"
+syntax: "function TransformedOperation (fn : ('U -> 'T), op : ('T => Unit)) : ('U => Unit)"
 input:
   content: "(fn : ('U -> 'T), op : ('T => Unit))"
   types:
@@ -71,3 +70,4 @@ seeAlso:
 - transformedoperationca
 - applywithinputtransformation
 - compose
+...

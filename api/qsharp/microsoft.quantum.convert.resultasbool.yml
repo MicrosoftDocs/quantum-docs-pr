@@ -24,3 +24,4 @@ output:
   - summary: A `Bool` representing the `input`.
     isPrimitive: true
     uid: Bool
+...

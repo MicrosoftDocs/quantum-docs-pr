@@ -13,8 +13,7 @@ summary: |-
 remarks: |-
   <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> allows for asserting
   arbitrary qubit states rather than only $Z$ eigenstates.
-syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance
-  : Double) : Unit'
+syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Result, q : Qubit, tolerance : Double)'
   types:
@@ -39,3 +38,4 @@ output:
     uid: Unit
 seeAlso:
 - assertqubitisinstatewithintolerance
+...

@@ -15,3 +15,4 @@ summary: |-
   for all times $t$, where $U$ is a fixed operation, and where
   $\delta t$ is a non-negative real number.
 syntax: newtype ContinuousOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
+...

@@ -10,8 +10,7 @@ namespace: microsoft.quantum.convert
 summary: |-
   Converts a given integer number to an equivalent string representation,
   using the given format.
-remarks: See [C# Int64.ToString](https://docs.microsoft.com/dotnet/api/system.int64.tostring?view=netframework-4.7.1#System_Int64_ToString_System_String_)
-  for more details.
+remarks: See [C# Int64.ToString](https://docs.microsoft.com/dotnet/api/system.int64.tostring?view=netframework-4.7.1#System_Int64_ToString_System_String_) for more details.
 syntax: 'function IntAsStringWithFormat (a : Int, fmt : String) : String'
 input:
   content: '(a : Int, fmt : String)'
@@ -27,3 +26,4 @@ output:
   types:
   - isPrimitive: true
     uid: String
+...

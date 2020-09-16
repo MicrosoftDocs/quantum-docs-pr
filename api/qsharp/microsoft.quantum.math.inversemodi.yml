@@ -26,3 +26,4 @@ output:
   - summary: Integer $b$ such that $a \cdot b = 1 (\operatorname{mod} \texttt{modulus})$.
     isPrimitive: true
     uid: Int
+...

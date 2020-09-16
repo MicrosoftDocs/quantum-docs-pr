@@ -22,8 +22,7 @@ examples: |-
   ```qsharp
   ApplyWithInputTransformation(LittleEndianAsBigEndian, ApplyXorInPlaceBE, LittleEndian(qubits));
   ```
-syntax: "operation ApplyWithInputTransformationC (fn : ('U -> 'T), op : ('T => Unit\
-  \ is Ctl), input : 'U) : Unit"
+syntax: "operation ApplyWithInputTransformationC (fn : ('U -> 'T), op : ('T => Unit is Ctl), input : 'U) : Unit"
 input:
   content: "(fn : ('U -> 'T), op : ('T => Unit is Ctl), input : 'U)"
   types:
@@ -69,3 +68,4 @@ seeAlso:
 - applywithinputtransformationa
 - applywithinputtransformationca
 - transformedoperation
+...

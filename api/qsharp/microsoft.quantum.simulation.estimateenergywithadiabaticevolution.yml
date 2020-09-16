@@ -13,14 +13,9 @@ summary: |-
   followed by adiabatic state preparation using a
   `adiabaticUnitary`, and finally phase estimation with respect to
   `qpeUnitary`on the resulting state using a `phaseEstAlgorithm`.
-syntax: 'operation EstimateEnergyWithAdiabaticEvolution (nQubits : Int, statePrepUnitary
-  : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[]
-  => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle,
-  Qubit[]) => Double)) : Double'
+syntax: 'operation EstimateEnergyWithAdiabaticEvolution (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
-  content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary
-    : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm
-    : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
+  content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
   types:
   - name: nQubits
     summary: Number of qubits used for the simulation.
@@ -96,3 +91,4 @@ output:
       of the generator represented by $U$.
     isPrimitive: true
     uid: Double
+...

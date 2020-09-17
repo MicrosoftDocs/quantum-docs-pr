@@ -16,12 +16,9 @@ remarks: |-
   A\ket{0}\_{f}\ket{0}\_s= \lambda\ket{1}\_f\ket{\text{target}}\_s + \sqrt{1-|\lambda|^2}\ket{0}\_f\cdots,
   \end{align}
   In most cases, `flagQubit` and `auxiliaryRegister` are initialized in the state $\ket{0}\_{f}\ket{0}\_s$.
-syntax: 'function AmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases,
-  stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[]
-  => Unit is Adj + Ctl)'
+syntax: 'function AmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
-  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle
-    : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
   types:
   - name: phases
     summary: Phases of partial reflections
@@ -52,3 +49,4 @@ output:
     functors:
     - Adjoint
     - Controlled
+...

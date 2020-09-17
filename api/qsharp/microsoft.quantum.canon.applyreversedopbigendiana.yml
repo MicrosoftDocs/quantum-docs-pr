@@ -7,13 +7,10 @@ uid: microsoft.quantum.canon.applyreversedopbigendiana
 name: ApplyReversedOpBigEndianA
 type: operation
 namespace: microsoft.quantum.canon
-summary: ApplyReversedOpBigEndianA has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopbea"
-  instead.
-syntax: 'operation ApplyReversedOpBigEndianA (op : (Microsoft.Quantum.Arithmetic.BigEndian
-  => Unit is Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+summary: ApplyReversedOpBigEndianA has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopbea" instead.
+syntax: 'operation ApplyReversedOpBigEndianA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
-  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj), register
-    : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: op
     isOperation: true
@@ -35,3 +32,4 @@ output:
     uid: Unit
 functors:
 - Adjoint
+...

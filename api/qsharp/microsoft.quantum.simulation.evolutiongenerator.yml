@@ -13,3 +13,4 @@ summary: |-
 
   Last parameter for number of terms.
 syntax: newtype EvolutionGenerator = (Microsoft.Quantum.Simulation.EvolutionSet, Microsoft.Quantum.Simulation.GeneratorSystem);
+...

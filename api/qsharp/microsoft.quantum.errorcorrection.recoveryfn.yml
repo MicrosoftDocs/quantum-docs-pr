@@ -11,3 +11,4 @@ summary: |-
   Type for function that maps an error syndrome to a sequence of `Pauli[]`
   operations that correct the detected error.
 syntax: newtype RecoveryFn = (Microsoft.Quantum.ErrorCorrection.Syndrome -> Pauli[]);
+...

@@ -31,3 +31,4 @@ output:
       `nQubits` qubits.
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
+...

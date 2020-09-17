@@ -11,3 +11,4 @@ summary: |-
   Format of data passed from C# to Q# to represent preparation of the initial state
   The meaning of the data represented is determined by the algorithm that receives it.
 syntax: newtype JordanWignerInputState = ((Double, Double), Int[]);
+...

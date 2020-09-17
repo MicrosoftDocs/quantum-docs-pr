@@ -8,8 +8,7 @@ name: ApplySeriesOfOpsC
 type: operation
 namespace: microsoft.quantum.canon
 summary: Applies a list of ops and their targets sequentially on an array. (Controlled)
-syntax: "operation ApplySeriesOfOpsC (listOfOps : ('T[] => Unit is Ctl)[], targets\
-  \ : Int[][], register : 'T[]) : Unit"
+syntax: "operation ApplySeriesOfOpsC (listOfOps : ('T[] => Unit is Ctl)[], targets : Int[][], register : 'T[]) : Unit"
 input:
   content: "(listOfOps : ('T[] => Unit is Ctl)[], targets : Int[][], register : 'T[])"
   types:
@@ -53,3 +52,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applyoprepeatedlyover
+...

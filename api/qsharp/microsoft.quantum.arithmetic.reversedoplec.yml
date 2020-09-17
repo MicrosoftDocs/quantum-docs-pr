@@ -10,8 +10,7 @@ namespace: microsoft.quantum.arithmetic
 summary: |-
   Given an operation that takes a little-endian input, returns a new
   operation that takes a big-endian input.
-syntax: 'function ReversedOpLEC (op : (Microsoft.Quantum.Arithmetic.LittleEndian =>
-  Unit is Ctl)) : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl)'
+syntax: 'function ReversedOpLEC (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl)) : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl)'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl))'
   types:
@@ -46,3 +45,4 @@ seeAlso:
 - reversedople
 - reversedoplea
 - reversedopleca
+...

@@ -65,3 +65,4 @@ typeParameters:
   summary: The target on which each of the operations in the array act.
 seeAlso:
 - microsoft.quantum.canon.bound
+...

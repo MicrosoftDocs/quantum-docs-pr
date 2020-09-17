@@ -91,3 +91,4 @@ functions:
   summary: Returns the Boolean disjunction of two values.
 - uid: microsoft.quantum.logical.xor
   summary: Returns the Boolean exclusive disjunction of two values.
+...

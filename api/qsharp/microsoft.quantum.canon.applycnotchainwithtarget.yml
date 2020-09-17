@@ -26,8 +26,7 @@ remarks: |-
   ```qsharp
   ApplyCNOTChain(qs);
   ```
-syntax: 'operation ApplyCNOTChainWithTarget (qubits : Qubit[], targetQubit : Qubit)
-  : Unit'
+syntax: 'operation ApplyCNOTChainWithTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'
 input:
   content: '(qubits : Qubit[], targetQubit : Qubit)'
   types:
@@ -48,3 +47,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

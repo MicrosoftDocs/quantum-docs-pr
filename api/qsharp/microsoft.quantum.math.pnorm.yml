@@ -30,3 +30,4 @@ output:
   - summary: The $p$-norm $\|x\|_p$.
     isPrimitive: true
     uid: Double
+...

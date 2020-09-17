@@ -11,8 +11,7 @@ summary: |-
   Given a set of coefficients and a tolerance, returns a state preparation
   operation that prepares each coefficient as the corresponding amplitude
   of a computational basis state, up to the given tolerance.
-syntax: 'function ApproximateInputEncoder (tolerance : Double, coefficients : Double[])
-  : Microsoft.Quantum.MachineLearning.StateGenerator'
+syntax: 'function ApproximateInputEncoder (tolerance : Double, coefficients : Double[]) : Microsoft.Quantum.MachineLearning.StateGenerator'
 input:
   content: '(tolerance : Double, coefficients : Double[])'
   types:
@@ -34,3 +33,4 @@ output:
       A state preparation operation that prepares the given coefficients
       as an input state on a given register.
     uid: microsoft.quantum.machinelearning.stategenerator
+...

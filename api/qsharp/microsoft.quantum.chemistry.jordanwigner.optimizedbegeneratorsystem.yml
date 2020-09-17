@@ -12,3 +12,4 @@ summary: |-
   integer `n`, together with the number of terms in the first `Int` and
   the sum of absolute-values of all term coefficients in the `Double`.
 syntax: newtype OptimizedBEGeneratorSystem = (Int, Double, (Int -> Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex));
+...

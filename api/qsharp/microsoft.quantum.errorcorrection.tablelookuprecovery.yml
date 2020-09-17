@@ -29,3 +29,4 @@ output:
       An object of type `RecoveryFn`, i.e., a map `Syndrome -> Pauli[]` that associates
       with a given syndrome array a corresponding Pauli correction operation.
     uid: microsoft.quantum.errorcorrection.recoveryfn
+...

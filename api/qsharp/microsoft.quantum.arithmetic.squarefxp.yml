@@ -8,8 +8,7 @@ name: SquareFxP
 type: operation
 namespace: microsoft.quantum.arithmetic
 summary: Squares a fixed-point number.
-syntax: 'operation SquareFxP (fp : Microsoft.Quantum.Arithmetic.FixedPoint, result
-  : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+syntax: 'operation SquareFxP (fp : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
@@ -29,3 +28,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

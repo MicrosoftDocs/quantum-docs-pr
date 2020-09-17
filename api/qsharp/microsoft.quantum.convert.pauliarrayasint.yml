@@ -38,3 +38,4 @@ output:
   - summary: An integer uniquely identifying `paulis`, as described below.
     isPrimitive: true
     uid: Int
+...

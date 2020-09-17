@@ -11,8 +11,7 @@ summary: |-
   Given an operation op, returns a new operation which
   applies the op if a classical control bit is true. If `false`, nothing happens.
   The modifier `C` indicates that the operation is controllable.
-syntax: "function CControlledC (op : ('T => Unit is Ctl)) : ((Bool, 'T) => Unit is\
-  \ Ctl)"
+syntax: "function CControlledC (op : ('T => Unit is Ctl)) : ((Bool, 'T) => Unit is Ctl)"
 input:
   content: "(op : ('T => Unit is Ctl))"
   types:
@@ -51,3 +50,4 @@ typeParameters:
   summary: The input type of the operation to be conditionally applied.
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
+...

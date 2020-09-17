@@ -42,7 +42,7 @@ Lastly, `Unit` defines that the operation's output is empty.
 Operations can also return more interesting types than `Unit`.
 For instance, the <xref:microsoft.quantum.intrinsic.m> operation returns an output of type `Result`, representing having performed a measurement.  You can pass it from an operation to another operation or use it with the `let` keyword to define a new variable.
 
-This approach allows for representing classical computation that interacts with quantum operations at a low level, such as in [superdense coding](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding):
+This approach allows for representing classical computation that interacts with quantum operations at a low level, such as in [superdense coding](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding):
 
 ```qsharp
 operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {

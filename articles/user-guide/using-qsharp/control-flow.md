@@ -331,7 +331,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-For more information, see [unit testing sample provided with the standard library](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+For more information, see [unit testing sample provided with the standard library](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## Next steps
 

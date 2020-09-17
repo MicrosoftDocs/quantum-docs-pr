@@ -15,7 +15,7 @@ Before proceeding with this example, make sure that you've installed Docker, fol
 
 For more information:
 - [Structure of NWChem input decks](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
-    - [Input deck commands for use with the Quantum Development Kit](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
+    - [Input deck commands for use with the Quantum Development Kit](https://github.com/nwchemgit/nwchem/tree/main/contrib/quasar)
 - [Installing the chemistry library and dependencies](xref:microsoft.quantum.chemistry.concepts.installation)
 - [Resource counting](xref:microsoft.quantum.chemistry.examples.resourcecounts)
 
@@ -58,7 +58,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Next, we'll import the `Get-GateCount` command provided with the **GetGateCount** sample.
-For full details, see the [instructions provided with the sample](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount).
+For full details, see the [instructions provided with the sample](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/GetGateCount).
 Next, run the following, substituting `<runtime>` with either `win10-x64`, `osx-x64`, or `linux-x64`, depending on your operating system:
 
 ```powershell
@@ -88,7 +88,7 @@ First, clone the [nwchemgit/nwchem repository](https://github.com/nwchemgit/nwch
 git clone https://github.com/nwchemgit/nwchem --depth 1
 ```
 
-The `nwchemgit/nwchem` repository comes with a variety of input decks intended for use with the Quantum Development Kit, listed under the [`QA/chem_library_tests` folder](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests).
+The `nwchemgit/nwchem` repository comes with a variety of input decks intended for use with the Quantum Development Kit, listed under the [`QA/chem_library_tests` folder](https://github.com/nwchemgit/nwchem/tree/main/QA/chem_library_tests).
 For this example, we'll use the `H4` input deck:
 
 ```powershell
@@ -160,7 +160,7 @@ There are many things to go do from here:
 - Try out different predefined input decks, e.g., by varying the parameter `alpha` in `h4_sto6g_alpha.nw`, 
 - Try modifying the decks by editing the NWChem decks directly, e.g., exploring `STO-nG` models for various choices of n, 
 - Try other predefined NWChem input decks that are available at `nwchem/qa/chem_library_tests`,
-- Try out a suite of predefined Broombridge YAML benchmarks that were generated from NWChem and are available as part of the [Microsoft/Quantum repository](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML). These benchmarks include: 
+- Try out a suite of predefined Broombridge YAML benchmarks that were generated from NWChem and are available as part of the [Microsoft/Quantum repository](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML). These benchmarks include: 
     - small molecules such as molecular hydrogen (H2), Beryllium (Be), Lithium hydride (LiH),
     - larger molecules such as ozone (O3), beta-carotene, cytosine, and many more. 
 - Try out the graphical front-end [EMSL Arrows](https://arrows.emsl.pnnl.gov/api/qsharp_chem) that features an interface to the Microsoft Quantum Development Kit. 

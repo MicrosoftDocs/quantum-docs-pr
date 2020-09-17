@@ -153,8 +153,8 @@ This unitary is customarily described by one of two types of oracles.
 
 > [!TIP]
 > Both of the oracle types described below are covered in the samples.
-> To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation).
-> To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> To learn more about continuous query oracles, please see the [**PhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
+> To learn more about discrete query oracles, please see the [**IsingPhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
 The first type of oracle, which we call a discrete query oracle and represent with the user-defined type <xref:microsoft.quantum.oracles.discreteoracle>, simply involves a unitary matrix.
 If $U$ is the unitary whose eigenvalues we wish to estimate then the oracle for $U$ is simply a stand-in for a subroutine that implements $U$.
@@ -233,8 +233,8 @@ The dynamical generator modeling library provides a framework for systematically
 
 > [!TIP]
 > The dynamical generator library described below is covered in the samples. 
-> For an example based on the Ising model, please see the [**IsingGenerators** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
-> For an example based on molecular Hydrogen, please see the [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) and [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) samples.
+> For an example based on the Ising model, please see the [**IsingGenerators** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
+> For an example based on molecular Hydrogen, please see the [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) and [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) samples.
 
 ### Complete Description of a Generator ###
 

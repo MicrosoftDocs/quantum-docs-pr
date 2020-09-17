@@ -82,7 +82,7 @@ If you are using an editor other than Visual Studio or VS Code, simply follow th
 Once you have your projects set up following the above instructions, you can call into Q# from your .NET console application.
 The Q# compiler will create .NET classes for each Q# operation and function that allow you to run your quantum programs on a simulator.
 
-For example, the [.NET interoperability sample](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) includes the following example of a Q# operation:
+For example, the [.NET interoperability sample](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet) includes the following example of a Q# operation:
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 

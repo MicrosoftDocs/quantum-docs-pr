@@ -15,8 +15,8 @@ Linear algebra is the language of quantum computing. Although you don’t need t
 
 Just like being familiar with the [basic concepts of quantum physics](xref:microsoft.quantum.overview.understanding) can help you understand quantum computing, knowing some basic linear algebra can help you understand how quantum algorithms work. At the least, you’ll want to be familiar with **vectors** and **matrix multiplication**. If you need to refresh your knowledge of these algebra concepts, here are some tutorials that cover the basics:
 
-- [Jupyter notebook tutorial on linear algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
-- [Jupyter notebook tutorial on complex arithmetic](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+- [Jupyter notebook tutorial on linear algebra](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
+- [Jupyter notebook tutorial on complex arithmetic](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
 - [Linear Algebra for Quantum Computation](https://cds.cern.ch/record/1522001/files/978-1-4614-6336-8_BookBackMatter.pdf)
 - [Fundamentals of Linear Algebra](https://www.math.ubc.ca/~carrell/NB.pdf)
 - [Quantum Computation Primer](https://www.codeproject.com/Articles/5155638/Quantum-Computation-Primer-Part-1#exploring-quantum-superposition)

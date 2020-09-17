@@ -16,14 +16,14 @@ no-loc: ['Q#', '$$v']
 ---
 # Licensing #
 
-The Quantum Development Kit is provided with an extensive collection of open-source functions and operations, licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt).
+The Quantum Development Kit is provided with an extensive collection of open-source functions and operations, licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/main/LICENSE.txt).
 The portions of the standard library that are portable across target machines can be obtained from the [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) repository on GitHub, along with other libraries such as  and other libraries, such as the [quantum chemistry library](xref:microsoft.quantum.chemistry.concepts.intro).
 
-Microsoft's Quantum Development Kit also provides specialized library functions and operations that are licensed under a [Microsoft Research license](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE).
+Microsoft's Quantum Development Kit also provides specialized library functions and operations that are licensed under a [Microsoft Research license](https://github.com/Microsoft/Quantum-NC/blob/main/LICENSE).
 These can be obtained from the [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) repository on GitHub.
 
 There are also many samples that explain and illustrate the use of functions and operations from the standard library and other libraries.
-These samples are licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt).
+These samples are licensed under the [MIT license](https://github.com/Microsoft/Quantum/blob/main/LICENSE.txt).
 The samples can be obtained from the [Microsoft/Quantum](https://github.com/Microsoft/Quantum) repository on GitHub.
 
 ## Contributing ##

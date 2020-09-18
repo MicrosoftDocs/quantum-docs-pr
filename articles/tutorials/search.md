@@ -51,9 +51,9 @@ The number of incremental boosts is fewer than the number of items in the list. 
 
 ### Q# applications with Visual Studio or Visual Studio Code
 
-The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
+The program will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
 
-In Visual Studio, simply press Ctrl + F5 to execute the script.
+In Visual Studio, simply press Ctrl + F5 to run the script.
 
 In VS Code, build the `Program.qs` the first time by typing the below in the terminal:
 
@@ -83,8 +83,8 @@ Commands:
 ```
 
 This is because you didn't specify the number of qubits you wanted to use,
-so the terminal tells you the commands available for the executable. If we
-want to use 5 qubits we should type:
+so the terminal shows you the commands available for the executable program. If we
+want to use 5 qubits, we should type:
 
 ```Command line
 dotnet run --n-qubits 5

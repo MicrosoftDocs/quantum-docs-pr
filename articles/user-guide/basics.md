@@ -83,7 +83,7 @@ For more information about expressions and compatible operators in Q#, see [Type
 
 ### Statements 
 A statement is a syntactic unit of an imperative programming language that expresses some action to carry out.
-Statements contrast with expressions in that statements do not return results and are executed solely for their side effects. Expressions, however, always return a result and often do not have side effects at all. In short, Q# statements are executed, while expressions are evaluated.
+Statements contrast with expressions in that statements do not return results and are run solely for their side effects. Expressions, however, always return a result and often do not have any side effects. In short, Q# statements are run, while expressions are evaluated.
 
 A simple example of a statement in Q# is assigning a symbol to an expression:
 ```qsharp

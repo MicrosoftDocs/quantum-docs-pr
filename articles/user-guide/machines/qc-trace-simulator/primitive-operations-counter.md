@@ -1,6 +1,6 @@
 ---
 title: Primitive operation counter - Quantum Development Kit
-description: Learn about the Microsoft QDK primitive operation counter, which uses the quantum trace simulator to track primitive executions used by operations in a Q# program. 
+description: Learn about the Microsoft QDK primitive operation counter, which uses the quantum trace simulator to track primitive processes used by operations in a Q# program. 
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
@@ -11,7 +11,7 @@ no-loc: ['Q#', '$$v']
 
 # Quantum trace simulator: primitive operations counter
 
-The primitive operation counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). It counts the number of primitive executions used by every operation invoked in a quantum program. 
+The primitive operation counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro). It counts the number of primitive processes used by every operation invoked in a quantum program. 
 
 All <xref:microsoft.quantum.intrinsic> operations are expressed in terms of single-qubit rotations, T operations, single-qubit Clifford operations, CNOT operations, and measurements of multi-qubit Pauli observables. The Primitive Operations Counter aggregates and collects statistics over all the edges of the operation's [call graph](https://en.wikipedia.org/wiki/Call_graph).
 

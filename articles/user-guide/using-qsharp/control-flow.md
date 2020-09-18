@@ -26,7 +26,7 @@ This action follows the "shoes-and-socks" principle: if you wish to undo putting
 
 ## If, Else-if, Else
 
-The `if` statement supports conditional execution.
+The `if` statement supports conditional processing.
 It consists of the keyword `if`, a Boolean expression in parentheses, and a statement block (the _then_ block).
 Optionally, any number of else-if clauses can follow, each of which consists of the keyword `elif`, a Boolean expression in parentheses, and a statement block (the _else-if_ block).
 Finally, the statement can optionally finish with an else clause, which consists of the keyword `else` followed by another statement block (the _else_ block).
@@ -69,7 +69,7 @@ The statement consists of the keyword `for`, followed by a symbol or symbol tupl
 
 The statement block (the body of the loop) runs repeatedly, with the defined symbol (the loop variable) bound to each value in the range or array.
 Note that if the range expression evaluates to an empty range or array, the body does not run at all.
-The expression is fully evaluated before entering the loop, and does not change while the loop is executing.
+The expression is fully evaluated before entering the loop, and does not change while the loop is running.
 
 The loop variable is bound at each entrance to the loop body, and is unbound at the end of the body.
 The loop variable is not bound after the for loop is completed.
@@ -123,7 +123,7 @@ The loop body runs, and then the condition is evaluated.
 If the condition is true, then the statement is completed; otherwise, the fixup runs, and the statement runs again, starting with the loop body.
 
 All three portions of an RUS loop (the body, the test, and the fixup) are treated as a single scope *for each repetition*, so symbols that are bound in the body are available in both the test and the fixup.
-However, completing the execution of the fixup ends the scope for the statement, so that symbol bindings made during the body or fixup are not available in subsequent repetitions.
+However, completing the run of the fixup ends the scope for the statement, so that symbol bindings made during the body or fixup are not available in subsequent repetitions.
 
 Further, the `fixup` statement is often useful but not always necessary.
 In cases that it is not needed, the construct
@@ -146,10 +146,10 @@ For more examples and details, see [Repeat-until-success examples](#repeat-until
 ## While loop
 
 Repeat-until-success patterns have a very quantum-specific connotation. They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#. 
-However, loops that break based on a condition and whose execution length is thus unknown at compile-time, are handled with particular care in a quantum runtime. 
+However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime. 
 However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware. 
 
-Q#, therefore, supports to use of while loops within functions only. 
+Q#, therefore, supports to use of while loops within functions only.
 A `while` statement consists of the keyword `while`, a Boolean expression in parentheses, and a statement block.
 The statement block (the body of the loop) runs as long as the condition evaluates to `true`.
 

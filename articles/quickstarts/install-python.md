@@ -49,7 +49,7 @@ Install the QDK to develop Python host programs to call Q# operations.
     pip install qsharp
     ```
 
-1. Install IQ#, a kernel used by Jupyter and Python that provides the core functionality for compiling and executing Q# operations.
+1. Install IQ#, a kernel used by Jupyter and Python that provides the core functionality for compiling and running Q# operations.
 
     ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -67,7 +67,7 @@ Install the QDK to develop Python host programs to call Q# operations.
     
 ***
 
-That's it! You now have both the `qsharp` Python package and the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Python and allows you to use Q# Jupyter Notebooks.
+That's it! You now have both the `qsharp` Python package and the IQ# kernel for Jupyter, which provide the core functionality for compiling and running Q# operations from Python and allows you to use Q# Jupyter Notebooks.
 
 ## Choose your IDE
 
@@ -82,7 +82,7 @@ If you would like to use a different editor, the instructions above have you all
 
 ## Write your first Q# program
 
-Now you are ready to verify your `qsharp` Python package installation by writing and executing a simple Q# program.
+Now you are ready to verify your `qsharp` Python package installation by writing and running a simple Q# program.
 
 1. Create a minimal Q# operation by creating a file called `Operation.qs` and adding the following code to it:
 

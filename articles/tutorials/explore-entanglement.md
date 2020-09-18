@@ -112,7 +112,7 @@ qubit and another parameter, `desired`, representing the state that we would
 like the qubit to be in.  The operation `SetQubitState` performs a measurement on the
 qubit using the operation `M`.  In Q#, a qubit measurement always returns either
 `Zero` or `One`.  If the measurement returns a value not equal to the desired
-value, `SetQubitState` “flips” the qubit; that is, it executes an `X` operation, which
+value, `SetQubitState` “flips” the qubit; that is, it runs an `X` operation, which
 changes the qubit state to a new state in which the probabilities of a
 measurement returning `Zero` and `One` are reversed. This way, `SetQubitState` always puts
 the target qubit in the desired state.
@@ -139,7 +139,7 @@ returning `Zero` 100% of the time or returning `One` 100% of the time.
 of a measurement of a qubit.
 
 The operation `SetQubitState` measures the qubit. If the qubit is in the state we
-want, `SetQubitState` leaves it alone; otherwise, by executing the `X` operation, we
+want, `SetQubitState` leaves it alone; otherwise, by running the `X` operation, we
 change the qubit state to the desired state.
 
 #### About Q# operations
@@ -394,8 +394,8 @@ quantum state.
 Now let’s look at how Q# expresses ways to entangle qubits.
 First, we set the first qubit to the initial state and then use the `H`
 operation to put it into superposition.  Then, before we measure the first
-qubit, we use a new operation (`CNOT`), which stands for Controlled-NOT.  The
-result of executing this operation on two qubits is to flip the second qubit if
+qubit, we use a new operation (`CNOT`), which stands for *Controlled-NOT*.  The
+result of running this operation on two qubits is to flip the second qubit if
 the first qubit is `One`.  Now, the two qubits are entangled.  Our statistics
 for the first qubit haven't changed (50-50 chance of a `Zero` or a `One` after
 measurement), but now when we measure the second qubit, it is __always__ the

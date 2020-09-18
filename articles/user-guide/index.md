@@ -19,7 +19,7 @@ In the different topics of this guide, we detail the core concepts of the Q# lan
 
 - [Q# Basics](xref:microsoft.quantum.guide.basics): An introductory overview of the purpose and functionality of the Q# programming language. 
 
-- [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs): describes how a Q# program is executed, and provides an overview of the various ways you can call the program: from the command line, in Q# Jupyter Notebooks, or from a classical host program written in Python or a .NET language.
+- [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs): describes how a Q# program is run, and provides an overview of the various ways you can call the program: from the command line, in Q# Jupyter Notebooks, or from a classical host program written in Python or a .NET language.
 
 ### Q# Language
 
@@ -39,7 +39,7 @@ In the different topics of this guide, we detail the core concepts of the Q# lan
 
 - [Working with qubits](xref:microsoft.quantum.guide.qubits): Describes the features of Q# used to address individual qubits and systems of qubits, specifically, allocating them, performing operations on them, and measuring them. 
 
-- [Control Flow](xref:microsoft.quantum.guide.controlflow): Details the programming control flow patterns available in Q#, which includes many standard techniques (such as conditional execution, for loops, while loops) as well as the quantum-specific "Repeat-Until-Success" pattern.
+- [Control Flow](xref:microsoft.quantum.guide.controlflow): Details the programming control flow patterns available in Q#, which includes many standard techniques (such as conditional processing, *for* loops, *while* loops) as well as the quantum-specific *Repeat-Until-Success* pattern.
 
 - [Testing and debugging](xref:microsoft.quantum.guide.testingdebugging): Details some techniques for making sure your code is doing what it is supposed to do. 
     Due to the general opacity of quantum information, debugging a quantum program can require specialized techniques. 
@@ -48,13 +48,13 @@ In the different topics of this guide, we detail the core concepts of the Q# lan
 
 ### Quantum Simulators and Resource Estimators
 
-- [Quantum simulators and host applications](xref:microsoft.quantum.machines): An overview of the different simulators available, as well as the general execution model between host programs and target machines.
+- [Quantum simulators and host applications](xref:microsoft.quantum.machines): An overview of the different simulators available, as well as the general run model between host programs and target machines.
 
-- [Full state simulator](xref:microsoft.quantum.machines.full-state-simulator): The target machine which simulates the full quantum state. Useful for fully executing or debugging smaller-scale programs (less than a few dozen qubits)
+- [Full state simulator](xref:microsoft.quantum.machines.full-state-simulator): The target machine which simulates the full quantum state. Useful for fully running or debugging smaller-scale programs (less than a few dozen qubits)
 
 - [Resources estimator](xref:microsoft.quantum.machines.resources-estimator): Estimates the resources required to run a given instance of a Q# operation on a quantum computer.
 
-- [Trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro): Executes a quantum program without actually simulating the state of a quantum computer, and therefore can execute quantum programs that use thousands of qubits. Useful for debugging classical code within a quantum program, as well as estimating resources required.
+- [Trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro): Runs a quantum program without actually simulating the state of a quantum computer, and therefore can run quantum programs that use thousands of qubits. Useful for debugging classical code within a quantum program, as well as estimating resources required.
 
 - [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator): A special-purpose quantum simulator that can be used with millions of qubits, but only for programs with a restricted set of quantum operations - X, CNOT, and multi-controlled X.
 

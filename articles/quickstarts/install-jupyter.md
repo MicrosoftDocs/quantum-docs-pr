@@ -14,7 +14,7 @@ no-loc: ['Q#', '$$v']
 
 Install the QDK for developing Q# operations on Q# Jupyter Notebooks.
 
-Jupyter Notebooks allow in-place code execution alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
+Jupyter Notebooks allow in-place code computation alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
 
 ## Install the IQ# Jupyter kernel
 
@@ -64,11 +64,11 @@ IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python 
     
 ***
 
-That's it! You now have the IQ# kernel for Jupyter, which provides the core functionality for compiling and executing Q# operations from Q# Jupyter Notebooks.
+That's it! You now have the IQ# kernel for Jupyter, which provides the core functionality for compiling and running Q# operations from Q# Jupyter Notebooks.
 
 ## Create your first Q# notebook
 
-Now you are ready to verify your Q# Jupyter Notebook installation by writing and executing a simple Q# operation.
+Now you are ready to verify your Q# Jupyter Notebook installation by writing and running a simple Q# operation.
 
 1. From the environment you created during installation (i.e., either the conda environment you created, or the Python environment where you installed Jupyter), run the following command to start the Jupyter Notebook server:
 
@@ -88,11 +88,11 @@ Now you are ready to verify your Q# Jupyter Notebook installation by writing and
 
     You should see `SampleQuantumRandomNumberGenerator` in the output of the cell. When running in Jupyter Notebook, the Q# code is compiled, and the cell outputs the name of any operations that it finds.
 
-1. In a new cell, execute the operation you just created (in a simulator) by using the `%simulate` command:
+1. In a new cell, run the operation you just created (in a simulator) by using the `%simulate` command:
 
     ![Jupyter Notebook cell with %simulate magic](~/media/install-guide-jupyter-simulate.png)
 
-    You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `Zero` or `One` printed on the screen. If you execute the cell repeatedly, you should see each result approximately half the time.
+    You should see the result of the operation you invoked. In this case, because your operation generates a random result, you will see either `Zero` or `One` printed on the screen. If you run the cell repeatedly, you should see each result approximately half the time.
 
 ## Next steps
 

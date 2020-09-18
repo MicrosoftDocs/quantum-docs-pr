@@ -41,7 +41,7 @@ Defines how many data samples is used for a single estimation of stochastic grad
 
 "Epoch" means one complete pass through the scheduled training data.
 The maximum number of epochs per a training thread (see below) should be capped. 
-The training thread is defined to terminate (with the best known candidate parameters) when the maximum number of epochs has been executed. However such training
+The training thread is defined to terminate (with the best known candidate parameters) when the maximum number of epochs has been run. However such training
  would terminate earlier when misclassification rate on validation schedule falls below a chosen tolerance. Suppose, for example, that misclassification tolerance
  is 0.01 (1%); if on validation set of 2000 samples we are seeing fewer than 20 misclassifications, then the tolerance level has been achieved. A training thread
  also terminates prematurely if the validation score of the candidate model has not shown any improvement over several consecutive epochs (a gridlock). The logic

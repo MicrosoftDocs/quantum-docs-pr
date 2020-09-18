@@ -1,6 +1,6 @@
 ---
 title: Basic classification with the Quantum Machine Learning library
-description: Learn how to execute a quantum sequential classifier written in Q# using the Quantum Machine Learning library of the Microsoft QDK.
+description: Learn how to run a quantum sequential classifier written in Q# using the Quantum Machine Learning library of the Microsoft QDK.
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
@@ -11,7 +11,7 @@ no-loc: ['Q#', '$$v']
 
 # Basic classification: Classify data with the QDK
 
-In this Quickstart, you will learn how to execute a quantum sequential classifier written in Q# using the Quantum Machine Learning library of the QDK. 
+In this Quickstart, you will learn how to run a quantum sequential classifier written in Q# using the Quantum Machine Learning library of the QDK. 
 
 In this guide we will use the half-moon dataset, using a classifier structure defined in Q#.
 
@@ -25,7 +25,7 @@ In this guide we will use the half-moon dataset, using a classifier structure de
 Your host program consists of three parts:
 
 - Load the dataset and choose a set of starting parameters for your model.
-- Execute training to determine the parameters and bias of the model.
+- Run training to determine the parameters and bias of the model.
 - Validate the model to determine its accuracy
 
     ### [Python with Visual Studio Code or the Command Line](#tab/tabid-python)
@@ -63,7 +63,7 @@ Your host program consists of three parts:
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
-    Then press F5, the program will start execution and a new windows will pop-up with the following results: 
+    Press F5, and the program will start to run. A new window will display the following results: 
 
     ```bash
     $ dotnet run

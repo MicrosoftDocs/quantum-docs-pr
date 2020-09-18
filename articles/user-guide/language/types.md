@@ -274,13 +274,13 @@ These are called the *signature* of the callable.
 
 *Operations* have certain additional characteristics that are expressed as part of the operation type. 
 Such characteristics include information about which *functors* the operation supports.
-For example, if the execution of the operation relies on the state of other qubits, then it should support the `Controlled` functor; if the operation has an inverse, then it should support the `Adjoint` functor.
+For example, if the running of the operation relies on the state of other qubits, then it should support the `Controlled` functor; if the operation has an inverse, then it should support the `Adjoint` functor.
 
 > [!NOTE]
 > This article only discuss how functors alter the operation signature. For more details about functors and operations, see [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions). 
 
 To require support for the `Controlled` and/or `Adjoint` functor in an operation type, you need to add an annotation indicating the corresponding characteristics.
-The annotation `is Ctl` (for example, `(Qubit => Unit is Ctl)`) indicates that the operation is controllable. That is, its execution relies on the state of another qubit or qubits. 
+The annotation `is Ctl` (for example, `(Qubit => Unit is Ctl)`) indicates that the operation is controllable. That is, its run relies on the state of another qubit or qubits. 
 Similarly, the annotation `is Adj` indicates that the operation has an adjoint, that is, it can be "inverted" such that successively applying an operation and then its adjoint to a state leaves the state unchanged. 
 
 If you want to require that an operation of that type supports both the `Adjoint` and `Controlled` functor you can express this as `(Qubit => Unit is Adj + Ctl)`. 

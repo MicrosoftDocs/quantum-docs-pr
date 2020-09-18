@@ -17,8 +17,7 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: b
-    summary: the second number of which extended greatest common divisor is being
-      computed
+    summary: the second number of which extended greatest common divisor is being computed
     isPrimitive: true
     uid: BigInt
 output:
@@ -27,3 +26,4 @@ output:
   - summary: Greatest common divisor of $a$ and $b$
     isPrimitive: true
     uid: BigInt
+...

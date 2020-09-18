@@ -28,3 +28,4 @@ output:
       and false otherwise
     isPrimitive: true
     uid: Bool
+...

@@ -17,8 +17,7 @@ summary: |-
   The implementation makes use of @"microsoft.quantum.intrinsic.cnot"
   and @"microsoft.quantum.intrinsic.r1" gates.  The implementation of the
   adjoint operation is optimized and uses measurement-based uncomputation.
-syntax: 'operation ApplyXControlledOnTruthTableWithCleanTarget (func : BigInt, controlRegister
-  : Qubit[], target : Qubit) : Unit'
+syntax: 'operation ApplyXControlledOnTruthTableWithCleanTarget (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit'
 input:
   content: '(func : BigInt, controlRegister : Qubit[], target : Qubit)'
   types:
@@ -45,3 +44,4 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.synthesis.applyxcontrolledontruthtable
+...

@@ -22,3 +22,4 @@ output:
   - summary: The base-2 logarithm $y = \log_2(x)$ such that $x = 2^y$.
     isPrimitive: true
     uid: Double
+...

@@ -10,12 +10,9 @@ namespace: microsoft.quantum.arithmetic
 summary: |-
   Multiply signed integer `xs` by signed integer `ys` and store
   the result in `result`, which must be zero initially.
-syntax: 'operation MultiplySI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian,
-  ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)
-  : Unit'
+syntax: 'operation MultiplySI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
-  content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian,
-    result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
+  content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
   types:
   - name: xs
     summary: n-bit multiplicand (SignedLittleEndian)
@@ -36,3 +33,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

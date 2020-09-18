@@ -32,3 +32,4 @@ output:
 typeParameters:
 - uid: "'Element"
   summary: The type of each element in each of the two input arrays.
+...

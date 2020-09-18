@@ -23,8 +23,7 @@ remarks: |-
   See the figure on
   [ Page 6 of arXiv:quant-ph/0008033v1 ](https://arxiv.org/pdf/quant-ph/0008033.pdf#page=6)
   for the circuit diagram and explanation.
-syntax: 'operation IncrementPhaseByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)
-  : Unit'
+syntax: 'operation IncrementPhaseByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 references: |-
   - [ *Thomas G. Draper*,
     arXiv:quant-ph/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)
@@ -51,3 +50,4 @@ functors:
 seeAlso:
 - incrementbyintegerbe
 - incrementbyintegerle
+...

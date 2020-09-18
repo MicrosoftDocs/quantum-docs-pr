@@ -7,13 +7,10 @@ uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
 name: AmpAmpByOracle
 type: function
 namespace: microsoft.quantum.amplitudeamplification
-summary: AmpAmpByOracle has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification"
-  instead.
-syntax: 'function AmpAmpByOracle (nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle,
-  idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
+summary: AmpAmpByOracle has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification" instead.
+syntax: 'function AmpAmpByOracle (nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
-  content: '(nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle,
-    idxFlagQubit : Int)'
+  content: '(nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
   types:
   - name: nIterations
     isPrimitive: true
@@ -39,3 +36,4 @@ output:
     functors:
     - Adjoint
     - Controlled
+...

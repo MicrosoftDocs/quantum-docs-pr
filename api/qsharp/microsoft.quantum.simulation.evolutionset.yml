@@ -18,3 +18,4 @@ summary: |-
   which are operations
   parameterized by a real number representing time
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
+...

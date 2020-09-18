@@ -36,3 +36,4 @@ output:
   types:
   - isPrimitive: true
     uid: Bool
+...

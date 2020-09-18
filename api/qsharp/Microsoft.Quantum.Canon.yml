@@ -76,8 +76,7 @@ functions:
     Given outer and inner operations, returns a new operation that
     conjugates the inner operation by the outer operation.
 - uid: microsoft.quantum.canon.controlledonbitstring
-  summary: Returns a unitary operation that applies an oracle on the target register
-    if the control register state corresponds to a specified bit mask.
+  summary: Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
 - uid: microsoft.quantum.canon.controlledonint
   summary: |-
     Returns a unitary operator that applies an oracle on the target register
@@ -361,25 +360,19 @@ operations:
 - uid: microsoft.quantum.canon.applyifone
   summary: Applies an operation conditioned on a classical result value being one.
 - uid: microsoft.quantum.canon.applyifonea
-  summary: Applies an adjointable operation conditioned on a classical result value
-    being one.
+  summary: Applies an adjointable operation conditioned on a classical result value being one.
 - uid: microsoft.quantum.canon.applyifonec
-  summary: Applies a controllable operation conditioned on a classical result value
-    being one.
+  summary: Applies a controllable operation conditioned on a classical result value being one.
 - uid: microsoft.quantum.canon.applyifoneca
-  summary: Applies a unitary operation conditioned on a classical result value being
-    one.
+  summary: Applies a unitary operation conditioned on a classical result value being one.
 - uid: microsoft.quantum.canon.applyifzero
   summary: Applies an operation conditioned on a classical result value being zero.
 - uid: microsoft.quantum.canon.applyifzeroa
-  summary: Applies an adjointable operation conditioned on a classical result value
-    being zero.
+  summary: Applies an adjointable operation conditioned on a classical result value being zero.
 - uid: microsoft.quantum.canon.applyifzeroc
-  summary: Applies a controllable operation conditioned on a classical result value
-    being zero.
+  summary: Applies a controllable operation conditioned on a classical result value being zero.
 - uid: microsoft.quantum.canon.applyifzeroca
-  summary: Applies a unitary operation conditioned on a classical result value being
-    zero.
+  summary: Applies a unitary operation conditioned on a classical result value being zero.
 - uid: microsoft.quantum.canon.applylowdepthand
   summary: |-
     Inverts a given target qubit if and only if both control qubits are in
@@ -479,8 +472,7 @@ operations:
 - uid: microsoft.quantum.canon.applyseriesofopsc
   summary: Applies a list of ops and their targets sequentially on an array. (Controlled)
 - uid: microsoft.quantum.canon.applyseriesofopsca
-  summary: Applies a list of ops and their targets sequentially on an array. (Adjoint
-    + Controlled)
+  summary: Applies a list of ops and their targets sequentially on an array. (Adjoint + Controlled)
 - uid: microsoft.quantum.canon.applytoeach
   summary: Applies a single-qubit operation to each element in a register.
 - uid: microsoft.quantum.canon.applytoeacha
@@ -562,8 +554,7 @@ operations:
     Applies an operation to the first two qubits in the register.
     The modifier `CA` indicates that the operation is controllable and adjointable.
 - uid: microsoft.quantum.canon.applytopartition
-  summary: Applies a pair of operations to a given partition of a register into two
-    parts.
+  summary: Applies a pair of operations to a given partition of a register into two parts.
 - uid: microsoft.quantum.canon.applytopartitiona
   summary: |-
     Applies a pair of operations to a given partition of a register into two parts.
@@ -912,3 +903,4 @@ newtypes:
     > Deprecated
 
     ResultStack has been deprecated.
+...

@@ -9,3 +9,4 @@ type: newtype
 namespace: microsoft.quantum.canon
 summary: ResultStack has been deprecated.
 syntax: newtype ResultStack = (Int, Int, Result[]);
+...

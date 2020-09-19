@@ -57,3 +57,4 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of `array` elements.
+...

@@ -11,3 +11,4 @@ summary: |-
   Format of data passed from C# to Q# to represent a term of the Hamiltonian.
   The meaning of the data represented is determined by the algorithm that receives it.
 syntax: newtype HTerm = (Int[], Double[]);
+...

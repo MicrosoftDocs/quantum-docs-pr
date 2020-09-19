@@ -15,15 +15,12 @@ summary: |-
   U\ket{p}\ket{\psi} = \ket{p}Z\_p\ket{\psi}
   \end{align}
   $$
-syntax: 'operation SelectZ (indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian,
-  targetRegister : Qubit[]) : Unit'
+syntax: 'operation SelectZ (indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
 input:
-  content: '(indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister
-    : Qubit[])'
+  content: '(indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
   types:
   - name: indexRegister
-    summary: The state $\ket{p}$ of this register determines the qubit on which $Z$
-      is applied.
+    summary: The state $\ket{p}$ of this register determines the qubit on which $Z$ is applied.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: targetRegister
     summary: Register of qubits on which the Pauli operators are applied.
@@ -38,3 +35,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

@@ -24,15 +24,13 @@ summary: |-
 remarks: |-
   `coefficients` will be padded with elements $\theta_j = 0.0$ if
   fewer than $2^n$ are specified.
-syntax: 'operation ApproximatelyMultiplexZ (tolerance : Double, coefficients : Double[],
-  control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+syntax: 'operation ApproximatelyMultiplexZ (tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 references: |-
   - Synthesis of Quantum Logic Circuits
     Vivek V. Shende, Stephen S. Bullock, Igor L. Markov
     https://arxiv.org/abs/quant-ph/0406176
 input:
-  content: '(tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian,
-    target : Qubit)'
+  content: '(tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
   - name: tolerance
     summary: A tolerance below which small coefficients are truncated.
@@ -64,3 +62,4 @@ functors:
 - Controlled
 seeAlso:
 - multiplexz
+...

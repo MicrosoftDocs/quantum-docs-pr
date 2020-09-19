@@ -12,3 +12,4 @@ summary: |-
   the first element of the tuple and `q` is the second element
   of the tuple.
 syntax: newtype BigFraction = (BigInt, BigInt);
+...

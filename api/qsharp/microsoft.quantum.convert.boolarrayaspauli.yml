@@ -11,8 +11,7 @@ summary: |-
   Given a bit string, returns a multi-qubit Pauli operator
   represented as an array of single-qubit Pauli operators.
 remarks: The Boolean array and the quantum register must be of equal length.
-syntax: 'function BoolArrayAsPauli (pauli : Pauli, bitApply : Bool, bits : Bool[])
-  : Pauli[]'
+syntax: 'function BoolArrayAsPauli (pauli : Pauli, bitApply : Bool, bits : Bool[]) : Pauli[]'
 input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[])'
   types:
@@ -35,3 +34,4 @@ output:
   - isArray: true
     isPrimitive: true
     uid: Pauli
+...

@@ -10,16 +10,9 @@ namespace: microsoft.quantum.machinelearning
 summary: |-
   Given the structure of a sequential classifier, trains the classifier
   on a given labeled training set.
-syntax: 'operation TrainSequentialClassifier (models : Microsoft.Quantum.MachineLearning.SequentialModel[],
-  samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions,
-  trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule
-  : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel,
-  Int)'
+syntax: 'operation TrainSequentialClassifier (models : Microsoft.Quantum.MachineLearning.SequentialModel[], samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel, Int)'
 input:
-  content: '(models : Microsoft.Quantum.MachineLearning.SequentialModel[], samples
-    : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions,
-    trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule
-    : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
+  content: '(models : Microsoft.Quantum.MachineLearning.SequentialModel[], samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
   types:
   - name: models
     summary: An array of models to be used as starting points during training.
@@ -62,3 +55,4 @@ output:
 seeAlso:
 - microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
 - microsoft.quantum.machinelearning.validatesequentialclassifier
+...

@@ -129,3 +129,4 @@ newtypes:
   summary: |-
     The results from having validated a classifier against a set of
     samples.
+...

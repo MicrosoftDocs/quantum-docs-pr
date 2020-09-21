@@ -2,7 +2,7 @@
 title: Quantum computing history and background
 description: Learn about the history of quantum computing, some background describing how it works, and about the Microsoft Quantum Development Kit. 
 author: QuantumWriter
-ms.author: nawiebe
+ms.author: v-benbra
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article

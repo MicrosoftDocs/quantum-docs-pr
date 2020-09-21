@@ -2,7 +2,7 @@
 title: Width counter - Quantum Development Kit 
 description: Learn about the Microsoft QDK width counter, which uses the Quantum trace simulator to count the number of qubits allocated and borrowed by operations in a Q# program. 
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter

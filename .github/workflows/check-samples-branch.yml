@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Check that samples branch refers to master.
+      - name: Check that samples branch refers to main.
         run: |
           $configPath = ".openpublishing.publish.config.json";
           $config = Get-Content $configPath | ConvertFrom-Json;
@@ -16,7 +16,9 @@ jobs:
             $_.url -eq "https://github.com/microsoft/quantum"
           }
           if ($samplesRepo.branch -ne "main") {
-            Write-Host "::error file=$configPath::Samples repository branch is not set to master for a PR targeting master."
+
+            Write-Host "::error file=$configPath::Samples repository branch is not set to main for a PR targeting main."
+
             exit 1;
           }
         shell: pwsh

@@ -3,7 +3,7 @@ title: Diagnostics in the Q# standard libraries
 description: Learn about the diagnostic functions and operations in the Q# standard libraries used to catch mistakes or errors in quantum programs. 
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com 
+ms.author: chgranad 
 ms.topic: article
 no-loc: ['Q#', '$$v']
 ---
@@ -61,7 +61,7 @@ On target machines which do not allow evaluation of assertions, calls to <xref:m
 
 More generally, the <xref:microsoft.quantum.diagnostics.assertmeasurement> operation asserts that measuring the given qubits in the
 given Pauli basis will always have the given result.
-If the assertion fails, the execution ends by calling `fail` with the
+If the assertion fails, the run ends by calling `fail` with the
 given message.
 By default, this operation is not implemented; simulators that can support it
 should provide an implementation that performs runtime checking.
@@ -71,8 +71,8 @@ Since `AssertMeasurement` is a function with an empty tuple as its output type, 
 The <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> operation function asserts that measuring the given qubits in the
 given Pauli basis will have the given result with the given probability,
 within some tolerance.
-Tolerance is additive (e.g. `abs(expected-actual) < tol`).
-If the assertion fails, the execution ends by calling `fail`
+Tolerance is additive (for example, `abs(expected-actual) < tol`).
+If the assertion fails, the run ends by calling `fail`
 with the given message.
 By default, this operation is not implemented; simulators that can support it
 should provide an implementation that performs runtime checking.

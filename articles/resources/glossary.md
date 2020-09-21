@@ -1,9 +1,9 @@
 ---
 title: Quantum computing glossary
 description: A glossary of common terms, actions and objects used in quantum computing.
-author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com 
-ms.date: 12/11/2017
+author: bradben
+ms.author: v-benbra 
+ms.date: 9/1/2020
 ms.topic: article
 uid: microsoft.quantum.glossary
 no-loc: ['Q#', '$$v', '$$', "$$", '$', "$", $, $$, '\cdots', 'bmatrix', '\ddots', '\equiv', '\sum', '\begin', '\end', '\sqrt', '\otimes', '{', '}', '\text', '\phi', '\kappa', '\psi', '\alpha', '\beta', '\gamma', '\delta', '\omega', '\bra', '\ket', '\boldone', '\\\\', '\\', '=', '\frac', '\text', '\mapsto', '\dagger', '\to', '\begin{cases}', '\end{cases}', '\operatorname', '\braket', '\id', '\expect', '\defeq', '\variance', '\dd', '&', '\begin{align}', '\end{align}', '\Lambda', '\lambda', '\Omega', '\mathrm', '\left', '\right', '\qquad', '\times', '\big', '\langle', '\rangle', '\bigg', '\Big', '|', '\mathbb', '\vec', '\in', '\texttt', '\ne', '<', '>', '\leq', '\geq', '~~', '~', '\begin{bmatrix}', '\end{bmatrix}', '\_']
@@ -96,7 +96,7 @@ A label for a collection of related names (i.e., [operations](xref:microsoft.qua
 
 ## Operation
 
-The basic unit of quantum execution in Q#. It is roughly equivalent to a function in C, C++ or Python, or a static method in C# or Java. For more information, see [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
+The basic unit of quantum computation in Q#. It is roughly equivalent to a function in C, C++ or Python, or a static method in C# or Java. For more information, see [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## Operator application
 

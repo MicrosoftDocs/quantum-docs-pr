@@ -2,7 +2,7 @@
 title: Operations and functions in Q#
 description: How to define and call operations and functions, as well the controlled and adjoint operation specializations.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
@@ -42,7 +42,7 @@ Lastly, `Unit` defines that the operation's output is empty.
 Operations can also return more interesting types than `Unit`.
 For instance, the <xref:microsoft.quantum.intrinsic.m> operation returns an output of type `Result`, representing having performed a measurement.  You can pass it from an operation to another operation or use it with the `let` keyword to define a new variable.
 
-This approach allows for representing classical computation that interacts with quantum operations at a low level, such as in [superdense coding](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding):
+This approach allows for representing classical computation that interacts with quantum operations at a low level, such as in [superdense coding](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding):
 
 ```qsharp
 operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
@@ -630,7 +630,7 @@ That is, an operation or function can call itself, or it can call another callab
 There are two important comments about the use of recursion, however:
 
 - The use of recursion in operations is likely to interfere with certain optimizations.
-  This interference can have a substantial impact on the execution time of the algorithm.
+  This interference can have a substantial impact on the run time of the algorithm.
 - When running on an actual quantum device, stack space might be limited, and so deep recursion can lead to a runtime error.
   In particular, the Q# compiler and runtime do not identify and optimize tail recursion.
 

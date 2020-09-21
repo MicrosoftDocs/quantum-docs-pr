@@ -2,7 +2,7 @@
 title: Quick reference pages
 description: Quick reference pages for Q#
 author: gillenhaalb
-ms.author:  a-gibec@microsoft.com
+ms.author:  a-gibec
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref
 no-loc: ['Q#', '$$v']

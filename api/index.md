@@ -1,9 +1,9 @@
 ---
-uid: microsoft.quantum.standardlibsintro
-title: Q# standard library for Microsoft Quantum
-description: Reference documentation for the Q# standard library for Microsoft Quantum
-author: natke
-ms.author: nakersha
+uid: microsoft.quantum.apiref-intro
+title: Q# libraries for Microsoft Quantum
+description: Reference documentation for the Q# libraries for Microsoft Quantum
+author: bradben
+ms.author: v-benbra
 ms.date: 09/04/2019
 ms.topic: landing-page
 ---

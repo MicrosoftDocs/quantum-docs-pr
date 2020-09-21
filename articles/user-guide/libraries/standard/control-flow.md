@@ -1,11 +1,11 @@
 ---
 # Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Flow controls in the Q# standard libararies
+title: Flow controls in the Q# standard libraries
 description: Learn about the flow control operations and functions in the Microsoft Q# standard library. 
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
-ms.author: martinro@microsoft.com 
-ms.date: 12/11/2017
+ms.author: martinro
+ms.date: 9/14/2020
 ms.topic: article
 no-loc: ['Q#', '$$v']
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
@@ -15,11 +15,12 @@ no-loc: ['Q#', '$$v']
 # ms.technology: tech-name-from-white-list
 ---
 
-# Higher-Order Control Flow #
+# Higher-order control flow #
 
-One of the primary roles of the standard library is to make it easier to express high-level algorithmic ideas as [quantum programs](https://en.wikipedia.org/wiki/Quantum_programming).
-Thus, the Q# canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.
-Jumping immediately into an example, consider the case in which one wants to construct a "CNOT ladder" on a register:
+One of the primary roles of the Q# standard library is to make it easier to express high-level algorithmic ideas as [quantum programs](xref:microsoft.quantum.guide.basics).
+Thus, the Q# canon provides a variety of different flow control constructs, each implemented using [partial application](xref:microsoft.quantum.glossary#partial-application) of functions and operations.
+
+As an example, consider the case in which one wants to construct a "CNOT ladder" on a register:
 
 ```qsharp
 let nQubits = Length(register);
@@ -29,7 +30,7 @@ CNOT(register[1], register[2]);
 CNOT(register[nQubits - 2], register[nQubits - 1]);
 ```
 
-We can express this pattern by using iteration and `for` loops:
+You can express this pattern by using iteration and `for` loops:
 
 ```qsharp
 for (idxQubit in 0..nQubits - 2) {
@@ -37,19 +38,19 @@ for (idxQubit in 0..nQubits - 2) {
 }
 ```
 
-Expressed in terms of <xref:microsoft.quantum.canon.applytoeachca> and array manipulation functions such as <xref:microsoft.quantum.arrays.zip>, however, this is much shorter and easier to read:
+However, the example is much shorter and easier to read when expressed in terms of <xref:microsoft.quantum.canon.applytoeachca> and array manipulation functions such as <xref:microsoft.quantum.arrays.zip>:
 
 ```qsharp
 ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 ```
 
-In the rest of this section, we will provide a number of examples of how to use the various flow control operations and functions provided by the canon to compactly express quantum programs.
+This article provides a number of examples of how to use the various flow control operations and functions in Q# to compactly express quantum programs.
 
-## Applying Operations and Functions over Arrays and Ranges ##
+## Applying operations and functions over arrays and ranges ##
 
-One of the primary abstractions provided by the canon is that of iteration.
-For instance, consider a unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.
-In Q#, we might use <xref:microsoft.quantum.arrays.indexrange> to represent this as as a `for` loop over a register:
+One of the primary abstractions provided by Q# is that of iteration.
+For example, consider a unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.
+In Q#, we might use <xref:microsoft.quantum.arrays.indexrange> to represent this as a `for` loop over a register:
 
 ```qsharp
 /// # Summary
@@ -63,11 +64,11 @@ operation ApplyHadamardToAll(
 }
 ```
 
-We can then use this new operation as `HAll(register)` to apply $H \otimes H \otimes \cdots \otimes H$.
+You can then use this new operation as `HAll(register)` to apply $H \otimes H \otimes \cdots \otimes H$.
 
 This is cumbersome to do, however, especially in a larger algorithm.
-Moreover, this approach is specialized to the particular operation that we wish to apply to each qubit.
-We can use the fact that operations are first-class to express this algorithmic concept more explicitly:
+Moreover, this approach is specialized to the particular operation that you wish to apply to each qubit.
+You can use the fact that operations are first-class to express this algorithmic concept more explicitly:
 
 ```qsharp
 ApplyToEachCA(H, register);
@@ -82,16 +83,16 @@ ApplyToEachCA(Adjoint U, register);
 ```
 
 In particular, this means that calls to `ApplyToEachCA` can appear in operations for which an adjoint specialization is auto-generated.
-Similarly, <xref:microsoft.quantum.canon.applytoeachindex> is useful for representing patterns of the form `U(0, targets[0]); U(1, targets[1]); ...`, and offers versions for each combination of functors supported by its input.
+Similarly, the <xref:microsoft.quantum.canon.applytoeachindex> operation is useful for representing patterns of the form `U(0, targets[0]); U(1, targets[1]); ...`, and offers versions for each combination of functors supported by its input.
 
 > [!TIP]
-> `ApplyToEach` is type-parameterized such that it can be used with operations that take inputs other than `Qubit`.
+> `ApplyToEach` is type-parameterized such that it can be used with operations that take inputs other than type `Qubit`.
 > For example, suppose that `codeBlocks` is an array of <xref:microsoft.quantum.errorcorrection.logicalregister> values that need to be recovered.
-> Then `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` will apply the error-correcting code `code` and recovery function `recoveryFn` to each block independently.
-> This holds even for classical inputs: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` will apply a rotation of $\pi / 2$ about $X$ followed by a rotation of $pi / 3$ about $Y$.
+> Then `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` would apply the error-correcting code `code` and recovery function `recoveryFn` to each block independently.
+> This holds for classical inputs as well. For example,  `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))`  applies a rotation of $\pi / 2$ about $X$, followed by a rotation of $pi / 3$ about $Y$.
 
-The Q# canon also provides support for classical enumeration patterns familiar to functional programming.
-For instance, <xref:microsoft.quantum.arrays.fold> implements the pattern $f(f(f(s\_{\text{initial}}, x\_0), x\_1), \dots)$ for reducing a function over a list.
+Q# also provides support for classical enumeration patterns familiar to functional programming.
+For example, <xref:microsoft.quantum.arrays.fold> implements the pattern $f(f(f(s\_{\text{initial}}, x\_0), x\_1), \dots)$ for reducing a function over a list.
 This pattern can be used to implement sums, products, minima, maxima and other such functions:
 
 ```qsharp
@@ -102,13 +103,13 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Similarly, functions like <xref:microsoft.quantum.arrays.mapped> and <xref:microsoft.quantum.arrays.mappedbyindex> can be used to express functional programming concepts in Q#.
+Similarly, functions such as <xref:microsoft.quantum.arrays.mapped> and <xref:microsoft.quantum.arrays.mappedbyindex> can be used to express functional programming concepts in Q#.
 
-## Composing Operations and Functions ##
+## Composing operations and functions ##
 
-The control flow constructs offered by the canon take operations and functions as their inputs, such that it is helpful to be able to compose several operations or functions into a single callable.
-For instance, the pattern $UVU^{\dagger}$ is extremely common in quantum programming, such that the canon provides the operation <xref:microsoft.quantum.canon.applywith> as an abstraction for this pattern.
-This abstraction also allows for more efficient compliation into circuits, as `Controlled` acting on the sequence `U(qubit); V(qubit); Adjoint U(qubit);` does not need to act on each `U`.
+The control flow constructs in Q# take operations and functions as their inputs, which makes it possible to include several operations or functions into a single callable.
+For example, the pattern $UVU^{\dagger}$ is very common in quantum programming, such that Q# provides the operation <xref:microsoft.quantum.canon.applywith> as an abstraction for this pattern.
+This abstraction also allows for more efficient compilation into circuits, as `Controlled` acting on the sequence `U(qubit); V(qubit); Adjoint U(qubit);` does not need to act on each `U`.
 To see this, let $c(U)$ be the unitary representing `Controlled U([control], target)` and let $c(V)$ be defined in the same way.
 Then for an arbitrary state $\ket{\psi}$,
 \begin{align}
@@ -124,12 +125,11 @@ On the other hand,
         & = \ket{0} \otimes (UU^\dagger \ket{\psi}) \\\\
         & = (\boldone \otimes U) (c(V)) (\boldone \otimes U^\dagger) \ket{0} \otimes \ket{\psi}.
 \end{align}
-By linearity, we can conclude that we can factor $U$ out in this way for all input states.
-That is, $c(UVU^\dagger) = U c(V) U^\dagger$.
-Since controlling operations can be expensive in general, using controlled variants such as `WithC` and `WithCA` can help reduce the number of control functors that need to be applied.
+By linearity, you can conclude that you can factor $U$ out in this way for all input states, that is, $c(UVU^\dagger) = U c(V) U^\dagger$.
+Since controlling operations are generally expensive, using controlled variants such as `WithC` and `WithCA` can help reduce the number of control functors that need to be applied.
 
 > [!NOTE]
-> One other consequence of factoring out $U$ is that we need not even know how to apply the `Controlled` functor to `U`.
+> One other consequence of factoring out $U$ is that you need to know how to apply the `Controlled` functor to `U`.
 > `ApplyWithCA` therefore has a weaker signature than might be expected:
 > ```qsharp
 > ApplyWithCA<'T> : (('T => Unit is Adj),
@@ -137,28 +137,31 @@ Since controlling operations can be expensive in general, using controlled varia
 > ```
 
 Similarly, <xref:microsoft.quantum.canon.bound> produces operations which apply a sequence of other operations in turn.
-For instance, the following are equivalent:
+For example, the following statements are equivalent:
 
 ```qsharp
 H(qubit); X(qubit);
 Bound([H, X], qubit);
 ```
 
-Combining with iteration patterns can make this especially useful:
+This becomes especially useful when combined with iteration patterns:
 
 ```qsharp
 // Bracket the quantum Fourier transform with $XH$ on each qubit.
 ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
-### Time-Ordered Composition ###
+### Time-ordered composition ###
 
-We can go still further by thinking of flow control in terms of partial application and classical functions, and can model even fairly sophisticated quantum concepts in terms of classical flow control.
-This analogy is made precise by the recognition that unitary operators correspond exactly to the side effects of calling operations, such that any decomposition of unitary operators in terms of other unitary operators corresponds to constructing a particular calling sequence for classical subroutines which emit instructions to act as particular unitary operators.
+You can go still further by thinking of flow control in terms of partial application and classical functions, and can model even fairly sophisticated quantum concepts in terms of classical flow control.
+This analogy is made precise by the recognition that unitary operators correspond exactly to the side effects of calling operations. As a result, any decomposition of unitary operators in terms of other unitary operators corresponds to constructing a particular calling sequence for classical subroutines which emit instructions to act as particular unitary operators.
 Under this view, `Bound` is precisely the representation of the matrix product, since `Bound([A, B])(target)` is equivalent to `A(target); B(target);`, which in turn is the calling sequence corresponding to $BA$.
 
 A more sophisticated example is the [Trotter–Suzuki expansion](https://arxiv.org/abs/math-ph/0506007v1).
-As discussed in the Dynamical Generator Representation section of [data structures](xref:microsoft.quantum.libraries.data-structures), the Trotter–Suzuki expansion provides a particularly useful way of expressing matrix exponentials.
+
+> [NOTE!]
+> 
+As discussed in the Dynamical Generator Representation section of [data structures](xref:microsoft.quantum.libraries.data-structures#dynamical-generator-modeling), the Trotter–Suzuki expansion provides a particularly useful way of expressing matrix exponentials.
 For instance, applying the expansion at its lowest order yields that for any operators $A$ and $B$ such that $A = A^\dagger$ and $B = B^\dagger$,
 \begin{align}
     \tag{★} \label{eq:trotter-suzuki-0}

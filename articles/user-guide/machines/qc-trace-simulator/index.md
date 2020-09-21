@@ -81,7 +81,7 @@ The QDK includes five tools that you can use with the quantum trace simulator to
 |-----| -----|
 |[Distinct inputs checker](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |Checks for potential conflicts with shared qubits |
 |[Invalidated qubits use checker](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Checks if the program applies an operation to a qubit that is already released |
-|[Primitive operations counter](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Counts the number of primitive executions used by every operation invoked in a quantum program  |
+|[Primitive operations counter](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Counts the number of primitive processes used by every operation invoked in a quantum program  |
 |[Depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Gathers counts that represent the lower bound of the depth of every operation invoked in a quantum program   |
 |[Width counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Counts the number of qubits allocated and borrowed by each operation in a quantum program |
 

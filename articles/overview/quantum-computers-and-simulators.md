@@ -26,7 +26,7 @@ Quantum computers face a multitude of challenges to operate correctly. Error cor
 
 ## Quantum simulators
 
-Quantum simulators that run on classical computers allow you to simulate the execution of quantum algorithms on a quantum system.  Microsoft’s Quantum Development Kit (QDK) includes a full-state vector simulator along with other specialized quantum simulators.
+Quantum simulators that run on classical computers allow you to simulate the computation of quantum algorithms on a quantum system.  Microsoft’s Quantum Development Kit (QDK) includes a full-state vector simulator along with other specialized quantum simulators.
 
 ## Topological qubit
 

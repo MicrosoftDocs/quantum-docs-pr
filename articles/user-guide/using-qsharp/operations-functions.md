@@ -630,7 +630,7 @@ That is, an operation or function can call itself, or it can call another callab
 There are two important comments about the use of recursion, however:
 
 - The use of recursion in operations is likely to interfere with certain optimizations.
-  This interference can have a substantial impact on the execution time of the algorithm.
+  This interference can have a substantial impact on the run time of the algorithm.
 - When running on an actual quantum device, stack space might be limited, and so deep recursion can lead to a runtime error.
   In particular, the Q# compiler and runtime do not identify and optimize tail recursion.
 

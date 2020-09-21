@@ -96,7 +96,7 @@ A label for a collection of related names (i.e., [operations](xref:microsoft.qua
 
 ## Operation
 
-The basic unit of quantum execution in Q#. It is roughly equivalent to a function in C, C++ or Python, or a static method in C# or Java. For more information, see [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
+The basic unit of quantum computation in Q#. It is roughly equivalent to a function in C, C++ or Python, or a static method in C# or Java. For more information, see [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## Operator application
 

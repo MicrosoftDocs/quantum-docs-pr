@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyand
 name: ApplyAnd
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Inverts a given target qubit if and only if both control qubits are in the 1 state,
   using measurement to perform the adjoint operation.
@@ -23,7 +23,8 @@ summary: |-
   operation.  The adjoint controlled application requires `2^c - 1` `Rz`
   gates (with an angle twice the size of the non-adjoint operation), no
   helper qubit and is not optimized for depth.
-syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) :
+  Unit'
 references: |-
   - Cody Jones: "Novel constructions for the fault-tolerant Toffoli gate",
     Phys. Rev. A 87, 022328, 2013
@@ -59,4 +60,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.delayed
 name: Delayed
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Returns an operation that applies
   given operation with given argument.
@@ -52,4 +52,3 @@ seeAlso:
 - microsoft.quantum.canon.delayeda
 - microsoft.quantum.canon.delayedca
 - microsoft.quantum.canon.delay
-...

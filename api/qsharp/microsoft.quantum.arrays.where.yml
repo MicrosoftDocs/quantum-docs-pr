@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.where
 name: Where
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Given a predicate and an array, returns the indices of that
   array where the predicate is true.
@@ -40,4 +40,3 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of `array` elements.
-...

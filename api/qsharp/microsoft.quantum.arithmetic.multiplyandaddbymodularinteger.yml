@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 name: MultiplyAndAddByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Performs a modular multiply-and-add by integer constants on a qubit register.
 
@@ -22,15 +22,19 @@ remarks: |-
     of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=7)
   - This operation corresponds to CMULT(a)MOD(N) in
     [arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
-syntax: 'operation MultiplyAndAddByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation MultiplyAndAddByModularInteger (constMultiplier : Int, modulus
+  : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian)
+  : Unit'
 input:
-  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian,
+    summand : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: constMultiplier
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: The modulus $N$ which addition and multiplication is taken with respect to.
+    summary: The modulus $N$ which addition and multiplication is taken with respect
+      to.
     isPrimitive: true
     uid: Int
   - name: multiplier
@@ -53,4 +57,3 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
-...

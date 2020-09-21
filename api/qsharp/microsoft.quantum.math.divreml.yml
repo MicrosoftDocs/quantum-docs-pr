@@ -6,9 +6,11 @@
 uid: microsoft.quantum.math.divreml
 name: DivRemL
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Divides one BigInteger value by another, returns the result and the remainder as a tuple.
-remarks: See [System.Numerics.BigInteger.DivRem](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.divrem) for more details.
+namespace: microsoft.quantum.math
+summary: Divides one BigInteger value by another, returns the result and the remainder
+  as a tuple.
+remarks: See [System.Numerics.BigInteger.DivRem](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.divrem)
+  for more details.
 syntax: 'function DivRemL (dividend : BigInt, divisor : BigInt) : (BigInt, BigInt)'
 input:
   content: '(dividend : BigInt, divisor : BigInt)'
@@ -27,4 +29,3 @@ output:
       uid: BigInt
     - isPrimitive: true
       uid: BigInt
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.sequencei
 name: SequenceI
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Get an array of integers in a given interval.
 examples: |-
   ```qsharp
@@ -38,4 +38,3 @@ output:
     isArray: true
     isPrimitive: true
     uid: Int
-...

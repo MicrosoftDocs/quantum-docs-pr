@@ -6,13 +6,15 @@
 uid: microsoft.quantum.canon.applytopartitionca
 name: ApplyToPartitionCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a pair of operations to a given partition of a register into two parts.
   The modifier `CA` indicates that the operation is controllable and adjointable.
-syntax: 'operation ApplyToPartitionCA (op : ((Qubit[], Qubit[]) => Unit is Ctl + Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit'
+syntax: 'operation ApplyToPartitionCA (op : ((Qubit[], Qubit[]) => Unit is Ctl + Adj),
+  numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit'
 input:
-  content: '(op : ((Qubit[], Qubit[]) => Unit is Ctl + Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
+  content: '(op : ((Qubit[], Qubit[]) => Unit is Ctl + Adj), numberOfQubitsToFirstArgument
+    : Int, target : Qubit[])'
   types:
   - name: op
     summary: The pair of operations to be applied to the given partition.
@@ -55,4 +57,3 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applytopartition
-...

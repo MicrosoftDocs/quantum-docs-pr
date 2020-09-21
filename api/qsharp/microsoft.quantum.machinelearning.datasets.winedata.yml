@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.datasets.winedata
 name: WineData
 type: operation
-namespace: Microsoft.Quantum.MachineLearning.Datasets
+namespace: microsoft.quantum.machinelearning.datasets
 syntax: 'operation WineData () : Microsoft.Quantum.MachineLearning.LabeledSample[]'
 input:
   content: ()
@@ -16,4 +16,3 @@ output:
   types:
   - isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.pnormalized
 name: PNormalized
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: |-
   Normalizes a vector of `Double`s in the `L(p)` norm.
 
@@ -33,4 +33,3 @@ output:
     uid: Double
 seeAlso:
 - pnorm
-...

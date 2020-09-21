@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.timedependentblockencoding
 name: TimeDependentBlockEncoding
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Represents a `BlockEncoding` that is controlled by a clock register.
 
@@ -20,5 +20,5 @@ summary: |-
   (\bra{0}\_a\otimes I_{ds})U(\ket{0}\_a\otimes I_{ds}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
   \end{align}
   $$.
-syntax: newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl);
-...
+syntax: newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit
+  is Adj + Ctl);

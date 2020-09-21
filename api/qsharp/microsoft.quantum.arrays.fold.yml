@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.fold
 name: Fold
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Iterates a function `f` through an array `array`, returning
   `f(f(f(initialState, array[0]), array[1]), ...)`.
@@ -19,7 +19,8 @@ examples: |-
       return Fold(Plus, 0.0, xs);
   }
   ```
-syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array : 'T[]) : 'State"
+syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array :\
+  \ 'T[]) : 'State"
 input:
   content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
   types:
@@ -60,4 +61,3 @@ typeParameters:
     argument and returns.
 - uid: "'T"
   summary: The type of `array` elements.
-...

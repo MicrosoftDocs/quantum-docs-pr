@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.signi
 name: SignI
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: SignI has been deprecated. Please use @"microsoft.quantum.math.signi" instead.
 syntax: 'function SignI (a : Int) : Int'
 input:
@@ -20,4 +20,3 @@ output:
   types:
   - isPrimitive: true
     uid: Int
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifelserca
 name: ApplyIfElseRCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies one of two unitary operations, depending on the value of a
   classical result.
@@ -14,9 +14,11 @@ summary: |-
   Given a result `result`, applies the operation `zeroOp` with `zeroInput` as
   its input when `result` is equal to `Zero`, and applies `oneOp(oneInput)`
   when `result == One`.
-syntax: "operation ApplyIfElseRCA (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit"
+syntax: "operation ApplyIfElseRCA (result : Result, (zeroOp : ('T => Unit is Adj +\
+  \ Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit"
 input:
-  content: "(result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U))"
+  content: "(result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T),\
+    \ (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U))"
   types:
   - name: result
     summary: |-
@@ -79,4 +81,3 @@ seeAlso:
 - microsoft.quantum.canon.applyifelserc
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
-...

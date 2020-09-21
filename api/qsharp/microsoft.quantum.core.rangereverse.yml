@@ -6,7 +6,7 @@
 uid: microsoft.quantum.core.rangereverse
 name: RangeReverse
 type: function
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: Returns a new range which is the reverse of the input range.
 remarks: |-
   Note that the reverse of a range is not simply `end`..`-step`..`start`, because
@@ -25,4 +25,3 @@ output:
   - summary: A new range that is the reverse of the given range.
     isPrimitive: true
     uid: Range
-...

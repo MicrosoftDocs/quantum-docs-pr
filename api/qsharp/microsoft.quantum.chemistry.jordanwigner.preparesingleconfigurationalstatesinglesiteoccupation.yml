@@ -6,11 +6,12 @@
 uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
 name: PrepareSingleConfigurationalStateSingleSiteOccupation
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: |-
   Simple state preparation of trial state by occupying
   spin-orbitals
-syntax: 'operation PrepareSingleConfigurationalStateSingleSiteOccupation (qubitIndices : Int[], qubits : Qubit[]) : Unit'
+syntax: 'operation PrepareSingleConfigurationalStateSingleSiteOccupation (qubitIndices
+  : Int[], qubits : Qubit[]) : Unit'
 input:
   content: '(qubitIndices : Int[], qubits : Qubit[])'
   types:
@@ -32,4 +33,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

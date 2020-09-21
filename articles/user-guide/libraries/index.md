@@ -1,9 +1,11 @@
 ---
 title: Quantum Development Kit Libraries
 description: Overview of the standard, chemistry, and numerics libraries included in the Microsoft Quantum Development Kit.
+
 author: bradben
 ms.author: v-benbra
 ms.date: 08/26/2020
+
 ms.topic: article
 uid: microsoft.quantum.libraries
 no-loc: ['Q#', '$$v']

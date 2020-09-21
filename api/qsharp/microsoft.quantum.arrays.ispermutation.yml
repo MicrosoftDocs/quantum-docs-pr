@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.ispermutation
 name: IsPermutation
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Outputs true if and only if a given array represents a permutation.
 
@@ -36,4 +36,3 @@ output:
   types:
   - isPrimitive: true
     uid: Bool
-...

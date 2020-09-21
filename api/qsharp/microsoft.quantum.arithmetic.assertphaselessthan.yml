@@ -6,10 +6,11 @@
 uid: microsoft.quantum.arithmetic.assertphaselessthan
 name: AssertPhaseLessThan
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Asserts that the `number` encoded in PhaseLittleEndian is less than `value`.
 remarks: The controlled version of this operation ignores controls.
-syntax: 'operation AssertPhaseLessThan (value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+syntax: 'operation AssertPhaseLessThan (value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)
+  : Unit'
 input:
   content: '(value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
@@ -28,4 +29,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

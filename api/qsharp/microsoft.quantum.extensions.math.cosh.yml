@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.cosh
 name: Cosh
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: Cosh has been deprecated. Please use @"microsoft.quantum.math.cosh" instead.
 syntax: 'function Cosh (theta : Double) : Double'
 input:
@@ -20,4 +20,3 @@ output:
   types:
   - isPrimitive: true
     uid: Double
-...

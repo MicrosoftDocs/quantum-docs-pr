@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.incrementbyinteger
 name: IncrementByInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Increments an unsigned quantum register by a classical integer,
   using phase rotations.
@@ -16,7 +16,8 @@ summary: |-
   Then, this operation implements the unitary $\ket{x} \mapsto \ket{x + a}$,
   where the addition is performed
   modulo $2^n$, where $n = \texttt{Length(target!)}$.
-syntax: 'operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)
+  : Unit'
 input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -37,4 +38,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

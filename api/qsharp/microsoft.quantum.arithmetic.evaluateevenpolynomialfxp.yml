@@ -6,11 +6,13 @@
 uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
 name: EvaluateEvenPolynomialFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Evaluates an even polynomial in a fixed-point representation.
-syntax: 'operation EvaluateEvenPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+syntax: 'operation EvaluateEvenPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint,
+  result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
-  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint,
+    result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
     summary: |-
@@ -36,4 +38,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

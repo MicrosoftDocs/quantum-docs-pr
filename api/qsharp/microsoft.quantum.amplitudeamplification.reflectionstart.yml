@@ -6,8 +6,9 @@
 uid: microsoft.quantum.amplitudeamplification.reflectionstart
 name: ReflectionStart
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Constructs a reflection about the all-zero string |0...0〉, which is the typical input state to amplitude amplification.
+namespace: microsoft.quantum.amplitudeamplification
+summary: Constructs a reflection about the all-zero string |0...0〉, which is the typical
+  input state to amplitude amplification.
 syntax: 'function ReflectionStart () : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: ()
@@ -19,4 +20,3 @@ output:
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle
-...

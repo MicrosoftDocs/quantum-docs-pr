@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.multiplybymodularinteger
 name: MultiplyByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Performs modular multiplication by an integer constant on a qubit register.
 
@@ -24,12 +24,14 @@ remarks: |-
     of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
   - This operation corresponds to Uₐ in
     [arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
-syntax: 'operation MultiplyByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation MultiplyByModularInteger (constMultiplier : Int, modulus : Int,
+  multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: constMultiplier
-    summary: Constant by which multiplier is being multiplied. Must be co-prime to modulus.
+    summary: Constant by which multiplier is being multiplied. Must be co-prime to
+      modulus.
     isPrimitive: true
     uid: Int
   - name: modulus
@@ -49,4 +51,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

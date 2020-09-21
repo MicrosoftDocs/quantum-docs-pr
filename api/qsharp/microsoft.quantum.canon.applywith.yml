@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applywith
 name: ApplyWith
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Given two operations, applies one as conjugated with the other.
 
@@ -18,9 +18,11 @@ remarks: |-
   The outer operation is always assumed to be adjointable, but does not
   need to be controllable in order for the combined operation to be
   controllable.
-syntax: "operation ApplyWith (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit), target : 'T) : Unit"
+syntax: "operation ApplyWith (outerOperation : ('T => Unit is Adj), innerOperation\
+  \ : ('T => Unit), target : 'T) : Unit"
 input:
-  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit), target : 'T)"
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit),\
+    \ target : 'T)"
   types:
   - name: outerOperation
     summary: |-
@@ -65,4 +67,3 @@ seeAlso:
 - applywitha
 - applywithc
 - applywithca
-...

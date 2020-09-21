@@ -1,7 +1,8 @@
 ---
 title: Quantum machine learning library
+description: Learn how machine learning is used on quantum systems
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 11/22/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.intro
@@ -76,4 +77,4 @@ A training case $(x,y) \in \mathcal{D}$ is considered a *misclassification* give
 
 This information should be enough to start playing with the code. However, if you want to learn more about this model, please read the original proposal: [*'Circuit-centric quantum classifiers', Maria Schuld, Alex Bocharov, Krysta Svore and Nathan Wiebe*](https://arxiv.org/abs/1804.00633)
 
-In addition to the code sample you will see in the next steps, you can also start exploring quantum classification in [this tutorial](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification) 
+In addition to the code sample you will see in the next steps, you can also start exploring quantum classification in [this tutorial](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/QuantumClassification) 

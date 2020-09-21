@@ -6,9 +6,10 @@
 uid: microsoft.quantum.math.cos
 name: Cos
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the cosine of the specified angle.
-remarks: See [System.Math.Cos](https://docs.microsoft.com/dotnet/api/system.math.cos) for more details.
+remarks: See [System.Math.Cos](https://docs.microsoft.com/dotnet/api/system.math.cos)
+  for more details.
 syntax: 'function Cos (theta : Double) : Double'
 input:
   content: '(theta : Double)'
@@ -21,4 +22,3 @@ output:
   types:
   - isPrimitive: true
     uid: Double
-...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.environment.getqubitsavailabletouse
 name: GetQubitsAvailableToUse
 type: operation
-namespace: Microsoft.Quantum.Environment
+namespace: microsoft.quantum.environment
 summary: Returns the number of qubits currently available to use.
 syntax: 'operation GetQubitsAvailableToUse () : Int'
 input:
@@ -23,4 +23,3 @@ output:
     uid: Int
 seeAlso:
 - getqubitsavailabletoborrow
-...

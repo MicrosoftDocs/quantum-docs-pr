@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.boundca
 name: BoundCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Given an array of operations acting on a single input,
   produces a new operation that
@@ -26,7 +26,8 @@ examples: |-
   ```qsharp
   U(x); V(x);
   ```
-syntax: "function BoundCA (operations : ('T => Unit is Adj + Ctl)[]) : ('T => Unit is Adj + Ctl)"
+syntax: "function BoundCA (operations : ('T => Unit is Adj + Ctl)[]) : ('T => Unit\
+  \ is Adj + Ctl)"
 input:
   content: "(operations : ('T => Unit is Adj + Ctl)[])"
   types:
@@ -68,4 +69,3 @@ typeParameters:
   summary: The target on which each of the operations in the array act.
 seeAlso:
 - microsoft.quantum.canon.bound
-...

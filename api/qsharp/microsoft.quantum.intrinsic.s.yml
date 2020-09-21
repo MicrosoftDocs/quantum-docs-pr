@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.s
 name: S
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: |-
   Applies the S gate to a single qubit.
 
@@ -34,4 +34,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

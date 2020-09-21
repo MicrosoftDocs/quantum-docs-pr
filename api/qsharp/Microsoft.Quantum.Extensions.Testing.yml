@@ -73,4 +73,3 @@ operations:
 
     AssertQubitTol has been deprecated. Please use @"microsoft.quantum.diagnostics.assertqubitwithintolerance" instead.
     Please use @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
-...

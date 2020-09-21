@@ -6,11 +6,12 @@
 uid: microsoft.quantum.canon.applytoeachindexc
 name: ApplyToEachIndexC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a single-qubit operation to each indexed element in a register.
   The modifier `C` indicates that the single-qubit operation is controllable.
-syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[]) : Unit"
+syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => Unit\
+  \ is Ctl), register : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[])"
   types:
@@ -46,4 +47,3 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
-...

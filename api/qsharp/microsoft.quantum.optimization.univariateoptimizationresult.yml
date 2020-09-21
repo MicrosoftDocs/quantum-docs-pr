@@ -6,7 +6,6 @@
 uid: microsoft.quantum.optimization.univariateoptimizationresult
 name: UnivariateOptimizationResult
 type: newtype
-namespace: Microsoft.Quantum.Optimization
+namespace: microsoft.quantum.optimization
 summary: Represents the result of optimizing a univariate function.
 syntax: newtype UnivariateOptimizationResult = (Double, Double);
-...

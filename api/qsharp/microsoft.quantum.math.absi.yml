@@ -6,9 +6,10 @@
 uid: microsoft.quantum.math.absi
 name: AbsI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the absolute value of an integer.
-remarks: See [System.Math.Abs](https://docs.microsoft.com/dotnet/api/system.math.abs) for more details.
+remarks: See [System.Math.Abs](https://docs.microsoft.com/dotnet/api/system.math.abs)
+  for more details.
 syntax: 'function AbsI (a : Int) : Int'
 input:
   content: '(a : Int)'
@@ -21,4 +22,3 @@ output:
   types:
   - isPrimitive: true
     uid: Int
-...

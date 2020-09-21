@@ -6,12 +6,12 @@
 uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
 name: TimeDependentSimulationAlgorithm
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Represents a time-dependent simulation algorithm.
 
   A time-dependent simulation technique converts an
   <xref:microsoft.quantum.simulation.evolutionschedule>
   to unitary time-evolution for some time-interval.
-syntax: newtype TimeDependentSimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionSchedule, Qubit[]) => Unit is Adj + Ctl);
-...
+syntax: newtype TimeDependentSimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionSchedule,
+  Qubit[]) => Unit is Adj + Ctl);

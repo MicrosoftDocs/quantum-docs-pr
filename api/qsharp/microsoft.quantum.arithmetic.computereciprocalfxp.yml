@@ -6,9 +6,10 @@
 uid: microsoft.quantum.arithmetic.computereciprocalfxp
 name: ComputeReciprocalFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Computes $1/x$ for a fixed-point number $x$.
-syntax: 'operation ComputeReciprocalFxP (x : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+syntax: 'operation ComputeReciprocalFxP (x : Microsoft.Quantum.Arithmetic.FixedPoint,
+  result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(x : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
@@ -16,7 +17,8 @@ input:
     summary: Fixed-point number to be inverted.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Fixed-point number that will hold the result. Must be initialized to $\ket{0.0}$.
+    summary: Fixed-point number that will hold the result. Must be initialized to
+      $\ket{0.0}$.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -26,4 +28,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

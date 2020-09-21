@@ -6,11 +6,10 @@
 uid: microsoft.quantum.random.complexdistribution
 name: ComplexDistribution
 type: newtype
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: Represents a univariate probability distribution over complex numbers.
 syntax: newtype ComplexDistribution = (Unit => Microsoft.Quantum.Math.Complex);
 seeAlso:
 - microsoft.quantum.random.continuousdistribution
 - microsoft.quantum.random.discretedistribution
 - microsoft.quantum.random.bigdiscretedistribution
-...

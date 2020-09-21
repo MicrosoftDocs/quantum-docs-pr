@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.message
 name: Message
 type: function
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: Logs a message.
 remarks: |-
   The specific behavior of this function is simulator-dependent,
@@ -24,4 +24,3 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
-...

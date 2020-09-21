@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.generatorindex
 name: GeneratorIndex
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Represents a single primitive term in the set of all dynamical generators, e.g.
   Hermitian operators, for which there exists a map from that generator
@@ -34,4 +34,3 @@ syntax: newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 seeAlso:
 - evolutionset
 - paulievolutionset
-...

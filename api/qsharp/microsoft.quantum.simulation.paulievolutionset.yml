@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.paulievolutionset
 name: PauliEvolutionSet
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Represents a dynamical generator as a set of simulatable gates and an
   expansion in the Pauli basis.
@@ -24,4 +24,3 @@ output:
       An `EvolutionSet` that maps a `GeneratorIndex` for the Pauli basis to
       an `EvolutionUnitary.
     uid: microsoft.quantum.simulation.evolutionset
-...

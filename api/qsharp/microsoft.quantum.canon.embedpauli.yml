@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.embedpauli
 name: EmbedPauli
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Given a single-qubit Pauli operator and the index of a qubit,
   returns a multi-qubit Pauli operator with the given single-qubit
@@ -41,4 +41,3 @@ output:
   - isArray: true
     isPrimitive: true
     uid: Pauli
-...

@@ -6,8 +6,9 @@
 uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
 name: AmpAmpPhasesFixedPoint
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: AmpAmpPhasesFixedPoint has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases" instead.
+namespace: microsoft.quantum.amplitudeamplification
+summary: AmpAmpPhasesFixedPoint has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases"
+  instead.
 syntax: 'function AmpAmpPhasesFixedPoint (nQueries : Int, successMin : Double) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 input:
   content: '(nQueries : Int, successMin : Double)'
@@ -22,4 +23,3 @@ output:
   content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
   types:
   - uid: microsoft.quantum.amplitudeamplification.reflectionphases
-...

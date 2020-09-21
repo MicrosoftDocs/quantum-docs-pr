@@ -6,7 +6,7 @@
 uid: microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
 name: ApplyPermutationUsingDecompositionWithVariableOrder
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: |-
   Permutes the amplitudes in a quantum state given a permutation
   using decomposition-based synthesis.
@@ -25,7 +25,8 @@ examples: |-
     ApplyPermutationUsingDecompositionWithVariableOrder([0, 2, 1, 3], [1, 0], LittleEndian(qubits));
   }
   ```
-syntax: 'operation ApplyPermutationUsingDecompositionWithVariableOrder (perm : Int[], variableOrder : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ApplyPermutationUsingDecompositionWithVariableOrder (perm : Int[],
+  variableOrder : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(perm : Int[], variableOrder : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -53,4 +54,3 @@ functors:
 seeAlso:
 - microsoft.quantum.synthesis.applypermutationusingdecomposition
 - microsoft.quantum.synthesis.applypermutationusingtransformation
-...

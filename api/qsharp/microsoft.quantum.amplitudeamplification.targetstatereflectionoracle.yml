@@ -6,7 +6,7 @@
 uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
 name: TargetStateReflectionOracle
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: |-
   Constructs a `ReflectionOracle` about the target state uniquely marked by the flag qubit.
 
@@ -26,4 +26,3 @@ output:
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle
-...

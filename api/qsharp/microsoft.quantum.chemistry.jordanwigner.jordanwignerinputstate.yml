@@ -6,9 +6,8 @@
 uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
 name: JordanWignerInputState
 type: newtype
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: |-
   Format of data passed from C# to Q# to represent preparation of the initial state
   The meaning of the data represented is determined by the algorithm that receives it.
 syntax: newtype JordanWignerInputState = ((Double, Double), Int[]);
-...

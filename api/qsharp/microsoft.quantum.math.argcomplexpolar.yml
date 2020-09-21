@@ -6,11 +6,12 @@
 uid: microsoft.quantum.math.argcomplexpolar
 name: ArgComplexPolar
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: |-
   Returns the phase of a complex number of type
   `ComplexPolar`.
-syntax: 'function ArgComplexPolar (input : Microsoft.Quantum.Math.ComplexPolar) : Double'
+syntax: 'function ArgComplexPolar (input : Microsoft.Quantum.Math.ComplexPolar) :
+  Double'
 input:
   content: '(input : Microsoft.Quantum.Math.ComplexPolar)'
   types:
@@ -23,4 +24,3 @@ output:
   - summary: Phase $\text{Arg}[c] = t$.
     isPrimitive: true
     uid: Double
-...

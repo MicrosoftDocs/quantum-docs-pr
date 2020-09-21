@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
 name: MultiplexOperationsFromGenerator
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a multiply-controlled unitary operation $U$ that applies a
   unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
@@ -16,12 +16,15 @@ remarks: |-
   `coefficients` will be padded with identity elements if
   fewer than $2^n$ are specified. This implementation uses
   $n-1$ auxiliary qubits.
-syntax: "operation MultiplexOperationsFromGenerator (unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
+syntax: "operation MultiplexOperationsFromGenerator (unitaryGenerator : (Int, (Int\
+  \ -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian,\
+  \ target : 'T) : Unit"
 references: |-
   - [ *Andrew M. Childs, Dmitri Maslov, Yunseong Nam, Neil J. Ross, Yuan Su*,
     arXiv:1711.10980](https://arxiv.org/abs/1711.10980)
 input:
-  content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
+  content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index :\
+    \ Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
   types:
   - name: unitaryGenerator
     summary: |-
@@ -68,4 +71,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

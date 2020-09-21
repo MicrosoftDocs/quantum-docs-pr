@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.reflectaboutinteger
 name: ReflectAboutInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Reflects a quantum register about a given classical integer.
 
@@ -20,7 +20,8 @@ summary: |-
 remarks: |-
   This operation is implemented in-place, without explicit allocation of
   additional auxiliary qubits.
-syntax: 'operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian)
+  : Unit'
 input:
   content: '(index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -38,4 +39,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

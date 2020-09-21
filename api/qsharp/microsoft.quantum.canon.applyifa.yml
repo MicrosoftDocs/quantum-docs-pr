@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifa
 name: ApplyIfA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a adjointable operation conditioned on a classical bit.
 
@@ -26,7 +26,8 @@ examples: |-
       ...
   }
   ```
-syntax: "operation ApplyIfA (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit"
+syntax: "operation ApplyIfA (op : ('T => Unit is Adj), bit : Bool, target : 'T) :\
+  \ Unit"
 input:
   content: "(op : ('T => Unit is Adj), bit : Bool, target : 'T)"
   types:
@@ -65,4 +66,3 @@ seeAlso:
 - microsoft.quantum.canon.applyifc
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
-...

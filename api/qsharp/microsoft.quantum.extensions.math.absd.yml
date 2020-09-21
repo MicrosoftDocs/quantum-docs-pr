@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.absd
 name: AbsD
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: AbsD has been deprecated. Please use @"microsoft.quantum.math.absd" instead.
 syntax: 'function AbsD (a : Double) : Double'
 input:
@@ -20,4 +20,3 @@ output:
   types:
   - isPrimitive: true
     uid: Double
-...

@@ -1,13 +1,15 @@
 ---
 title: Develop with Q# and .NET
+description: Learn how to create a Q# application using .NET languages.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
 no-loc: ['Q#', '$$v']
 ---
+
 # Develop with Q# and .NET
 
 Q# is built to play well with .NET languages such as C# and F#.
@@ -80,7 +82,7 @@ If you are using an editor other than Visual Studio or VS Code, simply follow th
 Once you have your projects set up following the above instructions, you can call into Q# from your .NET console application.
 The Q# compiler will create .NET classes for each Q# operation and function that allow you to run your quantum programs on a simulator.
 
-For example, the [.NET interoperability sample](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) includes the following example of a Q# operation:
+For example, the [.NET interoperability sample](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet) includes the following example of a Q# operation:
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 

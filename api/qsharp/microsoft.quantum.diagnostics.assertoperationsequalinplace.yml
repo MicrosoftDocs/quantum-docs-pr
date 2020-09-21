@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
 name: AssertOperationsEqualInPlace
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: |-
   Given two operations, asserts that they act identically for all input states.
 
@@ -15,15 +15,18 @@ summary: |-
   $V_k$ is one of the states $\ket{0}$, $\ket{1}$, $\ket{+}$ and $\ket{i}$ (+1 eigenstate of Pauli Y operator).
 
   This assertion uses $n$ qubits and requires multiple calls of the operations being compared.
-syntax: 'operation AssertOperationsEqualInPlace (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
+syntax: 'operation AssertOperationsEqualInPlace (nQubits : Int, givenU : (Qubit[]
+  => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
 references: |-
   The basis of states $\ket{0}$, $\ket{1}$, $\ket{+}$ and $\ket{i}$ is the Chuang-Nielsen basis,
   described in [ *I. L. Chuang, M. A. Nielsen* ](https://arxiv.org/abs/quant-ph/9610001).
 input:
-  content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
+  content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit
+    is Adj))'
   types:
   - name: nQubits
-    summary: The number of qubits $n$ that the operations `givenU` and `expectedU` operate on.
+    summary: The number of qubits $n$ that the operations `givenU` and `expectedU`
+      operate on.
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -59,4 +62,3 @@ output:
     uid: Unit
 seeAlso:
 - assertoperationsequalreferenced
-...

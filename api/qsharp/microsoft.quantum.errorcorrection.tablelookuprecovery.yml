@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.tablelookuprecovery
 name: TableLookupRecovery
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: |-
   For a given table of Pauli operations on a given register of qubits, this function
   returns an object of type `RecoveryFn` which contains all information needed to
@@ -29,4 +29,3 @@ output:
       An object of type `RecoveryFn`, i.e., a map `Syndrome -> Pauli[]` that associates
       with a given syndrome array a corresponding Pauli correction operation.
     uid: microsoft.quantum.errorcorrection.recoveryfn
-...

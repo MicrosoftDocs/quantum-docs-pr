@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytoeachc
 name: ApplyToEachC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a single-qubit operation to each element in a register.
   The modifier `C` indicates that the single-qubit operation is controllable.
@@ -18,7 +18,8 @@ examples: |-
       ApplyToEach(H, register);
   }
   ```
-syntax: "operation ApplyToEachC (singleElementOperation : ('T => Unit is Ctl), register : 'T[]) : Unit"
+syntax: "operation ApplyToEachC (singleElementOperation : ('T => Unit is Ctl), register\
+  \ : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ('T => Unit is Ctl), register : 'T[])"
   types:
@@ -52,4 +53,3 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applytoeach
-...

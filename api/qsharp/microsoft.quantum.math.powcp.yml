@@ -6,9 +6,10 @@
 uid: microsoft.quantum.math.powcp
 name: PowCP
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns a number raised to a given power.
-syntax: 'function PowCP (a : Microsoft.Quantum.Math.ComplexPolar, power : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.ComplexPolar'
+syntax: 'function PowCP (a : Microsoft.Quantum.Math.ComplexPolar, power : Microsoft.Quantum.Math.ComplexPolar)
+  : Microsoft.Quantum.Math.ComplexPolar'
 input:
   content: '(a : Microsoft.Quantum.Math.ComplexPolar, power : Microsoft.Quantum.Math.ComplexPolar)'
   types:
@@ -22,4 +23,3 @@ output:
   types:
   - summary: The power $a^b$
     uid: microsoft.quantum.math.complexpolar
-...

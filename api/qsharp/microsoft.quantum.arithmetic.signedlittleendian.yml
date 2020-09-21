@@ -6,7 +6,6 @@
 uid: microsoft.quantum.arithmetic.signedlittleendian
 name: SignedLittleEndian
 type: newtype
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Type of a signed integer stored in little endian (see LittleEndian).
 syntax: newtype SignedLittleEndian = Microsoft.Quantum.Arithmetic.LittleEndian;
-...

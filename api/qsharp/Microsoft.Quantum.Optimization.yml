@@ -16,4 +16,3 @@ functions:
 newtypes:
 - uid: microsoft.quantum.optimization.univariateoptimizationresult
   summary: Represents the result of optimizing a univariate function.
-...

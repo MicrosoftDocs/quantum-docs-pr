@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.delayc
 name: DelayC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a given operation with a delay.
 
@@ -55,4 +55,3 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.delay
 - microsoft.quantum.canon.delayed
-...

@@ -6,11 +6,14 @@
 uid: microsoft.quantum.intrinsic.assertprob
 name: AssertProb
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
-summary: AssertProb has been deprecated. Please use @"microsoft.quantum.diagnostics.assertmeasurementprobability" instead.
-syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
+namespace: microsoft.quantum.intrinsic
+summary: AssertProb has been deprecated. Please use @"microsoft.quantum.diagnostics.assertmeasurementprobability"
+  instead.
+syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result,
+  prob : Double, msg : String, tol : Double) : Unit'
 input:
-  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg
+    : String, tol : Double)'
   types:
   - name: bases
     isArray: true
@@ -40,4 +43,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

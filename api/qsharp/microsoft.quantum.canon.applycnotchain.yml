@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applycnotchain
 name: ApplyCNOTChain
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Computes the parity of a register of qubits in-place.
 
@@ -35,4 +35,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

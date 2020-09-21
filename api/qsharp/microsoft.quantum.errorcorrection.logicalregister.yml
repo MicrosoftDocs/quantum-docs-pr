@@ -6,9 +6,8 @@
 uid: microsoft.quantum.errorcorrection.logicalregister
 name: LogicalRegister
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: |-
   Type for register of physical qubits `Qubit[]` that encode the
   logical qubits.
 syntax: newtype LogicalRegister = Qubit[];
-...

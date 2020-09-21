@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.pauliblockencoding
 name: PauliBlockEncoding
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Creates a block-encoding unitary for a Hamiltonian.
 
@@ -17,7 +17,8 @@ remarks: |-
   and constructing a multiply-controlled unitary
   <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> and
   <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>.
-syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
+syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)
+  : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
@@ -40,4 +41,3 @@ output:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
-...

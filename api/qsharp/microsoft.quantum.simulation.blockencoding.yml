@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.blockencoding
 name: BlockEncoding
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Represents a unitary where an arbitrary operator of
   interest is encoded in the top-left block.
@@ -21,4 +21,3 @@ summary: |-
   \end{align}
   $$.
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
-...

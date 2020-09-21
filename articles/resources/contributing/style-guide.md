@@ -89,7 +89,7 @@ We suggest:
 
 # [Examples](#tab/examples)
 
-|   | Name | Description |
+| &nbsp;  | Name | Description |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Clear use of a verb ("reflect") to indicate the effect of the operation. |
 | ☒ | <s>`operation XRotation`</s> | Use of noun phrase suggests function, rather than operation. |
@@ -108,7 +108,7 @@ We suggest:
 
 When defining an entry point into a Q# program, the Q# compiler recognizes the [`@EntryPoint()` attribute](xref:microsoft.quantum.core.entrypoint) rather requiring that entry points have a particular name (e.g.: `main`, `Main`, or `__main__`).
 That is, from the perspective of a Q# developer, entry points are ordinary operations annotated with `@EntryPoint()`.
-Moreover, Q# entry points may be entry points for an entire application (i.e.: in Q# standalone executables), or may be an interface between a Q# program and the host program for an application (i.e.: when using Q# with Python or .NET), such that the name "main" could be misleading when applied to a Q# entry point.
+Moreover, Q# entry points may be entry points for an entire application (for example, in Q# standalone executable programs), or may be an interface between a Q# program and the host program for an application (i.e.: when using Q# with Python or .NET), such that the name "main" could be misleading when applied to a Q# entry point.
 
 We suggest using naming entry points to reflect the use of the `@EntryPoint()` attribute by using the general advice for naming operations listed above.
 
@@ -122,7 +122,7 @@ We suggest:
 
 # [Examples](#tab/examples)
 
-|   | Name | Description |
+| &nbsp;  | Name | Description |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Clearly communicates purpose of entry point through operation name. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | Use of `Main` doesn't clearly communicate purpose of entry point, and is redundant with `@EntryPoint()` attribute. |
@@ -164,7 +164,7 @@ We suggest:
 
 # [Examples](#tab/examples)
 
-|   | Name | Description |
+| &nbsp;   | Name | Description |
 |---|------|-------------|
 | ☑ | `X` | Well-understood shorthand for "apply an $X$ transformation" |
 | ☑ | `CNOT` | Well-understood shorthand for "controlled-NOT" |
@@ -221,7 +221,7 @@ We suggest:
 
 # [Examples](#tab/examples)
 
-|   | Name | Description |
+| &nbsp;   | Name | Description |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | The preposition "to" results in a verb phrase, indicating an operation and not a function. |
 | ☒ | <s>`AsDouble`</s> | The input type is not clear from the function name. |
@@ -244,7 +244,7 @@ We suggest:
 
 # [Examples](#tab/examples)
 
-|   | Name | Description |
+| &nbsp;  | Name | Description |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Do not use an underscore `_` to indicate that this operation is for internal use only. |
 | ☑ | `internal operation ApplyDecomposedOperation` | The `internal` keyword at the beginning clearly indicates that this operation is for internal use only. |
@@ -316,7 +316,7 @@ We suggest:
 
 # [Examples](#tab/examples)
 
-|   | Snippet | Description |
+| &nbsp;  | Snippet | Description |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | The name `Apply` is a `CamelCase`-formatted verb phrase, suggesting that the named item is an operation. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Named items should begin with an initial uppercase letter. |
@@ -472,7 +472,7 @@ We suggest:
 
 # [Examples](#tab/examples)
 
-|   | Snippet | Description |
+| &nbsp; | Snippet | Description |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Use spaces around binary operators. |
 | ☒ | <s>`target:Qubit`</s> | Use spaces around type annotation colons. |

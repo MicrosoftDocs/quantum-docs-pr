@@ -2,7 +2,7 @@
 title: Testing and debugging
 description: Learn how to use unit tests, facts and assertions, and dump functions to test and debug quantum programs. 
 author: tcNickolas
-ms.author: mamykhai@microsoft.com
+ms.author: mamykhai
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
@@ -64,7 +64,7 @@ In the previous example, the argument to that attribute, `"QuantumSimulator"`, s
 ```
 Save the file and run all tests. There should now be two unit tests, one where `AllocateQubit` runs on the `QuantumSimulator`, and one where it runs in the `ResourcesEstimator`. 
 
-The Q# compiler recognizes the built-in targets `"QuantumSimulator"`, `"ToffoliSimulator"`, and `"ResourcesEstimator"` as valid execution targets for unit tests. It is also possible to specify any fully qualified name to define a custom execution target. 
+The Q# compiler recognizes the built-in targets `"QuantumSimulator"`, `"ToffoliSimulator"`, and `"ResourcesEstimator"` as valid run targets for unit tests. It is also possible to specify any fully qualified name to define a custom run target. 
 
 ### Running Q# Unit Tests
 
@@ -108,7 +108,7 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
-Unit tests can be filtered according to their name or the execution target:
+Unit tests can be filtered according to their name or the run target:
 
 ```bash 
 $ dotnet test --filter "Target=QuantumSimulator"
@@ -122,7 +122,7 @@ The intrinsic function <xref:microsoft.quantum.intrinsic.message> has type `(Str
 
 #### [Visual Studio 2019](#tab/tabid-vs2019)
 
-After you run a test in Test Explorer and click on the test, a panel displays with information about test execution: Pass/fail status, elapsed time, and a link to the output. Click **Output** to open the test output in a new window.
+After you run a test in Test Explorer and click on the test, a panel displays with information about test run: Pass/fail status, elapsed time, and a link to the output. Click **Output** to open the test output in a new window.
 
 ![test output](~/media/unit-test-output.png)
 
@@ -173,7 +173,7 @@ operation AssertQubitsAreAvailable() : Unit
 ```
 
 Here, we are using the operation <xref:microsoft.quantum.environment.getqubitsavailabletouse> to return the number of qubits available to use.
-As this depends on the global state of the program and its execution environment, our definition of `AssertQubitsAreAvailable` must be an operation as well.
+As this depends on the global state of the program and its run environment, our definition of `AssertQubitsAreAvailable` must be an operation as well.
 However, we can use that global state to yield a simple `Bool` value as input to the `Fact` function.
 
 [The prelude](xref:microsoft.quantum.libraries.standard.prelude), building on these ideas, offers two especially useful assertions, <xref:microsoft.quantum.diagnostics.assertmeasurement> and <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> both modeled as operations onto `()`. These assertions each take a Pauli operator describing a particular measurement of interest, a quantum register on which a measurement is performed, and a hypothetical outcome.
@@ -392,6 +392,6 @@ namespace app
 
 ## Debugging
 
-On top of `Assert` and `Dump` functions and operations, Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger), and [inspecting values of classic variables](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) are all possible during code execution on the simulator.
+On top of `Assert` and `Dump` functions and operations, Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger), and [inspecting values of classic variables](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) are all possible when running your code on the simulator.
 
 Debugging in Visual Studio Code leverages the debugging capabilities provided by the C# for Visual Studio Code extension powered by OmniSharp and requires installing the [latest version](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp). 

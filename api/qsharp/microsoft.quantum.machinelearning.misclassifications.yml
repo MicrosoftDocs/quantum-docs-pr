@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.misclassifications
 name: Misclassifications
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Given a set of inferred labels and a set of correct labels, returns
   indices for where each set of labels differs.
@@ -15,7 +15,8 @@ examples: |-
   let misclassifications = Misclassifications([0, 1, 0, 0], [0, 1, 1, 0]);
   Message($"{misclassifications}"); // Will print [2].
   ```
-syntax: 'function Misclassifications (inferredLabels : Int[], actualLabels : Int[]) : Int[]'
+syntax: 'function Misclassifications (inferredLabels : Int[], actualLabels : Int[])
+  : Int[]'
 input:
   content: '(inferredLabels : Int[], actualLabels : Int[])'
   types:
@@ -38,4 +39,3 @@ output:
     isArray: true
     isPrimitive: true
     uid: Int
-...

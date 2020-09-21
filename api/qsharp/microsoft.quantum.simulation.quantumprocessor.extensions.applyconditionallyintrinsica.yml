@@ -6,10 +6,13 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyintrinsica
 name: ApplyConditionallyIntrinsicA
 type: operation
-namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
-syntax: 'operation ApplyConditionallyIntrinsicA (measurementResults : Result[], resultsValues : Result[], onEqualOp : (Unit => Unit is Adj), onNonEqualOp : (Unit => Unit is Adj)) : Unit'
+namespace: microsoft.quantum.simulation.quantumprocessor.extensions
+syntax: 'operation ApplyConditionallyIntrinsicA (measurementResults : Result[], resultsValues
+  : Result[], onEqualOp : (Unit => Unit is Adj), onNonEqualOp : (Unit => Unit is Adj))
+  : Unit'
 input:
-  content: '(measurementResults : Result[], resultsValues : Result[], onEqualOp : (Unit => Unit is Adj), onNonEqualOp : (Unit => Unit is Adj))'
+  content: '(measurementResults : Result[], resultsValues : Result[], onEqualOp :
+    (Unit => Unit is Adj), onNonEqualOp : (Unit => Unit is Adj))'
   types:
   - name: measurementResults
     isArray: true
@@ -50,4 +53,3 @@ output:
     uid: Unit
 functors:
 - Adjoint
-...

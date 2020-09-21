@@ -6,9 +6,10 @@
 uid: microsoft.quantum.chemistry.htermstogensys
 name: HTermsToGenSys
 type: function
-namespace: Microsoft.Quantum.Chemistry
+namespace: microsoft.quantum.chemistry
 summary: Converts a Hamiltonian in `HTerm[]` data format to a GeneratorSystem.
-syntax: 'function HTermsToGenSys (data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
+syntax: 'function HTermsToGenSys (data : Microsoft.Quantum.Chemistry.HTerm[], termType
+  : Int[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[])'
   types:
@@ -24,6 +25,6 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: A GeneratorSystem representing a Hamiltonian represented by the input `data`.
+  - summary: A GeneratorSystem representing a Hamiltonian represented by the input
+      `data`.
     uid: microsoft.quantum.simulation.generatorsystem
-...

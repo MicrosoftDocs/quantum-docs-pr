@@ -6,16 +6,18 @@
 uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
 name: CompareGreaterThanFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Compares two fixed-point numbers stored in quantum registers, and
   controls a flip on the result.
 remarks: |-
   The current implementation requires the two fixed-point numbers
   to have the same point position and the same number of qubits.
-syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
+syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint,
+  fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
 input:
-  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit)'
+  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint,
+    result : Qubit)'
   types:
   - name: fp1
     summary: First fixed-point number to be compared.
@@ -35,4 +37,3 @@ output:
 functors:
 - Adjoint
 - Controlled
-...

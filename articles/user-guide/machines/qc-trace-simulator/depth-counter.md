@@ -2,7 +2,7 @@
 title: Depth counter - Quantum Development Kit
 description: Learn about the Microsoft QDK depth counter, which uses the Quantum trace simulator to gather counts of the depth of every operation invoked in a Q# program.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter

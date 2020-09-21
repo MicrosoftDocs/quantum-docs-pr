@@ -1,9 +1,11 @@
 ---
+
 title: Quantum characterization and statistics using Q#
 description: Learn how measurement statistics from phase estimations are used with Q# to estimate result values in quantum programming. 
 author: QuantumWriter
 ms.author: martinro
 ms.date: 9/11/2020
+
 ms.topic: article
 uid: microsoft.quantum.libraries.characterization
 no-loc: ['Q#', '$$v']
@@ -75,7 +77,8 @@ For this reason, phase estimation appears within a number of quantum algorithms 
 ### Bayesian phase estimation ###
 
 > [!TIP]
-> For more details on Bayesian phase estimation in practice, see the [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) sample.
+> For more details on Bayesian phase estimation in practice, please see the [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation) sample.
+
 
 The idea of Bayesian phase estimation is simple.
 You collect measurement statistics from the phase estimation protocol, and then you process the results using Bayesian inference and provide an estimate of the parameter.
@@ -141,11 +144,10 @@ where the lower bound is reached in the limit of asymptotically large $Q$, and t
 Other relevant details include, say, the small space overhead of just $1$ ancilla qubit, or that the procedure is non-adaptive, meaning the required sequence of quantum experiments is independent of the intermediate measurement outcomes. In the following examples where the choice of phase estimation algorithm is important, you should refer to the documentation, for example <xref:microsoft.quantum.characterization.robustphaseestimation> and the referenced publications therein, for more information about their the implementation.
 
 > [!TIP]
-> There are many samples available that use robust phase estimation. For phase estimation in extracting the ground state energy of various physical systems, 
-> see the [**H2 simulation**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), 
-> [**SimpleIsing**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple), 
-> and [**Hubbard model**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard) samples.
-
+> There are many samples where robust phase estimation is used. For phase estimation in extracting the ground state energy of various physical system, 
+> please see the [**H2 simulation** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), 
+> the [**SimpleIsing** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple), 
+> and the [**Hubbard model** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 ### Continuous oracles ###
 

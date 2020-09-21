@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.greaterthanorequali
 name: GreaterThanOrEqualI
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: |-
   Returns true if and only if a number is greater than or equal to another
   number.
@@ -35,4 +35,3 @@ output:
   - summary: '`true` if and only if `a` is greater than or is equal to `b`.'
     isPrimitive: true
     uid: Bool
-...

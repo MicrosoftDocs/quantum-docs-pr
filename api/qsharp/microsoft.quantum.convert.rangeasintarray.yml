@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.rangeasintarray
 name: RangeAsIntArray
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: Creates an array `arr` of integers enumerated by start..step..end.
 examples: |-
   ```qsharp
@@ -28,4 +28,3 @@ output:
     isArray: true
     isPrimitive: true
     uid: Int
-...

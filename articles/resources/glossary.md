@@ -2,8 +2,13 @@
 title: Quantum computing glossary
 description: A glossary of common terms, actions and objects used in quantum computing.
 author: bradben
+<<<<<<< HEAD
 ms.author: v-benbra 
 ms.date: 9/1/2020
+=======
+ms.author: ageller 
+ms.date: 12/11/2017
+>>>>>>> 7ed002f2... edit pass on lib topics
 ms.topic: article
 uid: microsoft.quantum.glossary
 no-loc: ['Q#', '$$v', '$$', "$$", '$', "$", $, $$, '\cdots', 'bmatrix', '\ddots', '\equiv', '\sum', '\begin', '\end', '\sqrt', '\otimes', '{', '}', '\text', '\phi', '\kappa', '\psi', '\alpha', '\beta', '\gamma', '\delta', '\omega', '\bra', '\ket', '\boldone', '\\\\', '\\', '=', '\frac', '\text', '\mapsto', '\dagger', '\to', '\begin{cases}', '\end{cases}', '\operatorname', '\braket', '\id', '\expect', '\defeq', '\variance', '\dd', '&', '\begin{align}', '\end{align}', '\Lambda', '\lambda', '\Omega', '\mathrm', '\left', '\right', '\qquad', '\times', '\big', '\langle', '\rangle', '\bigg', '\Big', '|', '\mathbb', '\vec', '\in', '\texttt', '\ne', '<', '>', '\leq', '\geq', '~~', '~', '\begin{bmatrix}', '\end{bmatrix}', '\_']
@@ -92,7 +97,7 @@ A variable whose value may be changed after it is created. A mutable variable in
 
 ## Namespace
 
-A label for a collection of related names (i.e., [operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function), and [user-defined types](xref:microsoft.quantum.glossary#user-defined-type)). For instance the namespace [Microsoft.Quantum.Preparation](xref:microsoft.quantum.preparation) labels all of the symbols defined in the standard library that help with preparing initial states.
+A label for a collection of related names (for example, [operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function), and [user-defined types](xref:microsoft.quantum.glossary#user-defined-type)). For instance the namespace [Microsoft.Quantum.Preparation](xref:microsoft.quantum.preparation) labels all of the symbols defined in the standard library that help with preparing initial states.
 
 ## Operation
 
@@ -158,9 +163,13 @@ A method for regenerating data, or the [quantum state](xref:microsoft.quantum.gl
 
 A collection of comma-separated values that acts as a single value. The *type* of a tuple is defined by the types of values it contains. In Q#, tuples are [immutable](xref:microsoft.quantum.glossary#immutable) and can be nested, contain arrays, or used in an array. For more information, see [Tuple types](xref:microsoft.quantum.guide.types#tuple-types).
 
+## Uncomputing
+
+A technique used in reversible circuits for cleaning up temporary effects on [ancilla](#ancilla) bits so they can be re-used.  Whether or not intermediate effects have been uncomputed affects how states interfere with each other when measuring results.
+
 ## Unitary operator
 
-An operator whose inverse is equal to its [adjoint](xref:microsoft.quantum.glossary#adjoint), i.e., $UU^{\dagger} = \id$.
+An operator whose inverse is equal to its [adjoint](xref:microsoft.quantum.glossary#adjoint), for example, $UU^{\dagger} = \id$.
 
 ## User-defined type
 

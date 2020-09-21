@@ -2,7 +2,7 @@
 title: Introduction to the Quantum Machine Learning Package | Microsoft Docs
 description: Introduction to the Quantum Machine Learning Package
 author: QuantumWriter
-ms.author: alexeib@microsoft.com
+ms.author: alexeib
 ms.date: 12/5/2019
 ms.topic: article
 uid: microsoft.quantum.machine-learning.concepts.intro

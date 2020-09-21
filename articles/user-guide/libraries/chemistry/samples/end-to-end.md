@@ -2,7 +2,7 @@
 title: Sample NWChem quantum program
 description: Using an NWChem input deck, walk through an example of getting gate counts for quantum chemistry simulation.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc: ['Q#', '$$v']
@@ -39,14 +39,14 @@ Import-Module InvokeNWChem.psm1
 ```
 
 > [!NOTE]
-> By default, Windows prevents the execution of any scripts or modules as a security measure.
-> To allow modules such as `Invoke-NWChem.psm1` to run on Windows, you may need to change the execution policy.
+> By default, Windows prevents the running of any scripts or modules as a security measure.
+> To allow modules such as `Invoke-NWChem.psm1` to run on Windows, you may need to change the policy.
 > To do so, run the `Set-ExecutionPolicy` command:
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope Process
 > ```
-> The execution policy will then be reverted when you exit PowerShell.
-> If you would like to save the execution policy, use a different value for `-Scope`:
+> The policy will revert when you exit PowerShell.
+> If you would like to save the policy, use a different value for `-Scope`:
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```

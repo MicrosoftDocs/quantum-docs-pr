@@ -3,7 +3,7 @@ uid: microsoft.quantum.dotnetlibsintro
 title: .NET library for Microsoft Quantum
 description: Reference documentation for the .NET library for Microsoft Quantum
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 03/04/2020
 ms.topic: landing-page
 ---

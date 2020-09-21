@@ -2,7 +2,7 @@
 title: Invalidated qubits use checker - Quantum Development Kit
 description: Learn about the Microsoft QDK invalidated qubits use checker, which uses the Quantum trace simulator to check your Q# code for potentially invalid qubits.
 author: vadym-kl
-ms.author: vadym@microsoft.com 
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits

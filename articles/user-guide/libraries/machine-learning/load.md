@@ -2,7 +2,7 @@
 title: Loading classical data
 description: Learn how to load your own dataset to train a classifier model with the Microsoft Quantum Development Kit (QDK).
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load

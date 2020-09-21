@@ -1,7 +1,8 @@
 ---
 title: Quantum machine learning library
+description: Learn how machine learning is used on quantum systems
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 11/22/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.intro

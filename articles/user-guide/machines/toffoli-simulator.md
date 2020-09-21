@@ -2,7 +2,7 @@
 title: Quantum Toffoli simulator - Quantum Development Kit
 description: Learn about the Microsoft QDK Toffoli simulator, a special purpose quantum simulator that can be used with millions of qubits. 
 author: alan-geller
-ms.author: ageller@microsoft.com 
+ms.author: ageller 
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator

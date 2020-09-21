@@ -2,7 +2,7 @@
 title: Intrinsic operations and functions in the QDK
 description: Learn about the intrinsic operations and functions in the QDK, including classical functions and unitary, rotation and measurement operations. 
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
@@ -301,7 +301,7 @@ That said, an individual target machine may mitigate this performance impact by 
 
 ### Math ###
 
-The <xref:microsoft.quantum.math> namespace provides many useful functions from the .NET base class library's [`System.Math` class](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1).
+The <xref:microsoft.quantum.math> namespace provides many useful functions from the .NET base class library's [`System.Math` class](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true).
 These functions can be used in the same manner as any other Q# functions:
 
 ```qsharp

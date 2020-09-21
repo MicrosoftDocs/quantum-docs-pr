@@ -2,7 +2,7 @@
 title: Control Flow in Q#
 description: Loops, conditionals, etc.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
@@ -17,15 +17,16 @@ However, you can modify the flow of control in three distinct ways:
 * `if` statements
 * `for` loops
 * `repeat-until-success` loops
+* conjugations (`apply-within` statements)
 
-The `if` and `for` control flow constructs proceed in a familiar sense to most classical programming languages. [`Repeat-until-success`](#repeat-until-success-loop) loops are discussed later in this article.
+The `if` and `for` control flow constructs proceed in a familiar sense to most classical programming languages. [`Repeat-until-success`](#repeat-until-success-loop) loops and [conjugations](#conjugations) are discussed later in this article.
 
 Importantly, `for` loops and `if` statements can be used in operations for which [specializations](xref:microsoft.quantum.guide.operationsfunctions) are auto-generated. In that scenario, the adjoint of a `for` loop reverses the direction and takes the adjoint of each iteration.
 This action follows the "shoes-and-socks" principle: if you wish to undo putting on socks and then shoes, you must undo putting on shoes and then undo putting on socks. 
 
 ## If, Else-if, Else
 
-The `if` statement supports conditional execution.
+The `if` statement supports conditional processing.
 It consists of the keyword `if`, a Boolean expression in parentheses, and a statement block (the _then_ block).
 Optionally, any number of else-if clauses can follow, each of which consists of the keyword `elif`, a Boolean expression in parentheses, and a statement block (the _else-if_ block).
 Finally, the statement can optionally finish with an else clause, which consists of the keyword `else` followed by another statement block (the _else_ block).
@@ -68,7 +69,7 @@ The statement consists of the keyword `for`, followed by a symbol or symbol tupl
 
 The statement block (the body of the loop) runs repeatedly, with the defined symbol (the loop variable) bound to each value in the range or array.
 Note that if the range expression evaluates to an empty range or array, the body does not run at all.
-The expression is fully evaluated before entering the loop, and does not change while the loop is executing.
+The expression is fully evaluated before entering the loop, and does not change while the loop is running.
 
 The loop variable is bound at each entrance to the loop body, and is unbound at the end of the body.
 The loop variable is not bound after the for loop is completed.
@@ -122,7 +123,7 @@ The loop body runs, and then the condition is evaluated.
 If the condition is true, then the statement is completed; otherwise, the fixup runs, and the statement runs again, starting with the loop body.
 
 All three portions of an RUS loop (the body, the test, and the fixup) are treated as a single scope *for each repetition*, so symbols that are bound in the body are available in both the test and the fixup.
-However, completing the execution of the fixup ends the scope for the statement, so that symbol bindings made during the body or fixup are not available in subsequent repetitions.
+However, completing the run of the fixup ends the scope for the statement, so that symbol bindings made during the body or fixup are not available in subsequent repetitions.
 
 Further, the `fixup` statement is often useful but not always necessary.
 In cases that it is not needed, the construct
@@ -145,10 +146,10 @@ For more examples and details, see [Repeat-until-success examples](#repeat-until
 ## While loop
 
 Repeat-until-success patterns have a very quantum-specific connotation. They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#. 
-However, loops that break based on a condition and whose execution length is thus unknown at compile-time, are handled with particular care in a quantum runtime. 
+However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime. 
 However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware. 
 
-Q#, therefore, supports to use of while loops within functions only. 
+Q#, therefore, supports to use of while loops within functions only.
 A `while` statement consists of the keyword `while`, a Boolean expression in parentheses, and a statement block.
 The statement block (the body of the loop) runs as long as the condition evaluates to `true`.
 
@@ -160,6 +161,47 @@ while (index < Length(arr) && item < 0) {
     set index += 1;
 }
 ```
+
+## Conjugations
+
+In contrast to classical bits, releasing quantum memory is slightly more involved since blindly resetting qubits can have undesired effects on the remaining computation if the qubits are still entangled. 
+These effects can be avoided by properly "undoing" performed computations prior to releasing the memory. 
+A common pattern in quantum computing is hence the following: 
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    outerOperation(target);
+    innerOperation(target);
+    Adjoint outerOperation(target);
+}
+```
+
+Q# supports a conjugation statement that implements the preceding transformation. Using that statement, the operation `ApplyWith` can be implemented in the following way:
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    within{ 
+        outerOperation(target);
+    }
+    apply {
+        innerOperation(target);
+    }
+}
+```
+Such a conjugation statement becomes useful if the outer and inner transformations are not readily available as operations but are instead more convenient to describe by a block consisting of several statements. 
+
+The inverse transformation for the statements defined in the within-block is automatically generated by the compiler and run after the apply-block completes.
+Since any mutable variables used as part of the within-block cannot be rebound in the apply-block, the generated transformation is guaranteed to be the adjoint of the computation in the within-block. 
 
 ## Return Statement
 

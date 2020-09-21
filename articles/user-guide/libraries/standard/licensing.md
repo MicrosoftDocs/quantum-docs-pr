@@ -3,7 +3,7 @@
 title: Open source licensing for the QDK
 description: Learn about the licensing for using and contributing to the Microsoft Q# standard libraries - licensing and contributing.
 author: martinro
-ms.author: martinro@microsoft.com 
+ms.author: martinro
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing

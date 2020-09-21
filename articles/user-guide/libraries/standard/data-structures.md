@@ -3,7 +3,7 @@ title: Data structures in the Q# standard libraries
 description: Learn about data structures, oracles and dynamical generators in the Microsoft Q# standard libraries.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
-ms.author: martinro@microsoft.com 
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc: ['Q#', '$$v']

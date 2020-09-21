@@ -1,8 +1,8 @@
 ---
 title: Symmetries of Molecular Integrals
 description: Learn about using the Q# OrbitalIntegral type to enumerate molecular symmetries. 
-author: nathanwiebe2
-ms.author: nawiebe
+author: bradben    
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries

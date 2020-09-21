@@ -2,7 +2,7 @@
 title: Quantum simulators and Q# programs
 description: Describes the quantum simulators available as target machines for Q# programs.
 author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com 
+ms.author: v-benbra 
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
@@ -17,7 +17,7 @@ Quantum simulators are software programs that run on classical computers and act
 
 ## The Quantum Development Kit (QDK) quantum simulators
 
-The quantum simulator is responsible for providing implementations of quantum primitives for an algorithm. This includes primitive operations such as `H`, `CNOT`, and `Measure`, as well as qubit management and tracking. The QDK includes different classes of quantum simulators representing different execution models for the same quantum algorithm. 
+The quantum simulator is responsible for providing implementations of quantum primitives for an algorithm. This includes primitive operations such as `H`, `CNOT`, and `Measure`, as well as qubit management and tracking. The QDK includes different classes of quantum simulators representing different run models for the same quantum algorithm. 
 
 
 Each type of quantum simulator can provide different implementations of these primitives. For example, the [full state simulator](xref:microsoft.quantum.machines.full-state-simulator) runs the quantum algorithm by fully simulating the [quantum state vector](xref:microsoft.quantum.glossary#quantum-state), whereas the [quantum computer trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 
@@ -25,7 +25,7 @@ doesn't consider the actual quantum state at all. Rather, it tracks gate, qubit,
 
 ### Quantum machine classes
 
-In the future, the QDK will define additional quantum machine classes to support other types of simulation and to support execution on quantum hardware. Allowing the algorithm to stay constant while varying the underlying machine implementation makes it easy to test and debug an algorithm in simulation and then run it on real hardware with confidence
+In the future, the QDK will define additional quantum machine classes to support other types of simulation and to support running on quantum hardware. Allowing the algorithm to stay constant while varying the underlying machine implementation makes it easy to test and debug an algorithm in simulation and then run it on real hardware with confidence
 that the algorithm hasn't changed.
 
 The QDK includes several quantum machine classes, all defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.

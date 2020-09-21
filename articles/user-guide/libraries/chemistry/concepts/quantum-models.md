@@ -1,8 +1,8 @@
 ---
 title: Quantum Models for Electronic Systems
 description: Learn how molecular electronic systems are simulated using quantum modeling. 
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantummodels

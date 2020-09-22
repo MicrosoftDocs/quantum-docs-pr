@@ -17,6 +17,18 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version X.XX.XXXXXXXX
+
+*Release date: Sept 29th, 2020*
+
+This release contains the following:
+
+- Performance improvements for simulator.
+- IntelliSense support is enabled when using Python as a driver.
+- Improved IQ# Python interoperability.
+- Resource estimation is updated to produce simultaneously achievable depth and width estimates.
+- General bug fixes.
+
 ## Version 0.12.20082513
 
 *Release date: August 25th, 2020*

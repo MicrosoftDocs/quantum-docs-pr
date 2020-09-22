@@ -27,6 +27,7 @@ This release contains the following:
 - IntelliSense support is enabled when using Python as a driver.
 - Improved IQ# Python interoperability.
 - Resource estimation is updated to produce simultaneously achievable depth and width estimates.
+- Implemented new gate for external contribution.
 - General bug fixes.
 
 ## Version 0.12.20082513

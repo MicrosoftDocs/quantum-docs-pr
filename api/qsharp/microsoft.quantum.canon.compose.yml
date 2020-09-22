@@ -60,3 +60,4 @@ typeParameters:
     of the second function to be applied.
 - uid: "'V"
   summary: The output type of the second function to be applied.
+...

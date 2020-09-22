@@ -11,3 +11,4 @@ summary: |-
   Type for register of physical qubits `Qubit[]` that encode the
   logical qubits.
 syntax: newtype LogicalRegister = Qubit[];
+...

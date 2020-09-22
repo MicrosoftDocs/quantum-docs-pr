@@ -16,12 +16,9 @@ remarks: |-
   `coefficients` will be padded with identity elements if
   fewer than $2^n$ are specified. This version is implemented
   directly by looping through n-controlled unitary operators.
-syntax: "operation MultiplexOperationsBruteForceFromGenerator (unitaryGenerator :\
-  \ (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian,\
-  \ target : 'T) : Unit"
+syntax: "operation MultiplexOperationsBruteForceFromGenerator (unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
 input:
-  content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index :\
-    \ Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
+  content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
   types:
   - name: unitaryGenerator
     summary: |-
@@ -68,3 +65,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

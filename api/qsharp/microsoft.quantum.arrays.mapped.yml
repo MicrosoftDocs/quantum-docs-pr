@@ -47,3 +47,4 @@ typeParameters:
   summary: The type of `array` elements.
 - uid: "'U"
   summary: The result type of the `mapper` function.
+...

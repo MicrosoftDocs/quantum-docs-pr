@@ -27,6 +27,7 @@ This release contains the following:
 - IntelliSense support is enabled when using Python as a driver.
 - Improved IQ# Python interoperability.
 - Improvements to the Microsoft.Quantum.Arrays namespace (microsoft/QuantumLibraries#313)
+- Added a new language repo (QIR blog)[TODO]
 - General bug fixes.
 
 Since the last release, the default branch in our open source repositories has been renamed to "main" as the default branch for development.

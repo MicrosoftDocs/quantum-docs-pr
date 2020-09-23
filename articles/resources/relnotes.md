@@ -29,6 +29,8 @@ This release contains the following:
 - Improvements to the Microsoft.Quantum.Arrays namespace (microsoft/QuantumLibraries#313)
 - General bug fixes.
 
+Since the last release, the default branch in our open source repositories has been renamed to "main" as the default branch for development.
+
 ## Version 0.12.20082513
 
 *Release date: August 25th, 2020*

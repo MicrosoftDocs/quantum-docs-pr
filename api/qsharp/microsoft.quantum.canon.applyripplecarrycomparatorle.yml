@@ -7,13 +7,10 @@ uid: microsoft.quantum.canon.applyripplecarrycomparatorle
 name: ApplyRippleCarryComparatorLE
 type: operation
 namespace: microsoft.quantum.canon
-summary: ApplyRippleCarryComparatorLE has been deprecated. Please use @"microsoft.quantum.arithmetic.compareusingripplecarry"
-  instead.
-syntax: 'operation ApplyRippleCarryComparatorLE (x : Microsoft.Quantum.Arithmetic.LittleEndian,
-  y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
+summary: ApplyRippleCarryComparatorLE has been deprecated. Please use @"microsoft.quantum.arithmetic.compareusingripplecarry" instead.
+syntax: 'operation ApplyRippleCarryComparatorLE (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
 input:
-  content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian,
-    output : Qubit)'
+  content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
   types:
   - name: x
     uid: microsoft.quantum.arithmetic.littleendian
@@ -30,3 +27,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

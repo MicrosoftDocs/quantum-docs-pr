@@ -26,7 +26,7 @@ input:
 output:
   content: Int
   types:
-  - summary: Integer $r$ between 0 and `modulus - 1` such that `value - r` is divisible
-      by modulus
+  - summary: Integer $r$ between 0 and `modulus - 1` such that `value - r` is divisible by modulus
     isPrimitive: true
     uid: Int
+...

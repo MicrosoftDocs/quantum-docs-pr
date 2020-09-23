@@ -21,3 +21,4 @@ output:
       An `EvolutionSet` that maps a `GeneratorIndex` for the JordanWigner basis to
       an `EvolutionUnitary.
     uid: microsoft.quantum.simulation.evolutionset
+...

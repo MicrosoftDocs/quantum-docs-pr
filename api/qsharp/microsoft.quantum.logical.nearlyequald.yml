@@ -35,3 +35,4 @@ output:
   - summary: '`true` if and only if `a` is nearly equal to `b`.'
     isPrimitive: true
     uid: Bool
+...

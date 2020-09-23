@@ -9,3 +9,4 @@ type: newtype
 namespace: microsoft.quantum.canon
 summary: The signature type of CCNOT gate.
 syntax: newtype CCNOTop = ((Qubit, Qubit, Qubit) => Unit is Adj);
+...

@@ -8,8 +8,7 @@ name: ArcSin
 type: function
 namespace: microsoft.quantum.math
 summary: Returns the angle whose sine is the specified number.
-remarks: See [System.Math.Asin](https://docs.microsoft.com/dotnet/api/system.math.asin)
-  for more details.
+remarks: See [System.Math.Asin](https://docs.microsoft.com/dotnet/api/system.math.asin) for more details.
 syntax: 'function ArcSin (y : Double) : Double'
 input:
   content: '(y : Double)'
@@ -22,3 +21,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

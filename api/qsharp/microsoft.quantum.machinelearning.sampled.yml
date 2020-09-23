@@ -8,11 +8,9 @@ name: Sampled
 type: function
 namespace: microsoft.quantum.machinelearning
 summary: Samples a given array, using the given schedule.
-syntax: "function Sampled (schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule,\
-  \ values : 'T[]) : 'T[]"
+syntax: "function Sampled (schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, values : 'T[]) : 'T[]"
 input:
-  content: "(schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, values\
-    \ : 'T[])"
+  content: "(schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, values : 'T[])"
   types:
   - name: schedule
     summary: A schedule to use in sampling values.
@@ -29,3 +27,4 @@ output:
     isArray: true
     uid: "'T"
     isLocal: true
+...

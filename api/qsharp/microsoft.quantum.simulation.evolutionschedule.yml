@@ -12,5 +12,5 @@ summary: |-
 
   The `Double`
   parameter is a schedule in $[0, 1]$.
-syntax: newtype EvolutionSchedule = (Microsoft.Quantum.Simulation.EvolutionSet, (Double
-  -> Microsoft.Quantum.Simulation.GeneratorSystem));
+syntax: newtype EvolutionSchedule = (Microsoft.Quantum.Simulation.EvolutionSet, (Double -> Microsoft.Quantum.Simulation.GeneratorSystem));
+...

@@ -23,7 +23,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 This release contains the following:
 
-- Performance improvements for simulator.
+- Performance improvements for simulator: better application of gate fusion decisions; improved parallelization on Linux system; added intelligent scheduling of gate execution; bug fixes; overall speed improvement of ~5x (even faster on larger problems).
 - IntelliSense support is enabled when using Python as a driver.
 - Improved IQ# Python interoperability.
 - Improvements to the Microsoft.Quantum.Arrays namespace (microsoft/QuantumLibraries#313)

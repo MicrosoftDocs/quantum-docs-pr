@@ -26,7 +26,7 @@ This release contains the following:
 - Performance improvements for simulator.
 - IntelliSense support is enabled when using Python as a driver.
 - Improved IQ# Python interoperability.
-- Implemented new gate for external contribution.
+- Improvements to the Microsoft.Quantum.Arrays namespace (microsoft/QuantumLibraries#313)
 - General bug fixes.
 
 ## Version 0.12.20082513

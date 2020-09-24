@@ -15,8 +15,7 @@ input:
   content: "(array : 'T[])"
   types:
   - name: array
-    summary: An array whose first to second-to-last elements are to form the output
-      array.
+    summary: An array whose first to second-to-last elements are to form the output array.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -30,3 +29,4 @@ output:
 typeParameters:
 - uid: "'T"
   summary: The type of the array elements.
+...

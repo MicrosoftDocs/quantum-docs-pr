@@ -17,20 +17,22 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
-## Version X.XX.XXXXXXXX
+## Version 0.12.20092342
 
-*Release date: Sept 29th, 2020*
+*Release date: September 29th, 2020*
 
 This release contains the following:
 
 - Performance improvements for simulator: better application of gate fusion decisions; improved parallelization on Linux system; added intelligent scheduling of gate execution; bug fixes; overall speed improvement of ~5x (even faster on larger problems).
-- IntelliSense support is enabled when using Python as a driver.
-- Improved IQ# Python interoperability.
+- IntelliSense features are now supported for Q# files in Visual Studio and Visual Studio Code even without a project file.
+- Various Q#/Python interoperability improvements and bug fixes, including better support for NumPy data types.
 - Improvements to the Microsoft.Quantum.Arrays namespace (microsoft/QuantumLibraries#313)
 - Added a new language repo (QIR blog)[TODO]
 - General bug fixes.
 
-Since the last release, the default branch in our open source repositories has been renamed to "main" as the default branch for development.
+Since the last release, the default branch in each of our open source repositories has been renamed to `main`.
+
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).
 
 ## Version 0.12.20082513
 

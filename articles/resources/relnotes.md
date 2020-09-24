@@ -29,6 +29,7 @@ This release contains the following:
 - Improvements to the Microsoft.Quantum.Arrays namespace (microsoft/QuantumLibraries#313)
 - Added a new language repo (QIR blog)[TODO]
 - General bug fixes.
+- Added a new Repeat-Until-Success sample that uses only two qubits
 
 Since the last release, the default branch in each of our open source repositories has been renamed to `main`.
 

@@ -257,7 +257,7 @@ Measuring $Z_0$ and $Z_1$ each individually, you get the results $r_0 = 1$ and $
 Measuring $Z_0 Z_1$, however, you get the single result $r_{\textrm{joint}} = 0$, representing that the parity of $\ket{11}$ is positive.
 Put differently, $(-1)^{r_0 + r_1} = (-1)^r_{\textrm{joint}})$.
 Critically, since you *only* learn the parity from this measurement, any quantum information represented in the superposition between the two two-qubit states of positive parity, $\ket{00}$ and $\ket{11}$, is preserved.
-This property is essential to [quantum error correction](xref:microsoft.quantum.libraries.error-correction.).
+This property is essential to [quantum error correction](xref:microsoft.quantum.libraries.error-correction).
 
 For convenience, the prelude also provides two other operations for measuring qubits.
 First, since performing single-qubit measurements is quite common, the prelude defines a shorthand for this case.

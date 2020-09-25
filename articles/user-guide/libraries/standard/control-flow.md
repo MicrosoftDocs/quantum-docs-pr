@@ -44,11 +44,11 @@ However, the example is much shorter and easier to read when expressed in terms 
 ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 ```
 
-This article provides a number of examples of how to use the various flow control operations and functions in Q# to compactly express quantum programs.
+This article provides a number of examples of how to use the various flow control operations and functions provided by the canon to compactly express quantum programs.
 
 ## Applying operations and functions over arrays and ranges ##
 
-One of the primary abstractions provided by Q# is that of iteration.
+One of the primary abstractions provided by the canon is that of iteration.
 For example, consider a unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.
 In Q#, we might use <xref:microsoft.quantum.arrays.indexrange> to represent this as a `for` loop over a register:
 
@@ -91,7 +91,7 @@ Similarly, the <xref:microsoft.quantum.canon.applytoeachindex> operation is usef
 > Then `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` would apply the error-correcting code `code` and recovery function `recoveryFn` to each block independently.
 > This holds for classical inputs as well. For example,  `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))`  applies a rotation of $\pi / 2$ about $X$, followed by a rotation of $pi / 3$ about $Y$.
 
-Q# also provides support for classical enumeration patterns familiar to functional programming.
+The Q# canon also provides support for classical enumeration patterns familiar to functional programming.
 For example, <xref:microsoft.quantum.arrays.fold> implements the pattern $f(f(f(s\_{\text{initial}}, x\_0), x\_1), \dots)$ for reducing a function over a list.
 This pattern can be used to implement sums, products, minima, maxima and other such functions:
 
@@ -107,8 +107,8 @@ Similarly, functions such as <xref:microsoft.quantum.arrays.mapped> and <xref:mi
 
 ## Composing operations and functions ##
 
-The control flow constructs in Q# take operations and functions as their inputs, which makes it possible to include several operations or functions into a single callable.
-For example, the pattern $UVU^{\dagger}$ is very common in quantum programming, such that Q# provides the operation <xref:microsoft.quantum.canon.applywith> as an abstraction for this pattern.
+The control flow constructs by the canon take operations and functions as their inputs, which makes it possible to include several operations or functions into a single callable.
+For example, the pattern $UVU^{\dagger}$ is very common in quantum programming, such that the canon provides the operation <xref:microsoft.quantum.canon.applywith> as an abstraction for this pattern.
 This abstraction also allows for more efficient compilation into circuits, as `Controlled` acting on the sequence `U(qubit); V(qubit); Adjoint U(qubit);` does not need to act on each `U`.
 To see this, let $c(U)$ be the unitary representing `Controlled U([control], target)` and let $c(V)$ be defined in the same way.
 Then for an arbitrary state $\ket{\psi}$,

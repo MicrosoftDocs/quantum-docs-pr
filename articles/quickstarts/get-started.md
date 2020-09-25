@@ -29,6 +29,7 @@ To get up and running with the power of quantum, you can try out our tutorials:
 * [Explore entanglement with Q#](xref:microsoft.quantum.write-program) - This tutorial guides you on writing a Q# program that demonstrates some of the foundational concepts of quantum programming. If you are not ready to start coding, you can still follow along without installing the QDK and get an overview of the Q# programming language and the first concepts of quantum computing.
 * [Grover’s search algorithm](xref:microsoft.quantum.quickstarts.search) - Explore this example of a Q# program to get an idea of the power of Q# for expressing the quantum algorithm in a way that abstracts the low-level quantum operations.
 	This tutorial guides you through developing the program as a Q# application, using Visual Studio or Visual Studio Code.
+* [MS Learn: Quantum computing fundamentals](https://docs.microsoft.com/learn/paths/quantum-computing-fundamentals/) - This four-module Learning Path introduces the fundamental concepts of quantum computing and quantum algorithms, and gets you started building quantum programs using Q#. 
 
 ### Learning further
 * The [Microsoft Learn modules for quantum computing](https://docs.microsoft.com/learn/browse/?term=quantum) will teach you to master core concepts at your speed and on your schedule. You can learn the basics of how to create quantum programs with the QDK with our [first module](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/).

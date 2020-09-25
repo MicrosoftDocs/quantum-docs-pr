@@ -26,12 +26,9 @@ summary: |-
 remarks: |-
   `coefficients` will be padded with elements $\theta_j = 0.0$ if
   fewer than $2^n$ are specified.
-syntax: 'operation ApproximatelyMultiplexPauli (tolerance : Double, coefficients :
-  Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target
-  : Qubit) : Unit'
+syntax: 'operation ApproximatelyMultiplexPauli (tolerance : Double, coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
-  content: '(tolerance : Double, coefficients : Double[], pauli : Pauli, control :
-    Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  content: '(tolerance : Double, coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
   - name: tolerance
     summary: A tolerance below which small coefficients are truncated.
@@ -67,3 +64,4 @@ functors:
 - Controlled
 seeAlso:
 - multiplexpauli
+...

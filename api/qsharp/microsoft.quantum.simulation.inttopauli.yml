@@ -22,3 +22,4 @@ output:
   - summary: A `Pauli` operator given by `[PauliI, PauliX, PauliY, PauliZ][idx]`.
     isPrimitive: true
     uid: Pauli
+...

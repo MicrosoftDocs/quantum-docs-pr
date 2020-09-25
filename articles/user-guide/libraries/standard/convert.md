@@ -4,18 +4,21 @@ description: Learn about common and user-defined type conversion functions in th
 author: cgranade
 uid: microsoft.quantum.libraries.convert
 ms.author: chgranad 
+ms.date: 9/22/2020
 ms.topic: article
 no-loc: ['Q#', '$$v']
 ---
 
-# Type Conversions #
+# Type conversions
 
 Q# is a **strongly-typed** language.
-In particular, Q# does not implicitly cast between distinct types. For instance, `1 + 2.0` is not a valid Q# expression.
+In particular, Q# does not implicitly cast between distinct types. For example, `1 + 2.0` is not a valid Q# expression.
 Rather, Q# provides a variety of type conversion functions for constructing new values of a given type.
 
-For example, <xref:microsoft.quantum.core.length> has an output type of `Int`, so its output must first be converted to a `Double` before it can be used as a part of a floating-point expression.
-This can be done using the <xref:microsoft.quantum.convert.intasdouble> function:
+## Built-in types
+
+For example, <xref:microsoft.quantum.core.length> has an output type of `Int`, so its output must first be converted to a `Double` before you can use it as a part of a floating-point expression.
+This is done using the <xref:microsoft.quantum.convert.intasdouble> function:
 
 ```qsharp
 open Microsoft.Quantum.Convert as Convert;
@@ -35,7 +38,9 @@ let indices = Convert.RangeAsIntArray(0..4); // [0, 1, 2, 3, 4]
 
 The <xref:microsoft.quantum.convert> namespace also provides some more exotic conversions, such as `FunctionAsOperation`, which converts functions `'T -> 'U` into new operations `'T => 'U`.
 
-Finally, the Q# standard library provides a number of user-defined types such as <xref:microsoft.quantum.math.complex> and <xref:microsoft.quantum.arithmetic.littleendian>.
+## User-defined types
+
+The Q# standard library also provides several user-defined types, such as <xref:microsoft.quantum.math.complex> and <xref:microsoft.quantum.arithmetic.littleendian>.
 Along with these types, the standard library provides functions such as <xref:microsoft.quantum.arithmetic.bigendianaslittleendian>:
 
 ```Q#

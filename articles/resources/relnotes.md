@@ -26,10 +26,10 @@ This release contains the following:
 - Performance improvements for simulator: better application of gate fusion decisions; improved parallelization on Linux system; added intelligent scheduling of gate execution; bug fixes; overall speed improvement of ~5x (even faster on larger problems).
 - IntelliSense features are now supported for Q# files in Visual Studio and Visual Studio Code even without a project file.
 - Various Q#/Python interoperability improvements and bug fixes, including better support for NumPy data types.
-- Improvements to the Microsoft.Quantum.Arrays namespace (microsoft/QuantumLibraries#313)
+- Improvements to the Microsoft.Quantum.Arrays namespace (see [microsoft/QuantumLibraries#313](https://github.com/microsoft/QuantumLibraries/issues/313)).
 - Added a new language repo (QIR blog)[TODO]
+- Added a new [Repeat-Until-Success sample](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/repeat-until-success) that uses only two qubits.
 - General bug fixes.
-- Added a new Repeat-Until-Success sample that uses only two qubits
 
 Since the last release, the default branch in each of our open source repositories has been renamed to `main`.
 

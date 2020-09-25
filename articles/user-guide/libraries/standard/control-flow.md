@@ -10,9 +10,9 @@ ms.topic: article
 no-loc: ['Q#', '$$v']
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # For Quantum products none of these categories have been defined  yet.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-# ms.technology: tech-name-from-white-list
+# ms.service: service-name-from-allow-list
+# ms.prod: product-name-from-allow-list
+# ms.technology: tech-name-from-allow-list
 ---
 
 # Higher-order control flow #

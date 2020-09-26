@@ -1,5 +1,7 @@
   expanded: true 
   items:
+  - name: Keyword/symbol lists
+    href: language-reference.md
   - name: Types
     items:
     - name: Primitive types

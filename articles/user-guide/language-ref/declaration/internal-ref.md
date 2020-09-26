@@ -3,7 +3,7 @@ title: internal
 description: Keyword reference internal
 author: gillenhaalb
 ms.author: a-gibec
-ms.date: 20/09/2020
+ms.date: 09/20/2020
 ms.topic: article
 uid: microsoft.quantum.lang-ref.internal
 ---
@@ -32,5 +32,3 @@ The `internal` keyword at the beginning clearly indicates that this operation is
 ## Locations in documentation
 
 - Discussed in [Style Guide: Naming Conventions](xref:microsoft.quantum.contributing.style#private-or-internal-names). 
-
-https://docs.microsoft.com/en-us/quantum/resources/contributing/style-guide?tabs=guidance#private-or-internal-names

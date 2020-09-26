@@ -3,7 +3,7 @@ title: Keyword and language reference
 description: List of keywords and common symbols in the Q# language, with links to their respective pages in documentation
 author: gillenhaalb
 ms.author: a-gibec
-ms.date: 20/09/2020
+ms.date: 09/20/2020
 ms.topic: article
 uid: microsoft.quantum.lang-ref.main-list
 ---
@@ -14,7 +14,7 @@ This page contains brief descriptions and links to further information about all
 
 ## Keywords
 
-|    |Description|
+|Keyword|Description|
 |----|-----------|
 |[`Adj`](xref:microsoft.quantum.lang-ref.adj)|...|
 |[`Adj + Ctl`](xref:microsoft.quantum.lang-ref.adj-ctl)|...|
@@ -59,7 +59,7 @@ This page contains brief descriptions and links to further information about all
 
 ## Intrinsic types
 
-|    |Description|
+|Type|Description|
 |----|-----------|
 |[`BigInt`](xref:microsoft.quantum.lang-ref.bigint)|...|
 |[`Bool`](xref:microsoft.quantum.lang-ref.bool)|...|
@@ -74,7 +74,7 @@ This page contains brief descriptions and links to further information about all
 
 ## Reserved values 
 
-|    |Description|
+|Value|Description|
 |----|-----------|
 |[`False`](xref:microsoft.quantum.lang-ref.false)|...|
 |[`One`](xref:microsoft.quantum.lang-ref.one)|...|
@@ -83,17 +83,19 @@ This page contains brief descriptions and links to further information about all
 |[`PauliY`](xref:microsoft.quantum.lang-ref.pauliy)|...|
 |[`PauliZ`](xref:microsoft.quantum.lang-ref.pauliz)|...|
 |[`True`](xref:microsoft.quantum.lang-ref.true)|...|
-|[`Zero`](xref:microsoft.quantum.lang-ref.Zero)|...|
+|[`Zero`](xref:microsoft.quantum.lang-ref.zero)|...|
 
 ## Attributes
 
-|    |Description|
+|Attribute|Description|
 |----|-----------|
 |[`@EntryPoint`](xref:microsoft.quantum.lang-ref.entrypoint)|...|
 |[`@Test`](xref:microsoft.quantum.lang-ref.test)|...|
 
 ## Symbols
 
+|Symbol|Description|
+|----|-----------|
 |[`_`](xref:microsoft.quantum.lang-ref.partial-app-symb)|...|
 |[`->`](xref:microsoft.quantum.lang-ref.fn-signature-symb)|...|
 |[`=>`](xref:microsoft.quantum.lang-ref.op-signature-symb)|...|

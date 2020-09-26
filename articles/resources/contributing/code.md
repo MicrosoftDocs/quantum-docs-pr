@@ -79,7 +79,7 @@ Locally, unit tests can be run using the Visual Studio Test Explorer or the `dot
 ## Pull Requests
 
 When you are ready to contribute your work, please send a Pull Request via GitHub to the corresponding repository.
-The team will review and provide feedback. All comments need to be answer and resolved and all checks need to pass
+The team will review and provide feedback. All comments need to be answered and resolved and all checks need to pass
 before the code is merged to the `main` branch.
 
 ## When We'll Reject a Pull Request

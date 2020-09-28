@@ -30,7 +30,6 @@ This release contains the following:
 - Various Q#/Python interoperability improvements and bug fixes, including better support for NumPy data types.
 - Improvements to the Microsoft.Quantum.Arrays namespace (see [microsoft/QuantumLibraries#313](https://github.com/microsoft/QuantumLibraries/issues/313)).
 - Added a new [Repeat-Until-Success sample](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/repeat-until-success) that uses only two qubits.
-- General bug fixes.
 
 Since the last release, the default branch in each of our open source repositories has been renamed to `main`.
 

@@ -22,8 +22,7 @@ examples: |-
       ControlledRotation((2, [1]), PauliX, 2)
   ];
   ```
-syntax: 'function CyclicEntanglingLayer (nQubits : Int, axis : Pauli, stride : Int)
-  : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+syntax: 'function CyclicEntanglingLayer (nQubits : Int, axis : Pauli, stride : Int) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
 input:
   content: '(nQubits : Int, axis : Pauli, stride : Int)'
   types:
@@ -47,3 +46,4 @@ output:
       a register of `nQubits` qubits.
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
+...

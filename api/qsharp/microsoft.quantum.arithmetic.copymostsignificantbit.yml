@@ -10,8 +10,7 @@ namespace: microsoft.quantum.arithmetic
 summary: |-
   Copies the most significant bit of a qubit register
   `from` representing an unsigned integer into the qubit `target`.
-syntax: 'operation CopyMostSignificantBit (from : Microsoft.Quantum.Arithmetic.LittleEndian,
-  target : Qubit) : Unit'
+syntax: 'operation CopyMostSignificantBit (from : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
   content: '(from : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
@@ -35,3 +34,4 @@ functors:
 - Adjoint
 seeAlso:
 - littleendian
+...

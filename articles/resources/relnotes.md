@@ -23,6 +23,8 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 This release contains the following:
 
+- Introduction of [Quantum Intermediate Representation (QIR)](https://github.com/microsoft/qsharp-language/tree/main/Specifications/QIR#quantum-intermediate-representation-qir) intended as a common format across different front- and backends; see our [blog](https://devblogs.microsoft.com/qsharp/introducing-quantum-intermediate-representation-qir)
+- Launch of our new Q# language [repo](https://github.com/microsoft/qsharp-language) containing also the full [Q# documentation](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language)
 - Performance improvements for simulator: better application of gate fusion decisions; improved parallelization on Linux system; added intelligent scheduling of gate execution; bug fixes; overall speed improvement of ~5x (even faster on larger problems).
 - IntelliSense features are now supported for Q# files in Visual Studio and Visual Studio Code even without a project file.
 - Various Q#/Python interoperability improvements and bug fixes, including better support for NumPy data types.

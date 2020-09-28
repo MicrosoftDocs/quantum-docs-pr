@@ -7,13 +7,10 @@ uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
 name: AssertOperationsEqualReferenced
 type: operation
 namespace: microsoft.quantum.extensions.testing
-summary: AssertOperationsEqualReferenced has been deprecated. Please use @"microsoft.quantum.diagnostics.assertoperationsequalreferenced"
-  instead.
-syntax: 'operation AssertOperationsEqualReferenced (actual : (Qubit[] => Unit), expected
-  : (Qubit[] => Unit is Adj), nQubits : Int) : Unit'
+summary: AssertOperationsEqualReferenced has been deprecated. Please use @"microsoft.quantum.diagnostics.assertoperationsequalreferenced" instead.
+syntax: 'operation AssertOperationsEqualReferenced (actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int) : Unit'
 input:
-  content: '(actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits
-    : Int)'
+  content: '(actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int)'
   types:
   - name: actual
     isOperation: true
@@ -47,3 +44,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

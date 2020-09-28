@@ -21,13 +21,12 @@ examples: |-
   ```Q#
   let bitstring = [true, false, true];
   using (register = Qubit(3)) {
-      ApplyToEach(ApplyIf(X, _, _), Zip(bitstring, register));
+      ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));
       // register should now be in the state |101⟩.
       ...
   }
   ```
-syntax: "operation ApplyIfC (op : ('T => Unit is Ctl), bit : Bool, target : 'T) :\
-  \ Unit"
+syntax: "operation ApplyIfC (op : ('T => Unit is Ctl), bit : Bool, target : 'T) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl), bit : Bool, target : 'T)"
   types:
@@ -66,3 +65,4 @@ seeAlso:
 - microsoft.quantum.canon.applyifc
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
+...

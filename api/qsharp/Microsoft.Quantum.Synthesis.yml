@@ -33,3 +33,4 @@ operations:
   summary: |-
     Applies the @"microsoft.quantum.intrinsic.x" operation on `target`, if the Boolean function `func` evaluates
     to true for the classical assignment in `controlRegister`.
+...

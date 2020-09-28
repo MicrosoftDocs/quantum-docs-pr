@@ -8,11 +8,9 @@ name: EqualityFactCP
 type: function
 namespace: microsoft.quantum.diagnostics
 summary: Asserts that a complex number has the expected value.
-syntax: 'function EqualityFactCP (actual : Microsoft.Quantum.Math.ComplexPolar, expected
-  : Microsoft.Quantum.Math.ComplexPolar, message : String) : Unit'
+syntax: 'function EqualityFactCP (actual : Microsoft.Quantum.Math.ComplexPolar, expected : Microsoft.Quantum.Math.ComplexPolar, message : String) : Unit'
 input:
-  content: '(actual : Microsoft.Quantum.Math.ComplexPolar, expected : Microsoft.Quantum.Math.ComplexPolar,
-    message : String)'
+  content: '(actual : Microsoft.Quantum.Math.ComplexPolar, expected : Microsoft.Quantum.Math.ComplexPolar, message : String)'
   types:
   - name: actual
     summary: The value to be checked.
@@ -29,3 +27,4 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+...

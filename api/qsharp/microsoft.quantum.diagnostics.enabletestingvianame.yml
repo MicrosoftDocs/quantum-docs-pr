@@ -11,3 +11,4 @@ summary: |-
   Compiler-recognized attribute via which an alternative name can be defined
   that may be used when loading a type or callable for testing purposes.
 syntax: newtype EnableTestingViaName = String;
+...

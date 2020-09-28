@@ -6,7 +6,7 @@ ms.author: martinro
 ms.date: 9/24/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
-ms.prod: quantum
+ms.prod: 
 no-loc: ['Q#', '$$v']
 ---
 

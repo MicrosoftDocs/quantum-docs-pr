@@ -8,11 +8,9 @@ name: EvaluateOddPolynomialFxP
 type: operation
 namespace: microsoft.quantum.arithmetic
 summary: Evaluates an odd polynomial in a fixed-point representation.
-syntax: 'operation EvaluateOddPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint,
-  result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+syntax: 'operation EvaluateOddPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
-  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint,
-    result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
     summary: |-
@@ -38,3 +36,4 @@ output:
 functors:
 - Adjoint
 - Controlled
+...

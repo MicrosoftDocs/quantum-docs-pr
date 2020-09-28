@@ -29,7 +29,6 @@ This release contains the following:
 - IntelliSense features are now supported for Q# files in Visual Studio and Visual Studio Code even without a project file.
 - Various Q#/Python interoperability improvements and bug fixes, including better support for NumPy data types.
 - Improvements to the Microsoft.Quantum.Arrays namespace (see [microsoft/QuantumLibraries#313](https://github.com/microsoft/QuantumLibraries/issues/313)).
-- Introduction of [Quantum Intermediate Representation (QIR)](https://github.com/microsoft/qsharp-language/tree/main/Specifications/QIR#quantum-intermediate-representation-qir) intended as a common format across different front- and backends; see our [blog](https://devblogs.microsoft.com/qsharp/introducing-quantum-intermediate-representation-qir)
 - Added a new [Repeat-Until-Success sample](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/repeat-until-success) that uses only two qubits.
 - General bug fixes.
 

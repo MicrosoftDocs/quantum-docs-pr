@@ -17,8 +17,7 @@ examples: |-
   ```Q#
   let randomInteger = BoolArrayAsInt(DrawMany(SampleRandomBit, 16, ()));
   ```
-syntax: "operation DrawMany (op : ('TInput => 'TOutput), nSamples : Int, input : 'TInput)\
-  \ : 'TOutput[]"
+syntax: "operation DrawMany (op : ('TInput => 'TOutput), nSamples : Int, input : 'TInput) : 'TOutput[]"
 input:
   content: "(op : ('TInput => 'TOutput), nSamples : Int, input : 'TInput)"
   types:
@@ -54,3 +53,4 @@ typeParameters:
   summary: The type of output returned by `op`.
 seeAlso:
 - microsoft.quantum.canon.repeat
+...

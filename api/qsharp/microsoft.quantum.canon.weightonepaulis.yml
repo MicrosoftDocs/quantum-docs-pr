@@ -31,3 +31,4 @@ output:
     - isArray: true
       isPrimitive: true
       uid: Pauli
+...

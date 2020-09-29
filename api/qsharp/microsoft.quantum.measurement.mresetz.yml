@@ -29,3 +29,4 @@ output:
   - summary: The result of measuring `target` in the Pauli $Z$ basis.
     isPrimitive: true
     uid: Result
+...

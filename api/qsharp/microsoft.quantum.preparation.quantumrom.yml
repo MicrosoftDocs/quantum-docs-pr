@@ -36,9 +36,7 @@ examples: |-
       }
   }
   ```
-syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int,
-  (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit
-  is Adj + Ctl))'
+syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))'
 references: |-
   - Encoding Electronic Spectra in Quantum Circuits with Linear T Complexity
     Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru Paler, Austin Fowler, Hartmut Neven
@@ -58,8 +56,7 @@ input:
     isPrimitive: true
     uid: Double
 output:
-  content: ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian,
-    Qubit[]) => Unit is Adj + Ctl))
+  content: ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))
   types:
   - summary: |-
       ## First parameter
@@ -100,3 +97,4 @@ output:
       functors:
       - Adjoint
       - Controlled
+...

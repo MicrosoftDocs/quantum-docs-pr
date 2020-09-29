@@ -11,6 +11,7 @@ uid: microsoft.quantum.lang-ref.main-list
 # Q# Keyword and Language Reference
 
 This page contains brief descriptions and links to further information about all Q# language keywords and many common symbols. 
+Each keyword is hyperlinked to its own dedicated page where you will find more details and examples of its use.
 
 ## Keywords
 

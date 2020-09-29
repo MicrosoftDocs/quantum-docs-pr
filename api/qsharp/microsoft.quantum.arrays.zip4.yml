@@ -7,11 +7,8 @@ uid: microsoft.quantum.arrays.zip4
 name: Zip4
 type: function
 namespace: microsoft.quantum.arrays
-summary: |-
-  Given four arrays, returns a new array of 4-tuples such that each 4-tuple
-  contains an element from each original array.
-syntax: "function Zip4 (first : 'T1[], second : 'T2[], third : 'T3[], fourth : 'T4[])\
-  \ : ('T1, 'T2, 'T3, 'T4)[]"
+summary: Zip4 has been deprecated. Please use @"microsoft.quantum.arrays.zipped4" instead.
+syntax: "function Zip4 (first : 'T1[], second : 'T2[], third : 'T3[], fourth : 'T4[]) : ('T1, 'T2, 'T3, 'T4)[]"
 input:
   content: "(first : 'T1[], second : 'T2[], third : 'T3[], fourth : 'T4[])"
   types:
@@ -64,3 +61,4 @@ typeParameters:
 seeAlso:
 - zip
 - zip3
+...

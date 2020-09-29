@@ -16,7 +16,9 @@ jobs:
             $_.url -eq "https://github.com/microsoft/quantum"
           }
           if ($samplesRepo.branch -ne "main") {
+
             Write-Host "::error file=$configPath::Samples repository branch is not set to main for a PR targeting main."
+
             exit 1;
           }
         shell: pwsh

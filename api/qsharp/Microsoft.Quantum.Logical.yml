@@ -63,6 +63,10 @@ functions:
   summary: |-
     Returns true if and only if a number is less than or equal to another
     number.
+- uid: microsoft.quantum.logical.lexographiccomparison
+  summary: |-
+    Given a comparison function, returns a new function that
+    lexographically compares two arrays.
 - uid: microsoft.quantum.logical.nearlyequald
   summary: |-
     Returns true if and only if two inputs are nearly equal (that is, within
@@ -91,3 +95,4 @@ functions:
   summary: Returns the Boolean disjunction of two values.
 - uid: microsoft.quantum.logical.xor
   summary: Returns the Boolean exclusive disjunction of two values.
+...

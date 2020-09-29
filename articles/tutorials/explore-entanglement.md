@@ -105,7 +105,7 @@ introduce qubit states, operations, and measurement.
 
 ### Initialize qubit using measurement
 
-In the first code below, we show you how to work with qubits in
+In the first code snippet below, we show you how to work with qubits in
 Q#.  We’ll introduce two operations, [`M`](xref:microsoft.quantum.intrinsic.m) and [`X`](xref:microsoft.quantum.intrinsic.x) that transform the state of a
 qubit. In this code snippet, an operation `SetQubitState` is defined that takes as a parameter a
 qubit and another parameter, `desired`, representing the state that we would
@@ -150,7 +150,7 @@ contains calls to other quantum operations.
 The arguments to an operation are specified as a tuple, within parentheses.
 
 The return type of the operation is specified after a colon. In this case, the
-`SetQubitState` operation has no return, so it is marked as returning `Unit`. This is the
+`SetQubitState` operation has no return type, so it is marked as returning `Unit`. This is the
 Q# equivalent of `unit` in F#, which is roughly analogous to `void` in C#, and
 an empty tuple in Python (`()`, represented by the type hint `Tuple[()]`).
 
@@ -226,7 +226,7 @@ immutable variable. Operation arguments are always immutable.
 
 If you need a variable whose value can change, such as `numOnes` in the example,
 you can declare the variable with the `mutable` keyword. A mutable variable's
-value may be changed using a `setQubitState` statement.
+value may be changed using a `set` statement.
 
 In both cases, the type of a variable is inferred by the compiler. Q# doesn't
 require any type annotations for variables.
@@ -241,7 +241,7 @@ at the start, and releases those qubits at the end of the block.
 
 ## Run the code from the command prompt
 
-In order to run the code we need to specify the compiler *which* callable to run
+In order to run the code we need to tell the compiler *which* callable to run
 when we provide the `dotnet run` command. This is done with a simple change in
 the Q# file by adding a line with `@EntryPoint()` directly preceding the
 callable: the `TestBellState` operation in this case. The full code should be:
@@ -323,7 +323,7 @@ and `One` after measurement.
 
 ### `X` flips qubit state
 
-First we'll just try to flip the qubit (if the qubit is in `Zero` state will
+First we'll just try to flip the qubit (if the qubit is in `Zero` state it will
 flip to `One` and vice versa). This is accomplished by performing an `X`
 operation before we measure it in `TestBellState`:
 

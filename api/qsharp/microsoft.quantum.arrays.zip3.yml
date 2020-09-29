@@ -7,11 +7,8 @@ uid: microsoft.quantum.arrays.zip3
 name: Zip3
 type: function
 namespace: microsoft.quantum.arrays
-summary: |-
-  Given three arrays, returns a new array of 3-tuples such that each 3-tuple
-  contains an element from each original array.
-syntax: "function Zip3 (first : 'T1[], second : 'T2[], third : 'T3[]) : ('T1, 'T2,\
-  \ 'T3)[]"
+summary: Zip3 has been deprecated. Please use @"microsoft.quantum.arrays.zipped3" instead.
+syntax: "function Zip3 (first : 'T1[], second : 'T2[], third : 'T3[]) : ('T1, 'T2, 'T3)[]"
 input:
   content: "(first : 'T1[], second : 'T2[], third : 'T3[])"
   types:
@@ -55,3 +52,4 @@ typeParameters:
 seeAlso:
 - zip
 - zip4
+...

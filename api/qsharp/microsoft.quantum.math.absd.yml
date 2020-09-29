@@ -8,8 +8,7 @@ name: AbsD
 type: function
 namespace: microsoft.quantum.math
 summary: Returns the absolute value of a double-precision floating-point number.
-remarks: See [System.Math.Abs](https://docs.microsoft.com/dotnet/api/system.math.abs)
-  for more details.
+remarks: See [System.Math.Abs](https://docs.microsoft.com/dotnet/api/system.math.abs) for more details.
 syntax: 'function AbsD (a : Double) : Double'
 input:
   content: '(a : Double)'
@@ -22,3 +21,4 @@ output:
   types:
   - isPrimitive: true
     uid: Double
+...

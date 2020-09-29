@@ -36,3 +36,4 @@ output:
       The index `i` with probability `probs[i] / sum`, where `sum` is the sum
       of `probs` given by `Fold(PlusD, 0.0, probs)`.
     uid: microsoft.quantum.random.discretedistribution
+...

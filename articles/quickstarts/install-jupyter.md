@@ -14,7 +14,7 @@ no-loc: ['Q#', '$$v']
 
 Install the QDK for developing Q# operations on Q# Jupyter Notebooks.
 
-Jupyter Notebooks allow in-place code computation alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
+Jupyter Notebooks allow running code in-place alongside instructions, notes, and other content. This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials. Here's what you need to do to start creating your own Q# notebooks.
 
 ## Install the IQ# Jupyter kernel
 

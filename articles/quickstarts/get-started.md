@@ -52,7 +52,7 @@ The current documentation includes the following additional topics.
 ### Q# developer guides
 
 * [Q# User Guide](xref:microsoft.quantum.guide) details the core concepts used to create quantum programs in Q#.
-* [Quantum simulators and host applications](xref:microsoft.quantum.machines) describes how quantum algorithms are computed, what quantum machines are available, and how to write a non-Q# driver for the quantum program.
+* [Quantum simulators and host applications](xref:microsoft.quantum.machines) describes how quantum algorithms are run, what quantum machines are available, and how to write a non-Q# driver for the quantum program.
 
 ### Q# libraries
 

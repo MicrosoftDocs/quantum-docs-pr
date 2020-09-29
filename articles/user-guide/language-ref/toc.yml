@@ -78,13 +78,11 @@
         href: callables/functors/controlled-adjoint-ref.md
     - name: Signatures
       items:
-      - name: is
-        href: callables/signature/is-ref.md
-      - name: Ctl
+      - name: is Ctl
         href: callables/signature/ctl-ref.md
-      - name: Adj
+      - name: is Adj
         href: callables/signature/adj-ref.md
-      - name: 'Adj + Ctl'
+      - name: 'is Adj + Ctl'
         href: callables/signature/adj-ctl-ref.md
       - name: '=> (operation)'
         href: callables/signature/op-signature-symb-ref.md

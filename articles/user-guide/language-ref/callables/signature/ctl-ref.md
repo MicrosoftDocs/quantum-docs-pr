@@ -1,5 +1,5 @@
 ---
-title: Ctl
+title: is Ctl
 description: Keyword reference Ctl
 author: gillenhaalb
 ms.author: a-gibec
@@ -8,6 +8,6 @@ ms.topic: article
 uid: microsoft.quantum.lang-ref.ctl
 ---
 
-# `Ctl`
+# `is Ctl`
 
 fill

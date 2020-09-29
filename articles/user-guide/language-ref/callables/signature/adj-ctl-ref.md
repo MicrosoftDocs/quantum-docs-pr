@@ -1,5 +1,5 @@
 ---
-title: 'Adj + Ctl'
+title: 'is Adj + Ctl'
 description: Keyword reference 'Adj + Ctl'
 author: gillenhaalb
 ms.author: a-gibec
@@ -8,6 +8,6 @@ ms.topic: article
 uid: microsoft.quantum.lang-ref.adj-ctl
 ---
 
-# `Adj + Ctl`
+# `is Adj + Ctl`
 
-fill
+Equivalent to `is Ctl + Adj`.

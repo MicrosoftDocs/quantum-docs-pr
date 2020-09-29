@@ -1,5 +1,5 @@
 ---
-title: Adj
+title: is Adj
 description: Keyword reference Adj
 author: gillenhaalb
 ms.author: a-gibec
@@ -8,6 +8,6 @@ ms.topic: article
 uid: microsoft.quantum.lang-ref.adj
 ---
 
-# `Adj`
+# `is Adj`
 
 fill

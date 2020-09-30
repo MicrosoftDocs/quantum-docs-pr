@@ -1,3 +1,7 @@
+---
+ms.topic: include
+---
+
 Why do we have exponential growth for quantum state vectors?  Our goal in this section is to review the rules used to build multi-qubit states out of single-qubit states as well as discuss the gate operations that we need to include in our gate set to form a universal many-qubit quantum computer.
 These tools are absolutely necessary to understand the gate sets that are commonly used in Q# code and also to gain intuition about why quantum effects such as entanglement or interference render quantum computing more powerful than classical computing.
 

@@ -1,7 +1,5 @@
 - name: Introduction to quantum computing
   href: overview.md
-- name: Includes test
-  href: includes.md
 - name: Key concepts
   items: 
   - name: Understanding quantum computing

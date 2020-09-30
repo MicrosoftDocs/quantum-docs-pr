@@ -3,7 +3,7 @@ title: '%azure.execute (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.execute
 ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.date: 09/30/2020
 ms.topic: article
 ---
 

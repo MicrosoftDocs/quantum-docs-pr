@@ -3,7 +3,7 @@ title: '%chemistry.fh.load (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load
 ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.date: 10/02/2020
 ms.topic: article
 ---
 

@@ -3,7 +3,7 @@ title: '%chemistry.encode (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.encode
 ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.date: 10/03/2020
 ms.topic: article
 ---
 

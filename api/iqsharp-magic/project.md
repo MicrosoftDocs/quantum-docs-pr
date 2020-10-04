@@ -3,7 +3,7 @@ title: '%project (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.project
 ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.date: 10/04/2020
 ms.topic: article
 ---
 

@@ -3,7 +3,7 @@ title: '%estimate (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.estimate
 ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.date: 10/05/2020
 ms.topic: article
 ---
 

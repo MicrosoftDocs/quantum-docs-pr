@@ -48,7 +48,7 @@ In the different topics of this guide, we detail the core concepts of the Q# lan
 
 ### Quantum Simulators and Resource Estimators
 
-- [Quantum simulators and host applications](xref:microsoft.quantum.machines): An overview of the different simulators available, as well as the general execution model between host programs and target machines.
+- [Quantum simulators and host applications](xref:microsoft.quantum.machines): An overview of the different simulators available, as well as the general interaction model between host programs and target machines.
 
 - [Full state simulator](xref:microsoft.quantum.machines.full-state-simulator): The target machine which simulates the full quantum state. Useful for fully running or debugging smaller-scale programs (less than a few dozen qubits)
 

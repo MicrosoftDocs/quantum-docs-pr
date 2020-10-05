@@ -136,7 +136,7 @@ To get started, clone the repo and open the `Numerics` subfolder:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics
+cd Quantum/samples/numerics
 ```
 
 Then, `cd` into one of the sample folders and run the sample via

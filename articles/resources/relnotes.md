@@ -17,6 +17,12 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version 0.12.20100301
+
+*Release date: October 5th, 2020*
+
+This release fixes a bug affecting load of Q# notebooks.
+
 ## Version 0.12.20092803
 
 *Release date: September 29th, 2020*

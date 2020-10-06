@@ -10,4 +10,4 @@ uid: microsoft.quantum.lang-ref.auto
 
 # `auto`
 
-fill
+https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/1_ProgramStructure/4_SpecializationDeclarations.md#specialization-declarations

@@ -11,3 +11,5 @@ uid: microsoft.quantum.lang-ref.using
 # `using`
 
 fill
+
+https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/2_Statements/QuantumMemoryManagement.md#quantum-memory-management

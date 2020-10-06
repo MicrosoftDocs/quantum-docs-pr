@@ -10,4 +10,8 @@ uid: microsoft.quantum.lang-ref.namespace
 
 # `namespace`
 
-fill
+## Example
+
+## More details
+- *QDK documentation*: 
+- *Q# language repository*: [Namespaces](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/1_ProgramStructure/1_Namespaces.md#namespaces)

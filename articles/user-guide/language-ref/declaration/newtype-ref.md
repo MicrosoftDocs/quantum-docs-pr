@@ -10,4 +10,8 @@ uid: microsoft.quantum.lang-ref.newtype
 
 # `newtype`
 
-fill
+## Example
+
+## More details
+- *QDK documentation*: 
+- *Q# language repository*: [Type Declarations](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/1_ProgramStructure/2_TypeDeclarations.md#type-declarations)

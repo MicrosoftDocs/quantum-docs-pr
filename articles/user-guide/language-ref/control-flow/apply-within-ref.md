@@ -11,3 +11,5 @@ uid: microsoft.quantum.lang-ref.apply-within
 # `apply-within` (conjugation)
 
 fill
+
+https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/2_Statements/Conjugations.md#conjugations

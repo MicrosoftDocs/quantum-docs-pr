@@ -11,3 +11,6 @@ uid: microsoft.quantum.lang-ref.entrypoint
 # `@EntryPoint`
 
 fill
+
+
+https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/1_ProgramStructure/5_Attributes.md#attributes

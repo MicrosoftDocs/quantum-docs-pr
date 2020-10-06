@@ -10,4 +10,4 @@ uid: microsoft.quantum.lang-ref.adj
 
 # `is Adj`
 
-fill
+https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/4_TypeSystem/OperationsAndFunctions.md#operation-characteristics

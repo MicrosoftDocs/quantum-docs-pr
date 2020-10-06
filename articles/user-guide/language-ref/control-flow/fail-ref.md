@@ -11,3 +11,5 @@ uid: microsoft.quantum.lang-ref.fail
 # `fail`
 
 fill
+
+https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/2_Statements/ReturnsAndTermination.md#fail-statement

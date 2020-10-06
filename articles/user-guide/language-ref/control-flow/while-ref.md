@@ -11,3 +11,5 @@ uid: microsoft.quantum.lang-ref.while
 # `while`
 
 fill
+
+https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/2_Statements/ConditionalLoops.md#conditional-loops

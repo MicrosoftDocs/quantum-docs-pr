@@ -11,3 +11,5 @@ uid: microsoft.quantum.lang-ref.mutable
 # `mutable`
 
 fill
+
+https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/2_Statements/VariableDeclarationsAndReassignments.md#variable-declarations-and-reassignments

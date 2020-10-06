@@ -31,4 +31,7 @@ The `internal` keyword at the beginning clearly indicates that this operation is
 
 ## Locations in documentation
 
-- Discussed in [Style Guide: Naming Conventions](xref:microsoft.quantum.contributing.style#private-or-internal-names). 
+- [Style Guide: Naming Conventions](xref:microsoft.quantum.contributing.style#private-or-internal-names). 
+
+<!-- Maybe the following? page is empty so unsure -->
+- Q# language repository: [Access Modifiers](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/1_ProgramStructure/6_AccessModifiers.md#access-modifiers)

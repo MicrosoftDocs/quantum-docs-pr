@@ -10,4 +10,4 @@ uid: microsoft.quantum.lang-ref.else
 
 # `else`
 
-fill
+https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/2_Statements/ConditionalBranching.md#conditional-branching

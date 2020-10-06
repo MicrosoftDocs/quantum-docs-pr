@@ -11,3 +11,5 @@ uid: microsoft.quantum.lang-ref.range
 # `Range`
 
 fill
+
+https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/3_Expressions/ValueLiterals.md#literals

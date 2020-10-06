@@ -11,3 +11,7 @@ uid: microsoft.quantum.lang-ref.qubit
 # `Qubit`
 
 fill
+
+https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/4_TypeSystem/QuantumDataTypes.md#quantum-specific-data-types
+
+https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/3_Expressions/ValueLiterals.md#literals

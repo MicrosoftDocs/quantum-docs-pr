@@ -27,7 +27,7 @@ Each keyword is hyperlinked to its own dedicated page where you will find more d
 |[`Controlled`](xref:microsoft.quantum.lang-ref.controlled)|Operation functor; used to call the controlled version of an operation.|
 |[`controlled`](xref:microsoft.quantum.lang-ref.controlled-tag)|Specialization tag used to explicitly define the implementation of an operation's controlled specialization.|
 |[`Controlled Adjoint`](xref:microsoft.quantum.lang-ref.controlled-adjoint)|Operation functor; used to call the controlled adjoint version of an operation.|
-|[`controlled adjoint`](xref:microsoft.quantum.lang-ref.controlled-adjoint-tag)|Specialization tag used to explicitly define the implementation of an operation's controlled adjoint specialization. *Equivalent to `adjoint controlled`.*|
+|[`controlled adjoint`](xref:microsoft.quantum.lang-ref.controlled-adjoint-tag)|Specialization tag used to explicitly define the implementation of an operation's controlled adjoint specialization. *Equivalent to* `adjoint controlled`.|
 |[`distribute`](xref:microsoft.quantum.lang-ref.distribute)|Generation directive indicating how the compiler should generate an operation specialization. Can be used with `controlled` and `controlled adjoint` specializations.|
 |[`elif`](xref:microsoft.quantum.lang-ref.elif)|Indicates an *else-if* clause, to be evaluated if a preceding *if* condition was *false*.|
 |[`else`](xref:microsoft.quantum.lang-ref.else)|Indicates an *else* block, which will be run if, to be evaluated if the preceding *if* condition was *false* (in addition to any *else-if* conditions).|
@@ -41,7 +41,7 @@ Each keyword is hyperlinked to its own dedicated page where you will find more d
 |[`intrinsic`](xref:microsoft.quantum.lang-ref.intrinsic)|Generation directive indicating that the target machine provides an operation specialization.|
 |[`invert`](xref:microsoft.quantum.lang-ref.invert)|Generation directive indicating how the compiler should generate an operation specialization. Can be used with `adjoint` and `controlled adjoint` specializations.|
 |[`is Adj`](xref:microsoft.quantum.lang-ref.adj)|Annotation to the signature of an operation being defined; declares the existence of an adjoint specialization. Thus the `Adjoint` functor can be used when calling the operation.|
-|[`is Adj + Ctl`](xref:microsoft.quantum.lang-ref.adj-ctl)|Annotation to the signature of an operation being defined; declares the existence of a controlled adjoint specialization. Thus the `Controlled Adjoint` functor can be used when calling the operation. *Equivalent to `is Ctl + Adj`.*|
+|[`is Adj + Ctl`](xref:microsoft.quantum.lang-ref.adj-ctl)|Annotation to the signature of an operation being defined; declares the existence of a controlled adjoint specialization. Thus the `Controlled Adjoint` functor can be used when calling the operation. *Equivalent to* `is Ctl + Adj`.|
 |[`is Ctl`](xref:microsoft.quantum.lang-ref.ctl)|Annotation to the signature of an operation being defined; declares the existence of a controlled specialization. Thus the `Controlled` functor can be used when calling the operation.|
 |[`let`](xref:microsoft.quantum.lang-ref.let)|Used to bind a value to an immutable variable. Compare to `mutable`, which allows rebinding.|
 |[`mutable`](xref:microsoft.quantum.lang-ref.mutable)|Used to create a mutable variable which can be rebound using `set`.|

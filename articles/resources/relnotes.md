@@ -17,11 +17,11 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
-## Version 0.12.20100301
+## Version 0.12.20100504
 
 *Release date: October 5th, 2020*
 
-This release fixes a bug affecting load of Q# notebooks.
+This release fixes a bug affecting load of Q# notebooks (see [iqsharp#331](https://github.com/microsoft/iqsharp/pull/331)).
 
 ## Version 0.12.20092803
 

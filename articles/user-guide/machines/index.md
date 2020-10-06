@@ -17,7 +17,7 @@ Quantum simulators are software programs that run on classical computers and act
 
 ## The Quantum Development Kit (QDK) quantum simulators
 
-The quantum simulator is responsible for providing implementations of quantum primitives for an algorithm. This includes primitive operations such as `H`, `CNOT`, and `Measure`, as well as qubit management and tracking. The QDK includes different classes of quantum simulators representing different run models for the same quantum algorithm. 
+The quantum simulator is responsible for providing implementations of quantum primitives for an algorithm. This includes primitive operations such as `H`, `CNOT`, and `Measure`, as well as qubit management and tracking. The QDK includes different classes of quantum simulators representing different ways of simulating the same quantum algorithm. 
 
 
 Each type of quantum simulator can provide different implementations of these primitives. For example, the [full state simulator](xref:microsoft.quantum.machines.full-state-simulator) runs the quantum algorithm by fully simulating the [quantum state vector](xref:microsoft.quantum.glossary#quantum-state), whereas the [quantum computer trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 

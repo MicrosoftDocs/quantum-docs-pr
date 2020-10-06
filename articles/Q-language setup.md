@@ -4,9 +4,9 @@ This document is to define the setup and workflow for syncing the Q# language to
 
 * [Quantum-docs-pr structure](#quantum-docs-pr-structure)
 * [QDK TOC structure](#qdk-toc-structure)
-* [File sync process](#file-sync-structure)
-* [Stub topics in quantum-docs-pr](#stub-topics-in-quantum-docs-pr)
-* [Source content](#source-content)
+* [File sync process](#file-sync-process)
+* [Stubbed topics in quantum-docs-pr](#stubbed-topics-in-quantum-docs-pr)
+* [Source topics](#source-topics)
 
 Syntax for the Markdown *include* statement is [here](https://review.docs.microsoft.com/help/contribute/includes-best-practices?branch=master).
 

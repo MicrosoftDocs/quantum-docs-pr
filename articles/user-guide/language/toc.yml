@@ -2,3 +2,9 @@
   href: types.md
 - name: Expressions 
   href: expressions.md
+- name: Identfiers 
+  href: stub_2.md
+- name: Type inference 
+  href: stub_3.md
+- name: Call statements 
+  href: stub_1.md

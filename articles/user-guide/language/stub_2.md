@@ -10,4 +10,4 @@ no-loc: ['Q#', '$$v']
 ---
 
 
-[!INCLUDE [description](~/includes/qsharp-language/Specifications/Language/3_expressions/Identifiers.md)]
+[!INCLUDE [description](~/includes/qsharp-language/Specifications/Language/3_expressions/Functorapplication.md)]

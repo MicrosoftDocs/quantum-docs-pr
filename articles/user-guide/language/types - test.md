@@ -9,4 +9,6 @@ uid: microsoft.quantum.guide.types.test
 no-loc: ['Q#', '$$v']
 ---
 
+# Type in Q\#
+
 [!INCLUDE [description](~/includes/qsharp-language/Specifications/Language/2_Statements/CallStatements.md)]

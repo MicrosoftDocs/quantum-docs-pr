@@ -9,6 +9,4 @@ uid: microsoft.quantum.guide.types.test
 no-loc: ['Q#', '$$v']
 ---
 
-# Type in Q\#
-
-[!INCLUDE [description](~/includes/qsharp-language/Specifications/Language/4_typesystem/typeinference.md)]
+[!INCLUDE [description](~/includes/qsharp-language/Specifications/Language/4_typesystem/immutability.md)]

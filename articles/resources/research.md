@@ -35,7 +35,11 @@ The Quantum Development Kit provides several tools to help include Q# code into 
 
 ## Papers using Q\#
 
-<!-- TODO: populate this list -->
+- _Implementing Grover Oracles for Quantum Key Search on AES and LowMC_, Jaques et al. (2020). DOI [10/fmcx](https://doi.org/fcmx).
+- _Property-based Testing of Quantum Programs in Q#_, Honarvar, Mousavi, and Nagarajan (2020). DOI [10/fcmz](https://doi.org/fcmz).
+Google's arithmetic papers
+- _Asymptotically Efficient Quantum Karatsuba Multiplication_, Gidney (2019). arXiv [1904.07356](https://arxiv.org/abs/1904.07356).
+- _Q# and NWChem: Tools for Scalable Quantum Chemistry on Quantum Computers_, Low et al. (2019). arXiv [1904.01131](https://arxiv.org/abs/1904.01131).
 
 If you have a paper that uses Q# and that you would like for us to add to this list, please let us know by [filing feedback on the documentation repository](https://github.com/MicrosoftDocs/quantum-docs-pr/issues), or by making a [pull request](https://github.com/MicrosoftDocs/quantum-docs-pr/pulls) with your paper added to the list.
 Thank you!

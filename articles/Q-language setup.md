@@ -6,4 +6,4 @@ uid: microsoft.quantum.qsharp.conditional-branching
 
 ## Conditional branching
 
-[!INCLUDE [conditional branching] (...../microsoft/qsharp-language/specifications/language/2_statements/conditionalbranching.md)]
+[!INCLUDE [conditional branching] (..../microsoft/qsharp-language/specifications/language/2_statements/conditionalbranching.md)]

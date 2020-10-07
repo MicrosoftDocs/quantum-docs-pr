@@ -74,6 +74,12 @@
       "url": "https://github.com/microsoft/quantum",
       "branch": "main",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "articles/includes/qsharp-language",
+      "url": "https://github.com/microsoft/qsharp-language",
+      "branch": "main",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {},

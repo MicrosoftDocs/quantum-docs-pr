@@ -11,4 +11,4 @@ no-loc: ['Q#', '$$v']
 
 # Types in Q# test
 
-Test
+[!INCLUDE [description](~/includes/qsharp-language/Specifications/Language/2_Statements/CallStatements.md)]

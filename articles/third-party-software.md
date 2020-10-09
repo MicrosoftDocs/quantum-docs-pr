@@ -8,6 +8,7 @@ ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 no-loc: ['Q#', '$$v']
+ms.service: quantum
 ---
 
 # THIRD-PARTY SOFTWARE NOTICES AND INFORMATION

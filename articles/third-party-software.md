@@ -6,9 +6,9 @@ keywords: Don’t add or edit keywords without consulting your SEO champ.
 author: QuantumWriter
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: article
 no-loc: ['Q#', '$$v']
-ms.service: quantum
+ms.prod: quantum
 ---
 
 # THIRD-PARTY SOFTWARE NOTICES AND INFORMATION

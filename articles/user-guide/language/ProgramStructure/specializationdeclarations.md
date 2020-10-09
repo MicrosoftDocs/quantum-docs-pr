@@ -2,7 +2,7 @@
 title: Specialization declarations in Q#
 description: Learn how to declare specialization to support certain functors in Q# operations.
 author: bettinaheim
-ms.author: bettina.heim
+ms.author: beheim
 ms.date: 10/07/2020
 ms.topic: article
 uid: microsoft.quantum.qsharp.specializationdeclarations

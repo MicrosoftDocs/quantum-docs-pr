@@ -2,7 +2,7 @@
 title: Quantum data types in Q#
 description: Learn about quantum data types in the Q# programming language.
 author: bettinaheim
-ms.author: bettina.heim
+ms.author: beheim
 ms.date: 10/07/2020
 ms.topic: article
 uid: microsoft.quantum.qsharp.quantumdatatypes

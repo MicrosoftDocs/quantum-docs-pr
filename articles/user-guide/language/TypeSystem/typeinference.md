@@ -1,8 +1,8 @@
 ---
 title: Type inference in Q#
-description: Learn about the type system in the Q# programming language.
+description: Learn about type inference in the Q# programming language.
 author: bettinaheim
-ms.author: bettina.heim
+ms.author: beheim
 ms.date: 10/07/2020
 ms.topic: article
 uid: microsoft.quantum.qsharp.typeinference

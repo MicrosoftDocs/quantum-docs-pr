@@ -2,7 +2,7 @@
 title: Operator precedence in Q#
 description: Learn about operator precedence in Q#.
 author: bettinaheim
-ms.author: bettina.heim
+ms.author: beheim
 ms.date: 10/07/2020
 ms.topic: article
 uid: microsoft.quantum.qsharp.precedenceandassociativity

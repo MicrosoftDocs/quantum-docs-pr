@@ -2,7 +2,7 @@
 title: Type declarations in Q#
 description: Learn about how user-defined types are declared in the Q# programming language.
 author: bettinaheim
-ms.author: bettina.heim
+ms.author: beheim
 ms.date: 10/07/2020
 ms.topic: article
 uid: microsoft.quantum.qsharp.typedeclarations

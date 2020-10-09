@@ -2,7 +2,7 @@
 title: Conjugations in Q#
 description: Learn about using conjugations in Q# to manage memory in quantum programs.
 author: bettinaheim
-ms.author: bettina.heim
+ms.author: beheim
 ms.date: 10/07/2020
 ms.topic: article
 uid: microsoft.quantum.qsharp.conjugations

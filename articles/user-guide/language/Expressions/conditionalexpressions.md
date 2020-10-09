@@ -2,7 +2,7 @@
 title: Conditional expressions in Q#
 description: Learn about conditional expressions in the Q# programming language.
 author: bettinaheim
-ms.author: bettina.heim
+ms.author: beheim
 ms.date: 10/07/2020
 ms.topic: article
 uid: microsoft.quantum.qsharp.conditionalexpressions

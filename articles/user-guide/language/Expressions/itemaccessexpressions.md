@@ -2,7 +2,7 @@
 title: Item access in Q#
 description: Learn about array item access and array slicing in Q#.
 author: bettinaheim
-ms.author: bettina.heim
+ms.author: beheim
 ms.date: 10/07/2020
 ms.topic: article
 uid: microsoft.quantum.qsharp.itemaccessexpression

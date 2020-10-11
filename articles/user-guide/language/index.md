@@ -20,6 +20,3 @@ Q# is a stand-alone language offering a high level of abstraction.
 There is no notion of a quantum state or a circuit. Instead, 
 programs are implemented in terms of statements and expressions, much like in classical programming languages. Distinct quantum capabilities, (for example, support for functors and quantum control-flow constructs such as repeat-until-success loops), facilitate the expression of algorithms for areas such as phase estimation and quantum chemistry.
 
-<!--->
-[!INCLUDE [source link](~/includes/qsharp-language/Specifications/Language/README.md)]
--->

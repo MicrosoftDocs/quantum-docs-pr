@@ -23,11 +23,17 @@ In the different topics of this guide, we detail the core concepts of the Q# lan
 
 ### Q# Language
 
-- [Types in Q#](xref:microsoft.quantum.guide.types): Lays out the Q# type model and describes the syntax for specifying and working with types.
+- [Program structure](xref:microsoft.quantum.qsharp.programstructure-index): Lays out the basic structure of a Q# program run from the command prompt.
 
-- [Type Expressions](xref:microsoft.quantum.guide.expressions): Details how to specify, reference, combine, and operate on values of each type in Q#. 
+- [Statements](xref:microsoft.quantum.qsharp.statements-index): Details the different types of statements in Q# used for such things as variable declarations, looping, and memory management. 
+
+- [Expressions](xref:microsoft.quantum.qsharp.expressions-index): Details the different types of expressions in Q# - operators, modifiers, and combinators. 
+
+- [Type system](xref:microsoft.quantum.qsharp.typesystem-index): Lays out the Q# type model and describes the syntax for specifying and working with types. 
 
 ### Using Q#
+
+<!--- TBD: How do the articles in this section overlap with the qsharp-lang articles? -->
 
 - [Q# File Structure](xref:microsoft.quantum.guide.filestructure): Describes the structure and syntax of a `*.qs` Q# file.
 

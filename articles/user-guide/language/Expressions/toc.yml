@@ -1,37 +1,34 @@
-- name: Expressions
+- name: Expressions in Q#
   href: index.md
+- name: Precedence and associativity
+  href: precedenceandassociativity.md
+- name: Operators
   items:
-  - name: Expressions in Q#
-    href: ndex.md
-  - name: Precedence and associativity
-    href: precedenceandassociativity.md
-  - name: Operators
-    items:
-    - name: Copy-and-update expressions
-      href: copyandupdateexpressions.md
-    - name: Conditional expressions
-      href: conditionalexpressions.md
-    - name: Comparative expresssions
-      href: comparativeexpressions.md  
-    - name: Logical expressions
-      href: logicalexpressions.md
-    - name: Bitwise expressions
-      href: bitwiseexpressions.md
-    - name: Arithmetic expressions
-      href: arithmeticexpressions.md  
-    - name: Concatenations
-      href: concatenation.md  
-  - name: Modifiers and combinators
-    items:
-    - name: Partial application
-      href: partialapplication.md
-    - name: Functor application
-      href: functorapplication.md
-    - name: Item access expressions
-      href: itemaccessexpressions.md
-  - name: Contextual expressions
-    href: contextualexpressions.md
-  - name: Value literals and default values
-    href: valueliterals.md
-  - name: Identifiers
-    href: identifiers.md
+  - name: Copy-and-update expressions
+    href: copyandupdateexpressions.md
+  - name: Conditional expressions
+    href: conditionalexpressions.md
+  - name: Comparative expresssions
+    href: comparativeexpressions.md  
+  - name: Logical expressions
+    href: logicalexpressions.md
+  - name: Bitwise expressions
+    href: bitwiseexpressions.md
+  - name: Arithmetic expressions
+    href: arithmeticexpressions.md  
+  - name: Concatenations
+    href: concatenation.md  
+- name: Modifiers and combinators
+  items:
+  - name: Partial application
+    href: partialapplication.md
+  - name: Functor application
+    href: functorapplication.md
+  - name: Item access expressions
+    href: itemaccessexpressions.md
+- name: Contextual expressions
+  href: contextualexpressions.md
+- name: Value literals and default values
+  href: valueliterals.md
+- name: Identifiers
+  href: identifiers.md

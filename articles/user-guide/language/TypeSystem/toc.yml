@@ -1,17 +1,14 @@
-- name: Type system
+- name: Type system in Q#
   href: index.md
-  items:
-  - name: Type system in Q#
-    href: index.md
-  - name: Quantum data types
-    href: quantumdatatypes.md
-  - name: Immutability
-    href: immutability.md
-  - name: Singleton tuple equivalence
-    href: singletontupleequivalence.md
-  - name: Subtyping and variance
-    href: subtypingandvariance.md
-  - name: Type parameterizations
-    href: typeparameterizations.md
-  - name: Type inference
-    href: typeinference.md
+- name: Quantum data types
+  href: quantumdatatypes.md
+- name: Immutability
+  href: immutability.md
+- name: Singleton tuple equivalence
+  href: singletontupleequivalence.md
+- name: Subtyping and variance
+  href: subtypingandvariance.md
+- name: Type parameterizations
+  href: typeparameterizations.md
+- name: Type inference
+  href: typeinference.md

@@ -1,4 +1,90 @@
-- name: Types in Q#
-  href: types.md
-- name: Expressions 
-  href: expressions.md
+- name: Q# language
+  href: index.md
+- name: Program structure
+  items: 
+  - name: Program implementation
+  - href: programstructure/index.md
+  - name: Namepaces
+  - href: programstructure/namespaces.md
+  - name: Type declarations
+  - href: programstructure/typedeclarations.md
+  - name: Callable declarations
+  - href: programstructure/callabledeclarations.md
+  - name: Specialization declarations
+  - href: programstructure/specializationdeclarations.md
+  - name: Attributes
+  - href: programstructure/attributes.md
+  - name: Access modifiers
+  - href: programstructure/accessmodifiers.md
+- name: Statements
+  items: 
+  - name: Statements in Q#
+  - href: statements/index.md
+  - name: Call statements
+  - href: statements/callstatements.md
+  - name: Returns and termination 
+  - href: statements/returnsandtermination.md
+  - name: Variable declaration and reassignment 
+  - href: statements/variabledeclarationsandreassignments.md
+  - name: Iterations 
+  - href: statements/iterations.md
+  - name: Conditional loops 
+  - href: statements/conditionalloops.md
+  - name: Conditional branching 
+  - href: statements/conditionalbranching.md
+  - name: Conjugations 
+  - href: statements/conjugations.md
+  - name: Quantum memory management 
+  - href: statements/quantummemorymanagement.md
+- name: Expressions
+  items:
+  - name: Expressions in Q#
+  - href: expressions/index.md
+  - name: Precedence and associativity
+  - href: expressions/precedenceandassociativity.md
+  - name: Operators
+    items:
+    - name: Copy-and-update expressions
+    - hfef: expressions/copyandupdateexpressions.md
+    - name: Conditional expressions
+    - hfef: expressions/conditionalexpressions.md
+    - name: Comparative expresssions
+    - hfef: expressions/comparativeexpressions.md  
+    - name: Logical expressions
+    - hfef: expressions/logicalexpressions.md
+    - name: Bitwise expressions
+    - hfef: expressions/bitwiseexpressions.md
+    - name: Arithmetic expressions
+    - hfef: expressions/arithmeticexpressions.md  
+    - name: Concatenations
+    - hfef: expressions/concatenation.md  
+  - name: Modifiers and combinators
+    items:
+    - name: Partial application
+    - hfef: expressions/partialapplication.md
+    - name: Functor application
+    - hfef: expressions/functorapplication.md
+    - name: Item access expressions
+    - hfef: expressions/itemaccessexpressions.md
+  - name: Contextual expressions
+  - href: expressions/contextualexpressions.md
+  - name: Value literals and default values
+  - href: expressions/valueliterals.md
+  - name: Identifiers
+  - href: expressions/identifiers.md
+- name: Type system
+  items:
+  - name: Type system in Q#
+  - href: typesystem/index.md
+  - name: Quantum data types
+  - href: typesystem/quantumdatatypes.md
+  - name: Immutability
+  - href: typesystem/immutability.md
+  - name: Singleton tuple equivalence
+  - href: typesystem/singletontupleequivalence.md
+  - name: Subtyping and variance
+  - href: typesystem/subtypingandvariance.md
+  - name: Type parameterizations
+  - href: typesystem/typeparameterizations.md
+  - name: Type inference
+  - href: typesystem/typeinference.md

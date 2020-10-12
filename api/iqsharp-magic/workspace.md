@@ -2,8 +2,8 @@
 title: '%workspace (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.workspace
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/12/2020
 ms.topic: article
 ---
 

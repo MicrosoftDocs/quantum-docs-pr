@@ -1,8 +1,10 @@
 ---
-title: Complex numbers in quantum computing description: This article introduces
-the use of complex numbers for quantum computing. author: geduardo uid:
-microsoft.quantum.concepts.algebra.complex-numbers ms.author:
-v-edsanc@microsoft.com ms.date: 07/30/2020 ms.topic: article
+title: Complex numbers in quantum computing description: This article introduces the use of complex numbers for quantum computing. 
+author: geduardo 
+uid: microsoft.quantum.concepts.algebra.complex-numbers
+ms.author: v-edsanc@microsoft.com 
+ms.date: 07/30/2020 
+ms.topic: article
 ---
 
 # Complex numbers for quantum computing

@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.math.tanh
 name: Tanh
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: Tanh has been deprecated. Please use @"microsoft.quantum.math.tanh" instead.
+summary: |+
+  > [!WARNING]
+  > Tanh has been deprecated. Please use @"microsoft.quantum.math.tanh" instead.
+  >
+  > Please use @"microsoft.quantum.math.tanh".
+
 syntax: 'function Tanh (d : Double) : Double'
 input:
   content: '(d : Double)'

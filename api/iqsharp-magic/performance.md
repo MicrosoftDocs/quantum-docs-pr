@@ -3,7 +3,7 @@ title: '%performance (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.performance
 ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.date: 10/13/2020
 ms.topic: article
 ---
 

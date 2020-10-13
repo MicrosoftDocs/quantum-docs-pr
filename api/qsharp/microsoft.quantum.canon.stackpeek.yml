@@ -7,7 +7,10 @@ uid: microsoft.quantum.canon.stackpeek
 name: StackPeek
 type: function
 namespace: microsoft.quantum.canon
-summary: StackPeek has been deprecated.
+summary: |+
+  > [!WARNING]
+  > StackPeek has been deprecated.
+
 syntax: 'function StackPeek (stack : Microsoft.Quantum.Canon.ResultStack) : Result'
 input:
   content: '(stack : Microsoft.Quantum.Canon.ResultStack)'

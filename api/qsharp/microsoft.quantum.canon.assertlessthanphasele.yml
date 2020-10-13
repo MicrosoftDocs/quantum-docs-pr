@@ -7,7 +7,12 @@ uid: microsoft.quantum.canon.assertlessthanphasele
 name: AssertLessThanPhaseLE
 type: operation
 namespace: microsoft.quantum.canon
-summary: AssertLessThanPhaseLE has been deprecated. Please use @"microsoft.quantum.arithmetic.assertphaselessthan" instead.
+summary: |+
+  > [!WARNING]
+  > AssertLessThanPhaseLE has been deprecated. Please use @"microsoft.quantum.arithmetic.assertphaselessthan" instead.
+  >
+  > Please use @"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan".
+
 syntax: 'operation AssertLessThanPhaseLE (value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'

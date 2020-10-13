@@ -7,7 +7,12 @@ uid: microsoft.quantum.canon.applyreversedopbigendiana
 name: ApplyReversedOpBigEndianA
 type: operation
 namespace: microsoft.quantum.canon
-summary: ApplyReversedOpBigEndianA has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopbea" instead.
+summary: |+
+  > [!WARNING]
+  > ApplyReversedOpBigEndianA has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopbea" instead.
+  >
+  > Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA".
+
 syntax: 'operation ApplyReversedOpBigEndianA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian)'

@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.math.tan
 name: Tan
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: Tan has been deprecated. Please use @"microsoft.quantum.math.tan" instead.
+summary: |+
+  > [!WARNING]
+  > Tan has been deprecated. Please use @"microsoft.quantum.math.tan" instead.
+  >
+  > Please use @"microsoft.quantum.math.tan".
+
 syntax: 'function Tan (d : Double) : Double'
 input:
   content: '(d : Double)'

@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.bitwise.not
 name: Not
 type: function
 namespace: microsoft.quantum.extensions.bitwise
-summary: Not has been deprecated. Please use @"microsoft.quantum.bitwise.not" instead.
+summary: |+
+  > [!WARNING]
+  > Not has been deprecated. Please use @"microsoft.quantum.bitwise.not" instead.
+  >
+  > Please use @"microsoft.quantum.bitwise.not".
+
 syntax: 'function Not (a : Int) : Int'
 input:
   content: '(a : Int)'

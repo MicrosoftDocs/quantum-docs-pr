@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.convert.tostringdformat
 name: ToStringDFormat
 type: function
 namespace: microsoft.quantum.extensions.convert
-summary: ToStringDFormat has been deprecated. Please use @"microsoft.quantum.convert.doubleasstringwithformat" instead.
+summary: |+
+  > [!WARNING]
+  > ToStringDFormat has been deprecated. Please use @"microsoft.quantum.convert.doubleasstringwithformat" instead.
+  >
+  > Please use @"microsoft.quantum.convert.doubleasstringwithformat".
+
 syntax: 'function ToStringDFormat (a : Double, fmt : String) : String'
 input:
   content: '(a : Double, fmt : String)'

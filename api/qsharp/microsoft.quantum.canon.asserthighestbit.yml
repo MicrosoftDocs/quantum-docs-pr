@@ -7,7 +7,14 @@ uid: microsoft.quantum.canon.asserthighestbit
 name: AssertHighestBit
 type: operation
 namespace: microsoft.quantum.canon
-summary: AssertHighestBit has been deprecated. Please use @"microsoft.quantum.arithmetic.assertmostsignificantbit" instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  AssertHighestBit has been deprecated. Please use @"microsoft.quantum.arithmetic.assertmostsignificantbit" instead.
+  Please use @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit".
 syntax: 'operation AssertHighestBit (value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian)'

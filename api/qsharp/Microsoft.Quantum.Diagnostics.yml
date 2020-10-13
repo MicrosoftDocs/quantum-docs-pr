@@ -74,14 +74,7 @@ operations:
     Asserts that measuring the given qubits in the given Pauli basis will have the given result
     with the given probability, within some tolerance.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
-  summary: |-
-    Given two operations, asserts that they act identically for all input states.
-
-    This assertion is implemented by checking the action of the operations
-    on all states of the form $V_0 \otimes ... \otimes V_{n-1}$, where
-    $V_k$ is one of the states $\ket{0}$, $\ket{1}$, $\ket{+}$ and $\ket{i}$ (+1 eigenstate of Pauli Y operator).
-
-    This assertion uses $n$ qubits and requires multiple calls of the operations being compared.
+  summary: Given two operations, asserts that they act identically for all input states.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: |-
     Checks if the operation `givenU` is equal to the operation `expectedU` on
@@ -90,28 +83,13 @@ operations:
     This is a necessary, but not sufficient, condition for the equality of
     two unitaries.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
-  summary: |-
-    Given two operations, asserts that they act identically for all input states.
-
-    This assertion is implemented by using the Choi–Jamiłkowski isomorphism to reduce
-    the assertion to one of a qubit state assertion on two entangled registers.
-    Thus, this operation needs only a single call to each operation being tested,
-    but requires twice as many qubits to be allocated.
-    This assertion can be used to ensure, for instance, that an optimized version of an
-    operation acts identically to its naïve implementation, or that an operation
-    which acts on a range of non-quantum inputs agrees with known cases.
+  summary: Given two operations, asserts that they act identically for all input states.
 - uid: microsoft.quantum.diagnostics.assertphase
   summary: Asserts that the phase of an equal superposition state has the expected value.
 - uid: microsoft.quantum.diagnostics.assertqubit
   summary: Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
-  summary: |-
-    Asserts that a qubit in the expected state.
-
-    `expected` represents a complex vector, $\ket{\psi} = \begin{bmatrix}a & b\end{bmatrix}^{\mathrm{T}}$.
-    The first element of the tuples representing each of $a$, $b$
-    is the real part of the complex number, while the second one is the imaginary part.
-    The last argument defines the tolerance with which assertion is made.
+  summary: Asserts that a qubit in the expected state.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: |-
     Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator up to

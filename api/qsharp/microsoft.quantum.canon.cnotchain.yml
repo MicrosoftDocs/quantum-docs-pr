@@ -7,7 +7,13 @@ uid: microsoft.quantum.canon.cnotchain
 name: CNOTChain
 type: operation
 namespace: microsoft.quantum.canon
-summary: CNOTChain has been deprecated. Please use @"microsoft.quantum.canon.applycnotchain" instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  CNOTChain has been deprecated. Please use @"microsoft.quantum.canon.applycnotchain" instead.
 syntax: 'operation CNOTChain (qubits : Qubit[]) : Unit'
 input:
   content: '(qubits : Qubit[])'

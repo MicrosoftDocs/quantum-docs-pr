@@ -7,7 +7,13 @@ uid: microsoft.quantum.canon.cnotchaintarget
 name: CNOTChainTarget
 type: operation
 namespace: microsoft.quantum.canon
-summary: CNOTChainTarget has been deprecated. Please use @"microsoft.quantum.canon.applycnotchainwithtarget" instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  CNOTChainTarget has been deprecated. Please use @"microsoft.quantum.canon.applycnotchainwithtarget" instead.
 syntax: 'operation CNOTChainTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'
 input:
   content: '(qubits : Qubit[], targetQubit : Qubit)'

@@ -7,7 +7,14 @@ uid: microsoft.quantum.canon.cascadecnot
 name: CascadeCNOT
 type: operation
 namespace: microsoft.quantum.canon
-summary: CascadeCNOT has been deprecated. Please use @"microsoft.quantum.canon.applycnotchain" instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  CascadeCNOT has been deprecated. Please use @"microsoft.quantum.canon.applycnotchain" instead.
+  Please use @"microsoft.quantum.canon.applycnotchain".
 syntax: 'operation CascadeCNOT (register : Qubit[]) : Unit'
 input:
   content: '(register : Qubit[])'

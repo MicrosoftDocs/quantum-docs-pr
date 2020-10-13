@@ -7,7 +7,13 @@ uid: microsoft.quantum.canon.stacklength
 name: StackLength
 type: function
 namespace: microsoft.quantum.canon
-summary: StackLength has been deprecated.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  StackLength has been deprecated.
 syntax: 'function StackLength (stack : Microsoft.Quantum.Canon.ResultStack) : Int'
 input:
   content: '(stack : Microsoft.Quantum.Canon.ResultStack)'

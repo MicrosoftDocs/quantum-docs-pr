@@ -7,7 +7,14 @@ uid: microsoft.quantum.extensions.math.maxb
 name: MaxB
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: MaxB has been deprecated. Please use @"microsoft.quantum.math.maxl" instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  MaxB has been deprecated. Please use @"microsoft.quantum.math.maxl" instead.
+  Please use @"microsoft.quantum.math.maxl".
 syntax: 'function MaxB (a : BigInt, b : BigInt) : BigInt'
 input:
   content: '(a : BigInt, b : BigInt)'

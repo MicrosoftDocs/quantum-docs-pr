@@ -7,17 +7,33 @@ uid: microsoft.quantum.math.randomintpow2
 name: RandomIntPow2
 type: operation
 namespace: microsoft.quantum.math
-summary: RandomIntPow2 has been deprecated. Please use @"microsoft.quantum.random.drawrandomint" instead.
+summary: |-
+  Generates a random integer uniformly sampled from all integers that can be represented
+  in a given number of bits.
+
+  > [!WARNING]
+  > Deprecated
+
+  RandomIntPow2 has been deprecated. Please use @"microsoft.quantum.random.drawrandomint" instead.
+remarks: |-
+  This function calls <xref:microsoft.quantum.intrinsic.random>, so
+  its randomness depends on the implementation of `Random`.
 syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
 input:
   content: '(maxBits : Int)'
   types:
   - name: maxBits
+    summary: |-
+      The number of classical bits required to represent the largest integer
+      that could be returned by this operation.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - isPrimitive: true
+  - summary: |-
+      An integer $x$ uniformly at random from $[0,2^{\texttt{maxBits}}-1]$;
+      that is, with $\Pr(x) = \frac{1}{2^{\texttt{maxBits}}}$.
+    isPrimitive: true
     uid: Int
 ...

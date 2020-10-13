@@ -7,59 +7,17 @@ uid: microsoft.quantum.extensions.bitwise
 name: Microsoft.Quantum.Extensions.Bitwise
 functions:
 - uid: microsoft.quantum.extensions.bitwise.and
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    And has been deprecated. Please use @"microsoft.quantum.bitwise.and" instead.
-    Please use @"microsoft.quantum.bitwise.and".
+  summary: And has been deprecated. Please use @"microsoft.quantum.bitwise.and" instead.
 - uid: microsoft.quantum.extensions.bitwise.not
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Not has been deprecated. Please use @"microsoft.quantum.bitwise.not" instead.
-    Please use @"microsoft.quantum.bitwise.not".
+  summary: Not has been deprecated. Please use @"microsoft.quantum.bitwise.not" instead.
 - uid: microsoft.quantum.extensions.bitwise.or
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Or has been deprecated. Please use @"microsoft.quantum.bitwise.or" instead.
-    Please use @"microsoft.quantum.bitwise.or".
+  summary: Or has been deprecated. Please use @"microsoft.quantum.bitwise.or" instead.
 - uid: microsoft.quantum.extensions.bitwise.parity
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Parity has been deprecated. Please use @"microsoft.quantum.bitwise.parity" instead.
-    Please use @"microsoft.quantum.bitwise.parity".
+  summary: Parity has been deprecated. Please use @"microsoft.quantum.bitwise.parity" instead.
 - uid: microsoft.quantum.extensions.bitwise.xbits
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    XBits has been deprecated. Please use @"microsoft.quantum.bitwise.xbits" instead.
-    Please use @"microsoft.quantum.bitwise.xbits".
+  summary: XBits has been deprecated. Please use @"microsoft.quantum.bitwise.xbits" instead.
 - uid: microsoft.quantum.extensions.bitwise.xor
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Xor has been deprecated. Please use @"microsoft.quantum.bitwise.xor" instead.
-    Please use @"microsoft.quantum.bitwise.xor".
+  summary: Xor has been deprecated. Please use @"microsoft.quantum.bitwise.xor" instead.
 - uid: microsoft.quantum.extensions.bitwise.zbits
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ZBits has been deprecated. Please use @"microsoft.quantum.bitwise.zbits" instead.
-    Please use @"microsoft.quantum.bitwise.zbits".
+  summary: ZBits has been deprecated. Please use @"microsoft.quantum.bitwise.zbits" instead.
 ...

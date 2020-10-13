@@ -7,7 +7,14 @@ uid: microsoft.quantum.canon.modularincrementphasele
 name: ModularIncrementPhaseLE
 type: operation
 namespace: microsoft.quantum.canon
-summary: ModularIncrementPhaseLE has been deprecated. Please use @"microsoft.quantum.arithmetic.incrementphasebymodularinteger" instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  ModularIncrementPhaseLE has been deprecated. Please use @"microsoft.quantum.arithmetic.incrementphasebymodularinteger" instead.
+  Please use @"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger".
 syntax: 'operation ModularIncrementPhaseLE (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'

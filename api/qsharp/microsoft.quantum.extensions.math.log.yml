@@ -7,7 +7,14 @@ uid: microsoft.quantum.extensions.math.log
 name: Log
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: Log has been deprecated. Please use @"microsoft.quantum.math.log" instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  Log has been deprecated. Please use @"microsoft.quantum.math.log" instead.
+  Please use @"microsoft.quantum.math.log".
 syntax: 'function Log (input : Double) : Double'
 input:
   content: '(input : Double)'

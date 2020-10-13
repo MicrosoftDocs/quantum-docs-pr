@@ -7,7 +7,14 @@ uid: microsoft.quantum.characterization.measureallz
 name: MeasureAllZ
 type: operation
 namespace: microsoft.quantum.characterization
-summary: MeasureAllZ has been deprecated. Please use @"microsoft.quantum.measurement.measureallz" instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  MeasureAllZ has been deprecated. Please use @"microsoft.quantum.measurement.measureallz" instead.
+  Please use @"microsoft.quantum.measurement.measureAllZ".
 syntax: 'operation MeasureAllZ (register : Qubit[]) : Result'
 input:
   content: '(register : Qubit[])'

@@ -7,7 +7,14 @@ uid: microsoft.quantum.extensions.math.arccos
 name: ArcCos
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: ArcCos has been deprecated. Please use @"microsoft.quantum.math.arccos" instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  ArcCos has been deprecated. Please use @"microsoft.quantum.math.arccos" instead.
+  Please use @"microsoft.quantum.math.arccos".
 syntax: 'function ArcCos (theta : Double) : Double'
 input:
   content: '(theta : Double)'

@@ -7,7 +7,14 @@ uid: microsoft.quantum.canon.bigendiantolittleendian
 name: BigEndianToLittleEndian
 type: function
 namespace: microsoft.quantum.canon
-summary: BigEndianToLittleEndian has been deprecated. Please use @"microsoft.quantum.arithmetic.bigendianaslittleendian" instead.
+summary: |2-
+
+
+  > [!WARNING]
+  > Deprecated
+
+  BigEndianToLittleEndian has been deprecated. Please use @"microsoft.quantum.arithmetic.bigendianaslittleendian" instead.
+  Please use @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian".
 syntax: 'function BigEndianToLittleEndian (input : Microsoft.Quantum.Arithmetic.BigEndian) : Microsoft.Quantum.Arithmetic.LittleEndian'
 input:
   content: '(input : Microsoft.Quantum.Arithmetic.BigEndian)'

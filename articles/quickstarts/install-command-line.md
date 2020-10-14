@@ -1,5 +1,5 @@
 ---
-title: Develop with Q# applications
+title: Q# with Visual Studio and VS Code
 description: Learn how to create a Q# application that runs from the command prompt.
 author: bradben
 ms.author: v-benbra
@@ -10,7 +10,7 @@ uid: microsoft.quantum.install.standalone
 no-loc: ['Q#', '$$v']
 ---
 
-# Develop with Q# applications
+# Q# with Visual Studio and VS Code
 
 Follow the instructions at the tab corresponding to your environment.
 

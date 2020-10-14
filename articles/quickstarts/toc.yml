@@ -6,7 +6,7 @@
     href: index.md
   - name: Getting started examples
     items:
-    - name: Q# applications
+    - name: Q# with Visual Studio and VS Code
       href: install-command-line.md
     - name: Q# with Jupyter Notebooks
       href: install-jupyter.md

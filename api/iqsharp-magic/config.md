@@ -1,9 +1,10 @@
 ---
 title: '%config (magic command)'
+description: Allows setting or querying configuration options.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.config
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/15/2020
 ms.topic: article
 ---
 
@@ -80,7 +81,9 @@ Configures the default depth used in the `%trace` command for visualizing Q# ope
 
 Configures the default style used in generating the visualization of Q# operations with the `%trace` command.
 
-## Example
+## Examples for `%config`
+
+### Example 1
 
 Print a list of all currently set configuration options:
 ```
@@ -91,7 +94,7 @@ Out[]: Configuration key                 Value
        dump.truncateSmallAmplitudes      true
 ```
 
-## Example
+### Example 2
 
 Configure the `DumpMachine` and `DumpRegister` callables
 to use big-endian convention:
@@ -100,7 +103,7 @@ In []: %config dump.basisStateLabelingConvention="BigEndian"
 Out[]: "BigEndian"
 ```
 
-## Example
+### Example 3
 
 Save current configuration options to `.iqsharp-config.json`
 in the current working directory:

@@ -1,0 +1,58 @@
+---
+uid: Microsoft.Quantum.MachineLearning.ValidateSequentialClassifier
+title: ValidateSequentialClassifier operation
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.MachineLearning
+qsharp.name: ValidateSequentialClassifier
+qsharp.summary: >-
+  Validates a given sequential classifier against a given set of
+  pre-labeled samples.
+---
+
+# ValidateSequentialClassifier operation
+
+Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
+
+Package: [](https://nuget.org/packages/)
+
+
+Validates a given sequential classifier against a given set ofpre-labeled samples.
+
+```Q#
+ValidateSequentialClassifier (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : Microsoft.Quantum.MachineLearning.ValidationResults
+```
+
+
+## Input
+
+### model : [SequentialModel](xref:Microsoft.Quantum.MachineLearning.SequentialModel)
+
+The sequential model to be validated.
+
+
+### samples : [LabeledSample](xref:Microsoft.Quantum.MachineLearning.LabeledSample)[]
+
+The samples to be used to validate the given model.
+
+
+### tolerance : Double
+
+The approximation tolerance to use in encoding each sample as an inputto the sequential classifier.
+
+
+### nMeasurements : Int
+
+The number of measurements to use in classifying each sample.
+
+
+### validationSchedule : [SamplingSchedule](xref:Microsoft.Quantum.MachineLearning.SamplingSchedule)
+
+The schedule by which samples should be drawn from the validation set.
+
+
+
+## Output
+
+The results of the given validation.

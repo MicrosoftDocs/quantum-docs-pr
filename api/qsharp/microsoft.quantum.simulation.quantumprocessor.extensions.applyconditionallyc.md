@@ -1,0 +1,23 @@
+---
+uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionallyC
+title: ApplyConditionallyC operation
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+qsharp.name: ApplyConditionallyC
+qsharp.summary: ''
+---
+
+# ApplyConditionallyC operation
+
+Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
+
+Package: [](https://nuget.org/packages/)
+
+
+
+
+```Q#
+ApplyConditionallyC<'T, 'U> (measurementResults : Result[], resultsValues : Result[], (onEqualOp : ('T => Unit is Ctl), equalArg : 'T), (onNonEqualOp : ('U => Unit is Ctl), nonEqualArg : 'U)) : Unit
+```

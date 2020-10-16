@@ -1,0 +1,54 @@
+---
+uid: Microsoft.Quantum.Preparation.PrepareChoiState
+title: PrepareChoiState operation
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Preparation
+qsharp.name: PrepareChoiState
+qsharp.summary: >-
+  Prepares the Choi–Jamiłkowski state for a given operation onto given reference
+  and target registers.
+---
+
+# PrepareChoiState operation
+
+Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
+
+Package: [](https://nuget.org/packages/)
+
+
+Prepares the Choi–Jamiłkowski state for a given operation onto given referenceand target registers.
+
+```Q#
+PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[]) : Unit
+```
+
+
+## Input
+
+### op : Qubit[] => Unit 
+
+Operation $\Lambda$ whose Choi–Jamiłkowski state $J(\Lambda) / 2^N$is to be prepared, where $N$ is the number of qubits on which`op` acts.
+
+
+### reference : Qubit[]
+
+A register of qubits starting in the $\ket{00\cdots 0}$ stateto be used as a reference for the action of `op`.
+
+
+### target : Qubit[]
+
+A register of qubits initially in the $\ket{00\cdots 0}$ stateon which `op` is to be applied.
+
+
+
+## Remarks
+
+The Choi–Jamiłkowski state $J(\Lambda)$ of a quantum process isdefined as$$\begin{align}J(\Lambda) \mathrel{:=} (\boldone \otimes \Lambda)(|\boldone\rangle\!\rangle\langle\!\langle\boldone|),\end{align}$$where $|X\rangle\!\rangle$ is the *vectorization* of a matrix $X$in the column-stacking convention. Learning a classical descriptionof this state provides full information about the effect of $\Lambda$acting on arbitrary input states, and forms the foundation of*quantum process tomography*.
+
+## See Also
+
+- [Microsoft.Quantum.Preparation.PrepareChoiStateA](xref:Microsoft.Quantum.Preparation.PrepareChoiStateA)
+- [Microsoft.Quantum.Preparation.PrepareChoiStateC](xref:Microsoft.Quantum.Preparation.PrepareChoiStateC)
+- [Microsoft.Quantum.Preparation.PrepareChoiStateCA](xref:Microsoft.Quantum.Preparation.PrepareChoiStateCA)

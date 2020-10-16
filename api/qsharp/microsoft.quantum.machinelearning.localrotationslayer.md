@@ -1,0 +1,44 @@
+---
+uid: Microsoft.Quantum.MachineLearning.LocalRotationsLayer
+title: LocalRotationsLayer function
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.MachineLearning
+qsharp.name: LocalRotationsLayer
+qsharp.summary: >-
+  Returns an array of uncontrolled (single-qubit) rotations along a given
+  axis, with one rotation for each qubit in a register, parameterized by
+  distinct model parameters.
+---
+
+# LocalRotationsLayer function
+
+Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
+
+Package: [](https://nuget.org/packages/)
+
+
+Returns an array of uncontrolled (single-qubit) rotations along a givenaxis, with one rotation for each qubit in a register, parameterized bydistinct model parameters.
+
+```Q#
+LocalRotationsLayer (nQubits : Int, axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]
+```
+
+
+## Input
+
+### nQubits : Int
+
+The number of qubits acted on by the given layer.
+
+
+### axis : Pauli
+
+The rotation axis for each rotation in the given layer.
+
+
+
+## Output
+
+An array of controlled rotations about the given axis, one on each of`nQubits` qubits.

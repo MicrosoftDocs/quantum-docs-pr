@@ -1,0 +1,43 @@
+---
+uid: Microsoft.Quantum.Canon.ApplyQuantumFourierTransformBE
+title: ApplyQuantumFourierTransformBE operation
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Canon
+qsharp.name: ApplyQuantumFourierTransformBE
+qsharp.summary: >-
+  Performs the Quantum Fourier Transform on a quantum register containing an
+  integer in the big-endian representation.
+---
+
+# ApplyQuantumFourierTransformBE operation
+
+Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
+
+Package: [](https://nuget.org/packages/)
+
+
+Performs the Quantum Fourier Transform on a quantum register containing aninteger in the big-endian representation.
+
+```Q#
+ApplyQuantumFourierTransformBE (qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit
+```
+
+
+## Input
+
+### qs : [BigEndian](xref:Microsoft.Quantum.Arithmetic.BigEndian)
+
+Quantum register to which the Quantum Fourier Transform is applied
+
+
+
+## Remarks
+
+The input and output are assumed to be in big endian encoding.
+
+## See Also
+
+- [Microsoft.Quantum.Canon.ApproximateQFT](xref:Microsoft.Quantum.Canon.ApproximateQFT)
+- [Microsoft.Quantum.Canon.QFTLE](xref:Microsoft.Quantum.Canon.QFTLE)

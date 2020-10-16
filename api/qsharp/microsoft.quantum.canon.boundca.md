@@ -1,0 +1,53 @@
+---
+uid: Microsoft.Quantum.Canon.BoundCA
+title: BoundCA function
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.Canon
+qsharp.name: BoundCA
+qsharp.summary: >-
+  Given an array of operations acting on a single input,
+  produces a new operation that
+  performs each given operation in sequence.
+  The modifier `CA` indicates that all operations in the array are adjointable
+  and controllable.
+---
+
+# BoundCA function
+
+Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
+
+Package: [](https://nuget.org/packages/)
+
+
+Given an array of operations acting on a single input,produces a new operation thatperforms each given operation in sequence.The modifier `CA` indicates that all operations in the array are adjointableand controllable.
+
+```Q#
+BoundCA<'T> (operations : ('T => Unit is Adj + Ctl)[]) : ('T => Unit is Adj + Ctl)
+```
+
+
+## Input
+
+### operations : 'T => Unit Adj + Ctl[]
+
+A sequence of operations to be performed on a given input.
+
+
+
+## Output
+
+A new operation that performs each given operation in sequenceon its input.
+
+## Type Parameters
+
+### 'T
+
+The target on which each of the operations in the array act.
+
+
+
+## See Also
+
+- [Microsoft.Quantum.Canon.Bound](xref:Microsoft.Quantum.Canon.Bound)

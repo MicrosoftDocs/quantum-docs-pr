@@ -1,0 +1,68 @@
+---
+uid: Microsoft.Quantum.Canon.Delayed
+title: Delayed function
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.Canon
+qsharp.name: Delayed
+qsharp.summary: >-
+  Returns an operation that applies
+  given operation with given argument.
+---
+
+# Delayed function
+
+Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
+
+Package: [](https://nuget.org/packages/)
+
+
+Returns an operation that appliesgiven operation with given argument.
+
+```Q#
+Delayed<'T, 'U> (op : ('T => 'U), arg : 'T) : (Unit => 'U)
+```
+
+
+## Input
+
+### op : 'T => 'U 
+
+An operation to be applied.
+
+
+### arg : 'T
+
+The input to which the operation is applied.
+
+
+### aux
+
+Argument used to delay the application of operation by usingpartial application.
+
+
+
+## Output
+
+A new operation which applies `op` with input `arg`
+
+## Type Parameters
+
+### 'T
+
+The input type of the operation to be delayed.
+
+
+### 'U
+
+The return type of the operation to be delayed.
+
+
+
+## See Also
+
+- [Microsoft.Quantum.Canon.DelayedC](xref:Microsoft.Quantum.Canon.DelayedC)
+- [Microsoft.Quantum.Canon.DelayedA](xref:Microsoft.Quantum.Canon.DelayedA)
+- [Microsoft.Quantum.Canon.DelayedCA](xref:Microsoft.Quantum.Canon.DelayedCA)
+- [Microsoft.Quantum.Canon.Delay](xref:Microsoft.Quantum.Canon.Delay)

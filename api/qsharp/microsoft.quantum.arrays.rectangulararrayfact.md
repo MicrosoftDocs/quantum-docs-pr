@@ -1,0 +1,53 @@
+---
+uid: Microsoft.Quantum.Arrays.RectangularArrayFact
+title: RectangularArrayFact function
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.Arrays
+qsharp.name: RectangularArrayFact
+qsharp.summary: Represents a condition that a 2-dimensional array has a rectangular shape
+---
+
+# RectangularArrayFact function
+
+Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
+
+Package: [](https://nuget.org/packages/)
+
+
+Represents a condition that a 2-dimensional array has a rectangular shape
+
+```Q#
+RectangularArrayFact<'T> (array : 'T[][], message : String) : Unit
+```
+
+
+## Description
+
+This function asserts that each row in an array has the same length.
+
+## Input
+
+### array : 'T[][]
+
+A 2-dimensional array of elements
+
+
+### message : String
+
+A message to be printed if the array is not a rectangular array
+
+
+
+## Type Parameters
+
+### 'T
+
+The type of each element of `array`.
+
+
+
+## See Also
+
+- [Microsoft.Quantum.Arrays.SquareArrayFact](xref:Microsoft.Quantum.Arrays.SquareArrayFact)

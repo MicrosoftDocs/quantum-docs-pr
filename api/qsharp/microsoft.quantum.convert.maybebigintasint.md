@@ -1,0 +1,31 @@
+---
+uid: Microsoft.Quantum.Convert.MaybeBigIntAsInt
+title: MaybeBigIntAsInt function
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.Convert
+qsharp.name: MaybeBigIntAsInt
+qsharp.summary: >-
+  Converts a given big integer to an equivalent integer, if possible.
+  The function returns a pair of the resulting integer and a Boolean flag
+  which is true, if and only if the conversion was possible.
+---
+
+# MaybeBigIntAsInt function
+
+Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)
+
+Package: [](https://nuget.org/packages/)
+
+
+Converts a given big integer to an equivalent integer, if possible.The function returns a pair of the resulting integer and a Boolean flagwhich is true, if and only if the conversion was possible.
+
+```Q#
+MaybeBigIntAsInt (a : BigInt) : (Int, Bool)
+```
+
+
+## Remarks
+
+See [C# BigInteger constructor](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) for more details.

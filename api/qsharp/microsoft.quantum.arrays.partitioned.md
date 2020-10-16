@@ -1,0 +1,41 @@
+---
+uid: Microsoft.Quantum.Arrays.Partitioned
+title: Partitioned function
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.Arrays
+qsharp.name: Partitioned
+qsharp.summary: Splits an array into multiple parts.
+---
+
+# Partitioned function
+
+Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
+
+Package: [](https://nuget.org/packages/)
+
+
+Splits an array into multiple parts.
+
+```Q#
+Partitioned<'T> (nElements : Int[], arr : 'T[]) : 'T[][]
+```
+
+
+## Input
+
+### nElements : Int[]
+
+Number of elements in each part of array
+
+
+### arr : 'T[]
+
+Input array to be split.
+
+
+
+## Output
+
+Multiple arrays where the first array is the first `nElements[0]` of `arr`and the second array are the next `nElements[1]` of `arr` etc. The last arraywill contain all remaining elements.

@@ -1,0 +1,40 @@
+---
+uid: Microsoft.Quantum.Measurement.MeasureAllZ
+title: MeasureAllZ operation
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Measurement
+qsharp.name: MeasureAllZ
+qsharp.summary: Jointly measures a register of qubits in the Pauli Z basis.
+---
+
+# MeasureAllZ operation
+
+Namespace: [Microsoft.Quantum.Measurement](xref:Microsoft.Quantum.Measurement)
+
+Package: [](https://nuget.org/packages/)
+
+
+Jointly measures a register of qubits in the Pauli Z basis.
+
+```Q#
+MeasureAllZ (register : Qubit[]) : Result
+```
+
+
+## Description
+
+Measures a register of qubits in the $Z \otimes Z \otimes \cdots \otimes Z$basis, representing the parity of the entire register.
+
+## Input
+
+### register : Qubit[]
+
+The register to be measured.
+
+
+
+## Output
+
+The result of measuring $Z \otimes Z \otimes \cdots \otimes Z$.

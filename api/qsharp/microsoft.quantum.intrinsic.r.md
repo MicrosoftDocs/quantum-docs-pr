@@ -1,0 +1,53 @@
+---
+uid: Microsoft.Quantum.Intrinsic.R
+title: R operation
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Intrinsic
+qsharp.name: R
+qsharp.summary: >-
+  Applies a rotation about the given Pauli axis.
+
+  \begin{align}
+  R_{\mu}(\theta) \mathrel{:=}
+  e^{-i \theta \sigma_{\mu} / 2},
+  \end{align}
+  where $\mu \in \{I, X, Y, Z\}$.
+---
+
+# R operation
+
+Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
+
+Package: [](https://nuget.org/packages/)
+
+
+Applies a rotation about the given Pauli axis.\begin{align}R_{\mu}(\theta) \mathrel{:=}e^{-i \theta \sigma_{\mu} / 2},\end{align}where $\mu \in \{I, X, Y, Z\}$.
+
+```Q#
+R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit
+```
+
+
+## Input
+
+### pauli : Pauli
+
+Pauli operator ($\mu$) to be exponentiated to form the rotation.
+
+
+### theta : Double
+
+Angle about which the qubit is to be rotated.
+
+
+### qubit : Qubit
+
+Qubit to which the gate should be applied.
+
+
+
+## Remarks
+
+When called with `pauli = PauliI`, this operation appliesa *global phase*. This phase can be significantwhen used with the `Controlled` functor.

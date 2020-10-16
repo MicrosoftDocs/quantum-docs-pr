@@ -1,0 +1,30 @@
+---
+uid: Microsoft.Quantum.ErrorCorrection.BitFlipCode
+title: BitFlipCode function
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.ErrorCorrection
+qsharp.name: BitFlipCode
+qsharp.summary: >-
+  Returns a QECC value representing the ⟦3, 1, 1⟧ bit flip code encoder and
+  decoder with in-place syndrome measurement.
+---
+
+# BitFlipCode function
+
+Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
+
+Package: [](https://nuget.org/packages/)
+
+
+Returns a QECC value representing the ⟦3, 1, 1⟧ bit flip code encoder anddecoder with in-place syndrome measurement.
+
+```Q#
+BitFlipCode () : Microsoft.Quantum.ErrorCorrection.QECC
+```
+
+
+## Output
+
+Returns an implementation of a quantum error correction code byspecifying a `QECC` type.

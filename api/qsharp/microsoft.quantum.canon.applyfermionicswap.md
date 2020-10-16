@@ -1,0 +1,49 @@
+---
+uid: Microsoft.Quantum.Canon.ApplyFermionicSWAP
+title: ApplyFermionicSWAP operation
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Canon
+qsharp.name: ApplyFermionicSWAP
+qsharp.summary: Applies the Fermionic SWAP.
+---
+
+# ApplyFermionicSWAP operation
+
+Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
+
+Package: [](https://nuget.org/packages/)
+
+
+Applies the Fermionic SWAP.
+
+```Q#
+ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit
+```
+
+
+## Description
+
+This essentially swaps the qubits while applying a global phase of -1if both qubits are 1s. Preserves anti-symmetrization of orbitals.See  for more information.This operation is represented by the unitary operator\begin{align}f_{swap} \mathrel{:=}\begin{bmatrix}1 & 0 & 0 & 0 \\\\0 & 0 & 1 & 0 \\\\0 & 1 & 0 & 0 \\\\0 & 0 & 0 & -1 \\\\\end{bmatrix}.\end{align}
+
+## Input
+
+### qubit1 : Qubit
+
+The first qubit to be swapped.
+
+
+### qubit2 : Qubit
+
+The second qubit to be swapped.
+
+
+
+## References
+
+- [ *Ryan Babbush, Nathan Wiebe, Jarrod McClean, James McClain,  Hartmut Neven, Garnet Kin-Lic Chan*,  arXiv:1706.00023 ](https://arxiv.org/pdf/1706.00023.pdf)
+
+## See Also
+
+- [Microsoft.Quantum.Intrinsic.SWAP](xref:Microsoft.Quantum.Intrinsic.SWAP)

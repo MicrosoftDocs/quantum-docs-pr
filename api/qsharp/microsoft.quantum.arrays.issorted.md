@@ -1,0 +1,55 @@
+---
+uid: Microsoft.Quantum.Arrays.IsSorted
+title: IsSorted function
+ms.date: 10/16/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.Arrays
+qsharp.name: IsSorted
+qsharp.summary: >-
+  Given an array, returns whether that array is sorted as defined by
+  a given comparison function.
+---
+
+# IsSorted function
+
+Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
+
+Package: [](https://nuget.org/packages/)
+
+
+Given an array, returns whether that array is sorted as defined bya given comparison function.
+
+```Q#
+IsSorted<'T> (comparison : (('T, 'T) -> Bool), array : 'T[]) : Bool
+```
+
+
+## Input
+
+### comparison : ('T,'T) -> Bool
+
+A function that compares two elements such that `a` is considered tobe less than or equal to `b` if `comparison(a, b)` is `true`.
+
+
+### array : 'T[]
+
+The array to be checked.
+
+
+
+## Output
+
+`true` if and only if for each pair of elements `a` and `b` of`array` occuring in that order, `comparison(a, b)` is `true`.
+
+## Type Parameters
+
+### 'T
+
+The type of each element of `array`.
+
+
+
+## Remarks
+
+The function `comparison` is assumed to be transitive, such thatif `comparison(a, b)` and `comparison(b, c)`, then `comparison(a, c)`is assumed. If this property does not hold, then the output of thisfunction may be incorrect.

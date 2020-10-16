@@ -3,8 +3,8 @@
   topicHref: /
   items:
   - name: Microsoft Quantum
-    tocHref: /quantum/
+    tocHref: /azure/
     topicHref: /quantum/index
   - name: External Docs
-    tocHref: /azure/azure-sql/database
+    tocHref: /azure/azure-sql/database/
     topicHref: /quantum/index

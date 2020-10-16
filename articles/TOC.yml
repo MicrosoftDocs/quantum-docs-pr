@@ -1,5 +1,7 @@
 - name: Azure Quantum Documentation
   href: index.yml
+- name: Link to external docs
+  href: https://docs.microsoft.com/azure/azure-sql/database/index.yml
 - name: Overview
   items:
   - name: What is Azure Quantum?

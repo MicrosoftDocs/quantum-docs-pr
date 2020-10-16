@@ -1,5 +1,5 @@
 ---
-title: Q# with Visual Studio and VS Code
+title: Develop with Q# applications in an IDE
 description: Learn how to create a Q# application that runs from the command prompt.
 author: bradben
 ms.author: v-benbra
@@ -10,46 +10,43 @@ uid: microsoft.quantum.install.standalone
 no-loc: ['Q#', '$$v']
 ---
 
-# Q# with Visual Studio and VS Code
+# Develop with Q# applications in an IDE
 
-Follow the instructions at the tab corresponding to your environment.
+Q# programs can run on their own, without a driver in a host language like C#, F#, or Python. You can develop Q# applications in Visual Studio Code (VS Code), Visual Studio, Visual Studio Codespaces, or with any editor/IDE and run applications from the .NET console. 
 
-Q# programs can run on their own, without a driver in a host language like C#, F#, or Python.
-
-## Prerequisites
+## Prerequisites for all environments
 
 - [.NET Core SDK 3.1 or later](https://www.microsoft.com/net/download)
 
 ## Installation
 
-While you can build Q# applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for developing your Q# applications locally. For developing in the Cloud via the web browser, we recommend Visual Studio Codespaces. Developing in these environments includes the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more. 
+While you can build Q# applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for developing your Q# applications locally. For developing in the Cloud via the web browser, we recommend Visual Studio Codespaces. Developing in these environments leverages the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more. 
 
-To configure VS Code:
+### To configure VS Code:
 
 1. Download and install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
 2. Install the [Microsoft QDK for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
-To configure Visual Studio:
+### To configure Visual Studio:
 
 1. Download and install [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 or greater, with the .NET Core cross-platform development workload enabled.
 2. Download and install the [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
-To configure Visual Studio Codespaces:
-
-1. Create an [Azure account](https://azure.microsoft.com/free/).
-2. Create a Codespaces environment. Please follow the [quickstart guide](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). When creating the Codespace, we recommend to enter `microsoft/Quantum` in the "Git Repository" field to load QDK-specific settings.
-3. You can now launch your new environment and start developing in the browser via the [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments). Alternatively, it is possible to use your local installation of VS Code and use Codespaces as a [remote environment](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
-
-
-To install the QDK for another environment, enter the following at the command prompt:
+### To configure the QDK for another environment, enter the following at the command prompt:
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
+### To configure Visual Studio Codespaces:
+
+1. Create an [Azure account](https://azure.microsoft.com/free/).
+2. Create a Codespaces environment. Please follow the [quickstart guide](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). When creating the Codespace, we recommend to enter `microsoft/Quantum` in the "Git Repository" field to load QDK-specific settings.
+3. You can now launch your new environment and start developing in the browser via the [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments). Alternatively, it is possible to use your local installation of VS Code and use Codespaces as a [remote environment](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
+
 ## Develop with Q#
 
-Follow the instructions on the tab corresponding to your environment.
+Follow the instructions on the tab corresponding to your development environment.
 
 ### [VS Code](#tab/tabid-vscode)
 
@@ -95,12 +92,6 @@ To run the application:
 ### [Other editors with the command prompt](#tab/tabid-cmdline)
 
 Verify your installation by creating a Q# `Hello World` application.
-
-1. Install the project templates.
-
-    ```dotnetcli
-    dotnet new -i Microsoft.Quantum.ProjectTemplates
-    ```
 
 1. Create a new application:
 

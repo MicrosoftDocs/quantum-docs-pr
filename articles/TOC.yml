@@ -1,12 +1,7 @@
 - name: Azure Quantum Documentation
   href: index.yml
-<<<<<<< HEAD
 - name: LINK TO EXTERNAL DOCSET
   href: https://docs.microsoft.com/azure/azure-sql/database/sql-database-paas-overview?toc=/quantum/toc.json&bcS=/quantum/breadcrumb/toc.json
-=======
-- name: Link to external docs
-  href: https://docs.microsoft.com/azure/azure-sql/database/sql-database-paas-overview?toc=/quantum/toc.json&bc=/quantum/breadcrumb/toc.json
->>>>>>> 47b7af5fa462fb532a0ff007b20fd082c4b63f5f
 - name: Overview
   items:
   - name: What is Azure Quantum?

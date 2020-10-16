@@ -6,7 +6,7 @@
 uid: microsoft.quantum.preparation.quantumrom
 name: QuantumROM
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: |-
   Uses the Quantum ROM technique to represent a given density matrix.
 

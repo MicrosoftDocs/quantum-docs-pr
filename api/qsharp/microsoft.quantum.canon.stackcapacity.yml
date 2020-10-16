@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.stackcapacity
 name: StackCapacity
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: StackCapacity has been deprecated.
 syntax: 'function StackCapacity (stack : Microsoft.Quantum.Canon.ResultStack) : Int'
 input:

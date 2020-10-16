@@ -6,8 +6,14 @@
 uid: microsoft.quantum.diagnostics.fact
 name: Fact
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Declares that a classical condition is true.
+examples: |-
+  The following Q# snippet will fail:
+
+  ```Q#
+  Fact(false, "Expected true.");
+  ```
 syntax: 'function Fact (actual : Bool, message : String) : Unit'
 input:
   content: '(actual : Bool, message : String)'

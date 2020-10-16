@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.injectpi4yrotation
 name: InjectPi4YRotation
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: |-
   Rotates a single qubit by π/4 about the Y-axis.
 

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.preparetrialstate
 name: PrepareTrialState
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 syntax: 'operation PrepareTrialState (stateData : (Int, Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]), qubits : Qubit[]) : Unit'
 input:
   content: '(stateData : (Int, Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]), qubits : Qubit[])'

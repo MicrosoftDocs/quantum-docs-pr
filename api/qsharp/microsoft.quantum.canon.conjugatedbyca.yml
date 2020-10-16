@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.conjugatedbyca
 name: ConjugatedByCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Given outer and inner operations, returns a new operation that
   conjugates the inner operation by the outer operation.

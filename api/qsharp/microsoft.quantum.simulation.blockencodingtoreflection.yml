@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.blockencodingtoreflection
 name: BlockEncodingToReflection
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Converts a `BlockEncoding` into an equivalent `BLockEncodingReflection`.
 

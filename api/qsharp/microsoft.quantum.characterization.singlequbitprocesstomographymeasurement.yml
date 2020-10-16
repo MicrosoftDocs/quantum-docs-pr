@@ -6,7 +6,7 @@
 uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
 name: SingleQubitProcessTomographyMeasurement
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: |-
   Performs a single-qubit process tomography measurement in the Pauli
   basis, given a particular channel of interest.

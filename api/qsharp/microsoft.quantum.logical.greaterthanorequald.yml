@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.greaterthanorequald
 name: GreaterThanOrEqualD
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: |-
   Returns true if and only if a number is greater than or equal to another
   number.

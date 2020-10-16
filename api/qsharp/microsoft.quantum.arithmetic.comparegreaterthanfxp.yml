@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
 name: CompareGreaterThanFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Compares two fixed-point numbers stored in quantum registers, and
   controls a flip on the result.

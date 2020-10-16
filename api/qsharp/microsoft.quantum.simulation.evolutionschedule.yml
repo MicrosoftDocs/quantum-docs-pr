@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.evolutionschedule
 name: EvolutionSchedule
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Represents a time-dependent dynamical generator.
 

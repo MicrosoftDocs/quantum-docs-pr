@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.tan
 name: Tan
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the tangent of the specified angle.
 remarks: See [System.Math.Tan](https://docs.microsoft.com/dotnet/api/system.math.tan) for more details.
 syntax: 'function Tan (d : Double) : Double'

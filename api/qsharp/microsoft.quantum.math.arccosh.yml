@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.arccosh
 name: ArcCosh
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Computes the inverse hyperbolic cosine of a number.
 syntax: 'function ArcCosh (x : Double) : Double'
 input:

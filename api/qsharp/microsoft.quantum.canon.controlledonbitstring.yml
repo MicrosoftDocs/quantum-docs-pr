@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.controlledonbitstring
 name: ControlledOnBitString
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
 

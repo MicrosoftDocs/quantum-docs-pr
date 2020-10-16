@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyreversedoplittleendianca
 name: ApplyReversedOpLittleEndianCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: ApplyReversedOpLittleEndianCA has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopleca" instead.
 syntax: 'operation ApplyReversedOpLittleEndianCA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 input:

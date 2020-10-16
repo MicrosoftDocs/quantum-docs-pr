@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.multiplyfxp
 name: MultiplyFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Multiplies two fixed-point numbers in quantum registers.
 remarks: |-
   The current implementation requires the three fixed-point numbers

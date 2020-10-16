@@ -6,7 +6,7 @@
 uid: microsoft.quantum.characterization.estimatefrequency
 name: EstimateFrequency
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: |-
   Given a preparation and measurement, estimates the frequency
   with which that measurement succeeds (returns `Zero`) by

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.x
 name: X
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: |-
   Applies the Pauli $X$ gate.
 

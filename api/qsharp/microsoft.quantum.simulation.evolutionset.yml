@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.evolutionset
 name: EvolutionSet
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Represents a set of gates that can be readily implemented and used
   to implement simulation algorithms.

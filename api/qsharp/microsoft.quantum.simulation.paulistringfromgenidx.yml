@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.paulistringfromgenidx
 name: PauliStringFromGenIdx
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Extracts the Pauli string and its qubit indices of a Pauli term described
   by a `GeneratorIndex`.

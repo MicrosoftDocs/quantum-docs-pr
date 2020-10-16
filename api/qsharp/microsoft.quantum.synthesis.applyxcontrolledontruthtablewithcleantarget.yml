@@ -6,7 +6,7 @@
 uid: microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
 name: ApplyXControlledOnTruthTableWithCleanTarget
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: |-
   Applies the @"microsoft.quantum.intrinsic.x" operation on `target`, if the Boolean function `func` evaluates
   to true for the classical assignment in `controlRegister`.

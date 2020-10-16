@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
 name: EstimateTermExpectation
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+namespace: microsoft.quantum.chemistry.jordanwigner.vqe
 summary: |-
   Computes the energy associated to a given Jordan-Wigner Hamiltonian term
 

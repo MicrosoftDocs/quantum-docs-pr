@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.blockencodingreflection
 name: BlockEncodingReflection
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: Represents a `BlockEncoding` that is also a reflection.
 syntax: newtype BlockEncodingReflection = Microsoft.Quantum.Simulation.BlockEncoding;
 seeAlso:

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifone
 name: ApplyIfOne
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies an operation conditioned on a classical result value being one.
 

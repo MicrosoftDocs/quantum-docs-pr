@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.lessthanorequall
 name: LessThanOrEqualL
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: |-
   Returns true if and only if a number is less than or equal to another
   number.

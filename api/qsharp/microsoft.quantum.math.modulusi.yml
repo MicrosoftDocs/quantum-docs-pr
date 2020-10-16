@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.modulusi
 name: ModulusI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Computes the canonical residue of `value` modulo `modulus`.
 remarks: |-
   This function behaves different to how the operator `%` behaves in C# and Q# as in the result

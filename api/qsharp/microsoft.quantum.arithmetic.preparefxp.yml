@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.preparefxp
 name: PrepareFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Initialize a quantum fixed-point number to a classical constant.
 syntax: 'operation PrepareFxP (constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:

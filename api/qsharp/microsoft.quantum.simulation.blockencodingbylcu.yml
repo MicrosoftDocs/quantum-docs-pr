@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.blockencodingbylcu
 name: BlockEncodingByLCU
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Encodes an operator of interest into a `BlockEncoding`.
 

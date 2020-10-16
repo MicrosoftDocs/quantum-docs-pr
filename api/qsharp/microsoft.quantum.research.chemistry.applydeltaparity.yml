@@ -6,7 +6,7 @@
 uid: microsoft.quantum.research.chemistry.applydeltaparity
 name: ApplyDeltaParity
 type: operation
-namespace: Microsoft.Quantum.Research.Chemistry
+namespace: microsoft.quantum.research.chemistry
 summary: |-
   Computes difference in parity between a previous PQRS... terms
   and the next PQRS... term. This difference is computed on a auxiliary

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.sqrt
 name: Sqrt
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the square root of a specified number.
 remarks: See [System.Math.Sqrt](https://docs.microsoft.com/dotnet/api/system.math.sqrt) for more details.
 syntax: 'function Sqrt (d : Double) : Double'

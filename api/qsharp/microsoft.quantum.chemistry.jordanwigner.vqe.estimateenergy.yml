@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
 name: EstimateEnergy
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+namespace: microsoft.quantum.chemistry.jordanwigner.vqe
 summary: |-
   Estimates the energy of the molecule by summing the energy contributed by the individual Jordan-Wigner terms.
 

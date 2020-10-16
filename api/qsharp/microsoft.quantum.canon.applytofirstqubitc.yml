@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytofirstqubitc
 name: ApplyToFirstQubitC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies operation op to the first qubit in the register.
   The modifier `C` indicates that the operation is controllable.

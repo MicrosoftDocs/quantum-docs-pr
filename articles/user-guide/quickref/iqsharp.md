@@ -2,7 +2,7 @@
 title: IQ# Magic Commands
 description: Quick reference page for IQ# magic commands with Q# Jupyter Notebooks
 author: gillenhaalb
-ms.author:  a-gibec@microsoft.com
+ms.author:  a-gibec
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc: ['Q#', '$$v']
@@ -15,8 +15,10 @@ no-loc: ['Q#', '$$v']
 - [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config): Allows setting or querying configuration options.
 - [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate): Runs a given function or operation on the ResourcesEstimator target machine.
 - [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic): Returns a list of all currently available magic commands.
+- [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen): Lists currently opened namespaces and their aliases.
 - [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package): Provides the ability to load a NuGet package.
 - [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance): Reports current performance metrics for this kernel.
+- [`%project`](xref:microsoft.quantum.iqsharp.magic-ref.project): Provides the ability to view or add Q# project references. 
 - [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate): Runs a given function or operation on the QuantumSimulator target machine.
 - [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli): Runs a given function or operation on the ToffoliSimulator target machine.
 - [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Lists the Q# operations available in the current session.
@@ -25,12 +27,12 @@ no-loc: ['Q#', '$$v']
 ### Azure Quantum integration
 
 - [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect): Connects to an Azure Quantum workspace or displays current connection status.
-- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Executes a job in an Azure Quantum workspace.
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Submits a job to an Azure Quantum workspace and waits for completion.
 - [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs): Displays a list of jobs in the current Azure Quantum workspace.
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Displays results for a job in the current Azure Quantum workspace.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Displays status for a job in the current Azure Quantum workspace.
 - [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Submits a job to an Azure Quantum workspace.
-- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Sets or displays the active execution target for Q# job submission in an Azure Quantum workspace.
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Sets or displays the active run target for Q# job submission in an Azure Quantum workspace.
 
 ### Chemistry (from Microsoft.Quantum.Chemistry package)
 
@@ -42,6 +44,6 @@ no-loc: ['Q#', '$$v']
 
 ### Katas (from Microsoft.Quantum.Katas package)
 
-- [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata): Executes a single test, and reports whether the test passed successfully.
+- [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata): Runs a single test, and reports whether the test passed successfully.
 - [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata): Checks the reference implementation for a single kata's test.
     Specifically, it substitutes the reference implementation for a single task into the cell, and reports whether the test passed successfully.

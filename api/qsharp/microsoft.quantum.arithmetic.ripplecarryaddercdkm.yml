@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
 name: RippleCarryAdderCDKM
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Reversible, in-place ripple-carry addition of two integers.
 

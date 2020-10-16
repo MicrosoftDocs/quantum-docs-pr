@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.interpolatedevolution
 name: InterpolatedEvolution
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Interpolates between two generators with a uniform schedule,
   returning an operation that applies simulated evolution under

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.recoveryfn
 name: RecoveryFn
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: |-
   Type for function that maps an error syndrome to a sequence of `Pauli[]`
   operations that correct the detected error.

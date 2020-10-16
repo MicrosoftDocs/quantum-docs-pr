@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.isempty
 name: IsEmpty
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Returns true if and only if an array is empty.
 syntax: "function IsEmpty (array : 'T[]) : Bool"
 input:

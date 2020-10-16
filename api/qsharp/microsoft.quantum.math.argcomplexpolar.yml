@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.argcomplexpolar
 name: ArgComplexPolar
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: |-
   Returns the phase of a complex number of type
   `ComplexPolar`.

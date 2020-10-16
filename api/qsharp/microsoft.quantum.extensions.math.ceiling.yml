@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.ceiling
 name: Ceiling
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: Ceiling has been deprecated. Please use @"microsoft.quantum.math.ceiling" instead.
 syntax: 'function Ceiling (value : Double) : Int'
 input:

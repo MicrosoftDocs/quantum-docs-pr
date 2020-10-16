@@ -6,7 +6,7 @@
 uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
 name: ReflectionOracleFromDeterministicStateOracle
 type: function
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: |-
   Constructs reflection about a given state from an oracle.
 

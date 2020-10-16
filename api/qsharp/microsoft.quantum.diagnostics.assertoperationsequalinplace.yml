@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
 name: AssertOperationsEqualInPlace
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: |-
   Given two operations, asserts that they act identically for all input states.
 

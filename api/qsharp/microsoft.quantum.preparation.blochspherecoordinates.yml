@@ -6,7 +6,7 @@
 uid: microsoft.quantum.preparation.blochspherecoordinates
 name: BlochSphereCoordinates
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: |-
   Computes the Bloch sphere coordinates for a single-qubit state.
 

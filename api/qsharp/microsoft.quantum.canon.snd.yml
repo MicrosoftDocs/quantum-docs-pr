@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.snd
 name: Snd
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Given a pair, returns its second element.
 syntax: "function Snd (pair : ('T, 'U)) : 'U"
 input:

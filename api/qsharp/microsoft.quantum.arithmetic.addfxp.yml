@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.addfxp
 name: AddFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Adds two fixed-point numbers stored in quantum registers.
 

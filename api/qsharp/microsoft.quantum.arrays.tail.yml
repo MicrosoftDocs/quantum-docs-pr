@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.tail
 name: Tail
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Returns the last element of the array.
 syntax: "function Tail (array : 'A[]) : 'A"
 input:

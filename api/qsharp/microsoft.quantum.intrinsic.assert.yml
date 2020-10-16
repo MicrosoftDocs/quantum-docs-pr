@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.assert
 name: Assert
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: Assert has been deprecated. Please use @"microsoft.quantum.diagnostics.assertmeasurement" instead.
 syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
 input:

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.reversedopbec
 name: ReversedOpBEC
 type: function
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Given an operation that takes a big-endian input, returns a new
   operation that takes a little-endian input.

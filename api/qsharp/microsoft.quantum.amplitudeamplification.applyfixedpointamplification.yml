@@ -6,7 +6,7 @@
 uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
 name: ApplyFixedPointAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Fixed-Point Amplitude Amplification algorithm
 remarks: |-
   The startQubits must be in the $\ket{0 \cdots 0}$ state. This operation iterates over a number of queries in powers of $2$ until either a maximal number of queries

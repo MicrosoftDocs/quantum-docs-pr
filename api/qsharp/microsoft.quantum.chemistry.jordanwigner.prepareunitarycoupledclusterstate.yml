@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.prepareunitarycoupledclusterstate
 name: PrepareUnitaryCoupledClusterState
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: Unitary coupled-cluster state preparation of trial state
 syntax: 'operation PrepareUnitaryCoupledClusterState (initialStatePreparation : (Qubit[] => Unit), clusterOperator : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], trotterStepSize : Double, qubits : Qubit[]) : Unit'
 input:

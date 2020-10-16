@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.dividei
 name: DivideI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Divides two quantum integers.
 

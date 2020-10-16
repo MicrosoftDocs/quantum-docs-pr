@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.call
 name: Call
 type: operation
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: |-
   Calls a function with a given input.
 

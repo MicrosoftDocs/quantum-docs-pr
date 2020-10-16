@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.htermtogenidx
 name: HTermToGenIdx
 type: function
-namespace: Microsoft.Quantum.Chemistry
+namespace: microsoft.quantum.chemistry
 summary: Converts a Hamiltonian term in `HTerm` data format to a GeneratorIndex.
 syntax: 'function HTermToGenIdx (term : Microsoft.Quantum.Chemistry.HTerm, termType : Int[]) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:

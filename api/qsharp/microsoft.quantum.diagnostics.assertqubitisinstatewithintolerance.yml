@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
 name: AssertQubitIsInStateWithinTolerance
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: |-
   Asserts that a qubit in the expected state.
 

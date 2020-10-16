@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.measureinteger
 name: MeasureInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Measures the content of a quantum register and converts
   it to an integer. The measurement is performed with respect

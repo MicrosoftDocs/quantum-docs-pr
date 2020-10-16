@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.computereciprocali
 name: ComputeReciprocalI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Computes the reciprocal 1/x for an unsigned integer x
   using integer division. The result, interpreted as an integer,

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.preparation.preparearbitrarystate
 name: PrepareArbitraryState
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: |-
   Given a set of coefficients and a little-endian encoded quantum register,
   prepares an state on that register described by the given coefficients.

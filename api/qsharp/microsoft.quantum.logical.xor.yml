@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.xor
 name: Xor
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Returns the Boolean exclusive disjunction of two values.
 syntax: 'function Xor (a : Bool, b : Bool) : Bool'
 input:

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.css
 name: CSS
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: |-
   Represents a Calderbank–Shor–Steane (CSS) code as defined by
   its encoder, decoder, and its syndrome measurement procedures

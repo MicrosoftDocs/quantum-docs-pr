@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytoeachca
 name: ApplyToEachCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a single-qubit operation to each element in a register.
   The modifier `CA` indicates that the single-qubit operation is controllable

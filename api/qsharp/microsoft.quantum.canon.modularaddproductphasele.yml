@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.modularaddproductphasele
 name: ModularAddProductPhaseLE
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: ModularAddProductPhaseLE has been deprecated. Please use @"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger" instead.
 syntax: 'operation ModularAddProductPhaseLE (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:

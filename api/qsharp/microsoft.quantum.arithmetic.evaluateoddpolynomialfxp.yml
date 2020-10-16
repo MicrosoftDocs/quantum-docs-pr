@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
 name: EvaluateOddPolynomialFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Evaluates an odd polynomial in a fixed-point representation.
 syntax: 'operation EvaluateOddPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:

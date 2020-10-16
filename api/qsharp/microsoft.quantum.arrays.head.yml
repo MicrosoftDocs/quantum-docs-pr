@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.head
 name: Head
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Returns the first element of the array.
 syntax: "function Head (array : 'A[]) : 'A"
 input:

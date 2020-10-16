@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.recover
 name: Recover
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: |-
   Performs a single round of error correction by a quantum code
   described by a `QECC` type.

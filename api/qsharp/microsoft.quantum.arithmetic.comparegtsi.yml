@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.comparegtsi
 name: CompareGTSI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: 'Wrapper for signed integer comparison: `result = xs > ys`.'
 syntax: 'operation CompareGTSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Qubit) : Unit'
 input:

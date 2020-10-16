@@ -6,7 +6,7 @@
 uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
 name: OptimizedTrotterStepOracle
 type: function
-namespace: Microsoft.Quantum.Research.Chemistry
+namespace: microsoft.quantum.research.chemistry
 summary: Returns optimized Trotter step operation and the parameters necessary to run it.
 syntax: 'function OptimizedTrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:

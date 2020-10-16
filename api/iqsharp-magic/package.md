@@ -3,7 +3,7 @@ title: '%package (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.package
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 09/29/2020
 ms.topic: article
 ---
 

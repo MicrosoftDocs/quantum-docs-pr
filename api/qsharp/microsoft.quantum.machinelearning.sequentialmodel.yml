@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.sequentialmodel
 name: SequentialModel
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Describes a quantum classifier model composed of a sequence of
   parameterized and controlled rotations, an assignment of rotation

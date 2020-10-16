@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.approximatelymultiplexz
 name: ApproximatelyMultiplexZ
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a Pauli Z rotation conditioned on an array of qubits, truncating
   small rotation angles according to a given tolerance.

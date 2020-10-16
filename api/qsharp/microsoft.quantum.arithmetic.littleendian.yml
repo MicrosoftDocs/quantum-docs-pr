@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.littleendian
 name: LittleEndian
 type: newtype
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Register that encodes an unsigned integer in little-endian order. The
   qubit with index `0` encodes the lowest bit of an unsigned integer.

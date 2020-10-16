@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.jordanwignergeneratorsystem
 name: JordanWignerGeneratorSystem
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: |-
   Converts a Hamiltonian described by `JWOptimizedHTerms`
   to a `GeneratorSystem` expressed in terms of the

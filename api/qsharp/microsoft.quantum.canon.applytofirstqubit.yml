@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytofirstqubit
 name: ApplyToFirstQubit
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Applies an operation to the first qubit in the register.
 syntax: 'operation ApplyToFirstQubit (op : (Qubit => Unit), register : Qubit[]) : Unit'
 input:

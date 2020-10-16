@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.assertmeasurementprobability
 name: AssertMeasurementProbability
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: |-
   Asserts that measuring the given qubits in the given Pauli basis will have the given result
   with the given probability, within some tolerance.

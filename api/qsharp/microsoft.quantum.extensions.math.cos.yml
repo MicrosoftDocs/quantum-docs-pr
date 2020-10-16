@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.cos
 name: Cos
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: Cos has been deprecated. Please use @"microsoft.quantum.math.cos" instead.
 syntax: 'function Cos (theta : Double) : Double'
 input:

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.maxd
 name: MaxD
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the larger of two specified numbers.
 remarks: See [System.Math.Max](https://docs.microsoft.com/dotnet/api/system.math.max) for more details.
 syntax: 'function MaxD (a : Double, b : Double) : Double'

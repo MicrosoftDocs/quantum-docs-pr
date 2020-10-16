@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.partitioned
 name: Partitioned
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Splits an array into multiple parts.
 examples: |-
   ```qsharp

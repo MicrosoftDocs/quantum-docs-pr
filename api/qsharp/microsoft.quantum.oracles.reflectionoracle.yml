@@ -6,7 +6,7 @@
 uid: microsoft.quantum.oracles.reflectionoracle
 name: ReflectionOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: |-
   Represents a reflection oracle.
 

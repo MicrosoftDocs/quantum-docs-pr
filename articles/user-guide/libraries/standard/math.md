@@ -3,7 +3,7 @@ title: Math in the Q# standard libraries
 description: Learn about the classical math functions in the Q# standard libraries that are used with the built-in data types. 
 author: cgranade
 uid: microsoft.quantum.libraries.math
-ms.author: chgranad@microsoft.com 
+ms.author: chgranad
 ms.topic: article
 no-loc: ['Q#', '$$v']
 ---

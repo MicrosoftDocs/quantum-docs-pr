@@ -6,7 +6,7 @@
 uid: microsoft.quantum.core.entrypoint
 name: EntryPoint
 type: newtype
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: Compiler-recognized attribute used to mark the entry point of an executable.
 syntax: newtype EntryPoint = Unit;
 ...

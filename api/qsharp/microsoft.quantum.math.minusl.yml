@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.minusl
 name: MinusL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the difference between two inputs.
 syntax: 'function MinusL (a : BigInt, b : BigInt) : BigInt'
 input:

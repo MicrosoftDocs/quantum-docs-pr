@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyconditionallyintrinsica
 name: ApplyConditionallyIntrinsicA
 type: operation
-namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+namespace: microsoft.quantum.simulation.quantumprocessor.extensions
 syntax: 'operation ApplyConditionallyIntrinsicA (measurementResults : Result[], resultsValues : Result[], onEqualOp : (Unit => Unit is Adj), onNonEqualOp : (Unit => Unit is Adj)) : Unit'
 input:
   content: '(measurementResults : Result[], resultsValues : Result[], onEqualOp : (Unit => Unit is Adj), onNonEqualOp : (Unit => Unit is Adj))'

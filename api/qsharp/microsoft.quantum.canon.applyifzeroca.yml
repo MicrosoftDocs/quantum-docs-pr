@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifzeroca
 name: ApplyIfZeroCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a unitary operation conditioned on a classical result value being zero.
 

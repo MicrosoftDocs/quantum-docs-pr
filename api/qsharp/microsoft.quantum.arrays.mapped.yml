@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.mapped
 name: Mapped
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Given an array and a function that is defined
   for the elements of the array, returns a new array that consists

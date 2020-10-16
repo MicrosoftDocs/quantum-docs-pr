@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applycontrolledonint
 name: ApplyControlledOnInt
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a unitary operation on the target register if the control
   register state corresponds to a specified positive integer.

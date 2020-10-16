@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.applyphaseleoperationonlec
 name: ApplyPhaseLEOperationOnLEC
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 syntax: 'operation ApplyPhaseLEOperationOnLEC (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit is Ctl), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit is Ctl), target : Microsoft.Quantum.Arithmetic.LittleEndian)'

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applypauli
 name: ApplyPauli
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Given a multi-qubit Pauli operator, applies the corresponding operation to
   a register.

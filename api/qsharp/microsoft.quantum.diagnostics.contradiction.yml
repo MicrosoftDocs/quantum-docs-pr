@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.contradiction
 name: Contradiction
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Declares that a classical condition is false.
 examples: |-
   The following Q# code will print "Hello, world":

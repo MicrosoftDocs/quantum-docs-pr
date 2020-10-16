@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.powl
 name: PowL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns a number raised to a given power.
 syntax: 'function PowL (a : BigInt, power : Int) : BigInt'
 input:

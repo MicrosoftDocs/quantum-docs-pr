@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.identitygeneratorsystem
 name: IdentityGeneratorSystem
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Returns a generator system consistent with the zero
   Hamiltonian `H = 0`, which corresponds to the identity evolution operation.

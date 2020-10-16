@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifelseb
 name: ApplyIfElseB
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies one of two operations, depending on the value of a classical
   bit.

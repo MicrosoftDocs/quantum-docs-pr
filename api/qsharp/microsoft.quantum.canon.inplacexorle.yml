@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.inplacexorle
 name: InPlaceXorLE
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: InPlaceXorLE has been deprecated. Please use @"microsoft.quantum.measurement.applyxorinplace" instead.
 syntax: 'operation InPlaceXorLE (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:

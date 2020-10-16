@@ -2,7 +2,7 @@
 title: Q# File Structure
 description: Describes the structure and syntax of a Q# file.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.greatestcommondivisorl
 name: GreatestCommonDivisorL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Computes the greatest common divisor of $a$ and $b$. The GCD is always positive.
 syntax: 'function GreatestCommonDivisorL (a : BigInt, b : BigInt) : BigInt'
 input:

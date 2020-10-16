@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.plusc
 name: PlusC
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the sum of two inputs.
 syntax: 'function PlusC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
 input:

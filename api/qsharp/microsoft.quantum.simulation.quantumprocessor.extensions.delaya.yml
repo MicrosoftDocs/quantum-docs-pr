@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.delaya
 name: DelayA
 type: operation
-namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+namespace: microsoft.quantum.simulation.quantumprocessor.extensions
 syntax: "operation DelayA (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit"
 input:
   content: "(op : ('T => Unit is Adj), arg : 'T, aux : Unit)"

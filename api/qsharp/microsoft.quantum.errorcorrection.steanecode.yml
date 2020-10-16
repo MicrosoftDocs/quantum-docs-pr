@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.steanecode
 name: SteaneCode
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: |-
   Returns a CSS value representing the ⟦7, 1, 3⟧ Steane code encoder and
   decoder with in-place syndrome measurement.

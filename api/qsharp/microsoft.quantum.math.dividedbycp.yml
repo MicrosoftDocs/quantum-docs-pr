@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.dividedbycp
 name: DividedByCP
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the quotient of two inputs.
 syntax: 'function DividedByCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.ComplexPolar'
 input:

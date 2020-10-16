@@ -30,6 +30,7 @@
       href: ../qdk/test.md
     - name: Optimization Jupyter Notebooks
       href: ../qdk/test.md
+
   - name: Update the QDK
     href: update.md
   - name: Contributing to the QDK

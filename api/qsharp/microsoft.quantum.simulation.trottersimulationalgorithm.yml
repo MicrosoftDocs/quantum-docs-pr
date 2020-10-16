@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.trottersimulationalgorithm
 name: TrotterSimulationAlgorithm
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   `SimulationAlgorithm` function that uses a Trotter–Suzuki
   decomposition to approximate the time-evolution operator _exp(-iHt)_.

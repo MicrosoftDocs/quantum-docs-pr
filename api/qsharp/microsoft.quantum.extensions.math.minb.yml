@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.minb
 name: MinB
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: MinB has been deprecated. Please use @"microsoft.quantum.math.minl" instead.
 syntax: 'function MinB (a : BigInt, b : BigInt) : BigInt'
 input:

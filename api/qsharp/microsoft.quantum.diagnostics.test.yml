@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.test
 name: Test
 type: newtype
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Compiler-recognized attribute used to mark a unit test.
 syntax: newtype Test = String;
 ...

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
 name: TimeDependentTrotterSimulationAlgorithm
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   `TimeDependentSimulationAlgorithm` function that uses a Trotter–Suzuki
   decomposition to approximate a unitary operator that solves the

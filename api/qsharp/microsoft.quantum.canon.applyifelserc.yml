@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifelserc
 name: ApplyIfElseRC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies one of two controllable operations, depending on the value of a
   classical result.

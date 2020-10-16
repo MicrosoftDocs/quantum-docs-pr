@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.littleendianasbigendian
 name: LittleEndianAsBigEndian
 type: function
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Converts a `LittleEndian` qubit register to a `BigEndian` qubit
   register by reversing the qubit ordering.

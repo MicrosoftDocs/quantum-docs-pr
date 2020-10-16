@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.ripplecarryadderd
 name: RippleCarryAdderD
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Reversible, in-place ripple-carry addition of two integers.
   Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`,

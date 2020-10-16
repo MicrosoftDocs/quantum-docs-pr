@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 name: MultiplyAndAddPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   The same as MultiplyAndAddByModularInteger, but assumes that the summand encodes
   integers in QFT basis.

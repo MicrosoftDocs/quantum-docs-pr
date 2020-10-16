@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.boolarrayasbigint
 name: BoolArrayAsBigInt
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: |-
   Converts a given array of Booleans to an equivalent big integer.
   The 0 element of the array is the least significant bit of the big integer.

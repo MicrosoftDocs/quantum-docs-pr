@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
 name: AssertOperationsEqualReferenced
 type: operation
-namespace: Microsoft.Quantum.Extensions.Testing
+namespace: microsoft.quantum.extensions.testing
 summary: AssertOperationsEqualReferenced has been deprecated. Please use @"microsoft.quantum.diagnostics.assertoperationsequalreferenced" instead.
 syntax: 'operation AssertOperationsEqualReferenced (actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int) : Unit'
 input:

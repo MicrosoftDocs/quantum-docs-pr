@@ -6,7 +6,7 @@
 uid: microsoft.quantum.bitwise.rightshiftedi
 name: RightShiftedI
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: |-
   Shifts the bitwise representation of a number right by a given number of
   bits.

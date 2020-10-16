@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
 name: EstimateClassificationProbabilities
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Given a set of samples and a sequential classifier, estimates the
   classification probability for those samples by repeatedly measuring

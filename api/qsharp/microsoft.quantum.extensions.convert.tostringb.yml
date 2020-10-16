@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.convert.tostringb
 name: ToStringB
 type: function
-namespace: Microsoft.Quantum.Extensions.Convert
+namespace: microsoft.quantum.extensions.convert
 summary: ToStringB has been deprecated. Please use @"microsoft.quantum.convert.boolasstring" instead.
 syntax: 'function ToStringB (a : Bool) : String'
 input:

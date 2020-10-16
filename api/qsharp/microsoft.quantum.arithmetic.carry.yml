@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.carry
 name: Carry
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Implements a reversible carry gate. Given a carry-in bit encoded in
   qubit `carryIn` and two summand bits encoded in `summand1` and `summand2`,

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.quantumprocessor.extensions.applyifelseintrinsicca
 name: ApplyIfElseIntrinsicCA
 type: operation
-namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
+namespace: microsoft.quantum.simulation.quantumprocessor.extensions
 syntax: 'operation ApplyIfElseIntrinsicCA (measurementResult : Result, onResultZeroOp : (Unit => Unit is Ctl + Adj), onResultOneOp : (Unit => Unit is Ctl + Adj)) : Unit'
 input:
   content: '(measurementResult : Result, onResultZeroOp : (Unit => Unit is Ctl + Adj), onResultOneOp : (Unit => Unit is Ctl + Adj))'

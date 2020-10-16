@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
 name: ApproximatelyApplyDiagonalUnitary
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies an array of complex phases to numeric basis states of a register
   of qubits, truncating small rotation angles according to a given

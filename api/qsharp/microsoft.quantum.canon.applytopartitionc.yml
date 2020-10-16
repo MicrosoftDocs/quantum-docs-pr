@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytopartitionc
 name: ApplyToPartitionC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a pair of operations to a given partition of a register into two parts.
   The modifier `C` indicates that the operation is controllable.

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.exp
 name: Exp
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: |-
   Applies the exponential of a multi-qubit Pauli operator.
 

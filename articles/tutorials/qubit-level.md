@@ -2,7 +2,7 @@
 title: Write and simulate qubit-level programs in Q#
 description: Step-by-step tutorial on writing and simulating a quantum program which operates at the individual qubit level
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
@@ -111,7 +111,7 @@ With `using`, the qubits are automatically allocated in the $\ket{0}$ state. We 
 Next, we apply the gates which comprise the operation itself.
 Q# already contains many basic quantum gates as operations in the [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) namespace, and these are no exception. 
 
-Within a Q# operation, the statements invoking callables will of course be executed in sequential order.
+Within a Q# operation, the statements invoking callables will, of course, be run in sequential order.
 Hence, the first gate to apply is the [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) to the first qubit:
 
 <br/>
@@ -129,7 +129,7 @@ An `R1(θ, <qubit>)` operation in general leaves the $\ket{0}$ component of the 
 
 #### Controlled operations
 
-Q# makes it extremely easy to condition the execution of an operation upon one or multiple control qubits.
+Q# makes it extremely easy to condition the run of an operation upon one or multiple control qubits.
 In general, we merely preface the call with `Controlled`, and the operation arguments change as:
 
  `Op(<normal args>)` $\to$ `Controlled Op([<control qubits>], (<normal args>))`.
@@ -239,7 +239,7 @@ namespace NamespaceQFT {
 
 With the Q# file and operation complete, our quantum program is ready to be called and simulated.
 
-## Execute the program
+## Run the program
 
 Having defined our Q# operation in a `.qs` file, we now need to call that operation and observe any returned classical data.
 For now, there isn't anything returned (recall that our operation defined above returns `Unit`), but when we later modify the Q# operation to return an array of measurement results (`Result[]`), we will address this.
@@ -265,7 +265,7 @@ To run the program, open the terminal in the folder of your project and enter
 dotnet run
 ```
 
-Upon execution, you should see the `Message` and `DumpMachine` outputs below printed in your console.
+Upon completion, you should see the `Message` and `DumpMachine` outputs below printed in your console.
 
 
 #### [Python](#tab/tabid-python)
@@ -310,9 +310,9 @@ The C# host has four parts:
     There are none in this example.
 3. Run the quantum algorithm. 
     Each Q# operation generates a C# class with the same name. 
-    This class has a `Run` method that **asynchronously** executes the operation.
-    The execution is asynchronous because execution on actual hardware will be asynchronous. 
-    Because the `Run` method is asynchronous, we call the `Wait()` method; this blocks execution until the task completes and returns the result synchronously. 
+    This class has a `Run` method that runs the operation **asynchronously**.
+    The run is asynchronous because running it on actual hardware will be asynchronous. 
+    Because the `Run` method is asynchronous, we call the `Wait()` method; this blocks the run until the task completes and returns the result synchronously. 
 4. Process the returned result of the operation.
     For now, the operation returns nothing.
 
@@ -506,7 +506,7 @@ The final operation code should look like:
 }
 ```
 
-If you are working from the command prompt, the returned array will simply be printed directly to the console at the end of the execution.
+If you are working from the command prompt, the returned array will simply be displayed directly to the console at the end of the run.
 Otherwise, update your host program to process the returned array.
 
 #### [Command prompt](#tab/tabid-cmdline)

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.absi
 name: AbsI
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: AbsI has been deprecated. Please use @"microsoft.quantum.math.absi" instead.
 syntax: 'function AbsI (a : Int) : Int'
 input:

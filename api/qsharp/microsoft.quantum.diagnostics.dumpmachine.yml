@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.dumpmachine
 name: DumpMachine
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Dumps the current target machine's status.
 remarks: |-
   This method allows you to dump information about the current status of the

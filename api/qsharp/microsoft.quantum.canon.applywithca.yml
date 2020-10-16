@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applywithca
 name: ApplyWithCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Given two operations, applies one as conjugated with the other.
 

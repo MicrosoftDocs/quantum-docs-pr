@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.repeat
 name: Repeat
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Repeats an operation a given number of times.
 examples: |-
   The following are equivalent:

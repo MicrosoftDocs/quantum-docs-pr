@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.modpowb
 name: ModPowB
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: ModPowB has been deprecated. Please use @"microsoft.quantum.math.modpowl" instead.
 syntax: 'function ModPowB (value : BigInt, exponent : BigInt, modulus : BigInt) : BigInt'
 input:

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.selectz
 name: SelectZ
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: |-
   A unitary $U$ that applies the Pauli $Z$ gate on a qubits $p$ conditioned
   on an index state $\ket{p}$. That is,

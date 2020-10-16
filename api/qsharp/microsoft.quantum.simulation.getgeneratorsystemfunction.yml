@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.getgeneratorsystemfunction
 name: GetGeneratorSystemFunction
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: Retrieves the `GeneratorIndex` function in a `GeneratorSystem`.
 syntax: 'function GetGeneratorSystemFunction (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Int -> Microsoft.Quantum.Simulation.GeneratorIndex)'
 input:

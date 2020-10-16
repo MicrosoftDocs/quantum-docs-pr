@@ -10,7 +10,7 @@ no-loc: ['Q#', '$$v']
 ---
 
 # Obtaining energy level estimates
-Estimating the values of energy levels is one of the principal applications of quantum chemistry. This article outlines how you can perform this for the canonical example of molecular hydrogen. The sample referenced in this section is [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) in the chemistry samples repository. A more visual example that plots the output is the [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) demo.
+Estimating the values of energy levels is one of the principal applications of quantum chemistry. This article outlines how you can perform this for the canonical example of molecular hydrogen. The sample referenced in this section is [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) in the chemistry samples repository. A more visual example that plots the output is the [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) demo.
 
 ## Estimating the energy values of molecular hydrogen
 

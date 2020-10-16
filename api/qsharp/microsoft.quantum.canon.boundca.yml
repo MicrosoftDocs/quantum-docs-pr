@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.boundca
 name: BoundCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Given an array of operations acting on a single input,
   produces a new operation that

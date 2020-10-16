@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.reflectaboutinteger
 name: ReflectAboutInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Reflects a quantum register about a given classical integer.
 

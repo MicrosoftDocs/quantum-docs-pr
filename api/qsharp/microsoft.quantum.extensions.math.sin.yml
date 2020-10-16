@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.sin
 name: Sin
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: Sin has been deprecated. Please use @"microsoft.quantum.math.sin" instead.
 syntax: 'function Sin (theta : Double) : Double'
 input:

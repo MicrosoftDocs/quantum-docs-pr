@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.addconstantfxp
 name: AddConstantFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Adds a classical constant to a quantum fixed-point number.
 syntax: 'operation AddConstantFxP (constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:

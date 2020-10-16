@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.arccos
 name: ArcCos
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the angle whose cosine is the specified number.
 remarks: See [System.Math.Acos](https://docs.microsoft.com/dotnet/api/system.math.acos) for more details.
 syntax: 'function ArcCos (x : Double) : Double'

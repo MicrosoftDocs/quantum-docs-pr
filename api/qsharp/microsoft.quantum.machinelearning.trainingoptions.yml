@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.trainingoptions
 name: TrainingOptions
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: A collection of options to be used in training quantum classifiers.
 remarks: |-
   This UDT should not be created directly, but rather should be specified

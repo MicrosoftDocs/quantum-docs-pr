@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.operationpow
 name: OperationPow
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Raises an operation to a power.
 

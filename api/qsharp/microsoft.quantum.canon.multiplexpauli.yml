@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.multiplexpauli
 name: MultiplexPauli
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a Pauli rotation conditioned on an array of qubits.
 

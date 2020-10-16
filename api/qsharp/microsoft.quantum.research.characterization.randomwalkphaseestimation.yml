@@ -6,7 +6,7 @@
 uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
 name: RandomWalkPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Research.Characterization
+namespace: microsoft.quantum.research.characterization
 summary: |-
   Performs iterative phase estimation using a random walk to approximate
   Bayesian inference on the classical measurement results from a given

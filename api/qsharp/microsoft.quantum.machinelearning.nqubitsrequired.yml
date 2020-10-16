@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.nqubitsrequired
 name: NQubitsRequired
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Returns the number of qubits required to apply a given sequential
   classifier.

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.modpowl
 name: ModPowL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Performs modular division on a number raised to the power of another number.
 remarks: See [System.Numerics.BigInteger.ModPow](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.modpow) for more details.
 syntax: 'function ModPowL (value : BigInt, exponent : BigInt, modulus : BigInt) : BigInt'

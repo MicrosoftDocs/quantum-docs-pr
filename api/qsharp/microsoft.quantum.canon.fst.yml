@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.fst
 name: Fst
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Given a pair, returns its first element.
 syntax: "function Fst (pair : ('T, 'U)) : 'T"
 input:

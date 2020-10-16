@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.multiplyi
 name: MultiplyI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Multiply integer `xs` by integer `ys` and store the result in `result`,
   which must be zero initially.

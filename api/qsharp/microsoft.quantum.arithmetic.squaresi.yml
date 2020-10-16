@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.squaresi
 name: SquareSI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Square signed integer `xs` and store
   the result in `result`, which must be zero initially.

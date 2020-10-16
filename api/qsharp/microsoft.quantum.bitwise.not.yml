@@ -6,7 +6,7 @@
 uid: microsoft.quantum.bitwise.not
 name: Not
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: |-
   Returns the bitwise NOT of an integer.
   This performs the same computation as the built-in `~~~` operator.

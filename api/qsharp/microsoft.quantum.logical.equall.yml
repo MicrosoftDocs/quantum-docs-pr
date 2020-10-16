@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.equall
 name: EqualL
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Returns true if and only if two inputs are equal.
 remarks: |-
   The following are equivalent:

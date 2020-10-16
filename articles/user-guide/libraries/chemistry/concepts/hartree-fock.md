@@ -1,8 +1,8 @@
 ---
 title: Hartree-Fock Theory
 description: Learn about the Hartree–Fock theory, a simple way to construct the initial state for quantum systems.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.hartreefock

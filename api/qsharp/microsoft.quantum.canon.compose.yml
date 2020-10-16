@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.compose
 name: Compose
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Returns the composition of two functions.
 

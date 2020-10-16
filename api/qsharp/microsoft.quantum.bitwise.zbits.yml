@@ -6,7 +6,7 @@
 uid: microsoft.quantum.bitwise.zbits
 name: ZBits
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: |-
   Returns an integer representing the Z bits of an array
   of Pauli operators.

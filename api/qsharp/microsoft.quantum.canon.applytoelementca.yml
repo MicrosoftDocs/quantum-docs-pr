@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytoelementca
 name: ApplyToElementCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies an operation to a given element of an array.
 

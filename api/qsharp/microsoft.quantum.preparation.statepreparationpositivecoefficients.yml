@@ -6,7 +6,7 @@
 uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
 name: StatePreparationPositiveCoefficients
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: |-
   Returns an operation that prepares the given quantum state.
 

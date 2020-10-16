@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.timesc
 name: TimesC
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the product of two inputs.
 syntax: 'function TimesC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
 input:

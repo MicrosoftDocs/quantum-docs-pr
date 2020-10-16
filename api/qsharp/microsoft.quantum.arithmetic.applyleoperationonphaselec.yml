@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
 name: ApplyLEOperationOnPhaseLEC
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Applies an operation that takes a
   <xref:microsoft.quantum.arithmetic.phaselittleendian> register as input

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.decodeop
 name: DecodeOp
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: |-
   Represents an operation which decodes an encoded register into a
   physical register and the scratch qubits used to record a syndrome.

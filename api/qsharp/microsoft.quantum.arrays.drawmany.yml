@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.drawmany
 name: DrawMany
 type: operation
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Repeats an operation for a given number of samples, collecting its outputs
   in an array.

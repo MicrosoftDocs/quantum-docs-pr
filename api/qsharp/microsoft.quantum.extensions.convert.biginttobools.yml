@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.convert.biginttobools
 name: BigIntToBools
 type: function
-namespace: Microsoft.Quantum.Extensions.Convert
+namespace: microsoft.quantum.extensions.convert
 summary: BigIntToBools has been deprecated. Please use @"microsoft.quantum.convert.bigintasboolarray" instead.
 syntax: 'function BigIntToBools (a : BigInt) : Bool[]'
 input:

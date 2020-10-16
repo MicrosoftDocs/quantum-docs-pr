@@ -6,7 +6,7 @@
 uid: microsoft.quantum.bitwise.leftshiftedi
 name: LeftShiftedI
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: |-
   Shifts the bitwise representation of a number left by a given number of
   bits.

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.core.rangeend
 name: RangeEnd
 type: function
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: |-
   Returns the defined end value of the given range,
   which is not necessarily the last element in the sequence.

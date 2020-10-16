@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.powd
 name: PowD
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the number x raised to the power y.
 remarks: See [System.Math.Pow](https://docs.microsoft.com/dotnet/api/system.math.pow) for more details.
 syntax: 'function PowD (x : Double, y : Double) : Double'

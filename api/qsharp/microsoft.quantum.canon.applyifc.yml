@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifc
 name: ApplyIfC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a controllable operation conditioned on a classical bit.
 
@@ -21,7 +21,7 @@ examples: |-
   ```Q#
   let bitstring = [true, false, true];
   using (register = Qubit(3)) {
-      ApplyToEach(ApplyIf(X, _, _), Zip(bitstring, register));
+      ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));
       // register should now be in the state |101⟩.
       ...
   }

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.core.length
 name: Length
 type: function
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: Returns the number of elements in an array.
 syntax: "function Length (a : 'T[]) : Int"
 input:

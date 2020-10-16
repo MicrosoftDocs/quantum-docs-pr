@@ -18,8 +18,27 @@ functions:
     the array satisfies the predicate.
 - uid: microsoft.quantum.arrays.chunks
   summary: Splits an array into multiple parts of equal length.
+- uid: microsoft.quantum.arrays.columnat
+  summary: Extracts a column from a matrix.
 - uid: microsoft.quantum.arrays.constantarray
   summary: Creates an array of given length with all elements equal to given value.
+- uid: microsoft.quantum.arrays.count
+  summary: |-
+    Given an array and a predicate that is defined
+    for the elements of the array, returns the number of elements
+    an array that consists of those elements that satisfy the predicate.
+- uid: microsoft.quantum.arrays.cumulativefolded
+  summary: Combines Mapped and Fold into a single function
+- uid: microsoft.quantum.arrays.diagonal
+  summary: Returns an array of diagonal elements of a 2-dimensional array
+- uid: microsoft.quantum.arrays.elementat
+  summary: Returns the at the given index of an array.
+- uid: microsoft.quantum.arrays.elementsat
+  summary: |-
+    Returns the array's elements at a given range
+    of indices.
+- uid: microsoft.quantum.arrays.emptyarray
+  summary: Returns the empty array of a given type.
 - uid: microsoft.quantum.arrays.enumerated
   summary: |-
     Given an array, returns a new array containing elements of the original
@@ -32,17 +51,29 @@ functions:
   summary: |-
     Returns an array containing the elements of another array,
     excluding elements at a given list of indices.
+- uid: microsoft.quantum.arrays.excluding
+  summary: |-
+    Returns an array containing the elements of another array,
+    excluding elements at a given list of indices.
 - uid: microsoft.quantum.arrays.filtered
   summary: |-
     Given an array and a predicate that is defined
     for the elements of the array, returns an array that consists of
     those elements that satisfy the predicate.
+- uid: microsoft.quantum.arrays.flatmapped
+  summary: |-
+    Given an array and a function that maps an array element to some output
+    array, returns the concatenated output arrays for each array element.
+- uid: microsoft.quantum.arrays.flattened
+  summary: Given an array of arrays, returns the concatenation of all arrays.
 - uid: microsoft.quantum.arrays.fold
   summary: |-
     Iterates a function `f` through an array `array`, returning
     `f(f(f(initialState, array[0]), array[1]), ...)`.
 - uid: microsoft.quantum.arrays.head
   summary: Returns the first element of the array.
+- uid: microsoft.quantum.arrays.headandrest
+  summary: Returns a tuple of first and all remaining elements of the array.
 - uid: microsoft.quantum.arrays.indexof
   summary: |-
     Returns the first index of the first element in an array that satisfies
@@ -51,10 +82,16 @@ functions:
   summary: |-
     Given an array, returns a range over the indices of that array, suitable
     for use in a for loop.
+- uid: microsoft.quantum.arrays.interleaved
+  summary: Interleaves two arrays of (almost) same size.
 - uid: microsoft.quantum.arrays.isempty
   summary: Returns true if and only if an array is empty.
 - uid: microsoft.quantum.arrays.ispermutation
   summary: Outputs true if and only if a given array represents a permutation.
+- uid: microsoft.quantum.arrays.issorted
+  summary: |-
+    Given an array, returns whether that array is sorted as defined by
+    a given comparison function.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: |-
     Given an array, returns a function which returns elements of that
@@ -69,16 +106,27 @@ functions:
     Given an array and a function that is defined
     for the indexed elements of the array, returns a new array that consists
     of the images of the original array under the function.
+- uid: microsoft.quantum.arrays.mappedoverrange
+  summary: |-
+    Given a range and a function that takes an integer as input,
+    returns a new array that consists
+    of the images of the range values under the function.
 - uid: microsoft.quantum.arrays.most
   summary: |-
     Creates an array that is equal to an input array except that the last array
     element is dropped.
+- uid: microsoft.quantum.arrays.mostandtail
+  summary: Returns a tuple of all but one and the last element of the array.
 - uid: microsoft.quantum.arrays.padded
   summary: |-
     Returns an array padded at with specified values up to a
     specified length.
 - uid: microsoft.quantum.arrays.partitioned
   summary: Splits an array into multiple parts.
+- uid: microsoft.quantum.arrays.prefixes
+  summary: Given an array, returns all its prefixes.
+- uid: microsoft.quantum.arrays.rectangulararrayfact
+  summary: Represents a condition that a 2-dimensional array has a rectangular shape
 - uid: microsoft.quantum.arrays.rest
   summary: |-
     Creates an array that is equal to an input array except that the first array
@@ -91,6 +139,12 @@ functions:
   summary: Get an array of integers in a given interval.
 - uid: microsoft.quantum.arrays.sequencel
   summary: Get an array of integers in a given interval.
+- uid: microsoft.quantum.arrays.sorted
+  summary: |-
+    Given an array, returns the elements of that array sorted by a given
+    comparison function.
+- uid: microsoft.quantum.arrays.squarearrayfact
+  summary: Represents a condition that a 2-dimensional array has a square shape
 - uid: microsoft.quantum.arrays.subarray
   summary: |-
     Takes an array and a list of locations and
@@ -100,21 +154,57 @@ functions:
   summary: Applies a swap of two elements in an array.
 - uid: microsoft.quantum.arrays.tail
   summary: Returns the last element of the array.
+- uid: microsoft.quantum.arrays.transposed
+  summary: |-
+    Returns the transpose of a matrix represented as an array
+    of arrays.
 - uid: microsoft.quantum.arrays.tuplearrayasnestedarray
   summary: Turns a list of 2-tuples into a nested array.
+- uid: microsoft.quantum.arrays.unique
+  summary: Returns a new array that has no equal adjacent elements.
+- uid: microsoft.quantum.arrays.unzipped
+  summary: |-
+    Given an array of 2-tuples, returns a tuple of two arrays, each containing
+    the elements of the tuples of the input array.
 - uid: microsoft.quantum.arrays.where
   summary: |-
     Given a predicate and an array, returns the indices of that
     array where the predicate is true.
+- uid: microsoft.quantum.arrays.windows
+  summary: Returns all consecutive subarrays of length `size`.
 - uid: microsoft.quantum.arrays.zip
   summary: |-
     Given two arrays, returns a new array of pairs such that each pair
     contains an element from each original array.
+    > [!WARNING]
+    > Deprecated
+
+    Zip has been deprecated. Please use @"microsoft.quantum.arrays.zipped" instead.
 - uid: microsoft.quantum.arrays.zip3
   summary: |-
     Given three arrays, returns a new array of 3-tuples such that each 3-tuple
     contains an element from each original array.
+    > [!WARNING]
+    > Deprecated
+
+    Zip3 has been deprecated. Please use @"microsoft.quantum.arrays.zipped3" instead.
 - uid: microsoft.quantum.arrays.zip4
+  summary: |-
+    Given four arrays, returns a new array of 4-tuples such that each 4-tuple
+    contains an element from each original array.
+    > [!WARNING]
+    > Deprecated
+
+    Zip4 has been deprecated. Please use @"microsoft.quantum.arrays.zipped4" instead.
+- uid: microsoft.quantum.arrays.zipped
+  summary: |-
+    Given two arrays, returns a new array of pairs such that each pair
+    contains an element from each original array.
+- uid: microsoft.quantum.arrays.zipped3
+  summary: |-
+    Given three arrays, returns a new array of 3-tuples such that each 3-tuple
+    contains an element from each original array.
+- uid: microsoft.quantum.arrays.zipped4
   summary: |-
     Given four arrays, returns a new array of 4-tuples such that each 4-tuple
     contains an element from each original array.

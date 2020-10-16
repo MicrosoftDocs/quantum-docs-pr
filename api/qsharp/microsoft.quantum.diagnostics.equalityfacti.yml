@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.equalityfacti
 name: EqualityFactI
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Asserts that a classical Int variable has the expected value.
 syntax: 'function EqualityFactI (actual : Int, expected : Int, message : String) : Unit'
 input:

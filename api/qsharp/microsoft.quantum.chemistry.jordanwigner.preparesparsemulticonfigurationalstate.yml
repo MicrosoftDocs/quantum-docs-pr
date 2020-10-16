@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
 name: PrepareSparseMultiConfigurationalState
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: |-
   Sparse multi-configurational state preparation of trial state by adding excitations
   to initial trial state.

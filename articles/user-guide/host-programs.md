@@ -2,7 +2,7 @@
 title: Ways to run a Q# program
 description: Overview of the different ways to run Q# programs. From the command prompt, Q# Jupyter Notebooks, and classical host programs in Python or a .NET language.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 05/15/2020
 ms.topic: article
 uid: microsoft.quantum.guide.host-programs
@@ -19,9 +19,9 @@ A primary distinction is that Q# can be run:
 - as a standalone application, where Q# is the only language involved and the program is invoked directly. Two methods actually fall in this category:
   - the command-line interface
   - Q# Jupyter Notebooks
-- with an additional *host program*, written in Python or a .NET language (e.g. C# or F#), which then invokes the program and can further process returned results.
+- with an additional *host program*, written in Python or a .NET language (for example, C# or F#), which then invokes the program and can further process returned results.
 
-To best understand these processes and their differences, we consider a simple Q# program and compare the ways it can be executed.
+To best understand these processes and their differences, we consider a simple Q# program and compare the ways it can be run.
 
 ## Basic Q# program
 
@@ -37,8 +37,8 @@ In Q#, this would be performed by the following code:
         }
 ```
 
-However, this code alone can't be executed by Q#.
-For that, it needs to make up the body of an [operation](xref:microsoft.quantum.guide.basics#q-operations-and-functions), which is then executed when called---either directly or by another operation. 
+However, this code alone can't be run by Q#.
+For that, it needs to make up the body of an [operation](xref:microsoft.quantum.guide.basics#q-operations-and-functions), which is then run when called---either directly or by another operation. 
 Hence, you can write an operation of the following form:
 ```qsharp
     operation MeasureSuperposition() : Result {
@@ -88,43 +88,46 @@ namespace NamespaceName {
 > One exception to all of this is the [`Microsoft.Quantum.Core`](xref:microsoft.quantum.core) namespace, which is always automatically opened.
 > Therefore, callables like [`Length`](xref:microsoft.quantum.core.length) can always be used directly.
 
-### Execution on target machines
+### Running on target machines
 
-Now the general execution model of a Q# program becomes clear.
+Now the general run model of a Q# program becomes clear.
 
 <br/>
 <img src="../media/hostprograms_general_execution_model.png" alt="Q# program execution diagram" width="400">
 
-Firstly, the specific callable to be executed has access to any other callables and types defined in the same namespace.
+Firstly, the specific callable to be run has access to any other callables and types defined in the same namespace.
 It also access those from any of the [Q# libraries](xref:microsoft.quantum.libraries), but those must be referenced either via their full name, or through the use of `open` statements described above.
 
-The callable itself is then executed on a *[target machine](xref:microsoft.quantum.machines)*.
+The callable itself is then run on a *[target machine](xref:microsoft.quantum.machines)*.
 Such target machines can be actual quantum hardware or the multiple simulators available as part of the QDK.
-For our purposes here, the most useful target machine is an instance of the [full-state simulator](xref:microsoft.quantum.machines.full-state-simulator), `QuantumSimulator`, which calculates the program's behavior as if it were being executed on a noise-free quantum computer.
+For our purposes here, the most useful target machine is an instance of the [full-state simulator](xref:microsoft.quantum.machines.full-state-simulator), `QuantumSimulator`, which calculates the program's behavior as if it were being run on a noise-free quantum computer.
 
-So far, we've described what happens when a specific Q# callable is being executed.
+So far, we've described what happens when a specific Q# callable is being run.
 Regardless of whether Q# is used in a standalone application or with a host program, this general process is more or less the same---hence the QDK's flexibility.
-The differences between the different ways of calling into the Quantum Development Kit therefore reveal themselves in *how* that Q# callable is called to be executed, and in what manner any results are returned.
-More specifically, the differences revolve around 
-1. indicating which Q# callable is to be executed,
-2. how potential callable arguments are provided,
-3. specifying the target machine on which to execute it, and
-4. how any results are returned.
+The differences between the ways of calling into the Quantum Development Kit therefore reveal themselves in *how* that Q# callable is called to be run, and in what manner any results are returned.
+More specifically, the differences revolve around:
+
+- Indicating which Q# callable is to be run
+- How potential callable arguments are provided
+- Specifying the target machine on which to run it
+- How any results are returned
 
 First, we discuss how this is done with the Q# standalone application from the command prompt, and then proceed to using Python and C# host programs.
 We reserve the standalone application of Q# Jupyter Notebooks for last, because unlike the first three, it's primary functionality does not center around a local Q# file.
 
 > [!NOTE]
-> Although we don't illustrate it in these examples, one commonality between the execution methods is that any messages printed from inside the Q# program (by way of [`Message`](xref:microsoft.quantum.intrinsic.message) or [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine), for example) will typically always be printed to the respective console.
+> Although we don't illustrate it in these examples, one commonality between the run methods is that any messages printed from inside the Q# program (by way of [`Message`](xref:microsoft.quantum.intrinsic.message) or [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine), for example) will typically always be printed to the respective console.
 
 ## Q# from the command prompt
 One of the easiest ways to get started writing Q# programs is to avoid worrying about separate files and a second language altogether.
 Using Visual Studio Code or Visual Studio with the QDK extension allows for a seamless work flow in which we run Q# callables from only a single Q# file.
 
-For this, we will ultimately invoke the program's execution by entering
+For this, we will ultimately run the program by entering
+
 ```dotnetcli
 dotnet run
 ```
+
 at the command prompt.
 The simplest workflow is when the terminal's directory location is the same as the Q# file, which can be easily handled alongside Q# file editing by using the integrated terminal in VS Code, for example.
 However, the [`dotnet run` command](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) accepts numerous options, and the program can also be run from a different location by simply providing `--project <PATH>` with the location of the Q# file.
@@ -132,7 +135,7 @@ However, the [`dotnet run` command](https://docs.microsoft.com/dotnet/core/tools
 
 ### Add entry point to Q# file
 
-Most Q# files will contain more than one callable, so naturally we need to let the compiler know *which* callable to execute when we provide the `dotnet run` command.
+Most Q# files will contain more than one callable, so naturally we need to let the compiler know *which* callable to run when we provide the `dotnet run` command.
 This is done with a simple change to the Q# file itself: 
     - add a line with `@EntryPoint()` directly preceding the callable.
 
@@ -225,7 +228,7 @@ BorrowedWidth   0
 
 For details on what these metrics indicate, see [Resource estimator: metrics reported](xref:microsoft.quantum.machines.resources-estimator#metrics-reported).
 
-### Command line execution summary
+### Command line run summary
 <br/>
 <img src="../media/hostprograms_command_line_diagram.png" alt="Q# program from command line" width="700">
 
@@ -233,7 +236,7 @@ For details on what these metrics indicate, see [Resource estimator: metrics rep
 
 As we briefly mentioned above with the `--project` option, the [`dotnet run` command](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) also accepts options unrelated to the Q# callable arguments.
 If providing both kinds of options, the `dotnet`-specific options must be provided first, followed by a delimeter `--`, and then the Q#-specific options.
-For example, specifiying a path along with a number qubits for the operation above would be executed via `dotnet run --project <PATH> -- -n <n>`.
+For example, specifying a path along with a number qubits for the operation above would be run via `dotnet run --project <PATH> -- -n <n>`.
 
 ## Q# with host programs
 
@@ -241,15 +244,15 @@ With our Q# file in hand, an alternative to calling an operation or function dir
 Specifically, this can be done with either Python or a .NET language such as C# or F# (for the sake of brevity we will only detail C# here).
 A little more setup is required to enable the interoperability, but those details can be found in the [install guides](xref:microsoft.quantum.install).
 
-In a nutshell, the situation now includes a host program file (e.g. `*.py` or `*.cs`) in the same location as our Q# file.
-It's now the *host* program that gets run, and in the course of its execution it can call specific Q# operations and functions from the Q# file.
+In a nutshell, the situation now includes a host program file (for example, `*.py` or `*.cs`) in the same location as our Q# file.
+It's now the *host* program that gets run, and while it is running, it can call specific Q# operations and functions from the Q# file.
 The core of the interoperability is based on the Q# compiler making the contents of the Q# file accessible to the host program so that they can be called.
 
 One of the main benefits of using a host program is that the classical data returned by the Q# program can then be further processed in the host language.
-This could consist of some advanced data processing (e.g. something that can't be performed internally in Q#), and then calling further Q# actions based on those results, or something as simple as plotting the Q# results.
+This could consist of some advanced data processing (for example, something that can't be performed internally in Q#), and then calling further Q# actions based on those results, or something as simple as plotting the Q# results.
 
 The general scheme is shown here, and we discuss the specific implementations for Python and C# below. 
-A sample using an F# host program can be found at the [.NET interoperability samples](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet).
+A sample using an F# host program can be found at the [.NET interoperability samples](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet).
 
 <br/>
 <img src="../media/hostprograms_host_program_diagram.png" alt="Q# program from a host program" width="700">
@@ -291,7 +294,7 @@ A Python host program is constructed as follows:
 1. Import the `qsharp` module, which registers the module loader for Q# interoperability. 
     This allows Q# namespaces to appear as Python modules, from which we can "import" Q# callables.
     Note that it is technically not the Q# callables themselves which are imported, but rather Python stubs which allow calling into them.
-    These then behave as objects of Python classes, on which we use methods to specify the target machines to send the operation to for execution.
+    These behave as objects of Python classes. We use methods on these objects to specify the target machines that we send the operation to when running the program.
 
 2. Import those Q# callables which we will directly invoke---in this case, `MeasureSuperposition` and `MeasureSuperpositionArray`.
     ```python
@@ -331,7 +334,7 @@ print(multi_qubit_resources)
 
 results in an output like the following:
 
-```python
+```output
 Single qubit:
 1
 {'CNOT': 0, 'QubitClifford': 1, 'R': 0, 'Measure': 1, 'T': 0, 'Depth': 0, 'Width': 1, 'BorrowedWidth': 0}
@@ -340,6 +343,68 @@ Multiple qubits:
 [0, 1, 1, 1]
 {'CNOT': 0, 'QubitClifford': 4, 'R': 0, 'Measure': 4, 'T': 0, 'Depth': 0, 'Width': 4, 'BorrowedWidth': 0}
 ```
+
+#### Using Q# code from other projects or packages
+
+By default, the `import qsharp` command loads all of the `.qs` files in the current folder and makes their Q# operations and functions
+available for use from inside the Python script.
+
+To load Q# code from another folder, the [`qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects)
+can be used to add a reference to a `.csproj` file for a Q# project (that is, a project that references `Microsoft.Quantum.Sdk`).
+This command will compile any `.qs` files in the folder containing the `.csproj` and its subfolders. It will also recursively load
+any packages referenced via `PackageReference` or Q# projects referenced via `ProjectReference` in that `.csproj` file.
+
+As an example, the following Python code imports an external project, referencing its path relative to the current folder,
+and invokes one of its Q# operations:
+
+```python
+import qsharp
+qsharp.projects.add("../qrng/Qrng.csproj")
+from Qrng import SampleQuantumRandomNumberGenerator
+print(f"Qrng result: {SampleQuantumRandomNumberGenerator.simulate()}")
+```
+
+This results in output like the following:
+
+```output
+Adding reference to project: ../qrng/Qrng.csproj
+Qrng result: 0
+```
+
+To load external packages containing Q# code, use the [`qsharp.packages` API](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages).
+
+If the Q# code in the current folder depends on external projects or packages, you may see errors when running `import qsharp`,
+since the dependencies have not yet been loaded.
+To load required external packages or Q# projects during the `import qsharp` command, ensure that the folder with the Python script
+contains a `.csproj` file which references `Microsoft.Quantum.Sdk`. In that `.csproj`, add the property
+`<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` to the `<PropertyGroup>`. This will instruct IQ# to recursively
+load any `ProjectReference` or `PackageReference` items found in that `.csproj` during the `import qsharp` command.
+
+For example, here is a simple `.csproj` file that causes IQ# to automatically load the `Microsoft.Quantum.Chemistry` package:
+
+```xml
+<Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
+    </ItemGroup>
+</Project>
+```
+
+> [!NOTE]
+> Currently this custom `<IQSharpLoadAutomatically>` property is required by Python hosts, but in the future,
+> this may become the default behavior for a `.csproj` file located in the same folder as the Python script.
+
+> [!NOTE]
+> Currently the `<QsharpCompile>` setting in the `.csproj` is ignored by Python hosts, and all `.qs` files
+> in the folder of the `.csproj`
+> (including subfolders) are loaded and compiled. Support for `.csproj` settings will be improved in the future
+> (see [iqsharp#277](https://github.com/microsoft/iqsharp/issues/277) for more details).
+
 
 ### [C#](#tab/tabid-csharp)
 
@@ -353,16 +418,16 @@ First, we make any classes used in our host program available with `using` state
 ```csharp
 using System;
 using System.Threading.Tasks;
-using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines (e.g. QuantumSimulator, ResourcesEstimator)
+using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines (for example, QuantumSimulator, ResourcesEstimator)
 using NamespaceName;                              // make the Q# namespace available
 ```
 
-Next, we declare our C# namespace, a few other bits and pieces (see the full code block below), and then any classical programming we would like (e.g. computing arguments for the Q# callables).
-The latter isn't necessary in our case, but an example of such usage can be found at the  [.NET interoperability sample](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet).
+Next, we declare our C# namespace, a few other bits and pieces (see the full code block below), and then any classical programming we would like (for example, computing arguments for the Q# callables).
+The latter isn't necessary in our case, but an example of such usage can be found at the  [.NET interoperability sample](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet).
 
 #### Target machines
 
-Getting back to Q#, we must create an instance of whatever target machine we will execute our operations on.
+Getting back to Q#, we must create an instance of whatever target machine we will run our operations on.
 
 ```csharp
             using var sim = new QuantumSimulator();
@@ -380,9 +445,9 @@ The returned results can then be assigned to variables in C#:
 ```
 
 > [!NOTE]
-> The `Run` method is executed asynchronously because this will be the case for real quantum hardware, and therefore the `await` keyword blocks further execution until the task completes.
+> The `Run` method is run asynchronously because this will be the case for real quantum hardware, and therefore the `await` keyword blocks further processing until the task completes.
 
-If the Q# callable does not have any returns (i.e. has return type `Unit`), then the execution can still be done in the same manner without assigning it to a variable.
+If the Q# callable does not have any returns (for example, it has return type `Unit`), then the run can still be done in the same manner without assigning it to a variable.
 In that case, the entire line would simply consist of 
 ```csharp
 await <callable>.Run(<simulator>);
@@ -390,7 +455,7 @@ await <callable>.Run(<simulator>);
 
 #### Arguments
 
-Any arguments to the Q# callable are simply passed as additional arguments afer the target machine.
+Any arguments to the Q# callable are simply passed as additional arguments after the target machine.
 Hence the results of `MeasureSuperpositionArray` on `n=4` qubits would fetched via 
 
 ```csharp
@@ -528,9 +593,9 @@ BorrowedWidth   0
 
 ## Q# Jupyter Notebooks
 Q# Jupyter Notebooks make use of the IQ# kernel, which allows you to define, compile, and run Q# callables in a single notebook---all alongside instructions, notes, and other content.
-This means that while it is possible to import and use the contents of `*.qs` Q# files, they are not necessary in the execution model.
+This means that while it is possible to import and use the contents of `*.qs` Q# files, they are not necessary in the run model.
 
-Here, we will detail how to run the Q# operations defined above, but a more broad introduction to using Q# Jupyter Notebooks is provided at [Intro to Q# and Jupyter Notebooks](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb).
+Here, we will detail how to run the Q# operations defined above, but a more broad introduction to using Q# Jupyter Notebooks is provided at [Intro to Q# and Jupyter Notebooks](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb).
 
 ### Defining operations
 
@@ -540,13 +605,13 @@ So, we can enable access to callables from the [Q# standard libraries](xref:micr
 Upon running a cell with such a statement, the definitions from those namespaces are available throughout the workspace.
 
 > [!NOTE]
-> Callables from [Microsoft.Quantum.Intrinsic](xref:microsoft.quantum.intrinsic) and [Microsoft.Quantum.Canon](xref:microsoft.quantum.canon) (e.g. [`H`](xref:microsoft.quantum.intrinsic.h) and [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach)) are automatically available to operations defined within cells in Q# Jupyter Notebooks.
-> However, this is not true for code brought in from external Q# source files (a process shown at [Intro to Q# and Jupyter Notebooks](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)). 
+> Callables from [Microsoft.Quantum.Intrinsic](xref:microsoft.quantum.intrinsic) and [Microsoft.Quantum.Canon](xref:microsoft.quantum.canon) (for example, [`H`](xref:microsoft.quantum.intrinsic.h) and [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach)) are automatically available to operations defined within cells in Q# Jupyter Notebooks.
+> However, this is not true for code brought in from external Q# source files (a process shown at [Intro to Q# and Jupyter Notebooks](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)). 
 > 
 
 Similarly, defining operations requires only writing the Q# code and running the cell.
 
-<img src="../media/hostprograms_jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="600">
+<img src="../media/hostprograms_jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="773">
 
 The output then lists those operations, which can then be called from future cells.
 
@@ -555,13 +620,63 @@ The output then lists those operations, which can then be called from future cel
 The functionality to run operations on specific target machines is provided via [IQ# Magic Commands](xref:microsoft.quantum.guide.quickref.iqsharp).
 For example, `%simulate` makes use of the `QuantumSimulator`, and `%estimate` uses the `ResourcesEstimator`:
 
-<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Simulate and estimate resources Jupyter cell" width="500">
+<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Jupyter cell simulating a Q# operation and running resource estimation" width="773">
 
 ### Passing inputs to functions and operations
 
-Currently the execution magic commands can only be used with operations that take no arguments. 
-So, to run `MeasureSuperpositionArray`, we need to define a "wrapper" operation which then calls the operation with the arguments:
+To pass inputs to the Q# operations, the arguments can be passed as `key=value` pairs to the run magic command.
+So, to run `MeasureSuperpositionArray` with four qubits, we can run `%simulate MeasureSuperpositionArray n=4`:
 
-<img src="../media/hostprograms_jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="550">
+<img src="../media/hostprograms_jupyter_args_sim_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="773">
 
-This operation can of course be used similarly with `%estimate` and other execution commands.
+This pattern can be used similarly with `%estimate` and other run commands.
+
+### Using Q# code from other projects or packages
+
+By default, a Q# Jupyter Notebook loads all of the `.qs` files in the current folder and makes their Q# operations and functions
+available for use from inside the notebook. The [`%who` magic command](xref:microsoft.quantum.iqsharp.magic-ref.who) lists all
+currently-available Q# operations and functions.
+
+To load Q# code from another folder, the [`%project` magic command](xref:microsoft.quantum.iqsharp.magic-ref.project) can be used
+to add a reference to a `.csproj` file for a Q# project (that is, a project that references `Microsoft.Quantum.Sdk`). This command
+will compile any `.qs` files in the folder containing the `.csproj` (and subfolders). It will also recursively load any packages
+referenced via `PackageReference` or Q# projects referenced via `ProjectReference` in that `.csproj` file. 
+
+As an example, the following cells simulate a Q# operation from an external project, where the project path is referenced relative to the current folder:
+
+<img src="../media/hostprograms_jupyter_project_crop.png" alt="Jupyter cell simulating a Q# operation from an external project" width="773">
+
+To load external packages containing Q# code, use the [`%package` magic command](xref:microsoft.quantum.iqsharp.magic-ref.package).
+Loading a package will also make available any custom magic commands or display encoders that are contained in any assemblies
+that are part of the package.
+
+To load external packages or Q# projects at notebook intialization time, ensure that the notebook folder contains
+a `.csproj` file which references `Microsoft.Quantum.Sdk`. In that `.csproj`, add the property
+`<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` to the `<PropertyGroup>`. This will instruct IQ# to recursively
+load any `ProjectReference` or `PackageReference` items found in that `.csproj` at notebook load time.
+
+For example, here is a simple `.csproj` file that causes IQ# to automatically load the `Microsoft.Quantum.Chemistry` package:
+
+```xml
+<Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
+    </ItemGroup>
+</Project>
+```
+
+> [!NOTE]
+> Currently this custom `<IQSharpLoadAutomatically>` property is required by Q# Jupyter Notebook hosts,
+> but in the future, this may become the default
+> behavior for a `.csproj` file located in the same folder as the notebook file.
+
+> [!NOTE]
+> Currently the `<QsharpCompile>` setting in the `.csproj` is ignored by Q# Jupyter Notebook hosts,
+> and all `.qs` files in the folder of the `.csproj`
+> (including subfolders) are loaded and compiled. Support for `.csproj` settings will be improved in the future
+> (see [iqsharp#277](https://github.com/microsoft/iqsharp/issues/277) for more details).

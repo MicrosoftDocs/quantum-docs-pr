@@ -6,7 +6,7 @@
 uid: microsoft.quantum.amplitudeamplification.reflectionphases
 name: ReflectionPhases
 type: newtype
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Phases for a sequence of partial reflections in amplitude amplification.
 remarks: |-
   The first parameter is an array of phases for reflection about the

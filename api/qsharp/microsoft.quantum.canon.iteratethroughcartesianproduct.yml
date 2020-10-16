@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.iteratethroughcartesianproduct
 name: IterateThroughCartesianProduct
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies an operation for each index in the Cartesian product of several
   ranges.

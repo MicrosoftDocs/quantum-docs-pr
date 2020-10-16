@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.timedependentgeneratorsystem
 name: TimeDependentGeneratorSystem
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Represents a time-dependent dynamical generator as a function
   from time to the value of the dynamical generator at that time.

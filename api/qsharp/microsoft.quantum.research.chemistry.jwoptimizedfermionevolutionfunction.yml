@@ -6,7 +6,7 @@
 uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
 name: JWOptimizedFermionEvolutionFunction
 type: function
-namespace: Microsoft.Quantum.Research.Chemistry
+namespace: microsoft.quantum.research.chemistry
 summary: |-
   Represents a dynamical generator as a set of simulatable gates and an
   expansion in the JWOptimized basis.

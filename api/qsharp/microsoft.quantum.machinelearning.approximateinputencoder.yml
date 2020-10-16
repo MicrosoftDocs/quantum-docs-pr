@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.approximateinputencoder
 name: ApproximateInputEncoder
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Given a set of coefficients and a tolerance, returns a state preparation
   operation that prepares each coefficient as the corresponding amplitude

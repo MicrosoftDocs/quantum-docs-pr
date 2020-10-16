@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.trotterstep
 name: TrotterStep
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Implements a single time-step of time-evolution by the system
   described in an `EvolutionGenerator` using a Trotter–Suzuki

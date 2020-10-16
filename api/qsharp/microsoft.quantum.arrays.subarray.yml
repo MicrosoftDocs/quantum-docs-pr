@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.subarray
 name: Subarray
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Takes an array and a list of locations and
   produces a new array formed from the elements of the original

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.convert.tobigint
 name: ToBigInt
 type: function
-namespace: Microsoft.Quantum.Extensions.Convert
+namespace: microsoft.quantum.extensions.convert
 summary: ToBigInt has been deprecated. Please use @"microsoft.quantum.convert.intasbigint" instead.
 syntax: 'function ToBigInt (a : Int) : BigInt'
 input:

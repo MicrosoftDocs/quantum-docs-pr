@@ -6,7 +6,7 @@
 uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections
 name: AmplitudeAmplificationFromPartialReflections
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Amplitude amplification by partial reflections.
 remarks: |-
   Amplitude amplification is a special case of oblivious amplitude amplification where there are no system qubits and the oblivious oracle is set to identity.

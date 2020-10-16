@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
 name: MeasurementOperators
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+namespace: microsoft.quantum.chemistry.jordanwigner.vqe
 summary: Computes all the measurement operators required to compute the expectation of a Jordan-Wigner term.
 syntax: 'function MeasurementOperators (nQubits : Int, indices : Int[], termType : Int) : Pauli[][]'
 input:

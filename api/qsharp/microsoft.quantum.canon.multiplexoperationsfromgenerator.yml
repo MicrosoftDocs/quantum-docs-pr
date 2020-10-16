@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
 name: MultiplexOperationsFromGenerator
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a multiply-controlled unitary operation $U$ that applies a
   unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.

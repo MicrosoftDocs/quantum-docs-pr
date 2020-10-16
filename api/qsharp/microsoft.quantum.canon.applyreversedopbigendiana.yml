@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyreversedopbigendiana
 name: ApplyReversedOpBigEndianA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: ApplyReversedOpBigEndianA has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopbea" instead.
 syntax: 'operation ApplyReversedOpBigEndianA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:

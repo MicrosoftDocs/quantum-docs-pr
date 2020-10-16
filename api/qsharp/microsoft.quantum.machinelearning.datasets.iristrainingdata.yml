@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.datasets.iristrainingdata
 name: IrisTrainingData
 type: operation
-namespace: Microsoft.Quantum.MachineLearning.Datasets
+namespace: microsoft.quantum.machinelearning.datasets
 syntax: 'operation IrisTrainingData () : Microsoft.Quantum.MachineLearning.LabeledSample[]'
 input:
   content: ()

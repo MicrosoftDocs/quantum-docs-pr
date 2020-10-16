@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.compareusingripplecarry
 name: CompareUsingRippleCarry
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   This operation tests if an integer represented by a register of qubits
   is greater than another integer, applying an XOR of the result onto an

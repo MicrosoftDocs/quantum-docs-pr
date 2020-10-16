@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.approximateqft
 name: ApproximateQFT
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
 remarks: |-
   AQFT requires Z-rotation gates of the form 2π/2ᵏ and Hadamard gates.

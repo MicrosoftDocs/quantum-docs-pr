@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.invert2ssi
 name: Invert2sSI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Inverts a given integer modulo 2's complement.
 syntax: 'operation Invert2sSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:

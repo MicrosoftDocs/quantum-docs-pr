@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.recovercss
 name: RecoverCSS
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: |-
   Performs a single round of error correction by a quantum code
   described by a `CSS` type.

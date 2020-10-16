@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.multiplysi
 name: MultiplySI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Multiply signed integer `xs` by signed integer `ys` and store
   the result in `result`, which must be zero initially.

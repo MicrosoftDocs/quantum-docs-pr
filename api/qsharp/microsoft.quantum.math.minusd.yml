@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.minusd
 name: MinusD
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the difference between two inputs.
 syntax: 'function MinusD (a : Double, b : Double) : Double'
 input:

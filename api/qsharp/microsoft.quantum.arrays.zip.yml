@@ -6,10 +6,8 @@
 uid: microsoft.quantum.arrays.zip
 name: Zip
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: |-
-  Given two arrays, returns a new array of pairs such that each pair
-  contains an element from each original array.
+namespace: microsoft.quantum.arrays
+summary: Zip has been deprecated. Please use @"microsoft.quantum.arrays.zipped" instead.
 examples: |-
   ```qsharp
   let left = [1, 3, 71];
@@ -51,4 +49,5 @@ typeParameters:
 seeAlso:
 - zip3
 - zip4
+- unzipped
 ...

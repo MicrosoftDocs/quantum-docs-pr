@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyoprepeatedlyoverca
 name: ApplyOpRepeatedlyOverCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Applies the same op over a qubit register multiple times.
 syntax: 'operation ApplyOpRepeatedlyOverCA (op : (Qubit[] => Unit is Adj + Ctl), targets : Int[][], register : Qubit[]) : Unit'
 input:

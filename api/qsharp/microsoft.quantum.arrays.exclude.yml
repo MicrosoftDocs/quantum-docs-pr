@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.exclude
 name: Exclude
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Returns an array containing the elements of another array,
   excluding elements at a given list of indices.

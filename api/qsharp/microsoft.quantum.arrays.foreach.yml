@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.foreach
 name: ForEach
 type: operation
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Given an array and an operation that is defined
   for the elements of the array, returns a new array that consists

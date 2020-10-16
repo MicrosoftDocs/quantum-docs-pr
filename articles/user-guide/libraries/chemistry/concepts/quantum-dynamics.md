@@ -1,8 +1,8 @@
 ---
 title: Quantum Dynamics 
 description: Learn the similarities and differences between quantum dynamics and classical dynamics. 
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics

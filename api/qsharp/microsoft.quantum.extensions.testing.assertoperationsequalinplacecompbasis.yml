@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
 name: AssertOperationsEqualInPlaceCompBasis
 type: operation
-namespace: Microsoft.Quantum.Extensions.Testing
+namespace: microsoft.quantum.extensions.testing
 summary: AssertOperationsEqualInPlaceCompBasis has been deprecated. Please use @"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis" instead.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int) : Unit'
 input:

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.preparation.quantumromqubitcount
 name: QuantumROMQubitCount
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: |-
   Returns the total number of qubits that must be allocated
   to the operation returned by `QuantumROM`.

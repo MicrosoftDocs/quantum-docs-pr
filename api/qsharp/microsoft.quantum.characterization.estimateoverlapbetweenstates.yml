@@ -6,7 +6,7 @@
 uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
 name: EstimateOverlapBetweenStates
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: |-
   Given two operations which each prepare copies of a state, estimates
   the squared overlap between the states prepared by each

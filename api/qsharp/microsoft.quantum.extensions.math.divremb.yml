@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.divremb
 name: DivRemB
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: DivRemB has been deprecated. Please use @"microsoft.quantum.math.divreml" instead.
 syntax: 'function DivRemB (dividend : BigInt, divisor : BigInt) : (BigInt, BigInt)'
 input:

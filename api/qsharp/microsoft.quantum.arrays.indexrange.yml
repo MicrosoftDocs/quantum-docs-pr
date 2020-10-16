@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.indexrange
 name: IndexRange
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Given an array, returns a range over the indices of that array, suitable
   for use in a for loop.

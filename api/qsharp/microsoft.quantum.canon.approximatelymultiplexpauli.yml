@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.approximatelymultiplexpauli
 name: ApproximatelyMultiplexPauli
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a Pauli rotation conditioned on an array of qubits, truncating
   small rotation angles according to a given tolerance.

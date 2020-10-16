@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifelsera
 name: ApplyIfElseRA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies one of two adjointable operations, depending on the value of a
   classical result.

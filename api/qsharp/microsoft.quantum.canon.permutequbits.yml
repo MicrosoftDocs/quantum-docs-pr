@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.permutequbits
 name: PermuteQubits
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Permutes qubits by using the SWAP operation.
 examples: |-
   Given ordering = [2, 1, 0] and register $\ket{\alpha_0} \ket{\alpha_1} \ket{\alpha_2}$, PermuteQubits

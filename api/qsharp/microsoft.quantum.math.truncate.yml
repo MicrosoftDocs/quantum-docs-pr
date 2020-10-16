@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.truncate
 name: Truncate
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Calculates the integral part of a number.
 remarks: See [System.Math.Truncate](https://docs.microsoft.com/dotnet/api/system.math.truncate) for more details.
 syntax: 'function Truncate (a : Double) : Int'

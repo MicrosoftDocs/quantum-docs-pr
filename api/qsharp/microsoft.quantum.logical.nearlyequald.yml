@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.nearlyequald
 name: NearlyEqualD
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: |-
   Returns true if and only if two inputs are nearly equal (that is, within
   a tolerance of 1e-12).

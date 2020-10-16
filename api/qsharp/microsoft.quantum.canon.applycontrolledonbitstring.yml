@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applycontrolledonbitstring
 name: ApplyControlledOnBitString
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a unitary operation on the target register, controlled on a a state specified by a given
   bit mask.

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.most
 name: Most
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Creates an array that is equal to an input array except that the last array
   element is dropped.

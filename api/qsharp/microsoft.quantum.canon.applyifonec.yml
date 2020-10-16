@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifonec
 name: ApplyIfOneC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a controllable operation conditioned on a classical result value being one.
 

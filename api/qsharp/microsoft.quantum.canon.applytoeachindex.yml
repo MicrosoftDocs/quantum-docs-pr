@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytoeachindex
 name: ApplyToEachIndex
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Applies a single-qubit operation to each indexed element in a register.
 syntax: "operation ApplyToEachIndex (singleElementOperation : ((Int, 'T) => Unit), register : 'T[]) : Unit"
 input:

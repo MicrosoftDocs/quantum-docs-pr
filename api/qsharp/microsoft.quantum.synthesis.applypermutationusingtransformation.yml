@@ -6,7 +6,7 @@
 uid: microsoft.quantum.synthesis.applypermutationusingtransformation
 name: ApplyPermutationUsingTransformation
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: |-
   Permutes the amplitudes in a quantum state given a permutation
   using transformation-based synthesis.

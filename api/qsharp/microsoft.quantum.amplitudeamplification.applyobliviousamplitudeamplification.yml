@@ -6,7 +6,7 @@
 uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
 name: ApplyObliviousAmplitudeAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Oblivious amplitude amplification by specifying partial reflections.
 remarks: |-
   Given a particular auxiliary start state $\ket{\text{start}}\_a$, a

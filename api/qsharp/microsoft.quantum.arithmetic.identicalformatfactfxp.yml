@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.identicalformatfactfxp
 name: IdenticalFormatFactFxP
 type: function
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Assert that all fixed-point numbers in the provided array
   have identical point positions and qubit numbers.

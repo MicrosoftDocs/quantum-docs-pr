@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.asserthighestbit
 name: AssertHighestBit
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: AssertHighestBit has been deprecated. Please use @"microsoft.quantum.arithmetic.assertmostsignificantbit" instead.
 syntax: 'operation AssertHighestBit (value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:

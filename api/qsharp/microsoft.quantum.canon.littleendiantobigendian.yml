@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.littleendiantobigendian
 name: LittleEndianToBigEndian
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: LittleEndianToBigEndian has been deprecated. Please use @"microsoft.quantum.arithmetic.littleendianasbigendian" instead.
 syntax: 'function LittleEndianToBigEndian (input : Microsoft.Quantum.Arithmetic.LittleEndian) : Microsoft.Quantum.Arithmetic.BigEndian'
 input:

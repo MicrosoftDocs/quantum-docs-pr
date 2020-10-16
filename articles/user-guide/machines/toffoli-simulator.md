@@ -2,7 +2,7 @@
 title: Quantum Toffoli simulator - Quantum Development Kit
 description: Learn about the Microsoft QDK Toffoli simulator, a special purpose quantum simulator that can be used with millions of qubits. 
 author: alan-geller
-ms.author: ageller@microsoft.com 
+ms.author: ageller 
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
@@ -33,7 +33,7 @@ Note that, unlike the `QuantumSimulator` class, the `ToffoliSimulator` class doe
 
 ### Invoking the Toffoli simulator from Python
 
-Use the [toffoli_simulate()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:
+Use the [toffoli_simulate()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:
 
 ```python
 qubit_result = myOperation.toffoli_simulate()

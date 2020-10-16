@@ -6,7 +6,7 @@
 uid: microsoft.quantum.characterization.continuousphaseestimationiteration
 name: ContinuousPhaseEstimationIteration
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: |-
   Performs a single iteration of an iterative (classically-controlled) phase
   estimation algorithm using arbitrary real powers of a unitary oracle.

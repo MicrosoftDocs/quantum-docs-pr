@@ -2,7 +2,7 @@
 title: Types in Q#
 description: Learn about the different types used in the Q# programming language.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
@@ -151,10 +151,10 @@ newtype Complex = (Double, Double);
 This statement creates a new type with two anonymous items of type `Double`.   
 
 Aside from anonymous items, user-defined types also support *named items* as of Q# version 0.7 or higher. 
-For example, you could name the items to `Re` for the double representing the real part of a complex number and `Im` for the imaginary part: 
+For example, you could name the items to `Real` for the double representing the real part of a complex number and `Imag` for the imaginary part: 
 
 ```qsharp
-newtype Complex = (Re : Double, Im : Double);
+newtype Complex = (Real : Double, Imag : Double);
 ```
 Naming one item in a user-defined type does not imply that all items need to be named - any combination of named and unnamed items is supported. 
 Furthermore, inner items may also be named.
@@ -168,18 +168,18 @@ Named items have the advantage that they can be accessed directly via the *acces
 
 ```qsharp
 function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
-    return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
+    return Complex(c1::Real + c2::Real, c1::Imag + c2::Imag);
 }
 ```
 
 In addition to providing short aliases for potentially complicated tuple types, a significant advantage of defining such types is that they can document the intent of a particular value.
-Returning to the example of `Complex`, one could have also defined 2D polar coordinates as a user-defined type:
+Returning to the example of `Complex`, one could have also defined a polar coordinate represenation as a user-defined type:
 
 ```qsharp
-newtype Polar = (Radius : Double, Phase : Double);
+newtype ComplexPolar = (Magnitude : Double, Argument : Double);
 ```
 
-Even though both `Complex` and `Polar` both have an underlying type `(Double, Double)`, the two types are wholly incompatible in Q#, minimizing the risk of accidentally calling a complex math function with polar coordinates and vice versa.
+Even though both `Complex` and `ComplexPolar` both have an underlying type `(Double, Double)`, the two types are wholly incompatible in Q#, minimizing the risk of accidentally calling a complex math function with polar coordinates and vice versa.
 
 #### Access anonymous items with the unwrap operator
 
@@ -274,13 +274,13 @@ These are called the *signature* of the callable.
 
 *Operations* have certain additional characteristics that are expressed as part of the operation type. 
 Such characteristics include information about which *functors* the operation supports.
-For example, if the execution of the operation relies on the state of other qubits, then it should support the `Controlled` functor; if the operation has an inverse, then it should support the `Adjoint` functor.
+For example, if the running of the operation relies on the state of other qubits, then it should support the `Controlled` functor; if the operation has an inverse, then it should support the `Adjoint` functor.
 
 > [!NOTE]
 > This article only discuss how functors alter the operation signature. For more details about functors and operations, see [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions). 
 
 To require support for the `Controlled` and/or `Adjoint` functor in an operation type, you need to add an annotation indicating the corresponding characteristics.
-The annotation `is Ctl` (for example, `(Qubit => Unit is Ctl)`) indicates that the operation is controllable. That is, its execution relies on the state of another qubit or qubits. 
+The annotation `is Ctl` (for example, `(Qubit => Unit is Ctl)`) indicates that the operation is controllable. That is, its run relies on the state of another qubit or qubits. 
 Similarly, the annotation `is Adj` indicates that the operation has an adjoint, that is, it can be "inverted" such that successively applying an operation and then its adjoint to a state leaves the state unchanged. 
 
 If you want to require that an operation of that type supports both the `Adjoint` and `Controlled` functor you can express this as `(Qubit => Unit is Adj + Ctl)`. 

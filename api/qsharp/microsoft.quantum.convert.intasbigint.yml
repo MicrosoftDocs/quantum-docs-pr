@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.intasbigint
 name: IntAsBigInt
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: Converts a given integer to an equivalent big integer.
 remarks: See [C# BigInteger constructor](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) for more details.
 syntax: 'function IntAsBigInt (a : Int) : BigInt'

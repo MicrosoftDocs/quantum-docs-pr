@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.copymostsignificantbit
 name: CopyMostSignificantBit
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Copies the most significant bit of a qubit register
   `from` representing an unsigned integer into the qubit `target`.

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.stacklength
 name: StackLength
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: StackLength has been deprecated.
 syntax: 'function StackLength (stack : Microsoft.Quantum.Canon.ResultStack) : Int'
 input:

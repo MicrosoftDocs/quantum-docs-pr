@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.convert.pauliarraytoint
 name: PauliArrayToInt
 type: function
-namespace: Microsoft.Quantum.Extensions.Convert
+namespace: microsoft.quantum.extensions.convert
 summary: PauliArrayToInt has been deprecated. Please use @"microsoft.quantum.convert.pauliarrayasint" instead.
 syntax: 'function PauliArrayToInt (paulis : Pauli[]) : Int'
 input:

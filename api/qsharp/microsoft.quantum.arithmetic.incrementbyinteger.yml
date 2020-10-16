@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.incrementbyinteger
 name: IncrementByInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Increments an unsigned quantum register by a classical integer,
   using phase rotations.

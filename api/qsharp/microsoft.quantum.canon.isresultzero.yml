@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.isresultzero
 name: IsResultZero
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Tests if a given Result value is equal to `Zero`.
 syntax: 'function IsResultZero (input : Result) : Bool'
 input:

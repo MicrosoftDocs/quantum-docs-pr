@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.stacknew
 name: StackNew
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: StackNew has been deprecated.
 syntax: 'function StackNew (size : Int) : Microsoft.Quantum.Canon.ResultStack'
 input:

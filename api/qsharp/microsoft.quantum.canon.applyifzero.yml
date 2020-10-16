@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyifzero
 name: ApplyIfZero
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies an operation conditioned on a classical result value being zero.
 

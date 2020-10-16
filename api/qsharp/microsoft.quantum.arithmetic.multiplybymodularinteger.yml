@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.multiplybymodularinteger
 name: MultiplyByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Performs modular multiplication by an integer constant on a qubit register.
 

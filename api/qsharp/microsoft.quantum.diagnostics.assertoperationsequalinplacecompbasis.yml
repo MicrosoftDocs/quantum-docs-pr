@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
 name: AssertOperationsEqualInPlaceCompBasis
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: |-
   Checks if the operation `givenU` is equal to the operation `expectedU` on
   the given input size  by checking the action of the operations only on

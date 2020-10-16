@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.mind
 name: MinD
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: MinD has been deprecated. Please use @"microsoft.quantum.math.mind" instead.
 syntax: 'function MinD (a : Double, b : Double) : Double'
 input:

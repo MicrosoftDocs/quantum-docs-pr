@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.not
 name: Not
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Returns the Boolean negation of a value.
 remarks: |-
   The following are equivalent:

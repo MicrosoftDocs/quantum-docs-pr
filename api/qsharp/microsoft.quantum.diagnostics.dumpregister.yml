@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.dumpregister
 name: DumpRegister
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Dumps the current target machine's status associated with the given qubits.
 remarks: |-
   This method allows you to dump the information associated with the state of the

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.applyreversedoplea
 name: ApplyReversedOpLEA
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Applies an operation that takes little-endian input to a register encoding
   an unsigned integer using big-endian format.

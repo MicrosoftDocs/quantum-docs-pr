@@ -6,7 +6,7 @@
 uid: microsoft.quantum.environment.getqubitsavailabletoborrow
 name: GetQubitsAvailableToBorrow
 type: operation
-namespace: Microsoft.Quantum.Environment
+namespace: microsoft.quantum.environment
 summary: |-
   Returns the number of qubits currently available to borrow.
   This includes unused qubits; that is, this includes the qubits

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle
 name: OptimizedQubitizationOracle
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: |-
   Returns T-count optimized Qubitization operation
   and the parameters necessary to run it.

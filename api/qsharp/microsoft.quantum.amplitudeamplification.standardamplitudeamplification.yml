@@ -6,7 +6,7 @@
 uid: microsoft.quantum.amplitudeamplification.standardamplitudeamplification
 name: StandardAmplitudeAmplification
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Standard Amplitude Amplification algorithm
 remarks: |-
   This is the standard amplitude amplification algorithm obtained by a choice of reflection phases computed by `AmpAmpPhasesStandard`

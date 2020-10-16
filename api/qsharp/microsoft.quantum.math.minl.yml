@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.minl
 name: MinL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns the smaller of two specified numbers.
 remarks: See [System.Numerics.BigInteger.Min](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.min) for more details.
 syntax: 'function MinL (a : BigInt, b : BigInt) : BigInt'

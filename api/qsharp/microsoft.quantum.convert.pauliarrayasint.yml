@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.pauliarrayasint
 name: PauliArrayAsInt
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: |-
   Encodes a multi-qubit Pauli operator represented as an array of
   single-qubit Pauli operators into an integer.

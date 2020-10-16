@@ -39,7 +39,7 @@ Within the folder for each subject area, each sample consists of a single folder
 
 ## How Samples are Structured
 
-Looking at the files that make up each folder, let's dive into the [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/chsh-game) sample.
+Looking at the files that make up each folder, let's dive into the [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/chsh-game) sample.
 
 | File              | Description                                                |
 |-------------------|------------------------------------------------------------|

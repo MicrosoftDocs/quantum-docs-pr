@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.stackpush
 name: StackPush
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: StackPush has been deprecated.
 syntax: 'function StackPush (stack : Microsoft.Quantum.Canon.ResultStack, datum : Result) : Microsoft.Quantum.Canon.ResultStack'
 input:

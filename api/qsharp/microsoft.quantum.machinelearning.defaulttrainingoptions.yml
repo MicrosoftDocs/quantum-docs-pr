@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.defaulttrainingoptions
 name: DefaultTrainingOptions
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Returns a default set of options for training classifiers.
 examples: |-
   To use the default options, but with additional measurements, use the

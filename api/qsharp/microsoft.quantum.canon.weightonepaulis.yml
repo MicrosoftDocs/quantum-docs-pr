@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.weightonepaulis
 name: WeightOnePaulis
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Returns an array of all weight-1 Pauli operators
   on a given number of qubits.

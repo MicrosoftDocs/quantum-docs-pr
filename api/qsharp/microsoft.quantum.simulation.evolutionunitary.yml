@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.evolutionunitary
 name: EvolutionUnitary
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Represents a unitary time-evolution operator.
 

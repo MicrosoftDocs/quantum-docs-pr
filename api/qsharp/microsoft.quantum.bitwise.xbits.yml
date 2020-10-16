@@ -6,7 +6,7 @@
 uid: microsoft.quantum.bitwise.xbits
 name: XBits
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: |-
   Returns an integer representing the X bits of an array
   of Pauli operators.

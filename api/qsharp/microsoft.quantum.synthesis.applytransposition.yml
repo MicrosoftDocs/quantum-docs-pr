@@ -6,7 +6,7 @@
 uid: microsoft.quantum.synthesis.applytransposition
 name: ApplyTransposition
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: |-
   This operation swaps the amplitude at index `a` with the
   amplitude at index `b` in the given state-vector of

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.bitwise.parity
 name: Parity
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Returns the bitwise PARITY of an integer (1 if its binary representation contains odd number of ones and 0 otherwise).
 examples: |-
   ```qsharp

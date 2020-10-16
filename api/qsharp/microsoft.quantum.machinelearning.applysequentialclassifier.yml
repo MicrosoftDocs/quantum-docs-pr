@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.applysequentialclassifier
 name: ApplySequentialClassifier
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Given the structure and parameterization of a sequential classifier,
   applies the classifier to a register of qubits.

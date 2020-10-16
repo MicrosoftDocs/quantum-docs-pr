@@ -6,7 +6,7 @@
 uid: microsoft.quantum.characterization.robustphaseestimation
 name: RobustPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: |-
   Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate,
   and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.

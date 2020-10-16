@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.partialrotationslayer
 name: PartialRotationsLayer
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Returns an array of single-qubit rotations along a given
   axis, parameterized by distinct model parameters.

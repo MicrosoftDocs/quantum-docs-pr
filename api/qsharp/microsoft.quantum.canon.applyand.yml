@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyand
 name: ApplyAnd
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Inverts a given target qubit if and only if both control qubits are in the 1 state,
   using measurement to perform the adjoint operation.

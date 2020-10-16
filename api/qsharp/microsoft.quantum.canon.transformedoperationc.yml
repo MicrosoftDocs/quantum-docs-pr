@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.transformedoperationc
 name: TransformedOperationC
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Given a function and an operation, returns a new operation whose
   input is transformed by the given function.

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.optimization.localunivariateminimum
 name: LocalUnivariateMinimum
 type: function
-namespace: Microsoft.Quantum.Optimization
+namespace: microsoft.quantum.optimization
 summary: |-
   Returns the local minimum for a univariate function over a bounded interval,
   using a golden interval search.

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
 name: PrepareSingleConfigurationalStateSingleSiteOccupation
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: |-
   Simple state preparation of trial state by occupying
   spin-orbitals

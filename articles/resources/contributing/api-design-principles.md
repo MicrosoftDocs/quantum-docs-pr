@@ -388,9 +388,9 @@ This article lists these principles, and gives examples to help guide how to app
         unphysical resources. Operations using this verb should
         always be safely removable without affecting the
         functionality of libraries and executable programs. Note
-        that unlike facts, assertions may in general depend on
+        that unlike facts, assertions may, in general, depend on
         external state, such as the state of a qubit register,
-        the execution environment or so forth. As dependency on
+        the run environment or so forth. As dependency on
         external state is a kind of side effect, assertions must
         be exposed as operations rather than functions.
 

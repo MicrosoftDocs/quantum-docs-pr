@@ -6,7 +6,7 @@
 uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
 name: MeasureStabilizerGenerators
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: Measures the given set of generators of a stabilizer group.
 remarks: |-
   This does not check if the given set of generators are commuting.

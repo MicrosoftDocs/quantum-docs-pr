@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.mini
 name: MinI
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: MinI has been deprecated. Please use @"microsoft.quantum.math.mini" instead.
 syntax: 'function MinI (a : Int, b : Int) : Int'
 input:

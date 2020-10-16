@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.sampled
 name: Sampled
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Samples a given array, using the given schedule.
 syntax: "function Sampled (schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, values : 'T[]) : 'T[]"
 input:

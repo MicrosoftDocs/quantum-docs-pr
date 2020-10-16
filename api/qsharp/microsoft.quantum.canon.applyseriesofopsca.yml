@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applyseriesofopsca
 name: ApplySeriesOfOpsCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Applies a list of ops and their targets sequentially on an array. (Adjoint + Controlled)
 syntax: "operation ApplySeriesOfOpsCA (listOfOps : ('T[] => Unit is Adj + Ctl)[], targets : Int[][], register : 'T[]) : Unit"
 input:

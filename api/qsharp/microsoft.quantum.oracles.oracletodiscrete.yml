@@ -6,7 +6,7 @@
 uid: microsoft.quantum.oracles.oracletodiscrete
 name: OracleToDiscrete
 type: function
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: |-
   Given an operation representing a "black-box" oracle, returns a discrete-time oracle
   which represents the "black-box" oracle repeated multiple times.

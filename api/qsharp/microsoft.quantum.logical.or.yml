@@ -6,7 +6,7 @@
 uid: microsoft.quantum.logical.or
 name: Or
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Returns the Boolean disjunction of two values.
 remarks: |-
   Unlike the `or` operator, this function does not short-circuit, such that

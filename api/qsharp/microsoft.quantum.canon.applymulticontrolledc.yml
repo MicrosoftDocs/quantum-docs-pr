@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applymulticontrolledc
 name: ApplyMultiControlledC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a multiply controlled version of a singly controlled
   operation.

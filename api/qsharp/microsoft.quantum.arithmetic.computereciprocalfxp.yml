@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.computereciprocalfxp
 name: ComputeReciprocalFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Computes $1/x$ for a fixed-point number $x$.
 syntax: 'operation ComputeReciprocalFxP (x : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:

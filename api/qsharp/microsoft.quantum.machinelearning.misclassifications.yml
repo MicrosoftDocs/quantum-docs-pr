@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.misclassifications
 name: Misclassifications
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Given a set of inferred labels and a set of correct labels, returns
   indices for where each set of labels differs.

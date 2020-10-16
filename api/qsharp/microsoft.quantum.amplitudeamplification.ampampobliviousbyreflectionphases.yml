@@ -6,7 +6,7 @@
 uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
 name: AmpAmpObliviousByReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: AmpAmpObliviousByReflectionPhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections" instead.
 syntax: 'function AmpAmpObliviousByReflectionPhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:

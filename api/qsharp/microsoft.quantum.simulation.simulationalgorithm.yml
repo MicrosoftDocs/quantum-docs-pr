@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.simulationalgorithm
 name: SimulationAlgorithm
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Represents a time-independent simulation algorithm.
 

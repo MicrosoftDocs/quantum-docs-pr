@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.andladder
 name: AndLadder
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Performs a controlled "AND ladder" on a register of target qubits.
 

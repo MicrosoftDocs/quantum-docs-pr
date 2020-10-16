@@ -6,7 +6,7 @@
 uid: microsoft.quantum.characterization.quantumphaseestimation
 name: QuantumPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: |-
   Performs the quantum phase estimation algorithm for a given oracle `U` and `targetState`,
   reading the phase into a big-endian quantum register.

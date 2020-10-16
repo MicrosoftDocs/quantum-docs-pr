@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.trainsequentialclassifier
 name: TrainSequentialClassifier
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Given the structure of a sequential classifier, trains the classifier
   on a given labeled training set.

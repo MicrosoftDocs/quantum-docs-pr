@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applywithinputtransformationa
 name: ApplyWithInputTransformationA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Given an operation that accepts some input, a function that
   returns an output compatible with that operation, and an input to that

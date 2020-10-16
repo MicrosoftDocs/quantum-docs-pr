@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.applymajorityinplace
 name: ApplyMajorityInPlace
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Applies the three-qubit majority operation in-place on a register of
   qubits.

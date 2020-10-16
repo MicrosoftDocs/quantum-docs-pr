@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.squarei
 name: SquareI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Computes the square of the integer `xs` into `result`,
   which must be zero initially.

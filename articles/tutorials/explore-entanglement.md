@@ -2,7 +2,7 @@
 title: Explore entanglement with Q#
 description: Learn how to write a quantum program in Q#. Develop a Bell State application using the Quantum Development Kit (QDK)
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
@@ -105,14 +105,14 @@ introduce qubit states, operations, and measurement.
 
 ### Initialize qubit using measurement
 
-In the first code below, we show you how to work with qubits in
+In the first code snippet below, we show you how to work with qubits in
 Q#.  We’ll introduce two operations, [`M`](xref:microsoft.quantum.intrinsic.m) and [`X`](xref:microsoft.quantum.intrinsic.x) that transform the state of a
 qubit. In this code snippet, an operation `SetQubitState` is defined that takes as a parameter a
 qubit and another parameter, `desired`, representing the state that we would
 like the qubit to be in.  The operation `SetQubitState` performs a measurement on the
 qubit using the operation `M`.  In Q#, a qubit measurement always returns either
 `Zero` or `One`.  If the measurement returns a value not equal to the desired
-value, `SetQubitState` “flips” the qubit; that is, it executes an `X` operation, which
+value, `SetQubitState` “flips” the qubit; that is, it runs an `X` operation, which
 changes the qubit state to a new state in which the probabilities of a
 measurement returning `Zero` and `One` are reversed. This way, `SetQubitState` always puts
 the target qubit in the desired state.
@@ -139,7 +139,7 @@ returning `Zero` 100% of the time or returning `One` 100% of the time.
 of a measurement of a qubit.
 
 The operation `SetQubitState` measures the qubit. If the qubit is in the state we
-want, `SetQubitState` leaves it alone; otherwise, by executing the `X` operation, we
+want, `SetQubitState` leaves it alone; otherwise, by running the `X` operation, we
 change the qubit state to the desired state.
 
 #### About Q# operations
@@ -150,9 +150,9 @@ contains calls to other quantum operations.
 The arguments to an operation are specified as a tuple, within parentheses.
 
 The return type of the operation is specified after a colon. In this case, the
-`SetQubitState` operation has no return, so it is marked as returning `Unit`. This is the
+`SetQubitState` operation has no return type, so it is marked as returning `Unit`. This is the
 Q# equivalent of `unit` in F#, which is roughly analogous to `void` in C#, and
-an empty tuple (`Tuple[()]`) in Python.
+an empty tuple in Python (`()`, represented by the type hint `Tuple[()]`).
 
 You have used two quantum operations in your first Q# operation:
 
@@ -180,7 +180,7 @@ input will return `Zero`, and all measurements of a qubit set with `One` as the
 parameter input will return `One`. Further on, we’ll add code to `TestBellState`
 to demonstrate superposition and entanglement.
 
-Add the following operation to the `Bell.qs` file, inside the namespace,
+Add the following operation to the `Program.qs` file, inside the namespace,
    after the end of the `SetQubitState` operation:
 
 ```qsharp
@@ -226,7 +226,7 @@ immutable variable. Operation arguments are always immutable.
 
 If you need a variable whose value can change, such as `numOnes` in the example,
 you can declare the variable with the `mutable` keyword. A mutable variable's
-value may be changed using a `setQubitState` statement.
+value may be changed using a `set` statement.
 
 In both cases, the type of a variable is inferred by the compiler. Q# doesn't
 require any type annotations for variables.
@@ -241,7 +241,7 @@ at the start, and releases those qubits at the end of the block.
 
 ## Run the code from the command prompt
 
-In order to run the code we need to specify the compiler *which* callable to run
+In order to run the code we need to tell the compiler *which* callable to run
 when we provide the `dotnet run` command. This is done with a simple change in
 the Q# file by adding a line with `@EntryPoint()` directly preceding the
 callable: the `TestBellState` operation in this case. The full code should be:
@@ -323,7 +323,7 @@ and `One` after measurement.
 
 ### `X` flips qubit state
 
-First we'll just try to flip the qubit (if the qubit is in `Zero` state will
+First we'll just try to flip the qubit (if the qubit is in `Zero` state it will
 flip to `One` and vice versa). This is accomplished by performing an `X`
 operation before we measure it in `TestBellState`:
 
@@ -394,8 +394,8 @@ quantum state.
 Now let’s look at how Q# expresses ways to entangle qubits.
 First, we set the first qubit to the initial state and then use the `H`
 operation to put it into superposition.  Then, before we measure the first
-qubit, we use a new operation (`CNOT`), which stands for Controlled-NOT.  The
-result of executing this operation on two qubits is to flip the second qubit if
+qubit, we use a new operation (`CNOT`), which stands for *Controlled-NOT*.  The
+result of running this operation on two qubits is to flip the second qubit if
 the first qubit is `One`.  Now, the two qubits are entangled.  Our statistics
 for the first qubit haven't changed (50-50 chance of a `Zero` or a `One` after
 measurement), but now when we measure the second qubit, it is __always__ the

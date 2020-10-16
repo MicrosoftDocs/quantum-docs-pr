@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
 name: EvaluateEvenPolynomialFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Evaluates an even polynomial in a fixed-point representation.
 syntax: 'operation EvaluateEvenPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:

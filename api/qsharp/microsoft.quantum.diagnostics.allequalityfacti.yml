@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.allequalityfacti
 name: AllEqualityFactI
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Asserts that two arrays of integer values are equal.
 syntax: 'function AllEqualityFactI (actual : Int[], expected : Int[], message : String) : Unit'
 input:

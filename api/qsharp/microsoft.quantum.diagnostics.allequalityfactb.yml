@@ -6,7 +6,7 @@
 uid: microsoft.quantum.diagnostics.allequalityfactb
 name: AllEqualityFactB
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Asserts that two arrays of boolean values are equal.
 syntax: 'function AllEqualityFactB (actual : Bool[], expected : Bool[], message : String) : Unit'
 input:

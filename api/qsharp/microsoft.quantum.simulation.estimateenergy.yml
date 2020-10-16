@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.estimateenergy
 name: EstimateEnergy
 type: operation
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Performs state preparation by applying a
   `statePrepUnitary` on an automatically allocated input state

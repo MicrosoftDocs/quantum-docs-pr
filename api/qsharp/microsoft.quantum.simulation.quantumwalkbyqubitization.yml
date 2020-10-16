@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.quantumwalkbyqubitization
 name: QuantumWalkByQubitization
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Converts a block-encoding reflection into a quantum walk.
 

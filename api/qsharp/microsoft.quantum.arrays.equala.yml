@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arrays.equala
 name: EqualA
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: |-
   Given two arrays of the same type and a predicate that is defined
   for pairs of elements of the arrays, checks whether the arrays are equal.

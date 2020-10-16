@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.restrictedtosubregisterc
 name: RestrictedToSubregisterC
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Restricts an operation to an array of indices of a register, i.e., a subregister.
   The modifier `C` indicates that the operation is controllable.

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
 name: AmplitudeAmplificationFromStatePreparation
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Amplitude amplification by oracles for partial reflections.
 remarks: |-
   This imposes stricter conditions on form of the start and target states than in `AmpAmpByReflectionPhases`.

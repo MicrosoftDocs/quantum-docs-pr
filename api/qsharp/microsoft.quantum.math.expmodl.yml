@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.expmodl
 name: ExpModL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: |-
   Returns an integer raised to a given power, with respect to a given
   modulus.

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.applyreversedopbea
 name: ApplyReversedOpBEA
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Applies an operation that takes big-endian input to a register encoding
   an unsigned integer using little-endian format.

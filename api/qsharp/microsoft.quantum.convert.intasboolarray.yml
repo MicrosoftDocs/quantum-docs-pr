@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.intasboolarray
 name: IntAsBoolArray
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: |-
   Produces a binary representation of a positive integer, using the
   little-endian representation for the returned array.

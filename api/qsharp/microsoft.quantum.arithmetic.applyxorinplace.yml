@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.applyxorinplace
 name: ApplyXorInPlace
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Applies a bitwise-XOR operation between a classical integer and an
   integer represented by a register of qubits.

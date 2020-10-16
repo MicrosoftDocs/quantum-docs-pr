@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.bitwise.zbits
 name: ZBits
 type: function
-namespace: Microsoft.Quantum.Extensions.Bitwise
+namespace: microsoft.quantum.extensions.bitwise
 summary: ZBits has been deprecated. Please use @"microsoft.quantum.bitwise.zbits" instead.
 syntax: 'function ZBits (paulies : Pauli[]) : Int'
 input:

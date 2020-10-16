@@ -6,7 +6,7 @@
 uid: microsoft.quantum.amplitudeamplification.rotationphases
 name: RotationPhases
 type: newtype
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Phases for a sequence of single-qubit rotations in amplitude amplification.
 remarks: |-
   The first parameter is an array of phases for reflections, expressed as a product of single-qubit rotations.

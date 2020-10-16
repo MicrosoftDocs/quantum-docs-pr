@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.assertmostsignificantbit
 name: AssertMostSignificantBit
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Asserts that the most significant qubit of a qubit register
   representing an unsigned integer is in a particular state.

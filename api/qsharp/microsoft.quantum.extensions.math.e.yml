@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.e
 name: E
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: E has been deprecated. Please use @"microsoft.quantum.math.e" instead.
 syntax: 'function E () : Double'
 input:

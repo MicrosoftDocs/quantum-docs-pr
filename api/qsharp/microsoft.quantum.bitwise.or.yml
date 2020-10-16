@@ -6,7 +6,7 @@
 uid: microsoft.quantum.bitwise.or
 name: Or
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: |-
   Returns the bitwise OR of two integers.
   This performs the same computation as the built-in `|||` operator.

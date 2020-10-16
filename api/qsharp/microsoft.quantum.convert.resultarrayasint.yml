@@ -6,7 +6,7 @@
 uid: microsoft.quantum.convert.resultarrayasint
 name: ResultArrayAsInt
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: Produces a positive integer from a string of Results in little endian format.
 syntax: 'function ResultArrayAsInt (results : Result[]) : Int'
 input:

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.greaterthan
 name: GreaterThan
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Applies a greater-than comparison between two integers encoded into
   qubit registers, flipping a target qubit based on the result of the

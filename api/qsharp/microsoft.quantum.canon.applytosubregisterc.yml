@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytosubregisterc
 name: ApplyToSubregisterC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies an operation to a subregister of a register, with qubits
   specified by an array of their indices.

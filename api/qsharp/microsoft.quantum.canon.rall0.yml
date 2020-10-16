@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.rall0
 name: RAll0
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Performs a phase shift operation.
 

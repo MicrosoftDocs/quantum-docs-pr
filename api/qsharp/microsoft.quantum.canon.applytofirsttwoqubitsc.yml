@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytofirsttwoqubitsc
 name: ApplyToFirstTwoQubitsC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies an operation to the first two qubits in the register.
   The modifier `C` indicates that the operation is controllable.

@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applytofirstthreequbitsca
 name: ApplyToFirstThreeQubitsCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies an operation to the first three qubits in the register.
   The modifier `CA` indicates that the operation is controllable and adjointable.

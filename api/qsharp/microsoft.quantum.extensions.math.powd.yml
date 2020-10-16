@@ -6,7 +6,7 @@
 uid: microsoft.quantum.extensions.math.powd
 name: PowD
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
+namespace: microsoft.quantum.extensions.math
 summary: PowD has been deprecated. Please use @"microsoft.quantum.math.powd" instead.
 syntax: 'function PowD (x : Double, y : Double) : Double'
 input:

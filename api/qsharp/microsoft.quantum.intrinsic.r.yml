@@ -6,7 +6,7 @@
 uid: microsoft.quantum.intrinsic.r
 name: R
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: |-
   Applies a rotation about the given Pauli axis.
 

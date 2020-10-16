@@ -6,7 +6,7 @@
 uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
 name: AdiabaticStateEnergyUnitary
 type: operation
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: |-
   Performs state preparation by applying a
   `statePrepUnitary` on the input state, followed by adiabatic state

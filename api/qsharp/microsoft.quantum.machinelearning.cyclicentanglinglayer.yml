@@ -6,7 +6,7 @@
 uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
 name: CyclicEntanglingLayer
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: |-
   Returns an array of singly controlled rotations along a given axis,
   arranged cyclically across a register of qubits, and parameterized by

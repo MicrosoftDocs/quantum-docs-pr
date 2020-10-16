@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.applycnotchainwithtarget
 name: ApplyCNOTChainWithTarget
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Computes the parity of an array of qubits into a target qubit.
 

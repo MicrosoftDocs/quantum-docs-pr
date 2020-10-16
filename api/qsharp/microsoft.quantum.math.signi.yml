@@ -6,7 +6,7 @@
 uid: microsoft.quantum.math.signi
 name: SignI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Returns an integer that indicates the sign of a number.
 remarks: See [System.Math.Sign](https://docs.microsoft.com/dotnet/api/system.math.sign) for more details.
 syntax: 'function SignI (a : Int) : Int'

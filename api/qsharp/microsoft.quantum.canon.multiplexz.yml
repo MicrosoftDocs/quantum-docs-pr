@@ -6,7 +6,7 @@
 uid: microsoft.quantum.canon.multiplexz
 name: MultiplexZ
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: |-
   Applies a Pauli Z rotation conditioned on an array of qubits.
 

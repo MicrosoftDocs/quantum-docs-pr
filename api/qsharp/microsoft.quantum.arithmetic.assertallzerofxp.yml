@@ -6,7 +6,7 @@
 uid: microsoft.quantum.arithmetic.assertallzerofxp
 name: AssertAllZeroFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: |-
   Helper function to assert that a quantum fixed-point number is
   initialized to zero, i.e., all qubits are in state $\ket{0}$.

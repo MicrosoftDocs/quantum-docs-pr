@@ -2,8 +2,8 @@
 title: '%estimate (magic command)'
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.estimate
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/16/2020
 ms.topic: article
 ---
 

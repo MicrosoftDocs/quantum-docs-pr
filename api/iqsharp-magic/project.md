@@ -1,9 +1,10 @@
 ---
 title: '%project (magic command)'
+description: Provides the ability to view or add Q# project references.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.project
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/16/2020
 ms.topic: article
 ---
 
@@ -37,7 +38,9 @@ associated .qs source files.
 If no argument is provided, the command simply returns the list of projects loaded in
 the current IQ# session.
 
-## Example
+## Examples for `%project`
+
+### Example 1
 
 Add a reference to the `C:\Projects\MyProject.csproj` Q# project into the current IQ# session:
 ```
@@ -46,7 +49,7 @@ Out[]: Loading project C:\Projects\MyProject.csproj and dependencies...
        <list of all loaded Q# project references>
 ```
 
-## Example
+### Example 2
 
 View the list of all Q# project references that have been loaded into the current IQ# session:
 ```

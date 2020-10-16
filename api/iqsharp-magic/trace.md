@@ -1,9 +1,10 @@
 ---
 title: '%trace (magic command)'
+description: Visualizes the execution path of the given operation.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.trace
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/16/2020
 ms.topic: article
 ---
 
@@ -37,7 +38,9 @@ or function name that has been defined either in the notebook or in a Q# file in
 - `--depth=<integer>` (default=1): The depth at which to render operations along
 the execution path.
 
-## Example
+## Examples for `%trace`
+
+### Example 1
 
 Visualize the execution path of a Q# operation defined as `operation MyOperation() : Result`:
 ```
@@ -45,7 +48,7 @@ In []: %trace MyOperation
 Out[]: <HTML visualization of the operation>
 ```
 
-## Example
+### Example 2
 
 Visualize the execution path of a Q# operation defined as `operation MyOperation(a : Int, b : Int) : Result`:
 ```
@@ -53,7 +56,7 @@ In []: %trace MyOperation a=5 b=10
 Out[]: <HTML visualization of the operation>
 ```
 
-## Example
+### Example 3
 
 Visualize operations at depth 2 on the execution path of a Q# operation defined
 as `operation MyOperation() : Result`:

@@ -1,9 +1,10 @@
 ---
 title: '%who (magic command)'
+description: Lists the Q# operations available in the current session.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.who
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/16/2020
 ms.topic: article
 ---
 
@@ -31,7 +32,9 @@ The list will include Q# operations and functions which have been defined intera
 within cells in the current notebook (after the cells have been executed),
 as well as any Q# operations and functions defined within .qs files in the current folder.
 
-## Example
+## Examples for `%who`
+
+### Example 1
 
 Display the list of Q# operations and functions available in the current session:
 ```

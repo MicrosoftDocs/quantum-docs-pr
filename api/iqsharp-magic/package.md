@@ -1,9 +1,10 @@
 ---
 title: '%package (magic command)'
+description: Provides the ability to load a NuGet package.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.package
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/16/2020
 ms.topic: article
 ---
 
@@ -37,7 +38,9 @@ If no version is specified:
 obtain the version of the package that matches the current IQ# version.
 - For other packages, IQ# will attempt to obtain the most recent version of the package.
 
-## Example
+## Examples for `%package`
+
+### Example 1
 
 Load the `Microsoft.Quantum.MachineLearning` package into the current IQ# session:
 ```
@@ -46,7 +49,7 @@ Out[]: Adding package Microsoft.Quantum.MachineLearning: done!
        <list of all loaded packages and versions>
 ```
 
-## Example
+### Example 2
 
 Load a specific version of the `Microsoft.Quantum.Katas` package into the current IQ# session:
 ```
@@ -55,7 +58,7 @@ Out[]: Adding package Microsoft.Quantum.Katas::0.11.2006.403: done!
        <list of all loaded packages and versions>
 ```
 
-## Example
+### Example 3
 
 View the list of all packages that have been loaded into the current IQ# session:
 ```

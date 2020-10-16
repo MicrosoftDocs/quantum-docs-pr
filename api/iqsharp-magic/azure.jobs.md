@@ -1,9 +1,10 @@
 ---
 title: '%azure.jobs (magic command)'
+description: Displays a list of jobs in the current Azure Quantum workspace.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.jobs
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/16/2020
 ms.topic: article
 ---
 
@@ -40,7 +41,9 @@ all recent jobs are displayed.
 
 - `NotConnected`: Not connected to any Azure Quantum workspace.
 
-## Example
+## Examples for `%azure.jobs`
+
+### Example 1
 
 Get the list of jobs:
 ```
@@ -48,7 +51,7 @@ In []: %azure.jobs
 Out[]: <detailed status of all recent jobs in the workspace>
 ```
 
-## Example
+### Example 2
 
 Get the list of jobs whose ID, name, or target contains "My job":
 ```

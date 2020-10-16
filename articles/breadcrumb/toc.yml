@@ -1,10 +1,13 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Quantum
+  tocHref: /azure/
+  topicHref: /quantum/index
   items:
-  - name: Microsoft Quantum
-    tocHref: /azure/
+  - name: Quantum 2
+    tocHref: /azure/azure-sql/
     topicHref: /quantum/index
-  - name: External Docs
-    tocHref: /azure/azure-sql/database/
-    topicHref: /quantum/index
+    items: 
+    - name: External link
+      tocHref: /azure/azure-sql/database/
+      topicHref: /quantum/index
+
+

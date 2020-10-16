@@ -2,12 +2,12 @@
   tocHref: /azure/
   topicHref: /quantum/index
   items:
-  - name: Quantum 2
+  - name: Overview
     tocHref: /azure/azure-sql/
-    topicHref: /quantum/index
+    topicHref: /quantum/overview/index
     items: 
     - name: External link
       tocHref: /azure/azure-sql/database/
-      topicHref: /quantum/index
+      topicHref: /quantum/overview/index
 
 

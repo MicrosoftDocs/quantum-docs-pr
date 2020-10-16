@@ -22,23 +22,25 @@ Q# programs can run on their own, without a driver in a host language like C#, F
 
 While you can build Q# applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for developing your Q# applications locally. For developing in the Cloud via the web browser, we recommend Visual Studio Codespaces. Developing in these environments leverages the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more. 
 
-### To configure VS Code:
+### To configure for VS Code:
 
 1. Download and install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).
 2. Install the [Microsoft QDK for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
-### To configure Visual Studio:
+### To configure for Visual Studio:
 
 1. Download and install [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 or greater, with the .NET Core cross-platform development workload enabled.
 2. Download and install the [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
-### To configure the QDK for another environment, enter the following at the command prompt:
+### To configure for another environment: 
+
+1. Enter the following at the command prompt
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
-### To configure Visual Studio Codespaces:
+### To configure for Visual Studio Codespaces:
 
 1. Create an [Azure account](https://azure.microsoft.com/free/).
 2. Create a Codespaces environment. Please follow the [quickstart guide](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). When creating the Codespace, we recommend to enter `microsoft/Quantum` in the "Git Repository" field to load QDK-specific settings.

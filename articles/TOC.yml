@@ -17,7 +17,7 @@
   - name: Create and manage workspaces
     items:
     - name: Use Azure portal
-      href: qdk/test.md 
+      href: https://docs.microsoft.com/azure/azure-sql/database?toc=/quantum/toc.json&bc=/quantum/breadcrumb/toc.json 
     - name: Use Azure CLI
       href: qdk/test.md 
     - name: Use REST

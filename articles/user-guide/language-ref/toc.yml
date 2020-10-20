@@ -151,6 +151,6 @@
   - name: Attributes
     items:
     - name: '@EntryPoint'
-      href: attributes/entrypoint-ref.md
+      href: microsoft.quantum.core.entrypoint
     - name: '@Test'
-      href: attributes/test-ref.md
+      href: microsoft.quantum.diagnostics.test

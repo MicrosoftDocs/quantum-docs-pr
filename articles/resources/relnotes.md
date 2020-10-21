@@ -24,7 +24,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 This release contains the following:
 
 - Improved IQ# debug user experience, to help developers better understand the inner workings of their quantum applications, and more easily identify logic errors. Created visualizations of a particular execution path of a quantum application, as well as the state at a point during the program execution.
-
+- Implemented a way for resource estimation to produce simultaneously achievable depth and width estimates.
 
 ## Version 0.12.20100504
 

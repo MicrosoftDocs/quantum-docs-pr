@@ -39,6 +39,9 @@ input:
     isPrimitive: true
     uid: Double
   - name: qubits
+    summary: |-
+      $n$-qubit control register that encodes number states $\ket{j}$ in
+      little-endian format.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -49,5 +52,5 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- approximatelyapplydiagonalunitary
+- microsoft.quantum.canon.approximatelyapplydiagonalunitary
 ...

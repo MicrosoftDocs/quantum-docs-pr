@@ -24,6 +24,6 @@ output:
       dummy variable and has no effect.
     uid: microsoft.quantum.oracles.stateoracle
 seeAlso:
-- microsoft.quantum.canon.deterministicstateoracle
-- microsoft.quantum.canon.stateoracle
+- microsoft.quantum.oracles.deterministicstateoracle
+- microsoft.quantum.oracles.stateoracle
 ...

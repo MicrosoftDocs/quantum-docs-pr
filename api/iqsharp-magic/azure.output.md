@@ -1,9 +1,10 @@
 ---
 title: '%azure.output (magic command)'
+description: Displays results for a job in the current Azure Quantum workspace.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.output
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/21/2020
 ms.topic: article
 ---
 
@@ -44,7 +45,9 @@ or [`%azure.execute`](https://docs.microsoft.com/qsharp/api/iqsharp-magic/azure.
 - `JobNotCompleted`: The specified Azure Quantum job has not yet completed.
 - `JobOutputDownloadFailed`: Failed to download results for the specified Azure Quantum job.
 
-## Example
+## Examples for `%azure.output`
+
+### Example 1
 
 Get results of a specific job:
 ```
@@ -52,7 +55,7 @@ In []: %azure.output JOB_ID
 Out[]: <detailed results of specified job>
 ```
 
-## Example
+### Example 2
 
 Get results of the most recently submitted job:
 ```

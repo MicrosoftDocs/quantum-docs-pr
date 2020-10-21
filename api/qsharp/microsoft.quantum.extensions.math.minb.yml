@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.math.minb
 name: MinB
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: MinB has been deprecated. Please use @"microsoft.quantum.math.minl" instead.
+summary: |+
+  > [!WARNING]
+  > MinB has been deprecated. Please use @"microsoft.quantum.math.minl" instead.
+  >
+  > Please use @"microsoft.quantum.math.minl".
+
 syntax: 'function MinB (a : BigInt, b : BigInt) : BigInt'
 input:
   content: '(a : BigInt, b : BigInt)'

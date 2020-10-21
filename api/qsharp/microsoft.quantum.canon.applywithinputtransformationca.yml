@@ -66,8 +66,8 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- applywithinputtransformation
-- applywithinputtransformationa
-- applywithinputtransformationc
-- transformedoperation
+- microsoft.quantum.canon.applywithinputtransformation
+- microsoft.quantum.canon.applywithinputtransformationa
+- microsoft.quantum.canon.applywithinputtransformationc
+- microsoft.quantum.canon.transformedoperation
 ...

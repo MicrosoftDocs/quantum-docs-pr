@@ -65,9 +65,9 @@ output:
       - isPrimitive: true
         uid: Unit
 seeAlso:
-- transformedoperationa
-- transformedoperationc
-- transformedoperationca
-- applywithinputtransformation
-- compose
+- microsoft.quantum.canon.transformedoperationa
+- microsoft.quantum.canon.transformedoperationc
+- microsoft.quantum.canon.transformedoperationca
+- microsoft.quantum.canon.applywithinputtransformation
+- microsoft.quantum.canon.composed
 ...

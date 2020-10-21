@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.math.round
 name: Round
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: Round has been deprecated. Please use @"microsoft.quantum.math.round" instead.
+summary: |+
+  > [!WARNING]
+  > Round has been deprecated. Please use @"microsoft.quantum.math.round" instead.
+  >
+  > Please use @"microsoft.quantum.math.round".
+
 syntax: 'function Round (a : Double) : Int'
 input:
   content: '(a : Double)'

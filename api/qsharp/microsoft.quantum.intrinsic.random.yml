@@ -7,7 +7,10 @@ uid: microsoft.quantum.intrinsic.random
 name: Random
 type: operation
 namespace: microsoft.quantum.intrinsic
-summary: Random has been deprecated. Please use @"microsoft.quantum.random.drawcategorical" instead.
+summary: |+
+  > [!WARNING]
+  > Random has been deprecated. Please use @"microsoft.quantum.random.drawcategorical" instead.
+
 syntax: 'operation Random (probs : Double[]) : Int'
 input:
   content: '(probs : Double[])'

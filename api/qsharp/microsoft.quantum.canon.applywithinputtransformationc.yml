@@ -64,8 +64,8 @@ output:
 functors:
 - Controlled
 seeAlso:
-- applywithinputtransformation
-- applywithinputtransformationa
-- applywithinputtransformationca
-- transformedoperation
+- microsoft.quantum.canon.applywithinputtransformation
+- microsoft.quantum.canon.applywithinputtransformationa
+- microsoft.quantum.canon.applywithinputtransformationca
+- microsoft.quantum.canon.transformedoperation
 ...

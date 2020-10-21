@@ -27,6 +27,7 @@ input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: constMultiplier
+    summary: An integer $a$ to be added to each basis state label.
     isPrimitive: true
     uid: Int
   - name: modulus

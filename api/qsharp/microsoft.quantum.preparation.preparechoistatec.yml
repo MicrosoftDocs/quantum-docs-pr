@@ -43,5 +43,5 @@ output:
 functors:
 - Controlled
 seeAlso:
-- preparechoistate
+- microsoft.quantum.preparation.preparechoistate
 ...

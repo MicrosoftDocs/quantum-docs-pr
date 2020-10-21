@@ -73,6 +73,6 @@ output:
     - Adjoint
     - Controlled
 seeAlso:
-- microsoft.quantum.canon.blockencoding
-- microsoft.quantum.canon.blockencodingreflection
+- microsoft.quantum.simulation.blockencoding
+- microsoft.quantum.simulation.blockencodingreflection
 ...

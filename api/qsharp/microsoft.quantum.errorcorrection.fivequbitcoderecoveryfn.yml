@@ -30,5 +30,5 @@ output:
       detected error.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
-- recoveryfn
+- microsoft.quantum.errorcorrection.recoveryfn
 ...

@@ -34,7 +34,7 @@ output:
   - isPrimitive: true
     uid: Unit
 seeAlso:
-- microsoft.quantum.canon.qecc
-- microsoft.quantum.canon.recoveryfn
-- microsoft.quantum.canon.logicalregister
+- microsoft.quantum.errorcorrection.qecc
+- microsoft.quantum.errorcorrection.recoveryfn
+- microsoft.quantum.errorcorrection.logicalregister
 ...

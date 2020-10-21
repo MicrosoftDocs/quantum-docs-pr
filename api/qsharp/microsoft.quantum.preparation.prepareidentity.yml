@@ -30,5 +30,5 @@ output:
   - isPrimitive: true
     uid: Unit
 seeAlso:
-- microsoft.quantum.canon.preparesinglequbitidentity
+- microsoft.quantum.preparation.preparesinglequbitidentity
 ...

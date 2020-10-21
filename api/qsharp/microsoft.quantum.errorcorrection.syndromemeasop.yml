@@ -29,6 +29,6 @@ remarks: |-
   ```
 syntax: newtype SyndromeMeasOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister => Microsoft.Quantum.ErrorCorrection.Syndrome);
 seeAlso:
-- logicalregister
-- syndrome
+- microsoft.quantum.errorcorrection.logicalregister
+- microsoft.quantum.errorcorrection.syndrome
 ...

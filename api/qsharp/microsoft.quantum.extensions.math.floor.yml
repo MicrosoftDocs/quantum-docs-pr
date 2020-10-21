@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.math.floor
 name: Floor
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: Floor has been deprecated. Please use @"microsoft.quantum.math.floor" instead.
+summary: |+
+  > [!WARNING]
+  > Floor has been deprecated. Please use @"microsoft.quantum.math.floor" instead.
+  >
+  > Please use @"microsoft.quantum.math.floor".
+
 syntax: 'function Floor (value : Double) : Int'
 input:
   content: '(value : Double)'

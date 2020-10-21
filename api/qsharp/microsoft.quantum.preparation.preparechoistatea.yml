@@ -43,5 +43,5 @@ output:
 functors:
 - Adjoint
 seeAlso:
-- preparechoistate
+- microsoft.quantum.preparation.preparechoistate
 ...

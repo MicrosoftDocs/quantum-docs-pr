@@ -71,9 +71,9 @@ output:
     - Adjoint
     - Controlled
 seeAlso:
-- transformedoperation
-- transformedoperationa
-- transformedoperationca
-- applywithinputtransformation
-- compose
+- microsoft.quantum.canon.transformedoperation
+- microsoft.quantum.canon.transformedoperationa
+- microsoft.quantum.canon.transformedoperationca
+- microsoft.quantum.canon.applywithinputtransformation
+- microsoft.quantum.canon.composed
 ...

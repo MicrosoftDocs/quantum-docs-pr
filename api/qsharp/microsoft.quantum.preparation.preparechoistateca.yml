@@ -45,5 +45,5 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- preparechoistate
+- microsoft.quantum.preparation.preparechoistate
 ...

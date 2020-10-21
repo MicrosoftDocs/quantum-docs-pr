@@ -43,8 +43,8 @@ output:
     - Adjoint
     - Controlled
 seeAlso:
-- applyreversedopleca
-- reversedople
-- reversedoplea
-- reversedoplec
+- microsoft.quantum.arithmetic.applyreversedopleca
+- microsoft.quantum.arithmetic.reversedople
+- microsoft.quantum.arithmetic.reversedoplea
+- microsoft.quantum.arithmetic.reversedoplec
 ...

@@ -49,5 +49,5 @@ output:
     functors:
     - Adjoint
 seeAlso:
-- restrictedtosubregister
+- microsoft.quantum.canon.restrictedtosubregister
 ...

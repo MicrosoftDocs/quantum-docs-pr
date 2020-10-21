@@ -29,6 +29,6 @@ output:
       isPrimitive: true
       uid: Qubit
 seeAlso:
-- fivequbitcodeencoder
-- logicalregister
+- microsoft.quantum.errorcorrection.fivequbitcodeencoder
+- microsoft.quantum.errorcorrection.logicalregister
 ...

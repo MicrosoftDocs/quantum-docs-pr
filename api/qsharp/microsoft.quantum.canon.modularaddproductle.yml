@@ -7,7 +7,12 @@ uid: microsoft.quantum.canon.modularaddproductle
 name: ModularAddProductLE
 type: operation
 namespace: microsoft.quantum.canon
-summary: ModularAddProductLE has been deprecated. Please use @"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger" instead.
+summary: |+
+  > [!WARNING]
+  > ModularAddProductLE has been deprecated. Please use @"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger" instead.
+  >
+  > Please use @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger".
+
 syntax: 'operation ModularAddProductLE (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian)'

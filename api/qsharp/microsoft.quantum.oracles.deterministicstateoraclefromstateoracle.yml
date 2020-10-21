@@ -31,6 +31,6 @@ output:
       longer explicitly separate, e.g.  $A\ket{0\psi}\_{as}$.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 seeAlso:
-- microsoft.quantum.canon.stateoracle
-- microsoft.quantum.canon.deterministicstateoracle
+- microsoft.quantum.oracles.stateoracle
+- microsoft.quantum.oracles.deterministicstateoracle
 ...

@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.math.signd
 name: SignD
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: SignD has been deprecated. Please use @"microsoft.quantum.math.signd" instead.
+summary: |+
+  > [!WARNING]
+  > SignD has been deprecated. Please use @"microsoft.quantum.math.signd" instead.
+  >
+  > Please use @"microsoft.quantum.math.signd".
+
 syntax: 'function SignD (a : Double) : Int'
 input:
   content: '(a : Double)'

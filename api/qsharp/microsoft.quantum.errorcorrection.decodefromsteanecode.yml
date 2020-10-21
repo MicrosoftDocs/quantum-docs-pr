@@ -38,7 +38,7 @@ output:
       isPrimitive: true
       uid: Qubit
 seeAlso:
-- steanecodeencoder
-- steanecodedecoder
-- logicalregister
+- microsoft.quantum.errorcorrection.steanecodeencoder
+- microsoft.quantum.errorcorrection.steanecodedecoder
+- microsoft.quantum.errorcorrection.logicalregister
 ...

@@ -32,5 +32,5 @@ output:
       logical register.
     uid: microsoft.quantum.errorcorrection.logicalregister
 seeAlso:
-- logicalregister
+- microsoft.quantum.errorcorrection.logicalregister
 ...

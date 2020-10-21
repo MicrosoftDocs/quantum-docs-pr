@@ -22,6 +22,9 @@ input:
   content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection)'
   types:
   - name: blockEncoding
+    summary: |-
+      A `BlockEncodingReflection` unitary $U$ to be converted into a Quantum
+      walk.
     uid: microsoft.quantum.simulation.blockencodingreflection
 output:
   content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
@@ -46,6 +49,6 @@ output:
     - Adjoint
     - Controlled
 seeAlso:
-- microsoft.quantum.canon.blockencoding
-- microsoft.quantum.canon.blockencodingreflection
+- microsoft.quantum.simulation.blockencoding
+- microsoft.quantum.simulation.blockencodingreflection
 ...

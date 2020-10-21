@@ -1,9 +1,10 @@
 ---
 title: '%lsopen (magic command)'
+description: Lists currently opened namespaces and their aliases.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.lsopen
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/21/2020
 ms.topic: article
 ---
 
@@ -27,7 +28,9 @@ This magic command lists any namespaces that have been made
 available using `open` statements, along with any aliases
 that may have been assigned to those namespaces.
 
-## Example
+## Examples for `%lsopen`
+
+### Example 1
 
 Print a list of all currently opened namespaces:
 ```

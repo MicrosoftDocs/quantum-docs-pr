@@ -18,5 +18,5 @@ remarks: |-
   <xref:microsoft.quantum.arrays.lookupfunction> function.
 syntax: newtype GeneratorSystem = (Int, (Int -> Microsoft.Quantum.Simulation.GeneratorIndex));
 seeAlso:
-- microsoft.quantum.canon.lookupfunction
+- microsoft.quantum.arrays.lookupfunction
 ...

@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.bitwise.parity
 name: Parity
 type: function
 namespace: microsoft.quantum.extensions.bitwise
-summary: Parity has been deprecated. Please use @"microsoft.quantum.bitwise.parity" instead.
+summary: |+
+  > [!WARNING]
+  > Parity has been deprecated. Please use @"microsoft.quantum.bitwise.parity" instead.
+  >
+  > Please use @"microsoft.quantum.bitwise.parity".
+
 syntax: 'function Parity (a : Int) : Int'
 input:
   content: '(a : Int)'

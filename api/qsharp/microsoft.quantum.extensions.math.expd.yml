@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.math.expd
 name: ExpD
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: ExpD has been deprecated. Please use @"microsoft.quantum.math.expd" instead.
+summary: |+
+  > [!WARNING]
+  > ExpD has been deprecated. Please use @"microsoft.quantum.math.expd" instead.
+  >
+  > Please use @"microsoft.quantum.math.expd".
+
 syntax: 'function ExpD (a : Double) : Double'
 input:
   content: '(a : Double)'

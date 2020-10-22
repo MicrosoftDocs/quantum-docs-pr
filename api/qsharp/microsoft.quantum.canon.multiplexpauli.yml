@@ -20,8 +20,7 @@ summary: |-
   \begin{align}
   U = \sum^{2^n - 1}_{j=0} \ket{j}\bra{j} \otimes e^{i P \theta_j}.
   \end{align}
-
-  ##
+  $$
 remarks: |-
   `coefficients` will be padded with elements $\theta_j = 0.0$ if
   fewer than $2^n$ are specified.

@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.math.sqrt
 name: Sqrt
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: Sqrt has been deprecated. Please use @"microsoft.quantum.math.sqrt" instead.
+summary: |+
+  > [!WARNING]
+  > Sqrt has been deprecated. Please use @"microsoft.quantum.math.sqrt" instead.
+  >
+  > Please use @"microsoft.quantum.math.sqrt".
+
 syntax: 'function Sqrt (d : Double) : Double'
 input:
   content: '(d : Double)'

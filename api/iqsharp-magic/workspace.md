@@ -1,9 +1,10 @@
 ---
 title: '%workspace (magic command)'
+description: Provides actions related to the current workspace.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.workspace
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/22/2020
 ms.topic: article
 ---
 
@@ -38,7 +39,9 @@ in the current folder.
 
 - `reload`: Causes the IQ# kernel to recompile all .qs files in the current folder.
 
-## Example
+## Examples for `%workspace`
+
+### Example 1
 
 Display the list of Q# operations and functions available in the current folder:
 ```
@@ -46,7 +49,7 @@ In []: %workspace
 Out[]: <list of Q# operation and function names>
 ```
 
-## Example
+### Example 2
 
 Recompile the .qs files in the current folder:
 ```

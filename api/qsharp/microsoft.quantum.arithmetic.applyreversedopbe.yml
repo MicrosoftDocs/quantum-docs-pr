@@ -33,7 +33,7 @@ output:
   - isPrimitive: true
     uid: Unit
 seeAlso:
-- applyreversedopbea
-- applyreversedopbec
-- applyreversedopbeca
+- microsoft.quantum.arithmetic.applyreversedopbea
+- microsoft.quantum.arithmetic.applyreversedopbec
+- microsoft.quantum.arithmetic.applyreversedopbeca
 ...

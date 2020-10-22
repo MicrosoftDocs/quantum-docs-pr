@@ -23,5 +23,5 @@ output:
       detected error.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
-- microsoft.quantum.canon.recoveryfn
+- microsoft.quantum.errorcorrection.recoveryfn
 ...

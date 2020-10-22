@@ -72,8 +72,8 @@ typeParameters:
     The type of the target on which each of the inner and outer operations
     act.
 seeAlso:
-- conjugatedbya
-- conjugatedbyc
-- conjugatedbyca
-- applywith
+- microsoft.quantum.canon.conjugatedbya
+- microsoft.quantum.canon.conjugatedbyc
+- microsoft.quantum.canon.conjugatedbyca
+- microsoft.quantum.canon.applywith
 ...

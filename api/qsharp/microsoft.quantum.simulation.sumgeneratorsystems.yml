@@ -24,5 +24,5 @@ output:
       input generator systems.
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
-- microsoft.quantum.canon.generatorsystem
+- microsoft.quantum.simulation.generatorsystem
 ...

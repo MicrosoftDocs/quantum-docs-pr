@@ -27,5 +27,5 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- applyquantumfouriertransformbe
+- microsoft.quantum.canon.applyquantumfouriertransformbe
 ...

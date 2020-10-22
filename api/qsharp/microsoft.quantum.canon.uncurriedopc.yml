@@ -61,5 +61,5 @@ typeParameters:
 - uid: "'U"
   summary: The type of the second argument of a curried function.
 seeAlso:
-- microsoft.quantum.canon.uncurryop
+- microsoft.quantum.canon.uncurriedop
 ...

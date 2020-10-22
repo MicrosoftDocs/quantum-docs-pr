@@ -33,5 +33,5 @@ output:
       `multiplier` larger.
     uid: microsoft.quantum.simulation.generatorindex
 seeAlso:
-- microsoft.quantum.canon.generatorindex
+- microsoft.quantum.simulation.generatorindex
 ...

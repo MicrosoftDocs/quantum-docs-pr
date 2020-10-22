@@ -13,6 +13,7 @@ input:
   content: '(a : Microsoft.Quantum.Math.ComplexPolar, power : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: a
+    summary: The number $a$ that is to be raised.
     uid: microsoft.quantum.math.complexpolar
   - name: power
     summary: The power $b$ to which $a$ should be raised.

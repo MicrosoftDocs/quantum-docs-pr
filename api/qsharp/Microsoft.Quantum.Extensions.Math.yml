@@ -7,291 +7,75 @@ uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
 - uid: microsoft.quantum.extensions.math.absb
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AbsB has been deprecated. Please use @"microsoft.quantum.math.absl" instead.
-    Please use @"microsoft.quantum.math.absl".
+  summary: AbsB has been deprecated. Please use @"microsoft.quantum.math.absl" instead.
 - uid: microsoft.quantum.extensions.math.absd
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AbsD has been deprecated. Please use @"microsoft.quantum.math.absd" instead.
-    Please use @"microsoft.quantum.math.absd".
+  summary: AbsD has been deprecated. Please use @"microsoft.quantum.math.absd" instead.
 - uid: microsoft.quantum.extensions.math.absi
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    AbsI has been deprecated. Please use @"microsoft.quantum.math.absi" instead.
-    Please use @"microsoft.quantum.math.absi".
+  summary: AbsI has been deprecated. Please use @"microsoft.quantum.math.absi" instead.
 - uid: microsoft.quantum.extensions.math.arccos
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ArcCos has been deprecated. Please use @"microsoft.quantum.math.arccos" instead.
-    Please use @"microsoft.quantum.math.arccos".
+  summary: ArcCos has been deprecated. Please use @"microsoft.quantum.math.arccos" instead.
 - uid: microsoft.quantum.extensions.math.arcsin
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ArcSin has been deprecated. Please use @"microsoft.quantum.math.arcsin" instead.
-    Please use @"microsoft.quantum.math.arcsin".
+  summary: ArcSin has been deprecated. Please use @"microsoft.quantum.math.arcsin" instead.
 - uid: microsoft.quantum.extensions.math.arctan
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ArcTan has been deprecated. Please use @"microsoft.quantum.math.arctan" instead.
-    Please use @"microsoft.quantum.math.arctan".
+  summary: ArcTan has been deprecated. Please use @"microsoft.quantum.math.arctan" instead.
 - uid: microsoft.quantum.extensions.math.arctan2
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ArcTan2 has been deprecated. Please use @"microsoft.quantum.math.arctan2" instead.
-    Please use @"microsoft.quantum.math.arctan2".
+  summary: ArcTan2 has been deprecated. Please use @"microsoft.quantum.math.arctan2" instead.
 - uid: microsoft.quantum.extensions.math.ceiling
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Ceiling has been deprecated. Please use @"microsoft.quantum.math.ceiling" instead.
-    Please use @"microsoft.quantum.math.ceiling".
+  summary: Ceiling has been deprecated. Please use @"microsoft.quantum.math.ceiling" instead.
 - uid: microsoft.quantum.extensions.math.cos
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Cos has been deprecated. Please use @"microsoft.quantum.math.cos" instead.
-    Please use @"microsoft.quantum.math.cos".
+  summary: Cos has been deprecated. Please use @"microsoft.quantum.math.cos" instead.
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Cosh has been deprecated. Please use @"microsoft.quantum.math.cosh" instead.
-    Please use @"microsoft.quantum.math.cosh".
+  summary: Cosh has been deprecated. Please use @"microsoft.quantum.math.cosh" instead.
 - uid: microsoft.quantum.extensions.math.divremb
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    DivRemB has been deprecated. Please use @"microsoft.quantum.math.divreml" instead.
-    Please use @"microsoft.quantum.math.divreml".
+  summary: DivRemB has been deprecated. Please use @"microsoft.quantum.math.divreml" instead.
 - uid: microsoft.quantum.extensions.math.e
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    E has been deprecated. Please use @"microsoft.quantum.math.e" instead.
-    Please use @"microsoft.quantum.math.e".
+  summary: E has been deprecated. Please use @"microsoft.quantum.math.e" instead.
 - uid: microsoft.quantum.extensions.math.expd
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ExpD has been deprecated. Please use @"microsoft.quantum.math.expd" instead.
-    Please use @"microsoft.quantum.math.expd".
+  summary: ExpD has been deprecated. Please use @"microsoft.quantum.math.expd" instead.
 - uid: microsoft.quantum.extensions.math.floor
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Floor has been deprecated. Please use @"microsoft.quantum.math.floor" instead.
-    Please use @"microsoft.quantum.math.floor".
+  summary: Floor has been deprecated. Please use @"microsoft.quantum.math.floor" instead.
 - uid: microsoft.quantum.extensions.math.ieeeremainder
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    IEEERemainder has been deprecated. Please use @"microsoft.quantum.math.ieeeremainder" instead.
-    Please use @"microsoft.quantum.math.ieeeremainder".
+  summary: IEEERemainder has been deprecated. Please use @"microsoft.quantum.math.ieeeremainder" instead.
 - uid: microsoft.quantum.extensions.math.log
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Log has been deprecated. Please use @"microsoft.quantum.math.log" instead.
-    Please use @"microsoft.quantum.math.log".
+  summary: Log has been deprecated. Please use @"microsoft.quantum.math.log" instead.
 - uid: microsoft.quantum.extensions.math.log10
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Log10 has been deprecated. Please use @"microsoft.quantum.math.log10" instead.
-    Please use @"microsoft.quantum.math.log10".
+  summary: Log10 has been deprecated. Please use @"microsoft.quantum.math.log10" instead.
 - uid: microsoft.quantum.extensions.math.maxb
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    MaxB has been deprecated. Please use @"microsoft.quantum.math.maxl" instead.
-    Please use @"microsoft.quantum.math.maxl".
+  summary: MaxB has been deprecated. Please use @"microsoft.quantum.math.maxl" instead.
 - uid: microsoft.quantum.extensions.math.maxd
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    MaxD has been deprecated. Please use @"microsoft.quantum.math.maxd" instead.
-    Please use @"microsoft.quantum.math.maxd".
+  summary: MaxD has been deprecated. Please use @"microsoft.quantum.math.maxd" instead.
 - uid: microsoft.quantum.extensions.math.maxi
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    MaxI has been deprecated. Please use @"microsoft.quantum.math.maxi" instead.
-    Please use @"microsoft.quantum.math.maxi".
+  summary: MaxI has been deprecated. Please use @"microsoft.quantum.math.maxi" instead.
 - uid: microsoft.quantum.extensions.math.minb
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    MinB has been deprecated. Please use @"microsoft.quantum.math.minl" instead.
-    Please use @"microsoft.quantum.math.minl".
+  summary: MinB has been deprecated. Please use @"microsoft.quantum.math.minl" instead.
 - uid: microsoft.quantum.extensions.math.mind
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    MinD has been deprecated. Please use @"microsoft.quantum.math.mind" instead.
-    Please use @"microsoft.quantum.math.mind".
+  summary: MinD has been deprecated. Please use @"microsoft.quantum.math.mind" instead.
 - uid: microsoft.quantum.extensions.math.mini
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    MinI has been deprecated. Please use @"microsoft.quantum.math.mini" instead.
-    Please use @"microsoft.quantum.math.mini".
+  summary: MinI has been deprecated. Please use @"microsoft.quantum.math.mini" instead.
 - uid: microsoft.quantum.extensions.math.modpowb
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    ModPowB has been deprecated. Please use @"microsoft.quantum.math.modpowl" instead.
-    Please use @"microsoft.quantum.math.modpowl".
+  summary: ModPowB has been deprecated. Please use @"microsoft.quantum.math.modpowl" instead.
 - uid: microsoft.quantum.extensions.math.pi
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    PI has been deprecated. Please use @"microsoft.quantum.math.pi" instead.
-    Please use @"microsoft.quantum.math.pi".
+  summary: PI has been deprecated. Please use @"microsoft.quantum.math.pi" instead.
 - uid: microsoft.quantum.extensions.math.powd
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    PowD has been deprecated. Please use @"microsoft.quantum.math.powd" instead.
-    Please use @"microsoft.quantum.math.powd".
+  summary: PowD has been deprecated. Please use @"microsoft.quantum.math.powd" instead.
 - uid: microsoft.quantum.extensions.math.round
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Round has been deprecated. Please use @"microsoft.quantum.math.round" instead.
-    Please use @"microsoft.quantum.math.round".
+  summary: Round has been deprecated. Please use @"microsoft.quantum.math.round" instead.
 - uid: microsoft.quantum.extensions.math.signb
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    SignB has been deprecated. Please use @"microsoft.quantum.math.signl" instead.
-    Please use @"microsoft.quantum.math.signl".
+  summary: SignB has been deprecated. Please use @"microsoft.quantum.math.signl" instead.
 - uid: microsoft.quantum.extensions.math.signd
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    SignD has been deprecated. Please use @"microsoft.quantum.math.signd" instead.
-    Please use @"microsoft.quantum.math.signd".
+  summary: SignD has been deprecated. Please use @"microsoft.quantum.math.signd" instead.
 - uid: microsoft.quantum.extensions.math.signi
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    SignI has been deprecated. Please use @"microsoft.quantum.math.signi" instead.
-    Please use @"microsoft.quantum.math.signi".
+  summary: SignI has been deprecated. Please use @"microsoft.quantum.math.signi" instead.
 - uid: microsoft.quantum.extensions.math.sin
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Sin has been deprecated. Please use @"microsoft.quantum.math.sin" instead.
-    Please use @"microsoft.quantum.math.sin".
+  summary: Sin has been deprecated. Please use @"microsoft.quantum.math.sin" instead.
 - uid: microsoft.quantum.extensions.math.sinh
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Sinh has been deprecated. Please use @"microsoft.quantum.math.sinh" instead.
-    Please use @"microsoft.quantum.math.sinh".
+  summary: Sinh has been deprecated. Please use @"microsoft.quantum.math.sinh" instead.
 - uid: microsoft.quantum.extensions.math.sqrt
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Sqrt has been deprecated. Please use @"microsoft.quantum.math.sqrt" instead.
-    Please use @"microsoft.quantum.math.sqrt".
+  summary: Sqrt has been deprecated. Please use @"microsoft.quantum.math.sqrt" instead.
 - uid: microsoft.quantum.extensions.math.tan
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Tan has been deprecated. Please use @"microsoft.quantum.math.tan" instead.
-    Please use @"microsoft.quantum.math.tan".
+  summary: Tan has been deprecated. Please use @"microsoft.quantum.math.tan" instead.
 - uid: microsoft.quantum.extensions.math.tanh
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Tanh has been deprecated. Please use @"microsoft.quantum.math.tanh" instead.
-    Please use @"microsoft.quantum.math.tanh".
+  summary: Tanh has been deprecated. Please use @"microsoft.quantum.math.tanh" instead.
 - uid: microsoft.quantum.extensions.math.truncate
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    Truncate has been deprecated. Please use @"microsoft.quantum.math.truncate" instead.
-    Please use @"microsoft.quantum.math.truncate".
+  summary: Truncate has been deprecated. Please use @"microsoft.quantum.math.truncate" instead.
 ...

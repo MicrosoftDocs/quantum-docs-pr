@@ -63,7 +63,7 @@ output:
   - isPrimitive: true
     uid: Unit
 seeAlso:
-- preparechoistatea
-- preparechoistatec
-- preparechoistateca
+- microsoft.quantum.preparation.preparechoistatea
+- microsoft.quantum.preparation.preparechoistatec
+- microsoft.quantum.preparation.preparechoistateca
 ...

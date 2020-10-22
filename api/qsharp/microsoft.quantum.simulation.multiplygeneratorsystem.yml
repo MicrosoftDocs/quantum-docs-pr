@@ -27,5 +27,5 @@ output:
       `multiplier` larger.
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
-- microsoft.quantum.canon.generatorsystem
+- microsoft.quantum.simulation.generatorsystem
 ...

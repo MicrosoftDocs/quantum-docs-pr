@@ -28,6 +28,7 @@ input:
   content: '(permuation : Int[])'
   types:
   - name: permuation
+    summary: An array that may or may not represent a permutation.
     isArray: true
     isPrimitive: true
     uid: Int

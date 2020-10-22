@@ -63,6 +63,6 @@ output:
       encodes $H$, and satisfies $U'^{-1} = U$.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
-- microsoft.quantum.canon.blockencoding
-- microsoft.quantum.canon.blockencodingreflection
+- microsoft.quantum.simulation.blockencoding
+- microsoft.quantum.simulation.blockencodingreflection
 ...

@@ -56,5 +56,5 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- approximatelymultiplexz
+- microsoft.quantum.canon.approximatelymultiplexz
 ...

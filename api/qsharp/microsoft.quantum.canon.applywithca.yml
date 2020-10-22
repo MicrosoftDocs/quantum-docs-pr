@@ -68,7 +68,7 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- applywith
-- applywitha
-- applywithc
+- microsoft.quantum.canon.applywith
+- microsoft.quantum.canon.applywitha
+- microsoft.quantum.canon.applywithc
 ...

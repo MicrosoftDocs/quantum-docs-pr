@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.math.truncate
 name: Truncate
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: Truncate has been deprecated. Please use @"microsoft.quantum.math.truncate" instead.
+summary: |+
+  > [!WARNING]
+  > Truncate has been deprecated. Please use @"microsoft.quantum.math.truncate" instead.
+  >
+  > Please use @"microsoft.quantum.math.truncate".
+
 syntax: 'function Truncate (a : Double) : Int'
 input:
   content: '(a : Double)'

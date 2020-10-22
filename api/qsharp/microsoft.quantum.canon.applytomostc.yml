@@ -31,6 +31,7 @@ input:
     functors:
     - Controlled
   - name: targets
+    summary: An array of targets, of which all but the last will be applied to `op`.
     isArray: true
     uid: "'T"
     isLocal: true

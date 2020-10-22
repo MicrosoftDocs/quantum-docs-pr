@@ -1949,4 +1949,9 @@
     uid: microsoft.quantum.synthesis.applyxcontrolledontruthtable
   - name: ApplyXControlledOnTruthTableWithCleanTarget
     uid: microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
+- uid: microsoft.quantum.targeting
+  name: Microsoft.Quantum.Targeting
+  items:
+  - name: RequiresCapability
+    uid: microsoft.quantum.targeting.requirescapability
 ...

@@ -43,8 +43,8 @@ output:
     - Adjoint
     - Controlled
 seeAlso:
-- applyreversedopbeca
-- reversedopbe
-- reversedopbea
-- reversedopbec
+- microsoft.quantum.arithmetic.applyreversedopbeca
+- microsoft.quantum.arithmetic.reversedopbe
+- microsoft.quantum.arithmetic.reversedopbea
+- microsoft.quantum.arithmetic.reversedopbec
 ...

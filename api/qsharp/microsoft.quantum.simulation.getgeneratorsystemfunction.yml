@@ -28,6 +28,6 @@ output:
       types:
       - uid: microsoft.quantum.simulation.generatorindex
 seeAlso:
-- microsoft.quantum.canon.generatorindex
-- microsoft.quantum.canon.generatorsystem
+- microsoft.quantum.simulation.generatorindex
+- microsoft.quantum.simulation.generatorsystem
 ...

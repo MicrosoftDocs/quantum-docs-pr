@@ -37,7 +37,7 @@ output:
 functors:
 - Controlled
 seeAlso:
-- applyreversedopbe
-- applyreversedopbea
-- applyreversedopbeca
+- microsoft.quantum.arithmetic.applyreversedopbe
+- microsoft.quantum.arithmetic.applyreversedopbea
+- microsoft.quantum.arithmetic.applyreversedopbeca
 ...

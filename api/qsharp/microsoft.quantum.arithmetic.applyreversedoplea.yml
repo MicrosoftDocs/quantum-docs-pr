@@ -37,7 +37,7 @@ output:
 functors:
 - Adjoint
 seeAlso:
-- applyreversedople
-- applyreversedoplec
-- applyreversedopleca
+- microsoft.quantum.arithmetic.applyreversedople
+- microsoft.quantum.arithmetic.applyreversedoplec
+- microsoft.quantum.arithmetic.applyreversedopleca
 ...

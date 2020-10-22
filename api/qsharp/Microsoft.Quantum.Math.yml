@@ -51,17 +51,9 @@ functions:
     Returns the phase of a complex number of type
     `ComplexPolar`.
 - uid: microsoft.quantum.math.bitsizei
-  summary: |-
-    For a non-negative integer `a`, returns the number of bits required to represent `a`.
-
-    That is, returns the smallest $n$ such
-    that $a < 2^n$.
+  summary: For a non-negative integer `a`, returns the number of bits required to represent `a`.
 - uid: microsoft.quantum.math.bitsizel
-  summary: |-
-    For a non-negative integer `a`, returns the number of bits required to represent `a`.
-
-    That is, returns the smallest $n$ such
-    that $a < 2^n$.
+  summary: For a non-negative integer `a`, returns the number of bits required to represent `a`.
 - uid: microsoft.quantum.math.ceiling
   summary: Returns the smallest integer greater than or equal to the specified number.
 - uid: microsoft.quantum.math.complexascomplexpolar
@@ -203,17 +195,9 @@ functions:
 - uid: microsoft.quantum.math.plusl
   summary: Returns the sum of two inputs.
 - uid: microsoft.quantum.math.pnorm
-  summary: |-
-    Returns the `L(p)` norm of a vector of `Double`s.
-
-    That is, given an array $x$ of type `Double[]`, this returns the $p$-norm
-    $\|x\|\_p= (\sum_{j}|x_j|^{p})^{1/p}$.
+  summary: Returns the `L(p)` norm of a vector of `Double`s.
 - uid: microsoft.quantum.math.pnormalized
-  summary: |-
-    Normalizes a vector of `Double`s in the `L(p)` norm.
-
-    That is, given an array $x$ of type `Double[]`, this returns an array where
-    all elements are divided by the $p$-norm $\|x\|_p$.
+  summary: Normalizes a vector of `Double`s in the `L(p)` norm.
 - uid: microsoft.quantum.math.powc
   summary: Returns a number raised to a given power.
 - uid: microsoft.quantum.math.powcp
@@ -269,10 +253,7 @@ newtypes:
     Represents a complex number by its real and imaginary components.
     The first element of the tuple is the real component, the second one - the imaginary component.
 - uid: microsoft.quantum.math.complexpolar
-  summary: |-
-    Represents a complex number in polar form.
-
-    The polar representation of a complex number is $c=r e^{i t}$.
+  summary: Represents a complex number in polar form.
 - uid: microsoft.quantum.math.fraction
   summary: |-
     Represents a rational number of the form `p/q`. Integer `p` is
@@ -283,31 +264,11 @@ summary: |2-
    This namespace contains classical mathematical functions and data types.
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    RandomInt has been deprecated. Please use @"microsoft.quantum.random.drawrandomint" instead.
+  summary: RandomInt has been deprecated. Please use @"microsoft.quantum.random.drawrandomint" instead.
 - uid: microsoft.quantum.math.randomintpow2
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    RandomIntPow2 has been deprecated. Please use @"microsoft.quantum.random.drawrandomint" instead.
+  summary: RandomIntPow2 has been deprecated. Please use @"microsoft.quantum.random.drawrandomint" instead.
 - uid: microsoft.quantum.math.randomreal
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    RandomReal has been deprecated. Please use @"microsoft.quantum.random.drawrandomdouble" instead.
+  summary: RandomReal has been deprecated. Please use @"microsoft.quantum.random.drawrandomdouble" instead.
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: |2-
-
-    > [!WARNING]
-    > Deprecated
-
-    RandomSingleQubitPauli has been deprecated. Please use @"microsoft.quantum.random.drawrandompauli" instead.
+  summary: RandomSingleQubitPauli has been deprecated. Please use @"microsoft.quantum.random.drawrandompauli" instead.
 ...

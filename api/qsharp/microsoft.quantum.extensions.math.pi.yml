@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.math.pi
 name: PI
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: PI has been deprecated. Please use @"microsoft.quantum.math.pi" instead.
+summary: |+
+  > [!WARNING]
+  > PI has been deprecated. Please use @"microsoft.quantum.math.pi" instead.
+  >
+  > Please use @"microsoft.quantum.math.pi".
+
 syntax: 'function PI () : Double'
 input:
   content: ()

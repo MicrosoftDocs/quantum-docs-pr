@@ -29,6 +29,6 @@ output:
       isPrimitive: true
       uid: Qubit
 seeAlso:
-- logicalregister
-- encodeintobitflipcode
+- microsoft.quantum.errorcorrection.logicalregister
+- microsoft.quantum.errorcorrection.encodeintobitflipcode
 ...

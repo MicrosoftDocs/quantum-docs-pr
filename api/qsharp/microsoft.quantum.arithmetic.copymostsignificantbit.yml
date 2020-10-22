@@ -33,5 +33,5 @@ output:
 functors:
 - Adjoint
 seeAlso:
-- littleendian
+- microsoft.quantum.arithmetic.littleendian
 ...

@@ -7,7 +7,12 @@ uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
 name: AmpAmpRUSByOracle
 type: operation
 namespace: microsoft.quantum.amplitudeamplification
-summary: AmpAmpRUSByOracle has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.applyfixedpointamplification" instead.
+summary: |+
+  > [!WARNING]
+  > AmpAmpRUSByOracle has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.applyfixedpointamplification" instead.
+  >
+  > Please use @"microsoft.quantum.amplitudeamplification.applyfixedpointamplification".
+
 syntax: 'operation AmpAmpRUSByOracle (statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[]) : Unit'
 input:
   content: '(statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[])'

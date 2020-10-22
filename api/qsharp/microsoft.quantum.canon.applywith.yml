@@ -62,7 +62,7 @@ typeParameters:
 - uid: "'T"
   summary: The target on which each of the inner and outer operations act.
 seeAlso:
-- applywitha
-- applywithc
-- applywithca
+- microsoft.quantum.canon.applywitha
+- microsoft.quantum.canon.applywithc
+- microsoft.quantum.canon.applywithca
 ...

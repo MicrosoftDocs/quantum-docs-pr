@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.convert.tostringi
 name: ToStringI
 type: function
 namespace: microsoft.quantum.extensions.convert
-summary: ToStringI has been deprecated. Please use @"microsoft.quantum.convert.intasstring" instead.
+summary: |+
+  > [!WARNING]
+  > ToStringI has been deprecated. Please use @"microsoft.quantum.convert.intasstring" instead.
+  >
+  > Please use @"microsoft.quantum.convert.intasstring".
+
 syntax: 'function ToStringI (a : Int) : String'
 input:
   content: '(a : Int)'

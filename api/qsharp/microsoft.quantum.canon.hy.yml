@@ -37,4 +37,6 @@ output:
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.intrinsic.h
 ...

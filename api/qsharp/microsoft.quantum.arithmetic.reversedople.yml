@@ -37,8 +37,8 @@ output:
       - isPrimitive: true
         uid: Unit
 seeAlso:
-- applyreversedople
-- reversedoplea
-- reversedoplec
-- reversedopleca
+- microsoft.quantum.arithmetic.applyreversedople
+- microsoft.quantum.arithmetic.reversedoplea
+- microsoft.quantum.arithmetic.reversedoplec
+- microsoft.quantum.arithmetic.reversedopleca
 ...

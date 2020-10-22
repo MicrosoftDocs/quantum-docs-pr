@@ -66,7 +66,7 @@ typeParameters:
 functors:
 - Adjoint
 seeAlso:
-- applywith
-- applywithc
-- applywithca
+- microsoft.quantum.canon.applywith
+- microsoft.quantum.canon.applywithc
+- microsoft.quantum.canon.applywithca
 ...

@@ -7,7 +7,10 @@ uid: microsoft.quantum.math.randomintpow2
 name: RandomIntPow2
 type: operation
 namespace: microsoft.quantum.math
-summary: RandomIntPow2 has been deprecated. Please use @"microsoft.quantum.random.drawrandomint" instead.
+summary: |+
+  > [!WARNING]
+  > RandomIntPow2 has been deprecated. Please use @"microsoft.quantum.random.drawrandomint" instead.
+
 syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
 input:
   content: '(maxBits : Int)'

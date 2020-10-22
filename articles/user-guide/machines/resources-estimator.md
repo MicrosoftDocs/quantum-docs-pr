@@ -123,7 +123,7 @@ The resources estimator tracks the following metrics:
 |__Measure__    |The run count of any measurements.  |
 |__R__    |The run count of any single-qubit rotations, excluding `T`, Clifford and Pauli operations.  |
 |__T__    |The run count of `T` operations and their conjugates, including the `T` operations, T_x = H.T.H, and T_y = Hy.T.Hy.  |
-|__Depth__|Depth of the quantum circuit run by the Q# operation (see [below](#depth-width-and-qubitcount)). By default, the depth metric only counts `T` gates. For more details, see [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Depth__|Depth of the quantum circuit run by the Q# operation (see [below](#depth,-width,-and-qubitcount)). By default, the depth metric only counts `T` gates. For more details, see [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
 |__Width__|Width of the quantum circuit run by the Q# operation (see below). By default, the depth metric only counts `T` gates. For more details, see [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
 |__QubitCount__    |The lower bound for the maximum number of qubits allocated during the run of the Q# operation. This metric might not be compatible with __Depth__ (see below).  |
 |__BorrowedWidth__    |The maximum number of qubits borrowed inside the Q# operation.  |

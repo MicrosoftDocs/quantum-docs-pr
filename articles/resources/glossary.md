@@ -33,7 +33,7 @@ An [operation](xref:microsoft.quantum.glossary#operation) or [function](xref:mic
 
 ## Clifford group
 
-The set of operations that occupy the octants of the [Bloch sphere](xref:microsoft.quantum.glossary#bloch-sphere) and effect permutations of the [Pauli operators](xref:microsoft.quantum.glossary#pauli-operators). These include the operations [$X$](xref:microsoft.quantum.intrinsic.x), [$Y$](xref:microsoft.quantum.intrinsic.y), [$Z$](xref:microsoft.quantum.intrinsic.z), [$H$](xref:microsoft.quantum.intrinsic.h) and [$S$](xref:microsoft.quantum.intrinsic.s).
+The set of operations that occupy the octants of the [Bloch sphere](xref:microsoft.quantum.glossary#bloch-sphere) and effect permutations of the [Pauli operators](xref:microsoft.quantum.glossary#pauli-operators). These include the operations [$X$](xref:Microsoft.Quantum.Intrinsic.X), [$Y$](xref:Microsoft.Quantum.Intrinsic.Y), [$Z$](xref:Microsoft.Quantum.Intrinsic.Z), [$H$](xref:Microsoft.Quantum.Intrinsic.H) and [$S$](xref:Microsoft.Quantum.Intrinsic.S).
 
 ## Controlled
 
@@ -76,7 +76,7 @@ When two [states](xref:microsoft.quantum.glossary#quantum-state) are identical u
 
 ## Hadamard
 
-The Hadamard operation (also referred to as the Hadamard gate or transform) acts on a single [qubit](xref:microsoft.quantum.glossary#qubit) and puts it in an even [superposition](xref:microsoft.quantum.glossary#superposition) of $\ket{0}$ or $\ket{1}$ if the qubit is initially in the $\ket{0}$ state. In Q#, this operation is applied by the pre-defined [`H`](xref:microsoft.quantum.intrinsic.h) operation.
+The Hadamard operation (also referred to as the Hadamard gate or transform) acts on a single [qubit](xref:microsoft.quantum.glossary#qubit) and puts it in an even [superposition](xref:microsoft.quantum.glossary#superposition) of $\ket{0}$ or $\ket{1}$ if the qubit is initially in the $\ket{0}$ state. In Q#, this operation is applied by the pre-defined [`H`](xref:Microsoft.Quantum.Intrinsic.H) operation.
 
 ## Immutable
 

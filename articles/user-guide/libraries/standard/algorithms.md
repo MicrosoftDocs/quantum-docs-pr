@@ -46,8 +46,8 @@ For background, you could start from [Standard Amplitude Amplification](https://
 The Fourier transform is a fundamental tool of classical analysis and is just as important for quantum computations.
 In addition, the efficiency of the *quantum Fourier transform* (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm.
 
-As an approximate generalization of the QFT, we provide the <xref:microsoft.quantum.canon.approximateqft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
-The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.intrinsic.rfrac> as well as the <xref:microsoft.quantum.intrinsic.h> operation.
+As an approximate generalization of the QFT, we provide the <xref:Microsoft.Quantum.Canon.ApproximateQft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
+The approximate QFT requires the dyadic $Z$-rotation operation <xref:Microsoft.Quantum.Intrinsic.RFrac> as well as the <xref:Microsoft.Quantum.Intrinsic.H> operation.
 The input and output are assumed to be encoded in big endian encoding---that is, the qubit with index `0` is encoded in the left-most (highest) bit of the binary integer representation.
 This aligns with [ket notation](xref:microsoft.quantum.concepts.dirac), as a register of three qubits in the state $\ket{100}$ corresponds to $q_0$ being in the state $\ket{1}$ while $q_1$ and $q_2$ are both in state $\ket{0}$.
 The approximation parameter $a$ determines the pruning level of the $Z$-rotations, i.e., $a \in [0..n]$.
@@ -164,7 +164,7 @@ We can collect terms to find that
     V(\ket{+} \otimes \ket{\phi}) & = \frac{\ket{0} + e^{i \phi} \ket{1}}{\sqrt{2}} \otimes \ket{\phi} \\\\
                                   & = (R_1(\phi) \ket{+}) \otimes \ket{\phi},
 \end{align}
-where $R_1$ is the unitary applied by the <xref:microsoft.quantum.intrinsic.r1> operation.
+where $R_1$ is the unitary applied by the <xref:Microsoft.Quantum.Intrinsic.R1> operation.
 Put differently, the effect of applying $V$ is precisely the same as applying $R_1$ with an unknown angle, even though we only have access to $V$ as an oracle.
 Thus, for the rest of this discussion we will discuss phase estimation in terms of $R_1(\phi)$, which we implement by using so-called *phase kickback*.
 
@@ -180,4 +180,4 @@ where $n$ is the number of bits of precision that we require, and where we have 
 If we assume that $\phi = 2 \pi p / 2^k$ for an integer $p$, then we recognize this as $\ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n}$, where $p_j$ is the $j^{\textrm{th}}$ bit of $2 \pi \phi$.
 Applying the adjoint of the quantum Fourier transform, we therefore obtain the binary representation of the phase encoded as a quantum state.
 
-In Q#, this is implemented by the <xref:microsoft.quantum.characterization.quantumphaseestimation> operation, which takes a <xref:microsoft.quantum.oracles.discreteoracle> implementing application of $U^m$ as a function of positive integers $m$.
+In Q#, this is implemented by the <xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation> operation, which takes a <xref:Microsoft.Quantum.Oracles.DiscreteOracle> implementing application of $U^m$ as a function of positive integers $m$.

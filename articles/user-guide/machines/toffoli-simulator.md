@@ -60,7 +60,7 @@ Use the IQ# magic command [%toffoli](xref:microsoft.quantum.iqsharp.magic-ref.to
 The Toffoli simulator supports:
 
 * Rotations and exponentiated Paulis, such as `R` and `Exp`, when the resulting operation equals `X` or the identity matrix.
-* Measurement and [assert](xref:microsoft.quantum.diagnostics.assertmeasurement) operations, but only in the Pauli `Z` basis. 
+* Measurement and [assert](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) operations, but only in the Pauli `Z` basis. 
 Note that a measurement operation's probability is always either **0** or **1**;
 there is no randomness in the Toffoli simulator.
 * `DumpMachine` and `DumpRegister` functions.

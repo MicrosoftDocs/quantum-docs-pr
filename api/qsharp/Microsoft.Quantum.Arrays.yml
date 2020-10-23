@@ -173,29 +173,11 @@ functions:
 - uid: microsoft.quantum.arrays.windows
   summary: Returns all consecutive subarrays of length `size`.
 - uid: microsoft.quantum.arrays.zip
-  summary: |-
-    Given two arrays, returns a new array of pairs such that each pair
-    contains an element from each original array.
-    > [!WARNING]
-    > Deprecated
-
-    Zip has been deprecated. Please use @"microsoft.quantum.arrays.zipped" instead.
+  summary: Zip has been deprecated. Please use @"microsoft.quantum.arrays.zipped" instead.
 - uid: microsoft.quantum.arrays.zip3
-  summary: |-
-    Given three arrays, returns a new array of 3-tuples such that each 3-tuple
-    contains an element from each original array.
-    > [!WARNING]
-    > Deprecated
-
-    Zip3 has been deprecated. Please use @"microsoft.quantum.arrays.zipped3" instead.
+  summary: Zip3 has been deprecated. Please use @"microsoft.quantum.arrays.zipped3" instead.
 - uid: microsoft.quantum.arrays.zip4
-  summary: |-
-    Given four arrays, returns a new array of 4-tuples such that each 4-tuple
-    contains an element from each original array.
-    > [!WARNING]
-    > Deprecated
-
-    Zip4 has been deprecated. Please use @"microsoft.quantum.arrays.zipped4" instead.
+  summary: Zip4 has been deprecated. Please use @"microsoft.quantum.arrays.zipped4" instead.
 - uid: microsoft.quantum.arrays.zipped
   summary: |-
     Given two arrays, returns a new array of pairs such that each pair

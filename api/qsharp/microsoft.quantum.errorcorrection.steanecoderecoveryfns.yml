@@ -25,6 +25,6 @@ output:
     - uid: microsoft.quantum.errorcorrection.recoveryfn
     - uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
-- steanecoderecoveryx
-- steanecoderecoveryz
+- microsoft.quantum.errorcorrection.steanecoderecoveryx
+- microsoft.quantum.errorcorrection.steanecoderecoveryz
 ...

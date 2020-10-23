@@ -24,6 +24,6 @@ output:
   - summary: An oracle $O=UA$ of type `ObliviousOracle`.
     uid: microsoft.quantum.oracles.obliviousoracle
 seeAlso:
-- microsoft.quantum.canon.deterministicstateoracle
-- microsoft.quantum.canon.obliviousoracle
+- microsoft.quantum.oracles.deterministicstateoracle
+- microsoft.quantum.oracles.obliviousoracle
 ...

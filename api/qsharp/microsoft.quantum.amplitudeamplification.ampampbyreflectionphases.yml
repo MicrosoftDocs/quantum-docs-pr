@@ -7,7 +7,12 @@ uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionphases
 name: AmpAmpByReflectionPhases
 type: function
 namespace: microsoft.quantum.amplitudeamplification
-summary: AmpAmpByReflectionPhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections" instead.
+summary: |+
+  > [!WARNING]
+  > AmpAmpByReflectionPhases has been deprecated. Please use @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections" instead.
+  >
+  > Please use @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections".
+
 syntax: 'function AmpAmpByReflectionPhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle)'

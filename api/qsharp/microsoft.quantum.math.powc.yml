@@ -8,11 +8,12 @@ name: PowC
 type: function
 namespace: microsoft.quantum.math
 summary: Returns a number raised to a given power.
-syntax: 'function PowC (base_ : Microsoft.Quantum.Math.Complex, power : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
+syntax: 'function PowC (a : Microsoft.Quantum.Math.Complex, power : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
 input:
-  content: '(base_ : Microsoft.Quantum.Math.Complex, power : Microsoft.Quantum.Math.Complex)'
+  content: '(a : Microsoft.Quantum.Math.Complex, power : Microsoft.Quantum.Math.Complex)'
   types:
-  - name: base_
+  - name: a
+    summary: The number $a$ that is to be raised.
     uid: microsoft.quantum.math.complex
   - name: power
     summary: The power $b$ to which $a$ should be raised.

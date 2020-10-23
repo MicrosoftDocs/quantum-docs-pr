@@ -7,7 +7,12 @@ uid: microsoft.quantum.extensions.math.signi
 name: SignI
 type: function
 namespace: microsoft.quantum.extensions.math
-summary: SignI has been deprecated. Please use @"microsoft.quantum.math.signi" instead.
+summary: |+
+  > [!WARNING]
+  > SignI has been deprecated. Please use @"microsoft.quantum.math.signi" instead.
+  >
+  > Please use @"microsoft.quantum.math.signi".
+
 syntax: 'function SignI (a : Int) : Int'
 input:
   content: '(a : Int)'

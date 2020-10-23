@@ -32,6 +32,6 @@ remarks: |-
   ```
 syntax: newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 seeAlso:
-- evolutionset
-- paulievolutionset
+- microsoft.quantum.simulation.evolutionset
+- microsoft.quantum.simulation.paulievolutionset
 ...

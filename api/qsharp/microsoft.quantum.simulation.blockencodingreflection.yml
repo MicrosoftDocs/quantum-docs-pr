@@ -10,5 +10,5 @@ namespace: microsoft.quantum.simulation
 summary: Represents a `BlockEncoding` that is also a reflection.
 syntax: newtype BlockEncodingReflection = Microsoft.Quantum.Simulation.BlockEncoding;
 seeAlso:
-- microsoft.quantum.canon.blockencoding
+- microsoft.quantum.simulation.blockencoding
 ...

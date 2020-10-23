@@ -29,6 +29,6 @@ output:
       `generatorSystemStart` and weight $s$ on `generatorSystemEnd`.
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
 seeAlso:
-- microsoft.quantum.canon.generatorsystem
-- microsoft.quantum.canon.timedependentgeneratorsystem
+- microsoft.quantum.simulation.generatorsystem
+- microsoft.quantum.simulation.timedependentgeneratorsystem
 ...

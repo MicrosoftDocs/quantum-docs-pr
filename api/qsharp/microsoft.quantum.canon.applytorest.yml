@@ -36,6 +36,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: targets
+    summary: An array of targets, of which all but the first will be applied to `op`.
     isArray: true
     uid: "'T"
     isLocal: true

@@ -64,8 +64,8 @@ output:
 functors:
 - Adjoint
 seeAlso:
-- applywithinputtransformation
-- applywithinputtransformationc
-- applywithinputtransformationca
-- transformedoperation
+- microsoft.quantum.canon.applywithinputtransformation
+- microsoft.quantum.canon.applywithinputtransformationc
+- microsoft.quantum.canon.applywithinputtransformationca
+- microsoft.quantum.canon.transformedoperation
 ...

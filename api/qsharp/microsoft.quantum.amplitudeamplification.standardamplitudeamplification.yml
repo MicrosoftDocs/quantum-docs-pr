@@ -29,6 +29,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: stateOracle
+    summary: Unitary oracle $A$ that prepares start state
     uid: microsoft.quantum.oracles.stateoracle
   - name: idxFlagQubit
     summary: Index to flag qubit

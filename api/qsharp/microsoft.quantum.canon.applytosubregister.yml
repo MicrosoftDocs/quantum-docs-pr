@@ -50,7 +50,7 @@ output:
   - isPrimitive: true
     uid: Unit
 seeAlso:
-- applytosubregistera
-- applytosubregisterc
-- applytosubregisterca
+- microsoft.quantum.canon.applytosubregistera
+- microsoft.quantum.canon.applytosubregisterc
+- microsoft.quantum.canon.applytosubregisterca
 ...

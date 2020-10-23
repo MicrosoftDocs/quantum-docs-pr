@@ -39,7 +39,7 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- applyreversedople
-- applyreversedoplea
-- applyreversedoplec
+- microsoft.quantum.arithmetic.applyreversedople
+- microsoft.quantum.arithmetic.applyreversedoplea
+- microsoft.quantum.arithmetic.applyreversedoplec
 ...

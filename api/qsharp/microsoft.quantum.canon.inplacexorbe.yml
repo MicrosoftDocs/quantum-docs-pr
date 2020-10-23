@@ -7,7 +7,12 @@ uid: microsoft.quantum.canon.inplacexorbe
 name: InPlaceXorBE
 type: operation
 namespace: microsoft.quantum.canon
-summary: InPlaceXorBE has been deprecated. Please use @"applyreversedopleca(applyxorinplace(value, _), target)" instead.
+summary: |+
+  > [!WARNING]
+  > InPlaceXorBE has been deprecated. Please use @"applyreversedopleca(applyxorinplace(value, _), target)" instead.
+  >
+  > This operation has been removed.
+
 syntax: 'operation InPlaceXorBE (value : Int, target : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.BigEndian)'

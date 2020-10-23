@@ -22,5 +22,5 @@ output:
     isPrimitive: true
     uid: Int
 seeAlso:
-- microsoft.quantum.canon.generatorsystem
+- microsoft.quantum.simulation.generatorsystem
 ...

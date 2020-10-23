@@ -17,6 +17,6 @@ summary: |-
 remarks: We abbreviate `PhaseLittleEndian` as `PhaseLE` in the documentation.
 syntax: newtype PhaseLittleEndian = Qubit[];
 seeAlso:
-- qft
-- qftle
+- microsoft.quantum.canon.qft
+- microsoft.quantum.canon.qftle
 ...

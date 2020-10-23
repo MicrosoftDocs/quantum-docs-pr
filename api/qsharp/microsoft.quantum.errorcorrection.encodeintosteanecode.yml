@@ -32,6 +32,6 @@ output:
   - summary: A quantum register holding the state after the Steane encoder has been applied
     uid: microsoft.quantum.errorcorrection.logicalregister
 seeAlso:
-- logicalregister
-- steanecodedecoder
+- microsoft.quantum.errorcorrection.logicalregister
+- microsoft.quantum.errorcorrection.steanecodedecoder
 ...

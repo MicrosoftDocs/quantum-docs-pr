@@ -60,5 +60,5 @@ typeParameters:
 - uid: "'U"
   summary: The result type of the `mapper` function.
 seeAlso:
-- mapped
+- microsoft.quantum.arrays.mapped
 ...

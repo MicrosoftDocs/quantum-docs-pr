@@ -8,11 +8,12 @@ name: Min
 type: function
 namespace: microsoft.quantum.math
 summary: Given an array of integers, returns the smallest element.
-syntax: 'function Min (value : Int[]) : Int'
+syntax: 'function Min (values : Int[]) : Int'
 input:
-  content: '(value : Int[])'
+  content: '(values : Int[])'
   types:
-  - name: value
+  - name: values
+    summary: An array to take the minimum of.
     isArray: true
     isPrimitive: true
     uid: Int

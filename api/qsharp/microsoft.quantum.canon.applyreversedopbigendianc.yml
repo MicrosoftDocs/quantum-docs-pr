@@ -7,7 +7,12 @@ uid: microsoft.quantum.canon.applyreversedopbigendianc
 name: ApplyReversedOpBigEndianC
 type: operation
 namespace: microsoft.quantum.canon
-summary: ApplyReversedOpBigEndianC has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopbec" instead.
+summary: |+
+  > [!WARNING]
+  > ApplyReversedOpBigEndianC has been deprecated. Please use @"microsoft.quantum.arithmetic.applyreversedopbec" instead.
+  >
+  > Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".
+
 syntax: 'operation ApplyReversedOpBigEndianC (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian)'

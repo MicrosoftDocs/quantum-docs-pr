@@ -37,6 +37,7 @@ input:
   content: "(equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[])"
   types:
   - name: equal
+    summary: A function from tuple `('T, 'T)` to `Bool` that is used to check whether two elements of arrays are equal.
     isFunction: true
     input:
       types:

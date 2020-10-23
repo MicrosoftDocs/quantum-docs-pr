@@ -21,6 +21,6 @@ output:
     isPrimitive: true
     uid: Pauli
 seeAlso:
-- steanecoderecoveryx
-- steanecoderecoveryfns
+- microsoft.quantum.errorcorrection.steanecoderecoveryx
+- microsoft.quantum.errorcorrection.steanecoderecoveryfns
 ...

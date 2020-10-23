@@ -56,7 +56,7 @@ typeParameters:
 - uid: "'U"
   summary: The type of the second input to a curried operation.
 seeAlso:
-- microsoft.quantum.canon.uncurryopc
-- microsoft.quantum.canon.uncurryopa
-- microsoft.quantum.canon.uncurryopca
+- microsoft.quantum.canon.uncurriedopc
+- microsoft.quantum.canon.uncurriedopa
+- microsoft.quantum.canon.uncurriedopca
 ...

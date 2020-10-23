@@ -1,9 +1,10 @@
 ---
 title: '%lsmagic (magic command)'
+description: Returns a list of all currently available magic commands.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.lsmagic
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/23/2020
 ms.topic: article
 ---
 
@@ -27,7 +28,9 @@ This magic command lists all of the magic commands available in the IQ# kernel,
 as well as those defined in any packages that have been loaded in the current
 session via the [`%package` magic command](https://docs.microsoft.com/qsharp/api/iqsharp-magic/package).
 
-## Example
+## Examples for `%lsmagic`
+
+### Example 1
 
 Display the list of available magic commands:
 ```

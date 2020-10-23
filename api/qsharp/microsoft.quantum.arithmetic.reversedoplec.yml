@@ -41,8 +41,8 @@ output:
     functors:
     - Controlled
 seeAlso:
-- applyreversedoplec
-- reversedople
-- reversedoplea
-- reversedopleca
+- microsoft.quantum.arithmetic.applyreversedoplec
+- microsoft.quantum.arithmetic.reversedople
+- microsoft.quantum.arithmetic.reversedoplea
+- microsoft.quantum.arithmetic.reversedopleca
 ...

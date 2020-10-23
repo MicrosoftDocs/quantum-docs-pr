@@ -9,7 +9,7 @@ uid: microsoft.quantum.libraries.using
 no-loc: ['Q#', '$$v']
 ---
 
-# Using Additional Q# Libraries
+# Using additional Q# libraries
 
 The Quantum Development Kit provides additional domain-specific functionality through _NuGet packages_ that you can add to your Q# projects.
 

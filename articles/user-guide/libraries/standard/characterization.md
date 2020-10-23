@@ -1,25 +1,15 @@
 ---
-<<<<<<< HEAD
-title: Quantum characterization and statistics 
-description: Learn how measurement statistics from phase estimations are used to estimate result values in quantum programming. 
-author: bradben
-uid: microsoft.quantum.libraries.characterization
-ms.author: martinro
-ms.date: 12/11/2017
-=======
 title: Quantum characterization and statistics using Q#
 description: Learn how measurement statistics from phase estimations are used with Q# to estimate result values in quantum programming. 
 author: QuantumWriter
 ms.author: martinro
-ms.date: 9/11/2020
->>>>>>> 7ed002f2... edit pass on lib topics
+ms.date: 10/22/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.characterization
 no-loc: ['Q#', '$$v']
 ---
 
-
-# Quantum characterization and statistics #
+# Quantum characterization and statistics
 
 It is critical to be able to characterize the effects of operations in order to develop useful quantum algorithms.
 This is challenging because every measurement of a quantum system yields at most one bit of information.
@@ -34,7 +24,7 @@ The aim here is more to perform a unitary transformation on a state vector, rath
 These libraries must therefore blend both classical and quantum information processing.
 
 
-## Iterative phase estimation ##
+## Iterative phase estimation
 
 Viewing quantum programming in terms of quantum characterization suggests a useful alternative to [quantum phase estimation](xref:microsoft.quantum.libraries.standard.algorithms#quantum-phase-estimation).
 That is, instead of preparing an $n$-qubit register to contain a binary representation of the phase as in quantum phase estimation, you can view phase estimation as the process by which a *classical* agent learns properties of a quantum system through measurements.
@@ -54,9 +44,9 @@ The auxiliary qubit used as a control for `U(m)` is then measured in the $X$ bas
 
 At this point, reconstructing the phase from the `Result` values obtained through iterative phase estimation is a classical statistical inference problem.
 Finding the value of $m$ that maximizes the information gained, given a fixed inference method, is simply a problem in statistics.
-We emphasize this by briefly describing iterative phase estimation at a theoretical level in the Bayesian parameter estimation formalism before proceeding to describe the statistical algorithms provided by Q# for solving this classical inference problem.
+We emphasize this by briefly describing iterative phase estimation at a theoretical level in the Bayesian parameter estimation formalism before proceeding to describe the statistical algorithms provided by the standard library for solving this classical inference problem.
 
-### Iterative phase estimation without eigenstates ###
+### Iterative phase estimation without eigenstates
 
 If an input state is provided that is not an eigenstate, which is to say that if $U(m)\ket{\phi\_j} = e^{im\phi\_j}$ then the process of phase estimation non-deterministically guides the quantum state towards a single energy eigenstate.  The eigenstate it ultimately converges to is the eigenstate that is most likely to produce the observed `Result`.
 
@@ -81,14 +71,11 @@ Learning these three things is often exponentially hard on a classical computer.
 The utility of phase estimation arises, to no small extent, from the fact that it can perform such a quantum learning task without knowing any of them.
 For this reason, phase estimation appears within a number of quantum algorithms that provide exponential speedups.
 
-### Bayesian phase estimation ###
+### Bayesian phase estimation
 
 > [!TIP]
-<<<<<<< HEAD
-> For more details on Bayesian phase estimation in practice, please see the [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation) sample.
-=======
 > For more details on Bayesian phase estimation in practice, see the [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) sample.
->>>>>>> 7ed002f2... edit pass on lib topics
+
 
 The idea of Bayesian phase estimation is simple.
 You collect measurement statistics from the phase estimation protocol, and then you process the results using Bayesian inference and provide an estimate of the parameter.
@@ -137,7 +124,7 @@ While for some applications, such as quantum simulation, the limited accuracy re
 such as Shor's algorithm, cannot use exact Bayesian inference within its phase estimation step.  For this reason, you also provide implementations
 for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) and non-Bayesian approaches such as [robust phase estimation](xref:microsoft.quantum.characterization.robustphaseestimation).
 
-### Robust phase estimation ###
+### Robust phase estimation
 
 A maximum *a posteriori* Bayesian reconstruction of a phase estimate from measurement results is exponentially hard in the worst-case. Thus most practical phase estimation algorithms sacrifice some quality in the reconstruction in exchange for an amount of classical post-processing that instead scales polynomially with the number of measurements made.
 
@@ -154,20 +141,12 @@ where the lower bound is reached in the limit of asymptotically large $Q$, and t
 Other relevant details include, say, the small space overhead of just $1$ ancilla qubit, or that the procedure is non-adaptive, meaning the required sequence of quantum experiments is independent of the intermediate measurement outcomes. In the following examples where the choice of phase estimation algorithm is important, you should refer to the documentation, for example <xref:microsoft.quantum.characterization.robustphaseestimation> and the referenced publications therein, for more information about their the implementation.
 
 > [!TIP]
-<<<<<<< HEAD
-> There are many samples where robust phase estimation is used. For phase estimation in extracting the ground state energy of various physical system, 
-> please see the [**H2 simulation** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), 
-> the [**SimpleIsing** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple), 
-> and the [**Hubbard model** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
-=======
 > There are many samples available that use robust phase estimation. For phase estimation in extracting the ground state energy of various physical systems, 
 > see the [**H2 simulation**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), 
 > [**SimpleIsing**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple), 
 > and [**Hubbard model**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard) samples.
->>>>>>> 7ed002f2... edit pass on lib topics
 
-
-### Continuous oracles ###
+### Continuous oracles
 
 We can also generalize from the oracle model used earlier to allow for continuous-time oracles, modeled by the type <xref:microsoft.quantum.oracles.continuousoracle>.
 Consider that instead of a single unitary operator $U$, you have a family of unitary operators $U(t)$ for $t \in \mathbb{R}$ such that $U(t) U(s)$ = $U(t + s)$.
@@ -185,9 +164,9 @@ $$
 Moreover, if $U$ is a simulation of a dynamical generator, as is the case for [Hamiltonian simulation](xref:microsoft.quantum.libraries.applications#hamiltonian-simulation), you interpret $\phi$ as an energy.
 Thus, you can use phase estimation with continuous queries to learn the simulated [energy spectrum of molecules](https://arxiv.org/abs/quant-ph/0604193), [materials](https://arxiv.org/abs/1510.03859), or [field theories](https://arxiv.org/abs/1111.3633v2) without having to compromise your choice of experiments by requiring $t$ to be an integer.
 
-### Random walk phase estimation ###
+### Random walk phase estimation
 
-Q# provides a useful approximation of Bayesian phase estimation designed for use close to quantum devices that operates by conditioning a random walk on the data record obtained from iterative phase estimation.
+The Q# standard library provides a useful approximation of Bayesian phase estimation designed for use close to quantum devices that operates by conditioning a random walk on the data record obtained from iterative phase estimation.
 This method is both adaptive and entirely deterministic, allowing for near-optimal scaling of errors in the estimated phase $\hat{\phi}$ with very low memory overheads.
 
 The protocol uses an approximate Bayesian inference method that assumes the prior distribution is Gaussian.
@@ -199,9 +178,9 @@ It recovers from failure by performing experiments to test whether the current m
 If they are not, then the algorithm does an inverse step of the walk and the process continues.
 This ability to step backward also allows the algorithm to learn, even if the initial prior standard deviation is inappropriately small.
 
-## Calling phase estimation algorithms ##
+## Calling phase estimation algorithms
 
-Each phase estimation operation provided with Q# takes a different set of inputs, parameterizing the quality required of the final estimate $\hat{\phi}$.
+Each phase estimation operation provided with standard library takes a different set of inputs, parameterizing the quality required of the final estimate $\hat{\phi}$.
 These various inputs, however, all have several inputs in common, such that partial application over the quality parameters results in a common signature.
 For example, the <xref:microsoft.quantum.characterization.robustphaseestimation> operation discussed in the next section has the following signature:
 
@@ -210,7 +189,7 @@ operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, ei
 ```
 
 The `bitsPrecision` input is unique to `RobustPhaseEstimation`, while `oracle` and `eigenstate` are in common.
-Thus, as seen in the following **H2EstimateEnergy** example, an operation can accept an iterative phase estimation algorithm with an input of the form `(DiscreteOracle, Qubit[]) => Unit` to allow a user to specify arbitrary phase estimation algorithms:
+As seen in the following **H2EstimateEnergy** example, an operation can accept an iterative phase estimation algorithm with an input of the form `(DiscreteOracle, Qubit[]) => Unit` to allow a user to specify arbitrary phase estimation algorithms:
 
 ```qsharp
 operation H2EstimateEnergy(
@@ -222,7 +201,7 @@ operation H2EstimateEnergy(
 
 These various phase estimation algorithms are optimized for different properties and input parameters, which must be understood to make the best choice for the target application. For example, some phase estimation algorithms are adaptive, meaning that future steps are classically controlled by the measurement results of previous steps. Some require the ability to exponentiate its black-box unitary oracle by arbitrary real powers, and others only require integer powers but are only able to resolve a phase estimate modulo $2\pi$. Some require many auxiliary qubits, and others require only one.
 
-Similarly, using random walk phase estimation proceeds in much the same way as other algorithms provided with Q#:
+Similarly, using random walk phase estimation proceeds in much the same way as other algorithms provided with the standard library:
 
 ```qsharp
 operation ApplyExampleOracle(

@@ -5,11 +5,7 @@ description: Learn about two fundamental applications in quantum computing - Ham
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
-<<<<<<< HEAD
-ms.date: 12/11/2017
-=======
-ms.date: 09/02/2020
->>>>>>> 7ed002f2... edit pass on lib topics
+ms.date: 10/22/2020
 ms.topic: article
 no-loc: ['Q#', '$$v']
 ---
@@ -18,11 +14,11 @@ no-loc: ['Q#', '$$v']
 
 The simulation of quantum systems is one of the most exciting applications of quantum computation.
 On a classical computer, the difficulty of simulating quantum mechanics, in general, scales with the dimension $N$ of its state-vector representation.
-As this representation grows exponentially with the number of $n$ qubits $N=2^n$, a trait known also known as the [curse of dimensionality](xref:microsoft.quantum.concepts.multiple-qubits), quantum simulation on classical hardware is intractable. However, the situation can be very different on quantum hardware.
+As this representation grows exponentially with the number of $n$ qubits $N=2^n$, also known as the [curse of dimensionality](xref:microsoft.quantum.concepts.multiple-qubits), quantum simulation on classical hardware is intractable. However, the situation can be very different on quantum hardware.
 
 This topic looks at two fundamental quantum computing algorithms - Hamiltonian simulation and Shor's search algorithm.
 
-## Hamiltonian Simulation
+## Hamiltonian simulation
 
 The most common variation of quantum simulation is called the time-independent Hamiltonian simulation problem. There, one is provided with a description of the system Hamiltonian $H$, which is a Hermitian matrix, and some initial quantum state $\ket{\psi(0)}$ that is encoded in some basis on $n$ qubits on a quantum computer. As quantum states in closed systems evolve under the [Schrödinger equation](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation),
 $$
@@ -48,7 +44,7 @@ $$
 where $a\_j>0$ are coefficients, and $\hat{U}\_j$ are unitaries. It is then assumed that one has black-box access to the unitary oracle $V=\sum^{d-1}\_{j=0}\ket{j}\bra{j}\otimes \hat{U}\_j$ that selects the desired $\hat{U}\_j$, and the oracle $A\ket{0}=\sum^{d-1}\_{j=0}\sqrt{a\_j/\sum^{d-1}\_{k=0}\alpha\_j}\ket{j}$ that create a quantum state encoding these coefficients. In the case of [sparse Hamiltonian simulation](https://arxiv.org/abs/quant-ph/0301023), one assumes that the Hamiltonian is a sparse matrix with only $d=\mathcal{O}(\text{polylog}(N))$ non-zero element in every row. Moreover, one assumes the existence of efficient quantum circuits that output the location of these non-zero elements, as well as the their values. The complexity of [Hamiltonian simulation algorithms](xref:microsoft.quantum.more-information) is evaluated in terms of number of queries to these black-boxes, and the primitive gate complexity then depends very much on the difficulty of implementing these black-boxes.
 
 > [!NOTE]
-> The big-O notation is commonly used to describe the complexity scaling of algorithms. Given two real functions $f,g$, the expression $g(x)=\mathcal{O}(f(x))$ means that there exists an absolute positive constant $x\_0, c>0$ such that $g(x) \le c f(x)$ for all $x\ge x\_0$. 
+> The *big-O* notation is commonly used to describe the complexity scaling of algorithms. Given two real functions $f,g$, the expression $g(x)=\mathcal{O}(f(x))$ means that there exists an absolute positive constant $x\_0, c>0$ such that $g(x) \le c f(x)$ for all $x\ge x\_0$. 
 
 In most practical applications to be implemented on a quantum computer, these black-boxes must be efficiently implementable, that is with $\mathcal{O}(\text{polylog}(N))$ primitive quantum gates. More strongly, efficiently simulable Hamiltonians must have some sufficiently sparse classical description. In one such formulation, it is assumed that the Hamiltonian decomposes into a sum of Hermitian parts
 $$
@@ -61,7 +57,7 @@ Moreover, it is assumed that each part, a Hamiltonian $H\_j$, is easy to simulat
 > [!TIP]
 > Hamiltonians that decompose into a sum of parts may be described using the Dynamical Generator Representation library. For more information, see the Dynamical Generator Representation section in [data structures](xref:microsoft.quantum.libraries.data-structures).
 
-### Simulation Algorithms
+### Simulation algorithms
 
 A quantum simulation algorithm converts a given description of a Hamiltonian into a sequence of primitive quantum gates that, as a whole, approximate time-evolution by said Hamiltonian.
 
@@ -77,15 +73,9 @@ using a product of $r d$ terms.
 
 > [!TIP]
 > Applications of the Trotter-Suzuki simulation algorithm are covered in the samples.
-<<<<<<< HEAD
-> For the Ising model using only the intrinsic operations provided by each target machine, please see the [**SimpleIsing** sample](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple).
-> For the Ising model using the Trotter-Suzuki library control structure, please see the [**IsingTrotter** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution).
-> For molecular Hydrogen using the Trotter-Suzuki library control structure, please see the [**H2 simulation** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line).
-=======
-> For the Ising model using only the intrinsic operations provided by each target machine, see the [**SimpleIsing** sample](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple).
-> For the Ising model using the Trotter-Suzuki library control structure, see the [**IsingTrotter** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution).
-> For molecular Hydrogen using the Trotter-Suzuki library control structure, see the [**H2 simulation** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line).
->>>>>>> 7ed002f2... edit pass on lib topics
+> * For the Ising model using only the intrinsic operations provided by each target machine, see the [**SimpleIsing** sample](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple).
+> * For the Ising model using the Trotter-Suzuki library control structure, see the [**IsingTrotter** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution).
+> * For molecular Hydrogen using the Trotter-Suzuki library control structure, see the [**H2 simulation** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line).
 
 In many cases, you may want to implement the simulation algorithm, but are not interested in the details of its implementation. For example, the second-order integrator approximates
 $$
@@ -108,7 +98,7 @@ The first parameter `Double` is the time of simulation, the second parameter `Ev
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
 ```
 
-As an example, the Trotter-Suzuki decomposition may be called using the following Q# functions, with parameters `trotterStepSize` modifying the duration of simulation in each exponential, and `trotterOrder` for the order of the desired integrator.
+As an example, the Trotter-Suzuki decomposition may be called using the following Q# standard library functions, with parameters `trotterStepSize` modifying the duration of simulation in each exponential, and `trotterOrder` for the order of the desired integrator.
 
 ```qsharp
 function TrotterSimulationAlgorithm(
@@ -128,14 +118,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 
 > [!TIP]
 > Applications of the simulation library are covered in the samples. 
-<<<<<<< HEAD
-> For phase estimation in the Ising model using `SimulationAlgorithm`, please see the [**IsingPhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
-> For adiabatic state preparation in the Ising model using `TimeDependentSimulationAlgorithm`, please see the [**AdiabaticIsing** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
-=======
-> For phase estimation in the Ising model using `SimulationAlgorithm`, see the [**IsingPhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
-> For adiabatic state preparation in the Ising model using `TimeDependentSimulationAlgorithm`, see the [**AdiabaticIsing** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
->>>>>>> 7ed002f2... edit pass on lib topics
-
+> * For phase estimation in the Ising model using `SimulationAlgorithm`, see the [**IsingPhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> * For adiabatic state preparation in the Ising model using `TimeDependentSimulationAlgorithm`, see the [**AdiabaticIsing** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
 
 #### Adiabatic State Preparation & Phase Estimation
 
@@ -179,21 +163,13 @@ operation EstimateAdiabaticStateEnergy(
 
 > [!TIP]
 > Applications of adiabatic state preparation are covered in the samples. 
-<<<<<<< HEAD
-> For the Ising model using a manual implementation of adiabatic state preparation versus using the `AdiabaticEvolution` function, please see the [**AdiabaticIsing** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
-> For phase estimation and adiabatic state preparation in the Ising model, please see the [**IsingPhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
-
-> [!TIP]
-> The [simulation of molecular Hydrogen](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) is an interesting and brief sample. The model and experimental results reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) only requires Pauli matrices and takes the form $\hat H = g\_{0}I\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$. This is an effective Hamiltonian only requiring only 2 qubits, where the constants $g$ are computed from the distance $R$ between the two Hydrogen atoms. Using canon functions, the Paulis are converted to unitaries and then evolved over short periods of time using the Trotter-Suzuki decomposition. A good approximation to the $H_2$ ground state can be created without using adiabatic state preparation, and so the ground state energy may be found directly by utilizing phase estimation from the canon.
-=======
-> For the Ising model using a manual implementation of adiabatic state preparation versus using the `AdiabaticEvolution` function, see the [**AdiabaticIsing** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
-> For phase estimation and adiabatic state preparation in the Ising model, see the [**IsingPhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> * For the Ising model using a manual implementation of adiabatic state preparation versus using the `AdiabaticEvolution` function, see the [**AdiabaticIsing** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
+> * For phase estimation and adiabatic state preparation in the Ising model, see the [**IsingPhaseEstimation** sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
 > [!TIP]
 > The [simulation of molecular Hydrogen](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) is an interesting and brief sample. The model, and its experimental results, reported in [O'Malley et. al.](https://arxiv.org/abs/1512.06860) only requires Pauli matrices and takes the form $\hat H = g\_{0}I\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}{X\_1}$. This is an effective Hamiltonian requiring only two qubits, where the constants $g$ are computed from the distance $R$ between the two Hydrogen atoms. Using Q# functions, the Pauli matrices are converted to unitaries and then evolved over short periods of time using the Trotter-Suzuki decomposition. A good approximation to the $H_2$ ground state is created without using adiabatic state preparation, and so the ground state energy is found directly by utilizing phase estimation algorithms.
 
 ## Shor's search algorithm
->>>>>>> 7ed002f2... edit pass on lib topics
 
 Shor's algorithm remains one of the most significant developments in quantum computing because it showed that quantum computers could be used to solve important, currently classically intractable problems.
 Shor's algorithm provides a fast way to factor large numbers using a quantum computer, a problem called *factoring*.
@@ -245,7 +221,11 @@ using one of the phase estimation routines available in [Microsoft.Quantum.Chara
 ### Factoring
 
 The goal of factoring is to determine the two prime factors of integer $N$, where $N$ is an $n$-bit number.  
-The factoring process is described in the following steps. The process is divided into three parts: a classical preprocessing routine (steps 1-4); a quantum computing routine to find the order of $a \text{ mod } N$ (step 5); and a classical postprocessing routine to derive the prime factors from the order (steps 6-9).
+The factoring process is described in the following steps. The process is divided into three parts: 
+
+* A classical preprocessing routine (steps 1-4).
+* A quantum computing routine to find the order of $a \text{ mod } N$ (step 5).
+* A classical postprocessing routine to derive the prime factors from the order (steps 6-9).
 
 The classical preprocessing routine consists of the following steps:
 

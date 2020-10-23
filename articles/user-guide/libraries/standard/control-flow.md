@@ -5,24 +5,20 @@ description: Learn about the flow control operations and functions in the Micros
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
-<<<<<<< HEAD
-ms.date: 12/11/2017
-=======
-ms.date: 9/14/2020
->>>>>>> 7ed002f2... edit pass on lib topics
+ms.date: 10/22/2020
 ms.topic: article
 no-loc: ['Q#', '$$v']
 # Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
 # For Quantum products none of these categories have been defined  yet.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-# ms.technology: tech-name-from-white-list
+# ms.service: service-name-from-allow-list
+# ms.prod: product-name-from-allow-list
+# ms.technology: tech-name-from-allow-list
 ---
 
-# Higher-order control flow #
+# Higher-order control flow
 
 One of the primary roles of the Q# standard library is to make it easier to express high-level algorithmic ideas as [quantum programs](xref:microsoft.quantum.guide.basics).
-Thus, the Q# canon provides a variety of different flow control constructs, each implemented using [partial application](xref:microsoft.quantum.glossary#partial-application) of functions and operations.
+Thus, the standard library provides a variety of different flow control constructs, each implemented using [partial application](xref:microsoft.quantum.glossary#partial-application) of functions and operations.
 
 As an example, consider the case in which one wants to construct a "CNOT ladder" on a register:
 
@@ -48,9 +44,9 @@ However, the example is much shorter and easier to read when expressed in terms 
 ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 ```
 
-This article provides a number of examples of how to use the various flow control operations and functions in Q# to compactly express quantum programs.
+This article provides a number of examples of how to use the various flow control operations and functions in the Q# standard library to compactly express quantum programs.
 
-## Applying operations and functions over arrays and ranges ##
+## Applying operations and functions over arrays and ranges
 
 One of the primary abstractions provided by Q# is that of iteration.
 For example, consider a unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.
@@ -109,9 +105,9 @@ function Sum(xs : Int[]) {
 
 Similarly, functions such as <xref:microsoft.quantum.arrays.mapped> and <xref:microsoft.quantum.arrays.mappedbyindex> can be used to express functional programming concepts in Q#.
 
-## Composing operations and functions ##
+## Composing operations and functions
 
-The control flow constructs in Q# take operations and functions as their inputs, which makes it possible to include several operations or functions into a single callable.
+The control flow constructs in the standard library take operations and functions as their inputs, which makes it possible to include several operations or functions into a single callable.
 For example, the pattern $UVU^{\dagger}$ is very common in quantum programming, such that Q# provides the operation <xref:microsoft.quantum.canon.applywith> as an abstraction for this pattern.
 This abstraction also allows for more efficient compilation into circuits, as `Controlled` acting on the sequence `U(qubit); V(qubit); Adjoint U(qubit);` does not need to act on each `U`.
 To see this, let $c(U)$ be the unitary representing `Controlled U([control], target)` and let $c(V)$ be defined in the same way.
@@ -155,7 +151,7 @@ This becomes especially useful when combined with iteration patterns:
 ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
-### Time-ordered composition ###
+### Time-ordered composition
 
 You can go still further by thinking of flow control in terms of partial application and classical functions, and can model even fairly sophisticated quantum concepts in terms of classical flow control.
 This analogy is made precise by the recognition that unitary operators correspond exactly to the side effects of calling operations. As a result, any decomposition of unitary operators in terms of other unitary operators corresponds to constructing a particular calling sequence for classical subroutines which emit instructions to act as particular unitary operators.
@@ -190,15 +186,15 @@ This iteration pattern is implemented by <xref:microsoft.quantum.canon.decompose
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
 // while the 1 indicates that we are using the
-// first-order Trotter–Suzuki decomposoition.
+// first-order Trotter–Suzuki decomposition.
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
 The signature of `DecomposeIntoTimeStepsCA` follows a common pattern in Q#, where collections that may be backed either by arrays or by something which compute elements on the fly are represented by tuples whose first elements are `Int` values indicating their lengths.
 
-## Putting it Together: Controlling Operations ##
+## Putting it Together: Controlling Operations
 
-Finally, the canon builds on the `Controlled` functor by providing additional ways to condition quantum operations.
+Finally, the standard library builds on the `Controlled` functor by providing additional ways to condition quantum operations.
 It is common, especially in quantum arithmetic, to condition operations on computational basis states other than $\ket{0\cdots 0}$.
 Using the control operations and functions introduced above, we can more general quantum conditions in a single statement.
 Let's jump in to how <xref:microsoft.quantum.canon.controlledonbitstring> does it (sans type parameters), then we'll break down the pieces one by one.
@@ -239,7 +235,7 @@ This leaves `ApplyWith` acting to bracket the control register with $P$, exactly
 
 At this point, we could be done, but it is somehow unsatisfying that our new operation does not "feel" like applying the `Controlled` functor.
 Thus, we finish defining our new control flow concept by writing a function that takes the oracle to be controlled and that returns a new operation.
-In this way, our new function looks and feels very much like `Controlled`, illustrating that we can easily define powerful new control flow constructs using Q# and the canon together:
+In this way, our new function looks and feels very much like `Controlled`, illustrating that we can easily define powerful new control flow constructs using Q# and the standard library together:
 
 ```qsharp
 function ControlledOnBitString(

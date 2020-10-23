@@ -1,25 +1,19 @@
 ---
 title: Quantum algorithms in Q#
 description: Learn about fundamental quantum computing algorithms, including amplitude amplification, Fourier transform, Draper and Beauregard adders, and phase estimation. 
-<<<<<<< HEAD
-author: QuantumWriter
-ms.author: martinro
-ms.date: 12/11/2017
-=======
 author: bradben
 ms.author: v-benbra 
-ms.date: 08/26/2020
->>>>>>> 7ed002f2... edit pass on lib topics
+ms.date: 10/22/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc: ['Q#', '$$v']
 ---
 
-# Quantum algorithms #
+# Quantum algorithms
 
 Just as there are standardized approaches to designing classical computing algorithms, there are also standardized methods to designing quantum algorithms. This topic examines quantum algorithms based on amplitude amplification, the quantum Fourier transform, and quantum adder circuits.
 
-## Amplitude amplification ##
+## Amplitude amplification
 
 **Amplitude amplification** is one of the fundamental tools of Quantum Computing. It is the fundamental idea that underlies Grover's search, amplitude estimation, and many quantum machine learning algorithms.  There are many variants, and Q# provides a general version based on **oblivious amplitude amplification with partial reflections** to allow for the widest area of application.
 
@@ -33,7 +27,7 @@ $$
 $$
 where $\ket{\psi_\pm}$ are eigenvectors of $Q$ with eigenvalues $e^{\pm  2i\theta}$ and only have support on the $+1$ eigenvectors of $P_0$ and $P_1$.  The fact that the eigenvalues are $e^{\pm i \theta}$ implies that the operator $Q$ performs a rotation in a two-dimensional subspace specified by the two projectors and the initial state where the rotation angle is $2\theta$.  This is why after $m$ iterations of $Q$ the success probability is $\sin^2([2m+1]\theta)$.
 
-Another useful property that comes out of this is that the eigenvalue $\theta$ is directly related to the probability that the initial state is marked (in the case where $P_0$ is a projector onto only the initial state).  Since the eigenphases of $Q$ are $2\theta = 2\sin^{-1}(\sqrt{\Pr(success)})$, it then follows that if you apply phase estimation to $Q$, then you can learn the probability of success for a unitary quantum procedure.  This approach is useful because it requires quadratically fewer applications of the quantum procedure to learn the success probability than would otherwise be needed.
+Another useful property that comes out of this is that the eigenvalue $\theta$ is directly related to the probability that the initial state is marked (in the case where $P_0$ is a projector onto only the initial state).  Since the eigenphases of $Q$ are $2\theta = 2\sin^{-1}(\sqrt{\Pr(success)})$, it then follows that if you apply phase estimation to $Q$, you can learn the probability of success for a unitary quantum procedure.  This approach is useful because it requires quadratically fewer applications of the quantum procedure to learn the success probability than would otherwise be needed.
 
 Q# introduces amplitude amplification as a specialization of **oblivious amplitude amplification**.  Oblivious amplitude amplification earns this moniker because the projector onto the initial eigenspace need not be a projector onto the initial state.  In this sense, the protocol is oblivious to the initial state.  The key application of oblivious amplitude amplification is in certain linear combinations of unitary Hamiltonian simulation methods, wherein the initial state is unknown but becomes entangled with an ancilla register in the simulation protocol.  If this ancilla register is measured to be a fixed value, say $0$, then such simulation methods apply the desired unitary transformation to the remaining qubits (called the system register).  All other measurement outcomes lead to failure, however.  Oblivious amplitude amplification allows the probability of success of this measurement to be boosted to $100\\%$ using the earlier reasoning.  Further, ordinary amplitude amplification corresponds to the case where the system register is empty.  This is why Q# uses oblivious amplitude amplification as its fundamental amplitude amplification subroutine.
 
@@ -49,12 +43,12 @@ Q# relates the single-qubit rotation phases to the reflection operator phases, a
 
 For background, you could start with [Standard Amplitude Amplification](https://arxiv.org/abs/quant-ph/0005055), move to an introduction to [Oblivious Amplitude Amplification](https://arxiv.org/abs/1312.1414), and finally, generalizations presented in [Low and Chuang](https://arxiv.org/abs/1610.06546). A nice overview presentation of this entire area as it relates to Hamiltonian Simulation was given by [Dominic Berry](http://www.dominicberry.org/presentations/Durban.pdf).
 
-## Quantum Fourier transform ##
+## Quantum Fourier transform
 
 The Fourier transform is a fundamental tool of classical analysis and is just as important for quantum computations.
 In addition, the efficiency of the **quantum Fourier transform** (QFT) far surpasses what is possible on a classical machine, which makes it one of the first tools of choice when designing a quantum algorithm.
 
-As an approximate generalization of the QFT, Q# provides the <xref:microsoft.quantum.canon.approximateqft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
+As an approximate generalization of the QFT, the Q# standard library provides the <xref:microsoft.quantum.canon.approximateqft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
 The approximate QFT requires the dyadic $Z$-rotation operation <xref:microsoft.quantum.intrinsic.rfrac> as well as the <xref:microsoft.quantum.intrinsic.h> operation.
 The input and output are assumed to be encoded in big-endian encoding; that is, the qubit with index `0` is encoded in the left-most (highest) bit of the binary integer representation.
 This aligns with [ket notation](xref:microsoft.quantum.concepts.dirac), as a register of three qubits in the state $\ket{100}$ corresponds to $q_0$ being in the state $\ket{1}$, while $q_1$ and $q_2$ are both in state $\ket{0}$.
@@ -63,7 +57,7 @@ In this case, all $Z$-rotations $2\pi/2^k$ where $k > a$ are removed from the QF
 It is known that for $k \ge \log_2(n) + \log_2(1 / \epsilon) + 3$, you can bound $\\| \operatorname{QFT} - \operatorname{AQFT} \\| < \epsilon$.
 The operator norm here is $\\|\cdot\\|$, which in this case, is the square root of the largest [eigenvalue](xref:microsoft.quantum.concepts.matrix-advanced) of $(\operatorname{QFT} - \operatorname{AQFT})(\operatorname{QFT} - \operatorname{AQFT})^\dagger$.
 
-## Arithmetic ##
+## Arithmetic
 
 Just as arithmetic plays a central role in classical computing, it is also indispensable in quantum computing.  Algorithms such as Shor's factoring algorithm, quantum simulation methods as well as many oracular algorithms rely upon coherent arithmetic operations.  Most approaches to arithmetic build upon quantum adder circuits.  The simplest adder takes a classical input $b$ and adds the value to a quantum state holding an integer $\ket{a}$.  Mathematically, the adder (denoted as $\operatorname{Add}(b)$ for classical input $b$) has the property that
 
@@ -101,7 +95,7 @@ There is a subtlety with multiplication on quantum computers that you may notice
 
 Many quantum circuits have been proposed for addition, and each explores a different tradeoff in terms of the number of qubits (space) and the number of gate operations (time) required. Two highly space-efficient adders, the Draper adder and the Beauregard adder, are described here.
 
-### Draper adder ###
+### Draper adder
 
 The Draper adder is arguably one of the most elegant quantum adders, as it directly invokes quantum properties to perform addition.  The insight behind the Draper adder is that you can use the Fourier transform to translate phase shifts into a bit shift.  It then follows that by applying a Fourier transform, applying appropriate phase shifts, and then undoing the Fourier transform, you can implement an adder.  Unlike many other adders that have been proposed, the Draper adder explicitly uses quantum effects introduced through the quantum Fourier transform.  It does not have a natural classical counterpart.  The specific steps of the Draper adder are shown here.
 
@@ -131,7 +125,7 @@ This means that if you perform addition by incrementing each of the tensor facto
 
 Each controlled $e^{i2\pi/k}$ gate in the circuit refers to a controlled-phase gate.  Such gates have the property that, on the pair of qubits on which they act, $\ket{00}\mapsto \ket{00}$ but $\ket{11}\mapsto e^{i2\pi/k}\ket{11}$.  Using this circuit, you can perform addition using no additional qubits, apart from those needed to store the inputs and the outputs.
 
-### Beauregard adder ###
+### Beauregard adder
 
 The Beauregard adder is a quantum modular adder that uses the Draper adder to perform addition modulo $N$ for an arbitrary value positive integer $N$.  The significance of quantum modular adders, such as the Beauregard adder, stems to a large extent from their use in the modular exponentiation step within Shor's algorithm for factoring.  A quantum modular adder has the following action for quantum input $\ket{b}$ and classical input $a$ where $a$ and $b$ are promised to be integers mod $N$, meaning that they are in the interval $[0,\ldots, N-1]$.
 
@@ -145,9 +139,9 @@ The Beauregard adder uses the Draper adder, or more specifically $\phi\\\!\opera
 
 The gate $\Phi\\\!\operatorname{ADD}$ takes the same form as $\phi\\\!\operatorname{ADD}$ except that in this context, the input is classical rather than quantum.  This allows the controlled phases in $\Phi\\\!\operatorname{ADD}$ to be replaced with phase gates that can be compiled together into fewer operations. This replacement reduces both the number of qubits and the number of gates needed for the adder.
 
-For more details, please refer to [M. Roetteler, Th. Beth](http://doi.org/10.1007/s00200-008-0072-2 ) and [D. Coppersmith](https://arxiv.org/abs/quant-ph/0201067).
+For more details, refer to [M. Roetteler, Th. Beth](http://doi.org/10.1007/s00200-008-0072-2 ) and [D. Coppersmith](https://arxiv.org/abs/quant-ph/0201067).
 
-### Quantum phase estimation ###
+### Quantum phase estimation
 
 One particularly important application of the quantum Fourier transform is to learn the eigenvalues of unitary operators, a problem known as **phase estimation**.
 Consider a unitary $U$ and a state $\ket{\phi}$ such that $\ket{\phi}$ is an eigenstate of $U$ with unknown eigenvalue $\phi$,
@@ -186,6 +180,6 @@ Continuing in this way, you can obtain a register of the form
 where $n$ is the number of bits of precision required, and where you have used ${} \propto {}$ to indicate that you have suppressed the normalization factor of $1 / \sqrt{2^n}$.
 
 If you assume that $\phi = 2 \pi p / 2^k$ for an integer $p$, then you recognize this as $\ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n}$, where $p_j$ is the $j^{\textrm{th}}$ bit of $2 \pi \phi$.
-Therefor, applying the adjoint of the quantum Fourier transform, you can obtain the binary representation of the phase encoded as a quantum state.
+By applying the adjoint of the quantum Fourier transform, you can then obtain the binary representation of the phase encoded as a quantum state.
 
 In Q#, this is implemented by the <xref:microsoft.quantum.characterization.quantumphaseestimation> operation, which takes a <xref:microsoft.quantum.oracles.discreteoracle> implementing application of $U^m$ as a function of positive integers $m$.

@@ -1,9 +1,11 @@
 ---
 title: '%azure.connect (magic command)'
+description: Connects to an Azure Quantum workspace or displays current connection
+  status.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.connect
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/24/2020
 ms.topic: article
 ---
 
@@ -56,7 +58,9 @@ account at workspace creation time.
 - `WorkspaceNotFound`: No Azure Quantum workspace was found that matches the specified criteria.
 - `AuthenticationFailed`: Failed to authenticate to the specified Azure Quantum workspace.
 
-## Example
+## Examples for `%azure.connect`
+
+### Example 1
 
 Connect to an Azure Quantum workspace using its resource ID:
 ```
@@ -65,7 +69,7 @@ Out[]: Connected to Azure Quantum workspace WORKSPACE_NAME.
         <list of Q# execution targets available in the Azure Quantum workspace>
 ```
 
-## Example
+### Example 2
 
 Connect to an Azure Quantum workspace using its resource ID and a storage account connection string:
 ```
@@ -75,7 +79,7 @@ Out[]: Connected to Azure Quantum workspace WORKSPACE_NAME.
         <list of Q# execution targets available in the Azure Quantum workspace>
 ```
 
-## Example
+### Example 3
 
 Connect to an Azure Quantum workspace using individual subscription ID, resource group name, and workspace name parameters:
 ```
@@ -87,7 +91,7 @@ Out[]: Connected to Azure Quantum workspace WORKSPACE_NAME.
         <list of Q# execution targets available in the Azure Quantum workspace>
 ```
 
-## Example
+### Example 4
 
 Connect to an Azure Quantum workspace and force a credential prompt using
 the `refresh` option:
@@ -99,7 +103,7 @@ Out[]: To sign in, use a web browser to open the page https://microsoft.com/devi
         <list of Q# execution targets available in the Azure Quantum workspace>
 ```
 
-## Example
+### Example 5
 
 Print information about the currently-connected Azure Quantum workspace:
 ```

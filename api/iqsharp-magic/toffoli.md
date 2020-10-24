@@ -1,9 +1,10 @@
 ---
 title: '%toffoli (magic command)'
+description: Runs a given function or operation on the ToffoliSimulator target machine.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.toffoli
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/24/2020
 ms.topic: article
 ---
 
@@ -35,7 +36,9 @@ See the [ToffoliSimulator user guide](https://docs.microsoft.com/quantum/user-gu
 or function name that has been defined either in the notebook or in a Q# file in the same folder.
 - Arguments for the Q# operation or function must also be specified as `key=value` pairs.
 
-## Example
+## Examples for `%toffoli`
+
+### Example 1
 
 Use the ToffoliSimulator to simulate a Q# operation
 defined as `operation MyOperation() : Result`:
@@ -44,7 +47,7 @@ In []: %toffoli MyOperation
 Out[]: <return value of the operation>
 ```
 
-## Example
+### Example 2
 
 Use the ToffoliSimulator to simulate a Q# operation
 defined as `operation MyOperation(a : Int, b : Int) : Result`:

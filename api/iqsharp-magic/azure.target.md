@@ -1,9 +1,11 @@
 ---
 title: '%azure.target (magic command)'
+description: Sets or displays the active execution target for Q# job submission in
+  an Azure Quantum workspace.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.target
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/24/2020
 ms.topic: article
 ---
 
@@ -41,7 +43,9 @@ the currently active execution target is displayed.
 - `InvalidTarget`: The specified execution target is not valid for Q# job submission in the current Azure Quantum workspace.
 - `NoTarget`: No execution target has been configured for Azure Quantum job submission.
 
-## Example
+## Examples for `%azure.target`
+
+### Example 1
 
 Set the current target for Q# job submission to `provider.qpu`:
 ```
@@ -51,7 +55,7 @@ Out[]: Loading package Microsoft.Quantum.Providers.Provider and dependencies...
        <detailed properties of active execution target>
 ```
 
-## Example
+### Example 2
 
 Display the current target and all available targets in the current Azure Quantum workspace:
 ```

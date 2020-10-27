@@ -17,9 +17,9 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
-## Version X.XX.XXXXXXXX
+## Version 0.13.20102604
 
-*Release date: October 26th, 2020*
+*Release date: October 27th, 2020*
 
 This release contains the following:
 

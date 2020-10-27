@@ -15,7 +15,7 @@ This article describes the Q# type model and the syntax for specifying and worki
 
 We note that Q# is a *strongly-typed* language, such that careful use of these types can help the compiler to provide strong guarantees about Q# programs at compile time.
 To provide the strongest guarantees possible, conversions between types in Q# must be explicit using calls to functions which express that conversion. 
-Q# provides a variety of such functions as a part of the <xref:microsoft.quantum.convert> namespace.
+Q# provides a variety of such functions as a part of the <xref:Microsoft.Quantum.Convert> namespace.
 Upcasts to compatible types, on the other hand, happen implicitly. 
 
 Q# provides both primitive types, which are used directly, and a variety of ways to produce new types from other types.
@@ -284,7 +284,7 @@ The annotation `is Ctl` (for example, `(Qubit => Unit is Ctl)`) indicates that t
 Similarly, the annotation `is Adj` indicates that the operation has an adjoint, that is, it can be "inverted" such that successively applying an operation and then its adjoint to a state leaves the state unchanged. 
 
 If you want to require that an operation of that type supports both the `Adjoint` and `Controlled` functor you can express this as `(Qubit => Unit is Adj + Ctl)`. 
-For example, the built-in Pauli <xref:microsoft.quantum.intrinsic.x> operation has type `(Qubit => Unit is Adj + Ctl)`. 
+For example, the built-in Pauli <xref:Microsoft.Quantum.Intrinsic.X> operation has type `(Qubit => Unit is Adj + Ctl)`. 
 
 An operation type that does not support any functors is specified by its input and output type alone, with no additional annotation.
 

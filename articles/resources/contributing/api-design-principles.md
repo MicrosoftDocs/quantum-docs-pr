@@ -421,7 +421,7 @@ This article lists these principles, and gives examples to help guide how to app
         back out.
 
       *Examples:*
-      - @"microsoft.quantum.intrinsic.measure"
+      - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 

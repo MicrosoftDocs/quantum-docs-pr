@@ -30,7 +30,7 @@ When a new pull request is opened, for instance, our [Azure Pipelines](https://a
 With the latest Q# version, unit tests are defined using the `@Test("QuantumSimulator")` attribute. The argument may be either "QuantumSimulator", "ToffoliSimulator", "TraceSimulator", or any fully qualified name specifying the run target. Several attributes defining different run targets may be attached to the same callable. 
 Some of our tests still use the deprecated [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) package that exposes all Q# functions and operations ending in `Test` to the [xUnit](https://xunit.github.io/) framework. This package is no longer needed for defining unit tests. 
 
-The following function is used to ensure that the <xref:microsoft.quantum.canon.fst> and <xref:microsoft.quantum.canon.snd> functions both return the right outputs in a representative example.
+The following function is used to ensure that the <xref:Microsoft.Quantum.Canon.Fst> and <xref:Microsoft.Quantum.Canon.Snd> functions both return the right outputs in a representative example.
 If the output of `Fst` or `Snd` is incorrect, the `fail` statement is used to cause the test to fail.
 
 ```qsharp
@@ -51,7 +51,7 @@ function PairTest () : Unit {
 ```
 
 More complicated conditions can be checked using the techniques in the [testing section](xref:microsoft.quantum.libraries.diagnostics) of the standard libraries guide.
-For instance, the following test checks that `H(q); X(q); H(q);` as called by <xref:microsoft.quantum.canon.applywith> does the same thing as `Z(q)`.
+For instance, the following test checks that `H(q); X(q); H(q);` as called by <xref:Microsoft.Quantum.Canon.ApplyWith> does the same thing as `Z(q)`.
 
 ```Q#
 @Test("QuantumSimulator")

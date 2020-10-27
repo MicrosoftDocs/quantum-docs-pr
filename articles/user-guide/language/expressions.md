@@ -33,7 +33,7 @@ let bigOne = bigZero + 1L;
 They can be written with or without a decimal point, `.`, or an exponential part indicated with 'e' or 'E' (after which only a possible negative sign and decimal digits are valid).
 The following are valid `Double` literals: `0.0`, `1.2e5`, `1e-5`.
 
-Given an array expression of any element type, you can form an `Int` expression using the [`Length`](xref:microsoft.quantum.core.length) built-in function, with the array expression enclosed in parentheses.
+Given an array expression of any element type, you can form an `Int` expression using the [`Length`](xref:Microsoft.Quantum.Core.Length) built-in function, with the array expression enclosed in parentheses.
 For example, if `a` is bound to an array, then `Length(a)` is
 an integer expression.
 If `b` is an array of arrays of integers, `Int[][]`, then
@@ -135,7 +135,7 @@ a new Boolean expression that is true if the constituent expression is false.
 
 ## String expressions
 
-Q# allows strings to be used in the `fail` statement (explained in [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:microsoft.quantum.intrinsic.message) standard function. The specific behavior of the latter depends on the simulator used but typically writes a message to the host console when called during a Q# program.
+Q# allows strings to be used in the `fail` statement (explained in [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standard function. The specific behavior of the latter depends on the simulator used but typically writes a message to the host console when called during a Q# program.
 
 Strings in Q# are either literals or interpolated strings.
 
@@ -155,7 +155,7 @@ The Q# syntax for string interpolations is a subset of the C# syntax. Following 
 
 * To identify a string literal as an interpolated string, prepend it with the `$` symbol. There can be no white space between the `$` and the `"` that starts a string literal.
 
-* The following is a basic example using the [`Message`](xref:microsoft.quantum.intrinsic.message) function to write the result of a measurement to the console, alongside other Q# expressions.
+* The following is a basic example using the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) function to write the result of a measurement to the console, alongside other Q# expressions.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -285,7 +285,7 @@ In most cases, this is some variation of zero.
 For qubits and callables, which are references to entities, there is no reasonable default value.
 Thus, for these types, the default is an invalid reference that you cannot use without causing a runtime error, similar to a null reference in languages such as C# or Java.
 Arrays containing qubits or callables must be initialized with non-default values before you can use their elements safely. 
-For suitable initialization routines, see <xref:microsoft.quantum.arrays>.
+For suitable initialization routines, see <xref:Microsoft.Quantum.Arrays>.
 
 The default values for each type are:
 

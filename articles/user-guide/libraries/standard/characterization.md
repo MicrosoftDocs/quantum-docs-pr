@@ -33,7 +33,7 @@ This has the advantage that we only require a single additional qubit to perform
 Each of the methods proposed below uses a different strategy for designing experiments and different data processing methods to learn the phase.  They each have unique advantage ranging from having rigorous error bounds, to the abilities to incorporate prior information, tolerate errors or run on memory limitted classical computers.
 
 In discussing iterative phase estimation, we will consider a unitary $U$ given as a black-box operation.
-As described in the section on oracles in [data structures](xref:microsoft.quantum.libraries.data-structures), the Q# canon models such operations by the <xref:microsoft.quantum.oracles.discreteoracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.
+As described in the section on oracles in [data structures](xref:microsoft.quantum.libraries.data-structures), the Q# canon models such operations by the <xref:Microsoft.Quantum.Oracles.DiscreteOracle> user-defined type, defined by the tuple type `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.
 Concretely, if `U : DiscreteOracle`, then `U(m)` implements $U^m$ for `m : Int`.
 
 With this definition in place, each step of iterative phase estimation proceeds by preparing an auxiliary qubit in the $\ket{+}$ state along with the initial state $\ket{\phi}$ that we assume is an [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) of $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi}\ket{\phi}$.  
@@ -121,7 +121,7 @@ The prior distribution $\Pr(x)$ has support over $2^n$ hypothetical values of $x
 This means that if we need a highly accurate estimate of $x$ then Bayesian phase estimation may need prohibitive memory and processing time.
 While for some applications, such as quantum simulation, the limitted accuracy required does not preclude such methods other applications,
 such as Shor's algorithm, cannot use exact Bayesian inference within its phase estimation step.  For this reason, we also provide implementations
-for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) and also non-Bayesian approaches such as [robust phase estimation](xref:microsoft.quantum.characterization.robustphaseestimation).
+for approximate Bayesian methods such as [random walk phase estimation (RWPE)](xref:Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation) and also non-Bayesian approaches such as [robust phase estimation](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation).
 
 ### Robust Phase Estimation ###
 
@@ -148,9 +148,9 @@ Other relevant details include, say, the small space overhead of just $1$ ancill
 
 ### Continuous Oracles ###
 
-We can also generalize from the oracle model used above to allow for continuous-time oracles, modeled by the canon type <xref:microsoft.quantum.oracles.continuousoracle>.
+We can also generalize from the oracle model used above to allow for continuous-time oracles, modeled by the canon type <xref:Microsoft.Quantum.Oracles.ContinuousOracle>.
 Consider that instead of a single unitary operator $U$, we have a family of unitary operators $U(t)$ for $t \in \mathbb{R}$ such that $U(t) U(s)$ = $U(t + s)$.
-This is a weaker statement than in the discrete case, since we can construct a <xref:microsoft.quantum.oracles.discreteoracle> by restricting $t = m\,\delta t$ for some fixed $\delta t$.
+This is a weaker statement than in the discrete case, since we can construct a <xref:Microsoft.Quantum.Oracles.DiscreteOracle> by restricting $t = m\,\delta t$ for some fixed $\delta t$.
 By [Stone's theorem](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U(t) = \exp(i H t)$ for some operator $H$, where $\exp$ is the matrix exponential as described in [advanced matrices](xref:microsoft.quantum.concepts.matrix-advanced).
 An eigenstate $\ket{\phi}$ of $H$ such that $H \ket{\phi} = \phi \ket{\phi}$ is then also an eigenstate of $U(t)$ for all $t$,
 \begin{equation}
@@ -182,7 +182,7 @@ The ability to step backwards also allows the algorithm to learn even if the ini
 
 Each phase estimation operation provided with the Q# canon takes a different set of inputs parameterizing the quality that we demand out of the final estimate $\hat{\phi}$.
 These various inputs, however, all share several inputs in common, such that partial application over the quality parameters results in a common signature.
-For example, the <xref:microsoft.quantum.characterization.robustphaseestimation> operation discussed in the next section has the following signature:
+For example, the <xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation> operation discussed in the next section has the following signature:
 
 ```qsharp
 operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double

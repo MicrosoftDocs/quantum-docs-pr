@@ -48,7 +48,7 @@ Explore the basics and fundamentals of quantum computing or dive deeper into qua
 |[Recognizing quantum gates](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|A series of exercises designed to get you familiar with the basic quantum gates in Q#. Includes exercises for basic single-qubit and multi-qubit gates, adjoint and controlled gates, and how to use gates to modify the state of a qubit.|
 |[Creating quantum superposition](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|Use these exercises to get familiar with the concept of superposition and programming in Q#. Includes exercises for basic single-qubit and multi-qubit gates, superposition, and flow control and recursion in Q#.|
 |[Distinguishing quantum states using measurements](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|Solve these exercises while learning about quantum measurement and orthogonal and non-orthogonal states. |
-|[Joint measurements](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Learn about joint parity measurements and how to use the [Measure](xref:microsoft.quantum.intrinsic.measure) operation to distinguish quantum states.|
+|[Joint measurements](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Learn about joint parity measurements and how to use the [Measure](xref:Microsoft.Quantum.Intrinsic.Measure) operation to distinguish quantum states.|
 
 ### Algorithms
 

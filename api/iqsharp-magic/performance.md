@@ -1,9 +1,10 @@
 ---
 title: '%performance (magic command)'
+description: Reports current performance metrics for this kernel.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.performance
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/26/2020
 ms.topic: article
 ---
 
@@ -31,7 +32,9 @@ Reports various performance metrics for the current IQ# kernel process, includin
 - User time
 - Total time
 
-## Example
+## Examples for `%performance`
+
+### Example 1
 
 Display performance metrics for the current IQ# kernel process:
 ```

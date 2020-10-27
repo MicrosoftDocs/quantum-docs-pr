@@ -211,11 +211,11 @@ The controlled-$U_a$ gate maps $\ket{x}$ to $\ket{(ax)\text{ mod } N}$ if the co
 To achieve $(a^nx)\text{ mod } N$,  we can simply apply controlled-$U_{a^n}$, where we calculate $a^n \text{ mod } N$ classically to plug into the quantum circuit.  
 The circuits to achieve such modular arithmetic have been described in the [quantum arithmetic documentation](./algorithms.md#arithmetic), specifically we require a modular exponentiation circuit to implement the controlled-$U\_{a^i}$ operations.
 
-While the circuit above corresponds to [Quantum Phase Estimation](xref:microsoft.quantum.characterization.quantumphaseestimation) and explicitly enables order finding, we can reduce the number of qubits required. We can either follow Beauregard's method for order finding as described 
+While the circuit above corresponds to [Quantum Phase Estimation](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) and explicitly enables order finding, we can reduce the number of qubits required. We can either follow Beauregard's method for order finding as described 
 [on Page 8 of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), or 
 use one of the phase estimation routines available in Microsoft.Quantum.Characterization. For example, 
 [Robust Phase Estimation](xref:microsoft.quantum.characterization.robustphaseestimation) also uses one extra qubit.
- 
+
 ### Factoring ###
 The goal of factoring is to determine the two prime factors of integer $N$, where $N$ is an $n$-bit number.  
 Factoring consists of the steps described below. The steps are split into three parts: a classical preprocessing routine (1-4); a quantum computing routine to find the order of $a \text{ mod } N$ (5); and a classical postprocessing routine to derive the prime factors from the order (6-9).

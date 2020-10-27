@@ -123,13 +123,46 @@ The resources estimator tracks the following metrics:
 |__Measure__    |The run count of any measurements.  |
 |__R__    |The run count of any single-qubit rotations, excluding `T`, Clifford and Pauli operations.  |
 |__T__    |The run count of `T` operations and their conjugates, including the `T` operations, T_x = H.T.H, and T_y = Hy.T.Hy.  |
-|__Depth__|The lower bound for the depth of the quantum circuit run by the Q# operation. By default, the depth metric only counts `T` gates. For more details, see [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Width__    |The lower bound for the maximum number of qubits allocated during the run of the Q# operation. It might not be possible to achieve both __Depth__ and __Width__ lower bounds simultaneously.  |
+|__Depth__|Depth of the quantum circuit run by the Q# operation (see [below](#depth-width-and-qubitcount)). By default, the depth metric only counts `T` gates. For more details, see [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Width__|Width of the quantum circuit run by the Q# operation (see [below](#depth-width-and-qubitcount)). By default, the depth metric only counts `T` gates. For more details, see [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__QubitCount__    |The lower bound for the maximum number of qubits allocated during the run of the Q# operation. This metric might not be compatible with __Depth__ (see below).  |
 |__BorrowedWidth__    |The maximum number of qubits borrowed inside the Q# operation.  |
+
+
+## Depth, Width, and QubitCount
+
+Reported Depth and Width estimates are compatible with each other.
+(Previously both numbers were achievable, but different circuits would be required for Depth and for Width.)
+Currently both metrics in this pair can be achieved by the same circuit at the same time.
+
+The following metrics are reported:
+
+__Depth:__
+For the root operation - time it takes to execute it assuming specific gate times.
+For operations called or subsequent operations - time difference between latest qubit availability time at the beginning and the end of the operation.
+
+__Width:__
+For the root operation - number of qubits actually used to execute it (and operation it calls).
+For operations called or subsequent operations - how many more qubits were used in addition to the qubits already used at the beginning of the operation.
+
+Please note, that reused qubits do not contribute to this number.
+I.e. if a few qubits have been released before operation A starts, and all qubit demanded by this operation A (and operations called from A) were satisfied by reusing previously release qubits, the Width of operation A is reported as 0. Successfully borrowed qubits do not contribute to the Width either.
+
+__QubitCount:__
+For the root operation - minimum number of qubits that would be sufficient to execute this operation (and operations called from it).
+For operations called or subsequent operations - minimum number of qubits that would be sufficient to execute this operation separately. This number doesn't include input qubits. It does include borrowed qubits.
+
+Two modes of operation are supported. Mode is selected by setting QCTraceSimulatorConfiguration.OptimizeDepth.
+
+__OptimizeDepth=true:__
+QubitManager is discouraged from qubit reuse and allocates new qubit every time it is asked for a qubit. For the root operation __Depth__ becomes the minimum depth (lower bound). Compatible __Width__ is reported for this depth (both can be achieved at the same time). Note, that this width will likely be not optimal given this depth. __QubitCount__ may be lower than Width for the root operation because it assumes reuse.
+
+__OptimizeDepth=false:__
+QubitManager is encouraged to reuse qubits and will reuse released qubits before allocating new ones. For the root operation __Width__ becomes the minimal width (lower bound). Compatible __Depth__ is reported on which it can be achieved. __QubitCount__ will be the same as __Width__ for the root operation assuming no borrowing.
 
 ## Providing the probability of measurement outcomes
 
-You can use <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> from the <xref:microsoft.quantum.diagnostics> namespace to provide information about the expected probability of a measurement operation. For more information, see [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+You can use <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> from the <xref:Microsoft.Quantum.Diagnostics> namespace to provide information about the expected probability of a measurement operation. For more information, see [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
 ## See also
 

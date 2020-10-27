@@ -25,7 +25,7 @@ var sim = new QCTraceSimulator(config);
 
 ## Using the width counter in a C# host program
 
-The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:microsoft.quantum.intrinsic.x> operation, based on the following Q# sample code:
+The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation, based on the following Q# sample code:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -37,7 +37,7 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-The multiply controlled <xref:microsoft.quantum.intrinsic.x> operation acts on a total of five qubits, allocates two [ancillary qubits](xref:microsoft.quantum.glossary#ancilla), and has an input width of **5**. Use the following C# program to verify the counts:
+The multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation acts on a total of five qubits, allocates two [ancillary qubits](xref:microsoft.quantum.glossary#ancilla), and has an input width of **5**. Use the following C# program to verify the counts:
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();

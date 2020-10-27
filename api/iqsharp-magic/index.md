@@ -1,16 +1,17 @@
 ---
 title: IQ# Magic Commands
+description: Lists the magic commands available in the IQ# Jupyter kernel.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/26/2020
 ms.topic: article
 ---
 # IQ# Magic Commands
 | Magic Command | Summary |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Connects to an Azure Quantum workspace or displays current connection status. |
-| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Executes a job in an Azure Quantum workspace. |
+| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Submits a job to an Azure Quantum workspace and waits for completion. |
 | [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs) | Displays a list of jobs in the current Azure Quantum workspace. |
 | [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output) | Displays results for a job in the current Azure Quantum workspace. |
 | [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status) | Displays status for a job in the current Azure Quantum workspace. |
@@ -23,6 +24,7 @@ ms.topic: article
 | [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load) | Loads the fermion Hamiltonian for an electronic structure problem. The problem is loaded from a file or passed as an argument. |
 | [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load) | Loads Broombridge electronic structure problem and returns selected input state. |
 | [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config) | Allows setting or querying configuration options. |
+| [`%debug`](xref:microsoft.quantum.iqsharp.magic-ref.debug) | Steps through the execution of a given Q# operation or function. |
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Runs a given function or operation on the ResourcesEstimator target machine. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Executes a single test. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Returns a list of all currently available magic commands. |

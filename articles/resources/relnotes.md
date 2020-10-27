@@ -17,6 +17,15 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version 0.13.20102604
+
+*Release date: October 27th, 2020*
+
+This release contains the following:
+
+- Improved IQ# debug user experience, to help developers better understand the inner workings of their quantum applications, and more easily identify logic errors. Created visualizations of a particular execution path of a quantum application, as well as the state at a point during the program execution.
+- Implemented a way for resource estimation to produce simultaneously achievable depth and width estimates.
+
 ## Version 0.12.20100504
 
 *Release date: October 5th, 2020*

@@ -23,8 +23,9 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 This release contains the following:
 
-- Improved IQ# debug user experience, to help developers better understand the inner workings of their quantum applications, and more easily identify logic errors. Created visualizations of a particular execution path of a quantum application, as well as the state at a point during the program execution.
-- Implemented a way for resource estimation to produce simultaneously achievable depth and width estimates.
+- Resource estimation now emits simultaneously achievable depth and width estimates in addition to the qubit count. See [here](xref:microsoft.quantum.machines.resources-estimator#metrics-reported) for details.
+
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22).
 
 ## Version 0.12.20100504
 

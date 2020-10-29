@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorFunction
 title: _JordanWignerClusterOperatorFunction function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 10/29/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner

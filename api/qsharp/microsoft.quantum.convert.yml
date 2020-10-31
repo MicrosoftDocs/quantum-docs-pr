@@ -47,6 +47,6 @@ name: Microsoft.Quantum.Convert
 newtypes: []
 operations:
 - {summary: Calls a function with a given input., uid: Microsoft.Quantum.Convert.Call}
-summary: This namespace contains functions for converting between various Q# data
-  types.
+summary: These are some of the functions from System.Convert namespace of .NET CLR
+  that are relevant within Q# type system.
 uid: Microsoft.Quantum.Convert

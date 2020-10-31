@@ -93,5 +93,6 @@ operations:
     \ pair of qubits on the respective registers. All qubits must start in the |0\u27E9\
     \ state.\nThe result is that corresponding pairs of qubits from each register\
     \ are in the $\\bra{\\beta_{00}}\\ket{\\beta_{00}}$.", uid: Microsoft.Quantum.Diagnostics._prepareEntangledState}
-summary: ''
+summary: This namespace contains functions and operations useful for diagnostic purposes,
+  including assert operations and claim functions.
 uid: Microsoft.Quantum.Diagnostics

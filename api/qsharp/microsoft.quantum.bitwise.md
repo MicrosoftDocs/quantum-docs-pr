@@ -1,16 +1,14 @@
 ---
 uid: Microsoft.Quantum.Bitwise
 title: Microsoft.Quantum.Bitwise namespace
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 10/30/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Bitwise
-qsharp.summary: >-
-  This namespace contains functions for acting on the bitwise representation of
-  classical data types.
+qsharp.summary: ''
 ---
 
 # Microsoft.Quantum.Bitwise namespace
 
-This namespace contains functions for acting on the bitwise representation ofclassical data types.
+
 

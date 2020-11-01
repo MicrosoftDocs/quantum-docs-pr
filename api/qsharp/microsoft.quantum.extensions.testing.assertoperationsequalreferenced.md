@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualReferenced
 title: AssertOperationsEqualReferenced operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/1/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Extensions.Testing

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.ContinuedFractionConvergentI
 title: ContinuedFractionConvergentI function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/1/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math

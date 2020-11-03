@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.R1Frac
 title: R1Frac operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/3/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic

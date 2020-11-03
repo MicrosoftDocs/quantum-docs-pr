@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionallyCA
 title: ApplyConditionallyCA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/3/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions

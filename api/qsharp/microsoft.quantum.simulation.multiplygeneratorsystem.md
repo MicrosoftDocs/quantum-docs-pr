@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.MultiplyGeneratorSystem
 title: MultiplyGeneratorSystem function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/4/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation

@@ -55,6 +55,17 @@
           "variance": "\\operatorname{Var}",
           "defeq": "\\mathrel{:=}",
           "dd": "\\mathrm{d}"
+        },
+        "**/**.md": {
+          "ket": ["\\left| #1\\right\\rangle", 1],
+          "bra": ["\\left\\langle #1\\right|", 1],
+          "braket": [ "\\left\\langle #1 \\right\\rangle", 1 ],
+          "id": "\\mathbb{1}",
+          "boldone": "\\mathbf{1}",
+          "expect": "\\mathbb{E}",
+          "variance": "\\operatorname{Var}",
+          "defeq": "\\mathrel{:=}",
+          "dd": "\\mathrm{d}"
         }
       }
     },

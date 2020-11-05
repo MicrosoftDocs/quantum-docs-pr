@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Logical.EqualL
 title: EqualL function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/5/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Ry
 title: Ry operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/6/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -23,13 +23,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Applies a rotation about the $y$-axis by a given angle.\begin{align}R_y(\theta) \mathrel{:=}e^{-i \theta \sigma_y / 2} =\begin{bmatrix}\cos \frac{\theta}{2} & -\sin \frac{\theta}{2}  \\\\\sin \frac{\theta}{2} & \cos \frac{\theta}{2}\end{bmatrix}.\end{align}
 
 ```qsharp
-operation Ry (theta : Double, qubit : Qubit) : Unit
+operation Ry (theta : Double, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

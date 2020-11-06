@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.AdiabaticStateEnergyUnitary
 title: AdiabaticStateEnergyUnitary operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/6/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -18,7 +18,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Performs state preparation by applying a`statePrepUnitary` on the input state, followed by adiabatic statepreparation using a `adiabaticUnitary`, and finally phase estimationwith respect to `qpeUnitary`on the resulting state using a`phaseEstAlgorithm`.

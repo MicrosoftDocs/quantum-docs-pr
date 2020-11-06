@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Oracles.ReflectionOracle
 title: ReflectionOracle user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/6/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Oracles
@@ -19,7 +19,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Oracles](xref:Microsoft.Quantum.Oracles)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Represents a reflection oracle.A reflection oracle, $O$, has inputs:- The phase $\phi$ by which to rotate the reflected subspace.- The qubit register on which to perform the given reflection.

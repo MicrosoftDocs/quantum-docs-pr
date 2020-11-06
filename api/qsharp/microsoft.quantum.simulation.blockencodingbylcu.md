@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.BlockEncodingByLCU
 title: BlockEncodingByLCU function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/6/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -20,7 +20,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Encodes an operator of interest into a `BlockEncoding`.This constructs a `BlockEncoding` unitary $U=P\cdot V\cdot P^\dagger$ that encodes someoperator $H=\sum_{j}|\alpha_j|U_j$ of interest that is a linear combination ofunitaries. Typically, $P$ is a state preparation unitary such that$P\ket{0}\_a=\sum_j\sqrt{\alpha_j/\|\vec\alpha\|\_2}\ket{j}\_a$,and $V=\sum_{j}\ket{j}\bra{j}\_a\otimes U_j$.

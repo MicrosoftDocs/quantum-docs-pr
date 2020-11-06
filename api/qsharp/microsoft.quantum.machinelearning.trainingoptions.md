@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainingOptions
 title: TrainingOptions user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/6/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning

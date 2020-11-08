@@ -3,9 +3,10 @@ title: Quantum circuits
 description: Learn how to visually represent simple and complex quantum operations with quantum circuit diagrams. 
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
-ms.author: nawiebe@microsoft.com
+ms.author: v-benbra
 ms.date: 12/11/2017
 ms.topic: article
+no-loc: ['Q#', '$$v', '$$', "$$", '$', "$", $, $$, '\cdots', 'bmatrix', '\ddots', '\equiv', '\sum', '\begin', '\end', '\sqrt', '\otimes', '{', '}', '\text', '\phi', '\kappa', '\psi', '\alpha', '\beta', '\gamma', '\delta', '\omega', '\bra', '\ket', '\boldone', '\\\\', '\\', '=', '\frac', '\text', '\mapsto', '\dagger', '\to', '\begin{cases}', '\end{cases}', '\operatorname', '\braket', '\id', '\expect', '\defeq', '\variance', '\dd', '&', '\begin{align}', '\end{align}', '\Lambda', '\lambda', '\Omega', '\mathrm', '\left', '\right', '\qquad', '\times', '\big', '\langle', '\rangle', '\bigg', '\Big', '|', '\mathbb', '\vec', '\in', '\texttt', '\ne', '<', '>', '\leq', '\geq', '~~', '~', '\begin{bmatrix}', '\end{bmatrix}', '\_']
 ---
 
 # Quantum Circuits
@@ -34,7 +35,7 @@ For example, the symbol
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Symbol for a Hadamard operation acting on a single-qubit register](~/media/2.svg)
 
-is a [Hadamard](xref:microsoft.quantum.intrinsic.h) operation acting on a single-qubit register.
+is a [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) operation acting on a single-qubit register.
 
 Quantum gates are ordered in chronological order with the left-most gate as the gate first applied to the qubits.
 In other words, if you picture the wires as holding the quantum state, the wires bring the quantum state through each of the gates in the diagram from left to right.
@@ -77,7 +78,7 @@ In general, we describe such controlled operations in circuit diagrams as
 ![Circuit diagram of a singly controlled gate](~/media/5.svg)
 
 Here the black circle denotes the quantum bit on which the gate is controlled and a vertical wire denotes the unitary that is applied when the control qubit takes the value $1$.
-For the special cases where $G=X$ and $G=Z$ we introduce the following notation to describe the controlled version of the gates (note that the controlled-X gate is the [$CNOT$ gate](xref:microsoft.quantum.intrinsic.cnot)):
+For the special cases where $G=X$ and $G=Z$ we introduce the following notation to describe the controlled version of the gates (note that the controlled-X gate is the [$CNOT$ gate](xref:Microsoft.Quantum.Intrinsic.CNOT)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -102,7 +103,7 @@ Specifically, such a subcircuit looks like:
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Symbol representing a measurement operation](~/media/7.svg)
 
-Q# implements a [Measure operator](xref:microsoft.quantum.intrinsic.measure) for this purpose.
+Q# implements a [Measure operator](xref:Microsoft.Quantum.Intrinsic.Measure) for this purpose.
 See the [section on measurements](xref:microsoft.quantum.libraries.standard.prelude#measurements) for more information.
 
 Similarly, the subcircuit

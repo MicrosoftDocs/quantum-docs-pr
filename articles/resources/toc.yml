@@ -1,0 +1,11 @@
+- name: Build your skills with MS Learn
+  href: https://docs.microsoft.com/learn/paths/quantum-computing-fundamentals/
+- name: Glossary
+  href: glossary.md
+- name: Contributing to the QDK
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: QDK Release Notes
+  href: relnotes.md
+- name: Further reading
+  href: further-reading.md

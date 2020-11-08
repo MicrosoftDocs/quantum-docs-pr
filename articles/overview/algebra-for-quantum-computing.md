@@ -2,10 +2,11 @@
 title: Linear algebra for quantum computing
 description: Learn what basic linear algebra concepts are needed to understand quantum computing
 author: bradben
-ms.author:  bradben
+ms.author:  v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
+no-loc: ['Q#', '$$v']
 ---
 
 # Linear algebra for quantum computing
@@ -14,8 +15,8 @@ Linear algebra is the language of quantum computing. Although you don’t need t
 
 Just like being familiar with the [basic concepts of quantum physics](xref:microsoft.quantum.overview.understanding) can help you understand quantum computing, knowing some basic linear algebra can help you understand how quantum algorithms work. At the least, you’ll want to be familiar with **vectors** and **matrix multiplication**. If you need to refresh your knowledge of these algebra concepts, here are some tutorials that cover the basics:
 
-- [Jupyter notebook tutorial on linear algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
-- [Jupyter notebook tutorial on complex arithmetic](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+- [Jupyter notebook tutorial on linear algebra](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
+- [Jupyter notebook tutorial on complex arithmetic](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
 - [Linear Algebra for Quantum Computation](https://cds.cern.ch/record/1522001/files/978-1-4614-6336-8_BookBackMatter.pdf)
 - [Fundamentals of Linear Algebra](https://www.math.ubc.ca/~carrell/NB.pdf)
 - [Quantum Computation Primer](https://www.codeproject.com/Articles/5155638/Quantum-Computation-Primer-Part-1#exploring-quantum-superposition)
@@ -33,7 +34,7 @@ In [Quantum computers and quantum simulators](xref:microsoft.quantum.overview.si
 Here are two common quantum operations represented with matrix multiplication.
 
 
-The [`X` operation](xref:microsoft.quantum.intrinsic.x) is represented by the Pauli matrix $X$,
+The [`X` operation](xref:Microsoft.Quantum.Intrinsic.X) is represented by the Pauli matrix $X$,
 
 $$X = \begin{bmatrix}
         0 & 1 \\\\
@@ -44,7 +45,7 @@ and is used to flip the state of a qubit from 0 to 1 (or vice-versa), for exampl
 
 $$\begin{bmatrix}0 &1\\\\ 1 &0\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}.$$
 
-The ['H' operation](xref:microsoft.quantum.intrinsic.h) is represented by the Hadamard transformation $H$,
+The ['H' operation](xref:Microsoft.Quantum.Intrinsic.H) is represented by the Hadamard transformation $H$,
 
 $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
@@ -60,11 +61,7 @@ In the examples above, the state of one qubit was described using a single colum
 
 Remember that each qubit is a vector space, so they can't just be multiplied. Instead, you use a **tensor product**, which is a related operation that creates a new vector space from individual vector spaces, and is represented by the $\otimes$ symbol. For example, the tensor product of two qubit states $\begin{bmatrix} a \\\\  b \end{bmatrix}$ and $\begin{bmatrix} c \\\\  d \end{bmatrix}$ is calculated
 
-$$
-\begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} 
-=\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix}
-= \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}.
-$$
+$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}. $$
 
 The result is a four-dimensional matrix, with each element representing a probability. For example, $ac$ is the probability of the two qubits collapsing to 0 and 0, $ad$ is the probability of 0 and 1, and so on. 
 

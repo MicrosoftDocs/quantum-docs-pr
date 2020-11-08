@@ -2,15 +2,16 @@
 title: Understanding quantum computing
 description: What are quantum computers and how do they use the principles of quantum mechanics?
 author: bradben
-ms.author:  bradben
+ms.author:  v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.understanding
+no-loc: ['Q#', '$$v']
 ---
 
 # Understanding quantum computing
 
-Quantum computing uses the principles of quantum mechanics to process information. Because of this, quantum computing requires a different approach than classical computing.  One example of this difference is the processor used in quantum computers.  Where classical computers use familiar silicon-based chips, quantum computers use quantum materials such as atoms, ions, photons, or electrons.  
+Quantum computing uses the principles of quantum mechanics to process information. Because of this, quantum computing requires a different approach than classical computing. One example of this difference is the processor used in quantum computers. Where classical computers use familiar silicon-based chips, quantum computers use quantum systems such as atoms, ions, photons, or electrons. They use their quantum properties to represent bits that can be prepared in different quantum superpositions of 1 and 0.  
 
 The quantum material behaves according to the laws of quantum mechanics, leveraging concepts such as probabilistic computation, superposition, and entanglement. These concepts provide the basis for quantum algorithms that harness the power of quantum computing to solve complex problems. This article describes some of the essential concepts of quantum mechanics on which quantum computing is based.
 

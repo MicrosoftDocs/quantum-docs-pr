@@ -1,7 +1,10 @@
 ---
 title: '%chemistry.encode (magic command)'
+description: Encodes a fermion Hamiltonian to a format consumable by Q#.
+author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.encode
-ms.date: '2020-06-02'
+ms.author: ryansha
+ms.date: 10/26/2020
 ms.topic: article
 ---
 

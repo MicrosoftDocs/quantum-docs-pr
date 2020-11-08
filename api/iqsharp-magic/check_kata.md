@@ -1,7 +1,10 @@
 ---
 title: '%check_kata (magic command)'
+description: Checks the reference implementation for a single kata's test.
+author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.check_kata
-ms.date: '2020-06-02'
+ms.author: ryansha
+ms.date: 10/26/2020
 ms.topic: article
 ---
 
@@ -10,7 +13,7 @@ ms.topic: article
         please do not manually edit it.
 
     [DEBUG] JSON source:
-        {"Name": "%check_kata", "Documentation": {"Summary": "Checks the reference implementation for a single kata's test.", "Full": null, "Description": "Substitutes the reference implementation for a single task into the cell, and reports whether the test passed successfully using the reference implementation.", "Remarks": null, "Examples": ["To check a test called `Test`:\n```\nIn []: %check_kata T101_StateFlip_Test \n", "  ...: operation StateFlip (q : Qubit) : Unit is Adj + Ctl {\n", "           // The Pauli X gate will change the |0\u27e9 state to the |1\u27e9 state and vice versa.\n", "           // Type X(q);\n", "           // Then run the cell using Ctrl/\u2318+Enter.\n", "\n", "           // ...\n", "       }\nOut[]: Success!```\n"], "SeeAlso": null}, "AssemblyName": "Microsoft.Quantum.Katas"}
+        {"Name": "%check_kata", "Documentation": {"Summary": "Checks the reference implementation for a single kata's test.", "Full": null, "Description": "Substitutes the reference implementation for a single task into the cell, and reports whether the test passed successfully using the reference implementation.", "Remarks": null, "Examples": ["To check a test called `Test`:\n```\nIn []: %check_kata T101_StateFlip \n", "  ...: operation StateFlip (q : Qubit) : Unit is Adj + Ctl {\n", "           // The Pauli X gate will change the |0\u27e9 state to the |1\u27e9 state and vice versa.\n", "           // Type X(q);\n", "           // Then run the cell using Ctrl/\u2318+Enter.\n", "\n", "           // ...\n", "       }\nOut[]: Success!```\n"], "SeeAlso": null}, "AssemblyName": "Microsoft.Quantum.Katas"}
 -->
 
 # `%check_kata`
@@ -23,33 +26,35 @@ Checks the reference implementation for a single kata's test.
 
 Substitutes the reference implementation for a single task into the cell, and reports whether the test passed successfully using the reference implementation.
 
-## Example
+## Examples for `%check_kata`
+
+### Example 1
 
 To check a test called `Test`:
 ```
-In []: %check_kata T101_StateFlip_Test
+In []: %check_kata T101_StateFlip
 
-## Example
+### Example 2
 
 ...: operation StateFlip (q : Qubit) : Unit is Adj + Ctl {
 
-## Example
+### Example 3
 
 // The Pauli X gate will change the |0⟩ state to the |1⟩ state and vice versa.
 
-## Example
+### Example 4
 
 // Type X(q);
 
-## Example
+### Example 5
 
 // Then run the cell using Ctrl/⌘+Enter.
 
-## Example
+### Example 7
 
 // ...
 
-## Example
+### Example 8
 
 }
 Out[]: Success!```

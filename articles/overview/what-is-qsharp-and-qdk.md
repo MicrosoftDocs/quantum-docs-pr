@@ -2,21 +2,22 @@
 title: What are the Q# programming language and QDK?
 description: Learn about the Microsoft Quantum Development Kit, the Q# programming language, and how you can create quantum programs.
 author: bradben
-ms.author:  bradben
+ms.author:  v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
+no-loc: ['Q#', '$$v']
 ---
 
 # What are the Q# programming language and QDK?
 
-Q# is Microsoft’s open-source programming language for developing and running quantum algorithms. It’s part of the Quantum Development Kit (QDK), which includes [Q# libraries](xref:microsoft.quantum.libraries), [quantum simulators](xref:microsoft.quantum.machines), [extensions for other programming environments](xref:microsoft.quantum.install), and [API documentation](xref:microsoft.quantum.standardlibsintro). In addition to the Standard Q# library, the QDK includes Chemistry, Machine Learning, and Numeric libraries.
+Q# is Microsoft’s open-source programming language for developing and running quantum algorithms. It’s part of the Quantum Development Kit (QDK), which includes [Q# libraries](xref:microsoft.quantum.libraries), [quantum simulators](xref:microsoft.quantum.machines), [extensions for other programming environments](xref:microsoft.quantum.install), and [API documentation](xref:microsoft.quantum.apiref-intro). In addition to the Standard Q# library, the QDK includes Chemistry, Machine Learning, and Numeric libraries.
 
 As a programming language, Q# draws familiar elements from Python, C#, and F# and supports a basic procedural model for writing programs with loops, if/then statements, and common data types. It also introduces new quantum-specific data structures and operations.
 
 ## What can I do with the QDK?
 
-The QDK is a full-featured development kit for Q# that you can use with common tools and languages to develop quantum applications that you can run in various environments. Q# programs can run as a command-line app, through Jupyter Notebooks, or use a Python or .NET host program.
+The QDK is a full-featured development kit for Q# that you can use with common tools and languages to develop quantum applications that you can run in various environments. Q# programs can run as a console application, through Jupyter Notebooks, or use a Python or .NET host program.
 
 ### Develop in common tools and environments
 
@@ -40,19 +41,19 @@ Run your quantum programs on a full-state quantum simulator, a limited-scope Tof
 
 ## How does Q# work?
 
-A Q# program can compile into a standalone command line application or be called by a host program that is written either in Python or a .NET language.
+A Q# program can compile into a standalone application or be called by a host program that is written either in Python or a .NET language.
 
 When you compile and run the program, it creates an instance of the quantum simulator and passes the Q# code to it. The simulator uses the Q# code to create qubits (simulations of quantum particles) and apply transformations to modify their state. The results of the quantum operations in the simulator are then returned to the program.  
 
 Isolating the Q# code in the simulator ensures that the algorithms follow the laws of quantum physics and can run correctly on quantum computers.
 
-![qsharp-code-flow](~/media/qsharp-code-flow.png)
+![Qsharp code flow](~/media/qsharp-code-flow.png)
 
 ## How do I use the QDK?
 
 Everything you need to write and run Q# programs, including the Q# compiler, the Q# libraries, and the quantum simulators, can be installed and run from your local computer. Eventually you will be able to run your Q# programs remotely on an actual quantum computer, but until then the quantum simulators provided with the QDK provide accurate and reliable results.
 
-- Running [Q# from the command line](xref:microsoft.quantum.install.standalone) is the quickest way to get started.
+- Developing [Q# applications](xref:microsoft.quantum.install.standalone) is the quickest way to get started.
 
 - Run standalone [Jupyter Notebooks with IQ#](xref:microsoft.quantum.install.jupyter), a Jupyter extension for compiling, simulating, and visualizing Q# programs.
 

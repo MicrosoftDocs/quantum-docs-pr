@@ -6,6 +6,7 @@ ms.author: bradben
 ms.date: 04/01/2020
 ms.topic: article
 uid: microsoft.quantum.tutorial-template
+no-loc: ['Q#']
 
 # title: <title should express the intent of the article. Google displays the title on the search results page, best to keep length to 60-65 characters including spaces. For example "Tutorial: Write and simulate qubit-level programs in Q#">
 # description: <Description of the tutorial for SEO - this text also appears on the search results page> 
@@ -14,6 +15,7 @@ uid: microsoft.quantum.tutorial-template
 # ms.date: 04/01/2020
 # ms.topic: tutorial
 # uid: microsoft.quantum.tutorial.<unique name for tutorial>
+# no-loc: ['Q#']
 
 # For future contributors, describe the customer intent of the tutorial
 # Customer intent: As a <type of user>, I want to <what?> so that <why>.

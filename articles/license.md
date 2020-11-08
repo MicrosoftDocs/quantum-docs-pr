@@ -5,7 +5,7 @@ description: License terms, disclaimers and user rights for the Microsoft Quantu
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019
-
+no-loc: ['Q#', '$$v']
 ---
 
 # MICROSOFT SOFTWARE LICENSE TERMS 

@@ -4,7 +4,7 @@
       {
         "files": [
           "**/*.md",
-          "*.yml"
+          "**/*.yml"
         ],
         "src": ".",
         "dest": "",
@@ -43,7 +43,9 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/quantum-docs-pr",
       "feedback_product_url": "https://github.com/Microsoft/quantum/issues",
-      "titleSuffix": "Microsoft Quantum"
+      "titleSuffix": "Microsoft Quantum",
+      "breadcrumb_path": "/quantum/breadcrumb/toc.json",
+      "extendBreadcrumb": true
     },
     "fileMetadata": {
       "latex_macros": {

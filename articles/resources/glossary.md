@@ -94,7 +94,7 @@ A variable whose value may be changed after it is created. A mutable variable in
 
 ## Namespace
 
-A label for a collection of related names (i.e., [operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function), and [user-defined types](xref:microsoft.quantum.glossary#user-defined-type)). For instance the namespace [Microsoft.Quantum.Preparation](xref:microsoft.quantum.preparation) labels all of the symbols defined in the standard library that help with preparing initial states.
+A label for a collection of related names (i.e., [operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function), and [user-defined types](xref:microsoft.quantum.glossary#user-defined-type)). For instance the namespace [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation) labels all of the symbols defined in the standard library that help with preparing initial states.
 
 ## Operation
 

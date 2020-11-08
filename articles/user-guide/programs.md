@@ -2,7 +2,7 @@
 title: Q# Introdution
 description: Quick introduction into quantum programs in Q#
 author: beheim
-ms.author: beheim@microsoft.com
+ms.author: beheim
 ms.date: 11/08/2020
 ms.topic: article
 uid: microsoft.quantum.guide.programs

@@ -1,7 +1,7 @@
 - name: Overview/Contents
   href: index.md
-- name: Q# basics
-  href: basics.md
+- name: Q# programs
+  href: programs.md
 - name: Ways to run a Q# program
   href: host-programs.md
 - name: Q# language

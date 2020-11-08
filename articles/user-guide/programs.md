@@ -1,11 +1,11 @@
 ---
-title: Q# Basics
-description: Basic concepts of Q#
-author: gillenhaalb
-ms.author: a-gibec@microsoft.com
-ms.date: 02/28/2020
+title: Q# Introdution
+description: Quick introduction into quantum programs in Q#
+author: beheim
+ms.author: beheim@microsoft.com
+ms.date: 11/08/2020
 ms.topic: article
-uid: microsoft.quantum.guide.basics
+uid: microsoft.quantum.guide.programs
 ---
 
 # Q# Quantum Programming Language

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Core.Length
 title: Length function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/9/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Core
@@ -13,7 +13,7 @@ qsharp.summary: Returns the number of elements in an array.
 
 Namespace: [Microsoft.Quantum.Core](xref:Microsoft.Quantum.Core)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Returns the number of elements in an array.

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.MeasureInteger
 title: MeasureInteger operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/9/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Measures the content of a quantum register and convertsit to an integer. The measurement is performed with respectto the standard computational basis, i.e., the eigenbasis of `PauliZ`.

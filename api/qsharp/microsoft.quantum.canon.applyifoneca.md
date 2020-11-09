@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOneCA
 title: ApplyIfOneCA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/9/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,13 +13,13 @@ qsharp.summary: Applies a unitary operation conditioned on a classical result va
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies a unitary operation conditioned on a classical result value being one.
 
 ```qsharp
-operation ApplyIfOneCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit
+operation ApplyIfOneCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit is Adj + Ctl
 ```
 
 
@@ -34,7 +34,7 @@ Given an operation `op` and a result value `result`, applies `op` to the `target
 A measurement result that controls whether op is applied or not.
 
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 An operation to be conditionally applied.
 

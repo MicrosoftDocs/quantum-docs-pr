@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance
 title: AssertQubitIsInStateWithinTolerance operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/9/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -19,7 +19,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Asserts that a qubit in the expected state.`expected` represents a complex vector, $\ket{\psi} = \begin{bmatrix}a & b\end{bmatrix}^{\mathrm{T}}$.The first element of the tuples representing each of $a$, $b$is the real part of the complex number, while the second one is the imaginary part.The last argument defines the tolerance with which assertion is made.

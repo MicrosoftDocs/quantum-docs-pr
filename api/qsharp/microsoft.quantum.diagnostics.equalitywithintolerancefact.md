@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact
 title: EqualityWithinToleranceFact function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/9/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Represents the claim that a classical floating point value has theexpected value up to a givenabsolute tolerance.

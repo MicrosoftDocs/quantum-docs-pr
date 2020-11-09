@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfElseRA
 title: ApplyIfElseRA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/9/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
@@ -13,13 +13,13 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyIfElseRA<'T, 'U> (measurementResult : Result, (onResultZeroOp : ('T => Unit is Adj), zeroArg : 'T), (onResultOneOp : ('U => Unit is Adj), oneArg : 'U)) : Unit
+operation ApplyIfElseRA<'T, 'U> (measurementResult : Result, (onResultZeroOp : ('T => Unit is Adj), zeroArg : 'T), (onResultOneOp : ('U => Unit is Adj), oneArg : 'U)) : Unit is Adj
 ```
 
 
@@ -30,7 +30,7 @@ operation ApplyIfElseRA<'T, 'U> (measurementResult : Result, (onResultZeroOp : (
 
 
 
-### onResultZeroOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### onResultZeroOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 
 
@@ -40,7 +40,7 @@ operation ApplyIfElseRA<'T, 'U> (measurementResult : Result, (onResultZeroOp : (
 
 
 
-### onResultOneOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### onResultOneOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 
 

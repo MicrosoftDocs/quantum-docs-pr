@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.MaskToQubitsPair
 title: MaskToQubitsPair function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/9/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -13,7 +13,7 @@ qsharp.summary: Transform mask of control and target bits to a pair of control q
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Transform mask of control and target bits to a pair of control qubits and target qubits

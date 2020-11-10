@@ -59,9 +59,10 @@ The likelihood function which is the training utility for the classifier is very
 
 #### How to modify the hyperparameters
 
-In the QML library, the best way to modify the hyperparameters is by overriding the default values of the UDT [`TrainingOptions`](xref:microsoft.quantum.machinelearning.trainingoptions). To do this we call it with the function [`DefaultTrainingOptions`](xref:microsoft.quantum.machinelearning.defaulttrainingoptions) and apply the operator `w/` to override the default values. For example, to use 100,000 measurements and a learning rate of 0.01:
- ```qsharp
+In the QML library, the best way to modify the hyperparameters is by overriding the default values of the UDT [`TrainingOptions`](xref:Microsoft.Quantum.MachineLearning.TrainingOptions). To do this we call it with the function [`DefaultTrainingOptions`](xref:Microsoft.Quantum.MachineLearning.DefaultTrainingOptions) and apply the operator `w/` to override the default values. For example, to use 100,000 measurements and a learning rate of 0.01:
+
+```qsharp
 let options = DefaultTrainingOptions()
 w/ LearningRate <- 0.01
 w/ NMeasurements <- 100000;
- ```
+```

@@ -131,7 +131,7 @@ For the example of `ControlledOnBitString`, we might write something like the fo
  }
 ```
 
-You can see the rendered version of the code above in the [API documentation for the `ControlledOnBitString` function](xref:microsoft.quantum.canon.controlledonbitstring).
+You can see the rendered version of the code above in the [API documentation for the `ControlledOnBitString` function](xref:Microsoft.Quantum.Canon.ControlledOnBitString).
 
 In addition to the general practice of documentation writing, in writing API documentation comments it helps to keep a few things in mind:
 

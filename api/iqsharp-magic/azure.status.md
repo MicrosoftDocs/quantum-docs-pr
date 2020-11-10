@@ -1,9 +1,10 @@
 ---
 title: '%azure.status (magic command)'
+description: Displays status for a job in the current Azure Quantum workspace.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.status
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/26/2020
 ms.topic: article
 ---
 
@@ -40,7 +41,9 @@ or [`%azure.execute`](https://docs.microsoft.com/qsharp/api/iqsharp-magic/azure.
 - `NotConnected`: Not connected to any Azure Quantum workspace.
 - `JobNotFound`: No job with the given ID was found in the current Azure Quantum workspace.
 
-## Example
+## Examples for `%azure.status`
+
+### Example 1
 
 Get the status of a specific job:
 ```
@@ -48,7 +51,7 @@ In []: %azure.status JOB_ID
 Out[]: <detailed status of specified job>
 ```
 
-## Example
+### Example 2
 
 Get the status of the most recently submitted job:
 ```

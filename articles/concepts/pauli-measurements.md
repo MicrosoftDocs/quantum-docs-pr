@@ -55,7 +55,7 @@ These measurements are given below for convenience.
 | $X$               | $H$                    |
 | $Y$               | $HS^{\dagger}$         |
 
-That is, using this language, "measure $Y$" is equivalent to applying $HS^\dagger$ and then measuring in the computational basis, where [`S`](xref:microsoft.quantum.intrinsic.s) is an intrinsic quantum operation sometimes called the "phase gate," and can be simulated by the unitary matrix
+That is, using this language, "measure $Y$" is equivalent to applying $HS^\dagger$ and then measuring in the computational basis, where [`S`](xref:Microsoft.Quantum.Intrinsic.S) is an intrinsic quantum operation sometimes called the "phase gate," and can be simulated by the unitary matrix
 
 $$
 \begin{align}
@@ -127,7 +127,7 @@ We enumerate the transformations in the following table.
 >     \end{matrix}\right)
 > \end{align}
 > $$
-> used to simulate the intrinsic operation [`SWAP`](xref:microsoft.quantum.intrinsic).
+> used to simulate the intrinsic operation [`SWAP`](xref:Microsoft.Quantum.Intrinsic).
 
 |Pauli Measurement     |Unitary transformation  |
 |----------------------|------------------------|
@@ -147,7 +147,7 @@ We enumerate the transformations in the following table.
 | $X\otimes Y$ | $\operatorname{CNOT}\_{10}(H\otimes HS^\dagger)$ |
 | $Y\otimes Y$ | $\operatorname{CNOT}\_{10}(HS^\dagger\otimes HS^\dagger)$ |
 
-Here, the [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) operation appears for the following reason.
+Here, the [`CNOT`](xref:Microsoft.Quantum.Intrinsic.CNOT) operation appears for the following reason.
 Each Pauli measurement that does not include the $\boldone$ matrix is equivalent up to a unitary to $Z\otimes Z$ by the above reasoning.
 The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector, and the controlled-not operations serve to compute this parity and store it in the first bit.
 Then once the first bit is measured, we can recover the identity of the resultant half-space, which is equivalent to measuring the Pauli operator.
@@ -175,7 +175,7 @@ In Q#, such measurements return $j$ if the measurement yields a result in the ei
 Having Pauli measurements as a built-in feature in Q# is helpful because measuring such operators requires long chains of controlled-NOT gates and basis transformations to describe the diagonalizing $U$ gate needed to express the operation as a tensor product of $Z$ and $\id$.
 By being able to specify that you wish to do one of these pre-defined measurements, you don't need to worry about how to transform your basis such that a computational basis measurement provides the necessary information.
 Q# handles all the necessary basis transformations for you automatically.
-For more information, see the [`Measure`](xref:microsoft.quantum.intrinsic.measure) and [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) operations.
+For more information, see the [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) and [`MeasurePaulis`](xref:Microsoft.Quantum.Measurement.MeasurePaulis) operations.
 
 ## The No-Cloning Theorem
 

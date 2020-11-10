@@ -1,9 +1,10 @@
 ---
 title: '%chemistry.fh.add_terms (magic command)'
+description: Adds terms to a fermion Hamiltonian.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/26/2020
 ms.topic: article
 ---
 

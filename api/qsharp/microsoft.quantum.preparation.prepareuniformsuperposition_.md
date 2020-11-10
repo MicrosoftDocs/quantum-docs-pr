@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition_
 title: PrepareUniformSuperposition_ operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/10/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -13,13 +13,13 @@ qsharp.summary: Implementation step of <xref:microsoft.quantum.canon.prepareunif
 
 Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementation step of <xref:microsoft.quantum.canon.prepareuniformsuperposition>
 
 ```qsharp
-operation PrepareUniformSuperposition_ (nIndices : Int, nQubits : Int, idxFlag : Int, qubits : Qubit[]) : Unit
+operation PrepareUniformSuperposition_ (nIndices : Int, nQubits : Int, idxFlag : Int, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

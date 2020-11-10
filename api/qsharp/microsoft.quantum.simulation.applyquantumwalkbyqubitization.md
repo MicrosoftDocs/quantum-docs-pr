@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.ApplyQuantumWalkByQubitization
 title: ApplyQuantumWalkByQubitization operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/10/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -13,13 +13,13 @@ qsharp.summary: Implementation of `Qubitization`.
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementation of `Qubitization`.
 
 ```qsharp
-operation ApplyQuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection, auxiliary : Qubit[], system : Qubit[]) : Unit
+operation ApplyQuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection, auxiliary : Qubit[], system : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

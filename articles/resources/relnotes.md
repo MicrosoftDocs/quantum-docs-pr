@@ -17,6 +17,14 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version 0.13.20111004
+
+*Release date: November 10th, 2020*
+
+This release disables IntelliSense features for Q# files in Visual Studio and Visual Studio Code
+when a project file is not present. This resolves an issue where IntelliSense features may stop
+working after adding a new Q# file to a project (see [qsharp-compiler#720](https://github.com/microsoft/qsharp-compiler/issues/720)).
+
 ## Version 0.13.20102604
 
 *Release date: October 27th, 2020*

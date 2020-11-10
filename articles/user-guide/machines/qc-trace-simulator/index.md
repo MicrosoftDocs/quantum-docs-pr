@@ -50,7 +50,7 @@ namespace Quantum.MyProgram
 
 Because the quantum trace simulator does not simulate the actual quantum state, it cannot calculate the probability of measurement outcomes within an operation. 
 
-Therefore, if an operation includes measurements, you must explicitly provide these probabilities using the <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> operation from the <xref:microsoft.quantum.diagnostics> namespace. The following example illustrates this:
+Therefore, if an operation includes measurements, you must explicitly provide these probabilities using the <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> operation from the <xref:Microsoft.Quantum.Diagnostics> namespace. The following example illustrates this:
 
 ```qsharp
 operation TeleportQubit(source : Qubit, target : Qubit) : Unit {

@@ -17,7 +17,7 @@ The Q# compiler and the target machines included with the Quantum Development Ki
 
 The intrinsic operations defined in the standard library roughly fall into one of several categories:
 
-- Essential classical functions, collected in the <xref:microsoft.quantum.core> namespace.
+- Essential classical functions, collected in the <xref:Microsoft.Quantum.Core> namespace.
 - Operations representing unitaries composed of [Clifford and $T$ gates](xref:microsoft.quantum.concepts.qubit).
 - Operations representing rotations about various operators.
 - Operations implementing measurements.
@@ -28,7 +28,7 @@ By providing rotations as well, Q# allows the programmer to work within the sing
 Where possible, the operations defined in the prelude which act on qubits allow for applying the `Controlled` variant, such that the target machine will perform the appropriate decomposition.
 
 Many of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.intrinsic" namespace, such that most Q# source files will have an `open Microsoft.Quantum.Intrinsic;` directive immediately following the initial namespace declaration.
-The <xref:microsoft.quantum.core> namespace is automatically opened, so that functions such as <xref:microsoft.quantum.core.length> can be used without an `open` statement at all.
+The <xref:Microsoft.Quantum.Core> namespace is automatically opened, so that functions such as <xref:Microsoft.Quantum.Core.Length> can be used without an `open` statement at all.
 
 ### Common Single-Qubit Unitary Operations ###
 
@@ -37,7 +37,7 @@ All of these operations allow both the `Controlled` and `Adjoint` functors.
 
 #### Pauli Operators ####
 
-The <xref:microsoft.quantum.intrinsic.x> operation implements the Pauli $X$ operator.
+The <xref:Microsoft.Quantum.Intrinsic.X> operation implements the Pauli $X$ operator.
 This is sometimes also known as the `NOT` gate.
 It has signature `(Qubit => Unit is Adj + Ctl)`.
 It corresponds to the single-qubit unitary:
@@ -49,7 +49,7 @@ It corresponds to the single-qubit unitary:
     \end{bmatrix}
 \end{equation}
 
-The <xref:microsoft.quantum.intrinsic.y> operation implements the Pauli $Y$ operator.
+The <xref:Microsoft.Quantum.Intrinsic.Y> operation implements the Pauli $Y$ operator.
 It has signature `(Qubit => Unit is Adj + Ctl)`.
 It corresponds to the single-qubit unitary:
 
@@ -60,7 +60,7 @@ It corresponds to the single-qubit unitary:
     \end{bmatrix}
 \end{equation}
 
-The <xref:microsoft.quantum.intrinsic.z> operation implements the Pauli $Z$ operator.
+The <xref:Microsoft.Quantum.Intrinsic.Z> operation implements the Pauli $Z$ operator.
 It has signature `(Qubit => Unit is Adj + Ctl)`.
 It corresponds to the single-qubit unitary:
 
@@ -87,7 +87,7 @@ This can be visualised on the Bloch sphere:
 
 #### Other Single-Qubit Cliffords ####
 
-The <xref:microsoft.quantum.intrinsic.h> operation implements the Hadamard gate.
+The <xref:Microsoft.Quantum.Intrinsic.H> operation implements the Hadamard gate.
 This interchanges the Pauli $X$ and $Z$ axes of the target qubit, such that $H\ket{0} = \ket{+} \mathrel{:=} (\ket{0} + \ket{1}) / \sqrt{2}$ and $H\ket{+} = \ket{0}$.
 It has signature `(Qubit => Unit is Adj + Ctl)`,
 and corresponds to the single-qubit unitary:
@@ -104,7 +104,7 @@ The Hadamard gate is particularly important as it can be used to create a superp
 
 ![Hadamard operation mapped onto the Bloch sphere](~/media/prelude_hadamardBloch.png)
 
-The <xref:microsoft.quantum.intrinsic.s> operation implements the phase gate $S$.
+The <xref:Microsoft.Quantum.Intrinsic.S> operation implements the phase gate $S$.
 This is the matrix square root of the Pauli $Z$ operation.
 That is, $S^2 = Z$.
 It has signature `(Qubit => Unit is Adj + Ctl)`,
@@ -130,11 +130,11 @@ We start by recalling that we can express any single-qubit operation using the $
         0 & e^{i \pi / 4}
     \end{bmatrix}
 \end{equation}
-This is the square root of the <xref:microsoft.quantum.intrinsic.s> operation, such that $T^2 = S$.
-The $T$ gate is in turn implemented by the <xref:microsoft.quantum.intrinsic.t> operation, and has signature `(Qubit => Unit is Adj + Ctl)`, indicating that it is a unitary operation on a single-qubit.
+This is the square root of the <xref:Microsoft.Quantum.Intrinsic.S> operation, such that $T^2 = S$.
+The $T$ gate is in turn implemented by the <xref:Microsoft.Quantum.Intrinsic.T> operation, and has signature `(Qubit => Unit is Adj + Ctl)`, indicating that it is a unitary operation on a single-qubit.
 
 Even though this is in principle sufficient to describe any arbitrary single-qubit operation, different target machines may have more efficient representations for rotations about Pauli operators, such that the prelude includes a variety of ways to convienently express such rotations.
-The most basic of these is the <xref:microsoft.quantum.intrinsic.r> operation, which implements a rotation around a specified Pauli axis,
+The most basic of these is the <xref:Microsoft.Quantum.Intrinsic.r> operation, which implements a rotation around a specified Pauli axis,
 \begin{equation}
     R(\sigma, \phi) \mathrel{:=}
     \exp(-i \phi \sigma / 2),
@@ -145,7 +145,7 @@ We can partially apply $\sigma$ and $\phi$ to obtain an operation whose type is 
 For example, `R(PauliZ, PI() / 4, _)` has type `(Qubit => Unit is Adj + Ctl)`.
 
 > [!NOTE]
-> The <xref:microsoft.quantum.intrinsic.r> operation divides the input angle by 2 and multiplies it by -1.
+> The <xref:Microsoft.Quantum.Intrinsic.r> operation divides the input angle by 2 and multiplies it by -1.
 > For $Z$ rotations, this means that the $\ket{0}$ eigenstate is rotated by $-\phi / 2$ and the
 > $\ket{1}$ eigenstate is rotated by $\phi / 2$, so that the $\ket{1}$ eigenstate is rotated by $\phi$
 > relative to the $\ket{0}$ eigenstate.
@@ -156,32 +156,32 @@ For example, `R(PauliZ, PI() / 4, _)` has type `(Qubit => Unit is Adj + Ctl)`.
 > Note also that rotating around `PauliI` simply applies a global phase of $\phi / 2$. While such phases are irrelevant, as argued in [the conceptual documents](xref:microsoft.quantum.concepts.qubit), they are relevant for controlled `PauliI` rotations.
 
 Within quantum algorithms, it is often useful to express rotations as dyadic fractions, such that $\phi = \pi k / 2^n$ for some $k \in \mathbb{Z}$ and $n \in \mathbb{N}$.
-The <xref:microsoft.quantum.intrinsic.rfrac> operation implements a rotation around a specified Pauli axis using this convention.
-It differs from <xref:microsoft.quantum.intrinsic.r> in that the rotation angle is specified as two inputs of type `Int`, interpreted as a dyadic fraction.
+The <xref:Microsoft.Quantum.Intrinsic.RFrac> operation implements a rotation around a specified Pauli axis using this convention.
+It differs from <xref:Microsoft.Quantum.Intrinsic.R> in that the rotation angle is specified as two inputs of type `Int`, interpreted as a dyadic fraction.
 Thus, `RFrac` has signature `((Pauli, Int, Int, Qubit) => Unit is Adj + Ctl)`.
 It implements the single-qubit unitary $\exp(i \pi k \sigma / 2^n)$, where $\sigma$ is the Pauli matrix
 corresponding to the first argument, $k$ is the second argument, and $n$ is the third argument.
 `RFrac(_,k,n,_)` is the same as `R(_,-πk/2^n,_)`; note that the angle is the *negative*
 of the fraction.
 
-The <xref:microsoft.quantum.intrinsic.rx> operation implements a rotation around the Pauli $X$ axis.
+The <xref:Microsoft.Quantum.Intrinsic.Rx> operation implements a rotation around the Pauli $X$ axis.
 It has signature `((Double, Qubit) => Unit is Adj + Ctl)`.
 `Rx(_, _)` is the same as `R(PauliX, _, _)`.
 
-The <xref:microsoft.quantum.intrinsic.ry> operation implements a rotation around the Pauli $Y$ axis.
+The <xref:Microsoft.Quantum.Intrinsic.Ry> operation implements a rotation around the Pauli $Y$ axis.
 It has signature `((Double, Qubit) => Unit is Adj + Ctl)`.
 `Ry(_, _)` is the same as `R(PauliY,_ , _)`.
 
-The <xref:microsoft.quantum.intrinsic.rz> operation implements a rotation around the Pauli $Z$ axis.
+The <xref:Microsoft.Quantum.Intrinsic.Rz> operation implements a rotation around the Pauli $Z$ axis.
 It has signature `((Double, Qubit) => Unit is Adj + Ctl)`.
 `Rz(_, _)` is the same as `R(PauliZ, _, _)`.
 
-The <xref:microsoft.quantum.intrinsic.r1> operation implements a rotation by the given amount around $\ket{1}$, the
+The <xref:Microsoft.Quantum.Intrinsic.R1> operation implements a rotation by the given amount around $\ket{1}$, the
 $-1$ eigenstate of $Z$.
 It has signature `((Double, Qubit) => Unit is Adj + Ctl)`.
 `R1(phi,_)` is the same as `R(PauliZ,phi,_)` followed by `R(PauliI,-phi,_)`.
 
-The <xref:microsoft.quantum.intrinsic.r1frac> operation implements a fractional rotation by the given amount around the
+The <xref:Microsoft.Quantum.Intrinsic.R1Frac> operation implements a fractional rotation by the given amount around the
 Z=1 eigenstate.
 It has signature `((Int,Int, Qubit) => Unit is Adj + Ctl)`.
 `R1Frac(k,n,_)` is the same as `RFrac(PauliZ,-k.n+1,_)` followed by `RFrac(PauliI,k,n+1,_)`.
@@ -194,7 +194,7 @@ An example of a rotation operation (around the Pauli $Z$ axis, in this instance)
 
 In addition to the single-qubit operations above, the prelude also defines several multi-qubit operations.
 
-First, the <xref:microsoft.quantum.intrinsic.cnot> operation performs a standard controlled-`NOT` gate,
+First, the <xref:Microsoft.Quantum.Intrinsic.CNOT> operation performs a standard controlled-`NOT` gate,
 \begin{equation}
     \operatorname{CNOT} \mathrel{:=}
     \begin{bmatrix}
@@ -208,11 +208,11 @@ It has signature `((Qubit, Qubit) => Unit is Adj + Ctl)`, representing that $\op
 `CNOT(q1, q2)` is the same as `(Controlled X)([q1], q2)`.
 Since the `Controlled` functor allows for controlling on a register, we use the array literal `[q1]` to indicate that we want only the one control.
 
-The <xref:microsoft.quantum.intrinsic.ccnot> operation performs doubly-controlled NOT gate, sometimes also known as the Toffoli gate.
+The <xref:Microsoft.Quantum.Intrinsic.CCNOT> operation performs doubly-controlled NOT gate, sometimes also known as the Toffoli gate.
 It has signature `((Qubit, Qubit, Qubit) => Unit is Adj + Ctl)`.
 `CCNOT(q1, q2, q3)` is the same as `(Controlled X)([q1, q2], q3)`.
 
-The <xref:microsoft.quantum.intrinsic.swap> operation swaps the quantum states of two qubits.
+The <xref:Microsoft.Quantum.Intrinsic.SWAP> operation swaps the quantum states of two qubits.
 That is, it implements the unitary matrix
 \begin{equation}
     \operatorname{SWAP} \mathrel{:=}
@@ -233,7 +233,7 @@ It has signature `((Qubit, Qubit) => Unit is Adj + Ctl)`.
 > The controlled-SWAP gate, also known as the Fredkin gate, is powerful enough to include all classical computation.
 
 Finally, the prelude provides two operations for representing exponentials of multi-qubit Pauli operators.
-The <xref:microsoft.quantum.intrinsic.exp> operation performs a rotation based on a tensor product of Pauli matrices, as represented by the multi-qubit unitary
+The <xref:Microsoft.Quantum.Intrinsic.Exp> operation performs a rotation based on a tensor product of Pauli matrices, as represented by the multi-qubit unitary
 \begin{equation}
     \operatorname{Exp}(\vec{\sigma}, \phi) \mathrel{:=}
     \exp\left(i \phi \sigma_0 \otimes \sigma_1 \otimes \cdots \otimes \sigma_n \right),
@@ -241,7 +241,7 @@ The <xref:microsoft.quantum.intrinsic.exp> operation performs a rotation based o
 where $\vec{\sigma} = (\sigma_0, \sigma_1, \dots, \sigma_n)$ is a sequence of single-qubit Pauli operators, and where $\phi$ is an angle.
 The `Exp` rotation represents $\vec{\sigma}$ as an array of `Pauli` elements, such that it has signature `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`.
 
-The <xref:microsoft.quantum.intrinsic.expfrac> operation performs the same rotation, using the dyadic fraction notation discussed above.
+The <xref:Microsoft.Quantum.Intrinsic.ExpFrac> operation performs the same rotation, using the dyadic fraction notation discussed above.
 It has signature `((Pauli[], Int, Int, Qubit[]) => Unit is Adj + Ctl)`.
 
 > [!WARNING]
@@ -259,7 +259,7 @@ When measuring, the +1 eigenvalue of the operator being measured corresponds to 
 
 Measurement operations support neither the `Adjoint` nor the `Controlled` functor.
 
-The <xref:microsoft.quantum.intrinsic.measure> operation performs a joint measurement of one or more qubits in the specified product of Pauli operators.
+The <xref:Microsoft.Quantum.Intrinsic.Measure> operation performs a joint measurement of one or more qubits in the specified product of Pauli operators.
 If the Pauli array and qubit array are different lengths,
 then the operation fails.
 `Measure` has signature `((Pauli[], Qubit[]) => Result)`.
@@ -274,10 +274,10 @@ This property will be essential later, as we discuss error correction.
 
 For convenience, the prelude also provides two other operations for measuring qubits.
 First, since performing single-qubit measurements is quite common, the prelude defines a shorthand for this case.
-The <xref:microsoft.quantum.intrinsic.m> operation measures the Pauli $Z$ operator on a single qubit, and has signature `(Qubit => Result)`.
+The <xref:Microsoft.Quantum.Intrinsic.M> operation measures the Pauli $Z$ operator on a single qubit, and has signature `(Qubit => Result)`.
 `M(q)` is equivalent to `Measure([PauliZ], [q])`.
 
-The <xref:microsoft.quantum.measurement.multim> measures the Pauli $Z$ operator *separately* on each of an array of qubits, returning the *array* of `Result` values obtained for each qubit.
+The <xref:microsoft.quantum.measurement.MultiM> measures the Pauli $Z$ operator *separately* on each of an array of qubits, returning the *array* of `Result` values obtained for each qubit.
 In some cases this can be optimized. 
 It has signature (`Qubit[] => Result[])`.
 `MultiM(qs)` is equivalent to:
@@ -294,14 +294,14 @@ return rs;
 ## Extension Functions and Operations ##
 
 In addition, the prelude defines a rich set of mathematical and type conversion functions at the .NET level for use within Q# code.
-For instance, the <xref:microsoft.quantum.math> namespace defines useful operations such as <xref:microsoft.quantum.math.sin> and <xref:microsoft.quantum.math.log>.
+For instance, the <xref:Microsoft.Quantum.Math> namespace defines useful operations such as <xref:Microsoft.Quantum.Math.Sin> and <xref:Microsoft.Quantum.Math.Log>.
 The implementation provided by the Quantum Development Kit uses the classical .NET base class library, and thus may involve an additional communications round trip between quantum programs and their classical drivers.
 While this does not present a problem for a local simulator, this can be a performance issue when using a remote simulator or actual hardware as a target machine.
 That said, an individual target machine may mitigate this performance impact by overriding these operations with versions that are more efficient for that particular system.
 
 ### Math ###
 
-The <xref:microsoft.quantum.math> namespace provides many useful functions from the .NET base class library's [`System.Math` class](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true).
+The <xref:Microsoft.Quantum.Math> namespace provides many useful functions from the .NET base class library's [`System.Math` class](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true).
 These functions can be used in the same manner as any other Q# functions:
 
 ```qsharp
@@ -320,5 +320,5 @@ let y = AbsD(-PI()); // y : Double = 3.1415...
 
 ### Bitwise Operations ###
 
-Finally, the <xref:microsoft.quantum.bitwise> namespace provides several useful functions for manipulating integers through bitwise operators.
-For instance, <xref:microsoft.quantum.bitwise.parity> returns the bitwise parity of an integer as another integer.
+Finally, the <xref:Microsoft.Quantum.Bitwise> namespace provides several useful functions for manipulating integers through bitwise operators.
+For instance, <xref:Microsoft.Quantum.Bitwise.Parity> returns the bitwise parity of an integer as another integer.

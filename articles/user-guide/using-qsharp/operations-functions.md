@@ -26,7 +26,7 @@ An operation declaration consists of the keyword `operation`, followed by the sy
 
 Each operation takes an input, produces an output, and specifies the implementation for one or more operation specializations.
 The possible specializations, and how to define and call them, are detailed in the different sections of this article.
-For now, consider the following operation, which defines only a default body specialization and takes a single qubit as its input, then calls the built-in <xref:microsoft.quantum.intrinsic.x> operation on that input:
+For now, consider the following operation, which defines only a default body specialization and takes a single qubit as its input, then calls the built-in <xref:Microsoft.Quantum.Intrinsic.X> operation on that input:
 
 ```qsharp
 operation BitFlip(target : Qubit) : Unit {
@@ -40,7 +40,7 @@ Lastly, `Unit` defines that the operation's output is empty.
 `Unit` is used similarly to `void` in C# and other imperative languages and is equivalent to `unit` in F# and other functional languages.
 
 Operations can also return more interesting types than `Unit`.
-For instance, the <xref:microsoft.quantum.intrinsic.m> operation returns an output of type `Result`, representing having performed a measurement.  You can pass it from an operation to another operation or use it with the `let` keyword to define a new variable.
+For instance, the <xref:Microsoft.Quantum.Intrinsic.m> operation returns an output of type `Result`, representing having performed a measurement.  You can pass it from an operation to another operation or use it with the `let` keyword to define a new variable.
 
 This approach allows for representing classical computation that interacts with quantum operations at a low level, such as in [superdense coding](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding):
 
@@ -140,7 +140,7 @@ The `Controlled` and `Adjoint` functors commute, so there is no difference betwe
 
 In the first operation declaration in the previous examples, the operations `BitFlip` and `DecodeSuperdense` were defined with signatures `(Qubit => Unit)` and `((Qubit, Qubit) => (Result, Result))`, respectively.
 As `DecodeSuperdense` includes measurements, it is not a unitary operation, and therefore neither controlled not adjoint specializations could exist (recall the related requirement that such an operation return `Unit`).
-However, as `BitFlip` simply performs the unitary <xref:microsoft.quantum.intrinsic.x> operation, you could have defined it with both specializations.
+However, as `BitFlip` simply performs the unitary <xref:Microsoft.Quantum.Intrinsic.X> operation, you could have defined it with both specializations.
 
 This section details how to include the existence of specializations in your Q# operation declarations, hence giving them the ability to called in conjunction with the `Adjoint` or `Controlled` functors.
 For more information about some of the situations in which it is either valid or not valid to declare certain specializations, see [Circumstances for validly defining specializations](#circumstances-for-validly-defining-specializations) in this article.
@@ -423,7 +423,7 @@ operation U(target : Qubit) : Unit {
 
 Each time that `U` is called, it has a different action on `target`.
 In particular, the compiler cannot guarantee that if you add an `adjoint auto` specialization declaration to `U`, then `U(target); Adjoint U(target);` acts as identity (that is, as a no-op).
-This violates the definition of the adjoint defined in [Vectors and Matrices](xref:microsoft.quantum.concepts.vectors), such that allowing the compiler to auto-generate an adjoint specialization in an operation where you call the operation <xref:microsoft.quantum.math.randomreal> would break the guarantees provided by the compiler; <xref:microsoft.quantum.math.randomreal> is an operation for which no adjoint or controlled version exists.
+This violates the definition of the adjoint defined in [Vectors and Matrices](xref:microsoft.quantum.concepts.vectors), such that allowing the compiler to auto-generate an adjoint specialization in an operation where you call the operation <xref:Microsoft.Quantum.Math.RandomReal> would break the guarantees provided by the compiler; <xref:Microsoft.Quantum.Math.RandomReal> is an operation for which no adjoint or controlled version exists.
 
 On the other hand, allowing function calls such as `Square` is safe, and assures the compiler that it only needs to preserve the input to `Square` to keep its output stable.
 Thus, isolating as much classical logic as possible into functions makes it easy to reuse that logic in other functions and operations alike.
@@ -557,7 +557,7 @@ operation FirstClassExample(target : Qubit) : Unit {
 }
 ```
 
-The value of the variable `ourH` in the previous snippet is then the operation <xref:microsoft.quantum.intrinsic.h>, such that you can call that value like any other operation.
+The value of the variable `ourH` in the previous snippet is then the operation <xref:Microsoft.Quantum.Intrinsic.H>, such that you can call that value like any other operation.
 With this ability, you can write operations that take operations as a part of their input, forming higher-order control flow concepts.
 For instance, you could imagine wanting to "square" an operation by applying it twice to the same target qubit.
 

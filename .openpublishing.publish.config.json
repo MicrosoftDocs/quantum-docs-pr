@@ -48,14 +48,6 @@
       "template_folder": "_themes"
     }
   ],
-  "JoinTOCPlugin": [
-    {
-      "ReferenceTOC": "api/TOC.yml",
-      "ConceptualTOC": "articles/TOC.yml",
-      "ReferenceTOCUrl": "/qsharp/api/toc.json",
-      "ConceptualTOCUrl": "/quantum/toc.json"
-    }
-  ],
   "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
@@ -92,13 +84,24 @@
       "Pdf"
     ]
   },
-  
+
   "need_generate_pdf_url_template": true,
   "targets": {
-    "Pdf": {
+    "pdf": {
       "template_folder": "_themes.pdf"
     }
   },
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  },
+  "JoinTOCPlugin": [
+    {
+      "ReferenceTOC": "api/TOC.yml",
+      "ConceptualTOC": "articles/TOC.yml",
+      "ReferenceTOCUrl": "/qsharp/api/toc.json",
+      "ConceptualTOCUrl": "/quantum/toc.json"
+    }
+  ],
   "dependent_packages": [
     {
       "id": "Microsoft.OpenPublishing.CommonPlugins",
@@ -107,8 +110,5 @@
       "target_framework": "net45",
       "version": "latest"
     }
-  ],
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  }
+  ]
 }

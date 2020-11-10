@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._ApplyTwoQubitCase
 title: _ApplyTwoQubitCase operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/10/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -13,13 +13,13 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 
 
 ```qsharp
-operation _ApplyTwoQubitCase (datum : Double[], reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation _ApplyTwoQubitCase (datum : Double[], reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayA
 title: DelayA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/10/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,13 +13,13 @@ qsharp.summary: Applies a given operation with a delay.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies a given operation with a delay.
 
 ```qsharp
-operation DelayA<'T> (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit
+operation DelayA<'T> (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit is Adj
 ```
 
 
@@ -29,7 +29,7 @@ Given an operation and an input to that operation, appliesthe operation once an
 
 ## Input
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 An operation to be applied.
 

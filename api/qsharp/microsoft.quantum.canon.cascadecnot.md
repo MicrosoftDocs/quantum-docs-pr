@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.CascadeCNOT
 title: CascadeCNOT operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/10/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -21,7 +21,7 @@ qsharp.summary: >+
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -32,7 +32,7 @@ Package: [](https://nuget.org/packages/)
 
 
 ```qsharp
-operation CascadeCNOT (register : Qubit[]) : Unit
+operation CascadeCNOT (register : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

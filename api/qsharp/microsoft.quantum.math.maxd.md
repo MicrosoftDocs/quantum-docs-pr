@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.MaxD
 title: MaxD function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/11/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -13,7 +13,7 @@ qsharp.summary: Returns the larger of two specified numbers.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Returns the larger of two specified numbers.

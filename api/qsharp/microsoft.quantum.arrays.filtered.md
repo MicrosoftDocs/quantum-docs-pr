@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Filtered
 title: Filtered function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/11/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given an array and a predicate that is definedfor the elements of the array, returns an array that consists ofthose elements that satisfy the predicate.

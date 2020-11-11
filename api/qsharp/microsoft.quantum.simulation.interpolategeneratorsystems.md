@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.InterpolateGeneratorSystems
 title: InterpolateGeneratorSystems function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/11/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns a `TimeDependentGeneratorSystem` representing the linearinterpolation between two `GeneratorSystem`s.

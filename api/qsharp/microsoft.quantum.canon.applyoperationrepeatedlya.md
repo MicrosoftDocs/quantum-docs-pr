@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyA
 title: ApplyOperationRepeatedlyA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/11/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,19 +13,19 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
 
 ```qsharp
-operation ApplyOperationRepeatedlyA<'T> (op : ('T => Unit is Adj), power : Int, target : 'T) : Unit
+operation ApplyOperationRepeatedlyA<'T> (op : ('T => Unit is Adj), power : Int, target : 'T) : Unit is Adj
 ```
 
 
 ## Input
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 
 

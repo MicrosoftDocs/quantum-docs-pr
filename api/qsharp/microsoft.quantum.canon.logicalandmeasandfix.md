@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.LogicalANDMeasAndFix
 title: LogicalANDMeasAndFix operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/11/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,13 +13,13 @@ qsharp.summary: Computes the logical AND of multiple qubits.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Computes the logical AND of multiple qubits.
 
 ```qsharp
-operation LogicalANDMeasAndFix (ctrlRegister : Qubit[], target : Qubit) : Unit
+operation LogicalANDMeasAndFix (ctrlRegister : Qubit[], target : Qubit) : Unit is Adj
 ```
 
 

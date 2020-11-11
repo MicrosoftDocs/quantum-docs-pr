@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRC
 title: ApplyIfElseRC operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/11/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies one of two controllable operations, depending on the value of aclassical result.
 
 ```qsharp
-operation ApplyIfElseRC<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit
+operation ApplyIfElseRC<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit is Ctl
 ```
 
 
@@ -36,7 +36,7 @@ Given a result `result`, applies the operation `zeroOp` with `zeroInput` asits 
 The measurement result used to determine if `zeroOp` or `oneOp` isapplied.
 
 
-### zeroOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### zeroOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 The controllable operation to be applied when `result == Zero`.
 
@@ -46,7 +46,7 @@ The controllable operation to be applied when `result == Zero`.
 The input to be provided to `zeroOp` when `result == Zero`.
 
 
-### oneOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### oneOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 The controllable operation to be applied when `result == One`.
 

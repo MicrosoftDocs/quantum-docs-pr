@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance
 title: AssertAllZeroWithinTolerance operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/11/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -13,13 +13,13 @@ qsharp.summary: Assert that given qubits are all in $\ket{0}$ state up to a give
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Assert that given qubits are all in $\ket{0}$ state up to a given tolerance.
 
 ```qsharp
-operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit
+operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit is Adj + Ctl
 ```
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionallyC
 title: ApplyConditionallyC operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/10/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
@@ -13,13 +13,13 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyConditionallyC<'T, 'U> (measurementResults : Result[], resultsValues : Result[], (onEqualOp : ('T => Unit is Ctl), equalArg : 'T), (onNonEqualOp : ('U => Unit is Ctl), nonEqualArg : 'U)) : Unit
+operation ApplyConditionallyC<'T, 'U> (measurementResults : Result[], resultsValues : Result[], (onEqualOp : ('T => Unit is Ctl), equalArg : 'T), (onNonEqualOp : ('U => Unit is Ctl), nonEqualArg : 'U)) : Unit is Ctl
 ```
 
 
@@ -35,7 +35,7 @@ operation ApplyConditionallyC<'T, 'U> (measurementResults : Result[], resultsVal
 
 
 
-### onEqualOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### onEqualOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 
 
@@ -45,7 +45,7 @@ operation ApplyConditionallyC<'T, 'U> (measurementResults : Result[], resultsVal
 
 
 
-### onNonEqualOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### onNonEqualOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 
 

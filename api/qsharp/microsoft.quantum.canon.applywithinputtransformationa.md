@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWithInputTransformationA
 title: ApplyWithInputTransformationA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/10/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -17,13 +17,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given an operation that accepts some input, a function thatreturns an output compatible with that operation, and an input to thatfunction, applies the operation using the function to transform theinput to a form expected by the operation.
 
 ```qsharp
-operation ApplyWithInputTransformationA<'T, 'U> (fn : ('U -> 'T), op : ('T => Unit is Adj), input : 'U) : Unit
+operation ApplyWithInputTransformationA<'T, 'U> (fn : ('U -> 'T), op : ('T => Unit is Adj), input : 'U) : Unit is Adj
 ```
 
 
@@ -34,7 +34,7 @@ operation ApplyWithInputTransformationA<'T, 'U> (fn : ('U -> 'T), op : ('T => Un
 A function that transforms the given input into a form expected by theoperation.
 
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 The operation to be applied.
 

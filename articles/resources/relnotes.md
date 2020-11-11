@@ -17,6 +17,14 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version x.xx.xxxxxxxx
+
+*Release date: November _, 2020*
+
+Compiler performance is improved. Format changed to Bond.
+
+
+
 ## Version 0.13.20111004
 
 *Release date: November 10th, 2020*

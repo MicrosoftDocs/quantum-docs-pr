@@ -9,7 +9,7 @@ uid: microsoft.quantum.qsharp.typedeclarations
 no-loc: ['Q#', '$$v']
 ---
 
-<!---
+<!-- 
 # Type declarations in Q#
 -->
 

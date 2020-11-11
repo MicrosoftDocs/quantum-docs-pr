@@ -9,7 +9,7 @@ uid: microsoft.quantum.qsharp.callabledeclarations
 no-loc: ['Q#', '$$v']
 ---
 
-<!---
+<!-- 
 # Callable declarations in Q#
 -->
 

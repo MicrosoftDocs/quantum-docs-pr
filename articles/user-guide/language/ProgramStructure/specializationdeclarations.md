@@ -9,7 +9,7 @@ uid: microsoft.quantum.qsharp.specializationdeclarations
 no-loc: ['Q#', '$$v']
 ---
 
-<!---
+<!-- 
 # Specialization declarations in Q#
 -->
 

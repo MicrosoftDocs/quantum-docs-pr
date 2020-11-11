@@ -8,3 +8,5 @@
   href: expressions/toc.yml
 - name: Type system
   href: typesystem/toc.yml
+- name: Grammar
+  href: grammar.md

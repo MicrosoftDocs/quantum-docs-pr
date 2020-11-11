@@ -1,5 +1,7 @@
 - name: Statements in Q#
   href: index.md
+- name: Binding scopes
+  href: bindingscopes.md
 - name: Call statements
   href: callstatements.md
 - name: Returns and termination 

@@ -9,8 +9,8 @@ uid: microsoft.quantum.qsharp.namespaces
 no-loc: ['Q#', '$$v']
 ---
 
-<!---
-# Types in Q#
+<!-- 
+# Namespaces in Q#
 -->
 
 [!INCLUDE [source link](~/includes/qsharp-language/Specifications/Language/1_ProgramStructure/1_Namespaces.md)]

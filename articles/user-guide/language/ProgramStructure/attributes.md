@@ -9,7 +9,6 @@ uid: microsoft.quantum.qsharp.attributes
 no-loc: ['Q#', '$$v']
 ---
 
-
 # Attributes in Q#
 
 

@@ -33,6 +33,24 @@ You can use the QDK in three ways:
 
 You can develop Q# code in most of your favorites IDEs, as well as integrate Q# with other languages such as Python and .NET (C#, F#).
 
+<table>
+    <tr>
+        <th>&nbsp;</th>
+        <th><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
+        <th>X</th>
+        <th>Y</th>
+        <th>Z</th>
+    </tr>
+    <tr>
+        <td><img src="~/media/quantum.png" alt="QDK" width="50"/>&nbsp;Q# standalone</td>
+        <td>A B C</td>
+    </tr>
+</table>
+
+
+
+
+
 |&nbsp; |&nbsp; |<img src="~/media/vs_code.png" alt="VS Code" width="50"/><br> **VS Code<br>(2019 or later)**|<img src="~/media/vs_studio.png" alt="VS" width="50"/><br>**Visual Studio<br>(2019 or later)** |<img src="~/media/jupyter.png" alt="Jupyter install" width="50"/><br> **Jupyter Notebooks**|<br><br> **Command line**|
 |-----:|:------:|:-----:|:-----:|:-----:|:-----:|
 |&nbsp; | **OS**|Windows, macOS, Linux |Windows only |Windows, macOS, Linux |Windows, macOS, Linux |

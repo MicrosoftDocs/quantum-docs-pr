@@ -38,7 +38,7 @@ In Q#, this would be performed by the following code:
 ```
 
 However, this code alone can't be run by Q#.
-For that, it needs to make up the body of an operation, which is then run when called---either directly or by another operation. 
+For that, it needs to make up the body of an [operation](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/4_TypeSystem/OperationsAndFunctions.md), which is then run when called---either directly or by another operation. 
 Hence, you can write an operation of the following form:
 ```qsharp
     operation MeasureSuperposition() : Result {

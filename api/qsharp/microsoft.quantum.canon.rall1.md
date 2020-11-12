@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.RAll1
 title: RAll1 operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/12/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -16,13 +16,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Performs a phase shift operation.$R=\boldone-(1-e^{i \phi})\ket{1\cdots 1}\bra{1\cdots 1}$.
 
 ```qsharp
-operation RAll1 (phase : Double, qubits : Qubit[]) : Unit
+operation RAll1 (phase : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

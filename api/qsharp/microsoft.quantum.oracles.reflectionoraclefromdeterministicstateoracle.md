@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Oracles.ReflectionOracleFromDeterministicStateOracle
 title: ReflectionOracleFromDeterministicStateOracle function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/12/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
@@ -13,7 +13,7 @@ qsharp.summary: Constructs reflection about a given state from an oracle.
 
 Namespace: [Microsoft.Quantum.Oracles](xref:Microsoft.Quantum.Oracles)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Constructs reflection about a given state from an oracle.

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.AssertProb
 title: AssertProb operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/12/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -17,7 +17,7 @@ qsharp.summary: >+
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]
@@ -26,7 +26,7 @@ Package: [](https://nuget.org/packages/)
 
 
 ```qsharp
-operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit
+operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit is Adj + Ctl
 ```
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Exp
 title: Exp operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/12/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -20,13 +20,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Applies the exponential of a multi-qubit Pauli operator.\begin{align}e^{i \theta [P_0 \otimes P_1 \cdots P_{N-1}]},\end{align}where $P_i$ is the $i$th element of `paulis`, and where$N = $`Length(paulis)`.
 
 ```qsharp
-operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit
+operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

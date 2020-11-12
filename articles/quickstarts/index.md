@@ -35,9 +35,9 @@ You can use the QDK in three ways:
 
 <img src="~/media/quantum.png" alt="QDK" width="75"/>
 
-[<img src="~/media/vs_studio.png" alt="Visual Studio" width="75"/>]()
+[<img src="~/media/vs_studio.png" alt="Visual Studio" width="75"/>](xref:microsoft.quantum.install.standalone)
 
-![alt text](~/media/jupyter.png =75x75) 
+![alt text](quantum/media/jupyter.png) 
 
 
 You can develop Q# code in most of your favorites IDEs, as well as integrate Q# with other languages such as Python and .NET (C#, F#).

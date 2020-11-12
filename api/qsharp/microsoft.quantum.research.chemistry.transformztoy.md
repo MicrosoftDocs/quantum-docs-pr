@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.TransformZToY
 title: TransformZToY operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/12/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Used to change the basis of a Z operator to a Y operator byconjugation.
 
 ```qsharp
-operation TransformZToY (qubit : Qubit) : Unit
+operation TransformZToY (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.IsResultZero
 title: IsResultZero function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/12/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,7 +13,7 @@ qsharp.summary: Tests if a given Result value is equal to `Zero`.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Tests if a given Result value is equal to `Zero`.

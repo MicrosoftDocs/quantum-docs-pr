@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.RMEncoding
 title: RMEncoding function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/12/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -13,7 +13,7 @@ qsharp.summary: '{-1,1} coding of a Boolean truth value'
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 {-1,1} coding of a Boolean truth value

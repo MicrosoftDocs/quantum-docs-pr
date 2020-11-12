@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.AccumulatedBitsizeI
 title: AccumulatedBitsizeI function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/12/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -13,7 +13,7 @@ qsharp.summary: Helper function used to recursively calculate the bitsize of a v
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Helper function used to recursively calculate the bitsize of a value.

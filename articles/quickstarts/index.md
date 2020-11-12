@@ -31,7 +31,7 @@ You can use the QDK in three ways:
 
 ## Install the QDK locally
 
-:::image type="icon" source="~/media/vs_code.png" style="width: 75;":::
+:::image type="icon" source="~/media/vs_code.png":::
 
 [<img src="~/media/vs_studio.png" width="75"/>](~/media/vs_studio.png)
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsA
 title: ApplySeriesOfOpsA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/12/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,19 +13,19 @@ qsharp.summary: Applies a list of ops and their targets sequentially on an array
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies a list of ops and their targets sequentially on an array. (Adjoint)
 
 ```qsharp
-operation ApplySeriesOfOpsA<'T> (listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[]) : Unit
+operation ApplySeriesOfOpsA<'T> (listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[]) : Unit is Adj
 ```
 
 
 ## Input
 
-### listOfOps : 'T[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj[]
+### listOfOps : 'T[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj[]
 
 List of ops, each taking a 'T array, to be applied. They are applied sequentially, lowest index first.Each must have an adjoint functor
 

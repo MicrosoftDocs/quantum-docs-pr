@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.StateGenerator
 title: StateGenerator user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/12/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Describes an operation that prepares a given input to a sequentialclassifier.
@@ -32,6 +32,6 @@ newtype StateGenerator = (NQubits : Int, Prepare : (Microsoft.Quantum.Arithmetic
 ### NQubits : [Int](xref:microsoft.quantum.lang-ref.int)
 
 The number of qubits on which the encoded input is defined.
-### Prepare : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### Prepare : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 An operation which prepares the encoded input on a little-endianregister of `NQubits` qubits.

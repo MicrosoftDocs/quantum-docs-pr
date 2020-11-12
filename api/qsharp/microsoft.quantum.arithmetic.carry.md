@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.Carry
 title: Carry operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/12/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -17,13 +17,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implements a reversible carry gate. Given a carry-in bit encoded inqubit `carryIn` and two summand bits encoded in `summand1` and `summand2`,computes the bitwise xor of `carryIn`, `summand1` and `summand2` in thequbit `summand2` and the carry-out is xored to the qubit `carryOut`.
 
 ```qsharp
-operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit
+operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit is Adj + Ctl
 ```
 
 

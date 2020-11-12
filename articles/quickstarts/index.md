@@ -33,9 +33,11 @@ You can use the QDK in three ways:
 
 :::image type="icon" source="~/media/vs_code.png":::
 
-[<img src="~/media/vs_studio.png" width="75"/>](~/media/vs_studio.png)
+<img src="~/media/quantum.png" width="75"/>
 
-![alt text](~/media/jupyter.png =100x) 
+[<img src="~/media/vs_studio.png" width="75"/>]()
+
+![alt text](~/media/jupyter.png) 
 
 
 You can develop Q# code in most of your favorites IDEs, as well as integrate Q# with other languages such as Python and .NET (C#, F#).

@@ -4,10 +4,6 @@
   href: programs.md
 - name: Ways to run a Q# program
   href: host-programs.md
-- name: Q# language
-  href: language/toc.yml
-- name: Use Q#
-  href: using-qsharp/toc.yml
 - name: Simulators and resource estimators
   href: machines/toc.yml
 - name: Q# libraries

@@ -51,7 +51,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
         <td align="center">Windows, macOS, Linux</td>
     </tr>
     <tr>
-        <td align="right"><img src="~/media/quantum-neg.png" alt="QDK" width="60"/></td>
+        <td align="right"><img src="~/media/quantum-neg2.png" alt="QDK" width="60"/></td>
         <td align="left"><b>Q# standalone</b></td>
         <td align="center"><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
         <td align="center"><a href="xref:microsoft.quantum.install.standalone">Install</a></td>

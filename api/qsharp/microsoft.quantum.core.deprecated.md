@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Core.Deprecated
 title: Deprecated user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/13/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Core
@@ -13,7 +13,7 @@ qsharp.summary: Compiler-recognized attribute used to mark a type or callable as
 
 Namespace: [Microsoft.Quantum.Core](xref:Microsoft.Quantum.Core)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Compiler-recognized attribute used to mark a type or callable as deprecated.

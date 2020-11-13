@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.OptimizedTrotterStepOracle
 title: OptimizedTrotterStepOracle function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/13/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
@@ -13,7 +13,7 @@ qsharp.summary: Returns optimized Trotter step operation and the parameters nece
 
 Namespace: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Returns optimized Trotter step operation and the parameters necessary to run it.
@@ -41,6 +41,6 @@ Order of Trotter integrator.
 
 
 
-## Output : ([Int](xref:microsoft.quantum.lang-ref.int),([Double](xref:microsoft.quantum.lang-ref.double),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl))
+## Output : ([Int](xref:microsoft.quantum.lang-ref.int),([Double](xref:microsoft.quantum.lang-ref.double),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl))
 
 A tuple where: `Int` is the number of qubits allocated,`Double` is `1.0/trotterStepSize`, and the operationis the Trotter step.

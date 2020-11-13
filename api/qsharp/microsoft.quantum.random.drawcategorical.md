@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.DrawCategorical
 title: DrawCategorical operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/13/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Draws a random sample from a categorical distribution specified by alist of probablities.

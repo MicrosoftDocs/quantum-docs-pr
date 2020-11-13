@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Not
 title: Not function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/13/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Returns the bitwise NOT of an integer.This performs the same computation as the built-in `~~~` operator.

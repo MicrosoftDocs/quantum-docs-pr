@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToRestA
 title: ApplyToRestA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/13/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,13 +13,13 @@ qsharp.summary: Applies an operation to all but the first element of an array.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies an operation to all but the first element of an array.
 
 ```qsharp
-operation ApplyToRestA<'T> (op : ('T[] => Unit is Adj), targets : 'T[]) : Unit
+operation ApplyToRestA<'T> (op : ('T[] => Unit is Adj), targets : 'T[]) : Unit is Adj
 ```
 
 
@@ -29,7 +29,7 @@ Given an operation `op` and an array of targets `targets`,applies `op(Rest(targ
 
 ## Input
 
-### op : 'T[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### op : 'T[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 An operation to be applied.
 

@@ -35,16 +35,16 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 
 <table>
     <tr>
-        <th width=7%>&nbsp;</th>
+        <th width=10%>&nbsp;</th>
         <th>&nbsp;</th>
-        <th align="center" width=20%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
-        <th align="center" width=20%><img src="~/media/vs_studio.png" alt="VS STudio" width="50"/><br><b>VS Studio<br>(2019 or later)</b></th>
-        <th align="center" width=20%><img src="~/media/jupyter.png" alt="jupyter install" width="50"/><br><b>Jupyter Notebooks</b></th>
-        <th align="center" width=20%><br><br><br><b>Command line</b></th>
+        <th align="center" width=18%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
+        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="VS STudio" width="50"/><br><b>VS Studio<br>(2019 or later)</b></th>
+        <th align="center" width=18%><img src="~/media/jupyter.png" alt="jupyter install" width="50"/><br><b>Jupyter Notebooks</b></th>
+        <th align="center" width=18%><br><br><br><b>Command line</b></th>
     </tr>
     <tr>
-        <td align="left"><b>OS support:</b></td>
         <th>&nbsp;</th>
+        <td align="left"><b>OS support:</b></td>
         <td align="center">Windows, macOS, Linux</td>
         <td align="center">Windows only</td>
         <td align="center">Windows, macOS, Linux</td>
@@ -71,7 +71,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
         <td align="left"><br><b>Q# and .NET (C#, F#)</b></td> 
         <td align="center"><br><a href="xref:microsoft.quantum.install.cs">Install</a></td>
         <td align="center"><br><a href="xref:microsoft.quantum.install.cs">Install</a></td>
-        <td><br>&#10006;</a></td>
+        <td align="center"><br>&#10006;</a></td>
         <td align="center"><br><a href="xref:microsoft.quantum.install.cs">Install</a></td>
    </tr>
 </table>

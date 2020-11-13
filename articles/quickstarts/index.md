@@ -35,7 +35,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 
 <table>
 <colgroup>
-<col style="width: 50%" />
+<col style="width: 50%">
 <col>
 <col>
 <col>

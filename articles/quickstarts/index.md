@@ -40,11 +40,11 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
         <th align="center" width=18%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
         <th align="center" width=18%><img src="~/media/vs_studio.png" alt="VS STudio" width="50"/><br><b>VS Studio<br>(2019 or later)</b></th>
         <th align="center" width=18%><img src="~/media/jupyter.png" alt="jupyter install" width="50"/><br><b>Jupyter Notebooks</b></th>
-        <th align="center" style="vertical-align:middle;" width=18%>Command line</b></th>
+        <th width=18%>Command line</b></th>
     </tr>
     <tr>
         <th>&nbsp;</th>
-        <td align="left" style="vertical-align:middle;"><b>OS support:</b></td>
+        <td align="left"><b>OS support:</b></td>
         <td align="center" valign="middle">Windows, macOS, Linux</td>
         <td align="center" valign="middle">Windows only</td>
         <td align="center" valign="middle">Windows, macOS, Linux</td>
@@ -68,10 +68,10 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
     </tr>
     <tr>
         <td align="right"><img src="~/media/dot_net.png" alt="dotnet install" width="50"/></td>
-        <td align="left"><br><b>Q# and .NET (C#, F#)</b></td> 
+        <td align="left"><b>Q# and .NET (C#, F#)</b></td> 
         <td align="center" valign="middle"><a href="xref:microsoft.quantum.install.cs">Install</a></td>
         <td align="center" valign="middle"><a href="xref:microsoft.quantum.install.cs">Install</a></td>
-        <td align="center" valign="middle">&#10006;</a></td>
+        <td align="center" valign="middle">&#10006;</td>
         <td align="center" valign="middle"><a href="xref:microsoft.quantum.install.cs">Install</a></td>
    </tr>
 </table>

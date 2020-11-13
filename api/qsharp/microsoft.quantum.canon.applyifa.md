@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfA
 title: ApplyIfA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/13/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,13 +13,13 @@ qsharp.summary: Applies a adjointable operation conditioned on a classical bit.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies a adjointable operation conditioned on a classical bit.
 
 ```qsharp
-operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit
+operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit is Adj
 ```
 
 
@@ -29,7 +29,7 @@ Given an operation `op` and a bit value `bit`, applies `op` to the `target`if `
 
 ## Input
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 An operation to be conditionally applied.
 

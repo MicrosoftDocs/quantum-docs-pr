@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE._prepareTrialStateWrapper
 title: _prepareTrialStateWrapper operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/13/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Chemistry.JordanWigner.VQE](xref:Microsoft.Quantum.Chemistry.JordanWigner.VQE)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Private wrapper around PrepareTrialState to make it compatible with EstimateFrequencyA by defining an adjoint.EstimateFrequencyA has built-in emulation feature when targeting the QuantumSimulator, which speeds up its execution.
 
 ```qsharp
-operation _prepareTrialStateWrapper (inputState : (Int, Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]), qubits : Qubit[]) : Unit
+operation _prepareTrialStateWrapper (inputState : (Int, Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]), qubits : Qubit[]) : Unit is Adj
 ```
 
 

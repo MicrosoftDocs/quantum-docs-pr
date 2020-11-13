@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareChoiStateA
 title: PrepareChoiStateA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/13/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -15,19 +15,19 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Prepares the Choi–Jamiłkowski state for a given operation with an adjoint variant onto given referenceand target registers.
 
 ```qsharp
-operation PrepareChoiStateA (op : (Qubit[] => Unit is Adj), reference : Qubit[], target : Qubit[]) : Unit
+operation PrepareChoiStateA (op : (Qubit[] => Unit is Adj), reference : Qubit[], target : Qubit[]) : Unit is Adj
 ```
 
 
 ## Input
 
-### op : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### op : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 
 

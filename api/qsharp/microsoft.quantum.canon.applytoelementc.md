@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToElementC
 title: ApplyToElementC operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/13/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,13 +13,13 @@ qsharp.summary: Applies an operation to a given element of an array.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies an operation to a given element of an array.
 
 ```qsharp
-operation ApplyToElementC<'T> (op : ('T => Unit is Ctl), index : Int, targets : 'T[]) : Unit
+operation ApplyToElementC<'T> (op : ('T => Unit is Ctl), index : Int, targets : 'T[]) : Unit is Ctl
 ```
 
 
@@ -29,7 +29,7 @@ Given an operation `op`, an index `index`, and an array of targets `targets`,ap
 
 ## Input
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 An operation to be applied.
 

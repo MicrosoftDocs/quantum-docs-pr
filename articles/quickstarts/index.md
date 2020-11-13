@@ -43,7 +43,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
         <th align="center" width=17%><br><br><br><b>Command line</b></th>
     </tr>
     <tr>
-        <td colspan="2" align="right"><b>Supported on:</b></td>
+        <td colspan="2" align="center"><b>OS support:</b></td>
         <td align="center">Windows, macOS, Linux</td>
         <td align="center">Windows only</td>
         <td align="center">Windows, macOS, Linux</td>
@@ -81,7 +81,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 |:-----:|:-----:|:-----:|:-----:|:-----:|
 |&nbsp;  |Windows, macOS, Linux |Windows only |Windows, macOS, Linux |Windows, macOS, Linux |
 |<img src="~/media/quantum.png" alt="QDK" width="60"/>&nbsp;&nbsp;**Q# standalone**|<br>[Install](xref:microsoft.quantum.install.standalone) |<br> [Install](xref:microsoft.quantum.install.standalone)  |<br> [Install](xref:microsoft.quantum.install.jupyter)|<br>[Install](xref:microsoft.quantum.install.standalone)|
-|<img src="~/media/python.png" alt="Python install" width="50"/>&nbsp;&nbsp;>**Q#  and Python**|<br>[Install](xref:microsoft.quantum.install.python) |<br>[Install](xref:microsoft.quantum.install.python) |<br>[Install](xref:microsoft.quantum.install.jupyter) |<br>[Install](xref:microsoft.quantum.install.python) |
+|<img src="~/media/python.png" alt="Python install" width="50"/>&nbsp;&nbsp;**Q#  and Python**|<br>[Install](xref:microsoft.quantum.install.python) |<br>[Install](xref:microsoft.quantum.install.python) |<br>[Install](xref:microsoft.quantum.install.jupyter) |<br>[Install](xref:microsoft.quantum.install.python) |
 |<img src="~/media/dot_net.png" alt="DotNET" width="50"/>&nbsp;&nbsp;**Q# and .NET (C#, F#)**|<br>[Install](xref:microsoft.quantum.install.cs) |<br>[Install](xref:microsoft.quantum.install.cs)|<br>&#10006; |<br>[Install](xref:microsoft.quantum.install.cs) |
 
 ## Use the QDK Online

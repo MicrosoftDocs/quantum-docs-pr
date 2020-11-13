@@ -38,10 +38,10 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
         <th>&nbsp;</th>
         <th>&nbsp;</th>
         <th>&nbsp;</th>
-        <th><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
-        <th><img src="~/media/vs_studio.png" alt="VS STudio" width="50"/><br><b>VS Studio<br>(2019 or later)</b></th>
-        <th><img src="~/media/jupyter.png" alt="jupyter install" width="50"/><br><b>Jupyter Notebooks</b></th>
-        <th><br><br><b>Command line</b></th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="~/media/vs_studio.png" alt="VS STudio" width="50"/><br><b>VS Studio<br>(2019 or later)</b></th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="~/media/jupyter.png" alt="jupyter install" width="50"/><br><b>Jupyter Notebooks</b></th>
+        <th><br><br><br><b>Command line</b></th>
     </tr>
     <tr>
         <td>&nbsp;</td>
@@ -54,30 +54,30 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
     </tr>
     <tr>
         <td><img src="~/media/quantum.png" alt="QDK" width="50"/></td>
-        <td>Q# standalone</td>
+        <td><br>Q# standalone</td>
         <td>&nbsp;</td>
-        <td><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
-        <td><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
-        <td><a href="xref:microsoft.quantum.install.jupyter">Install</a></td>
-        <td><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
+        <td><br><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
+        <td><br><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
+        <td><br><a href="xref:microsoft.quantum.install.jupyter">Install</a></td>
+        <td><br><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
     </tr>
     <tr>
         <td><img src="~/media/python.png" alt="python install" width="50"/></td>
-        <td>Q# and Python</td>
+        <td><br>Q# and Python</td>
         <td>&nbsp;</td>
-        <td><a href="xref:microsoft.quantum.install.python">Install</a></td>
-        <td><a href="xref:microsoft.quantum.install.python">Install</a></td>
-        <td><a href="xref:microsoft.quantum.install.jupyter">Install</a></td>
-        <td><a href="xref:microsoft.quantum.install.python">Install</a></td>
+        <td><br><a href="xref:microsoft.quantum.install.python">Install</a></td>
+        <td><br><a href="xref:microsoft.quantum.install.python">Install</a></td>
+        <td><br><a href="xref:microsoft.quantum.install.jupyter">Install</a></td>
+        <td><br><a href="xref:microsoft.quantum.install.python">Install</a></td>
     </tr>
     <tr>
         <td><img src="~/media/dot_net.png" alt="dotnet install" width="50"/></td>
-        <td>Q# and .NET (C#, F#)</td> 
+        <td><br>Q# and .NET (C#, F#)</td> 
         <td>&nbsp;</td>
-        <td><a href="xref:microsoft.quantum.install.cs">Install</a></td>
-        <td><a href="xref:microsoft.quantum.install.cs">Install</a></td>
+        <td><br><a href="xref:microsoft.quantum.install.cs">Install</a></td>
+        <td><br><a href="xref:microsoft.quantum.install.cs">Install</a></td>
         <td><br>&#10006;</a></td>
-        <td><a href="xref:microsoft.quantum.install.cs">Install</a></td>
+        <td><br><a href="xref:microsoft.quantum.install.cs">Install</a></td>
    </tr>
 </table>
 

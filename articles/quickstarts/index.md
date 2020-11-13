@@ -36,14 +36,26 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 <table>
     <tr>
         <th>&nbsp;</th>
-        <th><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
-        <th>X</th>
-        <th>Y</th>
-        <th>Z</th>
+        <th style="text-align: center;"><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
+        <th style="text-align: center;"><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
+        <th style="text-align: center;"><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
+        <th style="text-align: center;"><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
     </tr>
     <tr>
-        <td><img src="~/media/quantum.png" alt="QDK" width="50"/>&nbsp;Q# standalone</td>
-        <td>A B C</td>
+        <td style="text-align: right;"><b>OS</b>
+        <td style="text-align: center;">Windows, macOS, Linux</td>
+        <td style="text-align: center;">Windows only </td>
+        <td style="text-align: center;">Windows, macOS, Linux</td>
+        <td style="text-align: center;">Windows, macOS, Linux</td>
+    </tr>
+    <tr>
+        <td><img src="~/media/quantum.png" alt="QDK" width="50"/>Q# standalone</td>
+    </tr>
+    <tr>
+        <td><img src="~/media/python.png" alt="python install" width="50"/>Q# and Python</td>
+    </tr>
+    <tr>
+        <td><img src="~/media/dot_net.png" alt="dotnet install" width="50"/>Q# and .NET (C#, F#)</td>
     </tr>
 </table>
 

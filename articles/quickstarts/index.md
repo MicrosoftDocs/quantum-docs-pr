@@ -36,17 +36,19 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 <table>
     <tr>
         <th>&nbsp;</th>
-        <th style="text-align: center;"><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
-        <th style="text-align: center;"><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
-        <th style="text-align: center;"><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
-        <th style="text-align: center;"><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
+        <th>&nbsp;</th>
+        <th><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
+        <th><img src="~/media/vs_studio.png" alt="VS STudio" width="50"/><br><b>VS Studio<br>(2019 or later)</b></th>
+        <th><img src="~/media/jupyter.png" alt="jupyter install" width="50"/><br><b>Jupyter Notebooks</b></th>
+        <th><b>Command line</b></th>
     </tr>
     <tr>
-        <td style="text-align: right;"><b>OS</b>
-        <td style="text-align: center;">Windows, macOS, Linux</td>
-        <td style="text-align: center;">Windows only </td>
-        <td style="text-align: center;">Windows, macOS, Linux</td>
-        <td style="text-align: center;">Windows, macOS, Linux</td>
+        <td>&nbsp;</td>
+        <td><b>OS</b></td>
+        <td>Windows, macOS, Linux</td>
+        <td>Windows only</td>
+        <td>Windows, macOS, Linux</td>
+        <td>Windows, macOS, Linux</td>
     </tr>
     <tr>
         <td><img src="~/media/quantum.png" alt="QDK" width="50"/>Q# standalone</td>
@@ -61,7 +63,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 
 
 
-
+<!-->
 
 |&nbsp; |&nbsp; |<img src="~/media/vs_code.png" alt="VS Code" width="50"/><br> **VS Code<br>(2019 or later)**|<img src="~/media/vs_studio.png" alt="VS" width="50"/><br>**Visual Studio<br>(2019 or later)** |<img src="~/media/jupyter.png" alt="Jupyter install" width="50"/><br> **Jupyter Notebooks**|<br><br> **Command line**|
 |-----:|:------:|:-----:|:-----:|:-----:|:-----:|
@@ -69,6 +71,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 |<img src="~/media/quantum.png" alt="QDK" width="50"/> |<br>**Q# standalone**  |<br>[Install](xref:microsoft.quantum.install.standalone) |<br> [Install](xref:microsoft.quantum.install.standalone)  |<br> [Install](xref:microsoft.quantum.install.jupyter) |<br>[Install](xref:microsoft.quantum.install.standalone)|
 |<img src="~/media/python.png" alt="Python install" width="50"/> |<br>**Q#  and Python**  |<br>[Install](xref:microsoft.quantum.install.python) |<br>[Install](xref:microsoft.quantum.install.python) |<br>[Install](xref:microsoft.quantum.install.jupyter) |<br>[Install](xref:microsoft.quantum.install.python) |
 |<img src="~/media/dot_net.png" alt="DotNET" width="50"/> |<br> **Q# and .NET (C#, F#)** |<br>[Install](xref:microsoft.quantum.install.cs) |<br>[Install](xref:microsoft.quantum.install.cs)|<br>&#10006; |<br>[Install](xref:microsoft.quantum.install.cs) |
+-->
 
 ## Use the QDK Online
 

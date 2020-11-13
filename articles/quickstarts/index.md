@@ -75,6 +75,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
         <td align="center"><a href="xref:microsoft.quantum.install.cs">Install</a></td>
    </tr>
 </table>
+
 ## Use the QDK Online
 
 You can also develop Q# code without installing anything locally with these options:

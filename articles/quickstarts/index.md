@@ -45,12 +45,14 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
     <tr>
         <th>&nbsp;</th>
         <th>&nbsp;</th>
+        <th>&nbsp;</th>
         <th><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
         <th><img src="~/media/vs_studio.png" alt="VS STudio" width="50"/><br><b>VS Studio<br>(2019 or later)</b></th>
         <th><img src="~/media/jupyter.png" alt="jupyter install" width="50"/><br><b>Jupyter Notebooks</b></th>
-        <th><b>Command line</b></th>
+        <th><br><br><b>Command line</b></th>
     </tr>
     <tr>
+        <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td><b>OS</b></td>
         <td>Windows, macOS, Linux</td>
@@ -59,14 +61,17 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
         <td>Windows, macOS, Linux</td>
     </tr>
     <tr>
-        <td><img src="~/media/quantum.png" alt="QDK" width="50"/>Q# standalone</td>
+        <td><img src="~/media/quantum.png" alt="QDK" width="50"/></td>
+        <td>Q# standalone</td>
+    </tr>    
+    <tr>
+        <td><img src="~/media/python.png" alt="python install" width="50"/></td>
+        <td>Q# and Python</td>
     </tr>
     <tr>
-        <td><img src="~/media/python.png" alt="python install" width="50"/>Q# and Python</td>
-    </tr>
-    <tr>
-        <td><img src="~/media/dot_net.png" alt="dotnet install" width="50"/>Q# and .NET (C#, F#)</td>
-    </tr>
+        <td><img src="~/media/dot_net.png" alt="dotnet install" width="50"/></td>
+        <td>Q# and .NET (C#, F#)</td> 
+   </tr>
 </table>
 
 

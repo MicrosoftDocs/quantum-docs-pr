@@ -34,7 +34,7 @@ You can use the QDK in three ways:
 You can develop Q# code in most of your favorites IDEs, as well as integrate Q# with other languages such as Python and .NET (C#, F#).
 
 <picture>
-<source scrset="~/media/vs_code.png" media="(prefers-color-scheme: dark)">
+<source scrset="~/media/vs_code.png" media="(prefers-color-scheme: dark;)">
 <img src="~/media/python.png" alt="install python">
 </picture>
 

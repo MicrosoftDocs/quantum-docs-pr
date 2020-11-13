@@ -42,6 +42,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
 <col align="center">
 <col align="center">
 <col align="center">
+<colgroups>
     <tr>
         <th>&nbsp;</th>
         <th>&nbsp;</th>

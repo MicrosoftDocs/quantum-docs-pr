@@ -34,14 +34,6 @@ You can use the QDK in three ways:
 You can develop Q# code in most of your favorites IDEs, as well as integrate Q# with other languages such as Python and .NET (C#, F#).
 
 <table>
-<colgroup>
-<col style="width: 50%">
-<col>
-<col>
-<col>
-<col>
-<col>
-</colgroup>
     <tr>
         <th>&nbsp;</th>
         <th>&nbsp;</th>
@@ -63,14 +55,29 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
     <tr>
         <td><img src="~/media/quantum.png" alt="QDK" width="50"/></td>
         <td>Q# standalone</td>
-    </tr>    
+        <td>&nbsp;</td>
+        <td><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
+        <td><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
+        <td><a href="xref:microsoft.quantum.install.jupyter">Install</a></td>
+        <td><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
+    </tr>
     <tr>
         <td><img src="~/media/python.png" alt="python install" width="50"/></td>
         <td>Q# and Python</td>
+        <td>&nbsp;</td>
+        <td><a href="xref:microsoft.quantum.install.python">Install</a></td>
+        <td><a href="xref:microsoft.quantum.install.python">Install</a></td>
+        <td><a href="xref:microsoft.quantum.install.jupyter">Install</a></td>
+        <td><a href="xref:microsoft.quantum.install.python">Install</a></td>
     </tr>
     <tr>
         <td><img src="~/media/dot_net.png" alt="dotnet install" width="50"/></td>
         <td>Q# and .NET (C#, F#)</td> 
+        <td>&nbsp;</td>
+        <td><a href="xref:microsoft.quantum.install.cs">Install</a></td>
+        <td><a href="xref:microsoft.quantum.install.cs">Install</a></td>
+        <td><br>&#10006;</a></td>
+        <td><a href="xref:microsoft.quantum.install.cs">Install</a></td>
    </tr>
 </table>
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.NoOp
 title: NoOp operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/13/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,13 +13,13 @@ qsharp.summary: Performs the identity operation (no-op) on an argument.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Performs the identity operation (no-op) on an argument.
 
 ```qsharp
-operation NoOp<'T> (input : 'T) : Unit
+operation NoOp<'T> (input : 'T) : Unit is Adj + Ctl
 ```
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AllEqualityFactI
 title: AllEqualityFactI function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/13/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -13,7 +13,7 @@ qsharp.summary: Asserts that two arrays of integer values are equal.
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Asserts that two arrays of integer values are equal.

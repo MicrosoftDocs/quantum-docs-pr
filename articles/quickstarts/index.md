@@ -40,7 +40,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
         <th align="center" width=18%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
         <th align="center" width=18%><img src="~/media/vs_studio.png" alt="VS Studio" width="50"/><br><b>VS Studio<br>(2019 or later)</b></th>
         <th align="center" width=18%><img src="~/media/jupyter-wht.png" alt="jupyter install" width="65"/><br><b>Jupyter Notebooks</b></th>
-        <th align="center" width=18%><br><img src="~/media/blank.png" alt="blank spacer" width="65"/><br><b>Command line</b></th>
+        <th align="center" width=18%><img src="~/media/blank.png" alt="blank spacer" width="65"/><br><b>Command line</b></th>
     </tr>
     <tr>
         <th>&nbsp;</th>

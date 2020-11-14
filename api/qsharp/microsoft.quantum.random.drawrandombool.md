@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomBool
 title: DrawRandomBool operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/14/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Given a success probability, returns a single Bernoulli trial thatis true with the given probability.

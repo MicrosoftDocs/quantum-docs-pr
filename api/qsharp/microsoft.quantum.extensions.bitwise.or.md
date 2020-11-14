@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Bitwise.Or
 title: Or function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/14/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Bitwise
@@ -21,7 +21,7 @@ qsharp.summary: >+
 
 Namespace: [Microsoft.Quantum.Extensions.Bitwise](xref:Microsoft.Quantum.Extensions.Bitwise)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]

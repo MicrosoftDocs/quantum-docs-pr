@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.PhaseLittleEndian
 title: PhaseLittleEndian user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/14/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -19,7 +19,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Little-endian unsigned integers in QFT basis.For example, if $\ket{x}$ is the little-endian encoding of the integer$x$ in the computational basis,then $\operatorname{QFTLE} \ket{x}$ is the encoding of $x$ in the QFTbasis.

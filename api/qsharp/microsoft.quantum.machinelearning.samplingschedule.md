@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.SamplingSchedule
 title: SamplingSchedule user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/14/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -13,7 +13,7 @@ qsharp.summary: A schedule for drawing batches from a set of samples.
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 A schedule for drawing batches from a set of samples.

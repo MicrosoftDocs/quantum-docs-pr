@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AssertAllZeroFxP
 title: AssertAllZeroFxP operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/16/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Helper function to assert that a quantum fixed-point number isinitialized to zero, i.e., all qubits are in state $\ket{0}$.
 
 ```qsharp
-operation AssertAllZeroFxP (fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit
+operation AssertAllZeroFxP (fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit is Adj + Ctl
 ```
 
 

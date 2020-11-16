@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.RepeatC
 title: RepeatC operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/16/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,19 +13,19 @@ qsharp.summary: Repeats an operation a given number of times.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Repeats an operation a given number of times.
 
 ```qsharp
-operation RepeatC<'TInput> (op : ('TInput => Unit is Ctl), nTimes : Int, input : 'TInput) : Unit
+operation RepeatC<'TInput> (op : ('TInput => Unit is Ctl), nTimes : Int, input : 'TInput) : Unit is Ctl
 ```
 
 
 ## Input
 
-### op : 'TInput => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### op : 'TInput => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 The operation to be called repeatedly.
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.ApplyDeltaParity
 title: ApplyDeltaParity operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/16/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
@@ -16,13 +16,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Computes difference in parity between a previous PQRS... termsand the next PQRS... term. This difference is computed on a auxiliaryqubit.
 
 ```qsharp
-operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit
+operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

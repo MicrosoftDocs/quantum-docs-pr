@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.Trotter2ImplCA
 title: Trotter2ImplCA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/16/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,13 +13,13 @@ qsharp.summary: Implementation of the second-order Trotter–Suzuki integrator.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementation of the second-order Trotter–Suzuki integrator.
 
 ```qsharp
-operation Trotter2ImplCA<'T> ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), stepSize : Double, target : 'T) : Unit
+operation Trotter2ImplCA<'T> ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), stepSize : Double, target : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -30,7 +30,7 @@ operation Trotter2ImplCA<'T> ((nSteps : Int, op : ((Int, Double, 'T) => Unit is 
 The number of operations to be decomposed into time steps.
 
 
-### op : ([Int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double),'T) => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### op : ([Int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double),'T) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 An operation which accepts an index input (type `Int`) and a timeinput (type `Double`) and a quantum register (type `'T`) for decomposition.
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.IntegerBits
 title: IntegerBits function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/16/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -13,7 +13,7 @@ qsharp.summary: Returns all positions in which bits of an integer are set.
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns all positions in which bits of an integer are set.

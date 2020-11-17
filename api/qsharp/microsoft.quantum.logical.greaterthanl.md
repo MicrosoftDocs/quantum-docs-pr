@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Logical.GreaterThanL
 title: GreaterThanL function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/16/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
@@ -13,7 +13,7 @@ qsharp.summary: Returns true if and only if a number is greater than another num
 
 Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns true if and only if a number is greater than another number.

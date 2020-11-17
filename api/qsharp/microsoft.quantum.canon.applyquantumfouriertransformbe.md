@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyQuantumFourierTransformBE
 title: ApplyQuantumFourierTransformBE operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/16/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Performs the Quantum Fourier Transform on a quantum register containing aninteger in the big-endian representation.
 
 ```qsharp
-operation ApplyQuantumFourierTransformBE (qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit
+operation ApplyQuantumFourierTransformBE (qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit is Adj + Ctl
 ```
 
 

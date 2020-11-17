@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertQubit
 title: AssertQubit operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/16/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -13,7 +13,7 @@ qsharp.summary: Asserts that the qubit `q` is in the expected eigenstate of the 
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator.

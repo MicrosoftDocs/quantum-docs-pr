@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfElseRC
 title: ApplyIfElseRC operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/17/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
@@ -13,13 +13,13 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyIfElseRC<'T, 'U> (measurementResult : Result, (onResultZeroOp : ('T => Unit is Ctl), zeroArg : 'T), (onResultOneOp : ('U => Unit is Ctl), oneArg : 'U)) : Unit
+operation ApplyIfElseRC<'T, 'U> (measurementResult : Result, (onResultZeroOp : ('T => Unit is Ctl), zeroArg : 'T), (onResultOneOp : ('U => Unit is Ctl), oneArg : 'U)) : Unit is Ctl
 ```
 
 
@@ -30,7 +30,7 @@ operation ApplyIfElseRC<'T, 'U> (measurementResult : Result, (onResultZeroOp : (
 
 
 
-### onResultZeroOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### onResultZeroOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 
 
@@ -40,7 +40,7 @@ operation ApplyIfElseRC<'T, 'U> (measurementResult : Result, (onResultZeroOp : (
 
 
 
-### onResultOneOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### onResultOneOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 
 

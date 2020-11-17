@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Z
 title: Z operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/17/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -22,13 +22,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Applies the Pauli $Z$ gate.\begin{align}\sigma_z \mathrel{:=}\begin{bmatrix}1 & 0 \\\\0 & -1\end{bmatrix}.\end{align}
 
 ```qsharp
-operation Z (qubit : Qubit) : Unit
+operation Z (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.RestrictedToSubregisterCA
 title: RestrictedToSubregisterCA function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/17/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Restricts an operation to an array of indices of a register, i.e., a subregister.The modifier `CA` indicates that the operation is controllable and adjointable.
@@ -27,7 +27,7 @@ function RestrictedToSubregisterCA (op : (Qubit[] => Unit is Adj + Ctl), idxs : 
 
 ## Input
 
-### op : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### op : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 Operation to be restricted to a subregister.
 
@@ -38,7 +38,7 @@ Array of indices, indicating to which qubits the operation will be restricted.
 
 
 
-## Output : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+## Output : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 
 

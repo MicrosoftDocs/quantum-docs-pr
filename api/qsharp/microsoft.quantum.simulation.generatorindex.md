@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.GeneratorIndex
 title: GeneratorIndex user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/17/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -23,7 +23,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Represents a single primitive term in the set of all dynamical generators, e.g.Hermitian operators, for which there exists a map from that generatorto time-evolution by that generator, through `EvolutionSet`.The first element(Int[], Double[]) is indexes that single term -- For instance, the Pauli stringXXY with coefficient 0.5 would be indexed by ([1,1,2], [0.5]). Alternatively,Hamiltonians parameterized by a continuous variable, such as X cos φ + Y sin φ,might for instance be represented by ([], [φ]). The secondelement indexes the subsystem on which the generator acts on.

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Bitwise.LeftShiftedI
 title: LeftShiftedI function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/17/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Shifts the bitwise representation of a number left by a given number ofbits.

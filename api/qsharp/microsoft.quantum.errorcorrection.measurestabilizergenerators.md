@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.MeasureStabilizerGenerators
 title: MeasureStabilizerGenerators operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/17/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -13,7 +13,7 @@ qsharp.summary: Measures the given set of generators of a stabilizer group.
 
 Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Measures the given set of generators of a stabilizer group.

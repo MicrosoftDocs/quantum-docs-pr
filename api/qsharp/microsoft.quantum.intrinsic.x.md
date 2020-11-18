@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.X
 title: X operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/18/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -22,13 +22,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Applies the Pauli $X$ gate.\begin{align}\sigma_x \mathrel{:=}\begin{bmatrix}0 & 1 \\\\1 & 0\end{bmatrix}.\end{align}
 
 ```qsharp
-operation X (qubit : Qubit) : Unit
+operation X (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

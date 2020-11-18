@@ -94,6 +94,10 @@ operations:
 - {summary: Implementation step of <xref:microsoft.quantum.canon.prepareuniformsuperposition>,
   uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition_}
 - {summary: '', uid: Microsoft.Quantum.Preparation.WriteQuantumROMBitString}
+- {summary: 'Given a set of coefficients and a little-endian encoded quantum register
+    of unentangled qubits, all of which are in zero state, prepares a state on that
+    register described by the given coefficients. Uses state emulation if supported
+    by the target.', uid: Microsoft.Quantum.Preparation._PrepareAmplitudesFromZeroState}
 summary: This namespace contains functions and operations for preparing qubits into
   arbitrary initial states.
 uid: Microsoft.Quantum.Preparation

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.M
 title: M operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/18/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -22,7 +22,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Performs a measurement of a single qubit in thePauli $Z$ basis.The output result is given bythe distribution\begin{align}\Pr(\texttt{Zero} | \ket{\psi}) =\braket{\psi | 0} \braket{0 | \psi}.\end{align}

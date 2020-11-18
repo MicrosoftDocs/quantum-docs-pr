@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Oracles.ApplyObliviousOracleFromDeterministicStateOracle
 title: ApplyObliviousOracleFromDeterministicStateOracle operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/18/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Oracles
@@ -13,13 +13,13 @@ qsharp.summary: Implementation of <xref:microsoft.quantum.canon.obliviousoraclef
 
 Namespace: [Microsoft.Quantum.Oracles](xref:Microsoft.Quantum.Oracles)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementation of <xref:microsoft.quantum.canon.obliviousoraclefromdeterministicstateoracle>.
 
 ```qsharp
-operation ApplyObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, ancillaRegister : Qubit[], systemRegister : Qubit[]) : Unit
+operation ApplyObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, ancillaRegister : Qubit[], systemRegister : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

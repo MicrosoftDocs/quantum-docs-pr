@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLEA
 title: ApplyPhaseLEOperationOnLEA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/18/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -13,19 +13,19 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
 
 ```qsharp
-operation ApplyPhaseLEOperationOnLEA (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit is Adj), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyPhaseLEOperationOnLEA (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit is Adj), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj
 ```
 
 
 ## Input
 
-### op : [PhaseLittleEndian](xref:Microsoft.Quantum.Arithmetic.PhaseLittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### op : [PhaseLittleEndian](xref:Microsoft.Quantum.Arithmetic.PhaseLittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 
 

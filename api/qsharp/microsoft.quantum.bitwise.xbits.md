@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Bitwise.XBits
 title: XBits function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/18/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Returns an integer representing the X bits of an arrayof Pauli operators.

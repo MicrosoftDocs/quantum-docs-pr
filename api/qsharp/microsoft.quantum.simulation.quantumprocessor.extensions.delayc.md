@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.DelayC
 title: DelayC operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/17/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
@@ -13,19 +13,19 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation DelayC<'T> (op : ('T => Unit is Ctl), arg : 'T, aux : Unit) : Unit
+operation DelayC<'T> (op : ('T => Unit is Ctl), arg : 'T, aux : Unit) : Unit is Ctl
 ```
 
 
 ## Input
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 
 

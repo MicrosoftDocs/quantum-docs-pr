@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.IndexOf
 title: IndexOf function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/17/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns the first index of the first element in an array that satisfiesa given predicate. If no such element exists, returns -1.

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Measurement.BasisChangeZtoY
 title: BasisChangeZtoY operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/18/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Measurement
@@ -13,13 +13,13 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Measurement](xref:Microsoft.Quantum.Measurement)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation BasisChangeZtoY (target : Qubit) : Unit
+operation BasisChangeZtoY (target : Qubit) : Unit is Adj + Ctl
 ```
 
 

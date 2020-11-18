@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Oracles.ObliviousOracleFromDeterministicStateOracle
 title: ObliviousOracleFromDeterministicStateOracle function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/18/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
@@ -13,7 +13,7 @@ qsharp.summary: Combines the oracles `DeterministicStateOracle` and `ObliviousOr
 
 Namespace: [Microsoft.Quantum.Oracles](xref:Microsoft.Quantum.Oracles)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Combines the oracles `DeterministicStateOracle` and `ObliviousOracle`.

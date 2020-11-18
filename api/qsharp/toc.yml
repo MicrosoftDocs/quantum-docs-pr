@@ -1068,6 +1068,7 @@
   - {name: WriteQuantumROMBitString, uid: Microsoft.Quantum.Preparation.WriteQuantumROMBitString}
   - {name: _ApproximatelyUnprepareArbitraryStatePlan, uid: Microsoft.Quantum.Preparation._ApproximatelyUnprepareArbitraryStatePlan}
   - {name: _CompileApproximateArbitraryStatePreparation, uid: Microsoft.Quantum.Preparation._CompileApproximateArbitraryStatePreparation}
+  - {name: _PrepareAmplitudesFromZeroState, uid: Microsoft.Quantum.Preparation._PrepareAmplitudesFromZeroState}
   - {name: _QuantumROMDiscretization, uid: Microsoft.Quantum.Preparation._QuantumROMDiscretization}
   - {name: _QuantumROMQubitManager, uid: Microsoft.Quantum.Preparation._QuantumROMQubitManager}
   - {name: _StatePreparationSBMComputeCoefficients, uid: Microsoft.Quantum.Preparation._StatePreparationSBMComputeCoefficients}

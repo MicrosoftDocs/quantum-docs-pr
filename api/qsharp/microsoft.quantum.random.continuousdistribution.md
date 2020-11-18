@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.ContinuousDistribution
 title: ContinuousDistribution user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/18/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Random
@@ -13,7 +13,7 @@ qsharp.summary: Represents a univariate probability distribution over real numbe
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Represents a univariate probability distribution over real numbers.

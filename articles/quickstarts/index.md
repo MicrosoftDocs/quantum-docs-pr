@@ -33,12 +33,48 @@ You can use the QDK in three ways:
 
 You can develop Q# code in most of your favorites IDEs, as well as integrate Q# with other languages such as Python and .NET (C#, F#).
 
-|&nbsp; | **VS Code<br>(2019 or later)**| **Visual Studio<br>(2019 or later)** | **Jupyter Notebooks** | **Command line**|
-|:-----|:-----:|:-----:|:-----:|:-----:|
-|**OS** |Windows, macOS, Linux |Windows only |Windows, macOS, Linux |Windows, macOS, Linux |
-|<br>**Q# standalone** |<br>[Install](xref:microsoft.quantum.install.standalone) |<br> [Install](xref:microsoft.quantum.install.standalone)  |<br> [Install](xref:microsoft.quantum.install.jupyter) |<br>[Install](xref:microsoft.quantum.install.standalone)|
-|**Q#  and Python** |[Install](xref:microsoft.quantum.install.python) |[Install](xref:microsoft.quantum.install.python) |[Install](xref:microsoft.quantum.install.jupyter) |[Install](xref:microsoft.quantum.install.python) |
-|**Q# and .NET (C#, F#)**|[Install](xref:microsoft.quantum.install.cs) |[Install](xref:microsoft.quantum.install.cs)|&#10006; |[Install](xref:microsoft.quantum.install.cs) |
+<table>
+    <tr>
+        <th width=10%>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th align="center" width=18%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
+        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="VS Studio" width="50"/><br><b>VS Studio<br>(2019 or later)</b></th>
+        <th align="center" width=18%><img src="~/media/jupyter-wht.png" alt="jupyter install" width="65"/><br><b>Jupyter Notebooks</b></th>
+        <th align="center" width=18%><img src="~/media/blank.png" alt="blank spacer" width="65"/><br><b>Command line</b></th>
+    </tr>
+    <tr>
+        <th>&nbsp;</th>
+        <td align="left"><b>OS support:</b></td>
+        <td align="center">Windows, macOS, Linux</td>
+        <td align="center">Windows only</td>
+        <td align="center">Windows, macOS, Linux</td>
+        <td align="center">Windows, macOS, Linux</td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/quantum-wht.png" alt="QDK" width="60"/></td>
+        <td align="left"><b>Q# standalone</b></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">Install</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">Install</a></td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/python.png" alt="python install" width="50"/></td>
+        <td align="left"><b>Q# and Python</b></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Install</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Install</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">Install</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Install</a></td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/dot_net.png" alt="dotnet install" width="50"/></td>
+        <td align="left"><b>Q# and .NET (C#, F#)</b></td> 
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">Install</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">Install</a></td>
+        <td align="center">&#10006;</td>
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">Install</a></td>
+   </tr>
+</table>
 
 ## Use the QDK Online
 

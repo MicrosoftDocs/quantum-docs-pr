@@ -21,7 +21,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 *Release date: November 23rd, 2020*
 
-- Improved compiler performance with faster reference loading.
+- Improved compiler performance due to faster reference loading.
 - Updated Q# grammar for language repository.Fixed lexer bug with double literals and ranges. Updated grammar for namespaces, namespace elements, statements, and types and labels are used consistently. 
 - Updated Microsoft.Quantum.Preparation API.
 - Q# ergonomic improvements: eliminate the need for parentheses around subsequent calls. 

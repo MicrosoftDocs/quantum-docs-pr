@@ -17,6 +17,17 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version X.XX.XXXXXXXX
+
+*Release date: November 23rd, 2020*
+
+- Improved compiler performance with faster reference loading.
+- Added Q# grammar for language repository.
+- Updated Microsoft.Quantum.Preparation API.
+- Q# ergonomic improvements: eliminate the need for parentheses around subsequent calls. 
+- Updated IQ# client telemetry to use the latest Microsoft Cookie Compliance API and GDPR cookie consent banner. This requires explicit user consent for non-critical cookies, and the user has a finer control on how cookies can be used. More here: https://www.1eswiki.com/wiki/WCP_Cookie_Consent_API.
+- Allocated qubits not reused when optimizing for depth. When the QCTraceSimulator is set for OptimizeDepth = true, then the width of SimultaneousUse should be 20, and depth (of all gates) should be 4. SequentialUse should have depth 24 and also have width 20.
+
 ## Version 0.13.20111004
 
 *Release date: November 10th, 2020*

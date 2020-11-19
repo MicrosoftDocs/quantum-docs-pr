@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Convert.MaybeBigIntAsInt
 title: MaybeBigIntAsInt function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/19/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Converts a given big integer to an equivalent integer, if possible.The function returns a pair of the resulting integer and a Boolean flagwhich is true, if and only if the conversion was possible.

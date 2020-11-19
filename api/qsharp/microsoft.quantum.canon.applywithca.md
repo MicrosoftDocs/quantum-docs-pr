@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWithCA
 title: ApplyWithCA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/19/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,13 +13,13 @@ qsharp.summary: Given two operations, applies one as conjugated with the other.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given two operations, applies one as conjugated with the other.
 
 ```qsharp
-operation ApplyWithCA<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T) : Unit
+operation ApplyWithCA<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -29,12 +29,12 @@ Given two operations, respectively described by unitary operators $U$and $V$, a
 
 ## Input
 
-### outerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### outerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 The operation $U$ that should be used to conjugate $V$. Note that theouter operation $U$ needs to be adjointable, but does notneed to be controllable.
 
 
-### innerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### innerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 The operation $V$ being conjugated.
 

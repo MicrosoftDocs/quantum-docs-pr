@@ -23,7 +23,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 - Improved compiler performance due to faster reference loading.
 - Updated Q# grammar for language repository. Fixed lexer bug with double literals and ranges. Updated grammar for namespaces, namespace elements, statements, and types and labels are used consistently. 
-- Updated Microsoft.Quantum.Preparation API.
+- Updated the [`Microsoft.Quantum.Preparation` namespace](xref:Microsoft.Quantum.Preparation) to be more consistent with style guide and API design principles, and to support purified mixed states with additional data (see [proposal](https://github.com/microsoft/QuantumLibraries/issues/344) and [review notes](https://github.com/microsoft/QuantumLibraries/blob/main/Design/meetings/2020/api-design-2020-11-05.md)). https://github.com/microsoft/QuantumLibraries/pull/212, https://github.com/microsoft/QuantumLibraries/pull/322, https://github.com/microsoft/QuantumLibraries/pull/375, https://github.com/microsoft/QuantumLibraries/pull/376
 - Q# ergonomic improvements: eliminate the need for parentheses around subsequent calls. 
 - Updated IQ# client telemetry to use the latest Microsoft Cookie Compliance API and GDPR cookie consent banner. This requires explicit user consent for non-critical cookies, and the user has a finer control on how cookies can be used. More here: https://www.1eswiki.com/wiki/WCP_Cookie_Consent_API.
 - Allocated qubits not reused when optimizing for depth. When the QCTraceSimulator is set for OptimizeDepth = true, then the width of SimultaneousUse should be 20, and depth (of all gates) should be 4. SequentialUse should have depth 24 and also have width 20.

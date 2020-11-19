@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.MeasureFxP
 title: MeasureFxP operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/19/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Measure a fixed-point number, returns its value as Double, and resetsall the register to zero.

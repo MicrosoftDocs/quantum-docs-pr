@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.R1
 title: R1 operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/19/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -19,13 +19,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Applies a rotation about the $\ket{1}$ state by a given angle.\begin{align}R_1(\theta) \mathrel{:=}\operatorname{diag}(1, e^{i\theta}).\end{align}
 
 ```qsharp
-operation R1 (theta : Double, qubit : Qubit) : Unit
+operation R1 (theta : Double, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

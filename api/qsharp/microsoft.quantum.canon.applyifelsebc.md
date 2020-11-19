@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseBC
 title: ApplyIfElseBC operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/19/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies one of two controllable operations, depending on the value of aclassical bit.
 
 ```qsharp
-operation ApplyIfElseBC<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit
+operation ApplyIfElseBC<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit is Ctl
 ```
 
 
@@ -36,7 +36,7 @@ Given a bit `bit`, applies the operation `trueOp` with `trueInput` asits input 
 The boolean value used to determine whether `trueOp` or `falseOp` isapplied.
 
 
-### trueOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### trueOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 The controllable operation to be applied when `bit` is `true`.
 
@@ -46,7 +46,7 @@ The controllable operation to be applied when `bit` is `true`.
 The input to be provided to `trueOp` when `bit` is `true`.
 
 
-### falseOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### falseOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 The controllable operation to be applied when `bit` is `false`.
 

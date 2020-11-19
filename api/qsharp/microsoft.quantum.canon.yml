@@ -73,6 +73,7 @@ functions:
 - {summary: 'Computes the Hamming weight of an integer, i.e., the number of 1s in
     its binary expansion.', uid: Microsoft.Quantum.Canon.HammingWeightI}
 - {summary: Ignores the output of an operation or function., uid: Microsoft.Quantum.Canon.Ignore}
+- {summary: Returns true if and only if input range is empty., uid: Microsoft.Quantum.Canon.IsRangeEmpty}
 - {summary: Tests if a given Result value is equal to `One`., uid: Microsoft.Quantum.Canon.IsResultOne}
 - {summary: Tests if a given Result value is equal to `Zero`., uid: Microsoft.Quantum.Canon.IsResultZero}
 - {summary: "> [!WARNING]\n> LittleEndianToBigEndian has been deprecated. Please use\
@@ -147,6 +148,7 @@ operations:
 - {summary: Performs a controlled "AND ladder" on a register of target qubits., uid: Microsoft.Quantum.Canon.AndLadder}
 - {summary: 'Inverts a given target qubit if and only if both control qubits are in
     the 1 state, using measurement to perform the adjoint operation.', uid: Microsoft.Quantum.Canon.ApplyAnd}
+- {summary: Computes a chain of AND gates, uid: Microsoft.Quantum.Canon.ApplyAndChain}
 - {summary: '', uid: Microsoft.Quantum.Canon.ApplyBound}
 - {summary: '', uid: Microsoft.Quantum.Canon.ApplyBoundA}
 - {summary: '', uid: Microsoft.Quantum.Canon.ApplyBoundC}
@@ -428,7 +430,6 @@ operations:
     range., uid: Microsoft.Quantum.Canon.IterateThroughCartesianPower}
 - {summary: Applies an operation for each index in the Cartesian product of several
     ranges., uid: Microsoft.Quantum.Canon.IterateThroughCartesianProduct}
-- {summary: Computes the logical AND of multiple qubits., uid: Microsoft.Quantum.Canon.LogicalANDMeasAndFix}
 - {summary: "> [!WARNING]\n> ModularAddProductLE has been deprecated. Please use <xref:Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger>\
     \ instead.\n>\n> Please use @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"\
     .\n\n", uid: Microsoft.Quantum.Canon.ModularAddProductLE}
@@ -457,6 +458,7 @@ operations:
 - {summary: "Applies a multiply-controlled unitary operation $U$ that applies a unitary\
     \ $V_j$ when controlled by n-qubit number state $\\ket{j}$.\n$U = \\sum^{N-1}_{j=0}\\\
     ket{j}\\bra{j}\\otimes V_j$.", uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator}
+- {summary: Implementation step of `MultiplexOperationsFromGenerator`., uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGeneratorImpl}
 - {summary: Implementation step of MultiplexOperations., uid: Microsoft.Quantum.Canon.MultiplexOperationsWithAuxRegister}
 - {summary: Applies a Pauli rotation conditioned on an array of qubits., uid: Microsoft.Quantum.Canon.MultiplexPauli}
 - {summary: Applies a Pauli Z rotation conditioned on an array of qubits., uid: Microsoft.Quantum.Canon.MultiplexZ}
@@ -480,6 +482,5 @@ operations:
   uid: Microsoft.Quantum.Canon.Trotter2ImplCA}
 - {summary: "Recursive implementation of even-order Trotter\u2013Suzuki integrator.",
   uid: Microsoft.Quantum.Canon.TrotterArbitraryImplCA}
-- {summary: Implementation step of `MultiplexOperationsFromGenerator`., uid: Microsoft.Quantum.Canon._MultiplexOperationsFromGenerator}
 summary: ''
 uid: Microsoft.Quantum.Canon

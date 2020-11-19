@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.HY
 title: HY operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/19/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -26,13 +26,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies the Y-basis analog to the Hadamard transformationthat interchanges the Z and Y axes.The Y Hadamard transformation $H_Y = S H$ on a single qubit is:\begin{align}H_Y \mathrel{:=}\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1 \\\\i & -i\end{bmatrix}.\end{align}
 
 ```qsharp
-operation HY (target : Qubit) : Unit
+operation HY (target : Qubit) : Unit is Adj + Ctl
 ```
 
 

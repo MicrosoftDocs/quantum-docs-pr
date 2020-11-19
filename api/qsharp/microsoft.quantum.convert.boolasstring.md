@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Convert.BoolAsString
 title: BoolAsString function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/19/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
@@ -13,7 +13,7 @@ qsharp.summary: Converts a given boolean value to an equivalent string represent
 
 Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Converts a given boolean value to an equivalent string representation.

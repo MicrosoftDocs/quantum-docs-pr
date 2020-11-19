@@ -22,7 +22,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 *Release date: November 23rd, 2020*
 
 - Improved compiler performance with faster reference loading.
-- Added Q# grammar for language repository.
+- Updated Q# grammar for language repository.Fixed lexer bug with double literals and ranges. Updated grammar for namespaces, namespace elements, statements, and types and labels are used consistently. 
 - Updated Microsoft.Quantum.Preparation API.
 - Q# ergonomic improvements: eliminate the need for parentheses around subsequent calls. 
 - Updated IQ# client telemetry to use the latest Microsoft Cookie Compliance API and GDPR cookie consent banner. This requires explicit user consent for non-critical cookies, and the user has a finer control on how cookies can be used. More here: https://www.1eswiki.com/wiki/WCP_Cookie_Consent_API.

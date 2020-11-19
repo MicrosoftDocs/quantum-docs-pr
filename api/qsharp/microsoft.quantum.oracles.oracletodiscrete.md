@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Oracles.OracleToDiscrete
 title: OracleToDiscrete function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/19/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Oracles](xref:Microsoft.Quantum.Oracles)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given an operation representing a "black-box" oracle, returns a discrete-time oraclewhich represents the "black-box" oracle repeated multiple times.
@@ -27,7 +27,7 @@ function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl)) : Mi
 
 ## Input
 
-### blackBoxOracle : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### blackBoxOracle : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 The operation to be exponentiated.
 

@@ -1,13 +1,13 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareChoiState
 title: PrepareChoiState operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/19/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareChoiState
 qsharp.summary: >-
-  Prepares the Choi–Jamiłkowski state for a given operation onto given reference
+  Prepares the Choi–Jamiołkowski state for a given operation onto given reference
   and target registers.
 ---
 
@@ -15,10 +15,10 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Prepares the Choi–Jamiłkowski state for a given operation onto given referenceand target registers.
+Prepares the Choi–Jamiołkowski state for a given operation onto given referenceand target registers.
 
 ```qsharp
 operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[]) : Unit
@@ -29,7 +29,7 @@ operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target 
 
 ### op : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
 
-Operation $\Lambda$ whose Choi–Jamiłkowski state $J(\Lambda) / 2^N$is to be prepared, where $N$ is the number of qubits on which`op` acts.
+Operation $\Lambda$ whose Choi–Jamiołkowski state $J(\Lambda) / 2^N$is to be prepared, where $N$ is the number of qubits on which`op` acts.
 
 
 ### reference : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]

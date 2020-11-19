@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger
 title: IncrementPhaseByModularInteger operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/19/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -13,13 +13,13 @@ qsharp.summary: Performs a modular increment of a qubit register by an integer c
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Performs a modular increment of a qubit register by an integer constant.
 
 ```qsharp
-operation IncrementPhaseByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit
+operation IncrementPhaseByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit is Adj + Ctl
 ```
 
 

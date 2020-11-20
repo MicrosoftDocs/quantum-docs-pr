@@ -1,12 +1,17 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareArbitraryState
 title: PrepareArbitraryState operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/20/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareArbitraryState
 qsharp.summary: >-
+  > [!WARNING]
+
+  > PrepareArbitraryState has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> instead.
+
+
   Given a set of coefficients and a little-endian encoded quantum register,
   prepares an state on that register described by the given coefficients.
 ---
@@ -15,13 +20,16 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
+
+> [!WARNING]
+> PrepareArbitraryState has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> instead.
 
 Given a set of coefficients and a little-endian encoded quantum register,prepares an state on that register described by the given coefficients.
 
 ```qsharp
-operation PrepareArbitraryState (coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation PrepareArbitraryState (coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 

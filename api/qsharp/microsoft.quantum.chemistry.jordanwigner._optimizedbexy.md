@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEXY
 title: _OptimizedBEXY operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/20/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
@@ -13,13 +13,13 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 
 
 ```qsharp
-operation _OptimizedBEXY (targetIndex : Int, pauliBasis : Qubit, accumulator : Qubit, targetRegister : Qubit[]) : Unit
+operation _OptimizedBEXY (targetIndex : Int, pauliBasis : Qubit, accumulator : Qubit, targetRegister : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

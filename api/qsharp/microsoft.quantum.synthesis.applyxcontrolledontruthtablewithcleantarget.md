@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTableWithCleanTarget
 title: ApplyXControlledOnTruthTableWithCleanTarget operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/20/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies the @"microsoft.quantum.intrinsic.x" operation on `target`, if the Boolean function `func` evaluatesto true for the classical assignment in `controlRegister`.
 
 ```qsharp
-operation ApplyXControlledOnTruthTableWithCleanTarget (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit
+operation ApplyXControlledOnTruthTableWithCleanTarget (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit is Adj + Ctl
 ```
 
 

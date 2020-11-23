@@ -40,7 +40,7 @@ working after adding a new Q# file to a project (see [qsharp-compiler#720](https
 
 This release contains the following:
 
-- Resource estimation now emits simultaneously achievable depth and width estimates in addition to the qubit count. See [here](xref:microsoft.quantum.machines.resources-estimator#metrics-reported) for details.
+- Resource estimation now emits simultaneously achievable depth and width estimates in addition to the qubit count. See [here](xref:microsoft.quantum.machines.resources-estimator#metrics-reported) for details. 
 
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22).
 

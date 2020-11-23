@@ -6,9 +6,7 @@ functions: []
 name: Microsoft.Quantum.Environment
 newtypes: []
 operations:
-- {summary: 'Returns the number of qubits currently available to borrow. This includes
-    unused qubits; that is, this includes the qubits returned by `GetQubitsAvailableToUse`.',
-  uid: Microsoft.Quantum.Environment.GetQubitsAvailableToBorrow}
+- {summary: Returns the number of qubits currently available to borrow., uid: Microsoft.Quantum.Environment.GetQubitsAvailableToBorrow}
 - {summary: Returns the number of qubits currently available to use., uid: Microsoft.Quantum.Environment.GetQubitsAvailableToUse}
 summary: These functions provide information about the environment in which the quantum
   computation is occuring.

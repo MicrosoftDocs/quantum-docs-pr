@@ -30,7 +30,7 @@ If you are ready to start coding, follow these steps before proceeding:
 
 You can also follow along with the narrative without installing the QDK,
 reviewing  the overviews of the Q# programming language and the first concepts
-of quantum computing.
+of quantum computing. 
 
 ## In this tutorial, you'll learn how to:
 

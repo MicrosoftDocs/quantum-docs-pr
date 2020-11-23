@@ -17,7 +17,7 @@ measures qubits and demonstrates the effects of superposition and entanglement.
 You will write an application called Bell to demonstrate quantum entanglement.
 The name Bell is in reference to Bell states, which are specific quantum states
 of two qubits that are used to represent the simplest examples of superposition
-and quantum entanglement.
+and quantum entanglement. 
 
 ## Pre-requisites
 

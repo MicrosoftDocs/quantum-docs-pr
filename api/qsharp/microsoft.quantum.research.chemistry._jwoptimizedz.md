@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZ
 title: _JWOptimizedZ operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Applies a Rz rotation, with a C-NOT trick to double phasein phase estimation.
 
 ```qsharp
-operation _JWOptimizedZ (angle : Double, parityQubit : Qubit, qubit : Qubit) : Unit
+operation _JWOptimizedZ (angle : Double, parityQubit : Qubit, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

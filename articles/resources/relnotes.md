@@ -26,6 +26,8 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 - Updated the [`Microsoft.Quantum.Preparation` namespace](xref:Microsoft.Quantum.Preparation) to be more consistent with style guide and API design principles, and to support purified mixed states with additional data (see [proposal](https://github.com/microsoft/QuantumLibraries/issues/344) and [review notes](https://github.com/microsoft/QuantumLibraries/blob/main/Design/meetings/2020/api-design-2020-11-05.md)). https://github.com/microsoft/QuantumLibraries/pull/212, https://github.com/microsoft/QuantumLibraries/pull/322, https://github.com/microsoft/QuantumLibraries/pull/375, https://github.com/microsoft/QuantumLibraries/pull/376
 - Parentheses around repeated call expressions are now optional: `(Foo(x))(y)` may be written as `Foo(x)(y)`.
 
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18).
+
 ## Version 0.13.20111004
 
 *Release date: November 10th, 2020*

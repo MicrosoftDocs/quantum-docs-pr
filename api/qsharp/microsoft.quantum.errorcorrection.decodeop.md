@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.DecodeOp
 title: DecodeOp user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -18,7 +18,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Represents an operation which decodes an encoded register into aphysical register and the scratch qubits used to record a syndrome.The argument to a DecodeOp is the same as the return from anEncodeOp, and vice versa.

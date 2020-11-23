@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.PauliCoefficientFromGenIdx
 title: PauliCoefficientFromGenIdx function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -13,7 +13,7 @@ qsharp.summary: Extracts the coefficient of a Pauli term described by a `Generat
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Extracts the coefficient of a Pauli term described by a `GeneratorIndex`.

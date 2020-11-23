@@ -22,7 +22,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 *Release date: November 23rd, 2020*
 
 - Improved compiler performance due to faster reference loading.
-- Updated Q# grammar for language repository. Fixed lexer bug with double literals and ranges. Updated grammar for namespaces, namespace elements, statements, and types and labels are used consistently. 
+- Added an [ANTLR grammar for Q#](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language/5_Grammar) to the Q# language specification.
 - Updated the [`Microsoft.Quantum.Preparation` namespace](xref:Microsoft.Quantum.Preparation) to be more consistent with style guide and API design principles, and to support purified mixed states with additional data (see [proposal](https://github.com/microsoft/QuantumLibraries/issues/344) and [review notes](https://github.com/microsoft/QuantumLibraries/blob/main/Design/meetings/2020/api-design-2020-11-05.md)). https://github.com/microsoft/QuantumLibraries/pull/212, https://github.com/microsoft/QuantumLibraries/pull/322, https://github.com/microsoft/QuantumLibraries/pull/375, https://github.com/microsoft/QuantumLibraries/pull/376
 - Q# ergonomic improvements: eliminate the need for parentheses around subsequent calls. 
 

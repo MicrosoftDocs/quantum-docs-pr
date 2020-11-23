@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Exclude
 title: Exclude function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns an array containing the elements of another array,excluding elements at a given list of indices.
@@ -47,3 +47,7 @@ An array `output` such that `output[0]` is the first elementof `array` whose in
 ### 'T
 
 The type of the array elements.
+
+## Example
+
+```qsharplet array = [10, 11, 12, 13, 14, 15];// The following line returns [10, 12, 15].let subarray = Exclude([1, 3, 4], array);```

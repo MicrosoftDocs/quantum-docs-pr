@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.MappedOverRange
 title: MappedOverRange function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given a range and a function that takes an integer as input,returns a new array that consistsof the images of the range values under the function.
@@ -48,6 +48,10 @@ An array `'T[]` of elements that are mapped by the `mapper` function.
 ### 'T
 
 The result type of the `mapper` function.
+
+## Example
+
+This example adds 1 to a range of even numbers:```Q#let numbers = MappedOverRange(PlusI(1, _), 0..2..10);// numbers = [1, 3, 5, 7, 9, 11]```
 
 ## Remarks
 

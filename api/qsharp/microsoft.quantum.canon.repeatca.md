@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.RepeatCA
 title: RepeatCA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,19 +13,19 @@ qsharp.summary: Repeats an operation a given number of times.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Repeats an operation a given number of times.
 
 ```qsharp
-operation RepeatCA<'TInput> (op : ('TInput => Unit is Adj + Ctl), nTimes : Int, input : 'TInput) : Unit
+operation RepeatCA<'TInput> (op : ('TInput => Unit is Adj + Ctl), nTimes : Int, input : 'TInput) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### op : 'TInput => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### op : 'TInput => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 The operation to be called repeatedly.
 
@@ -50,6 +50,10 @@ The input to be passed to `op`.
 ### 'TInput
 
 
+
+## Example
+
+The following are equivalent:```Q#RepeatCA(U, 17, target);(BoundCA(ConstantArray(17, U)))(target);```
 
 ## See Also
 

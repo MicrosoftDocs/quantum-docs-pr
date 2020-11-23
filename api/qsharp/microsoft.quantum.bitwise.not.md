@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Not
 title: Not function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Returns the bitwise NOT of an integer.This performs the same computation as the built-in `~~~` operator.
@@ -36,6 +36,10 @@ function Not (a : Int) : Int
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)
 
 
+
+## Example
+
+```qsharplet a = 248;let x = Not(a); // x : Int = -249, due to two's complement representation.```
 
 ## Remarks
 

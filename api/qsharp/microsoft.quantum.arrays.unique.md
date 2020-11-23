@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Unique
 title: Unique function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -13,7 +13,7 @@ qsharp.summary: Returns a new array that has no equal adjacent elements.
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns a new array that has no equal adjacent elements.
@@ -49,6 +49,10 @@ Array with no equal adjacent elements.
 ### 'T
 
 The type of each element of `array`.
+
+## Example
+
+```Q#let unique1 = Unique(EqualI, [1, 1, 3, 3, 2, 5, 5, 5, 7]);// same as [1, 3, 2, 5, 7]let unique2 = Unique(EqualI, [2, 2, 1, 1, 2, 2, 1, 1]);// same as [2, 1, 2, 1];let unique3 = Unique(EqualI, Sorted(LessThanOrEqualI, [2, 2, 1, 1, 2, 2, 1, 1]));// same as [1, 2];```
 
 ## Remarks
 

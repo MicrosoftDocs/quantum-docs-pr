@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.All
 title: All function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given an array and a predicate that is definedfor the elements of the array, and checks if all elements of thearray satisfy the predicate.
@@ -48,6 +48,10 @@ A `Bool` value of the AND function of the predicate applied to all elements.
 ### 'T
 
 The type of `array` elements.
+
+## Example
+
+The following code checks whether all elements of the array are non-zero:```qsharpopen Microsoft.Quantum.Arrays;open Microsoft.Quantum.Logical;function AllDemo() : Unit {    let predicate = NotEqualI(_, 0);    let isNonZero = All(predicate, [2, 3, 4, 5, 6, 0]);    Message($"{isNonZero}");}```
 
 ## Remarks
 

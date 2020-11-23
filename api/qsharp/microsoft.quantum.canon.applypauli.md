@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyPauli
 title: ApplyPauli operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given a multi-qubit Pauli operator, applies the corresponding operation toa register.
 
 ```qsharp
-operation ApplyPauli (pauli : Pauli[], target : Qubit[]) : Unit
+operation ApplyPauli (pauli : Pauli[], target : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -40,3 +40,8 @@ Register to apply the given Pauli operation on.
 
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## Example
+
+The following are equivalent:```qsharpApplyPauli([PauliY, PauliZ, PauliX], target);```and```qsharpY(target[0]);Z(target[1]);X(target[2]);```

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Filtered
 title: Filtered function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given an array and a predicate that is definedfor the elements of the array, returns an array that consists ofthose elements that satisfy the predicate.
@@ -48,6 +48,10 @@ An array `'T[]` of elements that satisfy the predicate.
 ### 'T
 
 The type of `array` elements.
+
+## Example
+
+The following code demonstrates the "Filtered" function.A predicate is defined using the @"microsoft.quantum.logical.greaterthani" function:```qsharpopen Microsoft.Quantum.Arrays;open Microsoft.Quantum.Logical;function FilteredDemo() : Unit {   let predicate = GreaterThanI(_, 5);   let filteredArray = Filtered(predicate, [2, 5, 9, 1, 8]);   Message($"{filteredArray}");}```The outcome one should expect from this example will be an array of numbers greater than 5.
 
 ## Remarks
 

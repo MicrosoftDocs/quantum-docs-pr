@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.Contradiction
 title: Contradiction function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -13,7 +13,7 @@ qsharp.summary: Declares that a classical condition is false.
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Declares that a classical condition is false.
@@ -39,6 +39,10 @@ Failure message string to be printed in the case that the classicalcondition is
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+The following Q# code will print "Hello, world":```Q#Contradiction(2 == 3, "2 is not equal to 3.");Message("Hello, world.");```
 
 ## See Also
 

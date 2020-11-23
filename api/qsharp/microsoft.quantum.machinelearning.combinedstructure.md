@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.CombinedStructure
 title: CombinedStructure function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Given one or more layers of controlled rotations, returns a singlelayer with model parameter index shifted such that distinct layersare parameterized by distinct model parameters.
@@ -37,3 +37,7 @@ The layers to be combined.
 ## Output : [ControlledRotation](xref:Microsoft.Quantum.MachineLearning.ControlledRotation)[]
 
 A single layer of controlled rotations, representing the concatenationof all other layers.
+
+## Example
+
+The following are equivalent:```Q#let structure = CombinedStructure([    LocalRotationLayer(2, PauliY),    CyclicEntanglingLayer(3, PauliX, 2)]);let structure = [    ControlledRotation((0, new Int[0]), PauliY, 0),    ControlledRotation((1, new Int[0]), PauliY, 1),    ControlledRotation((0, [2]), PauliX, 2),    ControlledRotation((1, [0]), PauliX, 3),    ControlledRotation((2, [1]), PauliX, 4)];```

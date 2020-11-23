@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Count
 title: Count function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given an array and a predicate that is definedfor the elements of the array, returns the number of elementsan array that consists of those elements that satisfy the predicate.
@@ -48,6 +48,10 @@ The number of elements in `array` that satisfy the predicate.
 ### 'T
 
 The type of `array` elements.
+
+## Example
+
+The following code demonstrates the "Count" function.A predicate is defined using the @"microsoft.quantum.logical.greaterthani" function:```Q# let predicate = GreaterThanI(_, 5); let count = Count(predicate, [2, 5, 9, 1, 8]); // count = 2```
 
 ## Remarks
 

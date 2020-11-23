@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.IterateThroughCartesianProduct
 title: IterateThroughCartesianProduct operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies an operation for each index in the Cartesian product of severalranges.
@@ -45,6 +45,10 @@ An operation to be called for each element of the given Cartesian product.
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+Given an operation `op`, the following two snippets are equivalent:```Q#IterateThroughCartesianProduct([3, 4, 5], op);``````Q#op([0, 0, 0]);op([1, 0, 0]);op([2, 0, 0]);op([0, 1, 0]);// ...op([0, 3, 0]);op([0, 0, 1]);//op([2, 3, 4]);```
 
 ## See Also
 

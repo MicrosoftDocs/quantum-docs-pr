@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyTransposition
 title: ApplyTransposition operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -13,13 +13,13 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
 
 ```qsharp
-operation ApplyTransposition (a : Int, b : Int, qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyTransposition (a : Int, b : Int, qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -47,3 +47,8 @@ A list of $n$ qubits to which the transposition is applied to.
 
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## Example
+
+Prepare a uniform superposition of number states $|1\rangle$, $|2\rangle$, and$|3\rangle$ on 2 qubits.```Q#using (qubits = Qubit[2]) {  let register = LittleEndian(qubits);  PrepareUniformSuperposition(3, register);  ApplyTransposition(0, 3, register);}```

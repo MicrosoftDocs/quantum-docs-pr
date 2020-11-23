@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutation
 title: TruthTablesFromPermutation function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -13,7 +13,7 @@ qsharp.summary: Collect all functions for controlled gates by folding through al
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Collect all functions for controlled gates by folding through all variable indexes

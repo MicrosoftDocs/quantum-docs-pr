@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.ColumnAt
 title: ColumnAt function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -13,7 +13,7 @@ qsharp.summary: Extracts a column from a matrix.
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Extracts a column from a matrix.
@@ -49,6 +49,10 @@ Column of the matrix
 ### 'T
 
 The type of each element of `matrix`.
+
+## Example
+
+```Q#let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];let column = ColumnAt(0, matrix);// same as: column = [1, 4, 7]```
 
 ## See Also
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertMeasurementProbability
 title: AssertMeasurementProbability operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Asserts that measuring the given qubits in the given Pauli basis will have the given resultwith the given probability, within some tolerance.
 
 ```qsharp
-operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit
+operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit is Adj + Ctl
 ```
 
 
@@ -61,6 +61,10 @@ A message to be reported if the assertion fails.
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+```qsharpusing (register = Qubit()) {    H(register);    AssertProb([PauliZ], [register], One, 0.5,        "Measuring in conjugate basis did not give 50/50 results.", 1e-5);}```
 
 ## Remarks
 

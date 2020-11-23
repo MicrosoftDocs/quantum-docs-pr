@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Convert.RangeAsIntArray
 title: RangeAsIntArray function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
@@ -13,7 +13,7 @@ qsharp.summary: Creates an array `arr` of integers enumerated by start..step..en
 
 Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Creates an array `arr` of integers enumerated by start..step..end.
@@ -34,3 +34,7 @@ A `Range` of values `start..step..end` to be converted to an array.
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
 
 A new array of integers corresponding to values iterated over by `range`.
+
+## Example
+
+```qsharp// The following returns [1,3,5,7];let array = RangeAsIntArray(1..2..8);```

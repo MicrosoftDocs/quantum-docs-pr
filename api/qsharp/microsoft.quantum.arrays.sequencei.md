@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.SequenceI
 title: SequenceI function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -13,7 +13,7 @@ qsharp.summary: Get an array of integers in a given interval.
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Get an array of integers in a given interval.
@@ -39,3 +39,7 @@ An inclusive end index of the interval that is not smaller than `from`.
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
 
 An array containing the sequence of numbers `from`, `from + 1`, ...,`to`.
+
+## Example
+
+```qsharplet arr1 = SequenceI(0, 3); // [0, 1, 2, 3]let arr2 = SequenceI(23, 29); // [23, 24, 25, 26, 27, 28, 29]let arr3 = SequenceI(-5, -2); // [-5, -4, -3, -2]let numbers = SequenceI(0, _); // function to create sequence from 0 to `to`let naturals = SequenceI(1, _); // function to create sequence from 1 to `to````

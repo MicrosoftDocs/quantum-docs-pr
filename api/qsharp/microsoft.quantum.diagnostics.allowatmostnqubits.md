@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AllowAtMostNQubits
 title: AllowAtMostNQubits operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -16,13 +16,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Between a call to this operation and its adjoint, asserts thatat most a given number of additional qubits are allocated withusing statements.
 
 ```qsharp
-operation AllowAtMostNQubits (nQubits : Int, message : String) : Unit
+operation AllowAtMostNQubits (nQubits : Int, message : String) : Unit is Adj
 ```
 
 
@@ -42,6 +42,10 @@ A message to be displayed upon failure.
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+The following snippet will fail when executed on machines whichsupport this diagnostic:```Q#within {    AllowAtMostNQubits(3, "Too many qubits allocated.");} apply {    // Fails since this allocates four qubits.    using (register = Qubit[4]) {    }}```
 
 ## Remarks
 

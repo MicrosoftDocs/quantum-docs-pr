@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.FlatMapped
 title: FlatMapped function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given an array and a function that maps an array element to some outputarray, returns the concatenated output arrays for each array element.
@@ -50,3 +50,7 @@ The type of `array` elements.
 ### 'TOutput
 
 The `mapper` function returns arrays of this type.
+
+## Example
+
+```Q#let Numbers = SequenceI(1, _); // generates numbers starting from 1let values = FlatMapped(Numbers, [1, 2, 3]);// values = [1, 1, 2, 1, 2, 3]```

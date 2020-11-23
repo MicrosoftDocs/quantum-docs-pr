@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.Repeat
 title: Repeat operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,7 +13,7 @@ qsharp.summary: Repeats an operation a given number of times.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Repeats an operation a given number of times.
@@ -50,6 +50,10 @@ The input to be passed to `op`.
 ### 'TInput
 
 
+
+## Example
+
+The following are equivalent:```Q#Repeat(U, 17, target);(Bound(ConstantArray(17, U)))(target);```
 
 ## See Also
 

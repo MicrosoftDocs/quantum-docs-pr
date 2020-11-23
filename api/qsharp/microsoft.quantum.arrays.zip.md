@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Zip
 title: Zip function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -20,7 +20,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -58,6 +58,10 @@ The type of the left array elements.
 ### 'U
 
 The type of the right array elements.
+
+## Example
+
+```qsharplet left = [1, 3, 71];let right = [false, true];let pairs = Zip(left, right); // [(1, false), (3, true)]```
 
 ## See Also
 

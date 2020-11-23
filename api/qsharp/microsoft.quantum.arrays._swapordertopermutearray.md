@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays._SwapOrderToPermuteArray
 title: _SwapOrderToPermuteArray function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns the order elements in an array need to be swapped to produce an ordered array.Assumes swaps occur in place.
@@ -36,6 +36,10 @@ Array with the permutation of the indices of the new array. There should be $n$ 
 ## Output : ([Int](xref:microsoft.quantum.lang-ref.int),[Int](xref:microsoft.quantum.lang-ref.int))[]
 
 The tuple represents the two indices to be swapped. The swaps begin at the lowest index.
+
+## Example
+
+```qsharp// The following returns [(0, 5),(0, 4),(0, 1),(0, 3)];let swapOrder = _SwapOrderToPermuteArray([5, 3, 2, 0, 1, 4]);```
 
 ## Remarks
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToHead
 title: ApplyToHead operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,7 +13,7 @@ qsharp.summary: Applies an operation to the first element of an array.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies an operation to the first element of an array.
@@ -49,6 +49,10 @@ An array of targets, of which the first will be applied to `op`.
 ### 'T
 
 The input type of the operation to be applied.
+
+## Example
+
+The following Q# snippets are equivalent:```Q#ApplyToHead(H, register);H(Head(register));```
 
 ## See Also
 

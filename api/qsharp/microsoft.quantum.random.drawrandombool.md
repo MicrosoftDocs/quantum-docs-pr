@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomBool
 title: DrawRandomBool operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Given a success probability, returns a single Bernoulli trial thatis true with the given probability.
@@ -36,3 +36,7 @@ The probability with which `true` should be returned.
 ## Output : [Bool](xref:microsoft.quantum.lang-ref.bool)
 
 `true` with probability `successProbability` and `false` withprobability `1.0 - successProbability`.
+
+## Example
+
+The following Q# snippet samples flips from a biased coin:```Q#let flips = DrawMany(DrawRandomBool, 10, 0.6);```

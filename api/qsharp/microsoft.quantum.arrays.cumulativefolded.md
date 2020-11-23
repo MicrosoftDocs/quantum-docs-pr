@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.CumulativeFolded
 title: CumulativeFolded function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -13,7 +13,7 @@ qsharp.summary: Combines Mapped and Fold into a single function
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Combines Mapped and Fold into a single function
@@ -57,3 +57,7 @@ The type of states that the `fn` function operates on, i.e., accepts as its firs
 ### 'T
 
 The type of `array` elements.
+
+## Example
+
+```Q#// same as sums = [1, 3, 6, 10, 15]let sums = CumulativeFolded(PlusI, 0, SequenceI(1, 5));```

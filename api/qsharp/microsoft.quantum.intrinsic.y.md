@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Y
 title: Y operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -22,13 +22,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Applies the Pauli $Y$ gate.\begin{align}\sigma_y \mathrel{:=}\begin{bmatrix}0 & -i \\\\i & 0\end{bmatrix}.\end{align}
 
 ```qsharp
-operation Y (qubit : Qubit) : Unit
+operation Y (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

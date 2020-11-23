@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.AbsI
 title: AbsI function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/23/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -13,7 +13,7 @@ qsharp.summary: Returns the absolute value of an integer.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Returns the absolute value of an integer.

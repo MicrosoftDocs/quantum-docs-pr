@@ -1,6 +1,6 @@
-﻿---
+---
 title: Expressions in Q#
-description: Understand how to specify, reference and combine constants, variables, operators, operations and functions as expressions in Q#.
+description: Understand how to specify, reference and combine constants, variables, operators, operations and functions expressions in Q#.
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020

@@ -15,11 +15,19 @@ Welcome to the Q# User Guide!
 
 In the different topics of this guide, we introduce some of the basics for developing quantum programs using Q#.
 
+<<<<<<< HEAD
 We refer to the [Q# GitHub repository](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language) for a full specification and documentation of the Q# quantum programming language. 
 
 ## User Guide Contents
 
 - [Q# programs](xref:microsoft.quantum.guide.programs): An quick introduction to quantum programs in Q#. 
+=======
+We refer to the [Q# language guide](xref:microsoft.quantum.qsharp.index) for a full specification and documentation of the Q# quantum programming language. 
+
+## User Guide Contents
+
+- [Q# programs](xref:microsoft.quantum.guide.programs): A quick introduction to quantum programs in Q#. 
+>>>>>>> afa9b69a7737e0e4f8b4fe851a83d0e7cf2042c0
 
 - [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs): describes how a Q# program is run, and provides an overview of the various ways you can call the program: from the command line, in Q# Jupyter Notebooks, or from a classical host program written in Python or a .NET language.
 

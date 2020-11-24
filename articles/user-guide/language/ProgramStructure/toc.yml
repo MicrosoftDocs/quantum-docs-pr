@@ -1,0 +1,16 @@
+- name: Program implementation
+  href: index.md
+- name: Namespaces
+  href: namespaces.md
+- name: Type declarations
+  href: typedeclarations.md
+- name: Callable declarations
+  href: callabledeclarations.md
+- name: Specialization declarations
+  href: specializationdeclarations.md
+- name: Attributes
+  href: attributes.md
+- name: Access modifiers
+  href: accessmodifiers.md
+- name: Comments
+  href: comments.md

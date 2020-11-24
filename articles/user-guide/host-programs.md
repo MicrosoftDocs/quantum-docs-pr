@@ -38,7 +38,7 @@ In Q#, this would be performed by the following code:
 ```
 
 However, this code alone can't be run by Q#.
-For that, it needs to make up the body of an [operation](xref:microsoft.quantum.guide.basics#q-operations-and-functions), which is then run when called---either directly or by another operation. 
+For that, it needs to make up the body of an [operation](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/4_TypeSystem/OperationsAndFunctions.md), which is then run when called---either directly or by another operation. 
 Hence, you can write an operation of the following form:
 ```qsharp
     operation MeasureSuperposition() : Result {
@@ -48,10 +48,9 @@ Hence, you can write an operation of the following form:
         }
     }
 ```
-You have defined an operation, `MeasureSuperposition`, which takes no inputs and returns a value of type [Result](xref:microsoft.quantum.guide.types).
+You have defined an operation, `MeasureSuperposition`, which takes no inputs and returns a value of type [Result](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language/4_TypeSystem#available-types).
 
-While the examples on this page only consist of Q# *operations*, all of the concepts we will discuss pertain equally to Q# *functions*, and therefore we refer to them collectively as *callables*. 
-Their differences are discussed at [Q# basics: operations and functions](xref:microsoft.quantum.guide.basics#q-operations-and-functions), and more details on defining them can be found at [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
+In addition to operations, Q# also allows to encapsulate deterministic computations into functions. Aside from the determinism guarantee that implies that computations that act on qubits need to be encapsulated into operations rather than functions, there is little difference between operations and function. We refer to them collectively as *callables*.
 
 ### Callable defined in a Q# file
 
@@ -159,7 +158,7 @@ Now, a call of `dotnet run` from the command prompt leads to `MeasureSuperpositi
 So, you will see either `One` or `Zero` printed. 
 
 Note that it doesn't matter if you have more callables defined below it, only `MeasureSuperposition` will be run.
-Additionally, it's no problem if your callable includes [documentation comments](xref:microsoft.quantum.guide.filestructure#documentation-comments) before its declaration, the `@EntryPoint()` attribute can be simply placed above them.
+Additionally, it's no problem if your callable includes [documentation comments](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/1_ProgramStructure/7_Comments.md#documentation-comments) before its declaration, the `@EntryPoint()` attribute can be simply placed above them.
 
 ### Callable arguments
 

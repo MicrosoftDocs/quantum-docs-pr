@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.SignedLittleEndian
 title: SignedLittleEndian user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/24/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -13,7 +13,7 @@ qsharp.summary: Type of a signed integer stored in little endian (see LittleEndi
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Type of a signed integer stored in little endian (see LittleEndian).

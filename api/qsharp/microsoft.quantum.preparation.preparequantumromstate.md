@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareQuantumROMState
 title: PrepareQuantumROMState operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/24/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -13,13 +13,13 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
 
 ```qsharp
-operation PrepareQuantumROMState (nBitsPrecision : Int, nCoeffs : Int, nBitsIndices : Int, keepCoeff : Int[], altIndex : Int[], indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, garbageRegister : Qubit[]) : Unit
+operation PrepareQuantumROMState (nBitsPrecision : Int, nCoeffs : Int, nBitsIndices : Int, keepCoeff : Int[], altIndex : Int[], data : Bool[][], indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, dataQubits : Qubit[], garbageRegister : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -50,7 +50,17 @@ operation PrepareQuantumROMState (nBitsPrecision : Int, nCoeffs : Int, nBitsIndi
 
 
 
+### data : [Bool](xref:microsoft.quantum.lang-ref.bool)[][]
+
+
+
+
 ### indexRegister : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)
+
+
+
+
+### dataQubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
 
 
 

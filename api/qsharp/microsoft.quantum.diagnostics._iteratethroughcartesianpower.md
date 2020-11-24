@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics._iterateThroughCartesianPower
 title: _iterateThroughCartesianPower operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/24/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Iterates a variable through a Cartesian product[ 0, bounds[0]-1 ] × [ 0, bounds[1]-1 ] × [ 0, bounds[Length(bounds)-1]-1 ]and calls op(arr) for every element of the Cartesian product

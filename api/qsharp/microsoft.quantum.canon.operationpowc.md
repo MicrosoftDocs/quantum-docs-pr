@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.OperationPowC
 title: OperationPowC function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/24/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -18,7 +18,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Raises an operation to a power.The modifier `C` indicates that the operation is controllable.That is, given an operation representing a gate $U$, returns a new operation$U^m$ for a power $m$.
@@ -30,7 +30,7 @@ function OperationPowC<'T> (op : ('T => Unit is Ctl), power : Int) : ('T => Unit
 
 ## Input
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 An operation $U$ representing the gate to be repeated.
 
@@ -41,7 +41,7 @@ The number of times that $U$ is to be repeated.
 
 
 
-## Output : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+## Output : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 A new operation representing $U^m$, where $m = \texttt{power}$.
 

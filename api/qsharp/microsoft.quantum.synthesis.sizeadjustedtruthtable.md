@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
 title: SizeAdjustedTruthTable function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/24/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -18,7 +18,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Adjusts truth table from array of Booleans according to number of variablesA new array is returned of length `2^numVars`, possiblyrequiring to extend `table`'s size with `false` entriesor truncating it to `2^numVars` elements.

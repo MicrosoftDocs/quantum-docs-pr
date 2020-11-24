@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateFrequencyA
 title: EstimateFrequencyA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/24/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Characterization](xref:Microsoft.Quantum.Characterization)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given a preparation that is adjointable and measurement, estimates the frequencywith which that measurement succeeds (returns `Zero`) byperforming a given number of trials.
@@ -28,7 +28,7 @@ operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measuremen
 
 ## Input
 
-### preparation : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### preparation : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 An adjointable operation $P$ that prepares a given state $\rho$ onits input register.
 

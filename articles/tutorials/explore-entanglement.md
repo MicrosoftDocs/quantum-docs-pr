@@ -106,7 +106,7 @@ introduce qubit states, operations, and measurement.
 ### Initialize qubit using measurement
 
 In the first code snippet below, we show you how to work with qubits in
-Q#.  We’ll introduce two operations, [`M`](xref:Microsoft.Quantum.Intrinsic.m) and [`X`](xref:Microsoft.Quantum.Intrinsic.X) that transform the state of a
+Q#.  We’ll introduce two operations, [`M`](xref:Microsoft.Quantum.Intrinsic.M) and [`X`](xref:Microsoft.Quantum.Intrinsic.X) that transform the state of a
 qubit. In this code snippet, an operation `SetQubitState` is defined that takes as a parameter a
 qubit and another parameter, `desired`, representing the state that we would
 like the qubit to be in.  The operation `SetQubitState` performs a measurement on the
@@ -156,7 +156,7 @@ an empty tuple in Python (`()`, represented by the type hint `Tuple[()]`).
 
 You have used two quantum operations in your first Q# operation:
 
-* The [`M`](xref:Microsoft.Quantum.Intrinsic.m) operation, which measures the
+* The [`M`](xref:Microsoft.Quantum.Intrinsic.M) operation, which measures the
   state of the qubit
 * The [`X`](xref:Microsoft.Quantum.Intrinsic.X) operation, which flips the state
   of a qubit

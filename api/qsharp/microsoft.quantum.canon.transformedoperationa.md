@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.TransformedOperationA
 title: TransformedOperationA function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/24/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given a function and an operation, returns a new operation whoseinput is transformed by the given function.
@@ -32,13 +32,13 @@ function TransformedOperationA<'T, 'U> (fn : ('U -> 'T), op : ('T => Unit is Adj
 A function that transforms the given input into a form expected by theoperation.
 
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 The operation to be transformed.
 
 
 
-## Output : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+## Output : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 A new operation tbat calls `fn` with its input, then passes theresulting output to `op`.
 

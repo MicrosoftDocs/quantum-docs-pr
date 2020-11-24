@@ -63,7 +63,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
         <td align="left"><b>Q# and Python</b></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">Install</a></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">Install</a></td>
-        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">Install</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Install</a></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">Install</a></td>
     </tr>
     <tr>

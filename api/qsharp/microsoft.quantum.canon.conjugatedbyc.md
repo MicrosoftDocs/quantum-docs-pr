@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ConjugatedByC
 title: ConjugatedByC function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/24/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given outer and inner operations, returns a new operation thatconjugates the inner operation by the outer operation.
@@ -27,18 +27,18 @@ function ConjugatedByC<'T> (outerOperation : ('T => Unit is Adj), innerOperation
 
 ## Input
 
-### outerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### outerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 The operation $U$ that should be used to conjugate $V$. Note that theouter operation $U$ needs to be adjointable, but does notneed to be controllable.
 
 
-### innerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### innerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 The operation $V$ being conjugated.
 
 
 
-## Output : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+## Output : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 A new operation whose action is represented by the unitary$U^{\dagger} V U$.
 

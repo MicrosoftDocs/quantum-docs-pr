@@ -56,7 +56,7 @@ To create a new project:
 
 1. Click **View** -> **Command Palette** and select **Q#: Create New Project**.
 2. Click **Standalone console application**.
-3. Navigate to the location to save the project and click **Create Project**.
+3. Navigate to the location to save the project. Enter the project name and click **Create Project**.
 4. When the project is successfully created, click **Open new project...** in the lower right.
 
 Inspect the project. You should see a source file named `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.

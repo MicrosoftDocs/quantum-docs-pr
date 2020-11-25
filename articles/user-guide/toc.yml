@@ -6,7 +6,7 @@
   href: host-programs.md
 - name: Testing and debugging
   href: testing-debugging.md
-- name: Q# language
+- name: Q# language guide
   href: language/toc.yml
 - name: Simulators and resource estimators
   href: machines/toc.yml

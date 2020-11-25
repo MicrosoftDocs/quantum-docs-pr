@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ApplyTargetStateReflectionOracle
 title: ApplyTargetStateReflectionOracle operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -13,13 +13,13 @@ qsharp.summary: Implementation of <xref:microsoft.quantum.canon.targetstaterefle
 
 Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementation of <xref:microsoft.quantum.canon.targetstatereflectionoracle>.
 
 ```qsharp
-operation ApplyTargetStateReflectionOracle (phase : Double, idxFlagQubit : Int, qubits : Qubit[]) : Unit
+operation ApplyTargetStateReflectionOracle (phase : Double, idxFlagQubit : Int, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

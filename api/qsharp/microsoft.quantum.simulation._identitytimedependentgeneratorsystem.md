@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation._IdentityTimeDependentGeneratorSystem
 title: _IdentityTimeDependentGeneratorSystem function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns a generator system consistent with theHamiltonian `H(s) = 0`, where `s` is a schedule parameter.

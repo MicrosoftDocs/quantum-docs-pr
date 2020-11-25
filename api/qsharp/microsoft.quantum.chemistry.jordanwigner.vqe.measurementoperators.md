@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.MeasurementOperators
 title: MeasurementOperators function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
@@ -13,7 +13,7 @@ qsharp.summary: Computes all the measurement operators required to compute the e
 
 Namespace: [Microsoft.Quantum.Chemistry.JordanWigner.VQE](xref:Microsoft.Quantum.Chemistry.JordanWigner.VQE)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Computes all the measurement operators required to compute the expectation of a Jordan-Wigner term.

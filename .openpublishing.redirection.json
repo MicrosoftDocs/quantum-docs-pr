@@ -117,7 +117,7 @@
     },
     {
       "source_path": "articles/quantum-techniques-TestingAndDebugging.md",
-      "redirect_url": "/quantum/user-guide/using-qsharp/testing-debugging",
+      "redirect_url": "/quantum/user-guide/testing-debugging",
       "redirect_document_id": false
     },
     {
@@ -267,7 +267,7 @@
     },
     {
       "source_path": "articles/techniques/testing-and-debugging.md",
-      "redirect_url": "/quantum/user-guide/using-qsharp/testing-debugging",
+      "redirect_url": "/quantum/user-guide/testing-debugging",
       "redirect_document_id": true
     },
     {

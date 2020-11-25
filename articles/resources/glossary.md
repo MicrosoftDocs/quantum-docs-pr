@@ -13,7 +13,7 @@ no-loc: ['Q#', '$$v', '$$', "$$", '$', "$", $, $$, '\cdots', 'bmatrix', '\ddots'
 
 ## Adjoint
 
-The complex conjugate transpose of an [operation](xref:microsoft.quantum.glossary#operation). For operations that implement a [unitary](xref:microsoft.quantum.glossary#unitary-operator) operator, the adjoint is the inverse of the operation and is indicated by a dagger symbol. For example, if the operation `U` represents the unitary operator $U$, then `Adjoint U` represents $U^\dagger$. For more information, see [Functor application](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/3_Expressions/FunctorApplication.md#functor-application).
+The complex conjugate transpose of an [operation](xref:microsoft.quantum.glossary#operation). For operations that implement a [unitary](xref:microsoft.quantum.glossary#unitary-operator) operator, the adjoint is the inverse of the operation and is indicated by a dagger symbol. For example, if the operation `U` represents the unitary operator $U$, then `Adjoint U` represents $U^\dagger$. For more information, see [Functor application](xref:microsoft.quantum.qsharp.functorapplication#functor-application).
 
 ## Ancilla
 
@@ -38,7 +38,7 @@ The set of operations that occupy the octants of the [Bloch sphere](xref:microso
 
 ## Controlled
 
-A quantum [operation](xref:microsoft.quantum.glossary#operation) that takes one or more [qubits](xref:microsoft.quantum.glossary#qubit) as enablers for the target operation. For more information, see [Functor application](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/3_Expressions/FunctorApplication.md#functor-application).
+A quantum [operation](xref:microsoft.quantum.glossary#operation) that takes one or more [qubits](xref:microsoft.quantum.glossary#qubit) as enablers for the target operation. For more information, see [Functor application](xref:microsoft.quantum.qsharp.functorapplication#functor-application).
 
 ## Dirac Notation
 
@@ -154,7 +154,7 @@ A method for regenerating data, or the [quantum state](xref:microsoft.quantum.gl
 
 ## Tuple
 
-A collection of comma-separated values that acts as a single value. The *type* of a tuple is defined by the types of values it contains. In Q#, tuples are [immutable](xref:microsoft.quantum.glossary#immutable) and can be nested, contain arrays, or used in an array. For more information, see [Tuples](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/3_Expressions/ValueLiterals.md#tuple-literals).
+A collection of comma-separated values that acts as a single value. The *type* of a tuple is defined by the types of values it contains. In Q#, tuples are [immutable](xref:microsoft.quantum.glossary#immutable) and can be nested, contain arrays, or used in an array. For more information, see [Tuples](xref:microsoft.quantum.qsharp.valueliterals#tuple-literals).
 
 ## Unitary operator
 
@@ -162,4 +162,4 @@ An operator whose inverse is equal to its [adjoint](xref:microsoft.quantum.gloss
 
 ## User-defined type
 
-A custom type that may contain one or more named or anonymous items. For more information, see  [Type declarations](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/1_ProgramStructure/2_TypeDeclarations.md#type-declarations).
+A custom type that may contain one or more named or anonymous items. For more information, see  [Type declarations]microsoft.quantum.qsharp.typedeclarations#type-declarations).

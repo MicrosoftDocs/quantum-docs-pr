@@ -1,25 +1,25 @@
 ---
-uid: Microsoft.Quantum.Preparation._StatePreparationSBMComputeCoefficients
-title: _StatePreparationSBMComputeCoefficients function
-ms.date: 10/26/2020 12:00:00 AM
+uid: Microsoft.Quantum.Preparation.StatePreparationSBMComputeCoefficients
+title: StatePreparationSBMComputeCoefficients function
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
-qsharp.name: _StatePreparationSBMComputeCoefficients
+qsharp.name: StatePreparationSBMComputeCoefficients
 qsharp.summary: Implementation step of arbitrary state preparation procedure.
 ---
 
-# _StatePreparationSBMComputeCoefficients function
+# StatePreparationSBMComputeCoefficients function
 
 Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementation step of arbitrary state preparation procedure.
 
 ```qsharp
-function _StatePreparationSBMComputeCoefficients (coefficients : Microsoft.Quantum.Math.ComplexPolar[]) : (Double[], Double[], Microsoft.Quantum.Math.ComplexPolar[])
+function StatePreparationSBMComputeCoefficients (coefficients : Microsoft.Quantum.Math.ComplexPolar[]) : (Double[], Double[], Microsoft.Quantum.Math.ComplexPolar[])
 ```
 
 

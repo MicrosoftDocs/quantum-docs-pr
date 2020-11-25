@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.MCMTMask
 title: MCMTMask user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -22,7 +22,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A type to represent a multiple-controlled multiple-target Toffoli gate.The first integer is a bit mask for control lines.  Bit indexes whichare set correspond to control line indexes.The second integer is a bit mask for target lines.  Bit indexes whichare set correspond to target line indexes.The bit indexes of both integers must be disjoint.

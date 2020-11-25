@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Convert.IntAsBoolArray
 title: IntAsBoolArray function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Produces a binary representation of a positive integer, using thelittle-endian representation for the returned array.

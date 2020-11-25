@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced
 title: AssertOperationsEqualReferenced operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -22,7 +22,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Given two operations, asserts that they act identically for all input states.This assertion is implemented by using the Choi–Jamiołkowski isomorphism to reducethe assertion to one of a qubit state assertion on two entangled registers.Thus, this operation needs only a single call to each operation being tested,but requires twice as many qubits to be allocated.This assertion can be used to ensure, for instance, that an optimized version of anoperation acts identically to its naïve implementation, or that an operationwhich acts on a range of non-quantum inputs agrees with known cases.
@@ -44,7 +44,7 @@ Number of qubits to pass to each operation.
 Operation to be tested.
 
 
-### expected : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### expected : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 Operation defining the expected behavior for the operation under test.
 

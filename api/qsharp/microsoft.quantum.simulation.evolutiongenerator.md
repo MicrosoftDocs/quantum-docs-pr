@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.EvolutionGenerator
 title: EvolutionGenerator user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -17,7 +17,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Represents a dynamical generator as a set of simulatable gates andan expansion in terms of that basis.Last parameter for number of terms.

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.HTermsToGenSys
 title: HTermsToGenSys function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry
@@ -13,7 +13,7 @@ qsharp.summary: Converts a Hamiltonian in `HTerm[]` data format to a GeneratorSy
 
 Namespace: [Microsoft.Quantum.Chemistry](xref:Microsoft.Quantum.Chemistry)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Converts a Hamiltonian in `HTerm[]` data format to a GeneratorSystem.

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification
 title: StandardAmplitudeAmplification function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -13,7 +13,7 @@ qsharp.summary: Standard Amplitude Amplification algorithm
 
 Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Standard Amplitude Amplification algorithm
@@ -25,7 +25,7 @@ function StandardAmplitudeAmplification (nIterations : Int, stateOracle : Micros
 
 ## Input
 
-### nIterations : [Int](xref:microsoft.quantum.lang-ref.int)
+### nIterations : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Number of iterations $n$ of amplitude amplification
 
@@ -35,13 +35,13 @@ Number of iterations $n$ of amplitude amplification
 Unitary oracle $A$ that prepares start state
 
 
-### idxFlagQubit : [Int](xref:microsoft.quantum.lang-ref.int)
+### idxFlagQubit : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Index to flag qubit
 
 
 
-## Output : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+## Output : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 An operation that implements the standard amplitude amplification quantum algorithm
 

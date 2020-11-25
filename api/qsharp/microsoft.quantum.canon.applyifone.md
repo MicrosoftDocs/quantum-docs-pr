@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOne
 title: ApplyIfOne operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,7 +13,7 @@ qsharp.summary: Applies an operation conditioned on a classical result value bei
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies an operation conditioned on a classical result value being one.
@@ -34,7 +34,7 @@ Given an operation `op` and a result value `result`, applies `op` to the `target
 A measurement result that controls whether op is applied or not.
 
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### op : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 An operation to be conditionally applied.
 
@@ -45,7 +45,7 @@ The input to which the operation is applied.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

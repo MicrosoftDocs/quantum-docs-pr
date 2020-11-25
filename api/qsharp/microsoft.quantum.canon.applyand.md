@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyAnd
 title: ApplyAnd operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Inverts a given target qubit if and only if both control qubits are in the 1 state,using measurement to perform the adjoint operation.
 
 ```qsharp
-operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit
+operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -31,23 +31,23 @@ Inverts `target` if and only if both controls are 1, but assumes that`target` i
 
 ## Input
 
-### control1 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### control1 : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 First control qubit
 
 
-### control2 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### control2 : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 Second control qubit
 
 
-### target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### target : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 Target auxiliary qubit; must be in state 0
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.ElementAt
 title: ElementAt function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -13,7 +13,7 @@ qsharp.summary: Returns the at the given index of an array.
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns the at the given index of an array.
@@ -25,7 +25,7 @@ function ElementAt<'T> (index : Int, array : 'T[]) : 'T
 
 ## Input
 
-### index : [Int](xref:microsoft.quantum.lang-ref.int)
+### index : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Index of element
 

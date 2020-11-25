@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Padded
 title: Padded function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns an array padded at with specified values up to aspecified length.
@@ -27,7 +27,7 @@ function Padded<'T> (nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[
 
 ## Input
 
-### nElementsTotal : [Int](xref:microsoft.quantum.lang-ref.int)
+### nElementsTotal : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The length of the padded array. If this is positive, `inputArray`is padded at the head. If this is negative, `inputArray` is paddedat the tail.
 

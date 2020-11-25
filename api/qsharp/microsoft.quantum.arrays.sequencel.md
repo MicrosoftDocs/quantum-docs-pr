@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.SequenceL
 title: SequenceL function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -13,7 +13,7 @@ qsharp.summary: Get an array of integers in a given interval.
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Get an array of integers in a given interval.
@@ -25,18 +25,18 @@ function SequenceL (from : BigInt, to : BigInt) : BigInt[]
 
 ## Input
 
-### from : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
+### from : [BigInt](xref:microsoft.quantum.user-guide.language.types)
 
 An inclusive start index of the interval.
 
 
-### to : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
+### to : [BigInt](xref:microsoft.quantum.user-guide.language.types)
 
 An inclusive end index of the interval that is not smaller than `from`.
 
 
 
-## Output : [BigInt](xref:microsoft.quantum.lang-ref.bigint)[]
+## Output : [BigInt](xref:microsoft.quantum.user-guide.language.types)[]
 
 An array containing the sequence of numbers `from`, `from + 1`, ...,`to`.
 

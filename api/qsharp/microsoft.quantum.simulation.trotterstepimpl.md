@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.TrotterStepImpl
 title: TrotterStepImpl operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -13,13 +13,13 @@ qsharp.summary: Implements time-evolution by a term contained in a `GeneratorSys
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implements time-evolution by a term contained in a `GeneratorSystem`.
 
 ```qsharp
-operation TrotterStepImpl (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, idx : Int, stepsize : Double, qubits : Qubit[]) : Unit
+operation TrotterStepImpl (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, idx : Int, stepsize : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -30,21 +30,21 @@ operation TrotterStepImpl (evolutionGenerator : Microsoft.Quantum.Simulation.Evo
 A complete description of the system to be simulated.
 
 
-### idx : [Int](xref:microsoft.quantum.lang-ref.int)
+### idx : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Integer index to a term in the described system.
 
 
-### stepsize : [Double](xref:microsoft.quantum.lang-ref.double)
+### stepsize : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Multiplier on duration of time-evolution by term indexed by `idx`.
 
 
-### qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### qubits : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 Qubits acted on by simulation.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

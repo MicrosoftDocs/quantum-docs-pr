@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Oracles.DeterministicStateOracleFromStateOracle
 title: DeterministicStateOracleFromStateOracle function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
@@ -13,7 +13,7 @@ qsharp.summary: Converts an oracle of type `StateOracle` to `DeterministicStateO
 
 Namespace: [Microsoft.Quantum.Oracles](xref:Microsoft.Quantum.Oracles)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Converts an oracle of type `StateOracle` to `DeterministicStateOracle`.
@@ -25,7 +25,7 @@ function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracl
 
 ## Input
 
-### idxFlagQubit : [Int](xref:microsoft.quantum.lang-ref.int)
+### idxFlagQubit : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The index to the flag qubit of the `stateOracle` $A$,which explicitly acts on two registers: the flag $f$ and the system$s$, e.g. $A\ket{0}\_f\ket{\psi}\_s$.
 

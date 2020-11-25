@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._ReflectAboutNegativeCoefficients
 title: _ReflectAboutNegativeCoefficients operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -13,19 +13,19 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 
 
 ```qsharp
-operation _ReflectAboutNegativeCoefficients (negLocs : Int[], coefficients : Microsoft.Quantum.Math.ComplexPolar[], reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation _ReflectAboutNegativeCoefficients (negLocs : Int[], coefficients : Microsoft.Quantum.Math.ComplexPolar[], reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### negLocs : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### negLocs : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 
 
@@ -41,5 +41,5 @@ operation _ReflectAboutNegativeCoefficients (negLocs : Int[], coefficients : Mic
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

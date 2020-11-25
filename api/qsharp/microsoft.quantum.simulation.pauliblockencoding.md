@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.PauliBlockEncoding
 title: PauliBlockEncoding function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -17,7 +17,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Creates a block-encoding unitary for a Hamiltonian.The Hamiltonian $H=\sum_{j}\alpha_j P_j$ is described by asum of Pauli terms $P_j$, each with real coefficient $\alpha_j$.
@@ -35,7 +35,7 @@ A `GeneratorSystem` that describes $H$ as a sum of Pauli terms
 
 
 
-## Output : ([Double](xref:microsoft.quantum.lang-ref.double),[BlockEncodingReflection](xref:Microsoft.Quantum.Simulation.BlockEncodingReflection))
+## Output : ([Double](xref:microsoft.quantum.user-guide.language.types),[BlockEncodingReflection](xref:Microsoft.Quantum.Simulation.BlockEncodingReflection))
 
 ## First parameterThe one-norm of coefficients $\alpha=\sum_{j}|\alpha_j|$.## Second parameterA `BlockEncodingReflection` unitary $U$ of the Hamiltonian $H$. As this unitarysatisfies $U^2 = I$, it is also a reflection.
 

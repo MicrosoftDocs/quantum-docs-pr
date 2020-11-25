@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.ColumnAtUnchecked
 title: ColumnAtUnchecked function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -13,7 +13,7 @@ qsharp.summary: This function does not check for matrix shape
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 This function does not check for matrix shape
@@ -29,7 +29,7 @@ This function can be used in other multidimensional functions,which already che
 
 ## Input
 
-### column : [Int](xref:microsoft.quantum.lang-ref.int)
+### column : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 

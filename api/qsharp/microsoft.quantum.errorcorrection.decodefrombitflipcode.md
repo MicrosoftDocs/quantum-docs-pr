@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.DecodeFromBitFlipCode
 title: DecodeFromBitFlipCode operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -13,7 +13,7 @@ qsharp.summary: Decodes from the [3, 1, 3] / ⟦3, 1, 1⟧ bit-flip code.
 
 Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Decodes from the [3, 1, 3] / ⟦3, 1, 1⟧ bit-flip code.
@@ -31,7 +31,7 @@ A code block of the bit-flip code.
 
 
 
-## Output : ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[])
+## Output : ([Qubit](xref:microsoft.quantum.concepts.the-qubit)[],[Qubit](xref:microsoft.quantum.concepts.the-qubit)[])
 
 A tuple of the data encoded into the logical register, and the auxiliaryqubits used to represent the syndrome.
 

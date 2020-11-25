@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection._ExtractLogicalQubitFromSteaneCode
 title: _ExtractLogicalQubitFromSteaneCode operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -22,7 +22,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Syndrome measurement and the inverse of embedding.$X$- and $Z$-stabilizers are not treated equally,which is due to the particular choice of the encoding circuit.This asymmetry leads to a different syndrome extraction routine.One could measure the syndrome by measuring multi-qubit Pauli operatordirectly on the code state, but for the distillation purposethe logical qubit is returned into a single qubit,in course of which the syndrome measurements can be done without further ancillas.
@@ -40,7 +40,7 @@ operation _ExtractLogicalQubitFromSteaneCode (code : Microsoft.Quantum.ErrorCorr
 
 
 
-## Output : ([Qubit](xref:microsoft.quantum.lang-ref.qubit),[Int](xref:microsoft.quantum.lang-ref.int),[Int](xref:microsoft.quantum.lang-ref.int))
+## Output : ([Qubit](xref:microsoft.quantum.concepts.the-qubit),[Int](xref:microsoft.quantum.user-guide.language.types),[Int](xref:microsoft.quantum.user-guide.language.types))
 
 The logical qubit and a pair of integers for $X$-syndrome and $Z$-syndrome.They represent the index of the code qubit on which a single $X$- or $Z$-errorwould have caused the measured syndrome.
 

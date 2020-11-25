@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation
 title: ObliviousAmplitudeAmplificationFromStatePreparation function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -13,7 +13,7 @@ qsharp.summary: Oblivious amplitude amplification by oracles for partial reflect
 
 Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Oblivious amplitude amplification by oracles for partial reflections.
@@ -40,13 +40,13 @@ Unitary oracle $A$ that prepares auxiliary start state
 Unitary oracle $O$ of type `ObliviousOracle` that acts jointly on theauxiliary and system register
 
 
-### idxFlagQubit : [Int](xref:microsoft.quantum.lang-ref.int)
+### idxFlagQubit : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Index to single-qubit flag register
 
 
 
-## Output : ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+## Output : ([Qubit](xref:microsoft.quantum.concepts.the-qubit)[],[Qubit](xref:microsoft.quantum.concepts.the-qubit)[]) => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 An operation that implements oblivious amplitude amplification based on partial reflections.
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.ExpModI
 title: ExpModI function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns an integer raised to a given power, with respect to a givenmodulus.
@@ -31,23 +31,23 @@ Let us denote expBase by $x$, power by $p$ and modulus by $N$.The function retu
 
 ## Input
 
-### expBase : [Int](xref:microsoft.quantum.lang-ref.int)
+### expBase : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### power : [Int](xref:microsoft.quantum.lang-ref.int)
+### power : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### modulus : [Int](xref:microsoft.quantum.lang-ref.int)
+### modulus : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 

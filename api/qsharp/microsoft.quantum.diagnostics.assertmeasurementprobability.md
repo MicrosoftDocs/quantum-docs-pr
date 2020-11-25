@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertMeasurementProbability
 title: AssertMeasurementProbability operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -15,24 +15,24 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Asserts that measuring the given qubits in the given Pauli basis will have the given resultwith the given probability, within some tolerance.
 
 ```qsharp
-operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit
+operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### bases : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]
+### bases : [Pauli](xref:microsoft.quantum.user-guide.language.types)[]
 
 A measurement effect to assert the probability of, expressed as amulti-qubit Pauli operator.
 
 
-### qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### qubits : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 A register on which to make the assertion.
 
@@ -42,23 +42,23 @@ A register on which to make the assertion.
 An expected result of `Measure(bases, qubits)`.
 
 
-### prob : [Double](xref:microsoft.quantum.lang-ref.double)
+### prob : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The probability with which the given result is expected.
 
 
-### msg : [String](xref:microsoft.quantum.lang-ref.string)
+### msg : [String](xref:microsoft.quantum.user-guide.language.types)
 
 A message to be reported if the assertion fails.
 
 
-### tol : [Double](xref:microsoft.quantum.lang-ref.double)
+### tol : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

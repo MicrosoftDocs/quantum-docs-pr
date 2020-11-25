@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutationFolder
 title: TruthTablesFromPermutationFolder function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -13,7 +13,7 @@ qsharp.summary: Decomposition logic for a single variable index
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Decomposition logic for a single variable index
@@ -29,7 +29,7 @@ This takes the current state and generates an updated permutationand possibly a
 
 ## Input
 
-### numVars : [Int](xref:microsoft.quantum.lang-ref.int)
+### numVars : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
@@ -39,7 +39,7 @@ This takes the current state and generates an updated permutationand possibly a
 
 
 
-### index : [Int](xref:microsoft.quantum.lang-ref.int)
+### index : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 

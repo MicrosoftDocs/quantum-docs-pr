@@ -1,8 +1,11 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner
 title: Microsoft.Quantum.Chemistry.JordanWigner namespace
-ms.date: 10/26/2020 12:00:00 AM
+author: msquantumdocs
+description: ''
+ms.date: 11/25/2020
 ms.topic: article
+ms.author: msquantumdocs
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.summary: ''

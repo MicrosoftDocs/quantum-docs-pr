@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.PowL
 title: PowL function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -13,7 +13,7 @@ qsharp.summary: Returns a number raised to a given power.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns a number raised to a given power.
@@ -25,17 +25,17 @@ function PowL (a : BigInt, power : Int) : BigInt
 
 ## Input
 
-### a : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
+### a : [BigInt](xref:microsoft.quantum.user-guide.language.types)
 
 The number $a$ that is to be raised.
 
 
-### power : [Int](xref:microsoft.quantum.lang-ref.int)
+### power : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The power $b$ to which $a$ should be raised.
 
 
 
-## Output : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
+## Output : [BigInt](xref:microsoft.quantum.user-guide.language.types)
 
 The power $a^b$

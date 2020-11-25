@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.TableLookupRecovery
 title: TableLookupRecovery function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 For a given table of Pauli operations on a given register of qubits, this functionreturns an object of type `RecoveryFn` which contains all information needed toperform a table-lookup decoding with respect to the given array of Pauli operations.
@@ -28,7 +28,7 @@ function TableLookupRecovery (table : Pauli[][]) : Microsoft.Quantum.ErrorCorrec
 
 ## Input
 
-### table : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[][]
+### table : [Pauli](xref:microsoft.quantum.user-guide.language.types)[][]
 
 Table of Pauli operations that operate on a given qubit register
 

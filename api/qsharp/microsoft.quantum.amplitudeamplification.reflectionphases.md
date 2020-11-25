@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
 title: ReflectionPhases user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -13,7 +13,7 @@ qsharp.summary: Phases for a sequence of partial reflections in amplitude amplif
 
 Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Phases for a sequence of partial reflections in amplitude amplification.
@@ -27,10 +27,10 @@ newtype ReflectionPhases = (AboutStart : Double[], AboutTarget : Double[]);
 
 ## Named Items
 
-### AboutStart : [Double](xref:microsoft.quantum.lang-ref.double)[]
+### AboutStart : [Double](xref:microsoft.quantum.user-guide.language.types)[]
 
 An array of phases for reflection about thestart state.
-### AboutTarget : [Double](xref:microsoft.quantum.lang-ref.double)[]
+### AboutTarget : [Double](xref:microsoft.quantum.user-guide.language.types)[]
 
 An array of phases for reflectionabout the target state.
 

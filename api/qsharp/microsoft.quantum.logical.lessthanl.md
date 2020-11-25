@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanL
 title: LessThanL function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
@@ -13,7 +13,7 @@ qsharp.summary: Returns true if and only if a number is less than another number
 
 Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns true if and only if a number is less than another number.
@@ -25,18 +25,18 @@ function LessThanL (a : BigInt, b : BigInt) : Bool
 
 ## Input
 
-### a : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
+### a : [BigInt](xref:microsoft.quantum.user-guide.language.types)
 
 The first value to be compared.
 
 
-### b : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
+### b : [BigInt](xref:microsoft.quantum.user-guide.language.types)
 
 The second value to be compared.
 
 
 
-## Output : [Bool](xref:microsoft.quantum.lang-ref.bool)
+## Output : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 `true` if and only if `a` is strictly less than `b`.
 

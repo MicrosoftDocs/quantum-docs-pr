@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.Angle
 title: Angle function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns 1, if `index` has an odd number of 1s and -1, if `index` has aneven number of 1s.
@@ -31,11 +31,11 @@ Value corresponds to the sign of the coefficient of the Rademacher-Walshspectru
 
 ## Input
 
-### index : [Int](xref:microsoft.quantum.lang-ref.int)
+### index : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Input assignment as integer (from 0 to 2^n - 1)
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)
 

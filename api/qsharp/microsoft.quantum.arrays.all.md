@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.All
 title: All function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given an array and a predicate that is definedfor the elements of the array, and checks if all elements of thearray satisfy the predicate.
@@ -28,7 +28,7 @@ function All<'T> (predicate : ('T -> Bool), array : 'T[]) : Bool
 
 ## Input
 
-### predicate : 'T -> [Bool](xref:microsoft.quantum.lang-ref.bool)
+### predicate : 'T -> [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 A function from `'T` to `Bool` that is used to check elements.
 
@@ -39,7 +39,7 @@ An array of elements over `'T`.
 
 
 
-## Output : [Bool](xref:microsoft.quantum.lang-ref.bool)
+## Output : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 A `Bool` value of the AND function of the predicate applied to all elements.
 

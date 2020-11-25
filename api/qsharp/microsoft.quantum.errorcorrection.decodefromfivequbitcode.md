@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.DecodeFromFiveQubitCode
 title: DecodeFromFiveQubitCode operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -13,7 +13,7 @@ qsharp.summary: Decodes the ⟦5, 1, 3⟧ quantum code.
 
 Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Decodes the ⟦5, 1, 3⟧ quantum code.
@@ -31,7 +31,7 @@ An array of qubits representing the encoded 5-qubit code logical state.
 
 
 
-## Output : ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[])
+## Output : ([Qubit](xref:microsoft.quantum.concepts.the-qubit)[],[Qubit](xref:microsoft.quantum.concepts.the-qubit)[])
 
 A qubit array of length 1 representing the unencoded state in thefirst parameter, together with auxiliary qubits in the second parameter.
 

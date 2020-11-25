@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.PlusD
 title: PlusD function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -13,7 +13,7 @@ qsharp.summary: Returns the sum of two inputs.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns the sum of two inputs.
@@ -25,17 +25,17 @@ function PlusD (a : Double, b : Double) : Double
 
 ## Input
 
-### a : [Double](xref:microsoft.quantum.lang-ref.double)
+### a : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The first input $a$ to be summed.
 
 
-### b : [Double](xref:microsoft.quantum.lang-ref.double)
+### b : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The second input $b$ to be summed.
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The sum $a + b$.

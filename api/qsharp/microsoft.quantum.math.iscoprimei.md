@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.IsCoprimeI
 title: IsCoprimeI function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -13,7 +13,7 @@ qsharp.summary: Returns true if $a$ and $b$ are co-prime and false otherwise.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns true if $a$ and $b$ are co-prime and false otherwise.
@@ -25,17 +25,17 @@ function IsCoprimeI (a : Int, b : Int) : Bool
 
 ## Input
 
-### a : [Int](xref:microsoft.quantum.lang-ref.int)
+### a : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 the first number of which co-primality is being tested
 
 
-### b : [Int](xref:microsoft.quantum.lang-ref.int)
+### b : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 the second number of which co-primality is being tested
 
 
 
-## Output : [Bool](xref:microsoft.quantum.lang-ref.bool)
+## Output : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 True, if $a$ and $b$ are co-prime (e.g. their greatest common divisor is 1 ),and false otherwise

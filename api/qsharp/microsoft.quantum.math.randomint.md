@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.RandomInt
 title: RandomInt operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Math
@@ -17,7 +17,7 @@ qsharp.summary: >+
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -32,11 +32,11 @@ operation RandomInt (maxInt : Int) : Int
 
 ## Input
 
-### maxInt : [Int](xref:microsoft.quantum.lang-ref.int)
+### maxInt : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger
 title: MultiplyAndAddByModularInteger operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -13,13 +13,13 @@ qsharp.summary: Performs a modular multiply-and-add by integer constants on a qu
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Performs a modular multiply-and-add by integer constants on a qubit register.
 
 ```qsharp
-operation MultiplyAndAddByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation MultiplyAndAddByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -29,12 +29,12 @@ Implements the map$$\begin{align}\ket{x} \ket{b} \mapsto \ket{x} \ket{(b + a 
 
 ## Input
 
-### constMultiplier : [Int](xref:microsoft.quantum.lang-ref.int)
+### constMultiplier : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 An integer $a$ to be added to each basis state label.
 
 
-### modulus : [Int](xref:microsoft.quantum.lang-ref.int)
+### modulus : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The modulus $N$ which addition and multiplication is taken with respect to.
 
@@ -50,7 +50,7 @@ A quantum register representing an unsigned integer to use as the targetfor thi
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

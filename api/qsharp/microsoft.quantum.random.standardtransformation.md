@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.StandardTransformation
 title: StandardTransformation function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
@@ -13,7 +13,7 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
@@ -25,21 +25,21 @@ function StandardTransformation (mean : Double, variance : Double, variate : Dou
 
 ## Input
 
-### mean : [Double](xref:microsoft.quantum.lang-ref.double)
+### mean : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### variance : [Double](xref:microsoft.quantum.lang-ref.double)
+### variance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### variate : [Double](xref:microsoft.quantum.lang-ref.double)
+### variate : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.CategoricalDistribution
 title: CategoricalDistribution function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Returns a discrete categorical distribution, in which the probabilityfor each of a finite list of given outcomes is explicitly specified.
@@ -27,7 +27,7 @@ function CategoricalDistribution (probs : Double[]) : Microsoft.Quantum.Random.D
 
 ## Input
 
-### probs : [Double](xref:microsoft.quantum.lang-ref.double)[]
+### probs : [Double](xref:microsoft.quantum.user-guide.language.types)[]
 
 The probabilities for each outcome from the categorical distribution.These probabilities may not be normalized, but must all be non-negative.
 

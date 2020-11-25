@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.EstimateClassificationProbabilities
 title: EstimateClassificationProbabilities operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Given a set of samples and a sequential classifier, estimates theclassification probability for those samples by repeatedly measuringthe output of the classifier on each sample.
@@ -28,7 +28,7 @@ operation EstimateClassificationProbabilities (tolerance : Double, model : Micro
 
 ## Input
 
-### tolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### tolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The tolerance to allow in encoding the sample into a state preparationoperation.
 
@@ -38,17 +38,17 @@ The tolerance to allow in encoding the sample into a state preparationoperation
 The sequential model to be used to estimate the classificationprobabilities for the given samples.
 
 
-### samples : [Double](xref:microsoft.quantum.lang-ref.double)[][]
+### samples : [Double](xref:microsoft.quantum.user-guide.language.types)[][]
 
 An array of feature vectors for each sample to be classified.
 
 
-### nMeasurements : [Int](xref:microsoft.quantum.lang-ref.int)
+### nMeasurements : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of measurements to use in estimating the classificationprobability.
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)[]
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)[]
 
 An array of estimates of the classification probability for each givensample.

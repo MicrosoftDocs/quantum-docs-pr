@@ -1,8 +1,11 @@
 ---
 uid: Microsoft.Quantum.Targeting
 title: Microsoft.Quantum.Targeting namespace
-ms.date: 10/26/2020 12:00:00 AM
+author: msquantumdocs
+description: ''
+ms.date: 11/25/2020
 ms.topic: article
+ms.author: msquantumdocs
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Targeting
 qsharp.summary: This namespace provides functionality for targeting specific quantum processors.

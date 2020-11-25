@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ControlledRotation
 title: ControlledRotation user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Describes a controlled rotation in terms of its target and controlindices, rotation axis, and index into a model parameter vector.
@@ -29,16 +29,16 @@ newtype ControlledRotation = ((TargetIndex : Int, ControlIndices : Int[]), Axis 
 
 ## Named Items
 
-### TargetIndex : [Int](xref:microsoft.quantum.lang-ref.int)
+### TargetIndex : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Index of the target qubit for this controlled rotation.
-### ControlIndices : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### ControlIndices : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 An array of the control qubit indices for this rotation.
-### Axis : [Pauli](xref:microsoft.quantum.lang-ref.pauli)
+### Axis : [Pauli](xref:microsoft.quantum.user-guide.language.types)
 
 The axis for this rotation.
-### ParameterIndex : [Int](xref:microsoft.quantum.lang-ref.int)
+### ParameterIndex : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 An index into a model parameter vector describing the anglefor this rotation.
 

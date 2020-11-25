@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.TrotterSimulationAlgorithmImpl
 title: TrotterSimulationAlgorithmImpl operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -15,29 +15,29 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Makes repeated calls to `TrotterStep` to approximate thetime-evolution operator exp(_-iHt_).
 
 ```qsharp
-operation TrotterSimulationAlgorithmImpl (trotterStepSize : Double, trotterOrder : Int, maxTime : Double, evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, qubits : Qubit[]) : Unit
+operation TrotterSimulationAlgorithmImpl (trotterStepSize : Double, trotterOrder : Int, maxTime : Double, evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### trotterStepSize : [Double](xref:microsoft.quantum.lang-ref.double)
+### trotterStepSize : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Duration of simulated time-evolution in single Trotter step.
 
 
-### trotterOrder : [Int](xref:microsoft.quantum.lang-ref.int)
+### trotterOrder : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Order of Trotter integrator. This must be either 1 or an even number.
 
 
-### maxTime : [Double](xref:microsoft.quantum.lang-ref.double)
+### maxTime : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Total duration of simulation $t$.
 
@@ -47,11 +47,11 @@ Total duration of simulation $t$.
 A complete description of the system to be simulated.
 
 
-### qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### qubits : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 Qubits acted on by simulation.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.InferredLabels
 title: InferredLabels function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Given an array of classification probabilities and a bias, returns thelabel inferred from each probability.
@@ -27,17 +27,17 @@ function InferredLabels (bias : Double, probabilities : Double[]) : Int[]
 
 ## Input
 
-### bias : [Double](xref:microsoft.quantum.lang-ref.double)
+### bias : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The bias between two classes, typically the result of training aclassifier.
 
 
-### probabilities : [Double](xref:microsoft.quantum.lang-ref.double)[]
+### probabilities : [Double](xref:microsoft.quantum.user-guide.language.types)[]
 
 An array of classification probabilities for a set of samples, typicallyresulting from estimating classification frequencies.
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 The label inferred from each classification probability.

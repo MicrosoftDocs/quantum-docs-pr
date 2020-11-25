@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Optimization.LocalUnivariateMinimum
 title: LocalUnivariateMinimum function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Optimization
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Optimization](xref:Microsoft.Quantum.Optimization)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns the local minimum for a univariate function over a bounded interval,using a golden interval search.
@@ -27,17 +27,17 @@ function LocalUnivariateMinimum (fn : (Double -> Double), bounds : (Double, Doub
 
 ## Input
 
-### fn : [Double](xref:microsoft.quantum.lang-ref.double) -> [Double](xref:microsoft.quantum.lang-ref.double)
+### fn : [Double](xref:microsoft.quantum.user-guide.language.types) -> [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The univariate function to be minimized.
 
 
-### bounds : ([Double](xref:microsoft.quantum.lang-ref.double),[Double](xref:microsoft.quantum.lang-ref.double))
+### bounds : ([Double](xref:microsoft.quantum.user-guide.language.types),[Double](xref:microsoft.quantum.user-guide.language.types))
 
 The interval in which the local minimum is to be found.
 
 
-### tolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### tolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The accuracy in the function input to be tolerated.The search for local optima will continue until the interval issmaller in width than this tolerance.
 

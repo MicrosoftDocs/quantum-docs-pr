@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._EncodeSample
 title: _EncodeSample function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -13,7 +13,7 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 
@@ -25,12 +25,12 @@ function _EncodeSample (effectiveTolerance : Double, nQubits : Int, sample : Mic
 
 ## Input
 
-### effectiveTolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### effectiveTolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### nQubits : [Int](xref:microsoft.quantum.lang-ref.int)
+### nQubits : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 

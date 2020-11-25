@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math._ContinuedFractionConvergentL
 title: _ContinuedFractionConvergentL function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -13,7 +13,7 @@ qsharp.summary: Internal recursive call to calculate the GCD with a bound
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Internal recursive call to calculate the GCD with a bound
@@ -25,32 +25,32 @@ function _ContinuedFractionConvergentL (signA : Int, signB : Int, r : (BigInt, B
 
 ## Input
 
-### signA : [Int](xref:microsoft.quantum.lang-ref.int)
+### signA : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### signB : [Int](xref:microsoft.quantum.lang-ref.int)
+### signB : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### r : ([BigInt](xref:microsoft.quantum.lang-ref.bigint),[BigInt](xref:microsoft.quantum.lang-ref.bigint))
+### r : ([BigInt](xref:microsoft.quantum.user-guide.language.types),[BigInt](xref:microsoft.quantum.user-guide.language.types))
 
 
 
 
-### s : ([BigInt](xref:microsoft.quantum.lang-ref.bigint),[BigInt](xref:microsoft.quantum.lang-ref.bigint))
+### s : ([BigInt](xref:microsoft.quantum.user-guide.language.types),[BigInt](xref:microsoft.quantum.user-guide.language.types))
 
 
 
 
-### t : ([BigInt](xref:microsoft.quantum.lang-ref.bigint),[BigInt](xref:microsoft.quantum.lang-ref.bigint))
+### t : ([BigInt](xref:microsoft.quantum.user-guide.language.types),[BigInt](xref:microsoft.quantum.user-guide.language.types))
 
 
 
 
-### denominatorBound : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
+### denominatorBound : [BigInt](xref:microsoft.quantum.user-guide.language.types)
 
 
 

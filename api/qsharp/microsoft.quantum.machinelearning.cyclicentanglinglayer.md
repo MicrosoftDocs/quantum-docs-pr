@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.CyclicEntanglingLayer
 title: CyclicEntanglingLayer function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Returns an array of singly controlled rotations along a given axis,arranged cyclically across a register of qubits, and parameterized bydistinct model parameters.
@@ -28,17 +28,17 @@ function CyclicEntanglingLayer (nQubits : Int, axis : Pauli, stride : Int) : Mic
 
 ## Input
 
-### nQubits : [Int](xref:microsoft.quantum.lang-ref.int)
+### nQubits : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of qubits acted on by the given layer.
 
 
-### axis : [Pauli](xref:microsoft.quantum.lang-ref.pauli)
+### axis : [Pauli](xref:microsoft.quantum.user-guide.language.types)
 
 The rotation axis for each rotation in the given layer.
 
 
-### stride : [Int](xref:microsoft.quantum.lang-ref.int)
+### stride : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The separation between the target and control indices for each rotation.
 

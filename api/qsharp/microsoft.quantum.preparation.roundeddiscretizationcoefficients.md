@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.RoundedDiscretizationCoefficients
 title: RoundedDiscretizationCoefficients function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -13,7 +13,7 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
@@ -25,26 +25,26 @@ function RoundedDiscretizationCoefficients (coefficient : Double, oneNorm : Doub
 
 ## Input
 
-### coefficient : [Double](xref:microsoft.quantum.lang-ref.double)
+### coefficient : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### oneNorm : [Double](xref:microsoft.quantum.lang-ref.double)
+### oneNorm : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### nCoefficients : [Int](xref:microsoft.quantum.lang-ref.int)
+### nCoefficients : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### barHeight : [Int](xref:microsoft.quantum.lang-ref.int)
+### barHeight : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)
 

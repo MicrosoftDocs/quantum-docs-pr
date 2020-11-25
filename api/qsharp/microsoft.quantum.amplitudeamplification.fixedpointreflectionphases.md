@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases
 title: FixedPointReflectionPhases function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Computes partial reflection phases for fixed-point amplitudeamplification.
@@ -27,12 +27,12 @@ function FixedPointReflectionPhases (nQueries : Int, successMin : Double) : Micr
 
 ## Input
 
-### nQueries : [Int](xref:microsoft.quantum.lang-ref.int)
+### nQueries : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Number of queries to the state preparation oracle. Must be an oddinteger.
 
 
-### successMin : [Double](xref:microsoft.quantum.lang-ref.double)
+### successMin : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Target minimum success probability.
 

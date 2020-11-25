@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.QuantumROMBitStringWriterByIndex
 title: QuantumROMBitStringWriterByIndex function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -13,33 +13,38 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
 
 ```qsharp
-function QuantumROMBitStringWriterByIndex (idx : Int, keepCoeff : Int[], altIndex : Int[]) : ((Microsoft.Quantum.Arithmetic.LittleEndian, Microsoft.Quantum.Arithmetic.LittleEndian) => Unit is Adj + Ctl)
+function QuantumROMBitStringWriterByIndex (idx : Int, keepCoeff : Int[], altIndex : Int[], data : Bool[][]) : ((Microsoft.Quantum.Arithmetic.LittleEndian, Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[], Qubit[]) => Unit is Adj + Ctl)
 ```
 
 
 ## Input
 
-### idx : [Int](xref:microsoft.quantum.lang-ref.int)
+### idx : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### keepCoeff : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### keepCoeff : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 
 
 
-### altIndex : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### altIndex : [Int](xref:microsoft.quantum.user-guide.language.types)[]
+
+
+
+
+### data : [Bool](xref:microsoft.quantum.user-guide.language.types)[][]
 
 
 
 
 
-## Output : ([LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)) => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+## Output : ([LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[Qubit](xref:microsoft.quantum.concepts.the-qubit)[],[Qubit](xref:microsoft.quantum.concepts.the-qubit)[]) => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 

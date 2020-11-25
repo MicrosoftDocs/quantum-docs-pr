@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation._MultiplyGeneratorSystem
 title: _MultiplyGeneratorSystem function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -13,7 +13,7 @@ qsharp.summary: Multiplies the coefficient of all terms in a `GeneratorSystem`.
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Multiplies the coefficient of all terms in a `GeneratorSystem`.
@@ -25,12 +25,12 @@ function _MultiplyGeneratorSystem (multiplier : Double, idxTerm : Int, generator
 
 ## Input
 
-### multiplier : [Double](xref:microsoft.quantum.lang-ref.double)
+### multiplier : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### idxTerm : [Int](xref:microsoft.quantum.lang-ref.int)
+### idxTerm : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 

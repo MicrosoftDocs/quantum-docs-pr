@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Optimization.Width
 title: Width function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Optimization
@@ -13,7 +13,7 @@ qsharp.summary: Returns the width of an interval.
 
 Namespace: [Microsoft.Quantum.Optimization](xref:Microsoft.Quantum.Optimization)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns the width of an interval.
@@ -25,16 +25,16 @@ function Width (left : Double, right : Double) : Double
 
 ## Input
 
-### left : [Double](xref:microsoft.quantum.lang-ref.double)
+### left : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### right : [Double](xref:microsoft.quantum.lang-ref.double)
+### right : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)
 

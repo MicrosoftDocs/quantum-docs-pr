@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToHeadCA
 title: ApplyToHeadCA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,13 +13,13 @@ qsharp.summary: Applies an operation to the first element of an array.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies an operation to the first element of an array.
 
 ```qsharp
-operation ApplyToHeadCA<'T> (op : ('T => Unit is Adj + Ctl), targets : 'T[]) : Unit
+operation ApplyToHeadCA<'T> (op : ('T => Unit is Adj + Ctl), targets : 'T[]) : Unit is Adj + Ctl
 ```
 
 
@@ -29,7 +29,7 @@ Given an operation `op` and an array of targets `targets`,applies `op(Head(targ
 
 ## Input
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### op : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 An operation to be applied.
 
@@ -40,7 +40,7 @@ An array of targets, of which the first will be applied to `op`.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.Delay
 title: Delay operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
@@ -13,7 +13,7 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
@@ -25,7 +25,7 @@ operation Delay<'T> (op : ('T => Unit), arg : 'T, aux : Unit) : Unit
 
 ## Input
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### op : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 
 
@@ -35,13 +35,13 @@ operation Delay<'T> (op : ('T => Unit), arg : 'T, aux : Unit) : Unit
 
 
 
-### aux : [Unit](xref:microsoft.quantum.lang-ref.unit)
+### aux : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

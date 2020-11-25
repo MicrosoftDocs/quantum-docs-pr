@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.Misclassifications
 title: Misclassifications function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Given a set of inferred labels and a set of correct labels, returnsindices for where each set of labels differs.
@@ -27,17 +27,17 @@ function Misclassifications (inferredLabels : Int[], actualLabels : Int[]) : Int
 
 ## Input
 
-### inferredLabels : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### inferredLabels : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 The labels inferred for a given training or validation set.
 
 
-### actualLabels : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### actualLabels : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 The true labels for a given training or validation set.
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 An array of indices `idx` such that`inferredLabels[idx] != actualLabels[idx]`.

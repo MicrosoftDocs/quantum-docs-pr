@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Convert.IntAsStringWithFormat
 title: IntAsStringWithFormat function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Converts a given integer number to an equivalent string representation,using the given format.
@@ -27,18 +27,18 @@ function IntAsStringWithFormat (a : Int, fmt : String) : String
 
 ## Input
 
-### a : [Int](xref:microsoft.quantum.lang-ref.int)
+### a : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### fmt : [String](xref:microsoft.quantum.lang-ref.string)
+### fmt : [String](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [String](xref:microsoft.quantum.lang-ref.string)
+## Output : [String](xref:microsoft.quantum.user-guide.language.types)
 
 
 

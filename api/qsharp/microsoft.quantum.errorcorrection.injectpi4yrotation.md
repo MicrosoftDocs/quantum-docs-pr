@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.InjectPi4YRotation
 title: InjectPi4YRotation operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -13,13 +13,13 @@ qsharp.summary: Rotates a single qubit by π/4 about the Y-axis.
 
 Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Rotates a single qubit by π/4 about the Y-axis.
 
 ```qsharp
-operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit
+operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit is Adj
 ```
 
 
@@ -29,18 +29,18 @@ Performs a π/4 rotation about `Y`.The rotation is performed by consuming a ma
 
 ## Input
 
-### data : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### data : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 A qubit to be rotated about $Y$ by $\pi / 4$.
 
 
-### magic : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### magic : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 A qubit initially in the magic state. Following applicationof this operation, `magic` is returned to the $\ket{0}$ state.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

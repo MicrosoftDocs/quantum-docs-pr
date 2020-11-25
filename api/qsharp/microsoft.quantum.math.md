@@ -1,8 +1,11 @@
 ---
 uid: Microsoft.Quantum.Math
 title: Microsoft.Quantum.Math namespace
-ms.date: 10/26/2020 12:00:00 AM
+author: msquantumdocs
+description: ''
+ms.date: 11/25/2020
 ms.topic: article
+ms.author: msquantumdocs
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Math
 qsharp.summary: This namespace contains classical mathematical functions and data types.

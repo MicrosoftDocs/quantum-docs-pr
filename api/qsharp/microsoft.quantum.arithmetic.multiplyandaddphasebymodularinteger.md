@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger
 title: MultiplyAndAddPhaseByModularInteger operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -15,24 +15,24 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 The same as MultiplyAndAddByModularInteger, but assumes that the summand encodesintegers in QFT basis.
 
 ```qsharp
-operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit
+operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### constMultiplier : [Int](xref:microsoft.quantum.lang-ref.int)
+### constMultiplier : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 An integer $a$ to be added to each basis state label.
 
 
-### modulus : [Int](xref:microsoft.quantum.lang-ref.int)
+### modulus : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The modulus $N$ which addition and multiplication is taken with respect to.
 
@@ -48,7 +48,7 @@ A quantum register representing an unsigned integer to use as the targetfor thi
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

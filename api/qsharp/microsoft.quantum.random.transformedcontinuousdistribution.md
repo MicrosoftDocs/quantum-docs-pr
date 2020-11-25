@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.TransformedContinuousDistribution
 title: TransformedContinuousDistribution function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Given a continuous distribution, returns a new distribution thattransforms the original by a given function.
@@ -27,7 +27,7 @@ function TransformedContinuousDistribution (transform : (Double -> Double), dist
 
 ## Input
 
-### transform : [Double](xref:microsoft.quantum.lang-ref.double) -> [Double](xref:microsoft.quantum.lang-ref.double)
+### transform : [Double](xref:microsoft.quantum.user-guide.language.types) -> [Double](xref:microsoft.quantum.user-guide.language.types)
 
 A function that transforms variates of the original distribution to thetransformed distribution.
 

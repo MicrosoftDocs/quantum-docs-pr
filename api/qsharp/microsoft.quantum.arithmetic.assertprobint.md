@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AssertProbInt
 title: AssertProbInt operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Asserts that the probability of a specific state of a quantum register has theexpected value.
@@ -31,12 +31,12 @@ Given an $n$-qubit quantum state $\ket{\psi}=\sum^{2^n-1}_{j=0}\alpha_j \ket{j}$
 
 ## Input
 
-### stateIndex : [Int](xref:microsoft.quantum.lang-ref.int)
+### stateIndex : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The index $j$ of the state $\ket{j}$ represented by a `LittleEndian`register.
 
 
-### expected : [Double](xref:microsoft.quantum.lang-ref.double)
+### expected : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The expected value of $|\alpha_j|^2$.
 
@@ -46,11 +46,11 @@ The expected value of $|\alpha_j|^2$.
 The qubit register that stores $\ket{\psi}$ in little-endian format.
 
 
-### tolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### tolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Absolute tolerance on the difference between actual and expected.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

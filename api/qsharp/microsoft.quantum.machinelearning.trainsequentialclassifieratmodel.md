@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifierAtModel
 title: TrainSequentialClassifierAtModel operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Given the structure of a sequential classifier, trains the classifieron a given labeled training set, starting from a particular model.
@@ -53,7 +53,7 @@ A sampling schedule to use when selecting samples from the trainingdata when se
 
 
 
-## Output : ([SequentialModel](xref:Microsoft.Quantum.MachineLearning.SequentialModel),[Int](xref:microsoft.quantum.lang-ref.int))
+## Output : ([SequentialModel](xref:Microsoft.Quantum.MachineLearning.SequentialModel),[Int](xref:microsoft.quantum.user-guide.language.types))
 
 - A parameterization of the given classifier and a bias between the two  classes, together corresponding to the best result from each of the  given start points.- The number of misses observed at the best classifier model.
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.I
 title: I operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -13,25 +13,25 @@ qsharp.summary: Performs the identity operation (no-op) on a single qubit.
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Performs the identity operation (no-op) on a single qubit.
 
 ```qsharp
-operation I (target : Qubit) : Unit
+operation I (target : Qubit) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### target : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

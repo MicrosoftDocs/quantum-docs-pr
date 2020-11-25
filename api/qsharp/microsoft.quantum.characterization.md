@@ -1,8 +1,11 @@
 ---
 uid: Microsoft.Quantum.Characterization
 title: Microsoft.Quantum.Characterization namespace
-ms.date: 10/26/2020 12:00:00 AM
+author: msquantumdocs
+description: ''
+ms.date: 11/25/2020
 ms.topic: article
+ms.author: msquantumdocs
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Characterization
 qsharp.summary: >-

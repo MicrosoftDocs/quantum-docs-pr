@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.OperationPowCA
 title: OperationPowCA function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -18,7 +18,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Raises an operation to a power.The modifier `A` indicates that the operation is controllable and adjointable.That is, given an operation representing a gate $U$, returns a new operation$U^m$ for a power $m$.
@@ -30,18 +30,18 @@ function OperationPowCA<'T> (op : ('T => Unit is Ctl + Adj), power : Int) : ('T 
 
 ## Input
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl + Adj
+### op : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 An operation $U$ representing the gate to be repeated.
 
 
-### power : [Int](xref:microsoft.quantum.lang-ref.int)
+### power : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of times that $U$ is to be repeated.
 
 
 
-## Output : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl + Adj
+## Output : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 A new operation representing $U^m$, where $m = \texttt{power}$.
 

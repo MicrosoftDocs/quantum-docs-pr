@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyCNOTChainWithTarget
 title: ApplyCNOTChainWithTarget operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,13 +13,13 @@ qsharp.summary: Computes the parity of an array of qubits into a target qubit.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Computes the parity of an array of qubits into a target qubit.
 
 ```qsharp
-operation ApplyCNOTChainWithTarget (qubits : Qubit[], targetQubit : Qubit) : Unit
+operation ApplyCNOTChainWithTarget (qubits : Qubit[], targetQubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -29,18 +29,18 @@ If the array is initially in the state$\ket{q_0} \ket{q_1} \cdots \ket{q_{\text
 
 ## Input
 
-### qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### qubits : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 Array of qubits on which the parity is computed.
 
 
-### targetQubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### targetQubit : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 Final qubit into which the parity of 'qubits' is XORed.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

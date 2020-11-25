@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.AndLadder
 title: AndLadder operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,13 +13,13 @@ qsharp.summary: Performs a controlled "AND ladder" on a register of target qubit
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Performs a controlled "AND ladder" on a register of target qubits.
 
 ```qsharp
-operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit
+operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit is Adj
 ```
 
 
@@ -34,18 +34,18 @@ This operation applies a transformation described by the followingmapping of th
 The CCNOT gate to use for the construction.
 
 
-### controls : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### controls : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 A register of qubits to be used as controls for the and ladder.This operation leaves computational basis states of `controls`invariant.The length of `controls` must be at least 2, and mustbe equal to one plus the length of `targets`.
 
 
-### targets : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### targets : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 The length of `targets` must be at least 1 and equal to the lengthof `controls` minus one.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.IdxToCoeff
 title: IdxToCoeff function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -13,7 +13,7 @@ qsharp.summary: Used in implementation of `PauliBlockEncoding`
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Used in implementation of `PauliBlockEncoding`
@@ -25,23 +25,23 @@ function IdxToCoeff (idx : Int, genFun : (Int -> Microsoft.Quantum.Simulation.Ge
 
 ## Input
 
-### idx : [Int](xref:microsoft.quantum.lang-ref.int)
+### idx : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### genFun : [Int](xref:microsoft.quantum.lang-ref.int) -> [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)
+### genFun : [Int](xref:microsoft.quantum.user-guide.language.types) -> [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)
 
 
 
 
-### genIdxToCoeff : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex) -> [Double](xref:microsoft.quantum.lang-ref.double)
+### genIdxToCoeff : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex) -> [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 

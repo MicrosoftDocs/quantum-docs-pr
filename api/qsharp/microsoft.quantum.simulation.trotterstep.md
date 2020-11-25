@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.TrotterStep
 title: TrotterStep function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implements a single time-step of time-evolution by the systemdescribed in an `EvolutionGenerator` using a Trotter–Suzukidecomposition.
@@ -33,18 +33,18 @@ function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.Evolutio
 A complete description of the system to be simulated.
 
 
-### trotterOrder : [Int](xref:microsoft.quantum.lang-ref.int)
+### trotterOrder : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Order of Trotter integrator. This must be either 1 or an even number.
 
 
-### trotterStepSize : [Double](xref:microsoft.quantum.lang-ref.double)
+### trotterStepSize : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Duration of simulated time-evolution in single Trotter step.
 
 
 
-## Output : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+## Output : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 Unitary operation that approximates a single step of time-evolutionfor duration `trotterStepSize`.
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ScheduleLength
 title: ScheduleLength function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -13,7 +13,7 @@ qsharp.summary: Returns the number of elements in a given sampling schedule.
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Returns the number of elements in a given sampling schedule.
@@ -31,6 +31,6 @@ A sampling schedule whose length is to be returned.
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of elements in the given sampling schedule.

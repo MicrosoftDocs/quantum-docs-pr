@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.TableLookupRecoveryImpl
 title: TableLookupRecoveryImpl function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -13,7 +13,7 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
@@ -25,7 +25,7 @@ function TableLookupRecoveryImpl (table : Pauli[][], syndrome : Microsoft.Quantu
 
 ## Input
 
-### table : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[][]
+### table : [Pauli](xref:microsoft.quantum.user-guide.language.types)[][]
 
 
 
@@ -36,5 +36,5 @@ function TableLookupRecoveryImpl (table : Pauli[][], syndrome : Microsoft.Quantu
 
 
 
-## Output : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]
+## Output : [Pauli](xref:microsoft.quantum.user-guide.language.types)[]
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeRecoveryX
 title: SteaneCodeRecoveryX function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -13,7 +13,7 @@ qsharp.summary: Decoder for the X-part of the stabilizer group of the ⟦7, 1, 3
 
 Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Decoder for the X-part of the stabilizer group of the ⟦7, 1, 3⟧ Steane quantum code.
@@ -31,7 +31,7 @@ A syndrome array obtained from measuring the X-part of the stabilizer.
 
 
 
-## Output : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]
+## Output : [Pauli](xref:microsoft.quantum.user-guide.language.types)[]
 
 An array of Pauli operations which, when applied to the encoded quantum systemcorrects the error corresponding to `syndrome`.
 

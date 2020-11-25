@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.ModI
 title: ModI function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -13,7 +13,7 @@ qsharp.summary: Returns the modulus of a number with respect to another number.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns the modulus of a number with respect to another number.
@@ -25,17 +25,17 @@ function ModI (a : Int, b : Int) : Int
 
 ## Input
 
-### a : [Int](xref:microsoft.quantum.lang-ref.int)
+### a : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The input $a$ whose modulus is to be returned.
 
 
-### b : [Int](xref:microsoft.quantum.lang-ref.int)
+### b : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number with respect to which the modulus of $a$ is to be returned.
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The modulus $a \bmod b$.

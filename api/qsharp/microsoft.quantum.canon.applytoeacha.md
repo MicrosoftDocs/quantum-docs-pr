@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToEachA
 title: ApplyToEachA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,19 +15,19 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies a single-qubit operation to each element in a register.The modifier `A` indicates that the single-qubit operation is adjointable.
 
 ```qsharp
-operation ApplyToEachA<'T> (singleElementOperation : ('T => Unit is Adj), register : 'T[]) : Unit
+operation ApplyToEachA<'T> (singleElementOperation : ('T => Unit is Adj), register : 'T[]) : Unit is Adj
 ```
 
 
 ## Input
 
-### singleElementOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### singleElementOperation : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj
 
 Operation to apply to each qubit.
 
@@ -38,7 +38,7 @@ Array of qubits on which to apply the given operation.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

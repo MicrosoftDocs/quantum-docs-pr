@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.EstimateEnergyWithAdiabaticEvolution
 title: EstimateEnergyWithAdiabaticEvolution operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -18,7 +18,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Performs state preparation by applying a`statePrepUnitary` on an automatically allocated input state,followed by adiabatic state preparation using a`adiabaticUnitary`, and finally phase estimation with respect to`qpeUnitary`on the resulting state using a `phaseEstAlgorithm`.
@@ -30,32 +30,32 @@ operation EstimateEnergyWithAdiabaticEvolution (nQubits : Int, statePrepUnitary 
 
 ## Input
 
-### nQubits : [Int](xref:microsoft.quantum.lang-ref.int)
+### nQubits : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Number of qubits used for the simulation.
 
 
-### statePrepUnitary : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### statePrepUnitary : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 An oracle representing state preparation for the initial dynamicalgenerator.
 
 
-### adiabaticUnitary : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### adiabaticUnitary : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 An oracle representing the adiabatic evolution algorithm to be usedto implement the sweeps to the final state of the algorithm.
 
 
-### qpeUnitary : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### qpeUnitary : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 An oracle representing a unitary operator $U$ representing evolutionfor time $\delta t$ under a dynamical generator with ground state$\ket{\phi}$ and ground state energy $E = \phi\\,\delta t$.
 
 
-### phaseEstAlgorithm : ([DiscreteOracle](xref:Microsoft.Quantum.Oracles.DiscreteOracle),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Double](xref:microsoft.quantum.lang-ref.double) 
+### phaseEstAlgorithm : ([DiscreteOracle](xref:Microsoft.Quantum.Oracles.DiscreteOracle),[Qubit](xref:microsoft.quantum.concepts.the-qubit)[]) => [Double](xref:microsoft.quantum.user-guide.language.types) 
 
 An operation that performs phase estimation on a given unitary operation.See [iterative phase estimation](/quantum/libraries/characterization#iterative-phase-estimation)for more details.
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 An estimate $\hat{\phi}$ of the ground state energy $\phi$of the generator represented by $U$.

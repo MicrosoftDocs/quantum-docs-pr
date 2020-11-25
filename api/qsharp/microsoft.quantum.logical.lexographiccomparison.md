@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Logical.LexographicComparison
 title: LexographicComparison function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given a comparison function, returns a new function thatlexographically compares two arrays.
@@ -27,13 +27,13 @@ function LexographicComparison<'T> (elementComparison : (('T, 'T) -> Bool)) : ((
 
 ## Input
 
-### elementComparison : ('T,'T) -> [Bool](xref:microsoft.quantum.lang-ref.bool)
+### elementComparison : ('T,'T) -> [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 A function that compares two elements `x` and `y` and returns if`x` is less than or equal to `y`.
 
 
 
-## Output : ('T[],'T[]) -> [Bool](xref:microsoft.quantum.lang-ref.bool)
+## Output : ('T[],'T[]) -> [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 A function that compares two arrays `xs` and `ys` and returns if`xs` occurs before or equal to `ys` in lexographical ordering.
 

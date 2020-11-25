@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.DivRemB
 title: DivRemB function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -21,7 +21,7 @@ qsharp.summary: >+
 
 Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]
@@ -38,16 +38,16 @@ function DivRemB (dividend : BigInt, divisor : BigInt) : (BigInt, BigInt)
 
 ## Input
 
-### dividend : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
+### dividend : [BigInt](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### divisor : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
+### divisor : [BigInt](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : ([BigInt](xref:microsoft.quantum.lang-ref.bigint),[BigInt](xref:microsoft.quantum.lang-ref.bigint))
+## Output : ([BigInt](xref:microsoft.quantum.user-guide.language.types),[BigInt](xref:microsoft.quantum.user-guide.language.types))
 

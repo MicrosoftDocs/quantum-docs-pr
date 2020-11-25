@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionally
 title: ApplyConditionally operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
@@ -13,7 +13,7 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
@@ -35,7 +35,7 @@ operation ApplyConditionally<'T, 'U> (measurementResults : Result[], resultsValu
 
 
 
-### onEqualOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### onEqualOp : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 
 
@@ -45,7 +45,7 @@ operation ApplyConditionally<'T, 'U> (measurementResults : Result[], resultsValu
 
 
 
-### onNonEqualOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### onNonEqualOp : 'U => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 
 
@@ -56,7 +56,7 @@ operation ApplyConditionally<'T, 'U> (measurementResults : Result[], resultsValu
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

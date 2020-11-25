@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Characterization.HeadMeasurement
 title: HeadMeasurement function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Characterization
@@ -13,7 +13,7 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Characterization](xref:Microsoft.Quantum.Characterization)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
@@ -25,11 +25,11 @@ function HeadMeasurement (nQubits : Int) : (Qubit[] => Result)
 
 ## Input
 
-### nQubits : [Int](xref:microsoft.quantum.lang-ref.int)
+### nQubits : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => __invalid<Result>__ 
+## Output : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => __invalid<Result>__ 
 

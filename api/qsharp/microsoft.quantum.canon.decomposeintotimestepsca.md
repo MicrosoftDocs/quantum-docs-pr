@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.DecomposeIntoTimeStepsCA
 title: DecomposeIntoTimeStepsCA function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -17,7 +17,7 @@ qsharp.summary: >+
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -32,23 +32,23 @@ function DecomposeIntoTimeStepsCA<'T> ((nSteps : Int, op : ((Int, Double, 'T) =>
 
 ## Input
 
-### nSteps : [Int](xref:microsoft.quantum.lang-ref.int)
+### nSteps : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### op : ([Int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double),'T) => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### op : ([Int](xref:microsoft.quantum.user-guide.language.types),[Double](xref:microsoft.quantum.user-guide.language.types),'T) => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 
 
 
-### trotterOrder : [Int](xref:microsoft.quantum.lang-ref.int)
+### trotterOrder : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : ([Double](xref:microsoft.quantum.lang-ref.double),'T) => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+## Output : ([Double](xref:microsoft.quantum.user-guide.language.types),'T) => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 
 

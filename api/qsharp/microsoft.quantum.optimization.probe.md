@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Optimization.Probe
 title: Probe function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Optimization
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Optimization](xref:Microsoft.Quantum.Optimization)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given an interval, returns a probe interval that contracts the giveninterval by a factor of the golden ratio.
@@ -27,16 +27,16 @@ function Probe (left : Double, right : Double) : (Double, Double)
 
 ## Input
 
-### left : [Double](xref:microsoft.quantum.lang-ref.double)
+### left : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### right : [Double](xref:microsoft.quantum.lang-ref.double)
+### right : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : ([Double](xref:microsoft.quantum.lang-ref.double),[Double](xref:microsoft.quantum.lang-ref.double))
+## Output : ([Double](xref:microsoft.quantum.user-guide.language.types),[Double](xref:microsoft.quantum.user-guide.language.types))
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.MeasureStabilizerGenerators
 title: MeasureStabilizerGenerators operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -13,7 +13,7 @@ qsharp.summary: Measures the given set of generators of a stabilizer group.
 
 Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Measures the given set of generators of a stabilizer group.
@@ -25,7 +25,7 @@ operation MeasureStabilizerGenerators (stabilizerGroup : Pauli[][], logicalRegis
 
 ## Input
 
-### stabilizerGroup : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[][]
+### stabilizerGroup : [Pauli](xref:microsoft.quantum.user-guide.language.types)[][]
 
 An array of multiqubit Pauli operators.For example, `stabilizerGroup[0]` is a list of single-qubit Pauli matrices,the tensor product of which is a stabilizer generator.
 
@@ -35,7 +35,7 @@ An array of multiqubit Pauli operators.For example, `stabilizerGroup[0]` is a l
 An array of qubits where the stabilizer code is defined.
 
 
-### gadget : ([Pauli](xref:microsoft.quantum.lang-ref.pauli)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => __invalid<Result>__ 
+### gadget : ([Pauli](xref:microsoft.quantum.user-guide.language.types)[],[Qubit](xref:microsoft.quantum.concepts.the-qubit)[]) => __invalid<Result>__ 
 
 An operation that specifies how to measure a multiqubit Pauli operator.
 

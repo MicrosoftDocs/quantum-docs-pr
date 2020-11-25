@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Testing.AssertQubitState
 title: AssertQubitState operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Extensions.Testing
@@ -21,7 +21,7 @@ qsharp.summary: >+
 
 Namespace: [Microsoft.Quantum.Extensions.Testing](xref:Microsoft.Quantum.Extensions.Testing)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]
@@ -43,16 +43,16 @@ operation AssertQubitState (expected : (Microsoft.Quantum.Math.Complex, Microsof
 
 
 
-### register : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### register : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 
 
 
-### tolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### tolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

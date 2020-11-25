@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexZCoefficients
 title: MultiplexZCoefficients function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,7 +13,7 @@ qsharp.summary: Implementation step of multiply-controlled Z rotations.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementation step of multiply-controlled Z rotations.
@@ -25,13 +25,13 @@ function MultiplexZCoefficients (coefficients : Double[]) : (Double[], Double[])
 
 ## Input
 
-### coefficients : [Double](xref:microsoft.quantum.lang-ref.double)[]
+### coefficients : [Double](xref:microsoft.quantum.user-guide.language.types)[]
 
 
 
 
 
-## Output : ([Double](xref:microsoft.quantum.lang-ref.double)[],[Double](xref:microsoft.quantum.lang-ref.double)[])
+## Output : ([Double](xref:microsoft.quantum.user-guide.language.types)[],[Double](xref:microsoft.quantum.user-guide.language.types)[])
 
 
 

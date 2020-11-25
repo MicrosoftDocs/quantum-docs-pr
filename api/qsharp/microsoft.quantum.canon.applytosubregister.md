@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToSubregister
 title: ApplyToSubregister operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies an operation to a subregister of a register, with qubitsspecified by an array of their indices.
@@ -27,23 +27,23 @@ operation ApplyToSubregister (op : (Qubit[] => Unit), idxs : Int[], target : Qub
 
 ## Input
 
-### op : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### op : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 Operation to apply to subregister.
 
 
-### idxs : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### idxs : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 Array of indices, indicating to which qubits the operation will be applied.
 
 
-### target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### target : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 Register on which the operation acts.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

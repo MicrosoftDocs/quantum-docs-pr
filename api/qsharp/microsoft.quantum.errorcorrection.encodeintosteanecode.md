@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.EncodeIntoSteaneCode
 title: EncodeIntoSteaneCode operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 An encoding operation that maps an unencoded quantum register to an encoded quantum registerunder the ⟦7, 1, 3⟧ Steane quantum code.
@@ -27,12 +27,12 @@ operation EncodeIntoSteaneCode (physRegister : Qubit[], auxQubits : Qubit[]) : M
 
 ## Input
 
-### physRegister : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### physRegister : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 A qubit register which holds the an unencoded quantum state
 
 
-### auxQubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### auxQubits : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 A qubit register which is initially zero and which gets added to the quantumsystem so that an encoding operation can be performed
 

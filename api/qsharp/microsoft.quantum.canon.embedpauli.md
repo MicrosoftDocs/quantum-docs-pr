@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.EmbedPauli
 title: EmbedPauli function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given a single-qubit Pauli operator and the index of a qubit,returns a multi-qubit Pauli operator with the given single-qubitoperator at that index and `PauliI` at every other index.
@@ -28,21 +28,21 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
 
 ## Input
 
-### pauli : [Pauli](xref:microsoft.quantum.lang-ref.pauli)
+### pauli : [Pauli](xref:microsoft.quantum.user-guide.language.types)
 
 A single-qubit Pauli operator to be placed at the given location.
 
 
-### location : [Int](xref:microsoft.quantum.lang-ref.int)
+### location : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 An index such that `output[location] == pauli`, where `output` isthe output of this function.
 
 
-### n : [Int](xref:microsoft.quantum.lang-ref.int)
+### n : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Length of the array to be returned.
 
 
 
-## Output : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]
+## Output : [Pauli](xref:microsoft.quantum.user-guide.language.types)[]
 

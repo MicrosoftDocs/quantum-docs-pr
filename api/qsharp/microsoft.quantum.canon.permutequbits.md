@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.PermuteQubits
 title: PermuteQubits operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,28 +13,28 @@ qsharp.summary: Permutes qubits by using the SWAP operation.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Permutes qubits by using the SWAP operation.
 
 ```qsharp
-operation PermuteQubits (ordering : Int[], register : Qubit[]) : Unit
+operation PermuteQubits (ordering : Int[], register : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### ordering : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### ordering : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 Describes the new ordering of the qubits, where the qubit at index i will now be at ordering[i].
 
 
-### register : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### register : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 Qubit register to be acted upon.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

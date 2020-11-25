@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.ComplexDistribution
 title: ComplexDistribution user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Random
@@ -13,7 +13,7 @@ qsharp.summary: Represents a univariate probability distribution over complex nu
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Represents a univariate probability distribution over complex numbers.
@@ -27,7 +27,7 @@ newtype ComplexDistribution = (Sample : (Unit => Microsoft.Quantum.Math.Complex)
 
 ## Named Items
 
-### Sample : [Unit](xref:microsoft.quantum.lang-ref.unit) => [Complex](xref:Microsoft.Quantum.Math.Complex) 
+### Sample : [Unit](xref:microsoft.quantum.user-guide.language.types) => [Complex](xref:Microsoft.Quantum.Math.Complex) 
 
 
 

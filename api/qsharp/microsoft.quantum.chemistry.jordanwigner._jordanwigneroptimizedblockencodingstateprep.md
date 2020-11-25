@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingStatePrep
 title: _JordanWignerOptimizedBlockEncodingStatePrep operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
@@ -13,19 +13,19 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 
 
 ```qsharp
-operation _JordanWignerOptimizedBlockEncodingStatePrep (targetError : Double, optimizedBEGeneratorSystem : Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem, qROMIdxRegister : Microsoft.Quantum.Arithmetic.LittleEndian, qROMGarbage : Qubit[], signQubit : Qubit, selectZControlRegisters : Qubit[], OptimizedBEControlRegisters : Qubit[], pauliBases : Qubit[], pauliBasesIdx : Microsoft.Quantum.Arithmetic.LittleEndian, indexRegisters : Microsoft.Quantum.Arithmetic.LittleEndian[]) : Unit
+operation _JordanWignerOptimizedBlockEncodingStatePrep (targetError : Double, optimizedBEGeneratorSystem : Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem, qROMIdxRegister : Microsoft.Quantum.Arithmetic.LittleEndian, qROMGarbage : Qubit[], signQubit : Qubit, selectZControlRegisters : Qubit[], OptimizedBEControlRegisters : Qubit[], pauliBases : Qubit[], pauliBasesIdx : Microsoft.Quantum.Arithmetic.LittleEndian, indexRegisters : Microsoft.Quantum.Arithmetic.LittleEndian[]) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### targetError : [Double](xref:microsoft.quantum.lang-ref.double)
+### targetError : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
@@ -40,27 +40,27 @@ operation _JordanWignerOptimizedBlockEncodingStatePrep (targetError : Double, op
 
 
 
-### qROMGarbage : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### qROMGarbage : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 
 
 
-### signQubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### signQubit : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 
 
 
-### selectZControlRegisters : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### selectZControlRegisters : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 
 
 
-### OptimizedBEControlRegisters : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### OptimizedBEControlRegisters : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 
 
 
-### pauliBases : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### pauliBases : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 
 
@@ -76,5 +76,5 @@ operation _JordanWignerOptimizedBlockEncodingStatePrep (targetError : Double, op
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

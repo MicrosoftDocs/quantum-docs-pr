@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._DeltaParityCNOTbitstring
 title: _DeltaParityCNOTbitstring function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Classical processing step of `ApplyDeltaParity`.This computes a list of control qubits for evaluating paritydifference between any two PQRS... terms of even length.
@@ -28,18 +28,18 @@ function _DeltaParityCNOTbitstring (prevFermionicTerm : Int[], nextFermionicTerm
 
 ## Input
 
-### prevFermionicTerm : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### prevFermionicTerm : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 
 
 
-### nextFermionicTerm : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### nextFermionicTerm : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 
 
 
 
-## Output : ([Int](xref:microsoft.quantum.lang-ref.int),[Bool](xref:microsoft.quantum.lang-ref.bool)[])
+## Output : ([Int](xref:microsoft.quantum.user-guide.language.types),[Bool](xref:microsoft.quantum.user-guide.language.types)[])
 
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyBound
 title: ApplyBound operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,7 +13,7 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
@@ -25,7 +25,7 @@ operation ApplyBound<'T> (operations : ('T => Unit)[], target : 'T) : Unit
 
 ## Input
 
-### operations : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) []
+### operations : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types) []
 
 
 
@@ -36,7 +36,7 @@ operation ApplyBound<'T> (operations : ('T => Unit)[], target : 'T) : Unit
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.RestrictedToSubregisterC
 title: RestrictedToSubregisterC function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Restricts an operation to an array of indices of a register, i.e., a subregister.The modifier `C` indicates that the operation is controllable.
@@ -27,18 +27,18 @@ function RestrictedToSubregisterC (op : (Qubit[] => Unit is Ctl), idxs : Int[]) 
 
 ## Input
 
-### op : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### op : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Ctl
 
 Operation to be restricted to a subregister.
 
 
-### idxs : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### idxs : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 Array of indices, indicating to which qubits the operation will be restricted.
 
 
 
-## Output : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+## Output : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Ctl
 
 
 

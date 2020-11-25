@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.IterateThroughCartesianPower
 title: IterateThroughCartesianPower operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies an operation for each index in the Cartesian power of aninteger range.
@@ -31,23 +31,23 @@ Iteratively applies an operation for each element of a Cartesian powerof the ra
 
 ## Input
 
-### power : [Int](xref:microsoft.quantum.lang-ref.int)
+### power : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The Cartesian power to which the range `0..(bound - 1)` should beraised.
 
 
-### bound : [Int](xref:microsoft.quantum.lang-ref.int)
+### bound : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 A specification of the range to be iterated over, given as the lengthof the range.
 
 
-### op : [Int](xref:microsoft.quantum.lang-ref.int)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### op : [Int](xref:microsoft.quantum.user-guide.language.types)[] => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 An operation to be called for each element of the given Cartesian power.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

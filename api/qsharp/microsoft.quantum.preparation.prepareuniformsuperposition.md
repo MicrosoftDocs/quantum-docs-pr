@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition
 title: PrepareUniformSuperposition operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -22,19 +22,19 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Creates a uniform superposition over states that encode 0 through `nIndices - 1`.That is, this unitary $U$ creates a uniform superposition over all number states$0$ to $M-1$, given an input state $\ket{0\cdots 0}$. In other words,$$\begin{align}U\ket{0}=\frac{1}{\sqrt{M}}\sum_{j=0}^{M-1}\ket{j}.\end{align}$$.
 
 ```qsharp
-operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### nIndices : [Int](xref:microsoft.quantum.lang-ref.int)
+### nIndices : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The desired number of states $M$ in the uniform superposition.
 
@@ -45,7 +45,7 @@ The qubit register that stores the number states in `LittleEndian` format.This 
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

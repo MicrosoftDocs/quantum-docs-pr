@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ApplyFixedPointAmplification
 title: ApplyFixedPointAmplification operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -13,7 +13,7 @@ qsharp.summary: Fixed-Point Amplitude Amplification algorithm
 
 Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Fixed-Point Amplitude Amplification algorithm
@@ -30,13 +30,13 @@ operation ApplyFixedPointAmplification (statePrepOracle : Microsoft.Quantum.Orac
 Unitary oracle that prepares the start state.
 
 
-### startQubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### startQubits : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 Qubit register
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.SequentialModel
 title: SequentialModel user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Describes a quantum classifier model composed of a sequence ofparameterized and controlled rotations, an assignment of rotationangles, and a bias between the two classes recognized by the model.
@@ -33,10 +33,10 @@ newtype SequentialModel = (Structure : Microsoft.Quantum.MachineLearning.Control
 ### Structure : [ControlledRotation](xref:Microsoft.Quantum.MachineLearning.ControlledRotation)[]
 
 The sequence of controlled rotations used to classify inputs.
-### Parameters : [Double](xref:microsoft.quantum.lang-ref.double)[]
+### Parameters : [Double](xref:microsoft.quantum.user-guide.language.types)[]
 
 An assignment of rotation angles to the given classification structure.
-### Bias : [Double](xref:microsoft.quantum.lang-ref.double)
+### Bias : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The bias between the two classes recognized by this classifier.
 

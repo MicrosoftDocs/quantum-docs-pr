@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.SquaredNorm
 title: SquaredNorm function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -13,7 +13,7 @@ qsharp.summary: Returns the squared 2-norm of a vector.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns the squared 2-norm of a vector.
@@ -29,12 +29,12 @@ Returns the squared 2-norm of a vector; that is, given an input$\vec{x}$, retur
 
 ## Input
 
-### array : [Double](xref:microsoft.quantum.lang-ref.double)[]
+### array : [Double](xref:microsoft.quantum.user-guide.language.types)[]
 
 The vector whose squared 2-norm is to be returned.
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The squared 2-norm of `array`.

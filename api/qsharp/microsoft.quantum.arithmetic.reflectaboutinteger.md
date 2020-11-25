@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ReflectAboutInteger
 title: ReflectAboutInteger operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -13,13 +13,13 @@ qsharp.summary: Reflects a quantum register about a given classical integer.
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Reflects a quantum register about a given classical integer.
 
 ```qsharp
-operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -29,7 +29,7 @@ Given a quantum register initially in the state $\sum_i \alpha_i \ket{i}$,where
 
 ## Input
 
-### index : [Int](xref:microsoft.quantum.lang-ref.int)
+### index : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The classical integer indexing the basis state about which to reflect.
 
@@ -40,7 +40,7 @@ The classical integer indexing the basis state about which to reflect.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

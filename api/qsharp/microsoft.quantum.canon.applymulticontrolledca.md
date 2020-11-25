@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyMultiControlledCA
 title: ApplyMultiControlledCA operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -17,19 +17,19 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies a multiply controlled version of a singly controlledoperation.The modifier `CA` indicates that the single-qubit operation is controllableand adjointable.
 
 ```qsharp
-operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit
+operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### singlyControlledOp : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### singlyControlledOp : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj
 
 An operation controlled on a single qubit.The first qubit in the argument of the operationassumed to be a control and the rest are assumed to be target qubits.`ApplyMultiControlled` always calls `singlyControlledOp` with an argument oflength at least 1.
 
@@ -39,18 +39,18 @@ An operation controlled on a single qubit.The first qubit in the argument of th
 The controlled-controlled-NOT gate to use for the construction.
 
 
-### controls : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### controls : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 The qubits that `singlyControlledOp` is to be controlled on.The length of `controls` must be at least 1.
 
 
-### targets : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### targets : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 The target qubits that `singlyControlledOp` acts upon.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

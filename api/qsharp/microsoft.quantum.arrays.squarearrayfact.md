@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.SquareArrayFact
 title: SquareArrayFact function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -13,7 +13,7 @@ qsharp.summary: Represents a condition that a 2-dimensional array has a square s
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Represents a condition that a 2-dimensional array has a square shape
@@ -34,13 +34,13 @@ This function asserts that each row in an array hasas many elements as there ar
 A 2-dimensional array of elements
 
 
-### message : [String](xref:microsoft.quantum.lang-ref.string)
+### message : [String](xref:microsoft.quantum.user-guide.language.types)
 
 A message to be printed if the array is not a square array
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.SWAP
 title: SWAP operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -26,30 +26,30 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Applies the SWAP gate to a pair of qubits.\begin{align}\operatorname{SWAP} \mathrel{:=}\begin{bmatrix}1 & 0 & 0 & 0 \\\\0 & 0 & 1 & 0 \\\\0 & 1 & 0 & 0 \\\\0 & 0 & 0 & 1\end{bmatrix},\end{align}where rows and columns are ordered as in the quantum concepts guide.
 
 ```qsharp
-operation SWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit
+operation SWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### qubit1 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### qubit1 : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 First qubit to be swapped.
 
 
-### qubit2 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### qubit2 : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 Second qubit to be swapped.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

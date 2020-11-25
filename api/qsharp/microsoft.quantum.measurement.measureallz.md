@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Measurement.MeasureAllZ
 title: MeasureAllZ operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Measurement
@@ -13,7 +13,7 @@ qsharp.summary: Jointly measures a register of qubits in the Pauli Z basis.
 
 Namespace: [Microsoft.Quantum.Measurement](xref:Microsoft.Quantum.Measurement)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Jointly measures a register of qubits in the Pauli Z basis.
@@ -29,7 +29,7 @@ Measures a register of qubits in the $Z \otimes Z \otimes \cdots \otimes Z$basi
 
 ## Input
 
-### register : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### register : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 The register to be measured.
 

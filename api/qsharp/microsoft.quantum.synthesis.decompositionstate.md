@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.DecompositionState
 title: DecompositionState user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -13,7 +13,7 @@ qsharp.summary: State during decomposition based on variable indexes
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 State during decomposition based on variable indexes
@@ -27,13 +27,13 @@ newtype DecompositionState = (Perm : Int[], Lfunctions : (BigInt, Int)[], Rfunct
 
 ## Named Items
 
-### Perm : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### Perm : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 
-### Lfunctions : ([BigInt](xref:microsoft.quantum.lang-ref.bigint),[Int](xref:microsoft.quantum.lang-ref.int))[]
+### Lfunctions : ([BigInt](xref:microsoft.quantum.user-guide.language.types),[Int](xref:microsoft.quantum.user-guide.language.types))[]
 
 
-### Rfunctions : ([BigInt](xref:microsoft.quantum.lang-ref.bigint),[Int](xref:microsoft.quantum.lang-ref.int))[]
+### Rfunctions : ([BigInt](xref:microsoft.quantum.user-guide.language.types),[Int](xref:microsoft.quantum.user-guide.language.types))[]
 
 
 

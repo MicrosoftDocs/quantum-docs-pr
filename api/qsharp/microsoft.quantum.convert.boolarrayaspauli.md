@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
 title: BoolArrayAsPauli function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given a bit string, returns a multi-qubit Pauli operatorrepresented as an array of single-qubit Pauli operators.
@@ -27,23 +27,23 @@ function BoolArrayAsPauli (pauli : Pauli, bitApply : Bool, bits : Bool[]) : Paul
 
 ## Input
 
-### pauli : [Pauli](xref:microsoft.quantum.lang-ref.pauli)
+### pauli : [Pauli](xref:microsoft.quantum.user-guide.language.types)
 
 Pauli operator to apply to qubits where `bitsApply == bits[idx]`.
 
 
-### bitApply : [Bool](xref:microsoft.quantum.lang-ref.bool)
+### bitApply : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 apply Pauli if bit is this value.
 
 
-### bits : [Bool](xref:microsoft.quantum.lang-ref.bool)[]
+### bits : [Bool](xref:microsoft.quantum.user-guide.language.types)[]
 
 Boolean array.
 
 
 
-## Output : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]
+## Output : [Pauli](xref:microsoft.quantum.user-guide.language.types)[]
 
 
 

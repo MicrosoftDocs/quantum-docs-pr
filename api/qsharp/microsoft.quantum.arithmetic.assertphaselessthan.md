@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AssertPhaseLessThan
 title: AssertPhaseLessThan operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -13,19 +13,19 @@ qsharp.summary: Asserts that the `number` encoded in PhaseLittleEndian is less t
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Asserts that the `number` encoded in PhaseLittleEndian is less than `value`.
 
 ```qsharp
-operation AssertPhaseLessThan (value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit
+operation AssertPhaseLessThan (value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### value : [Int](xref:microsoft.quantum.lang-ref.int)
+### value : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 `number` must be less than this.
 
@@ -36,7 +36,7 @@ Unsigned integer which is compared to `value`.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

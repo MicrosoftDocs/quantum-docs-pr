@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.CX
 title: CX operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -26,30 +26,30 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies the controlled-X (CX) gate to a pair of qubits.$$\begin{align}\left(\begin{matrix}1 & 0 & 0 & 0 \\\\0 & 1 & 0 & 0 \\\\0 & 0 & 0 & 1 \\\\0 & 0 & 1 & 0\end{matrix}\right)\end{align},$$where rows and columns are organized as in the quantum concepts guide.
 
 ```qsharp
-operation CX (control : Qubit, target : Qubit) : Unit
+operation CX (control : Qubit, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### control : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### control : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 Control qubit for the CX gate.
 
 
-### target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### target : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 Target qubit for the CX gate.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

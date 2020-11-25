@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.DiscreteUniformDistribution
 title: DiscreteUniformDistribution function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
@@ -13,7 +13,7 @@ qsharp.summary: Returns a uniform distribution over a given inclusive range.
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Returns a uniform distribution over a given inclusive range.
@@ -25,12 +25,12 @@ function DiscreteUniformDistribution (min : Int, max : Int) : Microsoft.Quantum.
 
 ## Input
 
-### min : [Int](xref:microsoft.quantum.lang-ref.int)
+### min : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The smallest integer to be drawn.
 
 
-### max : [Int](xref:microsoft.quantum.lang-ref.int)
+### max : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The largest integer to be drawn.
 

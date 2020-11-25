@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.PrepareFxP
 title: PrepareFxP operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -13,19 +13,19 @@ qsharp.summary: Initialize a quantum fixed-point number to a classical constant.
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Initialize a quantum fixed-point number to a classical constant.
 
 ```qsharp
-operation PrepareFxP (constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit
+operation PrepareFxP (constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### constant : [Double](xref:microsoft.quantum.lang-ref.double)
+### constant : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Constant to which to initialize the quantum fixed-point number.
 
@@ -36,5 +36,5 @@ Fixed-point number (of type FixedPoint) to initialize.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Logical.Not
 title: Not function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
@@ -13,7 +13,7 @@ qsharp.summary: Returns the Boolean negation of a value.
 
 Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns the Boolean negation of a value.
@@ -25,13 +25,13 @@ function Not (value : Bool) : Bool
 
 ## Input
 
-### value : [Bool](xref:microsoft.quantum.lang-ref.bool)
+### value : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 The value to be negated.
 
 
 
-## Output : [Bool](xref:microsoft.quantum.lang-ref.bool)
+## Output : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 `true` if and only if `value` is `false`.
 

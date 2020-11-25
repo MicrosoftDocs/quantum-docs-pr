@@ -1,12 +1,17 @@
 ---
 uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState
 title: ApproximatelyPrepareArbitraryState operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: ApproximatelyPrepareArbitraryState
 qsharp.summary: >-
+  > [!WARNING]
+
+  > ApproximatelyPrepareArbitraryState has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP> instead.
+
+
   Given a set of coefficients and a little-endian encoded quantum register,
   prepares an state on that register described by the given coefficients,
   up to a given approximation tolerance.
@@ -16,13 +21,16 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
+
+> [!WARNING]
+> ApproximatelyPrepareArbitraryState has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP> instead.
 
 Given a set of coefficients and a little-endian encoded quantum register,prepares an state on that register described by the given coefficients,up to a given approximation tolerance.
 
 ```qsharp
-operation ApproximatelyPrepareArbitraryState (tolerance : Double, coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApproximatelyPrepareArbitraryState (tolerance : Double, coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -32,7 +40,7 @@ This operation prepares an arbitrary quantumstate $\ket{\psi}$ with complex coe
 
 ## Input
 
-### tolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### tolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The approximation tolerance to be used when preparing the given state.
 
@@ -48,7 +56,7 @@ Qubit register encoding number states in little-endian format. This isexpected 
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

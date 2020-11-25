@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanOrEqualI
 title: LessThanOrEqualI function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns true if and only if a number is less than or equal to anothernumber.
@@ -27,18 +27,18 @@ function LessThanOrEqualI (a : Int, b : Int) : Bool
 
 ## Input
 
-### a : [Int](xref:microsoft.quantum.lang-ref.int)
+### a : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The first value to be compared.
 
 
-### b : [Int](xref:microsoft.quantum.lang-ref.int)
+### b : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The second value to be compared.
 
 
 
-## Output : [Bool](xref:microsoft.quantum.lang-ref.bool)
+## Output : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 `true` if and only if `a` is less than or equal to `b`.
 

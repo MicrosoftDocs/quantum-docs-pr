@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance
 title: AssertQubitIsInStateWithinTolerance operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -19,7 +19,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Asserts that a qubit in the expected state.`expected` represents a complex vector, $\ket{\psi} = \begin{bmatrix}a & b\end{bmatrix}^{\mathrm{T}}$.The first element of the tuples representing each of $a$, $b$is the real part of the complex number, while the second one is the imaginary part.The last argument defines the tolerance with which assertion is made.
@@ -36,18 +36,18 @@ operation AssertQubitIsInStateWithinTolerance (expected : (Microsoft.Quantum.Mat
 Expected complex amplitudes for $\ket{0}$ and $\ket{1}$, respectively.
 
 
-### register : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### register : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 Qubit whose state is to be asserted. Note that this qubit is assumed to be separablefrom other allocated qubits, and not entangled.
 
 
-### tolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### tolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Additive tolerance by which actual amplitudes are allowed to deviate from expected.See remarks below for details.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

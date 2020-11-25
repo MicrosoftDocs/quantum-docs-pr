@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.HTermToGenIdx
 title: HTermToGenIdx function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry
@@ -13,7 +13,7 @@ qsharp.summary: Converts a Hamiltonian term in `HTerm` data format to a Generato
 
 Namespace: [Microsoft.Quantum.Chemistry](xref:Microsoft.Quantum.Chemistry)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Converts a Hamiltonian term in `HTerm` data format to a GeneratorIndex.
@@ -30,7 +30,7 @@ function HTermToGenIdx (term : Microsoft.Quantum.Chemistry.HTerm, termType : Int
 Input data in `HTerm` format.
 
 
-### termType : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### termType : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 Additional information added to GeneratorIndex.
 

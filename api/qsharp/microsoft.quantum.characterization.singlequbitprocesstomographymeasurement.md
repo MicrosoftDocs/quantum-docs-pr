@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Characterization.SingleQubitProcessTomographyMeasurement
 title: SingleQubitProcessTomographyMeasurement operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Characterization](xref:Microsoft.Quantum.Characterization)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Performs a single-qubit process tomography measurement in the Paulibasis, given a particular channel of interest.
@@ -27,17 +27,17 @@ operation SingleQubitProcessTomographyMeasurement (preparation : Pauli, measurem
 
 ## Input
 
-### preparation : [Pauli](xref:microsoft.quantum.lang-ref.pauli)
+### preparation : [Pauli](xref:microsoft.quantum.user-guide.language.types)
 
 The Pauli basis element $P$ in which a qubit is to be prepared.
 
 
-### measurement : [Pauli](xref:microsoft.quantum.lang-ref.pauli)
+### measurement : [Pauli](xref:microsoft.quantum.user-guide.language.types)
 
 The Pauli basis element $Q$ in which a qubit is to be measured.
 
 
-### channel : [Qubit](xref:microsoft.quantum.lang-ref.qubit) => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### channel : [Qubit](xref:microsoft.quantum.concepts.the-qubit) => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 A single qubit channel $\Lambda$ whose behavior is being estimatedwith process tomography.
 

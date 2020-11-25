@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IncrementByInteger
 title: IncrementByInteger operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Increments an unsigned quantum register by a classical integer,using phase rotations.
 
 ```qsharp
-operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -31,7 +31,7 @@ Suppose that `target` encodes an unsigned integer $x$ in a little-endianencodin
 
 ## Input
 
-### increment : [Int](xref:microsoft.quantum.lang-ref.int)
+### increment : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The integer by which the `target` is incremented by.
 
@@ -42,5 +42,5 @@ A quantum register encoding an unsigned integer using little-endianencoding.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

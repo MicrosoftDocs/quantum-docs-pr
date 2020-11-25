@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerZTerm_
 title: _ApplyJordanWignerZTerm_ operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
@@ -13,13 +13,13 @@ qsharp.summary: Applies time-evolution by a Z term described by a `GeneratorInde
 
 Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Applies time-evolution by a Z term described by a `GeneratorIndex`.
 
 ```qsharp
-operation _ApplyJordanWignerZTerm_ (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, qubits : Qubit[]) : Unit
+operation _ApplyJordanWignerZTerm_ (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -30,16 +30,16 @@ operation _ApplyJordanWignerZTerm_ (term : Microsoft.Quantum.Simulation.Generato
 `GeneratorIndex` representing a Z term.
 
 
-### stepSize : [Double](xref:microsoft.quantum.lang-ref.double)
+### stepSize : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Duration of time-evolution.
 
 
-### qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### qubits : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 Qubits of Hamiltonian.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

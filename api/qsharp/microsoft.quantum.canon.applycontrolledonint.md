@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyControlledOnInt
 title: ApplyControlledOnInt operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,29 +15,29 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies a unitary operation on the target register if the controlregister state corresponds to a specified positive integer.
 
 ```qsharp
-operation ApplyControlledOnInt<'T> (numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit
+operation ApplyControlledOnInt<'T> (numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### numberState : [Int](xref:microsoft.quantum.lang-ref.int)
+### numberState : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 A nonnegative integer on which the operation `oracle` should becontrolled.
 
 
-### oracle : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### oracle : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 A unitary operation to be controlled.
 
 
-### controlRegister : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### controlRegister : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 A quantum register that controls application of `oracle`.
 
@@ -48,7 +48,7 @@ A register on which to apply `oracle`.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

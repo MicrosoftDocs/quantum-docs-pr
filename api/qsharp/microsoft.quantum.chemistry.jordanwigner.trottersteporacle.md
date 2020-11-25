@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.TrotterStepOracle
 title: TrotterStepOracle function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
@@ -13,7 +13,7 @@ qsharp.summary: Returns Trotter step operation and the parameters necessary to r
 
 Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Returns Trotter step operation and the parameters necessary to run it.
@@ -30,17 +30,17 @@ function TrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigne
 Hamiltonian described by `JordanWignerEncodingData` format.
 
 
-### trotterStepSize : [Double](xref:microsoft.quantum.lang-ref.double)
+### trotterStepSize : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Step size of Trotter integrator.
 
 
-### trotterOrder : [Int](xref:microsoft.quantum.lang-ref.int)
+### trotterOrder : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Order of Trotter integrator.
 
 
 
-## Output : ([Int](xref:microsoft.quantum.lang-ref.int),([Double](xref:microsoft.quantum.lang-ref.double),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl))
+## Output : ([Int](xref:microsoft.quantum.user-guide.language.types),([Double](xref:microsoft.quantum.user-guide.language.types),[Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl))
 
 A tuple where: `Int` is the number of qubits allocated,`Double` is `1.0/trotterStepSize`, and the operationis the Trotter step.

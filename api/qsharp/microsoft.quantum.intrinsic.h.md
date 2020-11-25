@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.H
 title: H operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -23,23 +23,23 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Applies the Hadamard transformation to a single qubit.\begin{align}H \mathrel{:=}\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1 \\\\1 & -1\end{bmatrix}.\end{align}
 
 ```qsharp
-operation H (qubit : Qubit) : Unit
+operation H (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### qubit : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 Qubit to which the gate should be applied.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

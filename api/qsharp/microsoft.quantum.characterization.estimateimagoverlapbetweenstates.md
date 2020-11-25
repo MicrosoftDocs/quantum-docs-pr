@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateImagOverlapBetweenStates
 title: EstimateImagOverlapBetweenStates operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Characterization](xref:Microsoft.Quantum.Characterization)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given two operations which each prepare copies of a state, estimatesthe imaginary part of the overlap between the states prepared by eachoperation.
@@ -28,33 +28,33 @@ operation EstimateImagOverlapBetweenStates (commonPreparation : (Qubit[] => Unit
 
 ## Input
 
-### commonPreparation : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### commonPreparation : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj
 
 An operation that prepares a fixed input state.
 
 
-### preparation1 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### preparation1 : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 The first of the two state preparation operations to be compared.
 
 
-### preparation2 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### preparation2 : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 The second of the two state preparation operations to be compared.
 
 
-### nQubits : [Int](xref:microsoft.quantum.lang-ref.int)
+### nQubits : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of qubits on which `commonPreparation`, `preparation1`, and`preparation2` all act.
 
 
-### nMeasurements : [Int](xref:microsoft.quantum.lang-ref.int)
+### nMeasurements : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of measurements to use in estimating the overlap.
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 

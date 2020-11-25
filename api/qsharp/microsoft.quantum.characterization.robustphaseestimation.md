@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Characterization.RobustPhaseEstimation
 title: RobustPhaseEstimation operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Characterization](xref:Microsoft.Quantum.Characterization)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate,and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
@@ -27,7 +27,7 @@ operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum
 
 ## Input
 
-### bitsPrecision : [Int](xref:microsoft.quantum.lang-ref.int)
+### bitsPrecision : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 This provides an estimate of $\phi$ with standard deviation$\sigma \le 2\pi / 2^\text{bitsPrecision}$ using a number of queries scaling like $\sigma \le 10.7 \pi / \text{# of queries}$.
 
@@ -37,13 +37,13 @@ This provides an estimate of $\phi$ with standard deviation$\sigma \le 2\pi / 2
 An operation implementing $U^m$ for given integer powers $m$.
 
 
-### targetState : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### targetState : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 A quantum register that $U$ acts on. If it stores an eigenstate$\ket{\phi}$ of $U$, then $U\ket{\phi} = e^{i\phi} \ket{\phi}$for $\phi\in(-\pi,\pi]$ an unknown phase.
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 

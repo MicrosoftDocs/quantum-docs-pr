@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainingOptions
 title: TrainingOptions user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -13,7 +13,7 @@ qsharp.summary: A collection of options to be used in training quantum classifie
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 A collection of options to be used in training quantum classifiers.
@@ -27,31 +27,31 @@ newtype TrainingOptions = (LearningRate : Double, Tolerance : Double, MinibatchS
 
 ## Named Items
 
-### LearningRate : [Double](xref:microsoft.quantum.lang-ref.double)
+### LearningRate : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The learning rate by which gradients should be rescaled when updatingmodel parameters during training steps.
-### Tolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### Tolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The approximation tolerance to use when preparing samples as quantumstates.
-### MinibatchSize : [Int](xref:microsoft.quantum.lang-ref.int)
+### MinibatchSize : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of samples to use in each training minibatch.
-### NMeasurements : [Int](xref:microsoft.quantum.lang-ref.int)
+### NMeasurements : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of times to measure each classification result in order toestimate the classification probability.
-### MaxEpochs : [Int](xref:microsoft.quantum.lang-ref.int)
+### MaxEpochs : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The maximum number of epochs to train each model for.
-### MaxStalls : [Int](xref:microsoft.quantum.lang-ref.int)
+### MaxStalls : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The maximum number of times a training epoch is allowed to stall(approximately zero gradient) before failing.
-### StochasticRescaleFactor : [Double](xref:microsoft.quantum.lang-ref.double)
+### StochasticRescaleFactor : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The amount to rescale stalled models by before retrying an update.
-### ScoringPeriod : [Int](xref:microsoft.quantum.lang-ref.int)
+### ScoringPeriod : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of gradient steps to be taken between scoring points.For best accuracy, set to 1.
-### VerboseMessage : [String](xref:microsoft.quantum.lang-ref.string) -> [Unit](xref:microsoft.quantum.lang-ref.unit)
+### VerboseMessage : [String](xref:microsoft.quantum.user-guide.language.types) -> [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 A function that can be used to provide verbose feedback.
 

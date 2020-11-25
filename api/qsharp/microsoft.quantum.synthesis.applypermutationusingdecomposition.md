@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
 title: ApplyPermutationUsingDecomposition operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Permutes the amplitudes in a quantum state given a permutationusing decomposition-based synthesis.
 
 ```qsharp
-operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -31,7 +31,7 @@ This procedure implements the decomposition basedsynthesis approach.  The input
 
 ## Input
 
-### perm : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### perm : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 A permutation of $2^n$ elements starting from 0.
 
@@ -42,7 +42,7 @@ A list of $n$ qubits to which the permutation is applied to.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

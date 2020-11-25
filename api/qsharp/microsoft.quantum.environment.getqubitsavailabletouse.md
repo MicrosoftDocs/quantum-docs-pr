@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Environment.GetQubitsAvailableToUse
 title: GetQubitsAvailableToUse operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Environment
@@ -13,7 +13,7 @@ qsharp.summary: Returns the number of qubits currently available to use.
 
 Namespace: [Microsoft.Quantum.Environment](xref:Microsoft.Quantum.Environment)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Returns the number of qubits currently available to use.
@@ -23,7 +23,7 @@ operation GetQubitsAvailableToUse () : Int
 ```
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of qubits that could be allocated in a `using` statement.If the target machine being used does not provide this information, then`-1` is returned.
 

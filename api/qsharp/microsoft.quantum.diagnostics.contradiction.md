@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.Contradiction
 title: Contradiction function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -13,7 +13,7 @@ qsharp.summary: Declares that a classical condition is false.
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Declares that a classical condition is false.
@@ -25,18 +25,18 @@ function Contradiction (actual : Bool, message : String) : Unit
 
 ## Input
 
-### actual : [Bool](xref:microsoft.quantum.lang-ref.bool)
+### actual : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 The condition to be declared.
 
 
-### message : [String](xref:microsoft.quantum.lang-ref.string)
+### message : [String](xref:microsoft.quantum.user-guide.language.types)
 
 Failure message string to be printed in the case that the classicalcondition is true.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

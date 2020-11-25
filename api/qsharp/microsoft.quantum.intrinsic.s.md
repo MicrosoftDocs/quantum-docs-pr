@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.S
 title: S operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -13,13 +13,13 @@ qsharp.summary: Applies the S gate to a single qubit.
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Applies the S gate to a single qubit.
 
 ```qsharp
-operation S (qubit : Qubit) : Unit
+operation S (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -29,11 +29,11 @@ This operation can be simulated by the unitary matrix\begin{align}S \mathrel{:
 
 ## Input
 
-### qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### qubit : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 Qubit to which the gate should be applied.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

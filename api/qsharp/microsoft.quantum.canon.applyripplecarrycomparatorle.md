@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyRippleCarryComparatorLE
 title: ApplyRippleCarryComparatorLE operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -21,7 +21,7 @@ qsharp.summary: >+
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -32,7 +32,7 @@ Package: [](https://nuget.org/packages/)
 
 
 ```qsharp
-operation ApplyRippleCarryComparatorLE (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit
+operation ApplyRippleCarryComparatorLE (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -48,11 +48,11 @@ operation ApplyRippleCarryComparatorLE (x : Microsoft.Quantum.Arithmetic.LittleE
 
 
 
-### output : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### output : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

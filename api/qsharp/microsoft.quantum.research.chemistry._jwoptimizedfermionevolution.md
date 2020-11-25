@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedFermionEvolution
 title: _JWOptimizedFermionEvolution operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
@@ -18,13 +18,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Represents a dynamical generator as a set of simulatable gates and anexpansion in the JWOptimized basis.See [Dynamical Generator Modeling](../libraries/data-structures#dynamical-generator-modeling)for more details.
 
 ```qsharp
-operation _JWOptimizedFermionEvolution (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit
+operation _JWOptimizedFermionEvolution (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -35,21 +35,21 @@ operation _JWOptimizedFermionEvolution (generatorIndex : Microsoft.Quantum.Simul
 A generator index to be represented as unitary evolution in the JWOptimizedbasis.
 
 
-### stepSize : [Double](xref:microsoft.quantum.lang-ref.double)
+### stepSize : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 A multiplier on the duration of time-evolution by the term referencedin `generatorIndex`.
 
 
-### parityQubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### parityQubit : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 Qubit that determines the sign of time-evolution.
 
 
-### qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### qubits : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 Register acted upon by time-evolution operator.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

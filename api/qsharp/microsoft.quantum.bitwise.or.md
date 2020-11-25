@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Or
 title: Or function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Returns the bitwise OR of two integers.This performs the same computation as the built-in `|||` operator.
@@ -27,18 +27,18 @@ function Or (a : Int, b : Int) : Int
 
 ## Input
 
-### a : [Int](xref:microsoft.quantum.lang-ref.int)
+### a : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### b : [Int](xref:microsoft.quantum.lang-ref.int)
+### b : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 

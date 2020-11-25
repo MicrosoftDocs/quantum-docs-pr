@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.EvaluatePolynomialFxP
 title: EvaluatePolynomialFxP operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -13,19 +13,19 @@ qsharp.summary: Evaluates a polynomial in a fixed-point representation.
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Evaluates a polynomial in a fixed-point representation.
 
 ```qsharp
-operation EvaluatePolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit
+operation EvaluatePolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### coefficients : [Double](xref:microsoft.quantum.lang-ref.double)[]
+### coefficients : [Double](xref:microsoft.quantum.user-guide.language.types)[]
 
 Coefficients of the polynomial as a double array, i.e., the array$[a_0, a_1, ..., a_d]$ for the polynomial$P(x) = a_0 + a_1 x + \cdots + a_d x^d$.
 
@@ -41,5 +41,5 @@ Output fixed-point number which will hold $P(x)$. Must be in state$\ket{0}$ ini
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

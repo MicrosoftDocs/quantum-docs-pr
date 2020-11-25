@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomDouble
 title: DrawRandomDouble operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
@@ -13,7 +13,7 @@ qsharp.summary: Draws a random real number in a given inclusive interval.
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Draws a random real number in a given inclusive interval.
@@ -25,18 +25,18 @@ operation DrawRandomDouble (min : Double, max : Double) : Double
 
 ## Input
 
-### min : [Double](xref:microsoft.quantum.lang-ref.double)
+### min : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The smallest real number to be drawn.
 
 
-### max : [Double](xref:microsoft.quantum.lang-ref.double)
+### max : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The largest real number to be drawn.
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 A random real number in the inclusive interval from `min` to `max` withuniform probability.
 

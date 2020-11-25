@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.Repeat
 title: Repeat operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,7 +13,7 @@ qsharp.summary: Repeats an operation a given number of times.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Repeats an operation a given number of times.
@@ -25,12 +25,12 @@ operation Repeat<'TInput> (op : ('TInput => Unit), nTimes : Int, input : 'TInput
 
 ## Input
 
-### op : 'TInput => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### op : 'TInput => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 The operation to be called repeatedly.
 
 
-### nTimes : [Int](xref:microsoft.quantum.lang-ref.int)
+### nTimes : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of times to call `op`.
 
@@ -41,7 +41,7 @@ The input to be passed to `op`.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

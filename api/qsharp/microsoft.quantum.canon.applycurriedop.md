@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyCurriedOp
 title: ApplyCurriedOp operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,7 +13,7 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
@@ -25,7 +25,7 @@ operation ApplyCurriedOp<'T, 'U> (curriedOp : ('T -> ('U => Unit)), first : 'T, 
 
 ## Input
 
-### curriedOp : 'T -> 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### curriedOp : 'T -> 'U => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 
 
@@ -41,7 +41,7 @@ operation ApplyCurriedOp<'T, 'U> (curriedOp : ('T -> ('U => Unit)), first : 'T, 
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

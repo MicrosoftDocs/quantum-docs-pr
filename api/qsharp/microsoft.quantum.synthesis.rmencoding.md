@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.RMEncoding
 title: RMEncoding function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -13,7 +13,7 @@ qsharp.summary: '{-1,1} coding of a Boolean truth value'
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 {-1,1} coding of a Boolean truth value
@@ -25,12 +25,12 @@ function RMEncoding (b : Bool) : Int
 
 ## Input
 
-### b : [Bool](xref:microsoft.quantum.lang-ref.bool)
+### b : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 Boolean value
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 1, if `b` is false, otherwise -1

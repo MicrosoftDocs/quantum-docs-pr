@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingAsReflection
 title: ApplyBlockEncodingAsReflection operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -13,13 +13,13 @@ qsharp.summary: Implementation of `BlockEncodingToReflection`.
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementation of `BlockEncodingToReflection`.
 
 ```qsharp
-operation ApplyBlockEncodingAsReflection (blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding, auxiliary : Qubit[], system : Qubit[]) : Unit
+operation ApplyBlockEncodingAsReflection (blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding, auxiliary : Qubit[], system : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -30,16 +30,16 @@ operation ApplyBlockEncodingAsReflection (blockEncoding : Microsoft.Quantum.Simu
 
 
 
-### auxiliary : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### auxiliary : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 
 
 
-### system : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### system : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

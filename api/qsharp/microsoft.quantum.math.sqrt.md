@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.Sqrt
 title: Sqrt function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -13,7 +13,7 @@ qsharp.summary: Returns the square root of a specified number.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Returns the square root of a specified number.
@@ -25,13 +25,13 @@ function Sqrt (d : Double) : Double
 
 ## Input
 
-### d : [Double](xref:microsoft.quantum.lang-ref.double)
+### d : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 

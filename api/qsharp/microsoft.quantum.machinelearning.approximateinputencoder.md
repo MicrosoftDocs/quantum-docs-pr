@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ApproximateInputEncoder
 title: ApproximateInputEncoder function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Given a set of coefficients and a tolerance, returns a state preparationoperation that prepares each coefficient as the corresponding amplitudeof a computational basis state, up to the given tolerance.
@@ -28,12 +28,12 @@ function ApproximateInputEncoder (tolerance : Double, coefficients : Double[]) :
 
 ## Input
 
-### tolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### tolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The approximation tolerance to be used in encoding the givencoefficients into an input state.
 
 
-### coefficients : [Double](xref:microsoft.quantum.lang-ref.double)[]
+### coefficients : [Double](xref:microsoft.quantum.user-guide.language.types)[]
 
 The coefficients to be encoded into an input state.
 

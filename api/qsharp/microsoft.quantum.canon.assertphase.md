@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.AssertPhase
 title: AssertPhase operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -17,7 +17,7 @@ qsharp.summary: >+
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -32,21 +32,21 @@ operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double) : U
 
 ## Input
 
-### expected : [Double](xref:microsoft.quantum.lang-ref.double)
+### expected : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### qubit : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 
 
 
-### tolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### tolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

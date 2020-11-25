@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyOuterCDKMAdder
 title: ApplyOuterCDKMAdder operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -18,13 +18,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Reversible, in-place ripple-carry operation that is used in theinteger addition operation RippleCarryAdderCDKM below.Given two qubit registers `xs` and `ys` of the same length, the operationapplies a ripple carry sequence of CNOT and CCNOT gates with qubitsin `xs` and `ys` as the controls and qubits in `xs` as the targets.
 
 ```qsharp
-operation ApplyOuterCDKMAdder (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, ancilla : Qubit) : Unit
+operation ApplyOuterCDKMAdder (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, ancilla : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -40,13 +40,13 @@ First qubit register, containing controls and targets.
 Second qubit register, contributing to the controls.
 
 
-### ancilla : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### ancilla : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 The ancilla qubit used in RippleCarryAdderCDKM passed to this operation.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

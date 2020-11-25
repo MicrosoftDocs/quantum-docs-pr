@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyControlledOnBitString
 title: ApplyControlledOnBitString operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,29 +15,29 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies a unitary operation on the target register, controlled on a a state specified by a givenbit mask.
 
 ```qsharp
-operation ApplyControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit
+operation ApplyControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### bits : [Bool](xref:microsoft.quantum.lang-ref.bool)[]
+### bits : [Bool](xref:microsoft.quantum.user-guide.language.types)[]
 
 The bit string to control the given unitary operation on.
 
 
-### oracle : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### oracle : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj + Ctl
 
 The unitary operation to be applied on the target register.
 
 
-### controlRegister : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### controlRegister : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 A quantum register that controls application of `oracle`.
 
@@ -48,7 +48,7 @@ The target register to be passed to `oracle` as an input.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

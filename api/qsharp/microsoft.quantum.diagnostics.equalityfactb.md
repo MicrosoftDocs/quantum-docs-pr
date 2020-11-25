@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.EqualityFactB
 title: EqualityFactB function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -13,7 +13,7 @@ qsharp.summary: Asserts that a classical Bool variable has the expected value.
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Asserts that a classical Bool variable has the expected value.
@@ -25,21 +25,21 @@ function EqualityFactB (actual : Bool, expected : Bool, message : String) : Unit
 
 ## Input
 
-### actual : [Bool](xref:microsoft.quantum.lang-ref.bool)
+### actual : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 The variable to be checked.
 
 
-### expected : [Bool](xref:microsoft.quantum.lang-ref.bool)
+### expected : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 The expected value.
 
 
-### message : [String](xref:microsoft.quantum.lang-ref.string)
+### message : [String](xref:microsoft.quantum.user-guide.language.types)
 
 Failure message string to be used when the assertion is triggered.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

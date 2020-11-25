@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedHpqTermImpl
 title: _JWOptimizedHpqTermImpl operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
@@ -13,13 +13,13 @@ qsharp.summary: Implementation step of `JWOptimizedHpqTerm_`.
 
 Namespace: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Implementation step of `JWOptimizedHpqTerm_`.
 
 ```qsharp
-operation _JWOptimizedHpqTermImpl (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit
+operation _JWOptimizedHpqTermImpl (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -30,21 +30,21 @@ operation _JWOptimizedHpqTermImpl (term : Microsoft.Quantum.Simulation.Generator
 
 
 
-### stepSize : [Double](xref:microsoft.quantum.lang-ref.double)
+### stepSize : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### parityQubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### parityQubit : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 
 
 
-### qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### qubits : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

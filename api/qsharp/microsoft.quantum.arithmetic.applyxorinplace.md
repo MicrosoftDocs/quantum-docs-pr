@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyXorInPlace
 title: ApplyXorInPlace operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies a bitwise-XOR operation between a classical integer and aninteger represented by a register of qubits.
 
 ```qsharp
-operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -31,7 +31,7 @@ Applies `X` operations to qubits in a little-endian register based on1 bits in 
 
 ## Input
 
-### value : [Int](xref:microsoft.quantum.lang-ref.int)
+### value : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 An integer which is assumed to be non-negative.
 
@@ -42,5 +42,5 @@ A quantum register which is used to store `value` in little-endian encoding.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

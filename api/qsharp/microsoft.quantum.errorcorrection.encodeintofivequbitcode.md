@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.EncodeIntoFiveQubitCode
 title: EncodeIntoFiveQubitCode operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -13,7 +13,7 @@ qsharp.summary: Encodes into the ⟦5, 1, 3⟧ quantum code.
 
 Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Encodes into the ⟦5, 1, 3⟧ quantum code.
@@ -25,12 +25,12 @@ operation EncodeIntoFiveQubitCode (physRegister : Qubit[], auxQubits : Qubit[]) 
 
 ## Input
 
-### physRegister : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### physRegister : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 A qubit representing an unencoded state. This array `Qubit[]` is oflength 1.
 
 
-### auxQubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### auxQubits : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 A register of auxiliary qubits that will be used to represent theencoded state.
 

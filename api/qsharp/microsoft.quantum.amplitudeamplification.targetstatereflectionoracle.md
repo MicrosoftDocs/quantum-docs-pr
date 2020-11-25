@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.TargetStateReflectionOracle
 title: TargetStateReflectionOracle function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Constructs a `ReflectionOracle` about the target state uniquely marked by the flag qubit.The target state has a single qubit set to 1, and all others 0: $\ket{1}_f$.
@@ -28,7 +28,7 @@ function TargetStateReflectionOracle (idxFlagQubit : Int) : Microsoft.Quantum.Or
 
 ## Input
 
-### idxFlagQubit : [Int](xref:microsoft.quantum.lang-ref.int)
+### idxFlagQubit : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Index to flag qubit $f$ of oracle.
 

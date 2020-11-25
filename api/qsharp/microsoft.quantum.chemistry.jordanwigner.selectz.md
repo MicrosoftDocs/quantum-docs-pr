@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.SelectZ
 title: SelectZ operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
@@ -20,13 +20,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 A unitary $U$ that applies the Pauli $Z$ gate on a qubits $p$ conditionedon an index state $\ket{p}$. That is,$$\begin{align}U\ket{p}\ket{\psi} = \ket{p}Z\_p\ket{\psi}\end{align}$$
 
 ```qsharp
-operation SelectZ (indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit
+operation SelectZ (indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -37,11 +37,11 @@ operation SelectZ (indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, ta
 The state $\ket{p}$ of this register determines the qubit on which $Z$ is applied.
 
 
-### targetRegister : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### targetRegister : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 Register of qubits on which the Pauli operators are applied.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Where
 title: Where function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Given a predicate and an array, returns the indices of thatarray where the predicate is true.
@@ -27,7 +27,7 @@ function Where<'T> (predicate : ('T -> Bool), array : 'T[]) : Int[]
 
 ## Input
 
-### predicate : 'T -> [Bool](xref:microsoft.quantum.lang-ref.bool)
+### predicate : 'T -> [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 A function from `'T` to Boolean that is used to filter elements.
 
@@ -38,7 +38,7 @@ An array of elements over `'T`.
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 An array of indices where `predicate` is true.
 

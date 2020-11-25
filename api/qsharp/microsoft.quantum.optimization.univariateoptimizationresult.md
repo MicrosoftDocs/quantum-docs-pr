@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Optimization.UnivariateOptimizationResult
 title: UnivariateOptimizationResult user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Optimization
@@ -13,7 +13,7 @@ qsharp.summary: Represents the result of optimizing a univariate function.
 
 Namespace: [Microsoft.Quantum.Optimization](xref:Microsoft.Quantum.Optimization)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Represents the result of optimizing a univariate function.
@@ -27,9 +27,9 @@ newtype UnivariateOptimizationResult = (Coordinate : Double, Value : Double);
 
 ## Named Items
 
-### Coordinate : [Double](xref:microsoft.quantum.lang-ref.double)
+### Coordinate : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Input at which an optimum was found.
-### Value : [Double](xref:microsoft.quantum.lang-ref.double)
+### Value : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Value returned by the function at its optimum.

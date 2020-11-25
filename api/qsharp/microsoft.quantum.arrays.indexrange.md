@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.IndexRange
 title: IndexRange function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Given an array, returns a range over the indices of that array, suitablefor use in a for loop.
@@ -33,7 +33,7 @@ An array for which a range of indices should be returned.
 
 
 
-## Output : [Range](xref:microsoft.quantum.lang-ref.range)
+## Output : [Range](xref:microsoft.quantum.user-guide.language.types)
 
 A range over all indices of the array.
 

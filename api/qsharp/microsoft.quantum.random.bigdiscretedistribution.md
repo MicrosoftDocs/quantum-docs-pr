@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.BigDiscreteDistribution
 title: BigDiscreteDistribution user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Random
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Represents a univariate probability distribution over integers ofarbitrary size.
@@ -29,7 +29,7 @@ newtype BigDiscreteDistribution = (Sample : (Unit => BigInt));
 
 ## Named Items
 
-### Sample : [Unit](xref:microsoft.quantum.lang-ref.unit) => [BigInt](xref:microsoft.quantum.lang-ref.bigint) 
+### Sample : [Unit](xref:microsoft.quantum.user-guide.language.types) => [BigInt](xref:microsoft.quantum.user-guide.language.types) 
 
 
 

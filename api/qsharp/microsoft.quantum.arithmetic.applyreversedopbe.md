@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpBE
 title: ApplyReversedOpBE operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies an operation that takes big-endian input to a register encodingan unsigned integer using little-endian format.
@@ -27,7 +27,7 @@ operation ApplyReversedOpBE (op : (Microsoft.Quantum.Arithmetic.BigEndian => Uni
 
 ## Input
 
-### op : [BigEndian](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### op : [BigEndian](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 Operation that acts on a big-endian register.
 
@@ -38,7 +38,7 @@ A little-endian register to be transformed.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

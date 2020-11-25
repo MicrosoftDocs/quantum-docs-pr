@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.MAJ
 title: MAJ operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -13,13 +13,13 @@ qsharp.summary: This applies the in-place majority operation to 3 qubits.
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 This applies the in-place majority operation to 3 qubits.
 
 ```qsharp
-operation MAJ (input0 : Qubit, input1 : Qubit, target : Qubit) : Unit
+operation MAJ (input0 : Qubit, input1 : Qubit, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -29,21 +29,21 @@ If we denote the state of the target qubit as $\ket{z}$, and input states ofthe
 
 ## Input
 
-### input0 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### input0 : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 The first input qubit.
 
 
-### input1 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### input1 : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 The second input qubit.
 
 
-### target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### target : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 A qubit onto which the majority function will be applied.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

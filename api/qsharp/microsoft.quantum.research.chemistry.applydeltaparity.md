@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.ApplyDeltaParity
 title: ApplyDeltaParity operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
@@ -16,40 +16,40 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Computes difference in parity between a previous PQRS... termsand the next PQRS... term. This difference is computed on a auxiliaryqubit.
 
 ```qsharp
-operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit
+operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### prevFermionicTerm : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### prevFermionicTerm : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 List of indices to previous PQRS... terms.
 
 
-### nextFermionicTerm : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### nextFermionicTerm : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 List of indices to next PQRS... terms.
 
 
-### aux : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### aux : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 Auxiliary qubit onto which parity computation results are stored.
 
 
-### qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### qubits : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 Qubit acted on by all PQRS... terms.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

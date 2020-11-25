@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.ApplyPauliLCUUnitary
 title: ApplyPauliLCUUnitary operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -13,13 +13,13 @@ qsharp.summary: Used in implementation of `PauliBlockEncoding`
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Used in implementation of `PauliBlockEncoding`
 
 ```qsharp
-operation ApplyPauliLCUUnitary (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, qubits : Qubit[]) : Unit
+operation ApplyPauliLCUUnitary (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -30,13 +30,13 @@ operation ApplyPauliLCUUnitary (generatorIndex : Microsoft.Quantum.Simulation.Ge
 
 
 
-### qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### qubits : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

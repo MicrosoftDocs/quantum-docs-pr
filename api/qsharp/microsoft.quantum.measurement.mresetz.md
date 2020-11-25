@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Measurement.MResetZ
 title: MResetZ operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Measurement
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Measurement](xref:Microsoft.Quantum.Measurement)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Measures a single qubit in the Z basis,and resets it to a fixed initial statefollowing the measurement.
@@ -32,7 +32,7 @@ Performs a single-qubit measurement in the $Z$-basis,and ensures that the qubit
 
 ## Input
 
-### target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### target : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 A single qubit to be measured.
 

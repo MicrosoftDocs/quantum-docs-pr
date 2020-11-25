@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseB
 title: ApplyIfElseB operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies one of two operations, depending on the value of a classicalbit.
@@ -31,12 +31,12 @@ Given a bit `bit`, applies the operation `trueOp` with `trueInput` asits input 
 
 ## Input
 
-### bit : [Bool](xref:microsoft.quantum.lang-ref.bool)
+### bit : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 The boolean value used to determine whether `trueOp` or `falseOp` isapplied.
 
 
-### trueOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### trueOp : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 The operation to be applied when `bit` is `true`.
 
@@ -46,7 +46,7 @@ The operation to be applied when `bit` is `true`.
 The input to be provided to `trueOp` when `bit` is `true`.
 
 
-### falseOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### falseOp : 'U => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 The operation to be applied when `bit` is `false`.
 
@@ -57,7 +57,7 @@ The input to be provided to `falseOp` when `bit` is `false`.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

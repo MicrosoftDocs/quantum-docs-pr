@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.ComplexPolar
 title: ComplexPolar user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Math
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Represents a complex number in polar form.The polar representation of a complex number is $c=r e^{i t}$.
@@ -30,9 +30,9 @@ newtype ComplexPolar = (Magnitude : Double, Argument : Double);
 
 ## Named Items
 
-### Magnitude : [Double](xref:microsoft.quantum.lang-ref.double)
+### Magnitude : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The absolute value $r \ge 0$ of $c$.
-### Argument : [Double](xref:microsoft.quantum.lang-ref.double)
+### Argument : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The phase $t \in \mathbb R$ of $c$.

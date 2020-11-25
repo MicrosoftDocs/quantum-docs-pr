@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.RFrac
 title: RFrac operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -25,40 +25,40 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Applies a rotation about the given Pauli axis by an angle specifiedas a dyadic fraction.\begin{align}R_{\mu}(n, k) \mathrel{:=}e^{i \pi n \sigma_{\mu} / 2^k},\end{align}where $\mu \in \{I, X, Y, Z\}$.> [!WARNING]> This operation uses the **opposite** sign convention from> @"microsoft.quantum.intrinsic.r".
 
 ```qsharp
-operation RFrac (pauli : Pauli, numerator : Int, power : Int, qubit : Qubit) : Unit
+operation RFrac (pauli : Pauli, numerator : Int, power : Int, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### pauli : [Pauli](xref:microsoft.quantum.lang-ref.pauli)
+### pauli : [Pauli](xref:microsoft.quantum.user-guide.language.types)
 
 Pauli operator to be exponentiated to form the rotation.
 
 
-### numerator : [Int](xref:microsoft.quantum.lang-ref.int)
+### numerator : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Numerator in the dyadic fraction representation of the angleby which the qubit is to be rotated.
 
 
-### power : [Int](xref:microsoft.quantum.lang-ref.int)
+### power : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Power of two specifying the denominator of the angle by whichthe qubit is to be rotated.
 
 
-### qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### qubit : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 Qubit to which the gate should be applied.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ModularAddProductPhaseLE
 title: ModularAddProductPhaseLE operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -21,7 +21,7 @@ qsharp.summary: >+
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -32,18 +32,18 @@ Package: [](https://nuget.org/packages/)
 
 
 ```qsharp
-operation ModularAddProductPhaseLE (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit
+operation ModularAddProductPhaseLE (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### constMultiplier : [Int](xref:microsoft.quantum.lang-ref.int)
+### constMultiplier : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### modulus : [Int](xref:microsoft.quantum.lang-ref.int)
+### modulus : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
@@ -59,5 +59,5 @@ operation ModularAddProductPhaseLE (constMultiplier : Int, modulus : Int, multip
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

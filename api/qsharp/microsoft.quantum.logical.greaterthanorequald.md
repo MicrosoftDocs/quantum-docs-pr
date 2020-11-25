@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Logical.GreaterThanOrEqualD
 title: GreaterThanOrEqualD function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns true if and only if a number is greater than or equal to anothernumber.
@@ -27,18 +27,18 @@ function GreaterThanOrEqualD (a : Double, b : Double) : Bool
 
 ## Input
 
-### a : [Double](xref:microsoft.quantum.lang-ref.double)
+### a : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The first value to be compared.
 
 
-### b : [Double](xref:microsoft.quantum.lang-ref.double)
+### b : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The second value to be compared.
 
 
 
-## Output : [Bool](xref:microsoft.quantum.lang-ref.bool)
+## Output : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 `true` if and only if `a` is greater than or is equal to `b`.
 

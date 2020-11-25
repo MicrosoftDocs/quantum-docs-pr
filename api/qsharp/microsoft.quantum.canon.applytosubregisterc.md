@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToSubregisterC
 title: ApplyToSubregisterC operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -16,35 +16,35 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies an operation to a subregister of a register, with qubitsspecified by an array of their indices.The modifier `C` indicates that the operation is controllable.
 
 ```qsharp
-operation ApplyToSubregisterC (op : (Qubit[] => Unit is Ctl), idxs : Int[], target : Qubit[]) : Unit
+operation ApplyToSubregisterC (op : (Qubit[] => Unit is Ctl), idxs : Int[], target : Qubit[]) : Unit is Ctl
 ```
 
 
 ## Input
 
-### op : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### op : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Ctl
 
 Operation to apply to subregister.
 
 
-### idxs : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### idxs : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 Array of indices, indicating to which qubits the operation will be applied.
 
 
-### target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### target : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 Register on which the operation acts.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

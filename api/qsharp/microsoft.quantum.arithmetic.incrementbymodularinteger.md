@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IncrementByModularInteger
 title: IncrementByModularInteger operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -13,13 +13,13 @@ qsharp.summary: Performs a modular increment of a qubit register by an integer c
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Performs a modular increment of a qubit register by an integer constant.
 
 ```qsharp
-operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -29,12 +29,12 @@ Let us denote `increment` by $a$, `modulus` by $N$ and integer encoded in `targe
 
 ## Input
 
-### increment : [Int](xref:microsoft.quantum.lang-ref.int)
+### increment : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Integer increment $a$ to be added to $y$.
 
 
-### modulus : [Int](xref:microsoft.quantum.lang-ref.int)
+### modulus : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Integer $N$ that mods $y + a$.
 
@@ -45,7 +45,7 @@ Integer $y$ in `LittleEndian` format that `increment` $a$ is added to.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

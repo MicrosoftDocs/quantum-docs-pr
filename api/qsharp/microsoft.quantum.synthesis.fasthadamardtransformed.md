@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
 title: FastHadamardTransformed function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Computes Hadamard transform of a Boolean function in {-1,1} encodingusing Yates's method
@@ -27,12 +27,12 @@ function FastHadamardTransformed (func : Int[]) : Int[]
 
 ## Input
 
-### func : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### func : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 Truth table in {-1,1} encoding
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 Spectral coefficients of the function

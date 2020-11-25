@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.DecomposedOn
 title: DecomposedOn function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -13,7 +13,7 @@ qsharp.summary: Decomposes a permutation on a variable
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Decomposes a permutation on a variable
@@ -29,16 +29,16 @@ Given a permutation $\pi$ (`perm`) and an index $i$ (`index`), this methodretur
 
 ## Input
 
-### perm : [Int](xref:microsoft.quantum.lang-ref.int)[]
+### perm : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 
 
 
-### index : [Int](xref:microsoft.quantum.lang-ref.int)
+### index : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : (([Int](xref:microsoft.quantum.lang-ref.int)[],[Int](xref:microsoft.quantum.lang-ref.int)[]),[Int](xref:microsoft.quantum.lang-ref.int)[])
+## Output : (([Int](xref:microsoft.quantum.user-guide.language.types)[],[Int](xref:microsoft.quantum.user-guide.language.types)[]),[Int](xref:microsoft.quantum.user-guide.language.types)[])
 

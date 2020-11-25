@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.IntegerBits
 title: IntegerBits function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -13,7 +13,7 @@ qsharp.summary: Returns all positions in which bits of an integer are set.
 
 Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns all positions in which bits of an integer are set.
@@ -25,17 +25,17 @@ function IntegerBits (value : Int, length : Int) : Int[]
 
 ## Input
 
-### value : [Int](xref:microsoft.quantum.lang-ref.int)
+### value : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 A nonnegative number.
 
 
-### length : [Int](xref:microsoft.quantum.lang-ref.int)
+### length : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of bits in the binary expansion of `value`.
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)[]
 
 An array containing all bit positions (starting from 0) that are 1 inthe binary expansion of `value` considering all bits up to position`length - 1`.  All positions are ordered in the array by position in anincreasing order.

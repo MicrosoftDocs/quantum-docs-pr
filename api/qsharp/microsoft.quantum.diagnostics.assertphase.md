@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertPhase
 title: AssertPhase operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -13,7 +13,7 @@ qsharp.summary: Asserts that the phase of an equal superposition state has the e
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Asserts that the phase of an equal superposition state has the expected value.
@@ -29,21 +29,21 @@ This operation asserts that the phase $\phi$ of a quantum statethat may be expr
 
 ## Input
 
-### expected : [Double](xref:microsoft.quantum.lang-ref.double)
+### expected : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The expected value of $\phi \in (-\pi,\pi]$.
 
 
-### qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### qubit : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 The qubit that stores the expected state.
 
 
-### tolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### tolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Absolute tolerance on the difference between actual and expected.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

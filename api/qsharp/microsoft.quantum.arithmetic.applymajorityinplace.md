@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyMajorityInPlace
 title: ApplyMajorityInPlace operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies the three-qubit majority operation in-place on a register ofqubits.
 
 ```qsharp
-operation ApplyMajorityInPlace (output : Qubit, input : Qubit[]) : Unit
+operation ApplyMajorityInPlace (output : Qubit, input : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -31,16 +31,16 @@ This operation computes the majority function in-place on 3 qubits.If we denot
 
 ## Input
 
-### output : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### output : [Qubit](xref:microsoft.quantum.concepts.the-qubit)
 
 First input qubit. Note that the output is computed in-placeand stored in this qubit.
 
 
-### input : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### input : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 Second and third input qubits.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

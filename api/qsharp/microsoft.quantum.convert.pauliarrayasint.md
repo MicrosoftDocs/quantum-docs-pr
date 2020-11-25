@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Convert.PauliArrayAsInt
 title: PauliArrayAsInt function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Encodes a multi-qubit Pauli operator represented as an array ofsingle-qubit Pauli operators into an integer.
@@ -27,13 +27,13 @@ function PauliArrayAsInt (paulis : Pauli[]) : Int
 
 ## Input
 
-### paulis : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]
+### paulis : [Pauli](xref:microsoft.quantum.user-guide.language.types)[]
 
 An array of at most 31 single-qubit Pauli operators.
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 An integer uniquely identifying `paulis`, as described below.
 

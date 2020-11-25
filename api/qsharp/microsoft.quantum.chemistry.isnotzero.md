@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.IsNotZero
 title: IsNotZero function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry
@@ -13,7 +13,7 @@ qsharp.summary: Checks whether a `Double` number is not approximately zero.
 
 Namespace: [Microsoft.Quantum.Chemistry](xref:Microsoft.Quantum.Chemistry)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Checks whether a `Double` number is not approximately zero.
@@ -25,12 +25,12 @@ function IsNotZero (number : Double) : Bool
 
 ## Input
 
-### number : [Double](xref:microsoft.quantum.lang-ref.double)
+### number : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 Number to be checked
 
 
 
-## Output : [Bool](xref:microsoft.quantum.lang-ref.bool)
+## Output : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 Returns true if `number` has an absolute value greater than `1e-15`.

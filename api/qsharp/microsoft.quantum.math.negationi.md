@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.NegationI
 title: NegationI function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -13,7 +13,7 @@ qsharp.summary: Returns the unary negation of an input.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Returns the unary negation of an input.
@@ -25,12 +25,12 @@ function NegationI (input : Int) : Int
 
 ## Input
 
-### input : [Int](xref:microsoft.quantum.lang-ref.int)
+### input : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 A value whose negation is to be returned.
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The unary negation of `input`.

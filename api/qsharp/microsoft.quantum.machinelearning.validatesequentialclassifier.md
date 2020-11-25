@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ValidateSequentialClassifier
 title: ValidateSequentialClassifier operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Validates a given sequential classifier against a given set ofpre-labeled samples.
@@ -37,12 +37,12 @@ The sequential model to be validated.
 The samples to be used to validate the given model.
 
 
-### tolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### tolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The approximation tolerance to use in encoding each sample as an inputto the sequential classifier.
 
 
-### nMeasurements : [Int](xref:microsoft.quantum.lang-ref.int)
+### nMeasurements : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of measurements to use in classifying each sample.
 

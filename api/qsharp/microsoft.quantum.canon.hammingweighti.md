@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.HammingWeightI
 title: HammingWeightI function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Computes the Hamming weight of an integer, i.e., the number of 1s in itsbinary expansion.
@@ -27,12 +27,12 @@ function HammingWeightI (number : Int) : Int
 
 ## Input
 
-### number : [Int](xref:microsoft.quantum.lang-ref.int)
+### number : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Number to compute Hamming weight
 
 
 
-## Output : [Int](xref:microsoft.quantum.lang-ref.int)
+## Output : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 Hamming weight of the number

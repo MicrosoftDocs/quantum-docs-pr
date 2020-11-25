@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Prefix
 title: Prefix function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -13,7 +13,7 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
@@ -25,7 +25,7 @@ function Prefix<'T> (to : Int, array : 'T[]) : 'T[]
 
 ## Input
 
-### to : [Int](xref:microsoft.quantum.lang-ref.int)
+### to : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 

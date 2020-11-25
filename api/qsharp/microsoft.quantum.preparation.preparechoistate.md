@@ -1,13 +1,13 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareChoiState
 title: PrepareChoiState operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareChoiState
 qsharp.summary: >-
-  Prepares the Choi–Jamiłkowski state for a given operation onto given reference
+  Prepares the Choi–Jamiołkowski state for a given operation onto given reference
   and target registers.
 ---
 
@@ -15,10 +15,10 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Prepares the Choi–Jamiłkowski state for a given operation onto given referenceand target registers.
+Prepares the Choi–Jamiołkowski state for a given operation onto given referenceand target registers.
 
 ```qsharp
 operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[]) : Unit
@@ -27,23 +27,23 @@ operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target 
 
 ## Input
 
-### op : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### op : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
-Operation $\Lambda$ whose Choi–Jamiłkowski state $J(\Lambda) / 2^N$is to be prepared, where $N$ is the number of qubits on which`op` acts.
+Operation $\Lambda$ whose Choi–Jamiołkowski state $J(\Lambda) / 2^N$is to be prepared, where $N$ is the number of qubits on which`op` acts.
 
 
-### reference : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### reference : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 A register of qubits starting in the $\ket{00\cdots 0}$ stateto be used as a reference for the action of `op`.
 
 
-### target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### target : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 A register of qubits initially in the $\ket{00\cdots 0}$ stateon which `op` is to be applied.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

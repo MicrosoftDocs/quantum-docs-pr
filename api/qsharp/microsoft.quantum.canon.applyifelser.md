@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseR
 title: ApplyIfElseR operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies one of two operations, depending on the value of a classicalresult.
@@ -36,7 +36,7 @@ Given a result `result`, applies the operation `zeroOp` with `zeroInput` asits 
 The measurement result used to determine if `zeroOp` or `oneOp` isapplied.
 
 
-### zeroOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### zeroOp : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 The operation to be applied when `result == Zero`.
 
@@ -46,7 +46,7 @@ The operation to be applied when `result == Zero`.
 The input to be provided to `zeroOp` when `result == Zero`.
 
 
-### oneOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### oneOp : 'U => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 The operation to be applied when `result == One`.
 
@@ -57,7 +57,7 @@ The input to be provided to `oneOp` when `result == One`.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

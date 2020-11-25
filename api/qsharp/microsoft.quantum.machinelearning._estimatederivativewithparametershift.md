@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._EstimateDerivativeWithParameterShift
 title: _EstimateDerivativeWithParameterShift operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -13,7 +13,7 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 
@@ -35,21 +35,21 @@ operation _EstimateDerivativeWithParameterShift (inputEncoder : Microsoft.Quantu
 
 
 
-### parameters : ([Double](xref:microsoft.quantum.lang-ref.double)[],[Double](xref:microsoft.quantum.lang-ref.double)[])
+### parameters : ([Double](xref:microsoft.quantum.user-guide.language.types)[],[Double](xref:microsoft.quantum.user-guide.language.types)[])
 
 
 
 
-### nQubits : [Int](xref:microsoft.quantum.lang-ref.int)
+### nQubits : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### nMeasurements : [Int](xref:microsoft.quantum.lang-ref.int)
+### nMeasurements : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.EstimateTermExpectation
 title: EstimateTermExpectation operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
@@ -13,7 +13,7 @@ qsharp.summary: Computes the energy associated to a given Jordan-Wigner Hamilton
 
 Namespace: [Microsoft.Quantum.Chemistry.JordanWigner.VQE](xref:Microsoft.Quantum.Chemistry.JordanWigner.VQE)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Computes the energy associated to a given Jordan-Wigner Hamiltonian term
@@ -29,32 +29,32 @@ This operation estimates the expectation value associated to each measurement op
 
 ## Input
 
-### inputStateUnitary : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### inputStateUnitary : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[] => [Unit](xref:microsoft.quantum.user-guide.language.types)  is Adj
 
 The unitary used for state preparation.
 
 
-### ops : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[][]
+### ops : [Pauli](xref:microsoft.quantum.user-guide.language.types)[][]
 
 The measurement operators of the Jordan-Wigner term.
 
 
-### coeffs : [Double](xref:microsoft.quantum.lang-ref.double)[]
+### coeffs : [Double](xref:microsoft.quantum.user-guide.language.types)[]
 
 The coefficients of the Jordan-Wigner term.
 
 
-### nQubits : [Int](xref:microsoft.quantum.lang-ref.int)
+### nQubits : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of qubits required to simulate the molecular system.
 
 
-### nSamples : [Int](xref:microsoft.quantum.lang-ref.int)
+### nSamples : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 The number of samples to use for the estimation of the term expectation.
 
 
 
-## Output : [Double](xref:microsoft.quantum.lang-ref.double)
+## Output : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 The energy associated to the Jordan-Wigner term.

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.XOR
 title: XOR function
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -21,7 +21,7 @@ qsharp.summary: >+
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -38,16 +38,16 @@ function XOR (bit1 : Bool, bit2 : Bool) : Bool
 
 ## Input
 
-### bit1 : [Bool](xref:microsoft.quantum.lang-ref.bool)
+### bit1 : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
-### bit2 : [Bool](xref:microsoft.quantum.lang-ref.bool)
+### bit2 : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 
 
 
 
-## Output : [Bool](xref:microsoft.quantum.lang-ref.bool)
+## Output : [Bool](xref:microsoft.quantum.user-guide.language.types)
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximatelyApplyDiagonalUnitary
 title: ApproximatelyApplyDiagonalUnitary operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -16,13 +16,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies an array of complex phases to numeric basis states of a registerof qubits, truncating small rotation angles according to a giventolerance.
 
 ```qsharp
-operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -32,12 +32,12 @@ This operation implements a diagonal unitary that applies a complex phase$e^{i 
 
 ## Input
 
-### tolerance : [Double](xref:microsoft.quantum.lang-ref.double)
+### tolerance : [Double](xref:microsoft.quantum.user-guide.language.types)
 
 A tolerance below which small coefficients are truncated.
 
 
-### coefficients : [Double](xref:microsoft.quantum.lang-ref.double)[]
+### coefficients : [Double](xref:microsoft.quantum.user-guide.language.types)[]
 
 Array of up to $2^n$ coefficients $\theta_j$. The $j$th coefficientindexes the number state $\ket{j}$ encoded in little-endian format.
 
@@ -48,7 +48,7 @@ $n$-qubit control register that encodes number states $\ket{j}$ inlittle-endian
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

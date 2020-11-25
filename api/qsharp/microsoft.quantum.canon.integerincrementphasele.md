@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.IntegerIncrementPhaseLE
 title: IntegerIncrementPhaseLE operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -21,7 +21,7 @@ qsharp.summary: >+
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -32,13 +32,13 @@ Package: [](https://nuget.org/packages/)
 
 
 ```qsharp
-operation IntegerIncrementPhaseLE (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit
+operation IntegerIncrementPhaseLE (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit is Adj + Ctl
 ```
 
 
 ## Input
 
-### increment : [Int](xref:microsoft.quantum.lang-ref.int)
+### increment : [Int](xref:microsoft.quantum.user-guide.language.types)
 
 
 
@@ -49,5 +49,5 @@ operation IntegerIncrementPhaseLE (increment : Int, target : Microsoft.Quantum.A
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

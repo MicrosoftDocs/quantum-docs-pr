@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIf
 title: ApplyIf operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -13,7 +13,7 @@ qsharp.summary: Applies an operation conditioned on a classical bit.
 
 Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Applies an operation conditioned on a classical bit.
@@ -29,12 +29,12 @@ Given an operation `op` and a bit value `bit`, applies `op` to the `target`if `
 
 ## Input
 
-### op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### op : 'T => [Unit](xref:microsoft.quantum.user-guide.language.types) 
 
 An operation to be conditionally applied.
 
 
-### bit : [Bool](xref:microsoft.quantum.lang-ref.bool)
+### bit : [Bool](xref:microsoft.quantum.user-guide.language.types)
 
 a boolean that controls whether op is applied or not.
 
@@ -45,7 +45,7 @@ The input to which the operation is applied.
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 
 
 

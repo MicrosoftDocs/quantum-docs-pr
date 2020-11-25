@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.BigFraction
 title: BigFraction user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Math
@@ -16,7 +16,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Represents a rational number of the form `p/q`. Integer `p` isthe first element of the tuple and `q` is the second elementof the tuple.
@@ -30,9 +30,9 @@ newtype BigFraction = (Numerator : BigInt, Denominator : BigInt);
 
 ## Named Items
 
-### Numerator : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
+### Numerator : [BigInt](xref:microsoft.quantum.user-guide.language.types)
 
 Numerator of the fraction.
-### Denominator : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
+### Denominator : [BigInt](xref:microsoft.quantum.user-guide.language.types)
 
 Denominator of the fraction/

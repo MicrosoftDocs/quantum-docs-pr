@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Characterization.QuantumPhaseEstimation
 title: QuantumPhaseEstimation operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
@@ -15,13 +15,13 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Characterization](xref:Microsoft.Quantum.Characterization)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Performs the quantum phase estimation algorithm for a given oracle `U` and `targetState`,reading the phase into a big-endian quantum register.
 
 ```qsharp
-operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian) : Unit
+operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -32,7 +32,7 @@ operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOra
 An operation implementing $U^m$ for given integer powers m.
 
 
-### targetState : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### targetState : [Qubit](xref:microsoft.quantum.concepts.the-qubit)[]
 
 A quantum register representing the state $\ket{\phi}$ acted on by $U$. If $\ket{\phi}$ is aneigenstate of $U$, $U\ket{\phi} = e^{i\phi} \ket{\phi}$ for $\phi \in [0, 2\pi)$ an unknown phase.
 
@@ -43,5 +43,5 @@ A big-endian representation integer register that can be usedto control the pro
 
 
 
-## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
+## Output : [Unit](xref:microsoft.quantum.user-guide.language.types)
 

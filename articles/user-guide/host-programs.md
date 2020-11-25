@@ -158,7 +158,7 @@ Now, a call of `dotnet run` from the command prompt leads to `MeasureSuperpositi
 So, you will see either `One` or `Zero` printed. 
 
 Note that it doesn't matter if you have more callables defined below it, only `MeasureSuperposition` will be run.
-Additionally, it's no problem if your callable includes [documentation comments](xref:microsoft.quantum.qsharp.comments) before its declaration, the `@EntryPoint()` attribute can be simply placed above them.
+Additionally, it's no problem if your callable includes [documentation comments](xref:microsoft.quantum.qsharp.comments#documentation-comments) before its declaration, the `@EntryPoint()` attribute can be simply placed above them.
 
 ### Callable arguments
 

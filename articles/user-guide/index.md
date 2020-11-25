@@ -15,7 +15,7 @@ Welcome to the Q# User Guide!
 
 In the different topics of this guide, we introduce some of the basics for developing quantum programs using Q#.
 
-We refer to the [Q# GitHub repository](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language) for a full specification and documentation of the Q# quantum programming language. 
+We refer to the [Q# language guide](xref:microsoft.quantum.qsharp.index) for a full specification and documentation of the Q# quantum programming language. 
 
 ## User Guide Contents
 

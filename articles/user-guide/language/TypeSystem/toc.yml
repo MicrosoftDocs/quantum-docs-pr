@@ -4,6 +4,8 @@
   href: quantumdatatypes.md
 - name: Immutability
   href: immutability.md
+- name: Operations and functions
+  href: operationsandfunctions.md
 - name: Singleton tuple equivalence
   href: singletontupleequivalence.md
 - name: Subtyping and variance

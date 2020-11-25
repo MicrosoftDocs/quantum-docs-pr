@@ -4,6 +4,8 @@
   href: programs.md
 - name: Ways to run a Q# program
   href: host-programs.md
+- name: Testing and debugging
+  href: testing-debugging.md
 - name: Simulators and resource estimators
   href: machines/toc.yml
 - name: Q# libraries

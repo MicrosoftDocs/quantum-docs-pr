@@ -48,7 +48,7 @@ Hence, you can write an operation of the following form:
         }
     }
 ```
-You have defined an operation, `MeasureSuperposition`, which takes no inputs and returns a value of type [Result](xref:microsoft.quantum.qsharp.typesystem-index).
+You have defined an operation, `MeasureSuperposition`, which takes no inputs and returns a value of type [Result](xref:microsoft.quantum.qsharp.typesystem-index#available-types).
 
 In addition to operations, Q# also allows to encapsulate deterministic computations into functions. Aside from the determinism guarantee that implies that computations that act on qubits need to be encapsulated into operations rather than functions, there is little difference between operations and function. We refer to them collectively as *callables*.
 

@@ -17,9 +17,9 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
-## Version 0.14.2011120134 
+## Version 0.14.2011120240
 
-*Release date: November 24th, 2020*
+*Release date: November 25th, 2020*
 
 - Improved compiler performance due to faster reference loading.
 - Added an [ANTLR grammar for Q#](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language/5_Grammar) to the Q# language specification.

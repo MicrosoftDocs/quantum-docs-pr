@@ -10,7 +10,7 @@ uid: microsoft.quantum.guide.programs
 
 # Q# Quantum Programming Language
 
-Everything you need to know about the Q# programming language is detailed on the [Q# GitHub repository](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language). 
+Everything you need to know about the Q# programming language is detailed in the [Q# language guide](xref:microsoft.quantum.qsharp.index). 
 Like anything else, our [language design process](https://github.com/microsoft/qsharp-language#q-language-and-core-libraries-design) is open source and we welcome contributions.
 For more background about the foundations and motivation behind Q#, see [Why do we need Q#?](https://devblogs.microsoft.com/qsharp/why-do-we-need-q/).  
 Q# is shipped as part of the Quantum Development Kit (QDK) For a quick overview, check out [What is the QDK?](xref:microsoft.quantum.overview.q-sharp). 
@@ -53,7 +53,7 @@ operation MeasureOneQubit() : Result {
 }
 ```
 
-Our [Quantum Katas](https://github.com/microsoft/QuantumKatas#introduction) give a good introduction on [Quantum Computing Concepts](https://github.com/microsoft/QuantumKatas#quantum-computing-concepts-qubits-and-gates) such as common quantum operations and how to manipulate qubits. 
+Our [Quantum Katas](https://.com/microsoft/QuantumKatas#introduction) give a good introduction on [Quantum Computing Concepts](https://github.com/microsoft/QuantumKatas#quantum-computing-concepts-qubits-and-gates) such as common quantum operations and how to manipulate qubits. 
 More examples can also be found in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude).
 
 

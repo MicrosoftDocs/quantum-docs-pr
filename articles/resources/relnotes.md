@@ -281,7 +281,7 @@ The changes are summarized here as well as instructions for upgrading your exist
 This release adds new Q# language syntax:
 * Add named items for [user-defined types]microsoft.quantum.qsharp.typedeclarations#type-declarations).  
 * User-defined type constructors can now be used as functions.
-* Add support for [copy-and-update](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions) and [apply-and-reassign](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignmentsevaluateandreassignstatements) in user-defined types.
+* Add support for [copy-and-update](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions) and [apply-and-reassign](xref:microsoft.quantum.qsharp.evaluateandreassignstatements) in user-defined types.
 * Fixup-block for [repeat-until-success](xref:microsoft.quantum.qsharp.conditionalloopsrepeatstatement) loops is now optional.
 * We now support while loops in functions (not in operations).
 

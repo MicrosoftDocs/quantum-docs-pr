@@ -10,5 +10,3 @@
   href: subtypingandvariance.md
 - name: Type parameterizations
   href: typeparameterizations.md
-- name: Type inference
-  href: typeinference.md

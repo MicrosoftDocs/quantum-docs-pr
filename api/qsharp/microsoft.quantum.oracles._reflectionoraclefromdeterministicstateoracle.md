@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Oracles._ReflectionOracleFromDeterministicStateOracle
 title: _ReflectionOracleFromDeterministicStateOracle operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Oracles
@@ -13,13 +13,13 @@ qsharp.summary: Implementation of <xref:microsoft.quantum.canon.reflectionoracle
 
 Namespace: [Microsoft.Quantum.Oracles](xref:Microsoft.Quantum.Oracles)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementation of <xref:microsoft.quantum.canon.reflectionoraclefromdeterministicstateoracle>.
 
 ```qsharp
-operation _ReflectionOracleFromDeterministicStateOracle (phase : Double, oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, systemRegister : Qubit[]) : Unit
+operation _ReflectionOracleFromDeterministicStateOracle (phase : Double, oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, systemRegister : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

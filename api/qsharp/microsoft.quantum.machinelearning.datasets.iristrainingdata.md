@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.Datasets.IrisTrainingData
 title: IrisTrainingData operation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning.Datasets
@@ -13,7 +13,7 @@ qsharp.summary: ''
 
 Namespace: [Microsoft.Quantum.MachineLearning.Datasets](xref:Microsoft.Quantum.MachineLearning.Datasets)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 

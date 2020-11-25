@@ -1,4 +1,4 @@
-- name: Q# language
+- name: Overview
   href: index.md
 - name: Program structure
   href: programstructure/toc.yml

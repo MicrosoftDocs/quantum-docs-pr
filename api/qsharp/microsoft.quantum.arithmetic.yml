@@ -187,6 +187,5 @@ operations:
     `carryIn` and two summand bits encoded in `summand1` and `summand2`, computes
     the bitwise xor of `carryIn`, `summand1` and `summand2` in the qubit `summand2`.',
   uid: Microsoft.Quantum.Arithmetic.Sum}
-summary: This namespace contains functions and operations used for coherently computing
-  arithmetic.
+summary: ''
 uid: Microsoft.Quantum.Arithmetic

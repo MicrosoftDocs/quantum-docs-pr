@@ -208,6 +208,7 @@
   - {name: AnyOutsideToleranceCP, uid: Microsoft.Quantum.Canon.AnyOutsideToleranceCP}
   - {name: AnyOutsideToleranceD, uid: Microsoft.Quantum.Canon.AnyOutsideToleranceD}
   - {name: ApplyAnd, uid: Microsoft.Quantum.Canon.ApplyAnd}
+  - {name: ApplyAndChain, uid: Microsoft.Quantum.Canon.ApplyAndChain}
   - {name: ApplyBound, uid: Microsoft.Quantum.Canon.ApplyBound}
   - {name: ApplyBoundA, uid: Microsoft.Quantum.Canon.ApplyBoundA}
   - {name: ApplyBoundC, uid: Microsoft.Quantum.Canon.ApplyBoundC}
@@ -382,12 +383,12 @@
   - {name: InPlaceXorLE, uid: Microsoft.Quantum.Canon.InPlaceXorLE}
   - {name: IntegerIncrementLE, uid: Microsoft.Quantum.Canon.IntegerIncrementLE}
   - {name: IntegerIncrementPhaseLE, uid: Microsoft.Quantum.Canon.IntegerIncrementPhaseLE}
+  - {name: IsRangeEmpty, uid: Microsoft.Quantum.Canon.IsRangeEmpty}
   - {name: IsResultOne, uid: Microsoft.Quantum.Canon.IsResultOne}
   - {name: IsResultZero, uid: Microsoft.Quantum.Canon.IsResultZero}
   - {name: IterateThroughCartesianPower, uid: Microsoft.Quantum.Canon.IterateThroughCartesianPower}
   - {name: IterateThroughCartesianProduct, uid: Microsoft.Quantum.Canon.IterateThroughCartesianProduct}
   - {name: LittleEndianToBigEndian, uid: Microsoft.Quantum.Canon.LittleEndianToBigEndian}
-  - {name: LogicalANDMeasAndFix, uid: Microsoft.Quantum.Canon.LogicalANDMeasAndFix}
   - {name: ModularAddProductLE, uid: Microsoft.Quantum.Canon.ModularAddProductLE}
   - {name: ModularAddProductPhaseLE, uid: Microsoft.Quantum.Canon.ModularAddProductPhaseLE}
   - {name: ModularIncrementLE, uid: Microsoft.Quantum.Canon.ModularIncrementLE}
@@ -396,6 +397,7 @@
   - {name: MultiplexOperations, uid: Microsoft.Quantum.Canon.MultiplexOperations}
   - {name: MultiplexOperationsBruteForceFromGenerator, uid: Microsoft.Quantum.Canon.MultiplexOperationsBruteForceFromGenerator}
   - {name: MultiplexOperationsFromGenerator, uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator}
+  - {name: MultiplexOperationsFromGeneratorImpl, uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGeneratorImpl}
   - {name: MultiplexOperationsWithAuxRegister, uid: Microsoft.Quantum.Canon.MultiplexOperationsWithAuxRegister}
   - {name: MultiplexPauli, uid: Microsoft.Quantum.Canon.MultiplexPauli}
   - {name: MultiplexZ, uid: Microsoft.Quantum.Canon.MultiplexZ}
@@ -444,7 +446,6 @@
   - {name: WeightOnePaulis, uid: Microsoft.Quantum.Canon.WeightOnePaulis}
   - {name: WithFirstInputApplied, uid: Microsoft.Quantum.Canon.WithFirstInputApplied}
   - {name: XOR, uid: Microsoft.Quantum.Canon.XOR}
-  - {name: _MultiplexOperationsFromGenerator, uid: Microsoft.Quantum.Canon._MultiplexOperationsFromGenerator}
   name: Microsoft.Quantum.Canon
   uid: Microsoft.Quantum.Canon
 - items:
@@ -1045,32 +1046,43 @@
   - {name: ApplyMultiplexStep, uid: Microsoft.Quantum.Preparation.ApplyMultiplexStep}
   - {name: ApplyToLittleEndian, uid: Microsoft.Quantum.Preparation.ApplyToLittleEndian}
   - {name: ApproximatelyPrepareArbitraryState, uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState}
+  - {name: ApproximatelyPrepareArbitraryStateCP, uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP}
+  - {name: ApproximatelyPrepareArbitraryStateD, uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateD}
+  - {name: ApproximatelyUnprepareArbitraryStatePlan, uid: Microsoft.Quantum.Preparation.ApproximatelyUnprepareArbitraryStatePlan}
   - {name: BlochSphereCoordinates, uid: Microsoft.Quantum.Preparation.BlochSphereCoordinates}
+  - {name: IgnoreDataRegister, uid: Microsoft.Quantum.Preparation.IgnoreDataRegister}
+  - {name: MixedStatePreparation, uid: Microsoft.Quantum.Preparation.MixedStatePreparation}
+  - {name: MixedStatePreparationRequirements, uid: Microsoft.Quantum.Preparation.MixedStatePreparationRequirements}
   - {name: PrepareArbitraryState, uid: Microsoft.Quantum.Preparation.PrepareArbitraryState}
+  - {name: PrepareArbitraryStateCP, uid: Microsoft.Quantum.Preparation.PrepareArbitraryStateCP}
+  - {name: PrepareArbitraryStateD, uid: Microsoft.Quantum.Preparation.PrepareArbitraryStateD}
   - {name: PrepareChoiState, uid: Microsoft.Quantum.Preparation.PrepareChoiState}
   - {name: PrepareChoiStateA, uid: Microsoft.Quantum.Preparation.PrepareChoiStateA}
   - {name: PrepareChoiStateC, uid: Microsoft.Quantum.Preparation.PrepareChoiStateC}
   - {name: PrepareChoiStateCA, uid: Microsoft.Quantum.Preparation.PrepareChoiStateCA}
   - {name: PrepareEntangledState, uid: Microsoft.Quantum.Preparation.PrepareEntangledState}
   - {name: PrepareIdentity, uid: Microsoft.Quantum.Preparation.PrepareIdentity}
+  - {name: PreparePauliEigenstate, uid: Microsoft.Quantum.Preparation.PreparePauliEigenstate}
   - {name: PrepareQuantumROMState, uid: Microsoft.Quantum.Preparation.PrepareQuantumROMState}
   - {name: PrepareQubit, uid: Microsoft.Quantum.Preparation.PrepareQubit}
   - {name: PrepareSingleQubitIdentity, uid: Microsoft.Quantum.Preparation.PrepareSingleQubitIdentity}
   - {name: PrepareUniformSuperposition, uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition}
-  - {name: PrepareUniformSuperposition_, uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition_}
+  - {name: PrepareUniformSuperpositionOracle, uid: Microsoft.Quantum.Preparation.PrepareUniformSuperpositionOracle}
+  - {name: PurifiedMixedState, uid: Microsoft.Quantum.Preparation.PurifiedMixedState}
+  - {name: PurifiedMixedStateRequirements, uid: Microsoft.Quantum.Preparation.PurifiedMixedStateRequirements}
+  - {name: PurifiedMixedStateWithData, uid: Microsoft.Quantum.Preparation.PurifiedMixedStateWithData}
   - {name: QuantumROM, uid: Microsoft.Quantum.Preparation.QuantumROM}
   - {name: QuantumROMBitStringWriterByIndex, uid: Microsoft.Quantum.Preparation.QuantumROMBitStringWriterByIndex}
   - {name: QuantumROMQubitCount, uid: Microsoft.Quantum.Preparation.QuantumROMQubitCount}
-  - {name: RangeLength, uid: Microsoft.Quantum.Preparation.RangeLength}
   - {name: RoundedDiscretizationCoefficients, uid: Microsoft.Quantum.Preparation.RoundedDiscretizationCoefficients}
+  - {name: SplitSign, uid: Microsoft.Quantum.Preparation.SplitSign}
   - {name: StatePreparationComplexCoefficients, uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients}
   - {name: StatePreparationPositiveCoefficients, uid: Microsoft.Quantum.Preparation.StatePreparationPositiveCoefficients}
+  - {name: StatePreparationSBMComputeCoefficients, uid: Microsoft.Quantum.Preparation.StatePreparationSBMComputeCoefficients}
   - {name: WriteQuantumROMBitString, uid: Microsoft.Quantum.Preparation.WriteQuantumROMBitString}
-  - {name: _ApproximatelyUnprepareArbitraryStatePlan, uid: Microsoft.Quantum.Preparation._ApproximatelyUnprepareArbitraryStatePlan}
   - {name: _CompileApproximateArbitraryStatePreparation, uid: Microsoft.Quantum.Preparation._CompileApproximateArbitraryStatePreparation}
+  - {name: _PrepareAmplitudesFromZeroState, uid: Microsoft.Quantum.Preparation._PrepareAmplitudesFromZeroState}
   - {name: _QuantumROMDiscretization, uid: Microsoft.Quantum.Preparation._QuantumROMDiscretization}
-  - {name: _QuantumROMQubitManager, uid: Microsoft.Quantum.Preparation._QuantumROMQubitManager}
-  - {name: _StatePreparationSBMComputeCoefficients, uid: Microsoft.Quantum.Preparation._StatePreparationSBMComputeCoefficients}
   name: Microsoft.Quantum.Preparation
   uid: Microsoft.Quantum.Preparation
 - items:

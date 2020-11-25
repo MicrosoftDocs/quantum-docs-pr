@@ -17,6 +17,18 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version 0.14.2011120240
+
+*Release date: November 25th, 2020*
+
+- Improved compiler performance due to faster reference loading.
+- Added an [ANTLR grammar for Q#](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language/5_Grammar) to the Q# language specification.
+- Updated the [`Microsoft.Quantum.Preparation` namespace](xref:Microsoft.Quantum.Preparation) to be more consistent with style guide and API design principles, and to support purified mixed states with additional data (see [proposal](https://github.com/microsoft/QuantumLibraries/issues/344), [review notes](https://github.com/microsoft/QuantumLibraries/blob/main/Design/meetings/2020/api-design-2020-11-05.md) and PRs [#212](https://github.com/microsoft/QuantumLibraries/pull/212), [#322](https://github.com/microsoft/QuantumLibraries/pull/322), [#375](https://github.com/microsoft/QuantumLibraries/pull/375), [#376](https://github.com/microsoft/QuantumLibraries/pull/376)).
+- Parentheses around repeated call expressions are now optional: `(Foo(x))(y)` may be written as `Foo(x)(y)`.
+- Users of the Visual Studio or Visual Studio Code extensions who have installed .NET 5 or Visual Studio 16.8 may be prompted to install .NET Core 3.1 to continue to work with the extensions.
+
+See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18).
+
 ## Version 0.13.20111004
 
 *Release date: November 10th, 2020*

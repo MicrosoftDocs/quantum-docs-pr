@@ -38,7 +38,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
         <th width=10%>&nbsp;</th>
         <th>&nbsp;</th>
         <th align="center" width=18%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 or later)</b></th>
-        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="VS Studio" width="50"/><br><b>VS Studio<br>(2019 or later)</b></th>
+        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="Visual Studio" width="50"/><br><b>Visual Studio<br>(2019 or later)</b></th>
         <th align="center" width=18%><img src="~/media/jupyter-wht.png" alt="jupyter install" width="65"/><br><b>Jupyter Notebooks</b></th>
         <th align="center" width=18%><img src="~/media/blank.png" alt="blank spacer" width="65"/><br><b>Command line</b></th>
     </tr>
@@ -63,7 +63,7 @@ You can develop Q# code in most of your favorites IDEs, as well as integrate Q# 
         <td align="left"><b>Q# and Python</b></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">Install</a></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">Install</a></td>
-        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">Install</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Install</a></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">Install</a></td>
     </tr>
     <tr>

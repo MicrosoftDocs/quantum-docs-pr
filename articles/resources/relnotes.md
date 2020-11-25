@@ -156,7 +156,7 @@ This release contains minor bugfixes for version 0.11.2003.2506.
 
 This release contains the following:
 
-- New support for access modifiers in Q#, for more information see [Access  Modifiers](xref:microsoft.quantum.qsharp.accessmodifiers.md)
+- New support for access modifiers in Q#, for more information see [Access  Modifiers](xref:microsoft.quantum.qsharp.accessmodifiers)
 - Updated to .NET Core SDK 3.1
 
 See the full list of closed PRs for [libraries](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [samples](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) and [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
@@ -281,7 +281,7 @@ The changes are summarized here as well as instructions for upgrading your exist
 This release adds new Q# language syntax:
 * Add named items for [user-defined types]microsoft.quantum.qsharp.typedeclarations#type-declarations).  
 * User-defined type constructors can now be used as functions.
-* Add support for [copy-and-update](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions) and [apply-and-reassign](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignmentsevaluate-and-reassign-statements) in user-defined types.
+* Add support for [copy-and-update](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions) and [apply-and-reassign](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignmentsevaluateandreassignstatements) in user-defined types.
 * Fixup-block for [repeat-until-success](xref:microsoft.quantum.qsharp.conditionalloopsrepeat-statement) loops is now optional.
 * We now support while loops in functions (not in operations).
 

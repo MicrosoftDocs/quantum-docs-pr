@@ -1,0 +1,12 @@
+- name: Overview
+  href: index.md
+- name: Program structure
+  href: programstructure/toc.yml
+- name: Statements
+  href: statements/toc.yml 
+- name: Expressions
+  href: expressions/toc.yml
+- name: Type system
+  href: typesystem/toc.yml
+- name: Grammar
+  href: grammar.md

@@ -38,7 +38,7 @@ In Q#, this would be performed by the following code:
 ```
 
 However, this code alone can't be run by Q#.
-For that, it needs to make up the body of an [operation](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/4_TypeSystem/OperationsAndFunctions.md), which is then run when called---either directly or by another operation. 
+For that, it needs to make up the body of an [operation](xref:microsoft.quantum.qsharp.operationsandfunctions), which is then run when called---either directly or by another operation. 
 Hence, you can write an operation of the following form:
 ```qsharp
     operation MeasureSuperposition() : Result {
@@ -48,7 +48,7 @@ Hence, you can write an operation of the following form:
         }
     }
 ```
-You have defined an operation, `MeasureSuperposition`, which takes no inputs and returns a value of type [Result](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language/4_TypeSystem#available-types).
+You have defined an operation, `MeasureSuperposition`, which takes no inputs and returns a value of type [Result](xref:microsoft.quantum.qsharp.typesystem-index#available-types).
 
 In addition to operations, Q# also allows to encapsulate deterministic computations into functions. Aside from the determinism guarantee that implies that computations that act on qubits need to be encapsulated into operations rather than functions, there is little difference between operations and function. We refer to them collectively as *callables*.
 
@@ -59,7 +59,7 @@ However, it requires a few more additions to comprise a full `*.qs` Q# file.
 
 All Q# types and callables (both those you define and those intrinsic to the language) are defined within *namespaces*, which provide each a full name that can then be referenced.
 
-For example, the [`H`](xref:Microsoft.Quantum.Intrinsic.H) and [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) operations are found in the [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) and [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) namespaces (part of the [Q# Standard Libraries](xref:microsoft.quantum.qsharplibintro)).
+For example, the [`H`](xref:Microsoft.Quantum.Intrinsic.H) and [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) operations are found in the [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) and [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) namespaces (part of the [Q# Standard Libraries](xref:microsoft.quantum.libraries.standard.intro)).
 As such, they can always be called via their *full* names, `Microsoft.Quantum.Intrinsic.H(<qubit>)` and `Microsoft.Quantum.Measurement.MResetZ(<qubit>)`, but always doing this would lead to very cluttered code.
 
 Instead, `open` statements allow callables to be referenced with more concise shorthand, as we've done in the operation body above.
@@ -158,7 +158,7 @@ Now, a call of `dotnet run` from the command prompt leads to `MeasureSuperpositi
 So, you will see either `One` or `Zero` printed. 
 
 Note that it doesn't matter if you have more callables defined below it, only `MeasureSuperposition` will be run.
-Additionally, it's no problem if your callable includes [documentation comments](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/1_ProgramStructure/7_Comments.md#documentation-comments) before its declaration, the `@EntryPoint()` attribute can be simply placed above them.
+Additionally, it's no problem if your callable includes [documentation comments](xref:microsoft.quantum.qsharp.comments#documentation-comments) before its declaration, the `@EntryPoint()` attribute can be simply placed above them.
 
 ### Callable arguments
 
@@ -600,7 +600,7 @@ Here, we will detail how to run the Q# operations defined above, but a more broa
 
 In a Q# Jupyter Notebook, you enter Q# code just as we would from inside the namespace of a Q# file.
 
-So, we can enable access to callables from the [Q# standard libraries](xref:microsoft.quantum.qsharplibintro) with `open` statements for their respective namespaces.
+So, we can enable access to callables from the [Q# standard libraries](xref:microsoft.quantum.libraries.standard.intro) with `open` statements for their respective namespaces.
 Upon running a cell with such a statement, the definitions from those namespaces are available throughout the workspace.
 
 > [!NOTE]

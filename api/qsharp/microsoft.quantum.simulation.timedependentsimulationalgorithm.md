@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm
 title: TimeDependentSimulationAlgorithm user defined type
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -18,7 +18,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Package: [](https://nuget.org/packages/)
+Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Represents a time-dependent simulation algorithm.A time-dependent simulation technique converts an<xref:microsoft.quantum.simulation.evolutionschedule>to unitary time-evolution for some time-interval.

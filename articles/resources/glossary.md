@@ -106,7 +106,7 @@ A subroutine that provides data-dependent information to a quantum algorithm at 
 
 ## Partial application
 
-Calling a [function](xref:microsoft.quantum.glossary#function) or [operation](xref:microsoft.quantum.glossary#operation) without all the required inputs. This returns a new [callable](xref:microsoft.quantum.glossary#callable) that only needs the missing parameters (indicated by an underscore) to be supplied during a future application. For more information, see [Partial application](https://github.com/microsoft/qsharp-language/blob/main/Specifications/Language/3_Expressions/PartialApplication.md).
+Calling a [function](xref:microsoft.quantum.glossary#function) or [operation](xref:microsoft.quantum.glossary#operation) without all the required inputs. This returns a new [callable](xref:microsoft.quantum.glossary#callable) that only needs the missing parameters (indicated by an underscore) to be supplied during a future application. For more information, see [Partial application](xref:microsoft.quantum.qsharp.partialapplication).
 
 ## Pauli operators
 

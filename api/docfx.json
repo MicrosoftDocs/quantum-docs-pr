@@ -39,8 +39,8 @@
       "ms.devlang":"qsharp",
       "searchScope": ["quantum", "q#", "qsharp"],
       "feedback_system": "GitHub",
-      "feedback_github_repo": "Microsoft/quantum",
-      "feedback_product_url": "https://github.com/microsoft/quantum/issues",
+      "feedback_github_repo": "Microsoft/QuantumLibraries",
+      "feedback_product_url": "https://github.com/microsoft/QuantumLibraries/issues",
       "titleSuffix": "Q# reference - Microsoft Quantum"
     },
     "fileMetadata": {

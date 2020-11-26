@@ -373,7 +373,7 @@ This article lists these principles, and gives examples to help guide how to app
 - ✅ **DO** choose operations and function names that clearly
     communicate the intended effect of a callable, and not its
     implementation. Note that the implementation can and should be
-    documented in [API documentation comments](xref:microsoft.quantum.guide.filestructure#documentation-comments).
+    documented in [API documentation comments](xref:microsoft.quantum.qsharp.comments#documentation-comments).
 
   *Examples:*
   - Prefer "estimate overlap" to "Hadamard test," as the latter

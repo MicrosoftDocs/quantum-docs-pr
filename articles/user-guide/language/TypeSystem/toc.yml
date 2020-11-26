@@ -1,0 +1,14 @@
+- name: Type system in Q#
+  href: index.md
+- name: Quantum data types
+  href: quantumdatatypes.md
+- name: Immutability
+  href: immutability.md
+- name: Operations and functions
+  href: operationsandfunctions.md
+- name: Singleton tuple equivalence
+  href: singletontupleequivalence.md
+- name: Subtyping and variance
+  href: subtypingandvariance.md
+- name: Type parameterizations
+  href: typeparameterizations.md

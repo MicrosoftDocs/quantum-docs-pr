@@ -13,33 +13,15 @@ no-loc: ['Q#', '$$v']
 
 Welcome to the Q# User Guide! 
 
-In the different topics of this guide, we detail the core concepts of the Q# language and all the information you need to write quantum programs.
+In the different topics of this guide, we introduce some of the basics for developing quantum programs using Q#.
+
+We refer to the [Q# language guide](xref:microsoft.quantum.qsharp.index) for a full specification and documentation of the Q# quantum programming language. 
 
 ## User Guide Contents
 
-- [Q# Basics](xref:microsoft.quantum.guide.basics): An introductory overview of the purpose and functionality of the Q# programming language. 
+- [Q# programs](xref:microsoft.quantum.guide.programs): An quick introduction to quantum programs in Q#. 
 
 - [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs): describes how a Q# program is run, and provides an overview of the various ways you can call the program: from the command line, in Q# Jupyter Notebooks, or from a classical host program written in Python or a .NET language.
-
-### Q# Language
-
-- [Types in Q#](xref:microsoft.quantum.guide.types): Lays out the Q# type model and describes the syntax for specifying and working with types.
-
-- [Type Expressions](xref:microsoft.quantum.guide.expressions): Details how to specify, reference, combine, and operate on values of each type in Q#. 
-
-### Using Q#
-
-- [Q# File Structure](xref:microsoft.quantum.guide.filestructure): Describes the structure and syntax of a `*.qs` Q# file.
-
-- [Operations and Functions](xref:microsoft.quantum.guide.operationsfunctions): Details the two callable types of the Q# language: *operations*, which include action on qubit registers, and *functions*, which strictly work with classical information. 
-    Here you see how to define and call them, including the adjoint and controlled versions of quantum operations.
-
-- [Variables](xref:microsoft.quantum.guide.variables): Describes the role of variables within Q# programs and how to leverage them effectively. 
-    For example, you can find information about binding scopes, as well as the difference between immutable and mutable variables and how to assign or re-assign them.
-
-- [Working with qubits](xref:microsoft.quantum.guide.qubits): Describes the features of Q# used to address individual qubits and systems of qubits, specifically, allocating them, performing operations on them, and measuring them. 
-
-- [Control Flow](xref:microsoft.quantum.guide.controlflow): Details the programming control flow patterns available in Q#, which includes many standard techniques (such as conditional processing, *for* loops, *while* loops) as well as the quantum-specific *Repeat-Until-Success* pattern.
 
 - [Testing and debugging](xref:microsoft.quantum.guide.testingdebugging): Details some techniques for making sure your code is doing what it is supposed to do. 
     Due to the general opacity of quantum information, debugging a quantum program can require specialized techniques. 

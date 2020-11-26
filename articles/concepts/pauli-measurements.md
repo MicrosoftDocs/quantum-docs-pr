@@ -14,7 +14,7 @@ no-loc: ['Q#', '$$v', '$$', "$$", '$', "$", $, $$, '\cdots', 'bmatrix', '\ddots'
 In the previous discussions, we have focused on computational basis measurements.
 In fact, there are other common measurements that occur in quantum computing that, from a notational perspective, are convenient to express in terms of computational basis measurements.
 As you work with Q#, the most common kind of measurements that you'll run into will likely be *Pauli measurements*, which generalize computational basis measurements to include measurements in other bases, and of parity between different qubits.
-In such cases, it is common to discuss measuring a Pauli operator, in general an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$, and so forth.
+In such cases, it is common to discuss measuring a Pauli operator, in general an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$, and so forth. 
 
 > [!TIP]
 > In Q#, multi-qubit Pauli operators are generally represented by arrays of type `Pauli[]`.
@@ -187,7 +187,7 @@ One such limitation is given by the *No-Cloning Theorem*.
 The No-Cloning Theorem is aptly named.
 It disallows cloning of generic quantum states by a quantum computer.
 The proof of the theorem is remarkably straightforward.
-While a full proof of the no-cloning theorem is a little too technical for our discussion here, the proof in the case of no additional auxiliary qubits is within our scope (auxiliary qubits are qubits used for scratch space during a computation and are easily used and managed in Q#, see [borrowed qubits](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
+While a full proof of the no-cloning theorem is a little too technical for our discussion here, the proof in the case of no additional auxiliary qubits is within our scope.
 
 For such a quantum computer, the cloning operation must be described by a unitary matrix.
 We disallow measurement, since it would corrupt the quantum state we are trying to clone.

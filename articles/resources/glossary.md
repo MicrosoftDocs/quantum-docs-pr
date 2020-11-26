@@ -13,7 +13,7 @@ no-loc: ['Q#', '$$v', '$$', "$$", '$', "$", $, $$, '\cdots', 'bmatrix', '\ddots'
 
 ## Adjoint
 
-The complex conjugate transpose of an [operation](xref:microsoft.quantum.glossary#operation). For operations that implement a [unitary](xref:microsoft.quantum.glossary#unitary-operator) operator, the adjoint is the inverse of the operation and is indicated by a dagger symbol. For example, if the operation `U` represents the unitary operator $U$, then `Adjoint U` represents $U^\dagger$. For more information, see [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
+The complex conjugate transpose of an [operation](xref:microsoft.quantum.glossary#operation). For operations that implement a [unitary](xref:microsoft.quantum.glossary#unitary-operator) operator, the adjoint is the inverse of the operation and is indicated by a dagger symbol. For example, if the operation `U` represents the unitary operator $U$, then `Adjoint U` represents $U^\dagger$. For more information, see [Functor application](xref:microsoft.quantum.qsharp.functorapplication#functor-application).
 
 ## Ancilla
 
@@ -29,7 +29,8 @@ A graphical representation of a single-[qubit](xref:microsoft.quantum.glossary#q
 
 ## Callable
 
-An [operation](xref:microsoft.quantum.glossary#operation) or [function](xref:microsoft.quantum.glossary#function) in the Q# language. For more information, see [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
+An [operation](xref:microsoft.quantum.glossary#operation) or [function](xref:microsoft.quantum.glossary#function) in the [Q# language](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language).
+For more information, see [Q# programs](xref:microsoft.quantum.guide.programs)
 
 ## Clifford group
 
@@ -37,7 +38,7 @@ The set of operations that occupy the octants of the [Bloch sphere](xref:microso
 
 ## Controlled
 
-A quantum [operation](xref:microsoft.quantum.glossary#operation) that takes one or more [qubits](xref:microsoft.quantum.glossary#qubit) as enablers for the target operation. For more information, see [Controlled and adjoint operations](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
+A quantum [operation](xref:microsoft.quantum.glossary#operation) that takes one or more [qubits](xref:microsoft.quantum.glossary#qubit) as enablers for the target operation. For more information, see [Functor application](xref:microsoft.quantum.qsharp.functorapplication#functor-application).
 
 ## Dirac Notation
 
@@ -64,11 +65,12 @@ One of four specific maximally entangled [quantum states](xref:microsoft.quantum
 How a [quantum state](xref:microsoft.quantum.glossary#quantum-state) changes over time. For more information, see [Matrix exponentials](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials).
 
 ## Function
-A type of subroutine in the Q# language that is purely classical (non-quantum). While functions are used within quantum algorithms, they cannot act on [qubits](xref:microsoft.quantum.glossary#qubit) or call [operations](xref:microsoft.quantum.glossary#operation). For more information, see [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
+A type of subroutine in the Q# language that is purely deterministic. While functions are used within quantum algorithms, they cannot act on [qubits](xref:microsoft.quantum.glossary#qubit) or call [operations](xref:microsoft.quantum.glossary#operation). 
+For more information, see [Q# programs](xref:microsoft.quantum.guide.programs)
 
 ## Gate
 
-A legacy term for a quantum [operation](xref:microsoft.quantum.glossary#operation), based on the concept of classical logic gates. A [quantum circuit](xref:microsoft.quantum.glossary#quantum-circuit-diagram) is a network of gates (or operations), based on the similar concept of classical logic circuits.
+A legacy term for certain intrinsic quantum [operations](xref:microsoft.quantum.glossary#operation), based on the concept of classical logic gates. A [quantum circuit](xref:microsoft.quantum.glossary#quantum-circuit-diagram) is a network of gates, based on the similar concept of classical logic circuits.
 
 ## Global phase
 
@@ -92,15 +94,11 @@ A variable whose value may be changed after it is created. A mutable variable in
 
 ## Namespace
 
-A label for a collection of related names (i.e., [operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function), and [user-defined types](xref:microsoft.quantum.glossary#user-defined-type)). For instance the namespace [Microsoft.Quantum.Preparation](xref:microsoft.quantum.preparation) labels all of the symbols defined in the standard library that help with preparing initial states.
+A label for a collection of related names (i.e., [operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function), and [user-defined types](xref:microsoft.quantum.glossary#user-defined-type)). For instance the namespace [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation) labels all of the symbols defined in the standard library that help with preparing initial states.
 
 ## Operation
 
-The basic unit of quantum computation in Q#. It is roughly equivalent to a function in C, C++ or Python, or a static method in C# or Java. For more information, see [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
-
-## Operator application
-
-Performing a quantum operation. This typically applies a unitary matrix to the current quantum state vector.
+The basic unit of quantum computation in Q#. It is roughly equivalent to a function in C, C++ or Python, or a static method in C# or Java. For more information, see [Q# programs](xref:microsoft.quantum.guide.programs).
 
 ## Oracle
 
@@ -108,7 +106,7 @@ A subroutine that provides data-dependent information to a quantum algorithm at 
 
 ## Partial application
 
-Calling a [function](xref:microsoft.quantum.glossary#function) or [operation](xref:microsoft.quantum.glossary#operation) without all the required inputs. This returns a new [callable](xref:microsoft.quantum.glossary#callable) that only needs the missing parameters (indicated by an underscore) to be supplied during a future application. For example, given the function `MyFunc(x : int, y : int) : int {return x + y;}` you can partially apply it to a new function `let NewFunc = MyFunc(_, 3)`. You can then call the new function at a later time with the missing parameter `NewFunc(2)` which returns the value *5*.  For more information, see [Partial application](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
+Calling a [function](xref:microsoft.quantum.glossary#function) or [operation](xref:microsoft.quantum.glossary#operation) without all the required inputs. This returns a new [callable](xref:microsoft.quantum.glossary#callable) that only needs the missing parameters (indicated by an underscore) to be supplied during a future application. For more information, see [Partial application](xref:microsoft.quantum.qsharp.partialapplication).
 
 ## Pauli operators
 
@@ -116,7 +114,7 @@ A set of three 2 x 2 unitary matrices known as the `X`, `Y` and `Z` quantum oper
 
 ## Quantum circuit diagram
 
-A method to graphically represent the sequence of [operations](xref:microsoft.quantum.glossary#operation) (or [gates](xref:microsoft.quantum.glossary#gate)) for simple quantum programs, for example 
+A method to graphically represent the sequence of [gates](xref:microsoft.quantum.glossary#gate) for simple quantum programs, for example 
 
 ![Sample circuit diagram](~/media/qpe.png). 
 
@@ -136,7 +134,7 @@ A basic unit of quantum information, analogous to a *bit* in classical computing
 
 ## Repeat-until-success
 
-A quantum algorithm that probabilistically succeeds. Upon failure, the routine will retry until successful (or a limit has been reached). For more information, see [Repeat Until Success (RUS)](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)
+A concept often used in quantum algorithms that consists of repeatedly applying a computation until a certain condition is satisfied. When the condition is not satisfied, often a fixup is required before retrying by entering the next iteration. For more information, see the [Q# user guide](xref:microsoft.quantum.guide)
 
 ## Standard libraries
 
@@ -156,7 +154,7 @@ A method for regenerating data, or the [quantum state](xref:microsoft.quantum.gl
 
 ## Tuple
 
-A collection of comma-separated values that acts as a single value. The *type* of a tuple is defined by the types of values it contains. In Q#, tuples are [immutable](xref:microsoft.quantum.glossary#immutable) and can be nested, contain arrays, or used in an array. For more information, see [Tuple types](xref:microsoft.quantum.guide.types#tuple-types).
+A collection of comma-separated values that acts as a single value. The *type* of a tuple is defined by the types of values it contains. In Q#, tuples are [immutable](xref:microsoft.quantum.glossary#immutable) and can be nested, contain arrays, or used in an array. For more information, see [Tuples](xref:microsoft.quantum.qsharp.valueliterals#tuple-literals).
 
 ## Unitary operator
 
@@ -164,4 +162,4 @@ An operator whose inverse is equal to its [adjoint](xref:microsoft.quantum.gloss
 
 ## User-defined type
 
-A collection of built-in or previously defined types that may be referred to as a single unit. For more information, see [User-defined types](xref:microsoft.quantum.guide.types#user-defined-types).
+A custom type that may contain one or more named or anonymous items. For more information, see  [Type declarations]microsoft.quantum.qsharp.typedeclarations#type-declarations).

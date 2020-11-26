@@ -155,7 +155,7 @@ Here, the keyword `fail` indicates that the computation should not proceed, and 
 By definition, a failure of this kind cannot be observed from within Q#, as the target machine no longer runs the Q# code after reaching a `fail` statement.
 Thus, if we proceed past a call to `PositivityFact`, we can be assured that its input was positive.
 
-Note that we can implement the same behavior as `PositivityFact` using the [`Fact`](xref:Microsoft.Quantum.Diagnostics.fact) function from the <xref:Microsoft.Quantum.Diagnostics> namespace:
+Note that we can implement the same behavior as `PositivityFact` using the [`Fact`](xref:Microsoft.Quantum.Diagnostics.Fact) function from the <xref:Microsoft.Quantum.Diagnostics> namespace:
 
 ```qsharp
 	Fact(value > 0, "Expected a positive number.");

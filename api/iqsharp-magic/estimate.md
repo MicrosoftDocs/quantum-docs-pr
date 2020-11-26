@@ -4,7 +4,7 @@ description: Runs a given function or operation on the ResourcesEstimator target
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.estimate
 ms.author: ryansha
-ms.date: 11/25/2020
+ms.date: 11/26/2020
 ms.topic: article
 ---
 

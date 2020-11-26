@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.ApplyToLittleEndian
 title: ApplyToLittleEndian operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 11/26/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation

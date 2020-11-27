@@ -36,6 +36,19 @@ To implement Grover's algorithm to solve a problem you need to:
 1. **Implement the function of the Grover's task as a quantum oracle:** to implement Grover's algorithm, you need to implement the function $f(x)$ of your Grover's task as a [quantum oracle](xref:microsoft.quantum.concepts.oracles).
 1. **Use Grover's algorithm with your oracle to solve the task:** once you have quantum oracle, you can plug it into your Grover's algorithm implementation to solve the problem and interpret the output.
 
+## Quick overview of Grover's algorithm
+
+Suppose we have $N=2^n$ eligible items for the search task and we index them by assign each item a integer from $0$ to 
+$N-1$. The steps of the algorithm are:
+
+1. Start with a register of $n$ qubits initialized in the state $\ket{0}$ by applying $H$ to each qubit of the register.
+1. Prepare the register into a uniform superposition: $$|\psi\rangle=\frac{1}{N^{1 / 2}} \sum_{x=0}^{N-1}|x\rangle$$
+1. Apply $N_{\text{optimal}}$ times the following operations to the register:
+   1. The phase oracle $O_f$ that applies a conditional phase shift of $-1$ for the solution items.
+   1. Apply $H$ to each qubit of the register.
+   1. A conditional phase shift of $-1$ to every computational basis state except $\ket{0}$.
+   1. Apply $H$ to each qubit of the register.
+ 
 <!-- Any searching task can be mathematically formulated with an abstract function $f(x)$ that accepts search items $x$. If the item $x$ is a solution for the search task, then $f(x)=1$. If the item $x$ isn't a solution, then $f(x)=0$.
 
 The search problem consists on finding any item $x_0$ such that $f(x_0)=1$. This is, an item $x_0$ that is a solution of the search problem.

@@ -26,7 +26,7 @@ Any searching task can be mathematically formulated with an abstract function $f
 
 ## Grover's algorithm task
 
-You are given a classical function $f(x):\{0,1\}^N \right_arrow\{0,1\}$. The task solved by Grover's algorithm is to find an input $x_0$ for which $f(x_0)=1$.
+You are given a classical function $f(x):\\{0,1\\}^N \right_arrow\\{0,1\\}$. The task solved by Grover's algorithm is to find an input $x_0$ for which $f(x_0)=1$.
 
 ## Overview of the process
 

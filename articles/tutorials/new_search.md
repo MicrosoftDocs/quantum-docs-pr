@@ -1,9 +1,9 @@
 ---
-title: Run Grover's search algorithm in Q# - Quantum Development Kit
+title: Implement Grover's search algorithm in Q# - Quantum Development Kit
 description: Build a Q# project that demonstrates Grover's algorithm, one of the canonical quantum algorithms.
-author: cgranade
-ms.author: chgranad
-ms.date: 10/19/2019
+author: geduardo
+ms.author: v-edsanc
+ms.date: 11/30/2020
 ms.topic: article
 uid: microsoft.quantum.quickstarts.new-search
 no-loc: ['Q#', '$$v']
@@ -15,7 +15,8 @@ In this tutorial you'll learn to implement Grover's algorithm in Q# to solve sea
 
 Grover's algorithm is one of the most famous algorithms in quantum computing. The problem it solves is often referred to as "searching a database", but it's more accurate to think of it as a "search problem".
 
-> [!NOTE] This tutorial is intended for people who are already familiar with
+> [!NOTE] 
+> This tutorial is intended for people who are already familiar with
 > Grover's algorithm that want to learn how to implement it in Q#. For a more
 > slow paced tutorial we recommend the Microsoft Learn module [Solve graph
 > coloring problems by using Grover's

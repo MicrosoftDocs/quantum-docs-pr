@@ -25,13 +25,13 @@ Any searching task can be mathematically formulated with an abstract function $f
 
 ## Grover's algorithm task
 
-You are given a classical function $f(x):{0,1}^N\right_arrow{0,1}$. The task solved by Grover's algorithm is to find an input $x_0$ for which $f(x_0)=1$.
+You are given a classical function $f(x):\{0,1\}^N \right_arrow\{0,1\}$. The task solved by Grover's algorithm is to find an input $x_0$ for which $f(x_0)=1$.
 
 ## Overview of the process
 
 To implement Grover's algorithm to solve a problem you need to:
 
-1. **Transform the problem to the form of a Grover's task:** for example, suppose we want to find the factors of an integer $M$ using Grover's algorithm. You can transform the integer factorization problem to a Grover's task by creating a function $$f_M(x)=\mathbb{1}[r],$$ where $\mathbb{1}[r]=1$ if $r=0$ and $\mathbb{1}[r]=0$ if $r\neq0$ and $r$ is the remainder of $M/x$. This way, the integers $x_i$ that make $f_M(x_i)=0$ are the factors of $M$ and we transformed the problem to a Grover's task.
+1. **Transform the problem to the form of a Grover's task:** for example, suppose we want to find the factors of an integer $M$ using Grover's algorithm. You can transform the integer factorization problem to a Grover's task by creating a function $$f_M(x)=1[r],$$ where $1[r]=1$ if $r=0$ and $1[r]=0$ if $r\neq0$ and $r$ is the remainder of $M/x$. This way, the integers $x_i$ that make $f_M(x_i)=1$ are the factors of $M$ and we transformed the problem to a Grover's task.
 1. **Implement the function of the Grover's task as a quantum oracle:** to implement Grover's algorithm, you need to implement the function $f(x)$ of your Grover's task as a [quantum oracle](xref:microsoft.quantum.concepts.oracles).
 1. **Use Grover's algorithm with your oracle to solve the task:** once you have quantum oracle, you can plug it into your Grover's algorithm implementation to solve the problem and interpret the output.
 

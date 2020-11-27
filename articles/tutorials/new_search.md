@@ -5,7 +5,7 @@ author: cgranade
 ms.author: chgranad
 ms.date: 10/19/2019
 ms.topic: article
-uid: microsoft.quantum.quickstarts.search
+uid: microsoft.quantum.quickstarts.new-search
 no-loc: ['Q#', '$$v']
 ---
 

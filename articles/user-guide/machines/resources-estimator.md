@@ -21,9 +21,9 @@ You can use the resources estimator to run any Q# operation. For additional deta
 
 ### Invoking the resources estimator from C# 
 
-As with other target machines, you first create an instance of the `ResourceEstimator` class and then pass it as the first parameter of an operation's `Run` method.
+As with other target machines, you first create an instance of the `ResourcesEstimator` class and then pass it as the first parameter of an operation's `Run` method.
 
-Note that, unlike the `QuantumSimulator` class, the `ResourceEstimator` class does not implement the <xref:System.IDisposable> interface, and thus you do not need to enclose it within a `using` statement.
+Note that, unlike the `QuantumSimulator` class, the `ResourcesEstimator` class does not implement the <xref:System.IDisposable> interface, and thus you do not need to enclose it within a `using` statement.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;

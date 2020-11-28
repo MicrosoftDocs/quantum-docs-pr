@@ -48,7 +48,33 @@ $N-1$. The steps of the algorithm are:
    1. Apply $H$ to each qubit of the register.
    1. A conditional phase shift of $-1$ to every computational basis state except $\ket{0}$.
    1. Apply $H$ to each qubit of the register.
- 
+1. Measure the register to obtain the index of a item that's a solution with very high probability.
+1. Check if it's a valid solution. If not, start again.
+
+## Write the code for Grover's algorithm
+
+First, we are going to write an operation that applies the steps b., c. and d. of the loop:
+
+```qsharp
+operation ReflectAboutUniform(inputQubits : Qubit[]) : Unit {
+
+    within {
+        ApplyToEachA(H, inputQubits);
+        ApplyToEachA(X, inputQubits);
+    } apply {
+        Controlled Z(Most(inputQubits), Tail(inputQubits));
+    }
+
+}
+```
+
+In this operation we use the *within-apply* statement, that implements a the
+conjugation operations that occurs in the steps b., c. and d..
+
+> [!NOTE] 
+> To learn more about conjugations in Q#, check the [conjugations
+> article in the Q# language guide](xref:microsoft.quantum.qsharp.conjugations).
+
 <!-- Any searching task can be mathematically formulated with an abstract function $f(x)$ that accepts search items $x$. If the item $x$ is a solution for the search task, then $f(x)=1$. If the item $x$ isn't a solution, then $f(x)=0$.
 
 The search problem consists on finding any item $x_0$ such that $f(x_0)=1$. This is, an item $x_0$ that is a solution of the search problem.

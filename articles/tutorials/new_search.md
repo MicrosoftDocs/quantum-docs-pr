@@ -78,9 +78,9 @@ conjugation operations that occurs in the steps b., c. and d..
 You can check what each of the operations and functions used is by looking into
 the API documentation:
 
-- [`ApplyToEachA`](xref:microsoft.quantum.canon.applytoeacha)
-- [`Most`](xref:microsoft.quantum.arrays.most)
-- [`Tail`](xref:microsoft.quantum.arrays.tail)
+- [`ApplyToEachA`](xref:microsoft.quantum.canon.ApplyToEachA)
+- [`Most`](xref:microsoft.quantum.arrays.Most)
+- [`Tail`](xref:microsoft.quantum.arrays.Tail)
 
 <!-- Any searching task can be mathematically formulated with an abstract function $f(x)$ that accepts search items $x$. If the item $x$ is a solution for the search task, then $f(x)=1$. If the item $x$ isn't a solution, then $f(x)=0$.
 

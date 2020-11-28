@@ -38,7 +38,7 @@ To implement Grover's algorithm to solve a problem you need to:
 
 ## Quick overview of Grover's algorithm
 
-Suppose we have $N=2^n$ eligible items for the search task and we index them by assign each item a integer from $0$ to 
+Suppose we have $N=2^n$ eligible items for the search task and we index them by assigning each item a integer from $0$ to 
 $N-1$. The steps of the algorithm are:
 
 1. Start with a register of $n$ qubits initialized in the state $\ket{0}$ by applying $H$ to each qubit of the register.
@@ -74,6 +74,13 @@ conjugation operations that occurs in the steps b., c. and d..
 > [!NOTE] 
 > To learn more about conjugations in Q#, check the [conjugations
 > article in the Q# language guide](xref:microsoft.quantum.qsharp.conjugations).
+
+You can check what each of the operations and functions used is by looking into
+the API documentation:
+
+- [`ApplyToEachA`](xref:microsoft.quantum.canon.applytoeacha)
+- [`Most`](xref:microsoft.quantum.arrays.most)
+- [`Tail`](xref:microsoft.quantum.arrays.tail)
 
 <!-- Any searching task can be mathematically formulated with an abstract function $f(x)$ that accepts search items $x$. If the item $x$ is a solution for the search task, then $f(x)=1$. If the item $x$ isn't a solution, then $f(x)=0$.
 

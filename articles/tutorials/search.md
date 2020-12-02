@@ -4,7 +4,7 @@ description: Build a Q# project that demonstrates Grover's algorithm, one of the
 author: cgranade
 ms.author: chgranad
 ms.date: 10/19/2019
-ms.topic: article
+ms.topic: tutorial
 uid: microsoft.quantum.quickstarts.search
 no-loc: ['Q#', '$$v']
 ---

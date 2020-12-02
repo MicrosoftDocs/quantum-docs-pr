@@ -4,7 +4,7 @@ description: Learn about singleton tuple equivalence in the Q# programming langu
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.singletontupleequivalence
 no-loc: ['Q#', '$$v']
 ---

@@ -4,7 +4,7 @@ description: Build a Q# project that demonstrates fundamental quantum concepts l
 author: bromeg
 ms.author: megbrow
 ms.date: 10/25/2019
-ms.topic: article
+ms.topic: tutorial
 uid: microsoft.quantum.quickstarts.qrng
 no-loc: ['Q#', '$$v']
 ---

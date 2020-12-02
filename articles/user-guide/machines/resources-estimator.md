@@ -4,7 +4,7 @@ description: Learn about the Microsoft QDK resources estimator, which estimates 
 author: anpaz-msft
 ms.author: anpaz 
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc: ['Q#', '$$v']
 ---

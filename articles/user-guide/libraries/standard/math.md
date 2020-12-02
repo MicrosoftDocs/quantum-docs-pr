@@ -4,7 +4,7 @@ description: Learn about the classical math functions in the Q# standard librari
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc: ['Q#', '$$v']
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to run a quantum sequential classifier written in Q# usin
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc: ['Q#', '$$v']
 ---

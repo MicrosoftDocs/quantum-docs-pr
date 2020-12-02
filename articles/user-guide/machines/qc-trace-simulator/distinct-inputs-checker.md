@@ -4,7 +4,7 @@ description: Learn about the Microsoft QDK distinct inputs checker, which uses t
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
 no-loc: ['Q#', '$$v']
 ---

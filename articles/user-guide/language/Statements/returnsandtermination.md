@@ -4,7 +4,7 @@ description: Learn about using the 'return' and 'fail' statements in Q# to end a
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.returnsandtermination
 no-loc: ['Q#', '$$v']
 ---

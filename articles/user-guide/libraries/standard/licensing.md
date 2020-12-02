@@ -5,14 +5,9 @@ description: Learn about the licensing for using and contributing to the Microso
 author: martinro
 ms.author: martinro
 ms.date: 2/16/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.licensing
 no-loc: ['Q#', '$$v']
-# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
-# For Quantum products none of these categories have been defined  yet.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-# ms.technology: tech-name-from-white-list
 ---
 # Licensing #
 

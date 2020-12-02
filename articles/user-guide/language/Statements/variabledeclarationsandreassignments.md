@@ -4,7 +4,7 @@ description: Learn about using the 'let' and 'mutable' statements to bind variab
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.variabledeclarationsandreassignments
 no-loc: ['Q#', '$$v']
 ---

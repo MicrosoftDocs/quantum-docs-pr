@@ -4,7 +4,7 @@ description: Learn how to automatically generate a large Hamiltonian using the B
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
 no-loc: ['Q#', '$$v']
 ---

@@ -6,7 +6,7 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc: ['Q#', '$$v']
 ---
 

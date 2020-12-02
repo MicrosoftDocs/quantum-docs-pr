@@ -4,6 +4,7 @@ description: Quick reference page for IQ# magic commands with Q# Jupyter Noteboo
 author: gillenhaalb
 ms.author:  a-gibec
 ms.date: 03/05/2020
+ms.topic: reference
 uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc: ['Q#', '$$v']
 ---

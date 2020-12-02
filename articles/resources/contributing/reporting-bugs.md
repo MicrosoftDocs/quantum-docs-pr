@@ -4,7 +4,7 @@ description: Learn how to report bugs or issues with the Microsoft Quantum Devel
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.reporting
 no-loc: ['Q#', '$$v']
 ---

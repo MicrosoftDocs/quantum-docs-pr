@@ -5,7 +5,7 @@ author: bradben
 uid: microsoft.quantum.more-information
 ms.author: v-benbra
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc: ['Q#', '$$v']
 ---
 

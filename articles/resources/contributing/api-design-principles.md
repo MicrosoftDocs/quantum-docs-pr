@@ -4,7 +4,7 @@ description: Q# API Design Principles
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.api-design
 no-loc: ['Q#', '$$v']
 ---

@@ -4,7 +4,7 @@ description: Learn the basic concepts of designing circuit models for the quantu
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/17/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.design
 no-loc: ['Q#', '$$v']
 ---

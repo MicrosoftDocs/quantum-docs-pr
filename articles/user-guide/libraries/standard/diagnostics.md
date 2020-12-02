@@ -4,7 +4,7 @@ description: Learn about the diagnostic functions and operations in the Q# stand
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad 
-ms.topic: article
+ms.topic: conceptual
 no-loc: ['Q#', '$$v']
 ---
 

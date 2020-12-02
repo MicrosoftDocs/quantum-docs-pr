@@ -4,7 +4,7 @@ description: Learn how to contribute conceptual or API content to the Microsoft 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.docs
 no-loc: ['Q#', '$$v']
 ---

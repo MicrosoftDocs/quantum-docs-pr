@@ -4,8 +4,7 @@ description: Learn how to set up the Microsoft Quantum Development Kit for diffe
 author: bradben
 ms.author: v-benbra
 ms.date: 5/8/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install
 no-loc: ['Q#', '$$v']
 ---

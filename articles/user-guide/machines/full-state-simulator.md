@@ -4,7 +4,7 @@ description: Learn how to run your Q# programs on the Microsoft Quantum Developm
 author: anpaz-msft
 ms.author: anpaz
 ms.date: 06/26/2020 
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.full-state-simulator
 no-loc: ['Q#', '$$v']
 ---

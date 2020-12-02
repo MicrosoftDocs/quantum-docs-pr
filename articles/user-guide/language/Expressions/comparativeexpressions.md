@@ -4,7 +4,7 @@ description: Learn about equality comparison expressions in the Q# programming l
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.comparativeexpressions
 no-loc: ['Q#', '$$v']
 ---

@@ -4,7 +4,7 @@ description: Learn about the intrinsic operations and functions in the QDK, incl
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc: ['Q#', '$$v']
 ---

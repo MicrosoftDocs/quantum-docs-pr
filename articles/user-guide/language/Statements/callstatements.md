@@ -4,7 +4,7 @@ description: Learn about different ways to call operators and functions in the Q
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.callstatements
 no-loc: ['Q#', '$$v']
 ---

@@ -4,7 +4,7 @@ description: Learn about visibility of local variables in the Q# programming lan
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.bindingscopes
 no-loc: ['Q#', '$$v']
 ---

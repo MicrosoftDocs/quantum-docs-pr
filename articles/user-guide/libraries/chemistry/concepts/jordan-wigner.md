@@ -4,7 +4,7 @@ description: Learn about the Jordan-Wigner Representation, which maps Hamiltonia
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc: ['Q#', '$$v']
 ---

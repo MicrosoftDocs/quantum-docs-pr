@@ -4,7 +4,7 @@ description: Allows setting or querying configuration options.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.config
 ms.author: ryansha
-ms.date: 11/25/2020
+ms.date: 12/02/2020
 ms.topic: article
 ---
 

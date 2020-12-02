@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Optimization.UnivariateOptimizationResult
 title: UnivariateOptimizationResult user defined type
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 12/2/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Optimization

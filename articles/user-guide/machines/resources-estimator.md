@@ -1,7 +1,7 @@
 ---
 title: Quantum resources estimator - Quantum Development Kit
 description: Learn about the Microsoft QDK resources estimator, which estimates the resources required to run a given instance of a Q# operation on a quantum computer.
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz 
 ms.date: 06/26/2020
 ms.topic: conceptual

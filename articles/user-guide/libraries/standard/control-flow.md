@@ -8,11 +8,6 @@ ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: conceptual
 no-loc: ['Q#', '$$v']
-# Use only one of the following. Use ms.service for services, ms.prod for on-prem. Remove the # before the relevant field.
-# For Quantum products none of these categories have been defined  yet.
-# ms.service: service-name-from-white-list
-# ms.prod: product-name-from-white-list
-# ms.technology: tech-name-from-white-list
 ---
 
 # Higher-Order Control Flow #
@@ -178,7 +173,7 @@ U(1, time / Float(nSteps), target);
 
 At this point, we can now reason about the Trotter–Suzuki expansion *without reference to quantum mechanics at all*.
 The expansion is effectively a very particular iteration pattern motivated by $\eqref{eq:trotter-suzuki-0}$.
-This iteration pattern is implemented by <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA>:
+This iteration pattern is implemented by <xref:Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA>:
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,

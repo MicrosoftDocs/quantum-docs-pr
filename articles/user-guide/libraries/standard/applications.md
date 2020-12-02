@@ -214,7 +214,7 @@ The circuits to achieve such modular arithmetic have been described in the [quan
 While the circuit above corresponds to [Quantum Phase Estimation](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) and explicitly enables order finding, we can reduce the number of qubits required. We can either follow Beauregard's method for order finding as described 
 [on Page 8 of arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), or 
 use one of the phase estimation routines available in Microsoft.Quantum.Characterization. For example, 
-[Robust Phase Estimation](xref:microsoft.quantum.characterization.robustphaseestimation) also uses one extra qubit.
+[Robust Phase Estimation](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) also uses one extra qubit.
 
 ### Factoring ###
 The goal of factoring is to determine the two prime factors of integer $N$, where $N$ is an $n$-bit number.  

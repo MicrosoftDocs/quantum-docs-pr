@@ -134,7 +134,7 @@ This is the square root of the <xref:Microsoft.Quantum.Intrinsic.S> operation, s
 The $T$ gate is in turn implemented by the <xref:Microsoft.Quantum.Intrinsic.T> operation, and has signature `(Qubit => Unit is Adj + Ctl)`, indicating that it is a unitary operation on a single-qubit.
 
 Even though this is in principle sufficient to describe any arbitrary single-qubit operation, different target machines may have more efficient representations for rotations about Pauli operators, such that the prelude includes a variety of ways to convienently express such rotations.
-The most basic of these is the <xref:Microsoft.Quantum.Intrinsic.r> operation, which implements a rotation around a specified Pauli axis,
+The most basic of these is the <xref:Microsoft.Quantum.Intrinsic.R> operation, which implements a rotation around a specified Pauli axis,
 \begin{equation}
     R(\sigma, \phi) \mathrel{:=}
     \exp(-i \phi \sigma / 2),
@@ -145,7 +145,7 @@ We can partially apply $\sigma$ and $\phi$ to obtain an operation whose type is 
 For example, `R(PauliZ, PI() / 4, _)` has type `(Qubit => Unit is Adj + Ctl)`.
 
 > [!NOTE]
-> The <xref:Microsoft.Quantum.Intrinsic.r> operation divides the input angle by 2 and multiplies it by -1.
+> The <xref:Microsoft.Quantum.Intrinsic.R> operation divides the input angle by 2 and multiplies it by -1.
 > For $Z$ rotations, this means that the $\ket{0}$ eigenstate is rotated by $-\phi / 2$ and the
 > $\ket{1}$ eigenstate is rotated by $\phi / 2$, so that the $\ket{1}$ eigenstate is rotated by $\phi$
 > relative to the $\ket{0}$ eigenstate.
@@ -277,7 +277,7 @@ First, since performing single-qubit measurements is quite common, the prelude d
 The <xref:Microsoft.Quantum.Intrinsic.M> operation measures the Pauli $Z$ operator on a single qubit, and has signature `(Qubit => Result)`.
 `M(q)` is equivalent to `Measure([PauliZ], [q])`.
 
-The <xref:microsoft.quantum.measurement.MultiM> measures the Pauli $Z$ operator *separately* on each of an array of qubits, returning the *array* of `Result` values obtained for each qubit.
+The <xref:Microsoft.Quantum.Measurement.MultiM> measures the Pauli $Z$ operator *separately* on each of an array of qubits, returning the *array* of `Result` values obtained for each qubit.
 In some cases this can be optimized. 
 It has signature (`Qubit[] => Result[])`.
 `MultiM(qs)` is equivalent to:

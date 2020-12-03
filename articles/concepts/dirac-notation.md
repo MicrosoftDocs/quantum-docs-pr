@@ -54,6 +54,10 @@ $$
 
 As an example of Dirac notation, consider the braket $\braket{0 | 1}$, which is the inner product between $0$ and $1$.  It can be written as 
 
+|A |B |
+|-- |-- |
+|D | E|
+
 $$
 \braket{0 | 1}=\begin{bmatrix} 1 & 0 \end{bmatrix}\begin{bmatrix}0\\\\ 1\end{bmatrix}=0.
 $$

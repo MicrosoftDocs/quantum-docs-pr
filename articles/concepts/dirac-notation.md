@@ -24,12 +24,6 @@ There are two types of vectors in Dirac notation: the *bra* vector and the *ket*
 More generally, if $\psi$ and $\phi$ are quantum state vectors their inner product is $\braket{\phi|\psi}$ which implies that the probability of measuring the state $\ket{\psi}$ to be $\ket{\phi}$ is $|\braket{\phi|\psi}|^2$.  
 
 The following convention is used to describe the quantum states that encode the values of zero and one (the single-qubit computational basis states):
-
-$$
-\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \ket{0},\qquad
-\begin{bmatrix} 0 \\\\  1 \end{bmatrix} = \ket{1}.
-$$
-
 This says that $\ket{0}$ and $\ket{1}$ are orthogonal vectors, meaning that $\braket{0 | 1} = \braket{1 | 0} =0$.  Also by definition $\braket{0 | 0} = \braket{1 | 1}=1$, which means that the two computational basis vectors can also be called *orthonormal*.
 These orthonormal properties will be useful in the following example. If we have a state $\ket{\psi} = {\frac{3}{5}} \ket{1} + {\frac{4}{5}} \ket{0}$ then because $\braket{1 | 0} =0$ the probability of measuring $1$  is  
 

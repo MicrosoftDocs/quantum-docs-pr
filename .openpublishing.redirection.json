@@ -223,7 +223,7 @@
     {
       "source_path": "articles/techniques/file-structure.md",
       "redirect_url": "/quantum/user-guide/language/programstructure/index",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/language/type-model.md",

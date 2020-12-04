@@ -4,8 +4,8 @@ description: Displays status for a job in the current Azure Quantum workspace.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.status
 ms.author: ryansha
-ms.date: 11/25/2020
-ms.topic: article
+ms.date: 12/04/2020
+ms.topic: managed-reference
 ---
 
 <!--

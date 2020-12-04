@@ -223,7 +223,7 @@
     {
       "source_path": "articles/techniques/file-structure.md",
       "redirect_url": "/quantum/user-guide/language/programstructure/index",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/language/type-model.md",
@@ -243,7 +243,7 @@
     {
       "source_path": "articles/techniques/operations-and-functions.md",
       "redirect_url": "/quantum/user-guide/language/typesystem/operationsandfunctions",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/techniques/going-further.md",
@@ -691,42 +691,42 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "/quantum/user-guide/basics.md",
+      "source_path": "articles/user-guide/basics.md",
       "redirect_url": "/quantum/user-guide/programs",
       "redirect_document_id": true
     },
     {
-      "source_path": "/quantum/user-guide/language/expressions.md",
+      "source_path": "articles/user-guide/language/expressions.md",
       "redirect_url": "/quantum/user-guide/language/expressions/index",
       "redirect_document_id": true
     },
     {
-      "source_path": "/quantum/user-guide/language/types.md",
+      "source_path": "articles/user-guide/language/types.md",
       "redirect_url": "/quantum/user-guide/language/typesystem/index",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
-      "source_path": "/quantum/user-guide/using-qsharp/control-flow.md",
+      "source_path": "articles/user-guide/using-qsharp/control-flow.md",
       "redirect_url": "/quantum/user-guide/language/statements/iterations",
       "redirect_document_id": true
     },
     {
-      "source_path": "/quantum/user-guide/using-qsharp/file-structure.md",
+      "source_path": "articles/user-guide/using-qsharp/file-structure.md",
       "redirect_url": "/quantum/user-guide/language/programstructure/index",
       "redirect_document_id": true
     },
     {
-      "source_path": "/quantum/user-guide/using-qsharp/operations-functions.md",
+      "source_path": "articles/user-guide/using-qsharp/operations-functions.md",
       "redirect_url": "/quantum/user-guide/language/typesystem/operationsandfunctions",
       "redirect_document_id": true
     },
     {
-      "source_path": "/quantum/user-guide/using-qsharp/variables.md",
+      "source_path": "articles/user-guide/using-qsharp/variables.md",
       "redirect_url": "/quantum/user-guide/language/typesystem/index",
       "redirect_document_id": true
     },
     {
-      "source_path": "/quantum/user-guide/using-qsharp/working-with-qubits.md",
+      "source_path": "articles/user-guide/using-qsharp/working-with-qubits.md",
       "redirect_url": "/quantum/user-guide/language/typesystem/quantumdatatypes",
       "redirect_document_id": true
     }

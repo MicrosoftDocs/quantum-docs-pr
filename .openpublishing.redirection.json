@@ -243,7 +243,7 @@
     {
       "source_path": "articles/techniques/operations-and-functions.md",
       "redirect_url": "/quantum/user-guide/language/typesystem/operationsandfunctions",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/techniques/going-further.md",
@@ -703,7 +703,7 @@
     {
       "source_path": "articles/user-guide/language/types.md",
       "redirect_url": "/quantum/user-guide/language/typesystem/index",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "articles/user-guide/using-qsharp/control-flow.md",

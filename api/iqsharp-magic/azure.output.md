@@ -4,7 +4,7 @@ description: Displays results for a job in the current Azure Quantum workspace.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.output
 ms.author: ryansha
-ms.date: 11/25/2020
+ms.date: 12/04/2020
 ms.topic: article
 ---
 

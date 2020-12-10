@@ -26,7 +26,7 @@ Any searching task can be mathematically formulated with an abstract function $f
 
 ## Grover's algorithm task
 
-You are given a classical function $f(x):\\{0,1\\}^N \rightarrow\\{0,1\\}$. The task solved by Grover's algorithm is to find an input $x_0$ for which $f(x_0)=1$.
+You are given a classical function $f(x):\\{0,1\\}^n \rightarrow\\{0,1\\}$. The task solved by Grover's algorithm is to find an input $x_0$ for which $f(x_0)=1$.
 
 ## Overview of the process
 
@@ -38,7 +38,7 @@ To implement Grover's algorithm to solve a problem you need to:
 
 ## Quick overview of Grover's algorithm
 
-Suppose we have $2^{n-1}<N\leq2^n$ eligible items for the search task and we index them by assigning each item a integer from $0$ to
+Suppose we have $N=2^n$ eligible items for the search task and we index them by assigning each item a integer from $0$ to
 $N-1$. The steps of the algorithm are:
 
 1. Start with a register of $n$ qubits initialized in the state $\ket{0}$ by applying $H$ to each qubit of the register.
@@ -73,7 +73,7 @@ operation ReflectAboutUniform(inputQubits : Qubit[]) : Unit {
 }
 ```
 
-In this operation we use the [within-apply](microsoft.quantum.qsharp.conjugations) statement that implements a the
+In this operation we use the [within-apply](microsoft.quantum.qsharp.conjugations) statement that implements the
 conjugation operations that occurs in the steps of the Grover's diffusion
 operation.
 
@@ -90,8 +90,8 @@ the API documentation:
 
 A good exercise to understand the code and the operations is to check with pen
 and paper that the operation `ReflectAboutUniform` applies the Grover's
-diffusion operation. To see it note that in `Controlled Z(Most(inputQubits),Tail(inputQubits))`, `Z` only has an effect different than
-the identity and only if all qubits are in the state $\ket{1}$.
+diffusion operation. To see it note that in `Controlled Z(Most(inputQubits),Tail(inputQubits))` only has an effect different than
+the identity if and only if all qubits are in the state $\ket{1}$.
 
 The operation is called `ReflectAboutUniform` because it can be geometrically
 interpreted as a reflection in the ket space about the uniform superposition
@@ -103,11 +103,9 @@ Grover's search has an optimal number of iterations that yields the highest prob
 
 $$N_{\text{optimal}}\approx\frac{\pi}{4}\sqrt{\frac{N}{M}}$$
 
-Continuing to iterate past that number starts reducing that probability until we reach nearly-zero success probability on iteration $2 N_{\text{optimal}}$. After that, the probability grows again and approaches 100% on iteration $3 N_{\text{optimal}}$, and so on.
+Continuing to iterate past that number starts reducing that probability until we reach nearly-zero success probability on iteration $2 N_{\text{optimal}}$. After that, the probability grows again and util $3 N_{\text{optimal}}$ and so on.
 
-In practical applications, you don't usually know how many solutions your problem has before you solve it.
-
-An efficient strategy to handle this issue is to gradually increase the iteration number (for example: $2, 4, 8, 16, ..., 2^n$) and it will still find the solution with an average number of iterations around $\sqrt{\frac{N}{M}}$.
+In practical applications, you don't usually know how many solutions your problem has before you solve it. An efficient strategy to handle this issue is to gradually increase the iteration number (for example: $2, 4, 8, 16, ..., 2^n$) and it will still find the solution with an average number of iterations around $\sqrt{\frac{N}{M}}$.
 
 ### Complete Grover's operation
 
@@ -117,7 +115,7 @@ Now we are ready to write the full operation a Grover's search. It will have thr
 - An operation `phaseOracle : ((Qubit[]) => Unit is Adj` that represents the phase oracle for the Grover's task. This operation applies an unitary transformation over a generic qubit register.
 - An integer `iterations : Int` to represent the iterations of the algorithm.
 
-```
+```qsharp
 operation RunGroversSearch(register : Qubit[], phaseOracle : ((Qubit[]) => Unit is Adj), iterations : Int) : Unit {
     // Prepare register into uniform superposition.
     ApplyToEach(H, register);
@@ -130,6 +128,8 @@ operation RunGroversSearch(register : Qubit[], phaseOracle : ((Qubit[]) => Unit 
     }
 }
 ```
+
+This code is generic - it can be used to solve any search problem. We pass the quantum oracle - the only operation that relies on the knowledge of the problem instance we want to solve - as a parameter to the search code.
 
 ## Implement the oracle
 
@@ -147,9 +147,11 @@ However, there are some guidelines that might help you to translate your
 function $f(x)$ into a quantum oracle:
 
 1. **Break down the classical function into small building blocks that are easy to implement.** For example, you can try
-   to decompose your function $f(x)$ into a series of arithmetic operations or boolean logical gates.
-1. **Use the higher-level building blocks implemented by Q# library operations to implement the intermediate operations.** For instance,
-   if you decomposed your function into a combination of simple arithmetic operations, you can use the [Numerics library](xref:microsoft.quantum.arithmetic) to implement the intermediate operations. The following equivalence table might result you useful to implement boolean functions in Q#.
+   to decompose your function $f(x)$ into a series of arithmetic operations or boolean logic gates.
+1. **Use the higher-level building blocks of the Q# library operations to implement the intermediate operations.** For instance,
+   if you decomposed your function into a combination of simple arithmetic operations, you can use the [Numerics library](xref:microsoft.quantum.arithmetic) to implement the intermediate operations. 
+
+The following equivalence table might result you useful to implement boolean functions in Q#.
 
 | Classical logic gate | Q# operation        |
 |----------------|--------------------------|
@@ -158,6 +160,9 @@ function $f(x)$ into a quantum oracle:
 | $AND$          | `CCNOT` with an auxiliary qubit|
 
 ### Example: Quantum operation to check if a number is a divisor
+
+> [!IMPORTANT]
+> In this tutorial we are going to factorize a number using Grover's search algorithm as a didatic example to show how to translate a simple mathematical problem into a Grover's task. However, **Grover's algorithm is NOT an efficient algorithm to solve the integer factorization problem**. To explore a quantum algorithm that does solve the integer factorization problem faster than any classical algorithm check the [**Shor's algorithm** sample](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/integer-factorization).
 
 As an example, let's see how we would express the function $f_M(x)=1[r]$ of the factoring problem as quantum operation in Q#.
 

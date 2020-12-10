@@ -371,12 +371,98 @@ dotnet build
 For subsequent runs, there is no need to build it again. To run it, type the following command and press enter:
 
 ```Command line
-dotnet run --no-build --number 33
+dotnet run --no-build --number 21
 ```
 
 Pressing enter should observe something like:
 
 ```Command line
-The number 11 is a factor of 33.
+The number 7 is a factor of 21.
 ```
 
+## Extra: check the statistics with Python
+
+How can you check that the algorithm is behaving correctly? For example, if we substitute the Grover's search by a random number generator in the code above after ~ $N$ attempts it will find a factor.
+
+Let's write a small Python script to check that program is working as it should. 
+
+First, we are going to modify slightly the code to get rid off the RUS loop so it outputs the first measurement after the Grover's search:
+
+```qsharp
+...
+
+@EntryPoint()
+operation FactorizeWithGrovers2(number : Int) : Int {
+
+        let markingOracle = markingDivisor(number, _, _);
+        let phaseOracle = ApplyMarkingOracleAsPhaseOracle(markingOracle, _);
+        let size = BitSizeI(number);
+        let nSolutions = 4;
+        let nIterations = Round(PI() / 4.0 * Sqrt(IntAsDouble(size) / IntAsDouble(nSolutions)));
+
+        using ((register) = Qubit[size] ){
+            RunGroversSearch(register, phaseOracle, nIterations);
+            let res = MultiM(register);
+            return ResultArrayAsInt(res);
+            // Check whether the result is correct.
+        }
+...
+```
+
+Note that we changed the output type from `Unit` to `Int`. This will be useful for the Python program.
+
+The Python program is very simple. It just calls the operation `FactorizeWithGrovers2` several times and plots the results in a histogram.
+
+The code is the following:
+
+```python
+import qsharp
+qsharp.packages.add("Microsoft.Quantum.Numerics")
+qsharp.reload()
+from GroversTutorial import FactorizeWithGrovers2
+import matplotlib.pyplot as plt
+import numpy as np
+
+def main():
+
+    # Instantiate variables
+
+    frequency =  {}
+    N_Experiments = 1000
+    results = []
+    number = 21
+
+    # Run N_Experiments times the Q# operation.
+    for i in range(N_Experiments):
+        print(f'Experiment: {i} of {N_Experiments}')
+        results.append(FactorizeWithGrovers.simulate(number = number))
+
+    # Store the results in a dictionary
+    for i in results:
+        if i in frequency:c
+            frequency[i]=frequency[i]+1
+        else:
+            frequency[i]=1
+
+    # Sort and print the results
+    frequency = dict(reversed(sorted(frequency.items(), key=lambda item: item[1])))
+    print('Output,  Frequency' )
+    for k, v in frequency.items():
+        print(f'{k:<8} {v}')
+    
+    # Plot an histogram with the results
+    plt.bar(frequency.keys(), frequency.values())
+    plt.xlabel("Output")
+    plt.ylabel("Frequency of the outputs")
+    plt.title("Outputs for Grover's factoring. N=21, 1000 iterations")
+    plt.xticks(np.arange(1, 33, 2.0))
+    plt.show()
+
+if __name__ == "__main__":
+    main()
+
+```
+
+The program generates the following histogram:
+
+![alt_text=Histogram with the results of running several time the Grover's algorithm](~/media/grovers-histogram.png)

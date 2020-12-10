@@ -225,7 +225,7 @@ operation markingDivisor (
 
 ### Transform the operation into a phase oracle
 
-The operation `markingDivisor` is what's known as a *marking oracle*, since it marks the valid items with an entangled auxiliar qubit (`target`). However, Grover's algorithm needs a *phase oracle*, this is, an oracle that applies a conditional phase shift of $-1$ for the solution items. But don't panic, the operation above isn't work in vain. It's very easy to switch from one to another with Q#.
+The operation `markingDivisor` is what's known as a *marking oracle*, since it marks the valid items with an entangled auxiliary qubit (`target`). However, Grover's algorithm needs a *phase oracle*, this is, an oracle that applies a conditional phase shift of $-1$ for the solution items. But don't panic, the operation above isn't work in vain. It's very easy to switch from one to another with Q#.
 
 We can apply any marking oracle as a phase oracle with the following operation:
 
@@ -386,7 +386,8 @@ How can you check that the algorithm is behaving correctly? For example, if we s
 
 Let's write a small Python script to check that program is working as it should.
 
-> [!TIP] If you need help for running Q# operations within Python you can take a look to our [guide to use Python as a host program for Q#](xref:microsoft.quantum.guide.host-programs) and the [installation guide for Python](xref:microsoft.quantum.install.python).
+> [!TIP]
+> If you need help for running Q# operations within Python you can take a look to our [guide to use Python as a host program for Q#](xref:microsoft.quantum.guide.host-programs) and the [installation guide for Python](xref:microsoft.quantum.install.python).
 
 First, we are going to modify slightly the code to get rid of the RUS loop so it outputs the first measurement after the Grover's search:
 
@@ -428,7 +429,6 @@ import numpy as np
 def main():
 
     # Instantiate variables
-
     frequency =  {}
     N_Experiments = 1000
     results = []

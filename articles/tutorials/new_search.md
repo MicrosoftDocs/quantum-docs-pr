@@ -84,7 +84,7 @@ operation.
 You can check what each of the operations and functions used is by looking into
 the API documentation:
 
-- [`ApplyToEachA`](xref:microsoft.quantum.canon.applytoeacha)
+- [`ApplyToEachA`](xref:Microsoft.Quantum.Canon.ApplyToEachA)
 - [`Most`](xref:microsoft.quantum.arrays.most)
 - [`Tail`](xref:microsoft.quantum.arrays.tail)
 

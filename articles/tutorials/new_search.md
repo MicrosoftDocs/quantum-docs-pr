@@ -382,11 +382,11 @@ The number 7 is a factor of 21.
 
 ## Extra: check the statistics with Python
 
-How can you check that the algorithm is behaving correctly? For example, if we substitute the Grover's search by a random number generator in the code above after ~ $N$ attempts it will find a factor.
+How can you check that the algorithm is behaving correctly? For example, if we substitute the Grover's search by a random number generator in the code above after ~ $N$ attempts it will also find a factor.
 
-Let's write a small Python script to check that program is working as it should. 
+Let's write a small Python script to check that program is working as it should.
 
-First, we are going to modify slightly the code to get rid off the RUS loop so it outputs the first measurement after the Grover's search:
+First, we are going to modify slightly the code to get rid of the RUS loop so it outputs the first measurement after the Grover's search:
 
 ```qsharp
 ...
@@ -466,3 +466,9 @@ if __name__ == "__main__":
 The program generates the following histogram:
 
 ![alt_text=Histogram with the results of running several time the Grover's algorithm](~/media/grovers-histogram.png)
+
+As you can see in the histogram, the algorithm outputs the solutions to the search problem (1, 3, 7 and 21) with much higher probability than the non-solutions. You can think of Grover's algorithm as a quantum random generator that is purposefully biased towards those indexes that are a solutions of the search problem.
+
+## Next steps
+
+Now that you now how to implement Grover's algorithm, try to transform a mathematical problem into a search task and solve it with Q# and the Grover's algorithm.

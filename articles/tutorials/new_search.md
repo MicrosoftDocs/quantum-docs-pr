@@ -73,7 +73,7 @@ operation ReflectAboutUniform(inputQubits : Qubit[]) : Unit {
 }
 ```
 
-In this operation we use the [within-apply](microsoft.quantum.qsharp.conjugations) statement that implements the
+In this operation we use the [within-apply](xref:microsoft.quantum.qsharp.conjugations) statement that implements the
 conjugation operations that occurs in the steps of the Grover's diffusion
 operation.
 
@@ -84,9 +84,9 @@ operation.
 You can check what each of the operations and functions used is by looking into
 the API documentation:
 
-- [`ApplyToEachA`](xref:microsoft.quantum.canon.ApplyToEachA)
-- [`Most`](xref:microsoft.quantum.arrays.Most)
-- [`Tail`](xref:microsoft.quantum.arrays.Tail)
+- [`ApplyToEachA`](xref:microsoft.quantum.canon.applytoeacha)
+- [`Most`](xref:microsoft.quantum.arrays.most)
+- [`Tail`](xref:microsoft.quantum.arrays.tail)
 
 A good exercise to understand the code and the operations is to check with pen
 and paper that the operation `ReflectAboutUniform` applies the Grover's
@@ -171,7 +171,7 @@ Classically, we would compute the rest of the division $M/x$ and check if it's e
 - Compute the remainder of the division.
 - Apply a controlled operation over the output bit so that it's `1` if the remainder is `0`.
 
-So we need to calculate a division of two numbers with a quantum operation. Fortunately, you don't need to write the circuit implementing the division from scratch, you can use [`DivideI`](xref:microsoft.quantum.arithmetic.DivideI) operation of the Numerics library instead.
+So we need to calculate a division of two numbers with a quantum operation. Fortunately, you don't need to write the circuit implementing the division from scratch, you can use [`DivideI`](xref:microsoft.quantum.arithmetic.dividei) operation of the Numerics library instead.
 
 If we look into the description of `DivideI` we see that it needs three qubit registers, the $n$-bit dividend `xs`, the $n$-bit divisor `ys` and the
 $n$-bit `result` that must be initialized in the state `Zero`. The operation is `Adj + Ctl`, so we can conjugate it and use it in *within-apply* statements. Also, in the description it says that the dividend in the input register `xs` is replaced by the remainder. This is perfect since we are interested exclusively in the remainder, and not in the result of the operation.
@@ -249,9 +249,9 @@ This famous transformation is often known as the *phase kickback* and it's widel
 
 ## Factoring numbers with a Grover's search
 
-Now we have all the ingredients to implement the Grover's search algorithm to solve a mathematical problem. We just need to wrap-up everything. 
+Now we have all the ingredients to implement the Grover's search algorithm to solve a mathematical problem. We just need to wrap-up everything.
 
-Let's use the program to find a factor of *33*. To simplify the code let's assume that we know the number $M$ of valid items. In this case $M=4$, since there are two factors, $3$ and $11$, plus $1$ and $33$ itself.
+Let's use the program to find a factor of 21. To simplify the code let's assume that we know the number $M$ of valid items. In this case $M=4$, since there are two factors, 3 and 7, plus 1 and 21 itself.
 
 The code would be:
 
@@ -385,6 +385,8 @@ The number 7 is a factor of 21.
 How can you check that the algorithm is behaving correctly? For example, if we substitute the Grover's search by a random number generator in the code above after ~ $N$ attempts it will also find a factor.
 
 Let's write a small Python script to check that program is working as it should.
+
+> [!TIP] If you need help for running Q# operations within Python you can take a look to our [guide to use Python as a host program for Q#](xref:microsoft.quantum.guide.host-programs) and the [installation guide for Python](xref:microsoft.quantum.install.python).
 
 First, we are going to modify slightly the code to get rid of the RUS loop so it outputs the first measurement after the Grover's search:
 

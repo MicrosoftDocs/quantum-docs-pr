@@ -97,7 +97,39 @@ The operation is called `ReflectAboutUniform` because it can be geometrically
 interpreted as a reflection in the ket space about the uniform superposition
 state.
 
--------------------------------------------------------------TODO-------------------------------------------------------------
+### Number of iterations
+
+Grover's search has an optimal number of iterations that yields the highest probability of measuring a valid output. If the problem has $N$ possible eligible items, and $M$ of them are solutions to the problem, the optimal number of iterations is:
+
+$$N_{\text{optimal}}\approx\frac{\pi}{4}\sqrt{\frac{N}{M}}$$
+
+Continuing to iterate past that number starts reducing that probability until we reach nearly-zero success probability on iteration $2 N_{\text{optimal}}$. After that, the probability grows again and approaches 100% on iteration $3 N_{\text{optimal}}$, and so on.
+
+In practical applications, you don't usually know how many solutions your problem has before you solve it.
+
+An efficient strategy to handle this issue is to gradually increase the iteration number (for example: $2, 4, 8, 16, ... $) and it will still find the solution with an average number of iterations around $\sqrt{\frac{N}{M}}$.
+
+### Complete Grover's operation
+
+Now we are ready to write the full operation a Grover's search. It will have three inputs:
+
+- A qubit array `register : Qubit[]` that should be initialized in the all `Zero` state. This register will encode the tentative solution to the search problem. After the operation it will be measured.
+- An operation `phaseOracle : ((Qubit[]) => Unit is Adj` that represents the phase oracle for the Grover's task. This operation applies an unitary transformation over a generic qubit register.
+- An integer `iterations : Int` to represent the iterations of the algorithm.
+
+```
+operation RunGroversSearch(register : Qubit[], phaseOracle : ((Qubit[]) => Unit is Adj), iterations : Int) : Unit {
+    // Prepare register into uniform superposition.
+    ApplyToEach(H, register);
+    // Start Grover's loop.
+    for (_ in 1 .. iterations) {
+        // Apply phase oracle for the task.
+        phaseOracle(register);
+        // Apply Grover's diffusion operation.
+        ReflectAboutUniform(register);
+    }
+}
+```
 
 ## Implement the oracle
 
@@ -129,7 +161,7 @@ function $f(x)$ into a quantum oracle:
 
 As an example, let's see how we would express the function $f_M(x)=1[r]$ of the factoring problem as quantum operation in Q#.
 
-Classically, we would compute the rest of the division $M/x$ and check if it's equal to zero. If it is, the program outputs `1` and if it's not, the program outpus `0`. We need to:
+Classically, we would compute the rest of the division $M/x$ and check if it's equal to zero. If it is, the program outputs `1` and if it's not, the program outputs `0`. We need to:
 
 - Compute the remainder of the division.
 - Apply a controlled operation over the output bit so that it's `1` if the remainder is `0`.
@@ -141,10 +173,14 @@ $n$-bit `result` that must be initialized in the state `Zero`. The operation is 
 
 We can build then a quantum operation that does the following:
 
-- Takes three inputs:
-  - The dividend `number`: `Int`.
-  - A qubit array encoding the divisor `divisorRegister : Qubit[]` that might be in a superposition state.
-  - A target qubit `target : Qubit` that represents the output of $f_M(x)$.
+1. Takes three inputs:
+   - The dividend `number`: `Int`, this is the $M$ of $f_M(x)$.
+   - A qubit array encoding the divisor `divisorRegister : Qubit[]`, this is, $x$, that might be in a superposition state.
+   - A target qubit `target : Qubit` that flips if the output of $f_M(x)$ is $1$.
+1. Calculates the division $M/x$ using only reversible quantum operations, and flips the state of `target` if and only if the remainder is zero.
+1. Reverts all the operations except the flipping of `target` to leave the used auxiliary qubits in the zero state without introducing any irreversible operation like measurement. This step is important to preserve entanglement and superposition during the process.
+
+The code to implement this quantum operation is:
 
 ```qsharp
 operation markingDivisor (
@@ -161,7 +197,7 @@ operation markingDivisor (
         let ys = LittleEndian(divisorRegister);
         let result = LittleEndian(resultQubits);
 
-        // Start a within-apply statement to perform the opearion.
+        // Start a within-apply statement to perform the operation.
         within{
             // Encode the dividend in the register.
             ApplyXorInPlace(dividend, xs);
@@ -179,8 +215,9 @@ operation markingDivisor (
 }
 ```
 
-If the algorithm calls for a phase oracle, transform the marking oracle into a phase oracle.
-This step uses a standard trick called phase kickback: that is, applying a marking oracle to an input array of qubits and a target qubit in a particular state will have the same effect on the input array as applying a phase oracle to it.
+> [!NOTE]
+> We take advantage of the statement *within-apply* to achieve the step 3. Alternatively we could write explicitly the adjoints of each of the operations inside the `within` block after the controlled flipping of `target`. The *within-apply* statement does it for us, making the code more readable and short. One of the main goals of Q# is to make quantum programs easy to write and read.
+
 
 
 <!-- Any searching task can be mathematically formulated with an abstract function $f(x)$ that accepts search items $x$. If the item $x$ is a solution for the search task, then $f(x)=1$. If the item $x$ isn't a solution, then $f(x)=0$.

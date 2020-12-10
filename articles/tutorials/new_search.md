@@ -38,7 +38,7 @@ To implement Grover's algorithm to solve a problem you need to:
 
 ## Quick overview of Grover's algorithm
 
-Suppose we have $N=2^n$ eligible items for the search task and we index them by assigning each item a integer from $0$ to 
+Suppose we have $2^{n-1}<N\leq2^n$ eligible items for the search task and we index them by assigning each item a integer from $0$ to
 $N-1$. The steps of the algorithm are:
 
 1. Start with a register of $n$ qubits initialized in the state $\ket{0}$ by applying $H$ to each qubit of the register.
@@ -55,9 +55,9 @@ $N-1$. The steps of the algorithm are:
 
 Now let's see how to implement the code in Q#.
 
-### Grover's difussion operator
+### Grover's diffusion operator
 
-First, we are going to write an operation that applies the steps b., c. and d. of the loop. These steps
+First, we are going to write an operation that applies the steps **b**, **c** and **d** of the loop. These steps
 are sometimes known as the Grover's diffusion operation.
 
 ```qsharp
@@ -73,7 +73,7 @@ operation ReflectAboutUniform(inputQubits : Qubit[]) : Unit {
 }
 ```
 
-In this operation we use the *within-apply* statement that implements a the
+In this operation we use the [within-apply](microsoft.quantum.qsharp.conjugations) statement that implements a the
 conjugation operations that occurs in the steps of the Grover's diffusion
 operation.
 
@@ -91,7 +91,7 @@ the API documentation:
 A good exercise to understand the code and the operations is to check with pen
 and paper that the operation `ReflectAboutUniform` applies the Grover's
 diffusion operation. To see it note that in `Controlled Z(Most(inputQubits),Tail(inputQubits))`, `Z` only has an effect different than
-the identity and only if all qubits are in the state `\ket{1}`.
+the identity and only if all qubits are in the state $\ket{1}$.
 
 The operation is called `ReflectAboutUniform` because it can be geometrically
 interpreted as a reflection in the ket space about the uniform superposition
@@ -107,7 +107,7 @@ Continuing to iterate past that number starts reducing that probability until we
 
 In practical applications, you don't usually know how many solutions your problem has before you solve it.
 
-An efficient strategy to handle this issue is to gradually increase the iteration number (for example: $2, 4, 8, 16, ... $) and it will still find the solution with an average number of iterations around $\sqrt{\frac{N}{M}}$.
+An efficient strategy to handle this issue is to gradually increase the iteration number (for example: $2, 4, 8, 16, ..., 2^n$) and it will still find the solution with an average number of iterations around $\sqrt{\frac{N}{M}}$.
 
 ### Complete Grover's operation
 

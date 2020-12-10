@@ -387,7 +387,7 @@ How can you check that the algorithm is behaving correctly? For example, if we s
 Let's write a small Python script to check that program is working as it should.
 
 > [!TIP]
-> If you need help for running Q# operations within Python you can take a look to our [guide to use Python as a host program for Q#](xref:microsoft.quantum.guide.host-programs) and the [installation guide for Python](xref:microsoft.quantum.install.python).
+> If you need help for running Q# operations within Python you can take a look to our [guide to use Python as a host program for Q#](xref:microsoft.quantum.guide.host-programs#python) and the [installation guide for Python](xref:microsoft.quantum.install.python).
 
 First, we are going to modify slightly the code to get rid of the RUS loop so it outputs the first measurement after the Grover's search:
 

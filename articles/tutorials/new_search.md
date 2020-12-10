@@ -247,7 +247,7 @@ operation ApplyMarkingOracleAsPhaseOracle(
 
 This famous transformation is often known as the *phase kickback* and it's widely used in many quantum computing algorithms. You can find a detailed explanation of this technique in the [Microsoft Learn module](https://docs.microsoft.com/learn/modules/solve-graph-coloring-problems-grovers-search/4-implement-quantum-oracle).
 
-### Factoring numbers with a Grover's search
+## Factoring numbers with a Grover's search
 
 Now we have all the ingredients to implement the Grover's search algorithm to solve a mathematical problem. We just need to wrap-up everything. 
 
@@ -376,7 +376,7 @@ dotnet run --no-build --number 33
 
 Pressing enter should observe something like:
 
-```
+```Command line
 The number 11 is a factor of 33.
 ```
 

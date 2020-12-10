@@ -223,11 +223,160 @@ operation markingDivisor (
 > [!NOTE]
 > We take advantage of the statement *within-apply* to achieve the step 3. Alternatively we could write explicitly the adjoints of each of the operations inside the `within` block after the controlled flipping of `target`. The *within-apply* statement does it for us, making the code more readable and short. One of the main goals of Q# is to make quantum programs easy to write and read.
 
+### Transform the operation into a phase oracle
 
+The operation `markingDivisor` is what's known as a *marking oracle*, since it marks the valid items with an entangled auxiliar qubit (`target`). However, Grover's algorithm needs a *phase oracle*, this is, an oracle that applies a conditional phase shift of $-1$ for the solution items. But don't panic, the operation above isn't work in vain. It's very easy to switch from one to another with Q#.
 
-<!-- Any searching task can be mathematically formulated with an abstract function $f(x)$ that accepts search items $x$. If the item $x$ is a solution for the search task, then $f(x)=1$. If the item $x$ isn't a solution, then $f(x)=0$.
+We can apply any marking oracle as a phase oracle with the following operation:
 
-The search problem consists on finding any item $x_0$ such that $f(x_0)=1$. This is, an item $x_0$ that is a solution of the search problem.
+```qsharp
+operation ApplyMarkingOracleAsPhaseOracle(
+    markingOracle : ((Qubit[], Qubit) => Unit is Adj), 
+    register : Qubit[]
+) : Unit is Adj {
+    using (target = Qubit()) {
+        within {
+            X(target);
+            H(target);
+        } apply {
+            markingOracle(register, target);
+        }
+    }
+}
+```
 
-Generally, we don't have access to the internal workings of $f$, but we can ask search queries by trying input items $x$ and observing the output.
- -->
+This famous transformation is often known as the *phase kickback* and it's widely used in many quantum computing algorithms. You can find a detailed explanation of this technique in the [Microsoft Learn module](https://docs.microsoft.com/learn/modules/solve-graph-coloring-problems-grovers-search/4-implement-quantum-oracle).
+
+### Factoring numbers with a Grover's search
+
+Now we have all the ingredients to implement the Grover's search algorithm to solve a mathematical problem. We just need to wrap-up everything. 
+
+Let's use the program to find a factor of *33*. To simplify the code let's assume that we know the number $M$ of valid items. In this case $M=4$, since there are two factors, $3$ and $11$, plus $1$ and $33$ itself.
+
+The code would be:
+
+```qsharp
+namespace GroversTutorial {
+    open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Measurement;
+    open Microsoft.Quantum.Math;
+    open Microsoft.Quantum.Convert;
+    open Microsoft.Quantum.Arithmetic;
+    open Microsoft.Quantum.Arrays;
+
+    @EntryPoint()
+    operation FactorizeWithGrovers(number : Int) : Unit {
+        
+            // Define the oracle that for the factoring problem.
+            let markingOracle = markingDivisor(number, _, _);
+            let phaseOracle = ApplyMarkingOracleAsPhaseOracle(markingOracle, _);
+            // Bit-size of the number to factorize.
+            let size = BitSizeI(number);
+            // Estimate of the number of solutions.
+            let nSolutions = 4;
+            // The number of iterations can be computed using the formula.
+            let nIterations = Round(PI() / 4.0 * Sqrt(IntAsDouble(size) / IntAsDouble(nSolutions)));
+
+            // Initialize the register to run the algorithm
+            using ((register, output) = (Qubit[size], Qubit())){
+                mutable isCorrect = false;
+                mutable answer = 0;
+                // Use a Repeat-Until-Succeed loop to iterate until the solution is valid.
+                repeat {
+                    RunGroversSearch(register, phaseOracle, nIterations);
+                    let res = MultiM(register);
+                    set answer = BoolArrayAsInt(ResultArrayAsBoolArray(res));
+                    // Check that if the result is a solution with the oracle.
+                    markingOracle(register, output);
+                    if (MResetZ(output) == One and answer != 1 and answer != number) {
+                        set isCorrect = true;
+                    }
+                    ResetAll(register);
+                } until (isCorrect);
+
+                // Print out the answer.
+                Message($"The number {answer} is a factor of {number}.");
+            }
+
+    }
+
+    operation markingDivisor (
+        dividend : Int,
+        divisorRegister : Qubit [],
+        target : Qubit
+    ) : Unit is Adj+Ctl {
+        let size = BitSizeI(dividend);
+        using ( (dividendQubits, resultQubits) = (Qubit[size], Qubit[size]) ){
+            let xs = LittleEndian(dividendQubits);
+            let ys = LittleEndian(divisorRegister);
+            let result = LittleEndian(resultQubits);
+            within{
+                ApplyXorInPlace(dividend, xs);
+                DivideI(xs, ys, result);
+                ApplyToEachA(X, xs!);
+            }
+            apply{
+                Controlled X(xs!, target);
+            }
+        }
+    }
+
+    operation ApplyMarkingOracleAsPhaseOracle(
+        markingOracle : ((Qubit[], Qubit) => Unit is Adj), 
+        register : Qubit[]
+    ) : Unit is Adj {
+        using (target = Qubit()) {
+            within {
+                X(target);
+                H(target);
+            } apply {
+                markingOracle(register, target);
+            }
+        }
+    }
+
+    operation RunGroversSearch(register : Qubit[], phaseOracle : ((Qubit[]) => Unit is Adj), iterations : Int) : Unit {
+        ApplyToEach(H, register);
+        for (_ in 1 .. iterations) {
+            phaseOracle(register);
+            ReflectAboutUniform(register);
+        }
+    }
+
+    operation ReflectAboutUniform(inputQubits : Qubit[]) : Unit {
+        within {
+            ApplyToEachA(H, inputQubits);
+            ApplyToEachA(X, inputQubits);
+        } apply {
+            Controlled Z(Most(inputQubits), Tail(inputQubits));
+        }
+    }
+    
+}
+```
+
+### Run it with Visual Studio or Visual Studio Code
+
+The program above will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.
+
+In Visual Studio, simply press Ctrl + F5 to run the script.
+
+In VS Code, build the `Program.qs` the first time by typing the below in the terminal:
+
+```Command line
+dotnet build
+```
+
+For subsequent runs, there is no need to build it again. To run it, type the following command and press enter:
+
+```Command line
+dotnet run --no-build --number 33
+```
+
+Pressing enter should observe something like:
+
+```
+The number 11 is a factor of 33.
+```
+

@@ -4,8 +4,8 @@ description: Lists the Q# operations available in the current session.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.who
 ms.author: ryansha
-ms.date: 11/25/2020
-ms.topic: article
+ms.date: 12/13/2020
+ms.topic: managed-reference
 ---
 
 <!--

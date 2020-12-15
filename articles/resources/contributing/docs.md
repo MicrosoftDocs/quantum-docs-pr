@@ -48,6 +48,19 @@ If you want to include code from the [samples repository](https://github.com/Mic
 This command will import lines 4 to 8 of the [`Game.qs` file from the `chsh-game` sample](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs), marking them as Q# code for the purpose of syntax highlighting.
 Using this command, you can avoid duplicating code between conceptual articles and the samples repository, so that sample code in documentation is always as up to date as possible.
 
+### Contributing image files
+
+**IMPORTANT**: To have the images rendering properly in dark mode you must avoid transparencies.
+
+- For .jpg files. you don't need to do anything as the .jpg format doesn't support transparent elements.
+- For .png files, you must add a white background or change the value of the alpha channel to **100**. The easiest way to do this in Windows is to open the file in **Paint** and save it, overwriting the original file.
+- For .svg files you must add a white rectangle in the lowest layer. You can do this with **Inkscape**:
+  1. Open the .svg file.
+  1. Select the square maker tool and draw a white rectangle on top of the original figure.
+  1. Select the tool **Select and transform objects** by clicking in the dark arrow or pressing **F1**.
+  1. While having the rectangle selected, click the toolbar element **Lower selection to bottom (End)**.
+  1. Adjust the rectangle with your mouse or the arrow keys.
+
 ## Contributing to the API References
 
 To contribute an improvement to the API references, it's most helpful to open a pull request directly on the code being documented.

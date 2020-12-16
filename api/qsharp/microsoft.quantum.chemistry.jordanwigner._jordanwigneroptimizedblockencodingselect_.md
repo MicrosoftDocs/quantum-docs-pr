@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingSelect_
 title: _JordanWignerOptimizedBlockEncodingSelect_ operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 12/16/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner

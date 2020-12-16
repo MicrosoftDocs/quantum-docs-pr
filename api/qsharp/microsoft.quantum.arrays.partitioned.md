@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Partitioned
 title: Partitioned function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 12/16/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays

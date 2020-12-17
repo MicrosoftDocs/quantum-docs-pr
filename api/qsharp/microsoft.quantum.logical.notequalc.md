@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Logical.NotEqualC
 title: NotEqualC function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 12/17/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical

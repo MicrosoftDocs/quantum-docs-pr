@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingByLCU
 title: ApplyBlockEncodingByLCU operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 12/17/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.BigEndian
 title: BigEndian user defined type
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 12/21/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Arithmetic

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation._IdentityTimeDependentGeneratorSystem
 title: _IdentityTimeDependentGeneratorSystem function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 12/21/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.ForEach
 title: ForEach operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 12/21/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arrays

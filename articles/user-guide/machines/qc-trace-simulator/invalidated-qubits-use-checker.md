@@ -4,7 +4,7 @@ description: Learn about the Microsoft QDK invalidated qubits use checker, which
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
 no-loc: ['Q#', '$$v']
 ---
@@ -27,7 +27,7 @@ operation UseReleasedQubit() : Unit {
 }
 ```
 
-When you apply the `H` operation to `q[0]`, it points to an already released qubit, which can cause undefined behavior. When the Invalidated Qubits Use Checker is enabled, it throws the exception `InvalidatedQubitsUseCheckerException` if the program applies an operation to an already released qubit. For more information, see <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException>.
+When you apply the `H` operation to `q[0]`, it points to an already released qubit, which can cause undefined behavior. When the Invalidated Qubits Use Checker is enabled, it throws the exception `InvalidatedQubitsUseCheckerException` if the program applies an operation to an already released qubit. For more information, see <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.InvalidatedQubitsUseCheckerException>.
 
 ## Invoking the invalidated qubits use checker
 
@@ -71,4 +71,4 @@ namespace Quantum.MyProgram
 - The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
 - The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.
 - The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.
-- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException> API reference.
+- The <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.InvalidatedQubitsUseCheckerException> API reference.

@@ -4,7 +4,7 @@ description: Walk through a sample Q# program that estimates the energy level va
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc: ['Q#', '$$v']
 ---

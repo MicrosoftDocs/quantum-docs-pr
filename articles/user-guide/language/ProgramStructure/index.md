@@ -4,7 +4,7 @@ description: Learn how to run a simple program from the command prompt in Q#.
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.programstructure-index
 no-loc: ['Q#', '$$v']
 ---

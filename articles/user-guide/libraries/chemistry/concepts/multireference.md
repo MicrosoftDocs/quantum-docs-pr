@@ -4,7 +4,7 @@ description: Learn about dynamic and non-dynamic correlations in wavefunctions u
 author: guanghaolow
 ms.author: gulow
 ms.date: 05/28/2019
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.multireference
 no-loc: ['Q#', '$$v']
 ---

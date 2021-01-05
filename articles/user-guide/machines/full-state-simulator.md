@@ -1,10 +1,10 @@
 ---
 title: Full state quantum simulator - Quantum Development Kit
 description: Learn how to run your Q# programs on the Microsoft Quantum Development Kit full state simulator.
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020 
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.full-state-simulator
 no-loc: ['Q#', '$$v']
 ---

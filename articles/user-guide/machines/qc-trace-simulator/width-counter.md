@@ -4,7 +4,7 @@ description: Learn about the Microsoft QDK width counter, which uses the Quantum
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc: ['Q#', '$$v']
 ---

@@ -4,8 +4,7 @@ description: Learn how to create a Q# application that runs from the command pro
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.standalone
 no-loc: ['Q#', '$$v']
 ---

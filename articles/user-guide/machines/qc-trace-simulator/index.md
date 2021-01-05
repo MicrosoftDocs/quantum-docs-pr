@@ -5,7 +5,7 @@ description: Learn how to use the Microsoft quantum computer trace simulator to 
 author: vadym-kl 
 ms.author: vadym 
 ms.date: 06/25/2020 
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc: ['Q#', '$$v']
 ---

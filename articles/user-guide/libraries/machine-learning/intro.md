@@ -4,7 +4,7 @@ description: Learn how machine learning is used on quantum systems
 author: alexeib2
 ms.author: alexeib
 ms.date: 11/22/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc: ['Q#', '$$v']
 ---

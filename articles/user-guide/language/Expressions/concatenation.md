@@ -4,7 +4,7 @@ description: Learn about concatenation expressions in the Q# programming languag
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.concatenationexpressions
 no-loc: ['Q#', '$$v']
 ---

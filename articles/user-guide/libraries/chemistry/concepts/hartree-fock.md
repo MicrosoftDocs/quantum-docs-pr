@@ -4,7 +4,7 @@ description: Learn about the Hartree–Fock theory, a simple way to construct th
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.hartreefock
 no-loc: ['Q#', '$$v']
 ---

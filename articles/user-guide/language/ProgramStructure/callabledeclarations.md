@@ -4,7 +4,7 @@ description: Learn how operations and functions, or callables, are declared in t
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.callabledeclarations
 no-loc: ['Q#', '$$v']
 ---

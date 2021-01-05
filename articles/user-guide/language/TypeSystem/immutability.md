@@ -4,7 +4,7 @@ description: Learn about immutability and Q# types.
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.immutability
 no-loc: ['Q#', '$$v']
 ---

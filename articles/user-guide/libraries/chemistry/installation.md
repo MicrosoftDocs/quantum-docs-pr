@@ -4,7 +4,7 @@ description: Learn how to install the Microsoft Quantum chemistry library and us
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.installation
 no-loc: ['Q#', '$$v']
 ---

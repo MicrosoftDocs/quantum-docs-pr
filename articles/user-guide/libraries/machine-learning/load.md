@@ -4,7 +4,7 @@ description: Learn how to load your own dataset to train a classifier model with
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.load
 no-loc: ['Q#', '$$v']
 ---

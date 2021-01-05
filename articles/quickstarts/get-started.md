@@ -5,7 +5,7 @@ description: Learn how to start programming quantum projects in Q# with the Micr
 author: bradben
 ms.author: v-benbra
 ms.date: 9/29/2020
-ms.topic: overview
+ms.topic: quickstart
 no-loc: ['Q#', '$$v']
 ---
 

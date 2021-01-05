@@ -4,7 +4,7 @@ description: Learn how to contribute sample and library code to the Microsoft Qu
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.code
 no-loc: ['Q#', '$$v']
 ---

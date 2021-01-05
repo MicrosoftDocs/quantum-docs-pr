@@ -4,7 +4,7 @@ description: Introduction to the Quantum Machine Learning Package
 author: QuantumWriter
 ms.author: alexeib
 ms.date: 12/5/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machine-learning.concepts.intro
 no-loc: ['Q#', '$$v']
 ---

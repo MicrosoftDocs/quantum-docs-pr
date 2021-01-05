@@ -4,7 +4,7 @@ description: Learn about the latest updates to the Microsoft Quantum Development
 author: bradben
 ms.author: v-benbra
 ms.date: 8/30/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.relnotes
 no-loc: ['Q#', '$$v']
 ---

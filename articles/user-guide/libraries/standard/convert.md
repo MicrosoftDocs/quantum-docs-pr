@@ -4,7 +4,7 @@ description: Learn about common and user-defined type conversion functions in th
 author: cgranade
 uid: microsoft.quantum.libraries.convert
 ms.author: chgranad 
-ms.topic: article
+ms.topic: conceptual
 no-loc: ['Q#', '$$v']
 ---
 

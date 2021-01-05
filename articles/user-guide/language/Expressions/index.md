@@ -4,7 +4,7 @@ description: Learn about the different types of expressions in the Q# programmin
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.expressions-index
 no-loc: ['Q#', '$$v']
 ---

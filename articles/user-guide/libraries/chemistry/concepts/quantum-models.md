@@ -4,7 +4,7 @@ description: Learn how molecular electronic systems are simulated using quantum 
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantummodels
 no-loc: ['Q#', '$$v']
 ---

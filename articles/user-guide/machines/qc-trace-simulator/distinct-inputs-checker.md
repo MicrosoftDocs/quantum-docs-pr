@@ -4,7 +4,7 @@ description: Learn about the Microsoft QDK distinct inputs checker, which uses t
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
 no-loc: ['Q#', '$$v']
 ---
@@ -45,7 +45,7 @@ operation ApplyWithNonDistinctInputs() : Unit {
 ```
 
 Note that `op1` and `op2` are both obtained using partial application and share a qubit. When you call `ApplyBoth` in this example, the result of the operation
-depends on the order of `op1` and `op2` inside `ApplyBoth` - not what you would expect to happen. When you enable the distinct inputs checker, it detects such situations and throws a `DistinctInputsCheckerException`. For more information, see <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> in the Q# API library.
+depends on the order of `op1` and `op2` inside `ApplyBoth` - not what you would expect to happen. When you enable the distinct inputs checker, it detects such situations and throws a `DistinctInputsCheckerException`. For more information, see <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.DistinctInputsCheckerException> in the Q# API library.
 
 ## Invoking the distinct inputs checker
 
@@ -88,4 +88,4 @@ namespace Quantum.MyProgram
 - The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.
 - The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.
 - The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.
-- The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API reference.
+- The <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.DistinctInputsCheckerException> API reference.

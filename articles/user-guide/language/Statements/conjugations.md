@@ -4,7 +4,7 @@ description: Learn about using conjugations in Q# to manage memory in quantum pr
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.conjugations
 no-loc: ['Q#', '$$v']
 ---

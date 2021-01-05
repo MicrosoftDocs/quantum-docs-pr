@@ -4,7 +4,7 @@ description: Learn how to declare specialization to support certain functors in 
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.specializationdeclarations
 no-loc: ['Q#', '$$v']
 ---

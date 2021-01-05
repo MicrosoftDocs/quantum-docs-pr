@@ -4,7 +4,7 @@ description: Learn how to use functors with callables in Q#.
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.functorapplication
 no-loc: ['Q#', '$$v']
 ---

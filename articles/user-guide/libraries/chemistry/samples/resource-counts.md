@@ -4,7 +4,7 @@ description: Learn how to obtain resource estimates using a quantum trace simula
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.resourcecounts
 no-loc: ['Q#', '$$v']
 ---

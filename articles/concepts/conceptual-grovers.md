@@ -29,7 +29,7 @@ Suppose we have $N=2^n$ eligible items for the search task and we index them by 
 $N-1$. Let's assume for the moment that there's only a single item $x_0$ that is a solution for the problem. The steps of the algorithm are:
 
 1. Start with a register of $n$ qubits initialized in the state $\ket{0}$ by applying $H$ to each qubit of the register.
-1. Prepare the register into a uniform superposition: $$|\psi\rangle=\frac{1}{N^{1 / 2}} \sum_{x=0}^{N-1}|x\rangle$$
+1. Prepare the register into a uniform superposition: $$|\text{register}\rangle=\frac{1}{N^{1 / 2}} \sum_{x=0}^{N-1}|x\rangle$$
 1. Apply $N_{\text{optimal}}$ times the following operations to the register:
    1. The phase oracle $O_f$ that applies a conditional phase shift of $-1$ for the solution items.
    1. Apply $H$ to each qubit of the register.
@@ -45,10 +45,10 @@ $N_{\text{optimal}} is the optimal number of iterations that maximizes the likel
 To illustrate the process, let's follow the mathematical transformations of the state of the register for a simple case.
 
 1. We start with the register in the state:
-$$|\text{register}\rangle = \sum_{i\in\{0,1\}^n} |i\rangle$$
+$$|\text{register}\rangle = \sum_{i\in\\{0,1\\}^n} |i\rangle$$
 
 1. After applying $H$ to each qubit the register's state transforms to:
-$$|\text{register}\rangle = \frac{1}{\sqrt{N}} \sum_{\{0,1\}^n}
+$$|\text{register}\rangle = \frac{1}{\sqrt{N}} \sum_{\\{0,1\\}^n}$$
 
 ## Geometrical explanation
 

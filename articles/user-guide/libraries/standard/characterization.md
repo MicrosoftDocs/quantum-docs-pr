@@ -52,7 +52,7 @@ If an input state is provided that is not an eigenstate, which is to say that if
 
 Specifically, a single step of PE performs the following non-unitary transformation on a state
 \begin{align}
-    \sum_j \sqrt{\Pr(\phi\_j)} \ket{\phi\_j} \mapsto \sum\_j\frac{\sqrt{\Pr(\phi\_j)}\sqrt{\Pr(\text{Result}|\phi\_j)}\ket{\phi\_j}}{\sqrt{\Pr(\phi\_j)\sum\_j \Pr(\text{Result}|\phi\_j)}}.
+    \sum_j \sqrt{\Pr(\phi\_j)} \ket{\phi\_j} \mapsto \sum\_j\frac{\sqrt{\Pr(\phi\_j)}\sqrt{\Pr(\text{Result}|\phi\_j)}\ket{\phi\_j}}{\sqrt{\Pr(\phi\_j)\sum\_k \Pr(\text{Result}|\phi\_k)}}.
 \end{align}
 As this process is iterated over multiple `Result` values, eigenstates that do not have maximal values of $\prod_k\Pr(\text{Result}\_k|\phi\_j)$ will be exponentially suppressed.
 As a result, the inference process will tend to converge to states with a single eigenvalue if the experiments are chosen properly.

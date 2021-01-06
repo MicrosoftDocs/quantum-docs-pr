@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IdenticalPointPosFactFxP
 title: IdenticalPointPosFactFxP function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/5/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic

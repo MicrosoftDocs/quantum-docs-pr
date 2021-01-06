@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Environment
 title: Microsoft.Quantum.Environment namespace
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/5/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Environment
 qsharp.summary: These functions provide information about the environment in which the quantum computation is occuring.

@@ -90,6 +90,9 @@ $$
 \end{align}
 $$
 
+> [!NOTE]
+> Note that $Z^{-1}=Z^{\dagger}=Z and therefore Z^{f(0)-f(1)}=Z^{f(1)-f(0)}.$
+
 More generally, both views of oracles can be broadened to represent classical functions which return real numbers instead of only a single bit.
 
 Choosing the best way to implement an oracle depends heavily on how this oracle will be used within a given algorithm.

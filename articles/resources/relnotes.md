@@ -485,14 +485,7 @@ Learn more about the [Quantum Development Kit chemistry library](xref:microsoft.
 
 With the new chemistry library, we are separating out the libraries into a new GitHub repo, [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries).  The samples remain in the repo [Microsoft/Quantum](https://github.com/Microsoft/Quantum).  We welcome contributions to both!
 
-This release includes bug fixes and features for issues reported by the community:
-
-* Intellisense for Q#? ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918)).
-* .qs files ([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049)).
-* Improve error message when curly braces are abbreviated in if statement ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518)).
-* Support tuple deconstruction at mutable (re-)binding ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444)).
-* Error Running Provided BitFlipCode ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
-* H2SimulationGUI displays big peaks sometimes ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34668370)).
+This release includes bug fixes and features for issues reported by the community.
 
 ### Community Contributions
 
@@ -508,15 +501,7 @@ Thank you also to Rohit Gupta ([@guptarohit](https://github.com/guptarohit),[PR 
 
 *Release date: September 10, 2018*
 
-This release includes bug fixes for issues reported by the community. Including:
-
-* Unable to use shift operator ([GitHub](https://github.com/Microsoft/Quantum/issues/75)).
-* `DumpMachine` / `DumpRegister` fails on `QCTraceSimulator` when printing to console ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34709680)).
-* Allow allocating 0 qubits ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34768069-allow-allocating-0-qubits)).
-* `AssertQubitState` requires explicit Complex() call ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34713733-assertqubitstate-requires-explicit-complex-call)).
-* `Measure` operation always returns `One` on macOS ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
-
-Thanks! 
+This release includes bug fixes for issues reported by the community.
 
 ## Version 0.2.1806.3001
 

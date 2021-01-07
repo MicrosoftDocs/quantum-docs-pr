@@ -45,10 +45,12 @@ $N_{\text{optimal}} is the optimal number of iterations that maximizes the likel
 To illustrate the process, let's follow the mathematical transformations of the state of the register for a simple case.
 
 1. We start with the register in the state:
-$$|\text{register}\rangle = \sum_{i\in\\{0,1\\}^n} |i\rangle$$
+$$|\text{register}=|0\rangle$$
 
 1. After applying $H$ to each qubit the register's state transforms to:
-$$|\text{register}\rangle = \frac{1}{\sqrt{N}} \sum_{\\{0,1\\}^n}$$
+$$|\text{register}\rangle = \frac{1}{\sqrt{N}} \sum_{i \in \\{0,1\\}^n}|i\rangle$$
+
+1. 
 
 ## Geometrical explanation
 

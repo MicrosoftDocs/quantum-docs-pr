@@ -469,7 +469,7 @@ The program generates the following histogram:
 
 ![alt_text=Histogram with the results of running several time the Grover's algorithm](~/media/grovers-histogram.png)
 
-As you can see in the histogram, the algorithm outputs the solutions to the search problem (1, 3, 7 and 21) with much higher probability than the non-solutions. You can think of Grover's algorithm as a quantum random generator that is purposefully biased towards those indexes that are a solutions of the search problem.
+As you can see in the histogram, the algorithm outputs the solutions to the search problem (1, 3, 7 and 21) with much higher probability than the non-solutions. You can think of Grover's algorithm as a quantum random generator that is purposefully biased towards those indexes that are a solutions of the search problem. 
 
 ## Next steps
 

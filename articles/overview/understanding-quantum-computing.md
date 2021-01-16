@@ -11,7 +11,7 @@ no-loc: ['Q#', '$$v']
 
 # Understanding quantum computing
 
-Quantum computing uses the principles of quantum mechanics to process information. Because of this, quantum computing requires a different approach than classical computing. One example of this difference is the processor used in quantum computers. Where classical computers use familiar silicon-based chips, quantum computers use quantum systems such as atoms, ions, photons, or electrons. They use their quantum properties to represent bits that can be prepared in different quantum superpositions of 1 and 0.  
+Quantum computing uses the principles of quantum mechanics to process information. Because of this, quantum computing requires a different approach than classical computing. One example of this difference is the processor used in quantum computers. Where classical computers use familiar silicon-based chips, quantum computers use quantum systems(controlling the unique properties and behaviours of quanta) such as atoms, ions, photons, or electrons. Classical computers use binary logic based highs and lows i.e. 1 and 0 respectively. While Quantum computers use their quantum properties to represent bits that can be prepared in different quantum superpositions of 1 and 0.  
 
 The quantum material behaves according to the laws of quantum mechanics, leveraging concepts such as probabilistic computation, superposition, and entanglement. These concepts provide the basis for quantum algorithms that harness the power of quantum computing to solve complex problems. This article describes some of the essential concepts of quantum mechanics on which quantum computing is based.
 
@@ -45,7 +45,7 @@ In addition to this interdependency, particles can maintain this connection even
 
 ### Qubits and probability
 
-Classical computers store and process information in bits, which can have a state of either 1 or 0, but never both. The equivalent in quantum computing is the **qubit**, which represents the state of a quantum particle. Because of superposition, qubits can either be 1 or 0 or anything in between. Depending on its configuration, a qubit has a certain *probability* of collapsing to 1 or 0. The qubit's probability of collapsing one way or the other is determined by **quantum interference**. 
+Classical computers store and process information in bits, which can have a state of either 1 or 0, but never both. The equivalent in quantum computing is the **qubit**, which represents the state of a quantum particle. Because of superposition, qubits can either be 1 or 0 or anything in between. Depending on its configuration, a qubit has a certain *probability* of collapsing to 1 or 0. The qubit's probability of collapsing one way or the other is determined by **quantum interference**.
 
 Remember your friend that was taking your picture? Suppose they have special filters on their camera called *Interference* filters. If they select the *70/30* filter and start taking pictures, in 70% of them you will be facing left, and in 30% you will be facing right. The filter has interfered with the regular state of the camera to influence the probability of its behavior.
 

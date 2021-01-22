@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Sorted
 title: Sorted function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -47,6 +47,10 @@ The array to be sorted.
 ### 'T
 
 The type of each element of `array`.
+
+## Example
+
+The following snippet sorts an array of integers to occur in ascendingorder:```Q#let sortedArray = Sorted(LessThanOrEqualI, [3, 17, 11, -201, -11]);```
 
 ## Remarks
 

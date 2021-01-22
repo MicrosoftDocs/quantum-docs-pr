@@ -123,6 +123,5 @@ operations:
 - {summary: 'Given an array and an operation that is defined for the elements of the
     array, returns a new array that consists of the images of the original array under
     the operation.', uid: Microsoft.Quantum.Arrays.ForEach}
-summary: This namespace contains functions for creating and manipulating arrays of
-  data.
+summary: ''
 uid: Microsoft.Quantum.Arrays

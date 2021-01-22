@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.FlatMapped
 title: FlatMapped function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -50,3 +50,7 @@ The type of `array` elements.
 ### 'TOutput
 
 The `mapper` function returns arrays of this type.
+
+## Example
+
+```Q#let Numbers = SequenceI(1, _); // generates numbers starting from 1let values = FlatMapped(Numbers, [1, 2, 3]);// values = [1, 1, 2, 1, 2, 3]```

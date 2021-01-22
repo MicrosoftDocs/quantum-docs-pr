@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance
 title: AssertQubitIsInStateWithinTolerance operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -50,6 +50,10 @@ Additive tolerance by which actual amplitudes are allowed to deviate from expect
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+```Q#using (qubits = Qubit[2]) {    // Both qubits are initialized as |0〉: a=(1 + 0*i), b=(0 + 0*i)    AssertQubitIsInStateWithinTolerance((Complex(1., 0.), Complex(0., 0.)), qubits[0], 1e-5);    AssertQubitIsInStateWithinTolerance((Complex(1., 0.), Complex(0., 0.)), qubits[1], 1e-5);    Y(qubits[1]);    // Y |0〉 = i |1〉: a=(0 + 0*i), b=(0 + 1*i)    AssertQubitIsInStateWithinTolerance((Complex(0., 0.), Complex(0., 1.)), qubits[1], 1e-5);}```
 
 ## Remarks
 

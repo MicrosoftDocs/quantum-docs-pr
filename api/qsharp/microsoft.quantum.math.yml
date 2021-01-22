@@ -168,5 +168,5 @@ operations:
     \ instead.\n\n", uid: Microsoft.Quantum.Math.RandomReal}
 - {summary: "> [!WARNING]\n> RandomSingleQubitPauli has been deprecated. Please use\
     \ <xref:Microsoft.Quantum.Random.DrawRandomPauli> instead.\n\n", uid: Microsoft.Quantum.Math.RandomSingleQubitPauli}
-summary: This namespace contains classical mathematical functions and data types.
+summary: ''
 uid: Microsoft.Quantum.Math

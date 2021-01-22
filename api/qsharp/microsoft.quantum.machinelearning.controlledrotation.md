@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ControlledRotation
 title: ControlledRotation user defined type
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -41,6 +41,10 @@ The axis for this rotation.
 ### ParameterIndex : [Int](xref:microsoft.quantum.lang-ref.int)
 
 An index into a model parameter vector describing the anglefor this rotation.
+
+## Example
+
+The following represents a rotation about the $X$-axis of the firstqubit in a register, controlled on the second qubit, and with anangle given by the fourth parameter in a sequential model:```Q#let controlledRotation = ControlledRotation(    (0, [1]),    PauliX,    3)```
 
 ## Remarks
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
 title: FastHadamardTransformed function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -36,3 +36,7 @@ Truth table in {-1,1} encoding
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
 
 Spectral coefficients of the function
+
+## Example
+
+```Q#FastHadamardTransformed([1, 1, 1, -1]); // [2, 2, 2, -2]```

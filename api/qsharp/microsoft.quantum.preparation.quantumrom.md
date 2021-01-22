@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.QuantumROM
 title: QuantumROM function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -60,6 +60,10 @@ Array of $N$ coefficients specifying the probability of basis states.Negative n
 ## Output : (([Int](xref:microsoft.quantum.lang-ref.int),([Int](xref:microsoft.quantum.lang-ref.int),[Int](xref:microsoft.quantum.lang-ref.int))),[Double](xref:microsoft.quantum.lang-ref.double),([LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl)
 
 ## First parameterA tuple `(x,(y,z))` where `x = y + z` is the total number of qubits allocated,`y` is the number of qubits for the `LittleEndian` register, and `z` is the Numberof garbage qubits.## Second parameterThe one-norm $\sum_j |\alpha_j|$ of the coefficient array.## Third parameterThe unitary $U$.
+
+## Example
+
+The following code snippet prepares an purification of the $3$-qubit state$\rho=\sum_{j=0}^{4}\frac{|alpha_j|}{\sum_k |\alpha_k|}\ket{j}\bra{j}$, where$\vec\alpha=(1.0,2.0,3.0,4.0,5.0)$, and the error is `1e-3`;```qsharplet coefficients = [1.0,2.0,3.0,4.0,5.0];let targetError = 1e-3;let ((nTotalQubits, (nIndexQubits, nGarbageQubits)), oneNorm, op) = QuantumROM(targetError, coefficients);using (indexRegister = Qubit[nIndexQubits]) {    using (garbageRegister = Qubit[nGarbageQubits]) {        op(LittleEndian(indexRegister), garbageRegister);    }}```
 
 ## References
 

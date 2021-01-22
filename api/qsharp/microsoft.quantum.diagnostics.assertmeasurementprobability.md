@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertMeasurementProbability
 title: AssertMeasurementProbability operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -61,6 +61,10 @@ A message to be reported if the assertion fails.
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+```qsharpusing (register = Qubit()) {    H(register);    AssertProb([PauliZ], [register], One, 0.5,        "Measuring in conjugate basis did not give 50/50 results.", 1e-5);}```
 
 ## Remarks
 

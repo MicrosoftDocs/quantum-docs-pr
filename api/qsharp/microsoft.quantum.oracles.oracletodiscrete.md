@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Oracles.OracleToDiscrete
 title: OracleToDiscrete function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
@@ -36,3 +36,7 @@ The operation to be exponentiated.
 ## Output : [DiscreteOracle](xref:Microsoft.Quantum.Oracles.DiscreteOracle)
 
 An operation partially applied over the "black-box" oracle representing the discrete-time oracle
+
+## Example
+
+`OracleToDiscrete(U)(3, target)` is equivalent to `U(target)` repeated three times.

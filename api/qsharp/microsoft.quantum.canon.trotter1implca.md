@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.Trotter1ImplCA
 title: Trotter1ImplCA operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -55,3 +55,7 @@ A quantum register on which the operations act.
 ### 'T
 
 The type which each time step should act upon; typically, either`Qubit[]` or `Qubit`.
+
+## Example
+
+The following are equivalent:```qsharpop(0, deltaT, target);op(1, deltaT, target);```and```qsharpTrotter1ImplCA((2, op), deltaT, target);```

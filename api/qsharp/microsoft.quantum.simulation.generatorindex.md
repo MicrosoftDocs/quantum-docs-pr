@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.GeneratorIndex
 title: GeneratorIndex user defined type
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -34,6 +34,10 @@ newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 ```
 
 
+
+## Example
+
+Using  <xref:microsoft.quantum.simulation.paulievolutionset>, the operator$\pi X_2 X_5 Y_9$ is represented as:```qsharplet index = GeneratorIndex(([1, 1, 2], [PI()]), [2, 5, 9]);```
 
 ## Remarks
 

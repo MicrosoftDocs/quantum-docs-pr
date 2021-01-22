@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.PurifiedMixedState
 title: PurifiedMixedState function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -43,6 +43,10 @@ Array of $N$ coefficients specifying the probability of basis states.Negative n
 ## Output : [MixedStatePreparation](xref:Microsoft.Quantum.Preparation.MixedStatePreparation)
 
 An operation that prepares $\tilde \rho$ as a purification onto a jointindex and garbage register.
+
+## Example
+
+The following code snippet prepares an purification of the $3$-qubit state$\rho=\sum_{j=0}^{4}\frac{|alpha_j|}{\sum_k |\alpha_k|}\ket{j}\bra{j}$, where$\vec\alpha=(1.0, 2.0, 3.0, 4.0, 5.0)$, and the target error is$10^{-3}$:```Q#let coefficients = [1.0, 2.0, 3.0, 4.0, 5.0];let targetError = 1e-3;let purifiedState = PurifiedMixedState(targetError, coefficients);using (indexRegister = Qubit[purifiedState::Requirements::NIndexQubits]) {    using (garbageRegister = Qubit[purifiedState::Requirements::NGarbageQubits]) {        purifiedState::Prepare(LittleEndian(indexRegister), new Qubit[0], garbageRegister);    }}```
 
 ## Remarks
 

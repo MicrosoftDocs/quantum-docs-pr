@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsA
 title: ApplySeriesOfOpsA operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -50,6 +50,10 @@ Qubit register to be acted upon.
 ### 'T
 
 
+
+## Example
+
+// The following applies Exp([PauliX, PauliY], 0.5) to qubits 0, 1// then X to qubit 2let ops = [Exp([PauliX, PauliY], 0.5, _), ApplyToFirstQubitA(X, _)];let indices = [[0, 1], [2]];ApplySeriesOfOpsA(ops, indices, qubitArray);
 
 ## See Also
 

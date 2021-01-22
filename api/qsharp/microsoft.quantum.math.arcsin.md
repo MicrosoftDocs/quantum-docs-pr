@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.ArcSin
 title: ArcSin function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math

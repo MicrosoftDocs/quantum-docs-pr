@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Any
 title: Any function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -48,6 +48,10 @@ A `Bool` value of the OR function of the predicate applied to all elements.
 ### 'T
 
 The type of `array` elements.
+
+## Example
+
+```qsharpopen Microsoft.Quantum.Arrays;open Microsoft.Quantum.Logical;function IsThreePresent() : Bool {    let arrayOfInts = [1, 2, 3, 4, 5];    let is3Present = IsNumberPresentInArray(3, arrayOfInts);    return is3Present;}function IsNumberPresentInArray(n : Int, array : Int[]) : Bool {    return Any(EqualI(_, n), array);}```
 
 ## Remarks
 

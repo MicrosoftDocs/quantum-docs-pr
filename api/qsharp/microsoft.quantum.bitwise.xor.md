@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Xor
 title: Xor function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
@@ -41,6 +41,10 @@ function Xor (a : Int, b : Int) : Int
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)
 
 
+
+## Example
+
+```qsharplet a = 248;       //                 11111000₂let b = 63;        //                 00111111₂let x = Xor(a, b); // x : Int = 199 = 11000111₂.```
 
 ## Remarks
 

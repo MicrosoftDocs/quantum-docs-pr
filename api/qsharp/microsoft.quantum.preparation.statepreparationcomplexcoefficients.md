@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients
 title: StatePreparationComplexCoefficients function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -54,6 +54,10 @@ Array of up to $2^n$ complex coefficients represented by theirabsolute value an
 ## Output : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 A state-preparation unitary operation $U$.
+
+## Example
+
+The following snippet prepares the quantum state $\ket{\psi}=e^{i 0.1}\sqrt{1/8}\ket{0}+\sqrt{7/8}\ket{2}$in the qubit register `qubitsLE`.```qsharplet amplitudes = [Sqrt(0.125), 0.0, Sqrt(0.875), 0.0];let phases = [0.1, 0.0, 0.0, 0.0];mutable complexNumbers = new ComplexPolar[4];for (idx in 0..3) {    set complexNumbers[idx] = ComplexPolar(amplitudes[idx], phases[idx]);}let op = StatePreparationComplexCoefficients(complexNumbers);using (qubits = Qubit[2]) {    let qubitsLE = LittleEndian(qubits);    op(qubitsLE);}```
 
 ## Remarks
 

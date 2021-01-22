@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Fold
 title: Fold function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -55,3 +55,7 @@ The type of states the `folder` function operates on, i.e., accepts as its first
 ### 'T
 
 The type of `array` elements.
+
+## Example
+
+```qsharpfunction Plus(a : Double, b : Double) {    return a + b;}function Sum(xs : Double[]) {    return Fold(Plus, 0.0, xs);}```

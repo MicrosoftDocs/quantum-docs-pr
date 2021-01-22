@@ -5,8 +5,8 @@ description: Loads Broombridge electronic structure problem and returns selected
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load
 ms.author: ryansha
-ms.date: 11/25/2020
-ms.topic: article
+ms.date: 01/22/2021
+ms.topic: managed-reference
 ---
 
 <!--

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Zipped
 title: Zipped function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -50,6 +50,10 @@ The type of the left array elements.
 ### 'U
 
 The type of the right array elements.
+
+## Example
+
+```qsharplet left = [1, 3, 71];let right = [false, true];let pairs = Zipped(left, right); // [(1, false), (3, true)]```
 
 ## See Also
 

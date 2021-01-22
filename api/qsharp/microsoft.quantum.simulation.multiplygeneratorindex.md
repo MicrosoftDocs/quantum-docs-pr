@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.MultiplyGeneratorIndex
 title: MultiplyGeneratorIndex function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -39,6 +39,10 @@ The `GeneratorIndex` to be multiplied.
 ## Output : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)
 
 A `GeneratorIndex` representing a term with coefficient a factor`multiplier` larger.
+
+## Example
+
+```qsharplet gen = GeneratorIndex(([1,2,3],[coeff]),[1,2,3]);let ((idxPaulis, idxDoubles), idxQubits) = MultiplyGeneratorIndex(multiplier, gen);// idxDoubles[0] == multiplier * coeff;```
 
 ## See Also
 

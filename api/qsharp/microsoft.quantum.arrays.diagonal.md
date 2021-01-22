@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Diagonal
 title: Diagonal function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/22/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -44,6 +44,10 @@ If the 2-dimensional array has not a square shape, the diagonal overthe minimum
 ### 'T
 
 The type of each element of `matrix`.
+
+## Example
+
+```Q#let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];let diagonal = Diagonal(matrix);// same as: column = [1, 5, 9]```
 
 ## See Also
 

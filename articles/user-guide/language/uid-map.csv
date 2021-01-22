@@ -6,6 +6,7 @@
 1_ProgramStructure/6_AccessModifiers.md,microsoft.quantum.qsharp.accessmodifiers
 1_ProgramStructure/7_Comments.md,microsoft.quantum.qsharp.comments
 1_ProgramStructure/README.md,microsoft.quantum.qsharp.programstructure-index
+1_ProgramStructure,microsoft.quantum.qsharp.programstructure-index
 2_Statements/VariableDeclarationsAndReassignments.md,microsoft.quantum.qsharp.variabledeclarationsandreassignments
 2_Statements/ReturnsAndTermination.md,microsoft.quantum.qsharp.returnsandtermination
 2_Statements/QuantumMemoryManagement.md,microsoft.quantum.qsharp.quantummemorymanagement
@@ -16,6 +17,7 @@
 2_Statements/ConditionalBranching.md,microsoft.quantum.qsharp.conditionalbranching
 2_Statements/CallStatements.md,microsoft.quantum.qsharp.callstatements
 2_Statements/BindingScopes.md,microsoft.quantum.qsharp.bindingscopes
+2_Statements,microsoft.quantum.qsharp.statements-index
 3_Expressions/ValueLiterals.md,microsoft.quantum.qsharp.valueliterals
 3_Expressions/PrecedenceAndAssociativity.md,microsoft.quantum.qsharp.precedenceandassociativity
 3_Expressions/PartialApplication.md,microsoft.quantum.qsharp.partialapplication
@@ -31,6 +33,7 @@
 3_Expressions/ComparativeExpressions.md,microsoft.quantum.qsharp.comparativeexpressions
 3_Expressions/BitwiseExpressions.md,microsoft.quantum.qsharp.bitwiseexpressions
 3_Expressions/ArithmeticExpressions.md,microsoft.quantum.qsharp.arithmeticexpressions
+3_Expressions,microsoft.quantum.qsharp.expressions-index
 4_TypeSystem/TypeParameterizations.md,microsoft.quantum.qsharp.typeparameterizations
 4_TypeSystem/TypeInference.md,microsoft.quantum.qsharp.typeinference
 4_TypeSystem/SubtypingAndVariance.md,microsoft.quantum.qsharp.subtypingandvariance
@@ -39,4 +42,6 @@
 4_TypeSystem/OperationsAndFunctions.md,microsoft.quantum.qsharp.operationsandfunctions
 4_TypeSystem/README.md,microsoft.quantum.qsharp.typesystem-index
 4_TypeSystem/Immutability.md,microsoft.quantum.qsharp.immutability
+4_TypeSystem,microsoft.quantum.qsharp.typesystem-index
 5_Grammar/README.md,microsoft.quantum.qsharp.grammar
+5_Grammar,microsoft.quantum.qsharp.grammar

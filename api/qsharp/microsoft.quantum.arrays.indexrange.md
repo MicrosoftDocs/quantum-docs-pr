@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.IndexRange
 title: IndexRange function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -42,3 +42,7 @@ A range over all indices of the array.
 ### 'TElement
 
 The type of elements of the array.
+
+## Example
+
+The following `for` loops are equivalent:```Q#for (idx in IndexRange(array)) { ... }for (idx in IndexRange(array)) { ... }```

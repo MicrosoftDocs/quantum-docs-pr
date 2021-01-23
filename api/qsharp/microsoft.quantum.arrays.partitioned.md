@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Partitioned
 title: Partitioned function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -44,3 +44,8 @@ Multiple arrays where the first array is the first `nElements[0]` of `arr`and t
 
 ### 'T
 
+
+
+## Example
+
+```qsharp// The following returns [[1, 5], [3], [7]];let split = Partitioned([2,1], [1,5,3,7]);```

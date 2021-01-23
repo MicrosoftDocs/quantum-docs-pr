@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.ColumnAt
 title: ColumnAt function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -49,6 +49,10 @@ Column of the matrix
 ### 'T
 
 The type of each element of `matrix`.
+
+## Example
+
+```Q#let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];let column = ColumnAt(0, matrix);// same as: column = [1, 4, 7]```
 
 ## See Also
 

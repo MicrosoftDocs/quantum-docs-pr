@@ -1233,7 +1233,9 @@
   - {name: ApplyPermutationUsingDecomposition, uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition}
   - {name: ApplyPermutationUsingDecompositionWithVariableOrder, uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder}
   - {name: ApplyPermutationUsingTransformation, uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation}
+  - {name: ApplySingleQubitUnitary, uid: Microsoft.Quantum.Synthesis.ApplySingleQubitUnitary}
   - {name: ApplyTransposition, uid: Microsoft.Quantum.Synthesis.ApplyTransposition}
+  - {name: ApplyUnitary, uid: Microsoft.Quantum.Synthesis.ApplyUnitary}
   - {name: ApplyXControlledOnTruthTable, uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable}
   - {name: ApplyXControlledOnTruthTableWithCleanTarget, uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTableWithCleanTarget}
   - {name: DecomposedOn, uid: Microsoft.Quantum.Synthesis.DecomposedOn}
@@ -1241,6 +1243,7 @@
   - {name: Encoded, uid: Microsoft.Quantum.Synthesis.Encoded}
   - {name: Extended, uid: Microsoft.Quantum.Synthesis.Extended}
   - {name: FastHadamardTransformed, uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed}
+  - {name: FlipMasks, uid: Microsoft.Quantum.Synthesis.FlipMasks}
   - {name: GateMask, uid: Microsoft.Quantum.Synthesis.GateMask}
   - {name: GateMasksForAssignment, uid: Microsoft.Quantum.Synthesis.GateMasksForAssignment}
   - {name: IntegerBits, uid: Microsoft.Quantum.Synthesis.IntegerBits}
@@ -1248,6 +1251,7 @@
   - {name: MaskToQubitsPair, uid: Microsoft.Quantum.Synthesis.MaskToQubitsPair}
   - {name: RMEncoding, uid: Microsoft.Quantum.Synthesis.RMEncoding}
   - {name: SizeAdjustedTruthTable, uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable}
+  - {name: SquareMatrixFact, uid: Microsoft.Quantum.Synthesis.SquareMatrixFact}
   - {name: TBSMain, uid: Microsoft.Quantum.Synthesis.TBSMain}
   - {name: TBSStep, uid: Microsoft.Quantum.Synthesis.TBSStep}
   - {name: TruthTablesFromPermutation, uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutation}
@@ -1255,6 +1259,7 @@
   - {name: UpdatedOutputPattern, uid: Microsoft.Quantum.Synthesis.UpdatedOutputPattern}
   - {name: UpdatedPermutation, uid: Microsoft.Quantum.Synthesis.UpdatedPermutation}
   - {name: WithZeroInsertedAt, uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt}
+  - {name: _TwoLevelDecomposition, uid: Microsoft.Quantum.Synthesis._TwoLevelDecomposition}
   name: Microsoft.Quantum.Synthesis
   uid: Microsoft.Quantum.Synthesis
 - items:

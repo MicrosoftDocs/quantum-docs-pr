@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Parity
 title: Parity function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
@@ -33,3 +33,8 @@ function Parity (a : Int) : Int
 
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)
 
+
+
+## Example
+
+```qsharplet a = 248;let x = Parity(a); // x : Int = 1.```

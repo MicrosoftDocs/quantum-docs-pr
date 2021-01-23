@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.NMisclassifications
 title: NMisclassifications function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -41,3 +41,7 @@ function NMisclassifications (proposed : Int[], actual : Int[]) : Int
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)
 
 The number of indices `idx` such that`inferredLabels[idx] != actualLabels[idx]`.
+
+## Example
+
+```Q#let nMisclassifications = NMisclassifications([1, 1, 0, 0], [0, 1, 1, 0]);Message($"{nMisclassifications}"); // Will print 2.```

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.PreparePauliEigenstate
 title: PreparePauliEigenstate operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -45,3 +45,8 @@ A qubit to be prepared.
 
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## Example
+
+To prepare a qubit in the $\ket{+}$ state:```qsharpusing (q = Qubit()) {    PreparePauliEigenstate(PauliX, qubit);    // ...}```

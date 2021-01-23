@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.All
 title: All function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -48,6 +48,10 @@ A `Bool` value of the AND function of the predicate applied to all elements.
 ### 'T
 
 The type of `array` elements.
+
+## Example
+
+The following code checks whether all elements of the array are non-zero:```qsharpopen Microsoft.Quantum.Arrays;open Microsoft.Quantum.Logical;function AllDemo() : Unit {    let predicate = NotEqualI(_, 0);    let isNonZero = All(predicate, [2, 3, 4, 5, 6, 0]);    Message($"{isNonZero}");}```
 
 ## Remarks
 

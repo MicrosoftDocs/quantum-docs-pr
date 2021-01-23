@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ControlledOnBitString
 title: ControlledOnBitString function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -49,6 +49,10 @@ A unitary operation that applies `oracle` on the target register if the control 
 ### 'T
 
 
+
+## Example
+
+The following code snippets are equivalent:```qsharp(ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);```and```qsharpwithin {    ApplyPauliFromBitString(PauliX, false, bits, controlRegister);} apply {    Controlled oracle(controlRegister, targetRegister);}```The following code prepares a state $\frac{1}{2}(\ket{00} - \ket{01} + \ket{10} + \ket{11})$:```qsharpusing (register = Qubit[2]) {    ApplyToEach(H, register);    (ControlledOnBitString([false], Z))(register[0..0], register[1]);}```
 
 ## Remarks
 

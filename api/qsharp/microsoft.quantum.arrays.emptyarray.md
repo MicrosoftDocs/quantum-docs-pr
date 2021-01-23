@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.EmptyArray
 title: EmptyArray function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -32,3 +32,7 @@ The empty array.
 ### 'TElement
 
 The type of elements of the array.
+
+## Example
+
+```Q#let empty = EmptyArray<Int>();```

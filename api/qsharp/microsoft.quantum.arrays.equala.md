@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.EqualA
 title: EqualA function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -52,6 +52,10 @@ The value `true` if and only if `array1` and `array2` are equal.That is, if bot
 ### 'T
 
 The type of each array's elements.
+
+## Example
+
+The following code checks whether different pairs of arrays are equal:```qsharpopen Microsoft.Quantum.Arrays;open Microsoft.Quantum.Logical;function EqualADemo() : Unit {    let equalArrays = EqualA(EqualI, [2, 3, 4], [2, 3, 4]);    let differentLength = EqualA(EqualD, [2.0, 3.0, 4.0], [2.0, 3.0]);    let differentElements = EqualA(EqualR, [One, Zero], [One, One]);    Message($"Equal arrays are {equalArrays ? "equal" | "not equal"}");    Message($"Arrays of different length are {differentLength ? "equal" | "not equal"}");    Message($"Arrays of the same length with different elements are {differentElements ? "equal" | "not equal"}");}```
 
 ## Remarks
 

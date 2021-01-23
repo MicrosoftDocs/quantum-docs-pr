@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.RectangularArrayFact
 title: RectangularArrayFact function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -49,6 +49,10 @@ A message to be printed if the array is not a rectangular array
 ### 'T
 
 The type of each element of `array`.
+
+## Example
+
+```Q#RectangularArrayFact([[1, 2], [3, 4]], "Array is not rectangular");       // okayRectangularArrayFact([[1, 2, 3], [4, 5, 6]], "Array is not rectangular"); // okayRectangularArrayFact([[1, 2], [3, 4, 5]], "Array is not rectangular");    // will fail```
 
 ## See Also
 

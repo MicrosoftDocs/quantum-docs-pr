@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition
 title: PrepareUniformSuperposition operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -48,6 +48,10 @@ The qubit register that stores the number states in `LittleEndian` format.This 
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+The following example prepares the state $\frac{1}{\sqrt{6}}\sum_{j=0}^{5}\ket{j}$on $3$ qubits.```Q#let nIndices = 6;using(indexRegister = Qubit[3]) {    PrepareUniformSuperposition(nIndices, LittleEndian(indexRegister));    // ...}```
 
 ## Remarks
 

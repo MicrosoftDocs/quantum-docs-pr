@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.Encoded
 title: Encoded function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -34,3 +34,7 @@ Truth table as array of truth values
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
 
 Truth table as array of {1,-1} integers
+
+## Example
+
+```Q#Encoded([false, false, false, true]); // [1, 1, 1, -1]```

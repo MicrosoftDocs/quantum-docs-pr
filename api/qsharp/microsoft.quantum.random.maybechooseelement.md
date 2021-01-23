@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.MaybeChooseElement
 title: MaybeChooseElement operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
@@ -46,3 +46,8 @@ A distribution over the indices of `data`.
 
 ### 'T
 
+
+
+## Example
+
+The following Q# snippet chooses an element at random from an array:```Q#let (succeeded, element) = MaybeChooseElement(    data,    DiscreteUniformDistribution(0, Length(data) - 1));Fact(succeeded, "Index chosen by MaybeChooseElement was not valid.");```

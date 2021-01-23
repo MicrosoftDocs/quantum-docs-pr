@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Excluding
 title: Excluding function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -47,3 +47,7 @@ An array `output` such that `output[0]` is the first elementof `array` whose in
 ### 'T
 
 The type of the array elements.
+
+## Example
+
+```qsharplet array = [10, 11, 12, 13, 14, 15];// The following line returns [10, 12, 15].let subarray = Excluding([1, 3, 4], array);```

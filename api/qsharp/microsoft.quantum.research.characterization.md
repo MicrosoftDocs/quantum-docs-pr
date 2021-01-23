@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Research.Characterization
 title: Microsoft.Quantum.Research.Characterization namespace
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/23/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Research.Characterization
 qsharp.summary: >-

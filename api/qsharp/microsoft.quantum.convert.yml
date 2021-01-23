@@ -7,8 +7,8 @@ functions:
     the array is the least significant bit of the big integer., uid: Microsoft.Quantum.Convert.BigIntAsBoolArray}
 - {summary: Converts a given array of Booleans to an equivalent big integer. The 0
     element of the array is the least significant bit of the big integer., uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt}
-- {summary: Produces a positive integer from a string of bits in little endian format.,
-  uid: Microsoft.Quantum.Convert.BoolArrayAsInt}
+- {summary: Produces a non-negative integer from a string of bits in little endian
+    format., uid: Microsoft.Quantum.Convert.BoolArrayAsInt}
 - {summary: 'Given a bit string, returns a multi-qubit Pauli operator represented
     as an array of single-qubit Pauli operators.', uid: Microsoft.Quantum.Convert.BoolArrayAsPauli}
 - {summary: 'Converts a `Bool[]` type to a `Result[]` type, where `true` is mapped
@@ -23,8 +23,8 @@ functions:
     string representation, using the given format.', uid: Microsoft.Quantum.Convert.DoubleAsStringWithFormat}
 - {summary: Converts functions to operations., uid: Microsoft.Quantum.Convert.FunctionAsOperation}
 - {summary: Converts a given integer to an equivalent big integer., uid: Microsoft.Quantum.Convert.IntAsBigInt}
-- {summary: 'Produces a binary representation of a positive integer, using the little-endian
-    representation for the returned array.', uid: Microsoft.Quantum.Convert.IntAsBoolArray}
+- {summary: 'Produces a binary representation of a non-negative integer, using the
+    little-endian representation for the returned array.', uid: Microsoft.Quantum.Convert.IntAsBoolArray}
 - {summary: Converts a given integer to an equivalent double-precision floating-point
     number., uid: Microsoft.Quantum.Convert.IntAsDouble}
 - {summary: Converts a given integer number to an equivalent string representation.,
@@ -39,7 +39,7 @@ functions:
 - {summary: Creates an array `arr` of integers enumerated by start..step..end., uid: Microsoft.Quantum.Convert.RangeAsIntArray}
 - {summary: 'Converts a `Result[]` type to a `Bool[]` type, where `One` is mapped
     to `true` and `Zero` is mapped to `false`.', uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray}
-- {summary: Produces a positive integer from a string of Results in little endian
+- {summary: Produces a non-negative integer from a string of Results in little endian
     format., uid: Microsoft.Quantum.Convert.ResultArrayAsInt}
 - {summary: 'Converts a `Result` type to a `Bool` type, where `One` is mapped to `true`
     and `Zero` is mapped to `false`.', uid: Microsoft.Quantum.Convert.ResultAsBool}

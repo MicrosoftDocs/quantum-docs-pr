@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToMost
 title: ApplyToMost operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -49,6 +49,10 @@ An array of targets, of which all but the last will be applied to `op`.
 ### 'T
 
 The input type of the operation to be applied.
+
+## Example
+
+The following Q# snippets are equivalent:```Q#ApplyToMost(ApplyCNOTChain, register);ApplyCNOTChain(Most(register));```
 
 ## See Also
 

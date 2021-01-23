@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
 title: ApplyPermutationUsingDecompositionWithVariableOrder operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -50,6 +50,10 @@ A list of $n$ qubits to which the permutation is applied to.
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+To synthesize a `SWAP` operation:```Q#using (qubits = Qubit[2]) {  ApplyPermutationUsingDecompositionWithVariableOrder([0, 2, 1, 3], [1, 0], LittleEndian(qubits));}```
 
 ## See Also
 

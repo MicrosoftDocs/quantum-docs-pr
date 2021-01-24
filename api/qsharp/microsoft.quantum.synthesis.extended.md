@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Synthesis.Extended
 title: Extended function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
@@ -34,3 +34,7 @@ Spectral coefficients
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
 
 Coefficients followed by inverted copy
+
+## Example
+
+```Q#Extended([2, 2, 2, -2]); // [2, 2, 2, -2, -2, -2, -2, 2]```

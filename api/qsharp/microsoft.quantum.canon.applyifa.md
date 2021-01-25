@@ -25,7 +25,9 @@ operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Uni
 
 ## Description
 
-Given an operation `op` and a bit value `bit`, applies `op` to the `target`if `bit` is `true`. If `false`, nothing happens to the `target`.The suffix `A` indicates that the operation to be applied is adjointable.
+Given an operation `op` and a bit value `bit`, applies `op` to the `target`
+if `bit` is `true`. If `false`, nothing happens to the `target`.
+The suffix `A` indicates that the operation to be applied is adjointable.
 
 ## Input
 
@@ -57,7 +59,18 @@ The input type of the operation to be conditionally applied.
 
 ## Example
 
-The following prepares a register of qubits into a computational basisstate represented by a classical bit string given as an array of `Bool`values:```Q#let bitstring = [true, false, true];using (register = Qubit(3)) {    ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));    // register should now be in the state |101⟩.    ...}```
+The following prepares a register of qubits into a computational basis
+state represented by a classical bit string given as an array of `Bool`
+values:
+
+```qsharp
+let bitstring = [true, false, true];
+using (register = Qubit(3)) {
+    ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));
+    // register should now be in the state |101⟩.
+    ...
+}
+```
 
 ## See Also
 

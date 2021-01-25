@@ -43,4 +43,7 @@ The type of `array` elements.
 
 ## Example
 
-```Q#let flattened = Flattened([[1, 2], [3], [4, 5, 6]]);// flattened = [1, 2, 3, 4, 5, 6]```
+```qsharp
+let flattened = Flattened([[1, 2], [3], [4, 5, 6]]);
+// flattened = [1, 2, 3, 4, 5, 6]
+```

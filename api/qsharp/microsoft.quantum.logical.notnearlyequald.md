@@ -18,7 +18,8 @@ Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)
 Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Returns true if and only if two inputs are not nearly equal (that is,are not within a tolerance of 1e-12).
+Returns true if and only if two inputs are not nearly equal (that is,
+are not within a tolerance of 1e-12).
 
 ```qsharp
 function NotNearlyEqualD (a : Double, b : Double) : Bool
@@ -44,4 +45,9 @@ The second value to be compared.
 
 ## Remarks
 
-The following are equivalent:```Q#let cond = Microsoft.Quantum.Math.AbsD(a - b) >= 1e-12;let cond = NotNearlyEqualD(a, b);```
+The following are equivalent:
+
+```qsharp
+let cond = Microsoft.Quantum.Math.AbsD(a - b) >= 1e-12;
+let cond = NotNearlyEqualD(a, b);
+```

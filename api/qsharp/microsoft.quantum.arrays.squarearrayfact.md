@@ -25,7 +25,8 @@ function SquareArrayFact<'T> (array : 'T[][], message : String) : Unit
 
 ## Description
 
-This function asserts that each row in an array hasas many elements as there are rows (elements) in the array.
+This function asserts that each row in an array has
+as many elements as there are rows (elements) in the array.
 
 ## Input
 
@@ -52,7 +53,11 @@ The type of each element of `array`.
 
 ## Example
 
-```Q#SquareArrayFact([[1, 2], [3, 4]], "Array is not a square");       // okaySquareArrayFact([[1, 2, 3], [4, 5, 6]], "Array is not a square"); // will failSquareArrayFact([[1, 2], [3, 4, 5]], "Array is not a square");    // will fail```
+```qsharp
+SquareArrayFact([[1, 2], [3, 4]], "Array is not a square");       // okay
+SquareArrayFact([[1, 2, 3], [4, 5, 6]], "Array is not a square"); // will fail
+SquareArrayFact([[1, 2], [3, 4, 5]], "Array is not a square");    // will fail
+```
 
 ## See Also
 

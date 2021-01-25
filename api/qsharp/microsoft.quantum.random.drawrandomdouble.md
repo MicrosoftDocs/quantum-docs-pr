@@ -38,11 +38,16 @@ The largest real number to be drawn.
 
 ## Output : [Double](xref:microsoft.quantum.lang-ref.double)
 
-A random real number in the inclusive interval from `min` to `max` withuniform probability.
+A random real number in the inclusive interval from `min` to `max` with
+uniform probability.
 
 ## Example
 
-The following Q# snippet randomly draws an angle between $0$ and $2 \pi$:```Q#let angle = DrawRandomDouble(0.0, 2.0 * PI());```
+The following Q# snippet randomly draws an angle between $0$ and $2 \pi$:
+
+```qsharp
+let angle = DrawRandomDouble(0.0, 2.0 * PI());
+```
 
 ## Remarks
 

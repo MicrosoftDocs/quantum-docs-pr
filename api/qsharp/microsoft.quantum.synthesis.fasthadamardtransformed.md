@@ -18,7 +18,8 @@ Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Computes Hadamard transform of a Boolean function in {-1,1} encodingusing Yates's method
+Computes Hadamard transform of a Boolean function in {-1,1} encoding
+using Yates's method
 
 ```qsharp
 function FastHadamardTransformed (func : Int[]) : Int[]
@@ -39,4 +40,6 @@ Spectral coefficients of the function
 
 ## Example
 
-```Q#FastHadamardTransformed([1, 1, 1, -1]); // [2, 2, 2, -2]```
+```qsharp
+FastHadamardTransformed([1, 1, 1, -1]); // [2, 2, 2, -2]
+```

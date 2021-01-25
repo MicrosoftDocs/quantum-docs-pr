@@ -38,8 +38,14 @@ The number of bits in the binary expansion of `value`.
 
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
 
-An array containing all bit positions (starting from 0) that are 1 inthe binary expansion of `value` considering all bits up to position`length - 1`.  All positions are ordered in the array by position in anincreasing order.
+An array containing all bit positions (starting from 0) that are 1 in
+the binary expansion of `value` considering all bits up to position
+`length - 1`.  All positions are ordered in the array by position in an
+increasing order.
 
 ## Example
 
-```Q#IntegerBits(23, 5); // [0, 1, 2, 4]IntegerBits(10, 4); // [1, 3]```
+```qsharp
+IntegerBits(23, 5); // [0, 1, 2, 4]
+IntegerBits(10, 4); // [1, 3]
+```

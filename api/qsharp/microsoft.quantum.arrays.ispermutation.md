@@ -25,7 +25,9 @@ function IsPermutation (permuation : Int[]) : Bool
 
 ## Description
 
-Given an array `array` of length `n`, returns true if and only ifeach integer from `0` to `n - 1` appears exactly once in `array`, suchthat `array` can be interpreted as a permutation on `n` elements.
+Given an array `array` of length `n`, returns true if and only if
+each integer from `0` to `n - 1` appears exactly once in `array`, such
+that `array` can be interpreted as a permutation on `n` elements.
 
 ## Input
 
@@ -41,7 +43,14 @@ An array that may or may not represent a permutation.
 
 ## Example
 
-The following Q# code prints the message "All diagnostics completedsuccessfully":```Q#Fact(IsPermutation([2, 0, 1], "");Contradiction(IsPermutation([5, 0, 1], "[5, 0, 1] isn't a permutation");Message("All diagnostics completed successfully.");```
+The following Q# code prints the message "All diagnostics completed
+successfully":
+
+```qsharp
+Fact(IsPermutation([2, 0, 1], "");
+Contradiction(IsPermutation([5, 0, 1], "[5, 0, 1] isn't a permutation");
+Message("All diagnostics completed successfully.");
+```
 
 ## Remarks
 

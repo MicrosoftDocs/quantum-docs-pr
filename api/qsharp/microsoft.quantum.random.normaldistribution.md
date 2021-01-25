@@ -42,7 +42,15 @@ function NormalDistribution (mean : Double, variance : Double) : Microsoft.Quant
 
 ## Example
 
-The following draws 10 samples from the normal distribution with mean2 and standard deviation 0.1:```Q#let samples = DrawMany(    (NormalDistribution(2.0, PowD(0.1, 2.0)))::Sample,    10, ());```
+The following draws 10 samples from the normal distribution with mean
+2 and standard deviation 0.1:
+
+```qsharp
+let samples = DrawMany(
+    (NormalDistribution(2.0, PowD(0.1, 2.0)))::Sample,
+    10, ()
+);
+```
 
 ## See Also
 

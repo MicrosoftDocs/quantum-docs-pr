@@ -25,7 +25,9 @@ function CumulativeFolded<'State, 'T> (fn : (('State, 'T) -> 'State), state : 'S
 
 ## Description
 
-This function iterates the `fn` function through the array, starting froman initial state `state` and returns all intermediate values, not includingthe inital state.
+This function iterates the `fn` function through the array, starting from
+an initial state `state` and returns all intermediate values, not including
+the inital state.
 
 ## Input
 
@@ -47,17 +49,22 @@ An array of values to be folded over
 
 ## Output : 'State[]
 
-All intermediate states, including the final state, but not the initial state.The length of the output array is of the same length as `array`.
+All intermediate states, including the final state, but not the initial state.
+The length of the output array is of the same length as `array`.
 
 ## Type Parameters
 
 ### 'State
 
-The type of states that the `fn` function operates on, i.e., accepts as its firstinput and returns.
+The type of states that the `fn` function operates on, i.e., accepts as its first
+input and returns.
 ### 'T
 
 The type of `array` elements.
 
 ## Example
 
-```Q#// same as sums = [1, 3, 6, 10, 15]let sums = CumulativeFolded(PlusI, 0, SequenceI(1, 5));```
+```qsharp
+// same as sums = [1, 3, 6, 10, 15]
+let sums = CumulativeFolded(PlusI, 0, SequenceI(1, 5));
+```

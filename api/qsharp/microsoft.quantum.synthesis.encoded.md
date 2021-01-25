@@ -37,4 +37,6 @@ Truth table as array of {1,-1} integers
 
 ## Example
 
-```Q#Encoded([false, false, false, true]); // [1, 1, 1, -1]```
+```qsharp
+Encoded([false, false, false, true]); // [1, 1, 1, -1]
+```

@@ -32,7 +32,8 @@ The condition to be declared.
 
 ### message : [String](xref:microsoft.quantum.lang-ref.string)
 
-Failure message string to be printed in the case that the classicalcondition is false.
+Failure message string to be printed in the case that the classical
+condition is false.
 
 
 
@@ -42,7 +43,11 @@ Failure message string to be printed in the case that the classicalcondition is
 
 ## Example
 
-The following Q# snippet will fail:```Q#Fact(false, "Expected true.");```
+The following Q# snippet will fail:
+
+```qsharp
+Fact(false, "Expected true.");
+```
 
 ## See Also
 

@@ -38,11 +38,16 @@ The largest integer to be drawn.
 
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)
 
-An integer in the inclusive range from `min` to `max` with uniformprobability.
+An integer in the inclusive range from `min` to `max` with uniform
+probability.
 
 ## Example
 
-The following Q# snippet randomly rolls a six-sided die:```Q#let roll = DrawRandomInt(1, 6);```
+The following Q# snippet randomly rolls a six-sided die:
+
+```qsharp
+let roll = DrawRandomInt(1, 6);
+```
 
 ## Remarks
 

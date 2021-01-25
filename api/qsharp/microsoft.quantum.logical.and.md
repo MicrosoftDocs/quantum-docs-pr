@@ -42,4 +42,12 @@ The second value to be considered.
 
 ## Remarks
 
-Unlike the `and` operator, this function does not short-circuit, such thatboth inputs are fully evaluated.Up to short-circuiting behavior, the following are equivalent:```Q#let x = a and b;let x = And(a, b);```
+Unlike the `and` operator, this function does not short-circuit, such that
+both inputs are fully evaluated.
+
+Up to short-circuiting behavior, the following are equivalent:
+
+```qsharp
+let x = a and b;
+let x = And(a, b);
+```

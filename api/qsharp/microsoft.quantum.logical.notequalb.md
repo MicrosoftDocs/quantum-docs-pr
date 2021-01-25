@@ -42,4 +42,9 @@ The second value to be compared.
 
 ## Remarks
 
-The following are equivalent:```Q#let cond = a != b;let cond = NotEqualB(a, b);```
+The following are equivalent:
+
+```qsharp
+let cond = a != b;
+let cond = NotEqualB(a, b);
+```

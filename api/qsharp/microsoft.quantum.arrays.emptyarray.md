@@ -35,4 +35,6 @@ The type of elements of the array.
 
 ## Example
 
-```Q#let empty = EmptyArray<Int>();```
+```qsharp
+let empty = EmptyArray<Int>();
+```

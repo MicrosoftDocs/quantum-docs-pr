@@ -53,7 +53,12 @@ The input to be passed to `op`.
 
 ## Example
 
-The following are equivalent:```Q#RepeatCA(U, 17, target);(BoundCA(ConstantArray(17, U)))(target);```
+The following are equivalent:
+
+```qsharp
+RepeatCA(U, 17, target);
+(BoundCA(ConstantArray(17, U)))(target);
+```
 
 ## See Also
 

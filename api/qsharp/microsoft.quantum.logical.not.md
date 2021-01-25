@@ -37,4 +37,9 @@ The value to be negated.
 
 ## Remarks
 
-The following are equivalent:```Q#let x = not value;let x = Not(value);```
+The following are equivalent:
+
+```qsharp
+let x = not value;
+let x = Not(value);
+```

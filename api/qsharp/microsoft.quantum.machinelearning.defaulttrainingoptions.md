@@ -25,8 +25,15 @@ function DefaultTrainingOptions () : Microsoft.Quantum.MachineLearning.TrainingO
 
 ## Output : [TrainingOptions](xref:Microsoft.Quantum.MachineLearning.TrainingOptions)
 
-A reasonable set of default training options for use when trainingclassifiers.
+A reasonable set of default training options for use when training
+classifiers.
 
 ## Example
 
-To use the default options, but with additional measurements, use the`w/` operator:```Q#let options = DefaultTrainingOptions()    w/ NMeasurements <- 1000000;```
+To use the default options, but with additional measurements, use the
+`w/` operator:
+
+```qsharp
+let options = DefaultTrainingOptions()
+    w/ NMeasurements <- 1000000;
+```

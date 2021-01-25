@@ -53,4 +53,12 @@ The value to be returned when `condition` is `false`.
 
 ## Remarks
 
-Unlike the `?|` operator, this function does not short-circuit, such thatboth inputs are fully evaluated.Up to short-circuiting behavior, the following are equivalent:```Q#let x = condition ? ifTrue | ifFalse;let x = Conditioned(condition, ifTrue, ifFalse);```
+Unlike the `?|` operator, this function does not short-circuit, such that
+both inputs are fully evaluated.
+
+Up to short-circuiting behavior, the following are equivalent:
+
+```qsharp
+let x = condition ? ifTrue | ifFalse;
+let x = Conditioned(condition, ifTrue, ifFalse);
+```

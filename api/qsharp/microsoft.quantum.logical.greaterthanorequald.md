@@ -18,7 +18,8 @@ Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)
 Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Returns true if and only if a number is greater than or equal to anothernumber.
+Returns true if and only if a number is greater than or equal to another
+number.
 
 ```qsharp
 function GreaterThanOrEqualD (a : Double, b : Double) : Bool
@@ -44,4 +45,9 @@ The second value to be compared.
 
 ## Remarks
 
-The following are equivalent:```Q#let cond = a >= b;let cond = GreaterThanOrEqualD(a, b);```
+The following are equivalent:
+
+```qsharp
+let cond = a >= b;
+let cond = GreaterThanOrEqualD(a, b);
+```

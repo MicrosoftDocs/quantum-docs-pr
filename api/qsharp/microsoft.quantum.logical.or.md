@@ -42,4 +42,12 @@ The second value to be considered.
 
 ## Remarks
 
-Unlike the `or` operator, this function does not short-circuit, such thatboth inputs are fully evaluated.Up to short-circuiting behavior, the following are equivalent:```Q#let x = a or b;let x = Or(a, b);```
+Unlike the `or` operator, this function does not short-circuit, such that
+both inputs are fully evaluated.
+
+Up to short-circuiting behavior, the following are equivalent:
+
+```qsharp
+let x = a or b;
+let x = Or(a, b);
+```

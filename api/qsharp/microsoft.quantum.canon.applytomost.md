@@ -25,7 +25,8 @@ operation ApplyToMost<'T> (op : ('T[] => Unit), targets : 'T[]) : Unit
 
 ## Description
 
-Given an operation `op` and an array of targets `targets`,applies `op(Most(targets))`.
+Given an operation `op` and an array of targets `targets`,
+applies `op(Most(targets))`.
 
 ## Input
 
@@ -52,7 +53,12 @@ The input type of the operation to be applied.
 
 ## Example
 
-The following Q# snippets are equivalent:```Q#ApplyToMost(ApplyCNOTChain, register);ApplyCNOTChain(Most(register));```
+The following Q# snippets are equivalent:
+
+```qsharp
+ApplyToMost(ApplyCNOTChain, register);
+ApplyCNOTChain(Most(register));
+```
 
 ## See Also
 

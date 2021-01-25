@@ -18,7 +18,8 @@ Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLea
 Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
-Given a set of inferred labels and a set of correct labels, returnsindices for where each set of labels differs.
+Given a set of inferred labels and a set of correct labels, returns
+indices for where each set of labels differs.
 
 ```qsharp
 function Misclassifications (inferredLabels : Int[], actualLabels : Int[]) : Int[]
@@ -40,8 +41,12 @@ The true labels for a given training or validation set.
 
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
 
-An array of indices `idx` such that`inferredLabels[idx] != actualLabels[idx]`.
+An array of indices `idx` such that
+`inferredLabels[idx] != actualLabels[idx]`.
 
 ## Example
 
-```Q#let misclassifications = Misclassifications([0, 1, 0, 0], [0, 1, 1, 0]);Message($"{misclassifications}"); // Will print [2].```
+```qsharp
+let misclassifications = Misclassifications([0, 1, 0, 0], [0, 1, 1, 0]);
+Message($"{misclassifications}"); // Will print [2].
+```

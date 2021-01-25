@@ -18,7 +18,8 @@ Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
-Given an array, returns a range over the indices of that array, suitablefor use in a for loop.
+Given an array, returns a range over the indices of that array, suitable
+for use in a for loop.
 
 ```qsharp
 function IndexRange<'TElement> (array : 'TElement[]) : Range
@@ -45,4 +46,9 @@ The type of elements of the array.
 
 ## Example
 
-The following `for` loops are equivalent:```Q#for (idx in IndexRange(array)) { ... }for (idx in IndexRange(array)) { ... }```
+The following `for` loops are equivalent:
+
+```qsharp
+for (idx in IndexRange(array)) { ... }
+for (idx in IndexRange(array)) { ... }
+```

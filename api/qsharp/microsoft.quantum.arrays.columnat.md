@@ -25,7 +25,9 @@ function ColumnAt<'T> (column : Int, matrix : 'T[][]) : 'T[]
 
 ## Description
 
-This function extracts a column in a matrix in row-wise order.Extracting a row corrsponds to element access of the first indexand therefore requires no further treatment.
+This function extracts a column in a matrix in row-wise order.
+Extracting a row corrsponds to element access of the first index
+and therefore requires no further treatment.
 
 ## Input
 
@@ -52,7 +54,11 @@ The type of each element of `matrix`.
 
 ## Example
 
-```Q#let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];let column = ColumnAt(0, matrix);// same as: column = [1, 4, 7]```
+```qsharp
+let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+let column = ColumnAt(0, matrix);
+// same as: column = [1, 4, 7]
+```
 
 ## See Also
 

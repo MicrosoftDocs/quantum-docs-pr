@@ -25,7 +25,8 @@ operation ApplyToTail<'T> (op : ('T => Unit), targets : 'T[]) : Unit
 
 ## Description
 
-Given an operation `op` and an array of targets `targets`,applies `op(Tail(targets))`.
+Given an operation `op` and an array of targets `targets`,
+applies `op(Tail(targets))`.
 
 ## Input
 
@@ -52,7 +53,12 @@ The input type of the operation to be applied.
 
 ## Example
 
-The following Q# snippets are equivalent:```Q#ApplyToTail(H, register);H(Tail(register));```
+The following Q# snippets are equivalent:
+
+```qsharp
+ApplyToTail(H, register);
+H(Tail(register));
+```
 
 ## See Also
 

@@ -25,7 +25,8 @@ operation ApplyToHead<'T> (op : ('T => Unit), targets : 'T[]) : Unit
 
 ## Description
 
-Given an operation `op` and an array of targets `targets`,applies `op(Head(targets))`.
+Given an operation `op` and an array of targets `targets`,
+applies `op(Head(targets))`.
 
 ## Input
 
@@ -52,7 +53,12 @@ The input type of the operation to be applied.
 
 ## Example
 
-The following Q# snippets are equivalent:```Q#ApplyToHead(H, register);H(Head(register));```
+The following Q# snippets are equivalent:
+
+```qsharp
+ApplyToHead(H, register);
+H(Head(register));
+```
 
 ## See Also
 

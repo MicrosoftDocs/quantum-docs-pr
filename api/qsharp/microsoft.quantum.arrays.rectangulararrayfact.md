@@ -52,7 +52,11 @@ The type of each element of `array`.
 
 ## Example
 
-```Q#RectangularArrayFact([[1, 2], [3, 4]], "Array is not rectangular");       // okayRectangularArrayFact([[1, 2, 3], [4, 5, 6]], "Array is not rectangular"); // okayRectangularArrayFact([[1, 2], [3, 4, 5]], "Array is not rectangular");    // will fail```
+```qsharp
+RectangularArrayFact([[1, 2], [3, 4]], "Array is not rectangular");       // okay
+RectangularArrayFact([[1, 2, 3], [4, 5, 6]], "Array is not rectangular"); // okay
+RectangularArrayFact([[1, 2], [3, 4, 5]], "Array is not rectangular");    // will fail
+```
 
 ## See Also
 

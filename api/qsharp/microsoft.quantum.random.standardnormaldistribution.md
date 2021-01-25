@@ -29,7 +29,11 @@ function StandardNormalDistribution () : Microsoft.Quantum.Random.ContinuousDist
 
 ## Example
 
-The following draws 10 samples from the standard normal distribution:```Q#let samples = DrawMany((StandardNormalDistribution())::Sample, 10, ());```
+The following draws 10 samples from the standard normal distribution:
+
+```qsharp
+let samples = DrawMany((StandardNormalDistribution())::Sample, 10, ());
+```
 
 ## See Also
 

@@ -19,7 +19,9 @@ Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Between a call to this operation and its adjoint, asserts thatat most a given number of additional qubits are allocated withusing statements.
+Between a call to this operation and its adjoint, asserts that
+at most a given number of additional qubits are allocated with
+using statements.
 
 ```qsharp
 operation AllowAtMostNQubits (nQubits : Int, message : String) : Unit is Adj
@@ -45,8 +47,20 @@ A message to be displayed upon failure.
 
 ## Example
 
-The following snippet will fail when executed on machines whichsupport this diagnostic:```Q#within {    AllowAtMostNQubits(3, "Too many qubits allocated.");} apply {    // Fails since this allocates four qubits.    using (register = Qubit[4]) {    }}```
+The following snippet will fail when executed on machines which
+support this diagnostic:
+
+```qsharp
+within {
+    AllowAtMostNQubits(3, "Too many qubits allocated.");
+} apply {
+    // Fails since this allocates four qubits.
+    using (register = Qubit[4]) {
+    }
+}
+```
 
 ## Remarks
 
-This operation may be replaced by a no-op on targets which do notsupport it.
+This operation may be replaced by a no-op on targets which do not
+support it.

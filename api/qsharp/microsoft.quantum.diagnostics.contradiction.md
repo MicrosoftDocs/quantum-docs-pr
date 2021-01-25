@@ -32,7 +32,8 @@ The condition to be declared.
 
 ### message : [String](xref:microsoft.quantum.lang-ref.string)
 
-Failure message string to be printed in the case that the classicalcondition is true.
+Failure message string to be printed in the case that the classical
+condition is true.
 
 
 
@@ -42,7 +43,12 @@ Failure message string to be printed in the case that the classicalcondition is
 
 ## Example
 
-The following Q# code will print "Hello, world":```Q#Contradiction(2 == 3, "2 is not equal to 3.");Message("Hello, world.");```
+The following Q# code will print "Hello, world":
+
+```qsharp
+Contradiction(2 == 3, "2 is not equal to 3.");
+Message("Hello, world.");
+```
 
 ## See Also
 

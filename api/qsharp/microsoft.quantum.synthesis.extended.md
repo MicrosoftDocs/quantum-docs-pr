@@ -37,4 +37,6 @@ Coefficients followed by inverted copy
 
 ## Example
 
-```Q#Extended([2, 2, 2, -2]); // [2, 2, 2, -2, -2, -2, -2, 2]```
+```qsharp
+Extended([2, 2, 2, -2]); // [2, 2, 2, -2, -2, -2, -2, 2]
+```

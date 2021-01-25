@@ -17,6 +17,16 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version X.XX.XXXXXXXXXX
+
+*Release date: January 26th, 2021*
+
+- Simplified qubit allocation, providing more convenient syntax for allocating qubits, [see details in Q# language repository](https://github.com/microsoft/qsharp-language/blob/main/Approved/1-implicitly-scoped-qubit-allocation.md).
+- Improved the chemistry library including API improvements and better Python support and integration with existing chemistry packages.
+- Q# ergonomic improvements:parentheses on the left-hand side of a curried call are now optional, eliminating the need for parentheses around subsequent calls; parentheses around operation and function type are now optional; parentheses around conditions and in other statement headers are now optional.
+- Improved width estimates for optimal depth, [see details](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
+- Released QDK-Python package. 
+
 ## Version 0.14.2011120240
 
 *Release date: November 25th, 2020*

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.ConstantArray
 title: ConstantArray function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -44,3 +44,8 @@ A new array of length `length`, such that every element is `value`.
 
 ### 'T
 
+
+
+## Example
+
+The following code creates an array of 3 Boolean values, each equal to `true`:```qsharplet array = ConstantArray(3, true);```

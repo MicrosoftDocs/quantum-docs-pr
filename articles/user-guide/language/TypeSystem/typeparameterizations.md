@@ -4,7 +4,7 @@ description: Learn about type-parameterized operations and functions in the Q# p
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.typeparameterizations
 no-loc: ['Q#', '$$v']
 ---

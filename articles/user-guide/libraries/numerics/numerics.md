@@ -4,7 +4,7 @@ description: Learn about the types and operations available in the Microsoft Qua
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.numerics.usage
 no-loc: ['Q#', '$$v']
 ---

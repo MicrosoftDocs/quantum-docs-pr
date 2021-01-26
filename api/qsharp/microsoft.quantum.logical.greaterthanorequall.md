@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Logical.GreaterThanOrEqualL
 title: GreaterThanOrEqualL function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
@@ -18,7 +18,8 @@ Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)
 Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Returns true if and only if a number is greater than or equal to anothernumber.
+Returns true if and only if a number is greater than or equal to another
+number.
 
 ```qsharp
 function GreaterThanOrEqualL (a : BigInt, b : BigInt) : Bool
@@ -44,4 +45,9 @@ The second value to be compared.
 
 ## Remarks
 
-The following are equivalent:```Q#let cond = a >= b;let cond = GreaterThanOrEqualL(a, b);```
+The following are equivalent:
+
+```qsharp
+let cond = a >= b;
+let cond = GreaterThanOrEqualL(a, b);
+```

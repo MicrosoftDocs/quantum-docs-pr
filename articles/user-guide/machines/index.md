@@ -4,7 +4,7 @@ description: Describes the quantum simulators available as target machines for Q
 author: QuantumWriter
 ms.author: v-benbra 
 ms.date: 6/17/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines
 no-loc: ['Q#', '$$v']
 ---

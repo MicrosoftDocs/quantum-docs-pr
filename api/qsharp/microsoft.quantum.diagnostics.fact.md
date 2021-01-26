@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.Fact
 title: Fact function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -32,13 +32,22 @@ The condition to be declared.
 
 ### message : [String](xref:microsoft.quantum.lang-ref.string)
 
-Failure message string to be printed in the case that the classicalcondition is false.
+Failure message string to be printed in the case that the classical
+condition is false.
 
 
 
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+The following Q# snippet will fail:
+
+```qsharp
+Fact(false, "Expected true.");
+```
 
 ## See Also
 

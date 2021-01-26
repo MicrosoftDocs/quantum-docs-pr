@@ -4,7 +4,7 @@ description: Explore sample applications of the Microsoft Quantum chemistry libr
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.examples
 no-loc: ['Q#', '$$v']
 ---

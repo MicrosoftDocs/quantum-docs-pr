@@ -4,7 +4,7 @@ description: Learn about the Microsoft Quantum Chemistry Library and how it is u
 author: QuantumWriter
 ms.author: ageller
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.intro
 no-loc: ['Q#', '$$v']
 ---

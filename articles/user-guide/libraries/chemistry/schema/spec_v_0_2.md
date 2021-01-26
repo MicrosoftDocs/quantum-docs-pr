@@ -4,7 +4,7 @@ description: Details the specifications for the Broombridge quantum chemistry sc
 author: guanghaolow
 ms.author: gulow
 ms.date: 05/28/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 no-loc: ['Q#', '$$v']
 ---

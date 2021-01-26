@@ -4,7 +4,7 @@ description: Learn how the Q# programming language grammar uses actions and sema
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.grammar
 no-loc: ['Q#', '$$v']
 ---

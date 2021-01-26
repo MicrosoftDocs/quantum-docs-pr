@@ -4,7 +4,7 @@ description: Learn about types of expressions in Q# that only valid in certain c
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.contextualexpressions
 no-loc: ['Q#', '$$v']
 ---

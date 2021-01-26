@@ -4,6 +4,7 @@ description: Quick reference pages for Q#
 author: gillenhaalb
 ms.author:  a-gibec
 ms.date: 03/05/2020
+ms.topic: reference
 uid: microsoft.quantum.guide.quickref
 no-loc: ['Q#', '$$v']
 ---

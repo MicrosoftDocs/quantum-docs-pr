@@ -4,7 +4,7 @@ description: Learn how to contribute sample and library code to the Microsoft Qu
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.code
 no-loc: ['Q#', '$$v']
 ---
@@ -53,7 +53,7 @@ function PairTest () : Unit {
 More complicated conditions can be checked using the techniques in the [testing section](xref:microsoft.quantum.libraries.diagnostics) of the standard libraries guide.
 For instance, the following test checks that `H(q); X(q); H(q);` as called by <xref:Microsoft.Quantum.Canon.ApplyWith> does the same thing as `Z(q)`.
 
-```Q#
+```qsharp
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);

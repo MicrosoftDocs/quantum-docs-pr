@@ -4,6 +4,7 @@ description: Using an NWChem input deck, walk through an example of getting gate
 author: cgranade
 ms.author: chgranad
 ms.date: 10/23/2018
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc: ['Q#', '$$v']
 ---

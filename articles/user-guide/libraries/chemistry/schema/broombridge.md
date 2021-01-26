@@ -4,7 +4,7 @@ description: Overview of the Broombridge quantum chemistry schema, used to model
 author: martinro
 ms.author: martinro
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
 no-loc: ['Q#', '$$v']
 ---

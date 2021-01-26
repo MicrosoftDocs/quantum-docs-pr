@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerBitString
 title: _ComputeJordanWignerBitString function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
@@ -42,3 +42,7 @@ fermionic operator indices.
 ## Output : [Bool](xref:microsoft.quantum.lang-ref.bool)[]
 
 Bitstring `Bool[]` that is `true` where a `PauliZ` should be applied.
+
+## Example
+
+let bitString = _ComputeJordanWignerBitString(6, [0,1,2,6]) ;// bitString is [false, false, false ,true, true, true, false].

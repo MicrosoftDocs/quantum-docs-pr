@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToTail
 title: ApplyToTail operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -25,7 +25,8 @@ operation ApplyToTail<'T> (op : ('T => Unit), targets : 'T[]) : Unit
 
 ## Description
 
-Given an operation `op` and an array of targets `targets`,applies `op(Tail(targets))`.
+Given an operation `op` and an array of targets `targets`,
+applies `op(Tail(targets))`.
 
 ## Input
 
@@ -49,6 +50,15 @@ An array of targets, of which the last will be applied to `op`.
 ### 'T
 
 The input type of the operation to be applied.
+
+## Example
+
+The following Q# snippets are equivalent:
+
+```qsharp
+ApplyToTail(H, register);
+H(Tail(register));
+```
 
 ## See Also
 

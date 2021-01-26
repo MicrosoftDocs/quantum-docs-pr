@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ControlledRotation
 title: ControlledRotation user defined type
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
@@ -18,7 +18,8 @@ Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLea
 Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
-Describes a controlled rotation in terms of its target and controlindices, rotation axis, and index into a model parameter vector.
+Describes a controlled rotation in terms of its target and control
+indices, rotation axis, and index into a model parameter vector.
 
 ```qsharp
 
@@ -40,8 +41,24 @@ An array of the control qubit indices for this rotation.
 The axis for this rotation.
 ### ParameterIndex : [Int](xref:microsoft.quantum.lang-ref.int)
 
-An index into a model parameter vector describing the anglefor this rotation.
+An index into a model parameter vector describing the angle
+for this rotation.
+
+## Example
+
+The following represents a rotation about the $X$-axis of the first
+qubit in a register, controlled on the second qubit, and with an
+angle given by the fourth parameter in a sequential model:
+
+```qsharp
+let controlledRotation = ControlledRotation(
+    (0, [1]),
+    PauliX,
+    3
+)
+```
 
 ## Remarks
 
-An uncontrolled rotation can be represented by setting `ControlIndices`to an empty array of indexes, `new Int[0]`.
+An uncontrolled rotation can be represented by setting `ControlIndices`
+to an empty array of indexes, `new Int[0]`.

@@ -4,7 +4,7 @@ description: Learn about allocating and releasing quantum memory in a Q# program
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.quantummemorymanagement
 no-loc: ['Q#', '$$v']
 ---

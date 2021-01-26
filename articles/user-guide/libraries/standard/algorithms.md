@@ -4,7 +4,7 @@ description: Learn about fundamental quantum computing algorithms, including amp
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc: ['Q#', '$$v']
 ---
@@ -46,7 +46,7 @@ For background, you could start from [Standard Amplitude Amplification](https://
 The Fourier transform is a fundamental tool of classical analysis and is just as important for quantum computations.
 In addition, the efficiency of the *quantum Fourier transform* (QFT) far surpasses what is possible on a classical machine making it one of the first tools of choice when designing a quantum algorithm.
 
-As an approximate generalization of the QFT, we provide the <xref:Microsoft.Quantum.Canon.ApproximateQft> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
+As an approximate generalization of the QFT, we provide the <xref:Microsoft.Quantum.Canon.ApproximateQFT> operation that allows for further optimizations by pruning rotations that aren't strictly necessary for the desired algorithmic accuracy.
 The approximate QFT requires the dyadic $Z$-rotation operation <xref:Microsoft.Quantum.Intrinsic.RFrac> as well as the <xref:Microsoft.Quantum.Intrinsic.H> operation.
 The input and output are assumed to be encoded in big endian encoding---that is, the qubit with index `0` is encoded in the left-most (highest) bit of the binary integer representation.
 This aligns with [ket notation](xref:microsoft.quantum.concepts.dirac), as a register of three qubits in the state $\ket{100}$ corresponds to $q_0$ being in the state $\ket{1}$ while $q_1$ and $q_2$ are both in state $\ket{0}$.

@@ -4,8 +4,7 @@ description: Describes how to update your Q# projects and the Microsoft Quantum 
 author: bradben
 ms.author: v-benbra
 ms.date: 5/30/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.update
 no-loc: ['Q#', '$$v']
 ---

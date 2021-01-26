@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AllowAtMostNCallsCA
 title: AllowAtMostNCallsCA operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -18,7 +18,8 @@ Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Between a call to this operation and its adjoint, asserts thata given operation is called at most a certain number of times.
+Between a call to this operation and its adjoint, asserts that
+a given operation is called at most a certain number of times.
 
 ```qsharp
 operation AllowAtMostNCallsCA<'TInput, 'TOutput> (nTimes : Int, op : ('TInput => 'TOutput is Adj + Ctl), message : String) : Unit is Adj
@@ -56,6 +57,24 @@ A message to be displayed upon failure.
 
 
 
+## Example
+
+The following snippet will fail when executed on machines which
+support this diagnostic:
+
+```qsharp
+using (register = Qubit[4]) {
+    within {
+        AllowAtMostNCallsCA(3, H, "Too many calls to H.");
+    } apply {
+        // Fails since this calls H four times, rather than the
+        // allowed maximum of three.
+        ApplyToEach(H, register);
+    }
+}
+```
+
 ## Remarks
 
-This operation may be replaced by a no-op on targets which do notsupport it.
+This operation may be replaced by a no-op on targets which do not
+support it.

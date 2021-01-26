@@ -4,7 +4,7 @@ description: Learn about the Microsoft QDK Toffoli simulator, a special purpose 
 author: alan-geller
 ms.author: ageller 
 ms.date: 6/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.toffoli-simulator
 no-loc: ['Q#', '$$v']
 ---

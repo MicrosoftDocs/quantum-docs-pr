@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanD
 title: LessThanD function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
@@ -42,4 +42,9 @@ The second value to be compared.
 
 ## Remarks
 
-The following are equivalent:```Q#let cond = a < b;let cond = LessThanD(a, b);```
+The following are equivalent:
+
+```qsharp
+let cond = a < b;
+let cond = LessThanD(a, b);
+```

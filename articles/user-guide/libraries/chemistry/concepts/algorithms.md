@@ -4,7 +4,7 @@ description: Learn how to use Trotter-Suzuki formulas and qubitization to work w
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc: ['Q#', '$$v']
 ---

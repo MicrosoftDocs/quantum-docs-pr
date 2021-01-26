@@ -4,7 +4,7 @@ description: Learn about operations and functions in the Q# programming language
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.operationsandfunctions
 no-loc: ['Q#', '$$v']
 ---

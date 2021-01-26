@@ -1,10 +1,10 @@
 ---
 title: Quantum resources estimator - Quantum Development Kit
 description: Learn about the Microsoft QDK resources estimator, which estimates the resources required to run a given instance of a Q# operation on a quantum computer.
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz 
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc: ['Q#', '$$v']
 ---
@@ -138,8 +138,8 @@ Currently both metrics in this pair can be achieved by the same circuit at the s
 The following metrics are reported:
 
 __Depth:__
-For the root operation - time it takes to execute it assuming specific gate times.
-For operations called or subsequent operations - time difference between latest qubit availability time at the beginning and the end of the operation.
+For the root operation - time it takes to execute it assuming configured gate times.
+For operations called or subsequent operations - time difference between the latest qubit availability time at the beginning and the end of the operation.
 
 __Width:__
 For the root operation - number of qubits actually used to execute it (and operation it calls).
@@ -154,11 +154,11 @@ For operations called or subsequent operations - minimum number of qubits that w
 
 Two modes of operation are supported. Mode is selected by setting QCTraceSimulatorConfiguration.OptimizeDepth.
 
-__OptimizeDepth=true:__
-QubitManager is discouraged from qubit reuse and allocates new qubit every time it is asked for a qubit. For the root operation __Depth__ becomes the minimum depth (lower bound). Compatible __Width__ is reported for this depth (both can be achieved at the same time). Note, that this width will likely be not optimal given this depth. __QubitCount__ may be lower than Width for the root operation because it assumes reuse.
-
 __OptimizeDepth=false:__
-QubitManager is encouraged to reuse qubits and will reuse released qubits before allocating new ones. For the root operation __Width__ becomes the minimal width (lower bound). Compatible __Depth__ is reported on which it can be achieved. __QubitCount__ will be the same as __Width__ for the root operation assuming no borrowing.
+This is the default mode. QubitManager is encouraged to reuse qubits and will reuse released qubits before allocating new ones. For the root operation __Width__ becomes the minimal width (lower bound). Compatible __Depth__ is reported on which it can be achieved. __QubitCount__ will be the same as __Width__ for the root operation assuming no borrowing.
+
+__OptimizeDepth=true:__
+QubitManager is discouraged from qubit reuse and heuristic-based optimization for qubit reuse is performed during and after execution. For the root operation __Depth__ becomes the minimum depth (lower bound). Compatible __Width__ is reported for this depth (both can be achieved at the same time). To optimize width, gates encountered later in the program may be scheduled before the gates encountered earlier in the program, but qubits are scheduled to be reused in such a way that the depth remains minimal. As qubits are reused based on time values, it is recommended that the gate times are configured to be integer values. __Width__ is not guaranteed to be optimal. More information can be found in the whitepaper [Width and Depth in the Tracer](https://github.com/microsoft/qsharp-runtime/tree/main/src/Simulation/Simulators/QCTraceSimulator/Docs).
 
 ## Providing the probability of measurement outcomes
 

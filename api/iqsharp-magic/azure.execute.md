@@ -4,8 +4,8 @@ description: Submits a job to an Azure Quantum workspace and waits for completio
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.execute
 ms.author: ryansha
-ms.date: 11/25/2020
-ms.topic: article
+ms.date: 01/24/2021
+ms.topic: managed-reference
 ---
 
 <!--

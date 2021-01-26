@@ -4,7 +4,7 @@ description: Learn about the diagnostic functions and operations in the Q# stand
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad 
-ms.topic: article
+ms.topic: conceptual
 no-loc: ['Q#', '$$v']
 ---
 
@@ -20,7 +20,7 @@ Diagnostics about classical values can be obtained by using the <xref:Microsoft.
 By default, this writes the string to the console.
 Used together with interpolated strings, <xref:Microsoft.Quantum.Intrinsic.Message> makes it easy to report diagnostic information about classical values:
 
-```Q#
+```qsharp
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```

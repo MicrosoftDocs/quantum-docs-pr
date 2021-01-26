@@ -4,7 +4,7 @@ description: Learn about the Microsoft QDK primitive operation counter, which us
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc: ['Q#', '$$v']
 ---
@@ -27,7 +27,7 @@ var sim = new QCTraceSimulator(config);
 
 ## Using the primitive operation counter in a C# host program
 
-The C# example that follows in this section counts how many <xref:Microsoft.Quantum.Intrinsic.T> operations are needed to implement the <xref:Microsoft.Quantum.Intrinsic.ccnot> operation, based on the following Q# sample code:
+The C# example that follows in this section counts how many <xref:Microsoft.Quantum.Intrinsic.T> operations are needed to implement the <xref:Microsoft.Quantum.Intrinsic.CCNOT> operation, based on the following Q# sample code:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

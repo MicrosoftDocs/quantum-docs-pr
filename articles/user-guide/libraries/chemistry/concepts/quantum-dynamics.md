@@ -4,7 +4,7 @@ description: Learn the similarities and differences between quantum dynamics and
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
 no-loc: ['Q#', '$$v']
 ---

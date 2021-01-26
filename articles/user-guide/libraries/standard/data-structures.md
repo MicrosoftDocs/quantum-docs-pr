@@ -5,7 +5,7 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc: ['Q#', '$$v']
 ---
 
@@ -65,7 +65,7 @@ ApplyToEach(
 ## Oracles ##
 
 In the [phase estimation](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) and [amplitude amplification](https://en.wikipedia.org/wiki/Amplitude_amplification) literature the concept of an oracle appears frequently.
-Here the term oracle refers to a blackbox quantum subroutine that acts upon a set of qubits and returns the answer as a phase.
+Here the term oracle refers to a quantum subroutine that acts upon a set of qubits and returns the answer as a phase.
 This subroutine often can be thought of as an input to a quantum algorithm that accepts the oracle, in addition to some other parameters, and applies a series of quantum operations and treating a call to this quantum subroutine as if it were a fundamental gate.
 Obviously, in order to actually implement the larger algorithm a concrete decomposition of the oracle into fundamental gates must be provided but such a decomposition is not needed in order to understand the algorithm that calls the oracle.
 In Q#, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.

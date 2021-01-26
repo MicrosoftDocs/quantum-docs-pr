@@ -4,7 +4,7 @@ description: Learn how to submit a GitHub pull request when you are ready to con
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.pulls
 no-loc: ['Q#', '$$v']
 ---

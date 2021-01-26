@@ -6,7 +6,7 @@ author: cgranade
 uid: microsoft.quantum.concepts.oracles
 ms.author: chgranad
 ms.date: 07/11/2018
-ms.topic: article
+ms.topic: conceptual
 no-loc: ['Q#', '$$v', '$$', "$$", '$', "$", $, $$, '\cdots', 'bmatrix', '\ddots', '\equiv', '\sum', '\begin', '\end', '\sqrt', '\otimes', '{', '}', '\text', '\phi', '\kappa', '\psi', '\alpha', '\beta', '\gamma', '\delta', '\omega', '\bra', '\ket', '\boldone', '\\\\', '\\', '=', '\frac', '\text', '\mapsto', '\dagger', '\to', '\begin{cases}', '\end{cases}', '\operatorname', '\braket', '\id', '\expect', '\defeq', '\variance', '\dd', '&', '\begin{align}', '\end{align}', '\Lambda', '\lambda', '\Omega', '\mathrm', '\left', '\right', '\qquad', '\times', '\big', '\langle', '\rangle', '\bigg', '\Big', '|', '\mathbb', '\vec', '\in', '\texttt', '\ne', '<', '>', '\leq', '\geq', '~~', '~', '\begin{bmatrix}', '\end{bmatrix}', '\_']
 ---
 # Quantum Oracles
@@ -89,6 +89,9 @@ $$
         & = (-1)^{f(0)} Z^{f(0) - f(1)} \ket{+}.
 \end{align}
 $$
+
+> [!NOTE]
+> Note that $Z^{-1}=Z^{\dagger}=Z$ and therefore $Z^{f(0)-f(1)}=Z^{f(1)-f(0)}.$
 
 More generally, both views of oracles can be broadened to represent classical functions which return real numbers instead of only a single bit.
 

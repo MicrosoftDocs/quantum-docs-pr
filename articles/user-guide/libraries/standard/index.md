@@ -4,7 +4,7 @@ description: Learn about the Microsoft Q# standard libraries that define the ope
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.intro
 no-loc: ['Q#', '$$v']
 ---

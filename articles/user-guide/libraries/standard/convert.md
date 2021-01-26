@@ -4,7 +4,7 @@ description: Learn about common and user-defined type conversion functions in th
 author: cgranade
 uid: microsoft.quantum.libraries.convert
 ms.author: chgranad 
-ms.topic: article
+ms.topic: conceptual
 no-loc: ['Q#', '$$v']
 ---
 
@@ -38,7 +38,7 @@ The <xref:Microsoft.Quantum.Convert> namespace also provides some more exotic co
 Finally, the Q# standard library provides a number of user-defined types such as <xref:Microsoft.Quantum.Math.Complex> and <xref:Microsoft.Quantum.Arithmetic.LittleEndian>.
 Along with these types, the standard library provides functions such as <xref:Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian>:
 
-```Q#
+```qsharp
 open Microsoft.Quantum.Arithmetic as Arithmetic;
 
 let register = Arithmetic.BigEndian(qubits);

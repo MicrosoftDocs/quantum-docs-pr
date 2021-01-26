@@ -4,8 +4,7 @@ description: Learn how to create a Q# application using Binder.
 author: bradben
 ms.author: v-benbra
 ms.date: 9/03/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.binder
 no-loc: ['Q#', '$$v']
 ---

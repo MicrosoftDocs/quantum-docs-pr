@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp
 title: SyndromeMeasOp user defined type
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: SyndromeMeasOp
@@ -26,6 +26,10 @@ newtype SyndromeMeasOp = ((Microsoft.Quantum.ErrorCorrection.LogicalRegister => 
 ```
 
 
+
+## Example
+
+Measure syndromes for the bit-flip code$S = \langle ZZI, IZZ \rangle$ using scratch qubits in anon–fault tolerant manner:```qsharp    let syndMeasOp = SyndromeMeasOp(MeasureStabilizerGenerators([            [PauliZ, PauliZ, PauliI],            [PauliI, PauliZ, PauliZ]        ], _, MeasureWithScratch));```
 
 ## Remarks
 

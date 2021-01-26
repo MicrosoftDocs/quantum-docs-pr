@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arrays.MappedByIndex
 title: MappedByIndex function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: MappedByIndex
@@ -51,6 +51,10 @@ The type of `array` elements.
 ### 'U
 
 The result type of the `mapper` function.
+
+## Example
+
+The following two lines are equivalent:```qsharplet arr = MapIndex(f, [x0, x1, x2]);```and```qsharplet arr = [f(0, x0), f(1, x1), f(2, x2)];```
 
 ## See Also
 

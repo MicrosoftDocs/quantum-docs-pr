@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Canon.BoundC
 title: BoundC function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: BoundC
@@ -44,6 +44,10 @@ A new operation that performs each given operation in sequenceon its input.
 ### 'T
 
 The target on which each of the operations in the array act.
+
+## Example
+
+The following are equivalent:```qsharplet bound = BoundC([U, V]);bound(x);```and```qsharpU(x); V(x);```
 
 ## See Also
 

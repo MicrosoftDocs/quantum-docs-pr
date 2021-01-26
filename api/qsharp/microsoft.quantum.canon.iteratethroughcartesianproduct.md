@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Canon.IterateThroughCartesianProduct
 title: IterateThroughCartesianProduct operation
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: IterateThroughCartesianProduct
@@ -45,6 +45,10 @@ An operation to be called for each element of the given Cartesian product.
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+Given an operation `op`, the following two snippets are equivalent:```Q#IterateThroughCartesianProduct([3, 4, 5], op);``````Q#op([0, 0, 0]);op([1, 0, 0]);op([2, 0, 0]);op([0, 1, 0]);// ...op([0, 3, 0]);op([0, 0, 1]);//op([2, 3, 4]);```
 
 ## See Also
 

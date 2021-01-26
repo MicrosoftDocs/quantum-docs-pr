@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arrays.Flattened
 title: Flattened function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Flattened
@@ -40,3 +40,7 @@ Concatenation of all arrays.
 ### 'T
 
 The type of `array` elements.
+
+## Example
+
+```Q#let flattened = Flattened([[1, 2], [3], [4, 5, 6]]);// flattened = [1, 2, 3, 4, 5, 6]```

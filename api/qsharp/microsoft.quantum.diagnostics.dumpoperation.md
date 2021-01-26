@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.DumpOperation
 title: DumpOperation operation
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: DumpOperation
@@ -42,6 +42,10 @@ The operation that is to be diagnosed.
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+When run on the quantum simulator target, the following snippet willoutput the matrix$$\begin{aligned}\left(\begin{matrix}1 & 0 & 0 & 0 \\\\0 & 0 & 0 & 1 \\\\0 & 0 & 1 & 0 \\\\0 & 1 & 0 & 0\end{matrix}\right)\end{aligned}.$$```Q#operation DumpCnot() : Unit {    DumpOperation(2, ApplyToFirstTwoQubitsCA(CNOT, _));}```
 
 ## Remarks
 

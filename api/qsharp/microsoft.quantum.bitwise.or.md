@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Or
 title: Or function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: Or
@@ -41,6 +41,10 @@ function Or (a : Int, b : Int) : Int
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)
 
 
+
+## Example
+
+```qsharplet a = 248;      //                 11111000₂let b = 63;       //                 00111111₂let x = Or(a, b); // x : Int = 255 = 11111111₂.```
 
 ## Remarks
 

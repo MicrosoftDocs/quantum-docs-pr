@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIf
 title: ApplyIf operation
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIf
@@ -54,6 +54,10 @@ The input to which the operation is applied.
 ### 'T
 
 The input type of the operation to be conditionally applied.
+
+## Example
+
+The following prepares a register of qubits into a computational basisstate represented by a classical bit string given as an array of `Bool`values:```Q#let bitstring = [true, false, true];using (register = Qubit(3)) {    ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));    // register should now be in the state |101⟩.    ...}```
 
 ## See Also
 

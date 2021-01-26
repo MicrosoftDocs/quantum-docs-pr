@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arrays.IsPermutation
 title: IsPermutation function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: IsPermutation
@@ -38,6 +38,10 @@ An array that may or may not represent a permutation.
 ## Output : [Bool](xref:microsoft.quantum.lang-ref.bool)
 
 
+
+## Example
+
+The following Q# code prints the message "All diagnostics completedsuccessfully":```Q#Fact(IsPermutation([2, 0, 1], "");Contradiction(IsPermutation([5, 0, 1], "[5, 0, 1] isn't a permutation");Message("All diagnostics completed successfully.");```
 
 ## Remarks
 

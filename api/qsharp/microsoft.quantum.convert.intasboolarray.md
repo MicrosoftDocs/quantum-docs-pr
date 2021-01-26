@@ -1,13 +1,13 @@
 ---
 uid: Microsoft.Quantum.Convert.IntAsBoolArray
 title: IntAsBoolArray function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: IntAsBoolArray
 qsharp.summary: >-
-  Produces a binary representation of a positive integer, using the
+  Produces a binary representation of a non-negative integer, using the
   little-endian representation for the returned array.
 ---
 
@@ -18,7 +18,7 @@ Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)
 Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Produces a binary representation of a positive integer, using thelittle-endian representation for the returned array.
+Produces a binary representation of a non-negative integer, using thelittle-endian representation for the returned array.
 
 ```qsharp
 function IntAsBoolArray (number : Int, bits : Int) : Bool[]
@@ -29,7 +29,7 @@ function IntAsBoolArray (number : Int, bits : Int) : Bool[]
 
 ### number : [Int](xref:microsoft.quantum.lang-ref.int)
 
-A positive integer to be converted to an array of boolean values.
+A non-negative integer to be converted to an array of boolean values.
 
 
 ### bits : [Int](xref:microsoft.quantum.lang-ref.int)

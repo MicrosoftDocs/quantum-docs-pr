@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyTransposition
 title: ApplyTransposition operation
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyTransposition
@@ -47,3 +47,8 @@ A list of $n$ qubits to which the transposition is applied to.
 
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## Example
+
+Prepare a uniform superposition of number states $|1\rangle$, $|2\rangle$, and$|3\rangle$ on 2 qubits.```Q#using (qubits = Qubit[2]) {  let register = LittleEndian(qubits);  PrepareUniformSuperposition(3, register);  ApplyTransposition(0, 3, register);}```

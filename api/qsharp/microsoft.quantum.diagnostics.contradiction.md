@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.Contradiction
 title: Contradiction function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: Contradiction
@@ -39,6 +39,10 @@ Failure message string to be printed in the case that the classicalcondition is
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+The following Q# code will print "Hello, world":```Q#Contradiction(2 == 3, "2 is not equal to 3.");Message("Hello, world.");```
 
 ## See Also
 

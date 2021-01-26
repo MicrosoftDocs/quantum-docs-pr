@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyPauli
 title: ApplyPauli operation
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyPauli
@@ -40,3 +40,8 @@ Register to apply the given Pauli operation on.
 
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## Example
+
+The following are equivalent:```qsharpApplyPauli([PauliY, PauliZ, PauliX], target);```and```qsharpY(target[0]);Z(target[1]);X(target[2]);```

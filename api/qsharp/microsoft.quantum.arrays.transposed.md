@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arrays.Transposed
 title: Transposed function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Transposed
@@ -46,3 +46,7 @@ Transposed $c \times r$ matrix
 ### 'T
 
 The type of each element of `matrix`.
+
+## Example
+
+```Q#// same as [[1, 4], [2, 5], [3, 6]]let transposed = Transposed([[1, 2, 3], [4, 5, 6]]);```

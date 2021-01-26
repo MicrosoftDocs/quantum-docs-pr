@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arrays.Windows
 title: Windows function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Windows
@@ -49,3 +49,7 @@ An array of elements.
 ### 'T
 
 The type of `array` elements.
+
+## Example
+
+```Q#// same as [[1, 2, 3], [2, 3, 4], [3, 4, 5]]let windows = Windows(3, [1, 2, 3, 4, 5]);```

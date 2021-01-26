@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.DefaultTrainingOptions
 title: DefaultTrainingOptions function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: DefaultTrainingOptions
@@ -26,3 +26,7 @@ function DefaultTrainingOptions () : Microsoft.Quantum.MachineLearning.TrainingO
 ## Output : [TrainingOptions](xref:Microsoft.Quantum.MachineLearning.TrainingOptions)
 
 A reasonable set of default training options for use when trainingclassifiers.
+
+## Example
+
+To use the default options, but with additional measurements, use the`w/` operator:```Q#let options = DefaultTrainingOptions()    w/ NMeasurements <- 1000000;```

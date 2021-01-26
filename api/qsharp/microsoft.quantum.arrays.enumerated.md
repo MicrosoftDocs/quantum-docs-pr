@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arrays.Enumerated
 title: Enumerated function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Enumerated
@@ -42,3 +42,7 @@ A new array containing elements of the original array along with theirindices.
 ### 'TElement
 
 The type of elements of the array.
+
+## Example
+
+The following `for` loops are equivalent:```Q#for (idx in IndexRange(array)) {    let element = array[idx];    ...}for ((idx, element) in Enumerated(array)) { ... }```

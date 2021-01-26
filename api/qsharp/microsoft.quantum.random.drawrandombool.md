@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomBool
 title: DrawRandomBool operation
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawRandomBool
@@ -36,3 +36,7 @@ The probability with which `true` should be returned.
 ## Output : [Bool](xref:microsoft.quantum.lang-ref.bool)
 
 `true` with probability `successProbability` and `false` withprobability `1.0 - successProbability`.
+
+## Example
+
+The following Q# snippet samples flips from a biased coin:```Q#let flips = DrawMany(DrawRandomBool, 10, 0.6);```

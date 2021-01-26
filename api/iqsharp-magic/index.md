@@ -4,7 +4,7 @@ description: Lists the magic commands available in the IQ# Jupyter kernel.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
 ms.author: ryansha
-ms.date: 11/25/2020
+ms.date: 01/26/2021
 ms.topic: article
 ---
 # IQ# Magic Commands
@@ -17,16 +17,9 @@ ms.topic: article
 | [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status) | Displays status for a job in the current Azure Quantum workspace. |
 | [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit) | Submits a job to an Azure Quantum workspace. |
 | [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target) | Sets or displays the active execution target for Q# job submission in an Azure Quantum workspace. |
-| [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata) | Checks the reference implementation for a single kata's test. |
-| [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge) | Loads and returns Broombridge electronic structure problem representation from a given .yaml file. |
-| [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode) | Encodes a fermion Hamiltonian to a format consumable by Q#. |
-| [`%chemistry.fh.add_terms`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms) | Adds terms to a fermion Hamiltonian. |
-| [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load) | Loads the fermion Hamiltonian for an electronic structure problem. The problem is loaded from a file or passed as an argument. |
-| [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load) | Loads Broombridge electronic structure problem and returns selected input state. |
 | [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config) | Allows setting or querying configuration options. |
 | [`%debug`](xref:microsoft.quantum.iqsharp.magic-ref.debug) | Steps through the execution of a given Q# operation or function. |
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Runs a given function or operation on the ResourcesEstimator target machine. |
-| [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Executes a single test. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Returns a list of all currently available magic commands. |
 | [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | Lists currently opened namespaces and their aliases. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Provides the ability to load a NuGet package. |

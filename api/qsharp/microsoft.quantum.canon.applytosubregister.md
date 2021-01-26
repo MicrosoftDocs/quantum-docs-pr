@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToSubregister
 title: ApplyToSubregister operation
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToSubregister
@@ -46,6 +46,10 @@ Register on which the operation acts.
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+Create three qubit state $\frac{1}{\sqrt{2}}\ket{0}\_2(\ket{0}\_1\ket{0}_3+\ket{1}\_1\ket{1}_3)$:```qsharp    using (register = Qubit[3]) {        ApplyToSubregister(Exp([PauliX,PauliY],PI() / 4.0,_), [1,3], register);    }```
 
 ## See Also
 

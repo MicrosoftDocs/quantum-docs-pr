@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Convert.RangeAsIntArray
 title: RangeAsIntArray function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: RangeAsIntArray
@@ -34,3 +34,7 @@ A `Range` of values `start..step..end` to be converted to an array.
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)[]
 
 A new array of integers corresponding to values iterated over by `range`.
+
+## Example
+
+```qsharp// The following returns [1,3,5,7];let array = RangeAsIntArray(1..2..8);```

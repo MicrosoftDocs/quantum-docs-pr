@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.CyclicEntanglingLayer
 title: CyclicEntanglingLayer function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: CyclicEntanglingLayer
@@ -47,3 +47,7 @@ The separation between the target and control indices for each rotation.
 ## Output : [ControlledRotation](xref:Microsoft.Quantum.MachineLearning.ControlledRotation)[]
 
 An array of two-qubit controlled rotations laid out cyclically acrossa register of `nQubits` qubits.
+
+## Example
+
+The following are equivalent:```Q#let layer = CyclicEntanglingLayer(3, PauliX, 2);let layer = [    ControlledRotation((0, [2]), PauliX, 0),    ControlledRotation((1, [0]), PauliX, 1),    ControlledRotation((2, [1]), PauliX, 2)];```

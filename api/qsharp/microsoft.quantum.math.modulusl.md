@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Math.ModulusL
 title: ModulusL function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ModulusL
@@ -42,4 +42,4 @@ Integer $r$ between 0 and `modulus - 1` such that `value - r` is divisible by mo
 
 ## Remarks
 
-This function behaves different to how the operator `%` behaves in C# and Q# as in the resultis always a positive integer between 0 and `modulus - 1`, even if value is negative.
+This function behaves different to how the operator `%` behaves in C# and Q# as in the resultis always a non-negative integer between 0 and `modulus - 1`, even if value is negative.

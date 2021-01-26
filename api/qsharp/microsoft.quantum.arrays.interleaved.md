@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arrays.Interleaved
 title: Interleaved function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Interleaved
@@ -49,3 +49,7 @@ Interleaved array
 ### 'T
 
 The type of each element of `first` and `second`.
+
+## Example
+
+```Q#// same as int1 = [1, -1, 2, -2, 3, -3]let int1 = Interleaved([1, 2, 3], [-1, -2, -3])// same as int2 = [false, true, false, true, false]let int2 = Interleaved(ConstantArray(3, false), ConstantArray(2, true));```

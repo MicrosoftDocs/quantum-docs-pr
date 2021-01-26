@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Canon.TransformedOperationA
 title: TransformedOperationA function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TransformedOperationA
@@ -50,6 +50,10 @@ A new operation tbat calls `fn` with its input, then passes theresulting output
 ### 'U
 
 
+
+## Example
+
+The following call uses@"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" to transforman operation designed for@"Microsoft.Quantum.Arithmetic.BigEndian" inputs into an operationthat accepts inputs of type@"Microsoft.Quantum.Arithmetic.LittleEndian":```qsharplet leOp = TransformedOperation(LittleEndianAsBigEndian, ApplyXorInPlaceBE);```
 
 ## See Also
 

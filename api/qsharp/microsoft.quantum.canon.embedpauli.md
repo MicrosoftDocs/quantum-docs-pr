@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Canon.EmbedPauli
 title: EmbedPauli function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: EmbedPauli
@@ -46,3 +46,8 @@ Length of the array to be returned.
 
 ## Output : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]
 
+
+
+## Example
+
+To obtain the array `[PauliI, PauliI, PauliX, PauliI]`:```qsharpEmbedPauli(PauliX, 2, 3);```

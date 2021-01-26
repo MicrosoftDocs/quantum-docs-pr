@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomDouble
 title: DrawRandomDouble operation
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawRandomDouble
@@ -39,6 +39,10 @@ The largest real number to be drawn.
 ## Output : [Double](xref:microsoft.quantum.lang-ref.double)
 
 A random real number in the inclusive interval from `min` to `max` withuniform probability.
+
+## Example
+
+The following Q# snippet randomly draws an angle between $0$ and $2 \pi$:```Q#let angle = DrawRandomDouble(0.0, 2.0 * PI());```
 
 ## Remarks
 

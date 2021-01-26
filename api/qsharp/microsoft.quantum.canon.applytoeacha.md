@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToEachA
 title: ApplyToEachA operation
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToEachA
@@ -47,6 +47,10 @@ Array of qubits on which to apply the given operation.
 ### 'T
 
 The target on which the operation acts.
+
+## Example
+
+Prepare a three-qubit $\ket{+}$ state:```qsharpusing (register = Qubit[3]) {    ApplyToEach(H, register);}```
 
 ## See Also
 

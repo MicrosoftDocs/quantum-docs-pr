@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arrays.SquareArrayFact
 title: SquareArrayFact function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: SquareArrayFact
@@ -49,6 +49,10 @@ A message to be printed if the array is not a square array
 ### 'T
 
 The type of each element of `array`.
+
+## Example
+
+```Q#SquareArrayFact([[1, 2], [3, 4]], "Array is not a square");       // okaySquareArrayFact([[1, 2, 3], [4, 5, 6]], "Array is not a square"); // will failSquareArrayFact([[1, 2], [3, 4, 5]], "Array is not a square");    // will fail```
 
 ## See Also
 

@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
 title: ApplyPermutationUsingDecomposition operation
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingDecomposition
@@ -45,6 +45,10 @@ A list of $n$ qubits to which the permutation is applied to.
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+To synthesize a `SWAP` operation:```Q#using (qubits = Qubit[2]) {  ApplyPermutationUsingDecomposition([0, 2, 1, 3], LittleEndian(qubits));}```
 
 ## References
 

@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arrays._SwapOrderToPermuteArray
 title: _SwapOrderToPermuteArray function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: _SwapOrderToPermuteArray
@@ -36,6 +36,10 @@ Array with the permutation of the indices of the new array. There should be $n$ 
 ## Output : ([Int](xref:microsoft.quantum.lang-ref.int),[Int](xref:microsoft.quantum.lang-ref.int))[]
 
 The tuple represents the two indices to be swapped. The swaps begin at the lowest index.
+
+## Example
+
+```qsharp// The following returns [(0, 5),(0, 4),(0, 1),(0, 3)];let swapOrder = _SwapOrderToPermuteArray([5, 3, 2, 0, 1, 4]);```
 
 ## Remarks
 

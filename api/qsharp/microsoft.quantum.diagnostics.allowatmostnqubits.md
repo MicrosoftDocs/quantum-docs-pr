@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AllowAtMostNQubits
 title: AllowAtMostNQubits operation
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AllowAtMostNQubits
@@ -42,6 +42,10 @@ A message to be displayed upon failure.
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## Example
+
+The following snippet will fail when executed on machines whichsupport this diagnostic:```Q#within {    AllowAtMostNQubits(3, "Too many qubits allocated.");} apply {    // Fails since this allocates four qubits.    using (register = Qubit[4]) {    }}```
 
 ## Remarks
 

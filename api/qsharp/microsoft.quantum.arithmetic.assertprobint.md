@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AssertProbInt
 title: AssertProbInt operation
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AssertProbInt
@@ -54,3 +54,8 @@ Absolute tolerance on the difference between actual and expected.
 
 ## Output : [Unit](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## Example
+
+Suppose that the `qubits` register encodes a 3-qubit quantum state$\ket{\psi}=\sqrt{1/8}\ket{0}+\sqrt{7/8}\ket{6}$ in little-endian format.This means that the number states $\ket{0}\equiv\ket{0}\ket{0}\ket{0}$and $\ket{6}\equiv\ket{0}\ket{1}\ket{1}$. Then the following asserts succeed:```qsharpAssertProbInt(0, 0.125, qubits, 10e-10);AssertProbInt(6, 0.875, qubits, 10e-10);```

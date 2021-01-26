@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Random.NormalDistribution
 title: NormalDistribution function
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/26/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: NormalDistribution
@@ -39,6 +39,10 @@ function NormalDistribution (mean : Double, variance : Double) : Microsoft.Quant
 ## Output : [ContinuousDistribution](xref:Microsoft.Quantum.Random.ContinuousDistribution)
 
 
+
+## Example
+
+The following draws 10 samples from the normal distribution with mean2 and standard deviation 0.1:```Q#let samples = DrawMany(    (NormalDistribution(2.0, PowD(0.1, 2.0)))::Sample,    10, ());```
 
 ## See Also
 

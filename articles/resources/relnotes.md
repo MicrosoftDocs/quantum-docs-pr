@@ -17,15 +17,15 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
-## Version X.XX.XXXXXXXXXX
+## Version 0.15.2101125897
 
 *Release date: January 26th, 2021*
 
 - Simplified qubit allocation, providing more convenient syntax for allocating qubits, [see details in Q# language repository](https://github.com/microsoft/qsharp-language/blob/main/Approved/1-implicitly-scoped-qubit-allocation.md).
-- Improved the chemistry library including API improvements and better Python support and integration with existing chemistry packages.
-- Q# ergonomic improvements:parentheses on the left-hand side of a curried call are now optional, eliminating the need for parentheses around subsequent calls; parentheses around operation and function type are now optional; parentheses around conditions and in other statement headers are now optional.
+- Created a Python package to work as a convenience layer to the Q# chemistry library, including molecular visualization, a convenience function for parsing Broombridge files for quantum simulation and resource estimation, and functionality to auto-generate input files for several popular chemistry packages, such as NWChem, OpenMolcas and Psi4.
+- Parentheses are now optional for operation and function types and `if`, `elif`, `while` and `until` statements. Parentheses for `for`, `use` and `borrow` statements have been deprecated.
 - Improved width estimates for optimal depth, [see details](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
-- Released QDK-Python package. 
+- Released QDK-Python package that includes `azure-quantum`, the Python client for submitting quantum-inspired optimization jobs to the Azure Quantum service, as well as `qdk`, including `qdk.chemistry`, a Python-based convenience layer for the Q# chemistry library.
 
 ## Version 0.14.2011120240
 

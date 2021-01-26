@@ -1,5 +1,5 @@
 - href: index.md
-  name: 'IQ# magic commands'
+  name: IQ# magic commands
 - href: azure.connect.md
   name: '%azure.connect magic command'
 - href: azure.execute.md

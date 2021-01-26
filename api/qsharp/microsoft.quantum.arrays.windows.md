@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Windows
 title: Windows function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -25,7 +25,12 @@ function Windows<'T> (size : Int, array : 'T[]) : 'T[][]
 
 ## Description
 
-This function returns all `n - size + 1` subarrays oflength `size` in order, where `n` is the length of `arr`.The first subarrays are `arr[0..size - 1], arr[1..size], arr[2..size + 1]`until the last subarray `arr[n - size..n - 1]`.If `size <= 0` or `size > n`, an empty array is returned.
+This function returns all `n - size + 1` subarrays of
+length `size` in order, where `n` is the length of `arr`.
+The first subarrays are `arr[0..size - 1], arr[1..size], arr[2..size + 1]`
+until the last subarray `arr[n - size..n - 1]`.
+
+If `size <= 0` or `size > n`, an empty array is returned.
 
 ## Input
 
@@ -49,3 +54,10 @@ An array of elements.
 ### 'T
 
 The type of `array` elements.
+
+## Example
+
+```qsharp
+// same as [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
+let windows = Windows(3, [1, 2, 3, 4, 5]);
+```

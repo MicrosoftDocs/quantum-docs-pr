@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomInt
 title: DrawRandomInt operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
@@ -38,7 +38,16 @@ The largest integer to be drawn.
 
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)
 
-An integer in the inclusive range from `min` to `max` with uniformprobability.
+An integer in the inclusive range from `min` to `max` with uniform
+probability.
+
+## Example
+
+The following Q# snippet randomly rolls a six-sided die:
+
+```qsharp
+let roll = DrawRandomInt(1, 6);
+```
 
 ## Remarks
 

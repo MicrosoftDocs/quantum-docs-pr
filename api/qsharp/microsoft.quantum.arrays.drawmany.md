@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.DrawMany
 title: DrawMany operation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -18,7 +18,8 @@ Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Repeats an operation for a given number of samples, collecting its outputsin an array.
+Repeats an operation for a given number of samples, collecting its outputs
+in an array.
 
 ```qsharp
 operation DrawMany<'TInput, 'TOutput> (op : ('TInput => 'TOutput), nSamples : Int, input : 'TInput) : 'TOutput[]
@@ -55,6 +56,15 @@ The input to be passed to `op`.
 ### 'TOutput
 
 
+
+## Example
+
+The following samples an integer, given an operation
+that samples a single bit at a time.
+
+```qsharp
+let randomInteger = BoolArrayAsInt(DrawMany(SampleRandomBit, 16, ()));
+```
 
 ## See Also
 

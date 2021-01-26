@@ -17,6 +17,16 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version 0.15.2101125897
+
+*Release date: January 26th, 2021*
+
+- Simplified qubit allocation, providing more convenient syntax for allocating qubits, [see details in Q# language repository](https://github.com/microsoft/qsharp-language/blob/main/Approved/1-implicitly-scoped-qubit-allocation.md).
+- Created QDK-Python repository that includes `azure-quantum`, the Python client for submitting quantum-inspired optimization jobs to the Azure Quantum service, as well as `qdk`, including `qdk.chemistry`, a Python-based convenience layer for the Q# chemistry library that includes molecular visualization and functionality to generate input files for several chemistry packages such as NWChem, Psi4 and OpenMolcas.
+- Parentheses are now optional for operation and function types and `if`, `elif`, `while` and `until` statements. Parentheses for `for`, `use` and `borrow` statements have been deprecated.
+- Improved width estimates for optimal depth, [see details](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
+- Apply unitary operation provided as explicit matrix using `ApplyUnitary` ([QuantumLibraries#391](https://github.com/microsoft/QuantumLibraries/pull/391), external contribution by Dmytro Fedoriaka)
+- Fixed https://github.com/microsoft/iqsharp/issues/387 by mitigating performance impact on IQ# kernel startup.
 ## Version 0.14.2011120240
 
 *Release date: November 25th, 2020*

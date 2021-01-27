@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Logical.EqualB
 title: EqualB function
-ms.date: 1/23/2021 12:00:00 AM
+ms.date: 1/27/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
@@ -42,9 +42,4 @@ The second value to be compared.
 
 ## Remarks
 
-The following are equivalent:
-
-```qsharp
-let cond = a == b;
-let cond = EqualB(a, b);
-```
+The following are equivalent:```qsharplet cond = a == b;let cond = EqualB(a, b);```

@@ -14,10 +14,6 @@ functions:
   uid: Microsoft.Quantum.Math.AbsSquaredComplex}
 - {summary: Returns the squared absolute value of a complex number of type `ComplexPolar`.,
   uid: Microsoft.Quantum.Math.AbsSquaredComplexPolar}
-- {summary: Helper function used to recursively calculate the bitsize of a value.,
-  uid: Microsoft.Quantum.Math.AccumulatedBitsizeI}
-- {summary: Helper function used to recursively calculate the bitsize of a value.,
-  uid: Microsoft.Quantum.Math.AccumulatedBitsizeL}
 - {summary: Returns the angle whose cosine is the specified number., uid: Microsoft.Quantum.Math.ArcCos}
 - {summary: Computes the inverse hyperbolic cosine of a number., uid: Microsoft.Quantum.Math.ArcCosh}
 - {summary: Returns the angle whose sine is the specified number., uid: Microsoft.Quantum.Math.ArcSin}
@@ -120,9 +116,6 @@ functions:
 - {summary: Returns the sum of two inputs., uid: Microsoft.Quantum.Math.PlusI}
 - {summary: Returns the sum of two inputs., uid: Microsoft.Quantum.Math.PlusL}
 - {summary: Returns a number raised to a given power., uid: Microsoft.Quantum.Math.PowC}
-- {summary: 'Internal. Since it is easiest to define the power of two complex numbers
-    in cartesian form as returning in polar form, we define that here, then convert
-    as needed.', uid: Microsoft.Quantum.Math.PowCAsCP}
 - {summary: Returns a number raised to a given power., uid: Microsoft.Quantum.Math.PowCP}
 - {summary: Returns the number x raised to the power y., uid: Microsoft.Quantum.Math.PowD}
 - {summary: Returns a number raised to a given power., uid: Microsoft.Quantum.Math.PowI}
@@ -168,5 +161,5 @@ operations:
     \ instead.\n\n", uid: Microsoft.Quantum.Math.RandomReal}
 - {summary: "> [!WARNING]\n> RandomSingleQubitPauli has been deprecated. Please use\
     \ <xref:Microsoft.Quantum.Random.DrawRandomPauli> instead.\n\n", uid: Microsoft.Quantum.Math.RandomSingleQubitPauli}
-summary: This namespace contains classical mathematical functions and data types.
+summary: ''
 uid: Microsoft.Quantum.Math

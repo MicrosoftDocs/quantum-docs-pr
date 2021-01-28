@@ -5,10 +5,6 @@
 functions:
 - {summary: 'Returns the local minimum for a univariate function over a bounded interval,
     using a golden interval search.', uid: Microsoft.Quantum.Optimization.LocalUnivariateMinimum}
-- {summary: Returns the midpoint for an interval., uid: Microsoft.Quantum.Optimization.Midpoint}
-- {summary: 'Given an interval, returns a probe interval that contracts the given
-    interval by a factor of the golden ratio.', uid: Microsoft.Quantum.Optimization.Probe}
-- {summary: Returns the width of an interval., uid: Microsoft.Quantum.Optimization.Width}
 name: Microsoft.Quantum.Optimization
 newtypes:
 - {summary: Represents the result of optimizing a univariate function., uid: Microsoft.Quantum.Optimization.UnivariateOptimizationResult}

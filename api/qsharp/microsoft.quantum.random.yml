@@ -9,7 +9,6 @@ functions:
 - {summary: Returns a uniform distribution over a given inclusive range., uid: Microsoft.Quantum.Random.DiscreteUniformDistribution}
 - {summary: Returns a normal distribution with a given mean and variance., uid: Microsoft.Quantum.Random.NormalDistribution}
 - {summary: Returns a normal distribution with mean 0 and variance 1., uid: Microsoft.Quantum.Random.StandardNormalDistribution}
-- {summary: '', uid: Microsoft.Quantum.Random.StandardTransformation}
 - {summary: 'Given a continuous distribution, returns a new distribution that transforms
     the original by a given function.', uid: Microsoft.Quantum.Random.TransformedContinuousDistribution}
 name: Microsoft.Quantum.Random
@@ -21,7 +20,6 @@ newtypes:
 - {summary: Represents a univariate probability distribution over real numbers., uid: Microsoft.Quantum.Random.ContinuousDistribution}
 - {summary: Represents a univariate probability distribution over integers., uid: Microsoft.Quantum.Random.DiscreteDistribution}
 operations:
-- {summary: '', uid: Microsoft.Quantum.Random.Delay}
 - {summary: Draws a random sample from a categorical distribution specified by a list
     of probablities., uid: Microsoft.Quantum.Random.DrawCategorical}
 - {summary: 'Given a success probability, returns a single Bernoulli trial that is
@@ -29,10 +27,7 @@ operations:
 - {summary: Draws a random real number in a given inclusive interval., uid: Microsoft.Quantum.Random.DrawRandomDouble}
 - {summary: Draws a random integer in a given inclusive range., uid: Microsoft.Quantum.Random.DrawRandomInt}
 - {summary: Draws a random Pauli value., uid: Microsoft.Quantum.Random.DrawRandomPauli}
-- {summary: '', uid: Microsoft.Quantum.Random.DrawStandardNormalVariate}
 - {summary: 'Given an array of data and an a distribution over its indices, attempts
     to choose an element at random.', uid: Microsoft.Quantum.Random.MaybeChooseElement}
-- {summary: Internal-only operation for sampling from transformed distributions. Should
-    only be used via partial application., uid: Microsoft.Quantum.Random.SampleTransformedContinuousDistribution}
 summary: ''
 uid: Microsoft.Quantum.Random

@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.StateGenerator
 title: StateGenerator user defined type
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/28/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: StateGenerator

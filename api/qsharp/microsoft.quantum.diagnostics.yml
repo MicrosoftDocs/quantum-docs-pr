@@ -18,7 +18,6 @@ functions:
 - {summary: Represents the claim that a classical floating point value has the expected
     value up to a given absolute tolerance., uid: Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact}
 - {summary: Declares that a classical condition is true., uid: Microsoft.Quantum.Diagnostics.Fact}
-- {summary: Internal function used to fail with meaningful error messages., uid: Microsoft.Quantum.Diagnostics.FormattedFailure}
 - {summary: Asserts that a classical complex number has the expected value up to a
     small tolerance of 1e-10., uid: Microsoft.Quantum.Diagnostics.NearEqualityFactC}
 - {summary: Asserts that a classical complex number has the expected value up to a
@@ -73,9 +72,6 @@ operations:
     Z operator up to a given tolerance., uid: Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance}
 - {summary: 'Given an operation, displays diagnostics about the operation that are
     made available by the current execution target.', uid: Microsoft.Quantum.Diagnostics.DumpOperation}
-- {summary: 'Uses DumpRegister to provide diagnostics on the state of a reference
-    and target register. Written as separate operation to allow overriding and interpreting
-    as separate registers, rather than as a single combined register.', uid: Microsoft.Quantum.Diagnostics.DumpReferenceAndTarget}
 - {summary: Checks if the result of applying two operations `givenU` and `expectedU`
     to a basis state is the same. The basis state is described by `basis` parameter.
     See <xref:microsoft.quantum.extensions.fliptobasis> function for more details

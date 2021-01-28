@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfZero
 title: ApplyIfZero operation
-ms.date: 1/23/2021 12:00:00 AM
+ms.date: 1/28/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions

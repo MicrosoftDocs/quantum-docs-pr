@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Convert.IntAsStringWithFormat
 title: IntAsStringWithFormat function
-ms.date: 1/23/2021 12:00:00 AM
+ms.date: 1/28/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert

@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Logical.Conditioned
 title: Conditioned function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/27/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: Conditioned
@@ -53,12 +53,4 @@ The value to be returned when `condition` is `false`.
 
 ## Remarks
 
-Unlike the `?|` operator, this function does not short-circuit, such that
-both inputs are fully evaluated.
-
-Up to short-circuiting behavior, the following are equivalent:
-
-```qsharp
-let x = condition ? ifTrue | ifFalse;
-let x = Conditioned(condition, ifTrue, ifFalse);
-```
+Unlike the `?|` operator, this function does not short-circuit, such thatboth inputs are fully evaluated.Up to short-circuiting behavior, the following are equivalent:```qsharplet x = condition ? ifTrue | ifFalse;let x = Conditioned(condition, ifTrue, ifFalse);```

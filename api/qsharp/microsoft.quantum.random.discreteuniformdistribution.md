@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Random.DiscreteUniformDistribution
 title: DiscreteUniformDistribution function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/27/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DiscreteUniformDistribution
@@ -38,17 +38,11 @@ The largest integer to be drawn.
 
 ## Output : [DiscreteDistribution](xref:Microsoft.Quantum.Random.DiscreteDistribution)
 
-A distribution whose random variates are integers in the inclusive
-range from `min` to `max` with uniform probability.
+A distribution whose random variates are integers in the inclusiverange from `min` to `max` with uniform probability.
 
 ## Example
 
-The following Q# snippet randomly rolls a six-sided die:
-
-```qsharp
-let dieDistribution = DiscreteUniformDistribution(1, 6);
-let dieRoll = dieDistribution::Sample();
-```
+The following Q# snippet randomly rolls a six-sided die:```qsharplet dieDistribution = DiscreteUniformDistribution(1, 6);let dieRoll = dieDistribution::Sample();```
 
 ## Remarks
 

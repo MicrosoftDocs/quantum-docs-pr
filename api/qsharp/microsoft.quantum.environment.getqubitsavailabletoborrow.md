@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Environment.GetQubitsAvailableToBorrow
 title: GetQubitsAvailableToBorrow operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/29/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Environment
 qsharp.name: GetQubitsAvailableToBorrow
@@ -13,7 +13,7 @@ qsharp.summary: Returns the number of qubits currently available to borrow.
 
 Namespace: [Microsoft.Quantum.Environment](xref:Microsoft.Quantum.Environment)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns the number of qubits currently available to borrow.

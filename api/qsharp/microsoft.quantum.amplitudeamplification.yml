@@ -67,8 +67,6 @@ operations:
 - {summary: Fixed-Point Amplitude Amplification algorithm, uid: Microsoft.Quantum.AmplitudeAmplification.ApplyFixedPointAmplification}
 - {summary: Oblivious amplitude amplification by specifying partial reflections.,
   uid: Microsoft.Quantum.AmplitudeAmplification.ApplyObliviousAmplitudeAmplification}
-- {summary: Implementation of <xref:microsoft.quantum.canon.targetstatereflectionoracle>.,
-  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyTargetStateReflectionOracle}
 summary: This namespace contains functions and operations for performing amplitude
   amplification.
 uid: Microsoft.Quantum.AmplitudeAmplification

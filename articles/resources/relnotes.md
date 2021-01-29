@@ -17,6 +17,15 @@ For installation instructions, please refer to the [install guide](xref:microsof
 
 For update instructions, please refer to the [update guide](xref:microsoft.quantum.update).
 
+## Version 0.15.2101.126807
+
+*Release date: January 29th, 2021*
+
+- Added project templates to Q# compiler for executables targeting IonQ and Honeywell providers
+- Update IQ# kernel syntax highlighting to include changes to Q# syntax introduced in version 0.15.2101125897
+- Bugfix to support passing arrays as input arguments to Q# programs submitted to Azure Quantum via `%azure.execute`
+- Fix "Permission denied" error encountered using `az` inside of `iqsharp-base` Docker images (https://github.com/microsoft/iqsharp/issues/404)
+
 ## Version 0.15.2101125897
 
 *Release date: January 26th, 2021*
@@ -27,6 +36,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 - Improved width estimates for optimal depth, [see details](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
 - Apply unitary operation provided as explicit matrix using `ApplyUnitary` ([QuantumLibraries#391](https://github.com/microsoft/QuantumLibraries/pull/391), external contribution by Dmytro Fedoriaka)
 - Fixed https://github.com/microsoft/iqsharp/issues/387 by mitigating performance impact on IQ# kernel startup.
+
 ## Version 0.14.2011120240
 
 *Release date: November 25th, 2020*

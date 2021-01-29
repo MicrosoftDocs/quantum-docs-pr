@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanOrEqualL
 title: LessThanOrEqualL function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/29/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LessThanOrEqualL
@@ -18,8 +18,7 @@ Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)
 Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Returns true if and only if a number is less than or equal to another
-number.
+Returns true if and only if a number is less than or equal to anothernumber.
 
 ```qsharp
 function LessThanOrEqualL (a : BigInt, b : BigInt) : Bool
@@ -45,9 +44,4 @@ The second value to be compared.
 
 ## Remarks
 
-The following are equivalent:
-
-```qsharp
-let cond = a <= b;
-let cond = LessThanOrEqualL(a, b);
-```
+The following are equivalent:```qsharplet cond = a <= b;let cond = LessThanOrEqualL(a, b);```

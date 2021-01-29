@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Random.ComplexDistribution
 title: ComplexDistribution user defined type
-ms.date: 1/23/2021 12:00:00 AM
+ms.date: 1/29/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Random

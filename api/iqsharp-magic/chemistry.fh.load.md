@@ -5,7 +5,7 @@ description: Loads the fermion Hamiltonian for an electronic structure problem. 
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load
 ms.author: ryansha
-ms.date: 01/24/2021
+ms.date: 01/29/2021
 ms.topic: managed-reference
 ---
 

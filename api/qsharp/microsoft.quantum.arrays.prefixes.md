@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Prefixes
 title: Prefixes function
-ms.date: 1/23/2021 12:00:00 AM
+ms.date: 1/29/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -25,8 +25,7 @@ function Prefixes<'T> (array : 'T[]) : 'T[][]
 
 ## Description
 
-Returns an array of all prefixes, starting with an array that only
-has the first element until the complete array.
+Returns an array of all prefixes, starting with an array that onlyhas the first element until the complete array.
 
 ## Input
 
@@ -48,7 +47,4 @@ The type of `array` elements.
 
 ## Example
 
-```qsharp
-let prefixes = Prefixes([23, 42, 144]);
-// prefixes = [[23], [23, 42], [23, 42, 144]]
-```
+```Q#let prefixes = Prefixes([23, 42, 144]);// prefixes = [[23], [23, 42], [23, 42, 144]]```

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Logical.And
 title: And function
-ms.date: 1/23/2021 12:00:00 AM
+ms.date: 1/29/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
@@ -42,12 +42,4 @@ The second value to be considered.
 
 ## Remarks
 
-Unlike the `and` operator, this function does not short-circuit, such that
-both inputs are fully evaluated.
-
-Up to short-circuiting behavior, the following are equivalent:
-
-```qsharp
-let x = a and b;
-let x = And(a, b);
-```
+Unlike the `and` operator, this function does not short-circuit, such thatboth inputs are fully evaluated.Up to short-circuiting behavior, the following are equivalent:```Q#let x = a and b;let x = And(a, b);```

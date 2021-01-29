@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.ArcTan2
 title: ArcTan2 function
-ms.date: 1/23/2021 12:00:00 AM
+ms.date: 1/29/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math

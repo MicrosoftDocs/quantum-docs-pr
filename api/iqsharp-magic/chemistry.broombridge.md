@@ -5,7 +5,7 @@ description: Loads and returns Broombridge electronic structure problem represen
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge
 ms.author: ryansha
-ms.date: 01/24/2021
+ms.date: 01/29/2021
 ms.topic: managed-reference
 ---
 

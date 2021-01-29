@@ -28,7 +28,6 @@ functions:
 - {summary: Returns true if and only if a number is less than another number., uid: Microsoft.Quantum.Logical.LessThanD}
 - {summary: Returns true if and only if a number is less than another number., uid: Microsoft.Quantum.Logical.LessThanI}
 - {summary: Returns true if and only if a number is less than another number., uid: Microsoft.Quantum.Logical.LessThanL}
-- {summary: Used to implement `LexographicComparison`., uid: Microsoft.Quantum.Logical.LessThanLexographic}
 - {summary: Returns true if and only if a number is less than or equal to another
     number., uid: Microsoft.Quantum.Logical.LessThanOrEqualD}
 - {summary: Returns true if and only if a number is less than or equal to another

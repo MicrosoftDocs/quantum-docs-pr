@@ -28,6 +28,5 @@ functions:
 name: Microsoft.Quantum.Bitwise
 newtypes: []
 operations: []
-summary: This namespace contains functions for acting on the bitwise representation
-  of classical data types.
+summary: ''
 uid: Microsoft.Quantum.Bitwise

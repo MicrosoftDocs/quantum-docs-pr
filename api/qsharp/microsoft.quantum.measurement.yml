@@ -6,7 +6,6 @@ functions: []
 name: Microsoft.Quantum.Measurement
 newtypes: []
 operations:
-- {summary: '', uid: Microsoft.Quantum.Measurement.BasisChangeZtoY}
 - {summary: 'Measures a single qubit in the X basis, and resets it to a fixed initial
     state following the measurement.', uid: Microsoft.Quantum.Measurement.MResetX}
 - {summary: 'Measures a single qubit in the Y basis, and resets it to a fixed initial

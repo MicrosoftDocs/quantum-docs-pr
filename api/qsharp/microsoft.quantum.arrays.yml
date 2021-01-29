@@ -10,7 +10,6 @@ functions:
   uid: Microsoft.Quantum.Arrays.Any}
 - {summary: Splits an array into multiple parts of equal length., uid: Microsoft.Quantum.Arrays.Chunks}
 - {summary: Extracts a column from a matrix., uid: Microsoft.Quantum.Arrays.ColumnAt}
-- {summary: This function does not check for matrix shape, uid: Microsoft.Quantum.Arrays.ColumnAtUnchecked}
 - {summary: Creates an array of given length with all elements equal to given value.,
   uid: Microsoft.Quantum.Arrays.ConstantArray}
 - {summary: 'Given an array and a predicate that is defined for the elements of the
@@ -19,7 +18,6 @@ functions:
 - {summary: Combines Mapped and Fold into a single function, uid: Microsoft.Quantum.Arrays.CumulativeFolded}
 - {summary: Returns an array of diagonal elements of a 2-dimensional array, uid: Microsoft.Quantum.Arrays.Diagonal}
 - {summary: Returns the at the given index of an array., uid: Microsoft.Quantum.Arrays.ElementAt}
-- {summary: '', uid: Microsoft.Quantum.Arrays.ElementAtDiagonal}
 - {summary: Returns the array's elements at a given range of indices., uid: Microsoft.Quantum.Arrays.ElementsAt}
 - {summary: Returns the empty array of a given type., uid: Microsoft.Quantum.Arrays.EmptyArray}
 - {summary: 'Given an array, returns a new array containing elements of the original
@@ -41,7 +39,6 @@ functions:
     array[0]), array[1]), ...)`.', uid: Microsoft.Quantum.Arrays.Fold}
 - {summary: Returns the first element of the array., uid: Microsoft.Quantum.Arrays.Head}
 - {summary: Returns a tuple of first and all remaining elements of the array., uid: Microsoft.Quantum.Arrays.HeadAndRest}
-- {summary: '', uid: Microsoft.Quantum.Arrays.Identity}
 - {summary: 'Returns the first index of the first element in an array that satisfies
     a given predicate. If no such element exists, returns -1.', uid: Microsoft.Quantum.Arrays.IndexOf}
 - {summary: 'Given an array, returns a range over the indices of that array, suitable
@@ -51,7 +48,6 @@ functions:
 - {summary: Outputs true if and only if a given array represents a permutation., uid: Microsoft.Quantum.Arrays.IsPermutation}
 - {summary: 'Given an array, returns whether that array is sorted as defined by a
     given comparison function.', uid: Microsoft.Quantum.Arrays.IsSorted}
-- {summary: '', uid: Microsoft.Quantum.Arrays.IsValuePresent}
 - {summary: 'Given an array, returns a function which returns elements of that array.',
   uid: Microsoft.Quantum.Arrays.LookupFunction}
 - {summary: 'Given an array and a function that is defined for the elements of the
@@ -63,15 +59,12 @@ functions:
 - {summary: 'Given a range and a function that takes an integer as input, returns
     a new array that consists of the images of the range values under the function.',
   uid: Microsoft.Quantum.Arrays.MappedOverRange}
-- {summary: 'Given two sorted arrays, returns a single array containing the elements
-    of both in sorted order. Used internally by merge sort.', uid: Microsoft.Quantum.Arrays.Merged}
 - {summary: Creates an array that is equal to an input array except that the last
     array element is dropped., uid: Microsoft.Quantum.Arrays.Most}
 - {summary: Returns a tuple of all but one and the last element of the array., uid: Microsoft.Quantum.Arrays.MostAndTail}
 - {summary: Returns an array padded at with specified values up to a specified length.,
   uid: Microsoft.Quantum.Arrays.Padded}
 - {summary: Splits an array into multiple parts., uid: Microsoft.Quantum.Arrays.Partitioned}
-- {summary: '', uid: Microsoft.Quantum.Arrays.Prefix}
 - {summary: 'Given an array, returns all its prefixes.', uid: Microsoft.Quantum.Arrays.Prefixes}
 - {summary: Represents a condition that a 2-dimensional array has a rectangular shape,
   uid: Microsoft.Quantum.Arrays.RectangularArrayFact}
@@ -123,6 +116,5 @@ operations:
 - {summary: 'Given an array and an operation that is defined for the elements of the
     array, returns a new array that consists of the images of the original array under
     the operation.', uid: Microsoft.Quantum.Arrays.ForEach}
-summary: This namespace contains functions for creating and manipulating arrays of
-  data.
+summary: ''
 uid: Microsoft.Quantum.Arrays

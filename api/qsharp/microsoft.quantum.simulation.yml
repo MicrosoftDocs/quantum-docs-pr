@@ -29,8 +29,6 @@ functions:
     0`, which corresponds to the identity evolution operation.', uid: Microsoft.Quantum.Simulation.IdentityGeneratorSystem}
 - {summary: Returns a time-dependent generator system consistent with the Hamiltonian
     `H(s) = 0`., uid: Microsoft.Quantum.Simulation.IdentityTimeDependentGeneratorSystem}
-- {summary: Used in implementation of `PauliBlockEncoding`, uid: Microsoft.Quantum.Simulation.IdxToCoeff}
-- {summary: Used in implementation of `PauliBlockEncoding`, uid: Microsoft.Quantum.Simulation.IdxToUnitary}
 - {summary: Converts a integer to a single-qubit Pauli operator., uid: Microsoft.Quantum.Simulation.IntToPauli}
 - {summary: Returns a `TimeDependentGeneratorSystem` representing the linear interpolation
     between two `GeneratorSystem`s., uid: Microsoft.Quantum.Simulation.InterpolateGeneratorSystems}
@@ -52,7 +50,6 @@ functions:
     expansion in the Pauli basis., uid: Microsoft.Quantum.Simulation.PauliEvolutionFunction}
 - {summary: Represents a dynamical generator as a set of simulatable gates and an
     expansion in the Pauli basis., uid: Microsoft.Quantum.Simulation.PauliEvolutionSet}
-- {summary: Used in implementation of `PauliBlockEncoding`, uid: Microsoft.Quantum.Simulation.PauliLCUUnitary}
 - {summary: Extracts the Pauli string and its qubit indices of a Pauli term described
     by a `GeneratorIndex`., uid: Microsoft.Quantum.Simulation.PauliStringFromGenIdx}
 - {summary: Converts a block-encoding reflection into a quantum walk., uid: Microsoft.Quantum.Simulation.QuantumWalkByQubitization}
@@ -123,12 +120,6 @@ operations:
     state, followed by adiabatic state preparation using a `adiabaticUnitary`, and
     finally phase estimation with respect to `qpeUnitary`on the resulting state using
     a `phaseEstAlgorithm`.', uid: Microsoft.Quantum.Simulation.AdiabaticStateEnergyUnitary}
-- {summary: Implementation of `BlockEncodingToReflection`., uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingAsReflection}
-- {summary: Implementation of `BlockEncodingByLCU`., uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingByLCU}
-- {summary: 'Conversion of ((LittleEndian, Qubit[]) => () is Adj + Ctl) to BlockEncoding',
-  uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingFromBEandQubit}
-- {summary: Used in implementation of `PauliBlockEncoding`, uid: Microsoft.Quantum.Simulation.ApplyPauliLCUUnitary}
-- {summary: Implementation of `Qubitization`., uid: Microsoft.Quantum.Simulation.ApplyQuantumWalkByQubitization}
 - {summary: Performs state preparation by applying a `statePrepUnitary` on an automatically
     allocated input state phase estimation with respect to `qpeUnitary`on the resulting
     state using a `phaseEstAlgorithm`., uid: Microsoft.Quantum.Simulation.EstimateEnergy}

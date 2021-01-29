@@ -5,8 +5,6 @@
 functions:
 - {summary: Converts a `BigEndian` qubit register to a `LittleEndian` qubit register
     by reversing the qubit ordering., uid: Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian}
-- {summary: 'If true, enables extra asserts that are expensive, but useful to debug
-    the use of the arithmetic functions.', uid: Microsoft.Quantum.Arithmetic.ExtraArithmeticAssertionsEnabled}
 - {summary: Assert that all fixed-point numbers in the provided array have identical
     point positions and qubit numbers., uid: Microsoft.Quantum.Arithmetic.IdenticalFormatFactFxP}
 - {summary: 'Assert that all fixed-point numbers in the provided array have identical
@@ -52,12 +50,6 @@ operations:
 - {summary: Adds two fixed-point numbers stored in quantum registers., uid: Microsoft.Quantum.Arithmetic.AddFxP}
 - {summary: 'Automatically chooses between addition with carry and without, depending
     on the register size of `ys`.', uid: Microsoft.Quantum.Arithmetic.AddI}
-- {summary: Implements the inner addition function for the operation RippleCarryAdderTTK.
-    This is the inner operation that is conjugated with the outer operation to construct
-    the full adder., uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdder}
-- {summary: Implements the inner addition function for the operation RippleCarryAdderNoCarryTTK.
-    This is the inner operation that is conjugated with the outer operation to construct
-    the full adder., uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdderWithoutCarry}
 - {summary: Applies an operation that takes a <xref:microsoft.quantum.arithmetic.phaselittleendian>
     register as input on a target register of type <xref:microsoft.quantum.arithmetic.littleendian>.,
   uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLE}
@@ -72,13 +64,6 @@ operations:
   uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLECA}
 - {summary: Applies the three-qubit majority operation in-place on a register of qubits.,
   uid: Microsoft.Quantum.Arithmetic.ApplyMajorityInPlace}
-- {summary: 'Reversible, in-place ripple-carry operation that is used in the integer
-    addition operation RippleCarryAdderCDKM below. Given two qubit registers `xs`
-    and `ys` of the same length, the operation applies a ripple carry sequence of
-    CNOT and CCNOT gates with qubits in `xs` and `ys` as the controls and qubits in
-    `xs` as the targets.', uid: Microsoft.Quantum.Arithmetic.ApplyOuterCDKMAdder}
-- {summary: Implements the outer operation for RippleCarryAdderTTK to conjugate the
-    inner operation to construct the full adder., uid: Microsoft.Quantum.Arithmetic.ApplyOuterTTKAdder}
 - {summary: Applies an operation that takes a <xref:microsoft.quantum.arithmetic.littleendian>
     register as input on a target register of type <xref:microsoft.quantum.arithmetic.phaselittleendian>.,
   uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLE}
@@ -115,10 +100,6 @@ operations:
     `carryIn` and two summand bits encoded in `summand1` and `summand2`, computes
     the bitwise xor of `carryIn`, `summand1` and `summand2` in the qubit `summand2`
     and the carry-out is xored to the qubit `carryOut`.', uid: Microsoft.Quantum.Arithmetic.Carry}
-- {summary: 'The core operation in the RippleCarryAdderCDKM, used with the above ApplyOuterCDKMAdder
-    operation, i.e. conjugated with this operation to obtain the inner operation of
-    the RippleCarryAdderCDKM. This operation computes the carry out qubit and applies
-    a sequence of NOT gates on part of the input `ys`.', uid: Microsoft.Quantum.Arithmetic.CarryOutCoreCDKM}
 - {summary: 'Wrapper for integer comparison: `result = x > y`.', uid: Microsoft.Quantum.Arithmetic.CompareGTI}
 - {summary: 'Wrapper for signed integer comparison: `result = xs > ys`.', uid: Microsoft.Quantum.Arithmetic.CompareGTSI}
 - {summary: 'Compares two fixed-point numbers stored in quantum registers, and controls
@@ -187,6 +168,5 @@ operations:
     `carryIn` and two summand bits encoded in `summand1` and `summand2`, computes
     the bitwise xor of `carryIn`, `summand1` and `summand2` in the qubit `summand2`.',
   uid: Microsoft.Quantum.Arithmetic.Sum}
-summary: This namespace contains functions and operations used for coherently computing
-  arithmetic.
+summary: ''
 uid: Microsoft.Quantum.Arithmetic

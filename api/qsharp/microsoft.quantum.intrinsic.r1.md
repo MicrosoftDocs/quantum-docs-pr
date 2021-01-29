@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.R1
 title: R1 operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/29/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: R1

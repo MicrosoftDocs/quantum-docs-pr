@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Canon.UncurriedOpC
 title: UncurriedOpC function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/29/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: UncurriedOpC

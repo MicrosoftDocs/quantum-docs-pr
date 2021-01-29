@@ -3,11 +3,6 @@
 # Please do not modify this file manually, or your changes may be lost when
 # documentation is rebuilt.
 functions:
-- {summary: 'Returns 1, if `index` has an odd number of 1s and -1, if `index` has
-    an even number of 1s.', uid: Microsoft.Quantum.Canon.Angle}
-- {summary: '', uid: Microsoft.Quantum.Canon.AnyOutsideToleranceCP}
-- {summary: '', uid: Microsoft.Quantum.Canon.AnyOutsideToleranceD}
-- {summary: 'Arrange control, target, and helper qubits according to an index', uid: Microsoft.Quantum.Canon.ArrangedQubits}
 - {summary: "> [!WARNING]\n> BigEndianToLittleEndian has been deprecated. Please use\
     \ <xref:Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian> instead.\n>\n> Please\
     \ use @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\".\n\n", uid: Microsoft.Quantum.Canon.BigEndianToLittleEndian}
@@ -34,8 +29,6 @@ functions:
     a classical control bit is true. If `false`, nothing happens. The modifier `CA`
     indicates that the operation is controllable and adjointable.', uid: Microsoft.Quantum.Canon.CControlledCA}
 - {summary: Returns the composition of two functions., uid: Microsoft.Quantum.Canon.Compose}
-- {summary: Returns the output of the composition of `inner` and `outer` for a given
-    input., uid: Microsoft.Quantum.Canon.ComposedOutput}
 - {summary: 'Given outer and inner operations, returns a new operation that conjugates
     the inner operation by the outer operation.', uid: Microsoft.Quantum.Canon.ConjugatedBy}
 - {summary: 'Given outer and inner operations, returns a new operation that conjugates
@@ -69,9 +62,6 @@ functions:
     a multi-qubit Pauli operator with the given single-qubit operator at that index
     and `PauliI` at every other index.', uid: Microsoft.Quantum.Canon.EmbedPauli}
 - {summary: 'Given a pair, returns its first element.', uid: Microsoft.Quantum.Canon.Fst}
-- {summary: Creates Gray code sequences, uid: Microsoft.Quantum.Canon.GrayCode}
-- {summary: 'Computes the Hamming weight of an integer, i.e., the number of 1s in
-    its binary expansion.', uid: Microsoft.Quantum.Canon.HammingWeightI}
 - {summary: Ignores the output of an operation or function., uid: Microsoft.Quantum.Canon.Ignore}
 - {summary: Returns true if and only if input range is empty., uid: Microsoft.Quantum.Canon.IsRangeEmpty}
 - {summary: Tests if a given Result value is equal to `One`., uid: Microsoft.Quantum.Canon.IsResultOne}
@@ -79,7 +69,6 @@ functions:
 - {summary: "> [!WARNING]\n> LittleEndianToBigEndian has been deprecated. Please use\
     \ <xref:Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian> instead.\n>\n> Please\
     \ use @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\".\n\n", uid: Microsoft.Quantum.Canon.LittleEndianToBigEndian}
-- {summary: Implementation step of multiply-controlled Z rotations., uid: Microsoft.Quantum.Canon.MultiplexZCoefficients}
 - {summary: "Returns a multiply-controlled unitary operation $U$ that applies a unitary\
     \ $V_j$ when controlled by n-qubit number state $\\ket{j}$.\n$U = \\sum^{2^n-1}_{j=0}\\\
     ket{j}\\bra{j}\\otimes V_j$.", uid: Microsoft.Quantum.Canon.MultiplexerBruteForceFromGenerator}
@@ -122,8 +111,6 @@ functions:
     is transformed by the given function.', uid: Microsoft.Quantum.Canon.TransformedOperationC}
 - {summary: 'Given a function and an operation, returns a new operation whose input
     is transformed by the given function.', uid: Microsoft.Quantum.Canon.TransformedOperationCA}
-- {summary: Computes Trotter step size in recursive implementation of Trotter simulation
-    algorithm., uid: Microsoft.Quantum.Canon.TrotterStepSize}
 - {summary: 'Given a function which returns operations, returns a new operation which
     takes both inputs as a tuple.', uid: Microsoft.Quantum.Canon.UncurriedOp}
 - {summary: 'Given a function which returns operations, returns a new operation which
@@ -137,7 +124,6 @@ functions:
     are controllable and adjointable.', uid: Microsoft.Quantum.Canon.UncurriedOpCA}
 - {summary: Returns an array of all weight-1 Pauli operators on a given number of
     qubits., uid: Microsoft.Quantum.Canon.WeightOnePaulis}
-- {summary: '', uid: Microsoft.Quantum.Canon.WithFirstInputApplied}
 - {summary: "> [!WARNING]\n> XOR has been deprecated. Please use <xref:Microsoft.Quantum.Logical.Xor>\
     \ instead.\n>\n> Please use @\"microsoft.quantum.logical.xor\".\n\n", uid: Microsoft.Quantum.Canon.XOR}
 name: Microsoft.Quantum.Canon
@@ -148,11 +134,6 @@ operations:
 - {summary: Performs a controlled "AND ladder" on a register of target qubits., uid: Microsoft.Quantum.Canon.AndLadder}
 - {summary: 'Inverts a given target qubit if and only if both control qubits are in
     the 1 state, using measurement to perform the adjoint operation.', uid: Microsoft.Quantum.Canon.ApplyAnd}
-- {summary: Computes a chain of AND gates, uid: Microsoft.Quantum.Canon.ApplyAndChain}
-- {summary: '', uid: Microsoft.Quantum.Canon.ApplyBound}
-- {summary: '', uid: Microsoft.Quantum.Canon.ApplyBoundA}
-- {summary: '', uid: Microsoft.Quantum.Canon.ApplyBoundC}
-- {summary: '', uid: Microsoft.Quantum.Canon.ApplyBoundCA}
 - {summary: 'Implements a cascade of CCNOT gates controlled on corresponding bits
     of two qubit registers, acting on the next qubit of one of the registers. Starting
     from the qubits at position 0 in both registers as controls, CCNOT is applied
@@ -165,10 +146,6 @@ operations:
     state specified by a given bit mask.', uid: Microsoft.Quantum.Canon.ApplyControlledOnBitString}
 - {summary: Applies a unitary operation on the target register if the control register
     state corresponds to a specified positive integer., uid: Microsoft.Quantum.Canon.ApplyControlledOnInt}
-- {summary: '', uid: Microsoft.Quantum.Canon.ApplyCurriedOp}
-- {summary: '', uid: Microsoft.Quantum.Canon.ApplyCurriedOpA}
-- {summary: '', uid: Microsoft.Quantum.Canon.ApplyCurriedOpC}
-- {summary: '', uid: Microsoft.Quantum.Canon.ApplyCurriedOpCA}
 - {summary: Applies an array of complex phases to numeric basis states of a register
     of qubits., uid: Microsoft.Quantum.Canon.ApplyDiagonalUnitary}
 - {summary: Applies the Fermionic SWAP., uid: Microsoft.Quantum.Canon.ApplyFermionicSWAP}
@@ -216,29 +193,16 @@ operations:
 - {summary: Applies a multiply controlled version of a singly controlled operation.
     The modifier `CA` indicates that the single-qubit operation is controllable and
     adjointable., uid: Microsoft.Quantum.Canon.ApplyMultiControlledCA}
-- {summary: 'Implements a multiple-controlled Toffoli gate, assuming that target qubit
-    is initialized 0.  The adjoint operation assumes that the target qubit will be
-    reset to 0.', uid: Microsoft.Quantum.Canon.ApplyMultiplyControlledAnd}
-- {summary: 'Implements a multiple-controlled Toffoli gate, assuming that target qubit
-    is initialized 0.  The adjoint operation assumes that the target qubit will be
-    reset to 0.  Requires a Rz depth of 1, while the number of helper qubits are exponential
-    in the number of qubits.', uid: Microsoft.Quantum.Canon.ApplyMultiplyControlledLowDepthAnd}
 - {summary: Applies the same op over a qubit register multiple times., uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOver}
 - {summary: Applies the same op over a qubit register multiple times., uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverA}
 - {summary: Applies the same op over a qubit register multiple times., uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverC}
 - {summary: Applies the same op over a qubit register multiple times., uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverCA}
-- {summary: '', uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedly}
-- {summary: '', uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyA}
-- {summary: '', uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyC}
-- {summary: '', uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyCA}
 - {summary: 'Given a multi-qubit Pauli operator, applies the corresponding operation
     to a register.', uid: Microsoft.Quantum.Canon.ApplyPauli}
 - {summary: Applies a Pauli operator on each qubit in an array if the corresponding
     bit of a Boolean array matches a given input., uid: Microsoft.Quantum.Canon.ApplyPauliFromBitString}
 - {summary: Performs the Quantum Fourier Transform on a quantum register containing
     an integer in the little-endian representation., uid: Microsoft.Quantum.Canon.ApplyQuantumFourierTransform}
-- {summary: Performs the Quantum Fourier Transform on a quantum register containing
-    an integer in the big-endian representation., uid: Microsoft.Quantum.Canon.ApplyQuantumFourierTransformBE}
 - {summary: "> [!WARNING]\n> ApplyReversedOpBigEndianA has been deprecated. Please\
     \ use <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA> instead.\n>\n> Please\
     \ use @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\".\n\n", uid: Microsoft.Quantum.Canon.ApplyReversedOpBigEndianA}
@@ -458,8 +422,6 @@ operations:
 - {summary: "Applies a multiply-controlled unitary operation $U$ that applies a unitary\
     \ $V_j$ when controlled by n-qubit number state $\\ket{j}$.\n$U = \\sum^{N-1}_{j=0}\\\
     ket{j}\\bra{j}\\otimes V_j$.", uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator}
-- {summary: Implementation step of `MultiplexOperationsFromGenerator`., uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGeneratorImpl}
-- {summary: Implementation step of MultiplexOperations., uid: Microsoft.Quantum.Canon.MultiplexOperationsWithAuxRegister}
 - {summary: Applies a Pauli rotation conditioned on an array of qubits., uid: Microsoft.Quantum.Canon.MultiplexPauli}
 - {summary: Applies a Pauli Z rotation conditioned on an array of qubits., uid: Microsoft.Quantum.Canon.MultiplexZ}
 - {summary: Performs the identity operation (no-op) on an argument., uid: Microsoft.Quantum.Canon.NoOp}
@@ -477,10 +439,5 @@ operations:
 - {summary: Repeats an operation a given number of times., uid: Microsoft.Quantum.Canon.RepeatC}
 - {summary: Repeats an operation a given number of times., uid: Microsoft.Quantum.Canon.RepeatCA}
 - {summary: Uses SWAP gates to Reversed the order of the qubits in a register., uid: Microsoft.Quantum.Canon.SwapReverseRegister}
-- {summary: "Implementation of the first-order Trotter\u2013Suzuki integrator.", uid: Microsoft.Quantum.Canon.Trotter1ImplCA}
-- {summary: "Implementation of the second-order Trotter\u2013Suzuki integrator.",
-  uid: Microsoft.Quantum.Canon.Trotter2ImplCA}
-- {summary: "Recursive implementation of even-order Trotter\u2013Suzuki integrator.",
-  uid: Microsoft.Quantum.Canon.TrotterArbitraryImplCA}
 summary: ''
 uid: Microsoft.Quantum.Canon

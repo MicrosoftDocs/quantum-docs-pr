@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Random.StandardNormalDistribution
 title: StandardNormalDistribution function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/29/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: StandardNormalDistribution
@@ -29,11 +29,7 @@ function StandardNormalDistribution () : Microsoft.Quantum.Random.ContinuousDist
 
 ## Example
 
-The following draws 10 samples from the standard normal distribution:
-
-```qsharp
-let samples = DrawMany((StandardNormalDistribution())::Sample, 10, ());
-```
+The following draws 10 samples from the standard normal distribution:```qsharplet samples = DrawMany((StandardNormalDistribution())::Sample, 10, ());```
 
 ## See Also
 

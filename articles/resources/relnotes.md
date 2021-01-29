@@ -23,7 +23,7 @@ For update instructions, please refer to the [update guide](xref:microsoft.quant
 
 - Added project templates to Q# compiler for executables targeting IonQ and Honeywell providers
 - Update IQ# kernel syntax highlighting to include changes to Q# syntax introduced in version 0.15.2101125897
-- Bugfix to support passing arrays as input arguments to Q# programs submitted to Azure Quantum via `%azure.execute`
+- Bugfix to support passing arrays as input arguments to Q# programs submitted to Azure Quantum via `%azure.execute (https://github.com/microsoft/iqsharp/issues/401)`
 - Fix "Permission denied" error encountered using `az` inside of `iqsharp-base` Docker images (https://github.com/microsoft/iqsharp/issues/404)
 
 ## Version 0.15.2101125897

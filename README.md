@@ -3,7 +3,7 @@
 ******************************************************
  **NOTE**: 
  Effective Februrary, 2021, this repository will move to https://github.com/MicrosoftDocs/quantum-docs. 
- To contribute documentation or code samples, please visit our new repository. 
+ To contribute documentation, please visit our new repository. 
  ******************************************************
 
 

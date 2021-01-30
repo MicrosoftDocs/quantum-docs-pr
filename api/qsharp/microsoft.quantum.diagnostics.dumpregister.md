@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.DumpRegister
 title: DumpRegister function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/29/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: DumpRegister
@@ -13,7 +13,7 @@ qsharp.summary: Dumps the current target machine's status associated with the gi
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Dumps the current target machine's status associated with the given qubits.

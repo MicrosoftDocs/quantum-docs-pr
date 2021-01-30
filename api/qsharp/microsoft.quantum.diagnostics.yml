@@ -18,7 +18,6 @@ functions:
 - {summary: Represents the claim that a classical floating point value has the expected
     value up to a given absolute tolerance., uid: Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact}
 - {summary: Declares that a classical condition is true., uid: Microsoft.Quantum.Diagnostics.Fact}
-- {summary: Internal function used to fail with meaningful error messages., uid: Microsoft.Quantum.Diagnostics.FormattedFailure}
 - {summary: Asserts that a classical complex number has the expected value up to a
     small tolerance of 1e-10., uid: Microsoft.Quantum.Diagnostics.NearEqualityFactC}
 - {summary: Asserts that a classical complex number has the expected value up to a
@@ -73,25 +72,5 @@ operations:
     Z operator up to a given tolerance., uid: Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance}
 - {summary: 'Given an operation, displays diagnostics about the operation that are
     made available by the current execution target.', uid: Microsoft.Quantum.Diagnostics.DumpOperation}
-- {summary: 'Uses DumpRegister to provide diagnostics on the state of a reference
-    and target register. Written as separate operation to allow overriding and interpreting
-    as separate registers, rather than as a single combined register.', uid: Microsoft.Quantum.Diagnostics.DumpReferenceAndTarget}
-- {summary: Checks if the result of applying two operations `givenU` and `expectedU`
-    to a basis state is the same. The basis state is described by `basis` parameter.
-    See <xref:microsoft.quantum.extensions.fliptobasis> function for more details
-    on this description., uid: Microsoft.Quantum.Diagnostics._assertEqualOnBasisVector}
-- {summary: "Applies unitaries that map $\\ket{0}\\otimes\\cdots\\ket{0}$ to $\\ket{\\\
-    psi_0} \\otimes \\ket{\\psi_{n - 1}}$, where $\\ket{\\psi_k}$ depends on `basis[k]`.\n\
-    The correspondence between value of `basis[k]` and $\\ket{\\psi_k}$ is the following:\n\
-    - `basis[k]=0` $\\rightarrow \\ket{0}$. - `basis[k]=1` $\\rightarrow \\ket{1}$.\
-    \ - `basis[k]=2` $\\rightarrow \\ket{+}$. - `basis[k]=3` $\\rightarrow \\ket{i}$\
-    \ ( +1 eigenstate of Pauli Y ).", uid: Microsoft.Quantum.Diagnostics._flipToBasis}
-- {summary: "Iterates a variable through a Cartesian product [ 0, bounds[0]-1 ] \xD7\
-    \ [ 0, bounds[1]-1 ] \xD7 [ 0, bounds[Length(bounds)-1]-1 ] and calls op(arr)\
-    \ for every element of the Cartesian product", uid: Microsoft.Quantum.Diagnostics._iterateThroughCartesianPower}
-- {summary: "Given two registers, prepares the maximally entangled state between each\
-    \ pair of qubits on the respective registers. All qubits must start in the |0\u27E9\
-    \ state.\nThe result is that corresponding pairs of qubits from each register\
-    \ are in the $\\bra{\\beta_{00}}\\ket{\\beta_{00}}$.", uid: Microsoft.Quantum.Diagnostics._prepareEntangledState}
 summary: ''
 uid: Microsoft.Quantum.Diagnostics

@@ -1,22 +1,12 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.H
 title: H operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/31/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: H
-qsharp.summary: >-
-  Applies the Hadamard transformation to a single qubit.
-
-  \begin{align}
-  H \mathrel{:=}
-  \frac{1}{\sqrt{2}}
-  \begin{bmatrix}
-  1 & 1 \\\\
-  1 & -1
-  \end{bmatrix}.
-  \end{align}
+qsharp.summary: Applies the Hadamard transformation to a single qubit.
 ---
 
 # H operation
@@ -26,12 +16,16 @@ Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
-Applies the Hadamard transformation to a single qubit.\begin{align}H \mathrel{:=}\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1 \\\\1 & -1\end{bmatrix}.\end{align}
+Applies the Hadamard transformation to a single qubit.
 
 ```qsharp
 operation H (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
+
+## Description
+
+\begin{align}H \mathrel{:=}\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1 \\\\1 & -1\end{bmatrix}.\end{align}
 
 ## Input
 

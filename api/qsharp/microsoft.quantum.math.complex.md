@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Math.Complex
 title: Complex user defined type
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/31/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Complex
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Represents a complex number by its real and imaginary components.The first element of the tuple is the real component, the second one - the imaginary component.

@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomInt
 title: DrawRandomInt operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/31/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawRandomInt
@@ -13,7 +13,7 @@ qsharp.summary: Draws a random integer in a given inclusive range.
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Draws a random integer in a given inclusive range.
@@ -38,16 +38,11 @@ The largest integer to be drawn.
 
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)
 
-An integer in the inclusive range from `min` to `max` with uniform
-probability.
+An integer in the inclusive range from `min` to `max` with uniformprobability.
 
 ## Example
 
-The following Q# snippet randomly rolls a six-sided die:
-
-```qsharp
-let roll = DrawRandomInt(1, 6);
-```
+The following Q# snippet randomly rolls a six-sided die:```qsharplet roll = DrawRandomInt(1, 6);```
 
 ## Remarks
 

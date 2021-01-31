@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Logical.Not
 title: Not function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/31/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: Not
@@ -37,9 +37,4 @@ The value to be negated.
 
 ## Remarks
 
-The following are equivalent:
-
-```qsharp
-let x = not value;
-let x = Not(value);
-```
+The following are equivalent:```qsharplet x = not value;let x = Not(value);```

@@ -17,14 +17,9 @@ functions:
 name: Microsoft.Quantum.Research.Chemistry
 newtypes: []
 operations:
-- {summary: '', uid: Microsoft.Quantum.Research.Chemistry.ApplyBasisChange}
 - {summary: Computes difference in parity between a previous PQRS... terms and the
     next PQRS... term. This difference is computed on a auxiliary qubit., uid: Microsoft.Quantum.Research.Chemistry.ApplyDeltaParity}
 - {summary: Simple state preparation of trial state by occupying spin-orbitals, uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedStatePreparation}
-- {summary: Used to change the basis of a Z operator to a Y operator. conjugation.,
-  uid: Microsoft.Quantum.Research.Chemistry.TransformZToX}
-- {summary: Used to change the basis of a Z operator to a Y operator by conjugation.,
-  uid: Microsoft.Quantum.Research.Chemistry.TransformZToY}
 - {summary: '', uid: Microsoft.Quantum.Research.Chemistry._ApplyOptimizedTrotterStep}
 - {summary: Applies time-evolution by a PQRS term described by a `GeneratorIndex`.,
   uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123Term}

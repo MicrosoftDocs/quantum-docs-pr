@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Reset
 title: Reset operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/31/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: Reset
@@ -21,13 +21,13 @@ Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Qu
 Given a single qubit, measures it and ensures it is in the |0⟩ statesuch that it can be safely released.
 
 ```qsharp
-operation Reset (target : Qubit) : Unit
+operation Reset (qubit : Qubit) : Unit
 ```
 
 
 ## Input
 
-### target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)
 
 The qubit whose state is to be reset to $\ket{0}$.
 

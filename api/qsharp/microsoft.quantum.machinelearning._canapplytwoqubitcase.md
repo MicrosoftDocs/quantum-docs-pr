@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._CanApplyTwoQubitCase
 title: _CanApplyTwoQubitCase function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/31/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _CanApplyTwoQubitCase

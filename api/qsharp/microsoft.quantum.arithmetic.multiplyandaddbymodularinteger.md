@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger
 title: MultiplyAndAddByModularInteger operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 1/31/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: MultiplyAndAddByModularInteger

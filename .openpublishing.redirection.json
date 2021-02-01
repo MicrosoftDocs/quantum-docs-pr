@@ -731,11 +731,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "articles/user-guide/using-qsharp/working-with-qubits.md",
-      "redirect_url": "/quantum/user-guide/language/typesystem/quantumdatatypes",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "articles/index.yml",
       "redirect_url": "/azure/quantum",
       "redirect_document_id": false

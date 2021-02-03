@@ -11,7 +11,7 @@ Welcome to the official documentation repository for the Microsoft Quantum Devel
 
 
 This repository contains open-source documentation articles and automatically generated API files.  There are two main folders:
-- **[articles/](./articles)** contains the Markdown articles and YAML files that constitute the source of the [QDK documentation](https://docs.microsoft.com/quantum/?view=qsharp-preview).
+- **[articles/](./articles)** contains the Markdown articles and YAML files that constitute the source of the [QDK documentation](https://docs.microsoft.com/azure/quantum/).
 - **[api/](./api)** contains the *automatically generated* API documentation that serves as the source for the [Q# API reference](https://docs.microsoft.com/en-us/qsharp/api/?view=qsharp-preview).
 
 > :warning: If you want to modify an article of the API reference, **DO NOT** modify the `*.yml` file in this repository, as any changes would be automatically overwritten in the next build. These files are automatically generated from the comments in the language source code files, which are located in the repositories [Quantum Libraries](https://github.com/microsoft/QuantumLibraries) and [Q# runtime](https://github.com/microsoft/qsharp-runtime). To modify the article you should locate the original source file, apply the changes in the comments there, and submit the pull request to its respective repository.

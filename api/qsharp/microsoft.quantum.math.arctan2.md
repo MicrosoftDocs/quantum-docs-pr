@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Math.ArcTan2
 title: ArcTan2 function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/3/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ArcTan2
@@ -13,7 +13,7 @@ qsharp.summary: Returns the angle whose tangent is the quotient of two specified
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns the angle whose tangent is the quotient of two specified numbers.

@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Convert.DoubleAsString
 title: DoubleAsString function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/3/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: DoubleAsString
@@ -13,7 +13,7 @@ qsharp.summary: Converts a given double-precision floating-point number to an eq
 
 Namespace: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Converts a given double-precision floating-point number to an equivalent string representation.

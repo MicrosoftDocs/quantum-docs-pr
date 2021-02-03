@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.ApplyDeltaParity
 title: ApplyDeltaParity operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/3/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: ApplyDeltaParity

@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Core.RangeStart
 title: RangeStart function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/3/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Core
 qsharp.name: RangeStart
@@ -13,7 +13,7 @@ qsharp.summary: Returns the defined start value of the given range.
 
 Namespace: [Microsoft.Quantum.Core](xref:Microsoft.Quantum.Core)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns the defined start value of the given range.
@@ -27,7 +27,7 @@ function RangeStart (range : Range) : Int
 
 ### range : [Range](xref:microsoft.quantum.lang-ref.range)
 
-
+Input range.
 
 
 

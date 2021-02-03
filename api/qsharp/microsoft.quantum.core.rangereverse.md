@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Core.RangeReverse
 title: RangeReverse function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/3/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Core
 qsharp.name: RangeReverse
@@ -13,19 +13,19 @@ qsharp.summary: Returns a new range which is the reverse of the input range.
 
 Namespace: [Microsoft.Quantum.Core](xref:Microsoft.Quantum.Core)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns a new range which is the reverse of the input range.
 
 ```qsharp
-function RangeReverse (r : Range) : Range
+function RangeReverse (range : Range) : Range
 ```
 
 
 ## Input
 
-### r : [Range](xref:microsoft.quantum.lang-ref.range)
+### range : [Range](xref:microsoft.quantum.lang-ref.range)
 
 Input range.
 

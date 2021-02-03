@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.EqualityFactR
 title: EqualityFactR function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/3/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: EqualityFactR

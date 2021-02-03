@@ -1,24 +1,14 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.RFrac
 title: RFrac operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/3/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: RFrac
 qsharp.summary: >-
   Applies a rotation about the given Pauli axis by an angle specified
   as a dyadic fraction.
-
-  \begin{align}
-  R_{\mu}(n, k) \mathrel{:=}
-  e^{i \pi n \sigma_{\mu} / 2^k},
-  \end{align}
-  where $\mu \in \{I, X, Y, Z\}$.
-
-  > [!WARNING]
-  > This operation uses the **opposite** sign convention from
-  > @"microsoft.quantum.intrinsic.r".
 ---
 
 # RFrac operation
@@ -28,12 +18,16 @@ Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
-Applies a rotation about the given Pauli axis by an angle specifiedas a dyadic fraction.\begin{align}R_{\mu}(n, k) \mathrel{:=}e^{i \pi n \sigma_{\mu} / 2^k},\end{align}where $\mu \in \{I, X, Y, Z\}$.> [!WARNING]> This operation uses the **opposite** sign convention from> @"microsoft.quantum.intrinsic.r".
+Applies a rotation about the given Pauli axis by an angle specifiedas a dyadic fraction.
 
 ```qsharp
 operation RFrac (pauli : Pauli, numerator : Int, power : Int, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
+
+## Description
+
+\begin{align}R_{\mu}(n, k) \mathrel{:=}e^{i \pi n \sigma_{\mu} / 2^k},\end{align}where $\mu \in \{I, X, Y, Z\}$.> [!WARNING]> This operation uses the **opposite** sign convention from> @"microsoft.quantum.intrinsic.r".
 
 ## Input
 

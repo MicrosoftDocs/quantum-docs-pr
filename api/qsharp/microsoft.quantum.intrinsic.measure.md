@@ -1,30 +1,14 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Measure
 title: Measure operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/3/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: Measure
 qsharp.summary: >-
   Performs a joint measurement of one or more qubits in the
   specified Pauli bases.
-
-  The output result is given by the distribution:
-  \begin{align}
-  \Pr(\texttt{Zero} | \ket{\psi}) =
-  \frac12 \braket{
-  \psi \mid|
-  \left(
-  \boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_{N-1}
-  \right) \mid|
-  \psi
-  },
-  \end{align}
-  where $P_i$ is the $i$th element of `bases`, and where
-  $N = \texttt{Length}(\texttt{bases})$.
-  That is, measurement returns a `Result` $d$ such that the eigenvalue of the
-  observed measurement effect is $(-1)^d$.
 ---
 
 # Measure operation
@@ -34,12 +18,16 @@ Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
-Performs a joint measurement of one or more qubits in thespecified Pauli bases.The output result is given by the distribution:\begin{align}\Pr(\texttt{Zero} | \ket{\psi}) =\frac12 \braket{\psi \mid|\left(\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_{N-1}\right) \mid|\psi},\end{align}where $P_i$ is the $i$th element of `bases`, and where$N = \texttt{Length}(\texttt{bases})$.That is, measurement returns a `Result` $d$ such that the eigenvalue of theobserved measurement effect is $(-1)^d$.
+Performs a joint measurement of one or more qubits in thespecified Pauli bases.
 
 ```qsharp
 operation Measure (bases : Pauli[], qubits : Qubit[]) : Result
 ```
 
+
+## Description
+
+The output result is given by the distribution:\begin{align}\Pr(\texttt{Zero} | \ket{\psi}) =\frac12 \braket{\psi \mid|\left(\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_{N-1}\right) \mid|\psi},\end{align}where $P_i$ is the $i$th element of `bases`, and where$N = \texttt{Length}(\texttt{bases})$.That is, measurement returns a `Result` $d$ such that the eigenvalue of theobserved measurement effect is $(-1)^d$.
 
 ## Input
 

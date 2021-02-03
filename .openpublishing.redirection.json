@@ -729,7 +729,696 @@
       "source_path": "articles/user-guide/using-qsharp/working-with-qubits.md",
       "redirect_url": "/quantum/user-guide/language/typesystem/quantumdatatypes",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "articles/index.yml",
+      "redirect_url": "/azure/quantum",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/concepts/advanced-matrices.md",
+      "redirect_url": "/azure/quantum/concepts/advanced-matrices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/concepts/circuits.md",
+      "redirect_url": "/azure/quantum/concepts/circuits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/concepts/dirac-notation.md",
+      "redirect_url": "/azure/quantum/concepts/dirac-notation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/concepts/index.md",
+      "redirect_url": "/azure/quantum/concepts/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/concepts/multiple-qubits.md",
+      "redirect_url": "/azure/quantum/concepts/multiple-qubits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/concepts/oracles.md",
+      "redirect_url": "/azure/quantum/concepts/oracles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/concepts/pauli-measurements.md",
+      "redirect_url": "/azure/quantum/concepts/pauli-measurements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/concepts/the-qubit.md",
+      "redirect_url": "/azure/quantum/concepts/the-qubit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/concepts/vectors-and-matrices.md",
+      "redirect_url": "/azure/quantum/concepts/vectors-and-matrices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/overview/algebra-for-quantum-computing.md",
+      "redirect_url": "/azure/quantum/overview/algebra-for-quantum-computing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/overview/overview.md",
+      "redirect_url": "/azure/quantum/overview/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/overview/quantum-computers-and-simulators.md",
+      "redirect_url": "/azure/quantum/overview/quantum-computers-and-simulators",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/overview/understanding-quantum-computing.md",
+      "redirect_url": "/azure/quantum/overview/understanding-quantum-computing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/overview/what-is-qsharp-and-qdk.md",
+      "redirect_url": "/azure/quantum/overview/what-is-qsharp-and-qdk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/quickstarts/get-started.md",
+      "redirect_url": "/azure/quantum/quickstarts/get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/quickstarts/index.md",
+      "redirect_url": "/azure/quantum/quickstarts/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/quickstarts/install-binder.md",
+      "redirect_url": "/azure/quantum/quickstarts/install-binder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/quickstarts/install-command-line.md",
+      "redirect_url": "/azure/quantum/quickstarts/install-command-line",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/quickstarts/install-cs.md",
+      "redirect_url": "/azure/quantum/quickstarts/install-cs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/quickstarts/install-jupyter.md",
+      "redirect_url": "/azure/quantum/quickstarts/install-jupyter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/quickstarts/install-python.md",
+      "redirect_url": "/azure/quantum/quickstarts/install-python",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/quickstarts/update.md",
+      "redirect_url": "/azure/quantum/quickstarts/update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/resources/further-reading.md",
+      "redirect_url": "/azure/quantum/resources/further-reading",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/resources/glossary.md",
+      "redirect_url": "/azure/quantum/resources/glossary",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/resources/relnotes.md",
+      "redirect_url": "/azure/quantum/resources/relnotes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/resources/contributing/api-design-principles.md",
+      "redirect_url": "/azure/quantum/resources/contributing/api-design-principles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/resources/contributing/code.md",
+      "redirect_url": "/azure/quantum/resources/contributing/code",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/resources/contributing/docs.md",
+      "redirect_url": "/azure/quantum/resources/contributing/docs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/resources/contributing/index.md",
+      "redirect_url": "/azure/quantum/resources/contributing/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/resources/contributing/pull-requests.md",
+      "redirect_url": "/azure/quantum/resources/contributing/pull-requests",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/resources/contributing/reporting-bugs.md",
+      "redirect_url": "/azure/quantum/resources/contributing/reporting-bugs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/resources/contributing/samples.md",
+      "redirect_url": "/azure/quantum/resources/contributing/samples",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/resources/contributing/style-guide.md",
+      "redirect_url": "/azure/quantum/resources/contributing/style-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/tutorials/explore-entanglement.md",
+      "redirect_url": "/azure/quantum/tutorials/explore-entanglement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/tutorials/intro-to-katas.md",
+      "redirect_url": "/azure/quantum/tutorials/intro-to-katas",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/tutorials/quantum-random-number-generator.md",
+      "redirect_url": "/azure/quantum/tutorials/quantum-random-number-generator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/tutorials/qubit-level.md",
+      "redirect_url": "/azure/quantum/tutorials/qubit-level",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/tutorials/search.md",
+      "redirect_url": "/azure/quantum/tutorials/search",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/host-programs.md",
+      "redirect_url": "/azure/quantum/user-guide/host-programs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/index.md",
+      "redirect_url": "/azure/quantum/user-guide/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/programs.md",
+      "redirect_url": "/azure/quantum/user-guide/programs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/testing-debugging.md",
+      "redirect_url": "/azure/quantum/user-guide/testing-debugging",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/grammar.md",
+      "redirect_url": "/azure/quantum/user-guide/language/grammar",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/index.md",
+      "redirect_url": "/azure/quantum/user-guide/language/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/arithmeticexpressions.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/arithmeticexpressions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/bitwiseexpressions.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/bitwiseexpressions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/comparativeexpressions.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/comparativeexpressions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/concatenation.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/concatenation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/conditionalexpressions.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/conditionalexpressions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/contextualexpressions.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/contextualexpressions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/copyandupdateexpressions.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/copyandupdateexpressions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/functorapplication.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/functorapplication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/identifiers.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/identifiers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/index.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/itemaccessexpressions.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/itemaccessexpressions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/logicalexpressions.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/logicalexpressions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/partialapplication.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/partialapplication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/precedenceandassociativity.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/precedenceandassociativity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Expressions/valueliterals.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Expressions/valueliterals",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/ProgramStructure/accessmodifiers.md",
+      "redirect_url": "/azure/quantum/user-guide/language/ProgramStructure/accessmodifiers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/ProgramStructure/attributes.md",
+      "redirect_url": "/azure/quantum/user-guide/language/ProgramStructure/attributes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/ProgramStructure/callabledeclarations.md",
+      "redirect_url": "/azure/quantum/user-guide/language/ProgramStructure/callabledeclarations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/ProgramStructure/comments.md",
+      "redirect_url": "/azure/quantum/user-guide/language/ProgramStructure/comments",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/ProgramStructure/index.md",
+      "redirect_url": "/azure/quantum/user-guide/language/ProgramStructure/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/ProgramStructure/namespaces.md",
+      "redirect_url": "/azure/quantum/user-guide/language/ProgramStructure/namespaces",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/ProgramStructure/specializationdeclarations.md",
+      "redirect_url": "/azure/quantum/user-guide/language/ProgramStructure/specializationdeclarations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/ProgramStructure/typedeclarations.md",
+      "redirect_url": "/azure/quantum/user-guide/language/ProgramStructure/typedeclarations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Statements/bindingscopes.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Statements/bindingscopes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Statements/callstatements.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Statements/callstatements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Statements/conditionalbranching.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Statements/conditionalbranching",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Statements/conditionalloops.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Statements/conditionalloops",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Statements/conjugations.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Statements/conjugations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Statements/index.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Statements/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Statements/iterations.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Statements/iterations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Statements/quantummemorymanagement.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Statements/quantummemorymanagement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Statements/returnsandtermination.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Statements/returnsandtermination",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/Statements/variabledeclarationsandreassignments.md",
+      "redirect_url": "/azure/quantum/user-guide/language/Statements/variabledeclarationsandreassignments",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/TypeSystem/immutability.md",
+      "redirect_url": "/azure/quantum/user-guide/language/TypeSystem/immutability",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/TypeSystem/index.md",
+      "redirect_url": "/azure/quantum/user-guide/language/TypeSystem/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/TypeSystem/operationsandfunctions.md",
+      "redirect_url": "/azure/quantum/user-guide/language/TypeSystem/operationsandfunctions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/TypeSystem/quantumdatatypes.md",
+      "redirect_url": "/azure/quantum/user-guide/language/TypeSystem/quantumdatatypes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/TypeSystem/singletontupleequivalence.md",
+      "redirect_url": "/azure/quantum/user-guide/language/TypeSystem/singletontupleequivalence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/TypeSystem/subtypingandvariance.md",
+      "redirect_url": "/azure/quantum/user-guide/language/TypeSystem/subtypingandvariance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/TypeSystem/typeinference.md",
+      "redirect_url": "/azure/quantum/user-guide/language/TypeSystem/typeinference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/language/TypeSystem/typeparameterizations.md",
+      "redirect_url": "/azure/quantum/user-guide/language/TypeSystem/typeparameterizations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/additional-libraries.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/additional-libraries",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/index.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/index.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/installation.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/installation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/concepts/algorithms.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/concepts/algorithms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/concepts/hartree-fock.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/concepts/hartree-fock",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/concepts/jordan-wigner.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/concepts/jordan-wigner",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/concepts/multireference.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/concepts/multireference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/concepts/quantum-dynamics.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/concepts/quantum-dynamics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/concepts/quantum-models.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/concepts/quantum-models",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/concepts/second-quantization.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/concepts/second-quantization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/concepts/symmetries-molecular.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/concepts/symmetries-molecular",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/samples/end-to-end.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/samples/end-to-end",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/samples/index.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/samples/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/samples/loading-from-file.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/samples/loading-from-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/samples/molecular-hydrogen.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/samples/molecular-hydrogen",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/samples/resource-counts.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/samples/resource-counts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/schema/broombridge.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/schema/broombridge",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/schema/spec_v_0_1.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/schema/spec_v_0_1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/chemistry/schema/spec_v_0_2.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/chemistry/schema/spec_v_0_2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/machine-learning/basic-classification.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/machine-learning/basic-classification",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/machine-learning/design.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/machine-learning/design",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/machine-learning/glossary-qml.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/machine-learning/glossary-qml",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/machine-learning/index.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/machine-learning/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/machine-learning/intro.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/machine-learning/intro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/machine-learning/load.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/machine-learning/load",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/numerics/index.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/numerics/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/numerics/numerics.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/numerics/numerics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/standard/algorithms.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/standard/algorithms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/standard/applications.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/standard/applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/standard/characterization.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/standard/characterization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/standard/control-flow.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/standard/control-flow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/standard/convert.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/standard/convert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/standard/data-structures.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/standard/data-structures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/standard/diagnostics.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/standard/diagnostics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/standard/error-correction.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/standard/error-correction",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/standard/index.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/standard/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/standard/licensing.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/standard/licensing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/standard/math.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/standard/math",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/libraries/standard/prelude.md",
+      "redirect_url": "/azure/quantum/user-guide/libraries/standard/prelude",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/machines/full-state-simulator.md",
+      "redirect_url": "/azure/quantum/user-guide/machines/full-state-simulator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/machines/index.md",
+      "redirect_url": "/azure/quantum/user-guide/machines/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/machines/resources-estimator.md",
+      "redirect_url": "/azure/quantum/user-guide/machines/resources-estimator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/machines/toffoli-simulator.md",
+      "redirect_url": "/azure/quantum/user-guide/machines/toffoli-simulator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/machines/qc-trace-simulator/depth-counter.md",
+      "redirect_url": "/azure/quantum/user-guide/machines/qc-trace-simulator/depth-counter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/machines/qc-trace-simulator/distinct-inputs-checker.md",
+      "redirect_url": "/azure/quantum/user-guide/machines/qc-trace-simulator/distinct-inputs-checker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/machines/qc-trace-simulator/index.md",
+      "redirect_url": "/azure/quantum/user-guide/machines/qc-trace-simulator/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/machines/qc-trace-simulator/invalidated-qubits-use-checker.md",
+      "redirect_url": "/azure/quantum/user-guide/machines/qc-trace-simulator/invalidated-qubits-use-checker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/machines/qc-trace-simulator/primitive-operations-counter.md",
+      "redirect_url": "/azure/quantum/user-guide/machines/qc-trace-simulator/primitive-operations-counter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/machines/qc-trace-simulator/width-counter.md",
+      "redirect_url": "/azure/quantum/user-guide/machines/qc-trace-simulator/width-counter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/quickref/index.md",
+      "redirect_url": "/azure/quantum/user-guide/quickref/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "articles/user-guide/quickref/iqsharp.md",
+      "redirect_url": "/azure/quantum/user-guide/quickref/iqsharp",
+      "redirect_document_id": false
     }
   ]
 }
-

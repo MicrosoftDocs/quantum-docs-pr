@@ -1,4 +1,12 @@
 # Microsoft Quantum Documenation
+
+******************************************************
+ **NOTE**: 
+ Effective Februrary, 2021, this repository will move to https://github.com/MicrosoftDocs/quantum-docs. 
+ To contribute documentation, please visit our new repository. 
+ ******************************************************
+
+
 Welcome to the official documentation repository for the Microsoft Quantum Development Kit.
 
 

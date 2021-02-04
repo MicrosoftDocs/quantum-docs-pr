@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Bitwise.And
 title: And function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/4/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: And
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns the bitwise AND of two integers.This performs the same computation as the built-in `&&&` operator.

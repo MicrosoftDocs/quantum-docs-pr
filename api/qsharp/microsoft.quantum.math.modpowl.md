@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Math.ModPowL
 title: ModPowL function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/4/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ModPowL
@@ -13,7 +13,7 @@ qsharp.summary: Performs modular division on a number raised to the power of ano
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Performs modular division on a number raised to the power of another number.

@@ -4,7 +4,7 @@ description: Provides the ability to view or add Q# project references.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.project
 ms.author: ryansha
-ms.date: 01/24/2021
+ms.date: 02/05/2021
 ms.topic: managed-reference
 ---
 

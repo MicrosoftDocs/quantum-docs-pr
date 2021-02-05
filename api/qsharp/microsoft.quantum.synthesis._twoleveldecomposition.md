@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Synthesis._TwoLevelDecomposition
 title: _TwoLevelDecomposition function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/5/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: _TwoLevelDecomposition

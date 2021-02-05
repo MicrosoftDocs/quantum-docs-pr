@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Bitwise.ZBits
 title: ZBits function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/5/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: ZBits
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns an integer representing the Z bits of an arrayof Pauli operators.

@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Targeting.RequiresCapability
 title: RequiresCapability user defined type
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/5/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Targeting
 qsharp.name: RequiresCapability
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Targeting](xref:Microsoft.Quantum.Targeting)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Compiler-recognized attribute used to mark a callable with the runtime capabilities itrequires.

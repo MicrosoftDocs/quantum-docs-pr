@@ -1,12 +1,12 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.T
 title: T operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/5/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: T
-qsharp.summary: Applies the T gate to a single qubit.
+qsharp.summary: Applies the π/8 gate to a single qubit.
 ---
 
 # T operation
@@ -16,7 +16,7 @@ Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
-Applies the T gate to a single qubit.
+Applies the π/8 gate to a single qubit.
 
 ```qsharp
 operation T (qubit : Qubit) : Unit is Adj + Ctl
@@ -25,7 +25,7 @@ operation T (qubit : Qubit) : Unit is Adj + Ctl
 
 ## Description
 
-This operation can be simulated by the unitary matrix\begin{align}T \mathrel{:=}\begin{bmatrix}1 & 0 \\\\0 & e^{i \pi / 4}\end{bmatrix}.\end{align}
+\begin{align}T \mathrel{:=}\begin{bmatrix}1 & 0 \\\\0 & e^{i \pi / 4}\end{bmatrix}.\end{align}
 
 ## Input
 

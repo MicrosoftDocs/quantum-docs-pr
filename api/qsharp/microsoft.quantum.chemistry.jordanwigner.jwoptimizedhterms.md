@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms
 title: JWOptimizedHTerms user defined type
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/6/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: JWOptimizedHTerms

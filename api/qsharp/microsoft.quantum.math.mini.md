@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Math.MinI
 title: MinI function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/6/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: MinI
@@ -13,7 +13,7 @@ qsharp.summary: Returns the smaller of two specified numbers.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns the smaller of two specified numbers.
@@ -27,19 +27,24 @@ function MinI (a : Int, b : Int) : Int
 
 ### a : [Int](xref:microsoft.quantum.lang-ref.int)
 
-
+The first number to be compared.
 
 
 ### b : [Int](xref:microsoft.quantum.lang-ref.int)
 
-
+The second number to be compared.
 
 
 
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)
 
+The smaller of `a` and `b`.
 
+## Example
 
-## Remarks
+```qsharplet min = MinD(314, 271);  // 271```
 
-See [System.Math.Min](https://docs.microsoft.com/dotnet/api/system.math.min) for more details.
+## See Also
+
+- [Microsoft.Quantum.MinD](xref:Microsoft.Quantum.MinD)
+- [Microsoft.Quantum.MinL](xref:Microsoft.Quantum.MinL)

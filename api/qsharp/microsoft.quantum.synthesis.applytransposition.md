@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyTransposition
 title: ApplyTransposition operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/6/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyTransposition
@@ -25,10 +25,7 @@ operation ApplyTransposition (a : Int, b : Int, qubits : Microsoft.Quantum.Arith
 
 ## Description
 
-This operation swaps the amplitude at index `a` with the
-amplitude at index `b` in the given state-vector of
-`register` of length $n$.  If `a` equals `b`, the state-vector
-is not changed.
+This operation swaps the amplitude at index `a` with theamplitude at index `b` in the given state-vector of`register` of length $n$.  If `a` equals `b`, the state-vectoris not changed.
 
 ## Input
 
@@ -54,13 +51,4 @@ A list of $n$ qubits to which the transposition is applied to.
 
 ## Example
 
-Prepare a uniform superposition of number states $|1\rangle$, $|2\rangle$, and
-$|3\rangle$ on 2 qubits.
-
-```qsharp
-using (qubits = Qubit[2]) {
-  let register = LittleEndian(qubits);
-  PrepareUniformSuperposition(3, register);
-  ApplyTransposition(0, 3, register);
-}
-```
+Prepare a uniform superposition of number states $|1\rangle$, $|2\rangle$, and$|3\rangle$ on 2 qubits.```qsharpusing (qubits = Qubit[2]) {  let register = LittleEndian(qubits);  PrepareUniformSuperposition(3, register);  ApplyTransposition(0, 3, register);}```

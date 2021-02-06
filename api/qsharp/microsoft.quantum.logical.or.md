@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Logical.Or
 title: Or function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/6/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: Or
@@ -42,12 +42,4 @@ The second value to be considered.
 
 ## Remarks
 
-Unlike the `or` operator, this function does not short-circuit, such that
-both inputs are fully evaluated.
-
-Up to short-circuiting behavior, the following are equivalent:
-
-```qsharp
-let x = a or b;
-let x = Or(a, b);
-```
+Unlike the `or` operator, this function does not short-circuit, such thatboth inputs are fully evaluated.Up to short-circuiting behavior, the following are equivalent:```qsharplet x = a or b;let x = Or(a, b);```

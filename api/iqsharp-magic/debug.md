@@ -4,7 +4,7 @@ description: Steps through the execution of a given Q# operation or function.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.debug
 ms.author: ryansha
-ms.date: 01/24/2021
+ms.date: 02/08/2021
 ms.topic: managed-reference
 ---
 

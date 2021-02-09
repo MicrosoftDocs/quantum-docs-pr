@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.Test
 title: Test user defined type
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/9/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: Test
@@ -13,7 +13,7 @@ qsharp.summary: Compiler-recognized attribute used to mark a unit test.
 
 Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Compiler-recognized attribute used to mark a unit test.

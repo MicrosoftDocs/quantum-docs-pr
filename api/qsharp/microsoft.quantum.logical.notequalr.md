@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Logical.NotEqualR
 title: NotEqualR function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/9/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: NotEqualR
@@ -42,9 +42,4 @@ The second value to be compared.
 
 ## Remarks
 
-The following are equivalent:
-
-```qsharp
-let cond = a != b;
-let cond = NotEqualR(a, b);
-```
+The following are equivalent:```qsharplet cond = a != b;let cond = NotEqualR(a, b);```

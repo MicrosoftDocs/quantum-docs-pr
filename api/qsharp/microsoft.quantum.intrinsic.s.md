@@ -1,12 +1,12 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.S
 title: S operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/9/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: S
-qsharp.summary: Applies the S gate to a single qubit.
+qsharp.summary: Applies the π/4 phase gate to a single qubit.
 ---
 
 # S operation
@@ -16,7 +16,7 @@ Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
-Applies the S gate to a single qubit.
+Applies the π/4 phase gate to a single qubit.
 
 ```qsharp
 operation S (qubit : Qubit) : Unit is Adj + Ctl
@@ -25,7 +25,7 @@ operation S (qubit : Qubit) : Unit is Adj + Ctl
 
 ## Description
 
-This operation can be simulated by the unitary matrix\begin{align}S \mathrel{:=}\begin{bmatrix}1 & 0 \\\\0 & i\end{bmatrix}.\end{align}
+\begin{align}S \mathrel{:=}\begin{bmatrix}1 & 0 \\\\0 & i\end{bmatrix}.\end{align}
 
 ## Input
 

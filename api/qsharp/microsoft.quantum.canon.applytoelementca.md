@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToElementCA
 title: ApplyToElementCA operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/9/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToElementCA

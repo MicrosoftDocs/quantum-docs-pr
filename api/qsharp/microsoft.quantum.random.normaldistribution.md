@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Random.NormalDistribution
 title: NormalDistribution function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/10/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: NormalDistribution
@@ -13,7 +13,7 @@ qsharp.summary: Returns a normal distribution with a given mean and variance.
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns a normal distribution with a given mean and variance.
@@ -42,15 +42,7 @@ function NormalDistribution (mean : Double, variance : Double) : Microsoft.Quant
 
 ## Example
 
-The following draws 10 samples from the normal distribution with mean
-2 and standard deviation 0.1:
-
-```qsharp
-let samples = DrawMany(
-    (NormalDistribution(2.0, PowD(0.1, 2.0)))::Sample,
-    10, ()
-);
-```
+The following draws 10 samples from the normal distribution with mean2 and standard deviation 0.1:```qsharplet samples = DrawMany(    (NormalDistribution(2.0, PowD(0.1, 2.0)))::Sample,    10, ());```
 
 ## See Also
 

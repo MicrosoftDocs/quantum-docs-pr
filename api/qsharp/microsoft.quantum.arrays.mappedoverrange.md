@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arrays.MappedOverRange
 title: MappedOverRange function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/10/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: MappedOverRange
@@ -19,9 +19,7 @@ Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Given a range and a function that takes an integer as input,
-returns a new array that consists
-of the images of the range values under the function.
+Given a range and a function that takes an integer as input,returns a new array that consistsof the images of the range values under the function.
 
 ```qsharp
 function MappedOverRange<'T> (mapper : (Int -> 'T), range : Range) : 'T[]
@@ -53,18 +51,11 @@ The result type of the `mapper` function.
 
 ## Example
 
-This example adds 1 to a range of even numbers:
-
-```qsharp
-let numbers = MappedOverRange(PlusI(1, _), 0..2..10);
-// numbers = [1, 3, 5, 7, 9, 11]
-```
+This example adds 1 to a range of even numbers:```qsharplet numbers = MappedOverRange(PlusI(1, _), 0..2..10);// numbers = [1, 3, 5, 7, 9, 11]```
 
 ## Remarks
 
-The function is defined for generic types, i.e., whenever we have
-a function `mapper: Int -> 'T` we can map the values
-of the range and produce an array of type `'T[]`.
+The function is defined for generic types, i.e., whenever we havea function `mapper: Int -> 'T` we can map the valuesof the range and produce an array of type `'T[]`.
 
 ## See Also
 

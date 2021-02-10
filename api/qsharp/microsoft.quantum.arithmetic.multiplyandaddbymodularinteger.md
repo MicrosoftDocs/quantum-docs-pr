@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger
 title: MultiplyAndAddByModularInteger operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/10/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: MultiplyAndAddByModularInteger
@@ -25,7 +25,7 @@ operation MultiplyAndAddByModularInteger (constMultiplier : Int, modulus : Int, 
 
 ## Description
 
-Implements the map$$\begin{align}\ket{x} \ket{b} \mapsto \ket{x} \ket{(b + a \cdot x) \operatorname{mod} N}\end{align}$$for a given modulus $N$, constant multiplier $a$, and summand $y$.
+Implements the map$$\begin{align}\ket{x} \ket{b} \mapsto \ket{x} \ket{(b + a \cdot x) \operatorname{mod} N}\end{align}$$for a given modulus $N$, constant multiplier $a$, and summand $b$.
 
 ## Input
 
@@ -41,12 +41,12 @@ The modulus $N$ which addition and multiplication is taken with respect to.
 
 ### multiplier : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)
 
-A quantum register representing an unsigned integer whose value is tobe added to each basis state label of `summand`.
+A quantum register representing an unsigned integer whose value is tobe added to each basis state label of `summand`. Corresponds to theregister in state $\ket{x}$ above.
 
 
 ### summand : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)
 
-A quantum register representing an unsigned integer to use as the targetfor this operation.
+A quantum register representing an unsigned integer to use as the targetfor this operation. Corresponds to the register initially in $\ket{b}$ above.
 
 
 

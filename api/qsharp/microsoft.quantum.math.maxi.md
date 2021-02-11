@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Math.MaxI
 title: MaxI function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/11/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: MaxI
@@ -13,7 +13,7 @@ qsharp.summary: Returns the larger of two specified numbers.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns the larger of two specified numbers.
@@ -27,19 +27,24 @@ function MaxI (a : Int, b : Int) : Int
 
 ### a : [Int](xref:microsoft.quantum.lang-ref.int)
 
-
+The first number to be compared.
 
 
 ### b : [Int](xref:microsoft.quantum.lang-ref.int)
 
-
+The second number to be compared.
 
 
 
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)
 
+The larger of `a` and `b`.
 
+## Example
 
-## Remarks
+```qsharplet max = MaxD(314, 271);  // 314```
 
-See [System.Math.Max](https://docs.microsoft.com/dotnet/api/system.math.max) for more details.
+## See Also
+
+- [Microsoft.Quantum.MaxD](xref:Microsoft.Quantum.MaxD)
+- [Microsoft.Quantum.MaxL](xref:Microsoft.Quantum.MaxL)

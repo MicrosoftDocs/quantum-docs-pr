@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomPauli
 title: DrawRandomPauli operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/11/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawRandomPauli
@@ -13,7 +13,7 @@ qsharp.summary: Draws a random Pauli value.
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Draws a random Pauli value.

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToRest
 title: ApplyToRest operation
-ms.date: 1/23/2021 12:00:00 AM
+ms.date: 2/11/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -25,8 +25,7 @@ operation ApplyToRest<'T> (op : ('T[] => Unit), targets : 'T[]) : Unit
 
 ## Description
 
-Given an operation `op` and an array of targets `targets`,
-applies `op(Rest(targets))`.
+Given an operation `op` and an array of targets `targets`,applies `op(Rest(targets))`.
 
 ## Input
 
@@ -53,12 +52,7 @@ The input type of the operation to be applied.
 
 ## Example
 
-The following Q# snippets are equivalent:
-
-```qsharp
-ApplyToRest(ApplyCNOTChain, register);
-ApplyCNOTChain(Rest(register));
-```
+The following Q# snippets are equivalent:```Q#ApplyToRest(ApplyCNOTChain, register);ApplyCNOTChain(Rest(register));```
 
 ## See Also
 

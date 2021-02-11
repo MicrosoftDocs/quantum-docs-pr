@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.ColumnAt
 title: ColumnAt function
-ms.date: 1/23/2021 12:00:00 AM
+ms.date: 2/11/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -25,9 +25,7 @@ function ColumnAt<'T> (column : Int, matrix : 'T[][]) : 'T[]
 
 ## Description
 
-This function extracts a column in a matrix in row-wise order.
-Extracting a row corrsponds to element access of the first index
-and therefore requires no further treatment.
+This function extracts a column in a matrix in row-wise order.Extracting a row corrsponds to element access of the first indexand therefore requires no further treatment.
 
 ## Input
 
@@ -54,11 +52,7 @@ The type of each element of `matrix`.
 
 ## Example
 
-```qsharp
-let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-let column = ColumnAt(0, matrix);
-// same as: column = [1, 4, 7]
-```
+```Q#let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];let column = ColumnAt(0, matrix);// same as: column = [1, 4, 7]```
 
 ## See Also
 

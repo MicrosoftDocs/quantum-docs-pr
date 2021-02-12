@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification
 title: StandardAmplitudeAmplification function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/11/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: StandardAmplitudeAmplification
@@ -47,7 +47,7 @@ An operation that implements the standard amplitude amplification quantum algori
 
 ## Remarks
 
-This is the standard amplitude amplification algorithm obtained by a choice of reflection phases computed by `AmpAmpPhasesStandard`Assuming that\begin{align}A\ket{0}\_{f}\ket{0}\_s= \lambda\ket{1}\_f\ket{\text{target}}\_s + \sqrt{1-|\lambda|^2}\ket{0}\_f\cdots,\end{align}this operation prepares the state\begin{align}\operatorname{AmpAmpByOracle}\ket{0}\_{f}\ket{0}\_s= \sin((2n+1)\sin^{-1}(\lambda))\ket{1}\_f\ket{\text{target}}\_s + \cdots\ket{0}\_f\end{align}In most cases, `flagQubit` and `auxiliaryRegister` is initialized in the state $\ket{0}\_f\ket{0}\_a$.
+This is the standard amplitude amplification algorithm obtained by a choice of reflection phases computed by `StandardReflectionPhases`Assuming that\begin{align}A\ket{0}\_{f}\ket{0}\_s= \lambda\ket{1}\_f\ket{\text{target}}\_s + \sqrt{1-|\lambda|^2}\ket{0}\_f\cdots,\end{align}this operation prepares the state\begin{align}\operatorname{StandardAmplitudeAmplification}\ket{0}\_{f}\ket{0}\_s= \sin((2n+1)\sin^{-1}(\lambda))\ket{1}\_f\ket{\text{target}}\_s + \cdots\ket{0}\_f\end{align}In most cases, `flagQubit` and `auxiliaryRegister` is initialized in the state $\ket{0}\_f\ket{0}\_a$.
 
 ## References
 

@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Math.Log
 title: Log function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/12/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Log
@@ -13,7 +13,7 @@ qsharp.summary: Returns the natural (base $e$) logarithm of a specified number.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns the natural (base $e$) logarithm of a specified number.

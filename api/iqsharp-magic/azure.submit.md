@@ -4,7 +4,7 @@ description: Submits a job to an Azure Quantum workspace.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.azure.submit
 ms.author: ryansha
-ms.date: 01/24/2021
+ms.date: 02/13/2021
 ms.topic: managed-reference
 ---
 

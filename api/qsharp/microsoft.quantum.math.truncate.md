@@ -1,22 +1,22 @@
 ---
 uid: Microsoft.Quantum.Math.Truncate
 title: Truncate function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/13/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Truncate
-qsharp.summary: Calculates the integral part of a number.
+qsharp.summary: Returns the integral part of a number.
 ---
 
 # Truncate function
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
-Calculates the integral part of a number.
+Returns the integral part of a number.
 
 ```qsharp
 function Truncate (a : Double) : Int
@@ -27,14 +27,21 @@ function Truncate (a : Double) : Int
 
 ### a : [Double](xref:microsoft.quantum.lang-ref.double)
 
-
+The value whose truncation is to be returned.
 
 
 
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)
 
+The truncation of the input.
 
+## Example
 
-## Remarks
+```Message($"{Truncate(3.1)}");   //  3Message($"{Truncate(3.7)}");   //  3Message($"{Truncate(-3.1)}");  // -3Message($"{Truncate(-3.7)}");  // -3```
 
-See [System.Math.Truncate](https://docs.microsoft.com/dotnet/api/system.math.truncate) for more details.
+## See Also
+
+- [Microsoft.Quantum.Convert.DoubleAsInt](xref:Microsoft.Quantum.Convert.DoubleAsInt)
+- [Microsoft.Quantum.Math.Ceiling](xref:Microsoft.Quantum.Math.Ceiling)
+- [Microsoft.Quantum.Math.Floor](xref:Microsoft.Quantum.Math.Floor)
+- [Microsoft.Quantum.Math.Round](xref:Microsoft.Quantum.Math.Round)

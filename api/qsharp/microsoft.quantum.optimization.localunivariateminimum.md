@@ -1,13 +1,13 @@
 ---
 uid: Microsoft.Quantum.Optimization.LocalUnivariateMinimum
 title: LocalUnivariateMinimum function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/12/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Optimization
 qsharp.name: LocalUnivariateMinimum
 qsharp.summary: >-
-  Returns the local minimum for a univariate function over a bounded interval,
+  Returns some local minimum for a univariate function over a bounded interval,
   using a golden interval search.
 ---
 
@@ -18,7 +18,7 @@ Namespace: [Microsoft.Quantum.Optimization](xref:Microsoft.Quantum.Optimization)
 Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Returns the local minimum for a univariate function over a bounded interval,using a golden interval search.
+Returns some local minimum for a univariate function over a bounded interval,using a golden interval search.
 
 ```qsharp
 function LocalUnivariateMinimum (fn : (Double -> Double), bounds : (Double, Double), tolerance : Double) : Microsoft.Quantum.Optimization.UnivariateOptimizationResult

@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Core.RangeEnd
 title: RangeEnd function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/12/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Core
 qsharp.name: RangeEnd
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Core](xref:Microsoft.Quantum.Core)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns the defined end value of the given range,which is not necessarily the last element in the sequence.
@@ -29,7 +29,7 @@ function RangeEnd (range : Range) : Int
 
 ### range : [Range](xref:microsoft.quantum.lang-ref.range)
 
-
+Input range.
 
 
 

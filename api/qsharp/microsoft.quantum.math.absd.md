@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Math.AbsD
 title: AbsD function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/14/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: AbsD
@@ -13,7 +13,7 @@ qsharp.summary: Returns the absolute value of a double-precision floating-point 
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns the absolute value of a double-precision floating-point number.
@@ -27,14 +27,19 @@ function AbsD (a : Double) : Double
 
 ### a : [Double](xref:microsoft.quantum.lang-ref.double)
 
-
+The number whose absolute value is to be returned.
 
 
 
 ## Output : [Double](xref:microsoft.quantum.lang-ref.double)
 
+The absolute value of `a`.
 
+## Example
 
-## Remarks
+```qsharpMessage($"{AbsD(3.14)}");   // 3.14Message($"{AbsD(-2.71)}");  // 2.71```
 
-See [System.Math.Abs](https://docs.microsoft.com/dotnet/api/system.math.abs) for more details.
+## See Also
+
+- [Microsoft.Quantum.Math.AbsI](xref:Microsoft.Quantum.Math.AbsI)
+- [Microsoft.Quantum.Math.AbsL](xref:Microsoft.Quantum.Math.AbsL)

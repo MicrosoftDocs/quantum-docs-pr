@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arrays.EmptyArray
 title: EmptyArray function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/14/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: EmptyArray
@@ -13,7 +13,7 @@ qsharp.summary: Returns the empty array of a given type.
 
 Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns the empty array of a given type.
@@ -35,6 +35,4 @@ The type of elements of the array.
 
 ## Example
 
-```qsharp
-let empty = EmptyArray<Int>();
-```
+```qsharplet empty = EmptyArray<Int>();```

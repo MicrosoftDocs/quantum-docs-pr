@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation
 title: ObliviousAmplitudeAmplificationFromStatePreparation function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/14/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ObliviousAmplitudeAmplificationFromStatePreparation
@@ -52,4 +52,4 @@ An operation that implements oblivious amplitude amplification based on partial 
 
 ## Remarks
 
-This imposes stricter conditions on form of the auxiliary start and target states than in `AmpAmpObliviousByReflectionPhases`.It is assumed that $A\ket{0}\_f\ket{0}\_a= \ket{\text{start}}\_{fa}$ prepares the auxiliary start state $\ket{\text{start}}\_{fa}$ from the computational basis $\ket{0}\_f\ket{0}$.It is assumed that the target state is marked by $\ket{1}\_f$.It is assumed that\begin{align}O\ket{\text{start}}\_{fa}\ket{\psi}\_s= \lambda\ket{1}\_f\ket{\text{anything}}\_a\ket{\text{target}}\_s U \ket{\psi}\_s + \sqrt{1-|\lambda|^2}\ket{0}\_f\cdots,\end{align}for some unitary $U$.
+This imposes stricter conditions on form of the auxiliary start and target states than in `ObliviousAmplitudeAmplificationFromPartialReflections`.It is assumed that $A\ket{0}\_f\ket{0}\_a= \ket{\text{start}}\_{fa}$ prepares the auxiliary start state $\ket{\text{start}}\_{fa}$ from the computational basis $\ket{0}\_f\ket{0}$.It is assumed that the target state is marked by $\ket{1}\_f$.It is assumed that\begin{align}O\ket{\text{start}}\_{fa}\ket{\psi}\_s= \lambda\ket{1}\_f\ket{\text{anything}}\_a\ket{\text{target}}\_s U \ket{\psi}\_s + \sqrt{1-|\lambda|^2}\ket{0}\_f\cdots,\end{align}for some unitary $U$.

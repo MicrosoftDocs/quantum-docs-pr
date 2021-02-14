@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Canon.Repeat
 title: Repeat operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/14/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Repeat
@@ -53,12 +53,7 @@ The input to be passed to `op`.
 
 ## Example
 
-The following are equivalent:
-
-```qsharp
-Repeat(U, 17, target);
-(Bound(ConstantArray(17, U)))(target);
-```
+The following are equivalent:```qsharpRepeat(U, 17, target);(Bound(ConstantArray(17, U)))(target);```
 
 ## See Also
 

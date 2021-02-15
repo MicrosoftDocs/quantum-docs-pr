@@ -1,10 +1,10 @@
 ---
 title: '%debug (magic command)'
 description: Steps through the execution of a given Q# operation or function.
-author: rmshaffer
+author: anjbur
 uid: microsoft.quantum.iqsharp.magic-ref.debug
-ms.author: ryansha
-ms.date: 01/24/2021
+ms.author: anburton
+ms.date: 02/15/2021
 ms.topic: managed-reference
 ---
 

@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Random.ContinuousUniformDistribution
 title: ContinuousUniformDistribution function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/15/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: ContinuousUniformDistribution
@@ -13,7 +13,7 @@ qsharp.summary: Returns a uniform distribution over a given inclusive interval.
 
 Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns a uniform distribution over a given inclusive interval.
@@ -38,17 +38,11 @@ The largest real number to be drawn.
 
 ## Output : [ContinuousDistribution](xref:Microsoft.Quantum.Random.ContinuousDistribution)
 
-A distribution whose random variates are real numbers in the inclusive
-interval from `min` to `max` with uniform probability.
+A distribution whose random variates are real numbers in the inclusiveinterval from `min` to `max` with uniform probability.
 
 ## Example
 
-The following Q# snippet randomly draws an angle between $0$ and $2 \pi$:
-
-```qsharp
-let angleDistribution = ContinuousUniformDistribution(0.0, 2.0 * PI());
-let angle = angleDistribution::Sample();
-```
+The following Q# snippet randomly draws an angle between $0$ and $2 \pi$:```qsharplet angleDistribution = ContinuousUniformDistribution(0.0, 2.0 * PI());let angle = angleDistribution::Sample();```
 
 ## Remarks
 

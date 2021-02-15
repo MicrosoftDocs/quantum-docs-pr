@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Math.ArcCosh
 title: ArcCosh function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/15/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ArcCosh

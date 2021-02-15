@@ -1,10 +1,10 @@
 ---
 title: '%toffoli (magic command)'
 description: Runs a given function or operation on the ToffoliSimulator target machine.
-author: rmshaffer
+author: anjbur
 uid: microsoft.quantum.iqsharp.magic-ref.toffoli
-ms.author: ryansha
-ms.date: 01/24/2021
+ms.author: anburton
+ms.date: 02/15/2021
 ms.topic: managed-reference
 ---
 

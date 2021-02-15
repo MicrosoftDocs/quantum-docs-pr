@@ -2,10 +2,10 @@
 title: '%azure.connect (magic command)'
 description: Connects to an Azure Quantum workspace or displays current connection
   status.
-author: rmshaffer
+author: anjbur
 uid: microsoft.quantum.iqsharp.magic-ref.azure.connect
-ms.author: ryansha
-ms.date: 01/24/2021
+ms.author: anburton
+ms.date: 02/15/2021
 ms.topic: managed-reference
 ---
 

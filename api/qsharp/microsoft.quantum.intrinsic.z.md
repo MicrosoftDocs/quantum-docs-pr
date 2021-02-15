@@ -1,21 +1,12 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Z
 title: Z operation
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/15/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: Z
-qsharp.summary: >-
-  Applies the Pauli $Z$ gate.
-
-  \begin{align}
-  \sigma_z \mathrel{:=}
-  \begin{bmatrix}
-  1 & 0 \\\\
-  0 & -1
-  \end{bmatrix}.
-  \end{align}
+qsharp.summary: Applies the Pauli $Z$ gate.
 ---
 
 # Z operation
@@ -25,12 +16,16 @@ Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
-Applies the Pauli $Z$ gate.\begin{align}\sigma_z \mathrel{:=}\begin{bmatrix}1 & 0 \\\\0 & -1\end{bmatrix}.\end{align}
+Applies the Pauli $Z$ gate.
 
 ```qsharp
 operation Z (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
+
+## Description
+
+\begin{align}\sigma_z \mathrel{:=}\begin{bmatrix}1 & 0 \\\\0 & -1\end{bmatrix}.\end{align}
 
 ## Input
 

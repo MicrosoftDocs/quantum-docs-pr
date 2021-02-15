@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.SignedLittleEndian
 title: SignedLittleEndian user defined type
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/15/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: SignedLittleEndian

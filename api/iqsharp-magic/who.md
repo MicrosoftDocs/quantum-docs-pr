@@ -1,10 +1,10 @@
 ---
 title: '%who (magic command)'
 description: Lists the Q# operations available in the current session.
-author: rmshaffer
+author: anjbur
 uid: microsoft.quantum.iqsharp.magic-ref.who
-ms.author: ryansha
-ms.date: 01/24/2021
+ms.author: anburton
+ms.date: 02/15/2021
 ms.topic: managed-reference
 ---
 

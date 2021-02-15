@@ -1,10 +1,10 @@
 ---
 title: '%azure.status (magic command)'
 description: Displays status for a job in the current Azure Quantum workspace.
-author: rmshaffer
+author: anjbur
 uid: microsoft.quantum.iqsharp.magic-ref.azure.status
-ms.author: ryansha
-ms.date: 01/24/2021
+ms.author: anburton
+ms.date: 02/15/2021
 ms.topic: managed-reference
 ---
 

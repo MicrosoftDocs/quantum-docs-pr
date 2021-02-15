@@ -1,10 +1,10 @@
 ---
 title: '%azure.submit (magic command)'
 description: Submits a job to an Azure Quantum workspace.
-author: rmshaffer
+author: anjbur
 uid: microsoft.quantum.iqsharp.magic-ref.azure.submit
-ms.author: ryansha
-ms.date: 01/24/2021
+ms.author: anburton
+ms.date: 02/15/2021
 ms.topic: managed-reference
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: '%trace (magic command)'
 description: Visualizes the execution path of the given operation.
-author: rmshaffer
+author: anjbur
 uid: microsoft.quantum.iqsharp.magic-ref.trace
-ms.author: ryansha
-ms.date: 01/24/2021
+ms.author: anburton
+ms.date: 02/16/2021
 ms.topic: managed-reference
 ---
 

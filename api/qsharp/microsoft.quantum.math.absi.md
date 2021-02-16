@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Math.AbsI
 title: AbsI function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/16/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: AbsI
@@ -13,7 +13,7 @@ qsharp.summary: Returns the absolute value of an integer.
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns the absolute value of an integer.
@@ -27,14 +27,19 @@ function AbsI (a : Int) : Int
 
 ### a : [Int](xref:microsoft.quantum.lang-ref.int)
 
-
+The number whose absolute value is to be returned.
 
 
 
 ## Output : [Int](xref:microsoft.quantum.lang-ref.int)
 
+The absolute value of `a`.
 
+## Example
 
-## Remarks
+```qsharpMessage($"{AbsD(314)}");   // 314Message($"{AbsD(-271)}");  // 271```
 
-See [System.Math.Abs](https://docs.microsoft.com/dotnet/api/system.math.abs) for more details.
+## See Also
+
+- [Microsoft.Quantum.Math.AbsD](xref:Microsoft.Quantum.Math.AbsD)
+- [Microsoft.Quantum.Math.AbsL](xref:Microsoft.Quantum.Math.AbsL)

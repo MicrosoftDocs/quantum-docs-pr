@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Bitwise.XBits
 title: XBits function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/16/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: XBits
@@ -15,7 +15,7 @@ qsharp.summary: >-
 
 Namespace: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
 Returns an integer representing the X bits of an arrayof Pauli operators.
@@ -39,7 +39,7 @@ An integer $x$ with binary representation $(p_{62}\,p_{61}\,\dots\,p_0)$,where 
 
 ## Remarks
 
-The function will throw if the length of `paulis` array is greater than 63.
+The function will fail if the length of `paulis` array is greater than 63.
 
 ## See Also
 

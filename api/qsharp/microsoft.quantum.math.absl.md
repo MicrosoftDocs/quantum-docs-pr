@@ -1,22 +1,22 @@
 ---
 uid: Microsoft.Quantum.Math.AbsL
 title: AbsL function
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/16/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: AbsL
-qsharp.summary: Returns the absolute value of a big integer.
+qsharp.summary: Returns the absolute value of an integer.
 ---
 
 # AbsL function
 
 Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
+Package: [Microsoft.Quantum.QSharp.Foundation](https://nuget.org/packages/Microsoft.Quantum.QSharp.Foundation)
 
 
-Returns the absolute value of a big integer.
+Returns the absolute value of an integer.
 
 ```qsharp
 function AbsL (a : BigInt) : BigInt
@@ -27,14 +27,19 @@ function AbsL (a : BigInt) : BigInt
 
 ### a : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
 
-
+The number whose absolute value is to be returned.
 
 
 
 ## Output : [BigInt](xref:microsoft.quantum.lang-ref.bigint)
 
+The absolute value of `a`.
 
+## Example
 
-## Remarks
+```qsharpMessage($"{AbsD(314L)}");   // 314LMessage($"{AbsD(-271L)}");  // 271L```
 
-See [System.Numerics.BigInteger.Abs](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.abs) for more details.
+## See Also
+
+- [Microsoft.Quantum.Math.AbsD](xref:Microsoft.Quantum.Math.AbsD)
+- [Microsoft.Quantum.Math.AbsI](xref:Microsoft.Quantum.Math.AbsI)

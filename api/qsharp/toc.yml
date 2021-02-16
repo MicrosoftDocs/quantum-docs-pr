@@ -17,7 +17,6 @@
   - {name: ApplyAmplitudeAmplification, uid: Microsoft.Quantum.AmplitudeAmplification.ApplyAmplitudeAmplification}
   - {name: ApplyFixedPointAmplification, uid: Microsoft.Quantum.AmplitudeAmplification.ApplyFixedPointAmplification}
   - {name: ApplyObliviousAmplitudeAmplification, uid: Microsoft.Quantum.AmplitudeAmplification.ApplyObliviousAmplitudeAmplification}
-  - {name: ApplyTargetStateReflectionOracle, uid: Microsoft.Quantum.AmplitudeAmplification.ApplyTargetStateReflectionOracle}
   - {name: FixedPointReflectionPhases, uid: Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases}
   - {name: ObliviousAmplitudeAmplificationFromPartialReflections, uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections}
   - {name: ObliviousAmplitudeAmplificationFromStatePreparation, uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation}
@@ -34,15 +33,11 @@
   - {name: AddConstantFxP, uid: Microsoft.Quantum.Arithmetic.AddConstantFxP}
   - {name: AddFxP, uid: Microsoft.Quantum.Arithmetic.AddFxP}
   - {name: AddI, uid: Microsoft.Quantum.Arithmetic.AddI}
-  - {name: ApplyInnerTTKAdder, uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdder}
-  - {name: ApplyInnerTTKAdderWithoutCarry, uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdderWithoutCarry}
   - {name: ApplyLEOperationOnPhaseLE, uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLE}
   - {name: ApplyLEOperationOnPhaseLEA, uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLEA}
   - {name: ApplyLEOperationOnPhaseLEC, uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLEC}
   - {name: ApplyLEOperationOnPhaseLECA, uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLECA}
   - {name: ApplyMajorityInPlace, uid: Microsoft.Quantum.Arithmetic.ApplyMajorityInPlace}
-  - {name: ApplyOuterCDKMAdder, uid: Microsoft.Quantum.Arithmetic.ApplyOuterCDKMAdder}
-  - {name: ApplyOuterTTKAdder, uid: Microsoft.Quantum.Arithmetic.ApplyOuterTTKAdder}
   - {name: ApplyPhaseLEOperationOnLE, uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLE}
   - {name: ApplyPhaseLEOperationOnLEA, uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLEA}
   - {name: ApplyPhaseLEOperationOnLEC, uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLEC}
@@ -63,7 +58,6 @@
   - {name: BigEndian, uid: Microsoft.Quantum.Arithmetic.BigEndian}
   - {name: BigEndianAsLittleEndian, uid: Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian}
   - {name: Carry, uid: Microsoft.Quantum.Arithmetic.Carry}
-  - {name: CarryOutCoreCDKM, uid: Microsoft.Quantum.Arithmetic.CarryOutCoreCDKM}
   - {name: CompareGTI, uid: Microsoft.Quantum.Arithmetic.CompareGTI}
   - {name: CompareGTSI, uid: Microsoft.Quantum.Arithmetic.CompareGTSI}
   - {name: CompareGreaterThanFxP, uid: Microsoft.Quantum.Arithmetic.CompareGreaterThanFxP}
@@ -75,7 +69,6 @@
   - {name: EvaluateEvenPolynomialFxP, uid: Microsoft.Quantum.Arithmetic.EvaluateEvenPolynomialFxP}
   - {name: EvaluateOddPolynomialFxP, uid: Microsoft.Quantum.Arithmetic.EvaluateOddPolynomialFxP}
   - {name: EvaluatePolynomialFxP, uid: Microsoft.Quantum.Arithmetic.EvaluatePolynomialFxP}
-  - {name: ExtraArithmeticAssertionsEnabled, uid: Microsoft.Quantum.Arithmetic.ExtraArithmeticAssertionsEnabled}
   - {name: FixedPoint, uid: Microsoft.Quantum.Arithmetic.FixedPoint}
   - {name: GreaterThan, uid: Microsoft.Quantum.Arithmetic.GreaterThan}
   - {name: IdenticalFormatFactFxP, uid: Microsoft.Quantum.Arithmetic.IdenticalFormatFactFxP}
@@ -123,14 +116,12 @@
   - {name: Any, uid: Microsoft.Quantum.Arrays.Any}
   - {name: Chunks, uid: Microsoft.Quantum.Arrays.Chunks}
   - {name: ColumnAt, uid: Microsoft.Quantum.Arrays.ColumnAt}
-  - {name: ColumnAtUnchecked, uid: Microsoft.Quantum.Arrays.ColumnAtUnchecked}
   - {name: ConstantArray, uid: Microsoft.Quantum.Arrays.ConstantArray}
   - {name: Count, uid: Microsoft.Quantum.Arrays.Count}
   - {name: CumulativeFolded, uid: Microsoft.Quantum.Arrays.CumulativeFolded}
   - {name: Diagonal, uid: Microsoft.Quantum.Arrays.Diagonal}
   - {name: DrawMany, uid: Microsoft.Quantum.Arrays.DrawMany}
   - {name: ElementAt, uid: Microsoft.Quantum.Arrays.ElementAt}
-  - {name: ElementAtDiagonal, uid: Microsoft.Quantum.Arrays.ElementAtDiagonal}
   - {name: ElementsAt, uid: Microsoft.Quantum.Arrays.ElementsAt}
   - {name: EmptyArray, uid: Microsoft.Quantum.Arrays.EmptyArray}
   - {name: Enumerated, uid: Microsoft.Quantum.Arrays.Enumerated}
@@ -144,24 +135,20 @@
   - {name: ForEach, uid: Microsoft.Quantum.Arrays.ForEach}
   - {name: Head, uid: Microsoft.Quantum.Arrays.Head}
   - {name: HeadAndRest, uid: Microsoft.Quantum.Arrays.HeadAndRest}
-  - {name: Identity, uid: Microsoft.Quantum.Arrays.Identity}
   - {name: IndexOf, uid: Microsoft.Quantum.Arrays.IndexOf}
   - {name: IndexRange, uid: Microsoft.Quantum.Arrays.IndexRange}
   - {name: Interleaved, uid: Microsoft.Quantum.Arrays.Interleaved}
   - {name: IsEmpty, uid: Microsoft.Quantum.Arrays.IsEmpty}
   - {name: IsPermutation, uid: Microsoft.Quantum.Arrays.IsPermutation}
   - {name: IsSorted, uid: Microsoft.Quantum.Arrays.IsSorted}
-  - {name: IsValuePresent, uid: Microsoft.Quantum.Arrays.IsValuePresent}
   - {name: LookupFunction, uid: Microsoft.Quantum.Arrays.LookupFunction}
   - {name: Mapped, uid: Microsoft.Quantum.Arrays.Mapped}
   - {name: MappedByIndex, uid: Microsoft.Quantum.Arrays.MappedByIndex}
   - {name: MappedOverRange, uid: Microsoft.Quantum.Arrays.MappedOverRange}
-  - {name: Merged, uid: Microsoft.Quantum.Arrays.Merged}
   - {name: Most, uid: Microsoft.Quantum.Arrays.Most}
   - {name: MostAndTail, uid: Microsoft.Quantum.Arrays.MostAndTail}
   - {name: Padded, uid: Microsoft.Quantum.Arrays.Padded}
   - {name: Partitioned, uid: Microsoft.Quantum.Arrays.Partitioned}
-  - {name: Prefix, uid: Microsoft.Quantum.Arrays.Prefix}
   - {name: Prefixes, uid: Microsoft.Quantum.Arrays.Prefixes}
   - {name: RectangularArrayFact, uid: Microsoft.Quantum.Arrays.RectangularArrayFact}
   - {name: Rest, uid: Microsoft.Quantum.Arrays.Rest}
@@ -204,24 +191,12 @@
   uid: Microsoft.Quantum.Bitwise
 - items:
   - {name: AndLadder, uid: Microsoft.Quantum.Canon.AndLadder}
-  - {name: Angle, uid: Microsoft.Quantum.Canon.Angle}
-  - {name: AnyOutsideToleranceCP, uid: Microsoft.Quantum.Canon.AnyOutsideToleranceCP}
-  - {name: AnyOutsideToleranceD, uid: Microsoft.Quantum.Canon.AnyOutsideToleranceD}
   - {name: ApplyAnd, uid: Microsoft.Quantum.Canon.ApplyAnd}
-  - {name: ApplyAndChain, uid: Microsoft.Quantum.Canon.ApplyAndChain}
-  - {name: ApplyBound, uid: Microsoft.Quantum.Canon.ApplyBound}
-  - {name: ApplyBoundA, uid: Microsoft.Quantum.Canon.ApplyBoundA}
-  - {name: ApplyBoundC, uid: Microsoft.Quantum.Canon.ApplyBoundC}
-  - {name: ApplyBoundCA, uid: Microsoft.Quantum.Canon.ApplyBoundCA}
   - {name: ApplyCCNOTChain, uid: Microsoft.Quantum.Canon.ApplyCCNOTChain}
   - {name: ApplyCNOTChain, uid: Microsoft.Quantum.Canon.ApplyCNOTChain}
   - {name: ApplyCNOTChainWithTarget, uid: Microsoft.Quantum.Canon.ApplyCNOTChainWithTarget}
   - {name: ApplyControlledOnBitString, uid: Microsoft.Quantum.Canon.ApplyControlledOnBitString}
   - {name: ApplyControlledOnInt, uid: Microsoft.Quantum.Canon.ApplyControlledOnInt}
-  - {name: ApplyCurriedOp, uid: Microsoft.Quantum.Canon.ApplyCurriedOp}
-  - {name: ApplyCurriedOpA, uid: Microsoft.Quantum.Canon.ApplyCurriedOpA}
-  - {name: ApplyCurriedOpC, uid: Microsoft.Quantum.Canon.ApplyCurriedOpC}
-  - {name: ApplyCurriedOpCA, uid: Microsoft.Quantum.Canon.ApplyCurriedOpCA}
   - {name: ApplyDiagonalUnitary, uid: Microsoft.Quantum.Canon.ApplyDiagonalUnitary}
   - {name: ApplyFermionicSWAP, uid: Microsoft.Quantum.Canon.ApplyFermionicSWAP}
   - {name: ApplyIf, uid: Microsoft.Quantum.Canon.ApplyIf}
@@ -247,20 +222,13 @@
   - {name: ApplyLowDepthAnd, uid: Microsoft.Quantum.Canon.ApplyLowDepthAnd}
   - {name: ApplyMultiControlledC, uid: Microsoft.Quantum.Canon.ApplyMultiControlledC}
   - {name: ApplyMultiControlledCA, uid: Microsoft.Quantum.Canon.ApplyMultiControlledCA}
-  - {name: ApplyMultiplyControlledAnd, uid: Microsoft.Quantum.Canon.ApplyMultiplyControlledAnd}
-  - {name: ApplyMultiplyControlledLowDepthAnd, uid: Microsoft.Quantum.Canon.ApplyMultiplyControlledLowDepthAnd}
   - {name: ApplyOpRepeatedlyOver, uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOver}
   - {name: ApplyOpRepeatedlyOverA, uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverA}
   - {name: ApplyOpRepeatedlyOverC, uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverC}
   - {name: ApplyOpRepeatedlyOverCA, uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverCA}
-  - {name: ApplyOperationRepeatedly, uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedly}
-  - {name: ApplyOperationRepeatedlyA, uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyA}
-  - {name: ApplyOperationRepeatedlyC, uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyC}
-  - {name: ApplyOperationRepeatedlyCA, uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyCA}
   - {name: ApplyPauli, uid: Microsoft.Quantum.Canon.ApplyPauli}
   - {name: ApplyPauliFromBitString, uid: Microsoft.Quantum.Canon.ApplyPauliFromBitString}
   - {name: ApplyQuantumFourierTransform, uid: Microsoft.Quantum.Canon.ApplyQuantumFourierTransform}
-  - {name: ApplyQuantumFourierTransformBE, uid: Microsoft.Quantum.Canon.ApplyQuantumFourierTransformBE}
   - {name: ApplyReversedOpBigEndianA, uid: Microsoft.Quantum.Canon.ApplyReversedOpBigEndianA}
   - {name: ApplyReversedOpBigEndianC, uid: Microsoft.Quantum.Canon.ApplyReversedOpBigEndianC}
   - {name: ApplyReversedOpBigEndianCA, uid: Microsoft.Quantum.Canon.ApplyReversedOpBigEndianCA}
@@ -332,7 +300,6 @@
   - {name: ApproximatelyApplyDiagonalUnitary, uid: Microsoft.Quantum.Canon.ApproximatelyApplyDiagonalUnitary}
   - {name: ApproximatelyMultiplexPauli, uid: Microsoft.Quantum.Canon.ApproximatelyMultiplexPauli}
   - {name: ApproximatelyMultiplexZ, uid: Microsoft.Quantum.Canon.ApproximatelyMultiplexZ}
-  - {name: ArrangedQubits, uid: Microsoft.Quantum.Canon.ArrangedQubits}
   - {name: AssertHighestBit, uid: Microsoft.Quantum.Canon.AssertHighestBit}
   - {name: AssertLessThanPhaseLE, uid: Microsoft.Quantum.Canon.AssertLessThanPhaseLE}
   - {name: AssertPhase, uid: Microsoft.Quantum.Canon.AssertPhase}
@@ -354,7 +321,6 @@
   - {name: CascadeCCNOT, uid: Microsoft.Quantum.Canon.CascadeCCNOT}
   - {name: CascadeCNOT, uid: Microsoft.Quantum.Canon.CascadeCNOT}
   - {name: Compose, uid: Microsoft.Quantum.Canon.Compose}
-  - {name: ComposedOutput, uid: Microsoft.Quantum.Canon.ComposedOutput}
   - {name: ConjugatedBy, uid: Microsoft.Quantum.Canon.ConjugatedBy}
   - {name: ConjugatedByA, uid: Microsoft.Quantum.Canon.ConjugatedByA}
   - {name: ConjugatedByC, uid: Microsoft.Quantum.Canon.ConjugatedByC}
@@ -374,9 +340,7 @@
   - {name: DelayedCA, uid: Microsoft.Quantum.Canon.DelayedCA}
   - {name: EmbedPauli, uid: Microsoft.Quantum.Canon.EmbedPauli}
   - {name: Fst, uid: Microsoft.Quantum.Canon.Fst}
-  - {name: GrayCode, uid: Microsoft.Quantum.Canon.GrayCode}
   - {name: HY, uid: Microsoft.Quantum.Canon.HY}
-  - {name: HammingWeightI, uid: Microsoft.Quantum.Canon.HammingWeightI}
   - {name: Ignore, uid: Microsoft.Quantum.Canon.Ignore}
   - {name: InPlaceMajority, uid: Microsoft.Quantum.Canon.InPlaceMajority}
   - {name: InPlaceXorBE, uid: Microsoft.Quantum.Canon.InPlaceXorBE}
@@ -397,11 +361,8 @@
   - {name: MultiplexOperations, uid: Microsoft.Quantum.Canon.MultiplexOperations}
   - {name: MultiplexOperationsBruteForceFromGenerator, uid: Microsoft.Quantum.Canon.MultiplexOperationsBruteForceFromGenerator}
   - {name: MultiplexOperationsFromGenerator, uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator}
-  - {name: MultiplexOperationsFromGeneratorImpl, uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGeneratorImpl}
-  - {name: MultiplexOperationsWithAuxRegister, uid: Microsoft.Quantum.Canon.MultiplexOperationsWithAuxRegister}
   - {name: MultiplexPauli, uid: Microsoft.Quantum.Canon.MultiplexPauli}
   - {name: MultiplexZ, uid: Microsoft.Quantum.Canon.MultiplexZ}
-  - {name: MultiplexZCoefficients, uid: Microsoft.Quantum.Canon.MultiplexZCoefficients}
   - {name: MultiplexerBruteForceFromGenerator, uid: Microsoft.Quantum.Canon.MultiplexerBruteForceFromGenerator}
   - {name: MultiplexerFromGenerator, uid: Microsoft.Quantum.Canon.MultiplexerFromGenerator}
   - {name: NoOp, uid: Microsoft.Quantum.Canon.NoOp}
@@ -435,24 +396,15 @@
   - {name: TransformedOperationA, uid: Microsoft.Quantum.Canon.TransformedOperationA}
   - {name: TransformedOperationC, uid: Microsoft.Quantum.Canon.TransformedOperationC}
   - {name: TransformedOperationCA, uid: Microsoft.Quantum.Canon.TransformedOperationCA}
-  - {name: Trotter1ImplCA, uid: Microsoft.Quantum.Canon.Trotter1ImplCA}
-  - {name: Trotter2ImplCA, uid: Microsoft.Quantum.Canon.Trotter2ImplCA}
-  - {name: TrotterArbitraryImplCA, uid: Microsoft.Quantum.Canon.TrotterArbitraryImplCA}
-  - {name: TrotterStepSize, uid: Microsoft.Quantum.Canon.TrotterStepSize}
   - {name: UncurriedOp, uid: Microsoft.Quantum.Canon.UncurriedOp}
   - {name: UncurriedOpA, uid: Microsoft.Quantum.Canon.UncurriedOpA}
   - {name: UncurriedOpC, uid: Microsoft.Quantum.Canon.UncurriedOpC}
   - {name: UncurriedOpCA, uid: Microsoft.Quantum.Canon.UncurriedOpCA}
   - {name: WeightOnePaulis, uid: Microsoft.Quantum.Canon.WeightOnePaulis}
-  - {name: WithFirstInputApplied, uid: Microsoft.Quantum.Canon.WithFirstInputApplied}
   - {name: XOR, uid: Microsoft.Quantum.Canon.XOR}
   name: Microsoft.Quantum.Canon
   uid: Microsoft.Quantum.Canon
 - items:
-  - {name: ApplyHadamardTest, uid: Microsoft.Quantum.Characterization.ApplyHadamardTest}
-  - {name: ApplyHadamardTestOnSingleRegister, uid: Microsoft.Quantum.Characterization.ApplyHadamardTestOnSingleRegister}
-  - {name: ApplySwapTest, uid: Microsoft.Quantum.Characterization.ApplySwapTest}
-  - {name: ApplySwapTestOnSingleRegister, uid: Microsoft.Quantum.Characterization.ApplySwapTestOnSingleRegister}
   - {name: ContinuousPhaseEstimationIteration, uid: Microsoft.Quantum.Characterization.ContinuousPhaseEstimationIteration}
   - {name: DiscretePhaseEstimationIteration, uid: Microsoft.Quantum.Characterization.DiscretePhaseEstimationIteration}
   - {name: EstimateFrequency, uid: Microsoft.Quantum.Characterization.EstimateFrequency}
@@ -460,7 +412,6 @@
   - {name: EstimateImagOverlapBetweenStates, uid: Microsoft.Quantum.Characterization.EstimateImagOverlapBetweenStates}
   - {name: EstimateOverlapBetweenStates, uid: Microsoft.Quantum.Characterization.EstimateOverlapBetweenStates}
   - {name: EstimateRealOverlapBetweenStates, uid: Microsoft.Quantum.Characterization.EstimateRealOverlapBetweenStates}
-  - {name: HeadMeasurement, uid: Microsoft.Quantum.Characterization.HeadMeasurement}
   - {name: MeasureAllZ, uid: Microsoft.Quantum.Characterization.MeasureAllZ}
   - {name: MeasureIdentity, uid: Microsoft.Quantum.Characterization.MeasureIdentity}
   - {name: QuantumPhaseEstimation, uid: Microsoft.Quantum.Characterization.QuantumPhaseEstimation}
@@ -567,6 +518,7 @@
   - {name: BoolAsResult, uid: Microsoft.Quantum.Convert.BoolAsResult}
   - {name: BoolAsString, uid: Microsoft.Quantum.Convert.BoolAsString}
   - {name: Call, uid: Microsoft.Quantum.Convert.Call}
+  - {name: DoubleAsInt, uid: Microsoft.Quantum.Convert.DoubleAsInt}
   - {name: DoubleAsString, uid: Microsoft.Quantum.Convert.DoubleAsString}
   - {name: DoubleAsStringWithFormat, uid: Microsoft.Quantum.Convert.DoubleAsStringWithFormat}
   - {name: FunctionAsOperation, uid: Microsoft.Quantum.Convert.FunctionAsOperation}
@@ -588,6 +540,7 @@
   - {name: Default, uid: Microsoft.Quantum.Core.Default}
   - {name: Deprecated, uid: Microsoft.Quantum.Core.Deprecated}
   - {name: EntryPoint, uid: Microsoft.Quantum.Core.EntryPoint}
+  - {name: Inline, uid: Microsoft.Quantum.Core.Inline}
   - {name: Length, uid: Microsoft.Quantum.Core.Length}
   - {name: RangeEnd, uid: Microsoft.Quantum.Core.RangeEnd}
   - {name: RangeReverse, uid: Microsoft.Quantum.Core.RangeReverse}
@@ -614,7 +567,6 @@
   - {name: Contradiction, uid: Microsoft.Quantum.Diagnostics.Contradiction}
   - {name: DumpMachine, uid: Microsoft.Quantum.Diagnostics.DumpMachine}
   - {name: DumpOperation, uid: Microsoft.Quantum.Diagnostics.DumpOperation}
-  - {name: DumpReferenceAndTarget, uid: Microsoft.Quantum.Diagnostics.DumpReferenceAndTarget}
   - {name: DumpRegister, uid: Microsoft.Quantum.Diagnostics.DumpRegister}
   - {name: EnableTestingViaName, uid: Microsoft.Quantum.Diagnostics.EnableTestingViaName}
   - {name: EqualityFactB, uid: Microsoft.Quantum.Diagnostics.EqualityFactB}
@@ -625,15 +577,10 @@
   - {name: EqualityFactR, uid: Microsoft.Quantum.Diagnostics.EqualityFactR}
   - {name: EqualityWithinToleranceFact, uid: Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact}
   - {name: Fact, uid: Microsoft.Quantum.Diagnostics.Fact}
-  - {name: FormattedFailure, uid: Microsoft.Quantum.Diagnostics.FormattedFailure}
   - {name: NearEqualityFactC, uid: Microsoft.Quantum.Diagnostics.NearEqualityFactC}
   - {name: NearEqualityFactCP, uid: Microsoft.Quantum.Diagnostics.NearEqualityFactCP}
   - {name: NearEqualityFactD, uid: Microsoft.Quantum.Diagnostics.NearEqualityFactD}
   - {name: Test, uid: Microsoft.Quantum.Diagnostics.Test}
-  - {name: _assertEqualOnBasisVector, uid: Microsoft.Quantum.Diagnostics._assertEqualOnBasisVector}
-  - {name: _flipToBasis, uid: Microsoft.Quantum.Diagnostics._flipToBasis}
-  - {name: _iterateThroughCartesianPower, uid: Microsoft.Quantum.Diagnostics._iterateThroughCartesianPower}
-  - {name: _prepareEntangledState, uid: Microsoft.Quantum.Diagnostics._prepareEntangledState}
   name: Microsoft.Quantum.Diagnostics
   uid: Microsoft.Quantum.Diagnostics
 - items:
@@ -642,7 +589,6 @@
   name: Microsoft.Quantum.Environment
   uid: Microsoft.Quantum.Environment
 - items:
-  - {name: ApplyBitFlipEncoder, uid: Microsoft.Quantum.ErrorCorrection.ApplyBitFlipEncoder}
   - {name: BitFlipCode, uid: Microsoft.Quantum.ErrorCorrection.BitFlipCode}
   - {name: BitFlipRecoveryFn, uid: Microsoft.Quantum.ErrorCorrection.BitFlipRecoveryFn}
   - {name: CSS, uid: Microsoft.Quantum.ErrorCorrection.CSS}
@@ -701,11 +647,6 @@
   name: Microsoft.Quantum.Extensions.Convert
   uid: Microsoft.Quantum.Extensions.Convert
 - items:
-  - {name: DumpMachine, uid: Microsoft.Quantum.Extensions.Diagnostics.DumpMachine}
-  - {name: DumpRegister, uid: Microsoft.Quantum.Extensions.Diagnostics.DumpRegister}
-  name: Microsoft.Quantum.Extensions.Diagnostics
-  uid: Microsoft.Quantum.Extensions.Diagnostics
-- items:
   - {name: AbsB, uid: Microsoft.Quantum.Extensions.Math.AbsB}
   - {name: AbsD, uid: Microsoft.Quantum.Extensions.Math.AbsD}
   - {name: AbsI, uid: Microsoft.Quantum.Extensions.Math.AbsI}
@@ -745,17 +686,7 @@
   name: Microsoft.Quantum.Extensions.Math
   uid: Microsoft.Quantum.Extensions.Math
 - items:
-  - {name: AssertAllZero, uid: Microsoft.Quantum.Extensions.Testing.AssertAllZero}
-  - {name: AssertAllZeroTol, uid: Microsoft.Quantum.Extensions.Testing.AssertAllZeroTol}
-  - {name: AssertOperationsEqualInPlace, uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlace}
-  - {name: AssertOperationsEqualInPlaceCompBasis, uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlaceCompBasis}
-  - {name: AssertOperationsEqualReferenced, uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualReferenced}
-  - {name: AssertQubit, uid: Microsoft.Quantum.Extensions.Testing.AssertQubit}
-  - {name: AssertQubitState, uid: Microsoft.Quantum.Extensions.Testing.AssertQubitState}
-  - {name: AssertQubitTol, uid: Microsoft.Quantum.Extensions.Testing.AssertQubitTol}
-  name: Microsoft.Quantum.Extensions.Testing
-  uid: Microsoft.Quantum.Extensions.Testing
-- items:
+  - {name: ApplyUncontrolledSWAP, uid: Microsoft.Quantum.Intrinsic.ApplyUncontrolledSWAP}
   - {name: Assert, uid: Microsoft.Quantum.Intrinsic.Assert}
   - {name: AssertProb, uid: Microsoft.Quantum.Intrinsic.AssertProb}
   - {name: CCNOT, uid: Microsoft.Quantum.Intrinsic.CCNOT}
@@ -804,7 +735,6 @@
   - {name: LessThanD, uid: Microsoft.Quantum.Logical.LessThanD}
   - {name: LessThanI, uid: Microsoft.Quantum.Logical.LessThanI}
   - {name: LessThanL, uid: Microsoft.Quantum.Logical.LessThanL}
-  - {name: LessThanLexographic, uid: Microsoft.Quantum.Logical.LessThanLexographic}
   - {name: LessThanOrEqualD, uid: Microsoft.Quantum.Logical.LessThanOrEqualD}
   - {name: LessThanOrEqualI, uid: Microsoft.Quantum.Logical.LessThanOrEqualI}
   - {name: LessThanOrEqualL, uid: Microsoft.Quantum.Logical.LessThanOrEqualL}
@@ -890,8 +820,6 @@
   - {name: AbsL, uid: Microsoft.Quantum.Math.AbsL}
   - {name: AbsSquaredComplex, uid: Microsoft.Quantum.Math.AbsSquaredComplex}
   - {name: AbsSquaredComplexPolar, uid: Microsoft.Quantum.Math.AbsSquaredComplexPolar}
-  - {name: AccumulatedBitsizeI, uid: Microsoft.Quantum.Math.AccumulatedBitsizeI}
-  - {name: AccumulatedBitsizeL, uid: Microsoft.Quantum.Math.AccumulatedBitsizeL}
   - {name: ArcCos, uid: Microsoft.Quantum.Math.ArcCos}
   - {name: ArcCosh, uid: Microsoft.Quantum.Math.ArcCosh}
   - {name: ArcSin, uid: Microsoft.Quantum.Math.ArcSin}
@@ -971,7 +899,6 @@
   - {name: PlusI, uid: Microsoft.Quantum.Math.PlusI}
   - {name: PlusL, uid: Microsoft.Quantum.Math.PlusL}
   - {name: PowC, uid: Microsoft.Quantum.Math.PowC}
-  - {name: PowCAsCP, uid: Microsoft.Quantum.Math.PowCAsCP}
   - {name: PowCP, uid: Microsoft.Quantum.Math.PowCP}
   - {name: PowD, uid: Microsoft.Quantum.Math.PowD}
   - {name: PowI, uid: Microsoft.Quantum.Math.PowI}
@@ -1004,7 +931,6 @@
   name: Microsoft.Quantum.Math
   uid: Microsoft.Quantum.Math
 - items:
-  - {name: BasisChangeZtoY, uid: Microsoft.Quantum.Measurement.BasisChangeZtoY}
   - {name: MResetX, uid: Microsoft.Quantum.Measurement.MResetX}
   - {name: MResetY, uid: Microsoft.Quantum.Measurement.MResetY}
   - {name: MResetZ, uid: Microsoft.Quantum.Measurement.MResetZ}
@@ -1017,16 +943,10 @@
   uid: Microsoft.Quantum.Measurement
 - items:
   - {name: LocalUnivariateMinimum, uid: Microsoft.Quantum.Optimization.LocalUnivariateMinimum}
-  - {name: Midpoint, uid: Microsoft.Quantum.Optimization.Midpoint}
-  - {name: Probe, uid: Microsoft.Quantum.Optimization.Probe}
   - {name: UnivariateOptimizationResult, uid: Microsoft.Quantum.Optimization.UnivariateOptimizationResult}
-  - {name: Width, uid: Microsoft.Quantum.Optimization.Width}
   name: Microsoft.Quantum.Optimization
   uid: Microsoft.Quantum.Optimization
 - items:
-  - {name: ApplyDeterministicStateOracleFromStateOracle, uid: Microsoft.Quantum.Oracles.ApplyDeterministicStateOracleFromStateOracle}
-  - {name: ApplyObliviousOracleFromDeterministicStateOracle, uid: Microsoft.Quantum.Oracles.ApplyObliviousOracleFromDeterministicStateOracle}
-  - {name: ApplyStateOracleFromDeterministicStateOracle, uid: Microsoft.Quantum.Oracles.ApplyStateOracleFromDeterministicStateOracle}
   - {name: ContinuousOracle, uid: Microsoft.Quantum.Oracles.ContinuousOracle}
   - {name: DeterministicStateOracle, uid: Microsoft.Quantum.Oracles.DeterministicStateOracle}
   - {name: DeterministicStateOracleFromStateOracle, uid: Microsoft.Quantum.Oracles.DeterministicStateOracleFromStateOracle}
@@ -1042,15 +962,10 @@
   name: Microsoft.Quantum.Oracles
   uid: Microsoft.Quantum.Oracles
 - items:
-  - {name: ApplyGlobalRotationStep, uid: Microsoft.Quantum.Preparation.ApplyGlobalRotationStep}
-  - {name: ApplyMultiplexStep, uid: Microsoft.Quantum.Preparation.ApplyMultiplexStep}
-  - {name: ApplyToLittleEndian, uid: Microsoft.Quantum.Preparation.ApplyToLittleEndian}
   - {name: ApproximatelyPrepareArbitraryState, uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState}
   - {name: ApproximatelyPrepareArbitraryStateCP, uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP}
   - {name: ApproximatelyPrepareArbitraryStateD, uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateD}
-  - {name: ApproximatelyUnprepareArbitraryStatePlan, uid: Microsoft.Quantum.Preparation.ApproximatelyUnprepareArbitraryStatePlan}
   - {name: BlochSphereCoordinates, uid: Microsoft.Quantum.Preparation.BlochSphereCoordinates}
-  - {name: IgnoreDataRegister, uid: Microsoft.Quantum.Preparation.IgnoreDataRegister}
   - {name: MixedStatePreparation, uid: Microsoft.Quantum.Preparation.MixedStatePreparation}
   - {name: MixedStatePreparationRequirements, uid: Microsoft.Quantum.Preparation.MixedStatePreparationRequirements}
   - {name: PrepareArbitraryState, uid: Microsoft.Quantum.Preparation.PrepareArbitraryState}
@@ -1063,23 +978,16 @@
   - {name: PrepareEntangledState, uid: Microsoft.Quantum.Preparation.PrepareEntangledState}
   - {name: PrepareIdentity, uid: Microsoft.Quantum.Preparation.PrepareIdentity}
   - {name: PreparePauliEigenstate, uid: Microsoft.Quantum.Preparation.PreparePauliEigenstate}
-  - {name: PrepareQuantumROMState, uid: Microsoft.Quantum.Preparation.PrepareQuantumROMState}
   - {name: PrepareQubit, uid: Microsoft.Quantum.Preparation.PrepareQubit}
   - {name: PrepareSingleQubitIdentity, uid: Microsoft.Quantum.Preparation.PrepareSingleQubitIdentity}
   - {name: PrepareUniformSuperposition, uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition}
-  - {name: PrepareUniformSuperpositionOracle, uid: Microsoft.Quantum.Preparation.PrepareUniformSuperpositionOracle}
   - {name: PurifiedMixedState, uid: Microsoft.Quantum.Preparation.PurifiedMixedState}
   - {name: PurifiedMixedStateRequirements, uid: Microsoft.Quantum.Preparation.PurifiedMixedStateRequirements}
   - {name: PurifiedMixedStateWithData, uid: Microsoft.Quantum.Preparation.PurifiedMixedStateWithData}
   - {name: QuantumROM, uid: Microsoft.Quantum.Preparation.QuantumROM}
-  - {name: QuantumROMBitStringWriterByIndex, uid: Microsoft.Quantum.Preparation.QuantumROMBitStringWriterByIndex}
   - {name: QuantumROMQubitCount, uid: Microsoft.Quantum.Preparation.QuantumROMQubitCount}
-  - {name: RoundedDiscretizationCoefficients, uid: Microsoft.Quantum.Preparation.RoundedDiscretizationCoefficients}
-  - {name: SplitSign, uid: Microsoft.Quantum.Preparation.SplitSign}
   - {name: StatePreparationComplexCoefficients, uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients}
   - {name: StatePreparationPositiveCoefficients, uid: Microsoft.Quantum.Preparation.StatePreparationPositiveCoefficients}
-  - {name: StatePreparationSBMComputeCoefficients, uid: Microsoft.Quantum.Preparation.StatePreparationSBMComputeCoefficients}
-  - {name: WriteQuantumROMBitString, uid: Microsoft.Quantum.Preparation.WriteQuantumROMBitString}
   - {name: _CompileApproximateArbitraryStatePreparation, uid: Microsoft.Quantum.Preparation._CompileApproximateArbitraryStatePreparation}
   - {name: _PrepareAmplitudesFromZeroState, uid: Microsoft.Quantum.Preparation._PrepareAmplitudesFromZeroState}
   - {name: _QuantumROMDiscretization, uid: Microsoft.Quantum.Preparation._QuantumROMDiscretization}
@@ -1091,7 +999,6 @@
   - {name: ComplexDistribution, uid: Microsoft.Quantum.Random.ComplexDistribution}
   - {name: ContinuousDistribution, uid: Microsoft.Quantum.Random.ContinuousDistribution}
   - {name: ContinuousUniformDistribution, uid: Microsoft.Quantum.Random.ContinuousUniformDistribution}
-  - {name: Delay, uid: Microsoft.Quantum.Random.Delay}
   - {name: DiscreteDistribution, uid: Microsoft.Quantum.Random.DiscreteDistribution}
   - {name: DiscreteUniformDistribution, uid: Microsoft.Quantum.Random.DiscreteUniformDistribution}
   - {name: DrawCategorical, uid: Microsoft.Quantum.Random.DrawCategorical}
@@ -1099,12 +1006,9 @@
   - {name: DrawRandomDouble, uid: Microsoft.Quantum.Random.DrawRandomDouble}
   - {name: DrawRandomInt, uid: Microsoft.Quantum.Random.DrawRandomInt}
   - {name: DrawRandomPauli, uid: Microsoft.Quantum.Random.DrawRandomPauli}
-  - {name: DrawStandardNormalVariate, uid: Microsoft.Quantum.Random.DrawStandardNormalVariate}
   - {name: MaybeChooseElement, uid: Microsoft.Quantum.Random.MaybeChooseElement}
   - {name: NormalDistribution, uid: Microsoft.Quantum.Random.NormalDistribution}
-  - {name: SampleTransformedContinuousDistribution, uid: Microsoft.Quantum.Random.SampleTransformedContinuousDistribution}
   - {name: StandardNormalDistribution, uid: Microsoft.Quantum.Random.StandardNormalDistribution}
-  - {name: StandardTransformation, uid: Microsoft.Quantum.Random.StandardTransformation}
   - {name: TransformedContinuousDistribution, uid: Microsoft.Quantum.Random.TransformedContinuousDistribution}
   name: Microsoft.Quantum.Random
   uid: Microsoft.Quantum.Random
@@ -1114,15 +1018,12 @@
   name: Microsoft.Quantum.Research.Characterization
   uid: Microsoft.Quantum.Research.Characterization
 - items:
-  - {name: ApplyBasisChange, uid: Microsoft.Quantum.Research.Chemistry.ApplyBasisChange}
   - {name: ApplyDeltaParity, uid: Microsoft.Quantum.Research.Chemistry.ApplyDeltaParity}
   - {name: JWOptimizedFermionEvolutionFunction, uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedFermionEvolutionFunction}
   - {name: JWOptimizedGeneratorSystem, uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedGeneratorSystem}
   - {name: JWOptimizedStatePreparation, uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedStatePreparation}
   - {name: JordanWignerOptimizedFermionEvolutionSet, uid: Microsoft.Quantum.Research.Chemistry.JordanWignerOptimizedFermionEvolutionSet}
   - {name: OptimizedTrotterStepOracle, uid: Microsoft.Quantum.Research.Chemistry.OptimizedTrotterStepOracle}
-  - {name: TransformZToX, uid: Microsoft.Quantum.Research.Chemistry.TransformZToX}
-  - {name: TransformZToY, uid: Microsoft.Quantum.Research.Chemistry.TransformZToY}
   - {name: _ApplyOptimizedTrotterStep, uid: Microsoft.Quantum.Research.Chemistry._ApplyOptimizedTrotterStep}
   - {name: _DeltaParityCNOTbitstring, uid: Microsoft.Quantum.Research.Chemistry._DeltaParityCNOTbitstring}
   - {name: _JWOptimized0123Term, uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123Term}
@@ -1139,11 +1040,6 @@
 - items:
   - {name: AddGeneratorSystems, uid: Microsoft.Quantum.Simulation.AddGeneratorSystems}
   - {name: AdiabaticStateEnergyUnitary, uid: Microsoft.Quantum.Simulation.AdiabaticStateEnergyUnitary}
-  - {name: ApplyBlockEncodingAsReflection, uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingAsReflection}
-  - {name: ApplyBlockEncodingByLCU, uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingByLCU}
-  - {name: ApplyBlockEncodingFromBEandQubit, uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingFromBEandQubit}
-  - {name: ApplyPauliLCUUnitary, uid: Microsoft.Quantum.Simulation.ApplyPauliLCUUnitary}
-  - {name: ApplyQuantumWalkByQubitization, uid: Microsoft.Quantum.Simulation.ApplyQuantumWalkByQubitization}
   - {name: BlockEncoding, uid: Microsoft.Quantum.Simulation.BlockEncoding}
   - {name: BlockEncodingByLCU, uid: Microsoft.Quantum.Simulation.BlockEncodingByLCU}
   - {name: BlockEncodingReflection, uid: Microsoft.Quantum.Simulation.BlockEncodingReflection}
@@ -1162,8 +1058,6 @@
   - {name: IdentityGeneratorIndex, uid: Microsoft.Quantum.Simulation.IdentityGeneratorIndex}
   - {name: IdentityGeneratorSystem, uid: Microsoft.Quantum.Simulation.IdentityGeneratorSystem}
   - {name: IdentityTimeDependentGeneratorSystem, uid: Microsoft.Quantum.Simulation.IdentityTimeDependentGeneratorSystem}
-  - {name: IdxToCoeff, uid: Microsoft.Quantum.Simulation.IdxToCoeff}
-  - {name: IdxToUnitary, uid: Microsoft.Quantum.Simulation.IdxToUnitary}
   - {name: IntToPauli, uid: Microsoft.Quantum.Simulation.IntToPauli}
   - {name: InterpolateGeneratorSystems, uid: Microsoft.Quantum.Simulation.InterpolateGeneratorSystems}
   - {name: InterpolateGeneratorSystemsImpl, uid: Microsoft.Quantum.Simulation.InterpolateGeneratorSystemsImpl}
@@ -1176,7 +1070,6 @@
   - {name: PauliEvolutionFunction, uid: Microsoft.Quantum.Simulation.PauliEvolutionFunction}
   - {name: PauliEvolutionImpl, uid: Microsoft.Quantum.Simulation.PauliEvolutionImpl}
   - {name: PauliEvolutionSet, uid: Microsoft.Quantum.Simulation.PauliEvolutionSet}
-  - {name: PauliLCUUnitary, uid: Microsoft.Quantum.Simulation.PauliLCUUnitary}
   - {name: PauliStringFromGenIdx, uid: Microsoft.Quantum.Simulation.PauliStringFromGenIdx}
   - {name: QuantumWalkByQubitization, uid: Microsoft.Quantum.Simulation.QuantumWalkByQubitization}
   - {name: SimulationAlgorithm, uid: Microsoft.Quantum.Simulation.SimulationAlgorithm}
@@ -1233,36 +1126,15 @@
   - {name: ApplyPermutationUsingDecomposition, uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition}
   - {name: ApplyPermutationUsingDecompositionWithVariableOrder, uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder}
   - {name: ApplyPermutationUsingTransformation, uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation}
-  - {name: ApplySingleQubitUnitary, uid: Microsoft.Quantum.Synthesis.ApplySingleQubitUnitary}
   - {name: ApplyTransposition, uid: Microsoft.Quantum.Synthesis.ApplyTransposition}
   - {name: ApplyUnitary, uid: Microsoft.Quantum.Synthesis.ApplyUnitary}
   - {name: ApplyXControlledOnTruthTable, uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable}
   - {name: ApplyXControlledOnTruthTableWithCleanTarget, uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTableWithCleanTarget}
-  - {name: DecomposedOn, uid: Microsoft.Quantum.Synthesis.DecomposedOn}
-  - {name: DecompositionState, uid: Microsoft.Quantum.Synthesis.DecompositionState}
-  - {name: Encoded, uid: Microsoft.Quantum.Synthesis.Encoded}
-  - {name: Extended, uid: Microsoft.Quantum.Synthesis.Extended}
-  - {name: FastHadamardTransformed, uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed}
-  - {name: FlipMasks, uid: Microsoft.Quantum.Synthesis.FlipMasks}
-  - {name: GateMask, uid: Microsoft.Quantum.Synthesis.GateMask}
-  - {name: GateMasksForAssignment, uid: Microsoft.Quantum.Synthesis.GateMasksForAssignment}
-  - {name: IntegerBits, uid: Microsoft.Quantum.Synthesis.IntegerBits}
-  - {name: MCMTMask, uid: Microsoft.Quantum.Synthesis.MCMTMask}
-  - {name: MaskToQubitsPair, uid: Microsoft.Quantum.Synthesis.MaskToQubitsPair}
-  - {name: RMEncoding, uid: Microsoft.Quantum.Synthesis.RMEncoding}
-  - {name: SizeAdjustedTruthTable, uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable}
-  - {name: SquareMatrixFact, uid: Microsoft.Quantum.Synthesis.SquareMatrixFact}
-  - {name: TBSMain, uid: Microsoft.Quantum.Synthesis.TBSMain}
-  - {name: TBSStep, uid: Microsoft.Quantum.Synthesis.TBSStep}
-  - {name: TruthTablesFromPermutation, uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutation}
-  - {name: TruthTablesFromPermutationFolder, uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutationFolder}
-  - {name: UpdatedOutputPattern, uid: Microsoft.Quantum.Synthesis.UpdatedOutputPattern}
-  - {name: UpdatedPermutation, uid: Microsoft.Quantum.Synthesis.UpdatedPermutation}
-  - {name: WithZeroInsertedAt, uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt}
   - {name: _TwoLevelDecomposition, uid: Microsoft.Quantum.Synthesis._TwoLevelDecomposition}
   name: Microsoft.Quantum.Synthesis
   uid: Microsoft.Quantum.Synthesis
 - items:
   - {name: RequiresCapability, uid: Microsoft.Quantum.Targeting.RequiresCapability}
+  - {name: TargetInstruction, uid: Microsoft.Quantum.Targeting.TargetInstruction}
   name: Microsoft.Quantum.Targeting
   uid: Microsoft.Quantum.Targeting

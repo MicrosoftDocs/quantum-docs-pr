@@ -1,10 +1,10 @@
 ---
 title: '%workspace (magic command)'
 description: Provides actions related to the current workspace.
-author: rmshaffer
+author: anjbur
 uid: microsoft.quantum.iqsharp.magic-ref.workspace
-ms.author: ryansha
-ms.date: 01/24/2021
+ms.author: anburton
+ms.date: 02/16/2021
 ms.topic: managed-reference
 ---
 

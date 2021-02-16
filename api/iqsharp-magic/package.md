@@ -1,10 +1,10 @@
 ---
 title: '%package (magic command)'
 description: Provides the ability to load a NuGet package.
-author: rmshaffer
+author: anjbur
 uid: microsoft.quantum.iqsharp.magic-ref.package
-ms.author: ryansha
-ms.date: 01/24/2021
+ms.author: anburton
+ms.date: 02/16/2021
 ms.topic: managed-reference
 ---
 

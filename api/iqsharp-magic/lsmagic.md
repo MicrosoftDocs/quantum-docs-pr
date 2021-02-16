@@ -1,10 +1,10 @@
 ---
 title: '%lsmagic (magic command)'
 description: Returns a list of all currently available magic commands.
-author: rmshaffer
+author: anjbur
 uid: microsoft.quantum.iqsharp.magic-ref.lsmagic
-ms.author: ryansha
-ms.date: 01/24/2021
+ms.author: anburton
+ms.date: 02/16/2021
 ms.topic: managed-reference
 ---
 

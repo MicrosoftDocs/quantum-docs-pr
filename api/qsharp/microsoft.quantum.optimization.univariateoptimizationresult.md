@@ -1,8 +1,8 @@
 ---
 uid: Microsoft.Quantum.Optimization.UnivariateOptimizationResult
 title: UnivariateOptimizationResult user defined type
-ms.date: 1/23/2021 12:00:00 AM
-ms.topic: article
+ms.date: 2/16/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Optimization
 qsharp.name: UnivariateOptimizationResult
@@ -20,7 +20,7 @@ Represents the result of optimizing a univariate function.
 
 ```qsharp
 
-newtype UnivariateOptimizationResult = (Coordinate : Double, Value : Double);
+newtype UnivariateOptimizationResult = (Coordinate : Double, Value : Double, NQueries : Int);
 ```
 
 
@@ -33,3 +33,6 @@ Input at which an optimum was found.
 ### Value : [Double](xref:microsoft.quantum.lang-ref.double)
 
 Value returned by the function at its optimum.
+### NQueries : [Int](xref:microsoft.quantum.lang-ref.int)
+
+The amount of times the function was called.

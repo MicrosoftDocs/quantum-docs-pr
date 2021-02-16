@@ -102,7 +102,7 @@
   },
   "JoinTOCPlugin": [
     {
-      "ReferenceTOCUrl": "/qsharp/api/toc.json",
+      "ReferenceTOC": "api/TOC.yml",
       "ConceptualTOCUrl": "/azure/quantum/toc.json"
     }
   ],

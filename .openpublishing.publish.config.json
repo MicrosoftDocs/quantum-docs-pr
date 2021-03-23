@@ -1,31 +1,6 @@
 {
   "docsets_to_publish": [
     {
-      "docset_name": "quamtum-api",
-      "build_source_folder": "api",
-      "build_output_subfolder": "quamtum-api",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "xref_query_tags": [
-        "/quantum"
-      ],
-      "enable_xrefmap_share": true,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "QSharpNamespace": "Content",
-        "QSharpType": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
-        ]
-      }
-    },
-    {
       "docset_name": "quantum-docs",
       "build_source_folder": "articles",
       "build_output_subfolder": "quantum-docs",
